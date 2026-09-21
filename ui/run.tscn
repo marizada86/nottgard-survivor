@@ -1,0 +1,26 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://ui/run.gd" id="1_ghh1m"]
+[ext_resource type="Script" path="res://ui/overlay.gd" id="2_g4hyb"]
+[ext_resource type="PackedScene" path="res://ui/hud.tscn" id="3_c74lo"]
+
+[node name="Run" type="Node2D" unique_id=851524603]
+script = ExtResource("1_ghh1m")
+
+[node name="StageSlot" type="Node2D" parent="." unique_id=1063079233]
+
+[node name="Under" type="Node2D" parent="." unique_id=792597096]
+z_index = -50
+script = ExtResource("2_g4hyb")
+mode = "under"
+
+[node name="Over" type="Node2D" parent="." unique_id=995991311]
+z_index = 60
+script = ExtResource("2_g4hyb")
+
+[node name="Fx" type="Node2D" parent="." unique_id=1825558210]
+z_index = 100
+
+[node name="Camera" type="Camera2D" parent="." unique_id=2131982590]
+
+[node name="Hud" parent="." unique_id=1614466486 instance=ExtResource("3_c74lo")]

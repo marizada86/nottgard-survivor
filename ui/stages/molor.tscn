@@ -1,0 +1,334 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://ui/ground.gd" id="1_koa63"]
+[ext_resource type="PackedScene" path="res://ui/hero_view.tscn" id="2_udx7a"]
+[ext_resource type="PackedScene" path="res://ui/prop.tscn" id="3_tp1vc"]
+[ext_resource type="PackedScene" path="res://ui/spawn_point.tscn" id="4_whu23"]
+
+[node name="Stage" type="Node2D" unique_id=409334170]
+
+[node name="Ground" type="Node2D" parent="." unique_id=388352511]
+z_index = -100
+script = ExtResource("1_koa63")
+color_a = Color(0.09411765, 0.15686275, 0.11764706, 1)
+color_b = Color(0.11764706, 0.19607843, 0.14117648, 1)
+
+[node name="Sorted" type="Node2D" parent="." unique_id=707647655]
+y_sort_enabled = true
+
+[node name="Hero" parent="Sorted" unique_id=629349748 instance=ExtResource("2_udx7a")]
+position = Vector2(0, 640)
+
+[node name="Prop1" parent="Sorted" unique_id=71309628 instance=ExtResource("3_tp1vc")]
+position = Vector2(192, 800)
+kind = "bolha"
+height = 39.421210289001465
+half_width = 19.577894
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop2" parent="Sorted" unique_id=778280658 instance=ExtResource("3_tp1vc")]
+position = Vector2(-32, 400)
+kind = "bolha"
+height = 46.10381603240967
+half_width = 20.286762
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop3" parent="Sorted" unique_id=1145570349 instance=ExtResource("3_tp1vc")]
+position = Vector2(-224, 624)
+kind = "bolha"
+height = 42.91611671447754
+half_width = 16.558489
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop4" parent="Sorted" unique_id=394771806 instance=ExtResource("3_tp1vc")]
+position = Vector2(32, 848)
+kind = "bolha"
+height = 46.437482833862305
+half_width = 20.00281
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop5" parent="Sorted" unique_id=1129452503 instance=ExtResource("3_tp1vc")]
+position = Vector2(0, 480)
+kind = "bolha"
+height = 41.93882942199707
+half_width = 24.573063
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop6" parent="Sorted" unique_id=431880248 instance=ExtResource("3_tp1vc")]
+position = Vector2(96, 912)
+kind = "bolha"
+height = 45.25572
+half_width = 21.626223
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop7" parent="Sorted" unique_id=90773137 instance=ExtResource("3_tp1vc")]
+position = Vector2(-256, 1024)
+kind = "bolha"
+height = 48.88082027435303
+half_width = 16.74827
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop8" parent="Sorted" unique_id=206375127 instance=ExtResource("3_tp1vc")]
+position = Vector2(-160, 912)
+kind = "bolha"
+height = 36.66116237640381
+half_width = 16.97958
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop9" parent="Sorted" unique_id=2082201429 instance=ExtResource("3_tp1vc")]
+position = Vector2(-32, 112)
+kind = "bolha"
+height = 49.610819816589355
+half_width = 23.76641
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop10" parent="Sorted" unique_id=1752712867 instance=ExtResource("3_tp1vc")]
+position = Vector2(192, 544)
+kind = "bolha"
+height = 36.49092674255371
+half_width = 22.88701
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop11" parent="Sorted" unique_id=1665624927 instance=ExtResource("3_tp1vc")]
+position = Vector2(544, 784)
+kind = "bolha"
+height = 35.673294
+half_width = 23.229557
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop12" parent="Sorted" unique_id=1243601023 instance=ExtResource("3_tp1vc")]
+position = Vector2(192, 992)
+kind = "bolha"
+height = 39.80032
+half_width = 20.24377
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop13" parent="Sorted" unique_id=1213025851 instance=ExtResource("3_tp1vc")]
+position = Vector2(352, 976)
+kind = "bolha"
+height = 33.80992650985718
+half_width = 17.841808
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop14" parent="Sorted" unique_id=649306684 instance=ExtResource("3_tp1vc")]
+position = Vector2(480, 656)
+kind = "bolha"
+height = 43.756985664367676
+half_width = 23.935638
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop15" parent="Sorted" unique_id=810046089 instance=ExtResource("3_tp1vc")]
+position = Vector2(-576, 864)
+kind = "bolha"
+height = 33.95949125289917
+half_width = 20.050632
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop16" parent="Sorted" unique_id=986405423 instance=ExtResource("3_tp1vc")]
+position = Vector2(1056, 656)
+kind = "bolha"
+height = 45.3479
+half_width = 24.885231
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop17" parent="Sorted" unique_id=817834061 instance=ExtResource("3_tp1vc")]
+position = Vector2(384, 832)
+kind = "bolha"
+height = 43.02588939666748
+half_width = 21.065063
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop18" parent="Sorted" unique_id=1717734097 instance=ExtResource("3_tp1vc")]
+position = Vector2(-480, 432)
+kind = "bolha"
+height = 36.693726
+half_width = 24.683882
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop19" parent="Sorted" unique_id=1288328501 instance=ExtResource("3_tp1vc")]
+position = Vector2(-288, 336)
+kind = "bolha"
+height = 42.631802558898926
+half_width = 17.121105
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop20" parent="Sorted" unique_id=1009566199 instance=ExtResource("3_tp1vc")]
+position = Vector2(-800, 528)
+kind = "bolha"
+height = 34.65304374694824
+half_width = 23.786682
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop21" parent="Sorted" unique_id=42876946 instance=ExtResource("3_tp1vc")]
+position = Vector2(-416, 816)
+kind = "bolha"
+height = 45.360107
+half_width = 19.411407
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop22" parent="Sorted" unique_id=150490669 instance=ExtResource("3_tp1vc")]
+position = Vector2(-480, 752)
+kind = "bolha"
+height = 33.84821891784668
+half_width = 18.900574
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop23" parent="Sorted" unique_id=140323066 instance=ExtResource("3_tp1vc")]
+position = Vector2(-160, 496)
+kind = "bolha"
+height = 32.456493
+half_width = 19.032099
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop24" parent="Sorted" unique_id=1766663148 instance=ExtResource("3_tp1vc")]
+position = Vector2(672, 496)
+kind = "bolha"
+height = 46.20020866394043
+half_width = 20.50922
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop25" parent="Sorted" unique_id=458763026 instance=ExtResource("3_tp1vc")]
+position = Vector2(32, 752)
+kind = "bolha"
+height = 36.70416
+half_width = 23.118832
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop26" parent="Sorted" unique_id=312933808 instance=ExtResource("3_tp1vc")]
+position = Vector2(288, 752)
+kind = "bolha"
+height = 33.36005210876465
+half_width = 17.224348
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop27" parent="Sorted" unique_id=611075379 instance=ExtResource("3_tp1vc")]
+position = Vector2(-384, 672)
+kind = "bolha"
+height = 48.726616
+half_width = 22.289717
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop28" parent="Sorted" unique_id=777699904 instance=ExtResource("3_tp1vc")]
+position = Vector2(-960, 704)
+kind = "bolha"
+height = 32.31115102767944
+half_width = 20.451683
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop29" parent="Sorted" unique_id=2016173680 instance=ExtResource("3_tp1vc")]
+position = Vector2(-64, 992)
+kind = "bolha"
+height = 47.601414
+half_width = 24.023493
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop30" parent="Sorted" unique_id=1580610078 instance=ExtResource("3_tp1vc")]
+position = Vector2(-608, 656)
+kind = "bolha"
+height = 46.814404
+half_width = 23.463568
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop31" parent="Sorted" unique_id=169924601 instance=ExtResource("3_tp1vc")]
+position = Vector2(-416, 912)
+kind = "bolha"
+height = 47.543163
+half_width = 23.714905
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop32" parent="Sorted" unique_id=1238635581 instance=ExtResource("3_tp1vc")]
+position = Vector2(-96, 176)
+kind = "bolha"
+height = 32.85992383956909
+half_width = 19.48677
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop33" parent="Sorted" unique_id=1666619383 instance=ExtResource("3_tp1vc")]
+position = Vector2(-448, 544)
+kind = "bolha"
+height = 44.699383
+half_width = 25.761078
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop34" parent="Sorted" unique_id=1477951845 instance=ExtResource("3_tp1vc")]
+position = Vector2(800, 464)
+kind = "bolha"
+height = 46.69010639190674
+half_width = 18.317608
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop35" parent="Sorted" unique_id=859947722 instance=ExtResource("3_tp1vc")]
+position = Vector2(896, 512)
+kind = "bolha"
+height = 40.57631492614746
+half_width = 21.978941
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop36" parent="Sorted" unique_id=116166061 instance=ExtResource("3_tp1vc")]
+position = Vector2(0, 1120)
+kind = "bolha"
+height = 44.062933921813965
+half_width = 20.819912
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop37" parent="Sorted" unique_id=1079055483 instance=ExtResource("3_tp1vc")]
+position = Vector2(-160, 432)
+kind = "bolha"
+height = 34.60712909698486
+half_width = 22.8666
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop38" parent="Sorted" unique_id=476266379 instance=ExtResource("3_tp1vc")]
+position = Vector2(896, 640)
+kind = "bolha"
+height = 32.88114786148071
+half_width = 19.007118
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop39" parent="Sorted" unique_id=1431913751 instance=ExtResource("3_tp1vc")]
+position = Vector2(608, 656)
+kind = "bolha"
+height = 32.511892318725586
+half_width = 24.670954
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop40" parent="Sorted" unique_id=1393166245 instance=ExtResource("3_tp1vc")]
+position = Vector2(-640, 800)
+kind = "bolha"
+height = 33.5956072807312
+half_width = 20.737898
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop41" parent="Sorted" unique_id=79752998 instance=ExtResource("3_tp1vc")]
+position = Vector2(-608, 720)
+kind = "bolha"
+height = 41.238389015197754
+half_width = 22.95707
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop42" parent="Sorted" unique_id=786904906 instance=ExtResource("3_tp1vc")]
+position = Vector2(608, 368)
+kind = "bolha"
+height = 42.86801815032959
+half_width = 17.45795
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="SpawnPoints" type="Node2D" parent="." unique_id=965905639]
+
+[node name="Spawn1" parent="SpawnPoints" unique_id=1837662586 instance=ExtResource("4_whu23")]
+position = Vector2(288, 784)
+enemy_id = "bolha_de_slime"
+count = 2
+
+[node name="Spawn2" parent="SpawnPoints" unique_id=1020507186 instance=ExtResource("4_whu23")]
+position = Vector2(-480, 592)
+enemy_id = "slime_de_juiblex"
+count = 2
+
+[node name="Spawn3" parent="SpawnPoints" unique_id=1552226311 instance=ExtResource("4_whu23")]
+position = Vector2(352, 464)
+enemy_id = "cultista_thullgrime"
+
+[node name="Spawn4" parent="SpawnPoints" unique_id=1945726195 instance=ExtResource("4_whu23")]
+position = Vector2(-64, 896)
+enemy_id = "pudim_negro"

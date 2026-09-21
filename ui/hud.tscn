@@ -1,0 +1,257 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://ui/hud.gd" id="1_rbyyf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_276te"]
+bg_color = Color(0.25, 0.6, 0.9, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_546lt"]
+bg_color = Color(0.75, 0.1, 0.1, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[node name="Hud" type="CanvasLayer" unique_id=1614466486]
+script = ExtResource("1_rbyyf")
+
+[node name="StatBox" type="VBoxContainer" parent="." unique_id=554709048]
+offset_left = 14.0
+offset_top = 10.0
+offset_right = 14.0
+offset_bottom = 10.0
+
+[node name="NameLabel" type="Label" parent="StatBox" unique_id=13073774]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+
+[node name="HpBar" type="ProgressBar" parent="StatBox" unique_id=802970028]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(320, 24)
+layout_mode = 2
+show_percentage = false
+
+[node name="HpLabel" type="Label" parent="StatBox/HpBar" unique_id=520323789]
+unique_name_in_owner = true
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="XpBar" type="ProgressBar" parent="StatBox" unique_id=1120640279]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(320, 10)
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_276te")
+show_percentage = false
+
+[node name="InfoLabel" type="Label" parent="StatBox" unique_id=85989554]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+
+[node name="TimerLabel" type="Label" parent="." unique_id=1791133122]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -90.0
+offset_top = 6.0
+offset_right = 90.0
+theme_override_font_sizes/font_size = 34
+text = "00:00"
+horizontal_alignment = 1
+
+[node name="StageLabel" type="Label" parent="." unique_id=1072731665]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = 48.0
+offset_right = 300.0
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(0.75, 0.7, 0.6, 1)
+horizontal_alignment = 1
+
+[node name="BossPanel" type="VBoxContainer" parent="." unique_id=447071436]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -290.0
+offset_top = 74.0
+offset_right = 290.0
+
+[node name="BossName" type="Label" parent="BossPanel" unique_id=1878675814]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_colors/font_color = Color(1, 0.6, 0.5, 1)
+horizontal_alignment = 1
+
+[node name="BossBar" type="ProgressBar" parent="BossPanel" unique_id=25321442]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(580, 16)
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_546lt")
+show_percentage = false
+
+[node name="WeaponsLabel" type="Label" parent="." unique_id=2085576852]
+unique_name_in_owner = true
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 14.0
+offset_top = -230.0
+offset_right = 460.0
+offset_bottom = -10.0
+theme_override_font_sizes/font_size = 15
+theme_override_colors/font_color = Color(0.85, 0.85, 0.8, 1)
+vertical_alignment = 2
+autowrap_mode = 3
+
+[node name="ToastBox" type="VBoxContainer" parent="." unique_id=1832365261]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -320.0
+offset_top = 130.0
+offset_right = 320.0
+mouse_filter = 2
+
+[node name="PromptLabel" type="Label" parent="." unique_id=1837985876]
+unique_name_in_owner = true
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = -80.0
+offset_right = 320.0
+offset_bottom = -40.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(1, 0.88, 0.45, 1)
+horizontal_alignment = 1
+
+[node name="LevelUpPanel" type="PanelContainer" parent="." unique_id=1040755196]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="LevelUpPanel" unique_id=1749255640]
+layout_mode = 2
+
+[node name="LvTitle" type="Label" parent="LevelUpPanel/VBox" unique_id=374274798]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+theme_override_colors/font_color = Color(1, 0.9, 0.5, 1)
+text = "Nível"
+
+[node name="OfferBox" type="VBoxContainer" parent="LevelUpPanel/VBox" unique_id=1859755159]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="RerollBtn" type="Button" parent="LevelUpPanel/VBox" unique_id=1519753920]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="PausePanel" type="PanelContainer" parent="." unique_id=744099025]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="PausePanel" unique_id=2021512559]
+custom_minimum_size = Vector2(380, 0)
+layout_mode = 2
+
+[node name="PauseTitle" type="Label" parent="PausePanel/VBox" unique_id=1385986146]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Pausa"
+
+[node name="ResumeBtn" type="Button" parent="PausePanel/VBox" unique_id=2075380963]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Continuar (Esc)"
+
+[node name="AimBtn" type="Button" parent="PausePanel/VBox" unique_id=1296607945]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="VolRow" type="HBoxContainer" parent="PausePanel/VBox" unique_id=1943235158]
+layout_mode = 2
+
+[node name="VolText" type="Label" parent="PausePanel/VBox/VolRow" unique_id=1333994695]
+layout_mode = 2
+text = "Volume"
+
+[node name="VolSlider" type="HSlider" parent="PausePanel/VBox/VolRow" unique_id=723196627]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.05
+
+[node name="QuitBtn" type="Button" parent="PausePanel/VBox" unique_id=1730098812]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Abandonar run"
+
+[node name="ResultPanel" type="PanelContainer" parent="." unique_id=1850503824]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="ResultPanel" unique_id=51232546]
+custom_minimum_size = Vector2(520, 0)
+layout_mode = 2
+
+[node name="ResultTitle" type="Label" parent="ResultPanel/VBox" unique_id=737180250]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+theme_override_colors/font_color = Color(1, 0.9, 0.5, 1)
+
+[node name="ResultText" type="Label" parent="ResultPanel/VBox" unique_id=1826369404]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Row" type="HBoxContainer" parent="ResultPanel/VBox" unique_id=1094964594]
+layout_mode = 2
+
+[node name="AgainBtn" type="Button" parent="ResultPanel/VBox/Row" unique_id=371463218]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Jogar de novo"
+
+[node name="MenuBtn" type="Button" parent="ResultPanel/VBox/Row" unique_id=1416827825]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Voltar ao Quartel"

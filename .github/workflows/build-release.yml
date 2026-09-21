@@ -1,0 +1,105 @@
+name: Build and Release
+
+# Push na main: roda testes, exporta o .exe do Windows e publica o release "latest" (pré-lançamento)
+# para os playtesters. Pull request: só roda os testes.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  GODOT_VERSION: "4.7.2"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: chickensoft-games/setup-godot@v2
+        with:
+          version: ${{ env.GODOT_VERSION }}
+          use-dotnet: false
+          include-templates: true
+
+      - name: Importar o projeto
+        run: godot --headless --path . --import || true
+
+      - name: Testes de unidade (core)
+        run: godot --headless --path . -s tests/run_all.gd
+
+      - name: Fumaça (menu + 8 fases)
+        run: godot --headless --path . res://tools/smoke.tscn
+
+  release:
+    needs: test
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    env:
+      # opcional: sem o segredo o passo de anúncio é pulado
+      DISCORD_WEBHOOK_DOWNLOADS: ${{ secrets.DISCORD_WEBHOOK_DOWNLOADS }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: chickensoft-games/setup-godot@v2
+        with:
+          version: ${{ env.GODOT_VERSION }}
+          use-dotnet: false
+          include-templates: true
+
+      - name: Versão do jogo
+        id: ver
+        run: |
+          V=$(grep -oP 'VERSION := "\K[^"]+' core/version.gd)
+          echo "version=$V" >> "$GITHUB_OUTPUT"
+
+      - name: Importar o projeto
+        run: godot --headless --path . --import || true
+
+      - name: Exportar Windows (.exe único)
+        run: |
+          mkdir -p build
+          godot --headless --path . --export-release "Windows Desktop" build/NottgardSurvivors.exe
+          ls -la build
+
+      - name: Empacotar
+        run: |
+          cd build
+          zip -9 NottgardSurvivors-windows.zip NottgardSurvivors.exe
+
+      - name: Mover a tag latest para este commit
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git tag -f latest "${{ github.sha }}"
+          git push -f origin latest
+
+      - name: Publicar release latest
+        uses: ncipollo/release-action@v1
+        with:
+          tag: latest
+          name: "Playtest v${{ steps.ver.outputs.version }} (${{ github.sha }})"
+          body: |
+            Build automática de playtest — Nottgard Survivors v${{ steps.ver.outputs.version }}
+            Commit: ${{ github.sha }}
+
+            **Como jogar:** baixe `NottgardSurvivors-windows.zip` (ou o `.exe` direto), extraia e abra.
+            **Como reportar:** dentro do jogo, F6 tira print, F5 abre o bloco de notas e F7 gera um `.zip`
+            de evidência ao lado do executável. Envie esse `.zip` ao responsável.
+          allowUpdates: true
+          replacesArtifacts: true
+          removeArtifacts: true
+          prerelease: true
+          makeLatest: true
+          artifacts: build/NottgardSurvivors-windows.zip,build/NottgardSurvivors.exe
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Anunciar aos playtesters no Discord (opcional)
+        if: env.DISCORD_WEBHOOK_DOWNLOADS != ''
+        run: |
+          MSG="**Nottgard Survivors v${{ steps.ver.outputs.version }}** — nova build de playtest disponível: https://github.com/${{ github.repository }}/releases/tag/latest"
+          jq -n --arg content "$MSG" '{content: $content}' | curl -sS -X POST -H "Content-Type: application/json" -d @- "$DISCORD_WEBHOOK_DOWNLOADS"

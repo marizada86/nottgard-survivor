@@ -1,0 +1,209 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://ui/ground.gd" id="1_lqgv8"]
+[ext_resource type="PackedScene" path="res://ui/hero_view.tscn" id="2_lp7os"]
+[ext_resource type="PackedScene" path="res://ui/prop.tscn" id="3_d55i6"]
+[ext_resource type="PackedScene" path="res://ui/spawn_point.tscn" id="4_wyecu"]
+
+[node name="Stage" type="Node2D" unique_id=543164556]
+
+[node name="Ground" type="Node2D" parent="." unique_id=1109015286]
+z_index = -100
+script = ExtResource("1_lqgv8")
+color_a = Color(0.13333334, 0.12156863, 0.14117648, 1)
+color_b = Color(0.16862746, 0.14901961, 0.16078432, 1)
+
+[node name="Sorted" type="Node2D" parent="." unique_id=1515329591]
+y_sort_enabled = true
+
+[node name="Hero" parent="Sorted" unique_id=629349748 instance=ExtResource("2_lp7os")]
+position = Vector2(0, 640)
+
+[node name="Prop1" parent="Sorted" unique_id=71309628 instance=ExtResource("3_d55i6")]
+position = Vector2(736, 624)
+height = 74.3446683883667
+color = Color(0.24313726, 0.22352941, 0.24313726, 1)
+
+[node name="Prop2" parent="Sorted" unique_id=1226873573 instance=ExtResource("3_d55i6")]
+position = Vector2(-96, 464)
+height = 48.92111420631409
+color = Color(0.24313726, 0.22352941, 0.24313726, 1)
+
+[node name="Prop3" parent="Sorted" unique_id=1565691315 instance=ExtResource("3_d55i6")]
+position = Vector2(320, 800)
+height = 68.43491792678833
+color = Color(0.33396077, 0.31670588, 0.33396077, 1)
+
+[node name="Prop4" parent="Sorted" unique_id=1854178684 instance=ExtResource("3_d55i6")]
+position = Vector2(-640, 512)
+height = 69.36421394348145
+color = Color(0.33396077, 0.31670588, 0.33396077, 1)
+
+[node name="Prop5" parent="Sorted" unique_id=2142142164 instance=ExtResource("3_d55i6")]
+position = Vector2(-128, 384)
+height = 58.48362922668457
+color = Color(0.33396077, 0.31670588, 0.33396077, 1)
+
+[node name="Prop6" parent="Sorted" unique_id=1356764939 instance=ExtResource("3_d55i6")]
+position = Vector2(-96, 1104)
+height = 72.23411321640015
+color = Color(0.24313726, 0.22352941, 0.24313726, 1)
+
+[node name="Prop7" parent="Sorted" unique_id=762937594 instance=ExtResource("3_d55i6")]
+position = Vector2(32, 944)
+height = 69.77085
+color = Color(0.24313726, 0.22352941, 0.24313726, 1)
+
+[node name="Prop8" parent="Sorted" unique_id=1742428142 instance=ExtResource("3_d55i6")]
+position = Vector2(160, 1040)
+height = 64.74004983901978
+color = Color(0.33396077, 0.31670588, 0.33396077, 1)
+
+[node name="Prop9" parent="Sorted" unique_id=825236449 instance=ExtResource("3_d55i6")]
+position = Vector2(704, 416)
+height = 50.45952
+color = Color(0.24313726, 0.22352941, 0.24313726, 1)
+
+[node name="Prop10" parent="Sorted" unique_id=916168172 instance=ExtResource("3_d55i6")]
+position = Vector2(-992, 688)
+height = 64.48063373565674
+color = Color(0.33396077, 0.31670588, 0.33396077, 1)
+
+[node name="Prop11" parent="Sorted" unique_id=1369957546 instance=ExtResource("3_d55i6")]
+position = Vector2(-544, 432)
+height = 49.103819131851196
+color = Color(0.33396077, 0.31670588, 0.33396077, 1)
+
+[node name="Prop12" parent="Sorted" unique_id=614991920 instance=ExtResource("3_d55i6")]
+position = Vector2(-864, 560)
+height = 50.23734927177429
+color = Color(0.24313726, 0.22352941, 0.24313726, 1)
+
+[node name="Prop13" parent="Sorted" unique_id=1031121108 instance=ExtResource("3_d55i6")]
+position = Vector2(544, 560)
+height = 69.93659019470215
+color = Color(0.24313726, 0.22352941, 0.24313726, 1)
+
+[node name="Prop14" parent="Sorted" unique_id=1987349174 instance=ExtResource("3_d55i6")]
+position = Vector2(-704, 800)
+height = 49.615
+color = Color(0.24313726, 0.22352941, 0.24313726, 1)
+
+[node name="Prop15" parent="Sorted" unique_id=1787801577 instance=ExtResource("3_d55i6")]
+position = Vector2(256, 896)
+height = 68.45915079116821
+color = Color(0.33396077, 0.31670588, 0.33396077, 1)
+
+[node name="Prop16" parent="Sorted" unique_id=1735198504 instance=ExtResource("3_d55i6")]
+position = Vector2(32, 752)
+height = 61.99861764907837
+color = Color(0.33396077, 0.31670588, 0.33396077, 1)
+
+[node name="Prop17" parent="Sorted" unique_id=331549852 instance=ExtResource("3_d55i6")]
+position = Vector2(-160, 848)
+height = 69.83585
+color = Color(0.24313726, 0.22352941, 0.24313726, 1)
+
+[node name="Prop18" parent="Sorted" unique_id=1241812236 instance=ExtResource("3_d55i6")]
+position = Vector2(832, 768)
+height = 70.85472822189331
+color = Color(0.33396077, 0.31670588, 0.33396077, 1)
+
+[node name="Prop19" parent="Sorted" unique_id=1742867384 instance=ExtResource("3_d55i6")]
+position = Vector2(320, 384)
+height = 49.109601974487305
+color = Color(0.33396077, 0.31670588, 0.33396077, 1)
+
+[node name="Prop20" parent="Sorted" unique_id=803865498 instance=ExtResource("3_d55i6")]
+position = Vector2(832, 480)
+height = 63.737804889678955
+color = Color(0.24313726, 0.22352941, 0.24313726, 1)
+
+[node name="Prop21" parent="Sorted" unique_id=1371167552 instance=ExtResource("3_d55i6")]
+position = Vector2(-352, 560)
+height = 54.943342208862305
+color = Color(0.24313726, 0.22352941, 0.24313726, 1)
+
+[node name="Prop22" parent="Sorted" unique_id=1696730153 instance=ExtResource("3_d55i6")]
+position = Vector2(640, 480)
+height = 73.74029159545898
+color = Color(0.24313726, 0.22352941, 0.24313726, 1)
+
+[node name="Prop23" parent="Sorted" unique_id=1245577698 instance=ExtResource("3_d55i6")]
+position = Vector2(-576, 640)
+height = 56.179139614105225
+color = Color(0.33396077, 0.31670588, 0.33396077, 1)
+
+[node name="Prop24" parent="Sorted" unique_id=1954512529 instance=ExtResource("3_d55i6")]
+position = Vector2(128, 544)
+height = 59.424519538879395
+color = Color(0.33396077, 0.31670588, 0.33396077, 1)
+
+[node name="Prop25" parent="Sorted" unique_id=2106103433 instance=ExtResource("3_d55i6")]
+position = Vector2(928, 656)
+height = 72.04757452011108
+color = Color(0.33396077, 0.31670588, 0.33396077, 1)
+
+[node name="Prop26" parent="Sorted" unique_id=187975627 instance=ExtResource("3_d55i6")]
+position = Vector2(1088, 640)
+height = 65.16366004943848
+color = Color(0.33396077, 0.31670588, 0.33396077, 1)
+
+[node name="Prop27" parent="Sorted" unique_id=163024570 instance=ExtResource("3_d55i6")]
+position = Vector2(-32, 176)
+height = 50.438300371170044
+color = Color(0.24313726, 0.22352941, 0.24313726, 1)
+
+[node name="Prop28" parent="Sorted" unique_id=787147045 instance=ExtResource("3_d55i6")]
+position = Vector2(224, 592)
+height = 50.44654726982117
+color = Color(0.33396077, 0.31670588, 0.33396077, 1)
+
+[node name="Prop29" parent="Sorted" unique_id=172080952 instance=ExtResource("3_d55i6")]
+position = Vector2(672, 720)
+height = 54.63571071624756
+color = Color(0.24313726, 0.22352941, 0.24313726, 1)
+
+[node name="Prop30" parent="Sorted" unique_id=1110488853 instance=ExtResource("3_d55i6")]
+position = Vector2(480, 496)
+height = 66.15527629852295
+color = Color(0.33396077, 0.31670588, 0.33396077, 1)
+
+[node name="Prop31" parent="Sorted" unique_id=1844896192 instance=ExtResource("3_d55i6")]
+position = Vector2(-384, 928)
+height = 48.37814927101135
+color = Color(0.33396077, 0.31670588, 0.33396077, 1)
+
+[node name="Prop32" parent="Sorted" unique_id=577635650 instance=ExtResource("3_d55i6")]
+position = Vector2(-480, 560)
+height = 61.51251554489136
+color = Color(0.24313726, 0.22352941, 0.24313726, 1)
+
+[node name="Prop33" parent="Sorted" unique_id=876385183 instance=ExtResource("3_d55i6")]
+position = Vector2(-256, 320)
+height = 56.342196464538574
+color = Color(0.33396077, 0.31670588, 0.33396077, 1)
+
+[node name="Prop34" parent="Sorted" unique_id=966483968 instance=ExtResource("3_d55i6")]
+position = Vector2(-288, 656)
+height = 48.075764179229736
+color = Color(0.33396077, 0.31670588, 0.33396077, 1)
+
+[node name="SpawnPoints" type="Node2D" parent="." unique_id=767912648]
+
+[node name="Spawn1" parent="SpawnPoints" unique_id=1837662586 instance=ExtResource("4_wyecu")]
+position = Vector2(288, 784)
+count = 2
+
+[node name="Spawn2" parent="SpawnPoints" unique_id=738852061 instance=ExtResource("4_wyecu")]
+position = Vector2(-480, 592)
+enemy_id = "slime_corrosivo"
+count = 2
+
+[node name="Spawn3" parent="SpawnPoints" unique_id=1345999871 instance=ExtResource("4_wyecu")]
+position = Vector2(352, 464)
+enemy_id = "cultista_adaga"
+
+[node name="Spawn4" parent="SpawnPoints" unique_id=2127028927 instance=ExtResource("4_wyecu")]
+position = Vector2(-64, 896)
+enemy_id = "cultista_arqueiro"

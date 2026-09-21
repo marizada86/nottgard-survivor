@@ -1,0 +1,243 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://ui/menu.gd" id="1_udkah"]
+[ext_resource type="FontFile" path="res://assets/fonts/CinzelDecorative-Bold.ttf" id="2_4c782"]
+
+[node name="Menu" type="Control" unique_id=1228160481]
+layout_mode = 3
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_udkah")
+
+[node name="Bg" type="ColorRect" parent="." unique_id=1411787953]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.06, 0.05, 0.08, 1)
+
+[node name="Title" type="Label" parent="." unique_id=1041963852]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 10.0
+offset_right = 28.0
+offset_bottom = 10.0
+theme_override_fonts/font = ExtResource("2_4c782")
+theme_override_font_sizes/font_size = 44
+theme_override_colors/font_color = Color(0.9, 0.75, 0.42, 1)
+text = "NOTTGARD SURVIVORS"
+
+[node name="Subtitle" type="Label" parent="." unique_id=221922516]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 68.0
+offset_right = 32.0
+offset_bottom = 68.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.65, 0.6, 0.55, 1)
+text = "O Abismo desce. Sobreviva, evolua, derrube o que vier."
+
+[node name="CoinsLabel" type="Label" parent="." unique_id=2131211705]
+unique_name_in_owner = true
+layout_mode = 0
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -300.0
+offset_top = 22.0
+offset_right = -28.0
+theme_override_font_sizes/font_size = 26
+theme_override_colors/font_color = Color(1, 0.85, 0.3, 1)
+text = "Moedas: 0"
+horizontal_alignment = 2
+
+[node name="VersionLabel" type="Label" parent="." unique_id=143086972]
+unique_name_in_owner = true
+layout_mode = 0
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 28.0
+offset_top = -30.0
+offset_bottom = -6.0
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.5, 0.5, 0.5, 1)
+
+[node name="Tabs" type="TabContainer" parent="." unique_id=1399597162]
+unique_name_in_owner = true
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 104.0
+offset_right = -24.0
+offset_bottom = -34.0
+current_tab = 0
+
+[node name="Jogar" type="HBoxContainer" parent="Tabs" unique_id=987154492]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 22
+metadata/_tab_index = 0
+
+[node name="Left" type="VBoxContainer" parent="Tabs/Jogar" unique_id=1743971936]
+custom_minimum_size = Vector2(290, 0)
+layout_mode = 2
+
+[node name="HeroTitle" type="Label" parent="Tabs/Jogar/Left" unique_id=1189575548]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.9, 0.75, 0.42, 1)
+text = "Herói"
+
+[node name="HeroList" type="ItemList" parent="Tabs/Jogar/Left" unique_id=1841182915]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Mid" type="VBoxContainer" parent="Tabs/Jogar" unique_id=571730608]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+
+[node name="Portrait" type="TextureRect" parent="Tabs/Jogar/Mid" unique_id=1532363712]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 240)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="HeroInfo" type="RichTextLabel" parent="Tabs/Jogar/Mid" unique_id=1098406521]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+
+[node name="Right" type="VBoxContainer" parent="Tabs/Jogar" unique_id=2092207490]
+custom_minimum_size = Vector2(340, 0)
+layout_mode = 2
+
+[node name="StageTitle" type="Label" parent="Tabs/Jogar/Right" unique_id=1461444343]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.9, 0.75, 0.42, 1)
+text = "Fase (camada do Abismo)"
+
+[node name="StageList" type="ItemList" parent="Tabs/Jogar/Right" unique_id=705993248]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 230)
+layout_mode = 2
+
+[node name="StageInfo" type="RichTextLabel" parent="Tabs/Jogar/Right" unique_id=1504480123]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+
+[node name="PlayBtn" type="Button" parent="Tabs/Jogar/Right" unique_id=1521846620]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 58)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "JOGAR"
+
+[node name="Melhorias" type="ScrollContainer" parent="Tabs" unique_id=788457525]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="UpgradeBox" type="VBoxContainer" parent="Tabs/Melhorias" unique_id=1606240188]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Conquistas" type="ScrollContainer" parent="Tabs" unique_id=148399990]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="AchBox" type="VBoxContainer" parent="Tabs/Conquistas" unique_id=1061149120]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="Códex" type="HBoxContainer" parent="Tabs" unique_id=1795758483]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 18
+metadata/_tab_index = 3
+
+[node name="Left" type="VBoxContainer" parent="Tabs/Códex" unique_id=246668084]
+custom_minimum_size = Vector2(340, 0)
+layout_mode = 2
+
+[node name="CodexCat" type="OptionButton" parent="Tabs/Códex/Left" unique_id=601095340]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CodexList" type="ItemList" parent="Tabs/Códex/Left" unique_id=2005390153]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CodexText" type="RichTextLabel" parent="Tabs/Códex" unique_id=1075091208]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+
+[node name="Opções" type="VBoxContainer" parent="Tabs" unique_id=2098473828]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 10
+metadata/_tab_index = 4
+
+[node name="AimLabel" type="Label" parent="Tabs/Opções" unique_id=1445271498]
+layout_mode = 2
+text = "Modo de mira (também: Tab durante a run)"
+
+[node name="AimOpt" type="OptionButton" parent="Tabs/Opções" unique_id=352884939]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="VolLabel" type="Label" parent="Tabs/Opções" unique_id=955941162]
+layout_mode = 2
+text = "Volume"
+
+[node name="VolOpt" type="HSlider" parent="Tabs/Opções" unique_id=1696047077]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(340, 24)
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+
+[node name="FullOpt" type="CheckBox" parent="Tabs/Opções" unique_id=1883920678]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Tela cheia (F11)"
+
+[node name="DiffLabel" type="Label" parent="Tabs/Opções" unique_id=2023613019]
+layout_mode = 2
+text = "Maldição (dificuldade)"
+
+[node name="DiffOpt" type="OptionButton" parent="Tabs/Opções" unique_id=1607044634]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="GuideBtn" type="Button" parent="Tabs/Opções" unique_id=1157184350]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Guia do playtester (F1)"
+
+[node name="ResetBtn" type="Button" parent="Tabs/Opções" unique_id=415018306]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Apagar progresso"

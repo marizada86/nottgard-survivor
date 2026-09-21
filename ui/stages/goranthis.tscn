@@ -1,0 +1,220 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://ui/ground.gd" id="1_pahhp"]
+[ext_resource type="PackedScene" path="res://ui/hero_view.tscn" id="2_g3bv1"]
+[ext_resource type="PackedScene" path="res://ui/prop.tscn" id="3_txbf3"]
+[ext_resource type="PackedScene" path="res://ui/spawn_point.tscn" id="4_ouecp"]
+
+[node name="Stage" type="Node2D" unique_id=815157521]
+
+[node name="Ground" type="Node2D" parent="." unique_id=2120377807]
+z_index = -100
+script = ExtResource("1_pahhp")
+color_a = Color(0.22745098, 0.21176471, 0.15686275, 1)
+color_b = Color(0.27450982, 0.25490198, 0.18039216, 1)
+
+[node name="Sorted" type="Node2D" parent="." unique_id=2114543858]
+y_sort_enabled = true
+
+[node name="Hero" parent="Sorted" unique_id=629349748 instance=ExtResource("2_g3bv1")]
+position = Vector2(0, 640)
+
+[node name="Prop1" parent="Sorted" unique_id=71309628 instance=ExtResource("3_txbf3")]
+position = Vector2(-512, 832)
+kind = "cachoeira"
+height = 72.54923164844513
+color = Color(0.8101961, 0.77568626, 0.5686275, 1)
+
+[node name="Prop2" parent="Sorted" unique_id=1474927214 instance=ExtResource("3_txbf3")]
+position = Vector2(-704, 832)
+kind = "cachoeira"
+height = 98.55351090431213
+color = Color(0.8101961, 0.77568626, 0.5686275, 1)
+
+[node name="Prop3" parent="Sorted" unique_id=1064445897 instance=ExtResource("3_txbf3")]
+position = Vector2(-640, 448)
+kind = "cachoeira"
+height = 91.7946982383728
+color = Color(0.8101961, 0.77568626, 0.5686275, 1)
+
+[node name="Prop4" parent="Sorted" unique_id=655341085 instance=ExtResource("3_txbf3")]
+position = Vector2(-864, 592)
+kind = "cachoeira"
+height = 88.89152348041534
+color = Color(0.78431374, 0.74509805, 0.50980395, 1)
+
+[node name="Prop5" parent="Sorted" unique_id=832406423 instance=ExtResource("3_txbf3")]
+position = Vector2(544, 400)
+kind = "cachoeira"
+height = 111.14894986152649
+color = Color(0.78431374, 0.74509805, 0.50980395, 1)
+
+[node name="Prop6" parent="Sorted" unique_id=1228611944 instance=ExtResource("3_txbf3")]
+position = Vector2(-160, 560)
+kind = "cachoeira"
+height = 96.45631313323975
+color = Color(0.78431374, 0.74509805, 0.50980395, 1)
+
+[node name="Prop7" parent="Sorted" unique_id=503975516 instance=ExtResource("3_txbf3")]
+position = Vector2(928, 688)
+kind = "cachoeira"
+height = 99.03099775314331
+color = Color(0.78431374, 0.74509805, 0.50980395, 1)
+
+[node name="Prop8" parent="Sorted" unique_id=1481858815 instance=ExtResource("3_txbf3")]
+position = Vector2(416, 880)
+kind = "cachoeira"
+height = 82.93329119682312
+color = Color(0.78431374, 0.74509805, 0.50980395, 1)
+
+[node name="Prop9" parent="Sorted" unique_id=2130717562 instance=ExtResource("3_txbf3")]
+position = Vector2(-32, 400)
+kind = "cachoeira"
+height = 82.90219902992249
+color = Color(0.78431374, 0.74509805, 0.50980395, 1)
+
+[node name="Prop10" parent="Sorted" unique_id=1978792044 instance=ExtResource("3_txbf3")]
+position = Vector2(672, 528)
+kind = "cachoeira"
+height = 108.13538074493408
+color = Color(0.8101961, 0.77568626, 0.5686275, 1)
+
+[node name="Prop11" parent="Sorted" unique_id=143304454 instance=ExtResource("3_txbf3")]
+position = Vector2(-736, 720)
+kind = "cachoeira"
+height = 97.21188068389893
+color = Color(0.78431374, 0.74509805, 0.50980395, 1)
+
+[node name="Prop12" parent="Sorted" unique_id=1081772215 instance=ExtResource("3_txbf3")]
+position = Vector2(-224, 208)
+kind = "cachoeira"
+height = 111.87296390533447
+color = Color(0.78431374, 0.74509805, 0.50980395, 1)
+
+[node name="Prop13" parent="Sorted" unique_id=1170678254 instance=ExtResource("3_txbf3")]
+position = Vector2(256, 1024)
+kind = "cachoeira"
+height = 94.69146251678467
+color = Color(0.8101961, 0.77568626, 0.5686275, 1)
+
+[node name="Prop14" parent="Sorted" unique_id=682105577 instance=ExtResource("3_txbf3")]
+position = Vector2(256, 672)
+kind = "cachoeira"
+height = 87.12840557098389
+color = Color(0.78431374, 0.74509805, 0.50980395, 1)
+
+[node name="Prop15" parent="Sorted" unique_id=1969603897 instance=ExtResource("3_txbf3")]
+position = Vector2(-384, 896)
+kind = "cachoeira"
+height = 107.71370530128479
+color = Color(0.78431374, 0.74509805, 0.50980395, 1)
+
+[node name="Prop16" parent="Sorted" unique_id=2065134365 instance=ExtResource("3_txbf3")]
+position = Vector2(608, 880)
+kind = "cachoeira"
+height = 91.33834719657898
+color = Color(0.78431374, 0.74509805, 0.50980395, 1)
+
+[node name="Prop17" parent="Sorted" unique_id=1923319047 instance=ExtResource("3_txbf3")]
+position = Vector2(-672, 624)
+kind = "cachoeira"
+height = 110.42224287986755
+color = Color(0.8101961, 0.77568626, 0.5686275, 1)
+
+[node name="Prop18" parent="Sorted" unique_id=24782678 instance=ExtResource("3_txbf3")]
+position = Vector2(-512, 640)
+kind = "cachoeira"
+height = 92.15218305587769
+color = Color(0.78431374, 0.74509805, 0.50980395, 1)
+
+[node name="Prop19" parent="Sorted" unique_id=1583340979 instance=ExtResource("3_txbf3")]
+position = Vector2(992, 592)
+kind = "cachoeira"
+height = 76.81761860847473
+color = Color(0.78431374, 0.74509805, 0.50980395, 1)
+
+[node name="Prop20" parent="Sorted" unique_id=108054488 instance=ExtResource("3_txbf3")]
+position = Vector2(320, 224)
+kind = "cachoeira"
+height = 110.28619050979614
+color = Color(0.78431374, 0.74509805, 0.50980395, 1)
+
+[node name="Prop21" parent="Sorted" unique_id=978301489 instance=ExtResource("3_txbf3")]
+position = Vector2(-32, 208)
+kind = "cachoeira"
+height = 87.76671230792999
+color = Color(0.78431374, 0.74509805, 0.50980395, 1)
+
+[node name="Prop22" parent="Sorted" unique_id=1333335017 instance=ExtResource("3_txbf3")]
+position = Vector2(-320, 1024)
+kind = "cachoeira"
+height = 105.7857871055603
+color = Color(0.8101961, 0.77568626, 0.5686275, 1)
+
+[node name="Prop23" parent="Sorted" unique_id=1187224543 instance=ExtResource("3_txbf3")]
+position = Vector2(-224, 880)
+kind = "cachoeira"
+height = 87.2915107011795
+color = Color(0.78431374, 0.74509805, 0.50980395, 1)
+
+[node name="Prop24" parent="Sorted" unique_id=900805486 instance=ExtResource("3_txbf3")]
+position = Vector2(-96, 304)
+kind = "cachoeira"
+height = 91.94264888763428
+color = Color(0.8101961, 0.77568626, 0.5686275, 1)
+
+[node name="Prop25" parent="Sorted" unique_id=500922630 instance=ExtResource("3_txbf3")]
+position = Vector2(-512, 384)
+kind = "cachoeira"
+height = 110.85473299026489
+color = Color(0.8101961, 0.77568626, 0.5686275, 1)
+
+[node name="Prop26" parent="Sorted" unique_id=1220941755 instance=ExtResource("3_txbf3")]
+position = Vector2(320, 480)
+kind = "cachoeira"
+height = 81.32975399494171
+color = Color(0.8101961, 0.77568626, 0.5686275, 1)
+
+[node name="Prop27" parent="Sorted" unique_id=1145163925 instance=ExtResource("3_txbf3")]
+position = Vector2(576, 480)
+kind = "cachoeira"
+height = 109.80785608291626
+color = Color(0.78431374, 0.74509805, 0.50980395, 1)
+
+[node name="Prop28" parent="Sorted" unique_id=1731105139 instance=ExtResource("3_txbf3")]
+position = Vector2(224, 560)
+kind = "cachoeira"
+height = 106.91812992095947
+color = Color(0.8101961, 0.77568626, 0.5686275, 1)
+
+[node name="Prop29" parent="Sorted" unique_id=374606669 instance=ExtResource("3_txbf3")]
+position = Vector2(-512, 576)
+kind = "cachoeira"
+height = 107.05108165740967
+color = Color(0.8101961, 0.77568626, 0.5686275, 1)
+
+[node name="Prop30" parent="Sorted" unique_id=1517038838 instance=ExtResource("3_txbf3")]
+position = Vector2(0, 896)
+kind = "cachoeira"
+height = 90.35244226455688
+color = Color(0.78431374, 0.74509805, 0.50980395, 1)
+
+[node name="SpawnPoints" type="Node2D" parent="." unique_id=1423137656]
+
+[node name="Spawn1" parent="SpawnPoints" unique_id=1837662586 instance=ExtResource("4_ouecp")]
+position = Vector2(288, 784)
+enemy_id = "ilusao_de_socothbenoth"
+count = 2
+
+[node name="Spawn2" parent="SpawnPoints" unique_id=15924959 instance=ExtResource("4_ouecp")]
+position = Vector2(-480, 592)
+enemy_id = "guardiao_de_goranthis"
+count = 2
+
+[node name="Spawn3" parent="SpawnPoints" unique_id=478486145 instance=ExtResource("4_ouecp")]
+position = Vector2(352, 464)
+enemy_id = "cultista_de_socothbenoth"
+
+[node name="Spawn4" parent="SpawnPoints" unique_id=714551419 instance=ExtResource("4_ouecp")]
+position = Vector2(-64, 896)
+enemy_id = "slime_de_juiblex"

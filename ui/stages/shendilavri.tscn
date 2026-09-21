@@ -1,0 +1,244 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://ui/ground.gd" id="1_83ovl"]
+[ext_resource type="PackedScene" path="res://ui/hero_view.tscn" id="2_h4h1k"]
+[ext_resource type="PackedScene" path="res://ui/prop.tscn" id="3_hgfgd"]
+[ext_resource type="PackedScene" path="res://ui/spawn_point.tscn" id="4_xlgwy"]
+
+[node name="Stage" type="Node2D" unique_id=1133947863]
+
+[node name="Ground" type="Node2D" parent="." unique_id=447917201]
+z_index = -100
+script = ExtResource("1_83ovl")
+color_a = Color(0.20392157, 0.11764706, 0.17254902, 1)
+color_b = Color(0.2509804, 0.14117648, 0.20392157, 1)
+
+[node name="Sorted" type="Node2D" parent="." unique_id=1353919478]
+y_sort_enabled = true
+
+[node name="Hero" parent="Sorted" unique_id=629349748 instance=ExtResource("2_h4h1k")]
+position = Vector2(0, 640)
+
+[node name="Prop1" parent="Sorted" unique_id=71309628 instance=ExtResource("3_hgfgd")]
+position = Vector2(128, 512)
+kind = "cristal"
+height = 72.67596
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop2" parent="Sorted" unique_id=1364928834 instance=ExtResource("3_hgfgd")]
+position = Vector2(416, 400)
+kind = "cristal"
+height = 58.306732
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop3" parent="Sorted" unique_id=771603056 instance=ExtResource("3_hgfgd")]
+position = Vector2(-384, 832)
+kind = "cristal"
+height = 52.311947
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop4" parent="Sorted" unique_id=1747862366 instance=ExtResource("3_hgfgd")]
+position = Vector2(-224, 368)
+kind = "cristal"
+height = 61.058407
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop5" parent="Sorted" unique_id=1024179555 instance=ExtResource("3_hgfgd")]
+position = Vector2(-768, 480)
+kind = "cristal"
+height = 67.90521
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop6" parent="Sorted" unique_id=1439224802 instance=ExtResource("3_hgfgd")]
+position = Vector2(1024, 672)
+kind = "cristal"
+height = 74.96579
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop7" parent="Sorted" unique_id=272757137 instance=ExtResource("3_hgfgd")]
+position = Vector2(224, 592)
+kind = "cristal"
+height = 57.335045
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop8" parent="Sorted" unique_id=1577308904 instance=ExtResource("3_hgfgd")]
+position = Vector2(-288, 944)
+kind = "cristal"
+height = 60.72767
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop9" parent="Sorted" unique_id=1110188362 instance=ExtResource("3_hgfgd")]
+position = Vector2(-1056, 592)
+kind = "cristal"
+height = 78.91531
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop10" parent="Sorted" unique_id=177603148 instance=ExtResource("3_hgfgd")]
+position = Vector2(32, 752)
+kind = "cristal"
+height = 75.588066
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop11" parent="Sorted" unique_id=308744892 instance=ExtResource("3_hgfgd")]
+position = Vector2(-544, 656)
+kind = "cristal"
+height = 56.90702
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop12" parent="Sorted" unique_id=1767565670 instance=ExtResource("3_hgfgd")]
+position = Vector2(224, 752)
+kind = "cristal"
+height = 56.39044
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop13" parent="Sorted" unique_id=860469442 instance=ExtResource("3_hgfgd")]
+position = Vector2(-576, 544)
+kind = "cristal"
+height = 57.314724
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop14" parent="Sorted" unique_id=404028891 instance=ExtResource("3_hgfgd")]
+position = Vector2(352, 592)
+kind = "cristal"
+height = 75.20148
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop15" parent="Sorted" unique_id=969183574 instance=ExtResource("3_hgfgd")]
+position = Vector2(896, 704)
+kind = "cristal"
+height = 63.6082
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop16" parent="Sorted" unique_id=1706937533 instance=ExtResource("3_hgfgd")]
+position = Vector2(64, 1152)
+kind = "cristal"
+height = 57.2879
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop17" parent="Sorted" unique_id=1040714080 instance=ExtResource("3_hgfgd")]
+position = Vector2(160, 240)
+kind = "cristal"
+height = 78.5767
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop18" parent="Sorted" unique_id=1794630369 instance=ExtResource("3_hgfgd")]
+position = Vector2(480, 784)
+kind = "cristal"
+height = 74.70838
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop19" parent="Sorted" unique_id=1551245915 instance=ExtResource("3_hgfgd")]
+position = Vector2(480, 592)
+kind = "cristal"
+height = 72.216736
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop20" parent="Sorted" unique_id=507581074 instance=ExtResource("3_hgfgd")]
+position = Vector2(-416, 560)
+kind = "cristal"
+height = 69.76789
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop21" parent="Sorted" unique_id=1898894899 instance=ExtResource("3_hgfgd")]
+position = Vector2(-128, 928)
+kind = "cristal"
+height = 75.60764
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop22" parent="Sorted" unique_id=1421404006 instance=ExtResource("3_hgfgd")]
+position = Vector2(288, 976)
+kind = "cristal"
+height = 73.846634
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop23" parent="Sorted" unique_id=581417617 instance=ExtResource("3_hgfgd")]
+position = Vector2(-128, 800)
+kind = "cristal"
+height = 78.28928
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop24" parent="Sorted" unique_id=653145766 instance=ExtResource("3_hgfgd")]
+position = Vector2(-128, 288)
+kind = "cristal"
+height = 53.916122
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop25" parent="Sorted" unique_id=67928183 instance=ExtResource("3_hgfgd")]
+position = Vector2(0, 1024)
+kind = "cristal"
+height = 57.43168
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop26" parent="Sorted" unique_id=1425085285 instance=ExtResource("3_hgfgd")]
+position = Vector2(288, 880)
+kind = "cristal"
+height = 65.34908
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop27" parent="Sorted" unique_id=1332456377 instance=ExtResource("3_hgfgd")]
+position = Vector2(0, 448)
+kind = "cristal"
+height = 59.72276
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop28" parent="Sorted" unique_id=1571866641 instance=ExtResource("3_hgfgd")]
+position = Vector2(480, 912)
+kind = "cristal"
+height = 57.45184
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop29" parent="Sorted" unique_id=1464643953 instance=ExtResource("3_hgfgd")]
+position = Vector2(-128, 160)
+kind = "cristal"
+height = 74.38002
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop30" parent="Sorted" unique_id=1623916199 instance=ExtResource("3_hgfgd")]
+position = Vector2(128, 928)
+kind = "cristal"
+height = 77.42009
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop31" parent="Sorted" unique_id=497185180 instance=ExtResource("3_hgfgd")]
+position = Vector2(256, 416)
+kind = "cristal"
+height = 67.53464
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop32" parent="Sorted" unique_id=640664038 instance=ExtResource("3_hgfgd")]
+position = Vector2(-416, 720)
+kind = "cristal"
+height = 64.834015
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop33" parent="Sorted" unique_id=210941562 instance=ExtResource("3_hgfgd")]
+position = Vector2(192, 832)
+kind = "cristal"
+height = 57.895508
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop34" parent="Sorted" unique_id=558848017 instance=ExtResource("3_hgfgd")]
+position = Vector2(-288, 432)
+kind = "cristal"
+height = 58.39059
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="SpawnPoints" type="Node2D" parent="." unique_id=749900560]
+
+[node name="Spawn1" parent="SpawnPoints" unique_id=1837662586 instance=ExtResource("4_xlgwy")]
+position = Vector2(288, 784)
+enemy_id = "escravo_de_rivenheart"
+count = 2
+
+[node name="Spawn2" parent="SpawnPoints" unique_id=1371884580 instance=ExtResource("4_xlgwy")]
+position = Vector2(-480, 592)
+enemy_id = "sucubo"
+count = 2
+
+[node name="Spawn3" parent="SpawnPoints" unique_id=1190111160 instance=ExtResource("4_xlgwy")]
+position = Vector2(352, 464)
+enemy_id = "ilusao_de_sucubo"
+
+[node name="Spawn4" parent="SpawnPoints" unique_id=1572094091 instance=ExtResource("4_xlgwy")]
+position = Vector2(-64, 896)
+enemy_id = "guarda_do_castelo"

@@ -1,0 +1,220 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://ui/ground.gd" id="1_t7b4e"]
+[ext_resource type="PackedScene" path="res://ui/hero_view.tscn" id="2_l16w6"]
+[ext_resource type="PackedScene" path="res://ui/prop.tscn" id="3_4tb0h"]
+[ext_resource type="PackedScene" path="res://ui/spawn_point.tscn" id="4_i64nu"]
+
+[node name="Stage" type="Node2D" unique_id=531400661]
+
+[node name="Ground" type="Node2D" parent="." unique_id=333420340]
+z_index = -100
+script = ExtResource("1_t7b4e")
+color_a = Color(0.20392157, 0.15686275, 0.13333334, 1)
+color_b = Color(0.24313726, 0.18431373, 0.14901961, 1)
+
+[node name="Sorted" type="Node2D" parent="." unique_id=125176944]
+y_sort_enabled = true
+
+[node name="Hero" parent="Sorted" unique_id=629349748 instance=ExtResource("2_l16w6")]
+position = Vector2(0, 640)
+
+[node name="Prop1" parent="Sorted" unique_id=71309628 instance=ExtResource("3_4tb0h")]
+position = Vector2(800, 688)
+kind = "rocha"
+height = 84.82065796852112
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop2" parent="Sorted" unique_id=1749728044 instance=ExtResource("3_4tb0h")]
+position = Vector2(416, 656)
+kind = "rocha"
+height = 86.5052843093872
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop3" parent="Sorted" unique_id=404713869 instance=ExtResource("3_4tb0h")]
+position = Vector2(-544, 624)
+kind = "rocha"
+height = 60.542757511138916
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop4" parent="Sorted" unique_id=1057023444 instance=ExtResource("3_4tb0h")]
+position = Vector2(224, 880)
+kind = "rocha"
+height = 73.21301579475403
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop5" parent="Sorted" unique_id=111220789 instance=ExtResource("3_4tb0h")]
+position = Vector2(384, 928)
+kind = "rocha"
+height = 59.89753246307373
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop6" parent="Sorted" unique_id=1747830231 instance=ExtResource("3_4tb0h")]
+position = Vector2(768, 512)
+kind = "rocha"
+height = 78.2253885269165
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop7" parent="Sorted" unique_id=2024013269 instance=ExtResource("3_4tb0h")]
+position = Vector2(-64, 256)
+kind = "rocha"
+height = 59.612287282943726
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop8" parent="Sorted" unique_id=85199516 instance=ExtResource("3_4tb0h")]
+position = Vector2(-128, 864)
+kind = "rocha"
+height = 56.518545746803284
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop9" parent="Sorted" unique_id=753325200 instance=ExtResource("3_4tb0h")]
+position = Vector2(-256, 928)
+kind = "rocha"
+height = 60.1432740688324
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop10" parent="Sorted" unique_id=2126641120 instance=ExtResource("3_4tb0h")]
+position = Vector2(-480, 464)
+kind = "rocha"
+height = 70.06933569908142
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop11" parent="Sorted" unique_id=122247528 instance=ExtResource("3_4tb0h")]
+position = Vector2(-224, 560)
+kind = "rocha"
+height = 72.26208448410034
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop12" parent="Sorted" unique_id=352559789 instance=ExtResource("3_4tb0h")]
+position = Vector2(-160, 176)
+kind = "rocha"
+height = 68.04185688495636
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop13" parent="Sorted" unique_id=59346526 instance=ExtResource("3_4tb0h")]
+position = Vector2(320, 736)
+kind = "rocha"
+height = 71.6392731666565
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop14" parent="Sorted" unique_id=121963103 instance=ExtResource("3_4tb0h")]
+position = Vector2(-416, 816)
+kind = "rocha"
+height = 83.70109796524048
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop15" parent="Sorted" unique_id=422051853 instance=ExtResource("3_4tb0h")]
+position = Vector2(-32, 752)
+kind = "rocha"
+height = 58.80247235298157
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop16" parent="Sorted" unique_id=1216586953 instance=ExtResource("3_4tb0h")]
+position = Vector2(-32, 112)
+kind = "rocha"
+height = 72.64520406723022
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop17" parent="Sorted" unique_id=1005251235 instance=ExtResource("3_4tb0h")]
+position = Vector2(32, 304)
+kind = "rocha"
+height = 85.059072971344
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop18" parent="Sorted" unique_id=1028665978 instance=ExtResource("3_4tb0h")]
+position = Vector2(672, 848)
+kind = "rocha"
+height = 84.2688512802124
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop19" parent="Sorted" unique_id=1424580574 instance=ExtResource("3_4tb0h")]
+position = Vector2(288, 272)
+kind = "rocha"
+height = 70.31641244888306
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop20" parent="Sorted" unique_id=640238105 instance=ExtResource("3_4tb0h")]
+position = Vector2(64, 416)
+kind = "rocha"
+height = 61.75642
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop21" parent="Sorted" unique_id=57987494 instance=ExtResource("3_4tb0h")]
+position = Vector2(640, 384)
+kind = "rocha"
+height = 82.69304752349854
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop22" parent="Sorted" unique_id=1295011276 instance=ExtResource("3_4tb0h")]
+position = Vector2(480, 784)
+kind = "rocha"
+height = 58.31282079219818
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop23" parent="Sorted" unique_id=1106116286 instance=ExtResource("3_4tb0h")]
+position = Vector2(-160, 464)
+kind = "rocha"
+height = 65.67667841911316
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop24" parent="Sorted" unique_id=1397722226 instance=ExtResource("3_4tb0h")]
+position = Vector2(0, 1120)
+kind = "rocha"
+height = 57.799466252326965
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop25" parent="Sorted" unique_id=192188294 instance=ExtResource("3_4tb0h")]
+position = Vector2(-512, 928)
+kind = "rocha"
+height = 64.04104769229889
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop26" parent="Sorted" unique_id=514010486 instance=ExtResource("3_4tb0h")]
+position = Vector2(160, 144)
+kind = "rocha"
+height = 73.06962966918945
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop27" parent="Sorted" unique_id=547402155 instance=ExtResource("3_4tb0h")]
+position = Vector2(160, 464)
+kind = "rocha"
+height = 74.06096577644348
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop28" parent="Sorted" unique_id=499164839 instance=ExtResource("3_4tb0h")]
+position = Vector2(-288, 720)
+kind = "rocha"
+height = 71.78789138793945
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop29" parent="Sorted" unique_id=136326350 instance=ExtResource("3_4tb0h")]
+position = Vector2(-768, 736)
+kind = "rocha"
+height = 78.3557403087616
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop30" parent="Sorted" unique_id=663201073 instance=ExtResource("3_4tb0h")]
+position = Vector2(-160, 336)
+kind = "rocha"
+height = 68.71849954128265
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="SpawnPoints" type="Node2D" parent="." unique_id=241119624]
+
+[node name="Spawn1" parent="SpawnPoints" unique_id=1837662586 instance=ExtResource("4_i64nu")]
+position = Vector2(288, 784)
+enemy_id = "alma_penada"
+count = 2
+
+[node name="Spawn2" parent="SpawnPoints" unique_id=2008417751 instance=ExtResource("4_i64nu")]
+position = Vector2(-480, 592)
+enemy_id = "demonio_de_gehenna"
+count = 2
+
+[node name="Spawn3" parent="SpawnPoints" unique_id=249764219 instance=ExtResource("4_i64nu")]
+position = Vector2(352, 464)
+enemy_id = "carcereiro_de_pedra"
+
+[node name="Spawn4" parent="SpawnPoints" unique_id=739564422 instance=ExtResource("4_i64nu")]
+position = Vector2(-64, 896)
+enemy_id = "aberracao_shu"

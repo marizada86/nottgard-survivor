@@ -1,0 +1,88 @@
+extends Node
+## Autoload "Game": perfil, save/load, parâmetros da run e log para o kit de playtest.
+
+const SAVE_PATH := "user://profile.json"
+
+var profile: Profile
+var persisted := false
+var run_hero := "durvall"
+var run_stage := "dagruve"
+var last_result: Dictionary = {}
+var last_summary: Dictionary = {}
+var log_lines: Array = []
+var screen_name := "menu"
+
+func _ready() -> void:
+	load_profile()
+	apply_settings()
+	logline("Jogo iniciado v%s" % Version.VERSION)
+
+func load_profile() -> void:
+	var d := {}
+	if FileAccess.file_exists(SAVE_PATH):
+		var f := FileAccess.open(SAVE_PATH, FileAccess.READ)
+		if f != null:
+			var parsed: Variant = JSON.parse_string(f.get_as_text())
+			if parsed is Dictionary:
+				d = parsed
+	profile = Profile.new(d)
+	persisted = FileAccess.file_exists(SAVE_PATH)
+
+func save() -> void:
+	var f := FileAccess.open(SAVE_PATH, FileAccess.WRITE)
+	if f == null:
+		persisted = false
+		return
+	f.store_string(JSON.stringify(profile.data, "\t"))
+	persisted = true
+
+func apply_settings() -> void:
+	var s: Dictionary = profile.data.settings
+	AudioServer.set_bus_volume_db(0, linear_to_db(clampf(float(s.volume), 0.0, 1.0)))
+	var mode := DisplayServer.WINDOW_MODE_FULLSCREEN if bool(s.fullscreen) else DisplayServer.WINDOW_MODE_WINDOWED
+	if DisplayServer.window_get_mode() != mode:
+		DisplayServer.window_set_mode(mode)
+
+func toggle_fullscreen() -> void:
+	profile.data.settings.fullscreen = not bool(profile.data.settings.fullscreen)
+	apply_settings()
+	save()
+
+func aim_mode() -> int:
+	return Battle.Aim.MOUSE if String(profile.data.settings.aim) == "mouse" else Battle.Aim.AUTO
+
+func set_aim(mode: int) -> void:
+	profile.data.settings.aim = "mouse" if mode == Battle.Aim.MOUSE else "auto"
+	save()
+
+func difficulty() -> float:
+	return 1.0 + 0.25 * int(profile.data.settings.difficulty)
+
+func battle_ctx() -> Dictionary:
+	var meta := profile.meta_mods()
+	Hero.add_mods(meta, profile.bonus_mods())
+	Hero.add_mods(meta, {"gold_pct": 0.25 * int(profile.data.settings.difficulty)})
+	return {"meta_mods": meta, "bonus_mods": {}, "difficulty": difficulty()}
+
+func start_run(hero_id: String, stage_id: String) -> void:
+	run_hero = hero_id
+	run_stage = stage_id
+	logline("Run: %s em %s" % [hero_id, stage_id])
+	get_tree().change_scene_to_file("res://ui/run.tscn")
+
+func finish_run(result: Dictionary) -> void:
+	last_result = result
+	last_summary = profile.apply_run(result)
+	save()
+	logline("Fim da run: %s | %d abates | +%d moedas" % ["vitória" if result.won else "derrota", result.kills, last_summary.earned])
+
+func goto_menu() -> void:
+	get_tree().paused = false
+	screen_name = "menu"
+	get_tree().change_scene_to_file("res://ui/menu.tscn")
+
+func logline(msg: String) -> void:
+	var t := Time.get_time_string_from_system()
+	log_lines.append("[%s] %s" % [t, msg])
+	if log_lines.size() > 400:
+		log_lines = log_lines.slice(log_lines.size() - 400)

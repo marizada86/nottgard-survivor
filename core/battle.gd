@@ -5,7 +5,9 @@ extends RefCounted
 enum Aim { AUTO, MOUSE }
 
 const ENEMY_ATK_RANGE := 0.95
-const ENEMY_ATK_CD := 1.1
+const ENEMY_ATK_CD := 1.3
+const SPAWN_SLOW := 1.35   # multiplica o intervalo das ondas (ritmo lento)
+const HIT_INVULN := 0.4
 const HERO_HIT_R := 0.3
 const MAX_PICKUPS := 140
 const AFFIXES := ["veloz", "resistente", "mortal", "avaro"]
@@ -95,7 +97,7 @@ func load_stage(stage_key: String) -> void:
 	stage_changed = true
 
 static func xp_need_for(lv: int) -> int:
-	return int(18.0 + lv * 10.0 + lv * lv * 1.2)
+	return int(12.0 + lv * 7.0 + lv * lv * 0.9)
 
 func spawn_for_test(id: String, at: Vector2) -> Enemy:
 	return _spawn(id, at, 0.0)
@@ -529,6 +531,7 @@ func _hurt_hero(dmg: float, src: String) -> void:
 	dmg = maxf(1.0, dmg * difficulty - hero.m("dr"))
 	hero.hp -= dmg
 	hero.hit_flash = 0.15
+	invuln = maxf(invuln, HIT_INVULN)
 	stats.damage_taken += dmg
 	events.append({"type": "hurt", "pos": hero.pos, "amount": int(dmg)})
 	if hero.hp <= 0.0:
@@ -927,7 +930,7 @@ func _director(dt: float) -> void:
 			if time < float(w.t0) or time > float(w.t1):
 				continue
 			_acc[wi] = float(_acc.get(wi, 0.0)) + dt
-			if _acc[wi] >= float(w.every):
+			if _acc[wi] >= float(w.every) * SPAWN_SLOW:
 				_acc[wi] = 0.0
 				var room := int(w.max) - alive(String(w.id))
 				for i in mini(int(w.n), room):
