@@ -32,6 +32,9 @@ func _run(hero_id: String, seed_v: int, start: String, dt: float, max_stages: in
 		if b.state == "levelup" or b.state == "altar":
 			b.choose(_pick(b))
 			continue
+		if b.run_time > 6000.0:
+			cause = "CAP de tempo em %s (boss hp %s)" % [b.stage_id, str(int(b.boss.hp)) if b.boss != null else "-"]
+			break
 		if b.state == "dead":
 			cause = "morreu em %s (%.0fs) nv%d por volta de %d inimigos" % [b.stage_id, b.time, b.hero.level, b.enemies.size()]
 			break
