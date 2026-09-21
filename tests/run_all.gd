@@ -7,7 +7,11 @@ func _init() -> void:
 	for f in dir.get_files():
 		if f.begins_with("test_") and f.ends_with(".gd"):
 			var t = load("res://tests/" + f).new()
-			for msg in t.run():
+			var res = t.run()
+			if not (res is Array):
+				failures.append("%s: teste abortou por erro de script" % f)
+				continue
+			for msg in res:
 				failures.append("%s: %s" % [f, msg])
 	for m in failures:
 		printerr("FALHA ", m)

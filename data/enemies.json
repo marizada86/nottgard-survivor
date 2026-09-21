@@ -1,0 +1,5 @@
+{
+  "zumbi":           {"name": "Zumbi",           "hp": 14, "atk_dice": "1d6", "atk_bonus": 1, "ca": 9,  "cam": 8,  "xp": 8,  "speed": 1.1, "radius": 0.35, "color": [0.43, 0.47, 0.31]},
+  "cultista_adaga":  {"name": "Cultista",        "hp": 11, "atk_dice": "1d6", "atk_bonus": 2, "ca": 11, "cam": 10, "xp": 12, "speed": 1.6, "radius": 0.3,  "color": [0.59, 0.24, 0.24]},
+  "slime_corrosivo": {"name": "Slime corrosivo", "hp": 8,  "atk_dice": "1d4", "atk_bonus": 1, "ca": 9,  "cam": 11, "xp": 5,  "speed": 0.9, "radius": 0.3,  "color": [0.37, 0.53, 0.24]}
+}

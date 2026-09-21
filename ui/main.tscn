@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene format=3]
 
-[ext_resource type="Script" path="res://ui/main.gd" id="1"]
+[ext_resource type="Script" path="res://ui/main.gd" id="1_vcrq8"]
+[ext_resource type="PackedScene" path="res://ui/world.tscn" id="2_loxbi"]
 
-[node name="Main" type="Node"]
-script = ExtResource("1")
+[node name="Main" type="Node" unique_id=2022860582]
+script = ExtResource("1_vcrq8")
+
+[node name="World" parent="." unique_id=2022264007 instance=ExtResource("2_loxbi")]

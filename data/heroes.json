@@ -1,0 +1,8 @@
+{
+  "durvall": {
+    "name": "Durvall",
+    "attrs": {"forca": 16, "inteligencia": 14, "constituicao": 12, "carisma": 10},
+    "base_hp": 30, "prof": 2, "weapon_dice": "1d8", "armor": {"ca": 3, "cam": -1},
+    "attack_cd": 1.2, "attack_range": 1.8, "skill_cd": 6.0, "skill_range": 2.5
+  }
+}
