@@ -50,6 +50,11 @@ func _ready() -> void:
 	result_panel.visible = false
 	prompt_label.text = ""
 
+func _unhandled_input(ev: InputEvent) -> void:
+	if pause_panel.visible and ev is InputEventKey and ev.pressed and not ev.echo and ev.physical_keycode == KEY_ESCAPE:
+		resume_pressed.emit()
+		get_viewport().set_input_as_handled()
+
 func update_stats(b: Battle) -> void:
 	var h := b.hero
 	name_label.text = "%s  ·  Nv %d" % [h.name, h.level]

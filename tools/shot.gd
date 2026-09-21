@@ -11,7 +11,20 @@ func _ready() -> void:
 	if mode == "run":
 		Game.run_stage = a[3] if a.size() > 3 else "dagruve"
 		Game.run_hero = a[4] if a.size() > 4 else "durvall"
-		add_child(load("res://ui/run.tscn").instantiate())
+		var run: Node = load("res://ui/run.tscn").instantiate()
+		add_child(run)
+		var flags: String = a[5] if a.size() > 5 else ""
+		if "god" in flags:
+			run.battle.hero.max_hp = 9999.0
+			run.battle.hero.hp = 9999.0
+		if "levelup" in flags:
+			run.battle._add_xp(400.0)
+		if "boss" in flags:
+			run.battle.time = float(run.battle.stage.duration) - 0.2
+		if "items" in flags:
+			for i in 5:
+				run.battle.give_item(Items.roll(run.battle.rng, 4, 3.0))
+			run.battle.give_item(Items.unique(Data.table("items").uniques[0]))
 	else:
 		var m: Node = load("res://ui/menu.tscn").instantiate()
 		add_child(m)

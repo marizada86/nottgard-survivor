@@ -27,6 +27,6 @@
     "weapon": "ampulheta", "unlock": "ach:mestre_de_camadas", "color": [110, 70, 150], "hair": [220, 220, 230],
     "passive": {"name": "Rede de Informação", "desc": "+1 opção nos level-ups.", "mods": {"choices": 1}}},
   "bromnor": {"name": "Bromnor Martelo da Luz", "title": "Anão · Alto Conselheiro de Fateridge", "attrs": {"forca": 16, "inteligencia": 10, "constituicao": 16, "carisma": 14}, "base_hp": 42, "prof": 3, "armor": {"ca": 5, "cam": -2},
-    "weapon": "martelo_da_gloria", "unlock": "ach:caçador_de_chefes", "color": [150, 120, 80], "hair": [200, 200, 200],
+    "weapon": "martelo_da_gloria", "unlock": "ach:cacador_de_chefes", "color": [150, 120, 80], "hair": [200, 200, 200],
     "passive": {"name": "Concórdia Eterna", "desc": "-2 de dano recebido e +2 CA.", "mods": {"dr": 2, "ca": 2}}}
 }
