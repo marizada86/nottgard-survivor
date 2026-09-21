@@ -1,0 +1,16 @@
+{
+  "boons": [
+    {"id": "sendrinah_cura", "god": "Sendrinah", "name": "Bênção da Cura", "desc": "+0,8 PV/s, mas -8% de dano.", "mods": {"regen": 0.8, "dmg_pct": -0.08}},
+    {"id": "sendrinah_vida", "god": "Sendrinah", "name": "Vida Nova", "desc": "+20 PV máximos, mas -6% de velocidade.", "mods": {"hp": 20, "speed_pct": -0.06}},
+    {"id": "mask_sombras", "god": "Mask", "name": "Manto de Sombras", "desc": "+10% esquiva e +12% velocidade, mas -2 CA.", "mods": {"dodge": 0.10, "speed_pct": 0.12, "ca": -2}},
+    {"id": "mask_ladrao", "god": "Mask", "name": "Mão de Ladrão", "desc": "+40% moedas e +1 de alcance de coleta, mas -1 CAM.", "mods": {"gold_pct": 0.40, "pickup": 1.0, "cam": -1}},
+    {"id": "lliira_alegria", "god": "Lliira", "name": "Dança da Alegria", "desc": "-12% de recarga, mas -10 PV máximos.", "mods": {"cd_pct": 0.12, "hp": -10}},
+    {"id": "lliira_sorte", "god": "Lliira", "name": "Sorriso da Sorte", "desc": "Críticos em 18-20, mas -1 de dano por acerto.", "mods": {"crit_range": 2, "dmg_flat": -1}},
+    {"id": "shar_noite", "god": "Shar", "name": "Noite Eterna", "desc": "+18% de dano, mas -15% de área.", "mods": {"dmg_pct": 0.18, "area_pct": -0.15}},
+    {"id": "shar_perda", "god": "Shar", "name": "Dádiva da Perda", "desc": "+2 CA e +2 CAM, mas -10% XP.", "mods": {"ca": 2, "cam": 2, "xp_pct": -0.10}},
+    {"id": "ghaunadaur_fome", "god": "Ghaunadaur", "name": "Fome do Abismo", "desc": "Roubo de vida 6%, mas -12 PV máximos.", "mods": {"lifesteal": 0.06, "hp": -12}},
+    {"id": "ghaunadaur_olho", "god": "Ghaunadaur", "name": "Olho Devorador", "desc": "+30% de dano, mas recebe +2 de dano por golpe.", "mods": {"dmg_pct": 0.30, "dr": -2}},
+    {"id": "tou_um_estrela", "god": "Tou Um", "name": "Guia da Estrela", "desc": "+15% de XP e +10% de velocidade, mas -6% de dano.", "mods": {"xp_pct": 0.15, "speed_pct": 0.10, "dmg_pct": -0.06}},
+    {"id": "helion_saber", "god": "Helion", "name": "Cadernos Vinculados", "desc": "+2 Inteligência, mas -1 Força.", "mods": {"inteligencia": 2, "forca": -1}}
+  ]
+}

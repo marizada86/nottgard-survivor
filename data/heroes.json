@@ -1,8 +1,32 @@
 {
-  "durvall": {
-    "name": "Durvall",
-    "attrs": {"forca": 16, "inteligencia": 14, "constituicao": 12, "carisma": 10},
-    "base_hp": 30, "prof": 2, "weapon_dice": "1d8", "armor": {"ca": 3, "cam": -1},
-    "attack_cd": 1.2, "attack_range": 1.8, "skill_cd": 6.0, "skill_range": 2.5
-  }
+  "durvall": {"name": "Durvall", "title": "Drow · Receptáculo", "attrs": {"forca": 16, "inteligencia": 14, "constituicao": 12, "carisma": 10}, "base_hp": 30, "prof": 2, "armor": {"ca": 3, "cam": -1},
+    "weapon": "espada_sombria", "unlock": "start", "color": [60, 60, 80], "hair": [230, 230, 240],
+    "passive": {"name": "Armadura Negra", "desc": "+15% de dano abaixo de 50% de PV.", "mods": {"low_hp_dmg": 0.15}}},
+  "brook": {"name": "Brook França", "title": "Paladino de Lliira", "attrs": {"forca": 12, "inteligencia": 10, "constituicao": 16, "carisma": 14}, "base_hp": 34, "prof": 2, "armor": {"ca": 5, "cam": -3},
+    "weapon": "sentenca_de_lliira", "unlock": "start", "color": [180, 170, 90], "hair": [90, 60, 40],
+    "passive": {"name": "Guarda", "desc": "-1 de dano recebido.", "mods": {"dr": 1}}},
+  "maelor": {"name": "Maelor", "title": "Devoto de Sendrinah", "attrs": {"forca": 10, "inteligencia": 13, "constituicao": 16, "carisma": 12}, "base_hp": 30, "prof": 2, "armor": {"ca": 0, "cam": 2},
+    "weapon": "raio_de_luz", "unlock": "start", "color": [80, 130, 190], "hair": [200, 180, 120],
+    "passive": {"name": "Comunhão com Sendrinah", "desc": "+0,6 PV por segundo.", "mods": {"regen": 0.6}}},
+  "sylas": {"name": "Sylas Malafaia", "title": "Tiefling · Devoto de Mask", "attrs": {"forca": 10, "inteligencia": 16, "constituicao": 14, "carisma": 12}, "base_hp": 26, "prof": 2, "armor": {"ca": 0, "cam": 2},
+    "weapon": "raio_enfraquecedor", "unlock": "start", "color": [120, 50, 110], "hair": [30, 20, 30],
+    "passive": {"name": "Visão Verdadeira", "desc": "+3 de precisão e críticos em 19-20.", "mods": {"hit": 3, "crit_range": 1}}},
+  "kayron": {"name": "Kayron Lioran", "title": "Aasimar · Leitor Abissal", "attrs": {"forca": 12, "inteligencia": 12, "constituicao": 12, "carisma": 14}, "base_hp": 28, "prof": 2, "armor": {"ca": 1, "cam": 0},
+    "weapon": "descarga_estelar", "unlock": "start", "color": [200, 200, 230], "hair": [240, 240, 255],
+    "passive": {"name": "Poder Místico", "desc": "-8% de recarga e +10% de área.", "mods": {"cd_pct": 0.08, "area_pct": 0.10}}},
+  "korrak": {"name": "Korrak Nammat", "title": "Goliath · Machado de Xar'gath", "attrs": {"forca": 18, "inteligencia": 8, "constituicao": 16, "carisma": 8}, "base_hp": 40, "prof": 2, "armor": {"ca": 2, "cam": -2},
+    "weapon": "machado_de_xargath", "unlock": "ach:veterano_de_durao", "color": [130, 130, 130], "hair": [40, 40, 40],
+    "passive": {"name": "Fúria Goliath", "desc": "+20% de dano, -10% de velocidade.", "mods": {"dmg_pct": 0.20, "speed_pct": -0.10}}},
+  "leoric": {"name": "Leoric", "title": "Gnomo · Modo de Constelação", "attrs": {"forca": 8, "inteligencia": 14, "constituicao": 12, "carisma": 16}, "base_hp": 24, "prof": 2, "armor": {"ca": 0, "cam": 2},
+    "weapon": "sopro_de_estrela", "unlock": "ach:aluris", "color": [140, 90, 50], "hair": [150, 140, 130],
+    "passive": {"name": "Constelação", "desc": "+25% de alcance de coleta e área.", "mods": {"pickup": 0.6, "area_pct": 0.15}}},
+  "nyrelia": {"name": "Nyrelia", "title": "Sacerdotisa de Mask · Greenholders", "attrs": {"forca": 8, "inteligencia": 14, "constituicao": 12, "carisma": 16}, "base_hp": 26, "prof": 2, "armor": {"ca": 0, "cam": 3},
+    "weapon": "dominar_pessoa", "unlock": "ach:pilares_ativos", "color": [200, 180, 60], "hair": [50, 40, 30],
+    "passive": {"name": "Aura Amarela", "desc": "+10% de moedas e XP.", "mods": {"gold_pct": 0.10, "xp_pct": 0.10}}},
+  "zynara": {"name": "Zynara Vellen", "title": "Alta Conselheira de Rodhe's Bridge", "attrs": {"forca": 9, "inteligencia": 16, "constituicao": 12, "carisma": 15}, "base_hp": 26, "prof": 2, "armor": {"ca": 0, "cam": 3},
+    "weapon": "ampulheta", "unlock": "ach:mestre_de_camadas", "color": [110, 70, 150], "hair": [220, 220, 230],
+    "passive": {"name": "Rede de Informação", "desc": "+1 opção nos level-ups.", "mods": {"choices": 1}}},
+  "bromnor": {"name": "Bromnor Martelo da Luz", "title": "Anão · Alto Conselheiro de Fateridge", "attrs": {"forca": 16, "inteligencia": 10, "constituicao": 16, "carisma": 14}, "base_hp": 42, "prof": 3, "armor": {"ca": 5, "cam": -2},
+    "weapon": "martelo_da_gloria", "unlock": "ach:caçador_de_chefes", "color": [150, 120, 80], "hair": [200, 200, 200],
+    "passive": {"name": "Concórdia Eterna", "desc": "-2 de dano recebido e +2 CA.", "mods": {"dr": 2, "ca": 2}}}
 }

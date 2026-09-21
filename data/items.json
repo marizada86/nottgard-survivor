@@ -1,0 +1,56 @@
+{
+  "bases": {
+    "arma": [
+      {"id": "adaga", "name": "Adaga", "mods": {"cd_pct": 0.04}},
+      {"id": "espada_longa", "name": "Espada Longa", "mods": {"dmg_pct": 0.05}},
+      {"id": "maca_de_guerra", "name": "Maça de Guerra", "mods": {"dmg_pct": 0.04, "forca": 1}},
+      {"id": "cajado", "name": "Cajado", "mods": {"inteligencia": 1, "cam": 1}},
+      {"id": "cetro", "name": "Cetro", "mods": {"carisma": 1, "area_pct": 0.05}}],
+    "armadura": [
+      {"id": "couro", "name": "Couro", "mods": {"ca": 1}},
+      {"id": "cota", "name": "Cota de Malha", "mods": {"ca": 3, "cam": -1}},
+      {"id": "placa", "name": "Placa Completa", "mods": {"ca": 5, "cam": -3, "speed_pct": -0.05}},
+      {"id": "robe", "name": "Robe", "mods": {"cam": 2}}],
+    "amuleto": [
+      {"id": "amuleto_simples", "name": "Amuleto", "mods": {"hp": 4}},
+      {"id": "talisma", "name": "Talismã", "mods": {"regen": 0.2}}],
+    "anel": [
+      {"id": "anel_simples", "name": "Anel", "mods": {"hit": 1}},
+      {"id": "anel_de_prata", "name": "Anel de Prata", "mods": {"pickup": 0.3}}]
+  },
+  "affixes": [
+    {"n": "Feroz", "pos": "pre", "mods": {"dmg_pct": [0.04, 0.10]}},
+    {"n": "do Urso", "pos": "suf", "mods": {"hp": [4, 10]}},
+    {"n": "Ágil", "pos": "pre", "mods": {"speed_pct": [0.04, 0.09]}},
+    {"n": "da Raposa", "pos": "suf", "mods": {"cd_pct": [0.03, 0.07]}},
+    {"n": "Rúnico", "pos": "pre", "mods": {"area_pct": [0.05, 0.12]}},
+    {"n": "da Fortuna", "pos": "suf", "mods": {"gold_pct": [0.08, 0.20]}},
+    {"n": "Sábio", "pos": "pre", "mods": {"xp_pct": [0.06, 0.14]}},
+    {"n": "da Vida", "pos": "suf", "mods": {"regen": [0.2, 0.7]}},
+    {"n": "Blindado", "pos": "pre", "mods": {"ca": [1, 2]}},
+    {"n": "Abissal", "pos": "pre", "mods": {"cam": [1, 2]}},
+    {"n": "da Precisão", "pos": "suf", "mods": {"hit": [1, 2]}},
+    {"n": "do Ímã", "pos": "suf", "mods": {"pickup": [0.3, 0.7]}},
+    {"n": "de Pedra", "pos": "suf", "mods": {"dr": [1, 1]}}
+  ],
+  "uniques": [
+    {"id": "machado_de_xargath", "name": "Machado de Xar'gath", "slot": "arma", "tier": 3, "mods": {"forca": 2, "dmg_pct": 0.10}, "weapon": "machado_de_xargath", "note": "Guarda a alma do demônio Xar'gath."},
+    {"id": "martelo_da_gloria", "name": "Martelo da Glória", "slot": "arma", "tier": 2, "mods": {"forca": 1, "carisma": 1}, "weapon": "martelo_da_gloria", "note": "Forjado com uma lasca da estrela Ailalore."},
+    {"id": "lamina_da_digestao", "name": "Lâmina da Digestão", "slot": "arma", "tier": 1, "mods": {"forca": 1}, "weapon": "lamina_da_digestao", "note": "Ácido que dissolve armadura."},
+    {"id": "chicote_avarento", "name": "Chicote Avarento +1", "slot": "arma", "tier": 1, "mods": {"gold_pct": 0.20}, "weapon": "chicote_avarento", "note": "Revela o maior desejo do amarrado."},
+    {"id": "cajado_dos_desejos", "name": "Cajado dos Desejos Sussurrantes", "slot": "arma", "tier": 4, "mods": {"carisma": 2, "hit": 1}, "weapon": "cajado_dos_desejos", "note": "Amaldiçoado: sussurra desejos."},
+    {"id": "colar_dos_tentaculos", "name": "Colar dos Tentáculos", "slot": "amuleto", "tier": 0, "mods": {"inteligencia": 1, "hp": 6}, "weapon": "colar_dos_tentaculos", "note": "Também chamado Olho de Ghaunadaur."},
+    {"id": "sopro_de_estrela", "name": "Sopro de Estrela", "slot": "amuleto", "tier": 4, "mods": {"carisma": 1, "cam": 1}, "weapon": "sopro_de_estrela", "note": "Concha que abre o portal de Feng-tu."},
+    {"id": "ampulheta", "name": "Ampulheta do Silêncio Eterno", "slot": "amuleto", "tier": 1, "mods": {"cd_pct": 0.05}, "weapon": "ampulheta", "note": "Guarda a magia Silêncio."},
+    {"id": "anel_resistencia_abissal", "name": "Anel da Resistência Abissal", "slot": "anel", "tier": 2, "mods": {"cam": 3, "dr": 1}, "note": "Vantagem para escapar de agarrões."},
+    {"id": "anel_passagem_sombria", "name": "Anel da Passagem Sombria", "slot": "anel", "tier": 3, "mods": {"speed_pct": 0.12, "dodge": 0.08}, "note": "Passos que a sombra engole."},
+    {"id": "aneis_de_grazzt", "name": "Anéis de Invocação de Graz'zt", "slot": "anel", "tier": 5, "mods": {"dmg_pct": 0.15, "hit": 2}, "note": "Chamam o Lorde do Abismo."},
+    {"id": "manto_do_pantano", "name": "Manto do Pântano", "slot": "armadura", "tier": 1, "mods": {"ca": 2, "cam": 2, "puddle_immune": 1}, "note": "Imune ao ácido dos limos."},
+    {"id": "broche_celestial", "name": "Broche Celestial", "slot": "amuleto", "tier": 2, "mods": {"hp": 10, "regen": 0.5}, "note": "Emblema dos Guardiões de Nottgard."},
+    {"id": "amuleto_da_luz", "name": "Amuleto da Luz", "slot": "amuleto", "tier": 2, "mods": {"regen": 0.6, "cam": 1}},
+    {"id": "luneta_de_korrak", "name": "Luneta de Korrak", "slot": "anel", "tier": 2, "mods": {"hit": 3, "crit_range": 1}},
+    {"id": "olho_de_ghaunadaur", "name": "Olho de Ghaunadaur", "slot": "amuleto", "tier": 6, "mods": {"dmg_pct": 0.25, "hp": -6}, "note": "Poder que cobra um preço."},
+    {"id": "lasca_de_ailalore", "name": "Lasca de Ailalore", "slot": "anel", "tier": 4, "mods": {"area_pct": 0.15, "cd_pct": 0.08}, "note": "Fragmento de uma estrela caída."},
+    {"id": "colar_runico_de_thalion", "name": "Colar Rúnico de Thalion", "slot": "amuleto", "tier": 3, "mods": {"inteligencia": 2, "xp_pct": 0.10}}
+  ]
+}

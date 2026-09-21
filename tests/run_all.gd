@@ -6,7 +6,11 @@ func _init() -> void:
 	var dir := DirAccess.open("res://tests")
 	for f in dir.get_files():
 		if f.begins_with("test_") and f.ends_with(".gd"):
-			var t = load("res://tests/" + f).new()
+			var scr = load("res://tests/" + f)
+			if scr == null or not scr.can_instantiate():
+				failures.append("%s: script não compila" % f)
+				continue
+			var t = scr.new()
 			var res = t.run()
 			if not (res is Array):
 				failures.append("%s: teste abortou por erro de script" % f)

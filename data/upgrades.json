@@ -1,0 +1,16 @@
+{
+  "upgrades": [
+    {"id": "forca_bruta", "name": "Força Bruta", "desc": "+4% de dano por nível", "costs": [100, 200, 400, 800, 1600], "mods": {"dmg_pct": 0.04}},
+    {"id": "vitalidade", "name": "Vitalidade", "desc": "+2 PV máximos por nível", "costs": [80, 160, 320, 640, 1280], "mods": {"hp": 2}},
+    {"id": "mao_cheia", "name": "Mão Cheia", "desc": "+1 opção nos level-ups", "costs": [500, 1500], "mods": {"choices": 1}},
+    {"id": "rerrolagem", "name": "Rerrolagem", "desc": "+1 rerrolagem por run", "costs": [150, 450, 1350], "mods": {"rerolls": 1}},
+    {"id": "sorte", "name": "Sorte", "desc": "Críticos mais frequentes (+1 na faixa por 2 níveis)", "costs": [300, 900, 2700], "mods": {"crit_step": 1}},
+    {"id": "bolso_fundo", "name": "Bolso Fundo", "desc": "+1 slot de arma", "costs": [600], "mods": {"weapon_slots": 1}},
+    {"id": "ganancia", "name": "Ganância", "desc": "+10% de moedas por nível", "costs": [200, 600, 1800], "mods": {"gold_pct": 0.10}},
+    {"id": "ima", "name": "Ímã", "desc": "+0,4 de alcance de coleta por nível", "costs": [120, 300, 700], "mods": {"pickup": 0.4}},
+    {"id": "armadura_extra", "name": "Guarnição", "desc": "+1 CA por nível", "costs": [250, 700, 1800], "mods": {"ca": 1}},
+    {"id": "pes_ligeiros", "name": "Pés Ligeiros", "desc": "+3% de velocidade por nível", "costs": [150, 400, 900], "mods": {"speed_pct": 0.03}},
+    {"id": "segunda_chance", "name": "Segunda Chance", "desc": "Revive uma vez por run com 50% de PV", "costs": [1200], "mods": {"revive": 1}},
+    {"id": "ressonancia", "name": "Ressonância Arcana", "desc": "-3% de recarga por nível", "costs": [350, 900, 2200], "mods": {"cd_pct": 0.03}}
+  ]
+}

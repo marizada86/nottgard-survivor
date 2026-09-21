@@ -1,0 +1,22 @@
+{
+  "achievements": [
+    {"id": "primeiro_sangue", "name": "Primeiro Sangue", "desc": "Derrote 100 inimigos (total).", "stat": "kills_total", "value": 100, "reward": {"coins": 100}},
+    {"id": "massacre", "name": "Massacre", "desc": "Derrote 2.000 inimigos (total).", "stat": "kills_total", "value": 2000, "reward": {"bonus": {"dmg_pct": 0.03}, "text": "+3% de dano permanente"}},
+    {"id": "veterano", "name": "Veterano", "desc": "Chegue ao nível 15 numa run.", "stat": "run_level", "value": 15, "reward": {"bonus": {"hp": 2}, "text": "+2 PV máximos (como Fechadura Aberta)"}},
+    {"id": "sorte_de_sendrinah", "name": "Sorte de Sendrinah", "desc": "Acerte 3 críticos na mesma run.", "stat": "run_crits", "value": 3, "reward": {"bonus": {"crit_range": 1}, "text": "Críticos em 19-20 sempre"}},
+    {"id": "o_infeliz", "name": "O Infeliz", "desc": "Tire 3 dados '1' na mesma run.", "stat": "run_ones", "value": 3, "reward": {"rerolls": 1, "text": "+1 rerrolagem por run"}},
+    {"id": "fechadura_aberta", "name": "Fechadura Aberta", "desc": "Derrote o chefe de Dagruve.", "stat": "boss_dagruve", "value": 1, "reward": {"unlock_stage": "shedaklah", "coins": 200}},
+    {"id": "ganancioso", "name": "Ganancioso", "desc": "Acumule 3.000 moedas (total).", "stat": "gold_total", "value": 3000, "reward": {"bonus": {"gold_pct": 0.05}, "text": "+5% de moedas"}},
+    {"id": "abridor_de_baus", "name": "Abridor de Baús", "desc": "Abra 30 baús (total).", "stat": "chests_total", "value": 30, "reward": {"bonus": {"pickup": 0.3}, "text": "+0,3 de alcance de coleta"}},
+    {"id": "sobrevivente", "name": "Sobrevivente", "desc": "Sobreviva 8 minutos numa run.", "stat": "run_time", "value": 480, "reward": {"coins": 150}},
+    {"id": "cacador_de_chefes", "name": "Caçador de Chefes", "desc": "Derrote 5 chefes (total).", "stat": "bosses_total", "value": 5, "reward": {"unlock_hero": "bromnor", "text": "Desbloqueia Bromnor"}},
+    {"id": "veterano_de_durao", "name": "Veterano de Durao", "desc": "Derrote o Molydeus, Carcereiro-Chefe.", "stat": "boss_molydeus_chefe", "value": 1, "reward": {"unlock_hero": "korrak", "text": "Desbloqueia Korrak"}},
+    {"id": "aluris", "name": "Aluris", "desc": "Complete 3 fases diferentes.", "stat": "stages_cleared", "value": 3, "reward": {"unlock_hero": "leoric", "text": "Desbloqueia Leoric"}},
+    {"id": "mestre_de_camadas", "name": "Mestre de Camadas", "desc": "Complete 5 fases diferentes.", "stat": "stages_cleared", "value": 5, "reward": {"unlock_hero": "zynara", "text": "Desbloqueia Zynara"}},
+    {"id": "pilares_ativos", "name": "Pilares Ativos", "desc": "Chegue aos Pilares.", "stat": "reached_pilares", "value": 1, "reward": {"unlock_hero": "nyrelia", "text": "Desbloqueia Nyrelia"}},
+    {"id": "queda_da_sintese", "name": "Queda da Síntese", "desc": "Derrote A Síntese Abissal.", "stat": "boss_sintese_abissal", "value": 1, "reward": {"coins": 5000, "bonus": {"dmg_pct": 0.05}, "text": "+5% de dano e 5.000 moedas"}},
+    {"id": "elite_hunter", "name": "Sem Piedade", "desc": "Derrote 50 elites (total).", "stat": "elites_total", "value": 50, "reward": {"bonus": {"xp_pct": 0.05}, "text": "+5% de XP"}},
+    {"id": "colecionador", "name": "Colecionador", "desc": "Descubra 15 itens no códex.", "stat": "codex_items", "value": 15, "reward": {"coins": 500}},
+    {"id": "um_de_cada", "name": "Um de Cada", "desc": "Jogue com 5 heróis diferentes.", "stat": "heroes_played", "value": 5, "reward": {"coins": 400}}
+  ]
+}

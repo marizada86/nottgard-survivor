@@ -1,0 +1,16 @@
+{
+  "forca":            {"name": "Força", "src": "Atributo Vermelho", "desc": "+1 Força por nível: mais dano e precisão físicos.", "mods": {"forca": 1}},
+  "inteligencia":     {"name": "Inteligência", "src": "Atributo Amarelo", "desc": "+1 Inteligência por nível: magia mais forte.", "mods": {"inteligencia": 1}},
+  "constituicao":     {"name": "Constituição", "src": "Atributo Azul", "desc": "+1 Constituição por nível (+2 PV por ponto par).", "mods": {"constituicao": 1, "hp": 2}},
+  "carisma":          {"name": "Carisma", "src": "Atributo Roxo", "desc": "+1 Carisma por nível: sorte, moedas e alcance de coleta.", "mods": {"carisma": 1, "pickup": 0.25, "gold_pct": 0.05}},
+  "cota_de_malha":    {"name": "Cota de Malha", "src": "Equipamento", "desc": "+1 CA por nível.", "mods": {"ca": 1}},
+  "robe_arcano":      {"name": "Robe Arcano", "src": "Equipamento", "desc": "+1 CAM por nível.", "mods": {"cam": 1}},
+  "botas_leves":      {"name": "Botas Leves", "src": "Equipamento", "desc": "+6% de velocidade por nível.", "mods": {"speed_pct": 0.06}},
+  "regeneracao":      {"name": "Regeneração", "src": "Sendrinah", "desc": "+0,4 PV por segundo por nível.", "mods": {"regen": 0.4}},
+  "foco_arcano":      {"name": "Foco Arcano", "src": "Poder Místico", "desc": "-6% de recarga das armas por nível.", "mods": {"cd_pct": 0.06}},
+  "alcance":          {"name": "Alcance", "src": "Cartas", "desc": "+10% de área e alcance por nível.", "mods": {"area_pct": 0.10}},
+  "sabedoria":        {"name": "Sabedoria", "src": "Experiência", "desc": "+10% de XP por nível.", "mods": {"xp_pct": 0.10}},
+  "sorte_de_sendrinah": {"name": "Sorte de Sendrinah", "src": "Conquista", "desc": "Críticos mais frequentes (19-20 no nível 1; 18-20 no nível 3).", "mods": {"crit_step": 1}},
+  "ganancia":         {"name": "Ganância", "src": "Economia", "desc": "+15% de moedas por nível.", "mods": {"gold_pct": 0.15}},
+  "pele_de_pedra":    {"name": "Pele de Pedra", "src": "Gárgulas", "desc": "-1 de dano recebido por nível (mín. 1).", "mods": {"dr": 1}}
+}
