@@ -1,0 +1,18 @@
+add_version: "0.1"
+project:
+  id: "PRJ-NOTTGARD-SURVIVORS"
+  name: "Nottgard Survivors"
+policies:
+  remote_context: "review-before-remote"
+  draft_writing: "allowed"
+  publishing: "explicit-approval"
+  dependencies: "allowlist-with-plan"
+autonomy:
+  profile: "guarded-autopilot"
+  execution_approval: "per-spec"
+  report_mode: "exceptions-and-final"
+  max_retries: 3
+git:
+  local_commits: "explicit-approval"
+  merge: "explicit-approval"
+  publish: "explicit-approval"
