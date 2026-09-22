@@ -3,6 +3,14 @@ extends RefCounted
 const ASSETS := {
 	"res://assets/animations/heroes/durvall/idle.png": Vector2i(1024, 384),
 	"res://assets/animations/heroes/durvall/move.png": Vector2i(1536, 384),
+	"res://assets/animations/heroes/durvall/move_n.png": Vector2i(1536, 384),
+	"res://assets/animations/heroes/durvall/move_ne.png": Vector2i(1536, 384),
+	"res://assets/animations/heroes/durvall/move_e.png": Vector2i(1536, 384),
+	"res://assets/animations/heroes/durvall/move_se.png": Vector2i(1536, 384),
+	"res://assets/animations/heroes/durvall/move_s.png": Vector2i(1536, 384),
+	"res://assets/animations/heroes/durvall/move_sw.png": Vector2i(1536, 384),
+	"res://assets/animations/heroes/durvall/move_w.png": Vector2i(1536, 384),
+	"res://assets/animations/heroes/durvall/move_nw.png": Vector2i(1536, 384),
 	"res://assets/animations/heroes/durvall/attack.png": Vector2i(1024, 384),
 	"res://assets/animations/heroes/durvall/active.png": Vector2i(1536, 384),
 	"res://assets/animations/heroes/durvall/death.png": Vector2i(1536, 384),
@@ -27,12 +35,14 @@ const ASSETS := {
 func run() -> Array[String]:
 	var failures: Array[String] = []
 	for path in ASSETS:
-		if not ResourceLoader.exists(path):
+		if not FileAccess.file_exists(path):
 			failures.append("asset ausente: %s" % path)
 			continue
-		var texture: Texture2D = load(path)
-		var image := texture.get_image()
-		if image.is_empty():
+		if not ResourceLoader.exists(path):
+			failures.append("asset não importado: %s" % path)
+			continue
+		var image := Image.new()
+		if image.load(ProjectSettings.globalize_path(path)) != OK:
 			failures.append("PNG inválido: %s" % path)
 		elif image.get_size() != ASSETS[path]:
 			failures.append("dimensão %s em %s; esperada %s" % [image.get_size(), path, ASSETS[path]])
@@ -47,4 +57,12 @@ func run() -> Array[String]:
 		if instance.get_node_or_null("AnimatedSprite2D") == null:
 			failures.append("AnimatedSprite2D ausente: %s" % scene_path)
 		instance.free()
+	var hero_script: Script = load("res://ui/hero_view.gd")
+	var directions := {
+		Vector2.UP: &"move_n", Vector2(1, -1): &"move_ne", Vector2.RIGHT: &"move_e", Vector2(1, 1): &"move_se",
+		Vector2.DOWN: &"move_s", Vector2(-1, 1): &"move_sw", Vector2.LEFT: &"move_w", Vector2(-1, -1): &"move_nw",
+	}
+	for direction in directions:
+		if hero_script.directional_walk_animation(direction) != directions[direction]:
+			failures.append("direção incorreta para %s" % direction)
 	return failures

@@ -1,0 +1,17 @@
+{
+  "id": "ANIMATION-PRODUCTION-MANIFEST-002",
+  "spec": "SPEC-018-direcoes-de-movimento-durvall",
+  "prompt_set": "ART-PROMPTS-015-durvall-movimento-direcional",
+  "generated_at": "2026-09-22",
+  "format": "horizontal RGBA sprite strip",
+  "entries": [
+    {"id":"durvall.move_n","frames":6,"cell":[256,384],"fps":10,"loop":true,"candidate":".atena/generated/animation-candidates/heroes/durvall/move_n_v03.png","asset":"assets/animations/heroes/durvall/move_n.png"},
+    {"id":"durvall.move_ne","frames":6,"cell":[256,384],"fps":10,"loop":true,"candidate":".atena/generated/animation-candidates/heroes/durvall/move_ne_v03.png","asset":"assets/animations/heroes/durvall/move_ne.png"},
+    {"id":"durvall.move_e","frames":6,"cell":[256,384],"fps":10,"loop":true,"candidate":".atena/generated/animation-candidates/heroes/durvall/move_e_v03.png","asset":"assets/animations/heroes/durvall/move_e.png"},
+    {"id":"durvall.move_se","frames":6,"cell":[256,384],"fps":10,"loop":true,"candidate":".atena/generated/animation-candidates/heroes/durvall/move_se_v03.png","asset":"assets/animations/heroes/durvall/move_se.png"},
+    {"id":"durvall.move_s","frames":6,"cell":[256,384],"fps":10,"loop":true,"candidate":".atena/generated/animation-candidates/heroes/durvall/move_s_v03.png","asset":"assets/animations/heroes/durvall/move_s.png"},
+    {"id":"durvall.move_sw","frames":6,"cell":[256,384],"fps":10,"loop":true,"candidate":".atena/generated/animation-candidates/heroes/durvall/move_sw_v03.png","asset":"assets/animations/heroes/durvall/move_sw.png"},
+    {"id":"durvall.move_w","frames":6,"cell":[256,384],"fps":10,"loop":true,"candidate":".atena/generated/animation-candidates/heroes/durvall/move_w_v03.png","asset":"assets/animations/heroes/durvall/move_w.png"},
+    {"id":"durvall.move_nw","frames":6,"cell":[256,384],"fps":10,"loop":true,"candidate":".atena/generated/animation-candidates/heroes/durvall/move_nw_v03.png","asset":"assets/animations/heroes/durvall/move_nw.png"}
+  ]
+}

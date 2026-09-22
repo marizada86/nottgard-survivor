@@ -4,6 +4,7 @@ extends Node2D
 
 const CELL := Vector2i(256, 384)
 const DISPLAY_HEIGHT := 72.0
+const WALK_DIRECTIONS := [&"e", &"se", &"s", &"sw", &"w", &"nw", &"n", &"ne"]
 
 @export var hero_id := "durvall": set = _set_hero_id
 @export var body_color := Color(0.55, 0.15, 0.15): set = _set_body
@@ -54,6 +55,9 @@ func _build_animations() -> void:
 	_has_animation = false
 	_has_animation = SpriteStripFrames.add_strip(frames, &"idle", "%s/idle.png" % root, CELL, 4, 8.0, true) or _has_animation
 	_has_animation = SpriteStripFrames.add_strip(frames, &"move", "%s/move.png" % root, CELL, 6, 10.0, true) or _has_animation
+	for direction in WALK_DIRECTIONS:
+		var animation: StringName = StringName("move_%s" % direction)
+		_has_animation = SpriteStripFrames.add_strip(frames, animation, "%s/%s.png" % [root, animation], CELL, 6, 10.0, true) or _has_animation
 	_has_animation = SpriteStripFrames.add_strip(frames, &"attack", "%s/attack.png" % root, CELL, 4, 12.0, false) or _has_animation
 	_has_animation = SpriteStripFrames.add_strip(frames, &"active", "%s/active.png" % root, CELL, 6, 12.0, false) or _has_animation
 	_has_animation = SpriteStripFrames.add_strip(frames, &"death", "%s/death.png" % root, CELL, 6, 9.0, false) or _has_animation
@@ -75,7 +79,7 @@ func sync_visual(screen_position: Vector2, is_dead: bool, is_flash: bool) -> voi
 			_action_locked = true
 			sprite.play(&"death")
 		elif not dead and not _action_locked:
-			var desired: StringName = &"move" if moving else &"idle"
+			var desired: StringName = _walk_animation(screen_position - _last_screen_position) if moving else &"idle"
 			if sprite.animation != desired:
 				sprite.play(desired)
 	_last_screen_position = screen_position
@@ -91,6 +95,16 @@ func _on_animation_finished() -> void:
 	if sprite.animation == &"death":
 		return
 	_action_locked = false
+
+func _walk_animation(delta: Vector2) -> StringName:
+	var animation := directional_walk_animation(delta)
+	return animation if sprite.sprite_frames.has_animation(animation) else &"move"
+
+static func directional_walk_animation(delta: Vector2) -> StringName:
+	if delta.length_squared() <= 0.04:
+		return &"move"
+	var sector := int(posmod(roundi(delta.angle() / (TAU / 8.0)), 8))
+	return StringName("move_%s" % WALK_DIRECTIONS[sector])
 
 func _draw() -> void:
 	draw_colored_polygon(PackedVector2Array([Vector2(0, -8), Vector2(16, 0), Vector2(0, 8), Vector2(-16, 0)]), Color(0, 0, 0, 0.5))
