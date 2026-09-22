@@ -13,9 +13,24 @@ var log_lines: Array = []
 var screen_name := "menu"
 
 func _ready() -> void:
+	ensure_input_actions()
 	load_profile()
 	apply_settings()
 	logline("Jogo iniciado v%s" % Version.VERSION)
+
+func ensure_input_actions() -> void:
+	if InputMap.has_action("hero_active"):
+		return
+	InputMap.add_action("hero_active")
+	var key := InputEventKey.new()
+	key.physical_keycode = KEY_Q
+	InputMap.action_add_event("hero_active", key)
+	var mouse := InputEventMouseButton.new()
+	mouse.button_index = MOUSE_BUTTON_RIGHT
+	InputMap.action_add_event("hero_active", mouse)
+	var joy := InputEventJoypadButton.new()
+	joy.button_index = JOY_BUTTON_RIGHT_SHOULDER
+	InputMap.action_add_event("hero_active", joy)
 
 func load_profile() -> void:
 	var d := {}

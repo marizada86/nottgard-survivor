@@ -41,7 +41,8 @@ func _ready() -> void:
 func playtest_context() -> Dictionary:
 	var h := battle.hero
 	return {"heroi": h.name, "fase": battle.stage_id, "tempo": int(battle.time), "nivel": h.level, "pv": "%d/%d" % [int(h.hp), int(h.max_hp)],
-		"armas": h.weapons.map(func(w): return "%s nv%d" % [w.id, w.level]), "estado": battle.state, "inimigos": battle.enemies.size()}
+		"armas": h.weapons.map(func(w): return "%s nv%d" % [w.id, w.level]), "habilidade": battle.active_def.id, "profundidade": battle.descent_depth,
+		"estado": battle.state, "inimigos": battle.enemies.size()}
 
 # ------------------------------------------------------------------ fase
 
@@ -81,6 +82,11 @@ func _load_stage() -> void:
 
 func _unhandled_input(ev: InputEvent) -> void:
 	if _result_shown:
+		return
+	if battle.state == "running" and ev.is_action_pressed("hero_active"):
+		if battle.use_active(battle.aim_dir):
+			Sfx.play("cast", -8.0)
+		get_viewport().set_input_as_handled()
 		return
 	if ev is InputEventKey and ev.pressed and not ev.echo:
 		var k: int = ev.physical_keycode
@@ -239,6 +245,13 @@ func _consume_events() -> void:
 			"boss":
 				Sfx.play("boss")
 				_shake = 1.2
+			"active":
+				_shake = 0.35
+				_ring(ev.pos, float(ev.get("radius", 2.0)), _dcol(String(ev.get("dtype", "radiante"))), 0.3)
+			"boss_phase":
+				Sfx.play("boss")
+				_shake = 1.0
+				hud.toast(ev.text, Color(1.0, 0.55, 0.35))
 			"toast":
 				hud.toast(ev.text, ev.get("color", Color(1, 1, 1)))
 				Game.logline(String(ev.text))

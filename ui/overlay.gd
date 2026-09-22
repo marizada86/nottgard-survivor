@@ -32,6 +32,18 @@ func _draw_zones() -> void:
 		elif z.kind == "puddle":
 			draw_colored_polygon(_ellipse(z.pos, z.radius), Color(0.35, 0.6, 0.25, 0.32))
 			draw_polyline(_ellipse_closed(z.pos, z.radius), Color(0.5, 0.8, 0.3, 0.5), 1.5)
+		elif z.kind == "rule_ritual":
+			draw_colored_polygon(_ellipse(z.pos, z.radius), Color(0.65, 0.12, 0.55, 0.24))
+			draw_polyline(_ellipse_closed(z.pos, z.radius), Color(1.0, 0.35, 0.75, 0.9), 3.0)
+			var progress: float = clampf(float(z.progress) / maxf(0.01, float(z.interrupt)), 0.0, 1.0)
+			draw_arc(Iso.to_screen(z.pos), 26.0, -PI * 0.5, -PI * 0.5 + TAU * progress, 24, Color(0.4, 1.0, 0.7), 4.0)
+		elif z.kind == "sanctuary":
+			var col := Color(1.0, 0.9, 0.5, 0.24) if not bool(z.fake) else Color(0.85, 0.72, 0.48, 0.18)
+			draw_colored_polygon(_ellipse(z.pos, z.radius), col)
+			draw_polyline(_ellipse_closed(z.pos, z.radius), Color(col, 0.8), 2.0)
+		elif z.kind == "bubble":
+			draw_colored_polygon(_ellipse(z.pos, z.radius), Color(0.3, 0.65, 0.9, 0.2))
+			draw_polyline(_ellipse_closed(z.pos, z.radius), Color(0.5, 0.85, 1.0, 0.9), 3.0)
 		else:
 			var t: float = clampf(1.0 - z.delay / maxf(0.01, z.get("total", z.delay)), 0.0, 1.0)
 			draw_colored_polygon(_ellipse(z.pos, z.radius), Color(0.9, 0.15, 0.1, 0.16 + 0.2 * (1.0 - clampf(z.delay, 0.0, 1.5) / 1.5)))

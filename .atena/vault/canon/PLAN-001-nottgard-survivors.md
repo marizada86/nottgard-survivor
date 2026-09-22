@@ -143,3 +143,17 @@ Cada fase vira uma `SPEC-00N` aprovada antes de implementar; evidências em `.at
 3. `git init` aprovado; **commits seguem exigindo aprovação explícita** (`add.yaml`).
 4. **NPCs entram como heróis jogáveis** desbloqueáveis (Nyrelia, Zynara, Bromnor e outros), além de Korrak e Leoric. Lista final definida por conquista ao longo das fases F5–F8.
 5. O vault é fonte para extração de conteúdo (sempre como draft → revisão → canon).
+
+## 15. Mecânicas de aprofundamento aprovadas (2026-09-22)
+
+O dono aprovou a implementação integral das recomendações de game design registradas nas SPEC-012 a SPEC-014:
+
+1. habilidade ativa própria para cada herói;
+2. level-up estruturado entre sinergia, defesa e nova direção;
+3. escolha explícita entre extrair e descer, com risco e recompensa crescentes;
+4. uma regra principal e legível por camada;
+5. chefes com transições de fase em 70% e 35% de vida;
+6. altares com consequências jogáveis além de modificadores numéricos;
+7. itens únicos capazes de alterar comportamento, usando eventos limitados e sem recursão.
+
+Implementação verificada em 2026-09-22 pelos testes automatizados, smoke das oito fases e bot determinístico. Evidência: `EVID-007-mecanicas-game-design.md`.

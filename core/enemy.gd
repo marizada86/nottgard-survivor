@@ -39,6 +39,9 @@ var affix := ""
 var dead := false
 var drops_chest := false
 var hit_flash := 0.0
+var charmed_t := 0.0
+var phase_index := 0
+var phase_defs: Array = []
 
 static func make(enemy_id: String, at: Vector2, minute: float = 0.0, hp_mult: float = 1.0, tier: int = 0) -> Enemy:
 	var d: Dictionary = Data.table("enemies")[enemy_id]
@@ -65,6 +68,7 @@ static func make(enemy_id: String, at: Vector2, minute: float = 0.0, hp_mult: fl
 	e.flags = d.get("flags", [])
 	e.split_id = String(d.get("split", ""))
 	e.note = String(d.get("note", ""))
+	e.phase_defs = Data.table("boss_phases").get(enemy_id, []).duplicate(true)
 	for a in e.abilities:
 		e.ab_cd.append(float(a.cd) * 0.5 + 1.0)
 	return e

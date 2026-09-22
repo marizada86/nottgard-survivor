@@ -47,6 +47,10 @@ func _run(hero_id: String, seed_v: int, start: String, dt: float, max_stages: in
 			if stages_reached.size() > max_stages:
 				cause = "limite de fases"
 				break
+		if b.active_cd <= 0.0 and not b.enemies.is_empty():
+			var active_target := b.nearest(b.hero.pos, 10.0)
+			var active_dir := (active_target.pos - b.hero.pos).normalized() if active_target != null else Vector2(1, 0)
+			b.use_active(active_dir)
 		b.step(_move(b), dt)
 		b.events.clear()
 		_interact(b)
@@ -58,8 +62,8 @@ func _run(hero_id: String, seed_v: int, start: String, dt: float, max_stages: in
 				if it.kind == "portal" and not it.used:
 					b.hero.pos = it.pos
 					b.interact()
-	var line := "%s | fases=%s | nv=%d armas=%s passivas=%s | itens=%d | %s" % [hero_id, ",".join(stages_reached), b.hero.level,
-		",".join(b.hero.weapons.map(func(w): return "%s%d" % [w.id, w.level])), str(b.hero.passives), b.hero.items.size(), cause]
+	var line := "%s | fases=%s | profundidade=%d x%.2f | nv=%d armas=%s passivas=%s | itens=%d | %s" % [hero_id, ",".join(stages_reached),
+		b.descent_depth, b.reward_multiplier(), b.hero.level, ",".join(b.hero.weapons.map(func(w): return "%s%d" % [w.id, w.level])), str(b.hero.passives), b.hero.items.size(), cause]
 	return {"line": line, "stages": stages_reached}
 
 func _interact(b: Battle) -> void:

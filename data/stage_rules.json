@@ -1,0 +1,10 @@
+{
+  "dagruve": {"name": "Rituais da Névoa", "kind": "rituals", "interval": 55.0, "delay": 7.0, "interrupt": 1.5, "desc": "Permaneça no selo para interromper reforços."},
+  "shedaklah": {"name": "Esporos de Shedaklah", "kind": "puddles", "interval": 8.0, "desc": "Poças crescem e tornam o terreno hostil."},
+  "molor": {"name": "Bolhas de Molor", "kind": "bubbles", "interval": 9.0, "delay": 2.2, "radius": 2.0, "desc": "Bolhas explodem e empurram tudo ao redor."},
+  "durao": {"name": "Corrente do Estige", "kind": "current", "force": 0.9, "desc": "A corrente arrasta herói, inimigos e tesouros."},
+  "feng_tu": {"name": "Julgamento de Tou Um", "kind": "strikes", "interval": 4.5, "friendly": true, "desc": "Raios atingem herói e inimigos."},
+  "shendilavri": {"name": "Corte das Ilusões", "kind": "illusions", "chance": 0.14, "desc": "Cópias frágeis imitam inimigos verdadeiros."},
+  "goranthis": {"name": "Falso Paraíso", "kind": "sanctuary", "interval": 12.0, "duration": 7.0, "fake_chance": 0.45, "desc": "Santuários podem curar ou revelar sua natureza ilusória."},
+  "pilares": {"name": "Memória dos Pilares", "kind": "rotation", "interval": 60.0, "rules": ["puddles", "current", "strikes", "illusions"], "desc": "Uma regra abissal diferente desperta a cada minuto."}
+}

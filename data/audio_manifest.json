@@ -1,0 +1,2517 @@
+{
+  "version": 1,
+  "generated_by": "tools/generate_audio.js",
+  "format": {
+    "codec": "PCM",
+    "bits": 16,
+    "sample_rate": 22050,
+    "channels": 1
+  },
+  "events": {
+    "ui.hover": {
+      "files": [
+        "res://assets/audio/sfx/ui/ui.hover_01.wav",
+        "res://assets/audio/sfx/ui/ui.hover_02.wav"
+      ],
+      "bus": "UI",
+      "volume_db": -10,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 20,
+      "priority": 2
+    },
+    "ui.click": {
+      "files": [
+        "res://assets/audio/sfx/ui/ui.click_01.wav",
+        "res://assets/audio/sfx/ui/ui.click_02.wav"
+      ],
+      "bus": "UI",
+      "volume_db": -10,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 20,
+      "priority": 2
+    },
+    "ui.confirm": {
+      "files": [
+        "res://assets/audio/sfx/ui/ui.confirm_01.wav",
+        "res://assets/audio/sfx/ui/ui.confirm_02.wav"
+      ],
+      "bus": "UI",
+      "volume_db": -10,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 20,
+      "priority": 2
+    },
+    "ui.cancel": {
+      "files": [
+        "res://assets/audio/sfx/ui/ui.cancel_01.wav",
+        "res://assets/audio/sfx/ui/ui.cancel_02.wav"
+      ],
+      "bus": "UI",
+      "volume_db": -10,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 20,
+      "priority": 2
+    },
+    "ui.open": {
+      "files": [
+        "res://assets/audio/sfx/ui/ui.open_01.wav",
+        "res://assets/audio/sfx/ui/ui.open_02.wav"
+      ],
+      "bus": "UI",
+      "volume_db": -10,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 20,
+      "priority": 2
+    },
+    "ui.close": {
+      "files": [
+        "res://assets/audio/sfx/ui/ui.close_01.wav",
+        "res://assets/audio/sfx/ui/ui.close_02.wav"
+      ],
+      "bus": "UI",
+      "volume_db": -10,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 20,
+      "priority": 2
+    },
+    "ui.invalid": {
+      "files": [
+        "res://assets/audio/sfx/ui/ui.invalid_01.wav",
+        "res://assets/audio/sfx/ui/ui.invalid_02.wav"
+      ],
+      "bus": "UI",
+      "volume_db": -10,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 20,
+      "priority": 2
+    },
+    "ui.pause": {
+      "files": [
+        "res://assets/audio/sfx/ui/ui.pause_01.wav",
+        "res://assets/audio/sfx/ui/ui.pause_02.wav"
+      ],
+      "bus": "UI",
+      "volume_db": -10,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 20,
+      "priority": 2
+    },
+    "ui.resume": {
+      "files": [
+        "res://assets/audio/sfx/ui/ui.resume_01.wav",
+        "res://assets/audio/sfx/ui/ui.resume_02.wav"
+      ],
+      "bus": "UI",
+      "volume_db": -10,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 20,
+      "priority": 2
+    },
+    "ui.tab": {
+      "files": [
+        "res://assets/audio/sfx/ui/ui.tab_01.wav",
+        "res://assets/audio/sfx/ui/ui.tab_02.wav"
+      ],
+      "bus": "UI",
+      "volume_db": -10,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 20,
+      "priority": 2
+    },
+    "progress.xp": {
+      "files": [
+        "res://assets/audio/sfx/progress/progress.xp_01.wav",
+        "res://assets/audio/sfx/progress/progress.xp_02.wav"
+      ],
+      "bus": "UI",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 45,
+      "priority": 2
+    },
+    "progress.coin": {
+      "files": [
+        "res://assets/audio/sfx/progress/progress.coin_01.wav",
+        "res://assets/audio/sfx/progress/progress.coin_02.wav"
+      ],
+      "bus": "UI",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 45,
+      "priority": 2
+    },
+    "progress.chest": {
+      "files": [
+        "res://assets/audio/sfx/progress/progress.chest_01.wav",
+        "res://assets/audio/sfx/progress/progress.chest_02.wav"
+      ],
+      "bus": "UI",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 45,
+      "priority": 2
+    },
+    "progress.fountain": {
+      "files": [
+        "res://assets/audio/sfx/progress/progress.fountain_01.wav",
+        "res://assets/audio/sfx/progress/progress.fountain_02.wav"
+      ],
+      "bus": "UI",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 45,
+      "priority": 2
+    },
+    "progress.altar": {
+      "files": [
+        "res://assets/audio/sfx/progress/progress.altar_01.wav",
+        "res://assets/audio/sfx/progress/progress.altar_02.wav"
+      ],
+      "bus": "UI",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 45,
+      "priority": 2
+    },
+    "progress.ritual": {
+      "files": [
+        "res://assets/audio/sfx/progress/progress.ritual_01.wav",
+        "res://assets/audio/sfx/progress/progress.ritual_02.wav"
+      ],
+      "bus": "UI",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 45,
+      "priority": 2
+    },
+    "progress.item": {
+      "files": [
+        "res://assets/audio/sfx/progress/progress.item_01.wav",
+        "res://assets/audio/sfx/progress/progress.item_02.wav"
+      ],
+      "bus": "UI",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 45,
+      "priority": 2
+    },
+    "progress.upgrade": {
+      "files": [
+        "res://assets/audio/sfx/progress/progress.upgrade_01.wav",
+        "res://assets/audio/sfx/progress/progress.upgrade_02.wav"
+      ],
+      "bus": "UI",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 45,
+      "priority": 2
+    },
+    "progress.levelup": {
+      "files": [
+        "res://assets/audio/sfx/progress/progress.levelup_01.wav",
+        "res://assets/audio/sfx/progress/progress.levelup_02.wav"
+      ],
+      "bus": "UI",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 45,
+      "priority": 2
+    },
+    "progress.evolution": {
+      "files": [
+        "res://assets/audio/sfx/progress/progress.evolution_01.wav",
+        "res://assets/audio/sfx/progress/progress.evolution_02.wav"
+      ],
+      "bus": "UI",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 45,
+      "priority": 2
+    },
+    "progress.achievement": {
+      "files": [
+        "res://assets/audio/sfx/progress/progress.achievement_01.wav",
+        "res://assets/audio/sfx/progress/progress.achievement_02.wav"
+      ],
+      "bus": "UI",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 45,
+      "priority": 2
+    },
+    "progress.reroll": {
+      "files": [
+        "res://assets/audio/sfx/progress/progress.reroll_01.wav",
+        "res://assets/audio/sfx/progress/progress.reroll_02.wav"
+      ],
+      "bus": "UI",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 45,
+      "priority": 2
+    },
+    "progress.unlock": {
+      "files": [
+        "res://assets/audio/sfx/progress/progress.unlock_01.wav",
+        "res://assets/audio/sfx/progress/progress.unlock_02.wav"
+      ],
+      "bus": "UI",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 45,
+      "priority": 2
+    },
+    "progress.portal": {
+      "files": [
+        "res://assets/audio/sfx/progress/progress.portal_01.wav",
+        "res://assets/audio/sfx/progress/progress.portal_02.wav"
+      ],
+      "bus": "UI",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 45,
+      "priority": 2
+    },
+    "combat.impact": {
+      "files": [
+        "res://assets/audio/sfx/combat/combat.impact_01.wav",
+        "res://assets/audio/sfx/combat/combat.impact_02.wav",
+        "res://assets/audio/sfx/combat/combat.impact_03.wav"
+      ],
+      "bus": "Impacts",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 1
+    },
+    "combat.critical": {
+      "files": [
+        "res://assets/audio/sfx/combat/combat.critical_01.wav",
+        "res://assets/audio/sfx/combat/combat.critical_02.wav",
+        "res://assets/audio/sfx/combat/combat.critical_03.wav"
+      ],
+      "bus": "Impacts",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 3
+    },
+    "combat.miss": {
+      "files": [
+        "res://assets/audio/sfx/combat/combat.miss_01.wav",
+        "res://assets/audio/sfx/combat/combat.miss_02.wav",
+        "res://assets/audio/sfx/combat/combat.miss_03.wav"
+      ],
+      "bus": "Impacts",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 1
+    },
+    "combat.swing": {
+      "files": [
+        "res://assets/audio/sfx/combat/combat.swing_01.wav",
+        "res://assets/audio/sfx/combat/combat.swing_02.wav",
+        "res://assets/audio/sfx/combat/combat.swing_03.wav"
+      ],
+      "bus": "Impacts",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 1
+    },
+    "combat.magic": {
+      "files": [
+        "res://assets/audio/sfx/combat/combat.magic_01.wav",
+        "res://assets/audio/sfx/combat/combat.magic_02.wav",
+        "res://assets/audio/sfx/combat/combat.magic_03.wav"
+      ],
+      "bus": "Impacts",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 1
+    },
+    "combat.nova": {
+      "files": [
+        "res://assets/audio/sfx/combat/combat.nova_01.wav",
+        "res://assets/audio/sfx/combat/combat.nova_02.wav",
+        "res://assets/audio/sfx/combat/combat.nova_03.wav"
+      ],
+      "bus": "Impacts",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 1
+    },
+    "combat.zone": {
+      "files": [
+        "res://assets/audio/sfx/combat/combat.zone_01.wav",
+        "res://assets/audio/sfx/combat/combat.zone_02.wav",
+        "res://assets/audio/sfx/combat/combat.zone_03.wav"
+      ],
+      "bus": "Impacts",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 1
+    },
+    "combat.explosion": {
+      "files": [
+        "res://assets/audio/sfx/combat/combat.explosion_01.wav",
+        "res://assets/audio/sfx/combat/combat.explosion_02.wav",
+        "res://assets/audio/sfx/combat/combat.explosion_03.wav"
+      ],
+      "bus": "Impacts",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 3
+    },
+    "combat.block": {
+      "files": [
+        "res://assets/audio/sfx/combat/combat.block_01.wav",
+        "res://assets/audio/sfx/combat/combat.block_02.wav",
+        "res://assets/audio/sfx/combat/combat.block_03.wav"
+      ],
+      "bus": "Impacts",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 1
+    },
+    "combat.dodge": {
+      "files": [
+        "res://assets/audio/sfx/combat/combat.dodge_01.wav",
+        "res://assets/audio/sfx/combat/combat.dodge_02.wav",
+        "res://assets/audio/sfx/combat/combat.dodge_03.wav"
+      ],
+      "bus": "Impacts",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 1
+    },
+    "combat.barrier": {
+      "files": [
+        "res://assets/audio/sfx/combat/combat.barrier_01.wav",
+        "res://assets/audio/sfx/combat/combat.barrier_02.wav",
+        "res://assets/audio/sfx/combat/combat.barrier_03.wav"
+      ],
+      "bus": "Impacts",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 1
+    },
+    "combat.fire": {
+      "files": [
+        "res://assets/audio/sfx/combat/combat.fire_01.wav",
+        "res://assets/audio/sfx/combat/combat.fire_02.wav",
+        "res://assets/audio/sfx/combat/combat.fire_03.wav"
+      ],
+      "bus": "Impacts",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 1
+    },
+    "combat.radiant": {
+      "files": [
+        "res://assets/audio/sfx/combat/combat.radiant_01.wav",
+        "res://assets/audio/sfx/combat/combat.radiant_02.wav",
+        "res://assets/audio/sfx/combat/combat.radiant_03.wav"
+      ],
+      "bus": "Impacts",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 1
+    },
+    "combat.physical": {
+      "files": [
+        "res://assets/audio/sfx/combat/combat.physical_01.wav",
+        "res://assets/audio/sfx/combat/combat.physical_02.wav",
+        "res://assets/audio/sfx/combat/combat.physical_03.wav"
+      ],
+      "bus": "Impacts",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 1
+    },
+    "combat.stun": {
+      "files": [
+        "res://assets/audio/sfx/combat/combat.stun_01.wav",
+        "res://assets/audio/sfx/combat/combat.stun_02.wav",
+        "res://assets/audio/sfx/combat/combat.stun_03.wav"
+      ],
+      "bus": "Impacts",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 1
+    },
+    "combat.knockback": {
+      "files": [
+        "res://assets/audio/sfx/combat/combat.knockback_01.wav",
+        "res://assets/audio/sfx/combat/combat.knockback_02.wav",
+        "res://assets/audio/sfx/combat/combat.knockback_03.wav"
+      ],
+      "bus": "Impacts",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 1
+    },
+    "combat.projectile": {
+      "files": [
+        "res://assets/audio/sfx/combat/combat.projectile_01.wav",
+        "res://assets/audio/sfx/combat/combat.projectile_02.wav",
+        "res://assets/audio/sfx/combat/combat.projectile_03.wav"
+      ],
+      "bus": "Impacts",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 1
+    },
+    "combat.burn": {
+      "files": [
+        "res://assets/audio/sfx/combat/combat.burn_01.wav",
+        "res://assets/audio/sfx/combat/combat.burn_02.wav",
+        "res://assets/audio/sfx/combat/combat.burn_03.wav"
+      ],
+      "bus": "Impacts",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 1
+    },
+    "player.hurt": {
+      "files": [
+        "res://assets/audio/sfx/player/player.hurt_01.wav",
+        "res://assets/audio/sfx/player/player.hurt_02.wav",
+        "res://assets/audio/sfx/player/player.hurt_03.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 4
+    },
+    "player.heal": {
+      "files": [
+        "res://assets/audio/sfx/player/player.heal_01.wav",
+        "res://assets/audio/sfx/player/player.heal_02.wav",
+        "res://assets/audio/sfx/player/player.heal_03.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 4
+    },
+    "player.death": {
+      "files": [
+        "res://assets/audio/sfx/player/player.death_01.wav",
+        "res://assets/audio/sfx/player/player.death_02.wav",
+        "res://assets/audio/sfx/player/player.death_03.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 4
+    },
+    "player.revive": {
+      "files": [
+        "res://assets/audio/sfx/player/player.revive_01.wav",
+        "res://assets/audio/sfx/player/player.revive_02.wav",
+        "res://assets/audio/sfx/player/player.revive_03.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 4
+    },
+    "player.guard": {
+      "files": [
+        "res://assets/audio/sfx/player/player.guard_01.wav",
+        "res://assets/audio/sfx/player/player.guard_02.wav",
+        "res://assets/audio/sfx/player/player.guard_03.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 4
+    },
+    "player.dash": {
+      "files": [
+        "res://assets/audio/sfx/player/player.dash_01.wav",
+        "res://assets/audio/sfx/player/player.dash_02.wav",
+        "res://assets/audio/sfx/player/player.dash_03.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 4
+    },
+    "player.footstep": {
+      "files": [
+        "res://assets/audio/sfx/player/player.footstep_01.wav",
+        "res://assets/audio/sfx/player/player.footstep_02.wav",
+        "res://assets/audio/sfx/player/player.footstep_03.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 4
+    },
+    "player.overdrive": {
+      "files": [
+        "res://assets/audio/sfx/player/player.overdrive_01.wav",
+        "res://assets/audio/sfx/player/player.overdrive_02.wav",
+        "res://assets/audio/sfx/player/player.overdrive_03.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 4
+    },
+    "world.chest": {
+      "files": [
+        "res://assets/audio/sfx/progress/world.chest_01.wav",
+        "res://assets/audio/sfx/progress/world.chest_02.wav"
+      ],
+      "bus": "UI",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 3
+    },
+    "world.fountain": {
+      "files": [
+        "res://assets/audio/sfx/progress/world.fountain_01.wav",
+        "res://assets/audio/sfx/progress/world.fountain_02.wav"
+      ],
+      "bus": "UI",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 3
+    },
+    "world.altar": {
+      "files": [
+        "res://assets/audio/sfx/progress/world.altar_01.wav",
+        "res://assets/audio/sfx/progress/world.altar_02.wav"
+      ],
+      "bus": "UI",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 3
+    },
+    "world.ritual": {
+      "files": [
+        "res://assets/audio/sfx/progress/world.ritual_01.wav",
+        "res://assets/audio/sfx/progress/world.ritual_02.wav"
+      ],
+      "bus": "UI",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 3
+    },
+    "world.portal": {
+      "files": [
+        "res://assets/audio/sfx/progress/world.portal_01.wav",
+        "res://assets/audio/sfx/progress/world.portal_02.wav"
+      ],
+      "bus": "UI",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 3
+    },
+    "world.descent": {
+      "files": [
+        "res://assets/audio/sfx/progress/world.descent_01.wav",
+        "res://assets/audio/sfx/progress/world.descent_02.wav"
+      ],
+      "bus": "UI",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 3
+    },
+    "world.elite": {
+      "files": [
+        "res://assets/audio/sfx/progress/world.elite_01.wav",
+        "res://assets/audio/sfx/progress/world.elite_02.wav"
+      ],
+      "bus": "UI",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 3
+    },
+    "world.warning": {
+      "files": [
+        "res://assets/audio/sfx/progress/world.warning_01.wav",
+        "res://assets/audio/sfx/progress/world.warning_02.wav"
+      ],
+      "bus": "UI",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 3
+    },
+    "result.victory": {
+      "files": [
+        "res://assets/audio/sfx/progress/result.victory_01.wav",
+        "res://assets/audio/sfx/progress/result.victory_02.wav"
+      ],
+      "bus": "UI",
+      "volume_db": -4,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 5
+    },
+    "result.defeat": {
+      "files": [
+        "res://assets/audio/sfx/boss/result.defeat_01.wav",
+        "res://assets/audio/sfx/boss/result.defeat_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -5,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 5
+    },
+    "boss.arrival": {
+      "files": [
+        "res://assets/audio/sfx/boss/boss.arrival_01.wav",
+        "res://assets/audio/sfx/boss/boss.arrival_02.wav",
+        "res://assets/audio/sfx/boss/boss.arrival_03.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -4,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 500,
+      "priority": 5
+    },
+    "enemy.telegraph": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.telegraph_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.telegraph_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 4
+    },
+    "enemy.charge": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.charge_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.charge_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 4
+    },
+    "enemy.summon": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.summon_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.summon_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -9,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 3
+    },
+    "weapon.espada_sombria.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.espada_sombria.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.espada_sombria.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.espada_do_receptaculo.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.espada_do_receptaculo.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.espada_do_receptaculo.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.golpe_esmagador.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.golpe_esmagador.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.golpe_esmagador.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.adaga_rapida.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.adaga_rapida.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.adaga_rapida.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.rajada_infinita.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.rajada_infinita.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.rajada_infinita.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.golpe_atordoante.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.golpe_atordoante.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.golpe_atordoante.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.golpe_do_juizo.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.golpe_do_juizo.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.golpe_do_juizo.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.sentenca_de_lliira.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.sentenca_de_lliira.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.sentenca_de_lliira.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.julgamento_da_gloria.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.julgamento_da_gloria.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.julgamento_da_gloria.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.raio_de_luz.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.raio_de_luz.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.raio_de_luz.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.luz_mais_pura.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.luz_mais_pura.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.luz_mais_pura.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.raio_enfraquecedor.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.raio_enfraquecedor.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.raio_enfraquecedor.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.descarga_estelar.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.descarga_estelar.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.descarga_estelar.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.chuva_de_estrelas.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.chuva_de_estrelas.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.chuva_de_estrelas.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.estocada_mistica.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.estocada_mistica.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.estocada_mistica.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.cera_fervente.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.cera_fervente.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.cera_fervente.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.inferno_de_cera.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.inferno_de_cera.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.inferno_de_cera.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.vela_sagrada.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.vela_sagrada.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.vela_sagrada.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.lamina_trovejante.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.lamina_trovejante.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.lamina_trovejante.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.tempestade.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.tempestade.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.tempestade.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.dominar_pessoa.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.dominar_pessoa.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.dominar_pessoa.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.marca_da_retidao.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.marca_da_retidao.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.marca_da_retidao.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.chicote_avarento.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.chicote_avarento.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.chicote_avarento.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.martelo_da_gloria.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.martelo_da_gloria.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.martelo_da_gloria.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.machado_de_xargath.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.machado_de_xargath.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.machado_de_xargath.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.colar_dos_tentaculos.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.colar_dos_tentaculos.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.colar_dos_tentaculos.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.sopro_de_estrela.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.sopro_de_estrela.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.sopro_de_estrela.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.lamina_da_digestao.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.lamina_da_digestao.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.lamina_da_digestao.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.cajado_dos_desejos.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.cajado_dos_desejos.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.cajado_dos_desejos.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.ampulheta.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.ampulheta.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.ampulheta.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "hero.durvall.active": {
+      "files": [
+        "res://assets/audio/sfx/hero/hero.durvall.active_01.wav",
+        "res://assets/audio/sfx/hero/hero.durvall.active_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -6,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 250,
+      "priority": 4
+    },
+    "hero.brook.active": {
+      "files": [
+        "res://assets/audio/sfx/hero/hero.brook.active_01.wav",
+        "res://assets/audio/sfx/hero/hero.brook.active_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -6,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 250,
+      "priority": 4
+    },
+    "hero.maelor.active": {
+      "files": [
+        "res://assets/audio/sfx/hero/hero.maelor.active_01.wav",
+        "res://assets/audio/sfx/hero/hero.maelor.active_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -6,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 250,
+      "priority": 4
+    },
+    "hero.sylas.active": {
+      "files": [
+        "res://assets/audio/sfx/hero/hero.sylas.active_01.wav",
+        "res://assets/audio/sfx/hero/hero.sylas.active_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -6,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 250,
+      "priority": 4
+    },
+    "hero.kayron.active": {
+      "files": [
+        "res://assets/audio/sfx/hero/hero.kayron.active_01.wav",
+        "res://assets/audio/sfx/hero/hero.kayron.active_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -6,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 250,
+      "priority": 4
+    },
+    "hero.korrak.active": {
+      "files": [
+        "res://assets/audio/sfx/hero/hero.korrak.active_01.wav",
+        "res://assets/audio/sfx/hero/hero.korrak.active_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -6,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 250,
+      "priority": 4
+    },
+    "hero.leoric.active": {
+      "files": [
+        "res://assets/audio/sfx/hero/hero.leoric.active_01.wav",
+        "res://assets/audio/sfx/hero/hero.leoric.active_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -6,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 250,
+      "priority": 4
+    },
+    "hero.nyrelia.active": {
+      "files": [
+        "res://assets/audio/sfx/hero/hero.nyrelia.active_01.wav",
+        "res://assets/audio/sfx/hero/hero.nyrelia.active_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -6,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 250,
+      "priority": 4
+    },
+    "hero.zynara.active": {
+      "files": [
+        "res://assets/audio/sfx/hero/hero.zynara.active_01.wav",
+        "res://assets/audio/sfx/hero/hero.zynara.active_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -6,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 250,
+      "priority": 4
+    },
+    "hero.bromnor.active": {
+      "files": [
+        "res://assets/audio/sfx/hero/hero.bromnor.active_01.wav",
+        "res://assets/audio/sfx/hero/hero.bromnor.active_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -6,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 250,
+      "priority": 4
+    },
+    "enemy.zumbi.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.zumbi.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.zumbi.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.zumbi.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.zumbi.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.notivago.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.notivago.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.notivago.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.notivago.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.notivago.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.cultista_adaga.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.cultista_adaga.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.cultista_adaga.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.cultista_adaga.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.cultista_adaga.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.cultista_arqueiro.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.cultista_arqueiro.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.cultista_arqueiro.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.cultista_arqueiro.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.cultista_arqueiro.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.cultista_cajado.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.cultista_cajado.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.cultista_cajado.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.cultista_cajado.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.cultista_cajado.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.slime_corrosivo.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.slime_corrosivo.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.slime_corrosivo.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.slime_corrosivo.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.slime_corrosivo.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.criatura_corrompida.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.criatura_corrompida.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.criatura_corrompida.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.criatura_corrompida.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.criatura_corrompida.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.guardiao_copia.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.guardiao_copia.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.guardiao_copia.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.guardiao_copia.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.guardiao_copia.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.guardiao_verdadeiro.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.guardiao_verdadeiro.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.guardiao_verdadeiro.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.guardiao_verdadeiro.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.guardiao_verdadeiro.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.mimico.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.mimico.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.mimico.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.mimico.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.mimico.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.sacerdote_mente_derretida.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.sacerdote_mente_derretida.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.sacerdote_mente_derretida.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.sacerdote_mente_derretida.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.sacerdote_mente_derretida.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.arch_hag.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.arch_hag.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.arch_hag.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.arch_hag.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.arch_hag.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.tentaculo_kraken.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.tentaculo_kraken.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.tentaculo_kraken.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.tentaculo_kraken.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.tentaculo_kraken.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.gargula.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.gargula.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.gargula.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.gargula.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.gargula.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.cogumelo_fungico.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.cogumelo_fungico.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.cogumelo_fungico.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.cogumelo_fungico.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.cogumelo_fungico.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.servo_de_zuggtmoy.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.servo_de_zuggtmoy.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.servo_de_zuggtmoy.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.servo_de_zuggtmoy.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.servo_de_zuggtmoy.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.esporo_voador.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.esporo_voador.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.esporo_voador.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.esporo_voador.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.esporo_voador.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.pudim_negro.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.pudim_negro.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.pudim_negro.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.pudim_negro.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.pudim_negro.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.slime_de_juiblex.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.slime_de_juiblex.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.slime_de_juiblex.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.slime_de_juiblex.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.slime_de_juiblex.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.zuggtmoy.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.zuggtmoy.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.zuggtmoy.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.zuggtmoy.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.zuggtmoy.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.bolha_de_slime.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.bolha_de_slime.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.bolha_de_slime.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.bolha_de_slime.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.bolha_de_slime.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.cultista_thullgrime.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.cultista_thullgrime.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.cultista_thullgrime.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.cultista_thullgrime.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.cultista_thullgrime.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.receptaculo_de_juiblex.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.receptaculo_de_juiblex.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.receptaculo_de_juiblex.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.receptaculo_de_juiblex.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.receptaculo_de_juiblex.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.blogbog.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.blogbog.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.blogbog.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.blogbog.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.blogbog.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.alma_penada.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.alma_penada.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.alma_penada.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.alma_penada.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.alma_penada.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.demonio_de_gehenna.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.demonio_de_gehenna.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.demonio_de_gehenna.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.demonio_de_gehenna.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.demonio_de_gehenna.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.carcereiro_de_pedra.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.carcereiro_de_pedra.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.carcereiro_de_pedra.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.carcereiro_de_pedra.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.carcereiro_de_pedra.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.molydeus_menor.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.molydeus_menor.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.molydeus_menor.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.molydeus_menor.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.molydeus_menor.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.molydeus_chefe.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.molydeus_chefe.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.molydeus_chefe.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.molydeus_chefe.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.molydeus_chefe.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.larva_de_lu_yueh.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.larva_de_lu_yueh.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.larva_de_lu_yueh.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.larva_de_lu_yueh.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.larva_de_lu_yueh.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.cultista_de_feng_tu.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.cultista_de_feng_tu.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.cultista_de_feng_tu.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.cultista_de_feng_tu.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.cultista_de_feng_tu.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.estatua_do_templo.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.estatua_do_templo.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.estatua_do_templo.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.estatua_do_templo.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.estatua_do_templo.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.discipulo_pestilento.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.discipulo_pestilento.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.discipulo_pestilento.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.discipulo_pestilento.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.discipulo_pestilento.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.lu_yueh.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.lu_yueh.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.lu_yueh.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.lu_yueh.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.lu_yueh.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.escravo_de_rivenheart.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.escravo_de_rivenheart.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.escravo_de_rivenheart.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.escravo_de_rivenheart.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.escravo_de_rivenheart.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.sucubo.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.sucubo.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.sucubo.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.sucubo.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.sucubo.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.ilusao_de_sucubo.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.ilusao_de_sucubo.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.ilusao_de_sucubo.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.ilusao_de_sucubo.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.ilusao_de_sucubo.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.guarda_do_castelo.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.guarda_do_castelo.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.guarda_do_castelo.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.guarda_do_castelo.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.guarda_do_castelo.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.master_of_cruelties.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.master_of_cruelties.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.master_of_cruelties.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.master_of_cruelties.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.master_of_cruelties.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.malcanthet.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.malcanthet.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.malcanthet.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.malcanthet.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.malcanthet.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.ilusao_de_socothbenoth.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.ilusao_de_socothbenoth.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.ilusao_de_socothbenoth.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.ilusao_de_socothbenoth.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.ilusao_de_socothbenoth.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.guardiao_de_goranthis.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.guardiao_de_goranthis.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.guardiao_de_goranthis.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.guardiao_de_goranthis.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.guardiao_de_goranthis.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.cultista_de_socothbenoth.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.cultista_de_socothbenoth.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.cultista_de_socothbenoth.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.cultista_de_socothbenoth.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.cultista_de_socothbenoth.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.socothbenoth.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.socothbenoth.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.socothbenoth.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.socothbenoth.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.socothbenoth.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.death_tyrant.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.death_tyrant.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.death_tyrant.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.death_tyrant.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.death_tyrant.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.cultista_ghaunadaur.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.cultista_ghaunadaur.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.cultista_ghaunadaur.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.cultista_ghaunadaur.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.cultista_ghaunadaur.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.aberracao_shu.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.aberracao_shu.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.aberracao_shu.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.aberracao_shu.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.aberracao_shu.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.ezro.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.ezro.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.ezro.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.ezro.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.ezro.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.sintese_abissal.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.sintese_abissal.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.sintese_abissal.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.sintese_abissal.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.sintese_abissal.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "boss.sacerdote_mente_derretida.arrival": {
+      "files": [
+        "res://assets/audio/sfx/boss/boss.sacerdote_mente_derretida.arrival_01.wav",
+        "res://assets/audio/sfx/boss/boss.sacerdote_mente_derretida.arrival_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -3,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 800,
+      "priority": 5
+    },
+    "boss.sacerdote_mente_derretida.phase": {
+      "files": [
+        "res://assets/audio/sfx/boss/boss.sacerdote_mente_derretida.phase_01.wav",
+        "res://assets/audio/sfx/boss/boss.sacerdote_mente_derretida.phase_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -4,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 500,
+      "priority": 5
+    },
+    "boss.sacerdote_mente_derretida.defeat": {
+      "files": [
+        "res://assets/audio/sfx/boss/boss.sacerdote_mente_derretida.defeat_01.wav",
+        "res://assets/audio/sfx/boss/boss.sacerdote_mente_derretida.defeat_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -3,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 800,
+      "priority": 5
+    },
+    "boss.zuggtmoy.arrival": {
+      "files": [
+        "res://assets/audio/sfx/boss/boss.zuggtmoy.arrival_01.wav",
+        "res://assets/audio/sfx/boss/boss.zuggtmoy.arrival_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -3,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 800,
+      "priority": 5
+    },
+    "boss.zuggtmoy.phase": {
+      "files": [
+        "res://assets/audio/sfx/boss/boss.zuggtmoy.phase_01.wav",
+        "res://assets/audio/sfx/boss/boss.zuggtmoy.phase_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -4,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 500,
+      "priority": 5
+    },
+    "boss.zuggtmoy.defeat": {
+      "files": [
+        "res://assets/audio/sfx/boss/boss.zuggtmoy.defeat_01.wav",
+        "res://assets/audio/sfx/boss/boss.zuggtmoy.defeat_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -3,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 800,
+      "priority": 5
+    },
+    "boss.blogbog.arrival": {
+      "files": [
+        "res://assets/audio/sfx/boss/boss.blogbog.arrival_01.wav",
+        "res://assets/audio/sfx/boss/boss.blogbog.arrival_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -3,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 800,
+      "priority": 5
+    },
+    "boss.blogbog.phase": {
+      "files": [
+        "res://assets/audio/sfx/boss/boss.blogbog.phase_01.wav",
+        "res://assets/audio/sfx/boss/boss.blogbog.phase_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -4,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 500,
+      "priority": 5
+    },
+    "boss.blogbog.defeat": {
+      "files": [
+        "res://assets/audio/sfx/boss/boss.blogbog.defeat_01.wav",
+        "res://assets/audio/sfx/boss/boss.blogbog.defeat_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -3,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 800,
+      "priority": 5
+    },
+    "boss.molydeus_chefe.arrival": {
+      "files": [
+        "res://assets/audio/sfx/boss/boss.molydeus_chefe.arrival_01.wav",
+        "res://assets/audio/sfx/boss/boss.molydeus_chefe.arrival_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -3,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 800,
+      "priority": 5
+    },
+    "boss.molydeus_chefe.phase": {
+      "files": [
+        "res://assets/audio/sfx/boss/boss.molydeus_chefe.phase_01.wav",
+        "res://assets/audio/sfx/boss/boss.molydeus_chefe.phase_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -4,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 500,
+      "priority": 5
+    },
+    "boss.molydeus_chefe.defeat": {
+      "files": [
+        "res://assets/audio/sfx/boss/boss.molydeus_chefe.defeat_01.wav",
+        "res://assets/audio/sfx/boss/boss.molydeus_chefe.defeat_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -3,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 800,
+      "priority": 5
+    },
+    "boss.lu_yueh.arrival": {
+      "files": [
+        "res://assets/audio/sfx/boss/boss.lu_yueh.arrival_01.wav",
+        "res://assets/audio/sfx/boss/boss.lu_yueh.arrival_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -3,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 800,
+      "priority": 5
+    },
+    "boss.lu_yueh.phase": {
+      "files": [
+        "res://assets/audio/sfx/boss/boss.lu_yueh.phase_01.wav",
+        "res://assets/audio/sfx/boss/boss.lu_yueh.phase_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -4,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 500,
+      "priority": 5
+    },
+    "boss.lu_yueh.defeat": {
+      "files": [
+        "res://assets/audio/sfx/boss/boss.lu_yueh.defeat_01.wav",
+        "res://assets/audio/sfx/boss/boss.lu_yueh.defeat_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -3,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 800,
+      "priority": 5
+    },
+    "boss.malcanthet.arrival": {
+      "files": [
+        "res://assets/audio/sfx/boss/boss.malcanthet.arrival_01.wav",
+        "res://assets/audio/sfx/boss/boss.malcanthet.arrival_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -3,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 800,
+      "priority": 5
+    },
+    "boss.malcanthet.phase": {
+      "files": [
+        "res://assets/audio/sfx/boss/boss.malcanthet.phase_01.wav",
+        "res://assets/audio/sfx/boss/boss.malcanthet.phase_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -4,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 500,
+      "priority": 5
+    },
+    "boss.malcanthet.defeat": {
+      "files": [
+        "res://assets/audio/sfx/boss/boss.malcanthet.defeat_01.wav",
+        "res://assets/audio/sfx/boss/boss.malcanthet.defeat_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -3,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 800,
+      "priority": 5
+    },
+    "boss.socothbenoth.arrival": {
+      "files": [
+        "res://assets/audio/sfx/boss/boss.socothbenoth.arrival_01.wav",
+        "res://assets/audio/sfx/boss/boss.socothbenoth.arrival_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -3,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 800,
+      "priority": 5
+    },
+    "boss.socothbenoth.phase": {
+      "files": [
+        "res://assets/audio/sfx/boss/boss.socothbenoth.phase_01.wav",
+        "res://assets/audio/sfx/boss/boss.socothbenoth.phase_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -4,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 500,
+      "priority": 5
+    },
+    "boss.socothbenoth.defeat": {
+      "files": [
+        "res://assets/audio/sfx/boss/boss.socothbenoth.defeat_01.wav",
+        "res://assets/audio/sfx/boss/boss.socothbenoth.defeat_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -3,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 800,
+      "priority": 5
+    },
+    "boss.sintese_abissal.arrival": {
+      "files": [
+        "res://assets/audio/sfx/boss/boss.sintese_abissal.arrival_01.wav",
+        "res://assets/audio/sfx/boss/boss.sintese_abissal.arrival_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -3,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 800,
+      "priority": 5
+    },
+    "boss.sintese_abissal.phase": {
+      "files": [
+        "res://assets/audio/sfx/boss/boss.sintese_abissal.phase_01.wav",
+        "res://assets/audio/sfx/boss/boss.sintese_abissal.phase_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -4,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 500,
+      "priority": 5
+    },
+    "boss.sintese_abissal.defeat": {
+      "files": [
+        "res://assets/audio/sfx/boss/boss.sintese_abissal.defeat_01.wav",
+        "res://assets/audio/sfx/boss/boss.sintese_abissal.defeat_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -3,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 800,
+      "priority": 5
+    }
+  },
+  "aliases": {
+    "hit": "combat.impact",
+    "crit": "combat.critical",
+    "swing": "combat.swing",
+    "cast": "combat.magic",
+    "nova": "combat.nova",
+    "hurt": "player.hurt",
+    "pickup": "progress.xp",
+    "gold": "progress.coin",
+    "levelup": "progress.levelup",
+    "item": "progress.item",
+    "boom": "combat.explosion",
+    "boss": "boss.arrival",
+    "click": "ui.click",
+    "win": "result.victory",
+    "dead": "result.defeat"
+  },
+  "music": {
+    "menu": "res://assets/audio/music/menu.wav",
+    "dagruve": "res://assets/audio/music/dagruve.wav",
+    "shedaklah": "res://assets/audio/music/shedaklah.wav",
+    "molor": "res://assets/audio/music/molor.wav",
+    "durao": "res://assets/audio/music/durao.wav",
+    "feng_tu": "res://assets/audio/music/feng_tu.wav",
+    "shendilavri": "res://assets/audio/music/shendilavri.wav",
+    "goranthis": "res://assets/audio/music/goranthis.wav",
+    "pilares": "res://assets/audio/music/pilares.wav",
+    "boss": "res://assets/audio/music/boss.wav",
+    "victory": "res://assets/audio/music/victory.wav",
+    "defeat": "res://assets/audio/music/defeat.wav"
+  },
+  "ambience": {
+    "dagruve": "res://assets/audio/ambience/dagruve.wav",
+    "shedaklah": "res://assets/audio/ambience/shedaklah.wav",
+    "molor": "res://assets/audio/ambience/molor.wav",
+    "durao": "res://assets/audio/ambience/durao.wav",
+    "feng_tu": "res://assets/audio/ambience/feng_tu.wav",
+    "shendilavri": "res://assets/audio/ambience/shendilavri.wav",
+    "goranthis": "res://assets/audio/ambience/goranthis.wav",
+    "pilares": "res://assets/audio/ambience/pilares.wav"
+  }
+}

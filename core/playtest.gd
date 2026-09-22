@@ -131,7 +131,7 @@ func _guide_text() -> String:
 		+ "3. [b]F5[/b] abre o bloco de notas: escreva o que estranhou ou gostou. Ao fechar, a nota e o print do instante são guardados.\n" \
 		+ "4. [b]F7[/b] gera UM arquivo .zip ao lado do executável (prints, notas, log e estado). Envie esse .zip ao responsável (Discord).\n\n" \
 		+ "[b]Controles do jogo[/b]\n" \
-		+ "WASD/setas: mover · Tab: alterna mira (automática / mouse) · E: altar, ritual, portal · X: extrair após o chefe · 1-5: escolher no level-up · R: rerrolar · Esc: pausa\n" \
+		+ "WASD/setas: mover · Tab: alterna mira (automática / mouse) · Q/botão direito: habilidade ativa · E: altar, ritual, portal · X: extrair após o chefe · 1-5: escolher no level-up · R: rerrolar · Esc: pausa\n" \
 		+ "Todas as armas atacam sozinhas. Sobreviva, evolua, derrote o chefe da fase e desça pelo portal.\n\n" \
 		+ "[b]Teclas de teste[/b]: F5 nota · F6 print · F7 gera o .zip · F11 tela cheia · F1 este guia\n" \
 		+ "[color=#aaaaaa]Os prints mostram a tela do jogo. Notas e log têm o nome de usuário do Windows removido.[/color]"
@@ -339,9 +339,10 @@ func _save_item(i: int) -> void:
 			p.store_buffer(it.png)
 
 func _load_draft() -> void:
-	if not DirAccess.dir_exists_absolute(DRAFT_DIR):
+	var dir := DirAccess.open(DRAFT_DIR)
+	if dir == null:
 		return
-	var names := DirAccess.get_files_at(DRAFT_DIR)
+	var names := dir.get_files()
 	names.sort()
 	for n in names:
 		if not n.ends_with(".json"):
@@ -356,7 +357,10 @@ func _load_draft() -> void:
 			items.append({"kind": d.kind, "time": d.time, "ctx": d.ctx, "text": d.text, "png": png})
 
 func _wipe_draft() -> void:
-	for n in DirAccess.get_files_at(DRAFT_DIR):
+	var dir := DirAccess.open(DRAFT_DIR)
+	if dir == null:
+		return
+	for n in dir.get_files():
 		DirAccess.remove_absolute("%s/%s" % [DRAFT_DIR, n])
 
 func out_dir() -> String:

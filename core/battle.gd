@@ -56,11 +56,27 @@ var _cur_angle := 0.0
 var _trickle := 0.0
 var _grid := {}
 var _first_inter := true
+var active_def: Dictionary = {}
+var active_cd := 0.0
+var active_buff_t := 0.0
+var time_slow_t := 0.0
+var projectile_slow_t := 0.0
+var active_guard := 0
+var active_guard_t := 0.0
+var barrier := 0.0
+var shadow_charge := false
+var descent_depth := 0
+var stage_rule: Dictionary = {}
+var _rule_timer := 0.0
+var _rule_index := -1
+var _effect_cd := {}
+var _hero_moving := false
 
 func _init(seed_value: int = 1, hero_id: String = "durvall", stage_key: String = "dagruve", ctx: Dictionary = {}) -> void:
 	rng.seed = seed_value
 	difficulty = float(ctx.get("difficulty", 1.0))
 	hero = Hero.make(hero_id, ctx.get("meta_mods", {}), ctx.get("bonus_mods", {}))
+	active_def = Data.table("abilities")[hero_id].duplicate(true)
 	hero.map_size = map_size
 	hero.pos = map_size * 0.5
 	rerolls = int(hero.m("rerolls"))
@@ -74,6 +90,7 @@ func _init(seed_value: int = 1, hero_id: String = "durvall", stage_key: String =
 func load_stage(stage_key: String) -> void:
 	stage_id = stage_key
 	stage = Data.table("stages")[stage_key].duplicate(true)
+	stage_rule = Data.table("stage_rules").get(stage_key, {}).duplicate(true)
 	enemies.clear()
 	projectiles.clear()
 	zones.clear()
@@ -91,7 +108,11 @@ func load_stage(stage_key: String) -> void:
 	_first_inter = true
 	_amb_puddle = 9.0
 	_amb_strike = 6.0
+	_rule_timer = minf(8.0, float(stage_rule.get("interval", 8.0)))
+	_rule_index = -1
 	hero.pos = map_size * 0.5
+	if _has_boon_effect("stage_heal"):
+		_heal_hero(hero.max_hp * 0.15)
 	if not stats.stage_ids.has(stage_key):
 		stats.stage_ids.append(stage_key)
 	stage_changed = true
@@ -104,6 +125,127 @@ func spawn_for_test(id: String, at: Vector2) -> Enemy:
 
 func toggle_aim() -> void:
 	aim = Aim.MOUSE if aim == Aim.AUTO else Aim.AUTO
+
+func active_status() -> String:
+	if active_guard > 0:
+		return "[Q/RMB] %s — GUARDA ATIVA" % active_def.name
+	if active_cd <= 0.0:
+		return "[Q/RMB] %s — PRONTA" % active_def.name
+	return "[Q/RMB] %s — %.1fs" % [active_def.name, active_cd]
+
+func reward_multiplier() -> float:
+	return _reward_multiplier_for(descent_depth)
+
+func _reward_multiplier_for(depth: int) -> float:
+	var values := [1.0, 1.25, 1.55, 1.90]
+	if depth < values.size():
+		return values[depth]
+	return 1.90 + float(depth - 3) * 0.35
+
+func next_reward_multiplier() -> float:
+	return _reward_multiplier_for(descent_depth + 1)
+
+func _has_boon_effect(effect_id: String) -> bool:
+	var defs: Dictionary = Data.table("boon_effects")
+	for boon in hero.boons:
+		if defs.get(String(boon.id), {}).get("effect", "") == effect_id:
+			return true
+	return false
+
+func _has_item_effect(effect_id: String) -> bool:
+	var defs: Dictionary = Data.table("item_effects")
+	for item in hero.items.values():
+		if defs.get(String(item.id), {}).get("effect", "") == effect_id:
+			return true
+	return false
+
+func _heal_hero(amount: float) -> void:
+	if amount <= 0.0:
+		return
+	var before := hero.hp
+	hero.hp = minf(hero.max_hp, hero.hp + amount)
+	var excess := maxf(0.0, amount - (hero.hp - before))
+	if excess > 0.0 and _has_boon_effect("overheal_shield"):
+		barrier = minf(hero.max_hp * 0.25, barrier + excess)
+
+func _update_effect_timers(dt: float) -> void:
+	active_cd = maxf(0.0, active_cd - dt)
+	active_buff_t = maxf(0.0, active_buff_t - dt)
+	time_slow_t = maxf(0.0, time_slow_t - dt)
+	projectile_slow_t = maxf(0.0, projectile_slow_t - dt)
+	active_guard_t = maxf(0.0, active_guard_t - dt)
+	if active_guard_t <= 0.0:
+		active_guard = 0
+	for key in _effect_cd.keys():
+		_effect_cd[key] = maxf(0.0, float(_effect_cd[key]) - dt)
+	if _hero_moving and _has_boon_effect("moving_cooldown"):
+		active_cd = maxf(0.0, active_cd - dt * 0.35)
+		for w in hero.weapons:
+			w.timer -= dt * 0.25
+
+func use_active(dir: Vector2 = Vector2.ZERO) -> bool:
+	if state != "running" or active_cd > 0.0 or hero.dead:
+		return false
+	var p := active_def
+	var used := true
+	var radius := float(p.get("radius", p.get("range", 2.0)))
+	match String(p.kind):
+		"cleave":
+			var hit := p.duplicate(true)
+			hit.kind = "melee"
+			used = _fire_melee(hit, 1.0 + hero.m("area_pct"))
+		"guard":
+			active_guard = int(p.get("charges", 1))
+			active_guard_t = float(p.get("duration", 4.0))
+		"healing_aura":
+			_heal_hero(float(p.heal))
+			for e in enemies:
+				if not e.dead and e.pos.distance_to(hero.pos) <= radius + e.radius:
+					_hero_hit(e, p, false)
+		"dash_weaken":
+			var move_dir := dir.normalized() if dir.length() > 0.01 else Vector2(1, 0)
+			var target_pos := hero.pos + move_dir * float(p.distance)
+			for i in range(10, 0, -1):
+				var candidate := hero.pos.lerp(target_pos, float(i) / 10.0)
+				if hero.is_free(candidate):
+					hero.pos = candidate
+					break
+			for e in enemies:
+				if not e.dead and e.pos.distance_to(hero.pos) <= radius + e.radius:
+					_apply_effects(e, {"weaken": p.weaken})
+		"overdrive":
+			active_buff_t = float(p.duration)
+		"slam":
+			used = _fire_nova(p, 1.0 + hero.m("area_pct"))
+		"star_burst":
+			var n := int(p.count)
+			for k in n:
+				var ang := TAU * float(k) / float(n)
+				projectiles.append({"owner": "hero", "pos": hero.pos, "dir": Vector2(cos(ang), sin(ang)), "speed": float(p.speed),
+					"life": float(p.range) / float(p.speed), "pierce": 1, "radius": 0.4, "p": p, "hit": {}})
+		"charm":
+			var charm_target := nearest(hero.pos, float(p.range))
+			if charm_target == null or charm_target.is_boss():
+				used = false
+			else:
+				charm_target.charmed_t = float(p.duration)
+				events.append({"type": "text", "pos": charm_target.pos, "text": "dominado"})
+		"time_stop":
+			time_slow_t = float(p.duration)
+		"guard_nova":
+			active_guard = int(p.get("charges", 1))
+			active_guard_t = 5.0
+			used = _fire_nova(p, 1.0 + hero.m("area_pct")) or active_guard > 0
+		_:
+			used = false
+	if not used:
+		return false
+	active_cd = maxf(3.0, float(p.cooldown) * (1.0 - hero.m("cd_pct") * 0.5))
+	if _has_item_effect("projectile_slow_on_active"):
+		projectile_slow_t = 4.0
+	events.append({"type": "active", "pos": hero.pos, "radius": radius, "dtype": p.get("dtype", "radiante"), "name": p.name})
+	events.append({"type": "toast", "text": p.name})
+	return true
 
 func minute() -> float:
 	return time / 60.0
@@ -122,12 +264,14 @@ func step(screen_dir: Vector2, dt: float) -> void:
 		return
 	time += dt
 	run_time += dt
+	_update_effect_timers(dt)
 	invuln = maxf(0.0, invuln - dt)
 	hero.push = Vector2.ZERO
-	_ambient(dt)
+	_hero_moving = screen_dir != Vector2.ZERO
+	_stage_rule_step(dt)
 	hero.step(screen_dir, dt)
 	if hero.m("regen") > 0.0:
-		hero.hp = minf(hero.max_hp, hero.hp + hero.m("regen") * dt)
+		_heal_hero(hero.m("regen") * dt)
 	_build_grid()
 	_update_weapons(dt)
 	_update_projectiles(dt)
@@ -164,6 +308,8 @@ func nearest(from: Vector2, max_range: float) -> Enemy:
 
 func _cd_of(p: Dictionary) -> float:
 	var f := clampf(1.0 - hero.m("cd_pct"), 0.35, 1.5)
+	if active_buff_t > 0.0:
+		f *= 0.6
 	return maxf(0.25, float(p.cd) * f)
 
 func _update_weapons(dt: float) -> void:
@@ -285,16 +431,34 @@ func _hero_hit(e: Enemy, p: Dictionary, roll: bool) -> bool:
 	if dice != "":
 		dmg = float(Dice.roll(rng, dice) + hero.attr_mod(attr) + int(p.get("dmg", 0)) + int(hero.m("dmg_flat")))
 		var pct := 1.0 + hero.m("dmg_pct")
+		if _has_boon_effect("dark_power") and hero.pos.distance_to(map_size * 0.5) > 8.0:
+			pct += 0.18
+		if _has_item_effect("control_damage") and (e.stun_t > 0.0 or e.slow_t > 0.0 or e.charmed_t > 0.0):
+			pct += 0.25
+		if shadow_charge:
+			pct += 0.5
+			shadow_charge = false
 		if hero.hp < hero.max_hp * 0.5:
 			pct += hero.m("low_hp_dmg")
 		dmg *= maxf(0.2, pct) * (1.0 + e.mark) * float(e.resist.get(dtype, 1.0))
 		if crit:
 			dmg *= 2.0
 			stats.crits += 1
+			if _has_item_effect("crit_magnet"):
+				for pickup in pickups:
+					pickup.magnet = true
 		dmg = maxf(1.0, round(dmg))
 		e.hp -= dmg
 		e.hit_flash = 0.12
 		events.append({"type": "hit", "pos": e.pos, "amount": int(dmg), "crit": crit})
+		if crit and _has_boon_effect("critical_wave"):
+			for other in enemies:
+				if other != e and not other.dead and other.pos.distance_to(e.pos) <= 2.0:
+					var splash := maxf(1.0, round(dmg * 0.25))
+					other.hp -= splash
+					events.append({"type": "hit", "pos": other.pos, "amount": int(splash), "crit": false})
+					if other.hp <= 0.0:
+						_kill(other)
 		var ls := float(p.get("lifesteal", 0.0)) + hero.m("lifesteal")
 		if ls > 0.0:
 			hero.hp = minf(hero.max_hp, hero.hp + dmg * ls)
@@ -332,8 +496,9 @@ func _apply_effects(e: Enemy, p: Dictionary) -> void:
 func _update_projectiles(dt: float) -> void:
 	var keep: Array = []
 	for pr in projectiles:
-		pr.pos += pr.dir * pr.speed * dt
-		pr.life -= dt
+		var step_dt := dt * (0.3 if pr.owner == "enemy" and projectile_slow_t > 0.0 else 1.0)
+		pr.pos += pr.dir * pr.speed * step_dt
+		pr.life -= step_dt
 		var gone: bool = pr.life <= 0.0 or pr.pos.x < 0.0 or pr.pos.y < 0.0 or pr.pos.x > map_size.x or pr.pos.y > map_size.y
 		if not gone:
 			if pr.owner == "hero":
@@ -368,12 +533,47 @@ func _update_zones(dt: float) -> void:
 			if z.life > 0.0:
 				keep.append(z)
 		elif z.kind == "puddle":
-			if hero.pos.distance_to(z.pos) <= z.radius and hero.m("puddle_immune") <= 0.0:
-				hero.slow_t = 0.3
+			if bool(z.get("grows", false)):
+				z.radius = minf(2.3, float(z.radius) + dt * 0.05)
+			if hero.pos.distance_to(z.pos) <= z.radius:
 				z.acc += dt
-				if z.acc >= 0.9:
-					z.acc = 0.0
-					_hurt_hero(2.0 + tier(), "puddle")
+				if _has_boon_effect("friendly_puddles") or _has_item_effect("puddle_regen"):
+					if z.acc >= 1.0:
+						z.acc = 0.0
+						_heal_hero(1.0 + hero.max_hp * 0.01)
+				elif hero.m("puddle_immune") <= 0.0:
+					hero.slow_t = 0.3
+					if z.acc >= 0.9:
+						z.acc = 0.0
+						_hurt_hero(2.0 + tier(), "puddle")
+			if z.life > 0.0:
+				keep.append(z)
+		elif z.kind == "rule_ritual":
+			if hero.pos.distance_to(z.pos) <= z.radius:
+				z.progress += dt
+			else:
+				z.progress = maxf(0.0, float(z.progress) - dt * 0.5)
+			z.delay -= dt
+			if z.progress >= z.interrupt:
+				events.append({"type": "toast", "text": "Ritual interrompido."})
+			elif z.delay <= 0.0:
+				if stage.waves.is_empty():
+					events.append({"type": "toast", "text": "O ritual se desfaz."})
+				else:
+					for i in 5:
+						var wave: Dictionary = stage.waves[rng.randi() % stage.waves.size()]
+						_spawn(String(wave.id), z.pos + Vector2(rng.randf_range(-1.5, 1.5), rng.randf_range(-1.5, 1.5)))
+					events.append({"type": "toast", "text": "O ritual trouxe reforços!"})
+			else:
+				keep.append(z)
+		elif z.kind == "sanctuary":
+			z.acc += dt
+			if hero.pos.distance_to(z.pos) <= z.radius and z.acc >= 1.0:
+				z.acc = 0.0
+				if bool(z.fake):
+					_hurt_hero(2.0 + tier(), "false_sanctuary")
+				else:
+					_heal_hero(1.5 + hero.max_hp * 0.01)
 			if z.life > 0.0:
 				keep.append(z)
 		else:   # telegraph
@@ -382,6 +582,19 @@ func _update_zones(dt: float) -> void:
 				events.append({"type": "boom", "pos": z.pos, "radius": z.radius})
 				if hero.pos.distance_to(z.pos) <= z.radius + HERO_HIT_R:
 					_hurt_hero(float(Dice.roll(rng, z.dice) + int(z.bonus / 2)), "aoe")
+				if z.kind == "bubble":
+					var away: Vector2 = (hero.pos - Vector2(z.pos)).normalized()
+					hero.push += away * 4.0
+				if bool(z.get("friendly", false)) or z.kind == "bubble":
+					for e in enemies:
+						if not e.dead and e.pos.distance_to(z.pos) <= z.radius + e.radius:
+							var env_damage := float(Dice.roll(rng, z.dice) + int(z.bonus / 2))
+							e.hp -= env_damage
+							events.append({"type": "hit", "pos": e.pos, "amount": int(env_damage), "crit": false})
+							if z.kind == "bubble" and not e.is_boss():
+								e.pos += (e.pos - z.pos).normalized() * 1.2
+							if e.hp <= 0.0:
+								_kill(e)
 			else:
 				keep.append(z)
 	zones = keep
@@ -391,7 +604,78 @@ func tier() -> int:
 
 # ------------------------------------------------------------------ inimigos
 
+func _charmed_step(e: Enemy, dt: float) -> void:
+	e.charmed_t = maxf(0.0, e.charmed_t - dt)
+	e.atk_cd = maxf(0.0, e.atk_cd - dt)
+	var target: Enemy = null
+	var best := 8.0
+	for other in enemies:
+		if other == e or other.dead or other.charmed_t > 0.0:
+			continue
+		var dist := e.pos.distance_to(other.pos)
+		if dist < best:
+			best = dist
+			target = other
+	if target == null:
+		return
+	if best > e.radius + target.radius + 0.7:
+		var np := e.pos + (target.pos - e.pos).normalized() * e.speed * dt
+		if hero.is_free(np, e.radius):
+			e.pos = np
+	elif e.atk_cd <= 0.0:
+		e.atk_cd = ENEMY_ATK_CD
+		var dmg := float(Dice.roll(rng, e.atk_dice) + maxi(0, e.atk_bonus))
+		target.hp -= dmg
+		events.append({"type": "hit", "pos": target.pos, "amount": int(dmg), "crit": false})
+		if target.hp <= 0.0:
+			_kill(target)
+
+func _check_boss_phase(e: Enemy) -> void:
+	if not e.is_boss() or e.phase_index >= e.phase_defs.size() or e.max_hp <= 0.0:
+		return
+	while e.phase_index < e.phase_defs.size():
+		var phase: Dictionary = e.phase_defs[e.phase_index]
+		if e.hp / e.max_hp > float(phase.at_hp):
+			break
+		e.phase_index += 1
+		events.append({"type": "boss_phase", "pos": e.pos, "text": String(phase.announcement)})
+		for action in phase.actions:
+			_apply_boss_phase_action(e, action)
+
+func _apply_boss_phase_action(e: Enemy, action: Dictionary) -> void:
+	match String(action.t):
+		"summon":
+			for i in int(action.n):
+				_spawn(String(action.id), e.pos + Vector2(rng.randf_range(-2.5, 2.5), rng.randf_range(-2.5, 2.5)))
+		"ring":
+			var n := int(action.n)
+			var off := rng.randf() * TAU
+			for k in n:
+				var ang := off + TAU * float(k) / float(n)
+				projectiles.append({"owner": "enemy", "pos": e.pos, "dir": Vector2(cos(ang), sin(ang)), "speed": float(action.speed), "life": 5.0,
+					"radius": 0.25, "dice": action.dice, "bonus": e.atk_bonus, "dtype": "magico", "pierce": 0, "hit": {}, "p": {}})
+		"hazard":
+			for i in int(action.n):
+				var at := hero.pos + Vector2(rng.randf_range(-5.0, 5.0), rng.randf_range(-5.0, 5.0))
+				zones.append({"owner": "enemy", "kind": "puddle", "pos": at, "radius": float(action.radius), "delay": 0.0, "life": 9.0, "acc": 0.0})
+		"strikes":
+			for i in int(action.n):
+				var at := hero.pos + Vector2(rng.randf_range(-4.0, 4.0), rng.randf_range(-4.0, 4.0))
+				zones.append({"owner": "enemy", "kind": "telegraph", "pos": at, "radius": 1.4, "delay": 1.2, "total": 1.2, "life": 99.0,
+					"dice": "2d6", "bonus": e.atk_bonus, "dtype": "magico", "friendly": false})
+		"enrage":
+			e.speed *= float(action.get("speed", 1.0))
+			e.atk_bonus += int(action.get("bonus", 0))
+			for i in e.ab_cd.size():
+				e.ab_cd[i] *= 0.7
+
 func _enemy_step(e: Enemy, dt: float) -> void:
+	_check_boss_phase(e)
+	if e.charmed_t > 0.0:
+		_charmed_step(e, dt)
+		return
+	if time_slow_t > 0.0:
+		dt *= 0.15
 	e.hit_flash = maxf(0.0, e.hit_flash - dt)
 	e.atk_cd = maxf(0.0, e.atk_cd - dt)
 	e.slow_t = maxf(0.0, e.slow_t - dt)
@@ -521,6 +805,10 @@ func _enemy_hit_hero(bonus: int, dice: String, dtype: String, is_proj: bool) -> 
 		return
 	if rng.randf() < hero.m("dodge"):
 		events.append({"type": "text", "pos": hero.pos, "text": "esquiva"})
+		if _has_boon_effect("shadow_dodge"):
+			invuln = maxf(invuln, 0.45)
+		if _has_item_effect("dodge_empower"):
+			shadow_charge = true
 		return
 	var dmg := float(Dice.roll(rng, dice)) * (2.0 if r == 20 else 1.0)
 	_hurt_hero(dmg, "hit")
@@ -528,12 +816,37 @@ func _enemy_hit_hero(bonus: int, dice: String, dtype: String, is_proj: bool) -> 
 func _hurt_hero(dmg: float, src: String) -> void:
 	if hero.dead or invuln > 0.0:
 		return
+	if active_guard > 0:
+		active_guard -= 1
+		if active_guard <= 0:
+			active_guard_t = 0.0
+		events.append({"type": "text", "pos": hero.pos, "text": "GUARDA"})
+		if String(active_def.kind) == "guard":
+			for e in enemies:
+				if not e.dead and e.pos.distance_to(hero.pos) <= 2.6:
+					_hero_hit(e, {"dice": "2d8", "attr": "carisma", "dtype": "radiante", "knock": 1.0}, false)
+		return
 	dmg = maxf(1.0, dmg * difficulty - hero.m("dr"))
+	if barrier > 0.0:
+		var absorbed := minf(barrier, dmg)
+		barrier -= absorbed
+		dmg -= absorbed
+		if dmg <= 0.0:
+			events.append({"type": "text", "pos": hero.pos, "text": "BARREIRA"})
+			return
 	hero.hp -= dmg
 	hero.hit_flash = 0.15
 	invuln = maxf(invuln, HIT_INVULN)
 	stats.damage_taken += dmg
 	events.append({"type": "hurt", "pos": hero.pos, "amount": int(dmg)})
+	if _has_boon_effect("pain_retaliation"):
+		for e in enemies:
+			if not e.dead and e.pos.distance_to(hero.pos) <= 2.2:
+				var retaliation := maxf(1.0, round(dmg * 0.5))
+				e.hp -= retaliation
+				events.append({"type": "hit", "pos": e.pos, "amount": int(retaliation), "crit": false})
+				if e.hp <= 0.0:
+					_kill(e)
 	if hero.hp <= 0.0:
 		if revive_left > 0:
 			revive_left -= 1
@@ -559,6 +872,12 @@ func _kill(e: Enemy) -> void:
 	stats.kills += 1
 	var xp_v := float(e.xp)
 	events.append({"type": "kill", "pos": e.pos, "enemy": e})
+	if e.burn_t > 0.0 and _has_item_effect("burn_spread") and float(_effect_cd.get("burn_spread", 0.0)) <= 0.0:
+		_effect_cd.burn_spread = 0.5
+		for other in enemies:
+			if other != e and not other.dead and other.pos.distance_to(e.pos) <= 2.4:
+				other.burn_t = maxf(other.burn_t, 3.0)
+				other.burn_dps = maxf(other.burn_dps, 4.0)
 	if xp_v > 0.0:
 		_drop("xp", e.pos, xp_v)
 	if e.xp > 0 and rng.randf() < 0.22 + hero.m("gold_pct") * 0.05:
@@ -614,7 +933,7 @@ func _collect(kind: String, value: float) -> void:
 		"xp": _add_xp(value * (1.0 + hero.m("xp_pct")))
 		"gold": _add_gold(value)
 		"potion":
-			hero.hp = minf(hero.max_hp, hero.hp + hero.max_hp * value)
+			_heal_hero(hero.max_hp * value)
 			events.append({"type": "heal", "pos": hero.pos, "amount": int(hero.max_hp * value)})
 
 func _add_gold(v: float) -> void:
@@ -661,9 +980,12 @@ func _update_interactions(dt: float) -> void:
 			if it.kind == "chest":
 				_open_chest(it)
 			else:
-				hero.hp = minf(hero.max_hp, hero.hp + hero.max_hp * 0.4)
-				events.append({"type": "heal", "pos": hero.pos, "amount": int(hero.max_hp * 0.4)})
-				events.append({"type": "toast", "text": "Fonte: +40% PV"})
+				var heal_pct := 0.4 * maxf(0.35, 1.0 - float(descent_depth) * 0.15)
+				if _has_boon_effect("weak_fountains"):
+					heal_pct *= 0.5
+				_heal_hero(hero.max_hp * heal_pct)
+				events.append({"type": "heal", "pos": hero.pos, "amount": int(hero.max_hp * heal_pct)})
+				events.append({"type": "toast", "text": "Fonte: +%d%% PV" % int(round(heal_pct * 100.0))})
 	interactions = interactions.filter(func(i): return not i.used)
 
 ## Interação manual (E): altar, ritual, portal.
@@ -707,7 +1029,10 @@ func _open_chest(it: Dictionary) -> void:
 		m.hp = m.max_hp
 		events.append({"type": "toast", "text": "Era um Mímico!"})
 		return
-	give_item(Items.roll(rng, tier(), hero.m("carisma") + hero.attr_mod("carisma")))
+	var luck := hero.m("carisma") + hero.attr_mod("carisma")
+	if _has_boon_effect("lucky_chests"):
+		luck += 4.0
+	give_item(Items.roll(rng, tier(), luck))
 
 func give_item(item: Dictionary) -> void:
 	codex.items[item.id] = true
@@ -738,11 +1063,23 @@ func _open_altar() -> void:
 	_shuffle(boons)
 	offer = []
 	for b in boons.slice(0, 3):
-		offer.append({"t": "boon", "id": b.id, "name": "%s: %s" % [b.god, b.name], "desc": b.desc, "boon": b})
+		offer.append({"t": "boon", "id": b.id, "name": "%s: %s" % [b.god, b.name], "desc": "%s\n%s" % [b.desc, _boon_effect_desc(String(b.id))], "boon": b})
 	if offer.is_empty():
 		return
 	offer_kind = "altar"
 	state = "altar"
+
+func _boon_effect_desc(id: String) -> String:
+	var effect := String(Data.table("boon_effects").get(id, {}).get("effect", ""))
+	var descriptions := {
+		"overheal_shield": "Excesso de cura vira barreira.", "stage_heal": "Recupera 15% de PV ao descer.",
+		"shadow_dodge": "Esquivar concede breve invulnerabilidade.", "lucky_chests": "Baús têm itens melhores.",
+		"moving_cooldown": "Mover-se acelera recargas.", "critical_wave": "Críticos atingem inimigos próximos.",
+		"dark_power": "Longe do centro, causa mais dano.", "weak_fountains": "Fontes curam apenas metade.",
+		"friendly_puddles": "Poças passam a curar lentamente.", "pain_retaliation": "Receber dano fere inimigos próximos.",
+		"friendly_strikes": "Raios também ferem inimigos.", "level_insight": "A cada 5 níveis, ganha uma opção extra."
+	}
+	return String(descriptions.get(effect, ""))
 
 func _shuffle(a: Array) -> void:
 	for i in range(a.size() - 1, 0, -1):
@@ -755,9 +1092,11 @@ func enter_next_stage() -> void:
 	var nxt: String = stage.get("next", "")
 	if nxt == "":
 		return
-	hero.hp = minf(hero.max_hp, hero.hp + hero.max_hp * 0.4)
+	descent_depth += 1
+	var recovery := 0.4 * maxf(0.35, 1.0 - float(descent_depth) * 0.15)
+	_heal_hero(hero.max_hp * recovery)
 	load_stage(nxt)
-	events.append({"type": "toast", "text": "Você desce: %s" % Data.table("stages")[nxt].name})
+	events.append({"type": "toast", "text": "Você desce: %s — recompensa ×%.2f" % [Data.table("stages")[nxt].name, reward_multiplier()]})
 
 func extract() -> void:
 	if stage_cleared or final_victory:
@@ -774,6 +1113,8 @@ func _open_levelup() -> void:
 
 func _build_offer() -> Array:
 	var n := 3 + int(hero.m("choices"))
+	if _has_boon_effect("level_insight") and hero.level % 5 == 0:
+		n += 1
 	var pool: Array = []
 	var wdata: Dictionary = Data.table("weapons")
 	var pdata: Dictionary = Data.table("passives")
@@ -784,9 +1125,9 @@ func _build_offer() -> Array:
 		var pv: Dictionary = w.params()
 		if w.can_evolve() and int(hero.passives.get(w.def.evolve.passive, 0)) > 0:
 			var evo: Dictionary = wdata[w.def.evolve.into]
-			pool.append({"t": "evolve", "id": w.id, "into": w.def.evolve.into, "name": "EVOLUÇÃO: %s" % evo.name, "desc": evo.desc, "weight": 9.0})
+			pool.append({"t": "evolve", "id": w.id, "into": w.def.evolve.into, "name": "EVOLUÇÃO: %s" % evo.name, "desc": evo.desc, "weight": 9.0, "role": "synergy"})
 		elif w.level < w.max_level():
-			pool.append({"t": "weapon_up", "id": w.id, "name": "%s → Nv %d" % [w.def.name, w.level + 1], "desc": _level_desc(w), "weight": 3.0})
+			pool.append({"t": "weapon_up", "id": w.id, "name": "%s → Nv %d" % [w.def.name, w.level + 1], "desc": _level_desc(w), "weight": 3.0, "role": "synergy"})
 	if owned_w < hero.weapon_slots():
 		for wid in wdata:
 			var d: Dictionary = wdata[wid]
@@ -794,37 +1135,61 @@ func _build_offer() -> Array:
 				continue
 			if hero.weapons.any(func(w): return w.id == wid):
 				continue
-			pool.append({"t": "weapon_new", "id": wid, "name": "NOVA: %s" % d.name, "desc": d.desc, "weight": 2.0})
+			pool.append({"t": "weapon_new", "id": wid, "name": "NOVA: %s" % d.name, "desc": d.desc, "weight": 2.0, "role": _weapon_offer_role(d)})
 	var owned_p := hero.passives.size()
 	for pid in pdata:
 		var lv := int(hero.passives.get(pid, 0))
 		if lv >= 5:
 			continue
 		if lv > 0:
-			pool.append({"t": "passive", "id": pid, "name": "%s → Nv %d" % [pdata[pid].name, lv + 1], "desc": pdata[pid].desc, "weight": 3.0})
+			pool.append({"t": "passive", "id": pid, "name": "%s → Nv %d" % [pdata[pid].name, lv + 1], "desc": pdata[pid].desc, "weight": 3.0, "role": "synergy"})
 		elif owned_p < 5:
-			pool.append({"t": "passive", "id": pid, "name": "NOVA: %s" % pdata[pid].name, "desc": pdata[pid].desc, "weight": 2.0})
+			pool.append({"t": "passive", "id": pid, "name": "NOVA: %s" % pdata[pid].name, "desc": pdata[pid].desc, "weight": 2.0, "role": _passive_offer_role(pdata[pid])})
 	var out: Array = []
-	for i in n:
-		if pool.is_empty():
-			break
-		var total := 0.0
-		for c in pool:
-			total += float(c.weight)
-		var roll := rng.randf() * total
-		var pick := 0
-		for j in pool.size():
-			roll -= float(pool[j].weight)
-			if roll <= 0.0:
-				pick = j
-				break
-		out.append(pool[pick])
-		pool.remove_at(pick)
+	for role in ["synergy", "defense", "direction"]:
+		var candidates := pool.filter(func(c): return String(c.role) == role)
+		if not candidates.is_empty() and out.size() < n:
+			var picked: Dictionary = _weighted_pick(candidates)
+			out.append(picked)
+			pool.erase(picked)
+	while out.size() < n and not pool.is_empty():
+		var picked: Dictionary = _weighted_pick(pool)
+		out.append(picked)
+		pool.erase(picked)
 	if out.size() < n:
 		out.append({"t": "heal", "id": "heal", "name": "Provisões", "desc": "Recupera 40% dos PV.", "weight": 1.0})
 	if out.size() < n:
 		out.append({"t": "gold", "id": "gold", "name": "Bolsa de Moedas", "desc": "+40 moedas.", "weight": 1.0})
 	return out
+
+func _weighted_pick(candidates: Array) -> Dictionary:
+	var total := 0.0
+	for c in candidates:
+		total += float(c.weight)
+	var roll := rng.randf() * total
+	for c in candidates:
+		roll -= float(c.weight)
+		if roll <= 0.0:
+			return c
+	return candidates.back()
+
+func _weapon_offer_role(d: Dictionary) -> String:
+	if d.has("heal") or d.has("stun") or d.has("slow"):
+		return "defense"
+	for owned in hero.weapons:
+		if String(owned.def.get("attr", "")) == String(d.get("attr", "")) or String(owned.def.get("dtype", "")) == String(d.get("dtype", "")):
+			return "synergy"
+	return "direction"
+
+func _passive_offer_role(d: Dictionary) -> String:
+	var defensive := ["hp", "regen", "ca", "cam", "dr", "dodge"]
+	for key in d.mods:
+		if key in defensive:
+			return "defense"
+	for owned in hero.weapons:
+		if String(owned.def.get("attr", "")) in d.mods:
+			return "synergy"
+	return "direction"
 
 func _level_desc(w: Weapon) -> String:
 	var lv: Array = w.def.get("levels", [])
@@ -899,7 +1264,7 @@ func _spawn(id: String, at: Vector2, minute_override: float = -1.0) -> Enemy:
 	var mn := minute() if minute_override < 0.0 else minute_override
 	var e := Enemy.make(id, at, mn, float(stage.hp_mult) * difficulty, tier())
 	e.pos = e.pos.clamp(Vector2(0.6, 0.6), map_size - Vector2(0.6, 0.6))
-	if "illusions" in stage.ambient and not e.is_boss() and not e.has_flag("elite_only") and rng.randf() < 0.12 and e.xp > 0:
+	if _stage_has_rule("illusions") and not e.is_boss() and not e.has_flag("elite_only") and rng.randf() < float(stage_rule.get("chance", 0.12)) and e.xp > 0:
 		e.max_hp = 1.0
 		e.hp = 1.0
 		e.xp = 0
@@ -941,6 +1306,13 @@ func _director(dt: float) -> void:
 		if not _elites_done.has(i) and time >= float(el.at):
 			_elites_done[i] = true
 			_spawn_elite(String(el.id), _ring_pos())
+	if descent_depth > 0 and not stage.elites.is_empty():
+		var pressure_mark := int(time / maxf(70.0, 130.0 - float(descent_depth) * 10.0))
+		var pressure_key := "pressure_%d" % pressure_mark
+		if pressure_mark > 0 and not _elites_done.has(pressure_key):
+			_elites_done[pressure_key] = true
+			var pressure_elite: Dictionary = stage.elites[rng.randi() % stage.elites.size()]
+			_spawn_elite(String(pressure_elite.id), _ring_pos())
 	if not boss_spawned and time >= float(stage.duration):
 		boss_spawned = true
 		var scale_extra := 1.0 + 0.5 * boss_repeat
@@ -983,30 +1355,83 @@ func _spawn_random_interaction() -> void:
 	_add_interaction(kind, hero.pos + Vector2(cos(ang), sin(ang)) * rng.randf_range(6.0, 12.0))
 	events.append({"type": "toast", "text": "Algo apareceu no mapa..."})
 
-func _ambient(dt: float) -> void:
-	for a in stage.ambient:
-		match String(a):
-			"puddles":
-				_amb_puddle -= dt
-				if _amb_puddle <= 0.0:
-					_amb_puddle = 7.0 + rng.randf() * 4.0
-					var ang := rng.randf() * TAU
-					zones.append({"owner": "enemy", "kind": "puddle", "pos": hero.pos + Vector2(cos(ang), sin(ang)) * rng.randf_range(2.5, 6.0),
-						"radius": 1.3, "delay": 0.0, "life": 10.0, "acc": 0.0})
-			"current":
-				_cur_angle += 0.12 * dt
-				hero.push += Vector2(cos(_cur_angle), sin(_cur_angle)) * 0.9
-			"strikes":
-				_amb_strike -= dt
-				if _amb_strike <= 0.0:
-					_amb_strike = 3.5 + rng.randf() * 2.5
-					var at := hero.pos + Vector2(rng.randf_range(-3, 3), rng.randf_range(-3, 3)) * (0.3 if rng.randf() < 0.5 else 1.0)
-					zones.append({"owner": "enemy", "kind": "telegraph", "pos": at, "radius": 1.5, "delay": 1.3, "life": 99.0, "dice": "2d6", "bonus": 4 + tier(), "dtype": "magico"})
-					events.append({"type": "telegraph", "pos": at, "radius": 1.5, "delay": 1.3})
+func _stage_has_rule(kind: String) -> bool:
+	var configured := String(stage_rule.get("kind", ""))
+	if configured == kind:
+		return true
+	if configured == "rotation":
+		var rules: Array = stage_rule.get("rules", [])
+		if rules.is_empty():
+			return false
+		var idx := int(time / float(stage_rule.get("interval", 60.0))) % rules.size()
+		return String(rules[idx]) == kind
+	return false
+
+func _stage_rule_step(dt: float) -> void:
+	if stage_rule.is_empty():
+		return
+	var kind := String(stage_rule.kind)
+	if kind == "rotation":
+		var rules: Array = stage_rule.rules
+		var idx := int(time / float(stage_rule.interval)) % rules.size()
+		if idx != _rule_index:
+			_rule_index = idx
+			events.append({"type": "toast", "text": "Os Pilares despertam: %s" % String(rules[idx])})
+		kind = String(rules[idx])
+	_apply_rule_kind(kind, dt)
+
+func _apply_rule_kind(kind: String, dt: float) -> void:
+	match kind:
+		"puddles":
+			_amb_puddle -= dt
+			if _amb_puddle <= 0.0:
+				_amb_puddle = float(stage_rule.get("interval", 8.0)) + rng.randf() * 3.0
+				var ang := rng.randf() * TAU
+				zones.append({"owner": "enemy", "kind": "puddle", "pos": hero.pos + Vector2(cos(ang), sin(ang)) * rng.randf_range(2.5, 6.0),
+					"radius": 1.0, "grows": true, "delay": 0.0, "life": 11.0, "acc": 0.0})
+		"current":
+			_cur_angle += 0.12 * dt
+			var current := Vector2(cos(_cur_angle), sin(_cur_angle)) * float(stage_rule.get("force", 0.9))
+			hero.push += current
+			for pickup in pickups:
+				pickup.pos = (pickup.pos + current * dt * 0.5).clamp(Vector2.ZERO, map_size)
+			for e in enemies:
+				if not e.dead and not e.is_boss():
+					e.pos = (e.pos + current * dt * 0.25).clamp(Vector2(0.5, 0.5), map_size - Vector2(0.5, 0.5))
+		"strikes":
+			_amb_strike -= dt
+			if _amb_strike <= 0.0:
+				_amb_strike = float(stage_rule.get("interval", 4.5)) + rng.randf_range(-1.0, 1.0)
+				var at := hero.pos + Vector2(rng.randf_range(-3, 3), rng.randf_range(-3, 3))
+				zones.append({"owner": "stage", "kind": "telegraph", "pos": at, "radius": 1.5, "delay": 1.3, "total": 1.3, "life": 99.0,
+					"dice": "2d6", "bonus": 4 + tier(), "dtype": "magico", "friendly": bool(stage_rule.get("friendly", false)) or _has_boon_effect("friendly_strikes")})
+		"rituals":
+			_rule_timer -= dt
+			if _rule_timer <= 0.0:
+				_rule_timer = float(stage_rule.interval)
+				var at := _ring_pos()
+				zones.append({"owner": "stage", "kind": "rule_ritual", "pos": at, "radius": 1.7, "delay": float(stage_rule.delay), "total": float(stage_rule.delay),
+					"interrupt": float(stage_rule.interrupt), "progress": 0.0, "life": 99.0})
+				events.append({"type": "toast", "text": "Ritual da Névoa: permaneça no selo para interromper!"})
+		"bubbles":
+			_rule_timer -= dt
+			if _rule_timer <= 0.0:
+				_rule_timer = float(stage_rule.interval)
+				var at := hero.pos + Vector2(rng.randf_range(-4.0, 4.0), rng.randf_range(-4.0, 4.0))
+				zones.append({"owner": "stage", "kind": "bubble", "pos": at, "radius": float(stage_rule.radius), "delay": float(stage_rule.delay),
+					"total": float(stage_rule.delay), "life": 99.0, "dice": "2d6", "bonus": 3 + tier(), "dtype": "magico"})
+		"sanctuary":
+			_rule_timer -= dt
+			if _rule_timer <= 0.0:
+				_rule_timer = float(stage_rule.interval)
+				var fake := rng.randf() < float(stage_rule.fake_chance)
+				zones.append({"owner": "stage", "kind": "sanctuary", "pos": _ring_pos(), "radius": 2.2, "life": float(stage_rule.duration), "acc": 0.0, "fake": fake})
+				events.append({"type": "toast", "text": "Um santuário surge no falso paraíso."})
 
 # ------------------------------------------------------------------ resultado
 
 func result() -> Dictionary:
-	return {"won": state == "won", "dead": state == "dead", "extracted": extracted, "time": run_time, "kills": stats.kills, "gold": int(stats.gold),
+	return {"won": state == "won", "dead": state == "dead", "extracted": extracted, "time": run_time, "kills": stats.kills,
+		"gold": int(round(stats.gold * reward_multiplier())), "raw_gold": int(stats.gold), "reward_mult": reward_multiplier(), "descent_depth": descent_depth,
 		"level": hero.level, "stage": stage_id, "hero": hero.id, "bosses": stats.bosses, "boss_ids": stats.boss_ids, "elites": stats.elites, "crits": stats.crits,
 		"ones": stats.ones, "chests": stats.chests, "stages_cleared": stats.stages_cleared, "stage_ids": stats.stage_ids, "cleared_ids": stats.cleared_ids, "final_victory": final_victory, "weapons": hero.weapons.map(func(w): return w.id), "codex": codex}

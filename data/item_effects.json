@@ -1,0 +1,8 @@
+{
+  "machado_de_xargath": {"effect": "burn_spread", "cooldown": 0.5},
+  "ampulheta": {"effect": "projectile_slow_on_active", "duration": 4.0},
+  "luneta_de_korrak": {"effect": "crit_magnet"},
+  "manto_do_pantano": {"effect": "puddle_regen"},
+  "anel_passagem_sombria": {"effect": "dodge_empower"},
+  "colar_dos_tentaculos": {"effect": "control_damage", "bonus": 0.25}
+}

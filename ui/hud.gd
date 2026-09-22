@@ -14,6 +14,7 @@ signal aim_pressed
 @onready var hp_label: Label = %HpLabel
 @onready var xp_bar: ProgressBar = %XpBar
 @onready var info_label: Label = %InfoLabel
+@onready var active_label: Label = %ActiveLabel
 @onready var timer_label: Label = %TimerLabel
 @onready var stage_label: Label = %StageLabel
 @onready var boss_panel: Control = %BossPanel
@@ -60,10 +61,12 @@ func update_stats(b: Battle) -> void:
 	name_label.text = "%s  ·  Nv %d" % [h.name, h.level]
 	hp_bar.max_value = h.max_hp
 	hp_bar.value = h.hp
-	hp_label.text = "%d / %d" % [int(ceil(h.hp)), int(h.max_hp)]
+	hp_label.text = "%d / %d%s" % [int(ceil(h.hp)), int(h.max_hp), "  +%d barreira" % int(ceil(b.barrier)) if b.barrier > 0.0 else ""]
 	xp_bar.max_value = h.xp_need
 	xp_bar.value = h.xp
 	info_label.text = "Moedas %d   Abates %d   CA %d  CAM %d" % [int(h.gold), b.stats.kills, h.ca(), h.cam()]
+	active_label.text = b.active_status()
+	active_label.modulate = Color(1.0, 0.9, 0.5) if b.active_cd <= 0.0 else Color(0.65, 0.65, 0.65)
 	var t := int(b.time)
 	var dur := int(b.stage.duration)
 	if b.boss_spawned and not b.boss_dead:
@@ -97,7 +100,9 @@ func update_stats(b: Battle) -> void:
 		if not it.used and it.kind in ["altar", "ritual", "portal"] and it.pos.distance_to(h.pos) <= 1.6:
 			pr = "[E] " + {"altar": "rezar no altar", "ritual": "iniciar o ritual", "portal": "descer pelo portal"}[it.kind]
 	if pr == "" and (b.stage_cleared or b.final_victory):
-		pr = "[X] extrair com as recompensas"
+		pr = "[X] Extrair ×%.2f" % b.reward_multiplier()
+		if b.stage.get("next", "") != "":
+			pr += "   [E] Descer ×%.2f" % b.next_reward_multiplier()
 	prompt_label.text = pr
 
 func show_offer(b: Battle) -> void:
@@ -107,7 +112,9 @@ func show_offer(b: Battle) -> void:
 	for i in b.offer.size():
 		var o: Dictionary = b.offer[i]
 		var btn := Button.new()
-		btn.text = "%d.  %s\n      %s" % [i + 1, o.name, o.desc]
+		var role_names := {"synergy": "SINERGIA", "defense": "DEFESA", "direction": "NOVA DIREÇÃO"}
+		var role := String(role_names.get(o.get("role", ""), ""))
+		btn.text = "%d.  %s%s\n      %s" % [i + 1, "[%s] " % role if role != "" else "", o.name, o.desc]
 		btn.alignment = HORIZONTAL_ALIGNMENT_LEFT
 		btn.custom_minimum_size = Vector2(620, 62)
 		match String(o.t):
@@ -150,9 +157,10 @@ func show_result(res: Dictionary, summary: Dictionary) -> void:
 	pause_panel.visible = false
 	result_title.text = "Vitória!" if res.won else "Você caiu..."
 	var t := int(res.time)
-	var txt := "%s · %s\nTempo %02d:%02d · Nível %d · Abates %d · Chefes %d\nModo: %s\n\n+%d moedas%s (total %d)" % [
+	var txt := "%s · %s\nTempo %02d:%02d · Nível %d · Abates %d · Chefes %d\nModo: %s · Profundidade %d · Multiplicador ×%.2f\n\n+%d moedas%s (total %d)" % [
 		Data.table("heroes")[res.hero].name, Data.table("stages")[res.stage].name, t / 60, t % 60, res.level, res.kills, res.bosses,
-		"extraído" if res.extracted else ("derrota" if res.dead else "final"), summary.earned, " (metade: derrota)" if summary.half else "", summary.coins]
+		"extraído" if res.extracted else ("derrota" if res.dead else "final"), int(res.get("descent_depth", 0)), float(res.get("reward_mult", 1.0)),
+		summary.earned, " (metade: derrota)" if summary.half else "", summary.coins]
 	var names: Array = []
 	for id in summary.achievements:
 		for a in Data.table("achievements").achievements:

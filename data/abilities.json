@@ -1,0 +1,12 @@
+{
+  "durvall": {"id": "ruptura_sombria", "name": "Ruptura Sombria", "kind": "cleave", "cooldown": 12.0, "range": 3.2, "cone": 85, "dice": "3d8", "dtype": "fisico", "attr": "forca", "weaken": 2, "desc": "Golpe frontal que rasga a armadura; causa mais dano com pouca vida."},
+  "brook": {"id": "guarda_de_lliira", "name": "Guarda de Lliira", "kind": "guard", "cooldown": 15.0, "duration": 4.0, "charges": 1, "desc": "Bloqueia o próximo golpe e responde com uma onda radiante."},
+  "maelor": {"id": "comunhao", "name": "Comunhão", "kind": "healing_aura", "cooldown": 16.0, "radius": 3.2, "heal": 9, "dice": "2d6", "dtype": "radiante", "attr": "constituicao", "mark": 0.2, "desc": "Cura e marca os inimigos próximos."},
+  "sylas": {"id": "passo_pelas_sombras", "name": "Passo pelas Sombras", "kind": "dash_weaken", "cooldown": 10.0, "distance": 3.5, "radius": 1.1, "weaken": 2, "desc": "Atravessa uma curta distância e enfraquece quem estiver no caminho."},
+  "kayron": {"id": "sobrecarga_mistica", "name": "Sobrecarga Mística", "kind": "overdrive", "cooldown": 18.0, "duration": 6.0, "desc": "Acelera temporariamente todas as armas."},
+  "korrak": {"id": "impacto_de_xargath", "name": "Impacto de Xar'gath", "kind": "slam", "cooldown": 14.0, "radius": 3.0, "dice": "3d10", "dtype": "fogo", "attr": "forca", "lifesteal": 0.2, "burn": 3, "desc": "Impacto de fogo em área com roubo de vida."},
+  "leoric": {"id": "constelacao", "name": "Constelação", "kind": "star_burst", "cooldown": 13.0, "count": 8, "dice": "2d8", "dtype": "radiante", "attr": "carisma", "speed": 13, "range": 11, "desc": "Dispara uma constelação de projéteis em todas as direções."},
+  "nyrelia": {"id": "dominacao", "name": "Dominação", "kind": "charm", "cooldown": 17.0, "duration": 7.0, "range": 7.0, "desc": "Converte temporariamente um inimigo comum em aliado."},
+  "zynara": {"id": "suspensao_temporal", "name": "Suspensão Temporal", "kind": "time_stop", "cooldown": 20.0, "duration": 4.0, "radius": 7.0, "desc": "Quase paralisa inimigos e projéteis próximos."},
+  "bromnor": {"id": "concordia", "name": "Concórdia", "kind": "guard_nova", "cooldown": 16.0, "radius": 3.5, "dice": "2d8", "dtype": "radiante", "attr": "forca", "knock": 2.5, "charges": 1, "desc": "Ganha guarda e repele os inimigos ao redor."}
+}

@@ -12,6 +12,7 @@ Survivor-like lento e legível, ambientado em Nottgard, com foco no **Plano Abis
 |---|---|
 | WASD / setas | mover |
 | Tab | alterna mira automática ↔ mouse |
+| Q / botão direito | habilidade ativa do herói |
 | E | altar, ritual, portal |
 | X | extrair depois do chefe |
 | 1–5 / R | escolher no level-up / rerrolar |
@@ -20,6 +21,8 @@ Survivor-like lento e legível, ambientado em Nottgard, com foco no **Plano Abis
 | **F6** | print da tela |
 | **F7** | gera **um** `.zip` de evidência ao lado do executável — envie ao responsável |
 | F1 / F11 | guia / tela cheia |
+
+Depois de cada chefe, **X** extrai e garante a recompensa atual; **E** entra no portal, mantém a build e aumenta o multiplicador de risco e recompensa. Cada camada possui uma regra ambiental própria, e os chefes mudam de fase em 70% e 35% de vida.
 
 ## Desenvolver
 
