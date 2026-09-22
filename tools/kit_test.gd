@@ -10,6 +10,22 @@ func _ready() -> void:
 	add_child(load("res://ui/menu.tscn").instantiate())
 	await get_tree().create_timer(0.5).timeout
 	var fails: Array = []
+	# O guia inicial deve bloquear o Quartel de forma explícita e só fechar com nome.
+	Playtest.open_guide(false)
+	var viewport_size := get_viewport().get_visible_rect().size
+	if not Playtest._guide_modal.visible or not get_tree().paused:
+		fails.append("guia não abriu como modal pausado")
+	if Playtest._guide.size.x > viewport_size.x - 47.0 or Playtest._guide.size.y > viewport_size.y - 47.0:
+		fails.append("guia não respeitou as margens do viewport")
+	Game.profile.data.name = ""
+	Playtest._name_edit.text = ""
+	Playtest.close_guide()
+	if not Playtest._guide_modal.visible or not Playtest._guide_error.visible:
+		fails.append("guia aceitou nome vazio ou não exibiu erro local")
+	Playtest._name_edit.text = "Testador"
+	Playtest.close_guide()
+	if Playtest._guide_modal.visible or get_tree().paused:
+		fails.append("guia não devolveu o controle ao fechar")
 	print('a'); await Playtest.take_print(); print('b')
 	await Playtest.open_note(); print('c')
 	Playtest._edit.text = "Nota de teste em %s do usuário %s" % [OS.get_user_data_dir(), OS.get_environment("USERNAME")]

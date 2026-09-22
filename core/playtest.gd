@@ -9,6 +9,8 @@ const MAX_BYTES := 8 * 1024 * 1024
 const NOTE_MAX := 1000
 const DRAFT_DIR := "user://evidencias/rascunho"
 const FALLBACK_DIR := "user://evidencias"
+const GUIDE_MAX_SIZE := Vector2(820, 560)
+const GUIDE_MARGIN := 24.0
 
 var items: Array = []          # {kind, time, ctx, text, png}
 var _note_open := false
@@ -22,9 +24,12 @@ var _pad: PanelContainer
 var _edit: TextEdit
 var _count: Label
 var _summary: Label
+var _guide_modal: Control
 var _guide: PanelContainer
+var _guide_content: VBoxContainer
 var _name_edit: LineEdit
 var _guide_start: Button
+var _guide_error: Label
 var _clear_armed := false
 var _clear_btn: Button
 
@@ -32,6 +37,8 @@ func _ready() -> void:
 	layer = 100
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	_build_ui()
+	get_viewport().size_changed.connect(_layout_guide)
+	call_deferred("_layout_guide")
 	_load_draft()
 	if not Version.PLAYTEST_BUILD:
 		return
@@ -91,37 +98,73 @@ func _build_ui() -> void:
 	hint.modulate = Color(1, 1, 1, 0.6)
 	h.add_child(hint)
 
+	_guide_modal = Control.new()
+	_guide_modal.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	_guide_modal.mouse_filter = Control.MOUSE_FILTER_STOP
+	_guide_modal.visible = false
+	add_child(_guide_modal)
+	var shade := ColorRect.new()
+	shade.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	shade.color = Color(0.015, 0.01, 0.025, 0.82)
+	shade.mouse_filter = Control.MOUSE_FILTER_STOP
+	_guide_modal.add_child(shade)
 	_guide = PanelContainer.new()
-	_guide.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
-	_guide.custom_minimum_size = Vector2(820, 560)
-	_guide.visible = false
-	add_child(_guide)
+	_guide.mouse_filter = Control.MOUSE_FILTER_STOP
+	_guide_modal.add_child(_guide)
+	var scroll := ScrollContainer.new()
+	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	scroll.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_AUTO
+	scroll.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	_guide.add_child(scroll)
 	var g := VBoxContainer.new()
-	_guide.add_child(g)
+	g.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	scroll.add_child(g)
+	_guide_content = g
 	var title := Label.new()
 	title.text = "Obrigado por ajudar a construir %s!" % Version.GAME_NAME
 	title.add_theme_font_size_override("font_size", 26)
+	title.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	g.add_child(title)
 	var body := RichTextLabel.new()
 	body.bbcode_enabled = true
 	body.fit_content = true
-	body.custom_minimum_size = Vector2(780, 0)
+	body.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	body.text = _guide_text()
 	g.add_child(body)
-	var nrow := HBoxContainer.new()
-	g.add_child(nrow)
 	var nl := Label.new()
 	nl.text = "Seu nome (vai no .zip da evidência): "
-	nrow.add_child(nl)
+	nl.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	g.add_child(nl)
 	_name_edit = LineEdit.new()
 	_name_edit.max_length = 24
-	_name_edit.custom_minimum_size = Vector2(260, 0)
+	_name_edit.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	_name_edit.text_submitted.connect(func(_t): close_guide())
-	nrow.add_child(_name_edit)
+	_name_edit.text_changed.connect(func(_t): _guide_error.visible = false)
+	g.add_child(_name_edit)
+	_guide_error = Label.new()
+	_guide_error.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	_guide_error.add_theme_color_override("font_color", Color(1.0, 0.48, 0.42))
+	_guide_error.visible = false
+	g.add_child(_guide_error)
 	_guide_start = Button.new()
 	_guide_start.text = "Começar"
+	_guide_start.custom_minimum_size = Vector2(0, 44)
 	_guide_start.pressed.connect(close_guide)
 	g.add_child(_guide_start)
+
+func _layout_guide() -> void:
+	if _guide == null:
+		return
+	var viewport_size := get_viewport().get_visible_rect().size
+	var available := viewport_size - Vector2(GUIDE_MARGIN * 2.0, GUIDE_MARGIN * 2.0)
+	var panel_size := Vector2(minf(GUIDE_MAX_SIZE.x, maxf(1.0, available.x)), minf(GUIDE_MAX_SIZE.y, maxf(1.0, available.y)))
+	_guide.custom_minimum_size = panel_size
+	_guide.size = panel_size
+	_guide.position = (viewport_size - panel_size) * 0.5
+	# ScrollContainer mede o filho pela largura mínima; mantemos o texto dentro
+	# da largura visível para que apenas a rolagem vertical seja necessária.
+	_guide_content.custom_minimum_size.x = maxf(1.0, panel_size.x - 32.0)
 
 func _guide_text() -> String:
 	return "Este jogo [b]ainda não foi lançado[/b]: você está testando uma versão em construção (v%s). O que você reportar muda o jogo de verdade.\n\n" % Version.VERSION \
@@ -299,7 +342,9 @@ func open_guide(first: bool) -> void:
 	_guide_open = true
 	_paused_before = get_tree().paused
 	get_tree().paused = true
-	_guide.visible = true
+	_guide_error.visible = false
+	_guide_modal.visible = true
+	_layout_guide()
 	_name_edit.text = Game.profile.data.name
 	_guide_start.text = "Começar" if first else "Fechar"
 	_name_edit.grab_focus()
@@ -308,15 +353,26 @@ func close_guide() -> void:
 	var nm := _name_edit.text.strip_edges()
 	if nm == "":
 		if Game.profile.data.name == "":
-			toast("Digite um nome para continuar.")
+			_guide_error.text = "Digite um nome para continuar."
+			_guide_error.visible = true
+			_name_edit.grab_focus()
 			return
 		nm = Game.profile.data.name
 	Game.profile.data.name = nm
 	Game.profile.data.welcome_seen = true
 	Game.save()
 	_guide_open = false
-	_guide.visible = false
+	_guide_modal.visible = false
 	get_tree().paused = _paused_before
+	call_deferred("_restore_menu_focus")
+
+func _restore_menu_focus() -> void:
+	var scene := get_tree().current_scene
+	if scene == null:
+		return
+	var play_btn := scene.get_node_or_null("Tabs/Jogar/Right/PlayBtn") as Button
+	if play_btn != null and not play_btn.disabled:
+		play_btn.grab_focus()
 
 # ------------------------------------------------------------------ pacote e disco
 
