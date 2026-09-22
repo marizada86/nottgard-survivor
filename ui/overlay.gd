@@ -80,7 +80,15 @@ func _draw_over() -> void:
 			"ritual": col = Color(0.9, 0.2, 0.2); label = "ritual [E]"; asset = "ritual"
 			"portal": col = Color(0.3, 1.0, 0.6); label = "portal [E]"; asset = "portal"
 		var texture := _texture("res://assets/interactions/%s.png" % asset)
-		if texture != null:
+		var animation_id: String = {"fountain": "fountain_active", "altar": "altar_active", "ritual": "ritual", "portal": "portal"}.get(String(it.kind), "")
+		var animation_count: int = {"fountain_active": 6, "altar_active": 6, "ritual": 8, "portal": 8}.get(animation_id, 0)
+		var animation_texture := _texture("res://assets/animations/interactions/%s.png" % animation_id) if animation_id != "" else null
+		if animation_texture != null and animation_count > 0:
+			var h := 70.0 if it.kind == "portal" else 54.0
+			var frame := int(Time.get_ticks_msec() / 100) % animation_count
+			var w := h
+			draw_texture_rect_region(animation_texture, Rect2(p.x - w * 0.5, p.y - h, w, h), Rect2(frame * 192, 0, 192, 192))
+		elif texture != null:
 			var h := 70.0 if it.kind == "portal" else 54.0
 			var w := h * float(texture.get_width()) / float(texture.get_height())
 			draw_texture_rect(texture, Rect2(p.x - w * 0.5, p.y - h, w, h), false)

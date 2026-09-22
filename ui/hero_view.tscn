@@ -4,3 +4,5 @@
 
 [node name="Hero" type="Node2D" unique_id=629349748]
 script = ExtResource("1_p7d46")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

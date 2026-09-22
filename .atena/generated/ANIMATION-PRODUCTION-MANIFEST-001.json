@@ -1,0 +1,30 @@
+{
+  "id": "ANIMATION-PRODUCTION-MANIFEST-001",
+  "spec": "SPEC-017-piloto-animacao-dagruve",
+  "prompt_set": "ART-PROMPTS-014-animacao-dagruve-piloto",
+  "generated_at": "2026-09-22",
+  "format": "horizontal RGBA sprite strip",
+  "entries": [
+    {"id":"durvall.idle","frames":4,"cell":[256,384],"fps":8,"loop":true,"candidate":".atena/generated/animation-candidates/heroes/durvall/idle_v01.png","asset":"assets/animations/heroes/durvall/idle.png"},
+    {"id":"durvall.move","frames":6,"cell":[256,384],"fps":10,"loop":true,"candidate":".atena/generated/animation-candidates/heroes/durvall/move_v01.png","asset":"assets/animations/heroes/durvall/move.png"},
+    {"id":"durvall.attack","frames":4,"cell":[256,384],"fps":12,"loop":false,"candidate":".atena/generated/animation-candidates/heroes/durvall/attack_v01.png","asset":"assets/animations/heroes/durvall/attack.png"},
+    {"id":"durvall.active","frames":6,"cell":[256,384],"fps":12,"loop":false,"candidate":".atena/generated/animation-candidates/heroes/durvall/active_v02.png","asset":"assets/animations/heroes/durvall/active.png"},
+    {"id":"durvall.death","frames":6,"cell":[256,384],"fps":9,"loop":false,"candidate":".atena/generated/animation-candidates/heroes/durvall/death_v02.png","asset":"assets/animations/heroes/durvall/death.png"},
+    {"id":"zumbi.idle","frames":4,"cell":[256,384],"fps":10,"loop":true,"candidate":".atena/generated/animation-candidates/enemies/zumbi/idle_v01.png","asset":"assets/animations/enemies/zumbi/idle.png"},
+    {"id":"zumbi.move","frames":6,"cell":[256,384],"fps":10,"loop":true,"candidate":".atena/generated/animation-candidates/enemies/zumbi/move_v02.png","asset":"assets/animations/enemies/zumbi/move.png"},
+    {"id":"zumbi.attack","frames":4,"cell":[256,384],"fps":12,"loop":false,"candidate":".atena/generated/animation-candidates/enemies/zumbi/attack_v02.png","asset":"assets/animations/enemies/zumbi/attack.png"},
+    {"id":"zumbi.death","frames":6,"cell":[256,384],"fps":9,"loop":false,"candidate":".atena/generated/animation-candidates/enemies/zumbi/death_v02.png","asset":"assets/animations/enemies/zumbi/death.png"},
+    {"id":"sacerdote_mente_derretida.idle","frames":6,"cell":[320,480],"fps":10,"loop":true,"candidate":".atena/generated/animation-candidates/enemies/sacerdote_mente_derretida/idle_v02.png","asset":"assets/animations/enemies/sacerdote_mente_derretida/idle.png"},
+    {"id":"sacerdote_mente_derretida.move","frames":8,"cell":[320,480],"fps":10,"loop":true,"candidate":".atena/generated/animation-candidates/enemies/sacerdote_mente_derretida/move_v02.png","asset":"assets/animations/enemies/sacerdote_mente_derretida/move.png"},
+    {"id":"sacerdote_mente_derretida.attack","frames":6,"cell":[320,480],"fps":12,"loop":false,"candidate":".atena/generated/animation-candidates/enemies/sacerdote_mente_derretida/attack_v02.png","asset":"assets/animations/enemies/sacerdote_mente_derretida/attack.png"},
+    {"id":"sacerdote_mente_derretida.special_a","frames":8,"cell":[320,480],"fps":12,"loop":false,"candidate":".atena/generated/animation-candidates/enemies/sacerdote_mente_derretida/special_a_v02.png","asset":"assets/animations/enemies/sacerdote_mente_derretida/special_a.png"},
+    {"id":"sacerdote_mente_derretida.special_b","frames":8,"cell":[320,480],"fps":12,"loop":false,"candidate":".atena/generated/animation-candidates/enemies/sacerdote_mente_derretida/special_b_v02.png","asset":"assets/animations/enemies/sacerdote_mente_derretida/special_b.png"},
+    {"id":"sacerdote_mente_derretida.phase","frames":8,"cell":[320,480],"fps":12,"loop":false,"candidate":".atena/generated/animation-candidates/enemies/sacerdote_mente_derretida/phase_v02.png","asset":"assets/animations/enemies/sacerdote_mente_derretida/phase.png"},
+    {"id":"sacerdote_mente_derretida.death","frames":10,"cell":[320,480],"fps":9,"loop":false,"candidate":".atena/generated/animation-candidates/enemies/sacerdote_mente_derretida/death_v02.png","asset":"assets/animations/enemies/sacerdote_mente_derretida/death.png"},
+    {"id":"interaction.chest_open","frames":6,"cell":[192,192],"fps":10,"loop":false,"candidate":".atena/generated/animation-candidates/interactions/chest_open_v02.png","asset":"assets/animations/interactions/chest_open.png"},
+    {"id":"interaction.fountain_active","frames":6,"cell":[192,192],"fps":10,"loop":true,"candidate":".atena/generated/animation-candidates/interactions/fountain_active_v02.png","asset":"assets/animations/interactions/fountain_active.png"},
+    {"id":"interaction.altar_active","frames":6,"cell":[192,192],"fps":10,"loop":true,"candidate":".atena/generated/animation-candidates/interactions/altar_active_v02.png","asset":"assets/animations/interactions/altar_active.png"},
+    {"id":"interaction.ritual","frames":8,"cell":[192,192],"fps":10,"loop":true,"candidate":".atena/generated/animation-candidates/interactions/ritual_v02.png","asset":"assets/animations/interactions/ritual.png"},
+    {"id":"interaction.portal","frames":8,"cell":[192,192],"fps":10,"loop":true,"candidate":".atena/generated/animation-candidates/interactions/portal_v02.png","asset":"assets/animations/interactions/portal.png"}
+  ]
+}

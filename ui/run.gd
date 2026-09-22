@@ -1,7 +1,7 @@
 extends Node2D
 ## Controla a run: cena da fase (ui/stages/*.tscn), simulação (Battle), efeitos e HUD.
 
-const ENEMY_VIEW := preload("res://ui/enemy_view.gd")
+const ENEMY_VIEW := preload("res://ui/enemy_view.tscn")
 
 @onready var slot: Node2D = $StageSlot
 @onready var under: Node2D = $Under
@@ -174,24 +174,20 @@ func _process(dt: float) -> void:
 
 func _sync() -> void:
 	var h := battle.hero
-	hero_node.position = Iso.to_screen(h.pos)
-	hero_node.dead = h.dead
-	hero_node.flash = h.hit_flash > 0.0
-	hero_node.queue_redraw()
+	hero_node.sync_visual(Iso.to_screen(h.pos), h.dead, h.hit_flash > 0.0)
 	for e in battle.enemies:
 		if not enemy_nodes.has(e):
-			var n: Node2D = ENEMY_VIEW.new()
+			var n: Node2D = ENEMY_VIEW.instantiate()
 			sorted.add_child(n)
 			n.setup(e)
 			enemy_nodes[e] = n
 	for e in enemy_nodes.keys():
 		var n: Node2D = enemy_nodes[e]
 		if e.dead or not battle.enemies.has(e):
-			n.queue_free()
+			n.play_death()
 			enemy_nodes.erase(e)
 		else:
-			n.position = Iso.to_screen(e.pos)
-			n.queue_redraw()
+			n.sync_visual(Iso.to_screen(e.pos))
 
 func _show_result() -> void:
 	_result_shown = true
@@ -233,9 +229,11 @@ func _consume_events() -> void:
 				_float_text(at + Vector2(0, -60), "+%d" % ev.amount, Color(0.4, 1.0, 0.5), 14)
 			"swing":
 				Sfx.play_weapon(String(ev.get("weapon", "")), "combat.swing")
+				hero_node.play_action(&"attack")
 				_swing(ev)
 			"cast":
 				Sfx.play_weapon(String(ev.get("weapon", "")), "combat.magic")
+				hero_node.play_action(&"attack")
 			"nova":
 				Sfx.play_weapon(String(ev.get("weapon", "")), "combat.nova")
 				_ring(ev.pos, ev.radius, _dcol(String(ev.dtype)), 0.35)
@@ -257,6 +255,7 @@ func _consume_events() -> void:
 				Sfx.play("player.heal" if pickup_key == "potion" else "progress.%s" % pickup_key)
 			"interaction":
 				Sfx.play("world.%s" % String(ev.kind))
+				_play_interaction(ev)
 			"item":
 				Sfx.play("progress.item")
 			"levelup":
@@ -267,6 +266,7 @@ func _consume_events() -> void:
 				_shake = 1.2
 			"active":
 				Sfx.play_hero(String(ev.get("hero_id", battle.hero.id)))
+				hero_node.play_action(&"active")
 				_shake = 0.35
 				_ring(ev.pos, float(ev.get("radius", 2.0)), _dcol(String(ev.get("dtype", "radiante"))), 0.3)
 			"boss_phase":
@@ -274,8 +274,13 @@ func _consume_events() -> void:
 				Sfx.play_boss(active_boss, "phase")
 				_shake = 1.0
 				hud.toast(ev.text, Color(1.0, 0.55, 0.35))
+				_play_enemy_action(active_boss, ev.pos, &"phase")
 			"enemy_action":
 				Sfx.play_enemy(String(ev.enemy_id), "action")
+				var action: StringName = &"attack"
+				if String(ev.get("ability", "")) == "summon": action = &"special_a"
+				elif String(ev.get("ability", "")) == "ring": action = &"special_b"
+				_play_enemy_action(String(ev.enemy_id), ev.pos, action)
 			"telegraph":
 				Sfx.play("enemy.telegraph")
 				Sfx.play_enemy(String(ev.get("enemy_id", "")), "action")
@@ -287,6 +292,37 @@ func _consume_events() -> void:
 				hud.toast(ev.text, ev.get("color", Color(1, 1, 1)))
 				Game.logline(String(ev.text))
 	battle.events.clear()
+
+func _play_enemy_action(enemy_id: String, ground_position: Vector2, action: StringName) -> void:
+	var best: Node2D
+	var best_distance := INF
+	for enemy_key in enemy_nodes:
+		if enemy_key.id != enemy_id:
+			continue
+		var distance: float = enemy_key.pos.distance_squared_to(ground_position)
+		if distance < best_distance:
+			best_distance = distance
+			best = enemy_nodes[enemy_key]
+	if best != null:
+		best.play_action(action)
+
+func _play_interaction(ev: Dictionary) -> void:
+	var sequence: String = {"chest": "chest_open", "fountain": "fountain_active", "altar": "altar_active", "ritual": "ritual", "portal": "portal"}.get(String(ev.kind), "")
+	var count: int = {"chest_open": 6, "fountain_active": 6, "altar_active": 6, "ritual": 8, "portal": 8}.get(sequence, 0)
+	var path := "res://assets/animations/interactions/%s.png" % sequence
+	if count == 0 or not ResourceLoader.exists(path):
+		return
+	var frames := SpriteStripFrames.empty()
+	SpriteStripFrames.add_strip(frames, &"activate", path, Vector2i(192, 192), count, 10.0, false)
+	var animated := AnimatedSprite2D.new()
+	animated.sprite_frames = frames
+	animated.position = Iso.to_screen(ev.pos)
+	animated.offset = Vector2(0, -96)
+	var height := 70.0 if ev.kind == "portal" else 54.0
+	animated.scale = Vector2.ONE * (height / 192.0)
+	fx.add_child(animated)
+	animated.animation_finished.connect(animated.queue_free)
+	animated.play(&"activate")
 
 func _dcol(dtype: String) -> Color:
 	match dtype:

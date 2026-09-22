@@ -756,7 +756,7 @@ func _use_ability(e: Enemy, idx: int, a: Dictionary, dist: float, to: Vector2) -
 			var dir := to.normalized()
 			projectiles.append({"owner": "enemy", "pos": e.pos, "dir": dir, "speed": float(a.speed), "life": float(a.range) / float(a.speed) + 1.0, "radius": 0.25,
 				"dice": a.dice, "bonus": int(a.bonus) + int(minute() / 4.0) + tier(), "dtype": a.dtype, "pierce": 0, "hit": {}, "p": {}})
-			events.append({"type": "enemy_action", "enemy_id": e.id, "pos": e.pos})
+			events.append({"type": "enemy_action", "enemy_id": e.id, "pos": e.pos, "ability": "shoot"})
 			return true
 		"aoe":
 			if dist > float(a.range):
@@ -781,10 +781,11 @@ func _use_ability(e: Enemy, idx: int, a: Dictionary, dist: float, to: Vector2) -
 				var at := e.pos + Vector2(rng.randf_range(-1.5, 1.5), rng.randf_range(-1.5, 1.5))
 				_spawn(String(a.id), at)
 			events.append({"type": "text", "pos": e.pos, "text": "invoca", "enemy_id": e.id})
+			events.append({"type": "enemy_action", "enemy_id": e.id, "pos": e.pos, "ability": "summon"})
 			return true
 		"puddle":
 			zones.append({"owner": "enemy", "kind": "puddle", "pos": e.pos, "radius": float(a.radius), "delay": 0.0, "life": float(a.life), "acc": 0.0})
-			events.append({"type": "enemy_action", "enemy_id": e.id, "pos": e.pos})
+			events.append({"type": "enemy_action", "enemy_id": e.id, "pos": e.pos, "ability": "puddle"})
 			return true
 		"ring":
 			if dist > 13.0:
@@ -795,7 +796,7 @@ func _use_ability(e: Enemy, idx: int, a: Dictionary, dist: float, to: Vector2) -
 				var ang := off + TAU * k / n
 				projectiles.append({"owner": "enemy", "pos": e.pos, "dir": Vector2(cos(ang), sin(ang)), "speed": float(a.speed), "life": 4.0, "radius": 0.25,
 					"dice": a.dice, "bonus": e.atk_bonus, "dtype": "magico", "pierce": 0, "hit": {}, "p": {}})
-			events.append({"type": "enemy_action", "enemy_id": e.id, "pos": e.pos})
+			events.append({"type": "enemy_action", "enemy_id": e.id, "pos": e.pos, "ability": "ring"})
 			return true
 	return false
 
