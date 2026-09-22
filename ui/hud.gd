@@ -15,6 +15,8 @@ signal aim_pressed
 @onready var xp_bar: ProgressBar = %XpBar
 @onready var info_label: Label = %InfoLabel
 @onready var active_label: Label = %ActiveLabel
+@onready var active_icon: TextureRect = %ActiveIcon
+@onready var stage_rule_icon: TextureRect = %StageRuleIcon
 @onready var timer_label: Label = %TimerLabel
 @onready var stage_label: Label = %StageLabel
 @onready var boss_panel: Control = %BossPanel
@@ -33,6 +35,9 @@ signal aim_pressed
 @onready var result_panel: PanelContainer = %ResultPanel
 @onready var result_title: Label = %ResultTitle
 @onready var result_text: Label = %ResultText
+@onready var result_background: TextureRect = %ResultBackground
+var _active_icon_id := ""
+var _stage_icon_id := ""
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
@@ -67,6 +72,22 @@ func update_stats(b: Battle) -> void:
 	info_label.text = "Moedas %d   Abates %d   CA %d  CAM %d" % [int(h.gold), b.stats.kills, h.ca(), h.cam()]
 	active_label.text = b.active_status()
 	active_label.modulate = Color(1.0, 0.9, 0.5) if b.active_cd <= 0.0 else Color(0.65, 0.65, 0.65)
+	var ability: Dictionary = Data.table("abilities").get(h.id, {})
+	var ability_id := String(ability.get("id", ""))
+	if ability_id != _active_icon_id:
+		_active_icon_id = ability_id
+		var ability_path := "res://assets/icons/abilities/%s.png" % ability_id
+		active_icon.texture = load(ability_path) if ResourceLoader.exists(ability_path) else null
+	var stage_icons := {
+		"dagruve": "dagruve_rituals", "shedaklah": "shedaklah_puddles", "molor": "molor_bubbles",
+		"durao": "durao_current", "feng_tu": "feng_tu_strikes", "shendilavri": "shendilavri_illusions",
+		"goranthis": "goranthis_sanctuary", "pilares": "pilares_rotation"
+	}
+	var stage_icon_id := String(stage_icons.get(b.stage_id, ""))
+	if stage_icon_id != _stage_icon_id:
+		_stage_icon_id = stage_icon_id
+		var stage_icon_path := "res://assets/icons/stages/%s.png" % stage_icon_id
+		stage_rule_icon.texture = load(stage_icon_path) if ResourceLoader.exists(stage_icon_path) else null
 	var t := int(b.time)
 	var dur := int(b.stage.duration)
 	if b.boss_spawned and not b.boss_dead:
@@ -117,6 +138,18 @@ func show_offer(b: Battle) -> void:
 		btn.text = "%d.  %s%s\n      %s" % [i + 1, "[%s] " % role if role != "" else "", o.name, o.desc]
 		btn.alignment = HORIZONTAL_ALIGNMENT_LEFT
 		btn.custom_minimum_size = Vector2(620, 62)
+		var icon_path := ""
+		match String(o.t):
+			"weapon_new", "weapon_up": icon_path = "res://assets/icons/weapons/%s.png" % String(o.id)
+			"evolve": icon_path = "res://assets/icons/weapons/%s.png" % String(o.into)
+			"passive": icon_path = "res://assets/icons/passives/%s.png" % String(o.id)
+			"boon": icon_path = "res://assets/icons/boons/%s.png" % String(o.id)
+			"heal": icon_path = "res://assets/pickups/health_potion.png"
+			"gold": icon_path = "res://assets/pickups/gold_coin.png"
+		if ResourceLoader.exists(icon_path):
+			btn.icon = load(icon_path)
+			btn.expand_icon = true
+			btn.icon_alignment = HORIZONTAL_ALIGNMENT_LEFT
 		match String(o.t):
 			"evolve": btn.add_theme_color_override("font_color", Color(1.0, 0.85, 0.3))
 			"weapon_new": btn.add_theme_color_override("font_color", Color(0.6, 1.0, 0.6))
@@ -156,6 +189,8 @@ func show_result(res: Dictionary, summary: Dictionary) -> void:
 	hide_offer()
 	pause_panel.visible = false
 	result_title.text = "Vitória!" if res.won else "Você caiu..."
+	var background_path := "res://assets/ui/backgrounds/victory_background.png" if res.won else "res://assets/ui/backgrounds/defeat_background.png"
+	result_background.texture = load(background_path) if ResourceLoader.exists(background_path) else null
 	var t := int(res.time)
 	var txt := "%s · %s\nTempo %02d:%02d · Nível %d · Abates %d · Chefes %d\nModo: %s · Profundidade %d · Multiplicador ×%.2f\n\n+%d moedas%s (total %d)" % [
 		Data.table("heroes")[res.hero].name, Data.table("stages")[res.stage].name, t / 60, t % 60, res.level, res.kills, res.bosses,

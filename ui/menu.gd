@@ -15,6 +15,9 @@ extends Control
 @onready var codex_text: RichTextLabel = %CodexText
 @onready var aim_opt: OptionButton = %AimOpt
 @onready var vol_opt: HSlider = %VolOpt
+@onready var music_vol_opt: HSlider = %MusicVolOpt
+@onready var sfx_vol_opt: HSlider = %SfxVolOpt
+@onready var ambience_vol_opt: HSlider = %AmbienceVolOpt
 @onready var full_opt: CheckBox = %FullOpt
 @onready var diff_opt: OptionButton = %DiffOpt
 @onready var guide_btn: Button = %GuideBtn
@@ -28,7 +31,10 @@ var _reset_armed := false
 
 func _ready() -> void:
 	Game.screen_name = "menu"
-	Sfx.stop_music()
+	stage_list.fixed_icon_size = Vector2i(96, 54)
+	codex_list.fixed_icon_size = Vector2i(48, 48)
+	Sfx.stop_ambience()
+	Sfx.start_music("menu")
 	RenderingServer.set_default_clear_color(Color(0.06, 0.05, 0.08))
 	get_tree().paused = false
 	var p: Profile = Game.profile
@@ -50,6 +56,9 @@ func _ready() -> void:
 		Game.profile.data.settings.volume = v
 		Game.apply_settings()
 		Game.save())
+	music_vol_opt.value_changed.connect(func(v): _save_audio_setting("music_volume", v))
+	sfx_vol_opt.value_changed.connect(func(v): _save_audio_setting("sfx_volume", v))
+	ambience_vol_opt.value_changed.connect(func(v): _save_audio_setting("ambience_volume", v))
 	full_opt.toggled.connect(func(_on): Game.toggle_fullscreen())
 	for i in 4:
 		diff_opt.add_item("Maldição %d  (inimigos +%d%%, moedas +%d%%)" % [i, i * 25, i * 25])
@@ -72,7 +81,9 @@ func _refresh_all() -> void:
 	stage_list.clear()
 	for id in stages:
 		var d: Dictionary = Data.table("stages")[id]
-		stage_list.add_item(("%d. %s" if p.stage_unlocked(id) else "🔒 %d. %s") % [int(d.order) + 1, d.name])
+		var thumb_path := "res://assets/stages/%s_thumb.png" % id
+		var thumb: Texture2D = load(thumb_path) if ResourceLoader.exists(thumb_path) else null
+		stage_list.add_item(("%d. %s" if p.stage_unlocked(id) else "🔒 %d. %s") % [int(d.order) + 1, d.name], thumb)
 	hero_list.select(sel_h[0] if not sel_h.is_empty() else heroes.find(Game.run_hero))
 	stage_list.select(sel_s[0] if not sel_s.is_empty() else stages.find(Game.run_stage))
 	_refresh_hero()
@@ -82,8 +93,17 @@ func _refresh_all() -> void:
 	_fill_codex()
 	aim_opt.select(1 if Game.aim_mode() == Battle.Aim.MOUSE else 0)
 	vol_opt.value = float(p.data.settings.volume)
+	music_vol_opt.value = float(p.data.settings.music_volume)
+	sfx_vol_opt.value = float(p.data.settings.sfx_volume)
+	ambience_vol_opt.value = float(p.data.settings.ambience_volume)
 	full_opt.set_pressed_no_signal(bool(p.data.settings.fullscreen))
 	diff_opt.select(int(p.data.settings.difficulty))
+
+
+func _save_audio_setting(key: String, value: float) -> void:
+	Game.profile.data.settings[key] = value
+	Game.apply_settings()
+	Game.save()
 
 func _ach_name(id: String) -> String:
 	for a in Data.table("achievements").achievements:
@@ -197,7 +217,13 @@ func _fill_codex() -> void:
 	for id in src:
 		codex_ids.append(id)
 		var known: bool = seen.has(id)
-		codex_list.add_item(String(src[id].name) if known else "???")
+		var icon_path := ""
+		match cat:
+			"enemies": icon_path = "res://assets/enemies/%s.png" % id
+			"weapons": icon_path = "res://assets/icons/weapons/%s.png" % id
+			"items": icon_path = "res://assets/icons/items/%s.png" % id
+		var icon: Texture2D = load(icon_path) if known and ResourceLoader.exists(icon_path) else null
+		codex_list.add_item(String(src[id].name) if known else "???", icon)
 	_codex_cat_cache = cat
 
 var _codex_cat_cache := "enemies"

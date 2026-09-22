@@ -54,6 +54,8 @@ func save() -> void:
 func apply_settings() -> void:
 	var s: Dictionary = profile.data.settings
 	AudioServer.set_bus_volume_db(0, linear_to_db(clampf(float(s.volume), 0.0, 1.0)))
+	if has_node("/root/Sfx"):
+		Sfx.apply_mix(s)
 	var mode := DisplayServer.WINDOW_MODE_FULLSCREEN if bool(s.fullscreen) else DisplayServer.WINDOW_MODE_WINDOWED
 	if DisplayServer.window_get_mode() != mode:
 		DisplayServer.window_set_mode(mode)

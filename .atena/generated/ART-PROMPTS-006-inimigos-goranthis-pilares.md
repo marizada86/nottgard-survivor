@@ -2,7 +2,7 @@
 id: "ART-PROMPTS-006"
 type: "prompts-de-arte"
 title: "Inimigos de Goranthis e dos Pilares"
-status: "draft"
+status: "approved-for-generation"
 created: "2026-09-21"
 relations: ["[[ART-PROMPTS-001-direcao-e-piloto]]", "[[RESEARCH-001-abismo-bestiario-visual-2026-09-21]]"]
 sources: ["data/enemies.json", "data/stages.json", "vault canônico"]
@@ -52,4 +52,3 @@ Aceite: motivos reconhecíveis sem copiar cabeças inteiras; silhueta única; vu
 ## Dependências
 
 Gerar Socothbenoth antes de eventual fase consumida. Gerar Síntese somente depois de todas as referências. Candidata aprovada: —.
-

@@ -2,7 +2,7 @@
 id: "ART-PROMPTS-008"
 type: "prompts-de-arte"
 title: "Interações do mapa"
-status: "draft-future-integration"
+status: "approved-for-generation"
 created: "2026-09-21"
 relations: ["[[ART-PROMPTS-001-direcao-e-piloto]]"]
 sources: ["PLAN-001", "PLAN-002"]
@@ -10,7 +10,7 @@ sources: ["PLAN-001", "PLAN-002"]
 
 # Interações
 
-Matriz 1024×1024; final 192×192 RGBA em `assets/interactions/<id>.png`; candidatas em `assets/_raw/interactions/`.
+Matriz 1024×1024; final 192×192 RGBA em `assets/interactions/<id>.png`; candidatas em `.atena/generated/art-candidates/interactions/`.
 
 ```text
 Use case: stylized-concept
@@ -55,4 +55,3 @@ Portal de passagem entre camadas: arco irregular de pedra abissal com abertura v
 ```
 
 Aceite: pares ativo/gasto preservam identidade; baú fechado não denuncia mímico; estados distinguíveis sem depender só de cor.
-

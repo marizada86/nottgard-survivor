@@ -1,4 +1,4 @@
-# SPEC-015 — Produção e integração total de áudio
+# SPEC-016 — Produção e integração total de áudio
 
 Status: aprovado pelo usuário em 2026-09-22  
 Autonomia: guarded-autopilot  

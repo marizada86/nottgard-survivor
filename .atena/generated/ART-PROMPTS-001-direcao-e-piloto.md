@@ -2,10 +2,10 @@
 id: "ART-PROMPTS-001"
 type: "prompts-de-arte"
 title: "Direção de arte e lote piloto"
-status: "draft"
+status: "approved-for-generation"
 created: "2026-09-21"
 relations: ["[[SPEC-011-fase-1-prompts-de-arte]]", "[[ASSET-MATRIX-001-imagens-e-prompts-2026-09-21]]"]
-sources: ["PLAN-001", "PLAN-002", "assets existentes", "nottcard-ai ART-PROMPTS-021"]
+sources: ["PLAN-001", "PLAN-003", "RESEARCH-001", "RESEARCH-002", "assets existentes", "vault Nottgard"]
 ---
 
 # Direção de arte e piloto
@@ -17,7 +17,7 @@ sources: ["PLAN-001", "PLAN-002", "assets existentes", "nottcard-ai ART-PROMPTS-
 1. Uma chamada de ImageGen por asset ou variante.
 2. Anexar somente as referências listadas e declarar o papel de cada uma.
 3. Pedir transparência real para figuras/props/ícones; nunca xadrez pintado.
-4. Salvar candidatas como `<id>_v01.png` em `assets/_raw/`; aprovado sem sufixo no caminho final.
+4. Salvar candidatas como `<id>_v01.png` em `.atena/generated/art-candidates/`; aprovado sem sufixo no caminho final em `assets/`.
 5. Máximo de três candidatas; cada nova tentativa corrige um problema objetivo.
 6. Aprovar em escala real no jogo, nunca apenas no PNG isolado.
 
@@ -50,7 +50,14 @@ Matriz: 1536×1024. Final: 640×427 RGB.
 
 ## Piloto de validação
 
-Usar nesta ordem, sem duplicar prompts: `notivago` de ART-PROMPTS-003, `korrak` de ART-PROMPTS-002 e, após integração aprovada, piso `dagruve` e prop `pilar_01` de ART-PROMPTS-007. O piloto valida identidade, alfa, câmera, linha dos pés, escala e contraste.
+Usar nesta ordem, sem duplicar prompts: retrato e sprite de `durvall`; remaster de `cultista_adaga`; `notivago`; `sacerdote_mente_derretida`; `dagruve_ground`; `pilar_01`; `chest_closed`; `espada_sombria`; `dagruve_thumb`. O piloto valida identidade, portrait→sprite, legado→remaster, comum→chefe, alfa, câmera, linha dos pés, piso repetível, escala, contraste, ícone e paisagem.
+
+## Uso de referências locais
+
+- Anexar somente arquivos catalogados em `RESEARCH-002` e registrar o papel de cada um.
+- O vault prevalece sobre roupa, espécie, estado ou símbolo conflitante.
+- Referências do Desktop preservam identidade/composição; não impõem anime, 3D, fotorrealismo ou selo visível ao acabamento final.
+- Uma chamada por imagem distinta; não solicitar folhas com múltiplos assets.
 
 ## Gate visual
 
@@ -59,4 +66,3 @@ Usar nesta ordem, sem duplicar prompts: `notivago` de ART-PROMPTS-003, `korrak` 
 - Silhueta reconhecível no tamanho renderizado.
 - Chefe/elite distinguível por forma, não apenas por cor.
 - Nada contradiz o vault ou revela spoiler além do conteúdo conhecido.
-

@@ -2,7 +2,7 @@
 id: "ART-PROMPTS-007"
 type: "prompts-de-arte"
 title: "Biomas, props e thumbnails"
-status: "draft-future-integration"
+status: "approved-for-generation"
 created: "2026-09-21"
 relations: ["[[ART-PROMPTS-001-direcao-e-piloto]]", "[[ASSET-MATRIX-001-imagens-e-prompts-2026-09-21]]"]
 sources: ["data/stages.json", "PLAN-002"]
@@ -33,7 +33,7 @@ Constraints: piso opaco, sem texto, personagens, sombras direcionais fortes, bor
 | `goranthis_ground` | Mármore marfim e dourado gasto, musgo verde-água e fissuras orgânicas quase invisíveis. |
 | `pilares_ground` | Pedra violeta quase preta, veios lilás elétricos e fragmentos de várias camadas, sem símbolo central. |
 
-Bruto: `assets/_raw/tiles/<id>_vNN.png`. Matriz 1024×512; final conforme atlas. Aceite: teste 8×8 sem costura ou repetição gritante.
+Candidata: `.atena/generated/art-candidates/tiles/<id>_vNN.png`. Matriz 1024×512; final conforme atlas. Aceite: teste 8×8 sem costura ou repetição gritante.
 
 ## Bloco — props
 
@@ -45,7 +45,7 @@ Composition/framing: um objeto em três quartos isométrico, câmera 30 graus ac
 Constraints: fundo realmente transparente, sem chão ou sombra separada, texto, personagens, moldura ou marca-d'água; silhueta legível a 64–160 px
 ```
 
-Cada linha gera `assets/props/<id>.png`, candidata `assets/_raw/props/<id>_vNN.png`, final até 256×256 RGBA.
+Cada linha gera `assets/props/<id>.png`, candidata `.atena/generated/art-candidates/props/<id>_vNN.png`, final até 256×256 RGBA.
 
 | ID | Prompt específico; variantes da família mantêm material/escala |
 |---|---|

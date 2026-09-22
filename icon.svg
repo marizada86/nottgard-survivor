@@ -1,1 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128"><rect width="128" height="128" rx="14" fill="#0f0d14"/><path d="M64 10 L118 64 L64 118 L10 64 Z" fill="#241c2c" stroke="#d9b86a" stroke-width="4"/><text x="64" y="84" font-family="serif" font-size="60" font-weight="bold" fill="#d9b86a" text-anchor="middle">N</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="abyss" x1="22" y1="18" x2="104" y2="112" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#35204a"/>
+      <stop offset="0.55" stop-color="#180f27"/>
+      <stop offset="1" stop-color="#090711"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="27" y1="24" x2="101" y2="107" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f0d58b"/>
+      <stop offset="0.5" stop-color="#b88b3f"/>
+      <stop offset="1" stop-color="#6f4921"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="18" fill="#0b0811"/>
+  <path d="M64 8 120 64 64 120 8 64Z" fill="url(#abyss)" stroke="#5f3a78" stroke-width="4"/>
+  <path d="M64 15 113 64 64 113 15 64Z" fill="none" stroke="url(#gold)" stroke-width="4"/>
+  <path d="m64 22 35 42-35 42-35-42Z" fill="none" stroke="#9b55d4" stroke-width="3"/>
+  <path d="M64 28 84 47 78 96H50l-6-49Z" fill="#090711" stroke="#d6ad58" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M64 35v53M52 49h24" fill="none" stroke="#bb68ff" stroke-width="4" stroke-linecap="square"/>
+  <path d="m64 8 5 10-5 5-5-5Zm0 97 5 5-5 10-5-10ZM8 64l10-5 5 5-5 5Zm97 0 5-5 10 5-10 5Z" fill="#d6ad58"/>
+  <circle cx="64" cy="64" r="5" fill="#e7c0ff"/>
+</svg>

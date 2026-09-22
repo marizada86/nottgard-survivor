@@ -3,6 +3,7 @@ extends Node2D
 
 @export_enum("under", "over") var mode := "over"
 var battle: Battle
+static var _texture_cache := {}
 
 func _process(_dt: float) -> void:
 	queue_redraw()
@@ -61,31 +62,41 @@ func _dcol(dtype: String, a: float) -> Color:
 		"magico": return Color(0.6, 0.4, 1.0, a)
 	return Color(0.8, 0.8, 0.8, a)
 
+func _texture(path: String) -> Texture2D:
+	if not _texture_cache.has(path):
+		_texture_cache[path] = load(path) if ResourceLoader.exists(path) else null
+	return _texture_cache[path]
+
 func _draw_over() -> void:
 	for it in battle.interactions:
 		var p := Iso.to_screen(it.pos)
 		var col := Color.WHITE
 		var label := ""
+		var asset := ""
 		match String(it.kind):
-			"chest": col = Color(0.9, 0.7, 0.2); label = "baú"
-			"fountain": col = Color(0.3, 0.7, 1.0); label = "fonte"
-			"altar": col = Color(0.8, 0.4, 1.0); label = "altar [E]"
-			"ritual": col = Color(0.9, 0.2, 0.2); label = "ritual [E]"
-			"portal": col = Color(0.3, 1.0, 0.6); label = "portal [E]"
-		draw_colored_polygon(PackedVector2Array([p + Vector2(0, -18), p + Vector2(14, 0), p + Vector2(0, 18) * 0.5, p + Vector2(-14, 0)]), Color(col, 0.35))
-		draw_rect(Rect2(p + Vector2(-9, -22), Vector2(18, 16)), col.darkened(0.2))
-		draw_rect(Rect2(p + Vector2(-9, -22), Vector2(18, 4)), col)
-		if it.kind == "portal":
-			draw_arc(p + Vector2(0, -20), 20, 0, TAU, 24, Color(0.4, 1.0, 0.7, 0.8), 3.0)
-		draw_string(ThemeDB.fallback_font, p + Vector2(-26, -30), label, HORIZONTAL_ALIGNMENT_CENTER, 52, 12, Color(col, 0.95))
+			"chest": col = Color(0.9, 0.7, 0.2); label = "baú"; asset = "chest_closed"
+			"fountain": col = Color(0.3, 0.7, 1.0); label = "fonte"; asset = "fountain_active"
+			"altar": col = Color(0.8, 0.4, 1.0); label = "altar [E]"; asset = "altar_active"
+			"ritual": col = Color(0.9, 0.2, 0.2); label = "ritual [E]"; asset = "ritual"
+			"portal": col = Color(0.3, 1.0, 0.6); label = "portal [E]"; asset = "portal"
+		var texture := _texture("res://assets/interactions/%s.png" % asset)
+		if texture != null:
+			var h := 70.0 if it.kind == "portal" else 54.0
+			var w := h * float(texture.get_width()) / float(texture.get_height())
+			draw_texture_rect(texture, Rect2(p.x - w * 0.5, p.y - h, w, h), false)
+		else:
+			draw_colored_polygon(PackedVector2Array([p + Vector2(0, -18), p + Vector2(14, 0), p + Vector2(0, 9), p + Vector2(-14, 0)]), Color(col, 0.35))
+			draw_rect(Rect2(p + Vector2(-9, -22), Vector2(18, 16)), col.darkened(0.2))
+		draw_string(ThemeDB.fallback_font, p + Vector2(-32, -62), label, HORIZONTAL_ALIGNMENT_CENTER, 64, 12, Color(col, 0.95))
 	for pk in battle.pickups:
 		var p := Iso.to_screen(pk.pos)
-		match String(pk.kind):
-			"xp": draw_colored_polygon(PackedVector2Array([p + Vector2(0, -8), p + Vector2(5, -3), p + Vector2(0, 2), p + Vector2(-5, -3)]), Color(0.35, 0.85, 1.0))
-			"gold": draw_circle(p + Vector2(0, -4), 4.0, Color(1.0, 0.8, 0.2))
-			"potion":
-				draw_circle(p + Vector2(0, -5), 5.0, Color(0.9, 0.2, 0.3))
-				draw_rect(Rect2(p + Vector2(-2, -12), Vector2(4, 4)), Color(0.8, 0.8, 0.8))
+		var pickup_asset: String = {"xp": "xp_shard", "gold": "gold_coin", "potion": "health_potion"}.get(String(pk.kind), "")
+		var pickup_texture := _texture("res://assets/pickups/%s.png" % pickup_asset)
+		if pickup_texture != null:
+			var size := 22.0 if pk.kind != "potion" else 26.0
+			draw_texture_rect(pickup_texture, Rect2(p.x - size * 0.5, p.y - size, size, size), false)
+		else:
+			draw_circle(p + Vector2(0, -4), 4.0, Color(0.6, 0.85, 1.0))
 	for pr in battle.projectiles:
 		var p := Iso.to_screen(pr.pos) + Vector2(0, -16)
 		if pr.owner == "hero":

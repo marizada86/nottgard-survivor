@@ -8,6 +8,8 @@ extends Node2D
 @export var half_width := 22.0: set = _set_hw
 @export var block_radius := 0.4   ## raio de colisão em tiles
 @export var color := Color(0.24, 0.22, 0.24): set = _set_color
+var _texture: Texture2D
+var _texture_path := ""
 
 func _ready() -> void:
 	add_to_group("blockers")
@@ -38,9 +40,24 @@ func _ellipse(c: Vector2, rx: float, ry: float, n: int = 20) -> PackedVector2Arr
 		pts.append(c + Vector2(cos(a) * rx, sin(a) * ry))
 	return pts
 
+func _prop_texture() -> Texture2D:
+	var seed_value := absi(int(round(position.x / 32.0)) * 31 + int(round(position.y / 16.0)) * 17)
+	var variant := seed_value % 3 + 1
+	var path := "res://assets/props/%s_%02d.png" % [kind, variant]
+	if path != _texture_path:
+		_texture_path = path
+		_texture = load(path) if ResourceLoader.exists(path) else null
+	return _texture
+
 func _draw() -> void:
 	var w := half_width
 	draw_colored_polygon(_ellipse(Vector2.ZERO, w * 1.05, w * 0.5), Color(0, 0, 0, 0.35))
+	var texture := _prop_texture()
+	if texture != null:
+		var target_h := maxf(42.0, height + w * 0.8)
+		var target_w := target_h * float(texture.get_width()) / float(texture.get_height())
+		draw_texture_rect(texture, Rect2(-target_w * 0.5, -target_h, target_w, target_h), false)
+		return
 	match kind:
 		"cogumelo":
 			draw_rect(Rect2(-w * 0.3, -height, w * 0.6, height), color.darkened(0.35))

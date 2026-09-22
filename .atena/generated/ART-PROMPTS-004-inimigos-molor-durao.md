@@ -2,7 +2,7 @@
 id: "ART-PROMPTS-004"
 type: "prompts-de-arte"
 title: "Inimigos de Molor e Durao"
-status: "draft"
+status: "approved-for-generation"
 created: "2026-09-21"
 relations: ["[[ART-PROMPTS-001-direcao-e-piloto]]", "[[RESEARCH-001-abismo-bestiario-visual-2026-09-21]]"]
 sources: ["data/enemies.json", "data/stages.json", "vault canônico"]
@@ -10,7 +10,7 @@ sources: ["data/enemies.json", "data/stages.json", "vault canônico"]
 
 # Inimigos — Molor e Durao
 
-Aplicar o bloco de figuras de ART-PROMPTS-001. Matriz 1024×1536 transparente; final `assets/enemies/<id>.png`, RGBA 320×480; candidatas em `assets/_raw/enemies/`.
+Aplicar o bloco de figuras de ART-PROMPTS-001. Matriz 1024×1536 transparente; final `assets/enemies/<id>.png`, RGBA 320×480; candidatas em `.atena/generated/art-candidates/enemies/`.
 
 ## Molor
 
@@ -87,4 +87,3 @@ Aceite: demônio-sapo; marca de controle secundária; não parecer hezrou genér
 ## Dependências
 
 `slime_de_juiblex` → `receptaculo_de_juiblex`; `molydeus_menor` → `molydeus_chefe`. Candidata aprovada: —.
-

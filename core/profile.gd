@@ -8,7 +8,7 @@ static func fresh() -> Dictionary:
 	return {"name": "", "coins": 0, "upgrades": {}, "achievements": {}, "cleared": {}, "welcome_seen": false,
 		"stats": {"kills_total": 0, "gold_total": 0, "chests_total": 0, "bosses_total": 0, "elites_total": 0, "boss_kills": {}, "heroes_played": {}, "reached": {}, "runs": 0, "deaths": 0, "best_time": {}},
 		"codex": {"enemies": {}, "items": {}, "weapons": {}},
-		"settings": {"aim": "auto", "volume": 0.7, "fullscreen": false, "difficulty": 0}}
+		"settings": {"aim": "auto", "volume": 0.7, "music_volume": 0.8, "sfx_volume": 0.9, "ambience_volume": 0.75, "fullscreen": false, "difficulty": 0}}
 
 func _init(d: Dictionary = {}) -> void:
 	data = fresh()

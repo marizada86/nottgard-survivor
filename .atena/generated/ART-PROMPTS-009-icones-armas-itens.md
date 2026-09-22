@@ -2,7 +2,7 @@
 id: "ART-PROMPTS-009"
 type: "prompts-de-arte"
 title: "Ícones de armas e itens"
-status: "draft-future-integration"
+status: "approved-for-generation"
 created: "2026-09-21"
 relations: ["[[ART-PROMPTS-001-direcao-e-piloto]]"]
 sources: ["data/weapons.json", "data/items.json", "vault/06_Itens"]
@@ -22,7 +22,7 @@ Composition/framing: um único objeto ou gesto mágico central, vista três quar
 Constraints: fundo realmente transparente; sem texto, letras, números, mãos extras, moldura, cenário, logotipo ou marca-d'água; nenhuma cor encosta nas bordas
 ```
 
-Matriz 1024×1024; final 128×128 RGBA. Armas: `assets/icons/weapons/<id>.png`; bases e únicos: `assets/icons/items/<id>.png`; candidatos espelham o caminho sob `assets/_raw/`.
+Matriz 1024×1024; final 128×128 RGBA. Armas: `assets/icons/weapons/<id>.png`; bases e únicos: `assets/icons/items/<id>.png`; candidatos espelham a família sob `.atena/generated/art-candidates/`.
 
 ## Armas e habilidades — 30
 
@@ -79,7 +79,7 @@ Matriz 1024×1024; final 128×128 RGBA. Armas: `assets/icons/weapons/<id>.png`; 
 
 ## Itens únicos — 18
 
-Quando houver arma homônima, anexar o ícone aprovado correspondente e preservar forma/material.
+Quando houver arma homônima, usar o ícone aprovado correspondente como alias exato no manifesto; não gerar uma segunda interpretação. Os dez únicos sem arma homônima usam os pedidos abaixo.
 
 | ID | Pedido específico |
 |---|---|
@@ -108,4 +108,3 @@ Quando houver arma homônima, anexar o ícone aprovado correspondente e preserva
 - Formas-base permanecem modestas; únicos/evoluções se distinguem por material e silhueta.
 - Duplicatas semânticas usam a imagem-âncora, mas possuem arquivo próprio.
 - Testar a 48 px sobre fundos dos oito biomas.
-

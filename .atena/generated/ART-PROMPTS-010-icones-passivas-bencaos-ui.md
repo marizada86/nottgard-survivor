@@ -2,7 +2,7 @@
 id: "ART-PROMPTS-010"
 type: "prompts-de-arte"
 title: "Ícones de passivas, bênçãos e HUD"
-status: "draft-future-integration"
+status: "approved-for-generation"
 created: "2026-09-21"
 relations: ["[[ART-PROMPTS-001-direcao-e-piloto]]"]
 sources: ["data/passives.json", "data/boons.json", "data/achievements.json", "PLAN-002"]
@@ -81,4 +81,3 @@ Os 18 IDs de `achievements.json` reutilizam, no primeiro passe, o ícone do cont
 - Pares de bênçãos compartilham divindade sem serem idênticos.
 - CA e CAM são distinguíveis por forma além da cor.
 - Nenhum símbolo introduz escrita, número ou iconografia religiosa não aprovada.
-

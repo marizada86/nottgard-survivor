@@ -1,6 +1,6 @@
 @tool
 extends Node2D
-## Visual placeholder do herói. A posição inicial do nó no editor = ponto de partida da run.
+## Visual do herói. A posição inicial do nó no editor = ponto de partida da run.
 
 @export var body_color := Color(0.55, 0.15, 0.15): set = _set_body
 @export var skin_color := Color(0.85, 0.75, 0.65)
@@ -8,6 +8,7 @@ extends Node2D
 var dead := false
 var flash := false
 var facing := Vector2(1, 1)
+var hero_texture: Texture2D
 
 func _set_body(v: Color) -> void:
 	body_color = v
@@ -17,6 +18,8 @@ func apply_hero(hero_id: String) -> void:
 	var d: Dictionary = Data.table("heroes")[hero_id]
 	body_color = Color(float(d.color[0]) / 255.0, float(d.color[1]) / 255.0, float(d.color[2]) / 255.0)
 	hair_color = Color(float(d.hair[0]) / 255.0, float(d.hair[1]) / 255.0, float(d.hair[2]) / 255.0)
+	var path := "res://assets/heroes/%s.png" % hero_id
+	hero_texture = load(path) if ResourceLoader.exists(path) else null
 	queue_redraw()
 
 func _draw() -> void:
@@ -26,6 +29,12 @@ func _draw() -> void:
 		body = body.darkened(0.6)
 	elif flash:
 		body = Color(1, 0.6, 0.6)
+	if hero_texture != null:
+		var tint := Color(0.35, 0.35, 0.4, 0.65) if dead else (Color(1.5, 0.75, 0.75) if flash else Color.WHITE)
+		var h := 72.0
+		var w := h * float(hero_texture.get_width()) / float(hero_texture.get_height())
+		draw_texture_rect(hero_texture, Rect2(-w * 0.5, -h, w, h), false, tint)
+		return
 	draw_rect(Rect2(-9, -40, 18, 40), body)
 	draw_rect(Rect2(-9, -22, 18, 4), body.darkened(0.4))
 	draw_circle(Vector2(0, -47), 8, skin_color)

@@ -1,12 +1,14 @@
 # ASSET-MATRIX-002 — Cobertura visual total de Nottgard Survivors
 
-Status: **draft derivado; não autoriza geração**  
+Status: **executada e reconciliada em 2026-09-22**
 Data: 2026-09-21  
 Relações: `PLAN-003-geracao-total-assets-2026-09-21`, `RESEARCH-002-biblioteca-visual-desktop-2026-09-21`, `ART-PROMPTS-001..010`
 
 ## Resumo executivo
 
 O alvo recomendado é uma coleção final coerente de **236 PNGs** e **1 ícone vetorial do aplicativo**. Os 15 PNGs atuais continuam funcionando durante a transição, mas entram como referências/legado: a recomendação para a versão final é harmonizar os 5 retratos e os 10 inimigos existentes.
+
+**Resultado final:** 236/236 PNGs integrados e verificados, sendo 228 gerações distintas e 8 aliases determinísticos, além do SVG do aplicativo. O estado linha a linha está em `ASSET-PRODUCTION-MANIFEST-001.json`.
 
 Com oito ícones de item único reutilizando exatamente a arte da arma homônima, a produção exige **228 gerações-base**. Esse número é o piso de chamadas, não um lote único: a produção será parcelada e qualquer nova candidata só corrige um defeito objetivo.
 

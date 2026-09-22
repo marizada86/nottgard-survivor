@@ -64,6 +64,26 @@ theme_override_font_sizes/font_size = 16
 theme_override_colors/font_color = Color(1, 0.9, 0.5, 1)
 text = "[Q] Habilidade"
 
+[node name="ActiveIcon" type="TextureRect" parent="StatBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(34, 34)
+layout_mode = 2
+expand_mode = 3
+stretch_mode = 5
+
+[node name="StageRuleIcon" type="TextureRect" parent="."]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -336.0
+offset_top = 46.0
+offset_right = -296.0
+offset_bottom = 86.0
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
 [node name="TimerLabel" type="Label" parent="." unique_id=1791133122]
 unique_name_in_owner = true
 anchors_preset = 5
@@ -235,6 +255,14 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="ResultBackground" type="TextureRect" parent="ResultPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+modulate = Color(0.34, 0.34, 0.4, 1)
+expand_mode = 1
+stretch_mode = 6
+mouse_filter = 2
 
 [node name="VBox" type="VBoxContainer" parent="ResultPanel" unique_id=51232546]
 custom_minimum_size = Vector2(520, 0)

@@ -243,7 +243,7 @@ func use_active(dir: Vector2 = Vector2.ZERO) -> bool:
 	active_cd = maxf(3.0, float(p.cooldown) * (1.0 - hero.m("cd_pct") * 0.5))
 	if _has_item_effect("projectile_slow_on_active"):
 		projectile_slow_t = 4.0
-	events.append({"type": "active", "pos": hero.pos, "radius": radius, "dtype": p.get("dtype", "radiante"), "name": p.name})
+	events.append({"type": "active", "pos": hero.pos, "radius": radius, "dtype": p.get("dtype", "radiante"), "name": p.name, "hero_id": hero.id, "ability_id": p.id})
 	events.append({"type": "toast", "text": p.name})
 	return true
 
@@ -323,6 +323,7 @@ func _update_weapons(dt: float) -> void:
 				w.timer = 0.12
 
 func _fire(w: Weapon, p: Dictionary) -> bool:
+	p["_audio_id"] = w.id
 	var area := 1.0 + hero.m("area_pct")
 	match String(p.kind):
 		"melee": return _fire_melee(p, area)
@@ -347,7 +348,7 @@ func _fire_melee(p: Dictionary, area: float) -> bool:
 			targets.append(e)
 	if targets.is_empty():
 		return false
-	events.append({"type": "swing", "pos": hero.pos, "dir": dir, "range": reach, "cone": float(p.cone)})
+	events.append({"type": "swing", "pos": hero.pos, "dir": dir, "range": reach, "cone": float(p.cone), "weapon": p.get("_audio_id", p.get("id", "")), "dtype": p.dtype})
 	for t in targets:
 		_hero_hit(t, p, true)
 	return true
@@ -365,7 +366,7 @@ func _fire_bolt(p: Dictionary) -> bool:
 		var ang := deg_to_rad((k - (n - 1) * 0.5) * spread)
 		projectiles.append({"owner": "hero", "pos": hero.pos, "dir": dir.rotated(ang), "speed": float(p.speed), "life": float(p.range) * (1.0 + hero.m("area_pct")) / float(p.speed),
 			"pierce": int(p.get("pierce", 0)), "radius": 0.4, "p": p, "hit": {}})
-	events.append({"type": "cast", "pos": hero.pos, "dir": dir})
+	events.append({"type": "cast", "pos": hero.pos, "dir": dir, "weapon": p.get("_audio_id", p.get("id", "")), "dtype": p.dtype})
 	return true
 
 func _fire_nova(p: Dictionary, area: float) -> bool:
@@ -378,7 +379,7 @@ func _fire_nova(p: Dictionary, area: float) -> bool:
 		return false
 	if targets.is_empty() and hero.hp >= hero.max_hp:
 		return false
-	events.append({"type": "nova", "pos": hero.pos, "radius": r, "dtype": p.dtype})
+	events.append({"type": "nova", "pos": hero.pos, "radius": r, "dtype": p.dtype, "weapon": p.get("_audio_id", p.get("id", ""))})
 	var heal := float(p.get("heal", 0.0))
 	if heal > 0.0:
 		hero.hp = minf(hero.max_hp, hero.hp + heal)
@@ -404,7 +405,7 @@ func _fire_zone(p: Dictionary, area: float) -> bool:
 		if nearest(hero.pos, r * 2.0) == null:
 			return false
 	zones.append({"owner": "hero", "kind": "zone", "pos": at, "radius": r, "life": float(p.get("duration", 3.0)), "tick": float(p.get("tick", 0.5)), "acc": 0.0, "p": p})
-	events.append({"type": "zone", "pos": at, "radius": r, "dtype": p.dtype})
+	events.append({"type": "zone", "pos": at, "radius": r, "dtype": p.dtype, "weapon": p.get("_audio_id", p.get("id", ""))})
 	return true
 
 ## Golpe do herói. `roll`: usa d20 vs CA/CAM (senão acerta sempre, p.ex. zonas).
@@ -755,6 +756,7 @@ func _use_ability(e: Enemy, idx: int, a: Dictionary, dist: float, to: Vector2) -
 			var dir := to.normalized()
 			projectiles.append({"owner": "enemy", "pos": e.pos, "dir": dir, "speed": float(a.speed), "life": float(a.range) / float(a.speed) + 1.0, "radius": 0.25,
 				"dice": a.dice, "bonus": int(a.bonus) + int(minute() / 4.0) + tier(), "dtype": a.dtype, "pierce": 0, "hit": {}, "p": {}})
+			events.append({"type": "enemy_action", "enemy_id": e.id, "pos": e.pos})
 			return true
 		"aoe":
 			if dist > float(a.range):
@@ -762,7 +764,7 @@ func _use_ability(e: Enemy, idx: int, a: Dictionary, dist: float, to: Vector2) -
 			var lead := hero.pos
 			zones.append({"owner": "enemy", "kind": "telegraph", "pos": lead, "radius": float(a.radius), "delay": float(a.delay), "life": 99.0,
 				"dice": a.dice, "bonus": e.atk_bonus, "dtype": a.dtype})
-			events.append({"type": "telegraph", "pos": lead, "radius": float(a.radius), "delay": float(a.delay)})
+			events.append({"type": "telegraph", "pos": lead, "radius": float(a.radius), "delay": float(a.delay), "enemy_id": e.id})
 			return true
 		"charge":
 			if dist < 2.5 or dist > float(a.dist) + 3.0:
@@ -770,7 +772,7 @@ func _use_ability(e: Enemy, idx: int, a: Dictionary, dist: float, to: Vector2) -
 			e.windup = float(a.windup)
 			e.charge_dir = to.normalized()
 			e.charge_ab = a
-			events.append({"type": "windup", "pos": e.pos, "dir": e.charge_dir, "len": float(a.dist)})
+			events.append({"type": "windup", "pos": e.pos, "dir": e.charge_dir, "len": float(a.dist), "enemy_id": e.id})
 			return true
 		"summon":
 			if alive(String(a.id)) >= int(a.cap):
@@ -778,10 +780,11 @@ func _use_ability(e: Enemy, idx: int, a: Dictionary, dist: float, to: Vector2) -
 			for i in int(a.n):
 				var at := e.pos + Vector2(rng.randf_range(-1.5, 1.5), rng.randf_range(-1.5, 1.5))
 				_spawn(String(a.id), at)
-			events.append({"type": "text", "pos": e.pos, "text": "invoca"})
+			events.append({"type": "text", "pos": e.pos, "text": "invoca", "enemy_id": e.id})
 			return true
 		"puddle":
 			zones.append({"owner": "enemy", "kind": "puddle", "pos": e.pos, "radius": float(a.radius), "delay": 0.0, "life": float(a.life), "acc": 0.0})
+			events.append({"type": "enemy_action", "enemy_id": e.id, "pos": e.pos})
 			return true
 		"ring":
 			if dist > 13.0:
@@ -792,6 +795,7 @@ func _use_ability(e: Enemy, idx: int, a: Dictionary, dist: float, to: Vector2) -
 				var ang := off + TAU * k / n
 				projectiles.append({"owner": "enemy", "pos": e.pos, "dir": Vector2(cos(ang), sin(ang)), "speed": float(a.speed), "life": 4.0, "radius": 0.25,
 					"dice": a.dice, "bonus": e.atk_bonus, "dtype": "magico", "pierce": 0, "hit": {}, "p": {}})
+			events.append({"type": "enemy_action", "enemy_id": e.id, "pos": e.pos})
 			return true
 	return false
 
@@ -929,6 +933,7 @@ func _drop(kind: String, at: Vector2, value: float) -> void:
 	pickups.append({"kind": kind, "pos": at + Vector2(rng.randf_range(-0.3, 0.3), rng.randf_range(-0.3, 0.3)), "value": value, "magnet": false})
 
 func _collect(kind: String, value: float) -> void:
+	events.append({"type": "pickup", "kind": kind, "pos": hero.pos})
 	match kind:
 		"xp": _add_xp(value * (1.0 + hero.m("xp_pct")))
 		"gold": _add_gold(value)
@@ -977,6 +982,7 @@ func _update_interactions(dt: float) -> void:
 		var d: float = it.pos.distance_to(hero.pos)
 		if d <= 0.8 and (it.kind == "chest" or it.kind == "fountain"):
 			it.used = true
+			events.append({"type": "interaction", "kind": it.kind, "pos": it.pos})
 			if it.kind == "chest":
 				_open_chest(it)
 			else:
@@ -1003,6 +1009,7 @@ func interact() -> bool:
 	if best.is_empty():
 		return false
 	best.used = true
+	events.append({"type": "interaction", "kind": best.kind, "pos": best.pos})
 	match String(best.kind):
 		"altar":
 			_open_altar()

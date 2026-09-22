@@ -2,7 +2,7 @@
 id: "ART-PROMPTS-005"
 type: "prompts-de-arte"
 title: "Inimigos de Feng-tu e Shendilavri"
-status: "draft"
+status: "approved-for-generation"
 created: "2026-09-21"
 relations: ["[[ART-PROMPTS-001-direcao-e-piloto]]", "[[RESEARCH-001-abismo-bestiario-visual-2026-09-21]]"]
 sources: ["data/enemies.json", "data/stages.json", "vault canônico"]
@@ -10,7 +10,7 @@ sources: ["data/enemies.json", "data/stages.json", "vault canônico"]
 
 # Inimigos — Feng-tu e Shendilavri
 
-Aplicar ART-PROMPTS-001: matriz 1024×1536, transparência real, final RGBA 320×480 em `assets/enemies/<id>.png`, candidatas em `assets/_raw/enemies/`.
+Aplicar ART-PROMPTS-001: matriz 1024×1536, transparência real, final RGBA 320×480 em `assets/enemies/<id>.png`, candidatas em `.atena/generated/art-candidates/enemies/`.
 
 ## Feng-tu
 
@@ -94,4 +94,3 @@ Aceite: mesma família visual da súcubo, autoridade inequívoca; sem ferimento/
 ## Dependências
 
 `cultista_de_feng_tu` → `discipulo_pestilento`; `sucubo` → `ilusao_de_sucubo` → `malcanthet`. Candidata aprovada: —.
-

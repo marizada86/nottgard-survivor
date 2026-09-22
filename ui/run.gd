@@ -35,7 +35,6 @@ func _ready() -> void:
 	hud.menu_pressed.connect(Game.goto_menu)
 	hud.aim_pressed.connect(_toggle_aim)
 	_load_stage()
-	Sfx.start_music()
 	hud.toast("%s — %s" % [battle.stage.name, battle.stage.sub], Color(0.9, 0.85, 0.6))
 
 func playtest_context() -> Dictionary:
@@ -77,6 +76,9 @@ func _load_stage() -> void:
 			battle.spawn_for_test(String(sp.enemy_id), Iso.to_ground(sp.position) + off)
 	battle.stage_changed = false
 	camera.position = hero_node.position
+	Sfx.set_context(battle.hero.id, battle.stage_id)
+	Sfx.start_music(battle.stage_id)
+	Sfx.start_ambience(battle.stage_id)
 
 # ------------------------------------------------------------------ entrada
 
@@ -85,8 +87,7 @@ func _unhandled_input(ev: InputEvent) -> void:
 		return
 	if battle.state == "running" and ev.is_action_pressed("hero_active"):
 		if battle.use_active(battle.aim_dir):
-			Sfx.play("cast", -8.0)
-		get_viewport().set_input_as_handled()
+			get_viewport().set_input_as_handled()
 		return
 	if ev is InputEventKey and ev.pressed and not ev.echo:
 		var k: int = ev.physical_keycode
@@ -129,7 +130,7 @@ func _abandon() -> void:
 
 func _on_choose(i: int) -> void:
 	battle.choose(i)
-	Sfx.play("click")
+	Sfx.play("ui.confirm")
 	_refresh_offer()
 
 func _refresh_offer() -> void:
@@ -198,8 +199,9 @@ func _show_result() -> void:
 	var res := battle.result()
 	Game.finish_run(res)
 	hud.show_result(res, Game.last_summary)
-	Sfx.play("win" if res.won else "dead", -4.0)
-	Sfx.stop_music()
+	Sfx.stop_ambience()
+	Sfx.play("result.victory" if res.won else "result.defeat", -4.0)
+	Sfx.start_music("victory" if res.won else "defeat")
 
 # ------------------------------------------------------------------ efeitos
 
@@ -208,50 +210,79 @@ func _consume_events() -> void:
 		var at := Iso.to_screen(ev.pos) if ev.has("pos") else Vector2.ZERO
 		match String(ev.type):
 			"hit":
-				Sfx.play("crit" if ev.crit else "hit", -14.0)
+				Sfx.play("combat.critical" if ev.crit else "combat.impact", -14.0)
 				if _numbers < 14:
 					_float_text(at + Vector2(randf_range(-6, 6), -36), str(ev.amount), Color(1, 0.85, 0.3) if ev.crit else Color(0.92, 0.92, 0.92), 16 if ev.crit else 12)
 			"miss":
-				pass
+				Sfx.play("combat.miss", -18.0)
 			"hurt":
-				Sfx.play("hurt")
+				Sfx.play("player.hurt")
 				_shake = 0.6
 				_float_text(at + Vector2(0, -58), "-%d" % ev.amount, Color(1.0, 0.3, 0.3), 16)
 			"text":
+				var cue := String(ev.text).to_lower()
+				if cue == "guarda": Sfx.play("player.guard")
+				elif cue == "barreira": Sfx.play("combat.barrier")
+				elif cue == "esquiva": Sfx.play("combat.dodge")
+				elif cue == "invoca":
+					Sfx.play("enemy.summon")
+					if ev.has("enemy_id"): Sfx.play_enemy(String(ev.enemy_id), "action")
 				_float_text(at + Vector2(0, -50), ev.text, Color(0.7, 0.8, 1.0), 12)
 			"heal":
+				Sfx.play("player.heal")
 				_float_text(at + Vector2(0, -60), "+%d" % ev.amount, Color(0.4, 1.0, 0.5), 14)
 			"swing":
-				Sfx.play("swing", -16.0)
+				Sfx.play_weapon(String(ev.get("weapon", "")), "combat.swing")
 				_swing(ev)
 			"cast":
-				Sfx.play("cast", -18.0)
+				Sfx.play_weapon(String(ev.get("weapon", "")), "combat.magic")
 			"nova":
-				Sfx.play("nova", -12.0)
+				Sfx.play_weapon(String(ev.get("weapon", "")), "combat.nova")
 				_ring(ev.pos, ev.radius, _dcol(String(ev.dtype)), 0.35)
 			"zone":
+				Sfx.play_weapon(String(ev.get("weapon", "")), "combat.zone")
 				_ring(ev.pos, ev.radius, _dcol(String(ev.dtype)), 0.25)
 			"boom":
-				Sfx.play("boom", -8.0)
+				Sfx.play("combat.explosion", -8.0)
 				_shake = 0.8
 				_ring(ev.pos, ev.radius, Color(1.0, 0.3, 0.2), 0.3)
 			"kill":
 				if ev.enemy.is_boss():
 					_shake = 1.5
+					Sfx.play_boss(String(ev.enemy.id), "defeat")
+				else:
+					Sfx.play_enemy(String(ev.enemy.id), "death")
+			"pickup":
+				var pickup_key := String(ev.kind)
+				Sfx.play("player.heal" if pickup_key == "potion" else "progress.%s" % pickup_key)
+			"interaction":
+				Sfx.play("world.%s" % String(ev.kind))
 			"item":
-				Sfx.play("item")
+				Sfx.play("progress.item")
 			"levelup":
-				Sfx.play("levelup")
+				Sfx.play("progress.levelup")
 			"boss":
-				Sfx.play("boss")
+				Sfx.play_boss(String(ev.enemy.id), "arrival")
+				Sfx.start_music("boss")
 				_shake = 1.2
 			"active":
+				Sfx.play_hero(String(ev.get("hero_id", battle.hero.id)))
 				_shake = 0.35
 				_ring(ev.pos, float(ev.get("radius", 2.0)), _dcol(String(ev.get("dtype", "radiante"))), 0.3)
 			"boss_phase":
-				Sfx.play("boss")
+				var active_boss: String = String(battle.stage.get("boss", ""))
+				Sfx.play_boss(active_boss, "phase")
 				_shake = 1.0
 				hud.toast(ev.text, Color(1.0, 0.55, 0.35))
+			"enemy_action":
+				Sfx.play_enemy(String(ev.enemy_id), "action")
+			"telegraph":
+				Sfx.play("enemy.telegraph")
+				Sfx.play_enemy(String(ev.get("enemy_id", "")), "action")
+			"windup":
+				Sfx.play("enemy.charge")
+			"dead":
+				Sfx.play("player.death")
 			"toast":
 				hud.toast(ev.text, ev.get("color", Color(1, 1, 1)))
 				Game.logline(String(ev.text))

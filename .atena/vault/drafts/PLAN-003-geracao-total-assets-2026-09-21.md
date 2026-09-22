@@ -1,6 +1,6 @@
 # PLAN-003 — Geração total dos assets visuais de Nottgard Survivors
 
-Status: **DRAFT — aguardando aprovação; nenhuma imagem autorizada**  
+Status: **executado integralmente e reconciliado em 2026-09-22**
 Data: 2026-09-21  
 Escopo: todos os assets visuais necessários ao jogo atual, sem áudio e sem material de loja/publicação.
 
@@ -239,6 +239,6 @@ O plano visual está concluído quando:
 - Limite de segurança: até três candidatas por asset, porém somente com falha objetiva; não reservar 684 chamadas antecipadamente.
 - A produção pode parar ao fim de qualquer onda sem quebrar o jogo, porque placeholders/legados continuam funcionando até a troca aprovada.
 
-## 11. Aprovação necessária
+## 11. Registro de aprovação e execução
 
-A aprovação deste draft autoriza apenas transformá-lo em spec da **Fase 1** e completar/reconciliar prompts e manifesto. Ela não autoriza geração de imagens. A Fase 2 terá uma aprovação separada após o gate dos prompts e das referências remotas.
+O dono aprovou explicitamente todo o plano em 2026-09-22, dispensou um segundo gate e autorizou a execução contínua até a criação de todas as imagens. A execução foi encerrada com 236/236 PNGs, 1 SVG, integração dos consumers, validação automática e evidências visuais. O resultado reconciliado está em `../../evidence/EVID-011-producao-total-assets.md`.

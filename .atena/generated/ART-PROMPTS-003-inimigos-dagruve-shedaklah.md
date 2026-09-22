@@ -2,7 +2,7 @@
 id: "ART-PROMPTS-003"
 type: "prompts-de-arte"
 title: "Inimigos de Dagruve e Shedaklah"
-status: "draft"
+status: "approved-for-generation"
 created: "2026-09-21"
 relations: ["[[ART-PROMPTS-001-direcao-e-piloto]]", "[[RESEARCH-001-abismo-bestiario-visual-2026-09-21]]"]
 sources: ["data/enemies.json", "data/stages.json", "vault canônico"]
@@ -10,7 +10,7 @@ sources: ["data/enemies.json", "data/stages.json", "vault canônico"]
 
 # Inimigos — Dagruve e Shedaklah
 
-Aplicar o bloco de figuras de ART-PROMPTS-001. Cada matriz é 1024×1536 transparente; final RGBA 320×480. Arquivo bruto `assets/_raw/enemies/<id>_vNN.png`; final `assets/enemies/<id>.png`.
+Aplicar o bloco de figuras de ART-PROMPTS-001. Cada matriz é 1024×1536 transparente; final RGBA 320×480. Candidata `.atena/generated/art-candidates/enemies/<id>_vNN.png`; final `assets/enemies/<id>.png`.
 
 ## Dagruve
 
@@ -99,4 +99,3 @@ Aceite: chefe por silhueta/escala; fungo, não planta floral; nada implica morte
 ## Dependências e registro
 
 Gerar `cogumelo_fungico` antes de `servo_de_zuggtmoy` e Zuggtmoy; gerar `slime_de_juiblex` antes de futuros receptáculos. Candidata aprovada: — para todos.
-
