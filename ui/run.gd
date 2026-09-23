@@ -23,7 +23,8 @@ var _paused := false
 
 func _ready() -> void:
 	Game.screen_name = "run"
-	battle = Battle.new(int(Time.get_ticks_usec() % 1000000), Game.run_hero, Game.run_stage, Game.battle_ctx())
+	var seed := int(Game.qa_launch.get("seed", Time.get_ticks_usec() % 1000000)) if Game.qa_sandbox else int(Time.get_ticks_usec() % 1000000)
+	battle = Battle.new(seed, Game.run_hero, Game.run_stage, Game.battle_ctx())
 	battle.aim = Game.aim_mode()
 	under.battle = battle
 	over.battle = battle
@@ -35,13 +36,15 @@ func _ready() -> void:
 	hud.menu_pressed.connect(Game.goto_menu)
 	hud.aim_pressed.connect(_toggle_aim)
 	_load_stage()
+	if Game.qa_sandbox:
+		battle.qa_prepare(String(Game.qa_launch.get("target_state", "running")))
 	hud.toast("%s — %s" % [battle.stage.name, battle.stage.sub], Color(0.9, 0.85, 0.6))
 
 func playtest_context() -> Dictionary:
 	var h := battle.hero
 	return {"heroi": h.name, "fase": battle.stage_id, "tempo": int(battle.time), "nivel": h.level, "pv": "%d/%d" % [int(h.hp), int(h.max_hp)],
 		"armas": h.weapons.map(func(w): return "%s nv%d" % [w.id, w.level]), "habilidade": battle.active_def.id, "profundidade": battle.descent_depth,
-		"estado": battle.state, "inimigos": battle.enemies.size()}
+		"estado": battle.state, "regra": battle.stage_rule.get("kind", ""), "inimigos": battle.enemies.size()}
 
 # ------------------------------------------------------------------ fase
 

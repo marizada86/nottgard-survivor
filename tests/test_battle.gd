@@ -186,4 +186,21 @@ func run() -> Array:
 		if sb.enemies.is_empty():
 			out.append("fase %s sem inimigos após 150s" % sid)
 
+	# 13) cenarios QA usam os estados reais da simulacao
+	var qa := _bat(101)
+	_quiet(qa)
+	qa.qa_prepare("levelup")
+	if qa.state != "levelup" or qa.offer.is_empty():
+		out.append("QA levelup nao preparou oferta")
+	var qb := _bat(102)
+	_quiet(qb)
+	qb.qa_prepare("boss_70")
+	if qb.boss == null or qb.boss.phase_index != 1:
+		out.append("QA boss_70 nao disparou primeira virada")
+	var qp := _bat(103)
+	_quiet(qp)
+	qp.qa_prepare("portal")
+	if not qp.interactions.any(func(i): return i.kind == "portal"):
+		out.append("QA portal nao preparou transicao")
+
 	return out

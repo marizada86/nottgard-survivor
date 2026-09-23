@@ -1,14 +1,13 @@
 extends CanvasLayer
-## Autoload "Playtest": kit de evidência para playtesters (mesmo modelo do nottcard-ai).
+## Autoload "Playtest": kit de evidência, diagnóstico e navegação QA.
 ##  F5 = bloco de notas (fechar guarda a nota + o print do instante em que abriu)
-##  F6 = print da tela (não pausa)   F7 = gera UM .zip ao lado do executável   F1 = guia
-## O rascunho é gravado a cada item em user://evidencias/rascunho e sobrevive a fechar o jogo.
+##  F6 = print da tela (não pausa)   F7 = gera ZIP em user://evidence-kit   F1 = guia
+## O rascunho é gravado a cada item e sobrevive a fechar o jogo.
 
 const MAX_PRINTS := 20
 const MAX_BYTES := 8 * 1024 * 1024
 const NOTE_MAX := 1000
-const DRAFT_DIR := "user://evidencias/rascunho"
-const FALLBACK_DIR := "user://evidencias"
+const EVIDENCE_ROOT := "user://evidence-kit"
 const GUIDE_MAX_SIZE := Vector2(820, 560)
 const GUIDE_MARGIN := 24.0
 
@@ -32,6 +31,15 @@ var _guide_start: Button
 var _guide_error: Label
 var _clear_armed := false
 var _clear_btn: Button
+var _unsaved_items := {}
+var _console: PanelContainer
+var _console_text: RichTextLabel
+var _qa_modal: PanelContainer
+var _qa_stage: OptionButton
+var _qa_hero: OptionButton
+var _qa_state: OptionButton
+var _qa_seed: SpinBox
+var _qa_prefix_ms := -10000
 
 func _ready() -> void:
 	layer = 100
@@ -39,9 +47,9 @@ func _ready() -> void:
 	_build_ui()
 	get_viewport().size_changed.connect(_layout_guide)
 	call_deferred("_layout_guide")
-	_load_draft()
-	if not Version.PLAYTEST_BUILD:
+	if not Version.evidence_enabled():
 		return
+	_load_draft()
 	if items.size() > 0:
 		toast("Você tem %d itens guardados (F7 gera o .zip)" % items.size())
 	await get_tree().process_frame
@@ -153,6 +161,131 @@ func _build_ui() -> void:
 	_guide_start.pressed.connect(close_guide)
 	g.add_child(_guide_start)
 
+	_build_console()
+	_build_qa_browser()
+
+func _build_console() -> void:
+	_console = PanelContainer.new()
+	_console.set_anchors_preset(Control.PRESET_CENTER_BOTTOM)
+	_console.position = Vector2(-440, -290)
+	_console.custom_minimum_size = Vector2(880, 260)
+	_console.visible = false
+	add_child(_console)
+	var v := VBoxContainer.new()
+	_console.add_child(v)
+	var title := Label.new()
+	title.text = "Console QA (somente diagnóstico)"
+	v.add_child(title)
+	_console_text = RichTextLabel.new()
+	_console_text.bbcode_enabled = true
+	_console_text.custom_minimum_size = Vector2(850, 190)
+	_console_text.scroll_following = true
+	v.add_child(_console_text)
+	var close := Button.new()
+	close.text = "Fechar (F12)"
+	close.pressed.connect(func(): _console.visible = false)
+	v.add_child(close)
+
+func _build_qa_browser() -> void:
+	_qa_modal = PanelContainer.new()
+	_qa_modal.set_anchors_preset(Control.PRESET_CENTER)
+	_qa_modal.position = Vector2(-390, -235)
+	_qa_modal.custom_minimum_size = Vector2(780, 440)
+	_qa_modal.visible = false
+	add_child(_qa_modal)
+	var v := VBoxContainer.new()
+	_qa_modal.add_child(v)
+	var title := Label.new()
+	title.text = "Navegador QA — sandbox: progresso real preservado"
+	title.add_theme_font_size_override("font_size", 22)
+	v.add_child(title)
+	var hint := Label.new()
+	hint.text = "Escolha um destino declarado. O seed torna a preparação reproduzível."
+	v.add_child(hint)
+	_qa_hero = OptionButton.new()
+	_qa_hero.tooltip_text = "Herói (bloqueios normais são ignorados apenas no sandbox)"
+	for id in Data.table("heroes"):
+		_qa_hero.add_item("Herói: %s [%s]" % [Data.table("heroes")[id].name, id])
+		_qa_hero.set_item_metadata(_qa_hero.item_count - 1, id)
+	v.add_child(_qa_hero)
+	_qa_stage = OptionButton.new()
+	for id in Data.table("stages"):
+		_qa_stage.add_item("Fase: %s [%s]" % [Data.table("stages")[id].name, id])
+		_qa_stage.set_item_metadata(_qa_stage.item_count - 1, id)
+	v.add_child(_qa_stage)
+	_qa_state = OptionButton.new()
+	for state in [["Quartel: Jogar", "menu_0"], ["Quartel: Melhorias", "menu_1"], ["Quartel: Conquistas", "menu_2"], ["Quartel: Códex", "menu_3"], ["Quartel: Opções", "menu_4"], ["Início da run", "running"], ["Oferta de level-up", "levelup"], ["Altar", "altar"], ["Chefe: entrada", "boss"], ["Chefe: virada 70%", "boss_70"], ["Chefe: virada 35%", "boss_35"], ["Portal após chefe", "portal"], ["Resultado: vitória", "victory"], ["Resultado: derrota", "defeat"], ["Regra da fase", "rule"]]:
+		_qa_state.add_item(state[0])
+		_qa_state.set_item_metadata(_qa_state.item_count - 1, state[1])
+	v.add_child(_qa_state)
+	_qa_seed = SpinBox.new()
+	_qa_seed.min_value = 1
+	_qa_seed.max_value = 999999999
+	_qa_seed.value = 1001
+	_qa_seed.tooltip_text = "Seed determinística"
+	v.add_child(_qa_seed)
+	var h := HBoxContainer.new()
+	v.add_child(h)
+	var launch := Button.new()
+	launch.text = "Abrir destino"
+	launch.pressed.connect(_launch_qa)
+	h.add_child(launch)
+	var menu := Button.new()
+	menu.text = "Abrir Quartel"
+	menu.pressed.connect(_launch_qa_menu)
+	h.add_child(menu)
+	var end := Button.new()
+	end.text = "Encerrar sandbox"
+	end.pressed.connect(_end_qa)
+	h.add_child(end)
+	var close := Button.new()
+	close.text = "Fechar"
+	close.pressed.connect(func(): _qa_modal.visible = false)
+	h.add_child(close)
+
+func _open_console() -> void:
+	if not Version.evidence_enabled():
+		return
+	_console.visible = not _console.visible
+	if _console.visible:
+		var lines := Game.log_lines.slice(maxi(0, Game.log_lines.size() - 200))
+		_console_text.text = "[color=#d8d8d8]%s[/color]" % scrub("\n".join(lines)).replace("[", "\\[")
+
+func _open_qa_browser() -> void:
+	if Version.qa_enabled():
+		_qa_modal.visible = not _qa_modal.visible
+
+func _launch_qa() -> void:
+	var target := String(_qa_state.get_item_metadata(_qa_state.selected))
+	if target.begins_with("menu_"):
+		if Game.begin_qa_sandbox("qa-menu-%d" % Time.get_ticks_msec()):
+			Game.qa_menu_tab = int(target.trim_prefix("menu_"))
+			_qa_modal.visible = false
+			Game.goto_menu()
+		return
+	var request := {
+		"id": "qa.%s.%s" % [String(_qa_stage.get_item_metadata(_qa_stage.selected)), String(_qa_state.get_item_metadata(_qa_state.selected))],
+		"seed": int(_qa_seed.value),
+		"hero_id": String(_qa_hero.get_item_metadata(_qa_hero.selected)),
+		"stage_id": String(_qa_stage.get_item_metadata(_qa_stage.selected)),
+		"target_state": target
+	}
+	_qa_modal.visible = false
+	Game.start_qa_run(request)
+
+func _launch_qa_menu() -> void:
+	if not Game.begin_qa_sandbox("qa-menu-%d" % Time.get_ticks_msec()):
+		return
+	Game.qa_menu_tab = 0
+	_qa_modal.visible = false
+	Game.goto_menu()
+
+func _end_qa() -> void:
+	var unchanged := Game.end_qa_sandbox()
+	_qa_modal.visible = false
+	toast("Sandbox encerrado; save real %s." % ("preservado" if unchanged else "ALTERADO — verifique"))
+	Game.goto_menu()
+
 func _layout_guide() -> void:
 	if _guide == null:
 		return
@@ -172,11 +305,11 @@ func _guide_text() -> String:
 		+ "1. Jogue seguindo o que foi pedido a você (uma fase, um herói, um chefe...). Não precisa jogar tudo.\n" \
 		+ "2. [b]F6[/b] tira um print na hora certa (não pausa).\n" \
 		+ "3. [b]F5[/b] abre o bloco de notas: escreva o que estranhou ou gostou. Ao fechar, a nota e o print do instante são guardados.\n" \
-		+ "4. [b]F7[/b] gera UM arquivo .zip ao lado do executável (prints, notas, log e estado). Envie esse .zip ao responsável (Discord).\n\n" \
+		+ "4. [b]F7[/b] gera UM arquivo .zip na pasta de evidências (prints, notas, log e estado). Envie esse .zip ao responsável (Discord).\n\n" \
 		+ "[b]Controles do jogo[/b]\n" \
 		+ "WASD/setas: mover · Tab: alterna mira (automática / mouse) · Q/botão direito: habilidade ativa · E: altar, ritual, portal · X: extrair após o chefe · 1-5: escolher no level-up · R: rerrolar · Esc: pausa\n" \
 		+ "Todas as armas atacam sozinhas. Sobreviva, evolua, derrote o chefe da fase e desça pelo portal.\n\n" \
-		+ "[b]Teclas de teste[/b]: F5 nota · F6 print · F7 gera o .zip · F11 tela cheia · F1 este guia\n" \
+		+ "[b]Teclas de teste[/b]: F5 nota · F6 print · F7 gera o .zip · F11 tela cheia · F12 diagnóstico · F1 este guia\n" \
 		+ "[color=#aaaaaa]Os prints mostram a tela do jogo. Notas e log têm o nome de usuário do Windows removido.[/color]"
 
 func toast(text: String) -> void:
@@ -195,8 +328,21 @@ func _input(ev: InputEvent) -> void:
 		Game.toggle_fullscreen()
 		get_viewport().set_input_as_handled()
 		return
-	if not Version.PLAYTEST_BUILD:
+	if not Version.evidence_enabled():
 		return
+	if ev.physical_keycode == KEY_F12:
+		_open_console()
+		get_viewport().set_input_as_handled()
+		return
+	if Version.qa_enabled() and get_viewport().gui_get_focus_owner() == null:
+		if ev.physical_keycode == KEY_O and ev.ctrl_pressed:
+			_qa_prefix_ms = Time.get_ticks_msec()
+			get_viewport().set_input_as_handled()
+			return
+		if ev.physical_keycode == KEY_P and Time.get_ticks_msec() - _qa_prefix_ms <= 1000:
+			_open_qa_browser()
+			get_viewport().set_input_as_handled()
+			return
 	match ev.physical_keycode:
 		KEY_F5:
 			if _guide_open:
@@ -229,10 +375,12 @@ func _input(ev: InputEvent) -> void:
 # ------------------------------------------------------------------ contexto
 
 func context() -> Dictionary:
-	var ctx := {"tela": Game.screen_name}
+	var ctx := {"tela": Game.screen_name, "build": Version.profile_slug()}
 	var cs := get_tree().current_scene
 	if cs != null and cs.has_method("playtest_context"):
 		ctx.merge(cs.playtest_context())
+	if Game.qa_sandbox:
+		ctx.qa = {"cenario": Game.qa_launch.get("id", ""), "seed": Game.qa_launch.get("seed", 0)}
 	return ctx
 
 static func scrub(text: String) -> String:
@@ -272,6 +420,15 @@ func _room_for_png(png: PackedByteArray) -> bool:
 		toast("Pacote cheio: aperte F7 para gerar o .zip")
 		return false
 	return true
+
+func _draft_dir() -> String:
+	return "%s/%s/drafts/current" % [EVIDENCE_ROOT, Version.profile_slug()]
+
+func _outbox_dir() -> String:
+	return "%s/%s/outbox" % [EVIDENCE_ROOT, Version.profile_slug()]
+
+func _recovery_dir() -> String:
+	return "%s/%s/recovery" % [EVIDENCE_ROOT, Version.profile_slug()]
 
 func take_print() -> void:
 	if _note_open:
@@ -381,21 +538,38 @@ func _add(it: Dictionary) -> void:
 	if not it.has("ctx"):
 		it.ctx = context()
 	items.append(it)
-	_save_item(items.size() - 1)
+	if not _save_item(items.size() - 1):
+		_unsaved_items[items.size() - 1] = true
+		toast("Item guardado apenas em memória; não foi possível gravar o rascunho.")
 
-func _save_item(i: int) -> void:
-	DirAccess.make_dir_recursive_absolute(DRAFT_DIR)
+func _write_atomic(path: String, data: PackedByteArray) -> bool:
+	var absolute := ProjectSettings.globalize_path(path)
+	var temp := absolute + ".tmp"
+	var f := FileAccess.open(temp, FileAccess.WRITE)
+	if f == null:
+		return false
+	f.store_buffer(data)
+	f.close()
+	if DirAccess.rename_absolute(temp, absolute) != OK:
+		DirAccess.remove_absolute(temp)
+		return false
+	return true
+
+func _save_item(i: int) -> bool:
+	var draft_dir := _draft_dir()
+	if DirAccess.make_dir_recursive_absolute(draft_dir) != OK:
+		return false
 	var it: Dictionary = items[i]
-	var f := FileAccess.open("%s/item_%03d.json" % [DRAFT_DIR, i], FileAccess.WRITE)
-	if f != null:
-		f.store_string(JSON.stringify({"kind": it.kind, "time": it.time, "ctx": it.ctx, "text": it.text}))
+	if not _write_atomic("%s/item_%03d.json" % [draft_dir, i], JSON.stringify({"kind": it.kind, "time": it.time, "ctx": it.ctx, "text": it.text}).to_utf8_buffer()):
+		return false
 	if it.png.size() > 0:
-		var p := FileAccess.open("%s/item_%03d.png" % [DRAFT_DIR, i], FileAccess.WRITE)
-		if p != null:
-			p.store_buffer(it.png)
+		if not _write_atomic("%s/item_%03d.png" % [draft_dir, i], it.png):
+			return false
+	return true
 
 func _load_draft() -> void:
-	var dir := DirAccess.open(DRAFT_DIR)
+	var draft_dir := _draft_dir()
+	var dir := DirAccess.open(draft_dir)
 	if dir == null:
 		return
 	var names := dir.get_files()
@@ -403,34 +577,35 @@ func _load_draft() -> void:
 	for n in names:
 		if not n.ends_with(".json"):
 			continue
-		var f := FileAccess.open("%s/%s" % [DRAFT_DIR, n], FileAccess.READ)
+		var f := FileAccess.open("%s/%s" % [draft_dir, n], FileAccess.READ)
 		var d: Variant = JSON.parse_string(f.get_as_text()) if f != null else null
 		if d is Dictionary:
 			var png := PackedByteArray()
-			var pp := "%s/%s.png" % [DRAFT_DIR, n.get_basename()]
+			var pp := "%s/%s.png" % [draft_dir, n.get_basename()]
 			if FileAccess.file_exists(pp):
 				png = FileAccess.get_file_as_bytes(pp)
 			items.append({"kind": d.kind, "time": d.time, "ctx": d.ctx, "text": d.text, "png": png})
 
 func _wipe_draft() -> void:
-	var dir := DirAccess.open(DRAFT_DIR)
+	var draft_dir := _draft_dir()
+	var dir := DirAccess.open(draft_dir)
 	if dir == null:
 		return
 	for n in dir.get_files():
-		DirAccess.remove_absolute("%s/%s" % [DRAFT_DIR, n])
+		DirAccess.remove_absolute(ProjectSettings.globalize_path("%s/%s" % [draft_dir, n]))
 
 func out_dir() -> String:
-	if OS.has_feature("editor"):
-		return ProjectSettings.globalize_path("res://")
-	return OS.get_executable_path().get_base_dir()
+	var dir := _outbox_dir()
+	DirAccess.make_dir_recursive_absolute(dir)
+	return ProjectSettings.globalize_path(dir)
 
 func build_info(now: Dictionary) -> Dictionary:
 	var itl: Array = []
 	for i in items.size():
 		itl.append({"n": i + 1, "tipo": items[i].kind, "hora": items[i].time, "contexto": items[i].ctx})
-	return {"jogador": Game.profile.data.name, "versao": Version.VERSION, "jogo": Version.GAME_NAME, "data": Time.get_datetime_string_from_system(),
-		"so": OS.get_name(), "moedas": Game.profile.coins(), "notas": items.filter(func(x): return x.kind == "nota").size(), "prints": _prints(),
-		"itens": itl, "save_em_disco": Game.persisted, "contexto_atual": context()}
+	return {"versao": Version.VERSION, "jogo": Version.GAME_NAME, "build": Version.profile_slug(), "data_utc": Time.get_datetime_string_from_system(true),
+		"plataforma": OS.get_name(), "notas": items.filter(func(x): return x.kind == "nota").size(), "prints": _prints(),
+		"itens": itl, "contexto_atual": context()}
 
 func export_zip() -> void:
 	if items.is_empty():
@@ -438,26 +613,21 @@ func export_zip() -> void:
 		return
 	if _note_open:
 		close_note()
-	var player := String(Game.profile.data.name)
-	var safe := ""
-	for ch in player:
-		if ch.unicode_at(0) < 128 and (ch.to_lower() != ch.to_upper() or ch.is_valid_int()):
-			safe += ch
-	if safe == "":
-		safe = "jogador"
 	var dt := Time.get_datetime_dict_from_system()
-	var fname := "EV-%s-%04d%02d%02d-%02d%02d%02d.zip" % [safe, dt.year, dt.month, dt.day, dt.hour, dt.minute, dt.second]
+	var fname := "NS-EV-%s-%04d%02d%02d-%02d%02d%02d.zip" % [Version.profile_slug(), dt.year, dt.month, dt.day, dt.hour, dt.minute, dt.second]
 	var dir := out_dir()
-	var path := "%s/%s" % [dir, fname]
+	var final_path := "%s/%s" % [dir, fname]
+	var path := final_path + ".tmp"
 	var zp := ZIPPacker.new()
 	if zp.open(path) != OK:
-		DirAccess.make_dir_recursive_absolute(FALLBACK_DIR)
-		dir = ProjectSettings.globalize_path(FALLBACK_DIR)
-		path = "%s/%s" % [dir, fname]
+		DirAccess.make_dir_recursive_absolute(_recovery_dir())
+		dir = ProjectSettings.globalize_path(_recovery_dir())
+		final_path = "%s/%s" % [dir, fname]
+		path = final_path + ".tmp"
 		if zp.open(path) != OK:
 			toast("Não consegui gravar o .zip; o pacote foi mantido.")
 			return
-	_zip_text(zp, "info.json", JSON.stringify(build_info({}), "  "))
+	_zip_text(zp, "manifest.json", JSON.stringify(build_info({}), "  "))
 	var log_text := "\n".join(Game.log_lines.slice(maxi(0, Game.log_lines.size() - 200)))
 	_zip_text(zp, "log.txt", scrub(log_text) + "\n")
 	var md := "# Notas — %s (v%s)\n" % [Version.GAME_NAME, Version.VERSION]
@@ -474,10 +644,14 @@ func export_zip() -> void:
 	for i in items.size():
 		var it: Dictionary = items[i]
 		if it.png.size() > 0:
-			zp.start_file("prints/%02d-%s.png" % [i + 1, it.kind])
+			zp.start_file("screenshots/%03d-%s.png" % [i + 1, it.kind])
 			zp.write_file(it.png)
 			zp.close_file()
-	zp.close()
+	if Version.qa_enabled() and Game.qa_sandbox:
+		_zip_text(zp, "qa/scenario.json", JSON.stringify(Game.qa_launch, "  "))
+	if zp.close() != OK or not FileAccess.file_exists(path) or FileAccess.get_file_as_bytes(path).is_empty() or DirAccess.rename_absolute(path, final_path) != OK:
+		toast("Falha ao finalizar o ZIP; o pacote foi mantido para nova tentativa.")
+		return
 	var summary := "%d notas, %d prints" % [items.filter(func(x): return x.kind == "nota").size(), _prints()]
 	items.clear()
 	_wipe_draft()

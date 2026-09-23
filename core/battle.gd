@@ -123,6 +123,34 @@ static func xp_need_for(lv: int) -> int:
 func spawn_for_test(id: String, at: Vector2) -> Enemy:
 	return _spawn(id, at, 0.0)
 
+func qa_prepare(target_state: String) -> void:
+	match target_state:
+		"levelup":
+			_add_xp(float(xp_need_for(hero.level)))
+		"altar":
+			_open_altar()
+		"boss", "boss_70", "boss_35", "portal":
+			boss = spawn_for_test(String(stage.boss), hero.pos + Vector2(2, 0))
+			boss_spawned = true
+			if target_state == "boss_70":
+				boss.hp = boss.max_hp * 0.69
+				_check_boss_phase(boss)
+			elif target_state == "boss_35":
+				boss.phase_index = 1
+				boss.hp = boss.max_hp * 0.34
+				_check_boss_phase(boss)
+			elif target_state == "portal":
+				_kill(boss)
+		"victory":
+			stage_cleared = true
+			state = "won"
+		"defeat":
+			hero.dead = true
+			hero.hp = 0.0
+			state = "dead"
+		"rule":
+			_stage_rule_step(99.0)
+
 func toggle_aim() -> void:
 	aim = Aim.MOUSE if aim == Aim.AUTO else Aim.AUTO
 

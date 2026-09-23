@@ -31,6 +31,8 @@ var _reset_armed := false
 
 func _ready() -> void:
 	Game.screen_name = "menu"
+	if Game.qa_sandbox:
+		%Tabs.current_tab = Game.qa_menu_tab
 	stage_list.fixed_icon_size = Vector2i(96, 54)
 	codex_list.fixed_icon_size = Vector2i(48, 48)
 	Sfx.stop_ambience()
@@ -40,7 +42,7 @@ func _ready() -> void:
 	var p: Profile = Game.profile
 	heroes = p.heroes_sorted()
 	stages = p.stages_sorted()
-	version_label.text = "%s v%s%s" % [Version.GAME_NAME, Version.VERSION, "  ·  build de playtest" if Version.PLAYTEST_BUILD else ""]
+	version_label.text = "%s v%s%s" % [Version.GAME_NAME, Version.VERSION, "  ·  build de %s" % Version.profile_slug() if Version.evidence_enabled() else ""]
 	hero_list.item_selected.connect(func(_i): _refresh_hero())
 	stage_list.item_selected.connect(func(_i): _refresh_stage())
 	play_btn.pressed.connect(_play)

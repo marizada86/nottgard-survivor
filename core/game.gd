@@ -5,6 +5,12 @@ const SAVE_PATH := "user://profile.json"
 
 var profile: Profile
 var persisted := false
+var _save_path := SAVE_PATH
+var qa_sandbox := false
+var qa_session_id := ""
+var qa_launch: Dictionary = {}
+var qa_menu_tab := 0
+var _real_save_signature: Dictionary = {}
 var run_hero := "durvall"
 var run_stage := "dagruve"
 var last_result: Dictionary = {}
@@ -34,22 +40,69 @@ func ensure_input_actions() -> void:
 
 func load_profile() -> void:
 	var d := {}
-	if FileAccess.file_exists(SAVE_PATH):
-		var f := FileAccess.open(SAVE_PATH, FileAccess.READ)
+	if FileAccess.file_exists(_save_path):
+		var f := FileAccess.open(_save_path, FileAccess.READ)
 		if f != null:
 			var parsed: Variant = JSON.parse_string(f.get_as_text())
 			if parsed is Dictionary:
 				d = parsed
 	profile = Profile.new(d)
-	persisted = FileAccess.file_exists(SAVE_PATH)
+	persisted = FileAccess.file_exists(_save_path)
 
 func save() -> void:
-	var f := FileAccess.open(SAVE_PATH, FileAccess.WRITE)
+	var f := FileAccess.open(_save_path, FileAccess.WRITE)
 	if f == null:
 		persisted = false
 		return
 	f.store_string(JSON.stringify(profile.data, "\t"))
 	persisted = true
+
+func real_save_signature() -> Dictionary:
+	if not FileAccess.file_exists(SAVE_PATH):
+		return {"exists": false, "hash": ""}
+	return {"exists": true, "hash": FileAccess.get_file_as_bytes(SAVE_PATH).sha256_text()}
+
+func begin_qa_sandbox(session_id: String) -> bool:
+	if not Version.qa_enabled():
+		return false
+	if qa_sandbox:
+		return true
+	_real_save_signature = real_save_signature()
+	qa_sandbox = true
+	qa_session_id = session_id
+	_save_path = "user://qa-sandbox/%s/profile.json" % session_id
+	if DirAccess.make_dir_recursive_absolute("user://qa-sandbox/%s" % session_id) != OK:
+		qa_sandbox = false
+		qa_session_id = ""
+		_save_path = SAVE_PATH
+		return false
+	var copied: Variant = JSON.parse_string(JSON.stringify(profile.data))
+	profile = Profile.new(copied if copied is Dictionary else {})
+	persisted = false
+	return true
+
+func end_qa_sandbox() -> bool:
+	if not qa_sandbox:
+		return true
+	var unchanged := real_save_signature() == _real_save_signature
+	qa_sandbox = false
+	qa_session_id = ""
+	qa_launch.clear()
+	_save_path = SAVE_PATH
+	load_profile()
+	return unchanged
+
+func start_qa_run(request: Dictionary) -> void:
+	if not Version.qa_enabled():
+		return
+	var session := "qa-%s" % Time.get_datetime_string_from_system().replace(":", "").replace("-", "").replace(" ", "-")
+	if not begin_qa_sandbox(session):
+		return
+	qa_launch = request.duplicate(true)
+	run_hero = String(request.get("hero_id", "durvall"))
+	run_stage = String(request.get("stage_id", "dagruve"))
+	logline("QA: %s em %s" % [String(request.get("target_state", "running")), run_stage])
+	get_tree().change_scene_to_file("res://ui/run.tscn")
 
 func apply_settings() -> void:
 	var s: Dictionary = profile.data.settings
