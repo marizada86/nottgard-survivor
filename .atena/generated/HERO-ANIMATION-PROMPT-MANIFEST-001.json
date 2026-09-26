@@ -1,0 +1,102 @@
+{
+  "id": "HERO-ANIMATION-PROMPT-MANIFEST-001",
+  "spec": "SPEC-021-prompts-de-animacao-dos-herois",
+  "prompt_set": "ART-PROMPTS-016-animacoes-dos-herois",
+  "status": "partial-generation",
+  "generated_at": "2026-09-23",
+  "asset_root": "assets/animations/heroes/<hero_id>",
+  "candidate_root": ".atena/generated/asset-candidates/animations/heroes/<hero_id>",
+  "prompt_id_pattern": "HERO-<hero_id>-<sequence>",
+  "sequence_contract": [
+    {"id": "idle", "frames": 4, "grid": "2x2", "cell": [256, 384], "final_path": "assets/animations/heroes/<hero_id>/idle.png"},
+    {"id": "move_n", "frames": 6, "grid": "3x2", "cell": [256, 384], "final_path": "assets/animations/heroes/<hero_id>/move_n.png"},
+    {"id": "move_ne", "frames": 6, "grid": "3x2", "cell": [256, 384], "final_path": "assets/animations/heroes/<hero_id>/move_ne.png"},
+    {"id": "move_e", "frames": 6, "grid": "3x2", "cell": [256, 384], "final_path": "assets/animations/heroes/<hero_id>/move_e.png"},
+    {"id": "move_se", "frames": 6, "grid": "3x2", "cell": [256, 384], "final_path": "assets/animations/heroes/<hero_id>/move_se.png"},
+    {"id": "move_s", "frames": 6, "grid": "3x2", "cell": [256, 384], "final_path": "assets/animations/heroes/<hero_id>/move_s.png"},
+    {"id": "move_sw", "frames": 6, "grid": "3x2", "cell": [256, 384], "final_path": "assets/animations/heroes/<hero_id>/move_sw.png"},
+    {"id": "move_w", "frames": 6, "grid": "3x2", "cell": [256, 384], "final_path": "assets/animations/heroes/<hero_id>/move_w.png"},
+    {"id": "move_nw", "frames": 6, "grid": "3x2", "cell": [256, 384], "final_path": "assets/animations/heroes/<hero_id>/move_nw.png"},
+    {"id": "attack", "frames": 4, "grid": "2x2", "cell": [256, 384], "final_path": "assets/animations/heroes/<hero_id>/attack.png"},
+    {"id": "active", "frames": 6, "grid": "3x2", "cell": [256, 384], "final_path": "assets/animations/heroes/<hero_id>/active.png"},
+    {"id": "death", "frames": 6, "grid": "3x2", "cell": [256, 384], "final_path": "assets/animations/heroes/<hero_id>/death.png"}
+  ],
+  "generation_sequence_contract": [
+    {"id": "idle", "frames": 4, "grid": "2x2", "cell": [256, 384], "final_path": "assets/animations/heroes/<hero_id>/idle.png"},
+    {"id": "move_n", "frames": 6, "grid": "3x2", "cell": [256, 384], "final_path": "assets/animations/heroes/<hero_id>/move_n.png"},
+    {"id": "move_ne", "frames": 6, "grid": "3x2", "cell": [256, 384], "final_path": "assets/animations/heroes/<hero_id>/move_ne.png"},
+    {"id": "move_e", "frames": 6, "grid": "3x2", "cell": [256, 384], "final_path": "assets/animations/heroes/<hero_id>/move_e.png"},
+    {"id": "move_se", "frames": 6, "grid": "3x2", "cell": [256, 384], "final_path": "assets/animations/heroes/<hero_id>/move_se.png"},
+    {"id": "move_s", "frames": 6, "grid": "3x2", "cell": [256, 384], "final_path": "assets/animations/heroes/<hero_id>/move_s.png"},
+    {"id": "attack", "frames": 4, "grid": "2x2", "cell": [256, 384], "final_path": "assets/animations/heroes/<hero_id>/attack.png"},
+    {"id": "active", "frames": 6, "grid": "3x2", "cell": [256, 384], "final_path": "assets/animations/heroes/<hero_id>/active.png"},
+    {"id": "death", "frames": 6, "grid": "3x2", "cell": [256, 384], "final_path": "assets/animations/heroes/<hero_id>/death.png"}
+  ],
+  "directional_generation": {
+    "rule": "Generate five movement source sheets; render the three opposite directions with horizontal flip in the runtime.",
+    "source_directions": ["move_n", "move_ne", "move_e", "move_se", "move_s"],
+    "runtime_mirrors": {"move_nw": "move_ne", "move_w": "move_e", "move_sw": "move_se"},
+    "legacy_inverse_assets": "optional; preserved when already present but never required or loaded"
+  },
+  "heroes": {
+    "durvall": {"mode": "reuse", "portrait_prompt": "ART-PROMPTS-002", "run_sprite_prompt": "ART-PROMPTS-011", "animation_prompts": ["ART-PROMPTS-014", "ART-PROMPTS-015"], "sequences": ["idle", "move_n", "move_ne", "move_e", "move_se", "move_s", "move_sw", "move_w", "move_nw", "attack", "active", "death"]},
+    "brook": {"mode": "generate", "portrait_prompt": "ART-PROMPTS-002", "run_sprite_prompt": "ART-PROMPTS-011", "sequences": ["idle", "move_n", "move_ne", "move_e", "move_se", "move_s", "move_sw", "move_w", "move_nw", "attack", "active", "death"]},
+    "maelor": {"mode": "generate", "portrait_prompt": "ART-PROMPTS-002", "run_sprite_prompt": "ART-PROMPTS-011", "sequences": ["idle", "move_n", "move_ne", "move_e", "move_se", "move_s", "move_sw", "move_w", "move_nw", "attack", "active", "death"]},
+    "sylas": {"mode": "generate", "portrait_prompt": "ART-PROMPTS-002", "run_sprite_prompt": "ART-PROMPTS-011", "sequences": ["idle", "move_n", "move_ne", "move_e", "move_se", "move_s", "move_sw", "move_w", "move_nw", "attack", "active", "death"]},
+    "kayron": {"mode": "generate", "portrait_prompt": "ART-PROMPTS-002", "run_sprite_prompt": "ART-PROMPTS-011", "sequences": ["idle", "move_n", "move_ne", "move_e", "move_se", "move_s", "move_sw", "move_w", "move_nw", "attack", "active", "death"]},
+    "korrak": {"mode": "generate", "portrait_prompt": "ART-PROMPTS-002", "run_sprite_prompt": "ART-PROMPTS-011", "sequences": ["idle", "move_n", "move_ne", "move_e", "move_se", "move_s", "move_sw", "move_w", "move_nw", "attack", "active", "death"]},
+    "leoric": {"mode": "generate", "portrait_prompt": "ART-PROMPTS-002", "run_sprite_prompt": "ART-PROMPTS-011", "sequences": ["idle", "move_n", "move_ne", "move_e", "move_se", "move_s", "move_sw", "move_w", "move_nw", "attack", "active", "death"]},
+    "nyrelia": {"mode": "generate", "portrait_prompt": "ART-PROMPTS-002", "run_sprite_prompt": "ART-PROMPTS-011", "sequences": ["idle", "move_n", "move_ne", "move_e", "move_se", "move_s", "move_sw", "move_w", "move_nw", "attack", "active", "death"]},
+    "zynara": {"mode": "generate", "portrait_prompt": "ART-PROMPTS-002", "run_sprite_prompt": "ART-PROMPTS-011", "sequences": ["idle", "move_n", "move_ne", "move_e", "move_se", "move_s", "move_sw", "move_w", "move_nw", "attack", "active", "death"]},
+    "bromnor": {"mode": "generate", "portrait_prompt": "ART-PROMPTS-002", "run_sprite_prompt": "ART-PROMPTS-011", "sequences": ["idle", "move_n", "move_ne", "move_e", "move_se", "move_s", "move_sw", "move_w", "move_nw", "attack", "active", "death"]}
+  },
+  "counts": {"heroes": 10, "logical_sequences_per_hero": 12, "source_sequences_per_hero": 9, "total_source_sequences": 90, "new_source_prompts": 81, "reused_source_sequences": 9},
+  "generated_heroes": {
+    "brook": {
+      "completed_sequences": ["idle", "move_n", "move_ne", "move_e", "move_se", "move_s", "attack", "active", "death"],
+      "pending_source_sequences": [],
+      "integrated_at": "2026-09-25",
+      "completed_at": "2026-09-26"
+    },
+    "kayron": {
+      "completed_sequences": ["idle", "move_n", "move_ne", "move_e", "move_se", "move_s", "move_sw", "move_w", "move_nw", "attack", "active", "death"],
+      "pending_sequences": [],
+      "completed_at": "2026-09-24"
+    },
+    "maelor": {
+      "completed_sequences": ["idle", "move_n", "move_ne", "move_e", "move_se", "move_s", "move_sw", "move_w", "move_nw", "attack", "active", "death"],
+      "pending_sequences": [],
+      "completed_at": "2026-09-24"
+    },
+    "sylas": {
+      "completed_sequences": ["idle", "move_n", "move_ne", "move_e", "move_se", "move_s", "move_sw", "move_w", "move_nw", "attack", "active", "death"],
+      "pending_sequences": [],
+      "completed_at": "2026-09-24"
+    },
+    "leoric": {
+      "completed_sequences": ["idle", "move_n", "move_ne", "move_e", "move_se", "move_s", "attack", "active", "death"],
+      "pending_source_sequences": [],
+      "completed_at": "2026-09-25",
+      "integrated_at": "2026-09-25"
+    },
+    "nyrelia": {
+      "completed_sequences": ["idle", "move_n", "move_ne", "move_e", "move_se", "move_s", "attack", "active", "death"],
+      "pending_source_sequences": [],
+      "integrated_at": "2026-09-25",
+      "completed_at": "2026-09-25"
+    },
+    "bromnor": {
+      "completed_sequences": ["idle", "move_n", "move_ne", "move_e", "move_se", "move_s", "attack", "active", "death"],
+      "pending_source_sequences": [],
+      "integrated_at": "2026-09-25",
+      "completed_at": "2026-09-25"
+    },
+    "zynara": {
+      "completed_sequences": ["idle", "move_n", "move_ne", "move_e", "move_se", "move_s", "attack", "active", "death"],
+      "pending_source_sequences": [],
+      "integrated_at": "2026-09-25",
+      "completed_at": "2026-09-25"
+    }
+  },
+  "generation_gate": "Per-batch approval remains required before ImageGen, reference transfer, PNG processing or integration."
+}

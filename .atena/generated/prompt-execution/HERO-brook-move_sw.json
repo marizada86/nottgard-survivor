@@ -1,0 +1,16 @@
+{
+  "id": "HERO-brook-move_sw",
+  "batch_id": "BATCH-brook-pilot-01",
+  "state": "qa_failed",
+  "general_instructions": {"document": "ART-PROMPTS-001-direcao-e-piloto.md", "read_at": "2026-09-24T05:38:52-03:00"},
+  "specific_prompt": {"document": "ART-PROMPTS-016-animacoes-dos-herois.md", "read_at": "2026-09-24T05:38:52-03:00"},
+  "manifest": {"document": "HERO-ANIMATION-PROMPT-MANIFEST-001.json", "checked_at": "2026-09-24T05:38:52-03:00"},
+  "sources_checked": ["data/heroes.json", "data/weapons.json", "data/abilities.json"],
+  "references": [{"path": "assets/portraits/brook.png", "role": "identity, beard and armor"}, {"path": "assets/heroes/brook.png", "role": "sprite silhouette and palette"}],
+  "remote_transfer_approval": "User approval in this conversation for BATCH-brook-pilot-01.",
+  "conflict_resolution": "Animation source uses a 3x2 grid as explicitly required by ART-PROMPTS-016; the no-grid rule in ART-PROMPTS-001 applies to static figures.",
+  "candidate": {"path": ".atena/generated/animation-candidates/heroes/brook/move_sw_v03.png", "version": 3, "generated_at": "2026-09-24T05:41:13-03:00"},
+  "qa": {"identity": false, "direction": true, "frames": true, "baseline": false, "alpha": false, "camera": true, "lighting": true, "artifacts": false},
+  "decision": "qa_failed",
+  "reason": "v03 improves the down-left directional read, but still has pointed elf ears and an opaque dark gradient background. The three-candidate limit is reached. No file in assets was created; move_sw is blocked pending a new user-approved correction strategy."
+}

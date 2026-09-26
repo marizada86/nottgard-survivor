@@ -1,0 +1,22 @@
+{
+  "id": "HERO-brook-active",
+  "batch_id": "BATCH-brook-missing-sources-03",
+  "state": "generated",
+  "general_instructions": {"document": "ART-PROMPTS-001-direcao-e-piloto.md", "read_at": "2026-09-25T20:52:43-03:00"},
+  "specific_prompt": {"document": "ART-PROMPTS-016-animacoes-dos-herois.md", "read_at": "2026-09-25T20:52:43-03:00"},
+  "manifest": {"document": "HERO-ANIMATION-PROMPT-MANIFEST-001.json", "checked_at": "2026-09-25T20:52:43-03:00"},
+  "sources_checked": ["data/heroes.json", "data/weapons.json", "data/abilities.json"],
+  "references": [],
+  "remote_transfer_approval": "User approval in this conversation on 2026-09-25 for BATCH-brook-missing-sources-03; no local reference was transmitted for this corrective call after the legacy pointed-ear conflict was observed.",
+  "user_visual_approval": {"candidate": ".atena/generated/animation-candidates/heroes/brook/active_v02.png", "approved_at": "2026-09-24T06:02:51-03:00", "scope": "Brook's corrected rounded dwarf ears and restrained Guarda de Lliira effect only; alpha cleanup and integration remain separate gates."},
+  "conflict_resolution": "Animation source uses a 3x2 grid as explicitly required by ART-PROMPTS-016; the no-grid rule in ART-PROMPTS-001 applies to static figures. v03 is a new source candidate aimed at the documented halo and baseline failure, without transmitting the conflicting legacy ears.",
+  "candidate": {"path": ".atena/generated/animation-candidates/heroes/brook/active_v03.png", "version": "3", "generated_at": "2026-09-25T20:52:43-03:00"},
+  "qa": {"identity": true, "direction": true, "frames": true, "baseline": true, "alpha": true, "camera": true, "lighting": true, "artifacts": true},
+  "user_visual_approval_v03": {"candidate": ".atena/generated/animation-candidates/heroes/brook/active_v03.png", "approved_at": "2026-09-25T20:56:40-03:00", "scope": "visual candidate only; normalization and integration remain separate gates"},
+  "integration_approval": "User instructed the approved candidates to continue on 2026-09-25.",
+  "final_path": "assets/animations/heroes/brook/active.png",
+  "normalized_candidate": ".atena/generated/animation-candidates/heroes/brook/active_v03_normalized.png",
+  "integrated_at": "2026-09-25T21:01:48-03:00",
+  "state": "integrated", "decision": "integrated",
+  "reason": "Normalized to 1536x384 and integrated after the user's continuation authorization. Static PNG validation passed; Godot runtime import remains unverified because the executable is unavailable."
+}

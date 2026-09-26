@@ -19,6 +19,213 @@ y_sort_enabled = true
 [node name="Hero" parent="Sorted" unique_id=629349748 instance=ExtResource("2_lp7os")]
 position = Vector2(0, 640)
 
+[node name="Brazier1" parent="Sorted" instance=ExtResource("3_d55i6")]
+position = Vector2(128, 640)
+kind = "braseiro"
+height = 60.0
+half_width = 25.0
+color = Color(0.24, 0.22, 0.24, 1)
+
+[node name="Brazier2" parent="Sorted" instance=ExtResource("3_d55i6")]
+position = Vector2(256, 640)
+kind = "braseiro"
+height = 52.0
+half_width = 28.0
+color = Color(0.24, 0.22, 0.24, 1)
+
+[node name="Brazier3" parent="Sorted" instance=ExtResource("3_d55i6")]
+position = Vector2(384, 640)
+kind = "braseiro"
+height = 74.0
+half_width = 24.0
+color = Color(0.24, 0.22, 0.24, 1)
+
+[node name="Crate1" parent="Sorted" instance=ExtResource("3_d55i6")]
+position = Vector2(-352, 576)
+kind = "caixote"
+height = 74.0
+half_width = 26.0
+color = Color(0.24, 0.22, 0.24, 1)
+
+[node name="Crate2" parent="Sorted" instance=ExtResource("3_d55i6")]
+position = Vector2(-192, 672)
+kind = "caixote"
+height = 52.0
+half_width = 32.0
+color = Color(0.24, 0.22, 0.24, 1)
+
+[node name="Crate3" parent="Sorted" instance=ExtResource("3_d55i6")]
+position = Vector2(608, 720)
+kind = "caixote"
+height = 68.0
+half_width = 29.0
+color = Color(0.24, 0.22, 0.24, 1)
+
+[node name="Candles1" parent="Sorted" instance=ExtResource("3_d55i6")]
+position = Vector2(0, 480)
+kind = "velas"
+height = 40.0
+half_width = 25.0
+color = Color(0.24, 0.22, 0.24, 1)
+
+[node name="Candles2" parent="Sorted" instance=ExtResource("3_d55i6")]
+position = Vector2(-512, 496)
+kind = "velas"
+height = 44.0
+half_width = 28.0
+color = Color(0.24, 0.22, 0.24, 1)
+
+[node name="Candles3" parent="Sorted" instance=ExtResource("3_d55i6")]
+position = Vector2(352, 576)
+kind = "velas"
+height = 58.0
+half_width = 22.0
+color = Color(0.24, 0.22, 0.24, 1)
+
+[node name="Books1" parent="Sorted" instance=ExtResource("3_d55i6")]
+position = Vector2(64, 320)
+kind = "livros"
+height = 54.0
+half_width = 29.0
+color = Color(0.24, 0.22, 0.24, 1)
+
+[node name="Books2" parent="Sorted" instance=ExtResource("3_d55i6")]
+position = Vector2(-448, 432)
+kind = "livros"
+height = 38.0
+half_width = 33.0
+color = Color(0.24, 0.22, 0.24, 1)
+
+[node name="Books3" parent="Sorted" instance=ExtResource("3_d55i6")]
+position = Vector2(704, 512)
+kind = "livros"
+height = 42.0
+half_width = 32.0
+color = Color(0.24, 0.22, 0.24, 1)
+
+[node name="Barrel1" parent="Sorted" instance=ExtResource("3_d55i6")]
+position = Vector2(0, 288)
+kind = "barril"
+height = 66.0
+half_width = 28.0
+color = Color(0.24, 0.22, 0.24, 1)
+
+[node name="Barrel2" parent="Sorted" instance=ExtResource("3_d55i6")]
+position = Vector2(-160, 288)
+kind = "barril"
+height = 48.0
+half_width = 34.0
+color = Color(0.24, 0.22, 0.24, 1)
+
+[node name="Barrel3" parent="Sorted" instance=ExtResource("3_d55i6")]
+position = Vector2(256, 288)
+kind = "barril"
+height = 58.0
+half_width = 36.0
+color = Color(0.24, 0.22, 0.24, 1)
+
+[node name="Net1" parent="Sorted" instance=ExtResource("3_d55i6")]
+position = Vector2(0, 192)
+kind = "rede"
+height = 46.0
+half_width = 34.0
+color = Color(0.24, 0.22, 0.24, 1)
+
+[node name="Net2" parent="Sorted" instance=ExtResource("3_d55i6")]
+position = Vector2(-160, 192)
+kind = "rede"
+height = 36.0
+half_width = 38.0
+color = Color(0.24, 0.22, 0.24, 1)
+
+[node name="Net3" parent="Sorted" instance=ExtResource("3_d55i6")]
+position = Vector2(256, 192)
+kind = "rede"
+height = 40.0
+half_width = 37.0
+color = Color(0.24, 0.22, 0.24, 1)
+
+[node name="Bones1" parent="Sorted" instance=ExtResource("3_d55i6")]
+position = Vector2(0, 96)
+kind = "ossos"
+height = 44.0
+half_width = 42.0
+color = Color(0.24, 0.22, 0.24, 1)
+
+[node name="Bones2" parent="Sorted" instance=ExtResource("3_d55i6")]
+position = Vector2(-320, 96)
+kind = "ossos"
+height = 34.0
+half_width = 46.0
+color = Color(0.24, 0.22, 0.24, 1)
+
+[node name="Bones3" parent="Sorted" instance=ExtResource("3_d55i6")]
+position = Vector2(256, 96)
+kind = "ossos"
+height = 40.0
+half_width = 40.0
+color = Color(0.24, 0.22, 0.24, 1)
+
+[node name="Dock1" parent="Sorted" instance=ExtResource("3_d55i6")]
+position = Vector2(0, 0)
+kind = "doca"
+height = 50.0
+half_width = 48.0
+color = Color(0.24, 0.22, 0.24, 1)
+
+[node name="Dock2" parent="Sorted" instance=ExtResource("3_d55i6")]
+position = Vector2(-320, 0)
+kind = "doca"
+height = 64.0
+half_width = 42.0
+color = Color(0.24, 0.22, 0.24, 1)
+
+[node name="Dock3" parent="Sorted" instance=ExtResource("3_d55i6")]
+position = Vector2(256, 0)
+kind = "doca"
+height = 46.0
+half_width = 50.0
+color = Color(0.24, 0.22, 0.24, 1)
+
+[node name="Cargo1" parent="Sorted" instance=ExtResource("3_d55i6")]
+position = Vector2(0, -96)
+kind = "carga"
+height = 50.0
+half_width = 43.0
+color = Color(0.24, 0.22, 0.24, 1)
+
+[node name="Cargo2" parent="Sorted" instance=ExtResource("3_d55i6")]
+position = Vector2(-320, -96)
+kind = "carga"
+height = 38.0
+half_width = 50.0
+color = Color(0.24, 0.22, 0.24, 1)
+
+[node name="Cargo3" parent="Sorted" instance=ExtResource("3_d55i6")]
+position = Vector2(256, -96)
+kind = "carga"
+height = 46.0
+half_width = 44.0
+color = Color(0.24, 0.22, 0.24, 1)
+
+[node name="Shore1" parent="Sorted" instance=ExtResource("3_d55i6")]
+position = Vector2(0, -192)
+kind = "margem"
+height = 42.0
+half_width = 50.0
+
+[node name="Shore2" parent="Sorted" instance=ExtResource("3_d55i6")]
+position = Vector2(-320, -192)
+kind = "margem"
+height = 68.0
+half_width = 42.0
+
+[node name="Shore3" parent="Sorted" instance=ExtResource("3_d55i6")]
+position = Vector2(256, -192)
+kind = "margem"
+height = 24.0
+half_width = 54.0
+
 [node name="Prop1" parent="Sorted" unique_id=71309628 instance=ExtResource("3_d55i6")]
 position = Vector2(736, 624)
 height = 74.3446683883667

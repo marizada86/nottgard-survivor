@@ -1,0 +1,38 @@
+{
+  "id": "HERO-<hero_id>-<sequence>",
+  "batch_id": "BATCH-<hero_id>-<phase>-NN",
+  "state": "queued",
+  "general_instructions": {
+    "document": "ART-PROMPTS-001-direcao-e-piloto.md",
+    "read_at": null
+  },
+  "specific_prompt": {
+    "document": "ART-PROMPTS-016-animacoes-dos-herois.md",
+    "read_at": null
+  },
+  "manifest": {
+    "document": "HERO-ANIMATION-PROMPT-MANIFEST-001.json",
+    "checked_at": null
+  },
+  "sources_checked": [],
+  "references": [],
+  "remote_transfer_approval": null,
+  "conflict_resolution": null,
+  "candidate": {
+    "path": null,
+    "version": null,
+    "generated_at": null
+  },
+  "qa": {
+    "identity": null,
+    "direction": null,
+    "frames": null,
+    "baseline": null,
+    "alpha": null,
+    "camera": null,
+    "lighting": null,
+    "artifacts": null
+  },
+  "decision": null,
+  "reason": null
+}

@@ -10,6 +10,18 @@ const NOTE_MAX := 1000
 const EVIDENCE_ROOT := "user://evidence-kit"
 const GUIDE_MAX_SIZE := Vector2(820, 560)
 const GUIDE_MARGIN := 24.0
+const QA_RUN_DESTINATIONS := [
+	["Inicio da run", "running"],
+	["Oferta de level-up", "levelup"],
+	["Altar", "altar"],
+	["Chefe: entrada", "boss"],
+	["Chefe: virada 70%", "boss_70"],
+	["Chefe: virada 35%", "boss_35"],
+	["Portal apos chefe", "portal"],
+	["Resultado: vitoria", "victory"],
+	["Resultado: derrota", "defeat"],
+	["Regra da fase", "rule"],
+]
 
 var items: Array = []          # {kind, time, ctx, text, png}
 var _note_open := false
@@ -39,7 +51,6 @@ var _qa_stage: OptionButton
 var _qa_hero: OptionButton
 var _qa_state: OptionButton
 var _qa_seed: SpinBox
-var _qa_prefix_ms := -10000
 
 func _ready() -> void:
 	layer = 100
@@ -214,7 +225,8 @@ func _build_qa_browser() -> void:
 		_qa_stage.set_item_metadata(_qa_stage.item_count - 1, id)
 	v.add_child(_qa_stage)
 	_qa_state = OptionButton.new()
-	for state in [["Quartel: Jogar", "menu_0"], ["Quartel: Melhorias", "menu_1"], ["Quartel: Conquistas", "menu_2"], ["Quartel: Códex", "menu_3"], ["Quartel: Opções", "menu_4"], ["Início da run", "running"], ["Oferta de level-up", "levelup"], ["Altar", "altar"], ["Chefe: entrada", "boss"], ["Chefe: virada 70%", "boss_70"], ["Chefe: virada 35%", "boss_35"], ["Portal após chefe", "portal"], ["Resultado: vitória", "victory"], ["Resultado: derrota", "defeat"], ["Regra da fase", "rule"]]:
+	_qa_state.tooltip_text = "Estado inicial da fase selecionada"
+	for state in QA_RUN_DESTINATIONS:
 		_qa_state.add_item(state[0])
 		_qa_state.set_item_metadata(_qa_state.item_count - 1, state[1])
 	v.add_child(_qa_state)
@@ -257,12 +269,6 @@ func _open_qa_browser() -> void:
 
 func _launch_qa() -> void:
 	var target := String(_qa_state.get_item_metadata(_qa_state.selected))
-	if target.begins_with("menu_"):
-		if Game.begin_qa_sandbox("qa-menu-%d" % Time.get_ticks_msec()):
-			Game.qa_menu_tab = int(target.trim_prefix("menu_"))
-			_qa_modal.visible = false
-			Game.goto_menu()
-		return
 	var request := {
 		"id": "qa.%s.%s" % [String(_qa_stage.get_item_metadata(_qa_stage.selected)), String(_qa_state.get_item_metadata(_qa_state.selected))],
 		"seed": int(_qa_seed.value),
@@ -271,10 +277,13 @@ func _launch_qa() -> void:
 		"target_state": target
 	}
 	_qa_modal.visible = false
-	Game.start_qa_run(request)
+	if not Game.start_qa_run(request):
+		_qa_modal.visible = true
+		toast(Game.qa_error)
 
 func _launch_qa_menu() -> void:
 	if not Game.begin_qa_sandbox("qa-menu-%d" % Time.get_ticks_msec()):
+		toast(Game.qa_error)
 		return
 	Game.qa_menu_tab = 0
 	_qa_modal.visible = false
@@ -290,14 +299,41 @@ func _layout_guide() -> void:
 	if _guide == null:
 		return
 	var viewport_size := get_viewport().get_visible_rect().size
-	var available := viewport_size - Vector2(GUIDE_MARGIN * 2.0, GUIDE_MARGIN * 2.0)
-	var panel_size := Vector2(minf(GUIDE_MAX_SIZE.x, maxf(1.0, available.x)), minf(GUIDE_MAX_SIZE.y, maxf(1.0, available.y)))
+	var panel_size := guide_panel_size(viewport_size)
 	_guide.custom_minimum_size = panel_size
 	_guide.size = panel_size
 	_guide.position = (viewport_size - panel_size) * 0.5
 	# ScrollContainer mede o filho pela largura mínima; mantemos o texto dentro
 	# da largura visível para que apenas a rolagem vertical seja necessária.
 	_guide_content.custom_minimum_size.x = maxf(1.0, panel_size.x - 32.0)
+
+static func guide_panel_size(viewport_size: Vector2) -> Vector2:
+	var available := viewport_size - Vector2(GUIDE_MARGIN * 2.0, GUIDE_MARGIN * 2.0)
+	return Vector2(minf(GUIDE_MAX_SIZE.x, maxf(1.0, available.x)), minf(GUIDE_MAX_SIZE.y, maxf(1.0, available.y)))
+
+static func is_qa_shortcut(ev: InputEvent, o_pressed: bool) -> bool:
+	return ev is InputEventKey and ev.pressed and not ev.echo and ev.physical_keycode == KEY_P and ev.ctrl_pressed and o_pressed
+
+static func shortcut_action(ev: InputEvent) -> StringName:
+	if not (ev is InputEventKey) or not ev.pressed or ev.echo:
+		return &""
+	match ev.physical_keycode:
+		KEY_F5:
+			return &"note"
+		KEY_F6:
+			return &"screenshot"
+		KEY_F7:
+			return &"export"
+		KEY_F11:
+			return &"fullscreen"
+		KEY_F12:
+			return &"console"
+		KEY_F1:
+			return &"guide"
+	return &""
+
+static func qa_run_destinations() -> Array:
+	return QA_RUN_DESTINATIONS.duplicate(true)
 
 func _guide_text() -> String:
 	return "Este jogo [b]ainda não foi lançado[/b]: você está testando uma versão em construção (v%s). O que você reportar muda o jogo de verdade.\n\n" % Version.VERSION \
@@ -324,27 +360,23 @@ func toast(text: String) -> void:
 func _input(ev: InputEvent) -> void:
 	if not (ev is InputEventKey) or not ev.pressed or ev.echo:
 		return
-	if ev.physical_keycode == KEY_F11:
+	var shortcut := shortcut_action(ev)
+	if shortcut == &"fullscreen":
 		Game.toggle_fullscreen()
 		get_viewport().set_input_as_handled()
 		return
 	if not Version.evidence_enabled():
 		return
-	if ev.physical_keycode == KEY_F12:
+	if shortcut == &"console":
 		_open_console()
 		get_viewport().set_input_as_handled()
 		return
-	if Version.qa_enabled() and get_viewport().gui_get_focus_owner() == null:
-		if ev.physical_keycode == KEY_O and ev.ctrl_pressed:
-			_qa_prefix_ms = Time.get_ticks_msec()
-			get_viewport().set_input_as_handled()
-			return
-		if ev.physical_keycode == KEY_P and Time.get_ticks_msec() - _qa_prefix_ms <= 1000:
-			_open_qa_browser()
-			get_viewport().set_input_as_handled()
-			return
-	match ev.physical_keycode:
-		KEY_F5:
+	if Version.qa_enabled() and get_viewport().gui_get_focus_owner() == null and is_qa_shortcut(ev, Input.is_key_pressed(KEY_O)):
+		_open_qa_browser()
+		get_viewport().set_input_as_handled()
+		return
+	match shortcut:
+		&"note":
 			if _guide_open:
 				return
 			if _note_open:
@@ -352,25 +384,25 @@ func _input(ev: InputEvent) -> void:
 			else:
 				open_note()
 			get_viewport().set_input_as_handled()
-		KEY_F6:
+		&"screenshot":
 			take_print()
 			get_viewport().set_input_as_handled()
-		KEY_F7:
+		&"export":
 			export_zip()
 			get_viewport().set_input_as_handled()
-		KEY_F1:
+		&"guide":
 			if _guide_open:
 				close_guide()
 			elif not _note_open:
 				open_guide(false)
 			get_viewport().set_input_as_handled()
-		KEY_ESCAPE:
-			if _note_open:
-				close_note()
-				get_viewport().set_input_as_handled()
-			elif _guide_open and Game.profile.data.name != "":
-				close_guide()
-				get_viewport().set_input_as_handled()
+	if ev.physical_keycode == KEY_ESCAPE:
+		if _note_open:
+			close_note()
+			get_viewport().set_input_as_handled()
+		elif _guide_open and Game.profile.data.name != "":
+			close_guide()
+			get_viewport().set_input_as_handled()
 
 # ------------------------------------------------------------------ contexto
 

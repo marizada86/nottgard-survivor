@@ -1,7 +1,10 @@
 .godot/
 build/
+tmp/
+Godot_v*_win64*.exe
 EV-*.zip
 *.tmp
 .atena/evidence/reference-staging/
 .atena/generated/art-candidates/
 .atena/generated/animation-candidates/
+.atena/generated/asset-candidates/

@@ -82,7 +82,7 @@ foreach ($id in @($enemies.PSObject.Properties.Name)) {
     Add-Generated $id "enemies" "assets/enemies/$id.png" $prompt "320x480" $true $refs
 }
 
-$propKinds = @("pilar", "cogumelo", "bolha", "rocha", "torii", "cristal", "cachoeira", "pilar_abissal")
+$propKinds = @("pilar", "cogumelo", "bolha", "rocha", "torii", "cristal", "cachoeira", "pilar_abissal", "braseiro", "caixote", "velas", "livros", "barril", "rede", "ossos", "doca", "carga", "margem")
 foreach ($stageId in @($stages.PSObject.Properties.Name)) {
     Add-Generated "${stageId}_ground" "tiles" "assets/tiles/${stageId}_ground.png" "ART-PROMPTS-007" "128x64" $false
     Add-Generated "${stageId}_thumb" "stages" "assets/stages/${stageId}_thumb.png" "ART-PROMPTS-007" "480x320" $false
@@ -144,10 +144,10 @@ foreach ($id in $screenRefs.Keys) {
 $manifest = [ordered]@{
     schema_version = 1
     project = "Nottgard Survivors"
-    generated_at = "2026-09-22"
-    specification = "SPEC-015-producao-total-de-assets-visuais"
-    expected_png_files = 236
-    expected_imagegen_calls = 228
+    generated_at = "2026-09-24"
+    specification = "SPEC-015-producao-total-de-assets-visuais; SPEC-022-props-de-dagruve-braseiros; SPEC-023-props-de-dagruve-caixotes; SPEC-024-props-de-dagruve-velas; SPEC-025-props-de-dagruve-livros; SPEC-026-props-de-dagruve-barris; SPEC-027-props-de-dagruve-redes; SPEC-028-props-de-dagruve-ossos; SPEC-029-props-de-dagruve-estrutura-de-doca; SPEC-030-props-de-dagruve-carga"
+    expected_png_files = 266
+    expected_imagegen_calls = 258
     entries = @($entries | Sort-Object family, asset_id)
     logical_reuse = [ordered]@{
         achievements = "18 IDs resolve through icon_ref; no additional PNG"
@@ -161,4 +161,3 @@ New-Item -ItemType Directory -Force -Path $dir | Out-Null
 $json = $manifest | ConvertTo-Json -Depth 10
 [System.IO.File]::WriteAllText((Join-Path (Get-Location) $OutputPath), $json, [System.Text.UTF8Encoding]::new($false))
 Write-Output $OutputPath
-

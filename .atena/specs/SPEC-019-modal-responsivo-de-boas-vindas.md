@@ -38,3 +38,6 @@ Status: aprovada (2026-09-22). Em execução.
 - Registrar os comandos de validação e resultados em `.atena/evidence/`.
 - Atualizar este documento para `Executada` somente após os critérios serem
   comprovados ou exceções registradas.
+- A verificação de geometria responsiva e a suíte automatizada estão registradas
+  em `EVID-039-modal-atalhos-e-reconciliacao.md`; o smoke visual interativo
+  continua necessário antes de encerrar a spec.

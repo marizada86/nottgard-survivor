@@ -147,11 +147,11 @@ func _refresh_offer() -> void:
 func _physics_process(dt: float) -> void:
 	if get_tree().paused or _result_shown:
 		return
-	var d := Vector2(
-		int(Input.is_physical_key_pressed(KEY_D) or Input.is_physical_key_pressed(KEY_RIGHT))
-		- int(Input.is_physical_key_pressed(KEY_A) or Input.is_physical_key_pressed(KEY_LEFT)),
-		int(Input.is_physical_key_pressed(KEY_S) or Input.is_physical_key_pressed(KEY_DOWN))
-		- int(Input.is_physical_key_pressed(KEY_W) or Input.is_physical_key_pressed(KEY_UP)))
+	var d := Hero.movement_input(
+		Input.is_physical_key_pressed(KEY_A) or Input.is_physical_key_pressed(KEY_LEFT),
+		Input.is_physical_key_pressed(KEY_D) or Input.is_physical_key_pressed(KEY_RIGHT),
+		Input.is_physical_key_pressed(KEY_W) or Input.is_physical_key_pressed(KEY_UP),
+		Input.is_physical_key_pressed(KEY_S) or Input.is_physical_key_pressed(KEY_DOWN))
 	var m_ground := Iso.to_ground(get_global_mouse_position() - hero_node.position)
 	if m_ground.length() > 0.01:
 		battle.aim_dir = m_ground.normalized()

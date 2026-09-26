@@ -1,0 +1,57 @@
+{
+  "id": "HERO-bromnor-idle",
+  "batch_id": "BATCH-bromnor-idle-01",
+  "state": "integrated",
+  "general_instructions": {
+    "document": "ART-PROMPTS-001-direcao-e-piloto.md",
+    "read_at": "2026-09-25T20:57:15-03:00"
+  },
+  "specific_prompt": {
+    "document": "ART-PROMPTS-016-animacoes-dos-herois.md",
+    "read_at": "2026-09-25T20:57:15-03:00"
+  },
+  "manifest": {
+    "document": "HERO-ANIMATION-PROMPT-MANIFEST-001.json",
+    "checked_at": "2026-09-25T20:57:15-03:00"
+  },
+  "sources_checked": [
+    "data/heroes.json",
+    "data/weapons.json",
+    "data/abilities.json",
+    "SPEC-021-prompts-de-animacao-dos-herois.md",
+    "PLAN-007-geracao-controlada-das-animacoes-de-bromnor-2026-09-25.md"
+  ],
+  "references": [
+    {
+      "path": ".atena/evidence/reference-staging/bromnor.png",
+      "role": "barba, armadura e proporcoes; nao preservar orelhas pontudas"
+    },
+    {
+      "path": "assets/portraits/bromnor.png",
+      "role": "identidade, paleta e Martelo da Gloria"
+    },
+    {
+      "path": "assets/heroes/bromnor.png",
+      "role": "silhueta, escala e acabamento de sprite"
+    }
+  ],
+  "remote_transfer_approval": "Aprovada pelo usuario em 2026-09-25 para o lote inicial de Bromnor.",
+  "conflict_resolution": "Orelhas curtas e arredondadas de anao prevalecem sobre as orelhas pontudas da referencia de staging.",
+  "candidate": {
+    "path": ".atena/generated/asset-candidates/animations/heroes/bromnor/idle_v01.png",
+    "version": "v01",
+    "generated_at": "2026-09-25T20:57:15-03:00"
+  },
+  "qa": {
+    "identity": "pending human review; dwarf-ear correction requested",
+    "direction": "not applicable to idle",
+    "frames": "4 visible frames in 2x2 source sheet; normalized into a 1024x384 horizontal runtime strip",
+    "baseline": "pending human review",
+    "alpha": "pass: alpha range 0-254; 610123 fully transparent pixels",
+    "camera": "pending human review",
+    "lighting": "pending human review",
+    "artifacts": "pending human review; no visible cell separators"
+  },
+  "decision": "accepted",
+  "reason": "Aprovada pelo usuario; normalizada com interpolacao nearest-neighbor para uma tira horizontal de 1024x384 e integrada em assets/animations/heroes/bromnor/idle.png."
+}

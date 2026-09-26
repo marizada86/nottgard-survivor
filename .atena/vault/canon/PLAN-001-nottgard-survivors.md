@@ -47,7 +47,7 @@ Fonte: `games/godot/nottcard/data/core/*.json`, `core/*.gd`, vault. **Lore/fatos
 
 ## 4. Personagens
 
-Jogáveis iniciais (atributos do Nottcard): **Durvall** (FOR16 INT14), **Brook França** (CON16 CAR14, paladino), **Maelor** (CON16, devoto de Sendrinah, cura/localizar), **Sylas Malafaia** (INT16, devoto de Mask, controle/enfraquecer), **Kayron** (CAR14, aasimar, Poder Místico/radiante).
+Jogáveis iniciais (atributos do Nottcard): **Durvall** (FOR16 INT14), **Brook França** (anão, CON16 CAR14, paladino), **Maelor** (CON16, devoto de Sendrinah, cura/localizar), **Sylas Malafaia** (INT16, devoto de Mask, controle/enfraquecer), **Kayron** (CAR14, aasimar, Poder Místico/radiante).
 Desbloqueáveis por conquista: **Korrak** (Machado de Xar'gath), **Leoric** (Modo de Constelação), e depois NPCs de apoio como "heróis alternativos" (ex.: Nyrelia, Zynara, Bromnor) — a definir com o dono.
 Cada herói tem: arma inicial, 1 habilidade de classe (as `class_ability` das cartas existentes), stats base, passiva.
 
@@ -157,3 +157,12 @@ O dono aprovou a implementação integral das recomendações de game design reg
 7. itens únicos capazes de alterar comportamento, usando eventos limitados e sem recursão.
 
 Implementação verificada em 2026-09-22 pelos testes automatizados, smoke das oito fases e bot determinístico. Evidência: `EVID-007-mecanicas-game-design.md`.
+
+## 16. Regra global de geração de animações direcionais (2026-09-24)
+
+Para cada novo herói, a produção de imagem deve criar somente cinco folhas de movimento: `move_n`, `move_ne`, `move_e`, `move_se` e `move_s`.
+O runtime mantém as oito direções lógicas e obtém `move_nw` espelhando `move_ne`, `move_w` espelhando `move_e` e `move_sw` espelhando `move_se` horizontalmente.
+`idle`, `attack`, `active` e `death` continuam folhas próprias: cada herói novo requer portanto nove sequências-fonte, não doze.
+
+Folhas inversas já existentes são legadas válidas e não devem ser apagadas, mas não são requisito de geração nem são carregadas pelo runtime.
+Não se espelha norte/sul; nem se aplica a regra a ataque, habilidade, morte ou idle.

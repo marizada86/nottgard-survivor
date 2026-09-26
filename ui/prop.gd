@@ -3,7 +3,7 @@ extends Node2D
 ## Objeto de cenário que bloqueia movimento (grupo "blockers"). A posição do nó é em pixels de tela;
 ## o chão é derivado por Iso.to_ground(position). Mova/duplique no editor à vontade.
 
-@export_enum("pilar", "cogumelo", "bolha", "rocha", "torii", "cristal", "cachoeira", "pilar_abissal") var kind := "pilar": set = _set_kind
+@export_enum("pilar", "cogumelo", "bolha", "rocha", "torii", "cristal", "cachoeira", "pilar_abissal", "braseiro", "caixote", "velas", "livros", "barril", "rede", "ossos", "doca", "carga", "margem") var kind := "pilar": set = _set_kind
 @export var height := 60.0: set = _set_height
 @export var half_width := 22.0: set = _set_hw
 @export var block_radius := 0.4   ## raio de colisão em tiles

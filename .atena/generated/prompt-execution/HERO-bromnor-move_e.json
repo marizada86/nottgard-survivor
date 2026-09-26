@@ -1,0 +1,48 @@
+﻿{
+    "id":  "HERO-bromnor-move_e",
+    "batch_id":  "BATCH-bromnor-movement-02",
+    "state":  "integrated",
+    "general_instructions":  {
+                                 "document":  "ART-PROMPTS-001-direcao-e-piloto.md",
+                                 "read_at":  "2026-09-25T21:01:49-03:00"
+                             },
+    "specific_prompt":  {
+                            "document":  "ART-PROMPTS-016-animacoes-dos-herois.md",
+                            "read_at":  "2026-09-25T21:01:49-03:00"
+                        },
+    "manifest":  {
+                     "document":  "HERO-ANIMATION-PROMPT-MANIFEST-001.json",
+                     "checked_at":  "2026-09-25T21:01:49-03:00"
+                 },
+    "sources_checked":  [
+                            "data/heroes.json",
+                            "data/weapons.json",
+                            "data/abilities.json",
+                            "PLAN-007-geracao-controlada-das-animacoes-de-bromnor-2026-09-25.md"
+                        ],
+    "references":  [
+                       ".atena/evidence/reference-staging/bromnor.png",
+                       "assets/portraits/bromnor.png",
+                       "assets/heroes/bromnor.png",
+                       "assets/animations/heroes/bromnor/idle.png"
+                   ],
+    "remote_transfer_approval":  "Aprovada pelo usuario em 2026-09-25 para o lote de movimento.",
+    "conflict_resolution":  "Orelhas curtas e arredondadas de anao prevalecem sobre a referencia conflitante.",
+    "candidate":  {
+                      "path":  ".atena/generated/asset-candidates/animations/heroes/bromnor/move_e_v01.png",
+                      "version":  "v01",
+                      "generated_at":  "2026-09-25T21:09:00-03:00"
+                  },
+    "qa":  {
+               "identity":  null,
+               "direction":  null,
+               "frames":  null,
+               "baseline":  null,
+               "alpha":  null,
+               "camera":  null,
+               "lighting":  null,
+               "artifacts":  null
+           },
+    "decision":  "accepted",
+    "reason":  "Aprovada pelo usuario; normalizada com interpolacao nearest-neighbor para uma tira horizontal de 1536x384 e integrada."
+}

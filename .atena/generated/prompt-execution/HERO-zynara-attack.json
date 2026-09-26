@@ -1,0 +1,10 @@
+{
+  "id": "HERO-zynara-attack", "batch_id": "BATCH-zynara-core-03", "state": "accepted",
+  "general_instructions": {"document": "ART-PROMPTS-001-direcao-e-piloto.md", "read_at": "2026-09-25T21:14:09-03:00"},
+  "specific_prompt": {"document": "ART-PROMPTS-016-animacoes-dos-herois.md", "read_at": "2026-09-25T21:14:09-03:00"},
+  "manifest": {"document": "HERO-ANIMATION-PROMPT-MANIFEST-001.json", "checked_at": "2026-09-25T21:14:09-03:00"},
+  "sources_checked": ["data/heroes.json", "data/weapons.json", "data/abilities.json"], "references": [], "remote_transfer_approval": "Plano aprovado pelo usuario em 2026-09-25; nenhuma referencia local enviada.",
+  "conflict_resolution": "O usuario aprovou manter o prompt atual: ampulheta prateada emite Marca da Retidao como traco prateado curto.",
+  "candidate": {"path": ".atena/generated/asset-candidates/animations/heroes/zynara/attack_v02_normalized.png", "version": "v02-normalized", "generated_at": "2026-09-25T21:30:00-03:00"},
+  "qa": {"identity": true, "direction": true, "frames": true, "baseline": true, "alpha": true, "camera": true, "lighting": true, "artifacts": true}, "decision": "accepted", "reason": "Aprovada pelo usuario e integrada como assets/animations/heroes/zynara/attack.png; dimensao e runtime validados."
+}

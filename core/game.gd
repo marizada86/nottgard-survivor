@@ -10,6 +10,7 @@ var qa_sandbox := false
 var qa_session_id := ""
 var qa_launch: Dictionary = {}
 var qa_menu_tab := 0
+var qa_error := ""
 var _real_save_signature: Dictionary = {}
 var run_hero := "durvall"
 var run_stage := "dagruve"
@@ -60,21 +61,34 @@ func save() -> void:
 func real_save_signature() -> Dictionary:
 	if not FileAccess.file_exists(SAVE_PATH):
 		return {"exists": false, "hash": ""}
-	return {"exists": true, "hash": FileAccess.get_file_as_bytes(SAVE_PATH).sha256_text()}
+	var file := FileAccess.open(SAVE_PATH, FileAccess.READ)
+	if file == null:
+		return {"exists": false, "hash": ""}
+	return {"exists": true, "hash": file.get_as_text().sha256_text()}
+
+static func qa_sandbox_directory(session_id: String) -> String:
+	return "user://qa-sandbox/%s" % session_id
+
+static func qa_sandbox_global_directory(session_id: String) -> String:
+	return ProjectSettings.globalize_path(qa_sandbox_directory(session_id))
 
 func begin_qa_sandbox(session_id: String) -> bool:
+	qa_error = ""
 	if not Version.qa_enabled():
+		qa_error = "O Navegador QA so esta disponivel no perfil QA Interno."
 		return false
 	if qa_sandbox:
 		return true
 	_real_save_signature = real_save_signature()
 	qa_sandbox = true
 	qa_session_id = session_id
-	_save_path = "user://qa-sandbox/%s/profile.json" % session_id
-	if DirAccess.make_dir_recursive_absolute("user://qa-sandbox/%s" % session_id) != OK:
+	var sandbox_dir := qa_sandbox_directory(session_id)
+	_save_path = "%s/profile.json" % sandbox_dir
+	if DirAccess.make_dir_recursive_absolute(qa_sandbox_global_directory(session_id)) != OK:
 		qa_sandbox = false
 		qa_session_id = ""
 		_save_path = SAVE_PATH
+		qa_error = "Nao foi possivel preparar o sandbox QA. Verifique o acesso a pasta de dados do jogo."
 		return false
 	var copied: Variant = JSON.parse_string(JSON.stringify(profile.data))
 	profile = Profile.new(copied if copied is Dictionary else {})
@@ -92,17 +106,22 @@ func end_qa_sandbox() -> bool:
 	load_profile()
 	return unchanged
 
-func start_qa_run(request: Dictionary) -> void:
+func start_qa_run(request: Dictionary) -> bool:
 	if not Version.qa_enabled():
-		return
+		qa_error = "O Navegador QA so esta disponivel no perfil QA Interno."
+		return false
 	var session := "qa-%s" % Time.get_datetime_string_from_system().replace(":", "").replace("-", "").replace(" ", "-")
 	if not begin_qa_sandbox(session):
-		return
+		return false
 	qa_launch = request.duplicate(true)
 	run_hero = String(request.get("hero_id", "durvall"))
 	run_stage = String(request.get("stage_id", "dagruve"))
 	logline("QA: %s em %s" % [String(request.get("target_state", "running")), run_stage])
-	get_tree().change_scene_to_file("res://ui/run.tscn")
+	if get_tree().change_scene_to_file("res://ui/run.tscn") != OK:
+		qa_error = "Nao foi possivel abrir a run QA."
+		end_qa_sandbox()
+		return false
+	return true
 
 func apply_settings() -> void:
 	var s: Dictionary = profile.data.settings

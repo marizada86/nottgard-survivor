@@ -1,0 +1,16 @@
+{
+  "id": "HERO-bromnor-active",
+  "batch_id": "BATCH-bromnor-actions-03",
+  "state": "integrated",
+  "general_instructions": {"document": "ART-PROMPTS-001-direcao-e-piloto.md", "read_at": "2026-09-25T22:02:22-03:00"},
+  "specific_prompt": {"document": "ART-PROMPTS-016-animacoes-dos-herois.md", "read_at": "2026-09-25T22:02:22-03:00"},
+  "manifest": {"document": "HERO-ANIMATION-PROMPT-MANIFEST-001.json", "checked_at": "2026-09-25T22:02:22-03:00"},
+  "sources_checked": ["data/heroes.json", "data/weapons.json", "data/abilities.json", "PLAN-007-geracao-controlada-das-animacoes-de-bromnor-2026-09-25.md"],
+  "references": ["assets/portraits/bromnor.png", "assets/heroes/bromnor.png", "assets/animations/heroes/bromnor/idle.png", "assets/animations/heroes/bromnor/move_s.png"],
+  "remote_transfer_approval": "Aprovada pelo usuario em 2026-09-25 para o lote de acoes de Bromnor.",
+  "conflict_resolution": "Orelhas curtas e arredondadas de anao prevalecem sobre a referencia conflitante.",
+  "candidate": {"path": ".atena/generated/asset-candidates/animations/heroes/bromnor/active_v02.png", "version": "v02", "generated_at": "2026-09-25T22:02:22-03:00"},
+  "qa": {"identity": "pending human batch review", "direction": "not applicable to active", "frames": "6 visible frames in 3x2 high-resolution source sheet", "baseline": "pending human batch review", "alpha": "pass: corner alpha is zero", "camera": "three-quarter isometric", "lighting": "low contained gold-silver radial shockwave", "artifacts": "v01 rejected for debris and vertical beams; v02 removes both"},
+  "decision": "accepted",
+  "reason": "Aprovada pelo usuario; normalizada com interpolacao nearest-neighbor para uma tira horizontal de 1536x384 e integrada."
+}

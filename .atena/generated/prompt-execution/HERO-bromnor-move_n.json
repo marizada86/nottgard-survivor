@@ -1,0 +1,48 @@
+﻿{
+    "id":  "HERO-bromnor-move_n",
+    "batch_id":  "BATCH-bromnor-movement-02",
+    "state":  "integrated",
+    "general_instructions":  {
+                                 "document":  "ART-PROMPTS-001-direcao-e-piloto.md",
+                                 "read_at":  "2026-09-25T21:01:49-03:00"
+                             },
+    "specific_prompt":  {
+                            "document":  "ART-PROMPTS-016-animacoes-dos-herois.md",
+                            "read_at":  "2026-09-25T21:01:49-03:00"
+                        },
+    "manifest":  {
+                     "document":  "HERO-ANIMATION-PROMPT-MANIFEST-001.json",
+                     "checked_at":  "2026-09-25T21:01:49-03:00"
+                 },
+    "sources_checked":  [
+                            "data/heroes.json",
+                            "data/weapons.json",
+                            "data/abilities.json",
+                            "PLAN-007-geracao-controlada-das-animacoes-de-bromnor-2026-09-25.md"
+                        ],
+    "references":  [
+                       ".atena/evidence/reference-staging/bromnor.png",
+                       "assets/portraits/bromnor.png",
+                       "assets/heroes/bromnor.png",
+                       "assets/animations/heroes/bromnor/idle.png"
+                   ],
+    "remote_transfer_approval":  "Aprovada pelo usuario em 2026-09-25 para o lote de movimento.",
+    "conflict_resolution":  "Orelhas curtas e arredondadas de anao prevalecem sobre a referencia conflitante.",
+    "candidate":  {
+                      "path":  ".atena/generated/asset-candidates/animations/heroes/bromnor/move_n_v02.png",
+                      "version":  "v02",
+                      "generated_at":  "2026-09-25T21:05:29-03:00"
+                  },
+    "qa":  {
+               "identity":  "pending human batch review",
+               "direction":  "pass: rear three-quarter view walking upward on screen",
+               "frames":  "6 visible frames in 3x2 high-resolution source sheet; requires approved 50% reduction",
+               "baseline":  "pending human batch review",
+               "alpha":  "pending technical alpha check",
+               "camera":  "pass: rear three-quarter isometric",
+               "lighting":  "pending human batch review",
+               "artifacts":  "no visible cell separators"
+           },
+    "decision":  "accepted",
+    "reason":  "Aprovada pelo usuario; normalizada com interpolacao nearest-neighbor para uma tira horizontal de 1536x384 e integrada. v01 foi rejeitada por direcao frontal; v02 corrige essa direcao."
+}

@@ -105,6 +105,9 @@ func speed_px() -> float:
 		f *= 0.6
 	return SPEED_PX * clampf(f, 0.4, 2.0)
 
+static func movement_input(left: bool, right: bool, up: bool, down: bool) -> Vector2:
+	return Vector2(int(right) - int(left), int(down) - int(up))
+
 func pickup_range() -> float:
 	return 1.4 + m("pickup") + attr_mod("carisma") * 0.1
 

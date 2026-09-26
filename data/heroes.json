@@ -2,7 +2,7 @@
   "durvall": {"name": "Durvall", "title": "Drow · Receptáculo", "attrs": {"forca": 16, "inteligencia": 14, "constituicao": 12, "carisma": 10}, "base_hp": 30, "prof": 2, "armor": {"ca": 3, "cam": -1},
     "weapon": "espada_sombria", "unlock": "start", "color": [60, 60, 80], "hair": [230, 230, 240],
     "passive": {"name": "Armadura Negra", "desc": "+15% de dano abaixo de 50% de PV.", "mods": {"low_hp_dmg": 0.15}}},
-  "brook": {"name": "Brook França", "title": "Paladino de Lliira", "attrs": {"forca": 12, "inteligencia": 10, "constituicao": 16, "carisma": 14}, "base_hp": 34, "prof": 2, "armor": {"ca": 5, "cam": -3},
+  "brook": {"name": "Brook França", "title": "Anão · Paladino de Lliira", "attrs": {"forca": 12, "inteligencia": 10, "constituicao": 16, "carisma": 14}, "base_hp": 34, "prof": 2, "armor": {"ca": 5, "cam": -3},
     "weapon": "sentenca_de_lliira", "unlock": "start", "color": [180, 170, 90], "hair": [90, 60, 40],
     "passive": {"name": "Guarda", "desc": "-1 de dano recebido.", "mods": {"dr": 1}}},
   "maelor": {"name": "Maelor", "title": "Devoto de Sendrinah", "attrs": {"forca": 10, "inteligencia": 13, "constituicao": 16, "carisma": 12}, "base_hp": 30, "prof": 2, "armor": {"ca": 0, "cam": 2},

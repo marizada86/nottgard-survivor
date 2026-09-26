@@ -5,6 +5,12 @@ extends Node2D
 const CELL := Vector2i(256, 384)
 const DISPLAY_HEIGHT := 72.0
 const WALK_DIRECTIONS := [&"e", &"se", &"s", &"sw", &"w", &"nw", &"n", &"ne"]
+const WALK_SOURCE_DIRECTIONS := [&"e", &"se", &"s", &"n", &"ne"]
+const MIRRORED_WALK_ANIMATIONS := {
+	&"move_w": &"move_e",
+	&"move_nw": &"move_ne",
+	&"move_sw": &"move_se",
+}
 
 @export var hero_id := "durvall": set = _set_hero_id
 @export var body_color := Color(0.55, 0.15, 0.15): set = _set_body
@@ -55,16 +61,19 @@ func _build_animations() -> void:
 	_has_animation = false
 	_has_animation = SpriteStripFrames.add_strip(frames, &"idle", "%s/idle.png" % root, CELL, 4, 8.0, true) or _has_animation
 	_has_animation = SpriteStripFrames.add_strip(frames, &"move", "%s/move.png" % root, CELL, 6, 10.0, true) or _has_animation
-	for direction in WALK_DIRECTIONS:
+	for direction in WALK_SOURCE_DIRECTIONS:
 		var animation: StringName = StringName("move_%s" % direction)
 		_has_animation = SpriteStripFrames.add_strip(frames, animation, "%s/%s.png" % [root, animation], CELL, 6, 10.0, true) or _has_animation
 	_has_animation = SpriteStripFrames.add_strip(frames, &"attack", "%s/attack.png" % root, CELL, 4, 12.0, false) or _has_animation
 	_has_animation = SpriteStripFrames.add_strip(frames, &"active", "%s/active.png" % root, CELL, 6, 12.0, false) or _has_animation
 	_has_animation = SpriteStripFrames.add_strip(frames, &"death", "%s/death.png" % root, CELL, 6, 9.0, false) or _has_animation
+	# Uma folha isolada nao deve ocultar o retrato estatico do heroi.
+	_has_animation = frames.has_animation(&"idle")
 	sprite.sprite_frames = frames
 	sprite.visible = _has_animation
 	sprite.offset = Vector2(0, -CELL.y * 0.5)
 	sprite.scale = Vector2.ONE * (DISPLAY_HEIGHT / CELL.y)
+	sprite.flip_h = false
 	if _has_animation and frames.has_animation(&"idle"):
 		sprite.play(&"idle")
 
@@ -79,7 +88,11 @@ func sync_visual(screen_position: Vector2, is_dead: bool, is_flash: bool) -> voi
 			_action_locked = true
 			sprite.play(&"death")
 		elif not dead and not _action_locked:
-			var desired: StringName = _walk_animation(screen_position - _last_screen_position) if moving else &"idle"
+			var desired: StringName = &"idle"
+			if moving:
+				var movement_delta := screen_position - _last_screen_position
+				desired = _walk_animation(movement_delta)
+				sprite.flip_h = walk_flips_horizontally(movement_delta)
 			if sprite.animation != desired:
 				sprite.play(desired)
 	_last_screen_position = screen_position
@@ -97,8 +110,15 @@ func _on_animation_finished() -> void:
 	_action_locked = false
 
 func _walk_animation(delta: Vector2) -> StringName:
-	var animation := directional_walk_animation(delta)
+	var animation := walk_animation_for_direction(delta)
 	return animation if sprite.sprite_frames.has_animation(animation) else &"move"
+
+static func walk_animation_for_direction(delta: Vector2) -> StringName:
+	var animation := directional_walk_animation(delta)
+	return MIRRORED_WALK_ANIMATIONS.get(animation, animation)
+
+static func walk_flips_horizontally(delta: Vector2) -> bool:
+	return MIRRORED_WALK_ANIMATIONS.has(directional_walk_animation(delta))
 
 static func directional_walk_animation(delta: Vector2) -> StringName:
 	if delta.length_squared() <= 0.04:

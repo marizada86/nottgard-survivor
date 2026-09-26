@@ -1,10 +1,10 @@
 {
     "schema_version":  1,
     "project":  "Nottgard Survivors",
-    "generated_at":  "2026-09-22",
-    "specification":  "SPEC-015-producao-total-de-assets-visuais",
-    "expected_png_files":  236,
-    "expected_imagegen_calls":  228,
+    "generated_at":  "2026-09-24",
+    "specification":  "SPEC-015-producao-total-de-assets-visuais; SPEC-022-props-de-dagruve-braseiros; SPEC-023-props-de-dagruve-caixotes; SPEC-024-props-de-dagruve-velas; SPEC-025-props-de-dagruve-livros; SPEC-026-props-de-dagruve-barris; SPEC-027-props-de-dagruve-redes; SPEC-028-props-de-dagruve-ossos; SPEC-029-props-de-dagruve-estrutura-de-doca; SPEC-030-props-de-dagruve-carga",
+    "expected_png_files":  266,
+    "expected_imagegen_calls":  258,
     "entries":  [
                     {
                         "asset_id":  "talisma",
@@ -4373,6 +4373,558 @@
                         "qa_notes":  [
                                          "processed 480x320; fit=Cover; alpha=False"
                                      ]
+                    },
+                    {
+                        "asset_id":  "braseiro_01",
+                        "family":  "props",
+                        "generation_mode":  "imagegen",
+                        "final_path":  "assets/props/braseiro_01.png",
+                        "candidate_path":  ".atena/generated/asset-candidates/props/dagruve/braseiro_01_v01.png",
+                        "prompt_id":  "ASSET-GEN-022-DAGRUVE-BRAZIERS",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "references":  [
+                                           "D:/dev/nottgard/games/IA/nottcard-ai/assets/world/props/braseiro.png",
+                                           "assets/props/pilar_01.png",
+                                           "assets/props/cristal_01.png"
+                                       ],
+                        "status":  "integrated",
+                        "selected_version":  "v01",
+                        "sha256":  "3d5d8bcb19caedde2dd441bcc251c556d59bf0c68c7b246272f09fe272da5bf2",
+                        "qa_notes":  [
+                                         "original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0"
+                                     ]
+                    },
+                    {
+                        "asset_id":  "braseiro_02",
+                        "family":  "props",
+                        "generation_mode":  "imagegen",
+                        "final_path":  "assets/props/braseiro_02.png",
+                        "candidate_path":  ".atena/generated/asset-candidates/props/dagruve/braseiro_02_v01.png",
+                        "prompt_id":  "ASSET-GEN-022-DAGRUVE-BRAZIERS",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "references":  [
+                                           "D:/dev/nottgard/games/IA/nottcard-ai/assets/world/props/braseiro.png",
+                                           "assets/props/pilar_01.png",
+                                           "assets/props/cristal_01.png"
+                                       ],
+                        "status":  "integrated",
+                        "selected_version":  "v01",
+                        "sha256":  "c2f71488085855bfcb2a68d54d3d27ebcd4d4a45c58a50c90f4206be771824fa",
+                        "qa_notes":  [
+                                         "original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0"
+                                     ]
+                    },
+                    {
+                        "asset_id":  "braseiro_03",
+                        "family":  "props",
+                        "generation_mode":  "imagegen",
+                        "final_path":  "assets/props/braseiro_03.png",
+                        "candidate_path":  ".atena/generated/asset-candidates/props/dagruve/braseiro_03_v01.png",
+                        "prompt_id":  "ASSET-GEN-022-DAGRUVE-BRAZIERS",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "references":  [
+                                           "D:/dev/nottgard/games/IA/nottcard-ai/assets/world/props/braseiro.png",
+                                           "assets/props/pilar_01.png",
+                                           "assets/props/cristal_01.png"
+                                       ],
+                        "status":  "integrated",
+                        "selected_version":  "v01",
+                        "sha256":  "8bdaf8ae9e904cd502736ad37b50f4c034537cc17f34b43814657e54abbe77f8",
+                        "qa_notes":  [
+                                         "original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0"
+                                     ]
+                    },
+                    {
+                        "asset_id":  "caixote_01",
+                        "family":  "props",
+                        "generation_mode":  "imagegen",
+                        "final_path":  "assets/props/caixote_01.png",
+                        "candidate_path":  ".atena/generated/asset-candidates/props/dagruve/caixote_01_v01.png",
+                        "prompt_id":  "ASSET-GEN-023-DAGRUVE-CRATES",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "references":  [
+                                           "D:/dev/nottgard/games/IA/nottcard-ai/assets/world/props/caixote.png",
+                                           "assets/props/pilar_01.png"
+                                       ],
+                        "status":  "integrated",
+                        "selected_version":  "v01",
+                        "sha256":  "de5d989a62090498bb626b12b3698406e3993b15859805227bd87958568310a4",
+                        "qa_notes":  [
+                                         "original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0"
+                                     ]
+                    },
+                    {
+                        "asset_id":  "caixote_02",
+                        "family":  "props",
+                        "generation_mode":  "imagegen",
+                        "final_path":  "assets/props/caixote_02.png",
+                        "candidate_path":  ".atena/generated/asset-candidates/props/dagruve/caixote_02_v01.png",
+                        "prompt_id":  "ASSET-GEN-023-DAGRUVE-CRATES",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "references":  [
+                                           "D:/dev/nottgard/games/IA/nottcard-ai/assets/world/props/caixote.png",
+                                           "assets/props/pilar_01.png"
+                                       ],
+                        "status":  "integrated",
+                        "selected_version":  "v01",
+                        "sha256":  "94e44064fde562031fa2eb2c73bca58a554d355ae72e47c1d69398a466a75a41",
+                        "qa_notes":  [
+                                         "original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0"
+                                     ]
+                    },
+                    {
+                        "asset_id":  "caixote_03",
+                        "family":  "props",
+                        "generation_mode":  "imagegen",
+                        "final_path":  "assets/props/caixote_03.png",
+                        "candidate_path":  ".atena/generated/asset-candidates/props/dagruve/caixote_03_v01.png",
+                        "prompt_id":  "ASSET-GEN-023-DAGRUVE-CRATES",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "references":  [
+                                           "D:/dev/nottgard/games/IA/nottcard-ai/assets/world/props/caixote.png",
+                                           "assets/props/pilar_01.png"
+                                       ],
+                        "status":  "integrated",
+                        "selected_version":  "v01",
+                        "sha256":  "4fa4c4ca0886d5ad1ccf1d6f42e1861c0ae49fa6745936177fbac5d835ea89fc",
+                        "qa_notes":  [
+                                         "original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0"
+                                     ]
+                    },
+                    {
+                        "asset_id":  "velas_01",
+                        "family":  "props",
+                        "generation_mode":  "imagegen",
+                        "final_path":  "assets/props/velas_01.png",
+                        "candidate_path":  ".atena/generated/asset-candidates/props/dagruve/velas_01_v01.png",
+                        "prompt_id":  "ASSET-GEN-024-DAGRUVE-CANDLES",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "references":  [
+                                           "D:/dev/nottgard/games/IA/nottcard-ai/assets/world/props/vela.png",
+                                           "assets/props/pilar_01.png"
+                                       ],
+                        "status":  "integrated",
+                        "selected_version":  "v01",
+                        "sha256":  "97ad156c84231b200a175bfad15a9e9232fc561aad3962a58a81f0bbc1212555",
+                        "qa_notes":  [
+                                         "original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0; no symbols"
+                                     ]
+                    },
+                    {
+                        "asset_id":  "velas_02",
+                        "family":  "props",
+                        "generation_mode":  "imagegen",
+                        "final_path":  "assets/props/velas_02.png",
+                        "candidate_path":  ".atena/generated/asset-candidates/props/dagruve/velas_02_v01.png",
+                        "prompt_id":  "ASSET-GEN-024-DAGRUVE-CANDLES",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "references":  [
+                                           "D:/dev/nottgard/games/IA/nottcard-ai/assets/world/props/vela.png",
+                                           "assets/props/caixote_02.png"
+                                       ],
+                        "status":  "integrated",
+                        "selected_version":  "v01",
+                        "sha256":  "d5b8f2e432f449bc9402521ce64d1f0595cdc4c39c973284eb08651134d0433a",
+                        "qa_notes":  [
+                                         "original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0; no symbols"
+                                     ]
+                    },
+                    {
+                        "asset_id":  "velas_03",
+                        "family":  "props",
+                        "generation_mode":  "imagegen",
+                        "final_path":  "assets/props/velas_03.png",
+                        "candidate_path":  ".atena/generated/asset-candidates/props/dagruve/velas_03_v01.png",
+                        "prompt_id":  "ASSET-GEN-024-DAGRUVE-CANDLES",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "references":  [
+                                           "D:/dev/nottgard/games/IA/nottcard-ai/assets/world/props/vela.png",
+                                           "assets/props/caixote_01.png"
+                                       ],
+                        "status":  "integrated",
+                        "selected_version":  "v01",
+                        "sha256":  "795b8576bb42dc2d3fe7d936584738465bb2e2db2e3a8fd0ab7b66916c198851",
+                        "qa_notes":  [
+                                         "original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0; no symbols"
+                                     ]
+                    },
+                    {
+                        "asset_id":  "livros_01",
+                        "family":  "props",
+                        "generation_mode":  "imagegen",
+                        "final_path":  "assets/props/livros_01.png",
+                        "candidate_path":  ".atena/generated/asset-candidates/props/dagruve/livros_01_v01.png",
+                        "prompt_id":  "ASSET-GEN-025-DAGRUVE-BOOKS",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "references":  [
+                                           "D:/dev/nottgard/games/IA/nottcard-ai/assets/world/props/livros.png",
+                                           "assets/props/caixote_01.png"
+                                       ],
+                        "status":  "integrated",
+                        "selected_version":  "v01",
+                        "sha256":  "b87237fa1fbe9f55b2ec50028c5823cb8fd63866030fd326af1de2a1ab6bebe8",
+                        "qa_notes":  [
+                                         "original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0; no legible content"
+                                     ]
+                    },
+                    {
+                        "asset_id":  "livros_02",
+                        "family":  "props",
+                        "generation_mode":  "imagegen",
+                        "final_path":  "assets/props/livros_02.png",
+                        "candidate_path":  ".atena/generated/asset-candidates/props/dagruve/livros_02_v01.png",
+                        "prompt_id":  "ASSET-GEN-025-DAGRUVE-BOOKS",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "references":  [
+                                           "D:/dev/nottgard/games/IA/nottcard-ai/assets/world/props/livros.png",
+                                           "assets/props/velas_02.png"
+                                       ],
+                        "status":  "integrated",
+                        "selected_version":  "v01",
+                        "sha256":  "a0776787fdf66c0eff519ee778f9df2771b322ea6b9a1be7c837b7e87c97f3e3",
+                        "qa_notes":  [
+                                         "original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0; no legible content"
+                                     ]
+                    },
+                    {
+                        "asset_id":  "livros_03",
+                        "family":  "props",
+                        "generation_mode":  "imagegen",
+                        "final_path":  "assets/props/livros_03.png",
+                        "candidate_path":  ".atena/generated/asset-candidates/props/dagruve/livros_03_v01.png",
+                        "prompt_id":  "ASSET-GEN-025-DAGRUVE-BOOKS",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "references":  [
+                                           "D:/dev/nottgard/games/IA/nottcard-ai/assets/world/props/livros.png",
+                                           "assets/props/caixote_03.png"
+                                       ],
+                        "status":  "integrated",
+                        "selected_version":  "v01",
+                        "sha256":  "318654070ff1fd02a13bf61fc23aada4836df4ddefba8656823c44f0df26ca4e",
+                        "qa_notes":  [
+                                         "original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0; no legible content"
+                                     ]
+                    },
+                    {
+                        "asset_id":  "barril_01",
+                        "family":  "props",
+                        "generation_mode":  "imagegen",
+                        "final_path":  "assets/props/barril_01.png",
+                        "candidate_path":  ".atena/generated/asset-candidates/props/dagruve/barril_01_v01.png",
+                        "prompt_id":  "ASSET-GEN-026-DAGRUVE-BARRELS",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "references":  [
+                                           "D:/dev/nottgard/games/IA/nottcard-ai/assets/world/props/barril.png",
+                                           "assets/props/caixote_01.png"
+                                       ],
+                        "status":  "integrated",
+                        "selected_version":  "v01",
+                        "sha256":  "5625804a3339c6b9fdb6a85cae77e302c20dab05ddfe958c64d70f52d3adf1c9",
+                        "qa_notes":  [
+                                         "original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0; no symbols"
+                                     ]
+                    },
+                    {
+                        "asset_id":  "barril_02",
+                        "family":  "props",
+                        "generation_mode":  "imagegen",
+                        "final_path":  "assets/props/barril_02.png",
+                        "candidate_path":  ".atena/generated/asset-candidates/props/dagruve/barril_02_v01.png",
+                        "prompt_id":  "ASSET-GEN-026-DAGRUVE-BARRELS",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "references":  [
+                                           "D:/dev/nottgard/games/IA/nottcard-ai/assets/world/props/barril.png",
+                                           "assets/props/caixote_02.png"
+                                       ],
+                        "status":  "integrated",
+                        "selected_version":  "v01",
+                        "sha256":  "363ff9dac3a43f4bbcb946908633a2d7d545a7e87b31ebd2768ac9095939abb9",
+                        "qa_notes":  [
+                                         "original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0; no symbols"
+                                     ]
+                    },
+                    {
+                        "asset_id":  "barril_03",
+                        "family":  "props",
+                        "generation_mode":  "imagegen",
+                        "final_path":  "assets/props/barril_03.png",
+                        "candidate_path":  ".atena/generated/asset-candidates/props/dagruve/barril_03_v01.png",
+                        "prompt_id":  "ASSET-GEN-026-DAGRUVE-BARRELS",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "references":  [
+                                           "D:/dev/nottgard/games/IA/nottcard-ai/assets/world/props/barril.png",
+                                           "assets/props/caixote_03.png"
+                                       ],
+                        "status":  "integrated",
+                        "selected_version":  "v01",
+                        "sha256":  "5ed65e5b9fa57a0dccdbf541c7811b88952dcaf4f04f8856cda8610294d8e7d6",
+                        "qa_notes":  [
+                                         "original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0; no symbols"
+                                     ]
+                    },
+                    {
+                        "asset_id":  "rede_01",
+                        "family":  "props",
+                        "generation_mode":  "imagegen",
+                        "final_path":  "assets/props/rede_01.png",
+                        "candidate_path":  ".atena/generated/asset-candidates/props/dagruve/rede_01_v01.png",
+                        "prompt_id":  "ASSET-GEN-027-DAGRUVE-NETS",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "references":  [
+                                           "D:/dev/nottgard/games/IA/nottcard-ai/assets/world/props/rede.png",
+                                           "assets/props/barril_01.png"
+                                       ],
+                        "status":  "integrated",
+                        "selected_version":  "v01",
+                        "sha256":  "296dc4b4f20aacea07f71d2c22537013fc5bb03dfddc4f37a14b56526666e40b",
+                        "qa_notes":  [
+                                         "original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,1,0"
+                                     ]
+                    },
+                    {
+                        "asset_id":  "rede_02",
+                        "family":  "props",
+                        "generation_mode":  "imagegen",
+                        "final_path":  "assets/props/rede_02.png",
+                        "candidate_path":  ".atena/generated/asset-candidates/props/dagruve/rede_02_v01.png",
+                        "prompt_id":  "ASSET-GEN-027-DAGRUVE-NETS",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "references":  [
+                                           "D:/dev/nottgard/games/IA/nottcard-ai/assets/world/props/rede.png",
+                                           "assets/props/barril_02.png"
+                                       ],
+                        "status":  "integrated",
+                        "selected_version":  "v01",
+                        "sha256":  "5873136623164d5ed78c6926a19cbf6aa6ec73c1bfa039a163ce59fd12bc75d4",
+                        "qa_notes":  [
+                                         "original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0"
+                                     ]
+                    },
+                    {
+                        "asset_id":  "rede_03",
+                        "family":  "props",
+                        "generation_mode":  "imagegen",
+                        "final_path":  "assets/props/rede_03.png",
+                        "candidate_path":  ".atena/generated/asset-candidates/props/dagruve/rede_03_v01.png",
+                        "prompt_id":  "ASSET-GEN-027-DAGRUVE-NETS",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "references":  [
+                                           "D:/dev/nottgard/games/IA/nottcard-ai/assets/world/props/rede.png",
+                                           "assets/props/barril_03.png"
+                                       ],
+                        "status":  "integrated",
+                        "selected_version":  "v01",
+                        "sha256":  "96ad81b9d3b453dc952521e9702a2024f1e6f478c214d736b5f2d7924dbc208f",
+                        "qa_notes":  [
+                                         "original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0"
+                                     ]
+                    },
+                    {
+                        "asset_id":  "ossos_01",
+                        "family":  "props",
+                        "generation_mode":  "imagegen",
+                        "final_path":  "assets/props/ossos_01.png",
+                        "candidate_path":  ".atena/generated/asset-candidates/props/dagruve/ossos_01_v01.png",
+                        "prompt_id":  "ASSET-GEN-028-DAGRUVE-BONES",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "references":  [
+                                           "D:/dev/nottgard/games/IA/nottcard-ai/assets/world/props/ossos.png",
+                                           "assets/props/rede_01.png"
+                                       ],
+                        "status":  "integrated",
+                        "selected_version":  "v01",
+                        "sha256":  "d518ca7c348f674fc501cdbc28ae25df1032608ef4800cf4136287451a2b03c5",
+                        "qa_notes":  [
+                                         "original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0; no skull or species identification"
+                                     ]
+                    },
+                    {
+                        "asset_id":  "ossos_02",
+                        "family":  "props",
+                        "generation_mode":  "imagegen",
+                        "final_path":  "assets/props/ossos_02.png",
+                        "candidate_path":  ".atena/generated/asset-candidates/props/dagruve/ossos_02_v01.png",
+                        "prompt_id":  "ASSET-GEN-028-DAGRUVE-BONES",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "references":  [
+                                           "D:/dev/nottgard/games/IA/nottcard-ai/assets/world/props/ossos.png",
+                                           "assets/props/rede_02.png"
+                                       ],
+                        "status":  "integrated",
+                        "selected_version":  "v01",
+                        "sha256":  "15a933b8cd1f93d3faaf7497ffc341f5310becbae015f9bd9677296029d345e6",
+                        "qa_notes":  [
+                                         "original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0; no skull or species identification"
+                                     ]
+                    },
+                    {
+                        "asset_id":  "ossos_03",
+                        "family":  "props",
+                        "generation_mode":  "imagegen",
+                        "final_path":  "assets/props/ossos_03.png",
+                        "candidate_path":  ".atena/generated/asset-candidates/props/dagruve/ossos_03_v01.png",
+                        "prompt_id":  "ASSET-GEN-028-DAGRUVE-BONES",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "references":  [
+                                           "D:/dev/nottgard/games/IA/nottcard-ai/assets/world/props/ossos.png",
+                                           "assets/props/rede_03.png"
+                                       ],
+                        "status":  "integrated",
+                        "selected_version":  "v01",
+                        "sha256":  "f7f91d8a0553399d4c9cb42973bee3970a6282e823f4035d16958520fdced097",
+                        "qa_notes":  [
+                                         "original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0; no skull or species identification"
+                                     ]
+                    },
+                    {
+                        "asset_id":  "doca_01",
+                        "family":  "props",
+                        "generation_mode":  "imagegen",
+                        "final_path":  "assets/props/doca_01.png",
+                        "candidate_path":  ".atena/generated/asset-candidates/props/dagruve/doca_01_v01.png",
+                        "prompt_id":  "ASSET-GEN-029-DAGRUVE-DOCK-STRUCTURES",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "references":  [
+                                           "assets/props/rede_01.png",
+                                           "assets/props/barril_01.png"
+                                       ],
+                        "status":  "integrated",
+                        "selected_version":  "v01",
+                        "sha256":  "49f51e198d8da876a4fc1fee305e0ab0028f484aa0d7b0f7ab0bf108e041ad2b",
+                        "qa_notes":  [
+                                         "original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0; no markings"
+                                     ]
+                    },
+                    {
+                        "asset_id":  "doca_02",
+                        "family":  "props",
+                        "generation_mode":  "imagegen",
+                        "final_path":  "assets/props/doca_02.png",
+                        "candidate_path":  ".atena/generated/asset-candidates/props/dagruve/doca_02_v01.png",
+                        "prompt_id":  "ASSET-GEN-029-DAGRUVE-DOCK-STRUCTURES",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "references":  [
+                                           "assets/props/rede_02.png",
+                                           "assets/props/barril_02.png"
+                                       ],
+                        "status":  "integrated",
+                        "selected_version":  "v01",
+                        "sha256":  "4e06e773bf622d89b55a583c4ee9ea7dd5adfc59ff3e7bf0739c25d501e208d8",
+                        "qa_notes":  [
+                                         "original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0; no markings"
+                                     ]
+                    },
+                    {
+                        "asset_id":  "doca_03",
+                        "family":  "props",
+                        "generation_mode":  "imagegen",
+                        "final_path":  "assets/props/doca_03.png",
+                        "candidate_path":  ".atena/generated/asset-candidates/props/dagruve/doca_03_v01.png",
+                        "prompt_id":  "ASSET-GEN-029-DAGRUVE-DOCK-STRUCTURES",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "references":  [
+                                           "assets/props/rede_03.png",
+                                           "assets/props/barril_03.png"
+                                       ],
+                        "status":  "integrated",
+                        "selected_version":  "v01",
+                        "sha256":  "7dc9f75a2ba0f92fd4446a04d705eca69cc7a405ef16dac9d13711444d09e838",
+                        "qa_notes":  [
+                                         "original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0; no markings"
+                                     ]
+                    },
+                    {
+                        "asset_id":  "carga_01",
+                        "family":  "props",
+                        "generation_mode":  "imagegen",
+                        "final_path":  "assets/props/carga_01.png",
+                        "candidate_path":  ".atena/generated/asset-candidates/props/dagruve/carga_01_v01.png",
+                        "prompt_id":  "ASSET-GEN-030-DAGRUVE-CARGO",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "references":  [
+                                           "assets/props/doca_01.png",
+                                           "assets/props/caixote_01.png"
+                                       ],
+                        "status":  "integrated",
+                        "selected_version":  "v01",
+                        "sha256":  "0354f259d167105cd1ae3977cf0ba3e376748c8fee4835f7c4350dffef0ec761",
+                        "qa_notes":  [
+                                         "original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0; no labels or identifiable contents"
+                                     ]
+                    },
+                    {
+                        "asset_id":  "carga_02",
+                        "family":  "props",
+                        "generation_mode":  "imagegen",
+                        "final_path":  "assets/props/carga_02.png",
+                        "candidate_path":  ".atena/generated/asset-candidates/props/dagruve/carga_02_v01.png",
+                        "prompt_id":  "ASSET-GEN-030-DAGRUVE-CARGO",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "references":  [
+                                           "assets/props/doca_02.png",
+                                           "assets/props/caixote_02.png"
+                                       ],
+                        "status":  "integrated",
+                        "selected_version":  "v01",
+                        "sha256":  "944a86a3902f015e8cf95bf0ef0fc064fdd14fbb1ef28832d80b865746010515",
+                        "qa_notes":  [
+                                         "original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0; no labels or identifiable contents"
+                                     ]
+                    },
+                    {
+                        "asset_id":  "carga_03",
+                        "family":  "props",
+                        "generation_mode":  "imagegen",
+                        "final_path":  "assets/props/carga_03.png",
+                        "candidate_path":  ".atena/generated/asset-candidates/props/dagruve/carga_03_v01.png",
+                        "prompt_id":  "ASSET-GEN-030-DAGRUVE-CARGO",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "references":  [
+                                           "assets/props/doca_03.png",
+                                           "assets/props/caixote_03.png"
+                                       ],
+                        "status":  "integrated",
+                        "selected_version":  "v01",
+                        "sha256":  "dfb8bd97be01adcfea509ac8a4c34b289d8b836651dbe6e04150a6ee99b84ec3",
+                        "qa_notes":  [
+                                         "original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0; no labels or identifiable contents"
+                                     ]
+                    },
+                    {
+                        "asset_id": "margem_01", "family": "props", "generation_mode": "imagegen", "final_path": "assets/props/margem_01.png", "candidate_path": ".atena/generated/asset-candidates/props/dagruve/margem_01_v01.png", "prompt_id": "ASSET-GEN-031-DAGRUVE-SHORE", "dimensions": "256x256", "alpha": true, "references": ["assets/props/doca_01.png", "assets/props/rede_01.png"], "status": "integrated", "selected_version": "v01", "sha256": "4cd9432a3a7d8fd92d2016bc7a4dd1f318d8a4d2d529d8b3b5e7d52177c638fb", "qa_notes": ["original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0"]
+                    },
+                    {
+                        "asset_id": "margem_02", "family": "props", "generation_mode": "imagegen", "final_path": "assets/props/margem_02.png", "candidate_path": ".atena/generated/asset-candidates/props/dagruve/margem_02_v01.png", "prompt_id": "ASSET-GEN-031-DAGRUVE-SHORE", "dimensions": "256x256", "alpha": true, "references": ["assets/props/doca_02.png", "assets/props/rede_02.png"], "status": "integrated", "selected_version": "v01", "sha256": "18cb702b63ea37759ca893e3aef372ac67a03bfd1aa2fb9e0a8d10a43e582825", "qa_notes": ["original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0"]
+                    },
+                    {
+                        "asset_id": "margem_03", "family": "props", "generation_mode": "imagegen", "final_path": "assets/props/margem_03.png", "candidate_path": ".atena/generated/asset-candidates/props/dagruve/margem_03_v01.png", "prompt_id": "ASSET-GEN-031-DAGRUVE-SHORE", "dimensions": "256x256", "alpha": true, "references": ["assets/props/doca_03.png", "assets/props/rede_03.png"], "status": "integrated", "selected_version": "v01", "sha256": "3f7f11bbca9c09d927b9b8ee863430133434dbb39a77605440dae0307c2c7226", "qa_notes": ["original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0"]
                     }
                 ],
     "logical_reuse":  {

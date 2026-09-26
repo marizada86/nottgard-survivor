@@ -1,0 +1,23 @@
+{
+  "id": "HERO-brook-move_s",
+  "batch_id": "BATCH-brook-missing-sources-03",
+  "state": "generated",
+  "general_instructions": {"document": "ART-PROMPTS-001-direcao-e-piloto.md", "read_at": "2026-09-25T20:52:43-03:00"},
+  "specific_prompt": {"document": "ART-PROMPTS-016-animacoes-dos-herois.md", "read_at": "2026-09-25T20:52:43-03:00"},
+  "manifest": {"document": "HERO-ANIMATION-PROMPT-MANIFEST-001.json", "checked_at": "2026-09-25T20:52:43-03:00"},
+  "sources_checked": ["data/heroes.json", "data/weapons.json", "data/abilities.json"],
+  "references": [],
+  "remote_transfer_approval": "User instructed this corrective continuation in this conversation on 2026-09-25. No local reference was transmitted.",
+  "conflict_resolution": "v01 used approved legacy visual references but still inherited pointed ears and was rejected. v02 changes only that failure: it uses canonical text without local references and requires tiny rounded dwarf ears.",
+  "prior_candidate": {"path": ".atena/generated/animation-candidates/heroes/brook/move_s_v01.png", "version": "1", "decision": "qa_failed", "reason": "pointed ears"},
+  "candidate": {"path": ".atena/generated/animation-candidates/heroes/brook/move_s_v02.png", "version": "2", "generated_at": "2026-09-25T21:05:00-03:00"},
+  "qa": {"identity": true, "direction": true, "frames": true, "baseline": true, "alpha": true, "camera": true, "lighting": true, "artifacts": true},
+  "user_visual_approval": {"candidate": ".atena/generated/animation-candidates/heroes/brook/move_s_v02.png", "approved_at": "2026-09-25T21:10:00-03:00", "scope": "candidate, normalization and integration"},
+  "integration_approval": "User approved continuation from the visual candidate in this conversation on 2026-09-25.",
+  "normalized_candidate": ".atena/generated/animation-candidates/heroes/brook/move_s_v02_normalized.png",
+  "final_path": "assets/animations/heroes/brook/move_s.png",
+  "integrated_at": "2026-09-25T21:10:00-03:00",
+  "state": "integrated",
+  "decision": "integrated",
+  "reason": "User approved v02. It was normalized to 1536x384 and integrated after static size and transparent-corner validation; Godot runtime import remains unverified because the executable is unavailable."
+}

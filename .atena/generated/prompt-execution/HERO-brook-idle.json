@@ -1,0 +1,17 @@
+{
+  "id": "HERO-brook-idle",
+  "batch_id": "BATCH-brook-pilot-01",
+  "state": "accepted",
+  "general_instructions": {"document": "ART-PROMPTS-001-direcao-e-piloto.md", "read_at": "2026-09-23T20:44:40-03:00"},
+  "specific_prompt": {"document": "ART-PROMPTS-016-animacoes-dos-herois.md", "read_at": "2026-09-23T20:44:40-03:00"},
+  "manifest": {"document": "HERO-ANIMATION-PROMPT-MANIFEST-001.json", "checked_at": "2026-09-23T20:44:40-03:00"},
+  "sources_checked": ["data/heroes.json", "data/weapons.json", "data/abilities.json"],
+  "references": [{"path": "assets/portraits/brook.png", "role": "identity, beard and armor"}, {"path": "assets/heroes/brook.png", "role": "sprite silhouette and palette"}],
+  "remote_transfer_approval": "User approval in this conversation for BATCH-brook-pilot-01.",
+  "conflict_resolution": "Animation source uses a 2x2 grid as explicitly required by ART-PROMPTS-016; the no-grid rule in ART-PROMPTS-001 applies to static figures.",
+  "candidate": {"path": ".atena/generated/animation-candidates/heroes/brook/idle_v02_alpha_t06.png", "version": "2-alpha-t06", "generated_at": "2026-09-24T09:00:00-03:00"},
+  "qa": {"identity": true, "direction": true, "frames": true, "baseline": true, "alpha": true, "camera": true, "lighting": true, "artifacts": true},
+  "decision": "accepted",
+  "processing_note": "v02 was reprocessed locally with approved threshold 6 after threshold 14 damaged dark armor details. The 1024x1536 2x2 candidate passed isolated and normalized inspection, then produced assets/animations/heroes/brook/idle.png without replacing an existing file.",
+  "reason": "As três candidatas têm fundo opaco/gradiente e falham o requisito de alfa real. O limite de três tentativas foi atingido; asset bloqueado até uma decisão sobre processamento de remoção de fundo ou nova estratégia de geração."
+}

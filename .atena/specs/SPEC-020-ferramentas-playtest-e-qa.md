@@ -50,12 +50,16 @@ como **produção** e registra o diagnóstico apenas no log local. Os perfis sã
 | F7 | Sem ação do kit | Empacota o rascunho em ZIP | Igual ao público, incluindo cenário QA |
 | F11 | Alterna tela cheia e salva apenas a preferência normal | Igual | Igual |
 | F12 | Sem ação do kit | Abre/fecha console de diagnóstico somente leitura, com log higienizado | Abre/fecha Console QA: mesmo log e comandos permitidos, sem avaliação livre de código |
-| Ctrl+O, depois P | Sem ação | Sem ação | Abre o Navegador QA |
+| Ctrl+O+P | Sem ação | Sem ação | Abre o Navegador QA |
 
-O sequenciador de Ctrl+O, depois P terá janela de 1 segundo, exibirá uma dica
-visível em QA e não interceptará digitação enquanto um campo de texto estiver
-com foco. Nenhuma função QA será desbloqueada apenas por argumento de linha de
+O acorde simultâneo Ctrl+O+P exibirá uma dica visível em QA e não interceptará
+digitação enquanto um campo de texto estiver com foco. Nenhuma função QA será
+desbloqueada apenas por argumento de linha de
 comando, arquivo de save ou variável de ambiente.
+
+Execuções visíveis de depuração, incluindo o jogo iniciado pelo editor Godot,
+resolvem para QA Interno para permitir a validação local. Exports release sem
+feature continuam em Produção; processos headless não habilitam o kit.
 
 O console público não oferece execução, edição nem comandos de sistema. No QA,
 os comandos são uma lista curta e declarada (ajuda, copiar diagnóstico
@@ -128,9 +132,10 @@ por falta de espaço sem confirmação explícita da pessoa.
 
 ### 3. Navegador QA e sandbox de save
 
-O Navegador QA será uma sobreposição interna, aberta por Ctrl+O, P. Ele usa
-destinos declarados, não campos livres de caminho, cena ou serialização. A lista
-é preenchida a partir dos identificadores válidos de `data/*.json` e apresenta
+O Navegador QA será uma sobreposição interna, aberta por Ctrl+O+P. A ação
+`Abrir destino` usa somente estados de run declarados, não campos livres de
+caminho, cena ou serialização; `Abrir Quartel` continua separado. A lista é
+preenchida a partir dos identificadores válidos de `data/*.json` e apresenta
 nome legível, id técnico, seed e descrição do estado. Ele permite escolher:
 
 - **Quartel:** as abas Jogar, Melhorias, Conquistas, Códex e Opções;
@@ -227,7 +232,7 @@ que cada combinação selecionada por dados é válida ou devolve erro claro.
 
 1. Os três perfis de build resolvem de forma exclusiva e todos os atalhos da
    tabela obedecem ao perfil, incluindo F11 em produção e a ausência completa de
-   F5/F6/F7/F12/Ctrl+O,P fora dos perfis autorizados.
+   F5/F6/F7/F12/Ctrl+O+P fora dos perfis autorizados.
 2. No playtest público é possível criar nota, captura e ZIP; o ZIP contém o
    formato prometido, respeita os limites e não inclui save, usuário do sistema
    nem caminho absoluto de teste conhecido.
@@ -273,6 +278,10 @@ que cada combinação selecionada por dados é válida ou devolve erro claro.
 ## Evidência e reconciliação previstas
 
 Após aprovação e execução, registrar em `.atena/evidence/`:
+
+- `EVID-039-modal-atalhos-e-reconciliacao.md` registra o alinhamento do acorde
+  QA e a validação automatizada deste lote; a spec permanece em execução até a
+  validação integrada de ZIP, sandbox e cenários QA.
 
 - matriz de atalhos por perfil e resultado de cada teste;
 - inventário de um ZIP público e um ZIP QA, com inspeção de privacidade;

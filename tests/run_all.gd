@@ -2,6 +2,9 @@ extends SceneTree
 ## Runner mínimo: cada tests/test_*.gd expõe run() -> Array[String] de falhas.
 
 func _init() -> void:
+	call_deferred("_run")
+
+func _run() -> void:
 	var failures: Array = []
 	var dir := DirAccess.open("res://tests")
 	for f in dir.get_files():

@@ -1,0 +1,17 @@
+{
+  "id": "HERO-brook-move_e",
+  "batch_id": "BATCH-brook-pilot-01",
+  "state": "qa_failed",
+  "general_instructions": {"document": "ART-PROMPTS-001-direcao-e-piloto.md", "read_at": "2026-09-24T05:15:36-03:00"},
+  "specific_prompt": {"document": "ART-PROMPTS-016-animacoes-dos-herois.md", "read_at": "2026-09-24T05:15:36-03:00"},
+  "manifest": {"document": "HERO-ANIMATION-PROMPT-MANIFEST-001.json", "checked_at": "2026-09-24T05:15:36-03:00"},
+  "sources_checked": ["data/heroes.json", "data/weapons.json", "data/abilities.json"],
+  "references": [{"path": "assets/portraits/brook.png", "role": "identity, beard and armor"}, {"path": "assets/heroes/brook.png", "role": "sprite silhouette and palette"}],
+  "remote_transfer_approval": "User approval in this conversation for BATCH-brook-pilot-01.",
+  "user_visual_approval": {"candidate": ".atena/generated/animation-candidates/heroes/brook/move_e_v02_earfix_v01.png", "approved_at": "2026-09-24T05:43:21-03:00", "scope": "Brook's corrected dwarf ears and preserved visual identity only; alpha and integration remain separate gates."},
+  "conflict_resolution": "Animation source uses a 3x2 grid as explicitly required by ART-PROMPTS-016; the no-grid rule in ART-PROMPTS-001 applies to static figures. PLAN-006 was explicitly approved as a corrective exception after the three candidate limit: it edits only Brook's ears in v02 and preserves every other pixel-level design invariant.",
+  "candidate": {"path": ".atena/generated/animation-candidates/heroes/brook/move_e_v02_earfix_v01_alpha_t06.png", "version": "2-earfix-v01-alpha-t06", "generated_at": "2026-09-24T05:19:03-03:00"},
+  "qa": {"identity": true, "direction": true, "frames": true, "baseline": true, "alpha": true, "camera": true, "lighting": true, "artifacts": false},
+  "decision": "qa_failed",
+  "reason": "The approved PLAN-006 ear-only correction succeeded: Brook now has short rounded dwarf ears while the walk, armor and identity are preserved. The t06 alpha pass keeps the art but leaves a colored halo; t07 removes armor details. The alpha/artifact gate therefore still fails. No file in assets was created."
+}

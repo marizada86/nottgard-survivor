@@ -1,0 +1,15 @@
+{
+  "id": "HERO-brook-move_w", "batch_id": "BATCH-brook-states-02", "state": "compiled",
+  "general_instructions": {"document": "ART-PROMPTS-001-direcao-e-piloto.md", "read_at": "2026-09-24T06:07:13-03:00"},
+  "specific_prompt": {"document": "ART-PROMPTS-016-animacoes-dos-herois.md", "read_at": "2026-09-24T06:07:13-03:00"},
+  "manifest": {"document": "HERO-ANIMATION-PROMPT-MANIFEST-001.json", "checked_at": "2026-09-24T06:07:13-03:00"},
+  "sources_checked": ["data/heroes.json", "data/weapons.json", "data/abilities.json"],
+  "references": [{"path": "assets/portraits/brook.png", "role": "identity, beard and armor"}, {"path": "assets/heroes/brook.png", "role": "sprite silhouette and palette"}],
+  "remote_transfer_approval": "User approval in this conversation for BATCH-brook-states-02: HERO-brook-move_w, HERO-brook-move_nw, HERO-brook-attack and HERO-brook-death, with the listed local references.",
+  "user_visual_approval": {"candidate": ".atena/generated/animation-candidates/heroes/brook/move_w_v01.png", "approved_at": "2026-09-24T06:13:02-03:00", "scope": "Brook's rounded dwarf ears, leftward motion, and visual identity only; alpha cleanup and integration remain separate gates."},
+  "conflict_resolution": "Animation source uses a 3x2 grid as explicitly required by ART-PROMPTS-016; the no-grid rule in ART-PROMPTS-001 applies to static figures.",
+  "candidate": {"path": ".atena/generated/animation-candidates/heroes/brook/move_w_v01.png", "version": 1, "generated_at": "2026-09-24T06:08:00-03:00"},
+  "qa": {"identity": true, "direction": true, "frames": true, "baseline": true, "alpha": false, "camera": true, "lighting": true, "artifacts": false},
+  "decision": "qa_failed",
+  "reason": "v01 preserves Brook's short rounded dwarf ears and reads as a leftward walk, but it has an opaque dark gradient background. Alpha and artifact gates fail; no file in assets was created."
+}

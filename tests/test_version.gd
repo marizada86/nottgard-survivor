@@ -12,4 +12,8 @@ func run() -> Array:
 		out.append("feature qa_internal nao selecionou perfil QA")
 	if Version.profile_from_features(["public_playtest", "qa_internal"]) != Version.BuildProfile.PRODUCTION:
 		out.append("features conflitantes precisam falhar para producao")
+	if Version.profile_from_features([], true) != Version.BuildProfile.QA_INTERNAL:
+		out.append("execucao de depuracao precisa liberar o perfil QA")
+	if Version.profile_from_features(["public_playtest"], true) != Version.BuildProfile.PUBLIC_PLAYTEST:
+		out.append("playtest publico precisa prevalecer sobre o modo de depuracao")
 	return out
