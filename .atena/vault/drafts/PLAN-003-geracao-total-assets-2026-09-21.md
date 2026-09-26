@@ -1,6 +1,6 @@
 # PLAN-003 — Geração total dos assets visuais de Nottgard Survivors
 
-Status: **executado integralmente e reconciliado em 2026-09-22**
+Status: **executado e preservado como plano histórico; reconciliação de estado atualizada em 2026-09-26 por EVID-040.**
 Data: 2026-09-21  
 Escopo: todos os assets visuais necessários ao jogo atual, sem áudio e sem material de loja/publicação.
 

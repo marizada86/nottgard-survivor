@@ -1,6 +1,6 @@
 # PLAN-006 - Correcao das orelhas de Brook
 
-Status: executado em 2026-09-24; correcao de identidade aprovada, alfa ainda bloqueado.
+Status: encerrado como tentativa corretiva não integrada (2026-09-26); a identidade foi corrigida na candidata, mas o alfa a impediu de virar final.
 
 ## Objetivo
 

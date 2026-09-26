@@ -1,6 +1,6 @@
 # PLAN-004 — Regressão de movimento sudoeste
 
-Status: **execução parcial em 2026-09-23; rota lógica coberta, validação visual manual pendente.**
+Status: **encerrado com exceção de aceitação visual (2026-09-26): rota lógica coberta; inspeção manual em janela nativa continua pendente.**
 
 ## Contexto observado
 

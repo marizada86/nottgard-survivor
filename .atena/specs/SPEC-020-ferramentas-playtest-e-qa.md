@@ -1,6 +1,6 @@
 # SPEC-020 — Ferramentas de playtest e navegação QA
 
-Status: **aprovada (2026-09-23) — em execução**.
+Status: **implementação parcial validada automaticamente (2026-09-26); validação integrada pendente**.
 
 ## Decisão proposta
 

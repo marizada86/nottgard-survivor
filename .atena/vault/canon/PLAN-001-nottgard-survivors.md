@@ -166,3 +166,18 @@ O runtime mantém as oito direções lógicas e obtém `move_nw` espelhando `mov
 
 Folhas inversas já existentes são legadas válidas e não devem ser apagadas, mas não são requisito de geração nem são carregadas pelo runtime.
 Não se espelha norte/sul; nem se aplica a regra a ataque, habilidade, morte ou idle.
+
+## 17. Contrato durável de produção visual (2026-09-26)
+
+1. IDs de dados e regras de jogo não mudam para acomodar uma imagem. A arte final
+   é integrada pelo caminho e pelo `asset_id` previstos pelo consumidor.
+2. Arquivos finais aprovados pertencem a `assets/` e são versionados com o
+   projeto. Candidatas, matrizes e cópias de validação são material de trabalho;
+   nunca substituem um final sem uma decisão registrada.
+3. Antes da integração, cada folha ou imagem final deve passar pela verificação
+   técnica aplicável: dimensões e grade previstas, RGBA/alfa real quando for
+   sprite, leitura na escala de jogo e ausência dos artefatos proibidos.
+4. A decisão de integrar uma candidata exige aprovação humana e evidência que
+   vincule o asset, sua versão e a validação. O manifesto de produção registra
+   cobertura operacional; ele não cria ou altera canon de personagens, lore ou
+   mecânicas.

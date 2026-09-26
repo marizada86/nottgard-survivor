@@ -1,6 +1,6 @@
 # PLAN-002 — Produção de assets visuais do Nottgard Survivors
 
-Status: **DRAFT — fase 1 de prompts concluída; geração de imagens aguardando aprovação separada**
+Status: **reconciliado como plano histórico em 2026-09-26; a cobertura visual atual está registrada no manifesto e em EVID-040.**
 Data: 2026-09-21
 
 ## 1. Objetivo

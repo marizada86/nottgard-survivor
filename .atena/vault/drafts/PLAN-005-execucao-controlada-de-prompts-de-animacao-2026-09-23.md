@@ -1,6 +1,6 @@
 # PLAN-005 — Execução controlada dos prompts de animação
 
-Status: **atualizado e aprovado em 2026-09-24; revisão visual passa a ocorrer por personagem.**
+Status: **fundação implementada parcialmente; reconciliação em 2026-09-26 mantém registros pendentes como trabalho aberto.**
 
 ## Objetivo
 

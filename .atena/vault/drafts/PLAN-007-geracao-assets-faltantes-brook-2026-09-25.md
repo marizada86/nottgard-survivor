@@ -1,6 +1,6 @@
 # PLAN-007 — Geração dos assets-fonte faltantes de Brook
 
-Status: **quatro fontes faltantes de Brook normalizadas e integradas em 2026-09-25; validação Godot pendente por indisponibilidade do executável.**
+Status: **quatro fontes faltantes de Brook normalizadas e integradas; validação automatizada registrada em 2026-09-26, com smoke visual interativo pendente.**
 
 ## Objetivo
 

@@ -1,6 +1,6 @@
 # SPEC-019 — Modal responsivo de boas-vindas
 
-Status: aprovada (2026-09-22). Em execução.
+Status: implementada e validada por testes automatizados (2026-09-26); smoke visual interativo pendente.
 
 ## Escopo
 
