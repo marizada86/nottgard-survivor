@@ -28,7 +28,7 @@ var aim_dir := Vector2(1, 1).normalized()
 var aim_pos := Vector2.ZERO
 var time := 0.0
 var run_time := 0.0
-var state := "running"   # running | levelup | altar | dead | won
+var state := "running"   # running | levelup | altar | revive_offer | dead | won
 var offer: Array = []
 var offer_kind := ""
 var pending_levels := 0
@@ -43,7 +43,11 @@ var extracted := false
 var stage_changed := false
 var map_size := Vector2(40, 40)
 var difficulty := 1.0
+## A primeira oferta é gratuita; a melhoria Segunda Chance concede ofertas extras.
 var revive_left := 0
+var free_revive_used := false
+var death_reward_rate := 0.5
+var death_reason := ""
 var invuln := 0.0
 var stats := {"kills": 0, "crits": 0, "ones": 0, "elites": 0, "bosses": 0, "chests": 0, "gold": 0.0, "damage_taken": 0.0, "stages_cleared": 0, "boss_ids": [], "stage_ids": [], "cleared_ids": []}
 var codex := {"enemies": {}, "items": {}, "weapons": {}}
@@ -148,6 +152,11 @@ func qa_prepare(target_state: String) -> void:
 			hero.dead = true
 			hero.hp = 0.0
 			state = "dead"
+		"revive_offer":
+			hero.dead = true
+			hero.hp = 0.0
+			stats.gold = 10.0
+			state = "revive_offer"
 		"rule":
 			_stage_rule_step(99.0)
 
@@ -881,19 +890,46 @@ func _hurt_hero(dmg: float, src: String) -> void:
 				if e.hp <= 0.0:
 					_kill(e)
 	if hero.hp <= 0.0:
-		if revive_left > 0:
-			revive_left -= 1
-			hero.hp = hero.max_hp * 0.5
-			invuln = 3.0
-			for e in enemies:
-				if e.pos.distance_to(hero.pos) < 4.0 and not e.is_boss():
-					e.stun_t = 2.0
-			events.append({"type": "toast", "text": "Segunda Chance!"})
+		if not free_revive_used or revive_left > 0:
+			hero.hp = 0.0
+			hero.dead = true
+			state = "revive_offer"
+			events.append({"type": "revive_offer", "pos": hero.pos})
 		else:
 			hero.hp = 0.0
 			hero.dead = true
 			state = "dead"
+			death_reason = "exhausted_revives"
 			events.append({"type": "dead", "pos": hero.pos})
+
+func accept_revive() -> bool:
+	if state != "revive_offer":
+		return false
+	if not free_revive_used:
+		free_revive_used = true
+	elif revive_left > 0:
+		revive_left -= 1
+	else:
+		return false
+	hero.dead = false
+	hero.hp = hero.max_hp * 0.5
+	invuln = 3.0
+	for e in enemies:
+		if e.pos.distance_to(hero.pos) < 4.0 and not e.is_boss():
+			e.stun_t = 2.0
+	state = "running"
+	events.append({"type": "revived", "pos": hero.pos})
+	events.append({"type": "toast", "text": "Segunda Chance!"})
+	return true
+
+func decline_revive() -> bool:
+	if state != "revive_offer":
+		return false
+	state = "dead"
+	death_reward_rate = 0.3
+	death_reason = "declined_revive"
+	events.append({"type": "dead", "pos": hero.pos})
+	return true
 
 # ------------------------------------------------------------------ mortes e drops
 
@@ -1470,4 +1506,5 @@ func result() -> Dictionary:
 	return {"won": state == "won", "dead": state == "dead", "extracted": extracted, "time": run_time, "kills": stats.kills,
 		"gold": int(round(stats.gold * reward_multiplier())), "raw_gold": int(stats.gold), "reward_mult": reward_multiplier(), "descent_depth": descent_depth,
 		"level": hero.level, "stage": stage_id, "hero": hero.id, "bosses": stats.bosses, "boss_ids": stats.boss_ids, "elites": stats.elites, "crits": stats.crits,
-		"ones": stats.ones, "chests": stats.chests, "stages_cleared": stats.stages_cleared, "stage_ids": stats.stage_ids, "cleared_ids": stats.cleared_ids, "final_victory": final_victory, "weapons": hero.weapons.map(func(w): return w.id), "codex": codex}
+		"ones": stats.ones, "chests": stats.chests, "stages_cleared": stats.stages_cleared, "stage_ids": stats.stage_ids, "cleared_ids": stats.cleared_ids, "final_victory": final_victory, "weapons": hero.weapons.map(func(w): return w.id), "codex": codex,
+		"reward_rate": death_reward_rate if state == "dead" else 1.0, "death_reason": death_reason}

@@ -19,11 +19,14 @@ func run() -> Array:
 		out.append("conquistas de primeira run não concedidas: %s" % str(p.data.achievements.keys()))
 	if not p.data.codex.enemies.has("zumbi"):
 		out.append("códex não registrou o zumbi")
-	# derrota: metade
+	# derrota comum: metade; recusar a primeira oferta de revive: 30%
 	var q := Profile.new()
 	var d := q.apply_run(_result({"won": false, "dead": true, "gold": 100, "cleared_ids": [], "bosses": 0, "boss_ids": []}))
 	if d.earned != 50:
 		out.append("derrota deveria render metade (50), veio %d" % d.earned)
+	var declined := q.apply_run(_result({"won": false, "dead": true, "gold": 100, "cleared_ids": [], "bosses": 0, "boss_ids": [], "reward_rate": 0.3, "death_reason": "declined_revive"}))
+	if declined.earned != 30 or declined.reward_rate != 0.3:
+		out.append("recusar revive deveria render 30%% (30), veio %d" % declined.earned)
 	# melhorias
 	var m := Profile.new({"coins": 1000})
 	if not m.buy_upgrade("forca_bruta") or m.coins() != 900:

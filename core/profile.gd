@@ -96,14 +96,20 @@ func stages_sorted() -> Array:
 # ------------------------------------------------------------------ fim de run
 
 ## `result`: Battle.result(). Retorna {coins, earned, achievements: [ids novos], deaths}.
-func apply_run(result: Dictionary) -> Dictionary:
-	var st: Dictionary = data.stats
-	st.runs = int(st.runs) + 1
-	var mult := 0.5 if bool(result.dead) else 1.0
+func reward_rate_for(result: Dictionary) -> float:
+	return clampf(float(result.get("reward_rate", 0.5 if bool(result.dead) else 1.0)), 0.0, 1.0)
+
+func preview_earned(result: Dictionary) -> int:
 	var boss_bonus := 0
 	for sid in result.cleared_ids:
 		boss_bonus += 60 * (1 + int(Data.table("stages")[sid].tier))
-	var earned := int(round((float(result.gold) + boss_bonus) * mult))
+	return int(round((float(result.gold) + boss_bonus) * reward_rate_for(result)))
+
+func apply_run(result: Dictionary) -> Dictionary:
+	var st: Dictionary = data.stats
+	st.runs = int(st.runs) + 1
+	var reward_rate := reward_rate_for(result)
+	var earned := preview_earned(result)
 	data.coins = coins() + earned
 	st.kills_total = int(st.kills_total) + int(result.kills)
 	st.gold_total = int(st.gold_total) + earned
@@ -127,7 +133,7 @@ func apply_run(result: Dictionary) -> Dictionary:
 		for k in codex[cat]:
 			data.codex[cat][k] = true
 	var new_ach := check_achievements(result)
-	return {"earned": earned, "coins": coins(), "achievements": new_ach, "half": bool(result.dead)}
+	return {"earned": earned, "coins": coins(), "achievements": new_ach, "reward_rate": reward_rate}
 
 func stat_value(stat: String, run: Dictionary) -> float:
 	var st: Dictionary = data.stats

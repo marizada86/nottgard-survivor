@@ -8,6 +8,8 @@ signal quit_pressed
 signal again_pressed
 signal menu_pressed
 signal aim_pressed
+signal revive_pressed
+signal decline_revive_pressed
 
 @onready var name_label: Label = %NameLabel
 @onready var hp_bar: ProgressBar = %HpBar
@@ -36,6 +38,8 @@ signal aim_pressed
 @onready var result_title: Label = %ResultTitle
 @onready var result_text: Label = %ResultText
 @onready var result_background: TextureRect = %ResultBackground
+@onready var revive_panel: PanelContainer = %RevivePanel
+@onready var revive_text: Label = %ReviveText
 var _active_icon_id := ""
 var _stage_icon_id := ""
 
@@ -46,6 +50,8 @@ func _ready() -> void:
 	%QuitBtn.pressed.connect(func(): quit_pressed.emit())
 	%AgainBtn.pressed.connect(func(): again_pressed.emit())
 	%MenuBtn.pressed.connect(func(): menu_pressed.emit())
+	%ReviveBtn.pressed.connect(func(): revive_pressed.emit())
+	%DeclineReviveBtn.pressed.connect(func(): decline_revive_pressed.emit())
 	aim_btn.pressed.connect(func(): aim_pressed.emit())
 	vol_slider.value_changed.connect(func(v: float):
 		Game.profile.data.settings.volume = v
@@ -54,6 +60,7 @@ func _ready() -> void:
 	levelup_panel.visible = false
 	pause_panel.visible = false
 	result_panel.visible = false
+	revive_panel.visible = false
 	prompt_label.text = ""
 
 func _unhandled_input(ev: InputEvent) -> void:
@@ -185,9 +192,24 @@ func show_pause(v: bool) -> void:
 		aim_btn.text = "Mira: %s (Tab)" % ("AUTO" if Game.aim_mode() == Battle.Aim.AUTO else "MOUSE")
 		vol_slider.value = float(Game.profile.data.settings.volume)
 
+func show_revive_offer(b: Battle) -> void:
+	hide_offer()
+	pause_panel.visible = false
+	result_panel.visible = false
+	var preview := b.result()
+	preview.reward_rate = 0.3
+	var pending := Game.profile.preview_earned(preview)
+	revive_text.text = "Seu herói caiu. Deseja reviver com 50%% de PV?\n\nSe encerrar agora, receberá +%d moedas (30%% da tentativa)." % pending
+	revive_panel.visible = true
+	%ReviveBtn.grab_focus()
+
+func hide_revive_offer() -> void:
+	revive_panel.visible = false
+
 func show_result(res: Dictionary, summary: Dictionary) -> void:
 	hide_offer()
 	pause_panel.visible = false
+	hide_revive_offer()
 	result_title.text = "Vitória!" if res.won else "Você caiu..."
 	var background_path := "res://assets/ui/backgrounds/victory_background.png" if res.won else "res://assets/ui/backgrounds/defeat_background.png"
 	result_background.texture = load(background_path) if ResourceLoader.exists(background_path) else null
@@ -195,7 +217,7 @@ func show_result(res: Dictionary, summary: Dictionary) -> void:
 	var txt := "%s · %s\nTempo %02d:%02d · Nível %d · Abates %d · Chefes %d\nModo: %s · Profundidade %d · Multiplicador ×%.2f\n\n+%d moedas%s (total %d)" % [
 		Data.table("heroes")[res.hero].name, Data.table("stages")[res.stage].name, t / 60, t % 60, res.level, res.kills, res.bosses,
 		"extraído" if res.extracted else ("derrota" if res.dead else "final"), int(res.get("descent_depth", 0)), float(res.get("reward_mult", 1.0)),
-		summary.earned, " (metade: derrota)" if summary.half else "", summary.coins]
+		summary.earned, (" (%d%% da tentativa)" % int(round(float(summary.reward_rate) * 100.0))) if float(summary.reward_rate) < 1.0 else "", summary.coins]
 	var names: Array = []
 	for id in summary.achievements:
 		for a in Data.table("achievements").achievements:

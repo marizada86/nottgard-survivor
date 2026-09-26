@@ -39,7 +39,7 @@ Fonte: `games/godot/nottcard/data/core/*.json`, `core/*.gd`, vault. **Lore/fatos
 | Poder Místico, Guarda, Corrente | Recursos de classe (Kayron: Poder; Brook: Guarda; Corrente = combo de acertos) |
 | d20, crítico natural, falha crítica, Sorte | Chance de crítico/falha (pequena, em cascata), "usos de Sorte" = rerrolls de level-up |
 | Armas (adaga, espada, maça, cajado, cetro) + armaduras | Slot de arma e armadura com identidade de golpe (ex.: adaga = rápida; maça = pode atordoar; cetro = marca) |
-| XP, moedas, derrota mantém 50% do XP | Idem: moedas por run, meia recompensa ao morrer |
+| XP, moedas, derrota mantém 50% do XP | Moedas por run; recusar o primeiro revive concede 30% da tentativa, e derrota após usar as ofertas mantém 50% |
 | Upgrades (Força Bruta +4%, Vitalidade +2 PV, Mão Cheia, Rerrolagem, Sorte, Bolso Fundo, Ganância) | **Loja permanente do menu**, com os mesmos custos/curvas como ponto de partida |
 | Conquistas com benefício (Dois Veteranos, Sorte de Sendrinah, O infeliz…) | Conquistas que **destravam bônus/personagens/itens** |
 | HQ / QG | **Quartel** (hub em menu): loja, personagens, conquistas, códex |
@@ -174,6 +174,15 @@ Não se espelha norte/sul; nem se aplica a regra a ataque, habilidade, morte ou 
 2. Arquivos finais aprovados pertencem a `assets/` e são versionados com o
    projeto. Candidatas, matrizes e cópias de validação são material de trabalho;
    nunca substituem um final sem uma decisão registrada.
+
+## 18. Contrato de revive e recompensa por derrota (2026-09-26)
+
+Na primeira vez que os PV chegam a zero em uma run, o jogo interrompe a simulação
+e oferece ao jogador reviver com 50% dos PV. Recusar encerra a tentativa e concede
+30% das moedas da tentativa; essa taxa substitui a recompensa de derrota usual,
+não se soma a ela. A melhoria permanente **Segunda Chance** acrescenta uma oferta
+manual de revive à run, sem automatizar a escolha. Depois que todas as ofertas são
+usadas, a morte encerra a run com a recompensa usual de 50%.
 3. Antes da integração, cada folha ou imagem final deve passar pela verificação
    técnica aplicável: dimensões e grade previstas, RGBA/alfa real quando for
    sprite, leitura na escala de jogo e ausência dos artefatos proibidos.

@@ -35,9 +35,13 @@ func _ready() -> void:
 	hud.again_pressed.connect(func(): Game.start_run(Game.run_hero, Game.run_stage))
 	hud.menu_pressed.connect(Game.goto_menu)
 	hud.aim_pressed.connect(_toggle_aim)
+	hud.revive_pressed.connect(_accept_revive)
+	hud.decline_revive_pressed.connect(_decline_revive)
 	_load_stage()
 	if Game.qa_sandbox:
 		battle.qa_prepare(String(Game.qa_launch.get("target_state", "running")))
+	if battle.state == "revive_offer":
+		hud.show_revive_offer(battle)
 	hud.toast("%s — %s" % [battle.stage.name, battle.stage.sub], Color(0.9, 0.85, 0.6))
 
 func playtest_context() -> Dictionary:
@@ -86,7 +90,7 @@ func _load_stage() -> void:
 # ------------------------------------------------------------------ entrada
 
 func _unhandled_input(ev: InputEvent) -> void:
-	if _result_shown:
+	if _result_shown or battle.state == "revive_offer":
 		return
 	if battle.state == "running" and ev.is_action_pressed("hero_active"):
 		if battle.use_active(battle.aim_dir):
@@ -136,6 +140,15 @@ func _on_choose(i: int) -> void:
 	Sfx.play("ui.confirm")
 	_refresh_offer()
 
+func _accept_revive() -> void:
+	if battle.accept_revive():
+		hud.hide_revive_offer()
+		Sfx.play("player.revive")
+
+func _decline_revive() -> void:
+	if battle.decline_revive():
+		hud.hide_revive_offer()
+
 func _refresh_offer() -> void:
 	if battle.state == "levelup" or battle.state == "altar":
 		hud.show_offer(battle)
@@ -166,6 +179,8 @@ func _physics_process(dt: float) -> void:
 	hud.update_stats(battle)
 	if battle.state != prev_state or (battle.state in ["levelup", "altar"] and not hud.levelup_panel.visible):
 		_refresh_offer()
+	if battle.state == "revive_offer" and prev_state != "revive_offer":
+		hud.show_revive_offer(battle)
 	if (battle.state == "dead" or battle.state == "won") and not _result_shown:
 		_show_result()
 

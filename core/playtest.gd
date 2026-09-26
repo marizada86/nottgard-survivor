@@ -20,6 +20,7 @@ const QA_RUN_DESTINATIONS := [
 	["Portal apos chefe", "portal"],
 	["Resultado: vitoria", "victory"],
 	["Resultado: derrota", "defeat"],
+	["Oferta de revive", "revive_offer"],
 	["Regra da fase", "rule"],
 ]
 

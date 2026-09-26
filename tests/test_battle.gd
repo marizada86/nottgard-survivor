@@ -102,30 +102,32 @@ func run() -> Array:
 	if not shot:
 		out.append("arqueiro nunca atirou")
 
-	# 8) morte do herói e segunda chance
+	# 8) primeira morte pede revive; aceitar restaura a run; Segunda Chance dá oferta extra.
 	var d := _bat(2)
 	_quiet(d)
-	d.hero.weapons = []
-	for i in 6:
-		d.spawn_for_test("cultista_adaga", Vector2(20.5 + i * 0.05, 20.5))
-	for i in 4000:
-		d.step(Vector2.ZERO, 0.016)
-	if not d.hero.dead:
-		out.append("herói deveria ter morrido")
+	d.stats.gold = 100.0
+	d._hurt_hero(9999.0, "test")
+	if d.state != "revive_offer" or not d.hero.dead:
+		out.append("primeira morte deveria abrir a oferta de revive")
+	if not d.decline_revive() or d.result().reward_rate != 0.3:
+		out.append("recusar revive deveria encerrar com 30% da tentativa")
 	var rv := Battle.new(2, "durvall", "dagruve", {"meta_mods": {"revive": 1}})
 	_quiet(rv)
-	rv.hero.pos = Vector2(20, 20)
-	rv.hero.weapons = []
-	for i in 6:
-		rv.spawn_for_test("cultista_adaga", Vector2(20.5 + i * 0.05, 20.5))
-	var revived := false
-	for i in 4000:
-		rv.step(Vector2.ZERO, 0.016)
-		if rv.revive_left == 0:
-			revived = true
-			break
-	if not revived:
-		out.append("segunda chance não disparou")
+	rv._hurt_hero(9999.0, "test")
+	if not rv.accept_revive() or rv.state != "running" or rv.hero.dead or rv.hero.hp != rv.hero.max_hp * 0.5 or rv.revive_left != 1:
+		out.append("revive gratuito deveria restaurar a run sem consumir Segunda Chance")
+	rv.invuln = 0.0
+	rv._hurt_hero(9999.0, "test")
+	if rv.state != "revive_offer" or not rv.accept_revive() or rv.revive_left != 0:
+		out.append("Segunda Chance deveria conceder uma oferta manual adicional")
+	rv.invuln = 0.0
+	rv._hurt_hero(9999.0, "test")
+	if rv.state != "dead" or rv.result().reward_rate != 0.5:
+		out.append("sem ofertas restantes, derrota deveria manter 50%")
+	var qa_revive := _bat(3)
+	qa_revive.qa_prepare("revive_offer")
+	if qa_revive.state != "revive_offer" or qa_revive.result().gold != 10:
+		out.append("cenário QA de revive deveria abrir a oferta com moedas previsíveis")
 
 	# 9) itens: rolagem gera item válido; equipar concede arma do item
 	var it := _bat(6)

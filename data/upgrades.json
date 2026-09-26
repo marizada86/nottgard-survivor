@@ -10,7 +10,7 @@
     {"id": "ima", "name": "Ímã", "desc": "+0,4 de alcance de coleta por nível", "costs": [120, 300, 700], "mods": {"pickup": 0.4}},
     {"id": "armadura_extra", "name": "Guarnição", "desc": "+1 CA por nível", "costs": [250, 700, 1800], "mods": {"ca": 1}},
     {"id": "pes_ligeiros", "name": "Pés Ligeiros", "desc": "+3% de velocidade por nível", "costs": [150, 400, 900], "mods": {"speed_pct": 0.03}},
-    {"id": "segunda_chance", "name": "Segunda Chance", "desc": "Revive uma vez por run com 50% de PV", "costs": [1200], "mods": {"revive": 1}},
+    {"id": "segunda_chance", "name": "Segunda Chance", "desc": "+1 oferta manual de revive por run (50% de PV)", "costs": [1200], "mods": {"revive": 1}},
     {"id": "ressonancia", "name": "Ressonância Arcana", "desc": "-3% de recarga por nível", "costs": [350, 900, 2200], "mods": {"cd_pct": 0.03}}
   ]
 }
