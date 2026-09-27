@@ -121,6 +121,8 @@ const MINIMUM_VISIBLE_COVERAGE := {
 	"res://assets/animations/heroes/maelor/move_n.png": 0.01,
 }
 
+const ANIMATED_ENEMY_IDS := ["zumbi", "sacerdote_mente_derretida"]
+
 func run() -> Array[String]:
 	var failures: Array[String] = []
 	for path in ASSETS:
@@ -177,8 +179,57 @@ func run() -> Array[String]:
 	var southwest_delta := Iso.to_screen(hero.pos) - before
 	if hero_script.directional_walk_animation(southwest_delta) != &"move_sw":
 		failures.append("A+S não seleciona move_sw após o deslocamento: %s" % southwest_delta)
+	failures.append_array(_validate_static_enemy_assets())
 	failures.append_array(_validate_bromnor_runtime())
 	failures.append_array(_validate_zynara_runtime())
+	failures.append_array(_validate_nyrelia_runtime())
+	failures.append_array(_validate_nyrelia_frame_baselines())
+	return failures
+
+func _validate_static_enemy_assets() -> Array[String]:
+	var failures: Array[String] = []
+	var enemies: Dictionary = Data.table("enemies")
+	for value in enemies:
+		var enemy_id := String(value)
+		var path := "res://assets/enemies/%s.png" % enemy_id
+		if not FileAccess.file_exists(path):
+			failures.append("imagem estática ausente: %s" % path)
+			continue
+		if not ResourceLoader.exists(path):
+			failures.append("imagem estática não importada: %s" % path)
+			continue
+		var image := Image.new()
+		if image.load(ProjectSettings.globalize_path(path)) != OK:
+			failures.append("PNG estático inválido: %s" % path)
+		elif image.detect_alpha() == Image.ALPHA_NONE:
+			failures.append("imagem estática sem canal alfa: %s" % path)
+		elif _visible_coverage(image) < 0.01:
+			failures.append("imagem estática sem conteúdo visível: %s" % path)
+		if enemy_id not in ANIMATED_ENEMY_IDS:
+			failures.append_array(_validate_static_enemy_cache(enemy_id))
+	return failures
+
+func _validate_static_enemy_cache(enemy_id: String) -> Array[String]:
+	var failures: Array[String] = []
+	var tree := Engine.get_main_loop() as SceneTree
+	var packed: PackedScene = load("res://ui/enemy_view.tscn")
+	if tree == null or packed == null:
+		return ["não foi possível instanciar o visual de inimigo"]
+	var first = packed.instantiate()
+	var second = packed.instantiate()
+	tree.root.add_child(first)
+	tree.root.add_child(second)
+	first._tex_cache.clear()
+	first.setup(Enemy.make(enemy_id, Vector2.ZERO))
+	second.setup(Enemy.make(enemy_id, Vector2.ONE))
+	if first.tex == null:
+		failures.append("primeira instância sem textura: %s" % enemy_id)
+	if second.tex == null:
+		failures.append("acerto de cache sem textura: %s" % enemy_id)
+	elif second.tex != first.tex:
+		failures.append("acerto de cache não reutilizou textura: %s" % enemy_id)
+	first.free()
+	second.free()
 	return failures
 
 func _validate_bromnor_runtime() -> Array[String]:
@@ -247,6 +298,71 @@ func _validate_zynara_runtime() -> Array[String]:
 		if sprite.animation != &"death":
 			failures.append("morte de Zynara não foi acionada")
 	hero_view.queue_free()
+	return failures
+
+func _validate_nyrelia_runtime() -> Array[String]:
+	var failures: Array[String] = []
+	var tree := Engine.get_main_loop() as SceneTree
+	var packed: PackedScene = load("res://ui/hero_view.tscn")
+	if tree == null or packed == null:
+		return ["não foi possível instanciar o visual de Nyrelia"]
+	var hero_view: Node2D = packed.instantiate()
+	tree.root.add_child(hero_view)
+	hero_view.apply_hero("nyrelia")
+	var sprite := hero_view.get_node_or_null("AnimatedSprite2D") as AnimatedSprite2D
+	if sprite == null or sprite.sprite_frames == null:
+		failures.append("Nyrelia não recebeu AnimatedSprite2D")
+	else:
+		var expected := {
+			&"idle": 4, &"move_n": 6, &"move_ne": 6, &"move_e": 6, &"move_se": 6, &"move_s": 6,
+			&"attack": 4, &"active": 6, &"death": 6,
+		}
+		for animation in expected:
+			if not sprite.sprite_frames.has_animation(animation):
+				failures.append("animação de Nyrelia ausente em jogo: %s" % animation)
+			elif sprite.sprite_frames.get_frame_count(animation) != expected[animation]:
+				failures.append("quadros incorretos em Nyrelia/%s" % animation)
+		if not is_equal_approx(sprite.offset.y, -176.0):
+			failures.append("âncora de Nyrelia não coincide com sua linha de base normalizada")
+		hero_view.play_action(&"attack")
+		if sprite.animation != &"attack":
+			failures.append("ataque de Nyrelia não foi acionado")
+		hero_view.play_action(&"active")
+		if sprite.animation != &"active":
+			failures.append("ativa de Nyrelia não foi acionada")
+		hero_view.sync_visual(Vector2(10, 10), true, false)
+		if sprite.animation != &"death":
+			failures.append("morte de Nyrelia não foi acionada")
+	hero_view.queue_free()
+	return failures
+
+func _validate_nyrelia_frame_baselines() -> Array[String]:
+	var failures: Array[String] = []
+	var expected := {
+		"idle": 4, "move_n": 6, "move_ne": 6, "move_e": 6, "move_se": 6, "move_s": 6,
+		"attack": 4, "active": 6, "death": 6,
+	}
+	for sequence in expected:
+		var path := "res://assets/animations/heroes/nyrelia/%s.png" % sequence
+		var image := Image.new()
+		if image.load(ProjectSettings.globalize_path(path)) != OK:
+			failures.append("não foi possível medir a base de Nyrelia/%s" % sequence)
+			continue
+		for frame in expected[sequence]:
+			var bottom := -1
+			var left := 256
+			var right := -1
+			for y in 384:
+				for x in range(frame * 256, (frame + 1) * 256):
+					if image.get_pixel(x, y).a < 0.10:
+						continue
+					bottom = max(bottom, y)
+					left = min(left, x - frame * 256)
+					right = max(right, x - frame * 256)
+			if bottom != 367:
+				failures.append("linha de base inválida em Nyrelia/%s[%d]: %d" % [sequence, frame, bottom + 1])
+			if left < 6 or right > 249:
+				failures.append("conteúdo de Nyrelia/%s[%d] toca a borda da célula" % [sequence, frame])
 	return failures
 
 func _visible_coverage(image: Image) -> float:

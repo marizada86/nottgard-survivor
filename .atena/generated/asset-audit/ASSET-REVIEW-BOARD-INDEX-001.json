@@ -1,0 +1,407 @@
+﻿{
+    "schema_version":  1,
+    "source_lock":  ".atena/generated/asset-audit/ASSET-OFFICIAL-LOCK-009.json",
+    "unofficial_asset_count":  231,
+    "board_count":  21,
+    "boards":  [
+                   {
+                       "board_id":  "unofficial-boss-intros-1",
+                       "family":  "boss-intros",
+                       "count":  1,
+                       "asset_ids":  [
+                                         "sacerdote_mente_derretida_intro"
+                                     ],
+                       "path":  ".atena/evidence/asset-review-boards/SPEC-044-unofficial-boss-intros-1-review.png"
+                   },
+                   {
+                       "board_id":  "unofficial-enemies-1",
+                       "family":  "enemies",
+                       "count":  18,
+                       "asset_ids":  [
+                                         "aberracao_shu",
+                                         "alma_penada",
+                                         "arch_hag",
+                                         "blogbog",
+                                         "bolha_de_slime",
+                                         "carcereiro_de_pedra",
+                                         "cogumelo_fungico",
+                                         "criatura_corrompida",
+                                         "cultista_adaga",
+                                         "cultista_arqueiro",
+                                         "cultista_cajado",
+                                         "cultista_de_feng_tu",
+                                         "cultista_de_socothbenoth",
+                                         "cultista_ghaunadaur",
+                                         "cultista_thullgrime",
+                                         "death_tyrant",
+                                         "demonio_de_gehenna",
+                                         "discipulo_pestilento"
+                                     ],
+                       "path":  ".atena/evidence/asset-review-boards/SPEC-044-unofficial-enemies-1-review.png"
+                   },
+                   {
+                       "board_id":  "unofficial-enemies-2",
+                       "family":  "enemies",
+                       "count":  18,
+                       "asset_ids":  [
+                                         "escravo_de_rivenheart",
+                                         "esporo_voador",
+                                         "estatua_do_templo",
+                                         "ezro",
+                                         "gargula",
+                                         "guarda_do_castelo",
+                                         "guardiao_copia",
+                                         "guardiao_de_goranthis",
+                                         "guardiao_verdadeiro",
+                                         "ilusao_de_socothbenoth",
+                                         "ilusao_de_sucubo",
+                                         "larva_de_lu_yueh",
+                                         "lu_yueh",
+                                         "malcanthet",
+                                         "master_of_cruelties",
+                                         "mimico",
+                                         "molydeus_chefe",
+                                         "molydeus_menor"
+                                     ],
+                       "path":  ".atena/evidence/asset-review-boards/SPEC-044-unofficial-enemies-2-review.png"
+                   },
+                   {
+                       "board_id":  "unofficial-enemies-3",
+                       "family":  "enemies",
+                       "count":  13,
+                       "asset_ids":  [
+                                         "notivago",
+                                         "pudim_negro",
+                                         "receptaculo_de_juiblex",
+                                         "sacerdote_mente_derretida",
+                                         "servo_de_zuggtmoy",
+                                         "sintese_abissal",
+                                         "slime_corrosivo",
+                                         "slime_de_juiblex",
+                                         "socothbenoth",
+                                         "sucubo",
+                                         "tentaculo_kraken",
+                                         "zuggtmoy",
+                                         "zumbi"
+                                     ],
+                       "path":  ".atena/evidence/asset-review-boards/SPEC-044-unofficial-enemies-3-review.png"
+                   },
+                   {
+                       "board_id":  "unofficial-heroes-1",
+                       "family":  "heroes",
+                       "count":  10,
+                       "asset_ids":  [
+                                         "bromnor",
+                                         "brook",
+                                         "durvall",
+                                         "kayron",
+                                         "korrak",
+                                         "leoric",
+                                         "maelor",
+                                         "nyrelia",
+                                         "sylas",
+                                         "zynara"
+                                     ],
+                       "path":  ".atena/evidence/asset-review-boards/SPEC-044-unofficial-heroes-1-review.png"
+                   },
+                   {
+                       "board_id":  "unofficial-icons-abilities-1",
+                       "family":  "icons/abilities",
+                       "count":  10,
+                       "asset_ids":  [
+                                         "comunhao",
+                                         "concordia",
+                                         "constelacao",
+                                         "dominacao",
+                                         "guarda_de_lliira",
+                                         "impacto_de_xargath",
+                                         "passo_pelas_sombras",
+                                         "ruptura_sombria",
+                                         "sobrecarga_mistica",
+                                         "suspensao_temporal"
+                                     ],
+                       "path":  ".atena/evidence/asset-review-boards/SPEC-044-unofficial-icons-abilities-1-review.png"
+                   },
+                   {
+                       "board_id":  "unofficial-icons-boons-1",
+                       "family":  "icons/boons",
+                       "count":  12,
+                       "asset_ids":  [
+                                         "ghaunadaur_fome",
+                                         "ghaunadaur_olho",
+                                         "helion_saber",
+                                         "lliira_alegria",
+                                         "lliira_sorte",
+                                         "mask_ladrao",
+                                         "mask_sombras",
+                                         "sendrinah_cura",
+                                         "sendrinah_vida",
+                                         "shar_noite",
+                                         "shar_perda",
+                                         "tou_um_estrela"
+                                     ],
+                       "path":  ".atena/evidence/asset-review-boards/SPEC-044-unofficial-icons-boons-1-review.png"
+                   },
+                   {
+                       "board_id":  "unofficial-icons-items-1",
+                       "family":  "icons/items",
+                       "count":  18,
+                       "asset_ids":  [
+                                         "adaga",
+                                         "ampulheta",
+                                         "amuleto_da_luz",
+                                         "amuleto_simples",
+                                         "aneis_de_grazzt",
+                                         "anel_de_prata",
+                                         "anel_passagem_sombria",
+                                         "anel_resistencia_abissal",
+                                         "anel_simples",
+                                         "broche_celestial",
+                                         "cajado",
+                                         "cajado_dos_desejos",
+                                         "cetro",
+                                         "chicote_avarento",
+                                         "colar_dos_tentaculos",
+                                         "colar_runico_de_thalion",
+                                         "cota",
+                                         "couro"
+                                     ],
+                       "path":  ".atena/evidence/asset-review-boards/SPEC-044-unofficial-icons-items-1-review.png"
+                   },
+                   {
+                       "board_id":  "unofficial-icons-items-2",
+                       "family":  "icons/items",
+                       "count":  13,
+                       "asset_ids":  [
+                                         "espada_longa",
+                                         "lamina_da_digestao",
+                                         "lasca_de_ailalore",
+                                         "luneta_de_korrak",
+                                         "maca_de_guerra",
+                                         "machado_de_xargath",
+                                         "manto_do_pantano",
+                                         "martelo_da_gloria",
+                                         "olho_de_ghaunadaur",
+                                         "placa",
+                                         "robe",
+                                         "sopro_de_estrela",
+                                         "talisma"
+                                     ],
+                       "path":  ".atena/evidence/asset-review-boards/SPEC-044-unofficial-icons-items-2-review.png"
+                   },
+                   {
+                       "board_id":  "unofficial-icons-passives-1",
+                       "family":  "icons/passives",
+                       "count":  14,
+                       "asset_ids":  [
+                                         "alcance",
+                                         "botas_leves",
+                                         "carisma",
+                                         "constituicao",
+                                         "cota_de_malha",
+                                         "foco_arcano",
+                                         "forca",
+                                         "ganancia",
+                                         "inteligencia",
+                                         "pele_de_pedra",
+                                         "regeneracao",
+                                         "robe_arcano",
+                                         "sabedoria",
+                                         "sorte_de_sendrinah"
+                                     ],
+                       "path":  ".atena/evidence/asset-review-boards/SPEC-044-unofficial-icons-passives-1-review.png"
+                   },
+                   {
+                       "board_id":  "unofficial-icons-stages-1",
+                       "family":  "icons/stages",
+                       "count":  8,
+                       "asset_ids":  [
+                                         "dagruve_rituals",
+                                         "durao_current",
+                                         "feng_tu_strikes",
+                                         "goranthis_sanctuary",
+                                         "molor_bubbles",
+                                         "pilares_rotation",
+                                         "shedaklah_puddles",
+                                         "shendilavri_illusions"
+                                     ],
+                       "path":  ".atena/evidence/asset-review-boards/SPEC-044-unofficial-icons-stages-1-review.png"
+                   },
+                   {
+                       "board_id":  "unofficial-icons-ui-1",
+                       "family":  "icons/ui",
+                       "count":  8,
+                       "asset_ids":  [
+                                         "ca",
+                                         "cam",
+                                         "coin",
+                                         "essence",
+                                         "health",
+                                         "kill",
+                                         "target",
+                                         "xp"
+                                     ],
+                       "path":  ".atena/evidence/asset-review-boards/SPEC-044-unofficial-icons-ui-1-review.png"
+                   },
+                   {
+                       "board_id":  "unofficial-icons-weapons-1",
+                       "family":  "icons/weapons",
+                       "count":  18,
+                       "asset_ids":  [
+                                         "adaga_rapida",
+                                         "ampulheta",
+                                         "cajado_dos_desejos",
+                                         "cera_fervente",
+                                         "chicote_avarento",
+                                         "chuva_de_estrelas",
+                                         "colar_dos_tentaculos",
+                                         "descarga_estelar",
+                                         "dominar_pessoa",
+                                         "espada_do_receptaculo",
+                                         "espada_sombria",
+                                         "estocada_mistica",
+                                         "golpe_atordoante",
+                                         "golpe_do_juizo",
+                                         "golpe_esmagador",
+                                         "inferno_de_cera",
+                                         "julgamento_da_gloria",
+                                         "lamina_da_digestao"
+                                     ],
+                       "path":  ".atena/evidence/asset-review-boards/SPEC-044-unofficial-icons-weapons-1-review.png"
+                   },
+                   {
+                       "board_id":  "unofficial-icons-weapons-2",
+                       "family":  "icons/weapons",
+                       "count":  12,
+                       "asset_ids":  [
+                                         "lamina_trovejante",
+                                         "luz_mais_pura",
+                                         "machado_de_xargath",
+                                         "marca_da_retidao",
+                                         "martelo_da_gloria",
+                                         "raio_de_luz",
+                                         "raio_enfraquecedor",
+                                         "rajada_infinita",
+                                         "sentenca_de_lliira",
+                                         "sopro_de_estrela",
+                                         "tempestade",
+                                         "vela_sagrada"
+                                     ],
+                       "path":  ".atena/evidence/asset-review-boards/SPEC-044-unofficial-icons-weapons-2-review.png"
+                   },
+                   {
+                       "board_id":  "unofficial-interactions-1",
+                       "family":  "interactions",
+                       "count":  8,
+                       "asset_ids":  [
+                                         "altar_active",
+                                         "altar_spent",
+                                         "chest_closed",
+                                         "chest_open",
+                                         "fountain_active",
+                                         "fountain_spent",
+                                         "portal",
+                                         "ritual"
+                                     ],
+                       "path":  ".atena/evidence/asset-review-boards/SPEC-044-unofficial-interactions-1-review.png"
+                   },
+                   {
+                       "board_id":  "unofficial-pickups-1",
+                       "family":  "pickups",
+                       "count":  3,
+                       "asset_ids":  [
+                                         "gold_coin",
+                                         "health_potion",
+                                         "xp_shard"
+                                     ],
+                       "path":  ".atena/evidence/asset-review-boards/SPEC-044-unofficial-pickups-1-review.png"
+                   },
+                   {
+                       "board_id":  "unofficial-portraits-1",
+                       "family":  "portraits",
+                       "count":  10,
+                       "asset_ids":  [
+                                         "bromnor",
+                                         "brook",
+                                         "durvall",
+                                         "kayron",
+                                         "korrak",
+                                         "leoric",
+                                         "maelor",
+                                         "nyrelia",
+                                         "sylas",
+                                         "zynara"
+                                     ],
+                       "path":  ".atena/evidence/asset-review-boards/SPEC-044-unofficial-portraits-1-review.png"
+                   },
+                   {
+                       "board_id":  "unofficial-props-1",
+                       "family":  "props",
+                       "count":  18,
+                       "asset_ids":  [
+                                         "bolha_01",
+                                         "bolha_02",
+                                         "bolha_03",
+                                         "cachoeira_01",
+                                         "cachoeira_02",
+                                         "cachoeira_03",
+                                         "cogumelo_01",
+                                         "cogumelo_02",
+                                         "cogumelo_03",
+                                         "cristal_01",
+                                         "cristal_02",
+                                         "cristal_03",
+                                         "pilar_01",
+                                         "pilar_02",
+                                         "pilar_03",
+                                         "torii_01",
+                                         "torii_02",
+                                         "torii_03"
+                                     ],
+                       "path":  ".atena/evidence/asset-review-boards/SPEC-044-unofficial-props-1-review.png"
+                   },
+                   {
+                       "board_id":  "unofficial-stages-1",
+                       "family":  "stages",
+                       "count":  8,
+                       "asset_ids":  [
+                                         "dagruve_thumb",
+                                         "durao_thumb",
+                                         "feng_tu_thumb",
+                                         "goranthis_thumb",
+                                         "molor_thumb",
+                                         "pilares_thumb",
+                                         "shedaklah_thumb",
+                                         "shendilavri_thumb"
+                                     ],
+                       "path":  ".atena/evidence/asset-review-boards/SPEC-044-unofficial-stages-1-review.png"
+                   },
+                   {
+                       "board_id":  "unofficial-tiles-1",
+                       "family":  "tiles",
+                       "count":  8,
+                       "asset_ids":  [
+                                         "dagruve_ground",
+                                         "durao_ground",
+                                         "feng_tu_ground",
+                                         "goranthis_ground",
+                                         "molor_ground",
+                                         "pilares_ground",
+                                         "shedaklah_ground",
+                                         "shendilavri_ground"
+                                     ],
+                       "path":  ".atena/evidence/asset-review-boards/SPEC-044-unofficial-tiles-1-review.png"
+                   },
+                   {
+                       "board_id":  "unofficial-ui-backgrounds-1",
+                       "family":  "ui/backgrounds",
+                       "count":  3,
+                       "asset_ids":  [
+                                         "defeat_background",
+                                         "quartel_background",
+                                         "victory_background"
+                                     ],
+                       "path":  ".atena/evidence/asset-review-boards/SPEC-044-unofficial-ui-backgrounds-1-review.png"
+                   }
+               ]
+}

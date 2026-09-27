@@ -22,5 +22,6 @@ script = ExtResource("2_g4hyb")
 z_index = 100
 
 [node name="Camera" type="Camera2D" parent="." unique_id=2131982590]
+zoom = Vector2(1.15, 1.15)
 
 [node name="Hud" parent="." unique_id=1614466486 instance=ExtResource("3_c74lo")]

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "lock_id": "ASSET-OFFICIAL-LOCK-001",
+  "scope": "SPEC-044 critical batch only",
+  "decision_register": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-001-lote-critico-2026-09-27.md",
+  "decision_reference": "Owner instruction: aprovar como oficiais (2026-09-27)",
+  "entries": [
+    {"asset_id":"nyrelia.idle","family":"animations/heroes","official_path":"assets/animations/heroes/nyrelia/idle.png","sha256":"dde7660102aa6b400fea90f843b5bdc448964dfe08abb58f971bb45360d16662","dimensions":"1024x384","alpha":true,"runtime_use":"Nyrelia source animation: idle"},
+    {"asset_id":"nyrelia.move_n","family":"animations/heroes","official_path":"assets/animations/heroes/nyrelia/move_n.png","sha256":"0fb01a27dcf54835c7d250373d83c7fe753caa001b35036e8948b1cb0ce9bc37","dimensions":"1536x384","alpha":true,"runtime_use":"Nyrelia source animation: move_n"},
+    {"asset_id":"nyrelia.move_ne","family":"animations/heroes","official_path":"assets/animations/heroes/nyrelia/move_ne.png","sha256":"c315b6cc1ddcc9a696fe4917e43bc02d45676ea171ea5e9e6878945885b1542a","dimensions":"1536x384","alpha":true,"runtime_use":"Nyrelia source animation: move_ne"},
+    {"asset_id":"nyrelia.move_e","family":"animations/heroes","official_path":"assets/animations/heroes/nyrelia/move_e.png","sha256":"f2b7370e8af72fec09d870b2f210781f8a4d726c9c87ff6ad3125b25f5e0df35","dimensions":"1536x384","alpha":true,"runtime_use":"Nyrelia source animation: move_e"},
+    {"asset_id":"nyrelia.move_se","family":"animations/heroes","official_path":"assets/animations/heroes/nyrelia/move_se.png","sha256":"4d573c78aa83f85b5a273f1deff5b66b1cf0a5bac1e428a44b47c1a8398f4301","dimensions":"1536x384","alpha":true,"runtime_use":"Nyrelia source animation: move_se"},
+    {"asset_id":"nyrelia.move_s","family":"animations/heroes","official_path":"assets/animations/heroes/nyrelia/move_s.png","sha256":"aab6bf6178de9185c751ed5e24f248014debc60fdb0c1ee8cc2ea0e277d73097","dimensions":"1536x384","alpha":true,"runtime_use":"Nyrelia source animation: move_s"},
+    {"asset_id":"nyrelia.attack","family":"animations/heroes","official_path":"assets/animations/heroes/nyrelia/attack.png","sha256":"1a763f52de249085d6fb6017963b49b0f7d48c027a67d5a1375421ad78fcf996","dimensions":"1024x384","alpha":true,"runtime_use":"Nyrelia source animation: attack"},
+    {"asset_id":"nyrelia.active","family":"animations/heroes","official_path":"assets/animations/heroes/nyrelia/active.png","sha256":"3a129528260295559733f8c254b32d6dd26e8a602e10a0880a13f4f6ea4c3d14","dimensions":"1536x384","alpha":true,"runtime_use":"Nyrelia source animation: active"},
+    {"asset_id":"nyrelia.death","family":"animations/heroes","official_path":"assets/animations/heroes/nyrelia/death.png","sha256":"42eb7005cadb3407f719648a704a258b58992149d0028cd3b5460652ee017174","dimensions":"1536x384","alpha":true,"runtime_use":"Nyrelia source animation: death"},
+    {"asset_id":"rocha_01","family":"props","official_path":"assets/props/rocha_01.png","sha256":"8b8145bd9724f2905aa0f47d25f02d88e2079f5633ba08f8a7491e610e91a5ec","dimensions":"256x256","alpha":true,"runtime_use":"Prop visual variant"},
+    {"asset_id":"rocha_02","family":"props","official_path":"assets/props/rocha_02.png","sha256":"40d47e7d3ac212f080b9bcdb676a5db6b4f9bba91cf416b0aac21ecc1cac778e","dimensions":"256x256","alpha":true,"runtime_use":"Prop visual variant"},
+    {"asset_id":"rocha_03","family":"props","official_path":"assets/props/rocha_03.png","sha256":"a164389984f15381f05b7ce452b508883430c2bf05ef2a056299b718d5d0339d","dimensions":"256x256","alpha":true,"runtime_use":"Prop visual variant"},
+    {"asset_id":"pilar_abissal_01","family":"props","official_path":"assets/props/pilar_abissal_01.png","sha256":"d95b5997845cf82ed0f67b2c5e73b692344b95818e4faee0de840af160217835","dimensions":"256x256","alpha":true,"runtime_use":"Prop visual variant"},
+    {"asset_id":"pilar_abissal_02","family":"props","official_path":"assets/props/pilar_abissal_02.png","sha256":"8f479fbc533df4fedb26627b9f5f4a641aa423772da5ecc7428a1d8a1f7e50a0","dimensions":"256x256","alpha":true,"runtime_use":"Prop visual variant"},
+    {"asset_id":"pilar_abissal_03","family":"props","official_path":"assets/props/pilar_abissal_03.png","sha256":"eaf07ba1019575855f39d3a355b78ab4f628500b3404663feb6c7373f18a798e","dimensions":"256x256","alpha":true,"runtime_use":"Prop visual variant"}
+  ]
+}

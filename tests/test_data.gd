@@ -69,9 +69,19 @@ func run() -> Array:
 		elif not ability_kinds.has(String(abilities[hid].kind)):
 			out.append("herói %s com habilidade de tipo inválido" % hid)
 	var stage_rules: Dictionary = Data.table("stage_rules")
+	var stage_events: Dictionary = Data.table("stage_events")
 	for sid in stages:
 		if not stage_rules.has(sid):
 			out.append("fase %s sem regra principal" % sid)
+	if String(stages.dagruve.boss) != "sacerdote_mente_derretida" or String(stages.dagruve.next) != "docas":
+		out.append("Dagruve não está configurada antes de Docas")
+	if String(stages.docas.boss) != "guardiao_verdadeiro" or String(stages.docas.next) != "shedaklah":
+		out.append("Docas não está configurada entre Dagruve e Shedaklah")
+	if not ("styx_gelatinous" in stages.durao.ambient) or String(stage_rules.durao.get("kind", "")) != "styx_gelatinous":
+		out.append("Durao deveria declarar o Estige gelatinoso, não uma corrente")
+	for sid in ["dagruve", "docas"]:
+		if not stage_events.has(sid) or stage_events[sid].is_empty():
+			out.append("fase %s sem eventos declarados" % sid)
 	var boss_phases: Dictionary = Data.table("boss_phases")
 	for bid in boss_phases:
 		if not enemies.has(bid):

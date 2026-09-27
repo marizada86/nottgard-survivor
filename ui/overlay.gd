@@ -70,6 +70,8 @@ func _texture(path: String) -> Texture2D:
 func _draw_over() -> void:
 	for it in battle.interactions:
 		var p := Iso.to_screen(it.pos)
+		var arrival_age := maxf(0.0, battle.time - float(it.get("born_at", 0.0)))
+		var arrival := clampf(arrival_age / 0.65, 0.0, 1.0)
 		var col := Color.WHITE
 		var label := ""
 		var asset := ""
@@ -79,23 +81,35 @@ func _draw_over() -> void:
 			"altar": col = Color(0.8, 0.4, 1.0); label = "altar [E]"; asset = "altar_active"
 			"ritual": col = Color(0.9, 0.2, 0.2); label = "ritual [E]"; asset = "ritual"
 			"portal": col = Color(0.3, 1.0, 0.6); label = "portal [E]"; asset = "portal"
+		# A simulação também bloqueia interação durante estes 0,65 s de entrada.
+		if arrival < 0.35:
+			var target_alpha := 0.25 + 0.45 * arrival / 0.35
+			draw_polyline(_ellipse_closed(it.pos, 0.65), Color(col, target_alpha), 2.0)
+			continue
+		var landing := clampf((arrival - 0.35) / 0.65, 0.0, 1.0)
+		var height_offset := lerpf(-70.0, 0.0, ease(landing, 2.2))
+		var size_scale := lerpf(0.55, 1.0, ease(landing, 1.8))
+		var draw_p := p + Vector2(0, height_offset)
+		if arrival > 0.92:
+			var impact := 1.0 - (arrival - 0.92) / 0.08
+			draw_polyline(_ellipse_closed(it.pos, 0.65 + (1.0 - impact) * 0.45), Color(col, impact * 0.55), 2.0)
 		var texture := _texture("res://assets/interactions/%s.png" % asset)
 		var animation_id: String = {"fountain": "fountain_active", "altar": "altar_active", "ritual": "ritual", "portal": "portal"}.get(String(it.kind), "")
 		var animation_count: int = {"fountain_active": 6, "altar_active": 6, "ritual": 8, "portal": 8}.get(animation_id, 0)
 		var animation_texture := _texture("res://assets/animations/interactions/%s.png" % animation_id) if animation_id != "" else null
 		if animation_texture != null and animation_count > 0:
-			var h := 70.0 if it.kind == "portal" else 54.0
+			var h := (70.0 if it.kind == "portal" else 54.0) * size_scale
 			var frame := int(Time.get_ticks_msec() / 100) % animation_count
 			var w := h
-			draw_texture_rect_region(animation_texture, Rect2(p.x - w * 0.5, p.y - h, w, h), Rect2(frame * 192, 0, 192, 192))
+			draw_texture_rect_region(animation_texture, Rect2(draw_p.x - w * 0.5, draw_p.y - h, w, h), Rect2(frame * 192, 0, 192, 192))
 		elif texture != null:
-			var h := 70.0 if it.kind == "portal" else 54.0
+			var h := (70.0 if it.kind == "portal" else 54.0) * size_scale
 			var w := h * float(texture.get_width()) / float(texture.get_height())
-			draw_texture_rect(texture, Rect2(p.x - w * 0.5, p.y - h, w, h), false)
+			draw_texture_rect(texture, Rect2(draw_p.x - w * 0.5, draw_p.y - h, w, h), false)
 		else:
-			draw_colored_polygon(PackedVector2Array([p + Vector2(0, -18), p + Vector2(14, 0), p + Vector2(0, 9), p + Vector2(-14, 0)]), Color(col, 0.35))
-			draw_rect(Rect2(p + Vector2(-9, -22), Vector2(18, 16)), col.darkened(0.2))
-		draw_string(ThemeDB.fallback_font, p + Vector2(-32, -62), label, HORIZONTAL_ALIGNMENT_CENTER, 64, 12, Color(col, 0.95))
+			draw_colored_polygon(PackedVector2Array([draw_p + Vector2(0, -18), draw_p + Vector2(14, 0), draw_p + Vector2(0, 9), draw_p + Vector2(-14, 0)]), Color(col, 0.35))
+			draw_rect(Rect2(draw_p + Vector2(-9, -22), Vector2(18, 16)), col.darkened(0.2))
+		draw_string(ThemeDB.fallback_font, draw_p + Vector2(-32, -62), label, HORIZONTAL_ALIGNMENT_CENTER, 64, 12, Color(col, 0.95))
 	for pk in battle.pickups:
 		var p := Iso.to_screen(pk.pos)
 		var pickup_asset: String = {"xp": "xp_shard", "gold": "gold_coin", "potion": "health_potion"}.get(String(pk.kind), "")

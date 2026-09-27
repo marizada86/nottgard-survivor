@@ -2,6 +2,8 @@ class_name Battle
 extends RefCounted
 ## Simulação da run (sem nós, RNG por seed). A UI lê o estado e consome `events`.
 
+const TerrainLayout := preload("res://core/terrain_layout.gd")
+
 enum Aim { AUTO, MOUSE }
 
 const ENEMY_ATK_RANGE := 0.95
@@ -38,6 +40,13 @@ var boss_spawned := false
 var boss_dead := false
 var boss_repeat := 0
 var stage_cleared := false
+## Pausa breve, dirigida por dados, antes de liberar o primeiro chefe.
+var boss_intro_remaining := 0.0
+## Maré de Névoa pós-chefe. Exposta para a UI e para os testes, sem depender dela.
+var fog_state := "inactive" # inactive | grace | warning | advancing
+var fog_elapsed := 0.0
+var fog_intensity := 0.0
+var fog_config: Dictionary = {}
 var final_victory := false
 var extracted := false
 var stage_changed := false
@@ -71,15 +80,29 @@ var barrier := 0.0
 var shadow_charge := false
 var descent_depth := 0
 var stage_rule: Dictionary = {}
+var stage_events: Array = []
 var _rule_timer := 0.0
 var _rule_index := -1
 var _effect_cd := {}
+var _stage_events_done := {}
 var _hero_moving := false
+## Afinidade estritamente visual; a aura só é habilitada por uma escolha divina.
+var visual_god := ""
+var visual_boon_selected := false
+## Estado ambiental de Durao. A RNG é separada para não deslocar a batalha.
+var styx_rng := RandomNumberGenerator.new()
+var styx_exposure := 0.0
+var styx_test_next := 1.0
+var styx_in_water := false
+var styx_warning_shown := false
+var styx_calling := false
 
 func _init(seed_value: int = 1, hero_id: String = "durvall", stage_key: String = "dagruve", ctx: Dictionary = {}) -> void:
 	rng.seed = seed_value
+	styx_rng.seed = seed_value ^ 0x5179
 	difficulty = float(ctx.get("difficulty", 1.0))
 	hero = Hero.make(hero_id, ctx.get("meta_mods", {}), ctx.get("bonus_mods", {}))
+	visual_god = String(Data.table("heroes")[hero_id].get("patron", ""))
 	active_def = Data.table("abilities")[hero_id].duplicate(true)
 	hero.map_size = map_size
 	hero.pos = map_size * 0.5
@@ -95,6 +118,7 @@ func load_stage(stage_key: String) -> void:
 	stage_id = stage_key
 	stage = Data.table("stages")[stage_key].duplicate(true)
 	stage_rule = Data.table("stage_rules").get(stage_key, {}).duplicate(true)
+	stage_events = Data.table("stage_events").get(stage_key, []).duplicate(true)
 	enemies.clear()
 	projectiles.clear()
 	zones.clear()
@@ -106,14 +130,28 @@ func load_stage(stage_key: String) -> void:
 	boss_dead = false
 	boss_repeat = 0
 	stage_cleared = false
+	boss_intro_remaining = 0.0
+	fog_state = "inactive"
+	fog_elapsed = 0.0
+	fog_intensity = 0.0
+	fog_config.clear()
 	_acc.clear()
 	_elites_done.clear()
+	_stage_events_done.clear()
 	_inter_t = 4.0
 	_first_inter = true
 	_amb_puddle = 9.0
 	_amb_strike = 6.0
 	_rule_timer = minf(8.0, float(stage_rule.get("interval", 8.0)))
 	_rule_index = -1
+	styx_exposure = 0.0
+	styx_test_next = 1.0
+	styx_in_water = false
+	styx_warning_shown = false
+	styx_calling = false
+	hero.styx_lucidity_loss = 0
+	hero.styx_forget_t = 0.0
+	hero.terrain_id = stage_key
 	hero.pos = map_size * 0.5
 	if _has_boon_effect("stage_heal"):
 		_heal_hero(hero.max_hp * 0.15)
@@ -127,15 +165,25 @@ static func xp_need_for(lv: int) -> int:
 func spawn_for_test(id: String, at: Vector2) -> Enemy:
 	return _spawn(id, at, 0.0)
 
-func qa_prepare(target_state: String) -> void:
+func qa_prepare(request: Variant) -> void:
+	var qa: Dictionary = request if request is Dictionary else {"target_state": String(request)}
+	_apply_qa_build(qa)
+	var event_id := String(qa.get("event_id", ""))
+	if event_id != "":
+		_prepare_qa_stage_event(event_id, float(qa.get("prelude_seconds", 5.0)))
+		return
+	var target_state := String(qa.get("target_state", "running"))
+	if target_state == "boss":
+		time = maxf(0.0, float(stage.duration) - float(qa.get("prelude_seconds", 5.0)))
+		_skip_stage_events_before(time)
+		return
 	match target_state:
 		"levelup":
 			_add_xp(float(xp_need_for(hero.level)))
 		"altar":
 			_open_altar()
-		"boss", "boss_70", "boss_35", "portal":
-			boss = spawn_for_test(String(stage.boss), hero.pos + Vector2(2, 0))
-			boss_spawned = true
+		"boss_70", "boss_35", "portal":
+			_spawn_qa_boss()
 			if target_state == "boss_70":
 				boss.hp = boss.max_hp * 0.69
 				_check_boss_phase(boss)
@@ -159,6 +207,106 @@ func qa_prepare(target_state: String) -> void:
 			state = "revive_offer"
 		"rule":
 			_stage_rule_step(99.0)
+		"prop_grounding":
+			events.append({"type": "toast", "text": "QA: cruz verde = contato; contorno amarelo = sombra; inspecione o y-sort."})
+		"styx_entry":
+			hero.pos = TerrainLayout.styx_sample("durao")
+			events.append({"type": "toast", "text": "QA: entrada no Rio Estige preparada."})
+		"styx_margin":
+			hero.pos = TerrainLayout.styx_sample("durao", TerrainLayout.MATERIAL_BANK)
+			events.append({"type": "toast", "text": "QA: margem do Estige preparada."})
+		"styx_current":
+			hero.pos = TerrainLayout.styx_sample("durao", TerrainLayout.MATERIAL_CURRENT)
+			events.append({"type": "toast", "text": "QA: gelatina central do Estige preparada."})
+		"styx_rare":
+			hero.pos = TerrainLayout.styx_sample("durao", TerrainLayout.MATERIAL_BANK)
+			var rare := _spawn_elite("alma_penada", TerrainLayout.styx_sample("durao", TerrainLayout.MATERIAL_CURRENT))
+			rare.styx_imbued = true
+			events.append({"type": "toast", "text": "QA: raro Imbuído por Juiblex preparado."})
+		"styx_cliff":
+			hero.pos = Vector2(5.0, 9.0)
+			events.append({"type": "toast", "text": "QA: penhasco e bloqueio lógico preparados."})
+		"styx_telegraph":
+			hero.pos = TerrainLayout.styx_sample("durao", TerrainLayout.MATERIAL_SHALLOW)
+			zones.append({"owner": "stage", "kind": "telegraph", "pos": hero.pos, "radius": 1.5, "delay": 1.3, "total": 1.3, "life": 99.0, "dice": "2d6", "bonus": 8, "dtype": "magico"})
+			events.append({"type": "toast", "text": "QA: telégrafo sobre o Estige preparado."})
+		"styx_item":
+			hero.pos = TerrainLayout.styx_sample("durao", TerrainLayout.MATERIAL_BANK)
+			pickups.append({"kind": "gold", "pos": TerrainLayout.styx_sample("durao", TerrainLayout.MATERIAL_SHALLOW), "value": 1.0, "magnet": false})
+			events.append({"type": "toast", "text": "QA: item na água rasa preparado."})
+		"styx_portal":
+			hero.pos = TerrainLayout.styx_sample("durao", TerrainLayout.MATERIAL_BANK)
+			_add_interaction("portal", TerrainLayout.styx_sample("durao", TerrainLayout.MATERIAL_SHALLOW))
+			events.append({"type": "toast", "text": "QA: portal junto ao Estige preparado."})
+		"styx_boss":
+			hero.pos = TerrainLayout.styx_sample("durao", TerrainLayout.MATERIAL_BANK)
+			_spawn_qa_boss()
+			boss.pos = TerrainLayout.styx_sample("durao", TerrainLayout.MATERIAL_SHALLOW)
+			events.append({"type": "toast", "text": "QA: chefe junto ao Estige preparado."})
+		"styx_forget":
+			hero.styx_forget_t = 4.0
+			hero.styx_lucidity_loss = 1
+			hero.pos = Vector2(20.0, 20.0)
+			events.append({"type": "toast", "text": "QA: Esquecimento do Estige ativo por 4 s."})
+		"styx_call":
+			hero.pos = TerrainLayout.styx_sample("durao")
+			styx_exposure = 10.0
+			styx_in_water = true
+			styx_calling = true
+			events.append({"type": "toast", "text": "QA: Chamado do Estige ativo."})
+		"styx_defeat":
+			hero.pos = TerrainLayout.styx_sample("durao")
+			styx_exposure = 11.9
+			styx_in_water = true
+			events.append({"type": "toast", "text": "QA: derrota pelo Estige em 0,1 s."})
+		"chest", "fountain", "altar", "ritual":
+			_add_interaction(target_state, hero.pos + Vector2(1.0, 0.0))
+
+func _apply_qa_build(qa: Dictionary) -> void:
+	var level := clampi(int(qa.get("level", 1)), 1, 20)
+	hero.level = level
+	hero.xp = 0.0
+	hero.xp_need = xp_need_for(level)
+	var weapon_ids: Array = qa.get("weapons", [])
+	for weapon_id in weapon_ids:
+		var wid := String(weapon_id)
+		if Data.table("weapons").has(wid) and not hero.weapons.any(func(w): return w.id == wid):
+			hero.weapons.append(Weapon.make(wid))
+			codex.weapons[wid] = true
+	var passive_id := String(qa.get("passive_id", ""))
+	if passive_id != "" and Data.table("passives").has(passive_id):
+		hero.passives[passive_id] = clampi(int(qa.get("passive_level", 1)), 1, 5)
+	var item_id := String(qa.get("item_id", ""))
+	if item_id != "":
+		for item in Data.table("items").uniques:
+			if String(item.id) == item_id:
+				hero.items[String(item.slot)] = item.duplicate(true)
+				break
+	hero.recalc()
+	hero.hp = hero.max_hp
+
+func _prepare_qa_stage_event(event_id: String, prelude: float) -> void:
+	for event_def in stage_events:
+		if String(event_def.get("id", "")) != event_id:
+			continue
+		var at := float(event_def.get("at", 0.0))
+		time = maxf(0.0, at - maxf(0.0, prelude))
+		_skip_stage_events_before(at)
+		return
+
+func _skip_stage_events_before(at: float) -> void:
+	for event_def in stage_events:
+		if float(event_def.get("at", 0.0)) < at:
+			var event_id := String(event_def.get("id", ""))
+			_stage_events_done[event_id] = true
+			_stage_events_done["%s.warning" % event_id] = true
+
+func _spawn_qa_boss() -> void:
+	boss = spawn_for_test(String(stage.boss), hero.pos + Vector2(2, 0))
+	boss_spawned = true
+	events.append({"type": "boss", "enemy": boss})
+	_start_boss_intro(boss)
+	events.append({"type": "toast", "text": "%s surge!" % boss.name})
 
 func toggle_aim() -> void:
 	aim = Aim.MOUSE if aim == Aim.AUTO else Aim.AUTO
@@ -299,6 +447,13 @@ func alive(id: String) -> int:
 func step(screen_dir: Vector2, dt: float) -> void:
 	if state != "running" or hero.dead:
 		return
+	if boss_intro_remaining > 0.0:
+		boss_intro_remaining = maxf(0.0, boss_intro_remaining - dt)
+		if is_zero_approx(boss_intro_remaining):
+			events.append({"type": "boss_intro_end"})
+			if boss != null and not boss.dead:
+				events.append({"type": "telegraph", "pos": boss.pos, "radius": 2.2, "delay": 0.8, "enemy_id": boss.id})
+		return
 	time += dt
 	run_time += dt
 	_update_effect_timers(dt)
@@ -306,7 +461,9 @@ func step(screen_dir: Vector2, dt: float) -> void:
 	hero.push = Vector2.ZERO
 	_hero_moving = screen_dir != Vector2.ZERO
 	_stage_rule_step(dt)
+	_stage_event_step()
 	hero.step(screen_dir, dt)
+	_update_postboss_fog(dt)
 	if hero.m("regen") > 0.0:
 		_heal_hero(hero.m("regen") * dt)
 	_build_grid()
@@ -445,7 +602,7 @@ func _fire_zone(p: Dictionary, area: float) -> bool:
 	events.append({"type": "zone", "pos": at, "radius": r, "dtype": p.dtype, "weapon": p.get("_audio_id", p.get("id", ""))})
 	return true
 
-## Golpe do herói. `roll`: usa d20 vs CA/CAM (senão acerta sempre, p.ex. zonas).
+## Golpe do herói. `roll`: usa d20 para erro/crítico e precisão contra evasão tipada.
 func _hero_hit(e: Enemy, p: Dictionary, roll: bool) -> bool:
 	if e.dead:
 		return false
@@ -456,14 +613,12 @@ func _hero_hit(e: Enemy, p: Dictionary, roll: bool) -> bool:
 	if roll:
 		r = Dice.d20(rng)
 		var acc := hero.prof + hero.attr_mod(attr) + int(hero.m("hit")) + int(p.get("acc", 0))
-		var defn: int = e.ca if dtype == "fisico" else e.cam
-		var cmin := 20 - hero.crit_range()
 		if r == 1:
 			stats.ones += 1
-		crit = r >= cmin
-		if not crit and (r == 1 or r + acc < defn):
+		if r == 1 or (r != 20 and rng.randf() >= _hit_chance(acc, e.typed_evasion(dtype))):
 			events.append({"type": "miss", "pos": e.pos})
 			return false
+		crit = r == 20 or rng.randf() < hero.crit_chance(r + acc)
 	var dmg := 0.0
 	var dice := String(p.get("dice", ""))
 	if dice != "":
@@ -478,7 +633,7 @@ func _hero_hit(e: Enemy, p: Dictionary, roll: bool) -> bool:
 			shadow_charge = false
 		if hero.hp < hero.max_hp * 0.5:
 			pct += hero.m("low_hp_dmg")
-		dmg *= maxf(0.2, pct) * (1.0 + e.mark) * float(e.resist.get(dtype, 1.0))
+		dmg *= maxf(0.2, pct) * (1.0 + e.mark) * float(e.resist.get(dtype, 1.0)) * _styx_enemy_defense_multiplier(e)
 		if crit:
 			dmg *= 2.0
 			stats.crits += 1
@@ -551,7 +706,7 @@ func _update_projectiles(dt: float) -> void:
 							gone = true
 							break
 			elif pr.pos.distance_to(hero.pos) <= HERO_HIT_R + pr.radius:
-				_enemy_hit_hero(int(pr.bonus), String(pr.dice), String(pr.dtype), true)
+				_enemy_hit_hero(int(pr.bonus), String(pr.dice), String(pr.dtype), true, float(pr.get("damage_mult", 1.0)))
 				gone = true
 		if not gone:
 			keep.append(pr)
@@ -619,7 +774,7 @@ func _update_zones(dt: float) -> void:
 			if z.delay <= 0.0:
 				events.append({"type": "boom", "pos": z.pos, "radius": z.radius})
 				if hero.pos.distance_to(z.pos) <= z.radius + HERO_HIT_R:
-					_hurt_hero(float(Dice.roll(rng, z.dice) + int(z.bonus / 2)), "aoe")
+					_hurt_hero(float(Dice.roll(rng, z.dice) + int(z.bonus / 2)) * float(z.get("damage_mult", 1.0)), "aoe")
 				if z.kind == "bubble":
 					var away: Vector2 = (hero.pos - Vector2(z.pos)).normalized()
 					hero.push += away * 4.0
@@ -739,7 +894,7 @@ func _enemy_step(e: Enemy, dt: float) -> void:
 			e.pos = np
 		if dist <= e.radius + HERO_HIT_R + 0.2 and e.atk_cd <= 0.0:
 			e.atk_cd = 1.0
-			_enemy_hit_hero(int(e.charge_ab.get("bonus", e.atk_bonus)), String(e.charge_ab.dice), "fisico", false)
+			_enemy_hit_hero(int(e.charge_ab.get("bonus", e.atk_bonus)), String(e.charge_ab.dice), "fisico", false, _styx_enemy_damage_multiplier(e))
 		return
 	if e.windup > 0.0:
 		e.windup -= dt
@@ -783,7 +938,7 @@ func _enemy_step(e: Enemy, dt: float) -> void:
 	var reach := 1.4 if e.speed == 0.0 else ENEMY_ATK_RANGE + e.radius * 0.3
 	if dist <= reach and e.atk_cd <= 0.0:
 		e.atk_cd = ENEMY_ATK_CD
-		_enemy_hit_hero(e.atk_bonus, e.atk_dice, "fisico", false)
+		_enemy_hit_hero(e.atk_bonus, e.atk_dice, "fisico", false, _styx_enemy_damage_multiplier(e))
 
 func _use_ability(e: Enemy, idx: int, a: Dictionary, dist: float, to: Vector2) -> bool:
 	match String(a.t):
@@ -792,7 +947,7 @@ func _use_ability(e: Enemy, idx: int, a: Dictionary, dist: float, to: Vector2) -
 				return false
 			var dir := to.normalized()
 			projectiles.append({"owner": "enemy", "pos": e.pos, "dir": dir, "speed": float(a.speed), "life": float(a.range) / float(a.speed) + 1.0, "radius": 0.25,
-				"dice": a.dice, "bonus": int(a.bonus) + int(minute() / 4.0) + tier(), "dtype": a.dtype, "pierce": 0, "hit": {}, "p": {}})
+				"dice": a.dice, "bonus": int(a.bonus) + int(minute() / 4.0) + tier(), "dtype": a.dtype, "pierce": 0, "hit": {}, "p": {}, "damage_mult": _styx_enemy_damage_multiplier(e)})
 			events.append({"type": "enemy_action", "enemy_id": e.id, "pos": e.pos, "ability": "shoot"})
 			return true
 		"aoe":
@@ -800,7 +955,7 @@ func _use_ability(e: Enemy, idx: int, a: Dictionary, dist: float, to: Vector2) -
 				return false
 			var lead := hero.pos
 			zones.append({"owner": "enemy", "kind": "telegraph", "pos": lead, "radius": float(a.radius), "delay": float(a.delay), "life": 99.0,
-				"dice": a.dice, "bonus": e.atk_bonus, "dtype": a.dtype})
+				"dice": a.dice, "bonus": e.atk_bonus, "dtype": a.dtype, "damage_mult": _styx_enemy_damage_multiplier(e)})
 			events.append({"type": "telegraph", "pos": lead, "radius": float(a.radius), "delay": float(a.delay), "enemy_id": e.id})
 			return true
 		"charge":
@@ -832,33 +987,42 @@ func _use_ability(e: Enemy, idx: int, a: Dictionary, dist: float, to: Vector2) -
 			for k in n:
 				var ang := off + TAU * k / n
 				projectiles.append({"owner": "enemy", "pos": e.pos, "dir": Vector2(cos(ang), sin(ang)), "speed": float(a.speed), "life": 4.0, "radius": 0.25,
-					"dice": a.dice, "bonus": e.atk_bonus, "dtype": "magico", "pierce": 0, "hit": {}, "p": {}})
+					"dice": a.dice, "bonus": e.atk_bonus, "dtype": "magico", "pierce": 0, "hit": {}, "p": {}, "damage_mult": _styx_enemy_damage_multiplier(e)})
 			events.append({"type": "enemy_action", "enemy_id": e.id, "pos": e.pos, "ability": "ring"})
 			return true
 	return false
 
-func _enemy_hit_hero(bonus: int, dice: String, dtype: String, is_proj: bool) -> void:
+func _enemy_hit_hero(bonus: int, dice: String, dtype: String, is_proj: bool, damage_mult: float = 1.0) -> void:
 	if hero.dead or invuln > 0.0:
 		return
 	var r := Dice.d20(rng)
-	var defn: int = hero.ca() if dtype == "fisico" else hero.cam()
-	if r == 1 or (r != 20 and r + bonus < defn):
+	if r == 1 or (r != 20 and rng.randf() >= _hit_chance(bonus, 0.0)):
 		events.append({"type": "text", "pos": hero.pos, "text": "erra"})
 		return
-	if rng.randf() < hero.m("dodge"):
+	if rng.randf() < hero.evasion(dtype, bonus):
 		events.append({"type": "text", "pos": hero.pos, "text": "esquiva"})
 		if _has_boon_effect("shadow_dodge"):
 			invuln = maxf(invuln, 0.45)
 		if _has_item_effect("dodge_empower"):
 			shadow_charge = true
 		return
-	var dmg := float(Dice.roll(rng, dice)) * (2.0 if r == 20 else 1.0)
+	var dmg := float(Dice.roll(rng, dice)) * (2.0 if r == 20 else 1.0) * damage_mult
 	_hurt_hero(dmg, "hit")
 
-func _hurt_hero(dmg: float, src: String) -> void:
-	if hero.dead or invuln > 0.0:
+func _styx_enemy_damage_multiplier(enemy: Enemy) -> float:
+	return 1.20 if enemy.styx_imbued else 1.0
+
+func _styx_enemy_defense_multiplier(enemy: Enemy) -> float:
+	return 0.85 if enemy.styx_imbued else 1.0
+
+func _hit_chance(accuracy: int, evasion: float) -> float:
+	# Bônus de ataque preserva a escala anterior do d20; evasão reduz o resultado.
+	return clampf((11.0 + float(accuracy)) / 20.0, 0.10, 0.95) * (1.0 - evasion)
+
+func _hurt_hero(dmg: float, src: String, bypass_generic_defenses: bool = false) -> void:
+	if hero.dead or (invuln > 0.0 and not bypass_generic_defenses):
 		return
-	if active_guard > 0:
+	if active_guard > 0 and not bypass_generic_defenses:
 		active_guard -= 1
 		if active_guard <= 0:
 			active_guard_t = 0.0
@@ -868,8 +1032,9 @@ func _hurt_hero(dmg: float, src: String) -> void:
 				if not e.dead and e.pos.distance_to(hero.pos) <= 2.6:
 					_hero_hit(e, {"dice": "2d8", "attr": "carisma", "dtype": "radiante", "knock": 1.0}, false)
 		return
-	dmg = maxf(1.0, dmg * difficulty - hero.m("dr"))
-	if barrier > 0.0:
+	if not bypass_generic_defenses:
+		dmg = maxf(1.0, dmg * difficulty - hero.m("dr"))
+	if barrier > 0.0 and not bypass_generic_defenses:
 		var absorbed := minf(barrier, dmg)
 		barrier -= absorbed
 		dmg -= absorbed
@@ -878,10 +1043,11 @@ func _hurt_hero(dmg: float, src: String) -> void:
 			return
 	hero.hp -= dmg
 	hero.hit_flash = 0.15
-	invuln = maxf(invuln, HIT_INVULN)
+	if not bypass_generic_defenses:
+		invuln = maxf(invuln, HIT_INVULN)
 	stats.damage_taken += dmg
 	events.append({"type": "hurt", "pos": hero.pos, "amount": int(dmg)})
-	if _has_boon_effect("pain_retaliation"):
+	if _has_boon_effect("pain_retaliation") and not bypass_generic_defenses:
 		for e in enemies:
 			if not e.dead and e.pos.distance_to(hero.pos) <= 2.2:
 				var retaliation := maxf(1.0, round(dmg * 0.5))
@@ -987,9 +1153,65 @@ func _on_boss_dead(e: Enemy) -> void:
 	var nxt: String = stage.get("next", "")
 	if nxt != "":
 		_add_interaction("portal", e.pos + Vector2(0, 2.0))
+		_start_postboss_fog(e.id)
 		events.append({"type": "toast", "text": "Portal aberto: %s (E). Ou extraia (X)." % String(stage.essence)})
 	else:
 		state = "won"
+
+func _boss_presentation(boss_id: String) -> Dictionary:
+	return Data.table("boss_presentations").get(boss_id, {}).duplicate(true)
+
+func _start_boss_intro(e: Enemy) -> void:
+	var presentation := _boss_presentation(e.id)
+	if presentation.is_empty():
+		return
+	boss_intro_remaining = clampf(float(presentation.get("pause_seconds", 1.0)), 0.8, 1.2)
+	events.append({"type": "boss_intro", "enemy": e, "presentation": presentation})
+
+func _start_postboss_fog(boss_id: String) -> void:
+	var presentation := _boss_presentation(boss_id)
+	var config: Dictionary = presentation.get("fog", {})
+	if not bool(config.get("enabled", false)):
+		return
+	fog_config = config.duplicate(true)
+	fog_state = "grace"
+	fog_elapsed = 0.0
+	fog_intensity = 0.0
+	events.append({"type": "postboss_fog", "state": fog_state})
+	events.append({"type": "toast", "text": "A Maré de Névoa se aproxima. Extraia (X) ou atravesse o portal (E)."})
+
+func _update_postboss_fog(dt: float) -> void:
+	if fog_state == "inactive":
+		return
+	fog_elapsed += dt
+	var grace := float(fog_config.get("grace_seconds", 8.0))
+	var warning := float(fog_config.get("warning_seconds", 2.0))
+	if fog_elapsed < grace:
+		return
+	if fog_elapsed < grace + warning:
+		if fog_state != "warning":
+			fog_state = "warning"
+			events.append({"type": "postboss_fog", "state": fog_state})
+		return
+	if fog_state != "advancing":
+		fog_state = "advancing"
+		events.append({"type": "postboss_fog", "state": fog_state})
+	var advance_time := fog_elapsed - grace - warning
+	var advance_seconds := maxf(1.0, float(fog_config.get("advance_seconds", 28.0)))
+	fog_intensity = clampf(advance_time / advance_seconds, 0.0, 1.0)
+	var edge_distance := minf(minf(hero.pos.x, map_size.x - hero.pos.x), minf(hero.pos.y, map_size.y - hero.pos.y))
+	var fog_depth := minf(map_size.x, map_size.y) * 0.5 * fog_intensity
+	if edge_distance > fog_depth:
+		return
+	_hurt_hero(hero.max_hp * fog_damage_per_second() * dt, "mare_nevoa", true)
+
+func fog_damage_per_second() -> float:
+	if fog_state != "advancing":
+		return 0.0
+	var ramp := maxf(1.0, float(fog_config.get("ramp_seconds", 20.0)))
+	var since_advance := maxf(0.0, fog_elapsed - float(fog_config.get("grace_seconds", 8.0)) - float(fog_config.get("warning_seconds", 2.0)))
+	var ratio := clampf(since_advance / ramp, 0.0, 1.0)
+	return lerpf(float(fog_config.get("start_dps_pct", 0.01)), float(fog_config.get("max_dps_pct", 0.03)), ratio)
 
 func _drop(kind: String, at: Vector2, value: float) -> void:
 	if pickups.size() >= MAX_PICKUPS and kind != "potion":
@@ -1038,11 +1260,13 @@ func _update_pickups(dt: float) -> void:
 
 func _add_interaction(kind: String, at: Vector2) -> void:
 	at = at.clamp(Vector2(1, 1), map_size - Vector2(1, 1))
-	interactions.append({"kind": kind, "pos": at, "used": false})
+	interactions.append({"kind": kind, "pos": at, "used": false, "born_at": time})
 
 func _update_interactions(dt: float) -> void:
 	for it in interactions:
 		if it.used:
+			continue
+		if time - float(it.get("born_at", 0.0)) < 0.65:
 			continue
 		var d: float = it.pos.distance_to(hero.pos)
 		if d <= 0.8 and (it.kind == "chest" or it.kind == "fountain"):
@@ -1066,7 +1290,7 @@ func interact() -> bool:
 	var best: Dictionary = {}
 	var bd := 1.6
 	for it in interactions:
-		if not it.used and it.kind in ["altar", "ritual", "portal"]:
+		if not it.used and time - float(it.get("born_at", 0.0)) >= 0.65 and it.kind in ["altar", "ritual", "portal"]:
 			var d: float = it.pos.distance_to(hero.pos)
 			if d <= bd:
 				bd = d
@@ -1303,6 +1527,12 @@ func choose(i: int) -> void:
 			_add_gold(40.0)
 		"boon":
 			hero.boons.append(c.boon)
+	var offered_boon: Dictionary = c.get("boon", {})
+	var chosen_god := String(c.get("god", offered_boon.get("god", "")))
+	if chosen_god != "":
+		visual_god = chosen_god
+		visual_boon_selected = visual_boon_selected or offer_kind == "altar"
+		events.append({"type": "divinity", "god": visual_god})
 	hero.recalc()
 	if offer_kind == "altar":
 		state = "running"
@@ -1393,6 +1623,7 @@ func _director(dt: float) -> void:
 		boss.hp = boss.max_hp
 		codex.enemies[boss.id] = true
 		events.append({"type": "boss", "enemy": boss})
+		_start_boss_intro(boss)
 		events.append({"type": "toast", "text": "%s surge!" % boss.name})
 	if boss_spawned and not boss_dead:
 		_trickle += dt
@@ -1452,6 +1683,37 @@ func _stage_rule_step(dt: float) -> void:
 		kind = String(rules[idx])
 	_apply_rule_kind(kind, dt)
 
+func _stage_event_step() -> void:
+	for event_def in stage_events:
+		var event_id := String(event_def.get("id", ""))
+		if event_id == "" or _stage_events_done.has(event_id):
+			continue
+		var at := float(event_def.get("at", 0.0))
+		var warning := float(event_def.get("warning", 5.0))
+		var warning_key := "%s.warning" % event_id
+		if time >= at - warning and not _stage_events_done.has(warning_key):
+			_stage_events_done[warning_key] = true
+			events.append({"type": "stage_event_warning", "id": event_id, "text": String(event_def.get("warning_text", event_def.get("title", ""))), "pos": hero.pos})
+		if time >= at:
+			_stage_events_done[event_id] = true
+			_fire_stage_event(event_def)
+
+func _fire_stage_event(event_def: Dictionary) -> void:
+	var kind := String(event_def.get("kind", ""))
+	var at := _ring_pos()
+	match kind:
+		"ritual":
+			zones.append({"owner": "stage", "kind": "rule_ritual", "pos": at, "radius": 1.7, "delay": float(stage_rule.get("delay", 7.0)), "total": float(stage_rule.get("delay", 7.0)),
+				"interrupt": float(stage_rule.get("interrupt", 1.5)), "progress": 0.0, "life": 99.0})
+		"hazard":
+			zones.append({"owner": "stage", "kind": "puddle", "pos": at, "radius": 1.35, "grows": true, "delay": 0.0, "life": 10.0, "acc": 0.0})
+		"wave":
+			for i in int(event_def.get("count", 1)):
+				_spawn(String(event_def.get("enemy_id", "zumbi")), at + Vector2(rng.randf_range(-1.4, 1.4), rng.randf_range(-1.4, 1.4)))
+		"elite":
+			_spawn_elite(String(event_def.get("enemy_id", "criatura_corrompida")), at)
+	events.append({"type": "stage_event", "id": String(event_def.get("id", "")), "text": String(event_def.get("result_text", event_def.get("title", ""))), "pos": at})
+
 func _apply_rule_kind(kind: String, dt: float) -> void:
 	match kind:
 		"puddles":
@@ -1462,6 +1724,9 @@ func _apply_rule_kind(kind: String, dt: float) -> void:
 				zones.append({"owner": "enemy", "kind": "puddle", "pos": hero.pos + Vector2(cos(ang), sin(ang)) * rng.randf_range(2.5, 6.0),
 					"radius": 1.0, "grows": true, "delay": 0.0, "life": 11.0, "acc": 0.0})
 		"current":
+			if stage_id == "durao":
+				_styx_step(dt)
+				return
 			_cur_angle += 0.12 * dt
 			var current := Vector2(cos(_cur_angle), sin(_cur_angle)) * float(stage_rule.get("force", 0.9))
 			hero.push += current
@@ -1470,6 +1735,8 @@ func _apply_rule_kind(kind: String, dt: float) -> void:
 			for e in enemies:
 				if not e.dead and not e.is_boss():
 					e.pos = (e.pos + current * dt * 0.25).clamp(Vector2(0.5, 0.5), map_size - Vector2(0.5, 0.5))
+		"styx_gelatinous":
+			_styx_step(dt)
 		"strikes":
 			_amb_strike -= dt
 			if _amb_strike <= 0.0:
@@ -1499,6 +1766,63 @@ func _apply_rule_kind(kind: String, dt: float) -> void:
 				var fake := rng.randf() < float(stage_rule.fake_chance)
 				zones.append({"owner": "stage", "kind": "sanctuary", "pos": _ring_pos(), "radius": 2.2, "life": float(stage_rule.duration), "acc": 0.0, "fake": fake})
 				events.append({"type": "toast", "text": "Um santuário surge no falso paraíso."})
+
+func _styx_step(dt: float) -> void:
+	_update_styx_imbuement()
+	var in_water := TerrainLayout.is_styx_water(stage_id, hero.pos)
+	if not in_water:
+		if styx_in_water and styx_exposure >= 2.0:
+			var duration := minf(floor(styx_exposure), 6.0)
+			hero.styx_forget_t = maxf(hero.styx_forget_t, duration)
+			events.append({"type": "styx_forget", "pos": hero.pos, "duration": duration})
+		styx_exposure = 0.0
+		styx_test_next = 1.0
+		styx_in_water = false
+		styx_warning_shown = false
+		styx_calling = false
+		return
+	if not styx_in_water:
+		styx_in_water = true
+		_styx_lucidity_test(11)
+	styx_exposure += dt
+	while styx_exposure >= styx_test_next:
+		_styx_lucidity_test(mini(16, 11 + int(styx_test_next)))
+		styx_test_next += 1.0
+	if styx_exposure >= 7.0 and not styx_warning_shown:
+		styx_warning_shown = true
+		events.append({"type": "styx_warning", "pos": hero.pos})
+	if styx_exposure >= 10.0:
+		if not styx_calling:
+			styx_calling = true
+			events.append({"type": "styx_call", "pos": hero.pos})
+	if styx_exposure >= 12.0:
+		_defeat_from_styx()
+
+func _update_styx_imbuement() -> void:
+	for enemy in enemies:
+		var should_be_imbued: bool = not enemy.dead and not enemy.is_boss() and not enemy.affix.is_empty() and TerrainLayout.is_styx_water(stage_id, enemy.pos)
+		if enemy.styx_imbued == should_be_imbued:
+			continue
+		enemy.styx_imbued = should_be_imbued
+		events.append({"type": "styx_imbued", "pos": enemy.pos, "enemy": enemy, "active": should_be_imbued})
+
+func _styx_lucidity_test(dc: int) -> void:
+	var roll := styx_rng.randi_range(1, 20)
+	var total := roll + hero.styx_intelligence_mod() + maxi(0, hero.cam() - 10)
+	var passed := total >= dc
+	if not passed:
+		hero.styx_lucidity_loss += 1
+	events.append({"type": "styx_test", "pos": hero.pos, "passed": passed, "roll": roll, "dc": dc, "loss": hero.styx_lucidity_loss})
+
+func _defeat_from_styx() -> void:
+	if state != "running":
+		return
+	hero.dead = true
+	hero.hp = 0.0
+	state = "dead"
+	death_reason = "styx"
+	events.append({"type": "styx_defeat", "pos": hero.pos})
+	events.append({"type": "dead", "pos": hero.pos})
 
 # ------------------------------------------------------------------ resultado
 

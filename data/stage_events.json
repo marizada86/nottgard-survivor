@@ -1,0 +1,11 @@
+{
+  "dagruve": [
+    {"id": "ritual_da_nevoa", "at": 115.0, "warning": 5.0, "kind": "ritual", "title": "Ritual da Névoa", "warning_text": "Cultistas acendem um selo na névoa.", "result_text": "Interrompa o selo para impedir reforços."},
+    {"id": "pulso_da_fratura", "at": 290.0, "warning": 5.0, "kind": "hazard", "title": "Pulso da Fratura", "warning_text": "A névoa distorce o chão adiante.", "result_text": "A fratura deixa uma zona hostil."}
+  ],
+  "docas": [
+    {"id": "cais_atacado", "at": 90.0, "warning": 5.0, "kind": "wave", "enemy_id": "criatura_corrompida", "count": 3, "title": "Cais atacado", "warning_text": "Cordas estalam e a água recua do cais.", "result_text": "Criaturas avançam pelo cais."},
+    {"id": "pulso_da_fenda", "at": 250.0, "warning": 5.0, "kind": "hazard", "title": "Pulso da Fenda", "warning_text": "Inscrições e luz fria respondem no porão.", "result_text": "A fenda contamina o terreno."},
+    {"id": "copias_do_guardiao", "at": 400.0, "warning": 5.0, "kind": "elite", "enemy_id": "guardiao_copia", "title": "Sombras aladas", "warning_text": "Uma sombra alada cresce entre os livros.", "result_text": "Uma cópia do Guardião protege o ritual."}
+  ]
+}

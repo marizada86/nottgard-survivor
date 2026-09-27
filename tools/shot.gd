@@ -21,6 +21,8 @@ func _ready() -> void:
 			run.battle._add_xp(400.0)
 		if "boss" in flags:
 			run.battle.time = float(run.battle.stage.duration) - 0.2
+		if "postboss" in flags:
+			run.battle.qa_prepare("portal")
 		if "items" in flags:
 			for i in 5:
 				run.battle.give_item(Items.roll(run.battle.rng, 4, 3.0))

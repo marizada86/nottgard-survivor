@@ -67,11 +67,11 @@ static func mods_text(mods: Dictionary) -> String:
 	var parts: Array = []
 	var labels := {"dmg_pct": "dano", "speed_pct": "velocidade", "cd_pct": "recarga", "area_pct": "área", "gold_pct": "moedas", "xp_pct": "XP",
 		"hp": "PV", "regen": "PV/s", "ca": "CA", "cam": "CAM", "hit": "precisão", "pickup": "coleta", "dr": "redução", "forca": "FOR", "inteligencia": "INT",
-		"constituicao": "CON", "carisma": "CAR", "crit_range": "crítico", "dodge": "esquiva"}
+		"constituicao": "CON", "carisma": "CAR", "crit_overflow_bonus": "crítico", "crit_overflow_step": "crítico/2 níveis", "dodge": "esquiva"}
 	for k in mods:
 		var v: float = float(mods[k])
 		var lab: String = labels.get(k, k)
-		if k.ends_with("_pct") or k == "dodge":
+		if k.ends_with("_pct") or k in ["dodge", "crit_overflow_bonus"]:
 			parts.append("%+d%% %s" % [int(round(v * 100.0)), lab])
 		elif absf(v) < 2.0 and v != floorf(v):
 			parts.append("%+.1f %s" % [v, lab])

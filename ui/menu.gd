@@ -123,8 +123,10 @@ func _refresh_hero() -> void:
 	portrait.texture = load(pth) if ResourceLoader.exists(pth) else null
 	var w: Dictionary = Data.table("weapons")[d.weapon]
 	var a: Dictionary = d.attrs
-	var txt := "[b]%s[/b] — %s\nFOR %d · INT %d · CON %d · CAR %d   |   PV %d · CA %d · CAM %d\n\n[b]Arma inicial:[/b] %s — %s\n[b]Passiva:[/b] %s — %s" % [
-		d.name, d.title, a.forca, a.inteligencia, a.constituicao, a.carisma, d.base_hp, 10 + int(d.armor.ca), 10 + int(d.armor.cam), w.name, w.desc, d.passive.name, d.passive.desc]
+	var ca: int = 10 + int(d.armor.ca)
+	var cam: int = 10 + int(d.armor.cam)
+	var txt := "[b]%s[/b] — %s\nFOR %d · INT %d · CON %d · CAR %d   |   PV %d · CA %d (%d%%) · CAM %d (%d%%)\n\n[b]Arma inicial:[/b] %s — %s\n[b]Passiva:[/b] %s — %s" % [
+		d.name, d.title, a.forca, a.inteligencia, a.constituicao, a.carisma, d.base_hp, ca, clampi((ca - 10) * 3, 0, 30), cam, clampi((cam - 10) * 3, 0, 30), w.name, w.desc, d.passive.name, d.passive.desc]
 	if not Game.profile.hero_unlocked(id):
 		txt += "\n\n[color=#e0a040]Bloqueado. Conquista: %s[/color]" % _ach_name(String(d.unlock).substr(4))
 	hero_info.text = txt
@@ -152,7 +154,7 @@ func _refresh_stage() -> void:
 func _ambient_text(amb: Array) -> String:
 	if amb.is_empty():
 		return "nenhuma"
-	var names := {"puddles": "poças de slime que retardam e ferem", "current": "corrente de almas que arrasta você", "strikes": "raios telegrafados caem do céu", "illusions": "alguns inimigos são ilusões (1 golpe)"}
+	var names := {"puddles": "poças de slime que retardam e ferem", "current": "corrente de almas que arrasta você", "styx_gelatinous": "Estige gelatinoso: risco mental e raros imbuídos", "strikes": "raios telegrafados caem do céu", "illusions": "alguns inimigos são ilusões (1 golpe)"}
 	return ", ".join(amb.map(func(a): return names.get(a, a)))
 
 func _update_play() -> void:
@@ -238,7 +240,7 @@ func _show_codex(i: int) -> void:
 		return
 	if cat == "enemies":
 		var d: Dictionary = Data.table("enemies")[id]
-		codex_text.text = "[b]%s[/b]\nPV %d · CA %d · CAM %d · dano %s · velocidade %.1f\n\n%s\nResistências: %s" % [d.name, d.hp, d.ca, d.cam, d.atk, float(d.speed), d.get("note", ""), str(d.get("resist", "nenhuma"))]
+		codex_text.text = "[b]%s[/b]\nPV %d · CA %d (%d%%) · CAM %d (%d%%) · dano %s · velocidade %.1f\n\n%s\nResistências: %s" % [d.name, d.hp, d.ca, clampi((int(d.ca) - 10) * 3, 0, 30), d.cam, clampi((int(d.cam) - 10) * 3, 0, 30), d.atk, float(d.speed), d.get("note", ""), str(d.get("resist", "nenhuma"))]
 	elif cat == "weapons":
 		var d: Dictionary = Data.table("weapons")[id]
 		codex_text.text = "[b]%s[/b]\nOrigem: %s\nTipo: %s · dano %s (%s, atributo %s) · recarga %.1fs\n\n%s" % [d.name, d.src, d.kind, d.dice if d.dice != "" else "—", d.dtype, d.attr, float(d.cd), d.desc]

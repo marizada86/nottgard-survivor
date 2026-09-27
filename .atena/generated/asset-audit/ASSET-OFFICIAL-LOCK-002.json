@@ -1,0 +1,309 @@
+﻿{
+    "schema_version":  1,
+    "lock_id":  "ASSET-OFFICIAL-LOCK-002",
+    "scope":  "SPEC-044 approved batches through the current decision",
+    "decision_registers":  [
+                               ".atena/vault/canon/ASSET-APPROVAL-REGISTER-001-lote-critico-2026-09-27.md",
+                               ".atena/vault/canon/ASSET-APPROVAL-REGISTER-002-durvall-brook-2026-09-27.md"
+                           ],
+    "entry_count":  33,
+    "entries":  [
+                    {
+                        "asset_id":  "brook.active",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/brook/active.png",
+                        "sha256":  "807609c0f6357e5254281d0cd15731dba0635579119cf628275c6752b7bd662d",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "brook source animation: active"
+                    },
+                    {
+                        "asset_id":  "brook.attack",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/brook/attack.png",
+                        "sha256":  "e1117ceb21f6937353ed46aae486bdd7f0dbd8db742aea27f3a79fca53f00c49",
+                        "dimensions":  "1024x384",
+                        "alpha":  true,
+                        "runtime_use":  "brook source animation: attack"
+                    },
+                    {
+                        "asset_id":  "brook.death",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/brook/death.png",
+                        "sha256":  "081badedb773bfcf86a7ae1a8b6f036500ef36d5c0eb016cc769c40e80a912a0",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "brook source animation: death"
+                    },
+                    {
+                        "asset_id":  "brook.idle",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/brook/idle.png",
+                        "sha256":  "c39cc3a7df118369d74a7b6fabf51f2815e2dacef8359b5c4a066a54d3215d54",
+                        "dimensions":  "1024x384",
+                        "alpha":  true,
+                        "runtime_use":  "brook source animation: idle"
+                    },
+                    {
+                        "asset_id":  "brook.move_e",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/brook/move_e.png",
+                        "sha256":  "3297589eafca309ff74ae8c5fd6e139036c1a3189e58118a5915f344cffe6545",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "brook source animation: move_e"
+                    },
+                    {
+                        "asset_id":  "brook.move_n",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/brook/move_n.png",
+                        "sha256":  "5017987bea0cb20a7b216685df1023c497ae5b5dbc7904e7a3c19987e7274fa0",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "brook source animation: move_n"
+                    },
+                    {
+                        "asset_id":  "brook.move_ne",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/brook/move_ne.png",
+                        "sha256":  "8d9d85b058af0d31160209e113649876edb19e6f99db59383b335d8c94b1f6a7",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "brook source animation: move_ne"
+                    },
+                    {
+                        "asset_id":  "brook.move_s",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/brook/move_s.png",
+                        "sha256":  "f997bd0fcfa058c7101a2ba49c800049cbd1a801be869fcdf63900510483ae4a",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "brook source animation: move_s"
+                    },
+                    {
+                        "asset_id":  "brook.move_se",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/brook/move_se.png",
+                        "sha256":  "234b814a96e775bfaefaf83282683d45d0fd4973fe104a89cf695150bfbac049",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "brook source animation: move_se"
+                    },
+                    {
+                        "asset_id":  "durvall.active",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/durvall/active.png",
+                        "sha256":  "e56a0dc79858a5b2c9f98aba02983f88c722b9d54854999a76875dfec1243a70",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "durvall source animation: active"
+                    },
+                    {
+                        "asset_id":  "durvall.attack",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/durvall/attack.png",
+                        "sha256":  "a3edd994d5ae14448df6b5eb4ee4c34264bdbb4f2e4335f2da4be35406c4a2db",
+                        "dimensions":  "1024x384",
+                        "alpha":  true,
+                        "runtime_use":  "durvall source animation: attack"
+                    },
+                    {
+                        "asset_id":  "durvall.death",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/durvall/death.png",
+                        "sha256":  "60a79474d7ffa1a3f6053b2604fc1d7ec5cc80d29bd669d057df25b1ce705350",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "durvall source animation: death"
+                    },
+                    {
+                        "asset_id":  "durvall.idle",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/durvall/idle.png",
+                        "sha256":  "7e40f32f4f4ee2dd9d6fd9cadeaa8683c62a7bb315a102f29c6ebc3287230bfa",
+                        "dimensions":  "1024x384",
+                        "alpha":  true,
+                        "runtime_use":  "durvall source animation: idle"
+                    },
+                    {
+                        "asset_id":  "durvall.move_e",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/durvall/move_e.png",
+                        "sha256":  "23783b4112efc698c97340a218158c121915747334f066791026f4658ee052f4",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "durvall source animation: move_e"
+                    },
+                    {
+                        "asset_id":  "durvall.move_n",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/durvall/move_n.png",
+                        "sha256":  "8d56629cf3bd26b8de80e7ed6847369efd6848867dd26f2ce689da2f5547ac7d",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "durvall source animation: move_n"
+                    },
+                    {
+                        "asset_id":  "durvall.move_ne",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/durvall/move_ne.png",
+                        "sha256":  "3397d7d0dd8b21073123d87d383b50cb5bbce6aa6047b6445994d9f492ec97df",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "durvall source animation: move_ne"
+                    },
+                    {
+                        "asset_id":  "durvall.move_s",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/durvall/move_s.png",
+                        "sha256":  "5fe334bd407438d44c8c2b7de3727b45a8f69a985f29b5d898c917b636cfc651",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "durvall source animation: move_s"
+                    },
+                    {
+                        "asset_id":  "durvall.move_se",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/durvall/move_se.png",
+                        "sha256":  "1244ac2579c1fbbae79e9e6365d6b06358c471d95a53a50e4d564460eac76920",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "durvall source animation: move_se"
+                    },
+                    {
+                        "asset_id":  "nyrelia.active",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/nyrelia/active.png",
+                        "sha256":  "3a129528260295559733f8c254b32d6dd26e8a602e10a0880a13f4f6ea4c3d14",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "Nyrelia source animation: active"
+                    },
+                    {
+                        "asset_id":  "nyrelia.attack",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/nyrelia/attack.png",
+                        "sha256":  "1a763f52de249085d6fb6017963b49b0f7d48c027a67d5a1375421ad78fcf996",
+                        "dimensions":  "1024x384",
+                        "alpha":  true,
+                        "runtime_use":  "Nyrelia source animation: attack"
+                    },
+                    {
+                        "asset_id":  "nyrelia.death",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/nyrelia/death.png",
+                        "sha256":  "42eb7005cadb3407f719648a704a258b58992149d0028cd3b5460652ee017174",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "Nyrelia source animation: death"
+                    },
+                    {
+                        "asset_id":  "nyrelia.idle",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/nyrelia/idle.png",
+                        "sha256":  "dde7660102aa6b400fea90f843b5bdc448964dfe08abb58f971bb45360d16662",
+                        "dimensions":  "1024x384",
+                        "alpha":  true,
+                        "runtime_use":  "Nyrelia source animation: idle"
+                    },
+                    {
+                        "asset_id":  "nyrelia.move_e",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/nyrelia/move_e.png",
+                        "sha256":  "f2b7370e8af72fec09d870b2f210781f8a4d726c9c87ff6ad3125b25f5e0df35",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "Nyrelia source animation: move_e"
+                    },
+                    {
+                        "asset_id":  "nyrelia.move_n",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/nyrelia/move_n.png",
+                        "sha256":  "0fb01a27dcf54835c7d250373d83c7fe753caa001b35036e8948b1cb0ce9bc37",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "Nyrelia source animation: move_n"
+                    },
+                    {
+                        "asset_id":  "nyrelia.move_ne",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/nyrelia/move_ne.png",
+                        "sha256":  "c315b6cc1ddcc9a696fe4917e43bc02d45676ea171ea5e9e6878945885b1542a",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "Nyrelia source animation: move_ne"
+                    },
+                    {
+                        "asset_id":  "nyrelia.move_s",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/nyrelia/move_s.png",
+                        "sha256":  "aab6bf6178de9185c751ed5e24f248014debc60fdb0c1ee8cc2ea0e277d73097",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "Nyrelia source animation: move_s"
+                    },
+                    {
+                        "asset_id":  "nyrelia.move_se",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/nyrelia/move_se.png",
+                        "sha256":  "4d573c78aa83f85b5a273f1deff5b66b1cf0a5bac1e428a44b47c1a8398f4301",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "Nyrelia source animation: move_se"
+                    },
+                    {
+                        "asset_id":  "pilar_abissal_01",
+                        "family":  "props",
+                        "official_path":  "assets/props/pilar_abissal_01.png",
+                        "sha256":  "d95b5997845cf82ed0f67b2c5e73b692344b95818e4faee0de840af160217835",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Prop visual variant"
+                    },
+                    {
+                        "asset_id":  "pilar_abissal_02",
+                        "family":  "props",
+                        "official_path":  "assets/props/pilar_abissal_02.png",
+                        "sha256":  "8f479fbc533df4fedb26627b9f5f4a641aa423772da5ecc7428a1d8a1f7e50a0",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Prop visual variant"
+                    },
+                    {
+                        "asset_id":  "pilar_abissal_03",
+                        "family":  "props",
+                        "official_path":  "assets/props/pilar_abissal_03.png",
+                        "sha256":  "eaf07ba1019575855f39d3a355b78ab4f628500b3404663feb6c7373f18a798e",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Prop visual variant"
+                    },
+                    {
+                        "asset_id":  "rocha_01",
+                        "family":  "props",
+                        "official_path":  "assets/props/rocha_01.png",
+                        "sha256":  "8b8145bd9724f2905aa0f47d25f02d88e2079f5633ba08f8a7491e610e91a5ec",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Prop visual variant"
+                    },
+                    {
+                        "asset_id":  "rocha_02",
+                        "family":  "props",
+                        "official_path":  "assets/props/rocha_02.png",
+                        "sha256":  "40d47e7d3ac212f080b9bcdb676a5db6b4f9bba91cf416b0aac21ecc1cac778e",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Prop visual variant"
+                    },
+                    {
+                        "asset_id":  "rocha_03",
+                        "family":  "props",
+                        "official_path":  "assets/props/rocha_03.png",
+                        "sha256":  "a164389984f15381f05b7ce452b508883430c2bf05ef2a056299b718d5d0339d",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Prop visual variant"
+                    }
+                ]
+}

@@ -36,6 +36,8 @@ var charge_t := 0.0
 var charge_dir := Vector2.ZERO
 var charge_ab: Dictionary = {}
 var affix := ""
+## Bênção ambiental efêmera: nunca entra na ficha, no loot nem na progressão.
+var styx_imbued := false
 var dead := false
 var drops_chest := false
 var hit_flash := 0.0
@@ -78,3 +80,7 @@ func has_flag(f: String) -> bool:
 
 func is_boss() -> bool:
 	return "boss" in flags
+
+func typed_evasion(dtype: String) -> float:
+	var defense := ca if dtype == "fisico" else cam
+	return clampf(float(defense - 10) * 0.03, 0.0, 0.30)

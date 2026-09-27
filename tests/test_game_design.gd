@@ -43,9 +43,12 @@ func run() -> Array:
 	_quiet(descent)
 	descent.hero.passives = {"forca": 2}
 	descent.enter_next_stage()
-	if descent.stage_id != "shedaklah" or descent.descent_depth != 1:
-		out.append("descida não levou a Shedaklah com profundidade 1")
-	if absf(descent.reward_multiplier() - 1.25) > 0.001 or int(descent.hero.passives.get("forca", 0)) != 2:
+	if descent.stage_id != "docas" or descent.descent_depth != 1:
+		out.append("descida não levou a Docas com profundidade 1")
+	descent.enter_next_stage()
+	if descent.stage_id != "shedaklah" or descent.descent_depth != 2:
+		out.append("segunda descida não levou a Shedaklah com profundidade 2")
+	if absf(descent.reward_multiplier() - 1.55) > 0.001 or int(descent.hero.passives.get("forca", 0)) != 2:
 		out.append("descida não preservou build/multiplicador")
 
 	# 4) Toda camada tem exatamente uma regra principal configurada.

@@ -3907,9 +3907,11 @@
 
                                        ],
                         "status":  "integrated",
-                        "selected_version":  "v02",
-                        "sha256":  "503198fba8e8f76e731bede026e91a184724f2b19836a7d165710cc1566c8eb1",
+                        "selected_version":  "v04",
+                        "sha256":  "bf4f86c5580a7a7a9539a1f9042a192eb70c43b4168c5d0330d5b9c949395d62",
                         "qa_notes":  [
+                                         "processed 128x64; fit=Cover; alpha=False",
+                                         "processed 128x64; fit=Cover; alpha=False",
                                          "processed 128x64; fit=Cover; alpha=False"
                                      ]
                     },
@@ -4389,10 +4391,11 @@
                                            "assets/props/cristal_01.png"
                                        ],
                         "status":  "integrated",
-                        "selected_version":  "v01",
-                        "sha256":  "3d5d8bcb19caedde2dd441bcc251c556d59bf0c68c7b246272f09fe272da5bf2",
+                        "selected_version":  "v02",
+                        "sha256":  "2e4fc0e1982da5d7b350df9e22617858d4c69aadcaa36154f14c660b5dc1540a",
                         "qa_notes":  [
-                                         "original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0"
+                                         "original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0",
+                                         "processed 256x256; fit=Contain; alpha=True"
                                      ]
                     },
                     {
@@ -4918,13 +4921,84 @@
                                      ]
                     },
                     {
-                        "asset_id": "margem_01", "family": "props", "generation_mode": "imagegen", "final_path": "assets/props/margem_01.png", "candidate_path": ".atena/generated/asset-candidates/props/dagruve/margem_01_v01.png", "prompt_id": "ASSET-GEN-031-DAGRUVE-SHORE", "dimensions": "256x256", "alpha": true, "references": ["assets/props/doca_01.png", "assets/props/rede_01.png"], "status": "integrated", "selected_version": "v01", "sha256": "4cd9432a3a7d8fd92d2016bc7a4dd1f318d8a4d2d529d8b3b5e7d52177c638fb", "qa_notes": ["original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0"]
+                        "asset_id":  "margem_01",
+                        "family":  "props",
+                        "generation_mode":  "imagegen",
+                        "final_path":  "assets/props/margem_01.png",
+                        "candidate_path":  ".atena/generated/asset-candidates/props/dagruve/margem_01_v01.png",
+                        "prompt_id":  "ASSET-GEN-031-DAGRUVE-SHORE",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "references":  [
+                                           "assets/props/doca_01.png",
+                                           "assets/props/rede_01.png"
+                                       ],
+                        "status":  "integrated",
+                        "selected_version":  "v01",
+                        "sha256":  "4cd9432a3a7d8fd92d2016bc7a4dd1f318d8a4d2d529d8b3b5e7d52177c638fb",
+                        "qa_notes":  [
+                                         "original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0"
+                                     ]
                     },
                     {
-                        "asset_id": "margem_02", "family": "props", "generation_mode": "imagegen", "final_path": "assets/props/margem_02.png", "candidate_path": ".atena/generated/asset-candidates/props/dagruve/margem_02_v01.png", "prompt_id": "ASSET-GEN-031-DAGRUVE-SHORE", "dimensions": "256x256", "alpha": true, "references": ["assets/props/doca_02.png", "assets/props/rede_02.png"], "status": "integrated", "selected_version": "v01", "sha256": "18cb702b63ea37759ca893e3aef372ac67a03bfd1aa2fb9e0a8d10a43e582825", "qa_notes": ["original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0"]
+                        "asset_id":  "margem_02",
+                        "family":  "props",
+                        "generation_mode":  "imagegen",
+                        "final_path":  "assets/props/margem_02.png",
+                        "candidate_path":  ".atena/generated/asset-candidates/props/dagruve/margem_02_v01.png",
+                        "prompt_id":  "ASSET-GEN-031-DAGRUVE-SHORE",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "references":  [
+                                           "assets/props/doca_02.png",
+                                           "assets/props/rede_02.png"
+                                       ],
+                        "status":  "integrated",
+                        "selected_version":  "v01",
+                        "sha256":  "18cb702b63ea37759ca893e3aef372ac67a03bfd1aa2fb9e0a8d10a43e582825",
+                        "qa_notes":  [
+                                         "original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0"
+                                     ]
                     },
                     {
-                        "asset_id": "margem_03", "family": "props", "generation_mode": "imagegen", "final_path": "assets/props/margem_03.png", "candidate_path": ".atena/generated/asset-candidates/props/dagruve/margem_03_v01.png", "prompt_id": "ASSET-GEN-031-DAGRUVE-SHORE", "dimensions": "256x256", "alpha": true, "references": ["assets/props/doca_03.png", "assets/props/rede_03.png"], "status": "integrated", "selected_version": "v01", "sha256": "3f7f11bbca9c09d927b9b8ee863430133434dbb39a77605440dae0307c2c7226", "qa_notes": ["original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0"]
+                        "asset_id":  "margem_03",
+                        "family":  "props",
+                        "generation_mode":  "imagegen",
+                        "final_path":  "assets/props/margem_03.png",
+                        "candidate_path":  ".atena/generated/asset-candidates/props/dagruve/margem_03_v01.png",
+                        "prompt_id":  "ASSET-GEN-031-DAGRUVE-SHORE",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "references":  [
+                                           "assets/props/doca_03.png",
+                                           "assets/props/rede_03.png"
+                                       ],
+                        "status":  "integrated",
+                        "selected_version":  "v01",
+                        "sha256":  "3f7f11bbca9c09d927b9b8ee863430133434dbb39a77605440dae0307c2c7226",
+                        "qa_notes":  [
+                                         "original generation; normalized 1254x1254 to 256x256; corner alpha 0,0,0,0"
+                                     ]
+                    },
+                    {
+                        "asset_id":  "sacerdote_mente_derretida_intro",
+                        "family":  "boss-intros",
+                        "generation_mode":  "imagegen",
+                        "final_path":  "assets/ui/boss-intros/sacerdote_mente_derretida.png",
+                        "candidate_path":  ".atena/generated/art-candidates/boss-intros/sacerdote_mente_derretida_intro_v02.png",
+                        "prompt_id":  "ART-PROMPTS-017",
+                        "dimensions":  "640x360",
+                        "alpha":  false,
+                        "references":  [
+                                           ".atena/generated/art-candidates/boss-intros/sacerdote_mente_derretida_intro_v02.png"
+                                       ],
+                        "status":  "integrated",
+                        "selected_version":  "v03",
+                        "sha256":  "3c07689108389950c964b614939e7510c1199121d5c6245f5b3142027927b2d4",
+                        "qa_notes":  [
+                                         "selected pilot candidate; normalize with nearest-neighbor before integration",
+                                         "processed 640x360; fit=Cover; alpha=False"
+                                     ]
                     }
                 ],
     "logical_reuse":  {

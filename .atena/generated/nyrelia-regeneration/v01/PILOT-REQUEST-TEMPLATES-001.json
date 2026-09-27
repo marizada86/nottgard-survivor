@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "template_id": "NYRELIA-PILOT-V01",
+  "local_only": true,
+  "generation_authorized": false,
+  "provider": null,
+  "license": null,
+  "spend_limit_cents": null,
+  "references_may_leave_workspace": false,
+  "output_root": ".atena/generated/nyrelia-regeneration/v01/candidates",
+  "common_prompt": "Sprite 2D de fantasia sombria em pixel art nítida, visão isométrica 3/4 de cima. Nyrelia, sacerdotisa mascarada de Mask, capuz e manto verde-floresta profundo, máscara escura claramente definida, rosto oculto, corpo e dobras de tecido visíveis, acentos dourados discretos, silhueta forte e legível em 72 pixels, luz de recorte verde-ouro controlada, fundo transparente, célula única 256 por 384 pixels, pés firmemente apoiados na linha de chão.",
+  "negative_prompt": "Fundo de cenário, retrato, concept art, texto, moldura, marca d'água, personagem sem corpo, silhueta preta perdida, apenas partículas, membros cortados, arma cruzando borda, blur, gradiente suave, perspectiva frontal, VFX fora da célula, múltiplos personagens.",
+  "cells": [
+    {"id":"nyrelia.idle.00","strip":"idle","frame":0,"output":"candidates/idle/frame-00.png","pose":"postura neutra, início da respiração, manto pesado e máscara inteiramente legíveis"},
+    {"id":"nyrelia.idle.01","strip":"idle","frame":1,"output":"candidates/idle/frame-01.png","pose":"inspiração sutil, uma mão relaxada, corpo continua preenchido e estável"},
+    {"id":"nyrelia.idle.02","strip":"idle","frame":2,"output":"candidates/idle/frame-02.png","pose":"breve brilho verde-ouro discreto na mão, sem apagar manto ou máscara"},
+    {"id":"nyrelia.idle.03","strip":"idle","frame":3,"output":"candidates/idle/frame-03.png","pose":"retorno à postura neutra, sem levitar ou mover o ponto de chão"},
+    {"id":"nyrelia.move_se.00","strip":"move_se","frame":0,"output":"candidates/move_se/frame-00.png","pose":"caminhada diagonal sudeste, pé dianteiro em contato, manto acompanha o passo"},
+    {"id":"nyrelia.move_se.01","strip":"move_se","frame":1,"output":"candidates/move_se/frame-01.png","pose":"transferência de peso para sudeste, ambos os pés e a silhueta distinguíveis"},
+    {"id":"nyrelia.move_se.02","strip":"move_se","frame":2,"output":"candidates/move_se/frame-02.png","pose":"passada intermediária, pé traseiro deixa o chão, sem cruzar a borda da célula"},
+    {"id":"nyrelia.move_se.03","strip":"move_se","frame":3,"output":"candidates/move_se/frame-03.png","pose":"novo pé dianteiro em contato, manto tem movimento curto e pesado"},
+    {"id":"nyrelia.move_se.04","strip":"move_se","frame":4,"output":"candidates/move_se/frame-04.png","pose":"transferência de peso, máscara e torso continuam legíveis"},
+    {"id":"nyrelia.move_se.05","strip":"move_se","frame":5,"output":"candidates/move_se/frame-05.png","pose":"fechamento do ciclo, volta à pose do frame zero sem oscilação de chão"},
+    {"id":"nyrelia.attack.00","strip":"attack","frame":0,"output":"candidates/attack/frame-00.png","pose":"preparação de Dominação, corpo inteiro, mão inicia o gesto e máscara visível"},
+    {"id":"nyrelia.attack.01","strip":"attack","frame":1,"output":"candidates/attack/frame-01.png","pose":"mão estendida, corpo e manto claros, pequeno anel verde-amarelo/violeta junto à mão"},
+    {"id":"nyrelia.attack.02","strip":"attack","frame":2,"output":"candidates/attack/frame-02.png","pose":"liberação do efeito de Dominação, personagem ainda ocupa o centro da célula e supera o VFX"},
+    {"id":"nyrelia.attack.03","strip":"attack","frame":3,"output":"candidates/attack/frame-03.png","pose":"recuperação, efeito se dissipa junto à mão, figura corporal permanece inteira e legível"}
+  ]
+}

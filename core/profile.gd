@@ -13,6 +13,7 @@ static func fresh() -> Dictionary:
 func _init(d: Dictionary = {}) -> void:
 	data = fresh()
 	_merge(data, d)
+	_migrate_stage_split()
 
 static func _merge(into: Dictionary, src: Dictionary) -> void:
 	for k in src:
@@ -20,6 +21,11 @@ static func _merge(into: Dictionary, src: Dictionary) -> void:
 			_merge(into[k], src[k])
 		else:
 			into[k] = src[k]
+
+func _migrate_stage_split() -> void:
+	# Perfis que já concluíram a antiga Dagruve/Docas não perdem acesso à nova Docas.
+	if data.cleared.has("dagruve"):
+		data.cleared["docas"] = true
 
 func coins() -> int:
 	return int(data.coins)

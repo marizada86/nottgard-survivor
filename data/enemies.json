@@ -11,7 +11,7 @@
   "criatura_corrompida": {"name": "Criatura Corrompida", "hp": 22, "atk": "1d6", "bonus": 2, "ca": 10, "cam": 10, "xp": 12, "speed": 1.0, "radius": 0.4, "color": [110, 70, 150], "scale": 1.1, "note": "Nottcard. Corrompida pela névoa."},
   "guardiao_copia":  {"name": "Guardião Alado (cópia)", "hp": 22, "atk": "1d8", "bonus": 3, "ca": 12, "cam": 10, "xp": 16, "speed": 1.3, "radius": 0.4, "color": [170, 130, 60], "scale": 1.15,
     "abilities": [{"t": "charge", "cd": 6.0, "windup": 0.8, "dist": 4.5, "speed": 9, "dice": "1d8", "bonus": 3}], "note": "Nottcard. Investida."},
-  "guardiao_verdadeiro": {"name": "Guardião Alado (verdadeiro)", "hp": 60, "atk": "1d8", "bonus": 4, "ca": 13, "cam": 12, "xp": 40, "speed": 1.3, "radius": 0.45, "color": [140, 60, 170], "scale": 1.3,
+  "guardiao_verdadeiro": {"name": "Guardião Alado (verdadeiro)", "hp": 60, "atk": "1d8", "bonus": 4, "ca": 13, "cam": 12, "xp": 40, "speed": 1.3, "radius": 0.45, "color": [140, 60, 170], "scale": 1.3, "flags": ["boss"],
     "abilities": [{"t": "charge", "cd": 5.0, "windup": 0.7, "dist": 5.0, "speed": 10, "dice": "1d10", "bonus": 4}, {"t": "aoe", "cd": 8.0, "dice": "1d8", "radius": 1.8, "delay": 1.0, "range": 8, "dtype": "magico"}], "note": "Nottcard. Grito Abissal."},
   "mimico":          {"name": "Mímico", "hp": 30, "atk": "1d6", "bonus": 2, "ca": 11, "cam": 10, "xp": 20, "speed": 1.6, "radius": 0.4, "color": [150, 100, 50], "scale": 1.1, "note": "Nottcard. Mordida que prende."},
   "sacerdote_mente_derretida": {"name": "Sacerdote da Mente Derretida", "hp": 260, "atk": "1d8", "bonus": 4, "ca": 12, "cam": 14, "xp": 200, "speed": 1.0, "radius": 0.55, "color": [130, 70, 150], "scale": 1.6, "flags": ["boss"],

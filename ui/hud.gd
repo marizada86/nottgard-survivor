@@ -76,7 +76,11 @@ func update_stats(b: Battle) -> void:
 	hp_label.text = "%d / %d%s" % [int(ceil(h.hp)), int(h.max_hp), "  +%d barreira" % int(ceil(b.barrier)) if b.barrier > 0.0 else ""]
 	xp_bar.max_value = h.xp_need
 	xp_bar.value = h.xp
-	info_label.text = "Moedas %d   Abates %d   CA %d  CAM %d" % [int(h.gold), b.stats.kills, h.ca(), h.cam()]
+	info_label.text = "Moedas %d   Abates %d   CA %d (%d%%)  CAM %d (%d%%)" % [int(h.gold), b.stats.kills, h.ca(), int(h.typed_evasion("fisico") * 100.0), h.cam(), int(h.typed_evasion("magico") * 100.0)]
+	if b.stage_id == "durao" and b.styx_exposure > 0.0:
+		info_label.text += "\nEstige %.1f s · INT efetiva %d%s" % [b.styx_exposure, h.styx_intelligence(), " · CHAMADO" if b.styx_calling else ""]
+	elif h.styx_forget_t > 0.0:
+		info_label.text += "\nEsquecimento do Estige %.1f s" % h.styx_forget_t
 	active_label.text = b.active_status()
 	active_label.modulate = Color(1.0, 0.9, 0.5) if b.active_cd <= 0.0 else Color(0.65, 0.65, 0.65)
 	var ability: Dictionary = Data.table("abilities").get(h.id, {})
@@ -87,7 +91,7 @@ func update_stats(b: Battle) -> void:
 		active_icon.texture = load(ability_path) if ResourceLoader.exists(ability_path) else null
 	var stage_icons := {
 		"dagruve": "dagruve_rituals", "shedaklah": "shedaklah_puddles", "molor": "molor_bubbles",
-		"durao": "durao_current", "feng_tu": "feng_tu_strikes", "shendilavri": "shendilavri_illusions",
+		"durao": "", "feng_tu": "feng_tu_strikes", "shendilavri": "shendilavri_illusions",
 		"goranthis": "goranthis_sanctuary", "pilares": "pilares_rotation"
 	}
 	var stage_icon_id := String(stage_icons.get(b.stage_id, ""))

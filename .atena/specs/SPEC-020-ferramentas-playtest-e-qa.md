@@ -50,9 +50,9 @@ como **produção** e registra o diagnóstico apenas no log local. Os perfis sã
 | F7 | Sem ação do kit | Empacota o rascunho em ZIP | Igual ao público, incluindo cenário QA |
 | F11 | Alterna tela cheia e salva apenas a preferência normal | Igual | Igual |
 | F12 | Sem ação do kit | Abre/fecha console de diagnóstico somente leitura, com log higienizado | Abre/fecha Console QA: mesmo log e comandos permitidos, sem avaliação livre de código |
-| Ctrl+O+P | Sem ação | Sem ação | Abre o Navegador QA |
+| Ctrl+O+P ou F4 | Sem ação | Sem ação | Abre o Navegador QA |
 
-O acorde simultâneo Ctrl+O+P exibirá uma dica visível em QA e não interceptará
+Os atalhos Ctrl+O+P e F4 exibirão uma dica visível em QA e não interceptarão
 digitação enquanto um campo de texto estiver com foco. Nenhuma função QA será
 desbloqueada apenas por argumento de linha de
 comando, arquivo de save ou variável de ambiente.

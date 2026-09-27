@@ -12,6 +12,12 @@ z_index = -100
 script = ExtResource("1_koa63")
 color_a = Color(0.09411765, 0.15686275, 0.11764706, 1)
 color_b = Color(0.11764706, 0.19607843, 0.14117648, 1)
+terrain_layout_id = "molor"
+visual_seed = 528
+use_modular_atlas = true
+atlas_columns = 2
+atlas_variants = 4
+terrain_texture_path = "res://assets/tiles/molor_ground_atlas_v1.png"
 
 [node name="Sorted" type="Node2D" parent="." unique_id=707647655]
 y_sort_enabled = true

@@ -1,0 +1,1155 @@
+﻿{
+    "schema_version":  1,
+    "lock_id":  "ASSET-OFFICIAL-LOCK-011",
+    "scope":  "SPEC-044 approved batches plus Nyrelia regeneration v02 and Leoric regeneration v01",
+    "decision_registers":  [
+                               ".atena/vault/canon/ASSET-APPROVAL-REGISTER-001-lote-critico-2026-09-27.md",
+                               ".atena/vault/canon/ASSET-APPROVAL-REGISTER-002-durvall-brook-2026-09-27.md",
+                               ".atena/vault/canon/ASSET-APPROVAL-REGISTER-003-maelor-sylas-2026-09-27.md",
+                               ".atena/vault/canon/ASSET-APPROVAL-REGISTER-004-kayron-leoric-2026-09-27.md",
+                               ".atena/vault/canon/ASSET-APPROVAL-REGISTER-005-zynara-bromnor-2026-09-27.md",
+                               ".atena/vault/canon/ASSET-APPROVAL-REGISTER-006-korrak-2026-09-27.md",
+                               ".atena/vault/canon/ASSET-APPROVAL-REGISTER-007-props-dagruve-2026-09-27.md",
+                               ".atena/vault/canon/ASSET-APPROVAL-REGISTER-008-barris-livros-redes-2026-09-27.md",
+                               ".atena/vault/canon/ASSET-APPROVAL-REGISTER-009-carga-doca-margem-ossos-2026-09-27.md",
+                               ".atena/vault/canon/ASSET-APPROVAL-REGISTER-010-nyrelia-regenerada-2026-09-27.md",
+                               ".atena/vault/canon/ASSET-APPROVAL-REGISTER-011-leoric-regenerado-2026-09-27.md"
+                           ],
+    "entry_count":  126,
+    "entries":  [
+                    {
+                        "asset_id":  "barril_01",
+                        "family":  "props",
+                        "official_path":  "assets/props/barril_01.png",
+                        "sha256":  "5625804a3339c6b9fdb6a85cae77e302c20dab05ddfe958c64d70f52d3adf1c9",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Asset final de producao; uso de runtime a confirmar por familia"
+                    },
+                    {
+                        "asset_id":  "barril_02",
+                        "family":  "props",
+                        "official_path":  "assets/props/barril_02.png",
+                        "sha256":  "363ff9dac3a43f4bbcb946908633a2d7d545a7e87b31ebd2768ac9095939abb9",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Asset final de producao; uso de runtime a confirmar por familia"
+                    },
+                    {
+                        "asset_id":  "barril_03",
+                        "family":  "props",
+                        "official_path":  "assets/props/barril_03.png",
+                        "sha256":  "5ed65e5b9fa57a0dccdbf541c7811b88952dcaf4f04f8856cda8610294d8e7d6",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Asset final de producao; uso de runtime a confirmar por familia"
+                    },
+                    {
+                        "asset_id":  "braseiro_01",
+                        "family":  "props",
+                        "official_path":  "assets/props/braseiro_01.png",
+                        "sha256":  "2e4fc0e1982da5d7b350df9e22617858d4c69aadcaa36154f14c660b5dc1540a",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Asset final de producao; uso de runtime a confirmar por familia"
+                    },
+                    {
+                        "asset_id":  "braseiro_02",
+                        "family":  "props",
+                        "official_path":  "assets/props/braseiro_02.png",
+                        "sha256":  "c2f71488085855bfcb2a68d54d3d27ebcd4d4a45c58a50c90f4206be771824fa",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Asset final de producao; uso de runtime a confirmar por familia"
+                    },
+                    {
+                        "asset_id":  "braseiro_03",
+                        "family":  "props",
+                        "official_path":  "assets/props/braseiro_03.png",
+                        "sha256":  "8bdaf8ae9e904cd502736ad37b50f4c034537cc17f34b43814657e54abbe77f8",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Asset final de producao; uso de runtime a confirmar por familia"
+                    },
+                    {
+                        "asset_id":  "bromnor.active",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/bromnor/active.png",
+                        "sha256":  "6887daec2a1ee6d433155e16bca084cce783a0d48bd8e57540f1691ba21533f2",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "bromnor source animation: active"
+                    },
+                    {
+                        "asset_id":  "bromnor.attack",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/bromnor/attack.png",
+                        "sha256":  "5d4ff82442ba3de95cfb8698913ef03047ee6356bbe2a8ceaf8337bdf4f70629",
+                        "dimensions":  "1024x384",
+                        "alpha":  true,
+                        "runtime_use":  "bromnor source animation: attack"
+                    },
+                    {
+                        "asset_id":  "bromnor.death",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/bromnor/death.png",
+                        "sha256":  "b4623930e19b6dc4626912854aa7921cded4c7cc980fbeda93d265a5eac36537",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "bromnor source animation: death"
+                    },
+                    {
+                        "asset_id":  "bromnor.idle",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/bromnor/idle.png",
+                        "sha256":  "078a815d903b264cc8587280eb4eb8be8e4b50b64c4cce95d927255607a59288",
+                        "dimensions":  "1024x384",
+                        "alpha":  true,
+                        "runtime_use":  "bromnor source animation: idle"
+                    },
+                    {
+                        "asset_id":  "bromnor.move_e",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/bromnor/move_e.png",
+                        "sha256":  "2b4ad7b2a9b831357856f9ce448022760878ddbd2c2392f2dd7b438074621ebb",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "bromnor source animation: move_e"
+                    },
+                    {
+                        "asset_id":  "bromnor.move_n",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/bromnor/move_n.png",
+                        "sha256":  "b97f141e1f430cc80e310177bdd3f28b07438fe52c9371276d7299528728ded2",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "bromnor source animation: move_n"
+                    },
+                    {
+                        "asset_id":  "bromnor.move_ne",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/bromnor/move_ne.png",
+                        "sha256":  "43ddeb2d2f457618d8759fdd87ff9ff01b0c5da275f018992139c93d07a0e610",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "bromnor source animation: move_ne"
+                    },
+                    {
+                        "asset_id":  "bromnor.move_s",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/bromnor/move_s.png",
+                        "sha256":  "fbefbd6c0125e6bc1d31e61acac0cffaff9db9cc0aa253b3a824880fe333aefa",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "bromnor source animation: move_s"
+                    },
+                    {
+                        "asset_id":  "bromnor.move_se",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/bromnor/move_se.png",
+                        "sha256":  "65e22249f6a0c98887971b5be43daa39258831934aa7ce5397481df907711b04",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "bromnor source animation: move_se"
+                    },
+                    {
+                        "asset_id":  "brook.active",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/brook/active.png",
+                        "sha256":  "807609c0f6357e5254281d0cd15731dba0635579119cf628275c6752b7bd662d",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "brook source animation: active"
+                    },
+                    {
+                        "asset_id":  "brook.attack",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/brook/attack.png",
+                        "sha256":  "e1117ceb21f6937353ed46aae486bdd7f0dbd8db742aea27f3a79fca53f00c49",
+                        "dimensions":  "1024x384",
+                        "alpha":  true,
+                        "runtime_use":  "brook source animation: attack"
+                    },
+                    {
+                        "asset_id":  "brook.death",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/brook/death.png",
+                        "sha256":  "081badedb773bfcf86a7ae1a8b6f036500ef36d5c0eb016cc769c40e80a912a0",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "brook source animation: death"
+                    },
+                    {
+                        "asset_id":  "brook.idle",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/brook/idle.png",
+                        "sha256":  "c39cc3a7df118369d74a7b6fabf51f2815e2dacef8359b5c4a066a54d3215d54",
+                        "dimensions":  "1024x384",
+                        "alpha":  true,
+                        "runtime_use":  "brook source animation: idle"
+                    },
+                    {
+                        "asset_id":  "brook.move_e",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/brook/move_e.png",
+                        "sha256":  "3297589eafca309ff74ae8c5fd6e139036c1a3189e58118a5915f344cffe6545",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "brook source animation: move_e"
+                    },
+                    {
+                        "asset_id":  "brook.move_n",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/brook/move_n.png",
+                        "sha256":  "5017987bea0cb20a7b216685df1023c497ae5b5dbc7904e7a3c19987e7274fa0",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "brook source animation: move_n"
+                    },
+                    {
+                        "asset_id":  "brook.move_ne",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/brook/move_ne.png",
+                        "sha256":  "8d9d85b058af0d31160209e113649876edb19e6f99db59383b335d8c94b1f6a7",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "brook source animation: move_ne"
+                    },
+                    {
+                        "asset_id":  "brook.move_s",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/brook/move_s.png",
+                        "sha256":  "f997bd0fcfa058c7101a2ba49c800049cbd1a801be869fcdf63900510483ae4a",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "brook source animation: move_s"
+                    },
+                    {
+                        "asset_id":  "brook.move_se",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/brook/move_se.png",
+                        "sha256":  "234b814a96e775bfaefaf83282683d45d0fd4973fe104a89cf695150bfbac049",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "brook source animation: move_se"
+                    },
+                    {
+                        "asset_id":  "caixote_01",
+                        "family":  "props",
+                        "official_path":  "assets/props/caixote_01.png",
+                        "sha256":  "de5d989a62090498bb626b12b3698406e3993b15859805227bd87958568310a4",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Asset final de producao; uso de runtime a confirmar por familia"
+                    },
+                    {
+                        "asset_id":  "caixote_02",
+                        "family":  "props",
+                        "official_path":  "assets/props/caixote_02.png",
+                        "sha256":  "94e44064fde562031fa2eb2c73bca58a554d355ae72e47c1d69398a466a75a41",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Asset final de producao; uso de runtime a confirmar por familia"
+                    },
+                    {
+                        "asset_id":  "caixote_03",
+                        "family":  "props",
+                        "official_path":  "assets/props/caixote_03.png",
+                        "sha256":  "4fa4c4ca0886d5ad1ccf1d6f42e1861c0ae49fa6745936177fbac5d835ea89fc",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Asset final de producao; uso de runtime a confirmar por familia"
+                    },
+                    {
+                        "asset_id":  "carga_01",
+                        "family":  "props",
+                        "official_path":  "assets/props/carga_01.png",
+                        "sha256":  "0354f259d167105cd1ae3977cf0ba3e376748c8fee4835f7c4350dffef0ec761",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Asset final de producao; uso de runtime a confirmar por familia"
+                    },
+                    {
+                        "asset_id":  "carga_02",
+                        "family":  "props",
+                        "official_path":  "assets/props/carga_02.png",
+                        "sha256":  "944a86a3902f015e8cf95bf0ef0fc064fdd14fbb1ef28832d80b865746010515",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Asset final de producao; uso de runtime a confirmar por familia"
+                    },
+                    {
+                        "asset_id":  "carga_03",
+                        "family":  "props",
+                        "official_path":  "assets/props/carga_03.png",
+                        "sha256":  "dfb8bd97be01adcfea509ac8a4c34b289d8b836651dbe6e04150a6ee99b84ec3",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Asset final de producao; uso de runtime a confirmar por familia"
+                    },
+                    {
+                        "asset_id":  "doca_01",
+                        "family":  "props",
+                        "official_path":  "assets/props/doca_01.png",
+                        "sha256":  "49f51e198d8da876a4fc1fee305e0ab0028f484aa0d7b0f7ab0bf108e041ad2b",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Asset final de producao; uso de runtime a confirmar por familia"
+                    },
+                    {
+                        "asset_id":  "doca_02",
+                        "family":  "props",
+                        "official_path":  "assets/props/doca_02.png",
+                        "sha256":  "4e06e773bf622d89b55a583c4ee9ea7dd5adfc59ff3e7bf0739c25d501e208d8",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Asset final de producao; uso de runtime a confirmar por familia"
+                    },
+                    {
+                        "asset_id":  "doca_03",
+                        "family":  "props",
+                        "official_path":  "assets/props/doca_03.png",
+                        "sha256":  "7dc9f75a2ba0f92fd4446a04d705eca69cc7a405ef16dac9d13711444d09e838",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Asset final de producao; uso de runtime a confirmar por familia"
+                    },
+                    {
+                        "asset_id":  "durvall.active",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/durvall/active.png",
+                        "sha256":  "e56a0dc79858a5b2c9f98aba02983f88c722b9d54854999a76875dfec1243a70",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "durvall source animation: active"
+                    },
+                    {
+                        "asset_id":  "durvall.attack",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/durvall/attack.png",
+                        "sha256":  "a3edd994d5ae14448df6b5eb4ee4c34264bdbb4f2e4335f2da4be35406c4a2db",
+                        "dimensions":  "1024x384",
+                        "alpha":  true,
+                        "runtime_use":  "durvall source animation: attack"
+                    },
+                    {
+                        "asset_id":  "durvall.death",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/durvall/death.png",
+                        "sha256":  "60a79474d7ffa1a3f6053b2604fc1d7ec5cc80d29bd669d057df25b1ce705350",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "durvall source animation: death"
+                    },
+                    {
+                        "asset_id":  "durvall.idle",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/durvall/idle.png",
+                        "sha256":  "7e40f32f4f4ee2dd9d6fd9cadeaa8683c62a7bb315a102f29c6ebc3287230bfa",
+                        "dimensions":  "1024x384",
+                        "alpha":  true,
+                        "runtime_use":  "durvall source animation: idle"
+                    },
+                    {
+                        "asset_id":  "durvall.move_e",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/durvall/move_e.png",
+                        "sha256":  "23783b4112efc698c97340a218158c121915747334f066791026f4658ee052f4",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "durvall source animation: move_e"
+                    },
+                    {
+                        "asset_id":  "durvall.move_n",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/durvall/move_n.png",
+                        "sha256":  "8d56629cf3bd26b8de80e7ed6847369efd6848867dd26f2ce689da2f5547ac7d",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "durvall source animation: move_n"
+                    },
+                    {
+                        "asset_id":  "durvall.move_ne",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/durvall/move_ne.png",
+                        "sha256":  "3397d7d0dd8b21073123d87d383b50cb5bbce6aa6047b6445994d9f492ec97df",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "durvall source animation: move_ne"
+                    },
+                    {
+                        "asset_id":  "durvall.move_s",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/durvall/move_s.png",
+                        "sha256":  "5fe334bd407438d44c8c2b7de3727b45a8f69a985f29b5d898c917b636cfc651",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "durvall source animation: move_s"
+                    },
+                    {
+                        "asset_id":  "durvall.move_se",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/durvall/move_se.png",
+                        "sha256":  "1244ac2579c1fbbae79e9e6365d6b06358c471d95a53a50e4d564460eac76920",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "durvall source animation: move_se"
+                    },
+                    {
+                        "asset_id":  "kayron.active",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/kayron/active.png",
+                        "sha256":  "b3d1fc3bd709cece3000d734baf1d23d8d802ecb0d38e54417ba1e6e05d0ef13",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "kayron source animation: active"
+                    },
+                    {
+                        "asset_id":  "kayron.attack",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/kayron/attack.png",
+                        "sha256":  "f18772fdab0db4ab496b249ead8d5279cdd93c3fe56e0269ef02147e36cc2fa2",
+                        "dimensions":  "1024x384",
+                        "alpha":  true,
+                        "runtime_use":  "kayron source animation: attack"
+                    },
+                    {
+                        "asset_id":  "kayron.death",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/kayron/death.png",
+                        "sha256":  "b1984527db0f0333e95be3cdf1c32d0758378bd4ca75e35021eb02435e36796d",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "kayron source animation: death"
+                    },
+                    {
+                        "asset_id":  "kayron.idle",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/kayron/idle.png",
+                        "sha256":  "37bba07b8df5f31ea504b38dd49e641dd1cc31acfb13d21fdcf8afe2f4f57243",
+                        "dimensions":  "1024x384",
+                        "alpha":  true,
+                        "runtime_use":  "kayron source animation: idle"
+                    },
+                    {
+                        "asset_id":  "kayron.move_e",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/kayron/move_e.png",
+                        "sha256":  "3f157270558273f8749bf11f71810e4bbe572719dabfe7b2bf6d618e8acbc34d",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "kayron source animation: move_e"
+                    },
+                    {
+                        "asset_id":  "kayron.move_n",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/kayron/move_n.png",
+                        "sha256":  "2539b91b83a23408954e66cef841a8192a66b5c2612e8f08903ae107e55615a6",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "kayron source animation: move_n"
+                    },
+                    {
+                        "asset_id":  "kayron.move_ne",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/kayron/move_ne.png",
+                        "sha256":  "fd07eb3be6407c512b56d48b59e3a8b4ef77a3d4099c0d795bed6d0c78921243",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "kayron source animation: move_ne"
+                    },
+                    {
+                        "asset_id":  "kayron.move_s",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/kayron/move_s.png",
+                        "sha256":  "e616e93029a0d093702d665439f9ed7841fad30da78c7c892c27793a4ebe8b74",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "kayron source animation: move_s"
+                    },
+                    {
+                        "asset_id":  "kayron.move_se",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/kayron/move_se.png",
+                        "sha256":  "9ce881d29508860d2762ef3fe10434fd29c03bc975cbd9dbfb9c4b6924e24d01",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "kayron source animation: move_se"
+                    },
+                    {
+                        "asset_id":  "korrak.active",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/korrak/active.png",
+                        "sha256":  "dcbec425d81bd426bed01b3a6493ddadf64e1522da8e45eb118af0af3fd51823",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "korrak source animation: active"
+                    },
+                    {
+                        "asset_id":  "korrak.attack",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/korrak/attack.png",
+                        "sha256":  "f30d06e6dc877286643472cdc99c4050a343706421f0652435357186132c0387",
+                        "dimensions":  "1024x384",
+                        "alpha":  true,
+                        "runtime_use":  "korrak source animation: attack"
+                    },
+                    {
+                        "asset_id":  "korrak.death",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/korrak/death.png",
+                        "sha256":  "821bc41e22775a59d3a9834d255083be38b81e8a7ced50ca61182081d2ccfd3a",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "korrak source animation: death"
+                    },
+                    {
+                        "asset_id":  "korrak.idle",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/korrak/idle.png",
+                        "sha256":  "3e67b3f40fce7a53f10353cb337546f9150493c7b6a1ee27aa21dc259f3b2596",
+                        "dimensions":  "1024x384",
+                        "alpha":  true,
+                        "runtime_use":  "korrak source animation: idle"
+                    },
+                    {
+                        "asset_id":  "korrak.move_e",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/korrak/move_e.png",
+                        "sha256":  "cdb3ebe66ceeffdd23da2cba658d66123d3465ec28401d1e74a9aa6113fee668",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "korrak source animation: move_e"
+                    },
+                    {
+                        "asset_id":  "korrak.move_n",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/korrak/move_n.png",
+                        "sha256":  "0b974b4673d872def2e14780b685beeacad5f44e07363433d6f06997a92d81d1",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "korrak source animation: move_n"
+                    },
+                    {
+                        "asset_id":  "korrak.move_ne",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/korrak/move_ne.png",
+                        "sha256":  "d531841427be250619ac33eda5432d0b12a6f383b5c7b42de31c119ccdab37c0",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "korrak source animation: move_ne"
+                    },
+                    {
+                        "asset_id":  "korrak.move_s",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/korrak/move_s.png",
+                        "sha256":  "5877e52a814137247e928e6ffb779accfc132945f7ab3313b86585129bb02cef",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "korrak source animation: move_s"
+                    },
+                    {
+                        "asset_id":  "korrak.move_se",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/korrak/move_se.png",
+                        "sha256":  "b1ce78f070429345daae744b927638f353a2dc089a76945c456abb8317ff5b7d",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "korrak source animation: move_se"
+                    },
+                    {
+                        "asset_id":  "leoric.active",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/leoric/active.png",
+                        "sha256":  "b3d6f536dc4146e121fbdf5e58bdd3ad3d626353f26b810c6446524e911ae1d1",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "leoric source animation: active"
+                    },
+                    {
+                        "asset_id":  "leoric.attack",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/leoric/attack.png",
+                        "sha256":  "798c57e5d5d659f83e33de4a35ba4f90bd8dacd363839c1a22f19a54c0469414",
+                        "dimensions":  "1024x384",
+                        "alpha":  true,
+                        "runtime_use":  "leoric source animation: attack"
+                    },
+                    {
+                        "asset_id":  "leoric.death",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/leoric/death.png",
+                        "sha256":  "24af342265863a7254a5f42baa61ea92e74bcbe161440a2f5dfe1a501e24aac9",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "leoric source animation: death"
+                    },
+                    {
+                        "asset_id":  "leoric.idle",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/leoric/idle.png",
+                        "sha256":  "7bd7e25c61b6bb4a639bed62639828bf5cd22f1ca14795884bd699e9059f8663",
+                        "dimensions":  "1024x384",
+                        "alpha":  true,
+                        "runtime_use":  "leoric source animation: idle"
+                    },
+                    {
+                        "asset_id":  "leoric.move_e",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/leoric/move_e.png",
+                        "sha256":  "bda86a85763a2cbd10009cc57b80fc23f8ebe34c0dc981d93cf0f51872c0485e",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "leoric source animation: move_e"
+                    },
+                    {
+                        "asset_id":  "leoric.move_n",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/leoric/move_n.png",
+                        "sha256":  "cf42b12627f6b75312ea2a4ed114cf9cbd0821cc932b5b71d28767b3f39fe0c4",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "leoric source animation: move_n"
+                    },
+                    {
+                        "asset_id":  "leoric.move_ne",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/leoric/move_ne.png",
+                        "sha256":  "fb08f435995845753719dcf9236481a537f7018ff31ebe3213496c4a396d3f6c",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "leoric source animation: move_ne"
+                    },
+                    {
+                        "asset_id":  "leoric.move_s",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/leoric/move_s.png",
+                        "sha256":  "2fb2262439781c7793d273c486cc87cea479c5b8a48231fd028ff5549e0f3eda",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "leoric source animation: move_s"
+                    },
+                    {
+                        "asset_id":  "leoric.move_se",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/leoric/move_se.png",
+                        "sha256":  "8b95bea1cfb288d28390ea18d128e7aef31ad27a817be4d221ecf403082100f3",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "leoric source animation: move_se"
+                    },
+                    {
+                        "asset_id":  "livros_01",
+                        "family":  "props",
+                        "official_path":  "assets/props/livros_01.png",
+                        "sha256":  "b87237fa1fbe9f55b2ec50028c5823cb8fd63866030fd326af1de2a1ab6bebe8",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Asset final de producao; uso de runtime a confirmar por familia"
+                    },
+                    {
+                        "asset_id":  "livros_02",
+                        "family":  "props",
+                        "official_path":  "assets/props/livros_02.png",
+                        "sha256":  "a0776787fdf66c0eff519ee778f9df2771b322ea6b9a1be7c837b7e87c97f3e3",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Asset final de producao; uso de runtime a confirmar por familia"
+                    },
+                    {
+                        "asset_id":  "livros_03",
+                        "family":  "props",
+                        "official_path":  "assets/props/livros_03.png",
+                        "sha256":  "318654070ff1fd02a13bf61fc23aada4836df4ddefba8656823c44f0df26ca4e",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Asset final de producao; uso de runtime a confirmar por familia"
+                    },
+                    {
+                        "asset_id":  "maelor.active",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/maelor/active.png",
+                        "sha256":  "44f4e953ab611fbaa30c556ad475f8d4f225d0a183e3b5b2467fb8cc0ff9ce43",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "maelor source animation: active"
+                    },
+                    {
+                        "asset_id":  "maelor.attack",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/maelor/attack.png",
+                        "sha256":  "a8ad79110b968f59c01b37e44d122ee48f6aa298dea4b088b1916d9497bb885c",
+                        "dimensions":  "1024x384",
+                        "alpha":  true,
+                        "runtime_use":  "maelor source animation: attack"
+                    },
+                    {
+                        "asset_id":  "maelor.death",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/maelor/death.png",
+                        "sha256":  "3ea31f7b243ad55112d621a326c02a35247e189feefcbb6e95ac28460e8e0342",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "maelor source animation: death"
+                    },
+                    {
+                        "asset_id":  "maelor.idle",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/maelor/idle.png",
+                        "sha256":  "a01b5e6db310b12e8240e1f1e758e5fcc2811ef2fb6c63ce3ad784601e8d83fb",
+                        "dimensions":  "1024x384",
+                        "alpha":  true,
+                        "runtime_use":  "maelor source animation: idle"
+                    },
+                    {
+                        "asset_id":  "maelor.move_e",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/maelor/move_e.png",
+                        "sha256":  "91dfa8de5fe0a183ff06daee04b2eeb27e667e646dab08bc9a53e96c847323c0",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "maelor source animation: move_e"
+                    },
+                    {
+                        "asset_id":  "maelor.move_n",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/maelor/move_n.png",
+                        "sha256":  "cb63062e8cf19d88d3bbe50916179e7e52f6e5a35565b09ca5a748ab1c99994a",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "maelor source animation: move_n"
+                    },
+                    {
+                        "asset_id":  "maelor.move_ne",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/maelor/move_ne.png",
+                        "sha256":  "188ba02c0fd1dbf0c0e2a391c4c899514515806bf3dd0dff48b6ae5ee7b732fe",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "maelor source animation: move_ne"
+                    },
+                    {
+                        "asset_id":  "maelor.move_s",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/maelor/move_s.png",
+                        "sha256":  "d35ece461721183d93c383efa7b34fa72bc9238918fbab9c8513c8b37d2b17d1",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "maelor source animation: move_s"
+                    },
+                    {
+                        "asset_id":  "maelor.move_se",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/maelor/move_se.png",
+                        "sha256":  "4b4e380cce0fb3d60291b43004b459174a42f6936de30db9e13f13a5f72f520b",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "maelor source animation: move_se"
+                    },
+                    {
+                        "asset_id":  "margem_01",
+                        "family":  "props",
+                        "official_path":  "assets/props/margem_01.png",
+                        "sha256":  "4cd9432a3a7d8fd92d2016bc7a4dd1f318d8a4d2d529d8b3b5e7d52177c638fb",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Asset final de producao; uso de runtime a confirmar por familia"
+                    },
+                    {
+                        "asset_id":  "margem_02",
+                        "family":  "props",
+                        "official_path":  "assets/props/margem_02.png",
+                        "sha256":  "18cb702b63ea37759ca893e3aef372ac67a03bfd1aa2fb9e0a8d10a43e582825",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Asset final de producao; uso de runtime a confirmar por familia"
+                    },
+                    {
+                        "asset_id":  "margem_03",
+                        "family":  "props",
+                        "official_path":  "assets/props/margem_03.png",
+                        "sha256":  "3f7f11bbca9c09d927b9b8ee863430133434dbb39a77605440dae0307c2c7226",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Asset final de producao; uso de runtime a confirmar por familia"
+                    },
+                    {
+                        "asset_id":  "nyrelia.active",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/nyrelia/active.png",
+                        "sha256":  "4d0f970da79c3fb298642dae9a2a259486b8aff78da49c7c151601ecfa0febb3",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "Nyrelia source animation: active"
+                    },
+                    {
+                        "asset_id":  "nyrelia.attack",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/nyrelia/attack.png",
+                        "sha256":  "ff157e2e88b61ed7a9c0aaec6c1cc4f20baaa52f3233cb1c7b25b711ff4df1b8",
+                        "dimensions":  "1024x384",
+                        "alpha":  true,
+                        "runtime_use":  "Nyrelia source animation: attack"
+                    },
+                    {
+                        "asset_id":  "nyrelia.death",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/nyrelia/death.png",
+                        "sha256":  "f3d42a56579f3d49f0bf382afad46171ac801afaa74603ea9c510d8d97fa8b19",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "Nyrelia source animation: death"
+                    },
+                    {
+                        "asset_id":  "nyrelia.idle",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/nyrelia/idle.png",
+                        "sha256":  "7fa0f6700ada6fb5a362d14604a259aee4f30e44088cf55be00b21b562abc9e6",
+                        "dimensions":  "1024x384",
+                        "alpha":  true,
+                        "runtime_use":  "Nyrelia source animation: idle"
+                    },
+                    {
+                        "asset_id":  "nyrelia.move_e",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/nyrelia/move_e.png",
+                        "sha256":  "1853f70299e13e5bed1e3821aba52575a72c922b3ded789bb8038798284a7be7",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "Nyrelia source animation: move_e"
+                    },
+                    {
+                        "asset_id":  "nyrelia.move_n",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/nyrelia/move_n.png",
+                        "sha256":  "c1c89d0d17c0068b67cf390ca567390313dd2551c3a335cd1849826351dbd4e7",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "Nyrelia source animation: move_n"
+                    },
+                    {
+                        "asset_id":  "nyrelia.move_ne",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/nyrelia/move_ne.png",
+                        "sha256":  "669cd3a05beab27bc0abfd1451efb58e711c5b8abe073676de5eb130c8d2b32a",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "Nyrelia source animation: move_ne"
+                    },
+                    {
+                        "asset_id":  "nyrelia.move_s",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/nyrelia/move_s.png",
+                        "sha256":  "2244f9cdaa8b0f95c992608e1dae2e5e35723df764d8a1a237910db5f9071950",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "Nyrelia source animation: move_s"
+                    },
+                    {
+                        "asset_id":  "nyrelia.move_se",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/nyrelia/move_se.png",
+                        "sha256":  "641d51e64781a8e34772eeec6d11250f3c3e431d0b75c11ef7ef2389a6170ac6",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "Nyrelia source animation: move_se"
+                    },
+                    {
+                        "asset_id":  "ossos_01",
+                        "family":  "props",
+                        "official_path":  "assets/props/ossos_01.png",
+                        "sha256":  "d518ca7c348f674fc501cdbc28ae25df1032608ef4800cf4136287451a2b03c5",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Asset final de producao; uso de runtime a confirmar por familia"
+                    },
+                    {
+                        "asset_id":  "ossos_02",
+                        "family":  "props",
+                        "official_path":  "assets/props/ossos_02.png",
+                        "sha256":  "15a933b8cd1f93d3faaf7497ffc341f5310becbae015f9bd9677296029d345e6",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Asset final de producao; uso de runtime a confirmar por familia"
+                    },
+                    {
+                        "asset_id":  "ossos_03",
+                        "family":  "props",
+                        "official_path":  "assets/props/ossos_03.png",
+                        "sha256":  "f7f91d8a0553399d4c9cb42973bee3970a6282e823f4035d16958520fdced097",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Asset final de producao; uso de runtime a confirmar por familia"
+                    },
+                    {
+                        "asset_id":  "pilar_abissal_01",
+                        "family":  "props",
+                        "official_path":  "assets/props/pilar_abissal_01.png",
+                        "sha256":  "d95b5997845cf82ed0f67b2c5e73b692344b95818e4faee0de840af160217835",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Prop visual variant"
+                    },
+                    {
+                        "asset_id":  "pilar_abissal_02",
+                        "family":  "props",
+                        "official_path":  "assets/props/pilar_abissal_02.png",
+                        "sha256":  "8f479fbc533df4fedb26627b9f5f4a641aa423772da5ecc7428a1d8a1f7e50a0",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Prop visual variant"
+                    },
+                    {
+                        "asset_id":  "pilar_abissal_03",
+                        "family":  "props",
+                        "official_path":  "assets/props/pilar_abissal_03.png",
+                        "sha256":  "eaf07ba1019575855f39d3a355b78ab4f628500b3404663feb6c7373f18a798e",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Prop visual variant"
+                    },
+                    {
+                        "asset_id":  "rede_01",
+                        "family":  "props",
+                        "official_path":  "assets/props/rede_01.png",
+                        "sha256":  "296dc4b4f20aacea07f71d2c22537013fc5bb03dfddc4f37a14b56526666e40b",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Asset final de producao; uso de runtime a confirmar por familia"
+                    },
+                    {
+                        "asset_id":  "rede_02",
+                        "family":  "props",
+                        "official_path":  "assets/props/rede_02.png",
+                        "sha256":  "5873136623164d5ed78c6926a19cbf6aa6ec73c1bfa039a163ce59fd12bc75d4",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Asset final de producao; uso de runtime a confirmar por familia"
+                    },
+                    {
+                        "asset_id":  "rede_03",
+                        "family":  "props",
+                        "official_path":  "assets/props/rede_03.png",
+                        "sha256":  "96ad81b9d3b453dc952521e9702a2024f1e6f478c214d736b5f2d7924dbc208f",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Asset final de producao; uso de runtime a confirmar por familia"
+                    },
+                    {
+                        "asset_id":  "rocha_01",
+                        "family":  "props",
+                        "official_path":  "assets/props/rocha_01.png",
+                        "sha256":  "8b8145bd9724f2905aa0f47d25f02d88e2079f5633ba08f8a7491e610e91a5ec",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Prop visual variant"
+                    },
+                    {
+                        "asset_id":  "rocha_02",
+                        "family":  "props",
+                        "official_path":  "assets/props/rocha_02.png",
+                        "sha256":  "40d47e7d3ac212f080b9bcdb676a5db6b4f9bba91cf416b0aac21ecc1cac778e",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Prop visual variant"
+                    },
+                    {
+                        "asset_id":  "rocha_03",
+                        "family":  "props",
+                        "official_path":  "assets/props/rocha_03.png",
+                        "sha256":  "a164389984f15381f05b7ce452b508883430c2bf05ef2a056299b718d5d0339d",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Prop visual variant"
+                    },
+                    {
+                        "asset_id":  "sylas.active",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/sylas/active.png",
+                        "sha256":  "feaad0777814b07d97db4526e38aa2981c30e3f400f0af50dee231879f344601",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "sylas source animation: active"
+                    },
+                    {
+                        "asset_id":  "sylas.attack",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/sylas/attack.png",
+                        "sha256":  "09b14a790ded142667b1c7df89dfb6631887d1985fb43152a8396f400644673c",
+                        "dimensions":  "1024x384",
+                        "alpha":  true,
+                        "runtime_use":  "sylas source animation: attack"
+                    },
+                    {
+                        "asset_id":  "sylas.death",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/sylas/death.png",
+                        "sha256":  "2621d11440529c26a5b59207929634bb942cf9c1fe53bd6fb0f4eb2151d484c1",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "sylas source animation: death"
+                    },
+                    {
+                        "asset_id":  "sylas.idle",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/sylas/idle.png",
+                        "sha256":  "fb93feb2dcf119e3820c4892a326650e6e8ff846113aff8b429166893b6d4be5",
+                        "dimensions":  "1024x384",
+                        "alpha":  true,
+                        "runtime_use":  "sylas source animation: idle"
+                    },
+                    {
+                        "asset_id":  "sylas.move_e",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/sylas/move_e.png",
+                        "sha256":  "c200ce46eea779adb27c04a0fadbcf6f5a5292646de04f76cf6cd421cfe1ffb3",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "sylas source animation: move_e"
+                    },
+                    {
+                        "asset_id":  "sylas.move_n",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/sylas/move_n.png",
+                        "sha256":  "9a2520984a6367e463ba8cf82b75d432d99459fc903e702f8dbedf2a80039922",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "sylas source animation: move_n"
+                    },
+                    {
+                        "asset_id":  "sylas.move_ne",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/sylas/move_ne.png",
+                        "sha256":  "5cd8db123fabcdaa3e572d3213e331eeed6af8004939e8911c1fb669c6946c77",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "sylas source animation: move_ne"
+                    },
+                    {
+                        "asset_id":  "sylas.move_s",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/sylas/move_s.png",
+                        "sha256":  "3039735e20e70acbcdd4799c332f05ea627835a191085190c5606689b3d65a8d",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "sylas source animation: move_s"
+                    },
+                    {
+                        "asset_id":  "sylas.move_se",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/sylas/move_se.png",
+                        "sha256":  "d567de6011e506d86f776f08c37d40a65ad176747065ac451d511817b4b4d04a",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "sylas source animation: move_se"
+                    },
+                    {
+                        "asset_id":  "velas_01",
+                        "family":  "props",
+                        "official_path":  "assets/props/velas_01.png",
+                        "sha256":  "97ad156c84231b200a175bfad15a9e9232fc561aad3962a58a81f0bbc1212555",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Asset final de producao; uso de runtime a confirmar por familia"
+                    },
+                    {
+                        "asset_id":  "velas_02",
+                        "family":  "props",
+                        "official_path":  "assets/props/velas_02.png",
+                        "sha256":  "d5b8f2e432f449bc9402521ce64d1f0595cdc4c39c973284eb08651134d0433a",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Asset final de producao; uso de runtime a confirmar por familia"
+                    },
+                    {
+                        "asset_id":  "velas_03",
+                        "family":  "props",
+                        "official_path":  "assets/props/velas_03.png",
+                        "sha256":  "795b8576bb42dc2d3fe7d936584738465bb2e2db2e3a8fd0ab7b66916c198851",
+                        "dimensions":  "256x256",
+                        "alpha":  true,
+                        "runtime_use":  "Asset final de producao; uso de runtime a confirmar por familia"
+                    },
+                    {
+                        "asset_id":  "zynara.active",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/zynara/active.png",
+                        "sha256":  "293868efd4a9051e823d73017ee30209fbe0d74b3c8ad7443523dc4b4ae08662",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "zynara source animation: active"
+                    },
+                    {
+                        "asset_id":  "zynara.attack",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/zynara/attack.png",
+                        "sha256":  "dc9b5755fa149d1777728c0eabe409957ae36ab0167f666aa305e8a7ec34dc24",
+                        "dimensions":  "1024x384",
+                        "alpha":  true,
+                        "runtime_use":  "zynara source animation: attack"
+                    },
+                    {
+                        "asset_id":  "zynara.death",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/zynara/death.png",
+                        "sha256":  "760fbae7ed3c7067347e822d22ef8e494b5fe046ab528116220fd8d21ccc2ecc",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "zynara source animation: death"
+                    },
+                    {
+                        "asset_id":  "zynara.idle",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/zynara/idle.png",
+                        "sha256":  "dcda5475c52c06aba54eafb143fe249ec98b23a716cef5eeb927e3618062107a",
+                        "dimensions":  "1024x384",
+                        "alpha":  true,
+                        "runtime_use":  "zynara source animation: idle"
+                    },
+                    {
+                        "asset_id":  "zynara.move_e",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/zynara/move_e.png",
+                        "sha256":  "7cad9f33c46ee4cc1ee74e16eb471353de6db54344bac622bd4b18b6b896118f",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "zynara source animation: move_e"
+                    },
+                    {
+                        "asset_id":  "zynara.move_n",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/zynara/move_n.png",
+                        "sha256":  "18c5410bdbb99ef6c6b98d3b13122a04cb0568ab6c521958287a7ad815c368da",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "zynara source animation: move_n"
+                    },
+                    {
+                        "asset_id":  "zynara.move_ne",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/zynara/move_ne.png",
+                        "sha256":  "35e619bfacf0cc137267c1e2ae814aa31a16e0d923b58d4a6ea3b267b3e5d695",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "zynara source animation: move_ne"
+                    },
+                    {
+                        "asset_id":  "zynara.move_s",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/zynara/move_s.png",
+                        "sha256":  "8e1b2b4a811d871371b34debecc1ea14f6ef83c3e40946a72332308b3ac95709",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "zynara source animation: move_s"
+                    },
+                    {
+                        "asset_id":  "zynara.move_se",
+                        "family":  "animations/heroes",
+                        "official_path":  "assets/animations/heroes/zynara/move_se.png",
+                        "sha256":  "f503ef6024712d8322ab2b16cc974b7b69960e6cb5d250cbf9f26c1db2bdd345",
+                        "dimensions":  "1536x384",
+                        "alpha":  true,
+                        "runtime_use":  "zynara source animation: move_se"
+                    }
+                ]
+}

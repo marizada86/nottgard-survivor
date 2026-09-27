@@ -10,6 +10,8 @@ const NOTE_MAX := 1000
 const EVIDENCE_ROOT := "user://evidence-kit"
 const GUIDE_MAX_SIZE := Vector2(820, 560)
 const GUIDE_MARGIN := 24.0
+const NOTE_MAX_SIZE := Vector2(760, 470)
+const NOTE_MARGIN := 24.0
 const QA_RUN_DESTINATIONS := [
 	["Inicio da run", "running"],
 	["Oferta de level-up", "levelup"],
@@ -22,6 +24,19 @@ const QA_RUN_DESTINATIONS := [
 	["Resultado: derrota", "defeat"],
 	["Oferta de revive", "revive_offer"],
 	["Regra da fase", "rule"],
+	["Props: contato visual", "prop_grounding"],
+	["Estige: entrada", "styx_entry"],
+	["Estige: margem", "styx_margin"],
+	["Estige: corrente", "styx_current"],
+	["Estige: raro imbuído", "styx_rare"],
+	["Estige: penhasco", "styx_cliff"],
+	["Estige: telégrafo", "styx_telegraph"],
+	["Estige: item", "styx_item"],
+	["Estige: portal", "styx_portal"],
+	["Estige: chefe", "styx_boss"],
+	["Estige: Esquecimento", "styx_forget"],
+	["Estige: Chamado", "styx_call"],
+	["Estige: derrota", "styx_defeat"],
 ]
 
 var items: Array = []          # {kind, time, ctx, text, png}
@@ -52,13 +67,18 @@ var _qa_stage: OptionButton
 var _qa_hero: OptionButton
 var _qa_state: OptionButton
 var _qa_seed: SpinBox
+var _qa_level: SpinBox
+var _qa_weapon: OptionButton
+var _qa_item: OptionButton
+var _qa_passive: OptionButton
+var _qa_event: OptionButton
 
 func _ready() -> void:
 	layer = 100
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	_build_ui()
-	get_viewport().size_changed.connect(_layout_guide)
-	call_deferred("_layout_guide")
+	get_viewport().size_changed.connect(_layout_modals)
+	call_deferred("_layout_modals")
 	if not Version.evidence_enabled():
 		return
 	_load_draft()
@@ -85,7 +105,6 @@ func _build_ui() -> void:
 
 	_pad = PanelContainer.new()
 	_pad.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
-	_pad.custom_minimum_size = Vector2(760, 470)
 	_pad.visible = false
 	add_child(_pad)
 	var v := VBoxContainer.new()
@@ -93,22 +112,29 @@ func _build_ui() -> void:
 	var t := Label.new()
 	t.text = "Bloco de notas (F5) — o print do instante em que você abriu vai junto"
 	v.add_child(t)
+	var note_scroll := ScrollContainer.new()
+	note_scroll.custom_minimum_size = Vector2(0, 130)
+	note_scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	v.add_child(note_scroll)
 	_edit = TextEdit.new()
-	_edit.custom_minimum_size = Vector2(720, 300)
+	_edit.custom_minimum_size = Vector2(0, 300)
+	_edit.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	_edit.wrap_mode = TextEdit.LINE_WRAPPING_BOUNDARY
 	_edit.placeholder_text = "Escreva o que viu: o que estranhou, o que funcionou, o que falhou..."
 	_edit.text_changed.connect(_on_note_changed)
-	v.add_child(_edit)
+	note_scroll.add_child(_edit)
 	_count = Label.new()
 	v.add_child(_count)
 	_summary = Label.new()
 	v.add_child(_summary)
-	var h := HBoxContainer.new()
-	v.add_child(h)
+	var actions := VBoxContainer.new()
+	v.add_child(actions)
 	var ok := Button.new()
-	ok.text = "Guardar nota e fechar (F5)"
+	ok.text = "Guardar e fechar (F5)"
 	ok.pressed.connect(close_note)
-	h.add_child(ok)
+	actions.add_child(ok)
+	var h := HBoxContainer.new()
+	actions.add_child(h)
 	_clear_btn = Button.new()
 	_clear_btn.text = "Limpar pacote"
 	_clear_btn.pressed.connect(_on_clear)
@@ -116,6 +142,8 @@ func _build_ui() -> void:
 	var hint := Label.new()
 	hint.text = "Ctrl+Z desfaz · Ctrl+A seleciona tudo · Esc fecha"
 	hint.modulate = Color(1, 1, 1, 0.6)
+	hint.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	hint.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	h.add_child(hint)
 
 	_guide_modal = Control.new()
@@ -201,8 +229,8 @@ func _build_console() -> void:
 func _build_qa_browser() -> void:
 	_qa_modal = PanelContainer.new()
 	_qa_modal.set_anchors_preset(Control.PRESET_CENTER)
-	_qa_modal.position = Vector2(-390, -235)
-	_qa_modal.custom_minimum_size = Vector2(780, 440)
+	_qa_modal.position = Vector2(-390, -320)
+	_qa_modal.custom_minimum_size = Vector2(780, 610)
 	_qa_modal.visible = false
 	add_child(_qa_modal)
 	var v := VBoxContainer.new()
@@ -212,7 +240,7 @@ func _build_qa_browser() -> void:
 	title.add_theme_font_size_override("font_size", 22)
 	v.add_child(title)
 	var hint := Label.new()
-	hint.text = "Escolha um destino declarado. O seed torna a preparação reproduzível."
+	hint.text = "Escolha cenário e build. Eventos e entrada de chefe começam cinco segundos antes do gatilho."
 	v.add_child(hint)
 	_qa_hero = OptionButton.new()
 	_qa_hero.tooltip_text = "Herói (bloqueios normais são ignorados apenas no sandbox)"
@@ -224,6 +252,7 @@ func _build_qa_browser() -> void:
 	for id in Data.table("stages"):
 		_qa_stage.add_item("Fase: %s [%s]" % [Data.table("stages")[id].name, id])
 		_qa_stage.set_item_metadata(_qa_stage.item_count - 1, id)
+	_qa_stage.item_selected.connect(func(_idx): _fill_qa_events())
 	v.add_child(_qa_stage)
 	_qa_state = OptionButton.new()
 	_qa_state.tooltip_text = "Estado inicial da fase selecionada"
@@ -237,6 +266,36 @@ func _build_qa_browser() -> void:
 	_qa_seed.value = 1001
 	_qa_seed.tooltip_text = "Seed determinística"
 	v.add_child(_qa_seed)
+	_qa_level = SpinBox.new()
+	_qa_level.min_value = 1
+	_qa_level.max_value = 20
+	_qa_level.value = 5
+	_qa_level.tooltip_text = "Nível inicial do herói no cenário"
+	v.add_child(_qa_level)
+	_qa_weapon = OptionButton.new()
+	_qa_weapon.add_item("Arma extra: nenhuma")
+	_qa_weapon.set_item_metadata(0, "")
+	for id in Data.table("weapons"):
+		_qa_weapon.add_item("Arma extra: %s" % Data.table("weapons")[id].name)
+		_qa_weapon.set_item_metadata(_qa_weapon.item_count - 1, id)
+	v.add_child(_qa_weapon)
+	_qa_item = OptionButton.new()
+	_qa_item.add_item("Item: nenhum")
+	_qa_item.set_item_metadata(0, "")
+	for item in Data.table("items").uniques:
+		_qa_item.add_item("Item: %s" % item.name)
+		_qa_item.set_item_metadata(_qa_item.item_count - 1, item.id)
+	v.add_child(_qa_item)
+	_qa_passive = OptionButton.new()
+	_qa_passive.add_item("Passiva: nenhuma")
+	_qa_passive.set_item_metadata(0, "")
+	for id in Data.table("passives"):
+		_qa_passive.add_item("Passiva: %s" % Data.table("passives")[id].name)
+		_qa_passive.set_item_metadata(_qa_passive.item_count - 1, id)
+	v.add_child(_qa_passive)
+	_qa_event = OptionButton.new()
+	v.add_child(_qa_event)
+	_fill_qa_events()
 	var h := HBoxContainer.new()
 	v.add_child(h)
 	var launch := Button.new()
@@ -268,6 +327,17 @@ func _open_qa_browser() -> void:
 	if Version.qa_enabled():
 		_qa_modal.visible = not _qa_modal.visible
 
+func _fill_qa_events() -> void:
+	if _qa_event == null or _qa_stage == null or _qa_stage.selected < 0:
+		return
+	_qa_event.clear()
+	_qa_event.add_item("Evento de fase: nenhum")
+	_qa_event.set_item_metadata(0, "")
+	var stage_id := String(_qa_stage.get_item_metadata(_qa_stage.selected))
+	for event_def in Data.table("stage_events").get(stage_id, []):
+		_qa_event.add_item("Evento: %s" % String(event_def.get("title", event_def.id)))
+		_qa_event.set_item_metadata(_qa_event.item_count - 1, String(event_def.id))
+
 func _launch_qa() -> void:
 	var target := String(_qa_state.get_item_metadata(_qa_state.selected))
 	var request := {
@@ -275,7 +345,14 @@ func _launch_qa() -> void:
 		"seed": int(_qa_seed.value),
 		"hero_id": String(_qa_hero.get_item_metadata(_qa_hero.selected)),
 		"stage_id": String(_qa_stage.get_item_metadata(_qa_stage.selected)),
-		"target_state": target
+		"target_state": target,
+		"event_id": String(_qa_event.get_item_metadata(_qa_event.selected)),
+		"prelude_seconds": 5.0,
+		"level": int(_qa_level.value),
+		"weapons": [String(_qa_weapon.get_item_metadata(_qa_weapon.selected))].filter(func(id): return id != ""),
+		"item_id": String(_qa_item.get_item_metadata(_qa_item.selected)),
+		"passive_id": String(_qa_passive.get_item_metadata(_qa_passive.selected)),
+		"passive_level": 1
 	}
 	_qa_modal.visible = false
 	if not Game.start_qa_run(request):
@@ -308,12 +385,33 @@ func _layout_guide() -> void:
 	# da largura visível para que apenas a rolagem vertical seja necessária.
 	_guide_content.custom_minimum_size.x = maxf(1.0, panel_size.x - 32.0)
 
+func _layout_modals() -> void:
+	_layout_guide()
+	_layout_note()
+
+func _layout_note() -> void:
+	if _pad == null:
+		return
+	var viewport_size := get_viewport().get_visible_rect().size
+	var panel_size := note_panel_size(viewport_size)
+	_pad.custom_minimum_size = panel_size
+	_pad.size = panel_size
+	_pad.position = (viewport_size - panel_size) * 0.5
+
 static func guide_panel_size(viewport_size: Vector2) -> Vector2:
 	var available := viewport_size - Vector2(GUIDE_MARGIN * 2.0, GUIDE_MARGIN * 2.0)
 	return Vector2(minf(GUIDE_MAX_SIZE.x, maxf(1.0, available.x)), minf(GUIDE_MAX_SIZE.y, maxf(1.0, available.y)))
 
-static func is_qa_shortcut(ev: InputEvent, o_pressed: bool) -> bool:
-	return ev is InputEventKey and ev.pressed and not ev.echo and ev.physical_keycode == KEY_P and ev.ctrl_pressed and o_pressed
+static func note_panel_size(viewport_size: Vector2) -> Vector2:
+	var available := viewport_size - Vector2(NOTE_MARGIN * 2.0, NOTE_MARGIN * 2.0)
+	return Vector2(minf(NOTE_MAX_SIZE.x, maxf(1.0, available.x)), minf(NOTE_MAX_SIZE.y, maxf(1.0, available.y)))
+
+static func is_qa_shortcut(ev: InputEvent, o_pressed: bool = false) -> bool:
+	if not (ev is InputEventKey) or not ev.pressed or ev.echo:
+		return false
+	if ev.physical_keycode == KEY_F4:
+		return true
+	return ev.physical_keycode == KEY_P and ev.ctrl_pressed and o_pressed
 
 static func shortcut_action(ev: InputEvent) -> StringName:
 	if not (ev is InputEventKey) or not ev.pressed or ev.echo:
@@ -346,7 +444,8 @@ func _guide_text() -> String:
 		+ "[b]Controles do jogo[/b]\n" \
 		+ "WASD/setas: mover · Tab: alterna mira (automática / mouse) · Q/botão direito: habilidade ativa · E: altar, ritual, portal · X: extrair após o chefe · 1-5: escolher no level-up · R: rerrolar · Esc: pausa\n" \
 		+ "Todas as armas atacam sozinhas. Sobreviva, evolua, derrote o chefe da fase e desça pelo portal.\n\n" \
-		+ "[b]Teclas de teste[/b]: F5 nota · F6 print · F7 gera o .zip · F11 tela cheia · F12 diagnóstico · F1 este guia\n" \
+		+ "[b]Teclas de teste[/b]: F5 nota · F6 print · F7 gera o .zip · F11 tela cheia · F12 diagnóstico · F1 este guia" \
+		+ (" · F4 Navegador QA" if Version.qa_enabled() else "") + "\n" \
 		+ "[color=#aaaaaa]Os prints mostram a tela do jogo. Notas e log têm o nome de usuário do Windows removido.[/color]"
 
 func toast(text: String) -> void:

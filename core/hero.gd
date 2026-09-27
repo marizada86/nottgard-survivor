@@ -2,6 +2,8 @@ class_name Hero
 extends RefCounted
 ## Herói no plano de chão. Sem nós: testável headless.
 
+const TerrainLayout := preload("res://core/terrain_layout.gd")
+
 const SPEED_PX := 190.0   # velocidade visual base, em pixels de tela
 const RADIUS := 0.3       # tiles
 
@@ -36,6 +38,10 @@ var slow_t := 0.0
 var stun_t := 0.0
 var push := Vector2.ZERO  # empurrão externo (tiles/s)
 var hit_flash := 0.0
+## Efeitos exclusivos da run no Estige. Nunca alteram a ficha persistente.
+var terrain_id := ""
+var styx_lucidity_loss := 0
+var styx_forget_t := 0.0
 
 static func make(hero_id: String, meta: Dictionary = {}, bonus: Dictionary = {}) -> Hero:
 	var d: Dictionary = Data.table("heroes")[hero_id]
@@ -87,17 +93,36 @@ func attr(name_: String) -> int:
 func attr_mod(name_: String) -> int:
 	return Dice.mod(attr(name_))
 
+func styx_intelligence() -> int:
+	return maxi(1, attr("inteligencia") - styx_lucidity_loss)
+
+func styx_intelligence_mod() -> int:
+	return Dice.mod(styx_intelligence())
+
 func ca() -> int:
 	return base_ca + int(m("ca"))
 
 func cam() -> int:
 	return base_cam + int(m("cam"))
 
-func crit_range() -> int:
-	var r := int(m("crit_range"))
-	if m("crit_step") > 0.0:
-		r += int((m("crit_step") + 1.0) / 2.0)
-	return mini(r, 6)
+func typed_evasion(dtype: String) -> float:
+	var defense := ca() if dtype == "fisico" else cam()
+	return clampf(float(defense - 10) * 0.03, 0.0, 0.30)
+
+func evasion(dtype: String, precision: int = 0) -> float:
+	# Precisão reduz apenas a parcela tipada; esquiva genérica continua útil.
+	var typed := maxf(0.0, typed_evasion(dtype) - float(precision) * 0.01)
+	var generic := clampf(m("dodge"), 0.0, 0.45)
+	return minf(0.45, 1.0 - (1.0 - typed) * (1.0 - generic))
+
+func crit_overflow_bonus() -> float:
+	var bonus := m("crit_overflow_bonus")
+	if m("crit_overflow_step") > 0.0:
+		bonus += float(int((m("crit_overflow_step") + 1.0) / 2.0)) * 0.03
+	return minf(0.40, bonus)
+
+func crit_chance(attack_total: int) -> float:
+	return minf(0.40, maxf(0.0, float(attack_total - 20) * 0.03) + crit_overflow_bonus())
 
 func speed_px() -> float:
 	var f := 1.0 + m("speed_pct")
@@ -119,6 +144,7 @@ func step(screen_dir: Vector2, dt: float) -> void:
 		return
 	slow_t = maxf(0.0, slow_t - dt)
 	stun_t = maxf(0.0, stun_t - dt)
+	styx_forget_t = maxf(0.0, styx_forget_t - dt)
 	hit_flash = maxf(0.0, hit_flash - dt)
 	var delta := Vector2.ZERO
 	if screen_dir != Vector2.ZERO and stun_t <= 0.0:
@@ -135,6 +161,10 @@ func step(screen_dir: Vector2, dt: float) -> void:
 
 func is_free(p: Vector2, r: float = RADIUS) -> bool:
 	if p.x < r or p.y < r or p.x > map_size.x - r or p.y > map_size.y - r:
+		return false
+	if TerrainLayout.is_blocked(terrain_id, p):
+		return false
+	if styx_forget_t > 0.0 and TerrainLayout.distance_to_styx(terrain_id, p) < TerrainLayout.distance_to_styx(terrain_id, pos):
 		return false
 	for b in blockers:
 		if p.distance_to(Vector2(b.x, b.y)) < b.z + r:

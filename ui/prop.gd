@@ -8,11 +8,18 @@ extends Node2D
 @export var half_width := 22.0: set = _set_hw
 @export var block_radius := 0.4   ## raio de colisão em tiles
 @export var color := Color(0.24, 0.22, 0.24): set = _set_color
+## Pixels de tela após a âncora automática; positivo desce arte e sombra.
+@export var visual_ground_offset := 0.0: set = _set_visual_ground_offset
+## Exclusivo de QA: mostra âncora, área de sombra e origem lógica.
+@export var show_grounding_guide := false: set = _set_grounding_guide
 var _texture: Texture2D
 var _texture_path := ""
+static var _visible_bottom_cache := {}
 
 func _ready() -> void:
-	add_to_group("blockers")
+	# Um prop oculto é removido do layout e nunca deixa uma colisão invisível.
+	if visible and block_radius > 0.0:
+		add_to_group("blockers")
 
 func _set_kind(v: String) -> void:
 	kind = v
@@ -28,6 +35,14 @@ func _set_hw(v: float) -> void:
 
 func _set_color(v: Color) -> void:
 	color = v
+	queue_redraw()
+
+func _set_visual_ground_offset(v: float) -> void:
+	visual_ground_offset = v
+	queue_redraw()
+
+func _set_grounding_guide(v: bool) -> void:
+	show_grounding_guide = v
 	queue_redraw()
 
 func _diamond(c: Vector2, hw: float, hh: float) -> PackedVector2Array:
@@ -49,15 +64,82 @@ func _prop_texture() -> Texture2D:
 		_texture = load(path) if ResourceLoader.exists(path) else null
 	return _texture
 
+## A base deve ser a última linha de alfa visível, não a borda do arquivo.
+func _visible_bottom_px(texture: Texture2D) -> float:
+	if _visible_bottom_cache.has(_texture_path):
+		return float(_visible_bottom_cache[_texture_path])
+	var bottom := float(texture.get_height())
+	var image := texture.get_image()
+	if image != null:
+		var used := image.get_used_rect()
+		if used.size.y > 0:
+			bottom = float(used.position.y + used.size.y)
+	_visible_bottom_cache[_texture_path] = bottom
+	return bottom
+
+static func texture_draw_y(texture_height: float, visible_bottom: float, target_height: float, ground_offset: float = 0.0) -> float:
+	if texture_height <= 0.0:
+		return ground_offset
+	return -visible_bottom * target_height / texture_height + ground_offset
+
+## Posiciona o ponto artístico normalizado no contato lógico local.
+static func texture_draw_origin(target_size: Vector2, contact_anchor: Vector2, ground_offset: float = 0.0) -> Vector2:
+	return Vector2(-target_size.x * contact_anchor.x, -target_size.y * contact_anchor.y + ground_offset)
+
+## A sombra de contato não pode terminar abaixo do ponto lógico de apoio.
+static func contact_shadow_center_y(contact_y: float, requested_center_y: float, radius_y: float) -> float:
+	return minf(requested_center_y, contact_y + 2.0 - radius_y)
+
+func _visual_profile() -> Dictionary:
+	var all_profiles: Dictionary = Data.table("prop_visuals")
+	var assets: Dictionary = all_profiles.get("assets", {})
+	return assets.get(_texture_path, {})
+
+func _profile_vec2(profile: Dictionary, key: String, fallback: Vector2) -> Vector2:
+	var raw: Variant = profile.get(key, [])
+	if raw is Array and raw.size() >= 2:
+		return Vector2(float(raw[0]), float(raw[1]))
+	return fallback
+
+func _draw_grounding_guide(contact: Vector2, shadow_center: Vector2, shadow_radius: Vector2, profile_found: bool) -> void:
+	if not show_grounding_guide:
+		return
+	var guide_color := Color(0.2, 1.0, 0.78, 0.92) if profile_found else Color(1.0, 0.28, 0.28, 0.95)
+	draw_line(contact + Vector2(-7, 0), contact + Vector2(7, 0), guide_color, 1.5)
+	draw_line(contact + Vector2(0, -7), contact + Vector2(0, 7), guide_color, 1.5)
+	draw_circle(contact, 2.4, guide_color)
+	if shadow_radius.x > 0.0 and shadow_radius.y > 0.0:
+		draw_polyline(_ellipse(shadow_center, shadow_radius.x, shadow_radius.y), Color(1.0, 0.86, 0.2, 0.9), 1.2)
+
+func set_grounding_guide(enabled: bool) -> void:
+	show_grounding_guide = enabled
+
 func _draw() -> void:
 	var w := half_width
-	draw_colored_polygon(_ellipse(Vector2.ZERO, w * 1.05, w * 0.5), Color(0, 0, 0, 0.35))
+	var contact := Vector2(0, visual_ground_offset)
 	var texture := _prop_texture()
 	if texture != null:
 		var target_h := maxf(42.0, height + w * 0.8)
 		var target_w := target_h * float(texture.get_width()) / float(texture.get_height())
-		draw_texture_rect(texture, Rect2(-target_w * 0.5, -target_h, target_w, target_h), false)
+		var target_size := Vector2(target_w, target_h)
+		var profile := _visual_profile()
+		var fallback_anchor := Vector2(0.5, _visible_bottom_px(texture) / float(texture.get_height()))
+		var anchor := _profile_vec2(profile, "contact_anchor", fallback_anchor)
+		var shadow_center := contact
+		var shadow_radius := Vector2.ZERO
+		if String(profile.get("shadow_mode", "dynamic")) == "dynamic":
+			var shadow_offset := _profile_vec2(profile, "shadow_offset", Vector2.ZERO)
+			var shadow_size := _profile_vec2(profile, "shadow_size", Vector2(w * 1.05 / target_w, w * 0.5 / target_h))
+			shadow_center = contact + Vector2(shadow_offset.x * target_w, shadow_offset.y * target_h)
+			shadow_radius = Vector2(maxf(2.0, shadow_size.x * target_w), maxf(1.5, shadow_size.y * target_h))
+			shadow_center.y = contact_shadow_center_y(contact.y, shadow_center.y, shadow_radius.y)
+			draw_colored_polygon(_ellipse(shadow_center, shadow_radius.x, shadow_radius.y), Color(0, 0, 0, float(profile.get("shadow_alpha", 0.28))))
+		var origin := texture_draw_origin(target_size, anchor, visual_ground_offset)
+		draw_texture_rect(texture, Rect2(origin, target_size), false)
+		_draw_grounding_guide(contact, shadow_center, shadow_radius, not profile.is_empty())
 		return
+	draw_colored_polygon(_ellipse(contact, w * 1.05, w * 0.5), Color(0, 0, 0, 0.35))
+	draw_set_transform(contact)
 	match kind:
 		"cogumelo":
 			draw_rect(Rect2(-w * 0.3, -height, w * 0.6, height), color.darkened(0.35))
@@ -92,3 +174,4 @@ func _draw() -> void:
 			draw_colored_polygon(_diamond(Vector2.ZERO, w, w * 0.5), color.darkened(0.1))
 			draw_rect(Rect2(-w, -height, w * 2, height), color)
 			draw_colored_polygon(_diamond(Vector2(0, -height), w, w * 0.5), color.lightened(0.15))
+	draw_set_transform(Vector2.ZERO)

@@ -4,6 +4,7 @@ extends Node2D
 
 const CELL := Vector2i(256, 384)
 const DISPLAY_HEIGHT := 72.0
+const NYRELIA_BASELINE_Y := 368.0
 const WALK_DIRECTIONS := [&"e", &"se", &"s", &"sw", &"w", &"nw", &"n", &"ne"]
 const WALK_SOURCE_DIRECTIONS := [&"e", &"se", &"s", &"n", &"ne"]
 const MIRRORED_WALK_ANIMATIONS := {
@@ -71,7 +72,10 @@ func _build_animations() -> void:
 	_has_animation = frames.has_animation(&"idle")
 	sprite.sprite_frames = frames
 	sprite.visible = _has_animation
-	sprite.offset = Vector2(0, -CELL.y * 0.5)
+	# Nyrelia usa folhas normalizadas com 16 px de margem inferior; os demais
+	# heróis preservam a âncora histórica na borda da célula.
+	var baseline_y := NYRELIA_BASELINE_Y if _active_hero_id == "nyrelia" else float(CELL.y)
+	sprite.offset = Vector2(0, CELL.y * 0.5 - baseline_y)
 	sprite.scale = Vector2.ONE * (DISPLAY_HEIGHT / CELL.y)
 	sprite.flip_h = false
 	if _has_animation and frames.has_animation(&"idle"):

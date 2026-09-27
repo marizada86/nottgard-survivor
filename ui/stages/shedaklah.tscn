@@ -12,6 +12,12 @@ z_index = -100
 script = ExtResource("1_y2hap")
 color_a = Color(0.14117648, 0.13333334, 0.15686275, 1)
 color_b = Color(0.18039216, 0.15686275, 0.1882353, 1)
+terrain_layout_id = "shedaklah"
+visual_seed = 222
+use_modular_atlas = true
+atlas_columns = 2
+atlas_variants = 4
+terrain_texture_path = "res://assets/tiles/shedaklah_ground_atlas_v1.png"
 
 [node name="Sorted" type="Node2D" parent="." unique_id=378418535]
 y_sort_enabled = true

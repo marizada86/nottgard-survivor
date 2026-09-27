@@ -7,6 +7,8 @@ func run() -> Array:
 	_assert_panel_size(failures, Vector2(1280, 720), Vector2(820, 560))
 	_assert_panel_size(failures, Vector2(375, 667), Vector2(327, 560))
 	_assert_panel_size(failures, Vector2(320, 480), Vector2(272, 432))
+	_assert_note_panel_size(failures, Vector2(1280, 720), Vector2(760, 470))
+	_assert_note_panel_size(failures, Vector2(320, 480), Vector2(272, 432))
 	_assert_shortcut(failures, KEY_F5, &"note")
 	_assert_shortcut(failures, KEY_F6, &"screenshot")
 	_assert_shortcut(failures, KEY_F7, &"export")
@@ -27,11 +29,20 @@ func run() -> Array:
 	qa_key.ctrl_pressed = false
 	if PlaytestScript.is_qa_shortcut(qa_key, true):
 		failures.append("O+P sem Ctrl nao pode abrir o atalho QA")
+	var qa_f4 := InputEventKey.new()
+	qa_f4.pressed = true
+	qa_f4.physical_keycode = KEY_F4
+	if not PlaytestScript.is_qa_shortcut(qa_f4):
+		failures.append("F4 nao abriu o atalho QA")
 	return failures
 
 func _assert_panel_size(failures: Array, viewport_size: Vector2, expected: Vector2) -> void:
 	if PlaytestScript.guide_panel_size(viewport_size) != expected:
 		failures.append("modal em %s deveria medir %s, recebeu %s" % [viewport_size, expected, PlaytestScript.guide_panel_size(viewport_size)])
+
+func _assert_note_panel_size(failures: Array, viewport_size: Vector2, expected: Vector2) -> void:
+	if PlaytestScript.note_panel_size(viewport_size) != expected:
+		failures.append("bloco F5 em %s deveria medir %s, recebeu %s" % [viewport_size, expected, PlaytestScript.note_panel_size(viewport_size)])
 
 func _assert_shortcut(failures: Array, keycode: Key, expected: StringName) -> void:
 	var event := InputEventKey.new()

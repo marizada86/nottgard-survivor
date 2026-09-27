@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "purpose": "Template only. No asset is official until an explicit human decision is recorded.",
+  "allowed_decisions": ["approved", "rejected", "hold", "regenerate"],
+  "required_for_approved": [
+    "asset_id",
+    "family",
+    "official_path",
+    "sha256",
+    "dimensions",
+    "alpha",
+    "runtime_use",
+    "decision_reference",
+    "decided_at",
+    "reason"
+  ],
+  "decision_records": []
+}

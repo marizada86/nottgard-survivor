@@ -1,0 +1,26 @@
+{
+  "template_id": "LEORIC-PILOT-V01",
+  "generation_authorized": true,
+  "method": "integrated-imagegen",
+  "license": "output retained under the account's integrated ImageGen terms; no separate provider receipt",
+  "spend_limit": null,
+  "output_root": ".atena/generated/leoric-regeneration/v01/candidates",
+  "common_prompt": "Sprite 2D de fantasia sombria em pixel art nítida, visão isométrica 3/4 de cima. Leoric, gnomo adulto astrônomo, chapéu escuro largo, barba grisalha legível, manto verde-musgo com constelações douradas e foco azul, corpo preenchido e silhueta forte em 72 pixels, fundo RGBA transparente, célula única 256 por 384 pixels, pés apoiados na base.",
+  "negative_prompt": "fundo, cenário, texto, moldura, watermark, chibi, corpo fragmentado, apenas traços, apenas partículas, chapéu ou barba ausentes, VFX cobrindo o personagem, membros cortados, blur, gradiente suave, personagem extra, borda de célula invadida",
+  "frames": [
+    {"id":"leoric.idle.00","strip":"idle","frame":0,"pose":"postura neutra; chapéu, barba e manto inteiros"},
+    {"id":"leoric.idle.01","strip":"idle","frame":1,"pose":"respiração curta; foco azul mínimo"},
+    {"id":"leoric.idle.02","strip":"idle","frame":2,"pose":"pequena mudança de peso; corpo permanece preenchido"},
+    {"id":"leoric.idle.03","strip":"idle","frame":3,"pose":"retorno à postura inicial; pé na base"},
+    {"id":"leoric.move_se.00","strip":"move_se","frame":0,"pose":"contato do pé dianteiro na diagonal sudeste"},
+    {"id":"leoric.move_se.01","strip":"move_se","frame":1,"pose":"transferência de peso; chapéu e barba claros"},
+    {"id":"leoric.move_se.02","strip":"move_se","frame":2,"pose":"passada intermediária; manto acompanha"},
+    {"id":"leoric.move_se.03","strip":"move_se","frame":3,"pose":"novo contato do pé na diagonal sudeste"},
+    {"id":"leoric.move_se.04","strip":"move_se","frame":4,"pose":"transferência de peso; foco azul contido"},
+    {"id":"leoric.move_se.05","strip":"move_se","frame":5,"pose":"fechamento do ciclo sem oscilação da base"},
+    {"id":"leoric.attack.00","strip":"attack","frame":0,"pose":"preparo de Sopro de Estrela; corpo inteiro"},
+    {"id":"leoric.attack.01","strip":"attack","frame":1,"pose":"braço aponta; chapéu e barba seguem visíveis"},
+    {"id":"leoric.attack.02","strip":"attack","frame":2,"pose":"raio azul curto e pequenas estrelas douradas; mago domina o quadro"},
+    {"id":"leoric.attack.03","strip":"attack","frame":3,"pose":"recuperação; efeito se apaga sem apagar a silhueta"}
+  ]
+}

@@ -62,7 +62,7 @@ Arquétipos de comportamento (poucos, bem distintos): perseguidor, atirador, inv
 ## 6. Mapa e interações aleatórias
 
 Mapa procedural por chunks dentro de um bioma; **inimigos por ondas pré-definidas** (tabela por minuto) + elites em pontos fixos do tempo.
-Interações aleatórias: baú (ou **Mímico**), altar de divindade (bênção com custo — Sendrinah, Mask, Lliira, Shar, Ghaunadaur), poço/fonte, ritual de cultistas (elite + recompensa), **portal** (exige essência da camada → puxa para a camada seguinte), Rio Estige (corrente de almas: risco/recompensa), mercador raro, "Baralho de Muitas Coisas" (evento aleatório de alto impacto).
+Interações aleatórias: baú (ou **Mímico**), altar de divindade (bênção com custo — Sendrinah, Mask, Lliira, Shar, Ghaunadaur), poço/fonte, ritual de cultistas (elite + recompensa), **portal** (exige essência da camada → puxa para a camada seguinte), Rio Estige (rio de almas: risco/recompensa; a corrente só existe quando a água flui), mercador raro, "Baralho de Muitas Coisas" (evento aleatório de alto impacto).
 
 ## 7. Camadas do Abismo = biomas/fases
 
@@ -70,13 +70,13 @@ Progressão de fases (todas do vault, "Camadas do Plano Abissal"):
 0. **Dagruve / Docas** (plano material) — tutorial/fase 1 do MVP: cultistas, zumbis, slimes, Arch-hag/Kraken.
 1. **Shedaklah** — fungo (Zuggtmoy) × slime (Juiblex).
 2. **Molor** — caverna de bolhas de slime; chefe **Blogbog**.
-3. **Durao** — deserto árido, rio de almas, jaula; **Molydeus**.
+3. **Durao** — deserto árido, rio de almas gelatinoso pela passagem de **Juiblex**, jaula; **Molydeus**. O Estige está parado nesta fase, embora retenha seu risco mental.
 4. **Feng-tu** — estética oriental (Tou Um, Lu Yueh).
 5. **Shendilavri / Rivenheart** — súcubos, ilusões; Castelo Argento (Graz'zt).
 6. **Goranthis** — "o verdadeiro Paraíso", cachoeira, ilusão; palco final.
 7. **Pilares / Síntese Abissal** — endgame e modo infinito.
 
-Cada camada: paleta, inimigos, regra ambiental própria (ex.: slime deixa poça; ilusão revela falsos inimigos; rio de almas empurra), 1 chefe, 1 tipo de essência.
+Cada camada: paleta, inimigos, regra ambiental própria (ex.: slime deixa poça; ilusão revela falsos inimigos; rio de almas pode empurrar quando flui; em Durao gelatinoso ele não empurra), 1 chefe, 1 tipo de essência.
 
 ## 8. Loop de run e progressão
 
@@ -190,3 +190,55 @@ usadas, a morte encerra a run com a recompensa usual de 50%.
    vincule o asset, sua versão e a validação. O manifesto de produção registra
    cobertura operacional; ele não cria ou altera canon de personagens, lore ou
    mecânicas.
+
+## 19. Retorno visual das escolhas divinas (2026-09-26)
+
+Cada herói começa com a cor de sua identidade visual; Kayron inicia associado a
+Shar em vermelho abissal e Maelor a Sendrinah em dourado. Uma escolha divina
+altera a cor dos números de dano para a última divindade escolhida. A aura é
+somente informativa, não existe no início e passa a existir somente após a
+primeira bênção de altar; ela substitui, em vez de acumular, a afinidade visual
+anterior. Selûne integra o conjunto de divindades disponíveis, com azul-luar e
+prata.
+
+## 20. Dagruve e Docas como fases sequenciais (2026-09-27)
+
+**CANON — aprovado pelo dono em 2026-09-27.** A antiga fase composta
+"Dagruve / Docas" passa a ser duas fases jogáveis, sequenciais e distintas:
+
+1. **Dagruve** — primeira fase, com duração-alvo de 8 minutos. Representa o
+   distrito sob névoa, culto e rituais; seu chefe é o **Sacerdote da Mente
+   Derretida**.
+2. **Docas** — segunda fase, com duração-alvo de 10 minutos. Representa o
+   porto, o cais, a fenda e o porão ritual da referência M1 de Nottcard; seu
+   chefe é o **Guardião Alado Verdadeiro**.
+3. **Shedaklah** passa a seguir Docas. As demais fases preservam suas
+   identidades e avançam uma posição na ordem de progressão.
+
+As duas fases regulares permanecem abaixo do teto temporário de 15 minutos.
+Seus eventos ambientais precisam derivar de fatos canônicos e oferecer sinais
+ambientais, aviso visível, telegráfo e janela de reação; não devem narrar ou
+revelar fatos não estabelecidos. O jogador pode testar esses eventos, chefes e
+suas fases por um Navegador de Cenários disponível somente na build de
+desenvolvimento, em sandbox que preserve o save real. O cenário inicia alguns
+segundos antes do gatilho e permite escolher herói, nível, armas, itens e seed.
+
+Esta decisão substitui a composição única descrita na seção 7 e o recorte de
+uma única fase/chefe do marco F6; ela não aprova arte nova, publicação ou
+alteração de lore além da separação e da alocação de chefes acima.
+
+## 21. Shedaklah e os dois braços do Estige (2026-09-27)
+
+**CANON — aprovado pelo dono em 2026-09-27.** Shedaklah, o Andar 222, é um
+pântano fúngico disputado por Zuggtmoy e Juiblex, situado entre **dois braços
+lentos do Rio Estige**. O terreno jogável permanece predominantemente fúngico:
+solo compacto escuro, micélio e pedra arroxeada, com slime de Juiblex em
+manchas locais. Os dois braços aparecem nas bordas opostas da arena, com
+margens orgânicas legíveis, e não convertem a arena em uma caverna de slime.
+
+Nesta fase, o Estige é uma macroforma visual e um limite de composição, sem
+fluxo, empurrão, teste de lucidez, Chamado ou buff. Esses riscos continuam
+exclusivos de Durao, onde a passagem de Juiblex o tornou gelatinoso e imóvel.
+O piso, os decais e os props devem preservar a leitura de herói, inimigos,
+itens e telegráfos em 1280×720. Esta decisão substitui, somente para
+Shedaklah, o não objetivo de extensão do Estige presente na SPEC-039.

@@ -1,0 +1,48 @@
+{
+  "assets": {
+    "res://assets/props/rocha_01.png": { "contact_anchor": [0.50, 0.935], "shadow_mode": "dynamic", "shadow_offset": [0.00, 0.018], "shadow_size": [0.20, 0.045], "shadow_alpha": 0.28 },
+    "res://assets/props/rocha_02.png": { "contact_anchor": [0.50, 0.945], "shadow_mode": "dynamic", "shadow_offset": [0.00, 0.018], "shadow_size": [0.31, 0.055], "shadow_alpha": 0.28 },
+    "res://assets/props/rocha_03.png": { "contact_anchor": [0.50, 0.948], "shadow_mode": "dynamic", "shadow_offset": [0.00, 0.018], "shadow_size": [0.28, 0.050], "shadow_alpha": 0.28 },
+
+    "res://assets/props/pilar_abissal_01.png": { "contact_anchor": [0.50, 0.950], "shadow_mode": "dynamic", "shadow_offset": [0.00, 0.016], "shadow_size": [0.18, 0.042], "shadow_alpha": 0.28 },
+    "res://assets/props/pilar_abissal_02.png": { "contact_anchor": [0.50, 0.948], "shadow_mode": "dynamic", "shadow_offset": [0.00, 0.016], "shadow_size": [0.23, 0.045], "shadow_alpha": 0.28 },
+    "res://assets/props/pilar_abissal_03.png": { "contact_anchor": [0.50, 0.946], "shadow_mode": "dynamic", "shadow_offset": [0.00, 0.016], "shadow_size": [0.26, 0.048], "shadow_alpha": 0.28 },
+
+    "res://assets/props/barril_01.png": { "contact_anchor": [0.50, 0.960], "shadow_mode": "dynamic", "shadow_offset": [0.00, 0.018], "shadow_size": [0.20, 0.045], "shadow_alpha": 0.24 },
+    "res://assets/props/barril_02.png": { "contact_anchor": [0.50, 0.960], "shadow_mode": "dynamic", "shadow_offset": [0.00, 0.018], "shadow_size": [0.20, 0.045], "shadow_alpha": 0.24 },
+    "res://assets/props/barril_03.png": { "contact_anchor": [0.50, 0.960], "shadow_mode": "dynamic", "shadow_offset": [0.00, 0.018], "shadow_size": [0.20, 0.045], "shadow_alpha": 0.24 },
+
+    "res://assets/props/braseiro_01.png": { "contact_anchor": [0.50, 0.958], "shadow_mode": "dynamic", "shadow_offset": [0.00, 0.018], "shadow_size": [0.18, 0.040], "shadow_alpha": 0.24 },
+    "res://assets/props/braseiro_02.png": { "contact_anchor": [0.50, 0.958], "shadow_mode": "dynamic", "shadow_offset": [0.00, 0.018], "shadow_size": [0.18, 0.040], "shadow_alpha": 0.24 },
+    "res://assets/props/braseiro_03.png": { "contact_anchor": [0.50, 0.958], "shadow_mode": "dynamic", "shadow_offset": [0.00, 0.018], "shadow_size": [0.18, 0.040], "shadow_alpha": 0.24 },
+
+    "res://assets/props/caixote_01.png": { "contact_anchor": [0.50, 0.957], "shadow_mode": "dynamic", "shadow_offset": [0.00, 0.018], "shadow_size": [0.25, 0.048], "shadow_alpha": 0.24 },
+    "res://assets/props/caixote_02.png": { "contact_anchor": [0.50, 0.957], "shadow_mode": "dynamic", "shadow_offset": [0.00, 0.018], "shadow_size": [0.25, 0.048], "shadow_alpha": 0.24 },
+    "res://assets/props/caixote_03.png": { "contact_anchor": [0.50, 0.957], "shadow_mode": "dynamic", "shadow_offset": [0.00, 0.018], "shadow_size": [0.25, 0.048], "shadow_alpha": 0.24 },
+
+    "res://assets/props/carga_01.png": { "contact_anchor": [0.50, 0.955], "shadow_mode": "dynamic", "shadow_offset": [0.00, 0.018], "shadow_size": [0.31, 0.052], "shadow_alpha": 0.24 },
+    "res://assets/props/carga_02.png": { "contact_anchor": [0.50, 0.955], "shadow_mode": "dynamic", "shadow_offset": [0.00, 0.018], "shadow_size": [0.31, 0.052], "shadow_alpha": 0.24 },
+    "res://assets/props/carga_03.png": { "contact_anchor": [0.50, 0.955], "shadow_mode": "dynamic", "shadow_offset": [0.00, 0.018], "shadow_size": [0.31, 0.052], "shadow_alpha": 0.24 },
+
+    "res://assets/props/livros_01.png": { "contact_anchor": [0.50, 0.965], "shadow_mode": "dynamic", "shadow_offset": [0.00, 0.015], "shadow_size": [0.19, 0.036], "shadow_alpha": 0.20 },
+    "res://assets/props/livros_02.png": { "contact_anchor": [0.50, 0.965], "shadow_mode": "dynamic", "shadow_offset": [0.00, 0.015], "shadow_size": [0.19, 0.036], "shadow_alpha": 0.20 },
+    "res://assets/props/livros_03.png": { "contact_anchor": [0.50, 0.965], "shadow_mode": "dynamic", "shadow_offset": [0.00, 0.015], "shadow_size": [0.19, 0.036], "shadow_alpha": 0.20 },
+
+    "res://assets/props/velas_01.png": { "contact_anchor": [0.50, 0.965], "shadow_mode": "dynamic", "shadow_offset": [0.00, 0.014], "shadow_size": [0.15, 0.032], "shadow_alpha": 0.20 },
+    "res://assets/props/velas_02.png": { "contact_anchor": [0.50, 0.965], "shadow_mode": "dynamic", "shadow_offset": [0.00, 0.014], "shadow_size": [0.15, 0.032], "shadow_alpha": 0.20 },
+    "res://assets/props/velas_03.png": { "contact_anchor": [0.50, 0.965], "shadow_mode": "dynamic", "shadow_offset": [0.00, 0.014], "shadow_size": [0.15, 0.032], "shadow_alpha": 0.20 },
+
+    "res://assets/props/doca_01.png": { "contact_anchor": [0.50, 0.975], "shadow_mode": "none" },
+    "res://assets/props/doca_02.png": { "contact_anchor": [0.50, 0.975], "shadow_mode": "none" },
+    "res://assets/props/doca_03.png": { "contact_anchor": [0.50, 0.975], "shadow_mode": "none" },
+    "res://assets/props/margem_01.png": { "contact_anchor": [0.50, 0.975], "shadow_mode": "none" },
+    "res://assets/props/margem_02.png": { "contact_anchor": [0.50, 0.975], "shadow_mode": "none" },
+    "res://assets/props/margem_03.png": { "contact_anchor": [0.50, 0.975], "shadow_mode": "none" },
+    "res://assets/props/ossos_01.png": { "contact_anchor": [0.50, 0.970], "shadow_mode": "none" },
+    "res://assets/props/ossos_02.png": { "contact_anchor": [0.50, 0.970], "shadow_mode": "none" },
+    "res://assets/props/ossos_03.png": { "contact_anchor": [0.50, 0.970], "shadow_mode": "none" },
+    "res://assets/props/rede_01.png": { "contact_anchor": [0.50, 0.970], "shadow_mode": "none" },
+    "res://assets/props/rede_02.png": { "contact_anchor": [0.50, 0.970], "shadow_mode": "none" },
+    "res://assets/props/rede_03.png": { "contact_anchor": [0.50, 0.970], "shadow_mode": "none" }
+  }
+}

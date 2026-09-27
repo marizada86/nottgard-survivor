@@ -20,6 +20,13 @@ var _result_shown := false
 var _shake := 0.0
 var _numbers := 0
 var _paused := false
+var _divine_aura: Line2D
+var _encounter_layer: CanvasLayer
+var _boss_intro_panel: Control
+var _boss_intro_art: TextureRect
+var _boss_intro_title: Label
+var _boss_intro_subtitle: Label
+var _fog_edges: Array[ColorRect] = []
 
 func _ready() -> void:
 	Game.screen_name = "run"
@@ -37,9 +44,10 @@ func _ready() -> void:
 	hud.aim_pressed.connect(_toggle_aim)
 	hud.revive_pressed.connect(_accept_revive)
 	hud.decline_revive_pressed.connect(_decline_revive)
+	_setup_encounter_overlays()
 	_load_stage()
 	if Game.qa_sandbox:
-		battle.qa_prepare(String(Game.qa_launch.get("target_state", "running")))
+		battle.qa_prepare(Game.qa_launch)
 	if battle.state == "revive_offer":
 		hud.show_revive_offer(battle)
 	hud.toast("%s — %s" % [battle.stage.name, battle.stage.sub], Color(0.9, 0.85, 0.6))
@@ -68,10 +76,13 @@ func _load_stage() -> void:
 	var msize := Vector2(ground.map_size)
 	battle.map_size = msize
 	battle.hero.map_size = msize
+	battle.hero.terrain_id = String(ground.get("terrain_layout_id"))
 	start_pos = hero_node.position
 	battle.hero.pos = Iso.to_ground(start_pos)
 	battle.hero.blockers.clear()
 	for b in sorted.get_children():
+		if b.has_method("set_grounding_guide"):
+			b.set_grounding_guide(Game.qa_sandbox and String(Game.qa_launch.get("target_state", "")) == "prop_grounding")
 		if b.is_in_group("blockers"):
 			var g := Iso.to_ground(b.position)
 			battle.hero.blockers.append(Vector3(g.x, g.y, b.block_radius))
@@ -86,6 +97,95 @@ func _load_stage() -> void:
 	Sfx.set_context(battle.hero.id, battle.stage_id)
 	Sfx.start_music(battle.stage_id)
 	Sfx.start_ambience(battle.stage_id)
+
+func _setup_encounter_overlays() -> void:
+	_encounter_layer = CanvasLayer.new()
+	_encounter_layer.layer = 20
+	add_child(_encounter_layer)
+	for edge in 4:
+		var fog := ColorRect.new()
+		fog.color = Color(0.18, 0.42, 0.25, 0.0)
+		fog.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		fog.visible = false
+		_encounter_layer.add_child(fog)
+		_fog_edges.append(fog)
+	_boss_intro_panel = Control.new()
+	_boss_intro_panel.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	_boss_intro_panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_boss_intro_panel.visible = false
+	_encounter_layer.add_child(_boss_intro_panel)
+	var veil := ColorRect.new()
+	veil.color = Color(0.01, 0.02, 0.015, 0.74)
+	veil.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	_boss_intro_panel.add_child(veil)
+	_boss_intro_art = TextureRect.new()
+	_boss_intro_art.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	_boss_intro_art.offset_left = 72.0
+	_boss_intro_art.offset_right = -72.0
+	_boss_intro_art.offset_top = 42.0
+	_boss_intro_art.offset_bottom = -128.0
+	_boss_intro_art.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	_boss_intro_art.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	_boss_intro_panel.add_child(_boss_intro_art)
+	_boss_intro_title = Label.new()
+	_boss_intro_title.set_anchors_preset(Control.PRESET_CENTER_BOTTOM)
+	_boss_intro_title.offset_left = -460.0
+	_boss_intro_title.offset_right = 460.0
+	_boss_intro_title.offset_top = -112.0
+	_boss_intro_title.offset_bottom = -66.0
+	_boss_intro_title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_boss_intro_title.add_theme_font_size_override("font_size", 32)
+	_boss_intro_title.add_theme_color_override("font_outline_color", Color(0.01, 0.01, 0.01))
+	_boss_intro_title.add_theme_constant_override("outline_size", 8)
+	_boss_intro_panel.add_child(_boss_intro_title)
+	_boss_intro_subtitle = Label.new()
+	_boss_intro_subtitle.set_anchors_preset(Control.PRESET_CENTER_BOTTOM)
+	_boss_intro_subtitle.offset_left = -460.0
+	_boss_intro_subtitle.offset_right = 460.0
+	_boss_intro_subtitle.offset_top = -61.0
+	_boss_intro_subtitle.offset_bottom = -32.0
+	_boss_intro_subtitle.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_boss_intro_subtitle.add_theme_font_size_override("font_size", 18)
+	_boss_intro_subtitle.modulate = Color(0.72, 0.92, 0.75)
+	_boss_intro_panel.add_child(_boss_intro_subtitle)
+
+func _show_boss_intro(ev: Dictionary) -> void:
+	var presentation: Dictionary = ev.get("presentation", {})
+	var image_path := String(presentation.get("image", ""))
+	_boss_intro_art.texture = load(image_path) if image_path != "" and ResourceLoader.exists(image_path) else null
+	_boss_intro_title.text = String(presentation.get("title", ev.enemy.name))
+	_boss_intro_subtitle.text = String(presentation.get("subtitle", ""))
+	_boss_intro_panel.modulate.a = 0.0
+	_boss_intro_panel.visible = true
+	var duration := clampf(float(presentation.get("overlay_seconds", 1.8)), 1.5, 2.0)
+	var tween := create_tween()
+	tween.tween_property(_boss_intro_panel, "modulate:a", 1.0, 0.16)
+	tween.tween_interval(maxf(0.1, duration - 0.46))
+	tween.tween_property(_boss_intro_panel, "modulate:a", 0.0, 0.30)
+	tween.tween_callback(func(): _boss_intro_panel.visible = false)
+
+func _update_fog_overlay() -> void:
+	if battle == null or fog_state_is_inactive():
+		for fog in _fog_edges:
+			fog.visible = false
+		return
+	var viewport_size := get_viewport().get_visible_rect().size
+	var depth := maxf(14.0, minf(viewport_size.x, viewport_size.y) * 0.5 * battle.fog_intensity)
+	var alpha := 0.08 if battle.fog_state == "warning" else 0.12 + battle.fog_intensity * 0.20
+	for fog in _fog_edges:
+		fog.visible = true
+		fog.color.a = alpha
+	_fog_edges[0].position = Vector2.ZERO
+	_fog_edges[0].size = Vector2(depth, viewport_size.y)
+	_fog_edges[1].position = Vector2(viewport_size.x - depth, 0.0)
+	_fog_edges[1].size = Vector2(depth, viewport_size.y)
+	_fog_edges[2].position = Vector2.ZERO
+	_fog_edges[2].size = Vector2(viewport_size.x, depth)
+	_fog_edges[3].position = Vector2(0.0, viewport_size.y - depth)
+	_fog_edges[3].size = Vector2(viewport_size.x, depth)
+
+func fog_state_is_inactive() -> bool:
+	return battle.fog_state == "inactive"
 
 # ------------------------------------------------------------------ entrada
 
@@ -189,6 +289,7 @@ func _process(dt: float) -> void:
 		return
 	_shake = maxf(0.0, _shake - dt * 3.0)
 	camera.position = hero_node.position + Vector2(randf_range(-1, 1), randf_range(-1, 1)) * _shake * 6.0
+	_update_fog_overlay()
 
 func _sync() -> void:
 	var h := battle.hero
@@ -206,6 +307,7 @@ func _sync() -> void:
 			enemy_nodes.erase(e)
 		else:
 			n.sync_visual(Iso.to_screen(e.pos))
+	_update_divine_aura()
 
 func _show_result() -> void:
 	_result_shown = true
@@ -226,7 +328,8 @@ func _consume_events() -> void:
 			"hit":
 				Sfx.play("combat.critical" if ev.crit else "combat.impact", -14.0)
 				if _numbers < 14:
-					_float_text(at + Vector2(randf_range(-6, 6), -36), str(ev.amount), Color(1, 0.85, 0.3) if ev.crit else Color(0.92, 0.92, 0.92), 16 if ev.crit else 12)
+					var divine_col := DivineVisuals.color_for(battle.hero.id, battle.visual_god)
+					_float_text(at + Vector2(randf_range(-6, 6), -36), str(ev.amount), divine_col.lightened(0.2) if ev.crit else divine_col, 18 if ev.crit else 14, ev.crit, DivineVisuals.outline_for(battle.hero.id, battle.visual_god))
 			"miss":
 				Sfx.play("combat.miss", -18.0)
 			"hurt":
@@ -282,6 +385,31 @@ func _consume_events() -> void:
 				Sfx.play_boss(String(ev.enemy.id), "arrival")
 				Sfx.start_music("boss")
 				_shake = 1.2
+			"boss_intro":
+				_show_boss_intro(ev)
+			"stage_event_warning":
+				hud.toast(String(ev.text), Color(0.95, 0.77, 0.38))
+				_ring(ev.pos, 1.7, Color(0.9, 0.62, 0.26), 0.45)
+			"stage_event":
+				hud.toast(String(ev.text), Color(0.65, 0.88, 0.72))
+				_ring(ev.pos, 1.5, Color(0.5, 0.85, 0.65), 0.35)
+			"postboss_fog":
+				if ev.state == "warning":
+					hud.toast("A névoa avança pelas bordas!", Color(0.58, 0.9, 0.58))
+			"styx_test":
+				if not bool(ev.passed):
+					hud.toast("Estige: lucidez falhou (−1 INT efetiva).", Color(0.42, 0.78, 0.95))
+			"styx_forget":
+				hud.toast("Esquecimento do Estige: afaste-se da água por %.0f s." % float(ev.duration), Color(0.48, 0.8, 1.0))
+			"styx_warning":
+				hud.toast("O Estige chama você. Saia da corrente!", Color(0.95, 0.72, 0.28))
+			"styx_call":
+				hud.toast("Chamado do Estige: resista à corrente!", Color(0.85, 0.5, 0.98))
+			"styx_defeat":
+				hud.toast("O Estige tomou sua memória.", Color(0.55, 0.75, 1.0))
+			"styx_imbued":
+				if bool(ev.active):
+					hud.toast("%s foi Imbuído por Juiblex!" % ev.enemy.name, Color(0.62, 0.95, 0.32))
 			"active":
 				Sfx.play_hero(String(ev.get("hero_id", battle.hero.id)))
 				hero_node.play_action(&"active")
@@ -306,6 +434,8 @@ func _consume_events() -> void:
 				Sfx.play("enemy.charge")
 			"dead":
 				Sfx.play("player.death")
+			"divinity":
+				hud.toast("Afinidade: %s" % String(ev.god), DivineVisuals.color_for(battle.hero.id, String(ev.god)))
 			"toast":
 				hud.toast(ev.text, ev.get("color", Color(1, 1, 1)))
 				Game.logline(String(ev.text))
@@ -349,22 +479,43 @@ func _dcol(dtype: String) -> Color:
 		"magico": return Color(0.65, 0.45, 1.0)
 	return Color(0.85, 0.85, 0.9)
 
-func _float_text(at: Vector2, text: String, col: Color, size: int) -> void:
+func _float_text(at: Vector2, text: String, col: Color, size: int, critical: bool = false, outline: Color = Color(0, 0, 0)) -> void:
 	var l := Label.new()
 	l.text = text
 	l.position = at
 	l.modulate = col
 	l.add_theme_font_size_override("font_size", size)
-	l.add_theme_color_override("font_outline_color", Color(0, 0, 0))
-	l.add_theme_constant_override("outline_size", 4)
+	l.add_theme_color_override("font_outline_color", outline)
+	l.add_theme_constant_override("outline_size", 5 if critical else 4)
+	l.pivot_offset = Vector2(18, 12)
+	l.scale = Vector2.ONE * (0.7 if critical else 0.82)
 	fx.add_child(l)
 	_numbers += 1
 	var t := create_tween()
+	t.tween_property(l, "scale", Vector2.ONE * (1.15 if critical else 1.0), 0.12).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 	t.tween_property(l, "position:y", at.y - 22, 0.6)
 	t.parallel().tween_property(l, "modulate:a", 0.0, 0.6)
 	t.tween_callback(func():
 		_numbers -= 1
 		l.queue_free())
+
+func _update_divine_aura() -> void:
+	if hero_node == null or battle == null:
+		return
+	if _divine_aura == null:
+		_divine_aura = Line2D.new()
+		var points := PackedVector2Array()
+		for i in 25:
+			var angle := TAU * float(i) / 24.0
+			points.append(Vector2(cos(angle) * 22.0, sin(angle) * 7.0))
+		_divine_aura.points = points
+		_divine_aura.width = 2.5
+		_divine_aura.antialiased = true
+		fx.add_child(_divine_aura)
+	_divine_aura.position = hero_node.position + Vector2(0, 2)
+	_divine_aura.visible = battle.visual_boon_selected
+	if _divine_aura.visible:
+		_divine_aura.default_color = Color(DivineVisuals.color_for(battle.hero.id, battle.visual_god), 0.8)
 
 func _swing(ev: Dictionary) -> void:
 	var poly := Polygon2D.new()

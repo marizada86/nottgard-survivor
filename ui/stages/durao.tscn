@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" path="res://ui/hero_view.tscn" id="2_l16w6"]
 [ext_resource type="PackedScene" path="res://ui/prop.tscn" id="3_4tb0h"]
 [ext_resource type="PackedScene" path="res://ui/spawn_point.tscn" id="4_i64nu"]
+[ext_resource type="Script" path="res://ui/terrain_features.gd" id="5_terrain"]
 
 [node name="Stage" type="Node2D" unique_id=531400661]
 
@@ -12,9 +13,15 @@ z_index = -100
 script = ExtResource("1_t7b4e")
 color_a = Color(0.20392157, 0.15686275, 0.13333334, 1)
 color_b = Color(0.24313726, 0.18431373, 0.14901961, 1)
+terrain_layout_id = "durao"
+visual_seed = 274
 
 [node name="Sorted" type="Node2D" parent="." unique_id=125176944]
 y_sort_enabled = true
+
+[node name="TerrainFeatures" type="Node2D" parent="Sorted"]
+script = ExtResource("5_terrain")
+terrain_layout_id = "durao"
 
 [node name="Hero" parent="Sorted" unique_id=629349748 instance=ExtResource("2_l16w6")]
 position = Vector2(0, 640)

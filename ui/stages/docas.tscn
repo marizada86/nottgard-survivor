@@ -1,0 +1,97 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://ui/ground.gd" id="1_ground"]
+[ext_resource type="PackedScene" path="res://ui/hero_view.tscn" id="2_hero"]
+[ext_resource type="PackedScene" path="res://ui/prop.tscn" id="3_prop"]
+[ext_resource type="PackedScene" path="res://ui/spawn_point.tscn" id="4_spawn"]
+
+[node name="Stage" type="Node2D"]
+
+[node name="Ground" type="Node2D" parent="."]
+z_index = -100
+script = ExtResource("1_ground")
+color_a = Color(0.105, 0.145, 0.17, 1)
+color_b = Color(0.14, 0.2, 0.22, 1)
+use_modular_atlas = true
+atlas_columns = 2
+atlas_variants = 4
+visual_seed = 31
+terrain_texture_path = "res://assets/tiles/docas_ground_atlas_v3.png"
+
+[node name="Sorted" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Hero" parent="Sorted" instance=ExtResource("2_hero")]
+position = Vector2(0, 640)
+
+[node name="DocaOeste" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(-416, 480)
+kind = "doca"
+height = 66.0
+half_width = 52.0
+color = Color(0.27, 0.25, 0.22, 1)
+
+[node name="DocaLeste" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(416, 512)
+kind = "doca"
+height = 62.0
+half_width = 50.0
+color = Color(0.27, 0.25, 0.22, 1)
+
+[node name="Carga" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(-224, 352)
+kind = "carga"
+height = 56.0
+half_width = 44.0
+color = Color(0.32, 0.27, 0.22, 1)
+
+[node name="Barril" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(320, 368)
+kind = "barril"
+height = 54.0
+half_width = 34.0
+color = Color(0.31, 0.25, 0.2, 1)
+
+[node name="Rede" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(80, 288)
+kind = "rede"
+height = 42.0
+half_width = 40.0
+color = Color(0.2, 0.3, 0.3, 1)
+
+[node name="Margem" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(0, 112)
+kind = "margem"
+height = 42.0
+half_width = 58.0
+color = Color(0.12, 0.2, 0.24, 1)
+
+[node name="LivrosDoPorao" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(-80, 536)
+kind = "livros"
+height = 52.0
+half_width = 34.0
+color = Color(0.22, 0.2, 0.18, 1)
+
+[node name="Braseiro" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(224, 640)
+kind = "braseiro"
+height = 60.0
+half_width = 26.0
+color = Color(0.25, 0.22, 0.2, 1)
+
+[node name="SpawnPoints" type="Node2D" parent="."]
+
+[node name="SpawnCriaturas" parent="SpawnPoints" instance=ExtResource("4_spawn")]
+position = Vector2(-416, 672)
+enemy_id = "criatura_corrompida"
+count = 2
+
+[node name="SpawnSlimes" parent="SpawnPoints" instance=ExtResource("4_spawn")]
+position = Vector2(352, 576)
+enemy_id = "slime_corrosivo"
+count = 2
+
+[node name="SpawnCultistas" parent="SpawnPoints" instance=ExtResource("4_spawn")]
+position = Vector2(64, 896)
+enemy_id = "cultista_adaga"

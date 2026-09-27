@@ -1,5 +1,7 @@
 extends RefCounted
 
+const TerrainLayout := preload("res://core/terrain_layout.gd")
+
 func _bat(seed_value := 1, hero := "durvall", stage := "dagruve") -> Battle:
 	var b := Battle.new(seed_value, hero, stage)
 	b.hero.pos = Vector2(20, 20)
@@ -170,10 +172,15 @@ func run() -> Array:
 	if not bs.stage_cleared or not bs.interactions.any(func(i): return i.kind == "portal"):
 		out.append("chefe não abriu o portal")
 	else:
+		bs.step(Vector2.ZERO, 0.66)
 		bs.hero.pos = bs.interactions.filter(func(i): return i.kind == "portal")[0].pos
 		bs.interact()
-		if bs.stage_id != "shedaklah":
-			out.append("portal não levou a shedaklah (%s)" % bs.stage_id)
+		if bs.stage_id != "docas":
+			out.append("portal não levou a docas (%s)" % bs.stage_id)
+		else:
+			bs.enter_next_stage()
+			if bs.stage_id != "shedaklah":
+				out.append("portal de docas não levou a shedaklah (%s)" % bs.stage_id)
 
 	# 12) todas as fases carregam e o diretor spawna sem quebrar
 	for sid in Data.table("stages"):
@@ -204,5 +211,137 @@ func run() -> Array:
 	qp.qa_prepare("portal")
 	if not qp.interactions.any(func(i): return i.kind == "portal"):
 		out.append("QA portal nao preparou transicao")
+
+	# 14) Afinidade visual nasce do patrono e só fica ativa após escolha divina.
+	var kayron := _bat(104, "kayron")
+	if kayron.visual_god != "Shar" or kayron.visual_boon_selected:
+		out.append("Kayron deveria iniciar em Shar sem aura")
+	var selune: Dictionary = Data.table("boons").boons.filter(func(b): return b.id == "selune_luar")[0]
+	kayron.state = "altar"
+	kayron.offer_kind = "altar"
+	kayron.offer = [{"t": "boon", "boon": selune}]
+	kayron.choose(0)
+	if kayron.visual_god != "Selûne" or not kayron.visual_boon_selected:
+		out.append("bênção de Selûne deveria substituir a afinidade visual")
+
+	# 15) CA/CAM acima de 10 viram esquiva tipada, sem imunidade.
+	var guard := Hero.make("durvall")
+	if not is_equal_approx(guard.typed_evasion("fisico"), 0.09):
+		out.append("CA 13 deveria conceder 9% de esquiva física")
+	guard.hero_mods = {"ca": 7, "dodge": 0.10}
+	guard.recalc()
+	if not is_equal_approx(guard.typed_evasion("fisico"), 0.30):
+		out.append("CA 20 deveria limitar esquiva tipada a 30%")
+	if not is_equal_approx(guard.evasion("fisico"), 0.37):
+		out.append("esquiva tipada e genérica deveriam combinar multiplicativamente")
+	if guard.evasion("fisico") >= 0.45:
+		out.append("esquiva composta não pode virar imunidade")
+
+	# 16) Crítico: excedente de 2 dá 6%, e a chance nunca passa de 40%.
+	var striker := Hero.make("durvall")
+	if not is_equal_approx(striker.crit_chance(22), 0.06):
+		out.append("19 + 3 = 22 deveria conceder 6% de crítico por excedente")
+	striker.hero_mods = {"crit_overflow_bonus": 0.50}
+	striker.recalc()
+	if not is_equal_approx(striker.crit_chance(99), 0.40):
+		out.append("chance de crítico deveria respeitar teto de 40%")
+
+	# 17) Apresentacao do chefe pausa a simulacao uma vez e libera um telegrafo.
+	var intro := _bat(105)
+	_quiet(intro)
+	intro.stage.duration = 0.0
+	intro._director(0.01)
+	var intro_count := intro.events.filter(func(ev): return ev.type == "boss_intro").size()
+	var before_intro_time := intro.time
+	intro.step(Vector2.ZERO, 0.5)
+	if intro_count != 1 or intro.boss_intro_remaining <= 0.0 or intro.time != before_intro_time:
+		out.append("introducao do chefe deveria pausar a simulacao uma unica vez")
+	intro.step(Vector2.ZERO, 0.6)
+	if not intro.events.any(func(ev): return ev.type == "boss_intro_end") or not intro.events.any(func(ev): return ev.type == "telegraph" and ev.enemy_id == intro.boss.id):
+		out.append("introducao do chefe deveria terminar com telegrafo")
+
+	# 18) Mare: graca, aviso, rampa 1% a 3% e dano que ignora esquiva generica.
+	var fog := _bat(106)
+	_quiet(fog)
+	var fog_boss := fog.spawn_for_test("sacerdote_mente_derretida", Vector2(21, 20))
+	fog._on_boss_dead(fog_boss)
+	fog_boss.dead = true
+	fog.step(Vector2.ZERO, 7.9)
+	if fog.fog_state != "grace" or not is_zero_approx(fog.fog_damage_per_second()):
+		out.append("Mare deveria manter 8s de graca sem dano")
+	fog.step(Vector2.ZERO, 0.2)
+	if fog.fog_state != "warning":
+		out.append("Mare deveria avisar antes de avancar")
+	fog.step(Vector2.ZERO, 2.0)
+	if fog.fog_state != "advancing" or fog.fog_damage_per_second() < 0.01 or fog.fog_damage_per_second() > 0.011:
+		out.append("Mare deveria iniciar em 1% da vida maxima por segundo")
+	fog._update_postboss_fog(20.0)
+	if not is_equal_approx(fog.fog_damage_per_second(), 0.03):
+		out.append("Mare deveria atingir 3% da vida maxima por segundo apos a rampa")
+	fog.hero.hero_mods = {"ca": 99, "cam": 99, "dodge": 0.99}
+	fog.hero.recalc()
+	fog.hero.pos = Vector2(0.1, 0.1)
+	fog.invuln = 5.0
+	var hp_before_fog := fog.hero.hp
+	fog._update_postboss_fog(1.0)
+	if fog.hero.hp >= hp_before_fog:
+		out.append("CA, CAM e esquiva nao deveriam evitar o dano da Mare")
+
+	# 19) Estige gelatinoso: risco mental sem deslocamento e raro imbuído.
+	var styx := _bat(107, "korrak", "durao")
+	_quiet(styx)
+	styx.hero.pos = Vector2(20, 20)
+	styx.hero.push = Vector2.ZERO
+	styx._stage_rule_step(0.1)
+	if styx.hero.push != Vector2.ZERO:
+		out.append("corrente de Durao não pode empurrar fora do rio")
+	styx.hero.pos = TerrainLayout.styx_sample("durao")
+	styx._stage_rule_step(0.1)
+	if styx.styx_exposure <= 0.0 or styx.hero.push != Vector2.ZERO:
+		out.append("Estige gelatinoso deveria iniciar exposição sem empurrão")
+	var gel_enemy := styx.spawn_for_test("alma_penada", TerrainLayout.styx_sample("durao"))
+	var gel_pickup := {"kind": "gold", "pos": TerrainLayout.styx_sample("durao"), "value": 1.0, "magnet": false}
+	var gel_projectile := {"owner": "enemy", "pos": TerrainLayout.styx_sample("durao"), "dir": Vector2.RIGHT, "speed": 1.0, "life": 1.0, "radius": 0.2, "dice": "1d4", "bonus": 0, "dtype": "fisico", "pierce": 0, "hit": {}, "p": {}}
+	styx.pickups.append(gel_pickup)
+	styx.projectiles.append(gel_projectile)
+	var enemy_before := gel_enemy.pos
+	var pickup_before: Vector2 = gel_pickup.pos
+	var projectile_before: Vector2 = gel_projectile.pos
+	styx._stage_rule_step(0.25)
+	if gel_enemy.pos != enemy_before or gel_pickup.pos != pickup_before or gel_projectile.pos != projectile_before:
+		out.append("Estige gelatinoso não pode deslocar inimigo, item ou projétil")
+	var rare := styx._spawn_elite("alma_penada", TerrainLayout.styx_sample("durao"))
+	styx._update_styx_imbuement()
+	if not rare.styx_imbued or not is_equal_approx(styx._styx_enemy_damage_multiplier(rare), 1.2) or not is_equal_approx(styx._styx_enemy_defense_multiplier(rare), 0.85):
+		out.append("raro na gelatina deveria receber bônus temporário de Juiblex")
+	rare.pos = Vector2(20, 20)
+	styx._update_styx_imbuement()
+	if rare.styx_imbued:
+		out.append("raro deveria perder a bênção ao sair da gelatina")
+	styx._spawn_qa_boss()
+	styx.boss.pos = TerrainLayout.styx_sample("durao")
+	styx._update_styx_imbuement()
+	if styx.boss.styx_imbued:
+		out.append("chefe não deveria receber a bênção de Juiblex")
+	styx.hero.styx_lucidity_loss = 99
+	if styx.hero.styx_intelligence() != 1:
+		out.append("lucidez do Estige deveria ter piso de Inteligência efetiva em 1")
+	styx.styx_exposure = 2.1
+	styx.styx_in_water = true
+	styx.hero.pos = Vector2(20, 20)
+	styx._stage_rule_step(0.01)
+	if styx.hero.styx_forget_t < 2.0:
+		out.append("sair do Estige após dois segundos deveria aplicar Esquecimento")
+	styx.hero.pos = TerrainLayout.styx_sample("durao")
+	styx.styx_exposure = 9.99
+	styx.styx_in_water = true
+	styx._stage_rule_step(0.02)
+	if not styx.styx_calling:
+		out.append("dez segundos no Estige deveriam iniciar o Chamado")
+	styx.styx_exposure = 11.99
+	styx.styx_in_water = true
+	styx._stage_rule_step(0.02)
+	if styx.state != "dead" or styx.death_reason != "styx":
+		out.append("doze segundos no Estige deveriam encerrar a run")
 
 	return out

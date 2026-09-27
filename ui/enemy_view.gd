@@ -131,6 +131,9 @@ func _draw() -> void:
 	draw_colored_polygon(PackedVector2Array([Vector2(0, -7 * actor_scale), Vector2(14 * actor_scale, 0), Vector2(0, 7 * actor_scale), Vector2(-14 * actor_scale, 0)]), Color(0, 0, 0, 0.5 * alpha))
 	if enemy != null and enemy.affix != "":
 		draw_arc(Vector2.ZERO, 16 * actor_scale, 0, TAU, 20, Color(1.0, 0.85, 0.3, 0.9), 2.0)
+	if enemy != null and enemy.styx_imbued:
+		draw_arc(Vector2(0, -2 * actor_scale), 20 * actor_scale, 0, TAU, 24, Color(0.55, 0.94, 0.25, 0.9), 2.4)
+		draw_circle(Vector2(8 * actor_scale, -4 * actor_scale), 4 * actor_scale, Color(0.55, 0.94, 0.25, 0.6))
 	if enemy != null and enemy.is_boss():
 		draw_arc(Vector2.ZERO, 22 * actor_scale, 0, TAU, 24, Color(0.9, 0.2, 0.2, 0.9), 3.0)
 	if tex != null and not _has_animation:

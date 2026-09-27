@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "policy_id": "NYRELIA-PILOT-VALIDATION-001",
+  "input_contract": {
+    "cell_dimensions": "256x384",
+    "alpha_required": true,
+    "background_transparent": true,
+    "baseline_local_y": 367,
+    "minimum_horizontal_margin_px": 8
+  },
+  "assembly_contract": {
+    "idle": {"frames": 4, "dimensions": "1024x384"},
+    "move_se": {"frames": 6, "dimensions": "1536x384"},
+    "attack": {"frames": 4, "dimensions": "1024x384"}
+  },
+  "required_evidence": [
+    "source digest and provenance receipt",
+    "cell validation result",
+    "assembled strip digest",
+    "runtime QA at 72px and 2.35x",
+    "human artistic selection"
+  ],
+  "rejection_conditions": [
+    "missing or unreadable body silhouette",
+    "body or VFX touches a cell boundary",
+    "opaque background or watermark",
+    "unrecorded license or provenance",
+    "runtime candidate loses ground contact or mirrored readability"
+  ],
+  "admission_rule": "No candidate may be copied to assets or added to the official lock without a separate human-approved admission spec."
+}

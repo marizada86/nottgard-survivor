@@ -1,0 +1,27 @@
+{
+  "sacerdote_mente_derretida": {
+    "image": "res://assets/ui/boss-intros/sacerdote_mente_derretida.png",
+    "title": "Sacerdote da Mente Derretida",
+    "subtitle": "Dagruve",
+    "pause_seconds": 1.0,
+    "overlay_seconds": 1.8,
+    "transition_color": [80, 151, 104],
+    "fog": {
+      "enabled": true,
+      "grace_seconds": 8.0,
+      "warning_seconds": 2.0,
+      "start_dps_pct": 0.01,
+      "max_dps_pct": 0.03,
+      "ramp_seconds": 20.0,
+      "advance_seconds": 28.0
+    }
+  },
+  "guardiao_verdadeiro": {
+    "image": "",
+    "title": "Guardião Alado Verdadeiro",
+    "subtitle": "Docas · o ritual desperta",
+    "pause_seconds": 1.0,
+    "overlay_seconds": 1.8,
+    "transition_color": [88, 115, 156]
+  }
+}
