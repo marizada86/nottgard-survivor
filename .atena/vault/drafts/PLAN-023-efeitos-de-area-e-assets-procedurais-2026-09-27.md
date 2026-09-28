@@ -1,8 +1,8 @@
 ---
-id: "PLAN-022"
+id: "PLAN-023"
 type: "plano-de-voo"
 title: "Efeitos de área de terreno — clareza de runtime e VFX procedural"
-status: "aprovado — aguardando especificação"
+status: "executado — exceção de validação aceita"
 created: "2026-09-27"
 approved: "2026-09-27"
 relations:
@@ -11,7 +11,7 @@ relations:
   - "[[SPEC-040-estige-gelatinoso-e-elites-de-juiblex]]"
 ---
 
-# PLAN-022 — Efeitos de área de terreno e assets procedurais
+# PLAN-023 — Efeitos de área de terreno e assets procedurais
 
 ## Contexto descoberto
 
@@ -127,3 +127,7 @@ quadrante, preservar silhuetas de herói/chefe/interações e funcionar a
 O dono aprovou este plano de voo em 2026-09-27. A aprovação autoriza a
 elaboração da SPEC delimitada; não autoriza, por si só, mudanças de código,
 dados, cânone, dependências, publicação ou promoção de assets.
+
+O dono também aprovou a exceção de validação registrada em `EVID-084` em
+2026-09-27. A pendência de captura gráfica e de resumo da suíte permanece
+registrada, sem ser apresentada como teste concluído.

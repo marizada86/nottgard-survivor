@@ -77,8 +77,8 @@ func update_stats(b: Battle) -> void:
 	xp_bar.max_value = h.xp_need
 	xp_bar.value = h.xp
 	info_label.text = "Moedas %d   Abates %d   CA %d (%d%%)  CAM %d (%d%%)" % [int(h.gold), b.stats.kills, h.ca(), int(h.typed_evasion("fisico") * 100.0), h.cam(), int(h.typed_evasion("magico") * 100.0)]
-	if b.stage_id == "durao" and b.styx_exposure > 0.0:
-		info_label.text += "\nEstige %.1f s · INT efetiva %d%s" % [b.styx_exposure, h.styx_intelligence(), " · CHAMADO" if b.styx_calling else ""]
+	if b.has_styx_contract() and b.styx_exposure > 0.0:
+		info_label.text += "\nEstige %.1f s · INT efetiva %d" % [b.styx_exposure, h.styx_intelligence()]
 	elif h.styx_forget_t > 0.0:
 		info_label.text += "\nEsquecimento do Estige %.1f s" % h.styx_forget_t
 	active_label.text = b.active_status()

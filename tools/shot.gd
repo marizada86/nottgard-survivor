@@ -17,6 +17,12 @@ func _ready() -> void:
 		if "god" in flags:
 			run.battle.hero.max_hp = 9999.0
 			run.battle.hero.hp = 9999.0
+		for flag in flags.split(","):
+			if flag.begins_with("god="):
+				var god := flag.trim_prefix("god=")
+				if DivineVisuals.is_divine_affinity(god):
+					run.battle.visual_god = god
+					run.battle.visual_boon_selected = true
 		if "levelup" in flags:
 			run.battle._add_xp(400.0)
 		if "boss" in flags:
@@ -29,6 +35,9 @@ func _ready() -> void:
 			run.battle.give_item(Items.unique(Data.table("items").uniques[0]))
 		if "vfx" in flags:
 			_seed_vfx_areas(run)
+		if "styx" in flags:
+			run.battle.hero.pos = TerrainLayout.styx_sample(Game.run_stage)
+			run.battle._stage_rule_step(0.1)
 	else:
 		var m: Node = load("res://ui/menu.tscn").instantiate()
 		add_child(m)

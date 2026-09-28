@@ -89,13 +89,11 @@ var _hero_moving := false
 ## Afinidade estritamente visual; a aura só é habilitada por uma escolha divina.
 var visual_god := ""
 var visual_boon_selected := false
-## Estado ambiental de Durao. A RNG é separada para não deslocar a batalha.
+## Estado ambiental do Estige. A RNG é separada para não deslocar a batalha.
 var styx_rng := RandomNumberGenerator.new()
 var styx_exposure := 0.0
 var styx_test_next := 1.0
 var styx_in_water := false
-var styx_warning_shown := false
-var styx_calling := false
 
 func _init(seed_value: int = 1, hero_id: String = "durvall", stage_key: String = "dagruve", ctx: Dictionary = {}) -> void:
 	rng.seed = seed_value
@@ -147,8 +145,6 @@ func load_stage(stage_key: String) -> void:
 	styx_exposure = 0.0
 	styx_test_next = 1.0
 	styx_in_water = false
-	styx_warning_shown = false
-	styx_calling = false
 	hero.styx_lucidity_loss = 0
 	hero.styx_forget_t = 0.0
 	hero.terrain_id = stage_key
@@ -210,55 +206,20 @@ func qa_prepare(request: Variant) -> void:
 		"prop_grounding":
 			events.append({"type": "toast", "text": "QA: cruz verde = contato; contorno amarelo = sombra; inspecione o y-sort."})
 		"styx_entry":
-			hero.pos = TerrainLayout.styx_sample("durao")
+			hero.pos = TerrainLayout.styx_sample(stage_id)
 			events.append({"type": "toast", "text": "QA: entrada no Rio Estige preparada."})
 		"styx_margin":
-			hero.pos = TerrainLayout.styx_sample("durao", TerrainLayout.MATERIAL_BANK)
+			hero.pos = TerrainLayout.styx_sample(stage_id, TerrainLayout.MATERIAL_BANK)
 			events.append({"type": "toast", "text": "QA: margem do Estige preparada."})
-		"styx_current":
-			hero.pos = TerrainLayout.styx_sample("durao", TerrainLayout.MATERIAL_CURRENT)
-			events.append({"type": "toast", "text": "QA: gelatina central do Estige preparada."})
-		"styx_rare":
-			hero.pos = TerrainLayout.styx_sample("durao", TerrainLayout.MATERIAL_BANK)
-			var rare := _spawn_elite("alma_penada", TerrainLayout.styx_sample("durao", TerrainLayout.MATERIAL_CURRENT))
-			rare.styx_imbued = true
-			events.append({"type": "toast", "text": "QA: raro Imbuído por Juiblex preparado."})
-		"styx_cliff":
-			hero.pos = Vector2(5.0, 9.0)
-			events.append({"type": "toast", "text": "QA: penhasco e bloqueio lógico preparados."})
-		"styx_telegraph":
-			hero.pos = TerrainLayout.styx_sample("durao", TerrainLayout.MATERIAL_SHALLOW)
-			zones.append({"owner": "stage", "kind": "telegraph", "pos": hero.pos, "radius": 1.5, "delay": 1.3, "total": 1.3, "life": 99.0, "dice": "2d6", "bonus": 8, "dtype": "magico"})
-			events.append({"type": "toast", "text": "QA: telégrafo sobre o Estige preparado."})
-		"styx_item":
-			hero.pos = TerrainLayout.styx_sample("durao", TerrainLayout.MATERIAL_BANK)
-			pickups.append({"kind": "gold", "pos": TerrainLayout.styx_sample("durao", TerrainLayout.MATERIAL_SHALLOW), "value": 1.0, "magnet": false})
-			events.append({"type": "toast", "text": "QA: item na água rasa preparado."})
-		"styx_portal":
-			hero.pos = TerrainLayout.styx_sample("durao", TerrainLayout.MATERIAL_BANK)
-			_add_interaction("portal", TerrainLayout.styx_sample("durao", TerrainLayout.MATERIAL_SHALLOW))
-			events.append({"type": "toast", "text": "QA: portal junto ao Estige preparado."})
-		"styx_boss":
-			hero.pos = TerrainLayout.styx_sample("durao", TerrainLayout.MATERIAL_BANK)
-			_spawn_qa_boss()
-			boss.pos = TerrainLayout.styx_sample("durao", TerrainLayout.MATERIAL_SHALLOW)
-			events.append({"type": "toast", "text": "QA: chefe junto ao Estige preparado."})
 		"styx_forget":
 			hero.styx_forget_t = 4.0
 			hero.styx_lucidity_loss = 1
 			hero.pos = Vector2(20.0, 20.0)
 			events.append({"type": "toast", "text": "QA: Esquecimento do Estige ativo por 4 s."})
-		"styx_call":
-			hero.pos = TerrainLayout.styx_sample("durao")
-			styx_exposure = 10.0
-			styx_in_water = true
-			styx_calling = true
-			events.append({"type": "toast", "text": "QA: Chamado do Estige ativo."})
-		"styx_defeat":
-			hero.pos = TerrainLayout.styx_sample("durao")
-			styx_exposure = 11.9
-			styx_in_water = true
-			events.append({"type": "toast", "text": "QA: derrota pelo Estige em 0,1 s."})
+		"styx_lucidity":
+			hero.pos = TerrainLayout.styx_sample(stage_id)
+			_styx_lucidity_test(99)
+			events.append({"type": "toast", "text": "QA: falha de Lucidez do Estige preparada."})
 		"chest", "fountain", "altar", "ritual":
 			_add_interaction(target_state, hero.pos + Vector2(1.0, 0.0))
 
@@ -407,7 +368,7 @@ func use_active(dir: Vector2 = Vector2.ZERO) -> bool:
 			for k in n:
 				var ang := TAU * float(k) / float(n)
 				projectiles.append({"owner": "hero", "pos": hero.pos, "dir": Vector2(cos(ang), sin(ang)), "speed": float(p.speed),
-					"life": float(p.range) / float(p.speed), "pierce": 1, "radius": 0.4, "p": p, "hit": {}})
+				"life": float(p.range) / float(p.speed), "pierce": 1, "radius": 0.4, "p": p, "hit": {}, "visual_theme": DivineVisuals.resolve(hero.id, visual_god, visual_boon_selected)})
 		"charm":
 			var charm_target := nearest(hero.pos, float(p.range))
 			if charm_target == null or charm_target.is_boss():
@@ -559,7 +520,7 @@ func _fire_bolt(p: Dictionary) -> bool:
 	for k in n:
 		var ang := deg_to_rad((k - (n - 1) * 0.5) * spread)
 		projectiles.append({"owner": "hero", "pos": hero.pos, "dir": dir.rotated(ang), "speed": float(p.speed), "life": float(p.range) * (1.0 + hero.m("area_pct")) / float(p.speed),
-			"pierce": int(p.get("pierce", 0)), "radius": 0.4, "p": p, "hit": {}})
+			"pierce": int(p.get("pierce", 0)), "radius": 0.4, "p": p, "hit": {}, "visual_theme": DivineVisuals.resolve(hero.id, visual_god, visual_boon_selected)})
 	events.append({"type": "cast", "pos": hero.pos, "dir": dir, "weapon": p.get("_audio_id", p.get("id", "")), "dtype": p.dtype})
 	return true
 
@@ -598,12 +559,14 @@ func _fire_zone(p: Dictionary, area: float) -> bool:
 	else:
 		if nearest(hero.pos, r * 2.0) == null:
 			return false
-	zones.append({"owner": "hero", "kind": "zone", "pos": at, "radius": r, "life": float(p.get("duration", 3.0)), "tick": float(p.get("tick", 0.5)), "acc": 0.0, "p": p})
-	events.append({"type": "zone", "pos": at, "radius": r, "dtype": p.dtype, "weapon": p.get("_audio_id", p.get("id", ""))})
+	var visual_theme := DivineVisuals.resolve(hero.id, visual_god, visual_boon_selected)
+	zones.append({"owner": "hero", "kind": "zone", "pos": at, "radius": r, "life": float(p.get("duration", 3.0)), "tick": float(p.get("tick", 0.5)), "acc": 0.0, "p": p, "visual_theme": visual_theme})
+	events.append({"type": "zone", "pos": at, "radius": r, "dtype": p.dtype, "weapon": p.get("_audio_id", p.get("id", "")), "visual_theme": visual_theme})
 	return true
 
 ## Golpe do herói. `roll`: usa d20 para erro/crítico e precisão contra evasão tipada.
-func _hero_hit(e: Enemy, p: Dictionary, roll: bool) -> bool:
+func _hero_hit(e: Enemy, p: Dictionary, roll: bool, visual_theme: Dictionary = {}) -> bool:
+	var resolved_theme: Dictionary = visual_theme if not visual_theme.is_empty() else DivineVisuals.resolve(hero.id, visual_god, visual_boon_selected)
 	if e.dead:
 		return false
 	var attr := String(p.get("attr", "forca"))
@@ -633,7 +596,7 @@ func _hero_hit(e: Enemy, p: Dictionary, roll: bool) -> bool:
 			shadow_charge = false
 		if hero.hp < hero.max_hp * 0.5:
 			pct += hero.m("low_hp_dmg")
-		dmg *= maxf(0.2, pct) * (1.0 + e.mark) * float(e.resist.get(dtype, 1.0)) * _styx_enemy_defense_multiplier(e)
+		dmg *= maxf(0.2, pct) * (1.0 + e.mark) * float(e.resist.get(dtype, 1.0))
 		if crit:
 			dmg *= 2.0
 			stats.crits += 1
@@ -643,13 +606,13 @@ func _hero_hit(e: Enemy, p: Dictionary, roll: bool) -> bool:
 		dmg = maxf(1.0, round(dmg))
 		e.hp -= dmg
 		e.hit_flash = 0.12
-		events.append({"type": "hit", "pos": e.pos, "amount": int(dmg), "crit": crit})
+		events.append({"type": "hit", "pos": e.pos, "amount": int(dmg), "crit": crit, "visual_theme": resolved_theme})
 		if crit and _has_boon_effect("critical_wave"):
 			for other in enemies:
 				if other != e and not other.dead and other.pos.distance_to(e.pos) <= 2.0:
 					var splash := maxf(1.0, round(dmg * 0.25))
 					other.hp -= splash
-					events.append({"type": "hit", "pos": other.pos, "amount": int(splash), "crit": false})
+					events.append({"type": "hit", "pos": other.pos, "amount": int(splash), "crit": false, "visual_theme": resolved_theme})
 					if other.hp <= 0.0:
 						_kill(other)
 		var ls := float(p.get("lifesteal", 0.0)) + hero.m("lifesteal")
@@ -700,7 +663,7 @@ func _update_projectiles(dt: float) -> void:
 						continue
 					if e.pos.distance_to(pr.pos) <= e.radius + pr.radius:
 						pr.hit[e] = true
-						_hero_hit(e, pr.p, true)
+						_hero_hit(e, pr.p, true, pr.get("visual_theme", {}))
 						pr.pierce -= 1
 						if pr.pierce < 0:
 							gone = true
@@ -722,7 +685,7 @@ func _update_zones(dt: float) -> void:
 				z.acc -= z.tick
 				for e in enemies:
 					if not e.dead and e.pos.distance_to(z.pos) <= z.radius + e.radius * 0.5:
-						_hero_hit(e, z.p, false)
+						_hero_hit(e, z.p, false, z.get("visual_theme", {}))
 			if z.life > 0.0:
 				keep.append(z)
 		elif z.kind == "puddle":
@@ -894,7 +857,7 @@ func _enemy_step(e: Enemy, dt: float) -> void:
 			e.pos = np
 		if dist <= e.radius + HERO_HIT_R + 0.2 and e.atk_cd <= 0.0:
 			e.atk_cd = 1.0
-			_enemy_hit_hero(int(e.charge_ab.get("bonus", e.atk_bonus)), String(e.charge_ab.dice), "fisico", false, _styx_enemy_damage_multiplier(e))
+			_enemy_hit_hero(int(e.charge_ab.get("bonus", e.atk_bonus)), String(e.charge_ab.dice), "fisico", false)
 		return
 	if e.windup > 0.0:
 		e.windup -= dt
@@ -938,7 +901,7 @@ func _enemy_step(e: Enemy, dt: float) -> void:
 	var reach := 1.4 if e.speed == 0.0 else ENEMY_ATK_RANGE + e.radius * 0.3
 	if dist <= reach and e.atk_cd <= 0.0:
 		e.atk_cd = ENEMY_ATK_CD
-		_enemy_hit_hero(e.atk_bonus, e.atk_dice, "fisico", false, _styx_enemy_damage_multiplier(e))
+		_enemy_hit_hero(e.atk_bonus, e.atk_dice, "fisico", false)
 
 func _use_ability(e: Enemy, idx: int, a: Dictionary, dist: float, to: Vector2) -> bool:
 	match String(a.t):
@@ -947,7 +910,7 @@ func _use_ability(e: Enemy, idx: int, a: Dictionary, dist: float, to: Vector2) -
 				return false
 			var dir := to.normalized()
 			projectiles.append({"owner": "enemy", "pos": e.pos, "dir": dir, "speed": float(a.speed), "life": float(a.range) / float(a.speed) + 1.0, "radius": 0.25,
-				"dice": a.dice, "bonus": int(a.bonus) + int(minute() / 4.0) + tier(), "dtype": a.dtype, "pierce": 0, "hit": {}, "p": {}, "damage_mult": _styx_enemy_damage_multiplier(e)})
+				"dice": a.dice, "bonus": int(a.bonus) + int(minute() / 4.0) + tier(), "dtype": a.dtype, "pierce": 0, "hit": {}, "p": {}})
 			events.append({"type": "enemy_action", "enemy_id": e.id, "pos": e.pos, "ability": "shoot"})
 			return true
 		"aoe":
@@ -955,7 +918,7 @@ func _use_ability(e: Enemy, idx: int, a: Dictionary, dist: float, to: Vector2) -
 				return false
 			var lead := hero.pos
 			zones.append({"owner": "enemy", "kind": "telegraph", "pos": lead, "radius": float(a.radius), "delay": float(a.delay), "life": 99.0,
-				"dice": a.dice, "bonus": e.atk_bonus, "dtype": a.dtype, "damage_mult": _styx_enemy_damage_multiplier(e)})
+				"dice": a.dice, "bonus": e.atk_bonus, "dtype": a.dtype})
 			events.append({"type": "telegraph", "pos": lead, "radius": float(a.radius), "delay": float(a.delay), "enemy_id": e.id})
 			return true
 		"charge":
@@ -987,7 +950,7 @@ func _use_ability(e: Enemy, idx: int, a: Dictionary, dist: float, to: Vector2) -
 			for k in n:
 				var ang := off + TAU * k / n
 				projectiles.append({"owner": "enemy", "pos": e.pos, "dir": Vector2(cos(ang), sin(ang)), "speed": float(a.speed), "life": 4.0, "radius": 0.25,
-					"dice": a.dice, "bonus": e.atk_bonus, "dtype": "magico", "pierce": 0, "hit": {}, "p": {}, "damage_mult": _styx_enemy_damage_multiplier(e)})
+					"dice": a.dice, "bonus": e.atk_bonus, "dtype": "magico", "pierce": 0, "hit": {}, "p": {}})
 			events.append({"type": "enemy_action", "enemy_id": e.id, "pos": e.pos, "ability": "ring"})
 			return true
 	return false
@@ -1008,12 +971,6 @@ func _enemy_hit_hero(bonus: int, dice: String, dtype: String, is_proj: bool, dam
 		return
 	var dmg := float(Dice.roll(rng, dice)) * (2.0 if r == 20 else 1.0) * damage_mult
 	_hurt_hero(dmg, "hit")
-
-func _styx_enemy_damage_multiplier(enemy: Enemy) -> float:
-	return 1.20 if enemy.styx_imbued else 1.0
-
-func _styx_enemy_defense_multiplier(enemy: Enemy) -> float:
-	return 0.85 if enemy.styx_imbued else 1.0
 
 func _hit_chance(accuracy: int, evasion: float) -> float:
 	# Bônus de ataque preserva a escala anterior do d20; evasão reduz o resultado.
@@ -1529,9 +1486,9 @@ func choose(i: int) -> void:
 			hero.boons.append(c.boon)
 	var offered_boon: Dictionary = c.get("boon", {})
 	var chosen_god := String(c.get("god", offered_boon.get("god", "")))
-	if chosen_god != "":
+	if offer_kind == "altar" and DivineVisuals.is_divine_affinity(chosen_god):
 		visual_god = chosen_god
-		visual_boon_selected = visual_boon_selected or offer_kind == "altar"
+		visual_boon_selected = true
 		events.append({"type": "divinity", "god": visual_god})
 	hero.recalc()
 	if offer_kind == "altar":
@@ -1671,6 +1628,10 @@ func _stage_has_rule(kind: String) -> bool:
 	return false
 
 func _stage_rule_step(dt: float) -> void:
+	# O Estige é uma camada ambiental comum: a regra principal do andar continua
+	# em paralelo, sem uma cópia de timers ou RNG por mapa.
+	if has_styx_contract():
+		_styx_step(dt)
 	if stage_rule.is_empty():
 		return
 	var kind := String(stage_rule.kind)
@@ -1735,8 +1696,8 @@ func _apply_rule_kind(kind: String, dt: float) -> void:
 			for e in enemies:
 				if not e.dead and not e.is_boss():
 					e.pos = (e.pos + current * dt * 0.25).clamp(Vector2(0.5, 0.5), map_size - Vector2(0.5, 0.5))
-		"styx_gelatinous":
-			_styx_step(dt)
+		"styx_memory":
+			pass # Já aplicado pela camada ambiental compartilhada acima.
 		"strikes":
 			_amb_strike -= dt
 			if _amb_strike <= 0.0:
@@ -1768,7 +1729,6 @@ func _apply_rule_kind(kind: String, dt: float) -> void:
 				events.append({"type": "toast", "text": "Um santuário surge no falso paraíso."})
 
 func _styx_step(dt: float) -> void:
-	_update_styx_imbuement()
 	var in_water := TerrainLayout.is_styx_water(stage_id, hero.pos)
 	if not in_water:
 		if styx_in_water and styx_exposure >= 2.0:
@@ -1778,8 +1738,6 @@ func _styx_step(dt: float) -> void:
 		styx_exposure = 0.0
 		styx_test_next = 1.0
 		styx_in_water = false
-		styx_warning_shown = false
-		styx_calling = false
 		return
 	if not styx_in_water:
 		styx_in_water = true
@@ -1788,23 +1746,9 @@ func _styx_step(dt: float) -> void:
 	while styx_exposure >= styx_test_next:
 		_styx_lucidity_test(mini(16, 11 + int(styx_test_next)))
 		styx_test_next += 1.0
-	if styx_exposure >= 7.0 and not styx_warning_shown:
-		styx_warning_shown = true
-		events.append({"type": "styx_warning", "pos": hero.pos})
-	if styx_exposure >= 10.0:
-		if not styx_calling:
-			styx_calling = true
-			events.append({"type": "styx_call", "pos": hero.pos})
-	if styx_exposure >= 12.0:
-		_defeat_from_styx()
 
-func _update_styx_imbuement() -> void:
-	for enemy in enemies:
-		var should_be_imbued: bool = not enemy.dead and not enemy.is_boss() and not enemy.affix.is_empty() and TerrainLayout.is_styx_water(stage_id, enemy.pos)
-		if enemy.styx_imbued == should_be_imbued:
-			continue
-		enemy.styx_imbued = should_be_imbued
-		events.append({"type": "styx_imbued", "pos": enemy.pos, "enemy": enemy, "active": should_be_imbued})
+func has_styx_contract() -> bool:
+	return "styx_memory" in stage.get("ambient", [])
 
 func _styx_lucidity_test(dc: int) -> void:
 	var roll := styx_rng.randi_range(1, 20)
@@ -1813,16 +1757,6 @@ func _styx_lucidity_test(dc: int) -> void:
 	if not passed:
 		hero.styx_lucidity_loss += 1
 	events.append({"type": "styx_test", "pos": hero.pos, "passed": passed, "roll": roll, "dc": dc, "loss": hero.styx_lucidity_loss})
-
-func _defeat_from_styx() -> void:
-	if state != "running":
-		return
-	hero.dead = true
-	hero.hp = 0.0
-	state = "dead"
-	death_reason = "styx"
-	events.append({"type": "styx_defeat", "pos": hero.pos})
-	events.append({"type": "dead", "pos": hero.pos})
 
 # ------------------------------------------------------------------ resultado
 

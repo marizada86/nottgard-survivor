@@ -154,7 +154,7 @@ func _refresh_stage() -> void:
 func _ambient_text(amb: Array) -> String:
 	if amb.is_empty():
 		return "nenhuma"
-	var names := {"puddles": "poças de slime que retardam e ferem", "current": "corrente de almas que arrasta você", "styx_gelatinous": "Estige gelatinoso: risco mental e raros imbuídos", "strikes": "raios telegrafados caem do céu", "illusions": "alguns inimigos são ilusões (1 golpe)"}
+	var names := {"puddles": "poças de slime que retardam e ferem", "current": "corrente de almas que arrasta você", "styx_memory": "Rio Estige: risco de lucidez e Esquecimento", "strikes": "raios telegrafados caem do céu", "illusions": "alguns inimigos são ilusões (1 golpe)"}
 	return ", ".join(amb.map(func(a): return names.get(a, a)))
 
 func _update_play() -> void:

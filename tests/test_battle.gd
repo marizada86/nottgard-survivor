@@ -223,6 +223,30 @@ func run() -> Array:
 	kayron.choose(0)
 	if kayron.visual_god != "Selûne" or not kayron.visual_boon_selected:
 		out.append("bênção de Selûne deveria substituir a afinidade visual")
+	var kayron_base: Dictionary = DivineVisuals.resolve("kayron", "Shar", false)
+	if kayron_base.primary != Color("d13e54"):
+		out.append("Kayron deveria preservar vermelho abissal antes da bênção")
+	var shar_theme: Dictionary = DivineVisuals.resolve("kayron", "Shar", true)
+	if shar_theme.primary != Color("b56bff") or shar_theme.outline != Color("160d24"):
+		out.append("sobreposição de Shar deveria usar a paleta violeta aprovada")
+	var ghaunadaur_theme: Dictionary = DivineVisuals.resolve("brook", "Ghaunadaur", true)
+	if ghaunadaur_theme.primary != Color("8ad14b") or ghaunadaur_theme.aura_accent != Color("a56bda"):
+		out.append("Ghaunadaur deveria ser verde com acentos roxos")
+	var divine_primaries := {"Shar": "b56bff", "Sendrinah": "f4c542", "Mask": "aeb8c8", "Lliira": "ffa12d", "Ghaunadaur": "8ad14b", "Tou Um": "6fd4ff", "Selûne": "8ccbff"}
+	for god in divine_primaries:
+		var theme: Dictionary = DivineVisuals.resolve("brook", String(god), true)
+		if theme.primary != Color(String(divine_primaries[god])):
+			out.append("%s deveria resolver para sua cor divina aprovada" % god)
+	if DivineVisuals.is_divine_affinity("Helion"):
+		out.append("Helion é mago e não pode habilitar afinidade divina")
+	var helion: Dictionary = Data.table("boons").boons.filter(func(b): return b.id == "helion_saber")[0]
+	var helion_battle := _bat(105, "kayron")
+	helion_battle.state = "altar"
+	helion_battle.offer_kind = "altar"
+	helion_battle.offer = [{"t": "boon", "boon": helion}]
+	helion_battle.choose(0)
+	if helion_battle.visual_boon_selected:
+		out.append("bênção de Helion não deveria habilitar aura divina")
 
 	# 15) CA/CAM acima de 10 viram esquiva tipada, sem imunidade.
 	var guard := Hero.make("durvall")
@@ -287,7 +311,7 @@ func run() -> Array:
 	if fog.hero.hp >= hp_before_fog:
 		out.append("CA, CAM e esquiva nao deveriam evitar o dano da Mare")
 
-	# 19) Estige gelatinoso: risco mental sem deslocamento e raro imbuído.
+	# 19) Estige: risco de memória sem deslocamento físico.
 	var styx := _bat(107, "korrak", "durao")
 	_quiet(styx)
 	styx.hero.pos = Vector2(20, 20)
@@ -298,31 +322,7 @@ func run() -> Array:
 	styx.hero.pos = TerrainLayout.styx_sample("durao")
 	styx._stage_rule_step(0.1)
 	if styx.styx_exposure <= 0.0 or styx.hero.push != Vector2.ZERO:
-		out.append("Estige gelatinoso deveria iniciar exposição sem empurrão")
-	var gel_enemy := styx.spawn_for_test("alma_penada", TerrainLayout.styx_sample("durao"))
-	var gel_pickup := {"kind": "gold", "pos": TerrainLayout.styx_sample("durao"), "value": 1.0, "magnet": false}
-	var gel_projectile := {"owner": "enemy", "pos": TerrainLayout.styx_sample("durao"), "dir": Vector2.RIGHT, "speed": 1.0, "life": 1.0, "radius": 0.2, "dice": "1d4", "bonus": 0, "dtype": "fisico", "pierce": 0, "hit": {}, "p": {}}
-	styx.pickups.append(gel_pickup)
-	styx.projectiles.append(gel_projectile)
-	var enemy_before := gel_enemy.pos
-	var pickup_before: Vector2 = gel_pickup.pos
-	var projectile_before: Vector2 = gel_projectile.pos
-	styx._stage_rule_step(0.25)
-	if gel_enemy.pos != enemy_before or gel_pickup.pos != pickup_before or gel_projectile.pos != projectile_before:
-		out.append("Estige gelatinoso não pode deslocar inimigo, item ou projétil")
-	var rare := styx._spawn_elite("alma_penada", TerrainLayout.styx_sample("durao"))
-	styx._update_styx_imbuement()
-	if not rare.styx_imbued or not is_equal_approx(styx._styx_enemy_damage_multiplier(rare), 1.2) or not is_equal_approx(styx._styx_enemy_defense_multiplier(rare), 0.85):
-		out.append("raro na gelatina deveria receber bônus temporário de Juiblex")
-	rare.pos = Vector2(20, 20)
-	styx._update_styx_imbuement()
-	if rare.styx_imbued:
-		out.append("raro deveria perder a bênção ao sair da gelatina")
-	styx._spawn_qa_boss()
-	styx.boss.pos = TerrainLayout.styx_sample("durao")
-	styx._update_styx_imbuement()
-	if styx.boss.styx_imbued:
-		out.append("chefe não deveria receber a bênção de Juiblex")
+		out.append("Estige deveria iniciar exposição sem empurrão")
 	styx.hero.styx_lucidity_loss = 99
 	if styx.hero.styx_intelligence() != 1:
 		out.append("lucidez do Estige deveria ter piso de Inteligência efetiva em 1")
@@ -332,16 +332,26 @@ func run() -> Array:
 	styx._stage_rule_step(0.01)
 	if styx.hero.styx_forget_t < 2.0:
 		out.append("sair do Estige após dois segundos deveria aplicar Esquecimento")
-	styx.hero.pos = TerrainLayout.styx_sample("durao")
-	styx.styx_exposure = 9.99
-	styx.styx_in_water = true
-	styx._stage_rule_step(0.02)
-	if not styx.styx_calling:
-		out.append("dez segundos no Estige deveriam iniciar o Chamado")
-	styx.styx_exposure = 11.99
-	styx.styx_in_water = true
-	styx._stage_rule_step(0.02)
-	if styx.state != "dead" or styx.death_reason != "styx":
-		out.append("doze segundos no Estige deveriam encerrar a run")
+
+	# 20) Paridade limitada: apenas os quatro andares documentados usam o contrato.
+	for stage_id in TerrainLayout.STYX_STAGES:
+		var documented_styx := _bat(208, "korrak", stage_id)
+		_quiet(documented_styx)
+		documented_styx.hero.pos = TerrainLayout.styx_sample(stage_id)
+		documented_styx._stage_rule_step(0.1)
+		if documented_styx.styx_exposure <= 0.0:
+			out.append("%s não iniciou o contrato de memória do Estige" % stage_id)
+		documented_styx.styx_exposure = 2.1
+		documented_styx.styx_in_water = true
+		documented_styx.hero.pos = TerrainLayout.styx_sample(stage_id, TerrainLayout.MATERIAL_BANK)
+		documented_styx._stage_rule_step(0.01)
+		if documented_styx.hero.styx_forget_t < 2.0:
+			out.append("%s não aplicou Esquecimento ao deixar o Estige" % stage_id)
+	for stage_id in [&"dagruve", &"docas", &"molor", &"feng_tu", &"pilares"]:
+		var dry_stage := _bat(209, "korrak", stage_id)
+		dry_stage.hero.pos = TerrainLayout.styx_sample(stage_id)
+		dry_stage._stage_rule_step(0.1)
+		if dry_stage.has_styx_contract() or dry_stage.styx_exposure > 0.0:
+			out.append("%s não deveria ter contrato ou exposição do Estige" % stage_id)
 
 	return out

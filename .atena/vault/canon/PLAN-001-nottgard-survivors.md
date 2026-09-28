@@ -201,6 +201,15 @@ primeira bênção de altar; ela substitui, em vez de acumular, a afinidade visu
 anterior. Selûne integra o conjunto de divindades disponíveis, com azul-luar e
 prata.
 
+**Decisão do dono — 2026-09-27.** A primeira entrega do tema de combate cobre
+somente as divindades e funciona como uma sobreposição visual sobre a identidade
+do herói: não há tema de buff nesta entrega. A paleta aprovada é Shar
+violeta/preto (sem alterar o vermelho abissal inicial de Kayron), Sendrinah
+dourado, Mask prata-fumaça/grafite, Lliira laranja/amarelo/vermelho,
+Ghaunadaur verde com efeitos roxos, Tou Um azul de estrela/prata e Selûne
+azul-luar/prata. Helion é um mago local, não uma divindade, e fica fora deste
+sistema de afinidades divinas.
+
 ## 20. Dagruve e Docas como fases sequenciais (2026-09-27)
 
 **CANON — aprovado pelo dono em 2026-09-27.** A antiga fase composta
@@ -269,3 +278,48 @@ margem legível e nenhum fluxo, empurrão, Teste de Lucidez, Esquecimento,
 Chamado, buff ou regra hídrica. As regras da camada continuam `sanctuary`,
 `illusions` e `puddles`. Esta decisão não altera ondas, chefe, duração,
 colisão, recompensas, sementes ou os comportamentos de Durao.
+
+## 24. Contrato universal do Estige (2026-09-27)
+
+**CANON — aprovado pelo dono em 2026-09-27, pelo PLAN-023.** Todo andar
+jogável — Dagruve, Docas de Nottgard, Shedaklah, Molor, Durao, Feng-tu,
+Shendilavri, Goranthis e Pilares — contém uma zona marginal, acessível e
+determinística do Rio Estige. Em todos eles a água é gelatinosa, imóvel e
+atravessável; aplica o mesmo Teste de Lucidez por INT/CAM, Esquecimento ao
+sair, Chamado por exposição prolongada, derrota no limiar e imbuimento
+temporário de raros. O Estige nunca empurra o jogador, inimigos, itens ou
+projéteis.
+
+O contrato é uma única camada ambiental compartilhada, executada em paralelo à
+regra principal de cada andar. Portanto, rituais, poças, bolhas, raios,
+ilusões, santuários e a rotação dos Pilares permanecem distintos e ativos.
+Os canais não podem cobrir ponto inicial, rotas essenciais, portal,
+telegráficos ou arena de chefe.
+
+Esta decisão substitui as limitações incompatíveis das seções 21, 22 e 23,
+bem como os limites operacionais de Estige apenas visual/ausente registrados
+nos planos de terreno e nos registros de ativo 011 a 016. Esses documentos
+permanecem como histórico de aprovação de seus atlas; sua restrição de
+comportamento do rio não é mais vigente.
+
+## 25. Correção fiel do Rio Estige (2026-09-27)
+
+**CANON — aprovado pelo dono em 2026-09-27, pelo PLAN-027 e SPEC-055.** A
+seção 24 está supersedida. O Rio Estige funcional aparece somente onde há
+presença documentada na campanha: **Shedaklah** (dois braços lentos),
+**Durão** (canal lento junto aos cais), **Shendilavri** (afluente marginal) e
+**Goranthis** (queda e bacia marginal). Dagruve, Docas, Molor, Feng-tu e
+Pilares não recebem rio nem contrato ambiental do Estige.
+
+O único efeito jogável comum é a tradução já aprovada de perda de memória: ao
+entrar e a cada segundo completo, Teste de Lucidez `d20 + mod. INT +
+max(0, CAM - 10)` contra CDs 11–16. Cada falha reduz apenas a Inteligência
+efetiva da run, com piso 1. Após dois ou mais segundos e ao sair da água,
+**Esquecimento** impede aproximar-se do rio por `min(segundos completos, 6)`
+segundos. Não altera perfil, desbloqueios, itens ou ficha persistente.
+
+Gelatina de Juiblex, Chamado, derrota por exposição, bônus de raros e empurrão
+não são propriedades deste rio e não fazem parte do jogo. As regras próprias
+dos quatro andares continuam em paralelo; a corrente rotativa dos Pilares é
+uma mecânica autoral separada. PLAN-023, SPEC-054 e EVID-084 permanecem como
+histórico de uma implementação corrigida, não como intenção vigente.

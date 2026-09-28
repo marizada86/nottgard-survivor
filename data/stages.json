@@ -22,7 +22,7 @@
     "elites": [{"at": 170, "id": "tentaculo_kraken"}, {"at": 330, "id": "arch_hag"}, {"at": 450, "id": "guardiao_copia"}],
     "boss": "guardiao_verdadeiro", "interactions": {"chest": 4, "fountain": 2, "altar": 2, "ritual": 1}, "essence": "Essência das Docas", "next": "shedaklah", "unlock": "dagruve"},
   "shedaklah": {"name": "Shedaklah", "sub": "Andar 222 · fungo e slime", "order": 2, "duration": 540, "cap": 50, "tier": 2, "coin_mult": 1.4, "hp_mult": 1.5,
-    "ambient": ["puddles"], "ground": [[36, 34, 40], [46, 40, 48]], "bg": [18, 13, 20], "prop": {"color": [140, 100, 130], "height": 46, "n": 40, "kind": "cogumelo"},
+    "ambient": ["puddles", "styx_memory"], "ground": [[36, 34, 40], [46, 40, 48]], "bg": [18, 13, 20], "prop": {"color": [140, 100, 130], "height": 46, "n": 40, "kind": "cogumelo"},
     "waves": [
       {"t0": 0,   "t1": 200, "id": "servo_de_zuggtmoy", "every": 3.0, "n": 2, "max": 14},
       {"t0": 0,   "t1": 240, "id": "cogumelo_fungico", "every": 5.0, "n": 1, "max": 7},
@@ -43,7 +43,7 @@
     "elites": [{"at": 140, "id": "pudim_negro"}, {"at": 270, "id": "receptaculo_de_juiblex"}, {"at": 420, "id": "receptaculo_de_juiblex"}],
     "boss": "blogbog", "interactions": {"chest": 4, "fountain": 3, "altar": 2, "ritual": 1}, "essence": "Núcleo Verde", "next": "durao", "unlock": "shedaklah"},
   "durao": {"name": "Durao", "sub": "Andar 274 · a jaula e o rio de almas", "order": 4, "duration": 600, "cap": 55, "tier": 4, "coin_mult": 2.2, "hp_mult": 2.8,
-    "ambient": ["styx_gelatinous"], "ground": [[52, 40, 34], [62, 47, 38]], "bg": [24, 16, 14], "prop": {"color": [96, 76, 66], "height": 70, "n": 30, "kind": "rocha"},
+    "ambient": ["styx_memory"], "ground": [[52, 40, 34], [62, 47, 38]], "bg": [24, 16, 14], "prop": {"color": [96, 76, 66], "height": 70, "n": 30, "kind": "rocha"},
     "waves": [
       {"t0": 0,   "t1": 220, "id": "alma_penada", "every": 2.6, "n": 3, "max": 18},
       {"t0": 30,  "t1": 400, "id": "demonio_de_gehenna", "every": 6.0, "n": 1, "max": 6},
@@ -62,7 +62,7 @@
     "elites": [{"at": 150, "id": "estatua_do_templo"}, {"at": 300, "id": "discipulo_pestilento"}, {"at": 450, "id": "discipulo_pestilento"}],
     "boss": "lu_yueh", "interactions": {"chest": 4, "fountain": 2, "altar": 3, "ritual": 1}, "essence": "Estrela do Norte", "next": "shendilavri", "unlock": "durao"},
   "shendilavri": {"name": "Shendilavri e Rivenheart", "sub": "Camada 570 · o reino das súcubos", "order": 6, "duration": 630, "cap": 60, "tier": 6, "coin_mult": 3.2, "hp_mult": 4.5,
-    "ambient": ["illusions"], "ground": [[52, 30, 44], [64, 36, 52]], "bg": [22, 10, 20], "prop": {"color": [140, 60, 100], "height": 64, "n": 34, "kind": "cristal"},
+    "ambient": ["illusions", "styx_memory"], "ground": [[52, 30, 44], [64, 36, 52]], "bg": [22, 10, 20], "prop": {"color": [140, 60, 100], "height": 64, "n": 34, "kind": "cristal"},
     "waves": [
       {"t0": 0,   "t1": 240, "id": "escravo_de_rivenheart", "every": 3.0, "n": 3, "max": 18},
       {"t0": 30,  "t1": 500, "id": "sucubo", "every": 4.0, "n": 2, "max": 10},
@@ -72,7 +72,7 @@
     "elites": [{"at": 160, "id": "guarda_do_castelo"}, {"at": 320, "id": "master_of_cruelties"}, {"at": 480, "id": "master_of_cruelties"}],
     "boss": "malcanthet", "interactions": {"chest": 5, "fountain": 2, "altar": 2, "ritual": 2}, "essence": "Chifre de Súcubo", "next": "goranthis", "unlock": "feng_tu"},
   "goranthis": {"name": "Goranthis", "sub": "Camada 597 · o verdadeiro Paraíso", "order": 7, "duration": 660, "cap": 65, "tier": 7, "coin_mult": 4.0, "hp_mult": 5.5,
-    "ambient": ["illusions", "puddles"], "ground": [[58, 54, 40], [70, 65, 46]], "bg": [22, 21, 14], "prop": {"color": [200, 190, 130], "height": 90, "n": 30, "kind": "cachoeira"},
+    "ambient": ["illusions", "puddles", "styx_memory"], "ground": [[58, 54, 40], [70, 65, 46]], "bg": [22, 21, 14], "prop": {"color": [200, 190, 130], "height": 90, "n": 30, "kind": "cachoeira"},
     "waves": [
       {"t0": 0,   "t1": 240, "id": "ilusao_de_socothbenoth", "every": 2.2, "n": 4, "max": 24},
       {"t0": 20,  "t1": 660, "id": "guardiao_de_goranthis", "every": 6.0, "n": 1, "max": 8},

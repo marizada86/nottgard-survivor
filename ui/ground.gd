@@ -198,14 +198,14 @@ func _draw_layout_cell(center: Vector2, points: PackedVector2Array, x: int, y: i
 	else:
 		draw_colored_polygon(points, base)
 	if material == TerrainLayout.MATERIAL_CURRENT or material == TerrainLayout.MATERIAL_SHALLOW:
-		# A passagem de Juiblex deixou a água espessa e imóvel: almas e bolhas ficam presas.
+		# Águas lentas do Estige: bolhas e reflexos deixam a travessia legível.
 		var gel := Color("4ba8b8") if material == TerrainLayout.MATERIAL_SHALLOW else Color("2c768d")
 		if variant % 3 == 0:
 			draw_circle(center + Vector2(variant - 4, -2), 1.8, Color(gel, 0.72))
 		if variant == 1:
 			draw_circle(center + Vector2(5, 3), 1.1, Color("91d7a2", 0.5))
 	elif material == TerrainLayout.MATERIAL_SHEDAKLAH_STYX:
-		# Em Shedaklah, o Estige é um limite visual lento, não o risco de Durao.
+		# Braços calmos: a regra comum do Estige é aplicada pela batalha.
 		if variant % 3 == 0:
 			draw_line(center + Vector2(-9, 1), center + Vector2(8, -2), Color("475766", 0.52), 1.0, true)
 	elif material == TerrainLayout.MATERIAL_SHEDAKLAH_BANK and variant % 2 == 0:
@@ -227,7 +227,7 @@ func _draw_layout_cell(center: Vector2, points: PackedVector2Array, x: int, y: i
 	elif material == TerrainLayout.MATERIAL_FENG_TU_FOUNDATION and variant % 2 == 0:
 		draw_line(center + Vector2(-10, 2), center + Vector2(8, -3), Color("0d1119", 0.75), 1.3, true)
 	elif material == TerrainLayout.MATERIAL_SHENDILAVRI_STYX:
-		# Estige de Shendilavri: água escura e parada, composição visual sem regra.
+		# Água escura e parada; o risco mental vem da camada ambiental comum.
 		if variant % 3 == 0:
 			draw_line(center + Vector2(-9, 1), center + Vector2(8, -2), Color("6d5b82", 0.42), 1.0, true)
 	elif material == TerrainLayout.MATERIAL_SHENDILAVRI_BANK and variant % 2 == 0:
@@ -239,7 +239,7 @@ func _draw_layout_cell(center: Vector2, points: PackedVector2Array, x: int, y: i
 	elif material == TerrainLayout.MATERIAL_SHENDILAVRI_FOUNDATION and variant % 2 == 0:
 		draw_line(center + Vector2(-10, 2), center + Vector2(8, -3), Color("1a1222", 0.78), 1.3, true)
 	elif material == TerrainLayout.MATERIAL_GORANTHIS_STYXFALL:
-		# Queda do Estige em Goranthis: impossível e visual, sem regra de água.
+		# A queda continua imóvel; sua base acessível usa o contrato comum do Estige.
 		if variant % 2 == 0:
 			draw_line(center + Vector2(-8, -5), center + Vector2(8, 5), Color("d6e5d1", 0.58), 1.4, true)
 	elif material == TerrainLayout.MATERIAL_GORANTHIS_BANK and variant % 2 == 0:

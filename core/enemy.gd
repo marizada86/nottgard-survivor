@@ -36,8 +36,6 @@ var charge_t := 0.0
 var charge_dir := Vector2.ZERO
 var charge_ab: Dictionary = {}
 var affix := ""
-## Bênção ambiental efêmera: nunca entra na ficha, no loot nem na progressão.
-var styx_imbued := false
 var dead := false
 var drops_chest := false
 var hit_flash := 0.0

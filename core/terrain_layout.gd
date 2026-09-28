@@ -43,6 +43,9 @@ const STYX_CENTER_X := 27.0
 const STYX_CURRENT_HALF_WIDTH := 1.25
 const STYX_SHALLOW_HALF_WIDTH := 2.35
 const STYX_BANK_HALF_WIDTH := 3.35
+## Presença documentada do Estige na campanha: dois braços em Shedaklah,
+## embarcadouro em Durao, braço de Shendilavri e queda de Goranthis.
+const STYX_STAGES := [&"shedaklah", &"durao", &"shendilavri", &"goranthis"]
 const MOUNTAINS := [
 	Vector3(7.0, 9.0, 2.2), Vector3(10.0, 30.0, 2.0),
 	Vector3(34.0, 12.0, 2.3), Vector3(34.0, 31.0, 2.1),
@@ -58,6 +61,26 @@ static func styx_center_x(y: float) -> float:
 
 static func styx_offset(p: Vector2) -> float:
 	return absf(p.x - styx_center_x(p.y))
+
+static func regional_styx_offset(stage_id: String, p: Vector2) -> float:
+	match stage_id:
+		"durao": return styx_offset(p)
+		"shedaklah": return shedaklah_styx_offset(p)
+		"shendilavri": return shendilavri_styx_offset(p)
+		"goranthis": return goranthis_styxfall_offset(p)
+	return INF
+
+static func _generic_styx_material(stage_id: String, p: Vector2) -> StringName:
+	if stage_id != "durao":
+		return &""
+	var offset := regional_styx_offset(stage_id, p)
+	if offset <= STYX_CURRENT_HALF_WIDTH:
+		return MATERIAL_CURRENT
+	if offset <= STYX_SHALLOW_HALF_WIDTH:
+		return MATERIAL_SHALLOW
+	if offset <= STYX_BANK_HALF_WIDTH:
+		return MATERIAL_BANK
+	return &""
 
 static func shedaklah_styx_center_x(y: float, left_branch: bool) -> float:
 	# Dois braços lentos e contínuos nas bordas; a arena central fica fúngica.
@@ -86,14 +109,10 @@ static func goranthis_styxfall_offset(p: Vector2) -> float:
 	return absf(p.x - goranthis_styxfall_center_x(p.y))
 
 static func material_at(stage_id: String, p: Vector2) -> StringName:
+	var generic_styx := _generic_styx_material(stage_id, p)
+	if generic_styx != &"":
+		return generic_styx
 	if stage_id == "durao":
-		var offset := styx_offset(p)
-		if offset <= STYX_CURRENT_HALF_WIDTH:
-			return MATERIAL_CURRENT
-		if offset <= STYX_SHALLOW_HALF_WIDTH:
-			return MATERIAL_SHALLOW
-		if offset <= STYX_BANK_HALF_WIDTH:
-			return MATERIAL_BANK
 		if is_blocked(stage_id, p):
 			return MATERIAL_SLOPE
 		# Grandes manchas, em vez de variação independente por célula.
@@ -177,26 +196,44 @@ static func is_goranthis_styxfall(stage_id: String, p: Vector2) -> bool:
 	return stage_id == "goranthis" and material_at(stage_id, p) == MATERIAL_GORANTHIS_STYXFALL
 
 static func is_styx_water(stage_id: String, p: Vector2) -> bool:
-	if stage_id != "durao":
+	if not STYX_STAGES.has(stage_id):
 		return false
 	var material := material_at(stage_id, p)
-	return material == MATERIAL_SHALLOW or material == MATERIAL_CURRENT
+	return material == MATERIAL_SHALLOW or material == MATERIAL_CURRENT or material == MATERIAL_SHEDAKLAH_STYX or material == MATERIAL_SHENDILAVRI_STYX or material == MATERIAL_GORANTHIS_STYXFALL
 
 static func is_styx_current(stage_id: String, p: Vector2) -> bool:
-	return stage_id == "durao" and styx_offset(p) <= STYX_CURRENT_HALF_WIDTH
+	# Durão usa o leito profundo; ele não causa deslocamento físico.
+	return stage_id == "durao" and material_at(stage_id, p) == MATERIAL_CURRENT
 
 static func distance_to_styx(stage_id: String, p: Vector2) -> float:
-	if stage_id != "durao":
+	if not STYX_STAGES.has(stage_id):
 		return INF
-	return maxf(0.0, styx_offset(p) - STYX_SHALLOW_HALF_WIDTH)
+	var half_width := STYX_SHALLOW_HALF_WIDTH
+	if stage_id == "shedaklah":
+		half_width = 1.2
+	elif stage_id == "shendilavri":
+		half_width = 1.15
+	elif stage_id == "goranthis":
+		half_width = 1.35
+	return maxf(0.0, regional_styx_offset(stage_id, p) - half_width)
 
 static func direction_to_styx(stage_id: String, p: Vector2) -> Vector2:
-	if stage_id != "durao":
+	if not STYX_STAGES.has(stage_id):
 		return Vector2.ZERO
-	return Vector2.RIGHT if p.x < styx_center_x(p.y) else Vector2.LEFT
+	var center := styx_center_x(p.y)
+	if stage_id == "shedaklah":
+		var left := shedaklah_styx_center_x(p.y, true)
+		var right := shedaklah_styx_center_x(p.y, false)
+		center = left if absf(p.x - left) < absf(p.x - right) else right
+	elif stage_id == "shendilavri":
+		center = shendilavri_styx_center_x(p.y)
+	elif stage_id == "goranthis":
+		center = goranthis_styxfall_center_x(p.y)
+	return Vector2.RIGHT if p.x < center else Vector2.LEFT
 
 static func flow_at(stage_id: String, p: Vector2) -> Vector2:
-	return STYX_FLOW if is_styx_water(stage_id, p) else Vector2.ZERO
+	# O risco é de memória, não uma força de corrente física.
+	return Vector2.ZERO
 
 static func is_blocked(stage_id: String, p: Vector2) -> bool:
 	if stage_id != "durao":
@@ -210,11 +247,28 @@ static func mountain_anchors(stage_id: String) -> Array:
 	return MOUNTAINS.duplicate() if stage_id == "durao" else []
 
 static func styx_sample(stage_id: String, material: StringName = MATERIAL_CURRENT) -> Vector2:
-	if stage_id != "durao":
+	if not STYX_STAGES.has(stage_id):
 		return Vector2(20.0, 20.0)
 	var y := 20.0
-	var offset := 0.0 if material == MATERIAL_CURRENT else (1.8 if material == MATERIAL_SHALLOW else 2.8)
-	return Vector2(styx_center_x(y) + offset, y)
+	var center := styx_center_x(y)
+	if stage_id == "shedaklah":
+		center = shedaklah_styx_center_x(y, true)
+	elif stage_id == "shendilavri":
+		center = shendilavri_styx_center_x(y)
+	elif stage_id == "goranthis":
+		center = goranthis_styxfall_center_x(y)
+	var bank_side := -1.0 if stage_id == "goranthis" else 1.0
+	var bank_offset := 2.8
+	if stage_id == "shedaklah":
+		bank_offset = 1.8
+	elif stage_id == "shendilavri":
+		bank_offset = 1.7
+	elif stage_id == "goranthis":
+		bank_offset = 2.1
+	var offset := 0.0 if material != MATERIAL_BANK else bank_side * bank_offset
+	if material == MATERIAL_SHALLOW and stage_id == "durao":
+		offset = bank_side * 1.8
+	return Vector2(center + offset, y)
 
 static func color_for(material: StringName) -> Color:
 	match material:

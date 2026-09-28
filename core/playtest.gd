@@ -27,16 +27,8 @@ const QA_RUN_DESTINATIONS := [
 	["Props: contato visual", "prop_grounding"],
 	["Estige: entrada", "styx_entry"],
 	["Estige: margem", "styx_margin"],
-	["Estige: corrente", "styx_current"],
-	["Estige: raro imbuído", "styx_rare"],
-	["Estige: penhasco", "styx_cliff"],
-	["Estige: telégrafo", "styx_telegraph"],
-	["Estige: item", "styx_item"],
-	["Estige: portal", "styx_portal"],
-	["Estige: chefe", "styx_boss"],
+	["Estige: falha de lucidez", "styx_lucidity"],
 	["Estige: Esquecimento", "styx_forget"],
-	["Estige: Chamado", "styx_call"],
-	["Estige: derrota", "styx_defeat"],
 ]
 
 var items: Array = []          # {kind, time, ctx, text, png}

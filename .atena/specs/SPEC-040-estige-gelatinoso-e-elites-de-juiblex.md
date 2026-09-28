@@ -1,6 +1,7 @@
 # SPEC-040 — Estige gelatinoso e elites de Juiblex em Durao
 
-Status: **implementada e verificada** (2026-09-27).
+Status: **supersedida** pelo PLAN-027/SPEC-055 (2026-09-27); histórico
+preservado. Gelatina de Juiblex e imbuimento de raros não são intenção vigente.
 
 ## Intenção
 

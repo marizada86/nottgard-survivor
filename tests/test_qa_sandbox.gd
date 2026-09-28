@@ -24,7 +24,7 @@ func run() -> Array:
 	qa_battle.step(Vector2.ZERO, 0.1)
 	if not qa_battle.events.any(func(ev): return String(ev.get("type", "")) == "stage_event_warning"):
 		failures.append("cenário QA não emitiu o aviso pré-evento")
-	for target in ["styx_margin", "styx_current", "styx_rare", "styx_cliff", "styx_telegraph", "styx_item", "styx_portal", "styx_boss", "styx_entry", "styx_forget", "styx_call", "styx_defeat"]:
+	for target in ["styx_margin", "styx_entry", "styx_lucidity", "styx_forget"]:
 		if not Playtest.qa_run_destinations().any(func(entry): return entry[1] == target):
 			failures.append("Navegador QA deveria expor cenário do Estige: %s" % target)
 	if not Playtest.qa_run_destinations().any(func(entry): return entry[1] == "prop_grounding"):

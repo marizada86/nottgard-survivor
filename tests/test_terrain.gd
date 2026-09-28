@@ -25,46 +25,53 @@ func run() -> Array:
 		out.append("corrente central deveria ter material próprio")
 	if TerrainLayout.material_at("durao", TerrainLayout.styx_sample("durao", TerrainLayout.MATERIAL_BANK)) != TerrainLayout.MATERIAL_BANK:
 		out.append("margem do Estige deveria ter material próprio")
+	for stage_id in TerrainLayout.STYX_STAGES:
+		var sample := TerrainLayout.styx_sample(stage_id)
+		if not TerrainLayout.is_styx_water(stage_id, sample):
+			out.append("%s deveria oferecer uma zona acessível do Estige" % stage_id)
+		if TerrainLayout.is_styx_water(stage_id, TerrainLayout.styx_sample(stage_id, TerrainLayout.MATERIAL_BANK)):
+			out.append("%s deveria preservar uma margem seca do Estige" % stage_id)
+		if TerrainLayout.flow_at(stage_id, sample) != Vector2.ZERO:
+			out.append("%s não deveria tratar o Estige como corrente física" % stage_id)
+		if TerrainLayout.is_styx_water(stage_id, Vector2(20.0, 20.0)):
+			out.append("%s não deveria cobrir o ponto inicial com Estige" % stage_id)
+	for stage_id in ["dagruve", "docas", "molor", "feng_tu", "pilares"]:
+		if TerrainLayout.is_styx_water(stage_id, TerrainLayout.styx_sample(stage_id)):
+			out.append("%s não deveria oferecer Estige fora da lore documentada" % stage_id)
 	var shedaklah_left_branch := Vector2(TerrainLayout.shedaklah_styx_center_x(20.0, true), 20.0)
 	var shedaklah_right_branch := Vector2(TerrainLayout.shedaklah_styx_center_x(20.0, false), 20.0)
 	if not TerrainLayout.is_shedaklah_styx("shedaklah", shedaklah_left_branch) or not TerrainLayout.is_shedaklah_styx("shedaklah", shedaklah_right_branch):
 		out.append("Shedaklah deveria ter dois braços do Estige nas bordas")
+	if not TerrainLayout.is_styx_water("shedaklah", shedaklah_left_branch):
+		out.append("os braços de Shedaklah deveriam ativar a memória do Estige")
 	if TerrainLayout.is_shedaklah_styx("shedaklah", Vector2(20.0, 20.0)):
 		out.append("centro de Shedaklah deveria permanecer terreno fúngico")
-	if TerrainLayout.is_styx_water("shedaklah", shedaklah_left_branch):
-		out.append("Estige visual de Shedaklah não deveria ativar a regra hídrica de Durao")
 	if TerrainLayout.material_at("molor", Vector2(7.0, 10.0)) != TerrainLayout.MATERIAL_MOLOR_OOZE:
 		out.append("Molor deveria ter bolsão determinístico de ooze")
 	if TerrainLayout.material_at("molor", Vector2(20.0, 20.0)) == TerrainLayout.MATERIAL_MOLOR_OOZE:
 		out.append("centro de Molor não deveria ser inteiramente ooze")
-	if TerrainLayout.is_styx_water("molor", Vector2(7.0, 10.0)):
-		out.append("bolsão de ooze em Molor não deveria ativar regra do Estige")
 	if TerrainLayout.material_at("feng_tu", Vector2(20.0, 20.0)) == TerrainLayout.MATERIAL_FENG_TU_FOUNDATION:
 		out.append("centro de Feng-tu deveria permanecer pátio ritual navegável")
 	if TerrainLayout.material_at("feng_tu", Vector2(0.5, 0.5)) != TerrainLayout.MATERIAL_FENG_TU_FOUNDATION:
 		out.append("borda de Feng-tu deveria ter fundação determinística")
-	if TerrainLayout.is_styx_water("feng_tu", Vector2(20.0, 20.0)):
-		out.append("Feng-tu não deveria ativar regra do Estige")
 	var shendilavri_branch := Vector2(TerrainLayout.shendilavri_styx_center_x(20.0), 20.0)
 	if not TerrainLayout.is_shendilavri_styx("shendilavri", shendilavri_branch):
 		out.append("Shendilavri deveria ter o braço visual do Estige na margem")
+	if not TerrainLayout.is_styx_water("shendilavri", shendilavri_branch):
+		out.append("o braço de Shendilavri deveria ativar a memória do Estige")
 	if TerrainLayout.is_shendilavri_styx("shendilavri", Vector2(20.0, 20.0)):
 		out.append("centro de Shendilavri deveria permanecer mármore de Rivenheart")
-	if TerrainLayout.is_styx_water("shendilavri", shendilavri_branch):
-		out.append("Estige visual de Shendilavri não deveria ativar regra hídrica")
 	var goranthis_fall := Vector2(TerrainLayout.goranthis_styxfall_center_x(20.0), 20.0)
 	if not TerrainLayout.is_goranthis_styxfall("goranthis", goranthis_fall):
 		out.append("Goranthis deveria ter queda visual do Estige na margem")
+	if not TerrainLayout.is_styx_water("goranthis", goranthis_fall):
+		out.append("a queda de Goranthis deveria ativar a memória do Estige")
 	if TerrainLayout.is_goranthis_styxfall("goranthis", Vector2(20.0, 20.0)):
 		out.append("centro de Goranthis deveria permanecer terraço do falso paraíso")
-	if TerrainLayout.is_styx_water("goranthis", goranthis_fall):
-		out.append("queda visual de Goranthis não deveria ativar regra hídrica")
 	if TerrainLayout.material_at("pilares", Vector2(20.0, 20.0)) == TerrainLayout.MATERIAL_PILLARS_FOUNDATION:
 		out.append("centro dos Pilares deveria permanecer platô navegável")
 	if TerrainLayout.material_at("pilares", Vector2(0.5, 0.5)) != TerrainLayout.MATERIAL_PILLARS_FOUNDATION:
 		out.append("borda dos Pilares deveria ter fundação determinística")
-	if TerrainLayout.is_styx_water("pilares", Vector2(20.0, 20.0)):
-		out.append("Pilares não deveria criar Estige ou corrente permanente")
 	for asset_path in ["res://assets/tiles/dagruve_ground_atlas_v3.png", "res://assets/tiles/docas_ground_atlas_v3.png", "res://assets/tiles/shedaklah_ground_atlas_v1.png", "res://assets/tiles/molor_ground_atlas_v1.png", "res://assets/tiles/feng_tu_ground_atlas_v1.png", "res://assets/tiles/shendilavri_ground_atlas_v1.png", "res://assets/tiles/goranthis_ground_atlas_v1.png", "res://assets/tiles/pilares_ground_atlas_v1.png"]:
 		var atlas: Texture2D = load(asset_path)
 		if atlas == null:

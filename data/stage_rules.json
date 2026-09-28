@@ -3,7 +3,7 @@
   "docas": {"name": "Corrosão das Docas", "kind": "puddles", "interval": 7.5, "desc": "O metal corroído anuncia poças hostis."},
   "shedaklah": {"name": "Esporos de Shedaklah", "kind": "puddles", "interval": 8.0, "desc": "Poças crescem e tornam o terreno hostil."},
   "molor": {"name": "Bolhas de Molor", "kind": "bubbles", "interval": 9.0, "delay": 2.2, "radius": 2.0, "desc": "Bolhas explodem e empurram tudo ao redor."},
-  "durao": {"name": "Estige Gelatinoso", "kind": "styx_gelatinous", "desc": "Juiblex parou o fluxo; a gelatina conserva o risco mental e fortalece raros."},
+  "durao": {"name": "Rio Estige", "kind": "styx_memory", "desc": "As águas lentas cobram lucidez e deixam Esquecimento após a travessia."},
   "feng_tu": {"name": "Julgamento de Tou Um", "kind": "strikes", "interval": 4.5, "friendly": true, "desc": "Raios atingem herói e inimigos."},
   "shendilavri": {"name": "Corte das Ilusões", "kind": "illusions", "chance": 0.14, "desc": "Cópias frágeis imitam inimigos verdadeiros."},
   "goranthis": {"name": "Falso Paraíso", "kind": "sanctuary", "interval": 12.0, "duration": 7.0, "fake_chance": 0.45, "desc": "Santuários podem curar ou revelar sua natureza ilusória."},

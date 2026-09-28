@@ -77,8 +77,15 @@ func run() -> Array:
 		out.append("Dagruve não está configurada antes de Docas")
 	if String(stages.docas.boss) != "guardiao_verdadeiro" or String(stages.docas.next) != "shedaklah":
 		out.append("Docas não está configurada entre Dagruve e Shedaklah")
-	if not ("styx_gelatinous" in stages.durao.ambient) or String(stage_rules.durao.get("kind", "")) != "styx_gelatinous":
-		out.append("Durao deveria declarar o Estige gelatinoso, não uma corrente")
+	var styx_stages := ["shedaklah", "durao", "shendilavri", "goranthis"]
+	for sid in styx_stages:
+		if not ("styx_memory" in stages[sid].ambient):
+			out.append("fase documentada %s deveria declarar a memória do Estige" % sid)
+	for sid in stages:
+		if not styx_stages.has(sid) and "styx_memory" in stages[sid].ambient:
+			out.append("fase sem Estige documentado não deveria declarar memória do Estige: %s" % sid)
+	if String(stage_rules.durao.get("kind", "")) != "styx_memory":
+		out.append("Durao deveria manter a memória do Estige como sua regra principal")
 	for sid in ["dagruve", "docas"]:
 		if not stage_events.has(sid) or stage_events[sid].is_empty():
 			out.append("fase %s sem eventos declarados" % sid)

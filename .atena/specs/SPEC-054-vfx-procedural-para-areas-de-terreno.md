@@ -1,16 +1,17 @@
 ---
-id: "SPEC-053"
+id: "SPEC-054"
 type: "especificação delimitada"
 title: "VFX procedural para áreas de terreno"
-status: "rascunho — aguardando aprovação"
+status: "implementada — exceção de validação aceita"
 created: "2026-09-27"
+approved: "2026-09-27"
 relations:
-  - "[[PLAN-022-efeitos-de-area-e-assets-procedurais-2026-09-27]]"
+  - "[[PLAN-023-efeitos-de-area-e-assets-procedurais-2026-09-27]]"
   - "[[ART-SPEC-001-vfx-e-ui-procedural]]"
   - "[[SPEC-040-estige-gelatinoso-e-elites-de-juiblex]]"
 ---
 
-# SPEC-053 — VFX procedural para áreas de terreno
+# SPEC-054 — VFX procedural para áreas de terreno
 
 ## Escopo
 
@@ -95,3 +96,10 @@ modificada nesta execução.
 A aprovação desta SPEC autoriza apenas a execução local delimitada acima, em
 modo guarded-autopilot. Qualquer ampliação de regra, asset raster, dependência,
 canon, publicação ou alteração externa exige nova aprovação.
+
+## Exceção aceita
+
+O dono aprovou em 2026-09-27 a entrega com a exceção registrada em `EVID-084`:
+a fumaça passou, mas a captura 1280×720 e o resumo final da suíte não puderam
+ser obtidos neste ambiente. Esta aprovação encerra o lote local sem declarar os
+critérios visuais como verificados.

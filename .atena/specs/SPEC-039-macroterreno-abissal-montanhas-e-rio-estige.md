@@ -1,6 +1,8 @@
 # SPEC-039 — Macroterreno Abissal, montanhas e Rio Estige
 
-Status: **implementada e verificada** (2026-09-27).
+Status: **parcialmente supersedida** pelo PLAN-027/SPEC-055 (2026-09-27).
+O sistema de macroterreno e a tradução de Lucidez/Esquecimento permanecem;
+empurrão, Chamado, derrota temporal e exclusividade de Durão não são vigentes.
 
 ## Intenção
 
@@ -104,8 +106,7 @@ textura dentro de cada material.
 
 ## Política aprovada do Estige em Durao
 
-- O raso e a corrente central são atravessáveis. A corrente central empurra
-  na direção visual do fluxo; não haverá parede invisível no centro do rio.
+- O raso e o leito central são atravessáveis, sem empurrão nem parede invisível.
 - Ao entrar na região de água, e a cada segundo completo de exposição, o
   herói executa um **Teste de Lucidez**: `d20 + modificador de Inteligência +
   max(0, CAM - 10)` contra uma CD que aumenta com a exposição. A sequência de
@@ -117,13 +118,6 @@ textura dentro de cada material.
   **Esquecimento do Estige** por `min(segundos completos de exposição, 6)`
   segundos. É uma condição de medo: o herói não pode se aproximar do rio e
   sua leitura visual deve mostrar claramente a duração.
-- A partir de sete segundos de exposição, o HUD e o próprio rio anunciam o
-  risco iminente. Aos dez segundos, começa o **Chamado do Estige**: o herói
-  caminha temporariamente em direção à água. O controle mantém esse nome — e
-  não `fear` — pois medo normalmente afasta, enquanto este efeito atrai.
-- Se o Chamado mantiver o herói em contato com o rio até doze segundos de
-  exposição, a run é perdida. A regra jamais falha instantaneamente aos dez
-  segundos: há aviso, janela de reação e cobertura por teste determinístico.
 - A exposição zera ao sair da água e recuperar o controle; perda de lucidez e
   condições temporárias expiram ao fim da run.
 

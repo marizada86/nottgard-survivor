@@ -21,6 +21,7 @@ var _shake := 0.0
 var _numbers := 0
 var _paused := false
 var _divine_aura: Line2D
+var _divine_aura_accent: Line2D
 var _encounter_layer: CanvasLayer
 var _boss_intro_panel: Control
 var _boss_intro_art: TextureRect
@@ -328,8 +329,11 @@ func _consume_events() -> void:
 			"hit":
 				Sfx.play("combat.critical" if ev.crit else "combat.impact", -14.0)
 				if _numbers < 14:
-					var divine_col := DivineVisuals.color_for(battle.hero.id, battle.visual_god)
-					_float_text(at + Vector2(randf_range(-6, 6), -36), str(ev.amount), divine_col.lightened(0.2) if ev.crit else divine_col, 18 if ev.crit else 14, ev.crit, DivineVisuals.outline_for(battle.hero.id, battle.visual_god))
+					var theme: Dictionary = ev.get("visual_theme", _divine_theme())
+					var divine_col: Color = theme.primary
+					_float_text(at + Vector2(randf_range(-6, 6), -36), str(ev.amount), divine_col.lightened(0.2) if ev.crit else divine_col, 18 if ev.crit else 14, ev.crit, theme.outline)
+					if ev.has("visual_theme") and under.has_method("spawn_impact"):
+						under.call("spawn_impact", ev.pos, 3, theme.impact_accent)
 			"miss":
 				Sfx.play("combat.miss", -18.0)
 			"hurt":
@@ -351,20 +355,23 @@ func _consume_events() -> void:
 			"swing":
 				Sfx.play_weapon(String(ev.get("weapon", "")), "combat.swing")
 				hero_node.play_action(&"attack")
-				_swing(ev)
+				_swing(ev, _divine_theme())
 			"cast":
 				Sfx.play_weapon(String(ev.get("weapon", "")), "combat.magic")
 				hero_node.play_action(&"attack")
 			"nova":
 				Sfx.play_weapon(String(ev.get("weapon", "")), "combat.nova")
-				_ring(ev.pos, ev.radius, _dcol(String(ev.dtype)), 0.35)
+				_ring(ev.pos, ev.radius, _divine_theme().impact_accent, 0.35)
 			"zone":
 				Sfx.play_weapon(String(ev.get("weapon", "")), "combat.zone")
-				_ring(ev.pos, ev.radius, _dcol(String(ev.dtype)), 0.25)
+				var zone_theme: Dictionary = ev.get("visual_theme", _divine_theme())
+				_ring(ev.pos, ev.radius, zone_theme.impact_accent, 0.25)
 			"boom":
 				Sfx.play("combat.explosion", -8.0)
 				_shake = 0.8
 				_ring(ev.pos, ev.radius, Color(1.0, 0.3, 0.2), 0.3)
+				if under.has_method("spawn_impact"):
+					under.call("spawn_impact", ev.pos, 8)
 			"kill":
 				if ev.enemy.is_boss():
 					_shake = 1.5
@@ -401,15 +408,6 @@ func _consume_events() -> void:
 					hud.toast("Estige: lucidez falhou (−1 INT efetiva).", Color(0.42, 0.78, 0.95))
 			"styx_forget":
 				hud.toast("Esquecimento do Estige: afaste-se da água por %.0f s." % float(ev.duration), Color(0.48, 0.8, 1.0))
-			"styx_warning":
-				hud.toast("O Estige chama você. Saia da corrente!", Color(0.95, 0.72, 0.28))
-			"styx_call":
-				hud.toast("Chamado do Estige: resista à corrente!", Color(0.85, 0.5, 0.98))
-			"styx_defeat":
-				hud.toast("O Estige tomou sua memória.", Color(0.55, 0.75, 1.0))
-			"styx_imbued":
-				if bool(ev.active):
-					hud.toast("%s foi Imbuído por Juiblex!" % ev.enemy.name, Color(0.62, 0.95, 0.32))
 			"active":
 				Sfx.play_hero(String(ev.get("hero_id", battle.hero.id)))
 				hero_node.play_action(&"active")
@@ -435,7 +433,7 @@ func _consume_events() -> void:
 			"dead":
 				Sfx.play("player.death")
 			"divinity":
-				hud.toast("Afinidade: %s" % String(ev.god), DivineVisuals.color_for(battle.hero.id, String(ev.god)))
+				hud.toast("Afinidade: %s" % String(ev.god), _divine_theme().primary)
 			"toast":
 				hud.toast(ev.text, ev.get("color", Color(1, 1, 1)))
 				Game.logline(String(ev.text))
@@ -503,21 +501,34 @@ func _update_divine_aura() -> void:
 	if hero_node == null or battle == null:
 		return
 	if _divine_aura == null:
-		_divine_aura = Line2D.new()
-		var points := PackedVector2Array()
-		for i in 25:
-			var angle := TAU * float(i) / 24.0
-			points.append(Vector2(cos(angle) * 22.0, sin(angle) * 7.0))
-		_divine_aura.points = points
-		_divine_aura.width = 2.5
-		_divine_aura.antialiased = true
+		_divine_aura = _make_divine_aura(22.0, 7.0, 2.5)
+		_divine_aura_accent = _make_divine_aura(25.0, 8.0, 1.2)
 		fx.add_child(_divine_aura)
+		fx.add_child(_divine_aura_accent)
 	_divine_aura.position = hero_node.position + Vector2(0, 2)
+	_divine_aura_accent.position = hero_node.position + Vector2(0, 2)
 	_divine_aura.visible = battle.visual_boon_selected
+	_divine_aura_accent.visible = battle.visual_boon_selected
 	if _divine_aura.visible:
-		_divine_aura.default_color = Color(DivineVisuals.color_for(battle.hero.id, battle.visual_god), 0.8)
+		var theme := _divine_theme()
+		_divine_aura.default_color = Color(theme.primary, 0.8)
+		_divine_aura_accent.default_color = Color(theme.aura_accent, 0.55)
 
-func _swing(ev: Dictionary) -> void:
+func _make_divine_aura(radius_x: float, radius_y: float, width: float) -> Line2D:
+	var aura := Line2D.new()
+	var points := PackedVector2Array()
+	for i in 25:
+		var angle := TAU * float(i) / 24.0
+		points.append(Vector2(cos(angle) * radius_x, sin(angle) * radius_y))
+	aura.points = points
+	aura.width = width
+	aura.antialiased = true
+	return aura
+
+func _divine_theme() -> Dictionary:
+	return DivineVisuals.resolve(battle.hero.id, battle.visual_god, battle.visual_boon_selected)
+
+func _swing(ev: Dictionary, theme: Dictionary) -> void:
 	var poly := Polygon2D.new()
 	var pts := PackedVector2Array([Iso.to_screen(ev.pos) + Vector2(0, -18)])
 	var cone: float = deg_to_rad(float(ev.cone))
@@ -525,7 +536,7 @@ func _swing(ev: Dictionary) -> void:
 		var a := lerpf(-cone, cone, float(i) / 8.0)
 		pts.append(Iso.to_screen(ev.pos + ev.dir.rotated(a) * float(ev.range)) + Vector2(0, -18))
 	poly.polygon = pts
-	poly.color = Color(1, 1, 1, 0.28)
+	poly.color = Color(theme.primary, 0.28)
 	fx.add_child(poly)
 	var t := create_tween()
 	t.tween_property(poly, "modulate:a", 0.0, 0.16)

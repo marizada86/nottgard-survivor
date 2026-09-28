@@ -5,8 +5,18 @@ extends Node2D
 var battle: Battle
 static var _texture_cache := {}
 var _large_fx_by_quadrant: Array[int] = [0, 0, 0, 0]
+const PARTICLE_CAP := 96
+const PARTICLES_PER_ZONE := 8
+const PARTICLES_PER_IMPACT := 12
+var _particles: Array[Dictionary] = []
+var _emitter_state: Dictionary = {}
+var _rich_particle_emitters: Array[int] = [0, 0, 0, 0]
+var _particle_serial := 0
 
-func _process(_dt: float) -> void:
+func _process(dt: float) -> void:
+	if mode == "under" and battle != null:
+		_advance_particles(dt)
+		_emit_zone_particles(dt)
 	queue_redraw()
 
 func _ellipse(c: Vector2, r: float, n: int = 28) -> PackedVector2Array:
@@ -37,6 +47,119 @@ func _allow_large_fx(c: Vector2) -> bool:
 	_large_fx_by_quadrant[quadrant] += 1
 	return true
 
+func _particle_quadrant(c: Vector2) -> int:
+	var size := get_viewport_rect().size
+	var p := Iso.to_screen(c)
+	return (1 if p.x >= size.x * 0.5 else 0) + (2 if p.y >= size.y * 0.5 else 0)
+
+func _allow_rich_particle_emitter(c: Vector2) -> bool:
+	if not _particle_emitter_visible(c):
+		return false
+	var quadrant := _particle_quadrant(c)
+	if _rich_particle_emitters[quadrant] >= 3:
+		return false
+	_rich_particle_emitters[quadrant] += 1
+	return true
+
+func _particle_emitter_visible(c: Vector2) -> bool:
+	var viewport := get_viewport()
+	if viewport == null:
+		return true
+	var canvas_pos: Vector2 = viewport.get_canvas_transform() * Iso.to_screen(c)
+	var margin := Vector2(48.0, 48.0)
+	return Rect2(-margin, viewport.get_visible_rect().size + margin * 2.0).has_point(canvas_pos)
+
+func _zone_key(z: Dictionary) -> String:
+	return "%s:%s:%d:%d" % [String(z.get("owner", "")), String(z.get("kind", "")), int(round(float(z.pos.x) * 2.0)), int(round(float(z.pos.y) * 2.0))]
+
+func _particle_count(source: String) -> int:
+	var count := 0
+	for particle in _particles:
+		if String(particle.source) == source:
+			count += 1
+	return count
+
+func _advance_particles(dt: float) -> void:
+	var keep: Array[Dictionary] = []
+	for particle in _particles:
+		particle.life = float(particle.life) - dt
+		if particle.life <= 0.0:
+			continue
+		particle.pos += Vector2(particle.vel) * dt
+		particle.vel = Vector2(particle.vel) * (0.94 if String(particle.kind) == "spark" else 0.985)
+		keep.append(particle)
+	_particles = keep
+
+func _spawn_particle(kind: String, world_pos: Vector2, velocity: Vector2, life: float, col: Color, size: float, source: String) -> void:
+	if _particles.size() >= PARTICLE_CAP:
+		return
+	_particle_serial += 1
+	_particles.append({"kind": kind, "pos": Iso.to_screen(world_pos), "vel": velocity, "life": life, "total": life, "color": col, "size": size, "source": source})
+
+func _spawn_profile(profile: String, world_pos: Vector2, source: String, amount: int = 1, tint: Color = Color(1.0, 0.62, 0.2, 0.82)) -> void:
+	var allowed := PARTICLES_PER_ZONE
+	if profile == "spark":
+		allowed = PARTICLES_PER_IMPACT
+	var available := maxi(0, allowed - _particle_count(source))
+	for i in mini(amount, available):
+		var a := float(_particle_serial + i * 13) * 2.39996323
+		var offset := Vector2(cos(a), sin(a))
+		match profile:
+			"bubble":
+				_spawn_particle("bubble", world_pos + offset * 0.18, Vector2(offset.x * 3.0, -7.0 - absf(offset.y) * 3.0), 0.85, Color(0.58, 0.95, 0.48, 0.56), 2.2, source)
+			"mote":
+				_spawn_particle("mote", world_pos + offset * 0.3, Vector2(offset.x * 2.0, -8.0), 1.15, Color(1.0, 0.82, 0.44, 0.48), 1.7, source)
+			"spark":
+				_spawn_particle("spark", world_pos, Vector2(cos(a) * 34.0, sin(a) * 24.0 - 12.0), 0.28, tint, 2.2, source)
+			"flow":
+				_spawn_particle("flow", world_pos + offset * 0.4, Vector2(13.0, -3.0), 0.75, Color(0.52, 0.72, 1.0, 0.28), 5.0, source)
+
+func spawn_impact(world_pos: Vector2, amount: int = 8, tint: Color = Color(1.0, 0.62, 0.2, 0.82)) -> void:
+	_spawn_profile("spark", world_pos, "impact:%d:%d:%d" % [int(world_pos.x * 2.0), int(world_pos.y * 2.0), _particle_serial], mini(amount, PARTICLES_PER_IMPACT), tint)
+
+func _zone_profile(z: Dictionary) -> String:
+	if String(z.get("owner", "")) == "hero":
+		var payload: Dictionary = z.get("p", {})
+		if String(payload.get("dtype", "")) == "fogo":
+			return "spark"
+		if String(payload.get("id", "")) == "colar_dos_tentaculos":
+			return "tentacle"
+	match String(z.get("kind", "")):
+		"puddle", "bubble": return "bubble"
+		"rule_ritual", "sanctuary": return "mote"
+	return ""
+
+func _emit_zone_particles(dt: float) -> void:
+	_rich_particle_emitters = [0, 0, 0, 0]
+	var next_state: Dictionary = {}
+	for z in battle.zones:
+		var profile := _zone_profile(z)
+		if profile.is_empty():
+			continue
+		var source := _zone_key(z)
+		var state: Dictionary = _emitter_state.get(source, {"cooldown": 0.0, "started": false})
+		var cooldown: float = float(state.get("cooldown", 0.0)) - dt
+		var started := bool(state.get("started", false))
+		if not started and profile == "tentacle" and _allow_rich_particle_emitter(z.pos):
+			_spawn_profile("mote", z.pos, source, 2)
+			started = true
+		elif profile != "tentacle" and cooldown <= 0.0 and _allow_rich_particle_emitter(z.pos):
+			var count := 1
+			if profile == "spark":
+				count = 2
+			_spawn_profile(profile, z.pos, source, count)
+			cooldown = 0.23 if profile == "spark" else (0.32 if profile == "mote" else 0.48)
+		next_state[source] = {"cooldown": cooldown, "started": started}
+	if battle.stage_id == "pilares" and battle._stage_has_rule("current"):
+		var flow_source := "pilares:current"
+		var flow_state: Dictionary = _emitter_state.get(flow_source, {"cooldown": 0.0})
+		var flow_cooldown: float = float(flow_state.get("cooldown", 0.0)) - dt
+		if flow_cooldown <= 0.0 and _allow_rich_particle_emitter(battle.hero.pos):
+			_spawn_profile("flow", battle.hero.pos, flow_source)
+			flow_cooldown = 0.16
+		next_state[flow_source] = {"cooldown": flow_cooldown}
+	_emitter_state = next_state
+
 func _draw() -> void:
 	if battle == null:
 		return
@@ -62,6 +185,28 @@ func _draw_zones() -> void:
 			_draw_bubble(z)
 		else:
 			_draw_telegraph(z)
+	_draw_particles()
+
+func _draw_particles() -> void:
+	for particle in _particles:
+		var total: float = maxf(0.01, float(particle.total))
+		var fade: float = clampf(float(particle.life) / total, 0.0, 1.0)
+		var col: Color = particle.color
+		col.a *= fade
+		var pos: Vector2 = particle.pos
+		var size: float = float(particle.size) * (0.55 + fade * 0.45)
+		match String(particle.kind):
+			"bubble":
+				draw_circle(pos, size, col)
+				draw_arc(pos, size, -PI * 0.75, PI * 0.1, 10, Color(0.9, 1.0, 0.78, col.a), 1.0)
+			"spark":
+				var vel: Vector2 = particle.vel
+				draw_line(pos, pos - vel.normalized() * size * 3.0, col, 1.5)
+			"flow":
+				var flow_vel: Vector2 = particle.vel
+				draw_line(pos, pos - flow_vel.normalized() * size * 3.0, col, 1.2)
+			_:
+				draw_circle(pos, size, col)
 
 func _draw_puddle(z: Dictionary) -> void:
 	var seed: float = float(z.pos.x) * 1.73 + float(z.pos.y) * 2.41
@@ -271,9 +416,11 @@ func _draw_over() -> void:
 	for pr in battle.projectiles:
 		var p := Iso.to_screen(pr.pos) + Vector2(0, -16)
 		if pr.owner == "hero":
-			var col := _dcol(String(pr.p.get("dtype", "fisico")), 1.0)
+			var theme: Dictionary = pr.get("visual_theme", DivineVisuals.resolve(battle.hero.id, battle.visual_god, battle.visual_boon_selected))
+			var col: Color = theme.primary
+			var trail: Color = theme.aura_accent
 			draw_circle(p, 5.0, col)
-			draw_line(p, p - Iso.to_screen(pr.dir).normalized() * 14.0, Color(col, 0.5), 3.0)
+			draw_line(p, p - Iso.to_screen(pr.dir).normalized() * 14.0, Color(trail, 0.5), 3.0)
 		else:
 			draw_circle(p, 5.0, Color(1.0, 0.25, 0.25))
 			draw_circle(p, 2.5, Color(1.0, 0.8, 0.6))
