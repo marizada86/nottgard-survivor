@@ -3,7 +3,7 @@
     "project":  "Nottgard Survivors",
     "generated_at":  "2026-09-24",
     "specification":  "SPEC-015-producao-total-de-assets-visuais; SPEC-022-props-de-dagruve-braseiros; SPEC-023-props-de-dagruve-caixotes; SPEC-024-props-de-dagruve-velas; SPEC-025-props-de-dagruve-livros; SPEC-026-props-de-dagruve-barris; SPEC-027-props-de-dagruve-redes; SPEC-028-props-de-dagruve-ossos; SPEC-029-props-de-dagruve-estrutura-de-doca; SPEC-030-props-de-dagruve-carga",
-    "expected_png_files":  266,
+    "expected_png_files":  269,
     "expected_imagegen_calls":  258,
     "entries":  [
                     {
@@ -4998,6 +4998,42 @@
                         "qa_notes":  [
                                          "selected pilot candidate; normalize with nearest-neighbor before integration",
                                          "processed 640x360; fit=Cover; alpha=False"
+                                     ]
+                    },
+                    {
+                        "asset_id":  "selune_luar",
+                        "family":  "icons/boons",
+                        "generation_mode":  "imagegen",
+                        "final_path":  "assets/icons/boons/selune_luar.png",
+                        "candidate_path":  ".atena/generated/art-candidates/icons/boons/selune_luar_v01.png",
+                        "prompt_id":  "SPEC-058",
+                        "dimensions":  "128x128",
+                        "alpha":  true,
+                        "references":  [],
+                        "status":  "integrated",
+                        "selected_version":  "v01",
+                        "sha256":  "ace8e78cac1ab546217318a734840a774593aa7ff0236f1bc601da1d12146d50",
+                        "qa_notes":  [
+                                         "built-in ImageGen; normalized 1280x1280 to 128x128; alpha=True",
+                                         "visual approval recorded 2026-09-27"
+                                     ]
+                    },
+                    {
+                        "asset_id":  "selune_guia",
+                        "family":  "icons/boons",
+                        "generation_mode":  "imagegen",
+                        "final_path":  "assets/icons/boons/selune_guia.png",
+                        "candidate_path":  ".atena/generated/art-candidates/icons/boons/selune_guia_v01.png",
+                        "prompt_id":  "SPEC-058",
+                        "dimensions":  "128x128",
+                        "alpha":  true,
+                        "references":  [],
+                        "status":  "integrated",
+                        "selected_version":  "v01",
+                        "sha256":  "514658fbd2a62df6b5289e991b04ec9dc3cac3a2476980f6a2a07c906d6121af",
+                        "qa_notes":  [
+                                         "built-in ImageGen; normalized 1280x1280 to 128x128; alpha=True",
+                                         "visual approval recorded 2026-09-27"
                                      ]
                     }
                 ],

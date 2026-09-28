@@ -34,6 +34,9 @@ func run() -> Array:
 	qa_f4.physical_keycode = KEY_F4
 	if not PlaytestScript.is_qa_shortcut(qa_f4):
 		failures.append("F4 nao abriu o atalho QA")
+	var rules := PlaytestScript.game_rules_text()
+	if rules.find("Seu nome") >= 0 or rules.find("[b]Objetivo[/b]") < 0 or rules.find("[b]Progresso[/b]") < 0:
+		failures.append("ajuda de regras deveria explicar o jogo sem pedir nome")
 	return failures
 
 func _assert_panel_size(failures: Array, viewport_size: Vector2, expected: Vector2) -> void:

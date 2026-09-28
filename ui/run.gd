@@ -42,6 +42,7 @@ func _ready() -> void:
 	hud.quit_pressed.connect(_abandon)
 	hud.again_pressed.connect(func(): Game.start_run(Game.run_hero, Game.run_stage))
 	hud.menu_pressed.connect(Game.goto_menu)
+	hud.help_pressed.connect(func(): Playtest.open_game_rules())
 	hud.aim_pressed.connect(_toggle_aim)
 	hud.revive_pressed.connect(_accept_revive)
 	hud.decline_revive_pressed.connect(_decline_revive)

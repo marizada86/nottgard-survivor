@@ -25,6 +25,20 @@ offset_top = 10.0
 offset_right = 14.0
 offset_bottom = 10.0
 
+[node name="HelpBtn" type="Button" parent="." unique_id=917820266]
+unique_name_in_owner = true
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -58.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = 58.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 24
+tooltip_text = "Como jogar"
+text = "?"
+
 [node name="NameLabel" type="Label" parent="StatBox" unique_id=13073774]
 unique_name_in_owner = true
 layout_mode = 2
@@ -225,6 +239,11 @@ text = "Continuar (Esc)"
 [node name="AimBtn" type="Button" parent="PausePanel/VBox" unique_id=1296607945]
 unique_name_in_owner = true
 layout_mode = 2
+
+[node name="PauseHelpBtn" type="Button" parent="PausePanel/VBox" unique_id=143577718]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Como jogar (?)"
 
 [node name="VolRow" type="HBoxContainer" parent="PausePanel/VBox" unique_id=1943235158]
 layout_mode = 2

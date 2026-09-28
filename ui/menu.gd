@@ -70,6 +70,9 @@ func _ready() -> void:
 	guide_btn.pressed.connect(func(): Playtest.open_guide(false))
 	reset_btn.pressed.connect(_on_reset)
 	_refresh_all()
+	var notice := Game.consume_save_notice()
+	if notice != "":
+		Playtest.toast(notice)
 
 func _refresh_all() -> void:
 	var p: Profile = Game.profile

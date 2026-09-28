@@ -2,9 +2,13 @@ extends Node
 ## Autoload "Game": perfil, save/load, parâmetros da run e log para o kit de playtest.
 
 const SAVE_PATH := "user://profile.json"
+const SAVE_BACKUP_SUFFIX := ".bak"
+const SAVE_TEMP_SUFFIX := ".tmp"
+const SAVE_CORRUPT_SUFFIX := ".corrupt"
 
 var profile: Profile
 var persisted := false
+var save_notice := ""
 var _save_path := SAVE_PATH
 var qa_sandbox := false
 var qa_session_id := ""
@@ -23,6 +27,8 @@ func _ready() -> void:
 	ensure_input_actions()
 	load_profile()
 	apply_settings()
+	if save_notice != "":
+		logline(save_notice)
 	logline("Jogo iniciado v%s" % Version.VERSION)
 
 func ensure_input_actions() -> void:
@@ -39,24 +45,112 @@ func ensure_input_actions() -> void:
 	joy.button_index = JOY_BUTTON_RIGHT_SHOULDER
 	InputMap.action_add_event("hero_active", joy)
 
+static func profile_backup_path(path: String) -> String:
+	return path + SAVE_BACKUP_SUFFIX
+
+static func profile_temp_path(path: String) -> String:
+	return path + SAVE_TEMP_SUFFIX
+
+## Resultado: {valid, exists, data, text}. Um perfil só é válido se for objeto JSON.
+static func read_profile_file(path: String) -> Dictionary:
+	var result := {"valid": false, "exists": FileAccess.file_exists(path), "data": {}, "text": ""}
+	if not bool(result.exists):
+		return result
+	var file := FileAccess.open(path, FileAccess.READ)
+	if file == null:
+		return result
+	var text := file.get_as_text()
+	file.close()
+	var json := JSON.new()
+	if json.parse(text) != OK:
+		return result
+	var parsed: Variant = json.data
+	if parsed is Dictionary:
+		result.valid = true
+		result.data = parsed
+		result.text = text
+	return result
+
+static func _write_text(path: String, text: String) -> bool:
+	var file := FileAccess.open(path, FileAccess.WRITE)
+	if file == null:
+		return false
+	file.store_string(text)
+	file.flush()
+	var ok := file.get_error() == OK
+	file.close()
+	return ok
+
+static func _replace_with_temp(temp_path: String, target_path: String) -> bool:
+	return DirAccess.rename_absolute(ProjectSettings.globalize_path(temp_path), ProjectSettings.globalize_path(target_path)) == OK
+
+static func _write_valid_file_atomically(path: String, text: String) -> bool:
+	var temp_path := profile_temp_path(path)
+	if not _write_text(temp_path, text):
+		return false
+	if not bool(read_profile_file(temp_path).valid):
+		return false
+	return _replace_with_temp(temp_path, path)
+
+static func _corrupt_archive_path(path: String) -> String:
+	var candidate := path + SAVE_CORRUPT_SUFFIX
+	var suffix := 1
+	while FileAccess.file_exists(candidate):
+		candidate = "%s%s-%d" % [path, SAVE_CORRUPT_SUFFIX, suffix]
+		suffix += 1
+	return candidate
+
+static func _preserve_corrupt_profile(path: String) -> bool:
+	if not FileAccess.file_exists(path):
+		return true
+	return DirAccess.rename_absolute(ProjectSettings.globalize_path(path), ProjectSettings.globalize_path(_corrupt_archive_path(path))) == OK
+
 func load_profile() -> void:
+	save_notice = ""
+	var primary := read_profile_file(_save_path)
+	var backup := read_profile_file(profile_backup_path(_save_path))
 	var d := {}
-	if FileAccess.file_exists(_save_path):
-		var f := FileAccess.open(_save_path, FileAccess.READ)
-		if f != null:
-			var parsed: Variant = JSON.parse_string(f.get_as_text())
-			if parsed is Dictionary:
-				d = parsed
+	if bool(primary.valid):
+		d = primary.data
+	elif bool(backup.valid):
+		d = backup.data
+		save_notice = "O save principal apresentou problema; o progresso foi recuperado do backup local."
+	elif bool(primary.exists) or bool(backup.exists):
+		save_notice = "Não foi possível ler o save local. Os arquivos foram preservados para diagnóstico."
 	profile = Profile.new(d)
-	persisted = FileAccess.file_exists(_save_path)
+	persisted = bool(primary.valid) or bool(backup.valid)
 
 func save() -> void:
-	var f := FileAccess.open(_save_path, FileAccess.WRITE)
-	if f == null:
+	if profile == null:
 		persisted = false
+		save_notice = "Não foi possível salvar: perfil indisponível."
 		return
-	f.store_string(JSON.stringify(profile.data, "\t"))
+	var text := JSON.stringify(profile.data, "\t")
+	var temp_path := profile_temp_path(_save_path)
+	if not _write_text(temp_path, text) or not bool(read_profile_file(temp_path).valid):
+		persisted = false
+		save_notice = "Não foi possível gravar o save. O progresso anterior foi preservado."
+		return
+	var primary := read_profile_file(_save_path)
+	if bool(primary.valid):
+		if not _write_valid_file_atomically(profile_backup_path(_save_path), String(primary.text)):
+			persisted = false
+			save_notice = "Não foi possível preparar o backup do save; o progresso anterior foi preservado."
+			return
+	elif bool(primary.exists) and not _preserve_corrupt_profile(_save_path):
+		persisted = false
+		save_notice = "O save com problema não pôde ser preservado; nenhuma alteração foi gravada."
+		return
+	if not _replace_with_temp(temp_path, _save_path) or not bool(read_profile_file(_save_path).valid):
+		persisted = false
+		save_notice = "Não foi possível finalizar o save. O backup local foi preservado."
+		return
 	persisted = true
+
+func consume_save_notice() -> String:
+	var notice := save_notice
+	save_notice = ""
+	return notice
 
 func real_save_signature() -> Dictionary:
 	if not FileAccess.file_exists(SAVE_PATH):

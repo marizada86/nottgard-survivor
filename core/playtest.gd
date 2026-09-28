@@ -34,6 +34,7 @@ const QA_RUN_DESTINATIONS := [
 var items: Array = []          # {kind, time, ctx, text, png}
 var _note_open := false
 var _guide_open := false
+var _guide_mode: StringName = &"playtest"
 var _pending_png := PackedByteArray()
 var _pending_ctx := {}
 var _paused_before := false
@@ -46,6 +47,9 @@ var _summary: Label
 var _guide_modal: Control
 var _guide: PanelContainer
 var _guide_content: VBoxContainer
+var _guide_title: Label
+var _guide_body: RichTextLabel
+var _guide_name_label: Label
 var _name_edit: LineEdit
 var _guide_start: Button
 var _guide_error: Label
@@ -161,21 +165,21 @@ func _build_ui() -> void:
 	g.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	scroll.add_child(g)
 	_guide_content = g
-	var title := Label.new()
-	title.text = "Obrigado por ajudar a construir %s!" % Version.GAME_NAME
-	title.add_theme_font_size_override("font_size", 26)
-	title.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	g.add_child(title)
-	var body := RichTextLabel.new()
-	body.bbcode_enabled = true
-	body.fit_content = true
-	body.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	body.text = _guide_text()
-	g.add_child(body)
-	var nl := Label.new()
-	nl.text = "Seu nome (vai no .zip da evidência): "
-	nl.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	g.add_child(nl)
+	_guide_title = Label.new()
+	_guide_title.text = "Obrigado por ajudar a construir %s!" % Version.GAME_NAME
+	_guide_title.add_theme_font_size_override("font_size", 26)
+	_guide_title.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	g.add_child(_guide_title)
+	_guide_body = RichTextLabel.new()
+	_guide_body.bbcode_enabled = true
+	_guide_body.fit_content = true
+	_guide_body.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	_guide_body.text = _guide_text()
+	g.add_child(_guide_body)
+	_guide_name_label = Label.new()
+	_guide_name_label.text = "Seu nome (vai no .zip da evidência): "
+	_guide_name_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	g.add_child(_guide_name_label)
 	_name_edit = LineEdit.new()
 	_name_edit.max_length = 24
 	_name_edit.size_flags_horizontal = Control.SIZE_EXPAND_FILL
@@ -440,6 +444,13 @@ func _guide_text() -> String:
 		+ (" · F4 Navegador QA" if Version.qa_enabled() else "") + "\n" \
 		+ "[color=#aaaaaa]Os prints mostram a tela do jogo. Notas e log têm o nome de usuário do Windows removido.[/color]"
 
+static func game_rules_text() -> String:
+	return "[b]Objetivo[/b]\nSobreviva às ondas, evolua sua build e derrote o chefe da fase. Depois, escolha entre extrair a recompensa atual ou entrar no portal para continuar com mais risco e mais recompensa.\n\n" \
+		+ "[b]Controles[/b]\nWASD ou setas: mover · Tab: alternar mira automática/mouse · Q ou botão direito: habilidade ativa · E: interagir com altar, ritual ou portal · X: extrair depois do chefe · Esc: pausa.\n\n" \
+		+ "[b]Combate e evolução[/b]\nSuas armas atacam automaticamente. Ao subir de nível, escolha uma melhoria com 1–5; R rerrola a oferta quando houver rerrolagens. Cada personagem tem uma habilidade ativa própria.\n\n" \
+		+ "[b]Decisões da run[/b]\nAltares oferecem uma bênção com uma maldição. Cada andar tem uma regra ambiental: observe os avisos e adapte seu movimento. Chefes mudam de fase quando a vida baixa.\n\n" \
+		+ "[b]Progresso[/b]\nMoedas, desbloqueios e descobertas são garantidos ao encerrar a tentativa. O portal preserva sua build e aumenta o multiplicador de recompensa; extrair encerra a run com segurança."
+
 func toast(text: String) -> void:
 	_toast.text = text
 	_toast.modulate.a = 1.0
@@ -492,7 +503,7 @@ func _input(ev: InputEvent) -> void:
 		if _note_open:
 			close_note()
 			get_viewport().set_input_as_handled()
-		elif _guide_open and Game.profile.data.name != "":
+		elif _guide_open and (_guide_mode == &"rules" or Game.profile.data.name != ""):
 			close_guide()
 			get_viewport().set_input_as_handled()
 
@@ -620,17 +631,42 @@ func _on_clear() -> void:
 	toast("Pacote limpo")
 
 func open_guide(first: bool) -> void:
+	_guide_mode = &"playtest"
 	_guide_open = true
 	_paused_before = get_tree().paused
 	get_tree().paused = true
 	_guide_error.visible = false
 	_guide_modal.visible = true
 	_layout_guide()
+	_guide_title.text = "Obrigado por ajudar a construir %s!" % Version.GAME_NAME
+	_guide_body.text = _guide_text()
+	_guide_name_label.visible = true
+	_name_edit.visible = true
 	_name_edit.text = Game.profile.data.name
 	_guide_start.text = "Começar" if first else "Fechar"
 	_name_edit.grab_focus()
 
+func open_game_rules() -> void:
+	if _guide_open:
+		return
+	_guide_mode = &"rules"
+	_guide_open = true
+	_paused_before = get_tree().paused
+	get_tree().paused = true
+	_guide_error.visible = false
+	_guide_modal.visible = true
+	_layout_guide()
+	_guide_title.text = "Como jogar"
+	_guide_body.text = game_rules_text()
+	_guide_name_label.visible = false
+	_name_edit.visible = false
+	_guide_start.text = "Fechar"
+	_guide_start.grab_focus()
+
 func close_guide() -> void:
+	if _guide_mode == &"rules":
+		_close_guide_modal()
+		return
 	var nm := _name_edit.text.strip_edges()
 	if nm == "":
 		if Game.profile.data.name == "":
@@ -642,9 +678,13 @@ func close_guide() -> void:
 	Game.profile.data.name = nm
 	Game.profile.data.welcome_seen = true
 	Game.save()
+	_close_guide_modal()
+
+func _close_guide_modal() -> void:
 	_guide_open = false
 	_guide_modal.visible = false
 	get_tree().paused = _paused_before
+	_guide_mode = &"playtest"
 	call_deferred("_restore_menu_focus")
 
 func _restore_menu_focus() -> void:

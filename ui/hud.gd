@@ -8,6 +8,7 @@ signal quit_pressed
 signal again_pressed
 signal menu_pressed
 signal aim_pressed
+signal help_pressed
 signal revive_pressed
 signal decline_revive_pressed
 
@@ -50,6 +51,8 @@ func _ready() -> void:
 	%QuitBtn.pressed.connect(func(): quit_pressed.emit())
 	%AgainBtn.pressed.connect(func(): again_pressed.emit())
 	%MenuBtn.pressed.connect(func(): menu_pressed.emit())
+	%HelpBtn.pressed.connect(func(): help_pressed.emit())
+	%PauseHelpBtn.pressed.connect(func(): help_pressed.emit())
 	%ReviveBtn.pressed.connect(func(): revive_pressed.emit())
 	%DeclineReviveBtn.pressed.connect(func(): decline_revive_pressed.emit())
 	aim_btn.pressed.connect(func(): aim_pressed.emit())
