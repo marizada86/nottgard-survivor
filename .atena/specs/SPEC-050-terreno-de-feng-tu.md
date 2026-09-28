@@ -1,6 +1,17 @@
 # SPEC-050 — Terreno de Feng-tu
 
-Status: **proposta — aguardando aprovação do plano** (2026-09-27).
+Status: **implementada e verificada** (2026-09-27).
+
+## Resultado e reconciliação (2026-09-27)
+
+O macroterreno determinístico de laje, cinza ritual, fissura e fundação está
+ativo com seed 300. O dono aprovou a candidata e o atlas derivado foi
+versionado como `assets/tiles/feng_tu_ground_atlas_v1.png`, integrado somente
+aos materiais terrestres; a fundação continua procedural. A suíte
+(`testes: 0 falha(s)`), a fumaça (`smoke: ok`) e a captura final 1280×720
+passaram com o atlas ativo. A evidência está em
+`EVID-080-spec-050-feng-tu-2026-09-27.md`; a aprovação canônica está no
+`ASSET-APPROVAL-REGISTER-013-terreno-de-feng-tu-2026-09-27.md`.
 
 ## Intenção
 

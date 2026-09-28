@@ -2,7 +2,7 @@
 id: "PLAN-019"
 type: "plano-de-voo"
 title: "Feng-tu — pátio ritual de Tou Um"
-status: "proposto; aguardando aprovação do dono"
+status: "executado e reconciliado"
 created: "2026-09-27"
 relations: ["[[SPEC-050-terreno-de-feng-tu]]"]
 ---

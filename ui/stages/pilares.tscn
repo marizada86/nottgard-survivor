@@ -12,6 +12,12 @@ z_index = -100
 script = ExtResource("1_yey4a")
 color_a = Color(0.11764706, 0.10980392, 0.16470589, 1)
 color_b = Color(0.14901961, 0.13333334, 0.20392157, 1)
+terrain_layout_id = "pilares"
+visual_seed = 800
+use_modular_atlas = true
+atlas_columns = 2
+atlas_variants = 4
+terrain_texture_path = "res://assets/tiles/pilares_ground_atlas_v1.png"
 
 [node name="Sorted" type="Node2D" parent="." unique_id=1354938654]
 y_sort_enabled = true

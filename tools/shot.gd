@@ -27,6 +27,8 @@ func _ready() -> void:
 			for i in 5:
 				run.battle.give_item(Items.roll(run.battle.rng, 4, 3.0))
 			run.battle.give_item(Items.unique(Data.table("items").uniques[0]))
+		if "vfx" in flags:
+			_seed_vfx_areas(run)
 	else:
 		var m: Node = load("res://ui/menu.tscn").instantiate()
 		add_child(m)
@@ -36,3 +38,15 @@ func _ready() -> void:
 	await get_tree().create_timer(secs).timeout
 	get_viewport().get_texture().get_image().save_png(out)
 	get_tree().quit()
+
+func _seed_vfx_areas(run: Node) -> void:
+	# Cena de evidência determinística: não é acessível pela partida normal.
+	run.battle.time = 60.0 # Pilares: a rotação entra em current.
+	var c: Vector2 = run.battle.hero.pos
+	run.battle.zones.append({"owner": "enemy", "kind": "puddle", "pos": c + Vector2(-4.5, -2.1), "radius": 1.55, "life": 9.0, "acc": 0.0})
+	run.battle.zones.append({"owner": "stage", "kind": "rule_ritual", "pos": c + Vector2(-1.1, -2.2), "radius": 1.7, "delay": 4.0, "total": 7.0, "interrupt": 1.5, "progress": 0.72, "life": 99.0})
+	run.battle.zones.append({"owner": "stage", "kind": "telegraph", "pos": c + Vector2(2.6, -2.0), "radius": 1.5, "delay": 0.55, "total": 1.3, "life": 99.0, "dice": "2d6", "bonus": 4})
+	run.battle.zones.append({"owner": "stage", "kind": "bubble", "pos": c + Vector2(-4.0, 2.7), "radius": 2.0, "delay": 0.8, "total": 2.2, "life": 99.0, "dice": "2d6", "bonus": 3})
+	run.battle.zones.append({"owner": "stage", "kind": "sanctuary", "pos": c + Vector2(0.2, 3.0), "radius": 2.2, "life": 7.0, "acc": 0.0, "fake": true})
+	run.battle.zones.append({"owner": "hero", "kind": "zone", "pos": c + Vector2(4.0, 2.6), "radius": 1.6, "life": 3.0, "tick": 0.5, "acc": 0.0, "p": {"id": "cera_fervente", "dtype": "fogo"}})
+	run.battle.zones.append({"owner": "hero", "kind": "zone", "pos": c, "radius": 2.4, "life": 4.0, "tick": 0.6, "acc": 0.0, "p": {"id": "colar_dos_tentaculos", "dtype": "magico"}})

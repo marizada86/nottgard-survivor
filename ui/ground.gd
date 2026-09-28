@@ -156,7 +156,7 @@ func _draw_layout_cell(center: Vector2, points: PackedVector2Array, x: int, y: i
 	var material := TerrainLayout.material_at(terrain_layout_id, Vector2(x + 0.5, y + 0.5))
 	var base := TerrainLayout.color_for(material)
 	var variant := deterministic_variant(terrain_layout_id, x, y, visual_seed, 8)
-	var accepts_ground_texture := material == TerrainLayout.MATERIAL_FUNGAL_SOIL or material == TerrainLayout.MATERIAL_MYCELIUM or material == TerrainLayout.MATERIAL_OOZE_CRUST or material == TerrainLayout.MATERIAL_MOLOR_ROCK or material == TerrainLayout.MATERIAL_MOLOR_DETRITUS or material == TerrainLayout.MATERIAL_MOLOR_OOZE
+	var accepts_ground_texture := material == TerrainLayout.MATERIAL_FUNGAL_SOIL or material == TerrainLayout.MATERIAL_MYCELIUM or material == TerrainLayout.MATERIAL_OOZE_CRUST or material == TerrainLayout.MATERIAL_MOLOR_ROCK or material == TerrainLayout.MATERIAL_MOLOR_DETRITUS or material == TerrainLayout.MATERIAL_MOLOR_OOZE or material == TerrainLayout.MATERIAL_FENG_TU_STONE or material == TerrainLayout.MATERIAL_FENG_TU_ASH or material == TerrainLayout.MATERIAL_FENG_TU_CRACK or material == TerrainLayout.MATERIAL_SHENDILAVRI_MARBLE or material == TerrainLayout.MATERIAL_SHENDILAVRI_VEIN or material == TerrainLayout.MATERIAL_SHENDILAVRI_DUST or material == TerrainLayout.MATERIAL_GORANTHIS_TERRACE or material == TerrainLayout.MATERIAL_GORANTHIS_PEARL or material == TerrainLayout.MATERIAL_GORANTHIS_MOSS or material == TerrainLayout.MATERIAL_PILLARS_OBSIDIAN or material == TerrainLayout.MATERIAL_PILLARS_BASALT or material == TerrainLayout.MATERIAL_PILLARS_DUST
 	if accepts_ground_texture and texture != null:
 		var atlas_variant := deterministic_variant(terrain_layout_id, x, y, visual_seed, available_variants)
 		var tint := Color("a99bab")
@@ -170,6 +170,30 @@ func _draw_layout_cell(center: Vector2, points: PackedVector2Array, x: int, y: i
 			tint = Color("9a996d")
 		elif material == TerrainLayout.MATERIAL_MOLOR_OOZE:
 			tint = Color("829a4f")
+		elif material == TerrainLayout.MATERIAL_FENG_TU_STONE:
+			tint = Color("85909a")
+		elif material == TerrainLayout.MATERIAL_FENG_TU_ASH:
+			tint = Color("9b9290")
+		elif material == TerrainLayout.MATERIAL_FENG_TU_CRACK:
+			tint = Color("677080")
+		elif material == TerrainLayout.MATERIAL_SHENDILAVRI_MARBLE:
+			tint = Color("a380a8")
+		elif material == TerrainLayout.MATERIAL_SHENDILAVRI_VEIN:
+			tint = Color("b177a4")
+		elif material == TerrainLayout.MATERIAL_SHENDILAVRI_DUST:
+			tint = Color("c59ab9")
+		elif material == TerrainLayout.MATERIAL_GORANTHIS_TERRACE:
+			tint = Color("c9bd8d")
+		elif material == TerrainLayout.MATERIAL_GORANTHIS_PEARL:
+			tint = Color("e0d7ae")
+		elif material == TerrainLayout.MATERIAL_GORANTHIS_MOSS:
+			tint = Color("a9ae72")
+		elif material == TerrainLayout.MATERIAL_PILLARS_OBSIDIAN:
+			tint = Color("766a98")
+		elif material == TerrainLayout.MATERIAL_PILLARS_BASALT:
+			tint = Color("9285ae")
+		elif material == TerrainLayout.MATERIAL_PILLARS_DUST:
+			tint = Color("b0a0c4")
 		draw_polygon(points, PackedColorArray([tint, tint, tint, tint]), _atlas_uvs(texture, atlas_variant), texture)
 	else:
 		draw_colored_polygon(points, base)
@@ -196,6 +220,42 @@ func _draw_layout_cell(center: Vector2, points: PackedVector2Array, x: int, y: i
 		draw_circle(center + Vector2(variant - 4, 1), 1.3, Color("6e7650", 0.45))
 	elif material == TerrainLayout.MATERIAL_MOLOR_WALL and variant % 2 == 0:
 		draw_line(center + Vector2(-9, 2), center + Vector2(8, -3), Color("31462f", 0.75), 1.4, true)
+	elif material == TerrainLayout.MATERIAL_FENG_TU_CRACK and variant % 2 == 0:
+		draw_line(center + Vector2(-8, 2), center + Vector2(6, -3), Color("151a24", 0.64), 1.0, true)
+	elif material == TerrainLayout.MATERIAL_FENG_TU_ASH and variant % 3 == 0:
+		draw_circle(center + Vector2(variant - 4, 1), 1.3, Color("b59e8f", 0.30))
+	elif material == TerrainLayout.MATERIAL_FENG_TU_FOUNDATION and variant % 2 == 0:
+		draw_line(center + Vector2(-10, 2), center + Vector2(8, -3), Color("0d1119", 0.75), 1.3, true)
+	elif material == TerrainLayout.MATERIAL_SHENDILAVRI_STYX:
+		# Estige de Shendilavri: água escura e parada, composição visual sem regra.
+		if variant % 3 == 0:
+			draw_line(center + Vector2(-9, 1), center + Vector2(8, -2), Color("6d5b82", 0.42), 1.0, true)
+	elif material == TerrainLayout.MATERIAL_SHENDILAVRI_BANK and variant % 2 == 0:
+		draw_circle(center + Vector2(variant - 4, 1), 1.4, Color("aa728f", 0.34))
+	elif material == TerrainLayout.MATERIAL_SHENDILAVRI_VEIN and variant % 2 == 0:
+		draw_line(center + Vector2(-8, 2), center + Vector2(7, -3), Color("8f597f", 0.42), 1.0, true)
+	elif material == TerrainLayout.MATERIAL_SHENDILAVRI_DUST and variant % 3 == 0:
+		draw_circle(center + Vector2(variant - 4, 1), 1.4, Color("d0a6c4", 0.30))
+	elif material == TerrainLayout.MATERIAL_SHENDILAVRI_FOUNDATION and variant % 2 == 0:
+		draw_line(center + Vector2(-10, 2), center + Vector2(8, -3), Color("1a1222", 0.78), 1.3, true)
+	elif material == TerrainLayout.MATERIAL_GORANTHIS_STYXFALL:
+		# Queda do Estige em Goranthis: impossível e visual, sem regra de água.
+		if variant % 2 == 0:
+			draw_line(center + Vector2(-8, -5), center + Vector2(8, 5), Color("d6e5d1", 0.58), 1.4, true)
+	elif material == TerrainLayout.MATERIAL_GORANTHIS_BANK and variant % 2 == 0:
+		draw_circle(center + Vector2(variant - 4, 1), 1.4, Color("d9cc9a", 0.36))
+	elif material == TerrainLayout.MATERIAL_GORANTHIS_PEARL and variant % 2 == 0:
+		draw_line(center + Vector2(-8, 2), center + Vector2(7, -3), Color("eee2b8", 0.35), 1.0, true)
+	elif material == TerrainLayout.MATERIAL_GORANTHIS_MOSS and variant % 3 == 0:
+		draw_circle(center + Vector2(variant - 4, 1), 1.4, Color("c2c982", 0.36))
+	elif material == TerrainLayout.MATERIAL_GORANTHIS_FOUNDATION and variant % 2 == 0:
+		draw_line(center + Vector2(-10, 2), center + Vector2(8, -3), Color("4d4839", 0.75), 1.3, true)
+	elif material == TerrainLayout.MATERIAL_PILLARS_BASALT and variant % 2 == 0:
+		draw_line(center + Vector2(-8, 2), center + Vector2(7, -3), Color("514568", 0.52), 1.0, true)
+	elif material == TerrainLayout.MATERIAL_PILLARS_DUST and variant % 3 == 0:
+		draw_circle(center + Vector2(variant - 4, 1), 1.4, Color("c1b3d1", 0.30))
+	elif material == TerrainLayout.MATERIAL_PILLARS_FOUNDATION and variant % 2 == 0:
+		draw_line(center + Vector2(-10, 2), center + Vector2(8, -3), Color("0d0c18", 0.80), 1.3, true)
 	elif material == TerrainLayout.MATERIAL_BANK and variant % 2 == 0:
 		draw_line(center + Vector2(-10, 2), center + Vector2(8, -3), Color("8f6351"), 1.0, true)
 	elif material == TerrainLayout.MATERIAL_ASH and variant % 3 == 0:

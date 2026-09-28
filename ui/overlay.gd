@@ -4,6 +4,7 @@ extends Node2D
 @export_enum("under", "over") var mode := "over"
 var battle: Battle
 static var _texture_cache := {}
+var _large_fx_by_quadrant: Array[int] = [0, 0, 0, 0]
 
 func _process(_dt: float) -> void:
 	queue_redraw()
@@ -16,6 +17,26 @@ func _ellipse(c: Vector2, r: float, n: int = 28) -> PackedVector2Array:
 		pts.append(Iso.to_screen(c + Vector2(cos(a), sin(a)) * r))
 	return pts
 
+func _organic_ellipse(c: Vector2, r: float, seed: float, n: int = 22) -> PackedVector2Array:
+	var pts := PackedVector2Array()
+	for i in n:
+		var a := TAU * float(i) / float(n)
+		var wobble := 0.88 + 0.09 * sin(a * 3.0 + seed) + 0.035 * sin(a * 7.0 - seed * 0.7)
+		pts.append(Iso.to_screen(c + Vector2(cos(a), sin(a)) * r * wobble))
+	return pts
+
+func _phase() -> float:
+	return float(Time.get_ticks_msec()) * 0.001
+
+func _allow_large_fx(c: Vector2) -> bool:
+	var size := get_viewport_rect().size
+	var p := Iso.to_screen(c)
+	var quadrant := (1 if p.x >= size.x * 0.5 else 0) + (2 if p.y >= size.y * 0.5 else 0)
+	if _large_fx_by_quadrant[quadrant] >= 3:
+		return false
+	_large_fx_by_quadrant[quadrant] += 1
+	return true
+
 func _draw() -> void:
 	if battle == null:
 		return
@@ -25,30 +46,158 @@ func _draw() -> void:
 		_draw_over()
 
 func _draw_zones() -> void:
+	_large_fx_by_quadrant = [0, 0, 0, 0]
+	if battle.stage_id == "pilares" and battle._stage_has_rule("current"):
+		_draw_pillar_current()
 	for z in battle.zones:
 		if z.owner == "hero":
-			var col := _dcol(String(z.p.dtype), 0.28)
-			draw_colored_polygon(_ellipse(z.pos, z.radius), col)
-			draw_polyline(_ellipse_closed(z.pos, z.radius), Color(col, 0.7), 2.0)
+			_draw_hero_zone(z)
 		elif z.kind == "puddle":
-			draw_colored_polygon(_ellipse(z.pos, z.radius), Color(0.35, 0.6, 0.25, 0.32))
-			draw_polyline(_ellipse_closed(z.pos, z.radius), Color(0.5, 0.8, 0.3, 0.5), 1.5)
+			_draw_puddle(z)
 		elif z.kind == "rule_ritual":
-			draw_colored_polygon(_ellipse(z.pos, z.radius), Color(0.65, 0.12, 0.55, 0.24))
-			draw_polyline(_ellipse_closed(z.pos, z.radius), Color(1.0, 0.35, 0.75, 0.9), 3.0)
-			var progress: float = clampf(float(z.progress) / maxf(0.01, float(z.interrupt)), 0.0, 1.0)
-			draw_arc(Iso.to_screen(z.pos), 26.0, -PI * 0.5, -PI * 0.5 + TAU * progress, 24, Color(0.4, 1.0, 0.7), 4.0)
+			_draw_ritual(z)
 		elif z.kind == "sanctuary":
-			var col := Color(1.0, 0.9, 0.5, 0.24) if not bool(z.fake) else Color(0.85, 0.72, 0.48, 0.18)
-			draw_colored_polygon(_ellipse(z.pos, z.radius), col)
-			draw_polyline(_ellipse_closed(z.pos, z.radius), Color(col, 0.8), 2.0)
+			_draw_sanctuary(z)
 		elif z.kind == "bubble":
-			draw_colored_polygon(_ellipse(z.pos, z.radius), Color(0.3, 0.65, 0.9, 0.2))
-			draw_polyline(_ellipse_closed(z.pos, z.radius), Color(0.5, 0.85, 1.0, 0.9), 3.0)
+			_draw_bubble(z)
 		else:
-			var t: float = clampf(1.0 - z.delay / maxf(0.01, z.get("total", z.delay)), 0.0, 1.0)
-			draw_colored_polygon(_ellipse(z.pos, z.radius), Color(0.9, 0.15, 0.1, 0.16 + 0.2 * (1.0 - clampf(z.delay, 0.0, 1.5) / 1.5)))
-			draw_polyline(_ellipse_closed(z.pos, z.radius), Color(1.0, 0.3, 0.2, 0.9), 2.0)
+			_draw_telegraph(z)
+
+func _draw_puddle(z: Dictionary) -> void:
+	var seed: float = float(z.pos.x) * 1.73 + float(z.pos.y) * 2.41
+	var outline := _organic_ellipse(z.pos, z.radius, seed)
+	outline.append(outline[0])
+	draw_colored_polygon(outline, Color(0.12, 0.22, 0.11, 0.42))
+	draw_polyline(outline, Color(0.46, 0.78, 0.28, 0.64), 1.7)
+	if not _allow_large_fx(z.pos):
+		return
+	var pulse := 0.5 + 0.5 * sin(_phase() * 2.2 + seed)
+	var inner := _organic_ellipse(z.pos, z.radius * (0.9 + pulse * 0.05), seed + 0.8)
+	inner.append(inner[0])
+	draw_polyline(inner, Color(0.66, 0.92, 0.38, 0.18 + pulse * 0.18), 1.1)
+	for i in 3:
+		var a: float = seed + float(i) * TAU / 3.0
+		var p := Iso.to_screen(z.pos + Vector2(cos(a), sin(a)) * z.radius * (0.25 + float(i) * 0.14))
+		draw_circle(p + Vector2(0.0, -2.0), 1.4 + pulse * 0.7, Color(0.66, 0.9, 0.37, 0.34))
+
+func _draw_ritual(z: Dictionary) -> void:
+	var pulse := 0.5 + 0.5 * sin(_phase() * 2.5)
+	var edge := Color(1.0, 0.35, 0.75, 0.76 + pulse * 0.18)
+	draw_colored_polygon(_ellipse(z.pos, z.radius), Color(0.42, 0.06, 0.35, 0.3))
+	draw_polyline(_ellipse_closed(z.pos, z.radius), edge, 2.6)
+	var center := Iso.to_screen(z.pos)
+	for i in 4:
+		var a := PI * 0.25 + float(i) * PI * 0.5
+		var inner := Iso.to_screen(z.pos + Vector2(cos(a), sin(a)) * z.radius * 0.24)
+		var outer := Iso.to_screen(z.pos + Vector2(cos(a), sin(a)) * z.radius * 0.58)
+		draw_line(inner, outer, Color(0.86, 0.3, 0.72, 0.42), 1.4)
+	draw_circle(center, 3.0 + pulse, Color(0.92, 0.34, 0.78, 0.34))
+	var progress: float = clampf(float(z.progress) / maxf(0.01, float(z.interrupt)), 0.0, 1.0)
+	_draw_ellipse_arc(z.pos, z.radius * 0.73, -PI * 0.5, -PI * 0.5 + TAU * progress, Color(0.4, 1.0, 0.7, 0.96), 3.2)
+
+func _draw_sanctuary(z: Dictionary) -> void:
+	var pulse := 0.5 + 0.5 * sin(_phase() * 2.0)
+	var is_fake := bool(z.fake)
+	var base := Color(1.0, 0.86, 0.42, 0.22)
+	var edge := Color(1.0, 0.92, 0.58, 0.76)
+	if is_fake:
+		base = Color(0.9, 0.76, 0.48, 0.2)
+		edge = Color(0.96, 0.82, 0.52, 0.7)
+	draw_colored_polygon(_ellipse(z.pos, z.radius), base)
+	draw_polyline(_ellipse_closed(z.pos, z.radius * (0.96 + pulse * 0.025)), edge, 2.1)
+	if _allow_large_fx(z.pos):
+		_draw_ellipse_arc(z.pos, z.radius * 0.62, -PI * 0.5, -PI * 0.5 + TAU * (0.25 + pulse * 0.25), Color(1.0, 0.96, 0.66, 0.42), 1.8)
+	if is_fake:
+		var c := Iso.to_screen(z.pos)
+		draw_line(c + Vector2(-7.0, 2.0), c + Vector2(2.0, -4.0), Color(0.54, 0.2, 0.6, 0.35), 1.2)
+		draw_line(c + Vector2(2.0, -4.0), c + Vector2(8.0, 4.0), Color(0.54, 0.2, 0.6, 0.35), 1.2)
+
+func _draw_bubble(z: Dictionary) -> void:
+	var total := maxf(0.01, float(z.get("total", z.delay)))
+	var charge := clampf(1.0 - float(z.delay) / total, 0.0, 1.0)
+	var pulse := 0.5 + 0.5 * sin(_phase() * 7.0)
+	draw_colored_polygon(_ellipse(z.pos, z.radius), Color(0.12, 0.46, 0.38, 0.19 + charge * 0.1))
+	draw_polyline(_ellipse_closed(z.pos, z.radius), Color(0.38, 0.94, 0.72, 0.58 + charge * 0.28), 2.4)
+	if not _allow_large_fx(z.pos):
+		return
+	var center := Iso.to_screen(z.pos) + Vector2(0.0, -5.0 - charge * 8.0)
+	draw_circle(center, 4.0 + charge * 7.0, Color(0.37, 0.84, 0.72, 0.16 + charge * 0.18))
+	draw_arc(center, 4.0 + charge * 7.0, -PI * 0.75, PI * 0.15, 16, Color(0.82, 1.0, 0.88, 0.58), 1.5)
+	_draw_ellipse_arc(z.pos, z.radius * (0.8 + pulse * 0.12), 0.0, TAU, Color(0.53, 0.95, 0.78, 0.12 + pulse * 0.15), 1.1)
+
+func _draw_telegraph(z: Dictionary) -> void:
+	var total := maxf(0.01, float(z.get("total", z.delay)))
+	var t := clampf(1.0 - float(z.delay) / total, 0.0, 1.0)
+	var beat := 0.5 + 0.5 * sin(_phase() * (5.0 + t * 9.0))
+	draw_colored_polygon(_ellipse(z.pos, z.radius), Color(0.92, 0.12, 0.08, 0.1 + t * 0.18))
+	draw_polyline(_ellipse_closed(z.pos, z.radius), Color(1.0, 0.3, 0.16, 0.56 + t * 0.34), 1.8 + t * 1.6)
+	if not _allow_large_fx(z.pos):
+		return
+	_draw_ellipse_arc(z.pos, z.radius * (1.03 + beat * 0.045), -PI * 0.2, PI * 0.38, Color(1.0, 0.72, 0.36, 0.28 + beat * 0.45), 1.4 + t)
+	for i in 3:
+		var a := -PI * 0.5 + float(i) * TAU / 3.0
+		var a0 := Iso.to_screen(z.pos + Vector2(cos(a), sin(a)) * z.radius * 0.76)
+		var a1 := Iso.to_screen(z.pos + Vector2(cos(a), sin(a)) * z.radius * 0.98)
+		draw_line(a0, a1, Color(1.0, 0.7, 0.34, 0.36 + t * 0.42), 1.5)
+
+func _draw_hero_zone(z: Dictionary) -> void:
+	var p: Dictionary = z.p
+	var weapon_id := String(p.get("id", ""))
+	var dtype := String(p.get("dtype", ""))
+	if dtype == "fogo":
+		_draw_wax_fire(z)
+		return
+	if weapon_id == "colar_dos_tentaculos":
+		_draw_tentacle_zone(z)
+		return
+	var col := _dcol(dtype, 0.24)
+	draw_colored_polygon(_ellipse(z.pos, z.radius), col)
+	draw_polyline(_ellipse_closed(z.pos, z.radius), Color(col, 0.76), 2.0)
+
+func _draw_wax_fire(z: Dictionary) -> void:
+	var pulse := 0.5 + 0.5 * sin(_phase() * 5.0)
+	draw_colored_polygon(_ellipse(z.pos, z.radius), Color(0.78, 0.16, 0.04, 0.32))
+	draw_polyline(_ellipse_closed(z.pos, z.radius), Color(1.0, 0.52, 0.12, 0.82), 2.1)
+	if not _allow_large_fx(z.pos):
+		return
+	for i in 3:
+		var a := _phase() * 0.7 + float(i) * TAU / 3.0
+		var base := Iso.to_screen(z.pos + Vector2(cos(a), sin(a)) * z.radius * 0.45)
+		var tip := base + Vector2(sin(a) * 2.0, -5.0 - pulse * 5.0)
+		draw_line(base, tip, Color(1.0, 0.77, 0.24, 0.8), 2.4)
+		draw_circle(base, 2.2 + pulse, Color(1.0, 0.35, 0.08, 0.62))
+
+func _draw_tentacle_zone(z: Dictionary) -> void:
+	var pulse := 0.5 + 0.5 * sin(_phase() * 3.2)
+	draw_colored_polygon(_ellipse(z.pos, z.radius), Color(0.28, 0.1, 0.48, 0.26))
+	draw_polyline(_ellipse_closed(z.pos, z.radius), Color(0.64, 0.42, 1.0, 0.75), 2.1)
+	if not _allow_large_fx(z.pos):
+		return
+	for i in 5:
+		var a := float(i) * TAU / 5.0 + _phase() * 0.25
+		var root := Iso.to_screen(z.pos + Vector2(cos(a), sin(a)) * z.radius * 0.2)
+		var mid := Iso.to_screen(z.pos + Vector2(cos(a + 0.28), sin(a + 0.28)) * z.radius * 0.54) + Vector2(0.0, -5.0 * pulse)
+		var tip := Iso.to_screen(z.pos + Vector2(cos(a + 0.1), sin(a + 0.1)) * z.radius * 0.82)
+		draw_polyline(PackedVector2Array([root, mid, tip]), Color(0.7, 0.48, 1.0, 0.72), 2.0)
+
+func _draw_pillar_current() -> void:
+	var direction := Vector2(cos(float(battle._cur_angle)), sin(float(battle._cur_angle)))
+	var side := Vector2(-direction.y, direction.x)
+	var p := _phase()
+	for i in 7:
+		var lateral := -5.0 + float(i) * 1.65
+		var distance := fmod(p * 2.2 + float(i) * 1.9, 9.0) - 4.5
+		var start_ground := battle.hero.pos + side * lateral + direction * distance
+		var end_ground := start_ground + direction * 1.35
+		draw_line(Iso.to_screen(start_ground), Iso.to_screen(end_ground), Color(0.48, 0.66, 1.0, 0.24), 1.4)
+
+func _draw_ellipse_arc(c: Vector2, r: float, from: float, to: float, col: Color, width: float) -> void:
+	var points := PackedVector2Array()
+	var segments := maxi(4, int(24.0 * absf(to - from) / TAU))
+	for i in segments + 1:
+		var a := lerpf(from, to, float(i) / float(segments))
+		points.append(Iso.to_screen(c + Vector2(cos(a), sin(a)) * r))
+	draw_polyline(points, col, width)
 
 func _ellipse_closed(c: Vector2, r: float) -> PackedVector2Array:
 	var p := _ellipse(c, r)

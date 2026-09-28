@@ -12,6 +12,12 @@ z_index = -100
 script = ExtResource("1_pahhp")
 color_a = Color(0.22745098, 0.21176471, 0.15686275, 1)
 color_b = Color(0.27450982, 0.25490198, 0.18039216, 1)
+terrain_layout_id = "goranthis"
+visual_seed = 597
+use_modular_atlas = true
+atlas_columns = 2
+atlas_variants = 4
+terrain_texture_path = "res://assets/tiles/goranthis_ground_atlas_v1.png"
 
 [node name="Sorted" type="Node2D" parent="." unique_id=2114543858]
 y_sort_enabled = true

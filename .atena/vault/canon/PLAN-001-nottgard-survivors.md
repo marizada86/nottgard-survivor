@@ -242,3 +242,30 @@ exclusivos de Durao, onde a passagem de Juiblex o tornou gelatinoso e imóvel.
 O piso, os decais e os props devem preservar a leitura de herói, inimigos,
 itens e telegráfos em 1280×720. Esta decisão substitui, somente para
 Shedaklah, o não objetivo de extensão do Estige presente na SPEC-039.
+
+## 22. Shendilavri e o braço visual do Estige (2026-09-27)
+
+**CANON — aprovado pelo dono em 2026-09-27.** Shendilavri / Rivenheart, a
+Camada 570 de Malcanthet, recebe um **único braço do Rio Estige** nas margens
+da arena. Ele ecoa a referência planar de uma ramificação vinda de Pazunia,
+mas não domina o salão refinado de mármore violeta, cristais e ilusões.
+
+O braço é uma macroforma visual: água calma e escura, margem de mármore
+legível e nenhum fluxo, empurrão, Teste de Lucidez, Esquecimento, Chamado,
+buff ou regra hídrica. A regra ambiental da camada continua exclusivamente
+`illusions`. O piso, os decais e os props devem preservar a leitura de herói,
+inimigos, itens e telegráfos em 1280×720. Esta decisão não altera ondas,
+chefe, duração, colisão, recompensas ou os comportamentos de Durao.
+
+## 23. Goranthis e a queda visual do Estige (2026-09-27)
+
+**CANON — aprovado pelo dono em 2026-09-27.** Goranthis, a Camada 597 e o
+“verdadeiro Paraíso” de Socothbenoth, recebe nas margens a **queda colossal do
+Rio Estige**. Ela enquadra os terraços claros, o mármore pérola, os santuários
+e as cachoeiras da camada sem ocupar a arena central.
+
+A queda é uma macroforma visual e periférica: água luminosa e impossível,
+margem legível e nenhum fluxo, empurrão, Teste de Lucidez, Esquecimento,
+Chamado, buff ou regra hídrica. As regras da camada continuam `sanctuary`,
+`illusions` e `puddles`. Esta decisão não altera ondas, chefe, duração,
+colisão, recompensas, sementes ou os comportamentos de Durao.

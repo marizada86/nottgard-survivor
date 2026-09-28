@@ -12,6 +12,12 @@ z_index = -100
 script = ExtResource("1_tyyt6")
 color_a = Color(0.14117648, 0.16470589, 0.1882353, 1)
 color_b = Color(0.17254902, 0.20392157, 0.22745098, 1)
+terrain_layout_id = "feng_tu"
+visual_seed = 300
+use_modular_atlas = true
+atlas_columns = 2
+atlas_variants = 4
+terrain_texture_path = "res://assets/tiles/feng_tu_ground_atlas_v1.png"
 
 [node name="Sorted" type="Node2D" parent="." unique_id=563941160]
 y_sort_enabled = true
