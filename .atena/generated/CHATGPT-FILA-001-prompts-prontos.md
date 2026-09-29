@@ -2,7 +2,7 @@
 id: "CHATGPT-FILA-001"
 type: "fila-de-prompts"
 title: "Fila consolidada de prompts prontos para o ChatGPT (39 imagens)"
-status: "pronta para envio — nada executado"
+status: "em andamento — geração no ChatGPT iniciada pelo dono em 2026-09-29; não misturar com as Ondas de HQ (ART-PROMPTS-028 e 029)"
 created: "2026-09-29"
 relations: ["[[ART-PROMPTS-025-lote-1-nevoa-bau-de-chefe-imas-e-npcs]]", "[[ART-PROMPTS-026-lote-2-camada-de-cenario-por-bioma]]", "[[ART-PROMPTS-027-hqs-novas-guia-de-estilo-e-piloto]]", "[[SPEC-062-fila-de-geracao-externa-de-assets]]"]
 ---

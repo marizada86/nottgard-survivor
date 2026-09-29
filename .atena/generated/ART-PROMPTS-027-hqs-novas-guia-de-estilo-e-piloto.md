@@ -2,7 +2,7 @@
 id: "ART-PROMPTS-027"
 type: "prompts-de-arte"
 title: "HQs novas — guia de estilo e piloto 'Uma Noite Sem Fim'"
-status: "prepared — aguardando decisões do PLAN-040 e geração externa; nada executado"
+status: "em andamento — geração no ChatGPT iniciada pelo dono em 2026-09-29; não misturar com as Ondas de HQ (ART-PROMPTS-028 e 029)"
 created: "2026-09-29"
 relations: ["[[PLAN-040-hqs-novas-highlights-do-vault-2026-09-29]]", "[[SPEC-080-hqs-de-transicao-do-nottcard]]", "[[SPEC-062-fila-de-geracao-externa-de-assets]]"]
 sources: ["nottgard-vault (github.com/marizada86/nottgard-vault): 01_Campanha, 16_Histórias, 10_Sessões", "Nottcard HQ-000 (guia de produção)", "Nottcard assets/hq/ (hq_001 a hq_003)", "assets/portraits/*.png"]

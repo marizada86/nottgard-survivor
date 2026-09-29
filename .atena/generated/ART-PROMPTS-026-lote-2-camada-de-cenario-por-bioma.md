@@ -2,7 +2,7 @@
 id: "ART-PROMPTS-026"
 type: "prompts-de-arte"
 title: "Lote 2 — camada de cenário por bioma (estruturas, remendos de solo e trilhas)"
-status: "prepared — aguardando geração externa (ChatGPT), nada executado"
+status: "em andamento — geração no ChatGPT iniciada pelo dono em 2026-09-29; não misturar com as Ondas de HQ (ART-PROMPTS-028 e 029)"
 created: "2026-09-29"
 relations: ["[[SPEC-062-fila-de-geracao-externa-de-assets]]", "[[ART-PROMPTS-024-cenario-e-quebraveis-por-bioma]]", "[[ART-PROMPTS-007-biomas-props-thumbnails]]", "[[SPEC-042-ancoras-artisticas-e-sombras-de-props]]", "[[RESEARCH-001-abismo-bestiario-visual-2026-09-21]]"]
 sources: ["backlog/ARTE.md ART-012", "EVID-106 IN-010, IN-018", "BUG-013", "data/stages.json", "RESEARCH-001", "ART-PROMPTS-007", "assets/stages/*_thumb.png"]
