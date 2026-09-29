@@ -650,6 +650,20 @@ func run() -> Array:
 	var pct_cmp := Items.compare_table({"cd_pct": 0.04}, {}, "Novo", "Atual")
 	if int(pct_cmp.rows[0].sign) != 1 or Items.compare_text({"cd_pct": 0.04}, {}) != "+4% recarga":
 		out.append("diferença de +4%% deveria contar como ganho: %s / %s" % [str(pct_cmp.rows[0]), Items.compare_text({"cd_pct": 0.04}, {})])
+	# cartão sem detalhe não pode abrir tooltip vazio (o Godot chama _make_custom_tooltip mesmo sem texto)
+	var bare_card := OfferCard.new()
+	bare_card.offer = {"name": "Simples", "desc": "+1 CA por nível.", "brief": "+1 CA por nível."}
+	if bare_card._make_custom_tooltip("") != null:
+		out.append("cartão sem detalhe deveria devolver tooltip nulo")
+	var full_tip = OfferCard.new()
+	full_tip.offer = cmp.offer[0]
+	var tip_node = full_tip._make_custom_tooltip(" ")
+	if tip_node == null:
+		out.append("cartão com detalhe deveria devolver tooltip")
+	else:
+		tip_node.free()
+	bare_card.free()
+	full_tip.free()
 	if String(cmp.offer[0].brief) == "" or int(cmp.offer[0].badge.up) != 1 or int(cmp.offer[0].badge.down) != 1:
 		out.append("oferta de item deveria trazer brief e badge ▲1 ▼1: %s" % str(cmp.offer[0].badge))
 	if int(cmp.offer[1].badge.up) != 1 or int(cmp.offer[1].badge.down) != 1 or cmp.offer[1].detail.footer.size() < 1:

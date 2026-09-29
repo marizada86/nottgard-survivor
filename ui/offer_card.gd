@@ -12,7 +12,7 @@ var offer: Dictionary = {}
 
 func setup(index: int, o: Dictionary, name_color: Color, icon_tex: Texture2D) -> void:
 	offer = o
-	custom_minimum_size = Vector2(640, 60)
+	custom_minimum_size = Vector2(680, 64)
 	alignment = HORIZONTAL_ALIGNMENT_LEFT
 	var margin := MarginContainer.new()
 	margin.set_anchors_preset(Control.PRESET_FULL_RECT)
@@ -27,7 +27,7 @@ func setup(index: int, o: Dictionary, name_color: Color, icon_tex: Texture2D) ->
 	if icon_tex != null:
 		var icon := TextureRect.new()
 		icon.texture = icon_tex
-		icon.custom_minimum_size = Vector2(40, 40)
+		icon.custom_minimum_size = Vector2(44, 44)
 		icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 		icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 		icon.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -42,8 +42,8 @@ func setup(index: int, o: Dictionary, name_color: Color, icon_tex: Texture2D) ->
 	var title := String(o.name)
 	if String(o.get("price_text", "")) != "" and title.find(" — ") >= 0:
 		title = title.substr(0, title.rfind(" — "))
-	left.add_child(_label("%d.  %s%s" % [index + 1, "[%s] " % role if role != "" else "", title], 17, name_color))
-	var brief := _label(String(o.get("brief", "")), 15, Color(0.88, 0.88, 0.88))
+	left.add_child(_label("%d.  %s%s" % [index + 1, "[%s] " % role if role != "" else "", title], 19, name_color))
+	var brief := _label(String(o.get("brief", "")), 16, Color(0.88, 0.88, 0.88))
 	brief.clip_text = true
 	left.add_child(brief)
 	var right := VBoxContainer.new()
@@ -55,7 +55,7 @@ func setup(index: int, o: Dictionary, name_color: Color, icon_tex: Texture2D) ->
 		right.add_child(badge_row)
 	var price := String(o.get("price_text", ""))
 	if price != "":
-		var pl := _label(price, 15, COLOR_PRICE)
+		var pl := _label(price, 16, COLOR_PRICE)
 		pl.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
 		right.add_child(pl)
 	if _has_detail(o) or String(o.get("tooltip", "")) != "":
@@ -81,21 +81,23 @@ func _badge(b: Variant) -> Control:
 	box.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	box.add_theme_constant_override("separation", 8)
 	if b.has("text"):
-		box.add_child(_label(String(b.text), 17, COLOR_PRICE))
+		box.add_child(_label(String(b.text), 18, COLOR_PRICE))
 		return box
 	var up := int(b.get("up", 0))
 	var down := int(b.get("down", 0))
 	if up == 0 and down == 0:
-		box.add_child(_label("=", 18, COLOR_NEUTRAL))
+		box.add_child(_label("=", 20, COLOR_NEUTRAL))
 		return box
 	if up > 0:
-		box.add_child(_label("▲ %d" % up, 18, COLOR_UP))
+		box.add_child(_label("▲ %d" % up, 20, COLOR_UP))
 	if down > 0:
-		box.add_child(_label("▼ %d" % down, 18, COLOR_DOWN))
+		box.add_child(_label("▼ %d" % down, 20, COLOR_DOWN))
 	return box
 
 ## Tooltip com a tabela de comparação (ou o texto antigo, quando a oferta não tem detalhe).
 func _make_custom_tooltip(_for_text: String) -> Object:
+	if not _has_detail(offer) and String(offer.get("tooltip", "")) == "":
+		return null
 	return build_detail()
 
 ## Tabela de detalhe da oferta; inline_only=true devolve null quando não há detalhe (modo Shift do HUD).
@@ -115,21 +117,21 @@ func build_detail(inline_only := false) -> Control:
 		grid.add_theme_constant_override("h_separation", 18)
 		grid.add_theme_constant_override("v_separation", 2)
 		box.add_child(grid)
-		grid.add_child(_label("", 14, COLOR_NEUTRAL))
+		grid.add_child(_label("", 16, COLOR_NEUTRAL))
 		for c in cols:
-			grid.add_child(_label(String(c), 14, Color(0.95, 0.85, 0.55)))
+			grid.add_child(_label(String(c), 16, Color(0.95, 0.85, 0.55)))
 		for r in rows:
 			var sign := int(r.sign)
-			grid.add_child(_label(String(r.label), 15, Color(0.9, 0.9, 0.9)))
+			grid.add_child(_label(String(r.label), 17, Color(0.9, 0.9, 0.9)))
 			for v in r.cols:
-				grid.add_child(_label(String(v), 15, Color(0.95, 0.95, 0.95)))
-			grid.add_child(_label(String(r.delta), 15, COLOR_UP if sign > 0 else (COLOR_DOWN if sign < 0 else COLOR_NEUTRAL)))
+				grid.add_child(_label(String(v), 17, Color(0.95, 0.95, 0.95)))
+			grid.add_child(_label(String(r.delta), 17, COLOR_UP if sign > 0 else (COLOR_DOWN if sign < 0 else COLOR_NEUTRAL)))
 	var footer: Array = d.get("footer", [])
 	if rows.is_empty() and footer.is_empty():
 		footer = [String(offer.get("tooltip", ""))]
 	for line in footer:
-		var fl := _label(String(line), 14, Color(0.8, 0.8, 0.7))
+		var fl := _label(String(line), 16, Color(0.8, 0.8, 0.7))
 		fl.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		fl.custom_minimum_size = Vector2(380, 0)
+		fl.custom_minimum_size = Vector2(420, 0)
 		box.add_child(fl)
 	return margin

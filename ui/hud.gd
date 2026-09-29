@@ -244,7 +244,7 @@ func show_offer(b: Battle) -> void:
 			var detail := (btn as OfferCard).build_detail(true)
 			if detail != null:
 				var wrap := MarginContainer.new()
-				wrap.add_theme_constant_override("margin_left", 52)
+				wrap.add_theme_constant_override("margin_left", 56)
 				wrap.add_theme_constant_override("margin_bottom", 6)
 				wrap.add_child(detail)
 				wrap.visible = false
@@ -253,7 +253,7 @@ func show_offer(b: Battle) -> void:
 	if b.offer.any(func(o): return o.has("brief")):
 		var hint := Label.new()
 		hint.text = "passe o mouse sobre uma opção, ou segure Shift, para ver os detalhes e a comparação"
-		hint.add_theme_font_size_override("font_size", 13)
+		hint.add_theme_font_size_override("font_size", 14)
 		hint.add_theme_color_override("font_color", Color(0.72, 0.72, 0.72))
 		hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		offer_box.add_child(hint)
