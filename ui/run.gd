@@ -11,6 +11,7 @@ const ENEMY_VIEW := preload("res://ui/enemy_view.tscn")
 @onready var hud: CanvasLayer = $Hud
 
 var battle: Battle
+var _speed_acc := 0.0
 var stage_root: Node2D
 var sorted: Node2D
 var hero_node: Node2D
@@ -44,6 +45,7 @@ func _ready() -> void:
 	hud.again_pressed.connect(func(): Game.start_run(Game.run_hero, Game.run_stage))
 	hud.menu_pressed.connect(_return_to_menu)
 	hud.help_pressed.connect(func(): Playtest.open_game_rules())
+	hud.speed_pressed.connect(func(): battle.toggle_speed())
 	hud.aim_pressed.connect(_toggle_aim)
 	hud.revive_pressed.connect(_accept_revive)
 	hud.decline_revive_pressed.connect(_decline_revive)
@@ -219,7 +221,7 @@ func _unhandled_input(ev: InputEvent) -> void:
 				battle.extract()
 			KEY_C:
 				_toggle_items_panel()
-			KEY_T:
+			KEY_F, KEY_T:
 				battle.toggle_speed()
 
 func _toggle_items_panel() -> void:
@@ -304,7 +306,9 @@ func _physics_process(dt: float) -> void:
 		battle.aim_pos = battle.hero.pos + m_ground
 	var prev_state := battle.state
 	battle.cleared_stages = Game.profile.data.cleared.keys()
-	var steps := 2 if battle.speed_scale() > 1.5 else 1
+	_speed_acc += battle.speed_scale()
+	var steps := int(_speed_acc)
+	_speed_acc -= steps
 	for _i in steps:
 		battle.step(d, dt)
 		if battle.state != "running" or battle.stage_changed:

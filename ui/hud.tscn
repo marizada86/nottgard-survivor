@@ -39,6 +39,23 @@ theme_override_font_sizes/font_size = 24
 tooltip_text = "Como jogar"
 text = "?"
 
+[node name="SpeedBtn" type="Button" parent="."]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -112.0
+offset_top = 12.0
+offset_right = -66.0
+offset_bottom = 58.0
+grow_horizontal = 0
+focus_mode = 0
+theme_override_font_sizes/font_size = 24
+tooltip_text = "Velocidade: 1x, 1,5x, 2x (F)"
+toggle_mode = true
+text = "1x"
+
 [node name="NameLabel" type="Label" parent="StatBox" unique_id=13073774]
 unique_name_in_owner = true
 layout_mode = 2
