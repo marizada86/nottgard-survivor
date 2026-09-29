@@ -1422,7 +1422,69 @@ func _shop_row(t: String, name: String, desc: String, price: int, extra: Diction
 	if row.locked:
 		row.desc = "%s\n(faltam %d moedas)" % [desc, price - int(hero.gold)]
 	row.merge(extra)
+	if row.locked:
+		var miss := "faltam %d" % (price - int(hero.gold))
+		row["price_text"] = ("%s · %s" % [row.price_text, miss]) if row.has("price_text") else miss
 	return row
+
+func _shop_item_detail(item: Dictionary, cur: Variant, price: int) -> Dictionary:
+	var cur_mods := {}
+	var cur_label := "Slot livre"
+	if cur != null:
+		cur_mods = Items.scaled_mods(cur, int(cur.get("level", 1)))
+		cur_label = "%s Nv %d" % [String(cur.name), int(cur.get("level", 1))]
+	var d := Items.compare_table(item.mods, cur_mods, "%s [%s]" % [String(item.name), String(item.rarity)], cur_label)
+	if int(hero.gold) >= price:
+		d.footer.append("Preço %d moedas · saldo depois: %d" % [price, int(hero.gold) - price])
+	else:
+		d.footer.append("Preço %d moedas · faltam %d" % [price, price - int(hero.gold)])
+	return d
+
+func _forge_detail(it: Dictionary, lvl: int) -> Dictionary:
+	var d := Items.compare_table(Items.scaled_mods(it, lvl + 1), Items.scaled_mods(it, lvl), "Nv %d" % (lvl + 1), "Nv %d (atual)" % lvl)
+	if lvl + 1 >= Items.MAX_LEVEL:
+		d.footer.append("Bônus final: %s" % Items.mods_text(Items.super_mods(it)))
+	return d
+
+## MEC-027 fase 3: toda oferta vira cartão. Sem brief próprio, o destaque é a primeira linha do desc
+## e o texto completo vai para o hover quando é maior que o cartão comporta.
+func _decorate_offer(o: Dictionary) -> Dictionary:
+	var desc := String(o.get("desc", ""))
+	var lines := desc.split("\n")
+	if not o.has("brief"):
+		o["brief"] = lines[0]
+	if not o.has("detail") and (lines.size() > 1 or desc.length() > 58):
+		o["detail"] = {"columns": [], "rows": [], "footer": Array(lines)}
+	return o
+
+func _decorate_offers() -> void:
+	for o in offer:
+		_decorate_offer(o)
+
+## MEC-027: bênção e maldição de uma bênção do altar em uma linha cada (a partir dos mods).
+func _boon_sign_count(b: Dictionary, positive: bool) -> int:
+	var n := 0
+	for k in b.get("mods", {}):
+		if (float(b.mods[k]) >= 0.0) == positive:
+			n += 1
+	return n
+
+func _boon_brief(b: Dictionary) -> String:
+	var pos := {}
+	var neg := {}
+	for k in b.get("mods", {}):
+		if float(b.mods[k]) >= 0.0:
+			pos[k] = b.mods[k]
+		else:
+			neg[k] = b.mods[k]
+	if pos.is_empty() and neg.is_empty():
+		return String(b.desc)
+	var parts: Array = []
+	if not pos.is_empty():
+		parts.append("Bênção: %s" % Items.mods_text(pos))
+	if not neg.is_empty():
+		parts.append("Maldição: %s" % Items.mods_text(neg))
+	return " · ".join(parts)
 
 func _shop_info(name: String, desc: String) -> Dictionary:
 	return {"t": "shop_info", "name": name, "desc": desc, "price": 0, "locked": true}
@@ -1442,13 +1504,17 @@ func _open_shop_event(kind: String) -> void:
 					var cur_mods := Items.scaled_mods(cur, int(cur.get("level", 1)))
 					compare = "Substitui %s Nv %d\nTroca: %s" % [String(cur.name), int(cur.get("level", 1)), Items.compare_text(item.mods, cur_mods)]
 				offer.append(_shop_row("shop_item", "%s [%s] — %d moedas" % [item.name, item.rarity, price],
-					"%s\n%s" % [Items.mods_text(item.mods), compare], price, {"item": item, "tooltip": compare}))
+					"%s\n%s" % [Items.mods_text(item.mods), compare], price, {"item": item, "tooltip": compare,
+						"brief": Items.brief_text(item.mods), "price_text": "%d moedas" % price,
+						"badge": ({"text": "Slot livre"} if cur == null else Items.verdict(item.mods, Items.scaled_mods(cur, int(cur.get("level", 1))))),
+						"detail": _shop_item_detail(item, cur, price)}))
 		"ferreiro":
 			var eligible: Array = hero.weapons.filter(func(w): return not w.granted and w.level < w.max_level())
 			for w in eligible.slice(0, 2):
 				var price := int(round((20.0 + 10.0 * float(w.level)) * float(stage.coin_mult)))
 				offer.append(_shop_row("shop_weapon_up", "%s → Nv %d — %d moedas" % [w.def.name, w.level + 1, price],
-					_level_desc(w), price, {"weapon_id": w.id}))
+					_level_desc(w), price, {"weapon_id": w.id, "brief": _level_brief(w), "badge": {"text": "Nv %d → %d" % [w.level, w.level + 1]},
+						"price_text": "%d moedas" % price, "detail": {"columns": [], "rows": [], "footer": Array(_level_desc(w).split("\n"))}}))
 			for slot in hero.items:
 				var it: Dictionary = hero.items[slot]
 				var lvl := int(it.get("level", 1))
@@ -1459,17 +1525,21 @@ func _open_shop_event(kind: String) -> void:
 				if lvl + 1 >= Items.MAX_LEVEL:
 					next_desc += " + bônus final: " + Items.mods_text(Items.super_mods(it))
 				offer.append(_shop_row("shop_item_up", "%s → Nv %d — %d moedas" % [it.name, lvl + 1, item_price], next_desc, item_price,
-					{"slot": slot, "base": String(it.base), "rarity": String(it.get("rarity", "comum"))}))
+					{"slot": slot, "base": String(it.base), "rarity": String(it.get("rarity", "comum")),
+						"brief": "Ganho: %s" % Items.compare_text(Items.scaled_mods(it, lvl + 1), Items.scaled_mods(it, lvl)), "badge": {"text": "Nv %d → %d" % [lvl, lvl + 1]},
+						"price_text": "%d moedas" % item_price, "detail": _forge_detail(it, lvl)}))
 			if offer.is_empty():
 				offer.append(_shop_info("Nada para melhorar", "Suas armas e equipamentos já estão no nível máximo, ou não há nada forjável equipado."))
 		"curandeiro":
 			var missing := hero.max_hp - hero.hp
 			if missing > 1.0:
 				var price := maxi(8, int(round(missing * 0.5 * float(stage.coin_mult))))
-				offer.append(_shop_row("shop_heal", "Cura completa — %d moedas" % price, "Restaura %d PV." % int(ceil(missing)), price, {"amount": missing}))
+				offer.append(_shop_row("shop_heal", "Cura completa — %d moedas" % price, "Restaura %d PV." % int(ceil(missing)), price, {"amount": missing, "brief": "Restaura %d PV" % int(ceil(missing)), "price_text": "%d moedas" % price,
+					"detail": {"columns": [], "rows": [], "footer": ["PV %d/%d → %d/%d" % [int(ceil(hero.hp)), int(hero.max_hp), int(hero.max_hp), int(hero.max_hp)]]}}))
 			else:
 				offer.append(_shop_info("Vida cheia", "Não há nada a curar agora."))
 	offer.append({"t": "shop_leave", "name": "Sair", "desc": "Nada te obriga a comprar.", "price": 0})
+	_decorate_offers()
 	offer_kind = "shop_%s" % kind
 	state = "shop"
 
@@ -1487,7 +1557,9 @@ func _open_risk_event(kind: String) -> void:
 				var it: Dictionary = hero.items[slot]
 				offer.append({"t": "donate", "name": "Doar %s [%s]" % [String(it.name), String(it.rarity)],
 					"desc": "Perde: %s\nGanha: uma bênção à escolha entre 3." % Items.mods_text(Items.scaled_mods(it, int(it.get("level", 1)))),
-					"slot": slot, "price": 0, "locked": false})
+					"slot": slot, "price": 0, "locked": false,
+					"brief": "Perde %s · ganha 1 bênção (escolha entre 3)" % Items.brief_text(Items.scaled_mods(it, int(it.get("level", 1)))),
+					"detail": {"columns": [], "rows": [], "footer": ["Perde: %s" % Items.mods_text(Items.scaled_mods(it, int(it.get("level", 1)))), "Ganha: uma bênção à escolha entre 3."]}})
 	else:
 		var chance := float(cfg.get("bet_win_chance", 0.45))
 		var gold := int(hero.gold)
@@ -1496,6 +1568,7 @@ func _open_risk_event(kind: String) -> void:
 			offer.append(_shop_row("gamble", "Apostar %d moedas" % bet,
 				"%d%% de chance de dobrar; %d%% de perder tudo." % [int(round(chance * 100.0)), int(round((1.0 - chance) * 100.0))], bet, {"bet": bet}))
 	offer.append({"t": "shop_leave", "name": "Sair", "desc": "Nada te obriga a arriscar.", "price": 0})
+	_decorate_offers()
 	offer_kind = "shop_%s" % kind
 	state = "shop"
 
@@ -1542,10 +1615,14 @@ func give_item(item: Dictionary) -> void:
 	offer = [
 		{"t": "item_swap", "name": "Equipar %s [%s]" % [item.name, item.rarity],
 			"desc": "%s\nContra o atual: %s\n(vende %s por %d moedas)" % [Items.mods_text(item.mods), Items.compare_text(item.mods, cur_now), cur.name, int(gold_for_cur)],
-			"keep": item, "sell": cur, "equips": true, "tooltip": "Equipado agora: %s\n%s" % [cur.name, Items.mods_text(cur_now)]},
+			"keep": item, "sell": cur, "equips": true, "tooltip": "Equipado agora: %s\n%s" % [cur.name, Items.mods_text(cur_now)],
+			"brief": Items.brief_text(item.mods), "badge": Items.verdict(item.mods, cur_now), "price_text": "vende %s: %d" % [cur.name, int(gold_for_cur)],
+			"detail": _swap_detail(item, item.mods, cur, cur_now, "vende %s por %d moedas" % [cur.name, int(gold_for_cur)])},
 		{"t": "item_swap", "name": "Manter %s [%s]" % [cur.name, cur.rarity],
 			"desc": "%s\nContra o novo: %s\n(vende %s por %d moedas)%s" % [Items.mods_text(cur_now), Items.compare_text(cur_now, item.mods), item.name, int(gold_for_new), _keep_hint(String(cur.slot), cur)],
-			"keep": cur, "sell": item, "tooltip": "Novo item: %s\n%s" % [item.name, Items.mods_text(item.mods)]},
+			"keep": cur, "sell": item, "tooltip": "Novo item: %s\n%s" % [item.name, Items.mods_text(item.mods)],
+			"brief": Items.brief_text(cur_now), "badge": Items.verdict(cur_now, item.mods), "price_text": "vende %s: %d" % [item.name, int(gold_for_new)],
+			"detail": _swap_detail(cur, cur_now, item, item.mods, "vende %s por %d moedas" % [item.name, int(gold_for_new)], _keep_hint(String(cur.slot), cur).strip_edges())},
 	]
 	offer_kind = "item"
 	state = "item_offer"
@@ -1570,6 +1647,14 @@ func _resolve_item_choice(keep: Dictionary, sell: Dictionary) -> void:
 	var g: float = 8.0 * float(Items.RANK[sell.rarity] + 1)
 	_add_gold(g)
 	events.append({"type": "toast", "text": "%s vendido (+%d moedas)" % [sell.name, int(g)], "color": Items.rarity_color(sell.rarity)})
+
+## MEC-027: tabela do hover da troca de item (lado principal contra o outro, ambos já escalados).
+func _swap_detail(main: Dictionary, main_mods: Dictionary, other: Dictionary, other_mods: Dictionary, sale_line: String, extra := "") -> Dictionary:
+	var d := Items.compare_table(main_mods, other_mods, "%s [%s]" % [String(main.name), String(main.rarity)], "%s [%s]" % [String(other.name), String(other.rarity)])
+	d.footer.append(sale_line)
+	if extra != "":
+		d.footer.append(extra)
+	return d
 
 func _keep_hint(slot: String, cur: Dictionary) -> String:
 	if String(cur.get("base", "")) == "" or int(cur.get("level", 1)) >= Items.MAX_LEVEL:
@@ -1598,7 +1683,10 @@ func _open_altar() -> void:
 	_shuffle(boons)
 	offer = []
 	for b in boons.slice(0, 3):
-		offer.append({"t": "boon", "id": b.id, "name": "%s: %s" % [b.god, b.name], "desc": "%s\n%s" % [b.desc, _boon_effect_desc(String(b.id))], "boon": b})
+		offer.append({"t": "boon", "id": b.id, "name": "%s: %s" % [b.god, b.name], "desc": "%s\n%s" % [b.desc, _boon_effect_desc(String(b.id))], "boon": b,
+			"brief": _boon_brief(b), "badge": {"up": _boon_sign_count(b, true), "down": _boon_sign_count(b, false)},
+			"detail": {"columns": [], "rows": [], "footer": [String(b.desc), _boon_effect_desc(String(b.id))]}})
+	_decorate_offers()
 	if offer.is_empty():
 		return
 	offer_kind = "altar"
@@ -1664,7 +1752,8 @@ func _build_offer() -> Array:
 			var evo: Dictionary = wdata[w.def.evolve.into]
 			pool.append({"t": "evolve", "id": w.id, "into": w.def.evolve.into, "name": "★ EVOLUÇÃO: %s" % evo.name, "desc": evo.desc, "weight": 9.0, "role": "synergy"})
 		elif w.level < w.max_level():
-			pool.append({"t": "weapon_up", "id": w.id, "name": "%s → Nv %d" % [w.def.name, w.level + 1], "desc": _level_desc(w) + (("\n" + evolve_hint(w)) if w.def.has("evolve") else ""), "weight": 3.0, "role": "synergy"})
+			pool.append({"t": "weapon_up", "id": w.id, "name": "%s → Nv %d" % [w.def.name, w.level + 1], "desc": _level_desc(w) + (("\n" + evolve_hint(w)) if w.def.has("evolve") else ""), "weight": 3.0, "role": "synergy",
+				"brief": _level_brief(w), "badge": {"text": "Nv %d → %d" % [w.level, w.level + 1]}})
 		var syn: Dictionary = w.def.get("synergy", {})
 		if not syn.is_empty() and not hero.synergies.has(w.id) and _has_maxed_accessory(String(syn.item_base)):
 			pool.append({"t": "synergy_activate", "id": w.id, "name": "SINERGIA: %s" % String(syn.name), "desc": "%s por camada descida (agora: ×%d)." % [Items.mods_text(syn.bonus_per_depth), maxi(1, descent_depth)], "weight": 9.0, "role": "synergy"})
@@ -1682,7 +1771,7 @@ func _build_offer() -> Array:
 		if lv >= 5:
 			continue
 		if lv > 0:
-			pool.append({"t": "passive", "id": pid, "name": "%s → Nv %d" % [pdata[pid].name, lv + 1], "desc": pdata[pid].desc, "weight": 3.0, "role": "synergy"})
+			pool.append({"t": "passive", "id": pid, "name": "%s → Nv %d" % [pdata[pid].name, lv + 1], "desc": pdata[pid].desc, "weight": 3.0, "role": "synergy", "badge": {"text": "Nv %d → %d" % [lv, lv + 1]}})
 		elif owned_p < 5:
 			pool.append({"t": "passive", "id": pid, "name": "NOVA: %s" % pdata[pid].name, "desc": pdata[pid].desc, "weight": 2.0, "role": _passive_offer_role(pdata[pid])})
 	var out: Array = []
@@ -1700,6 +1789,8 @@ func _build_offer() -> Array:
 		out.append({"t": "heal", "id": "heal", "name": "Provisões", "desc": "Recupera 40% dos PV.", "weight": 1.0})
 	if out.size() < n:
 		out.append({"t": "gold", "id": "gold", "name": "Bolsa de Moedas", "desc": "+40 moedas.", "weight": 1.0})
+	for o in out:
+		_decorate_offer(o)
 	return out
 
 func _weighted_pick(candidates: Array) -> Dictionary:
@@ -1782,6 +1873,14 @@ func _level_desc(w: Weapon) -> String:
 	if r_now != Vector2i.ZERO and r_next != r_now:
 		text += "\nDano %d–%d → %d–%d" % [r_now.x, r_now.y, r_next.x, r_next.y]
 	return text
+
+## MEC-027: destaque do cartão de melhoria de arma: a faixa de dano quando existe, senão a primeira linha.
+func _level_brief(w: Weapon) -> String:
+	var lines := _level_desc(w).split("\n")
+	for l in lines:
+		if l.begins_with("Dano"):
+			return l
+	return lines[0]
 
 func _has_maxed_accessory(base_id: String) -> bool:
 	for slot in hero.items:

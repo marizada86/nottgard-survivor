@@ -89,6 +89,19 @@ func _unhandled_input(ev: InputEvent) -> void:
 		items_closed.emit()
 		get_viewport().set_input_as_handled()
 
+## MEC-027: segurar Shift abre o detalhe de todas as opções, para quem joga sem mouse.
+var _detail_nodes: Array = []
+var _detail_on := false
+
+func _process(_delta: float) -> void:
+	if not levelup_panel.visible or _detail_nodes.is_empty():
+		return
+	var on := Input.is_key_pressed(KEY_SHIFT)
+	if on != _detail_on:
+		_detail_on = on
+		for n in _detail_nodes:
+			n.visible = on
+
 func update_stats(b: Battle) -> void:
 	var h := b.hero
 	name_label.text = "%s  ·  Nv %d" % [h.name, h.level]
@@ -165,6 +178,8 @@ func update_stats(b: Battle) -> void:
 func show_offer(b: Battle) -> void:
 	for c in offer_box.get_children():
 		c.queue_free()
+	_detail_nodes.clear()
+	_detail_on = false
 	var shop_titles := {"shop_loja": "Loja — compre ou saia", "shop_ferreiro": "Ferreiro — forje uma arma", "shop_curandeiro": "Curandeiro — cure suas feridas", "shop_doacao": "Altar da Doação — troque um item por uma bênção", "shop_aposta": "Mesa de Aposta — arrisque suas moedas"}
 	if b.offer_kind == "levelup":
 		lv_title.text = "Nível %d — escolha (1-%d)" % [b.hero.level, b.offer.size()]
@@ -176,12 +191,14 @@ func show_offer(b: Battle) -> void:
 		lv_title.text = "Altar — escolha uma bênção (e sua maldição)"
 	for i in b.offer.size():
 		var o: Dictionary = b.offer[i]
-		var btn := Button.new()
+		var is_card := o.has("brief")
+		var btn: Button = OfferCard.new() if is_card else Button.new()
 		var role_names := {"synergy": "SINERGIA", "defense": "DEFESA", "direction": "NOVA DIREÇÃO"}
 		var role := String(role_names.get(o.get("role", ""), ""))
-		btn.text = "%d.  %s%s\n      %s" % [i + 1, "[%s] " % role if role != "" else "", o.name, o.desc]
-		btn.alignment = HORIZONTAL_ALIGNMENT_LEFT
-		btn.custom_minimum_size = Vector2(620, 62)
+		if not is_card:
+			btn.text = "%d.  %s%s\n      %s" % [i + 1, "[%s] " % role if role != "" else "", o.name, o.desc]
+			btn.alignment = HORIZONTAL_ALIGNMENT_LEFT
+			btn.custom_minimum_size = Vector2(620, 62)
 		var icon_path := ""
 		match String(o.t):
 			"item_swap": icon_path = "res://assets/icons/items/%s.png" % String(o.keep.get("base", o.keep.get("id", "")))
@@ -195,8 +212,9 @@ func show_offer(b: Battle) -> void:
 			"shop_weapon_up": icon_path = "res://assets/icons/weapons/%s.png" % String(o.weapon_id)
 			"shop_heal": icon_path = "res://assets/pickups/health_potion.png"
 			"shop_item_up": icon_path = "res://assets/icons/items/%s.png" % String(o.base)
-		if ResourceLoader.exists(icon_path):
-			btn.icon = load(icon_path)
+		var icon_tex: Texture2D = load(icon_path) if ResourceLoader.exists(icon_path) else null
+		if icon_tex != null and not is_card:
+			btn.icon = icon_tex
 			btn.expand_icon = true
 			btn.icon_alignment = HORIZONTAL_ALIGNMENT_LEFT
 		match String(o.t):
@@ -210,15 +228,35 @@ func show_offer(b: Battle) -> void:
 			"shop_item_up": btn.add_theme_color_override("font_color", Items.rarity_color(String(o.get("rarity", "comum"))))
 			"shop_weapon_up", "shop_heal": btn.add_theme_color_override("font_color", Color(1.0, 0.9, 0.5))
 			"shop_leave": btn.add_theme_color_override("font_color", Color(0.6, 0.6, 0.6))
-		var tip := String(o.get("tooltip", ""))
-		if tip != "":
-			btn.tooltip_text = tip
+		if is_card:
+			(btn as OfferCard).setup(i, o, btn.get_theme_color("font_color"), icon_tex)
+		else:
+			var tip := String(o.get("tooltip", ""))
+			if tip != "":
+				btn.tooltip_text = tip
 		if bool(o.get("locked", false)):
 			# MEC-023: sem moedas (ou linha informativa): visível, esmaecida e sem efeito
 			btn.disabled = true
 			btn.modulate = Color(1, 1, 1, 0.9)
 		btn.pressed.connect(func(): offer_chosen.emit(i))
 		offer_box.add_child(btn)
+		if is_card:
+			var detail := (btn as OfferCard).build_detail(true)
+			if detail != null:
+				var wrap := MarginContainer.new()
+				wrap.add_theme_constant_override("margin_left", 52)
+				wrap.add_theme_constant_override("margin_bottom", 6)
+				wrap.add_child(detail)
+				wrap.visible = false
+				offer_box.add_child(wrap)
+				_detail_nodes.append(wrap)
+	if b.offer.any(func(o): return o.has("brief")):
+		var hint := Label.new()
+		hint.text = "passe o mouse sobre uma opção, ou segure Shift, para ver os detalhes e a comparação"
+		hint.add_theme_font_size_override("font_size", 13)
+		hint.add_theme_color_override("font_color", Color(0.72, 0.72, 0.72))
+		hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		offer_box.add_child(hint)
 	reroll_btn.visible = b.offer_kind == "levelup"
 	reroll_btn.text = "Rerrolar (R) — %d restantes" % b.rerolls
 	reroll_btn.disabled = b.rerolls <= 0

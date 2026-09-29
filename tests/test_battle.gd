@@ -634,6 +634,29 @@ func run() -> Array:
 	if Items.compare_text({"cam": 1.0}, {"cam": 1.0}) != "sem diferença nos atributos":
 		out.append("compare_text de mods iguais deveria avisar que não há diferença")
 
+	# MEC-027 fase 1: cartão resumido (brief/badge) e tabela de hover; desc antigo preservado
+	var brief_mods := {"inteligencia": 1.0, "cam": 1.0, "cd_pct": 0.09, "dmg_pct": 0.16, "pickup": 0.4}
+	var brief := Items.brief_text(brief_mods)
+	if brief != "+16% dano, +9% recarga, +1 CAM" and brief != "+16% dano, +9% recarga, +1 INT":
+		out.append("brief deveria trazer os 3 atributos mais relevantes: %s" % brief)
+	if brief.split(",").size() != 3:
+		out.append("brief deveria ter no máximo 3 atributos: %s" % brief)
+	var vd := Items.verdict({"cam": 3.0, "hp": 1.0, "ca": 0.0}, {"cam": 1.0, "hp": 2.0, "carisma": 1.0})
+	if int(vd.up) != 1 or int(vd.down) != 2:
+		out.append("verdict deveria contar 1 sobe e 2 descem: %s" % str(vd))
+	var tbl := Items.compare_table({"cam": 3.0, "hp": 1.0}, {"cam": 1.0, "hp": 2.0}, "Novo", "Atual")
+	if tbl.rows.size() != 2 or String(tbl.rows[0].label) != "PV" or int(tbl.rows[0].sign) != -1 or int(tbl.rows[1].sign) != 1:
+		out.append("compare_table deveria ordenar por relevância e marcar o sinal: %s" % str(tbl))
+	var pct_cmp := Items.compare_table({"cd_pct": 0.04}, {}, "Novo", "Atual")
+	if int(pct_cmp.rows[0].sign) != 1 or Items.compare_text({"cd_pct": 0.04}, {}) != "+4% recarga":
+		out.append("diferença de +4%% deveria contar como ganho: %s / %s" % [str(pct_cmp.rows[0]), Items.compare_text({"cd_pct": 0.04}, {})])
+	if String(cmp.offer[0].brief) == "" or int(cmp.offer[0].badge.up) != 1 or int(cmp.offer[0].badge.down) != 1:
+		out.append("oferta de item deveria trazer brief e badge ▲1 ▼1: %s" % str(cmp.offer[0].badge))
+	if int(cmp.offer[1].badge.up) != 1 or int(cmp.offer[1].badge.down) != 1 or cmp.offer[1].detail.footer.size() < 1:
+		out.append("opção de manter deveria trazer badge invertido e rodapé com a venda")
+	if cmp.offer[0].detail.rows.is_empty() or String(cmp.offer[0].price_text).find("vende") < 0:
+		out.append("oferta de item deveria trazer tabela de detalhe e texto de venda")
+
 	# 9f) nível de equipamento e super-upgrade (SPEC-073)
 	var eq := _bat(17)
 	_quiet(eq)

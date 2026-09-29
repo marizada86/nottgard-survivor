@@ -45,6 +45,23 @@ func _ready() -> void:
 			run.battle.state = "running"
 			run.battle.offer.clear()
 			run.battle._open_shop_event("ferreiro")
+		if "altar" in flags:
+			run.battle._open_altar()
+		if "donate" in flags:
+			for i in 3:
+				run.battle.give_item(Items.roll(run.battle.rng, 4, 3.0))
+			run.battle.state = "running"
+			run.battle.offer.clear()
+			run.battle._open_risk_event("doacao")
+		if "bet" in flags:
+			run.battle.hero.gold = 50
+			run.battle._open_risk_event("aposta")
+		if "shift" in flags:
+			var shift_ev := InputEventKey.new()
+			shift_ev.keycode = KEY_SHIFT
+			shift_ev.physical_keycode = KEY_SHIFT
+			shift_ev.pressed = true
+			Input.parse_input_event(shift_ev)
 		if "evolve" in flags:
 			run.battle.evolve_cine = {"from": "espada_sombria", "into": "espada_do_receptaculo", "passive": "cota_de_malha", "level": 5}
 			run.battle.evolve_cine_t = 30.0
