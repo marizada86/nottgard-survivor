@@ -1,0 +1,108 @@
+{
+  "build": "public",
+  "contexto_atual": {
+    "build": "public",
+    "tela": "menu"
+  },
+  "data_utc": "2026-09-29T15:38:17",
+  "itens": [
+    {
+      "contexto": {
+        "armas": [
+          "julgamento_da_gloria nv1",
+          "vela_sagrada nv5",
+          "golpe_atordoante nv5",
+          "inferno_de_cera nv1"
+        ],
+        "build": "public",
+        "estado": "running",
+        "fase": "shendilavri",
+        "habilidade": "guarda_de_lliira",
+        "heroi": "Brook França",
+        "inimigos": 8,
+        "nivel": 56,
+        "profundidade": 6,
+        "pv": "66/66",
+        "regra": "illusions",
+        "tela": "run",
+        "tempo": 166
+      },
+      "hora": "2026-09-29T11:56:51",
+      "n": 1,
+      "tipo": "nota"
+    },
+    {
+      "contexto": {
+        "armas": [
+          "julgamento_da_gloria nv1",
+          "vela_sagrada nv5",
+          "golpe_atordoante nv5",
+          "inferno_de_cera nv1"
+        ],
+        "build": "public",
+        "estado": "running",
+        "fase": "shendilavri",
+        "habilidade": "guarda_de_lliira",
+        "heroi": "Brook França",
+        "inimigos": 8,
+        "nivel": 57,
+        "profundidade": 6,
+        "pv": "66/66",
+        "regra": "illusions",
+        "tela": "run",
+        "tempo": 177
+      },
+      "hora": "2026-09-29T11:57:04",
+      "n": 2,
+      "tipo": "print"
+    },
+    {
+      "contexto": {
+        "armas": [
+          "julgamento_da_gloria nv1",
+          "vela_sagrada nv5",
+          "golpe_atordoante nv5",
+          "inferno_de_cera nv1"
+        ],
+        "build": "public",
+        "estado": "running",
+        "fase": "shendilavri",
+        "habilidade": "guarda_de_lliira",
+        "heroi": "Brook França",
+        "inimigos": 2,
+        "nivel": 57,
+        "profundidade": 6,
+        "pv": "66/66",
+        "regra": "illusions",
+        "tela": "run",
+        "tempo": 178
+      },
+      "hora": "2026-09-29T11:58:35",
+      "n": 3,
+      "tipo": "nota"
+    },
+    {
+      "contexto": {
+        "build": "public",
+        "tela": "menu"
+      },
+      "hora": "2026-09-29T12:33:27",
+      "n": 4,
+      "tipo": "nota"
+    },
+    {
+      "contexto": {
+        "build": "public",
+        "tela": "menu"
+      },
+      "hora": "2026-09-29T12:38:13",
+      "n": 5,
+      "tipo": "nota"
+    }
+  ],
+  "jogo": "Nottgard Survivors",
+  "notas": 4,
+  "plataforma": "Windows",
+  "prints": 5,
+  "versao": "0.1.0"
+}

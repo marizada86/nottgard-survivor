@@ -16,3 +16,12 @@ git:
   local_commits: "explicit-approval"
   merge: "explicit-approval"
   publish: "explicit-approval"
+backlog:
+  path: ".atena/backlog"
+  tracks: ["arte-audio", "mecanicas", "bugs"]
+  release_order: ["bugs", "arte-audio", "mecanicas"]
+  max_mechanics_per_batch: 2
+  mechanics_share_commit_with_other_tracks: false
+  bug_p0: "fix-immediately"
+  bug_batch_triggers: ["before-playtest-export", "before-new-mechanic", "five-or-more-p1"]
+  remind_open_bugs: ["session-start", "before-export", "before-commit"]

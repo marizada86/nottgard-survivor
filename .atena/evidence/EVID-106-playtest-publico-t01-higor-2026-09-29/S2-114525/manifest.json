@@ -1,0 +1,256 @@
+{
+  "build": "public",
+  "contexto_atual": {
+    "armas": [
+      "julgamento_da_gloria nv1",
+      "vela_sagrada nv5",
+      "golpe_atordoante nv5",
+      "inferno_de_cera nv1"
+    ],
+    "build": "public",
+    "estado": "running",
+    "fase": "feng_tu",
+    "habilidade": "guarda_de_lliira",
+    "heroi": "Brook França",
+    "inimigos": 0,
+    "nivel": 55,
+    "profundidade": 5,
+    "pv": "66/66",
+    "regra": "strikes",
+    "tela": "run",
+    "tempo": 637
+  },
+  "data_utc": "2026-09-29T14:45:25",
+  "itens": [
+    {
+      "contexto": {
+        "armas": [
+          "julgamento_da_gloria nv1",
+          "vela_sagrada nv1",
+          "golpe_atordoante nv5",
+          "inferno_de_cera nv1"
+        ],
+        "build": "public",
+        "estado": "running",
+        "fase": "shedaklah",
+        "habilidade": "guarda_de_lliira",
+        "heroi": "Brook França",
+        "inimigos": 3,
+        "nivel": 36,
+        "profundidade": 2,
+        "pv": "63/63",
+        "regra": "puddles",
+        "tela": "run",
+        "tempo": 437
+      },
+      "hora": "2026-09-29T10:35:55",
+      "n": 1,
+      "tipo": "nota"
+    },
+    {
+      "contexto": {
+        "armas": [
+          "julgamento_da_gloria nv1",
+          "vela_sagrada nv1",
+          "golpe_atordoante nv5",
+          "inferno_de_cera nv1"
+        ],
+        "build": "public",
+        "estado": "running",
+        "fase": "shedaklah",
+        "habilidade": "guarda_de_lliira",
+        "heroi": "Brook França",
+        "inimigos": 3,
+        "nivel": 37,
+        "profundidade": 2,
+        "pv": "63/63",
+        "regra": "puddles",
+        "tela": "run",
+        "tempo": 511
+      },
+      "hora": "2026-09-29T10:39:27",
+      "n": 2,
+      "tipo": "nota"
+    },
+    {
+      "contexto": {
+        "armas": [
+          "julgamento_da_gloria nv1",
+          "vela_sagrada nv1",
+          "golpe_atordoante nv5",
+          "inferno_de_cera nv1"
+        ],
+        "build": "public",
+        "estado": "running",
+        "fase": "molor",
+        "habilidade": "guarda_de_lliira",
+        "heroi": "Brook França",
+        "inimigos": 2,
+        "nivel": 38,
+        "profundidade": 3,
+        "pv": "65/65",
+        "regra": "bubbles",
+        "tela": "run",
+        "tempo": 22
+      },
+      "hora": "2026-09-29T10:43:32",
+      "n": 3,
+      "tipo": "nota"
+    },
+    {
+      "contexto": {
+        "armas": [
+          "julgamento_da_gloria nv1",
+          "vela_sagrada nv1",
+          "golpe_atordoante nv5",
+          "inferno_de_cera nv1"
+        ],
+        "build": "public",
+        "estado": "running",
+        "fase": "molor",
+        "habilidade": "guarda_de_lliira",
+        "heroi": "Brook França",
+        "inimigos": 4,
+        "nivel": 39,
+        "profundidade": 3,
+        "pv": "69/69",
+        "regra": "bubbles",
+        "tela": "run",
+        "tempo": 121
+      },
+      "hora": "2026-09-29T10:47:35",
+      "n": 4,
+      "tipo": "nota"
+    },
+    {
+      "contexto": {
+        "armas": [
+          "julgamento_da_gloria nv1",
+          "vela_sagrada nv4",
+          "golpe_atordoante nv5",
+          "inferno_de_cera nv1"
+        ],
+        "build": "public",
+        "estado": "running",
+        "fase": "durao",
+        "habilidade": "guarda_de_lliira",
+        "heroi": "Brook França",
+        "inimigos": 3,
+        "nivel": 47,
+        "profundidade": 4,
+        "pv": "66/66",
+        "regra": "styx_memory",
+        "tela": "run",
+        "tempo": 138
+      },
+      "hora": "2026-09-29T11:09:07",
+      "n": 5,
+      "tipo": "nota"
+    },
+    {
+      "contexto": {
+        "armas": [
+          "julgamento_da_gloria nv1",
+          "vela_sagrada nv5",
+          "golpe_atordoante nv5",
+          "inferno_de_cera nv1"
+        ],
+        "build": "public",
+        "estado": "running",
+        "fase": "durao",
+        "habilidade": "guarda_de_lliira",
+        "heroi": "Brook França",
+        "inimigos": 4,
+        "nivel": 50,
+        "profundidade": 4,
+        "pv": "66/66",
+        "regra": "styx_memory",
+        "tela": "run",
+        "tempo": 510
+      },
+      "hora": "2026-09-29T11:23:10",
+      "n": 6,
+      "tipo": "nota"
+    },
+    {
+      "contexto": {
+        "armas": [
+          "julgamento_da_gloria nv1",
+          "vela_sagrada nv5",
+          "golpe_atordoante nv5",
+          "inferno_de_cera nv1"
+        ],
+        "build": "public",
+        "estado": "running",
+        "fase": "feng_tu",
+        "habilidade": "guarda_de_lliira",
+        "heroi": "Brook França",
+        "inimigos": 1,
+        "nivel": 54,
+        "profundidade": 5,
+        "pv": "66/66",
+        "regra": "strikes",
+        "tela": "run",
+        "tempo": 531
+      },
+      "hora": "2026-09-29T11:40:01",
+      "n": 7,
+      "tipo": "nota"
+    },
+    {
+      "contexto": {
+        "armas": [
+          "julgamento_da_gloria nv1",
+          "vela_sagrada nv5",
+          "golpe_atordoante nv5",
+          "inferno_de_cera nv1"
+        ],
+        "build": "public",
+        "estado": "running",
+        "fase": "feng_tu",
+        "habilidade": "guarda_de_lliira",
+        "heroi": "Brook França",
+        "inimigos": 3,
+        "nivel": 55,
+        "profundidade": 5,
+        "pv": "66/66",
+        "regra": "strikes",
+        "tela": "run",
+        "tempo": 589
+      },
+      "hora": "2026-09-29T11:43:03",
+      "n": 8,
+      "tipo": "nota"
+    },
+    {
+      "contexto": {
+        "armas": [
+          "julgamento_da_gloria nv1",
+          "vela_sagrada nv5",
+          "golpe_atordoante nv5",
+          "inferno_de_cera nv1"
+        ],
+        "build": "public",
+        "estado": "running",
+        "fase": "feng_tu",
+        "habilidade": "guarda_de_lliira",
+        "heroi": "Brook França",
+        "inimigos": 0,
+        "nivel": 55,
+        "profundidade": 5,
+        "pv": "66/66",
+        "regra": "strikes",
+        "tela": "run",
+        "tempo": 626
+      },
+      "hora": "2026-09-29T11:45:14",
+      "n": 9,
+      "tipo": "nota"
+    }
+  ],
+  "jogo": "Nottgard Survivors",
+  "notas": 9,
+  "plataforma": "Windows",
+  "prints": 9,
+  "versao": "0.1.0"
+}

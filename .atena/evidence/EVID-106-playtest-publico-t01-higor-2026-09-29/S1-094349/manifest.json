@@ -1,0 +1,136 @@
+{
+  "build": "public",
+  "contexto_atual": {
+    "armas": [
+      "sentenca_de_lliira nv4",
+      "vela_sagrada nv1",
+      "golpe_atordoante nv5",
+      "inferno_de_cera nv1",
+      "lamina_da_digestao nv1"
+    ],
+    "build": "public",
+    "estado": "running",
+    "fase": "docas",
+    "habilidade": "guarda_de_lliira",
+    "heroi": "Brook França",
+    "inimigos": 2,
+    "nivel": 25,
+    "profundidade": 1,
+    "pv": "63/63",
+    "regra": "puddles",
+    "tela": "run",
+    "tempo": 298
+  },
+  "data_utc": "2026-09-29T12:43:49",
+  "itens": [
+    {
+      "contexto": {
+        "armas": [
+          "sentenca_de_lliira nv2",
+          "vela_sagrada nv1",
+          "golpe_atordoante nv4",
+          "inferno_de_cera nv1",
+          "lamina_da_digestao nv1"
+        ],
+        "build": "public",
+        "estado": "running",
+        "fase": "dagruve",
+        "habilidade": "guarda_de_lliira",
+        "heroi": "Brook França",
+        "inimigos": 2,
+        "nivel": 20,
+        "profundidade": 0,
+        "pv": "62/62",
+        "regra": "rituals",
+        "tela": "run",
+        "tempo": 512
+      },
+      "hora": "2026-09-29T09:34:11",
+      "n": 1,
+      "tipo": "nota"
+    },
+    {
+      "contexto": {
+        "armas": [
+          "sentenca_de_lliira nv2",
+          "vela_sagrada nv1",
+          "golpe_atordoante nv4",
+          "inferno_de_cera nv1",
+          "lamina_da_digestao nv1"
+        ],
+        "build": "public",
+        "estado": "running",
+        "fase": "dagruve",
+        "habilidade": "guarda_de_lliira",
+        "heroi": "Brook França",
+        "inimigos": 2,
+        "nivel": 20,
+        "profundidade": 0,
+        "pv": "57/62",
+        "regra": "rituals",
+        "tela": "run",
+        "tempo": 531
+      },
+      "hora": "2026-09-29T09:35:14",
+      "n": 2,
+      "tipo": "nota"
+    },
+    {
+      "contexto": {
+        "armas": [
+          "sentenca_de_lliira nv3",
+          "vela_sagrada nv1",
+          "golpe_atordoante nv4",
+          "inferno_de_cera nv1",
+          "lamina_da_digestao nv1"
+        ],
+        "build": "public",
+        "estado": "running",
+        "fase": "docas",
+        "habilidade": "guarda_de_lliira",
+        "heroi": "Brook França",
+        "inimigos": 2,
+        "nivel": 23,
+        "profundidade": 1,
+        "pv": "71/71",
+        "regra": "puddles",
+        "tela": "run",
+        "tempo": 202
+      },
+      "hora": "2026-09-29T09:40:23",
+      "n": 3,
+      "tipo": "nota"
+    },
+    {
+      "contexto": {
+        "armas": [
+          "sentenca_de_lliira nv4",
+          "vela_sagrada nv1",
+          "golpe_atordoante nv5",
+          "inferno_de_cera nv1",
+          "lamina_da_digestao nv1"
+        ],
+        "build": "public",
+        "estado": "running",
+        "fase": "docas",
+        "habilidade": "guarda_de_lliira",
+        "heroi": "Brook França",
+        "inimigos": 2,
+        "nivel": 25,
+        "profundidade": 1,
+        "pv": "63/63",
+        "regra": "puddles",
+        "tela": "run",
+        "tempo": 280
+      },
+      "hora": "2026-09-29T09:43:31",
+      "n": 4,
+      "tipo": "nota"
+    }
+  ],
+  "jogo": "Nottgard Survivors",
+  "notas": 4,
+  "plataforma": "Windows",
+  "prints": 4,
+  "versao": "0.1.0"
+}
