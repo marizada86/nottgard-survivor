@@ -1,0 +1,56 @@
+{
+  "build": "public",
+  "contexto_atual": {
+    "armas": [
+      "martelo_da_gloria nv1",
+      "adaga_rapida nv1",
+      "marca_da_retidao nv1",
+      "espada_sombria nv1"
+    ],
+    "build": "public",
+    "estado": "running",
+    "fase": "dagruve",
+    "habilidade": "concordia",
+    "heroi": "Bromnor Martelo da Luz",
+    "inimigos": 9,
+    "nivel": 5,
+    "profundidade": 0,
+    "pv": "10/60",
+    "regra": "rituals",
+    "tela": "run",
+    "tempo": 49
+  },
+  "data_utc": "2026-09-29T18:17:59",
+  "itens": [
+    {
+      "contexto": {
+        "armas": [
+          "martelo_da_gloria nv1",
+          "adaga_rapida nv1",
+          "marca_da_retidao nv1",
+          "espada_sombria nv1"
+        ],
+        "build": "public",
+        "estado": "running",
+        "fase": "dagruve",
+        "habilidade": "concordia",
+        "heroi": "Bromnor Martelo da Luz",
+        "inimigos": 10,
+        "nivel": 5,
+        "profundidade": 0,
+        "pv": "10/60",
+        "regra": "rituals",
+        "tela": "run",
+        "tempo": 48
+      },
+      "hora": "2026-09-29T15:17:59",
+      "n": 1,
+      "tipo": "print"
+    }
+  ],
+  "jogo": "Nottgard Survivors",
+  "notas": 0,
+  "plataforma": "Windows",
+  "prints": 1,
+  "versao": "0.1.0"
+}

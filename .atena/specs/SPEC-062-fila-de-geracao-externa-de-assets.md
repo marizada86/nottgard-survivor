@@ -47,9 +47,16 @@ continua sendo a spec própria do Zumbi — esta aqui é só o índice).
 | Props de cenário de Molor | [[SPEC-066-props-de-molor]] | prompts em [[ART-PROMPTS-024-cenario-e-quebraveis-por-bioma]] | 3 imagens | Processado em 2026-09-28: admitidos e validados; evidência em [[EVID-100-props-molor-candidatos-2026-09-28]] |
 | Props de cenário de Durao | [[SPEC-067-props-de-durao]] | prompts em [[ART-PROMPTS-024-cenario-e-quebraveis-por-bioma]] | 3 imagens | Processado em 2026-09-28: admitidos e validados; evidência em [[EVID-101-props-durao-candidatos-2026-09-28]] |
 | Props de cenário de Feng-tu | [[SPEC-068-props-de-feng-tu]] | prompts em [[ART-PROMPTS-024-cenario-e-quebraveis-por-bioma]] | 3 imagens | Processado em 2026-09-28: admitidos e validados; evidência em [[EVID-102-props-feng-tu-candidatos-2026-09-28]] |
-| Props de cenário de Shendilavri | [[SPEC-069-props-de-shendilavri]] | prompts em [[ART-PROMPTS-024-cenario-e-quebraveis-por-bioma]] | 3 imagens | Preparada; sem urgência |
-| Props de cenário de Goranthis | [[SPEC-070-props-de-goranthis]] | prompts em [[ART-PROMPTS-024-cenario-e-quebraveis-por-bioma]] | 3 imagens | Preparada; sem urgência |
-| Props de cenário dos Pilares | [[SPEC-071-props-dos-pilares]] | prompts em [[ART-PROMPTS-024-cenario-e-quebraveis-por-bioma]] | 3 imagens | Preparada; sem urgência |
+| Props de cenário de Shendilavri | [[SPEC-069-props-de-shendilavri]] | prompts em [[ART-PROMPTS-024-cenario-e-quebraveis-por-bioma]] | 3 imagens | Processado em 2026-09-28 (aprovação registrada no PLAN-035); reconciliado em 2026-09-29 |
+| Props de cenário de Goranthis | [[SPEC-070-props-de-goranthis]] | prompts em [[ART-PROMPTS-024-cenario-e-quebraveis-por-bioma]] | 3 imagens | Processado em 2026-09-28 (aprovação registrada no PLAN-035); reconciliado em 2026-09-29 |
+| Props de cenário dos Pilares | [[SPEC-071-props-dos-pilares]] | prompts em [[ART-PROMPTS-024-cenario-e-quebraveis-por-bioma]] | 3 imagens | Processado em 2026-09-28 (aprovação registrada no PLAN-035); reconciliado em 2026-09-29 |
+| Lote 1 — névoa (2), baú de chefe (2), ímã de XP (1), NPCs de loja/ferreiro/curandeiro (3) | ART-008, 009, 011, 015 do backlog (spec de admissão ainda a abrir) | prompts em [[ART-PROMPTS-025-lote-1-nevoa-bau-de-chefe-imas-e-npcs]] | 8 imagens | **Pendente:** prompts prontos, aguardando geração no ChatGPT |
+| Lote 2 — camada de cenário por bioma (estrutura, remendo de solo e trilha × 9 biomas) | ART-012 do backlog (spec de integração de decais a abrir; admissão depende de BUG-013) | prompts em [[ART-PROMPTS-026-lote-2-camada-de-cenario-por-bioma]] | 27 imagens (piloto: 3 de Dagruve) | **Pendente:** prompts prontos, aguardando geração no ChatGPT |
+
+**Nota (2026-09-29):** o ART-013 (HQ) não entra na fila de geração. As 3 HQs do
+Nottcard já têm arte, importada como candidata em
+`.atena/generated/art-candidates/hq/` ([[EVID-109-importacao-das-hqs-do-nottcard-2026-09-29]]);
+a integração é a [[SPEC-080-hqs-de-transicao-do-nottcard]].
 
 ## Não objetivos
 

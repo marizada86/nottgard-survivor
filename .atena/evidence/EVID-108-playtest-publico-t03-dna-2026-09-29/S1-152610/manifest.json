@@ -1,0 +1,181 @@
+{
+  "build": "public",
+  "contexto_atual": {
+    "armas": [
+      "descarga_estelar nv2",
+      "vela_sagrada nv5",
+      "inferno_de_cera nv1",
+      "lamina_trovejante nv2"
+    ],
+    "build": "public",
+    "estado": "running",
+    "fase": "molor",
+    "habilidade": "sobrecarga_mistica",
+    "heroi": "Kayron Lioran",
+    "inimigos": 7,
+    "nivel": 38,
+    "profundidade": 3,
+    "pv": "26/26",
+    "regra": "bubbles",
+    "tela": "run",
+    "tempo": 141
+  },
+  "data_utc": "2026-09-29T18:26:10",
+  "itens": [
+    {
+      "contexto": {
+        "armas": [
+          "descarga_estelar nv1",
+          "vela_sagrada nv1",
+          "cera_fervente nv1",
+          "lamina_trovejante nv1"
+        ],
+        "build": "public",
+        "estado": "shop",
+        "fase": "dagruve",
+        "habilidade": "sobrecarga_mistica",
+        "heroi": "Kayron Lioran",
+        "inimigos": 26,
+        "nivel": 8,
+        "profundidade": 0,
+        "pv": "36/36",
+        "regra": "rituals",
+        "tela": "run",
+        "tempo": 123
+      },
+      "hora": "2026-09-29T14:36:32",
+      "n": 1,
+      "tipo": "nota"
+    },
+    {
+      "contexto": {
+        "armas": [
+          "descarga_estelar nv2",
+          "vela_sagrada nv1",
+          "cera_fervente nv1",
+          "lamina_trovejante nv2"
+        ],
+        "build": "public",
+        "estado": "running",
+        "fase": "dagruve",
+        "habilidade": "sobrecarga_mistica",
+        "heroi": "Kayron Lioran",
+        "inimigos": 16,
+        "nivel": 17,
+        "profundidade": 0,
+        "pv": "42/42",
+        "regra": "rituals",
+        "tela": "run",
+        "tempo": 331
+      },
+      "hora": "2026-09-29T14:41:22",
+      "n": 2,
+      "tipo": "nota"
+    },
+    {
+      "contexto": {
+        "armas": [
+          "descarga_estelar nv2",
+          "vela_sagrada nv1",
+          "cera_fervente nv5",
+          "lamina_trovejante nv2"
+        ],
+        "build": "public",
+        "estado": "running",
+        "fase": "docas",
+        "habilidade": "sobrecarga_mistica",
+        "heroi": "Kayron Lioran",
+        "inimigos": 5,
+        "nivel": 26,
+        "profundidade": 1,
+        "pv": "28/28",
+        "regra": "puddles",
+        "tela": "run",
+        "tempo": 457
+      },
+      "hora": "2026-09-29T14:56:39",
+      "n": 3,
+      "tipo": "nota"
+    },
+    {
+      "contexto": {
+        "armas": [
+          "descarga_estelar nv2",
+          "vela_sagrada nv1",
+          "inferno_de_cera nv1",
+          "lamina_trovejante nv2"
+        ],
+        "build": "public",
+        "estado": "item_offer",
+        "fase": "docas",
+        "habilidade": "sobrecarga_mistica",
+        "heroi": "Kayron Lioran",
+        "inimigos": 2,
+        "nivel": 27,
+        "profundidade": 1,
+        "pv": "28/28",
+        "regra": "puddles",
+        "tela": "run",
+        "tempo": 529
+      },
+      "hora": "2026-09-29T14:59:32",
+      "n": 4,
+      "tipo": "nota"
+    },
+    {
+      "contexto": {
+        "armas": [
+          "descarga_estelar nv2",
+          "vela_sagrada nv2",
+          "inferno_de_cera nv1",
+          "lamina_trovejante nv2"
+        ],
+        "build": "public",
+        "estado": "running",
+        "fase": "docas",
+        "habilidade": "sobrecarga_mistica",
+        "heroi": "Kayron Lioran",
+        "inimigos": 1,
+        "nivel": 28,
+        "profundidade": 1,
+        "pv": "28/28",
+        "regra": "puddles",
+        "tela": "run",
+        "tempo": 564
+      },
+      "hora": "2026-09-29T15:01:34",
+      "n": 5,
+      "tipo": "nota"
+    },
+    {
+      "contexto": {
+        "armas": [
+          "descarga_estelar nv2",
+          "vela_sagrada nv2",
+          "inferno_de_cera nv1",
+          "lamina_trovejante nv2"
+        ],
+        "build": "public",
+        "estado": "item_offer",
+        "fase": "docas",
+        "habilidade": "sobrecarga_mistica",
+        "heroi": "Kayron Lioran",
+        "inimigos": 0,
+        "nivel": 28,
+        "profundidade": 1,
+        "pv": "28/28",
+        "regra": "puddles",
+        "tela": "run",
+        "tempo": 609
+      },
+      "hora": "2026-09-29T15:02:56",
+      "n": 6,
+      "tipo": "nota"
+    }
+  ],
+  "jogo": "Nottgard Survivors",
+  "notas": 6,
+  "plataforma": "Windows",
+  "prints": 5,
+  "versao": "0.1.0"
+}

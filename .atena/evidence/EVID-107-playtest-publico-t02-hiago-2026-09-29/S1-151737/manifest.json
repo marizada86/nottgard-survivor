@@ -1,0 +1,354 @@
+{
+  "build": "public",
+  "contexto_atual": {
+    "armas": [
+      "martelo_da_gloria nv1",
+      "adaga_rapida nv1",
+      "marca_da_retidao nv1"
+    ],
+    "build": "public",
+    "estado": "running",
+    "fase": "dagruve",
+    "habilidade": "concordia",
+    "heroi": "Bromnor Martelo da Luz",
+    "inimigos": 13,
+    "nivel": 4,
+    "profundidade": 0,
+    "pv": "23/60",
+    "regra": "rituals",
+    "tela": "run",
+    "tempo": 29
+  },
+  "data_utc": "2026-09-29T18:17:37",
+  "itens": [
+    {
+      "contexto": {
+        "armas": [
+          "sentenca_de_lliira nv1"
+        ],
+        "build": "public",
+        "estado": "running",
+        "fase": "dagruve",
+        "habilidade": "guarda_de_lliira",
+        "heroi": "Brook França",
+        "inimigos": 25,
+        "nivel": 3,
+        "profundidade": 0,
+        "pv": "10/42",
+        "regra": "rituals",
+        "tela": "run",
+        "tempo": 67
+      },
+      "hora": "2026-09-29T13:43:36",
+      "n": 1,
+      "tipo": "nota"
+    },
+    {
+      "contexto": {
+        "armas": [
+          "sentenca_de_lliira nv2",
+          "marca_da_retidao nv1",
+          "raio_enfraquecedor nv1"
+        ],
+        "build": "public",
+        "estado": "running",
+        "fase": "dagruve",
+        "habilidade": "guarda_de_lliira",
+        "heroi": "Brook França",
+        "inimigos": 49,
+        "nivel": 7,
+        "profundidade": 0,
+        "pv": "21/42",
+        "regra": "rituals",
+        "tela": "run",
+        "tempo": 174
+      },
+      "hora": "2026-09-29T13:48:02",
+      "n": 2,
+      "tipo": "nota"
+    },
+    {
+      "contexto": {
+        "armas": [
+          "sentenca_de_lliira nv2",
+          "marca_da_retidao nv1",
+          "raio_enfraquecedor nv1",
+          "chicote_avarento nv1",
+          "cera_fervente nv1"
+        ],
+        "build": "public",
+        "estado": "shop",
+        "fase": "dagruve",
+        "habilidade": "guarda_de_lliira",
+        "heroi": "Brook França",
+        "inimigos": 19,
+        "nivel": 12,
+        "profundidade": 0,
+        "pv": "32/42",
+        "regra": "rituals",
+        "tela": "run",
+        "tempo": 328
+      },
+      "hora": "2026-09-29T13:52:24",
+      "n": 3,
+      "tipo": "nota"
+    },
+    {
+      "contexto": {
+        "armas": [
+          "sentenca_de_lliira nv2",
+          "marca_da_retidao nv1",
+          "raio_enfraquecedor nv1",
+          "chicote_avarento nv1",
+          "cera_fervente nv3"
+        ],
+        "build": "public",
+        "estado": "running",
+        "fase": "dagruve",
+        "habilidade": "guarda_de_lliira",
+        "heroi": "Brook França",
+        "inimigos": 16,
+        "nivel": 15,
+        "profundidade": 0,
+        "pv": "50/50",
+        "regra": "rituals",
+        "tela": "run",
+        "tempo": 403
+      },
+      "hora": "2026-09-29T13:55:06",
+      "n": 4,
+      "tipo": "nota"
+    },
+    {
+      "contexto": {
+        "armas": [
+          "sentenca_de_lliira nv3",
+          "marca_da_retidao nv1",
+          "raio_enfraquecedor nv1",
+          "chicote_avarento nv2",
+          "cera_fervente nv4"
+        ],
+        "build": "public",
+        "estado": "shop",
+        "fase": "docas",
+        "habilidade": "guarda_de_lliira",
+        "heroi": "Brook França",
+        "inimigos": 9,
+        "nivel": 22,
+        "profundidade": 1,
+        "pv": "40/40",
+        "regra": "puddles",
+        "tela": "run",
+        "tempo": 326
+      },
+      "hora": "2026-09-29T14:08:43",
+      "n": 5,
+      "tipo": "nota"
+    },
+    {
+      "contexto": {
+        "armas": [
+          "sentenca_de_lliira nv4",
+          "marca_da_retidao nv1",
+          "raio_enfraquecedor nv1",
+          "inferno_de_cera nv1"
+        ],
+        "build": "public",
+        "estado": "running",
+        "fase": "docas",
+        "habilidade": "guarda_de_lliira",
+        "heroi": "Brook França",
+        "inimigos": 3,
+        "nivel": 25,
+        "profundidade": 1,
+        "pv": "40/40",
+        "regra": "puddles",
+        "tela": "run",
+        "tempo": 517
+      },
+      "hora": "2026-09-29T14:13:25",
+      "n": 6,
+      "tipo": "nota"
+    },
+    {
+      "contexto": {
+        "armas": [
+          "sentenca_de_lliira nv4",
+          "marca_da_retidao nv1",
+          "raio_enfraquecedor nv1",
+          "inferno_de_cera nv1"
+        ],
+        "build": "public",
+        "estado": "running",
+        "fase": "shedaklah",
+        "habilidade": "guarda_de_lliira",
+        "heroi": "Brook França",
+        "inimigos": 6,
+        "nivel": 26,
+        "profundidade": 2,
+        "pv": "40/40",
+        "regra": "puddles",
+        "tela": "run",
+        "tempo": 53
+      },
+      "hora": "2026-09-29T14:17:51",
+      "n": 7,
+      "tipo": "nota"
+    },
+    {
+      "contexto": {
+        "armas": [
+          "sentenca_de_lliira nv5",
+          "marca_da_retidao nv1",
+          "raio_enfraquecedor nv1",
+          "inferno_de_cera nv1"
+        ],
+        "build": "public",
+        "estado": "running",
+        "fase": "shedaklah",
+        "habilidade": "guarda_de_lliira",
+        "heroi": "Brook França",
+        "inimigos": 9,
+        "nivel": 28,
+        "profundidade": 2,
+        "pv": "40/40",
+        "regra": "puddles",
+        "tela": "run",
+        "tempo": 153
+      },
+      "hora": "2026-09-29T14:20:33",
+      "n": 8,
+      "tipo": "nota"
+    },
+    {
+      "contexto": {
+        "armas": [
+          "sentenca_de_lliira nv5",
+          "marca_da_retidao nv1",
+          "raio_enfraquecedor nv2",
+          "inferno_de_cera nv1"
+        ],
+        "build": "public",
+        "estado": "running",
+        "fase": "shedaklah",
+        "habilidade": "guarda_de_lliira",
+        "heroi": "Brook França",
+        "inimigos": 4,
+        "nivel": 29,
+        "profundidade": 2,
+        "pv": "40/40",
+        "regra": "puddles",
+        "tela": "run",
+        "tempo": 201
+      },
+      "hora": "2026-09-29T14:23:02",
+      "n": 9,
+      "tipo": "nota"
+    },
+    {
+      "contexto": {
+        "armas": [
+          "sentenca_de_lliira nv5",
+          "marca_da_retidao nv2",
+          "raio_enfraquecedor nv2",
+          "inferno_de_cera nv1"
+        ],
+        "build": "public",
+        "estado": "running",
+        "fase": "shedaklah",
+        "habilidade": "guarda_de_lliira",
+        "heroi": "Brook França",
+        "inimigos": 4,
+        "nivel": 31,
+        "profundidade": 2,
+        "pv": "51/51",
+        "regra": "puddles",
+        "tela": "run",
+        "tempo": 334
+      },
+      "hora": "2026-09-29T14:25:53",
+      "n": 10,
+      "tipo": "nota"
+    },
+    {
+      "contexto": {
+        "armas": [
+          "sentenca_de_lliira nv5",
+          "marca_da_retidao nv5",
+          "raio_enfraquecedor nv2",
+          "inferno_de_cera nv1"
+        ],
+        "build": "public",
+        "estado": "running",
+        "fase": "molor",
+        "habilidade": "guarda_de_lliira",
+        "heroi": "Brook França",
+        "inimigos": 11,
+        "nivel": 36,
+        "profundidade": 3,
+        "pv": "58/58",
+        "regra": "bubbles",
+        "tela": "run",
+        "tempo": 106
+      },
+      "hora": "2026-09-29T14:33:47",
+      "n": 11,
+      "tipo": "nota"
+    },
+    {
+      "contexto": {
+        "armas": [
+          "sentenca_de_lliira nv5",
+          "marca_da_retidao nv5",
+          "raio_enfraquecedor nv5",
+          "inferno_de_cera nv1"
+        ],
+        "build": "public",
+        "estado": "item_offer",
+        "fase": "durao",
+        "habilidade": "guarda_de_lliira",
+        "heroi": "Brook França",
+        "inimigos": 4,
+        "nivel": 45,
+        "profundidade": 4,
+        "pv": "62/62",
+        "regra": "styx_memory",
+        "tela": "run",
+        "tempo": 430
+      },
+      "hora": "2026-09-29T14:53:19",
+      "n": 12,
+      "tipo": "nota"
+    },
+    {
+      "contexto": {
+        "armas": [
+          "sentenca_de_lliira nv5",
+          "marca_da_retidao nv5",
+          "raio_enfraquecedor nv5",
+          "inferno_de_cera nv1"
+        ],
+        "build": "public",
+        "estado": "running",
+        "fase": "durao",
+        "habilidade": "guarda_de_lliira",
+        "heroi": "Brook França",
+        "inimigos": 4,
+        "nivel": 46,
+        "profundidade": 4,
+        "pv": "62/62",
+        "regra": "styx_memory",
+        "tela": "run",
+        "tempo": 457
+      },
+      "hora": "2026-09-29T14:54:16",
+      "n": 13,
+      "tipo": "nota"
+    }
+  ],
+  "jogo": "Nottgard Survivors",
+  "notas": 13,
+  "plataforma": "Windows",
+  "prints": 6,
+  "versao": "0.1.0"
+}

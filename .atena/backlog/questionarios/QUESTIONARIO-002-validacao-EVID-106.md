@@ -54,3 +54,16 @@ visto os eventos.
   para não induzir a resposta.
 - Frases afirmativas favorecem "Concordo"; por isso o PDF inclui a escolha das 3
   prioridades e a opção "Não notei".
+
+## Respostas recebidas
+
+| Respondente | Herói/fase declarados | Prioridades | Nota | Registro |
+|---|---|---|---:|---|
+| T02 Hiago | Leoric · Feng-tu (pacotes mostram Brook e Bromnor; confirmar) | 4, 8, 9 | 10 | [EVID-107](../../evidence/EVID-107-playtest-publico-t02-hiago-2026-09-29.md) |
+| T03 DNA | Kayron · Shedaklah (pacote termina em Molor) | 2, 9, 6 | 10 | [EVID-108](../../evidence/EVID-108-playtest-publico-t03-dna-2026-09-29.md) |
+
+Tabela pergunta a pergunta (C/P/D/N) no EVID-107 (T02) e EVID-108 (T03). T03 usou as quatro respostas (6 C, 2 P, 3 D, 3 N); ranking de prioridades T02+T03: pergunta 9 (2 votos); 2, 4, 6, 8 (1 voto).
+
+T02: 12 Concordo, 2 Em parte
+(perguntas 5 e 12), 0 Discordo, 0 Não notei. Pelo viés das frases afirmativas,
+só BUG-012 e BUG-014 contam como confirmados de fato (têm nota espontânea junto).
