@@ -102,7 +102,7 @@ da evidência — nunca é apagado.
 
 ## Numeração
 
-Próximos livres (2026-09-29, após EVID-108): `SPEC-086` (SPEC-079 fica
+Próximos livres (2026-09-29, após EVID-108): `SPEC-087` (SPEC-079 fica
 **reservada** à camada de decais do Lote 2; SPEC-080 é a das HQs), `EVID-110`,
 `PLAN-042`, `ART-PROMPTS-031`, `ART-019`, `MEC-027`, `BUG-016`, `IN-040`, `TOOL-004`, jogador `T04`. `tools/backlog_check.ps1` confere se esta linha está atrasada.
 
