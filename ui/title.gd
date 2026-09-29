@@ -114,7 +114,7 @@ func _process(delta: float) -> void:
 		_logo_time += delta
 		_logo_rect.texture = _logo_frames[int(_logo_time * LOGO_FPS) % _logo_frames.size()]
 
-func _unhandled_input(event: InputEvent) -> void:
+func _input(event: InputEvent) -> void:
 	if _leaving:
 		return
 	var pressed: bool = (event is InputEventMouseButton and event.pressed) \
