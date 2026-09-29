@@ -8,6 +8,7 @@ specs, evidências, planos e canon continuam onde estão, com os mesmos nomes
 |---|---|---|
 | [INBOX.md](INBOX.md) | Tudo que chega e ainda não foi classificado | `IN-nnn` |
 | [INTAKE.md](INTAKE.md) | Procedimento para assimilar evidência de um novo jogador | — |
+| [RECEBIMENTO-DE-ASSETS.md](RECEBIMENTO-DE-ASSETS.md) | Procedimento para receber, triar e admitir as imagens geradas no ChatGPT | — |
 | [ARTE.md](ARTE.md) | Arte **e áudio**: assets, templates, layouts, backgrounds, prompts, sons | `ART-nnn` |
 | [MECANICAS.md](MECANICAS.md) | O que muda o comportamento do jogo | `MEC-nnn` |
 | [BUGS.md](BUGS.md) | Defeitos e dívida de verificação | `BUG-nnn` |

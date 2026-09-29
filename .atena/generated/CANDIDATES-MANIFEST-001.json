@@ -1,0 +1,971 @@
+{
+    "id":  "CANDIDATES-MANIFEST-001",
+    "created":  "2026-09-29",
+    "note":  "Arquivos de candidata esperados por fila. Gerado a partir das CHATGPT-FILA-001/002/003. A pasta art-candidates/ e ignorada pelo git.",
+    "count":  107,
+    "items":  [
+                  {
+                      "fila":  "001",
+                      "num":  "P01",
+                      "id":  "nevoa_textura_01",
+                      "kind":  "asset",
+                      "path":  ".atena/generated/art-candidates/lote-1/nevoa_textura_01_v01.png",
+                      "bg":  "#000000",
+                      "shape":  "square"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P02",
+                      "id":  "nevoa_borda_01",
+                      "kind":  "asset",
+                      "path":  ".atena/generated/art-candidates/lote-1/nevoa_borda_01_v01.png",
+                      "bg":  "#000000",
+                      "shape":  "landscape"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P03",
+                      "id":  "bau_chefe_fechado",
+                      "kind":  "asset",
+                      "path":  ".atena/generated/art-candidates/lote-1/bau_chefe_fechado_v01.png",
+                      "bg":  "#FF00FF",
+                      "shape":  "square"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P04",
+                      "id":  "bau_chefe_aberto",
+                      "kind":  "asset",
+                      "path":  ".atena/generated/art-candidates/lote-1/bau_chefe_aberto_v01.png",
+                      "bg":  "#FF00FF",
+                      "shape":  "square"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P05",
+                      "id":  "ima_xp",
+                      "kind":  "asset",
+                      "path":  ".atena/generated/art-candidates/lote-1/ima_xp_v01.png",
+                      "bg":  "#00FF00",
+                      "shape":  "square"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P06",
+                      "id":  "npc_loja",
+                      "kind":  "asset",
+                      "path":  ".atena/generated/art-candidates/lote-1/npc_loja_v01.png",
+                      "bg":  "#FF00FF",
+                      "shape":  "square"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P07",
+                      "id":  "npc_ferreiro",
+                      "kind":  "asset",
+                      "path":  ".atena/generated/art-candidates/lote-1/npc_ferreiro_v01.png",
+                      "bg":  "#FF00FF",
+                      "shape":  "square"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P08",
+                      "id":  "npc_curandeiro",
+                      "kind":  "asset",
+                      "path":  ".atena/generated/art-candidates/lote-1/npc_curandeiro_v01.png",
+                      "bg":  "#FF00FF",
+                      "shape":  "square"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P09",
+                      "id":  "hq_n01_q1",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n01_q1_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P10",
+                      "id":  "hq_n01_q2",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n01_q2_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P11",
+                      "id":  "hq_n01_q3",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n01_q3_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P12",
+                      "id":  "hq_n01_q4",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n01_q4_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P13",
+                      "id":  "dagruve_estrutura_01",
+                      "kind":  "asset",
+                      "path":  ".atena/generated/art-candidates/scenery/dagruve_estrutura_01_v01.png",
+                      "bg":  "#FF00FF",
+                      "shape":  "square"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P14",
+                      "id":  "dagruve_remendo_01",
+                      "kind":  "asset",
+                      "path":  ".atena/generated/art-candidates/scenery/dagruve_remendo_01_v01.png",
+                      "bg":  "#FF00FF",
+                      "shape":  "landscape"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P15",
+                      "id":  "dagruve_trilha_01",
+                      "kind":  "asset",
+                      "path":  ".atena/generated/art-candidates/scenery/dagruve_trilha_01_v01.png",
+                      "bg":  "#FF00FF",
+                      "shape":  "landscape"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P16",
+                      "id":  "docas_estrutura_01",
+                      "kind":  "asset",
+                      "path":  ".atena/generated/art-candidates/scenery/docas_estrutura_01_v01.png",
+                      "bg":  "#FF00FF",
+                      "shape":  "square"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P17",
+                      "id":  "docas_remendo_01",
+                      "kind":  "asset",
+                      "path":  ".atena/generated/art-candidates/scenery/docas_remendo_01_v01.png",
+                      "bg":  "#FF00FF",
+                      "shape":  "landscape"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P18",
+                      "id":  "docas_trilha_01",
+                      "kind":  "asset",
+                      "path":  ".atena/generated/art-candidates/scenery/docas_trilha_01_v01.png",
+                      "bg":  "#FF00FF",
+                      "shape":  "landscape"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P19",
+                      "id":  "shedaklah_estrutura_01",
+                      "kind":  "asset",
+                      "path":  ".atena/generated/art-candidates/scenery/shedaklah_estrutura_01_v01.png",
+                      "bg":  "#FF00FF",
+                      "shape":  "square"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P20",
+                      "id":  "shedaklah_remendo_01",
+                      "kind":  "asset",
+                      "path":  ".atena/generated/art-candidates/scenery/shedaklah_remendo_01_v01.png",
+                      "bg":  "#FF00FF",
+                      "shape":  "landscape"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P21",
+                      "id":  "shedaklah_trilha_01",
+                      "kind":  "asset",
+                      "path":  ".atena/generated/art-candidates/scenery/shedaklah_trilha_01_v01.png",
+                      "bg":  "#FF00FF",
+                      "shape":  "landscape"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P22",
+                      "id":  "molor_estrutura_01",
+                      "kind":  "asset",
+                      "path":  ".atena/generated/art-candidates/scenery/molor_estrutura_01_v01.png",
+                      "bg":  "#FF00FF",
+                      "shape":  "square"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P23",
+                      "id":  "molor_remendo_01",
+                      "kind":  "asset",
+                      "path":  ".atena/generated/art-candidates/scenery/molor_remendo_01_v01.png",
+                      "bg":  "#FF00FF",
+                      "shape":  "landscape"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P24",
+                      "id":  "molor_trilha_01",
+                      "kind":  "asset",
+                      "path":  ".atena/generated/art-candidates/scenery/molor_trilha_01_v01.png",
+                      "bg":  "#FF00FF",
+                      "shape":  "landscape"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P25",
+                      "id":  "durao_estrutura_01",
+                      "kind":  "asset",
+                      "path":  ".atena/generated/art-candidates/scenery/durao_estrutura_01_v01.png",
+                      "bg":  "#FF00FF",
+                      "shape":  "square"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P26",
+                      "id":  "durao_remendo_01",
+                      "kind":  "asset",
+                      "path":  ".atena/generated/art-candidates/scenery/durao_remendo_01_v01.png",
+                      "bg":  "#FF00FF",
+                      "shape":  "landscape"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P27",
+                      "id":  "durao_trilha_01",
+                      "kind":  "asset",
+                      "path":  ".atena/generated/art-candidates/scenery/durao_trilha_01_v01.png",
+                      "bg":  "#FF00FF",
+                      "shape":  "landscape"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P28",
+                      "id":  "feng_tu_estrutura_01",
+                      "kind":  "asset",
+                      "path":  ".atena/generated/art-candidates/scenery/feng_tu_estrutura_01_v01.png",
+                      "bg":  "#FF00FF",
+                      "shape":  "square"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P29",
+                      "id":  "feng_tu_remendo_01",
+                      "kind":  "asset",
+                      "path":  ".atena/generated/art-candidates/scenery/feng_tu_remendo_01_v01.png",
+                      "bg":  "#FF00FF",
+                      "shape":  "landscape"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P30",
+                      "id":  "feng_tu_trilha_01",
+                      "kind":  "asset",
+                      "path":  ".atena/generated/art-candidates/scenery/feng_tu_trilha_01_v01.png",
+                      "bg":  "#FF00FF",
+                      "shape":  "landscape"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P31",
+                      "id":  "shendilavri_estrutura_01",
+                      "kind":  "asset",
+                      "path":  ".atena/generated/art-candidates/scenery/shendilavri_estrutura_01_v01.png",
+                      "bg":  "#00FFFF",
+                      "shape":  "square"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P32",
+                      "id":  "shendilavri_remendo_01",
+                      "kind":  "asset",
+                      "path":  ".atena/generated/art-candidates/scenery/shendilavri_remendo_01_v01.png",
+                      "bg":  "#00FFFF",
+                      "shape":  "landscape"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P33",
+                      "id":  "shendilavri_trilha_01",
+                      "kind":  "asset",
+                      "path":  ".atena/generated/art-candidates/scenery/shendilavri_trilha_01_v01.png",
+                      "bg":  "#00FFFF",
+                      "shape":  "landscape"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P34",
+                      "id":  "goranthis_estrutura_01",
+                      "kind":  "asset",
+                      "path":  ".atena/generated/art-candidates/scenery/goranthis_estrutura_01_v01.png",
+                      "bg":  "#FF00FF",
+                      "shape":  "square"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P35",
+                      "id":  "goranthis_remendo_01",
+                      "kind":  "asset",
+                      "path":  ".atena/generated/art-candidates/scenery/goranthis_remendo_01_v01.png",
+                      "bg":  "#FF00FF",
+                      "shape":  "landscape"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P36",
+                      "id":  "goranthis_trilha_01",
+                      "kind":  "asset",
+                      "path":  ".atena/generated/art-candidates/scenery/goranthis_trilha_01_v01.png",
+                      "bg":  "#FF00FF",
+                      "shape":  "landscape"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P37",
+                      "id":  "pilares_estrutura_01",
+                      "kind":  "asset",
+                      "path":  ".atena/generated/art-candidates/scenery/pilares_estrutura_01_v01.png",
+                      "bg":  "#00FFFF",
+                      "shape":  "square"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P38",
+                      "id":  "pilares_remendo_01",
+                      "kind":  "asset",
+                      "path":  ".atena/generated/art-candidates/scenery/pilares_remendo_01_v01.png",
+                      "bg":  "#00FFFF",
+                      "shape":  "landscape"
+                  },
+                  {
+                      "fila":  "001",
+                      "num":  "P39",
+                      "id":  "pilares_trilha_01",
+                      "kind":  "asset",
+                      "path":  ".atena/generated/art-candidates/scenery/pilares_trilha_01_v01.png",
+                      "bg":  "#00FFFF",
+                      "shape":  "landscape"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H01",
+                      "id":  "hq_n02_q1",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n02_q1_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H02",
+                      "id":  "hq_n02_q2",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n02_q2_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H03",
+                      "id":  "hq_n02_q3",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n02_q3_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H04",
+                      "id":  "hq_n02_q4",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n02_q4_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H05",
+                      "id":  "hq_n03_q1",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n03_q1_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H06",
+                      "id":  "hq_n03_q2",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n03_q2_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H07",
+                      "id":  "hq_n03_q3",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n03_q3_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H08",
+                      "id":  "hq_n03_q4",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n03_q4_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H09",
+                      "id":  "hq_n04_q1",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n04_q1_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H10",
+                      "id":  "hq_n04_q2",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n04_q2_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H11",
+                      "id":  "hq_n04_q3",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n04_q3_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H12",
+                      "id":  "hq_n04_q4",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n04_q4_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H13",
+                      "id":  "hq_n05_q1",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n05_q1_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H14",
+                      "id":  "hq_n05_q2",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n05_q2_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H15",
+                      "id":  "hq_n05_q3",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n05_q3_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H16",
+                      "id":  "hq_n05_q4",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n05_q4_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H17",
+                      "id":  "hq_n06_q1",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n06_q1_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H18",
+                      "id":  "hq_n06_q2",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n06_q2_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H19",
+                      "id":  "hq_n06_q3",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n06_q3_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H20",
+                      "id":  "hq_n06_q4",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n06_q4_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H21",
+                      "id":  "hq_n07_q1",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n07_q1_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H22",
+                      "id":  "hq_n07_q2",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n07_q2_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H23",
+                      "id":  "hq_n07_q3",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n07_q3_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H24",
+                      "id":  "hq_n07_q4",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n07_q4_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H25",
+                      "id":  "hq_n08_q1",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n08_q1_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H26",
+                      "id":  "hq_n08_q2",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n08_q2_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H27",
+                      "id":  "hq_n08_q3",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n08_q3_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H28",
+                      "id":  "hq_n08_q4",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n08_q4_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H29",
+                      "id":  "hq_n09_q1",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n09_q1_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H30",
+                      "id":  "hq_n09_q2",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n09_q2_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H31",
+                      "id":  "hq_n09_q3",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n09_q3_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H32",
+                      "id":  "hq_n09_q4",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n09_q4_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H33",
+                      "id":  "hq_n10_q1",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n10_q1_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H34",
+                      "id":  "hq_n10_q2",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n10_q2_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H35",
+                      "id":  "hq_n10_q3",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n10_q3_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H36",
+                      "id":  "hq_n10_q4",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n10_q4_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H37",
+                      "id":  "hq_n11_q1",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n11_q1_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H38",
+                      "id":  "hq_n11_q2",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n11_q2_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H39",
+                      "id":  "hq_n11_q3",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n11_q3_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H40",
+                      "id":  "hq_n11_q4",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n11_q4_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H41",
+                      "id":  "hq_n12_q1",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n12_q1_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H42",
+                      "id":  "hq_n12_q2",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n12_q2_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H43",
+                      "id":  "hq_n12_q3",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n12_q3_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H44",
+                      "id":  "hq_n12_q4",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n12_q4_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H45",
+                      "id":  "hq_n13_q1",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n13_q1_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H46",
+                      "id":  "hq_n13_q2",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n13_q2_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H47",
+                      "id":  "hq_n13_q3",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n13_q3_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H48",
+                      "id":  "hq_n13_q4",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n13_q4_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H49",
+                      "id":  "hq_n14_q1",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n14_q1_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H50",
+                      "id":  "hq_n14_q2",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n14_q2_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H51",
+                      "id":  "hq_n14_q3",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n14_q3_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "002",
+                      "num":  "H52",
+                      "id":  "hq_n14_q4",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n14_q4_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "003",
+                      "num":  "C01",
+                      "id":  "hq_n15_q1",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n15_q1_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "003",
+                      "num":  "C02",
+                      "id":  "hq_n15_q2",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n15_q2_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "003",
+                      "num":  "C03",
+                      "id":  "hq_n15_q3",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n15_q3_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "003",
+                      "num":  "C04",
+                      "id":  "hq_n15_q4",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n15_q4_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "003",
+                      "num":  "C05",
+                      "id":  "hq_n16_q1",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n16_q1_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "003",
+                      "num":  "C06",
+                      "id":  "hq_n16_q2",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n16_q2_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "003",
+                      "num":  "C07",
+                      "id":  "hq_n16_q3",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n16_q3_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "003",
+                      "num":  "C08",
+                      "id":  "hq_n16_q4",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n16_q4_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "003",
+                      "num":  "C09",
+                      "id":  "hq_n17_q1",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n17_q1_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "003",
+                      "num":  "C10",
+                      "id":  "hq_n17_q2",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n17_q2_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "003",
+                      "num":  "C11",
+                      "id":  "hq_n17_q3",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n17_q3_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "003",
+                      "num":  "C12",
+                      "id":  "hq_n17_q4",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n17_q4_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "003",
+                      "num":  "C13",
+                      "id":  "hq_n18_q1",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n18_q1_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "003",
+                      "num":  "C14",
+                      "id":  "hq_n18_q2",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n18_q2_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "003",
+                      "num":  "C15",
+                      "id":  "hq_n18_q3",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n18_q3_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  },
+                  {
+                      "fila":  "003",
+                      "num":  "C16",
+                      "id":  "hq_n18_q4",
+                      "kind":  "hq",
+                      "path":  ".atena/generated/art-candidates/hq/hq_n18_q4_v01.png",
+                      "bg":  null,
+                      "shape":  "16:9"
+                  }
+              ]
+}
