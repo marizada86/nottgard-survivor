@@ -240,7 +240,7 @@ kind = "taca_01"
 block_radius = 0.0
 
 [node name="Espelho" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(736, 352)
+position = Vector2(624, 408)
 kind = "espelho_ornado_01"
 block_radius = 0.0
 

@@ -35,4 +35,17 @@ func run() -> Array:
 	if profile.is_empty() or String(profile.get("shadow_mode", "")) != "dynamic":
 		out.append("rocha deveria ter ficha visual e sombra dinâmica própria")
 	prop.free()
+
+	# BUG-011: o Espelho de Shendilavri tem de ficar dentro da área andável (40x40 tiles), não na parede (y = -0,5).
+	var scene_text := FileAccess.get_file_as_string("res://ui/stages/shendilavri.tscn")
+	var at := scene_text.find("[node name=\"Espelho\"")
+	if at < 0:
+		out.append("shendilavri deveria ter o prop Espelho")
+	else:
+		var pos_at := scene_text.find("position = Vector2(", at)
+		var pos_end := scene_text.find(")", pos_at)
+		var nums := scene_text.substr(pos_at + 19, pos_end - pos_at - 19).split(",")
+		var ground := Iso.to_ground(Vector2(float(nums[0]), float(nums[1])))
+		if ground.x < 1.0 or ground.y < 1.0 or ground.x > 39.0 or ground.y > 39.0:
+			out.append("Espelho de Shendilavri fora da área andável: chão (%.1f, %.1f)" % [ground.x, ground.y])
 	return out

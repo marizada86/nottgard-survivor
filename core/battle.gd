@@ -662,7 +662,7 @@ func _apply_effects(e: Enemy, p: Dictionary) -> void:
 		e.burn_dps = maxf(e.burn_dps, float(p.burn) * 1.5)
 	if float(p.get("knock", 0.0)) > 0.0 and not e.is_boss():
 		var away: Vector2 = (e.pos - hero.pos).normalized() * float(p.knock)
-		if hero.is_free(e.pos + away, e.radius):
+		if hero.can_stand(e.pos + away, e.radius):
 			e.pos += away
 
 # ------------------------------------------------------------------ projéteis e zonas
@@ -729,7 +729,7 @@ func _update_zones(dt: float) -> void:
 				z.progress = maxf(0.0, float(z.progress) - dt * 0.5)
 			z.delay -= dt
 			if z.progress >= z.interrupt:
-				events.append({"type": "toast", "text": "Ritual interrompido."})
+				events.append({"type": "toast", "text": "Ritual interrompido: os reforços foram impedidos."})
 			elif z.delay <= 0.0:
 				if stage.waves.is_empty():
 					events.append({"type": "toast", "text": "O ritual se desfaz."})
@@ -794,7 +794,7 @@ func _charmed_step(e: Enemy, dt: float) -> void:
 		return
 	if best > e.radius + target.radius + 0.7:
 		var np := e.pos + (target.pos - e.pos).normalized() * e.speed * dt
-		if hero.is_free(np, e.radius):
+		if hero.can_stand(np, e.radius):
 			e.pos = np
 	elif e.atk_cd <= 0.0:
 		e.atk_cd = ENEMY_ATK_CD
@@ -871,7 +871,7 @@ func _enemy_step(e: Enemy, dt: float) -> void:
 	if e.charge_t > 0.0:
 		e.charge_t -= dt
 		var np: Vector2 = e.pos + e.charge_dir * float(e.charge_ab.speed) * dt
-		if hero.is_free(np, e.radius):
+		if hero.can_stand(np, e.radius):
 			e.pos = np
 		if dist <= e.radius + HERO_HIT_R + 0.2 and e.atk_cd <= 0.0:
 			e.atk_cd = 1.0
@@ -898,13 +898,7 @@ func _enemy_step(e: Enemy, dt: float) -> void:
 		elif dist > ENEMY_ATK_RANGE * 0.6:
 			mv = dir
 		if mv != Vector2.ZERO:
-			var step_v := mv * spd * dt
-			var nx := Vector2(e.pos.x + step_v.x, e.pos.y)
-			if hero.is_free(nx, e.radius):
-				e.pos = nx
-			var ny := Vector2(e.pos.x, e.pos.y + step_v.y)
-			if hero.is_free(ny, e.radius):
-				e.pos = ny
+			_enemy_move(e, mv * spd * dt)
 	var k := Vector2i(int(floor(e.pos.x)), int(floor(e.pos.y)))
 	for dx in range(-1, 2):
 		for dy in range(-1, 2):
@@ -922,6 +916,32 @@ func _enemy_step(e: Enemy, dt: float) -> void:
 	if dist <= reach and e.atk_cd <= 0.0:
 		e.atk_cd = ENEMY_ATK_CD
 		_enemy_hit_hero(e.atk_bonus, e.atk_dice, "fisico", false)
+
+## Move o inimigo deslizando pelos eixos; se quase não saiu do lugar (obstáculo redondo no caminho),
+## contorna girando o passo e mantém o lado escolhido até andar livre (BUG-012).
+func _enemy_move(e: Enemy, step_v: Vector2) -> void:
+	var before := e.pos
+	var nx := Vector2(e.pos.x + step_v.x, e.pos.y)
+	if hero.can_stand(nx, e.radius):
+		e.pos = nx
+	var ny := Vector2(e.pos.x, e.pos.y + step_v.y)
+	if hero.can_stand(ny, e.radius):
+		e.pos = ny
+	var want := step_v.length()
+	if want < 0.0001:
+		return
+	if e.pos.distance_to(before) >= want * 0.5:
+		e.detour_side = 0
+		return
+	if e.detour_side == 0:
+		e.detour_side = 1 if (int(floor(e.pos.x * 7.0)) + int(floor(e.pos.y * 7.0))) % 2 == 0 else -1
+	for turn in [0.9, 1.6, 2.4]:
+		for side in [e.detour_side, -e.detour_side]:
+			var cand: Vector2 = e.pos + step_v.rotated(turn * float(side))
+			if hero.can_stand(cand, e.radius):
+				e.pos = cand
+				e.detour_side = side
+				return
 
 func _use_ability(e: Enemy, idx: int, a: Dictionary, dist: float, to: Vector2) -> bool:
 	match String(a.t):
@@ -1335,11 +1355,11 @@ func _open_shop_event(kind: String) -> void:
 					continue
 				var item_price := int(round((25.0 + 15.0 * float(lvl)) * float(stage.coin_mult)))
 				if hero.gold >= item_price:
-					var next_desc: String = Items.mods_text(it.mods)
+					var next_desc: String = Items.upgrade_preview(it)
 					if lvl + 1 >= Items.MAX_LEVEL:
 						next_desc += " + bônus final: " + Items.mods_text(Items.super_mods(it))
 					offer.append({"t": "shop_item_up", "name": "%s → Nv %d — %d moedas" % [it.name, lvl + 1, item_price],
-						"desc": next_desc, "slot": slot, "base": String(it.base), "price": item_price})
+						"desc": next_desc, "slot": slot, "base": String(it.base), "rarity": String(it.get("rarity", "comum")), "price": item_price})
 		"curandeiro":
 			var missing := hero.max_hp - hero.hp
 			if missing > 1.0:
@@ -1381,7 +1401,7 @@ func give_item(item: Dictionary) -> void:
 			"desc": "%s\n(vende %s por %d moedas)" % [Items.mods_text(item.mods), cur.name, int(gold_for_cur)],
 			"keep": item, "sell": cur, "equips": true},
 		{"t": "item_swap", "name": "Manter %s [%s]" % [cur.name, cur.rarity],
-			"desc": "%s\n(vende %s por %d moedas)" % [Items.mods_text(cur.mods), item.name, int(gold_for_new)],
+			"desc": "%s\n(vende %s por %d moedas)" % [Items.mods_text(Items.scaled_mods(cur, int(cur.get("level", 1)))), item.name, int(gold_for_new)],
 			"keep": cur, "sell": item},
 	]
 	offer_kind = "item"
@@ -1552,10 +1572,13 @@ func _level_desc(w: Weapon) -> String:
 	var lv: Array = w.def.get("levels", [])
 	if w.level - 1 >= lv.size():
 		return ""
+	var labels := {"dice": "dado", "cd": "recarga (s)", "cone": "cone", "dmg": "dano", "range": "alcance", "stun": "atordoamento", "radius": "raio",
+		"pierce": "perfuração", "count": "projéteis", "weaken": "enfraquece", "duration": "duração", "heal": "cura", "mark": "marca",
+		"gold_hit": "moedas/golpe", "knock": "empurrão", "burn": "queimadura", "lifesteal": "roubo de vida", "slow": "lentidão"}
 	var parts: Array = []
 	for k in lv[w.level - 1]:
 		var v: Variant = lv[w.level - 1][k]
-		parts.append("%s %s" % [k, v if k == "dice" else "%+.1f" % float(v)])
+		parts.append("%s %s" % [labels.get(k, k), v if k == "dice" else "%+.1f" % float(v)])
 	return ", ".join(parts)
 
 func _has_maxed_accessory(base_id: String) -> bool:
@@ -1664,7 +1687,7 @@ func _ring_pos() -> Vector2:
 	for i in 8:
 		var ang := rng.randf() * TAU
 		var p := hero.pos + Vector2(cos(ang), sin(ang)) * rng.randf_range(8.0, 11.0)
-		if p.x > 1.0 and p.y > 1.0 and p.x < map_size.x - 1.0 and p.y < map_size.y - 1.0 and hero.is_free(p, 0.4):
+		if p.x > 1.0 and p.y > 1.0 and p.x < map_size.x - 1.0 and p.y < map_size.y - 1.0 and hero.can_stand(p, 0.4):
 			return p
 	return hero.pos + Vector2(8, 0)
 
@@ -1873,7 +1896,7 @@ func _apply_rule_kind(kind: String, dt: float) -> void:
 				var at := _ring_pos()
 				zones.append({"owner": "stage", "kind": "rule_ritual", "pos": at, "radius": 1.7, "delay": float(stage_rule.delay), "total": float(stage_rule.delay),
 					"interrupt": float(stage_rule.interrupt), "progress": 0.0, "life": 99.0})
-				events.append({"type": "toast", "text": "Ritual da Névoa: permaneça no selo para interromper!"})
+				events.append({"type": "toast", "text": "Ritual da Névoa: fique no selo para impedir os reforços!"})
 		"bubbles":
 			_rule_timer -= dt
 			if _rule_timer <= 0.0:

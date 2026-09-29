@@ -42,6 +42,7 @@ var hit_flash := 0.0
 var charmed_t := 0.0
 var phase_index := 0
 var phase_defs: Array = []
+var detour_side := 0       # lado (+1/-1) escolhido ao contornar obstáculo; 0 = livre
 
 static func make(enemy_id: String, at: Vector2, minute: float = 0.0, hp_mult: float = 1.0, tier: int = 0) -> Enemy:
 	var d: Dictionary = Data.table("enemies")[enemy_id]

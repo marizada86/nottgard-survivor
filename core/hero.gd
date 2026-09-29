@@ -171,11 +171,17 @@ func step(screen_dir: Vector2, dt: float) -> void:
 		pos = ny
 
 func is_free(p: Vector2, r: float = RADIUS) -> bool:
+	if not can_stand(p, r):
+		return false
+	if styx_forget_t > 0.0 and TerrainLayout.distance_to_styx(terrain_id, p) < TerrainLayout.distance_to_styx(terrain_id, pos):
+		return false
+	return true
+
+## Só geometria (mapa, montanhas, objetos). Inimigos usam esta: o Esquecimento do Estige é restrição do herói (BUG-012).
+func can_stand(p: Vector2, r: float = RADIUS) -> bool:
 	if p.x < r or p.y < r or p.x > map_size.x - r or p.y > map_size.y - r:
 		return false
 	if TerrainLayout.is_blocked(terrain_id, p):
-		return false
-	if styx_forget_t > 0.0 and TerrainLayout.distance_to_styx(terrain_id, p) < TerrainLayout.distance_to_styx(terrain_id, pos):
 		return false
 	for b in blockers:
 		if p.distance_to(Vector2(b.x, b.y)) < b.z + r:

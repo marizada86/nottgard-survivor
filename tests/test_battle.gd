@@ -18,6 +18,19 @@ func _quiet(b: Battle) -> void:
 func run() -> Array:
 	var out: Array = []
 
+	# 0) BUG-012: inimigo com obstáculo redondo exatamente entre ele e o herói contorna e chega; o Esquecimento do Estige (restrição do herói) não o trava
+	var ob := _bat(7)
+	_quiet(ob)
+	ob.hero.blockers = [Vector3(24.0, 20.0, 1.5)]
+	var chaser := ob.spawn_for_test("zumbi", Vector2(28.0, 20.0))
+	ob.hero.styx_forget_t = 30.0
+	var closest := 99.0
+	for i in 1200:
+		ob._enemy_step(chaser, 0.016)
+		closest = minf(closest, chaser.pos.distance_to(ob.hero.pos))
+	if closest > 2.0:
+		out.append("inimigo preso atrás de obstáculo redondo: chegou só a %.1f do herói" % closest)
+
 	# 1) XP e level-up: matar zumbi rende XP e gera oferta de 3
 	var b := _bat()
 	_quiet(b)
@@ -338,6 +351,16 @@ func run() -> Array:
 	if up_idx < 0:
 		out.append("ferreiro deveria oferecer upgrade de armadura equipada")
 	else:
+		# BUG-015: a prévia do ferreiro tem de mostrar o nível seguinte já escalado (+15%), não o texto do nível atual.
+		var preview := String(eq.offer[up_idx].desc)
+		var lines := preview.split("\n")
+		if lines.size() < 2 or lines[0].strip_edges().substr(lines[0].find(":")) == lines[1].strip_edges().substr(lines[1].find(":")):
+			out.append("prévia do ferreiro deveria mostrar valores diferentes entre o nível atual e o próximo: %s" % preview)
+		var sc := Items.scaled_mods({"mods": {"cam": 1.0, "hp": 4.0}}, 2)
+		if absf(float(sc.cam) - 1.15) > 0.001 or absf(float(sc.hp) - 4.6) > 0.001:
+			out.append("scaled_mods deveria aplicar +15% por nível acima de 1")
+		if Items.mods_text({"hp": 4.6}).find("4.6") < 0:
+			out.append("mods_text não deveria truncar 4.6 PV para 4")
 		eq.choose(up_idx)
 		if int(eq.hero.items.armadura.level) != 2:
 			out.append("comprar upgrade de equipamento deveria subir o nível em 1")
