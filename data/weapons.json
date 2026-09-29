@@ -66,6 +66,6 @@
     "desc": "Ácido que dissolve armadura.", "levels": [{"weaken": 1}, {"dice": "1d10"}, {"cd": -0.15}, {"dmg": 3}]},
   "cajado_dos_desejos": {"name": "Cajado dos Desejos Sussurrantes", "src": "Item: Cajado dos Desejos Sussurrantes", "kind": "bolt", "dtype": "magico", "attr": "carisma", "dice": "1d6", "cd": 2.4, "range": 9, "speed": 8, "pierce": 0, "count": 3, "spread": 30,
     "desc": "Desejos sussurrados em leque.", "levels": [{"dmg": 1}, {"count": 1}, {"dice": "1d8"}, {"cd": -0.4, "dmg": 2}]},
-  "ampulheta": {"name": "Ampulheta do Silêncio Eterno", "src": "Item: Ampulheta do Silêncio Eterno", "kind": "nova", "dtype": "magico", "attr": "inteligencia", "dice": "", "cd": 12.0, "radius": 4.0, "stun": 1.5,
-    "desc": "Silêncio: todos ao redor param.", "levels": [{"stun": 0.5}, {"cd": -2.0}, {"radius": 1.0}, {"stun": 1.0}]}
+  "ampulheta": {"name": "Ampulheta do Silêncio Eterno", "src": "Item: Ampulheta do Silêncio Eterno", "kind": "nova", "dtype": "magico", "attr": "inteligencia", "dice": "2d6", "cd": 5.5, "radius": 4.0, "stun": 1.5,
+    "desc": "Silêncio: todos ao redor param.", "levels": [{"stun": 0.5}, {"cd": -1.0}, {"radius": 1.0}, {"stun": 1.0}]}
 }
