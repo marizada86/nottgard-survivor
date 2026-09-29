@@ -11,13 +11,14 @@ specs, evidências, planos e canon continuam onde estão, com os mesmos nomes
 | [ARTE.md](ARTE.md) | Arte **e áudio**: assets, templates, layouts, backgrounds, prompts, sons | `ART-nnn` |
 | [MECANICAS.md](MECANICAS.md) | O que muda o comportamento do jogo | `MEC-nnn` |
 | [BUGS.md](BUGS.md) | Defeitos e dívida de verificação | `BUG-nnn` |
+| [BALANCEAMENTO.md](BALANCEAMENTO.md) | Equilíbrio: heróis, armas, itens, inimigos, economia e dificuldade | `BAL-nnn` |
 | [FERRAMENTAS.md](FERRAMENTAS.md) | Ferramentas e build: kit de evidência, CI, scripts, exportação | `TOOL-nnn` |
 | [RELEASES.md](RELEASES.md) | Quadro de versões de playtest: conteúdo, "o que testar", checklist | — |
 
 ## Fluxo
 
 ```
-evidência / playtest / ideia → INBOX → triagem → ARTE | MECANICAS | BUGS
+evidência / playtest / ideia → INBOX → triagem → ARTE | MECANICAS | BUGS | BALANCEAMENTO
                                                       ↓
                                      lote → spec (SPEC-nnn) → EVID-nnn → fechado
 ```
@@ -46,6 +47,9 @@ da evidência — nunca é apagado.
   função nova) → **Mecânicas**.
 - Mecânica que precisa de arte gera um `ART-nnn` ligado a ela (coluna
   "Depende de"). As duas trilhas nunca se descolam.
+- Só **números** de conteúdo que já existe (dano, PV, custo, taxa de drop, frequência,
+  curva de dificuldade) → **Balanceamento**. Regra ou sistema novo continua sendo
+  Mecânica; um relato pode gerar cartões nas duas, ligados entre si.
 - Defeito em algo que já deveria funcionar → **Bugs**, mesmo que a correção seja
   de arte (ex.: sprite transparente).
 
@@ -57,7 +61,7 @@ da evidência — nunca é apagado.
   bestiário ([RESEARCH-001](../vault/research/RESEARCH-001-abismo-bestiario-visual-2026-09-21.md)),
   sem inventar lore. Sem história: a lore é só sabor.
 - Itens abertos acumulam até fechar um **lote**. O lote sai como um único
-  `ART-PROMPTS-NNN` (próximo livre: **031**) para o gerador de imagem.
+  `ART-PROMPTS-NNN` (próximo livre: **032**) para o gerador de imagem.
 - Candidatos ficam em `.atena/generated/` até admissão explícita do dono.
 
 ### Mecânicas
@@ -85,6 +89,15 @@ da evidência — nunca é apagado.
   `powershell -ExecutionPolicy Bypass -File tools/backlog_check.ps1`. Um hook de
   início de sessão (`.claude/settings.json`) roda a versão curta sozinho.
 
+### Balanceamento
+- Um cartão por entidade e sintoma (herói forte demais, item fraco, economia sobrando...),
+  acumulando relatos por tester, medições do bot e leitura dos dados.
+- Decide-se com **duas fontes independentes** (ou jogador + bot); relato único fica em
+  observação. Sinais que divergem por herói pedem o bot por herói antes de mexer em
+  número global.
+- Uma alavanca por vez por entidade, anotando **antes → depois** no cartão.
+- Medição: `tools/bot.gd` (comando em [BALANCEAMENTO.md](BALANCEAMENTO.md)).
+
 ### Ferramentas e build
 - Tudo que não é arte, mecânica nem bug (kit de evidência, CI, scripts, export)
   vai em [FERRAMENTAS.md](FERRAMENTAS.md).
@@ -97,16 +110,17 @@ da evidência — nunca é apagado.
 
 ## Ordem de lançamento
 
-1. Bug-fix → 2. Arte & Áudio → 3. Mecânicas — cada um em commit separado
-(uma mecânica por commit). A versão de playtest junta tudo (ver [RELEASES.md](RELEASES.md)).
+1. Bug-fix → 2. Arte & Áudio → 3. Mecânicas → 4. Balanceamento — cada um em commit
+separado (uma mecânica por commit; números por entidade). Balanceamento vem por
+último para calibrar o conteúdo final da versão, com o bot rodando nele. A versão de playtest junta tudo (ver [RELEASES.md](RELEASES.md)).
 
 ## Numeração
 
-Próximos livres (2026-09-29, após EVID-108): `SPEC-090` (SPEC-079 fica
+Próximos livres (2026-09-29, após EVID-108): `SPEC-092` (SPEC-079 fica
 **reservada** à camada de decais do Lote 2; SPEC-080 é a das HQs), `EVID-110`,
-`PLAN-042`, `ART-PROMPTS-031`, `ART-021`, `MEC-027`, `BUG-016`, `IN-040`, `TOOL-004`, jogador `T04`. `tools/backlog_check.ps1` confere se esta linha está atrasada.
+`PLAN-043`, `ART-PROMPTS-032`, `ART-023`, `MEC-027`, `BUG-016`, `BAL-008`, `IN-040`, `TOOL-004`, jogador `T04`. `tools/backlog_check.ps1` confere se esta linha está atrasada.
 
 **Colisões históricas** (não renomear; usar o nome completo do arquivo ao
 citar): SPEC-047/048/049/050/054/055 têm dois arquivos cada; EVID-018, 077, 079,
-080, 087, 088, 098, 099 idem; PLAN-016, 023, 035 idem. Daqui pra frente, antes
+080, 087, 088, 098, 099 idem; PLAN-016, 023, 035, 041 idem. Daqui pra frente, antes
 de criar qualquer número novo, confira o próximo livre acima e atualize-o.
