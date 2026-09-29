@@ -1,0 +1,9 @@
+# Normaliza terminação de linha para LF no repositório e no checkout,
+# independente de core.autocrlf local — evita que .import/.godot/.tscn etc.
+# apareçam como "modificados" só por CRLF no Windows.
+* text=auto eol=lf
+
+# Binários explícitos: nunca normalizar.
+*.png binary
+*.wav binary
+*.ttf binary
