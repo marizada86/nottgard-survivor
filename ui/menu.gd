@@ -163,6 +163,13 @@ func _refresh_hero() -> void:
 		d.name, d.title, a.forca, a.inteligencia, a.constituicao, a.carisma, d.base_hp, ca, clampi((ca - 10) * 3, 0, 30), cam, clampi((cam - 10) * 3, 0, 30), w.name, w.desc, d.passive.name, d.passive.desc]
 	if not Game.profile.hero_unlocked(id):
 		txt += "\n\n[color=#e0a040]Bloqueado. Conquista: %s[/color]" % _ach_name(String(d.unlock).substr(4))
+	else:
+		var bio: String = String(Data.table("hero_bios").get(id, ""))
+		if bio != "":
+			if Game.profile.hero_bio_unlocked(id):
+				txt += "\n\n[b]Biografia[/b]\n[i]%s[/i]" % bio
+			else:
+				txt += "\n\n[color=#888888]Biografia bloqueada: vença uma fase com este herói.[/color]"
 	hero_info.text = txt
 	Game.run_hero = id
 	_update_play()
@@ -215,8 +222,12 @@ func _fill_upgrades() -> void:
 		row.add_child(lab)
 		var btn := Button.new()
 		var cost := p.upgrade_cost(u.id)
-		btn.text = "Comprar (%d)" % cost if cost >= 0 else "Máximo"
-		btn.disabled = cost < 0 or cost > p.coins()
+		var locked_by := p.upgrade_locked_by(u.id)
+		if locked_by != "":
+			lab.text += "\nBloqueado. Conquista: %s" % _ach_name(locked_by)
+			lab.modulate = Color(1, 1, 1, 0.7)
+		btn.text = "Bloqueado" if locked_by != "" else ("Comprar (%d)" % cost if cost >= 0 else "Máximo")
+		btn.disabled = locked_by != "" or cost < 0 or cost > p.coins()
 		btn.custom_minimum_size = Vector2(160, 44)
 		btn.pressed.connect(func():
 			if p.buy_upgrade(u.id):

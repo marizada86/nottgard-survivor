@@ -74,7 +74,7 @@ var free_revive_used := false
 var death_reward_rate := 0.5
 var death_reason := ""
 var invuln := 0.0
-var stats := {"kills": 0, "crits": 0, "ones": 0, "elites": 0, "bosses": 0, "chests": 0, "gold": 0.0, "damage_taken": 0.0, "stages_cleared": 0, "boss_ids": [], "stage_ids": [], "cleared_ids": []}
+var stats := {"kills": 0, "crits": 0, "ones": 0, "elites": 0, "bosses": 0, "chests": 0, "gold": 0.0, "damage_taken": 0.0, "stages_cleared": 0, "rituals": 0, "bets_won": 0, "loyalty": 0, "boss_ids": [], "stage_ids": [], "cleared_ids": []}
 var codex := {"enemies": {}, "items": {}, "weapons": {}}
 var _acc := {}
 var _elites_done := {}
@@ -736,6 +736,7 @@ func _update_zones(dt: float) -> void:
 			z.delay -= dt
 			if z.progress >= z.interrupt:
 				events.append({"type": "toast", "text": "Ritual interrompido: os reforços foram impedidos."})
+				stats.rituals += 1
 				_grant_ritual_blessing()
 			elif z.delay <= 0.0:
 				if stage.waves.is_empty():
@@ -1564,6 +1565,7 @@ func _register_keep(slot: String) -> void:
 		events.append({"type": "toast", "text": "Fidelidade: %s (%d/%d)" % [String(cur.name), int(keep_streak[slot]), KEEP_STREAK_NEEDED]})
 		return
 	keep_streak[slot] = 0
+	stats.loyalty += 1
 	cur.level = int(cur.get("level", 1)) + 1
 	hero.recalc()
 	events.append({"type": "toast", "text": "Fidelidade recompensada: %s sobe para Nv %d!" % [String(cur.name), int(cur.level)], "color": Color(1.0, 0.85, 0.3)})
@@ -1807,6 +1809,7 @@ func choose(i: int) -> void:
 				var risk: Dictionary = Data.table("difficulty").get("risk_events", {})
 				if hero.gold >= int(c.bet):
 					if rng.randf() < float(risk.get("bet_win_chance", 0.45)):
+						stats.bets_won += 1
 						hero.gold += int(c.bet)  # ganho não entra em stats.gold: não infla a recompensa da run
 						events.append({"type": "toast", "text": "A sorte sorri: +%d moedas!" % int(c.bet), "color": Color(1.0, 0.85, 0.3)})
 					else:
@@ -2187,5 +2190,5 @@ func result() -> Dictionary:
 	return {"won": state == "won", "dead": state == "dead", "extracted": extracted, "time": run_time, "kills": stats.kills,
 		"gold": int(round(stats.gold * reward_multiplier())), "raw_gold": int(stats.gold), "reward_mult": reward_multiplier(), "descent_depth": descent_depth,
 		"level": hero.level, "stage": stage_id, "hero": hero.id, "bosses": stats.bosses, "boss_ids": stats.boss_ids, "elites": stats.elites, "crits": stats.crits,
-		"ones": stats.ones, "chests": stats.chests, "stages_cleared": stats.stages_cleared, "stage_ids": stats.stage_ids, "cleared_ids": stats.cleared_ids, "final_victory": final_victory, "weapons": hero.weapons.map(func(w): return w.id), "codex": codex,
+		"ones": stats.ones, "rituals": stats.rituals, "bets_won": stats.bets_won, "loyalty": stats.loyalty, "chests": stats.chests, "stages_cleared": stats.stages_cleared, "stage_ids": stats.stage_ids, "cleared_ids": stats.cleared_ids, "final_victory": final_victory, "weapons": hero.weapons.map(func(w): return w.id), "codex": codex,
 		"reward_rate": death_reward_rate if state == "dead" else 1.0, "death_reason": death_reason}

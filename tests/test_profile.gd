@@ -27,6 +27,20 @@ func run() -> Array:
 	var declined := q.apply_run(_result({"won": false, "dead": true, "gold": 100, "cleared_ids": [], "bosses": 0, "boss_ids": [], "reward_rate": 0.3, "death_reason": "declined_revive"}))
 	if declined.earned != 30 or declined.reward_rate != 0.3:
 		out.append("recusar revive deveria render 30%% (30), veio %d" % declined.earned)
+	# MEC-016: novas estatísticas e conquistas
+	var cq := Profile.new()
+	cq.apply_run(_result({"won": true, "dead": false, "gold": 10, "cleared_ids": ["dagruve"], "bosses": 3, "boss_ids": ["sacerdote_mente_derretida"], "hero": "brook", "rituals": 10, "bets_won": 5, "loyalty": 3, "level": 30}))
+	for ach in ["nivel_30", "tres_chefes_na_run", "mestre_do_ritual", "jogador_de_risco", "fiel_ao_equipamento", "bio_brook"]:
+		if not cq.data.achievements.has(ach):
+			out.append("conquista deveria ter sido concedida: %s" % ach)
+	if not cq.hero_bio_unlocked("brook") or cq.hero_bio_unlocked("durvall"):
+		out.append("biografia deveria liberar só para o herói que venceu a fase")
+	if cq.upgrade_locked_by("mao_cheia") != "" or cq.upgrade_locked_by("segunda_chance") == "":
+		out.append("Mão Cheia deveria estar liberada e Segunda Chance ainda travada")
+	var bios: Dictionary = Data.table("hero_bios")
+	for hid in Data.table("heroes"):
+		if String(bios.get(hid, "")) == "":
+			out.append("herói sem biografia do vault: %s" % hid)
 	# melhorias
 	var m := Profile.new({"coins": 1000})
 	if not m.buy_upgrade("forca_bruta") or m.coins() != 900:
@@ -36,6 +50,11 @@ func run() -> Array:
 	var poor := Profile.new({"coins": 5})
 	if poor.buy_upgrade("forca_bruta"):
 		out.append("comprou sem moedas")
+	# MEC-016: Segunda Chance só depois da conquista de Feng-tu
+	m.data.coins = 99999
+	if m.buy_upgrade("segunda_chance"):
+		out.append("Segunda Chance não deveria ser comprável sem a conquista")
+	m.data.achievements["feng_tu_vencida"] = true
 	for i in 6:
 		m.data.coins = 99999
 		m.buy_upgrade("segunda_chance")

@@ -50,6 +50,15 @@ func upgrade_defs() -> Array:
 func upgrade_level(id: String) -> int:
 	return int(data.upgrades.get(id, 0))
 
+## MEC-016: aprimoramentos podem exigir uma conquista (campo requires). Quem já comprou continua com o que tem.
+func upgrade_locked_by(id: String) -> String:
+	for u in upgrade_defs():
+		if u.id == id:
+			var req := String(u.get("requires", ""))
+			if req != "" and not data.achievements.has(req) and upgrade_level(id) == 0:
+				return req
+	return ""
+
 func upgrade_cost(id: String) -> int:
 	for u in upgrade_defs():
 		if u.id == id:
@@ -59,6 +68,8 @@ func upgrade_cost(id: String) -> int:
 
 func buy_upgrade(id: String) -> bool:
 	var c := upgrade_cost(id)
+	if upgrade_locked_by(id) != "":
+		return false
 	if c < 0 or c > coins():
 		return false
 	data.coins = coins() - c
@@ -90,6 +101,10 @@ func run_mods() -> Dictionary:
 	return m
 
 # ------------------------------------------------------------------ desbloqueios
+
+## Biografia (vault de Nottgard) liberada ao vencer uma fase com o herói.
+func hero_bio_unlocked(id: String) -> bool:
+	return data.achievements.has("bio_" + id)
 
 func hero_unlocked(id: String) -> bool:
 	var req: String = Data.table("heroes")[id].unlock
@@ -139,6 +154,13 @@ func apply_run(result: Dictionary) -> Dictionary:
 	for bid in result.boss_ids:
 		st.boss_kills[bid] = int(st.boss_kills.get(bid, 0)) + 1
 	st.heroes_played[result.hero] = true
+	st["rituals_total"] = int(st.get("rituals_total", 0)) + int(result.get("rituals", 0))
+	st["bets_won_total"] = int(st.get("bets_won_total", 0)) + int(result.get("bets_won", 0))
+	st["loyalty_total"] = int(st.get("loyalty_total", 0)) + int(result.get("loyalty", 0))
+	if not result.cleared_ids.is_empty():
+		if not st.has("heroes_cleared"):
+			st["heroes_cleared"] = {}
+		st.heroes_cleared[result.hero] = true
 	for sid in result.stage_ids:
 		st.reached[sid] = true
 	for sid in result.cleared_ids:
@@ -168,6 +190,12 @@ func stat_value(stat: String, run: Dictionary) -> float:
 		"stages_cleared": return float(data.cleared.size())
 		"heroes_played": return float(st.heroes_played.size())
 		"codex_items": return float(data.codex.items.size())
+		"run_bosses": return float(run.get("bosses", 0))
+		"rituals_total": return float(st.get("rituals_total", 0))
+		"bets_won_total": return float(st.get("bets_won_total", 0))
+		"loyalty_total": return float(st.get("loyalty_total", 0))
+	if stat.begins_with("hero_cleared_"):
+		return 1.0 if st.get("heroes_cleared", {}).has(stat.substr(13)) else 0.0
 	if stat.begins_with("reached_"):
 		return 1.0 if st.reached.has(stat.substr(8)) else 0.0
 	if stat.begins_with("boss_"):
