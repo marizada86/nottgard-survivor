@@ -1,6 +1,6 @@
 # BRIEF-ZUMBI-REGEN-V01
 
-Status: **local e não executado**.
+Status: **executado em 2026-09-29; candidatas aprovadas e tiras admitidas**.
 SPEC: `SPEC-061-preparacao-da-regeneracao-do-piloto-de-zumbi.md` (aprovada
 2026-09-28; esta preparação, não a geração).
 

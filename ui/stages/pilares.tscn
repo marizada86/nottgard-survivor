@@ -205,6 +205,21 @@ kind = "pilar_abissal"
 height = 141.51440620422363
 color = Color(0.43058825, 0.39607844, 0.53411764, 1)
 
+[node name="FragmentoFlutuante" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(-704, 352)
+kind = "fragmento_01"
+block_radius = 0.0
+
+[node name="PlacaRuna" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(736, 960)
+kind = "runa_01"
+block_radius = 0.0
+
+[node name="NucleoCristalino" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(768, 416)
+kind = "nucleo_01"
+block_radius = 0.0
+
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=1165027511]
 
 [node name="Spawn1" parent="SpawnPoints" unique_id=1837662586 instance=ExtResource("4_3540k")]

@@ -1,7 +1,7 @@
 ---
 id: "SPEC-066"
 title: "Props de cenário de Molor"
-status: "preparada — aguardando geração externa de arte"
+status: "executada e verificada"
 created: "2026-09-28"
 relations:
   - "[[ART-PROMPTS-024-cenario-e-quebraveis-por-bioma]]"
@@ -44,3 +44,12 @@ ART-PROMPTS-007).
 
 - Execução (integração na cena) só acontece depois que a arte for gerada e
   admitida.
+
+## Reconciliação
+
+- As três artes aprovadas foram normalizadas para PNG RGBA 256×256 e admitidas
+  em `assets/props/` em 2026-09-28.
+- Os tipos estão expostos em `ui/prop.gd` e têm instâncias decorativas, sem
+  colisão, em `ui/stages/molor.tscn`.
+- A suíte automatizada e o smoke do jogo passaram; ver
+  [[EVID-100-props-molor-candidatos-2026-09-28]].

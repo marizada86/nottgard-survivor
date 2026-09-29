@@ -1,7 +1,7 @@
 ---
 id: "SPEC-061"
 title: "Preparação da regeneração do piloto de Zumbi"
-status: "aprovada — brief local preparado; geração autorizada, aguardando execução externa pelo dono"
+status: "implementada — 20 células aprovadas e admitidas; captura visual interativa pendente por limitação do ambiente"
 created: "2026-09-28"
 relations:
   - "[[PLAN-032-proxima-atualizacao-pos-playtest-2026-09-28]]"
@@ -134,3 +134,14 @@ oficiais.
   ChatGPT não gera tiras de animação pixel-perfeitas diretamente; exige
   montagem manual dos 20 frames numa grade 256×384 depois de gerados.
 - Nenhum PNG oficial, lock ou registro canônico de Zumbi foi tocado.
+- 2026-09-29: o dono aprovou a prancha de 20 candidatas em EVID-103 e autorizou
+  sua admissão. As tiras foram normalizadas para `256×384` por célula e
+  substituíram somente `idle.png`, `move.png`, `attack.png` e `death.png` em
+  `assets/animations/enemies/zumbi/`; os quatro originais foram preservados em
+  `EVID-104-zumbi-pre-admission-backup/`.
+- A reimportação do Godot concluiu para as quatro tiras; `tests/run_all.gd`
+  terminou com `0 falha(s)` e `tools/smoke.tscn` com `smoke: ok` nas nove fases.
+  A tentativa de captura no runtime visual falhou porque o renderer headless
+  não fornece textura de viewport neste ambiente; a confirmação visual humana
+  ocorreu na prancha aprovada, e a captura interativa permanece uma exceção
+  registrada em EVID-104.

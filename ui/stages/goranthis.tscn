@@ -205,6 +205,21 @@ kind = "cachoeira"
 height = 90.35244226455688
 color = Color(0.78431374, 0.74509805, 0.50980395, 1)
 
+[node name="ColunaRachada" parent="Sorted" instance=ExtResource("3_txbf3")]
+position = Vector2(-704, 352)
+kind = "coluna_01"
+block_radius = 0.0
+
+[node name="FloresCorrompidas" parent="Sorted" instance=ExtResource("3_txbf3")]
+position = Vector2(736, 960)
+kind = "flor_01"
+block_radius = 0.0
+
+[node name="TacaCerimonial" parent="Sorted" instance=ExtResource("3_txbf3")]
+position = Vector2(768, 416)
+kind = "taca_dourada_01"
+block_radius = 0.0
+
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=1423137656]
 
 [node name="Spawn1" parent="SpawnPoints" unique_id=1837662586 instance=ExtResource("4_ouecp")]

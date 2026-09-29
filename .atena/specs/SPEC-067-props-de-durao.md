@@ -1,7 +1,7 @@
 ---
 id: "SPEC-067"
 title: "Props de cenário de Durao"
-status: "preparada — aguardando geração externa de arte"
+status: "executada e verificada"
 created: "2026-09-28"
 relations:
   - "[[ART-PROMPTS-024-cenario-e-quebraveis-por-bioma]]"
@@ -44,3 +44,12 @@ ART-PROMPTS-007).
 
 - Execução (integração na cena) só acontece depois que a arte for gerada e
   admitida.
+
+## Reconciliação
+
+- As três artes aprovadas foram normalizadas para PNG RGBA 256×256 e admitidas
+  em `assets/props/` em 2026-09-28.
+- Os tipos estão expostos em `ui/prop.gd` e têm instâncias decorativas, sem
+  colisão, em `ui/stages/durao.tscn`.
+- A suíte automatizada e o smoke do jogo passaram; ver
+  [[EVID-101-props-durao-candidatos-2026-09-28]].

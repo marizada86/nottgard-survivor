@@ -235,6 +235,27 @@ height = 66.08195304870605
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
+[node name="LanternaIntacta" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-704, 352)
+kind = "lanterna_01"
+height = 90.0
+half_width = 34.0
+block_radius = 0.0
+
+[node name="LanternaRasgada" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(800, 512)
+kind = "lanterna_02"
+height = 90.0
+half_width = 34.0
+block_radius = 0.0
+
+[node name="SinoTemplo" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(512, 1056)
+kind = "sino_01"
+height = 86.0
+half_width = 42.0
+block_radius = 0.0
+
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=1037812085]
 
 [node name="Spawn1" parent="SpawnPoints" unique_id=1837662586 instance=ExtResource("4_cl6t8")]

@@ -1,7 +1,7 @@
 ---
 id: "SPEC-068"
 title: "Props de cenário de Feng-tu"
-status: "preparada — aguardando geração externa de arte"
+status: "executada e verificada"
 created: "2026-09-28"
 relations:
   - "[[ART-PROMPTS-024-cenario-e-quebraveis-por-bioma]]"
@@ -43,3 +43,9 @@ ART-PROMPTS-007).
 
 - Execução (integração na cena) só acontece depois que a arte for gerada e
   admitida.
+
+## Reconciliação
+
+- As três artes aprovadas foram normalizadas para PNG RGBA 256×256, expostas
+  em `ui/prop.gd` e instanciadas sem colisão em `ui/stages/feng_tu.tscn`.
+- A suíte e o smoke passaram; ver [[EVID-102-props-feng-tu-candidatos-2026-09-28]].

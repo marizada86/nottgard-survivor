@@ -229,6 +229,21 @@ kind = "cristal"
 height = 58.39059
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
+[node name="Veu" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-704, 352)
+kind = "veu_01"
+block_radius = 0.0
+
+[node name="Taca" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(704, 960)
+kind = "taca_01"
+block_radius = 0.0
+
+[node name="Espelho" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(736, 352)
+kind = "espelho_ornado_01"
+block_radius = 0.0
+
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=749900560]
 
 [node name="Spawn1" parent="SpawnPoints" unique_id=1837662586 instance=ExtResource("4_xlgwy")]

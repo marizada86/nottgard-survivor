@@ -41,12 +41,12 @@ continua sendo a spec própria do Zumbi — esta aqui é só o índice).
 
 | Asset | Spec | Pasta do brief | Frames | Status |
 |---|---|---|---|---|
-| Zumbi (inimigo) | [[SPEC-061-preparacao-da-regeneracao-do-piloto-de-zumbi]] | `.atena/generated/zumbi-regeneration/v01/` | 20 (idle 4, move 6, attack 4, death 6) | Geração autorizada, aguardando execução externa do dono |
-| 7 quebráveis temáticos por bioma (imagem estática única cada) | [[SPEC-063-objetos-quebraveis-e-rebalanceamento-de-pocao]] | prompts em [[ART-PROMPTS-024-cenario-e-quebraveis-por-bioma]] (bloco "quebráveis") | 1 imagem cada (7 no total) | Prompts prontos; brief/template por asset ainda não montado — rodando com arte provisória reaproveitada |
-| Props de cenário de Shedaklah | [[SPEC-065-props-de-shedaklah]] | prompts em [[ART-PROMPTS-024-cenario-e-quebraveis-por-bioma]] | 3 imagens | Preparada; sem urgência — priorizar os 7 quebráveis primeiro |
-| Props de cenário de Molor | [[SPEC-066-props-de-molor]] | prompts em [[ART-PROMPTS-024-cenario-e-quebraveis-por-bioma]] | 3 imagens | Preparada; sem urgência |
-| Props de cenário de Durao | [[SPEC-067-props-de-durao]] | prompts em [[ART-PROMPTS-024-cenario-e-quebraveis-por-bioma]] | 3 imagens | Preparada; sem urgência |
-| Props de cenário de Feng-tu | [[SPEC-068-props-de-feng-tu]] | prompts em [[ART-PROMPTS-024-cenario-e-quebraveis-por-bioma]] | 3 imagens | Preparada; sem urgência |
+| Zumbi (inimigo) | [[SPEC-061-preparacao-da-regeneracao-do-piloto-de-zumbi]] | `.atena/generated/zumbi-regeneration/v01/` | 20 (idle 4, move 6, attack 4, death 6) | Processado em 2026-09-29: candidatas aprovadas, admitidas e validadas; evidências [[EVID-103-zumbi-candidatos-2026-09-29]] e [[EVID-104-zumbi-admissao-2026-09-29]] |
+| 7 quebráveis temáticos por bioma (imagem estática única cada) | [[SPEC-063-objetos-quebraveis-e-rebalanceamento-de-pocao]] | prompts em [[ART-PROMPTS-024-cenario-e-quebraveis-por-bioma]] (bloco "quebráveis") | 1 imagem cada (7 no total) | Processado em 2026-09-28: candidatas aprovadas, admitidas e validadas; evidência em [[EVID-098-lote-a-quebraveis-candidatos-2026-09-28]] |
+| Props de cenário de Shedaklah | [[SPEC-065-props-de-shedaklah]] | prompts em [[ART-PROMPTS-024-cenario-e-quebraveis-por-bioma]] | 3 imagens | Processado em 2026-09-28: admitidos e validados; evidência em [[EVID-099-props-shedaklah-candidatos-2026-09-28]] |
+| Props de cenário de Molor | [[SPEC-066-props-de-molor]] | prompts em [[ART-PROMPTS-024-cenario-e-quebraveis-por-bioma]] | 3 imagens | Processado em 2026-09-28: admitidos e validados; evidência em [[EVID-100-props-molor-candidatos-2026-09-28]] |
+| Props de cenário de Durao | [[SPEC-067-props-de-durao]] | prompts em [[ART-PROMPTS-024-cenario-e-quebraveis-por-bioma]] | 3 imagens | Processado em 2026-09-28: admitidos e validados; evidência em [[EVID-101-props-durao-candidatos-2026-09-28]] |
+| Props de cenário de Feng-tu | [[SPEC-068-props-de-feng-tu]] | prompts em [[ART-PROMPTS-024-cenario-e-quebraveis-por-bioma]] | 3 imagens | Processado em 2026-09-28: admitidos e validados; evidência em [[EVID-102-props-feng-tu-candidatos-2026-09-28]] |
 | Props de cenário de Shendilavri | [[SPEC-069-props-de-shendilavri]] | prompts em [[ART-PROMPTS-024-cenario-e-quebraveis-por-bioma]] | 3 imagens | Preparada; sem urgência |
 | Props de cenário de Goranthis | [[SPEC-070-props-de-goranthis]] | prompts em [[ART-PROMPTS-024-cenario-e-quebraveis-por-bioma]] | 3 imagens | Preparada; sem urgência |
 | Props de cenário dos Pilares | [[SPEC-071-props-dos-pilares]] | prompts em [[ART-PROMPTS-024-cenario-e-quebraveis-por-bioma]] | 3 imagens | Preparada; sem urgência |
@@ -65,3 +65,11 @@ continua sendo a spec própria do Zumbi — esta aqui é só o índice).
 - Fila viva: não fecha "executada" enquanto houver itens pendentes. Cada
   processamento de item gera sua própria evidência na spec do asset
   correspondente.
+
+## Reconciliação
+
+- 2026-09-28: o lote dos sete quebráveis foi executado após aprovação explícita
+  do dono. As versões aprovadas substituíram apenas os respectivos placeholders
+  em `assets/enemies/`; os originais foram preservados, a suíte passou com zero
+  falhas e o smoke confirmou as nove fases. Ver
+  [[EVID-098-lote-a-quebraveis-candidatos-2026-09-28]].

@@ -305,6 +305,27 @@ height = 47.862387895584106
 half_width = 25.92108
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
+[node name="EsporoCluster" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-704, 496)
+kind = "esporo_01"
+height = 82.0
+half_width = 25.0
+block_radius = 0.0
+
+[node name="EsporoTrio" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(704, 352)
+kind = "esporo_02"
+height = 70.0
+half_width = 28.0
+block_radius = 0.0
+
+[node name="LodoFungico" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(736, 960)
+kind = "lodo_01"
+height = 44.0
+half_width = 46.0
+block_radius = 0.0
+
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=1723495585]
 
 [node name="Spawn1" parent="SpawnPoints" unique_id=1837662586 instance=ExtResource("4_xu3x4")]

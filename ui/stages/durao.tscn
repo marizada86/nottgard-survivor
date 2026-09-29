@@ -206,6 +206,27 @@ kind = "rocha"
 height = 68.71849954128265
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
+[node name="CorrentePartida" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-704, 480)
+kind = "corrente_01"
+height = 46.0
+half_width = 45.0
+block_radius = 0.0
+
+[node name="PosteComGrilhao" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(800, 264)
+kind = "corrente_02"
+height = 76.0
+half_width = 32.0
+block_radius = 0.0
+
+[node name="OssosPrisioneiro" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-480, 1056)
+kind = "osso_01"
+height = 56.0
+half_width = 44.0
+block_radius = 0.0
+
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=241119624]
 
 [node name="Spawn1" parent="SpawnPoints" unique_id=1837662586 instance=ExtResource("4_i64nu")]

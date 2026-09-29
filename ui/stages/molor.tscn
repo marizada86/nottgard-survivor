@@ -319,6 +319,27 @@ height = 42.86801815032959
 half_width = 17.45795
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
+[node name="EstalactiteViscosa" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-704, 256)
+kind = "estalactite_01"
+height = 90.0
+half_width = 32.0
+block_radius = 0.0
+
+[node name="EstalactitesRachadas" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(768, 352)
+kind = "estalactite_02"
+height = 84.0
+half_width = 35.0
+block_radius = 0.0
+
+[node name="ResinaAcida" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(448, 1088)
+kind = "resina_01"
+height = 54.0
+half_width = 46.0
+block_radius = 0.0
+
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=965905639]
 
 [node name="Spawn1" parent="SpawnPoints" unique_id=1837662586 instance=ExtResource("4_whu23")]

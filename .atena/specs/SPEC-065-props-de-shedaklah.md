@@ -1,7 +1,7 @@
 ---
 id: "SPEC-065"
 title: "Props de cenário de Shedaklah"
-status: "preparada — aguardando geração externa de arte"
+status: "executada e verificada"
 created: "2026-09-28"
 relations:
   - "[[ART-PROMPTS-024-cenario-e-quebraveis-por-bioma]]"
@@ -46,3 +46,14 @@ Adicionar duas famílias novas de prop puramente decorativo a Shedaklah
 
 - Execução (integração na cena) só acontece depois que a arte for gerada e
   admitida — esta spec não bloqueia nem antecipa isso.
+
+## Reconciliação
+
+- 2026-09-28: `esporo_01`, `esporo_02` e `lodo_01` foram gerados, aprovados e
+  normalizados para PNG RGBA 256×256 em `assets/props/`.
+- `ui/prop.gd` passou a reconhecer os três IDs como assets diretos, sem
+  escolher variante aleatória; cada um foi instanciado em
+  `ui/stages/shedaklah.tscn` com `block_radius = 0.0`, preservando seu caráter
+  puramente decorativo.
+- Reimportação do Godot, suíte e smoke passaram. Evidência:
+  [[EVID-099-props-shedaklah-candidatos-2026-09-28]].
