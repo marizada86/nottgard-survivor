@@ -80,6 +80,7 @@ func _load_stage() -> void:
 	hero_node.apply_hero(battle.hero.id)
 	var ground: Node2D = stage_root.get_node("Ground")
 	var msize := Vector2(ground.map_size)
+	TerrainLayout.scale = msize.x / 40.0  # MEC-012: layouts foram desenhados para 40x40
 	battle.map_size = msize
 	battle.hero.map_size = msize
 	battle.hero.terrain_id = String(ground.get("terrain_layout_id"))

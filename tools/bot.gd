@@ -1,7 +1,10 @@
 extends SceneTree
 ## Bot de balanceamento (headless). Joga runs completas com kite + escolhas heurísticas.
 ##   godot --headless --path . -s tools/bot.gd -- <heroi> <seeds> [fase_inicial] [dt] [maxfases]
+##   6º argumento opcional: lado do mapa (40 padrão; 60 = mapa estendido da MEC-012).
 ## Saída: por seed, fases alcançadas, nível, tempo, causa da morte.
+
+var _map_side := 40.0
 
 func _init() -> void:
 	var a := OS.get_cmdline_user_args()
@@ -10,6 +13,8 @@ func _init() -> void:
 	var start: String = a[2] if a.size() > 2 else "dagruve"
 	var dt := float(a[3]) if a.size() > 3 else 0.06
 	var max_stages := int(a[4]) if a.size() > 4 else 8
+	_map_side = float(a[5]) if a.size() > 5 else 40.0
+	TerrainLayout.scale = _map_side / 40.0
 	var summary := {}
 	for s in seeds:
 		var r := _run(hero, s + 1, start, dt, max_stages)
@@ -21,6 +26,9 @@ func _init() -> void:
 
 func _run(hero_id: String, seed_v: int, start: String, dt: float, max_stages: int) -> Dictionary:
 	var b := Battle.new(seed_v, hero_id, start, {})
+	b.map_size = Vector2(_map_side, _map_side)
+	b.hero.map_size = b.map_size
+	b.hero.pos = b.map_size * 0.5
 	var stages_reached: Array = [start]
 	var t_total := 0.0
 	var steps := 0

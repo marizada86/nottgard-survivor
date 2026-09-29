@@ -133,6 +133,7 @@ func _atlas_uvs(texture: Texture2D, variant: int) -> PackedVector2Array:
 	])
 
 func _draw() -> void:
+	TerrainLayout.scale = float(map_size.x) / 40.0
 	var hw := Iso.TILE_W * 0.5
 	var hh := Iso.TILE_H * 0.5
 	var texture := _ground_texture()

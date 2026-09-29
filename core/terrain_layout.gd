@@ -38,6 +38,10 @@ const MATERIAL_PILLARS_BASALT := &"pillars_basalt"
 const MATERIAL_PILLARS_DUST := &"pillars_dust"
 const MATERIAL_PILLARS_FOUNDATION := &"pillars_foundation"
 
+## MAPA ESTENDIDO (MEC-012): o layout foi desenhado para 40x40. `scale` = lado do mapa / 40 (60x60 = 1,5); as consultas
+## convertem o ponto para o desenho original e devolvem distâncias já escaladas. Padrão 1.0 (testes e bot).
+static var scale := 1.0
+
 static var STYX_FLOW := Vector2(0.72, 0.48).normalized()
 const STYX_CENTER_X := 27.0
 const STYX_CURRENT_HALF_WIDTH := 1.25
@@ -108,12 +112,12 @@ static func goranthis_styxfall_center_x(y: float) -> float:
 static func goranthis_styxfall_offset(p: Vector2) -> float:
 	return absf(p.x - goranthis_styxfall_center_x(p.y))
 
-static func material_at(stage_id: String, p: Vector2) -> StringName:
+static func _material_local(stage_id: String, p: Vector2) -> StringName:
 	var generic_styx := _generic_styx_material(stage_id, p)
 	if generic_styx != &"":
 		return generic_styx
 	if stage_id == "durao":
-		if is_blocked(stage_id, p):
+		if _is_blocked_local(stage_id, p):
 			return MATERIAL_SLOPE
 		# Grandes manchas, em vez de variação independente por célula.
 		var patch := int(floor(p.x / 7.0) + floor(p.y / 6.0) * 3.0)
@@ -205,7 +209,7 @@ static func is_styx_current(stage_id: String, p: Vector2) -> bool:
 	# Durão usa o leito profundo; ele não causa deslocamento físico.
 	return stage_id == "durao" and material_at(stage_id, p) == MATERIAL_CURRENT
 
-static func distance_to_styx(stage_id: String, p: Vector2) -> float:
+static func _distance_to_styx_local(stage_id: String, p: Vector2) -> float:
 	if not STYX_STAGES.has(stage_id):
 		return INF
 	var half_width := STYX_SHALLOW_HALF_WIDTH
@@ -217,7 +221,7 @@ static func distance_to_styx(stage_id: String, p: Vector2) -> float:
 		half_width = 1.35
 	return maxf(0.0, regional_styx_offset(stage_id, p) - half_width)
 
-static func direction_to_styx(stage_id: String, p: Vector2) -> Vector2:
+static func _direction_to_styx_local(stage_id: String, p: Vector2) -> Vector2:
 	if not STYX_STAGES.has(stage_id):
 		return Vector2.ZERO
 	var center := styx_center_x(p.y)
@@ -235,7 +239,7 @@ static func flow_at(stage_id: String, p: Vector2) -> Vector2:
 	# O risco é de memória, não uma força de corrente física.
 	return Vector2.ZERO
 
-static func is_blocked(stage_id: String, p: Vector2) -> bool:
+static func _is_blocked_local(stage_id: String, p: Vector2) -> bool:
 	if stage_id != "durao":
 		return false
 	for mountain in MOUNTAINS:
@@ -244,9 +248,13 @@ static func is_blocked(stage_id: String, p: Vector2) -> bool:
 	return false
 
 static func mountain_anchors(stage_id: String) -> Array:
-	return MOUNTAINS.duplicate() if stage_id == "durao" else []
+	var out: Array = []
+	if stage_id == "durao":
+		for m in MOUNTAINS:
+			out.append(Vector3(m.x * scale, m.y * scale, m.z * scale))
+	return out
 
-static func styx_sample(stage_id: String, material: StringName = MATERIAL_CURRENT) -> Vector2:
+static func _styx_sample_local(stage_id: String, material: StringName = MATERIAL_CURRENT) -> Vector2:
 	if not STYX_STAGES.has(stage_id):
 		return Vector2(20.0, 20.0)
 	var y := 20.0
@@ -269,6 +277,21 @@ static func styx_sample(stage_id: String, material: StringName = MATERIAL_CURREN
 	if material == MATERIAL_SHALLOW and stage_id == "durao":
 		offset = bank_side * 1.8
 	return Vector2(center + offset, y)
+
+static func material_at(stage_id: String, p: Vector2) -> StringName:
+	return _material_local(stage_id, p / scale)
+
+static func is_blocked(stage_id: String, p: Vector2) -> bool:
+	return _is_blocked_local(stage_id, p / scale)
+
+static func distance_to_styx(stage_id: String, p: Vector2) -> float:
+	return _distance_to_styx_local(stage_id, p / scale) * scale
+
+static func direction_to_styx(stage_id: String, p: Vector2) -> Vector2:
+	return _direction_to_styx_local(stage_id, p / scale)
+
+static func styx_sample(stage_id: String, material: StringName = MATERIAL_CURRENT) -> Vector2:
+	return _styx_sample_local(stage_id, material) * scale
 
 static func color_for(material: StringName) -> Color:
 	match material:
