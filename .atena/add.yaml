@@ -18,10 +18,14 @@ git:
   publish: "explicit-approval"
 backlog:
   path: ".atena/backlog"
-  tracks: ["arte-audio", "mecanicas", "bugs"]
+  tracks: ["arte-audio", "mecanicas", "bugs", "ferramentas"]
   release_order: ["bugs", "arte-audio", "mecanicas"]
-  max_mechanics_per_batch: 2
+  mechanics_per_playtest_build: "unlimited"   # decisao do dono 2026-09-29: build rica em conteudo
+  one_commit_per_mechanic: true
   mechanics_share_commit_with_other_tracks: false
   bug_p0: "fix-immediately"
-  bug_batch_triggers: ["before-playtest-export", "before-new-mechanic", "five-or-more-p1"]
+  bug_batch_close: "next-playtest-with-new-version"   # bug implementado e nao citado de novo = corrigido
+  bug_batch_warning: "five-or-more-p1"
+  build_id_required_for_playtest: true
   remind_open_bugs: ["session-start", "before-export", "before-commit"]
+  check_script: "tools/backlog_check.ps1"

@@ -8,7 +8,22 @@ completo em [INTAKE.md](INTAKE.md).
 
 | ID | Chegou | Origem | Resumo | Destino sugerido |
 |---|---|---|---|---|
-| IN-032 | 2026-09-29 | [EVID-107](../evidence/EVID-107-playtest-publico-t02-hiago-2026-09-29.md) S2 | Print de Bromnor sem nota (PV 10/60, 00:48). Perguntar a Hiago o que mostrava | Aguardando resposta |
+| IN-032 | 2026-09-29 | [EVID-107](../evidence/EVID-107-playtest-publico-t02-hiago-2026-09-29.md) S2 | Print de Bromnor sem nota (PV 10/60, 00:48). Perguntar a Hiago o que mostrava | Aguardando resposta (ver a seção abaixo) |
+
+## Perguntas para o próximo playtest
+
+Decisão do dono (2026-09-29): dúvidas sobre relatos **não bloqueiam** o trabalho;
+entram no próximo questionário e na conversa com o tester. Fonte:
+[EVID-107](../evidence/EVID-107-playtest-publico-t02-hiago-2026-09-29.md) (perguntas para Hiago).
+
+| Para | Pergunta | Cartão que destrava |
+|---|---|---|
+| T02 Hiago | O herói mais jogado foi Leoric? Os pacotes só mostram Brook e Bromnor | — (dado de amostra) |
+| T02 Hiago | O print de Bromnor (PV 10/60, 00:48) queria mostrar o quê? | IN-032 |
+| T02 Hiago | "Manter um item 3 vezes consecutivas" = recusar a troca 3 vezes seguidas, ou é sobre a tela de oferta? | MEC-021 |
+| T02 Hiago | "Durar apenas 5 min" é o tempo da perda de INT do Estige (hoje permanente na run)? | MEC-022 |
+| T02 Hiago | "Fontes menos frequentes" eram as fontes de "+% PV"? | MEC-020 |
+| Todos | Perguntas novas da versão 0.2.0 (lista "O que testar" em [RELEASES.md](RELEASES.md)) | verificação dos cartões implementados |
 
 ## Classificados
 

@@ -1,7 +1,10 @@
 # INTAKE — como assimilar evidência de um novo jogador
 
-Cada pacote `NS-EV-public-AAAAMMDD-HHMMSS.zip` (F7) chega por Discord. Siga
-estes passos, um jogador por vez.
+Desde a [SPEC-078](../specs/SPEC-078-evidencias-diretas-de-playtest.md) o kit não gera mais
+ZIP nem manifesto: o jogo grava, ao lado do executável, a pasta `evidencias/`
+(`relato.txt`, `logs/jogo.log`, `imagens/print-*.png`), e o tester envia esses
+arquivos pelo Discord. (Os pacotes `NS-EV-public-*.zip` de EVID-106 a 108 são do
+formato antigo.) Siga estes passos, um jogador por vez.
 
 > Questionário de validação em PDF (14 frases + 3 prioridades) e o mapa
 > pergunta → cartão: [questionarios/](questionarios/QUESTIONARIO-002-validacao-EVID-106.md).
@@ -20,12 +23,13 @@ jogador no pacote; quem mandou vem do Discord.
 
 ## 2. Arquivar o bruto (não editar)
 
-1. Extrair cada zip em uma pasta temporária e ler `manifest.json`, `notas.md`,
-   `log.txt` e as capturas.
-2. Copiar as pastas para
-   `.atena/evidence/EVID-NNN-playtest-publico-tXX-<jogador>-<data>/` como
-   `S1-HHMMSS`, `S2-HHMMSS`… (ordem cronológica). Sem os `.zip`.
-3. Verificar o `log.txt`: procurar `erro`, `warn`, `fail`, crash e comportamento
+1. Ler `relato.txt` (cada nota traz data, hora e contexto), `logs/jogo.log` e os
+   prints. O contexto de cada nota inclui `"commit"`: o **hash da build** jogada
+   (TOOL-001); `dev` = execução local, `+` no fim = árvore com alterações.
+2. Copiar os arquivos recebidos para
+   `.atena/evidence/EVID-NNN-playtest-publico-tXX-<jogador>-<data>/S1-HHMMSS/`
+   (uma pasta por envio, em ordem cronológica).
+3. Verificar o `jogo.log`: procurar `erro`, `warn`, `fail`, crash e comportamento
    estranho, mesmo que o jogador não tenha citado.
 4. Olhar os prints das notas que citam bug para confirmar (ex.: objeto fora do mapa).
 

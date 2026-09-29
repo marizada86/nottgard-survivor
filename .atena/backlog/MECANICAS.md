@@ -35,14 +35,14 @@ anterior fechado (ver [README](README.md)).
 | MEC-024 | médio | Mais dificuldade e mais mobs **no início da campanha** (curva mais dura no começo, mais fácil ao evoluir). T03 pede **mais mobs, mais dano e menos PV** (confirmado pelo dono). Exige rodada do bot **por herói**: sinais divergem entre T02 e T03. Ver PLAN-038 | [EVID-108](../evidence/EVID-108-playtest-publico-t03-dna-2026-09-29.md) IN-035, IN-037, IN-039 · 1 relato | —. **IMPLEMENTADO 2026-09-29** ([[SPEC-083-abertura-de-fase-mais-cheia]]), só mais mobs nos primeiros minutos, por decisão do dono | — |
 | MEC-026 | médio | Regra do ritual (BUG-014): interromper o ritual dá **Bênção do Selo** temporária (+20% dano, +15% velocidade, +1,0 coleta por 20 s). **IMPLEMENTADO 2026-09-29** ([[SPEC-084-bencao-do-selo-no-ritual]]) | [EVID-107](../evidence/EVID-107-playtest-publico-t02-hiago-2026-09-29.md) IN-019, EVID-106 IN-001 · T03 discordou | — | [[SPEC-084-bencao-do-selo-no-ritual]] |
 
-### Sugestão de lotes (Atena)
+### Como as mecânicas entram em versão
 
-1. **Lote M1 — baixo risco:** MEC-001 + MEC-002 (ou MEC-007 no lugar de um deles, que só mexe em JSON). Só
-   mexem em entrada, HUD e números simples.
-2. **Lote M2 — conteúdo novo:** MEC-004 + MEC-005, depois de o playtest público
-   (PLAN-036) trazer dados. MEC-003 fica para um lote M3, porque toca Quartel e
-   Códex.
-3. Não decidir M2 antes das respostas: evita reagir a uma amostra única.
+Sem limite por versão de playtest (decisão do dono, 2026-09-29); o quadro de
+conteúdo e a lista "O que testar" estão em [RELEASES.md](RELEASES.md). Para variar
+o que o tester experimenta, escolher **uma mecânica de cada tipo** (controle/UX,
+economia, combate, evento) em vez de várias do mesmo tipo. Risco **alto** (MEC-010,
+MEC-011, MEC-012, MEC-015, MEC-016) ganha spec e teste próprios, e o bot quando
+mexer em números.
 
 ## Fechados (histórico do backlog do Hiago, [PLAN-030](../vault/drafts/PLAN-030-backlog-hiago-itens-equipamento-e-economia-2026-09-27.md))
 

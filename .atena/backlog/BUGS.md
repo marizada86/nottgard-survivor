@@ -1,8 +1,10 @@
 # BUGS — defeitos e dívida de verificação
 
 Severidade: **P0** corrige na hora · **P1** acumula, quebra função · **P2** cosmético.
-Estado da semeadura (2026-09-29; atualizado com EVID-107): nenhum defeito **confirmado** aberto nos
-registros. Abaixo ficam os suspeitos e a dívida de verificação manual.
+Estado (2026-09-29): há defeitos **confirmados por mais de um tester** (BUG-011 a 015), todos
+**implementados e aguardando o próximo playtest**. O que resta de BUG-001 a 010 é
+suspeita e **dívida de verificação manual**. Ciclo de vida e regra de fechamento
+no [README](README.md); estado atual sai de `tools/backlog_check.ps1`.
 
 ## Abertos
 
@@ -38,9 +40,9 @@ abaixo. Cada item vira BUG-nnn se falhar.
 | BUG-015 | P1 | Ferreiro: prévia de equipamento Nv+1 mostra os **mesmos** mods do nível atual (a escala +15 % só entra na agregação) e, com valores inteiros pequenos, o +15 % é truncado (`Hero.cam()` usa `int()`): "Nv 2 não melhora nada" | [EVID-107](../evidence/EVID-107-playtest-publico-t02-hiago-2026-09-29.md) IN-028 (prints 003 e 005; código `core/battle.gd` `shop_item_up`, `core/hero.gd` `recalc`) | **Confirmado** por print + leitura de código. Reabre a verificação de BUG-008. Corrigir a prévia (mostrar mods já escalados) e o arredondamento. **IMPLEMENTADO 2026-09-29 (aguarda run real):** `Items.scaled_mods`/`upgrade_preview` mostram "Nv atual" e "Nv seguinte" já escalados; `mods_text` deixou de truncar 4.6 para 4; armas passam a ter rótulo em português ("recarga (s)", "marca"…). O truncamento de CAM/CA inteiros somados segue (as frações acumulam entre itens) | — |
 
 
-> Sugestão da Atena: as verificações BUG-003 a 010 cabem em **uma única run QA**
-> (roteiro do PLAN-033). Fazê-las antes de exportar novo playtest ou de abrir
-> mecânica nova.
+> Decisão do dono (2026-09-29): as verificações BUG-003 a 010 são pagas **no
+> próximo playtest** (a versão 0.2.0 traz a lista "O que testar"); não bloqueiam
+> exportação nem mecânica nova.
 
 ## Fechados
 
