@@ -86,7 +86,9 @@ var _cur_angle := 0.0
 var _trickle := 0.0
 var _grid := {}
 var _first_inter := true
-var speed_2x := false          # MEC-010: simulação ×2, só em fase já vencida
+var keep_streak := {}          # MEC-021: recusas seguidas de trocar o item de cada slot
+const KEEP_STREAK_NEEDED := 3
+var speed_mult := 1.0          # MEC-010: simulação ×1,5 ou ×2, só em fase já vencida
 var cleared_stages: Array = []  # ids das fases que o perfil já venceu (preenchido por ui/run.gd)
 var active_def: Dictionary = {}
 var active_cd := 0.0
@@ -1257,6 +1259,7 @@ func _add_xp(v: float) -> void:
 		hero.level += 1
 		hero.xp_need = xp_need_for(hero.level)
 		pending_levels += 1
+		hero.recalc()
 	if pending_levels > 0 and state == "running":
 		_open_levelup()
 
@@ -1281,17 +1284,20 @@ func can_speed_2x() -> bool:
 	return cleared_stages.has(stage_id)
 
 func speed_scale() -> float:
-	return 2.0 if speed_2x and can_speed_2x() else 1.0
+	return speed_mult if can_speed_2x() else 1.0
 
-## Liga/desliga o 2x. Devolve o estado final; em fase nova recusa e explica.
+## Alterna 1x → 1,5x → 2x → 1x. Devolve true se a velocidade final é acelerada; em fase nova recusa e explica.
 func toggle_speed() -> bool:
 	if not can_speed_2x():
-		speed_2x = false
-		events.append({"type": "toast", "text": "O 2x libera depois de vencer este mapa."})
+		speed_mult = 1.0
+		events.append({"type": "toast", "text": "A velocidade extra libera depois de vencer este mapa."})
 		return false
-	speed_2x = not speed_2x
-	events.append({"type": "toast", "text": "Velocidade 2x ligada." if speed_2x else "Velocidade normal."})
-	return speed_2x
+	speed_mult = 1.5 if speed_mult < 1.4 else (2.0 if speed_mult < 1.9 else 1.0)
+	events.append({"type": "toast", "text": "Velocidade %s." % speed_label() if speed_mult > 1.0 else "Velocidade normal."})
+	return speed_mult > 1.0
+
+func speed_label() -> String:
+	return "2x" if speed_mult > 1.9 else ("1,5x" if speed_mult > 1.4 else "1x")
 
 ## MEC-010: a Ampulheta adianta o relógio do mapa; os spawns que seriam gerados no intervalo chegam de uma vez.
 func _use_hourglass() -> bool:
@@ -1353,7 +1359,7 @@ func interact() -> bool:
 	var best: Dictionary = {}
 	var bd := 1.6
 	for it in interactions:
-		if not it.used and time - float(it.get("born_at", 0.0)) >= 0.65 and it.kind in ["altar", "ritual", "portal", "loja", "ferreiro", "curandeiro", "ampulheta"]:
+		if not it.used and time - float(it.get("born_at", 0.0)) >= 0.65 and it.kind in ["altar", "ritual", "portal", "loja", "ferreiro", "curandeiro", "ampulheta", "doacao", "aposta"]:
 			var d: float = it.pos.distance_to(hero.pos)
 			if d <= bd:
 				bd = d
@@ -1379,6 +1385,8 @@ func interact() -> bool:
 			enter_next_stage()
 		"loja", "ferreiro", "curandeiro":
 			_open_shop_event(String(best.kind))
+		"doacao", "aposta":
+			_open_risk_event(String(best.kind))
 		"ampulheta":
 			if not _use_hourglass():
 				best.used = false
@@ -1443,6 +1451,32 @@ func _open_shop_event(kind: String) -> void:
 	offer_kind = "shop_%s" % kind
 	state = "shop"
 
+## MEC-005: eventos de risco e recompensa. Doação: sacrifica um equipamento por uma bênção à escolha. Aposta: moedas em jogo.
+func _open_risk_event(kind: String) -> void:
+	offer = []
+	var cfg: Dictionary = Data.table("difficulty").get("risk_events", {})
+	if kind == "doacao":
+		var have: Array = hero.boons.map(func(b): return b.id)
+		var left: Array = Data.table("boons").boons.filter(func(b): return not (b.id in have))
+		if left.is_empty() or hero.items.is_empty():
+			offer.append(_shop_info("Nada a trocar", "Sem equipamento para doar ou sem bênçãos restantes."))
+		else:
+			for slot in hero.items:
+				var it: Dictionary = hero.items[slot]
+				offer.append({"t": "donate", "name": "Doar %s [%s]" % [String(it.name), String(it.rarity)],
+					"desc": "Perde: %s\nGanha: uma bênção à escolha entre 3." % Items.mods_text(Items.scaled_mods(it, int(it.get("level", 1)))),
+					"slot": slot, "price": 0, "locked": false})
+	else:
+		var chance := float(cfg.get("bet_win_chance", 0.45))
+		var gold := int(hero.gold)
+		for pct in [0.2, 0.5, 1.0]:
+			var bet := maxi(int(cfg.get("bet_min", 20)), int(round(float(gold) * pct)))
+			offer.append(_shop_row("gamble", "Apostar %d moedas" % bet,
+				"%d%% de chance de dobrar; %d%% de perder tudo." % [int(round(chance * 100.0)), int(round((1.0 - chance) * 100.0))], bet, {"bet": bet}))
+	offer.append({"t": "shop_leave", "name": "Sair", "desc": "Nada te obriga a arriscar.", "price": 0})
+	offer_kind = "shop_%s" % kind
+	state = "shop"
+
 func _open_chest(it: Dictionary) -> void:
 	stats.chests += 1
 	if String(it.kind) == "boss_chest":
@@ -1488,7 +1522,7 @@ func give_item(item: Dictionary) -> void:
 			"desc": "%s\nContra o atual: %s\n(vende %s por %d moedas)" % [Items.mods_text(item.mods), Items.compare_text(item.mods, cur_now), cur.name, int(gold_for_cur)],
 			"keep": item, "sell": cur, "equips": true, "tooltip": "Equipado agora: %s\n%s" % [cur.name, Items.mods_text(cur_now)]},
 		{"t": "item_swap", "name": "Manter %s [%s]" % [cur.name, cur.rarity],
-			"desc": "%s\nContra o novo: %s\n(vende %s por %d moedas)" % [Items.mods_text(cur_now), Items.compare_text(cur_now, item.mods), item.name, int(gold_for_new)],
+			"desc": "%s\nContra o novo: %s\n(vende %s por %d moedas)%s" % [Items.mods_text(cur_now), Items.compare_text(cur_now, item.mods), item.name, int(gold_for_new), _keep_hint(String(cur.slot), cur)],
 			"keep": cur, "sell": item, "tooltip": "Novo item: %s\n%s" % [item.name, Items.mods_text(item.mods)]},
 	]
 	offer_kind = "item"
@@ -1514,6 +1548,25 @@ func _resolve_item_choice(keep: Dictionary, sell: Dictionary) -> void:
 	var g: float = 8.0 * float(Items.RANK[sell.rarity] + 1)
 	_add_gold(g)
 	events.append({"type": "toast", "text": "%s vendido (+%d moedas)" % [sell.name, int(g)], "color": Items.rarity_color(sell.rarity)})
+
+func _keep_hint(slot: String, cur: Dictionary) -> String:
+	if String(cur.get("base", "")) == "" or int(cur.get("level", 1)) >= Items.MAX_LEVEL:
+		return ""
+	return "\nFidelidade %d/%d: manter %d vezes seguidas sobe o nível." % [int(keep_streak.get(slot, 0)) + 1, KEEP_STREAK_NEEDED, KEEP_STREAK_NEEDED]
+
+## MEC-021: recusar a troca 3 vezes seguidas no mesmo slot sobe o nível do item equipado (só itens com nível).
+func _register_keep(slot: String) -> void:
+	var cur: Variant = hero.items.get(slot)
+	if cur == null or String(cur.get("base", "")) == "" or int(cur.get("level", 1)) >= Items.MAX_LEVEL:
+		return
+	keep_streak[slot] = int(keep_streak.get(slot, 0)) + 1
+	if int(keep_streak[slot]) < KEEP_STREAK_NEEDED:
+		events.append({"type": "toast", "text": "Fidelidade: %s (%d/%d)" % [String(cur.name), int(keep_streak[slot]), KEEP_STREAK_NEEDED]})
+		return
+	keep_streak[slot] = 0
+	cur.level = int(cur.get("level", 1)) + 1
+	hero.recalc()
+	events.append({"type": "toast", "text": "Fidelidade recompensada: %s sobe para Nv %d!" % [String(cur.name), int(cur.level)], "color": Color(1.0, 0.85, 0.3)})
 
 func _open_altar() -> void:
 	var boons: Array = Data.table("boons").boons.duplicate()
@@ -1739,6 +1792,26 @@ func choose(i: int) -> void:
 				if hero.gold >= int(c.price):
 					hero.gold -= int(c.price)
 					_heal_hero(float(c.amount))
+			"donate":
+				var donated: Dictionary = hero.items.get(String(c.slot), {})
+				if not donated.is_empty():
+					hero.items.erase(String(c.slot))
+					var donated_weapon := String(donated.get("weapon", ""))
+					if donated_weapon != "":
+						hero.weapons = hero.weapons.filter(func(w): return not (w.granted and w.id == donated_weapon))
+					hero.recalc()
+					events.append({"type": "toast", "text": "%s foi doado ao altar." % String(donated.name)})
+					_open_altar()
+					return
+			"gamble":
+				var risk: Dictionary = Data.table("difficulty").get("risk_events", {})
+				if hero.gold >= int(c.bet):
+					if rng.randf() < float(risk.get("bet_win_chance", 0.45)):
+						hero.gold += int(c.bet)  # ganho não entra em stats.gold: não infla a recompensa da run
+						events.append({"type": "toast", "text": "A sorte sorri: +%d moedas!" % int(c.bet), "color": Color(1.0, 0.85, 0.3)})
+					else:
+						hero.gold -= int(c.bet)
+						events.append({"type": "toast", "text": "A casa vence: -%d moedas." % int(c.bet), "color": Color(0.9, 0.4, 0.4)})
 			"shop_item_up":
 				if hero.gold >= int(c.price) and hero.items.has(String(c.slot)):
 					hero.items[String(c.slot)].level = int(hero.items[String(c.slot)].get("level", 1)) + 1
@@ -1753,7 +1826,10 @@ func choose(i: int) -> void:
 		"item_swap":
 			_resolve_item_choice(c.keep, c.sell)
 			if c.get("equips", false):
+				keep_streak[String(c.keep.slot)] = 0
 				events.append({"type": "item", "item": c.keep})
+			else:
+				_register_keep(String(c.keep.slot))
 		"weapon_new":
 			hero.weapons.append(Weapon.make(String(c.id)))
 			codex.weapons[String(c.id)] = true

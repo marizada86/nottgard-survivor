@@ -94,10 +94,15 @@ func recalc() -> void:
 		add_mods(m, b.mods)
 	mods = m
 	var old_max := max_hp
-	max_hp = maxf(10.0, float(base_hp) + attr_mod("constituicao") * 2.0 + float(m.get("hp", 0.0)))
+	max_hp = maxf(10.0, float(base_hp) + attr_mod("constituicao") * 2.0 + float(m.get("hp", 0.0)) + level_growth_hp())
 	if old_max > 1.0 and max_hp > old_max:
 		hp += max_hp - old_max
 	hp = minf(hp, max_hp)
+
+## MEC-014: a partir de start_level cada nível dá PV fixos, para o herói não estagnar na fase tardia (dados em data/difficulty.json).
+func level_growth_hp() -> float:
+	var g: Dictionary = Data.table("difficulty").get("level_growth", {})
+	return float(maxi(0, level - int(g.get("start_level", 999)) + 1)) * float(g.get("hp_per_level", 0.0))
 
 func m(key: String) -> float:
 	return float(mods.get(key, 0.0))

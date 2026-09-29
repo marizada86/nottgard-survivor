@@ -9,6 +9,7 @@ signal again_pressed
 signal menu_pressed
 signal aim_pressed
 signal help_pressed
+signal speed_pressed
 signal revive_pressed
 signal decline_revive_pressed
 signal items_closed
@@ -61,6 +62,7 @@ func _ready() -> void:
 	%AgainBtn.pressed.connect(func(): again_pressed.emit())
 	%MenuBtn.pressed.connect(func(): menu_pressed.emit())
 	%HelpBtn.pressed.connect(func(): help_pressed.emit())
+	%SpeedBtn.pressed.connect(func(): speed_pressed.emit())
 	%PauseHelpBtn.pressed.connect(func(): help_pressed.emit())
 	%ReviveBtn.pressed.connect(func(): revive_pressed.emit())
 	%DeclineReviveBtn.pressed.connect(func(): decline_revive_pressed.emit())
@@ -124,7 +126,10 @@ func update_stats(b: Battle) -> void:
 		timer_label.text = "CHEFE"
 	else:
 		timer_label.text = "%02d:%02d" % [t / 60, t % 60]
-	stage_label.text = "%s%s%s" % [b.stage.name, "  (Mira: %s)" % ("AUTO" if b.aim == Battle.Aim.AUTO else "MOUSE"), "  [2x]" if b.speed_scale() > 1.5 else ""]
+	stage_label.text = "%s%s%s" % [b.stage.name, "  (Mira: %s)" % ("AUTO" if b.aim == Battle.Aim.AUTO else "MOUSE"), "  [%s]" % b.speed_label() if b.speed_scale() > 1.0 else ""]
+	%SpeedBtn.visible = b.can_speed_2x()
+	%SpeedBtn.set_pressed_no_signal(b.speed_scale() > 1.0)
+	%SpeedBtn.text = b.speed_label() if b.can_speed_2x() else "1x"
 	if b.boss != null and not b.boss.dead and b.boss_spawned:
 		boss_panel.visible = true
 		boss_name.text = b.boss.name
@@ -148,9 +153,9 @@ func update_stats(b: Battle) -> void:
 	weapons_label.text = "\n".join(lines)
 	var pr := ""
 	for it in b.interactions:
-		if not it.used and it.kind in ["altar", "ritual", "portal", "loja", "ferreiro", "curandeiro", "ampulheta"] and it.pos.distance_to(h.pos) <= 1.6:
+		if not it.used and it.kind in ["altar", "ritual", "portal", "loja", "ferreiro", "curandeiro", "ampulheta", "doacao", "aposta"] and it.pos.distance_to(h.pos) <= 1.6:
 			pr = "[E] " + {"altar": "rezar no altar", "ritual": "iniciar o ritual", "portal": "descer pelo portal",
-				"loja": "negociar na loja", "ferreiro": "forjar no ferreiro", "curandeiro": "buscar cura", "ampulheta": "girar a ampulheta (+60 s, inimigos acumulados)"}[it.kind]
+				"loja": "negociar na loja", "ferreiro": "forjar no ferreiro", "curandeiro": "buscar cura", "ampulheta": "girar a ampulheta (+60 s, inimigos acumulados)", "doacao": "doar um item por uma bênção", "aposta": "arriscar moedas na mesa"}[it.kind]
 	if pr == "" and (b.stage_cleared or b.final_victory):
 		pr = "[X] Extrair ×%.2f" % b.reward_multiplier()
 		if b.stage.get("next", "") != "":
@@ -160,7 +165,7 @@ func update_stats(b: Battle) -> void:
 func show_offer(b: Battle) -> void:
 	for c in offer_box.get_children():
 		c.queue_free()
-	var shop_titles := {"shop_loja": "Loja — compre ou saia", "shop_ferreiro": "Ferreiro — forje uma arma", "shop_curandeiro": "Curandeiro — cure suas feridas"}
+	var shop_titles := {"shop_loja": "Loja — compre ou saia", "shop_ferreiro": "Ferreiro — forje uma arma", "shop_curandeiro": "Curandeiro — cure suas feridas", "shop_doacao": "Altar da Doação — troque um item por uma bênção", "shop_aposta": "Mesa de Aposta — arrisque suas moedas"}
 	if b.offer_kind == "levelup":
 		lv_title.text = "Nível %d — escolha (1-%d)" % [b.hero.level, b.offer.size()]
 	elif b.offer_kind == "item":

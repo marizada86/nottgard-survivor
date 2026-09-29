@@ -80,16 +80,89 @@ func run() -> Array:
 	if dm.evolve_hint(sw).find("Pronta") < 0:
 		out.append("dica de evolução deveria avisar que a arma está pronta")
 
+	# MEC-021: recusar a troca 3 vezes seguidas sobe o nível do item equipado
+	var fk := _bat(71)
+	_quiet(fk)
+	var cota_b: Dictionary = Data.table("items").bases.armadura.filter(func(b): return b.id == "cota")[0]
+	fk.hero.items["armadura"] = {"id": "cota_fk", "base": "cota", "name": "Cota", "slot": "armadura", "rarity": "comum", "mods": cota_b.mods.duplicate(), "level": 1}
+	for i in 3:
+		fk.give_item({"id": "novo_%d" % i, "name": "Novo", "slot": "armadura", "rarity": "comum", "mods": {"ca": 1.0}, "level": 1})
+		if i == 0 and String(fk.offer[1].desc).find("Fidelidade 1/3") < 0:
+			out.append("oferta de manter deveria mostrar o progresso da fidelidade")
+		fk.choose(1)
+	if int(fk.hero.items.armadura.level) != 2:
+		out.append("3 recusas seguidas deveriam subir o item para Nv 2 (nível %d)" % int(fk.hero.items.armadura.level))
+	fk.give_item({"id": "novo_x", "name": "Novo", "slot": "armadura", "rarity": "comum", "mods": {"ca": 1.0}, "level": 1})
+	fk.choose(0)
+	fk.give_item({"id": "novo_y", "name": "Novo", "slot": "armadura", "rarity": "comum", "mods": {"ca": 1.0}, "level": 1})
+	fk.choose(1)
+	if int(fk.keep_streak.get("armadura", 0)) != 0:
+		out.append("equipar um item novo deveria zerar a sequência (e itens sem nível não contam)")
+
+	# MEC-005: Altar da Doação troca um item por uma bênção à escolha; Mesa de Aposta mexe só em hero.gold
+	var dn := _bat(81)
+	_quiet(dn)
+	dn.hero.items["anel"] = {"id": "anel_dn", "name": "Anel de Teste", "slot": "anel", "rarity": "raro", "mods": {"cam": 2.0}, "level": 1}
+	dn.hero.recalc()
+	dn._open_risk_event("doacao")
+	if dn.state != "shop" or String(dn.offer[0].t) != "donate":
+		out.append("altar da doação deveria oferecer doar o item equipado")
+	else:
+		dn.choose(0)
+		if dn.hero.items.has("anel") or dn.state != "altar" or dn.offer.size() < 1:
+			out.append("doar deveria remover o item e abrir a escolha de bênção (estado %s)" % dn.state)
+	var gb := _bat(82)
+	_quiet(gb)
+	gb.hero.gold = 100
+	var gold_hist := float(gb.stats.gold)
+	gb._open_risk_event("aposta")
+	gb.choose(0)
+	if gb.hero.gold != 120 and gb.hero.gold != 80:
+		out.append("aposta de 20 deveria terminar em 120 ou 80 moedas (agora %d)" % gb.hero.gold)
+	if float(gb.stats.gold) != gold_hist:
+		out.append("aposta não deve alterar o ouro histórico da run")
+	if gb.state != "running":
+		out.append("aposta deveria fechar a mesa depois de resolver")
+	var gb2 := _bat(83)
+	_quiet(gb2)
+	gb2.hero.gold = 5
+	gb2._open_risk_event("aposta")
+	gb2.choose(0)
+	if gb2.state != "shop" or gb2.hero.gold != 5:
+		out.append("aposta sem moedas suficientes deveria ficar travada")
+
+	# MEC-014: PV por nível a partir de start_level; MEC-015: novos aprimoramentos existem e têm custo crescente
+	var lg := _bat(91)
+	_quiet(lg)
+	lg.hero.level = 14
+	lg.hero.recalc()
+	var hp14 := lg.hero.max_hp
+	lg.hero.level = 24
+	lg.hero.recalc()
+	if lg.hero.max_hp - hp14 < 9.9:
+		out.append("nível 24 deveria ter cerca de 10 PV a mais que o nível 14 (%.1f)" % (lg.hero.max_hp - hp14))
+	var up_ids: Array = []
+	for u in Data.table("upgrades").upgrades:
+		up_ids.append(u.id)
+		for i in range(1, u.costs.size()):
+			if int(u.costs[i]) <= int(u.costs[i - 1]):
+				out.append("custo do aprimoramento %s deveria crescer a cada nível" % u.id)
+	for needed in ["corpo_de_ferro", "mente_aguda", "braco_forte", "presenca", "regeneracao_meta"]:
+		if not up_ids.has(needed):
+			out.append("aprimoramento novo ausente: %s" % needed)
+
 	# MEC-010: 2x só em fase já vencida
 	var sp := _bat(41)
 	_quiet(sp)
 	if sp.toggle_speed() or sp.speed_scale() != 1.0:
 		out.append("2x não deveria ligar em fase ainda não vencida")
 	sp.cleared_stages = ["dagruve"]
+	if not sp.toggle_speed() or sp.speed_scale() != 1.5:
+		out.append("primeiro toggle deveria ligar 1,5x em fase já vencida")
 	if not sp.toggle_speed() or sp.speed_scale() != 2.0:
-		out.append("2x deveria ligar em fase já vencida")
+		out.append("segundo toggle deveria ir para 2x")
 	if sp.toggle_speed() or sp.speed_scale() != 1.0:
-		out.append("segundo toggle deveria voltar à velocidade normal")
+		out.append("terceiro toggle deveria voltar à velocidade normal")
 
 	# MEC-010: a Ampulheta adianta o relógio e despeja os spawns acumulados
 	var hg := _bat(42)

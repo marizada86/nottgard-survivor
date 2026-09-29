@@ -381,6 +381,8 @@ func _draw_over() -> void:
 			"loja": col = Color(1.0, 0.85, 0.3); label = "loja [E]"; asset = "loja"
 			"ferreiro": col = Color(1.0, 0.5, 0.2); label = "ferreiro [E]"; asset = "ferreiro"
 			"curandeiro": col = Color(0.4, 1.0, 0.5); label = "curandeiro [E]"; asset = "curandeiro"
+			"doacao": col = Color(0.75, 0.45, 1.0); label = "altar da doação [E]"; asset = "doacao"
+			"aposta": col = Color(0.95, 0.8, 0.3); label = "mesa de aposta [E]"; asset = "aposta"
 			"ampulheta": col = Color(0.85, 0.75, 1.0); label = "ampulheta [E]"; asset = "ampulheta"
 		# A simulação também bloqueia interação durante estes 0,65 s de entrada.
 		if arrival < 0.35:

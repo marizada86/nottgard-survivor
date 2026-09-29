@@ -13,6 +13,14 @@
     "charisma_step": 0.06
   },
   "styx_lucidity_seconds": 300,
+  "risk_events": {
+    "bet_win_chance": 0.45,
+    "bet_min": 20
+  },
+  "level_growth": {
+    "start_level": 15,
+    "hp_per_level": 1.0
+  },
   "hourglass": {
     "skip_seconds": 60,
     "burst_max": 18
