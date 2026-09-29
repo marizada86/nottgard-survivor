@@ -1,7 +1,7 @@
 # ARTE & ÁUDIO — assets, templates, layouts, backgrounds, sons
 
 Cada item acumula até fechar um lote. O lote vira **um** `ART-PROMPTS-NNN`
-(próximo livre: 030). Todo prompt segue o **Sabor Nottgard**: divindade e bioma
+(próximo livre: 031). Todo prompt segue o **Sabor Nottgard**: divindade e bioma
 envolvidos, paleta (RESEARCH-003), bestiário (RESEARCH-001), sem lore inventada.
 
 ## Abertos
@@ -37,6 +37,12 @@ envolvidos, paleta (RESEARCH-003), bestiário (RESEARCH-001), sem lore inventada
 > [ART-PROMPTS-028](../generated/ART-PROMPTS-028-hqs-onda-1.md) e
 > [ART-PROMPTS-029](../generated/ART-PROMPTS-029-hqs-onda-2.md)). Ainda não
 > enviada; não tem relação com os pedidos em andamento da FILA-001.
+>
+> **Remessa opcional — HQs, Trilha C:**
+> [CHATGPT-FILA-003](../generated/CHATGPT-FILA-003-hqs-trilha-c.md) (16 prompts,
+> C01–C16, origem em
+> [ART-PROMPTS-030](../generated/ART-PROMPTS-030-hqs-trilha-c.md)). Só vale
+> gerar se o MEC-015 (venda de HQs) for aprovado.
 
 ## Lote 1 — prompts prontos (2026-09-29)
 

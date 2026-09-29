@@ -101,7 +101,8 @@ de 72 imagens.
 - **Onda 1 (6 novas):** HQN-01 (piloto), 02, 03, 04, 05, 06. Cobre da abertura até
   Durão e libera Korrak com sua HQ. Testa o método antes de gastar o resto.
 - **Onda 2 (8 novas):** HQN-07 a 10 e a Trilha B (HQN-11 a 14).
-- **Onda 3:** Trilha C, apenas se a economia pedir (R4).
+- **Onda 3:** Trilha C, apenas se a economia pedir (R4). **Prompts prontos** em
+  [[ART-PROMPTS-030-hqs-trilha-c]] e [[CHATGPT-FILA-003-hqs-trilha-c]] (16 imagens); não enviados.
 
 ### R2. Um gatilho por evento que já existe
 
