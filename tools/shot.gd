@@ -8,7 +8,9 @@ func _ready() -> void:
 	Game.profile.data.name = "Teste"
 	Game.profile.data.welcome_seen = true
 	Playtest.visible = false
-	if mode == "run":
+	if mode == "title":
+		add_child(load("res://ui/title.tscn").instantiate())
+	elif mode == "run":
 		Game.run_stage = a[3] if a.size() > 3 else "dagruve"
 		Game.run_hero = a[4] if a.size() > 4 else "durvall"
 		var run: Node = load("res://ui/run.tscn").instantiate()
