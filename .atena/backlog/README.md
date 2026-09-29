@@ -69,7 +69,7 @@ da evidência — nunca é apagado.
 
 ## Numeração
 
-Próximos livres (2026-09-29, após EVID-108): `SPEC-081` (SPEC-079 fica
+Próximos livres (2026-09-29, após EVID-108): `SPEC-083` (SPEC-079 fica
 **reservada** à camada de decais do Lote 2; SPEC-080 é a das HQs), `EVID-110`,
 `PLAN-041`, `ART-PROMPTS-030`, `ART-018`, `MEC-026`, `BUG-016`, `IN-040`, jogador `T04`.
 

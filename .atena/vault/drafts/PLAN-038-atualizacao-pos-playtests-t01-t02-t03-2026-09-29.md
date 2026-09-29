@@ -146,6 +146,21 @@ mostra o item novo em destaque enganoso.
 | Auditorias automáticas | BUG-002: sem defeito de opacidade (`tools/audit_alpha_solidity.gd`). Bot Brook, Bromnor e Kayron, 4 sementes, código novo contra o de antes das correções: sem falha e sem queda grosseira (chegam a Docas 2 de 12 em ambos); amostra pequena, o bot morre cedo. Comparação limpa exige mais sementes |
 | 3 — versão 0.1.1 | Depois da Etapa 0: subir versão em `core/version.gd` e nas seis linhas de `export_presets.cfg`, exportar |
 
+## Decisão do dono em 2026-09-29 (revisão)
+
+O **fechamento do lote de bugs fica guardado**: não haverá run QA própria antes de
+seguir. A verificação passa para o **próximo playtest com uma versão nova**: se os
+playtesters **não voltarem a mencionar** um bug, ele é dado por corrigido. Efeitos:
+
+- O portão "lote de bugs fechado antes de mecânica" foi **dispensado** pelo dono;
+  M1 (MEC-019 e MEC-023) foi implementado em seguida, em commit próprio.
+- As versões 0.1.1 e 0.2.0 se fundem em **uma versão nova (0.2.0)**, com commits
+  separados: bugs, arte, mecânicas.
+- Os cartões BUG-011, 012, 013 e 015 ficam **"implementados, aguardando playtest"**
+  (não vão para Fechados) e o PLAN-039 vira roteiro opcional.
+- Risco aceito: se algo novo aparecer, fica mais difícil separar se veio da correção
+  ou do M1. Mitigação: commits separados permitem `git revert` isolado.
+
 ## Ordem de execução e portões
 
 ```
