@@ -1,7 +1,8 @@
 param(
     [Parameter(Mandatory = $true)]
     [string]$HeroId,
-    [string]$ProjectRoot = (Get-Location).Path
+    [string]$ProjectRoot = (Get-Location).Path,
+    [string]$SpecId = 'SPEC-044'
 )
 
 $ErrorActionPreference = 'Stop'
@@ -11,6 +12,7 @@ $outputDirectory = Join-Path $ProjectRoot '.atena/evidence/asset-review-boards'
 New-Item -ItemType Directory -Force -Path $outputDirectory | Out-Null
 
 $audit = Get-Content -Raw -LiteralPath $auditPath | ConvertFrom-Json
+$headerSpec = "SPEC-" + ($SpecId -replace '^SPEC-', '')
 $order = @('idle', 'move_n', 'move_ne', 'move_e', 'move_se', 'move_s', 'attack', 'active', 'death')
 $records = @($audit.records | Where-Object { $_.hero_id -eq $HeroId } | Sort-Object { $order.IndexOf($_.sequence) })
 if ($records.Count -ne 9) { throw "Expected 9 source sequences for $HeroId, got $($records.Count)" }
@@ -35,7 +37,7 @@ $cardBrush = New-Object System.Drawing.SolidBrush ([System.Drawing.Color]::FromA
 $checkA = New-Object System.Drawing.SolidBrush ([System.Drawing.Color]::FromArgb(52, 59, 71))
 $checkB = New-Object System.Drawing.SolidBrush ([System.Drawing.Color]::FromArgb(43, 49, 59))
 try {
-    $graphics.DrawString("SPEC-044 / $HeroId - 9 strips finais", $titleFont, $labelBrush, 18, 12)
+    $graphics.DrawString("$headerSpec / $HeroId - 9 strips finais", $titleFont, $labelBrush, 18, 12)
     $graphics.DrawString('Arquivo final atual - revisao humana pendente; integridade tecnica nao e aprovacao artistica.', $metaFont, $mutedBrush, 20, 47)
     for ($index = 0; $index -lt $records.Count; $index++) {
         $record = $records[$index]
@@ -65,7 +67,7 @@ try {
         }
         finally { $image.Dispose() }
     }
-    $outputPath = Join-Path $outputDirectory "SPEC-044-$HeroId-final-review.png"
+    $outputPath = Join-Path $outputDirectory "$SpecId-$HeroId-final-review.png"
     $bitmap.Save($outputPath, [System.Drawing.Imaging.ImageFormat]::Png)
     Write-Output "board=$outputPath"
 }

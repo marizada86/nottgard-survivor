@@ -1,6 +1,6 @@
 ﻿{
     "schema_version":  1,
-    "generated_at":  "2026-09-27T18:27:44.9608060Z",
+    "generated_at":  "2026-09-29T17:49:46.9739953Z",
     "source_manifest":  ".atena/generated/HERO-ANIMATION-PROMPT-MANIFEST-001.json",
     "declared_source_sequences":  90,
     "audited_records":  90,
@@ -14,7 +14,7 @@
                                         "sequence":  "idle",
                                         "final_path":  "assets/animations/heroes/nyrelia/idle.png",
                                         "final_exists":  true,
-                                        "final_sha256":  "dde7660102aa6b400fea90f843b5bdc448964dfe08abb58f971bb45360d16662",
+                                        "final_sha256":  "7fa0f6700ada6fb5a362d14604a259aee4f30e44088cf55be00b21b562abc9e6",
                                         "dimensions":  "1024x384",
                                         "alpha":  true,
                                         "frames":  4,
@@ -59,7 +59,7 @@
                                         "sequence":  "move_n",
                                         "final_path":  "assets/animations/heroes/nyrelia/move_n.png",
                                         "final_exists":  true,
-                                        "final_sha256":  "0fb01a27dcf54835c7d250373d83c7fe753caa001b35036e8948b1cb0ce9bc37",
+                                        "final_sha256":  "c1c89d0d17c0068b67cf390ca567390313dd2551c3a335cd1849826351dbd4e7",
                                         "dimensions":  "1536x384",
                                         "alpha":  true,
                                         "frames":  6,
@@ -131,7 +131,7 @@
                                         "sequence":  "move_ne",
                                         "final_path":  "assets/animations/heroes/nyrelia/move_ne.png",
                                         "final_exists":  true,
-                                        "final_sha256":  "c315b6cc1ddcc9a696fe4917e43bc02d45676ea171ea5e9e6878945885b1542a",
+                                        "final_sha256":  "669cd3a05beab27bc0abfd1451efb58e711c5b8abe073676de5eb130c8d2b32a",
                                         "dimensions":  "1536x384",
                                         "alpha":  true,
                                         "frames":  6,
@@ -176,7 +176,7 @@
                                         "sequence":  "move_e",
                                         "final_path":  "assets/animations/heroes/nyrelia/move_e.png",
                                         "final_exists":  true,
-                                        "final_sha256":  "f2b7370e8af72fec09d870b2f210781f8a4d726c9c87ff6ad3125b25f5e0df35",
+                                        "final_sha256":  "1853f70299e13e5bed1e3821aba52575a72c922b3ded789bb8038798284a7be7",
                                         "dimensions":  "1536x384",
                                         "alpha":  true,
                                         "frames":  6,
@@ -221,7 +221,7 @@
                                         "sequence":  "move_se",
                                         "final_path":  "assets/animations/heroes/nyrelia/move_se.png",
                                         "final_exists":  true,
-                                        "final_sha256":  "4d573c78aa83f85b5a273f1deff5b66b1cf0a5bac1e428a44b47c1a8398f4301",
+                                        "final_sha256":  "641d51e64781a8e34772eeec6d11250f3c3e431d0b75c11ef7ef2389a6170ac6",
                                         "dimensions":  "1536x384",
                                         "alpha":  true,
                                         "frames":  6,
@@ -266,7 +266,7 @@
                                         "sequence":  "move_s",
                                         "final_path":  "assets/animations/heroes/nyrelia/move_s.png",
                                         "final_exists":  true,
-                                        "final_sha256":  "aab6bf6178de9185c751ed5e24f248014debc60fdb0c1ee8cc2ea0e277d73097",
+                                        "final_sha256":  "2244f9cdaa8b0f95c992608e1dae2e5e35723df764d8a1a237910db5f9071950",
                                         "dimensions":  "1536x384",
                                         "alpha":  true,
                                         "frames":  6,
@@ -338,7 +338,7 @@
                                         "sequence":  "attack",
                                         "final_path":  "assets/animations/heroes/nyrelia/attack.png",
                                         "final_exists":  true,
-                                        "final_sha256":  "1a763f52de249085d6fb6017963b49b0f7d48c027a67d5a1375421ad78fcf996",
+                                        "final_sha256":  "ff157e2e88b61ed7a9c0aaec6c1cc4f20baaa52f3233cb1c7b25b711ff4df1b8",
                                         "dimensions":  "1024x384",
                                         "alpha":  true,
                                         "frames":  4,
@@ -383,7 +383,7 @@
                                         "sequence":  "active",
                                         "final_path":  "assets/animations/heroes/nyrelia/active.png",
                                         "final_exists":  true,
-                                        "final_sha256":  "3a129528260295559733f8c254b32d6dd26e8a602e10a0880a13f4f6ea4c3d14",
+                                        "final_sha256":  "4d0f970da79c3fb298642dae9a2a259486b8aff78da49c7c151601ecfa0febb3",
                                         "dimensions":  "1536x384",
                                         "alpha":  true,
                                         "frames":  6,
@@ -428,7 +428,7 @@
                                         "sequence":  "death",
                                         "final_path":  "assets/animations/heroes/nyrelia/death.png",
                                         "final_exists":  true,
-                                        "final_sha256":  "42eb7005cadb3407f719648a704a258b58992149d0028cd3b5460652ee017174",
+                                        "final_sha256":  "f3d42a56579f3d49f0bf382afad46171ac801afaa74603ea9c510d8d97fa8b19",
                                         "dimensions":  "1536x384",
                                         "alpha":  true,
                                         "frames":  6,
@@ -939,7 +939,7 @@
                         "sequence":  "idle",
                         "final_path":  "assets/animations/heroes/brook/idle.png",
                         "final_exists":  true,
-                        "final_sha256":  "c39cc3a7df118369d74a7b6fabf51f2815e2dacef8359b5c4a066a54d3215d54",
+                        "final_sha256":  "01187e845ab43f8be3b72880d73084997ce70b4498490fce978f5fb47470b80a",
                         "dimensions":  "1024x384",
                         "alpha":  true,
                         "frames":  4,
@@ -1009,6 +1009,69 @@
                                                                           "height":  1246,
                                                                           "alpha":  true
                                                                       }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/idle_alpha.png",
+                                                       "sha256":  "03c673005c0d276d9e02917f5840755baa3c2a35201dfa5da93f55ab043d8ddc",
+                                                       "dimensions":  {
+                                                                          "width":  1146,
+                                                                          "height":  1372,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/idle_alpha_t14.png",
+                                                       "sha256":  "fb3f00be2f26b89ec4c85ac5be6b92cbc564afcd2c1169a71dc8f0b8270b064e",
+                                                       "dimensions":  {
+                                                                          "width":  1146,
+                                                                          "height":  1372,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/idle_approved.png",
+                                                       "sha256":  "01187e845ab43f8be3b72880d73084997ce70b4498490fce978f5fb47470b80a",
+                                                       "dimensions":  {
+                                                                          "width":  1024,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/idle_final.png",
+                                                       "sha256":  "66a8717041aad9d2a0fcdbb3a52e9971b03f08a1d453c79d0c6d5474e7971653",
+                                                       "dimensions":  {
+                                                                          "width":  1024,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/idle_fit.png",
+                                                       "sha256":  "9d7e73b4eea38d44b58438c517755b73e09539715901d54f8fa6795997d9095d",
+                                                       "dimensions":  {
+                                                                          "width":  1024,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/idle_normalized.png",
+                                                       "sha256":  "b087750c4db1395381cacdcafac1246b321f3447c290ce9bd0f1e3b2b621b94e",
+                                                       "dimensions":  {
+                                                                          "width":  1024,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/idle_source.png",
+                                                       "sha256":  "2adbbd6f5526841e6e322096e7e8188c49d7b8a091bb004b27dd90f33128ba8c",
+                                                       "dimensions":  {
+                                                                          "width":  1146,
+                                                                          "height":  1372,
+                                                                          "alpha":  true
+                                                                      }
                                                    }
                                                ],
                         "traceability_classification":  "verificavel_sem_hash_de_manifesto",
@@ -1020,7 +1083,7 @@
                         "sequence":  "move_n",
                         "final_path":  "assets/animations/heroes/brook/move_n.png",
                         "final_exists":  true,
-                        "final_sha256":  "5017987bea0cb20a7b216685df1023c497ae5b5dbc7904e7a3c19987e7274fa0",
+                        "final_sha256":  "1a6a0ad70425db952dba240b708af480deca7e7c183c123fa2b8d30647b59f62",
                         "dimensions":  "1536x384",
                         "alpha":  true,
                         "frames":  6,
@@ -1058,6 +1121,141 @@
                                                    {
                                                        "path":  ".atena/generated/animation-candidates/heroes/brook/move_nw_v02.png",
                                                        "sha256":  "6fc17542001f002ea0f45bd7299b7b020e93c1dcf02f629d37c8d4484ff399fa",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  1024,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_n_alpha.png",
+                                                       "sha256":  "e0cd21afd687e14ec0f3645cedd2f4b962da4a3f7ed66ec96037ec816f5f9602",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  1024,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_n_alpha_t14.png",
+                                                       "sha256":  "e2dc27e6b556eef31f55a335b3c2ceb0bf69c4b7e740c60a15707500da4ba1a1",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  1024,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_n_approved.png",
+                                                       "sha256":  "1a6a0ad70425db952dba240b708af480deca7e7c183c123fa2b8d30647b59f62",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_n_final.png",
+                                                       "sha256":  "af5e39b77a8a5bf6819c3210c7040d7f4a46cfec88c46ecbf0079a37035a022e",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_n_fit.png",
+                                                       "sha256":  "417c7938f5fa258862c64287de3406443dbdf0219f5c9105f20ebaf392f16522",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_n_fit_t14.png",
+                                                       "sha256":  "af5e39b77a8a5bf6819c3210c7040d7f4a46cfec88c46ecbf0079a37035a022e",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_n_normalized.png",
+                                                       "sha256":  "c6b5e6d4589b65a111ecb6722662b3321015efce6258028336950e01c4fa4a61",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_n_source.png",
+                                                       "sha256":  "d5b5b9de59f1426dc2e501e89bd43ef40f0c128e04a6961153b0925bf35f19c4",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  1024,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_ne_alpha.png",
+                                                       "sha256":  "a95b4f92469b01ec9385cf1fcbdce1a93e08d2da108b797d618b5f26b462d24f",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  1024,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_ne_alpha_t14.png",
+                                                       "sha256":  "ef676180cefc1d834ca9303866ea4bb3cc2a9284d8ac99d471cf1ea5ad4c0cff",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  1024,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_ne_approved.png",
+                                                       "sha256":  "b45cccf0f9002b58d834ba54beedf74bcb03c13638d0c88d5edffefb5a0cf4c8",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_ne_final.png",
+                                                       "sha256":  "bcf6cc19fd93c0a18d4cd46cc7b26d15d03c32238873ad727e703623167cd4f3",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_ne_fit.png",
+                                                       "sha256":  "4a37296f454cea25dff410dfa699adb944fdde46296c596c9bc3675b1d6344f2",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_ne_normalized.png",
+                                                       "sha256":  "ee3b6f6790e32e6573737ca5d18132b255f84281710968e03997070bcdd056a7",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_ne_source.png",
+                                                       "sha256":  "9ab4f489cbaad6fed4e5d7657117aef785c1faaeb8c64b0f08007687960bd87f",
                                                        "dimensions":  {
                                                                           "width":  1536,
                                                                           "height":  1024,
@@ -1110,7 +1308,7 @@
                         "sequence":  "move_ne",
                         "final_path":  "assets/animations/heroes/brook/move_ne.png",
                         "final_exists":  true,
-                        "final_sha256":  "8d9d85b058af0d31160209e113649876edb19e6f99db59383b335d8c94b1f6a7",
+                        "final_sha256":  "b45cccf0f9002b58d834ba54beedf74bcb03c13638d0c88d5edffefb5a0cf4c8",
                         "dimensions":  "1536x384",
                         "alpha":  true,
                         "frames":  6,
@@ -1121,6 +1319,69 @@
                                                    {
                                                        "path":  ".atena/generated/animation-candidates/heroes/brook/move_ne_v02.png",
                                                        "sha256":  "fb4c5ffdb165271fd47ff9c544d4b6f793f5c366e131b640dba672179eacb991",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  1024,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_ne_alpha.png",
+                                                       "sha256":  "a95b4f92469b01ec9385cf1fcbdce1a93e08d2da108b797d618b5f26b462d24f",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  1024,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_ne_alpha_t14.png",
+                                                       "sha256":  "ef676180cefc1d834ca9303866ea4bb3cc2a9284d8ac99d471cf1ea5ad4c0cff",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  1024,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_ne_approved.png",
+                                                       "sha256":  "b45cccf0f9002b58d834ba54beedf74bcb03c13638d0c88d5edffefb5a0cf4c8",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_ne_final.png",
+                                                       "sha256":  "bcf6cc19fd93c0a18d4cd46cc7b26d15d03c32238873ad727e703623167cd4f3",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_ne_fit.png",
+                                                       "sha256":  "4a37296f454cea25dff410dfa699adb944fdde46296c596c9bc3675b1d6344f2",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_ne_normalized.png",
+                                                       "sha256":  "ee3b6f6790e32e6573737ca5d18132b255f84281710968e03997070bcdd056a7",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_ne_source.png",
+                                                       "sha256":  "9ab4f489cbaad6fed4e5d7657117aef785c1faaeb8c64b0f08007687960bd87f",
                                                        "dimensions":  {
                                                                           "width":  1536,
                                                                           "height":  1024,
@@ -1155,7 +1416,7 @@
                         "sequence":  "move_e",
                         "final_path":  "assets/animations/heroes/brook/move_e.png",
                         "final_exists":  true,
-                        "final_sha256":  "3297589eafca309ff74ae8c5fd6e139036c1a3189e58118a5915f344cffe6545",
+                        "final_sha256":  "0bd79770f01779d0933dcb40301c38c8790382a72e41aed3285a2a1897396d4f",
                         "dimensions":  "1536x384",
                         "alpha":  true,
                         "frames":  6,
@@ -1299,6 +1560,69 @@
                                                                       }
                                                    },
                                                    {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_e_alpha.png",
+                                                       "sha256":  "4b1e99587ef970cac44a7231b955f0a363d27c2b830cb2955eab98a8eaabac60",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  1024,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_e_alpha_t14.png",
+                                                       "sha256":  "8202d4896091d68bdc36ee845c59c8e0ee95753ff9ca23591efddbd028f165d1",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  1024,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_e_approved.png",
+                                                       "sha256":  "0bd79770f01779d0933dcb40301c38c8790382a72e41aed3285a2a1897396d4f",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_e_final.png",
+                                                       "sha256":  "4d6fea45a6aa15764069e815539315a21340749facbe69914c7b37fd57745294",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_e_fit.png",
+                                                       "sha256":  "c4c53e6e87340b6be66d0c72b3fb188db1cd81a034597cb6115609d4781aab20",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_e_normalized.png",
+                                                       "sha256":  "7a63878451804bf5897bd8f0ec23ff1f58ccf691dba659f2d4112ee3a70d2ff4",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_e_source.png",
+                                                       "sha256":  "295667c63ceca2a2663192fdb78c2af2a967e3bd9197e012f4090d7800b8cf70",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  1024,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
                                                        "path":  ".atena/generated/asset-candidates/animations/heroes/brook/move_e_v01_alpha.png",
                                                        "sha256":  "c176c42c08b4220990f43a3253421ed494ac197e02154111e66ce58695eaa4ff",
                                                        "dimensions":  {
@@ -1326,7 +1650,7 @@
                         "sequence":  "move_se",
                         "final_path":  "assets/animations/heroes/brook/move_se.png",
                         "final_exists":  true,
-                        "final_sha256":  "234b814a96e775bfaefaf83282683d45d0fd4973fe104a89cf695150bfbac049",
+                        "final_sha256":  "348e70dc8755aa5913a3a9bab4cf5a2fd7f8ecea12b573357f85eea96f0c4050",
                         "dimensions":  "1536x384",
                         "alpha":  true,
                         "frames":  6,
@@ -1337,6 +1661,69 @@
                                                    {
                                                        "path":  ".atena/generated/animation-candidates/heroes/brook/move_se_v02.png",
                                                        "sha256":  "3e40a344284b808ae680885ee67e6b62a06f275697791fd7c171606e2d42c735",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  1024,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_se_alpha.png",
+                                                       "sha256":  "93c32eb6e2467a206f427fdb666a1cf652a0f3404a9861978e8b2aadb405b02c",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  1024,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_se_alpha_t14.png",
+                                                       "sha256":  "90639fed1a1bb75509059d8d8b82149aacb569f88ecece0408e3708e03b2ba35",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  1024,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_se_approved.png",
+                                                       "sha256":  "348e70dc8755aa5913a3a9bab4cf5a2fd7f8ecea12b573357f85eea96f0c4050",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_se_final.png",
+                                                       "sha256":  "1b6cc515a636a70c9306125230fc766e27e1d6a6b60a656729834793a64816c4",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_se_fit.png",
+                                                       "sha256":  "18cb787521322c7f6911031b426096225cb073f62bfdbb7b9b9ebfc4ec75aecb",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_se_normalized.png",
+                                                       "sha256":  "c59ad66e03c7aa409116993d16d76932a0abfc649c453da5833602dcc97d0319",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_se_source.png",
+                                                       "sha256":  "fec1377b435079661a80729aab3600714202e2f3369ef300f68f082e2b76e119",
                                                        "dimensions":  {
                                                                           "width":  1536,
                                                                           "height":  1024,
@@ -1371,7 +1758,7 @@
                         "sequence":  "move_s",
                         "final_path":  "assets/animations/heroes/brook/move_s.png",
                         "final_exists":  true,
-                        "final_sha256":  "f997bd0fcfa058c7101a2ba49c800049cbd1a801be869fcdf63900510483ae4a",
+                        "final_sha256":  "48a1587e46daabf58ded28b39ade14235250ba745d702f95d6719ad490119302",
                         "dimensions":  "1536x384",
                         "alpha":  true,
                         "frames":  6,
@@ -1443,6 +1830,132 @@
                                                                       }
                                                    },
                                                    {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_s_alpha.png",
+                                                       "sha256":  "b71da15fd308acc00cf14ed69044fd23bc7011690bc268b7823825e266b65198",
+                                                       "dimensions":  {
+                                                                          "width":  1146,
+                                                                          "height":  1372,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_s_alpha_t14.png",
+                                                       "sha256":  "f41c9f84afd079d64abc3d555fcc9fe5cb595abc15be25774f4e5d05a8b727cc",
+                                                       "dimensions":  {
+                                                                          "width":  1146,
+                                                                          "height":  1372,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_s_approved.png",
+                                                       "sha256":  "48a1587e46daabf58ded28b39ade14235250ba745d702f95d6719ad490119302",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_s_final.png",
+                                                       "sha256":  "fbb156bd83badde9bc51db21b74ea270c7b47867a055308a53e969d879a10f70",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_s_fit.png",
+                                                       "sha256":  "9c9379cec99ac26333e9a7c1c2ded8beb49fe5d3ceba7c2e49ac1edcf00bf990",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_s_normalized.png",
+                                                       "sha256":  "20cd3f8f375bc8623a4e391b02fd48c2d55c0a263e14102c29dad9386f8e5ae8",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_s_source.png",
+                                                       "sha256":  "6c77cac500af9b772821d9e7d5b9185103489fdfa0c08caf7ed28d17fa871d2e",
+                                                       "dimensions":  {
+                                                                          "width":  1146,
+                                                                          "height":  1372,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_se_alpha.png",
+                                                       "sha256":  "93c32eb6e2467a206f427fdb666a1cf652a0f3404a9861978e8b2aadb405b02c",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  1024,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_se_alpha_t14.png",
+                                                       "sha256":  "90639fed1a1bb75509059d8d8b82149aacb569f88ecece0408e3708e03b2ba35",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  1024,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_se_approved.png",
+                                                       "sha256":  "348e70dc8755aa5913a3a9bab4cf5a2fd7f8ecea12b573357f85eea96f0c4050",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_se_final.png",
+                                                       "sha256":  "1b6cc515a636a70c9306125230fc766e27e1d6a6b60a656729834793a64816c4",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_se_fit.png",
+                                                       "sha256":  "18cb787521322c7f6911031b426096225cb073f62bfdbb7b9b9ebfc4ec75aecb",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_se_normalized.png",
+                                                       "sha256":  "c59ad66e03c7aa409116993d16d76932a0abfc649c453da5833602dcc97d0319",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/move_se_source.png",
+                                                       "sha256":  "fec1377b435079661a80729aab3600714202e2f3369ef300f68f082e2b76e119",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  1024,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
                                                        "path":  ".atena/generated/asset-candidates/animations/heroes/brook/move_se_v01_alpha.png",
                                                        "sha256":  "f18b6a0dcde25f95b47f54522f4f8181723947e550cb4f2b81b26f2ee7e82495",
                                                        "dimensions":  {
@@ -1470,7 +1983,7 @@
                         "sequence":  "attack",
                         "final_path":  "assets/animations/heroes/brook/attack.png",
                         "final_exists":  true,
-                        "final_sha256":  "e1117ceb21f6937353ed46aae486bdd7f0dbd8db742aea27f3a79fca53f00c49",
+                        "final_sha256":  "1a8539f851d33d36ecdbb93783d47491493d9fe81548588f9feb4af09f4a792d",
                         "dimensions":  "1024x384",
                         "alpha":  true,
                         "frames":  4,
@@ -1495,6 +2008,69 @@
                                                                           "height":  384,
                                                                           "alpha":  true
                                                                       }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/attack_alpha.png",
+                                                       "sha256":  "28e9286193fb559aa8bff96b5bc97126d8a859d7fee0a42609dc788944d1a77c",
+                                                       "dimensions":  {
+                                                                          "width":  1146,
+                                                                          "height":  1372,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/attack_alpha_t14.png",
+                                                       "sha256":  "d94b2b50175dd755e3899cb90ee7ee4833c09ccf788059704c8e0db679969488",
+                                                       "dimensions":  {
+                                                                          "width":  1146,
+                                                                          "height":  1372,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/attack_approved.png",
+                                                       "sha256":  "1a8539f851d33d36ecdbb93783d47491493d9fe81548588f9feb4af09f4a792d",
+                                                       "dimensions":  {
+                                                                          "width":  1024,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/attack_final.png",
+                                                       "sha256":  "2a178bcf4fa27af59dfb074571b1d673ad26527be099b521b7c52de641ce1328",
+                                                       "dimensions":  {
+                                                                          "width":  1024,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/attack_fit.png",
+                                                       "sha256":  "f0e7f47b8f3ea01b194b24999a59a7a8f6928603302ec1aac3fbe5a790212e9c",
+                                                       "dimensions":  {
+                                                                          "width":  1024,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/attack_normalized.png",
+                                                       "sha256":  "792cd98de60a5ddc13495c8c6af8aedc132177bbbbb97144ad89a68d0ac93907",
+                                                       "dimensions":  {
+                                                                          "width":  1024,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/attack_source.png",
+                                                       "sha256":  "277c94d07af4dc2d50b20770781034c348930c5bf2cfae0544dadb8591f6bc8b",
+                                                       "dimensions":  {
+                                                                          "width":  1146,
+                                                                          "height":  1372,
+                                                                          "alpha":  true
+                                                                      }
                                                    }
                                                ],
                         "traceability_classification":  "verificavel_sem_hash_de_manifesto",
@@ -1506,7 +2082,7 @@
                         "sequence":  "active",
                         "final_path":  "assets/animations/heroes/brook/active.png",
                         "final_exists":  true,
-                        "final_sha256":  "807609c0f6357e5254281d0cd15731dba0635579119cf628275c6752b7bd662d",
+                        "final_sha256":  "f27a13d4bebf9794b8533432b6292c578cc009b5285cc555989b456531a70f7d",
                         "dimensions":  "1536x384",
                         "alpha":  true,
                         "frames":  6,
@@ -1567,6 +2143,87 @@
                                                                           "height":  384,
                                                                           "alpha":  true
                                                                       }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/active_alpha.png",
+                                                       "sha256":  "ef5253c653e52443f32e1d8c38e4cdddbf6ae6157b48496b3a9f9a3056d05975",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  1024,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/active_alpha_t14.png",
+                                                       "sha256":  "b5e3c8013e254450080e79efcb34f79f2517082bcdb77f3eb23fe1396d3aa415",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  1024,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/active_alpha_v02.png",
+                                                       "sha256":  "45ff0d4fe29067fe320eb483377233d74163b1e764f7888590fd6b8e86c5b9a5",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  1024,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/active_approved.png",
+                                                       "sha256":  "f27a13d4bebf9794b8533432b6292c578cc009b5285cc555989b456531a70f7d",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/active_final.png",
+                                                       "sha256":  "7813707643c11ed723ff386a915d74d8993c084af2c1ee3b3e81426cce8b67c7",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/active_fit.png",
+                                                       "sha256":  "b12e15119d02050ecc179d0c54e8d1844320da76aa2a0688b16417eaab75b7b7",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/active_normalized.png",
+                                                       "sha256":  "1ad821f57b8f3a053a42d4341286e0b0e98ff041e1a531adbb00bbaf3401c513",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/active_source.png",
+                                                       "sha256":  "6215dcb41ea26a2f0b8dc027993358c31e7bab70e7882092b6e5d1876ee19850",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  1024,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/active_source_v02.png",
+                                                       "sha256":  "18ce454366dccd07c746b5d8ca7665e0c91fc4a8c242f058d0f8012c337dc7e8",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  1024,
+                                                                          "alpha":  true
+                                                                      }
                                                    }
                                                ],
                         "traceability_classification":  "verificavel_sem_hash_de_manifesto",
@@ -1578,7 +2235,7 @@
                         "sequence":  "death",
                         "final_path":  "assets/animations/heroes/brook/death.png",
                         "final_exists":  true,
-                        "final_sha256":  "081badedb773bfcf86a7ae1a8b6f036500ef36d5c0eb016cc769c40e80a912a0",
+                        "final_sha256":  "1673760e7deeeca276578cbde1185162b6ded90fb9df46fbceb675b6d4026b2f",
                         "dimensions":  "1536x384",
                         "alpha":  true,
                         "frames":  6,
@@ -1601,6 +2258,69 @@
                                                        "dimensions":  {
                                                                           "width":  1536,
                                                                           "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/death_alpha.png",
+                                                       "sha256":  "e0eaf269c2cd244ac0a15aefdbbdd9f490146bbab6c4051a5e8d3320a69915ea",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  1024,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/death_alpha_t14.png",
+                                                       "sha256":  "b85d7879588e1c79b69df912e2315f270c749bb294a945c2e1700f753c27866e",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  1024,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/death_approved.png",
+                                                       "sha256":  "1673760e7deeeca276578cbde1185162b6ded90fb9df46fbceb675b6d4026b2f",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/death_final.png",
+                                                       "sha256":  "412c7e5fcc9094608259873a25df117112837833f40d5d39e0833cfd5b94e585",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/death_fit.png",
+                                                       "sha256":  "11f8f390762b191e0dbb2bb68147b6b3a175f28d5e7d7e690ecd1eb327fff8e2",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/death_normalized.png",
+                                                       "sha256":  "e81d1b1c74670b2f63e54effed779ebc200077a96a79ed28871dd5ff593cf005",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  384,
+                                                                          "alpha":  true
+                                                                      }
+                                                   },
+                                                   {
+                                                       "path":  ".atena/generated/animation-candidates/heroes/brook/v01/death_source.png",
+                                                       "sha256":  "ebb536ac853c14e2ead4079665926cbefb2edebd701e9d264afab8f036634e10",
+                                                       "dimensions":  {
+                                                                          "width":  1536,
+                                                                          "height":  1024,
                                                                           "alpha":  true
                                                                       }
                                                    }
@@ -2683,7 +3403,7 @@
                         "sequence":  "idle",
                         "final_path":  "assets/animations/heroes/leoric/idle.png",
                         "final_exists":  true,
-                        "final_sha256":  "60635f9d467ea4accba506ed40e6d9e9a33f9a8b50835d053fea1fddf0d882d5",
+                        "final_sha256":  "7bd7e25c61b6bb4a639bed62639828bf5cd22f1ca14795884bd699e9059f8663",
                         "dimensions":  "1024x384",
                         "alpha":  true,
                         "frames":  4,
@@ -2719,7 +3439,7 @@
                         "sequence":  "move_n",
                         "final_path":  "assets/animations/heroes/leoric/move_n.png",
                         "final_exists":  true,
-                        "final_sha256":  "0e83aebe41f1d81774fa8e19d3fc387b331d4246286e8a75e8c95569f5578f03",
+                        "final_sha256":  "cf42b12627f6b75312ea2a4ed114cf9cbd0821cc932b5b71d28767b3f39fe0c4",
                         "dimensions":  "1536x384",
                         "alpha":  true,
                         "frames":  6,
@@ -2773,7 +3493,7 @@
                         "sequence":  "move_ne",
                         "final_path":  "assets/animations/heroes/leoric/move_ne.png",
                         "final_exists":  true,
-                        "final_sha256":  "91ec4a4df5fc76fa3bf6e85bcd7cc1cfc245f3d19758a85caf34c7bc1a3cbed6",
+                        "final_sha256":  "fb08f435995845753719dcf9236481a537f7018ff31ebe3213496c4a396d3f6c",
                         "dimensions":  "1536x384",
                         "alpha":  true,
                         "frames":  6,
@@ -2809,7 +3529,7 @@
                         "sequence":  "move_e",
                         "final_path":  "assets/animations/heroes/leoric/move_e.png",
                         "final_exists":  true,
-                        "final_sha256":  "6d176f5ba25655129a108a9b9b2acad95386ff93afcb1375b05ac8a38c0f149a",
+                        "final_sha256":  "bda86a85763a2cbd10009cc57b80fc23f8ebe34c0dc981d93cf0f51872c0485e",
                         "dimensions":  "1536x384",
                         "alpha":  true,
                         "frames":  6,
@@ -2845,7 +3565,7 @@
                         "sequence":  "move_se",
                         "final_path":  "assets/animations/heroes/leoric/move_se.png",
                         "final_exists":  true,
-                        "final_sha256":  "25dd9bf8374b169801a5580d0f3acad20b275382d30f1b3ceb8b0b8e1ff34d8c",
+                        "final_sha256":  "8b95bea1cfb288d28390ea18d128e7aef31ad27a817be4d221ecf403082100f3",
                         "dimensions":  "1536x384",
                         "alpha":  true,
                         "frames":  6,
@@ -2881,7 +3601,7 @@
                         "sequence":  "move_s",
                         "final_path":  "assets/animations/heroes/leoric/move_s.png",
                         "final_exists":  true,
-                        "final_sha256":  "d750cc06b21be57a659701dda41bf44e4b2c47784cfb19b73dfc3e44edafbaa4",
+                        "final_sha256":  "2fb2262439781c7793d273c486cc87cea479c5b8a48231fd028ff5549e0f3eda",
                         "dimensions":  "1536x384",
                         "alpha":  true,
                         "frames":  6,
@@ -2935,7 +3655,7 @@
                         "sequence":  "attack",
                         "final_path":  "assets/animations/heroes/leoric/attack.png",
                         "final_exists":  true,
-                        "final_sha256":  "4d6e5c8da2e366cb6cfd3c82cb49395dffbb35a3d075153d596694a935f9fade",
+                        "final_sha256":  "798c57e5d5d659f83e33de4a35ba4f90bd8dacd363839c1a22f19a54c0469414",
                         "dimensions":  "1024x384",
                         "alpha":  true,
                         "frames":  4,
@@ -2971,7 +3691,7 @@
                         "sequence":  "active",
                         "final_path":  "assets/animations/heroes/leoric/active.png",
                         "final_exists":  true,
-                        "final_sha256":  "bcbeaf4f73cb74dc58fe9a5f1086cc57a2be24919b54cc27d6df0c7cd8744d33",
+                        "final_sha256":  "b3d6f536dc4146e121fbdf5e58bdd3ad3d626353f26b810c6446524e911ae1d1",
                         "dimensions":  "1536x384",
                         "alpha":  true,
                         "frames":  6,
@@ -3007,7 +3727,7 @@
                         "sequence":  "death",
                         "final_path":  "assets/animations/heroes/leoric/death.png",
                         "final_exists":  true,
-                        "final_sha256":  "077b4b0258d460619dd1552e0d17943bcc80e3ccbd407a16601b703dcaf08af1",
+                        "final_sha256":  "24af342265863a7254a5f42baa61ea92e74bcbe161440a2f5dfe1a501e24aac9",
                         "dimensions":  "1536x384",
                         "alpha":  true,
                         "frames":  6,
@@ -3043,7 +3763,7 @@
                         "sequence":  "idle",
                         "final_path":  "assets/animations/heroes/nyrelia/idle.png",
                         "final_exists":  true,
-                        "final_sha256":  "dde7660102aa6b400fea90f843b5bdc448964dfe08abb58f971bb45360d16662",
+                        "final_sha256":  "7fa0f6700ada6fb5a362d14604a259aee4f30e44088cf55be00b21b562abc9e6",
                         "dimensions":  "1024x384",
                         "alpha":  true,
                         "frames":  4,
@@ -3088,7 +3808,7 @@
                         "sequence":  "move_n",
                         "final_path":  "assets/animations/heroes/nyrelia/move_n.png",
                         "final_exists":  true,
-                        "final_sha256":  "0fb01a27dcf54835c7d250373d83c7fe753caa001b35036e8948b1cb0ce9bc37",
+                        "final_sha256":  "c1c89d0d17c0068b67cf390ca567390313dd2551c3a335cd1849826351dbd4e7",
                         "dimensions":  "1536x384",
                         "alpha":  true,
                         "frames":  6,
@@ -3160,7 +3880,7 @@
                         "sequence":  "move_ne",
                         "final_path":  "assets/animations/heroes/nyrelia/move_ne.png",
                         "final_exists":  true,
-                        "final_sha256":  "c315b6cc1ddcc9a696fe4917e43bc02d45676ea171ea5e9e6878945885b1542a",
+                        "final_sha256":  "669cd3a05beab27bc0abfd1451efb58e711c5b8abe073676de5eb130c8d2b32a",
                         "dimensions":  "1536x384",
                         "alpha":  true,
                         "frames":  6,
@@ -3205,7 +3925,7 @@
                         "sequence":  "move_e",
                         "final_path":  "assets/animations/heroes/nyrelia/move_e.png",
                         "final_exists":  true,
-                        "final_sha256":  "f2b7370e8af72fec09d870b2f210781f8a4d726c9c87ff6ad3125b25f5e0df35",
+                        "final_sha256":  "1853f70299e13e5bed1e3821aba52575a72c922b3ded789bb8038798284a7be7",
                         "dimensions":  "1536x384",
                         "alpha":  true,
                         "frames":  6,
@@ -3250,7 +3970,7 @@
                         "sequence":  "move_se",
                         "final_path":  "assets/animations/heroes/nyrelia/move_se.png",
                         "final_exists":  true,
-                        "final_sha256":  "4d573c78aa83f85b5a273f1deff5b66b1cf0a5bac1e428a44b47c1a8398f4301",
+                        "final_sha256":  "641d51e64781a8e34772eeec6d11250f3c3e431d0b75c11ef7ef2389a6170ac6",
                         "dimensions":  "1536x384",
                         "alpha":  true,
                         "frames":  6,
@@ -3295,7 +4015,7 @@
                         "sequence":  "move_s",
                         "final_path":  "assets/animations/heroes/nyrelia/move_s.png",
                         "final_exists":  true,
-                        "final_sha256":  "aab6bf6178de9185c751ed5e24f248014debc60fdb0c1ee8cc2ea0e277d73097",
+                        "final_sha256":  "2244f9cdaa8b0f95c992608e1dae2e5e35723df764d8a1a237910db5f9071950",
                         "dimensions":  "1536x384",
                         "alpha":  true,
                         "frames":  6,
@@ -3367,7 +4087,7 @@
                         "sequence":  "attack",
                         "final_path":  "assets/animations/heroes/nyrelia/attack.png",
                         "final_exists":  true,
-                        "final_sha256":  "1a763f52de249085d6fb6017963b49b0f7d48c027a67d5a1375421ad78fcf996",
+                        "final_sha256":  "ff157e2e88b61ed7a9c0aaec6c1cc4f20baaa52f3233cb1c7b25b711ff4df1b8",
                         "dimensions":  "1024x384",
                         "alpha":  true,
                         "frames":  4,
@@ -3412,7 +4132,7 @@
                         "sequence":  "active",
                         "final_path":  "assets/animations/heroes/nyrelia/active.png",
                         "final_exists":  true,
-                        "final_sha256":  "3a129528260295559733f8c254b32d6dd26e8a602e10a0880a13f4f6ea4c3d14",
+                        "final_sha256":  "4d0f970da79c3fb298642dae9a2a259486b8aff78da49c7c151601ecfa0febb3",
                         "dimensions":  "1536x384",
                         "alpha":  true,
                         "frames":  6,
@@ -3457,7 +4177,7 @@
                         "sequence":  "death",
                         "final_path":  "assets/animations/heroes/nyrelia/death.png",
                         "final_exists":  true,
-                        "final_sha256":  "42eb7005cadb3407f719648a704a258b58992149d0028cd3b5460652ee017174",
+                        "final_sha256":  "f3d42a56579f3d49f0bf382afad46171ac801afaa74603ea9c510d8d97fa8b19",
                         "dimensions":  "1536x384",
                         "alpha":  true,
                         "frames":  6,

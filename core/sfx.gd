@@ -118,9 +118,9 @@ func _apply_profile_mix() -> void:
 
 
 func apply_mix(settings: Dictionary) -> void:
-	_set_bus_linear("Music", float(settings.get("music_volume", 0.8)))
-	_set_bus_linear("SFX", float(settings.get("sfx_volume", 0.9)))
-	_set_bus_linear("Ambience", float(settings.get("ambience_volume", 0.75)))
+	_set_bus_linear("Music", 0.0 if bool(settings.get("music_muted", false)) else float(settings.get("music_volume", 0.8)))
+	_set_bus_linear("SFX", 0.0 if bool(settings.get("sfx_muted", false)) else float(settings.get("sfx_volume", 0.9)))
+	_set_bus_linear("Ambience", 0.0 if bool(settings.get("ambience_muted", false)) else float(settings.get("ambience_volume", 0.75)))
 
 
 func _set_bus_linear(bus_name: String, value: float) -> void:

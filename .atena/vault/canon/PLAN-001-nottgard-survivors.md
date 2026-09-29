@@ -47,7 +47,7 @@ Fonte: `games/godot/nottcard/data/core/*.json`, `core/*.gd`, vault. **Lore/fatos
 
 ## 4. Personagens
 
-Jogáveis iniciais (atributos do Nottcard): **Durvall** (FOR16 INT14), **Brook França** (anão, CON16 CAR14, paladino), **Maelor** (CON16, devoto de Sendrinah, cura/localizar), **Sylas Malafaia** (INT16, devoto de Mask, controle/enfraquecer), **Kayron** (CAR14, aasimar, Poder Místico/radiante).
+Jogáveis iniciais (atributos do Nottcard): **Durvall** (FOR16 INT14), **Brook França** (halfling, CON16 CAR14, paladino de Lliira; identidade visual definida por `CHARACTER-IDENTITY-003-brook-2026-09-29.md`), **Maelor** (CON16, devoto de Sendrinah, cura/localizar), **Sylas Malafaia** (INT16, devoto de Mask, controle/enfraquecer), **Kayron** (CAR14, aasimar, Poder Místico/radiante).
 Desbloqueáveis por conquista: **Korrak** (Machado de Xar'gath), **Leoric** (Modo de Constelação), e depois NPCs de apoio como "heróis alternativos" (ex.: Nyrelia, Zynara, Bromnor) — a definir com o dono.
 Cada herói tem: arma inicial, 1 habilidade de classe (as `class_ability` das cartas existentes), stats base, passiva.
 

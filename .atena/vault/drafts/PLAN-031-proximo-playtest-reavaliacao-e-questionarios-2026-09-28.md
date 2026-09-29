@@ -130,16 +130,17 @@ o próximo lote:
 6. Com base na resposta sobre prioridade (pergunta 8), a ordem da Fase B
    (itens 4 e 5) e da Fase C continua a mesma definida em
    [[PLAN-030-backlog-hiago-itens-equipamento-e-economia-2026-09-27]]?
-7. Vale registrar essa sessão via o kit de evidências (F7) para reaproveitar
-   o mesmo fluxo zip → EVID → PLAN desta vez?
+7. O relato, o log e os prints em `evidencias/` foram enviados individualmente
+   na task correspondente do Discord para reaproveitar o fluxo EVID → PLAN?
 8. Já é hora de trazer um segundo playtester, dado o risco de amostra única
    (ponto 8 da lista de reavaliação)?
 
 ## Sugestões
 
-1. **Capturar a sessão pelo kit de evidências (F7)** de novo, para manter o
-   mesmo fluxo de análise usado nesta sessão (zip → EVID → PLAN) e comparar
-   diretamente com [[EVID-088-qa-leoric-dagruve-2026-09-27]].
+1. **Capturar a sessão pelo kit de evidências**: registrar relatos com `F5`,
+   prints com `F6` e enviar individualmente os textos e imagens de
+   `evidencias/` na task correspondente do Discord. Isso mantém o fluxo
+   EVID → PLAN e permite comparar com [[EVID-088-qa-leoric-dagruve-2026-09-27]].
 2. **Não explicar o mecanismo novo de antemão** — só avisar que existe uma
    tecla nova e que baús podem perguntar algo. A reação de descoberta é dado
    real; explicar tudo antes contamina a resposta às perguntas 1 e 4.

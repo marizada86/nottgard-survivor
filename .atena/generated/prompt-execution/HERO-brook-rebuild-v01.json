@@ -1,0 +1,24 @@
+{
+  "id": "HERO-brook-rebuild-v01",
+  "spec": "SPEC-076-redefinicao-visual-de-brook",
+  "state": "official",
+  "identity_approval": "Owner approved brook_identity_v01 with ‘aprovado’ on 2026-09-29.",
+  "references": [
+    ".atena/evidence/reference-staging/brook-canonical-2026-09-29.png",
+    ".atena/generated/art-candidates/identity/brook_identity_v01.png"
+  ],
+  "assets": {
+    "portrait": "assets/portraits/brook.png",
+    "hero_figure": "assets/heroes/brook.png",
+    "sequences": ["idle", "move_n", "move_ne", "move_e", "move_se", "move_s", "attack", "active", "death"]
+  },
+  "candidate_root": ".atena/generated/animation-candidates/heroes/brook/v01",
+  "normalization": "Each source grid was fitted into the 256x384 runtime cell using its original alpha channel and the shared baseline; no destructive background stripping is present in final assets.",
+  "verification": {
+    "command": "godot --headless --path . -s tests/run_all.gd",
+    "result": "0 failures"
+  },
+  "final_review_board": ".atena/evidence/asset-review-boards/SPEC-076-brook-final-review.png",
+  "final_visual_approval": "Owner approved the final review board with ‘aprovado’ on 2026-09-29.",
+  "official_lock": ".atena/generated/asset-audit/ASSET-OFFICIAL-LOCK-012.json"
+}

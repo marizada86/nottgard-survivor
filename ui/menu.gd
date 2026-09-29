@@ -18,7 +18,11 @@ extends Control
 @onready var music_vol_opt: HSlider = %MusicVolOpt
 @onready var sfx_vol_opt: HSlider = %SfxVolOpt
 @onready var ambience_vol_opt: HSlider = %AmbienceVolOpt
-@onready var full_opt: CheckBox = %FullOpt
+@onready var music_mute_opt: CheckBox = %MusicMuteOpt
+@onready var sfx_mute_opt: CheckBox = %SfxMuteOpt
+@onready var ambience_mute_opt: CheckBox = %AmbienceMuteOpt
+@onready var display_mode_opt: OptionButton = %DisplayModeOpt
+@onready var resolution_opt: OptionButton = %ResolutionOpt
 @onready var diff_opt: OptionButton = %DiffOpt
 @onready var guide_btn: Button = %GuideBtn
 @onready var reset_btn: Button = %ResetBtn
@@ -61,7 +65,17 @@ func _ready() -> void:
 	music_vol_opt.value_changed.connect(func(v): _save_audio_setting("music_volume", v))
 	sfx_vol_opt.value_changed.connect(func(v): _save_audio_setting("sfx_volume", v))
 	ambience_vol_opt.value_changed.connect(func(v): _save_audio_setting("ambience_volume", v))
-	full_opt.toggled.connect(func(_on): Game.toggle_fullscreen())
+	music_mute_opt.toggled.connect(func(muted): _save_audio_mute("music", muted))
+	sfx_mute_opt.toggled.connect(func(muted): _save_audio_mute("sfx", muted))
+	ambience_mute_opt.toggled.connect(func(muted): _save_audio_mute("ambience", muted))
+	for label in ["Janela", "Sem borda", "Tela cheia (F11)"]:
+		display_mode_opt.add_item(label)
+	display_mode_opt.item_selected.connect(func(index):
+		Game.set_window_mode(String(Game.WINDOW_MODES[index])))
+	for resolution in Game.SUPPORTED_RESOLUTIONS:
+		resolution_opt.add_item(resolution)
+	resolution_opt.item_selected.connect(func(index):
+		Game.set_resolution(resolution_opt.get_item_text(index)))
 	for i in 4:
 		diff_opt.add_item("Maldição %d  (inimigos +%d%%, moedas +%d%%)" % [i, i * 25, i * 25])
 	diff_opt.item_selected.connect(func(i):
@@ -97,16 +111,33 @@ func _refresh_all() -> void:
 	_fill_achievements()
 	_fill_codex()
 	aim_opt.select(1 if Game.aim_mode() == Battle.Aim.MOUSE else 0)
-	vol_opt.value = float(p.data.settings.volume)
-	music_vol_opt.value = float(p.data.settings.music_volume)
-	sfx_vol_opt.value = float(p.data.settings.sfx_volume)
-	ambience_vol_opt.value = float(p.data.settings.ambience_volume)
-	full_opt.set_pressed_no_signal(bool(p.data.settings.fullscreen))
+	vol_opt.set_value_no_signal(float(p.data.settings.volume))
+	music_vol_opt.set_value_no_signal(float(p.data.settings.music_volume))
+	sfx_vol_opt.set_value_no_signal(float(p.data.settings.sfx_volume))
+	ambience_vol_opt.set_value_no_signal(float(p.data.settings.ambience_volume))
+	music_mute_opt.set_pressed_no_signal(bool(p.data.settings.get("music_muted", false)))
+	sfx_mute_opt.set_pressed_no_signal(bool(p.data.settings.get("sfx_muted", false)))
+	ambience_mute_opt.set_pressed_no_signal(bool(p.data.settings.get("ambience_muted", false)))
+	display_mode_opt.select(Game.WINDOW_MODES.find(String(p.data.settings.get("window_mode", "windowed"))))
+	resolution_opt.select(Game.SUPPORTED_RESOLUTIONS.find(String(p.data.settings.get("resolution", "1280x720"))))
 	diff_opt.select(int(p.data.settings.difficulty))
 
 
 func _save_audio_setting(key: String, value: float) -> void:
 	Game.profile.data.settings[key] = value
+	if value > 0.0001:
+		var channel := key.trim_suffix("_volume")
+		Game.profile.data.settings["%s_muted" % channel] = false
+		match channel:
+			"music": music_mute_opt.set_pressed_no_signal(false)
+			"sfx": sfx_mute_opt.set_pressed_no_signal(false)
+			"ambience": ambience_mute_opt.set_pressed_no_signal(false)
+	Game.apply_settings()
+	Game.save()
+
+
+func _save_audio_mute(channel: String, muted: bool) -> void:
+	Game.profile.data.settings["%s_muted" % channel] = muted
 	Game.apply_settings()
 	Game.save()
 

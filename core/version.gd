@@ -26,7 +26,10 @@ static func build_profile() -> int:
 	return profile_from_features(features, OS.is_debug_build() and not OS.has_feature("headless"))
 
 static func evidence_enabled() -> bool:
-	return build_profile() != BuildProfile.PRODUCTION
+	return playtest_tools_enabled_for_profile(build_profile())
+
+static func playtest_tools_enabled_for_profile(profile: int) -> bool:
+	return profile == BuildProfile.PUBLIC_PLAYTEST or profile == BuildProfile.QA_INTERNAL
 
 static func qa_enabled() -> bool:
 	return build_profile() == BuildProfile.QA_INTERNAL

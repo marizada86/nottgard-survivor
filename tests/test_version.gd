@@ -16,4 +16,8 @@ func run() -> Array:
 		out.append("execucao de depuracao precisa liberar o perfil QA")
 	if Version.profile_from_features(["public_playtest"], true) != Version.BuildProfile.PUBLIC_PLAYTEST:
 		out.append("playtest publico precisa prevalecer sobre o modo de depuracao")
+	if not Version.playtest_tools_enabled_for_profile(Version.BuildProfile.PUBLIC_PLAYTEST):
+		out.append("build de playtest precisa expor as ferramentas autorizadas")
+	if Version.playtest_tools_enabled_for_profile(Version.BuildProfile.PRODUCTION):
+		out.append("producao nao pode expor ferramentas de playtest")
 	return out

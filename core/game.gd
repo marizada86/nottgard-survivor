@@ -168,8 +168,8 @@ static func qa_sandbox_global_directory(session_id: String) -> String:
 
 func begin_qa_sandbox(session_id: String) -> bool:
 	qa_error = ""
-	if not Version.qa_enabled():
-		qa_error = "O Navegador QA so esta disponivel no perfil QA Interno."
+	if not Version.evidence_enabled():
+		qa_error = "O Navegador QA so esta disponivel na build de playtest."
 		return false
 	if qa_sandbox:
 		return true
@@ -201,8 +201,8 @@ func end_qa_sandbox() -> bool:
 	return unchanged
 
 func start_qa_run(request: Dictionary) -> bool:
-	if not Version.qa_enabled():
-		qa_error = "O Navegador QA so esta disponivel no perfil QA Interno."
+	if not Version.evidence_enabled():
+		qa_error = "O Navegador QA so esta disponivel na build de playtest."
 		return false
 	var session := "qa-%s" % Time.get_datetime_string_from_system().replace(":", "").replace("-", "").replace(" ", "-")
 	if not begin_qa_sandbox(session):
@@ -217,19 +217,53 @@ func start_qa_run(request: Dictionary) -> bool:
 		return false
 	return true
 
+const SUPPORTED_RESOLUTIONS = ["1280x720", "1600x900", "1920x1080"]
+const WINDOW_MODES = ["windowed", "borderless", "fullscreen"]
+
 func apply_settings() -> void:
 	var s: Dictionary = profile.data.settings
 	AudioServer.set_bus_volume_db(0, linear_to_db(clampf(float(s.volume), 0.0, 1.0)))
 	if has_node("/root/Sfx"):
 		Sfx.apply_mix(s)
-	var mode := DisplayServer.WINDOW_MODE_FULLSCREEN if bool(s.fullscreen) else DisplayServer.WINDOW_MODE_WINDOWED
-	if DisplayServer.window_get_mode() != mode:
-		DisplayServer.window_set_mode(mode)
+	var style := String(s.get("window_mode", "windowed"))
+	if not (style in WINDOW_MODES):
+		style = "windowed"
+		s.window_mode = style
+	s.fullscreen = style == "fullscreen" # Compatibilidade com perfis e integrações legadas.
+	if DisplayServer.window_get_mode() != DisplayServer.WINDOW_MODE_WINDOWED:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+	DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, style == "borderless")
+	DisplayServer.window_set_size(resolution_to_size(String(s.get("resolution", "1280x720"))))
+	if style == "fullscreen":
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 
-func toggle_fullscreen() -> void:
-	profile.data.settings.fullscreen = not bool(profile.data.settings.fullscreen)
+
+func resolution_to_size(resolution: String) -> Vector2i:
+	if not (resolution in SUPPORTED_RESOLUTIONS):
+		return Vector2i(1280, 720)
+	var parts := resolution.split("x", false)
+	return Vector2i(int(parts[0]), int(parts[1]))
+
+
+func set_window_mode(style: String) -> void:
+	if not (style in WINDOW_MODES):
+		return
+	profile.data.settings.window_mode = style
+	profile.data.settings.fullscreen = style == "fullscreen"
 	apply_settings()
 	save()
+
+
+func set_resolution(resolution: String) -> void:
+	if not (resolution in SUPPORTED_RESOLUTIONS):
+		return
+	profile.data.settings.resolution = resolution
+	apply_settings()
+	save()
+
+
+func toggle_fullscreen() -> void:
+	set_window_mode("windowed" if String(profile.data.settings.get("window_mode", "windowed")) == "fullscreen" else "fullscreen")
 
 func aim_mode() -> int:
 	return Battle.Aim.MOUSE if String(profile.data.settings.aim) == "mouse" else Battle.Aim.AUTO
@@ -266,6 +300,11 @@ func goto_menu() -> void:
 
 func logline(msg: String) -> void:
 	var t := Time.get_time_string_from_system()
-	log_lines.append("[%s] %s" % [t, msg])
+	var line := "[%s] %s" % [t, msg]
+	log_lines.append(line)
 	if log_lines.size() > 400:
 		log_lines = log_lines.slice(log_lines.size() - 400)
+	if is_inside_tree() and Version.evidence_enabled():
+		var kit := get_node_or_null("/root/Playtest")
+		if kit != null:
+			kit.append_game_log(line)

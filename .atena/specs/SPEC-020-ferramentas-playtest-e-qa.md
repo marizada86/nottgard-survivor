@@ -1,6 +1,12 @@
 # SPEC-020 — Ferramentas de playtest e navegação QA
 
-Status: **implementação parcial validada automaticamente (2026-09-26); validação integrada pendente**.
+Status: **substituída para o fluxo de evidências por `SPEC-078` (2026-09-29)**.
+
+> O contrato de rascunho, empacotamento e envio descrito abaixo é histórico.
+> O comportamento operacional vigente é o da `SPEC-078`: evidências diretas
+> ao lado do executável, F4 disponível nas builds de playtest autorizadas e
+> envio individual de texto e imagem no Discord. Esta spec permanece como
+> registro da evolução do sandbox QA.
 
 ## Decisão proposta
 

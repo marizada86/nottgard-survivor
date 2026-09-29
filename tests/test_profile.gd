@@ -51,6 +51,16 @@ func run() -> Array:
 	var again := Profile.new(JSON.parse_string(JSON.stringify(p.data)))
 	if again.coins() != p.coins() or not again.hero_unlocked("korrak"):
 		out.append("perfil não sobreviveu ao JSON")
+	# Preferências adicionadas após os saves antigos preservam a intenção de tela cheia.
+	var legacy_fullscreen := Profile.new({"settings": {"fullscreen": true}})
+	if legacy_fullscreen.data.settings.window_mode != "fullscreen" or not legacy_fullscreen.data.settings.fullscreen:
+		out.append("perfil legado em tela cheia não migrou para window_mode")
+	var legacy_windowed := Profile.new({"settings": {"fullscreen": false}})
+	if legacy_windowed.data.settings.window_mode != "windowed" or legacy_windowed.data.settings.fullscreen:
+		out.append("perfil legado em janela não migrou para window_mode")
+	var fresh_settings: Dictionary = Profile.new().data.settings
+	if fresh_settings.resolution != "1280x720" or not fresh_settings.has("music_muted") or not fresh_settings.has("ambience_muted"):
+		out.append("perfil novo não contém as preferências de áudio e vídeo")
 	# bônus de conquistas entram no herói
 	var b := Battle.new(1, "durvall", "dagruve", {"meta_mods": p.meta_mods(), "bonus_mods": p.bonus_mods()})
 	if b.hero.m("dmg_pct") <= 0.0 and p.data.achievements.has("massacre"):

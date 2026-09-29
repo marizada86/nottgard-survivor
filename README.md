@@ -5,7 +5,7 @@ Survivor-like lento e legível, ambientado em Nottgard, com foco no **Plano Abis
 ## Jogar (playtesters)
 
 1. Baixe o `NottgardSurvivors-windows.zip` do [release **latest**](../../releases/tag/latest), extraia e abra o `.exe`.
-2. Na primeira vez, digite seu nome (vai no `.zip` de evidência).
+2. Na primeira vez, digite seu nome para identificar o contexto do playtest.
 3. Escolha herói e fase no Quartel e jogue. Todas as armas atacam sozinhas.
 
 | Tecla | Faz |
@@ -17,12 +17,16 @@ Survivor-like lento e legível, ambientado em Nottgard, com foco no **Plano Abis
 | X | extrair depois do chefe |
 | 1–5 / R | escolher no level-up / rerrolar |
 | Esc | pausa |
-| **F5** | bloco de notas (guarda a nota + o print do instante) |
+| **F4** | abre o Navegador QA na build de playtest |
+| **F5** | bloco de notas; grava relato textual com data, hora e contexto |
 | **F6** | print da tela |
-| **F7** | gera **um** `.zip` de evidência ao lado do executável — envie ao responsável |
 | F1 / F11 | guia / tela cheia |
 
 Depois de cada chefe, **X** extrai e garante a recompensa atual; **E** entra no portal, mantém a build e aumenta o multiplicador de risco e recompensa. Cada camada possui uma regra ambiental própria, e os chefes mudam de fase em 70% e 35% de vida.
+
+As evidências ficam ao lado do executável em `evidencias/`: `relato.txt`,
+`logs/jogo.log` e os PNGs de `imagens/`. Envie os arquivos de texto e imagem
+individualmente na task correspondente do Discord.
 
 ## Desenvolver
 

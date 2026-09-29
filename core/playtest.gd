@@ -1,13 +1,11 @@
 extends CanvasLayer
-## Autoload "Playtest": kit de evidência, diagnóstico e navegação QA.
-##  F5 = bloco de notas (fechar guarda a nota + o print do instante em que abriu)
-##  F6 = print da tela (não pausa)   F7 = gera ZIP em user://evidence-kit   F1 = guia
-## O rascunho é gravado a cada item e sobrevive a fechar o jogo.
+## Autoload "Playtest": evidências diretas, diagnóstico e navegação QA.
+## F4 = Navegador QA, F5 = nota textual, F6 = print; F1 = guia.
+## As evidências ficam na pasta evidencias/ ao lado do executável de playtest.
 
-const MAX_PRINTS := 20
-const MAX_BYTES := 8 * 1024 * 1024
 const NOTE_MAX := 1000
-const EVIDENCE_ROOT := "user://evidence-kit"
+const EVIDENCE_FOLDER := "evidencias"
+const ALLOWED_EVIDENCE_EXTENSIONS := ["txt", "log", "png", "jpg", "jpeg", "webp"]
 const GUIDE_MAX_SIZE := Vector2(820, 560)
 const GUIDE_MARGIN := 24.0
 const NOTE_MAX_SIZE := Vector2(760, 470)
@@ -31,19 +29,19 @@ const QA_RUN_DESTINATIONS := [
 	["Estige: Esquecimento", "styx_forget"],
 ]
 
-var items: Array = []          # {kind, time, ctx, text, png}
 var _note_open := false
 var _guide_open := false
 var _guide_mode: StringName = &"playtest"
-var _pending_png := PackedByteArray()
 var _pending_ctx := {}
 var _paused_before := false
+var _evidence_dir := ""
+var _evidence_error := ""
+var _logged_line_count := 0
 
 var _toast: Label
 var _pad: PanelContainer
 var _edit: TextEdit
 var _count: Label
-var _summary: Label
 var _guide_modal: Control
 var _guide: PanelContainer
 var _guide_content: VBoxContainer
@@ -53,9 +51,6 @@ var _guide_name_label: Label
 var _name_edit: LineEdit
 var _guide_start: Button
 var _guide_error: Label
-var _clear_armed := false
-var _clear_btn: Button
-var _unsaved_items := {}
 var _console: PanelContainer
 var _console_text: RichTextLabel
 var _qa_modal: PanelContainer
@@ -77,9 +72,9 @@ func _ready() -> void:
 	call_deferred("_layout_modals")
 	if not Version.evidence_enabled():
 		return
-	_load_draft()
-	if items.size() > 0:
-		toast("Você tem %d itens guardados (F7 gera o .zip)" % items.size())
+	if _uses_executable_evidence_directory():
+		_prepare_evidence_dir()
+		_sync_game_log()
 	await get_tree().process_frame
 	if Game.profile.data.name == "" or not bool(Game.profile.data.welcome_seen):
 		open_guide(true)
@@ -106,7 +101,7 @@ func _build_ui() -> void:
 	var v := VBoxContainer.new()
 	_pad.add_child(v)
 	var t := Label.new()
-	t.text = "Bloco de notas (F5) — o print do instante em que você abriu vai junto"
+	t.text = "Bloco de notas (F5) — salva um relato textual com o contexto atual"
 	v.add_child(t)
 	var note_scroll := ScrollContainer.new()
 	note_scroll.custom_minimum_size = Vector2(0, 130)
@@ -121,26 +116,18 @@ func _build_ui() -> void:
 	note_scroll.add_child(_edit)
 	_count = Label.new()
 	v.add_child(_count)
-	_summary = Label.new()
-	v.add_child(_summary)
 	var actions := VBoxContainer.new()
 	v.add_child(actions)
 	var ok := Button.new()
 	ok.text = "Guardar e fechar (F5)"
 	ok.pressed.connect(close_note)
 	actions.add_child(ok)
-	var h := HBoxContainer.new()
-	actions.add_child(h)
-	_clear_btn = Button.new()
-	_clear_btn.text = "Limpar pacote"
-	_clear_btn.pressed.connect(_on_clear)
-	h.add_child(_clear_btn)
 	var hint := Label.new()
-	hint.text = "Ctrl+Z desfaz · Ctrl+A seleciona tudo · Esc fecha"
+	hint.text = "Ctrl+Z desfaz · Ctrl+A seleciona tudo · Esc fecha e grava"
 	hint.modulate = Color(1, 1, 1, 0.6)
 	hint.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	hint.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	h.add_child(hint)
+	actions.add_child(hint)
 
 	_guide_modal = Control.new()
 	_guide_modal.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
@@ -177,7 +164,7 @@ func _build_ui() -> void:
 	_guide_body.text = _guide_text()
 	g.add_child(_guide_body)
 	_guide_name_label = Label.new()
-	_guide_name_label.text = "Seu nome (vai no .zip da evidência): "
+	_guide_name_label.text = "Seu nome (aparece no contexto do playtest): "
 	_guide_name_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	g.add_child(_guide_name_label)
 	_name_edit = LineEdit.new()
@@ -320,7 +307,7 @@ func _open_console() -> void:
 		_console_text.text = "[color=#d8d8d8]%s[/color]" % scrub("\n".join(lines)).replace("[", "\\[")
 
 func _open_qa_browser() -> void:
-	if Version.qa_enabled():
+	if Version.evidence_enabled():
 		_qa_modal.visible = not _qa_modal.visible
 
 func _fill_qa_events() -> void:
@@ -417,8 +404,6 @@ static func shortcut_action(ev: InputEvent) -> StringName:
 			return &"note"
 		KEY_F6:
 			return &"screenshot"
-		KEY_F7:
-			return &"export"
 		KEY_F11:
 			return &"fullscreen"
 		KEY_F12:
@@ -430,18 +415,17 @@ static func shortcut_action(ev: InputEvent) -> StringName:
 static func qa_run_destinations() -> Array:
 	return QA_RUN_DESTINATIONS.duplicate(true)
 
-func _guide_text() -> String:
+static func _guide_text() -> String:
 	return "Este jogo [b]ainda não foi lançado[/b]: você está testando uma versão em construção (v%s). O que você reportar muda o jogo de verdade.\n\n" % Version.VERSION \
 		+ "[b]O que fazer[/b]\n" \
 		+ "1. Jogue seguindo o que foi pedido a você (uma fase, um herói, um chefe...). Não precisa jogar tudo.\n" \
 		+ "2. [b]F6[/b] tira um print na hora certa (não pausa).\n" \
-		+ "3. [b]F5[/b] abre o bloco de notas: escreva o que estranhou ou gostou. Ao fechar, a nota e o print do instante são guardados.\n" \
-		+ "4. [b]F7[/b] gera UM arquivo .zip na pasta de evidências (prints, notas, log e estado). Envie esse .zip ao responsável (Discord).\n\n" \
+		+ "3. [b]F5[/b] abre o bloco de notas: escreva o que estranhou ou gostou. Ao fechar, o relato textual é salvo.\n" \
+		+ "4. Envie individualmente o relato, o log e os prints de [b]evidencias[/b] na task correspondente do Discord.\n\n" \
 		+ "[b]Controles do jogo[/b]\n" \
 		+ "WASD/setas: mover · Tab: alterna mira (automática / mouse) · Q/botão direito: habilidade ativa · E: altar, ritual, portal · X: extrair após o chefe · 1-5: escolher no level-up · R: rerrolar · Esc: pausa\n" \
 		+ "Todas as armas atacam sozinhas. Sobreviva, evolua, derrote o chefe da fase e desça pelo portal.\n\n" \
-		+ "[b]Teclas de teste[/b]: F5 nota · F6 print · F7 gera o .zip · F11 tela cheia · F12 diagnóstico · F1 este guia" \
-		+ (" · F4 Navegador QA" if Version.qa_enabled() else "") + "\n" \
+		+ "[b]Teclas de teste[/b]: F4 Navegador QA · F5 nota · F6 print · F11 tela cheia · F12 diagnóstico · F1 este guia\n" \
 		+ "[color=#aaaaaa]Os prints mostram a tela do jogo. Notas e log têm o nome de usuário do Windows removido.[/color]"
 
 static func game_rules_text() -> String:
@@ -474,7 +458,7 @@ func _input(ev: InputEvent) -> void:
 		_open_console()
 		get_viewport().set_input_as_handled()
 		return
-	if Version.qa_enabled() and get_viewport().gui_get_focus_owner() == null and is_qa_shortcut(ev, Input.is_key_pressed(KEY_O)):
+	if get_viewport().gui_get_focus_owner() == null and is_qa_shortcut(ev, Input.is_key_pressed(KEY_O)):
 		_open_qa_browser()
 		get_viewport().set_input_as_handled()
 		return
@@ -489,9 +473,6 @@ func _input(ev: InputEvent) -> void:
 			get_viewport().set_input_as_handled()
 		&"screenshot":
 			take_print()
-			get_viewport().set_input_as_handled()
-		&"export":
-			export_zip()
 			get_viewport().set_input_as_handled()
 		&"guide":
 			if _guide_open:
@@ -537,33 +518,89 @@ func _capture() -> PackedByteArray:
 	visible = true
 	return img.save_png_to_buffer()
 
-func _bytes() -> int:
-	var n := 0
-	for it in items:
-		n += it.png.size() + String(it.text).length()
-	return n
+static func evidence_directory_for_executable(executable_path: String) -> String:
+	return executable_path.get_base_dir().path_join(EVIDENCE_FOLDER)
 
-func _prints() -> int:
-	var n := 0
-	for it in items:
-		if it.png.size() > 0:
-			n += 1
-	return n
+static func is_allowed_evidence_path(path: String) -> bool:
+	return ALLOWED_EVIDENCE_EXTENSIONS.has(path.get_extension().to_lower())
 
-func _room_for_png(png: PackedByteArray) -> bool:
-	if _prints() >= MAX_PRINTS or _bytes() + png.size() > MAX_BYTES:
-		toast("Pacote cheio: aperte F7 para gerar o .zip")
+func _uses_executable_evidence_directory() -> bool:
+	return OS.has_feature("public_playtest") or OS.has_feature("qa_internal")
+
+func _images_dir() -> String:
+	return _evidence_dir.path_join("imagens")
+
+func _log_path() -> String:
+	return _evidence_dir.path_join("logs/jogo.log")
+
+func _relato_path() -> String:
+	return _evidence_dir.path_join("relato.txt")
+
+func _prepare_evidence_dir() -> bool:
+	if _evidence_error != "":
+		_show_evidence_error(_evidence_error)
+		return false
+	if _evidence_dir == "":
+		_evidence_dir = evidence_directory_for_executable(OS.get_executable_path())
+	for path in [_evidence_dir, _evidence_dir.path_join("logs"), _images_dir()]:
+		if DirAccess.make_dir_recursive_absolute(path) != OK:
+			_show_evidence_error("Não foi possível criar evidencias ao lado do executável. Mova a build para uma pasta com permissão de gravação e abra o jogo novamente.")
+			return false
+	if not _ensure_text_file(_relato_path()) or not _ensure_text_file(_log_path()):
+		_show_evidence_error("A pasta evidencias ao lado do executável não permite gravação. Mova a build para uma pasta gravável e abra o jogo novamente.")
 		return false
 	return true
 
-func _draft_dir() -> String:
-	return "%s/%s/drafts/current" % [EVIDENCE_ROOT, Version.profile_slug()]
+func _ensure_text_file(path: String) -> bool:
+	if not is_allowed_evidence_path(path):
+		return false
+	var file := FileAccess.open(path, FileAccess.READ_WRITE) if FileAccess.file_exists(path) else FileAccess.open(path, FileAccess.WRITE)
+	if file == null:
+		return false
+	file.close()
+	return true
 
-func _outbox_dir() -> String:
-	return "%s/%s/outbox" % [EVIDENCE_ROOT, Version.profile_slug()]
+func _show_evidence_error(message: String) -> void:
+	_evidence_error = message
+	if _toast != null:
+		toast(message)
 
-func _recovery_dir() -> String:
-	return "%s/%s/recovery" % [EVIDENCE_ROOT, Version.profile_slug()]
+func _append_text(path: String, text: String) -> bool:
+	if not _prepare_evidence_dir() or not is_allowed_evidence_path(path):
+		return false
+	var file := FileAccess.open(path, FileAccess.READ_WRITE)
+	if file == null:
+		_show_evidence_error("Não foi possível gravar em evidencias ao lado do executável. Verifique a permissão da pasta da build.")
+		return false
+	file.seek_end()
+	file.store_string(text)
+	file.close()
+	return true
+
+func _write_binary(path: String, bytes: PackedByteArray) -> bool:
+	if not _prepare_evidence_dir() or not is_allowed_evidence_path(path):
+		return false
+	var file := FileAccess.open(path, FileAccess.WRITE)
+	if file == null:
+		_show_evidence_error("Não foi possível gravar o print em evidencias/imagens. Verifique a permissão da pasta da build.")
+		return false
+	file.store_buffer(bytes)
+	file.close()
+	return true
+
+func _write_note(text: String, ctx: Dictionary) -> bool:
+	var entry := "\n[%s]\nContexto: %s\n%s\n" % [Time.get_datetime_string_from_system(), scrub(JSON.stringify(ctx)), scrub(text)]
+	return _append_text(_relato_path(), entry)
+
+func append_game_log(line: String) -> void:
+	if Version.evidence_enabled() and (_evidence_dir != "" or _uses_executable_evidence_directory()) and _append_text(_log_path(), "%s\n" % scrub(line)):
+		_logged_line_count += 1
+
+func _sync_game_log() -> void:
+	if not Version.evidence_enabled():
+		return
+	for line in Game.log_lines.slice(_logged_line_count):
+		append_game_log(String(line))
 
 func take_print() -> void:
 	if _note_open:
@@ -571,24 +608,32 @@ func take_print() -> void:
 		return
 	if _guide_open:
 		return
-	var png: PackedByteArray = await _capture()
-	if not _room_for_png(png):
+	if not _prepare_evidence_dir():
 		return
-	_add({"kind": "print", "png": png, "text": ""})
-	toast("Print %d guardado (F7 gera o .zip)" % _prints())
-	if _bytes() > MAX_BYTES * 0.8:
-		toast("Pacote quase cheio (80%). Aperte F7 para gerar o .zip.")
+	var png: PackedByteArray = await _capture()
+	if png.is_empty():
+		_show_evidence_error("Não foi possível capturar a tela para salvar o print.")
+		return
+	var dt := Time.get_datetime_dict_from_system()
+	var stem := "print-%04d-%02d-%02d-%02d%02d%02d" % [dt.year, dt.month, dt.day, dt.hour, dt.minute, dt.second]
+	var path := "%s/%s.png" % [_images_dir(), stem]
+	var sequence := 2
+	while FileAccess.file_exists(path):
+		path = "%s/%s-%02d.png" % [_images_dir(), stem, sequence]
+		sequence += 1
+	if not _write_binary(path, png):
+		return
+	Game.logline("Evidência: print salvo em imagens/%s" % path.get_file())
+	toast("Print salvo em evidencias/imagens/%s" % path.get_file())
 
 func open_note() -> void:
 	_pending_ctx = context()
-	_pending_png = await _capture()
 	_note_open = true
 	_paused_before = get_tree().paused
 	get_tree().paused = true
 	_pad.visible = true
 	_edit.text = ""
 	_on_note_changed()
-	_refresh_summary()
 	_edit.grab_focus()
 
 func close_note() -> void:
@@ -599,36 +644,15 @@ func close_note() -> void:
 	get_tree().paused = _paused_before
 	var text := _edit.text.strip_edges().substr(0, NOTE_MAX)
 	if text != "":
-		var png := _pending_png if _room_for_png(_pending_png) else PackedByteArray()
-		_add({"kind": "nota", "png": png, "text": text, "ctx": _pending_ctx})
-		toast("Nota guardada (F7 gera o .zip)")
-	_clear_armed = false
-	_clear_btn.text = "Limpar pacote"
+		if _write_note(text, _pending_ctx):
+			Game.logline("Evidência: relato registrado")
+			toast("Relato salvo em evidencias/relato.txt")
 
 func _on_note_changed() -> void:
 	if _edit.text.length() > NOTE_MAX:
 		_edit.text = _edit.text.substr(0, NOTE_MAX)
 		_edit.set_caret_column(NOTE_MAX)
 	_count.text = "%d/%d caracteres" % [_edit.text.length(), NOTE_MAX]
-
-func _refresh_summary() -> void:
-	var notes := 0
-	for it in items:
-		if it.kind == "nota":
-			notes += 1
-	_summary.text = "Guardado: %d notas, %d prints" % [notes, _prints() - notes]
-
-func _on_clear() -> void:
-	if not _clear_armed:
-		_clear_armed = true
-		_clear_btn.text = "Certeza? clique de novo"
-		return
-	_clear_armed = false
-	_clear_btn.text = "Limpar pacote"
-	items.clear()
-	_wipe_draft()
-	_refresh_summary()
-	toast("Pacote limpo")
 
 func open_guide(first: bool) -> void:
 	_guide_mode = &"playtest"
@@ -694,135 +718,3 @@ func _restore_menu_focus() -> void:
 	var play_btn := scene.get_node_or_null("Tabs/Jogar/Right/PlayBtn") as Button
 	if play_btn != null and not play_btn.disabled:
 		play_btn.grab_focus()
-
-# ------------------------------------------------------------------ pacote e disco
-
-func _add(it: Dictionary) -> void:
-	it.time = Time.get_datetime_string_from_system()
-	if not it.has("ctx"):
-		it.ctx = context()
-	items.append(it)
-	if not _save_item(items.size() - 1):
-		_unsaved_items[items.size() - 1] = true
-		toast("Item guardado apenas em memória; não foi possível gravar o rascunho.")
-
-func _write_atomic(path: String, data: PackedByteArray) -> bool:
-	var absolute := ProjectSettings.globalize_path(path)
-	var temp := absolute + ".tmp"
-	var f := FileAccess.open(temp, FileAccess.WRITE)
-	if f == null:
-		return false
-	f.store_buffer(data)
-	f.close()
-	if DirAccess.rename_absolute(temp, absolute) != OK:
-		DirAccess.remove_absolute(temp)
-		return false
-	return true
-
-func _save_item(i: int) -> bool:
-	var draft_dir := _draft_dir()
-	if DirAccess.make_dir_recursive_absolute(draft_dir) != OK:
-		return false
-	var it: Dictionary = items[i]
-	if not _write_atomic("%s/item_%03d.json" % [draft_dir, i], JSON.stringify({"kind": it.kind, "time": it.time, "ctx": it.ctx, "text": it.text}).to_utf8_buffer()):
-		return false
-	if it.png.size() > 0:
-		if not _write_atomic("%s/item_%03d.png" % [draft_dir, i], it.png):
-			return false
-	return true
-
-func _load_draft() -> void:
-	var draft_dir := _draft_dir()
-	var dir := DirAccess.open(draft_dir)
-	if dir == null:
-		return
-	var names := dir.get_files()
-	names.sort()
-	for n in names:
-		if not n.ends_with(".json"):
-			continue
-		var f := FileAccess.open("%s/%s" % [draft_dir, n], FileAccess.READ)
-		var d: Variant = JSON.parse_string(f.get_as_text()) if f != null else null
-		if d is Dictionary:
-			var png := PackedByteArray()
-			var pp := "%s/%s.png" % [draft_dir, n.get_basename()]
-			if FileAccess.file_exists(pp):
-				png = FileAccess.get_file_as_bytes(pp)
-			items.append({"kind": d.kind, "time": d.time, "ctx": d.ctx, "text": d.text, "png": png})
-
-func _wipe_draft() -> void:
-	var draft_dir := _draft_dir()
-	var dir := DirAccess.open(draft_dir)
-	if dir == null:
-		return
-	for n in dir.get_files():
-		DirAccess.remove_absolute(ProjectSettings.globalize_path("%s/%s" % [draft_dir, n]))
-
-func out_dir() -> String:
-	var dir := _outbox_dir()
-	DirAccess.make_dir_recursive_absolute(dir)
-	return ProjectSettings.globalize_path(dir)
-
-func build_info(now: Dictionary) -> Dictionary:
-	var itl: Array = []
-	for i in items.size():
-		itl.append({"n": i + 1, "tipo": items[i].kind, "hora": items[i].time, "contexto": items[i].ctx})
-	return {"versao": Version.VERSION, "jogo": Version.GAME_NAME, "build": Version.profile_slug(), "data_utc": Time.get_datetime_string_from_system(true),
-		"plataforma": OS.get_name(), "notas": items.filter(func(x): return x.kind == "nota").size(), "prints": _prints(),
-		"itens": itl, "contexto_atual": context()}
-
-func export_zip() -> void:
-	if items.is_empty():
-		toast("Não há evidência a ser enviada.")
-		return
-	if _note_open:
-		close_note()
-	var dt := Time.get_datetime_dict_from_system()
-	var fname := "NS-EV-%s-%04d%02d%02d-%02d%02d%02d.zip" % [Version.profile_slug(), dt.year, dt.month, dt.day, dt.hour, dt.minute, dt.second]
-	var dir := out_dir()
-	var final_path := "%s/%s" % [dir, fname]
-	var path := final_path + ".tmp"
-	var zp := ZIPPacker.new()
-	if zp.open(path) != OK:
-		DirAccess.make_dir_recursive_absolute(_recovery_dir())
-		dir = ProjectSettings.globalize_path(_recovery_dir())
-		final_path = "%s/%s" % [dir, fname]
-		path = final_path + ".tmp"
-		if zp.open(path) != OK:
-			toast("Não consegui gravar o .zip; o pacote foi mantido.")
-			return
-	_zip_text(zp, "manifest.json", JSON.stringify(build_info({}), "  "))
-	var log_text := "\n".join(Game.log_lines.slice(maxi(0, Game.log_lines.size() - 200)))
-	_zip_text(zp, "log.txt", scrub(log_text) + "\n")
-	var md := "# Notas — %s (v%s)\n" % [Version.GAME_NAME, Version.VERSION]
-	var has_notes := false
-	var n := 0
-	for i in items.size():
-		var it: Dictionary = items[i]
-		if it.kind == "nota":
-			has_notes = true
-			n += 1
-			md += "\n## Nota %d — %s\nContexto: %s\n\n%s\n" % [n, it.time, JSON.stringify(it.ctx), scrub(String(it.text))]
-	if has_notes:
-		_zip_text(zp, "notas.md", md)
-	for i in items.size():
-		var it: Dictionary = items[i]
-		if it.png.size() > 0:
-			zp.start_file("screenshots/%03d-%s.png" % [i + 1, it.kind])
-			zp.write_file(it.png)
-			zp.close_file()
-	if Version.qa_enabled() and Game.qa_sandbox:
-		_zip_text(zp, "qa/scenario.json", JSON.stringify(Game.qa_launch, "  "))
-	if zp.close() != OK or not FileAccess.file_exists(path) or FileAccess.get_file_as_bytes(path).is_empty() or DirAccess.rename_absolute(path, final_path) != OK:
-		toast("Falha ao finalizar o ZIP; o pacote foi mantido para nova tentativa.")
-		return
-	var summary := "%d notas, %d prints" % [items.filter(func(x): return x.kind == "nota").size(), _prints()]
-	items.clear()
-	_wipe_draft()
-	Game.logline("Evidência exportada: %s" % fname)
-	toast("Evidência salva: %s (%s)\n%s" % [fname, summary, dir])
-
-func _zip_text(zp: ZIPPacker, name: String, text: String) -> void:
-	zp.start_file(name)
-	zp.write_file(text.to_utf8_buffer())
-	zp.close_file()

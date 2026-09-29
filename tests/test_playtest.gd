@@ -11,7 +11,7 @@ func run() -> Array:
 	_assert_note_panel_size(failures, Vector2(320, 480), Vector2(272, 432))
 	_assert_shortcut(failures, KEY_F5, &"note")
 	_assert_shortcut(failures, KEY_F6, &"screenshot")
-	_assert_shortcut(failures, KEY_F7, &"export")
+	_assert_shortcut(failures, KEY_F7, &"")
 	_assert_shortcut(failures, KEY_F11, &"fullscreen")
 	_assert_shortcut(failures, KEY_F12, &"console")
 	_assert_shortcut(failures, KEY_ESCAPE, &"")
@@ -34,9 +34,23 @@ func run() -> Array:
 	qa_f4.physical_keycode = KEY_F4
 	if not PlaytestScript.is_qa_shortcut(qa_f4):
 		failures.append("F4 nao abriu o atalho QA")
+	var evidence_dir := PlaytestScript.evidence_directory_for_executable("C:/playtest/NottgardSurvivors.exe")
+	if evidence_dir != "C:/playtest/evidencias":
+		failures.append("evidencias deveria ficar ao lado do executavel, recebeu %s" % evidence_dir)
+	for path in ["relato.txt", "logs/jogo.log", "imagens/print-2026-09-29-010203.png"]:
+		if not PlaytestScript.is_allowed_evidence_path(path):
+			failures.append("extensao permitida rejeitada: %s" % path)
+	for path in ["manifest.json", "pacote.zip", "video.mp4", "save.dat", "NottgardSurvivors.exe"]:
+		if PlaytestScript.is_allowed_evidence_path(path):
+			failures.append("extensao proibida aceita: %s" % path)
 	var rules := PlaytestScript.game_rules_text()
 	if rules.find("Seu nome") >= 0 or rules.find("[b]Objetivo[/b]") < 0 or rules.find("[b]Progresso[/b]") < 0:
 		failures.append("ajuda de regras deveria explicar o jogo sem pedir nome")
+	var guide := PlaytestScript._guide_text()
+	if guide.find("F7") >= 0 or guide.to_lower().find(".zip") >= 0:
+		failures.append("guia de playtest ainda referencia F7 ou ZIP")
+	if guide.find("F4 Navegador QA") < 0:
+		failures.append("guia de playtest deveria explicar F4")
 	return failures
 
 func _assert_panel_size(failures: Array, viewport_size: Vector2, expected: Vector2) -> void:

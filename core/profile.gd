@@ -8,11 +8,14 @@ static func fresh() -> Dictionary:
 	return {"name": "", "coins": 0, "upgrades": {}, "achievements": {}, "cleared": {}, "welcome_seen": false,
 		"stats": {"kills_total": 0, "gold_total": 0, "chests_total": 0, "bosses_total": 0, "elites_total": 0, "boss_kills": {}, "heroes_played": {}, "reached": {}, "runs": 0, "deaths": 0, "best_time": {}},
 		"codex": {"enemies": {}, "items": {}, "weapons": {}},
-		"settings": {"aim": "auto", "volume": 0.7, "music_volume": 0.8, "sfx_volume": 0.9, "ambience_volume": 0.75, "fullscreen": false, "difficulty": 0}}
+		"settings": {"aim": "auto", "volume": 0.7, "music_volume": 0.8, "sfx_volume": 0.9, "ambience_volume": 0.75,
+			"music_muted": false, "sfx_muted": false, "ambience_muted": false,
+			"window_mode": "windowed", "resolution": "1280x720", "fullscreen": false, "difficulty": 0}}
 
 func _init(d: Dictionary = {}) -> void:
 	data = fresh()
 	_merge(data, d)
+	_migrate_settings(d.get("settings", {}))
 	_migrate_stage_split()
 
 static func _merge(into: Dictionary, src: Dictionary) -> void:
@@ -26,6 +29,15 @@ func _migrate_stage_split() -> void:
 	# Perfis que já concluíram a antiga Dagruve/Docas não perdem acesso à nova Docas.
 	if data.cleared.has("dagruve"):
 		data.cleared["docas"] = true
+
+
+func _migrate_settings(source: Dictionary) -> void:
+	# `fullscreen` era a única preferência de vídeo até a SPEC-077.
+	if not source.has("window_mode"):
+		data.settings.window_mode = "fullscreen" if bool(source.get("fullscreen", false)) else "windowed"
+	if not (String(data.settings.window_mode) in ["windowed", "borderless", "fullscreen"]):
+		data.settings.window_mode = "windowed"
+	data.settings.fullscreen = String(data.settings.window_mode) == "fullscreen"
 
 func coins() -> int:
 	return int(data.coins)

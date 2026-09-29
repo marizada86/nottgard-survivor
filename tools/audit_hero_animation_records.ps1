@@ -19,6 +19,18 @@ function Get-ImageMetadata([string]$Path) {
     finally { $image.Dispose() }
 }
 
+function Get-Sha256([string]$Path) {
+    $algorithm = [System.Security.Cryptography.SHA256]::Create()
+    $stream = [System.IO.File]::OpenRead($Path)
+    try {
+        return -join ($algorithm.ComputeHash($stream) | ForEach-Object { $_.ToString('x2') })
+    }
+    finally {
+        $stream.Dispose()
+        $algorithm.Dispose()
+    }
+}
+
 function Get-Candidates([string]$Hero, [string]$Sequence) {
     $roots = @(
         (Join-Path $ProjectRoot ".atena/generated/asset-candidates/animations/heroes/$Hero"),
@@ -28,7 +40,7 @@ function Get-Candidates([string]$Hero, [string]$Sequence) {
         Get-ChildItem -LiteralPath $root -Recurse -File -Filter "$Sequence*.png" | ForEach-Object {
             [pscustomobject][ordered]@{
                 path = $_.FullName.Substring($ProjectRoot.Length + 1).Replace('\', '/')
-                sha256 = (Get-FileHash -Algorithm SHA256 -LiteralPath $_.FullName).Hash.ToLowerInvariant()
+                sha256 = Get-Sha256 $_.FullName
                 dimensions = Get-ImageMetadata $_.FullName
             }
         }
@@ -60,7 +72,7 @@ $records = foreach ($hero in $heroIds) {
             sequence = $sequence.id
             final_path = $finalPath
             final_exists = $finalExists
-            final_sha256 = if ($finalExists) { (Get-FileHash -Algorithm SHA256 -LiteralPath $finalFullPath).Hash.ToLowerInvariant() } else { $null }
+            final_sha256 = if ($finalExists) { Get-Sha256 $finalFullPath } else { $null }
             dimensions = if ($null -eq $metadata) { $null } else { "{0}x{1}" -f $metadata.width, $metadata.height }
             alpha = if ($null -eq $metadata) { $null } else { $metadata.alpha }
             frames = $sequence.frames

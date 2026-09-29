@@ -1,0 +1,19 @@
+{
+  "id": "HERO-brook-identity-v01",
+  "spec": "SPEC-076-redefinicao-visual-de-brook",
+  "state": "awaiting_visual_approval",
+  "generated_at": "2026-09-29",
+  "references": [
+    {
+      "path": ".atena/evidence/reference-staging/brook-canonical-2026-09-29.png",
+      "role": "authoritative visual identity"
+    }
+  ],
+  "remote_transfer_approval": "Owner approved the visual redefinition and transfer of the attached reference with ‘tudo aprovado’ on 2026-09-29.",
+  "candidate": {
+    "path": ".atena/generated/art-candidates/identity/brook_identity_v01.png",
+    "version": 1,
+    "role": "identity master candidate; not a runtime asset"
+  },
+  "prompt": "Create a canonical full-body identity master for Brook França, a halfling paladin of Lliira. Preserve the supplied authoritative reference's mature determined face, swept-back white hair, short neat white beard, ear shape, dark weathered plate armor, dark cape, and spiked mace. Make him unmistakably short and compact through body proportions, shortened limbs, and a low visual center of gravity; never a tall human, dwarf, or generic large bearded warrior. One complete centered three-quarter front figure, no text, grid, UI, other people, wings, halo, or large magical effects."
+}

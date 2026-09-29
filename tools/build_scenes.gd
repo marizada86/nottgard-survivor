@@ -443,22 +443,43 @@ func _build_menu() -> void:
 	_add(cl, _fill(ItemList.new()), "CodexList", m, true)
 	_add(cx, _fill(_rich(300)), "CodexText", m, true)
 	# Opções
+	var options_scroll := ScrollContainer.new()
+	_tab(tabs, options_scroll, "Opções", m)
 	var op := VBoxContainer.new()
+	op.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	op.add_theme_constant_override("separation", 10)
-	_tab(tabs, op, "Opções", m)
+	_add(options_scroll, op, "Content", m)
+	var audio_title := _label("ÁUDIO")
+	audio_title.add_theme_color_override("font_color", Color(0.9, 0.75, 0.42, 1))
+	_add(op, audio_title, "AudioTitle", m)
+	_add(op, _label("Volume mestre"), "VolLabel", m)
+	_add(op, _audio_slider(), "VolOpt", m, true)
+	_add(op, _label("Música"), "MusicVolLabel", m)
+	_add(op, _audio_slider(), "MusicVolOpt", m, true)
+	_add(op, _check("Silenciar música"), "MusicMuteOpt", m, true)
+	_add(op, _label("Efeitos"), "SfxVolLabel", m)
+	_add(op, _audio_slider(), "SfxVolOpt", m, true)
+	_add(op, _check("Silenciar efeitos"), "SfxMuteOpt", m, true)
+	_add(op, _label("Ambiência"), "AmbienceVolLabel", m)
+	_add(op, _audio_slider(), "AmbienceVolOpt", m, true)
+	_add(op, _check("Silenciar ambiência"), "AmbienceMuteOpt", m, true)
+	var video_title := _label("VÍDEO")
+	video_title.add_theme_color_override("font_color", Color(0.9, 0.75, 0.42, 1))
+	_add(op, video_title, "VideoTitle", m)
+	_add(op, _label("Modo de exibição"), "DisplayModeLabel", m)
+	_add(op, OptionButton.new(), "DisplayModeOpt", m, true)
+	_add(op, _label("Resolução (aplicada em Janela ou Sem borda)"), "ResolutionLabel", m)
+	_add(op, OptionButton.new(), "ResolutionOpt", m, true)
+	var gameplay_title := _label("JOGABILIDADE")
+	gameplay_title.add_theme_color_override("font_color", Color(0.9, 0.75, 0.42, 1))
+	_add(op, gameplay_title, "GameplayTitle", m)
 	_add(op, _label("Modo de mira (também: Tab durante a run)"), "AimLabel", m)
 	_add(op, OptionButton.new(), "AimOpt", m, true)
-	_add(op, _label("Volume"), "VolLabel", m)
-	var vs := HSlider.new()
-	vs.max_value = 1.0
-	vs.step = 0.05
-	vs.custom_minimum_size = Vector2(340, 24)
-	_add(op, vs, "VolOpt", m, true)
-	var fo := CheckBox.new()
-	fo.text = "Tela cheia (F11)"
-	_add(op, fo, "FullOpt", m, true)
 	_add(op, _label("Maldição (dificuldade)"), "DiffLabel", m)
 	_add(op, OptionButton.new(), "DiffOpt", m, true)
+	var actions_title := _label("AÇÕES")
+	actions_title.add_theme_color_override("font_color", Color(0.9, 0.75, 0.42, 1))
+	_add(op, actions_title, "ActionsTitle", m)
 	var gb := Button.new()
 	gb.text = "Guia do playtester (F1)"
 	_add(op, gb, "GuideBtn", m, true)
@@ -466,3 +487,17 @@ func _build_menu() -> void:
 	rb.text = "Apagar progresso"
 	_add(op, rb, "ResetBtn", m, true)
 	_save(m, "res://ui/menu.tscn")
+
+
+func _audio_slider() -> HSlider:
+	var slider := HSlider.new()
+	slider.max_value = 1.0
+	slider.step = 0.05
+	slider.custom_minimum_size = Vector2(340, 24)
+	return slider
+
+
+func _check(text: String) -> CheckBox:
+	var check := CheckBox.new()
+	check.text = text
+	return check
