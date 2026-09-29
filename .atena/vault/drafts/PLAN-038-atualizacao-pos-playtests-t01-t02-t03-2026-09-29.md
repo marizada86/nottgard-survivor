@@ -161,6 +161,14 @@ playtesters **não voltarem a mencionar** um bug, ele é dado por corrigido. Efe
 - Risco aceito: se algo novo aparecer, fica mais difícil separar se veio da correção
   ou do M1. Mitigação: commits separados permitem `git revert` isolado.
 
+## Estado final (2026-09-29, fim do dia)
+
+Todo o escopo de correções e mecânicas dos playtests T01 a T03 foi implementado e commitado na **versão 0.2.0**
+(bugs 011/012/013/015; MEC-005, 007, 008, 009, 010, 011, 013, 014, 015, 016, 017, 018, 019, 020, 021, 022, 023, 024, 026;
+SPEC-081 a 092; arte provisória em código). O lote de bugs **não foi fechado** por decisão do dono: a validação é o
+playtest da 0.2.0. **Adiados por decisão do dono:** MEC-012 (mapas maiores). **Pendentes de terceiros:** imagens em
+geração (ART-PROMPTS-025, 026, HQs) e o export/push do build.
+
 ## Ordem de execução e portões
 
 ```
