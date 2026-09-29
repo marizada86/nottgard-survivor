@@ -7,6 +7,12 @@
     "max_mult": 1.2,
     "every_mult": 0.85
   },
+  "breakables": {
+    "min_seconds": 22,
+    "spread_seconds": 14,
+    "charisma_step": 0.06
+  },
+  "styx_lucidity_seconds": 300,
   "hourglass": {
     "skip_seconds": 60,
     "burst_max": 18

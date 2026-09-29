@@ -112,6 +112,7 @@ var visual_boon_selected := false
 var styx_rng := RandomNumberGenerator.new()
 var styx_exposure := 0.0
 var styx_test_next := 1.0
+var _styx_loss_expiry: Array = []   # run_time em que cada ponto de INT perdido volta (MEC-022)
 var styx_in_water := false
 
 func _init(seed_value: int = 1, hero_id: String = "durvall", stage_key: String = "dagruve", ctx: Dictionary = {}) -> void:
@@ -165,6 +166,7 @@ func load_stage(stage_key: String) -> void:
 	styx_exposure = 0.0
 	styx_test_next = 1.0
 	styx_in_water = false
+	_styx_loss_expiry.clear()
 	hero.styx_lucidity_loss = 0
 	hero.styx_forget_t = 0.0
 	hero.terrain_id = stage_key
@@ -1149,6 +1151,7 @@ func _on_boss_dead(e: Enemy) -> void:
 	_drop("gold", e.pos, 60.0 * float(stage.coin_mult))
 	_add_interaction("chest", e.pos + Vector2(1.2, 0))
 	_add_interaction("chest", e.pos + Vector2(-1.2, 0))
+	_add_interaction("boss_chest", e.pos + Vector2(0, 1.6))
 	events.append({"type": "toast", "text": "%s caiu!" % e.name})
 	if bool(stage.get("endless", false)):
 		if not final_victory:
@@ -1329,10 +1332,10 @@ func _update_interactions(dt: float) -> void:
 		if time - float(it.get("born_at", 0.0)) < 0.65:
 			continue
 		var d: float = it.pos.distance_to(hero.pos)
-		if d <= 0.8 and (it.kind == "chest" or it.kind == "fountain"):
+		if d <= 0.8 and (it.kind == "chest" or it.kind == "boss_chest" or it.kind == "fountain"):
 			it.used = true
 			events.append({"type": "interaction", "kind": it.kind, "pos": it.pos})
-			if it.kind == "chest":
+			if it.kind == "chest" or it.kind == "boss_chest":
 				_open_chest(it)
 			else:
 				var heal_pct := 0.4 * maxf(0.35, 1.0 - float(descent_depth) * 0.15)
@@ -1442,6 +1445,9 @@ func _open_shop_event(kind: String) -> void:
 
 func _open_chest(it: Dictionary) -> void:
 	stats.chests += 1
+	if String(it.kind) == "boss_chest":
+		_open_boss_chest()
+		return
 	if rng.randf() < 0.10 + tier() * 0.01 and not it.get("safe", false):
 		var m := _spawn("mimico", it.pos, 0.0)
 		m.drops_chest = true
@@ -1453,6 +1459,17 @@ func _open_chest(it: Dictionary) -> void:
 	if _has_boon_effect("lucky_chests"):
 		luck += 4.0
 	give_item(Items.roll(rng, tier(), luck))
+
+## MEC-013: o baú do chefe nunca vem com item comum ou mágico (raro ou único) e nunca é mímico.
+func _open_boss_chest() -> void:
+	var luck := hero.m("carisma") + hero.attr_mod("carisma") + 4.0
+	var item := Items.roll(rng, tier() + 1, luck)
+	for i in 12:
+		if int(Items.RANK[item.rarity]) >= int(Items.RANK["raro"]):
+			break
+		item = Items.roll(rng, tier() + 1, luck)
+	events.append({"type": "toast", "text": "Baú do Chefe!", "color": Color(1.0, 0.85, 0.3)})
+	give_item(item)
 
 func give_item(item: Dictionary) -> void:
 	codex.items[item.id] = true
@@ -1569,9 +1586,9 @@ func _build_offer() -> Array:
 		var pv: Dictionary = w.params()
 		if w.can_evolve() and int(hero.passives.get(w.def.evolve.passive, 0)) > 0:
 			var evo: Dictionary = wdata[w.def.evolve.into]
-			pool.append({"t": "evolve", "id": w.id, "into": w.def.evolve.into, "name": "EVOLUÇÃO: %s" % evo.name, "desc": evo.desc, "weight": 9.0, "role": "synergy"})
+			pool.append({"t": "evolve", "id": w.id, "into": w.def.evolve.into, "name": "★ EVOLUÇÃO: %s" % evo.name, "desc": evo.desc, "weight": 9.0, "role": "synergy"})
 		elif w.level < w.max_level():
-			pool.append({"t": "weapon_up", "id": w.id, "name": "%s → Nv %d" % [w.def.name, w.level + 1], "desc": _level_desc(w), "weight": 3.0, "role": "synergy"})
+			pool.append({"t": "weapon_up", "id": w.id, "name": "%s → Nv %d" % [w.def.name, w.level + 1], "desc": _level_desc(w) + (("\n" + evolve_hint(w)) if w.def.has("evolve") else ""), "weight": 3.0, "role": "synergy"})
 		var syn: Dictionary = w.def.get("synergy", {})
 		if not syn.is_empty() and not hero.synergies.has(w.id) and _has_maxed_accessory(String(syn.item_base)):
 			pool.append({"t": "synergy_activate", "id": w.id, "name": "SINERGIA: %s" % String(syn.name), "desc": "%s por camada descida (agora: ×%d)." % [Items.mods_text(syn.bonus_per_depth), maxi(1, descent_depth)], "weight": 9.0, "role": "synergy"})
@@ -1638,6 +1655,39 @@ func _passive_offer_role(d: Dictionary) -> String:
 			return "synergy"
 	return "direction"
 
+## MEC-018: dano mínimo e máximo da arma com os atributos e bônus atuais do herói (sem crítico, que dobra).
+func weapon_damage_range(p: Dictionary) -> Vector2i:
+	var dice := String(p.get("dice", ""))
+	if dice == "":
+		return Vector2i.ZERO
+	var b := Dice.bounds(dice)
+	var flat := hero.attr_mod(String(p.get("attr", "forca"))) + int(p.get("dmg", 0)) + int(hero.m("dmg_flat"))
+	var pct := maxf(0.2, 1.0 + hero.m("dmg_pct"))
+	return Vector2i(maxi(1, int(round(float(b.x + flat) * pct))), maxi(1, int(round(float(b.y + flat) * pct))))
+
+func weapon_damage_text(p: Dictionary) -> String:
+	var r := weapon_damage_range(p)
+	if r == Vector2i.ZERO:
+		return ""
+	var attrs := {"forca": "FOR", "inteligencia": "INT", "carisma": "CAR", "constituicao": "CON"}
+	var types := {"fisico": "físico", "magico": "mágico", "radiante": "radiante", "fogo": "fogo"}
+	return "Dano %d–%d (%s, escala com %s)" % [r.x, r.y, types.get(String(p.get("dtype", "fisico")), String(p.get("dtype", "fisico"))), attrs.get(String(p.get("attr", "forca")), "FOR")]
+
+## MEC-008: como evoluir a arma (nível máximo + passiva) e o que ainda falta.
+func evolve_hint(w: Weapon) -> String:
+	if not w.def.has("evolve"):
+		return ""
+	var pname := String(Data.table("passives").get(String(w.def.evolve.passive), {}).get("name", String(w.def.evolve.passive)))
+	var into := String(Data.table("weapons").get(String(w.def.evolve.into), {}).get("name", String(w.def.evolve.into)))
+	var missing: Array = []
+	if w.level < Weapon.MAX_LEVEL:
+		missing.append("nível %d (agora %d)" % [Weapon.MAX_LEVEL, w.level])
+	if int(hero.passives.get(String(w.def.evolve.passive), 0)) <= 0:
+		missing.append("passiva %s" % pname)
+	if missing.is_empty():
+		return "Pronta para evoluir em %s: escolha a evolução no próximo level-up." % into
+	return "Evolui em %s com nível %d + passiva %s. Falta: %s." % [into, Weapon.MAX_LEVEL, pname, ", ".join(missing)]
+
 func _level_desc(w: Weapon) -> String:
 	var lv: Array = w.def.get("levels", [])
 	if w.level - 1 >= lv.size():
@@ -1649,7 +1699,13 @@ func _level_desc(w: Weapon) -> String:
 	for k in lv[w.level - 1]:
 		var v: Variant = lv[w.level - 1][k]
 		parts.append("%s %s" % [labels.get(k, k), v if k == "dice" else "%+.1f" % float(v)])
-	return ", ".join(parts)
+	var text := ", ".join(parts)
+	var next_p := Weapon.make(w.id, w.level + 1).params()
+	var r_now := weapon_damage_range(w.params())
+	var r_next := weapon_damage_range(next_p)
+	if r_now != Vector2i.ZERO and r_next != r_now:
+		text += "\nDano %d–%d → %d–%d" % [r_now.x, r_now.y, r_next.x, r_next.y]
+	return text
 
 func _has_maxed_accessory(base_id: String) -> bool:
 	for slot in hero.items:
@@ -1852,7 +1908,7 @@ func _director(dt: float) -> void:
 		_spawn_random_interaction()
 	_breakable_t -= dt
 	if _breakable_t <= 0.0:
-		_breakable_t = 35.0 + rng.randf() * 20.0
+		_breakable_t = _breakable_interval()
 		_spawn_random_breakable()
 
 ## MEC-026: interromper o ritual dá uma bênção temporária (dados em data/difficulty.json).
@@ -1864,6 +1920,12 @@ func _grant_ritual_blessing() -> void:
 	hero.temp_t = float(b.duration)
 	hero.recalc()
 	events.append({"type": "toast", "text": "Bênção do Selo: %s por %d s" % [Items.mods_text(hero.temp_mods), int(hero.temp_t)]})
+
+## MEC-007: quebráveis mais frequentes; o Carisma encurta o intervalo (até -40%).
+func _breakable_interval() -> float:
+	var cfg: Dictionary = Data.table("difficulty").get("breakables", {})
+	var base := float(cfg.get("min_seconds", 35.0)) + rng.randf() * float(cfg.get("spread_seconds", 20.0))
+	return base * clampf(1.0 - float(cfg.get("charisma_step", 0.0)) * float(hero.attr_mod("carisma")), 0.6, 1.0)
 
 func _spawn_random_breakable() -> void:
 	var types: Array = BREAKABLE_TYPES_BY_STAGE.get(stage_id, BREAKABLE_DEFAULT_TYPES)
@@ -2009,6 +2071,10 @@ func _apply_rule_kind(kind: String, dt: float) -> void:
 				events.append({"type": "toast", "text": "Um santuário surge no falso paraíso."})
 
 func _styx_step(dt: float) -> void:
+	while not _styx_loss_expiry.is_empty() and run_time >= float(_styx_loss_expiry[0]):
+		_styx_loss_expiry.pop_front()
+		hero.styx_lucidity_loss = maxi(0, hero.styx_lucidity_loss - 1)
+		events.append({"type": "toast", "text": "A lucidez volta: -1 de perda de INT."})
 	var in_water := TerrainLayout.is_styx_water(stage_id, hero.pos)
 	if not in_water:
 		if styx_in_water and styx_exposure >= 2.0:
@@ -2036,6 +2102,7 @@ func _styx_lucidity_test(dc: int) -> void:
 	var passed := total >= dc
 	if not passed:
 		hero.styx_lucidity_loss += 1
+		_styx_loss_expiry.append(run_time + float(Data.table("difficulty").get("styx_lucidity_seconds", 300.0)))
 	events.append({"type": "styx_test", "pos": hero.pos, "passed": passed, "roll": roll, "dc": dc, "loss": hero.styx_lucidity_loss})
 
 # ------------------------------------------------------------------ resultado

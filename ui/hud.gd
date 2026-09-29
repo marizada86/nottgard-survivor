@@ -260,7 +260,10 @@ func show_items_panel(b: Battle) -> void:
 		var status := ""
 		if w.can_evolve():
 			status = "  [color=#ffd966](pronto para evoluir)[/color]"
-		lines.append("[b]⚔ %s[/b]%s%s\n%s" % [w.display_name(), tag, status, String(w.def.get("desc", ""))])
+		var dmg_line := b.weapon_damage_text(w.params())
+		var hint := b.evolve_hint(w)
+		lines.append("[b]⚔ %s[/b]%s%s\n%s%s%s" % [w.display_name(), tag, status, String(w.def.get("desc", "")),
+			("\n[color=#e6c76e]%s[/color]" % dmg_line) if dmg_line != "" else "", ("\n[color=#9fb4d8]%s[/color]" % hint) if hint != "" else ""])
 	for pid in h.passives:
 		var p: Dictionary = Data.table("passives")[pid]
 		lines.append("[b]✦ %s Nv %d[/b]\n%s" % [p.name, h.passives[pid], String(p.get("desc", ""))])

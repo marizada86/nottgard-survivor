@@ -371,6 +371,8 @@ func _draw_over() -> void:
 		var asset := ""
 		match String(it.kind):
 			"chest": col = Color(0.9, 0.7, 0.2); label = "baú"; asset = "chest_closed"
+			# ART-011: baú do chefe reaproveita o baú comum, com rótulo e cor próprios, até existir assets/interactions/boss_chest.png
+			"boss_chest": col = Color(1.0, 0.85, 0.25); label = "BAÚ DO CHEFE"; asset = "boss_chest" if ResourceLoader.exists("res://assets/interactions/boss_chest.png") else "chest_closed"
 			"fountain": col = Color(0.3, 0.7, 1.0); label = "fonte"; asset = "fountain_active"
 			"altar": col = Color(0.8, 0.4, 1.0); label = "altar [E]"; asset = "altar_active"
 			"ritual": col = Color(0.9, 0.2, 0.2); label = "ritual [E]"; asset = "ritual"

@@ -18,6 +18,68 @@ func _quiet(b: Battle) -> void:
 func run() -> Array:
 	var out: Array = []
 
+	# MEC-007: quebráveis mais frequentes que o intervalo antigo de 35-55 s; Carisma encurta
+	var bk_t := _bat(51)
+	var bk_avg := 0.0
+	for i in 40:
+		bk_avg += bk_t._breakable_interval()
+	bk_avg /= 40.0
+	if bk_avg >= 35.0:
+		out.append("intervalo médio dos quebráveis deveria ser menor que o antigo (%.1f s)" % bk_avg)
+	var bk_hi := _bat(51)
+	bk_hi.hero.base_attrs["carisma"] = 20
+	var hi_sum := 0.0
+	for i in 40:
+		hi_sum += bk_hi._breakable_interval()
+	if hi_sum / 40.0 >= bk_avg:
+		out.append("Carisma alto deveria encurtar o intervalo dos quebráveis")
+
+	# MEC-022: a perda de INT do Estige some sozinha depois de styx_lucidity_seconds
+	var sl := _bat(52)
+	_quiet(sl)
+	sl.hero.styx_lucidity_loss = 2
+	sl._styx_loss_expiry = [sl.run_time + 300.0, sl.run_time + 320.0]
+	sl.run_time += 301.0
+	sl._styx_step(0.016)
+	if sl.hero.styx_lucidity_loss != 1:
+		out.append("a primeira perda de INT deveria expirar aos 300 s (perda agora %d)" % sl.hero.styx_lucidity_loss)
+	sl.run_time += 30.0
+	sl._styx_step(0.016)
+	if sl.hero.styx_lucidity_loss != 0:
+		out.append("a segunda perda de INT deveria expirar depois")
+
+	# MEC-013: baú do chefe sempre raro ou melhor
+	var bc := _bat(53)
+	_quiet(bc)
+	var bad_rarity := 0
+	for i in 20:
+		bc.hero.items.clear()
+		bc._open_boss_chest()
+		var got: Dictionary = bc.hero.items.values()[0] if not bc.hero.items.is_empty() else {}
+		if not got.is_empty() and int(Items.RANK[got.rarity]) < int(Items.RANK["raro"]):
+			bad_rarity += 1
+	if bad_rarity > 0:
+		out.append("baú do chefe entregou item abaixo de raro %d vez(es)" % bad_rarity)
+
+	# MEC-018: faixa de dano com atributos; MEC-008: dica de evolução
+	var dm := _bat(61)
+	_quiet(dm)
+	var sw := Weapon.make("espada_sombria")
+	var rng_dm := dm.weapon_damage_range(sw.params())
+	var expect_min: int = 1 + dm.hero.attr_mod("forca")
+	if rng_dm.x < 1 or rng_dm.y <= rng_dm.x or absf(float(rng_dm.x) - maxf(1.0, float(expect_min) * (1.0 + dm.hero.m("dmg_pct")))) > 1.0:
+		out.append("faixa de dano da espada deveria refletir 1d8 + FOR: %s" % str(rng_dm))
+	if dm.weapon_damage_text(sw.params()).find("FOR") < 0:
+		out.append("texto de dano deveria citar o atributo que escala")
+	if Dice.bounds("2d6") != Vector2i(2, 12):
+		out.append("Dice.bounds de 2d6 deveria ser 2 a 12")
+	if dm.evolve_hint(sw).find("Falta") < 0:
+		out.append("dica de evolução deveria dizer o que falta")
+	sw.level = Weapon.MAX_LEVEL
+	dm.hero.passives["cota_de_malha"] = 1
+	if dm.evolve_hint(sw).find("Pronta") < 0:
+		out.append("dica de evolução deveria avisar que a arma está pronta")
+
 	# MEC-010: 2x só em fase já vencida
 	var sp := _bat(41)
 	_quiet(sp)
@@ -714,11 +776,11 @@ func run() -> Array:
 	if fog.fog_state != "warning":
 		out.append("Mare deveria avisar antes de avancar")
 	fog.step(Vector2.ZERO, 2.0)
-	if fog.fog_state != "advancing" or fog.fog_damage_per_second() < 0.01 or fog.fog_damage_per_second() > 0.011:
-		out.append("Mare deveria iniciar em 1% da vida maxima por segundo")
+	if fog.fog_state != "advancing" or fog.fog_damage_per_second() < 0.02 or fog.fog_damage_per_second() > 0.021:
+		out.append("Mare deveria iniciar em 2% da vida maxima por segundo")
 	fog._update_postboss_fog(20.0)
-	if not is_equal_approx(fog.fog_damage_per_second(), 0.03):
-		out.append("Mare deveria atingir 3% da vida maxima por segundo apos a rampa")
+	if not is_equal_approx(fog.fog_damage_per_second(), 0.06):
+		out.append("Mare deveria atingir 6% da vida maxima por segundo apos a rampa")
 	fog.hero.hero_mods = {"ca": 99, "cam": 99, "dodge": 0.99}
 	fog.hero.recalc()
 	fog.hero.pos = Vector2(0.1, 0.1)

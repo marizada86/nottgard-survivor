@@ -10,8 +10,8 @@
       "enabled": true,
       "grace_seconds": 8.0,
       "warning_seconds": 2.0,
-      "start_dps_pct": 0.01,
-      "max_dps_pct": 0.03,
+      "start_dps_pct": 0.02,
+      "max_dps_pct": 0.06,
       "ramp_seconds": 20.0,
       "advance_seconds": 28.0
     }

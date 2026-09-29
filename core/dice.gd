@@ -22,3 +22,10 @@ static func avg(expr: String) -> float:
 		return 0.0
 	var p := expr.split("d")
 	return float(int(p[0])) * (float(int(p[1])) + 1.0) / 2.0
+
+## Mínimo e máximo de uma expressão de dado (NdM).
+static func bounds(expr: String) -> Vector2i:
+	if expr == "":
+		return Vector2i.ZERO
+	var p := expr.split("d")
+	return Vector2i(int(p[0]), int(p[0]) * int(p[1]))

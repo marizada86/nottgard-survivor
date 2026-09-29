@@ -490,7 +490,7 @@ func _play_enemy_action(enemy_id: String, ground_position: Vector2, action: Stri
 		best.play_action(action)
 
 func _play_interaction(ev: Dictionary) -> void:
-	var sequence: String = {"chest": "chest_open", "fountain": "fountain_active", "altar": "altar_active", "ritual": "ritual", "portal": "portal"}.get(String(ev.kind), "")
+	var sequence: String = {"chest": "chest_open", "boss_chest": "chest_open", "fountain": "fountain_active", "altar": "altar_active", "ritual": "ritual", "portal": "portal"}.get(String(ev.kind), "")
 	var count: int = {"chest_open": 6, "fountain_active": 6, "altar_active": 6, "ritual": 8, "portal": 8}.get(sequence, 0)
 	var path := "res://assets/animations/interactions/%s.png" % sequence
 	if count == 0 or not ResourceLoader.exists(path):
