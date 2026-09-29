@@ -316,11 +316,14 @@ func run() -> Array:
 	var le := _bat(14)
 	_quiet(le)
 	le.hero.gold = 500
-	le._open_shop_event("curandeiro")  # herói com PV cheio: só "Sair" deveria aparecer
-	if le.offer.size() != 1 or String(le.offer[0].t) != "shop_leave":
-		out.append("sem PV faltando, curandeiro deveria oferecer só 'Sair'")
-	var gold_before_leave: int = le.hero.gold
+	le._open_shop_event("curandeiro")  # herói com PV cheio: linha informativa travada + "Sair" (MEC-023)
+	if le.offer.size() != 2 or String(le.offer[0].t) != "shop_info" or String(le.offer[1].t) != "shop_leave":
+		out.append("sem PV faltando, curandeiro deveria mostrar 'Vida cheia' e 'Sair'")
 	le.choose(0)
+	if le.state != "shop":
+		out.append("linha informativa travada não deveria fechar a loja")
+	var gold_before_leave: int = le.hero.gold
+	le.choose(le.offer.size() - 1)
 	if le.hero.gold != gold_before_leave or le.state != "running":
 		out.append("'Sair' não deveria custar nada nem deixar de fechar a oferta")
 
@@ -328,8 +331,39 @@ func run() -> Array:
 	_quiet(poor)
 	poor.hero.gold = 0
 	poor._open_shop_event("loja")
-	if poor.offer.any(func(o): return o.t == "shop_item"):
-		out.append("sem moeda suficiente, a loja não deveria oferecer o item")
+	# MEC-023: sem moeda a loja continua mostrando os itens, mas travados e com o que falta; escolher não compra nem fecha
+	if not poor.offer.any(func(o): return o.t == "shop_item" and bool(o.locked)):
+		out.append("sem moeda suficiente, a loja deveria mostrar o item travado")
+	var poor_item: int = poor.offer.find_custom(func(o): return o.t == "shop_item")
+	if poor_item >= 0:
+		if String(poor.offer[poor_item].desc).find("faltam") < 0:
+			out.append("item travado deveria dizer quantas moedas faltam")
+		poor.choose(poor_item)
+		if poor.state != "shop" or poor.hero.gold != 0:
+			out.append("escolher item sem moeda não deveria comprar nem fechar a loja")
+
+	# MEC-023: ferreiro sem nada forjável explica o motivo em vez de mostrar só "Sair"
+	var nf := _bat(16)
+	_quiet(nf)
+	nf.hero.weapons = []
+	nf.hero.items.clear()
+	nf._open_shop_event("ferreiro")
+	if nf.offer.size() != 2 or String(nf.offer[0].t) != "shop_info":
+		out.append("ferreiro sem nada forjável deveria mostrar 'Nada para melhorar' e 'Sair'")
+
+	# MEC-019: item novo contra o equipado mostra a diferença e o slot ocupado
+	var cmp := _bat(19)
+	_quiet(cmp)
+	var old_item := {"id": "a", "name": "Velho", "slot": "amuleto", "rarity": "comum", "mods": {"cam": 1.0, "hp": 2.0}, "level": 1}
+	cmp.hero.items["amuleto"] = old_item
+	cmp.give_item({"id": "b", "name": "Novo", "slot": "amuleto", "rarity": "raro", "mods": {"cam": 3.0, "hp": 1.0}})
+	var equip_desc := String(cmp.offer[0].desc)
+	if equip_desc.find("Contra o atual: +2 CAM, -1 PV") < 0:
+		out.append("oferta de item deveria trazer a diferença contra o equipado: %s" % equip_desc)
+	if String(cmp.offer[0].get("tooltip", "")).find("Velho") < 0:
+		out.append("oferta de item deveria ter tooltip com o item equipado")
+	if Items.compare_text({"cam": 1.0}, {"cam": 1.0}) != "sem diferença nos atributos":
+		out.append("compare_text de mods iguais deveria avisar que não há diferença")
 
 	# 9f) nível de equipamento e super-upgrade (SPEC-073)
 	var eq := _bat(17)

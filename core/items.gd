@@ -31,11 +31,29 @@ static func scaled_mods(item: Dictionary, level: int) -> Dictionary:
 		out[k] = float(item.mods[k]) * scale
 	return out
 
+## Diferença entre dois conjuntos de mods (novo menos atual), só chaves que mudam.
+static func diff_mods(new_mods: Dictionary, old_mods: Dictionary) -> Dictionary:
+	var out := {}
+	for k in new_mods:
+		var d := float(new_mods[k]) - float(old_mods.get(k, 0.0))
+		if absf(d) >= 0.05:
+			out[k] = d
+	for k in old_mods:
+		if not new_mods.has(k) and absf(float(old_mods[k])) >= 0.05:
+			out[k] = -float(old_mods[k])
+	return out
+
+## MEC-019: texto de comparação ("+5 CA, -3 CAM") de um item novo contra o equipado.
+static func compare_text(new_mods: Dictionary, old_mods: Dictionary) -> String:
+	var d := diff_mods(new_mods, old_mods)
+	return "sem diferença nos atributos" if d.is_empty() else mods_text(d)
+
 ## Prévia do ferreiro: mostra o que o item dá agora e o que dará no próximo nível.
 static func upgrade_preview(item: Dictionary) -> String:
 	var lvl := int(item.get("level", 1))
-	return "Nv %d: %s
-      Nv %d: %s" % [lvl, mods_text(scaled_mods(item, lvl)), lvl + 1, mods_text(scaled_mods(item, lvl + 1))]
+	var now := scaled_mods(item, lvl)
+	var next := scaled_mods(item, lvl + 1)
+	return "Nv %d: %s\n      Nv %d: %s\n      Ganho: %s" % [lvl,mods_text(now), lvl + 1, mods_text(next), compare_text(next, now)]
 
 static func roll(rng: RandomNumberGenerator, tier: int, luck: float) -> Dictionary:
 	var db: Dictionary = Data.table("items")

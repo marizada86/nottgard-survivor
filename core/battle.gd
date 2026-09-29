@@ -1331,6 +1331,18 @@ func interact() -> bool:
 	return true
 
 ## Evento econômico: sempre pausa e sempre oferece "Sair" sem custo.
+## MEC-023: a loja mostra TODAS as opções; as que o herói não paga ficam travadas (locked) com o que falta.
+func _shop_row(t: String, name: String, desc: String, price: int, extra: Dictionary = {}) -> Dictionary:
+	var row := {"t": t, "name": name, "desc": desc, "price": price, "locked": hero.gold < price}
+	if row.locked:
+		row.desc = "%s
+(faltam %d moedas)" % [desc, price - int(hero.gold)]
+	row.merge(extra)
+	return row
+
+func _shop_info(name: String, desc: String) -> Dictionary:
+	return {"t": "shop_info", "name": name, "desc": desc, "price": 0, "locked": true}
+
 func _open_shop_event(kind: String) -> void:
 	offer = []
 	match kind:
@@ -1338,35 +1350,43 @@ func _open_shop_event(kind: String) -> void:
 			for i in 2:
 				var item := Items.roll(rng, tier(), hero.m("carisma") + hero.attr_mod("carisma"))
 				var price := int(round((16.0 + 8.0 * float(Items.RANK[item.rarity])) * float(stage.coin_mult)))
-				if hero.gold >= price:
-					offer.append({"t": "shop_item", "name": "%s [%s] — %d moedas" % [item.name, item.rarity, price],
-						"desc": Items.mods_text(item.mods), "item": item, "price": price})
+				var cur: Variant = hero.items.get(String(item.slot))
+				var compare := ""
+				if cur == null:
+					compare = "Slot livre (%s)." % String(item.slot)
+				else:
+					var cur_mods := Items.scaled_mods(cur, int(cur.get("level", 1)))
+					compare = "Substitui %s Nv %d
+Troca: %s" % [String(cur.name), int(cur.get("level", 1)), Items.compare_text(item.mods, cur_mods)]
+				offer.append(_shop_row("shop_item", "%s [%s] — %d moedas" % [item.name, item.rarity, price],
+					"%s
+%s" % [Items.mods_text(item.mods), compare], price, {"item": item, "tooltip": compare}))
 		"ferreiro":
 			var eligible: Array = hero.weapons.filter(func(w): return not w.granted and w.level < w.max_level())
 			for w in eligible.slice(0, 2):
 				var price := int(round((20.0 + 10.0 * float(w.level)) * float(stage.coin_mult)))
-				if hero.gold >= price:
-					offer.append({"t": "shop_weapon_up", "name": "%s → Nv %d — %d moedas" % [w.def.name, w.level + 1, price],
-						"desc": _level_desc(w), "weapon_id": w.id, "price": price})
+				offer.append(_shop_row("shop_weapon_up", "%s → Nv %d — %d moedas" % [w.def.name, w.level + 1, price],
+					_level_desc(w), price, {"weapon_id": w.id}))
 			for slot in hero.items:
 				var it: Dictionary = hero.items[slot]
 				var lvl := int(it.get("level", 1))
 				if String(it.get("base", "")) == "" or lvl >= Items.MAX_LEVEL:
 					continue
 				var item_price := int(round((25.0 + 15.0 * float(lvl)) * float(stage.coin_mult)))
-				if hero.gold >= item_price:
-					var next_desc: String = Items.upgrade_preview(it)
-					if lvl + 1 >= Items.MAX_LEVEL:
-						next_desc += " + bônus final: " + Items.mods_text(Items.super_mods(it))
-					offer.append({"t": "shop_item_up", "name": "%s → Nv %d — %d moedas" % [it.name, lvl + 1, item_price],
-						"desc": next_desc, "slot": slot, "base": String(it.base), "rarity": String(it.get("rarity", "comum")), "price": item_price})
+				var next_desc: String = Items.upgrade_preview(it)
+				if lvl + 1 >= Items.MAX_LEVEL:
+					next_desc += " + bônus final: " + Items.mods_text(Items.super_mods(it))
+				offer.append(_shop_row("shop_item_up", "%s → Nv %d — %d moedas" % [it.name, lvl + 1, item_price], next_desc, item_price,
+					{"slot": slot, "base": String(it.base), "rarity": String(it.get("rarity", "comum"))}))
+			if offer.is_empty():
+				offer.append(_shop_info("Nada para melhorar", "Suas armas e equipamentos já estão no nível máximo, ou não há nada forjável equipado."))
 		"curandeiro":
 			var missing := hero.max_hp - hero.hp
 			if missing > 1.0:
 				var price := maxi(8, int(round(missing * 0.5 * float(stage.coin_mult))))
-				if hero.gold >= price:
-					offer.append({"t": "shop_heal", "name": "Cura completa — %d moedas" % price,
-						"desc": "Restaura %d PV." % int(ceil(missing)), "amount": missing, "price": price})
+				offer.append(_shop_row("shop_heal", "Cura completa — %d moedas" % price, "Restaura %d PV." % int(ceil(missing)), price, {"amount": missing}))
+			else:
+				offer.append(_shop_info("Vida cheia", "Não há nada a curar agora."))
 	offer.append({"t": "shop_leave", "name": "Sair", "desc": "Nada te obriga a comprar.", "price": 0})
 	offer_kind = "shop_%s" % kind
 	state = "shop"
@@ -1394,15 +1414,16 @@ func give_item(item: Dictionary) -> void:
 		events.append({"type": "item", "item": item})
 		events.append({"type": "toast", "text": "%s [%s]" % [item.name, item.rarity], "color": Items.rarity_color(item.rarity)})
 		return
+	var cur_now := Items.scaled_mods(cur, int(cur.get("level", 1)))
 	var gold_for_cur: float = 8.0 * float(Items.RANK[cur.rarity] + 1)
 	var gold_for_new: float = 8.0 * float(Items.RANK[item.rarity] + 1)
 	offer = [
 		{"t": "item_swap", "name": "Equipar %s [%s]" % [item.name, item.rarity],
-			"desc": "%s\n(vende %s por %d moedas)" % [Items.mods_text(item.mods), cur.name, int(gold_for_cur)],
-			"keep": item, "sell": cur, "equips": true},
+			"desc": "%s\nContra o atual: %s\n(vende %s por %d moedas)" % [Items.mods_text(item.mods), Items.compare_text(item.mods, cur_now), cur.name, int(gold_for_cur)],
+			"keep": item, "sell": cur, "equips": true, "tooltip": "Equipado agora: %s\n%s" % [cur.name, Items.mods_text(cur_now)]},
 		{"t": "item_swap", "name": "Manter %s [%s]" % [cur.name, cur.rarity],
-			"desc": "%s\n(vende %s por %d moedas)" % [Items.mods_text(Items.scaled_mods(cur, int(cur.get("level", 1)))), item.name, int(gold_for_new)],
-			"keep": cur, "sell": item},
+			"desc": "%s\nContra o novo: %s\n(vende %s por %d moedas)" % [Items.mods_text(cur_now), Items.compare_text(cur_now, item.mods), item.name, int(gold_for_new)],
+			"keep": cur, "sell": item, "tooltip": "Novo item: %s\n%s" % [item.name, Items.mods_text(item.mods)]},
 	]
 	offer_kind = "item"
 	state = "item_offer"
@@ -1595,6 +1616,8 @@ func choose(i: int) -> void:
 		return
 	var c: Dictionary = offer[i]
 	if state == "shop":
+		if bool(c.get("locked", false)):
+			return  # sem moedas ou linha informativa: a loja continua aberta
 		match String(c.t):
 			"shop_item":
 				if hero.gold >= int(c.price):

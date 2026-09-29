@@ -205,6 +205,13 @@ func show_offer(b: Battle) -> void:
 			"shop_item_up": btn.add_theme_color_override("font_color", Items.rarity_color(String(o.get("rarity", "comum"))))
 			"shop_weapon_up", "shop_heal": btn.add_theme_color_override("font_color", Color(1.0, 0.9, 0.5))
 			"shop_leave": btn.add_theme_color_override("font_color", Color(0.6, 0.6, 0.6))
+		var tip := String(o.get("tooltip", ""))
+		if tip != "":
+			btn.tooltip_text = tip
+		if bool(o.get("locked", false)):
+			# MEC-023: sem moedas (ou linha informativa): visível, esmaecida e sem efeito
+			btn.disabled = true
+			btn.modulate = Color(1, 1, 1, 0.9)
 		btn.pressed.connect(func(): offer_chosen.emit(i))
 		offer_box.add_child(btn)
 	reroll_btn.visible = b.offer_kind == "levelup"
