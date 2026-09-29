@@ -1,0 +1,32 @@
+{
+  "template_id": "ZUMBI-PILOT-V01",
+  "generation_authorized": true,
+  "method": "external-dono (sem ferramenta de imagem nesta sessão do Claude Code)",
+  "license": null,
+  "spend_limit": null,
+  "output_root": ".atena/generated/zumbi-regeneration/v01/candidates",
+  "common_prompt": "Sprite 2D de fantasia sombria em pixel art nítida, visão isométrica 3/4 de cima. Zumbi, cadáver humano comum movido pela névoa, roupas portuárias rasgadas, pele cinza, postura curvada, sem gore excessivo, corpo preenchido e silhueta forte em 62 pixels de altura de exibição, fundo RGBA transparente, célula única 256 por 384 pixels, pés apoiados na base da célula.",
+  "negative_prompt": "fundo, cenário, texto, moldura, watermark, chibi, corpo fragmentado, apenas traços, apenas partículas, roupa ou pele ausente, névoa cobrindo o corpo inteiro, membros cortados, blur, gradiente suave, personagem extra, borda de célula invadida, silhueta translúcida ou com cobertura de opacidade esparsa",
+  "frames": [
+    {"id": "zumbi.idle.00", "strip": "idle", "frame": 0, "pose": "postura parada; roupas e pele cinza legíveis"},
+    {"id": "zumbi.idle.01", "strip": "idle", "frame": 1, "pose": "leve balanço da névoa/roupas; corpo permanece preenchido"},
+    {"id": "zumbi.idle.02", "strip": "idle", "frame": 2, "pose": "pequena mudança de peso, postura curvada mantida"},
+    {"id": "zumbi.idle.03", "strip": "idle", "frame": 3, "pose": "retorno à postura inicial; pés na base"},
+    {"id": "zumbi.move.00", "strip": "move", "frame": 0, "pose": "contato do pé dianteiro, passo arrastado"},
+    {"id": "zumbi.move.01", "strip": "move", "frame": 1, "pose": "transferência de peso, tronco curvado"},
+    {"id": "zumbi.move.02", "strip": "move", "frame": 2, "pose": "passada intermediária, braços soltos"},
+    {"id": "zumbi.move.03", "strip": "move", "frame": 3, "pose": "novo contato do pé, passo assimétrico"},
+    {"id": "zumbi.move.04", "strip": "move", "frame": 4, "pose": "transferência de peso, roupas rasgadas acompanham"},
+    {"id": "zumbi.move.05", "strip": "move", "frame": 5, "pose": "fechamento do ciclo sem oscilação da base"},
+    {"id": "zumbi.attack.00", "strip": "attack", "frame": 0, "pose": "aproximação, braços erguidos"},
+    {"id": "zumbi.attack.01", "strip": "attack", "frame": 1, "pose": "início da investida, corpo inclinado à frente"},
+    {"id": "zumbi.attack.02", "strip": "attack", "frame": 2, "pose": "golpe/mordida curta, silhueta cheia"},
+    {"id": "zumbi.attack.03", "strip": "attack", "frame": 3, "pose": "recuperação, retorno à postura curvada"},
+    {"id": "zumbi.death.00", "strip": "death", "frame": 0, "pose": "impacto, corpo começa a ceder"},
+    {"id": "zumbi.death.01", "strip": "death", "frame": 1, "pose": "joelhos dobram, tronco inclina"},
+    {"id": "zumbi.death.02", "strip": "death", "frame": 2, "pose": "queda parcial, um braço no chão"},
+    {"id": "zumbi.death.03", "strip": "death", "frame": 3, "pose": "corpo semi-caído, silhueta ainda legível"},
+    {"id": "zumbi.death.04", "strip": "death", "frame": 4, "pose": "colapso quase completo, sem desmembramento"},
+    {"id": "zumbi.death.05", "strip": "death", "frame": 5, "pose": "corpo imóvel no chão, cena final"}
+  ]
+}

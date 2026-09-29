@@ -1,22 +1,22 @@
 {
   "bases": {
     "arma": [
-      {"id": "adaga", "name": "Adaga", "mods": {"cd_pct": 0.04}},
-      {"id": "espada_longa", "name": "Espada Longa", "mods": {"dmg_pct": 0.05}},
-      {"id": "maca_de_guerra", "name": "Maça de Guerra", "mods": {"dmg_pct": 0.04, "forca": 1}},
-      {"id": "cajado", "name": "Cajado", "mods": {"inteligencia": 1, "cam": 1}},
-      {"id": "cetro", "name": "Cetro", "mods": {"carisma": 1, "area_pct": 0.05}}],
+      {"id": "adaga", "name": "Adaga", "mods": {"cd_pct": 0.04}, "super": {"cd_pct": 0.03, "dmg_pct": 0.02}},
+      {"id": "espada_longa", "name": "Espada Longa", "mods": {"dmg_pct": 0.05}, "super": {"dmg_pct": 0.05}},
+      {"id": "maca_de_guerra", "name": "Maça de Guerra", "mods": {"dmg_pct": 0.04, "forca": 1}, "super": {"forca": 1, "dmg_pct": 0.02}},
+      {"id": "cajado", "name": "Cajado", "mods": {"inteligencia": 1, "cam": 1}, "super": {"inteligencia": 1}},
+      {"id": "cetro", "name": "Cetro", "mods": {"carisma": 1, "area_pct": 0.05}, "super": {"carisma": 1}}],
     "armadura": [
-      {"id": "couro", "name": "Couro", "mods": {"ca": 1}},
-      {"id": "cota", "name": "Cota de Malha", "mods": {"ca": 3, "cam": -1}},
-      {"id": "placa", "name": "Placa Completa", "mods": {"ca": 5, "cam": -3, "speed_pct": -0.05}},
-      {"id": "robe", "name": "Robe", "mods": {"cam": 2}}],
+      {"id": "couro", "name": "Couro", "mods": {"ca": 1}, "super": {"ca": 1, "speed_pct": 0.03}},
+      {"id": "cota", "name": "Cota de Malha", "mods": {"ca": 3, "cam": -1}, "super": {"ca": 1, "forca": 2}},
+      {"id": "placa", "name": "Placa Completa", "mods": {"ca": 5, "cam": -3, "speed_pct": -0.05}, "super": {"ca": 2}},
+      {"id": "robe", "name": "Robe", "mods": {"cam": 2}, "super": {"cam": 1, "inteligencia": 1}}],
     "amuleto": [
-      {"id": "amuleto_simples", "name": "Amuleto", "mods": {"hp": 4}},
-      {"id": "talisma", "name": "Talismã", "mods": {"regen": 0.2}}],
+      {"id": "amuleto_simples", "name": "Amuleto", "mods": {"hp": 4}, "super": {"hp": 6}},
+      {"id": "talisma", "name": "Talismã", "mods": {"regen": 0.2}, "super": {"regen": 0.2}}],
     "anel": [
-      {"id": "anel_simples", "name": "Anel", "mods": {"hit": 1}},
-      {"id": "anel_de_prata", "name": "Anel de Prata", "mods": {"pickup": 0.3}}]
+      {"id": "anel_simples", "name": "Anel", "mods": {"hit": 1}, "super": {"hit": 1}},
+      {"id": "anel_de_prata", "name": "Anel de Prata", "mods": {"pickup": 0.3}, "super": {"pickup": 0.3, "gold_pct": 0.05}}]
   },
   "affixes": [
     {"n": "Feroz", "pos": "pre", "mods": {"dmg_pct": [0.04, 0.10]}},

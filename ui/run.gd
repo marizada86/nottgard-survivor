@@ -20,6 +20,7 @@ var _result_shown := false
 var _shake := 0.0
 var _numbers := 0
 var _paused := false
+var _items_shown := false
 var _divine_aura: Line2D
 var _divine_aura_accent: Line2D
 var _encounter_layer: CanvasLayer
@@ -46,6 +47,7 @@ func _ready() -> void:
 	hud.aim_pressed.connect(_toggle_aim)
 	hud.revive_pressed.connect(_accept_revive)
 	hud.decline_revive_pressed.connect(_decline_revive)
+	hud.items_closed.connect(_close_items_panel)
 	_setup_encounter_overlays()
 	_load_stage()
 	if Game.qa_sandbox:
@@ -200,7 +202,7 @@ func _unhandled_input(ev: InputEvent) -> void:
 		return
 	if ev is InputEventKey and ev.pressed and not ev.echo:
 		var k: int = ev.physical_keycode
-		if battle.state == "levelup" or battle.state == "altar":
+		if battle.state == "levelup" or battle.state == "altar" or battle.state == "item_offer" or battle.state == "shop":
 			if k >= KEY_1 and k <= KEY_9:
 				_on_choose(k - KEY_1)
 			elif k == KEY_R:
@@ -215,6 +217,23 @@ func _unhandled_input(ev: InputEvent) -> void:
 					Sfx.play("click")
 			KEY_X:
 				battle.extract()
+			KEY_C:
+				_toggle_items_panel()
+
+func _toggle_items_panel() -> void:
+	if battle.state != "running":
+		return
+	_items_shown = not _items_shown
+	get_tree().paused = _items_shown
+	if _items_shown:
+		hud.show_items_panel(battle)
+	else:
+		hud.hide_items_panel()
+
+func _close_items_panel() -> void:
+	_items_shown = false
+	get_tree().paused = false
+	hud.hide_items_panel()
 
 func _toggle_aim() -> void:
 	battle.toggle_aim()
@@ -252,7 +271,7 @@ func _decline_revive() -> void:
 		hud.hide_revive_offer()
 
 func _refresh_offer() -> void:
-	if battle.state == "levelup" or battle.state == "altar":
+	if battle.state == "levelup" or battle.state == "altar" or battle.state == "item_offer" or battle.state == "shop":
 		hud.show_offer(battle)
 	else:
 		hud.hide_offer()
@@ -267,6 +286,10 @@ func _physics_process(dt: float) -> void:
 		Input.is_physical_key_pressed(KEY_D) or Input.is_physical_key_pressed(KEY_RIGHT),
 		Input.is_physical_key_pressed(KEY_W) or Input.is_physical_key_pressed(KEY_UP),
 		Input.is_physical_key_pressed(KEY_S) or Input.is_physical_key_pressed(KEY_DOWN))
+	if d == Vector2.ZERO and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+		var screen_to_mouse := get_global_mouse_position() - hero_node.position
+		if screen_to_mouse.length() > 4.0:
+			d = screen_to_mouse.normalized()
 	var m_ground := Iso.to_ground(get_global_mouse_position() - hero_node.position)
 	if m_ground.length() > 0.01:
 		battle.aim_dir = m_ground.normalized()
@@ -279,7 +302,7 @@ func _physics_process(dt: float) -> void:
 	_sync()
 	_consume_events()
 	hud.update_stats(battle)
-	if battle.state != prev_state or (battle.state in ["levelup", "altar"] and not hud.levelup_panel.visible):
+	if battle.state != prev_state or (battle.state in ["levelup", "altar", "item_offer", "shop"] and not hud.levelup_panel.visible):
 		_refresh_offer()
 	if battle.state == "revive_offer" and prev_state != "revive_offer":
 		hud.show_revive_offer(battle)

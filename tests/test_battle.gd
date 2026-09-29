@@ -13,6 +13,7 @@ func _quiet(b: Battle) -> void:
 	b.stage.elites = []
 	b.stage.duration = 99999
 	b._inter_t = 99999.0
+	b._breakable_t = 99999.0
 
 func run() -> Array:
 	var out: Array = []
@@ -143,6 +144,235 @@ func run() -> Array:
 	it.give_item(Items.unique(Data.table("items").uniques[0]))
 	if not it.hero.weapons.any(func(w): return w.id == "machado_de_xargath"):
 		out.append("item único não concedeu a arma")
+
+	# 9b) slot ocupado: give_item pausa e oferece equipar/manter (SPEC-060)
+	var martelo: Dictionary = Data.table("items").uniques.filter(func(u): return u.id == "martelo_da_gloria")[0]
+	var gold_before := it.hero.gold
+	it.give_item(Items.unique(martelo))
+	if it.state != "item_offer" or it.offer.size() != 2:
+		out.append("item para slot ocupado deveria abrir uma oferta de 2 opções")
+	if it.hero.items.arma.id != "machado_de_xargath":
+		out.append("item ocupado não deveria trocar antes da escolha")
+	it.choose(0)  # equipar o novo (martelo), vender o machado
+	if it.state != "running":
+		out.append("escolher um item deveria retomar a run")
+	if it.hero.items.arma.id != "martelo_da_gloria":
+		out.append("escolher 'equipar novo' deveria trocar o item equipado")
+	if it.hero.weapons.any(func(w): return w.id == "machado_de_xargath"):
+		out.append("vender o item deveria remover a arma que ele concedia")
+	if not it.hero.weapons.any(func(w): return w.id == "martelo_da_gloria" and w.granted):
+		out.append("equipar o novo item deveria conceder sua arma")
+	if it.hero.gold <= gold_before:
+		out.append("vender o item deslocado deveria render moedas")
+
+	var lamina: Dictionary = Data.table("items").uniques.filter(func(u): return u.id == "lamina_da_digestao")[0]
+	var gold_before2 := it.hero.gold
+	it.give_item(Items.unique(lamina))
+	if it.state != "item_offer":
+		out.append("segundo item para o mesmo slot também deveria ofertar escolha")
+	it.choose(1)  # manter o atual (martelo), vender a lâmina
+	if it.hero.items.arma.id != "martelo_da_gloria":
+		out.append("escolher 'manter atual' não deveria trocar o item equipado")
+	if it.hero.gold <= gold_before2:
+		out.append("recusar o item novo também deveria render moedas pela venda")
+
+	# 9c) quebráveis: não se movem, não atacam e sempre largam um item (SPEC-063)
+	var bk := _bat(9)
+	_quiet(bk)
+	bk.hero.weapons = []
+	var crate := bk._spawn("caixote_quebravel", bk.hero.pos + Vector2(0.6, 0.0))
+	var hp_before := bk.hero.hp
+	var pos_before := crate.pos
+	for i in 30:
+		bk.step(Vector2.ZERO, 0.5)
+	if bk.hero.hp < hp_before:
+		out.append("quebrável não deveria atacar o herói parado ao lado")
+	if crate.pos != pos_before:
+		out.append("quebrável não deveria se mover")
+	var pickups_before := bk.pickups.size()
+	bk._kill(crate)
+	if bk.pickups.size() != pickups_before + 1:
+		out.append("quebrável deveria largar exatamente um item ao morrer")
+	elif not (String(bk.pickups[-1].kind) in ["potion", "gold", "magnet"]):
+		out.append("drop de quebrável deveria ser poção, moeda ou ímã")
+
+	# 9d) rebalanceamento de poção: inimigo comum nunca dropa; elite pode
+	var pot := _bat(10)
+	_quiet(pot)
+	var common_potions := 0
+	for i in 400:
+		var foe := pot._spawn("zumbi", pot.hero.pos + Vector2(3, 0))
+		foe.hp = 0.0
+		var before := pot.pickups.size()
+		pot._kill(foe)
+		for p in pot.pickups.slice(before):
+			if String(p.kind) == "potion":
+				common_potions += 1
+	if common_potions > 0:
+		out.append("inimigo comum não deveria mais dropar poção")
+
+	# 9d-2) drop de quebrável enviesado: ouro comum, item raro (amend. SPEC-063)
+	var wt := _bat(16)
+	_quiet(wt)
+	var counts := {"gold": 0, "potion": 0, "magnet": 0, "item": 0}
+	for i in 500:
+		var b2 := wt._spawn("arbusto_quebravel", wt.hero.pos + Vector2(3, 0))
+		var pickups_before2 := wt.pickups.size()
+		var items_before2 := wt.hero.items.size()
+		wt._kill(b2)
+		if wt.state == "item_offer":
+			counts.item += 1
+			wt.state = "running"
+			wt.offer.clear()
+		elif wt.hero.items.size() > items_before2:
+			counts.item += 1
+		elif wt.pickups.size() > pickups_before2:
+			var kind2 := String(wt.pickups[-1].kind)
+			counts[kind2] = int(counts.get(kind2, 0)) + 1
+		wt.pickups.clear()  # evita esbarrar em MAX_PICKUPS e mascarar a contagem
+	if counts.gold <= counts.potion or counts.gold <= counts.magnet or counts.gold <= counts.item:
+		out.append("ouro deveria ser o drop mais comum do quebrável (contagem: %s)" % str(counts))
+	if counts.item >= counts.gold:
+		out.append("item raro do quebrável não deveria ser mais comum que ouro")
+
+	# 9e) eventos econômicos: loja, ferreiro, curandeiro (SPEC-064)
+	var sh := _bat(11)
+	_quiet(sh)
+	sh.hero.gold = 500
+	sh._open_shop_event("loja")
+	var shop_idx := -1
+	for j in sh.offer.size():
+		if String(sh.offer[j].t) == "shop_item":
+			shop_idx = j
+			break
+	if sh.state != "shop" or shop_idx < 0:
+		out.append("loja com moeda suficiente deveria oferecer pelo menos um item")
+	else:
+		var gold_before_shop: int = sh.hero.gold
+		var price: int = sh.offer[shop_idx].price
+		sh.choose(shop_idx)
+		if sh.hero.gold != gold_before_shop - price:
+			out.append("comprar da loja deveria descontar exatamente o preço mostrado")
+		if sh.state != "running" and sh.state != "item_offer":
+			out.append("comprar da loja deveria fechar a oferta (ou abrir a escolha de equipar/vender)")
+
+	var fe := _bat(12)
+	_quiet(fe)
+	fe.hero.gold = 500
+	fe._open_shop_event("ferreiro")
+	var forge_idx := -1
+	for j in fe.offer.size():
+		if String(fe.offer[j].t) == "shop_weapon_up":
+			forge_idx = j
+			break
+	if forge_idx < 0:
+		out.append("ferreiro com arma elegível e moeda deveria oferecer upgrade")
+	else:
+		var weapon_id: String = fe.offer[forge_idx].weapon_id
+		var level_before := 0
+		for w in fe.hero.weapons:
+			if w.id == weapon_id:
+				level_before = w.level
+		fe.choose(forge_idx)
+		var level_after := 0
+		for w in fe.hero.weapons:
+			if w.id == weapon_id:
+				level_after = w.level
+		if level_after != level_before + 1:
+			out.append("comprar do ferreiro deveria subir o nível da arma em 1")
+		if fe.state != "running":
+			out.append("comprar do ferreiro deveria fechar a oferta")
+
+	var cu := _bat(13)
+	_quiet(cu)
+	cu.hero.gold = 500
+	cu.hero.hp = maxf(1.0, cu.hero.max_hp - 10.0)
+	cu._open_shop_event("curandeiro")
+	var heal_idx := -1
+	for j in cu.offer.size():
+		if String(cu.offer[j].t) == "shop_heal":
+			heal_idx = j
+			break
+	if heal_idx < 0:
+		out.append("curandeiro com PV faltando e moeda deveria oferecer cura")
+	else:
+		cu.choose(heal_idx)
+		if cu.hero.hp < cu.hero.max_hp - 0.01:
+			out.append("comprar do curandeiro deveria curar completamente")
+
+	var le := _bat(14)
+	_quiet(le)
+	le.hero.gold = 500
+	le._open_shop_event("curandeiro")  # herói com PV cheio: só "Sair" deveria aparecer
+	if le.offer.size() != 1 or String(le.offer[0].t) != "shop_leave":
+		out.append("sem PV faltando, curandeiro deveria oferecer só 'Sair'")
+	var gold_before_leave: int = le.hero.gold
+	le.choose(0)
+	if le.hero.gold != gold_before_leave or le.state != "running":
+		out.append("'Sair' não deveria custar nada nem deixar de fechar a oferta")
+
+	var poor := _bat(15)
+	_quiet(poor)
+	poor.hero.gold = 0
+	poor._open_shop_event("loja")
+	if poor.offer.any(func(o): return o.t == "shop_item"):
+		out.append("sem moeda suficiente, a loja não deveria oferecer o item")
+
+	# 9f) nível de equipamento e super-upgrade (SPEC-073)
+	var eq := _bat(17)
+	_quiet(eq)
+	eq.hero.gold = 1000
+	var cota_base: Dictionary = Data.table("items").bases.armadura.filter(func(b): return b.id == "cota")[0]
+	var cota := {"id": "cota_teste", "base": "cota", "name": "Cota de Malha", "slot": "armadura", "rarity": "comum", "mods": cota_base.mods.duplicate(), "level": 1}
+	eq.hero.items["armadura"] = cota
+	eq.hero.recalc()
+	if int(eq.hero.m("ca")) != 3:
+		out.append("item no nível 1 deveria contribuir com o mod cheio, sem regressão")
+
+	eq._open_shop_event("ferreiro")
+	var up_idx := -1
+	for j in eq.offer.size():
+		if String(eq.offer[j].t) == "shop_item_up" and String(eq.offer[j].slot) == "armadura":
+			up_idx = j
+			break
+	if up_idx < 0:
+		out.append("ferreiro deveria oferecer upgrade de armadura equipada")
+	else:
+		eq.choose(up_idx)
+		if int(eq.hero.items.armadura.level) != 2:
+			out.append("comprar upgrade de equipamento deveria subir o nível em 1")
+		if eq.hero.m("ca") <= 3.0:
+			out.append("nível 2 deveria escalar o mod de CA pra cima de 3")
+
+	eq.hero.items.armadura.level = Items.MAX_LEVEL - 1
+	eq.hero.recalc()
+	eq._open_shop_event("ferreiro")
+	var up_idx2 := -1
+	for j in eq.offer.size():
+		if String(eq.offer[j].t) == "shop_item_up" and String(eq.offer[j].slot) == "armadura":
+			up_idx2 = j
+			break
+	if up_idx2 < 0:
+		out.append("ferreiro deveria oferecer o upgrade final de armadura")
+	else:
+		var forca_before := eq.hero.m("forca")
+		eq.choose(up_idx2)
+		if int(eq.hero.items.armadura.level) != Items.MAX_LEVEL:
+			out.append("upgrade final deveria levar ao nível máximo")
+		if eq.hero.m("forca") <= forca_before:
+			out.append("nível máximo deveria aplicar o super-upgrade da base (Cota de Malha: +2 Força)")
+
+	eq._open_shop_event("ferreiro")
+	if eq.offer.any(func(o): return o.t == "shop_item_up" and String(o.slot) == "armadura"):
+		out.append("item no nível máximo não deveria mais aparecer na oferta do ferreiro")
+
+	var uq := _bat(18)
+	_quiet(uq)
+	uq.hero.gold = 1000
+	uq.hero.items["arma"] = Items.unique(Data.table("items").uniques[0])
+	uq._open_shop_event("ferreiro")
+	if uq.offer.any(func(o): return o.t == "shop_item_up" and String(o.slot) == "arma"):
+		out.append("item único não deveria aparecer na oferta de upgrade do ferreiro")
 
 	# 10) evolução: arma nv5 + passiva libera a evolução na oferta
 	var ev := _bat(8)

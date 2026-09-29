@@ -4,6 +4,24 @@ extends RefCounted
 
 const RANK := {"comum": 0, "magico": 1, "raro": 2, "unico": 3}
 const SLOTS := ["arma", "armadura", "amuleto", "anel"]
+const MAX_LEVEL := 3
+const LEVEL_SCALE_STEP := 0.15  ## +15% nos mods do item por nível acima de 1
+
+## Bônus fixo de nível máximo da base do item; {} para itens sem base (únicos).
+static func super_mods(item: Dictionary) -> Dictionary:
+	var base_id: String = item.get("base", "")
+	if base_id == "":
+		return {}
+	var slot: String = item.get("slot", "")
+	var bases: Array = Data.table("items").bases.get(slot, [])
+	for b in bases:
+		if b.id == base_id:
+			return b.get("super", {})
+	return {}
+
+## Multiplicador aplicado aos mods do item ao agregar em Hero.mods.
+static func level_scale(item: Dictionary) -> float:
+	return 1.0 + LEVEL_SCALE_STEP * float(int(item.get("level", 1)) - 1)
 
 static func roll(rng: RandomNumberGenerator, tier: int, luck: float) -> Dictionary:
 	var db: Dictionary = Data.table("items")
@@ -48,7 +66,7 @@ static func roll(rng: RandomNumberGenerator, tier: int, luck: float) -> Dictiona
 		name_ = "%s %s" % [name_, pre]
 	if suf != "":
 		name_ = "%s %s" % [name_, suf]
-	return {"id": "%s_%s" % [base.id, rarity], "base": base.id, "name": name_, "slot": slot, "rarity": rarity, "mods": mods}
+	return {"id": "%s_%s" % [base.id, rarity], "base": base.id, "name": name_, "slot": slot, "rarity": rarity, "mods": mods, "level": 1}
 
 static func hi_scale(k: String) -> float:
 	return 1.0 if k in ["dmg_pct", "speed_pct", "cd_pct", "area_pct", "gold_pct", "xp_pct"] else 0.0

@@ -74,7 +74,10 @@ func recalc() -> void:
 	for pid in passives:
 		add_mods(m, pdata[pid].mods, float(passives[pid]))
 	for slot in items:
-		add_mods(m, items[slot].mods)
+		var it: Dictionary = items[slot]
+		add_mods(m, it.mods, Items.level_scale(it))
+		if int(it.get("level", 1)) >= Items.MAX_LEVEL:
+			add_mods(m, Items.super_mods(it))
 	for b in boons:
 		add_mods(m, b.mods)
 	mods = m

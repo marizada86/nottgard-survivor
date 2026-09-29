@@ -11,6 +11,7 @@ signal aim_pressed
 signal help_pressed
 signal revive_pressed
 signal decline_revive_pressed
+signal items_closed
 
 @onready var name_label: Label = %NameLabel
 @onready var hp_bar: ProgressBar = %HpBar
@@ -41,6 +42,14 @@ signal decline_revive_pressed
 @onready var result_background: TextureRect = %ResultBackground
 @onready var revive_panel: PanelContainer = %RevivePanel
 @onready var revive_text: Label = %ReviveText
+@onready var items_panel: PanelContainer = %ItemsPanel
+@onready var items_portrait: TextureRect = %ItemsPortrait
+@onready var items_hero_line: Label = %ItemsHeroLine
+@onready var items_attr_line: Label = %ItemsAttrLine
+@onready var items_bonus_line: Label = %ItemsBonusLine
+@onready var items_slots_label: Label = %ItemsSlotsLabel
+@onready var items_desc_label: RichTextLabel = %ItemsDescLabel
+var _items_portrait_id := ""
 var _active_icon_id := ""
 var _stage_icon_id := ""
 
@@ -55,6 +64,7 @@ func _ready() -> void:
 	%PauseHelpBtn.pressed.connect(func(): help_pressed.emit())
 	%ReviveBtn.pressed.connect(func(): revive_pressed.emit())
 	%DeclineReviveBtn.pressed.connect(func(): decline_revive_pressed.emit())
+	%CloseItemsBtn.pressed.connect(func(): items_closed.emit())
 	aim_btn.pressed.connect(func(): aim_pressed.emit())
 	vol_slider.value_changed.connect(func(v: float):
 		Game.profile.data.settings.volume = v
@@ -64,11 +74,17 @@ func _ready() -> void:
 	pause_panel.visible = false
 	result_panel.visible = false
 	revive_panel.visible = false
+	items_panel.visible = false
 	prompt_label.text = ""
 
 func _unhandled_input(ev: InputEvent) -> void:
-	if pause_panel.visible and ev is InputEventKey and ev.pressed and not ev.echo and ev.physical_keycode == KEY_ESCAPE:
+	if not (ev is InputEventKey and ev.pressed and not ev.echo):
+		return
+	if ev.physical_keycode == KEY_ESCAPE and pause_panel.visible:
 		resume_pressed.emit()
+		get_viewport().set_input_as_handled()
+	elif ev.physical_keycode == KEY_C and items_panel.visible:
+		items_closed.emit()
 		get_viewport().set_input_as_handled()
 
 func update_stats(b: Battle) -> void:
@@ -132,8 +148,9 @@ func update_stats(b: Battle) -> void:
 	weapons_label.text = "\n".join(lines)
 	var pr := ""
 	for it in b.interactions:
-		if not it.used and it.kind in ["altar", "ritual", "portal"] and it.pos.distance_to(h.pos) <= 1.6:
-			pr = "[E] " + {"altar": "rezar no altar", "ritual": "iniciar o ritual", "portal": "descer pelo portal"}[it.kind]
+		if not it.used and it.kind in ["altar", "ritual", "portal", "loja", "ferreiro", "curandeiro"] and it.pos.distance_to(h.pos) <= 1.6:
+			pr = "[E] " + {"altar": "rezar no altar", "ritual": "iniciar o ritual", "portal": "descer pelo portal",
+				"loja": "negociar na loja", "ferreiro": "forjar no ferreiro", "curandeiro": "buscar cura"}[it.kind]
 	if pr == "" and (b.stage_cleared or b.final_victory):
 		pr = "[X] Extrair ×%.2f" % b.reward_multiplier()
 		if b.stage.get("next", "") != "":
@@ -143,7 +160,15 @@ func update_stats(b: Battle) -> void:
 func show_offer(b: Battle) -> void:
 	for c in offer_box.get_children():
 		c.queue_free()
-	lv_title.text = ("Nível %d — escolha (1-%d)" % [b.hero.level, b.offer.size()]) if b.offer_kind == "levelup" else "Altar — escolha uma bênção (e sua maldição)"
+	var shop_titles := {"shop_loja": "Loja — compre ou saia", "shop_ferreiro": "Ferreiro — forje uma arma", "shop_curandeiro": "Curandeiro — cure suas feridas"}
+	if b.offer_kind == "levelup":
+		lv_title.text = "Nível %d — escolha (1-%d)" % [b.hero.level, b.offer.size()]
+	elif b.offer_kind == "item":
+		lv_title.text = "Item encontrado — equipar ou manter?"
+	elif shop_titles.has(b.offer_kind):
+		lv_title.text = String(shop_titles[b.offer_kind])
+	else:
+		lv_title.text = "Altar — escolha uma bênção (e sua maldição)"
 	for i in b.offer.size():
 		var o: Dictionary = b.offer[i]
 		var btn := Button.new()
@@ -154,12 +179,17 @@ func show_offer(b: Battle) -> void:
 		btn.custom_minimum_size = Vector2(620, 62)
 		var icon_path := ""
 		match String(o.t):
+			"item_swap": icon_path = "res://assets/icons/items/%s.png" % String(o.keep.get("base", o.keep.get("id", "")))
 			"weapon_new", "weapon_up": icon_path = "res://assets/icons/weapons/%s.png" % String(o.id)
 			"evolve": icon_path = "res://assets/icons/weapons/%s.png" % String(o.into)
 			"passive": icon_path = "res://assets/icons/passives/%s.png" % String(o.id)
 			"boon": icon_path = "res://assets/icons/boons/%s.png" % String(o.id)
 			"heal": icon_path = "res://assets/pickups/health_potion.png"
 			"gold": icon_path = "res://assets/pickups/gold_coin.png"
+			"shop_item": icon_path = "res://assets/icons/items/%s.png" % String(o.item.get("base", o.item.get("id", "")))
+			"shop_weapon_up": icon_path = "res://assets/icons/weapons/%s.png" % String(o.weapon_id)
+			"shop_heal": icon_path = "res://assets/pickups/health_potion.png"
+			"shop_item_up": icon_path = "res://assets/icons/items/%s.png" % String(o.base)
 		if ResourceLoader.exists(icon_path):
 			btn.icon = load(icon_path)
 			btn.expand_icon = true
@@ -168,6 +198,11 @@ func show_offer(b: Battle) -> void:
 			"evolve": btn.add_theme_color_override("font_color", Color(1.0, 0.85, 0.3))
 			"weapon_new": btn.add_theme_color_override("font_color", Color(0.6, 1.0, 0.6))
 			"boon": btn.add_theme_color_override("font_color", Color(0.85, 0.6, 1.0))
+			"item_swap":
+				if o.get("equips", false):
+					btn.add_theme_color_override("font_color", Color(0.6, 1.0, 0.6))
+			"shop_item", "shop_weapon_up", "shop_heal", "shop_item_up": btn.add_theme_color_override("font_color", Color(1.0, 0.9, 0.5))
+			"shop_leave": btn.add_theme_color_override("font_color", Color(0.6, 0.6, 0.6))
 		btn.pressed.connect(func(): offer_chosen.emit(i))
 		offer_box.add_child(btn)
 	reroll_btn.visible = b.offer_kind == "levelup"
@@ -192,6 +227,54 @@ func toast(text: String, color: Color = Color(1, 1, 1)) -> void:
 	tw.tween_interval(3.0)
 	tw.tween_property(l, "modulate:a", 0.0, 0.6)
 	tw.tween_callback(l.queue_free)
+
+func show_items_panel(b: Battle) -> void:
+	var h := b.hero
+	if h.id != _items_portrait_id:
+		_items_portrait_id = h.id
+		var portrait_path := "res://assets/portraits/%s.png" % h.id
+		items_portrait.texture = load(portrait_path) if ResourceLoader.exists(portrait_path) else null
+	items_hero_line.text = "%s — Nv %d" % [h.name, h.level]
+	items_attr_line.text = "FOR %d · INT %d · CON %d · CAR %d\nPV %d/%d · CA %d (%d%%) · CAM %d (%d%%)" % [
+		h.attr("forca"), h.attr("inteligencia"), h.attr("constituicao"), h.attr("carisma"),
+		int(ceil(h.hp)), int(h.max_hp), h.ca(), int(h.typed_evasion("fisico") * 100.0), h.cam(), int(h.typed_evasion("magico") * 100.0)]
+	var bonus_text: String = Items.mods_text(h.mods)
+	items_bonus_line.text = ("Bônus ativos (itens, passivas e bênçãos somados): %s" % bonus_text) if bonus_text != "" else "Sem bônus ativos além dos atributos base."
+	var owned_w := 0
+	for w in h.weapons:
+		if not w.granted:
+			owned_w += 1
+	items_slots_label.text = "Feitiços/armas %d/%d    Equipamento %d/%d" % [owned_w, h.weapon_slots(), h.items.size(), Items.SLOTS.size()]
+	var lines: Array = []
+	for w in h.weapons:
+		var tag := "  [color=#99cc99](item)[/color]" if w.granted else ""
+		var status := ""
+		if w.can_evolve():
+			status = "  [color=#ffd966](pronto para evoluir)[/color]"
+		lines.append("[b]⚔ %s[/b]%s%s\n%s" % [w.display_name(), tag, status, String(w.def.get("desc", ""))])
+	for pid in h.passives:
+		var p: Dictionary = Data.table("passives")[pid]
+		lines.append("[b]✦ %s Nv %d[/b]\n%s" % [p.name, h.passives[pid], String(p.get("desc", ""))])
+	for slot in Items.SLOTS:
+		if not h.items.has(slot):
+			continue
+		var it: Dictionary = h.items[slot]
+		var lvl_tag := ""
+		if String(it.get("base", "")) != "":
+			var lvl := int(it.get("level", 1))
+			lvl_tag = "  [color=#ffd966](Nv %d/%d%s)[/color]" % [lvl, Items.MAX_LEVEL, " — máximo" if lvl >= Items.MAX_LEVEL else ""]
+		var desc: String = Items.mods_text(it.mods)
+		if String(it.get("note", "")) != "":
+			desc += "\n[i]%s[/i]" % String(it.note)
+		lines.append("[b]◆ %s[/b]%s\n%s" % [it.name, lvl_tag, desc])
+	for bn in h.boons:
+		var god_tag := " (%s)" % String(bn.god) if bn.has("god") else ""
+		lines.append("[b]☼ %s%s[/b]\n%s" % [bn.name, god_tag, String(bn.get("desc", ""))])
+	items_desc_label.text = "\n\n".join(lines) if not lines.is_empty() else "Nenhum item, feitiço ou bênção ainda."
+	items_panel.visible = true
+
+func hide_items_panel() -> void:
+	items_panel.visible = false
 
 func show_pause(v: bool) -> void:
 	pause_panel.visible = v

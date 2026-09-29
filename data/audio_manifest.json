@@ -1200,6 +1200,110 @@
       "cooldown_ms": 65,
       "priority": 1
     },
+    "enemy.candelabro_quebravel.action": {
+      "files": ["res://assets/audio/sfx/combat/combat.impact_01.wav"],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.candelabro_quebravel.death": {
+      "files": ["res://assets/audio/sfx/progress/world.chest_01.wav"],
+      "bus": "Enemies",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.caixote_quebravel.action": {
+      "files": ["res://assets/audio/sfx/combat/combat.impact_01.wav"],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.caixote_quebravel.death": {
+      "files": ["res://assets/audio/sfx/progress/world.chest_02.wav"],
+      "bus": "Enemies",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.arbusto_quebravel.action": {
+      "files": ["res://assets/audio/sfx/combat/combat.impact_02.wav"],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.arbusto_quebravel.death": {
+      "files": ["res://assets/audio/sfx/progress/world.chest_01.wav"],
+      "bus": "Enemies",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.saco_de_esporos_quebravel.action": {
+      "files": ["res://assets/audio/sfx/combat/combat.impact_01.wav"],
+      "bus": "Enemies", "volume_db": -14, "pitch_jitter": 0.035, "cooldown_ms": 180, "priority": 1
+    },
+    "enemy.saco_de_esporos_quebravel.death": {
+      "files": ["res://assets/audio/sfx/progress/world.chest_02.wav"],
+      "bus": "Enemies", "volume_db": -12, "pitch_jitter": 0.035, "cooldown_ms": 65, "priority": 1
+    },
+    "enemy.casulo_viscoso_quebravel.action": {
+      "files": ["res://assets/audio/sfx/combat/combat.impact_02.wav"],
+      "bus": "Enemies", "volume_db": -14, "pitch_jitter": 0.035, "cooldown_ms": 180, "priority": 1
+    },
+    "enemy.casulo_viscoso_quebravel.death": {
+      "files": ["res://assets/audio/sfx/progress/world.chest_01.wav"],
+      "bus": "Enemies", "volume_db": -12, "pitch_jitter": 0.035, "cooldown_ms": 65, "priority": 1
+    },
+    "enemy.urna_funeraria_quebravel.action": {
+      "files": ["res://assets/audio/sfx/combat/combat.impact_03.wav"],
+      "bus": "Enemies", "volume_db": -14, "pitch_jitter": 0.035, "cooldown_ms": 180, "priority": 1
+    },
+    "enemy.urna_funeraria_quebravel.death": {
+      "files": ["res://assets/audio/sfx/progress/world.chest_02.wav"],
+      "bus": "Enemies", "volume_db": -12, "pitch_jitter": 0.035, "cooldown_ms": 65, "priority": 1
+    },
+    "enemy.lanterna_de_papel_quebravel.action": {
+      "files": ["res://assets/audio/sfx/combat/combat.impact_01.wav"],
+      "bus": "Enemies", "volume_db": -14, "pitch_jitter": 0.035, "cooldown_ms": 180, "priority": 1
+    },
+    "enemy.lanterna_de_papel_quebravel.death": {
+      "files": ["res://assets/audio/sfx/progress/world.chest_01.wav"],
+      "bus": "Enemies", "volume_db": -12, "pitch_jitter": 0.035, "cooldown_ms": 65, "priority": 1
+    },
+    "enemy.espelho_ilusorio_quebravel.action": {
+      "files": ["res://assets/audio/sfx/combat/combat.impact_02.wav"],
+      "bus": "Enemies", "volume_db": -14, "pitch_jitter": 0.035, "cooldown_ms": 180, "priority": 1
+    },
+    "enemy.espelho_ilusorio_quebravel.death": {
+      "files": ["res://assets/audio/sfx/progress/world.chest_02.wav"],
+      "bus": "Enemies", "volume_db": -12, "pitch_jitter": 0.035, "cooldown_ms": 65, "priority": 1
+    },
+    "enemy.estatua_rachada_quebravel.action": {
+      "files": ["res://assets/audio/sfx/combat/combat.impact_03.wav"],
+      "bus": "Enemies", "volume_db": -14, "pitch_jitter": 0.035, "cooldown_ms": 180, "priority": 1
+    },
+    "enemy.estatua_rachada_quebravel.death": {
+      "files": ["res://assets/audio/sfx/progress/world.chest_01.wav"],
+      "bus": "Enemies", "volume_db": -12, "pitch_jitter": 0.035, "cooldown_ms": 65, "priority": 1
+    },
+    "enemy.relicario_instavel_quebravel.action": {
+      "files": ["res://assets/audio/sfx/combat/combat.impact_01.wav"],
+      "bus": "Enemies", "volume_db": -14, "pitch_jitter": 0.035, "cooldown_ms": 180, "priority": 1
+    },
+    "enemy.relicario_instavel_quebravel.death": {
+      "files": ["res://assets/audio/sfx/progress/world.chest_02.wav"],
+      "bus": "Enemies", "volume_db": -12, "pitch_jitter": 0.035, "cooldown_ms": 65, "priority": 1
+    },
     "enemy.notivago.action": {
       "files": [
         "res://assets/audio/sfx/enemy/enemy.notivago.action_01.wav"

@@ -14,6 +14,22 @@ const HERO_HIT_R := 0.3
 const MAX_PICKUPS := 140
 const AFFIXES := ["veloz", "resistente", "mortal", "avaro"]
 const AFFIX_NAMES := {"veloz": "Veloz", "resistente": "Resistente", "mortal": "Mortal", "avaro": "Avaro"}
+## Cada bioma tem seu próprio quebrável temático, alinhado à família de prop
+## já usada na fase (ART-PROMPTS-024). Candelabro/caixote continuam
+## exclusivos de Dagruve/Docas (tema de cais/porto); arbusto é o fallback
+## genérico para qualquer fase sem tipo próprio.
+const BREAKABLE_TYPES_BY_STAGE := {
+	"dagruve": ["candelabro_quebravel", "caixote_quebravel", "arbusto_quebravel"],
+	"docas": ["candelabro_quebravel", "caixote_quebravel", "arbusto_quebravel"],
+	"shedaklah": ["saco_de_esporos_quebravel", "arbusto_quebravel"],
+	"molor": ["casulo_viscoso_quebravel", "arbusto_quebravel"],
+	"durao": ["urna_funeraria_quebravel", "arbusto_quebravel"],
+	"feng_tu": ["lanterna_de_papel_quebravel", "arbusto_quebravel"],
+	"shendilavri": ["espelho_ilusorio_quebravel", "arbusto_quebravel"],
+	"goranthis": ["estatua_rachada_quebravel", "arbusto_quebravel"],
+	"pilares": ["relicario_instavel_quebravel", "arbusto_quebravel"],
+}
+const BREAKABLE_DEFAULT_TYPES := ["arbusto_quebravel"]
 
 var rng := RandomNumberGenerator.new()
 var hero: Hero
@@ -30,7 +46,7 @@ var aim_dir := Vector2(1, 1).normalized()
 var aim_pos := Vector2.ZERO
 var time := 0.0
 var run_time := 0.0
-var state := "running"   # running | levelup | altar | revive_offer | dead | won
+var state := "running"   # running | levelup | altar | item_offer | revive_offer | dead | won
 var offer: Array = []
 var offer_kind := ""
 var pending_levels := 0
@@ -63,6 +79,7 @@ var codex := {"enemies": {}, "items": {}, "weapons": {}}
 var _acc := {}
 var _elites_done := {}
 var _inter_t := 4.0
+var _breakable_t := 20.0
 var _amb_puddle := 9.0
 var _amb_strike := 6.0
 var _cur_angle := 0.0
@@ -138,6 +155,7 @@ func load_stage(stage_key: String) -> void:
 	_stage_events_done.clear()
 	_inter_t = 4.0
 	_first_inter = true
+	_breakable_t = 20.0 + rng.randf() * 10.0
 	_amb_puddle = 9.0
 	_amb_strike = 6.0
 	_rule_timer = minf(8.0, float(stage_rule.get("interval", 8.0)))
@@ -898,6 +916,8 @@ func _enemy_step(e: Enemy, dt: float) -> void:
 					var min_d: float = e.radius + o.radius
 					if l < min_d and l > 0.001:
 						e.pos += off / l * (min_d - l) * 0.35
+	if e.has_flag("inerte"):
+		return
 	var reach := 1.4 if e.speed == 0.0 else ENEMY_ATK_RANGE + e.radius * 0.3
 	if dist <= reach and e.atk_cd <= 0.0:
 		e.atk_cd = ENEMY_ATK_CD
@@ -1074,16 +1094,28 @@ func _kill(e: Enemy) -> void:
 		_drop("xp", e.pos, xp_v)
 	if e.xp > 0 and rng.randf() < 0.22 + hero.m("gold_pct") * 0.05:
 		_drop("gold", e.pos, maxf(1.0, round(float(stage.coin_mult) * (1.0 + hero.m("gold_pct")))) * (5.0 if e.affix == "avaro" else 1.0))
-	if e.xp > 0 and rng.randf() < 0.025:
-		_drop("potion", e.pos, 0.25)
 	if e.split_id != "":
 		for i in 2:
 			_spawn(e.split_id, e.pos + Vector2(rng.randf_range(-0.6, 0.6), rng.randf_range(-0.6, 0.6)))
+	if e.has_flag("quebravel"):
+		## Drop garantido, mas enviesado: ouro é o mais comum; item de verdade
+		## ("algo bom") é raro.
+		var roll := rng.randf()
+		if roll < 0.65:
+			_drop("gold", e.pos, 6.0 * float(stage.coin_mult))
+		elif roll < 0.85:
+			_drop("potion", e.pos, 0.25)
+		elif roll < 0.95:
+			_drop("magnet", e.pos, 0.0)
+		else:
+			give_item(Items.roll(rng, tier(), hero.m("carisma") + hero.attr_mod("carisma")))
 	if e.affix != "" or e.drops_chest:
 		stats.elites += 1
 		if e.drops_chest or rng.randf() < 0.5:
 			_add_interaction("chest", e.pos)
 		_drop("gold", e.pos, 12.0 * float(stage.coin_mult))
+		if rng.randf() < 0.06:
+			_drop("potion", e.pos, 0.25)
 	if e.is_boss():
 		_on_boss_dead(e)
 
@@ -1184,6 +1216,9 @@ func _collect(kind: String, value: float) -> void:
 		"potion":
 			_heal_hero(hero.max_hp * value)
 			events.append({"type": "heal", "pos": hero.pos, "amount": int(hero.max_hp * value)})
+		"magnet":
+			for p in pickups:
+				p.magnet = true
 
 func _add_gold(v: float) -> void:
 	hero.gold += int(v)
@@ -1240,14 +1275,14 @@ func _update_interactions(dt: float) -> void:
 				events.append({"type": "toast", "text": "Fonte: +%d%% PV" % int(round(heal_pct * 100.0))})
 	interactions = interactions.filter(func(i): return not i.used)
 
-## Interação manual (E): altar, ritual, portal.
+## Interação manual (E): altar, ritual, portal, loja, ferreiro, curandeiro.
 func interact() -> bool:
 	if state != "running":
 		return false
 	var best: Dictionary = {}
 	var bd := 1.6
 	for it in interactions:
-		if not it.used and time - float(it.get("born_at", 0.0)) >= 0.65 and it.kind in ["altar", "ritual", "portal"]:
+		if not it.used and time - float(it.get("born_at", 0.0)) >= 0.65 and it.kind in ["altar", "ritual", "portal", "loja", "ferreiro", "curandeiro"]:
 			var d: float = it.pos.distance_to(hero.pos)
 			if d <= bd:
 				bd = d
@@ -1271,7 +1306,50 @@ func interact() -> bool:
 			events.append({"type": "toast", "text": "O ritual atrai algo..."})
 		"portal":
 			enter_next_stage()
+		"loja", "ferreiro", "curandeiro":
+			_open_shop_event(String(best.kind))
 	return true
+
+## Evento econômico: sempre pausa e sempre oferece "Sair" sem custo.
+func _open_shop_event(kind: String) -> void:
+	offer = []
+	match kind:
+		"loja":
+			for i in 2:
+				var item := Items.roll(rng, tier(), hero.m("carisma") + hero.attr_mod("carisma"))
+				var price := int(round((16.0 + 8.0 * float(Items.RANK[item.rarity])) * float(stage.coin_mult)))
+				if hero.gold >= price:
+					offer.append({"t": "shop_item", "name": "%s [%s] — %d moedas" % [item.name, item.rarity, price],
+						"desc": Items.mods_text(item.mods), "item": item, "price": price})
+		"ferreiro":
+			var eligible: Array = hero.weapons.filter(func(w): return not w.granted and w.level < w.max_level())
+			for w in eligible.slice(0, 2):
+				var price := int(round((20.0 + 10.0 * float(w.level)) * float(stage.coin_mult)))
+				if hero.gold >= price:
+					offer.append({"t": "shop_weapon_up", "name": "%s → Nv %d — %d moedas" % [w.def.name, w.level + 1, price],
+						"desc": _level_desc(w), "weapon_id": w.id, "price": price})
+			for slot in hero.items:
+				var it: Dictionary = hero.items[slot]
+				var lvl := int(it.get("level", 1))
+				if String(it.get("base", "")) == "" or lvl >= Items.MAX_LEVEL:
+					continue
+				var item_price := int(round((25.0 + 15.0 * float(lvl)) * float(stage.coin_mult)))
+				if hero.gold >= item_price:
+					var next_desc: String = Items.mods_text(it.mods)
+					if lvl + 1 >= Items.MAX_LEVEL:
+						next_desc += " + bônus final: " + Items.mods_text(Items.super_mods(it))
+					offer.append({"t": "shop_item_up", "name": "%s → Nv %d — %d moedas" % [it.name, lvl + 1, item_price],
+						"desc": next_desc, "slot": slot, "base": String(it.base), "price": item_price})
+		"curandeiro":
+			var missing := hero.max_hp - hero.hp
+			if missing > 1.0:
+				var price := maxi(8, int(round(missing * 0.5 * float(stage.coin_mult))))
+				if hero.gold >= price:
+					offer.append({"t": "shop_heal", "name": "Cura completa — %d moedas" % price,
+						"desc": "Restaura %d PV." % int(ceil(missing)), "amount": missing, "price": price})
+	offer.append({"t": "shop_leave", "name": "Sair", "desc": "Nada te obriga a comprar.", "price": 0})
+	offer_kind = "shop_%s" % kind
+	state = "shop"
 
 func _open_chest(it: Dictionary) -> void:
 	stats.chests += 1
@@ -1291,13 +1369,27 @@ func give_item(item: Dictionary) -> void:
 	codex.items[item.id] = true
 	var slot: String = item.slot
 	var cur: Variant = hero.items.get(slot)
-	if cur != null and Items.RANK[cur.rarity] > Items.RANK[item.rarity]:
-		var g: float = 8.0 * float(Items.RANK[item.rarity] + 1)
-		_add_gold(g)
-		events.append({"type": "toast", "text": "%s vendido (+%d moedas)" % [item.name, int(g)], "color": Items.rarity_color(item.rarity)})
+	if cur == null:
+		_equip_item(item)
+		events.append({"type": "item", "item": item})
+		events.append({"type": "toast", "text": "%s [%s]" % [item.name, item.rarity], "color": Items.rarity_color(item.rarity)})
 		return
-	if cur != null and String(cur.get("weapon", "")) != "":
-		hero.weapons = hero.weapons.filter(func(w): return not (w.granted and w.id == cur.weapon))
+	var gold_for_cur: float = 8.0 * float(Items.RANK[cur.rarity] + 1)
+	var gold_for_new: float = 8.0 * float(Items.RANK[item.rarity] + 1)
+	offer = [
+		{"t": "item_swap", "name": "Equipar %s [%s]" % [item.name, item.rarity],
+			"desc": "%s\n(vende %s por %d moedas)" % [Items.mods_text(item.mods), cur.name, int(gold_for_cur)],
+			"keep": item, "sell": cur, "equips": true},
+		{"t": "item_swap", "name": "Manter %s [%s]" % [cur.name, cur.rarity],
+			"desc": "%s\n(vende %s por %d moedas)" % [Items.mods_text(cur.mods), item.name, int(gold_for_new)],
+			"keep": cur, "sell": item},
+	]
+	offer_kind = "item"
+	state = "item_offer"
+	events.append({"type": "item_offer", "new_item": item, "current_item": cur})
+
+func _equip_item(item: Dictionary) -> void:
+	var slot: String = item.slot
 	hero.items[slot] = item
 	var wid: String = item.get("weapon", "")
 	if wid != "" and not hero.weapons.any(func(w): return w.id == wid):
@@ -1306,8 +1398,15 @@ func give_item(item: Dictionary) -> void:
 		hero.weapons.append(w)
 		codex.weapons[wid] = true
 	hero.recalc()
-	events.append({"type": "item", "item": item})
-	events.append({"type": "toast", "text": "%s [%s]" % [item.name, item.rarity], "color": Items.rarity_color(item.rarity)})
+
+## A peça que não fica equipada é sempre vendida, nunca só descartada.
+func _resolve_item_choice(keep: Dictionary, sell: Dictionary) -> void:
+	if String(sell.get("weapon", "")) != "" and String(sell.get("weapon", "")) != String(keep.get("weapon", "")):
+		hero.weapons = hero.weapons.filter(func(w): return not (w.granted and w.id == sell.weapon))
+	_equip_item(keep)
+	var g: float = 8.0 * float(Items.RANK[sell.rarity] + 1)
+	_add_gold(g)
+	events.append({"type": "toast", "text": "%s vendido (+%d moedas)" % [sell.name, int(g)], "color": Items.rarity_color(sell.rarity)})
 
 func _open_altar() -> void:
 	var boons: Array = Data.table("boons").boons.duplicate()
@@ -1455,12 +1554,43 @@ func _level_desc(w: Weapon) -> String:
 	return ", ".join(parts)
 
 func choose(i: int) -> void:
-	if state != "levelup" and state != "altar":
+	if state != "levelup" and state != "altar" and state != "item_offer" and state != "shop":
 		return
 	if i < 0 or i >= offer.size():
 		return
 	var c: Dictionary = offer[i]
+	if state == "shop":
+		match String(c.t):
+			"shop_item":
+				if hero.gold >= int(c.price):
+					hero.gold -= int(c.price)
+					give_item(c.item)
+			"shop_weapon_up":
+				if hero.gold >= int(c.price):
+					for w in hero.weapons:
+						if w.id == c.weapon_id and not w.granted:
+							w.level += 1
+							hero.gold -= int(c.price)
+							break
+			"shop_heal":
+				if hero.gold >= int(c.price):
+					hero.gold -= int(c.price)
+					_heal_hero(float(c.amount))
+			"shop_item_up":
+				if hero.gold >= int(c.price) and hero.items.has(String(c.slot)):
+					hero.items[String(c.slot)].level = int(hero.items[String(c.slot)].get("level", 1)) + 1
+					hero.gold -= int(c.price)
+					hero.recalc()
+		if state == "item_offer":
+			return
+		state = "running"
+		offer.clear()
+		return
 	match String(c.t):
+		"item_swap":
+			_resolve_item_choice(c.keep, c.sell)
+			if c.get("equips", false):
+				events.append({"type": "item", "item": c.keep})
 		"weapon_new":
 			hero.weapons.append(Weapon.make(String(c.id)))
 			codex.weapons[String(c.id)] = true
@@ -1484,6 +1614,10 @@ func choose(i: int) -> void:
 			_add_gold(40.0)
 		"boon":
 			hero.boons.append(c.boon)
+	if offer_kind == "item":
+		state = "running"
+		offer.clear()
+		return
 	var offered_boon: Dictionary = c.get("boon", {})
 	var chosen_god := String(c.get("god", offered_boon.get("god", "")))
 	if offer_kind == "altar" and DivineVisuals.is_divine_affinity(chosen_god):
@@ -1592,6 +1726,18 @@ func _director(dt: float) -> void:
 	if _inter_t <= 0.0:
 		_inter_t = 50.0 + rng.randf() * 25.0
 		_spawn_random_interaction()
+	_breakable_t -= dt
+	if _breakable_t <= 0.0:
+		_breakable_t = 35.0 + rng.randf() * 20.0
+		_spawn_random_breakable()
+
+func _spawn_random_breakable() -> void:
+	var types: Array = BREAKABLE_TYPES_BY_STAGE.get(stage_id, BREAKABLE_DEFAULT_TYPES)
+	if types.is_empty():
+		return
+	var id: String = types[rng.randi() % types.size()]
+	var ang := rng.randf() * TAU
+	_spawn(id, hero.pos + Vector2(cos(ang), sin(ang)) * rng.randf_range(6.0, 11.0))
 
 func _spawn_random_interaction() -> void:
 	var alive_n := interactions.filter(func(i): return not i.used and i.kind != "portal").size()

@@ -1,0 +1,216 @@
+{
+  "build": "qa",
+  "contexto_atual": {
+    "armas": [
+      "sopro_de_estrela nv1",
+      "chicote_avarento nv1",
+      "vela_sagrada nv1",
+      "golpe_atordoante nv3",
+      "descarga_estelar nv2"
+    ],
+    "build": "qa",
+    "estado": "levelup",
+    "fase": "dagruve",
+    "habilidade": "constelacao",
+    "heroi": "Leoric",
+    "inimigos": 14,
+    "nivel": 16,
+    "profundidade": 0,
+    "pv": "24/24",
+    "qa": {
+      "cenario": "qa.durao.running",
+      "seed": 1001
+    },
+    "regra": "rituals",
+    "tela": "run",
+    "tempo": 243
+  },
+  "data_utc": "2026-09-27T23:06:12",
+  "itens": [
+    {
+      "contexto": {
+        "armas": [
+          "sopro_de_estrela nv1",
+          "chicote_avarento nv1",
+          "vela_sagrada nv1",
+          "golpe_atordoante nv3",
+          "descarga_estelar nv2"
+        ],
+        "build": "qa",
+        "estado": "levelup",
+        "fase": "dagruve",
+        "habilidade": "constelacao",
+        "heroi": "Leoric",
+        "inimigos": 25,
+        "nivel": 15,
+        "profundidade": 0,
+        "pv": "24/24",
+        "qa": {
+          "cenario": "qa.durao.running",
+          "seed": 1001
+        },
+        "regra": "rituals",
+        "tela": "run",
+        "tempo": 221
+      },
+      "hora": "2026-09-27T19:53:24",
+      "n": 1,
+      "tipo": "nota"
+    },
+    {
+      "contexto": {
+        "armas": [
+          "sopro_de_estrela nv1",
+          "chicote_avarento nv1",
+          "vela_sagrada nv1",
+          "golpe_atordoante nv3",
+          "descarga_estelar nv2"
+        ],
+        "build": "qa",
+        "estado": "running",
+        "fase": "dagruve",
+        "habilidade": "constelacao",
+        "heroi": "Leoric",
+        "inimigos": 25,
+        "nivel": 15,
+        "profundidade": 0,
+        "pv": "24/24",
+        "qa": {
+          "cenario": "qa.durao.running",
+          "seed": 1001
+        },
+        "regra": "rituals",
+        "tela": "run",
+        "tempo": 221
+      },
+      "hora": "2026-09-27T19:58:29",
+      "n": 2,
+      "tipo": "nota"
+    },
+    {
+      "contexto": {
+        "armas": [
+          "sopro_de_estrela nv1",
+          "chicote_avarento nv1",
+          "vela_sagrada nv1",
+          "golpe_atordoante nv3",
+          "descarga_estelar nv2"
+        ],
+        "build": "qa",
+        "estado": "running",
+        "fase": "dagruve",
+        "habilidade": "constelacao",
+        "heroi": "Leoric",
+        "inimigos": 24,
+        "nivel": 15,
+        "profundidade": 0,
+        "pv": "24/24",
+        "qa": {
+          "cenario": "qa.durao.running",
+          "seed": 1001
+        },
+        "regra": "rituals",
+        "tela": "run",
+        "tempo": 222
+      },
+      "hora": "2026-09-27T19:59:49",
+      "n": 3,
+      "tipo": "nota"
+    },
+    {
+      "contexto": {
+        "armas": [
+          "sopro_de_estrela nv1",
+          "chicote_avarento nv1",
+          "vela_sagrada nv1",
+          "golpe_atordoante nv3",
+          "descarga_estelar nv2"
+        ],
+        "build": "qa",
+        "estado": "running",
+        "fase": "dagruve",
+        "habilidade": "constelacao",
+        "heroi": "Leoric",
+        "inimigos": 23,
+        "nivel": 15,
+        "profundidade": 0,
+        "pv": "24/24",
+        "qa": {
+          "cenario": "qa.durao.running",
+          "seed": 1001
+        },
+        "regra": "rituals",
+        "tela": "run",
+        "tempo": 222
+      },
+      "hora": "2026-09-27T20:02:03",
+      "n": 4,
+      "tipo": "nota"
+    },
+    {
+      "contexto": {
+        "armas": [
+          "sopro_de_estrela nv1",
+          "chicote_avarento nv1",
+          "vela_sagrada nv1",
+          "golpe_atordoante nv3",
+          "descarga_estelar nv2"
+        ],
+        "build": "qa",
+        "estado": "running",
+        "fase": "dagruve",
+        "habilidade": "constelacao",
+        "heroi": "Leoric",
+        "inimigos": 25,
+        "nivel": 15,
+        "profundidade": 0,
+        "pv": "24/24",
+        "qa": {
+          "cenario": "qa.durao.running",
+          "seed": 1001
+        },
+        "regra": "rituals",
+        "tela": "run",
+        "tempo": 223
+      },
+      "hora": "2026-09-27T20:04:43",
+      "n": 5,
+      "tipo": "nota"
+    },
+    {
+      "contexto": {
+        "armas": [
+          "sopro_de_estrela nv1",
+          "chicote_avarento nv1",
+          "vela_sagrada nv1",
+          "golpe_atordoante nv3",
+          "descarga_estelar nv2"
+        ],
+        "build": "qa",
+        "estado": "running",
+        "fase": "dagruve",
+        "habilidade": "constelacao",
+        "heroi": "Leoric",
+        "inimigos": 19,
+        "nivel": 15,
+        "profundidade": 0,
+        "pv": "24/24",
+        "qa": {
+          "cenario": "qa.durao.running",
+          "seed": 1001
+        },
+        "regra": "rituals",
+        "tela": "run",
+        "tempo": 238
+      },
+      "hora": "2026-09-27T20:05:38",
+      "n": 6,
+      "tipo": "nota"
+    }
+  ],
+  "jogo": "Nottgard Survivors",
+  "notas": 6,
+  "plataforma": "Windows",
+  "prints": 6,
+  "versao": "0.1.0"
+}
