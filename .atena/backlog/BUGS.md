@@ -9,7 +9,7 @@ registros. Abaixo ficam os suspeitos e a dívida de verificação manual.
 | ID | Sev | Título | Origem | Situação | Spec |
 |---|---|---|---|---|---|
 | BUG-001 | P1 | Zumbi novo (SPEC-061) sem captura visual em run real: o renderer headless não gerou viewport | [EVID-104](../evidence/EVID-104-zumbi-admissao-2026-09-29.md) | Só a prancha foi aprovada; abrir uma run em Dagruve e conferir idle/move/attack/death | SPEC-061 |
-| BUG-002 | P2 | Pode haver outros assets animados com opacidade fraca (mesma classe do Leoric e do Zumbi antigos): falta auditar Sacerdote da Mente Derretida | [PLAN-032](../vault/drafts/PLAN-032-proxima-atualizacao-pos-playtest-2026-09-28.md) (risco em aberto) | Suspeita. SPEC-038 só checa "existe pixel visível"; conferir cobertura de opacidade nas folhas | — |
+| BUG-002 | P2 | Pode haver outros assets animados com opacidade fraca (mesma classe do Leoric e do Zumbi antigos): falta auditar Sacerdote da Mente Derretida | [PLAN-032](../vault/drafts/PLAN-032-proxima-atualizacao-pos-playtest-2026-09-28.md) (risco em aberto) | Suspeita. SPEC-038 só checa "existe pixel visível"; conferir cobertura de opacidade nas folhas. **Auditado 2026-09-29:** `tools/audit_alpha_solidity.gd` (191 imagens): as folhas do Sacerdote têm 80–88 % de pixels sólidos e alfa médio 0,87–0,92, faixa igual à de Bromnor e Durvall. Nenhuma sprite de corpo abaixo de 0,79; só efeitos (altar, portal, ritual) e mortes/ativas de heróis ficam mais translúcidos, o que é esperado. **Sem evidência de defeito**; falta só o olho na run QA (PLAN-039) | — |
 
 ### Dívida de verificação manual (roteiro do [PLAN-033](../vault/drafts/PLAN-033-checklist-consolidado-pre-playtest-2026-09-28.md))
 

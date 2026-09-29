@@ -143,7 +143,8 @@ mostra o item novo em destaque enganoso.
 | 1 — BUG-015, 012, 013, 011 | **Implementado**, suíte e smoke verdes, sem commit. Falta verificar em run real (ver BUGS.md). O portão da Etapa 0 vale para **fechar o lote e exportar**, não para começar correções já confirmadas |
 | 1 — descobertas | BUG-012 tinha causa dupla: restrição do Estige aplicada aos inimigos + obstáculo redondo sem contorno. BUG-013: 29 fichas de props com contato acima da base; 17 corrigidas, 12 planos aguardam olho humano |
 | 2 — arte/UI | **Implementado** o que é código: ART-016 (cor de raridade), ART-017 ("redução de dano"), rótulo e cor provisórios de loja/ferreiro/curandeiro e ferradura provisória do ímã. **Prompts das imagens já existem** (ART-PROMPTS-025 e 026, criados em paralelo); falta o dono gerar, aprovar e admitir |
-| 3 — versão 0.1.1 | Depois da Etapa 0 |
+| Auditorias automáticas | BUG-002: sem defeito de opacidade (`tools/audit_alpha_solidity.gd`). Bot Brook, Bromnor e Kayron, 4 sementes, código novo contra o de antes das correções: sem falha e sem queda grosseira (chegam a Docas 2 de 12 em ambos); amostra pequena, o bot morre cedo. Comparação limpa exige mais sementes |
+| 3 — versão 0.1.1 | Depois da Etapa 0: subir versão em `core/version.gd` e nas seis linhas de `export_presets.cfg`, exportar |
 
 ## Ordem de execução e portões
 
