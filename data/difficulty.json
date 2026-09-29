@@ -1,0 +1,14 @@
+{
+  "opening": {
+    "hold_seconds": 90,
+    "fade_seconds": 240,
+    "cap_bonus": 6,
+    "n_mult": 1.25,
+    "max_mult": 1.2,
+    "every_mult": 0.85
+  },
+  "ritual_blessing": {
+    "duration": 20.0,
+    "mods": {"dmg_pct": 0.2, "speed_pct": 0.15, "pickup": 1.0}
+  }
+}

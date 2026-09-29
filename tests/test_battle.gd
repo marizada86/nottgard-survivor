@@ -18,6 +18,51 @@ func _quiet(b: Battle) -> void:
 func run() -> Array:
 	var out: Array = []
 
+	# MEC-024: a abertura da fase é mais cheia e decai; sem o bônus a contagem cai
+	var op := _bat(31)
+	_quiet(op)
+	op.time = 0.0
+	if not is_equal_approx(op.opening_factor(), 1.0):
+		out.append("abertura deveria valer 1.0 no início")
+	op.time = 165.0
+	if absf(op.opening_factor() - 0.5) > 0.01:
+		out.append("abertura deveria decair para 0.5 na metade do fade (%.2f)" % op.opening_factor())
+	op.time = 240.0
+	if op.opening_factor() != 0.0:
+		out.append("abertura deveria acabar em fade_seconds")
+	var open_counts: Array = []
+	for with_bonus in [true, false]:
+		var oc := _bat(32)
+		oc.hero.max_hp = 99999.0
+		oc.hero.hp = 99999.0
+		var od: Dictionary = Data.table("difficulty").opening
+		var saved: Dictionary = od.duplicate()
+		if not with_bonus:
+			od.cap_bonus = 0
+			od.n_mult = 1.0
+			od.max_mult = 1.0
+			od.every_mult = 1.0
+		for i in 900:
+			oc._director(0.1)
+		open_counts.append(oc.enemies.size())
+		od.merge(saved, true)
+	if int(open_counts[0]) <= int(open_counts[1]):
+		out.append("abertura deveria gerar mais inimigos: com bônus %d, sem bônus %d" % [open_counts[0], open_counts[1]])
+
+	# MEC-026: interromper o ritual dá bênção temporária que expira
+	var rb := _bat(33)
+	_quiet(rb)
+	var dmg0 := rb.hero.m("dmg_pct")
+	rb.zones.append({"owner": "stage", "kind": "rule_ritual", "pos": rb.hero.pos, "radius": 1.7, "delay": 7.0, "total": 7.0, "interrupt": 1.5, "progress": 0.0, "life": 99.0})
+	for i in 30:
+		rb.step(Vector2.ZERO, 0.1)
+	if rb.hero.temp_t <= 0.0 or rb.hero.m("dmg_pct") <= dmg0 + 0.1:
+		out.append("interromper o ritual deveria dar bênção temporária (temp_t=%.1f)" % rb.hero.temp_t)
+	for i in 260:
+		rb.hero.step(Vector2.ZERO, 0.1)
+	if rb.hero.temp_t != 0.0 or absf(rb.hero.m("dmg_pct") - dmg0) > 0.001:
+		out.append("a bênção do selo deveria expirar e voltar ao dano base")
+
 	# 0) BUG-012: inimigo com obstáculo redondo exatamente entre ele e o herói contorna e chega; o Esquecimento do Estige (restrição do herói) não o trava
 	var ob := _bat(7)
 	_quiet(ob)

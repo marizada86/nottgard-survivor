@@ -730,6 +730,7 @@ func _update_zones(dt: float) -> void:
 			z.delay -= dt
 			if z.progress >= z.interrupt:
 				events.append({"type": "toast", "text": "Ritual interrompido: os reforços foram impedidos."})
+				_grant_ritual_blessing()
 			elif z.delay <= 0.0:
 				if stage.waves.is_empty():
 					events.append({"type": "toast", "text": "O ritual se desfaz."})
@@ -1741,18 +1742,32 @@ func _spawn_elite(id: String, at: Vector2) -> Enemy:
 	events.append({"type": "toast", "text": "Elite: %s" % e.name})
 	return e
 
+## MEC-024: força da abertura de cada fase, 1.0 no começo, constante por hold_seconds e decaindo até 0 em fade_seconds.
+func opening_factor() -> float:
+	var o: Dictionary = Data.table("difficulty").get("opening", {})
+	var hold := float(o.get("hold_seconds", 0.0))
+	var fade := float(o.get("fade_seconds", 0.0))
+	if fade <= hold or time >= fade:
+		return 0.0
+	return 1.0 if time <= hold else 1.0 - (time - hold) / (fade - hold)
+
 func _director(dt: float) -> void:
-	var cap := int(stage.cap) + int(minute()) * 3
+	var opening := opening_factor()
+	var o: Dictionary = Data.table("difficulty").get("opening", {})
+	var cap := int(stage.cap) + int(minute()) * 3 + int(round(float(o.get("cap_bonus", 0)) * opening))
 	if enemies.size() < cap:
 		for wi in stage.waves.size():
 			var w: Dictionary = stage.waves[wi]
 			if time < float(w.t0) or time > float(w.t1):
 				continue
 			_acc[wi] = float(_acc.get(wi, 0.0)) + dt
-			if _acc[wi] >= float(w.every) * SPAWN_SLOW:
+			var every := float(w.every) * SPAWN_SLOW * lerpf(1.0, float(o.get("every_mult", 1.0)), opening)
+			if _acc[wi] >= every:
 				_acc[wi] = 0.0
-				var room := int(w.max) - alive(String(w.id))
-				for i in mini(int(w.n), room):
+				var max_alive := int(ceil(float(w.max) * lerpf(1.0, float(o.get("max_mult", 1.0)), opening)))
+				var per_wave := int(ceil(float(w.n) * lerpf(1.0, float(o.get("n_mult", 1.0)), opening)))
+				var room := max_alive - alive(String(w.id))
+				for i in mini(per_wave, room):
 					if enemies.size() < cap:
 						_spawn(String(w.id), _ring_pos())
 	for i in stage.elites.size():
@@ -1791,6 +1806,16 @@ func _director(dt: float) -> void:
 	if _breakable_t <= 0.0:
 		_breakable_t = 35.0 + rng.randf() * 20.0
 		_spawn_random_breakable()
+
+## MEC-026: interromper o ritual dá uma bênção temporária (dados em data/difficulty.json).
+func _grant_ritual_blessing() -> void:
+	var b: Dictionary = Data.table("difficulty").get("ritual_blessing", {})
+	if b.is_empty():
+		return
+	hero.temp_mods = b.mods.duplicate()
+	hero.temp_t = float(b.duration)
+	hero.recalc()
+	events.append({"type": "toast", "text": "Bênção do Selo: %s por %d s" % [Items.mods_text(hero.temp_mods), int(hero.temp_t)]})
 
 func _spawn_random_breakable() -> void:
 	var types: Array = BREAKABLE_TYPES_BY_STAGE.get(stage_id, BREAKABLE_DEFAULT_TYPES)

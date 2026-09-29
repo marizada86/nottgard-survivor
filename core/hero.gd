@@ -21,6 +21,8 @@ var base_cam := 10
 var hero_mods := {}
 var meta_mods := {}
 var bonus_mods := {}      # conquistas
+var temp_mods := {}       # bênção temporária (ritual); vale enquanto temp_t > 0
+var temp_t := 0.0
 var passives := {}        # id -> nível
 var items := {}           # slot -> item
 var boons: Array = []
@@ -72,6 +74,8 @@ func recalc() -> void:
 	add_mods(m, hero_mods)
 	add_mods(m, meta_mods)
 	add_mods(m, bonus_mods)
+	if temp_t > 0.0:
+		add_mods(m, temp_mods)
 	var pdata: Dictionary = Data.table("passives")
 	for pid in passives:
 		add_mods(m, pdata[pid].mods, float(passives[pid]))
@@ -153,6 +157,11 @@ func weapon_slots() -> int:
 func step(screen_dir: Vector2, dt: float) -> void:
 	if dead:
 		return
+	if temp_t > 0.0:
+		temp_t = maxf(0.0, temp_t - dt)
+		if temp_t <= 0.0:
+			temp_mods = {}
+			recalc()
 	slow_t = maxf(0.0, slow_t - dt)
 	stun_t = maxf(0.0, stun_t - dt)
 	styx_forget_t = maxf(0.0, styx_forget_t - dt)
