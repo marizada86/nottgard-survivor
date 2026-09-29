@@ -423,14 +423,14 @@ static func _guide_text() -> String:
 		+ "3. [b]F5[/b] abre o bloco de notas: escreva o que estranhou ou gostou. Ao fechar, o relato textual é salvo.\n" \
 		+ "4. Envie individualmente o relato, o log e os prints de [b]evidencias[/b] na task correspondente do Discord.\n\n" \
 		+ "[b]Controles do jogo[/b]\n" \
-		+ "WASD/setas: mover · Tab: alterna mira (automática / mouse) · Q/botão direito: habilidade ativa · E: altar, ritual, portal · X: extrair após o chefe · 1-5: escolher no level-up · R: rerrolar · Esc: pausa\n" \
+		+ "WASD/setas: mover · Tab: alterna mira (automática / mouse) · Q/botão direito: habilidade ativa · E: interagir (altar, ritual, portal, loja, ferreiro, curandeiro, ampulheta, doação, aposta) · X: extrair após o chefe · 1-5: escolher no level-up · R: rerrolar · T ou F: velocidade 2x (só em mapa já vencido) · Esc: pausa\n" \
 		+ "Todas as armas atacam sozinhas. Sobreviva, evolua, derrote o chefe da fase e desça pelo portal.\n\n" \
 		+ "[b]Teclas de teste[/b]: F4 Navegador QA · F5 nota · F6 print · F11 tela cheia · F12 diagnóstico · F1 este guia\n" \
 		+ "[color=#aaaaaa]Os prints mostram a tela do jogo. Notas e log têm o nome de usuário do Windows removido.[/color]"
 
 static func game_rules_text() -> String:
 	return "[b]Objetivo[/b]\nSobreviva às ondas, evolua sua build e derrote o chefe da fase. Depois, escolha entre extrair a recompensa atual ou entrar no portal para continuar com mais risco e mais recompensa.\n\n" \
-		+ "[b]Controles[/b]\nWASD ou setas: mover · Tab: alternar mira automática/mouse · Q ou botão direito: habilidade ativa · E: interagir com altar, ritual ou portal · X: extrair depois do chefe · Esc: pausa.\n\n" \
+		+ "[b]Controles[/b]\nWASD ou setas: mover · Tab: alternar mira automática/mouse · Q ou botão direito: habilidade ativa · E: interagir com altar, ritual, portal, loja, ferreiro, curandeiro, ampulheta, altar da doação e mesa de aposta · X: extrair depois do chefe · T: velocidade 2x em mapas já vencidos · Esc: pausa.\n\n" \
 		+ "[b]Combate e evolução[/b]\nSuas armas atacam automaticamente. Ao subir de nível, escolha uma melhoria com 1–5; R rerrola a oferta quando houver rerrolagens. Cada personagem tem uma habilidade ativa própria.\n\n" \
 		+ "[b]Decisões da run[/b]\nAltares oferecem uma bênção com uma maldição. Cada andar tem uma regra ambiental: observe os avisos e adapte seu movimento. Chefes mudam de fase quando a vida baixa.\n\n" \
 		+ "[b]Progresso[/b]\nMoedas, desbloqueios e descobertas são garantidos ao encerrar a tentativa. O portal preserva sua build e aumenta o multiplicador de recompensa; extrair encerra a run com segurança."

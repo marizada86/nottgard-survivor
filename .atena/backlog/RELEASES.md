@@ -31,8 +31,15 @@ Origem: [PLAN-038](../vault/drafts/PLAN-038-atualizacao-pos-playtests-t01-t02-t0
 | Bugs | Regra do ritual | BUG-014 → MEC-026 | implementado, aguarda playtest |
 | Mecânicas | Comparação de equipamento (loja, forja, oferta) | MEC-019 · SPEC-081 | implementado |
 | Mecânicas | Loja e ferreiro mostram todas as opções | MEC-023 · SPEC-082 | implementado |
-| Mecânicas | Abertura de fase mais cheia | MEC-024 · SPEC-083 | em implementação |
-| Mecânicas | Bênção do Selo ao interromper o ritual | MEC-026 · SPEC-084 | em implementação |
+| Mecânicas | Abertura de fase mais cheia | MEC-024 · SPEC-083 | implementado |
+| Mecânicas | Bênção do Selo ao interromper o ritual | MEC-026 · SPEC-084 | implementado |
+| Mecânicas | Velocidade 2x em mapas vencidos e evento Ampulheta | MEC-010 · SPEC-085 | implementado |
+| Mecânicas | Faixa de dano, dica de evolução, Baú do Chefe, quebráveis, fontes, névoa e INT do Estige | MEC-007, 008, 013, 017, 018, 020, 022 · SPEC-086 | implementado |
+| Mecânicas | Fidelidade do item (3 recusas sobem o nível) e eventos Altar da Doação e Mesa de Aposta | MEC-021, 005 · SPEC-087 | implementado |
+| Mecânicas | Meta ampliado (5 aprimoramentos, 10 níveis em Força e Vitalidade) e +1 PV por nível a partir do 15 | MEC-014, 015 · SPEC-088 | implementado |
+| Mecânicas | Conquistas novas, aprimoramentos travados por conquista e biografias do vault | MEC-016 · SPEC-089 | implementado |
+| Mecânicas | IA de cerco: perseguidores flanqueiam | MEC-011 · SPEC-090 | implementado |
+| Mecânicas | Mini-cinemática de evolução de arma | MEC-009 · SPEC-091 | implementado (procedural) |
 | Arte | Cor de raridade, rótulos de loja/ferreiro/curandeiro, ímã provisório, texto de "redução" | ART-009, 015, 016, 017 | implementado (provisório onde indicado) |
 | Balanceamento | Ajustes de números pós-playtest: névoa, quebráveis, fontes, baú do chefe, abertura de fase | BAL-001, 004, 005, 006, 007 · SPEC-083, 086 | implementado, aguarda playtest |
 | Ferramentas | Hash do commit no rodapé, no log e nas notas | TOOL-001 | implementado |
@@ -45,6 +52,12 @@ Origem: [PLAN-038](../vault/drafts/PLAN-038-atualizacao-pos-playtests-t01-t02-t0
 4. Os primeiros minutos de cada fase estão mais movimentados? Ficou difícil demais?
 5. Inimigos contornam objetos, sem ficar presos? Props encostam no chão?
 6. Cores de raridade ficaram claras nas ofertas?
+7. Mapas já vencidos: a tecla T (2x) e o evento Ampulheta ajudam a jogar mais rápido?
+8. Altar da Doação e Mesa de Aposta: entendeu o risco? Valeu a pena?
+9. Os inimigos chegam de vários lados? Isso ficou interessante ou injusto?
+10. Ao evoluir uma arma, a tela de evolução explica como foi? Dá para pular?
+11. Quer comprar algo no meta? Novos aprimoramentos, conquistas e biografias: motivam a jogar mais?
+12. A fase tardia (Shendilavri em diante) continuou melhorando o herói?
 
 ### Fechar a versão (checklist)
 
