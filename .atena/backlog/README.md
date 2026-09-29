@@ -116,9 +116,9 @@ separado (uma mecânica por commit; números por entidade). Balanceamento vem po
 
 ## Numeração
 
-Próximos livres (2026-09-29, após EVID-108): `SPEC-094` (SPEC-079 fica
-**reservada** à camada de decais do Lote 2; SPEC-080 é a das HQs), `EVID-112`,
-`PLAN-043`, `ART-PROMPTS-032`, `ART-023`, `MEC-027`, `BUG-016`, `BAL-010`, `IN-040`, `TOOL-004`, jogador `T04`. `tools/backlog_check.ps1` confere se esta linha está atrasada.
+Próximos livres (2026-09-29, após EVID-112): `SPEC-095` (SPEC-079 fica
+**reservada** à camada de decais do Lote 2; SPEC-080 é a das HQs), `EVID-113`,
+`PLAN-044`, `ART-PROMPTS-032`, `ART-023`, `MEC-028`, `BUG-016`, `BAL-010`, `IN-040`, `TOOL-004`, jogador `T04`. `tools/backlog_check.ps1` confere se esta linha está atrasada.
 
 **Colisões históricas** (não renomear; usar o nome completo do arquivo ao
 citar): SPEC-047/048/049/050/054/055 têm dois arquivos cada; EVID-018, 077, 079,

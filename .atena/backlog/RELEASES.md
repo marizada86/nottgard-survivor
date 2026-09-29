@@ -41,6 +41,7 @@ Origem: [PLAN-038](../vault/drafts/PLAN-038-atualizacao-pos-playtests-t01-t02-t0
 | Mecânicas | IA de cerco: perseguidores flanqueiam | MEC-011 · SPEC-090 | implementado |
 | Mecânicas | Mini-cinemática de evolução de arma | MEC-009 · SPEC-091 | implementado (procedural) |
 | Mecânicas | Mapas maiores: 60×60 em todas as fases (props escalados, terreno esticado) | MEC-012 · SPEC-093 | implementado |
+| Mecânicas | Ofertas em cartão resumido: detalhes no hover ou com Shift (item, loja, ferreiro, nível, altar) | MEC-027 · SPEC-094 | implementado |
 | Arte | Cor de raridade, rótulos de loja/ferreiro/curandeiro, ímã provisório, texto de "redução" | ART-009, 015, 016, 017 | implementado (provisório onde indicado) |
 | Balanceamento | Ajustes de números pós-playtest: névoa, quebráveis, fontes, baú do chefe, abertura de fase | BAL-001, 004, 005, 006, 007 · SPEC-083, 086 | implementado, aguarda playtest |
 | Ferramentas | Hash do commit no rodapé, no log e nas notas | TOOL-001 | implementado |
@@ -60,6 +61,7 @@ Origem: [PLAN-038](../vault/drafts/PLAN-038-atualizacao-pos-playtests-t01-t02-t0
 11. Quer comprar algo no meta? Novos aprimoramentos, conquistas e biografias: motivam a jogar mais?
 12. A fase tardia (Shendilavri em diante) continuou melhorando o herói?
 13. Os mapas ficaram maiores: acabou a sensação de apertado ou ficaram vazios demais? Inimigos demoram muito a chegar?
+14. As ofertas (item, loja, ferreiro, nível, altar) ficaram mais fáceis de entender? O hover e o Shift (segurar) mostram o que faltava?
 
 ### Fechar a versão (checklist)
 
