@@ -491,7 +491,7 @@ func _input(ev: InputEvent) -> void:
 # ------------------------------------------------------------------ contexto
 
 func context() -> Dictionary:
-	var ctx := {"tela": Game.screen_name, "build": Version.profile_slug()}
+	var ctx := {"tela": Game.screen_name, "build": Version.profile_slug(), "commit": Version.build_id()}
 	var cs := get_tree().current_scene
 	if cs != null and cs.has_method("playtest_context"):
 		ctx.merge(cs.playtest_context())

@@ -36,3 +36,16 @@ static func qa_enabled() -> bool:
 
 static func profile_slug() -> String:
 	return "qa" if qa_enabled() else "public" if evidence_enabled() else "production"
+
+## Identificador da build (hash curto do commit), gravado por tools/stamp_build.ps1 ou pelo CI
+## em data/build_info.json. Sem o arquivo, é uma execução local: "dev".
+const BUILD_INFO_PATH := "res://data/build_info.json"
+
+static func build_id() -> String:
+	if not FileAccess.file_exists(BUILD_INFO_PATH):
+		return "dev"
+	var parsed: Variant = JSON.parse_string(FileAccess.get_file_as_string(BUILD_INFO_PATH))
+	if typeof(parsed) != TYPE_DICTIONARY:
+		return "dev"
+	var commit := str((parsed as Dictionary).get("commit", "")).strip_edges()
+	return commit if commit != "" else "dev"

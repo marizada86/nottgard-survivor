@@ -57,6 +57,11 @@ jobs:
           V=$(grep -oP 'VERSION := "\K[^"]+' core/version.gd)
           echo "version=$V" >> "$GITHUB_OUTPUT"
 
+      - name: Gravar o identificador da build
+        run: |
+          printf '{"commit": "%s", "date": "%s"}\n' "$(git rev-parse --short HEAD)" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > data/build_info.json
+          cat data/build_info.json
+
       - name: Importar o projeto
         run: godot --headless --path . --import || true
 

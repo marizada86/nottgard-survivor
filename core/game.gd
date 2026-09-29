@@ -29,7 +29,7 @@ func _ready() -> void:
 	apply_settings()
 	if save_notice != "":
 		logline(save_notice)
-	logline("Jogo iniciado v%s" % Version.VERSION)
+	logline("Jogo iniciado v%s (%s)" % [Version.VERSION, Version.build_id()])
 
 func ensure_input_actions() -> void:
 	if InputMap.has_action("hero_active"):
