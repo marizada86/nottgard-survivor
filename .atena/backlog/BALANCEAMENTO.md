@@ -52,7 +52,7 @@ godot --headless --path . -s tools/bot.gd -- <heroi> <seeds> [fase_inicial] [dt]
 ```
 
 Rodar por herói, com as mesmas seeds, e registrar num EVID: fases alcançadas,
-nível, tempo e causa da morte. **Linha de base:** ainda não registrada. O ideal é
+nível, tempo e causa da morte. **Linha de base:** registrada em [EVID-110](../evidence/EVID-110-linha-de-base-do-bot-por-heroi-2026-09-29.md) (build 0.2.0). O ideal é
 tirá-la logo depois que os ajustes em andamento de `data/difficulty.json` forem
 commitados, para não medir uma versão no meio da mudança.
 
@@ -64,23 +64,31 @@ entre si**, não para dizer se um jogador humano vai achar difícil.
 | ID | Entidade | Sintoma e evidências | Alavanca | Ligado a | Estado |
 |---|---|---|---|---|---|
 | BAL-001 | Dificuldade inicial da campanha | T03 (Kayron): início fácil, quer **mais mobs, mais dano e menos PV**, "fica mais fácil ao evoluir" (EVID-108, IN-035, IN-037, IN-039). T01 (Brook): "fácil até Feng-tu" (EVID-106). T02: PV baixo em Dagruve (10/60 a 00:48 com Bromnor, IN-032). **Sinais divergem por herói** | `data/difficulty.json`, `data/stages.json` | MEC-024 · SPEC-083 | **IMPLEMENTADO 2026-09-29** só a parte de mais mobs nos primeiros minutos; aguarda playtest. Falta a rodada do bot por herói |
-| BAL-002 | Progressão tardia (Shendilavri em diante) | T01: o herói "perdeu a progressão", não melhora mais (EVID-106, IN-014). T02 Q11 confirma e propõe **mais status e PV máx. entre fases** (EVID-107). T03 não chegou lá | `data/upgrades.json`, `data/passives.json`, `data/stage_rules.json` | MEC-014, MEC-005 | observação: 2 fontes; falta medir com o bot até a fase 7 |
-| BAL-003 | Economia de moedas | T01 comprou a loja inteira com ~30 000 moedas (EVID-106, IN-016). T02: +23 354 moedas numa run e propõe **upgrades mais caros ou moedas menos frequentes** (EVID-107) | preços de loja e forja em `data/`, ganho de moeda por inimigo e chefe, multiplicador de risco | MEC-015 | observação: 2 fontes independentes; decidir entre subir custo, reduzir ganho ou criar novos usos (MEC-015) |
+| BAL-002 | Progressão tardia (Shendilavri em diante) | T01: o herói "perdeu a progressão", não melhora mais (EVID-106, IN-014). T02 Q11 confirma e propõe **mais status e PV máx. entre fases** (EVID-107). T03 não chegou lá | `data/upgrades.json`, `data/passives.json`, `data/stage_rules.json` | MEC-014, MEC-005 | observação: 2 fontes; falta medir com o bot até a fase 7. **Parcial 2026-09-29:** +1 PV por nível a partir do 15 e meta ampliado (SPEC-088); aguarda playtest |
+| BAL-003 | Economia de moedas | T01 comprou a loja inteira com ~30 000 moedas (EVID-106, IN-016). T02: +23 354 moedas numa run e propõe **upgrades mais caros ou moedas menos frequentes** (EVID-107) | preços de loja e forja em `data/`, ganho de moeda por inimigo e chefe, multiplicador de risco | MEC-015 | observação: 2 fontes independentes; decidir entre subir custo, reduzir ganho ou criar novos usos (MEC-015). **Parcial 2026-09-29:** 5 aprimoramentos novos e Força/Vitalidade até nível 10 (SPEC-088), mais Mesa de Aposta (SPEC-087); aguarda playtest |
 | BAL-004 | Dano da Maré de Névoa | T01: "dano causado pela névoa está baixo" (EVID-106, IN-002) | dano em % da vida máxima por segundo | MEC-017 | **IMPLEMENTADO 2026-09-29** (2% → 6%, SPEC-086); aguarda playtest |
 | BAL-005 | Frequência e recompensa dos quebráveis | T01 ×2 e T02: aparecem pouco (EVID-106, IN-004, IN-005); T03 concorda | intervalo de spawn e escala por Carisma | MEC-007 | **IMPLEMENTADO 2026-09-29** (35–55 s → 22–36 s, −6% por ponto de Carisma, SPEC-086); aguarda playtest |
 | BAL-006 | Frequência das fontes "+% PV" | T02: "menos frequentes, mas não muito" (EVID-107, IN-024) | peso das fontes nos eventos aleatórios | MEC-020 | **IMPLEMENTADO 2026-09-29** (peso 2 → 1,4, SPEC-086); aguarda playtest |
 | BAL-007 | Baú do chefe | T01 e T02: iguais aos baús comuns; T02 "apenas 1 baú" (EVID-106, EVID-107) | qualidade e número de baús | MEC-013 | **IMPLEMENTADO 2026-09-29** (raro ou único, SPEC-086); aguarda playtest |
+| BAL-008 | Zynara Vellen | **Só o bot:** nível médio 1,0 em 5 sementes (2,4 mesmo sem abertura e flanqueio); a mais fraca dos 10 heróis (EVID-110). Nenhum tester a usou | `data/heroes.json` (PV base, armadura, arma inicial), arma inicial de Zynara em `data/weapons.json` | — | **IMPLEMENTADO 2026-09-29** ([[SPEC-092-arma-inicial-de-zynara]]): a arma inicial não causava dano; agora 2d6 a cada 5,5 s. Bot: nível médio 1,0 → 5,0. Aguarda playtest com Zynara |
+| BAL-009 | Nyrelia | **Só o bot:** nível médio 6,0 (7,6 sem abertura e flanqueio); segunda mais frágil (EVID-110) | `data/heroes.json`, passiva e arma inicial | — | **Observação** |
 
 ### Painel de heróis
 
-Nenhum herói foi medido ainda. Sinais coletados até aqui (só relatos, sem bot):
+Medição do bot em 2026-09-29 (5 sementes, EVID-110) ao lado dos relatos:
 
 | Herói | Sinais | Medição do bot |
 |---|---|---|
-| Brook França | T01: run longa até Shendilavri (nv 57, 66 PV), fácil até Feng-tu, estagna depois | pendente |
-| Bromnor Martelo da Luz | T02: PV 10/60 aos 00:48 em Dagruve (IN-032; falta saber o contexto) | pendente |
-| Kayron Lioran | T03: 56 min até Molor, início fácil | pendente |
-| Durvall, Maelor, Sylas Malafaia, Korrak Nammat, Leoric, Nyrelia, Zynara Vellen | sem relatos | pendente |
+| Brook França | T01: run longa até Shendilavri (nv 57, 66 PV), fácil até Feng-tu, estagna depois | nível médio 7,0 (EVID-110) |
+| Bromnor Martelo da Luz | T02: PV 10/60 aos 00:48 em Dagruve (IN-032; falta saber o contexto) | nível médio 11,6 |
+| Kayron Lioran | T03: 56 min até Molor, início fácil | nível médio 10,2 |
+| Maelor | sem relatos | nível médio 14,4 |
+| Korrak Nammat | sem relatos | nível médio 14,4 |
+| Sylas Malafaia | sem relatos | nível médio 9,6 |
+| Leoric | sem relatos | nível médio 7,6 |
+| Durvall | sem relatos | nível médio 5,8 |
+| Nyrelia | sem relatos | nível médio 6,0 (BAL-009) |
+| **Zynara Vellen** | sem relatos | nível médio 1,0 → **5,0** depois do SPEC-092 (BAL-008) |
 
 Preencher a coluna do bot na primeira rodada por herói e acrescentar linha de
 armas, itens e inimigos quando aparecerem sinais.

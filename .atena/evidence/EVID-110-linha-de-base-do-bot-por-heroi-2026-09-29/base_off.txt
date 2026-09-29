@@ -1,0 +1,29 @@
+== brook
+seed 1: brook | fases=dagruve | profundidade=0 x1.00 | nv=12 armas=sentenca_de_lliira2,estocada_mistica3,golpe_atordoante2 passivas={ "forca": 1, "regeneracao": 2, "pele_de_pedra": 1, "botas_leves": 1 } | itens=2 | tempo
+seed 2: brook | fases=dagruve | profundidade=0 x1.00 | nv=5 armas=sentenca_de_lliira1,golpe_esmagador3,lamina_da_digestao1 passivas={ "cota_de_malha": 1 } | itens=3 | tempo
+seed 3: brook | fases=dagruve | profundidade=0 x1.00 | nv=11 armas=sentenca_de_lliira2,chicote_avarento1,adaga_rapida1,cera_fervente1 passivas={ "pele_de_pedra": 1, "regeneracao": 1, "constituicao": 1, "foco_arcano": 3, "forca": 1 } | itens=3 | tempo
+seed 4: brook | fases=dagruve | profundidade=0 x1.00 | nv=3 armas=sentenca_de_lliira1 passivas={ "pele_de_pedra": 1, "forca": 1 } | itens=2 | tempo
+seed 5: brook | fases=dagruve | profundidade=0 x1.00 | nv=4 armas=sentenca_de_lliira2 passivas={ "pele_de_pedra": 1, "forca": 1 } | itens=3 | tempo
+chegaram: { "dagruve": 5 }
+== durvall
+seed 1: durvall | fases=dagruve | profundidade=0 x1.00 | nv=7 armas=espada_sombria2,vela_sagrada2,descarga_estelar1 passivas={ "botas_leves": 1, "forca": 1 } | itens=3 | tempo
+seed 2: durvall | fases=dagruve | profundidade=0 x1.00 | nv=7 armas=espada_sombria3,ampulheta2 passivas={ "cota_de_malha": 1, "forca": 2 } | itens=4 | tempo
+seed 3: durvall | fases=dagruve | profundidade=0 x1.00 | nv=7 armas=espada_sombria1,chicote_avarento2,golpe_atordoante3 passivas={ "constituicao": 1, "robe_arcano": 1 } | itens=3 | tempo
+seed 4: durvall | fases=dagruve | profundidade=0 x1.00 | nv=2 armas=espada_sombria2 passivas={  } | itens=1 | tempo
+seed 5: durvall | fases=dagruve | profundidade=0 x1.00 | nv=4 armas=espada_sombria3 passivas={ "forca": 1 } | itens=1 | tempo
+chegaram: { "dagruve": 5 }
+== nyrelia
+seed 1: nyrelia | fases=dagruve | profundidade=0 x1.00 | nv=11 armas=dominar_pessoa3,raio_enfraquecedor1,sentenca_de_lliira1,descarga_estelar1 passivas={ "constituicao": 1, "regeneracao": 1, "foco_arcano": 1, "robe_arcano": 1, "sorte_de_sendrinah": 1 } | itens=3 | tempo
+seed 2: nyrelia | fases=dagruve | profundidade=0 x1.00 | nv=2 armas=dominar_pessoa1,golpe_atordoante1 passivas={  } | itens=1 | tempo
+seed 3: nyrelia | fases=dagruve | profundidade=0 x1.00 | nv=9 armas=dominar_pessoa2,raio_enfraquecedor2,lamina_trovejante3 passivas={ "robe_arcano": 1, "constituicao": 1 } | itens=3 | tempo
+seed 4: nyrelia | fases=dagruve | profundidade=0 x1.00 | nv=10 armas=dominar_pessoa2,lamina_trovejante1,cera_fervente2 passivas={ "pele_de_pedra": 1, "cota_de_malha": 2, "ganancia": 1, "robe_arcano": 1 } | itens=1 | tempo
+seed 5: nyrelia | fases=dagruve | profundidade=0 x1.00 | nv=6 armas=dominar_pessoa3,golpe_esmagador3 passivas={  } | itens=3 | tempo
+chegaram: { "dagruve": 5 }
+== zynara
+seed 1: zynara | fases=dagruve | profundidade=0 x1.00 | nv=1 armas=ampulheta1 passivas={  } | itens=1 | tempo
+seed 2: zynara | fases=dagruve | profundidade=0 x1.00 | nv=1 armas=ampulheta1 passivas={  } | itens=1 | tempo
+seed 3: zynara | fases=dagruve | profundidade=0 x1.00 | nv=8 armas=ampulheta2,chicote_avarento2,raio_enfraquecedor1 passivas={ "cota_de_malha": 2, "constituicao": 1, "pele_de_pedra": 1 } | itens=2 | tempo
+seed 4: zynara | fases=dagruve | profundidade=0 x1.00 | nv=1 armas=ampulheta1 passivas={  } | itens=1 | tempo
+seed 5: zynara | fases=dagruve | profundidade=0 x1.00 | nv=1 armas=ampulheta1 passivas={  } | itens=1 | tempo
+chegaram: { "dagruve": 5 }
+FIM
