@@ -1,7 +1,7 @@
 # ARTE & ÁUDIO — assets, templates, layouts, backgrounds, sons
 
 Cada item acumula até fechar um lote. O lote vira **um** `ART-PROMPTS-NNN`
-(próximo livre: 028). Todo prompt segue o **Sabor Nottgard**: divindade e bioma
+(próximo livre: 030). Todo prompt segue o **Sabor Nottgard**: divindade e bioma
 envolvidos, paleta (RESEARCH-003), bestiário (RESEARCH-001), sem lore inventada.
 
 ## Abertos
@@ -28,7 +28,15 @@ envolvidos, paleta (RESEARCH-003), bestiário (RESEARCH-001), sem lore inventada
 
 > **Fila consolidada para o ChatGPT:**
 > [CHATGPT-FILA-001](../generated/CHATGPT-FILA-001-prompts-prontos.md) reúne os
-> 39 prompts prontos (Lotes 1, 2 e o piloto de HQ), com checklist de progresso.
+> 39 prompts prontos (Lotes 1 e 2 e piloto de HQ). **Em andamento**: já enviados
+> ao ChatGPT pelo dono.
+>
+> **Remessa separada — HQs, Ondas 1 e 2:**
+> [CHATGPT-FILA-002](../generated/CHATGPT-FILA-002-hqs-ondas-1-e-2.md) (52 prompts,
+> numeração H01–H52, origem em
+> [ART-PROMPTS-028](../generated/ART-PROMPTS-028-hqs-onda-1.md) e
+> [ART-PROMPTS-029](../generated/ART-PROMPTS-029-hqs-onda-2.md)). Ainda não
+> enviada; não tem relação com os pedidos em andamento da FILA-001.
 
 ## Lote 1 — prompts prontos (2026-09-29)
 

@@ -1,7 +1,7 @@
 ---
 id: "PLAN-040"
 title: "HQs novas: highlights do vault, gatilhos e conquistas"
-status: "proposta — aguardando escolhas do dono; nada implementado nem gerado"
+status: "Ondas 1 e 2 aprovadas pelo dono em 2026-09-29 (recomendações padrão adotadas em D-N2 a D-N6); prompts prontos em ART-PROMPTS-028 e 029; nada gerado nem implementado"
 created: "2026-09-29"
 relations:
   - "[[SPEC-080-hqs-de-transicao-do-nottcard]]"
