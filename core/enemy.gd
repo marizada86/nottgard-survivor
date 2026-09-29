@@ -42,6 +42,7 @@ var hit_flash := 0.0
 var charmed_t := 0.0
 var phase_index := 0
 var phase_defs: Array = []
+var flank_side := 0        # MEC-011: -1/+1 = contorna pelo lado esquerdo/direito; 0 = vai direto
 var detour_side := 0       # lado (+1/-1) escolhido ao contornar obstáculo; 0 = livre
 
 static func make(enemy_id: String, at: Vector2, minute: float = 0.0, hp_mult: float = 1.0, tier: int = 0) -> Enemy:

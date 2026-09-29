@@ -46,7 +46,7 @@ var aim_dir := Vector2(1, 1).normalized()
 var aim_pos := Vector2.ZERO
 var time := 0.0
 var run_time := 0.0
-var state := "running"   # running | levelup | altar | item_offer | revive_offer | dead | won
+var state := "running"   # running | levelup | altar | item_offer | shop | evolve_cine | revive_offer | dead | won
 var offer: Array = []
 var offer_kind := ""
 var pending_levels := 0
@@ -86,6 +86,16 @@ var _cur_angle := 0.0
 var _trickle := 0.0
 var _grid := {}
 var _first_inter := true
+var _spawn_serial := 0
+var _cine_queue: Array = []      # MEC-009: evoluções aguardando a mini-cinemática
+var evolve_cine: Dictionary = {}   # {from, into, passive, level} da cinemática em curso
+var evolve_cine_t := 0.0
+
+func skip_cine() -> void:
+	if state == "evolve_cine":
+		state = "running"
+		evolve_cine = {}
+		evolve_cine_t = 0.0
 var keep_streak := {}          # MEC-021: recusas seguidas de trocar o item de cada slot
 const KEEP_STREAK_NEEDED := 3
 var speed_mult := 1.0          # MEC-010: simulação ×1,5 ou ×2, só em fase já vencida
@@ -430,6 +440,17 @@ func alive(id: String) -> int:
 # ------------------------------------------------------------------ passo
 
 func step(screen_dir: Vector2, dt: float) -> void:
+	# MEC-009: mini-cinemática de evolução; o jogo fica parado enquanto ela roda
+	if state == "evolve_cine":
+		evolve_cine_t -= dt
+		if evolve_cine_t <= 0.0:
+			skip_cine()
+		return
+	if state == "running" and not _cine_queue.is_empty() and not hero.dead:
+		evolve_cine = _cine_queue.pop_front()
+		evolve_cine_t = float(Data.table("difficulty").get("evolve_cinematic_seconds", 2.6))
+		state = "evolve_cine"
+		return
 	if state != "running" or hero.dead:
 		return
 	if boss_intro_remaining > 0.0:
@@ -904,7 +925,7 @@ func _enemy_step(e: Enemy, dt: float) -> void:
 			elif dist < e.keep - 1.2:
 				mv = -dir * 0.7
 		elif dist > ENEMY_ATK_RANGE * 0.6:
-			mv = dir
+			mv = _chase_dir(e, dir, dist)
 		if mv != Vector2.ZERO:
 			_enemy_move(e, mv * spd * dt)
 	var k := Vector2i(int(floor(e.pos.x)), int(floor(e.pos.y)))
@@ -1844,6 +1865,7 @@ func choose(i: int) -> void:
 			for w in hero.weapons:
 				if w.id == c.id:
 					var nw := Weapon.make(String(c.into))
+					_cine_queue.append({"from": String(w.id), "into": String(c.into), "passive": String(w.def.get("evolve", {}).get("passive", "")), "level": w.level})
 					nw.granted = w.granted
 					hero.weapons[hero.weapons.find(w)] = nw
 					codex.weapons[String(c.into)] = true
@@ -1907,9 +1929,30 @@ func _spawn(id: String, at: Vector2, minute_override: float = -1.0) -> Enemy:
 		e.hp = 1.0
 		e.xp = 0
 		e.flags = e.flags + ["ghost"]
+	_spawn_serial += 1
+	e.flank_side = _flank_side_for(e, _spawn_serial)
 	enemies.append(e)
 	codex.enemies[id] = codex.enemies.get(id, false)
 	return e
+
+## MEC-011: parte dos perseguidores contorna pelos lados em vez de formar fila (sem consumir o RNG da run).
+func _flank_side_for(e: Enemy, serial: int) -> int:
+	if e.is_boss() or e.move != "chase" or e.speed <= 0.0:
+		return 0
+	var share := float(Data.table("difficulty").get("flank", {}).get("share", 0.0))
+	if share <= 0.0 or float((serial * 37) % 100) / 100.0 >= share:
+		return 0
+	return 1 if serial % 2 == 0 else -1
+
+## Direção de perseguição: quem flanqueia abre um arco que fecha ao chegar perto do herói.
+func _chase_dir(e: Enemy, dir: Vector2, dist: float) -> Vector2:
+	if e.flank_side == 0:
+		return dir
+	var f: Dictionary = Data.table("difficulty").get("flank", {})
+	var reach := float(f.get("close_distance", 2.5))
+	var span := maxf(1.0, float(f.get("open_distance", 10.0)) - reach)
+	var arc := float(f.get("max_arc", 1.0)) * clampf((dist - reach) / span, 0.0, 1.0)
+	return dir.rotated(arc * float(e.flank_side))
 
 func _spawn_elite(id: String, at: Vector2) -> Enemy:
 	var e := _spawn(id, at)

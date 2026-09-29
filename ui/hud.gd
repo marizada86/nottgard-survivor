@@ -227,6 +227,97 @@ func show_offer(b: Battle) -> void:
 func hide_offer() -> void:
 	levelup_panel.visible = false
 
+# ------------------------------------------------------------------ MEC-009: mini-cinemática de evolução
+
+var _evo_root: Control = null
+var _evo_key := ""
+
+func show_evolution(b: Battle) -> void:
+	var cine: Dictionary = b.evolve_cine
+	if cine.is_empty():
+		hide_evolution()
+		return
+	var key := "%s>%s" % [String(cine.from), String(cine.into)]
+	if _evo_root != null and _evo_key == key:
+		return
+	hide_evolution()
+	_evo_key = key
+	var wdata: Dictionary = Data.table("weapons")
+	var from_w: Dictionary = wdata.get(String(cine.from), {})
+	var into_w: Dictionary = wdata.get(String(cine.into), {})
+	var passive_name := String(Data.table("passives").get(String(cine.passive), {}).get("name", String(cine.passive)))
+	var root := ColorRect.new()
+	root.color = Color(0, 0, 0, 0.74)
+	root.set_anchors_preset(Control.PRESET_FULL_RECT)
+	root.mouse_filter = Control.MOUSE_FILTER_STOP
+	var center := CenterContainer.new()
+	center.set_anchors_preset(Control.PRESET_FULL_RECT)
+	root.add_child(center)
+	var col := VBoxContainer.new()
+	col.alignment = BoxContainer.ALIGNMENT_CENTER
+	col.add_theme_constant_override("separation", 14)
+	center.add_child(col)
+	var title := Label.new()
+	title.text = "★  EVOLUÇÃO  ★"
+	title.add_theme_font_size_override("font_size", 38)
+	title.add_theme_color_override("font_color", Color(1.0, 0.85, 0.3))
+	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	col.add_child(title)
+	var icons := HBoxContainer.new()
+	icons.alignment = BoxContainer.ALIGNMENT_CENTER
+	icons.add_theme_constant_override("separation", 26)
+	col.add_child(icons)
+	for pair in [[String(cine.from), 96.0], ["", 0.0], [String(cine.into), 132.0]]:
+		if String(pair[0]) == "":
+			var arrow := Label.new()
+			arrow.text = "→"
+			arrow.add_theme_font_size_override("font_size", 54)
+			arrow.add_theme_color_override("font_color", Color(1.0, 0.85, 0.3))
+			icons.add_child(arrow)
+			continue
+		var icon := TextureRect.new()
+		var path := "res://assets/icons/weapons/%s.png" % String(pair[0])
+		icon.texture = load(path) if ResourceLoader.exists(path) else null
+		icon.custom_minimum_size = Vector2(float(pair[1]), float(pair[1]))
+		icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		icons.add_child(icon)
+	var names := Label.new()
+	names.text = "%s  →  %s" % [String(from_w.get("name", cine.from)), String(into_w.get("name", cine.into))]
+	names.add_theme_font_size_override("font_size", 24)
+	names.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	col.add_child(names)
+	var cond := Label.new()
+	cond.text = "Condições cumpridas: nível %d (máximo) + passiva %s" % [int(cine.level), passive_name]
+	cond.add_theme_color_override("font_color", Color(0.62, 0.71, 0.85))
+	cond.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	col.add_child(cond)
+	var desc := Label.new()
+	desc.text = String(into_w.get("desc", ""))
+	desc.custom_minimum_size = Vector2(560, 0)
+	desc.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	desc.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	col.add_child(desc)
+	var hint := Label.new()
+	hint.text = "clique ou tecle para continuar"
+	hint.add_theme_color_override("font_color", Color(0.55, 0.55, 0.55))
+	hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	col.add_child(hint)
+	add_child(root)
+	_evo_root = root
+	root.modulate.a = 0.0
+	col.pivot_offset = col.size * 0.5
+	col.scale = Vector2(0.85, 0.85)
+	var tw := root.create_tween().set_parallel(true)
+	tw.tween_property(root, "modulate:a", 1.0, 0.35)
+	tw.tween_property(col, "scale", Vector2.ONE, 0.45).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+
+func hide_evolution() -> void:
+	if _evo_root != null:
+		_evo_root.queue_free()
+		_evo_root = null
+	_evo_key = ""
+
 func toast(text: String, color: Color = Color(1, 1, 1)) -> void:
 	if toast_box.get_child_count() >= 4:
 		toast_box.get_child(0).queue_free()

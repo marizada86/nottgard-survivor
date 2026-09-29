@@ -198,6 +198,12 @@ func fog_state_is_inactive() -> bool:
 func _unhandled_input(ev: InputEvent) -> void:
 	if _result_shown or battle.state == "revive_offer":
 		return
+	if battle.state == "evolve_cine":
+		# MEC-009: qualquer tecla ou clique pula a cinemática de evolução
+		if (ev is InputEventKey and ev.pressed and not ev.echo) or (ev is InputEventMouseButton and ev.pressed):
+			battle.skip_cine()
+			get_viewport().set_input_as_handled()
+		return
 	if battle.state == "running" and ev.is_action_pressed("hero_active"):
 		if battle.use_active(battle.aim_dir):
 			get_viewport().set_input_as_handled()
@@ -323,6 +329,10 @@ func _physics_process(dt: float) -> void:
 		_refresh_offer()
 	if battle.state == "revive_offer" and prev_state != "revive_offer":
 		hud.show_revive_offer(battle)
+	if battle.state == "evolve_cine":
+		hud.show_evolution(battle)
+	else:
+		hud.hide_evolution()
 	if (battle.state == "dead" or battle.state == "won") and not _result_shown:
 		_show_result()
 

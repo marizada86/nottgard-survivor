@@ -43,6 +43,10 @@ func _ready() -> void:
 			run.battle.state = "running"
 			run.battle.offer.clear()
 			run.battle._open_shop_event("ferreiro")
+		if "evolve" in flags:
+			run.battle.evolve_cine = {"from": "espada_sombria", "into": "espada_do_receptaculo", "passive": "cota_de_malha", "level": 5}
+			run.battle.evolve_cine_t = 30.0
+			run.battle.state = "evolve_cine"
 		if "levelup" in flags:
 			run.battle._add_xp(400.0)
 		if "boss" in flags:

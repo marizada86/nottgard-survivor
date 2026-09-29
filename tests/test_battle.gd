@@ -151,6 +151,61 @@ func run() -> Array:
 		if not up_ids.has(needed):
 			out.append("aprimoramento novo ausente: %s" % needed)
 
+	# MEC-011: perseguidores flanqueiam (curvam de lado) e ainda chegam ao herói; parte segue reta
+	var fl := _bat(101)
+	_quiet(fl)
+	var sides := {}
+	for i in 40:
+		var fe := fl._spawn("zumbi", Vector2(30.0, 5.0 + float(i) * 0.5))
+		sides[fe.flank_side] = int(sides.get(fe.flank_side, 0)) + 1
+	if not sides.has(1) or not sides.has(-1) or not sides.has(0):
+		out.append("deveria haver flanqueadores dos dois lados e perseguidores diretos: %s" % str(sides))
+	var straight := Enemy.make("zumbi", Vector2(30.0, 20.0))
+	var curved := Enemy.make("zumbi", Vector2(30.0, 20.0))
+	curved.flank_side = 1
+	for i in 25:
+		fl.enemies = [straight, curved]
+		fl._enemy_step(straight, 0.1)
+		fl._enemy_step(curved, 0.1)
+	if absf(straight.pos.y - 20.0) > 0.05:
+		out.append("perseguidor direto não deveria sair da linha reta")
+	if absf(curved.pos.y - 20.0) < 0.3:
+		out.append("flanqueador deveria curvar para o lado (y=%.2f)" % curved.pos.y)
+	var reached := 99.0
+	for i in 600:
+		fl._enemy_step(curved, 0.05)
+		reached = minf(reached, curved.pos.distance_to(fl.hero.pos))
+	if reached > 2.0:
+		out.append("flanqueador deveria acabar chegando ao herói (%.1f)" % reached)
+
+	# MEC-009: evoluir a arma abre a mini-cinemática, que para o jogo e some sozinha ou ao pular
+	var evb := _bat(111)
+	_quiet(evb)
+	var evb_w := Weapon.make("espada_sombria")
+	evb_w.level = Weapon.MAX_LEVEL
+	evb.hero.weapons = [evb_w]
+	evb.hero.passives["cota_de_malha"] = 1
+	evb.state = "levelup"
+	evb.offer = [{"t": "evolve", "id": "espada_sombria", "into": "espada_do_receptaculo", "name": "x", "desc": ""}]
+	evb.choose(0)
+	evb.step(Vector2.ZERO, 0.016)
+	if evb.state != "evolve_cine" or String(evb.evolve_cine.get("into", "")) != "espada_do_receptaculo":
+		out.append("evoluir deveria abrir a mini-cinemática (estado %s)" % evb.state)
+	var t_evb := evb.time
+	evb.step(Vector2.ZERO, 0.5)
+	if evb.time != t_evb:
+		out.append("o jogo deveria ficar parado durante a cinemática")
+	evb.step(Vector2.ZERO, 5.0)
+	if evb.state != "running":
+		out.append("a cinemática deveria acabar sozinha")
+	var evb2 := _bat(112)
+	_quiet(evb2)
+	evb2.state = "evolve_cine"
+	evb2.evolve_cine = {"from": "a", "into": "b", "passive": "", "level": 5}
+	evb2.skip_cine()
+	if evb2.state != "running":
+		out.append("pular a cinemática deveria voltar ao jogo")
+
 	# MEC-010: 2x só em fase já vencida
 	var sp := _bat(41)
 	_quiet(sp)
@@ -647,7 +702,7 @@ func run() -> Array:
 
 	# 10) evolução: arma nv5 + passiva libera a evolução na oferta
 	var ev := _bat(8)
-	_quiet(ev)
+	_quiet(evb)
 	ev.hero.weapons = [Weapon.make("espada_sombria", 5)]
 	ev.hero.passives = {"cota_de_malha": 1}
 	ev.hero.meta_mods = {"choices": 60}

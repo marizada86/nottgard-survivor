@@ -21,6 +21,13 @@
     "start_level": 15,
     "hp_per_level": 1.0
   },
+  "flank": {
+    "share": 0.6,
+    "max_arc": 1.0,
+    "open_distance": 10.0,
+    "close_distance": 2.5
+  },
+  "evolve_cinematic_seconds": 2.6,
   "hourglass": {
     "skip_seconds": 60,
     "burst_max": 18
