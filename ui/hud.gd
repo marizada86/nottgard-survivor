@@ -199,9 +199,11 @@ func show_offer(b: Battle) -> void:
 			"weapon_new": btn.add_theme_color_override("font_color", Color(0.6, 1.0, 0.6))
 			"boon": btn.add_theme_color_override("font_color", Color(0.85, 0.6, 1.0))
 			"item_swap":
-				if o.get("equips", false):
-					btn.add_theme_color_override("font_color", Color(0.6, 1.0, 0.6))
-			"shop_item", "shop_weapon_up", "shop_heal", "shop_item_up": btn.add_theme_color_override("font_color", Color(1.0, 0.9, 0.5))
+				# ART-016: a cor é a raridade do item da opção, não "o novo está verde" (empurrava trocar raro por comum)
+				btn.add_theme_color_override("font_color", Items.rarity_color(String(o.keep.get("rarity", "comum"))))
+			"shop_item": btn.add_theme_color_override("font_color", Items.rarity_color(String(o.item.get("rarity", "comum"))))
+			"shop_item_up": btn.add_theme_color_override("font_color", Items.rarity_color(String(o.get("rarity", "comum"))))
+			"shop_weapon_up", "shop_heal": btn.add_theme_color_override("font_color", Color(1.0, 0.9, 0.5))
 			"shop_leave": btn.add_theme_color_override("font_color", Color(0.6, 0.6, 0.6))
 		btn.pressed.connect(func(): offer_chosen.emit(i))
 		offer_box.add_child(btn)

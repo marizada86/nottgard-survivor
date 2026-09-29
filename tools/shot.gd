@@ -23,6 +23,12 @@ func _ready() -> void:
 				if DivineVisuals.is_divine_affinity(god):
 					run.battle.visual_god = god
 					run.battle.visual_boon_selected = true
+		if "market" in flags:
+			var bt: Battle = run.battle
+			for i in 3:
+				bt.interactions.append({"kind": ["loja", "ferreiro", "curandeiro"][i], "pos": bt.hero.pos + Vector2(-4.0 + 3.5 * i, 3.0), "used": false, "born_at": -5.0})
+			bt.pickups.append({"kind": "magnet", "pos": bt.hero.pos + Vector2(7.0, 5.0), "value": 0.0, "magnet": false})
+			bt.pickups.append({"kind": "xp", "pos": bt.hero.pos + Vector2(8.5, 5.0), "value": 1.0, "magnet": false})
 		if "levelup" in flags:
 			run.battle._add_xp(400.0)
 		if "boss" in flags:

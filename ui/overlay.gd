@@ -375,6 +375,10 @@ func _draw_over() -> void:
 			"altar": col = Color(0.8, 0.4, 1.0); label = "altar [E]"; asset = "altar_active"
 			"ritual": col = Color(0.9, 0.2, 0.2); label = "ritual [E]"; asset = "ritual"
 			"portal": col = Color(0.3, 1.0, 0.6); label = "portal [E]"; asset = "portal"
+			# ART-009: eventos de mercado tinham só o quadrado branco sem rótulo; cada um agora tem cor e nome. O PNG definitivo entra em assets/interactions/<tipo>.png
+			"loja": col = Color(1.0, 0.85, 0.3); label = "loja [E]"; asset = "loja"
+			"ferreiro": col = Color(1.0, 0.5, 0.2); label = "ferreiro [E]"; asset = "ferreiro"
+			"curandeiro": col = Color(0.4, 1.0, 0.5); label = "curandeiro [E]"; asset = "curandeiro"
 		# A simulação também bloqueia interação durante estes 0,65 s de entrada.
 		if arrival < 0.35:
 			var target_alpha := 0.25 + 0.45 * arrival / 0.35
@@ -403,14 +407,21 @@ func _draw_over() -> void:
 		else:
 			draw_colored_polygon(PackedVector2Array([draw_p + Vector2(0, -18), draw_p + Vector2(14, 0), draw_p + Vector2(0, 9), draw_p + Vector2(-14, 0)]), Color(col, 0.35))
 			draw_rect(Rect2(draw_p + Vector2(-9, -22), Vector2(18, 16)), col.darkened(0.2))
-		draw_string(ThemeDB.fallback_font, draw_p + Vector2(-32, -62), label, HORIZONTAL_ALIGNMENT_CENTER, 64, 12, Color(col, 0.95))
+		draw_string(ThemeDB.fallback_font, draw_p + Vector2(-55, -62), label, HORIZONTAL_ALIGNMENT_CENTER, 110, 12, Color(col, 0.95))
 	for pk in battle.pickups:
 		var p := Iso.to_screen(pk.pos)
-		var pickup_asset: String = {"xp": "xp_shard", "gold": "gold_coin", "potion": "health_potion"}.get(String(pk.kind), "")
+		var pickup_asset: String = {"xp": "xp_shard", "gold": "gold_coin", "potion": "health_potion", "magnet": "magnet"}.get(String(pk.kind), "")
 		var pickup_texture := _texture("res://assets/pickups/%s.png" % pickup_asset)
 		if pickup_texture != null:
 			var size := 22.0 if pk.kind != "potion" else 26.0
 			draw_texture_rect(pickup_texture, Rect2(p.x - size * 0.5, p.y - size, size, size), false)
+		elif pk.kind == "magnet":
+			# ART-015: ímã de XP provisório em ferradura pulsante até existir assets/pickups/magnet.png
+			var pulse := 0.5 + 0.5 * sin(Time.get_ticks_msec() / 160.0)
+			draw_circle(p + Vector2(0, -10), 13.0 + 3.0 * pulse, Color(1.0, 0.85, 0.3, 0.16 + 0.14 * pulse))
+			draw_arc(p + Vector2(0, -12), 7.0, PI, TAU, 14, Color(0.9, 0.15, 0.15), 4.5)
+			draw_line(p + Vector2(-7, -12), p + Vector2(-7, -5), Color(0.85, 0.9, 1.0), 4.5)
+			draw_line(p + Vector2(7, -12), p + Vector2(7, -5), Color(0.85, 0.9, 1.0), 4.5)
 		else:
 			draw_circle(p + Vector2(0, -4), 4.0, Color(0.6, 0.85, 1.0))
 	for pr in battle.projectiles:
