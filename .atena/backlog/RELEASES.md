@@ -40,6 +40,7 @@ Origem: [PLAN-038](../vault/drafts/PLAN-038-atualizacao-pos-playtests-t01-t02-t0
 | Mecânicas | Conquistas novas, aprimoramentos travados por conquista e biografias do vault | MEC-016 · SPEC-089 | implementado |
 | Mecânicas | IA de cerco: perseguidores flanqueiam | MEC-011 · SPEC-090 | implementado |
 | Mecânicas | Mini-cinemática de evolução de arma | MEC-009 · SPEC-091 | implementado (procedural) |
+| Mecânicas | Mapas maiores: 60×60 em todas as fases (props escalados, terreno esticado) | MEC-012 · SPEC-093 | implementado |
 | Arte | Cor de raridade, rótulos de loja/ferreiro/curandeiro, ímã provisório, texto de "redução" | ART-009, 015, 016, 017 | implementado (provisório onde indicado) |
 | Balanceamento | Ajustes de números pós-playtest: névoa, quebráveis, fontes, baú do chefe, abertura de fase | BAL-001, 004, 005, 006, 007 · SPEC-083, 086 | implementado, aguarda playtest |
 | Ferramentas | Hash do commit no rodapé, no log e nas notas | TOOL-001 | implementado |
@@ -58,6 +59,7 @@ Origem: [PLAN-038](../vault/drafts/PLAN-038-atualizacao-pos-playtests-t01-t02-t0
 10. Ao evoluir uma arma, a tela de evolução explica como foi? Dá para pular?
 11. Quer comprar algo no meta? Novos aprimoramentos, conquistas e biografias: motivam a jogar mais?
 12. A fase tardia (Shendilavri em diante) continuou melhorando o herói?
+13. Os mapas ficaram maiores: acabou a sensação de apertado ou ficaram vazios demais? Inimigos demoram muito a chegar?
 
 ### Fechar a versão (checklist)
 
