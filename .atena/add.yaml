@@ -18,8 +18,8 @@ git:
   publish: "explicit-approval"
 backlog:
   path: ".atena/backlog"
-  tracks: ["arte-audio", "mecanicas", "bugs", "ferramentas"]
-  release_order: ["bugs", "arte-audio", "mecanicas"]
+  tracks: ["arte-audio", "mecanicas", "bugs", "balanceamento", "ferramentas"]
+  release_order: ["bugs", "arte-audio", "mecanicas", "balanceamento"]
   mechanics_per_playtest_build: "unlimited"   # decisao do dono 2026-09-29: build rica em conteudo
   one_commit_per_mechanic: true
   mechanics_share_commit_with_other_tracks: false

@@ -43,8 +43,10 @@ muda o peso da opinião.
 ## 4. Triar
 
 1. Cada nota vira uma linha `IN-nnn` em [INBOX.md](INBOX.md) (seção Classificados).
-2. O destino é **BUGS**, **MECANICAS** ou **ARTE** (regra de fronteira no
+2. O destino é **BUGS**, **MECANICAS**, **ARTE** ou **BALANCEAMENTO** (regra de fronteira no
    [README](README.md)); uma nota pode gerar mais de um cartão.
+   Relato de "forte/fraco/caro/raro demais" vai para [BALANCEAMENTO](BALANCEAMENTO.md),
+   somando ao cartão da entidade (relato, nível, herói, build).
 3. **Duplicata:** se já existe cartão para o mesmo pedido, **não criar outro**:
    acrescentar a origem e somar ao contador de relatos (`N relatos`). Vários
    jogadores independentes pedindo a mesma coisa é o principal sinal de prioridade.

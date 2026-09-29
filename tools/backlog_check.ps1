@@ -11,7 +11,7 @@ foreach ($f in Get-ChildItem $dir -Filter *.md) {
   $lines = Get-Content $f.FullName -Encoding UTF8
   $seen = @{}
   foreach ($l in $lines) {
-    if ($l -match '^\|\s*((BUG|MEC|ART|TOOL|IN)-(\d+))\s*\|') {
+    if ($l -match '^\|\s*((BUG|MEC|ART|BAL|TOOL|IN)-(\d+))\s*\|') {
       $id = $Matches[1]; $pre = $Matches[2]; $n = [int]$Matches[3]
       if ($seen.ContainsKey($id)) { [void]$alerts.Add("ID duplicado em $($f.Name): $id") } else { $seen[$id] = 1 }
       if (-not $maxId.ContainsKey($pre) -or $maxId[$pre] -lt $n) { $maxId[$pre] = $n }

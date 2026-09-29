@@ -34,6 +34,7 @@ Origem: [PLAN-038](../vault/drafts/PLAN-038-atualizacao-pos-playtests-t01-t02-t0
 | Mecânicas | Abertura de fase mais cheia | MEC-024 · SPEC-083 | em implementação |
 | Mecânicas | Bênção do Selo ao interromper o ritual | MEC-026 · SPEC-084 | em implementação |
 | Arte | Cor de raridade, rótulos de loja/ferreiro/curandeiro, ímã provisório, texto de "redução" | ART-009, 015, 016, 017 | implementado (provisório onde indicado) |
+| Balanceamento | Ajustes de números pós-playtest: névoa, quebráveis, fontes, baú do chefe, abertura de fase | BAL-001, 004, 005, 006, 007 · SPEC-083, 086 | implementado, aguarda playtest |
 | Ferramentas | Hash do commit no rodapé, no log e nas notas | TOOL-001 | implementado |
 
 ### O que testar (texto para os testers)
