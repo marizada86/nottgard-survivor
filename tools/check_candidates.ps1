@@ -7,18 +7,23 @@
 #   powershell -File tools\check_candidates.ps1 -Fila 001 -OnlyFound
 #   powershell -File tools\check_candidates.ps1 -Inbox     # lista arquivos soltos em _inbox
 param(
-    [ValidateSet('all', '001', '002', '003')][string]$Fila = 'all',
+    [ValidateSet('all', '001', '002', '003', '004')][string]$Fila = 'all',
     [switch]$OnlyFound,
     [switch]$Inbox
 )
 
 Add-Type -AssemblyName System.Drawing
 $root = Split-Path -Parent $PSScriptRoot
-$manifestPath = Join-Path $root '.atena\generated\CANDIDATES-MANIFEST-001.json'
 $candRoot = Join-Path $root '.atena\generated\art-candidates'
 
-if (-not (Test-Path $manifestPath)) { Write-Error "Manifesto nao encontrado: $manifestPath"; exit 1 }
-$manifest = Get-Content $manifestPath -Raw -Encoding UTF8 | ConvertFrom-Json
+# Manifestos: 001 = filas 001 a 003; 002 = fila 004 (piloto de animacao de inimigo).
+$allItems = @()
+foreach ($n in '001', '002') {
+    $mp = Join-Path $root ".atena\generated\CANDIDATES-MANIFEST-$n.json"
+    if (Test-Path $mp) { $allItems += (Get-Content $mp -Raw -Encoding UTF8 | ConvertFrom-Json).items }
+}
+if ($allItems.Count -eq 0) { Write-Error "Nenhum manifesto encontrado em .atena\generated"; exit 1 }
+$manifest = [pscustomobject]@{ items = $allItems }
 
 if ($Inbox) {
     $dir = Join-Path $candRoot '_inbox'
@@ -58,7 +63,11 @@ foreach ($it in $manifest.items) {
             if ($it.shape -eq '16:9' -and [Math]::Abs($ratio - 16 / 9) -gt 0.06) { $notes += 'proporcao fora de 16:9' }
             if ($it.shape -eq 'square' -and [Math]::Abs($ratio - 1) -gt 0.05) { $notes += 'nao e quadrada' }
             if ($it.shape -eq 'landscape' -and $ratio -lt 1.3) { $notes += 'nao e paisagem' }
-            if ($w -lt 512 -or $h -lt 288) { $notes += 'resolucao baixa' }
+            if ($it.shape -eq 'portrait' -and ($ratio -lt 0.5 -or $ratio -gt 0.95)) { $notes += 'nao e retrato (esperado ~2:3)' }
+            if ($it.shape -eq 'strip' -and $ratio -lt 1.8) { $notes += 'nao e fileira larga' }
+            if ($it.shape -ne 'strip' -and ($w -lt 512 -or $h -lt 288) -and $it.shape -ne 'portrait') { $notes += 'resolucao baixa' }
+            if ($it.shape -eq 'portrait' -and $h -lt 512) { $notes += 'resolucao baixa' }
+            if ($it.shape -eq 'strip' -and $w -lt 1000) { $notes += 'resolucao baixa' }
             if ($it.bg) {
                 $pts = @(@(2, 2), @(($w - 3), 2), @(2, ($h - 3)), @(($w - 3), ($h - 3)))
                 $bad = 0

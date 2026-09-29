@@ -1,0 +1,224 @@
+{
+    "id":  "CANDIDATES-MANIFEST-002",
+    "created":  "2026-09-29",
+    "note":  "Piloto de animacao cultista_adaga (CHATGPT-FILA-004). A pasta art-candidates/ e ignorada pelo git.",
+    "count":  24,
+    "items":  [
+                  {
+                      "fila":  "004",
+                      "num":  "E01",
+                      "id":  "cultista_adaga_idle_00",
+                      "kind":  "enemy",
+                      "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_idle_00_v01.png",
+                      "bg":  "#00FFFF",
+                      "shape":  "portrait"
+                  },
+                  {
+                      "fila":  "004",
+                      "num":  "E02",
+                      "id":  "cultista_adaga_idle_01",
+                      "kind":  "enemy",
+                      "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_idle_01_v01.png",
+                      "bg":  "#00FFFF",
+                      "shape":  "portrait"
+                  },
+                  {
+                      "fila":  "004",
+                      "num":  "E03",
+                      "id":  "cultista_adaga_idle_02",
+                      "kind":  "enemy",
+                      "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_idle_02_v01.png",
+                      "bg":  "#00FFFF",
+                      "shape":  "portrait"
+                  },
+                  {
+                      "fila":  "004",
+                      "num":  "E04",
+                      "id":  "cultista_adaga_idle_03",
+                      "kind":  "enemy",
+                      "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_idle_03_v01.png",
+                      "bg":  "#00FFFF",
+                      "shape":  "portrait"
+                  },
+                  {
+                      "fila":  "004",
+                      "num":  "E05",
+                      "id":  "cultista_adaga_move_00",
+                      "kind":  "enemy",
+                      "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_move_00_v01.png",
+                      "bg":  "#00FFFF",
+                      "shape":  "portrait"
+                  },
+                  {
+                      "fila":  "004",
+                      "num":  "E06",
+                      "id":  "cultista_adaga_move_01",
+                      "kind":  "enemy",
+                      "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_move_01_v01.png",
+                      "bg":  "#00FFFF",
+                      "shape":  "portrait"
+                  },
+                  {
+                      "fila":  "004",
+                      "num":  "E07",
+                      "id":  "cultista_adaga_move_02",
+                      "kind":  "enemy",
+                      "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_move_02_v01.png",
+                      "bg":  "#00FFFF",
+                      "shape":  "portrait"
+                  },
+                  {
+                      "fila":  "004",
+                      "num":  "E08",
+                      "id":  "cultista_adaga_move_03",
+                      "kind":  "enemy",
+                      "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_move_03_v01.png",
+                      "bg":  "#00FFFF",
+                      "shape":  "portrait"
+                  },
+                  {
+                      "fila":  "004",
+                      "num":  "E09",
+                      "id":  "cultista_adaga_move_04",
+                      "kind":  "enemy",
+                      "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_move_04_v01.png",
+                      "bg":  "#00FFFF",
+                      "shape":  "portrait"
+                  },
+                  {
+                      "fila":  "004",
+                      "num":  "E10",
+                      "id":  "cultista_adaga_move_05",
+                      "kind":  "enemy",
+                      "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_move_05_v01.png",
+                      "bg":  "#00FFFF",
+                      "shape":  "portrait"
+                  },
+                  {
+                      "fila":  "004",
+                      "num":  "E11",
+                      "id":  "cultista_adaga_attack_00",
+                      "kind":  "enemy",
+                      "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_attack_00_v01.png",
+                      "bg":  "#00FFFF",
+                      "shape":  "portrait"
+                  },
+                  {
+                      "fila":  "004",
+                      "num":  "E12",
+                      "id":  "cultista_adaga_attack_01",
+                      "kind":  "enemy",
+                      "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_attack_01_v01.png",
+                      "bg":  "#00FFFF",
+                      "shape":  "portrait"
+                  },
+                  {
+                      "fila":  "004",
+                      "num":  "E13",
+                      "id":  "cultista_adaga_attack_02",
+                      "kind":  "enemy",
+                      "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_attack_02_v01.png",
+                      "bg":  "#00FFFF",
+                      "shape":  "portrait"
+                  },
+                  {
+                      "fila":  "004",
+                      "num":  "E14",
+                      "id":  "cultista_adaga_attack_03",
+                      "kind":  "enemy",
+                      "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_attack_03_v01.png",
+                      "bg":  "#00FFFF",
+                      "shape":  "portrait"
+                  },
+                  {
+                      "fila":  "004",
+                      "num":  "E15",
+                      "id":  "cultista_adaga_death_00",
+                      "kind":  "enemy",
+                      "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_death_00_v01.png",
+                      "bg":  "#00FFFF",
+                      "shape":  "portrait"
+                  },
+                  {
+                      "fila":  "004",
+                      "num":  "E16",
+                      "id":  "cultista_adaga_death_01",
+                      "kind":  "enemy",
+                      "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_death_01_v01.png",
+                      "bg":  "#00FFFF",
+                      "shape":  "portrait"
+                  },
+                  {
+                      "fila":  "004",
+                      "num":  "E17",
+                      "id":  "cultista_adaga_death_02",
+                      "kind":  "enemy",
+                      "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_death_02_v01.png",
+                      "bg":  "#00FFFF",
+                      "shape":  "portrait"
+                  },
+                  {
+                      "fila":  "004",
+                      "num":  "E18",
+                      "id":  "cultista_adaga_death_03",
+                      "kind":  "enemy",
+                      "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_death_03_v01.png",
+                      "bg":  "#00FFFF",
+                      "shape":  "portrait"
+                  },
+                  {
+                      "fila":  "004",
+                      "num":  "E19",
+                      "id":  "cultista_adaga_death_04",
+                      "kind":  "enemy",
+                      "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_death_04_v01.png",
+                      "bg":  "#00FFFF",
+                      "shape":  "portrait"
+                  },
+                  {
+                      "fila":  "004",
+                      "num":  "E20",
+                      "id":  "cultista_adaga_death_05",
+                      "kind":  "enemy",
+                      "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_death_05_v01.png",
+                      "bg":  "#00FFFF",
+                      "shape":  "portrait"
+                  },
+                  {
+                      "fila":  "004",
+                      "num":  "E21",
+                      "id":  "cultista_adaga_row_idle",
+                      "kind":  "enemy",
+                      "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_row_idle_v01.png",
+                      "bg":  "#00FFFF",
+                      "shape":  "strip"
+                  },
+                  {
+                      "fila":  "004",
+                      "num":  "E22",
+                      "id":  "cultista_adaga_row_move",
+                      "kind":  "enemy",
+                      "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_row_move_v01.png",
+                      "bg":  "#00FFFF",
+                      "shape":  "strip"
+                  },
+                  {
+                      "fila":  "004",
+                      "num":  "E23",
+                      "id":  "cultista_adaga_row_attack",
+                      "kind":  "enemy",
+                      "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_row_attack_v01.png",
+                      "bg":  "#00FFFF",
+                      "shape":  "strip"
+                  },
+                  {
+                      "fila":  "004",
+                      "num":  "E24",
+                      "id":  "cultista_adaga_row_death",
+                      "kind":  "enemy",
+                      "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_row_death_v01.png",
+                      "bg":  "#00FFFF",
+                      "shape":  "strip"
+                  }
+              ]
+}

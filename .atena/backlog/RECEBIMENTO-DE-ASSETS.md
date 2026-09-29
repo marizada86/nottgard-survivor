@@ -11,9 +11,10 @@ Vale para as três filas de prompts.
 | [CHATGPT-FILA-001](../generated/CHATGPT-FILA-001-prompts-prontos.md) | 39 | P01–P39 | **Em andamento** (já enviada) | Lote 1, piloto de HQ, Lote 2 |
 | [CHATGPT-FILA-002](../generated/CHATGPT-FILA-002-hqs-ondas-1-e-2.md) | 52 | H01–H52 | Pronta, não enviada | HQs, Ondas 1 e 2 |
 | [CHATGPT-FILA-003](../generated/CHATGPT-FILA-003-hqs-trilha-c.md) | 16 | C01–C16 | Opcional, não enviada | HQs, Trilha C |
+| [CHATGPT-FILA-004](../generated/CHATGPT-FILA-004-piloto-cultista-adaga.md) | 24 | E01–E24 | Pronta, não enviada | Piloto de animação de inimigo (`cultista_adaga`, métodos 1 e 2) |
 
-Total esperado: **107 imagens** (35 assets de jogo + 72 quadros de HQ), listadas
-uma a uma em [CANDIDATES-MANIFEST-001.json](../generated/CANDIDATES-MANIFEST-001.json).
+Total esperado: **131 imagens** (35 assets de jogo + 72 quadros de HQ + 24 do piloto de animação), listadas
+uma a uma em [CANDIDATES-MANIFEST-001.json](../generated/CANDIDATES-MANIFEST-001.json) (filas 001 a 003) e [CANDIDATES-MANIFEST-002.json](../generated/CANDIDATES-MANIFEST-002.json) (fila 004).
 **As filas não se misturam:** cada uma tem numeração, origem e nomes de arquivo próprios.
 
 ## Onde colocar os arquivos
@@ -26,6 +27,7 @@ não vão para o repositório). Estrutura já criada:
 | `lote-1/` | P01–P08 (névoa, baú de chefe, ímã, NPCs) |
 | `hq/` | todos os quadros de HQ (P09–P12, H01–H52, C01–C16) |
 | `scenery/` | P13–P39 (estrutura, remendo e trilha por bioma), **sem subpasta por bioma** |
+| `enemy-pilot/cultista_adaga/` | E01–E24 (piloto de animação), quadros `cultista_adaga_<estado>_NN` e fileiras `cultista_adaga_row_<estado>` |
 | `_inbox/` | qualquer arquivo ainda sem nome certo; a Atena renomeia |
 
 Nome do arquivo: `<id>_v01.png` (`_v02`, `_v03` para nova tentativa do mesmo
