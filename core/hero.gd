@@ -25,6 +25,8 @@ var passives := {}        # id -> nível
 var items := {}           # slot -> item
 var boons: Array = []
 var weapons: Array = []   # Array[Weapon]
+var synergies := {}       # id da arma evoluída -> true (SPEC-075)
+var descent_depth := 0
 var mods := {}
 
 var hp := 1.0
@@ -78,6 +80,12 @@ func recalc() -> void:
 		add_mods(m, it.mods, Items.level_scale(it))
 		if int(it.get("level", 1)) >= Items.MAX_LEVEL:
 			add_mods(m, Items.super_mods(it))
+	if not synergies.is_empty():
+		var wdata: Dictionary = Data.table("weapons")
+		for wid in synergies:
+			var syn: Dictionary = wdata.get(wid, {}).get("synergy", {})
+			if not syn.is_empty():
+				add_mods(m, syn.bonus_per_depth, float(maxi(1, descent_depth)))
 	for b in boons:
 		add_mods(m, b.mods)
 	mods = m

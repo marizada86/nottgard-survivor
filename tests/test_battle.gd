@@ -393,6 +393,57 @@ func run() -> Array:
 		if ev.hero.weapons[0].id != "espada_do_receptaculo":
 			out.append("evolução não trocou a arma")
 
+	# 10b) sinergia combinada: arma evoluída + acessório nv máx + magia (SPEC-075)
+	var sy := _bat(19)
+	_quiet(sy)
+	sy.hero.weapons = [Weapon.make("espada_do_receptaculo")]
+	sy.hero.passives = {"cota_de_malha": 1}
+	sy.hero.meta_mods = {"choices": 60}
+	sy.hero.recalc()
+	if sy._build_offer().any(func(o): return o.t == "synergy_activate"):
+		out.append("sinergia não deveria aparecer sem o acessório equipado")
+	var cota_super: Dictionary = Data.table("items").bases.armadura.filter(func(b): return b.id == "cota")[0]
+	sy.hero.items["armadura"] = {"id": "cota_syn", "base": "cota", "name": "Cota de Malha", "slot": "armadura", "rarity": "comum", "mods": cota_super.mods.duplicate(), "level": 1}
+	sy.hero.recalc()
+	if sy._build_offer().any(func(o): return o.t == "synergy_activate"):
+		out.append("sinergia não deveria aparecer com o acessório abaixo do nível máximo")
+	if sy._has_maxed_accessory("cota"):
+		out.append("acessório no nível 1 não deveria contar como maximizado")
+	sy.hero.items.armadura = Items.unique(Data.table("items").uniques.filter(func(u): return String(u.slot) == "armadura")[0])
+	if sy._has_maxed_accessory("cota"):
+		out.append("item único (sem base) nunca deveria satisfazer a condição de sinergia")
+	sy.hero.items["armadura"] = {"id": "cota_syn", "base": "cota", "name": "Cota de Malha", "slot": "armadura", "rarity": "comum", "mods": cota_super.mods.duplicate(), "level": Items.MAX_LEVEL}
+	sy.hero.recalc()
+	var syn_offer := sy._build_offer()
+	var syn_idx := syn_offer.find(syn_offer.filter(func(o): return o.t == "synergy_activate")[0]) if syn_offer.any(func(o): return o.t == "synergy_activate") else -1
+	if syn_idx < 0:
+		out.append("sinergia deveria aparecer com arma evoluída + acessório no nível máximo + passiva")
+	else:
+		var ca_before := sy.hero.m("ca")
+		sy.state = "levelup"
+		sy.offer = syn_offer
+		sy.pending_levels = 1
+		sy.offer_kind = "levelup"
+		sy.choose(syn_idx)
+		if not sy.hero.synergies.get("espada_do_receptaculo", false):
+			out.append("escolher a sinergia deveria marcá-la como ativa")
+		if absf(sy.hero.m("ca") - ca_before - 1.0) > 0.001:
+			out.append("sinergia ativa deveria somar +1 CA (bônus por camada, descent_depth mínimo 1)")
+		if sy._build_offer().any(func(o): return o.t == "synergy_activate"):
+			out.append("sinergia já ativa não deveria ser oferecida de novo")
+		sy.hero.items.erase("armadura")
+		sy.hero.recalc()
+		if not sy.hero.synergies.get("espada_do_receptaculo", false):
+			out.append("perder o acessório não deveria desativar uma sinergia já ativada")
+		var ca_depth0 := sy.hero.m("ca")
+		sy.enter_next_stage()
+		sy.enter_next_stage()
+		if int(sy.hero.descent_depth) != int(sy.descent_depth) or sy.descent_depth != 2:
+			out.append("descer de fase deveria sincronizar Hero.descent_depth com Battle.descent_depth")
+		var ca_after_descent := sy.hero.m("ca")
+		if absf(ca_after_descent - ca_depth0 - 1.0) > 0.001:
+			out.append("bônus de sinergia deveria crescer ao descer de fase (escala com descent_depth, aqui de ×1 para ×2)")
+
 	# 11) chefe morto abre portal e leva à próxima fase
 	var bs := _bat(12)
 	_quiet(bs)

@@ -134,13 +134,25 @@ provisória).
 
 Achado original em EVID-088: ao navegar pelo Navegador QA e depois continuar
 jogando normalmente, o campo `qa.cenario` do manifesto de evidência fica
-com o cenário antigo, não o contexto real da nota. Duas opções:
-- **Corrigir**: `qa.cenario` reflete sempre o estado real do momento da nota
-  (ex. limpa o campo se o jogador saiu do cenário navegado), spec pequena em
-  `core/playtest.gd`.
-- **Deixar como está**: é só um rótulo de depuração interno do kit de
-  evidências, não afeta gameplay nem o jogador nunca vê isso diretamente —
-  só quem analisa o ZIP depois.
+com o cenário antigo, não o contexto real da nota.
+
+**Discovery ampliada (2026-09-28)**: o problema não é só o rótulo. Só existe
+um jeito de encerrar `Game.qa_sandbox`/`qa_launch` — o botão "encerrar
+sandbox" do próprio Navegador QA (`Playtest._end_qa()`). O botão "voltar ao
+menu" do HUD durante uma run QA (`ui/run.gd:45`, usado em pausa/derrota/
+vitória) não encerra o sandbox. Enquanto ele fica preso em `true`, uma run
+normal jogada depois pelo menu herda a preparação QA antiga e tem seu
+resultado salvo em `user://qa-sandbox/<sessão>/profile.json`, não no save
+real — sem aviso. O `qa.cenario` errado é sintoma desse vazamento, não a
+causa isolada. Isso já era o comportamento pretendido por
+[[SPEC-020-ferramentas-playtest-e-qa]] ("sair do cenário descarta a sessão
+sandbox"), só nunca implementado para a saída via HUD.
+
+**Decisão (2026-09-28)**: corrigir o vazamento do sandbox (não só o rótulo),
+fazendo o botão de menu do HUD encerrar o sandbox quando ele estiver ativo —
+ver [[SPEC-074-correcao-do-vazamento-do-sandbox-qa]]. Mantém a ordem já
+combinada no PLAN-034 (não pula a frente do questionário de playtest), por
+afetar somente o build QA interno.
 
 ## Progresso
 
@@ -153,9 +165,13 @@ com o cenário antigo, não o contexto real da nota. Duas opções:
    em 2026-09-28** — suíte e smoke verdes; checagem manual interativa do
    dono pendente. Evidência em
    [[EVID-097-spec-073-nivel-de-equipamento-2026-09-28]]. Sinergias
-   combinadas (item 7 do backlog original) continuam não iniciadas,
-   dependem desta base já existir — agora existem.
-3. **Rótulo `qa.cenario`**: ainda não iniciado.
+   combinadas (item 7 do backlog original) foram planejadas e executadas em
+   seguida — ver [[PLAN-035-sinergias-combinadas-arma-acessorio-magia-2026-09-28]]
+   e [[SPEC-075-sinergias-combinadas-arma-acessorio-magia]].
+3. **Rótulo `qa.cenario`**: [[SPEC-074-correcao-do-vazamento-do-sandbox-qa]]
+   aprovada e **executada em 2026-09-28** — suíte e smoke verdes; checagem
+   manual interativa do dono pendente. Evidência em
+   [[EVID-098-spec-074-vazamento-do-sandbox-qa-2026-09-28]].
 4. **Questionário de playtest**: fica pra quando fizer sentido
    cronologicamente com o próximo playtest.
 

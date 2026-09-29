@@ -270,6 +270,13 @@ func show_items_panel(b: Battle) -> void:
 	for bn in h.boons:
 		var god_tag := " (%s)" % String(bn.god) if bn.has("god") else ""
 		lines.append("[b]☼ %s%s[/b]\n%s" % [bn.name, god_tag, String(bn.get("desc", ""))])
+	var wdata: Dictionary = Data.table("weapons")
+	for wid in h.synergies:
+		var syn: Dictionary = wdata.get(wid, {}).get("synergy", {})
+		if syn.is_empty():
+			continue
+		var mult := maxi(1, b.descent_depth)
+		lines.append("[b]♾ Sinergia: %s[/b]\n%s por camada descida (agora ×%d)." % [String(syn.name), Items.mods_text(syn.bonus_per_depth), mult])
 	items_desc_label.text = "\n\n".join(lines) if not lines.is_empty() else "Nenhum item, feitiço ou bênção ainda."
 	items_panel.visible = true
 

@@ -1445,6 +1445,8 @@ func enter_next_stage() -> void:
 	if nxt == "":
 		return
 	descent_depth += 1
+	hero.descent_depth = descent_depth
+	hero.recalc()
 	var recovery := 0.4 * maxf(0.35, 1.0 - float(descent_depth) * 0.15)
 	_heal_hero(hero.max_hp * recovery)
 	load_stage(nxt)
@@ -1480,6 +1482,9 @@ func _build_offer() -> Array:
 			pool.append({"t": "evolve", "id": w.id, "into": w.def.evolve.into, "name": "EVOLUÇÃO: %s" % evo.name, "desc": evo.desc, "weight": 9.0, "role": "synergy"})
 		elif w.level < w.max_level():
 			pool.append({"t": "weapon_up", "id": w.id, "name": "%s → Nv %d" % [w.def.name, w.level + 1], "desc": _level_desc(w), "weight": 3.0, "role": "synergy"})
+		var syn: Dictionary = w.def.get("synergy", {})
+		if not syn.is_empty() and not hero.synergies.has(w.id) and _has_maxed_accessory(String(syn.item_base)):
+			pool.append({"t": "synergy_activate", "id": w.id, "name": "SINERGIA: %s" % String(syn.name), "desc": "%s por camada descida (agora: ×%d)." % [Items.mods_text(syn.bonus_per_depth), maxi(1, descent_depth)], "weight": 9.0, "role": "synergy"})
 	if owned_w < hero.weapon_slots():
 		for wid in wdata:
 			var d: Dictionary = wdata[wid]
@@ -1553,6 +1558,13 @@ func _level_desc(w: Weapon) -> String:
 		parts.append("%s %s" % [k, v if k == "dice" else "%+.1f" % float(v)])
 	return ", ".join(parts)
 
+func _has_maxed_accessory(base_id: String) -> bool:
+	for slot in hero.items:
+		var it: Dictionary = hero.items[slot]
+		if String(it.get("base", "")) == base_id and int(it.get("level", 1)) >= Items.MAX_LEVEL:
+			return true
+	return false
+
 func choose(i: int) -> void:
 	if state != "levelup" and state != "altar" and state != "item_offer" and state != "shop":
 		return
@@ -1606,6 +1618,9 @@ func choose(i: int) -> void:
 					hero.weapons[hero.weapons.find(w)] = nw
 					codex.weapons[String(c.into)] = true
 					break
+		"synergy_activate":
+			hero.synergies[String(c.id)] = true
+			hero.recalc()
 		"passive":
 			hero.passives[c.id] = int(hero.passives.get(c.id, 0)) + 1
 		"heal":
