@@ -219,6 +219,8 @@ func _unhandled_input(ev: InputEvent) -> void:
 				battle.extract()
 			KEY_C:
 				_toggle_items_panel()
+			KEY_T:
+				battle.toggle_speed()
 
 func _toggle_items_panel() -> void:
 	if battle.state != "running":
@@ -301,7 +303,12 @@ func _physics_process(dt: float) -> void:
 		battle.aim_dir = m_ground.normalized()
 		battle.aim_pos = battle.hero.pos + m_ground
 	var prev_state := battle.state
-	battle.step(d, dt)
+	battle.cleared_stages = Game.profile.data.cleared.keys()
+	var steps := 2 if battle.speed_scale() > 1.5 else 1
+	for _i in steps:
+		battle.step(d, dt)
+		if battle.state != "running" or battle.stage_changed:
+			break
 	if battle.stage_changed:
 		_load_stage()
 		battle.hero.pos = Iso.to_ground(start_pos)

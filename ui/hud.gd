@@ -124,7 +124,7 @@ func update_stats(b: Battle) -> void:
 		timer_label.text = "CHEFE"
 	else:
 		timer_label.text = "%02d:%02d" % [t / 60, t % 60]
-	stage_label.text = "%s%s" % [b.stage.name, "  (Mira: %s)" % ("AUTO" if b.aim == Battle.Aim.AUTO else "MOUSE")]
+	stage_label.text = "%s%s%s" % [b.stage.name, "  (Mira: %s)" % ("AUTO" if b.aim == Battle.Aim.AUTO else "MOUSE"), "  [2x]" if b.speed_scale() > 1.5 else ""]
 	if b.boss != null and not b.boss.dead and b.boss_spawned:
 		boss_panel.visible = true
 		boss_name.text = b.boss.name
@@ -148,9 +148,9 @@ func update_stats(b: Battle) -> void:
 	weapons_label.text = "\n".join(lines)
 	var pr := ""
 	for it in b.interactions:
-		if not it.used and it.kind in ["altar", "ritual", "portal", "loja", "ferreiro", "curandeiro"] and it.pos.distance_to(h.pos) <= 1.6:
+		if not it.used and it.kind in ["altar", "ritual", "portal", "loja", "ferreiro", "curandeiro", "ampulheta"] and it.pos.distance_to(h.pos) <= 1.6:
 			pr = "[E] " + {"altar": "rezar no altar", "ritual": "iniciar o ritual", "portal": "descer pelo portal",
-				"loja": "negociar na loja", "ferreiro": "forjar no ferreiro", "curandeiro": "buscar cura"}[it.kind]
+				"loja": "negociar na loja", "ferreiro": "forjar no ferreiro", "curandeiro": "buscar cura", "ampulheta": "girar a ampulheta (+60 s, inimigos acumulados)"}[it.kind]
 	if pr == "" and (b.stage_cleared or b.final_victory):
 		pr = "[X] Extrair ×%.2f" % b.reward_multiplier()
 		if b.stage.get("next", "") != "":

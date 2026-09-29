@@ -7,6 +7,10 @@
     "max_mult": 1.2,
     "every_mult": 0.85
   },
+  "hourglass": {
+    "skip_seconds": 60,
+    "burst_max": 18
+  },
   "ritual_blessing": {
     "duration": 20.0,
     "mods": {"dmg_pct": 0.2, "speed_pct": 0.15, "pickup": 1.0}

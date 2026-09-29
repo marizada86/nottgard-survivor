@@ -86,6 +86,8 @@ var _cur_angle := 0.0
 var _trickle := 0.0
 var _grid := {}
 var _first_inter := true
+var speed_2x := false          # MEC-010: simulação ×2, só em fase já vencida
+var cleared_stages: Array = []  # ids das fases que o perfil já venceu (preenchido por ui/run.gd)
 var active_def: Dictionary = {}
 var active_cd := 0.0
 var active_buff_t := 0.0
@@ -1271,6 +1273,51 @@ func _update_pickups(dt: float) -> void:
 
 # ------------------------------------------------------------------ interações
 
+## MEC-010: o 2x só vale em fase que o perfil já venceu.
+func can_speed_2x() -> bool:
+	return cleared_stages.has(stage_id)
+
+func speed_scale() -> float:
+	return 2.0 if speed_2x and can_speed_2x() else 1.0
+
+## Liga/desliga o 2x. Devolve o estado final; em fase nova recusa e explica.
+func toggle_speed() -> bool:
+	if not can_speed_2x():
+		speed_2x = false
+		events.append({"type": "toast", "text": "O 2x libera depois de vencer este mapa."})
+		return false
+	speed_2x = not speed_2x
+	events.append({"type": "toast", "text": "Velocidade 2x ligada." if speed_2x else "Velocidade normal."})
+	return speed_2x
+
+## MEC-010: a Ampulheta adianta o relógio do mapa; os spawns que seriam gerados no intervalo chegam de uma vez.
+func _use_hourglass() -> bool:
+	var cfg: Dictionary = Data.table("difficulty").get("hourglass", {})
+	if boss_spawned:
+		events.append({"type": "toast", "text": "A ampulheta não tem mais efeito: o chefe já chegou."})
+		return false
+	var skip := minf(float(cfg.get("skip_seconds", 60.0)), float(stage.duration) - time - 5.0)
+	if skip < 5.0:
+		events.append({"type": "toast", "text": "Falta pouco para o chefe; a ampulheta não ajuda."})
+		return false
+	var burst := 0
+	var burst_max := int(cfg.get("burst_max", 18))
+	for w in stage.waves:
+		var lo := maxf(time, float(w.t0))
+		var hi := minf(time + skip, float(w.t1))
+		if hi <= lo:
+			continue
+		var batches := int(floor((hi - lo) / (float(w.every) * SPAWN_SLOW)))
+		for b in batches:
+			for i in int(w.n):
+				if burst >= burst_max or alive(String(w.id)) >= int(w.max):
+					continue
+				_spawn(String(w.id), _ring_pos())
+				burst += 1
+	time += skip
+	events.append({"type": "toast", "text": "A ampulheta adiantou %d s! %d inimigos acumulados chegam de uma vez." % [int(skip), burst]})
+	return true
+
 func _add_interaction(kind: String, at: Vector2) -> void:
 	at = at.clamp(Vector2(1, 1), map_size - Vector2(1, 1))
 	interactions.append({"kind": kind, "pos": at, "used": false, "born_at": time})
@@ -1303,7 +1350,7 @@ func interact() -> bool:
 	var best: Dictionary = {}
 	var bd := 1.6
 	for it in interactions:
-		if not it.used and time - float(it.get("born_at", 0.0)) >= 0.65 and it.kind in ["altar", "ritual", "portal", "loja", "ferreiro", "curandeiro"]:
+		if not it.used and time - float(it.get("born_at", 0.0)) >= 0.65 and it.kind in ["altar", "ritual", "portal", "loja", "ferreiro", "curandeiro", "ampulheta"]:
 			var d: float = it.pos.distance_to(hero.pos)
 			if d <= bd:
 				bd = d
@@ -1329,6 +1376,10 @@ func interact() -> bool:
 			enter_next_stage()
 		"loja", "ferreiro", "curandeiro":
 			_open_shop_event(String(best.kind))
+		"ampulheta":
+			if not _use_hourglass():
+				best.used = false
+				return false
 	return true
 
 ## Evento econômico: sempre pausa e sempre oferece "Sair" sem custo.
@@ -1336,8 +1387,7 @@ func interact() -> bool:
 func _shop_row(t: String, name: String, desc: String, price: int, extra: Dictionary = {}) -> Dictionary:
 	var row := {"t": t, "name": name, "desc": desc, "price": price, "locked": hero.gold < price}
 	if row.locked:
-		row.desc = "%s
-(faltam %d moedas)" % [desc, price - int(hero.gold)]
+		row.desc = "%s\n(faltam %d moedas)" % [desc, price - int(hero.gold)]
 	row.merge(extra)
 	return row
 
@@ -1357,11 +1407,9 @@ func _open_shop_event(kind: String) -> void:
 					compare = "Slot livre (%s)." % String(item.slot)
 				else:
 					var cur_mods := Items.scaled_mods(cur, int(cur.get("level", 1)))
-					compare = "Substitui %s Nv %d
-Troca: %s" % [String(cur.name), int(cur.get("level", 1)), Items.compare_text(item.mods, cur_mods)]
+					compare = "Substitui %s Nv %d\nTroca: %s" % [String(cur.name), int(cur.get("level", 1)), Items.compare_text(item.mods, cur_mods)]
 				offer.append(_shop_row("shop_item", "%s [%s] — %d moedas" % [item.name, item.rarity, price],
-					"%s
-%s" % [Items.mods_text(item.mods), compare], price, {"item": item, "tooltip": compare}))
+					"%s\n%s" % [Items.mods_text(item.mods), compare], price, {"item": item, "tooltip": compare}))
 		"ferreiro":
 			var eligible: Array = hero.weapons.filter(func(w): return not w.granted and w.level < w.max_level())
 			for w in eligible.slice(0, 2):

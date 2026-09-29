@@ -13,7 +13,8 @@ Survivor-like lento e legível, ambientado em Nottgard, com foco no **Plano Abis
 | WASD / setas | mover |
 | Tab | alterna mira automática ↔ mouse |
 | Q / botão direito | habilidade ativa do herói |
-| E | altar, ritual, portal |
+| E | altar, ritual, portal, loja, ferreiro, curandeiro, ampulheta |
+| T | velocidade 2x (só em mapa já vencido) |
 | X | extrair depois do chefe |
 | 1–5 / R | escolher no level-up / rerrolar |
 | Esc | pausa |

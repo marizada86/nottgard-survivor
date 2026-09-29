@@ -18,6 +18,40 @@ func _quiet(b: Battle) -> void:
 func run() -> Array:
 	var out: Array = []
 
+	# MEC-010: 2x só em fase já vencida
+	var sp := _bat(41)
+	_quiet(sp)
+	if sp.toggle_speed() or sp.speed_scale() != 1.0:
+		out.append("2x não deveria ligar em fase ainda não vencida")
+	sp.cleared_stages = ["dagruve"]
+	if not sp.toggle_speed() or sp.speed_scale() != 2.0:
+		out.append("2x deveria ligar em fase já vencida")
+	if sp.toggle_speed() or sp.speed_scale() != 1.0:
+		out.append("segundo toggle deveria voltar à velocidade normal")
+
+	# MEC-010: a Ampulheta adianta o relógio e despeja os spawns acumulados
+	var hg := _bat(42)
+	hg.hero.max_hp = 99999.0
+	hg.hero.hp = 99999.0
+	hg.time = 30.0
+	var n_before := hg.enemies.size()
+	hg._add_interaction("ampulheta", hg.hero.pos + Vector2(0.5, 0.0))
+	hg.interactions[hg.interactions.size() - 1].born_at = -5.0
+	if not hg.interact():
+		out.append("ampulheta deveria ser interagível com E")
+	if hg.time < 89.0 or hg.time > 91.0:
+		out.append("ampulheta deveria adiantar 60 s (tempo agora %.1f)" % hg.time)
+	if hg.enemies.size() <= n_before:
+		out.append("ampulheta deveria despejar inimigos acumulados")
+	var hb := _bat(43)
+	_quiet(hb)
+	hb.boss_spawned = true
+	hb._add_interaction("ampulheta", hb.hero.pos + Vector2(0.5, 0.0))
+	hb.interactions[hb.interactions.size() - 1].born_at = -5.0
+	var t_boss := hb.time
+	if hb.interact() or hb.time != t_boss:
+		out.append("ampulheta não deveria agir depois de o chefe surgir")
+
 	# MEC-024: a abertura da fase é mais cheia e decai; sem o bônus a contagem cai
 	var op := _bat(31)
 	_quiet(op)
