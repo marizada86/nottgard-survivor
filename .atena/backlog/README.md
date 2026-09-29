@@ -43,7 +43,7 @@ da evidência — nunca é apagado.
   bestiário ([RESEARCH-001](../vault/research/RESEARCH-001-abismo-bestiario-visual-2026-09-21.md)),
   sem inventar lore. Sem história: a lore é só sabor.
 - Itens abertos acumulam até fechar um **lote**. O lote sai como um único
-  `ART-PROMPTS-NNN` (próximo livre: **027**) para o gerador de imagem.
+  `ART-PROMPTS-NNN` (próximo livre: **028**) para o gerador de imagem.
 - Candidatos ficam em `.atena/generated/` até admissão explícita do dono.
 
 ### Mecânicas
@@ -71,7 +71,7 @@ da evidência — nunca é apagado.
 
 Próximos livres (2026-09-29, após EVID-108): `SPEC-081` (SPEC-079 fica
 **reservada** à camada de decais do Lote 2; SPEC-080 é a das HQs), `EVID-110`,
-`PLAN-040`, `ART-PROMPTS-027`, `ART-018`, `MEC-026`, `BUG-016`, `IN-040`, jogador `T04`.
+`PLAN-041`, `ART-PROMPTS-028`, `ART-018`, `MEC-026`, `BUG-016`, `IN-040`, jogador `T04`.
 
 **Colisões históricas** (não renomear; usar o nome completo do arquivo ao
 citar): SPEC-047/048/049/050/054/055 têm dois arquivos cada; EVID-018, 077, 079,
