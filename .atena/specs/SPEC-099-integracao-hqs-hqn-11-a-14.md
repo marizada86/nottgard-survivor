@@ -1,13 +1,14 @@
 ---
 id: "SPEC-099"
 title: "Integração das HQN-11 a HQN-14 no jogo"
-status: "em execução — plano de voo aprovado"
+status: "concluída — commits enviados para codex/hq-story-integration; sem merge"
 created: "2026-09-30"
 relations:
   - "[[PLAN-040-hqs-novas-highlights-do-vault-2026-09-29]]"
   - "[[SPEC-080-hqs-de-transicao-do-nottcard]]"
   - "[[SPEC-098-geracao-de-hqs-trilha-b]]"
   - "[[EVID-124-hqn-11-a-14-candidatas-2026-09-30]]"
+  - "[[EVID-128-integracao-hqs-hqn-11-a-14-2026-09-30]]"
 ---
 
 # SPEC-099 — Integração das HQN-11 a HQN-14 no jogo
@@ -97,14 +98,15 @@ as decisões pendentes de SPEC-080 sobre as HQs antigas do Nottcard.
 2. Concluído: 16 imagens admitidas e comparadas por SHA-256; commit de arte
    `11d0c60`.
 3. Concluído: catálogo, leitor, gatilhos de conquista, Diário e testes
-   automatizados implementados; commits de mecânica e evidência pendentes.
+   automatizados implementados; commit de mecânica `fab9e01`.
 4. Concluído: suíte `tests/run_all.gd` e smoke test do Godot passaram. A cena do
    leitor usa âncoras de tela cheia e `KEEP_ASPECT_CENTERED`.
-5. Em andamento: concluir reconciliação, registrar commits finais e fazer push
-   da branch para `origin`; não fazer merge.
+5. Concluído: commits de arte e mecânica enviados a
+   `origin/codex/hq-story-integration` em 2026-09-30; sem PR ou merge.
 
 ## Evidência e reconciliação
 
-O plano está aprovado. A evidência final será registrada em
-`.atena/evidence/` com inventário e hashes das imagens admitidas, resultados dos
-testes, links para os commits e destino do push.
+Ver [[EVID-128-integracao-hqs-hqn-11-a-14-2026-09-30]] para o inventário SHA-256,
+resultados dos testes, hashes dos commits e confirmação do push. Godot retornou
+exit code 0 nos dois checks, com avisos ambientais de log/certificados e
+limpeza de recursos que não afetaram os resultados.

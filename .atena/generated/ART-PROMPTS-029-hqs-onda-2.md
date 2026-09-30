@@ -4,7 +4,7 @@ type: "prompts-de-arte"
 title: "HQs novas — Onda 2 (HQN-07 a HQN-14)"
 status: "parcialmente integrada — HQN-11 a HQN-14 admitidas em assets/hq; HQN-07 a HQN-10 seguem como candidatas aprovadas"
 created: "2026-09-29"
-relations: ["[[PLAN-040-hqs-novas-highlights-do-vault-2026-09-29]]", "[[ART-PROMPTS-027-hqs-novas-guia-de-estilo-e-piloto]]", "[[SPEC-080-hqs-de-transicao-do-nottcard]]"]
+relations: ["[[PLAN-040-hqs-novas-highlights-do-vault-2026-09-29]]", "[[ART-PROMPTS-027-hqs-novas-guia-de-estilo-e-piloto]]", "[[SPEC-080-hqs-de-transicao-do-nottcard]]", "[[EVID-128-integracao-hqs-hqn-11-a-14-2026-09-30]]"]
 sources: ["F:/dev/nottgard-vault (16_Histórias, 10_Sessões, 04_Locais)", "Nottcard HQ-000", "assets/portraits/*.png"]
 ---
 
@@ -357,7 +357,8 @@ The masked priestess places a gentle hand on the tiefling's shoulder, her head s
   [[EVID-123-auditoria-de-proporcao-e-identidade-das-hqs-2026-09-29]].
 - HQN-11 a HQN-14: 16 quadros finais gerados, aprovados localmente e admitidos
   em `assets/hq/`; ver
-  [[EVID-124-hqn-11-a-14-candidatas-2026-09-30]].
+  [[EVID-124-hqn-11-a-14-candidatas-2026-09-30]] e
+  [[EVID-128-integracao-hqs-hqn-11-a-14-2026-09-30]].
 - As fontes aprovadas permanecem preservadas em
   `.atena/generated/art-candidates/hq/`; HQN-07 a HQN-10 ainda não foram
   admitidas em `assets/`.
