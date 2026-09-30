@@ -2,7 +2,7 @@
 id: "ART-PROMPTS-031"
 type: "prompts-de-arte"
 title: "Piloto de animação no padrão Zumbi — cultista_adaga (métodos 1 e 2)"
-status: "prepared — decisões D-A1 a D-A6 do PLAN-041 aprovadas; aguardando geração externa, nada executado"
+status: "E01–E20 integrados ao runtime; E21–E24 preservados como candidatas de comparação"
 created: "2026-09-29"
 relations: ["[[PLAN-041-animacao-padrao-zumbi-para-inimigos-e-interacoes-2026-09-29]]", "[[SPEC-061-preparacao-da-regeneracao-do-piloto-de-zumbi]]", "[[CHATGPT-PROMPTS-ZUMBI-V01]]"]
 sources: ["assets/enemies/cultista_adaga.png", "data/enemies.json", "CHATGPT-PROMPTS-ZUMBI-V01"]
@@ -206,4 +206,20 @@ Vence o método que atingir a régua com menos regenerações e menos ajuste man
 
 ## Gate
 
-Preparado, não executado. Nada entra em `assets/` sem aprovação explícita do dono, prancha de revisão, backup e conferência numa run real.
+A geração e a aprovação visual do piloto foram executadas. O dono autorizou a
+integração de E01–E20 por meio da SPEC-099; as quatro tiras de runtime foram
+admitidas em `assets/animations/enemies/cultista_adaga/`. A arte estática
+oficial foi preservada. Evidência: [[EVID-126-integracao-animacoes-cultista-adaga-2026-09-30]].
+
+## Reconciliação do piloto — 2026-09-30
+
+Foram geradas 24 candidatas: 20 quadros individuais (E01–E20) e quatro tiras
+(E21–E24). O dono aprovou as cinco pranchas. Os 24 originais ciano foram
+preservados e receberam cópias com alfa real (`*_alpha_v01.png`).
+
+A comparação foi concluída em [[EVID-125-piloto-cultista-aprovacao-alfa-comparacao-2026-09-30]].
+Embora as tiras sejam visualmente coerentes, o recorte automático em células
+iguais corta detalhes que atravessam limites (E22–E24); portanto o método 1,
+quadro a quadro, é recomendado para as próximas ondas. As tiras E21–E24 ficam
+como candidatas de comparação, fora do runtime; a integração de E01–E20 está
+detalhada em [[EVID-126-integracao-animacoes-cultista-adaga-2026-09-30]].
