@@ -308,10 +308,10 @@ func toggle_aim() -> void:
 
 func active_status() -> String:
 	if active_guard > 0:
-		return "[Q/RMB] %s — GUARDA ATIVA" % active_def.name
+		return "[Q/RMB/RB] %s — GUARDA ATIVA" % active_def.name
 	if active_cd <= 0.0:
-		return "[Q/RMB] %s — PRONTA" % active_def.name
-	return "[Q/RMB] %s — %.1fs" % [active_def.name, active_cd]
+		return "[Q/RMB/RB] %s — PRONTA" % active_def.name
+	return "[Q/RMB/RB] %s — %.1fs" % [active_def.name, active_cd]
 
 func reward_multiplier() -> float:
 	return _reward_multiplier_for(descent_depth)
@@ -1181,7 +1181,7 @@ func _on_boss_dead(e: Enemy) -> void:
 		if not final_victory:
 			final_victory = true
 			stats.cleared_ids.append(stage_id)
-			events.append({"type": "toast", "text": "Vitória final! Continue nos Pilares ou extraia (X)."})
+			events.append({"type": "toast", "text": "Vitória final! Continue nos Pilares ou extraia (X/norte)."})
 		boss_repeat += 1
 		boss_spawned = false
 		time = 0.0
@@ -1193,7 +1193,7 @@ func _on_boss_dead(e: Enemy) -> void:
 	if nxt != "":
 		_add_interaction("portal", e.pos + Vector2(0, 2.0))
 		_start_postboss_fog(e.id)
-		events.append({"type": "toast", "text": "Portal aberto: %s (E). Ou extraia (X)." % String(stage.essence)})
+		events.append({"type": "toast", "text": "Portal aberto: %s (E/oeste). Ou extraia (X/norte)." % String(stage.essence)})
 	else:
 		state = "won"
 
@@ -1217,7 +1217,7 @@ func _start_postboss_fog(boss_id: String) -> void:
 	fog_elapsed = 0.0
 	fog_intensity = 0.0
 	events.append({"type": "postboss_fog", "state": fog_state})
-	events.append({"type": "toast", "text": "A Maré de Névoa se aproxima. Extraia (X) ou atravesse o portal (E)."})
+	events.append({"type": "toast", "text": "A Maré de Névoa se aproxima. Extraia (X/norte) ou atravesse o portal (E/oeste)."})
 
 func _update_postboss_fog(dt: float) -> void:
 	if fog_state == "inactive":

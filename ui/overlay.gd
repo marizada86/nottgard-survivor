@@ -374,16 +374,16 @@ func _draw_over() -> void:
 			# ART-011: baú do chefe reaproveita o baú comum, com rótulo e cor próprios, até existir assets/interactions/boss_chest.png
 			"boss_chest": col = Color(1.0, 0.85, 0.25); label = "BAÚ DO CHEFE"; asset = "boss_chest" if ResourceLoader.exists("res://assets/interactions/boss_chest.png") else "chest_closed"
 			"fountain": col = Color(0.3, 0.7, 1.0); label = "fonte"; asset = "fountain_active"
-			"altar": col = Color(0.8, 0.4, 1.0); label = "altar [E]"; asset = "altar_active"
-			"ritual": col = Color(0.9, 0.2, 0.2); label = "ritual [E]"; asset = "ritual"
-			"portal": col = Color(0.3, 1.0, 0.6); label = "portal [E]"; asset = "portal"
+			"altar": col = Color(0.8, 0.4, 1.0); label = "altar [E/oeste]"; asset = "altar_active"
+			"ritual": col = Color(0.9, 0.2, 0.2); label = "ritual [E/oeste]"; asset = "ritual"
+			"portal": col = Color(0.3, 1.0, 0.6); label = "portal [E/oeste]"; asset = "portal"
 			# ART-009: eventos de mercado tinham só o quadrado branco sem rótulo; cada um agora tem cor e nome. O PNG definitivo entra em assets/interactions/<tipo>.png
-			"loja": col = Color(1.0, 0.85, 0.3); label = "loja [E]"; asset = "loja"
-			"ferreiro": col = Color(1.0, 0.5, 0.2); label = "ferreiro [E]"; asset = "ferreiro"
-			"curandeiro": col = Color(0.4, 1.0, 0.5); label = "curandeiro [E]"; asset = "curandeiro"
-			"doacao": col = Color(0.75, 0.45, 1.0); label = "altar da doação [E]"; asset = "doacao"
-			"aposta": col = Color(0.95, 0.8, 0.3); label = "mesa de aposta [E]"; asset = "aposta"
-			"ampulheta": col = Color(0.85, 0.75, 1.0); label = "ampulheta [E]"; asset = "ampulheta"
+			"loja": col = Color(1.0, 0.85, 0.3); label = "loja [E/oeste]"; asset = "loja"
+			"ferreiro": col = Color(1.0, 0.5, 0.2); label = "ferreiro [E/oeste]"; asset = "ferreiro"
+			"curandeiro": col = Color(0.4, 1.0, 0.5); label = "curandeiro [E/oeste]"; asset = "curandeiro"
+			"doacao": col = Color(0.75, 0.45, 1.0); label = "altar da doação [E/oeste]"; asset = "doacao"
+			"aposta": col = Color(0.95, 0.8, 0.3); label = "mesa de aposta [E/oeste]"; asset = "aposta"
+			"ampulheta": col = Color(0.85, 0.75, 1.0); label = "ampulheta [E/oeste]"; asset = "ampulheta"
 		# A simulação também bloqueia interação durante estes 0,65 s de entrada.
 		if arrival < 0.35:
 			var target_alpha := 0.25 + 0.45 * arrival / 0.35
