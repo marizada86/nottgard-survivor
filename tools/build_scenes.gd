@@ -230,7 +230,8 @@ func _build_hud() -> void:
 	wl.offset_left = 14
 	wl.offset_top = -230
 	wl.offset_right = 460
-	wl.offset_bottom = -10
+	wl.offset_bottom = -24
+	wl.grow_vertical = Control.GROW_DIRECTION_BEGIN
 	wl.vertical_alignment = VERTICAL_ALIGNMENT_BOTTOM
 	wl.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	_add(h, wl, "WeaponsLabel", h, true)
