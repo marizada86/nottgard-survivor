@@ -13,7 +13,8 @@ specs, evidências, planos e canon continuam onde estão, com os mesmos nomes
 | [BUGS.md](BUGS.md) | Defeitos e dívida de verificação | `BUG-nnn` |
 | [BALANCEAMENTO.md](BALANCEAMENTO.md) | Equilíbrio: heróis, armas, itens, inimigos, economia e dificuldade | `BAL-nnn` |
 | [FERRAMENTAS.md](FERRAMENTAS.md) | Ferramentas e build: kit de evidência, CI, scripts, exportação | `TOOL-nnn` |
-| [RELEASES.md](RELEASES.md) | Quadro de versões de playtest: conteúdo, "o que testar", checklist | — |
+| [RELEASES.md](RELEASES.md) | Quadro de versões de playtest (**Minor** e **Major**): conteúdo, "o que testar", checklist | — |
+| [changelogs/](changelogs/README.md) | Changelog em PDF dos **Major-update** para os testers, com guia e modelo | — |
 
 ## Fluxo
 
@@ -118,7 +119,7 @@ separado (uma mecânica por commit; números por entidade). Balanceamento vem po
 
 Próximos livres (2026-09-29, após EVID-112): `SPEC-095` (SPEC-079 fica
 **reservada** à camada de decais do Lote 2; SPEC-080 é a das HQs), `EVID-113`,
-`PLAN-044`, `ART-PROMPTS-032`, `ART-023`, `MEC-028`, `BUG-016`, `BAL-010`, `IN-040`, `TOOL-004`, jogador `T04`. `tools/backlog_check.ps1` confere se esta linha está atrasada.
+`PLAN-044`, `ART-PROMPTS-032`, `ART-023`, `MEC-028`, `BUG-018`, `BAL-010`, `IN-040`, `TOOL-004`, jogador `T04`. `tools/backlog_check.ps1` confere se esta linha está atrasada.
 
 **Colisões históricas** (não renomear; usar o nome completo do arquivo ao
 citar): SPEC-047/048/049/050/054/055 têm dois arquivos cada; EVID-018, 077, 079,

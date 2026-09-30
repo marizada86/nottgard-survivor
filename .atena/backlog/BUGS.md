@@ -1,17 +1,20 @@
 # BUGS — defeitos e dívida de verificação
 
 Severidade: **P0** corrige na hora · **P1** acumula, quebra função · **P2** cosmético.
-Estado (2026-09-29): há defeitos **confirmados por mais de um tester** (BUG-011 a 015), todos
+Estado (2026-09-30): há defeitos **confirmados por mais de um tester** (BUG-011 a 015), todos
 **implementados e aguardando o próximo playtest**. O que resta de BUG-001 a 010 é
 suspeita e **dívida de verificação manual**. Ciclo de vida e regra de fechamento
 no [README](README.md); estado atual sai de `tools/backlog_check.ps1`.
+
+Os cartões trazem só o **estado atual**; o texto integral de cada um está em
+[Histórico](#histórico-dos-cartões) no fim do arquivo.
 
 ## Abertos
 
 | ID | Sev | Título | Origem | Situação | Spec |
 |---|---|---|---|---|---|
 | BUG-001 | P1 | Zumbi novo (SPEC-061) sem captura visual em run real: o renderer headless não gerou viewport | [EVID-104](../evidence/EVID-104-zumbi-admissao-2026-09-29.md) | Só a prancha foi aprovada; abrir uma run em Dagruve e conferir idle/move/attack/death | SPEC-061 |
-| BUG-002 | P2 | Pode haver outros assets animados com opacidade fraca (mesma classe do Leoric e do Zumbi antigos): falta auditar Sacerdote da Mente Derretida | [PLAN-032](../vault/drafts/PLAN-032-proxima-atualizacao-pos-playtest-2026-09-28.md) (risco em aberto) | Suspeita. SPEC-038 só checa "existe pixel visível"; conferir cobertura de opacidade nas folhas. **Auditado 2026-09-29:** `tools/audit_alpha_solidity.gd` (191 imagens): as folhas do Sacerdote têm 80–88 % de pixels sólidos e alfa médio 0,87–0,92, faixa igual à de Bromnor e Durvall. Nenhuma sprite de corpo abaixo de 0,79; só efeitos (altar, portal, ritual) e mortes/ativas de heróis ficam mais translúcidos, o que é esperado. **Sem evidência de defeito**; falta só o olho na run QA (PLAN-039) | — |
+| BUG-002 | P2 | Possíveis assets animados com opacidade fraca (Sacerdote da Mente Derretida) | [PLAN-032](../vault/drafts/PLAN-032-proxima-atualizacao-pos-playtest-2026-09-28.md) | Auditado 2026-09-29: **sem evidência de defeito**; falta só o olho na run QA (PLAN-039). [Histórico](#bug-002) | — |
 
 ### Dívida de verificação manual (roteiro do [PLAN-033](../vault/drafts/PLAN-033-checklist-consolidado-pre-playtest-2026-09-28.md))
 
@@ -33,15 +36,26 @@ abaixo. Cada item vira BUG-nnn se falhar.
 
 | ID | Sev | Título | Origem | Situação | Spec |
 |---|---|---|---|---|---|
-| BUG-011 | P1 | Espelho de Shendilavri fica fora do mapa e não dá para interagir | [EVID-106](../evidence/EVID-106-playtest-publico-t01-higor-2026-09-29.md) IN-015 (print `S3-123817/screenshots/002-print.png`); T02 Q1 concorda (2 de 2, só questionário) | Corrigir posicionamento, independente de ampliar o mapa (MEC-012); T03 Q1 "não notei" (não chegou a Shendilavri). **IMPLEMENTADO 2026-09-29 (PLAN-038, aguarda verificação em run real):** Espelho movido de chão (22.5, -0.5) para (22.5, 3.0); teste em `test_prop_grounding.gd`. Outros props de borda (Veu, Taca, Lanterna etc.) seguem na parede por serem decoração de contorno; rever se algum jogador reclamar | — |
-| BUG-012 | P1 | Inimigos travam ao encostar em objetos e param de perseguir; deveriam deslizar | EVID-106 IN-009 (Durão) | Já **confirmado**, falta só medir outros biomas: T02 nota espontânea N12 (Durão, "mobs presos em obstáculos") + Q2 (2 relatos independentes); T03 Q2 concorda, **prioridade 1ª** (3 de 3). **IMPLEMENTADO 2026-09-29 (aguarda run real em Durão):** duas causas. (1) inimigos usavam `hero.is_free`, que aplica o Esquecimento do Estige (restrição do herói) e travava o avanço; agora usam `hero.can_stand`. (2) obstáculo redondo (montanhas de Durão, props) exatamente no caminho: novo `Battle._enemy_move` contorna girando o passo. Teste em `test_battle.gd` | — |
-| BUG-014 | P1 | Ritual: concluir não dá recompensa e a penalidade (monstros extras) vira ganho de XP. *Confirmar se é por design; se for, vira MEC* | EVID-106 IN-001 (Dagruve, regra `rituals`) | Verificar regra de ritual em `data/stage_rules.json`; **2º relato**: T02 N1 (print com "Ritual interrompido." sem recompensa) + Q4, **prioridade 1ª** de T02. Severidade sobe P2 → P1; T03 Q4 **discorda** (2 C + 1 D): **contestado**. T03 vê dois "Ritual interrompido." sem relato de recompensa no log. **Reclassificado como mecânica em 2026-09-29 (D1):** recompensa implementada como MEC-026 (SPEC-084); aguarda playtest | — |
-| BUG-015 | P1 | Ferreiro: prévia de equipamento Nv+1 mostra os **mesmos** mods do nível atual (a escala +15 % só entra na agregação) e, com valores inteiros pequenos, o +15 % é truncado (`Hero.cam()` usa `int()`): "Nv 2 não melhora nada" | [EVID-107](../evidence/EVID-107-playtest-publico-t02-hiago-2026-09-29.md) IN-028 (prints 003 e 005; código `core/battle.gd` `shop_item_up`, `core/hero.gd` `recalc`) | **Confirmado** por print + leitura de código. Reabre a verificação de BUG-008. Corrigir a prévia (mostrar mods já escalados) e o arredondamento. **IMPLEMENTADO 2026-09-29 (aguarda run real):** `Items.scaled_mods`/`upgrade_preview` mostram "Nv atual" e "Nv seguinte" já escalados; `mods_text` deixou de truncar 4.6 para 4; armas passam a ter rótulo em português ("recarga (s)", "marca"…). O truncamento de CAM/CA inteiros somados segue (as frações acumulam entre itens) | — |
-
+| BUG-011 | P1 | Espelho de Shendilavri fora do mapa, sem interação | [EVID-106](../evidence/EVID-106-playtest-publico-t01-higor-2026-09-29.md) IN-015 | **IMPLEMENTADO 2026-09-29 (PLAN-038)**: Espelho movido para (22.5, 3.0); aguarda run real em Shendilavri. [Histórico](#bug-011) | — |
+| BUG-012 | P1 | Inimigos travam em objetos e param de perseguir (deveriam deslizar) | EVID-106 IN-009 (Durão); confirmado por 3 de 3 testers | **IMPLEMENTADO 2026-09-29**: `hero.can_stand` no lugar de `is_free` + `Battle._enemy_move` contorna obstáculos; aguarda run real em Durão. [Histórico](#bug-012) | — |
+| BUG-014 | P1 | Ritual: concluir não dá recompensa e a penalidade vira XP | EVID-106 IN-001 (Dagruve, regra `rituals`) | **Reclassificado como mecânica (D1, 2026-09-29):** recompensa em MEC-026 (SPEC-084); aguarda playtest. T03 discorda (contestado). [Histórico](#bug-014) | — |
+| BUG-015 | P1 | Ferreiro: prévia Nv+1 mostra os mesmos mods e o +15 % é truncado | [EVID-107](../evidence/EVID-107-playtest-publico-t02-hiago-2026-09-29.md) IN-028 | **IMPLEMENTADO 2026-09-29**: `Items.scaled_mods`/`upgrade_preview`; `mods_text` não trunca mais. Reabre a verificação de BUG-008; aguarda run real. [Histórico](#bug-015) | — |
 
 > Decisão do dono (2026-09-29): as verificações BUG-003 a 010 são pagas **no
 > próximo playtest** (a versão 0.2.0 traz a lista "O que testar"); não bloqueiam
 > exportação nem mecânica nova.
+
+## Minor-fix
+
+Correções triviais (texto, margem, rótulo): **sem P0/P1, sem spec e sem EVID**; uma
+linha por cartão e o commit. Fluxo curto decidido pelo dono em 2026-09-30. Se o
+conserto crescer, o cartão sobe para a tabela "Abertos" acima. Ao fechar uma versão,
+os cartões Minor-fix do período viram o bloco "Pequenos ajustes" do changelog
+(escrito à mão, em linguagem de jogador).
+
+| ID | Título | Origem | Situação |
+|---|---|---|---|
+| — | — | — | — |
 
 ## Fechados
 
@@ -50,3 +64,24 @@ abaixo. Cada item vira BUG-nnn se falhar.
 | — | Regressão do Leoric transparente (nota 6 do EVID-088) | 2026-09-27 | [EVID-081](../evidence/EVID-081-leoric-admissao-oficial-2026-09-27.md) |
 | — | Vazamento do sandbox QA para run normal | 2026-09-28 (implementado; verificação em BUG-009) | [EVID-098-spec-074](../evidence/EVID-098-spec-074-vazamento-do-sandbox-qa-2026-09-28.md) |
 | BUG-013 | Props flutuando no cenário | 2026-09-29 | [EVID-121](../evidence/EVID-121-aprovacao-visual-de-decais-e-bug-013-2026-09-29.md) |
+| BUG-016 | Minor-fix: lista de feitiços/equipamentos cortada no canto inferior esquerdo do HUD quando é longa (`WeaponsLabel` crescia para baixo; agora `grow_vertical` para cima e base -24) | 2026-09-30 | Relato do dono (print); `ui/hud.tscn`, `tools/build_scenes.gd` |
+| BUG-017 | Minor-fix: cartão da bênção Sorriso da Sorte mostrava "-1 dmg_flat"; agora "-1 dano por acerto" (`MOD_LABELS` sem `dmg_flat`) | 2026-09-30 | Relato do dono (print); `core/items.gd` |
+
+## Histórico dos cartões
+
+Texto integral da coluna "Situação" antes do enxugamento de 2026-09-30.
+
+### BUG-002
+Suspeita. SPEC-038 só checa "existe pixel visível"; conferir cobertura de opacidade nas folhas. **Auditado 2026-09-29:** `tools/audit_alpha_solidity.gd` (191 imagens): as folhas do Sacerdote têm 80–88 % de pixels sólidos e alfa médio 0,87–0,92, faixa igual à de Bromnor e Durvall. Nenhuma sprite de corpo abaixo de 0,79; só efeitos (altar, portal, ritual) e mortes/ativas de heróis ficam mais translúcidos, o que é esperado. **Sem evidência de defeito**; falta só o olho na run QA (PLAN-039). Falta auditar o Sacerdote da Mente Derretida (mesma classe do Leoric e do Zumbi antigos).
+
+### BUG-011
+Origem: [EVID-106](../evidence/EVID-106-playtest-publico-t01-higor-2026-09-29.md) IN-015 (print `S3-123817/screenshots/002-print.png`); T02 Q1 concorda (2 de 2, só questionário). Corrigir posicionamento, independente de ampliar o mapa (MEC-012); T03 Q1 "não notei" (não chegou a Shendilavri). **IMPLEMENTADO 2026-09-29 (PLAN-038, aguarda verificação em run real):** Espelho movido de chão (22.5, -0.5) para (22.5, 3.0); teste em `test_prop_grounding.gd`. Outros props de borda (Veu, Taca, Lanterna etc.) seguem na parede por serem decoração de contorno; rever se algum jogador reclamar.
+
+### BUG-012
+Origem: EVID-106 IN-009 (Durão). Já **confirmado**, falta só medir outros biomas: T02 nota espontânea N12 (Durão, "mobs presos em obstáculos") + Q2 (2 relatos independentes); T03 Q2 concorda, **prioridade 1ª** (3 de 3). **IMPLEMENTADO 2026-09-29 (aguarda run real em Durão):** duas causas. (1) inimigos usavam `hero.is_free`, que aplica o Esquecimento do Estige (restrição do herói) e travava o avanço; agora usam `hero.can_stand`. (2) obstáculo redondo (montanhas de Durão, props) exatamente no caminho: novo `Battle._enemy_move` contorna girando o passo. Teste em `test_battle.gd`.
+
+### BUG-014
+Origem: EVID-106 IN-001 (Dagruve, regra `rituals`). *Confirmar se é por design; se for, vira MEC.* Verificar regra de ritual em `data/stage_rules.json`; **2º relato**: T02 N1 (print com "Ritual interrompido." sem recompensa) + Q4, **prioridade 1ª** de T02. Severidade sobe P2 → P1; T03 Q4 **discorda** (2 C + 1 D): **contestado**. T03 vê dois "Ritual interrompido." sem relato de recompensa no log. **Reclassificado como mecânica em 2026-09-29 (D1):** recompensa implementada como MEC-026 (SPEC-084); aguarda playtest.
+
+### BUG-015
+Origem: [EVID-107](../evidence/EVID-107-playtest-publico-t02-hiago-2026-09-29.md) IN-028 (prints 003 e 005; código `core/battle.gd` `shop_item_up`, `core/hero.gd` `recalc`). **Confirmado** por print + leitura de código. Reabre a verificação de BUG-008. Corrigir a prévia (mostrar mods já escalados) e o arredondamento. **IMPLEMENTADO 2026-09-29 (aguarda run real):** `Items.scaled_mods`/`upgrade_preview` mostram "Nv atual" e "Nv seguinte" já escalados; `mods_text` deixou de truncar 4.6 para 4; armas passam a ter rótulo em português ("recarga (s)", "marca"…). O truncamento de CAM/CA inteiros somados segue (as frações acumulam entre itens).
