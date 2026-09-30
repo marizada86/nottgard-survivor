@@ -1,6 +1,6 @@
 class_name GroundDecals
 extends Node2D
-## Prévia controlada dos decais do Lote 2. Não participa de física nem y-sort.
+## Decais oficiais do Lote 2. Não participam de física nem y-sort.
 
 const GROUND_Z_INDEX := -100
 const DECAL_Z_INDEX := -90
@@ -11,7 +11,7 @@ const FOOTPRINT_SAMPLES := [Vector2.ZERO, Vector2(-3, 0), Vector2(3, 0), Vector2
 
 var stage_id := ""
 var visual_seed := 0
-var candidate_preview := false
+var enabled := true
 var _textures: Dictionary = {}
 
 func _ready() -> void:
@@ -71,7 +71,7 @@ func _texture(path: String) -> Texture2D:
 	return texture
 
 func _draw() -> void:
-	if not candidate_preview:
+	if not enabled:
 		return
 	for placement in placements(stage_id, visual_seed):
 		var texture := _texture(String(placement.path))

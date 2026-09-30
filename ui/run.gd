@@ -87,11 +87,11 @@ func _load_stage() -> void:
 	hero_node.apply_hero(battle.hero.id)
 	var ground: Node2D = stage_root.get_node("Ground")
 	var decals := GroundDecals.new()
-	decals.name = "GroundDecalsPreview"
+	decals.name = "GroundDecals"
 	decals.stage_id = battle.stage_id
 	decals.visual_seed = int(ground.get("visual_seed"))
-	# As candidatas permanecem no cofre: só o sandbox de QA pode desenhá-las.
-	decals.candidate_preview = Game.qa_sandbox
+	# Somente assets oficiais estão no manifesto; Docas permanece sem decais.
+	decals.enabled = true
 	stage_root.add_child(decals)
 	var msize := Vector2(ground.map_size)
 	TerrainLayout.scale = msize.x / 40.0  # MEC-012: layouts foram desenhados para 40x40
