@@ -2,7 +2,7 @@
 id: "ART-PROMPTS-027"
 type: "prompts-de-arte"
 title: "HQs novas — guia de estilo e piloto 'Uma Noite Sem Fim'"
-status: "em andamento — geração no ChatGPT iniciada pelo dono em 2026-09-29; não misturar com as Ondas de HQ (ART-PROMPTS-028 e 029)"
+status: "candidatas aprovadas pelo dono — piloto hq_n01 pendente de integração; ondas de HQ seguem em ART-PROMPTS-028 e 029"
 created: "2026-09-29"
 relations: ["[[PLAN-040-hqs-novas-highlights-do-vault-2026-09-29]]", "[[SPEC-080-hqs-de-transicao-do-nottcard]]", "[[SPEC-062-fila-de-geracao-externa-de-assets]]"]
 sources: ["nottgard-vault (github.com/marizada86/nottgard-vault): 01_Campanha, 16_Histórias, 10_Sessões", "Nottcard HQ-000 (guia de produção)", "Nottcard assets/hq/ (hq_001 a hq_003)", "assets/portraits/*.png"]
@@ -109,5 +109,7 @@ edges. Characters must match the attached reference portraits exactly.*
 
 ## Gate
 
-Preparado, não executado. Depende de o dono confirmar o catálogo do PLAN-040
-(ao menos a HQ piloto) e de gerar as imagens no ChatGPT.
+As quatro candidatas do piloto `hq_n01` foram geradas e aprovadas pelo dono em
+2026-09-29 e estão em `.atena/generated/art-candidates/hq/`. A integração
+continua pendente da implementação da HQ e da validação de fidelidade aos
+retratos.
