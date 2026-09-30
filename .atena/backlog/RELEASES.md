@@ -12,6 +12,34 @@ O que continua valendo, para poder desfazer sem perder o resto:
 - todo item novo entra na lista "O que testar" da versão (abaixo), que também
   alimenta o próximo questionário.
 
+## Tipos de atualização: Minor-update e Major-update
+
+Decisão do dono (2026-09-30). Toda versão publicada é de um dos dois tipos, e o tipo
+define o número, o que entra e o que se entrega aos testers.
+
+| | **Minor-update** | **Major-update** |
+|---|---|---|
+| Serve para | Manter a build saudável entre playtests | A grande atualização, depois de coletar o relatório dos testers |
+| Conteúdo | Bugfixes gerais, balanceamentos pequenos (só números em JSON), ajustes pequenos de texto/UI/arte | Mecânicas novas, eventos, sistemas, telas, conteúdo e arte grande; junta correções e ajustes que vieram junto |
+| Número | Último dígito: `0.2.0` → `0.2.1` → `0.2.2` | Dígito do meio: `0.2.x` → `0.3.0` (volta o último a zero) |
+| Origem | Bug do [BUGS](BUGS.md), cartão pequeno do [BALANCEAMENTO](BALANCEAMENTO.md) ou de [ARTE](ARTE.md) | Relatório dos testers triado (INTAKE) e plano `PLAN-nnn` aprovado |
+| Entrega aos testers | Notas curtas no aviso do Discord (lista de 3 a 8 linhas). **Sem PDF, sem questionário novo** | **Changelog em PDF** + questionário rápido novo |
+| Não pode conter | Mecânica nova, regra nova, mudança de dificuldade global | — |
+| Risco | Baixo: `git revert` isolado por commit | Médio/alto: um commit por mecânica (regra acima) |
+
+**Como decidir o tipo:** se o tester precisa **aprender algo novo** para jogar (tecla, tela,
+regra, evento), é **major**. Se ele só percebe "isso parou de dar problema" ou "está um
+pouco mais fácil/difícil", é **minor**. Se um minor crescer até exigir explicação, vira major.
+
+**Fluxo do major:** relatório dos testers → INTAKE → triagem → `PLAN` → implementação por
+trilha (bugs → arte → mecânicas → balanceamento) → suíte + smoke + bot → versão em
+`core/version.gd` e `export_presets.cfg` → **changelog PDF** (guia e modelo em
+[changelogs/README.md](changelogs/README.md)) → push → aviso aos testers.
+
+**Fluxo do minor:** bug ou ajuste → commit → suíte + smoke → versão (último dígito) →
+push → aviso curto. Sem plano novo, sem PDF. A tabela de conteúdo da versão ganha uma
+linha em "Histórico" (abaixo).
+
 ## Estados de uma versão
 
 `planejada → em preparação → publicada (playtest) → avaliada`
@@ -19,7 +47,12 @@ O que continua valendo, para poder desfazer sem perder o resto:
 Avaliada = as EVID dos testers foram triadas. Só então os cartões "aguardando
 playtest" viram verificados ou reabertos.
 
-## Versão 0.2.0 — publicada (playtest)
+## Versão 0.2.0 — Major-update, publicada (playtest)
+
+Changelog para os testers (PDF, de 0.1.0 para 0.2.0): [CHANGELOG 0.2.0](changelogs/CHANGELOG%200.2.0%20-%20Nottgard%20Survivors.pdf)
+(fonte em [HTML](changelogs/CHANGELOG-0.2.0.html)). Também entraram na build `latest`, depois do primeiro
+push: suporte a joystick (SPEC-096), tela de título nova, skin de Leoric, animações do cultista de adaga
+(SPEC-099) e estruturas por bioma (SPEC-100); o changelog já os cobre.
 
 Origem: [PLAN-038](../vault/drafts/PLAN-038-atualizacao-pos-playtests-t01-t02-t03-2026-09-29.md)
 (0.1.1 e 0.2.0 viraram uma versão só) e [PLAN-039](../vault/drafts/PLAN-039-roteiro-run-qa-para-versao-0-1-1-2026-09-29.md)
@@ -71,11 +104,12 @@ Origem: [PLAN-038](../vault/drafts/PLAN-038-atualizacao-pos-playtests-t01-t02-t0
 - [x] Esta tabela revisada, com commits
 - [x] `tools/backlog_check.ps1` sem alertas novos
 - [x] Push na `main` (CI grava o commit da build e publica o `latest`)
-- [ ] Aviso aos testers com a lista "O que testar" e o [questionário rápido 003](questionarios/QUESTIONARIO%20R%C3%A1pido%20-%20003.pdf) (mapa pergunta → cartão em [QUESTIONARIO-003](questionarios/QUESTIONARIO-003-verificacao-v0.2.0.md))
+- [x] Changelog em PDF para os testers (2026-09-30)
+- [ ] Aviso aos testers com o changelog em PDF, a lista "O que testar" e o [questionário rápido 003](questionarios/QUESTIONARIO%20R%C3%A1pido%20-%20003.pdf) (mapa pergunta → cartão em [QUESTIONARIO-003](questionarios/QUESTIONARIO-003-verificacao-v0.2.0.md))
 
 ## Histórico
 
-| Versão | Publicada | Commit da build | Avaliada em |
-|---|---|---|---|
-| 0.2.0 | 2026-09-29 (release `latest`, Playtest v0.2.0) | commit no título do release (`fce670d` na primeira publicação; republicada a cada push na `main`) | — (aguardando testers) |
-| 0.1.0 | 2026-09-29 (playtest T01, T02, T03) | não registrado (builds anteriores ao TOOL-001) | EVID-106, 107, 108 |
+| Versão | Tipo | Publicada | Commit da build | Avaliada em |
+|---|---|---|---|---|
+| 0.2.0 | Major | 2026-09-29 (release `latest`, Playtest v0.2.0) | commit no título do release (`fce670d` na primeira publicação; republicada a cada push na `main`) | — (aguardando testers) |
+| 0.1.0 | Major (primeira) | 2026-09-29 (playtest T01, T02, T03) | não registrado (builds anteriores ao TOOL-001) | EVID-106, 107, 108 |

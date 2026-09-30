@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<title>Novidades da versão 0.2.0 — Nottgard Survivors</title>
+<style>
+@page { size: A4; margin: 13mm 14mm; }
+* { box-sizing: border-box; }
+body { font-family: "Segoe UI", Arial, sans-serif; font-size: 10pt; color: #1c1a22; line-height: 1.36; }
+h1 { font-size: 22pt; margin: 0; color: #3b1d4f; }
+.sub { color: #5a5566; margin: 2px 0 10px; font-size: 10.5pt; }
+h2 { font-size: 13pt; margin: 14px 0 5px; color: #3b1d4f; border-bottom: 2px solid #b48ad6; padding-bottom: 2px; break-after: avoid; }
+h3 { font-size: 11pt; margin: 0 0 3px; color: #3b1d4f; }
+p { margin: 3px 0; }
+ul { margin: 3px 0 3px 18px; padding: 0; }
+li { margin: 1px 0; }
+.box { border: 1px solid #c9c2d6; background: #f6f3fa; border-radius: 6px; padding: 8px 12px; margin: 8px 0; break-inside: avoid; }
+.warn { border-color: #e0c27a; background: #fbf5e4; }
+.ok { border-color: #a9d1b0; background: #eef8f0; }
+.card { border: 1px solid #ddd6e8; border-left: 5px solid #7a4ba3; border-radius: 5px; padding: 6px 11px 7px; margin: 7px 0; break-inside: avoid; }
+.card .tag { float: right; font-size: 8pt; font-weight: 700; color: #fff; background: #7a4ba3; border-radius: 9px; padding: 1px 8px; margin-left: 8px; }
+.lbl { font-weight: 700; color: #7a4ba3; }
+.how { background: #f6f3fa; border-radius: 4px; padding: 3px 8px; margin-top: 4px; }
+table { width: 100%; border-collapse: collapse; margin: 4px 0; }
+th { text-align: left; font-size: 9pt; color: #3b1d4f; background: #ece6f4; padding: 4px 6px; }
+td { padding: 4px 6px; border-top: 1px solid #e3deec; vertical-align: top; }
+tr { break-inside: avoid; }
+td.k { white-space: nowrap; font-weight: 700; color: #3b1d4f; }
+.chk li { list-style: none; margin-left: -16px; padding-left: 0; }
+.chk li:before { content: "☐  "; font-size: 12pt; }
+.steps { counter-reset: s; list-style: none; margin-left: 0; }
+.steps li { counter-increment: s; margin: 3px 0; padding-left: 26px; position: relative; }
+.steps li:before { content: counter(s); position: absolute; left: 0; top: 0; width: 19px; height: 19px; border-radius: 50%; background: #7a4ba3; color: #fff; text-align: center; font-weight: 700; font-size: 9pt; line-height: 19px; }
+.small { font-size: 8.8pt; color: #5a5566; }
+.pb { break-before: page; }
+</style></head><body>
+
+<h1>Novidades da versão 0.2.0</h1>
+<p class="sub">Nottgard Survivors · atualização <b>grande</b> · de <b>0.1.0</b> para <b>0.2.0</b> · leitura de uns 5 minutos</p>
+
+<div class="box">
+<b>Resumo em 30 segundos.</b> Você jogou a 0.1.0 e nos contou o que achou. Ouvimos.
+Nesta versão: <b>os mapas ficaram maiores</b>, dá para <b>jogar mais rápido</b> em fases que você já venceu,
+<b>escolher equipamento ficou muito mais fácil de entender</b>, os inimigos <b>cercam você</b> em vez de vir em fila,
+há <b>eventos novos</b>, <b>mais coisas para comprar e conquistar</b> e o jogo agora funciona com <b>controle (joystick)</b>.
+Também consertamos os problemas que você mais reportou.
+</div>
+
+<h2>Antes de jogar: como atualizar (3 passos)</h2>
+<ol class="steps">
+<li>Baixe o arquivo <b>NottgardSurvivors-windows.zip</b> no mesmo lugar onde você baixou a 0.1.0 (release <b>latest</b>).</li>
+<li><b>Extraia numa pasta nova</b> (não jogue por cima da pasta antiga) e abra o arquivo <b>.exe</b>.</li>
+<li>Olhe o <b>rodapé</b> do jogo: tem de aparecer <b>0.2.0</b>. Se aparecer 0.1.0, você abriu o jogo antigo.</li>
+</ol>
+<p class="small">Seu progresso (moedas, aprimoramentos, conquistas) fica salvo no computador e continua na versão nova.</p>
+
+<h2>As grandes mudanças</h2>
+
+<div class="card"><span class="tag">MAPA</span>
+<h3>1. Mapas bem maiores</h3>
+<p><span class="lbl">Antes:</span> o mapa era pequeno e apertado. <span class="lbl">Agora:</span> todas as 9 fases têm mais que o dobro da área (60×60 em vez de 40×40), com os objetos espalhados pelo mapa novo.</p>
+<p class="how"><span class="lbl">Como ver:</span> ande até a borda do mapa. Você agora anda muito mais até chegar lá. Diga se ficou <i>espaçoso</i> ou <i>vazio demais</i>.</p></div>
+
+<div class="card"><span class="tag">RITMO</span>
+<h3>2. Jogar mais rápido em fases já vencidas</h3>
+<p><span class="lbl">Novo botão de velocidade</span> (1x, 1,5x, 2x) no topo da tela, ou tecla <b>T</b> ou <b>F</b> (no controle: direcional para cima). <b>Só funciona em fase que você já venceu.</b> Em fase nova, o jogo avisa que ainda não libera.</p>
+<p><span class="lbl">Evento novo: Ampulheta</span> (aperte <b>E</b> perto dela). Ela pula <b>60 segundos</b> do mapa e traz de uma vez os inimigos desse tempo. Menos tempo no mapa também significa menos moedas e menos itens.</p></div>
+
+<div class="card"><span class="tag">ESCOLHAS</span>
+<h3>3. Escolher equipamento ficou claro</h3>
+<p><span class="lbl">Antes:</span> telas cheias de números repetidos, difícil saber se o item novo era melhor. <span class="lbl">Agora:</span></p>
+<ul>
+<li>Cada opção é um <b>cartão curto</b>: ícone, nome na <b>cor da raridade</b>, 3 atributos principais e um selo: <b>▲ = você ganha</b>, <b>▼ = você perde</b>.</li>
+<li><b>Passe o mouse por cima</b> do cartão: aparece uma tabela <i>novo × atual</i>, com verde (melhora) e vermelho (piora).</li>
+<li><b>Segure Shift</b> (no controle, aperte o analógico direito): mostra os detalhes de <b>todas</b> as opções de uma vez.</li>
+<li><b>Loja e ferreiro mostram tudo.</b> O que você não consegue pagar aparece <b>apagado</b>, com "faltam N moedas". Ferreiro sem nada a melhorar diz <b>"Nada para melhorar"</b>. Curandeiro com vida cheia diz <b>"Vida cheia"</b>.</li>
+<li>O ferreiro mostra <b>nível atual → nível seguinte</b> e o <b>ganho</b> (antes parecia que subir de nível não mudava nada).</li>
+</ul></div>
+
+<div class="card"><span class="tag">COMBATE</span>
+<h3>4. Começo mais movimentado e inimigos que cercam</h3>
+<p><span class="lbl">Começo de fase:</span> nos primeiros ~4 minutos aparecem <b>mais inimigos</b> (a quantidade volta ao normal sozinha). O dano dos inimigos e a vida dos heróis <b>não mudaram</b>.</p>
+<p><span class="lbl">Cerco:</span> cerca de 6 em cada 10 inimigos comuns agora <b>contornam pelos lados</b> e chegam de direções diferentes, em vez de vir todos em fila.</p>
+<p class="how"><span class="lbl">Como ver:</span> nos primeiros minutos de qualquer fase, olhe se o mapa está mais cheio e se os inimigos fecham você por vários lados. Diga se ficou <i>interessante</i> ou <i>injusto</i>.</p></div>
+
+<div class="card"><span class="tag">EVENTOS</span>
+<h3>5. Eventos e regras novas</h3>
+<table>
+<tr><td class="k">Bênção do Selo</td><td>Interrompeu o ritual (Dagruve)? Você ganha por <b>20 segundos</b>: +20% de dano, +15% de velocidade e coleta maior.</td></tr>
+<tr><td class="k">Altar da Doação</td><td>(E) Você <b>doa um equipamento</b> que está vestindo e, em troca, escolhe <b>1 entre 3 bênçãos</b>. Sem equipamento, nada acontece.</td></tr>
+<tr><td class="k">Mesa de Aposta</td><td>(E) Você aposta 20%, 50% ou 100% das suas moedas da run (mínimo 20). <b>45% de chance de dobrar, 55% de perder.</b> Sem moedas, fica travada.</td></tr>
+<tr><td class="k">Baú do Chefe</td><td>Todo chefe derrotado deixa um <b>baú extra</b> com item <b>raro ou único</b> garantido.</td></tr>
+<tr><td class="k">Fidelidade</td><td>Recusou trocar seu item (escolheu <b>manter</b>) <b>3 vezes seguidas</b>? Ele <b>sobe de nível</b>. O cartão mostra "Fidelidade n/3".</td></tr>
+<tr><td class="k">Tela de evolução</td><td>Quando uma arma evolui, o jogo <b>pausa uns 3 segundos</b> mostrando a arma antiga, a nova e o <b>porquê</b>. Qualquer tecla ou clique pula.</td></tr>
+</table></div>
+
+<div class="card"><span class="tag">PROGRESSO</span>
+<h3>6. Mais para comprar, conquistar e ler</h3>
+<ul>
+<li><b>Força Bruta</b> e <b>Vitalidade</b> agora têm <b>10 níveis</b> (antes 5).</li>
+<li><b>5 aprimoramentos novos</b> no menu: Corpo de Ferro, Mente Aguçada, Braço Forte, Presença e Sangue Vivo.</li>
+<li><b>16 conquistas novas</b> (34 no total). Três aprimoramentos (<b>Mão Cheia, Bolso Fundo, Segunda Chance</b>) agora ficam <b>travados</b> até você cumprir a conquista deles. Quem já tinha comprado <b>continua com o que tem</b>.</li>
+<li><b>Biografias dos 10 heróis</b>, tiradas do vault de Nottgard: vença uma fase com o herói e o texto abre no Quartel.</li>
+<li>Fase avançada (Shendilavri em diante): a partir do <b>nível 15</b>, cada nível dá <b>+1 de vida máxima</b>. Antes o herói parava de melhorar.</li>
+</ul></div>
+
+<div class="card"><span class="tag">CONTROLE</span>
+<h3>7. Agora dá para jogar só com controle (joystick)</h3>
+<p>Do título até o fim da run, sem teclado nem mouse. Teclado e mouse continuam funcionando igual.</p>
+<table>
+<tr><th>Ação</th><th>Controle (nomes do controle de Xbox)</th></tr>
+<tr><td class="k">Andar</td><td>Analógico esquerdo ou direcional</td></tr>
+<tr><td class="k">Mirar (só no modo manual)</td><td>Analógico direito</td></tr>
+<tr><td class="k">Habilidade do herói</td><td>RB</td></tr>
+<tr><td class="k">Interagir (E)</td><td>Botão da esquerda (X)</td></tr>
+<tr><td class="k">Trocar mira / Extrair</td><td>Botão de cima (Y)</td></tr>
+<tr><td class="k">Rerrolar · Velocidade</td><td>LB · direcional para cima</td></tr>
+<tr><td class="k">Pausa · Itens</td><td>Start · Back</td></tr>
+<tr><td class="k">Nos menus: confirmar · voltar</td><td>Botão da direita (B) · botão de baixo (A)</td></tr>
+</table>
+<p class="small"><b>Atenção:</b> ainda não testamos com um controle físico de verdade. Se algo estranho acontecer, nos avise. Isso é importante!</p></div>
+
+<div class="card"><span class="tag">VISUAL</span>
+<h3>8. Visual novo</h3>
+<ul>
+<li><b>Tela de título nova</b> (portal abissal). Clicar na tela inicia o jogo.</li>
+<li><b>Leoric</b> agora usa cartola preta e sobretudo marrom.</li>
+<li>O <b>cultista de adaga</b> agora tem animação (parado, andando, atacando, morrendo).</li>
+<li>Cada fase ganhou <b>uma estrutura grande</b> no cenário e <b>remendos e trilhas no chão</b>.</li>
+<li><b>Loja, ferreiro, curandeiro, baú do chefe e ímã de XP</b> têm imagem própria (antes era só "algo apareceu no mapa").</li>
+<li><b>Cor de raridade</b> mais clara nos itens.</li>
+</ul></div>
+
+<h2>Problemas que você reportou e que consertamos</h2>
+<table>
+<tr><th style="width:44%">Antes</th><th>Agora</th></tr>
+<tr><td>Inimigos <b>ficavam presos</b> em objetos e montanhas e paravam de perseguir.</td><td>Eles <b>deslizam</b> pelo objeto e voltam a perseguir.</td></tr>
+<tr><td>Objetos do cenário <b>flutuavam</b> acima do chão.</td><td>Ajustamos o encaixe no chão dos objetos mais óbvios. <b>Alguns podem ter sobrado:</b> avise qual.</td></tr>
+<tr><td>O <b>espelho de Shendilavri</b> ficava fora do mapa.</td><td>Agora fica dentro da área onde dá para andar.</td></tr>
+<tr><td>Ferreiro: subir o nível parecia <b>não mudar nada</b>.</td><td>A prévia mostra o ganho real de cada nível.</td></tr>
+<tr><td>Interromper o ritual <b>não dava nada</b>.</td><td>Agora dá a <b>Bênção do Selo</b> (veja acima).</td></tr>
+</table>
+
+<h2>Pequenos ajustes (só para você saber)</h2>
+<ul>
+<li>A <b>Maré de Névoa</b> agora machuca <b>o triplo</b> (de 2% para 6% da vida máxima por segundo). Ficou mais perigosa de propósito.</li>
+<li>Objetos <b>quebráveis</b> aparecem com mais frequência (e o Carisma acelera isso). As <b>fontes</b> aparecem um pouco menos.</li>
+<li>A Inteligência perdida no <b>Estige</b> agora <b>volta depois de 5 minutos</b>.</li>
+<li>A <b>arma inicial de Zynara</b> não causava dano nenhum. Agora causa. <b>Ninguém testou a Zynara ainda: jogue com ela!</b></li>
+<li>O painel <b>C</b> mostra a <b>faixa de dano</b> das armas e uma <b>dica de como evoluir</b> cada uma.</li>
+<li>"Redução" virou <b>"redução de dano"</b>, para não confundir. A versão do jogo aparece no rodapé.</li>
+</ul>
+
+<h2 class="pb">Isto é provisório (não precisa avisar)</h2>
+<div class="box warn">
+<ul>
+<li>A <b>Ampulheta</b>, o <b>Altar da Doação</b> e a <b>Mesa de Aposta</b> ainda aparecem como <b>quadrados coloridos com o nome escrito</b>. A arte vem depois.</li>
+<li>A <b>tela de evolução</b> ainda não tem som nem efeitos. O <b>ímã de XP</b> pode estar provisório.</li>
+<li>Só o cultista de adaga tem animação nova. Os outros inimigos ainda são como antes.</li>
+<li>Docas ainda não recebeu os remendos de chão.</li>
+</ul>
+<p>Se algo <b>fora</b> desta lista parecer estranho ou quebrado, isso queremos saber!</p>
+</div>
+
+<h2>O que testar (marque o que você fez)</h2>
+<div class="box ok">
+<p class="small">Você não precisa fazer tudo. Faça o que aparecer no seu caminho e anote o que sentiu.</p>
+<ul class="chk">
+<li>Abri a <b>loja</b> ou o <b>ferreiro</b> sem moedas suficientes: as opções apareceram apagadas?</li>
+<li>Troquei um equipamento: deu para ver <b>o que ganhei e o que perdi</b> (cartão, mouse por cima, Shift)?</li>
+<li>Interrompi um ritual: apareceu a <b>Bênção do Selo</b>? Valeu a pena?</li>
+<li>Os primeiros minutos de uma fase ficaram <b>mais movimentados</b>? Difícil demais, ou bom?</li>
+<li>Os inimigos chegaram por <b>vários lados</b>? Foi interessante ou injusto?</li>
+<li>Algum inimigo <b>ficou preso</b> em objeto? Algum objeto ainda <b>flutua</b>?</li>
+<li>Numa fase já vencida: o <b>2x</b> e a <b>Ampulheta</b> ajudaram a jogar mais rápido?</li>
+<li>Usei o <b>Altar da Doação</b> ou a <b>Mesa de Aposta</b>: entendi o risco? Valeu?</li>
+<li>Evolui uma arma: a <b>tela de evolução</b> explicou bem? Consegui pular?</li>
+<li>Os <b>mapas maiores</b> ficaram bons, ou ficaram vazios?</li>
+<li>Olhei o <b>meta</b> (aprimoramentos, conquistas, biografias): deu vontade de jogar mais?</li>
+<li>Na fase tardia (Shendilavri em diante): meu herói <b>continuou melhorando</b>?</li>
+<li>Joguei com <b>Zynara</b> ou com <b>controle</b>: funcionou?</li>
+</ul></div>
+
+<h2>Como nos contar o que achou</h2>
+<ol class="steps">
+<li>Durante o jogo, aperte <b>F5</b> para escrever uma nota (o jogo pausa) e <b>F6</b> para tirar um print. Faça isso na hora, sem esperar.</li>
+<li>Depois de jogar, responda o <b>Questionário Rápido 003</b> (dura uns 5 minutos).</li>
+<li>Mande as notas e os prints, junto do questionário, pelo <b>Discord</b>. Os arquivos ficam na pasta <b>evidencias</b>, ao lado do .exe.</li>
+</ol>
+<p class="small">Se travou, deu erro ou fechou sozinho, diga <b>o que você estava fazendo</b>, em qual fase e com qual herói. Não existe relato pequeno demais.</p>
+
+<p style="margin-top:12px; text-align:center; color:#7a4ba3;"><b>Obrigado por jogar e por falar a verdade.</b> É isso que faz o jogo melhorar.</p>
+</body></html>
