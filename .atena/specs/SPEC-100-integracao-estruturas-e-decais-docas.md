@@ -1,6 +1,6 @@
 # SPEC-100 - Integracao das estruturas e dos decais de Docas
 
-Status: implementation verified locally; push pending (2026-09-30).
+Status: complete; verified and pushed (2026-09-30).
 
 ## Scope
 
@@ -55,8 +55,7 @@ Status: implementation verified locally; push pending (2026-09-30).
 
 ## Reconciliation
 
-The implementation and local checks pass. The approved feature-branch push
-remains the final acceptance step. The nine structures render as non-blocking
+All four acceptance criteria passed. The nine structures render as non-blocking
 y-sorted props with tested safe placement; the two Docas decals are officially
 admitted while their preview remains disabled. HQ/comic assets were excluded.
-See EVID-127.
+See EVID-127 for checks and push details.

@@ -1,6 +1,6 @@
 # PLAN-047 - Integrar assets nao-HQ restantes
 
-Status: implemented and verified locally; push pending (2026-09-30).
+Status: executed, verified, and pushed (2026-09-30).
 Spec: `[[SPEC-100-integracao-estruturas-e-decais-docas]]`.
 
 ## Flight plan

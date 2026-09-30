@@ -42,4 +42,11 @@ Plano: `[[PLAN-047-integrar-assets-nao-hq-restantes]]`
 
 HQs excluidas conforme o escopo aprovado. O commit anterior
 `20ba29c feat(assets): integrate cultista adaga animations` permanece na
-branch. Estado do push: pendente de confirmacao do servidor remoto.
+branch. O commit `8c1e497 feat(assets): integrate lote 2 structures` foi
+enviado para `origin/codex/cultista-adaga-animation`; o branch local agora
+acompanha o branch remoto.
+
+O servidor aceitou o push pelo remote configurado, mas informou que o
+repositorio mudou de endereco e recomendou
+`https://github.com/marizada86/nottgard-survivor.git` para operacoes futuras.
+O remote local nao foi alterado nesta entrega.
