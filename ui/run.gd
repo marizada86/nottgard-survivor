@@ -4,6 +4,8 @@ extends Node2D
 const ENEMY_VIEW := preload("res://ui/enemy_view.tscn")
 const GroundDecals := preload("res://ui/ground_decals.gd")
 const StageStructures := preload("res://ui/stage_structures.gd")
+const HQ_SCREEN := preload("res://ui/hq_screen.tscn")
+const HQCatalog := preload("res://core/hq_catalog.gd")
 
 @onready var slot: Node2D = $StageSlot
 @onready var under: Node2D = $Under
@@ -425,10 +427,27 @@ func _show_result() -> void:
 	get_tree().paused = false
 	var res := battle.result()
 	Game.finish_run(res)
-	hud.show_result(res, Game.last_summary)
 	Sfx.stop_ambience()
+	var new_achievements: Array = Game.last_summary.get("achievements", [])
+	for hq_id in HQCatalog.newly_earned_ids(new_achievements):
+		await _present_hq(hq_id)
+	hud.show_result(res, Game.last_summary)
 	Sfx.play("result.victory" if res.won else "result.defeat", -4.0)
 	Sfx.start_music("victory" if res.won else "defeat")
+
+func _present_hq(hq_id: String) -> void:
+	var hq: Dictionary = Data.table("hqs").get(hq_id, {})
+	if hq.is_empty():
+		return
+	var screen = HQ_SCREEN.instantiate()
+	screen.process_mode = Node.PROCESS_MODE_ALWAYS
+	hud.add_child(screen)
+	get_tree().paused = true
+	screen.call_deferred("start_hq", hq)
+	while not bool(screen.get("is_closed")):
+		await get_tree().process_frame
+	get_tree().paused = false
+	screen.queue_free()
 
 # ------------------------------------------------------------------ efeitos
 

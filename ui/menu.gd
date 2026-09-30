@@ -1,6 +1,9 @@
 extends Control
 ## Quartel: jogar, melhorias, conquistas, códex e opções. A estrutura vem de menu.tscn (nós únicos %).
 
+const HQ_SCREEN := preload("res://ui/hq_screen.tscn")
+const HQCatalog := preload("res://core/hq_catalog.gd")
+
 @onready var coins_label: Label = %CoinsLabel
 @onready var hero_list: ItemList = %HeroList
 @onready var portrait: TextureRect = %Portrait
@@ -27,10 +30,14 @@ extends Control
 @onready var guide_btn: Button = %GuideBtn
 @onready var reset_btn: Button = %ResetBtn
 @onready var version_label: Label = %VersionLabel
+@onready var hq_list: ItemList = %HqList
+@onready var hq_info: RichTextLabel = %HqInfo
+@onready var hq_play_btn: Button = %HqPlayBtn
 
 var heroes: Array = []
 var stages: Array = []
 var codex_ids: Array = []
+var hq_ids: Array[String] = []
 var _reset_armed := false
 
 func _ready() -> void:
@@ -83,6 +90,8 @@ func _ready() -> void:
 		Game.save())
 	guide_btn.pressed.connect(func(): Playtest.open_guide(false))
 	reset_btn.pressed.connect(_on_reset)
+	hq_list.item_selected.connect(_refresh_hq_selection)
+	hq_play_btn.pressed.connect(_open_selected_hq)
 	_refresh_all()
 	hero_list.call_deferred("grab_focus")
 	var notice := Game.consume_save_notice()
@@ -111,6 +120,7 @@ func _refresh_all() -> void:
 	_fill_upgrades()
 	_fill_achievements()
 	_fill_codex()
+	_fill_hqs()
 	aim_opt.select(1 if Game.aim_mode() == Battle.Aim.MOUSE else 0)
 	vol_opt.set_value_no_signal(float(p.data.settings.volume))
 	music_vol_opt.set_value_no_signal(float(p.data.settings.music_volume))
@@ -294,6 +304,47 @@ func _show_codex(i: int) -> void:
 		for u in Data.table("items").uniques:
 			if u.id == id:
 				codex_text.text = "[b]%s[/b] [color=#ff8c26](único · %s)[/color]\n%s\n\n%s" % [u.name, u.slot, Items.mods_text(u.mods), u.get("note", "")]
+
+# ------------------------------------------------------------------ histórias
+
+func _fill_hqs() -> void:
+	hq_list.clear()
+	hq_ids.clear()
+	for hq_id in HQCatalog.unlocked_ids(Game.profile.data.achievements):
+		var hq: Dictionary = Data.table("hqs")[hq_id]
+		hq_ids.append(hq_id)
+		hq_list.add_item(String(hq.get("title", hq_id)))
+	if hq_ids.is_empty():
+		hq_info.text = "Nenhuma HQ desbloqueada."
+		hq_play_btn.disabled = true
+		return
+	hq_list.select(0)
+	_refresh_hq_selection(0)
+
+func _refresh_hq_selection(index: int) -> void:
+	if index < 0 or index >= hq_ids.size():
+		hq_info.text = ""
+		hq_play_btn.disabled = true
+		return
+	var hq: Dictionary = Data.table("hqs")[hq_ids[index]]
+	hq_info.text = "[b]%s[/b]\n4 quadros" % String(hq.get("title", ""))
+	hq_play_btn.disabled = false
+
+func _open_selected_hq() -> void:
+	var selected := hq_list.get_selected_items()
+	if selected.is_empty():
+		return
+	var hq_id: String = hq_ids[selected[0]]
+	var hq: Dictionary = Data.table("hqs").get(hq_id, {})
+	if hq.is_empty():
+		return
+	var screen = HQ_SCREEN.instantiate()
+	screen.process_mode = Node.PROCESS_MODE_ALWAYS
+	add_child(screen)
+	screen.call_deferred("start_hq", hq)
+	while not bool(screen.get("is_closed")):
+		await get_tree().process_frame
+	screen.queue_free()
 
 func _on_reset() -> void:
 	if not _reset_armed:
