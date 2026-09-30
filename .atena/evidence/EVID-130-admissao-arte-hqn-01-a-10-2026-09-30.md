@@ -1,0 +1,83 @@
+---
+id: "EVID-130"
+title: "Admissão de arte HQN-01 a HQN-10"
+created: "2026-09-30"
+status: "40 quadros admitidos localmente; fontes preservadas; hashes verificados"
+relations:
+  - "[[SPEC-100-integracao-hqn-01-a-10]]"
+  - "[[EVID-123-auditoria-de-proporcao-e-identidade-das-hqs-2026-09-29]]"
+  - "[[EVID-111-hqn-02-candidatas-2026-09-29]]"
+  - "[[EVID-112-hqn-03-candidatas-2026-09-29]]"
+  - "[[EVID-113-hqn-04-candidatas-2026-09-29]]"
+  - "[[EVID-114-hqn-05-candidatas-2026-09-29]]"
+  - "[[EVID-115-hqn-06-e-onda-1-candidatas-2026-09-29]]"
+  - "[[EVID-116-hqn-07-candidatas-2026-09-29]]"
+  - "[[EVID-117-hqn-08-candidatas-2026-09-29]]"
+  - "[[EVID-118-hqn-09-candidatas-2026-09-29]]"
+  - "[[EVID-119-hqn-10-candidatas-2026-09-29]]"
+---
+
+# EVID-130 — Arte HQN-01 a HQN-10
+
+## Resultado
+
+As 40 imagens aprovadas foram copiadas sem edição para `assets/hq/`; as fontes
+originais permanecem em `.atena/generated/art-candidates/hq/`. Trinta e cinco
+medem 1672×941 px; cinco diferem por 1 px (HQN-02 Q2–Q4: 1671×941; HQN-06 Q4
+e HQN-08 Q4: 1672×940). As 40 permanecem próximas a 16:9; o leitor preserva a
+proporção com ajuste centralizado. Cada SHA-256 do destino corresponde ao
+arquivo-fonte selecionado.
+As seis correções v02 aprovadas em EVID-123 foram usadas nos destinos abaixo;
+as variantes v01 continuam preservadas.
+
+| Destino | Fonte aprovada | SHA-256 |
+|---|---|---|
+| `hq_n01_q1.png` | `hq_n01_q1_v01.png` | `47fd203a66ed7aa262715c66a08ca2b6b9f81cb409209a55a4ed5aff736a80e6` |
+| `hq_n01_q2.png` | `hq_n01_q2_v01.png` | `07ed3b2daa448d56ef6ad31ecca9ba17a7e9d8c05a0dd02811f1ae307604e709` |
+| `hq_n01_q3.png` | `hq_n01_q3_v01.png` | `8c829a3732fa4eccce306667fa1ade5425bb0523f6f088b287add22ae87efff6` |
+| `hq_n01_q4.png` | `hq_n01_q4_v01.png` | `d1b83048a50f53ac31c895e1ed9ab36cee3ea0ba6bca43771ae7cea473c5f618` |
+| `hq_n02_q1.png` | `hq_n02_q1_v01.png` | `bda8c0da6c82a6dc0ebf99cb612c1084a9f5e9e690be990dd69b594551849741` |
+| `hq_n02_q2.png` | `hq_n02_q2_v01.png` | `bcff102f0f24e9e2536f942dd333647b47d524e09b6f52227c353cb70f538527` |
+| `hq_n02_q3.png` | `hq_n02_q3_v01.png` | `bc57169f420796547f57457f331822467d85bff3c93c17282228b5c5a1a9e07a` |
+| `hq_n02_q4.png` | `hq_n02_q4_v01.png` | `1e69a4fea68f2d38fb841adb8fc489f7809d99508aae2f6a579b085551e93eb4` |
+| `hq_n03_q1.png` | `hq_n03_q1_v01.png` | `ebe27dc27b5fec2312b4d89651154f00e9f63d11061f9d68bf379e8199b4dd97` |
+| `hq_n03_q2.png` | `hq_n03_q2_v01.png` | `2c80a19779ca5cb2b97eb1eb05619f5ec397a7e9dd7ffc9960beca00b315060d` |
+| `hq_n03_q3.png` | `hq_n03_q3_v01.png` | `a302006819dd15090e95c3cb02a84c6210a403372fc889594ed6596bc2d7c1bd` |
+| `hq_n03_q4.png` | `hq_n03_q4_v02.png` | `01783ce71426e31a0881e253b69599c8de74be27ccef8cdc7f4c55dae961cc2b` |
+| `hq_n04_q1.png` | `hq_n04_q1_v01.png` | `dacdd6ac5317347bf3baa57e1f49565922e6123e778f0245dfabea360f7e5b25` |
+| `hq_n04_q2.png` | `hq_n04_q2_v02.png` | `b7928080fdff0ac653989b3cae181f548c3f05b4654381f1eb6f7620f258250a` |
+| `hq_n04_q3.png` | `hq_n04_q3_v01.png` | `07c225b85c16b989f2617bcfc16380ad9835ca229a8d7f0ac44028f4171abe8f` |
+| `hq_n04_q4.png` | `hq_n04_q4_v02.png` | `62ab7696fe6cc44afe325209d320476a990c4d3269e21f76de5c32cf3307e757` |
+| `hq_n05_q1.png` | `hq_n05_q1_v02.png` | `225921f01768c439fe57d56432e8c2e0d1892068bc0993333f8b7c340ff83ec8` |
+| `hq_n05_q2.png` | `hq_n05_q2_v01.png` | `f62661917c203fc6b8125b46ad5de57c27c33ed855ec9fc40ccb0be453d3dfa0` |
+| `hq_n05_q3.png` | `hq_n05_q3_v01.png` | `4d67d91ff460e2c7af3175327f104a654bbeff2e3e57f4fac4908e09df3c8856` |
+| `hq_n05_q4.png` | `hq_n05_q4_v02.png` | `ebd9e7ea06857cb41b3b069bbad81c3f2cacf23f4d3cec11b75f1eeb9e9fa4ad` |
+| `hq_n06_q1.png` | `hq_n06_q1_v01.png` | `f07ecdb9351619bdc874f9fc37d6983b4f364c3b2b615479df1e01325fb799f4` |
+| `hq_n06_q2.png` | `hq_n06_q2_v01.png` | `b977556edf197ef27cec015abfd5661d678b1e18e697cd3ec51180927309c1cb` |
+| `hq_n06_q3.png` | `hq_n06_q3_v01.png` | `7842de6287a1a75362eef947828e7addffd7bb596db495a0f17b0ea9eef28701` |
+| `hq_n06_q4.png` | `hq_n06_q4_v01.png` | `999c6c2ea5a7d54a9d794dff6a1441a927f8aba4e95979875bdbedf8cef8df12` |
+| `hq_n07_q1.png` | `hq_n07_q1_v01.png` | `890adfc8ccc0ba22d50d207ba965756028137c5842d9a05aa21cb516dad51367` |
+| `hq_n07_q2.png` | `hq_n07_q2_v02.png` | `f6ccd095c224870b8022afbb100c746128fd0f750e7e9c37dab3126cd9e42963` |
+| `hq_n07_q3.png` | `hq_n07_q3_v01.png` | `e64edb80c6631ec5bb36c9aed7bc8034bb64e7c9f732e70eacafc62e5df9a6ae` |
+| `hq_n07_q4.png` | `hq_n07_q4_v01.png` | `99777c3fd2ed488e0d45735cfb617e5527781c3a814be3afe80fef2768a4f4ef` |
+| `hq_n08_q1.png` | `hq_n08_q1_v01.png` | `93e09c0bd7430492e1bf7eeb0467c238c59520e210e79aca189e065fcbd64823` |
+| `hq_n08_q2.png` | `hq_n08_q2_v01.png` | `eb8db582d5fa9e4369653083b447548f263b6d1743199bf7a8083bb05157501e` |
+| `hq_n08_q3.png` | `hq_n08_q3_v01.png` | `bb0ba092786ef208d02710ad4626c8d831c831e8a6a3c5642cf7f22cdccfaeae` |
+| `hq_n08_q4.png` | `hq_n08_q4_v01.png` | `4da109e5b1f637b74eaf97be247c2994770708b4fb9be58cca18d85f1491ab6e` |
+| `hq_n09_q1.png` | `hq_n09_q1_v01.png` | `c6be00a260a385979bee4ddc15658fa85e838472755d6a3026723baa50576a17` |
+| `hq_n09_q2.png` | `hq_n09_q2_v01.png` | `0e5eeb98b4d267a76000e9d07fda21f3d120d372b820f949101bd59ba0225a6f` |
+| `hq_n09_q3.png` | `hq_n09_q3_v01.png` | `8da436b787f8b8780db69ce3453950973ce09df68ec5f841a537608b301a0b8d` |
+| `hq_n09_q4.png` | `hq_n09_q4_v01.png` | `c1958957b0d7824951f7f70d8878429cfb311cc3f60614548e6ca4eceae9b5b9` |
+| `hq_n10_q1.png` | `hq_n10_q1_v01.png` | `88d7e5546ae7e0453f0ef8442e4cac5f46c5c0eea4ef504b295381e6273fa05b` |
+| `hq_n10_q2.png` | `hq_n10_q2_v01.png` | `e260260766ec9a9a90351355f5a28cea3f690e3e7e88dd0ce1fd85606b5feef6` |
+| `hq_n10_q3.png` | `hq_n10_q3_v01.png` | `0bcfd5c3baa7261c3f1c7283bd80c7221b5c95f0e1ec42b83c8b651d39883f2d` |
+| `hq_n10_q4.png` | `hq_n10_q4_v01.png` | `9d815046283fb54e7045daece90101765b688ee307668d4c2688533b8577c8b7` |
+
+## Verificação
+
+- Paridade de bytes confirmada em 40/40 imagens por SHA-256.
+- Importação pelo Godot 4.7.2 reconheceu os 40 PNGs; o teste de catálogo
+  verifica carregamento e proporção nominal 16:9 sem editar os fontes.
+- As variantes descartadas e originais não foram removidas nem sobrescritas.
+- Não foi usado serviço de vendoring externo: são imagens locais aprovadas do
+  próprio projeto.
