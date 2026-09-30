@@ -80,12 +80,12 @@ func _ready() -> void:
 	prompt_label.text = ""
 
 func _unhandled_input(ev: InputEvent) -> void:
-	if not (ev is InputEventKey and ev.pressed and not ev.echo):
+	if not ev.is_pressed() or (ev is InputEventKey and ev.echo):
 		return
-	if ev.physical_keycode == KEY_ESCAPE and pause_panel.visible:
+	if (ev.is_action_pressed(Game.ACTION_RUN_PAUSE) or ev.is_action_pressed(&"ui_cancel")) and pause_panel.visible:
 		resume_pressed.emit()
 		get_viewport().set_input_as_handled()
-	elif ev.physical_keycode == KEY_C and items_panel.visible:
+	elif (ev.is_action_pressed(Game.ACTION_RUN_ITEMS) or ev.is_action_pressed(&"ui_cancel")) and items_panel.visible:
 		items_closed.emit()
 		get_viewport().set_input_as_handled()
 
@@ -96,7 +96,7 @@ var _detail_on := false
 func _process(_delta: float) -> void:
 	if not levelup_panel.visible or _detail_nodes.is_empty():
 		return
-	var on := Input.is_key_pressed(KEY_SHIFT)
+	var on := Input.is_action_pressed(Game.ACTION_OFFER_DETAILS)
 	if on != _detail_on:
 		_detail_on = on
 		for n in _detail_nodes:
@@ -167,12 +167,12 @@ func update_stats(b: Battle) -> void:
 	var pr := ""
 	for it in b.interactions:
 		if not it.used and it.kind in ["altar", "ritual", "portal", "loja", "ferreiro", "curandeiro", "ampulheta", "doacao", "aposta"] and it.pos.distance_to(h.pos) <= 1.6:
-			pr = "[E] " + {"altar": "rezar no altar", "ritual": "iniciar o ritual", "portal": "descer pelo portal",
+			pr = "[E/oeste] " + {"altar": "rezar no altar", "ritual": "iniciar o ritual", "portal": "descer pelo portal",
 				"loja": "negociar na loja", "ferreiro": "forjar no ferreiro", "curandeiro": "buscar cura", "ampulheta": "girar a ampulheta (+60 s, inimigos acumulados)", "doacao": "doar um item por uma bênção", "aposta": "arriscar moedas na mesa"}[it.kind]
 	if pr == "" and (b.stage_cleared or b.final_victory):
-		pr = "[X] Extrair ×%.2f" % b.reward_multiplier()
+		pr = "[X/norte] Extrair ×%.2f" % b.reward_multiplier()
 		if b.stage.get("next", "") != "":
-			pr += "   [E] Descer ×%.2f" % b.next_reward_multiplier()
+			pr += "   [E/oeste] Descer ×%.2f" % b.next_reward_multiplier()
 	prompt_label.text = pr
 
 func show_offer(b: Battle) -> void:
@@ -240,6 +240,8 @@ func show_offer(b: Battle) -> void:
 			btn.modulate = Color(1, 1, 1, 0.9)
 		btn.pressed.connect(func(): offer_chosen.emit(i))
 		offer_box.add_child(btn)
+		if i == 0:
+			btn.call_deferred("grab_focus")
 		if is_card:
 			var detail := (btn as OfferCard).build_detail(true)
 			if detail != null:
@@ -252,13 +254,13 @@ func show_offer(b: Battle) -> void:
 				_detail_nodes.append(wrap)
 	if b.offer.any(func(o): return o.has("brief")):
 		var hint := Label.new()
-		hint.text = "passe o mouse sobre uma opção, ou segure Shift, para ver os detalhes e a comparação"
+		hint.text = "passe o mouse, segure Shift ou pressione o analógico direito para ver detalhes e comparação"
 		hint.add_theme_font_size_override("font_size", 14)
 		hint.add_theme_color_override("font_color", Color(0.72, 0.72, 0.72))
 		hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		offer_box.add_child(hint)
 	reroll_btn.visible = b.offer_kind == "levelup"
-	reroll_btn.text = "Rerrolar (R) — %d restantes" % b.rerolls
+	reroll_btn.text = "Rerrolar (R/LB) — %d restantes" % b.rerolls
 	reroll_btn.disabled = b.rerolls <= 0
 	levelup_panel.visible = true
 
@@ -425,6 +427,7 @@ func show_items_panel(b: Battle) -> void:
 		lines.append("[b]♾ Sinergia: %s[/b]\n%s por camada descida (agora ×%d)." % [String(syn.name), Items.mods_text(syn.bonus_per_depth), mult])
 	items_desc_label.text = "\n\n".join(lines) if not lines.is_empty() else "Nenhum item, feitiço ou bênção ainda."
 	items_panel.visible = true
+	%CloseItemsBtn.call_deferred("grab_focus")
 
 func hide_items_panel() -> void:
 	items_panel.visible = false
@@ -432,8 +435,9 @@ func hide_items_panel() -> void:
 func show_pause(v: bool) -> void:
 	pause_panel.visible = v
 	if v:
-		aim_btn.text = "Mira: %s (Tab)" % ("AUTO" if Game.aim_mode() == Battle.Aim.AUTO else "MOUSE")
+		aim_btn.text = "Mira: %s (Tab / norte)" % ("AUTO" if Game.aim_mode() == Battle.Aim.AUTO else "MANUAL")
 		vol_slider.value = float(Game.profile.data.settings.volume)
+		%ResumeBtn.call_deferred("grab_focus")
 
 func show_revive_offer(b: Battle) -> void:
 	hide_offer()
@@ -470,3 +474,4 @@ func show_result(res: Dictionary, summary: Dictionary) -> void:
 		txt += "\n\nConquistas:\n" + "\n".join(names)
 	result_text.text = txt
 	result_panel.visible = true
+	%AgainBtn.call_deferred("grab_focus")

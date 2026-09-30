@@ -423,15 +423,15 @@ static func _guide_text() -> String:
 		+ "3. [b]F5[/b] abre o bloco de notas: escreva o que estranhou ou gostou. Ao fechar, o relato textual é salvo.\n" \
 		+ "4. Envie individualmente o relato, o log e os prints de [b]evidencias[/b] na task correspondente do Discord.\n\n" \
 		+ "[b]Controles do jogo[/b]\n" \
-		+ "WASD/setas: mover · Tab: alterna mira (automática / mouse) · Q/botão direito: habilidade ativa · E: interagir (altar, ritual, portal, loja, ferreiro, curandeiro, ampulheta, doação, aposta) · X: extrair após o chefe · 1-5: escolher no level-up · R: rerrolar · T ou F: velocidade 2x (só em mapa já vencido) · Esc: pausa\n" \
+		+ "Teclado/mouse: WASD/setas movem; Tab alterna mira; Q/botão direito usa habilidade; E interage; X extrai; 1-5 escolhe; R rerrola; T/F acelera; Esc pausa. Controle: analógico esquerdo/direcional move; direito mira no modo manual; RB usa habilidade; oeste interage; norte alterna mira ou extrai; LB rerrola; Start pausa; Back abre itens. Leste confirma e sul volta nas telas.\n" \
 		+ "Todas as armas atacam sozinhas. Sobreviva, evolua, derrote o chefe da fase e desça pelo portal.\n\n" \
 		+ "[b]Teclas de teste[/b]: F4 Navegador QA · F5 nota · F6 print · F11 tela cheia · F12 diagnóstico · F1 este guia\n" \
 		+ "[color=#aaaaaa]Os prints mostram a tela do jogo. Notas e log têm o nome de usuário do Windows removido.[/color]"
 
 static func game_rules_text() -> String:
 	return "[b]Objetivo[/b]\nSobreviva às ondas, evolua sua build e derrote o chefe da fase. Depois, escolha entre extrair a recompensa atual ou entrar no portal para continuar com mais risco e mais recompensa.\n\n" \
-		+ "[b]Controles[/b]\nWASD ou setas: mover · Tab: alternar mira automática/mouse · Q ou botão direito: habilidade ativa · E: interagir com altar, ritual, portal, loja, ferreiro, curandeiro, ampulheta, altar da doação e mesa de aposta · X: extrair depois do chefe · T: velocidade 2x em mapas já vencidos · Esc: pausa.\n\n" \
-		+ "[b]Combate e evolução[/b]\nSuas armas atacam automaticamente. Ao subir de nível, escolha uma melhoria com 1–5; R rerrola a oferta quando houver rerrolagens. Cada personagem tem uma habilidade ativa própria.\n\n" \
+		+ "[b]Controles[/b]\nTeclado/mouse: WASD ou setas movem; Tab alterna mira automática/manual; Q ou botão direito usa habilidade; E interage; X extrai; T acelera; Esc pausa. Controle: analógico esquerdo ou direcional move; analógico direito mira no modo manual; RB usa habilidade; oeste interage; norte alterna mira ou extrai; Start pausa; Back abre itens. Nas telas, direcional navega, leste confirma e sul volta.\n\n" \
+		+ "[b]Combate e evolução[/b]\nSuas armas atacam automaticamente. Ao subir de nível, escolha uma melhoria pelo foco ou com 1–5; R ou LB rerrola a oferta quando houver rerrolagens. Cada personagem tem uma habilidade ativa própria.\n\n" \
 		+ "[b]Decisões da run[/b]\nAltares oferecem uma bênção com uma maldição. Cada andar tem uma regra ambiental: observe os avisos e adapte seu movimento. Chefes mudam de fase quando a vida baixa.\n\n" \
 		+ "[b]Progresso[/b]\nMoedas, desbloqueios e descobertas são garantidos ao encerrar a tentativa. O portal preserva sua build e aumenta o multiplicador de recompensa; extrair encerra a run com segurança."
 
@@ -445,7 +445,18 @@ func toast(text: String) -> void:
 # ------------------------------------------------------------------ teclas
 
 func _input(ev: InputEvent) -> void:
-	if not (ev is InputEventKey) or not ev.pressed or ev.echo:
+	if not ev.is_pressed() or (ev is InputEventKey and ev.echo):
+		return
+	if ev.is_action_pressed(&"ui_cancel"):
+		if _note_open:
+			close_note()
+			get_viewport().set_input_as_handled()
+			return
+		if _guide_open and (_guide_mode == &"rules" or Game.profile.data.name != ""):
+			close_guide()
+			get_viewport().set_input_as_handled()
+			return
+	if not ev is InputEventKey:
 		return
 	var shortcut := shortcut_action(ev)
 	if shortcut == &"fullscreen":
@@ -479,13 +490,6 @@ func _input(ev: InputEvent) -> void:
 				close_guide()
 			elif not _note_open:
 				open_guide(false)
-			get_viewport().set_input_as_handled()
-	if ev.physical_keycode == KEY_ESCAPE:
-		if _note_open:
-			close_note()
-			get_viewport().set_input_as_handled()
-		elif _guide_open and (_guide_mode == &"rules" or Game.profile.data.name != ""):
-			close_guide()
 			get_viewport().set_input_as_handled()
 
 # ------------------------------------------------------------------ contexto

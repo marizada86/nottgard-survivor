@@ -13,6 +13,8 @@ const GroundDecals := preload("res://ui/ground_decals.gd")
 
 var battle: Battle
 var _speed_acc := 0.0
+var _controller_aim_active := false
+var _last_mouse_position := Vector2.INF
 var stage_root: Node2D
 var sorted: Node2D
 var hero_node: Node2D
@@ -230,35 +232,47 @@ func _unhandled_input(ev: InputEvent) -> void:
 		return
 	if battle.state == "evolve_cine":
 		# MEC-009: qualquer tecla ou clique pula a cinemática de evolução
-		if (ev is InputEventKey and ev.pressed and not ev.echo) or (ev is InputEventMouseButton and ev.pressed):
+		if (ev is InputEventKey and ev.pressed and not ev.echo) or (ev is InputEventMouseButton and ev.pressed) or (ev is InputEventJoypadButton and ev.pressed):
 			battle.skip_cine()
 			get_viewport().set_input_as_handled()
+		return
+	if not ev.is_pressed() or (ev is InputEventKey and ev.echo):
 		return
 	if battle.state == "running" and ev.is_action_pressed("hero_active"):
 		if battle.use_active(battle.aim_dir):
 			get_viewport().set_input_as_handled()
 		return
-	if ev is InputEventKey and ev.pressed and not ev.echo:
-		var k: int = ev.physical_keycode
-		if battle.state == "levelup" or battle.state == "altar" or battle.state == "item_offer" or battle.state == "shop":
-			if k >= KEY_1 and k <= KEY_9:
-				_on_choose(k - KEY_1)
-			elif k == KEY_R:
-				battle.reroll()
+	if battle.state == "levelup" or battle.state == "altar" or battle.state == "item_offer" or battle.state == "shop":
+		if ev.is_action_pressed(Game.ACTION_RUN_REROLL):
+			if battle.reroll():
 				_refresh_offer()
+			get_viewport().set_input_as_handled()
 			return
-		match k:
-			KEY_ESCAPE: _toggle_pause()
-			KEY_TAB: _toggle_aim()
-			KEY_E:
-				if battle.interact():
-					Sfx.play("click")
-			KEY_X:
-				battle.extract()
-			KEY_C:
-				_toggle_items_panel()
-			KEY_F, KEY_T:
-				battle.toggle_speed()
+		if ev is InputEventKey:
+			var offer_key: int = ev.physical_keycode
+			if offer_key >= KEY_1 and offer_key <= KEY_9:
+				_on_choose(offer_key - KEY_1)
+				get_viewport().set_input_as_handled()
+		return
+	if ev.is_action_pressed(Game.ACTION_RUN_PAUSE):
+		_toggle_pause()
+		get_viewport().set_input_as_handled()
+	elif ev.is_action_pressed(Game.ACTION_RUN_INTERACT):
+		if battle.interact():
+			Sfx.play("click")
+		get_viewport().set_input_as_handled()
+	elif ev.is_action_pressed(Game.ACTION_RUN_EXTRACT) and (battle.stage_cleared or battle.final_victory):
+		battle.extract()
+		get_viewport().set_input_as_handled()
+	elif ev.is_action_pressed(Game.ACTION_RUN_ITEMS):
+		_toggle_items_panel()
+		get_viewport().set_input_as_handled()
+	elif ev.is_action_pressed(Game.ACTION_RUN_SPEED):
+		battle.toggle_speed()
+		get_viewport().set_input_as_handled()
+	elif ev.is_action_pressed(Game.ACTION_RUN_AIM):
+		_toggle_aim()
+		get_viewport().set_input_as_handled()
 
 func _toggle_items_panel() -> void:
 	if battle.state != "running":
@@ -332,14 +346,27 @@ func _physics_process(dt: float) -> void:
 		Input.is_physical_key_pressed(KEY_D) or Input.is_physical_key_pressed(KEY_RIGHT),
 		Input.is_physical_key_pressed(KEY_W) or Input.is_physical_key_pressed(KEY_UP),
 		Input.is_physical_key_pressed(KEY_S) or Input.is_physical_key_pressed(KEY_DOWN))
+	if d == Vector2.ZERO:
+		d = Game.movement_joystick()
 	if d == Vector2.ZERO and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		var screen_to_mouse := get_global_mouse_position() - hero_node.position
 		if screen_to_mouse.length() > 4.0:
 			d = screen_to_mouse.normalized()
-	var m_ground := Iso.to_ground(get_global_mouse_position() - hero_node.position)
-	if m_ground.length() > 0.01:
-		battle.aim_dir = m_ground.normalized()
-		battle.aim_pos = battle.hero.pos + m_ground
+	var mouse_position := get_global_mouse_position()
+	if mouse_position != _last_mouse_position:
+		_controller_aim_active = false
+		_last_mouse_position = mouse_position
+	var stick_aim := Game.manual_aim_joystick()
+	if battle.aim == Battle.Aim.MOUSE and stick_aim != Vector2.ZERO:
+		_controller_aim_active = true
+		var stick_ground := Iso.to_ground(stick_aim)
+		battle.aim_dir = stick_ground.normalized()
+		battle.aim_pos = battle.hero.pos + stick_ground
+	elif battle.aim == Battle.Aim.MOUSE and not _controller_aim_active:
+		var m_ground := Iso.to_ground(mouse_position - hero_node.position)
+		if m_ground.length() > 0.01:
+			battle.aim_dir = m_ground.normalized()
+			battle.aim_pos = battle.hero.pos + m_ground
 	var prev_state := battle.state
 	battle.cleared_stages = Game.profile.data.cleared.keys()
 	_speed_acc += battle.speed_scale()

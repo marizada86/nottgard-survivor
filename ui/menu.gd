@@ -84,6 +84,7 @@ func _ready() -> void:
 	guide_btn.pressed.connect(func(): Playtest.open_guide(false))
 	reset_btn.pressed.connect(_on_reset)
 	_refresh_all()
+	hero_list.call_deferred("grab_focus")
 	var notice := Game.consume_save_notice()
 	if notice != "":
 		Playtest.toast(notice)
