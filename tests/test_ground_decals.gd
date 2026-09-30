@@ -31,6 +31,11 @@ func run() -> Array:
 			out.append("%s: faltou remendo ou trilha" % stage_id)
 	if GroundDecals.placements("docas", 701).size() != 0:
 		out.append("Docas não deve pré-visualizar decais até receber âncora seca")
+	for path in ["res://assets/decals/docas_remendo_01.png", "res://assets/decals/docas_trilha_01.png"]:
+		if not FileAccess.file_exists(path):
+			out.append("official Docas decal missing: %s" % path)
+		elif not _has_transparent_outer_band(path):
+			out.append("Docas decal has chroma background: %s" % path)
 	if preview.has_method("get_collision_layer"):
 		out.append("camada de decais não pode criar colisão")
 	if preview.z_index != 0:

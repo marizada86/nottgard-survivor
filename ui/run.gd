@@ -3,6 +3,7 @@ extends Node2D
 
 const ENEMY_VIEW := preload("res://ui/enemy_view.tscn")
 const GroundDecals := preload("res://ui/ground_decals.gd")
+const StageStructures := preload("res://ui/stage_structures.gd")
 
 @onready var slot: Node2D = $StageSlot
 @onready var under: Node2D = $Under
@@ -109,6 +110,7 @@ func _load_stage() -> void:
 		if b.is_in_group("blockers"):
 			var g := Iso.to_ground(b.position)
 			battle.hero.blockers.append(Vector3(g.x, g.y, b.block_radius))
+	StageStructures.attach_for_stage(sorted, battle.stage_id, battle.hero.pos, msize, battle.hero.blockers)
 	var bg: Array = battle.stage.bg
 	RenderingServer.set_default_clear_color(Color(float(bg[0]) / 255.0, float(bg[1]) / 255.0, float(bg[2]) / 255.0))
 	for sp in stage_root.get_node("SpawnPoints").get_children():
