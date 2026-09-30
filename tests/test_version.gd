@@ -16,6 +16,12 @@ func run() -> Array:
 		out.append("execucao de depuracao precisa liberar o perfil QA")
 	if Version.profile_from_features(["public_playtest"], true) != Version.BuildProfile.PUBLIC_PLAYTEST:
 		out.append("playtest publico precisa prevalecer sobre o modo de depuracao")
+	if not Version.qa_enabled_for_profile(Version.BuildProfile.QA_INTERNAL):
+		out.append("Navegador QA deve estar habilitado no perfil QA interno")
+	if Version.qa_enabled_for_profile(Version.BuildProfile.PUBLIC_PLAYTEST):
+		out.append("Navegador QA nao deve aparecer no playtest publico")
+	if Version.qa_enabled_for_profile(Version.BuildProfile.PRODUCTION):
+		out.append("Navegador QA nao deve aparecer na producao")
 	if not Version.playtest_tools_enabled_for_profile(Version.BuildProfile.PUBLIC_PLAYTEST):
 		out.append("build de playtest precisa expor as ferramentas autorizadas")
 	if Version.build_id() == "":
