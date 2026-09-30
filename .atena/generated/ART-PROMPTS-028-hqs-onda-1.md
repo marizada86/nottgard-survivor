@@ -2,9 +2,9 @@
 id: "ART-PROMPTS-028"
 type: "prompts-de-arte"
 title: "HQs novas — Onda 1 (HQN-02 a HQN-06)"
-status: "prepared — aprovado pelo dono (ondas do PLAN-040); aguardando geração externa, nada executado"
+status: "HQN-02 a HQN-06 geradas, aprovadas e integradas localmente sem edição de PNG conforme SPEC-100/EVID-130"
 created: "2026-09-29"
-relations: ["[[PLAN-040-hqs-novas-highlights-do-vault-2026-09-29]]", "[[ART-PROMPTS-027-hqs-novas-guia-de-estilo-e-piloto]]", "[[SPEC-080-hqs-de-transicao-do-nottcard]]"]
+relations: ["[[PLAN-040-hqs-novas-highlights-do-vault-2026-09-29]]", "[[ART-PROMPTS-027-hqs-novas-guia-de-estilo-e-piloto]]", "[[SPEC-080-hqs-de-transicao-do-nottcard]]", "[[SPEC-100-integracao-hqn-01-a-10]]", "[[EVID-130-admissao-arte-hqn-01-a-10-2026-09-30]]"]
 sources: ["F:/dev/nottgard-vault (16_Histórias, 10_Sessões, 04_Locais)", "Nottcard HQ-000", "assets/portraits/*.png"]
 ---
 
@@ -225,8 +225,10 @@ An immense iron cage stands at the end of the dead landscape, filled with the di
 2. Retratos batem com as referências; NPCs sem referência ficam em silhueta ou coerentes entre quadros.
 3. Sem texto, balão, moldura ou marca-d'água; terço inferior calmo; sem gore.
 4. Respeitar a coluna “Proibido / cuidado” de cada HQ.
-5. Entrega: PNGs 16:9 em `.atena/generated/art-candidates/hq/<id>_q1..q4.png`; redimensionamento e admissão só após aprovação (SPEC-080).
+5. As imagens aprovadas permanecem em `.atena/generated/art-candidates/hq/`
+   e foram admitidas sem redimensionamento, conforme a decisão da SPEC-100.
 
 ## Gate
 
-Preparado, não executado. Depende da geração externa no ChatGPT.
+Concluído para HQN-02 a HQN-06. Os arquivos finais, hashes e variantes aprovadas
+estão registrados em EVID-130; os candidatos originais foram preservados.

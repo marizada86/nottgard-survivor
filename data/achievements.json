@@ -33,6 +33,7 @@
     {"id":"bio_zynara","name":"Biografia: Zynara","desc":"Vença uma fase jogando com Zynara.","stat":"hero_cleared_zynara","value":1,"reward":{"bio":"zynara","text":"Biografia de Zynara no Quartel"}},
     {"id":"bio_nyrelia","name":"Biografia: Nyrelia","desc":"Vença uma fase jogando com Nyrelia.","stat":"hero_cleared_nyrelia","value":1,"reward":{"bio":"nyrelia","text":"Biografia de Nyrelia no Quartel"}},
     {"id":"bio_korrak","name":"Biografia: Korrak","desc":"Vença uma fase jogando com Korrak.","stat":"hero_cleared_korrak","value":1,"reward":{"bio":"korrak","text":"Biografia de Korrak no Quartel"}},
-    {"id":"bio_leoric","name":"Biografia: Leoric","desc":"Vença uma fase jogando com Leoric.","stat":"hero_cleared_leoric","value":1,"reward":{"bio":"leoric","text":"Biografia de Leoric no Quartel"}}
+    {"id":"bio_leoric","name":"Biografia: Leoric","desc":"Vença uma fase jogando com Leoric.","stat":"hero_cleared_leoric","value":1,"reward":{"bio":"leoric","text":"Biografia de Leoric no Quartel"}},
+    {"id":"cronista_de_nottgard","name":"Cronista de Nottgard","desc":"Leia 5 HQs completas.","stat":"hqs_seen","value":5,"reward":{"coins":300,"text":"300 moedas"}}
   ]
 }

@@ -310,7 +310,7 @@ func _show_codex(i: int) -> void:
 func _fill_hqs() -> void:
 	hq_list.clear()
 	hq_ids.clear()
-	for hq_id in HQCatalog.unlocked_ids(Game.profile.data.achievements):
+	for hq_id in HQCatalog.unlocked_ids(Game.profile.data):
 		var hq: Dictionary = Data.table("hqs")[hq_id]
 		hq_ids.append(hq_id)
 		hq_list.add_item(String(hq.get("title", hq_id)))
@@ -344,7 +344,13 @@ func _open_selected_hq() -> void:
 	screen.call_deferred("start_hq", hq)
 	while not bool(screen.get("is_closed")):
 		await get_tree().process_frame
+	var completed := bool(screen.get("completed"))
 	screen.queue_free()
+	if completed:
+		var newly_earned: Array = Game.profile.mark_hq_seen(hq_id)
+		Game.save()
+		if not newly_earned.is_empty():
+			_fill_achievements()
 
 func _on_reset() -> void:
 	if not _reset_armed:

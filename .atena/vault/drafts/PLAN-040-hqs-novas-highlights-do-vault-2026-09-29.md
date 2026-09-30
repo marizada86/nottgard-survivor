@@ -1,13 +1,15 @@
 ---
 id: "PLAN-040"
 title: "HQs novas: highlights do vault, gatilhos e conquistas"
-status: "Ondas 1 e 2 aprovadas pelo dono em 2026-09-29 (recomendações padrão adotadas em D-N2 a D-N6); prompts prontos em ART-PROMPTS-028 e 029; nada gerado nem implementado"
+status: "Ondas 1 e 2 aprovadas; arte e integração principal HQN-01 a HQN-14 concluídas localmente em 2026-09-30; Trilha C e Nottcard legado permanecem fora do lote"
 created: "2026-09-29"
 relations:
   - "[[SPEC-080-hqs-de-transicao-do-nottcard]]"
   - "[[ART-PROMPTS-027-hqs-novas-guia-de-estilo-e-piloto]]"
   - "[[RESEARCH-001-abismo-bestiario-visual-2026-09-21]]"
   - "[[SPEC-062-fila-de-geracao-externa-de-assets]]"
+  - "[[SPEC-100-integracao-hqn-01-a-10]]"
+  - "[[EVID-130-admissao-arte-hqn-01-a-10-2026-09-30]]"
 ---
 
 # PLAN-040 — HQs novas: highlights do vault
@@ -148,16 +150,16 @@ narrador em quase todos, fala de personagem só quando o vault registra a fala.
 Onde o vault tem citação literal (ex.: "Seremos um só", "Crianças não precisam
 carregar guerra", "Alguma coisa nos viu primeiro"), usar essa frase.
 
-## Decisões pendentes (dono)
+## Decisões registradas (dono, 2026-09-29)
 
-| ID | Pergunta | Recomendação |
+| ID | Tema | Decisão |
 |---|---|---|
-| D-N1 | Aprovar o catálogo ou cortar HQs? | Aprovar a Onda 1 agora e revisar a Onda 2 depois |
-| D-N2 | Nível de spoiler: mostrar a morte de Helion (HQN-03), Durvall como armadura da Síntese (HQN-10) e a seção "cânone do mestre" | Mostrar Helion e a Síntese como aparecem para o grupo (sem revelar o receptáculo). Isso já está no jogo em parte (chefe Síntese Abissal) |
-| D-N3 | Classificação de conteúdo: o quanto de violência e crueldade é aceitável | Sugestão do princípio 4: tudo sugerido, nada explícito |
-| D-N4 | Vender a Trilha C (R4) ou deixar tudo por conquista | Vender só a Trilha C |
-| D-N5 | Aprovar as 3 conquistas novas (R3) | Aprovar |
-| D-N6 | Quem escreve o texto final dos quadros | Atena propõe a partir do vault, dono revisa |
+| D-N1 | Catálogo e ondas | Ondas 1 e 2 aprovadas; integrar as HQs centrais e manter Trilha C opcional. |
+| D-N2 | Spoilers | Mostrar Helion e a Síntese como vistos pelo grupo, sem revelar o receptáculo nem o cânone do mestre. |
+| D-N3 | Violência | Sugerida, nunca explícita; sem gore. |
+| D-N4 | Trilha C | Vender somente as HQs opcionais da Trilha C; HQN-15 a HQN-18 seguem sem arte integrada. |
+| D-N5 | Conquistas | Três aprovadas em princípio. Cronista está na SPEC-100; Guardião com Broche e Arquivo Completo aguardam o lote Nottcard necessário. |
+| D-N6 | Textos da UI | Atena propõe as legendas a partir das fontes locais aprovadas; não acrescentar nem reescrever lore nesta integração. |
 
 Continuam valendo as decisões D1 a D5 da SPEC-080 (ordem, `hq_003_q3`, gatilho,
 Diário, redimensionamento).
@@ -176,12 +178,10 @@ Diário, redimensionamento).
 
 ## Próximos passos
 
-1. Dono responde D-N1 a D-N6 (e D1 a D5 da SPEC-080).
-2. Gerar o piloto HQN-01 no ChatGPT com os prompts de ART-PROMPTS-027.
-3. Avaliar consistência dos quadros; ajustar o guia de estilo.
-4. Escrever os prompts da Onda 1 (ART-PROMPTS-028) e o texto dos quadros.
-5. Atualizar a SPEC-080 (dados, gatilhos e conquistas) e só então implementar.
+1. A integração principal HQN-01 a HQN-14 foi executada conforme SPEC-099 e SPEC-100; ver EVID-128 e EVID-130.
+2. Manter HQN-15 a HQN-18 fora até aprovação de uma especificação econômica e geração de arte.
+3. Resolver D1–D5 da SPEC-080 antes de integrar as HQs legadas `hq_001` a `hq_003`.
 
 ## Gate
 
-Proposta. Nenhum arquivo do jogo foi alterado e nenhuma imagem foi gerada.
+O arco principal HQN-01 a HQN-14 está integrado na branch local. A Trilha C não foi gerada; as HQs Nottcard `hq_001` a `hq_003` continuam bloqueadas pelas decisões da SPEC-080.

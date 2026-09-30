@@ -80,6 +80,26 @@ func run() -> Array:
 	var fresh_settings: Dictionary = Profile.new().data.settings
 	if fresh_settings.resolution != "1280x720" or not fresh_settings.has("music_muted") or not fresh_settings.has("ambience_muted"):
 		out.append("perfil novo não contém as preferências de áudio e vídeo")
+	var legacy_hq_profile := Profile.new({"stats": {"runs": 3}, "cleared": {"docas": true}})
+	if not legacy_hq_profile.data.has("hqs_seen") or not legacy_hq_profile.data.hqs_seen.is_empty():
+		out.append("save antigo deveria migrar para hqs_seen vazio sem perda")
+	var hq_reader := Profile.new()
+	for hq_id in ["hqn_01", "hqn_02", "hqn_03", "hqn_04"]:
+		if not hq_reader.mark_hq_seen(hq_id).is_empty():
+			out.append("Cronista não deveria liberar antes de cinco HQs")
+	var cronista_unlocks := hq_reader.mark_hq_seen("hqn_05")
+	if cronista_unlocks != ["cronista_de_nottgard"] or not hq_reader.data.achievements.has("cronista_de_nottgard") or hq_reader.coins() != 300:
+		out.append("quinta HQ completa deveria liberar Cronista e 300 moedas")
+	if not hq_reader.mark_hq_seen("hqn_05").is_empty() or hq_reader.coins() != 300:
+		out.append("reler uma HQ não deveria repetir progresso ou recompensa")
+	var saved_hq_reader := Profile.new(JSON.parse_string(JSON.stringify(hq_reader.data)))
+	if saved_hq_reader.data.hqs_seen.size() != 5 or not saved_hq_reader.data.achievements.has("cronista_de_nottgard") or saved_hq_reader.coins() != 300:
+		out.append("leituras e recompensa do Cronista deveriam sobreviver à serialização")
+	var milestone_progress := Profile.new()
+	if not milestone_progress.mark_stage_reached("shedaklah") or milestone_progress.mark_stage_reached("shedaklah"):
+		out.append("registro de entrada em fase deveria ser idempotente")
+	if not milestone_progress.mark_stage_cleared("docas") or milestone_progress.mark_stage_cleared("docas"):
+		out.append("registro de vitória de fase deveria ser idempotente")
 	# bônus de conquistas entram no herói
 	var b := Battle.new(1, "durvall", "dagruve", {"meta_mods": p.meta_mods(), "bonus_mods": p.bonus_mods()})
 	if b.hero.m("dmg_pct") <= 0.0 and p.data.achievements.has("massacre"):

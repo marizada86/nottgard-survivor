@@ -11,6 +11,7 @@ signal closed
 var panels: Array = []
 var panel_index := 0
 var is_closed := false
+var completed := false
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
@@ -20,6 +21,7 @@ func start_hq(hq: Dictionary) -> void:
 	panels = hq.get("panels", [])
 	panel_index = 0
 	is_closed = false
+	completed = false
 	visible = true
 	if panels.is_empty():
 		finish()
@@ -30,6 +32,7 @@ func advance() -> void:
 	if is_closed:
 		return
 	if panel_index + 1 >= panels.size():
+		completed = true
 		finish()
 		return
 	panel_index += 1

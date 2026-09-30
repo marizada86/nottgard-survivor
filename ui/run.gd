@@ -28,6 +28,8 @@ var _shake := 0.0
 var _numbers := 0
 var _paused := false
 var _items_shown := false
+var _stage_clear_events_seen: Dictionary = {}
+var _final_victory_event_seen := false
 var _divine_aura: Line2D
 var _divine_aura_accent: Line2D
 var _encounter_layer: CanvasLayer
@@ -69,6 +71,8 @@ func _ready() -> void:
 	if battle.state == "revive_offer":
 		hud.show_revive_offer(battle)
 	hud.toast("%s — %s" % [battle.stage.name, battle.stage.sub], Color(0.9, 0.85, 0.6))
+	await _present_hqs(HQCatalog.newly_triggered_ids(Game.profile.data, "first_run"))
+	await _record_stage_reached(battle.stage_id)
 
 func playtest_context() -> Dictionary:
 	var h := battle.hero
@@ -383,6 +387,8 @@ func _physics_process(dt: float) -> void:
 	if battle.stage_changed:
 		_load_stage()
 		battle.hero.pos = Iso.to_ground(start_pos)
+		await _record_stage_reached(battle.stage_id)
+	await _process_hq_milestones()
 	_sync()
 	_consume_events()
 	hud.update_stats(battle)
@@ -435,6 +441,32 @@ func _show_result() -> void:
 	Sfx.play("result.victory" if res.won else "result.defeat", -4.0)
 	Sfx.start_music("victory" if res.won else "defeat")
 
+func _record_stage_reached(stage_id: String) -> void:
+	var hq_ids := HQCatalog.newly_triggered_ids(Game.profile.data, "stage_reached", stage_id)
+	if Game.profile.mark_stage_reached(stage_id):
+		Game.save()
+	await _present_hqs(hq_ids)
+
+func _process_hq_milestones() -> void:
+	if battle.final_victory and not _final_victory_event_seen:
+		_final_victory_event_seen = true
+		await _record_stage_cleared(battle.stage_id, "final_victory")
+	if battle.stage_cleared and not _stage_clear_events_seen.has(battle.stage_id):
+		_stage_clear_events_seen[battle.stage_id] = true
+		await _record_stage_cleared(battle.stage_id, "stage_cleared")
+
+func _record_stage_cleared(stage_id: String, event_type: String) -> void:
+	var hq_ids := HQCatalog.newly_triggered_ids(Game.profile.data, event_type, stage_id)
+	var changed := Game.profile.mark_stage_reached(stage_id)
+	changed = Game.profile.mark_stage_cleared(stage_id) or changed
+	if changed:
+		Game.save()
+	await _present_hqs(hq_ids)
+
+func _present_hqs(hq_ids: Array[String]) -> void:
+	for hq_id in hq_ids:
+		await _present_hq(hq_id)
+
 func _present_hq(hq_id: String) -> void:
 	var hq: Dictionary = Data.table("hqs").get(hq_id, {})
 	if hq.is_empty():
@@ -446,8 +478,18 @@ func _present_hq(hq_id: String) -> void:
 	screen.call_deferred("start_hq", hq)
 	while not bool(screen.get("is_closed")):
 		await get_tree().process_frame
+	var completed := bool(screen.get("completed"))
 	get_tree().paused = false
 	screen.queue_free()
+	if completed:
+		var already_seen: bool = Game.profile.data.hqs_seen.has(hq_id)
+		var newly_earned: Array = Game.profile.mark_hq_seen(hq_id)
+		if not already_seen:
+			Game.save()
+		for achievement_id in newly_earned:
+			for achievement in Data.table("achievements").achievements:
+				if achievement.id == achievement_id:
+					hud.toast("Conquista: %s (+%d moedas)" % [achievement.name, int(achievement.reward.get("coins", 0))], Color(0.95, 0.8, 0.42))
 
 # ------------------------------------------------------------------ efeitos
 

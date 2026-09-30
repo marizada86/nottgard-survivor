@@ -2,9 +2,9 @@
 id: "ART-PROMPTS-029"
 type: "prompts-de-arte"
 title: "HQs novas — Onda 2 (HQN-07 a HQN-14)"
-status: "parcialmente integrada — HQN-11 a HQN-14 admitidas em assets/hq; HQN-07 a HQN-10 seguem como candidatas aprovadas"
+status: "HQN-07 a HQN-14 integradas localmente; HQN-07 a HQN-10 sem edição de PNG conforme SPEC-100/EVID-130"
 created: "2026-09-29"
-relations: ["[[PLAN-040-hqs-novas-highlights-do-vault-2026-09-29]]", "[[ART-PROMPTS-027-hqs-novas-guia-de-estilo-e-piloto]]", "[[SPEC-080-hqs-de-transicao-do-nottcard]]", "[[EVID-128-integracao-hqs-hqn-11-a-14-2026-09-30]]"]
+relations: ["[[PLAN-040-hqs-novas-highlights-do-vault-2026-09-29]]", "[[ART-PROMPTS-027-hqs-novas-guia-de-estilo-e-piloto]]", "[[SPEC-080-hqs-de-transicao-do-nottcard]]", "[[SPEC-100-integracao-hqn-01-a-10]]", "[[EVID-128-integracao-hqs-hqn-11-a-14-2026-09-30]]", "[[EVID-130-admissao-arte-hqn-01-a-10-2026-09-30]]"]
 sources: ["F:/dev/nottgard-vault (16_Histórias, 10_Sessões, 04_Locais)", "Nottcard HQ-000", "assets/portraits/*.png"]
 ---
 
@@ -345,11 +345,12 @@ The masked priestess places a gentle hand on the tiefling's shoulder, her head s
 2. Retratos batem com as referências; NPCs sem referência ficam em silhueta ou coerentes entre quadros.
 3. Sem texto, balão, moldura ou marca-d'água; terço inferior calmo; sem gore.
 4. Respeitar a coluna “Proibido / cuidado” de cada HQ.
-5. Entrega: PNGs 16:9 em `.atena/generated/art-candidates/hq/<id>_q1..q4.png`; redimensionamento e admissão só após aprovação (SPEC-080).
+5. As imagens aprovadas permanecem em `.atena/generated/art-candidates/hq/`
+   e foram admitidas sem redimensionamento, conforme a decisão da SPEC-100.
 
 ## Estado de geração local
 
-- HQN-07 a HQN-10: candidatas locais e correções aprovadas; ver
+- HQN-07 a HQN-10: imagens finais admitidas e hash-verificadas; ver
   [[EVID-116-hqn-07-candidatas-2026-09-29]],
   [[EVID-117-hqn-08-candidatas-2026-09-29]],
   [[EVID-118-hqn-09-candidatas-2026-09-29]],
@@ -360,8 +361,8 @@ The masked priestess places a gentle hand on the tiefling's shoulder, her head s
   [[EVID-124-hqn-11-a-14-candidatas-2026-09-30]] e
   [[EVID-128-integracao-hqs-hqn-11-a-14-2026-09-30]].
 - As fontes aprovadas permanecem preservadas em
-  `.atena/generated/art-candidates/hq/`; HQN-07 a HQN-10 ainda não foram
-  admitidas em `assets/`.
+  `.atena/generated/art-candidates/hq/`; HQN-07 a HQN-10 foram admitidas em
+  `assets/hq/` sem edição, com as seis correções aprovadas de Leoric.
 - HQN-14 Q1 segue a clarificação do dono de que a figura encapuzada é Nyrelia;
   a v02 aprovada foi preservada junto da v01 anterior. Os textos dos prompts
   deste arquivo não foram alterados nesta execução.

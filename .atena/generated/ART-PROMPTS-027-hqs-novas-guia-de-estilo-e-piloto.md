@@ -2,9 +2,9 @@
 id: "ART-PROMPTS-027"
 type: "prompts-de-arte"
 title: "HQs novas — guia de estilo e piloto 'Uma Noite Sem Fim'"
-status: "candidatas aprovadas pelo dono — piloto hq_n01 pendente de integração; ondas de HQ seguem em ART-PROMPTS-028 e 029"
+status: "piloto HQN-01 integrado sem alteração dos PNGs; HQN-02 a HQN-14 integradas conforme SPEC-100 e evidências locais"
 created: "2026-09-29"
-relations: ["[[PLAN-040-hqs-novas-highlights-do-vault-2026-09-29]]", "[[SPEC-080-hqs-de-transicao-do-nottcard]]", "[[SPEC-062-fila-de-geracao-externa-de-assets]]"]
+relations: ["[[PLAN-040-hqs-novas-highlights-do-vault-2026-09-29]]", "[[SPEC-080-hqs-de-transicao-do-nottcard]]", "[[SPEC-062-fila-de-geracao-externa-de-assets]]", "[[SPEC-100-integracao-hqn-01-a-10]]", "[[EVID-130-admissao-arte-hqn-01-a-10-2026-09-30]]"]
 sources: ["nottgard-vault (github.com/marizada86/nottgard-vault): 01_Campanha, 16_Histórias, 10_Sessões", "Nottcard HQ-000 (guia de produção)", "Nottcard assets/hq/ (hq_001 a hq_003)", "assets/portraits/*.png"]
 ---
 
@@ -104,12 +104,14 @@ edges. Characters must match the attached reference portraits exactly.*
 3. Kayron, Durvall, Sylas e Maelor batem com os retratos anexados.
 4. Sem texto, balão, moldura ou marca-d'água; terço inferior calmo.
 5. Sem gore e sem nada posterior à Sessão 01.
-6. Entrega: 4 PNGs 16:9 em `.atena/generated/art-candidates/hq/hq_n01_q1..q4.png`.
-   Redimensionamento para 1280×720 e admissão só após aprovação do dono.
+6. Entrega: os quatro PNGs aprovados do piloto permanecem preservados em
+   `.atena/generated/art-candidates/hq/` e foram admitidos sem edição conforme
+   SPEC-100; o leitor preserva a proporção na tela.
 
 ## Gate
 
 As quatro candidatas do piloto `hq_n01` foram geradas e aprovadas pelo dono em
-2026-09-29 e estão em `.atena/generated/art-candidates/hq/`. A integração
-continua pendente da implementação da HQ e da validação de fidelidade aos
-retratos.
+2026-09-29 e estão preservadas em `.atena/generated/art-candidates/hq/`. A
+integração local de HQN-01 a HQN-10 está registrada na SPEC-100 e EVID-130; a
+fidelidade ao retrato de Leoric foi atualizada nas seis variantes aprovadas em
+EVID-123.
