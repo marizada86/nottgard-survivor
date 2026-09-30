@@ -111,5 +111,5 @@ Origem: [PLAN-038](../vault/drafts/PLAN-038-atualizacao-pos-playtests-t01-t02-t0
 
 | Versão | Tipo | Publicada | Commit da build | Avaliada em |
 |---|---|---|---|---|
-| 0.2.0 | Major | 2026-09-29 (release `latest`, Playtest v0.2.0) | commit no título do release (`fce670d` na primeira publicação; republicada a cada push na `main`) | — (aguardando testers) |
+| 0.2.0 | Major | 2026-09-29 (release `latest`, Playtest v0.2.0) | `adc9ae6` (tag `latest` em 2026-09-30; primeira publicação: `fce670d`; republicada a cada push na `main`) | — (aguardando testers) |
 | 0.1.0 | Major (primeira) | 2026-09-29 (playtest T01, T02, T03) | não registrado (builds anteriores ao TOOL-001) | EVID-106, 107, 108 |
