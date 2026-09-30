@@ -42,5 +42,6 @@ encerrar. Não afetaram o resultado da suíte nem o código de saída do smoke t
 ## Commits locais
 
 - Arte: `e03942f` — `Add approved HQN-01 to HQN-10 artwork`.
-- Mecânica e reconciliação: será registrado após a criação do commit local.
+- Mecânica e documentação: `001b1a6` —
+  `Integrate HQN-01 to HQN-10 story comics`.
 - Não houve push, PR ou merge.

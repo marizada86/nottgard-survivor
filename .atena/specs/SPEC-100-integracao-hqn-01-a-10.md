@@ -1,7 +1,7 @@
 ---
 id: "SPEC-100"
 title: "Integração das HQN-01 a HQN-10 no jogo"
-status: "aprovada — execução local em andamento"
+status: "concluída — execução e verificação locais"
 created: "2026-09-30"
 relations:
   - "[[PLAN-040-hqs-novas-highlights-do-vault-2026-09-29]]"
@@ -151,6 +151,10 @@ Exibição e estado:
 
 ## Evidência e reconciliação
 
-Pendente de aprovação e execução. A evidência será criada em `.atena/evidence/`
-com a tabela de variantes finais e hashes, resultados dos testes e referências
-aos commits locais.
+Execução e verificação concluídas em 2026-09-30. Consultar EVID-130 para as
+variantes finais e hashes, e EVID-131 para critérios, testes e reconciliação.
+
+- Arte: `e03942f` — `Add approved HQN-01 to HQN-10 artwork`.
+- Mecânica e documentação: `001b1a6` —
+  `Integrate HQN-01 to HQN-10 story comics`.
+- Não houve push, PR ou merge.
