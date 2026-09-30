@@ -79,6 +79,17 @@ func _ready() -> void:
 			for i in 5:
 				run.battle.give_item(Items.roll(run.battle.rng, 4, 3.0))
 			run.battle.give_item(Items.unique(Data.table("items").uniques[0]))
+		if "fullhud" in flags:
+			# Lista do canto inferior esquerdo no limite: armas, passivas, equipamentos e bênçãos.
+			for wid in Data.table("weapons").keys().slice(0, 6):
+				if not run.battle.hero.weapons.any(func(w): return w.id == wid):
+					run.battle.hero.weapons.append(Weapon.make(String(wid)))
+			for pid in Data.table("passives").keys().slice(0, 5):
+				run.battle.hero.passives[pid] = 2
+			for i in 5:
+				run.battle.give_item(Items.roll(run.battle.rng, 4, 3.0))
+			run.battle.give_item(Items.unique(Data.table("items").uniques[0]))
+			run.battle.hero.boons.append(Data.table("boons").boons[0])
 		if "vfx" in flags:
 			_seed_vfx_areas(run)
 		if "styx" in flags:
