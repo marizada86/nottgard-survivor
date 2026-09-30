@@ -2,7 +2,7 @@
 id: "ART-PROMPTS-026"
 type: "prompts-de-arte"
 title: "Lote 2 — camada de cenário por bioma (estruturas, remendos de solo e trilhas)"
-status: "em andamento — geração no ChatGPT iniciada pelo dono em 2026-09-29; não misturar com as Ondas de HQ (ART-PROMPTS-028 e 029)"
+status: "16 decais admitidos — Docas e estruturas pendentes; ondas de HQ seguem em ART-PROMPTS-028 e 029"
 created: "2026-09-29"
 relations: ["[[SPEC-062-fila-de-geracao-externa-de-assets]]", "[[ART-PROMPTS-024-cenario-e-quebraveis-por-bioma]]", "[[ART-PROMPTS-007-biomas-props-thumbnails]]", "[[SPEC-042-ancoras-artisticas-e-sombras-de-props]]", "[[RESEARCH-001-abismo-bestiario-visual-2026-09-21]]"]
 sources: ["backlog/ARTE.md ART-012", "EVID-106 IN-010, IN-018", "BUG-013", "data/stages.json", "RESEARCH-001", "ART-PROMPTS-007", "assets/stages/*_thumb.png"]
@@ -24,6 +24,15 @@ sensação de lugar. O lote acrescenta **três camadas**, nove biomas, **27
 imagens**.
 
 Nada foi gerado. Este documento só prepara os prompts e as recomendações.
+
+## Reconciliação de execução — 2026-09-29
+
+- Remendo e trilha de Dagruve, Shedaklah, Molor, Durão, Feng-tu,
+  Shendilavri, Goranthis e Pilares foram aprovados visualmente, normalizados,
+  validados e admitidos em `assets/decals/`.
+- Docas permanece sem decal: a cena ainda não fornece uma âncora seca de cais.
+- As nove estruturas seguem como candidatas e as HQs pertencem a uma
+  integração independente.
 
 ## Recomendação da Atena (resposta a IN-010 / IN-018)
 
@@ -259,6 +268,7 @@ linguagem visual. Por isso os três prompts usam fragmentos de outras camadas.
 
 ## Gate
 
-Preparado, não executado. Começa pelo piloto de Dagruve (3 imagens). O dono
-gera e devolve os PNGs brutos; a sessão normaliza, valida a leitura sobre o
-piso real e apresenta uma prancha. Registro de evidência: `EVID-109`.
+As 27 candidatas brutas foram geradas e aprovadas pelo dono em 2026-09-29, preservadas em
+`.atena/generated/art-candidates/scenery/` e normalizadas para revisão em
+`.atena/generated/art-candidates/scenery-normalized/`. A admissão continua
+bloqueada até o fechamento visual do BUG-013 e a spec de integração de decais.

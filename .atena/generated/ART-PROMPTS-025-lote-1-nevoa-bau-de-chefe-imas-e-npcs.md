@@ -2,7 +2,7 @@
 id: "ART-PROMPTS-025"
 type: "prompts-de-arte"
 title: "Lote 1 — névoa, baú de chefe, ímã de XP e NPCs de evento"
-status: "em andamento — geração no ChatGPT iniciada pelo dono em 2026-09-29; não misturar com as Ondas de HQ (ART-PROMPTS-028 e 029)"
+status: "executado — P01–P08 admitidos em 2026-09-29; ondas de HQ seguem em ART-PROMPTS-028 e 029"
 created: "2026-09-29"
 relations: ["[[SPEC-062-fila-de-geracao-externa-de-assets]]", "[[ART-PROMPTS-024-cenario-e-quebraveis-por-bioma]]", "[[SPEC-034-docas-prompts-introducao-chefes-e-mare-de-nevoa]]", "[[SPEC-064-eventos-economicos-loja-ferreiro-curandeiro]]"]
 sources: ["backlog/ARTE.md ART-008, ART-009, ART-011, ART-015", "EVID-106 IN-002, IN-003, IN-013", "EVID-107 IN-026", "RESEARCH-003", "assets/interactions/chest_closed.png", "assets/pickups/xp_shard.png"]
@@ -22,7 +22,9 @@ com decisão de design já tomada nos playtests:
 | ART-015 | Ímã de experiência mais evidente | 1 |
 | ART-009 | Assets de loja, ferreiro e curandeiro | 3 |
 
-Total: **8 imagens**. Nenhuma foi gerada; este documento só prepara os prompts.
+Total: **8 imagens**. P01–P08 foram geradas, aprovadas pelo dono e admitidas.
+P01 foi normalizada a partir da candidata v03 e passou no requisito de emenda
+sem costura.
 Os itens de ARTE.md que **não** entram aqui e o motivo estão na seção final.
 
 ## Sabor Nottgard
@@ -161,6 +163,6 @@ verde/dourado suave = curandeiro). Esse é o defeito relatado por 2 jogadores.
 
 ## Gate
 
-Preparado, não executado. Após o dono gerar e devolver os PNGs brutos, a
-sessão normaliza, valida em runtime, apresenta prancha de revisão e só então
-admite, registrando a evidência (`EVID-109` é o próximo número livre).
+Execução registrada em [[EVID-110-lote-1-admissao-2026-09-29]]: o dono aprovou
+P01–P08. Os oito PNGs foram normalizados e admitidos; P01 passou no teste de
+emenda após a normalização da candidata v03.

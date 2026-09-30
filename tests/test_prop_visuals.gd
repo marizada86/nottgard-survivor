@@ -21,11 +21,10 @@ func run() -> Array:
 				out.append("modo de sombra inválido: %s" % path)
 			if shadow_mode == "dynamic" and not profile.has("shadow_size"):
 				out.append("sombra dinâmica sem dimensão: %s" % path)
-	# BUG-013: com sombra dinâmica, o contato declarado não pode ficar acima da base opaca da arte (senão o objeto "flutua")
+	# BUG-013: todo prop catalogado deve alinhar a âncora à base opaca, inclusive
+	# os que não recebem sombra dinâmica (docas, margens, ossos e redes).
 	for path in profiles:
 		var fp: Dictionary = profiles[path]
-		if String(fp.get("shadow_mode", "")) != "dynamic":
-			continue
 		var img := Image.load_from_file(ProjectSettings.globalize_path(String(path)))
 		if img == null:
 			continue
@@ -39,9 +38,9 @@ func run() -> Array:
 			if opaque:
 				base_row = y + 1
 				break
-		var lift_px := (float(fp.contact_anchor[1]) - float(base_row) / float(img.get_height())) * 80.0
-		if lift_px > 2.5:
-			out.append("prop flutuando %.1fpx acima do chão: %s" % [lift_px, path])
+		var contact_delta_px := (float(fp.contact_anchor[1]) - float(base_row) / float(img.get_height())) * 80.0
+		if absf(contact_delta_px) > 2.0:
+			out.append("âncora fora da tolerância em %+.1fpx: %s" % [contact_delta_px, path])
 	var prop := Prop.new()
 	prop._texture_path = "res://assets/props/doca_01.png"
 	if String(prop._visual_profile().get("shadow_mode", "")) != "none":

@@ -2,6 +2,7 @@ extends Node2D
 ## Controla a run: cena da fase (ui/stages/*.tscn), simulação (Battle), efeitos e HUD.
 
 const ENEMY_VIEW := preload("res://ui/enemy_view.tscn")
+const GroundDecals := preload("res://ui/ground_decals.gd")
 
 @onready var slot: Node2D = $StageSlot
 @onready var under: Node2D = $Under
@@ -29,7 +30,13 @@ var _boss_intro_panel: Control
 var _boss_intro_art: TextureRect
 var _boss_intro_title: Label
 var _boss_intro_subtitle: Label
-var _fog_edges: Array[ColorRect] = []
+var _fog_edges: Array[TextureRect] = []
+var _texture_cache: Dictionary = {}
+
+func _texture(path: String) -> Texture2D:
+	if not _texture_cache.has(path):
+		_texture_cache[path] = load(path) if ResourceLoader.exists(path) else null
+	return _texture_cache[path]
 
 func _ready() -> void:
 	Game.screen_name = "run"
@@ -79,6 +86,13 @@ func _load_stage() -> void:
 	hero_node = sorted.get_node("Hero")
 	hero_node.apply_hero(battle.hero.id)
 	var ground: Node2D = stage_root.get_node("Ground")
+	var decals := GroundDecals.new()
+	decals.name = "GroundDecalsPreview"
+	decals.stage_id = battle.stage_id
+	decals.visual_seed = int(ground.get("visual_seed"))
+	# As candidatas permanecem no cofre: só o sandbox de QA pode desenhá-las.
+	decals.candidate_preview = Game.qa_sandbox
+	stage_root.add_child(decals)
 	var msize := Vector2(ground.map_size)
 	TerrainLayout.scale = msize.x / 40.0  # MEC-012: layouts foram desenhados para 40x40
 	battle.map_size = msize
@@ -110,8 +124,11 @@ func _setup_encounter_overlays() -> void:
 	_encounter_layer.layer = 20
 	add_child(_encounter_layer)
 	for edge in 4:
-		var fog := ColorRect.new()
-		fog.color = Color(0.18, 0.42, 0.25, 0.0)
+		var fog := TextureRect.new()
+		fog.texture = _texture("res://assets/fx/nevoa_borda_01.png")
+		fog.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		fog.stretch_mode = TextureRect.STRETCH_SCALE
+		fog.modulate = Color(0.34, 0.62, 0.46, 0.0)
 		fog.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		fog.visible = false
 		_encounter_layer.add_child(fog)
@@ -181,15 +198,27 @@ func _update_fog_overlay() -> void:
 	var alpha := 0.08 if battle.fog_state == "warning" else 0.12 + battle.fog_intensity * 0.20
 	for fog in _fog_edges:
 		fog.visible = true
-		fog.color.a = alpha
-	_fog_edges[0].position = Vector2.ZERO
-	_fog_edges[0].size = Vector2(depth, viewport_size.y)
-	_fog_edges[1].position = Vector2(viewport_size.x - depth, 0.0)
-	_fog_edges[1].size = Vector2(depth, viewport_size.y)
-	_fog_edges[2].position = Vector2.ZERO
-	_fog_edges[2].size = Vector2(viewport_size.x, depth)
-	_fog_edges[3].position = Vector2(0.0, viewport_size.y - depth)
-	_fog_edges[3].size = Vector2(viewport_size.x, depth)
+		fog.modulate.a = alpha
+	var left := _fog_edges[0]
+	left.position = Vector2(0.0, viewport_size.y)
+	left.size = Vector2(viewport_size.y, depth)
+	left.rotation = -PI * 0.5
+	left.flip_v = true
+	var right := _fog_edges[1]
+	right.position = Vector2(viewport_size.x, 0.0)
+	right.size = Vector2(viewport_size.y, depth)
+	right.rotation = PI * 0.5
+	right.flip_v = true
+	var top := _fog_edges[2]
+	top.position = Vector2.ZERO
+	top.size = Vector2(viewport_size.x, depth)
+	top.rotation = 0.0
+	top.flip_v = true
+	var bottom := _fog_edges[3]
+	bottom.position = Vector2(0.0, viewport_size.y - depth)
+	bottom.size = Vector2(viewport_size.x, depth)
+	bottom.rotation = 0.0
+	bottom.flip_v = false
 
 func fog_state_is_inactive() -> bool:
 	return battle.fog_state == "inactive"
