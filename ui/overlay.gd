@@ -371,13 +371,12 @@ func _draw_over() -> void:
 		var asset := ""
 		match String(it.kind):
 			"chest": col = Color(0.9, 0.7, 0.2); label = "baú"; asset = "chest_closed"
-			# ART-011: baú do chefe reaproveita o baú comum, com rótulo e cor próprios, até existir assets/interactions/boss_chest.png
-			"boss_chest": col = Color(1.0, 0.85, 0.25); label = "BAÚ DO CHEFE"; asset = "boss_chest" if ResourceLoader.exists("res://assets/interactions/boss_chest.png") else "chest_closed"
+			"boss_chest": col = Color(1.0, 0.85, 0.25); label = "BAÚ DO CHEFE"; asset = "bau_chefe_fechado"
 			"fountain": col = Color(0.3, 0.7, 1.0); label = "fonte"; asset = "fountain_active"
 			"altar": col = Color(0.8, 0.4, 1.0); label = "altar [E/oeste]"; asset = "altar_active"
 			"ritual": col = Color(0.9, 0.2, 0.2); label = "ritual [E/oeste]"; asset = "ritual"
 			"portal": col = Color(0.3, 1.0, 0.6); label = "portal [E/oeste]"; asset = "portal"
-			# ART-009: eventos de mercado tinham só o quadrado branco sem rótulo; cada um agora tem cor e nome. O PNG definitivo entra em assets/interactions/<tipo>.png
+			# Eventos com PNG oficial em assets/interactions/<tipo>.png; sem PNG (doacao, aposta, ampulheta) o quadrado colorido com rótulo é o provisório
 			"loja": col = Color(1.0, 0.85, 0.3); label = "loja [E/oeste]"; asset = "loja"
 			"ferreiro": col = Color(1.0, 0.5, 0.2); label = "ferreiro [E/oeste]"; asset = "ferreiro"
 			"curandeiro": col = Color(0.4, 1.0, 0.5); label = "curandeiro [E/oeste]"; asset = "curandeiro"
@@ -419,14 +418,12 @@ func _draw_over() -> void:
 		var pickup_texture := _texture("res://assets/pickups/%s.png" % pickup_asset)
 		if pickup_texture != null:
 			var size := 22.0 if pk.kind != "potion" else 26.0
+			if pk.kind == "magnet":
+				# ART-015: o ímã é maior e pulsa, para se destacar dos cristais de XP
+				size = 32.0
+				var pulse := 0.5 + 0.5 * sin(Time.get_ticks_msec() / 160.0)
+				draw_circle(p + Vector2(0, -size * 0.5), size * 0.55 + 3.0 * pulse, Color(1.0, 0.85, 0.3, 0.14 + 0.12 * pulse))
 			draw_texture_rect(pickup_texture, Rect2(p.x - size * 0.5, p.y - size, size, size), false)
-		elif pk.kind == "magnet":
-			# ART-015: ímã de XP provisório em ferradura pulsante até existir assets/pickups/magnet.png
-			var pulse := 0.5 + 0.5 * sin(Time.get_ticks_msec() / 160.0)
-			draw_circle(p + Vector2(0, -10), 13.0 + 3.0 * pulse, Color(1.0, 0.85, 0.3, 0.16 + 0.14 * pulse))
-			draw_arc(p + Vector2(0, -12), 7.0, PI, TAU, 14, Color(0.9, 0.15, 0.15), 4.5)
-			draw_line(p + Vector2(-7, -12), p + Vector2(-7, -5), Color(0.85, 0.9, 1.0), 4.5)
-			draw_line(p + Vector2(7, -12), p + Vector2(7, -5), Color(0.85, 0.9, 1.0), 4.5)
 		else:
 			draw_circle(p + Vector2(0, -4), 4.0, Color(0.6, 0.85, 1.0))
 	for pr in battle.projectiles:

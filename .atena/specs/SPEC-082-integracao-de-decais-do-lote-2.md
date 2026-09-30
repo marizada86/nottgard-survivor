@@ -52,6 +52,15 @@ ou o contrato de y-sort.
 ## Gate
 
 BUG-013 foi fechado após a inspeção visual aprovada. Os 16 decais dos oito
-biomas com área seca foram admitidos. Estruturas, HQs e os decais de Docas
-continuam fora da admissão até suas integrações e âncoras específicas serem
-aprovadas.
+biomas com área seca foram admitidos nesta spec. A integração posterior dos
+dois decais de Docas e das nove estruturas foi executada pela SPEC-100; Docas
+segue sem prévia até existir uma âncora seca. HQs permanecem fora do escopo
+aprovado. Ver EVID-127.
+
+## Reconciliação posterior — 2026-09-30
+
+Os arquivos dos decais de Docas agora existem em `assets/decals/` e o manifesto
+usa esses caminhos oficiais, mas `GroundDecals.placements("docas", seed)` segue
+vazio para não desenhar sobre a água. A SPEC-100 cobre essa admissão e as
+estruturas; os critérios de determinismo e segurança desta spec continuam
+válidos para os oito biomas ativos.

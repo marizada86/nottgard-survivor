@@ -2,7 +2,7 @@
 id: "CHATGPT-FILA-001"
 type: "fila-de-prompts"
 title: "Fila consolidada de prompts prontos para o ChatGPT (39 imagens)"
-status: "em andamento — geração no ChatGPT iniciada pelo dono em 2026-09-29; não misturar com as Ondas de HQ (ART-PROMPTS-028 e 029)"
+status: "execução parcial — P01–P08 admitidos; ondas de HQ seguem em ART-PROMPTS-028 e 029"
 created: "2026-09-29"
 relations: ["[[ART-PROMPTS-025-lote-1-nevoa-bau-de-chefe-imas-e-npcs]]", "[[ART-PROMPTS-026-lote-2-camada-de-cenario-por-bioma]]", "[[ART-PROMPTS-027-hqs-novas-guia-de-estilo-e-piloto]]", "[[SPEC-062-fila-de-geracao-externa-de-assets]]"]
 ---
@@ -13,9 +13,9 @@ Compilação **literal** dos parágrafos dos três ART-PROMPTS que ainda não fo
 
 | Lote | Origem | Imagens | Prioridade sugerida |
 |---|---|---:|---|
-| 1 | ART-PROMPTS-025 — névoa, baú de chefe, ímã de XP, NPCs de evento | 8 | Alta (decisões de design já fechadas) |
-| 3 (piloto HQ) | ART-PROMPTS-027 — HQ "Uma Noite Sem Fim" | 4 | Média (valida o método das HQs) |
-| 2 | ART-PROMPTS-026 — camada de cenário por bioma | 27 | Piloto de Dagruve primeiro (3); admissão trava em BUG-013 |
+| 1 | ART-PROMPTS-025 — névoa, baú de chefe, ímã de XP, NPCs de evento | 8 concluídas | Admitido em 2026-09-29 |
+| 3 (piloto HQ) | ART-PROMPTS-027 — HQ "Uma Noite Sem Fim" | 4 geradas e aprovadas | Integração e fidelidade aos retratos pendentes |
+| 2 | ART-PROMPTS-026 — camada de cenário por bioma | 27 geradas e aprovadas | Admissão ainda trava em BUG-013 e na spec de decais |
 
 Já processados e **fora** desta fila: Zumbi, quebráveis, props dos 7 biomas, Nyrelia e Leoric.
 
@@ -40,7 +40,7 @@ Candidatas em `.atena/generated/art-candidates/lote-1/`. Névoa: branco sobre pr
 
 #### P01 — `nevoa_textura_01` 
 
-- [ ] gerada · [ ] aprovada · candidata: `.atena/generated/art-candidates/lote-1/nevoa_textura_01_v01.png`
+- [x] gerada · [x] aprovada · admitida: `assets/fx/nevoa_textura_01.png` (candidata v03 normalizada; `nevoa_textura_01_v01.png` e `nevoa_textura_01_v02.png` rejeitadas por emenda)
 
 ```text
 A seamless tileable texture of dense drifting mist, rendered as soft layered wisps and curling banks of fog in pure white and light gray. Dark-fantasy pixel-art style with controlled dithering and visible stepped pixel bands for density, no smooth airbrushed gradient and no painterly softness. The pattern must repeat perfectly: the left edge must match the right edge and the top edge must match the bottom edge, with no visible seam and no single dominant focal shape. Mist must be uneven, with thinner and thicker regions, but never fully empty and never solid. Background: a single completely flat pure black (#000000) — the mist is white on black, with no color, no ground, no scenery, no objects, no creatures, no text, no logo, no watermark, no frame and no border. Square image.
@@ -48,7 +48,7 @@ A seamless tileable texture of dense drifting mist, rendered as soft layered wis
 
 #### P02 — `nevoa_borda_01` 
 
-- [ ] gerada · [ ] aprovada · candidata: `.atena/generated/art-candidates/lote-1/nevoa_borda_01_v01.png`
+- [x] gerada · [x] aprovada · admitida: `assets/fx/nevoa_borda_01.png`
 
 ```text
 A wide horizontal bank of thick dark-fantasy mist that is densest along the bottom edge of the image and fades gradually upward into nothing, drawn as layered curling fog in pure white and light gray. Pixel-art style with controlled dithering and visible stepped pixel bands, no smooth airbrushed gradient. The top third of the image must be almost fully empty black, so it can blend into a game scene. Background: a single completely flat pure black (#000000) — the mist is white on black, with no color, no ground, no scenery, no objects, no creatures, no text, no logo, no watermark, no frame and no border. Wide landscape image.
@@ -58,7 +58,7 @@ A wide horizontal bank of thick dark-fantasy mist that is densest along the bott
 
 #### P03 — `bau_chefe_fechado` 
 
-- [ ] gerada · [ ] aprovada · candidata: `.atena/generated/art-candidates/lote-1/bau_chefe_fechado_v01.png`
+- [x] gerada · [x] aprovada · admitida: `assets/interactions/bau_chefe_fechado.png`
 
 ```text
 A large, heavy dark-fantasy treasure chest, closed, clearly grander than an ordinary wooden chest but from the same visual family: dark weathered wood wrapped in thick blackened iron bands, with rich gold trim on the corners, edges and a large ornate gold lock plate at the front, plus a few thick iron chains hanging across the lid. A faint warm golden light leaks out of the seams between the planks. Dark-fantasy isometric pixel-art game prop, viewed from a three-quarter isometric angle tilted about 30 degrees from above, with soft directional light from the upper left. Crisp, clean pixel-art rendering with controlled dithering, no blur and no smooth anti-aliasing. The object sits centered in the frame with roughly 12% empty margin on every side and does not touch or cross the image edges. The whole silhouette must be solid, fully opaque and readable at small size. Background: a single, completely flat and uniform solid magenta color (#FF00FF), with absolutely no ground, floor, cast shadow, gradient, vignette, texture, or scenery behind the object. Do not include any text, logo, watermark, frame, border, UI element, character, creature, skull, or second object — render only this one chest, alone. Square image.
@@ -66,7 +66,7 @@ A large, heavy dark-fantasy treasure chest, closed, clearly grander than an ordi
 
 #### P04 — `bau_chefe_aberto` 
 
-- [ ] gerada · [ ] aprovada · candidata: `.atena/generated/art-candidates/lote-1/bau_chefe_aberto_v01.png`
+- [x] gerada · [x] aprovada · admitida: `assets/interactions/bau_chefe_aberto.png`
 
 ```text
 The exact same large ornate boss treasure chest as before — same size, same dark weathered wood, blackened iron bands, gold trim, ornate gold lock plate and hanging chains, same camera angle, same zoom and same position in the frame — but now open, with the lid tilted back and a warm golden glow spilling out of the inside, lighting the inner rim. The inside must show only a bright glow and a hint of gold, no readable items. Dark-fantasy isometric pixel-art game prop, three-quarter isometric angle tilted about 30 degrees from above, soft directional light from the upper left, crisp clean pixel art with controlled dithering, no blur or anti-aliasing. Centered with roughly 12% empty margin, not touching the frame edges, base of the chest at the same height as the closed version. The whole silhouette must be solid and fully opaque. Background: a single flat uniform solid magenta color (#FF00FF), no ground, floor, cast shadow, gradient, vignette, texture, or scenery. No text, logo, watermark, frame, border, UI, character, creature, skull, or second object — only this one chest, alone. Square image.
@@ -76,7 +76,7 @@ The exact same large ornate boss treasure chest as before — same size, same da
 
 #### P05 — `ima_xp` 
 
-- [ ] gerada · [ ] aprovada · candidata: `.atena/generated/art-candidates/lote-1/ima_xp_v01.png`
+- [x] gerada · [x] aprovada · admitida: `assets/pickups/magnet.png`
 
 ```text
 A single small horseshoe magnet pickup item for a game: a thick U-shaped magnet made of polished steel-gray metal, with the two tips painted in strong red and white bands, and a few tiny bright sparks of energy between the two tips. Bold chunky shapes, very readable when shrunk to 64 pixels, strong dark outline. Dark-fantasy isometric pixel-art game item, viewed from a slightly raised three-quarter angle, with soft directional light from the upper left. Crisp, clean pixel-art rendering with controlled dithering, no blur and no smooth anti-aliasing. The item sits centered with roughly 12% empty margin on every side. The whole silhouette must be solid and fully opaque. Background: a single, completely flat and uniform solid bright green color (#00FF00), with absolutely no ground, cast shadow, gradient, vignette, texture, or scenery, and no green anywhere on the object itself. Do not include any text, logo, watermark, frame, border, UI element, character, or second object — only this one item, alone. Square image.
@@ -86,7 +86,7 @@ A single small horseshoe magnet pickup item for a game: a thick U-shaped magnet 
 
 #### P06 — `npc_loja` · comerciante
 
-- [ ] gerada · [ ] aprovada · candidata: `.atena/generated/art-candidates/lote-1/npc_loja_v01.png`
+- [x] gerada · [x] aprovada · admitida: `assets/interactions/loja.png`
 
 ```text
 A small traveling merchant stall for a dark-fantasy game: a hooded, cloaked merchant figure standing behind a low wooden counter under a sagging deep-red cloth awning, with a lantern hanging from the awning pole, a few closed sacks and a small open chest on the counter, and a leather coin purse and a few coins clearly visible in front. The dominant color of the whole object is deep red and warm brown, so it reads as a shop at a glance. The merchant's face stays hidden in the shadow of the hood. Dark-fantasy isometric pixel-art game prop, viewed from a three-quarter isometric angle tilted about 30 degrees from above, with soft directional light from the upper left. Crisp, clean pixel-art rendering with controlled dithering, no blur and no smooth anti-aliasing. Centered with roughly 12% empty margin on every side, not touching the frame edges. The whole silhouette must be solid and fully opaque. Background: a single, completely flat and uniform solid magenta color (#FF00FF), with no ground, floor, cast shadow, gradient, vignette, texture, or scenery. No text, no signboard lettering, logo, watermark, frame, border, UI element, weapon in use, or second character — only this one stall with its merchant, alone. Square image.
@@ -94,7 +94,7 @@ A small traveling merchant stall for a dark-fantasy game: a hooded, cloaked merc
 
 #### P07 — `npc_ferreiro` · ferreiro
 
-- [ ] gerada · [ ] aprovada · candidata: `.atena/generated/art-candidates/lote-1/npc_ferreiro_v01.png`
+- [x] gerada · [x] aprovada · admitida: `assets/interactions/ferreiro.png`
 
 ```text
 A dark-fantasy blacksmith's work station: a hooded, broad-shouldered smith figure standing behind a heavy iron anvil, hammer resting in hand, next to a small stone forge with glowing orange embers, with a couple of unfinished blades and tongs leaning against the anvil. The dominant colors of the whole object are dark steel gray and glowing orange, so it reads as a forge at a glance, and it must look clearly different from a merchant stall. The smith's face stays hidden in shadow. Dark-fantasy isometric pixel-art game prop, viewed from a three-quarter isometric angle tilted about 30 degrees from above, with soft directional light from the upper left plus the orange glow of the forge. Crisp, clean pixel-art rendering with controlled dithering, no blur and no smooth anti-aliasing. Centered with roughly 12% empty margin on every side, not touching the frame edges. The whole silhouette must be solid and fully opaque. Background: a single, completely flat and uniform solid magenta color (#FF00FF), with no ground, floor, cast shadow, gradient, vignette, texture, or scenery. No text, logo, watermark, frame, border, UI element, or second character — only this one work station with its smith, alone. Square image.
@@ -102,7 +102,7 @@ A dark-fantasy blacksmith's work station: a hooded, broad-shouldered smith figur
 
 #### P08 — `npc_curandeiro` · curandeiro
 
-- [ ] gerada · [ ] aprovada · candidata: `.atena/generated/art-candidates/lote-1/npc_curandeiro_v01.png`
+- [x] gerada · [x] aprovada · admitida: `assets/interactions/curandeiro.png`
 
 ```text
 A dark-fantasy herbalist healer's corner: a hooded, gentle-looking healer figure kneeling or standing beside a small stone bowl and a bubbling iron cauldron that gives off soft warm golden-white steam, with bundles of dried herbs hanging from a short wooden rack and a few small glass vials on a low stool. The dominant colors of the whole object are soft moss green and pale warm gold, with a calm, restorative feeling, so it reads as healing at a glance and looks clearly different from a merchant stall and from a forge. The healer's face stays hidden in shadow. Dark-fantasy isometric pixel-art game prop, viewed from a three-quarter isometric angle tilted about 30 degrees from above, with soft directional light from the upper left. Crisp, clean pixel-art rendering with controlled dithering, no blur and no smooth anti-aliasing. Centered with roughly 12% empty margin on every side, not touching the frame edges. The whole silhouette must be solid and fully opaque. Background: a single, completely flat and uniform solid magenta color (#FF00FF), with no ground, floor, cast shadow, gradient, vignette, texture, or scenery. No text, no cross or religious symbol, logo, watermark, frame, border, UI element, or second character — only this one healing corner with its healer, alone. Square image.

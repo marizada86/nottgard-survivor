@@ -1,7 +1,13 @@
-{
+﻿{
     "id":  "CANDIDATES-MANIFEST-002",
     "created":  "2026-09-29",
     "note":  "Piloto de animacao cultista_adaga (CHATGPT-FILA-004). A pasta art-candidates/ e ignorada pelo git.",
+    "execution_status":  "20_individual_frames_integrated_and_tested; 4_method_comparison_strips_retained_candidate_only",
+    "generated_count":  24,
+    "generation_mode":  "built-in image_gen; candidate-only",
+    "verification_note":  "All 24 original opaque cyan candidates exist and remain preserved; 24 sibling *_alpha_v01.png files exist with matching dimensions and transparent border pixels. Alpha outputs are separate candidate-only copies.",
+    "prompt_log":  ".atena/generated/IMAGEGEN-LOG-001-piloto-cultista-2026-09-29.md",
+    "evidence":  ".atena/evidence/EVID-125-piloto-cultista-aprovacao-alfa-comparacao-2026-09-30.md",
     "count":  24,
     "items":  [
                   {
@@ -11,7 +17,23 @@
                       "kind":  "enemy",
                       "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_idle_00_v01.png",
                       "bg":  "#00FFFF",
-                      "shape":  "portrait"
+                      "shape":  "portrait",
+                      "status":  "approved_identity_frame",
+                      "generation_mode":  "built-in image_gen",
+                      "alpha_path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_idle_00_alpha_v01.png",
+                      "owner_approved":  true,
+                      "owner_approval_date":  "2026-09-29",
+                      "qa_notes":  [
+                                       "1024x1536; background opaque (alpha=255), cyan is approximate rather than exact #00FFFF",
+                                       "Identity frame approved by owner on 2026-09-29",
+                                       "Visual batch approved by owner on 2026-09-30",
+                                       "Candidate-only alpha variant generated; original cyan PNG preserved",
+                                       "Visual batch approved by owner on 2026-09-30",
+                                       "Candidate-only alpha variant generated; original cyan PNG preserved"
+                                   ],
+                      "integrated_in_runtime":  true,
+                      "runtime_state":  "idle",
+                      "runtime_frame":  0
                   },
                   {
                       "fila":  "004",
@@ -20,7 +42,19 @@
                       "kind":  "enemy",
                       "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_idle_01_v01.png",
                       "bg":  "#00FFFF",
-                      "shape":  "portrait"
+                      "shape":  "portrait",
+                      "alpha_path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_idle_01_alpha_v01.png",
+                      "owner_approved":  true,
+                      "owner_approval_date":  "2026-09-30",
+                      "status":  "approved_visual_candidate",
+                      "qa_notes":  [
+                                       null,
+                                       "Visual batch approved by owner on 2026-09-30",
+                                       "Candidate-only alpha variant generated; original cyan PNG preserved"
+                                   ],
+                      "integrated_in_runtime":  true,
+                      "runtime_state":  "idle",
+                      "runtime_frame":  1
                   },
                   {
                       "fila":  "004",
@@ -29,7 +63,19 @@
                       "kind":  "enemy",
                       "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_idle_02_v01.png",
                       "bg":  "#00FFFF",
-                      "shape":  "portrait"
+                      "shape":  "portrait",
+                      "alpha_path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_idle_02_alpha_v01.png",
+                      "owner_approved":  true,
+                      "owner_approval_date":  "2026-09-30",
+                      "status":  "approved_visual_candidate",
+                      "qa_notes":  [
+                                       null,
+                                       "Visual batch approved by owner on 2026-09-30",
+                                       "Candidate-only alpha variant generated; original cyan PNG preserved"
+                                   ],
+                      "integrated_in_runtime":  true,
+                      "runtime_state":  "idle",
+                      "runtime_frame":  2
                   },
                   {
                       "fila":  "004",
@@ -38,7 +84,19 @@
                       "kind":  "enemy",
                       "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_idle_03_v01.png",
                       "bg":  "#00FFFF",
-                      "shape":  "portrait"
+                      "shape":  "portrait",
+                      "alpha_path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_idle_03_alpha_v01.png",
+                      "owner_approved":  true,
+                      "owner_approval_date":  "2026-09-30",
+                      "status":  "approved_visual_candidate",
+                      "qa_notes":  [
+                                       null,
+                                       "Visual batch approved by owner on 2026-09-30",
+                                       "Candidate-only alpha variant generated; original cyan PNG preserved"
+                                   ],
+                      "integrated_in_runtime":  true,
+                      "runtime_state":  "idle",
+                      "runtime_frame":  3
                   },
                   {
                       "fila":  "004",
@@ -47,7 +105,19 @@
                       "kind":  "enemy",
                       "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_move_00_v01.png",
                       "bg":  "#00FFFF",
-                      "shape":  "portrait"
+                      "shape":  "portrait",
+                      "alpha_path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_move_00_alpha_v01.png",
+                      "owner_approved":  true,
+                      "owner_approval_date":  "2026-09-30",
+                      "status":  "approved_visual_candidate",
+                      "qa_notes":  [
+                                       null,
+                                       "Visual batch approved by owner on 2026-09-30",
+                                       "Candidate-only alpha variant generated; original cyan PNG preserved"
+                                   ],
+                      "integrated_in_runtime":  true,
+                      "runtime_state":  "move",
+                      "runtime_frame":  0
                   },
                   {
                       "fila":  "004",
@@ -56,7 +126,19 @@
                       "kind":  "enemy",
                       "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_move_01_v01.png",
                       "bg":  "#00FFFF",
-                      "shape":  "portrait"
+                      "shape":  "portrait",
+                      "alpha_path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_move_01_alpha_v01.png",
+                      "owner_approved":  true,
+                      "owner_approval_date":  "2026-09-30",
+                      "status":  "approved_visual_candidate",
+                      "qa_notes":  [
+                                       null,
+                                       "Visual batch approved by owner on 2026-09-30",
+                                       "Candidate-only alpha variant generated; original cyan PNG preserved"
+                                   ],
+                      "integrated_in_runtime":  true,
+                      "runtime_state":  "move",
+                      "runtime_frame":  1
                   },
                   {
                       "fila":  "004",
@@ -65,7 +147,19 @@
                       "kind":  "enemy",
                       "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_move_02_v01.png",
                       "bg":  "#00FFFF",
-                      "shape":  "portrait"
+                      "shape":  "portrait",
+                      "alpha_path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_move_02_alpha_v01.png",
+                      "owner_approved":  true,
+                      "owner_approval_date":  "2026-09-30",
+                      "status":  "approved_visual_candidate",
+                      "qa_notes":  [
+                                       null,
+                                       "Visual batch approved by owner on 2026-09-30",
+                                       "Candidate-only alpha variant generated; original cyan PNG preserved"
+                                   ],
+                      "integrated_in_runtime":  true,
+                      "runtime_state":  "move",
+                      "runtime_frame":  2
                   },
                   {
                       "fila":  "004",
@@ -74,7 +168,19 @@
                       "kind":  "enemy",
                       "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_move_03_v01.png",
                       "bg":  "#00FFFF",
-                      "shape":  "portrait"
+                      "shape":  "portrait",
+                      "alpha_path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_move_03_alpha_v01.png",
+                      "owner_approved":  true,
+                      "owner_approval_date":  "2026-09-30",
+                      "status":  "approved_visual_candidate",
+                      "qa_notes":  [
+                                       null,
+                                       "Visual batch approved by owner on 2026-09-30",
+                                       "Candidate-only alpha variant generated; original cyan PNG preserved"
+                                   ],
+                      "integrated_in_runtime":  true,
+                      "runtime_state":  "move",
+                      "runtime_frame":  3
                   },
                   {
                       "fila":  "004",
@@ -83,7 +189,19 @@
                       "kind":  "enemy",
                       "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_move_04_v01.png",
                       "bg":  "#00FFFF",
-                      "shape":  "portrait"
+                      "shape":  "portrait",
+                      "alpha_path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_move_04_alpha_v01.png",
+                      "owner_approved":  true,
+                      "owner_approval_date":  "2026-09-30",
+                      "status":  "approved_visual_candidate",
+                      "qa_notes":  [
+                                       null,
+                                       "Visual batch approved by owner on 2026-09-30",
+                                       "Candidate-only alpha variant generated; original cyan PNG preserved"
+                                   ],
+                      "integrated_in_runtime":  true,
+                      "runtime_state":  "move",
+                      "runtime_frame":  4
                   },
                   {
                       "fila":  "004",
@@ -92,7 +210,19 @@
                       "kind":  "enemy",
                       "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_move_05_v01.png",
                       "bg":  "#00FFFF",
-                      "shape":  "portrait"
+                      "shape":  "portrait",
+                      "alpha_path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_move_05_alpha_v01.png",
+                      "owner_approved":  true,
+                      "owner_approval_date":  "2026-09-30",
+                      "status":  "approved_visual_candidate",
+                      "qa_notes":  [
+                                       null,
+                                       "Visual batch approved by owner on 2026-09-30",
+                                       "Candidate-only alpha variant generated; original cyan PNG preserved"
+                                   ],
+                      "integrated_in_runtime":  true,
+                      "runtime_state":  "move",
+                      "runtime_frame":  5
                   },
                   {
                       "fila":  "004",
@@ -101,7 +231,19 @@
                       "kind":  "enemy",
                       "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_attack_00_v01.png",
                       "bg":  "#00FFFF",
-                      "shape":  "portrait"
+                      "shape":  "portrait",
+                      "alpha_path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_attack_00_alpha_v01.png",
+                      "owner_approved":  true,
+                      "owner_approval_date":  "2026-09-30",
+                      "status":  "approved_visual_candidate",
+                      "qa_notes":  [
+                                       null,
+                                       "Visual batch approved by owner on 2026-09-30",
+                                       "Candidate-only alpha variant generated; original cyan PNG preserved"
+                                   ],
+                      "integrated_in_runtime":  true,
+                      "runtime_state":  "attack",
+                      "runtime_frame":  0
                   },
                   {
                       "fila":  "004",
@@ -110,7 +252,19 @@
                       "kind":  "enemy",
                       "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_attack_01_v01.png",
                       "bg":  "#00FFFF",
-                      "shape":  "portrait"
+                      "shape":  "portrait",
+                      "alpha_path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_attack_01_alpha_v01.png",
+                      "owner_approved":  true,
+                      "owner_approval_date":  "2026-09-30",
+                      "status":  "approved_visual_candidate",
+                      "qa_notes":  [
+                                       null,
+                                       "Visual batch approved by owner on 2026-09-30",
+                                       "Candidate-only alpha variant generated; original cyan PNG preserved"
+                                   ],
+                      "integrated_in_runtime":  true,
+                      "runtime_state":  "attack",
+                      "runtime_frame":  1
                   },
                   {
                       "fila":  "004",
@@ -119,7 +273,19 @@
                       "kind":  "enemy",
                       "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_attack_02_v01.png",
                       "bg":  "#00FFFF",
-                      "shape":  "portrait"
+                      "shape":  "portrait",
+                      "alpha_path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_attack_02_alpha_v01.png",
+                      "owner_approved":  true,
+                      "owner_approval_date":  "2026-09-30",
+                      "status":  "approved_visual_candidate",
+                      "qa_notes":  [
+                                       null,
+                                       "Visual batch approved by owner on 2026-09-30",
+                                       "Candidate-only alpha variant generated; original cyan PNG preserved"
+                                   ],
+                      "integrated_in_runtime":  true,
+                      "runtime_state":  "attack",
+                      "runtime_frame":  2
                   },
                   {
                       "fila":  "004",
@@ -128,7 +294,19 @@
                       "kind":  "enemy",
                       "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_attack_03_v01.png",
                       "bg":  "#00FFFF",
-                      "shape":  "portrait"
+                      "shape":  "portrait",
+                      "alpha_path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_attack_03_alpha_v01.png",
+                      "owner_approved":  true,
+                      "owner_approval_date":  "2026-09-30",
+                      "status":  "approved_visual_candidate",
+                      "qa_notes":  [
+                                       null,
+                                       "Visual batch approved by owner on 2026-09-30",
+                                       "Candidate-only alpha variant generated; original cyan PNG preserved"
+                                   ],
+                      "integrated_in_runtime":  true,
+                      "runtime_state":  "attack",
+                      "runtime_frame":  3
                   },
                   {
                       "fila":  "004",
@@ -137,7 +315,19 @@
                       "kind":  "enemy",
                       "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_death_00_v01.png",
                       "bg":  "#00FFFF",
-                      "shape":  "portrait"
+                      "shape":  "portrait",
+                      "alpha_path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_death_00_alpha_v01.png",
+                      "owner_approved":  true,
+                      "owner_approval_date":  "2026-09-30",
+                      "status":  "approved_visual_candidate",
+                      "qa_notes":  [
+                                       null,
+                                       "Visual batch approved by owner on 2026-09-30",
+                                       "Candidate-only alpha variant generated; original cyan PNG preserved"
+                                   ],
+                      "integrated_in_runtime":  true,
+                      "runtime_state":  "death",
+                      "runtime_frame":  0
                   },
                   {
                       "fila":  "004",
@@ -146,7 +336,19 @@
                       "kind":  "enemy",
                       "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_death_01_v01.png",
                       "bg":  "#00FFFF",
-                      "shape":  "portrait"
+                      "shape":  "portrait",
+                      "alpha_path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_death_01_alpha_v01.png",
+                      "owner_approved":  true,
+                      "owner_approval_date":  "2026-09-30",
+                      "status":  "approved_visual_candidate",
+                      "qa_notes":  [
+                                       null,
+                                       "Visual batch approved by owner on 2026-09-30",
+                                       "Candidate-only alpha variant generated; original cyan PNG preserved"
+                                   ],
+                      "integrated_in_runtime":  true,
+                      "runtime_state":  "death",
+                      "runtime_frame":  1
                   },
                   {
                       "fila":  "004",
@@ -155,7 +357,19 @@
                       "kind":  "enemy",
                       "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_death_02_v01.png",
                       "bg":  "#00FFFF",
-                      "shape":  "portrait"
+                      "shape":  "portrait",
+                      "alpha_path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_death_02_alpha_v01.png",
+                      "owner_approved":  true,
+                      "owner_approval_date":  "2026-09-30",
+                      "status":  "approved_visual_candidate",
+                      "qa_notes":  [
+                                       null,
+                                       "Visual batch approved by owner on 2026-09-30",
+                                       "Candidate-only alpha variant generated; original cyan PNG preserved"
+                                   ],
+                      "integrated_in_runtime":  true,
+                      "runtime_state":  "death",
+                      "runtime_frame":  2
                   },
                   {
                       "fila":  "004",
@@ -164,7 +378,19 @@
                       "kind":  "enemy",
                       "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_death_03_v01.png",
                       "bg":  "#00FFFF",
-                      "shape":  "portrait"
+                      "shape":  "portrait",
+                      "alpha_path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_death_03_alpha_v01.png",
+                      "owner_approved":  true,
+                      "owner_approval_date":  "2026-09-30",
+                      "status":  "approved_visual_candidate",
+                      "qa_notes":  [
+                                       null,
+                                       "Visual batch approved by owner on 2026-09-30",
+                                       "Candidate-only alpha variant generated; original cyan PNG preserved"
+                                   ],
+                      "integrated_in_runtime":  true,
+                      "runtime_state":  "death",
+                      "runtime_frame":  3
                   },
                   {
                       "fila":  "004",
@@ -173,7 +399,19 @@
                       "kind":  "enemy",
                       "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_death_04_v01.png",
                       "bg":  "#00FFFF",
-                      "shape":  "portrait"
+                      "shape":  "portrait",
+                      "alpha_path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_death_04_alpha_v01.png",
+                      "owner_approved":  true,
+                      "owner_approval_date":  "2026-09-30",
+                      "status":  "approved_visual_candidate",
+                      "qa_notes":  [
+                                       null,
+                                       "Visual batch approved by owner on 2026-09-30",
+                                       "Candidate-only alpha variant generated; original cyan PNG preserved"
+                                   ],
+                      "integrated_in_runtime":  true,
+                      "runtime_state":  "death",
+                      "runtime_frame":  4
                   },
                   {
                       "fila":  "004",
@@ -182,7 +420,19 @@
                       "kind":  "enemy",
                       "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_death_05_v01.png",
                       "bg":  "#00FFFF",
-                      "shape":  "portrait"
+                      "shape":  "portrait",
+                      "alpha_path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_death_05_alpha_v01.png",
+                      "owner_approved":  true,
+                      "owner_approval_date":  "2026-09-30",
+                      "status":  "approved_visual_candidate",
+                      "qa_notes":  [
+                                       null,
+                                       "Visual batch approved by owner on 2026-09-30",
+                                       "Candidate-only alpha variant generated; original cyan PNG preserved"
+                                   ],
+                      "integrated_in_runtime":  true,
+                      "runtime_state":  "death",
+                      "runtime_frame":  5
                   },
                   {
                       "fila":  "004",
@@ -191,7 +441,18 @@
                       "kind":  "enemy",
                       "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_row_idle_v01.png",
                       "bg":  "#00FFFF",
-                      "shape":  "strip"
+                      "shape":  "strip",
+                      "alpha_path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_row_idle_alpha_v01.png",
+                      "owner_approved":  true,
+                      "owner_approval_date":  "2026-09-30",
+                      "status":  "approved_visual_candidate",
+                      "qa_notes":  [
+                                       null,
+                                       "Visual batch approved by owner on 2026-09-30",
+                                       "Candidate-only alpha variant generated; original cyan PNG preserved"
+                                   ],
+                      "integrated_in_runtime":  false,
+                      "integration_note":  "comparison strip; not used in runtime"
                   },
                   {
                       "fila":  "004",
@@ -200,7 +461,18 @@
                       "kind":  "enemy",
                       "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_row_move_v01.png",
                       "bg":  "#00FFFF",
-                      "shape":  "strip"
+                      "shape":  "strip",
+                      "alpha_path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_row_move_alpha_v01.png",
+                      "owner_approved":  true,
+                      "owner_approval_date":  "2026-09-30",
+                      "status":  "approved_visual_candidate",
+                      "qa_notes":  [
+                                       null,
+                                       "Visual batch approved by owner on 2026-09-30",
+                                       "Candidate-only alpha variant generated; original cyan PNG preserved"
+                                   ],
+                      "integrated_in_runtime":  false,
+                      "integration_note":  "comparison strip; not used in runtime"
                   },
                   {
                       "fila":  "004",
@@ -209,7 +481,18 @@
                       "kind":  "enemy",
                       "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_row_attack_v01.png",
                       "bg":  "#00FFFF",
-                      "shape":  "strip"
+                      "shape":  "strip",
+                      "alpha_path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_row_attack_alpha_v01.png",
+                      "owner_approved":  true,
+                      "owner_approval_date":  "2026-09-30",
+                      "status":  "approved_visual_candidate",
+                      "qa_notes":  [
+                                       null,
+                                       "Visual batch approved by owner on 2026-09-30",
+                                       "Candidate-only alpha variant generated; original cyan PNG preserved"
+                                   ],
+                      "integrated_in_runtime":  false,
+                      "integration_note":  "comparison strip; not used in runtime"
                   },
                   {
                       "fila":  "004",
@@ -218,7 +501,49 @@
                       "kind":  "enemy",
                       "path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_row_death_v01.png",
                       "bg":  "#00FFFF",
-                      "shape":  "strip"
+                      "shape":  "strip",
+                      "alpha_path":  ".atena/generated/art-candidates/enemy-pilot/cultista_adaga/cultista_adaga_row_death_alpha_v01.png",
+                      "owner_approved":  true,
+                      "owner_approval_date":  "2026-09-30",
+                      "status":  "approved_visual_candidate",
+                      "qa_notes":  [
+                                       null,
+                                       "Visual batch approved by owner on 2026-09-30",
+                                       "Candidate-only alpha variant generated; original cyan PNG preserved"
+                                   ],
+                      "integrated_in_runtime":  false,
+                      "integration_note":  "comparison strip; not used in runtime"
                   }
-              ]
+              ],
+    "approval":  {
+                     "status":  "approved_by_owner",
+                     "date":  "2026-09-30",
+                     "scope":  "all 24 generated candidates in five visual batches; candidate approval only"
+                 },
+    "alpha_processing":  {
+                             "method":  "RGB cyan chroma key applied to matching pixels; binary alpha",
+                             "script":  "tools/remove_cyan_candidate_background.ps1",
+                             "outputs":  "*_alpha_v01.png",
+                             "originals_preserved":  true,
+                             "official_assets_modified":  false
+                         },
+    "method_comparison":  {
+                              "recommendation":  "method_1_individual_frames",
+                              "method_1":  "20 isolated frame candidates; no regeneration; direct per-frame review/cropping",
+                              "method_2":  "4 strip candidates; equal-cell auto extraction clips frame-overflow details in E22-E24",
+                              "failed_review":  "review/review_alpha_strips_extracted_256x384.png"
+                          },
+    "runtime_integration":  {
+                                "id":  "SPEC-099",
+                                "branch":  "codex/cultista-adaga-animation",
+                                "source_frames":  "E01-E20 individual",
+                                "runtime_files":  [
+                                                      "assets/animations/enemies/cultista_adaga/idle.png",
+                                                      "assets/animations/enemies/cultista_adaga/move.png",
+                                                      "assets/animations/enemies/cultista_adaga/attack.png",
+                                                      "assets/animations/enemies/cultista_adaga/death.png"
+                                                  ],
+                                "comparison_strips":  "E21-E24 not integrated because equal-cell extraction clipped frame-overflow details",
+                                "evidence":  ".atena/evidence/EVID-126-integracao-animacoes-cultista-adaga-2026-09-30.md"
+                            }
 }

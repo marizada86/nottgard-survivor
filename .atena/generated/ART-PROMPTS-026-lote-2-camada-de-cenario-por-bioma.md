@@ -2,7 +2,7 @@
 id: "ART-PROMPTS-026"
 type: "prompts-de-arte"
 title: "Lote 2 — camada de cenário por bioma (estruturas, remendos de solo e trilhas)"
-status: "16 decais admitidos — Docas e estruturas pendentes; ondas de HQ seguem em ART-PROMPTS-028 e 029"
+status: "18 decais admitidos; 9 estruturas integradas; HQs fora do escopo aprovado"
 created: "2026-09-29"
 relations: ["[[SPEC-062-fila-de-geracao-externa-de-assets]]", "[[ART-PROMPTS-024-cenario-e-quebraveis-por-bioma]]", "[[ART-PROMPTS-007-biomas-props-thumbnails]]", "[[SPEC-042-ancoras-artisticas-e-sombras-de-props]]", "[[RESEARCH-001-abismo-bestiario-visual-2026-09-21]]"]
 sources: ["backlog/ARTE.md ART-012", "EVID-106 IN-010, IN-018", "BUG-013", "data/stages.json", "RESEARCH-001", "ART-PROMPTS-007", "assets/stages/*_thumb.png"]
@@ -23,16 +23,16 @@ piso e os props**: nada quebra a repetição do chão e nenhuma estrutura dá
 sensação de lugar. O lote acrescenta **três camadas**, nove biomas, **27
 imagens**.
 
-Nada foi gerado. Este documento só prepara os prompts e as recomendações.
+As 27 candidatas foram geradas e aprovadas; consulte a reconciliação abaixo e
+EVID-127 para o estado final da integração no jogo.
 
-## Reconciliação de execução — 2026-09-29
+## Reconciliação de execução — 2026-09-30
 
-- Remendo e trilha de Dagruve, Shedaklah, Molor, Durão, Feng-tu,
-  Shendilavri, Goranthis e Pilares foram aprovados visualmente, normalizados,
-  validados e admitidos em `assets/decals/`.
-- Docas permanece sem decal: a cena ainda não fornece uma âncora seca de cais.
-- As nove estruturas seguem como candidatas e as HQs pertencem a uma
-  integração independente.
+- Os 16 decais dos oito biomas secos e os dois decais de Docas foram admitidos
+  em `assets/decals/`; Docas permanece sem prévia até haver âncora seca.
+- As nove estruturas foram admitidas em `assets/props/` e integradas como
+  decoração não bloqueante, com posicionamento em terreno seguro por bioma.
+- As HQs foram deliberadamente excluídas desta entrega aprovada; ver SPEC-100.
 
 ## Recomendação da Atena (resposta a IN-010 / IN-018)
 
@@ -268,7 +268,7 @@ linguagem visual. Por isso os três prompts usam fragmentos de outras camadas.
 
 ## Gate
 
-As 27 candidatas brutas foram geradas e aprovadas pelo dono em 2026-09-29, preservadas em
-`.atena/generated/art-candidates/scenery/` e normalizadas para revisão em
-`.atena/generated/art-candidates/scenery-normalized/`. A admissão continua
-bloqueada até o fechamento visual do BUG-013 e a spec de integração de decais.
+As 27 candidatas brutas foram geradas e aprovadas pelo dono em 2026-09-29,
+preservadas em `.atena/generated/art-candidates/scenery/` e normalizadas para
+revisão em `.atena/generated/art-candidates/scenery-normalized/`. O gate de
+admissão foi satisfeito para os assets não-HQ pela SPEC-100; consulte EVID-127.

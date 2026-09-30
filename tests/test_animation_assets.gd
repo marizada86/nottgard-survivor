@@ -99,6 +99,10 @@ const ASSETS := {
 	"res://assets/animations/enemies/zumbi/move.png": Vector2i(1536, 384),
 	"res://assets/animations/enemies/zumbi/attack.png": Vector2i(1024, 384),
 	"res://assets/animations/enemies/zumbi/death.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/cultista_adaga/idle.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/cultista_adaga/move.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/cultista_adaga/attack.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/cultista_adaga/death.png": Vector2i(1536, 384),
 	"res://assets/animations/enemies/sacerdote_mente_derretida/idle.png": Vector2i(1920, 480),
 	"res://assets/animations/enemies/sacerdote_mente_derretida/move.png": Vector2i(2560, 480),
 	"res://assets/animations/enemies/sacerdote_mente_derretida/attack.png": Vector2i(1920, 480),
@@ -119,9 +123,13 @@ const MINIMUM_VISIBLE_COVERAGE := {
 	"res://assets/animations/heroes/brook/move_e.png": 0.01,
 	"res://assets/animations/heroes/brook/move_se.png": 0.01,
 	"res://assets/animations/heroes/maelor/move_n.png": 0.01,
+	"res://assets/animations/enemies/cultista_adaga/idle.png": 0.01,
+	"res://assets/animations/enemies/cultista_adaga/move.png": 0.01,
+	"res://assets/animations/enemies/cultista_adaga/attack.png": 0.01,
+	"res://assets/animations/enemies/cultista_adaga/death.png": 0.01,
 }
 
-const ANIMATED_ENEMY_IDS := ["zumbi", "sacerdote_mente_derretida"]
+const ANIMATED_ENEMY_IDS := ["zumbi", "cultista_adaga", "sacerdote_mente_derretida"]
 
 func run() -> Array[String]:
 	var failures: Array[String] = []
@@ -180,10 +188,43 @@ func run() -> Array[String]:
 	if hero_script.directional_walk_animation(southwest_delta) != &"move_sw":
 		failures.append("A+S não seleciona move_sw após o deslocamento: %s" % southwest_delta)
 	failures.append_array(_validate_static_enemy_assets())
+	failures.append_array(_validate_cultista_adaga_runtime())
 	failures.append_array(_validate_bromnor_runtime())
 	failures.append_array(_validate_zynara_runtime())
 	failures.append_array(_validate_nyrelia_runtime())
 	failures.append_array(_validate_nyrelia_frame_baselines())
+	return failures
+
+func _validate_cultista_adaga_runtime() -> Array[String]:
+	var failures: Array[String] = []
+	var tree := Engine.get_main_loop() as SceneTree
+	var packed: PackedScene = load("res://ui/enemy_view.tscn")
+	if tree == null or packed == null:
+		return ["não foi possível instanciar o visual do cultista de adaga"]
+	var enemy_view: Node2D = packed.instantiate()
+	tree.root.add_child(enemy_view)
+	enemy_view.setup(Enemy.make("cultista_adaga", Vector2.ZERO))
+	var sprite := enemy_view.get_node_or_null("AnimatedSprite2D") as AnimatedSprite2D
+	if sprite == null or sprite.sprite_frames == null:
+		failures.append("cultista de adaga não recebeu AnimatedSprite2D")
+	else:
+		var expected := {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}
+		for animation in expected:
+			if not sprite.sprite_frames.has_animation(animation):
+				failures.append("animação do cultista ausente: %s" % animation)
+			elif sprite.sprite_frames.get_frame_count(animation) != expected[animation]:
+				failures.append("contagem incorreta em cultista/%s" % animation)
+		var start := enemy_view.position
+		enemy_view.sync_visual(start + Vector2(-1, 0))
+		if sprite.animation != &"move" or not sprite.flip_h:
+			failures.append("movimento do cultista para a esquerda não foi espelhado")
+		enemy_view.play_action(&"attack")
+		if sprite.animation != &"attack" or sprite.flip_h:
+			failures.append("ataque do cultista manteve espelhamento de movimento")
+		enemy_view.play_death()
+		if sprite.animation != &"death" or sprite.flip_h:
+			failures.append("morte do cultista não iniciou na orientação-base")
+	enemy_view.queue_free()
 	return failures
 
 func _validate_static_enemy_assets() -> Array[String]:

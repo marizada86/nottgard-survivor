@@ -19,11 +19,11 @@ O que continua valendo, para poder desfazer sem perder o resto:
 Avaliada = as EVID dos testers foram triadas. Só então os cartões "aguardando
 playtest" viram verificados ou reabertos.
 
-## Versão 0.2.0 — em preparação
+## Versão 0.2.0 — publicada (playtest)
 
 Origem: [PLAN-038](../vault/drafts/PLAN-038-atualizacao-pos-playtests-t01-t02-t03-2026-09-29.md)
 (0.1.1 e 0.2.0 viraram uma versão só) e [PLAN-039](../vault/drafts/PLAN-039-roteiro-run-qa-para-versao-0-1-1-2026-09-29.md)
-(roteiro da run QA). Ainda `0.1.0` em `core/version.gd` e `export_presets.cfg`.
+(roteiro da run QA, dispensado pelo dono: os bugs serão validados no próprio playtest). `0.2.0` em `core/version.gd` e `export_presets.cfg`. Publicada pelo CI no release `latest` (Playtest v0.2.0); o commit da build fica registrado no título do release.
 
 | Trilha | Conteúdo | Cartão / spec | Estado |
 |---|---|---|---|
@@ -65,16 +65,17 @@ Origem: [PLAN-038](../vault/drafts/PLAN-038-atualizacao-pos-playtests-t01-t02-t0
 
 ### Fechar a versão (checklist)
 
-- [ ] Suíte, smoke e (se houver mudança de dados) bot verdes
-- [ ] Roteiro do PLAN-039 rodado em run real; resultado vira EVID
-- [ ] `VERSION` em `core/version.gd` e `file_version`/`product_version` em `export_presets.cfg` atualizados no mesmo commit
-- [ ] Esta tabela revisada, com commits
-- [ ] `tools/backlog_check.ps1` sem alertas novos
-- [ ] Push na `main` (CI grava o commit da build e publica o `latest`)
-- [ ] Aviso aos testers com a lista "O que testar" e o [questionário](questionarios/)
+- [x] Suíte, smoke e (se houver mudança de dados) bot verdes
+- [ ] Roteiro do PLAN-039 rodado em run real; resultado vira EVID *(dispensado pelo dono em 2026-09-29; validar no playtest)*
+- [x] `VERSION` em `core/version.gd` e `file_version`/`product_version` em `export_presets.cfg` atualizados no mesmo commit
+- [x] Esta tabela revisada, com commits
+- [x] `tools/backlog_check.ps1` sem alertas novos
+- [x] Push na `main` (CI grava o commit da build e publica o `latest`)
+- [ ] Aviso aos testers com a lista "O que testar" e o [questionário rápido 003](questionarios/QUESTIONARIO%20R%C3%A1pido%20-%20003.pdf) (mapa pergunta → cartão em [QUESTIONARIO-003](questionarios/QUESTIONARIO-003-verificacao-v0.2.0.md))
 
 ## Histórico
 
 | Versão | Publicada | Commit da build | Avaliada em |
 |---|---|---|---|
+| 0.2.0 | 2026-09-29 (release `latest`, Playtest v0.2.0) | commit no título do release (`fce670d` na primeira publicação; republicada a cada push na `main`) | — (aguardando testers) |
 | 0.1.0 | 2026-09-29 (playtest T01, T02, T03) | não registrado (builds anteriores ao TOOL-001) | EVID-106, 107, 108 |

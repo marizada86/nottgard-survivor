@@ -5,6 +5,7 @@ extends Node2D
 const H_BASE := 62.0
 const ANIMATED := {
 	"zumbi": {"cell": Vector2i(256, 384), "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}},
+	"cultista_adaga": {"cell": Vector2i(256, 384), "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
 	"sacerdote_mente_derretida": {"cell": Vector2i(320, 480), "states": {"idle": 6, "move": 8, "attack": 6, "special_a": 8, "special_b": 8, "phase": 8, "death": 10}},
 }
 static var _tex_cache := {}
@@ -13,6 +14,7 @@ static var _tex_cache := {}
 var enemy: Enemy
 var tex: Texture2D
 var _has_animation := false
+var _flip_h_for_move := false
 var _action_locked := false
 var _dying := false
 var _last_screen_position := Vector2.ZERO
@@ -50,15 +52,18 @@ func _apply_id(enemy_id: String) -> void:
 func _build_animations(enemy_id: String) -> void:
 	var frames := SpriteStripFrames.empty()
 	_has_animation = false
+	_flip_h_for_move = false
 	if ANIMATED.has(enemy_id):
 		var spec: Dictionary = ANIMATED[enemy_id]
 		_cell = spec.cell
+		_flip_h_for_move = bool(spec.get("flip_h_for_move", false))
 		for state in spec.states:
 			var looped: bool = state in ["idle", "move"]
 			var fps := 9.0 if state == "death" else (10.0 if looped else 12.0)
 			_has_animation = SpriteStripFrames.add_strip(frames, state, "res://assets/animations/enemies/%s/%s.png" % [enemy_id, state], _cell, int(spec.states[state]), fps, looped) or _has_animation
 	sprite.sprite_frames = frames
 	sprite.visible = _has_animation
+	sprite.flip_h = false
 	sprite.offset = Vector2(0, -_cell.y * 0.5)
 	_update_sprite_scale()
 	if _has_animation and frames.has_animation(&"idle"):
@@ -71,10 +76,16 @@ func _update_sprite_scale() -> void:
 func sync_visual(screen_position: Vector2) -> void:
 	if _dying:
 		return
-	var moving := screen_position.distance_squared_to(_last_screen_position) > 0.04
+	var movement_delta := screen_position - _last_screen_position
+	var moving := movement_delta.length_squared() > 0.04
 	position = screen_position
 	_last_screen_position = screen_position
 	_update_sprite_scale()
+	if _flip_h_for_move:
+		if moving and absf(movement_delta.x) > 0.01:
+			sprite.flip_h = movement_delta.x < 0.0
+		elif not moving:
+			sprite.flip_h = false
 	if _has_animation and not _action_locked:
 		var desired: StringName = &"move" if moving else &"idle"
 		if sprite.animation != desired:
@@ -85,6 +96,8 @@ func sync_visual(screen_position: Vector2) -> void:
 func play_action(action: StringName = &"attack") -> void:
 	if not _has_animation or _dying:
 		return
+	if _flip_h_for_move:
+		sprite.flip_h = false
 	if not sprite.sprite_frames.has_animation(action):
 		action = &"attack"
 	if sprite.sprite_frames.has_animation(action):
@@ -95,6 +108,8 @@ func play_death() -> void:
 	if _dying:
 		return
 	_dying = true
+	if _flip_h_for_move:
+		sprite.flip_h = false
 	if _has_animation and sprite.sprite_frames.has_animation(&"death"):
 		_action_locked = true
 		sprite.play(&"death")
