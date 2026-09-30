@@ -56,58 +56,16 @@ da evidência — nunca é apagado.
 
 ## Regras por trilha
 
-### Arte & Áudio
-- Todo prompt respeita o **Sabor Nottgard**: divindade/bioma envolvido, paleta
-  ([RESEARCH-003](../vault/research/RESEARCH-003-paleta-das-deidades-2026-09-27.md)),
-  bestiário ([RESEARCH-001](../vault/research/RESEARCH-001-abismo-bestiario-visual-2026-09-21.md)),
-  sem inventar lore. Sem história: a lore é só sabor.
-- Itens abertos acumulam até fechar um **lote**. O lote sai como um único
-  `ART-PROMPTS-NNN` (próximo livre: **032**) para o gerador de imagem.
-- Candidatos ficam em `.atena/generated/` até admissão explícita do dono.
+Cada trilha guarda as próprias regras no topo do seu arquivo; aqui só o mapa:
 
-### Mecânicas
-- **Sem limite de mecânicas por versão de playtest** (decisão do dono,
-  2026-09-29: builds com mais conteúdo empolgam os testers). O que vale é **uma
-  spec, um teste e um commit por mecânica** e a lista "O que testar" em
-  [RELEASES.md](RELEASES.md). O antigo limite de 2 fica como sugestão de prudência
-  para mecânicas de risco **alto**.
-- Cada mecânica: spec própria, teste em `tests/`, rodada do bot de balanceamento
-  quando mexer em números, e nível de risco:
-  **baixo** (só números em JSON) · **médio** · **alto** (nova forma de jogar).
-- Mecânica nunca entra no mesmo commit que arte ou bug-fix (isola `git revert`).
-- O portão "bugs fechados antes de mecânica" está **dispensado**: a verificação
-  acontece no próximo playtest (ver ciclo de vida acima).
-
-### Bugs
-- **P0** (crash, save corrompido, impede jogar): corrige na hora, não espera lote.
-- **P1** (quebra uma função, tem contorno) e **P2** (cosmético): acumulam.
-- O lote de bugs fecha no **próximo playtest com versão nova** (regra do dono).
-  O gatilho de 5 ou mais P1 continua servindo de **aviso**, não de bloqueio.
-- Verificação manual pendente (BUG-003 a 010) não conta como defeito: é dívida
-  a pagar no playtest.
-- **Lembrete da Atena:** no início de cada sessão e antes de export/commit ela
-  informa quantos P0/P1 estão abertos, rodando
-  `powershell -ExecutionPolicy Bypass -File tools/backlog_check.ps1`. Um hook de
-  início de sessão (`.claude/settings.json`) roda a versão curta sozinho.
-
-### Balanceamento
-- Um cartão por entidade e sintoma (herói forte demais, item fraco, economia sobrando...),
-  acumulando relatos por tester, medições do bot e leitura dos dados.
-- Decide-se com **duas fontes independentes** (ou jogador + bot); relato único fica em
-  observação. Sinais que divergem por herói pedem o bot por herói antes de mexer em
-  número global.
-- Uma alavanca por vez por entidade, anotando **antes → depois** no cartão.
-- Medição: `tools/bot.gd` (comando em [BALANCEAMENTO.md](BALANCEAMENTO.md)).
-
-### Ferramentas e build
-- Tudo que não é arte, mecânica nem bug (kit de evidência, CI, scripts, export)
-  vai em [FERRAMENTAS.md](FERRAMENTAS.md).
-- Build de playtest sempre com `tools/stamp_build.ps1` (o CI já faz) para gravar o
-  commit no rodapé, no log e nas notas.
-
-### Perguntas para os testers
-- Dúvidas sobre um relato **não bloqueiam** nada: ficam em "Perguntas para o
-  próximo playtest" no [INBOX](INBOX.md) e entram no questionário seguinte.
+| Trilha | Onde estão as regras | Em uma linha |
+|---|---|---|
+| Arte & Áudio | [ARTE.md](ARTE.md) | Sabor Nottgard, lote único `ART-PROMPTS-NNN`, candidatos em `.atena/generated/` até admissão |
+| Mecânicas | [MECANICAS.md](MECANICAS.md) | Sem limite por versão; uma spec, um teste e um commit por mecânica |
+| Bugs | [BUGS.md](BUGS.md) | P0 na hora; P1/P2 acumulam; lote fecha no próximo playtest; **Minor-fix** sem spec nem EVID |
+| Balanceamento | [BALANCEAMENTO.md](BALANCEAMENTO.md) | Um cartão por entidade e sintoma; duas fontes para decidir; uma alavanca por vez |
+| Ferramentas | [FERRAMENTAS.md](FERRAMENTAS.md) | Kit de evidência, CI, scripts e export; build de playtest sempre com `stamp_build.ps1` |
+| Perguntas aos testers | [INBOX.md](INBOX.md) | Dúvidas não bloqueiam; entram no questionário seguinte |
 
 ## Ordem de lançamento
 

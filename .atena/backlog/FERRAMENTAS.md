@@ -26,5 +26,6 @@ godot --headless --path . -s tests/run_all.gd
 godot --headless --path . --export-release "Windows Playtest Publico" build/NottgardSurvivors-Playtest.exe
 ```
 
-O CI já grava o commit sozinho no passo "Gravar o identificador da build".
+Build de playtest sempre com `tools/stamp_build.ps1`, para gravar o commit no
+rodapé, no log e nas notas. O CI já grava o commit sozinho no passo "Gravar o identificador da build".
 `data/build_info.json` fica fora do git de propósito.

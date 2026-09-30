@@ -6,6 +6,19 @@ Estado (2026-09-30): há defeitos **confirmados por mais de um tester** (BUG-011
 suspeita e **dívida de verificação manual**. Ciclo de vida e regra de fechamento
 no [README](README.md); estado atual sai de `tools/backlog_check.ps1`.
 
+## Regras
+
+- **P0** (crash, save corrompido, impede jogar): corrige na hora, não espera lote.
+- **P1** (quebra uma função, tem contorno) e **P2** (cosmético): acumulam.
+- O lote de bugs fecha no **próximo playtest com versão nova** (regra do dono).
+  O gatilho de 5 ou mais P1 continua servindo de **aviso**, não de bloqueio.
+- Verificação manual pendente (BUG-003 a 010) não conta como defeito: é dívida
+  a pagar no playtest.
+- **Lembrete da Atena:** no início de cada sessão e antes de export/commit ela
+  informa quantos P0/P1 estão abertos, rodando
+  `powershell -ExecutionPolicy Bypass -File tools/backlog_check.ps1`. Um hook de
+  início de sessão (`.claude/settings.json`) roda a versão curta sozinho.
+
 Os cartões trazem só o **estado atual**; o texto integral de cada um está em
 [Histórico](#histórico-dos-cartões) no fim do arquivo.
 

@@ -1,8 +1,14 @@
 # ARTE & ÁUDIO — assets, templates, layouts, backgrounds, sons
 
-Cada item acumula até fechar um lote. O lote vira **um** `ART-PROMPTS-NNN`
-(próximo livre: 032). Todo prompt segue o **Sabor Nottgard**: divindade e bioma
-envolvidos, paleta (RESEARCH-003), bestiário (RESEARCH-001), sem lore inventada.
+## Regras
+
+- Todo prompt respeita o **Sabor Nottgard**: divindade/bioma envolvido, paleta
+  ([RESEARCH-003](../vault/research/RESEARCH-003-paleta-das-deidades-2026-09-27.md)),
+  bestiário ([RESEARCH-001](../vault/research/RESEARCH-001-abismo-bestiario-visual-2026-09-21.md)),
+  sem inventar lore. Sem história: a lore é só sabor.
+- Itens abertos acumulam até fechar um **lote**. O lote sai como um único
+  `ART-PROMPTS-NNN` (próximo livre: **032**) para o gerador de imagem.
+- Candidatos ficam em `.atena/generated/` até admissão explícita do dono.
 
 ## Abertos
 

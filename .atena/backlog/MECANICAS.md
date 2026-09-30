@@ -1,8 +1,18 @@
 # MECÂNICAS — o que muda o comportamento do jogo
 
-Limite: **2 mecânicas por lote de lançamento**. Risco: **baixo** (só JSON) ·
-**médio** · **alto** (nova forma de jogar). Só abre spec com o lote de bugs
-anterior fechado (ver [README](README.md)).
+## Regras
+
+- **Sem limite de mecânicas por versão de playtest** (decisão do dono,
+  2026-09-29: builds com mais conteúdo empolgam os testers). O que vale é **uma
+  spec, um teste e um commit por mecânica** e a lista "O que testar" em
+  [RELEASES.md](RELEASES.md). O antigo limite de 2 fica como sugestão de prudência
+  para mecânicas de risco **alto**.
+- Cada mecânica: spec própria, teste em `tests/`, rodada do bot de balanceamento
+  quando mexer em números, e nível de risco:
+  **baixo** (só números em JSON) · **médio** · **alto** (nova forma de jogar).
+- Mecânica nunca entra no mesmo commit que arte ou bug-fix (isola `git revert`).
+- O portão "bugs fechados antes de mecânica" está **dispensado**: a verificação
+  acontece no próximo playtest (ver ciclo de vida no [README](README.md)).
 
 ## Abertos
 
