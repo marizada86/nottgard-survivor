@@ -55,7 +55,7 @@ os cartões Minor-fix do período viram o bloco "Pequenos ajustes" do changelog
 
 | ID | Título | Origem | Situação |
 |---|---|---|---|
-| — | — | — | — |
+| BUG-018 | Minor-fix: Manto do Pântano mostrava "+1 puddle_immune"; agora "+1 imune a poças" (`MOD_LABELS`) | Auditoria de rótulos 2026-09-30 | **Fechado 2026-09-30**; `core/items.gd` |
 
 ## Fechados
 
