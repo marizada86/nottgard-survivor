@@ -2,7 +2,7 @@
 id: "ART-PROMPTS-029"
 type: "prompts-de-arte"
 title: "HQs novas — Onda 2 (HQN-07 a HQN-14)"
-status: "concluída localmente — HQN-07 a HQN-14 possuem candidatas aprovadas; não promovidas para assets"
+status: "parcialmente integrada — HQN-11 a HQN-14 admitidas em assets/hq; HQN-07 a HQN-10 seguem como candidatas aprovadas"
 created: "2026-09-29"
 relations: ["[[PLAN-040-hqs-novas-highlights-do-vault-2026-09-29]]", "[[ART-PROMPTS-027-hqs-novas-guia-de-estilo-e-piloto]]", "[[SPEC-080-hqs-de-transicao-do-nottcard]]"]
 sources: ["F:/dev/nottgard-vault (16_Histórias, 10_Sessões, 04_Locais)", "Nottcard HQ-000", "assets/portraits/*.png"]
@@ -355,10 +355,12 @@ The masked priestess places a gentle hand on the tiefling's shoulder, her head s
   [[EVID-118-hqn-09-candidatas-2026-09-29]],
   [[EVID-119-hqn-10-candidatas-2026-09-29]] e
   [[EVID-123-auditoria-de-proporcao-e-identidade-das-hqs-2026-09-29]].
-- HQN-11 a HQN-14: 16 quadros finais gerados e aprovados localmente; ver
+- HQN-11 a HQN-14: 16 quadros finais gerados, aprovados localmente e admitidos
+  em `assets/hq/`; ver
   [[EVID-124-hqn-11-a-14-candidatas-2026-09-30]].
-- As candidatas permanecem em `.atena/generated/art-candidates/hq/`; nenhuma
-  foi admitida em `assets/`. A geração local desta onda está concluída.
+- As fontes aprovadas permanecem preservadas em
+  `.atena/generated/art-candidates/hq/`; HQN-07 a HQN-10 ainda não foram
+  admitidas em `assets/`.
 - HQN-14 Q1 segue a clarificação do dono de que a figura encapuzada é Nyrelia;
   a v02 aprovada foi preservada junto da v01 anterior. Os textos dos prompts
   deste arquivo não foram alterados nesta execução.
