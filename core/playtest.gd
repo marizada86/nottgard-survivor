@@ -531,22 +531,27 @@ static func is_allowed_evidence_path(path: String) -> bool:
 func _uses_executable_evidence_directory() -> bool:
 	return OS.has_feature("public_playtest") or OS.has_feature("qa_internal")
 
+## O Game grava o primeiro log antes do _ready do Playtest: resolve a pasta sob demanda
+## para que o caminho nunca saia relativo.
+func _evidence_root() -> String:
+	if _evidence_dir == "":
+		_evidence_dir = evidence_directory_for_executable(OS.get_executable_path())
+	return _evidence_dir
+
 func _images_dir() -> String:
-	return _evidence_dir.path_join("imagens")
+	return _evidence_root().path_join("imagens")
 
 func _log_path() -> String:
-	return _evidence_dir.path_join("logs/jogo.log")
+	return _evidence_root().path_join("logs/jogo.log")
 
 func _relato_path() -> String:
-	return _evidence_dir.path_join("relato.txt")
+	return _evidence_root().path_join("relato.txt")
 
 func _prepare_evidence_dir() -> bool:
 	if _evidence_error != "":
 		_show_evidence_error(_evidence_error)
 		return false
-	if _evidence_dir == "":
-		_evidence_dir = evidence_directory_for_executable(OS.get_executable_path())
-	for path in [_evidence_dir, _evidence_dir.path_join("logs"), _images_dir()]:
+	for path in [_evidence_root(), _evidence_root().path_join("logs"), _images_dir()]:
 		if DirAccess.make_dir_recursive_absolute(path) != OK:
 			_show_evidence_error("Não foi possível criar evidencias ao lado do executável. Mova a build para uma pasta com permissão de gravação e abra o jogo novamente.")
 			return false
