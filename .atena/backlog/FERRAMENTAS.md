@@ -9,6 +9,7 @@ procedimentos. Prefixo `TOOL-nnn`. Mesma regra de estado dos outros backlogs.
 |---|---|---|---|
 | TOOL-002 | `tools/backlog_check.ps1`: confere IDs duplicados, links quebrados, próximos livres e conta P0/P1 abertos | [PLAN-041](../vault/drafts/PLAN-041-ajustes-de-organizacao-release-rico-e-build-id-2026-09-29.md) | implementado; rodar antes de commit e de export |
 | TOOL-003 | Hook de início de sessão que roda o `backlog_check` (`.claude/settings.json`) | PLAN-041 | implementado; ver README de ferramentas abaixo |
+| TOOL-004 | `tools/bot.gd`: responde a `item_offer`, trata `revive_offer` como morte, reporta o motivo real do fim e o tempo/PV mínimo na luta do chefe | [EVID-143](../evidence/EVID-143-bot-travado-em-item-offer-e-chefe-das-docas-2026-10-01.md) | implementado 2026-10-01; refazer a varredura `overnight.ps1` |
 
 ## Fechados
 

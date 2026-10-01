@@ -35,16 +35,20 @@ func _run(hero_id: String, seed_v: int, start: String, dt: float, max_stages: in
 	var cleared := 0
 	var last_stage := start
 	var cause := "tempo"
+	var bossinfo := {}
 	while steps < 400000:
 		steps += 1
 		if b.state == "levelup" or b.state == "altar":
 			b.choose(_pick(b))
 			continue
+		if b.state == "item_offer":
+			b.choose(_pick_item(b))
+			continue
 		if b.run_time > 6000.0:
 			cause = "CAP de tempo em %s (boss hp %s)" % [b.stage_id, str(int(b.boss.hp)) if b.boss != null else "-"]
 			break
-		if b.state == "dead":
-			cause = "morreu em %s (%.0fs) nv%d por volta de %d inimigos" % [b.stage_id, b.time, b.hero.level, b.enemies.size()]
+		if b.state == "dead" or b.state == "revive_offer":
+			cause = "morreu em %s (%.0fs) nv%d por volta de %d inimigos; boss=%s" % [b.stage_id, b.time, b.hero.level, b.enemies.size(), ("hp %d/%d" % [int(b.boss.hp), int(b.boss.max_hp)]) if b.boss != null and not b.boss_dead else ("caiu" if b.boss_dead else "nao-surgiu")]
 			break
 		if b.state == "won":
 			cause = "VENCEU"
@@ -60,6 +64,12 @@ func _run(hero_id: String, seed_v: int, start: String, dt: float, max_stages: in
 			var active_dir := (active_target.pos - b.hero.pos).normalized() if active_target != null else Vector2(1, 0)
 			b.use_active(active_dir)
 		b.step(_move(b), dt)
+		if b.boss != null and not b.boss.dead:
+			var bi: Dictionary = bossinfo.get(b.stage_id, {"t0": b.time, "min": 1.0, "dur": -1.0})
+			bi.min = minf(float(bi.min), b.hero.hp / maxf(1.0, b.hero.max_hp))
+			bossinfo[b.stage_id] = bi
+		elif b.boss_dead and bossinfo.has(b.stage_id) and float(bossinfo[b.stage_id].dur) < 0.0:
+			bossinfo[b.stage_id].dur = b.time - float(bossinfo[b.stage_id].t0)
 		b.events.clear()
 		_interact(b)
 		if b.stage_cleared and b.stage.get("next", "") == "" and not b.stage.get("endless", false):
@@ -70,8 +80,14 @@ func _run(hero_id: String, seed_v: int, start: String, dt: float, max_stages: in
 				if it.kind == "portal" and not it.used:
 					b.hero.pos = it.pos
 					b.interact()
+	if cause == "tempo":
+		cause = "tempo (estado=%s t=%.0fs run=%.0fs boss=%s)" % [b.state, b.time, b.run_time, ("hp %d/%d" % [int(b.boss.hp), int(b.boss.max_hp)]) if b.boss != null and not b.boss_dead else ("caiu" if b.boss_dead else "nao-surgiu")]
 	var line := "%s | fases=%s | profundidade=%d x%.2f | nv=%d armas=%s passivas=%s | itens=%d | %s" % [hero_id, ",".join(stages_reached),
 		b.descent_depth, b.reward_multiplier(), b.hero.level, ",".join(b.hero.weapons.map(func(w): return "%s%d" % [w.id, w.level])), str(b.hero.passives), b.hero.items.size(), cause]
+	var bf: Array = []
+	for k in bossinfo:
+		bf.append("%s:%s/pvmin%d%%" % [k, ("%.0fs" % float(bossinfo[k].dur)) if float(bossinfo[k].dur) >= 0.0 else "x", int(float(bossinfo[k].min) * 100.0)])
+	line += " | chefe=" + ",".join(bf)
 	return {"line": line, "stages": stages_reached}
 
 func _interact(b: Battle) -> void:
@@ -154,3 +170,15 @@ func _move(b: Battle) -> Vector2:
 	if v.length() < 0.05:
 		return Vector2.ZERO
 	return Iso.to_screen(v.normalized()).normalized()
+
+## Troca de item (MEC-021/027): fica com a opção de melhor saldo de modificadores; empate, a primeira (equipar o novo).
+func _pick_item(b: Battle) -> int:
+	var best := 0
+	var best_s := -999
+	for i in b.offer.size():
+		var badge: Dictionary = b.offer[i].get("badge", {})
+		var s := int(badge.get("up", 0)) - int(badge.get("down", 0))
+		if s > best_s:
+			best_s = s
+			best = i
+	return best
