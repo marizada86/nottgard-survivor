@@ -37,6 +37,24 @@ func run() -> Array:
 		out.append("biografia deveria liberar só para o herói que venceu a fase")
 	if cq.upgrade_locked_by("mao_cheia") != "" or cq.upgrade_locked_by("segunda_chance") == "":
 		out.append("Mão Cheia deveria estar liberada e Segunda Chance ainda travada")
+	# O Azarado: 3 mortes com o Leoric (total) liberam a Teimosia do Azarado
+	var az := Profile.new()
+	var dead_leoric := {"won": false, "dead": true, "gold": 10, "cleared_ids": [], "bosses": 0, "boss_ids": [], "hero": "leoric"}
+	az.apply_run(_result({"won": false, "dead": true, "gold": 10, "cleared_ids": [], "bosses": 0, "boss_ids": [], "hero": "durvall"}))
+	az.apply_run(_result(dead_leoric))
+	az.apply_run(_result(dead_leoric))
+	if az.data.achievements.has("o_azarado"):
+		out.append("O Azarado não pode sair com 2 mortes do Leoric (mortes de outros heróis não contam)")
+	if az.upgrade_locked_by("teimosia_do_azarado") != "o_azarado":
+		out.append("Teimosia do Azarado deveria estar travada por O Azarado")
+	az.apply_run(_result({"won": true, "dead": false, "hero": "leoric"}))
+	if az.data.achievements.has("o_azarado"):
+		out.append("vencer com o Leoric não conta como morte")
+	az.apply_run(_result(dead_leoric))
+	if not az.data.achievements.has("o_azarado"):
+		out.append("3 mortes com o Leoric deveriam conceder O Azarado")
+	if az.upgrade_locked_by("teimosia_do_azarado") != "" or az.achievement_progress({"id": "x", "stat": "hero_deaths_leoric", "value": 3}) != "3/3":
+		out.append("O Azarado deveria liberar a Teimosia do Azarado e mostrar 3/3")
 	var bios: Dictionary = Data.table("hero_bios")
 	for hid in Data.table("heroes"):
 		if String(bios.get(hid, "")) == "":

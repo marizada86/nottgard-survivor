@@ -178,6 +178,9 @@ func apply_run(result: Dictionary) -> Dictionary:
 	st.elites_total = int(st.elites_total) + int(result.elites)
 	if bool(result.dead):
 		st.deaths = int(st.deaths) + 1
+		if not st.has("hero_deaths"):
+			st["hero_deaths"] = {}
+		st.hero_deaths[result.hero] = int(st.hero_deaths.get(result.hero, 0)) + 1
 	for bid in result.boss_ids:
 		st.boss_kills[bid] = int(st.boss_kills.get(bid, 0)) + 1
 	st.heroes_played[result.hero] = true
@@ -222,6 +225,8 @@ func stat_value(stat: String, run: Dictionary) -> float:
 		"rituals_total": return float(st.get("rituals_total", 0))
 		"bets_won_total": return float(st.get("bets_won_total", 0))
 		"loyalty_total": return float(st.get("loyalty_total", 0))
+	if stat.begins_with("hero_deaths_"):
+		return float(st.get("hero_deaths", {}).get(stat.substr(12), 0))
 	if stat.begins_with("hero_cleared_"):
 		return 1.0 if st.get("heroes_cleared", {}).has(stat.substr(13)) else 0.0
 	if stat.begins_with("reached_"):

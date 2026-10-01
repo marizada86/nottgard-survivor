@@ -52,6 +52,7 @@
 | MEC-033 | médio | **Sorte de drop:** destrutíveis soltam loot ocasional (55 % base, +5 % por Sorte, teto 90 %) e a tabela de drop melhora com a **Sorte** (Carisma + itens/bênçãos + novo modificador `sorte`). Sorte sobe durante a run | [EVID-139](../evidence/EVID-139-playtest-higor-qa-14b15e4-2026-10-01.md) IN-047; resposta do dono 2026-10-01 | — | SPEC-115 §2 — **IMPLEMENTADO 2026-10-01** (fase 1) |
 | MEC-034 | médio | **Armadilhas de cenário que ferem herói e inimigos** (Selo Sacrificial em Dagruve, Carga Solta nas Docas), com aviso e ciclo | EVID-139 IN-047; resposta do dono 2026-10-01 | ART-026 (glifo, carga) | SPEC-115 §3 — **IMPLEMENTADO 2026-10-01**; aguarda playtest e arte (ART-026) |
 | MEC-035 | alto | **Layout de cenário por dados** (`data/scenery.json`): zonas, props com sentido, estradas e destrutíveis fixos, sem consumir a RNG da batalha | EVID-139 IN-047 | ART-025, ART-026 | SPEC-115 §1 — **fases 1 e 3 IMPLEMENTADAS 2026-10-01** (destrutíveis fixos e layout de props por zonas com a arte atual); estradas dormentes até ART-026 |
+| MEC-036 | baixo | Conquista **O Azarado**: morrer 3 vezes com o Leoric (total, entre runs) libera o aprimoramento **Teimosia do Azarado** (+1 revive por run, soma com Segunda Chance; 1.500 moedas). Novo contador `hero_deaths` no perfil. Pedido do dono 2026-10-01; o nome "O Infeliz" já era de outra conquista | pedido do dono (chat) | — | — **IMPLEMENTADO 2026-10-01** |
 
 ### Como as mecânicas entram em versão
 
