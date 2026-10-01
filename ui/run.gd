@@ -687,10 +687,12 @@ func _merge_damage_number(tid: int, amount: int) -> bool:
 	if tid == 0 or not _recent_numbers.has(tid):
 		return false
 	var entry: Dictionary = _recent_numbers[tid]
-	var label: Label = entry.label
-	if not is_instance_valid(label) or Time.get_ticks_msec() > int(entry.until):
+	# O número flutuante é liberado ao sumir: validar antes de tipar, senão o GDScript acusa "instância já liberada".
+	var raw_label: Variant = entry.label
+	if not is_instance_valid(raw_label) or Time.get_ticks_msec() > int(entry.until):
 		_recent_numbers.erase(tid)
 		return false
+	var label: Label = raw_label
 	entry.amount = int(entry.amount) + amount
 	label.text = str(entry.amount)
 	label.scale = Vector2.ONE * 1.2
