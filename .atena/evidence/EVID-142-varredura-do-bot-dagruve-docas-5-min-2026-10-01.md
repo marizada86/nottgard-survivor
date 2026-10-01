@@ -69,3 +69,19 @@ Mesma comparação controlada, só Dagruve (A = build antiga `adaf31b`, 8 min; B
 - **Nyrelia:** fraca nas três condições (mediana 3 a 4). A diferença A→B (−1,4) fica **dentro do erro** (~1,8 com 30 sementes): não dá para afirmar regressão. O mapa de 5 min não muda nada (B ≈ C).
 - **Zynara:** a 8 min é um herói **mediano** (8,0 nas duas builds); a 5 min cai para 5,8 (**−28 %**), enquanto Korrak, Durvall e Kayron variam menos de 6 %. **O corte para 5 min prejudica a Zynara**: ela depende do tempo para render (Suspensão Temporal tem recarga de 20 s). Efeito colateral de BAL-011.
 - Conclusão: a Nyrelia precisa de ajuste próprio; a Zynara precisa de uma partida inicial mais forte ou de outra alavanca antes de se mexer nos números gerais. Confirmar no playtest humano.
+
+## Ajuste de Nyrelia e Zynara (BAL-014) — 2026-10-01
+Entrevista com o dono: alavancas escolhidas e meta "meio da tabela, nível médio 7 a 9" (bot, Dagruve de 5 min, 30 sementes).
+
+| Mudança | Antes | Depois |
+|---|---|---|
+| Nyrelia: Dominar Pessoa | 1d4, recarga 4,5 s | **1d6, recarga 3,5 s** (atordoamento 2,5 s mantido) |
+| Nyrelia: PV base e CA | 26 PV, CA 0 | **30 PV, CA 1** |
+| Zynara: Suspensão Temporal | recarga 20 s | **14 s** |
+| Zynara: Ampulheta do Silêncio Eterno | 2d6, recarga 5,5 s | **2d8, recarga 5,0 s** (2ª alavanca, aplicada porque a recarga sozinha não bastou) |
+
+Resultado (nível médio; mediana):
+- **Nyrelia:** 4,1 (3,0) → **8,8 (7,5)**.
+- **Zynara:** 5,8 (4,0) → só a recarga **6,2 (5,5)** → com a arma **7,9 (6,5)**.
+
+Efeitos colaterais a vigiar: `dominar_pessoa` e `ampulheta` também podem ser obtidas por outros heróis e pelo item "Ampulheta do Silêncio Eterno"; essas armas ficaram mais fortes para todos. Não foi medido o efeito nos demais heróis. Confirmar no playtest humano.

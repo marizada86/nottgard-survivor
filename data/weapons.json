@@ -48,7 +48,7 @@
     "evolve": {"passive": "botas_leves", "into": "tempestade"}},
   "tempestade":       {"name": "Tempestade", "src": "Evolução", "kind": "bolt", "dtype": "magico", "attr": "inteligencia", "dice": "3d8", "cd": 1.4, "range": 12, "speed": 15, "pierce": 6, "count": 4, "spread": 40, "levels": [], "desc": "Lâminas em todas as direções.",
     "synergy": {"item_base": "couro", "name": "Vendaval Constante", "bonus_per_depth": {"speed_pct": 0.02}}},
-  "dominar_pessoa":   {"name": "Dominar Pessoa", "src": "Carta: Dominar Pessoa", "kind": "bolt", "dtype": "magico", "attr": "carisma", "dice": "1d4", "cd": 4.5, "range": 9, "speed": 12, "pierce": 0, "count": 1, "stun": 2.5,
+  "dominar_pessoa":   {"name": "Dominar Pessoa", "src": "Carta: Dominar Pessoa", "kind": "bolt", "dtype": "magico", "attr": "carisma", "dice": "1d6", "cd": 3.5, "range": 9, "speed": 12, "pierce": 0, "count": 1, "stun": 2.5,
     "desc": "O alvo perde os ataques.", "levels": [{"stun": 0.5}, {"cd": -0.6}, {"count": 1}, {"stun": 1.0, "dice": "2d6"}]},
   "marca_da_retidao": {"name": "Marca da Retidão", "src": "Carta: Marca da Retidão", "kind": "bolt", "dtype": "radiante", "attr": "constituicao", "dice": "1d4", "cd": 3.0, "range": 9, "speed": 12, "pierce": 0, "count": 1, "mark": 0.25, "weaken": 1,
     "desc": "Marca o alvo: todos os golpes doem mais.", "levels": [{"mark": 0.1}, {"cd": -0.4}, {"count": 1}, {"mark": 0.15, "weaken": 1}]},
@@ -66,6 +66,6 @@
     "desc": "Ácido que dissolve armadura.", "levels": [{"weaken": 1}, {"dice": "1d10"}, {"cd": -0.15}, {"dmg": 3}]},
   "cajado_dos_desejos": {"name": "Cajado dos Desejos Sussurrantes", "src": "Item: Cajado dos Desejos Sussurrantes", "kind": "bolt", "dtype": "magico", "attr": "carisma", "dice": "1d6", "cd": 2.4, "range": 9, "speed": 8, "pierce": 0, "count": 3, "spread": 30,
     "desc": "Desejos sussurrados em leque.", "levels": [{"dmg": 1}, {"count": 1}, {"dice": "1d8"}, {"cd": -0.4, "dmg": 2}]},
-  "ampulheta": {"name": "Ampulheta do Silêncio Eterno", "src": "Item: Ampulheta do Silêncio Eterno", "kind": "nova", "dtype": "magico", "attr": "inteligencia", "dice": "2d6", "cd": 5.5, "radius": 4.0, "stun": 1.5,
+  "ampulheta": {"name": "Ampulheta do Silêncio Eterno", "src": "Item: Ampulheta do Silêncio Eterno", "kind": "nova", "dtype": "magico", "attr": "inteligencia", "dice": "2d8", "cd": 5.0, "radius": 4.0, "stun": 1.5,
     "desc": "Silêncio: todos ao redor param.", "levels": [{"stun": 0.5}, {"cd": -1.0}, {"radius": 1.0}, {"stun": 1.0}]}
 }

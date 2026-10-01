@@ -20,7 +20,7 @@
   "leoric": {"name": "Leoric", "title": "Gnomo · Modo de Constelação", "attrs": {"forca": 8, "inteligencia": 14, "constituicao": 12, "carisma": 16}, "base_hp": 24, "prof": 2, "armor": {"ca": 0, "cam": 2},
     "weapon": "sopro_de_estrela", "unlock": "ach:aluris", "color": [140, 90, 50], "hair": [150, 140, 130],
     "passive": {"name": "Constelação", "desc": "+25% de alcance de coleta e área.", "mods": {"pickup": 0.6, "area_pct": 0.15}}},
-  "nyrelia": {"name": "Nyrelia", "title": "Sacerdotisa de Mask · Greenholders", "attrs": {"forca": 8, "inteligencia": 14, "constituicao": 12, "carisma": 16}, "base_hp": 26, "prof": 2, "armor": {"ca": 0, "cam": 3},
+  "nyrelia": {"name": "Nyrelia", "title": "Sacerdotisa de Mask · Greenholders", "attrs": {"forca": 8, "inteligencia": 14, "constituicao": 12, "carisma": 16}, "base_hp": 30, "prof": 2, "armor": {"ca": 1, "cam": 3},
     "weapon": "dominar_pessoa", "unlock": "ach:pilares_ativos", "color": [200, 180, 60], "hair": [50, 40, 30],
     "passive": {"name": "Aura Amarela", "desc": "+10% de moedas e XP.", "mods": {"gold_pct": 0.10, "xp_pct": 0.10}}},
   "zynara": {"name": "Zynara Vellen", "title": "Alta Conselheira de Rodhe's Bridge", "attrs": {"forca": 9, "inteligencia": 16, "constituicao": 12, "carisma": 15}, "base_hp": 26, "prof": 2, "armor": {"ca": 0, "cam": 3},

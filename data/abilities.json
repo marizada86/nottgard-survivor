@@ -7,6 +7,6 @@
   "korrak": {"id": "impacto_de_xargath", "name": "Impacto de Xar'gath", "kind": "slam", "cooldown": 14.0, "radius": 3.0, "dice": "3d10", "dtype": "fogo", "attr": "forca", "lifesteal": 0.2, "burn": 3, "desc": "Impacto de fogo em área com roubo de vida."},
   "leoric": {"id": "constelacao", "name": "Constelação", "kind": "star_burst", "cooldown": 13.0, "count": 8, "dice": "2d8", "dtype": "radiante", "attr": "carisma", "speed": 13, "range": 11, "desc": "Dispara uma constelação de projéteis em todas as direções."},
   "nyrelia": {"id": "dominacao", "name": "Dominação", "kind": "charm", "cooldown": 17.0, "duration": 7.0, "range": 7.0, "desc": "Converte temporariamente um inimigo comum em aliado."},
-  "zynara": {"id": "suspensao_temporal", "name": "Suspensão Temporal", "kind": "time_stop", "cooldown": 20.0, "duration": 4.0, "radius": 7.0, "desc": "Quase paralisa inimigos e projéteis próximos."},
+  "zynara": {"id": "suspensao_temporal", "name": "Suspensão Temporal", "kind": "time_stop", "cooldown": 14.0, "duration": 4.0, "radius": 7.0, "desc": "Quase paralisa inimigos e projéteis próximos."},
   "bromnor": {"id": "concordia", "name": "Concórdia", "kind": "guard_nova", "cooldown": 16.0, "radius": 3.5, "dice": "2d8", "dtype": "radiante", "attr": "forca", "knock": 2.5, "charges": 1, "desc": "Ganha guarda e repele os inimigos ao redor."}
 }
