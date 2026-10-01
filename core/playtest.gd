@@ -780,6 +780,9 @@ func take_print() -> void:
 	Game.logline("Evidência: print salvo em imagens/%s" % path.get_file())
 	toast("Print salvo em evidencias/imagens/%s" % path.get_file())
 
+func is_note_open() -> bool:
+	return _note_open
+
 func open_note() -> void:
 	_pending_ctx = context()
 	_note_open = true

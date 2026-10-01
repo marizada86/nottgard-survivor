@@ -48,6 +48,9 @@ func finish() -> void:
 func _input(event: InputEvent) -> void:
 	if is_closed:
 		return
+	# O bloco de notas (F5) fica por cima da HQ e precisa receber espaço e clique.
+	if Playtest.is_note_open():
+		return
 	if event is InputEventKey and event.pressed and not event.echo:
 		if event.keycode == KEY_ESCAPE:
 			finish()

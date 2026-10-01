@@ -128,4 +128,27 @@ func run() -> Array:
 	if not bool(skip_screen.get("is_closed")) or bool(skip_screen.get("completed")):
 		out.append("Esc deveria pular a HQ sem contar leitura completa")
 	skip_screen.free()
+
+	var note_screen = scene.instantiate()
+	note_screen.process_mode = Node.PROCESS_MODE_ALWAYS
+	tree.root.add_child(note_screen)
+	note_screen.call("start_hq", hqs["hqn_11"])
+	Playtest.open_note()
+	var space := InputEventKey.new()
+	space.pressed = true
+	space.keycode = KEY_SPACE
+	note_screen.call("_input", space)
+	if int(note_screen.get("panel_index")) != 0:
+		out.append("espaço digitado no bloco de notas (F5) não pode avançar a HQ")
+	var click := InputEventMouseButton.new()
+	click.pressed = true
+	click.button_index = MOUSE_BUTTON_LEFT
+	note_screen.call("_input", click)
+	if int(note_screen.get("panel_index")) != 0:
+		out.append("clique no bloco de notas (F5) não pode avançar a HQ")
+	Playtest.close_note()
+	note_screen.call("_input", space)
+	if int(note_screen.get("panel_index")) != 1:
+		out.append("com o bloco de notas fechado o espaço deve voltar a avançar a HQ")
+	note_screen.free()
 	return out
