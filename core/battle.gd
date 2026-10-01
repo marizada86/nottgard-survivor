@@ -1390,6 +1390,10 @@ func _on_boss_dead(e: Enemy) -> void:
 	_add_interaction("chest", e.pos + Vector2(-1.2, 0))
 	_add_interaction("boss_chest", e.pos + Vector2(0, 1.6))
 	events.append({"type": "toast", "text": "%s caiu!" % e.name})
+	# SPEC-117 H4: a primeira vitória nesta fase libera a crônica no Diário
+	var chronicle: Dictionary = Data.table("chronicles").get(stage_id, {})
+	if not chronicle.is_empty() and not cleared_stages.has(stage_id):
+		events.append({"type": "toast", "text": "Nova crônica no Diário: %s" % String(chronicle.titulo), "color": Color(0.9, 0.8, 0.5)})
 	if bool(stage.get("endless", false)):
 		if not final_victory:
 			final_victory = true

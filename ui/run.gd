@@ -75,6 +75,10 @@ func _ready() -> void:
 	if battle.state == "revive_offer":
 		hud.show_revive_offer(battle)
 	hud.toast("%s — %s" % [battle.stage.name, Data.table("stage_story").get(battle.stage_id, {}).get("epigrafe", battle.stage.sub)], Color(0.9, 0.85, 0.6))
+	# SPEC-117 H6: uma linha sobre Adam nas Docas e em Shedaklah, logo depois da epígrafe
+	var rumor := String(Data.table("stage_story").get(battle.stage_id, {}).get("rumor", ""))
+	if rumor != "":
+		get_tree().create_timer(4.5).timeout.connect(func(): if is_instance_valid(hud): hud.toast(rumor, Color(0.75, 0.7, 0.9)))
 	_bark("entrada")
 	await _present_hqs(HQCatalog.newly_triggered_ids(Game.profile.data, "first_run"))
 	await _record_stage_reached(battle.stage_id)

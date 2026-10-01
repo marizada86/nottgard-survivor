@@ -41,6 +41,8 @@ Jogue uma partida normal em **Dagruve com Sylas**; troque de herói só onde o r
 
 **Texto e história (MEC-032).**
 - [ ] Ao entrar numa fase aparece a **epígrafe** (2 linhas). Em Dagruve ela cita **Adam**.
+- [ ] **Diário → Crônicas:** vença o chefe de uma fase: aparece o aviso "Nova crônica no Diário" e a crônica sai destravada; as demais ficam com cadeado.
+- [ ] **Rumor de Adam:** nas Docas e em Shedaklah, 4 segundos depois da epígrafe, uma linha em roxo fala dele.
 - [ ] Ao chefe aparecer, o título traz uma linha de contexto; **falas do herói** na entrada, no chefe e com pouca vida (desligável em Opções).
 
 **Dopamina (MEC-031).**

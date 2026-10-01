@@ -328,6 +328,16 @@ func _fill_hqs() -> void:
 		var hq: Dictionary = Data.table("hqs")[hq_id]
 		hq_ids.append(hq_id)
 		hq_list.add_item(String(hq.get("title", hq_id)))
+	# SPEC-117 H4: uma crônica por fase, liberada ao vencer a fase; as demais aparecem bloqueadas.
+	var chronicles: Dictionary = Data.table("chronicles")
+	var stage_ids: Array = Data.table("stages").keys()
+	stage_ids.sort_custom(func(a, b): return int(Data.table("stages")[a].order) < int(Data.table("stages")[b].order))
+	for stage_id in stage_ids:
+		if not chronicles.has(stage_id):
+			continue
+		var unlocked: bool = Game.profile.data.cleared.has(stage_id)
+		hq_ids.append("chr:%s" % stage_id)
+		hq_list.add_item(("Crônica: %s" if unlocked else "🔒 Crônica: %s") % Data.table("stages")[stage_id].name)
 	if hq_ids.is_empty():
 		hq_info.text = "Nenhuma HQ desbloqueada."
 		hq_play_btn.disabled = true
@@ -340,6 +350,16 @@ func _refresh_hq_selection(index: int) -> void:
 		hq_info.text = ""
 		hq_play_btn.disabled = true
 		return
+	if String(hq_ids[index]).begins_with("chr:"):
+		var stage_id := String(hq_ids[index]).substr(4)
+		var entry: Dictionary = Data.table("chronicles")[stage_id]
+		var stage_name: String = String(Data.table("stages")[stage_id].name)
+		if Game.profile.data.cleared.has(stage_id):
+			hq_info.text = "[b]%s — %s[/b]\n\n%s" % [stage_name, String(entry.titulo), String(entry.texto)]
+		else:
+			hq_info.text = "[b]Crônica: %s[/b]\n\nDerrote o chefe desta fase para ler." % stage_name
+		hq_play_btn.disabled = true
+		return
 	var hq: Dictionary = Data.table("hqs")[hq_ids[index]]
 	hq_info.text = "[b]%s[/b]\n4 quadros" % String(hq.get("title", ""))
 	hq_play_btn.disabled = false
@@ -349,6 +369,8 @@ func _open_selected_hq() -> void:
 	if selected.is_empty():
 		return
 	var hq_id: String = hq_ids[selected[0]]
+	if hq_id.begins_with("chr:"):
+		return
 	var hq: Dictionary = Data.table("hqs").get(hq_id, {})
 	if hq.is_empty():
 		return
