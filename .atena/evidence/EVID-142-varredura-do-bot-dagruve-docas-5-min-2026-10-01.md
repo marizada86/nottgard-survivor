@@ -85,3 +85,20 @@ Resultado (nível médio; mediana):
 - **Zynara:** 5,8 (4,0) → só a recarga **6,2 (5,5)** → com a arma **7,9 (6,5)**.
 
 Efeitos colaterais a vigiar: `dominar_pessoa` e `ampulheta` também podem ser obtidas por outros heróis e pelo item "Ampulheta do Silêncio Eterno"; essas armas ficaram mais fortes para todos. Não foi medido o efeito nos demais heróis. Confirmar no playtest humano.
+
+## Efeito do ajuste nos outros 8 heróis — 2026-10-01
+Mesma configuração (Dagruve de 5 min, 30 sementes), com `dominar_pessoa` e `ampulheta` já mais fortes. "Antes" = varredura desta EVID.
+
+| Herói | Antes | Depois (mediana) | Δ |
+|---|---:|---:|---:|
+| Korrak | 13,5 | 12,0 (12,0) | −1,5 |
+| Sylas | 10,9 | 11,0 (11,5) | +0,1 |
+| Maelor | 11,5 | 10,7 (11,0) | −0,8 |
+| Bromnor | 9,5 | 8,6 (8,0) | −0,9 |
+| Brook | 8,8 | 9,1 (8,5) | +0,3 |
+| Leoric | 8,6 | 7,1 (6,0) | −1,5 |
+| Durvall | 6,6 | 7,2 (6,0) | +0,6 |
+| Kayron | 5,6 | 6,0 (5,0) | +0,4 |
+
+Leitura: **nenhum herói se mexeu além do ruído** (erro de ~0,8 a 1,0 por média de 30 sementes; a maior variação é −1,5 em Korrak e Leoric, pouco mais de 1 desvio). A soma das variações é praticamente zero (−3,3 em 8 heróis, média −0,4), então não há inflação geral. A `dominar_pessoa` aparece nos itens de 4 a 11 runs por herói (a mais usada em Brook e Leoric) e a `ampulheta` em 0 a 2: a mudança alcança outros heróis, mas sem efeito detectável.
+Ordem após o ajuste: Korrak 12,0 · Sylas 11,0 · Maelor 10,7 · Brook 9,1 · **Nyrelia 8,8** · Bromnor 8,6 · **Zynara 7,9** · Durvall 7,2 · Leoric 7,1 · Kayron 6,0. A tabela ficou mais compacta, com Kayron como único herói claramente abaixo.
