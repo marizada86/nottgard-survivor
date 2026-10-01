@@ -93,8 +93,9 @@ jobs:
             Commit: ${{ github.sha }}
 
             **Como jogar:** baixe `NottgardSurvivors-windows.zip` (ou o `.exe` direto), extraia e abra.
-            **Como reportar:** dentro do jogo, F6 tira print, F5 abre o bloco de notas e F7 gera um `.zip`
-            de evidência ao lado do executável. Envie esse `.zip` ao responsável.
+            **Como reportar:** dentro do jogo, F6 tira print e F5 abre o bloco de notas para o relato.
+            As evidências ficam na pasta `evidencias/` ao lado do executável (`relato.txt`, `logs/jogo.log`
+            e os PNGs de `imagens/`). Envie os arquivos individualmente na task correspondente do Discord.
           allowUpdates: true
           replacesArtifacts: true
           removeArtifacts: true
