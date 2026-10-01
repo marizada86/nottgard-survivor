@@ -7,7 +7,7 @@
   bestiário ([RESEARCH-001](../vault/research/RESEARCH-001-abismo-bestiario-visual-2026-09-21.md)),
   sem inventar lore. Sem história: a lore é só sabor.
 - Itens abertos acumulam até fechar um **lote**. O lote sai como um único
-  `ART-PROMPTS-NNN` (próximo livre: **044**) para o gerador de imagem.
+  `ART-PROMPTS-NNN` (próximo livre: **052**) para o gerador de imagem.
 - Candidatos ficam em `.atena/generated/` até admissão explícita do dono.
 
 ## Abertos
@@ -40,6 +40,9 @@
 | ART-025 | background | **Fundos das fases** melhorados e coerentes com o cenário e com os novos assets (piloto Dagruve + Docas) | Dagruve (névoa/culto) · Docas (cais) | [EVID-139](../evidence/EVID-139-playtest-higor-qa-14b15e4-2026-10-01.md) IN-047/048 | ART-PROMPTS-040 pronto; fila CHATGPT-FILA-010 (C01-C02), aguarda geração; destrava MEC-030 |
 | ART-026 | props | Props temáticos do piloto: estradas, carroças, destrutíveis, objeto interativo e armadilha por bioma | Dagruve · Docas | [EVID-139](../evidence/EVID-139-playtest-higor-qa-14b15e4-2026-10-01.md) IN-047 | ART-PROMPTS-041 pronto; fila CHATGPT-FILA-010 (C03-C11), aguarda geração; destrava MEC-030 |
 | ART-027 | sprite + VFX | Cópia-isca de Sylas (Passo pelas Sombras) e explosão sombria | Mask / sombra | [EVID-139](../evidence/EVID-139-playtest-higor-qa-14b15e4-2026-10-01.md) IN-043 | destrava MEC-029; **hoje usa o sprite do Sylas em roxo como provisório**; ART-PROMPTS-042 pronto, fila CHATGPT-FILA-011 (S01-S02) |
+| ART-028 | VFX | **Golpes corpo a corpo** das 12 armas: kit de 6 quadros, arte neutra, tinta em runtime. Hoje é um cone translúcido de 0,16 s (`_swing` em `ui/run.gd`) | kit físico + exceções radiante, fogo e mágico | dono, 2026-10-01 ([PLAN-051](../vault/drafts/PLAN-051-vfx-de-ataques-e-magias-2026-10-01.md)) | **piloto pronto:** [ART-PROMPTS-051](../generated/ART-PROMPTS-051-piloto-vfx-corpo-a-corpo-fisico.md), fila [CHATGPT-FILA-020](../generated/CHATGPT-FILA-020-piloto-vfx-corpo-a-corpo-fisico.md) (12 imagens, nada enviado); a integração em `ui/run.gd` é mecânica |
+| ART-029 | VFX | **Projéteis e magias**: 8 projéteis (voo 4 + impacto 4) e 7 explosões (hoje só um anel `Line2D`) | orbe radiante, orbe arcano, trovão, anel radiante, ampulheta | dono, 2026-10-01 (PLAN-051) | depende da aprovação do piloto ART-028; prompts ainda a escrever |
+| ART-030 | VFX | **Habilidades dos 10 heróis** (corte, guarda, aura de cura, dash, overdrive, golpe no chão, estrelas, charme, tempo parado, guarda-nova): hoje sem visual próprio | por herói e divindade | dono, 2026-10-01 (PLAN-051) | depende do ART-028; prompts ainda a escrever; zonas e golpes de inimigos ficam fora até o dono pedir |
 
 > **Fila consolidada para o ChatGPT:**
 > [CHATGPT-FILA-001](../generated/CHATGPT-FILA-001-prompts-prontos.md) reúne os
