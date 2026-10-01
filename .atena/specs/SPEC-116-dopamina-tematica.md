@@ -88,3 +88,6 @@ Itens escolhidos: **D1 + D2 + D3 (lote Impacto)**. Implementados 2026-10-01:
 - Evento `hit` do herói agora leva `dtype` e `tid` (alvo). `ui/run.gd`: cor do número por tipo de dano (`_dcol`: físico cinza, mágico roxo, fogo laranja, radiante dourado); crítico em 22 pt, mais claro e com contorno.
 - **Agregação:** acertos não críticos no mesmo alvo dentro de 350 ms somam no mesmo número (`_merge_damage_number`), com leve pulso; críticos sempre aparecem sozinhos. O limite de 14 números simultâneos continua.
 - Testes automáticos passam (0 falhas, fumaça ok); o visual precisa de conferência em run real.
+
+## D6 implementado (2026-10-01)
+`ui/run.gd` `_loot_reveal`, disparado pelos eventos `item` e `item_offer` (baú, destrutível, Mímico, chefe): anel e faíscas na cor da raridade (comum só faíscas; mágico, raro e único com anel crescente 1,1 / 1,5 / 2,0) e o nome do item flutuando acima do herói, maior e em destaque para raro e único. A marca "(sorte)" aparece em itens acima de comum quando a Sorte do herói é positiva (aproximação: o jogo não registra se a Sorte mudou o sorteio). "Reduzir efeitos de impacto" corta as faíscas pela metade. O item não "salta" fisicamente: ele já vai direto para o herói. Sem teste automático; conferir em run real.

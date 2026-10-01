@@ -580,6 +580,9 @@ func _consume_events() -> void:
 				_play_interaction(ev)
 			"item":
 				Sfx.play("progress.item")
+				_loot_reveal(ev.item)
+			"item_offer":
+				_loot_reveal(ev.new_item)
 			"levelup":
 				Sfx.play("progress.levelup")
 			"boss":
@@ -821,6 +824,26 @@ func _kill_burst(enemy: Enemy, at: Vector2) -> void:
 		_hit_stop(0.05)
 	elif under.has_method("spawn_impact"):
 		under.call("spawn_impact", at, 2 if reduced else 5, tint)
+
+## Revelação do loot (SPEC-116 D6): brilho, anel e nome na cor da raridade; a Sorte aparece quando ajudou.
+const LOOT_FX := {"comum": {"ring": 0.8, "sparks": 3, "size": 12}, "magico": {"ring": 1.1, "sparks": 6, "size": 14},
+	"raro": {"ring": 1.5, "sparks": 10, "size": 16}, "unico": {"ring": 2.0, "sparks": 16, "size": 18}}
+func _loot_reveal(item: Dictionary) -> void:
+	if hero_node == null or battle == null:
+		return
+	var rarity := String(item.get("rarity", "comum"))
+	var fx_spec: Dictionary = LOOT_FX.get(rarity, LOOT_FX.comum)
+	var col := Items.rarity_color(rarity)
+	var world: Vector2 = battle.hero.pos
+	if rarity != "comum":
+		_ring(world, float(fx_spec.ring), col, 0.4)
+	if under.has_method("spawn_impact"):
+		var sparks := int(fx_spec.sparks)
+		under.call("spawn_impact", world, maxi(2, sparks / 2) if Game.reduced_impact() else sparks, col)
+	var text := String(item.get("name", ""))
+	if rarity != "comum" and battle.luck() > 0.0:
+		text += "  (sorte)"
+	_float_text(hero_node.position + Vector2(-30, -78), text, col.lightened(0.15), int(fx_spec.size), rarity == "unico" or rarity == "raro")
 
 ## Coleta com ritmo: o tom sobe a cada moeda ou orbe de XP coletado em sequência.
 func _pickup_feedback(kind: String, at: Vector2) -> void:
