@@ -101,11 +101,12 @@ function New-ContactSheet([object[]]$Frames, [string]$Path) {
     $graphics = [System.Drawing.Graphics]::FromImage($sheet)
     $font = [System.Drawing.Font]::new('Segoe UI', 10)
     $brush = [System.Drawing.SolidBrush]::new([System.Drawing.Color]::White)
+    $checkerLight = [System.Drawing.SolidBrush]::new([System.Drawing.Color]::FromArgb(96, 96, 96))
+    $checkerDark = [System.Drawing.SolidBrush]::new([System.Drawing.Color]::FromArgb(68, 68, 68))
     try {
         $graphics.Clear([System.Drawing.Color]::FromArgb(32, 32, 32))
         $graphics.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::NearestNeighbor
         $graphics.PixelOffsetMode = [System.Drawing.Drawing2D.PixelOffsetMode]::Half
-        $groups = @($Frames | Group-Object State)
         for ($rowIndex = 0; $rowIndex -lt $stateOrder.Count; $rowIndex++) {
             $stateName = $stateOrder[$rowIndex]
             $stateFrames = @($Frames | Where-Object { $_.State -eq $stateName } | Sort-Object Index)
@@ -118,8 +119,8 @@ function New-ContactSheet([object[]]$Frames, [string]$Path) {
                 $imageY = $y + $labelHeight
                 for ($checkY = 0; $checkY -lt $previewCellHeight; $checkY += 12) {
                     for ($checkX = 0; $checkX -lt $previewCellWidth; $checkX += 12) {
-                        $shade = if (([int]($checkX / 12) + [int]($checkY / 12)) % 2 -eq 0) { 68 } else { 96 }
-                        $graphics.FillRectangle([System.Drawing.SolidBrush]::new([System.Drawing.Color]::FromArgb($shade, $shade, $shade)), $imageX + $checkX, $imageY + $checkY, 12, 12)
+                        $tileBrush = if (([int]($checkX / 12) + [int]($checkY / 12)) % 2 -eq 0) { $checkerDark } else { $checkerLight }
+                        $graphics.FillRectangle($tileBrush, $imageX + $checkX, $imageY + $checkY, 12, 12)
                     }
                 }
                 $source = [System.Drawing.Bitmap]::FromFile($frame.FullPath)
@@ -136,6 +137,8 @@ function New-ContactSheet([object[]]$Frames, [string]$Path) {
     }
     finally {
         $brush.Dispose()
+        $checkerLight.Dispose()
+        $checkerDark.Dispose()
         $font.Dispose()
         $graphics.Dispose()
         $sheet.Dispose()
@@ -251,6 +254,8 @@ foreach ($stateName in $stateOrder) {
     Save-ArgbPng $stripBytes $stripWidth $cellHeight $stripPath
     $savedImage = [System.Drawing.Bitmap]::FromFile($stripPath)
     try {
+        $savedWidth = $savedImage.Width
+        $savedHeight = $savedImage.Height
         $savedRect = [System.Drawing.Rectangle]::new(0, 0, $savedImage.Width, $savedImage.Height)
         $savedData = $savedImage.LockBits($savedRect, [System.Drawing.Imaging.ImageLockMode]::ReadOnly, [System.Drawing.Imaging.PixelFormat]::Format32bppArgb)
         try {
@@ -267,7 +272,7 @@ foreach ($stateName in $stateOrder) {
     finally {
         $savedImage.Dispose()
     }
-    if ($savedImage.Width -ne $stripWidth -or $savedImage.Height -ne $cellHeight) { throw "Dimensão errada na tira '$stateName'." }
+    if ($savedWidth -ne $stripWidth -or $savedHeight -ne $cellHeight) { throw "Dimensão errada na tira '$stateName'." }
     for ($frameIndex = 0; $frameIndex -lt $stateFrames.Count; $frameIndex++) {
         $frame = $stateFrames[$frameIndex]
         $cellBytes = New-Object byte[] ($cellWidth * $cellHeight * 4)
