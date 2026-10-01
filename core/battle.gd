@@ -75,7 +75,7 @@ var free_revive_used := false
 var death_reward_rate := 0.5
 var death_reason := ""
 var invuln := 0.0
-var stats := {"kills": 0, "crits": 0, "ones": 0, "elites": 0, "bosses": 0, "chests": 0, "gold": 0.0, "damage_taken": 0.0, "clean_kills": 0, "clean_streak_best": 0, "stages_cleared": 0, "rituals": 0, "bets_won": 0, "loyalty": 0, "boss_ids": [], "stage_ids": [], "cleared_ids": []}
+var stats := {"kills": 0, "crits": 0, "ones": 0, "elites": 0, "bosses": 0, "chests": 0, "gold": 0.0, "damage_taken": 0.0, "clean_kills": 0, "clean_streak_best": 0, "still_best": 0.0, "stages_cleared": 0, "rituals": 0, "bets_won": 0, "loyalty": 0, "boss_ids": [], "stage_ids": [], "cleared_ids": []}
 var codex := {"enemies": {}, "items": {}, "weapons": {}}
 var _acc := {}
 var _elites_done := {}
@@ -128,6 +128,7 @@ var _rule_index := -1
 var _effect_cd := {}
 var _stage_events_done := {}
 var _hero_moving := false
+var still_t := 0.0
 ## Afinidade estritamente visual; a aura só é habilitada por uma escolha divina.
 var visual_god := ""
 var visual_boon_selected := false
@@ -481,6 +482,9 @@ func step(screen_dir: Vector2, dt: float) -> void:
 	invuln = maxf(0.0, invuln - dt)
 	hero.push = Vector2.ZERO
 	_hero_moving = screen_dir != Vector2.ZERO
+	# "Estátua Viva": segundos seguidos sem andar (tempo de jogo; pausas de menu e cinemática não contam)
+	still_t = 0.0 if _hero_moving else still_t + dt
+	stats.still_best = maxf(float(stats.still_best), still_t)
 	_stage_rule_step(dt)
 	_stage_event_step()
 	hero.step(screen_dir, dt)
@@ -2542,5 +2546,5 @@ func result() -> Dictionary:
 	return {"won": state == "won", "dead": state == "dead", "extracted": extracted, "time": run_time, "kills": stats.kills,
 		"gold": int(round(stats.gold * reward_multiplier())), "raw_gold": int(stats.gold), "reward_mult": reward_multiplier(), "descent_depth": descent_depth,
 		"clean_streak": stats.clean_streak_best, "level": hero.level, "stage": stage_id, "hero": hero.id, "bosses": stats.bosses, "boss_ids": stats.boss_ids, "elites": stats.elites, "crits": stats.crits,
-		"ones": stats.ones, "rituals": stats.rituals, "bets_won": stats.bets_won, "loyalty": stats.loyalty, "chests": stats.chests, "stages_cleared": stats.stages_cleared, "stage_ids": stats.stage_ids, "cleared_ids": stats.cleared_ids, "final_victory": final_victory, "weapons": hero.weapons.map(func(w): return w.id), "codex": codex,
+		"ones": stats.ones, "still": stats.still_best, "rituals": stats.rituals, "bets_won": stats.bets_won, "loyalty": stats.loyalty, "chests": stats.chests, "stages_cleared": stats.stages_cleared, "stage_ids": stats.stage_ids, "cleared_ids": stats.cleared_ids, "final_victory": final_victory, "weapons": hero.weapons.map(func(w): return w.id), "codex": codex,
 		"reward_rate": death_reward_rate if state == "dead" else 1.0, "death_reason": death_reason}

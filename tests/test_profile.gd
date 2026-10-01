@@ -55,6 +55,15 @@ func run() -> Array:
 		out.append("3 mortes com o Leoric deveriam conceder Leoric, o Infeliz")
 	if az.upgrade_locked_by("teimosia_do_azarado") != "" or az.achievement_progress({"id": "x", "stat": "hero_deaths_leoric", "value": 3}) != "3/3":
 		out.append("Leoric, o Infeliz deveria liberar a Teimosia do Infeliz e mostrar 3/3")
+	# Estátua Viva: 2 minutos seguidos parado numa run
+	var still_p := Profile.new()
+	still_p.apply_run(_result({"still": 119.0}))
+	if still_p.data.achievements.has("estatua_viva"):
+		out.append("119 s parado não deveriam conceder Estátua Viva")
+	var coins_before := still_p.coins()
+	still_p.apply_run(_result({"won": false, "dead": true, "gold": 0, "cleared_ids": [], "bosses": 0, "boss_ids": [], "still": 121.0}))
+	if not still_p.data.achievements.has("estatua_viva") or still_p.coins() < coins_before + 150:
+		out.append("121 s parado deveriam conceder Estátua Viva e 150 moedas")
 	var bios: Dictionary = Data.table("hero_bios")
 	for hid in Data.table("heroes"):
 		if String(bios.get(hid, "")) == "":

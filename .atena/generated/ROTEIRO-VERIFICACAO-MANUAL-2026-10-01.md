@@ -49,6 +49,7 @@ Jogue uma partida normal em **Dagruve com Sylas**; troque de herói só onde o r
 - [ ] **Maré do Abismo:** 10 abates seguidos mostram um aviso e +2% de XP por 5 s.
 
 **Conquista e loja do Leoric (MEC-036).**
+- [ ] **Estátua Viva:** fique parado 2 minutos seguidos numa run (sem tocar em WASD, mouse ou Q); a conquista sai e dá 150 moedas.
 - [ ] Em **Conquistas** aparece **Leoric, o Infeliz** (morrer 3 vezes com o Leoric). A recompensa libera **Teimosia do Infeliz** em Melhorias.
 
 **Duração e balanceamento (BAL-011/013/014).**

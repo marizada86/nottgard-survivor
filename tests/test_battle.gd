@@ -1190,4 +1190,23 @@ func run() -> Array:
 					out.append("%s: prop dentro da armadilha %s" % [lay_stage, trap.id])
 					break
 
+	# Estátua Viva: segundos seguidos sem andar, reinicia ao andar, só conta com a run ativa
+	var st := _bat(95, "durvall")
+	_quiet(st)
+	st.hero.max_hp = 99999.0
+	st.hero.hp = 99999.0
+	for i in 250:
+		st.step(Vector2.ZERO, 0.5)
+	if st.stats.still_best < 120.0 or st.result().still < 120.0:
+		out.append("125 s parado deveriam registrar ao menos 120 s (veio %.1f)" % float(st.stats.still_best))
+	var best_before := float(st.stats.still_best)
+	st.step(Vector2(1, 0), 0.5)
+	if st.still_t != 0.0:
+		out.append("andar deveria reiniciar a contagem de imobilidade")
+	if float(st.stats.still_best) != best_before:
+		out.append("o melhor tempo parado não pode diminuir ao andar")
+	st.step(Vector2.ZERO, 0.5)
+	if st.still_t <= 0.0 or st.still_t > 1.0:
+		out.append("a contagem deveria recomeçar do zero depois de andar")
+
 	return out

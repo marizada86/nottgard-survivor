@@ -217,6 +217,7 @@ func stat_value(stat: String, run: Dictionary) -> float:
 		"run_time": return float(run.get("time", 0.0))
 		"run_crits": return float(run.get("crits", 0))
 		"run_ones": return float(run.get("ones", 0))
+		"run_still": return float(run.get("still", 0.0))
 		"run_clean_streak": return float(run.get("clean_streak", 0))
 		"stages_cleared": return float(data.cleared.size())
 		"heroes_played": return float(st.heroes_played.size())
