@@ -102,3 +102,13 @@ Mesma configuração (Dagruve de 5 min, 30 sementes), com `dominar_pessoa` e `am
 
 Leitura: **nenhum herói se mexeu além do ruído** (erro de ~0,8 a 1,0 por média de 30 sementes; a maior variação é −1,5 em Korrak e Leoric, pouco mais de 1 desvio). A soma das variações é praticamente zero (−3,3 em 8 heróis, média −0,4), então não há inflação geral. A `dominar_pessoa` aparece nos itens de 4 a 11 runs por herói (a mais usada em Brook e Leoric) e a `ampulheta` em 0 a 2: a mudança alcança outros heróis, mas sem efeito detectável.
 Ordem após o ajuste: Korrak 12,0 · Sylas 11,0 · Maelor 10,7 · Brook 9,1 · **Nyrelia 8,8** · Bromnor 8,6 · **Zynara 7,9** · Durvall 7,2 · Leoric 7,1 · Kayron 6,0. A tabela ficou mais compacta, com Kayron como único herói claramente abaixo.
+
+## Ajuste do Kayron (BAL-013) — 2026-10-01
+Entrevista com o dono: alavancas "Sobrecarga Mística melhor" e "Passiva mais forte"; meta "só sair do fundo, 6,5 a 7" (bot, Dagruve de 5 min, 30 sementes).
+
+| Mudança | Antes | Depois |
+|---|---|---|
+| Sobrecarga Mística (habilidade ativa) | recarga 18 s, duração 6 s | **recarga 14 s, duração 7 s** |
+| Poder Místico (passiva) | −8 % de recarga, +10 % de área | **−10 % de recarga, +15 % de área** |
+
+Resultado: nível médio **6,0 (mediana 5,0) → 7,3 (mediana 6,0)**; 1 semente passou para as Docas. Fica no limite superior da meta, dentro do erro de ~0,8. Confirmar no playtest humano.

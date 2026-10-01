@@ -13,7 +13,7 @@
     "passive": {"name": "Visão Verdadeira", "desc": "+3 de precisão e +3% de crítico por excedente.", "mods": {"hit": 3, "crit_overflow_bonus": 0.03}}},
   "kayron": {"name": "Kayron Lioran", "title": "Aasimar · Leitor Abissal", "patron": "Shar", "attrs": {"forca": 12, "inteligencia": 12, "constituicao": 12, "carisma": 14}, "base_hp": 28, "prof": 2, "armor": {"ca": 1, "cam": 0},
     "weapon": "descarga_estelar", "unlock": "start", "color": [200, 200, 230], "hair": [240, 240, 255],
-    "passive": {"name": "Poder Místico", "desc": "-8% de recarga e +10% de área.", "mods": {"cd_pct": 0.08, "area_pct": 0.10}}},
+    "passive": {"name": "Poder Místico", "desc": "-10% de recarga e +15% de área.", "mods": {"cd_pct": 0.10, "area_pct": 0.15}}},
   "korrak": {"name": "Korrak Nammat", "title": "Goliath · Machado de Xar'gath", "attrs": {"forca": 18, "inteligencia": 8, "constituicao": 16, "carisma": 8}, "base_hp": 40, "prof": 2, "armor": {"ca": 2, "cam": -2},
     "weapon": "machado_de_xargath", "unlock": "ach:veterano_de_durao", "color": [130, 130, 130], "hair": [40, 40, 40],
     "passive": {"name": "Fúria Goliath", "desc": "+20% de dano, -10% de velocidade.", "mods": {"dmg_pct": 0.20, "speed_pct": -0.10}}},
