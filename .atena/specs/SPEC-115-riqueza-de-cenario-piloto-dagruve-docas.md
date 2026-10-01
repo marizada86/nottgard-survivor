@@ -1,0 +1,83 @@
+---
+id: "SPEC-115"
+title: "Riqueza de cenário: piloto em Dagruve e Docas"
+status: "rascunho para aprovação do dono (2026-10-01)"
+created: "2026-10-01"
+relations: ["[[EVID-139-playtest-higor-qa-14b15e4-2026-10-01]]", "[[PLAN-050-pos-playtest-higor-2026-10-01]]", "[[SPEC-114-passo-pelas-sombras-copia-isca]]"]
+---
+
+# SPEC-115 — Riqueza de cenário (MEC-030, piloto Dagruve + Docas)
+
+Risco: **alto** (nova forma de jogar o mapa). Cartões: MEC-030 (guarda-chuva), MEC-033, MEC-034, MEC-035, ART-025, ART-026.
+
+## Origem e decisões do dono
+Relato IN-047/IN-048 (2026-10-01): cenário sem sentido na disposição; pede estradas, carroças, coisas destrutíveis e interativas e
+armadilhas temáticas, "um cenário rico deixa a gameplay menos monótona".
+- **Armadilha fere os dois** (herói e inimigos).
+- **Destrutíveis soltam loot ocasionalmente**, com **sorte melhorável durante a run**.
+- Piloto em Dagruve e Docas; o resultado vira molde para os outros sete biomas.
+
+## O que já existe e será reaproveitado
+- Quebráveis são inimigos parados com a flag `quebravel` (`core/battle.gd`, tabela por bioma em `BREAKABLE_TYPES_BY_STAGE`); hoje nascem em
+  posições aleatórias perto do herói e têm drop garantido (ouro 65 %, poção 20 %, ímã 10 %, item 5 %).
+- Zonas `telegraph` com `friendly: true` já ferem herói e inimigos (regra de Feng-tu). A armadilha usa esse mecanismo.
+- Interações (`chest`, `fountain`, `altar`...) e seus pesos por fase (`stages.json`).
+- Props manuais nas cenas `ui/stages/*.tscn`, decais de chão (`data/ground_decals.json`) e `TerrainLayout`.
+
+## Regra de ouro
+O layout **não consome a RNG da batalha** (como o `TerrainLayout`): as sementes do bot continuam comparáveis. Posições vêm de dados; variações usam uma RNG própria.
+
+## Peças
+
+### 1. Dados de cenário (`data/scenery.json`) — MEC-035
+Por fase: `zones` (praça, cais, estrada, clareira), `props_fixos` (carroças, pilhas de caixotes, redes, guindaste), `destrutiveis` (tipo + posição fixa + zona)
+e `armadilhas`. Mapa 60×60. Cada zona tem tema, ancora decais de estrada (trilha/remendo já existem) e agrupa props com sentido
+(carroça na estrada, caixotes junto ao cais, velas junto ao altar). Nada flutua: usar o contrato de ancoragem de props (BUG-013).
+
+- **Dagruve (distrito negligenciado, névoa e culto):** rua de pedra cruzando o mapa, carroça abandonada, barris e caixotes junto às paredes,
+  velas/candelabros ao redor de uma praça com selo ritual.
+- **Docas (cais, fenda e porão ritual):** cais de tábuas ao longo da água, guindaste, pilhas de carga, redes e barris, boca do porão ritual.
+
+### 2. Destrutíveis fixos com loot e sorte — MEC-033 + MEC-035
+- Carroça, barril, caixote, candelabro: inimigos parados `quebravel` colocados pelo layout, com PV por tipo (carroça aguenta mais).
+  Quebram com qualquer arma; sem ação nova de combate.
+- **Chance de loot ocasional:** hoje sempre cai algo. Nova regra: `chance_drop` base 55 %, +5 % por ponto de **Sorte**, teto 90 %.
+- **Tabela de loot enviesada pela Sorte:** o peso do ouro cai e os pesos de poção, ímã e item sobem; item raro só passa de 5 % com Sorte.
+- **Sorte** = modificador de Carisma + bônus de itens/bênçãos (`lucky_chests` já dá +4 nos baús) + um novo modificador `sorte` em itens e passivas.
+  Assim melhora durante a run (nível de Carisma, itens, bênçãos) sem criar nova tela. Números em `data/difficulty.json` → `breakables`.
+- Os destrutíveis aleatórios de hoje continuam (spawn dinâmico), usando a mesma tabela.
+
+### 3. Armadilhas de cenário que ferem os dois — MEC-034
+Entidade de fase com posição fixa, ciclo e telegrafia (anel vermelho), reaproveitando `zones` `telegraph` com `friendly: true`.
+- **Dagruve — Selo Sacrificial:** glifo no chão que pulsa a cada 7 s (aviso de 1,2 s), 2d6 mágico em raio 1,6.
+- **Docas — Carga Solta:** carga suspensa pelo guindaste cai a cada 9 s em ponto marcado (aviso de 1,0 s), 2d8 físico em raio 1,4 e deixa uma poça de slime.
+- Fere herói e inimigos igualmente; inimigos comuns **não evitam** a armadilha (valor tático de levá-los até ela).
+- Dano escala com `tier()` como os ataques de inimigo; sem armadilha em cima do ponto de nascimento do herói.
+
+### 4. Interativo temático — parte de MEC-030 (fase 2)
+Um objeto por bioma, reaproveitando as interações existentes com visual temático (poço de oferendas em Dagruve; guincho do cais em Docas).
+Só entra se as fases 1 a 3 passarem no playtest.
+
+### 5. Arte (ART-025, ART-026)
+Fundo de fase coerente com o cenário, estrada, carroça, guindaste, pilhas de carga e glifo do selo. Prompts pelo Sabor Nottgard; o jogo roda com
+os assets atuais enquanto a arte não chega (retângulos/props existentes).
+
+## Fases de implementação (um commit por fase)
+1. **Dados + destrutíveis fixos + Sorte** (MEC-033/035): `data/scenery.json`, leitor no Battle e no cenário, loot com Sorte, testes.
+2. **Armadilhas** (MEC-034): entidade, telegrafia, dano em ambos, testes de dano e de não nascer sobre o herói.
+3. **Layout e props com sentido** (decais de estrada, carroça, cais) com a arte disponível.
+4. **Interativo temático** e arte nova (ART-025/026).
+
+## Testes
+- Destrutível fixo existe na posição do dado e quebra com dano.
+- Probabilidade de drop cresce com a Sorte e respeita o teto; tabela não perde peso total.
+- Armadilha fere herói e inimigo no raio, não fora dele, e respeita o aviso.
+- Layout não altera a sequência da RNG da batalha (mesma semente, mesmos spawns de onda).
+- Rodada do bot: Sylas, Durvall e Brook em Dagruve e Docas antes e depois.
+
+## Não objetivos
+Mapa novo, novas fases, regras de fase novas, mudar dificuldade das ondas (isso é BAL).
+
+## Perguntas ainda abertas
+- Número de destrutíveis fixos por mapa (proposta: 14 em Dagruve e 16 em Docas) e se recarregam depois de quebrados (proposta: não; os aleatórios continuam).
+- Armadilhas visíveis desde o início ou reveladas ao chegar perto (proposta: sempre visíveis, para o jogador poder usá-las).
