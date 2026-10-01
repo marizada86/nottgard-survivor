@@ -84,11 +84,11 @@ Lore nova, mudar o cânone, revelar segredos do mestre, alterar a ordem das fase
 
 ## Cânone do mestre informado pelo dono (2026-10-01) — NÃO entra no texto do jogo
 Dito pelo dono no chat, para facilitar a escrita:
-- **O amuleto de Adam** (no Vault, o **Colar de Ghaunadaur**): **quem o possui se torna o Adam.** Adam é, portanto, um papel que o colar impõe a quem o carrega.
+- **O amuleto de Adam**: **quem o possui se torna o Adam.** Adam é, portanto, um papel que o amuleto impõe a quem o carrega. Esclarecimento do dono: **colar e amuleto são "quase a mesma coisa"**, ou seja, o amuleto é parente próximo do **Colar de Ghaunadaur** do Vault, **não necessariamente o mesmo objeto**; não tratar os dois como idênticos nem escrever um no lugar do outro.
 - Esse amuleto é **uma das duas metades** da formação da **Síntese Abissal**: a outra é a **fusão de Astherion com Durvall**. As duas juntas dão a Síntese.
 
 Como isto conversa com o Vault (leitura, sem alterar):
-- O registro já diz que **quem usa o colar é dominado pela consciência de Ghaunadaur** (Sylvaris em 1477; depois Adam) e que Marciela o reconhece como o mesmo trazido pela expedição dos pais de Erik (Sessões 23 e 24).
+- O registro já diz, sobre o **Colar de Ghaunadaur** (parente do amuleto, ver acima), que **quem usa o colar é dominado pela consciência de Ghaunadaur** (Sylvaris em 1477; depois Adam) e que Marciela o reconhece como o mesmo trazido pela expedição dos pais de Erik (Sessões 23 e 24).
 - Em seguida Adam derrete quando Brook arranca o colar e a Síntese passa a ser o chefe final.
 - O Vault **não** diz que o colar "faz de quem o porta o Adam" nem que ele é metade da Síntese; isto é informação nova do dono. Se o dono quiser que vire cânone registrado, a decisão e o registro são dele (o Vault é somente leitura para este projeto).
 
