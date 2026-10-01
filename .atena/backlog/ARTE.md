@@ -70,6 +70,20 @@
 > | 5 | [CHATGPT-FILA-012](../generated/CHATGPT-FILA-012-ui-e-vfx-pendentes.md) | 9 (U01–U09) | polimento; depende de mecânicas já feitas |
 >
 > Filas 004 a 008 (piloto do cultista e mobs da onda 1) seguem em andamento pelo [PLAN-048](../vault/drafts/PLAN-048-geracao-animacoes-mobs-onda-1-2026-09-30.md). Nenhuma das novas foi enviada.
+>
+> **Ordem de envio das filas de mobs por bioma (ART-021, Atena, 2026-10-01):** um bioma por vez, com gate de identidade (só os `idle_00`, aprovar, depois o resto) e admissão pelo rito da SPEC-111 antes de abrir o seguinte. Alternativa: trocar 1 e 2 para seguir a ordem de jogo.
+>
+> | # | Fila | Quadros | Por quê |
+> |---|---|---:|---|
+> | 1 | [CHATGPT-FILA-014](../generated/CHATGPT-FILA-014-mobs-molor.md) Molor | 66 | menor lote com chefe; valida a receita num bioma novo |
+> | 2 | [CHATGPT-FILA-013](../generated/CHATGPT-FILA-013-mobs-shedaklah.md) Shedaklah | 166 | maior reuso (limo, receptáculo e pudim aparecem em Molor, Goranthis e Pilares) |
+> | 3 | [CHATGPT-FILA-015](../generated/CHATGPT-FILA-015-mobs-durao.md) Durão | 126 | `molydeus_chefe` cobre também o `molydeus_menor` |
+> | 4 | [CHATGPT-FILA-016](../generated/CHATGPT-FILA-016-mobs-feng-tu.md) Feng Tu | 126 | `cultista_ghaunadaur` reaproveitado em Shendilavri e Pilares |
+> | 5 | [CHATGPT-FILA-017](../generated/CHATGPT-FILA-017-mobs-shendilavri.md) Shendilavri | 106 | `sucubo` cobre a ilusão; `master_of_cruelties` aparece em Pilares |
+> | 6 | [CHATGPT-FILA-018](../generated/CHATGPT-FILA-018-mobs-goranthis.md) Goranthis | 86 | `death_tyrant` e guardião aparecem em Pilares |
+> | 7 | [CHATGPT-FILA-019](../generated/CHATGPT-FILA-019-mobs-pilares.md) Pilares | 26 | só a Síntese Abissal, chefe final; o resto já vem dos lotes anteriores |
+>
+> Roda depois, ou em paralelo, das filas de cenário (ART-024, 026, 025), que travam jogo ou bug visível.
 
 ## Lote 1 — prompts prontos (2026-09-29)
 
