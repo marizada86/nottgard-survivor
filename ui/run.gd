@@ -28,6 +28,8 @@ var start_pos := Vector2.ZERO
 var _result_shown := false
 var _shake := 0.0
 var _numbers := 0
+const NUMBER_MERGE_MS := 350
+var _recent_numbers := {}  # tid do alvo -> {label, amount, until}: soma acertos rápidos no mesmo alvo (MEC-031 D5)
 var _paused := false
 var _items_shown := false
 var _stage_clear_events_seen: Dictionary = {}
@@ -511,10 +513,13 @@ func _consume_events() -> void:
 				Sfx.play("combat.critical" if ev.crit else "combat.impact", -14.0)
 				if ev.crit:
 					_hit_stop(0.04)
-				if _numbers < 14:
-					var theme: Dictionary = ev.get("visual_theme", _divine_theme())
-					var divine_col: Color = theme.primary
-					_float_text(at + Vector2(randf_range(-6, 6), -36), str(ev.amount), divine_col.lightened(0.2) if ev.crit else divine_col, 18 if ev.crit else 14, ev.crit, theme.outline)
+				var theme: Dictionary = ev.get("visual_theme", _divine_theme())
+				var number_col := _dcol(String(ev.get("dtype", "fisico")))
+				var merged: bool = not ev.crit and _merge_damage_number(int(ev.get("tid", 0)), int(ev.amount))
+				if not merged and _numbers < 14:
+					var label := _float_text(at + Vector2(randf_range(-6, 6), -36), str(ev.amount), number_col.lightened(0.25) if ev.crit else number_col, 22 if ev.crit else 14, ev.crit, theme.outline)
+					if not ev.crit and ev.has("tid"):
+						_recent_numbers[int(ev.tid)] = {"label": label, "amount": int(ev.amount), "until": Time.get_ticks_msec() + NUMBER_MERGE_MS}
 					if ev.has("visual_theme") and under.has_method("spawn_impact"):
 						under.call("spawn_impact", ev.pos, 3, theme.impact_accent)
 			"miss":
@@ -668,7 +673,21 @@ func _dcol(dtype: String) -> Color:
 		"magico": return Color(0.65, 0.45, 1.0)
 	return Color(0.85, 0.85, 0.9)
 
-func _float_text(at: Vector2, text: String, col: Color, size: int, critical: bool = false, outline: Color = Color(0, 0, 0)) -> void:
+## Soma o acerto ao número recente do mesmo alvo, se ainda estiver na janela; devolve true se somou.
+func _merge_damage_number(tid: int, amount: int) -> bool:
+	if tid == 0 or not _recent_numbers.has(tid):
+		return false
+	var entry: Dictionary = _recent_numbers[tid]
+	var label: Label = entry.label
+	if not is_instance_valid(label) or Time.get_ticks_msec() > int(entry.until):
+		_recent_numbers.erase(tid)
+		return false
+	entry.amount = int(entry.amount) + amount
+	label.text = str(entry.amount)
+	label.scale = Vector2.ONE * 1.2
+	return true
+
+func _float_text(at: Vector2, text: String, col: Color, size: int, critical: bool = false, outline: Color = Color(0, 0, 0)) -> Label:
 	var l := Label.new()
 	l.text = text
 	l.position = at
@@ -687,6 +706,7 @@ func _float_text(at: Vector2, text: String, col: Color, size: int, critical: boo
 	t.tween_callback(func():
 		_numbers -= 1
 		l.queue_free())
+	return l
 
 func _update_divine_aura() -> void:
 	if hero_node == null or battle == null:

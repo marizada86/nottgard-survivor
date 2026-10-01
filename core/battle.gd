@@ -655,13 +655,13 @@ func _hero_hit(e: Enemy, p: Dictionary, roll: bool, visual_theme: Dictionary = {
 		dmg = maxf(1.0, round(dmg))
 		e.hp -= dmg
 		e.hit_flash = 0.12
-		events.append({"type": "hit", "pos": e.pos, "amount": int(dmg), "crit": crit, "visual_theme": resolved_theme})
+		events.append({"type": "hit", "pos": e.pos, "amount": int(dmg), "crit": crit, "dtype": dtype, "tid": e.get_instance_id(), "visual_theme": resolved_theme})
 		if crit and _has_boon_effect("critical_wave"):
 			for other in enemies:
 				if other != e and not other.dead and other.pos.distance_to(e.pos) <= 2.0:
 					var splash := maxf(1.0, round(dmg * 0.25))
 					other.hp -= splash
-					events.append({"type": "hit", "pos": other.pos, "amount": int(splash), "crit": false, "visual_theme": resolved_theme})
+					events.append({"type": "hit", "pos": other.pos, "amount": int(splash), "crit": false, "dtype": dtype, "tid": other.get_instance_id(), "visual_theme": resolved_theme})
 					if other.hp <= 0.0:
 						_kill(other)
 		var ls := float(p.get("lifesteal", 0.0)) + hero.m("lifesteal")

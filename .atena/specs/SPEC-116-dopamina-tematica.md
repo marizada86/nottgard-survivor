@@ -83,3 +83,8 @@ Itens escolhidos: **D1 + D2 + D3 (lote Impacto)**. Implementados 2026-10-01:
 - **Opção de acessibilidade** (Opções → "Reduzir efeitos de impacto"): desliga o hit-stop, reduz as partículas e a faísca da moeda. Padrão: desligada (`settings.reduced_impact`).
 - Testes em `tests/test_impact_fx.gd` (tom encadeado, teto, padrão da opção). Visual e hit-stop não têm teste automático; conferir em run real.
 - Ficam para depois: D5 (números de dano), D6 (revelação do loot), D4 (Maré do Abismo).
+
+## D5 implementado (2026-10-01)
+- Evento `hit` do herói agora leva `dtype` e `tid` (alvo). `ui/run.gd`: cor do número por tipo de dano (`_dcol`: físico cinza, mágico roxo, fogo laranja, radiante dourado); crítico em 22 pt, mais claro e com contorno.
+- **Agregação:** acertos não críticos no mesmo alvo dentro de 350 ms somam no mesmo número (`_merge_damage_number`), com leve pulso; críticos sempre aparecem sozinhos. O limite de 14 números simultâneos continua.
+- Testes automáticos passam (0 falhas, fumaça ok); o visual precisa de conferência em run real.
