@@ -47,6 +47,20 @@ linha em "Histórico" (abaixo).
 Avaliada = as EVID dos testers foram triadas. Só então os cartões "aguardando
 playtest" viram verificados ou reabertos.
 
+## Versão 0.2.1 — publicada (playtest)
+
+Pedido direto do dono em 2026-10-01 ("atualize a build de playtester para v0.2.1 com as novas atualizações"). **Fora da regra de minor-update:** esta versão traz mecânicas novas (Maré do Abismo, falas, números de dano), então os testers precisam aprender coisas novas; não há PDF nem questionário novo, só as notas abaixo. `0.2.1` em `core/version.gd` e `export_presets.cfg`.
+
+### O que testar (notas curtas para o aviso)
+
+- Retratos dos heróis no menu e no painel de itens agora aparecem inteiros (antes cortavam).
+- Heróis e inimigos encostam os pés na sombra (antes flutuavam alguns pixels).
+- Eventos do mapa (loja, ferreiro, curandeiro, aposta, doação, ampulheta, altar, fonte, ritual, portal) ficaram maiores; baús mantêm o tamanho.
+- Dopamina (MEC-031): estouro ao matar, pausa curta em crítico e abate de elite ou chefe, tom da coleta subindo em sequência, números de dano por tipo com soma de acertos rápidos, brilho e nome do loot por raridade. Opção **Reduzir efeitos de impacto** em Opções.
+- **Maré do Abismo:** abates em sequência (10, 25, 50, 100, 200) dão aviso e +2% de XP por 5 s (máx. +10%). Três conquistas novas por abates seguidos sem dano.
+- **Alma e história (MEC-032):** epígrafe de cada fase, contexto de chefe, textos temáticos dos eventos e **falas dos heróis** (balão na entrada, no chefe e com pouca vida; desligável em Opções).
+- Cenário (MEC-030, 033, 034, 035): destrutíveis com loot e Sorte, armadilhas de cenário e layout por zonas em Dagruve e Docas; arte de estradas ainda provisória.
+
 ## Versão 0.2.0 — Major-update, publicada (playtest)
 
 Changelog para os testers (PDF, de 0.1.0 para 0.2.0): [CHANGELOG 0.2.0](changelogs/CHANGELOG%200.2.0%20-%20Nottgard%20Survivors.pdf)
@@ -111,5 +125,6 @@ Origem: [PLAN-038](../vault/drafts/PLAN-038-atualizacao-pos-playtests-t01-t02-t0
 
 | Versão | Tipo | Publicada | Commit da build | Avaliada em |
 |---|---|---|---|---|
+| 0.2.1 | Atualização de playtest (pedido do dono; traz mecânicas) | 2026-10-01 (release `latest`, Playtest v0.2.1) | ver título do release | — (aguardando testers) |
 | 0.2.0 | Major | 2026-09-29 (release `latest`, Playtest v0.2.0) | `adc9ae6` (tag `latest` em 2026-09-30; primeira publicação: `fce670d`; republicada a cada push na `main`) | — (aguardando testers) |
 | 0.1.0 | Major (primeira) | 2026-09-29 (playtest T01, T02, T03) | não registrado (builds anteriores ao TOOL-001) | EVID-106, 107, 108 |
