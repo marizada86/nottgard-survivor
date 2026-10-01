@@ -1,4 +1,18 @@
 {
+  "_kinds": {
+    "barril": {"height": 58, "half_width": 30},
+    "caixote": {"height": 70, "half_width": 26},
+    "carga": {"height": 54, "half_width": 46},
+    "doca": {"height": 48, "half_width": 46},
+    "rede": {"height": 42, "half_width": 40},
+    "margem": {"height": 42, "half_width": 56},
+    "corrente_01": {"height": 46, "half_width": 45},
+    "livros": {"height": 42, "half_width": 32},
+    "ossos": {"height": 38, "half_width": 40},
+    "velas": {"height": 42, "half_width": 27},
+    "braseiro": {"height": 56, "half_width": 28},
+    "pilar": {"height": 96, "half_width": 20}
+  },
   "dagruve": {
     "destrutiveis": [
       {"zone": "praca_do_selo", "id": "candelabro_quebravel", "pos": [40, 36]},
@@ -8,9 +22,9 @@
       {"zone": "beco_oeste", "id": "caixote_quebravel", "pos": [8, 34]},
       {"zone": "beco_oeste", "id": "caixote_quebravel", "pos": [10, 36]},
       {"zone": "beco_oeste", "id": "arbusto_quebravel", "pos": [7, 38]},
-      {"zone": "rua_norte", "id": "caixote_quebravel", "pos": [30, 10]},
-      {"zone": "rua_norte", "id": "caixote_quebravel", "pos": [34, 9]},
-      {"zone": "rua_norte", "id": "arbusto_quebravel", "pos": [38, 12]},
+      {"zone": "rua_leste_oeste", "id": "caixote_quebravel", "pos": [22, 24]},
+      {"zone": "rua_leste_oeste", "id": "caixote_quebravel", "pos": [36, 24]},
+      {"zone": "rua_leste_oeste", "id": "arbusto_quebravel", "pos": [47, 24]},
       {"zone": "sudoeste", "id": "caixote_quebravel", "pos": [18, 46]},
       {"zone": "sudoeste", "id": "caixote_quebravel", "pos": [21, 48]},
       {"zone": "sudoeste", "id": "arbusto_quebravel", "pos": [16, 49]},
@@ -18,6 +32,46 @@
     ],
     "armadilhas": [
       {"id": "selo_sacrificial", "name": "Selo Sacrificial", "theme": "selo", "pos": [42, 38], "radius": 1.6, "interval": 7.0, "warn": 1.2, "dice": "2d6", "dtype": "magico"}
+    ],
+    "interativos": [
+      {"zone": "poco_de_oferendas", "kind": "fountain", "name": "Poço de Oferendas", "pos": [36, 41]}
+    ],
+    "estradas": [
+      {"zone": "rua_leste_oeste", "axis": "x", "at": 26, "from": 4, "to": 56, "decal": "res://assets/decals/dagruve_estrada_trecho.png"},
+      {"zone": "rua_do_selo", "axis": "y", "at": 42, "from": 26, "to": 56, "decal": "res://assets/decals/dagruve_estrada_trecho.png"}
+    ],
+    "props": [
+      {"zone": "praca_do_selo", "center": [42, 38], "items": [
+        {"kind": "braseiro", "off": [-4, -4]}, {"kind": "braseiro", "off": [4, -4]},
+        {"kind": "braseiro", "off": [-4, 4]}, {"kind": "braseiro", "off": [4, 4]},
+        {"kind": "velas", "off": [0, -3.6]}, {"kind": "velas", "off": [0, 3.6]},
+        {"kind": "ossos", "off": [-6, 0]}, {"kind": "ossos", "off": [6, 1]}
+      ]},
+      {"zone": "rua_leste_oeste", "center": [30, 24], "items": [
+        {"kind": "pilar", "off": [-24, -3]}, {"kind": "pilar", "off": [-6, -3]}, {"kind": "pilar", "off": [18, -3]},
+        {"kind": "pilar", "off": [-20, 4]}, {"kind": "pilar", "off": [22, 4]},
+        {"kind": "braseiro", "off": [4, -3]}, {"kind": "braseiro", "off": [-12, 3.5]},
+        {"kind": "livros", "off": [-14, 5]}, {"kind": "livros", "off": [-15.5, 5.8]}
+      ]},
+      {"zone": "beco_oeste", "center": [9, 37], "items": [
+        {"kind": "barril", "off": [-3, -3]}, {"kind": "barril", "off": [3, -1]},
+        {"kind": "carga", "off": [0, 6]}, {"kind": "caixote", "off": [4, 4]}
+      ]},
+      {"zone": "sudoeste", "center": [18, 47], "items": [
+        {"kind": "carga", "off": [-4, -1]}, {"kind": "barril", "off": [3, -3]},
+        {"kind": "ossos", "off": [6, 3]}, {"kind": "corrente_01", "off": [0, 5]}
+      ]},
+      {"zone": "norte_em_ruinas", "center": [30, 8], "items": [
+        {"kind": "pilar", "off": [-9, 0]}, {"kind": "pilar", "off": [0, -2]}, {"kind": "pilar", "off": [9, 1]},
+        {"kind": "ossos", "off": [-4, 4]}, {"kind": "velas", "off": [4, 5]}, {"kind": "livros", "off": [14, 4]}
+      ]},
+      {"zone": "leste", "center": [51, 19], "items": [
+        {"kind": "pilar", "off": [3, -4]}, {"kind": "braseiro", "off": [-2, 2]}, {"kind": "ossos", "off": [4, 4]}
+      ]},
+      {"zone": "sudeste", "center": [50, 50], "items": [
+        {"kind": "ossos", "off": [0, 0]}, {"kind": "barril", "off": [-4, 3]}, {"kind": "caixote", "off": [-6, 4]},
+        {"kind": "pilar", "off": [5, -2]}, {"kind": "velas", "off": [2, 5]}
+      ]}
     ]
   },
   "docas": {
@@ -41,6 +95,49 @@
     ],
     "armadilhas": [
       {"id": "carga_solta", "name": "Carga Solta", "theme": "carga", "pos": [28, 22], "radius": 1.4, "interval": 9.0, "warn": 1.0, "dice": "2d8", "dtype": "fisico", "leaves_puddle": true}
+    ],
+    "interativos": [
+      {"zone": "oficina_do_cais", "kind": "ferreiro", "name": "Oficina do Cais", "pos": [32, 16]}
+    ],
+    "props": [
+      {"zone": "borda_do_cais", "center": [5, 30], "items": [
+        {"kind": "margem", "off": [0, -22]}, {"kind": "margem", "off": [1, -14]}, {"kind": "margem", "off": [0, -6]},
+        {"kind": "margem", "off": [1, 6]}, {"kind": "margem", "off": [0, 14]}, {"kind": "margem", "off": [1, 22]},
+        {"kind": "braseiro", "off": [3, -16]}, {"kind": "braseiro", "off": [3, -2]}, {"kind": "braseiro", "off": [3, 12]},
+        {"kind": "corrente_01", "off": [4, 4]}, {"kind": "corrente_01", "off": [4, -10]}
+      ]},
+      {"zone": "armazem_norte", "center": [26, 14], "items": [
+        {"kind": "carga", "off": [-6, 4]}, {"kind": "carga", "off": [8, 3]}, {"kind": "carga", "off": [-2, -5]},
+        {"kind": "barril", "off": [-9, 7]}, {"kind": "barril", "off": [11, 6]}, {"kind": "caixote", "off": [5, -5]}
+      ]},
+      {"zone": "redes", "center": [15, 12], "items": [
+        {"kind": "rede", "off": [-3, -2]}, {"kind": "rede", "off": [3, 3]}, {"kind": "corrente_01", "off": [-2, 6]},
+        {"kind": "doca", "off": [5, -4]}
+      ]},
+      {"zone": "carga_oeste", "center": [11, 23], "items": [
+        {"kind": "carga", "off": [-2, -4]}, {"kind": "barril", "off": [4, 2]}, {"kind": "rede", "off": [-1, 5]},
+        {"kind": "doca", "off": [6, -3]}
+      ]},
+      {"zone": "cais_sul", "center": [21, 43], "items": [
+        {"kind": "braseiro", "off": [-9, -1]}, {"kind": "braseiro", "off": [3, 2.5]},
+        {"kind": "barril", "off": [-3, -3]}, {"kind": "caixote", "off": [0, 3.5]},
+        {"kind": "doca", "off": [8, -1]}, {"kind": "margem", "off": [-12, 5]}, {"kind": "margem", "off": [11, 5]}
+      ]},
+      {"zone": "pier_leste", "center": [45, 18], "items": [
+        {"kind": "carga", "off": [-5, -4]}, {"kind": "carga", "off": [5, -3]}, {"kind": "barril", "off": [0, 6.5]},
+        {"kind": "rede", "off": [6, 4]}
+      ]},
+      {"zone": "porao_ritual", "center": [40, 28], "items": [
+        {"kind": "braseiro", "off": [-3, -2]}, {"kind": "velas", "off": [2, -3]}, {"kind": "velas", "off": [4, 0]},
+        {"kind": "ossos", "off": [-2, 3]}, {"kind": "livros", "off": [3, 4]}, {"kind": "livros", "off": [5, 3]}
+      ]},
+      {"zone": "margem_leste", "center": [51, 36], "items": [
+        {"kind": "margem", "off": [0, -4]}, {"kind": "margem", "off": [2, 3]}, {"kind": "doca", "off": [-4, 1]},
+        {"kind": "braseiro", "off": [1, 8]}
+      ]},
+      {"zone": "sul_aberto", "center": [38, 50], "items": [
+        {"kind": "carga", "off": [0, 0]}, {"kind": "barril", "off": [-4, 2]}, {"kind": "rede", "off": [5, 3]}
+      ]}
     ]
   }
 }

@@ -3,6 +3,7 @@ extends Node2D
 
 const ENEMY_VIEW := preload("res://ui/enemy_view.tscn")
 const GroundDecals := preload("res://ui/ground_decals.gd")
+const SceneryLayout := preload("res://ui/scenery_layout.gd")
 const StageStructures := preload("res://ui/stage_structures.gd")
 const HQ_SCREEN := preload("res://ui/hq_screen.tscn")
 const HQCatalog := preload("res://core/hq_catalog.gd")
@@ -110,6 +111,7 @@ func _load_stage() -> void:
 	battle.hero.terrain_id = String(ground.get("terrain_layout_id"))
 	start_pos = hero_node.position
 	battle.hero.pos = Iso.to_ground(start_pos)
+	SceneryLayout.apply(sorted, battle.stage_id, battle.hero.pos, msize)  # MEC-035: props por zonas, antes dos bloqueios
 	battle.hero.blockers.clear()
 	for b in sorted.get_children():
 		if b.has_method("set_grounding_guide"):

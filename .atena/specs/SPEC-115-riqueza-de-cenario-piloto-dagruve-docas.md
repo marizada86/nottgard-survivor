@@ -102,3 +102,16 @@ Mapa novo, novas fases, regras de fase novas, mudar dificuldade das ondas (isso 
 - Visual provisório (desenhado por código); arte própria do glifo e da carga em ART-026.
 - Testes em `tests/test_battle.gd`: colocação, aviso antes do dano, dano em herói e inimigo dentro do raio, nada fora, ciclo reinicia, poça das Docas.
 - Capturas conferidas na janela do jogo (Dagruve e Docas).
+
+## Fases 3 e 4 sem arte nova — implementadas 2026-10-01
+Decisão do dono: seguir sem as imagens novas (ART-025/026 seguem na fila do ChatGPT).
+- **Layout por zonas** (`ui/scenery_layout.gd`, dados em `data/scenery.json` → `props` e `_kinds`): em Dagruve e Docas os props soltos da cena (~66 por mapa) são
+  substituídos por aglomerados com sentido, só com a arte existente.
+  - Dagruve: praça do selo (braseiros, velas, ossos em volta do glifo), rua leste-oeste com pilares em ruínas, beco de carga a oeste, sudoeste, norte em ruínas, leste e sudeste.
+  - Docas: borda do cais (margem, braseiros, correntes), armazém norte (carga, barris), redes, carga oeste, cais sul (braseiros entre os candelabros), pier leste, porão ritual (velas, ossos, livros), margem leste e sul aberto.
+  - Nada nasce a menos de 5 tiles do início; testes impedem prop sobre destrutível ou dentro da armadilha. Fases sem `props` no JSON continuam com a cena como estava.
+- **Interativos fixos** (`interativos`): poço de oferendas em Dagruve (reaproveita `fountain`) e oficina do cais nas Docas (reaproveita `ferreiro`). Não contam no limite de 4 interações aleatórias.
+- **Estradas** (`estradas` + `GroundDecals.road_placements`): infraestrutura pronta e **dormente**. As trilhas atuais não são alinhadas ao eixo isométrico (ficam como manchas soltas), então a estrada só liga quando existir
+  `assets/decals/dagruve_estrada_trecho.png` (ART-026, C03). Rua leste-oeste em y=26 e rua do selo em x=42 já estão declaradas.
+- Capturas conferidas na janela do jogo.
+- **Falta (depende de arte):** estradas, carroça e pilha de carga como destrutíveis novos, glifo e carga das armadilhas, fundo atrás do mapa, arte do poço e do guincho.

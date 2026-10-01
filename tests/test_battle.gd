@@ -1,6 +1,8 @@
 extends RefCounted
 
 const TerrainLayout := preload("res://core/terrain_layout.gd")
+const SceneryLayoutRef := preload("res://ui/scenery_layout.gd")
+const PropRef := preload("res://ui/prop.gd")
 
 func _bat(seed_value := 1, hero := "durvall", stage := "dagruve") -> Battle:
 	var b := Battle.new(seed_value, hero, stage)
@@ -1148,5 +1150,44 @@ func run() -> Array:
 	puddle_check._update_zones(0.1)
 	if puddle_check.zones.filter(func(z): return z.kind == "puddle").is_empty():
 		out.append("Carga Solta deveria deixar uma poça")
+
+	# MEC-030: interativos fixos e layout de props por zonas
+	for lay_stage in ["dagruve", "docas"]:
+		var lb := _bat(91, "durvall", lay_stage)
+		_quiet(lb)
+		lb.map_size = Vector2(60, 60)
+		lb.hero.map_size = Vector2(60, 60)
+		lb.place_scenery()
+		var fixed_kinds: Array = []
+		for inter in lb.interactions:
+			if bool(inter.get("fixed", false)):
+				fixed_kinds.append(String(inter.kind))
+		var want_kinds: Array = Data.table("scenery")[lay_stage].interativos.map(func(i): return String(i.kind))
+		if fixed_kinds != want_kinds:
+			out.append("%s: interativos fixos %s, esperado %s" % [lay_stage, str(fixed_kinds), str(want_kinds)])
+		var props := SceneryLayoutRef.expanded_props(lay_stage, lb.hero.pos, Vector2(60, 60))
+		if props.size() < 20:
+			out.append("%s: layout com poucos props (%d)" % [lay_stage, props.size()])
+		var kinds: Dictionary = Data.table("scenery")._kinds
+		var prop_kinds: Array = PropRef.new().get_property_list().filter(func(p): return p.name == "kind")[0].hint_string.split(",")
+		for entry in props:
+			if not kinds.has(String(entry.kind)):
+				out.append("%s: prop %s sem dimensões em _kinds" % [lay_stage, entry.kind])
+			if not (String(entry.kind) in prop_kinds):
+				out.append("%s: prop %s não existe em ui/prop.gd" % [lay_stage, entry.kind])
+			if entry.pos.distance_to(lb.hero.pos) < SceneryLayoutRef.START_CLEARANCE:
+				out.append("%s: prop colado no ponto de início" % lay_stage)
+		for dest in Data.table("scenery")[lay_stage].destrutiveis:
+			var dpos := Vector2(float(dest.pos[0]), float(dest.pos[1]))
+			for entry in props:
+				if entry.pos.distance_to(dpos) < 1.0:
+					out.append("%s: prop em cima do destrutível %s" % [lay_stage, str(dest.pos)])
+					break
+		for trap in Data.table("scenery")[lay_stage].armadilhas:
+			var tpos := Vector2(float(trap.pos[0]), float(trap.pos[1]))
+			for entry in props:
+				if entry.pos.distance_to(tpos) < float(trap.radius) + 0.8:
+					out.append("%s: prop dentro da armadilha %s" % [lay_stage, trap.id])
+					break
 
 	return out

@@ -1310,7 +1310,17 @@ func place_scenery() -> int:
 		_spawn(String(entry.id), at)
 		placed += 1
 	_place_traps()
+	_place_fixed_interactions()
 	return placed
+
+## Interativos de posição fixa da fase (poço de Dagruve, oficina do cais nas Docas). Reaproveitam as interações existentes.
+func _place_fixed_interactions() -> void:
+	for entry in Data.table("scenery").get(stage_id, {}).get("interativos", []):
+		var at := Vector2(float(entry.pos[0]), float(entry.pos[1]))
+		if at.distance_to(hero.pos) < 3.0:
+			continue
+		_add_interaction(String(entry.kind), at)
+		interactions[-1].fixed = true
 
 ## Posição pedida ou a mais próxima livre (anéis de até 3 tiles); (-1, -1) se não houver.
 func _free_scenery_spot(wanted: Vector2, radius: float) -> Vector2:
@@ -2321,7 +2331,7 @@ func _spawn_random_breakable() -> void:
 	_spawn(id, hero.pos + Vector2(cos(ang), sin(ang)) * rng.randf_range(6.0, 11.0))
 
 func _spawn_random_interaction() -> void:
-	var alive_n := interactions.filter(func(i): return not i.used and i.kind != "portal").size()
+	var alive_n := interactions.filter(func(i): return not i.used and i.kind != "portal" and not bool(i.get("fixed", false))).size()
 	if alive_n >= 4:
 		return
 	var weights: Dictionary = stage.interactions

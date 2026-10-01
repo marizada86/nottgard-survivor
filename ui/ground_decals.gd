@@ -73,9 +73,44 @@ func _texture(path: String) -> Texture2D:
 func _draw() -> void:
 	if not enabled:
 		return
+	_draw_roads()
 	for placement in placements(stage_id, visual_seed):
 		var texture := _texture(String(placement.path))
 		var dimensions: Array = placement.get("size", [320, 160])
 		var size := Vector2(float(dimensions[0]), float(dimensions[1]))
 		if texture != null:
 			draw_texture_rect(texture, Rect2(Vector2(placement.position) - size * 0.5, size), false)
+
+## MEC-035: estradas do cenário (data/scenery.json -> "estradas"): o decal de trilha da fase repetido ao longo de um eixo.
+## Cada entrada precisa de "decal" (arte tileável alinhada ao eixo x; no eixo y usa o espelho horizontal) e fica dormente sem o arquivo. Sem RNG e sem busca de terreno seco (o layout é desenhado).
+const ROAD_SPAN := 9.0
+
+static func road_placements(stage_key: String) -> Array[Dictionary]:
+	var result: Array[Dictionary] = []
+	for road in Data.table("scenery").get(stage_key, {}).get("estradas", []):
+		var path := String(road.get("decal", ""))
+		if path == "" or not ResourceLoader.exists(path):
+			continue  # dormente até a arte da estrada ser admitida (ART-026)
+		var from_t := float(road.from)
+		var to_t := float(road.to)
+		var steps := maxi(1, int(ceil((to_t - from_t) / ROAD_SPAN)))
+		var step := (to_t - from_t) / float(steps)
+		for i in steps:
+			var along := from_t + step * (float(i) + 0.5)
+			var ground := Vector2(along, float(road.at)) if String(road.axis) == "x" else Vector2(float(road.at), along)
+			result.append({"path": path, "position": Iso.to_screen(ground), "flip": String(road.axis) == "y", "zone": String(road.zone)})
+	return result
+
+func _draw_roads() -> void:
+	for placement in road_placements(stage_id):
+		var texture := _texture(String(placement.path))
+		if texture == null:
+			continue
+		var size := Vector2(320, 160)
+		var rect := Rect2(Vector2(placement.position) - size * 0.5, size)
+		if bool(placement.flip):
+			draw_set_transform(Vector2(placement.position), 0.0, Vector2(-1, 1))
+			draw_texture_rect(texture, Rect2(-size * 0.5, size), false)
+			draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+		else:
+			draw_texture_rect(texture, rect, false)
