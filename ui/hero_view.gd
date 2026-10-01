@@ -18,7 +18,7 @@ const HERO_DISPLAY_HEIGHT := {
 ## Altura visível (alfa) do idle de cada herói na célula 256x384; ver tools/audit_hero_motion.gd.
 ## Se a arte for regenerada, atualizar aqui (tests/test_animation_assets.gd confere).
 const HERO_IDLE_ART_HEIGHT := {
-	&"korrak": 316.0, &"kayron": 371.0, &"sylas": 365.0, &"maelor": 337.0, &"nyrelia": 352.0,
+	&"korrak": 267.0, &"kayron": 316.0, &"sylas": 304.0, &"maelor": 299.0, &"nyrelia": 352.0,
 	&"durvall": 231.0, &"zynara": 368.0, &"bromnor": 241.0, &"leoric": 224.0, &"brook": 259.0,
 }
 const WALK_DIRECTIONS := [&"e", &"se", &"s", &"sw", &"w", &"nw", &"n", &"ne"]
