@@ -17,6 +17,12 @@ const ANIMATED := {
 	"guardiao_verdadeiro": {"cell": Vector2i(320, 480), "states": {"idle": 4, "move": 6, "attack": 4, "special": 6, "death": 6}, "flip_h_for_move": true},
 	"guardiao_copia": {"cell": Vector2i(320, 480), "states": {"idle": 4, "move": 6, "attack": 4, "special": 6, "death": 6}, "flip_h_for_move": true},
 }
+## Linha dos pés no idle (px na célula); ancora o sprite na sombra em vez da borda da célula.
+const FEET_Y := {
+	"arch_hag": 380.0, "criatura_corrompida": 376.0, "cultista_adaga": 376.0, "cultista_arqueiro": 370.0,
+	"cultista_cajado": 363.0, "guardiao_copia": 458.0, "guardiao_verdadeiro": 469.0, "notivago": 367.0,
+	"sacerdote_mente_derretida": 472.0, "slime_corrosivo": 372.0, "tentaculo_kraken": 372.0, "zumbi": 376.0,
+}
 static var _tex_cache := {}
 
 @export var preview_enemy_id := "zumbi": set = _set_preview_enemy_id
@@ -73,7 +79,7 @@ func _build_animations(enemy_id: String) -> void:
 	sprite.sprite_frames = frames
 	sprite.visible = _has_animation
 	sprite.flip_h = false
-	sprite.offset = Vector2(0, -_cell.y * 0.5)
+	sprite.offset = Vector2(0, _cell.y * 0.5 - float(FEET_Y.get(enemy_id, _cell.y)))
 	_update_sprite_scale()
 	if _has_animation and frames.has_animation(&"idle"):
 		sprite.play(&"idle")

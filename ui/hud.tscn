@@ -325,7 +325,7 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
 expand_mode = 1
-stretch_mode = 6
+stretch_mode = 5
 
 [node name="ItemsHeaderText" type="VBoxContainer" parent="ItemsPanel/VBox/ItemsHeader" unique_id=1214622912]
 layout_mode = 2

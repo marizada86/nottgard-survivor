@@ -108,7 +108,7 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(500, 240)
 layout_mode = 2
 expand_mode = 1
-stretch_mode = 6
+stretch_mode = 5
 
 [node name="HeroInfo" type="RichTextLabel" parent="Tabs/Jogar/Mid" unique_id=1098406521]
 unique_name_in_owner = true

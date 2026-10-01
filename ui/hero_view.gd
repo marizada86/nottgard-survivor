@@ -4,7 +4,11 @@ extends Node2D
 
 const CELL := Vector2i(256, 384)
 const DISPLAY_HEIGHT := 72.0
-const NYRELIA_BASELINE_Y := 368.0
+## Linha (px na célula 256x384) em que ficam os pés no idle; o sprite é ancorado aí para tocar a sombra.
+const HERO_FEET_Y := {
+	&"korrak": 350.0, &"kayron": 376.0, &"sylas": 376.0, &"maelor": 364.0, &"nyrelia": 368.0,
+	&"durvall": 376.0, &"zynara": 376.0, &"bromnor": 364.0, &"leoric": 368.0, &"brook": 368.0,
+}
 ## Altura do herói em tela (px), pela raça (humano 1,75 m = 64 px; piso de 40 px para os pequenos).
 ## Korrak 2,32 m e Leoric ~1 m vêm do Vault; as demais são médias de D&D.
 const HERO_DISPLAY_HEIGHT := {
@@ -84,9 +88,8 @@ func _build_animations() -> void:
 	_has_animation = frames.has_animation(&"idle")
 	sprite.sprite_frames = frames
 	sprite.visible = _has_animation
-	# Nyrelia usa folhas normalizadas com 16 px de margem inferior; os demais
-	# heróis preservam a âncora histórica na borda da célula.
-	var baseline_y := NYRELIA_BASELINE_Y if _active_hero_id == "nyrelia" else float(CELL.y)
+	# Ancora os pés (e não a borda da célula) na origem, onde fica a sombra.
+	var baseline_y: float = HERO_FEET_Y.get(StringName(_active_hero_id), float(CELL.y))
 	sprite.offset = Vector2(0, CELL.y * 0.5 - baseline_y)
 	sprite.scale = Vector2.ONE * display_scale(_active_hero_id)
 	sprite.flip_h = false
