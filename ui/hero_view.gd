@@ -5,6 +5,18 @@ extends Node2D
 const CELL := Vector2i(256, 384)
 const DISPLAY_HEIGHT := 72.0
 const NYRELIA_BASELINE_Y := 368.0
+## Altura do herói em tela (px), pela raça (humano 1,75 m = 64 px; piso de 40 px para os pequenos).
+## Korrak 2,32 m e Leoric ~1 m vêm do Vault; as demais são médias de D&D.
+const HERO_DISPLAY_HEIGHT := {
+	&"korrak": 85.0, &"kayron": 66.0, &"sylas": 64.0, &"maelor": 64.0, &"nyrelia": 62.0,
+	&"durvall": 60.0, &"zynara": 60.0, &"bromnor": 48.0, &"leoric": 40.0, &"brook": 40.0,
+}
+## Altura visível (alfa) do idle de cada herói na célula 256x384; ver tools/audit_hero_motion.gd.
+## Se a arte for regenerada, atualizar aqui (tests/test_animation_assets.gd confere).
+const HERO_IDLE_ART_HEIGHT := {
+	&"korrak": 316.0, &"kayron": 371.0, &"sylas": 365.0, &"maelor": 337.0, &"nyrelia": 352.0,
+	&"durvall": 293.0, &"zynara": 368.0, &"bromnor": 336.0, &"leoric": 313.0, &"brook": 259.0,
+}
 const WALK_DIRECTIONS := [&"e", &"se", &"s", &"sw", &"w", &"nw", &"n", &"ne"]
 const WALK_SOURCE_DIRECTIONS := [&"e", &"se", &"s", &"n", &"ne"]
 const MIRRORED_WALK_ANIMATIONS := {
@@ -76,10 +88,17 @@ func _build_animations() -> void:
 	# heróis preservam a âncora histórica na borda da célula.
 	var baseline_y := NYRELIA_BASELINE_Y if _active_hero_id == "nyrelia" else float(CELL.y)
 	sprite.offset = Vector2(0, CELL.y * 0.5 - baseline_y)
-	sprite.scale = Vector2.ONE * (DISPLAY_HEIGHT / CELL.y)
+	sprite.scale = Vector2.ONE * display_scale(_active_hero_id)
 	sprite.flip_h = false
 	if _has_animation and frames.has_animation(&"idle"):
 		sprite.play(&"idle")
+
+## Escala única do herói: altura-alvo em tela dividida pela altura do idle na célula.
+static func display_scale(hero: String) -> float:
+	var key := StringName(hero)
+	if not HERO_DISPLAY_HEIGHT.has(key) or not HERO_IDLE_ART_HEIGHT.has(key):
+		return DISPLAY_HEIGHT / CELL.y
+	return float(HERO_DISPLAY_HEIGHT[key]) / float(HERO_IDLE_ART_HEIGHT[key])
 
 func sync_visual(screen_position: Vector2, is_dead: bool, is_flash: bool) -> void:
 	var moving := screen_position.distance_squared_to(_last_screen_position) > 0.04

@@ -207,6 +207,7 @@ func run() -> Array[String]:
 	failures.append_array(_validate_zynara_runtime())
 	failures.append_array(_validate_nyrelia_runtime())
 	failures.append_array(_validate_nyrelia_frame_baselines())
+	failures.append_array(_validate_hero_display_scale())
 	return failures
 
 func _validate_cultista_adaga_runtime() -> Array[String]:
@@ -478,6 +479,45 @@ func _validate_nyrelia_frame_baselines() -> Array[String]:
 				failures.append("linha de base inválida em Nyrelia/%s[%d]: %d" % [sequence, frame, bottom + 1])
 			if left < 6 or right > 249:
 				failures.append("conteúdo de Nyrelia/%s[%d] toca a borda da célula" % [sequence, frame])
+	return failures
+
+
+func _validate_hero_display_scale() -> Array[String]:
+	var failures: Array[String] = []
+	var script: Script = load("res://ui/hero_view.gd")
+	var heights: Dictionary = script.HERO_DISPLAY_HEIGHT
+	var art: Dictionary = script.HERO_IDLE_ART_HEIGHT
+	for hero_id in Data.table("heroes"):
+		if not heights.has(StringName(hero_id)) or not art.has(StringName(hero_id)):
+			failures.append("herói sem altura de exibição: %s" % hero_id)
+			continue
+		var image := Image.new()
+		if image.load(ProjectSettings.globalize_path("res://assets/animations/heroes/%s/idle.png" % hero_id)) != OK:
+			failures.append("idle ilegível: %s" % hero_id)
+			continue
+		var measured: Array[int] = []
+		for frame in image.get_width() / 256:
+			var top := 384
+			var bottom := -1
+			for y in 384:
+				for x in 256:
+					if image.get_pixel(frame * 256 + x, y).a >= 0.10:
+						top = mini(top, y)
+						bottom = maxi(bottom, y)
+			measured.append(bottom - top + 1)
+		measured.sort()
+		if absi(measured[measured.size() / 2] - int(art[StringName(hero_id)])) > 3:
+			failures.append("HERO_IDLE_ART_HEIGHT de %s desatualizada: tabela %d, arte %d" % [hero_id, int(art[StringName(hero_id)]), measured[measured.size() / 2]])
+	# Ordem por raça (vault + D&D): Korrak maior; Brook <= Leoric < Bromnor < humanos.
+	var order := [&"brook", &"leoric", &"bromnor", &"durvall", &"nyrelia", &"sylas", &"kayron", &"korrak"]
+	for index in range(1, order.size()):
+		if float(heights[order[index - 1]]) > float(heights[order[index]]):
+			failures.append("altura de %s maior que a de %s" % [order[index - 1], order[index]])
+	for hero_id in heights:
+		if hero_id != &"korrak" and float(heights[hero_id]) >= float(heights[&"korrak"]):
+			failures.append("%s não pode ser tão alto quanto Korrak" % hero_id)
+		if absf(script.display_scale(String(hero_id)) * float(art[hero_id]) - float(heights[hero_id])) > 0.5:
+			failures.append("escala de %s não entrega a altura-alvo" % hero_id)
 	return failures
 
 func _visible_coverage(image: Image) -> float:
