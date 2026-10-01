@@ -5,7 +5,7 @@ extends RefCounted
 var data := {}
 
 static func fresh() -> Dictionary:
-	return {"name": "", "coins": 0, "upgrades": {}, "achievements": {}, "cleared": {}, "welcome_seen": false,
+	return {"name": "", "coins": 0, "upgrades": {}, "achievements": {}, "cleared": {}, "hqs_seen": {}, "welcome_seen": false,
 		"stats": {"kills_total": 0, "gold_total": 0, "chests_total": 0, "bosses_total": 0, "elites_total": 0, "boss_kills": {}, "heroes_played": {}, "reached": {}, "runs": 0, "deaths": 0, "best_time": {}},
 		"codex": {"enemies": {}, "items": {}, "weapons": {}},
 		"settings": {"aim": "auto", "volume": 0.7, "music_volume": 0.8, "sfx_volume": 0.9, "ambience_volume": 0.75,
@@ -29,6 +29,33 @@ func _migrate_stage_split() -> void:
 	# Perfis que já concluíram a antiga Dagruve/Docas não perdem acesso à nova Docas.
 	if data.cleared.has("dagruve"):
 		data.cleared["docas"] = true
+
+func mark_stage_reached(stage_id: String) -> bool:
+	if data.stats.reached.has(stage_id):
+		return false
+	data.stats.reached[stage_id] = true
+	return true
+
+func mark_stage_cleared(stage_id: String) -> bool:
+	if data.cleared.has(stage_id):
+		return false
+	data.cleared[stage_id] = true
+	return true
+
+func mark_hq_seen(hq_id: String) -> Array:
+	if hq_id == "" or not Data.table("hqs").has(hq_id) or data.hqs_seen.has(hq_id):
+		return []
+	data.hqs_seen[hq_id] = true
+	var out: Array = []
+	for a in Data.table("achievements").achievements:
+		if String(a.get("stat", "")) != "hqs_seen" or data.achievements.has(a.id):
+			continue
+		if float(data.hqs_seen.size()) >= float(a.get("value", 0)):
+			data.achievements[a.id] = true
+			out.append(a.id)
+			if a.reward.has("coins"):
+				data.coins = coins() + int(a.reward.coins)
+	return out
 
 
 func _migrate_settings(source: Dictionary) -> void:
@@ -190,6 +217,7 @@ func stat_value(stat: String, run: Dictionary) -> float:
 		"stages_cleared": return float(data.cleared.size())
 		"heroes_played": return float(st.heroes_played.size())
 		"codex_items": return float(data.codex.items.size())
+		"hqs_seen": return float(data.hqs_seen.size())
 		"run_bosses": return float(run.get("bosses", 0))
 		"rituals_total": return float(st.get("rituals_total", 0))
 		"bets_won_total": return float(st.get("bets_won_total", 0))

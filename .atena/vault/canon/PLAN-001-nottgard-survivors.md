@@ -323,3 +323,30 @@ não são propriedades deste rio e não fazem parte do jogo. As regras próprias
 dos quatro andares continuam em paralelo; a corrente rotativa dos Pilares é
 uma mecânica autoral separada. PLAN-023, SPEC-054 e EVID-084 permanecem como
 histórico de uma implementação corrigida, não como intenção vigente.
+
+## 26. Contrato de animação integral dos heróis (2026-09-30)
+
+**CANON — aprovado pelo dono em 2026-09-30, pelo PLAN-049 (D-M1 a D-M4).**
+O programa de animação cobre todos os dez heróis jogáveis atuais, começando
+por Durvall e seguindo com revisão independente por personagem. A produção
+visual de movimento usa oito fontes independentes por herói:
+`move_n`, `move_ne`, `move_e`, `move_se`, `move_s`, `move_sw`, `move_w` e
+`move_nw`. O contrato anterior de cinco fontes com três direções espelhadas
+fica supersedido para produção e runtime-alvo deste programa. Assets legados
+permanecem preservados até a substituição individual ser aprovada; não se
+apagam nem se sobrescrevem por inferência.
+
+Ataques e habilidades ativas devem acompanhar o facing/mira da ação quando ela
+for direcional. Cada pacote usará variantes visuais próprias quando a pose,
+arma ou efeito não funcionar corretamente em outras direções; espelhamento só
+é válido após confirmar a simetria visual. Efeitos de ataque e habilidade são
+parte do pacote do herói, sincronizados com antecipação, emissão, deslocamento,
+impacto ou área persistente conforme a ação existente. Reuso de VFX
+compartilhado é preferível à duplicação quando preserva identidade e leitura.
+
+Este contrato não cria habilidades, estados, hitboxes, regras, áudio ou
+balanceamento. A auditoria de inventário, cada produção por herói e sua
+integração exigem SPEC de voo aprovado; candidatos não substituem assets
+oficiais sem aprovação rastreável e evidência conforme a SPEC-044. A SPEC-021
+e o manifesto anterior permanecem como registros históricos da produção sob o
+contrato precedente.

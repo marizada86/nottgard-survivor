@@ -34,6 +34,31 @@ func run() -> Array:
 	qa_f4.physical_keycode = KEY_F4
 	if not PlaytestScript.is_qa_shortcut(qa_f4):
 		failures.append("F4 nao abriu o atalho QA")
+	if not PlaytestScript.should_handle_qa_shortcut(qa_f4, true, true):
+		failures.append("F4 deveria fechar o navegador mesmo com foco em um controle QA")
+	if PlaytestScript.should_handle_qa_shortcut(qa_f4, false, true):
+		failures.append("F4 nao deveria abrir o navegador com outro controle em foco")
+	if not PlaytestScript.should_handle_qa_shortcut(qa_f4, false, false):
+		failures.append("F4 deveria abrir o navegador quando nenhum controle tem foco")
+	var open_pause := PlaytestScript.qa_browser_pause_transition(true, false, false)
+	var close_pause := PlaytestScript.qa_browser_pause_transition(false, bool(open_pause.paused_before), true)
+	var open_existing_pause := PlaytestScript.qa_browser_pause_transition(true, false, true)
+	var keep_existing_pause := PlaytestScript.qa_browser_pause_transition(false, bool(open_existing_pause.paused_before), true)
+	if not bool(open_pause.tree_paused) or bool(close_pause.tree_paused):
+		failures.append("F4 deveria pausar durante o navegador e retomar após fechar")
+	if not bool(open_existing_pause.tree_paused) or not bool(keep_existing_pause.tree_paused):
+		failures.append("fechar F4 nao deveria retomar um jogo que ja estava pausado")
+	if not PlaytestScript.qa_run_destinations().any(func(destination): return String(destination[1]) == "comic_preview"):
+		failures.append("destino QA deveria incluir prévia direta de quadrinho")
+	var hqs: Dictionary = Data.table("hqs")
+	var docas_comics := PlaytestScript.qa_comic_ids_for_stage(hqs, "docas")
+	var shedaklah_comics := PlaytestScript.qa_comic_ids_for_stage(hqs, "shedaklah")
+	if docas_comics[0] != "hqn_02":
+		failures.append("HQ da fase selecionada deveria vir primeiro para Docas")
+	if shedaklah_comics[0] != "hqn_03" or shedaklah_comics[1] != "hqn_04":
+		failures.append("Shedaklah deveria priorizar HQN-03 e HQN-04 na ordem de campanha")
+	if shedaklah_comics.size() != 14 or not shedaklah_comics.has("hqn_01") or not shedaklah_comics.has("hqn_14"):
+		failures.append("todas as HQN-01 a HQN-14 deveriam continuar acessíveis na lista QA")
 	var evidence_dir := PlaytestScript.evidence_directory_for_executable("C:/playtest/NottgardSurvivors.exe")
 	if evidence_dir != "C:/playtest/evidencias":
 		failures.append("evidencias deveria ficar ao lado do executavel, recebeu %s" % evidence_dir)
@@ -49,8 +74,10 @@ func run() -> Array:
 	var guide := PlaytestScript._guide_text()
 	if guide.find("F7") >= 0 or guide.to_lower().find(".zip") >= 0:
 		failures.append("guia de playtest ainda referencia F7 ou ZIP")
-	if guide.find("F4 Navegador QA") < 0:
-		failures.append("guia de playtest deveria explicar F4")
+	if PlaytestScript.qa_shortcuts_text(true).find("F4 Navegador QA") < 0:
+		failures.append("guia QA deveria explicar F4")
+	if PlaytestScript.qa_shortcuts_text(false).find("F4 Navegador QA") >= 0:
+		failures.append("guia publico nao deveria anunciar o atalho do Navegador QA")
 	return failures
 
 func _assert_panel_size(failures: Array, viewport_size: Vector2, expected: Vector2) -> void:

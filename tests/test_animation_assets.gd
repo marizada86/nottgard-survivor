@@ -129,7 +129,19 @@ const MINIMUM_VISIBLE_COVERAGE := {
 	"res://assets/animations/enemies/cultista_adaga/death.png": 0.01,
 }
 
-const ANIMATED_ENEMY_IDS := ["zumbi", "cultista_adaga", "sacerdote_mente_derretida"]
+const WAVE_ONE_ENEMY_ANIMATIONS := {
+	"slime_corrosivo": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
+	"cultista_arqueiro": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
+	"cultista_cajado": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
+	"notivago": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
+	"criatura_corrompida": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
+	"arch_hag": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
+	"tentaculo_kraken": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"attack": 4, &"death": 6}},
+	"guardiao_verdadeiro": {"cell": Vector2i(320, 480), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"special": 6, &"death": 6}},
+	"guardiao_copia": {"cell": Vector2i(320, 480), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"special": 6, &"death": 6}},
+}
+
+const ANIMATED_ENEMY_IDS := ["zumbi", "cultista_adaga", "sacerdote_mente_derretida", "slime_corrosivo", "cultista_arqueiro", "cultista_cajado", "notivago", "criatura_corrompida", "arch_hag", "tentaculo_kraken", "guardiao_verdadeiro", "guardiao_copia"]
 
 func run() -> Array[String]:
 	var failures: Array[String] = []
@@ -189,6 +201,8 @@ func run() -> Array[String]:
 		failures.append("A+S não seleciona move_sw após o deslocamento: %s" % southwest_delta)
 	failures.append_array(_validate_static_enemy_assets())
 	failures.append_array(_validate_cultista_adaga_runtime())
+	failures.append_array(_validate_wave_one_enemy_assets())
+	failures.append_array(_validate_wave_one_enemy_runtime())
 	failures.append_array(_validate_bromnor_runtime())
 	failures.append_array(_validate_zynara_runtime())
 	failures.append_array(_validate_nyrelia_runtime())
@@ -225,6 +239,66 @@ func _validate_cultista_adaga_runtime() -> Array[String]:
 		if sprite.animation != &"death" or sprite.flip_h:
 			failures.append("morte do cultista não iniciou na orientação-base")
 	enemy_view.queue_free()
+	return failures
+
+func _validate_wave_one_enemy_assets() -> Array[String]:
+	var failures: Array[String] = []
+	for enemy_id in WAVE_ONE_ENEMY_ANIMATIONS:
+		var spec: Dictionary = WAVE_ONE_ENEMY_ANIMATIONS[enemy_id]
+		var cell: Vector2i = spec.cell
+		for state in spec.states:
+			var count: int = int(spec.states[state])
+			var path := "res://assets/animations/enemies/%s/%s.png" % [enemy_id, state]
+			if not FileAccess.file_exists(path):
+				failures.append("asset da Onda 1 ausente: %s" % path)
+				continue
+			if not ResourceLoader.exists(path):
+				failures.append("asset da Onda 1 não importado: %s" % path)
+				continue
+			var image := Image.new()
+			if image.load(ProjectSettings.globalize_path(path)) != OK:
+				failures.append("PNG inválido da Onda 1: %s" % path)
+			elif image.get_size() != Vector2i(cell.x * count, cell.y):
+				failures.append("dimensão incorreta da Onda 1: %s" % path)
+			elif image.detect_alpha() == Image.ALPHA_NONE:
+				failures.append("asset da Onda 1 sem canal alfa: %s" % path)
+	return failures
+
+func _validate_wave_one_enemy_runtime() -> Array[String]:
+	var failures: Array[String] = []
+	var tree := Engine.get_main_loop() as SceneTree
+	var packed: PackedScene = load("res://ui/enemy_view.tscn")
+	if tree == null or packed == null:
+		return ["não foi possível instanciar os visuais da Onda 1"]
+	for enemy_id in WAVE_ONE_ENEMY_ANIMATIONS:
+		var spec: Dictionary = WAVE_ONE_ENEMY_ANIMATIONS[enemy_id]
+		var enemy_view: Node2D = packed.instantiate()
+		tree.root.add_child(enemy_view)
+		enemy_view.setup(Enemy.make(enemy_id, Vector2.ZERO))
+		var sprite := enemy_view.get_node_or_null("AnimatedSprite2D") as AnimatedSprite2D
+		if sprite == null or sprite.sprite_frames == null:
+			failures.append("%s não recebeu AnimatedSprite2D" % enemy_id)
+		else:
+			for animation in spec.states:
+				if not sprite.sprite_frames.has_animation(animation):
+					failures.append("animação ausente em %s/%s" % [enemy_id, animation])
+				elif sprite.sprite_frames.get_frame_count(animation) != int(spec.states[animation]):
+					failures.append("contagem incorreta em %s/%s" % [enemy_id, animation])
+			if spec.states.has(&"move"):
+				enemy_view.sync_visual(enemy_view.position + Vector2.LEFT)
+				if sprite.animation != &"move" or not sprite.flip_h:
+					failures.append("movimento à esquerda não foi espelhado: %s" % enemy_id)
+			enemy_view.play_action(&"attack")
+			if sprite.animation != &"attack" or sprite.flip_h:
+				failures.append("ataque não usa orientação-base: %s" % enemy_id)
+			if spec.states.has(&"special"):
+				enemy_view.play_action(&"special")
+				if sprite.animation != &"special":
+					failures.append("special não é reproduzível: %s" % enemy_id)
+			enemy_view.play_death()
+			if sprite.animation != &"death" or sprite.flip_h:
+				failures.append("morte não usa orientação-base: %s" % enemy_id)
+		enemy_view.queue_free()
 	return failures
 
 func _validate_static_enemy_assets() -> Array[String]:

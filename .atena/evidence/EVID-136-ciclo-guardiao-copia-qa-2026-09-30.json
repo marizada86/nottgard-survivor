@@ -1,0 +1,2100 @@
+{
+  "contact_sheet": ".atena/evidence/EVID-136-ciclo-guardiao-copia-prancha-2026-09-30.png",
+  "authorized_references": [
+    {
+      "path": "assets/enemies/guardiao_copia.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "sha256": "4de2d4320e35972357947e2d612573b0143bbdf299877046096d51271ee2faff"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_idle_01_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "sha256": "67e10a285445b9f9dedcb2529ea09bd19434d9a1f1bf8bed2d9fa1a496d81c1b"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_idle_02_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "sha256": "4491a2edb39acee7f21eec4a56fa7e5453783bbf7de719504abd651137213651"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_idle_03_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "sha256": "b95ed4ade5c14810e3048c12cb3999f26cff4ed4093c8b289d82f92cc5689240"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_move_00_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "sha256": "228349a87f20e0e93fba9840e8b1bf77327d2202f13d610766f619c7d1579077"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_move_01_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "sha256": "df5be78b7af750455cb89bea128a63bff692dde8c57f65c0e2391ee90158a54e"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_move_02_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "sha256": "2a4c5832ecbe086c8bdcffd0b98d735a4479bb969838a3be38ccd4d0a9b1505f"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_move_03_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "sha256": "4c31b743d7067154aba306dd00391885f41bb10478c9c9e7d2233a6ac572d52b"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_move_04_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "sha256": "65b1ca887f2c334e83bf67a0528683b2ea0ec124101370360ca800b9627dc7a0"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_move_05_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "sha256": "1f6edfa978015367a07b49671e769f85da8cc706260d993c290843bca91b7cbc"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_attack_00_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "sha256": "a36f5b58ebf2b4c2d180877f029a00c149464afa16abf0aa9e3daae550a7dd83"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_attack_01_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "sha256": "35bf54493ed198b0e1edf3ea885f2131d2ac9c20b4f4b7d87115acf3cf9de599"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_attack_03_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "sha256": "5f1c2ddf0d329f9b5122d0d185c5b7585963d619d1032c925664bb4a63113f58"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_death_00_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "sha256": "8629e0793742098e39acf4a7033e8fa084173cd767792afb9a46ad44b1b62947"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_death_01_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "sha256": "abd44d0339bdb2499bc1d46eafc6e0ff7e007ce6499157a1a2e8bbf5a8215eb7"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_death_02_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "sha256": "aeeea20425561b9285d98a678080860788a22404596d46f1eb9abfe66c078a3a"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_death_03_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "sha256": "1d58e364f6c25bb5a1d0fa0c08acfaf78aba8b6e51369fd6c5bc2d0339ca6c2c"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_death_04_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "sha256": "df0c1a62fb7eba43c26e46572822eaeae4e157d4baed41bd48a5c2d7ab39aab8"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_special_00_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "sha256": "5314a5148d84241d1d8f6941beff386fa4f5ce76c8ca30cd775b5eeb400c4e8a"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_special_01_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "sha256": "1e84cb85a44bf88e9adb8a5b2e8a0b9126cb7fa062dc0b938c5a0ba0fd8ef6f0"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_special_02_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "sha256": "a9df4b5b231dbb1d6062f727a0c63355440f7549a8d142e5dda087cd1c19c9c0"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_special_03_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "sha256": "e3dd6b6b9dd6271b5ba8bfdabfe96fad88f6ec1b625bfeaf90fa612e783d3f89"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_special_04_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "sha256": "8fd403730d03c61d85e54318e2e6716ecb98096a579fa3c3e1c106d800ec217b"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_special_05_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "sha256": "3e2a8056b80d051e211cc3e583aee3f7330728c2929c5963fa377be147c6da0f"
+    }
+  ],
+  "count": 26,
+  "frames": [
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/pilot/guardiao_copia_idle_00_pilot_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        8,
+        35,
+        308,
+        469
+      ],
+      "visible_bbox_alpha_gt_0_04": [
+        35,
+        39,
+        307,
+        460
+      ],
+      "margins": {
+        "left": 8,
+        "top": 35,
+        "right": 12,
+        "bottom": 11
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "edge_alpha": {
+        "left": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "right": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "top": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "bottom": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        }
+      },
+      "solidity": 0.9709,
+      "mean_alpha": 0.9736,
+      "sha256": "7acaa14221d58565ee4bb92a0376b2cc0c0670047e5fd4c87a9ce17118dc4e53",
+      "bytes": 238811
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/frames/guardiao_copia_idle_01_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        20,
+        30,
+        295,
+        462
+      ],
+      "visible_bbox_alpha_gt_0_04": [
+        28,
+        31,
+        294,
+        461
+      ],
+      "margins": {
+        "left": 20,
+        "top": 30,
+        "right": 25,
+        "bottom": 18
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "edge_alpha": {
+        "left": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "right": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "top": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "bottom": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        }
+      },
+      "solidity": 0.977,
+      "mean_alpha": 0.9776,
+      "sha256": "d0078b8de0457575e2ee076c41cfb0792025079024f213df65a08709a386bfd7",
+      "bytes": 281764,
+      "raw_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/raw/guardiao_copia_idle_01_v01_raw.png",
+      "raw_size": [
+        1024,
+        1536
+      ],
+      "raw_mode": "RGBA",
+      "raw_alpha_bbox": [
+        0,
+        95,
+        988,
+        1516
+      ],
+      "raw_sha256": "4328cde5ff2e539badd5340bbe2ff93ac877f873233ed769538b71a3c959c00c",
+      "source_pose": "guardiao_verdadeiro_idle_01_v01.png",
+      "source_pose_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_idle_01_v01.png",
+      "source_pose_sha256": "67e10a285445b9f9dedcb2529ea09bd19434d9a1f1bf8bed2d9fa1a496d81c1b"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/frames/guardiao_copia_idle_02_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        20,
+        47,
+        290,
+        463
+      ],
+      "visible_bbox_alpha_gt_0_04": [
+        36,
+        48,
+        287,
+        458
+      ],
+      "margins": {
+        "left": 20,
+        "top": 47,
+        "right": 30,
+        "bottom": 17
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "edge_alpha": {
+        "left": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "right": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "top": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "bottom": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        }
+      },
+      "solidity": 0.9747,
+      "mean_alpha": 0.9765,
+      "sha256": "6c689b98496d2fc0efb86c7250251325c61286dd909e7b47ea48616971541382",
+      "bytes": 261494,
+      "raw_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/raw/guardiao_copia_idle_02_v01_raw.png",
+      "raw_size": [
+        1024,
+        1536
+      ],
+      "raw_mode": "RGBA",
+      "raw_alpha_bbox": [
+        65,
+        151,
+        962,
+        1500
+      ],
+      "raw_sha256": "50f68cef242bbee7050329e996766c41cf3324abc4cace037e61e407eb72e55f",
+      "source_pose": "guardiao_verdadeiro_idle_02_v01.png",
+      "source_pose_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_idle_02_v01.png",
+      "source_pose_sha256": "4491a2edb39acee7f21eec4a56fa7e5453783bbf7de719504abd651137213651"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/frames/guardiao_copia_idle_03_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        7,
+        45,
+        314,
+        455
+      ],
+      "visible_bbox_alpha_gt_0_04": [
+        25,
+        46,
+        295,
+        455
+      ],
+      "margins": {
+        "left": 7,
+        "top": 45,
+        "right": 6,
+        "bottom": 25
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "edge_alpha": {
+        "left": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "right": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "top": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "bottom": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        }
+      },
+      "solidity": 0.976,
+      "mean_alpha": 0.9763,
+      "sha256": "1d9be00e210e54223cbc0e36de70c9a6e6cd35681e956cee363e31f52ae5d692",
+      "bytes": 271312,
+      "raw_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/raw/guardiao_copia_idle_03_v01_raw.png",
+      "raw_size": [
+        1024,
+        1536
+      ],
+      "raw_mode": "RGBA",
+      "raw_alpha_bbox": [
+        0,
+        39,
+        1004,
+        1516
+      ],
+      "raw_sha256": "7ea401548f4c24dd10d28d14b1d19063cb92301bb52a9adaf66034cbbf3bb917",
+      "source_pose": "guardiao_verdadeiro_idle_03_v01.png",
+      "source_pose_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_idle_03_v01.png",
+      "source_pose_sha256": "b95ed4ade5c14810e3048c12cb3999f26cff4ed4093c8b289d82f92cc5689240"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/frames/guardiao_copia_move_00_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        5,
+        11,
+        309,
+        451
+      ],
+      "visible_bbox_alpha_gt_0_04": [
+        24,
+        48,
+        308,
+        450
+      ],
+      "margins": {
+        "left": 5,
+        "top": 11,
+        "right": 11,
+        "bottom": 29
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "edge_alpha": {
+        "left": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "right": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "top": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "bottom": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        }
+      },
+      "solidity": 0.973,
+      "mean_alpha": 0.9747,
+      "sha256": "4154166e2c41e43d31edbd4b9b1187b52cf03a2a58bfe4c1b84b7c69aa06da8b",
+      "bytes": 278505,
+      "raw_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/raw/guardiao_copia_move_00_v01_raw.png",
+      "raw_size": [
+        1024,
+        1536
+      ],
+      "raw_mode": "RGBA",
+      "raw_alpha_bbox": [
+        0,
+        35,
+        1010,
+        1516
+      ],
+      "raw_sha256": "45d63dcb52ba0714ed93865d15f7c89a08a56c733a13436bf13827b871d9e6fd",
+      "source_pose": "guardiao_verdadeiro_move_00_v01.png",
+      "source_pose_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_move_00_v01.png",
+      "source_pose_sha256": "228349a87f20e0e93fba9840e8b1bf77327d2202f13d610766f619c7d1579077"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/frames/guardiao_copia_move_01_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        24,
+        54,
+        301,
+        459
+      ],
+      "visible_bbox_alpha_gt_0_04": [
+        26,
+        55,
+        300,
+        457
+      ],
+      "margins": {
+        "left": 24,
+        "top": 54,
+        "right": 19,
+        "bottom": 21
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "edge_alpha": {
+        "left": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "right": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "top": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "bottom": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        }
+      },
+      "solidity": 0.9733,
+      "mean_alpha": 0.975,
+      "sha256": "324441250fd0b14e0324374f246f050ab32837f438db7164995e8c259d825afc",
+      "bytes": 279573,
+      "raw_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/raw/guardiao_copia_move_01_v01_raw.png",
+      "raw_size": [
+        1024,
+        1536
+      ],
+      "raw_mode": "RGBA",
+      "raw_alpha_bbox": [
+        0,
+        37,
+        963,
+        1516
+      ],
+      "raw_sha256": "160277d4c07c15ce4169dfcf4a4ac1c91cad6497a7b88ca2200dec646b82fd29",
+      "source_pose": "guardiao_verdadeiro_move_01_v01.png",
+      "source_pose_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_move_01_v01.png",
+      "source_pose_sha256": "df5be78b7af750455cb89bea128a63bff692dde8c57f65c0e2391ee90158a54e"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/frames/guardiao_copia_move_02_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        15,
+        43,
+        301,
+        462
+      ],
+      "visible_bbox_alpha_gt_0_04": [
+        28,
+        44,
+        299,
+        455
+      ],
+      "margins": {
+        "left": 15,
+        "top": 43,
+        "right": 19,
+        "bottom": 18
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "edge_alpha": {
+        "left": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "right": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "top": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "bottom": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        }
+      },
+      "solidity": 0.9742,
+      "mean_alpha": 0.9757,
+      "sha256": "20357e184db7ef20df47fbf74c3c2f3044a672ee2d87d45ec145240292a731ab",
+      "bytes": 268158,
+      "raw_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/raw/guardiao_copia_move_02_v01_raw.png",
+      "raw_size": [
+        1024,
+        1536
+      ],
+      "raw_mode": "RGBA",
+      "raw_alpha_bbox": [
+        0,
+        67,
+        980,
+        1536
+      ],
+      "raw_sha256": "df54951def2abb9113743d758d157d73c4d430bab9e80a4718f35018ff4012c2",
+      "source_pose": "guardiao_verdadeiro_move_02_v01.png",
+      "source_pose_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_move_02_v01.png",
+      "source_pose_sha256": "2a4c5832ecbe086c8bdcffd0b98d735a4479bb969838a3be38ccd4d0a9b1505f"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/frames/guardiao_copia_move_03_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        0,
+        36,
+        301,
+        467
+      ],
+      "visible_bbox_alpha_gt_0_04": [
+        28,
+        51,
+        299,
+        466
+      ],
+      "margins": {
+        "left": 0,
+        "top": 36,
+        "right": 19,
+        "bottom": 13
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "edge_alpha": {
+        "left": {
+          "nonzero_pixels": 4,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 1
+        },
+        "right": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "top": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "bottom": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        }
+      },
+      "solidity": 0.97,
+      "mean_alpha": 0.9732,
+      "sha256": "5962f38ddcc0243664b0625917f1a56fbc7093ae4b4fb0dc252aa30ac281a1b6",
+      "bytes": 276363,
+      "raw_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/raw/guardiao_copia_move_03_v01_raw.png",
+      "raw_size": [
+        1024,
+        1536
+      ],
+      "raw_mode": "RGBA",
+      "raw_alpha_bbox": [
+        0,
+        71,
+        964,
+        1496
+      ],
+      "raw_sha256": "777b48bbfe3a49f25d1d3ebf771fc170a465e5fedd6230ccd9ab44ce39cf398f",
+      "source_pose": "guardiao_verdadeiro_move_03_v01.png",
+      "source_pose_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_move_03_v01.png",
+      "source_pose_sha256": "4c31b743d7067154aba306dd00391885f41bb10478c9c9e7d2233a6ac572d52b"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/frames/guardiao_copia_move_04_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        16,
+        56,
+        305,
+        467
+      ],
+      "visible_bbox_alpha_gt_0_04": [
+        18,
+        59,
+        304,
+        466
+      ],
+      "margins": {
+        "left": 16,
+        "top": 56,
+        "right": 15,
+        "bottom": 13
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "edge_alpha": {
+        "left": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "right": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "top": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "bottom": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        }
+      },
+      "solidity": 0.9756,
+      "mean_alpha": 0.9763,
+      "sha256": "531855f88f06f456a3729453e490d81280935712d5f88592022ea25a0988909a",
+      "bytes": 281011,
+      "raw_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/raw/guardiao_copia_move_04_v01_raw.png",
+      "raw_size": [
+        1024,
+        1536
+      ],
+      "raw_mode": "RGBA",
+      "raw_alpha_bbox": [
+        51,
+        9,
+        1018,
+        1536
+      ],
+      "raw_sha256": "e049bef5a23644c3d6a130c200f56d4b0b382af8e8d5f8a64298bb2bb1f75f6c",
+      "source_pose": "guardiao_verdadeiro_move_04_v01.png",
+      "source_pose_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_move_04_v01.png",
+      "source_pose_sha256": "65b1ca887f2c334e83bf67a0528683b2ea0ec124101370360ca800b9627dc7a0"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/frames/guardiao_copia_move_05_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        35,
+        40,
+        289,
+        475
+      ],
+      "visible_bbox_alpha_gt_0_04": [
+        40,
+        58,
+        287,
+        454
+      ],
+      "margins": {
+        "left": 35,
+        "top": 40,
+        "right": 31,
+        "bottom": 5
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "edge_alpha": {
+        "left": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "right": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "top": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "bottom": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        }
+      },
+      "solidity": 0.9686,
+      "mean_alpha": 0.9725,
+      "sha256": "1acf0fee206c6fdd1bf22e667b043fb1fff6c4cae82744d6369a9a3aa96fc307",
+      "bytes": 255566,
+      "raw_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/raw/guardiao_copia_move_05_v01_raw.png",
+      "raw_size": [
+        1024,
+        1536
+      ],
+      "raw_mode": "RGBA",
+      "raw_alpha_bbox": [
+        49,
+        19,
+        924,
+        1536
+      ],
+      "raw_sha256": "7977d1e673808b790654f3e41755ddea7504379c48f4156832dd2137b33bfdac",
+      "source_pose": "guardiao_verdadeiro_move_05_v01.png",
+      "source_pose_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_move_05_v01.png",
+      "source_pose_sha256": "1f6edfa978015367a07b49671e769f85da8cc706260d993c290843bca91b7cbc"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/frames/guardiao_copia_attack_00_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        11,
+        56,
+        310,
+        476
+      ],
+      "visible_bbox_alpha_gt_0_04": [
+        13,
+        58,
+        308,
+        446
+      ],
+      "margins": {
+        "left": 11,
+        "top": 56,
+        "right": 10,
+        "bottom": 4
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "edge_alpha": {
+        "left": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "right": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "top": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "bottom": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        }
+      },
+      "solidity": 0.9741,
+      "mean_alpha": 0.9745,
+      "sha256": "b5d3a1d22a021a0c050431f9d33649877d1587cd8a5e48eb8817330dc58aa6a6",
+      "bytes": 281716,
+      "raw_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/raw/guardiao_copia_attack_00_v01_raw.png",
+      "raw_size": [
+        1024,
+        1536
+      ],
+      "raw_mode": "RGBA",
+      "raw_alpha_bbox": [
+        0,
+        43,
+        1004,
+        1536
+      ],
+      "raw_sha256": "8a00274e6d1d8fb1328fba26762343e5de75c833212be29f6f79d6aa2be83e82",
+      "source_pose": "guardiao_verdadeiro_attack_00_v01.png",
+      "source_pose_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_attack_00_v01.png",
+      "source_pose_sha256": "a36f5b58ebf2b4c2d180877f029a00c149464afa16abf0aa9e3daae550a7dd83"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/frames/guardiao_copia_attack_01_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        0,
+        27,
+        317,
+        467
+      ],
+      "visible_bbox_alpha_gt_0_04": [
+        4,
+        73,
+        316,
+        412
+      ],
+      "margins": {
+        "left": 0,
+        "top": 27,
+        "right": 3,
+        "bottom": 13
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "edge_alpha": {
+        "left": {
+          "nonzero_pixels": 9,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 1
+        },
+        "right": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "top": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "bottom": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        }
+      },
+      "solidity": 0.9686,
+      "mean_alpha": 0.9729,
+      "sha256": "42afe5b0bad29674ab3a96671fa071b17e6e0855a374f89b214ebefb5b80d94b",
+      "bytes": 245674,
+      "raw_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/raw/guardiao_copia_attack_01_v01_raw.png",
+      "raw_size": [
+        1024,
+        1536
+      ],
+      "raw_mode": "RGBA",
+      "raw_alpha_bbox": [
+        0,
+        19,
+        1016,
+        1494
+      ],
+      "raw_sha256": "847375b4f246b239c59cfe5155a7a3e7e30b36a151cf02c328662e2bd5c4956b",
+      "source_pose": "guardiao_verdadeiro_attack_01_v01.png",
+      "source_pose_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_attack_01_v01.png",
+      "source_pose_sha256": "35bf54493ed198b0e1edf3ea885f2131d2ac9c20b4f4b7d87115acf3cf9de599"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/pilot/guardiao_copia_attack_02_pilot_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        0,
+        8,
+        320,
+        447
+      ],
+      "visible_bbox_alpha_gt_0_04": [
+        4,
+        62,
+        319,
+        427
+      ],
+      "margins": {
+        "left": 0,
+        "top": 8,
+        "right": 0,
+        "bottom": 33
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "edge_alpha": {
+        "left": {
+          "nonzero_pixels": 9,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 1
+        },
+        "right": {
+          "nonzero_pixels": 9,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 7
+        },
+        "top": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "bottom": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        }
+      },
+      "solidity": 0.9694,
+      "mean_alpha": 0.9725,
+      "sha256": "b786513534782fc5f52a58b651069b3dbe491a82856afc0900018622abd403cd",
+      "bytes": 218317
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/frames/guardiao_copia_attack_03_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        20,
+        40,
+        314,
+        467
+      ],
+      "visible_bbox_alpha_gt_0_04": [
+        39,
+        42,
+        292,
+        446
+      ],
+      "margins": {
+        "left": 20,
+        "top": 40,
+        "right": 6,
+        "bottom": 13
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "edge_alpha": {
+        "left": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "right": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "top": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "bottom": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        }
+      },
+      "solidity": 0.9697,
+      "mean_alpha": 0.973,
+      "sha256": "95ebd91c6092bbf987f0c2d302b550a78cc064dc511050234533cf30cb28e8bf",
+      "bytes": 260147,
+      "raw_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/raw/guardiao_copia_attack_03_v01_raw.png",
+      "raw_size": [
+        1024,
+        1536
+      ],
+      "raw_mode": "RGBA",
+      "raw_alpha_bbox": [
+        0,
+        19,
+        1015,
+        1514
+      ],
+      "raw_sha256": "ea602833df52ae5ec94f0763097aecf017bd7782dc2cd9939c1f464802ccb029",
+      "source_pose": "guardiao_verdadeiro_attack_03_v01.png",
+      "source_pose_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_attack_03_v01.png",
+      "source_pose_sha256": "5f1c2ddf0d329f9b5122d0d185c5b7585963d619d1032c925664bb4a63113f58"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/frames/guardiao_copia_death_00_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        20,
+        40,
+        316,
+        457
+      ],
+      "visible_bbox_alpha_gt_0_04": [
+        26,
+        50,
+        315,
+        449
+      ],
+      "margins": {
+        "left": 20,
+        "top": 40,
+        "right": 4,
+        "bottom": 23
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "edge_alpha": {
+        "left": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "right": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "top": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "bottom": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        }
+      },
+      "solidity": 0.9719,
+      "mean_alpha": 0.9747,
+      "sha256": "b66f9f998c0568f8043d08e9751e0efd9416148e4d6f452a5f95a4503841003e",
+      "bytes": 266507,
+      "raw_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/raw/guardiao_copia_death_00_v01_raw.png",
+      "raw_size": [
+        1024,
+        1536
+      ],
+      "raw_mode": "RGBA",
+      "raw_alpha_bbox": [
+        0,
+        117,
+        1011,
+        1536
+      ],
+      "raw_sha256": "8e073b31103e8b57fb3069de47a5ebc685335d31616244367169b61c1b2c2ebd",
+      "source_pose": "guardiao_verdadeiro_death_00_v01.png",
+      "source_pose_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_death_00_v01.png",
+      "source_pose_sha256": "8629e0793742098e39acf4a7033e8fa084173cd767792afb9a46ad44b1b62947"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/frames/guardiao_copia_death_01_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        39,
+        4,
+        296,
+        465
+      ],
+      "visible_bbox_alpha_gt_0_04": [
+        40,
+        57,
+        290,
+        449
+      ],
+      "margins": {
+        "left": 39,
+        "top": 4,
+        "right": 24,
+        "bottom": 15
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "edge_alpha": {
+        "left": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "right": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "top": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "bottom": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        }
+      },
+      "solidity": 0.974,
+      "mean_alpha": 0.9764,
+      "sha256": "a76928fac3eb29da8325be196becd08240e9c08d60813edcdc281c3038688e37",
+      "bytes": 251838,
+      "raw_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/raw/guardiao_copia_death_01_v01_raw.png",
+      "raw_size": [
+        1024,
+        1536
+      ],
+      "raw_mode": "RGBA",
+      "raw_alpha_bbox": [
+        65,
+        13,
+        948,
+        1514
+      ],
+      "raw_sha256": "885ccb70a0c33c8f022bb82e01cfad2212212af33482c9b6d3d5d22b67735651",
+      "source_pose": "guardiao_verdadeiro_death_01_v01.png",
+      "source_pose_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_death_01_v01.png",
+      "source_pose_sha256": "abd44d0339bdb2499bc1d46eafc6e0ff7e007ce6499157a1a2e8bbf5a8215eb7"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/frames/guardiao_copia_death_02_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        8,
+        21,
+        310,
+        457
+      ],
+      "visible_bbox_alpha_gt_0_04": [
+        20,
+        82,
+        309,
+        452
+      ],
+      "margins": {
+        "left": 8,
+        "top": 21,
+        "right": 10,
+        "bottom": 23
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "edge_alpha": {
+        "left": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "right": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "top": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "bottom": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        }
+      },
+      "solidity": 0.9705,
+      "mean_alpha": 0.9734,
+      "sha256": "23514470f9c30f6e918040d13e39efc24e366c3a63721af315b3cbb5683b8e5e",
+      "bytes": 256596,
+      "raw_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/raw/guardiao_copia_death_02_v01_raw.png",
+      "raw_size": [
+        1024,
+        1536
+      ],
+      "raw_mode": "RGBA",
+      "raw_alpha_bbox": [
+        25,
+        19,
+        992,
+        1464
+      ],
+      "raw_sha256": "1106b9f499feb157cb9bd9cd72c2867fc2d2aac185f0e1471f2534486926f296",
+      "source_pose": "guardiao_verdadeiro_death_02_v01.png",
+      "source_pose_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_death_02_v01.png",
+      "source_pose_sha256": "aeeea20425561b9285d98a678080860788a22404596d46f1eb9abfe66c078a3a"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/frames/guardiao_copia_death_03_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        20,
+        11,
+        306,
+        470
+      ],
+      "visible_bbox_alpha_gt_0_04": [
+        22,
+        103,
+        303,
+        443
+      ],
+      "margins": {
+        "left": 20,
+        "top": 11,
+        "right": 14,
+        "bottom": 10
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "edge_alpha": {
+        "left": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "right": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "top": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "bottom": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        }
+      },
+      "solidity": 0.979,
+      "mean_alpha": 0.9798,
+      "sha256": "e4ca054fc9df0c0ca906bf4d85d760dabd38a72598a2ad520eeb1542857afd08",
+      "bytes": 258996,
+      "raw_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/raw/guardiao_copia_death_03_v01_raw.png",
+      "raw_size": [
+        1024,
+        1536
+      ],
+      "raw_mode": "RGBA",
+      "raw_alpha_bbox": [
+        0,
+        36,
+        1000,
+        1536
+      ],
+      "raw_sha256": "79f709b2997f1f5d28149ebccd04a41ffdf5cf88ce639bb483ad1f254ec29c9c",
+      "source_pose": "guardiao_verdadeiro_death_03_v01.png",
+      "source_pose_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_death_03_v01.png",
+      "source_pose_sha256": "1d58e364f6c25bb5a1d0fa0c08acfaf78aba8b6e51369fd6c5bc2d0339ca6c2c"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/frames/guardiao_copia_death_04_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        29,
+        76,
+        310,
+        455
+      ],
+      "visible_bbox_alpha_gt_0_04": [
+        30,
+        87,
+        309,
+        454
+      ],
+      "margins": {
+        "left": 29,
+        "top": 76,
+        "right": 10,
+        "bottom": 25
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "edge_alpha": {
+        "left": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "right": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "top": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "bottom": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        }
+      },
+      "solidity": 0.9799,
+      "mean_alpha": 0.979,
+      "sha256": "f2d48442a81bee282e514b8298efebfeb683d72880a634bd49017fa6e7247863",
+      "bytes": 270882,
+      "raw_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/raw/guardiao_copia_death_04_v01_raw.png",
+      "raw_size": [
+        1024,
+        1536
+      ],
+      "raw_mode": "RGBA",
+      "raw_alpha_bbox": [
+        2,
+        208,
+        992,
+        1458
+      ],
+      "raw_sha256": "e37c464f3c7766f62a94e3a651d6ac7169abeeeed5aae0a82e84de57657038dc",
+      "source_pose": "guardiao_verdadeiro_death_04_v01.png",
+      "source_pose_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_death_04_v01.png",
+      "source_pose_sha256": "df0c1a62fb7eba43c26e46572822eaeae4e157d4baed41bd48a5c2d7ab39aab8"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/pilot/guardiao_copia_death_05_pilot_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        14,
+        21,
+        316,
+        474
+      ],
+      "visible_bbox_alpha_gt_0_04": [
+        15,
+        120,
+        315,
+        452
+      ],
+      "margins": {
+        "left": 14,
+        "top": 21,
+        "right": 4,
+        "bottom": 6
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "edge_alpha": {
+        "left": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "right": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "top": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "bottom": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        }
+      },
+      "solidity": 0.9798,
+      "mean_alpha": 0.9793,
+      "sha256": "e657059d11f5f4922e300cc937ea69d54d1a62b5f4fee8553e523738d0a842d5",
+      "bytes": 228289
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/frames/guardiao_copia_special_00_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        0,
+        41,
+        314,
+        456
+      ],
+      "visible_bbox_alpha_gt_0_04": [
+        28,
+        43,
+        304,
+        455
+      ],
+      "margins": {
+        "left": 0,
+        "top": 41,
+        "right": 6,
+        "bottom": 24
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "edge_alpha": {
+        "left": {
+          "nonzero_pixels": 1,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 1
+        },
+        "right": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "top": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "bottom": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        }
+      },
+      "solidity": 0.9726,
+      "mean_alpha": 0.9751,
+      "sha256": "3939532a7093ac5c1d210e65667f787962a1654973f678fa3eb92ee758fa6b6a",
+      "bytes": 278607,
+      "raw_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/raw/guardiao_copia_special_00_v01_raw.png",
+      "raw_size": [
+        1024,
+        1536
+      ],
+      "raw_mode": "RGBA",
+      "raw_alpha_bbox": [
+        0,
+        67,
+        1004,
+        1536
+      ],
+      "raw_sha256": "1b0ed6af3c7228fb4b02c8818815af96a9b3ea34448f2be091573ceba1425e71",
+      "source_pose": "guardiao_verdadeiro_special_00_v01.png",
+      "source_pose_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_special_00_v01.png",
+      "source_pose_sha256": "5314a5148d84241d1d8f6941beff386fa4f5ce76c8ca30cd775b5eeb400c4e8a"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/frames/guardiao_copia_special_01_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        10,
+        16,
+        307,
+        471
+      ],
+      "visible_bbox_alpha_gt_0_04": [
+        12,
+        35,
+        306,
+        470
+      ],
+      "margins": {
+        "left": 10,
+        "top": 16,
+        "right": 13,
+        "bottom": 9
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "edge_alpha": {
+        "left": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "right": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "top": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "bottom": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        }
+      },
+      "solidity": 0.9691,
+      "mean_alpha": 0.9726,
+      "sha256": "eee0f3eb51bc083da921d68cee6bd74436191ebfdd4376a0d92e3f53ab26ec0a",
+      "bytes": 284267,
+      "raw_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/raw/guardiao_copia_special_01_v01_raw.png",
+      "raw_size": [
+        1024,
+        1536
+      ],
+      "raw_mode": "RGBA",
+      "raw_alpha_bbox": [
+        31,
+        37,
+        1004,
+        1506
+      ],
+      "raw_sha256": "379676dbf7afd849583c6018353e8885c61303b946c2fc00041314e3ed7a3673",
+      "source_pose": "guardiao_verdadeiro_special_01_v01.png",
+      "source_pose_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_special_01_v01.png",
+      "source_pose_sha256": "1e84cb85a44bf88e9adb8a5b2e8a0b9126cb7fa062dc0b938c5a0ba0fd8ef6f0"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/frames/guardiao_copia_special_02_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        14,
+        28,
+        309,
+        466
+      ],
+      "visible_bbox_alpha_gt_0_04": [
+        15,
+        37,
+        306,
+        465
+      ],
+      "margins": {
+        "left": 14,
+        "top": 28,
+        "right": 11,
+        "bottom": 14
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "edge_alpha": {
+        "left": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "right": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "top": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "bottom": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        }
+      },
+      "solidity": 0.9711,
+      "mean_alpha": 0.973,
+      "sha256": "81bc9e9fdc298b9dae46bbfa55c61018b8222bb3d430033379d4fec1ac1e7350",
+      "bytes": 279024,
+      "raw_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/raw/guardiao_copia_special_02_v01_raw.png",
+      "raw_size": [
+        1024,
+        1536
+      ],
+      "raw_mode": "RGBA",
+      "raw_alpha_bbox": [
+        45,
+        55,
+        988,
+        1514
+      ],
+      "raw_sha256": "e0e992274e13464409ae4f9def09cedb01c1b45cead68b023ede643882a42fac",
+      "source_pose": "guardiao_verdadeiro_special_02_v01.png",
+      "source_pose_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_special_02_v01.png",
+      "source_pose_sha256": "a9df4b5b231dbb1d6062f727a0c63355440f7549a8d142e5dda087cd1c19c9c0"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/frames/guardiao_copia_special_03_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        6,
+        21,
+        313,
+        480
+      ],
+      "visible_bbox_alpha_gt_0_04": [
+        8,
+        67,
+        312,
+        447
+      ],
+      "margins": {
+        "left": 6,
+        "top": 21,
+        "right": 7,
+        "bottom": 0
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "edge_alpha": {
+        "left": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "right": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "top": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "bottom": {
+          "nonzero_pixels": 2,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 1
+        }
+      },
+      "solidity": 0.9702,
+      "mean_alpha": 0.9733,
+      "sha256": "2ad754f5bb68916ae9a703034bc7e7957adb4f6131f2f05caff3ff6de0fb7e7d",
+      "bytes": 282174,
+      "raw_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/raw/guardiao_copia_special_03_v01_raw.png",
+      "raw_size": [
+        1024,
+        1536
+      ],
+      "raw_mode": "RGBA",
+      "raw_alpha_bbox": [
+        0,
+        19,
+        1003,
+        1536
+      ],
+      "raw_sha256": "030180fcd4df2cabb33b085a241008519488a9629de20bb08505a0c20770d529",
+      "source_pose": "guardiao_verdadeiro_special_03_v01.png",
+      "source_pose_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_special_03_v01.png",
+      "source_pose_sha256": "e3dd6b6b9dd6271b5ba8bfdabfe96fad88f6ec1b625bfeaf90fa612e783d3f89"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/frames/guardiao_copia_special_04_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        20,
+        36,
+        296,
+        471
+      ],
+      "visible_bbox_alpha_gt_0_04": [
+        30,
+        53,
+        295,
+        457
+      ],
+      "margins": {
+        "left": 20,
+        "top": 36,
+        "right": 24,
+        "bottom": 9
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "edge_alpha": {
+        "left": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "right": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "top": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "bottom": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        }
+      },
+      "solidity": 0.9685,
+      "mean_alpha": 0.9726,
+      "sha256": "31d087d7af8c39f19ca169b1d4e0007f3426821c3a796496a7f687ed685f5330",
+      "bytes": 267137,
+      "raw_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/raw/guardiao_copia_special_04_v01_raw.png",
+      "raw_size": [
+        1024,
+        1536
+      ],
+      "raw_mode": "RGBA",
+      "raw_alpha_bbox": [
+        0,
+        57,
+        994,
+        1536
+      ],
+      "raw_sha256": "1fe1c62704773574ca3d0dbc70f9b963b4e5ffcc76eb89b6cbd112d894a3f68b",
+      "source_pose": "guardiao_verdadeiro_special_04_v01.png",
+      "source_pose_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_special_04_v01.png",
+      "source_pose_sha256": "8fd403730d03c61d85e54318e2e6716ecb98096a579fa3c3e1c106d800ec217b"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/frames/guardiao_copia_special_05_v01.png",
+      "size": [
+        320,
+        480
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        23,
+        35,
+        299,
+        474
+      ],
+      "visible_bbox_alpha_gt_0_04": [
+        24,
+        36,
+        297,
+        452
+      ],
+      "margins": {
+        "left": 23,
+        "top": 35,
+        "right": 21,
+        "bottom": 6
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "edge_alpha": {
+        "left": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "right": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "top": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        },
+        "bottom": {
+          "nonzero_pixels": 0,
+          "visible_pixels_gt_0_04": 0,
+          "max_alpha": 0
+        }
+      },
+      "solidity": 0.9738,
+      "mean_alpha": 0.975,
+      "sha256": "7f2244a8497efe9ffe7e82d8e4358abbc3db295740458321783717e49f8ac72b",
+      "bytes": 276618,
+      "raw_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_copia/raw/guardiao_copia_special_05_v01_raw.png",
+      "raw_size": [
+        1024,
+        1536
+      ],
+      "raw_mode": "RGBA",
+      "raw_alpha_bbox": [
+        0,
+        29,
+        1010,
+        1536
+      ],
+      "raw_sha256": "77ca92d3be42c83fb2dab18d2657f4333c893bb517cf373976d989f43708e749",
+      "source_pose": "guardiao_verdadeiro_special_05_v01.png",
+      "source_pose_path": ".atena/generated/art-candidates/enemies-wave-1/guardiao_verdadeiro/frames/guardiao_verdadeiro_special_05_v01.png",
+      "source_pose_sha256": "3e2a8056b80d051e211cc3e583aee3f7330728c2929c5963fa377be147c6da0f"
+    }
+  ]
+}

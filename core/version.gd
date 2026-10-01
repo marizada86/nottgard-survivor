@@ -32,7 +32,10 @@ static func playtest_tools_enabled_for_profile(profile: int) -> bool:
 	return profile == BuildProfile.PUBLIC_PLAYTEST or profile == BuildProfile.QA_INTERNAL
 
 static func qa_enabled() -> bool:
-	return build_profile() == BuildProfile.QA_INTERNAL
+	return qa_enabled_for_profile(build_profile())
+
+static func qa_enabled_for_profile(profile: int) -> bool:
+	return profile == BuildProfile.QA_INTERNAL
 
 static func profile_slug() -> String:
 	return "qa" if qa_enabled() else "public" if evidence_enabled() else "production"

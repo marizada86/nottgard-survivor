@@ -1,0 +1,142 @@
+{
+  "hqn_01": {
+    "title": "Uma Noite Sem Fim",
+    "trigger": {"type": "first_run"},
+    "panels": [
+      {"image": "res://assets/hq/hq_n01_q1.png", "text": "Não é noite. É a ausência do dia, desde que a Finbulnott engoliu o sol."},
+      {"image": "res://assets/hq/hq_n01_q2.png", "text": "Zynara: Há algo errado nas Docas."},
+      {"image": "res://assets/hq/hq_n01_q3.png", "text": "Runas entalhadas na Tarn. Um ritual para enfraquecê-la."},
+      {"image": "res://assets/hq/hq_n01_q4.png", "text": "Alguma coisa nos viu primeiro."}
+    ]
+  },
+  "hqn_02": {
+    "title": "Seremos um só",
+    "trigger": {"type": "stage_cleared", "stage": "docas"},
+    "panels": [
+      {"image": "res://assets/hq/hq_n02_q1.png", "text": "Nas paredes do porão, uma só frase, repetida: Seremos um só."},
+      {"image": "res://assets/hq/hq_n02_q2.png", "text": "Um guardião alado. Mas era só uma cópia."},
+      {"image": "res://assets/hq/hq_n02_q3.png", "text": "Sylas executa o ritual: sangue celestial, sangue negro e um osso de galinha."},
+      {"image": "res://assets/hq/hq_n02_q4.png", "text": "A névoa recuou. Uma voz sussurrou: Só escuridão."}
+    ]
+  },
+  "hqn_03": {
+    "title": "O Véu Vivo",
+    "trigger": {"type": "stage_reached", "stage": "shedaklah"},
+    "panels": [
+      {"image": "res://assets/hq/hq_n03_q1.png", "text": "O exército abissal chegou à estrela."},
+      {"image": "res://assets/hq/hq_n03_q2.png", "text": "A luz de Ailalore falhou. A Tarn começou a cair."},
+      {"image": "res://assets/hq/hq_n03_q3.png", "text": "Nottgard resistirá. Por essa terra que tanto amamos, eu dou a minha vida. — Helion"},
+      {"image": "res://assets/hq/hq_n03_q4.png", "text": "Helion se tornou o Véu Vivo. Continuem protegendo Nottgard."}
+    ]
+  },
+  "hqn_04": {
+    "title": "O Palácio de Zuggtmoy",
+    "trigger": {"type": "stage_cleared", "stage": "shedaklah"},
+    "panels": [
+      {"image": "res://assets/hq/hq_n04_q1.png", "text": "Shedaklah, andar 222: fungo de um lado, slime do outro."},
+      {"image": "res://assets/hq/hq_n04_q2.png", "text": "O Rio Estige parou. Algo o solidificou."},
+      {"image": "res://assets/hq/hq_n04_q3.png", "text": "Zuggtmoy oferece um mapa em troca de conter Juiblex."},
+      {"image": "res://assets/hq/hq_n04_q4.png", "text": "Adiante, o território de Juiblex."}
+    ]
+  },
+  "hqn_05": {
+    "title": "O Núcleo Verde",
+    "trigger": {"type": "stage_cleared", "stage": "molor"},
+    "panels": [
+      {"image": "res://assets/hq/hq_n05_q1.png", "text": "O portal roxo levou mais fundo."},
+      {"image": "res://assets/hq/hq_n05_q2.png", "text": "Molor, andar 528: bolhas que crescem e explodem."},
+      {"image": "res://assets/hq/hq_n05_q3.png", "text": "O chefe de Molor caiu."},
+      {"image": "res://assets/hq/hq_n05_q4.png", "text": "Dentro dele, um núcleo verde ainda pulsava. Era parte de Juiblex."}
+    ]
+  },
+  "hqn_06": {
+    "title": "A Jaula de Durão",
+    "trigger": {"type": "stage_cleared", "stage": "durao"},
+    "panels": [
+      {"image": "res://assets/hq/hq_n06_q1.png", "text": "Durão, andar 274: uma guerra sem fim que terminou sem vencedor."},
+      {"image": "res://assets/hq/hq_n06_q2.png", "text": "Três carcereiros vigiam quem tenta fugir."},
+      {"image": "res://assets/hq/hq_n06_q3.png", "text": "Korrak empunha o machado de Xar'gath. Ele cobra uma provação."},
+      {"image": "res://assets/hq/hq_n06_q4.png", "text": "Na jaula, um elfo oferece o próprio sangue em troca de uma runa."}
+    ]
+  },
+  "hqn_07": {
+    "title": "A Peregrinação da Estrela",
+    "trigger": {"type": "stage_cleared", "stage": "feng_tu"},
+    "panels": [
+      {"image": "res://assets/hq/hq_n07_q1.png", "text": "Feng-tu, andar 300: Tou Um e Lu Yueh disputam o andar."},
+      {"image": "res://assets/hq/hq_n07_q2.png", "text": "O Discípulo Pestilento e suas larvas."},
+      {"image": "res://assets/hq/hq_n07_q3.png", "text": "Só quem segue a estrela é curado."},
+      {"image": "res://assets/hq/hq_n07_q4.png", "text": "Oito dias de caminhada. A estrela nunca se aproxima. Eles se curaram."}
+    ]
+  },
+  "hqn_08": {
+    "title": "O Chifre de Malcanthet",
+    "trigger": {"type": "stage_cleared", "stage": "shendilavri"},
+    "panels": [
+      {"image": "res://assets/hq/hq_n08_q1.png", "text": "Rivenheart: luxo, ilusão e correntes."},
+      {"image": "res://assets/hq/hq_n08_q2.png", "text": "Malcanthet quer o Espelho de volta. Em segredo."},
+      {"image": "res://assets/hq/hq_n08_q3.png", "text": "Sete notas, sete runas. A parede se abriu."},
+      {"image": "res://assets/hq/hq_n08_q4.png", "text": "Graz'zt arrancou o chifre de Malcanthet e declarou guerra."}
+    ]
+  },
+  "hqn_09": {
+    "title": "O Paraíso que Era Ilusão",
+    "trigger": {"type": "stage_cleared", "stage": "goranthis"},
+    "panels": [
+      {"image": "res://assets/hq/hq_n09_q1.png", "text": "Goranthis, camada 597: o verdadeiro Paraíso."},
+      {"image": "res://assets/hq/hq_n09_q2.png", "text": "Comida, bebida e festa, tudo de graça. Tudo ilusão."},
+      {"image": "res://assets/hq/hq_n09_q3.png", "text": "Tirado do trono, o palácio revelou o que era: carne."},
+      {"image": "res://assets/hq/hq_n09_q4.png", "text": "O Estige voltou a correr. O grupo voltou para casa."}
+    ]
+  },
+  "hqn_10": {
+    "title": "A Síntese Abissal",
+    "trigger": {"type": "final_victory", "stage": "pilares"},
+    "panels": [
+      {"image": "res://assets/hq/hq_n10_q1.png", "text": "O Castelo da Fome, cercado de fogo azul."},
+      {"image": "res://assets/hq/hq_n10_q2.png", "text": "Quando a lamparina apagar..."},
+      {"image": "res://assets/hq/hq_n10_q3.png", "text": "A Síntese Abissal."},
+      {"image": "res://assets/hq/hq_n10_q4.png", "text": "A névoa acabou. Mas os pilares no horizonte ainda estendem as mãos."}
+    ]
+  },
+  "hqn_11": {
+    "title": "A Concórdia Eterna",
+    "achievement": "cacador_de_chefes",
+    "panels": [
+      {"image": "res://assets/hq/hq_n11_q1.png", "text": "Fateridge. Guardas Celestiais contra a população."},
+      {"image": "res://assets/hq/hq_n11_q2.png", "text": "Bromnor sai ferido da forja."},
+      {"image": "res://assets/hq/hq_n11_q3.png", "text": "A Aurora da Concórdia Eterna."},
+      {"image": "res://assets/hq/hq_n11_q4.png", "text": "Bromnor virou luz."}
+    ]
+  },
+  "hqn_12": {
+    "title": "O Nome Aluris",
+    "achievement": "aluris",
+    "panels": [
+      {"image": "res://assets/hq/hq_n12_q1.png", "text": "A ponte foi reaberta. A cidade respirava de novo."},
+      {"image": "res://assets/hq/hq_n12_q2.png", "text": "Gilly pediu um nome. Para a ponte e para eles."},
+      {"image": "res://assets/hq/hq_n12_q3.png", "text": "Aluris. Em homenagem a uma cidade antiga que um dia existiu."},
+      {"image": "res://assets/hq/hq_n12_q4.png", "text": "Ninguém ali sabia o peso daquela palavra."}
+    ]
+  },
+  "hqn_13": {
+    "title": "O Cerco de Aluris",
+    "achievement": "mestre_de_camadas",
+    "panels": [
+      {"image": "res://assets/hq/hq_n13_q1.png", "text": "Eléstria, ano 700: um presente rasgou o céu."},
+      {"image": "res://assets/hq/hq_n13_q2.png", "text": "Nossa estrela está morrendo."},
+      {"image": "res://assets/hq/hq_n13_q3.png", "text": "Setenta anos de cerco, e a muralha não caía."},
+      {"image": "res://assets/hq/hq_n13_q4.png", "text": "Helion invocou uma rocha do céu. A muralha caiu."}
+    ]
+  },
+  "hqn_14": {
+    "title": "A Máscara",
+    "achievement": "pilares_ativos",
+    "panels": [
+      {"image": "res://assets/hq/hq_n14_q1.png", "text": "Entre a multidão, alguém usava uma máscara igual à dele."},
+      {"image": "res://assets/hq/hq_n14_q2.png", "text": "O colar mostrou uma aura amarela."},
+      {"image": "res://assets/hq/hq_n14_q3.png", "text": "Nyrelia, a sacerdotisa que o criou."},
+      {"image": "res://assets/hq/hq_n14_q4.png", "text": "Crianças não precisam carregar guerra."}
+    ]
+  }
+}

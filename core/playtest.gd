@@ -1,6 +1,6 @@
 extends CanvasLayer
 ## Autoload "Playtest": evidências diretas, diagnóstico e navegação QA.
-## F4 = Navegador QA, F5 = nota textual, F6 = print; F1 = guia.
+## F4 = Navegador QA pausado com prévia de HQ, F5 = nota textual, F6 = print; F1 = guia.
 ## As evidências ficam na pasta evidencias/ ao lado do executável de playtest.
 
 const NOTE_MAX := 1000
@@ -10,8 +10,10 @@ const GUIDE_MAX_SIZE := Vector2(820, 560)
 const GUIDE_MARGIN := 24.0
 const NOTE_MAX_SIZE := Vector2(760, 470)
 const NOTE_MARGIN := 24.0
+const HQ_SCREEN := preload("res://ui/hq_screen.tscn")
 const QA_RUN_DESTINATIONS := [
 	["Inicio da run", "running"],
+	["Quadrinho (prévia)", "comic_preview"],
 	["Oferta de level-up", "levelup"],
 	["Altar", "altar"],
 	["Chefe: entrada", "boss"],
@@ -34,6 +36,8 @@ var _guide_open := false
 var _guide_mode: StringName = &"playtest"
 var _pending_ctx := {}
 var _paused_before := false
+var _qa_open := false
+var _qa_paused_before := false
 var _evidence_dir := ""
 var _evidence_error := ""
 var _logged_line_count := 0
@@ -55,6 +59,7 @@ var _console: PanelContainer
 var _console_text: RichTextLabel
 var _qa_modal: PanelContainer
 var _qa_stage: OptionButton
+var _qa_comic: OptionButton
 var _qa_hero: OptionButton
 var _qa_state: OptionButton
 var _qa_seed: SpinBox
@@ -63,6 +68,9 @@ var _qa_weapon: OptionButton
 var _qa_item: OptionButton
 var _qa_passive: OptionButton
 var _qa_event: OptionButton
+var _qa_launch_button: Button
+var _qa_comic_reader: Node
+var _qa_run_controls: Array[Control] = []
 
 func _ready() -> void:
 	layer = 100
@@ -223,7 +231,7 @@ func _build_qa_browser() -> void:
 	title.add_theme_font_size_override("font_size", 22)
 	v.add_child(title)
 	var hint := Label.new()
-	hint.text = "Escolha cenário e build. Eventos e entrada de chefe começam cinco segundos antes do gatilho."
+	hint.text = "Quadrinho abre uma prévia sem alterar progresso. Eventos e entrada de chefe começam cinco segundos antes do gatilho."
 	v.add_child(hint)
 	_qa_hero = OptionButton.new()
 	_qa_hero.tooltip_text = "Herói (bloqueios normais são ignorados apenas no sandbox)"
@@ -235,14 +243,25 @@ func _build_qa_browser() -> void:
 	for id in Data.table("stages"):
 		_qa_stage.add_item("Fase: %s [%s]" % [Data.table("stages")[id].name, id])
 		_qa_stage.set_item_metadata(_qa_stage.item_count - 1, id)
-	_qa_stage.item_selected.connect(func(_idx): _fill_qa_events())
+	_qa_stage.item_selected.connect(func(_idx):
+		_fill_qa_events()
+		_fill_qa_comics()
+	)
+	if _qa_stage.item_count > 0:
+		_qa_stage.select(0)
 	v.add_child(_qa_stage)
 	_qa_state = OptionButton.new()
-	_qa_state.tooltip_text = "Estado inicial da fase selecionada"
+	_qa_state.tooltip_text = "Destino de teste para a fase selecionada"
 	for state in QA_RUN_DESTINATIONS:
 		_qa_state.add_item(state[0])
 		_qa_state.set_item_metadata(_qa_state.item_count - 1, state[1])
+	_qa_state.item_selected.connect(func(_idx): _update_qa_target_ui())
 	v.add_child(_qa_state)
+	_qa_comic = OptionButton.new()
+	_qa_comic.visible = false
+	_qa_comic.tooltip_text = "Prévia sem alterar progresso, save ou conquistas"
+	_qa_comic.item_selected.connect(func(_idx): _update_qa_target_ui())
+	v.add_child(_qa_comic)
 	_qa_seed = SpinBox.new()
 	_qa_seed.min_value = 1
 	_qa_seed.max_value = 999999999
@@ -279,12 +298,17 @@ func _build_qa_browser() -> void:
 	_qa_event = OptionButton.new()
 	v.add_child(_qa_event)
 	_fill_qa_events()
+	_fill_qa_comics()
+	_qa_run_controls = [_qa_hero, _qa_seed, _qa_level, _qa_weapon, _qa_item, _qa_passive, _qa_event]
+	if _qa_state.item_count > 0:
+		_qa_state.select(0)
+	_update_qa_target_ui()
 	var h := HBoxContainer.new()
 	v.add_child(h)
-	var launch := Button.new()
-	launch.text = "Abrir destino"
-	launch.pressed.connect(_launch_qa)
-	h.add_child(launch)
+	_qa_launch_button = Button.new()
+	_qa_launch_button.text = "Abrir destino"
+	_qa_launch_button.pressed.connect(_launch_qa)
+	h.add_child(_qa_launch_button)
 	var menu := Button.new()
 	menu.text = "Abrir Quartel"
 	menu.pressed.connect(_launch_qa_menu)
@@ -295,7 +319,7 @@ func _build_qa_browser() -> void:
 	h.add_child(end)
 	var close := Button.new()
 	close.text = "Fechar"
-	close.pressed.connect(func(): _qa_modal.visible = false)
+	close.pressed.connect(_close_qa_browser)
 	h.add_child(close)
 
 func _open_console() -> void:
@@ -307,8 +331,29 @@ func _open_console() -> void:
 		_console_text.text = "[color=#d8d8d8]%s[/color]" % scrub("\n".join(lines)).replace("[", "\\[")
 
 func _open_qa_browser() -> void:
-	if Version.evidence_enabled():
-		_qa_modal.visible = not _qa_modal.visible
+	if not Version.qa_enabled() or _qa_open:
+		return
+	var pause_state := qa_browser_pause_transition(true, _qa_paused_before, get_tree().paused)
+	_qa_paused_before = bool(pause_state.paused_before)
+	_qa_open = true
+	_qa_modal.visible = true
+	get_tree().paused = bool(pause_state.tree_paused)
+	_update_qa_target_ui()
+
+func _close_qa_browser() -> void:
+	if not _qa_open:
+		return
+	_qa_open = false
+	_qa_modal.visible = false
+	get_viewport().gui_release_focus()
+	if _qa_comic_reader != null:
+		var reader := _qa_comic_reader
+		_qa_comic_reader = null
+		reader.call("finish")
+		reader.queue_free()
+	var pause_state := qa_browser_pause_transition(false, _qa_paused_before, get_tree().paused)
+	_qa_paused_before = bool(pause_state.paused_before)
+	get_tree().paused = bool(pause_state.tree_paused)
 
 func _fill_qa_events() -> void:
 	if _qa_event == null or _qa_stage == null or _qa_stage.selected < 0:
@@ -321,8 +366,85 @@ func _fill_qa_events() -> void:
 		_qa_event.add_item("Evento: %s" % String(event_def.get("title", event_def.id)))
 		_qa_event.set_item_metadata(_qa_event.item_count - 1, String(event_def.id))
 
+static func qa_comic_ids_for_stage(hqs: Dictionary, stage_id: String) -> Array[String]:
+	var ids: Array[String] = []
+	for key in hqs.keys():
+		ids.append(String(key))
+	ids.sort()
+	ids.sort_custom(func(a: String, b: String) -> bool:
+		var a_trigger: Dictionary = hqs[a].get("trigger", {})
+		var b_trigger: Dictionary = hqs[b].get("trigger", {})
+		var a_matches := String(a_trigger.get("stage", "")) == stage_id and stage_id != ""
+		var b_matches := String(b_trigger.get("stage", "")) == stage_id and stage_id != ""
+		if a_matches != b_matches:
+			return a_matches
+		return a < b
+	)
+	return ids
+
+func _fill_qa_comics() -> void:
+	if _qa_comic == null:
+		return
+	_qa_comic.clear()
+	if _qa_stage == null or _qa_stage.selected < 0:
+		return
+	var stage_id := String(_qa_stage.get_item_metadata(_qa_stage.selected))
+	var stages: Dictionary = Data.table("stages")
+	var hqs: Dictionary = Data.table("hqs")
+	for hq_id in qa_comic_ids_for_stage(hqs, stage_id):
+		var hq: Dictionary = hqs[hq_id]
+		var trigger: Dictionary = hq.get("trigger", {})
+		var category := "conquista" if hq.has("achievement") else "abertura"
+		if trigger.get("type", "") == "stage_reached":
+			category = "chegada: %s" % String(stages.get(String(trigger.get("stage", "")), {}).get("name", trigger.get("stage", "")))
+		elif trigger.get("type", "") == "stage_cleared":
+			category = "vitória: %s" % String(stages.get(String(trigger.get("stage", "")), {}).get("name", trigger.get("stage", "")))
+		elif trigger.get("type", "") == "final_victory":
+			category = "vitória final: %s" % String(stages.get(String(trigger.get("stage", "")), {}).get("name", trigger.get("stage", "")))
+		_qa_comic.add_item("%s — %s · %s" % [hq_id.to_upper().replace("_", "-"), String(hq.get("title", hq_id)), category])
+		_qa_comic.set_item_metadata(_qa_comic.item_count - 1, hq_id)
+	if _qa_comic.item_count > 0:
+		_qa_comic.select(0)
+	_update_qa_target_ui()
+
+func _update_qa_target_ui() -> void:
+	if _qa_state == null:
+		return
+	var is_comic_preview := _qa_state.selected >= 0 and String(_qa_state.get_item_metadata(_qa_state.selected)) == "comic_preview"
+	if _qa_comic != null:
+		_qa_comic.visible = is_comic_preview
+	for control in _qa_run_controls:
+		control.visible = not is_comic_preview
+	if _qa_launch_button != null:
+		_qa_launch_button.text = "Pré-visualizar quadrinho" if is_comic_preview else "Abrir destino"
+		_qa_launch_button.disabled = is_comic_preview and (_qa_comic == null or _qa_comic.selected < 0)
+
+func _preview_qa_comic() -> void:
+	if not _qa_open or _qa_comic == null or _qa_comic.selected < 0:
+		return
+	var hq_id := String(_qa_comic.get_item_metadata(_qa_comic.selected))
+	var hq: Dictionary = Data.table("hqs").get(hq_id, {})
+	if hq.is_empty():
+		return
+	_qa_modal.visible = false
+	_qa_comic_reader = HQ_SCREEN.instantiate()
+	_qa_comic_reader.process_mode = Node.PROCESS_MODE_ALWAYS
+	_qa_comic_reader.connect("closed", _on_qa_comic_closed)
+	add_child(_qa_comic_reader)
+	_qa_comic_reader.call_deferred("start_hq", hq)
+
+func _on_qa_comic_closed() -> void:
+	if _qa_comic_reader != null:
+		_qa_comic_reader.queue_free()
+		_qa_comic_reader = null
+	if _qa_open:
+		_qa_modal.visible = true
+
 func _launch_qa() -> void:
 	var target := String(_qa_state.get_item_metadata(_qa_state.selected))
+	if target == "comic_preview":
+		_preview_qa_comic()
+		return
 	var request := {
 		"id": "qa.%s.%s" % [String(_qa_stage.get_item_metadata(_qa_stage.selected)), String(_qa_state.get_item_metadata(_qa_state.selected))],
 		"seed": int(_qa_seed.value),
@@ -337,9 +459,9 @@ func _launch_qa() -> void:
 		"passive_id": String(_qa_passive.get_item_metadata(_qa_passive.selected)),
 		"passive_level": 1
 	}
-	_qa_modal.visible = false
+	_close_qa_browser()
 	if not Game.start_qa_run(request):
-		_qa_modal.visible = true
+		_open_qa_browser()
 		toast(Game.qa_error)
 
 func _launch_qa_menu() -> void:
@@ -347,12 +469,12 @@ func _launch_qa_menu() -> void:
 		toast(Game.qa_error)
 		return
 	Game.qa_menu_tab = 0
-	_qa_modal.visible = false
+	_close_qa_browser()
 	Game.goto_menu()
 
 func _end_qa() -> void:
+	_close_qa_browser()
 	var unchanged := Game.end_qa_sandbox()
-	_qa_modal.visible = false
 	toast("Sandbox encerrado; save real %s." % ("preservado" if unchanged else "ALTERADO — verifique"))
 	Game.goto_menu()
 
@@ -396,6 +518,14 @@ static func is_qa_shortcut(ev: InputEvent, o_pressed: bool = false) -> bool:
 		return true
 	return ev.physical_keycode == KEY_P and ev.ctrl_pressed and o_pressed
 
+static func should_handle_qa_shortcut(ev: InputEvent, browser_open: bool, has_ui_focus: bool, o_pressed: bool = false) -> bool:
+	return is_qa_shortcut(ev, o_pressed) and (browser_open or not has_ui_focus)
+
+static func qa_browser_pause_transition(opening: bool, paused_before: bool, currently_paused: bool) -> Dictionary:
+	if opening:
+		return {"paused_before": currently_paused, "tree_paused": true}
+	return {"paused_before": paused_before, "tree_paused": paused_before}
+
 static func shortcut_action(ev: InputEvent) -> StringName:
 	if not (ev is InputEventKey) or not ev.pressed or ev.echo:
 		return &""
@@ -415,6 +545,13 @@ static func shortcut_action(ev: InputEvent) -> StringName:
 static func qa_run_destinations() -> Array:
 	return QA_RUN_DESTINATIONS.duplicate(true)
 
+static func qa_shortcuts_text(qa_enabled: bool) -> String:
+	var shortcuts := "[b]Teclas de teste[/b]: "
+	if qa_enabled:
+		shortcuts += "F4 Navegador QA (pausa e prévia de HQ) · "
+	shortcuts += "F5 nota · F6 print · F11 tela cheia · F12 diagnóstico · F1 este guia\n"
+	return shortcuts
+
 static func _guide_text() -> String:
 	return "Este jogo [b]ainda não foi lançado[/b]: você está testando uma versão em construção (v%s). O que você reportar muda o jogo de verdade.\n\n" % Version.VERSION \
 		+ "[b]O que fazer[/b]\n" \
@@ -425,7 +562,7 @@ static func _guide_text() -> String:
 		+ "[b]Controles do jogo[/b]\n" \
 		+ "Teclado/mouse: WASD/setas movem; Tab alterna mira; Q/botão direito usa habilidade; E interage; X extrai; 1-5 escolhe; R rerrola; T/F acelera; Esc pausa. Controle: analógico esquerdo/direcional move; direito mira no modo manual; RB usa habilidade; oeste interage; norte alterna mira ou extrai; LB rerrola; Start pausa; Back abre itens. Leste confirma e sul volta nas telas.\n" \
 		+ "Todas as armas atacam sozinhas. Sobreviva, evolua, derrote o chefe da fase e desça pelo portal.\n\n" \
-		+ "[b]Teclas de teste[/b]: F4 Navegador QA · F5 nota · F6 print · F11 tela cheia · F12 diagnóstico · F1 este guia\n" \
+		+ qa_shortcuts_text(Version.qa_enabled()) \
 		+ "[color=#aaaaaa]Os prints mostram a tela do jogo. Notas e log têm o nome de usuário do Windows removido.[/color]"
 
 static func game_rules_text() -> String:
@@ -456,6 +593,10 @@ func _input(ev: InputEvent) -> void:
 			close_guide()
 			get_viewport().set_input_as_handled()
 			return
+		if _qa_open and _qa_modal.visible:
+			_close_qa_browser()
+			get_viewport().set_input_as_handled()
+			return
 	if not ev is InputEventKey:
 		return
 	var shortcut := shortcut_action(ev)
@@ -469,8 +610,12 @@ func _input(ev: InputEvent) -> void:
 		_open_console()
 		get_viewport().set_input_as_handled()
 		return
-	if get_viewport().gui_get_focus_owner() == null and is_qa_shortcut(ev, Input.is_key_pressed(KEY_O)):
-		_open_qa_browser()
+	var has_ui_focus := get_viewport().gui_get_focus_owner() != null
+	if Version.qa_enabled() and should_handle_qa_shortcut(ev, _qa_open, has_ui_focus, Input.is_key_pressed(KEY_O)):
+		if _qa_open:
+			_close_qa_browser()
+		else:
+			_open_qa_browser()
 		get_viewport().set_input_as_handled()
 		return
 	match shortcut:
