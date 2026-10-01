@@ -94,5 +94,5 @@ Itens escolhidos: **D1 + D2 + D3 (lote Impacto)**. Implementados 2026-10-01:
 
 ## D4 implementado (2026-10-01)
 - `core/battle.gd` (`_tide_kill`, `tide_xp_bonus`, evento `streak`): janela de 3 s sem matar zera a sequência; marcos em 10 / 25 / 50 / 100 / 200 com os nomes **Maré Cinzenta, Maré Negra, Maré de Gehenna, Maré do Abismo, Maré Sem Fundo** (propostos a partir do Vault, ajustáveis na constante `TIDE_MARKS`). Cada marco dá +2% de XP coletado por 5 s, com teto de +10%. Aviso via `hud.toast` em `ui/run.gd`. Não consome a RNG. Testes em `tests/test_tide.gd`.
-- **Ainda não medido com o bot** (o XP extra pode mudar o ritmo de nível); abrir cartão BAL se o bot indicar desvio.
+- **Bot (2026-10-01, durvall, 6 seeds, Dagruve, dt 0,08):** com e sem o bônus de XP, 6 de 6 runs chegaram a Dagruve e morreram ali (a run mais longa passou às Docas só com o bônus, mas as seeds divergem por ruído). Amostra pequena: sem desvio claro; repetir com mais seeds e outros heróis antes de abrir cartão BAL.
 - **Conquistas de sequência sem dano** (pedido do dono): `Intocado` (25, +100 moedas), `Sombra Sem Marca` (75, +250) e `Maré Sem Rastro` (200, +600), por run, via `stats.clean_kills` (zera em `_hurt_hero`; guarda o melhor em `clean_streak_best`) e `run_clean_streak` em `core/profile.gd`. Dano absorvido por guarda ou barreira não zera.
