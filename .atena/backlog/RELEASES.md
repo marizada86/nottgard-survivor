@@ -59,6 +59,7 @@ Pedido direto do dono em 2026-10-01 ("atualize a build de playtester para v0.2.1
 - Dopamina (MEC-031): estouro ao matar, pausa curta em crítico e abate de elite ou chefe, tom da coleta subindo em sequência, números de dano por tipo com soma de acertos rápidos, brilho e nome do loot por raridade. Opção **Reduzir efeitos de impacto** em Opções.
 - **Maré do Abismo:** abates em sequência (10, 25, 50, 100, 200) dão aviso e +2% de XP por 5 s (máx. +10%). Três conquistas novas por abates seguidos sem dano.
 - **Alma e história (MEC-032):** epígrafe de cada fase, contexto de chefe, textos temáticos dos eventos e **falas dos heróis** (balão na entrada, no chefe e com pouca vida; desligável em Opções).
+- Questionário para os testers: [QUESTIONARIO Rápido - 004](questionarios/QUESTIONARIO%20R%C3%A1pido%20-%20004.pdf) (mapa em [QUESTIONARIO-004](questionarios/QUESTIONARIO-004-v0.2.1.md)).
 - Cenário (MEC-030, 033, 034, 035): destrutíveis com loot e Sorte, armadilhas de cenário e layout por zonas em Dagruve e Docas; arte de estradas ainda provisória.
 
 ## Versão 0.2.0 — Major-update, publicada (playtest)
