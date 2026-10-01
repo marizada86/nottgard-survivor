@@ -1209,4 +1209,21 @@ func run() -> Array:
 	if st.still_t <= 0.0 or st.still_t > 1.0:
 		out.append("a contagem deveria recomeçar do zero depois de andar")
 
+	# cada cópia-isca tem um id estável e único (o visual é indexado por ele, nunca pelo dicionário mutável)
+	var did := _bat(96, "sylas")
+	_quiet(did)
+	did.use_active(Vector2(1, 0))
+	did.active_cd = 0.0
+	did.use_active(Vector2(1, 0))
+	var ids: Array = did.decoys.map(func(d): return int(d.id))
+	if ids.size() != 2 or ids[0] == ids[1]:
+		out.append("cada cópia-isca deveria ter um id único (ids %s)" % str(ids))
+	var id_before := int(did.decoys[0].id)
+	did.step(Vector2.ZERO, 0.5)
+	if int(did.decoys[0].id) != id_before:
+		out.append("o id da cópia não pode mudar durante a vida dela")
+	did.load_stage("docas")
+	if not did.decoys.is_empty():
+		out.append("trocar de fase deve limpar as cópias-isca")
+
 	return out

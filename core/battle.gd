@@ -39,6 +39,7 @@ var enemies: Array = []
 var projectiles: Array = []
 var zones: Array = []
 var decoys: Array = []  # MEC-029: cópias-isca do Passo pelas Sombras
+var _decoy_serial := 0
 var pickups: Array = []
 var interactions: Array = []
 var events: Array = []
@@ -164,6 +165,7 @@ func load_stage(stage_key: String) -> void:
 	enemies.clear()
 	projectiles.clear()
 	zones.clear()
+	decoys.clear()  # a cópia-isca do Passo pelas Sombras não atravessa de fase
 	pickups.clear()
 	interactions.clear()
 	time = 0.0
@@ -1010,7 +1012,8 @@ func _enemy_step(e: Enemy, dt: float) -> void:
 # ------------------------------------------------------------------ cópia-isca (MEC-029)
 
 func _spawn_decoy(p: Dictionary) -> void:
-	decoys.append({"pos": hero.pos, "life": float(p.decoy_life), "hp": float(p.get("decoy_hp", 24.0)),
+	_decoy_serial += 1
+	decoys.append({"id": _decoy_serial, "pos": hero.pos, "life": float(p.decoy_life), "hp": float(p.get("decoy_hp", 24.0)),
 		"aggro": float(p.get("decoy_aggro", 12.0)), "p": p})
 	events.append({"type": "decoy_spawn", "pos": hero.pos, "hero_id": hero.id})
 

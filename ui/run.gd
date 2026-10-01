@@ -22,7 +22,7 @@ var _last_mouse_position := Vector2.INF
 var stage_root: Node2D
 var sorted: Node2D
 var hero_node: Node2D
-var decoy_nodes := {}  # MEC-029: dicionário da isca (Battle) -> visual
+var decoy_nodes := {}  # MEC-029: id da isca (Battle) -> visual
 var enemy_nodes := {}
 var start_pos := Vector2.ZERO
 var _result_shown := false
@@ -787,21 +787,25 @@ func _ring(center: Vector2, radius: float, col: Color, dur: float) -> void:
 
 ## Cópia-isca do Sylas (MEC-029): um fantasma roxo do herói parado onde ele estava.
 func _sync_decoys() -> void:
-	for d in decoy_nodes.keys():
-		var node: Node2D = decoy_nodes[d]
-		if not is_instance_valid(node):
-			decoy_nodes.erase(d)
-		elif not battle.decoys.has(d):
-			node.queue_free()
-			decoy_nodes.erase(d)
+	# As iscas são dicionários que mudam a cada quadro: o visual é indexado pelo `id` estável, nunca pelo dicionário.
+	var live := {}
 	for d in battle.decoys:
-		if decoy_nodes.has(d):
+		live[int(d.id)] = d
+	for id in decoy_nodes.keys():
+		var node: Node2D = decoy_nodes[id]
+		if not is_instance_valid(node):
+			decoy_nodes.erase(id)
+		elif not live.has(id):
+			node.queue_free()
+			decoy_nodes.erase(id)
+	for id in live:
+		if decoy_nodes.has(id):
 			continue
 		var ghost: Node2D = hero_node.duplicate()
 		ghost.modulate = Color(0.55, 0.35, 0.95, 0.65)
 		sorted.add_child(ghost)
-		ghost.sync_visual(Iso.to_screen(d.pos), false, false)
-		decoy_nodes[d] = ghost
+		ghost.sync_visual(Iso.to_screen(live[id].pos), false, false)
+		decoy_nodes[id] = ghost
 
 # ------------------------------------------------------------------ impacto (SPEC-116 D1, D2, D3)
 

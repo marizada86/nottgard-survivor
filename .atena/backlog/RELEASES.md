@@ -61,6 +61,10 @@ Pedido direto do dono em 2026-10-01 ("atualize a build de playtester para v0.2.1
 - **Alma e história (MEC-032):** epígrafe de cada fase, contexto de chefe, textos temáticos dos eventos e **falas dos heróis** (balão na entrada, no chefe e com pouca vida; desligável em Opções).
 - Questionário para os testers: [QUESTIONARIO Rápido - 004](questionarios/QUESTIONARIO%20R%C3%A1pido%20-%20004.pdf) (mapa em [QUESTIONARIO-004](questionarios/QUESTIONARIO-004-v0.2.1.md)).
 - Cenário (MEC-030, 033, 034, 035): destrutíveis com loot e Sorte, armadilhas de cenário e layout por zonas em Dagruve e Docas; arte de estradas ainda provisória.
+- **Estátua Viva (MEC-037):** nova conquista por ficar 2 minutos seguidos parado numa run.
+- **Crônicas e rumor de Adam (MEC-032 H4, H6):** o Diário ganhou uma crônica por fase (libera ao vencer o chefe, com aviso); nas Docas e em Shedaklah aparece uma linha sobre Adam depois da epígrafe.
+- **Heróis ajustados (BAL-013, 014):** Nyrelia (Dominar Pessoa mais forte, mais PV e CA), Zynara (Suspensão Temporal mais frequente, Ampulheta mais forte) e Kayron (Sobrecarga Mística e Poder Místico melhores).
+- **Proporção dos sprites (BUG-021):** os heróis não devem mais mudar de tamanho ao andar nem ao atacar; a Nyrelia andando para a direita ainda fica um pouco menor.
 
 ## Versão 0.2.0 — Major-update, publicada (playtest)
 
