@@ -7,7 +7,7 @@
   bestiário ([RESEARCH-001](../vault/research/RESEARCH-001-abismo-bestiario-visual-2026-09-21.md)),
   sem inventar lore. Sem história: a lore é só sabor.
 - Itens abertos acumulam até fechar um **lote**. O lote sai como um único
-  `ART-PROMPTS-NNN` (próximo livre: **043**) para o gerador de imagem.
+  `ART-PROMPTS-NNN` (próximo livre: **044**) para o gerador de imagem.
 - Candidatos ficam em `.atena/generated/` até admissão explícita do dono.
 
 ## Abertos
@@ -15,19 +15,19 @@
 | ID | Tipo | Item | Sabor Nottgard (preencher no lote) | Origem | Dependência |
 |---|---|---|---|---|---|
 | ART-001 | verificação | Captura runtime do Zumbi v01 em janela interativa (só a prancha foi vista) | Dagruve · Zumbi | [EVID-104](../evidence/EVID-104-zumbi-admissao-2026-09-29.md) | acompanha BUG-001 |
-| ART-002 | layout | Barra de progresso da fase no HUD | a definir | EVID-088 nota 3 | destrava MEC-002 |
-| ART-003 | layout | Catálogo de itens do menu Esc: cartas desbloqueadas, silhueta escura para bloqueadas | a definir | EVID-088 nota 2 | destrava MEC-003 |
-| ART-004 | ícone + VFX | Item de dano temporário (chama/lança-chamas) | a definir (divindade de fogo?) | PLAN-030 item 5 | destrava MEC-004 |
+| ART-002 | layout | Barra de progresso da fase no HUD | a definir | EVID-088 nota 3 | destrava MEC-002; ART-PROMPTS-043 pronto, fila CHATGPT-FILA-012 (U01-U02) |
+| ART-003 | layout | Catálogo de itens do menu Esc: cartas desbloqueadas, silhueta escura para bloqueadas | a definir | EVID-088 nota 2 | destrava MEC-003; ART-PROMPTS-043 pronto, fila CHATGPT-FILA-012 (U03-U04) |
+| ART-004 | ícone + VFX | Item de dano temporário (chama/lança-chamas) | a definir (divindade de fogo?) | PLAN-030 item 5 | destrava MEC-004; ART-PROMPTS-043 pronto, fila CHATGPT-FILA-012 (U05-U06) |
 | ART-005 | props + ícones | Um visual por novo evento aleatório | a definir | EVID-091 resposta 10 | destrava MEC-005 |
 | ART-006 | áudio | *A confirmar:* sons de loja, ferreiro, curandeiro, quebráveis (só `quebravel` consta no `audio_manifest.json`) e sinergia | — | `data/audio_manifest.json` | SPEC-064, 075 |
 | ART-007 | UI | *A confirmar:* números de dano maiores e mais claros, referência Vampire Survivors / Death Must Die. SPEC-033 só colorou por afinidade divina | — | EVID-088 nota 5 | — |
 | ART-008 | asset | Asset visual da névoa (hoje inexistente) | Névoa · Docas / Abismo, ver SPEC-034 | [EVID-106](../evidence/EVID-106-playtest-publico-t01-higor-2026-09-29.md) IN-002 | acompanha MEC-017 |
 | ART-009 | props/NPC | Assets do curandeiro e do ferreiro (a loja também, se faltar) | a definir | [EVID-106](../evidence/EVID-106-playtest-publico-t01-higor-2026-09-29.md) IN-003; T02 N4 + texto livre: eventos de loja, ferreiro e curandeiro **indistinguíveis** no mapa (**2 relatos**) | —; **INTEGRADO 2026-09-29:** PNGs oficiais admitidos (EVID-110 do lote 1) e exibidos em `ui/overlay.gd`; o quadrado colorido provisório só resta para doação, aposta e ampulheta (ART-018 a 020)|
-| ART-010 | VFX + áudio | Impacto ao subir de nível: efeitos visuais e sonoros, ref. Castlevania Symphony of the Night | a definir | [EVID-106](../evidence/EVID-106-playtest-publico-t01-higor-2026-09-29.md) IN-006; T02 Q7 concorda; T03 Q7 **discorda** | acompanha MEC-008 |
+| ART-010 | VFX + áudio | Impacto ao subir de nível: efeitos visuais e sonoros, ref. Castlevania Symphony of the Night | a definir | [EVID-106](../evidence/EVID-106-playtest-publico-t01-higor-2026-09-29.md) IN-006; T02 Q7 concorda; T03 Q7 **discorda** | acompanha MEC-008; ART-PROMPTS-043 pronto, fila CHATGPT-FILA-012 (U07) |
 | ART-011 | asset | Baú de Chefe (visual distinto dos baús comuns) | a definir por chefe/divindade | [EVID-106](../evidence/EVID-106-playtest-publico-t01-higor-2026-09-29.md) IN-013; T02 Q10 concorda; T03 Q10 concorda | destrava MEC-013 |
 | ART-012 | ambientação | Nova camada de cenário por bioma: casas/ruínas, grama, areia, caminhos de pedra, trilhas; remeter a acontecimentos da lore; reaproveitar assets existentes. T01 pede recomendações (refs de jogo do projeto) | por bioma, lote grande | [EVID-106](../evidence/EVID-106-playtest-publico-t01-higor-2026-09-29.md) IN-010, IN-018; T02 Q12 "em parte"; T03 Q12 "em parte" | relaciona-se a BUG-013 |
 | ART-013 | cutscene/HQ | **HQs novas** (direção do dono, 2026-09-29): catálogo em [PLAN-040](../vault/drafts/PLAN-040-hqs-novas-highlights-do-vault-2026-09-29.md), estilo e piloto em [ART-PROMPTS-027](../generated/ART-PROMPTS-027-hqs-novas-guia-de-estilo-e-piloto.md). 3 HQs do Nottcard são candidatas ([EVID-109](../evidence/EVID-109-importacao-das-hqs-do-nottcard-2026-09-29.md)); falta admissão e integração pela [SPEC-080](../specs/SPEC-080-hqs-de-transicao-do-nottcard.md). [Histórico](#art-013) | história de Nottgard | [EVID-106](../evidence/EVID-106-playtest-publico-t01-higor-2026-09-29.md) IN-016 | destrava MEC-015, MEC-016 |
-| ART-014 | VFX/UI | Visual da mini-cinemática de evolução de arma | a definir; **Provisório 2026-09-29:** painel procedural em código (SPEC-091); falta visual e som próprios | [EVID-106](../evidence/EVID-106-playtest-publico-t01-higor-2026-09-29.md) IN-008 | destrava MEC-009 |
+| ART-014 | VFX/UI | Visual da mini-cinemática de evolução de arma | a definir; **Provisório 2026-09-29:** painel procedural em código (SPEC-091); falta visual e som próprios | [EVID-106](../evidence/EVID-106-playtest-publico-t01-higor-2026-09-29.md) IN-008 | destrava MEC-009; ART-PROMPTS-043 pronto, fila CHATGPT-FILA-012 (U08-U09) |
 | ART-015 | asset/VFX | Ímã de experiência mais evidente (asset do pickup e/ou efeito ao atrair os cristais) | [EVID-107](../evidence/EVID-107-playtest-publico-t02-hiago-2026-09-29.md) IN-026 | —; **INTEGRADO 2026-09-29:** `assets/pickups/magnet.png` oficial, maior (32 px) e com brilho pulsante; a ferradura provisória foi removida|
 | ART-016 | UI/cor | **Cor de raridade** nas ofertas de item, loja e forja (comum, mágico, raro, único). Hoje a oferta pinta de verde o item **novo** sem olhar a raridade (`ui/hud.gd`) e empurra a troca de um raro por um comum (print 004) | [EVID-108](../evidence/EVID-108-playtest-publico-t03-dna-2026-09-29.md) IN-036 | acompanha MEC-019; **IMPLEMENTADO 2026-09-29** (`ui/hud.gd`: cor pela raridade, sem verde fixo; aguarda run real, PLAN-039) |
 | ART-017 | UI/texto | Explicar "+1 redução" (é redução de dano recebido) e os demais rótulos de atributo em ofertas e ficha | [EVID-108](../evidence/EVID-108-playtest-publico-t03-dna-2026-09-29.md) IN-038 | acompanha MEC-019; **IMPLEMENTADO 2026-09-29** parcial: "redução de dano". CA/CAM/coleta seguem abreviados; aguarda run real |
@@ -90,7 +90,7 @@ Critério: o que destrava jogo já implementado ou bug visível vem primeiro; de
 | 6 | ART-008, 009, 011 (lote 1: névoa, NPCs, baú de chefe) | prompts prontos; só falta gerar | ART-PROMPTS-025 |
 | 7 | ART-018, 019, 020 (ampulheta, doação, aposta) | hoje quadrados lilás | CHATGPT-FILA-011 S03–S05 |
 | 8 | ART-013 HQs | vale quando houver tempo de playtest narrativo | FILA-002 e 003 |
-| 9 | ART-002, 003, 007, 010, 014 (UI/VFX) | lote A1; dependem de mecânica | a preparar |
+| 9 | ART-002, 003, 004, 010, 014 (UI/VFX) | prompts prontos; ART-007 e ART-006 não são imagem | CHATGPT-FILA-012 |
 | — | ART-004, 005, 006, 012 | presos a decisão de mecânica, a confirmar ou já integrados | — |
 
 ## Sugestão de lote (Atena)
