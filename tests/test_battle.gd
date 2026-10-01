@@ -998,4 +998,44 @@ func run() -> Array:
 		if dry_stage.has_styx_contract() or dry_stage.styx_exposure > 0.0:
 			out.append("%s não deveria ter contrato ou exposição do Estige" % stage_id)
 
+	# MEC-029: Passo pelas Sombras deixa uma cópia-isca que atrai e explode
+	var dc := _bat(61, "sylas")
+	_quiet(dc)
+	dc.hero.pos = Vector2(20, 20)
+	var lured: Enemy = dc._spawn("zumbi", Vector2(26, 20))
+	var boss_like: Enemy = dc._spawn("zumbi", Vector2(20, 26))
+	boss_like.flags.append("chefe")
+	if not dc.use_active(Vector2(-1, 0)):
+		out.append("Passo pelas Sombras deveria poder ser usado")
+	if dc.decoys.size() != 1:
+		out.append("Passo pelas Sombras deveria deixar uma cópia-isca (há %d)" % dc.decoys.size())
+	else:
+		var decoy_pos: Vector2 = dc.decoys[0].pos
+		if decoy_pos.distance_to(Vector2(20, 20)) > 0.01:
+			out.append("a cópia deveria ficar onde o herói estava")
+		if dc._decoy_for(lured).is_empty():
+			out.append("inimigo comum dentro do alcance deveria ser atraído pela cópia")
+		var far: Enemy = dc._spawn("zumbi", Vector2(20 + 40, 20))
+		if not dc._decoy_for(far).is_empty():
+			out.append("inimigo fora do alcance de aggro não deveria ser atraído")
+		var lured_hp := lured.hp
+		dc.enemies = [lured]
+		lured.pos = Vector2(21, 20)
+		dc.decoys[0].life = 0.01
+		dc._update_decoys(0.1)
+		if not dc.decoys.is_empty():
+			out.append("a cópia deveria sumir ao fim da duração")
+		if lured.hp >= lured_hp:
+			out.append("a cópia deveria explodir e ferir os inimigos próximos")
+	var dc2 := _bat(62, "sylas")
+	_quiet(dc2)
+	dc2.use_active(Vector2(1, 0))
+	var swarm: Enemy = dc2._spawn("zumbi", dc2.decoys[0].pos + Vector2(0.5, 0))
+	dc2._hit_decoy(dc2.decoys[0], 999.0)
+	dc2._update_decoys(0.016)
+	if not dc2.decoys.is_empty():
+		out.append("cópia destruída deveria explodir")
+	if swarm.hp >= swarm.max_hp and not swarm.dead:
+		out.append("explosão da cópia destruída deveria ferir o inimigo ao lado")
+
 	return out

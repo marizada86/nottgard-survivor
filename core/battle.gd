@@ -38,6 +38,7 @@ var stage: Dictionary = {}
 var enemies: Array = []
 var projectiles: Array = []
 var zones: Array = []
+var decoys: Array = []  # MEC-029: cópias-isca do Passo pelas Sombras
 var pickups: Array = []
 var interactions: Array = []
 var events: Array = []
@@ -385,6 +386,8 @@ func use_active(dir: Vector2 = Vector2.ZERO) -> bool:
 		"dash_weaken":
 			var move_dir := dir.normalized() if dir.length() > 0.01 else Vector2(1, 0)
 			var target_pos := hero.pos + move_dir * float(p.distance)
+			if float(p.get("decoy_life", 0.0)) > 0.0:
+				_spawn_decoy(p)
 			for i in range(10, 0, -1):
 				var candidate := hero.pos.lerp(target_pos, float(i) / 10.0)
 				if hero.is_free(candidate):
@@ -476,6 +479,7 @@ func step(screen_dir: Vector2, dt: float) -> void:
 	_update_weapons(dt)
 	_update_projectiles(dt)
 	_update_zones(dt)
+	_update_decoys(dt)
 	for e in enemies:
 		if not e.dead:
 			_enemy_step(e, dt)
@@ -895,8 +899,9 @@ func _enemy_step(e: Enemy, dt: float) -> void:
 	if e.stun_t > 0.0:
 		e.stun_t -= dt
 		return
-	var to := hero.pos - e.pos
-	var dist := to.length()
+	var lure: Dictionary = _decoy_for(e)
+	var to: Vector2 = (lure.pos if not lure.is_empty() else hero.pos) - e.pos
+	var dist: float = to.length()
 	if e.charge_t > 0.0:
 		e.charge_t -= dt
 		var np: Vector2 = e.pos + e.charge_dir * float(e.charge_ab.speed) * dt
@@ -944,7 +949,57 @@ func _enemy_step(e: Enemy, dt: float) -> void:
 	var reach := 1.4 if e.speed == 0.0 else ENEMY_ATK_RANGE + e.radius * 0.3
 	if dist <= reach and e.atk_cd <= 0.0:
 		e.atk_cd = ENEMY_ATK_CD
-		_enemy_hit_hero(e.atk_bonus, e.atk_dice, "fisico", false)
+		if not lure.is_empty():
+			_hit_decoy(lure, float(Dice.roll(rng, e.atk_dice) + maxi(0, e.atk_bonus)))
+		else:
+			_enemy_hit_hero(e.atk_bonus, e.atk_dice, "fisico", false)
+
+# ------------------------------------------------------------------ cópia-isca (MEC-029)
+
+func _spawn_decoy(p: Dictionary) -> void:
+	decoys.append({"pos": hero.pos, "life": float(p.decoy_life), "hp": float(p.get("decoy_hp", 24.0)),
+		"aggro": float(p.get("decoy_aggro", 12.0)), "p": p})
+	events.append({"type": "decoy_spawn", "pos": hero.pos, "hero_id": hero.id})
+
+## Isca mais próxima que atrai este inimigo; chefes e inimigos imóveis a ignoram.
+func _decoy_for(e: Enemy) -> Dictionary:
+	if decoys.is_empty() or e.is_boss() or e.speed <= 0.0:
+		return {}
+	var best: Dictionary = {}
+	var best_d := INF
+	for d in decoys:
+		var dist := e.pos.distance_to(d.pos)
+		if dist <= float(d.aggro) and dist < best_d:
+			best = d
+			best_d = dist
+	return best
+
+func _hit_decoy(d: Dictionary, amount: float) -> void:
+	d.hp = float(d.hp) - amount
+	events.append({"type": "hit", "pos": d.pos, "amount": int(amount), "crit": false})
+
+func _update_decoys(dt: float) -> void:
+	if decoys.is_empty():
+		return
+	var keep: Array = []
+	for d in decoys:
+		d.life = float(d.life) - dt
+		if float(d.life) <= 0.0 or float(d.hp) <= 0.0:
+			_detonate_decoy(d)
+		else:
+			keep.append(d)
+	decoys = keep
+
+func _detonate_decoy(d: Dictionary) -> void:
+	var p: Dictionary = d.p
+	var radius := float(p.get("blast_radius", 2.5)) * (1.0 + hero.m("area_pct"))
+	var hit := {"dice": p.get("blast_dice", "3d8"), "dtype": p.get("dtype", "magico"), "attr": p.get("attr", "inteligencia"), "weaken": p.get("weaken", 0)}
+	events.append({"type": "decoy_blast", "pos": d.pos, "radius": radius, "dtype": hit.dtype})
+	for e in enemies:
+		if not e.dead and e.pos.distance_to(d.pos) - e.radius <= radius:
+			if _hero_hit(e, hit, false):
+				if int(hit.weaken) > 0:
+					_apply_effects(e, {"weaken": hit.weaken})
 
 ## Move o inimigo deslizando pelos eixos; se quase não saiu do lugar (obstáculo redondo no caminho),
 ## contorna girando o passo e mantém o lado escolhido até andar livre (BUG-012).

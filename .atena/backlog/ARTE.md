@@ -39,7 +39,7 @@
 | ART-024 | asset | **Miniatura de Docas** (`assets/stages/docas_thumb.png`): hoje a linha "2. Docas" do menu aparece sem imagem | Docas · cais, fenda e porão ritual | [EVID-139](../evidence/EVID-139-playtest-higor-qa-14b15e4-2026-10-01.md) IN-045 | ART-PROMPTS-039 pronto (`.atena/generated/`), aguarda geração da imagem |
 | ART-025 | background | **Fundos das fases** melhorados e coerentes com o cenário e com os novos assets (piloto Dagruve + Docas) | Dagruve (névoa/culto) · Docas (cais) | [EVID-139](../evidence/EVID-139-playtest-higor-qa-14b15e4-2026-10-01.md) IN-047/048 | destrava MEC-030 |
 | ART-026 | props | Props temáticos do piloto: estradas, carroças, destrutíveis, objeto interativo e armadilha por bioma | Dagruve · Docas | [EVID-139](../evidence/EVID-139-playtest-higor-qa-14b15e4-2026-10-01.md) IN-047 | destrava MEC-030 |
-| ART-027 | sprite + VFX | Cópia-isca de Sylas (Passo pelas Sombras) e explosão sombria | Mask / sombra | [EVID-139](../evidence/EVID-139-playtest-higor-qa-14b15e4-2026-10-01.md) IN-043 | destrava MEC-029 |
+| ART-027 | sprite + VFX | Cópia-isca de Sylas (Passo pelas Sombras) e explosão sombria | Mask / sombra | [EVID-139](../evidence/EVID-139-playtest-higor-qa-14b15e4-2026-10-01.md) IN-043 | destrava MEC-029; **hoje usa o sprite do Sylas em roxo como provisório** |
 
 > **Fila consolidada para o ChatGPT:**
 > [CHATGPT-FILA-001](../generated/CHATGPT-FILA-001-prompts-prontos.md) reúne os

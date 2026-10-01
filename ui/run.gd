@@ -21,6 +21,7 @@ var _last_mouse_position := Vector2.INF
 var stage_root: Node2D
 var sorted: Node2D
 var hero_node: Node2D
+var decoy_nodes := {}  # MEC-029: dicionário da isca (Battle) -> visual
 var enemy_nodes := {}
 var start_pos := Vector2.ZERO
 var _result_shown := false
@@ -426,6 +427,7 @@ func _sync() -> void:
 			enemy_nodes.erase(e)
 		else:
 			n.sync_visual(Iso.to_screen(e.pos))
+	_sync_decoys()
 	_update_divine_aura()
 
 func _show_result() -> void:
@@ -537,6 +539,12 @@ func _consume_events() -> void:
 				Sfx.play_weapon(String(ev.get("weapon", "")), "combat.zone")
 				var zone_theme: Dictionary = ev.get("visual_theme", _divine_theme())
 				_ring(ev.pos, ev.radius, zone_theme.impact_accent, 0.25)
+			"decoy_blast":
+				Sfx.play("combat.explosion", -6.0)
+				_shake = 0.5
+				_ring(ev.pos, ev.radius, _dcol(String(ev.get("dtype", "magico"))), 0.4)
+				if under.has_method("spawn_impact"):
+					under.call("spawn_impact", ev.pos, 8)
 			"boom":
 				Sfx.play("combat.explosion", -8.0)
 				_shake = 0.8
@@ -729,3 +737,21 @@ func _ring(center: Vector2, radius: float, col: Color, dur: float) -> void:
 	t.tween_property(line, "scale", Vector2.ONE, dur)
 	t.parallel().tween_property(line, "modulate:a", 0.0, dur)
 	t.tween_callback(line.queue_free)
+
+## Cópia-isca do Sylas (MEC-029): um fantasma roxo do herói parado onde ele estava.
+func _sync_decoys() -> void:
+	for d in decoy_nodes.keys():
+		var node: Node2D = decoy_nodes[d]
+		if not is_instance_valid(node):
+			decoy_nodes.erase(d)
+		elif not battle.decoys.has(d):
+			node.queue_free()
+			decoy_nodes.erase(d)
+	for d in battle.decoys:
+		if decoy_nodes.has(d):
+			continue
+		var ghost: Node2D = hero_node.duplicate()
+		ghost.modulate = Color(0.55, 0.35, 0.95, 0.65)
+		sorted.add_child(ghost)
+		ghost.sync_visual(Iso.to_screen(d.pos), false, false)
+		decoy_nodes[d] = ghost
