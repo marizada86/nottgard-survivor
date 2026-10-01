@@ -58,6 +58,15 @@
 > C01–C16, origem em
 > [ART-PROMPTS-030](../generated/ART-PROMPTS-030-hqs-trilha-c.md)). Só vale
 > gerar se o MEC-015 (venda de HQs) for aprovado.
+>
+> **Remessas novas (2026-10-01), por ordem de envio sugerida:**
+> 1. ART-024, miniatura de Docas, 1 imagem: [ART-PROMPTS-039](../generated/ART-PROMPTS-039-miniatura-das-docas.md) (sem fila própria; enviar antes de C02 da FILA-010).
+> 2. [CHATGPT-FILA-010](../generated/CHATGPT-FILA-010-piloto-cenario-dagruve-docas.md): 11 prompts, C01–C11, fundos e props do piloto (ART-025, ART-026).
+> 3. [CHATGPT-FILA-011](../generated/CHATGPT-FILA-011-isca-sylas-e-eventos.md): 5 prompts, S01–S05, isca e explosão do Sylas e eventos de mapa (ART-027, ART-018 a 020).
+> 4. [CHATGPT-FILA-012](../generated/CHATGPT-FILA-012-ui-e-vfx-pendentes.md): 9 prompts, U01–U09, UI e VFX (ART-002, 003, 004, 010, 014).
+> 5. [CHATGPT-FILA-009](../generated/CHATGPT-FILA-009-fundo-da-tela-de-titulo.md): 1 prompt, T01, fundo da tela de título.
+>
+> Filas 004 a 008 (piloto do cultista e mobs da onda 1) seguem em andamento pelo [PLAN-048](../vault/drafts/PLAN-048-geracao-animacoes-mobs-onda-1-2026-09-30.md). Nenhuma das novas foi enviada.
 
 ## Lote 1 — prompts prontos (2026-09-29)
 
