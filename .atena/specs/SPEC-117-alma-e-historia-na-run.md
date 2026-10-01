@@ -1,0 +1,74 @@
+---
+id: "SPEC-117"
+title: "Alma e história na run: mapa narrativo por fase e chefe"
+status: "proposta para escolha do dono (2026-10-01)"
+created: "2026-10-01"
+relations: ["[[EVID-139-playtest-higor-qa-14b15e4-2026-10-01]]", "[[PLAN-050-pos-playtest-higor-2026-10-01]]", "[[SPEC-116-dopamina-tematica]]"]
+sources: ["nottgard-vault/04_Locais (Dagruve, Docas, Camadas do Plano Abissal (Arco 01))", "nottgard-vault/05_Organizações/A Mente Derretida", "nottgard-vault/07_Criaturas/A Síntese Abissal", "nottgard-vault/12_Lore/Pilares Ativos e Plano Abissal", "data/hero_bios.json", "data/boss_presentations.json"]
+---
+
+# SPEC-117 — Alma e história na run (MEC-032)
+
+Origem: relato do dono (IN-048, 2026-10-01): o jogo precisa de "consistência na história" e menos "jogado". Esta SPEC é **pesquisa + proposta**; nada foi implementado.
+
+## Regras de fonte (do dono)
+- O **Vault** é a fonte principal e vale mais que o Nottcard quando divergem. O registro de sessão prevalece sobre prosa derivada (`16_Histórias`).
+- Seções de "cânone do mestre" são segredos que o grupo não sabia: **não entram sem decisão do dono**.
+- Os arquivos `Dagruve.md` e `Docas.md` trazem a etiqueta `conteudo-nao-revelado`. Usei só o que está em "Base canônica" e nas **consolidações aprovadas das sessões**; qualquer texto novo deve ser conferido contra a etiqueta antes de ir ao jogo.
+- Todo texto abaixo é **paráfrase curta do que está registrado**, sem lore nova.
+
+## O que o jogo tem hoje de história
+- `stages.json`: um subtítulo por fase ("Distrito negligenciado · névoa e culto").
+- `boss_presentations.json`: título e subtítulo de cada chefe (Docas sem imagem).
+- `hero_bios.json`: biografia de cada herói, derivada do Vault (liberada ao vencer uma fase com o herói).
+- HQs de transição (`hqs.json`) e a mensagem de abertura da fase ("Dagruve — Distrito negligenciado · névoa e culto").
+- Diagnóstico: a história está **fora da run** (HQs, biografias). Durante a partida não há contexto de "por que estou aqui" nem de "quem é o chefe".
+
+## Mapa narrativo (nove fases)
+Fonte principal: `04_Locais/Camadas do Plano Abissal (Arco 01)` (etiqueta `conteudo-conhecido`) e as páginas de cada local.
+
+| # | Fase | O que o registro diz (resumo) | Chefe no jogo | Epígrafe proposta (rascunho) | Cuidado |
+|---|---|---|---|---|---|
+| 1 | Dagruve | Distrito mais negligenciado de Nottgard; uma fratura no cemitério deixa entrar a névoa; cultistas de A Mente Derretida (culto de Ghaunadaur) agem na Praça da Loucura | Sacerdote da Mente Derretida | "O distrito que Nottgard esqueceu. A névoa entra por uma fratura no cemitério." | Etiqueta `conteudo-nao-revelado` |
+| 2 | Docas | Porto com rituais num porão de galpão, slime que corrói metal; mais tarde, invocação num navio abandonado traz uma Arch-hag e um Kraken | Guardião Alado (verdadeiro) | "No porão do galpão, um ritual espera. O metal vira ferrugem onde o slime passa." | Etiqueta `conteudo-nao-revelado`; o chefe vem do Nottcard e **não tem página própria no Vault**: decidir se é adaptação |
+| 3 | Shedaklah (andar 222) | Domínio de Zuggtmoy (fungo) e Juiblex (slime), equilíbrio quebrado pela passagem de Juiblex | Zuggtmoy | "Fungo e limo dividem o andar. O equilíbrio já não segura." | — |
+| 4 | Molor (andar 528) | Outro domínio de Juiblex; caverna de bolhas de slime; o Rio Estige volta a correr após o núcleo verde | Blogbog | "Bolhas de limo, um núcleo verde, e o Estige correndo de novo." | Thullgrime e o receptáculo de Juiblex aparecem na mesma camada: conferir antes de citar |
+| 5 | Durao (andar 274) | Rio de almas, jaula gigante; guerra terminada; restam três Molydeus carcereiros | Molydeus, Carcereiro-Chefe | "Uma jaula do tamanho de um céu. Três carcereiros ficaram para guardá-la." | A jaula prende Vhaerith Aetherion e o Machado de Xar'gath vem daqui (relação com Korrak) |
+| 6 | Feng-tu (andar 300) | Estética oriental; Tou Um e Lu Yueh; templo de Tou Um e peregrinação da estrela | Lu Yueh | "Lu Yueh tomou o andar. O templo de Tou Um ainda espera a peregrinação da estrela." | — |
+| 7 | Shendilavri (camada 570) | Reino de Malcanthet; Rivenheart é murada e quase toda ilusão de súcubos | Malcanthet | "Uma única cidade, murada, quase toda feita de ilusão." | — |
+| 8 | Goranthis (camada 597) | "O verdadeiro Paraíso"; castelo de Socothbenoth, todo ilusão sustentada por Juiblex; palco da batalha final do Abismo | Socothbenoth | "O Paraíso é uma ilusão, e todo o castelo a sustenta." | — |
+| 9 | Pilares | Após a derrota da Síntese Abissal, pilares aparecem no horizonte; Sylas reconhece a pedra como a parede do mundo abissal; Ghaunadaur não foi destruído | Síntese Abissal | "Pilares no horizonte: a parede do mundo abissal. Querem puxar o céu para cá." | **A Síntese Abissal é a fusão de Durvall com a armadura de Astherion** e Durvall é herói jogável: decisão do dono sobre como (e se) mostrar |
+
+A descida segue o **Rio Estige**; cada portal exige a **essência da própria camada** (o jogo já usa essências por fase).
+
+## Proposta (do menor risco ao maior)
+
+### H1 — Epígrafe de abertura da fase (risco baixo)
+Ao entrar na fase, mostrar 1 a 2 linhas (coluna "Epígrafe proposta") no lugar do subtítulo atual, com a fonte registrada em `stages.json` (`epigrafe`, `fonte_vault`).
+Teste: toda fase tem epígrafe e fonte; nenhuma passa de 140 caracteres.
+
+### H2 — Apresentação do chefe com contexto (risco baixo)
+Acrescentar a `boss_presentations.json` uma linha de contexto ("quem é") por chefe, a partir da mesma tabela. Docas só depois da decisão sobre o Guardião.
+
+### H3 — Falas do herói em momentos-chave (risco médio)
+Uma frase curta do herói ao entrar numa fase, ao chegar do chefe e ao ficar com pouca vida, em balão discreto. Texto escrito **a partir da ficha do herói** (`hero_bios.json`) e **aprovado pelo dono**; sem falas inventadas sobre cânone não revelado.
+Dados em `data/barks.json` (herói × gatilho), com no máximo 2 variações para não repetir. Fica opcional em Opções.
+
+### H4 — Diário de campanha desbloqueável (risco médio)
+Cada fase vencida libera uma "crônica" curta no Diário/Códex, a partir de `16_Histórias` e do registro de sessão. Reaproveita o fluxo de HQs e biografias.
+
+### H5 — Eventos com voz temática (risco baixo)
+Os eventos de mapa (altar, ritual, ferreiro, curandeiro, poço de oferendas, oficina do cais) ganham um texto de abertura temático por fase, já que agora existem no cenário (SPEC-115).
+
+## Ordem sugerida
+H1 + H2 (dados e texto, sem mecânica) → H5 → H3 (depois de o dono aprovar as falas) → H4.
+
+## Não objetivos
+Lore nova, mudar o cânone, revelar segredos do mestre, alterar a ordem das fases.
+
+## Perguntas para o dono
+1. Quais itens entram (H1 a H5)? Proposta: H1, H2 e H5 já.
+2. A epígrafe pode ser dita pelo narrador do jogo, ou prefere sempre uma citação de personagem?
+3. **Guardião Alado (Docas):** adaptar para algo que o Vault registra (por exemplo, a Arch-hag ou o Kraken das Docas), ou manter e escrever uma linha sem pretensão de cânone?
+4. **Síntese Abissal e Durvall:** mostrar a revelação (fusão com a armadura de Astherion) ao chegar nos Pilares, evitar o tema no jogo, ou tratar como segredo até uma decisão sua?
+5. Quem escreve as falas (H3): eu proponho um rascunho por herói para você revisar, ou você escreve?
