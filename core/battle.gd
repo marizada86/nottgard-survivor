@@ -773,6 +773,16 @@ func _update_zones(dt: float) -> void:
 					events.append({"type": "toast", "text": "O ritual trouxe reforços!"})
 			else:
 				keep.append(z)
+		elif z.kind == "trap":
+			z.t = float(z.t) - dt
+			if not bool(z.armed) and float(z.t) <= float(z.warn):
+				z.armed = true
+				events.append({"type": "trap_warn", "pos": z.pos, "radius": z.radius, "name": z.get("name", "")})
+			if float(z.t) <= 0.0:
+				_fire_trap(z)
+				z.t = float(z.interval)
+				z.armed = false
+			keep.append(z)
 		elif z.kind == "sanctuary":
 			z.acc += dt
 			if hero.pos.distance_to(z.pos) <= z.radius and z.acc >= 1.0:
@@ -805,6 +815,33 @@ func _update_zones(dt: float) -> void:
 			else:
 				keep.append(z)
 	zones = keep
+
+## MEC-034: armadilha de cenário. Fere o herói e os inimigos (todos) dentro do raio, sem desvio.
+func _fire_trap(z: Dictionary) -> void:
+	events.append({"type": "boom", "pos": z.pos, "radius": z.radius})
+	if hero.pos.distance_to(z.pos) <= float(z.radius) + HERO_HIT_R:
+		_hurt_hero(float(Dice.roll(rng, String(z.dice)) + int(float(z.bonus) / 2.0)), "trap")
+	for e in enemies:
+		if not e.dead and e.pos.distance_to(z.pos) <= float(z.radius) + e.radius:
+			var damage := float(Dice.roll(rng, String(z.dice)) + int(float(z.bonus) / 2.0))
+			e.hp -= damage
+			events.append({"type": "hit", "pos": e.pos, "amount": int(damage), "crit": false})
+			if e.hp <= 0.0:
+				_kill(e)
+	if bool(z.get("leaves_puddle", false)):
+		zones.append({"owner": "stage", "kind": "puddle", "pos": z.pos, "radius": float(z.radius) * 0.8, "delay": 0.0, "life": 8.0, "acc": 0.0})
+
+func _place_traps() -> void:
+	var spec: Dictionary = Data.table("scenery").get(stage_id, {})
+	for entry in spec.get("armadilhas", []):
+		var at := Vector2(float(entry.pos[0]), float(entry.pos[1]))
+		if at.distance_to(hero.pos) < 4.0:
+			continue
+		var interval := float(entry.interval)
+		zones.append({"owner": "stage", "kind": "trap", "id": String(entry.id), "name": String(entry.name), "theme": String(entry.get("theme", "")),
+			"pos": at, "radius": float(entry.radius), "interval": interval, "warn": float(entry.warn), "t": interval * 0.8, "armed": false,
+			"dice": String(entry.dice), "bonus": 4 + tier(), "dtype": String(entry.dtype), "leaves_puddle": bool(entry.get("leaves_puddle", false)),
+			"life": 999999.0})
 
 func tier() -> int:
 	return int(stage.get("tier", 0))
@@ -1272,6 +1309,7 @@ func place_scenery() -> int:
 			continue
 		_spawn(String(entry.id), at)
 		placed += 1
+	_place_traps()
 	return placed
 
 ## Posição pedida ou a mais próxima livre (anéis de até 3 tiles); (-1, -1) se não houver.

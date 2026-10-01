@@ -608,6 +608,8 @@ func _consume_events() -> void:
 			"telegraph":
 				Sfx.play("enemy.telegraph")
 				Sfx.play_enemy(String(ev.get("enemy_id", "")), "action")
+			"trap_warn":
+				Sfx.play("enemy.telegraph")
 			"windup":
 				Sfx.play("enemy.charge")
 			"dead":

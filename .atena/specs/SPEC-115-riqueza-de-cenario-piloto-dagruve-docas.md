@@ -1,7 +1,7 @@
 ---
 id: "SPEC-115"
 title: "Riqueza de cenário: piloto em Dagruve e Docas"
-status: "aprovada pelo dono 2026-10-01; fase 1 implementada (dados, destrutíveis fixos, Sorte)"
+status: "aprovada pelo dono 2026-10-01; fases 1 e 2 implementadas (destrutíveis fixos, Sorte, armadilhas)"
 created: "2026-10-01"
 relations: ["[[EVID-139-playtest-higor-qa-14b15e4-2026-10-01]]", "[[PLAN-050-pos-playtest-higor-2026-10-01]]", "[[SPEC-114-passo-pelas-sombras-copia-isca]]"]
 ---
@@ -93,3 +93,12 @@ Mapa novo, novas fases, regras de fase novas, mudar dificuldade das ondas (isso 
 - **Sorte**: `Battle.luck()` = mod. de Carisma + `sorte`. Chance de drop 55 % +5 %/ponto (piso 30 %, teto 90 %); pesos ouro 65 (−3/ponto, piso 20), poção 20 (+1), ímã 10 (+0,5), item 5 (+1,5); o item rolado também recebe a Sorte. Números em `data/difficulty.json` → `breakables.loot`.
 - Fontes de Sorte: Carisma (atributo e passiva), afixo de item **"do Trevo"** (+1 a +2), bênção **Sorriso da Sorte** (+2).
 - Testes em `tests/test_battle.gd`. Mudança de comportamento: o destrutível deixou de soltar sempre algo (agora ~55 % no início).
+
+## Fase 2 — implementada 2026-10-01
+- `data/scenery.json` → `armadilhas` por fase; `Battle._place_traps()` (chamada por `place_scenery()`) cria uma zona `kind: "trap"` por armadilha, nunca a menos de 4 do herói.
+- Ciclo: `t` conta até 0; ao entrar em `warn` emite `trap_warn` (som de aviso) e a armadilha "arma"; em 0 dispara (`_fire_trap`): dano em **herói e inimigos** no raio (sem desvio, chefes inclusos), depois reinicia.
+- **Selo Sacrificial** (Dagruve, (42,38), raio 1,6, 7 s, aviso 1,2 s, 2d6 mágico) e **Carga Solta** (Docas, (28,22), raio 1,4, 9 s, aviso 1,0 s, 2d8 físico, deixa uma poça de slime por 8 s). Bônus de dano = (4 + tier)/2, como os ataques de inimigos.
+- Sempre visíveis: `ui/overlay.gd` `_draw_trap` (glifo roxo com raios em Dagruve, anel âmbar nas Docas); ao armar, a cor vira vermelha e o preenchimento cresce até o disparo.
+- Visual provisório (desenhado por código); arte própria do glifo e da carga em ART-026.
+- Testes em `tests/test_battle.gd`: colocação, aviso antes do dano, dano em herói e inimigo dentro do raio, nada fora, ciclo reinicia, poça das Docas.
+- Capturas conferidas na janela do jogo (Dagruve e Docas).

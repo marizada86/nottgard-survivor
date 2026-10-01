@@ -183,6 +183,8 @@ func _draw_zones() -> void:
 			_draw_sanctuary(z)
 		elif z.kind == "bubble":
 			_draw_bubble(z)
+		elif z.kind == "trap":
+			_draw_trap(z)
 		else:
 			_draw_telegraph(z)
 	_draw_particles()
@@ -269,6 +271,26 @@ func _draw_bubble(z: Dictionary) -> void:
 	draw_circle(center, 4.0 + charge * 7.0, Color(0.37, 0.84, 0.72, 0.16 + charge * 0.18))
 	draw_arc(center, 4.0 + charge * 7.0, -PI * 0.75, PI * 0.15, 16, Color(0.82, 1.0, 0.88, 0.58), 1.5)
 	_draw_ellipse_arc(z.pos, z.radius * (0.8 + pulse * 0.12), 0.0, TAU, Color(0.53, 0.95, 0.78, 0.12 + pulse * 0.15), 1.1)
+
+## MEC-034: armadilha sempre visível; ao armar, vira um telegraph vermelho que enche até o disparo.
+func _draw_trap(z: Dictionary) -> void:
+	var warn := maxf(0.01, float(z.warn))
+	var remaining := clampf(float(z.t), 0.0, warn)
+	var armed := bool(z.armed)
+	var t := 1.0 - remaining / warn if armed else 0.0
+	var theme := String(z.get("theme", ""))
+	var base := Color(0.62, 0.3, 0.9) if theme == "selo" else Color(0.85, 0.62, 0.26)
+	var col := base.lerp(Color(1.0, 0.25, 0.12), t)
+	var pulse := 0.5 + 0.5 * sin(_phase() * (2.0 + t * 10.0))
+	draw_colored_polygon(_ellipse(z.pos, z.radius), Color(col.r * 0.45, col.g * 0.45, col.b * 0.45, 0.2 + t * 0.22))
+	draw_polyline(_ellipse_closed(z.pos, z.radius), Color(col.r, col.g, col.b, 0.62 + pulse * 0.2 + t * 0.2), 2.0 + t * 1.8)
+	var spokes := 5 if theme == "selo" else 4
+	for i in spokes:
+		var a := _phase() * 0.15 * float(i % 2 * 2 - 1) + TAU * float(i) / float(spokes)
+		var p0 := Iso.to_screen(z.pos + Vector2(cos(a), sin(a)) * z.radius * 0.25)
+		var p1 := Iso.to_screen(z.pos + Vector2(cos(a), sin(a)) * z.radius * 0.85)
+		draw_line(p0, p1, Color(col.r, col.g, col.b, 0.3 + pulse * 0.25 + t * 0.35), 1.4)
+	draw_circle(Iso.to_screen(z.pos), 2.5 + pulse * 1.2 + t * 2.0, Color(col.r, col.g, col.b, 0.4 + t * 0.4))
 
 func _draw_telegraph(z: Dictionary) -> void:
 	var total := maxf(0.01, float(z.get("total", z.delay)))

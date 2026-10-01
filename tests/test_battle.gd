@@ -1096,4 +1096,57 @@ func run() -> Array:
 	if no_scenery.place_scenery() != 0:
 		out.append("fase sem dados de cenário não deve colocar nada")
 
+	# MEC-034: armadilhas de cenário ferem herói e inimigos
+	for trap_stage in ["dagruve", "docas"]:
+		var tb := _bat(81, "durvall", trap_stage)
+		_quiet(tb)
+		tb.map_size = Vector2(60, 60)
+		tb.hero.map_size = Vector2(60, 60)
+		tb.place_scenery()
+		var traps: Array = tb.zones.filter(func(z): return z.kind == "trap")
+		var expected: int = Data.table("scenery")[trap_stage].armadilhas.size()
+		if traps.size() != expected:
+			out.append("%s: %d de %d armadilhas colocadas" % [trap_stage, traps.size(), expected])
+			continue
+		var trap: Dictionary = traps[0]
+		if trap.pos.distance_to(tb.hero.pos) < 4.0:
+			out.append("%s: armadilha nasceu perto do herói" % trap_stage)
+		tb.enemies.clear()
+		var victim: Enemy = tb._spawn("zumbi", trap.pos + Vector2(0.3, 0.0))
+		victim.hp = 9999.0
+		var far_enemy: Enemy = tb._spawn("zumbi", trap.pos + Vector2(float(trap.radius) + 3.0, 0.0))
+		far_enemy.hp = 9999.0
+		tb.hero.pos = trap.pos + Vector2(0.2, 0.0)
+		tb.invuln = 0.0
+		var hp_start := tb.hero.hp
+		var victim_hp := victim.hp
+		var far_hp := far_enemy.hp
+		tb.events.clear()
+		trap.t = float(trap.warn) + 0.05
+		tb._update_zones(0.1)
+		var warned := tb.events.any(func(ev): return ev.type == "trap_warn")
+		if not warned or not bool(trap.armed):
+			out.append("%s: a armadilha deveria avisar antes de disparar" % trap_stage)
+		if tb.hero.hp < hp_start or victim.hp < victim_hp:
+			out.append("%s: a armadilha não pode ferir antes do aviso acabar" % trap_stage)
+		tb._update_zones(float(trap.warn) + 0.5)
+		if not (tb.hero.hp < hp_start):
+			out.append("%s: a armadilha deveria ferir o herói" % trap_stage)
+		if not (victim.hp < victim_hp):
+			out.append("%s: a armadilha deveria ferir o inimigo dentro do raio" % trap_stage)
+		if far_enemy.hp != far_hp:
+			out.append("%s: a armadilha não pode ferir quem está fora do raio" % trap_stage)
+		if bool(trap.armed) or float(trap.t) <= 0.0:
+			out.append("%s: a armadilha deveria reiniciar o ciclo" % trap_stage)
+	var puddle_check := _bat(82, "durvall", "docas")
+	_quiet(puddle_check)
+	puddle_check.map_size = Vector2(60, 60)
+	puddle_check.hero.map_size = Vector2(60, 60)
+	puddle_check.place_scenery()
+	var docas_trap: Dictionary = puddle_check.zones.filter(func(z): return z.kind == "trap")[0]
+	docas_trap.t = 0.01
+	puddle_check._update_zones(0.1)
+	if puddle_check.zones.filter(func(z): return z.kind == "puddle").is_empty():
+		out.append("Carga Solta deveria deixar uma poça")
+
 	return out
