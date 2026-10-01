@@ -47,11 +47,11 @@ Contagem por `data/weapons.json`. Quadros de 6 por animação, salvo indicação
 | Grupo | Formas do kit | Armas cobertas | Imagens (aprox.) |
 |---|---|---|---:|
 | Corpo a corpo, físico | corte médio (cone 45–60°: adaga, esmagador, espada sombria, lâmina da digestão, rajada infinita), arco largo (90–100°: atordoante, espada do receptáculo), estocada longa (22–25°: chicote) | 8 físicas | 18 |
-| Corpo a corpo, exceções | arco largo radiante (juízo, martelo), arco largo de fogo (machado), estocada mágica | 4 | 18 |
-| Projétil | orbe radiante e orbe arcano (voo 4 + impacto 4 cada); trovão para lâmina trovejante e tempestade | 8 bolts | 24 |
-| Explosão | anel radiante (6 armas); ampulheta mágica como exceção | 7 | 12 |
-| Habilidades dos heróis | uma por herói (corte, guarda, aura de cura, dash, overdrive, golpe no chão, estrelas, charme, tempo parado, guarda-nova) | 10 | 60 a 80 |
-| Total aproximado | | | 130 a 150 |
+| Corpo a corpo, exceções | estocada longa mágica, chicote, arco largo radiante (juízo, martelo), arco largo de fogo (machado) | 5 | 24 |
+| Projétil | orbe radiante, orbe arcano e onda cortante (voo 4 + impacto 4 cada) | 8 bolts | 24 |
+| Explosão | pulso radiante (6 armas); ampulheta do silêncio como exceção | 7 | 12 |
+| Habilidades dos heróis | uma animação de 6 quadros por herói | 10 | 60 |
+| Total (piloto de 12 + 120) | | | 132 |
 
 Zonas (cera, tentáculos) e golpes de inimigos e chefes ficam fora deste plano até o dono mandar.
 
