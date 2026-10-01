@@ -72,3 +72,27 @@ Lore nova, mudar o cânone, revelar segredos do mestre, alterar a ordem das fase
 3. **Guardião Alado (Docas):** adaptar para algo que o Vault registra (por exemplo, a Arch-hag ou o Kraken das Docas), ou manter e escrever uma linha sem pretensão de cânone?
 4. **Síntese Abissal e Durvall:** mostrar a revelação (fusão com a armadura de Astherion) ao chegar nos Pilares, evitar o tema no jogo, ou tratar como segredo até uma decisão sua?
 5. Quem escreve as falas (H3): eu proponho um rascunho por herói para você revisar, ou você escreve?
+
+## Decisões do dono (2026-10-01) e correção
+- Itens aprovados: **H1, H2 e H5** (dados e texto). **Síntese Abissal:** segredo por enquanto (a fusão de Durvall não aparece).
+- **Docas:** o dono escolheu "trocar pela Arch-hag". É uma mudança de **design**, não de texto: o Guardião Alado tem animação completa (320×480), fases que invocam o Guardião Cópia, um teste que trava o chefe das Docas e arte do ciclo Guardião Cópia em produção; a Arch-hag hoje é elite sem animação.
+  Por isso **não foi trocado**: a epígrafe das Docas já usa a Arch-hag e o Kraken (Sessão 13), e o chefe segue o Guardião até o dono confirmar o custo.
+- **Correção — o fio de Adam (apontado pelo dono):** faltou o Adam no mapa narrativo. Pelo Vault (`03_NPCs/Adam`, `conteudo-conhecido`): suposto messias dos cultistas, tratado em Dagruve como libertador (Sessão 03); emissário de Ghaunadaur e "Messias do Caos" (Sessão 12); lidera a invasão pelo Domwieck e fere a estrela Ailalore, o que derruba a Tarn;
+  conduz o ritual no Castelo da Fome e derrete em lodo quando Brook arranca o Colar de Ghaunadaur (Sessões 23 e 24); depois dele vem a Síntese Abissal.
+  Aplicado em `data/stage_story.json`: Dagruve cita Adam como o messias que os cultistas esperam; Pilares abre dizendo que Adam caiu antes. Outros NPCs do Vault a considerar: Mago Helion, Arlindo Orlando, Kein/Elias, Astherion, Aila.
+- **H6 (proposta nova) — Fio de Adam:** uma linha de rumor sobre ele em fases intermediárias (Docas, Shedaklah...), só com o que o grupo soube em cada sessão. Aguarda o dono.
+
+## Cânone do mestre informado pelo dono (2026-10-01) — NÃO entra no texto do jogo
+Dito pelo dono no chat, para facilitar a escrita:
+- **O amuleto de Adam** (no Vault, o **Colar de Ghaunadaur**): **quem o possui se torna o Adam.** Adam é, portanto, um papel que o colar impõe a quem o carrega.
+- Esse amuleto é **uma das duas metades** da formação da **Síntese Abissal**: a outra é a **fusão de Astherion com Durvall**. As duas juntas dão a Síntese.
+
+Como isto conversa com o Vault (leitura, sem alterar):
+- O registro já diz que **quem usa o colar é dominado pela consciência de Ghaunadaur** (Sylvaris em 1477; depois Adam) e que Marciela o reconhece como o mesmo trazido pela expedição dos pais de Erik (Sessões 23 e 24).
+- Em seguida Adam derrete quando Brook arranca o colar e a Síntese passa a ser o chefe final.
+- O Vault **não** diz que o colar "faz de quem o porta o Adam" nem que ele é metade da Síntese; isto é informação nova do dono. Se o dono quiser que vire cânone registrado, a decisão e o registro são dele (o Vault é somente leitura para este projeto).
+
+Regras para o jogo:
+- Esta ligação (colar → Adam → Síntese, com Durvall) é **segredo**, na mesma decisão de "Síntese Abissal: segredo por enquanto". Nenhum texto do jogo (epígrafe, contexto de chefe, falas, diário) pode afirmá-la.
+- O que está no jogo hoje respeita isso: Dagruve fala de Adam como "o messias que os cultistas esperam", e os Pilares dizem "Adam caiu no Castelo da Fome. Depois dele veio uma monstruosidade abissal".
+- Se o dono liberar a revelação, o lugar natural é o contexto do chefe dos Pilares e uma crônica do Diário (H4), com variação para quem joga de Durvall.

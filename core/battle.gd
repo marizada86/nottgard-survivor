@@ -1321,6 +1321,7 @@ func _place_fixed_interactions() -> void:
 			continue
 		_add_interaction(String(entry.kind), at)
 		interactions[-1].fixed = true
+		interactions[-1].name = String(entry.get("name", ""))
 
 ## Posição pedida ou a mais próxima livre (anéis de até 3 tiles); (-1, -1) se não houver.
 func _free_scenery_spot(wanted: Vector2, radius: float) -> Vector2:
@@ -1545,7 +1546,8 @@ func _update_interactions(dt: float) -> void:
 					heal_pct *= 0.5
 				_heal_hero(hero.max_hp * heal_pct)
 				events.append({"type": "heal", "pos": hero.pos, "amount": int(hero.max_hp * heal_pct)})
-				events.append({"type": "toast", "text": "Fonte: +%d%% PV" % int(round(heal_pct * 100.0))})
+				var spring_text := String(Data.table("stage_story").get(stage_id, {}).get("fonte_uso", "")) if String(it.get("name", "")) != "" else ""
+				events.append({"type": "toast", "text": (spring_text if spring_text != "" else "Fonte: +%d%% PV") % int(round(heal_pct * 100.0))})
 	interactions = interactions.filter(func(i): return not i.used)
 
 ## Interação manual (E): altar, ritual, portal, loja, ferreiro, curandeiro.
@@ -2350,7 +2352,7 @@ func _spawn_random_interaction() -> void:
 		kind = "chest"
 	var ang := rng.randf() * TAU
 	_add_interaction(kind, hero.pos + Vector2(cos(ang), sin(ang)) * rng.randf_range(6.0, 12.0))
-	events.append({"type": "toast", "text": "Algo apareceu no mapa..."})
+	events.append({"type": "toast", "text": String(Data.table("stage_story").get(stage_id, {}).get("aparece", "Algo apareceu no mapa..."))})
 
 func _stage_has_rule(kind: String) -> bool:
 	var configured := String(stage_rule.get("kind", ""))

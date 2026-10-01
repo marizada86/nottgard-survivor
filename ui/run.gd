@@ -72,7 +72,7 @@ func _ready() -> void:
 		battle.qa_prepare(Game.qa_launch)
 	if battle.state == "revive_offer":
 		hud.show_revive_offer(battle)
-	hud.toast("%s — %s" % [battle.stage.name, battle.stage.sub], Color(0.9, 0.85, 0.6))
+	hud.toast("%s — %s" % [battle.stage.name, Data.table("stage_story").get(battle.stage_id, {}).get("epigrafe", battle.stage.sub)], Color(0.9, 0.85, 0.6))
 	await _present_hqs(HQCatalog.newly_triggered_ids(Game.profile.data, "first_run"))
 	await _record_stage_reached(battle.stage_id)
 
@@ -192,7 +192,9 @@ func _show_boss_intro(ev: Dictionary) -> void:
 	var image_path := String(presentation.get("image", ""))
 	_boss_intro_art.texture = load(image_path) if image_path != "" and ResourceLoader.exists(image_path) else null
 	_boss_intro_title.text = String(presentation.get("title", ev.enemy.name))
-	_boss_intro_subtitle.text = String(presentation.get("subtitle", ""))
+	var boss_context := String(Data.table("stage_story").get(battle.stage_id, {}).get("chefe", ""))
+	_boss_intro_subtitle.text = String(presentation.get("subtitle", "")) + ("  ·  " + boss_context if boss_context != "" else "")
+	_boss_intro_subtitle.add_theme_font_size_override("font_size", 18 if _boss_intro_subtitle.text.length() <= 90 else 14)
 	_boss_intro_panel.modulate.a = 0.0
 	_boss_intro_panel.visible = true
 	var duration := clampf(float(presentation.get("overlay_seconds", 1.8)), 1.5, 2.0)

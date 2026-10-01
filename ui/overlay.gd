@@ -394,13 +394,13 @@ func _draw_over() -> void:
 		match String(it.kind):
 			"chest": col = Color(0.9, 0.7, 0.2); label = "baú"; asset = "chest_closed"
 			"boss_chest": col = Color(1.0, 0.85, 0.25); label = "BAÚ DO CHEFE"; asset = "bau_chefe_fechado"
-			"fountain": col = Color(0.3, 0.7, 1.0); label = "fonte"; asset = "fountain_active"
+			"fountain": col = Color(0.3, 0.7, 1.0); label = String(it.name).to_lower() if String(it.get("name", "")) != "" else "fonte"; asset = "fountain_active"
 			"altar": col = Color(0.8, 0.4, 1.0); label = "altar [E/oeste]"; asset = "altar_active"
 			"ritual": col = Color(0.9, 0.2, 0.2); label = "ritual [E/oeste]"; asset = "ritual"
 			"portal": col = Color(0.3, 1.0, 0.6); label = "portal [E/oeste]"; asset = "portal"
 			# Eventos com PNG oficial em assets/interactions/<tipo>.png; sem PNG (doacao, aposta, ampulheta) o quadrado colorido com rótulo é o provisório
 			"loja": col = Color(1.0, 0.85, 0.3); label = "loja [E/oeste]"; asset = "loja"
-			"ferreiro": col = Color(1.0, 0.5, 0.2); label = "ferreiro [E/oeste]"; asset = "ferreiro"
+			"ferreiro": col = Color(1.0, 0.5, 0.2); label = ("%s [E/oeste]" % String(it.name).to_lower()) if String(it.get("name", "")) != "" else "ferreiro [E/oeste]"; asset = "ferreiro"
 			"curandeiro": col = Color(0.4, 1.0, 0.5); label = "curandeiro [E/oeste]"; asset = "curandeiro"
 			"doacao": col = Color(0.75, 0.45, 1.0); label = "altar da doação [E/oeste]"; asset = "doacao"
 			"aposta": col = Color(0.95, 0.8, 0.3); label = "mesa de aposta [E/oeste]"; asset = "aposta"

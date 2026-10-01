@@ -1,0 +1,61 @@
+{
+  "_fonte": "Paráfrases curtas do que o Vault de Nottgard registra (SPEC-117). Sem lore nova. Dagruve e Docas têm a etiqueta conteudo-nao-revelado: só entra o que está em 'Base canônica' e nas consolidações aprovadas.",
+  "dagruve": {
+    "epigrafe": "O distrito que Nottgard esqueceu. A névoa entra por uma fratura no cemitério, e os cultistas esperam um messias: Adam.",
+    "fonte_vault": "04_Locais/Dagruve (Base canônica; Sessões 07 e 08); 03_NPCs/Adam (Sessão 03: tratado em Dagruve como libertador ou messias)",
+    "chefe": "Sacerdote de A Mente Derretida, culto de Ghaunadaur.",
+    "fonte_chefe": "05_Organizações/A Mente Derretida (S3-47)",
+    "aparece": "A névoa revela algo no distrito...",
+    "fonte_uso": "O poço aceita a oferenda: +%d%% PV"
+  },
+  "docas": {
+    "epigrafe": "No porão de um galpão, um ritual espera. Num navio abandonado, outro traz uma Arch-hag e um Kraken.",
+    "fonte_vault": "04_Locais/Docas (Sessões 02 e 13)",
+    "chefe": "O ritual do porão desperta.",
+    "fonte_chefe": "Adaptação do Nottcard: o Guardião Alado não tem página no Vault (decisão do dono pendente, SPEC-117)",
+    "aparece": "Algo se move entre os galpões...",
+    "fonte_uso": "A oficina do cais devolve o ânimo: +%d%% PV"
+  },
+  "shedaklah": {
+    "epigrafe": "Fungo e limo dividem o andar 222. O equilíbrio já não segura.",
+    "fonte_vault": "04_Locais/Camadas do Plano Abissal (Arco 01)",
+    "chefe": "Zuggtmoy, senhora do fungo, divide o andar com Juiblex.",
+    "fonte_chefe": "04_Locais/Camadas do Plano Abissal (Arco 01)"
+  },
+  "molor": {
+    "epigrafe": "Bolhas de limo no andar 528. O Estige corre de novo depois do núcleo verde.",
+    "fonte_vault": "04_Locais/Camadas do Plano Abissal (Arco 01)",
+    "chefe": "Blogbog, chefe fúngico de Molor; dele sai o núcleo verde de Juiblex.",
+    "fonte_chefe": "04_Locais/Camadas do Plano Abissal (Arco 01)"
+  },
+  "durao": {
+    "epigrafe": "Uma jaula gigante e um rio de almas. A guerra acabou, os carcereiros ficaram.",
+    "fonte_vault": "04_Locais/Camadas do Plano Abissal (Arco 01)",
+    "chefe": "Um dos três Molydeus que guardam a jaula de Durao.",
+    "fonte_chefe": "04_Locais/Camadas do Plano Abissal (Arco 01)"
+  },
+  "feng_tu": {
+    "epigrafe": "Lu Yueh tomou o andar 300. O templo de Tou Um ainda espera a peregrinação da estrela.",
+    "fonte_vault": "04_Locais/Camadas do Plano Abissal (Arco 01)",
+    "chefe": "Lu Yueh, que tomou Feng-tu depois da passagem de Juiblex.",
+    "fonte_chefe": "04_Locais/Camadas do Plano Abissal (Arco 01)"
+  },
+  "shendilavri": {
+    "epigrafe": "Uma única cidade, murada, quase toda feita de ilusão.",
+    "fonte_vault": "04_Locais/Camadas do Plano Abissal (Arco 01)",
+    "chefe": "Malcanthet, Rainha das Súcubos, senhora de Rivenheart.",
+    "fonte_chefe": "04_Locais/Camadas do Plano Abissal (Arco 01)"
+  },
+  "goranthis": {
+    "epigrafe": "O verdadeiro Paraíso é uma ilusão, e o castelo inteiro a sustenta.",
+    "fonte_vault": "04_Locais/Camadas do Plano Abissal (Arco 01)",
+    "chefe": "Socothbenoth: o castelo é todo ilusão, sustentada por Juiblex.",
+    "fonte_chefe": "04_Locais/Camadas do Plano Abissal (Arco 01)"
+  },
+  "pilares": {
+    "epigrafe": "Pilares no horizonte: a parede do mundo abissal. Querem puxar o céu para cá.",
+    "fonte_vault": "12_Lore/Pilares Ativos e Plano Abissal (Sessão 24)",
+    "chefe": "Adam caiu no Castelo da Fome. Depois dele veio uma monstruosidade abissal, e só então os pilares surgiram.",
+    "fonte_chefe": "03_NPCs/Adam (Sessões 23 e 24); 07_Criaturas/A Síntese Abissal; revelação sobre Durvall mantida em segredo (decisão do dono)"
+  }
+}

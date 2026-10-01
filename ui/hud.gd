@@ -365,11 +365,15 @@ func toast(text: String, color: Color = Color(1, 1, 1)) -> void:
 	l.text = text
 	l.modulate = color
 	l.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	if text.length() > 60:
+		# epígrafes de fase (SPEC-117) são longas: quebram em até 640 px e ficam mais tempo na tela
+		l.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		l.custom_minimum_size.x = 640.0
 	l.add_theme_color_override("font_outline_color", Color(0, 0, 0))
 	l.add_theme_constant_override("outline_size", 5)
 	toast_box.add_child(l)
 	var tw := create_tween()
-	tw.tween_interval(3.0)
+	tw.tween_interval(3.0 + maxf(0.0, float(text.length() - 60)) * 0.04)
 	tw.tween_property(l, "modulate:a", 0.0, 0.6)
 	tw.tween_callback(l.queue_free)
 
