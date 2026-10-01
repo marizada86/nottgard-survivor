@@ -10,7 +10,16 @@
   "breakables": {
     "min_seconds": 22,
     "spread_seconds": 14,
-    "charisma_step": 0.06
+    "charisma_step": 0.06,
+    "loot": {
+      "base_chance": 0.55,
+      "chance_per_luck": 0.05,
+      "min_chance": 0.3,
+      "max_chance": 0.9,
+      "weights": {"gold": 65, "potion": 20, "magnet": 10, "item": 5},
+      "per_luck": {"gold": -3, "potion": 1, "magnet": 0.5, "item": 1.5},
+      "min_weight": {"gold": 20, "potion": 5, "magnet": 3, "item": 2}
+    }
   },
   "styx_lucidity_seconds": 300,
   "risk_events": {

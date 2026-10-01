@@ -1202,17 +1202,7 @@ func _kill(e: Enemy) -> void:
 		for i in 2:
 			_spawn(e.split_id, e.pos + Vector2(rng.randf_range(-0.6, 0.6), rng.randf_range(-0.6, 0.6)))
 	if e.has_flag("quebravel"):
-		## Drop garantido, mas enviesado: ouro é o mais comum; item de verdade
-		## ("algo bom") é raro.
-		var roll := rng.randf()
-		if roll < 0.65:
-			_drop("gold", e.pos, 6.0 * float(stage.coin_mult))
-		elif roll < 0.85:
-			_drop("potion", e.pos, 0.25)
-		elif roll < 0.95:
-			_drop("magnet", e.pos, 0.0)
-		else:
-			give_item(Items.roll(rng, tier(), hero.m("carisma") + hero.attr_mod("carisma")))
+		_breakable_loot(e.pos)
 	if e.affix != "" or e.drops_chest:
 		stats.elites += 1
 		if e.drops_chest or rng.randf() < 0.5:
@@ -1222,6 +1212,87 @@ func _kill(e: Enemy) -> void:
 			_drop("potion", e.pos, 0.25)
 	if e.is_boss():
 		_on_boss_dead(e)
+
+## MEC-033: Sorte = modificador de Carisma + bônus `sorte` de itens, bênçãos e passivas.
+func luck() -> float:
+	return float(hero.attr_mod("carisma")) + hero.m("sorte")
+
+## Chance de um destrutível soltar algo (cresce com a Sorte, entre min e max).
+func breakable_drop_chance() -> float:
+	var cfg: Dictionary = Data.table("difficulty").get("breakables", {}).get("loot", {})
+	return clampf(float(cfg.get("base_chance", 1.0)) + float(cfg.get("chance_per_luck", 0.0)) * luck(),
+		float(cfg.get("min_chance", 0.0)), float(cfg.get("max_chance", 1.0)))
+
+## Pesos da tabela de loot já deslocados pela Sorte: ouro cai, o resto sobe.
+func breakable_loot_weights() -> Dictionary:
+	var cfg: Dictionary = Data.table("difficulty").get("breakables", {}).get("loot", {})
+	var base: Dictionary = cfg.get("weights", {"gold": 65, "potion": 20, "magnet": 10, "item": 5})
+	var per_luck: Dictionary = cfg.get("per_luck", {})
+	var floors: Dictionary = cfg.get("min_weight", {})
+	var out := {}
+	for k in base:
+		out[k] = maxf(float(floors.get(k, 0.0)), float(base[k]) + float(per_luck.get(k, 0.0)) * luck())
+	return out
+
+## Destrutível: solta algo só às vezes; a Sorte melhora a chance e a qualidade.
+func _breakable_loot(at: Vector2) -> void:
+	if rng.randf() >= breakable_drop_chance():
+		return
+	var weights := breakable_loot_weights()
+	var total := 0.0
+	for k in weights:
+		total += float(weights[k])
+	var roll := rng.randf() * total
+	var kind := "gold"
+	for k in weights:
+		roll -= float(weights[k])
+		if roll <= 0.0:
+			kind = k
+			break
+	match kind:
+		"gold":
+			_drop("gold", at, 6.0 * float(stage.coin_mult))
+		"potion":
+			_drop("potion", at, 0.25)
+		"magnet":
+			_drop("magnet", at, 0.0)
+		_:
+			give_item(Items.roll(rng, tier(), hero.m("carisma") + hero.attr_mod("carisma") + hero.m("sorte")))
+
+## MEC-035: destrutíveis de posição fixa da fase (data/scenery.json). Não usa a RNG da batalha.
+## Chamado depois que os bloqueios do cenário são conhecidos (ui/run.gd); sem ele, bot e testes não mudam.
+func place_scenery() -> int:
+	var placed := 0
+	var spec: Dictionary = Data.table("scenery").get(stage_id, {})
+	for entry in spec.get("destrutiveis", []):
+		var radius := float(Data.table("enemies").get(String(entry.id), {}).get("radius", 0.35))
+		var wanted := Vector2(float(entry.pos[0]), float(entry.pos[1]))
+		var at := _free_scenery_spot(wanted, radius)
+		if at.x < 0.0:
+			continue
+		_spawn(String(entry.id), at)
+		placed += 1
+	return placed
+
+## Posição pedida ou a mais próxima livre (anéis de até 3 tiles); (-1, -1) se não houver.
+func _free_scenery_spot(wanted: Vector2, radius: float) -> Vector2:
+	for ring in 4:
+		var steps := 1 if ring == 0 else 6 * ring
+		for i in steps:
+			var ang := TAU * float(i) / float(steps)
+			var cand := wanted + Vector2(cos(ang), sin(ang)) * float(ring)
+			if cand.distance_to(hero.pos) < 4.0:
+				continue
+			if hero.can_stand(cand, radius + 0.3):
+				return cand
+	return Vector2(-1.0, -1.0)
+
+func _combat_count() -> int:
+	var n := 0
+	for e in enemies:
+		if not e.has_flag("quebravel"):
+			n += 1
+	return n
 
 func _on_boss_dead(e: Enemy) -> void:
 	boss_dead = true
@@ -2135,7 +2206,7 @@ func _director(dt: float) -> void:
 	var opening := opening_factor()
 	var o: Dictionary = Data.table("difficulty").get("opening", {})
 	var cap := int(stage.cap) + int(minute()) * 3 + int(round(float(o.get("cap_bonus", 0)) * opening))
-	if enemies.size() < cap:
+	if _combat_count() < cap:
 		for wi in stage.waves.size():
 			var w: Dictionary = stage.waves[wi]
 			if time < float(w.t0) or time > float(w.t1):
@@ -2148,7 +2219,7 @@ func _director(dt: float) -> void:
 				var per_wave := int(ceil(float(w.n) * lerpf(1.0, float(o.get("n_mult", 1.0)), opening)))
 				var room := max_alive - alive(String(w.id))
 				for i in mini(per_wave, room):
-					if enemies.size() < cap:
+					if _combat_count() < cap:
 						_spawn(String(w.id), _ring_pos())
 	for i in stage.elites.size():
 		var el: Dictionary = stage.elites[i]
@@ -2174,7 +2245,7 @@ func _director(dt: float) -> void:
 		events.append({"type": "toast", "text": "%s surge!" % boss.name})
 	if boss_spawned and not boss_dead:
 		_trickle += dt
-		if _trickle >= 3.5 and enemies.size() < cap:
+		if _trickle >= 3.5 and _combat_count() < cap:
 			_trickle = 0.0
 			var w0: Dictionary = stage.waves[0]
 			_spawn(String(w0.id), _ring_pos())

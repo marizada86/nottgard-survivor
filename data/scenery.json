@@ -1,0 +1,40 @@
+{
+  "dagruve": {
+    "destrutiveis": [
+      {"zone": "praca_do_selo", "id": "candelabro_quebravel", "pos": [40, 36]},
+      {"zone": "praca_do_selo", "id": "candelabro_quebravel", "pos": [44, 36]},
+      {"zone": "praca_do_selo", "id": "candelabro_quebravel", "pos": [40, 40]},
+      {"zone": "praca_do_selo", "id": "candelabro_quebravel", "pos": [44, 40]},
+      {"zone": "beco_oeste", "id": "caixote_quebravel", "pos": [8, 34]},
+      {"zone": "beco_oeste", "id": "caixote_quebravel", "pos": [10, 36]},
+      {"zone": "beco_oeste", "id": "arbusto_quebravel", "pos": [7, 38]},
+      {"zone": "rua_norte", "id": "caixote_quebravel", "pos": [30, 10]},
+      {"zone": "rua_norte", "id": "caixote_quebravel", "pos": [34, 9]},
+      {"zone": "rua_norte", "id": "arbusto_quebravel", "pos": [38, 12]},
+      {"zone": "sudoeste", "id": "caixote_quebravel", "pos": [18, 46]},
+      {"zone": "sudoeste", "id": "caixote_quebravel", "pos": [21, 48]},
+      {"zone": "sudoeste", "id": "arbusto_quebravel", "pos": [16, 49]},
+      {"zone": "leste", "id": "candelabro_quebravel", "pos": [52, 22]}
+    ]
+  },
+  "docas": {
+    "destrutiveis": [
+      {"zone": "cais_sul", "id": "candelabro_quebravel", "pos": [12, 40]},
+      {"zone": "cais_sul", "id": "candelabro_quebravel", "pos": [18, 42]},
+      {"zone": "cais_sul", "id": "candelabro_quebravel", "pos": [24, 44]},
+      {"zone": "cais_sul", "id": "candelabro_quebravel", "pos": [30, 46]},
+      {"zone": "carga_oeste", "id": "caixote_quebravel", "pos": [9, 24]},
+      {"zone": "carga_oeste", "id": "caixote_quebravel", "pos": [13, 24]},
+      {"zone": "carga_oeste", "id": "caixote_quebravel", "pos": [8, 20]},
+      {"zone": "armazem_norte", "id": "caixote_quebravel", "pos": [22, 8]},
+      {"zone": "armazem_norte", "id": "caixote_quebravel", "pos": [27, 8]},
+      {"zone": "armazem_norte", "id": "caixote_quebravel", "pos": [26, 12]},
+      {"zone": "redes", "id": "caixote_quebravel", "pos": [18, 13]},
+      {"zone": "pier_leste", "id": "caixote_quebravel", "pos": [42, 16]},
+      {"zone": "pier_leste", "id": "caixote_quebravel", "pos": [46, 18]},
+      {"zone": "pier_leste", "id": "caixote_quebravel", "pos": [44, 22]},
+      {"zone": "margem_leste", "id": "arbusto_quebravel", "pos": [40, 34]},
+      {"zone": "margem_leste", "id": "arbusto_quebravel", "pos": [47, 30]}
+    ]
+  }
+}

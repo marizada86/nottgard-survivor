@@ -473,9 +473,9 @@ func run() -> Array:
 		out.append("quebrável não deveria se mover")
 	var pickups_before := bk.pickups.size()
 	bk._kill(crate)
-	if bk.pickups.size() != pickups_before + 1:
-		out.append("quebrável deveria largar exatamente um item ao morrer")
-	elif not (String(bk.pickups[-1].kind) in ["potion", "gold", "magnet"]):
+	if bk.pickups.size() > pickups_before + 1:
+		out.append("quebrável deveria largar no máximo um item ao morrer (MEC-033: às vezes nada)")
+	elif bk.pickups.size() > pickups_before and not (String(bk.pickups[-1].kind) in ["potion", "gold", "magnet"]):
 		out.append("drop de quebrável deveria ser poção, moeda ou ímã")
 
 	# 9d) rebalanceamento de poção: inimigo comum nunca dropa; elite pode
@@ -1037,5 +1037,63 @@ func run() -> Array:
 		out.append("cópia destruída deveria explodir")
 	if swarm.hp >= swarm.max_hp and not swarm.dead:
 		out.append("explosão da cópia destruída deveria ferir o inimigo ao lado")
+
+	# MEC-033: Sorte melhora chance e qualidade do loot dos destrutíveis
+	var lk := _bat(71)
+	lk.hero.base_attrs["carisma"] = 10
+	var chance_base := lk.breakable_drop_chance()
+	var weights_base := lk.breakable_loot_weights()
+	lk.hero.mods["sorte"] = 4.0
+	var chance_lucky := lk.breakable_drop_chance()
+	var weights_lucky := lk.breakable_loot_weights()
+	if not (chance_lucky > chance_base):
+		out.append("Sorte deveria aumentar a chance de drop (%.2f -> %.2f)" % [chance_base, chance_lucky])
+	if not (float(weights_lucky.gold) < float(weights_base.gold) and float(weights_lucky.item) > float(weights_base.item)):
+		out.append("Sorte deveria trocar ouro por itens na tabela de loot")
+	lk.hero.mods["sorte"] = 99.0
+	if lk.breakable_drop_chance() > float(Data.table("difficulty").breakables.loot.max_chance) + 0.0001:
+		out.append("a chance de drop deve respeitar o teto")
+	lk.hero.mods["sorte"] = -99.0
+	if lk.breakable_drop_chance() < float(Data.table("difficulty").breakables.loot.min_chance) - 0.0001:
+		out.append("a chance de drop deve respeitar o piso")
+	var drops_none := _bat(72)
+	_quiet(drops_none)
+	drops_none.hero.mods["sorte"] = -99.0
+	var loot_before := drops_none.pickups.size()
+	var rolled := 0
+	for i in 200:
+		drops_none._breakable_loot(Vector2(10, 10))
+		rolled += 1
+	if drops_none.pickups.size() - loot_before >= rolled:
+		out.append("com Sorte mínima o destrutível não deveria soltar algo sempre")
+	if drops_none.pickups.size() - loot_before <= 0:
+		out.append("destrutível deveria soltar algo às vezes")
+
+	# MEC-035: destrutíveis fixos por dados; sem consumir a RNG da batalha
+	for scenery_stage in ["dagruve", "docas"]:
+		var sc := _bat(73, "durvall", scenery_stage)
+		sc.map_size = Vector2(60, 60)
+		sc.hero.map_size = Vector2(60, 60)
+		_quiet(sc)
+		var before_state := sc.rng.state
+		var placed := sc.place_scenery()
+		var wanted: int = Data.table("scenery")[scenery_stage].destrutiveis.size()
+		if placed != wanted:
+			out.append("%s: %d de %d destrutíveis fixos colocados" % [scenery_stage, placed, wanted])
+		if sc.rng.state != before_state:
+			out.append("%s: place_scenery não pode consumir a RNG da batalha" % scenery_stage)
+		var near := 0
+		for e in sc.enemies:
+			if not e.has_flag("quebravel"):
+				out.append("%s: destrutível fixo inesperado %s" % [scenery_stage, e.id])
+			if e.pos.distance_to(sc.hero.pos) < 4.0:
+				near += 1
+		if near > 0:
+			out.append("%s: destrutível fixo nasceu colado no herói" % scenery_stage)
+		if sc._combat_count() != 0:
+			out.append("destrutíveis não devem contar no limite de inimigos")
+	var no_scenery := _bat(74, "durvall", "shedaklah")
+	if no_scenery.place_scenery() != 0:
+		out.append("fase sem dados de cenário não deve colocar nada")
 
 	return out

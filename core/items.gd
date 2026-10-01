@@ -115,12 +115,12 @@ static func rarity_color(r: String) -> Color:
 
 const MOD_LABELS := {"dmg_pct": "dano", "speed_pct": "velocidade", "cd_pct": "recarga", "area_pct": "área", "gold_pct": "moedas", "xp_pct": "XP",
 	"hp": "PV", "regen": "PV/s", "ca": "CA", "cam": "CAM", "hit": "precisão", "pickup": "coleta", "dr": "redução de dano", "forca": "FOR", "inteligencia": "INT",
-	"constituicao": "CON", "carisma": "CAR", "crit_overflow_bonus": "crítico", "crit_overflow_step": "crítico/2 níveis", "dodge": "esquiva", "lifesteal": "roubo de vida", "dmg_flat": "dano por acerto", "puddle_immune": "imune a poças"}
+	"constituicao": "CON", "carisma": "CAR", "crit_overflow_bonus": "crítico", "crit_overflow_step": "crítico/2 níveis", "dodge": "esquiva", "lifesteal": "roubo de vida", "dmg_flat": "dano por acerto", "puddle_immune": "imune a poças", "sorte": "sorte"}
 
 ## MEC-027: peso de relevância de cada atributo; escolhe os destaques do cartão (só apresentação, não altera o cálculo do herói).
 const STAT_WEIGHT := {"dmg_pct": 10.0, "cd_pct": 9.0, "speed_pct": 8.0, "hp": 8.0, "ca": 7.0, "cam": 7.0, "dr": 7.0,
 	"regen": 6.0, "forca": 6.0, "inteligencia": 6.0, "constituicao": 6.0, "dodge": 6.0, "carisma": 5.0, "area_pct": 5.0,
-	"crit_overflow_bonus": 5.0, "crit_overflow_step": 5.0, "hit": 4.0, "xp_pct": 4.0, "gold_pct": 3.0, "pickup": 3.0}
+	"crit_overflow_bonus": 5.0, "crit_overflow_step": 5.0, "hit": 4.0, "xp_pct": 4.0, "gold_pct": 3.0, "pickup": 3.0, "sorte": 4.0}
 
 static func mod_label(k: String) -> String:
 	return String(MOD_LABELS.get(k, k))

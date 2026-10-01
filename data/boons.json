@@ -5,7 +5,7 @@
     {"id": "mask_sombras", "god": "Mask", "name": "Manto de Sombras", "desc": "+10% esquiva e +12% velocidade, mas -2 CA.", "mods": {"dodge": 0.10, "speed_pct": 0.12, "ca": -2}},
     {"id": "mask_ladrao", "god": "Mask", "name": "Mão de Ladrão", "desc": "+40% moedas e +1 de alcance de coleta, mas -1 CAM.", "mods": {"gold_pct": 0.40, "pickup": 1.0, "cam": -1}},
     {"id": "lliira_alegria", "god": "Lliira", "name": "Dança da Alegria", "desc": "-12% de recarga, mas -10 PV máximos.", "mods": {"cd_pct": 0.12, "hp": -10}},
-    {"id": "lliira_sorte", "god": "Lliira", "name": "Sorriso da Sorte", "desc": "+6% de crítico por excedente, mas -1 de dano por acerto.", "mods": {"crit_overflow_bonus": 0.06, "dmg_flat": -1}},
+    {"id": "lliira_sorte", "god": "Lliira", "name": "Sorriso da Sorte", "desc": "+6% de crítico por excedente e +2 de Sorte (destrutíveis soltam mais e melhor), mas -1 de dano por acerto.", "mods": {"crit_overflow_bonus": 0.06, "dmg_flat": -1, "sorte": 2}},
     {"id": "shar_noite", "god": "Shar", "name": "Noite Eterna", "desc": "+18% de dano, mas -15% de área.", "mods": {"dmg_pct": 0.18, "area_pct": -0.15}},
     {"id": "shar_perda", "god": "Shar", "name": "Dádiva da Perda", "desc": "+2 CA e +2 CAM, mas -10% XP.", "mods": {"ca": 2, "cam": 2, "xp_pct": -0.10}},
     {"id": "selune_luar", "god": "Selûne", "name": "Luar Protetor", "desc": "+8% esquiva e +10% XP, mas -8% de dano.", "mods": {"dodge": 0.08, "xp_pct": 0.10, "dmg_pct": -0.08}},

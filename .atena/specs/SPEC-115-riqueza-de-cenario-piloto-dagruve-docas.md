@@ -1,7 +1,7 @@
 ---
 id: "SPEC-115"
 title: "Riqueza de cenário: piloto em Dagruve e Docas"
-status: "rascunho para aprovação do dono (2026-10-01)"
+status: "aprovada pelo dono 2026-10-01; fase 1 implementada (dados, destrutíveis fixos, Sorte)"
 created: "2026-10-01"
 relations: ["[[EVID-139-playtest-higor-qa-14b15e4-2026-10-01]]", "[[PLAN-050-pos-playtest-higor-2026-10-01]]", "[[SPEC-114-passo-pelas-sombras-copia-isca]]"]
 ---
@@ -81,3 +81,15 @@ Mapa novo, novas fases, regras de fase novas, mudar dificuldade das ondas (isso 
 ## Perguntas ainda abertas
 - Número de destrutíveis fixos por mapa (proposta: 14 em Dagruve e 16 em Docas) e se recarregam depois de quebrados (proposta: não; os aleatórios continuam).
 - Armadilhas visíveis desde o início ou reveladas ao chegar perto (proposta: sempre visíveis, para o jogador poder usá-las).
+
+## Decisões do dono (2026-10-01)
+- Quantidade: 14 destrutíveis fixos em Dagruve e 16 nas Docas; **não recarregam** depois de quebrados (os aleatórios continuam).
+- Armadilhas **sempre visíveis**, para o jogador poder usá-las.
+
+## Fase 1 — implementada 2026-10-01
+- `data/scenery.json`: posições fixas dos destrutíveis por zona (usa só tipos existentes: candelabro, caixote, arbusto; carroça e barril entram com ART-026).
+- `Battle.place_scenery()` (chamada em `ui/run.gd` depois dos bloqueios do cenário): posição pedida ou a livre mais próxima (até 3 tiles), nunca a menos de 4 do herói; não consome a RNG da batalha.
+- Destrutíveis (fixos ou aleatórios) **não contam no limite de inimigos** do diretor (`_combat_count`).
+- **Sorte**: `Battle.luck()` = mod. de Carisma + `sorte`. Chance de drop 55 % +5 %/ponto (piso 30 %, teto 90 %); pesos ouro 65 (−3/ponto, piso 20), poção 20 (+1), ímã 10 (+0,5), item 5 (+1,5); o item rolado também recebe a Sorte. Números em `data/difficulty.json` → `breakables.loot`.
+- Fontes de Sorte: Carisma (atributo e passiva), afixo de item **"do Trevo"** (+1 a +2), bênção **Sorriso da Sorte** (+2).
+- Testes em `tests/test_battle.gd`. Mudança de comportamento: o destrutível deixou de soltar sempre algo (agora ~55 % no início).

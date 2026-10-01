@@ -118,6 +118,7 @@ func _load_stage() -> void:
 			var g := Iso.to_ground(b.position)
 			battle.hero.blockers.append(Vector3(g.x, g.y, b.block_radius))
 	StageStructures.attach_for_stage(sorted, battle.stage_id, battle.hero.pos, msize, battle.hero.blockers)
+	battle.place_scenery()  # MEC-035: destrutíveis fixos, depois dos bloqueios do cenário
 	var bg: Array = battle.stage.bg
 	RenderingServer.set_default_clear_color(Color(float(bg[0]) / 255.0, float(bg[1]) / 255.0, float(bg[2]) / 255.0))
 	for sp in stage_root.get_node("SpawnPoints").get_children():
