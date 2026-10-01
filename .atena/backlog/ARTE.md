@@ -7,7 +7,7 @@
   bestiário ([RESEARCH-001](../vault/research/RESEARCH-001-abismo-bestiario-visual-2026-09-21.md)),
   sem inventar lore. Sem história: a lore é só sabor.
 - Itens abertos acumulam até fechar um **lote**. O lote sai como um único
-  `ART-PROMPTS-NNN` (próximo livre: **038** (já há rascunhos 038 em generated/)) para o gerador de imagem.
+  `ART-PROMPTS-NNN` (próximo livre: **042**) para o gerador de imagem.
 - Candidatos ficam em `.atena/generated/` até admissão explícita do dono.
 
 ## Abertos
@@ -37,8 +37,8 @@
 | ART-019 | props/NPC | Asset do **Altar da Doação** (evento). Hoje quadrado lilás com rótulo; PNG em `assets/interactions/doacao.png` | [[SPEC-087-fidelidade-e-eventos-de-risco]] | acompanha MEC-005 |
 | ART-020 | props/NPC | Asset da **Mesa de Aposta** (evento). PNG em `assets/interactions/aposta.png` | [[SPEC-087-fidelidade-e-eventos-de-risco]] | acompanha MEC-005 |
 | ART-024 | asset | **Miniatura de Docas** (`assets/stages/docas_thumb.png`): hoje a linha "2. Docas" do menu aparece sem imagem | Docas · cais, fenda e porão ritual | [EVID-139](../evidence/EVID-139-playtest-higor-qa-14b15e4-2026-10-01.md) IN-045 | ART-PROMPTS-039 pronto (`.atena/generated/`), aguarda geração da imagem |
-| ART-025 | background | **Fundos das fases** melhorados e coerentes com o cenário e com os novos assets (piloto Dagruve + Docas) | Dagruve (névoa/culto) · Docas (cais) | [EVID-139](../evidence/EVID-139-playtest-higor-qa-14b15e4-2026-10-01.md) IN-047/048 | destrava MEC-030 |
-| ART-026 | props | Props temáticos do piloto: estradas, carroças, destrutíveis, objeto interativo e armadilha por bioma | Dagruve · Docas | [EVID-139](../evidence/EVID-139-playtest-higor-qa-14b15e4-2026-10-01.md) IN-047 | destrava MEC-030 |
+| ART-025 | background | **Fundos das fases** melhorados e coerentes com o cenário e com os novos assets (piloto Dagruve + Docas) | Dagruve (névoa/culto) · Docas (cais) | [EVID-139](../evidence/EVID-139-playtest-higor-qa-14b15e4-2026-10-01.md) IN-047/048 | ART-PROMPTS-040 pronto; fila CHATGPT-FILA-010 (C01-C02), aguarda geração; destrava MEC-030 |
+| ART-026 | props | Props temáticos do piloto: estradas, carroças, destrutíveis, objeto interativo e armadilha por bioma | Dagruve · Docas | [EVID-139](../evidence/EVID-139-playtest-higor-qa-14b15e4-2026-10-01.md) IN-047 | ART-PROMPTS-041 pronto; fila CHATGPT-FILA-010 (C03-C11), aguarda geração; destrava MEC-030 |
 | ART-027 | sprite + VFX | Cópia-isca de Sylas (Passo pelas Sombras) e explosão sombria | Mask / sombra | [EVID-139](../evidence/EVID-139-playtest-higor-qa-14b15e4-2026-10-01.md) IN-043 | destrava MEC-029; **hoje usa o sprite do Sylas em roxo como provisório** |
 
 > **Fila consolidada para o ChatGPT:**
@@ -75,6 +75,23 @@ IN-010/IN-018 em
 27 imagens (estrutura, remendo de solo e trilha para cada um dos 9 biomas),
 com piloto em Dagruve. **Admissão trava em BUG-013** (props flutuando) e numa
 spec de integração da camada de decais (SPEC-079), que ainda não existe.
+
+## Prioridade de assets (Atena, 2026-10-01)
+
+Critério: o que destrava jogo já implementado ou bug visível vem primeiro; depois o que o dono pediu no último playtest; arte presa a mecânica ainda não decidida vai por último.
+
+| # | Cartão | Por quê | Fila |
+|---|---|---|---|
+| 1 | ART-024 miniatura de Docas | 1 imagem, falha visível no menu | ART-PROMPTS-039 (sem fila; gerar antes do C02) |
+| 2 | ART-026 props do piloto | destrava MEC-030/033/034/035 | CHATGPT-FILA-010 C03–C11 |
+| 3 | ART-025 fundos Dagruve e Docas | coerência do piloto; ancora as zonas de `scenery.json` | CHATGPT-FILA-010 C01–C02 |
+| 4 | ART-027 cópia-isca e explosão de Sylas | MEC-029 roda com provisório roxo | a preparar |
+| 5 | ART-021/022 animações de mobs e interações | em andamento (ondas 1 a 3) | CHATGPT-FILA-005 a 008 |
+| 6 | ART-008, 009, 011 (lote 1: névoa, NPCs, baú de chefe) | prompts prontos; só falta gerar | ART-PROMPTS-025 |
+| 7 | ART-018, 019, 020 (ampulheta, doação, aposta) | hoje quadrados lilás | a preparar |
+| 8 | ART-013 HQs | vale quando houver tempo de playtest narrativo | FILA-002 e 003 |
+| 9 | ART-002, 003, 007, 010, 014 (UI/VFX) | lote A1; dependem de mecânica | a preparar |
+| — | ART-004, 005, 006, 012 | presos a decisão de mecânica, a confirmar ou já integrados | — |
 
 ## Sugestão de lote (Atena)
 
