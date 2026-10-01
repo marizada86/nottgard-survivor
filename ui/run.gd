@@ -355,6 +355,9 @@ func _refresh_offer() -> void:
 func _physics_process(dt: float) -> void:
 	if get_tree().paused or _result_shown:
 		return
+	if _hit_stop_t > 0.0:  # SPEC-116 D2: pausa curta de acerto importante
+		_hit_stop_t -= dt
+		return
 	var d := Hero.movement_input(
 		Input.is_physical_key_pressed(KEY_A) or Input.is_physical_key_pressed(KEY_LEFT),
 		Input.is_physical_key_pressed(KEY_D) or Input.is_physical_key_pressed(KEY_RIGHT),
@@ -506,6 +509,8 @@ func _consume_events() -> void:
 		match String(ev.type):
 			"hit":
 				Sfx.play("combat.critical" if ev.crit else "combat.impact", -14.0)
+				if ev.crit:
+					_hit_stop(0.04)
 				if _numbers < 14:
 					var theme: Dictionary = ev.get("visual_theme", _divine_theme())
 					var divine_col: Color = theme.primary
@@ -562,9 +567,9 @@ func _consume_events() -> void:
 					Sfx.play_boss(String(ev.enemy.id), "defeat")
 				else:
 					Sfx.play_enemy(String(ev.enemy.id), "death")
+				_kill_burst(ev.enemy, ev.pos)
 			"pickup":
-				var pickup_key := String(ev.kind)
-				Sfx.play("player.heal" if pickup_key == "potion" else "progress.%s" % pickup_key)
+				_pickup_feedback(String(ev.kind), ev.pos)
 			"interaction":
 				Sfx.play("world.%s" % String(ev.kind))
 				_play_interaction(ev)
@@ -762,3 +767,54 @@ func _sync_decoys() -> void:
 		sorted.add_child(ghost)
 		ghost.sync_visual(Iso.to_screen(d.pos), false, false)
 		decoy_nodes[d] = ghost
+
+# ------------------------------------------------------------------ impacto (SPEC-116 D1, D2, D3)
+
+var _hit_stop_t := 0.0
+var _hit_stop_last_ms := -1000
+var _pickup_chain := 0
+var _pickup_last_ms := -10000
+
+## Pausa curta da simulação em acertos importantes; no máximo uma a cada 0,3 s e nunca com "Reduzir efeitos de impacto".
+func _hit_stop(seconds: float) -> void:
+	if Game.reduced_impact():
+		return
+	var now := Time.get_ticks_msec()
+	if now - _hit_stop_last_ms < 300:
+		return
+	_hit_stop_last_ms = now
+	_hit_stop_t = minf(seconds, 0.15)
+
+## Estouro de abate: partículas na cor do inimigo; elite e chefe ganham anel e pausa.
+func _kill_burst(enemy: Enemy, at: Vector2) -> void:
+	var tint := Color(enemy.color, 0.85).lightened(0.25)
+	var reduced := Game.reduced_impact()
+	if enemy.is_boss():
+		_ring(at, 2.4, tint, 0.45)
+		if under.has_method("spawn_impact"):
+			under.call("spawn_impact", at, 6 if reduced else 16, tint)
+		_hit_stop(0.12)
+	elif enemy.affix != "" or enemy.drops_chest:
+		_ring(at, 1.2, Color(1.0, 0.85, 0.4), 0.3)
+		if under.has_method("spawn_impact"):
+			under.call("spawn_impact", at, 4 if reduced else 10, tint)
+		_hit_stop(0.05)
+	elif under.has_method("spawn_impact"):
+		under.call("spawn_impact", at, 2 if reduced else 5, tint)
+
+## Coleta com ritmo: o tom sobe a cada moeda ou orbe de XP coletado em sequência.
+func _pickup_feedback(kind: String, at: Vector2) -> void:
+	var now := Time.get_ticks_msec()
+	if float(now - _pickup_last_ms) / 1000.0 <= Sfx.CHAIN_WINDOW:
+		_pickup_chain += 1
+	else:
+		_pickup_chain = 0
+	_pickup_last_ms = now
+	if kind == "potion":
+		Sfx.play("player.heal")
+		return
+	Sfx.play("progress.%s" % kind, Sfx.DEFAULT_OVERRIDE, Sfx.chain_pitch(_pickup_chain))
+	if kind == "gold" and under.has_method("spawn_impact") and not Game.reduced_impact():
+		under.call("spawn_impact", at, 2, Color(1.0, 0.82, 0.3, 0.8))
+	if kind == "xp" or kind == "gold":
+		hud.pulse_xp()

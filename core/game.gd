@@ -323,6 +323,10 @@ func start_qa_run(request: Dictionary) -> bool:
 const SUPPORTED_RESOLUTIONS = ["1280x720", "1600x900", "1920x1080"]
 const WINDOW_MODES = ["windowed", "borderless", "fullscreen"]
 
+## SPEC-116: opção de acessibilidade; desliga a pausa de acerto e reduz as partículas novas de impacto.
+func reduced_impact() -> bool:
+	return bool(profile.data.settings.get("reduced_impact", false))
+
 func apply_settings() -> void:
 	var s: Dictionary = profile.data.settings
 	AudioServer.set_bus_volume_db(0, linear_to_db(clampf(float(s.volume), 0.0, 1.0)))

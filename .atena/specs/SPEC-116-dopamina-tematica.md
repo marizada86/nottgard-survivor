@@ -74,3 +74,12 @@ Nova moeda, nova tela, loja de cosméticos, ou mudar o dano das armas. D4 não �
 - Quais itens entram (D1 a D6)? Proposta: D1, D2, D3 e D5 já; D6 e D4 depois.
 - Nomes dos marcos da Maré do Abismo (D4): usar lore do Vault ou termos genéricos?
 - Opção **Efeitos de impacto** em Opções: confirmar o padrão (proposta: Padrão ligado).
+
+## Decisão do dono (2026-10-01) e implementação
+Itens escolhidos: **D1 + D2 + D3 (lote Impacto)**. Implementados 2026-10-01:
+- **D1 Estouro de abate** (`ui/run.gd` `_kill_burst`): partículas na cor do inimigo (5 no comum, 10 no elite com anel âmbar, 16 no chefe com anel grande). Reaproveita `spawn_impact` e `_ring`; sem arte nova.
+- **D2 Hit-stop** (`_hit_stop`): 40 ms no crítico, 50 ms no abate de elite, 120 ms no de chefe; no máximo uma pausa a cada 0,3 s, teto de 150 ms.
+- **D3 Coleta com ritmo** (`_pickup_feedback`, `Sfx.chain_pitch`): o tom sobe 5% por coleta encadeada em até 0,6 s (teto de 8 passos, +40%); faísca âmbar ao pegar moeda; a barra de XP pisca (`Hud.pulse_xp`).
+- **Opção de acessibilidade** (Opções → "Reduzir efeitos de impacto"): desliga o hit-stop, reduz as partículas e a faísca da moeda. Padrão: desligada (`settings.reduced_impact`).
+- Testes em `tests/test_impact_fx.gd` (tom encadeado, teto, padrão da opção). Visual e hit-stop não têm teste automático; conferir em run real.
+- Ficam para depois: D5 (números de dano), D6 (revelação do loot), D4 (Maré do Abismo).

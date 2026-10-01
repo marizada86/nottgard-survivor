@@ -479,3 +479,13 @@ func show_result(res: Dictionary, summary: Dictionary) -> void:
 	result_text.text = txt
 	result_panel.visible = true
 	%AgainBtn.call_deferred("grab_focus")
+
+## SPEC-116 D3: a barra de XP pisca ao receber moeda ou XP.
+var _xp_pulse: Tween
+
+func pulse_xp() -> void:
+	if _xp_pulse != null and _xp_pulse.is_valid():
+		_xp_pulse.kill()
+	xp_bar.modulate = Color(1.6, 1.5, 1.2)
+	_xp_pulse = create_tween()
+	_xp_pulse.tween_property(xp_bar, "modulate", Color.WHITE, 0.18)

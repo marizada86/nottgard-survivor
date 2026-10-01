@@ -141,9 +141,10 @@ func has_event(key: String) -> bool:
 	return _events.has(String(_aliases.get(key, key)))
 
 
-func play(key: String, volume_override_db: float = DEFAULT_OVERRIDE) -> void:
+## `pitch_mult`: multiplicador do tom (coleta encadeada, SPEC-116 D3).
+func play(key: String, volume_override_db: float = DEFAULT_OVERRIDE, pitch_mult: float = 1.0) -> void:
 	var resolved := String(_aliases.get(key, key))
-	_play_event(resolved, volume_override_db)
+	_play_event(resolved, volume_override_db, pitch_mult)
 
 
 func play_weapon(weapon_id: String, fallback: String = "combat.impact") -> void:
@@ -167,7 +168,7 @@ func play_boss(enemy_id: String, cue: String = "arrival") -> void:
 	play(key if has_event(key) else "boss.arrival")
 
 
-func _play_event(key: String, volume_override_db: float) -> void:
+func _play_event(key: String, volume_override_db: float, pitch_mult: float = 1.0) -> void:
 	if not _events.has(key):
 		return
 	var definition: Dictionary = _events[key]
@@ -194,7 +195,7 @@ func _play_event(key: String, volume_override_db: float) -> void:
 	voice.bus = String(definition.get("bus", "SFX"))
 	voice.volume_db = float(definition.get("volume_db", -8.0)) if volume_override_db >= 90.0 else volume_override_db
 	var jitter := float(definition.get("pitch_jitter", 0.0))
-	voice.pitch_scale = 1.0 + randf_range(-jitter, jitter)
+	voice.pitch_scale = (1.0 + randf_range(-jitter, jitter)) * pitch_mult
 	voice.play()
 	_voice_priority[voice_index] = priority
 	_voice_started[voice_index] = now
@@ -287,3 +288,12 @@ func _load_loop(file_path: String) -> AudioStream:
 			var bytes_per_frame := 4 if stream.stereo else 2
 			stream.loop_end = int(stream.data.size() / bytes_per_frame)
 	return stream
+
+
+## SPEC-116 D3: o tom sobe a cada coleta encadeada (dentro de CHAIN_WINDOW s) e volta ao normal depois. Função pura, testável.
+const CHAIN_WINDOW := 0.6
+const CHAIN_STEP := 0.05
+const CHAIN_MAX_STEPS := 8
+
+static func chain_pitch(chain: int) -> float:
+	return 1.0 + CHAIN_STEP * float(clampi(chain, 0, CHAIN_MAX_STEPS))
