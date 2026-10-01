@@ -59,12 +59,15 @@
 > [ART-PROMPTS-030](../generated/ART-PROMPTS-030-hqs-trilha-c.md)). Só vale
 > gerar se o MEC-015 (venda de HQs) for aprovado.
 >
-> **Remessas novas (2026-10-01), por ordem de envio sugerida:**
-> 1. ART-024, miniatura de Docas, 1 imagem: [ART-PROMPTS-039](../generated/ART-PROMPTS-039-miniatura-das-docas.md) (sem fila própria; enviar antes de C02 da FILA-010).
-> 2. [CHATGPT-FILA-010](../generated/CHATGPT-FILA-010-piloto-cenario-dagruve-docas.md): 11 prompts, C01–C11, fundos e props do piloto (ART-025, ART-026).
-> 3. [CHATGPT-FILA-011](../generated/CHATGPT-FILA-011-isca-sylas-e-eventos.md): 5 prompts, S01–S05, isca e explosão do Sylas e eventos de mapa (ART-027, ART-018 a 020).
-> 4. [CHATGPT-FILA-012](../generated/CHATGPT-FILA-012-ui-e-vfx-pendentes.md): 9 prompts, U01–U09, UI e VFX (ART-002, 003, 004, 010, 014).
-> 5. [CHATGPT-FILA-009](../generated/CHATGPT-FILA-009-fundo-da-tela-de-titulo.md): 1 prompt, T01, fundo da tela de título.
+> **Remessas novas (2026-10-01), por prioridade de envio:**
+>
+> | # | Fila | Itens | Por quê |
+> |---|---|---|---|
+> | 1 | ART-024, [ART-PROMPTS-039](../generated/ART-PROMPTS-039-miniatura-das-docas.md) (sem fila própria) | 1 | falha visível no menu; precisa existir antes de C02 |
+> | 2 | [CHATGPT-FILA-009](../generated/CHATGPT-FILA-009-fundo-da-tela-de-titulo.md) | 1 (T01) | primeira tela que o jogador vê; barata |
+> | 3 | [CHATGPT-FILA-010](../generated/CHATGPT-FILA-010-piloto-cenario-dagruve-docas.md) | 11 (C01–C11) | destrava MEC-030/033/034/035; enviar C03–C11 (props) antes de C01–C02 (fundos) |
+> | 4 | [CHATGPT-FILA-011](../generated/CHATGPT-FILA-011-isca-sylas-e-eventos.md) | 5 (S01–S05) | troca provisórios de MEC-029 e dos eventos |
+> | 5 | [CHATGPT-FILA-012](../generated/CHATGPT-FILA-012-ui-e-vfx-pendentes.md) | 9 (U01–U09) | polimento; depende de mecânicas já feitas |
 >
 > Filas 004 a 008 (piloto do cultista e mobs da onda 1) seguem em andamento pelo [PLAN-048](../vault/drafts/PLAN-048-geracao-animacoes-mobs-onda-1-2026-09-30.md). Nenhuma das novas foi enviada.
 
@@ -92,7 +95,7 @@ Critério: o que destrava jogo já implementado ou bug visível vem primeiro; de
 | # | Cartão | Por quê | Fila |
 |---|---|---|---|
 | 1 | ART-024 miniatura de Docas | 1 imagem, falha visível no menu | ART-PROMPTS-039 (sem fila; gerar antes do C02) |
-| 2 | ART-026 props do piloto | destrava MEC-030/033/034/035 | CHATGPT-FILA-010 C03–C11 |
+| 2 | ART-026 props do piloto | destrava MEC-030/033/034/035 | CHATGPT-FILA-010 C03–C11 (ver ordem das filas acima; título T01 entra antes) |
 | 3 | ART-025 fundos Dagruve e Docas | coerência do piloto; ancora as zonas de `scenery.json` | CHATGPT-FILA-010 C01–C02 |
 | 4 | ART-027 cópia-isca e explosão de Sylas | MEC-029 roda com provisório roxo | CHATGPT-FILA-011 S01–S02 |
 | 5 | ART-021/022 animações de mobs e interações | em andamento (ondas 1 a 3) | CHATGPT-FILA-005 a 008 |
