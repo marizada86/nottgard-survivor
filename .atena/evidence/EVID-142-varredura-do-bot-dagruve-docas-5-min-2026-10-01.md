@@ -57,3 +57,15 @@ Conclusões:
 4. O **Kayron é simplesmente um herói fraco para o bot** nas duas builds (mediana 4 a 4,5). Isso é um tema de balanceamento (BAL-014), não de regressão.
 5. A comparação de EVID-110 com sementes baixas **não é confiável**; o mesmo pode valer para a queda aparente da Nyrelia (6,0 → 4,1).
 Dados brutos: logs `out_A_*`/`out_B_*` em `F:\dev\_wt_tmp\` (fora do repositório).
+
+## Nyrelia e Zynara com 30 sementes (BAL-014) — 2026-10-01
+Mesma comparação controlada, só Dagruve (A = build antiga `adaf31b`, 8 min; B = build atual com 8 min; C = build atual, 5 min, da varredura):
+
+| Herói | A (antiga, 8 min) | B (atual, 8 min) | C (atual, 5 min) |
+|---|---:|---:|---:|
+| Nyrelia | 5,8 (mediana 4,0; dp 5,2) | 4,4 (3,0; dp 3,8) | 4,1 (3,0) |
+| Zynara | 8,0 (8,0; dp 4,3) | 8,1 (8,5; dp 4,3) | 5,8 (4,0) |
+
+- **Nyrelia:** fraca nas três condições (mediana 3 a 4). A diferença A→B (−1,4) fica **dentro do erro** (~1,8 com 30 sementes): não dá para afirmar regressão. O mapa de 5 min não muda nada (B ≈ C).
+- **Zynara:** a 8 min é um herói **mediano** (8,0 nas duas builds); a 5 min cai para 5,8 (**−28 %**), enquanto Korrak, Durvall e Kayron variam menos de 6 %. **O corte para 5 min prejudica a Zynara**: ela depende do tempo para render (Suspensão Temporal tem recarga de 20 s). Efeito colateral de BAL-011.
+- Conclusão: a Nyrelia precisa de ajuste próprio; a Zynara precisa de uma partida inicial mais forte ou de outra alavanca antes de se mexer nos números gerais. Confirmar no playtest humano.
