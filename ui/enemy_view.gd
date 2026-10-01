@@ -7,6 +7,15 @@ const ANIMATED := {
 	"zumbi": {"cell": Vector2i(256, 384), "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}},
 	"cultista_adaga": {"cell": Vector2i(256, 384), "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
 	"sacerdote_mente_derretida": {"cell": Vector2i(320, 480), "states": {"idle": 6, "move": 8, "attack": 6, "special_a": 8, "special_b": 8, "phase": 8, "death": 10}},
+	"slime_corrosivo": {"cell": Vector2i(256, 384), "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
+	"cultista_arqueiro": {"cell": Vector2i(256, 384), "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
+	"cultista_cajado": {"cell": Vector2i(256, 384), "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
+	"notivago": {"cell": Vector2i(256, 384), "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
+	"criatura_corrompida": {"cell": Vector2i(256, 384), "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
+	"arch_hag": {"cell": Vector2i(256, 384), "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
+	"tentaculo_kraken": {"cell": Vector2i(256, 384), "states": {"idle": 4, "attack": 4, "death": 6}},
+	"guardiao_verdadeiro": {"cell": Vector2i(320, 480), "states": {"idle": 4, "move": 6, "attack": 4, "special": 6, "death": 6}, "flip_h_for_move": true},
+	"guardiao_copia": {"cell": Vector2i(320, 480), "states": {"idle": 4, "move": 6, "attack": 4, "special": 6, "death": 6}, "flip_h_for_move": true},
 }
 static var _tex_cache := {}
 

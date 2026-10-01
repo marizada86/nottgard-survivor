@@ -1,0 +1,2819 @@
+{
+  "id": "HERO-ANIMATION-INVENTORY-001",
+  "spec": "SPEC-105",
+  "generated_at": "2026-09-30",
+  "classification": "read-only inventory; source assets and production manifests unchanged",
+  "methods": {
+    "cell": [
+      256,
+      384
+    ],
+    "alpha_threshold": 0.1,
+    "pixel_alpha_cutoff": 26,
+    "edge_margin_pixels": 1,
+    "measurements": "Per-frame visible alpha bounds aggregated to medians, ranges, bottom anchors, edge and blank-frame counts."
+  },
+  "contract": {
+    "current_runtime_sources": [
+      "move_n",
+      "move_ne",
+      "move_e",
+      "move_se",
+      "move_s"
+    ],
+    "current_runtime_mirrors": {
+      "move_nw": "move_ne",
+      "move_w": "move_e",
+      "move_sw": "move_se"
+    },
+    "approved_target_sources": [
+      "move_n",
+      "move_ne",
+      "move_e",
+      "move_se",
+      "move_s",
+      "move_sw",
+      "move_w",
+      "move_nw"
+    ]
+  },
+  "counts": {
+    "heroes": 10,
+    "official_png_sheets": 106,
+    "files_by_sequence": {
+      "active": 10,
+      "attack": 10,
+      "death": 10,
+      "idle": 10,
+      "move_e": 10,
+      "move_n": 10,
+      "move_ne": 10,
+      "move_s": 10,
+      "move_se": 10,
+      "move": 1,
+      "move_nw": 5,
+      "move_sw": 5,
+      "move_w": 5
+    },
+    "legacy_generic_move_sheet": 1,
+    "old_contract_records": 90,
+    "extra_inverse_direction_sheets": 15,
+    "edge_touch_frames": 219,
+    "assets_with_any_edge_touch": 47,
+    "blank_frames": 0,
+    "grid_contract_failures": 0
+  },
+  "roster": [
+    {
+      "id": "durvall",
+      "name": "Durvall",
+      "starting_weapon": "espada_sombria",
+      "active_ability": "Ruptura Sombria",
+      "active_kind": "cleave",
+      "movement_files_present": [
+        "move_n",
+        "move_ne",
+        "move_e",
+        "move_se",
+        "move_s",
+        "move_sw",
+        "move_w",
+        "move_nw"
+      ],
+      "movement_files_missing": [],
+      "movement_file_count": 8,
+      "movement_median_height_range": [
+        211,
+        368
+      ],
+      "movement_median_width_range": [
+        235,
+        240
+      ],
+      "movement_median_bottom_range": [
+        376,
+        376
+      ],
+      "movement_median_bottom_spread": 0,
+      "states": {
+        "idle": {
+          "frames": 4,
+          "sheet": [
+            1024,
+            384
+          ],
+          "median_alpha": [
+            240,
+            293
+          ],
+          "height_range": [
+            287,
+            298
+          ],
+          "median_bottom": 376,
+          "edge_frames": 0
+        },
+        "attack": {
+          "frames": 4,
+          "sheet": [
+            1024,
+            384
+          ],
+          "median_alpha": [
+            240,
+            284
+          ],
+          "height_range": [
+            236,
+            294
+          ],
+          "median_bottom": 376,
+          "edge_frames": 0
+        },
+        "active": {
+          "frames": 6,
+          "sheet": [
+            1536,
+            384
+          ],
+          "median_alpha": [
+            240,
+            238
+          ],
+          "height_range": [
+            176,
+            242
+          ],
+          "median_bottom": 376,
+          "edge_frames": 0
+        },
+        "death": {
+          "frames": 6,
+          "sheet": [
+            1536,
+            384
+          ],
+          "median_alpha": [
+            237,
+            230
+          ],
+          "height_range": [
+            204,
+            263
+          ],
+          "median_bottom": 376,
+          "edge_frames": 0
+        }
+      }
+    },
+    {
+      "id": "brook",
+      "name": "Brook França",
+      "starting_weapon": "sentenca_de_lliira",
+      "active_ability": "Guarda de Lliira",
+      "active_kind": "guard",
+      "movement_files_present": [
+        "move_n",
+        "move_ne",
+        "move_e",
+        "move_se",
+        "move_s"
+      ],
+      "movement_files_missing": [
+        "move_sw",
+        "move_w",
+        "move_nw"
+      ],
+      "movement_file_count": 5,
+      "movement_median_height_range": [
+        245,
+        360
+      ],
+      "movement_median_width_range": [
+        232,
+        232
+      ],
+      "movement_median_bottom_range": [
+        368,
+        368
+      ],
+      "movement_median_bottom_spread": 0,
+      "states": {
+        "idle": {
+          "frames": 4,
+          "sheet": [
+            1024,
+            384
+          ],
+          "median_alpha": [
+            232,
+            259
+          ],
+          "height_range": [
+            251,
+            268
+          ],
+          "median_bottom": 368,
+          "edge_frames": 0
+        },
+        "attack": {
+          "frames": 4,
+          "sheet": [
+            1024,
+            384
+          ],
+          "median_alpha": [
+            232,
+            276
+          ],
+          "height_range": [
+            238,
+            278
+          ],
+          "median_bottom": 368,
+          "edge_frames": 0
+        },
+        "active": {
+          "frames": 6,
+          "sheet": [
+            1536,
+            384
+          ],
+          "median_alpha": [
+            232,
+            222
+          ],
+          "height_range": [
+            202,
+            252
+          ],
+          "median_bottom": 368,
+          "edge_frames": 0
+        },
+        "death": {
+          "frames": 6,
+          "sheet": [
+            1536,
+            384
+          ],
+          "median_alpha": [
+            232,
+            223
+          ],
+          "height_range": [
+            164,
+            233
+          ],
+          "median_bottom": 368,
+          "edge_frames": 0
+        }
+      }
+    },
+    {
+      "id": "maelor",
+      "name": "Maelor",
+      "starting_weapon": "raio_de_luz",
+      "active_ability": "Comunhão",
+      "active_kind": "healing_aura",
+      "movement_files_present": [
+        "move_n",
+        "move_ne",
+        "move_e",
+        "move_se",
+        "move_s",
+        "move_sw",
+        "move_w",
+        "move_nw"
+      ],
+      "movement_files_missing": [],
+      "movement_file_count": 8,
+      "movement_median_height_range": [
+        302,
+        369
+      ],
+      "movement_median_width_range": [
+        159,
+        255
+      ],
+      "movement_median_bottom_range": [
+        361,
+        377
+      ],
+      "movement_median_bottom_spread": 16,
+      "states": {
+        "idle": {
+          "frames": 4,
+          "sheet": [
+            1024,
+            384
+          ],
+          "median_alpha": [
+            256,
+            345
+          ],
+          "height_range": [
+            344,
+            345
+          ],
+          "median_bottom": 364,
+          "edge_frames": 4
+        },
+        "attack": {
+          "frames": 4,
+          "sheet": [
+            1024,
+            384
+          ],
+          "median_alpha": [
+            243,
+            332
+          ],
+          "height_range": [
+            323,
+            339
+          ],
+          "median_bottom": 362,
+          "edge_frames": 2
+        },
+        "active": {
+          "frames": 6,
+          "sheet": [
+            1536,
+            384
+          ],
+          "median_alpha": [
+            256,
+            307
+          ],
+          "height_range": [
+            303,
+            308
+          ],
+          "median_bottom": 347,
+          "edge_frames": 6
+        },
+        "death": {
+          "frames": 6,
+          "sheet": [
+            1536,
+            384
+          ],
+          "median_alpha": [
+            254,
+            189
+          ],
+          "height_range": [
+            91,
+            292
+          ],
+          "median_bottom": 343,
+          "edge_frames": 6
+        }
+      }
+    },
+    {
+      "id": "sylas",
+      "name": "Sylas Malafaia",
+      "starting_weapon": "raio_enfraquecedor",
+      "active_ability": "Passo pelas Sombras",
+      "active_kind": "dash_weaken",
+      "movement_files_present": [
+        "move_n",
+        "move_ne",
+        "move_e",
+        "move_se",
+        "move_s",
+        "move_sw",
+        "move_w",
+        "move_nw"
+      ],
+      "movement_files_missing": [],
+      "movement_file_count": 8,
+      "movement_median_height_range": [
+        303,
+        349
+      ],
+      "movement_median_width_range": [
+        238,
+        256
+      ],
+      "movement_median_bottom_range": [
+        352,
+        374
+      ],
+      "movement_median_bottom_spread": 22,
+      "states": {
+        "idle": {
+          "frames": 4,
+          "sheet": [
+            1024,
+            384
+          ],
+          "median_alpha": [
+            254,
+            373
+          ],
+          "height_range": [
+            372,
+            375
+          ],
+          "median_bottom": 377,
+          "edge_frames": 4
+        },
+        "attack": {
+          "frames": 4,
+          "sheet": [
+            1024,
+            384
+          ],
+          "median_alpha": [
+            251,
+            369
+          ],
+          "height_range": [
+            357,
+            374
+          ],
+          "median_bottom": 374,
+          "edge_frames": 3
+        },
+        "active": {
+          "frames": 6,
+          "sheet": [
+            1536,
+            384
+          ],
+          "median_alpha": [
+            253,
+            207
+          ],
+          "height_range": [
+            190,
+            284
+          ],
+          "median_bottom": 381,
+          "edge_frames": 5
+        },
+        "death": {
+          "frames": 6,
+          "sheet": [
+            1536,
+            384
+          ],
+          "median_alpha": [
+            253,
+            226
+          ],
+          "height_range": [
+            108,
+            314
+          ],
+          "median_bottom": 377,
+          "edge_frames": 5
+        }
+      }
+    },
+    {
+      "id": "kayron",
+      "name": "Kayron Lioran",
+      "starting_weapon": "descarga_estelar",
+      "active_ability": "Sobrecarga Mística",
+      "active_kind": "overdrive",
+      "movement_files_present": [
+        "move_n",
+        "move_ne",
+        "move_e",
+        "move_se",
+        "move_s",
+        "move_sw",
+        "move_w",
+        "move_nw"
+      ],
+      "movement_files_missing": [],
+      "movement_file_count": 8,
+      "movement_median_height_range": [
+        327,
+        363
+      ],
+      "movement_median_width_range": [
+        239,
+        256
+      ],
+      "movement_median_bottom_range": [
+        356,
+        373
+      ],
+      "movement_median_bottom_spread": 17,
+      "states": {
+        "idle": {
+          "frames": 4,
+          "sheet": [
+            1024,
+            384
+          ],
+          "median_alpha": [
+            248,
+            371
+          ],
+          "height_range": [
+            371,
+            372
+          ],
+          "median_bottom": 379,
+          "edge_frames": 0
+        },
+        "attack": {
+          "frames": 4,
+          "sheet": [
+            1024,
+            384
+          ],
+          "median_alpha": [
+            246,
+            355
+          ],
+          "height_range": [
+            344,
+            364
+          ],
+          "median_bottom": 377,
+          "edge_frames": 2
+        },
+        "active": {
+          "frames": 6,
+          "sheet": [
+            1536,
+            384
+          ],
+          "median_alpha": [
+            253,
+            321
+          ],
+          "height_range": [
+            316,
+            323
+          ],
+          "median_bottom": 362,
+          "edge_frames": 5
+        },
+        "death": {
+          "frames": 6,
+          "sheet": [
+            1536,
+            384
+          ],
+          "median_alpha": [
+            256,
+            305
+          ],
+          "height_range": [
+            178,
+            308
+          ],
+          "median_bottom": 384,
+          "edge_frames": 6
+        }
+      }
+    },
+    {
+      "id": "korrak",
+      "name": "Korrak Nammat",
+      "starting_weapon": "machado_de_xargath",
+      "active_ability": "Impacto de Xar'gath",
+      "active_kind": "slam",
+      "movement_files_present": [
+        "move_n",
+        "move_ne",
+        "move_e",
+        "move_se",
+        "move_s",
+        "move_sw",
+        "move_w",
+        "move_nw"
+      ],
+      "movement_files_missing": [],
+      "movement_file_count": 8,
+      "movement_median_height_range": [
+        278,
+        368
+      ],
+      "movement_median_width_range": [
+        213,
+        256
+      ],
+      "movement_median_bottom_range": [
+        328,
+        374
+      ],
+      "movement_median_bottom_spread": 46,
+      "states": {
+        "idle": {
+          "frames": 4,
+          "sheet": [
+            1024,
+            384
+          ],
+          "median_alpha": [
+            246,
+            316
+          ],
+          "height_range": [
+            312,
+            319
+          ],
+          "median_bottom": 350,
+          "edge_frames": 0
+        },
+        "attack": {
+          "frames": 4,
+          "sheet": [
+            1024,
+            384
+          ],
+          "median_alpha": [
+            247,
+            322
+          ],
+          "height_range": [
+            307,
+            323
+          ],
+          "median_bottom": 355,
+          "edge_frames": 4
+        },
+        "active": {
+          "frames": 6,
+          "sheet": [
+            1536,
+            384
+          ],
+          "median_alpha": [
+            221,
+            355
+          ],
+          "height_range": [
+            252,
+            378
+          ],
+          "median_bottom": 384,
+          "edge_frames": 6
+        },
+        "death": {
+          "frames": 6,
+          "sheet": [
+            1536,
+            384
+          ],
+          "median_alpha": [
+            248,
+            363
+          ],
+          "height_range": [
+            233,
+            366
+          ],
+          "median_bottom": 384,
+          "edge_frames": 6
+        }
+      }
+    },
+    {
+      "id": "leoric",
+      "name": "Leoric",
+      "starting_weapon": "sopro_de_estrela",
+      "active_ability": "Constelação",
+      "active_kind": "star_burst",
+      "movement_files_present": [
+        "move_n",
+        "move_ne",
+        "move_e",
+        "move_se",
+        "move_s"
+      ],
+      "movement_files_missing": [
+        "move_sw",
+        "move_w",
+        "move_nw"
+      ],
+      "movement_file_count": 5,
+      "movement_median_height_range": [
+        215,
+        244
+      ],
+      "movement_median_width_range": [
+        209,
+        236
+      ],
+      "movement_median_bottom_range": [
+        368,
+        368
+      ],
+      "movement_median_bottom_spread": 0,
+      "states": {
+        "idle": {
+          "frames": 4,
+          "sheet": [
+            1024,
+            384
+          ],
+          "median_alpha": [
+            225,
+            313
+          ],
+          "height_range": [
+            312,
+            314
+          ],
+          "median_bottom": 368,
+          "edge_frames": 0
+        },
+        "attack": {
+          "frames": 4,
+          "sheet": [
+            1024,
+            384
+          ],
+          "median_alpha": [
+            236,
+            255
+          ],
+          "height_range": [
+            235,
+            256
+          ],
+          "median_bottom": 368,
+          "edge_frames": 0
+        },
+        "active": {
+          "frames": 6,
+          "sheet": [
+            1536,
+            384
+          ],
+          "median_alpha": [
+            230,
+            266
+          ],
+          "height_range": [
+            222,
+            281
+          ],
+          "median_bottom": 368,
+          "edge_frames": 0
+        },
+        "death": {
+          "frames": 6,
+          "sheet": [
+            1536,
+            384
+          ],
+          "median_alpha": [
+            233,
+            139
+          ],
+          "height_range": [
+            77,
+            220
+          ],
+          "median_bottom": 368,
+          "edge_frames": 0
+        }
+      }
+    },
+    {
+      "id": "nyrelia",
+      "name": "Nyrelia",
+      "starting_weapon": "dominar_pessoa",
+      "active_ability": "Dominação",
+      "active_kind": "charm",
+      "movement_files_present": [
+        "move_n",
+        "move_ne",
+        "move_e",
+        "move_se",
+        "move_s"
+      ],
+      "movement_files_missing": [
+        "move_sw",
+        "move_w",
+        "move_nw"
+      ],
+      "movement_file_count": 5,
+      "movement_median_height_range": [
+        298,
+        352
+      ],
+      "movement_median_width_range": [
+        178,
+        224
+      ],
+      "movement_median_bottom_range": [
+        368,
+        368
+      ],
+      "movement_median_bottom_spread": 0,
+      "states": {
+        "idle": {
+          "frames": 4,
+          "sheet": [
+            1024,
+            384
+          ],
+          "median_alpha": [
+            180,
+            352
+          ],
+          "height_range": [
+            352,
+            352
+          ],
+          "median_bottom": 368,
+          "edge_frames": 0
+        },
+        "attack": {
+          "frames": 4,
+          "sheet": [
+            1024,
+            384
+          ],
+          "median_alpha": [
+            208,
+            352
+          ],
+          "height_range": [
+            349,
+            352
+          ],
+          "median_bottom": 368,
+          "edge_frames": 0
+        },
+        "active": {
+          "frames": 6,
+          "sheet": [
+            1536,
+            384
+          ],
+          "median_alpha": [
+            223,
+            344
+          ],
+          "height_range": [
+            302,
+            352
+          ],
+          "median_bottom": 368,
+          "edge_frames": 0
+        },
+        "death": {
+          "frames": 6,
+          "sheet": [
+            1536,
+            384
+          ],
+          "median_alpha": [
+            224,
+            143
+          ],
+          "height_range": [
+            90,
+            352
+          ],
+          "median_bottom": 368,
+          "edge_frames": 0
+        }
+      }
+    },
+    {
+      "id": "zynara",
+      "name": "Zynara Vellen",
+      "starting_weapon": "ampulheta",
+      "active_ability": "Suspensão Temporal",
+      "active_kind": "time_stop",
+      "movement_files_present": [
+        "move_n",
+        "move_ne",
+        "move_e",
+        "move_se",
+        "move_s"
+      ],
+      "movement_files_missing": [
+        "move_sw",
+        "move_w",
+        "move_nw"
+      ],
+      "movement_file_count": 5,
+      "movement_median_height_range": [
+        367,
+        368
+      ],
+      "movement_median_width_range": [
+        152,
+        226
+      ],
+      "movement_median_bottom_range": [
+        376,
+        376
+      ],
+      "movement_median_bottom_spread": 0,
+      "states": {
+        "idle": {
+          "frames": 4,
+          "sheet": [
+            1024,
+            384
+          ],
+          "median_alpha": [
+            166,
+            368
+          ],
+          "height_range": [
+            368,
+            368
+          ],
+          "median_bottom": 376,
+          "edge_frames": 0
+        },
+        "attack": {
+          "frames": 4,
+          "sheet": [
+            1024,
+            384
+          ],
+          "median_alpha": [
+            240,
+            367
+          ],
+          "height_range": [
+            211,
+            368
+          ],
+          "median_bottom": 376,
+          "edge_frames": 0
+        },
+        "active": {
+          "frames": 6,
+          "sheet": [
+            1536,
+            384
+          ],
+          "median_alpha": [
+            211,
+            368
+          ],
+          "height_range": [
+            368,
+            368
+          ],
+          "median_bottom": 376,
+          "edge_frames": 0
+        },
+        "death": {
+          "frames": 6,
+          "sheet": [
+            1536,
+            384
+          ],
+          "median_alpha": [
+            240,
+            314
+          ],
+          "height_range": [
+            215,
+            368
+          ],
+          "median_bottom": 376,
+          "edge_frames": 0
+        }
+      }
+    },
+    {
+      "id": "bromnor",
+      "name": "Bromnor Martelo da Luz",
+      "starting_weapon": "martelo_da_gloria",
+      "active_ability": "Concórdia",
+      "active_kind": "guard_nova",
+      "movement_files_present": [
+        "move_n",
+        "move_ne",
+        "move_e",
+        "move_se",
+        "move_s"
+      ],
+      "movement_files_missing": [
+        "move_sw",
+        "move_w",
+        "move_nw"
+      ],
+      "movement_file_count": 5,
+      "movement_median_height_range": [
+        251,
+        290
+      ],
+      "movement_median_width_range": [
+        233,
+        255
+      ],
+      "movement_median_bottom_range": [
+        351,
+        375
+      ],
+      "movement_median_bottom_spread": 24,
+      "states": {
+        "idle": {
+          "frames": 4,
+          "sheet": [
+            1024,
+            384
+          ],
+          "median_alpha": [
+            246,
+            343
+          ],
+          "height_range": [
+            341,
+            345
+          ],
+          "median_bottom": 363,
+          "edge_frames": 2
+        },
+        "attack": {
+          "frames": 4,
+          "sheet": [
+            1024,
+            384
+          ],
+          "median_alpha": [
+            248,
+            296
+          ],
+          "height_range": [
+            254,
+            339
+          ],
+          "median_bottom": 361,
+          "edge_frames": 0
+        },
+        "active": {
+          "frames": 6,
+          "sheet": [
+            1536,
+            384
+          ],
+          "median_alpha": [
+            256,
+            250
+          ],
+          "height_range": [
+            242,
+            262
+          ],
+          "median_bottom": 331,
+          "edge_frames": 6
+        },
+        "death": {
+          "frames": 6,
+          "sheet": [
+            1536,
+            384
+          ],
+          "median_alpha": [
+            251,
+            177
+          ],
+          "height_range": [
+            106,
+            252
+          ],
+          "median_bottom": 338,
+          "edge_frames": 3
+        }
+      }
+    }
+  ],
+  "weapons": {
+    "base_levelup_offers": {
+      "total": 14,
+      "by_kind": {
+        "melee": 5,
+        "bolt": 5,
+        "nova": 3,
+        "zone": 1
+      },
+      "available_to_all_heroes": true
+    },
+    "evolution_profiles": 8,
+    "item_granted_profiles": 8,
+    "total_profiles": 30,
+    "attack_effect_categories": [
+      "melee",
+      "bolt",
+      "nova",
+      "zone"
+    ]
+  },
+  "findings": {
+    "runtime_direction_coverage": "Eight logical directions are selected; only five independent source sheets load and west/northwest/southwest are mirrored.",
+    "action_facing": "The action event carries aim direction, but HeroView.play_action receives only an action name; actor pose/facing remains whatever movement last set.",
+    "hit_reaction": "No dedicated hurt animation; damage is communicated by flash, shake, text and procedural particles.",
+    "hero_specific_vfx_assets": "No gameplay VFX sprite sequence is loaded for player attacks; swing/rings/projectiles/zones/impacts are drawn procedurally and recolored with visual themes.",
+    "historical_audit": "The existing prompt audit covers 90 older-contract records and labels review status unreviewed; it does not resolve the newly approved eight-source contract."
+  },
+  "measurements": [
+    {
+      "hero_id": "bromnor",
+      "sequence": "active",
+      "source_path": "assets/animations/heroes/bromnor/active.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 256,
+      "median_alpha_height": 250,
+      "min_alpha_height": 242,
+      "max_alpha_height": 262,
+      "median_bottom": 331,
+      "bottom_spread_within_sheet": 20,
+      "frames_touching_cell_edge": 6,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "bromnor",
+      "sequence": "attack",
+      "source_path": "assets/animations/heroes/bromnor/attack.png",
+      "sheet_width": 1024,
+      "sheet_height": 384,
+      "frames": 4,
+      "median_alpha_width": 248,
+      "median_alpha_height": 296,
+      "min_alpha_height": 254,
+      "max_alpha_height": 339,
+      "median_bottom": 361,
+      "bottom_spread_within_sheet": 56,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "bromnor",
+      "sequence": "death",
+      "source_path": "assets/animations/heroes/bromnor/death.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 251,
+      "median_alpha_height": 177,
+      "min_alpha_height": 106,
+      "max_alpha_height": 252,
+      "median_bottom": 338,
+      "bottom_spread_within_sheet": 115,
+      "frames_touching_cell_edge": 3,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "bromnor",
+      "sequence": "idle",
+      "source_path": "assets/animations/heroes/bromnor/idle.png",
+      "sheet_width": 1024,
+      "sheet_height": 384,
+      "frames": 4,
+      "median_alpha_width": 246,
+      "median_alpha_height": 343,
+      "min_alpha_height": 341,
+      "max_alpha_height": 345,
+      "median_bottom": 363,
+      "bottom_spread_within_sheet": 4,
+      "frames_touching_cell_edge": 2,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "bromnor",
+      "sequence": "move_e",
+      "source_path": "assets/animations/heroes/bromnor/move_e.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 248,
+      "median_alpha_height": 251,
+      "min_alpha_height": 249,
+      "max_alpha_height": 252,
+      "median_bottom": 355,
+      "bottom_spread_within_sheet": 79,
+      "frames_touching_cell_edge": 6,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "bromnor",
+      "sequence": "move_n",
+      "source_path": "assets/animations/heroes/bromnor/move_n.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 249,
+      "median_alpha_height": 270,
+      "min_alpha_height": 268,
+      "max_alpha_height": 273,
+      "median_bottom": 369,
+      "bottom_spread_within_sheet": 76,
+      "frames_touching_cell_edge": 2,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "bromnor",
+      "sequence": "move_ne",
+      "source_path": "assets/animations/heroes/bromnor/move_ne.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 233,
+      "median_alpha_height": 264,
+      "min_alpha_height": 257,
+      "max_alpha_height": 266,
+      "median_bottom": 365,
+      "bottom_spread_within_sheet": 77,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "bromnor",
+      "sequence": "move_s",
+      "source_path": "assets/animations/heroes/bromnor/move_s.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 255,
+      "median_alpha_height": 290,
+      "min_alpha_height": 278,
+      "max_alpha_height": 291,
+      "median_bottom": 351,
+      "bottom_spread_within_sheet": 45,
+      "frames_touching_cell_edge": 6,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "bromnor",
+      "sequence": "move_se",
+      "source_path": "assets/animations/heroes/bromnor/move_se.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 254,
+      "median_alpha_height": 282,
+      "min_alpha_height": 278,
+      "max_alpha_height": 322,
+      "median_bottom": 375,
+      "bottom_spread_within_sheet": 82,
+      "frames_touching_cell_edge": 6,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "brook",
+      "sequence": "active",
+      "source_path": "assets/animations/heroes/brook/active.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 232,
+      "median_alpha_height": 222,
+      "min_alpha_height": 202,
+      "max_alpha_height": 252,
+      "median_bottom": 368,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "brook",
+      "sequence": "attack",
+      "source_path": "assets/animations/heroes/brook/attack.png",
+      "sheet_width": 1024,
+      "sheet_height": 384,
+      "frames": 4,
+      "median_alpha_width": 232,
+      "median_alpha_height": 276,
+      "min_alpha_height": 238,
+      "max_alpha_height": 278,
+      "median_bottom": 368,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "brook",
+      "sequence": "death",
+      "source_path": "assets/animations/heroes/brook/death.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 232,
+      "median_alpha_height": 223,
+      "min_alpha_height": 164,
+      "max_alpha_height": 233,
+      "median_bottom": 368,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "brook",
+      "sequence": "idle",
+      "source_path": "assets/animations/heroes/brook/idle.png",
+      "sheet_width": 1024,
+      "sheet_height": 384,
+      "frames": 4,
+      "median_alpha_width": 232,
+      "median_alpha_height": 259,
+      "min_alpha_height": 251,
+      "max_alpha_height": 268,
+      "median_bottom": 368,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "brook",
+      "sequence": "move_e",
+      "source_path": "assets/animations/heroes/brook/move_e.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 232,
+      "median_alpha_height": 255,
+      "min_alpha_height": 240,
+      "max_alpha_height": 255,
+      "median_bottom": 368,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "brook",
+      "sequence": "move_n",
+      "source_path": "assets/animations/heroes/brook/move_n.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 232,
+      "median_alpha_height": 305,
+      "min_alpha_height": 275,
+      "max_alpha_height": 326,
+      "median_bottom": 368,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "brook",
+      "sequence": "move_ne",
+      "source_path": "assets/animations/heroes/brook/move_ne.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 232,
+      "median_alpha_height": 245,
+      "min_alpha_height": 217,
+      "max_alpha_height": 254,
+      "median_bottom": 368,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "brook",
+      "sequence": "move_s",
+      "source_path": "assets/animations/heroes/brook/move_s.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 232,
+      "median_alpha_height": 360,
+      "min_alpha_height": 346,
+      "max_alpha_height": 360,
+      "median_bottom": 368,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "brook",
+      "sequence": "move_se",
+      "source_path": "assets/animations/heroes/brook/move_se.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 232,
+      "median_alpha_height": 271,
+      "min_alpha_height": 261,
+      "max_alpha_height": 287,
+      "median_bottom": 368,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "durvall",
+      "sequence": "active",
+      "source_path": "assets/animations/heroes/durvall/active.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 240,
+      "median_alpha_height": 238,
+      "min_alpha_height": 176,
+      "max_alpha_height": 242,
+      "median_bottom": 376,
+      "bottom_spread_within_sheet": 3,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "durvall",
+      "sequence": "attack",
+      "source_path": "assets/animations/heroes/durvall/attack.png",
+      "sheet_width": 1024,
+      "sheet_height": 384,
+      "frames": 4,
+      "median_alpha_width": 240,
+      "median_alpha_height": 284,
+      "min_alpha_height": 236,
+      "max_alpha_height": 294,
+      "median_bottom": 376,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "durvall",
+      "sequence": "death",
+      "source_path": "assets/animations/heroes/durvall/death.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 237,
+      "median_alpha_height": 230,
+      "min_alpha_height": 204,
+      "max_alpha_height": 263,
+      "median_bottom": 376,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "durvall",
+      "sequence": "idle",
+      "source_path": "assets/animations/heroes/durvall/idle.png",
+      "sheet_width": 1024,
+      "sheet_height": 384,
+      "frames": 4,
+      "median_alpha_width": 240,
+      "median_alpha_height": 293,
+      "min_alpha_height": 287,
+      "max_alpha_height": 298,
+      "median_bottom": 376,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "durvall",
+      "sequence": "move",
+      "source_path": "assets/animations/heroes/durvall/move.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 240,
+      "median_alpha_height": 319,
+      "min_alpha_height": 308,
+      "max_alpha_height": 334,
+      "median_bottom": 376,
+      "bottom_spread_within_sheet": 1,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "durvall",
+      "sequence": "move_e",
+      "source_path": "assets/animations/heroes/durvall/move_e.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 240,
+      "median_alpha_height": 226,
+      "min_alpha_height": 204,
+      "max_alpha_height": 235,
+      "median_bottom": 376,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "durvall",
+      "sequence": "move_n",
+      "source_path": "assets/animations/heroes/durvall/move_n.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 235,
+      "median_alpha_height": 368,
+      "min_alpha_height": 340,
+      "max_alpha_height": 368,
+      "median_bottom": 376,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "durvall",
+      "sequence": "move_ne",
+      "source_path": "assets/animations/heroes/durvall/move_ne.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 240,
+      "median_alpha_height": 319,
+      "min_alpha_height": 280,
+      "max_alpha_height": 343,
+      "median_bottom": 376,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "durvall",
+      "sequence": "move_nw",
+      "source_path": "assets/animations/heroes/durvall/move_nw.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 240,
+      "median_alpha_height": 297,
+      "min_alpha_height": 257,
+      "max_alpha_height": 307,
+      "median_bottom": 376,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "durvall",
+      "sequence": "move_s",
+      "source_path": "assets/animations/heroes/durvall/move_s.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 240,
+      "median_alpha_height": 308,
+      "min_alpha_height": 301,
+      "max_alpha_height": 321,
+      "median_bottom": 376,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "durvall",
+      "sequence": "move_se",
+      "source_path": "assets/animations/heroes/durvall/move_se.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 240,
+      "median_alpha_height": 251,
+      "min_alpha_height": 232,
+      "max_alpha_height": 253,
+      "median_bottom": 376,
+      "bottom_spread_within_sheet": 1,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "durvall",
+      "sequence": "move_sw",
+      "source_path": "assets/animations/heroes/durvall/move_sw.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 240,
+      "median_alpha_height": 258,
+      "min_alpha_height": 250,
+      "max_alpha_height": 259,
+      "median_bottom": 376,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "durvall",
+      "sequence": "move_w",
+      "source_path": "assets/animations/heroes/durvall/move_w.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 240,
+      "median_alpha_height": 211,
+      "min_alpha_height": 205,
+      "max_alpha_height": 221,
+      "median_bottom": 376,
+      "bottom_spread_within_sheet": 1,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "kayron",
+      "sequence": "active",
+      "source_path": "assets/animations/heroes/kayron/active.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 253,
+      "median_alpha_height": 321,
+      "min_alpha_height": 316,
+      "max_alpha_height": 323,
+      "median_bottom": 362,
+      "bottom_spread_within_sheet": 12,
+      "frames_touching_cell_edge": 5,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "kayron",
+      "sequence": "attack",
+      "source_path": "assets/animations/heroes/kayron/attack.png",
+      "sheet_width": 1024,
+      "sheet_height": 384,
+      "frames": 4,
+      "median_alpha_width": 246,
+      "median_alpha_height": 355,
+      "min_alpha_height": 344,
+      "max_alpha_height": 364,
+      "median_bottom": 377,
+      "bottom_spread_within_sheet": 16,
+      "frames_touching_cell_edge": 2,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "kayron",
+      "sequence": "death",
+      "source_path": "assets/animations/heroes/kayron/death.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 256,
+      "median_alpha_height": 305,
+      "min_alpha_height": 178,
+      "max_alpha_height": 308,
+      "median_bottom": 384,
+      "bottom_spread_within_sheet": 81,
+      "frames_touching_cell_edge": 6,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "kayron",
+      "sequence": "idle",
+      "source_path": "assets/animations/heroes/kayron/idle.png",
+      "sheet_width": 1024,
+      "sheet_height": 384,
+      "frames": 4,
+      "median_alpha_width": 248,
+      "median_alpha_height": 371,
+      "min_alpha_height": 371,
+      "max_alpha_height": 372,
+      "median_bottom": 379,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "kayron",
+      "sequence": "move_e",
+      "source_path": "assets/animations/heroes/kayron/move_e.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 255,
+      "median_alpha_height": 354,
+      "min_alpha_height": 351,
+      "max_alpha_height": 364,
+      "median_bottom": 372,
+      "bottom_spread_within_sheet": 15,
+      "frames_touching_cell_edge": 6,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "kayron",
+      "sequence": "move_n",
+      "source_path": "assets/animations/heroes/kayron/move_n.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 244,
+      "median_alpha_height": 329,
+      "min_alpha_height": 320,
+      "max_alpha_height": 336,
+      "median_bottom": 356,
+      "bottom_spread_within_sheet": 20,
+      "frames_touching_cell_edge": 5,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "kayron",
+      "sequence": "move_ne",
+      "source_path": "assets/animations/heroes/kayron/move_ne.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 239,
+      "median_alpha_height": 354,
+      "min_alpha_height": 350,
+      "max_alpha_height": 356,
+      "median_bottom": 367,
+      "bottom_spread_within_sheet": 6,
+      "frames_touching_cell_edge": 1,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "kayron",
+      "sequence": "move_nw",
+      "source_path": "assets/animations/heroes/kayron/move_nw.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 251,
+      "median_alpha_height": 344,
+      "min_alpha_height": 340,
+      "max_alpha_height": 347,
+      "median_bottom": 368,
+      "bottom_spread_within_sheet": 18,
+      "frames_touching_cell_edge": 6,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "kayron",
+      "sequence": "move_s",
+      "source_path": "assets/animations/heroes/kayron/move_s.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 250,
+      "median_alpha_height": 363,
+      "min_alpha_height": 359,
+      "max_alpha_height": 364,
+      "median_bottom": 373,
+      "bottom_spread_within_sheet": 11,
+      "frames_touching_cell_edge": 5,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "kayron",
+      "sequence": "move_se",
+      "source_path": "assets/animations/heroes/kayron/move_se.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 245,
+      "median_alpha_height": 327,
+      "min_alpha_height": 323,
+      "max_alpha_height": 331,
+      "median_bottom": 366,
+      "bottom_spread_within_sheet": 24,
+      "frames_touching_cell_edge": 2,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "kayron",
+      "sequence": "move_sw",
+      "source_path": "assets/animations/heroes/kayron/move_sw.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 256,
+      "median_alpha_height": 331,
+      "min_alpha_height": 323,
+      "max_alpha_height": 342,
+      "median_bottom": 359,
+      "bottom_spread_within_sheet": 31,
+      "frames_touching_cell_edge": 6,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "kayron",
+      "sequence": "move_w",
+      "source_path": "assets/animations/heroes/kayron/move_w.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 250,
+      "median_alpha_height": 339,
+      "min_alpha_height": 337,
+      "max_alpha_height": 341,
+      "median_bottom": 370,
+      "bottom_spread_within_sheet": 26,
+      "frames_touching_cell_edge": 6,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "korrak",
+      "sequence": "active",
+      "source_path": "assets/animations/heroes/korrak/active.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 221,
+      "median_alpha_height": 355,
+      "min_alpha_height": 252,
+      "max_alpha_height": 378,
+      "median_bottom": 384,
+      "bottom_spread_within_sheet": 31,
+      "frames_touching_cell_edge": 6,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "korrak",
+      "sequence": "attack",
+      "source_path": "assets/animations/heroes/korrak/attack.png",
+      "sheet_width": 1024,
+      "sheet_height": 384,
+      "frames": 4,
+      "median_alpha_width": 247,
+      "median_alpha_height": 322,
+      "min_alpha_height": 307,
+      "max_alpha_height": 323,
+      "median_bottom": 355,
+      "bottom_spread_within_sheet": 17,
+      "frames_touching_cell_edge": 4,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "korrak",
+      "sequence": "death",
+      "source_path": "assets/animations/heroes/korrak/death.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 248,
+      "median_alpha_height": 363,
+      "min_alpha_height": 233,
+      "max_alpha_height": 366,
+      "median_bottom": 384,
+      "bottom_spread_within_sheet": 21,
+      "frames_touching_cell_edge": 6,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "korrak",
+      "sequence": "idle",
+      "source_path": "assets/animations/heroes/korrak/idle.png",
+      "sheet_width": 1024,
+      "sheet_height": 384,
+      "frames": 4,
+      "median_alpha_width": 246,
+      "median_alpha_height": 316,
+      "min_alpha_height": 312,
+      "max_alpha_height": 319,
+      "median_bottom": 350,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "korrak",
+      "sequence": "move_e",
+      "source_path": "assets/animations/heroes/korrak/move_e.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 256,
+      "median_alpha_height": 278,
+      "min_alpha_height": 277,
+      "max_alpha_height": 280,
+      "median_bottom": 352,
+      "bottom_spread_within_sheet": 27,
+      "frames_touching_cell_edge": 6,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "korrak",
+      "sequence": "move_n",
+      "source_path": "assets/animations/heroes/korrak/move_n.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 245,
+      "median_alpha_height": 289,
+      "min_alpha_height": 284,
+      "max_alpha_height": 292,
+      "median_bottom": 336,
+      "bottom_spread_within_sheet": 24,
+      "frames_touching_cell_edge": 2,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "korrak",
+      "sequence": "move_ne",
+      "source_path": "assets/animations/heroes/korrak/move_ne.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 256,
+      "median_alpha_height": 288,
+      "min_alpha_height": 284,
+      "max_alpha_height": 302,
+      "median_bottom": 337,
+      "bottom_spread_within_sheet": 35,
+      "frames_touching_cell_edge": 6,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "korrak",
+      "sequence": "move_nw",
+      "source_path": "assets/animations/heroes/korrak/move_nw.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 233,
+      "median_alpha_height": 368,
+      "min_alpha_height": 361,
+      "max_alpha_height": 369,
+      "median_bottom": 374,
+      "bottom_spread_within_sheet": 8,
+      "frames_touching_cell_edge": 1,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "korrak",
+      "sequence": "move_s",
+      "source_path": "assets/animations/heroes/korrak/move_s.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 256,
+      "median_alpha_height": 286,
+      "min_alpha_height": 277,
+      "max_alpha_height": 293,
+      "median_bottom": 348,
+      "bottom_spread_within_sheet": 39,
+      "frames_touching_cell_edge": 6,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "korrak",
+      "sequence": "move_se",
+      "source_path": "assets/animations/heroes/korrak/move_se.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 256,
+      "median_alpha_height": 281,
+      "min_alpha_height": 275,
+      "max_alpha_height": 285,
+      "median_bottom": 328,
+      "bottom_spread_within_sheet": 7,
+      "frames_touching_cell_edge": 6,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "korrak",
+      "sequence": "move_sw",
+      "source_path": "assets/animations/heroes/korrak/move_sw.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 213,
+      "median_alpha_height": 355,
+      "min_alpha_height": 353,
+      "max_alpha_height": 357,
+      "median_bottom": 373,
+      "bottom_spread_within_sheet": 10,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "korrak",
+      "sequence": "move_w",
+      "source_path": "assets/animations/heroes/korrak/move_w.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 240,
+      "median_alpha_height": 352,
+      "min_alpha_height": 346,
+      "max_alpha_height": 354,
+      "median_bottom": 372,
+      "bottom_spread_within_sheet": 16,
+      "frames_touching_cell_edge": 4,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "leoric",
+      "sequence": "active",
+      "source_path": "assets/animations/heroes/leoric/active.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 230,
+      "median_alpha_height": 266,
+      "min_alpha_height": 222,
+      "max_alpha_height": 281,
+      "median_bottom": 368,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "leoric",
+      "sequence": "attack",
+      "source_path": "assets/animations/heroes/leoric/attack.png",
+      "sheet_width": 1024,
+      "sheet_height": 384,
+      "frames": 4,
+      "median_alpha_width": 236,
+      "median_alpha_height": 255,
+      "min_alpha_height": 235,
+      "max_alpha_height": 256,
+      "median_bottom": 368,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "leoric",
+      "sequence": "death",
+      "source_path": "assets/animations/heroes/leoric/death.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 233,
+      "median_alpha_height": 139,
+      "min_alpha_height": 77,
+      "max_alpha_height": 220,
+      "median_bottom": 368,
+      "bottom_spread_within_sheet": 1,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "leoric",
+      "sequence": "idle",
+      "source_path": "assets/animations/heroes/leoric/idle.png",
+      "sheet_width": 1024,
+      "sheet_height": 384,
+      "frames": 4,
+      "median_alpha_width": 225,
+      "median_alpha_height": 313,
+      "min_alpha_height": 312,
+      "max_alpha_height": 314,
+      "median_bottom": 368,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "leoric",
+      "sequence": "move_e",
+      "source_path": "assets/animations/heroes/leoric/move_e.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 220,
+      "median_alpha_height": 216,
+      "min_alpha_height": 214,
+      "max_alpha_height": 220,
+      "median_bottom": 368,
+      "bottom_spread_within_sheet": 1,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "leoric",
+      "sequence": "move_n",
+      "source_path": "assets/animations/heroes/leoric/move_n.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 209,
+      "median_alpha_height": 244,
+      "min_alpha_height": 237,
+      "max_alpha_height": 247,
+      "median_bottom": 368,
+      "bottom_spread_within_sheet": 1,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "leoric",
+      "sequence": "move_ne",
+      "source_path": "assets/animations/heroes/leoric/move_ne.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 236,
+      "median_alpha_height": 233,
+      "min_alpha_height": 230,
+      "max_alpha_height": 237,
+      "median_bottom": 368,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "leoric",
+      "sequence": "move_s",
+      "source_path": "assets/animations/heroes/leoric/move_s.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 210,
+      "median_alpha_height": 242,
+      "min_alpha_height": 241,
+      "max_alpha_height": 244,
+      "median_bottom": 368,
+      "bottom_spread_within_sheet": 1,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "leoric",
+      "sequence": "move_se",
+      "source_path": "assets/animations/heroes/leoric/move_se.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 222,
+      "median_alpha_height": 215,
+      "min_alpha_height": 213,
+      "max_alpha_height": 217,
+      "median_bottom": 368,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "maelor",
+      "sequence": "active",
+      "source_path": "assets/animations/heroes/maelor/active.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 256,
+      "median_alpha_height": 307,
+      "min_alpha_height": 303,
+      "max_alpha_height": 308,
+      "median_bottom": 347,
+      "bottom_spread_within_sheet": 16,
+      "frames_touching_cell_edge": 6,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "maelor",
+      "sequence": "attack",
+      "source_path": "assets/animations/heroes/maelor/attack.png",
+      "sheet_width": 1024,
+      "sheet_height": 384,
+      "frames": 4,
+      "median_alpha_width": 243,
+      "median_alpha_height": 332,
+      "min_alpha_height": 323,
+      "max_alpha_height": 339,
+      "median_bottom": 362,
+      "bottom_spread_within_sheet": 12,
+      "frames_touching_cell_edge": 2,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "maelor",
+      "sequence": "death",
+      "source_path": "assets/animations/heroes/maelor/death.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 254,
+      "median_alpha_height": 189,
+      "min_alpha_height": 91,
+      "max_alpha_height": 292,
+      "median_bottom": 343,
+      "bottom_spread_within_sheet": 71,
+      "frames_touching_cell_edge": 6,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "maelor",
+      "sequence": "idle",
+      "source_path": "assets/animations/heroes/maelor/idle.png",
+      "sheet_width": 1024,
+      "sheet_height": 384,
+      "frames": 4,
+      "median_alpha_width": 256,
+      "median_alpha_height": 345,
+      "min_alpha_height": 344,
+      "max_alpha_height": 345,
+      "median_bottom": 364,
+      "bottom_spread_within_sheet": 2,
+      "frames_touching_cell_edge": 4,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "maelor",
+      "sequence": "move_e",
+      "source_path": "assets/animations/heroes/maelor/move_e.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 173,
+      "median_alpha_height": 358,
+      "min_alpha_height": 354,
+      "max_alpha_height": 365,
+      "median_bottom": 373,
+      "bottom_spread_within_sheet": 16,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "maelor",
+      "sequence": "move_n",
+      "source_path": "assets/animations/heroes/maelor/move_n.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 159,
+      "median_alpha_height": 369,
+      "min_alpha_height": 356,
+      "max_alpha_height": 370,
+      "median_bottom": 377,
+      "bottom_spread_within_sheet": 19,
+      "frames_touching_cell_edge": 2,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "maelor",
+      "sequence": "move_ne",
+      "source_path": "assets/animations/heroes/maelor/move_ne.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 170,
+      "median_alpha_height": 358,
+      "min_alpha_height": 353,
+      "max_alpha_height": 360,
+      "median_bottom": 372,
+      "bottom_spread_within_sheet": 16,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "maelor",
+      "sequence": "move_nw",
+      "source_path": "assets/animations/heroes/maelor/move_nw.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 255,
+      "median_alpha_height": 353,
+      "min_alpha_height": 331,
+      "max_alpha_height": 359,
+      "median_bottom": 371,
+      "bottom_spread_within_sheet": 38,
+      "frames_touching_cell_edge": 6,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "maelor",
+      "sequence": "move_s",
+      "source_path": "assets/animations/heroes/maelor/move_s.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 237,
+      "median_alpha_height": 302,
+      "min_alpha_height": 291,
+      "max_alpha_height": 308,
+      "median_bottom": 361,
+      "bottom_spread_within_sheet": 58,
+      "frames_touching_cell_edge": 2,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "maelor",
+      "sequence": "move_se",
+      "source_path": "assets/animations/heroes/maelor/move_se.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 195,
+      "median_alpha_height": 359,
+      "min_alpha_height": 355,
+      "max_alpha_height": 360,
+      "median_bottom": 373,
+      "bottom_spread_within_sheet": 8,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "maelor",
+      "sequence": "move_sw",
+      "source_path": "assets/animations/heroes/maelor/move_sw.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 249,
+      "median_alpha_height": 322,
+      "min_alpha_height": 318,
+      "max_alpha_height": 326,
+      "median_bottom": 372,
+      "bottom_spread_within_sheet": 23,
+      "frames_touching_cell_edge": 6,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "maelor",
+      "sequence": "move_w",
+      "source_path": "assets/animations/heroes/maelor/move_w.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 220,
+      "median_alpha_height": 366,
+      "min_alpha_height": 360,
+      "max_alpha_height": 367,
+      "median_bottom": 375,
+      "bottom_spread_within_sheet": 8,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "nyrelia",
+      "sequence": "active",
+      "source_path": "assets/animations/heroes/nyrelia/active.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 223,
+      "median_alpha_height": 344,
+      "min_alpha_height": 302,
+      "max_alpha_height": 352,
+      "median_bottom": 368,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "nyrelia",
+      "sequence": "attack",
+      "source_path": "assets/animations/heroes/nyrelia/attack.png",
+      "sheet_width": 1024,
+      "sheet_height": 384,
+      "frames": 4,
+      "median_alpha_width": 208,
+      "median_alpha_height": 352,
+      "min_alpha_height": 349,
+      "max_alpha_height": 352,
+      "median_bottom": 368,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "nyrelia",
+      "sequence": "death",
+      "source_path": "assets/animations/heroes/nyrelia/death.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 224,
+      "median_alpha_height": 143,
+      "min_alpha_height": 90,
+      "max_alpha_height": 352,
+      "median_bottom": 368,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "nyrelia",
+      "sequence": "idle",
+      "source_path": "assets/animations/heroes/nyrelia/idle.png",
+      "sheet_width": 1024,
+      "sheet_height": 384,
+      "frames": 4,
+      "median_alpha_width": 180,
+      "median_alpha_height": 352,
+      "min_alpha_height": 352,
+      "max_alpha_height": 352,
+      "median_bottom": 368,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "nyrelia",
+      "sequence": "move_e",
+      "source_path": "assets/animations/heroes/nyrelia/move_e.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 224,
+      "median_alpha_height": 298,
+      "min_alpha_height": 284,
+      "max_alpha_height": 341,
+      "median_bottom": 368,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "nyrelia",
+      "sequence": "move_n",
+      "source_path": "assets/animations/heroes/nyrelia/move_n.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 224,
+      "median_alpha_height": 341,
+      "min_alpha_height": 300,
+      "max_alpha_height": 352,
+      "median_bottom": 368,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "nyrelia",
+      "sequence": "move_ne",
+      "source_path": "assets/animations/heroes/nyrelia/move_ne.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 178,
+      "median_alpha_height": 352,
+      "min_alpha_height": 352,
+      "max_alpha_height": 352,
+      "median_bottom": 368,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "nyrelia",
+      "sequence": "move_s",
+      "source_path": "assets/animations/heroes/nyrelia/move_s.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 185,
+      "median_alpha_height": 352,
+      "min_alpha_height": 352,
+      "max_alpha_height": 352,
+      "median_bottom": 368,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "nyrelia",
+      "sequence": "move_se",
+      "source_path": "assets/animations/heroes/nyrelia/move_se.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 190,
+      "median_alpha_height": 351,
+      "min_alpha_height": 350,
+      "max_alpha_height": 352,
+      "median_bottom": 368,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "sylas",
+      "sequence": "active",
+      "source_path": "assets/animations/heroes/sylas/active.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 253,
+      "median_alpha_height": 207,
+      "min_alpha_height": 190,
+      "max_alpha_height": 284,
+      "median_bottom": 381,
+      "bottom_spread_within_sheet": 116,
+      "frames_touching_cell_edge": 5,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "sylas",
+      "sequence": "attack",
+      "source_path": "assets/animations/heroes/sylas/attack.png",
+      "sheet_width": 1024,
+      "sheet_height": 384,
+      "frames": 4,
+      "median_alpha_width": 251,
+      "median_alpha_height": 369,
+      "min_alpha_height": 357,
+      "max_alpha_height": 374,
+      "median_bottom": 374,
+      "bottom_spread_within_sheet": 19,
+      "frames_touching_cell_edge": 3,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "sylas",
+      "sequence": "death",
+      "source_path": "assets/animations/heroes/sylas/death.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 253,
+      "median_alpha_height": 226,
+      "min_alpha_height": 108,
+      "max_alpha_height": 314,
+      "median_bottom": 377,
+      "bottom_spread_within_sheet": 83,
+      "frames_touching_cell_edge": 5,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "sylas",
+      "sequence": "idle",
+      "source_path": "assets/animations/heroes/sylas/idle.png",
+      "sheet_width": 1024,
+      "sheet_height": 384,
+      "frames": 4,
+      "median_alpha_width": 254,
+      "median_alpha_height": 373,
+      "min_alpha_height": 372,
+      "max_alpha_height": 375,
+      "median_bottom": 377,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 4,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "sylas",
+      "sequence": "move_e",
+      "source_path": "assets/animations/heroes/sylas/move_e.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 256,
+      "median_alpha_height": 323,
+      "min_alpha_height": 322,
+      "max_alpha_height": 327,
+      "median_bottom": 352,
+      "bottom_spread_within_sheet": 6,
+      "frames_touching_cell_edge": 6,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "sylas",
+      "sequence": "move_n",
+      "source_path": "assets/animations/heroes/sylas/move_n.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 238,
+      "median_alpha_height": 331,
+      "min_alpha_height": 326,
+      "max_alpha_height": 333,
+      "median_bottom": 361,
+      "bottom_spread_within_sheet": 14,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "sylas",
+      "sequence": "move_ne",
+      "source_path": "assets/animations/heroes/sylas/move_ne.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 256,
+      "median_alpha_height": 316,
+      "min_alpha_height": 308,
+      "max_alpha_height": 320,
+      "median_bottom": 364,
+      "bottom_spread_within_sheet": 27,
+      "frames_touching_cell_edge": 6,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "sylas",
+      "sequence": "move_nw",
+      "source_path": "assets/animations/heroes/sylas/move_nw.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 248,
+      "median_alpha_height": 349,
+      "min_alpha_height": 334,
+      "max_alpha_height": 354,
+      "median_bottom": 368,
+      "bottom_spread_within_sheet": 28,
+      "frames_touching_cell_edge": 5,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "sylas",
+      "sequence": "move_s",
+      "source_path": "assets/animations/heroes/sylas/move_s.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 249,
+      "median_alpha_height": 342,
+      "min_alpha_height": 338,
+      "max_alpha_height": 345,
+      "median_bottom": 360,
+      "bottom_spread_within_sheet": 11,
+      "frames_touching_cell_edge": 5,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "sylas",
+      "sequence": "move_se",
+      "source_path": "assets/animations/heroes/sylas/move_se.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 247,
+      "median_alpha_height": 338,
+      "min_alpha_height": 326,
+      "max_alpha_height": 338,
+      "median_bottom": 365,
+      "bottom_spread_within_sheet": 16,
+      "frames_touching_cell_edge": 6,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "sylas",
+      "sequence": "move_sw",
+      "source_path": "assets/animations/heroes/sylas/move_sw.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 253,
+      "median_alpha_height": 339,
+      "min_alpha_height": 336,
+      "max_alpha_height": 339,
+      "median_bottom": 374,
+      "bottom_spread_within_sheet": 20,
+      "frames_touching_cell_edge": 6,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "sylas",
+      "sequence": "move_w",
+      "source_path": "assets/animations/heroes/sylas/move_w.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 256,
+      "median_alpha_height": 303,
+      "min_alpha_height": 299,
+      "max_alpha_height": 303,
+      "median_bottom": 357,
+      "bottom_spread_within_sheet": 38,
+      "frames_touching_cell_edge": 6,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "zynara",
+      "sequence": "active",
+      "source_path": "assets/animations/heroes/zynara/active.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 211,
+      "median_alpha_height": 368,
+      "min_alpha_height": 368,
+      "max_alpha_height": 368,
+      "median_bottom": 376,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "zynara",
+      "sequence": "attack",
+      "source_path": "assets/animations/heroes/zynara/attack.png",
+      "sheet_width": 1024,
+      "sheet_height": 384,
+      "frames": 4,
+      "median_alpha_width": 240,
+      "median_alpha_height": 367,
+      "min_alpha_height": 211,
+      "max_alpha_height": 368,
+      "median_bottom": 376,
+      "bottom_spread_within_sheet": 1,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "zynara",
+      "sequence": "death",
+      "source_path": "assets/animations/heroes/zynara/death.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 240,
+      "median_alpha_height": 314,
+      "min_alpha_height": 215,
+      "max_alpha_height": 368,
+      "median_bottom": 376,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "zynara",
+      "sequence": "idle",
+      "source_path": "assets/animations/heroes/zynara/idle.png",
+      "sheet_width": 1024,
+      "sheet_height": 384,
+      "frames": 4,
+      "median_alpha_width": 166,
+      "median_alpha_height": 368,
+      "min_alpha_height": 368,
+      "max_alpha_height": 368,
+      "median_bottom": 376,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "zynara",
+      "sequence": "move_e",
+      "source_path": "assets/animations/heroes/zynara/move_e.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 226,
+      "median_alpha_height": 368,
+      "min_alpha_height": 365,
+      "max_alpha_height": 368,
+      "median_bottom": 376,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "zynara",
+      "sequence": "move_n",
+      "source_path": "assets/animations/heroes/zynara/move_n.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 156,
+      "median_alpha_height": 368,
+      "min_alpha_height": 368,
+      "max_alpha_height": 368,
+      "median_bottom": 376,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "zynara",
+      "sequence": "move_ne",
+      "source_path": "assets/animations/heroes/zynara/move_ne.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 189,
+      "median_alpha_height": 367,
+      "min_alpha_height": 367,
+      "max_alpha_height": 368,
+      "median_bottom": 376,
+      "bottom_spread_within_sheet": 1,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "zynara",
+      "sequence": "move_s",
+      "source_path": "assets/animations/heroes/zynara/move_s.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 152,
+      "median_alpha_height": 368,
+      "min_alpha_height": 367,
+      "max_alpha_height": 368,
+      "median_bottom": 376,
+      "bottom_spread_within_sheet": 0,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    },
+    {
+      "hero_id": "zynara",
+      "sequence": "move_se",
+      "source_path": "assets/animations/heroes/zynara/move_se.png",
+      "sheet_width": 1536,
+      "sheet_height": 384,
+      "frames": 6,
+      "median_alpha_width": 207,
+      "median_alpha_height": 368,
+      "min_alpha_height": 367,
+      "max_alpha_height": 368,
+      "median_bottom": 376,
+      "bottom_spread_within_sheet": 1,
+      "frames_touching_cell_edge": 0,
+      "blank_frames": 0
+    }
+  ]
+}

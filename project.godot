@@ -29,8 +29,8 @@ window/stretch/mode="canvas_items"
 
 [gui]
 
-theme/custom="res://ui/theme.tres"
 timers/tooltip_delay_sec=0.15
+theme/custom="res://ui/theme.tres"
 
 [rendering]
 
