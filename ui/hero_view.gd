@@ -15,7 +15,7 @@ const HERO_DISPLAY_HEIGHT := {
 ## Se a arte for regenerada, atualizar aqui (tests/test_animation_assets.gd confere).
 const HERO_IDLE_ART_HEIGHT := {
 	&"korrak": 316.0, &"kayron": 371.0, &"sylas": 365.0, &"maelor": 337.0, &"nyrelia": 352.0,
-	&"durvall": 293.0, &"zynara": 368.0, &"bromnor": 336.0, &"leoric": 313.0, &"brook": 259.0,
+	&"durvall": 279.0, &"zynara": 368.0, &"bromnor": 284.0, &"leoric": 270.0, &"brook": 259.0,
 }
 const WALK_DIRECTIONS := [&"e", &"se", &"s", &"sw", &"w", &"nw", &"n", &"ne"]
 const WALK_SOURCE_DIRECTIONS := [&"e", &"se", &"s", &"n", &"ne"]
