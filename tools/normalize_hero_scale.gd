@@ -22,11 +22,14 @@ func _initialize() -> void:
 	var apply := false
 	var only_hero := ""
 	var groups: Array = ["move"]
+	var fixed_factor := 0.0
 	for arg in OS.get_cmdline_user_args():
 		if arg == "--apply":
 			apply = true
 		elif arg.begins_with("--hero="):
 			only_hero = arg.substr(7)
+		elif arg.begins_with("--factor="):
+			fixed_factor = float(arg.substr(9))
 		elif arg.begins_with("--residual="):
 			max_residual = float(arg.substr(11))
 		elif arg.begins_with("--only="):
@@ -40,7 +43,10 @@ func _initialize() -> void:
 	for hero_id in directory.get_directories():
 		if only_hero != "" and hero_id != only_hero:
 			continue
-		_process_hero(hero_id, groups, apply)
+		if fixed_factor > 0.0:
+			_apply_fixed(hero_id, groups, fixed_factor, apply)
+		else:
+			_process_hero(hero_id, groups, apply)
 	quit()
 
 func _sequences(groups: Array) -> Array:
@@ -95,7 +101,7 @@ func _process_hero(hero_id: String, groups: Array, apply: bool) -> void:
 		var limit_h := float(MAX_HEIGHT) / float(maxi(1, _max(data.heights)))
 		var factor := minf(wanted, minf(limit_w, limit_h))
 		var reason := "ok" if factor >= wanted - 0.001 else "limitado pela celula (queria %.3f)" % wanted
-		var changed := absf(factor - 1.0) >= MIN_CHANGE or absi(_median(data.bottoms) - ref_bottom) > 2
+		var changed: bool = absf(factor - 1.0) >= MIN_CHANGE or absi(_median(data.bottoms) - ref_bottom) > 2 or int(data.edges) > 0
 		var new_w := int(round(_median(data.widths) * factor))
 		var new_h := int(round(height * factor))
 		var applied := "nao"
@@ -113,10 +119,12 @@ func _load(path: String, frames_count: int) -> Dictionary:
 	image.convert(Image.FORMAT_RGBA8)
 	if image.get_size() != Vector2i(frames_count * CELL.x, CELL.y):
 		return {}
-	var result := {"image": image, "frames": frames_count, "rects": [], "heights": [], "widths": [], "bottoms": []}
+	var result := {"image": image, "frames": frames_count, "rects": [], "heights": [], "widths": [], "bottoms": [], "edges": 0}
 	for index in frames_count:
 		var rect := _bounds(image, index)
 		result.rects.append(rect)
+		if rect.size != Vector2i.ZERO and (rect.position.x <= 1 or rect.position.y <= 1 or rect.end.x >= CELL.x - 1 or rect.end.y >= CELL.y - 1):
+			result.edges += 1
 		if rect.size == Vector2i.ZERO:
 			continue
 		result.heights.append(rect.size.y)
@@ -178,3 +186,21 @@ func _max(values: Array) -> int:
 	for value in values:
 		best = maxi(best, value)
 	return best
+
+## Modo --factor=F: aplica um fator fixo às tiras de ataque, habilidade e morte, mantendo a base de cada tira.
+## Usado para acompanhar a redução do idle de um herói (mesma relação ataque/idle de antes). Ex.: --hero=sylas --factor=0.833 --apply
+func _apply_fixed(hero_id: String, groups: Array, factor: float, apply: bool) -> void:
+	var root := ProjectSettings.globalize_path("res://assets/animations/heroes/%s" % hero_id)
+	for sequence in groups:
+		if not (sequence in ["attack", "active", "death"]):
+			continue
+		var data := _load("%s/%s.png" % [root, sequence], FRAMES[sequence])
+		if data.is_empty():
+			print("%s,%s,invalido" % [hero_id, sequence])
+			continue
+		var bottom := _median(data.bottoms)
+		var applied := "nao"
+		if apply:
+			_write("%s/%s.png" % [root, sequence], data, factor, bottom, bottom)
+			applied = "sim"
+		print("%s,%s,fator=%.4f,altura %d -> %d,aplicado=%s" % [hero_id, sequence, factor, _median(data.heights), int(round(_median(data.heights) * factor)), applied])
