@@ -91,3 +91,8 @@ Itens escolhidos: **D1 + D2 + D3 (lote Impacto)**. Implementados 2026-10-01:
 
 ## D6 implementado (2026-10-01)
 `ui/run.gd` `_loot_reveal`, disparado pelos eventos `item` e `item_offer` (baú, destrutível, Mímico, chefe): anel e faíscas na cor da raridade (comum só faíscas; mágico, raro e único com anel crescente 1,1 / 1,5 / 2,0) e o nome do item flutuando acima do herói, maior e em destaque para raro e único. A marca "(sorte)" aparece em itens acima de comum quando a Sorte do herói é positiva (aproximação: o jogo não registra se a Sorte mudou o sorteio). "Reduzir efeitos de impacto" corta as faíscas pela metade. O item não "salta" fisicamente: ele já vai direto para o herói. Sem teste automático; conferir em run real.
+
+## D4 implementado (2026-10-01)
+- `core/battle.gd` (`_tide_kill`, `tide_xp_bonus`, evento `streak`): janela de 3 s sem matar zera a sequência; marcos em 10 / 25 / 50 / 100 / 200 com os nomes **Maré Cinzenta, Maré Negra, Maré de Gehenna, Maré do Abismo, Maré Sem Fundo** (propostos a partir do Vault, ajustáveis na constante `TIDE_MARKS`). Cada marco dá +2% de XP coletado por 5 s, com teto de +10%. Aviso via `hud.toast` em `ui/run.gd`. Não consome a RNG. Testes em `tests/test_tide.gd`.
+- **Ainda não medido com o bot** (o XP extra pode mudar o ritmo de nível); abrir cartão BAL se o bot indicar desvio.
+- **Conquistas de sequência sem dano** (pedido do dono): `Intocado` (25, +100 moedas), `Sombra Sem Marca` (75, +250) e `Maré Sem Rastro` (200, +600), por run, via `stats.clean_kills` (zera em `_hurt_hero`; guarda o melhor em `clean_streak_best`) e `run_clean_streak` em `core/profile.gd`. Dano absorvido por guarda ou barreira não zera.

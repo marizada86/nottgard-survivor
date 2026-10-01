@@ -75,7 +75,7 @@ var free_revive_used := false
 var death_reward_rate := 0.5
 var death_reason := ""
 var invuln := 0.0
-var stats := {"kills": 0, "crits": 0, "ones": 0, "elites": 0, "bosses": 0, "chests": 0, "gold": 0.0, "damage_taken": 0.0, "stages_cleared": 0, "rituals": 0, "bets_won": 0, "loyalty": 0, "boss_ids": [], "stage_ids": [], "cleared_ids": []}
+var stats := {"kills": 0, "crits": 0, "ones": 0, "elites": 0, "bosses": 0, "chests": 0, "gold": 0.0, "damage_taken": 0.0, "clean_kills": 0, "clean_streak_best": 0, "stages_cleared": 0, "rituals": 0, "bets_won": 0, "loyalty": 0, "boss_ids": [], "stage_ids": [], "cleared_ids": []}
 var codex := {"enemies": {}, "items": {}, "weapons": {}}
 var _acc := {}
 var _elites_done := {}
@@ -110,6 +110,16 @@ var active_guard := 0
 var active_guard_t := 0.0
 var barrier := 0.0
 var shadow_charge := false
+
+## MEC-031 D4 (Maré do Abismo): sequência de abates; some se ficar 3 s sem matar.
+const TIDE_WINDOW := 3.0
+const TIDE_BUFF_SECONDS := 5.0
+const TIDE_BUFF_XP := 0.02
+const TIDE_BUFF_CAP := 0.10
+const TIDE_MARKS := {10: "Maré Cinzenta", 25: "Maré Negra", 50: "Maré de Gehenna", 100: "Maré do Abismo", 200: "Maré Sem Fundo"}
+var tide_kills := 0
+var tide_last_t := -100.0
+var _tide_buffs: Array = []  # instantes (time) em que cada marco expira
 var descent_depth := 0
 var stage_rule: Dictionary = {}
 var stage_events: Array = []
@@ -465,6 +475,8 @@ func step(screen_dir: Vector2, dt: float) -> void:
 		return
 	time += dt
 	run_time += dt
+	if tide_kills > 0 and time - tide_last_t > TIDE_WINDOW:
+		tide_kills = 0
 	_update_effect_timers(dt)
 	invuln = maxf(0.0, invuln - dt)
 	hero.push = Vector2.ZERO
@@ -1164,6 +1176,7 @@ func _hurt_hero(dmg: float, src: String, bypass_generic_defenses: bool = false) 
 	if not bypass_generic_defenses:
 		invuln = maxf(invuln, HIT_INVULN)
 	stats.damage_taken += dmg
+	stats.clean_kills = 0
 	events.append({"type": "hurt", "pos": hero.pos, "amount": int(dmg)})
 	if _has_boon_effect("pain_retaliation") and not bypass_generic_defenses:
 		for e in enemies:
@@ -1217,12 +1230,33 @@ func decline_revive() -> bool:
 
 # ------------------------------------------------------------------ mortes e drops
 
+## Conta o abate na sequência e dispara o marco, com recompensa pequena e limitada.
+func _tide_kill() -> void:
+	if time - tide_last_t > TIDE_WINDOW:
+		tide_kills = 0
+	tide_kills += 1
+	tide_last_t = time
+	if TIDE_MARKS.has(tide_kills):
+		_tide_buffs.append(time + TIDE_BUFF_SECONDS)
+		events.append({"type": "streak", "count": tide_kills, "name": TIDE_MARKS[tide_kills], "xp_bonus": tide_xp_bonus()})
+
+## Bônus de XP vigente da Maré: +2 % por marco ativo, no máximo +10 %.
+func tide_xp_bonus() -> float:
+	var active := 0
+	for expiry in _tide_buffs:
+		if float(expiry) > time:
+			active += 1
+	return minf(TIDE_BUFF_CAP, TIDE_BUFF_XP * active)
+
 func _kill(e: Enemy) -> void:
 	if e.dead:
 		return
 	e.dead = true
 	codex.enemies[e.id] = true
 	stats.kills += 1
+	_tide_kill()
+	stats.clean_kills += 1
+	stats.clean_streak_best = maxi(int(stats.clean_streak_best), int(stats.clean_kills))
 	var xp_v := float(e.xp)
 	events.append({"type": "kill", "pos": e.pos, "enemy": e})
 	if e.burn_t > 0.0 and _has_item_effect("burn_spread") and float(_effect_cd.get("burn_spread", 0.0)) <= 0.0:
@@ -1436,7 +1470,7 @@ func _drop(kind: String, at: Vector2, value: float) -> void:
 func _collect(kind: String, value: float) -> void:
 	events.append({"type": "pickup", "kind": kind, "pos": hero.pos})
 	match kind:
-		"xp": _add_xp(value * (1.0 + hero.m("xp_pct")))
+		"xp": _add_xp(value * (1.0 + hero.m("xp_pct") + tide_xp_bonus()))
 		"gold": _add_gold(value)
 		"potion":
 			_heal_hero(hero.max_hp * value)
@@ -2507,6 +2541,6 @@ func _styx_lucidity_test(dc: int) -> void:
 func result() -> Dictionary:
 	return {"won": state == "won", "dead": state == "dead", "extracted": extracted, "time": run_time, "kills": stats.kills,
 		"gold": int(round(stats.gold * reward_multiplier())), "raw_gold": int(stats.gold), "reward_mult": reward_multiplier(), "descent_depth": descent_depth,
-		"level": hero.level, "stage": stage_id, "hero": hero.id, "bosses": stats.bosses, "boss_ids": stats.boss_ids, "elites": stats.elites, "crits": stats.crits,
+		"clean_streak": stats.clean_streak_best, "level": hero.level, "stage": stage_id, "hero": hero.id, "bosses": stats.bosses, "boss_ids": stats.boss_ids, "elites": stats.elites, "crits": stats.crits,
 		"ones": stats.ones, "rituals": stats.rituals, "bets_won": stats.bets_won, "loyalty": stats.loyalty, "chests": stats.chests, "stages_cleared": stats.stages_cleared, "stage_ids": stats.stage_ids, "cleared_ids": stats.cleared_ids, "final_victory": final_victory, "weapons": hero.weapons.map(func(w): return w.id), "codex": codex,
 		"reward_rate": death_reward_rate if state == "dead" else 1.0, "death_reason": death_reason}
