@@ -7,7 +7,7 @@
   bestiário ([RESEARCH-001](../vault/research/RESEARCH-001-abismo-bestiario-visual-2026-09-21.md)),
   sem inventar lore. Sem história: a lore é só sabor.
 - Itens abertos acumulam até fechar um **lote**. O lote sai como um único
-  `ART-PROMPTS-NNN` (próximo livre: **038**) para o gerador de imagem.
+  `ART-PROMPTS-NNN` (próximo livre: **038** (já há rascunhos 038 em generated/)) para o gerador de imagem.
 - Candidatos ficam em `.atena/generated/` até admissão explícita do dono.
 
 ## Abertos
@@ -36,6 +36,10 @@
 | ART-018 | props/NPC | Asset da **Ampulheta** (evento que adianta o tempo do mapa). Hoje é um quadrado lilás com rótulo; PNG definitivo em `assets/interactions/ampulheta.png` | [[SPEC-085-jogar-mais-rapido-2x-e-ampulheta]] | acompanha MEC-010 |
 | ART-019 | props/NPC | Asset do **Altar da Doação** (evento). Hoje quadrado lilás com rótulo; PNG em `assets/interactions/doacao.png` | [[SPEC-087-fidelidade-e-eventos-de-risco]] | acompanha MEC-005 |
 | ART-020 | props/NPC | Asset da **Mesa de Aposta** (evento). PNG em `assets/interactions/aposta.png` | [[SPEC-087-fidelidade-e-eventos-de-risco]] | acompanha MEC-005 |
+| ART-024 | asset | **Miniatura de Docas** (`assets/stages/docas_thumb.png`): hoje a linha "2. Docas" do menu aparece sem imagem | Docas · cais, fenda e porão ritual | [EVID-139](../evidence/EVID-139-playtest-higor-qa-14b15e4-2026-10-01.md) IN-045 | ART-PROMPTS-039 pronto (`.atena/generated/`), aguarda geração da imagem |
+| ART-025 | background | **Fundos das fases** melhorados e coerentes com o cenário e com os novos assets (piloto Dagruve + Docas) | Dagruve (névoa/culto) · Docas (cais) | [EVID-139](../evidence/EVID-139-playtest-higor-qa-14b15e4-2026-10-01.md) IN-047/048 | destrava MEC-030 |
+| ART-026 | props | Props temáticos do piloto: estradas, carroças, destrutíveis, objeto interativo e armadilha por bioma | Dagruve · Docas | [EVID-139](../evidence/EVID-139-playtest-higor-qa-14b15e4-2026-10-01.md) IN-047 | destrava MEC-030 |
+| ART-027 | sprite + VFX | Cópia-isca de Sylas (Passo pelas Sombras) e explosão sombria | Mask / sombra | [EVID-139](../evidence/EVID-139-playtest-higor-qa-14b15e4-2026-10-01.md) IN-043 | destrava MEC-029 |
 
 > **Fila consolidada para o ChatGPT:**
 > [CHATGPT-FILA-001](../generated/CHATGPT-FILA-001-prompts-prontos.md) reúne os

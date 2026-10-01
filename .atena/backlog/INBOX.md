@@ -82,3 +82,18 @@ Origem: [EVID-108](../evidence/EVID-108-playtest-publico-t03-dna-2026-09-29.md) 
 | IN-038 | T03-S1-N6 | "+1 redução": redução do quê? | ART-017 |
 | IN-039 | T03 texto livre | Mais dificuldade e mobs no início | MEC-024 (mesmo relato) |
 | — | Questionário 002 | 14 respostas + prioridades 2, 9, 6 + nota 10 | contadores nos cartões; tabela no EVID-108 |
+
+## Classificados — playtest Higor 2026-10-01
+
+Origem: [EVID-139](../evidence/EVID-139-playtest-higor-qa-14b15e4-2026-10-01.md) (build qa, commit 14b15e4).
+
+| ID | Tema | Destino |
+|---|---|---|
+| IN-041 | F5 sobre HQ: espaço passa a HQ | BUG-020 |
+| IN-042 | HQ Peregrinação, quadro 2: braço de Korrak fundido ao machado | BUG-022 |
+| IN-043 | Passo pelas Sombras fraco; quer cópia que atrai inimigos | MEC-029, ART-027 |
+| IN-044 | Deformação de sprites ao andar | BUG-021 |
+| IN-045 | Imagem das Docas e mapas 1-2 em 5 min | ART-024, BAL-011 |
+| IN-046 | Movimento dos inimigos aprovado; seguir com novos inimigos | sem ação (registro) |
+| IN-047 | Cenário sem sentido; estradas, carroças, destrutíveis, armadilhas | MEC-030, ART-025, ART-026 |
+| IN-048 | Jogo "cru, sem alma"; dopamina, história, fundos | MEC-031, MEC-032, ART-025 |
