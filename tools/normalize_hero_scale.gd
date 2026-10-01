@@ -14,7 +14,7 @@ const MAX_HEIGHT := 376
 const MIN_BOTTOM_MARGIN := 3
 const EDGE_MARGIN := 3
 const MIN_CHANGE := 0.03
-const MAX_RESIDUAL := 1.18
+var max_residual := 1.18
 const FRAMES := {"idle": 4, "move": 6, "attack": 4, "active": 6, "death": 6}
 const MOVE_DIRECTIONS := ["n", "ne", "e", "se", "s"]
 
@@ -27,6 +27,8 @@ func _initialize() -> void:
 			apply = true
 		elif arg.begins_with("--hero="):
 			only_hero = arg.substr(7)
+		elif arg.begins_with("--residual="):
+			max_residual = float(arg.substr(11))
 		elif arg.begins_with("--only="):
 			groups = arg.substr(7).split(",")
 	var directory := DirAccess.open("res://assets/animations/heroes")
@@ -70,7 +72,7 @@ func _process_hero(hero_id: String, groups: Array, apply: bool) -> void:
 				continue
 			var walk_fit := float(_median(walk.heights)) * float(MAX_WIDTH) / float(maxi(1, _max(walk.widths)))
 			fit_height = mini(fit_height, int(walk_fit))
-		ref_height = mini(idle_height, int(float(fit_height) * MAX_RESIDUAL))
+		ref_height = mini(idle_height, int(float(fit_height) * max_residual))
 		var idle_factor := float(ref_height) / float(idle_height)
 		if absf(idle_factor - 1.0) >= MIN_CHANGE:
 			var idle_applied := "nao"
