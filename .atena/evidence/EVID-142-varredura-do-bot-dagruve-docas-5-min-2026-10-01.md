@@ -37,3 +37,23 @@ Docas → Shedaklah: Korrak 10, Bromnor 6, Brook 4, Leoric 4, Sylas 2, Maelor 2,
 
 ## Cartões abertos por esta varredura
 BAL-012 (chefes de Dagruve e Docas), BAL-013 (Kayron), BAL-014 (Nyrelia, Zynara e Durvall frágeis).
+
+## Investigação do Kayron (BAL-013) — 2026-10-01: **não é regressão**
+Comparação controlada, 30 sementes, só Dagruve, Kayron e dois heróis de controle:
+- **A:** build antiga (`adaf31b`, linha de base de EVID-110), mapa de 8 min.
+- **B:** build atual, mas com `data/stages.json` de 8 min (isola o efeito da duração).
+- **C:** build atual, 5 min (a varredura acima).
+
+| Herói | A (antiga, 8 min) | B (atual, 8 min) | C (atual, 5 min) |
+|---|---:|---:|---:|
+| Kayron | 5,8 (mediana 4,5) | 5,3 (4,0) | 5,6 (4,5) |
+| Korrak | 14,6 (15,0) | 13,7 (13,5) | 13,5 (13,5) |
+| Durvall | 6,9 (6,0) | 6,4 (5,0) | 6,6 (6,0) |
+
+Conclusões:
+1. Com 30 sementes o Kayron já era **~5,8 na build antiga**: o "10,2" de EVID-110 saiu de **5 sementes** e era ruído. Não houve queda por conteúdo novo.
+2. O mapa de 5 min praticamente não muda o resultado do bot (B ≈ C).
+3. Há uma queda pequena e uniforme da build antiga para a atual (−0,5 a −1,0 nível nos três heróis, dentro do erro de ~0,8). A causa mais provável é o loot dos destrutíveis (55 % de chance em vez de sempre soltar algo, MEC-033), que reduz poções e ímãs. Não é específica do Kayron.
+4. O **Kayron é simplesmente um herói fraco para o bot** nas duas builds (mediana 4 a 4,5). Isso é um tema de balanceamento (BAL-014), não de regressão.
+5. A comparação de EVID-110 com sementes baixas **não é confiável**; o mesmo pode valer para a queda aparente da Nyrelia (6,0 → 4,1).
+Dados brutos: logs `out_A_*`/`out_B_*` em `F:\dev\_wt_tmp\` (fora do repositório).
