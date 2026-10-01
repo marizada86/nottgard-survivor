@@ -25,6 +25,7 @@ const HQCatalog := preload("res://core/hq_catalog.gd")
 @onready var sfx_mute_opt: CheckBox = %SfxMuteOpt
 @onready var ambience_mute_opt: CheckBox = %AmbienceMuteOpt
 @onready var reduced_impact_opt: CheckBox = %ReducedImpactOpt
+@onready var barks_opt: CheckBox = %BarksOpt
 @onready var display_mode_opt: OptionButton = %DisplayModeOpt
 @onready var resolution_opt: OptionButton = %ResolutionOpt
 @onready var diff_opt: OptionButton = %DiffOpt
@@ -77,6 +78,7 @@ func _ready() -> void:
 	sfx_mute_opt.toggled.connect(func(muted): _save_audio_mute("sfx", muted))
 	ambience_mute_opt.toggled.connect(func(muted): _save_audio_mute("ambience", muted))
 	reduced_impact_opt.toggled.connect(func(on): _save_reduced_impact(on))
+	barks_opt.toggled.connect(func(on): _save_barks(on))
 	for label in ["Janela", "Sem borda", "Tela cheia (F11)"]:
 		display_mode_opt.add_item(label)
 	display_mode_opt.item_selected.connect(func(index):
@@ -132,6 +134,7 @@ func _refresh_all() -> void:
 	sfx_mute_opt.set_pressed_no_signal(bool(p.data.settings.get("sfx_muted", false)))
 	ambience_mute_opt.set_pressed_no_signal(bool(p.data.settings.get("ambience_muted", false)))
 	reduced_impact_opt.set_pressed_no_signal(bool(p.data.settings.get("reduced_impact", false)))
+	barks_opt.set_pressed_no_signal(bool(p.data.settings.get("barks", true)))
 	display_mode_opt.select(Game.WINDOW_MODES.find(String(p.data.settings.get("window_mode", "windowed"))))
 	resolution_opt.select(Game.SUPPORTED_RESOLUTIONS.find(String(p.data.settings.get("resolution", "1280x720"))))
 	diff_opt.select(int(p.data.settings.difficulty))
@@ -149,6 +152,10 @@ func _save_audio_setting(key: String, value: float) -> void:
 	Game.apply_settings()
 	Game.save()
 
+
+func _save_barks(on: bool) -> void:
+	Game.profile.data.settings["barks"] = on
+	Game.save()
 
 func _save_reduced_impact(on: bool) -> void:
 	Game.profile.data.settings["reduced_impact"] = on

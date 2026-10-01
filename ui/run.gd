@@ -75,6 +75,7 @@ func _ready() -> void:
 	if battle.state == "revive_offer":
 		hud.show_revive_offer(battle)
 	hud.toast("%s — %s" % [battle.stage.name, Data.table("stage_story").get(battle.stage_id, {}).get("epigrafe", battle.stage.sub)], Color(0.9, 0.85, 0.6))
+	_bark("entrada")
 	await _present_hqs(HQCatalog.newly_triggered_ids(Game.profile.data, "first_run"))
 	await _record_stage_reached(battle.stage_id)
 
@@ -420,6 +421,7 @@ func _process(dt: float) -> void:
 	_shake = maxf(0.0, _shake - dt * 3.0)
 	camera.position = hero_node.position + Vector2(randf_range(-1, 1), randf_range(-1, 1)) * _shake * 6.0
 	_update_fog_overlay()
+	_update_low_hp_bark()
 
 func _sync() -> void:
 	var h := battle.hero
@@ -590,6 +592,7 @@ func _consume_events() -> void:
 				Sfx.play("progress.levelup")
 			"boss":
 				Sfx.play_boss(String(ev.enemy.id), "arrival")
+				_bark("chefe")
 				Sfx.start_music("boss")
 				_shake = 1.2
 			"boss_intro":
@@ -827,6 +830,48 @@ func _kill_burst(enemy: Enemy, at: Vector2) -> void:
 		_hit_stop(0.05)
 	elif under.has_method("spawn_impact"):
 		under.call("spawn_impact", at, 2 if reduced else 5, tint)
+
+## Falas do herói (SPEC-117 H3): balão discreto em entrada, chefe e pouca vida; opcional em Opções.
+const BARK_LOW_HP := 0.3
+var _bark_label: Label
+var _bark_low_armed := true
+var _bark_low_last_ms := -100000
+
+func _bark(trigger: String) -> void:
+	if hero_node == null or battle == null or not bool(Game.profile.data.settings.get("barks", true)):
+		return
+	var lines: Array = Data.table("barks").get(battle.hero.id, {}).get(trigger, [])
+	if lines.is_empty():
+		return
+	if is_instance_valid(_bark_label):
+		_bark_label.queue_free()
+	var l := Label.new()
+	l.text = "“%s”" % String(lines[randi() % lines.size()])
+	l.custom_minimum_size = Vector2(190, 0)
+	l.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	l.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	l.add_theme_font_size_override("font_size", 12)
+	l.add_theme_color_override("font_color", Color(0.96, 0.92, 0.8))
+	l.add_theme_color_override("font_outline_color", Color(0.05, 0.04, 0.08))
+	l.add_theme_constant_override("outline_size", 5)
+	l.position = hero_node.position + Vector2(-95, -118)
+	fx.add_child(l)
+	_bark_label = l
+	var t := create_tween()
+	t.tween_interval(2.6)
+	t.tween_property(l, "modulate:a", 0.0, 0.6)
+	t.tween_callback(l.queue_free)
+
+func _update_low_hp_bark() -> void:
+	if battle == null or battle.hero == null or battle.hero.dead:
+		return
+	var fraction: float = battle.hero.hp / battle.hero.max_hp
+	if fraction > 0.5:
+		_bark_low_armed = true
+	elif fraction < BARK_LOW_HP and _bark_low_armed and Time.get_ticks_msec() - _bark_low_last_ms > 20000:
+		_bark_low_armed = false
+		_bark_low_last_ms = Time.get_ticks_msec()
+		_bark("vida")
 
 ## Revelação do loot (SPEC-116 D6): brilho, anel e nome na cor da raridade; a Sorte aparece quando ajudou.
 const LOOT_FX := {"comum": {"ring": 0.8, "sparks": 3, "size": 12}, "magico": {"ring": 1.1, "sparks": 6, "size": 14},

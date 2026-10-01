@@ -1,0 +1,53 @@
+{
+  "_fonte": "Falas aprovadas pelo dono em 2026-10-01 (rascunho H3, SPEC-117), derivadas de hero_bios.json. Gatilhos: entrada, chefe, vida (abaixo de 30% de PV). Sem cânone do mestre.",
+  "durvall": {
+    "entrada": ["Cada lugar novo me devolve um pedaço do que esqueci.", "Helion confiou em mim. Não vou falhar com ele."],
+    "chefe": ["Isso eu não esqueceria.", "Que venha. Meu passado já pesa mais."],
+    "vida": ["Ainda não... eu preciso lembrar.", "Segura, Durvall. Segura."]
+  },
+  "brook": {
+    "entrada": ["Não me chamem de pequeno. De novo.", "Padrinho, se estiver ouvindo, estou chegando."],
+    "chefe": ["Ah, ótimo. Mais um gigante.", "Humanos não são o problema aqui!"],
+    "vida": ["Bromnor não me ensinou a cair.", "Ainda de pé. Irritado, mas de pé."]
+  },
+  "maelor": {
+    "entrada": ["Sendrinah, guia meus passos. E meus dados, por favor.", "Sinto a voz da estrela me chamando."],
+    "chefe": ["Ailalore, dê-me forças. E um pouco de sorte.", "Sylas, fique por perto. Para eu ter alguém para culpar."],
+    "vida": ["A sorte me deve uma, Sendrinah.", "Ainda tenho fé. Muita. Preciso dela agora."]
+  },
+  "sylas": {
+    "entrada": ["Mask vê o que a névoa esconde. Eu só vejo mais névoa.", "Mais um rito contra a névoa."],
+    "chefe": ["Nyrelia me ensinou a não recuar. Não me ensinou a gostar.", "Nas sombras, eu sou melhor."],
+    "vida": ["Sombras, não me abandonem agora.", "Eu já sobrevivi a pior. Acho."]
+  },
+  "kayron": {
+    "entrada": ["Há inscrições abissais aqui. Vou lê-las.", "Zynara quer respostas. Eu as trago."],
+    "chefe": ["Esse armamento cheira a guerra humana.", "Sangue celestial, não me falhe."],
+    "vida": ["Shar, não me deixe ver a luz ainda.", "Preciso de mais um rito."]
+  },
+  "bromnor": {
+    "entrada": ["Todas as raças juntas, ou nenhuma sobrevive.", "Fateridge resiste. Eu também."],
+    "chefe": ["Eu já enfrentei coisa pior que você!", "Pela luz do martelo!"],
+    "vida": ["Um anão só cai quando quer.", "Brook... aguenta, rapaz."]
+  },
+  "zynara": {
+    "entrada": ["O Conselho precisa de informação, não de heroísmo.", "Observe antes de agir."],
+    "chefe": ["Interessante. Anote tudo.", "Isto estava no relatório. Mal."],
+    "vida": ["Recuar também é estratégia.", "Isso não estava nos planos."]
+  },
+  "nyrelia": {
+    "entrada": ["Mask acompanha quem anda em silêncio.", "Cuido de quem preciso cuidar."],
+    "chefe": ["Fiquem atrás de mim.", "Já protegi coisas menores com mais medo."],
+    "vida": ["Ainda não é a minha hora.", "Sylas precisa de mim viva."]
+  },
+  "korrak": {
+    "entrada": ["Sete dias com o machado. Depois, servir.", "O machado tem fome. Eu também."],
+    "chefe": ["Mostre-me o que vale a segunda prova.", "Xar'gath, ao trabalho!"],
+    "vida": ["Já sangrei mais na primeira prova.", "Dor é só informação."]
+  },
+  "leoric": {
+    "entrada": ["Eu não pertenço a ninguém.", "Que o céu me empreste uma estrela."],
+    "chefe": ["Pior que isso, só a minha sorte.", "Constelação, comigo!"],
+    "vida": ["Claro que seria hoje...", "Eu sempre me levanto. Chato, mas verdade."]
+  }
+}

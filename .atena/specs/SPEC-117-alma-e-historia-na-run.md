@@ -96,3 +96,6 @@ Regras para o jogo:
 - Esta ligação (colar → Adam → Síntese, com Durvall) é **segredo**, na mesma decisão de "Síntese Abissal: segredo por enquanto". Nenhum texto do jogo (epígrafe, contexto de chefe, falas, diário) pode afirmá-la.
 - O que está no jogo hoje respeita isso: Dagruve fala de Adam como "o messias que os cultistas esperam", e os Pilares dizem "Adam caiu no Castelo da Fome. Depois dele veio uma monstruosidade abissal".
 - Se o dono liberar a revelação, o lugar natural é o contexto do chefe dos Pilares e uma crônica do Diário (H4), com variação para quem joga de Durvall.
+
+## H3 implementado (2026-10-01)
+Falas aprovadas pelo dono (tom: seguir o Vault; Maelor, Sylas e Brook com humor, Brook irritado e curto). `data/barks.json` (herói × entrada/chefe/vida, até 2 variações), `ui/run.gd` (`_bark`, `_update_low_hp_bark`: balão acima do herói por ~3 s; "vida" abaixo de 30% de PV, rearma ao passar de 50%, no mínimo 20 s entre falas), opção **Opções → Falas dos heróis** (padrão ligada, `settings.barks`). Teste: `tests/test_barks.gd`. Falas por fase ficam para depois do playtest.
