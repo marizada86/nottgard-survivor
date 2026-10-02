@@ -47,3 +47,18 @@ Dagruve, 30 sementes por teste, bot corrigido. Meta: morte antes de 2:30 em torn
 
 Leitura: o erro estatístico com 30 sementes é de ~8 pontos, então Kayron fica "no entorno de 35–40 %" para morte inicial. O perfil resultante: Leoric (controle, resistente) passa de 60 % dos casos; Kayron (canhão de vidro rápido) fica arriscado, abaixo do meio da tabela, por desenho. A passiva de Kayron passou de "−10 % de recarga e +15 % de área" para "−18 % de recarga, +15 % de área e +20 % de dano".
 Testes: 0 falhas. Falta confirmar em playtest humano. Restam Durvall, Sylas e Zynara (37 %).
+
+## Ajuste de Durvall, Sylas e Zynara (BAL-015, parte 2) — 2026-10-01
+Mesma configuração (Dagruve, 30 sementes, bot corrigido).
+
+| Herói | Mudança | Morre < 150 s | Vence o chefe |
+|---|---|---:|---:|
+| Durvall (antes) | 30 PV, +15 % de dano abaixo de 50 % de PV | 37 % | 30 % |
+| **Durvall (depois)** | **36 PV, +25 % de dano abaixo de 50 % de PV** | **20 %** | **46 %** |
+| Sylas (antes) | 26 PV, CA 0 | 37 % | 60 % |
+| Sylas, teste 1 | 32 PV, CA 1 | 40 % | 56 % |
+| **Sylas (depois)** | **32 PV, CA 1, +20 % de dano na passiva** | **23 %** | **73 %** |
+| Zynara (antes) | 26 PV, CA 0 | 37 % | 47 % |
+| **Zynara (depois)** | **32 PV, CA 1** | **23 %** | **66 %** |
+
+Leitura: para Sylas, vida e armadura não resolviam (o problema era matar rápido); o dano resolveu. Durvall mantém o tema (luta melhor ferido). Com 30 sementes o erro é de ~8 pontos, então 20–23 % significa "bem abaixo de 30 %". Estado final (morte inicial / vitória em Dagruve): Korrak 0/100, Bromnor 0/97, Maelor 7/93, Brook 10/77, Nyrelia 13/60, **Sylas 23/73, Zynara 23/66, Durvall 20/46, Leoric 30/63, Kayron 33/40**. A ordem e as diferenças de estilo permanecem; o piso subiu. Testes: 0 falhas. Falta playtest humano.
