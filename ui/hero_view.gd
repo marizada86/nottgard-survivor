@@ -12,7 +12,7 @@ const HERO_FEET_Y := {
 ## Altura do herói em tela (px), pela raça (humano 1,75 m = 64 px; piso de 40 px para os pequenos).
 ## Korrak 2,32 m e Leoric ~1 m vêm do Vault; as demais são médias de D&D.
 const HERO_DISPLAY_HEIGHT := {
-	&"korrak": 85.0, &"kayron": 66.0, &"sylas": 64.0, &"maelor": 64.0, &"nyrelia": 62.0,
+	&"korrak": 76.0, &"kayron": 66.0, &"sylas": 64.0, &"maelor": 64.0, &"nyrelia": 62.0,
 	&"durvall": 60.0, &"zynara": 60.0, &"bromnor": 48.0, &"leoric": 40.0, &"brook": 40.0,
 }
 ## Altura visível (alfa) do idle de cada herói na célula 256x384; ver tools/audit_hero_motion.gd.
