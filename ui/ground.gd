@@ -21,8 +21,12 @@ const TerrainLayout := preload("res://core/terrain_layout.gd")
 @export var use_stage_texture := true: set = _set_use_stage_texture
 ## Permite promover uma versão do atlas sem sobrescrever o piso legado.
 @export_file("*.png") var terrain_texture_path := "": set = _set_terrain_texture_path
+## Chão assado em uma imagem contínua (tools/bake_ground.gd, PLAN-054): substitui a malha de losangos.
+@export_file("*.png") var baked_texture_path := "": set = _set_baked_texture_path
 var _texture: Texture2D
 var _texture_path := ""
+var _baked: Texture2D
+var _baked_path := ""
 
 func _set_size(v: Vector2i) -> void:
 	map_size = v
@@ -73,6 +77,20 @@ func _set_terrain_texture_path(v: String) -> void:
 	_texture_path = ""
 	_texture = null
 	queue_redraw()
+
+func _set_baked_texture_path(v: String) -> void:
+	baked_texture_path = v
+	_baked_path = ""
+	_baked = null
+	queue_redraw()
+
+func _baked_texture() -> Texture2D:
+	if baked_texture_path.is_empty():
+		return null
+	if baked_texture_path != _baked_path:
+		_baked_path = baked_texture_path
+		_baked = load(baked_texture_path) if ResourceLoader.exists(baked_texture_path) else null
+	return _baked
 
 func _stage_id() -> String:
 	if not stage_visual_id.is_empty():
@@ -133,6 +151,11 @@ func _atlas_uvs(texture: Texture2D, variant: int) -> PackedVector2Array:
 	])
 
 func _draw() -> void:
+	var baked := _baked_texture()
+	if baked != null:
+		var span := float(map_size.x + map_size.y)
+		draw_texture_rect(baked, Rect2(-float(map_size.x) * Iso.TILE_W * 0.5, 0.0, span * Iso.TILE_W * 0.5, span * Iso.TILE_H * 0.5), false)
+		return
 	TerrainLayout.scale = float(map_size.x) / 40.0
 	var hw := Iso.TILE_W * 0.5
 	var hh := Iso.TILE_H * 0.5

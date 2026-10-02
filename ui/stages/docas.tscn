@@ -18,6 +18,7 @@ atlas_columns = 2
 atlas_variants = 4
 visual_seed = 31
 terrain_texture_path = "res://assets/tiles/docas_ground_atlas_v3.png"
+baked_texture_path = "res://assets/tiles/docas_ground_baked_v1.png"
 
 [node name="Sorted" type="Node2D" parent="."]
 y_sort_enabled = true
