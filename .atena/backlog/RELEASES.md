@@ -47,7 +47,17 @@ linha em "Histórico" (abaixo).
 Avaliada = as EVID dos testers foram triadas. Só então os cartões "aguardando
 playtest" viram verificados ou reabertos.
 
-## Versão 0.2.1 — publicada (playtest)
+## Versão 0.2.3 — publicada (playtest), junta 0.2.0 + 0.2.1
+
+Decisão do dono (2026-10-02): **nenhum playtester jogou a 0.2.0 nem a 0.2.1**, então a 0.2.3 as engloba e as duas ficam sem aviso próprio (0.2.2 foi pulada). Os testers saem da **0.1.0** e vão direto para a 0.2.3. `0.2.3` em `core/version.gd` e `export_presets.cfg`.
+
+- Changelog para os testers (PDF, 0.1.0 → 0.2.3): [CHANGELOG 0.2.3](changelogs/CHANGELOG%200.2.3%20-%20Nottgard%20Survivors.pdf) (fonte em [HTML](changelogs/CHANGELOG-0.2.3.html)).
+- Questionário rápido: [QUESTIONARIO Rápido - 005](questionarios/QUESTIONARIO%20R%C3%A1pido%20-%20005.pdf) (mapa em [QUESTIONARIO-005](questionarios/QUESTIONARIO-005-v0.2.3.md)).
+- Conteúdo: tudo da 0.2.0 e da 0.2.1 (abaixo) mais, depois da 0.2.1: BAL-012 (Guardião Alado das Docas 60 → 480 PV), BAL-015 (início de Dagruve mais justo para Leoric, Kayron, Durvall, Sylas e Zynara), limpeza do fundo magenta em estruturas e remendos, correção da tira de ataque do Durvall (BUG-021) e do erro de número de dano fundido (BUG-024), conquistas Estátua Viva (MEC-037) e Leoric, o Infeliz (MEC-036).
+- Suíte e fumaça verdes em 2026-10-02. Balanceamento dos heróis segue adiado até o feedback humano (PLAN-052).
+- [ ] Aviso aos testers com o PDF do changelog e o PDF do questionário 005.
+
+## Versão 0.2.1 — substituída pela 0.2.3 (nunca jogada por testers)
 
 Pedido direto do dono em 2026-10-01 ("atualize a build de playtester para v0.2.1 com as novas atualizações"). **Fora da regra de minor-update:** esta versão traz mecânicas novas (Maré do Abismo, falas, números de dano), então os testers precisam aprender coisas novas; não há PDF nem questionário novo, só as notas abaixo. `0.2.1` em `core/version.gd` e `export_presets.cfg`.
 
@@ -130,6 +140,7 @@ Origem: [PLAN-038](../vault/drafts/PLAN-038-atualizacao-pos-playtests-t01-t02-t0
 
 | Versão | Tipo | Publicada | Commit da build | Avaliada em |
 |---|---|---|---|---|
+| 0.2.3 | Atualização de playtest (pedido do dono; junta 0.2.0 + 0.2.1) | 2026-10-02 (release `latest`, Playtest v0.2.3) | ver título do release | — (aguardando testers) |
 | 0.2.1 | Atualização de playtest (pedido do dono; traz mecânicas) | 2026-10-01 (release `latest`, Playtest v0.2.1) | ver título do release | — (aguardando testers) |
 | 0.2.0 | Major | 2026-09-29 (release `latest`, Playtest v0.2.0) | `adc9ae6` (tag `latest` em 2026-09-30; primeira publicação: `fce670d`; republicada a cada push na `main`) | — (aguardando testers) |
 | 0.1.0 | Major (primeira) | 2026-09-29 (playtest T01, T02, T03) | não registrado (builds anteriores ao TOOL-001) | EVID-106, 107, 108 |

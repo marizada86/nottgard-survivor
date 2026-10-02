@@ -8,6 +8,7 @@ Minor-update **não** tem PDF: só notas curtas no aviso do Discord.
 | `CHANGELOG-X.Y.0.html` | Fonte editável |
 | `CHANGELOG X.Y.0 - Nottgard Survivors.pdf` | O que se entrega |
 | [CHANGELOG-0.2.0](CHANGELOG-0.2.0.html) | Primeiro (0.1.0 → 0.2.0); serve de **modelo** (copie e troque o texto) |
+| [CHANGELOG-0.2.3](CHANGELOG-0.2.3.html) | 0.1.0 → 0.2.3 (junta 0.2.0 e 0.2.1, que ninguém jogou) |
 
 ## Regra de ouro: escrever para quem não sabe nada
 
