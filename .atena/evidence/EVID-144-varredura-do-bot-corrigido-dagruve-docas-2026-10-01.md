@@ -32,3 +32,18 @@ Ou o herói morre cedo (nível ≤ 10) ou engrena e chega ao nível 30–50. A m
 ## Efeito nos cartões
 - **BAL-013 (Kayron) e BAL-014 (Nyrelia/Zynara/Durvall):** refeitos com este dado. Kayron e Durvall são os mais frágeis (30 % de vitória em Dagruve); Zynara melhorou (47 %), Nyrelia está no meio (60 %).
 - **BAL-015 (mortes no início):** confirmado como o principal problema; alvo proposto: nenhum herói acima de 30 % de morte antes de 2:30, preservando a diferença de estilo.
+
+## Ajuste de Leoric e Kayron (BAL-015, parte 1) — 2026-10-01
+Dagruve, 30 sementes por teste, bot corrigido. Meta: morte antes de 2:30 em torno de 30 %, sem aproximar o herói do Korrak. Cada herói recebeu alavancas próprias, sem uniformizar.
+
+| Herói | Mudança | Morre < 150 s | Vence o chefe |
+|---|---|---:|---:|
+| Leoric (antes) | 24 PV, CA 0 | 60 % | 33 % |
+| **Leoric (depois)** | **30 PV, CA 2** (passiva intacta) | **30 %** | **63 %** |
+| Kayron (antes) | 28 PV, CA 1, recarga −10 % | 53 % | 30 % |
+| Kayron, teste 1 | 32 PV, +10 % de dano | 56 % | 36 % |
+| Kayron, teste 2 | 36 PV, CA 2, +20 % de dano | 40 % | 53 % |
+| **Kayron (depois)** | **36 PV, CA 2, +20 % de dano, recarga −18 %** | **33 %** | **40 %** |
+
+Leitura: o erro estatístico com 30 sementes é de ~8 pontos, então Kayron fica "no entorno de 35–40 %" para morte inicial. O perfil resultante: Leoric (controle, resistente) passa de 60 % dos casos; Kayron (canhão de vidro rápido) fica arriscado, abaixo do meio da tabela, por desenho. A passiva de Kayron passou de "−10 % de recarga e +15 % de área" para "−18 % de recarga, +15 % de área e +20 % de dano".
+Testes: 0 falhas. Falta confirmar em playtest humano. Restam Durvall, Sylas e Zynara (37 %).
