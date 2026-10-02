@@ -1,6 +1,14 @@
 extends RefCounted
 
 const ASSETS := {
+	"res://assets/animations/enemies/cultista_thullgrime/idle.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/cultista_thullgrime/move.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/cultista_thullgrime/attack.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/cultista_thullgrime/death.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/bolha_de_slime/idle.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/bolha_de_slime/move.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/bolha_de_slime/attack.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/bolha_de_slime/death.png": Vector2i(1536, 384),
 	"res://assets/animations/heroes/brook/idle.png": Vector2i(1024, 384),
 	"res://assets/animations/heroes/brook/move_n.png": Vector2i(1536, 384),
 	"res://assets/animations/heroes/brook/move_ne.png": Vector2i(1536, 384),
@@ -130,6 +138,8 @@ const MINIMUM_VISIBLE_COVERAGE := {
 }
 
 const WAVE_ONE_ENEMY_ANIMATIONS := {
+	"cultista_thullgrime": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
+	"bolha_de_slime": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
 	"slime_corrosivo": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
 	"cultista_arqueiro": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
 	"cultista_cajado": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
@@ -192,6 +202,10 @@ func run() -> Array[String]:
 	if southwest_input != Vector2(-1, 1):
 		failures.append("A+S não resolve para baixo e esquerda: %s" % southwest_input)
 	var hero := Hero.new()
+	for index in 8:
+		var direction := Vector2.RIGHT.rotated(index * PI / 4.0)
+		if hero_script.uses_procedural_walk_for_direction("korrak", direction) != (index != 0):
+			failures.append("Korrak deve usar tira validada só em move_e enquanto as demais aguardam regeneração")
 	hero.map_size = Vector2(100, 100)
 	hero.pos = Vector2(50, 50)
 	var before := Iso.to_screen(hero.pos)
@@ -207,8 +221,83 @@ func run() -> Array[String]:
 	failures.append_array(_validate_zynara_runtime())
 	failures.append_array(_validate_nyrelia_runtime())
 	failures.append_array(_validate_nyrelia_frame_baselines())
+	failures.append_array(_validate_hero_walk_stability())
 	failures.append_array(_validate_hero_display_scale())
 	return failures
+
+## Dívida conhecida de caminhada (EVID-146 / BUG-025 / ART-PROMPTS-055): massa fora de ±30% do idle
+## ou quadro colado na borda. Só pode encolher: ao regerar a tira, remova a entrada.
+const WALK_KNOWN_MASS := ["bromnor/move_e", "brook/move_ne", "durvall/move_e", "kayron/move_se", "maelor/move_n", "maelor/move_ne", "maelor/move_e", "maelor/move_se"]
+const WALK_KNOWN_EDGE := ["durvall/move_e", "maelor/move_s"]
+
+func _validate_hero_walk_stability() -> Array[String]:
+	var failures: Array[String] = []
+	for hero_id in Data.table("heroes"):
+		var idle := _walk_metrics("res://assets/animations/heroes/%s/idle.png" % hero_id)
+		if idle.is_empty():
+			continue
+		for direction in ["n", "ne", "e", "se", "s"]:
+			var key := "%s/move_%s" % [hero_id, direction]
+			var strip := _walk_metrics("res://assets/animations/heroes/%s/move_%s.png" % [hero_id, direction])
+			if strip.is_empty():
+				failures.append("caminhada ausente ou ilegível: %s" % key)
+				continue
+			var mass_bad := false
+			var edge_bad := false
+			for frame in strip.frames:
+				if absf(float(frame.height) / float(idle.height) - 1.0) > 0.16:
+					failures.append("altura de %s muda ao andar: %d px contra %d do idle" % [key, frame.height, idle.height])
+					break
+			for frame in strip.frames:
+				if absi(frame.bottom - idle.bottom) > 6:
+					failures.append("pés de %s fora da linha de base do idle: %d contra %d" % [key, frame.bottom, idle.bottom])
+					break
+			for frame in strip.frames:
+				var mass_ratio := float(frame.mass) / float(idle.mass)
+				mass_bad = mass_bad or mass_ratio < 0.70 or mass_ratio > 1.30
+				edge_bad = edge_bad or frame.edge
+			if mass_bad and not WALK_KNOWN_MASS.has(key):
+				failures.append("massa de %s fora de ±30%% do idle (corpo engorda/afina ao andar)" % key)
+			if edge_bad and not WALK_KNOWN_EDGE.has(key):
+				failures.append("conteúdo de %s toca a borda da célula (arma/capa cortada)" % key)
+	return failures
+
+func _walk_metrics(path: String) -> Dictionary:
+	var image := Image.new()
+	if image.load(ProjectSettings.globalize_path(path)) != OK:
+		return {}
+	image.convert(Image.FORMAT_RGBA8)
+	var frames: Array = []
+	var heights: Array[int] = []
+	var bottoms: Array[int] = []
+	var masses: Array[int] = []
+	for index in image.get_width() / 256:
+		var left := 256
+		var top := 384
+		var right := -1
+		var bottom := -1
+		var mass := 0
+		for y in 384:
+			for x in 256:
+				if image.get_pixel(index * 256 + x, y).a < 0.10:
+					continue
+				mass += 1
+				left = mini(left, x)
+				top = mini(top, y)
+				right = maxi(right, x)
+				bottom = maxi(bottom, y)
+		if right < left:
+			continue
+		frames.append({"height": bottom - top + 1, "bottom": bottom + 1, "mass": mass, "edge": left <= 1 or top <= 1 or right >= 254 or bottom >= 382})
+		heights.append(bottom - top + 1)
+		bottoms.append(bottom + 1)
+		masses.append(mass)
+	if frames.is_empty():
+		return {}
+	heights.sort()
+	bottoms.sort()
+	masses.sort()
+	return {"frames": frames, "height": heights[heights.size() / 2], "bottom": bottoms[bottoms.size() / 2], "mass": masses[masses.size() / 2]}
 
 func _validate_cultista_adaga_runtime() -> Array[String]:
 	var failures: Array[String] = []
