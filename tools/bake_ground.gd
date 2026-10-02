@@ -322,6 +322,11 @@ func _setup_layout(stage: String) -> void:
 	s["molor_junk"] = _sp("soil", Color(0.19, 0.17, 0.12), Color(0.28, 0.25, 0.17), Color(0.11, 0.10, 0.07))
 	s["molor_roof"] = _sp("rock", Color(0.08, 0.13, 0.10), Color(0.14, 0.21, 0.16), Color(0.04, 0.07, 0.05))
 	s["molor_nest"] = _sp("web", Color(0.26, 0.18, 0.20), Color(0.36, 0.25, 0.27), Color(0.18, 0.11, 0.13))
+	s["durao_road"] = _sp("crack", Color(0.31, 0.25, 0.22), Color(0.40, 0.33, 0.29), Color(0.09, 0.07, 0.07))
+	s["durao_plaza"] = _sp("slab", Color(0.20, 0.16, 0.15), Color(0.29, 0.23, 0.21), Color(0.05, 0.04, 0.04))
+	s["durao_deck"] = _sp("slab", Color(0.22, 0.15, 0.12), Color(0.31, 0.22, 0.17), Color(0.06, 0.04, 0.03))
+	s["durao_ossuario"] = _sp("soil", Color(0.33, 0.29, 0.26), Color(0.43, 0.38, 0.33), Color(0.22, 0.19, 0.17))
+	s["durao_scree"] = _sp("rock", Color(0.19, 0.15, 0.15), Color(0.28, 0.22, 0.21), Color(0.08, 0.06, 0.06))
 	s["molor_wall"] = _sp("rock", Color(0.07, 0.12, 0.09), Color(0.13, 0.19, 0.14), Color(0.03, 0.06, 0.04))
 	# Durao
 	s["plateau"] = _sp("soil", Color(0.23, 0.17, 0.14), Color(0.32, 0.24, 0.19), Color(0.15, 0.11, 0.10))
