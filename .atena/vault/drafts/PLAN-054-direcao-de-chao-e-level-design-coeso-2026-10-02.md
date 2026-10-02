@@ -14,14 +14,14 @@ Pede um level design mais coeso e consistente em todos os mapas.
 
 ## O que já existe (não havia plano de chão)
 - **SPEC-115** organiza props, destrutíveis, armadilhas e estradas por zonas — só em Dagruve e Docas, e só **acima** do chão.
-- **PLAN-016 a 022** deram um macroterreno (materiais por célula) aos biomas Shedaklah, Molor, Durão, Feng-tu, Shendilavri, Goranthis e Pilares.
+- **PLAN-016 a 022** deram um macroterreno (materiais por célula) aos biomas Shedaklah, Molor, Durao, Feng-tu, Shendilavri, Goranthis e Pilares.
 - **ART-012** (camada de ambientação por bioma) está aberto sem plano.
 - Nenhum documento define uma direção visual do chão nem uma regra comum de composição de mapa.
 
 ## Diagnóstico
 1. **Textura:** o piso é ruído fino e uniforme (a captura anexada). Sem forma, sem valor claro/escuro, lê como tapete. O losango 64×32 repete com
    4 variantes, então a repetição aparece e nada diz "que lugar é este".
-2. **Dagruve e Docas** (os pilotos de cenário) são os únicos sem `terrain_layout_id`: chão = atlas de 4 variantes, sem macroterreno. Durão tem layout, mas sem atlas (cores chapadas).
+2. **Dagruve e Docas** (os pilotos de cenário) são os únicos sem `terrain_layout_id`: chão = atlas de 4 variantes, sem macroterreno. Durao tem layout, mas sem atlas (cores chapadas).
 3. **Manutenção:** em `ui/ground.gd` a cor de cada material é uma cadeia de `elif` (~20 materiais) e os detalhes por célula são círculos/linhas soltos. Cada bioma foi feito por uma regra própria; por isso não há coesão.
 4. **Estrada:** os decais de trilha não seguem o eixo isométrico; as estradas ficam como manchas.
 5. **Contraste:** nada garante que o chão fique abaixo de herói, inimigos e projéteis em saturação e contraste.
@@ -50,7 +50,7 @@ ligar Dagruve e Docas ao mesmo mecanismo. Layout continua **sem consumir a RNG d
 - Origem da arte: ver Decisões.
 
 ### F3 — Rollout nos sete biomas restantes
-Um bioma por vez com o mesmo checklist (ficha F0, zonas F1, atlas, captura). Ordem sugerida: Shedaklah, Molor, Durão (falta atlas), Feng-tu, Shendilavri, Goranthis, Pilares.
+Um bioma por vez com o mesmo checklist (ficha F0, zonas F1, atlas, captura). Ordem sugerida: Shedaklah, Molor, Durao (falta atlas), Feng-tu, Shendilavri, Goranthis, Pilares.
 
 ### F4 — Validação
 Testes: mesma semente gera os mesmos spawns (RNG intacta); nenhum prop sobre destrutível, armadilha ou clareira; todo material do layout existe em `ground_materials.json`.
@@ -74,5 +74,5 @@ ART (atlas de chão por bioma), MEC-035 (estende o layout por dados), ART-012 (p
 ## Progresso
 - Dagruve e Docas: aprovados. Sete biomas restantes: chão assado implementado (SPEC-116), aguardando aprovação visual. Próximo: F1 (zonas, eixo de caminho, landmarks, materiais em dados) e F4 (bot e questionário).
 - F1 em Shedaklah (molde): `data/level_design.json` (novo) guarda por bioma o `chao` (clareira de início, dominância fungo a oeste × limo a leste, regiões: bosque, poço de lodo, esporos; trilhas norte-sul e leste-oeste; praça da estrutura) e os `props` por zonas (54 props, mesmo formato de `scenery.json`). `SceneryLayout.stage_spec` usa `scenery.json` e, na falta de props, `level_design.json`. `tools/bake_ground.gd` aplica o `chao` sobre o layout só onde não é água nem margem. Teste: `tests/test_level_design.gd` (props fora de água e margem, determinismo, tipos com dimensões, sem sobreposição). Captura geral: `tools/capture_ground_spots.tscn` gera `<bioma>_<tag>_overview.png`.
-- Próximos biomas pela mesma receita: Molor, Durão, Feng-tu, Shendilavri, Goranthis, Pilares (um por vez, com aprovação).
-- F1 em Molor: calçada de detrito (leste-oeste e norte-sul passando pela estrutura), praça da estrutura, gruta de estalactites ao norte, lixão a sul, ninho de parasitas a leste, bolsões de lodo existentes cercados de bolhas e quatro cantos com bolhas; 111 props em zonas (antes ~130 espalhados). Nenhum prop em parede (a parede de Molor começa em ~55,5 nos lados altos). O ajuste "chão não sobrepõe parede/fundação/encosta" vale para todos os biomas. Falta: Durão, Feng-tu, Shendilavri, Goranthis, Pilares.
+- Próximos biomas pela mesma receita: Molor, Durao, Feng-tu, Shendilavri, Goranthis, Pilares (um por vez, com aprovação).
+- F1 em Molor: calçada de detrito (leste-oeste e norte-sul passando pela estrutura), praça da estrutura, gruta de estalactites ao norte, lixão a sul, ninho de parasitas a leste, bolsões de lodo existentes cercados de bolhas e quatro cantos com bolhas; 111 props em zonas (antes ~130 espalhados). Nenhum prop em parede (a parede de Molor começa em ~55,5 nos lados altos). O ajuste "chão não sobrepõe parede/fundação/encosta" vale para todos os biomas. Falta: Durao, Feng-tu, Shendilavri, Goranthis, Pilares.

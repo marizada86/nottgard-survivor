@@ -31,7 +31,7 @@ posicionava-os por coordenadas de tela fixas, sem consultar o terreno lógico.
 
 ## Pendente
 
-Uma nova inspeção QA deve confirmar que Durão, Shedaklah, Shendilavri e
+Uma nova inspeção QA deve confirmar que Durao, Shedaklah, Shendilavri e
 Goranthis não exibem decais sobre o Estige. Docas precisa de uma área seca
 autorizada antes de receber seus decais. Nenhum asset do Lote 2 foi promovido
 para `assets/` e BUG-013 permanece aberto.

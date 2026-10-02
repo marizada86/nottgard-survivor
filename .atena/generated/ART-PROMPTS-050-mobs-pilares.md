@@ -20,7 +20,7 @@ Segue a receita da Onda 1 (ART-PROMPTS-032 e 033), que o dono aprovou: **primeir
 
 ### Reuso (nada a gerar)
 
-- Todos os outros inimigos de Pilares (`cultista_ghaunadaur`, `limo`, `guardiao_de_goranthis`, `demonio_de_gehenna`, `sucubo`, `aberracao_shu`, `master_of_cruelties`, `death_tyrant`, `molydeus_menor`) **já são cobertos** pelos lotes de Feng Tu, Shedaklah, Durão, Shendilavri e Goranthis. Esta é a menor remessa: um chefe só.
+- Todos os outros inimigos de Pilares (`cultista_ghaunadaur`, `limo`, `guardiao_de_goranthis`, `demonio_de_gehenna`, `sucubo`, `aberracao_shu`, `master_of_cruelties`, `death_tyrant`, `molydeus_menor`) **já são cobertos** pelos lotes de Feng Tu, Shedaklah, Durao, Shendilavri e Goranthis. Esta é a menor remessa: um chefe só.
 
 ## Contrato do gate de identidade
 

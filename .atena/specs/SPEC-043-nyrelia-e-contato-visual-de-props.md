@@ -15,7 +15,7 @@ Eliminar a flutuação, o recorte entre células e a instabilidade de base das a
 
 ## Escopo
 
-- Produzir baseline e cenários QA locais de Nyrelia e de props em Dagruve, Docas e Durão.
+- Produzir baseline e cenários QA locais de Nyrelia e de props em Dagruve, Docas e Durao.
 - Normalizar somente as nove folhas-fonte de Nyrelia para célula 256×384, linha de base comum e margens seguras de VFX.
 - Ajustar por asset os metadados de âncora e sombra dos props que comprovadamente falharem na captura, começando por rochas e pilares.
 - Acrescentar testes de runtime/limites de Nyrelia e verificações de contato visual de props.
@@ -45,7 +45,7 @@ Eliminar a flutuação, o recorte entre células e a instabilidade de base das a
 3. Criar candidatos recuperáveis para `idle` e `move_se` de Nyrelia, medir base e limites por quadro, e validar também o espelhamento de `move_sw`.
 4. Criar perfis candidatos para as três rochas e os três pilares, comparando sombra `dynamic`/`none` em escala de jogo; expandir apenas a props que ainda falharem.
 5. Apresentar ao dono o piloto visual e os arquivos afetados. Somente após sua aprovação, integrar strips, perfis e qualquer ajuste mínimo de renderer.
-6. Adicionar testes, recapturar Dagruve, Docas e Durão, rodar suíte/smoke e reconciliar especificação, evidência e fatos operacionais.
+6. Adicionar testes, recapturar Dagruve, Docas e Durao, rodar suíte/smoke e reconciliar especificação, evidência e fatos operacionais.
 
 ## Critérios de aceite
 
@@ -66,7 +66,7 @@ Eliminar a flutuação, o recorte entre células e a instabilidade de base das a
 - Captura do dono como referência de falha.
 - Resultados de baseline da suíte e smoke.
 - Relatório por quadro dos pilotos de Nyrelia.
-- Capturas normais e de QA em Dagruve, Docas e Durão.
+- Capturas normais e de QA em Dagruve, Docas e Durao.
 - Resultados finais de testes e reconciliação.
 - `EVID-052-spec-043-baseline-2026-09-27.md` para a suíte e smoke iniciais.
 

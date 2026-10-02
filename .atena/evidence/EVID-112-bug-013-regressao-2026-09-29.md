@@ -5,7 +5,7 @@ Spec: [[SPEC-081-regressao-bug-013-contato-visual-de-props]]
 
 ## Diagnóstico
 
-O relato de props flutuando persistiu em Dagruve, Docas e Durão porque a
+O relato de props flutuando persistiu em Dagruve, Docas e Durao porque a
 proteção automatizada anterior só verificava perfis com `shadow_mode:
 dynamic`. Doze props planos com `shadow_mode: none` tinham `contact_anchor`
 entre 5,1 e 20,5 pixels de tela abaixo da base opaca; `rocha_03` também
@@ -14,7 +14,7 @@ ultrapassava a tolerância em 2,4 pixels.
 | Grupo | Perfis fora da tolerância antes | Resultado após correção |
 |---|---:|---:|
 | Docas, margens, ossos e redes | 12 | 0 |
-| `rocha_03` (Durão) | 1 | 0 |
+| `rocha_03` (Durao) | 1 | 0 |
 | Total | 13 | 0 |
 
 ## Correção limitada

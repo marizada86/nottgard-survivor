@@ -1,13 +1,13 @@
 ---
 id: "ART-PROMPTS-046"
 type: "prompts-de-arte"
-title: "Animações dos inimigos de Durão — identidade e ciclos"
+title: "Animações dos inimigos de Durao — identidade e ciclos"
 status: "pronto para envio — nada executado; aguarda aprovação das identidades"
 created: "2026-10-01"
 relations: ["[[PLAN-041-animacao-padrao-zumbi-para-inimigos-e-interacoes-2026-09-29]]", "[[PLAN-048-geracao-animacoes-mobs-onda-1-2026-09-30]]", "[[ART-PROMPTS-033-mobs-onda-1-lote-a]]"]
 ---
 
-# ART-PROMPTS-046 — Durão (Andar 274 · a jaula e o rio de almas)
+# ART-PROMPTS-046 — Durao (Andar 274 · a jaula e o rio de almas)
 
 Segue a receita da Onda 1 (ART-PROMPTS-032 e 033), que o dono aprovou: **primeiro a identidade** (`idle_00`) de cada alvo, depois os demais quadros, cada um como imagem independente. Perfil A = 20 quadros (idle 4, move 6, attack 4, death 6). Perfil B (chefe) = 26 (mais `special` 6). Nenhuma imagem é asset oficial; tudo fica em `.atena/generated/art-candidates/enemies-durao/<id>/`.
 

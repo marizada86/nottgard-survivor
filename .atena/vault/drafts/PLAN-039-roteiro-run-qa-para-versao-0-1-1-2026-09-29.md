@@ -26,9 +26,9 @@ não foi visto numa run real. As demais são a dívida antiga (BUG-001 a 010).
       `cd` ou `mark` crus.
 
 ### BUG-012 — inimigos presos (novo)
-- [ ] **Durão** (montanhas): deixe uma montanha entre você e um grupo de
+- [ ] **Durao** (montanhas): deixe uma montanha entre você e um grupo de
       inimigos; eles devem **contornar** e voltar a perseguir, não ficar parados.
-- [ ] **Durão** logo depois de sair da água do Estige (Esquecimento ativo):
+- [ ] **Durao** logo depois de sair da água do Estige (Esquecimento ativo):
       os inimigos continuam avançando normalmente.
 - [ ] Dagruve e Docas: passar por perto de barris, caixotes e braseiros; ninguém
       deve ficar grudado nos objetos por mais de 2 ou 3 segundos.

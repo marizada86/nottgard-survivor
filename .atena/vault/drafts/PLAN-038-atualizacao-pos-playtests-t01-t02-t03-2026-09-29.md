@@ -61,7 +61,7 @@ algo já quebrado.
 | Ordem | Cartão | O que fazer | Esforço | Teste |
 |---|---|---|---|---|
 | 1 | **BUG-015** (P1) | Prévia do ferreiro e da loja deve mostrar os mods **já escalados** (+15 % por nível, `Items.level_scale`); tratar o arredondamento de inteiros pequenos (`Hero.cam()` faz `int()`), por exemplo somando antes de truncar ou exibindo décimos. Revisitar a "escala" das armas (`cd -0.6`, `mark +0.1`) para o texto trazer unidade | baixo | `tests/`: prévia Nv+1 ≠ atual; CAM +1 com nível 2 e 3 |
-| 2 | **BUG-012** (P1) | Inimigos que encostam em objeto devem **deslizar** (mover pelo eixo livre) e voltar a perseguir; medir em Durão, Docas e Dagruve | médio | teste de movimento com obstáculo; bot sem regressão de tempo de run |
+| 2 | **BUG-012** (P1) | Inimigos que encostam em objeto devem **deslizar** (mover pelo eixo livre) e voltar a perseguir; medir em Durao, Docas e Dagruve | médio | teste de movimento com obstáculo; bot sem regressão de tempo de run |
 | 3 | **BUG-013** (P2, 3 biomas) | Achar quais props flutuam (sombra descolada; ver print 003 de EVID-108) e corrigir âncora/offset/sombra. Relaciona-se com SPEC-041 e SPEC-042. **Não** é ambientação nova (isso é ART-012) | médio | auditoria de âncora por prop; captura antes/depois |
 | 4 | **BUG-011** (P1) | Espelho de Shendilavri dentro da área andável e interagível | baixo | teste: todo objeto interativo dentro da área andável |
 | 5 | Novos da Etapa 0 | Conforme o resultado da run QA | — | — |

@@ -6,7 +6,7 @@ Escopo: execução do PLAN-027 e da SPEC-055.
 ## Resultado
 
 O contrato ambiental agora é `styx_memory` e aparece somente em Shedaklah,
-Durão, Shendilavri e Goranthis. Ele preserva o Teste de Lucidez e o
+Durao, Shendilavri e Goranthis. Ele preserva o Teste de Lucidez e o
 Esquecimento aprovados na SPEC-039. Dagruve, Docas, Molor, Feng-tu e Pilares
 não declaram o contrato, não possuem zona de Estige e não iniciam exposição.
 
@@ -33,11 +33,11 @@ sucesso.
 | Andar | Evidência | SHA-256 |
 | --- | --- | --- |
 | Shedaklah | `EVID-085-estige-shedaklah-2026-09-27.png` | `0E0135578BE1F7D30E9E133EB0D1DAC3FCE28F013964916A5DACEAA2312B7C06` |
-| Durão | `EVID-085-estige-durao-2026-09-27.png` | `F673355C61E68062FCEC67D39150D5E52C065D2EAADA88F282FB3D8B30F7BA10` |
+| Durao | `EVID-085-estige-durao-2026-09-27.png` | `F673355C61E68062FCEC67D39150D5E52C065D2EAADA88F282FB3D8B30F7BA10` |
 | Shendilavri | `EVID-085-estige-shendilavri-2026-09-27.png` | `E19FD26B79B87F6E2E62653F9D299C0A440D52D0C2A851542C8C756C39D32919` |
 | Goranthis | `EVID-085-estige-goranthis-2026-09-27.png` | `4A8E05D3778D007EB127484092F53377E1479B0520DD2C67960BCF7DB704731E` |
 
-Inspeção visual independente em Durão confirma água lenta, HUD de exposição e
+Inspeção visual independente em Durao confirma água lenta, HUD de exposição e
 feedback de falha de Lucidez, sem indicador de Chamado ou efeito de raro.
 
 ## Reconciliação

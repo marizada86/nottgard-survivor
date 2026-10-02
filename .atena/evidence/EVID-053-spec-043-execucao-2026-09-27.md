@@ -41,6 +41,6 @@ remotos.
 
 O modo headless não disponibilizou framebuffer para `tools/shot.tscn`, e a
 superfície de automação do computador não expôs uma janela nativa de Godot.
-Assim, a inspeção interativa em 1280×720 de Nyrelia, Dagruve, Docas e Durão
+Assim, a inspeção interativa em 1280×720 de Nyrelia, Dagruve, Docas e Durao
 permanece pendente. Esta evidência não afirma aceite visual final; ela registra
 apenas validação estrutural e automatizada.

@@ -32,7 +32,7 @@ Ela não escolhe arte em nome do dono e não troca arquivos finais.
 - Produzir relatório de inconsistências e pranchas locais de revisão em lotes
   de até 20 assets, com cartões suficientes para uma decisão humana informada.
 - Preparar o lote crítico: nove strips de Nyrelia, `rocha_01–03`,
-  `pilar_abissal_01–03` e os placements ativos de Durão relacionados.
+  `pilar_abissal_01–03` e os placements ativos de Durao relacionados.
 - Criar modelos de registro canônico de decisão e lock derivado, mas preencher
   itens como oficiais apenas após uma escolha explícita do dono.
 - Registrar evidências, cobertura e exceções no workspace ADD.

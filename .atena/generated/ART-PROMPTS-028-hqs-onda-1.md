@@ -10,7 +10,7 @@ sources: ["F:/dev/nottgard-vault (16_Histórias, 10_Sessões, 04_Locais)", "Nott
 
 # HQs novas — Onda 1 (HQN-02 a HQN-06)
 
-Da Sessão 02 até a incursão em Molor e Durão. A HQN-01 (piloto) está em ART-PROMPTS-027.
+Da Sessão 02 até a incursão em Molor e Durao. A HQN-01 (piloto) está em ART-PROMPTS-027.
 
 Todas as HQs seguem o **guia de estilo e a regra de personagens** de [[ART-PROMPTS-027-hqs-novas-guia-de-estilo-e-piloto]]: 16:9, sem texto na imagem, terço inferior calmo, grupo majoritariamente de costas, Tarn azul, névoa verde-acinzentada, luz âmbar. **Anexe o retrato de cada personagem listado no quadro** (`assets/portraits/<nome>.png`) e gere os 4 quadros de uma HQ **na mesma conversa, em ordem**.
 
@@ -22,7 +22,7 @@ Todas as HQs seguem o **guia de estilo e a regra de personagens** de [[ART-PROMP
 | HQN-03 | O Véu Vivo | Primeira entrada em Shedaklah | 4 |
 | HQN-04 | O Palácio de Zuggtmoy | Vencer Shedaklah (chefe Zuggtmoy) | 4 |
 | HQN-05 | O Núcleo Verde | Vencer Molor (chefe Blogbog) | 4 |
-| HQN-06 | A Jaula de Durão | Vencer Durão (desbloqueia Korrak) | 4 |
+| HQN-06 | A Jaula de Durao | Vencer Durao (desbloqueia Korrak) | 4 |
 
 ## HQN-02 — “Seremos um só” (`hq_n02`)
 
@@ -180,9 +180,9 @@ A huge shapeless mass of slime and fungus rears up in the cave, its body dissolv
 In the remains of the dissolved creature a small green core still pulses and twists on the ground, glowing from within, while a small gnome adventurer crouches to look at it. Far behind them, a thin pale-blue river of souls begins to flow again in the dark. Close low-angle shot of the pulsing core in the foreground, the gnome to one side, the faint blue river in the far background, green light against dark stone. Dark-fantasy illustration with dense pixel-art finish and controlled dithering, crisp pixel edges, no smooth painterly blur, wide 16:9 landscape composition. No text, no letters, no speech bubbles, no captions, no logo, no watermark, no frame or border, no UI. Keep the bottom third of the image visually calm and uncluttered. Nothing important is cropped by the edges. The named characters must match the attached reference portraits exactly; any other figure is an anonymous silhouette.
 ```
 
-## HQN-06 — A Jaula de Durão (`hq_n06`)
+## HQN-06 — A Jaula de Durao (`hq_n06`)
 
-- **Gatilho:** Vencer Durão (desbloqueia Korrak)
+- **Gatilho:** Vencer Durao (desbloqueia Korrak)
 - **Fonte no vault:** Sessões 16 e 17
 - **Fecha:** Molor e o núcleo verde.  **Abre:** Korrak empunha o machado de Xar'gath; o portal se abre.
 - **Retratos a anexar:** `assets/portraits/korrak.png`, `assets/portraits/brook.png`, `assets/portraits/leoric.png`, `assets/portraits/kayron.png`
@@ -190,7 +190,7 @@ In the remains of the dissolved creature a small green core still pulses and twi
 
 | Quadro | Função | Texto proposto na UI |
 |---|---|---|
-| 1 | Recapitular | Durão, andar 274: uma guerra sem fim que terminou sem vencedor. |
+| 1 | Recapitular | Durao, andar 274: uma guerra sem fim que terminou sem vencedor. |
 | 2 | Virar | Três carcereiros vigiam quem tenta fugir. |
 | 3 | Apresentar | Korrak empunha o machado de Xar'gath. Ele cobra uma provação. |
 | 4 | Dar gancho | Na jaula, um elfo oferece o próprio sangue em troca de uma runa. |

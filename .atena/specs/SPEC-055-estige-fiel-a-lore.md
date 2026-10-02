@@ -6,7 +6,7 @@ Data: 2026-09-27
 ## Objetivo
 
 Restaurar a fidelidade de localização e comportamento do Rio Estige: somente
-Shedaklah, Durão, Shendilavri e Goranthis o usam; seus efeitos derivam do risco
+Shedaklah, Durao, Shendilavri e Goranthis o usam; seus efeitos derivam do risco
 de memória da fonte 3.5, não da implementação universal anterior.
 
 ## Escopo
@@ -41,5 +41,5 @@ de memória da fonte 3.5, não da implementação universal anterior.
 
 - matriz de testes de presença/ausência e contato;
 - smoke dos nove mapas;
-- captura de Shedaklah, Durão, Shendilavri e Goranthis;
+- captura de Shedaklah, Durao, Shendilavri e Goranthis;
 - decisão canônica e registro de reconciliação.

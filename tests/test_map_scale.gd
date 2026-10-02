@@ -19,7 +19,7 @@ func run() -> Array:
 			if original != scaled:
 				out.append("%s: material em %s deveria acompanhar o mapa escalado (%s x %s)" % [sid, str(pt), str(original), str(scaled)])
 
-	# montanhas de Durão e água do Estige acompanham a escala
+	# montanhas de Durao e água do Estige acompanham a escala
 	TerrainLayout.scale = 1.5
 	for m in TerrainLayout.mountain_anchors("durao"):
 		if not TerrainLayout.is_blocked("durao", Vector2(m.x, m.y)):
@@ -28,7 +28,7 @@ func run() -> Array:
 		out.append("raio da montanha deveria escalar junto com o mapa")
 	var sample := TerrainLayout.styx_sample("durao")
 	if not TerrainLayout.is_styx_water("durao", sample):
-		out.append("styx_sample escalado deveria cair na água do Estige em Durão")
+		out.append("styx_sample escalado deveria cair na água do Estige em Durao")
 	if TerrainLayout.distance_to_styx("durao", sample) != 0.0:
 		out.append("distância ao Estige dentro da água deveria ser 0")
 	TerrainLayout.scale = old_scale

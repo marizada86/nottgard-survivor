@@ -2,7 +2,7 @@
 
 Status: **parcialmente supersedida** pelo PLAN-027/SPEC-055 (2026-09-27).
 O sistema de macroterreno e a tradução de Lucidez/Esquecimento permanecem;
-empurrão, Chamado, derrota temporal e exclusividade de Durão não são vigentes.
+empurrão, Chamado, derrota temporal e exclusividade de Durao não são vigentes.
 
 ## Intenção
 

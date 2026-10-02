@@ -91,7 +91,7 @@ terreno.
 1. Rodar a suíte atual e registrar falhas preexistentes sem corrigi-las fora do
    escopo.
 2. Criar cenários QA reproduzíveis: Nyrelia parada/em movimento e props em
-   Dagruve, Docas e Durão, em 1280×720.
+   Dagruve, Docas e Durao, em 1280×720.
 3. Capturar o baseline com o guia de ancoragem ativado apenas no QA; manter uma
    captura normal equivalente para inspeção estética.
 4. Registrar a discrepância de aceite das SPEC-041/042 como evidência de
@@ -141,7 +141,7 @@ terreno.
    lacuna base–sombra nos perfis aprovados; complementar com capturas em escala
    real, pois a fórmula isolada não é suficiente.
 4. Rodar `tests/run_all.gd` e smoke dos cenários afetados; comparar as capturas
-   final/baseline em Dagruve, Docas e Durão.
+   final/baseline em Dagruve, Docas e Durao.
 5. Registrar evidências em `.atena/evidence/`, comparar o resultado aos
    critérios abaixo e reconciliar as specs somente quando todos forem provados.
 

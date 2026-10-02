@@ -1,12 +1,12 @@
 ---
 id: "CHATGPT-FILA-015"
-title: "Fila de geração — animações dos inimigos de Durão"
+title: "Fila de geração — animações dos inimigos de Durao"
 status: "pronta para envio — nada executado"
 created: "2026-10-01"
 relations: ["[[ART-PROMPTS-046-mobs-durao]]", "[[PLAN-041-animacao-padrao-zumbi-para-inimigos-e-interacoes-2026-09-29]]"]
 ---
 
-# CHATGPT-FILA-015 — Durão (126 quadros)
+# CHATGPT-FILA-015 — Durao (126 quadros)
 
 Compilação operacional de [[ART-PROMPTS-046-mobs-durao]]; em caso de dúvida, o ART-PROMPTS prevalece.
 

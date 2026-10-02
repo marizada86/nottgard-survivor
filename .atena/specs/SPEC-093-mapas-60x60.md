@@ -16,7 +16,7 @@ sobre o terreno, o dono escolheu "aguardar o ART-012" (ver "Interpretação" aba
 | Herói e pontos de spawn | centro 20,20 | ×1,5 (centro 30,30) |
 | Props originais | posições de 40×40 | ×1,5 (a projeção isométrica é linear) |
 | Densidade de props | ~0,04 por tile | cópias determinísticas (dagruve +72, docas +10, shedaklah +54, molor +57, durao +42, feng_tu +42, shendilavri +47, goranthis +42, pilares +42) **e redistribuição**: props que ficavam fora do mapa (docas e margens de Dagruve, ossos, etc.) foram realocados para dentro (2,5 tiles de margem) e toda célula de 12×12 tem pelo menos a densidade original de props por tile |
-| Terreno (materiais, rio Estige, montanhas de Durão, poças de Molor, bordas) | desenhado para 40×40 | o mesmo desenho **esticado ×1,5** (`TerrainLayout.scale`) |
+| Terreno (materiais, rio Estige, montanhas de Durao, poças de Molor, bordas) | desenhado para 40×40 | o mesmo desenho **esticado ×1,5** (`TerrainLayout.scale`) |
 
 ## Implementação
 

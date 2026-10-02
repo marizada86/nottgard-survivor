@@ -21,7 +21,7 @@ dos mapas de Nottgard, há quatro presenças nomeadas do rio:
 | Andar | Presença fiel | Leitura de jogo proposta |
 | --- | --- | --- |
 | Shedaklah | dois braços lentos que separam Zuggtmoy e Juiblex | dois canais de memória, fronteira territorial |
-| Durão | águas lentas, cais, quartéis e barcaças da Guerra de Sangue | canal navegável junto a cais, sem gelatina |
+| Durao | águas lentas, cais, quartéis e barcaças da Guerra de Sangue | canal navegável junto a cais, sem gelatina |
 | Shendilavri | ramificação vinda de Pazunia | um braço marginal de memória |
 | Goranthis | chegada por cachoeira colossal | queda e bacia acessível de memória |
 
@@ -34,7 +34,7 @@ não prova impossibilidade cosmológica, mas não autoriza sua inclusão no jogo
 
 1. Remover rio, zona, HUD, QA e efeito do Estige de Dagruve, Docas, Molor,
    Feng-tu e Pilares.
-2. Manter rio somente em Shedaklah, Durão, Shendilavri e Goranthis, com a forma
+2. Manter rio somente em Shedaklah, Durao, Shendilavri e Goranthis, com a forma
    específica da tabela acima.
 3. Substituir `styx_gelatinous` por `styx_memory`, preservando a tradução
    jogável já aprovada na SPEC-039: ao entrar e a cada segundo, Teste de
@@ -66,7 +66,7 @@ contrato por Constituição/Fortitude.
    canais não autorizados e a sobreposição do piso legado de Dagruve/Docas.
 3. Reintroduzir `styx_memory` apenas nos quatro mapas documentados, usando a
    implementação aprovada de Lucidez/Esquecimento e suas topologias.
-4. Ajustar arte procedural e textos: Durão passa a água lenta com cais; os
+4. Ajustar arte procedural e textos: Durao passa a água lenta com cais; os
    dois braços de Shedaklah, o afluente de Shendilavri e a bacia de Goranthis
    exibem água do Estige sem sugerir gelatina ou corrente física não documentada.
 5. Reduzir QA à matriz correta: ausência nos cinco mapas, contato/memória nos
@@ -83,7 +83,7 @@ contrato por Constituição/Fortitude.
 
 ## Critérios de aceite
 
-1. Só Shedaklah, Durão, Shendilavri e Goranthis possuem Estige funcional.
+1. Só Shedaklah, Durao, Shendilavri e Goranthis possuem Estige funcional.
 2. Cada um reproduz sua topologia publicada sem efeitos inventados de Juiblex.
 3. O núcleo mecânico é o teste de memória do Estige; não há Chamado, dano por
    exposição, derrota temporal, buff de raro ou empurrão associado ao rio.

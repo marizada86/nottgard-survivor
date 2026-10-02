@@ -28,7 +28,7 @@ O plano não presume que `integrated`, um prompt executado ou um arquivo em
 - `rocha_01` e `rocha_03` são monólitos/ruínas, não rochas. Só `rocha_02`
   pode concorrer como a variante oficial da família `rocha` sem uma mudança de
   classificação previamente aprovada.
-- A captura mais recente é uma run de Durão, não uma evidência visual de
+- A captura mais recente é uma run de Durao, não uma evidência visual de
   Nyrelia. A aprovação de Nyrelia exigirá sua própria revisão em viewport.
 
 ## Escopo
@@ -88,7 +88,7 @@ O plano não presume que `integrated`, um prompt executado ou um arquivo em
    exibindo arquivo final, candidata disponível, dimensões, alfa, hash curto,
    uso no jogo e estado de rastreabilidade.
 2. Revisar primeiro o lote crítico de jogo: nove strips de Nyrelia, três
-   `rocha_*`, três `pilar_abissal_*` e seus placements ativos em Durão.
+   `rocha_*`, três `pilar_abissal_*` e seus placements ativos em Durao.
 3. Revisar depois os demais heróis e animações de inimigos, props por estágio,
    ícones de combate/itens, retratos, telas e backgrounds.
 4. Para animações, revisar a tira, os frames individuais e uma captura em

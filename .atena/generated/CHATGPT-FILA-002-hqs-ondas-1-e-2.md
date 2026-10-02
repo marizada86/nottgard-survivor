@@ -179,13 +179,13 @@ A huge shapeless mass of slime and fungus rears up in the cave, its body dissolv
 In the remains of the dissolved creature a small green core still pulses and twists on the ground, glowing from within, while a small gnome adventurer crouches to look at it. Far behind them, a thin pale-blue river of souls begins to flow again in the dark. Close low-angle shot of the pulsing core in the foreground, the gnome to one side, the faint blue river in the far background, green light against dark stone. Dark-fantasy illustration with dense pixel-art finish and controlled dithering, crisp pixel edges, no smooth painterly blur, wide 16:9 landscape composition. No text, no letters, no speech bubbles, no captions, no logo, no watermark, no frame or border, no UI. Keep the bottom third of the image visually calm and uncluttered. Nothing important is cropped by the edges. The named characters must match the attached reference portraits exactly; any other figure is an anonymous silhouette.
 ```
 
-### HQN-06 — A Jaula de Durão
+### HQN-06 — A Jaula de Durao
 
-Gatilho: Vencer Durão (desbloqueia Korrak). Proibido/cuidado: O prisioneiro Vhaerith aparece sem mutilação. Não mostrar a morte dos desertores. Aparência dos Molydeus e de Xar'gath é proposta de arte.
+Gatilho: Vencer Durao (desbloqueia Korrak). Proibido/cuidado: O prisioneiro Vhaerith aparece sem mutilação. Não mostrar a morte dos desertores. Aparência dos Molydeus e de Xar'gath é proposta de arte.
 
 #### H17 — `hq_n06_q1` · Recapitular · sem anexos
 
-- [ ] gerada · [ ] aprovada · candidata: `.atena/generated/art-candidates/hq/hq_n06_q1_v01.png` · texto proposto na UI: Durão, andar 274: uma guerra sem fim que terminou sem vencedor.
+- [ ] gerada · [ ] aprovada · candidata: `.atena/generated/art-candidates/hq/hq_n06_q1_v01.png` · texto proposto na UI: Durao, andar 274: uma guerra sem fim que terminou sem vencedor.
 
 ```text
 An arid wasteland of black basalt and dead vegetation, abandoned war camps with torn tents and broken carts, and a river of souls partly turned to gelatin winding through the middle, glowing with a pale ghostly blue. Very wide shot from a low ridge, empty and silent, rust-red dust in the air, the blue river as the only light. Dark-fantasy illustration with dense pixel-art finish and controlled dithering, crisp pixel edges, no smooth painterly blur, wide 16:9 landscape composition. No text, no letters, no speech bubbles, no captions, no logo, no watermark, no frame or border, no UI. Keep the bottom third of the image visually calm and uncluttered. Nothing important is cropped by the edges. No named characters in this image; any figures are anonymous silhouettes.

@@ -323,7 +323,7 @@ func _setup_layout(stage: String) -> void:
 	s["molor_roof"] = _sp("rock", Color(0.08, 0.13, 0.10), Color(0.14, 0.21, 0.16), Color(0.04, 0.07, 0.05))
 	s["molor_nest"] = _sp("web", Color(0.26, 0.18, 0.20), Color(0.36, 0.25, 0.27), Color(0.18, 0.11, 0.13))
 	s["molor_wall"] = _sp("rock", Color(0.07, 0.12, 0.09), Color(0.13, 0.19, 0.14), Color(0.03, 0.06, 0.04))
-	# Durão
+	# Durao
 	s["plateau"] = _sp("soil", Color(0.23, 0.17, 0.14), Color(0.32, 0.24, 0.19), Color(0.15, 0.11, 0.10))
 	s["ash"] = _sp("ash", Color(0.29, 0.25, 0.24), Color(0.38, 0.33, 0.31), Color(0.20, 0.17, 0.17))
 	s["slope"] = _sp("rock", Color(0.13, 0.11, 0.12), Color(0.23, 0.19, 0.19), Color(0.06, 0.05, 0.06))

@@ -6,7 +6,7 @@ Data: 2026-09-27
 ## Objetivo
 
 Fazer com que os nove andares jogáveis ofereçam uma zona acessível do Estige
-com o mesmo comportamento mecânico de Durão, preservando as regras próprias de
+com o mesmo comportamento mecânico de Durao, preservando as regras próprias de
 cada mapa.
 
 ## Fontes de intenção
@@ -37,7 +37,7 @@ cada mapa.
 ## Critérios de aceitação
 
 1. Os nove andares possuem uma zona do Estige acessível em jogo normal.
-2. Cada zona usa o mesmo contrato de Durão: atravessável, imóvel, Teste de
+2. Cada zona usa o mesmo contrato de Durao: atravessável, imóvel, Teste de
    Lucidez INT/CAM, Esquecimento temporário, Chamado, derrota por exposição e
    raros imbuídos; nunca empurra o jogador.
 3. Estado, temporizadores, RNG, efeitos e derrota do Estige têm uma única

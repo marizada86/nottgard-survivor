@@ -6,12 +6,12 @@ Escopo: comportamento ambiental do rio Estige nos nove andares jogáveis.
 
 ## Decisão proposta
 
-O comportamento implementado em Durão torna-se o contrato comum do Estige em
-todos os andares: Dagruve, Docas de Nottgard, Shedaklah, Molor, Durão,
+O comportamento implementado em Durao torna-se o contrato comum do Estige em
+todos os andares: Dagruve, Docas de Nottgard, Shedaklah, Molor, Durao,
 Feng-tu, Shendilavri, Goranthis e Pilares.
 
 Em cada andar haverá uma manifestação acessível, determinística e legível do
-rio. Ao atravessá-la, ela terá exatamente o contrato de Durão:
+rio. Ao atravessá-la, ela terá exatamente o contrato de Durao:
 
 - superfície gelatinosa, imóvel e atravessável;
 - Teste de Lucidez baseado em INT/CAM;
@@ -33,7 +33,7 @@ mensagens terão uma única origem.
 | Docas de Nottgard | braço entre os píeres |
 | Shedaklah | os dois braços existentes, agora atravessáveis e perigosos |
 | Molor | canal de detritos na borda, separado das poças de lodo |
-| Durão | referência já existente |
+| Durao | referência já existente |
 | Feng-tu | canal ritual marginal |
 | Shendilavri | braço marginal já representado |
 | Goranthis | base acessível da cachoeira já representada |
@@ -54,7 +54,7 @@ afetados só serão reconciliados durante a execução aprovada.
 
 1. Aprovar esta mudança de intenção e registrar uma cláusula canônica que
    substitua as limitações incompatíveis.
-2. Extrair o contrato `styx_gelatinous` de Durão para uma regra ambiental
+2. Extrair o contrato `styx_gelatinous` de Durao para uma regra ambiental
    compartilhada, sem duplicar estado, RNG, dano, buffs ou condições de derrota.
 3. Definir, para cada layout, uma zona de Estige acessível, determinística e
    compatível com sua rota, spawns, portal, telegráficos e arena de chefe.
@@ -77,5 +77,5 @@ zonas do Estige, pisos artísticos nem as regras ambientais que não sejam do ri
   ausência ou papel exclusivamente visual do Estige.
 - Cada novo canal precisa preservar rotas viáveis e não cobrir spawn, portal,
   telegráficos ou arena de chefe.
-- A paridade precisa demonstrar o mesmo contrato de Durão, sem regressões nas
+- A paridade precisa demonstrar o mesmo contrato de Durao, sem regressões nas
   regras próprias dos demais andares.

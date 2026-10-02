@@ -18,7 +18,7 @@ questionário vêm dele), [[EVID-091-playtest-higo-hiago-build-c-e-item-offer-20
 
 | Sessão | Pasta (cópia bruta) | Notas | Prints | Run |
 |---|---|---:|---:|---|
-| S1 | `S1-151737` (`NS-EV-public-20260929-151737.zip`, 8,3 MB) | 13 | 6 | **Brook França**, `guarda_de_lliira`: Dagruve → Docas → Shedaklah → Molor → Durão → **Feng-tu, vitória** (nv 3 → 46+, prof. 0–5). Fim da run: *vitória, 3 954 abates, +23 354 moedas* |
+| S1 | `S1-151737` (`NS-EV-public-20260929-151737.zip`, 8,3 MB) | 13 | 6 | **Brook França**, `guarda_de_lliira`: Dagruve → Docas → Shedaklah → Molor → Durao → **Feng-tu, vitória** (nv 3 → 46+, prof. 0–5). Fim da run: *vitória, 3 954 abates, +23 354 moedas* |
 | S2 | `S2-151759` (`NS-EV-public-20260929-151759.zip`, 1,4 MB) | 0 | 1 | **Bromnor Martelo da Luz**, `concordia`, Dagruve, nv 5, 00:48, PV 10/60 (run nova iniciada às 15:15:30) |
 
 - Os `.zip` não foram copiados. `log.txt` de S1 e S2 é praticamente o mesmo
@@ -68,8 +68,8 @@ no [INBOX](../backlog/INBOX.md).
 | IN-027 | S1-N9 | Shedaklah, nv 29 | Mostrar na loja **e na forja** as melhorias/pioras de um item para o outro quando já possui um equipado; ao passar o mouse; uma comparação | MEC-019 |
 | IN-028 | S1-N10 | Shedaklah, nv 31 | Alguns Nv 2 de equipamentos não apresentam melhorias | **BUG-015** (confirmado por print + código, ver abaixo) |
 | IN-029 | S1-N11 | Molor, nv 36 | Mostrar o dano da arma ou magia com os atributos que já possui (dano máx./mín.) | MEC-018 |
-| IN-030 | S1-N12 | Durão, `styx_memory`, nv 45, tela `item_offer` | Mobs estão ficando presos em obstáculos | BUG-012 (**2º relato**, Durão de novo) |
-| IN-031 | S1-N13 | Durão, nv 46 | A perda de INT do rio Estige deve durar apenas 5 min | MEC-022 |
+| IN-030 | S1-N12 | Durao, `styx_memory`, nv 45, tela `item_offer` | Mobs estão ficando presos em obstáculos | BUG-012 (**2º relato**, Durao de novo) |
+| IN-031 | S1-N13 | Durao, nv 46 | A perda de INT do rio Estige deve durar apenas 5 min | MEC-022 |
 | IN-032 | S2-P1 | Bromnor, Dagruve, 00:48, PV 10/60 (print sem nota) | Sem texto; intenção do print desconhecida | Confirmar com Hiago (ver "Sinais cruzados") |
 
 ### Verificação de IN-028 (nota 10, Nv 2 sem melhoria) → BUG-015

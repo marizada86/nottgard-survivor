@@ -67,7 +67,7 @@ Regras de uso, para o desenho da integração (fora do escopo de imagem):
 | Docas | `doca_*`, `barril_*`, `caixote_*`, `carga_*`, `rede_*`, `margem_*` |
 | Shedaklah | `cogumelo_*`, `esporo_*`, `lodo_01` |
 | Molor | `bolha_*`, `estalactite_*`, `resina_01` |
-| Durão | `rocha_*`, `corrente_*`, `osso_01` |
+| Durao | `rocha_*`, `corrente_*`, `osso_01` |
 | Feng-tu | `torii_*`, `lanterna_*`, `sino_01` |
 | Shendilavri | `cristal_*`, `veu_01`, `taca_01`, `espelho_ornado_01` |
 | Goranthis | `cachoeira_*`, `coluna_01`, `flor_01`, `taca_dourada_01` |
@@ -99,7 +99,7 @@ Só fatos canônicos de RESEARCH-001 e `data/stages.json`; sem lore nova.
 | Docas | "Cais, fenda e porão ritual" | pedra e madeira úmidas, azul-petróleo escuro |
 | Shedaklah | Fungo e slime; equilíbrio quebrado por Juiblex | marrom fúngico, micélio violeta |
 | Molor | Decomposição, lixo, parasitas, slime; fungo secundário | rocha verde-negra com filme viscoso |
-| Durão | Deserto pós-guerra, ferro oxidado, basalto, azul de almas | basalto, ferrugem, veios azul-fantasma |
+| Durao | Deserto pós-guerra, ferro oxidado, basalto, azul de almas | basalto, ferrugem, veios azul-fantasma |
 | Feng-tu | Templo destruído de Tou Um; peregrinação da estrela; peste | lajes azul-ardósia, juntas vermelhas, verde de peste |
 | Shendilavri | Cidade murada; luxo corrompido e ilusão | pedra vinho e preta, prata, magenta |
 | Goranthis | Paraíso ilusório: começa belo e termina orgânico | mármore marfim e ouro, musgo verde-água |
@@ -183,7 +183,7 @@ integração define os definitivos.
 **`molor_trilha_01`**
 > A trail of flattened refuse and rotten planks laid across green-black slime, made of warped wooden boards, packed trash and a few bones pressed into the muck, running from the left side of the image to the right side as an uneven strip, with slime creeping over its edges. It is a ground decal: seen from a three-quarter isometric angle tilted about 30 degrees from above, it reads as a flat path lying on the floor, wider than tall (about 2:1), with ragged edges that fade into nothing at both ends, and no raised object taller than a few pixels. Dark-fantasy pixel-art style, soft light from the upper left, crisp clean pixel art with controlled dithering, no blur and no smooth airbrushed gradient. Centered with roughly 8% empty margin. Background: a single, completely flat and uniform solid magenta color (#FF00FF), with no scenery, no cast shadow, no gradient or texture behind it. No text, logo, watermark, frame, border, UI element, character, creature, or second object, and no perfect diamond outline — only this one path, alone. Landscape image.
 
-### Durão
+### Durao
 
 **`durao_estrutura_01`**
 > The ruined corner of a military barracks in a barren post-war wasteland: thick walls of dark basalt blocks partly collapsed, with rusted iron window bars, a broken iron door hanging open, a dented iron plate roof half torn away, and reddish rust stains running down the stone. A faint pale ghostly blue glow leaks from one doorway. It looks like a fortress prison left to ruin, with no writing, signs or symbols. Dark-fantasy isometric pixel-art game prop, viewed from a three-quarter isometric angle tilted about 30 degrees from above, soft directional light from the upper left. Crisp, clean pixel-art rendering with controlled dithering, no blur and no smooth anti-aliasing. Centered with roughly 12% empty margin on every side, not touching the frame edges. Its base rests firmly on the ground with a solid footing of fallen blocks and rusty dust, so nothing looks like it is hovering, and no stray pixels float below the base. The whole silhouette is solid and fully opaque. Background: a single, completely flat and uniform solid magenta color (#FF00FF), with no ground plane, cast shadow, gradient, vignette, texture, or scenery. No text, logo, watermark, frame, border, UI element, character, creature, or second object — only this one ruin, alone. Square image.

@@ -7,7 +7,7 @@ status: "onda 1 aprovada como candidatas; nao admitida"
 relations: ["ART-PROMPTS-028", "CHATGPT-FILA-002", "SPEC-080"]
 ---
 
-# HQN-06 — A Jaula de Durão
+# HQN-06 — A Jaula de Durao
 
 ## Escopo executado
 

@@ -30,7 +30,7 @@ nem as sessões de Mystralia.
 
 **O vault e o jogo têm a mesma espinha.** As nove fases do Survivors são
 exatamente o arco jogado: Dagruve e Docas (Sessões 1–9), depois as camadas do
-Plano Abissal em ordem (Shedaklah, Molor, Durão, Feng-tu, Shendilavri,
+Plano Abissal em ordem (Shedaklah, Molor, Durao, Feng-tu, Shendilavri,
 Goranthis) e Os Pilares (Sessões 23–24). Os chefes também batem com os do vault.
 Logo, **vencer uma fase pode revelar o highlight da sessão correspondente**.
 As 5 conquistas que desbloqueiam herói (Bromnor, Korrak, Leoric, Zynara e
@@ -68,7 +68,7 @@ Numeração provisória `HQN-nn` (N = Nottgard). Fonte = nota do vault.
 | HQN-03 | O Véu Vivo | Sessões 12–13: Helion se sacrifica, a Tarn cai, nasce o Véu Vivo; Ailalore partida, surge Aila | **Primeira entrada em Shedaklah** (a incursão abissal começa) | Momento mais forte do arco. Helion **morre**: confirmar (D-N2) |
 | HQN-04 | O Palácio de Zuggtmoy | Sessão 15: negociação com a soberana fúngica; guarnição de humanos por escolha; Estige gelatinoso | Vencer Shedaklah (chefe Zuggtmoy) | Zuggtmoy **viva** |
 | HQN-05 | O Núcleo Verde | Sessão 16: Molor, bolhas de slime, Blogbog, núcleo verde | Vencer Molor (chefe Blogbog) | — |
-| HQN-06 | A Jaula de Durão | Sessão 17: rio de almas, jaula, Molydeus, Vhaerith; Korrak recebe o Machado de Xar'gath | Vencer Durão | Coincide com o desbloqueio de Korrak |
+| HQN-06 | A Jaula de Durao | Sessão 17: rio de almas, jaula, Molydeus, Vhaerith; Korrak recebe o Machado de Xar'gath | Vencer Durao | Coincide com o desbloqueio de Korrak |
 | HQN-07 | A Peregrinação da Estrela | Sessão 18: templo de Tou Um, Discípulo Pestilento, transe de 8 dias | Vencer Feng-tu (chefe Lu Yueh) | Evitar estética oriental genérica (RESEARCH-001) |
 | HQN-08 | O Chifre de Malcanthet | Sessão 19: sala de música, o Castelo Argento, aliança com Graz'zt | Vencer Shendilavri (chefe Malcanthet) | Malcanthet **viva**; roteiro **sem áudio** (declarado canônico) |
 | HQN-09 | O Paraíso que Era Ilusão | Sessões 19–20: festa falsa, paredes de carne, Socothbenoth consumido, o Estige volta a correr | Vencer Goranthis | Roteiro **sem áudio**; Juiblex é quem cai no vault, o jogo usa Socothbenoth como chefe |
@@ -101,7 +101,7 @@ de 72 imagens.
 ### R1. Comece pela espinha e em ondas
 
 - **Onda 1 (6 novas):** HQN-01 (piloto), 02, 03, 04, 05, 06. Cobre da abertura até
-  Durão e libera Korrak com sua HQ. Testa o método antes de gastar o resto.
+  Durao e libera Korrak com sua HQ. Testa o método antes de gastar o resto.
 - **Onda 2 (8 novas):** HQN-07 a 10 e a Trilha B (HQN-11 a 14).
 - **Onda 3:** Trilha C, apenas se a economia pedir (R4). **Prompts prontos** em
   [[ART-PROMPTS-030-hqs-trilha-c]] e [[CHATGPT-FILA-003-hqs-trilha-c]] (16 imagens); não enviados.

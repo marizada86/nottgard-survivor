@@ -8,7 +8,7 @@ Decisão: **admissão autorizada pelo responsável após QA visual aprovada**.
 
 Foram promovidos para `assets/decals/` os 16 PNGs de remendo e trilha de:
 
-- Dagruve, Shedaklah, Molor e Durão;
+- Dagruve, Shedaklah, Molor e Durao;
 - Feng-tu, Shendilavri, Goranthis e Pilares.
 
 O manifesto `data/ground_decals.json` aponta esses oito biomas aos destinos

@@ -47,7 +47,7 @@ no [INBOX](../backlog/INBOX.md).
 | IN | Nota | Contexto | Resumo fiel | Destino |
 |---|---|---|---|---|
 | IN-033 | S1-N1 | Dagruve, nv 8, ferreiro aberto (print 001: só "Sair") | "O usuário não sabe que não tem nada para melhorar" | MEC-023 |
-| IN-034 | S1-N2 | Dagruve, nv 17 | Objetos no mapa flutuando | BUG-013 (**relato espontâneo**; agora Dagruve, Docas e Durão) |
+| IN-034 | S1-N2 | Dagruve, nv 17 | Objetos no mapa flutuando | BUG-013 (**relato espontâneo**; agora Dagruve, Docas e Durao) |
 | IN-035 | S1-N3 | Docas, nv 26, 5 inimigos | Aumentar a quantidade de mobs no mapa | MEC-024 |
 | IN-036 | S1-N4 | Docas, nv 27, oferta de item (print 004) | Melhorar as cores dos itens raros para diferenciar dos comuns. O jogador clica fácil no item novo porque ele está de outra cor, "destacado" | ART-016 |
 | IN-037 | S1-N5 | Docas, nv 28, 1 inimigo | Além de mais mobs, aumentar a dificuldade no início: "esse tipo de jogo fica mais fácil ao evoluir; no início podemos aumentar bastante" | MEC-024 |

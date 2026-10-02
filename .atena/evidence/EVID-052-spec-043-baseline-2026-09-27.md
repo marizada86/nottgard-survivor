@@ -27,7 +27,7 @@ Avisos ambientais não bloqueantes:
 
 Comando: `Godot_v4.7.2-stable_win64.exe --headless --path . res://tools/smoke.tscn`
 
-Resultado: `smoke: ok` nas fases Dagruve, Docas, Shedaklah, Molor, Durão,
+Resultado: `smoke: ok` nas fases Dagruve, Docas, Shedaklah, Molor, Durao,
 Feng Tu, Shendilavri, Goranthis e Pilares.
 
 O encerramento relatou quatro instâncias ObjectDB e dois recursos ainda em uso;

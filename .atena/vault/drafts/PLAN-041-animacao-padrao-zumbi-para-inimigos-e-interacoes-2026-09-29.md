@@ -214,7 +214,7 @@ Ordem pela exposição do jogador (fases iniciais primeiro):
 | **1 — Dagruve e Docas** | slime_corrosivo, cultista_adaga, cultista_arqueiro, cultista_cajado, notivago, criatura_corrompida, guardiao_copia, arch_hag, tentaculo_kraken, guardiao_verdadeiro (chefe) | 10 |
 | **2 — Interações e quebráveis** | baús, altar, NPCs, mímico, 10 quebráveis | 11 |
 | **3 — Shedaklah e Molor** | servo_de_zuggtmoy, cogumelo_fungico, esporo_voador, slime_de_juiblex, pudim_negro, gargula, receptaculo_de_juiblex, zuggtmoy, bolha_de_slime, cultista_thullgrime, blogbog | 11 |
-| **4 — Durão e Feng-tu** | alma_penada, demonio_de_gehenna, carcereiro_de_pedra, aberracao_shu, ezro, molydeus_menor, molydeus_chefe, larva_de_lu_yueh, cultista_de_feng_tu, estatua_do_templo, cultista_ghaunadaur, discipulo_pestilento, lu_yueh | 13 |
+| **4 — Durao e Feng-tu** | alma_penada, demonio_de_gehenna, carcereiro_de_pedra, aberracao_shu, ezro, molydeus_menor, molydeus_chefe, larva_de_lu_yueh, cultista_de_feng_tu, estatua_do_templo, cultista_ghaunadaur, discipulo_pestilento, lu_yueh | 13 |
 | **5 — Shendilavri, Goranthis e Pilares** | escravo_de_rivenheart, sucubo, ilusao_de_sucubo, guarda_do_castelo, master_of_cruelties, malcanthet, ilusao_de_socothbenoth, guardiao_de_goranthis, cultista_de_socothbenoth, death_tyrant, socothbenoth, sintese_abissal | 12 |
 
 Cada onda vira **um** `ART-PROMPTS-NNN` e **uma** fila `CHATGPT-FILA-NNN`, como

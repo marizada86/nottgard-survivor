@@ -307,7 +307,7 @@ comportamento do rio não é mais vigente.
 **CANON — aprovado pelo dono em 2026-09-27, pelo PLAN-027 e SPEC-055.** A
 seção 24 está supersedida. O Rio Estige funcional aparece somente onde há
 presença documentada na campanha: **Shedaklah** (dois braços lentos),
-**Durão** (canal lento junto aos cais), **Shendilavri** (afluente marginal) e
+**Durao** (canal lento junto aos cais), **Shendilavri** (afluente marginal) e
 **Goranthis** (queda e bacia marginal). Dagruve, Docas, Molor, Feng-tu e
 Pilares não recebem rio nem contrato ambiental do Estige.
 

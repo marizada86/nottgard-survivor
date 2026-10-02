@@ -206,7 +206,7 @@ static func is_styx_water(stage_id: String, p: Vector2) -> bool:
 	return material == MATERIAL_SHALLOW or material == MATERIAL_CURRENT or material == MATERIAL_SHEDAKLAH_STYX or material == MATERIAL_SHENDILAVRI_STYX or material == MATERIAL_GORANTHIS_STYXFALL
 
 static func is_styx_current(stage_id: String, p: Vector2) -> bool:
-	# Durão usa o leito profundo; ele não causa deslocamento físico.
+	# Durao usa o leito profundo; ele não causa deslocamento físico.
 	return stage_id == "durao" and material_at(stage_id, p) == MATERIAL_CURRENT
 
 static func _distance_to_styx_local(stage_id: String, p: Vector2) -> float:

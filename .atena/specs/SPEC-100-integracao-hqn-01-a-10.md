@@ -64,7 +64,7 @@ Gatilhos propostos, conforme PLAN-040:
 | HQN-03 | Primeira entrada em Shedaklah |
 | HQN-04 | Primeira vitória em Shedaklah |
 | HQN-05 | Primeira vitória em Molor |
-| HQN-06 | Primeira vitória em Durão (`durao`) |
+| HQN-06 | Primeira vitória em Durao (`durao`) |
 | HQN-07 | Primeira vitória em Feng-tu (`feng_tu`) |
 | HQN-08 | Primeira vitória em Shendilavri (`shendilavri`) |
 | HQN-09 | Primeira vitória em Goranthis (`goranthis`) |

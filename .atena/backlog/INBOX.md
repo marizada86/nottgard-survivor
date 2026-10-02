@@ -66,7 +66,7 @@ Origem: [EVID-107](../evidence/EVID-107-playtest-publico-t02-hiago-2026-09-29.md
 | IN-027 | T02-S1-N9 | Comparação loja/forja ao passar o mouse | MEC-019 |
 | IN-028 | T02-S1-N10 | Nv 2 de equipamento sem melhoria | BUG-015 |
 | IN-029 | T02-S1-N11 | Dano mín./máx. da arma com atributos | MEC-018 |
-| IN-030 | T02-S1-N12 | Mobs presos em obstáculos (Durão) | BUG-012 (2º relato, confirmado) |
+| IN-030 | T02-S1-N12 | Mobs presos em obstáculos (Durao) | BUG-012 (2º relato, confirmado) |
 | IN-031 | T02-S1-N13 | Perda de INT do Estige dura 5 min | MEC-022 |
 | — | Questionário 002 | 14 respostas + prioridades 4, 8, 9 + nota 10 | contadores nos cartões; tabela no EVID-107 |
 
