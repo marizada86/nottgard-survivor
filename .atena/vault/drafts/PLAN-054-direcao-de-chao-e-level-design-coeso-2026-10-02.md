@@ -73,3 +73,5 @@ ART (atlas de chão por bioma), MEC-035 (estende o layout por dados), ART-012 (p
 
 ## Progresso
 - Dagruve e Docas: aprovados. Sete biomas restantes: chão assado implementado (SPEC-116), aguardando aprovação visual. Próximo: F1 (zonas, eixo de caminho, landmarks, materiais em dados) e F4 (bot e questionário).
+- F1 em Shedaklah (molde): `data/level_design.json` (novo) guarda por bioma o `chao` (clareira de início, dominância fungo a oeste × limo a leste, regiões: bosque, poço de lodo, esporos; trilhas norte-sul e leste-oeste; praça da estrutura) e os `props` por zonas (54 props, mesmo formato de `scenery.json`). `SceneryLayout.stage_spec` usa `scenery.json` e, na falta de props, `level_design.json`. `tools/bake_ground.gd` aplica o `chao` sobre o layout só onde não é água nem margem. Teste: `tests/test_level_design.gd` (props fora de água e margem, determinismo, tipos com dimensões, sem sobreposição). Captura geral: `tools/capture_ground_spots.tscn` gera `<bioma>_<tag>_overview.png`.
+- Próximos biomas pela mesma receita: Molor, Durão, Feng-tu, Shendilavri, Goranthis, Pilares (um por vez, com aprovação).

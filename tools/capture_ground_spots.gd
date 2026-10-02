@@ -27,4 +27,9 @@ func _ready() -> void:
 		await RenderingServer.frame_post_draw
 		var image := get_viewport().get_texture().get_image()
 		image.save_png("res://.atena/generated/ground-review/%s_%s_%d_%d.png" % [stage, tag, spot.x, spot.y])
+	run.camera.position = Iso.to_screen(Vector2(30, 30)) + Vector2(0, 0)
+	run.camera.zoom = Vector2(0.33, 0.33)
+	await get_tree().create_timer(0.3).timeout
+	await RenderingServer.frame_post_draw
+	get_viewport().get_texture().get_image().save_png("res://.atena/generated/ground-review/%s_%s_overview.png" % [stage, tag])
 	get_tree().quit()

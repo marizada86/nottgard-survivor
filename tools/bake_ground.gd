@@ -300,6 +300,7 @@ func _setup_layout(stage: String) -> void:
 	for j in cells:
 		for i in cells:
 			_grid[j * cells + i] = TerrainLayout.material_at(stage, Vector2((i + 0.5) / GRID_RES, (j + 0.5) / GRID_RES))
+	_apply_zones(stage)
 	var s := _specs
 	# Shedaklah
 	s["fungal_soil"] = _sp("soil", Color(0.17, 0.14, 0.20), Color(0.24, 0.19, 0.26), Color(0.11, 0.09, 0.14))
@@ -307,6 +308,11 @@ func _setup_layout(stage: String) -> void:
 	s["ooze_crust"] = _sp("ooze", Color(0.21, 0.25, 0.16), Color(0.29, 0.33, 0.20), Color(0.42, 0.48, 0.28))
 	s["shedaklah_bank"] = _sp("bank", Color(0.25, 0.21, 0.25), Color(0.34, 0.29, 0.33), Color(0.15, 0.12, 0.16))
 	s["shedaklah_styx"] = _sp("water", Color(0.045, 0.070, 0.110), Color(0.105, 0.150, 0.220), Color(0.20, 0.30, 0.40))
+	s["shedaklah_path"] = _sp("web", Color(0.42, 0.34, 0.38), Color(0.52, 0.43, 0.46), Color(0.30, 0.22, 0.28))
+	s["shedaklah_plaza"] = _sp("crack", Color(0.27, 0.22, 0.28), Color(0.36, 0.30, 0.36), Color(0.08, 0.06, 0.10))
+	s["shedaklah_grove"] = _sp("moss", Color(0.12, 0.17, 0.15), Color(0.18, 0.24, 0.20), Color(0.08, 0.11, 0.10))
+	s["shedaklah_pool"] = _sp("ooze", Color(0.20, 0.28, 0.12), Color(0.30, 0.40, 0.16), Color(0.50, 0.62, 0.26))
+	s["shedaklah_spore"] = _sp("web", Color(0.30, 0.20, 0.30), Color(0.42, 0.28, 0.40), Color(0.20, 0.12, 0.20))
 	# Molor
 	s["molor_rock"] = _sp("rock", Color(0.13, 0.19, 0.15), Color(0.20, 0.27, 0.21), Color(0.07, 0.11, 0.08))
 	s["molor_detritus"] = _sp("soil", Color(0.20, 0.23, 0.15), Color(0.29, 0.31, 0.19), Color(0.12, 0.14, 0.09))
@@ -343,6 +349,49 @@ func _setup_layout(stage: String) -> void:
 	s["pillars_basalt"] = _sp("slab", Color(0.17, 0.15, 0.25), Color(0.25, 0.22, 0.35), Color(0.04, 0.04, 0.08))
 	s["pillars_dust"] = _sp("ash", Color(0.24, 0.21, 0.32), Color(0.33, 0.29, 0.42), Color(0.16, 0.14, 0.22))
 	s["pillars_foundation"] = _sp("rock", Color(0.06, 0.06, 0.11), Color(0.11, 0.10, 0.18), Color(0.02, 0.02, 0.05))
+
+## Level design (data/level_design.json -> "chao"): sobrepõe materiais visuais ao layout, sem tocar em água e margem.
+func _apply_zones(stage: String) -> void:
+	var file := FileAccess.open("res://data/level_design.json", FileAccess.READ)
+	if file == null:
+		return
+	var design: Dictionary = JSON.parse_string(file.get_as_text()).get(stage, {})
+	var chao: Dictionary = design.get("chao", {})
+	if chao.is_empty():
+		return
+	var cells := SIZE * GRID_RES
+	for j in cells:
+		for i in cells:
+			var idx := j * cells + i
+			var base := String(_grid[idx])
+			if WATER.has(base):
+				continue
+			var p := Vector2((i + 0.5) / GRID_RES, (j + 0.5) / GRID_RES)
+			var m := base
+			for dom in chao.get("dominancia", []):
+				var v: float = p.x if String(dom.axis) == "x" else p.y
+				var inside: bool = (dom.has("below") and v < float(dom.below)) or (dom.has("above") and v > float(dom.above))
+				if inside and dom.replace.has(m) and _large.get_noise_2d(p.x * 1.7, p.y * 1.7) >= float(dom.get("noise_min", -1.0)):
+					m = String(dom.replace[m])
+			for region in chao.get("regioes", []):
+				var c: Array = region.center
+				if p.distance_to(Vector2(float(c[0]), float(c[1]))) <= float(region.radius):
+					m = String(region.material)
+			for lane in chao.get("trilhas", []):
+				var at := float(lane.at)
+				var along: float = p.x if String(lane.axis) == "x" else p.y
+				var across: float = absf((p.y if String(lane.axis) == "x" else p.x) - at)
+				if along >= float(lane.from) and along <= float(lane.to) and across <= float(lane.half_width):
+					m = String(lane.material)
+			for plaza in chao.get("pracas", []):
+				var pc: Array = plaza.center
+				if p.distance_to(Vector2(float(pc[0]), float(pc[1]))) <= float(plaza.radius):
+					m = String(plaza.material)
+			if chao.has("clareira"):
+				var cc: Array = chao.clareira.center
+				if p.distance_to(Vector2(float(cc[0]), float(cc[1]))) <= float(chao.clareira.radius) and not (m == "shedaklah_path"):
+					m = String(chao.clareira.material)
+			_grid[idx] = m
 
 func _mat_at(x: float, y: float) -> String:
 	var cells := SIZE * GRID_RES

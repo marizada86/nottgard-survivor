@@ -9,7 +9,7 @@ const MARGIN := 2.0
 
 ## Cria os props da fase e remove os antigos da cena. Devolve quantos criou (0 = fase sem dados; nada é removido).
 static func apply(sorted: Node2D, stage_key: String, start_ground: Vector2, map_size: Vector2) -> int:
-	var spec: Dictionary = Data.table("scenery").get(stage_key, {})
+	var spec: Dictionary = stage_spec(stage_key)
 	var entries := expanded_props(stage_key, start_ground, map_size)
 	if spec.get("props", []).is_empty():
 		return 0
@@ -17,7 +17,8 @@ static func apply(sorted: Node2D, stage_key: String, start_ground: Vector2, map_
 		if child is Prop:
 			sorted.remove_child(child)
 			child.queue_free()
-	var kinds: Dictionary = Data.table("scenery").get("_kinds", {})
+	var kinds: Dictionary = Data.table("scenery").get("_kinds", {}).duplicate()
+	kinds.merge(Data.table("level_design").get("_kinds", {}))
 	for index in entries.size():
 		var entry: Dictionary = entries[index]
 		var dims: Dictionary = kinds.get(String(entry.kind), {})
@@ -31,10 +32,17 @@ static func apply(sorted: Node2D, stage_key: String, start_ground: Vector2, map_
 		sorted.add_child(prop)
 	return entries.size()
 
+## Dados do layout da fase: scenery.json (Dagruve, Docas) ou, se ele não tiver props, level_design.json (PLAN-054 F1).
+static func stage_spec(stage_key: String) -> Dictionary:
+	var spec: Dictionary = Data.table("scenery").get(stage_key, {})
+	if spec.get("props", []).is_empty():
+		return Data.table("level_design").get(stage_key, {})
+	return spec
+
 ## Lista final de props: aglomerados expandidos, dentro do mapa e fora da área de início.
 static func expanded_props(stage_key: String, start_ground: Vector2, map_size: Vector2) -> Array:
 	var out: Array = []
-	var spec: Dictionary = Data.table("scenery").get(stage_key, {})
+	var spec: Dictionary = stage_spec(stage_key)
 	for cluster in spec.get("props", []):
 		var center := Vector2(float(cluster.center[0]), float(cluster.center[1]))
 		for item in cluster.items:

@@ -32,6 +32,9 @@ Técnica igual à de Dagruve: `godot --headless --path . -s tools/bake_ground.gd
 Shedaklah, Molor, Durão, Feng-tu, Shendilavri, Goranthis e Pilares reaproveitam o layout existente (`TerrainLayout.material_at`): a ferramenta consulta uma tabela de materiais (5 células por tile) e pinta cada material com um estilo procedural (terra, cinza, laje, laje rachada, laje com veios, água, queda d'água, lodo com bolhas, rocha, margem, musgo, teia de micélio). A consulta é deslocada por ruído para bordas orgânicas; perto de água e margem o deslocamento cai a 0,3 tile para a jogabilidade (Estige, corrente) continuar coincidindo com o que se vê. Materiais vizinhos se misturam levemente nas bordas e cada bioma tem sua cor de névoa na borda.
 Paletas por material estão em `_setup_layout` (`tools/bake_ground.gd`). Regerar: `godot --headless --path . -s tools/bake_ground.gd -- <bioma> assets/tiles/<bioma>_ground_baked_v1.png` e depois `--import`. Capturas `*_v2_*.png` em `.atena/generated/ground-review/`.
 
+## Level design (F1) — Shedaklah
+Ver PLAN-054, seção Progresso. Zonas de chão em `data/level_design.json` → `chao`; props por zonas no mesmo arquivo → `props` (substituem os 40 props soltos da cena em tempo de execução, sem tocar na RNG da batalha). Mudança de comportamento: os props de Shedaklah agora ficam em aglomerados (avenida, praça da estrutura, bosque, poço de lodo, esporos, margens) e nenhum nasce em água ou margem.
+
 ## Evidência
 Capturas em `.atena/generated/ground-review/` (Dagruve: `dagruve_before.png`, `dagruve_v3.png`; Docas: `docas_before.png`, `docas_v2_*.png`, geradas por `tools/capture_ground_spots.tscn`). Suíte: 0 falhas.
 
