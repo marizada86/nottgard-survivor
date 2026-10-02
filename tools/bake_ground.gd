@@ -317,6 +317,11 @@ func _setup_layout(stage: String) -> void:
 	s["molor_rock"] = _sp("rock", Color(0.13, 0.19, 0.15), Color(0.20, 0.27, 0.21), Color(0.07, 0.11, 0.08))
 	s["molor_detritus"] = _sp("soil", Color(0.20, 0.23, 0.15), Color(0.29, 0.31, 0.19), Color(0.12, 0.14, 0.09))
 	s["molor_ooze"] = _sp("ooze", Color(0.21, 0.31, 0.13), Color(0.32, 0.44, 0.18), Color(0.55, 0.68, 0.30))
+	s["molor_causeway"] = _sp("crack", Color(0.31, 0.34, 0.25), Color(0.41, 0.44, 0.32), Color(0.07, 0.09, 0.05))
+	s["molor_plaza"] = _sp("slab", Color(0.19, 0.23, 0.19), Color(0.27, 0.31, 0.25), Color(0.05, 0.07, 0.05))
+	s["molor_junk"] = _sp("soil", Color(0.19, 0.17, 0.12), Color(0.28, 0.25, 0.17), Color(0.11, 0.10, 0.07))
+	s["molor_roof"] = _sp("rock", Color(0.08, 0.13, 0.10), Color(0.14, 0.21, 0.16), Color(0.04, 0.07, 0.05))
+	s["molor_nest"] = _sp("web", Color(0.26, 0.18, 0.20), Color(0.36, 0.25, 0.27), Color(0.18, 0.11, 0.13))
 	s["molor_wall"] = _sp("rock", Color(0.07, 0.12, 0.09), Color(0.13, 0.19, 0.14), Color(0.03, 0.06, 0.04))
 	# Durão
 	s["plateau"] = _sp("soil", Color(0.23, 0.17, 0.14), Color(0.32, 0.24, 0.19), Color(0.15, 0.11, 0.10))
@@ -364,7 +369,7 @@ func _apply_zones(stage: String) -> void:
 		for i in cells:
 			var idx := j * cells + i
 			var base := String(_grid[idx])
-			if WATER.has(base):
+			if WATER.has(base) or base.ends_with("wall") or base.ends_with("foundation") or base == "slope":
 				continue
 			var p := Vector2((i + 0.5) / GRID_RES, (j + 0.5) / GRID_RES)
 			var m := base
@@ -377,6 +382,10 @@ func _apply_zones(stage: String) -> void:
 				var c: Array = region.center
 				if p.distance_to(Vector2(float(c[0]), float(c[1]))) <= float(region.radius):
 					m = String(region.material)
+			if chao.has("clareira"):
+				var cc: Array = chao.clareira.center
+				if p.distance_to(Vector2(float(cc[0]), float(cc[1]))) <= float(chao.clareira.radius):
+					m = String(chao.clareira.material)
 			for lane in chao.get("trilhas", []):
 				var at := float(lane.at)
 				var along: float = p.x if String(lane.axis) == "x" else p.y
@@ -387,10 +396,6 @@ func _apply_zones(stage: String) -> void:
 				var pc: Array = plaza.center
 				if p.distance_to(Vector2(float(pc[0]), float(pc[1]))) <= float(plaza.radius):
 					m = String(plaza.material)
-			if chao.has("clareira"):
-				var cc: Array = chao.clareira.center
-				if p.distance_to(Vector2(float(cc[0]), float(cc[1]))) <= float(chao.clareira.radius) and not (m == "shedaklah_path"):
-					m = String(chao.clareira.material)
 			_grid[idx] = m
 
 func _mat_at(x: float, y: float) -> String:

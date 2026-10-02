@@ -24,8 +24,8 @@ func run() -> Array:
 				out.append("%s: tipo de prop sem dimensões: %s" % [stage_id, p.kind])
 			var at: Vector2 = p.pos
 			var material := String(TerrainLayout.material_at(stage_id, at))
-			if TerrainLayout.is_styx_water(stage_id, at) or material.ends_with("bank") or material == "bank":
-				out.append("%s: prop %s em água ou margem (%.1f, %.1f)" % [stage_id, p.kind, at.x, at.y])
+			if TerrainLayout.is_styx_water(stage_id, at) or material.ends_with("bank") or material == "bank" or material.ends_with("wall") or material.ends_with("foundation"):
+				out.append("%s: prop %s em água, margem ou parede (%.1f, %.1f)" % [stage_id, p.kind, at.x, at.y])
 		for key in ["clareira", "regioes", "trilhas"]:
 			if not design[stage_id].get("chao", {}).has(key):
 				out.append("%s: chao sem %s" % [stage_id, key])
