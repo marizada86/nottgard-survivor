@@ -339,6 +339,9 @@ func _setup_layout(stage: String) -> void:
 	s["feng_tu_stone"] = _sp("slab", Color(0.20, 0.24, 0.29), Color(0.29, 0.33, 0.38), Color(0.06, 0.08, 0.11))
 	s["feng_tu_ash"] = _sp("ash", Color(0.27, 0.28, 0.30), Color(0.36, 0.37, 0.39), Color(0.18, 0.19, 0.21))
 	s["feng_tu_crack"] = _sp("crack", Color(0.15, 0.18, 0.23), Color(0.22, 0.26, 0.31), Color(0.04, 0.05, 0.08))
+	s["feng_tu_road"] = _sp("slab", Color(0.42, 0.39, 0.35), Color(0.54, 0.50, 0.44), Color(0.12, 0.11, 0.11))
+	s["feng_tu_plaza"] = _sp("slab", Color(0.30, 0.20, 0.20), Color(0.40, 0.27, 0.26), Color(0.09, 0.06, 0.07))
+	s["feng_tu_moss"] = _sp("moss", Color(0.15, 0.22, 0.20), Color(0.22, 0.31, 0.27), Color(0.09, 0.14, 0.13))
 	s["feng_tu_foundation"] = _sp("rock", Color(0.08, 0.10, 0.14), Color(0.14, 0.17, 0.22), Color(0.03, 0.04, 0.06))
 	# Shendilavri
 	s["shendilavri_marble"] = _sp("slab", Color(0.23, 0.17, 0.27), Color(0.34, 0.26, 0.37), Color(0.07, 0.05, 0.09))
