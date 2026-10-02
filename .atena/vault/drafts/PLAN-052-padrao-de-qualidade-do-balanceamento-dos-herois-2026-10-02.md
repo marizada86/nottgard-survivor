@@ -1,7 +1,7 @@
 ---
 id: "PLAN-052"
 title: "Padrão de qualidade do balanceamento dos heróis"
-status: "decisões do dono registradas em 2026-10-02; fichas de papel aguardam aprovação"
+status: "decisões registradas em 2026-10-02; EXECUÇÃO ADIADA para depois do próximo playtest humano (ordem do dono, 2026-10-02)"
 created: "2026-10-02"
 relations: ["[[EVID-143-bot-travado-em-item-offer-e-chefe-das-docas-2026-10-01]]", "[[EVID-144-varredura-do-bot-corrigido-dagruve-docas-2026-10-01]]"]
 ---
@@ -64,6 +64,8 @@ Cada ficha: papel, ponto forte, ponto fraco, faixa-alvo (morte inicial / vitóri
 | Zynara | Controle de tempo | Para o tempo, +1 opção por level-up | Frágil no começo, escala com escolhas | 20–30 % / 60–70 % |
 
 ## Próximos passos
+
+> **Adiado por ordem do dono (2026-10-02):** nenhum destes passos roda antes do próximo playtest humano. Depois dele, retomar do passo 1 com o feedback em mãos.
 1. Dono aprova ou corrige as fichas.
 2. Corrigir **D2** (Kayron sobe um pouco, Korrak ou Bromnor descem um pouco) e **D3** (Maelor desce ou os desbloqueios sobem), com as alavancas permitidas.
 3. Acrescentar à varredura longa a métrica de teto por herói (D4).
