@@ -7,10 +7,32 @@
   bestiário ([RESEARCH-001](../vault/research/RESEARCH-001-abismo-bestiario-visual-2026-09-21.md)),
   sem inventar lore. Sem história: a lore é só sabor.
 - Itens abertos acumulam até fechar um **lote**. O lote sai como um único
-  `ART-PROMPTS-NNN` (próximo livre: **055**) para o gerador de imagem.
+  `ART-PROMPTS-NNN` (próximo livre: **056**) para o gerador de imagem.
 - Candidatos ficam em `.atena/generated/` até admissão explícita do dono.
 
 ## Abertos
+
+### PRIORIDADE ALTA — tiras de heróis (2026-10-02)
+
+Fila [CHATGPT-FILA-024](../generated/CHATGPT-FILA-024-regerar-tiras-dos-herois.md) / [ART-PROMPTS-055](../generated/ART-PROMPTS-055-regerar-caminhadas-e-acoes-dos-herois.md): regerar tiras com defeito de dimensão (BUG-025). Passa na frente das demais.
+
+### Execução local de 2026-10-02
+
+Pedido do dono: executar os prompts e adicionar as imagens ao jogo. FILA-024 W02 Korrak move_e corrigido e integrado após auditoria; W01 Kayron aguarda decisão sobre limpeza de alfa após três tentativas. Progresso rastreado em [PLAN-053](../vault/drafts/PLAN-053-fila-de-imagens-2026-10-02.md).
+
+- ART-024: miniatura de Docas gerada e integrada.
+- FILA-009 T01: fundo de título gerado e integrado.
+- ART-025/026, FILA-010 C01–C11: fundos e nove props gerados e integrados ao piloto; capturas runtime conferidas (estrada, cais, carroça, carga, guindaste, selo, armadilha, poço e oficina).
+- ART-027, FILA-011 S01–S02: isca e explosão em quatro quadros geradas e integradas; primeira isca rejeitada por corte e halo, segunda utilizada.
+- ART-021: as três identidades limpas de Molor foram aprovadas pelo dono. Bolha de Slime e Cultista: 40 quadros e oito ciclos integrados; Blogbog pendente pela prioridade da FILA-024. Limpeza técnica de alfa autorizada, originais preservados.
+- FILA-011 S03–S05: ampulheta, doação e aposta geradas e integradas.
+- FILA-012 U07–U09: subida de nível, flare e moldura de evolução gerados e integrados; U01–U06 continuam condicionados às mecânicas pendentes.
+- HQs reconciliadas: `data/hqs.json` já registra HQN-01–14, com 56 PNGs existentes e nenhum caminho ausente. EVID-128 e EVID-133 documentam integração e prévia. Não regenerar a FILA-002 por causa do estado histórico abaixo.
+- FILA-020: A03 v02 e B03 aprovados pelo dono; os 12 quadros foram gerados e integrados em dois atlas. Sete cores, oito direções, duração e efeitos reduzidos conferidos. Build em `build/image-priority-vfx/NottgardSurvivors.exe`; suite com 0 falhas.
+- FILA-021: C03 v02 e D03 v01 aprovados; Estocada e Chicote completos e integrados, seis quadros por efeito. Sete cores e duração capturadas.
+- Total: 34 PNGs integrados (33 novos + substituição de Korrak move_e); testes com 0 falhas, smoke das nove fases e build local `build/image-priority-molor/NottgardSurvivors.exe` (4510c64+). Detalhes em [EVID-145](../evidence/EVID-145-fila-de-imagens-prioritaria-2026-10-02.md).
+
+As tabelas históricas abaixo preservam a prioridade anterior; esta seção registra o estado mais recente e evita gerar novamente os itens acima. Admissão local feita sob o pedido de 2026-10-02, sem atribuir aprovação visual individual ao dono.
 
 | ID | Tipo | Item | Sabor Nottgard (preencher no lote) | Origem | Dependência |
 |---|---|---|---|---|---|
@@ -31,7 +53,7 @@
 | ART-015 | asset/VFX | Ímã de experiência mais evidente (asset do pickup e/ou efeito ao atrair os cristais) | [EVID-107](../evidence/EVID-107-playtest-publico-t02-hiago-2026-09-29.md) IN-026 | —; **INTEGRADO 2026-09-29:** `assets/pickups/magnet.png` oficial, maior (32 px) e com brilho pulsante; a ferradura provisória foi removida|
 | ART-016 | UI/cor | **Cor de raridade** nas ofertas de item, loja e forja (comum, mágico, raro, único). Hoje a oferta pinta de verde o item **novo** sem olhar a raridade (`ui/hud.gd`) e empurra a troca de um raro por um comum (print 004) | [EVID-108](../evidence/EVID-108-playtest-publico-t03-dna-2026-09-29.md) IN-036 | acompanha MEC-019; **IMPLEMENTADO 2026-09-29** (`ui/hud.gd`: cor pela raridade, sem verde fixo; aguarda run real, PLAN-039) |
 | ART-017 | UI/texto | Explicar "+1 redução" (é redução de dano recebido) e os demais rótulos de atributo em ofertas e ficha | [EVID-108](../evidence/EVID-108-playtest-publico-t03-dna-2026-09-29.md) IN-038 | acompanha MEC-019; **IMPLEMENTADO 2026-09-29** parcial: "redução de dano". CA/CAM/coleta seguem abreviados; aguarda run real |
-| ART-021 | animação | Animação no **padrão Zumbi** para os 47 inimigos que ainda são estáticos (perfis A/B/C, 20–26 quadros; métodos 1 e 2). Plano, orçamento (~1 070 quadros ou ~210 imagens) e ondas em [PLAN-041](../vault/drafts/PLAN-041-animacao-padrao-zumbi-para-inimigos-e-interacoes-2026-09-29.md) | por inimigo, bioma da fase | Zumbi ([EVID-104](../evidence/EVID-104-zumbi-admissao-2026-09-29.md)); dono, 2026-09-29 | D-A1 a D-A6 aprovadas (2026-09-29). [PLAN-048](../vault/drafts/PLAN-048-geracao-animacoes-mobs-onda-1-2026-09-30.md) e identidades I01–I08 ([ART-PROMPTS-032](../generated/ART-PROMPTS-032-mobs-onda-1-identidade.md), [EVID-127](../evidence/EVID-127-mobs-wave-1-gate-identidade-2026-09-30.md)) aprovados. **Admitido 2026-09-30:** 37 tiras de animação para 9 mobs da Onda 1, integradas e validadas sem falhas ([SPEC-111](../specs/SPEC-111-admissao-animacoes-mobs-onda-1.md), [EVID-138](../evidence/EVID-138-admissao-animacoes-mobs-onda-1-2026-09-30.md)). Durvall e Leoric permanecem candidatos. **Prompts por bioma prontos (2026-10-01, nada enviado):** Shedaklah [ART-PROMPTS-044](../generated/ART-PROMPTS-044-mobs-shedaklah.md), Molor 045, Durão 046, Feng Tu 047, Shendilavri 048, Goranthis 049, Pilares 050; filas CHATGPT-FILA-013 a 019; 702 quadros no total (Dagruve e Docas já estão animadas). [Histórico](#art-021) |
+| ART-021 | animação | Animação no **padrão Zumbi** para os 47 inimigos que ainda são estáticos (perfis A/B/C, 20–26 quadros; métodos 1 e 2). Plano, orçamento (~1 070 quadros ou ~210 imagens) e ondas em [PLAN-041](../vault/drafts/PLAN-041-animacao-padrao-zumbi-para-inimigos-e-interacoes-2026-09-29.md) | por inimigo, bioma da fase | Zumbi ([EVID-104](../evidence/EVID-104-zumbi-admissao-2026-09-29.md)); dono, 2026-09-29 | D-A1 a D-A6 aprovadas (2026-09-29). [PLAN-048](../vault/drafts/PLAN-048-geracao-animacoes-mobs-onda-1-2026-09-30.md) e identidades I01–I08 ([ART-PROMPTS-032](../generated/ART-PROMPTS-032-mobs-onda-1-identidade.md), [EVID-127](../evidence/EVID-127-mobs-wave-1-gate-identidade-2026-09-30.md)) aprovados. **Admitido 2026-09-30:** 37 tiras de animação para 9 mobs da Onda 1, integradas e validadas sem falhas ([SPEC-111](../specs/SPEC-111-admissao-animacoes-mobs-onda-1.md), [EVID-138](../evidence/EVID-138-admissao-animacoes-mobs-onda-1-2026-09-30.md)). Durvall e Leoric permanecem candidatos. **Prompts por bioma prontos (2026-10-01, nada enviado):** Shedaklah [ART-PROMPTS-044](../generated/ART-PROMPTS-044-mobs-shedaklah.md), Molor 045, Durao 046, Feng Tu 047, Shendilavri 048, Goranthis 049, Pilares 050; filas CHATGPT-FILA-013 a 019; 702 quadros no total (Dagruve e Docas já estão animadas). [Histórico](#art-021) |
 | ART-022 | animação | Interações: regerar **baú abrindo** (`chest_open`, solidez 43 %) e **altar** (39 %); baú de chefe com animação própria; idle de loja, ferreiro e curandeiro; 10 quebráveis com `death` (romper) | por interação | [PLAN-041](../vault/drafts/PLAN-041-animacao-padrao-zumbi-para-inimigos-e-interacoes-2026-09-29.md); acompanha ART-009 e ART-011 | depende da admissão do Lote 1 (ART-PROMPTS-025) |
 | ART-018 | props/NPC | Asset da **Ampulheta** (evento que adianta o tempo do mapa). Hoje é um quadrado lilás com rótulo; PNG definitivo em `assets/interactions/ampulheta.png` | [[SPEC-085-jogar-mais-rapido-2x-e-ampulheta]] | acompanha MEC-010 ; ART-PROMPTS-042 pronto, fila CHATGPT-FILA-011 |
 | ART-019 | props/NPC | Asset do **Altar da Doação** (evento). Hoje quadrado lilás com rótulo; PNG em `assets/interactions/doacao.png` | [[SPEC-087-fidelidade-e-eventos-de-risco]] | acompanha MEC-005 ; ART-PROMPTS-042 pronto, fila CHATGPT-FILA-011 |
@@ -80,7 +102,7 @@
 > |---|---|---:|---|
 > | 1 | [CHATGPT-FILA-014](../generated/CHATGPT-FILA-014-mobs-molor.md) Molor | 66 | menor lote com chefe; valida a receita num bioma novo |
 > | 2 | [CHATGPT-FILA-013](../generated/CHATGPT-FILA-013-mobs-shedaklah.md) Shedaklah | 166 | maior reuso (limo, receptáculo e pudim aparecem em Molor, Goranthis e Pilares) |
-> | 3 | [CHATGPT-FILA-015](../generated/CHATGPT-FILA-015-mobs-durao.md) Durão | 126 | `molydeus_chefe` cobre também o `molydeus_menor` |
+> | 3 | [CHATGPT-FILA-015](../generated/CHATGPT-FILA-015-mobs-durao.md) Durao | 126 | `molydeus_chefe` cobre também o `molydeus_menor` |
 > | 4 | [CHATGPT-FILA-016](../generated/CHATGPT-FILA-016-mobs-feng-tu.md) Feng Tu | 126 | `cultista_ghaunadaur` reaproveitado em Shendilavri e Pilares |
 > | 5 | [CHATGPT-FILA-017](../generated/CHATGPT-FILA-017-mobs-shendilavri.md) Shendilavri | 106 | `sucubo` cobre a ilusão; `master_of_cruelties` aparece em Pilares |
 > | 6 | [CHATGPT-FILA-018](../generated/CHATGPT-FILA-018-mobs-goranthis.md) Goranthis | 86 | `death_tyrant` e guardião aparecem em Pilares |
@@ -134,7 +156,7 @@ qualquer lote, pois não depende de decisão de design.
 | Lote | Entregável | Evidência |
 |---|---|---|
 | A | 7 quebráveis definitivos, um por bioma | EVID-098 |
-| B | 21 props decorativos (Shedaklah, Molor, Durão, Feng-tu, Shendilavri, Goranthis, Pilares) | EVID-099 a 102 e demais |
+| B | 21 props decorativos (Shedaklah, Molor, Durao, Feng-tu, Shendilavri, Goranthis, Pilares) | EVID-099 a 102 e demais |
 | C | 20 células de animação do Zumbi | EVID-103, EVID-104 |
 | — | Regeneração de Nyrelia e Leoric | EVID-078, EVID-081 |
 | — | Terrenos dos 7 biomas + Estige | SPEC-047 a 055 |

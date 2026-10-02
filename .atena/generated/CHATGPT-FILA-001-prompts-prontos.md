@@ -2,12 +2,14 @@
 id: "CHATGPT-FILA-001"
 type: "fila-de-prompts"
 title: "Fila consolidada de prompts prontos para o ChatGPT (39 imagens)"
-status: "execução parcial — P01–P08 admitidos; ondas de HQ seguem em ART-PROMPTS-028 e 029"
+status: "reconciliada em 2026-10-02: Lotes 1/2 já admitidos; piloto HQ integrado; EVID-145"
 created: "2026-09-29"
 relations: ["[[ART-PROMPTS-025-lote-1-nevoa-bau-de-chefe-imas-e-npcs]]", "[[ART-PROMPTS-026-lote-2-camada-de-cenario-por-bioma]]", "[[ART-PROMPTS-027-hqs-novas-guia-de-estilo-e-piloto]]", "[[SPEC-062-fila-de-geracao-externa-de-assets]]"]
 ---
 
 # Fila consolidada de prompts para o ChatGPT
+
+**Estado atual (2026-10-02):** a tabela e marcações abaixo são históricas. Os oito oficiais P01–P08 existem (EVID-110); o Lote 2 foi admitido em EVID-127; o piloto HQ e HQN-01–14 já constam no catálogo com 56 imagens (EVID-133). Não gerar novamente esta remessa. Os decais antigos de Docas continuam sujeitos à restrição de âncora seca descrita em EVID-127; isso não exige regeneração. Reconciliação em EVID-145.
 
 Compilação **literal** dos parágrafos dos três ART-PROMPTS que ainda não foram gerados. O texto de cada bloco é copiado dos arquivos de origem sem alteração; em caso de dúvida, o arquivo de origem prevalece.
 
@@ -260,7 +262,7 @@ A flat irregular patch of green-black slimy scum with a dull wet sheen, scattere
 A trail of flattened refuse and rotten planks laid across green-black slime, made of warped wooden boards, packed trash and a few bones pressed into the muck, running from the left side of the image to the right side as an uneven strip, with slime creeping over its edges. It is a ground decal: seen from a three-quarter isometric angle tilted about 30 degrees from above, it reads as a flat path lying on the floor, wider than tall (about 2:1), with ragged edges that fade into nothing at both ends, and no raised object taller than a few pixels. Dark-fantasy pixel-art style, soft light from the upper left, crisp clean pixel art with controlled dithering, no blur and no smooth airbrushed gradient. Centered with roughly 8% empty margin. Background: a single, completely flat and uniform solid magenta color (#FF00FF), with no scenery, no cast shadow, no gradient or texture behind it. No text, logo, watermark, frame, border, UI element, character, creature, or second object, and no perfect diamond outline — only this one path, alone. Landscape image.
 ```
 
-### Durão
+### Durao
 
 #### P25 — `durao_estrutura_01` 
 
