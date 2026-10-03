@@ -4,6 +4,10 @@ extends Node2D
 
 const CELL := Vector2i(256, 384)
 const DISPLAY_HEIGHT := 72.0
+## A âncora é o pixel mais baixo da arte (ponta do pé da frente); erguer a sombra põe o corpo no meio dela.
+const SHADOW_LIFT := 0.4
+## Raio da sombra (px) por px de altura visível do personagem: grande tem sombra grande, pequeno, pequena.
+const SHADOW_RADIUS_PER_HEIGHT := 0.2
 ## Linha (px na célula 256x384) em que ficam os pés no idle; o sprite é ancorado aí para tocar a sombra.
 const HERO_FEET_Y := {
 	&"korrak": 350.0, &"kayron": 376.0, &"sylas": 376.0, &"maelor": 364.0, &"nyrelia": 368.0,
@@ -21,6 +25,18 @@ const HERO_IDLE_ART_HEIGHT := {
 	&"korrak": 267.0, &"kayron": 316.0, &"sylas": 304.0, &"maelor": 299.0, &"nyrelia": 352.0,
 	&"durvall": 231.0, &"zynara": 368.0, &"bromnor": 241.0, &"leoric": 224.0, &"brook": 259.0,
 }
+## Heróis cujas tiras de caminhada têm o machado cortado na borda da célula e proporção diferente do idle.
+## Eles andam com o próprio idle (sem espelhar, para a arma ficar sempre do mesmo lado) e um balanço procedural.
+const PROCEDURAL_WALK_HEROES := [&"korrak"]
+## Direções já regeneradas e aprovadas pela auditoria técnica (FILA-024).
+const VALIDATED_WALK_DIRECTIONS := {&"korrak": [&"move_e", &"move_se", &"move_s", &"move_ne"]}
+## Sem quique vertical: o passo de quem anda com o idle é só uma inclinação suave (o quique parecia saltitar).
+const WALK_BOB_PX := 0.0
+## Histerese da direção: só troca de setor quando o movimento passa bem da fronteira (evita alternar tira/idle).
+const WALK_SECTOR_HYSTERESIS := 0.75
+const WALK_SWAY_RAD := 0.045
+const WALK_STEP_HZ := 3.2
+const WALK_SETTLE_SPEED := 14.0
 const WALK_DIRECTIONS := [&"e", &"se", &"s", &"sw", &"w", &"nw", &"n", &"ne"]
 const WALK_SOURCE_DIRECTIONS := [&"e", &"se", &"s", &"n", &"ne"]
 const MIRRORED_WALK_ANIMATIONS := {
@@ -41,6 +57,10 @@ var _action_locked := false
 var _last_screen_position := Vector2.ZERO
 var _has_animation := false
 var _active_hero_id := "durvall"
+var _walking := false
+var _procedural_walking := false
+var _walk_phase := 0.0
+var _walk_sector := -1
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
@@ -92,7 +112,10 @@ func _build_animations() -> void:
 	var baseline_y: float = HERO_FEET_Y.get(StringName(_active_hero_id), float(CELL.y))
 	sprite.offset = Vector2(0, CELL.y * 0.5 - baseline_y)
 	sprite.scale = Vector2.ONE * display_scale(_active_hero_id)
+	sprite.position = Vector2.ZERO
+	sprite.rotation = 0.0
 	sprite.flip_h = false
+	_walking = false
 	if _has_animation and frames.has_animation(&"idle"):
 		sprite.play(&"idle")
 
@@ -115,14 +138,55 @@ func sync_visual(screen_position: Vector2, is_dead: bool, is_flash: bool) -> voi
 			sprite.play(&"death")
 		elif not dead and not _action_locked:
 			var desired: StringName = &"idle"
-			if moving:
-				var movement_delta := screen_position - _last_screen_position
+			_walking = moving
+			var movement_delta := _stable_direction(screen_position - _last_screen_position) if moving else Vector2.ZERO
+			if not moving:
+				_walk_sector = -1
+			_procedural_walking = moving and uses_procedural_walk_for_direction(_active_hero_id, movement_delta)
+			if uses_procedural_walk(_active_hero_id) and (not moving or _procedural_walking):
+				sprite.flip_h = false
+			elif moving:
 				desired = _walk_animation(movement_delta)
 				sprite.flip_h = walk_flips_horizontally(movement_delta)
+				if uses_procedural_walk(_active_hero_id):
+					sprite.position = Vector2.ZERO
+					sprite.rotation = 0.0
 			if sprite.animation != desired:
 				sprite.play(desired)
 	_last_screen_position = screen_position
 	queue_redraw()
+
+## Devolve o vetor unitário do setor de caminhada, mantendo o setor anterior perto da fronteira.
+func _stable_direction(delta: Vector2) -> Vector2:
+	if delta.length_squared() <= 0.04:
+		return delta
+	var step := TAU / 8.0
+	var angle := delta.angle()
+	var sector := int(posmod(roundi(angle / step), 8))
+	if _walk_sector >= 0 and sector != _walk_sector and absf(wrapf(angle - _walk_sector * step, -PI, PI)) < step * WALK_SECTOR_HYSTERESIS:
+		sector = _walk_sector
+	_walk_sector = sector
+	return Vector2.RIGHT.rotated(sector * step)
+
+static func uses_procedural_walk(hero: String) -> bool:
+	return PROCEDURAL_WALK_HEROES.has(StringName(hero))
+
+static func uses_procedural_walk_for_direction(hero: String, direction: Vector2) -> bool:
+	var validated: Array = VALIDATED_WALK_DIRECTIONS.get(StringName(hero), [])
+	return uses_procedural_walk(hero) and not validated.has(directional_walk_animation(direction))
+
+## Balanço do passo (quique e inclinação a partir dos pés) para quem anda com o idle.
+func _process(delta: float) -> void:
+	if sprite == null or not _has_animation or not uses_procedural_walk(_active_hero_id):
+		return
+	if _procedural_walking and not dead and not _action_locked:
+		_walk_phase = fposmod(_walk_phase + delta * WALK_STEP_HZ * PI, TAU * 4.0)
+		sprite.position.y = -absf(sin(_walk_phase)) * WALK_BOB_PX
+		sprite.rotation = sin(_walk_phase * 0.5) * WALK_SWAY_RAD
+	else:
+		var k := clampf(delta * WALK_SETTLE_SPEED, 0.0, 1.0)
+		sprite.position = sprite.position.lerp(Vector2.ZERO, k)
+		sprite.rotation = lerpf(sprite.rotation, 0.0, k)
 
 func play_action(action: StringName) -> void:
 	if not _has_animation or dead or not sprite.sprite_frames.has_animation(action):
@@ -153,7 +217,9 @@ static func directional_walk_animation(delta: Vector2) -> StringName:
 	return StringName("move_%s" % WALK_DIRECTIONS[sector])
 
 func _draw() -> void:
-	draw_colored_polygon(PackedVector2Array([Vector2(0, -8), Vector2(16, 0), Vector2(0, 8), Vector2(-16, 0)]), Color(0, 0, 0, 0.5))
+	var shadow_radius := float(HERO_DISPLAY_HEIGHT.get(StringName(_active_hero_id), DISPLAY_HEIGHT)) * SHADOW_RADIUS_PER_HEIGHT
+	var ground := Vector2(0, -shadow_radius * Iso.TILE_H / Iso.TILE_W * SHADOW_LIFT)
+	draw_colored_polygon(Iso.ground_circle(ground, shadow_radius), Color(0, 0, 0, 0.5))
 	var body := body_color
 	if dead:
 		body = body.darkened(0.6)
