@@ -24,7 +24,7 @@
         "res://assets/audio/sfx/ui/ui.click_01.mp3"
       ],
       "bus": "UI",
-      "volume_db": -10,
+      "volume_db": -5,
       "pitch_jitter": 0.035,
       "cooldown_ms": 20,
       "priority": 2
@@ -34,7 +34,7 @@
         "res://assets/audio/sfx/ui/ui.confirm_01.mp3"
       ],
       "bus": "UI",
-      "volume_db": -10,
+      "volume_db": -7,
       "pitch_jitter": 0.035,
       "cooldown_ms": 20,
       "priority": 2
@@ -586,7 +586,7 @@
         "res://assets/audio/sfx/progress/world.ferreiro_01.mp3"
       ],
       "bus": "UI",
-      "volume_db": -7,
+      "volume_db": -4,
       "pitch_jitter": 0.035,
       "cooldown_ms": 35,
       "priority": 3
@@ -596,7 +596,7 @@
         "res://assets/audio/sfx/progress/progress.gold_01.mp3"
       ],
       "bus": "UI",
-      "volume_db": -7,
+      "volume_db": -4.5,
       "pitch_jitter": 0.035,
       "cooldown_ms": 45,
       "priority": 2
@@ -606,7 +606,7 @@
         "res://assets/audio/sfx/progress/progress.potion_01.mp3"
       ],
       "bus": "UI",
-      "volume_db": -7,
+      "volume_db": -8,
       "pitch_jitter": 0.035,
       "cooldown_ms": 45,
       "priority": 2
@@ -616,7 +616,7 @@
         "res://assets/audio/sfx/progress/progress.magnet_01.mp3"
       ],
       "bus": "UI",
-      "volume_db": -7,
+      "volume_db": -8.5,
       "pitch_jitter": 0.035,
       "cooldown_ms": 45,
       "priority": 2
@@ -626,7 +626,7 @@
         "res://assets/audio/sfx/progress/world.boss_chest_01.mp3"
       ],
       "bus": "UI",
-      "volume_db": -7,
+      "volume_db": -13.5,
       "pitch_jitter": 0.035,
       "cooldown_ms": 35,
       "priority": 3
@@ -636,7 +636,7 @@
         "res://assets/audio/sfx/progress/world.loja_01.mp3"
       ],
       "bus": "UI",
-      "volume_db": -7,
+      "volume_db": -9.5,
       "pitch_jitter": 0.035,
       "cooldown_ms": 35,
       "priority": 3
@@ -646,7 +646,7 @@
         "res://assets/audio/sfx/progress/world.curandeiro_01.mp3"
       ],
       "bus": "UI",
-      "volume_db": -7,
+      "volume_db": -4,
       "pitch_jitter": 0.035,
       "cooldown_ms": 35,
       "priority": 3
@@ -656,7 +656,7 @@
         "res://assets/audio/sfx/progress/world.ampulheta_01.mp3"
       ],
       "bus": "UI",
-      "volume_db": -7,
+      "volume_db": -25,
       "pitch_jitter": 0.035,
       "cooldown_ms": 35,
       "priority": 3
@@ -666,7 +666,7 @@
         "res://assets/audio/sfx/progress/world.doacao_01.mp3"
       ],
       "bus": "UI",
-      "volume_db": -7,
+      "volume_db": -1,
       "pitch_jitter": 0.035,
       "cooldown_ms": 35,
       "priority": 3
@@ -676,7 +676,7 @@
         "res://assets/audio/sfx/progress/world.aposta_01.mp3"
       ],
       "bus": "UI",
-      "volume_db": -7,
+      "volume_db": -6.5,
       "pitch_jitter": 0.035,
       "cooldown_ms": 35,
       "priority": 3
