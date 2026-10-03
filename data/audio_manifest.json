@@ -2575,6 +2575,39 @@
       "pitch_jitter": 0.035,
       "cooldown_ms": 800,
       "priority": 5
+    },
+    "boss.guardiao_verdadeiro.arrival": {
+      "files": [
+        "res://assets/audio/sfx/boss/boss.guardiao_verdadeiro.arrival_01.wav",
+        "res://assets/audio/sfx/boss/boss.guardiao_verdadeiro.arrival_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -3,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 800,
+      "priority": 5
+    },
+    "boss.guardiao_verdadeiro.phase": {
+      "files": [
+        "res://assets/audio/sfx/boss/boss.guardiao_verdadeiro.phase_01.wav",
+        "res://assets/audio/sfx/boss/boss.guardiao_verdadeiro.phase_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -4,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 500,
+      "priority": 5
+    },
+    "boss.guardiao_verdadeiro.defeat": {
+      "files": [
+        "res://assets/audio/sfx/boss/boss.guardiao_verdadeiro.defeat_01.wav",
+        "res://assets/audio/sfx/boss/boss.guardiao_verdadeiro.defeat_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -3,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 800,
+      "priority": 5
     }
   },
   "aliases": {
@@ -2592,7 +2625,17 @@
     "boss": "boss.arrival",
     "click": "ui.click",
     "win": "result.victory",
-    "dead": "result.defeat"
+    "dead": "result.defeat",
+    "progress.gold": "progress.coin",
+    "progress.potion": "progress.fountain",
+    "progress.magnet": "progress.unlock",
+    "world.boss_chest": "world.chest",
+    "world.loja": "progress.coin",
+    "world.ferreiro": "combat.block",
+    "world.curandeiro": "player.heal",
+    "world.ampulheta": "progress.reroll",
+    "world.doacao": "progress.coin",
+    "world.aposta": "progress.reroll"
   },
   "music": {
     "menu": "res://assets/audio/music/menu.wav",

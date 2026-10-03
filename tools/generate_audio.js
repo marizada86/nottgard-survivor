@@ -2,6 +2,11 @@
  * Nottgard Survivors audio forge.
  * Generates deterministic, original mono PCM WAV assets without dependencies.
  * Run from the project root: node tools/generate_audio.js
+ *
+ * By default it only fills gaps: events, aliases, music and ambience already in the
+ * manifest are kept as they are (hand edits and real recordings survive), and WAVs that
+ * already exist on disk are never overwritten.
+ * `node tools/generate_audio.js --force` rebuilds every placeholder and the manifest from scratch.
  */
 
 "use strict";
@@ -13,6 +18,7 @@ const ROOT = path.resolve(__dirname, "..");
 const AUDIO = path.join(ROOT, "assets", "audio");
 const MANIFEST = path.join(ROOT, "data", "audio_manifest.json");
 const RATE = 22050;
+const FORCE = process.argv.includes("--force");
 
 function hash32(text) {
   let h = 2166136261 >>> 0;
@@ -194,24 +200,49 @@ const manifest = {
     cast: "combat.magic", nova: "combat.nova", hurt: "player.hurt",
     pickup: "progress.xp", gold: "progress.coin", levelup: "progress.levelup",
     item: "progress.item", boom: "combat.explosion", boss: "boss.arrival",
-    click: "ui.click", win: "result.victory", dead: "result.defeat"
+    click: "ui.click", win: "result.victory", dead: "result.defeat",
+    // Eventos chamados pelo jogo sem som próprio ainda: apontam para o placeholder mais próximo.
+    "progress.gold": "progress.coin", "progress.potion": "progress.fountain",
+    "progress.magnet": "progress.unlock", "world.boss_chest": "world.chest",
+    "world.loja": "progress.coin", "world.ferreiro": "combat.block",
+    "world.curandeiro": "player.heal", "world.ampulheta": "progress.reroll",
+    "world.doacao": "progress.coin", "world.aposta": "progress.reroll"
   },
   music: {},
   ambience: {}
 };
 
+const previous = !FORCE && fs.existsSync(MANIFEST) ? JSON.parse(fs.readFileSync(MANIFEST, "utf8")) : null;
+if (previous) {
+  Object.assign(manifest.events, previous.events || {});
+  manifest.aliases = { ...manifest.aliases, ...(previous.aliases || {}) };
+  Object.assign(manifest.music, previous.music || {});
+  Object.assign(manifest.ambience, previous.ambience || {});
+}
+
 let fileCount = 0;
 let byteCount = 0;
+let keptCount = 0;
+
+// Grava o placeholder só se o arquivo não existir (ou com --force). Devolve true se gravou.
+function writePlaceholder(abs, render) {
+  if (!FORCE && fs.existsSync(abs)) {
+    keptCount++;
+    return false;
+  }
+  writeWav(abs, render());
+  fileCount++;
+  byteCount += fs.statSync(abs).size;
+  return true;
+}
 
 function addEvent(key, kind, variants = 2, options = {}) {
+  if (manifest.events[key]) return;
   const files = [];
   for (let v = 0; v < variants; v++) {
     const rel = `assets/audio/sfx/${kind}/${safeName(key)}_${String(v + 1).padStart(2, "0")}.wav`;
-    const abs = path.join(ROOT, rel);
-    writeWav(abs, oneShot(kind, key, v));
+    writePlaceholder(path.join(ROOT, rel), () => oneShot(kind, key, v));
     files.push(`res://${rel.replaceAll("\\", "/")}`);
-    fileCount++;
-    byteCount += fs.statSync(abs).size;
   }
   manifest.events[key] = {
     files,
@@ -262,29 +293,27 @@ for (const id of bossIds) {
 
 const stageIds = Object.keys(stages);
 stageIds.forEach((stage, index) => {
+  if (manifest.ambience[stage]) return;
   const rel = `assets/audio/ambience/${stage}.wav`;
-  const abs = path.join(ROOT, rel);
-  writeWav(abs, ambience(stage, index));
+  writePlaceholder(path.join(ROOT, rel), () => ambience(stage, index));
   manifest.ambience[stage] = `res://${rel}`;
-  fileCount++;
-  byteCount += fs.statSync(abs).size;
 });
 
 const tracks = ["menu", ...stageIds, "boss", "victory", "defeat"];
 tracks.forEach((track, index) => {
+  if (manifest.music[track]) return;
   const rel = `assets/audio/music/${track}.wav`;
-  const abs = path.join(ROOT, rel);
-  writeWav(abs, music(track, index));
+  writePlaceholder(path.join(ROOT, rel), () => music(track, index));
   manifest.music[track] = `res://${rel}`;
-  fileCount++;
-  byteCount += fs.statSync(abs).size;
 });
 
 fs.writeFileSync(MANIFEST, JSON.stringify(manifest, null, 2) + "\n");
 const report = {
   generated_at: new Date().toISOString(),
+  mode: FORCE ? "force" : "fill-gaps",
   events: Object.keys(manifest.events).length,
   files: fileCount,
+  kept_files: keptCount,
   bytes: byteCount,
   sample_rate: RATE,
   manifest: path.relative(ROOT, MANIFEST).replaceAll("\\", "/")
