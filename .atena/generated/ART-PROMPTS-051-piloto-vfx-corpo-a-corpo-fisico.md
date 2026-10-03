@@ -2,7 +2,7 @@
 id: "ART-PROMPTS-051"
 type: "prompts-de-arte"
 title: "Piloto de VFX — corpo a corpo físico (kit base)"
-status: "pronto para envio — nada gerado"
+status: "12 quadros gerados; A03/B03 aprovados pelo dono; piloto integrado em 2026-10-02; EVID-145"
 created: "2026-10-01"
 relations: ["[[PLAN-051-vfx-de-ataques-e-magias-2026-10-01]]", "[[CHATGPT-FILA-020-piloto-vfx-corpo-a-corpo-fisico]]"]
 sources: ["data/weapons.json", "ui/run.gd", "core/divine_visuals.gd"]

@@ -2,7 +2,7 @@
 id: "ART-PROMPTS-052"
 type: "prompts-de-arte"
 title: "VFX do corpo a corpo — exceções do kit (ART-028)"
-status: "pronto para envio depois do piloto; nada gerado"
+status: "Estocada e Chicote: 12 quadros gerados e integrados; picos aprovados; E e F pendentes; EVID-145"
 created: "2026-10-01"
 relations: ["[[PLAN-051-vfx-de-ataques-e-magias-2026-10-01]]", "[[CHATGPT-FILA-021-vfx-corpo-a-corpo-excecoes]]", "[[ART-PROMPTS-051-piloto-vfx-corpo-a-corpo-fisico]]"]
 sources: ["data/weapons.json", "data/abilities.json", "ui/run.gd", "core/divine_visuals.gd"]
