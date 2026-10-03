@@ -12,8 +12,29 @@ const SPAWN_SLOW := 1.35   # multiplica o intervalo das ondas (ritmo lento)
 const HIT_INVULN := 0.4
 const HERO_HIT_R := 0.3
 const MAX_PICKUPS := 140
-const AFFIXES := ["veloz", "resistente", "mortal", "avaro"]
-const AFFIX_NAMES := {"veloz": "Veloz", "resistente": "Resistente", "mortal": "Mortal", "avaro": "Avaro"}
+const AFFIXES := ["veloz", "resistente", "mortal", "avaro"]   # Dagruve e Docas (SPEC-120: não mudam)
+## SPEC-120: da terceira fase em diante os elites sorteiam destes, e o chefe usa BOSS_AFFIXES.
+const ELITE_AFFIXES := ["veloz", "resistente", "mortal", "avaro", "blindado", "explosivo", "vampirico", "invocador", "escudeiro"]
+const BOSS_AFFIXES := ["mortal", "blindado", "vampirico", "invocador", "escudeiro"]
+const AFFIX_NAMES := {"veloz": "Veloz", "resistente": "Resistente", "mortal": "Mortal", "avaro": "Avaro", "blindado": "Blindado", "explosivo": "Explosivo",
+	"vampirico": "Vampírico", "invocador": "Invocador", "escudeiro": "Escudeiro"}
+const AFFIX_COLORS := {"veloz": Color(0.4, 0.9, 1.0), "resistente": Color(0.8, 0.5, 0.2), "mortal": Color(0.95, 0.2, 0.2), "avaro": Color(1.0, 0.85, 0.3),
+	"blindado": Color(0.7, 0.75, 0.85), "explosivo": Color(1.0, 0.5, 0.1), "vampirico": Color(0.75, 0.1, 0.45), "invocador": Color(0.6, 0.35, 0.95),
+	"escudeiro": Color(0.3, 0.8, 0.5)}
+const HORDE_FIRST_STAGE := 2        # SPEC-120: `order` da primeira fase com horda (Shedaklah)
+const HORDE_AT := 0.45               # fração da duração da fase em que a horda começa
+const HORDE_WARNING := 5.0
+const HORDE_DURATION := 20.0
+const HORDE_N_MULT := 3
+const HORDE_ROOM_MULT := 2.0         # a horda aceita o dobro do `max` da onda
+const HORDE_CAP_MULT := 1.5          # e 50 % a mais no teto da fase
+const AFFIX_SHIELD_RADIUS := 4.0
+const AFFIX_SHIELD_REDUCTION := 0.25
+const AFFIX_LEECH := 0.2
+const AFFIX_SUMMON_EVERY := 8.0
+const AFFIX_SUMMON_N := 3
+const AFFIX_FIRST_AFFIXED_STAGE := 2   # `order` da fase em que os afixos novos começam (Shedaklah)
+const AFFIX_BOSS_FIRST_STAGE := 4      # chefe afixado a partir da quinta fase (Durao)
 ## Cada bioma tem seu próprio quebrável temático, alinhado à família de prop
 ## já usada na fase (ART-PROMPTS-024). Candelabro/caixote continuam
 ## exclusivos de Dagruve/Docas (tema de cais/porto); arbusto é o fallback
@@ -83,6 +104,10 @@ var stats := {"kills": 0, "crits": 0, "ones": 0, "elites": 0, "bosses": 0, "ches
 var codex := {"enemies": {}, "items": {}, "weapons": {}}
 var _acc := {}
 var _elites_done := {}
+var _horde_state := 0         # SPEC-120: 0 espera, 1 aviso, 2 ativa, 3 feita
+var _horde_t := 0.0
+var _horde_acc := 0.0
+var _shielders: Array = []   # SPEC-120: elites escudeiros vivos (aura de -25 % de dano nos aliados)
 var _inter_t := 4.0
 var _breakable_t := 20.0
 var _amb_puddle := 9.0
@@ -186,6 +211,9 @@ func load_stage(stage_key: String) -> void:
 	fog_config.clear()
 	_acc.clear()
 	_elites_done.clear()
+	_shielders.clear()
+	_horde_state = 0
+	_horde_acc = 0.0
 	_stage_events_done.clear()
 	_inter_t = 4.0
 	_first_inter = true
@@ -670,7 +698,7 @@ func _hero_hit(e: Enemy, p: Dictionary, roll: bool, visual_theme: Dictionary = {
 			shadow_charge = false
 		if hero.hp < hero.max_hp * 0.5:
 			pct += hero.m("low_hp_dmg")
-		dmg *= maxf(0.2, pct) * (1.0 + e.mark) * float(e.resist.get(dtype, 1.0))
+		dmg *= maxf(0.2, pct) * (1.0 + e.mark) * float(e.resist.get(dtype, 1.0)) * _shield_factor(e)
 		if crit:
 			dmg *= 2.0
 			stats.crits += 1
@@ -743,7 +771,7 @@ func _update_projectiles(dt: float) -> void:
 							gone = true
 							break
 			elif pr.pos.distance_to(hero.pos) <= HERO_HIT_R + pr.radius:
-				_enemy_hit_hero(int(pr.bonus), String(pr.dice), String(pr.dtype), true, float(pr.get("damage_mult", 1.0)))
+				_enemy_hit_hero(int(pr.bonus), String(pr.dice), String(pr.dtype), true, float(pr.get("damage_mult", 1.0)), pr.get("by", null))
 				gone = true
 		if not gone:
 			keep.append(pr)
@@ -948,6 +976,8 @@ func _enemy_step(e: Enemy, dt: float) -> void:
 	e.hit_flash = maxf(0.0, e.hit_flash - dt)
 	e.atk_cd = maxf(0.0, e.atk_cd - dt)
 	e.slow_t = maxf(0.0, e.slow_t - dt)
+	if not e.affixes.is_empty():
+		_affix_step(e, dt)
 	if e.burn_t > 0.0:
 		e.burn_t -= dt
 		e.hp -= e.burn_dps * dt
@@ -974,7 +1004,7 @@ func _enemy_step(e: Enemy, dt: float) -> void:
 			e.pos = np
 		if dist <= e.radius + HERO_HIT_R + 0.2 and e.atk_cd <= 0.0:
 			e.atk_cd = 1.0
-			_enemy_hit_hero(int(e.charge_ab.get("bonus", e.atk_bonus)), String(e.charge_ab.dice), "fisico", false)
+			_enemy_hit_hero(int(e.charge_ab.get("bonus", e.atk_bonus)), String(e.charge_ab.dice), "fisico", false, 1.0, e)
 		return
 	if e.windup > 0.0:
 		e.windup -= dt
@@ -1017,7 +1047,7 @@ func _enemy_step(e: Enemy, dt: float) -> void:
 		if not lure.is_empty():
 			_hit_decoy(lure, float(Dice.roll(rng, e.atk_dice) + maxi(0, e.atk_bonus)))
 		else:
-			_enemy_hit_hero(e.atk_bonus, e.atk_dice, "fisico", false)
+			_enemy_hit_hero(e.atk_bonus, e.atk_dice, "fisico", false, 1.0, e)
 
 ## SPEC-118: inimigo com destino (carregador do ritual) ignora o herói e anda até o ponto.
 func _goal_step(e: Enemy, dt: float) -> void:
@@ -1108,7 +1138,7 @@ func _use_ability(e: Enemy, idx: int, a: Dictionary, dist: float, to: Vector2) -
 				return false
 			var dir := to.normalized()
 			projectiles.append({"owner": "enemy", "pos": e.pos, "dir": dir, "speed": float(a.speed), "life": float(a.range) / float(a.speed) + 1.0, "radius": 0.25,
-				"dice": a.dice, "bonus": int(a.bonus) + int(minute() / 4.0) + tier(), "dtype": a.dtype, "pierce": 0, "hit": {}, "p": {}})
+				"dice": a.dice, "bonus": int(a.bonus) + int(minute() / 4.0) + tier(), "dtype": a.dtype, "pierce": 0, "hit": {}, "p": {}, "by": e})
 			events.append({"type": "enemy_action", "enemy_id": e.id, "pos": e.pos, "ability": "shoot"})
 			return true
 		"aoe":
@@ -1153,7 +1183,7 @@ func _use_ability(e: Enemy, idx: int, a: Dictionary, dist: float, to: Vector2) -
 			return true
 	return false
 
-func _enemy_hit_hero(bonus: int, dice: String, dtype: String, is_proj: bool, damage_mult: float = 1.0) -> void:
+func _enemy_hit_hero(bonus: int, dice: String, dtype: String, is_proj: bool, damage_mult: float = 1.0, by: Enemy = null) -> void:
 	if hero.dead or invuln > 0.0:
 		return
 	var r := Dice.d20(rng)
@@ -1168,11 +1198,20 @@ func _enemy_hit_hero(bonus: int, dice: String, dtype: String, is_proj: bool, dam
 			shadow_charge = true
 		return
 	var dmg := float(Dice.roll(rng, dice)) * (2.0 if r == 20 else 1.0) * damage_mult
+	var hp_before: float = hero.hp
 	_hurt_hero(dmg, "hit")
+	if by != null and not by.dead and by.has_affix("vampirico"):
+		by.hp = minf(by.max_hp, by.hp + maxf(0.0, hp_before - hero.hp) * AFFIX_LEECH)
 
 func _hit_chance(accuracy: int, evasion: float) -> float:
 	# Bônus de ataque preserva a escala anterior do d20; evasão reduz o resultado.
 	return clampf((11.0 + float(accuracy)) / 20.0, 0.10, 0.95) * (1.0 - evasion)
+
+## SPEC-120: dano inimigo por fase (golpe, projétil e área); poças, armadilhas e névoa não escalam.
+func _stage_dmg_mult(src: String) -> float:
+	if src != "hit" and src != "aoe":
+		return 1.0
+	return float(stage.get("dmg_mult", 1.0))
 
 func _hurt_hero(dmg: float, src: String, bypass_generic_defenses: bool = false) -> void:
 	if hero.dead or (invuln > 0.0 and not bypass_generic_defenses):
@@ -1188,7 +1227,7 @@ func _hurt_hero(dmg: float, src: String, bypass_generic_defenses: bool = false) 
 					_hero_hit(e, {"dice": "2d8", "attr": "carisma", "dtype": "radiante", "knock": 1.0}, false)
 		return
 	if not bypass_generic_defenses:
-		dmg = maxf(1.0, dmg * difficulty - hero.m("dr"))
+		dmg = maxf(1.0, dmg * difficulty * _stage_dmg_mult(src) - hero.m("dr"))
 	if barrier > 0.0 and not bypass_generic_defenses:
 		var absorbed := minf(barrier, dmg)
 		barrier -= absorbed
@@ -1284,6 +1323,8 @@ func _kill(e: Enemy) -> void:
 	stats.clean_streak_best = maxi(int(stats.clean_streak_best), int(stats.clean_kills))
 	var xp_v := float(e.xp)
 	events.append({"type": "kill", "pos": e.pos, "enemy": e})
+	if e.has_affix("explosivo"):
+		_affix_explode(e)
 	if e.burn_t > 0.0 and _has_item_effect("burn_spread") and float(_effect_cd.get("burn_spread", 0.0)) <= 0.0:
 		_effect_cd.burn_spread = 0.5
 		for other in enemies:
@@ -2301,17 +2342,92 @@ func _chase_dir(e: Enemy, dir: Vector2, dist: float) -> Vector2:
 
 func _spawn_elite(id: String, at: Vector2) -> Enemy:
 	var e := _spawn(id, at)
-	e.affix = AFFIXES[rng.randi() % AFFIXES.size()]
-	match e.affix:
+	if _stage_order() < AFFIX_FIRST_AFFIXED_STAGE:
+		_apply_affix(e, AFFIXES[rng.randi() % AFFIXES.size()])
+	else:
+		for a in _pick_affixes(ELITE_AFFIXES, _elite_affix_count()):
+			_apply_affix(e, a)
+	e.affix = e.affixes[0]
+	e.xp *= 3
+	var names: Array = []
+	for a in e.affixes:
+		names.append(AFFIX_NAMES[a])
+	e.name = "%s (%s)" % [e.name, ", ".join(names)]
+	events.append({"type": "toast", "text": "Elite: %s" % e.name})
+	return e
+
+func _stage_order() -> int:
+	return int(stage.get("order", 0))
+
+## SPEC-120: quantos afixos um elite recebe: fases 3 e 4 = 1; 5 e 6 = 1 ou 2; da 7 em diante = 2.
+func _elite_affix_count() -> int:
+	var order := _stage_order()
+	if order <= 3:
+		return 1
+	if order <= 5:
+		return 1 + rng.randi() % 2
+	return 2
+
+func _pick_affixes(pool: Array, n: int) -> Array:
+	var left := pool.duplicate()
+	var picked: Array = []
+	for i in mini(n, left.size()):
+		picked.append(left.pop_at(rng.randi() % left.size()))
+	return picked
+
+func _apply_affix(e: Enemy, a: String) -> void:
+	if e.has_affix(a):
+		return
+	e.affixes.append(a)
+	match a:
 		"veloz": e.speed *= 1.5
 		"resistente":
 			e.max_hp *= 2.0
 			e.hp = e.max_hp
 		"mortal": e.atk_bonus += 3
-	e.xp *= 3
-	e.name = "%s (%s)" % [e.name, AFFIX_NAMES[e.affix]]
-	events.append({"type": "toast", "text": "Elite: %s" % e.name})
-	return e
+		"blindado": e.ca += 3
+		"invocador": e.affix_t = AFFIX_SUMMON_EVERY * 0.5
+		"escudeiro": _shielders.append(e)
+
+## SPEC-120: o chefe da quinta fase em diante ganha um afixo (sem o ring de elite: não conta como elite).
+func _apply_boss_affix(boss_e: Enemy) -> void:
+	if _stage_order() < AFFIX_BOSS_FIRST_STAGE:
+		return
+	for a in _pick_affixes(BOSS_AFFIXES, 1):
+		_apply_affix(boss_e, a)
+	boss_e.name = "%s (%s)" % [boss_e.name, AFFIX_NAMES[boss_e.affixes[0]]]
+
+## Escudeiro: aliados (não ele mesmo) a até AFFIX_SHIELD_RADIUS dele recebem 25 % menos dano do herói.
+func _shield_factor(e: Enemy) -> float:
+	for s in _shielders:
+		if s != e and not s.dead and s.pos.distance_to(e.pos) <= AFFIX_SHIELD_RADIUS:
+			return 1.0 - AFFIX_SHIELD_REDUCTION
+	return 1.0
+
+## Invocador: chama servos do bioma de tempos em tempos, respeitando o teto de inimigos da fase.
+func _affix_step(e: Enemy, dt: float) -> void:
+	if not e.has_affix("invocador"):
+		return
+	e.affix_t -= dt
+	if e.affix_t > 0.0:
+		return
+	e.affix_t = AFFIX_SUMMON_EVERY
+	var pool: Array = []
+	for w in stage.waves:
+		if time >= float(w.t0) and not Data.table("enemies")[String(w.id)].get("flags", []).has("boss"):
+			pool.append(String(w.id))
+	if pool.is_empty():
+		return
+	var cap := int(stage.cap) + int(minute()) * 3
+	for i in AFFIX_SUMMON_N:
+		if _combat_count() < cap:
+			_spawn(pool[rng.randi() % pool.size()], e.pos + Vector2(rng.randf_range(-1.2, 1.2), rng.randf_range(-1.2, 1.2)))
+
+## Explosivo: ao morrer deixa um aviso no chão e explode um segundo depois (só fere o herói).
+func _affix_explode(e: Enemy) -> void:
+	zones.append({"owner": "enemy", "kind": "telegraph", "pos": e.pos, "radius": 2.2, "delay": 1.0, "total": 1.0, "life": 99.0,
+		"dice": "2d8", "bonus": e.atk_bonus, "dtype": "fisico", "friendly": false})
+	events.append({"type": "telegraph", "pos": e.pos, "radius": 2.2, "delay": 1.0, "enemy_id": e.id})
 
 ## MEC-024: força da abertura de cada fase, 1.0 no começo, constante por hold_seconds e decaindo até 0 em fade_seconds.
 func opening_factor() -> float:
@@ -2322,7 +2438,54 @@ func opening_factor() -> float:
 		return 0.0
 	return 1.0 if time <= hold else 1.0 - (time - hold) / (fade - hold)
 
+## SPEC-120: uma horda por fase (da terceira em diante, fora do modo infinito): aviso de 5 s e 20 s de onda densa do inimigo mais numeroso do bioma.
+func _horde_wave() -> Dictionary:
+	var best: Dictionary = {}
+	for w in stage.waves:
+		if Data.table("enemies")[String(w.id)].get("flags", []).has("boss") or Data.table("enemies")[String(w.id)].get("flags", []).has("quebravel"):
+			continue
+		if best.is_empty() or int(w.max) > int(best.max):
+			best = w
+	return best
+
+func horde_active() -> bool:
+	return _horde_state == 2
+
+func _horde_step(dt: float) -> void:
+	if _stage_order() < HORDE_FIRST_STAGE or bool(stage.get("endless", false)) or boss_spawned or _horde_state >= 3:
+		return
+	var start := float(stage.duration) * HORDE_AT
+	if _horde_state == 0 and time >= start - HORDE_WARNING:
+		_horde_state = 1
+		events.append({"type": "toast", "text": "Uma horda se aproxima!"})
+	if _horde_state == 1 and time >= start:
+		_horde_state = 2
+		_horde_t = HORDE_DURATION
+		_horde_acc = 0.0
+		events.append({"type": "toast", "text": "HORDA!"})
+	if _horde_state != 2:
+		return
+	_horde_t -= dt
+	if _horde_t <= 0.0:
+		_horde_state = 3
+		return
+	var w := _horde_wave()
+	if w.is_empty():
+		_horde_state = 3
+		return
+	_horde_acc += dt
+	var every := float(w.every) * SPAWN_SLOW
+	if _horde_acc < every:
+		return
+	_horde_acc = 0.0
+	var cap := int(float(int(stage.cap) + int(minute()) * 3) * HORDE_CAP_MULT)
+	var room := int(ceil(float(w.max) * HORDE_ROOM_MULT)) - alive(String(w.id))
+	for i in mini(int(w.n) * HORDE_N_MULT, room):
+		if _combat_count() < cap:
+			_spawn(String(w.id), _ring_pos())
+
 func _director(dt: float) -> void:
+	_horde_step(dt)
 	var opening := opening_factor()
 	var o: Dictionary = Data.table("difficulty").get("opening", {})
 	var cap := int(stage.cap) + int(minute()) * 3 + int(round(float(o.get("cap_bonus", 0)) * opening))
@@ -2359,6 +2522,7 @@ func _director(dt: float) -> void:
 		boss = _spawn(happenings.boss_id(self), _ring_pos(), 0.0)
 		boss.max_hp = round(boss.max_hp * scale_extra * (1.0 + 0.3 * tier() * 0.0))
 		boss.hp = boss.max_hp
+		_apply_boss_affix(boss)
 		happenings.on_boss_spawn(self, boss)
 		codex.enemies[boss.id] = true
 		events.append({"type": "boss", "enemy": boss})

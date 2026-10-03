@@ -35,7 +35,9 @@ var windup := 0.0          # investida armada
 var charge_t := 0.0
 var charge_dir := Vector2.ZERO
 var charge_ab: Dictionary = {}
-var affix := ""
+var affix := ""            # afixo principal do elite ("" = não é elite)
+var affixes: Array = []    # SPEC-120: todos os afixos (elite e chefe)
+var affix_t := 0.0         # SPEC-120: relógio do afixo invocador
 var dead := false
 var drops_chest := false
 var hit_flash := 0.0
@@ -77,6 +79,9 @@ static func make(enemy_id: String, at: Vector2, minute: float = 0.0, hp_mult: fl
 	for a in e.abilities:
 		e.ab_cd.append(float(a.cd) * 0.5 + 1.0)
 	return e
+
+func has_affix(a: String) -> bool:
+	return a in affixes
 
 func has_flag(f: String) -> bool:
 	return f in flags

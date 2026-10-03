@@ -1,7 +1,7 @@
 version: 2
 
-# Nenhum plano ativo. SPEC-120 (PLAN-055) aguarda aprovacao e ainda nao e executavel.
-# Um plano ativo registra o modo de aprovacao escolhido e o checkpoint atual (PLAN, B-XXX ou S-XXX).
+# Nenhum plano ativo. PLAN-055-F5A (SPEC-120 parte A) concluido em 2026-10-03: B-001 a B-003 feitos, B-004 parcial
+# (EVID-149). Parte B (Marcas do Abismo) e SPEC-119 seguem como rascunhos aguardando aprovacao.
 active_plan: null
 plan_cursor: null
 suspension: null

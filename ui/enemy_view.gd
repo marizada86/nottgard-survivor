@@ -199,8 +199,17 @@ func _draw() -> void:
 	var shadow_radius := _visible_height(actor_scale) * SHADOW_RADIUS_PER_HEIGHT
 	var ground := Vector2(0, -shadow_radius * Iso.TILE_H / Iso.TILE_W * SHADOW_LIFT)
 	draw_colored_polygon(Iso.ground_circle(ground, shadow_radius), Color(0, 0, 0, 0.5 * alpha))
-	if enemy != null and enemy.affix != "":
-		draw_arc(ground, 16 * actor_scale, 0, TAU, 20, Color(1.0, 0.85, 0.3, 0.9), 2.0)
+	if enemy != null and (enemy.affix != "" or not enemy.affixes.is_empty()):
+		var aura := Color(1.0, 0.85, 0.3, 0.9)
+		for i in enemy.affixes.size():
+			var tint: Color = Battle.AFFIX_COLORS.get(enemy.affixes[i], aura)
+			draw_arc(ground, (16.0 + 3.0 * i) * actor_scale, 0, TAU, 20, Color(tint.r, tint.g, tint.b, 0.9), 2.0)
+		if enemy.affixes.is_empty():
+			draw_arc(ground, 16 * actor_scale, 0, TAU, 20, aura, 2.0)
+		if enemy.has_affix("escudeiro"):
+			var halo := Iso.ground_circle(ground, Battle.AFFIX_SHIELD_RADIUS * Iso.TILE_W * 0.7071, 32)
+			halo.append(halo[0])
+			draw_polyline(halo, Color(0.3, 0.8, 0.5, 0.25), 1.5)
 	if enemy != null and enemy.is_boss():
 		draw_arc(ground, 22 * actor_scale, 0, TAU, 24, Color(0.9, 0.2, 0.2, 0.9), 3.0)
 	if tex != null and not _has_animation:
@@ -209,7 +218,7 @@ func _draw() -> void:
 		draw_texture_rect(tex, Rect2(-width * 0.5, -height, width, height), false)
 	elif tex == null and not _has_animation:
 		draw_rect(Rect2(-8 * actor_scale, -34 * actor_scale, 16 * actor_scale, 34 * actor_scale), Color(0.55, 0.15, 0.15))
-	if enemy != null and (enemy.hp < enemy.max_hp or enemy.affix != "" or enemy.is_boss()):
+	if enemy != null and (enemy.hp < enemy.max_hp or enemy.affix != "" or not enemy.affixes.is_empty() or enemy.is_boss()):
 		var top := -H_BASE * actor_scale - 6.0
 		var fraction := clampf(enemy.hp / enemy.max_hp, 0.0, 1.0)
 		var bar_width := 26.0 * maxf(1.0, actor_scale * 0.8)
