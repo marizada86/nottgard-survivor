@@ -2,6 +2,26 @@ add_version: "0.2"
 project:
   id: "PRJ-NOTTGARD-SURVIVORS"
   name: "Nottgard Survivors"
+interaction:
+  default_mode: "direct"
+  atena:
+    trigger: "explicit-address"
+    mode: "guided"
+  direct_execution:
+    allow_without_spec: true
+    reconciliation: "propose-after-change"
+specification:
+  require_zero_blocking_gaps: true
+  allow_explicit_defer: true
+  recommend_defaults: true
+bootstrap:
+  tooling_checks:
+    rtk:
+      enabled: true
+      required: false
+      ask_if_missing: true
+      ask_once: true
+      status: "enabled"   # rtk 0.50.0 detectado em 2026-10-03
 policies:
   remote_context: "review-before-remote"
   draft_writing: "allowed"
@@ -9,13 +29,20 @@ policies:
   dependencies: "allowlist-with-plan"
 autonomy:
   profile: "guarded-autopilot"
-  execution_approval: "per-spec"
+  approval_selection: "required-per-plan"   # substitui execution_approval: per-spec (ADD upstream 2026-10-03)
   report_mode: "exceptions-and-final"
   max_retries: 3
 git:
   local_commits: "explicit-approval"
+  direct_local_commits: "explicit-approval"
   merge: "explicit-approval"
   publish: "explicit-approval"
+skills:
+  record_opportunity_after_repetitions: 2
+  propose_after_repetitions: 3
+graph:
+  mode: "derived"
+  output: "generated/graph.production.json"
 backlog:
   path: ".atena/backlog"
   tracks: ["arte-audio", "mecanicas", "bugs", "balanceamento", "ferramentas"]

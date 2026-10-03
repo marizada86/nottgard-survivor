@@ -1,0 +1,8 @@
+version: 2
+
+# Nenhum plano ativo. SPEC-120 (PLAN-055) aguarda aprovacao e ainda nao e executavel.
+# Um plano ativo registra o modo de aprovacao escolhido e o checkpoint atual (PLAN, B-XXX ou S-XXX).
+active_plan: null
+plan_cursor: null
+suspension: null
+deferred_requests: []
