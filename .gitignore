@@ -9,3 +9,8 @@ EV-*.zip
 .atena/generated/animation-candidates/
 .atena/generated/asset-candidates/
 data/build_info.json
+
+# Saída local: relatos/prints do playtest e logs de processamento das filas de arte
+evidencias/
+.atena/generated/*.log
+.atena/generated/**/*.log
