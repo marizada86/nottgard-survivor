@@ -577,7 +577,7 @@ func _consume_events() -> void:
 					Sfx.play_enemy(String(ev.enemy.id), "death")
 				_kill_burst(ev.enemy, ev.pos)
 			"streak":
-				Sfx.play("progress.levelup", -10.0)
+				Sfx.play("progress.levelup", -20.0)  # mais baixo que o level up (-17 dB no manifesto)
 				hud.toast("%s — %d abates (+%d%% XP por 5 s)" % [ev.name, ev.count, roundi(float(ev.xp_bonus) * 100.0)], Color(0.62, 0.55, 0.85))
 			"pickup":
 				_pickup_feedback(String(ev.kind), ev.pos)
