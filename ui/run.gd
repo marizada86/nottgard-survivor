@@ -562,19 +562,16 @@ func _consume_events() -> void:
 				_ring(ev.pos, ev.radius, zone_theme.impact_accent, 0.25)
 			"decoy_blast":
 				Sfx.play("combat.explosion", -6.0)
-				_shake = 0.5
 				_ring(ev.pos, ev.radius, _dcol(String(ev.get("dtype", "magico"))), 0.4)
 				if under.has_method("spawn_impact"):
 					under.call("spawn_impact", ev.pos, 8)
 			"boom":
 				Sfx.play("combat.explosion", -8.0)
-				_shake = 0.8
 				_ring(ev.pos, ev.radius, Color(1.0, 0.3, 0.2), 0.3)
 				if under.has_method("spawn_impact"):
 					under.call("spawn_impact", ev.pos, 8)
 			"kill":
 				if ev.enemy.is_boss():
-					_shake = 1.5
 					Sfx.play_boss(String(ev.enemy.id), "defeat")
 				else:
 					Sfx.play_enemy(String(ev.enemy.id), "death")
@@ -598,7 +595,6 @@ func _consume_events() -> void:
 				Sfx.play_boss(String(ev.enemy.id), "arrival")
 				_bark("chefe")
 				Sfx.start_music("boss")
-				_shake = 1.2
 			"boss_intro":
 				_show_boss_intro(ev)
 			"stage_event_warning":
@@ -618,12 +614,10 @@ func _consume_events() -> void:
 			"active":
 				Sfx.play_hero(String(ev.get("hero_id", battle.hero.id)))
 				hero_node.play_action(&"active")
-				_shake = 0.35
 				_ring(ev.pos, float(ev.get("radius", 2.0)), _dcol(String(ev.get("dtype", "radiante"))), 0.3)
 			"boss_phase":
 				var active_boss: String = String(battle.stage.get("boss", ""))
 				Sfx.play_boss(active_boss, "phase")
-				_shake = 1.0
 				hud.toast(ev.text, Color(1.0, 0.55, 0.35))
 				_play_enemy_action(active_boss, ev.pos, &"phase")
 			"enemy_action":
