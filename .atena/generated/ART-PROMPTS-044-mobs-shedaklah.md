@@ -2,7 +2,7 @@
 id: "ART-PROMPTS-044"
 type: "prompts-de-arte"
 title: "Animações dos inimigos de Shedaklah — identidade e ciclos"
-status: "pronto para envio — nada executado; aguarda aprovação das identidades"
+status: "oito identidades v03 aprovadas pelo dono; três alvos integrados; geração restante bloqueada por limite de uso"
 created: "2026-10-01"
 relations: ["[[PLAN-041-animacao-padrao-zumbi-para-inimigos-e-interacoes-2026-09-29]]", "[[PLAN-048-geracao-animacoes-mobs-onda-1-2026-09-30]]", "[[ART-PROMPTS-033-mobs-onda-1-lote-a]]"]
 ---
@@ -146,3 +146,5 @@ Anexar a arte estática `assets/enemies/<id>.png` e o `idle_00` aprovado. Salvar
 - Gosma, névoa, chama, fungo ou corrente translúcidos, desfocados ou soltos; partículas, círculos mágicos, projéteis ou respingos separados.
 - Troca de mão da arma, membros duplicados, texto, UI, cenário, sombra no chão ou segundo personagem.
 - Solidez abaixo de 0,90 (0,79 apenas para o que é translúcido por desenho: `alma_penada`, `bolha_de_slime`).
+
+2026-10-03: Servo, Cogumelo e Esporo integrados (60 quadros / 12 tiras), manifesto 88 PNGs. Suite zero falhas; smoke nove fases ok. Limo: sete novos quadros preservados (idle_01–03, move_00–03), mais idle_00 aprovado; faltam 12 quadros. Gerador bloqueado por HTTP 429 usage_limit_reached; liberação prevista 03/10/2026 10:19:52 America/Sao_Paulo. Pudim, Gargula, Receptaculo e Zuggtmoy aguardam 79 quadros; retomada total 91 prompts em shedaklah-resume-after-limit-2026-10-03.json. Nenhum ciclo incompleto foi admitido.

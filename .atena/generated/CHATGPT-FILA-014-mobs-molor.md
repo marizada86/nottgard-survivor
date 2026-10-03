@@ -1,7 +1,7 @@
 ---
 id: "CHATGPT-FILA-014"
 title: "Fila de geração — animações dos inimigos de Molor"
-status: "pronta para envio — nada executado"
+status: "I01–I03 aprovadas; 66 quadros e 13 ciclos integrados; lote Molor concluído localmente; EVID-145"
 created: "2026-10-01"
 relations: ["[[ART-PROMPTS-045-mobs-molor]]", "[[PLAN-041-animacao-padrao-zumbi-para-inimigos-e-interacoes-2026-09-29]]"]
 ---
@@ -20,84 +20,83 @@ Marque `[x]` ao gerar e `[a]` ao aprovar.
 
 ## Gate de identidade
 
-- [ ] gerada · [ ] aprovada — I01 `bolha_de_slime_idle_00`
-- [ ] gerada · [ ] aprovada — I02 `cultista_thullgrime_idle_00`
-- [ ] gerada · [ ] aprovada — I03 `blogbog_idle_00`
+- [x] gerada · [a] aprovada — I01 `bolha_de_slime_idle_00`
+- [x] gerada · [a] aprovada — I02 `cultista_thullgrime_idle_00`
+- [x] gerada · [a] aprovada — I03 `blogbog_idle_00`
 
 ## Quadros por alvo
 
 ### `bolha_de_slime` — Bolha de Slime (19 quadros a gerar, fora o `idle_00`)
 Destino: `.atena/generated/art-candidates/enemies-molor/bolha_de_slime/`
 
-- [ ] `idle_01`
-- [ ] `idle_02`
-- [ ] `idle_03`
-- [ ] `move_00`
-- [ ] `move_01`
-- [ ] `move_02`
-- [ ] `move_03`
-- [ ] `move_04`
-- [ ] `move_05`
-- [ ] `attack_00`
-- [ ] `attack_01`
-- [ ] `attack_02`
-- [ ] `attack_03`
-- [ ] `death_00`
-- [ ] `death_01`
-- [ ] `death_02`
-- [ ] `death_03`
-- [ ] `death_04`
-- [ ] `death_05`
+- [x] `idle_01`
+- [x] `idle_02`
+- [x] `idle_03`
+- [x] `move_00`
+- [x] `move_01`
+- [x] `move_02`
+- [x] `move_03`
+- [x] `move_04`
+- [x] `move_05`
+- [x] `attack_00`
+- [x] `attack_01`
+- [x] `attack_02`
+- [x] `attack_03`
+- [x] `death_00`
+- [x] `death_01`
+- [x] `death_02`
+- [x] `death_03`
+- [x] `death_04`
+- [x] `death_05`
 
 ### `cultista_thullgrime` — Cultista de Ghaunadaur (19 quadros a gerar, fora o `idle_00`)
 Destino: `.atena/generated/art-candidates/enemies-molor/cultista_thullgrime/`
 
-- [ ] `idle_01`
-- [ ] `idle_02`
-- [ ] `idle_03`
-- [ ] `move_00`
-- [ ] `move_01`
-- [ ] `move_02`
-- [ ] `move_03`
-- [ ] `move_04`
-- [ ] `move_05`
-- [ ] `attack_00`
-- [ ] `attack_01`
-- [ ] `attack_02`
-- [ ] `attack_03`
-- [ ] `death_00`
-- [ ] `death_01`
-- [ ] `death_02`
-- [ ] `death_03`
-- [ ] `death_04`
-- [ ] `death_05`
+- [x] `idle_01`
+- [x] `idle_02`
+- [x] `idle_03`
+- [x] `move_00`
+- [x] `move_01`
+- [x] `move_02`
+- [x] `move_03`
+- [x] `move_04`
+- [x] `move_05`
+- [x] `attack_00`
+- [x] `attack_01`
+- [x] `attack_02`
+- [x] `attack_03`
+- [x] `death_00`
+- [x] `death_01`
+- [x] `death_02`
+- [x] `death_03`
+- [x] `death_04`
+- [x] `death_05`
 
 ### `blogbog` — Blogbog (25 quadros a gerar, fora o `idle_00`)
 Destino: `.atena/generated/art-candidates/enemies-molor/blogbog/`
 
-- [ ] `idle_01`
-- [ ] `idle_02`
-- [ ] `idle_03`
-- [ ] `move_00`
-- [ ] `move_01`
-- [ ] `move_02`
-- [ ] `move_03`
-- [ ] `move_04`
-- [ ] `move_05`
-- [ ] `attack_00`
-- [ ] `attack_01`
-- [ ] `attack_02`
-- [ ] `attack_03`
-- [ ] `death_00`
-- [ ] `death_01`
-- [ ] `death_02`
-- [ ] `death_03`
-- [ ] `death_04`
-- [ ] `death_05`
-- [ ] `special_00`
-- [ ] `special_01`
-- [ ] `special_02`
-- [ ] `special_03`
-- [ ] `special_04`
-- [ ] `special_05`
-
+- [x] `idle_01`
+- [x] `idle_02`
+- [x] `idle_03`
+- [x] `move_00`
+- [x] `move_01`
+- [x] `move_02`
+- [x] `move_03`
+- [x] `move_04`
+- [x] `move_05`
+- [x] `attack_00`
+- [x] `attack_01`
+- [x] `attack_02`
+- [x] `attack_03`
+- [x] `death_00`
+- [x] `death_01`
+- [x] `death_02`
+- [x] `death_03`
+- [x] `death_04`
+- [x] `death_05`
+- [x] `special_00`
+- [x] `special_01`
+- [x] `special_02`
+- [x] `special_03`
+- [x] `special_04`
+- [x] `special_05`

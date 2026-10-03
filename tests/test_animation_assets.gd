@@ -1,6 +1,23 @@
 extends RefCounted
 
 const ASSETS := {
+	"res://assets/animations/enemies/esporo_voador/idle.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/esporo_voador/move.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/esporo_voador/attack.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/esporo_voador/death.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/cogumelo_fungico/idle.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/cogumelo_fungico/move.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/cogumelo_fungico/attack.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/cogumelo_fungico/death.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/servo_de_zuggtmoy/idle.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/servo_de_zuggtmoy/move.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/servo_de_zuggtmoy/attack.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/servo_de_zuggtmoy/death.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/blogbog/idle.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/blogbog/move.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/blogbog/attack.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/blogbog/death.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/blogbog/special.png": Vector2i(1536, 384),
 	"res://assets/animations/enemies/cultista_thullgrime/idle.png": Vector2i(1024, 384),
 	"res://assets/animations/enemies/cultista_thullgrime/move.png": Vector2i(1536, 384),
 	"res://assets/animations/enemies/cultista_thullgrime/attack.png": Vector2i(1024, 384),
@@ -138,6 +155,10 @@ const MINIMUM_VISIBLE_COVERAGE := {
 }
 
 const WAVE_ONE_ENEMY_ANIMATIONS := {
+	"esporo_voador": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
+	"cogumelo_fungico": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
+	"servo_de_zuggtmoy": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
+	"blogbog": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6, &"special": 6}},
 	"cultista_thullgrime": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
 	"bolha_de_slime": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
 	"slime_corrosivo": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
@@ -204,8 +225,8 @@ func run() -> Array[String]:
 	var hero := Hero.new()
 	for index in 8:
 		var direction := Vector2.RIGHT.rotated(index * PI / 4.0)
-		if hero_script.uses_procedural_walk_for_direction("korrak", direction) != (index != 0):
-			failures.append("Korrak deve usar tira validada só em move_e enquanto as demais aguardam regeneração")
+		if hero_script.uses_procedural_walk_for_direction("korrak", direction):
+			failures.append("Korrak deve andar com as tiras validadas nas oito direções (sem deslizar com o idle)")
 	hero.map_size = Vector2(100, 100)
 	hero.pos = Vector2(50, 50)
 	var before := Iso.to_screen(hero.pos)
@@ -227,8 +248,8 @@ func run() -> Array[String]:
 
 ## Dívida conhecida de caminhada (EVID-146 / BUG-025 / ART-PROMPTS-055): massa fora de ±30% do idle
 ## ou quadro colado na borda. Só pode encolher: ao regerar a tira, remova a entrada.
-const WALK_KNOWN_MASS := ["bromnor/move_e", "brook/move_ne", "durvall/move_e", "kayron/move_se", "maelor/move_n", "maelor/move_ne", "maelor/move_e", "maelor/move_se"]
-const WALK_KNOWN_EDGE := ["durvall/move_e", "maelor/move_s"]
+const WALK_KNOWN_MASS := []
+const WALK_KNOWN_EDGE := []
 
 func _validate_hero_walk_stability() -> Array[String]:
 	var failures: Array[String] = []

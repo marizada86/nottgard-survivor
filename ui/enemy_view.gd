@@ -3,7 +3,17 @@ extends Node2D
 ## Visual reutilizável de inimigo, com preview editável e fallback para a arte estática.
 
 const H_BASE := 62.0
+## A âncora é o pixel mais baixo da arte (ponta do pé da frente); erguer a sombra põe o corpo no meio dela.
+const SHADOW_LIFT := 0.4
+## Raio da sombra (px) por px de altura visível do inimigo: grande tem sombra grande, pequeno, pequena.
+const SHADOW_RADIUS_PER_HEIGHT := 0.2
 const ANIMATED := {
+	"esporo_voador": {"cell": Vector2i(256, 384), "body_height": 190.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
+	"cogumelo_fungico": {"cell": Vector2i(256, 384), "body_height": 188.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
+	"servo_de_zuggtmoy": {"cell": Vector2i(256, 384), "body_height": 110.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
+	"blogbog": {"cell": Vector2i(256, 384), "body_height": 248.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6, "special": 6}, "flip_h_for_move": true},
+	"bolha_de_slime": {"cell": Vector2i(256, 384), "body_height": 180.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
+	"cultista_thullgrime": {"cell": Vector2i(256, 384), "body_height": 302.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
 	"zumbi": {"cell": Vector2i(256, 384), "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}},
 	"cultista_adaga": {"cell": Vector2i(256, 384), "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
 	"sacerdote_mente_derretida": {"cell": Vector2i(320, 480), "states": {"idle": 6, "move": 8, "attack": 6, "special_a": 8, "special_b": 8, "phase": 8, "death": 10}},
@@ -19,11 +29,19 @@ const ANIMATED := {
 }
 ## Linha dos pés no idle (px na célula); ancora o sprite na sombra em vez da borda da célula.
 const FEET_Y := {
+	"esporo_voador": 356.0,
+	"cogumelo_fungico": 356.0,
+	"servo_de_zuggtmoy": 356.0,
+	"blogbog": 356.0,
+	"bolha_de_slime": 356.0,
+	"cultista_thullgrime": 356.0,
 	"arch_hag": 380.0, "criatura_corrompida": 376.0, "cultista_adaga": 376.0, "cultista_arqueiro": 370.0,
 	"cultista_cajado": 363.0, "guardiao_copia": 458.0, "guardiao_verdadeiro": 469.0, "notivago": 367.0,
 	"sacerdote_mente_derretida": 472.0, "slime_corrosivo": 372.0, "tentaculo_kraken": 372.0, "zumbi": 376.0,
 }
 static var _tex_cache := {}
+## Altura visível (alfa) do primeiro quadro do idle, em px da célula, por inimigo.
+static var _art_height_cache := {}
 
 @export var preview_enemy_id := "zumbi": set = _set_preview_enemy_id
 var enemy: Enemy
@@ -77,6 +95,7 @@ func _build_animations(enemy_id: String) -> void:
 			var fps := 9.0 if state == "death" else (10.0 if looped else 12.0)
 			_has_animation = SpriteStripFrames.add_strip(frames, state, "res://assets/animations/enemies/%s/%s.png" % [enemy_id, state], _cell, int(spec.states[state]), fps, looped) or _has_animation
 	sprite.sprite_frames = frames
+	_cache_art_height(enemy_id, frames)
 	sprite.visible = _has_animation
 	sprite.flip_h = false
 	sprite.offset = Vector2(0, _cell.y * 0.5 - float(FEET_Y.get(enemy_id, _cell.y)))
@@ -84,9 +103,24 @@ func _build_animations(enemy_id: String) -> void:
 	if _has_animation and frames.has_animation(&"idle"):
 		sprite.play(&"idle")
 
+static func _cache_art_height(enemy_id: String, frames: SpriteFrames) -> void:
+	if _art_height_cache.has(enemy_id) or not frames.has_animation(&"idle") or frames.get_frame_count(&"idle") == 0:
+		return
+	var image := frames.get_frame_texture(&"idle", 0).get_image()
+	if image != null:
+		_art_height_cache[enemy_id] = float(image.get_used_rect().size.y)
+
+## Altura do inimigo em tela (px); sem tira animada, a arte estática ocupa H_BASE.
+func _visible_height(actor_scale: float) -> float:
+	if _has_animation and _art_height_cache.has(preview_enemy_id):
+		return float(_art_height_cache[preview_enemy_id]) * sprite.scale.y
+	return H_BASE * actor_scale
+
 func _update_sprite_scale() -> void:
 	var actor_scale := enemy.scale if enemy != null else 1.0
-	sprite.scale = Vector2.ONE * (H_BASE * actor_scale / _cell.y)
+	var spec: Dictionary = ANIMATED.get(preview_enemy_id, {})
+	var body_height := float(spec.get("body_height", _cell.y))
+	sprite.scale = Vector2.ONE * (H_BASE * actor_scale / body_height)
 
 func sync_visual(screen_position: Vector2) -> void:
 	if _dying:
@@ -158,11 +192,13 @@ func _draw() -> void:
 		return
 	var actor_scale := enemy.scale if enemy != null else 1.0
 	var alpha := 0.45 if enemy != null and (enemy.has_flag("ghost") or enemy.has_flag("illusory")) else 1.0
-	draw_colored_polygon(PackedVector2Array([Vector2(0, -7 * actor_scale), Vector2(14 * actor_scale, 0), Vector2(0, 7 * actor_scale), Vector2(-14 * actor_scale, 0)]), Color(0, 0, 0, 0.5 * alpha))
+	var shadow_radius := _visible_height(actor_scale) * SHADOW_RADIUS_PER_HEIGHT
+	var ground := Vector2(0, -shadow_radius * Iso.TILE_H / Iso.TILE_W * SHADOW_LIFT)
+	draw_colored_polygon(Iso.ground_circle(ground, shadow_radius), Color(0, 0, 0, 0.5 * alpha))
 	if enemy != null and enemy.affix != "":
-		draw_arc(Vector2.ZERO, 16 * actor_scale, 0, TAU, 20, Color(1.0, 0.85, 0.3, 0.9), 2.0)
+		draw_arc(ground, 16 * actor_scale, 0, TAU, 20, Color(1.0, 0.85, 0.3, 0.9), 2.0)
 	if enemy != null and enemy.is_boss():
-		draw_arc(Vector2.ZERO, 22 * actor_scale, 0, TAU, 24, Color(0.9, 0.2, 0.2, 0.9), 3.0)
+		draw_arc(ground, 22 * actor_scale, 0, TAU, 24, Color(0.9, 0.2, 0.2, 0.9), 3.0)
 	if tex != null and not _has_animation:
 		var height := H_BASE * actor_scale
 		var width := height * float(tex.get_width()) / float(tex.get_height())

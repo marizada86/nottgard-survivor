@@ -1,0 +1,41 @@
+{
+  "generator": "built-in imagegen",
+  "frames": [
+    {
+      "id": "servo_de_zuggtmoy",
+      "state": "idle",
+      "index": 1,
+      "pose": "slight breathing, shoulders lower slightly, base fixed and spear held low",
+      "prompt": "Extract this EXACT existing idle_01 pose as ONE clean IN-GAME PIXEL SPRITE CUTOUT. REMOVE the diffuse brown halo/background completely, also between limbs. Preserve every body/weapon pixel shape, pose, anatomy, attached mushrooms, palette, right hand holding spear and direction. Do NOT return to idle or stand up, especially death must remain flat prone. COMPACT SQUARE transparent canvas: entire figure AND entire spear must fit with >=10%empty margins on all sides. Every non-character pixel alphaZERO; opaque crisp stepped outline, body only. Light ONLY body; no glow/aura/falloff/shadow/scenery/debris/text. ONE isolated complete character, NOT sheet.",
+      "dest": "F:/dev/nottgard-survivor/.atena/generated/art-candidates/enemies-shedaklah/servo_de_zuggtmoy/servo_de_zuggtmoy_idle_01_v02.png",
+      "output_hint": "Generated images are saved to C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a0fcbf-5349-7dc3-b367-20f513686fb7 as C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a0fcbf-5349-7dc3-b367-20f513686fb7\\exec-cb7129e2-8a21-4c44-b081-dff0ec39c238.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "id": "servo_de_zuggtmoy",
+      "state": "move",
+      "index": 0,
+      "pose": "heavy hunter walk first contact: right anatomical foot forward, left foot behind, spear held low in same right hand",
+      "prompt": "Extract this EXACT existing move_00 pose as ONE clean IN-GAME PIXEL SPRITE CUTOUT. REMOVE the diffuse brown halo/background completely, also between limbs. Preserve every body/weapon pixel shape, pose, anatomy, attached mushrooms, palette, right hand holding spear and direction. Do NOT return to idle or stand up, especially death must remain flat prone. COMPACT SQUARE transparent canvas: entire figure AND entire spear must fit with >=10%empty margins on all sides. Every non-character pixel alphaZERO; opaque crisp stepped outline, body only. Light ONLY body; no glow/aura/falloff/shadow/scenery/debris/text. ONE isolated complete character, NOT sheet.",
+      "dest": "F:/dev/nottgard-survivor/.atena/generated/art-candidates/enemies-shedaklah/servo_de_zuggtmoy/servo_de_zuggtmoy_move_00_v02.png",
+      "output_hint": "Generated images are saved to C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a0fcbf-5349-7dc3-b367-20f513686fb7 as C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a0fcbf-5349-7dc3-b367-20f513686fb7\\exec-3b6bfa84-7653-4de5-9d61-8621bed97498.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "id": "servo_de_zuggtmoy",
+      "state": "attack",
+      "index": 2,
+      "pose": "IMPACT spear fully extended to RIGHT, spear tip fully visible, right hand on shaft, left arm balancing; keep anatomical hand same as reference",
+      "prompt": "Extract this EXACT existing attack_02 pose as ONE clean IN-GAME PIXEL SPRITE CUTOUT. REMOVE the diffuse brown halo/background completely, also between limbs. Preserve every body/weapon pixel shape, pose, anatomy, attached mushrooms, palette, right hand holding spear and direction. Do NOT return to idle or stand up, especially death must remain flat prone. COMPACT SQUARE transparent canvas: entire figure AND entire spear must fit with >=10%empty margins on all sides. Every non-character pixel alphaZERO; opaque crisp stepped outline, body only. Light ONLY body; no glow/aura/falloff/shadow/scenery/debris/text. ONE isolated complete character, NOT sheet.",
+      "dest": "F:/dev/nottgard-survivor/.atena/generated/art-candidates/enemies-shedaklah/servo_de_zuggtmoy/servo_de_zuggtmoy_attack_02_v02.png",
+      "output_hint": "Generated images are saved to C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a0fcbf-5349-7dc3-b367-20f513686fb7 as C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a0fcbf-5349-7dc3-b367-20f513686fb7\\exec-a3ee0538-e7c4-4272-8e35-fbbd750e99cc.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "id": "servo_de_zuggtmoy",
+      "state": "death",
+      "index": 5,
+      "pose": "FINAL motionless body lying on its side, very low horizontal heap, limp dreads/cape/mushrooms, spear alongside same hand; no upright kneeling",
+      "prompt": "Extract this EXACT existing death_05 pose as ONE clean IN-GAME PIXEL SPRITE CUTOUT. REMOVE the diffuse brown halo/background completely, also between limbs. Preserve every body/weapon pixel shape, pose, anatomy, attached mushrooms, palette, right hand holding spear and direction. Do NOT return to idle or stand up, especially death must remain flat prone. COMPACT SQUARE transparent canvas: entire figure AND entire spear must fit with >=10%empty margins on all sides. Every non-character pixel alphaZERO; opaque crisp stepped outline, body only. Light ONLY body; no glow/aura/falloff/shadow/scenery/debris/text. ONE isolated complete character, NOT sheet.",
+      "dest": "F:/dev/nottgard-survivor/.atena/generated/art-candidates/enemies-shedaklah/servo_de_zuggtmoy/servo_de_zuggtmoy_death_05_v02.png",
+      "output_hint": "Generated images are saved to C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a0fcbf-5349-7dc3-b367-20f513686fb7 as C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a0fcbf-5349-7dc3-b367-20f513686fb7\\exec-b3f57e0f-f988-4c2e-bbce-05b76406651c.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  ]
+}

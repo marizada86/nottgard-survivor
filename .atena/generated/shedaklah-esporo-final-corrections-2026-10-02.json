@@ -1,0 +1,22 @@
+[
+  {
+    "status": "fulfilled",
+    "value": {
+      "name": "attack_00",
+      "ref": "esporo_voador_idle_00_v03.png",
+      "prompt": "Edit this APPROVED IDLE sprite into attack_00 ANTICIPATION with a tiny change only: circular mouth tightens slightly and sphere leans back five degrees, both wings draw a little inward, droplets stay attached. ABSOLUTELY preserve this exact sphere orientation: circular mouth on VIEWER LEFT half, back of sphere VIEWER RIGHT. Do not rotate across the vertical axis and do not mirror. Preserve the sphere size, colors, pink bulbs, two wings and exact crisp pixel-art identity.1254x1254 clean square native-alpha sprite cutout, full silhouette centered with8%side margins, same visual base and camera. No legs, halo, glow, shadow, loose particles, text, background or extra object.",
+      "dest": "F:/dev/nottgard-survivor/.atena/generated/art-candidates/enemies-shedaklah/esporo_voador/esporo_voador_attack_00_v02.png",
+      "output_hint": "Generated images are saved to C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a0fcbf-5349-7dc3-b367-20f513686fb7 as C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a0fcbf-5349-7dc3-b367-20f513686fb7\\exec-418abe06-8f29-40bd-9eca-1a6167f9f63e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "name": "death_04",
+      "ref": "esporo_voador_death_03_v01.png",
+      "prompt": "Edit this exact collapsed spore into the NEXT death_04 frame. Preserve exact1254x1254canvas, sprite size and horizontal position, identity, crisp pixel style and native alpha. The reference has contacted the ground. Flatten the sphere slightly farther, reducing its complete creature height by10percent while keeping its width unchanged; fold the two wings lower alongside the sphere and let all attached drops rest low. Entire body stays on the bottom third, no upright floating body. Preserve sphere/mouth facing and pink bulbs, no enlargement or camera change. Entire wings/body visible with margins. Outside alpha0, opaque silhouette, no shadow, halo, glow, debris, particles, ground or text.",
+      "dest": "F:/dev/nottgard-survivor/.atena/generated/art-candidates/enemies-shedaklah/esporo_voador/esporo_voador_death_04_v02.png",
+      "output_hint": "Generated images are saved to C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a0fcbf-5349-7dc3-b367-20f513686fb7 as C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a0fcbf-5349-7dc3-b367-20f513686fb7\\exec-ae51bbde-34c0-473b-98ec-dd0b5147beaa.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  }
+]

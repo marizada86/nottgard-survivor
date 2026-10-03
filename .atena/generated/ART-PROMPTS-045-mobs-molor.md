@@ -2,7 +2,7 @@
 id: "ART-PROMPTS-045"
 type: "prompts-de-arte"
 title: "Animações dos inimigos de Molor — identidade e ciclos"
-status: "pronto para envio — nada executado; aguarda aprovação das identidades"
+status: "identidades aprovadas; 66 quadros e 13 ciclos integrados; EVID-145"
 created: "2026-10-01"
 relations: ["[[PLAN-041-animacao-padrao-zumbi-para-inimigos-e-interacoes-2026-09-29]]", "[[PLAN-048-geracao-animacoes-mobs-onda-1-2026-09-30]]", "[[ART-PROMPTS-033-mobs-onda-1-lote-a]]"]
 ---

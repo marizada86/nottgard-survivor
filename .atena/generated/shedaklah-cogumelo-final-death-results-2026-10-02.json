@@ -1,0 +1,22 @@
+[
+  {
+    "status": "fulfilled",
+    "value": {
+      "index": 4,
+      "version": 3,
+      "prompt": "Edit this collapsed mushroom death sprite. Keep its EXACT horizontal collapsed body pose, attached cap and bulbs, colors, crisp pixel-art style and native opaque silhouette. Fix ONLY framing: reduce the whole existing creature uniformly to 80 percent of its current size and center it horizontally, with at least 100 transparent pixels at BOTH left and right borders of a 1254x1254 square canvas. Position its visual base at y=1130. Entire roots and entire cap visible, absolutely no body pixel touching any canvas border. Do not zoom back up. Preserve the flat low dead pose. Background fully transparent alpha0, no shadow, halo, glow, debris, text or extra objects.",
+      "dest": "F:/dev/nottgard-survivor/.atena/generated/art-candidates/enemies-shedaklah/cogumelo_fungico/cogumelo_fungico_death_04_v03.png",
+      "output_hint": "Generated images are saved to C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a0fcbf-5349-7dc3-b367-20f513686fb7 as C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a0fcbf-5349-7dc3-b367-20f513686fb7\\exec-c6f90cc5-ab72-4b8c-a2fb-99c35b4d59db.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "index": 5,
+      "version": 2,
+      "prompt": "Use this collapsed mushroom sprite as the preceding death_04 pose reference. Create the NEXT and FINAL death_05 frame: same exact brown-pink cap and white-pink root trunk, all attached pink bulbs, same dark fantasy crisp pixel-art identity, but the body rests fully motionless, cap settles slightly lower and the trunk remains completely horizontal. Do not stand up or crouch. The entire sprite is uniformly 80 percent of the reference image size, centered horizontally on a 1254x1254 square transparent canvas, visual base y=1130, with at least 100 pixels fully transparent padding at both sides. Large transparent region above, complete creature height no more than420pixels. Keep every root, cap and attached bulb intact and visible. Opaque native sprite silhouette, lighting only inside body, outside alpha0. No shadow, halo, glow, falloff, debris, particles, text, second character or scenery.",
+      "dest": "F:/dev/nottgard-survivor/.atena/generated/art-candidates/enemies-shedaklah/cogumelo_fungico/cogumelo_fungico_death_05_v02.png",
+      "output_hint": "Generated images are saved to C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a0fcbf-5349-7dc3-b367-20f513686fb7 as C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a0fcbf-5349-7dc3-b367-20f513686fb7\\exec-c78ac899-f4e2-4534-ba6f-a6052531c69b.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  }
+]
