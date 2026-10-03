@@ -34,7 +34,7 @@ individualmente na task correspondente do Discord.
 - Godot 4.7.2. Abra `project.godot`; a cena principal é `ui/menu.tscn` e as fases são cenas editáveis em `ui/stages/*.tscn` (props, spawns e posição do herói são nós na cena).
 - Conteúdo em JSON em `data/` (heróis, armas, passivas, inimigos, fases, itens, bênçãos, conquistas, melhorias).
 - Testes: `godot --headless --path . -s tests/run_all.gd` · Fumaça: `godot --headless --path . res://tools/smoke.tscn`
-- Áudio: `node tools/generate_audio.js` regenera a biblioteca original; `node tools/validate_audio.js` confere cobertura, WAVs, silêncio e clipping.
+- Áudio: `node tools/generate_audio.js` regenera a biblioteca original; `node tools/validate_audio.js` confere cobertura, WAVs, silêncio e clipping; `node tools/install_sfx.js evento=arquivo.mp3` instala um som real no lugar do placeholder.
 - Bot de balanceamento: `godot --headless --path . -s tools/bot.gd -- durvall 5 dagruve 0.08 8`
 - Regerar cenas (sobrescreve edições manuais!): `godot --headless --path . res://tools/build_scenes.tscn`
 - Exportar: `godot --headless --path . --export-release "Windows Desktop" build/NottgardSurvivors.exe` (precisa dos export templates 4.7.2).
