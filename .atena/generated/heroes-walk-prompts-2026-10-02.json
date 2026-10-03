@@ -1,0 +1,58 @@
+[
+  {
+    "hero": "kayron",
+    "sequence": "move_n",
+    "prompt": "Use case: stylized-concept. One game animation strip with SIX chronological walking frames, single horizontal row. kayron image1 idle is obligatory identity, body proportions and pixel art reference; image2 defective walk is pose reference ONLY, replace it. Preserve exact face hair clothing armor weapon palette and top-left lighting of idle, SAME anatomical hand holding weapon. Direction screen NORTH straight UP, back view walking away, white hair and back of purple cloak visible. Six distinct alternating leg steps: right contact, recoil, passing, left contact, recoil, passing, coherent loop. Character has constant scale, compact cape contained close to body, equal shoulder/trunk width, no stretching or fattening. Each whole figure including boots weapon cape hair and horns must fit separately with wide transparent gaps, 30px clear margin on all sides. Small sprites around330px tall on wide3:1 canvas, common support-sole baseline. Intended final pack six256x384cells, bodyheight316px, sole y376px, side10px safe margin. Actual alpha-zero transparent background outside sharp silhouettes, transparent gaps between limbs, no brown/black/white haze or glow, no floor, cast shadows, particles, text, grid or watermark. Detailed hand-painted pixel art exactly matching idle.",
+    "source": "kayron/move_n_v01.png",
+    "tool": "built-in imagegen"
+  },
+  {
+    "hero": "kayron",
+    "sequence": "move_s",
+    "prompt": "Use case: stylized-concept. One game animation strip with SIX chronological walking frames, single horizontal row. kayron image1 idle is obligatory identity, body proportions and pixel art reference; image2 defective walk is pose reference ONLY, replace it. Preserve exact face hair clothing armor weapon palette and top-left lighting of idle, SAME anatomical hand holding weapon. Direction screen SOUTH straight DOWN, front view walking towards viewer. Six distinct alternating leg steps: right contact, recoil, passing, left contact, recoil, passing, coherent loop. Character has constant scale, compact cape contained close to body, equal shoulder/trunk width, no stretching or fattening. Each whole figure including boots weapon cape hair and horns must fit separately with wide transparent gaps, 30px clear margin on all sides. Small sprites around330px tall on wide3:1 canvas, common support-sole baseline. Intended final pack six256x384cells, bodyheight316px, sole y376px, side10px safe margin. Actual alpha-zero transparent background outside sharp silhouettes, transparent gaps between limbs, no brown/black/white haze or glow, no floor, cast shadows, particles, text, grid or watermark. Detailed hand-painted pixel art exactly matching idle.",
+    "source": "kayron/move_s_v01.png",
+    "tool": "built-in imagegen"
+  },
+  {
+    "hero": "sylas",
+    "sequence": "move_s",
+    "prompt": "Use case: stylized-concept. One game animation strip with SIX chronological walking frames, single horizontal row. sylas image1 idle is obligatory identity, body proportions and pixel art reference; image2 defective walk is pose reference ONLY, replace it. Preserve exact face hair clothing armor weapon palette and top-left lighting of idle, SAME anatomical hand holding weapon. Direction screen SOUTH straight DOWN, front view walking towards viewer. Six distinct alternating leg steps: right contact, recoil, passing, left contact, recoil, passing, coherent loop. Character has constant scale, compact cape contained close to body, equal shoulder/trunk width, no stretching or fattening. Each whole figure including boots weapon cape hair and horns must fit separately with wide transparent gaps, 30px clear margin on all sides. Small sprites around330px tall on wide3:1 canvas, common support-sole baseline. Intended final pack six256x384cells, bodyheight304px, sole y376px, side10px safe margin. Actual alpha-zero transparent background outside sharp silhouettes, transparent gaps between limbs, no brown/black/white haze or glow, no floor, cast shadows, particles, text, grid or watermark. Detailed hand-painted pixel art exactly matching idle.",
+    "source": "sylas/move_s_v01.png",
+    "tool": "built-in imagegen"
+  },
+  {
+    "hero": "brook",
+    "sequence": "move_n",
+    "prompt": "Use case: stylized-concept. One game animation strip with SIX chronological walking frames, single horizontal row. brook image1 idle is obligatory identity, body proportions and pixel art reference; image2 defective walk is pose reference ONLY, replace it. Preserve exact face hair clothing armor weapon palette and top-left lighting of idle, SAME anatomical hand holding weapon. Direction screen NORTH straight UP, back view walking away, red cloak and white hair visible. Six distinct alternating leg steps: right contact, recoil, passing, left contact, recoil, passing, coherent loop. Character has constant scale, compact cape contained close to body, equal shoulder/trunk width, no stretching or fattening. Each whole figure including boots weapon cape hair and horns must fit separately with wide transparent gaps, 30px clear margin on all sides. Small sprites around330px tall on wide3:1 canvas, common support-sole baseline. Intended final pack six256x384cells, bodyheight259px, sole y368px, side10px safe margin. Actual alpha-zero transparent background outside sharp silhouettes, transparent gaps between limbs, no brown/black/white haze or glow, no floor, cast shadows, particles, text, grid or watermark. Detailed hand-painted pixel art exactly matching idle.",
+    "source": "brook/move_n_v01.png",
+    "tool": "built-in imagegen"
+  },
+  {
+    "hero": "brook",
+    "sequence": "move_ne",
+    "prompt": "Use case: stylized-concept. One game animation strip with SIX chronological walking frames, single horizontal row. brook image1 idle is obligatory identity, body proportions and pixel art reference; image2 defective walk is pose reference ONLY, replace it. Preserve exact face hair clothing armor weapon palette and top-left lighting of idle, SAME anatomical hand holding weapon. Direction screen NORTHEAST UP AND RIGHT, three-quarter BACK view walking away. Six distinct alternating leg steps: right contact, recoil, passing, left contact, recoil, passing, coherent loop. Character has constant scale, compact cape contained close to body, equal shoulder/trunk width, no stretching or fattening. Each whole figure including boots weapon cape hair and horns must fit separately with wide transparent gaps, 30px clear margin on all sides. Small sprites around330px tall on wide3:1 canvas, common support-sole baseline. Intended final pack six256x384cells, bodyheight259px, sole y368px, side10px safe margin. Actual alpha-zero transparent background outside sharp silhouettes, transparent gaps between limbs, no brown/black/white haze or glow, no floor, cast shadows, particles, text, grid or watermark. Detailed hand-painted pixel art exactly matching idle.",
+    "source": "brook/move_ne_v01.png",
+    "tool": "built-in imagegen"
+  },
+  {
+    "hero": "durvall",
+    "sequence": "move_ne",
+    "prompt": "Use case stylized-concept. Create one six-frame walking animation strip, hand-painted detailed pixel art for isometric game Nottgard Survivors. Image1 idle obligatory identity body proportion weapon hand and palette reference; image2 broken walk pose reference ONLY, regenerate with complete weapon. Hero durvall walking screen NORTHEAST UP AND RIGHT, three-quarter BACK view walking away. Six chronological alternating steps right contact/recoil/passing and left contact/recoil/passing, seamless loop. Uniform character scale shoulder/trunk width and support sole baseline across all six. Keep white long hair, dark grey elven skin, black armor red sash, icy blue long sword in the same anatomical hand. Hold sword close to body diagonally down, fully inside frame; no detached blade parts. Compact hair motion, no excessively long sideways hair. Whole figure weapon robes hair boots fit each sixth with broad transparent separation, all sides30px safe margins, small figures330px tall on wide3:1canvas. Intended final pack six256x384cells, height231px sole y376px, min10pxside. Actual alpha-zero transparency outside crisp silhouettes including gaps between limbs. No glow haze floor shadow background text grid extra parts or redesign.",
+    "source": "durvall/move_ne_v01.png",
+    "tool": "built-in imagegen"
+  },
+  {
+    "hero": "durvall",
+    "sequence": "move_e",
+    "prompt": "Use case stylized-concept. Create one six-frame walking animation strip, hand-painted detailed pixel art for isometric game Nottgard Survivors. Image1 idle obligatory identity body proportion weapon hand and palette reference; image2 broken walk pose reference ONLY, regenerate with complete weapon. Hero durvall walking screen EAST straight RIGHT, profile walking right. Six chronological alternating steps right contact/recoil/passing and left contact/recoil/passing, seamless loop. Uniform character scale shoulder/trunk width and support sole baseline across all six. Keep white long hair, dark grey elven skin, black armor red sash, icy blue long sword in the same anatomical hand. Hold sword close to body diagonally down, fully inside frame; no detached blade parts. Compact hair motion, no excessively long sideways hair. Whole figure weapon robes hair boots fit each sixth with broad transparent separation, all sides30px safe margins, small figures330px tall on wide3:1canvas. Intended final pack six256x384cells, height231px sole y376px, min10pxside. Actual alpha-zero transparency outside crisp silhouettes including gaps between limbs. No glow haze floor shadow background text grid extra parts or redesign.",
+    "source": "durvall/move_e_v01.png",
+    "tool": "built-in imagegen"
+  },
+  {
+    "hero": "nyrelia",
+    "sequence": "move_e",
+    "prompt": "Use case stylized-concept. Create one six-frame walking animation strip, hand-painted detailed pixel art for isometric game Nottgard Survivors. Image1 idle obligatory identity body proportion weapon hand and palette reference; image2 broken walk pose reference ONLY, regenerate with complete weapon. Hero nyrelia walking screen EAST straight RIGHT, side view walking right. Six chronological alternating steps right contact/recoil/passing and left contact/recoil/passing, seamless loop. Uniform character scale shoulder/trunk width and support sole baseline across all six. Keep green hooded robe, concealed face dark gloves gold trim and insignia, same slim body. Robe hems show discreet alternating steps, no added sword or staff. Whole figure weapon robes hair boots fit each sixth with broad transparent separation, all sides30px safe margins, small figures330px tall on wide3:1canvas. Intended final pack six256x384cells, height352px sole y368px, min10pxside. Actual alpha-zero transparency outside crisp silhouettes including gaps between limbs. No glow haze floor shadow background text grid extra parts or redesign.",
+    "source": "nyrelia/move_e_v01.png",
+    "tool": "built-in imagegen"
+  }
+]

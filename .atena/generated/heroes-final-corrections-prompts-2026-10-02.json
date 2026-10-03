@@ -1,0 +1,19 @@
+[
+  {
+    "hero": "kayron",
+    "seq": "move_se",
+    "refs": [
+      "move_s",
+      "idle"
+    ],
+    "prompt": "Create one six-frame Kayron walking animation strip. Reference1 clean approved SOUTH walking identity, reference2 idle identity. Preserve silver-haired young pale male black silver armor purple ragged cloak and body shoulder width exactly. Turn entire character toward SCREEN DOWN-RIGHT southeast, three-quarter FRONT view, face and chest visible. Six alternating leg walk steps, coherent cycle. Same full body height in all frames. Wide3:1canvas, SIX SMALL figures only about280px tall each, centers at 1/12,3/12,5/12,7/12,9/12,11/12 canvaswidth. Each figure must fit inside its own sixth with40px empty space on both sides. Compact cloak with no outer glow. Actual transparent alpha-zero everywhere outside character, crisp silhouette, NO brown smoke or halo, NO shadow/floor/text. Pixel-art upper-left lighting match references. Final technical packing316px height soles376 in256x384cells; no missing feet/hair/cloak."
+  },
+  {
+    "hero": "korrak",
+    "seq": "active",
+    "refs": [
+      "idle"
+    ],
+    "prompt": "Create one six-frame Korrak active animation strip. Exact identity of reference: muscular bearded human barbarian, fur leather armor cracked-red battleaxe gripped two-handed. SIX SMALL complete figures about280px tall on wide3:1canvas, centers at 1/12,3/12,5/12,7/12,9/12,11/12width. Huge fully transparent gaps. Entire figure INCLUDING AXE width below200px perfigure, never crosses its own sixth. Axe held close to torso, hands close together, axe head below shoulders beside hip; never swing sideways. Poses ready, grip tightens, tiny orange spark on axe, slight short downward gesture beside shin with spark, fade, ready. Upright full body exactly same head top and sole Y across allsix. No crouch or overhead axe, no external flare or detached debris. Preserve recognizable face/clothes/body bulk, pixel-art upperleft lighting. True alpha-zero background crisp edges no brown haze/shadow/floor/text. Technicalfinal267height soles350 within256x384cells."
+  }
+]
