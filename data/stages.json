@@ -59,8 +59,8 @@
       {"t0": 30,  "t1": 420, "id": "cultista_de_feng_tu", "every": 4.0, "n": 2, "max": 10},
       {"t0": 150, "t1": 600, "id": "estatua_do_templo", "every": 10.0, "n": 1, "max": 5},
       {"t0": 240, "t1": 600, "id": "cultista_ghaunadaur", "every": 6.0, "n": 2, "max": 8}],
-    "elites": [{"at": 150, "id": "estatua_do_templo"}, {"at": 300, "id": "discipulo_pestilento"}, {"at": 450, "id": "discipulo_pestilento"}],
-    "boss": "lu_yueh", "interactions": {"chest": 4, "fountain": 1.4, "altar": 3, "ritual": 1, "loja": 1, "ferreiro": 1, "curandeiro": 1, "ampulheta": 1, "doacao": 0.7, "aposta": 0.8}, "essence": "Estrela do Norte", "next": "shendilavri", "unlock": "durao"},
+    "elites": [{"at": 150, "id": "estatua_do_templo"}, {"at": 300, "id": "estatua_do_templo"}, {"at": 450, "id": "cultista_de_feng_tu"}],
+    "boss": "discipulo_pestilento", "interactions": {"chest": 4, "fountain": 1.4, "altar": 3, "ritual": 1, "loja": 1, "ferreiro": 1, "curandeiro": 1, "ampulheta": 1, "doacao": 0.7, "aposta": 0.8}, "essence": "Estrela do Norte", "next": "shendilavri", "unlock": "durao"},
   "shendilavri": {"name": "Shendilavri e Rivenheart", "sub": "Camada 570 · o reino das súcubos", "order": 6, "duration": 630, "cap": 60, "tier": 6, "coin_mult": 3.2, "hp_mult": 4.5,
     "ambient": ["illusions", "styx_memory"], "ground": [[52, 30, 44], [64, 36, 52]], "bg": [22, 10, 20], "prop": {"color": [140, 60, 100], "height": 64, "n": 34, "kind": "cristal"},
     "waves": [

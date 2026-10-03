@@ -416,6 +416,8 @@ func _draw_over() -> void:
 			"doacao": col = Color(0.75, 0.45, 1.0); label = "altar da doação [E/oeste]"; asset = "doacao"
 			"aposta": col = Color(0.95, 0.8, 0.3); label = "mesa de aposta [E/oeste]"; asset = "aposta"
 			"ampulheta": col = Color(0.85, 0.75, 1.0); label = "ampulheta [E/oeste]"; asset = "ampulheta"
+			# SPEC-118: pontos dos acontecimentos (item, destino, NPC, pacto, estrela) trazem rótulo e cor próprios
+			_: col = it.get("color", Color.WHITE); label = String(it.get("label", "")); asset = String(it.get("asset", ""))
 		# A simulação também bloqueia interação durante estes 0,65 s de entrada.
 		if arrival < 0.35:
 			var target_alpha := 0.25 + 0.45 * arrival / 0.35
@@ -457,7 +459,9 @@ func _draw_over() -> void:
 		else:
 			draw_colored_polygon(PackedVector2Array([draw_p + Vector2(0, -18), draw_p + Vector2(14, 0), draw_p + Vector2(0, 9), draw_p + Vector2(-14, 0)]), Color(col, 0.35))
 			draw_rect(Rect2(draw_p + Vector2(-9, -22), Vector2(18, 16)), col.darkened(0.2))
-		draw_string(ThemeDB.fallback_font, draw_p + Vector2(-55, -base_h - 8.0), label, HORIZONTAL_ALIGNMENT_CENTER, 110, 12, Color(col, 0.95))
+		var label_w := 220.0 if String(it.kind).begins_with("event_") else 110.0  # SPEC-118: rótulos de evento são nomes longos
+		draw_string(ThemeDB.fallback_font, draw_p + Vector2(-label_w * 0.5, -base_h - 8.0), label, HORIZONTAL_ALIGNMENT_CENTER, label_w, 12, Color(col, 0.95))
+	_draw_happenings()
 	for pk in battle.pickups:
 		var p := Iso.to_screen(pk.pos)
 		var pickup_asset: String = {"xp": "xp_shard", "gold": "gold_coin", "potion": "health_potion", "magnet": "magnet"}.get(String(pk.kind), "")
@@ -488,3 +492,39 @@ func _draw_over() -> void:
 			var a := Iso.to_screen(e.pos)
 			var b := Iso.to_screen(e.pos + e.charge_dir * float(e.charge_ab.dist))
 			draw_line(a, b, Color(1.0, 0.25, 0.2, 0.6), 4.0)
+
+## SPEC-118: aliados e peregrinos, círculo da arena e setas na borda para os objetivos fora da tela.
+func _draw_happenings() -> void:
+	var hp_ := battle.happenings
+	if not hp_.arena.is_empty():
+		var pulse := 0.5 + 0.5 * sin(Time.get_ticks_msec() / 140.0)
+		draw_polyline(_ellipse_closed(hp_.arena.pos, float(hp_.arena.radius)), Color(1.0, 0.45, 0.15, 0.55 + 0.35 * pulse), 4.0)
+	for a in hp_.allies:
+		var p := Iso.to_screen(a.pos)
+		var tex: Texture2D = _texture("res://assets/enemies/%s.png" % String(a.sprite)) if String(a.sprite) != "" else null
+		var h := 64.0
+		if tex != null:
+			var w := h * float(tex.get_width()) / float(tex.get_height())
+			draw_texture_rect(tex, Rect2(p.x - w * 0.5, p.y - h, w, h), false, Color(0.85, 1.0, 0.85))
+		else:
+			# NPC sem arte própria: figura provisória (ver ART do SPEC-118)
+			draw_circle(p + Vector2(0, -40), 8.0, Color(0.95, 0.85, 0.7))
+			draw_rect(Rect2(p + Vector2(-9, -32), Vector2(18, 30)), Color(0.55, 0.65, 0.85))
+		draw_polyline(_ellipse_closed(a.pos, 0.45), Color(0.5, 1.0, 0.6, 0.8), 2.0)
+		var frac := clampf(float(a.hp) / maxf(1.0, float(a.max_hp)), 0.0, 1.0)
+		draw_rect(Rect2(p + Vector2(-20, -h - 10), Vector2(40, 4)), Color(0, 0, 0, 0.6))
+		draw_rect(Rect2(p + Vector2(-20, -h - 10), Vector2(40 * frac, 4)), Color(0.4, 1.0, 0.5))
+		draw_string(ThemeDB.fallback_font, p + Vector2(-60, -h - 14), String(a.label), HORIZONTAL_ALIGNMENT_CENTER, 120, 12, Color(0.75, 1.0, 0.8))
+	var hero_p := Iso.to_screen(battle.hero.pos) + Vector2(0, -30)
+	var view := get_viewport_rect().grow(-30.0)
+	for m in hp_.markers(battle):
+		var mp := Iso.to_screen(m.pos)
+		# só aponta o que está fora da tela
+		if view.has_point(get_viewport().get_canvas_transform() * mp):
+			continue
+		var off := mp - hero_p
+		var dir := off.normalized()
+		var tip := hero_p + dir * 240.0
+		var side := Vector2(-dir.y, dir.x)
+		var col: Color = m.color
+		draw_colored_polygon(PackedVector2Array([tip + dir * 14.0, tip - dir * 6.0 + side * 9.0, tip - dir * 6.0 - side * 9.0]), Color(col, 0.9))

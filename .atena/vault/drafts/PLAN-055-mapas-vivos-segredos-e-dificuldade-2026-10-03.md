@@ -19,7 +19,7 @@ início de Dagruve), [[PLAN-052-padrao-de-qualidade-do-balanceamento-dos-herois-
 | # | Pergunta | Decisão |
 |---|---|---|
 | D1 | O que roda sozinho à noite | **Analisar, medir e escrever specs.** Nada muda no jogo; o dono aprova de manhã. Sem commit. |
-| D2 | Dificuldade | **As duas coisas:** endurecer um pouco a curva base (fase 3 em diante) **e** criar níveis de **Profundidade** opcionais com recompensa maior. |
+| D2 | Dificuldade | **As duas coisas:** endurecer um pouco a curva base (fase 3 em diante) **e** criar níveis opcionais de dificuldade (**Marcas do Abismo**) com recompensa maior. |
 | D3 | Até onde vai a história | **Segredos colecionáveis:** coisas escondidas no mapa revelam fragmentos curtos do Vault que vão para o Diário. Continua "lore como sabor", mas recompensa quem explora. Cânone do mestre continua fora. |
 
 ## Diagnóstico (fatos do código em 2026-10-03)
@@ -42,7 +42,7 @@ início de Dagruve), [[PLAN-052-padrao-de-qualidade-do-balanceamento-dos-herois-
 - Sinal anterior que bate: T01 "fácil até Feng-tu" (EVID-106); T03 já pedira
   "mais mobs, mais dano, menos PV" (EVID-108). Sinal contrário: o bot mostra
   heróis frágeis morrendo cedo em Dagruve (BAL-015). Por isso D2 separa
-  **base** (pouco mais dura, sobretudo da fase 3 em diante) de **Profundidade**
+  **base** (pouco mais dura, sobretudo da fase 3 em diante) das **Marcas do Abismo**
   (opcional, para quem quer sofrer).
 
 ## Frentes
@@ -104,16 +104,18 @@ EVID-108 Q8, quando ele estava vazio). Proposta:
 - Indicador discreto (brilho, som) quando um Eco está perto, para não virar caça
   cega.
 
-### F5 — Curva base e Profundidade (SPEC-120, rascunho para aprovação)
+### F5 — Curva base e Marcas do Abismo (SPEC-120, rascunho para aprovação)
+
+> O jogo já chama de "profundidade" a camada descida pelo portal (`descent_depth`); por isso o nome Marcas do Abismo.
 
 - **Base (fase 3 em diante):** elites com **afixos** (rápido, blindado,
   explosivo, vampírico) em vez de só PV maior; uma **horda** por fase (onda
   densa curta); `cap` sobe onde o bot mostrar folga. Dagruve e Docas só mudam se
   o bot mostrar folga sem piorar BAL-015.
-- **Profundidade 1–10:** escolhida no Quartel por fase já vencida. Cada nível
+- **Marcas do Abismo:** ligadas no Quartel por fase já vencida. Cada nível
   soma um modificador visível (mais inimigos, elites extras, cura menor, chefe
   com fase nova, eventos mais frequentes) e +X % de moeda e chance de relíquia.
-  Recorde de profundidade por herói e fase.
+  Recorde por herói e fase.
 
 ## Sugestões extras para complementar o jogo
 
@@ -127,8 +129,8 @@ Para escolher depois; nenhuma entra sem cartão próprio.
    60 s ou abre uma loja especial.
 4. **Rotas no portal:** depois do chefe, escolher entre 2 portais (fase normal
    ou variante com regra trocada), dando variedade sem arte nova.
-5. **Modo Incursão:** run infinita num bioma vencido, com Profundidade
-   crescendo sozinha; placar.
+5. **Modo Incursão:** run infinita num bioma vencido, com as Marcas
+   subindo sozinhas; placar.
 6. **Semente da semana:** mesma fase, herói e modificadores para todos os
    testers compararem.
 
@@ -138,13 +140,37 @@ Para escolher depois; nenhuma entra sem cartão próprio.
    (INBOX/cartões); rascunhos SPEC-118, SPEC-119 e SPEC-120.
 2. **Manhã:** o dono aprova ou corta os rascunhos.
 3. Implementar F3 primeiro (maior efeito contra o "enjoa"), depois F5 base,
-   depois F4 e Profundidade.
+   depois F4 e as Marcas do Abismo.
 4. Playtest com Daniel de novo (é o tester de primeira vez que deu o sinal).
+
+## Feito na noite de 2026-10-03
+
+- **F1:** [EVID-147](../../evidence/EVID-147-auditoria-vault-x-jogo-2026-10-03.md). Os textos do jogo estão fiéis e sem vazamento de segredo; as divergências estão nos chefes; há 40+ ganchos por fase.
+- **F2:** `tools/bot_curva.gd` (novo; mede cada fase) e [EVID-148](../../evidence/EVID-148-curva-de-dificuldade-por-fase-2026-10-03.md). Achado: a curva tem um degrau só (Dagruve mata 30 % dos novatos); das fases 3 a 9, 894 passagens com 0,8 % de mortes e PV mínimo médio de 85 %, com qualquer meta. Causa provável: o PV inimigo multiplica até ×6,5 e o dano não (só +1 por camada).
+- **F3, F4, F5:** rascunhos [SPEC-118](../../specs/SPEC-118-acontecimentos-exclusivos-por-fase.md), [SPEC-119](../../specs/SPEC-119-segredos-ecos-e-mapa-maior.md) e [SPEC-120](../../specs/SPEC-120-curva-base-e-marcas-do-abismo.md).
+- Backlog: IN-049 a IN-052, MEC-038 a MEC-040, BAL-016, BUG-026; MEC-005, MEC-012 e BAL-001 com o novo relato.
+- Nada foi commitado; o jogo não mudou.
+
+## Decisões do dono em 2026-10-03 (manhã)
+
+- **D-01 (Shedaklah):** Zuggtmoy pode virar **aliada** se o jogador levar a ela um item-chave; é uma referência que recompensa quem entende a história, com dica do que ela precisa.
+- **D-03 (Feng-tu):** O Discípulo Pestilento vira o chefe.
+- **SPEC-118 aprovada e implementada** no mesmo dia.
+
+## Decisões pendentes para o dono (texto da noite)
+
+1. **Chefe de Shedaklah (D-01):** o grupo negociou com Zuggtmoy. Manter, trocar por manifestação de Juiblex (Zuggtmoy aliada) ou "Zuggtmoy corrompida"?
+2. **Chefe de Feng-tu (D-03):** O Discípulo Pestilento vira chefe e Lu Yueh fica para as Marcas?
+3. **SPEC-118:** aprovar a lista de acontecimentos (cortar ou trocar linhas) e o sorteio "1 grande fixo + 1 ou 2 menores".
+4. **SPEC-119:** 84×84 nas fases 3 a 8? Aprovar os Ecos um a um (texto vai para o jogo).
+5. **SPEC-120:** lista de afixos, horda por fase e lista das Marcas.
+6. **BUG-026:** a cópia do Guardião nas Docas a 400 s é intencional?
+7. Ordem de implementação: proposta F3 → F5 (base) → F4 → Marcas.
 
 ## Limites
 
 - Vault e Nottcard são só leitura. Cânone do mestre fica fora (ver memória do
   colar de Adam e da Síntese).
 - Amostra: "fácil" vem de T01 e T03; "difícil no início" vem só do bot. Por isso
-  a base muda pouco e a Profundidade carrega o desafio.
+  a base muda pouco e a as Marcas do Abismo carregam o desafio.
 - Sem commit nem build sem aprovação do dono.

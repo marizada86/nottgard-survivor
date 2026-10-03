@@ -53,6 +53,7 @@ signal items_closed
 var _items_portrait_id := ""
 var _active_icon_id := ""
 var _stage_icon_id := ""
+var objective_label: Label  # SPEC-118: objetivos dos acontecimentos da fase
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
@@ -78,6 +79,19 @@ func _ready() -> void:
 	revive_panel.visible = false
 	items_panel.visible = false
 	prompt_label.text = ""
+	objective_label = Label.new()
+	objective_label.name = "ObjectiveLabel"
+	objective_label.set_anchors_preset(Control.PRESET_CENTER_TOP)
+	objective_label.offset_left = -360.0
+	objective_label.offset_right = 360.0
+	objective_label.offset_top = 74.0
+	objective_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	objective_label.add_theme_font_size_override("font_size", 16)
+	objective_label.add_theme_color_override("font_color", Color(0.98, 0.86, 0.55))
+	objective_label.add_theme_color_override("font_outline_color", Color(0, 0, 0, 0.85))
+	objective_label.add_theme_constant_override("outline_size", 5)
+	objective_label.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	add_child(objective_label)
 
 func _unhandled_input(ev: InputEvent) -> void:
 	if not ev.is_pressed() or (ev is InputEventKey and ev.echo):
@@ -166,14 +180,17 @@ func update_stats(b: Battle) -> void:
 	weapons_label.text = "\n".join(lines)
 	var pr := ""
 	for it in b.interactions:
-		if not it.used and it.kind in ["altar", "ritual", "portal", "loja", "ferreiro", "curandeiro", "ampulheta", "doacao", "aposta"] and it.pos.distance_to(h.pos) <= 1.6:
+		if not it.used and it.kind in ["altar", "ritual", "portal", "loja", "ferreiro", "curandeiro", "ampulheta", "doacao", "aposta", "event_pact"] and it.pos.distance_to(h.pos) <= 1.6:
 			pr = "[E/oeste] " + {"altar": "rezar no altar", "ritual": "iniciar o ritual", "portal": "descer pelo portal",
-				"loja": "negociar na loja", "ferreiro": "forjar no ferreiro", "curandeiro": "buscar cura", "ampulheta": "girar a ampulheta (+60 s, inimigos acumulados)", "doacao": "doar um item por uma bênção", "aposta": "arriscar moedas na mesa"}[it.kind]
+				"loja": "negociar na loja", "ferreiro": "forjar no ferreiro", "curandeiro": "buscar cura", "ampulheta": "girar a ampulheta (+60 s, inimigos acumulados)", "doacao": "doar um item por uma bênção", "aposta": "arriscar moedas na mesa",
+				"event_pact": "%s" % String(it.get("label", "pacto")).replace(" [E/oeste]", "")}[it.kind]
 	if pr == "" and (b.stage_cleared or b.final_victory):
 		pr = "[X/norte] Extrair ×%.2f" % b.reward_multiplier()
 		if b.stage.get("next", "") != "":
 			pr += "   [E/oeste] Descer ×%.2f" % b.next_reward_multiplier()
 	prompt_label.text = pr
+	objective_label.text = "
+".join(b.happenings.hud_lines(b))
 
 func show_offer(b: Battle) -> void:
 	for c in offer_box.get_children():
@@ -185,6 +202,8 @@ func show_offer(b: Battle) -> void:
 		lv_title.text = "Nível %d — escolha (1-%d)" % [b.hero.level, b.offer.size()]
 	elif b.offer_kind == "item":
 		lv_title.text = "Item encontrado — equipar ou manter?"
+	elif b.offer_kind == "pact":
+		lv_title.text = "%s — escolha ou recuse" % b.pact_title
 	elif shop_titles.has(b.offer_kind):
 		lv_title.text = String(shop_titles[b.offer_kind])
 	else:

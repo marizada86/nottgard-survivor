@@ -39,6 +39,9 @@ var enemies: Array = []
 var projectiles: Array = []
 var zones: Array = []
 var decoys: Array = []  # MEC-029: cópias-isca do Passo pelas Sombras
+var happenings := Happenings.new()  # SPEC-118: acontecimentos exclusivos por fase
+var pact_title := ""
+var _seed := 1
 var _decoy_serial := 0
 var pickups: Array = []
 var interactions: Array = []
@@ -142,6 +145,7 @@ var styx_in_water := false
 
 func _init(seed_value: int = 1, hero_id: String = "durvall", stage_key: String = "dagruve", ctx: Dictionary = {}) -> void:
 	rng.seed = seed_value
+	_seed = seed_value
 	styx_rng.seed = seed_value ^ 0x5179
 	difficulty = float(ctx.get("difficulty", 1.0))
 	hero = Hero.make(hero_id, ctx.get("meta_mods", {}), ctx.get("bonus_mods", {}))
@@ -161,7 +165,8 @@ func load_stage(stage_key: String) -> void:
 	stage_id = stage_key
 	stage = Data.table("stages")[stage_key].duplicate(true)
 	stage_rule = Data.table("stage_rules").get(stage_key, {}).duplicate(true)
-	stage_events = Data.table("stage_events").get(stage_key, []).duplicate(true)
+	stage_events = Happenings.select(stage_key, Data.table("stage_events").get(stage_key, []), _seed)
+	happenings.reset()
 	enemies.clear()
 	projectiles.clear()
 	zones.clear()
@@ -490,6 +495,7 @@ func step(screen_dir: Vector2, dt: float) -> void:
 	_stage_rule_step(dt)
 	_stage_event_step()
 	hero.step(screen_dir, dt)
+	happenings.post_hero_step(self)
 	_update_postboss_fog(dt)
 	if hero.m("regen") > 0.0:
 		_heal_hero(hero.m("regen") * dt)
@@ -498,6 +504,7 @@ func step(screen_dir: Vector2, dt: float) -> void:
 	_update_projectiles(dt)
 	_update_zones(dt)
 	_update_decoys(dt)
+	happenings.step(self, dt)
 	for e in enemies:
 		if not e.dead:
 			_enemy_step(e, dt)
@@ -954,6 +961,9 @@ func _enemy_step(e: Enemy, dt: float) -> void:
 	if e.stun_t > 0.0:
 		e.stun_t -= dt
 		return
+	if e.goal.x >= 0.0:
+		_goal_step(e, dt)
+		return
 	var lure: Dictionary = _decoy_for(e)
 	var to: Vector2 = (lure.pos if not lure.is_empty() else hero.pos) - e.pos
 	var dist: float = to.length()
@@ -1009,6 +1019,14 @@ func _enemy_step(e: Enemy, dt: float) -> void:
 		else:
 			_enemy_hit_hero(e.atk_bonus, e.atk_dice, "fisico", false)
 
+## SPEC-118: inimigo com destino (carregador do ritual) ignora o herói e anda até o ponto.
+func _goal_step(e: Enemy, dt: float) -> void:
+	var to: Vector2 = e.goal - e.pos
+	if to.length() <= 0.9:
+		happenings.on_goal_reached(self, e)
+		return
+	_enemy_move(e, to.normalized() * e.speed * (0.5 if e.slow_t > 0.0 else 1.0) * dt)
+
 # ------------------------------------------------------------------ cópia-isca (MEC-029)
 
 func _spawn_decoy(p: Dictionary) -> void:
@@ -1019,11 +1037,11 @@ func _spawn_decoy(p: Dictionary) -> void:
 
 ## Isca mais próxima que atrai este inimigo; chefes e inimigos imóveis a ignoram.
 func _decoy_for(e: Enemy) -> Dictionary:
-	if decoys.is_empty() or e.is_boss() or e.speed <= 0.0:
+	if (decoys.is_empty() and happenings.allies.is_empty()) or e.is_boss() or e.speed <= 0.0:
 		return {}
 	var best: Dictionary = {}
 	var best_d := INF
-	for d in decoys:
+	for d in decoys + happenings.lures():
 		var dist := e.pos.distance_to(d.pos)
 		if dist <= float(d.aggro) and dist < best_d:
 			best = d
@@ -1288,6 +1306,7 @@ func _kill(e: Enemy) -> void:
 		_drop("gold", e.pos, 12.0 * float(stage.coin_mult))
 		if rng.randf() < 0.06:
 			_drop("potion", e.pos, 0.25)
+	happenings.on_kill(self, e)
 	if e.is_boss():
 		_on_boss_dead(e)
 
@@ -1602,7 +1621,7 @@ func interact() -> bool:
 	var best: Dictionary = {}
 	var bd := 1.6
 	for it in interactions:
-		if not it.used and time - float(it.get("born_at", 0.0)) >= 0.65 and it.kind in ["altar", "ritual", "portal", "loja", "ferreiro", "curandeiro", "ampulheta", "doacao", "aposta"]:
+		if not it.used and time - float(it.get("born_at", 0.0)) >= 0.65 and it.kind in ["altar", "ritual", "portal", "loja", "ferreiro", "curandeiro", "ampulheta", "doacao", "aposta", "event_pact"]:
 			var d: float = it.pos.distance_to(hero.pos)
 			if d <= bd:
 				bd = d
@@ -1630,6 +1649,8 @@ func interact() -> bool:
 			_open_shop_event(String(best.kind))
 		"doacao", "aposta":
 			_open_risk_event(String(best.kind))
+		"event_pact":
+			happenings.open_pact(self, best)
 		"ampulheta":
 			if not _use_hourglass():
 				best.used = false
@@ -2156,6 +2177,8 @@ func choose(i: int) -> void:
 					else:
 						hero.gold -= int(c.bet)
 						events.append({"type": "toast", "text": "A casa vence: -%d moedas." % int(c.bet), "color": Color(0.9, 0.4, 0.4)})
+			"pact":
+				happenings.choose_pact(self, c)
 			"shop_item_up":
 				if hero.gold >= int(c.price) and hero.items.has(String(c.slot)):
 					hero.items[String(c.slot)].level = int(hero.items[String(c.slot)].get("level", 1)) + 1
@@ -2244,6 +2267,8 @@ func _spawn(id: String, at: Vector2, minute_override: float = -1.0) -> Enemy:
 	var mn := minute() if minute_override < 0.0 else minute_override
 	var e := Enemy.make(id, at, mn, float(stage.hp_mult) * difficulty, tier())
 	e.pos = e.pos.clamp(Vector2(0.6, 0.6), map_size - Vector2(0.6, 0.6))
+	if happenings.enemy_speed_mult != 1.0 and not e.is_boss():
+		e.speed *= happenings.enemy_speed_mult
 	if _stage_has_rule("illusions") and not e.is_boss() and not e.has_flag("elite_only") and rng.randf() < float(stage_rule.get("chance", 0.12)) and e.xp > 0:
 		e.max_hp = 1.0
 		e.hp = 1.0
@@ -2331,9 +2356,10 @@ func _director(dt: float) -> void:
 	if not boss_spawned and time >= float(stage.duration):
 		boss_spawned = true
 		var scale_extra := 1.0 + 0.5 * boss_repeat
-		boss = _spawn(String(stage.boss), _ring_pos(), 0.0)
+		boss = _spawn(happenings.boss_id(self), _ring_pos(), 0.0)
 		boss.max_hp = round(boss.max_hp * scale_extra * (1.0 + 0.3 * tier() * 0.0))
 		boss.hp = boss.max_hp
+		happenings.on_boss_spawn(self, boss)
 		codex.enemies[boss.id] = true
 		events.append({"type": "boss", "enemy": boss})
 		_start_boss_intro(boss)
@@ -2449,6 +2475,9 @@ func _stage_event_step() -> void:
 			_fire_stage_event(event_def)
 
 func _fire_stage_event(event_def: Dictionary) -> void:
+	if happenings.fire(self, event_def):
+		events.append({"type": "stage_event", "id": String(event_def.get("id", "")), "text": String(event_def.get("result_text", event_def.get("title", ""))), "pos": hero.pos})
+		return
 	var kind := String(event_def.get("kind", ""))
 	var at := _ring_pos()
 	match kind:

@@ -1999,6 +1999,27 @@
       "cooldown_ms": 65,
       "priority": 1
     },
+    "enemy.manifestacao_de_juiblex.action": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.receptaculo_de_juiblex.action_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.manifestacao_de_juiblex.death": {
+      "files": [
+        "res://assets/audio/sfx/enemy/enemy.receptaculo_de_juiblex.death_01.wav",
+        "res://assets/audio/sfx/enemy/enemy.receptaculo_de_juiblex.death_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -15,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
     "enemy.blogbog.action": {
       "files": [
         "res://assets/audio/sfx/enemy/enemy.blogbog.action_01.wav"

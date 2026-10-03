@@ -67,6 +67,15 @@ func _ready() -> void:
 			run.battle.evolve_cine = {"from": "espada_sombria", "into": "espada_do_receptaculo", "passive": "cota_de_malha", "level": 5}
 			run.battle.evolve_cine_t = 30.0
 			run.battle.state = "evolve_cine"
+		# SPEC-118: happening=<id> dispara um acontecimento da fase (vários separados por vírgula)
+		for flag in flags.split(","):
+			if flag.begins_with("happening="):
+				var hid := flag.trim_prefix("happening=")
+				for d in Data.table("stage_events").get(Game.run_stage, []):
+					if String(d.id) == hid:
+						run.battle.happenings.fire(run.battle, d.duplicate(true))
+						for it in run.battle.interactions:
+							it.born_at = -5.0
 		if "wide" in flags:
 			run.camera.zoom = Vector2(0.34, 0.34)
 		if "levelup" in flags:

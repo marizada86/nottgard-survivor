@@ -1,7 +1,7 @@
 ---
 id: "SPEC-118"
 title: "Acontecimentos exclusivos por fase"
-status: "rascunho para aprovação do dono (2026-10-03)"
+status: "IMPLEMENTADO 2026-10-03; aguarda playtest"
 created: "2026-10-03"
 relations: ["[[PLAN-055-mapas-vivos-segredos-e-dificuldade-2026-10-03]]", "[[EVID-147-auditoria-vault-x-jogo-2026-10-03]]", "[[SPEC-117-alma-e-historia-na-run]]", "[[SPEC-087-fidelidade-e-eventos-de-risco]]"]
 cards: ["MEC-005", "MEC-038"]
@@ -14,7 +14,26 @@ enjoativo". Hoje só Dagruve (2) e Docas (3) têm eventos em
 `data/stage_events.json`; as outras **7 fases têm zero**. Os eventos que
 existem só soltam uma poça, uma onda ou um elite.
 
-**Rascunho:** nada implementado. O dono aprova, corta ou troca cada linha.
+**Aprovada e implementada em 2026-10-03.** Decisões do dono:
+- **Zuggtmoy aliada por item-chave** "mais como referência": quem entende a história e leva a ela o que ela precisa ganha o pacto. Sem o pacto, Zuggtmoy segue chefe.
+- **O Discípulo Pestilento vira o chefe de Feng-tu** (D-03 do EVID-147); Lu Yueh sai da fase.
+
+## Implementação (2026-10-03)
+
+- Motor: `core/happenings.gd` (classe `Happenings`), chamado por `core/battle.gd` em `load_stage` (sorteio), `step`, `_fire_stage_event`, `_kill`, `interact`, `choose`, no surgimento do chefe e em `_spawn`. Inimigo ganhou `goal`, `event_tag` e `event_item` (`core/enemy.gd`).
+- Tipos: `collect`, `escort`, `intercept`, `invasion`, `rescue`, `pact`, `arena`, `map_shift`, `pilgrimage`, `quake`. Campos: `objective_text`, `deadline`, `reward`, `fail`, `success_text`, `fail_text`, `hint_text`, `until_boss`, `pool`, `jitter`, `fonte_vault`.
+- Sorteio: fixos sempre; dos `"pool": "optional"` sai 1 ou 2 por run, com RNG própria (semente + fase), sem deslocar a RNG da batalha. Dagruve e Docas não mudaram.
+- **Zuggtmoy:** aos 45 s surge um Receptáculo de Juiblex que carrega o **Coração de Limo**, e o trono de Zuggtmoy aparece num canto. O HUD só diz "Zuggtmoy precisa de algo. O que ela quer?"; tocar o trono sem o item dá a dica dela. Entregar o coração faz o chefe virar a **Manifestação de Juiblex** (inimigo novo, arte provisória = receptáculo), e a **guarnição de Zuggtmoy** (4 servos) luta ao seu lado. Sem o pacto, o pedido some quando o chefe chega.
+- Interface: rótulos e cor por ponto (`ui/overlay.gd`), aliados com barra de vida, círculo da arena, setas na borda para objetivos fora da tela; lista de objetivos no topo do HUD e título do pacto (`ui/hud.gd`).
+- Testes: `tests/test_happenings.gd` (dados, sorteio e cada tipo: concluir e falhar). `tools/shot.gd` ganhou `happening=<id>`.
+
+### Diferenças em relação à proposta
+
+- Dagruve e Docas: sem troca (o início segue igual por causa da BAL-015). BUG-026 não foi mexido.
+- Pilares: o "elevador" é um `quake` em dois horários fixos, não um ciclo.
+- "O nome dito três vezes": vale para todos, cobrando 1/3 das moedas, em vez de exigir o anel.
+- `once_per_profile` ficou para depois.
+- **Arte pendente:** João Barbosa, desertores, vítimas, Irmãs Radiantes e Graz'zt usam figura provisória; os pontos (trono, arco, massa, estrela, itens) usam o losango colorido. Manifestação de Juiblex usa a arte do receptáculo. Ver ART-032.
 
 ## Objetivo
 
