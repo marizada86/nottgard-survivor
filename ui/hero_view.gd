@@ -27,7 +27,10 @@ const HERO_IDLE_ART_HEIGHT := {
 }
 ## Heróis cujas tiras de caminhada têm o machado cortado na borda da célula e proporção diferente do idle.
 ## Eles andam com o próprio idle (sem espelhar, para a arma ficar sempre do mesmo lado) e um balanço procedural.
-const PROCEDURAL_WALK_HEROES := [&"korrak"]
+## Vazio por decisão do dono (03/10): o Korrak voltou a andar só com as tiras, como antes do balanço procedural.
+const PROCEDURAL_WALK_HEROES := []
+## Heróis com suavização opcional (histerese de direção e tolerância de parada); vazio = comportamento original.
+const WALK_SMOOTHING_HEROES := []
 ## Direções já regeneradas e aprovadas pela auditoria técnica (FILA-024).
 ## As direções oeste/sudoeste/noroeste usam as tiras validadas espelhadas e o norte usa a própria tira: andar com o idle
 ## deslizava sem pernas. O balanço procedural fica só para direções fora desta lista.
@@ -143,14 +146,15 @@ func sync_visual(screen_position: Vector2, is_dead: bool, is_flash: bool) -> voi
 			sprite.play(&"death")
 		elif not dead and not _action_locked:
 			var desired: StringName = &"idle"
+			var smoothing := WALK_SMOOTHING_HEROES.has(StringName(_active_hero_id))
 			_still_ticks = 0 if moving else _still_ticks + 1
-			var walking := moving or (_walk_sector >= 0 and _still_ticks < WALK_STOP_GRACE_TICKS)
+			var walking := moving or (smoothing and _walk_sector >= 0 and _still_ticks < WALK_STOP_GRACE_TICKS)
 			if not walking:
 				_walk_sector = -1
 			_walking = walking
 			var movement_delta := Vector2.ZERO
 			if moving:
-				movement_delta = _stable_direction(screen_position - _last_screen_position)
+				movement_delta = _stable_direction(screen_position - _last_screen_position) if smoothing else screen_position - _last_screen_position
 			elif walking:
 				movement_delta = Vector2.RIGHT.rotated(_walk_sector * TAU / 8.0)
 			_procedural_walking = walking and uses_procedural_walk_for_direction(_active_hero_id, movement_delta)
