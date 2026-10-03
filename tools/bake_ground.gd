@@ -367,6 +367,9 @@ func _setup_layout(stage: String) -> void:
 	s["pillars_obsidian"] = _sp("slab", Color(0.11, 0.10, 0.18), Color(0.18, 0.16, 0.28), Color(0.03, 0.03, 0.06))
 	s["pillars_basalt"] = _sp("slab", Color(0.17, 0.15, 0.25), Color(0.25, 0.22, 0.35), Color(0.04, 0.04, 0.08))
 	s["pillars_dust"] = _sp("ash", Color(0.24, 0.21, 0.32), Color(0.33, 0.29, 0.42), Color(0.16, 0.14, 0.22))
+	s["pillars_road"] = _sp("slab", Color(0.30, 0.27, 0.42), Color(0.40, 0.36, 0.54), Color(0.08, 0.07, 0.14))
+	s["pillars_plaza"] = _sp("vein", Color(0.20, 0.15, 0.30), Color(0.30, 0.22, 0.42), Color(0.04, 0.03, 0.07))
+	s["pillars_crystal"] = _sp("vein", Color(0.17, 0.12, 0.30), Color(0.26, 0.18, 0.44), Color(0.04, 0.03, 0.09))
 	s["pillars_foundation"] = _sp("rock", Color(0.06, 0.06, 0.11), Color(0.11, 0.10, 0.18), Color(0.02, 0.02, 0.05))
 
 ## Level design (data/level_design.json -> "chao"): sobrepõe materiais visuais ao layout, sem tocar em água e margem.
