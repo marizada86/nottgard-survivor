@@ -43,6 +43,7 @@ var _boss_intro_title: Label
 var _boss_intro_subtitle: Label
 var _fog_edges: Array[TextureRect] = []
 var _texture_cache: Dictionary = {}
+var _stage_background: CanvasLayer
 
 func _texture(path: String) -> Texture2D:
 	if not _texture_cache.has(path):
@@ -130,6 +131,21 @@ func _load_stage() -> void:
 	battle.place_scenery()  # MEC-035: destrutíveis fixos, depois dos bloqueios do cenário
 	var bg: Array = battle.stage.bg
 	RenderingServer.set_default_clear_color(Color(float(bg[0]) / 255.0, float(bg[1]) / 255.0, float(bg[2]) / 255.0))
+	if is_instance_valid(_stage_background):
+		_stage_background.queue_free()
+	var backdrop := _texture("res://assets/stages/%s_fundo.png" % battle.stage_id)
+	if backdrop != null:
+		_stage_background = CanvasLayer.new()
+		_stage_background.layer = -10
+		add_child(_stage_background)
+		var art := TextureRect.new()
+		art.texture = backdrop
+		art.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		art.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
+		art.set_anchors_preset(Control.PRESET_FULL_RECT)
+		art.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		art.modulate = Color(0.45, 0.45, 0.45)
+		_stage_background.add_child(art)
 	for sp in stage_root.get_node("SpawnPoints").get_children():
 		for i in int(sp.count):
 			var off := Vector2(battle.rng.randf_range(-1, 1), battle.rng.randf_range(-1, 1)) * float(sp.scatter)
@@ -562,6 +578,7 @@ func _consume_events() -> void:
 				_ring(ev.pos, ev.radius, zone_theme.impact_accent, 0.25)
 			"decoy_blast":
 				Sfx.play("combat.explosion", -6.0)
+				_shadow_blast(ev.pos, float(ev.radius))
 				_ring(ev.pos, ev.radius, _dcol(String(ev.get("dtype", "magico"))), 0.4)
 				if under.has_method("spawn_impact"):
 					under.call("spawn_impact", ev.pos, 8)
@@ -591,6 +608,7 @@ func _consume_events() -> void:
 				_loot_reveal(ev.new_item)
 			"levelup":
 				Sfx.play("progress.levelup")
+				_play_sheet_effect("res://assets/vfx/vfx_subida_de_nivel.png", battle.hero.pos, 1.8, 0.48)
 			"boss":
 				Sfx.play_boss(String(ev.enemy.id), "arrival")
 				_bark("chefe")
@@ -625,6 +643,7 @@ func _consume_events() -> void:
 				var action: StringName = &"attack"
 				if String(ev.get("ability", "")) == "summon": action = &"special_a"
 				elif String(ev.get("ability", "")) == "ring": action = &"special_b"
+				if String(ev.enemy_id) == "blogbog" and String(ev.get("ability", "")) == "summon": action = &"special"
 				_play_enemy_action(String(ev.enemy_id), ev.pos, action)
 			"telegraph":
 				Sfx.play("enemy.telegraph")
@@ -656,6 +675,9 @@ func _play_enemy_action(enemy_id: String, ground_position: Vector2, action: Stri
 		best.play_action(action)
 
 func _play_interaction(ev: Dictionary) -> void:
+	# Interativo fixo do cenário (poço, oficina) tem arte própria: a animação genérica da fonte seria um segundo asset por cima.
+	if bool(ev.get("fixed", false)):
+		return
 	var sequence: String = {"chest": "chest_open", "boss_chest": "chest_open", "fountain": "fountain_active", "altar": "altar_active", "ritual": "ritual", "portal": "portal"}.get(String(ev.kind), "")
 	var count: int = {"chest_open": 6, "fountain_active": 6, "altar_active": 6, "ritual": 8, "portal": 8}.get(sequence, 0)
 	var path := "res://assets/animations/interactions/%s.png" % sequence
@@ -749,6 +771,11 @@ func _divine_theme() -> Dictionary:
 	return DivineVisuals.resolve(battle.hero.id, battle.visual_god, battle.visual_boon_selected)
 
 func _swing(ev: Dictionary, theme: Dictionary) -> void:
+	if not Game.reduced_impact():
+		var effect := MeleeVfx.create_effect(ev, theme.primary)
+		if effect != null:
+			fx.add_child(effect)
+			return
 	var poly := Polygon2D.new()
 	var pts := PackedVector2Array([Iso.to_screen(ev.pos) + Vector2(0, -18)])
 	var cone: float = deg_to_rad(float(ev.cone))
@@ -761,6 +788,29 @@ func _swing(ev: Dictionary, theme: Dictionary) -> void:
 	var t := create_tween()
 	t.tween_property(poly, "modulate:a", 0.0, 0.16)
 	t.tween_callback(poly.queue_free)
+
+func _shadow_blast(center: Vector2, radius: float) -> void:
+	_play_sheet_effect("res://assets/vfx/sylas_explosao_sombria.png", center, radius, 0.3)
+
+func _play_sheet_effect(path: String, center: Vector2, radius: float, duration: float) -> void:
+	if Game.reduced_impact():
+		return
+	var texture := _texture(path)
+	if texture == null:
+		return
+	var sprite := Sprite2D.new()
+	sprite.texture = texture
+	sprite.hframes = 2
+	sprite.vframes = 2
+	sprite.position = Iso.to_screen(center)
+	var side := float(texture.get_width()) * 0.5
+	sprite.scale = Vector2(radius * 90.0 / side, radius * 45.0 / side)
+	fx.add_child(sprite)
+	var tween := create_tween()
+	for frame in 4:
+		tween.tween_callback(func(): sprite.frame = frame)
+		tween.tween_interval(duration / 4.0)
+	tween.tween_callback(sprite.queue_free)
 
 func _ring(center: Vector2, radius: float, col: Color, dur: float) -> void:
 	var line := Line2D.new()
@@ -795,10 +845,23 @@ func _sync_decoys() -> void:
 	for id in live:
 		if decoy_nodes.has(id):
 			continue
-		var ghost: Node2D = hero_node.duplicate()
-		ghost.modulate = Color(0.55, 0.35, 0.95, 0.65)
-		sorted.add_child(ghost)
-		ghost.sync_visual(Iso.to_screen(live[id].pos), false, false)
+		var ghost: Node2D
+		var decoy_texture := _texture("res://assets/heroes/sylas_copia_isca.png")
+		if decoy_texture != null:
+			var sprite := Sprite2D.new()
+			sprite.texture = decoy_texture
+			sprite.centered = false
+			sprite.offset = Vector2(-float(decoy_texture.get_width()) * 0.5, -float(decoy_texture.get_height()))
+			sprite.scale = Vector2.ONE * (64.0 / float(decoy_texture.get_height()))
+			sprite.modulate.a = 0.65
+			ghost = sprite
+			sorted.add_child(ghost)
+			ghost.position = Iso.to_screen(live[id].pos)
+		else:
+			ghost = hero_node.duplicate()
+			ghost.modulate = Color(0.55, 0.35, 0.95, 0.65)
+			sorted.add_child(ghost)
+			ghost.sync_visual(Iso.to_screen(live[id].pos), false, false)
 		decoy_nodes[id] = ghost
 
 # ------------------------------------------------------------------ impacto (SPEC-116 D1, D2, D3)

@@ -2,7 +2,7 @@
 id: "CHATGPT-FILA-009"
 type: "fila-de-prompts"
 title: "Fila — fundo da tela de título (1 imagem)"
-status: "pronta para envio — nada executado"
+status: "gerada e integrada localmente em 2026-10-02 sob pedido do dono; EVID-145"
 created: "2026-10-01"
 relations: ["[[ART-PROMPTS-038-fundo-da-tela-de-titulo]]"]
 ---
@@ -17,7 +17,7 @@ Marque `[x]` ao gerar e `[a]` ao aprovar.
 
 #### T01 - `title_background` - portal roxo do Abismo
 
-- [ ] gerada · [ ] aprovada · candidata: `.atena/generated/art-candidates/ui/title/title_background_v01.png`
+- [x] gerada · [ ] aprovada · candidata: `.atena/generated/art-candidates/ui/title/title_background_v01.png`
 
 ```text
 Use case: stylized-concept

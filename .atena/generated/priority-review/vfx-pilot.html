@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="pt-BR"><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+<title>Revisão do piloto de VFX</title>
+<style>
+body{background:#15151b;color:#eee;font:16px system-ui;max-width:1100px;margin:32px auto;padding:0 20px}h1{font-size:25px}p{color:#bbc0cc}section{display:flex;flex-wrap:wrap;gap:14px;margin:24px 0}figure{margin:0;background:#000;border:1px solid #343441;padding:10px}img{width:144px;height:144px;object-fit:contain}figcaption{text-align:center;margin-top:6px;color:#aab}#preview{width:384px;height:192px;background:#000;position:relative;overflow:hidden}#animated{position:absolute;width:384px;height:384px;top:-96px;transform:scaleY(.5);transform-origin:center}label{display:inline-block;margin:12px 15px 12px 0}button{padding:8px 15px}
+</style>
+<h1>Piloto de VFX — corte médio</h1>
+<p>A03 v02 e B03: estilos aprovados pelo dono em 02/10/2026. As duas sequências de seis quadros foram integradas; esta prévia exibe as matrizes antes da conversão de luminância em alfa.</p>
+<section id="frames"></section>
+<label>Quadro <input id="frame" type="range" min="1" max="6" value="3"></label><button id="play">Reproduzir</button>
+<p>Prévia com compressão isométrica 2:1; duração de 0,2 s. Fundo preto mantido na matriz.</p>
+<div id="preview"><img id="animated" alt="Quadro da animação"></div>
+<h1>Arco largo — pico B03</h1>
+<p>Segundo pico aprovado. Arco largo integrado em seis quadros.</p>
+<img style="width:320px;height:320px" src="../art-candidates/vfx-pilot/melee_fisico_arco_largo_03_v01.png" alt="Pico do arco largo">
+<script>
+const source=n=>`../art-candidates/vfx-pilot/melee_fisico_corte_medio_${String(n).padStart(2,'0')}_v${n===3?'02':'01'}.png`;
+for(let n=1;n<=6;n++){let figure=document.createElement('figure');let img=document.createElement('img');img.src=source(n);img.alt=`Quadro A0${n}`;let caption=document.createElement('figcaption');caption.textContent=`A0${n}`;figure.append(img,caption);document.querySelector('#frames').append(figure)}
+const frame=document.querySelector('#frame'),animated=document.querySelector('#animated'),play=document.querySelector('#play');let timer;
+function show(){animated.src=source(Number(frame.value))}frame.oninput=()=>{clearInterval(timer);play.textContent='Reproduzir';show()};play.onclick=()=>{if(timer){clearInterval(timer);timer=null;play.textContent='Reproduzir';return}play.textContent='Pausar';timer=setInterval(()=>{frame.value=Number(frame.value)%6+1;show()},200/6)};show();
+</script></html>

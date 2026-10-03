@@ -279,6 +279,17 @@ func _draw_trap(z: Dictionary) -> void:
 	var armed := bool(z.armed)
 	var t := 1.0 - remaining / warn if armed else 0.0
 	var theme := String(z.get("theme", ""))
+	var trap_asset := "dagruve_selo_sacrificial" if theme == "selo" else "docas_carga_solta"
+	var trap_texture := _texture("res://assets/interactions/%s.png" % trap_asset)
+	if trap_texture != null:
+		var center := Iso.to_screen(z.pos)
+		var art_size := Vector2(float(z.radius) * 90.0, float(z.radius) * 45.0)
+		if theme != "selo":
+			art_size.y = art_size.x
+		var origin := center - art_size * 0.5
+		if theme != "selo":
+			origin.y = center.y - art_size.y * 0.85
+		draw_texture_rect(trap_texture, Rect2(origin, art_size), false, Color(1, 1, 1, 0.65 if armed else 0.9))
 	var base := Color(0.62, 0.3, 0.9) if theme == "selo" else Color(0.85, 0.62, 0.26)
 	var col := base.lerp(Color(1.0, 0.25, 0.12), t)
 	var pulse := 0.5 + 0.5 * sin(_phase() * (2.0 + t * 10.0))
@@ -421,9 +432,19 @@ func _draw_over() -> void:
 		# Baús mantêm o tamanho original (54 px).
 		var base_h := (54.0 if it.kind in ["chest", "boss_chest"] else (100.0 if it.kind == "portal" else 80.0)) * size_scale
 		var texture := _texture("res://assets/interactions/%s.png" % asset)
+		var scenery_asset := ""
+		if String(it.get("name", "")) == "Poço de Oferendas":
+			scenery_asset = "dagruve_poco_oferendas"
+		elif String(it.get("name", "")) == "Oficina do Cais":
+			scenery_asset = "docas_guincho_do_cais"
+		var scenery_texture := _texture("res://assets/interactions/%s.png" % scenery_asset) if scenery_asset != "" else null
+		if scenery_texture != null:
+			texture = scenery_texture
 		var animation_id: String = {"fountain": "fountain_active", "altar": "altar_active", "ritual": "ritual", "portal": "portal"}.get(String(it.kind), "")
 		var animation_count: int = {"fountain_active": 6, "altar_active": 6, "ritual": 8, "portal": 8}.get(animation_id, 0)
 		var animation_texture := _texture("res://assets/animations/interactions/%s.png" % animation_id) if animation_id != "" else null
+		if scenery_texture != null:
+			animation_texture = null
 		if animation_texture != null and animation_count > 0:
 			var h := base_h
 			var frame := int(Time.get_ticks_msec() / 100) % animation_count

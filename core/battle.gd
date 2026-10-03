@@ -1582,7 +1582,7 @@ func _update_interactions(dt: float) -> void:
 		var d: float = it.pos.distance_to(hero.pos)
 		if d <= 0.8 and (it.kind == "chest" or it.kind == "boss_chest" or it.kind == "fountain"):
 			it.used = true
-			events.append({"type": "interaction", "kind": it.kind, "pos": it.pos})
+			events.append({"type": "interaction", "kind": it.kind, "pos": it.pos, "fixed": bool(it.get("fixed", false))})
 			if it.kind == "chest" or it.kind == "boss_chest":
 				_open_chest(it)
 			else:
@@ -2396,7 +2396,12 @@ func _spawn_random_interaction() -> void:
 		_first_inter = false
 		kind = "chest"
 	var ang := rng.randf() * TAU
-	_add_interaction(kind, hero.pos + Vector2(cos(ang), sin(ang)) * rng.randf_range(6.0, 12.0))
+	var at := hero.pos + Vector2(cos(ang), sin(ang)) * rng.randf_range(6.0, 12.0)
+	# Não sobrepor um interativo fixo (poço de Dagruve etc.): dois assets no mesmo ponto.
+	for other in interactions:
+		if bool(other.get("fixed", false)) and not other.used and other.pos.distance_to(at) < 3.0:
+			return
+	_add_interaction(kind, at)
 	events.append({"type": "toast", "text": String(Data.table("stage_story").get(stage_id, {}).get("aparece", "Algo apareceu no mapa..."))})
 
 func _stage_has_rule(kind: String) -> bool:

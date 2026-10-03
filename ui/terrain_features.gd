@@ -42,10 +42,28 @@ class Ridge extends Node2D:
 		ground_offset = value
 		queue_redraw()
 
+	## A colisão da montanha é um círculo de `radius` tiles no chão; sem esta base a rocha visível
+	## ocupava menos da metade da área bloqueada e o herói travava no ar (BUG: obstrução invisível).
+	func _draw_footprint(base: Vector2) -> void:
+		var rim := PackedVector2Array()
+		var inner := PackedVector2Array()
+		var steps := 36
+		for i in steps:
+			var a := TAU * i / steps
+			var jag := 1.0 - 0.06 * float(i % 3)
+			var g := Vector2(cos(a), sin(a)) * radius
+			rim.append(base + Iso.to_screen(g * jag))
+			inner.append(base + Iso.to_screen(g * 0.72 * jag))
+		draw_colored_polygon(rim, Color(0.17, 0.12, 0.15, 0.9))
+		draw_colored_polygon(inner, Color(0.24, 0.17, 0.2, 0.9))
+		rim.append(rim[0])
+		draw_polyline(rim, Color("806050", 0.75), 2.0)
+
 	func _draw() -> void:
 		var w := 24.0 + radius * 12.0
 		var h := 14.0 + radius * 7.0
 		var base := Vector2(0, ground_offset)
+		_draw_footprint(base)
 		var shadow := PackedVector2Array([base + Vector2(-w, 3), base + Vector2(0, h), base + Vector2(w, 3), base + Vector2(0, -h)])
 		draw_colored_polygon(shadow, Color(0.05, 0.035, 0.05, 0.62))
 		var body := PackedVector2Array([base + Vector2(-w * 0.8, 0), base + Vector2(-w * 0.35, -h * 2.8), base + Vector2(w * 0.18, -h * 3.5), base + Vector2(w * 0.8, -h * 0.3), base + Vector2(w * 0.5, h * 0.3), base + Vector2(-w * 0.3, h * 0.45)])

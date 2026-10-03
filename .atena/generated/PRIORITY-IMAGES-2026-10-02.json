@@ -1,0 +1,626 @@
+{
+  "created": "2026-10-02",
+  "generator": "built-in imagegen",
+  "authorization": "Pedido do dono em 2026-10-02",
+  "count": 88,
+  "assets": [
+    {
+      "path": "assets/stages/docas_thumb.png",
+      "width": 480,
+      "height": 320,
+      "corner_alpha": 255,
+      "sha256": "5fa30fc3d6d145cc4c5d956e5c77c61ae91da592931392da06b1a1a579fd32ff"
+    },
+    {
+      "path": "assets/ui/title/title_background.png",
+      "width": 1920,
+      "height": 1080,
+      "corner_alpha": 255,
+      "sha256": "6a0d949542c2ac0dc1b12d1612b13c49754c926c5d47af90a6fca8fc85cea471"
+    },
+    {
+      "path": "assets/stages/dagruve_fundo.png",
+      "width": 1536,
+      "height": 1024,
+      "corner_alpha": 255,
+      "sha256": "53e3d15fffdc9be9bb1a72d54d85cf661496dad7c49bd9e83ec710278b88e272"
+    },
+    {
+      "path": "assets/stages/docas_fundo.png",
+      "width": 1536,
+      "height": 1024,
+      "corner_alpha": 255,
+      "sha256": "cd03f97573d21595096978dc55cf21f116062d2cfeee13883b96ebbaea0f7f91"
+    },
+    {
+      "path": "assets/decals/dagruve_estrada_trecho.png",
+      "width": 320,
+      "height": 178,
+      "corner_alpha": 0,
+      "sha256": "1105a738837b9a7a8dbbacff6cc17e352888e0ca05af3c7fa1cda19b5a9fd554",
+      "previous_sha256": "89d32d39cbe3ea72c52cd575856ea5dedb218c49bfa1c55c22f18768606c66d8"
+    },
+    {
+      "path": "assets/enemies/carroca_quebravel.png",
+      "width": 256,
+      "height": 256,
+      "corner_alpha": 0,
+      "sha256": "2ad71a527e3531e2070978bf3808ec26f42fbca4559c046f604b89471772b92e"
+    },
+    {
+      "path": "assets/interactions/dagruve_selo_sacrificial.png",
+      "width": 256,
+      "height": 256,
+      "corner_alpha": 0,
+      "sha256": "597f33bcabc74b3d3a128ef5d1abdb30e882ba40a67c529ffe7abd4fca85c52e"
+    },
+    {
+      "path": "assets/interactions/dagruve_poco_oferendas.png",
+      "width": 256,
+      "height": 256,
+      "corner_alpha": 0,
+      "sha256": "6a1f7a29013913857a308325263e4df3b37d24c2d1a8cdf66685e549c7bb6358"
+    },
+    {
+      "path": "assets/decals/docas_cais_trecho.png",
+      "width": 320,
+      "height": 240,
+      "corner_alpha": 0,
+      "sha256": "db51484edf4822a7222af070354310a5b7cccad6d2c15e51afe753e7e5675f8a",
+      "previous_sha256": "9fd24589ee48525015cbdbc260c6d11f57ea97d226ea79a5188094bc3504ae8b"
+    },
+    {
+      "path": "assets/props/docas_guindaste_01.png",
+      "width": 256,
+      "height": 256,
+      "corner_alpha": 0,
+      "sha256": "c0e71fbb5558843eb6bd4e87a6fd8fdb1868570cccec91effebfc087c5886974"
+    },
+    {
+      "path": "assets/enemies/pilha_carga_quebravel.png",
+      "width": 256,
+      "height": 256,
+      "corner_alpha": 0,
+      "sha256": "333f986ca1e34ae003ee93f559b7b33b2b8cb5329bd5fbee9ed04ae047a2625a"
+    },
+    {
+      "path": "assets/interactions/docas_carga_solta.png",
+      "width": 256,
+      "height": 256,
+      "corner_alpha": 0,
+      "sha256": "901bd9b9f17a83bc94747149fd0f6919d0255e07e15a24f2cf9887afc0a72104"
+    },
+    {
+      "path": "assets/interactions/docas_guincho_do_cais.png",
+      "width": 256,
+      "height": 256,
+      "corner_alpha": 0,
+      "sha256": "dee870e192b5674b9c7c5c235e03f4ecec9856e4afc1d8d9b6a49085d10f8f0e"
+    },
+    {
+      "path": "assets/heroes/sylas_copia_isca.png",
+      "width": 256,
+      "height": 320,
+      "corner_alpha": 0,
+      "sha256": "f6cfc1e94ce66a70aca5b2c88c5c8463af06168623d07e96595fa1631fc7f671"
+    },
+    {
+      "path": "assets/vfx/sylas_explosao_sombria.png",
+      "width": 512,
+      "height": 512,
+      "corner_alpha": 0,
+      "sha256": "36402d80b4ee894674c0dbc3acaddc976fa88965734421e9d4cb196565e1a9b5"
+    },
+    {
+      "path": "assets/interactions/ampulheta.png",
+      "width": 192,
+      "height": 256,
+      "corner_alpha": 0,
+      "sha256": "b2735fa90816bbe4d2b9257d1e987a9428c324c4ea1372c7d403a087411b7ad9"
+    },
+    {
+      "path": "assets/interactions/doacao.png",
+      "width": 256,
+      "height": 256,
+      "corner_alpha": 0,
+      "sha256": "df364ad5b3672c04f61a4cd0eef2e6185218c518d31217b299a2c6abb27fee0d"
+    },
+    {
+      "path": "assets/interactions/aposta.png",
+      "width": 256,
+      "height": 256,
+      "corner_alpha": 0,
+      "sha256": "ab9c6b7b4f5b8e2d56ef637a80a8575c9a94c6501a6ba85575a6b24cf5d63fa8"
+    },
+    {
+      "path": "assets/vfx/vfx_subida_de_nivel.png",
+      "width": 512,
+      "height": 512,
+      "corner_alpha": 0,
+      "sha256": "83617e98df2b477423a56b95e62a9c8dce4ea5ed6ce55f489e3e26a0528bb653"
+    },
+    {
+      "path": "assets/vfx/vfx_evolucao_flare.png",
+      "width": 512,
+      "height": 512,
+      "corner_alpha": 0,
+      "sha256": "393f7d9865f6875b688c8fdea092886d137ebabaa4376a954691bcb9aa38d30e"
+    },
+    {
+      "path": "assets/ui/evolucao_painel_moldura.png",
+      "width": 960,
+      "height": 540,
+      "corner_alpha": 0,
+      "sha256": "cd8863b5733b44248217a8020069ca140d48fa525a73009e246ae5e76b7689c0"
+    },
+    {
+      "path": "assets/vfx/melee_fisico_corte_medio.png",
+      "width": 1536,
+      "height": 256,
+      "corner_alpha": 0,
+      "sha256": "a954d7ac85b5ccf4b61d5e728312ff801f5a16b5116a9a4068de7857f7f015b9"
+    },
+    {
+      "path": "assets/vfx/melee_fisico_arco_largo.png",
+      "width": 1536,
+      "height": 256,
+      "corner_alpha": 0,
+      "sha256": "89336b7c04c7e2e8fa2e2e9f73b2a2360bea1dac27620ac330bca7746889d7c3"
+    },
+    {
+      "path": "assets/vfx/melee_estocada_longa.png",
+      "width": 1536,
+      "height": 256,
+      "corner_alpha": 0,
+      "sha256": "5564a75dbd1c893350bd18936bf71b2d2c2a70229e5e8074825dd4e5db4430b9"
+    },
+    {
+      "path": "assets/vfx/melee_chicote.png",
+      "width": 1536,
+      "height": 256,
+      "corner_alpha": 0,
+      "sha256": "9b1792f4591adec448767a91b4d68f5374972530caffd2fc483031cded302319"
+    },
+    {
+      "path": "assets/animations/enemies/bolha_de_slime/idle.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "ca7376bb8bf40300cbd9c670705fe4d073ab8bae9c93d1f74eb1f83b8d5e7f12"
+    },
+    {
+      "path": "assets/animations/enemies/bolha_de_slime/move.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "831eab1bdb196bcc29b1edfa02c84b456718b8f0e4fe94109628391a5698f8d0"
+    },
+    {
+      "path": "assets/animations/enemies/bolha_de_slime/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "4e5b19f22a640eb1696fe976bf825a5f456adb595deb8936409c506e1c86f12a"
+    },
+    {
+      "path": "assets/animations/enemies/bolha_de_slime/death.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "c8cb11cfe10ca9ba9dc57975d0a94dd75514f61a24ca1da2302f52470ecd57cc"
+    },
+    {
+      "path": "assets/animations/enemies/cultista_thullgrime/idle.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "9e69ebe75d19292342cf81a82a5b62980f23ac28028dc4114efd51956def3d84"
+    },
+    {
+      "path": "assets/animations/enemies/cultista_thullgrime/move.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "841bccb2e7b813810d78fcf38bb56b6694cd2b26cd3010355c058614bec50092"
+    },
+    {
+      "path": "assets/animations/enemies/cultista_thullgrime/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "b8fc6663204079bc3f8937cdac35fd6a305f9078df5f04712c210d67cd2c6e56"
+    },
+    {
+      "path": "assets/animations/enemies/cultista_thullgrime/death.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "bca9fedfa8d8ff2131532807f3c3c5db9fbbad3760c63ef07a26650c219a4867"
+    },
+    {
+      "path": "assets/animations/heroes/korrak/move_e.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "e01b1a6b76f035e06302e3520d3a47ac82cb9832a4b14ccbef877e85630ac0f2"
+    },
+    {
+      "path": "assets/animations/heroes/korrak/move_se.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "2e8e9ac53178ba5e7860ec96c0ee396650e4f6359ae6735c340e5a055905e142"
+    },
+    {
+      "path": "assets/animations/heroes/korrak/move_s.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "df626278ec3b4bed6e652ddd768a66085de527e56c98f1b85170e5090e8d9799"
+    },
+    {
+      "path": "assets/animations/heroes/korrak/move_ne.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "5ccf94a3a34a9995f840cc19783442d6fcebf230df60157d5c9af0afdac8d32a"
+    },
+    {
+      "path": "assets/animations/heroes/bromnor/move_e.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "276ea3142c4faa00e76e3ca09dc4f78061ec0f260e91e4f2b93475bdabe6bb3f"
+    },
+    {
+      "path": "assets/animations/heroes/bromnor/move_se.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "e7ce9d15da11a4ea017b2491fd1cea93fc20e2302e33cad30f2761696ef3d3be"
+    },
+    {
+      "path": "assets/animations/heroes/sylas/move_ne.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "df27515793b28fc66218ab4ece9a3241e4c50b3908d7d2c3face13acd657228a"
+    },
+    {
+      "path": "assets/animations/heroes/kayron/move_n.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "4aeedf011ad91703b4ee15e06a2ac3add5397fd55a19ded556a78bf8ab763438"
+    },
+    {
+      "path": "assets/animations/heroes/kayron/move_s.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "6b25be05b4d31e9cfcc9b9de5c2a61ac5932198a633fe425eafaa52390712ec9"
+    },
+    {
+      "path": "assets/animations/heroes/sylas/move_s.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "4c202992f81e3162d78d9ba5e6056c4075d5de6b6f3cc9c6ccb84e7d8e98b0cc"
+    },
+    {
+      "path": "assets/animations/heroes/brook/move_n.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "910e4bed9fb16feaa5adce5dfee2ddef79f8a239bcc4386d5b64dcde8f22e665"
+    },
+    {
+      "path": "assets/animations/heroes/brook/move_ne.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "ff8f2acc3b25b5b2dafef8efab5d5d2f4c065ef5e3e5bdbb741d3648d73b815b"
+    },
+    {
+      "path": "assets/animations/heroes/maelor/move_ne.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "351b380a72ef4ffb35e3d43e101c2c6833ab6cff79e09eb88af83ec47bf12055"
+    },
+    {
+      "path": "assets/animations/heroes/maelor/move_e.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "ad2d4d196bf36211f785beaf486aafae036c5efa17d8c879606905443f2e2686"
+    },
+    {
+      "path": "assets/animations/heroes/maelor/move_se.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "95fb86892f6c49f8bdc4fb3153dd27c6b30f739cea8ab0e2607e9a84a115bc9d"
+    },
+    {
+      "path": "assets/animations/heroes/maelor/move_s.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "bf6b770d661bd69191ac941ddab4ad5d2b2cf8918226af9214a55a2c0f4c63f6"
+    },
+    {
+      "path": "assets/animations/heroes/durvall/move_ne.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "ea0486d421d919491626d9f29472a0ae93ab1fbb4ec967772f1e892cd66fc21f"
+    },
+    {
+      "path": "assets/animations/heroes/nyrelia/move_e.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "d73416553bb0857567a694bc9a8220283b8e93a8af47969cf815930bd40199d4"
+    },
+    {
+      "path": "assets/animations/heroes/bromnor/move_n.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "cee3bdaf167e34e0713c26214c5d70c0044f78476b8744225ebbcf82de253c17"
+    },
+    {
+      "path": "assets/animations/heroes/bromnor/move_ne.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "9b48b269ec216f623b72301bb2a57c1ccbad8d6ec7e79885484174a16dde78fd"
+    },
+    {
+      "path": "assets/animations/heroes/bromnor/move_s.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "551e0f0815971a7758dff2b332f85c8c989cbb3c9ddab18ee5488f2c63342786"
+    },
+    {
+      "path": "assets/animations/heroes/maelor/move_n.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "4c7fbbadd5c0d90d53088a0c739fed57b5e21caab83311d1ef464122acbf19e9"
+    },
+    {
+      "path": "assets/animations/heroes/durvall/move_e.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "f860a4e8b228f6eaf0bdf233c449c1d01191ad381b5d4555daa7356484400e58"
+    },
+    {
+      "path": "assets/animations/heroes/bromnor/active.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "28beb512ccdd680c164a1ac4d148f159dd84ab6b07d7528e36fafe5260d74fa6"
+    },
+    {
+      "path": "assets/animations/heroes/bromnor/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "76f2c5bac103c0927e5ca81d46cf97ac518a3a615fadca1b7d45d4ee53c8a789"
+    },
+    {
+      "path": "assets/animations/heroes/zynara/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "aa3a765062ba1595de0f1803da78cbd92ae385a9b15a5397b9d8ae409a9c7735"
+    },
+    {
+      "path": "assets/animations/heroes/sylas/active.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "7f642a56c26ed46e8d227ac7ab918ff0061c388057e2ddc551734a43e79e99f3"
+    },
+    {
+      "path": "assets/animations/heroes/leoric/active.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "1fe8328c0da018ace3ef36d5b018dc3cf3cff0f09c0d7882b1bccb05718132de"
+    },
+    {
+      "path": "assets/animations/heroes/kayron/active.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "e8c27db9404b6b1c3513be0a82aa787ababd53d63cbba26088e28eb92732fa1b"
+    },
+    {
+      "path": "assets/animations/heroes/maelor/active.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "d99de12690beb67c945193cfbfbcc76912275c7f41526d4cd2b7c74645f7f177"
+    },
+    {
+      "path": "assets/animations/heroes/nyrelia/active.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "da6f4ef0d92e9bc0bf9158732522096cdd3510f0d46f62691fdba2c6079db3d3"
+    },
+    {
+      "path": "assets/animations/heroes/durvall/active.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "e594da269146a7e6634dfb9ba274ffedfe40b3c4b4c1cc7bfe73ff43a5c29125"
+    },
+    {
+      "path": "assets/animations/heroes/brook/active.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "74eff74d35a210d1b52609f408180de6c508581bdf391c948218b2a35fdbccfc"
+    },
+    {
+      "path": "assets/animations/heroes/durvall/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "852fd859595caed94934b4e804b921ac93e6a1a496989dab4b2b0e2ace43ad40"
+    },
+    {
+      "path": "assets/animations/heroes/brook/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "bcb461c7827b972849877750b7fb62b617411fef516f257028d98eecb5da8e63"
+    },
+    {
+      "path": "assets/animations/heroes/leoric/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "62ebc00fb232b26e427797d90441db6dec0086e505378ed5a97689655b710e32"
+    },
+    {
+      "path": "assets/animations/heroes/kayron/move_se.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "7967c6d3c8591827211ca9bf86fee914b346ed572023d95604c942fc406b8668"
+    },
+    {
+      "path": "assets/animations/heroes/korrak/active.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "cc8ff5528d9e83d26863e2113edeebaa7309294667e907091926a124b8a7cf10"
+    },
+    {
+      "path": "assets/animations/enemies/blogbog/idle.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "2068d076fad9a7bf6c60014b6bd0b13717f7ba0886210eba7d10c9eb8a32d76e"
+    },
+    {
+      "path": "assets/animations/enemies/blogbog/move.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "a2ef9eb12f91bdde4c68a34f768508c087a15f49f6d759952330e9c4faf100f9"
+    },
+    {
+      "path": "assets/animations/enemies/blogbog/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "a3bf8733333c9d7cc70f953e70aed7738401768732fdce7611d70a1f1a4a07ac"
+    },
+    {
+      "path": "assets/animations/enemies/blogbog/death.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "324274ea018cfdc7e96dd00a2f8470e1b91575aa84e53469541cbc8bcfb4e39e"
+    },
+    {
+      "path": "assets/animations/enemies/blogbog/special.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "7ee7e923de0f75eccac15bfc791ae1c0a000e3cd7cec4a07722947041f877b01"
+    },
+    {
+      "path": "assets/animations/enemies/servo_de_zuggtmoy/idle.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "a3bbf0ad7a92e20250a841658d6cc843feb90996a1f68c023d8c876ee0a9a31e"
+    },
+    {
+      "path": "assets/animations/enemies/servo_de_zuggtmoy/move.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "4e0e2dac9f56f46a22133b899bac2b1b26dcb3eed9a7edf8ef73b70f4e03826e"
+    },
+    {
+      "path": "assets/animations/enemies/servo_de_zuggtmoy/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "2bd2853e1c0012dc973ed7b93060a5ba7447506cccaf19d0c82bae48680e15ba"
+    },
+    {
+      "path": "assets/animations/enemies/servo_de_zuggtmoy/death.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "afe092361443e7bf79fa4d4e5b008a6df964d9eda6c07bc48f3ac55fd8c97ec8"
+    },
+    {
+      "path": "assets/animations/enemies/cogumelo_fungico/idle.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "39c8efe77e1df3082481a06d017e68a1d11af9003986c167f1ec3062876b5988"
+    },
+    {
+      "path": "assets/animations/enemies/cogumelo_fungico/move.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "aca98d0d895a95672d75a6dd06aa1a0c3727242f52989a3b7ec042d80102b8f6"
+    },
+    {
+      "path": "assets/animations/enemies/cogumelo_fungico/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "24359424c19ca46b33f9319f8947ea68e4bfea4b29459a868c8aff26b4e6774c"
+    },
+    {
+      "path": "assets/animations/enemies/cogumelo_fungico/death.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "ea92a7f31dad25abd669487a73f51181b7b309af43c04bfe9c60b001aee2618a"
+    },
+    {
+      "path": "assets/animations/enemies/esporo_voador/idle.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "efe3e415d738cdc1d6f2854c5bb459b72c977fe5eb32fd3ef71f07692a56d1b3"
+    },
+    {
+      "path": "assets/animations/enemies/esporo_voador/move.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "8e14ceceba187599def4d33909672cfc6a49845c42ae25bb5845c4d204488331"
+    },
+    {
+      "path": "assets/animations/enemies/esporo_voador/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "a3538fec1a7abadeba7f315a23fd175e5e4ca048b41e9d7445f303aac9b08f53"
+    },
+    {
+      "path": "assets/animations/enemies/esporo_voador/death.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "ac74e8865ac4ce06c8edb30c522110b5ec3f3ab99cf6b4fe178d3da3a7c518a7"
+    }
+  ]
+}

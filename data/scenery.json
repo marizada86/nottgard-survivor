@@ -1,5 +1,6 @@
 {
   "_kinds": {
+    "docas_guindaste": {"height": 130, "half_width": 45, "block_radius": 0.5},
     "barril": {"height": 58, "half_width": 30},
     "caixote": {"height": 70, "half_width": 26},
     "carga": {"height": 54, "half_width": 46},
@@ -22,7 +23,7 @@
       {"zone": "beco_oeste", "id": "caixote_quebravel", "pos": [8, 34]},
       {"zone": "beco_oeste", "id": "caixote_quebravel", "pos": [10, 36]},
       {"zone": "beco_oeste", "id": "arbusto_quebravel", "pos": [7, 38]},
-      {"zone": "rua_leste_oeste", "id": "caixote_quebravel", "pos": [22, 24]},
+      {"zone": "rua_leste_oeste", "id": "carroca_quebravel", "pos": [22, 24]},
       {"zone": "rua_leste_oeste", "id": "caixote_quebravel", "pos": [36, 24]},
       {"zone": "rua_leste_oeste", "id": "arbusto_quebravel", "pos": [47, 24]},
       {"zone": "sudoeste", "id": "caixote_quebravel", "pos": [18, 46]},
@@ -37,8 +38,8 @@
       {"zone": "poco_de_oferendas", "kind": "fountain", "name": "Poço de Oferendas", "pos": [36, 41]}
     ],
     "estradas": [
-      {"zone": "rua_leste_oeste", "axis": "x", "at": 26, "from": 4, "to": 56, "decal": "res://assets/decals/dagruve_estrada_trecho.png"},
-      {"zone": "rua_do_selo", "axis": "y", "at": 42, "from": 26, "to": 56, "decal": "res://assets/decals/dagruve_estrada_trecho.png"}
+      {"zone": "rua_leste_oeste", "axis": "x", "at": 26, "from": 4, "to": 56, "decal": "res://assets/decals/dagruve_estrada_trecho.png", "span": 7.1, "size": [320, 178]},
+      {"zone": "rua_do_selo", "axis": "y", "at": 42, "from": 26, "to": 56, "decal": "res://assets/decals/dagruve_estrada_trecho.png", "span": 7.1, "size": [320, 178]}
     ],
     "props": [
       {"zone": "praca_do_selo", "center": [42, 38], "items": [
@@ -83,7 +84,7 @@
       {"zone": "carga_oeste", "id": "caixote_quebravel", "pos": [9, 24]},
       {"zone": "carga_oeste", "id": "caixote_quebravel", "pos": [13, 24]},
       {"zone": "carga_oeste", "id": "caixote_quebravel", "pos": [8, 20]},
-      {"zone": "armazem_norte", "id": "caixote_quebravel", "pos": [22, 8]},
+      {"zone": "armazem_norte", "id": "pilha_carga_quebravel", "pos": [22, 8]},
       {"zone": "armazem_norte", "id": "caixote_quebravel", "pos": [27, 8]},
       {"zone": "armazem_norte", "id": "caixote_quebravel", "pos": [26, 12]},
       {"zone": "redes", "id": "caixote_quebravel", "pos": [18, 13]},
@@ -99,12 +100,15 @@
     "interativos": [
       {"zone": "oficina_do_cais", "kind": "ferreiro", "name": "Oficina do Cais", "pos": [32, 16]}
     ],
+    "estradas": [
+      {"zone": "cais", "axis": "y", "at": 3.2, "from": 3, "to": 59, "decal": "res://assets/decals/docas_cais_trecho.png", "span": 8.4, "size": [320, 240]}
+    ],
     "props": [
       {"zone": "borda_do_cais", "center": [5, 30], "items": [
-        {"kind": "margem", "off": [0, -22]}, {"kind": "margem", "off": [1, -14]}, {"kind": "margem", "off": [0, -6]},
-        {"kind": "margem", "off": [1, 6]}, {"kind": "margem", "off": [0, 14]}, {"kind": "margem", "off": [1, 22]},
-        {"kind": "braseiro", "off": [3, -16]}, {"kind": "braseiro", "off": [3, -2]}, {"kind": "braseiro", "off": [3, 12]},
-        {"kind": "corrente_01", "off": [4, 4]}, {"kind": "corrente_01", "off": [4, -10]}
+        {"kind": "margem", "off": [1.5, -22]}, {"kind": "margem", "off": [2.5, -14]}, {"kind": "margem", "off": [1.5, -6]},
+        {"kind": "margem", "off": [2.5, 6]}, {"kind": "margem", "off": [1.5, 14]}, {"kind": "margem", "off": [2.5, 22]},
+        {"kind": "braseiro", "off": [-1.8, -16]}, {"kind": "braseiro", "off": [-1.8, -2]}, {"kind": "braseiro", "off": [-1.8, 12]},
+        {"kind": "corrente_01", "off": [-1.4, 4]}, {"kind": "corrente_01", "off": [-1.4, -10]}
       ]},
       {"zone": "armazem_norte", "center": [26, 14], "items": [
         {"kind": "carga", "off": [-6, 4]}, {"kind": "carga", "off": [8, 3]}, {"kind": "carga", "off": [-2, -5]},
@@ -124,7 +128,7 @@
         {"kind": "doca", "off": [8, -1]}, {"kind": "margem", "off": [-12, 5]}, {"kind": "margem", "off": [11, 5]}
       ]},
       {"zone": "pier_leste", "center": [45, 18], "items": [
-        {"kind": "carga", "off": [-5, -4]}, {"kind": "carga", "off": [5, -3]}, {"kind": "barril", "off": [0, 6.5]},
+        {"kind": "docas_guindaste", "off": [-5, -4]}, {"kind": "carga", "off": [5, -3]}, {"kind": "barril", "off": [0, 6.5]},
         {"kind": "rede", "off": [6, 4]}
       ]},
       {"zone": "porao_ritual", "center": [40, 28], "items": [

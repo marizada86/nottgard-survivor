@@ -2,7 +2,7 @@
 id: "CHATGPT-FILA-012"
 type: "fila-de-prompts"
 title: "Fila — UI e VFX pendentes (ART-002, 003, 004, 010, 014)"
-status: "pronta para envio — nada executado"
+status: "U07–U09 gerados e integrados em 2026-10-02; U01–U06 pendentes; EVID-145"
 created: "2026-10-01"
 relations: ["[[ART-PROMPTS-043-ui-e-vfx-pendentes]]"]
 ---
@@ -86,7 +86,7 @@ Constraints: fundo liso magenta #FF00FF, sem texto, sem personagens, sem bordas 
 ```n
 #### U07 - `vfx_subida_de_nivel` (ART-010)
 
-- [ ] gerada · [ ] aprovada
+- [x] gerada · [ ] aprovada
 
 ```text
 Use case: stylized-concept
@@ -98,7 +98,7 @@ Constraints: fundo liso ciano #00FFFF, sem texto, sem personagens, sem bordas en
 ```n
 #### U08 - `vfx_evolucao_flare` (ART-014)
 
-- [ ] gerada · [ ] aprovada
+- [x] gerada · [ ] aprovada
 
 ```text
 Use case: stylized-concept
@@ -110,7 +110,7 @@ Constraints: fundo liso ciano #00FFFF, sem texto, sem personagens, sem bordas en
 ```n
 #### U09 - `evolucao_painel_moldura` (ART-014)
 
-- [ ] gerada · [ ] aprovada
+- [x] gerada · [ ] aprovada
 
 ```text
 Use case: stylized-concept

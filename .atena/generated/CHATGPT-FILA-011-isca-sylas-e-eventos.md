@@ -2,7 +2,7 @@
 id: "CHATGPT-FILA-011"
 type: "fila-de-prompts"
 title: "Fila — isca do Sylas e eventos (ART-027, ART-018, ART-019, ART-020)"
-status: "pronta para envio — nada executado"
+status: "gerada e integrada localmente em 2026-10-02 sob pedido do dono; EVID-145"
 created: "2026-10-01"
 relations: ["[[ART-PROMPTS-042-isca-do-sylas-e-eventos-ampulheta-doacao-aposta]]"]
 ---
@@ -14,7 +14,7 @@ Marque `[x]` ao gerar e `[a]` ao aprovar.
 
 #### S01 - `sylas_copia_isca` (ART-027) — anexar `assets/heroes/sylas.png`
 
-- [ ] gerada · [ ] aprovada
+- [x] gerada · [ ] aprovada
 
 ```text
 Use case: stylized-concept
@@ -26,7 +26,7 @@ Constraints: fundo liso ciano #00FFFF, sem texto, sem outros personagens, quadra
 ```n
 #### S02 - `sylas_explosao_sombria` (ART-027)
 
-- [ ] gerada · [ ] aprovada
+- [x] gerada · [ ] aprovada
 
 ```text
 Use case: stylized-concept
@@ -38,7 +38,7 @@ Constraints: fundo liso ciano #00FFFF, sem texto, sem personagens, sem bordas en
 ```n
 #### S03 - `ampulheta` (ART-018)
 
-- [ ] gerada · [ ] aprovada
+- [x] gerada · [ ] aprovada
 
 ```text
 Use case: stylized-concept
@@ -50,7 +50,7 @@ Constraints: fundo liso magenta #FF00FF, sem texto, sem personagens, quadrado
 ```n
 #### S04 - `altar_doacao` (ART-019)
 
-- [ ] gerada · [ ] aprovada
+- [x] gerada · [ ] aprovada
 
 ```text
 Use case: stylized-concept
@@ -62,7 +62,7 @@ Constraints: fundo liso magenta #FF00FF, sem texto legível, sem personagens, qu
 ```n
 #### S05 - `mesa_aposta` (ART-020)
 
-- [ ] gerada · [ ] aprovada
+- [x] gerada · [ ] aprovada
 
 ```text
 Use case: stylized-concept

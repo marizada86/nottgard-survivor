@@ -1317,6 +1317,46 @@
       "cooldown_ms": 65,
       "priority": 1
     },
+    "enemy.carroca_quebravel.action": {
+      "files": [
+        "res://assets/audio/sfx/combat/combat.impact_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.carroca_quebravel.death": {
+      "files": [
+        "res://assets/audio/sfx/progress/world.chest_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
+    "enemy.pilha_carga_quebravel.action": {
+      "files": [
+        "res://assets/audio/sfx/combat/combat.impact_01.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -14,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.pilha_carga_quebravel.death": {
+      "files": [
+        "res://assets/audio/sfx/progress/world.chest_02.wav"
+      ],
+      "bus": "Enemies",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 1
+    },
     "enemy.caixote_quebravel.action": {
       "files": [
         "res://assets/audio/sfx/combat/combat.impact_01.wav"

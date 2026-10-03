@@ -3,7 +3,7 @@ extends Node2D
 ## Objeto de cenário que bloqueia movimento (grupo "blockers"). A posição do nó é em pixels de tela;
 ## o chão é derivado por Iso.to_ground(position). Mova/duplique no editor à vontade.
 
-@export_enum("pilar", "cogumelo", "bolha", "rocha", "torii", "cristal", "cachoeira", "pilar_abissal", "braseiro", "caixote", "velas", "livros", "barril", "rede", "ossos", "doca", "carga", "margem", "esporo_01", "esporo_02", "lodo_01", "estalactite_01", "estalactite_02", "resina_01", "corrente_01", "corrente_02", "osso_01", "lanterna_01", "lanterna_02", "sino_01", "veu_01", "taca_01", "espelho_ornado_01", "coluna_01", "flor_01", "taca_dourada_01", "fragmento_01", "runa_01", "nucleo_01", "dagruve_estrutura_01", "docas_estrutura_01", "shedaklah_estrutura_01", "molor_estrutura_01", "durao_estrutura_01", "feng_tu_estrutura_01", "shendilavri_estrutura_01", "goranthis_estrutura_01", "pilares_estrutura_01") var kind := "pilar": set = _set_kind
+@export_enum("docas_guindaste", "pilar", "cogumelo", "bolha", "rocha", "torii", "cristal", "cachoeira", "pilar_abissal", "braseiro", "caixote", "velas", "livros", "barril", "rede", "ossos", "doca", "carga", "margem", "esporo_01", "esporo_02", "lodo_01", "estalactite_01", "estalactite_02", "resina_01", "corrente_01", "corrente_02", "osso_01", "lanterna_01", "lanterna_02", "sino_01", "veu_01", "taca_01", "espelho_ornado_01", "coluna_01", "flor_01", "taca_dourada_01", "fragmento_01", "runa_01", "nucleo_01", "dagruve_estrutura_01", "docas_estrutura_01", "shedaklah_estrutura_01", "molor_estrutura_01", "durao_estrutura_01", "feng_tu_estrutura_01", "shendilavri_estrutura_01", "goranthis_estrutura_01", "pilares_estrutura_01") var kind := "pilar": set = _set_kind
 @export var height := 60.0: set = _set_height
 @export var half_width := 22.0: set = _set_hw
 @export var block_radius := 0.4   ## raio de colisão em tiles
@@ -58,6 +58,8 @@ func _ellipse(c: Vector2, rx: float, ry: float, n: int = 20) -> PackedVector2Arr
 func _prop_texture() -> Texture2D:
 	var seed_value := absi(int(round(position.x / 32.0)) * 31 + int(round(position.y / 16.0)) * 17)
 	var variant := seed_value % 3 + 1
+	if kind == "docas_guindaste":
+		variant = 1
 	var path := "res://assets/props/%s.png" % kind if kind in ["esporo_01", "esporo_02", "lodo_01", "estalactite_01", "estalactite_02", "resina_01", "corrente_01", "corrente_02", "osso_01", "lanterna_01", "lanterna_02", "sino_01", "veu_01", "taca_01", "espelho_ornado_01", "coluna_01", "flor_01", "taca_dourada_01", "fragmento_01", "runa_01", "nucleo_01", "dagruve_estrutura_01", "docas_estrutura_01", "shedaklah_estrutura_01", "molor_estrutura_01", "durao_estrutura_01", "feng_tu_estrutura_01", "shendilavri_estrutura_01", "goranthis_estrutura_01", "pilares_estrutura_01"] else "res://assets/props/%s_%02d.png" % [kind, variant]
 	if path != _texture_path:
 		_texture_path = path

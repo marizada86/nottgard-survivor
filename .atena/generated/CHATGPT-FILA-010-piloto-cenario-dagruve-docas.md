@@ -2,7 +2,7 @@
 id: "CHATGPT-FILA-010"
 type: "fila-de-prompts"
 title: "Fila — fundos e props do piloto Dagruve + Docas (ART-025, ART-026)"
-status: "pronta para envio — nada executado"
+status: "gerada e integrada localmente em 2026-10-02 sob pedido do dono; EVID-145"
 created: "2026-10-01"
 relations: ["[[ART-PROMPTS-040-fundos-das-fases-piloto-dagruve-docas]]", "[[ART-PROMPTS-041-props-tematicos-piloto-dagruve-docas]]"]
 ---
@@ -16,7 +16,7 @@ Referências: fundos → `assets/stages/dagruve_thumb.png` (Docas ainda sem mini
 
 #### C01 - `dagruve_fundo` (ART-025)
 
-- [ ] gerada · [ ] aprovada
+- [x] gerada · [ ] aprovada
 
 ```text
 Use case: stylized-concept
@@ -29,7 +29,7 @@ Constraints: imagem opaca, sem texto, logotipo, HUD, personagens ou criaturas, s
 ```n
 #### C02 - `docas_fundo` (ART-025)
 
-- [ ] gerada · [ ] aprovada
+- [x] gerada · [ ] aprovada
 
 ```text
 Use case: stylized-concept
@@ -42,7 +42,7 @@ Constraints: imagem opaca, sem texto, logotipo, HUD, personagens ou criaturas, s
 ```n
 #### C03 - `dagruve_estrada_trecho` (ART-026)
 
-- [ ] gerada · [ ] aprovada
+- [x] gerada · [ ] aprovada
 
 ```text
 Use case: stylized-concept
@@ -54,7 +54,7 @@ Constraints: fundo liso magenta #FF00FF, sem texto, sem personagens, quadrado
 ```n
 #### C04 - `dagruve_carroca_abandonada` (ART-026)
 
-- [ ] gerada · [ ] aprovada
+- [x] gerada · [ ] aprovada
 
 ```text
 Use case: stylized-concept
@@ -66,7 +66,7 @@ Constraints: fundo liso magenta #FF00FF, sem texto, sem personagens, quadrado
 ```n
 #### C05 - `dagruve_selo_sacrificial` (ART-026)
 
-- [ ] gerada · [ ] aprovada
+- [x] gerada · [ ] aprovada
 
 ```text
 Use case: stylized-concept
@@ -78,7 +78,7 @@ Constraints: fundo liso ciano #00FFFF, sem texto legível, sem personagens, quad
 ```n
 #### C06 - `dagruve_poco_oferendas` (ART-026)
 
-- [ ] gerada · [ ] aprovada
+- [x] gerada · [ ] aprovada
 
 ```text
 Use case: stylized-concept
@@ -90,7 +90,7 @@ Constraints: fundo liso magenta #FF00FF, sem texto, sem personagens, quadrado
 ```n
 #### C07 - `docas_cais_trecho` (ART-026)
 
-- [ ] gerada · [ ] aprovada
+- [x] gerada · [ ] aprovada
 
 ```text
 Use case: stylized-concept
@@ -102,7 +102,7 @@ Constraints: fundo liso magenta #FF00FF, sem texto, sem personagens, quadrado
 ```n
 #### C08 - `docas_guindaste` (ART-026)
 
-- [ ] gerada · [ ] aprovada
+- [x] gerada · [ ] aprovada
 
 ```text
 Use case: stylized-concept
@@ -114,7 +114,7 @@ Constraints: fundo liso magenta #FF00FF, sem texto, sem personagens, quadrado
 ```n
 #### C09 - `docas_pilha_de_carga` (ART-026)
 
-- [ ] gerada · [ ] aprovada
+- [x] gerada · [ ] aprovada
 
 ```text
 Use case: stylized-concept
@@ -126,7 +126,7 @@ Constraints: fundo liso magenta #FF00FF, sem texto, sem personagens, quadrado
 ```n
 #### C10 - `docas_carga_solta` (ART-026)
 
-- [ ] gerada · [ ] aprovada
+- [x] gerada · [ ] aprovada
 
 ```text
 Use case: stylized-concept
@@ -138,7 +138,7 @@ Constraints: fundo liso ciano #00FFFF, sem texto legível, sem personagens, quad
 ```n
 #### C11 - `docas_guincho_do_cais` (ART-026)
 
-- [ ] gerada · [ ] aprovada
+- [x] gerada · [ ] aprovada
 
 ```text
 Use case: stylized-concept

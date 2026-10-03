@@ -290,13 +290,50 @@ func show_evolution(b: Battle) -> void:
 	root.color = Color(0, 0, 0, 0.74)
 	root.set_anchors_preset(Control.PRESET_FULL_RECT)
 	root.mouse_filter = Control.MOUSE_FILTER_STOP
+	add_child(root)
 	var center := CenterContainer.new()
 	center.set_anchors_preset(Control.PRESET_FULL_RECT)
 	root.add_child(center)
 	var col := VBoxContainer.new()
 	col.alignment = BoxContainer.ALIGNMENT_CENTER
 	col.add_theme_constant_override("separation", 14)
-	center.add_child(col)
+	col.z_index = 2
+	var panel_path := "res://assets/ui/evolucao_painel_moldura.png"
+	if ResourceLoader.exists(panel_path):
+		var panel := PanelContainer.new()
+		panel.custom_minimum_size = Vector2(800, 520)
+		var style := StyleBoxTexture.new()
+		style.texture = load(panel_path)
+		for edge in [SIDE_LEFT, SIDE_RIGHT, SIDE_TOP, SIDE_BOTTOM]:
+			style.set_texture_margin(edge, 70)
+			style.set_content_margin(edge, 90 if edge == SIDE_BOTTOM else 70)
+		panel.add_theme_stylebox_override("panel", style)
+		center.add_child(panel)
+		panel.add_child(col)
+	else:
+		center.add_child(col)
+	var flare_path := "res://assets/vfx/vfx_evolucao_flare.png"
+	if ResourceLoader.exists(flare_path) and not Game.reduced_impact():
+		var flare := TextureRect.new()
+		var atlas := AtlasTexture.new()
+		atlas.atlas = load(flare_path)
+		atlas.region = Rect2(0, 0, 256, 256)
+		flare.texture = atlas
+		flare.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		flare.set_anchors_preset(Control.PRESET_CENTER)
+		flare.offset_left = -240
+		flare.offset_right = 240
+		flare.offset_top = -240
+		flare.offset_bottom = 240
+		flare.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		flare.modulate.a = 0.5
+		flare.z_index = 1
+		root.add_child(flare)
+		var flash := root.create_tween()
+		for frame in 4:
+			flash.tween_callback(func(): atlas.region = Rect2((frame % 2) * 256, (frame / 2) * 256, 256, 256))
+			flash.tween_interval(0.12)
+		flash.tween_callback(flare.queue_free)
 	var title := Label.new()
 	title.text = "★  EVOLUÇÃO  ★"
 	title.add_theme_font_size_override("font_size", 38)
@@ -343,7 +380,6 @@ func show_evolution(b: Battle) -> void:
 	hint.add_theme_color_override("font_color", Color(0.55, 0.55, 0.55))
 	hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	col.add_child(hint)
-	add_child(root)
 	_evo_root = root
 	root.modulate.a = 0.0
 	col.pivot_offset = col.size * 0.5
