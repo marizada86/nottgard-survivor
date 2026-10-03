@@ -18,19 +18,19 @@ Fila [CHATGPT-FILA-024](../generated/CHATGPT-FILA-024-regerar-tiras-dos-herois.m
 
 ### Execução local de 2026-10-02
 
-Pedido do dono: executar os prompts e adicionar as imagens ao jogo. FILA-024 W02 Korrak move_e corrigido e integrado após auditoria; W01 Kayron aguarda decisão sobre limpeza de alfa após três tentativas. Progresso rastreado em [PLAN-053](../vault/drafts/PLAN-053-fila-de-imagens-2026-10-02.md).
+Pedido do dono: executar os prompts e adicionar as imagens ao jogo. FILA-024 W01–W15 e A01–A10 corrigidos e integrados após auditoria. Últimas correções: Kayron SE v04 e Korrak active v04, com alfa do gerador preservado. Progresso rastreado em [PLAN-053](../vault/drafts/PLAN-053-fila-de-imagens-2026-10-02.md).
 
 - ART-024: miniatura de Docas gerada e integrada.
 - FILA-009 T01: fundo de título gerado e integrado.
 - ART-025/026, FILA-010 C01–C11: fundos e nove props gerados e integrados ao piloto; capturas runtime conferidas (estrada, cais, carroça, carga, guindaste, selo, armadilha, poço e oficina).
 - ART-027, FILA-011 S01–S02: isca e explosão em quatro quadros geradas e integradas; primeira isca rejeitada por corte e halo, segunda utilizada.
-- ART-021: as três identidades limpas de Molor foram aprovadas pelo dono. Bolha de Slime e Cultista: 40 quadros e oito ciclos integrados; Blogbog pendente pela prioridade da FILA-024. Limpeza técnica de alfa autorizada, originais preservados.
+- ART-021: as três identidades limpas de Molor foram aprovadas pelo dono. Bolha de Slime, Cultista e Blogbog: 66 quadros e 13 ciclos integrados. Limpeza técnica de alfa autorizada, originais preservados.
 - FILA-011 S03–S05: ampulheta, doação e aposta geradas e integradas.
 - FILA-012 U07–U09: subida de nível, flare e moldura de evolução gerados e integrados; U01–U06 continuam condicionados às mecânicas pendentes.
 - HQs reconciliadas: `data/hqs.json` já registra HQN-01–14, com 56 PNGs existentes e nenhum caminho ausente. EVID-128 e EVID-133 documentam integração e prévia. Não regenerar a FILA-002 por causa do estado histórico abaixo.
 - FILA-020: A03 v02 e B03 aprovados pelo dono; os 12 quadros foram gerados e integrados em dois atlas. Sete cores, oito direções, duração e efeitos reduzidos conferidos. Build em `build/image-priority-vfx/NottgardSurvivors.exe`; suite com 0 falhas.
 - FILA-021: C03 v02 e D03 v01 aprovados; Estocada e Chicote completos e integrados, seis quadros por efeito. Sete cores e duração capturadas.
-- Total: 34 PNGs integrados (33 novos + substituição de Korrak move_e); testes com 0 falhas, smoke das nove fases e build local `build/image-priority-molor/NottgardSurvivors.exe` (4510c64+). Detalhes em [EVID-145](../evidence/EVID-145-fila-de-imagens-prioritaria-2026-10-02.md).
+- Total: 88 PNGs integrados (50 fora dos heróis + 38 tiras de heróis substituídas/corrigidas, incluindo dois reempacotamentos técnicos). Molor concluído; oito identidades v03 de Shedaklah aprovadas pelo dono. Servo, Cogumelo Fúngico e Esporo Voador concluídos e integrados,60quadros/12tiras; testes focados0falhas e capturas runtime conferidas. Limo de Juiblex parcialmente gerado; bloqueado pelo limite do gerador. Build local `build/image-priority-shedaklah-partial/NottgardSurvivors.exe` (57be050+) contém os 88 PNGs; suite zero falhas, smoke nove fases, exportação e abertura verificadas. Validação em [EVID-145](../evidence/EVID-145-fila-de-imagens-prioritaria-2026-10-02.md).
 
 As tabelas históricas abaixo preservam a prioridade anterior; esta seção registra o estado mais recente e evita gerar novamente os itens acima. Admissão local feita sob o pedido de 2026-10-02, sem atribuir aprovação visual individual ao dono.
 
@@ -171,3 +171,5 @@ Texto integral das células antes do enxugamento de 2026-09-30.
 
 ### ART-021
 **Decisões D-A1 a D-A6 aprovadas (2026-09-29).** Piloto `cultista_adaga` preparado: [ART-PROMPTS-031](../generated/ART-PROMPTS-031-piloto-animacao-cultista-adaga.md), fila [CHATGPT-FILA-004](../generated/CHATGPT-FILA-004-piloto-cultista-adaga.md) (24 imagens, E01–E24). Integração em `ui/enemy_view.gd` é mecânica.
+
+2026-10-03: Servo, Cogumelo e Esporo integrados (60 quadros / 12 tiras), manifesto 88 PNGs. Suite zero falhas; smoke nove fases ok. Limo: sete novos quadros preservados (idle_01–03, move_00–03), mais idle_00 aprovado; faltam 12 quadros. Gerador bloqueado por HTTP 429 usage_limit_reached; liberação prevista 03/10/2026 10:19:52 America/Sao_Paulo. Pudim, Gargula, Receptaculo e Zuggtmoy aguardam 79 quadros; retomada total 91 prompts em shedaklah-resume-after-limit-2026-10-03.json. Nenhum ciclo incompleto foi admitido.

@@ -97,3 +97,15 @@ Origem: [EVID-139](../evidence/EVID-139-playtest-higor-qa-14b15e4-2026-10-01.md)
 | IN-046 | Movimento dos inimigos aprovado; seguir com novos inimigos | sem ação (registro) |
 | IN-047 | Cenário sem sentido; estradas, carroças, destrutíveis, armadilhas | MEC-030, ART-025, ART-026 |
 | IN-048 | Jogo "cru, sem alma"; dopamina, história, fundos | MEC-031, MEC-032, ART-025 |
+
+## Classificados — relato de T03 (Daniel) via dono, 2026-10-03
+
+Origem: relato verbal passado pelo dono (sem pacote de evidência; build não
+informada). Plano: [PLAN-055](../vault/drafts/PLAN-055-mapas-vivos-segredos-e-dificuldade-2026-10-03.md).
+
+| ID | Tema | Destino |
+|---|---|---|
+| IN-049 | Jogo fácil demais | BAL-001 (+1 relato T03), BAL-016, MEC-040 |
+| IN-050 | Falta coisa para fazer no mapa; mapa maior com coisas escondidas | MEC-012 (reabre com outro escopo), MEC-039 |
+| IN-051 | Referências à história de Nottgard (Vault) no mapa | MEC-032, MEC-039 |
+| IN-052 | Dono: enjoa depois do 3º ou 4º mapa; eventos exclusivos por mapa | MEC-005 (+1 relato), MEC-038 |
