@@ -29,11 +29,15 @@ const HERO_IDLE_ART_HEIGHT := {
 ## Eles andam com o próprio idle (sem espelhar, para a arma ficar sempre do mesmo lado) e um balanço procedural.
 const PROCEDURAL_WALK_HEROES := [&"korrak"]
 ## Direções já regeneradas e aprovadas pela auditoria técnica (FILA-024).
-const VALIDATED_WALK_DIRECTIONS := {&"korrak": [&"move_e", &"move_se", &"move_s", &"move_ne"]}
+## As direções oeste/sudoeste/noroeste usam as tiras validadas espelhadas e o norte usa a própria tira: andar com o idle
+## deslizava sem pernas. O balanço procedural fica só para direções fora desta lista.
+const VALIDATED_WALK_DIRECTIONS := {&"korrak": [&"move_e", &"move_se", &"move_s", &"move_ne", &"move_n", &"move_w", &"move_sw", &"move_nw"]}
 ## Sem quique vertical: o passo de quem anda com o idle é só uma inclinação suave (o quique parecia saltitar).
 const WALK_BOB_PX := 0.0
 ## Histerese da direção: só troca de setor quando o movimento passa bem da fronteira (evita alternar tira/idle).
 const WALK_SECTOR_HYSTERESIS := 0.75
+## Ticks parados antes de voltar ao idle: bloqueios curtos (props, colisão) não alternam idle/caminhada a cada tick.
+const WALK_STOP_GRACE_TICKS := 8
 const WALK_SWAY_RAD := 0.045
 const WALK_STEP_HZ := 3.2
 const WALK_SETTLE_SPEED := 14.0
@@ -61,6 +65,7 @@ var _walking := false
 var _procedural_walking := false
 var _walk_phase := 0.0
 var _walk_sector := -1
+var _still_ticks := 0
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
@@ -138,14 +143,20 @@ func sync_visual(screen_position: Vector2, is_dead: bool, is_flash: bool) -> voi
 			sprite.play(&"death")
 		elif not dead and not _action_locked:
 			var desired: StringName = &"idle"
-			_walking = moving
-			var movement_delta := _stable_direction(screen_position - _last_screen_position) if moving else Vector2.ZERO
-			if not moving:
+			_still_ticks = 0 if moving else _still_ticks + 1
+			var walking := moving or (_walk_sector >= 0 and _still_ticks < WALK_STOP_GRACE_TICKS)
+			if not walking:
 				_walk_sector = -1
-			_procedural_walking = moving and uses_procedural_walk_for_direction(_active_hero_id, movement_delta)
-			if uses_procedural_walk(_active_hero_id) and (not moving or _procedural_walking):
+			_walking = walking
+			var movement_delta := Vector2.ZERO
+			if moving:
+				movement_delta = _stable_direction(screen_position - _last_screen_position)
+			elif walking:
+				movement_delta = Vector2.RIGHT.rotated(_walk_sector * TAU / 8.0)
+			_procedural_walking = walking and uses_procedural_walk_for_direction(_active_hero_id, movement_delta)
+			if uses_procedural_walk(_active_hero_id) and (not walking or _procedural_walking):
 				sprite.flip_h = false
-			elif moving:
+			elif walking:
 				desired = _walk_animation(movement_delta)
 				sprite.flip_h = walk_flips_horizontally(movement_delta)
 				if uses_procedural_walk(_active_hero_id):
