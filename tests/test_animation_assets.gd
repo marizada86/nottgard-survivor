@@ -1,6 +1,14 @@
 extends RefCounted
 
 const ASSETS := {
+	"res://assets/animations/enemies/pudim_negro/idle.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/pudim_negro/move.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/pudim_negro/attack.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/pudim_negro/death.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/slime_de_juiblex/idle.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/slime_de_juiblex/move.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/slime_de_juiblex/attack.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/slime_de_juiblex/death.png": Vector2i(1536, 384),
 	"res://assets/animations/enemies/esporo_voador/idle.png": Vector2i(1024, 384),
 	"res://assets/animations/enemies/esporo_voador/move.png": Vector2i(1536, 384),
 	"res://assets/animations/enemies/esporo_voador/attack.png": Vector2i(1024, 384),
@@ -155,6 +163,8 @@ const MINIMUM_VISIBLE_COVERAGE := {
 }
 
 const WAVE_ONE_ENEMY_ANIMATIONS := {
+	"pudim_negro": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
+	"slime_de_juiblex": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
 	"esporo_voador": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
 	"cogumelo_fungico": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
 	"servo_de_zuggtmoy": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
@@ -639,3 +649,5 @@ func _visible_coverage(image: Image) -> float:
 			if image.get_pixel(x, y).a > 0.04:
 				visible += 1
 	return float(visible) / float(sampled) if sampled > 0 else 0.0
+
+

@@ -8,6 +8,8 @@ const SHADOW_LIFT := 0.4
 ## Raio da sombra (px) por px de altura visível do inimigo: grande tem sombra grande, pequeno, pequena.
 const SHADOW_RADIUS_PER_HEIGHT := 0.2
 const ANIMATED := {
+	"pudim_negro": {"cell": Vector2i(256, 384), "body_height": 109.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
+	"slime_de_juiblex": {"cell": Vector2i(256, 384), "body_height": 105.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
 	"esporo_voador": {"cell": Vector2i(256, 384), "body_height": 190.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
 	"cogumelo_fungico": {"cell": Vector2i(256, 384), "body_height": 188.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
 	"servo_de_zuggtmoy": {"cell": Vector2i(256, 384), "body_height": 110.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
@@ -29,6 +31,8 @@ const ANIMATED := {
 }
 ## Linha dos pés no idle (px na célula); ancora o sprite na sombra em vez da borda da célula.
 const FEET_Y := {
+	"pudim_negro": 356.0,
+	"slime_de_juiblex": 356.0,
 	"esporo_voador": 356.0,
 	"cogumelo_fungico": 356.0,
 	"servo_de_zuggtmoy": 356.0,
@@ -213,3 +217,5 @@ func _draw() -> void:
 		draw_rect(Rect2(-bar_width * 0.5, top, bar_width * fraction, 3), Color(0.8, 0.15, 0.15))
 	if enemy != null and enemy.stun_t > 0.0:
 		draw_string(ThemeDB.fallback_font, Vector2(-6, -H_BASE * actor_scale - 12), "✦", HORIZONTAL_ALIGNMENT_LEFT, -1, 14, Color(1, 1, 0.5))
+
+

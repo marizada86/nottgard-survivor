@@ -1,7 +1,7 @@
 ---
 id: "CHATGPT-FILA-013"
 title: "Fila de geração — animações dos inimigos de Shedaklah"
-status: "I01–I08 v03 aprovadas pelo dono; três alvos integrados; restante bloqueado por limite do gerador; EVID-145"
+status: "I01–I08 aprovadas; cinco alvos integrados; Gárgula em geração; EVID-145"
 created: "2026-10-01"
 relations: ["[[ART-PROMPTS-044-mobs-shedaklah]]", "[[PLAN-041-animacao-padrao-zumbi-para-inimigos-e-interacoes-2026-09-29]]"]
 ---
@@ -110,41 +110,41 @@ Destino: `.atena/generated/art-candidates/enemies-shedaklah/slime_de_juiblex/`
 - [x] `move_01`
 - [x] `move_02`
 - [x] `move_03`
-- [ ] `move_04`
-- [ ] `move_05`
-- [ ] `attack_00`
-- [ ] `attack_01`
-- [ ] `attack_02`
-- [ ] `attack_03`
-- [ ] `death_00`
-- [ ] `death_01`
-- [ ] `death_02`
-- [ ] `death_03`
-- [ ] `death_04`
-- [ ] `death_05`
+- [x] `move_04`
+- [x] `move_05`
+- [x] `attack_00`
+- [x] `attack_01`
+- [x] `attack_02`
+- [x] `attack_03`
+- [x] `death_00`
+- [x] `death_01`
+- [x] `death_02`
+- [x] `death_03`
+- [x] `death_04`
+- [x] `death_05`
 
 ### `pudim_negro` — Pudim Negro (19 quadros a gerar, fora o `idle_00`)
 Destino: `.atena/generated/art-candidates/enemies-shedaklah/pudim_negro/`
 
-- [ ] `idle_01`
-- [ ] `idle_02`
-- [ ] `idle_03`
-- [ ] `move_00`
-- [ ] `move_01`
-- [ ] `move_02`
-- [ ] `move_03`
-- [ ] `move_04`
-- [ ] `move_05`
-- [ ] `attack_00`
-- [ ] `attack_01`
-- [ ] `attack_02`
-- [ ] `attack_03`
-- [ ] `death_00`
-- [ ] `death_01`
-- [ ] `death_02`
-- [ ] `death_03`
-- [ ] `death_04`
-- [ ] `death_05`
+- [x] `idle_01`
+- [x] `idle_02`
+- [x] `idle_03`
+- [x] `move_00`
+- [x] `move_01`
+- [x] `move_02`
+- [x] `move_03`
+- [x] `move_04`
+- [x] `move_05`
+- [x] `attack_00`
+- [x] `attack_01`
+- [x] `attack_02`
+- [x] `attack_03`
+- [x] `death_00`
+- [x] `death_01`
+- [x] `death_02`
+- [x] `death_03`
+- [x] `death_04`
+- [x] `death_05`
 
 ### `gargula` — Gárgula (19 quadros a gerar, fora o `idle_00`)
 Destino: `.atena/generated/art-candidates/enemies-shedaklah/gargula/`
@@ -229,4 +229,4 @@ Oito identidades v03,1254×1254, geradas individualmente; versões v01/v02 prese
 
 Aprovação explícita das oito identidades v03 recebida do dono: “atena, está aprovado, pode prosseguir”. Ciclos autorizados; primeiro alvo Servo de Zuggtmoy.
 
-2026-10-03: Servo, Cogumelo e Esporo integrados (60 quadros / 12 tiras), manifesto 88 PNGs. Suite zero falhas; smoke nove fases ok. Limo: sete novos quadros preservados (idle_01–03, move_00–03), mais idle_00 aprovado; faltam 12 quadros. Gerador bloqueado por HTTP 429 usage_limit_reached; liberação prevista 03/10/2026 10:19:52 America/Sao_Paulo. Pudim, Gargula, Receptaculo e Zuggtmoy aguardam 79 quadros; retomada total 91 prompts em shedaklah-resume-after-limit-2026-10-03.json. Nenhum ciclo incompleto foi admitido.
+2026-10-03: Servo, Cogumelo e Esporo integrados (60 quadros / 12 tiras), manifesto 88 PNGs. Suite zero falhas; smoke nove fases ok. Limo: sete novos quadros preservados (idle_01–03, move_00–03), mais idle_00 aprovado; faltam 12 quadros. Gerador bloqueado por HTTP 429 usage_limit_reached; liberação prevista 03/10/2026 10:19:52 America/Sao_Paulo. Pudim, Gargula, Receptaculo e Zuggtmoy aguardam 82 quadros; retomada total 94 prompts em shedaklah-resume-after-limit-2026-10-03.json. Nenhum ciclo incompleto foi admitido.

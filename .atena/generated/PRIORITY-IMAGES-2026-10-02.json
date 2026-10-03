@@ -2,7 +2,7 @@
   "created": "2026-10-02",
   "generator": "built-in imagegen",
   "authorization": "Pedido do dono em 2026-10-02",
-  "count": 88,
+  "count": 96,
   "assets": [
     {
       "path": "assets/stages/docas_thumb.png",
@@ -621,6 +621,62 @@
       "height": 384,
       "corner_alpha": 0,
       "sha256": "ac74e8865ac4ce06c8edb30c522110b5ec3f3ab99cf6b4fe178d3da3a7c518a7"
+    },
+    {
+      "path": "assets/animations/enemies/slime_de_juiblex/idle.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "3b6d977a74dc50c741b4c9ae143496ab9d4e2a717057fa96613a8264759c69c5"
+    },
+    {
+      "path": "assets/animations/enemies/slime_de_juiblex/move.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "a5ccd380d195fadc0cdfddf854423f532da4473b02c1994342ca2ce077175740"
+    },
+    {
+      "path": "assets/animations/enemies/slime_de_juiblex/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "909ab1073052004ea2cd4956aacc2ec8e86912dc2f5a76d72a9257b33a286ea4"
+    },
+    {
+      "path": "assets/animations/enemies/slime_de_juiblex/death.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "c732bee6e33088f787fe00112cb99ce8c3dba66878dd9b173972c6e795f599b6"
+    },
+    {
+      "path": "assets/animations/enemies/pudim_negro/idle.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "f38752139b6eab4b71cfa94393da563c665a6701094329456e5ee5b1282b3b92"
+    },
+    {
+      "path": "assets/animations/enemies/pudim_negro/move.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "9ae7a2af6d4b35275d567b25e4e1aa91ec63ee44aed39dd10edf5ac2c0315d6b"
+    },
+    {
+      "path": "assets/animations/enemies/pudim_negro/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "e9d8e1c28fa115547bac4d60871fdb87a53ea83b57058e7a70d6516c96e39bdf"
+    },
+    {
+      "path": "assets/animations/enemies/pudim_negro/death.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "e591a1da0e291714b4f713a917d3a63033554b67d35b4f0ca178c94531b4a032"
     }
   ]
 }
