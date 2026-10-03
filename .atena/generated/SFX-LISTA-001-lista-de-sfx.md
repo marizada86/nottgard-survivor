@@ -7,8 +7,8 @@
 - **Todo evento de som já existe como placeholder sintético**, gerado por `tools/generate_audio.js`
   (WAV mono, 16 bit, 22 050 Hz) e registrado em `data/audio_manifest.json`. São **~280 eventos**.
 - Substituir um som = trocar o `.wav` no mesmo caminho do manifesto (ou apontar `files` para um `.ogg`/`.wav` novo).
-  **Atenção:** rodar `node tools/generate_audio.js` de novo **sobrescreve** os arquivos. Antes de trocar o primeiro
-  som real, isso precisa de uma proteção (gerar só o que estiver faltando).
+  O `node tools/generate_audio.js` agora **só preenche lacunas**: mantém os eventos, aliases e WAVs que já existem.
+  `--force` refaz tudo e **apaga os sons reais**; não use depois de começar a substituir.
 - O código cai num som genérico quando o específico não existe (`core/sfx.gd`):
   `weapon.X.fire` → `combat.swing/magic/nova/zone`, `hero.X.active` → `combat.magic`,
   `boss.X.*` → `boss.arrival`, `enemy.X.*` → `enemy.action/death`.
@@ -19,7 +19,11 @@
 
 ---
 
-## P0 — eventos chamados pelo código que **não existem** no manifesto (hoje ficam mudos)
+## P0 — eventos que o código chama e que estavam mudos
+
+> Desde o commit 32754f7, cada um tem um **alias provisório** para o placeholder mais próximo (veja `aliases` no
+> manifesto). Ao criar o evento próprio com o mesmo nome, **remova o alias** do manifesto e do gerador:
+> o alias é resolvido antes do evento e, se ficar, continua tocando o placeholder.
 
 | Evento chamado | Onde | O que deveria soar | Fonte |
 |---|---|---|---|
