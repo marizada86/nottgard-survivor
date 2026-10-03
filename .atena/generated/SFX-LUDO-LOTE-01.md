@@ -43,7 +43,7 @@
 | # | Evento | Prompt |
 |---|---|---|
 | 20 | `progress.xp` | Fantasy RPG game sound effect, collecting a small experience gem, tiny crystal pling, very short, bright, clean, no music, no background |
-| 21 | `progress.levelup` | Fantasy RPG game sound effect, level up, short heroic magical fanfare with rising shimmer and choir, gothic dark fantasy, clean, no background |
+| 21 | ~~`progress.levelup`~~ ✅ | Fantasy RPG game sound effect, level up, short heroic magical fanfare with rising shimmer and choir, gothic dark fantasy, clean, no background |
 | 22 | `progress.item` | Fantasy RPG game sound effect, revealing a rare magic item, bright shimmer swelling into a sparkling chime, short, clean, no music, no background |
 | 23 | `world.chest` | Fantasy RPG game sound effect, small wooden treasure chest opening, creak and latch click with a light sparkle, short, dry, clean, no music, no background |
 
@@ -61,3 +61,8 @@
 | 26 | `enemy.telegraph` | Fantasy RPG game sound effect, enemy attack warning, short ominous rising whoosh with low magical hum, clean, no music, no background |
 | 27 | `boss.arrival` | Fantasy RPG game sound effect, boss arrival, deep tolling bell and distant monstrous roar, dark gothic, clean, no music, no background |
 | 28 | `result.victory` | Fantasy RPG game sound effect, victory sting, short triumphant brass and choir flourish, dark fantasy, 3 seconds, clean, no background |
+
+## Situação em 2026-10-03
+
+Créditos esgotados com **12 de 28** instalados: bloco A (9), bloco E (2) e `progress.levelup` (#21).
+Ficam para o próximo lote: #10–20 e #22–28, com os prompts acima prontos.
