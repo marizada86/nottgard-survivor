@@ -594,6 +594,96 @@
       "cooldown_ms": 35,
       "priority": 3
     },
+    "progress.gold": {
+      "files": [
+        "res://assets/audio/sfx/progress/progress.gold_01.mp3"
+      ],
+      "bus": "UI",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 45,
+      "priority": 2
+    },
+    "progress.potion": {
+      "files": [
+        "res://assets/audio/sfx/progress/progress.potion_01.mp3"
+      ],
+      "bus": "UI",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 45,
+      "priority": 2
+    },
+    "progress.magnet": {
+      "files": [
+        "res://assets/audio/sfx/progress/progress.magnet_01.mp3"
+      ],
+      "bus": "UI",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 45,
+      "priority": 2
+    },
+    "world.boss_chest": {
+      "files": [
+        "res://assets/audio/sfx/progress/world.boss_chest_01.mp3"
+      ],
+      "bus": "UI",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 3
+    },
+    "world.loja": {
+      "files": [
+        "res://assets/audio/sfx/progress/world.loja_01.mp3"
+      ],
+      "bus": "UI",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 3
+    },
+    "world.curandeiro": {
+      "files": [
+        "res://assets/audio/sfx/progress/world.curandeiro_01.mp3"
+      ],
+      "bus": "UI",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 3
+    },
+    "world.ampulheta": {
+      "files": [
+        "res://assets/audio/sfx/progress/world.ampulheta_01.mp3"
+      ],
+      "bus": "UI",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 3
+    },
+    "world.doacao": {
+      "files": [
+        "res://assets/audio/sfx/progress/world.doacao_01.mp3"
+      ],
+      "bus": "UI",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 3
+    },
+    "world.aposta": {
+      "files": [
+        "res://assets/audio/sfx/progress/world.aposta_01.mp3"
+      ],
+      "bus": "UI",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 3
+    },
     "world.chest": {
       "files": [
         "res://assets/audio/sfx/progress/world.chest_01.wav",
@@ -2635,16 +2725,7 @@
     "boss": "boss.arrival",
     "click": "ui.click",
     "win": "result.victory",
-    "dead": "result.defeat",
-    "progress.gold": "progress.coin",
-    "progress.potion": "progress.fountain",
-    "progress.magnet": "progress.unlock",
-    "world.boss_chest": "world.chest",
-    "world.loja": "progress.coin",
-    "world.curandeiro": "player.heal",
-    "world.ampulheta": "progress.reroll",
-    "world.doacao": "progress.coin",
-    "world.aposta": "progress.reroll"
+    "dead": "result.defeat"
   },
   "music": {
     "menu": "res://assets/audio/music/menu.wav",

@@ -19,7 +19,7 @@
 
 ---
 
-## P0 — eventos que o código chama e que estavam mudos
+## P0 — eventos que o código chama e que estavam mudos (**concluída 2026-10-03, todos com som real do Ludo**)
 
 > Desde o commit 32754f7, cada um tem um **alias provisório** para o placeholder mais próximo (veja `aliases` no
 > manifesto). Ao criar o evento próprio com o mesmo nome, **remova o alias** do manifesto e do gerador:
@@ -27,16 +27,16 @@
 
 | Evento chamado | Onde | O que deveria soar | Fonte |
 |---|---|---|---|
-| `progress.gold` | coleta de ouro (`ui/run.gd:974`) | moeda tilintando, curta. Já existe `progress.coin` sem uso: **basta um alias** | K / S |
-| `progress.potion` | coleta de poção | rolha + gole/brilho (o `player.heal` toca junto) | F / S |
-| `progress.magnet` | coleta do ímã | "puxão" mágico subindo | S / A |
-| `world.boss_chest` | baú do chefe | baú pesado abrindo + coro/brilho, mais épico que `world.chest` | S |
-| `world.loja` | interação com loja | sino de porta + moedas | F / S |
+| ~~`progress.gold`~~ | coleta de ouro (`ui/run.gd:974`) | moeda tilintando, curta. Já existe `progress.coin` sem uso: **basta um alias** | **feito (Ludo)** |
+| ~~`progress.potion`~~ | coleta de poção | rolha + gole/brilho (o `player.heal` toca junto) | **feito (Ludo)** |
+| ~~`progress.magnet`~~ | coleta do ímã | "puxão" mágico subindo | **feito (Ludo)** |
+| ~~`world.boss_chest`~~ | baú do chefe | baú pesado abrindo + coro/brilho, mais épico que `world.chest` | **feito (Ludo)** |
+| ~~`world.loja`~~ | interação com loja | sino de porta + moedas | **feito (Ludo)** |
 | ~~`world.ferreiro`~~ | interação com ferreiro | **feito 2026-10-03:** som real do Ludo.ai (`world.ferreiro_01.mp3`, 0,76 s) | Ludo |
-| `world.curandeiro` | interação com curandeiro | sino suave + brilho sagrado | S |
-| `world.ampulheta` | interação com ampulheta | areia escorrendo + "tic" de vidro | F |
-| `world.doacao` | interação de doação | moedas caindo numa caixa | F / K |
-| `world.aposta` | interação de aposta | dados rolando em madeira | F / K |
+| ~~`world.curandeiro`~~ | interação com curandeiro | sino suave + brilho sagrado | **feito (Ludo)** |
+| ~~`world.ampulheta`~~ | interação com ampulheta | areia escorrendo + "tic" de vidro | **feito (Ludo)** |
+| ~~`world.doacao`~~ | interação de doação | moedas caindo numa caixa | **feito (Ludo)** |
+| ~~`world.aposta`~~ | interação de aposta | dados rolando em madeira | **feito (Ludo)** |
 
 > Correção do que eu disse antes: o ART-006 falava só de `quebravel`, mas o manifesto já cobre os quebráveis.
 > O que falta de verdade é o que está nesta tabela.

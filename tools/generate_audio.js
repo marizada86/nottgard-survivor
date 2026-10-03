@@ -200,13 +200,7 @@ const manifest = {
     cast: "combat.magic", nova: "combat.nova", hurt: "player.hurt",
     pickup: "progress.xp", gold: "progress.coin", levelup: "progress.levelup",
     item: "progress.item", boom: "combat.explosion", boss: "boss.arrival",
-    click: "ui.click", win: "result.victory", dead: "result.defeat",
-    // Eventos chamados pelo jogo sem som próprio ainda: apontam para o placeholder mais próximo.
-    "progress.gold": "progress.coin", "progress.potion": "progress.fountain",
-    "progress.magnet": "progress.unlock", "world.boss_chest": "world.chest",
-    "world.loja": "progress.coin",
-    "world.curandeiro": "player.heal", "world.ampulheta": "progress.reroll",
-    "world.doacao": "progress.coin", "world.aposta": "progress.reroll"
+    click: "ui.click", win: "result.victory", dead: "result.defeat"
   },
   music: {},
   ambience: {}
