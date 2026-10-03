@@ -32,7 +32,7 @@
 | `progress.magnet` | coleta do ímã | "puxão" mágico subindo | S / A |
 | `world.boss_chest` | baú do chefe | baú pesado abrindo + coro/brilho, mais épico que `world.chest` | S |
 | `world.loja` | interação com loja | sino de porta + moedas | F / S |
-| `world.ferreiro` | interação com ferreiro | martelo na bigorna (2–3 batidas) | S / F |
+| ~~`world.ferreiro`~~ | interação com ferreiro | **feito 2026-10-03:** som real do Ludo.ai (`world.ferreiro_01.mp3`, 0,76 s) | Ludo |
 | `world.curandeiro` | interação com curandeiro | sino suave + brilho sagrado | S |
 | `world.ampulheta` | interação com ampulheta | areia escorrendo + "tic" de vidro | F |
 | `world.doacao` | interação de doação | moedas caindo numa caixa | F / K |
@@ -136,6 +136,16 @@ Música (`music.*`, 13 faixas) e ambiente (`ambience.*`, 9 biomas) também são 
 - SFX curtos em **WAV 44,1 kHz mono 16 bit** (o Godot aceita misturar com os de 22 kHz); loops e música em **OGG**.
 - Normalizar em torno de **-1 dBFS de pico**, cortar o silêncio do início (latência) e aplicar fade-out de 5–10 ms.
 - Manter a convenção de nome `evento_01.wav`, `evento_02.wav`… e o número de variações já previsto no manifesto.
+
+## Ferramentas de IA testadas (2026-10-03)
+
+| Ferramenta | Resultado | Observação |
+|---|---|---|
+| Seedance 2.5 | não deu certo | modelo de vídeo; o áudio vem como subproduto |
+| Adobe Firefly (Generate Sound Effects) | gerou, mas não agradou | — |
+| **Ludo.ai** | **aprovado** (ferreiro) | prompt com vocabulário de jogo: `Fantasy RPG game sound effect, ..., dry, close, clean, no music, no background` |
+
+O MP3 do Ludo entra direto (o Godot importa MP3); `tools/validate_audio.js` aceita MP3/OGG. Conferir licença do plano usado antes do lançamento.
 
 ## Contagem para planejar
 - **P0:** 10 sons

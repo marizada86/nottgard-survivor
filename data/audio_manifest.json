@@ -584,6 +584,16 @@
       "cooldown_ms": 35,
       "priority": 4
     },
+    "world.ferreiro": {
+      "files": [
+        "res://assets/audio/sfx/progress/world.ferreiro_01.mp3"
+      ],
+      "bus": "UI",
+      "volume_db": -7,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 35,
+      "priority": 3
+    },
     "world.chest": {
       "files": [
         "res://assets/audio/sfx/progress/world.chest_01.wav",
@@ -2631,7 +2641,6 @@
     "progress.magnet": "progress.unlock",
     "world.boss_chest": "world.chest",
     "world.loja": "progress.coin",
-    "world.ferreiro": "combat.block",
     "world.curandeiro": "player.heal",
     "world.ampulheta": "progress.reroll",
     "world.doacao": "progress.coin",

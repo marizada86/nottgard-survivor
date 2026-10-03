@@ -19,6 +19,16 @@ function checkWav(resPath) {
     failures.push(`arquivo ausente: ${resPath}`);
     return;
   }
+  // Sons reais podem vir comprimidos (o Godot importa MP3/OGG); para eles só confere a assinatura.
+  if (/\.(mp3|ogg)$/i.test(rel)) {
+    const head = fs.readFileSync(abs).subarray(0, 4);
+    const ok = rel.toLowerCase().endsWith(".ogg")
+      ? head.toString("ascii") === "OggS"
+      : head.toString("ascii", 0, 3) === "ID3" || (head[0] === 0xff && (head[1] & 0xe0) === 0xe0);
+    if (!ok) failures.push(`arquivo comprimido inválido: ${resPath}`);
+    checkedFiles++;
+    return;
+  }
   const header = fs.readFileSync(abs, { encoding: null, flag: "r" }).subarray(0, 12);
   if (header.toString("ascii", 0, 4) !== "RIFF" || header.toString("ascii", 8, 12) !== "WAVE") failures.push(`WAV inválido: ${resPath}`);
   const wav = fs.readFileSync(abs);

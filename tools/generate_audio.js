@@ -204,7 +204,7 @@ const manifest = {
     // Eventos chamados pelo jogo sem som próprio ainda: apontam para o placeholder mais próximo.
     "progress.gold": "progress.coin", "progress.potion": "progress.fountain",
     "progress.magnet": "progress.unlock", "world.boss_chest": "world.chest",
-    "world.loja": "progress.coin", "world.ferreiro": "combat.block",
+    "world.loja": "progress.coin",
     "world.curandeiro": "player.heal", "world.ampulheta": "progress.reroll",
     "world.doacao": "progress.coin", "world.aposta": "progress.reroll"
   },
