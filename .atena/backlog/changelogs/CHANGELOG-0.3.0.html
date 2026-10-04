@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<title>Novidades da versão 0.3.0 — Nottgard Survivors</title>
+<style>
+@page { size: A4; margin: 13mm 14mm; }
+* { box-sizing: border-box; }
+body { font-family: "Segoe UI", Arial, sans-serif; font-size: 10pt; color: #1c1a22; line-height: 1.36; }
+h1 { font-size: 22pt; margin: 0; color: #3b1d4f; }
+.sub { color: #5a5566; margin: 2px 0 10px; font-size: 10.5pt; }
+h2 { font-size: 13pt; margin: 14px 0 5px; color: #3b1d4f; border-bottom: 2px solid #b48ad6; padding-bottom: 2px; break-after: avoid; }
+h3 { font-size: 11pt; margin: 0 0 3px; color: #3b1d4f; }
+p { margin: 3px 0; }
+ul { margin: 3px 0 3px 18px; padding: 0; }
+li { margin: 1px 0; }
+.box { border: 1px solid #c9c2d6; background: #f6f3fa; border-radius: 6px; padding: 8px 12px; margin: 8px 0; break-inside: avoid; }
+.warn { border-color: #e0c27a; background: #fbf5e4; }
+.ok { border-color: #a9d1b0; background: #eef8f0; }
+.card { border: 1px solid #ddd6e8; border-left: 5px solid #7a4ba3; border-radius: 5px; padding: 6px 11px 7px; margin: 7px 0; break-inside: avoid; }
+.card .tag { float: right; font-size: 8pt; font-weight: 700; color: #fff; background: #7a4ba3; border-radius: 9px; padding: 1px 8px; margin-left: 8px; }
+.lbl { font-weight: 700; color: #7a4ba3; }
+.how { background: #f6f3fa; border-radius: 4px; padding: 3px 8px; margin-top: 4px; }
+table { width: 100%; border-collapse: collapse; margin: 4px 0; }
+th { text-align: left; font-size: 9pt; color: #3b1d4f; background: #ece6f4; padding: 4px 6px; }
+td { padding: 4px 6px; border-top: 1px solid #e3deec; vertical-align: top; }
+tr { break-inside: avoid; }
+td.k { white-space: nowrap; font-weight: 700; color: #3b1d4f; }
+.chk li { list-style: none; margin-left: -16px; padding-left: 0; }
+.chk li:before { content: "☐  "; font-size: 12pt; }
+.steps { counter-reset: s; list-style: none; margin-left: 0; }
+.steps li { counter-increment: s; margin: 3px 0; padding-left: 26px; position: relative; }
+.steps li:before { content: counter(s); position: absolute; left: 0; top: 0; width: 19px; height: 19px; border-radius: 50%; background: #7a4ba3; color: #fff; text-align: center; font-weight: 700; font-size: 9pt; line-height: 19px; }
+.small { font-size: 8.8pt; color: #5a5566; }
+.pb { break-before: page; }
+</style></head><body>
+
+<h1>Novidades da versão 0.3.0</h1>
+<p class="sub">Nottgard Survivors · atualização <b>grande</b> · de <b>0.2.3</b> para <b>0.3.0</b> · leitura de uns 5 minutos</p>
+
+<div class="box">
+<b>Resumo em 30 segundos.</b> Vocês disseram que o jogo estava <b>fácil demais</b> e que <b>enjoava depois do 3º ou 4º mapa</b>. Esta versão responde a isso:
+do <b>3º mapa em diante os inimigos batem mais forte</b>, os <b>elites ganham poderes</b>, a cada mapa vem uma <b>horda</b> e <b>cada mapa tem acontecimentos só dele</b>
+(pedidos, escoltas, duelos). Além disso, o <b>chão de todos os mapas foi refeito</b>, os <b>heróis e vários inimigos têm animações novas</b>
+e o jogo ganhou os <b>primeiros sons de verdade</b>.
+</div>
+
+<h2>Antes de jogar: como atualizar (3 passos)</h2>
+<ol class="steps">
+<li>Baixe o arquivo <b>NottgardSurvivors-windows.zip</b> no mesmo lugar de sempre (release <b>latest</b>).</li>
+<li><b>Extraia numa pasta nova</b> (não jogue por cima da antiga) e abra o arquivo <b>.exe</b>.</li>
+<li>Olhe o <b>rodapé</b> do jogo: tem de aparecer <b>0.3.0</b>. Se aparecer outro número, você abriu o jogo antigo.</li>
+</ol>
+<p class="small">Seu progresso (moedas, aprimoramentos, conquistas) fica salvo no computador e continua na versão nova.</p>
+
+<h2>As grandes mudanças</h2>
+
+<div class="card"><span class="tag">DIFICULDADE</span>
+<h3>1. Do 3º mapa em diante, o jogo aperta</h3>
+<p><span class="lbl">Antes:</span> os inimigos ganhavam mais vida mas batiam quase igual, e o jogo ficava fácil. <span class="lbl">Agora:</span></p>
+<ul>
+<li><b>Inimigos batem mais forte a cada mapa</b>, a partir de <b>Shedaklah</b> (o 3º). Quanto mais fundo, mais dói. <b>Dagruve e Docas não mudaram</b>: o começo continua sendo onde se aprende.</li>
+<li><b>Elites com poderes.</b> Os elites mostram um <b>círculo colorido</b> e o nome com o poder entre parênteses (por exemplo “Molydeus (Vampírico)”). Alguns têm 2 poderes. Poderes: <b>Veloz</b>, <b>Resistente</b>, <b>Mortal</b>, <b>Avaro</b>
+e três novos para Shedaklah em diante: <b>Blindado</b> (difícil de acertar), <b>Explosivo</b> (deixa uma marca no chão ao morrer e explode 1 segundo depois), <b>Vampírico</b> (cura ao te acertar), <b>Invocador</b> (chama 3 servos a cada 8 segundos) e <b>Escudeiro</b> (aliados perto dele levam <b>25% menos dano</b>; um círculo verde fraco mostra o alcance).</li>
+<li><b>Chefes</b> da 5ª fase (Durao) em diante também ganham um poder.</li>
+<li><b>Uma horda por mapa</b> (do 3º em diante): aparece o aviso <b>“Uma horda se aproxima!”</b>, 5 segundos depois vem <b>“HORDA!”</b> e, por <b>20 segundos</b>, chegam inimigos em número bem maior. Passou? Respire: só vem uma por mapa.</li>
+</ul>
+<p class="how"><span class="lbl">Como ver:</span> jogue de Shedaklah em diante. Sentiu o jogo perigoso, mas justo? Morreu sem entender por quê? Anote a fase e o que te matou.</p></div>
+
+<div class="card"><span class="tag">MAPAS</span>
+<h3>2. Cada mapa tem acontecimentos só dele</h3>
+<p><span class="lbl">Antes:</span> só Dagruve e Docas tinham eventos; os outros mapas eram só ondas. <span class="lbl">Agora:</span> de Shedaklah a Pilares cada mapa tem <b>acontecimentos próprios</b>, com um texto no topo da tela dizendo o que fazer e uma <b>seta na borda</b> quando o objetivo está fora da tela. Alguns são <b>opcionais</b> e <b>mudam de run para run</b>. Os eventos que pedem conversa usam a tecla <b>E</b>.</p>
+<table>
+<tr><td class="k">Shedaklah</td><td><b>O portal sem vão:</b> leve um esporo e um limo até o arco de pedra (baú raro e cura; errou, nascem limos). Há também o <b>barqueiro do Estige</b> e um <b>pedido de Zuggtmoy</b>: descubra o que ela quer.</td></tr>
+<tr><td class="k">Molor</td><td><b>Ritual de estagnação:</b> mate os carregadores antes que cheguem à massa (baú e moedas; falhou, aparece um elite). Também: a vigília de Thullgrime e o diário do chefe.</td></tr>
+<tr><td class="k">Durao</td><td><b>Desertores:</b> salve-os (moedas e +15% de dano por 30 s) e derrote o Molydeus que os caça. Opcionais: a <b>Arena do Testador</b> (duelo; vencer dá bênção) e conversa com Vhaerith.</td></tr>
+<tr><td class="k">Feng-tu</td><td><b>Escolta do peregrino:</b> proteja João até o templo (baú, cura e Bênção da Estrela por 40 s). Siga a <b>Estrela do Norte</b> para curar. O chefe agora é o <b>Discípulo Pestilento</b>.</td></tr>
+<tr><td class="k">Shendilavri</td><td><b>O convite:</b> responda com (E) e arrisque. Opcionais: o mercador de Rivenheart e as vítimas drenadas (libertar traz 2 Irmãs Radiantes para lutar ao seu lado).</td></tr>
+<tr><td class="k">Goranthis</td><td><b>Do trono ao lodo:</b> o paraíso começa a ruir e o mapa muda. Opcionais: a luz prateada e chamar Graz’zt.</td></tr>
+<tr><td class="k">Pilares</td><td><b>O Castelo da Fome sobe:</b> em dois momentos o chão se ergue. Fique atento ao aviso.</td></tr>
+</table>
+<p class="how"><span class="lbl">Como ver:</span> em cada mapa novo, leia o texto do topo da tela. Entendeu o que fazer sem ninguém explicar? Valeu a pena a recompensa?</p></div>
+
+<div class="card"><span class="tag">CENÁRIO</span>
+<h3>3. Chão novo em todos os 9 mapas</h3>
+<p><span class="lbl">Antes:</span> chão de ladrilhos repetidos, com emendas visíveis. <span class="lbl">Agora:</span> cada mapa tem um <b>chão contínuo e próprio</b> (sem emendas), com <b>estradas, praça central, áreas de cinza, musgo, cristal, mármore</b> e outras zonas conforme o lugar.
+Dagruve e Docas também ganharam <b>fundos novos</b>, estradas e objetos fixos, além de <b>carroça e carga</b> que podem ser quebradas.</p>
+<p class="how"><span class="lbl">Como ver:</span> passeie pela borda dos mapas. O chão parece um lugar de verdade? Algum objeto ainda <b>flutua</b> ou está no lugar errado? Avise qual mapa.</p></div>
+
+<div class="card"><span class="tag">VISUAL</span>
+<h3>4. Animações novas e golpes mais visíveis</h3>
+<ul>
+<li><b>Os 10 heróis</b> ganharam <b>animações refeitas</b> de andar, atacar e usar a habilidade. O <b>Korrak</b> ficou um pouco menor e não “pula” mais ao andar.</li>
+<li><b>Inimigos de Shedaklah e de Molor</b> ganharam animação nova (andar, atacar e morrer), como o pudim negro e o limo de Juiblex.</li>
+<li>Golpes <b>corpo a corpo</b> têm <b>efeito visual próprio</b>, e há efeitos novos ao <b>subir de nível</b> e no <b>Passo pelas Sombras</b>. A <b>cópia-isca do Sylas</b> e as telas de <b>título</b> e de <b>evolução</b> também mudaram.</li>
+<li>A tela agora <b>só treme quando você leva dano</b>.</li>
+</ul></div>
+
+<div class="card"><span class="tag">SOM</span>
+<h3>5. Os primeiros sons de verdade</h3>
+<p>Treze sons novos gravados de verdade: <b>martelo do ferreiro</b>, cliques e confirmações da tela, <b>fanfarra de subir de nível</b>, sons de pegar moedas, poção e ímã, e das interações com <b>baú do chefe, loja, curandeiro, ampulheta, doação e aposta</b>.</p>
+<p class="how"><span class="lbl">Como ver:</span> jogue com o som ligado. Algum som alto demais, baixo demais ou irritante? Diga qual.</p></div>
+
+<h2>Problemas consertados</h2>
+<table>
+<tr><th style="width:44%">Antes</th><th>Agora</th></tr>
+<tr><td>O jogo ficava fácil depois do 3º mapa.</td><td>Veja o item 1. <b>Conte se ficou bom, difícil demais ou ainda fácil.</b></td></tr>
+<tr><td>A tela tremia sem você levar dano.</td><td>Só treme quando você é atingido.</td></tr>
+<tr><td>O herói <b>Korrak</b> andava com um pulinho e parecia maior que os outros.</td><td>Andar corrigido e tamanho ajustado.</td></tr>
+<tr><td>Objetos e eventos podiam nascer <b>um em cima do outro</b>; montanhas não mostravam onde você batia.</td><td>Os objetos aleatórios não nascem mais sobre os fixos e as montanhas mostram a base.</td></tr>
+<tr><td>O nome do mapa aparecia com til em alguns lugares.</td><td>Agora é sempre <b>Durao</b>.</td></tr>
+<tr><td>Várias ações (ferreiro, loja, baú do chefe, subir de nível...) faziam <b>silêncio</b> ou usavam som emprestado.</td><td>Sons próprios, ajustados para o mesmo volume.</td></tr>
+</table>
+<p class="small">Se algum problema antigo continuar, avise qual.</p>
+
+<h2 class="pb">Isto é provisório (não precisa avisar)</h2>
+<div class="box warn">
+<ul>
+<li>Vários personagens dos novos acontecimentos (João, desertores, vítimas, Irmãs Radiantes, Graz’zt) são <b>figuras provisórias</b>, e os pontos de interação (trono, arco, estrela, itens) são <b>losangos coloridos</b>.</li>
+<li>Nem todo inimigo tem animação ainda: os que faltam (vários dos mapas do meio ao fim e alguns chefes) aparecem como <b>imagem parada</b>.</li>
+<li>Alguns sons ainda são <b>provisórios</b>; os 13 novos são os primeiros de verdade.</li>
+<li>Dagruve segue difícil para heróis frágeis; estamos de olho.</li>
+<li>As dificuldades opcionais com recompensa maior e os segredos escondidos pelo mapa ainda <b>estão em planejamento</b>.</li>
+</ul>
+<p>Se algo <b>fora</b> desta lista parecer estranho ou quebrado, queremos saber!</p>
+</div>
+
+<h2>O que testar (marque o que você fez)</h2>
+<div class="box ok">
+<p class="small">Você não precisa fazer tudo. Faça o que aparecer no seu caminho e anote o que sentiu.</p>
+<ul class="chk">
+<li>De <b>Shedaklah em diante</b>: o jogo ficou mais difícil? <b>Difícil demais, na medida ou ainda fácil?</b></li>
+<li>Vi um <b>elite com poder</b> (círculo colorido e nome)? Entendi o que ele fazia? Algum poder foi injusto?</li>
+<li>Enfrentei uma <b>horda</b>? O aviso foi claro?</li>
+<li>Fiz algum <b>acontecimento do mapa</b>? Entendi o objetivo sem ajuda? A recompensa valeu o esforço?</li>
+<li>O <b>chão</b> dos mapas ficou bom? Algo flutuando ou fora do lugar?</li>
+<li>As <b>animações</b> novas dos heróis e dos inimigos ficaram bonitas? Alguma esquisita ou cortada?</li>
+<li>Os <b>sons</b> ficaram bons? Algum incomodou?</li>
+<li>Terminei algum mapa? <b>Ainda enjoei</b> depois do 3º ou 4º mapa?</li>
+</ul></div>
+
+<h2>Como nos contar o que achou</h2>
+<ol class="steps">
+<li>Durante o jogo, aperte <b>F5</b> para escrever uma nota (o jogo pausa) e <b>F6</b> para tirar um print. Faça isso na hora.</li>
+<li>Se preferir, <b>só conte no Discord</b> o que achou; uma conversa já ajuda muito.</li>
+<li>As notas e prints ficam na pasta <b>evidencias</b>, ao lado do .exe. Se quiser, mande-os pelo <b>Discord</b>.</li>
+</ol>
+<p class="small">Se travou, deu erro ou fechou sozinho, diga <b>o que estava fazendo</b>, a fase e o herói. Não existe relato pequeno demais.</p>
+
+<p style="margin-top:12px; text-align:center; color:#7a4ba3;"><b>Obrigado por jogar e por falar a verdade.</b></p>
+
+</body></html>

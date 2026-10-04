@@ -1,7 +1,7 @@
 extends RefCounted
 ## SPEC-120 parte A: dmg_mult por fase e afixos de elite/chefe.
 
-const DMG_MULTS := {"dagruve": 1.0, "docas": 1.0, "shedaklah": 1.25, "molor": 1.75, "durao": 1.9, "feng_tu": 1.85, "shendilavri": 2.05, "goranthis": 2.25, "pilares": 2.5}
+const DMG_MULTS := {"dagruve": 1.0, "docas": 1.0, "shedaklah": 1.4, "molor": 1.75, "durao": 1.9, "feng_tu": 2.1, "shendilavri": 2.3, "goranthis": 2.25, "pilares": 2.5}
 
 func _bat(stage: String) -> Battle:
 	var b := Battle.new(11, "durvall", stage)

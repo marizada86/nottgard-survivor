@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<title>Guia fácil — Nottgard Survivors 0.3.0</title>
+<style>
+@page { size: A4; margin: 13mm 14mm; }
+* { box-sizing: border-box; }
+body { font-family: "Segoe UI", Arial, sans-serif; font-size: 10pt; color: #1c1a22; line-height: 1.36; }
+h1 { font-size: 22pt; margin: 0; color: #3b1d4f; }
+.sub { color: #5a5566; margin: 2px 0 10px; font-size: 10.5pt; }
+h2 { font-size: 13pt; margin: 14px 0 5px; color: #3b1d4f; border-bottom: 2px solid #b48ad6; padding-bottom: 2px; break-after: avoid; }
+h3 { font-size: 11pt; margin: 0 0 3px; color: #3b1d4f; }
+p { margin: 3px 0; }
+ul { margin: 3px 0 3px 18px; padding: 0; }
+li { margin: 1px 0; }
+.box { border: 1px solid #c9c2d6; background: #f6f3fa; border-radius: 6px; padding: 8px 12px; margin: 8px 0; break-inside: avoid; }
+.warn { border-color: #e0c27a; background: #fbf5e4; }
+.ok { border-color: #a9d1b0; background: #eef8f0; }
+.card { border: 1px solid #ddd6e8; border-left: 5px solid #7a4ba3; border-radius: 5px; padding: 6px 11px 7px; margin: 7px 0; break-inside: avoid; }
+.card .tag { float: right; font-size: 8pt; font-weight: 700; color: #fff; background: #7a4ba3; border-radius: 9px; padding: 1px 8px; margin-left: 8px; }
+.lbl { font-weight: 700; color: #7a4ba3; }
+.how { background: #f6f3fa; border-radius: 4px; padding: 3px 8px; margin-top: 4px; }
+table { width: 100%; border-collapse: collapse; margin: 4px 0; }
+th { text-align: left; font-size: 9pt; color: #3b1d4f; background: #ece6f4; padding: 4px 6px; }
+td { padding: 4px 6px; border-top: 1px solid #e3deec; vertical-align: top; }
+tr { break-inside: avoid; }
+td.k { white-space: nowrap; font-weight: 700; color: #3b1d4f; }
+.chk li { list-style: none; margin-left: -16px; padding-left: 0; }
+.chk li:before { content: "☐  "; font-size: 12pt; }
+.steps { counter-reset: s; list-style: none; margin-left: 0; }
+.steps li { counter-increment: s; margin: 3px 0; padding-left: 26px; position: relative; }
+.steps li:before { content: counter(s); position: absolute; left: 0; top: 0; width: 19px; height: 19px; border-radius: 50%; background: #7a4ba3; color: #fff; text-align: center; font-weight: 700; font-size: 9pt; line-height: 19px; }
+.small { font-size: 8.8pt; color: #5a5566; }
+.pb { break-before: page; }
+</style></head><body>
+
+<h1>Guia fácil · Nottgard Survivors</h1>
+<p class="sub">Versão de teste <b>0.3.0</b> · para quem nunca jogou ou quer só relembrar · leitura de uns 3 minutos</p>
+
+<div class="box">
+<b>O que é o jogo.</b> Você é um herói sozinho num mapa cheio de monstros. <b>Suas armas atacam sozinhas.</b> Seu trabalho é <b>andar</b>, fugir dos golpes, pegar o que cai dos inimigos e <b>escolher melhorias</b> a cada nível. Sobreviva até o <b>chefe</b> do mapa, derrote-o e decida se continua descendo (mais risco, mais recompensa) ou sai com o que ganhou.
+</div>
+
+<h2>1. Baixar e abrir</h2>
+<ol class="steps">
+<li>Baixe o arquivo <b>NottgardSurvivors-windows.zip</b> (release <b>latest</b>, no link que o dono enviou).</li>
+<li><b>Extraia numa pasta nova</b> e abra o <b>.exe</b>. Se o Windows avisar que o programa é desconhecido, clique em <b>Mais informações</b> e depois em <b>Executar assim mesmo</b>: é normal, o jogo ainda não tem assinatura.</li>
+<li>No <b>rodapé do menu</b> tem de aparecer <b>0.3.0</b>. Se aparecer outro número, você abriu uma versão antiga.</li>
+</ol>
+<p class="small">O progresso (moedas, aprimoramentos, conquistas) fica salvo no seu computador e continua quando você atualiza.</p>
+
+<h2>2. Sua primeira partida</h2>
+<ol class="steps">
+<li>No menu, escolha um <b>herói</b> e depois um <b>mapa</b> (comece por <b>Dagruve</b>; os outros abrem conforme você vence).</li>
+<li><b>Ande</b> para não ser cercado. As armas já atacam sozinhas.</li>
+<li>Ao <b>subir de nível</b>, aparecem opções de melhoria. Leia e escolha (clique ou teclas <b>1 a 5</b>).</li>
+<li>Pegue o que os inimigos soltam: <b>moedas</b>, <b>poções</b> e <b>itens</b>. Chegue perto de baús e pontos do mapa e aperte <b>E</b> para usar.</li>
+<li>Sobreviva até o <b>chefe</b>. Derrote-o e escolha: <b>entrar no portal</b> (continua, mais difícil e com mais recompensa) ou <b>extrair</b> (sai com segurança).</li>
+</ol>
+<p class="small">Morrer faz parte: você <b>mantém as moedas</b> da tentativa, e elas compram aprimoramentos permanentes no <b>Quartel</b>.</p>
+
+<h2>3. Teclas principais</h2>
+<table>
+<tr><th style="width:42%">Ação</th><th>Teclado e mouse</th></tr>
+<tr><td class="k">Andar</td><td>W A S D ou setas (ou segure o botão esquerdo do mouse)</td></tr>
+<tr><td class="k">Habilidade do herói</td><td>Q ou botão direito do mouse</td></tr>
+<tr><td class="k">Interagir (loja, baú, conversa)</td><td>E</td></tr>
+<tr><td class="k">Escolher melhoria</td><td>Clique ou 1 a 5 · <b>R</b> troca as opções (quando houver)</td></tr>
+<tr><td class="k">Mira automática ou manual</td><td>Tab</td></tr>
+<tr><td class="k">Sair da fase com a recompensa</td><td>X (depois do chefe)</td></tr>
+<tr><td class="k">Acelerar a fase</td><td>T ou F (só em fase que você já venceu)</td></tr>
+<tr><td class="k">Pausar</td><td>Esc</td></tr>
+</table>
+<p class="small">Dá para jogar com <b>controle</b> (analógico esquerdo anda, RB usa a habilidade, Start pausa). Ainda não testamos com muitos controles, então avise se algo estranhar.</p>
+
+<h2>4. O que mudou nesta versão (resumo)</h2>
+<ul>
+<li>Do <b>3º mapa</b> em diante o jogo <b>aperta</b>: inimigos batem mais forte, elites têm poderes (círculo colorido) e vem uma <b>horda</b> por mapa.</li>
+<li>Cada mapa tem <b>acontecimentos próprios</b> (leia o texto no topo da tela).</li>
+<li>Chão novo, animações novas e os primeiros sons de verdade.</li>
+</ul>
+<p class="small">Quer o detalhe? Leia o <b>changelog da 0.3.0</b>.</p>
+
+<h2>5. Como nos contar o que achou</h2>
+<ol class="steps">
+<li>Durante o jogo, aperte <b>F6</b> para <b>tirar um print</b> e <b>F5</b> para <b>escrever uma nota</b> (o jogo pausa). Faça isso na hora que algo chamar a atenção.</li>
+<li>Quer só conversar? <b>Conte no Discord</b> o que achou: o que foi legal, o que estranhou, onde morreu. <b>Qualquer relato ajuda.</b></li>
+<li>As notas e prints ficam na pasta <b>evidencias</b>, ao lado do .exe. Se quiser, mande pelo Discord.</li>
+</ol>
+<p class="small"><b>F1</b> abre um guia curto dentro do jogo; <b>F11</b> liga a tela cheia. Se o jogo travar ou fechar sozinho, diga <b>o que estava fazendo</b>, o mapa e o herói.</p>
+
+<div class="box warn">
+<b>Lembrete:</b> o jogo está <b>em construção</b>. Imagens provisórias e coisas faltando são normais. Se algo parecer quebrado e <b>não</b> estiver explicado no changelog, queremos saber.
+</div>
+
+<p style="margin-top:12px; text-align:center; color:#7a4ba3;"><b>Obrigado por jogar e por falar a verdade.</b></p>
+</body></html>

@@ -47,6 +47,17 @@ linha em "Histórico" (abaixo).
 Avaliada = as EVID dos testers foram triadas. Só então os cartões "aguardando
 playtest" viram verificados ou reabertos.
 
+## Versão 0.3.0 — Major-update, publicada (playtest)
+
+Pedido do dono (2026-10-03): os testers não responderam o questionário, só conversaram o que precisava mudar (a conversa levou ao PLAN-055), então **esta versão não tem questionário novo**: leva o changelog em PDF e um **guia fácil** em PDF. `0.3.0` em `core/version.gd` e `export_presets.cfg`.
+
+- Changelog para os testers (PDF, 0.2.3 → 0.3.0): [CHANGELOG 0.3.0](changelogs/CHANGELOG%200.3.0%20-%20Nottgard%20Survivors.pdf) (fonte em [HTML](changelogs/CHANGELOG-0.3.0.html)).
+- Guia fácil (PDF, 2 páginas, para quem nunca jogou): [GUIA FACIL 0.3.0](changelogs/GUIA%20FACIL%200.3.0%20-%20Nottgard%20Survivors.pdf) (fonte em [HTML](changelogs/GUIA-FACIL-0.3.0.html)).
+- Conteúdo: SPEC-118 (acontecimentos exclusivos de Shedaklah a Pilares), SPEC-120 parte A (dano inimigo por fase, afixos de elite e de chefe, horda; [EVID-149](../evidence/EVID-149-curva-base-spec-120-parte-a-2026-10-03.md) e [EVID-150](../evidence/EVID-150-curva-base-em-escala-2026-10-03/EVID-150-curva-base-em-escala-2026-10-03.md); `dmg_mult` de Shedaklah 1,4, Molor 1,75, Durao 1,9, Feng-tu 2,1, Shendilavri 2,3 sem medição do bot depois do último ajuste), chão assado e desenho de nível nos 9 biomas (PLAN-054 F1), animações novas dos 10 heróis e dos mobs de Shedaklah e Molor, efeitos de golpe corpo a corpo, fila de imagens prioritária (PLAN-053), 13 SFX reais (Ludo.ai), tela que só treme com dano, Korrak ajustado, grafia Durao.
+- **Fora desta versão:** SPEC-119 (segredos e mapa maior) e Marcas do Abismo (SPEC-120 parte B), ainda rascunhos; animações de Zuggtmoy, Gárgula e Receptáculo de Juiblex (trabalho de outra sessão, não commitado).
+- Suíte e fumaça verdes em 2026-10-03.
+- [ ] Aviso aos testers com os dois PDFs.
+
 ## Versão 0.2.3 — publicada (playtest), junta 0.2.0 + 0.2.1
 
 Decisão do dono (2026-10-02): **nenhum playtester jogou a 0.2.0 nem a 0.2.1**, então a 0.2.3 as engloba e as duas ficam sem aviso próprio (0.2.2 foi pulada). Os testers saem da **0.1.0** e vão direto para a 0.2.3. `0.2.3` em `core/version.gd` e `export_presets.cfg`.
@@ -140,6 +151,7 @@ Origem: [PLAN-038](../vault/drafts/PLAN-038-atualizacao-pos-playtests-t01-t02-t0
 
 | Versão | Tipo | Publicada | Commit da build | Avaliada em |
 |---|---|---|---|---|
+| 0.3.0 | Major (changelog + guia fácil, sem questionário) | 2026-10-03 (release `latest`, Playtest v0.3.0) | ver título do release | — (aguardando testers) |
 | 0.2.3 | Atualização de playtest (pedido do dono; junta 0.2.0 + 0.2.1) | 2026-10-02 (release `latest`, Playtest v0.2.3) | ver título do release | — (aguardando testers) |
 | 0.2.1 | Atualização de playtest (pedido do dono; traz mecânicas) | 2026-10-01 (release `latest`, Playtest v0.2.1) | ver título do release | — (aguardando testers) |
 | 0.2.0 | Major | 2026-09-29 (release `latest`, Playtest v0.2.0) | `adc9ae6` (tag `latest` em 2026-09-30; primeira publicação: `fce670d`; republicada a cada push na `main`) | — (aguardando testers) |

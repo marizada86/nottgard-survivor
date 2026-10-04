@@ -9,6 +9,8 @@ Minor-update **não** tem PDF: só notas curtas no aviso do Discord.
 | `CHANGELOG X.Y.0 - Nottgard Survivors.pdf` | O que se entrega |
 | [CHANGELOG-0.2.0](CHANGELOG-0.2.0.html) | Primeiro (0.1.0 → 0.2.0); serve de **modelo** (copie e troque o texto) |
 | [CHANGELOG-0.2.3](CHANGELOG-0.2.3.html) | 0.1.0 → 0.2.3 (junta 0.2.0 e 0.2.1, que ninguém jogou) |
+| [CHANGELOG-0.3.0](CHANGELOG-0.3.0.html) | 0.2.3 → 0.3.0 |
+| [GUIA-FACIL-0.3.0](GUIA-FACIL-0.3.0.html) | Guia fácil de 2 páginas (baixar, primeira partida, teclas, como contar o que achou); atualize os números de versão e o resumo a cada major |
 
 ## Regra de ouro: escrever para quem não sabe nada
 
