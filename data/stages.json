@@ -21,7 +21,7 @@
       {"t0": 170, "t1": 300, "id": "cultista_cajado", "every": 7.5, "n": 1, "max": 4}],
     "elites": [{"at": 85, "id": "tentaculo_kraken"}, {"at": 165, "id": "arch_hag"}, {"at": 225, "id": "guardiao_copia"}],
     "boss": "guardiao_verdadeiro", "interactions": {"chest": 4, "fountain": 1.4, "altar": 2, "ritual": 1, "loja": 1, "ferreiro": 1, "curandeiro": 1, "ampulheta": 1, "doacao": 0.7, "aposta": 0.8}, "essence": "Essência das Docas", "next": "shedaklah", "unlock": "dagruve"},
-  "shedaklah": {"name": "Shedaklah", "sub": "Andar 222 · fungo e slime", "order": 2, "duration": 540, "cap": 50, "tier": 2, "coin_mult": 1.4, "hp_mult": 1.5, "dmg_mult": 1.4,
+  "shedaklah": {"name": "Shedaklah", "sub": "Andar 222 · fungo e slime", "order": 2, "duration": 540, "cap": 50, "tier": 2, "coin_mult": 1.4, "hp_mult": 1.4, "dmg_mult": 1.2,
     "ambient": ["puddles", "styx_memory"], "ground": [[36, 34, 40], [46, 40, 48]], "bg": [18, 13, 20], "prop": {"color": [140, 100, 130], "height": 46, "n": 40, "kind": "cogumelo"},
     "waves": [
       {"t0": 0,   "t1": 200, "id": "servo_de_zuggtmoy", "every": 3.0, "n": 2, "max": 14},
@@ -32,7 +32,7 @@
       {"t0": 300, "t1": 540, "id": "gargula", "every": 10.0, "n": 1, "max": 3}],
     "elites": [{"at": 150, "id": "pudim_negro"}, {"at": 280, "id": "gargula"}, {"at": 400, "id": "receptaculo_de_juiblex"}],
     "boss": "zuggtmoy", "interactions": {"chest": 4, "fountain": 1.4, "altar": 2, "ritual": 1, "loja": 1, "ferreiro": 1, "curandeiro": 1, "ampulheta": 1, "doacao": 0.7, "aposta": 0.8}, "essence": "Essência de Esporos", "next": "molor", "unlock": "dagruve"},
-  "molor": {"name": "Molor", "sub": "Andar 528 · caverna de bolhas", "order": 3, "duration": 570, "cap": 55, "tier": 3, "coin_mult": 1.8, "hp_mult": 2.1, "dmg_mult": 1.75,
+  "molor": {"name": "Molor", "sub": "Andar 528 · caverna de bolhas", "order": 3, "duration": 570, "cap": 55, "tier": 3, "coin_mult": 1.8, "hp_mult": 2.0, "dmg_mult": 1.6,
     "ambient": ["puddles"], "ground": [[24, 40, 30], [30, 50, 36]], "bg": [10, 20, 14], "prop": {"color": [70, 140, 90], "height": 40, "n": 42, "kind": "bolha"},
     "waves": [
       {"t0": 0,   "t1": 200, "id": "bolha_de_slime", "every": 2.6, "n": 2, "max": 16},
@@ -42,7 +42,7 @@
       {"t0": 300, "t1": 570, "id": "cogumelo_fungico", "every": 7.0, "n": 2, "max": 8}],
     "elites": [{"at": 140, "id": "pudim_negro"}, {"at": 270, "id": "receptaculo_de_juiblex"}, {"at": 420, "id": "receptaculo_de_juiblex"}],
     "boss": "blogbog", "interactions": {"chest": 4, "fountain": 2, "altar": 2, "ritual": 1, "loja": 1, "ferreiro": 1, "curandeiro": 1, "ampulheta": 1, "doacao": 0.7, "aposta": 0.8}, "essence": "Núcleo Verde", "next": "durao", "unlock": "shedaklah"},
-  "durao": {"name": "Durao", "sub": "Andar 274 · a jaula e o rio de almas", "order": 4, "duration": 600, "cap": 55, "tier": 4, "coin_mult": 2.2, "hp_mult": 2.8, "dmg_mult": 1.9,
+  "durao": {"name": "Durao", "sub": "Andar 274 · a jaula e o rio de almas", "order": 4, "duration": 600, "cap": 55, "tier": 4, "coin_mult": 2.2, "hp_mult": 2.8, "dmg_mult": 1.95,
     "ambient": ["styx_memory"], "ground": [[52, 40, 34], [62, 47, 38]], "bg": [24, 16, 14], "prop": {"color": [96, 76, 66], "height": 70, "n": 30, "kind": "rocha"},
     "waves": [
       {"t0": 0,   "t1": 220, "id": "alma_penada", "every": 2.6, "n": 3, "max": 18},
@@ -52,7 +52,7 @@
       {"t0": 300, "t1": 600, "id": "ezro", "every": 12.0, "n": 1, "max": 3}],
     "elites": [{"at": 160, "id": "carcereiro_de_pedra"}, {"at": 300, "id": "molydeus_menor"}, {"at": 450, "id": "molydeus_menor"}],
     "boss": "molydeus_chefe", "interactions": {"chest": 4, "fountain": 1.4, "altar": 2, "ritual": 2, "loja": 1, "ferreiro": 1, "curandeiro": 1, "ampulheta": 1, "doacao": 0.7, "aposta": 0.8}, "essence": "Sangue de Molydeus", "next": "feng_tu", "unlock": "molor"},
-  "feng_tu": {"name": "Feng-tu", "sub": "Andar 300 · templo de Tou Um", "order": 5, "duration": 600, "cap": 60, "tier": 5, "coin_mult": 2.7, "hp_mult": 3.6, "dmg_mult": 2.1,
+  "feng_tu": {"name": "Feng-tu", "sub": "Andar 300 · templo de Tou Um", "order": 5, "duration": 600, "cap": 60, "tier": 5, "coin_mult": 2.7, "hp_mult": 3.5, "dmg_mult": 2.2,
     "ambient": ["strikes"], "ground": [[36, 42, 48], [44, 52, 58]], "bg": [12, 16, 22], "prop": {"color": [150, 60, 50], "height": 80, "n": 30, "kind": "torii"},
     "waves": [
       {"t0": 0,   "t1": 240, "id": "larva_de_lu_yueh", "every": 2.0, "n": 4, "max": 26},
@@ -61,7 +61,7 @@
       {"t0": 240, "t1": 600, "id": "cultista_ghaunadaur", "every": 6.0, "n": 2, "max": 8}],
     "elites": [{"at": 150, "id": "estatua_do_templo"}, {"at": 300, "id": "estatua_do_templo"}, {"at": 450, "id": "cultista_de_feng_tu"}],
     "boss": "discipulo_pestilento", "interactions": {"chest": 4, "fountain": 1.4, "altar": 3, "ritual": 1, "loja": 1, "ferreiro": 1, "curandeiro": 1, "ampulheta": 1, "doacao": 0.7, "aposta": 0.8}, "essence": "Estrela do Norte", "next": "shendilavri", "unlock": "durao"},
-  "shendilavri": {"name": "Shendilavri e Rivenheart", "sub": "Camada 570 · o reino das súcubos", "order": 6, "duration": 630, "cap": 60, "tier": 6, "coin_mult": 3.2, "hp_mult": 4.5, "dmg_mult": 2.3,
+  "shendilavri": {"name": "Shendilavri e Rivenheart", "sub": "Camada 570 · o reino das súcubos", "order": 6, "duration": 630, "cap": 60, "tier": 6, "coin_mult": 3.2, "hp_mult": 4.4, "dmg_mult": 2.4,
     "ambient": ["illusions", "styx_memory"], "ground": [[52, 30, 44], [64, 36, 52]], "bg": [22, 10, 20], "prop": {"color": [140, 60, 100], "height": 64, "n": 34, "kind": "cristal"},
     "waves": [
       {"t0": 0,   "t1": 240, "id": "escravo_de_rivenheart", "every": 3.0, "n": 3, "max": 18},
@@ -71,7 +71,7 @@
       {"t0": 300, "t1": 630, "id": "cultista_ghaunadaur", "every": 6.0, "n": 2, "max": 8}],
     "elites": [{"at": 160, "id": "guarda_do_castelo"}, {"at": 320, "id": "master_of_cruelties"}, {"at": 480, "id": "master_of_cruelties"}],
     "boss": "malcanthet", "interactions": {"chest": 5, "fountain": 1.4, "altar": 2, "ritual": 2, "loja": 1, "ferreiro": 1, "curandeiro": 1, "ampulheta": 1, "doacao": 0.7, "aposta": 0.8}, "essence": "Chifre de Súcubo", "next": "goranthis", "unlock": "feng_tu"},
-  "goranthis": {"name": "Goranthis", "sub": "Camada 597 · o verdadeiro Paraíso", "order": 7, "duration": 660, "cap": 65, "tier": 7, "coin_mult": 4.0, "hp_mult": 5.5, "dmg_mult": 2.25,
+  "goranthis": {"name": "Goranthis", "sub": "Camada 597 · o verdadeiro Paraíso", "order": 7, "duration": 660, "cap": 65, "tier": 7, "coin_mult": 4.0, "hp_mult": 5.5, "dmg_mult": 2.5,
     "ambient": ["illusions", "puddles", "styx_memory"], "ground": [[58, 54, 40], [70, 65, 46]], "bg": [22, 21, 14], "prop": {"color": [200, 190, 130], "height": 90, "n": 30, "kind": "cachoeira"},
     "waves": [
       {"t0": 0,   "t1": 240, "id": "ilusao_de_socothbenoth", "every": 2.2, "n": 4, "max": 24},

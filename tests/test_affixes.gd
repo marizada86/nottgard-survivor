@@ -1,7 +1,7 @@
 extends RefCounted
 ## SPEC-120 parte A: dmg_mult por fase e afixos de elite/chefe.
 
-const DMG_MULTS := {"dagruve": 1.0, "docas": 1.0, "shedaklah": 1.4, "molor": 1.75, "durao": 1.9, "feng_tu": 2.1, "shendilavri": 2.3, "goranthis": 2.25, "pilares": 2.5}
+const DMG_MULTS := {"dagruve": 1.0, "docas": 1.0, "shedaklah": 1.2, "molor": 1.6, "durao": 1.95, "feng_tu": 2.2, "shendilavri": 2.4, "goranthis": 2.5, "pilares": 2.5}
 
 func _bat(stage: String) -> Battle:
 	var b := Battle.new(11, "durvall", stage)
@@ -25,8 +25,8 @@ func run() -> Array:
 	var hp0: float = b.hero.hp
 	b._hurt_hero(10.0, "hit")
 	var hit_taken := hp0 - b.hero.hp
-	if absf(hit_taken - 22.0) > 1.5:   # 10 × 2,25 (− defesas do herói)
-		f.append("golpe em Goranthis devia dar ~22, deu %s" % hit_taken)
+	if absf(hit_taken - 25.0) > 1.5:   # 10 × 2,5 (− defesas do herói)
+		f.append("golpe em Goranthis devia dar ~25, deu %s" % hit_taken)
 	b.invuln = 0.0
 	hp0 = b.hero.hp
 	b._hurt_hero(10.0, "puddle")
