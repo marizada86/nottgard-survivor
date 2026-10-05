@@ -6,7 +6,7 @@
   "docas": [
     {"id":"cais_atacado","at":90,"warning":5,"kind":"wave","enemy_id":"criatura_corrompida","count":3,"title":"Cais atacado","warning_text":"Cordas estalam e a água recua do cais.","result_text":"Criaturas avançam pelo cais."},
     {"id":"pulso_da_fenda","at":250,"warning":5,"kind":"hazard","title":"Pulso da Fenda","warning_text":"Inscrições e luz fria respondem no porão.","result_text":"A fenda contamina o terreno."},
-    {"id":"copias_do_guardiao","at":400,"warning":5,"kind":"elite","enemy_id":"guardiao_copia","title":"Sombras aladas","warning_text":"Uma sombra alada cresce entre os livros.","result_text":"Uma cópia do Guardião protege o ritual."}
+    {"id":"copias_do_guardiao","at":225,"warning":5,"kind":"elite","enemy_id":"guardiao_copia","title":"Sombras aladas","warning_text":"Uma sombra alada cresce entre os livros.","result_text":"Uma cópia do Guardião protege o ritual."}
   ],
   "_spec": "SPEC-118: acontecimentos exclusivos por fase. 'pool': 'optional' = sorteio de 1 ou 2 por run; 'jitter' = variação do horário. Textos parafraseiam o Vault (EVID-147).",
   "shedaklah": [
