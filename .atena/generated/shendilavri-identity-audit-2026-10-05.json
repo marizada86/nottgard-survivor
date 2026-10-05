@@ -1,0 +1,150 @@
+﻿{
+    "date":  "2026-10-05",
+    "plan":  "PLAN-053",
+    "spec":  "SPEC-121",
+    "tool":  "System.Drawing read-only alpha audit and review composition",
+    "sources_modified":  false,
+    "board":  ".atena/generated/priority-review/shendilavri_identities_v02.png",
+    "records":  [
+                    {
+                        "id":  "escravo_de_rivenheart",
+                        "version":  "01",
+                        "path":  ".atena/generated/art-candidates/enemies-shendilavri/escravo_de_rivenheart/escravo_de_rivenheart_idle_00_v01.png",
+                        "sha256":  "67A5D956DF538883F7D196692B4215C48E467F15FB793482357A9311AD1D0A56",
+                        "size":  [
+                                     1254,
+                                     1254
+                                 ],
+                        "transparent_pixels":  1299983,
+                        "visible_pixels":  252931,
+                        "solidity":  0.94758254227437522,
+                        "visible_bounds":  [
+                                               403,
+                                               66,
+                                               812,
+                                               1172
+                                           ],
+                        "margins_left_top_right_bottom":  [
+                                                              403,
+                                                              66,
+                                                              441,
+                                                              81
+                                                          ],
+                        "clipped":  false,
+                        "native_alpha_preserved":  true,
+                        "human_approval":  "pending"
+                    },
+                    {
+                        "id":  "sucubo",
+                        "version":  "01",
+                        "path":  ".atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_idle_00_v01.png",
+                        "sha256":  "095218F4B25D3BC7088FAC39F1C7EE494DF7E9B20A9BE43BE5A674E14A9D5663",
+                        "size":  [
+                                     1254,
+                                     1254
+                                 ],
+                        "transparent_pixels":  1144892,
+                        "visible_pixels":  387775,
+                        "solidity":  0.94726581135968024,
+                        "visible_bounds":  [
+                                               284,
+                                               31,
+                                               1039,
+                                               1223
+                                           ],
+                        "margins_left_top_right_bottom":  [
+                                                              284,
+                                                              31,
+                                                              214,
+                                                              30
+                                                          ],
+                        "clipped":  false,
+                        "native_alpha_preserved":  true,
+                        "human_approval":  "pending"
+                    },
+                    {
+                        "id":  "guarda_do_castelo",
+                        "version":  "02",
+                        "path":  ".atena/generated/art-candidates/enemies-shendilavri/guarda_do_castelo/guarda_do_castelo_idle_00_v02.png",
+                        "sha256":  "E4F81120768F592BFA2947641B1EBFEDF81B19813309853C40A84990277B9904",
+                        "size":  [
+                                     1254,
+                                     1254
+                                 ],
+                        "transparent_pixels":  1386561,
+                        "visible_pixels":  172331,
+                        "solidity":  0.948714972930001,
+                        "visible_bounds":  [
+                                               377,
+                                               189,
+                                               870,
+                                               1042
+                                           ],
+                        "margins_left_top_right_bottom":  [
+                                                              377,
+                                                              189,
+                                                              383,
+                                                              211
+                                                          ],
+                        "clipped":  false,
+                        "native_alpha_preserved":  true,
+                        "human_approval":  "pending"
+                    },
+                    {
+                        "id":  "master_of_cruelties",
+                        "version":  "02",
+                        "path":  ".atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_idle_00_v02.png",
+                        "sha256":  "D08028CA8F5E4C115869FCB8DEE8F1CDB788EE24030115DDFC2CACFCFEC78BA7",
+                        "size":  [
+                                     1254,
+                                     1254
+                                 ],
+                        "transparent_pixels":  1124000,
+                        "visible_pixels":  413566,
+                        "solidity":  0.9504891601340536,
+                        "visible_bounds":  [
+                                               251,
+                                               145,
+                                               1008,
+                                               1142
+                                           ],
+                        "margins_left_top_right_bottom":  [
+                                                              251,
+                                                              145,
+                                                              245,
+                                                              111
+                                                          ],
+                        "clipped":  false,
+                        "native_alpha_preserved":  true,
+                        "human_approval":  "pending"
+                    },
+                    {
+                        "id":  "malcanthet",
+                        "version":  "02",
+                        "path":  ".atena/generated/art-candidates/enemies-shendilavri/malcanthet/malcanthet_idle_00_v02.png",
+                        "sha256":  "E0AEC74817E93B1B27F0656568C22D6BD820960D7BF9FF728260C0B4CAEDE8BA",
+                        "size":  [
+                                     1254,
+                                     1254
+                                 ],
+                        "transparent_pixels":  1165287,
+                        "visible_pixels":  380055,
+                        "solidity":  0.95923747878596521,
+                        "visible_bounds":  [
+                                               285,
+                                               193,
+                                               989,
+                                               1118
+                                           ],
+                        "margins_left_top_right_bottom":  [
+                                                              285,
+                                                              193,
+                                                              264,
+                                                              135
+                                                          ],
+                        "clipped":  false,
+                        "native_alpha_preserved":  true,
+                        "human_approval":  "pending"
+                    }
+                ]
+}

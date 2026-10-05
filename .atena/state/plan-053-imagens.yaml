@@ -4,7 +4,7 @@ active_plan:
   spec_id: SPEC-121
   current_step: S-006
   total_steps: 7
-  status: ACTIVE
+  status: SUSPENDED_FOR_DEVIATION
   approval:
     mode: per-plan
     checkpoint: PLAN
@@ -18,13 +18,23 @@ active_plan:
     date: '2026-10-03'
     evidence: Pedido pode continuar após seleção Por plano; gates visuais preservados.
 plan_cursor:
-  current: 'S-006 Feng Tu completo126quadros/25tiras;build159validada. ShendilavriI01/I02gerados;I03 bloqueadoHTTP429 quota até2026-10-05 12:43:35BRT.'
-  next: 'Após liberação retomar I03Guarda, I04Master e I05Malcanthet; auditar e parar no gate visual FILA017 antes dos ciclos.'
-  review: '.atena/generated/priority-review/shendilavri_identities_v01.png (parcial2de5; sem gate humano ainda)'
-suspension: null
+  current: 'PLAN-053/S-006: cinco identidades Shendilavri aprovadas pelo dono em 2026-10-05; ciclos ainda nao gerados; suspenso para DEV-002 commit/push.'
+  next: 'Completar e revisar idle/move/attack/death do Escravo de Rivenheart; validar e integrar sob contrato SPEC-121 antes do proximo ator.'
+  review: '.atena/generated/priority-review/shendilavri_identities_v02.png'
+visual_gate:
+  id: GATE-SHENDILAVRI-IDENTITIES-V02
+  status: APPROVED
+  approver: dono
+  date: '2026-10-05'
+  evidence: 'atena, aprovado, continue'
+  register: '.atena/vault/canon/ASSET-APPROVAL-REGISTER-021-shendilavri-identidades-2026-10-05.md'
+  identities: [escravo_de_rivenheart_v01, sucubo_v01, guarda_do_castelo_v02, master_of_cruelties_v02, malcanthet_v02]
+execution_record: '.atena/generated/shendilavri-execution-state-2026-10-05.json'
+suspension:
+  deviation_id: DEV-002
+  request: 'Commit e push das identidades aprovadas Shendilavri e registros associados.'
+  route: execute-now-and-return
+  owner_approval: 'Commit e push agora; depois retomar os ciclos'
+  return_step: 'PLAN-053/S-006: Escravo de Rivenheart idle_01'
+  resumed_after: 'Confirmacao de commit e push bem-sucedidos'
 deferred_requests: []
-
-
-
-
-

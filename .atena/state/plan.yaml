@@ -1,12 +1,34 @@
 version: 2
 # Reconciliado por Atena em 2026-10-05: PLAN-056 aceito pelo dono; commits reais registrados.
-active_plan: null
+active_plan:
+  id: PLAN-053
+  spec_id: SPEC-121
+  current_step: S-006
+  total_steps: 7
+  status: SUSPENDED_FOR_DEVIATION
+  approval:
+    mode: per-plan
+    checkpoint: PLAN
+    status: APPROVED
+    approver: dono
+    date: '2026-10-04'
+    evidence: Dono respondeu atena continue após gate explícito das seis identidades v02 e anatomia Lu Yueh seis braços.
+  plan_scope_approval:
+    status: APPROVED
+    approver: dono
+    date: '2026-10-03'
+    evidence: Pedido pode continuar após seleção Por plano; gates visuais preservados.
 plan_cursor:
-  current: 'Nenhum plano ativo. PLAN-056 (SPEC-122) aceito e fechado em 2026-10-05.'
-  next: 'Retomar PLAN-053 (imagens, Shu: attack_02, death_03, death_04) e/ou abrir spec de balanceamento BAL-018 (precisa de linha de base do bot por heroi). Push da main (1 a 3 commits a frente) exige aprovacao.'
+  current: 'PLAN-053/S-006: cinco identidades Shendilavri aprovadas pelo dono em 2026-10-05; ciclos ainda nao gerados; suspenso para DEV-002 commit/push.'
+  next: 'Completar e revisar idle/move/attack/death do Escravo de Rivenheart; validar e integrar sob contrato SPEC-121 antes do proximo ator.'
+  operational_state: '.atena/state/plan-053-imagens.yaml'
 suspension:
-  suspended_plan_state_file: '.atena/state/plan-053-imagens.yaml'
-  note: 'PLAN-053 (imagens, SPEC-121) suspenso; cota de imagens liberou 2026-10-04 10:28 BRT; retoma na Shu (attack_02, death_03, death_04).'
+  deviation_id: DEV-002
+  request: 'Commit e push das identidades aprovadas Shendilavri e registros associados.'
+  route: execute-now-and-return
+  owner_approval: 'Commit e push agora; depois retomar os ciclos'
+  return_step: 'PLAN-053/S-006: Escravo de Rivenheart idle_01'
+  resumed_after: 'Confirmacao de commit e push bem-sucedidos'
 deferred_requests:
   - id: DEV-001
     request: 'Varredura geral e revisao da movimentacao dos herois (PLAN-057 / SPEC-123), B-001 concluido; estado em .atena/state/plan-057-movimentacao.yaml.'
