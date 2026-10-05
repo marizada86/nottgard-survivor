@@ -1,0 +1,18 @@
+version: 1
+plan:
+  id: PLAN-059
+  spec_id: SPEC-125
+  card: BAL-018
+  title: Balanceamento de desafio e entretenimento sobre a base 0.3.1
+  status: AWAITING_OWNER_REVIEW
+  approval: {mode: per-plan, status: APPROVED, approver: dono, date: '2026-10-05'}
+  batches:
+    B-001: {title: Linha de base com RNG semeado (novato e veterano), status: DONE_UNCOMMITTED, evidence: EVID-160}
+    B-002: {title: Herois do filtro de Dagruve (era B-004), status: DONE_NO_CHANGE, evidence: EVID-161, note: "resultado negativo, tudo revertido; Dagruve fica como esta (E2)"}
+    B-003: {title: Inimigos por fase (hp_mult e dmg_mult de Docas aos Pilares), status: DONE_UNCOMMITTED, evidence: EVID-162}
+    B-004: {title: Chefes e picos de tensao, status: DONE_NO_CHANGE, evidence: EVID-162, note: "dados insuficientes; volta ao BAL-018"}
+    B-005: {title: Curva de poder, status: DONE_NO_CHANGE, evidence: EVID-162, note: "sem excesso de poder medido"}
+    B-006: {title: Fechamento, status: DONE_UNCOMMITTED}
+  current_batch: null
+  target_ramp_novato: {dagruve_docas: '30-40%', meio: '45-55%', finais: '55-65%'}
+  commits: 'locais por lote so com aprovacao (git.local_commits: explicit-approval)'
