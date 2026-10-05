@@ -1,0 +1,30 @@
+[
+  {
+    "state": "move",
+    "index": 3,
+    "ref": "idle_00",
+    "pose": "opposite walking contact: SCREEN RIGHT foot slightly ahead and SCREEN LEFT foot slightly behind. Head and torso camera EXACTLY as image1, face pointing SCREEN LEFT, folded wings visible ONLY along SCREEN RIGHT back. DO NOT mirror character. Change only leg step and small arm sway.",
+    "prompt": "Use case: identity-preserve. Image1 approved idle identity exact camera anatomy palette. Image2 pose continuity reference. ONE corrected full-body PIXEL ART move_3 frame. opposite walking contact: SCREEN RIGHT foot slightly ahead and SCREEN LEFT foot slightly behind. Head and torso camera EXACTLY as image1, face pointing SCREEN LEFT, folded wings visible ONLY along SCREEN RIGHT back. DO NOT mirror character. Change only leg step and small arm sway. Exact TWO scythe arms, TWO legs, same purple eyes/chestgem and two long antennae, closed wings, same slender olive body proportions. No new limb/blade/wing/props. Crisp opaque solid clusters native transparent square canvas. Entire sprite inside central70%, transparent margins ALL edges, base near90%. No glow/halo/outline/particles/floor/shadow/text/blur. No camera turning."
+  },
+  {
+    "state": "attack",
+    "index": 2,
+    "ref": "attack_01",
+    "pose": "peak crossed slash SCREEN RIGHT, extending the TWO attached scythe arms slightly farther from image2. Preserve exact torso/head/leg orientation from image2: head faces SCREEN LEFT, folded wings remain along SCREEN RIGHT back, NEVER put wings on screen left. Both blades crossing in front chest, generous margin all tips.",
+    "prompt": "Use case: identity-preserve. Image1 approved idle identity exact camera anatomy palette. Image2 pose continuity reference. ONE corrected full-body PIXEL ART attack_2 frame. peak crossed slash SCREEN RIGHT, extending the TWO attached scythe arms slightly farther from image2. Preserve exact torso/head/leg orientation from image2: head faces SCREEN LEFT, folded wings remain along SCREEN RIGHT back, NEVER put wings on screen left. Both blades crossing in front chest, generous margin all tips. Exact TWO scythe arms, TWO legs, same purple eyes/chestgem and two long antennae, closed wings, same slender olive body proportions. No new limb/blade/wing/props. Crisp opaque solid clusters native transparent square canvas. Entire sprite inside central70%, transparent margins ALL edges, base near90%. No glow/halo/outline/particles/floor/shadow/text/blur. No camera turning."
+  },
+  {
+    "state": "death",
+    "index": 3,
+    "ref": "death_03",
+    "pose": "CHANGE ONLY all purple emitted light in eyes and chest gem to dim dark purple, no white highlights. Preserve exact half-fallen pose, TWO scythe arms and TWO legs closed wings.",
+    "prompt": "Use case: precise-object-edit. Image1 approved identity; image2 existing death03 EDIT TARGET. CHANGE ONLY bright purple light/white highlights in all eyes and chest gem to dark dim purple, completely unlit. Preserve exact pose, composition, geometry, two scythe arms and two legs, closed wings, antennae and palette elsewhere. ONE opaque crisp PIXEL ART sprite native transparent background. No extra limbs or effects."
+  },
+  {
+    "state": "death",
+    "index": 4,
+    "ref": "death_04",
+    "pose": "REMOVE ONLY extra THIRD small purple curved blade near SCREEN RIGHT knee/middle torso; retain the TWO large blades at SCREEN LEFT and lower CENTER, attached to original two arms. Fill removed third-blade area with correct plain olive knee/leg anatomy. Preserve exact low side-fallen pose, dim eyes and wings.",
+    "prompt": "Use case: precise-object-edit. Image1 approved identity with exactly TWO scythe arms; Image2 death04 EDIT TARGET contains EXTRA THIRD blade. Remove ONLY small third purple curved blade at SCREEN RIGHT of torso beside bent knee (around x650–780,y830–980). Keep TWO large blades: far left curved blade and lower center horizontal curved blade. Two arms total, two legs. Preserve exact corpse pose, size, dark eyes/chest, closed wings, antennae, olive stone-colored skin pixel palette. No duplicate blade. ONE crisp opaque pixel-art native transparent square canvas with empty margins. No text/floor/shadow/effects."
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "correction": {
+    "prompt": "Edit this exact mossy grey-beige stone gargoyle into FINAL death05: motionless corpse completely collapsed ON ITS SIDE, eyes fully closed. Same four paws curled sideways and two folded bat wings lying FLAT behind/along body, no raised wing tips. Skull head on viewer RIGHT rests sideways on ground level, jaw shut. Preserve stone thickness, attached moss and shelf mushrooms, palette/camera and width. Total body-and-wing height at most 350 pixels on same1254square canvas; achieve by side lying and flattened wings NOT by scaling the whole creature. Ample fully transparent space above. ALL outside pixels alphaZERO, no floor shadow glow halo loose fragments text. One full-body pixel sprite fully inside canvas with 8percent padding, solid attached anatomy.",
+    "dest": "F:/dev/nottgard-survivor/.atena/generated/art-candidates/enemies-shedaklah/gargula/gargula_death_05_v02.png",
+    "output_hint": "Generated images are saved to C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a0fcbf-5349-7dc3-b367-20f513686fb7 as C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a0fcbf-5349-7dc3-b367-20f513686fb7\\exec-22b5bb20-c432-4f1a-a1ce-c4a5f061584b.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+  },
+  "reassignments": [
+    {
+      "from": "gargula_death_03_v01.png",
+      "to": "gargula_death_02_v03.png"
+    },
+    {
+      "from": "gargula_death_02_v02.png",
+      "to": "gargula_death_03_v02.png"
+    }
+  ],
+  "reason": "Ordenar colapso por altura física; nenhuma edição de pixels; fontes originais preservadas."
+}

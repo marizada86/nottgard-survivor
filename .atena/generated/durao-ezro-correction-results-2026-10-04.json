@@ -1,0 +1,38 @@
+[
+  {
+    "state": "idle",
+    "index": 2,
+    "version": "02",
+    "refs": [
+      "ezro_idle_02_v01"
+    ],
+    "prompt": "Edit ONLY the attached Ezro idle02 sprite: retract the protruding pink tongue fully inside mouth, leaving the mouth naturally open as approved idle. Preserve exact pose, anatomical size, eyes, four limbs, attached purple brain mass, pixel positions, palette, style and canvas. No other changes. Native transparent alpha, no added objects or background.",
+    "status": "fulfilled",
+    "src": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a0fcbf-5349-7dc3-b367-20f513686fb7\\exec-bc5601f9-691a-41c8-ae21-26c2d41c3751.png",
+    "dest": "F:/dev/nottgard-survivor/.atena/generated/art-candidates/enemies-durao/ezro/ezro_idle_02_v02.png"
+  },
+  {
+    "state": "death",
+    "index": 4,
+    "version": "02",
+    "refs": [
+      "ezro_death_03_v01"
+    ],
+    "prompt": "Use the attached Ezro death03 fallen-side sprite as the exact EDIT TARGET to make death04. Close ALL THREE eyes fully: two face eyes and one large purple brain eye, with opaque eyelids. Lower head slightly and relax front arms slightly, maintaining the same side-lying body, SAME anatomical dimensions, same pixel scale, same canvas framing. Overall silhouette must be NO TALLER than input (729 pixels); slight additional collapse only. Tongue remains attached, limbs remain attached. Do not sit back up, do not zoom, do not enlarge body. Preserve native transparent alpha and exact crisp pixel-art style. No extras or effects.",
+    "status": "fulfilled",
+    "src": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a0fcbf-5349-7dc3-b367-20f513686fb7\\exec-e0b609d6-9302-4fa1-bcb4-2b2b7e072da0.png",
+    "dest": "F:/dev/nottgard-survivor/.atena/generated/art-candidates/enemies-durao/ezro/ezro_death_04_v02.png"
+  },
+  {
+    "state": "attack",
+    "index": 2,
+    "version": "02",
+    "refs": [
+      "ezro_idle_00_v01"
+    ],
+    "prompt": "Create ONE full-body Ezro tongue-attack PEAK frame matching attached approved identity exactly. Use a WIDE LANDSCAPE transparent canvas, aspect3:2, to give the extended tongue room WITHOUT SHRINKING THE CREATURE. Keep Ezro in the EXACT crouched posture/anatomical proportions of approved idle00, character body occupying about92% of CANVAS HEIGHT. Only change mouth to extend a long thick pink tongue horizontally SCREEN RIGHT, continuously attached inside mouth. Tongue fully inside frame with comfortable margin. Match exactly THREE orange eyes (brain plus two face), FOUR limbs, moss-green skin, cream belly, attached purple brain mass and pixel-art style. Do NOT shrink body or head to fit tongue; use the extra wide canvas space. No VFX, shadows, background, text, extra parts; native alpha.",
+    "status": "fulfilled",
+    "src": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a0fcbf-5349-7dc3-b367-20f513686fb7\\exec-629d8519-e303-401d-a142-cc194ccb4d64.png",
+    "dest": "F:/dev/nottgard-survivor/.atena/generated/art-candidates/enemies-durao/ezro/ezro_attack_02_v02.png"
+  }
+]

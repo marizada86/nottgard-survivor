@@ -1,0 +1,65 @@
+[
+  {
+    "state": "special",
+    "index": 3,
+    "version": 2,
+    "status": "selected",
+    "reason": "Clear six-arm ritual progression."
+  },
+  {
+    "state": "special",
+    "index": 2,
+    "version": 2,
+    "status": "selected",
+    "reason": "Clear six-arm ritual progression."
+  },
+  {
+    "state": "special",
+    "index": 4,
+    "version": 2,
+    "status": "selected",
+    "reason": "Clear six-arm ritual progression."
+  },
+  {
+    "state": "death",
+    "index": 4,
+    "version": 2,
+    "status": "rejected",
+    "reason": "Missing visible bell hand."
+  },
+  {
+    "state": "death",
+    "index": 4,
+    "version": 3,
+    "status": "selected",
+    "reason": "Six distinct hands/props resting low."
+  },
+  {
+    "state": "death",
+    "index": 5,
+    "version": 1,
+    "status": "rejected",
+    "reason": "Crown clipped rightedge."
+  },
+  {
+    "state": "death",
+    "index": 5,
+    "version": 2,
+    "status": "rejected",
+    "reason": "Wide composition externalhalo."
+  },
+  {
+    "state": "death",
+    "index": 5,
+    "version": 3,
+    "status": "rejected",
+    "reason": "Wide externalhalo persists."
+  },
+  {
+    "state": "death",
+    "index": 5,
+    "version": 4,
+    "status": "selected",
+    "reason": "Square clean nativealpha fullcrown sixvisiblehands, height478 versus487previous."
+  }
+]

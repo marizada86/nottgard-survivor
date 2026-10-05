@@ -1,0 +1,20 @@
+[
+  {
+    "state": "death",
+    "index": 2,
+    "pose": "keep exact kneeling pose of image2, CHANGE ONLY chest core: ALL cyan/blue light and blue cracks become DARK gray-black stone recesses, completely unlit. Preserve rest exact.",
+    "prompt": "Use case: precise-object-edit. Image1 APPROVED idle00 exact identity palette and anatomy. Image2 edit target existing death_2. keep exact kneeling pose of image2, CHANGE ONLY chest core: ALL cyan/blue light and blue cracks become DARK gray-black stone recesses, completely unlit. Preserve rest exact. Preserve stone gray blocks, rusty manacles, two arms fists legs, red-brown cloth, same camera, opaque crisp PIXEL ART. ONE full-body frame. Transparent native square canvas, base near90%, generous margin ALL edges, no cuts, no separate blocks, no effects or floor/shadow/text. No blue pixels or emitted light in dead chest."
+  },
+  {
+    "state": "death",
+    "index": 3,
+    "pose": "half fallen on SCREEN RIGHT SIDE, torso nearly horizontal inclined30degrees, one shoulder much lower, both knees folded, arms limp touching side/ground, ALL chest light OFF black-gray recesses. Body height40%standingidle, same head and limb dimensions, no zoom. Gray stone blocks and all chains remain connected.",
+    "prompt": "Use case: precise-object-edit. Image1 APPROVED idle00 exact identity palette and anatomy. Image2 edit target existing death_3. half fallen on SCREEN RIGHT SIDE, torso nearly horizontal inclined30degrees, one shoulder much lower, both knees folded, arms limp touching side/ground, ALL chest light OFF black-gray recesses. Body height40%standingidle, same head and limb dimensions, no zoom. Gray stone blocks and all chains remain connected. Preserve stone gray blocks, rusty manacles, two arms fists legs, red-brown cloth, same camera, opaque crisp PIXEL ART. ONE full-body frame. Transparent native square canvas, base near90%, generous margin ALL edges, no cuts, no separate blocks, no effects or floor/shadow/text. No blue pixels or emitted light in dead chest."
+  },
+  {
+    "state": "death",
+    "index": 4,
+    "pose": "keep exact existing collapsed side pose. CHANGE ONLY ALL blue/cyan emitted light and cracks in chest into DARK gray-black unlit stone recesses. Preserve all other geometry/color/proportions and chains.",
+    "prompt": "Use case: precise-object-edit. Image1 approved identity for style; Image2 edit target existing death04. CHANGE ONLY all cyan blue chest light and crack light to dark gray-black stone recesses, completely OFF, zero blue pixels. Preserve exact corpse side pose, stone/armor/chains/limbs/cloth and composition. ONE opaque crisp PIXEL ART sprite native transparent square background, full subject with empty margin all edges. No shadow/floor/effects/text. All blocks and chains connected."
+  }
+]

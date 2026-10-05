@@ -1,0 +1,20 @@
+{
+  "status": "admitted",
+  "selected_corrections": [
+    "idle_02_v02",
+    "death_04_v02"
+  ],
+  "attack_02_selected": "v01",
+  "attack_02_uniform_scale": 1.178749,
+  "rejected_attack_02_versions": [
+    "v02 halo",
+    "v03 halo",
+    "v04 halo"
+  ],
+  "native_rgba_preserved": true,
+  "body_height": 115,
+  "feet_y": 356,
+  "minimum_strip_solidity": 0.974,
+  "runtime": "PASS",
+  "evidence": "EVID-145"
+}

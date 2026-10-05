@@ -1,0 +1,45 @@
+{
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "status": "integrated",
+  "approval_mode": "per-plan",
+  "identity_approval": "approved: dono atena continue após gate explícito das seis v02/anatomia6 e3 braços, 2026-10-04",
+  "generated_v01": [
+    "larva_de_lu_yueh",
+    "cultista_de_feng_tu",
+    "estatua_do_templo",
+    "cultista_ghaunadaur",
+    "discipulo_pestilento",
+    "lu_yueh"
+  ],
+  "v01_rejection": "Soft atmospheric halos outside silhouette; Disciple also has duplicated hand.",
+  "corrections": "All six v02 complete and visually reviewed; halos removed; Disciple three arms.",
+  "cycles_generated": 120,
+  "official_assets_installed": 25,
+  "reference_discrepancies_for_owner": [
+    "Lu Yueh static has six arms, prompt text says four. Pilot preserves six static arms.",
+    "Disciple static has three visible arms. Pilot preserves three, rejecting duplicated fourth hand."
+  ],
+  "next": "FengTu completo e build159validada. ShendilavriI01/I02gerados,quotaaté2026-10-05 12:43:35BRT; ver shendilavri-execution-state-2026-10-04.json.",
+  "selected_version": "02",
+  "review": "priority-review/feng-tu_identities_v02.png",
+  "minimum_solidity": 0.956,
+  "source_clipping": false,
+  "current_actor": "",
+  "integrated": [
+    "larva_de_lu_yueh",
+    "cultista_de_feng_tu",
+    "estatua_do_templo",
+    "cultista_ghaunadaur",
+    "discipulo_pestilento",
+    "lu_yueh"
+  ],
+  "remaining_larva_frames": 0,
+  "corrections_pending": [],
+  "manifest_assets": 159,
+  "remaining_acolyte_frames": 0,
+  "remaining_statue_frames": 0,
+  "remaining_fanatic_frames": 0,
+  "remaining_disciple_frames": 0,
+  "remaining_lu_frames": 0
+}

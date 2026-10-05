@@ -1,0 +1,23 @@
+{
+  "build": "build/image-priority-durao-five-mobs/NottgardSurvivors.exe",
+  "commit": "8307924+",
+  "bytes": 414788152,
+  "sha256": "59B6F0435CE12CE1329FA23CDC205768E01011C2E24E1011E68053466CA21950",
+  "manifest_assets": 129,
+  "actors": [
+    "alma_penada",
+    "demonio_de_gehenna",
+    "carcereiro_de_pedra",
+    "aberracao_shu",
+    "ezro"
+  ],
+  "frames": 100,
+  "strips": 20,
+  "tests_failures": 0,
+  "smoke_stages": 9,
+  "manifest_hashes_valid": 129,
+  "export_exit": 0,
+  "launch_exit": 0,
+  "human_playtest": "pending",
+  "concurrent_balance_changes": "included from local workspace, separate review"
+}

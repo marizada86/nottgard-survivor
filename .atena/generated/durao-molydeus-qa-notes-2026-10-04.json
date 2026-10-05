@@ -1,0 +1,36 @@
+{
+  "status": "admitted",
+  "selected_corrections": [
+    "move_00_v02",
+    "death_03_v02",
+    "death_05_v02"
+  ],
+  "rejected_v01": [
+    "move_00: wolf facing mismatch",
+    "death_03: posture rises",
+    "death_05: direction flipped and glowing eyes"
+  ],
+  "physical_scale": {
+    "special_03": 1.25,
+    "special_02": 1.25
+  },
+  "native_rgba_preserved": true,
+  "body_height": 101,
+  "feet_y": 356,
+  "selected_death_heights": [
+    1078,
+    1023,
+    930,
+    796,
+    785,
+    571
+  ],
+  "source_clipping": false,
+  "minimum_strip_solidity": 0.957,
+  "runtime_actual_boss": "PASS",
+  "runtime_actual_minor": "PASS",
+  "minor_reuses": "molydeus_chefe",
+  "capture_review": "priority-review/molydeus_chefe_runtime.png",
+  "checks": "queue/suite/smoke/hash/export/EXE PASS",
+  "evidence": "EVID-145"
+}

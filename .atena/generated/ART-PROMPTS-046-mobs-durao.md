@@ -2,7 +2,7 @@
 id: "ART-PROMPTS-046"
 type: "prompts-de-arte"
 title: "Animações dos inimigos de Durao — identidade e ciclos"
-status: "pronto para envio — nada executado; aguarda aprovação das identidades"
+status: "integrado — Durão completo: 126 quadros/25 tiras; menor reutiliza chefe"
 created: "2026-10-01"
 relations: ["[[PLAN-041-animacao-padrao-zumbi-para-inimigos-e-interacoes-2026-09-29]]", "[[PLAN-048-geracao-animacoes-mobs-onda-1-2026-09-30]]", "[[ART-PROMPTS-033-mobs-onda-1-lote-a]]"]
 ---
@@ -126,3 +126,5 @@ Anexar a arte estática `assets/enemies/<id>.png` e o `idle_00` aprovado. Salvar
 - Gosma, névoa, chama, fungo ou corrente translúcidos, desfocados ou soltos; partículas, círculos mágicos, projéteis ou respingos separados.
 - Troca de mão da arma, membros duplicados, texto, UI, cenário, sombra no chão ou segundo personagem.
 - Solidez abaixo de 0,90 (0,79 apenas para o que é translúcido por desenho: `alma_penada`, `bolha_de_slime`).
+
+2026-10-04 — Durão concluído localmente (PLAN-053/SPEC-121 S-006). Molydeus26 quadros/5 tiras admitidos: move00v02 mantém cabeça aprovada; death03v02 e death05v02 preservam direção de queda, encerrando com olhos fechados. Special02/03 usam escala uniforme1,25 para continuidade física, sem alterar RGB/alfa; escolhas em frame-selection.json e transforms em strips/packing.json. Fontes selecionadas sem cortes; solidez mínima0,957. Chefe body_height101/feet356, menor usa source_id=molydeus_chefe sem PNG duplicado; escalas reais1,9/1,6 verificadas. A habilidade aoe existente toca special do chefe. Captura real priority-review/molydeus_chefe_runtime.png inspecionada. Durão6 atores novos/126quadros/25tiras, mais menor reutilizado; manifesto134 assets/hashes válidos. Suite0 falhas, smoke9 fases, queue0, runtime chefe+menor0, export0, EXE60frames0. Build8307924+ em build/image-priority-durao-complete/NottgardSurvivors.exe,415238352bytes,SHA2562EB63495BD5F805DEB815E04397DAD29C4C9AE8560DDB4DB0B111A2A29829673. Validação duraocompleta registrada em durao-complete-build-validation-2026-10-04.json. Build inclui mudanças de balanceamento da sessão paralela sob revisão separada. BUG-025 e playtest humano permanecem pendentes; sem commit/push. Estado central PLAN-056 preservado; cursor próprio PLAN-053. Próximo checkpoint: seis pilotos de Feng Tu antes de ciclos.

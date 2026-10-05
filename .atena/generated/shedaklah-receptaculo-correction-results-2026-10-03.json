@@ -1,0 +1,38 @@
+{
+  "corrections": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "index": 1,
+        "prompt": "Edit exact Receptaculo de Juiblex in reference into death01 corrected progression. Preserve same lime-green many-eyed goo identity, exactly2drooping arms, no legs, chest sphere DARKER than reference but still SOLID opaque and embedded. Lower head and torso by folding/melting body: total silhouette height at most780pixels on same1254squarecanvas. Preserve actual width/thickness and camera, do not scale whole creature smaller. Body sags and arms droop into base, no detached goo. Transparent margins at least8percent, large transparent space above lowered head. One fullbody pixel sprite, all outside character alphaZERO, no halo background shadow floor text.",
+        "dest": "F:/dev/nottgard-survivor/.atena/generated/art-candidates/enemies-shedaklah/receptaculo_de_juiblex/receptaculo_de_juiblex_death_01_v02.png",
+        "output_hint": "Generated images are saved to C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a0fcbf-5349-7dc3-b367-20f513686fb7 as C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a0fcbf-5349-7dc3-b367-20f513686fb7\\exec-9b704855-4997-4b21-aae1-610a749af8d3.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "index": 4,
+        "prompt": "Edit exact Receptaculo de Juiblex death04 reference into lower death04. Body now a LOW wide puddle/mound, NO UPRIGHT TORSO; both arms completely melt into puddle. Total silhouette height at most400pixels on same1254squarecanvas. Keep same many yellow eyes embedded in limegreen goo and chest sphere fully DARK olivegreen SOLID opaque, still embedded centered in mound. Preserve palette/style/width and actual thickness, no resizing an upright figure. Native alphaZERO outside sprite, big emptyspaceabove,8percent clear margins. One pixel sprite no halo shadow floor particles text.",
+        "dest": "F:/dev/nottgard-survivor/.atena/generated/art-candidates/enemies-shedaklah/receptaculo_de_juiblex/receptaculo_de_juiblex_death_04_v02.png",
+        "output_hint": "Generated images are saved to C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a0fcbf-5349-7dc3-b367-20f513686fb7 as C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a0fcbf-5349-7dc3-b367-20f513686fb7\\exec-aa7ba37c-1abb-43cd-8c14-aab6caf75fdc.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    }
+  ],
+  "final": {
+    "prompt": "Edit exact Receptaculo reference into FINAL death05: FLAT LOW LIME-GREEN GOO PUDDLE ONLY. No upright torso/head/arms. SAME goo width and opaque yellow eyes now eyelids closed, all eye shapes stay embedded in puddle. Chest sphere still embedded but completely DARK OLIVEGREEN, NO BRIGHT HIGHLIGHTS ON SPHERE. Flatten all goo above sphere into puddle, sphere small partly submerged. Whole puddle silhouette max260pixels tall on same1254square canvas, with huge empty transparent space ABOVE. Do not resize an upright creature: melt body horizontally into puddle, width about900pixels. Keep pixel palette/style, opaque attached clusters, native alphaZERO outside all goo; clear transparent margins. No halo glow shadow floor looseparticles text. One isolated fullbody final death sprite.",
+    "dest": "F:/dev/nottgard-survivor/.atena/generated/art-candidates/enemies-shedaklah/receptaculo_de_juiblex/receptaculo_de_juiblex_death_05_v02.png",
+    "output_hint": "Generated images are saved to C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a0fcbf-5349-7dc3-b367-20f513686fb7 as C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a0fcbf-5349-7dc3-b367-20f513686fb7\\exec-f088cbff-5150-43ee-828e-f05c502e8bb1.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+  },
+  "reassignments": [
+    {
+      "from": "death_02_v01",
+      "to": "death_01_v03"
+    },
+    {
+      "from": "death_01_v02",
+      "to": "death_02_v02"
+    }
+  ],
+  "reason": "Ordenação técnica por colapso; sem edição de pixels."
+}

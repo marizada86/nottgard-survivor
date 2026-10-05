@@ -1,0 +1,27 @@
+[
+  {
+    "state": "move",
+    "index": 0,
+    "refs": [
+      "molydeus_chefe_move_00_v01",
+      "molydeus_chefe_idle_00_v01"
+    ],
+    "prompt": "Edit image1 Molydeus move00 ONLY: change WOLF HEAD orientation to match image2 approved idle00, muzzle looking SCREEN LEFT at same three-quarter front angle. Preserve EXACT existing stride, body, anatomical size, pixel scale, armor, blue scars, snake on SCREEN RIGHT shoulder, two-hand axe grip, feet, canvas and native transparency. Head yaw only; no body mirror, no new heads or parts, no background/halo/shadow/effects."
+  },
+  {
+    "state": "death",
+    "index": 3,
+    "refs": [
+      "molydeus_chefe_death_03_v01"
+    ],
+    "prompt": "Edit this Molydeus death03 sprite to CONTINUE COLLAPSING: lean torso farther forward and down, lower WOLF HEAD and attached SNAKE HEAD markedly, bend joints naturally. Keep feet on SCREEN LEFT and wolf/axe on SCREEN RIGHT, same body facing/identity, both hands still gripping ONE axe. Creature now almost horizontal, halfway between deep kneel and side collapse. Full silhouette height must be about800–850 pixels on same1254square canvas (currently998), achieved by LOWERING posture, NEVER shrinking anatomical parts or zooming. Keep wolf, snake, armor, limbs, axe same physical dimensions, full sprite inside frame. Eyes fading, no renewed glow, no extra parts, no effects or shadows. Native alpha."
+  },
+  {
+    "state": "death",
+    "index": 5,
+    "refs": [
+      "molydeus_chefe_death_04_v01"
+    ],
+    "prompt": "Create death05 as the final continuation of this exact death04 pose: Molydeus FULLY LYING HORIZONTAL on side. Legs extend toward SCREEN LEFT; WOLF HEAD and AXE remain SCREEN RIGHT as input. Do NOT reverse or mirror body, do not swap head and feet sides. Lower shoulder, wolf and attached snake until silhouette is about550–650 pixels tall on same square canvas, preserving SAME physical size of all body parts. Both hands continue holding single double-bladed axe beside body on RIGHT; limbs relaxed. Wolf and snake eyes FULLY CLOSED with opaque dark eyelids, no bright red/blue eye glow. Preserve identity, armor, palette and crisp pixel art. Full body/axe inside generous transparent margins, native alpha, no background, shadow or effects."
+  }
+]

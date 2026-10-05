@@ -1,0 +1,24 @@
+{
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "status": "blocked_quota",
+  "approval_mode": "per-plan",
+  "identity_approval": "pending: gate incomplete,2of5 generated",
+  "generated": [
+    "escravo_de_rivenheart",
+    "sucubo"
+  ],
+  "remaining": [
+    "guarda_do_castelo",
+    "master_of_cruelties",
+    "malcanthet"
+  ],
+  "cycles_generated": 0,
+  "official_assets_installed": 0,
+  "manifest_assets": 159,
+  "quota_reset_unix": 1791215015,
+  "quota_reset_brt": "2026-10-05 12:43:35 -03:00",
+  "next": "Retomar I03 Guarda do Castelo, depois I04 Master of Cruelties e I05 Malcanthet; auditar5pilotos e apresentar gate FILA017 ao dono antes dos ciclos.",
+  "build": "build/image-priority-feng-tu-complete/NottgardSurvivors.exe",
+  "build_validation": "feng-tu-complete-build-validation-2026-10-04.json"
+}

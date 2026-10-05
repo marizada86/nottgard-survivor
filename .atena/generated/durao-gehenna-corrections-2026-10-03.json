@@ -1,0 +1,29 @@
+[
+  {
+    "state": "move",
+    "index": 0,
+    "pose": "walking contact pose, left foot slightly forward, right foot slightly back, small step only. Preserve head facing SCREEN LEFT, antennae, torso camera and all four arms exactly like approved identity. Spear A stays upright in SCREEN LEFT upper hand, SCREEN LEFT lower hand hangs; spear B stays down-pointing in outer SCREEN RIGHT hand, inner SCREEN RIGHT hand hangs.",
+    "prompt": "Use case: identity-preserve. Image 1 approved identity, PRIMARY exact anatomy/camera/style. Generate ONE corrected full-body PIXEL ART animation frame move_0. walking contact pose, left foot slightly forward, right foot slightly back, small step only. Preserve head facing SCREEN LEFT, antennae, torso camera and all four arms exactly like approved identity. Spear A stays upright in SCREEN LEFT upper hand, SCREEN LEFT lower hand hangs; spear B stays down-pointing in outer SCREEN RIGHT hand, inner SCREEN RIGHT hand hangs. EXACT FOUR arms and TWO spears, same red insect demon, armor, cloth, antennae, size and proportions. No arm/weapon swapping, no mirror, no new limb or equipment. Opaque solid pixel clusters, native transparent square background. Entire sprite and spear tips within canvas with generous empty margin on every edge. Feet near bottom. No glow/halo/red outline/floor/shadow/text/particles/VFX.",
+    "status": "fulfilled",
+    "src": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a0fcbf-5349-7dc3-b367-20f513686fb7\\exec-0eb34112-2652-4f90-8910-17c63eee74d1.png",
+    "dest": "F:/dev/nottgard-survivor/.atena/generated/art-candidates/enemies-durao/demonio_de_gehenna/demonio_de_gehenna_move_00_v02.png"
+  },
+  {
+    "state": "attack",
+    "index": 1,
+    "pose": "early thrust: upper and lower arms attached to SCREEN LEFT side of torso hold spear A together across front of chest, pointing horizontally SCREEN RIGHT. Both SCREEN RIGHT arms stay on SCREEN RIGHT: outer hand holds spear B diagonally downward like identity, inner hand low. Head and torso maintain identity camera, face SCREEN LEFT, no turning.",
+    "prompt": "Use case: identity-preserve. Image 1 approved identity, PRIMARY exact anatomy/camera/style. Generate ONE corrected full-body PIXEL ART animation frame attack_1. early thrust: upper and lower arms attached to SCREEN LEFT side of torso hold spear A together across front of chest, pointing horizontally SCREEN RIGHT. Both SCREEN RIGHT arms stay on SCREEN RIGHT: outer hand holds spear B diagonally downward like identity, inner hand low. Head and torso maintain identity camera, face SCREEN LEFT, no turning. EXACT FOUR arms and TWO spears, same red insect demon, armor, cloth, antennae, size and proportions. No arm/weapon swapping, no mirror, no new limb or equipment. Opaque solid pixel clusters, native transparent square background. Entire sprite and spear tips within canvas with generous empty margin on every edge. Feet near bottom. No glow/halo/red outline/floor/shadow/text/particles/VFX.",
+    "status": "fulfilled",
+    "src": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a0fcbf-5349-7dc3-b367-20f513686fb7\\exec-b9f12dc4-2c7f-4edd-9626-4d422136c1b5.png",
+    "dest": "F:/dev/nottgard-survivor/.atena/generated/art-candidates/enemies-durao/demonio_de_gehenna/demonio_de_gehenna_attack_01_v02.png"
+  },
+  {
+    "state": "attack",
+    "index": 2,
+    "pose": "maximum thrust: SCREEN LEFT upper arm reaches across chest toward SCREEN RIGHT and SCREEN LEFT lower arm supports rear of SAME spear A shaft near left shoulder. Both hands anatomically connect to SCREEN LEFT pair of shoulders. Spear A horizontal tip SCREEN RIGHT. SCREEN RIGHT outer arm retains spear B diagonally down, inner SCREEN RIGHT arm hangs low. Four arms total, two on each side. Head remains exact approved camera facing SCREEN LEFT.",
+    "prompt": "Use case: identity-preserve. Image 1 approved identity, PRIMARY exact anatomy/camera/style. Generate ONE corrected full-body PIXEL ART animation frame attack_2. maximum thrust: SCREEN LEFT upper arm reaches across chest toward SCREEN RIGHT and SCREEN LEFT lower arm supports rear of SAME spear A shaft near left shoulder. Both hands anatomically connect to SCREEN LEFT pair of shoulders. Spear A horizontal tip SCREEN RIGHT. SCREEN RIGHT outer arm retains spear B diagonally down, inner SCREEN RIGHT arm hangs low. Four arms total, two on each side. Head remains exact approved camera facing SCREEN LEFT. EXACT FOUR arms and TWO spears, same red insect demon, armor, cloth, antennae, size and proportions. No arm/weapon swapping, no mirror, no new limb or equipment. Opaque solid pixel clusters, native transparent square background. Entire sprite and spear tips within canvas with generous empty margin on every edge. Feet near bottom. No glow/halo/red outline/floor/shadow/text/particles/VFX.",
+    "status": "fulfilled",
+    "src": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a0fcbf-5349-7dc3-b367-20f513686fb7\\exec-0a0872b3-a722-4f72-908f-7be5d708ca16.png",
+    "dest": "F:/dev/nottgard-survivor/.atena/generated/art-candidates/enemies-durao/demonio_de_gehenna/demonio_de_gehenna_attack_02_v02.png"
+  }
+]

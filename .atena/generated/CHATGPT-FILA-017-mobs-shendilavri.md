@@ -1,7 +1,7 @@
 ---
 id: "CHATGPT-FILA-017"
 title: "Fila de geração — animações dos inimigos de Shendilavri"
-status: "pronta para envio — nada executado"
+status: "2 de 5 pilotos gerados — quota até2026-10-05 12:43:35BRT; gatependente"
 created: "2026-10-01"
 relations: ["[[ART-PROMPTS-048-mobs-shendilavri]]", "[[PLAN-041-animacao-padrao-zumbi-para-inimigos-e-interacoes-2026-09-29]]"]
 ---
@@ -20,8 +20,8 @@ Marque `[x]` ao gerar e `[a]` ao aprovar.
 
 ## Gate de identidade
 
-- [ ] gerada · [ ] aprovada — I01 `escravo_de_rivenheart_idle_00`
-- [ ] gerada · [ ] aprovada — I02 `sucubo_idle_00`
+- [x] gerada · [ ] aprovada — I01 `escravo_de_rivenheart_idle_00`
+- [x] gerada · [ ] aprovada — I02 `sucubo_idle_00`
 - [ ] gerada · [ ] aprovada — I03 `guarda_do_castelo_idle_00`
 - [ ] gerada · [ ] aprovada — I04 `master_of_cruelties_idle_00`
 - [ ] gerada · [ ] aprovada — I05 `malcanthet_idle_00`
@@ -149,3 +149,5 @@ Destino: `.atena/generated/art-candidates/enemies-shendilavri/malcanthet/`
 - [ ] `special_04`
 - [ ] `special_05`
 
+
+2026-10-04 — Shendilavri início autorizado S-006: I01escravo_de_rivenheart eI02sucubo v01gerados1254x1254, alfa nativo, sem cortes, solidez0,947/0,948; prancha parcial priority-review/shendilavri_identities_v01.png inspecionada. Nenhum ciclo ou assetruntime Shendilavri. I03guarda_do_castelo falhouHTTP429usage_limit_reached, resets_at1791215015=2026-10-05 12:43:35BRT. Nenhuma nova tentativa após quota. Preservadosprompts/resultados/estado shendilavri-{identity-prompts,identity-results,execution-state}-2026-10-04.json;logsreview/alpha/solidity. RetomarI03→I04Master→I05Malcanthet, auditar5identidades e submetergateFILA017 antesciclos; gateincompleto2de5,sem aprovaçãoinventada. BuildFengTucompleta validada preservada; centralPLAN056 intacto, sem commit/push.

@@ -2,7 +2,7 @@
 id: "ART-PROMPTS-048"
 type: "prompts-de-arte"
 title: "Animações dos inimigos de Shendilavri — identidade e ciclos"
-status: "pronto para envio — nada executado; aguarda aprovação das identidades"
+status: "2 de 5 pilotos gerados — quota até2026-10-05 12:43:35BRT; gatependente"
 created: "2026-10-01"
 relations: ["[[PLAN-041-animacao-padrao-zumbi-para-inimigos-e-interacoes-2026-09-29]]", "[[PLAN-048-geracao-animacoes-mobs-onda-1-2026-09-30]]", "[[ART-PROMPTS-033-mobs-onda-1-lote-a]]"]
 ---
@@ -114,3 +114,5 @@ Anexar a arte estática `assets/enemies/<id>.png` e o `idle_00` aprovado. Salvar
 - Gosma, névoa, chama, fungo ou corrente translúcidos, desfocados ou soltos; partículas, círculos mágicos, projéteis ou respingos separados.
 - Troca de mão da arma, membros duplicados, texto, UI, cenário, sombra no chão ou segundo personagem.
 - Solidez abaixo de 0,90 (0,79 apenas para o que é translúcido por desenho: `alma_penada`, `bolha_de_slime`).
+
+2026-10-04 — Shendilavri início autorizado S-006: I01escravo_de_rivenheart eI02sucubo v01gerados1254x1254, alfa nativo, sem cortes, solidez0,947/0,948; prancha parcial priority-review/shendilavri_identities_v01.png inspecionada. Nenhum ciclo ou assetruntime Shendilavri. I03guarda_do_castelo falhouHTTP429usage_limit_reached, resets_at1791215015=2026-10-05 12:43:35BRT. Nenhuma nova tentativa após quota. Preservadosprompts/resultados/estado shendilavri-{identity-prompts,identity-results,execution-state}-2026-10-04.json;logsreview/alpha/solidity. RetomarI03→I04Master→I05Malcanthet, auditar5identidades e submetergateFILA017 antesciclos; gateincompleto2de5,sem aprovaçãoinventada. BuildFengTucompleta validada preservada; centralPLAN056 intacto, sem commit/push.

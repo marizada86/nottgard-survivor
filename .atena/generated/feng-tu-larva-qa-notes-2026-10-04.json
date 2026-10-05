@@ -1,0 +1,29 @@
+{
+  "status": "admitted",
+  "pending_corrections": [],
+  "native_alpha": true,
+  "source_bounds_log": "feng-tu-larva-source-bounds-2026-10-04.log",
+  "integration": "20 frames/4 strips installed",
+  "attack03_review": "v01 viewed by exact file path; mouth closed, recovery accepted. Earlier provisional note associated displayed peak with wrong index.",
+  "selected_death_versions": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    2
+  ],
+  "source_death_heights": [
+    1093,
+    1041,
+    877,
+    848,
+    713,
+    709
+  ],
+  "body_height": 150,
+  "feet_y": 356,
+  "solidity_min": 0.975,
+  "runtime_actual_actor": "PASS scale0.7, anchor, fps, action unlock, death cleanup",
+  "capture": "priority-review/larva_de_lu_yueh_runtime.png inspected"
+}

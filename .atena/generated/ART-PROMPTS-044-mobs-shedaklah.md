@@ -2,7 +2,7 @@
 id: "ART-PROMPTS-044"
 type: "prompts-de-arte"
 title: "Animações dos inimigos de Shedaklah — identidade e ciclos"
-status: "oito identidades v03 aprovadas; quatro alvos integrados; Pudim em geração"
+status: "oito identidades v03 aprovadas; oito alvos integrados; 166 quadros/33 tiras"
 created: "2026-10-01"
 relations: ["[[PLAN-041-animacao-padrao-zumbi-para-inimigos-e-interacoes-2026-09-29]]", "[[PLAN-048-geracao-animacoes-mobs-onda-1-2026-09-30]]", "[[ART-PROMPTS-033-mobs-onda-1-lote-a]]"]
 ---

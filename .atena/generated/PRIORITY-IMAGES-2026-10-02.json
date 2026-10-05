@@ -2,7 +2,7 @@
   "created": "2026-10-02",
   "generator": "built-in imagegen",
   "authorization": "Pedido do dono em 2026-10-02",
-  "count": 96,
+  "count": 159,
   "assets": [
     {
       "path": "assets/stages/docas_thumb.png",
@@ -677,6 +677,447 @@
       "height": 384,
       "corner_alpha": 0,
       "sha256": "e591a1da0e291714b4f713a917d3a63033554b67d35b4f0ca178c94531b4a032"
+    },
+    {
+      "path": "assets/animations/enemies/gargula/idle.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "5b6e583d68d1228c55cb0674e0c1d138829839ad23ea47a7abb346c8ecff3b78"
+    },
+    {
+      "path": "assets/animations/enemies/gargula/move.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "780beb9ed9c168e05d4bfdf7d05532037d99c0b28f8b6c478f3f72f863f400a6"
+    },
+    {
+      "path": "assets/animations/enemies/gargula/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "c2bafe4278e5b6c49b6a627a6305a5eccdc0507757ed30907b6db6d5ea58f240"
+    },
+    {
+      "path": "assets/animations/enemies/gargula/death.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "bd13d06df858c3deeb60b6c89b565c150e3ce262af22e3bcd01c4e3a7881d2c1"
+    },
+    {
+      "path": "assets/animations/enemies/receptaculo_de_juiblex/idle.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "e373bf9c44b69890314b786a185f923675f855baad9cdfb01b1cea8b6121acdd"
+    },
+    {
+      "path": "assets/animations/enemies/receptaculo_de_juiblex/move.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "9268acc03805212b05a74010d428d28dbb558584135e52f8e1e7c294e775c2d0"
+    },
+    {
+      "path": "assets/animations/enemies/receptaculo_de_juiblex/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "63f131bc7920ef34a5327799fdc134b68ddeef9a38396e9625426f073b2d0688"
+    },
+    {
+      "path": "assets/animations/enemies/receptaculo_de_juiblex/death.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "abef6df49ac8b27fb4af73d4f99a8d55a3c589525c83a06c4fbe2de0d9232f73"
+    },
+    {
+      "path": "assets/animations/enemies/zuggtmoy/idle.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "0889a45f494502c60909b4b710676d908ce596de091ac6bebb341a6c6bef1580"
+    },
+    {
+      "path": "assets/animations/enemies/zuggtmoy/move.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "052477db526b2e855e11058b1fd53ee140db2075a0b1ca4d8d905c700224054d"
+    },
+    {
+      "path": "assets/animations/enemies/zuggtmoy/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "a7b9693b8fd35bae4f5b6606b5522e9764b35a6d86d25489cd4d1f986a36780d"
+    },
+    {
+      "path": "assets/animations/enemies/zuggtmoy/death.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "b87d0cc520f06f7f2a6252302592e65c1887da6acb0348ba8d7d81aff90d181e"
+    },
+    {
+      "path": "assets/animations/enemies/zuggtmoy/special.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "03aee0517f3410adda511e46da602662055ea33695d864ac3750b5a56d9b9479"
+    },
+    {
+      "path": "assets/animations/enemies/alma_penada/idle.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "e2b4c6a13b7bb336ed77a15ecb07850335140cca6d2a925cfa085819a6f8cdef"
+    },
+    {
+      "path": "assets/animations/enemies/alma_penada/move.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "857a9b9bdb6330a6355b0257ebd598cc8c2b7bac9aae856e976e4c6cf8306255"
+    },
+    {
+      "path": "assets/animations/enemies/alma_penada/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "b176ecaa4fa5648c88901952dcbe9fdb3f2cce9e93702c1eacb3e8e6db39e3d7"
+    },
+    {
+      "path": "assets/animations/enemies/alma_penada/death.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "88579ac441df37c8cfceb606c0fd9ca13e80cfd1bc29a94a41861a6e7ed9f69e"
+    },
+    {
+      "path": "assets/animations/enemies/demonio_de_gehenna/idle.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "dbdf86970ce9da6394bf7bed11c571f68c551ed487217a1eb8a84cf0ac2d523e"
+    },
+    {
+      "path": "assets/animations/enemies/demonio_de_gehenna/move.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "eedb6cc62c2a79c023e1b252b9afce48a0bf8c783e4731afc2d08033d203cf3c"
+    },
+    {
+      "path": "assets/animations/enemies/demonio_de_gehenna/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "08be14aeb0bb34f85e2bf7c095915ea0cca4ba397892a43be33da05e2f2e2cbb"
+    },
+    {
+      "path": "assets/animations/enemies/demonio_de_gehenna/death.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "d1e6ef4d65bae4e47b8be3d2dc37254bdef9b97f115d57fb6b64c1056d911a19"
+    },
+    {
+      "path": "assets/animations/enemies/carcereiro_de_pedra/idle.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "433f5bc01f3d35bad8a967ed3f85e415f059b7860da9127d667fb1358cc8a033"
+    },
+    {
+      "path": "assets/animations/enemies/carcereiro_de_pedra/move.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "40053a008f637f2cf7680e43be71737195af262b5abb5a21efbff0b1c7dbc313"
+    },
+    {
+      "path": "assets/animations/enemies/carcereiro_de_pedra/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "0f8a04a515398a272950cc36f46f2f11c405d28e41ad558369c0e696f1ed6d39"
+    },
+    {
+      "path": "assets/animations/enemies/carcereiro_de_pedra/death.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "c8a4ce18c9ecc6a9b17affe070b920f51e93bb9bb17d2252c959572da168420b"
+    },
+    {
+      "path": "assets/animations/enemies/aberracao_shu/idle.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "02c955a68c8319447928cc8e7932d78e1ec30bd8122ff89e1fd24eb10f7ff574"
+    },
+    {
+      "path": "assets/animations/enemies/aberracao_shu/move.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "69fe4b2be904632dde042e9897e5dc4ea362ffd4bf51888703dd5360465e68a4"
+    },
+    {
+      "path": "assets/animations/enemies/aberracao_shu/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "def76da7499c0b8a0ee6bc05ba23a344d78219167a7d2e55d22c8d71726a6f1a"
+    },
+    {
+      "path": "assets/animations/enemies/aberracao_shu/death.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "ac80d27a44e0b40a690e67f0f7ec1594ff4d80e01155f4efd2c2847dbd0f47bf"
+    },
+    {
+      "path": "assets/animations/enemies/ezro/idle.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "06b976c5201b904dc20e3b210910471cb659bab27ad62da1f9486bed155fcc95"
+    },
+    {
+      "path": "assets/animations/enemies/ezro/move.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "a4b680393e028a703ca6aabde2c6981a1d1d1af6cb76c39fb1240b30fe73d3d9"
+    },
+    {
+      "path": "assets/animations/enemies/ezro/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "0f905c6d55ca838eebe1dd3dd6b5b223394b41a8007c58f0a5850b6da969446e"
+    },
+    {
+      "path": "assets/animations/enemies/ezro/death.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "07f7c92060bf6f990ca2b985ecab6fdab74406177a3f3886f63184e47c4eeb39"
+    },
+    {
+      "path": "assets/animations/enemies/molydeus_chefe/idle.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "3d7555d9b17b2be444c1e6bbca65a89c4ed951b1a2ec31bf806f1e27dd0f55de"
+    },
+    {
+      "path": "assets/animations/enemies/molydeus_chefe/move.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "bf2ceadcfda3e817c3f7279006e1d872e4d6b3ef81a7f17ab648fa400db9cf2d"
+    },
+    {
+      "path": "assets/animations/enemies/molydeus_chefe/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "f3dc2bc599f24834ffb4d3a1104e23b49e97de963f0b8a6fb44f3501ffa52e99"
+    },
+    {
+      "path": "assets/animations/enemies/molydeus_chefe/death.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "0ae06d5b2e926050c311ddd49af68a6a10d3d4ec4dfa07710d610519b0e73a86"
+    },
+    {
+      "path": "assets/animations/enemies/molydeus_chefe/special.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "59df422d1a1438db21751b30fb321c842408cecc0c2fb1bf16dd67be6da3837b"
+    },
+    {
+      "path": "assets/animations/enemies/larva_de_lu_yueh/idle.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "e8b584835c9f2da829da1aa9ea12e60a90b1926949bce61f0480e3d79b604081"
+    },
+    {
+      "path": "assets/animations/enemies/larva_de_lu_yueh/move.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "0463df25c0dfc566827e03a73bab6feee7fb9b1b5cfb83cae3ef0c2fd6faca04"
+    },
+    {
+      "path": "assets/animations/enemies/larva_de_lu_yueh/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "84ffd01a9cb7c6bf1356aafc9cc2cfaedab6c3433f145c4d6aac8f63234ed967"
+    },
+    {
+      "path": "assets/animations/enemies/larva_de_lu_yueh/death.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "ace86b0f15c3d266e7e9a2cc34cf903d232900cfbdf9f99a84607e9fa8f796b3"
+    },
+    {
+      "path": "assets/animations/enemies/cultista_de_feng_tu/idle.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "cee180cf39fd4eb0fbc12a4f47d1a216861b24c4d3e5191e88ad1661ac304655"
+    },
+    {
+      "path": "assets/animations/enemies/cultista_de_feng_tu/move.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "7ff29f0e861ba8eab0dfd33b0edb62d629898c48549edcbadac5c0880a590b59"
+    },
+    {
+      "path": "assets/animations/enemies/cultista_de_feng_tu/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "92a14c1a7711cb12aca1b06dc6169b542cc00b5c0b594258d0255cb595edce94"
+    },
+    {
+      "path": "assets/animations/enemies/cultista_de_feng_tu/death.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "9b0606ccc29c61c13b536b7d1fe09c0e3b11e585ec00fa51743f7505885480f2"
+    },
+    {
+      "path": "assets/animations/enemies/estatua_do_templo/idle.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "a295f93fcedf655eb7ccd048d439881ca761bc612439b015b127c608abde730e"
+    },
+    {
+      "path": "assets/animations/enemies/estatua_do_templo/move.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "79c937706a28baeb81be57e6f864070c9bc9aaa75aac4c85f09063b35316b898"
+    },
+    {
+      "path": "assets/animations/enemies/estatua_do_templo/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "d47c37a4785663964479e0c2e9ab8d4f73d47eaf59897ac91d2e164eabfa6b8b"
+    },
+    {
+      "path": "assets/animations/enemies/estatua_do_templo/death.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "c49b9d5dda71fa64f78a0cbcf73ef9aa491a4310364db109024611541a59f5b9"
+    },
+    {
+      "path": "assets/animations/enemies/cultista_ghaunadaur/idle.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "e755659e15ea8d6e60d4ce704bce2921202d7c03dd51706c1914d071f8111830"
+    },
+    {
+      "path": "assets/animations/enemies/cultista_ghaunadaur/move.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "843a4599f581528823df2b989c4f2c7ab64d30f135cbb67deaf519f1ef1bf117"
+    },
+    {
+      "path": "assets/animations/enemies/cultista_ghaunadaur/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "2d8d2c170b2bc8d46d4f8cdda080e3b1b34aadeb11b74e9a95cf1d3d07df5ca3"
+    },
+    {
+      "path": "assets/animations/enemies/cultista_ghaunadaur/death.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "949ad275b3a8043e1b048e8f10cec00a0e63d243b7afda25cf7c96b7e829a19c"
+    },
+    {
+      "path": "assets/animations/enemies/discipulo_pestilento/idle.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "470406d13eb86de2d29a575d9ab36247e1b4bd0644f072a4b9b5ea1bd6a07482"
+    },
+    {
+      "path": "assets/animations/enemies/discipulo_pestilento/move.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "883a748d09bcfb2005d5a4b86bc2bac4df5e0c30fc5f33932d35fbdde13e5e89"
+    },
+    {
+      "path": "assets/animations/enemies/discipulo_pestilento/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "963fe91375c532120574bd769c37792235b2688b795dfd9ddace3157c3461d80"
+    },
+    {
+      "path": "assets/animations/enemies/discipulo_pestilento/death.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "8bcc576a35de92278fd5329a82e37afe75c765d90a02430651f5012bc8f5794a"
+    },
+    {
+      "path": "assets/animations/enemies/lu_yueh/idle.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "5bf1efb919bd808dc8bff9e37b5ab69d5f2754e7002cb0826889eda9be790c28"
+    },
+    {
+      "path": "assets/animations/enemies/lu_yueh/move.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "078594bd3965f82e6727de781c57abed8c666cdbf21cabf02216713cae426e47"
+    },
+    {
+      "path": "assets/animations/enemies/lu_yueh/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "0c82fa618271f41109754b5e47448a4a3483ee7f9e14c711a4016bda310b6c13"
+    },
+    {
+      "path": "assets/animations/enemies/lu_yueh/death.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "80c90bd0fc3c10fc22007c2d8ae55da90002ca2123ec0da309c9d3c8d7c986be"
+    },
+    {
+      "path": "assets/animations/enemies/lu_yueh/special.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "756c16c05593ccf837cbef78c1848367504dac6d9b582cde97c61e540fe35040"
     }
   ]
 }

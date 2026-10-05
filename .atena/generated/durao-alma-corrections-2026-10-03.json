@@ -1,0 +1,37 @@
+{
+  "results": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "state": "attack",
+        "index": 2,
+        "ref": "attack_01",
+        "prompt": "Edit this EXACT ghost attack pose to full impact. SAME NEAR arm starts from shoulder on SCREEN LEFT and crosses IN FRONT OF RIBS toward SCREEN RIGHT. Extend that near forearm and claw fully right across chest. FAR arm from SCREEN RIGHT shoulder must remain lowered pointing down as in reference. Do not switch attacking arm. Preserve EXACT head ribs mist tail two-arm anatomy cyan palette crisp pixel art and physical scale. One fullbody frame right-facing three-quarter front, no zoom. Entire body within central80% square native transparent canvas, all edges clear. No external glow, translucent detached mist, particles, background, floor, shadow or outline artifacts.",
+        "src": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a0fcbf-5349-7dc3-b367-20f513686fb7\\exec-527a77ba-5816-4a2f-89c6-803c0442df43.png",
+        "dest": "F:/dev/nottgard-survivor/.atena/generated/art-candidates/enemies-durao/alma_penada/alma_penada_attack_02_v02.png"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "state": "move",
+        "index": 0,
+        "ref": "idle_00",
+        "prompt": "Create first glide frame of this EXACT approved ghost. Keep SAME camera and silhouette: NEAR arm on SCREEN LEFT hangs low, FAR arm remains MOSTLY OCCLUDED BEHIND torso, no widely spread arms. Torso leans slightly RIGHT, connected solid cyan mist tail curls back gently. Preserve exact skull ribs colors proportions pixel detail. One isolated fullbody opaque pixel sprite, square native transparent canvas clear margins all edges central80%, base near90%height. No extra limbs legs props detached mist particles halo floor shadows text scenery.",
+        "src": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a0fcbf-5349-7dc3-b367-20f513686fb7\\exec-bf7bc6de-e59b-48f4-900d-39eee990edac.png",
+        "dest": "F:/dev/nottgard-survivor/.atena/generated/art-candidates/enemies-durao/alma_penada/alma_penada_move_00_v02.png"
+      }
+    }
+  ],
+  "reassignment": [
+    {
+      "source": "death_02_v01",
+      "destination": "death_01_v02"
+    },
+    {
+      "source": "death_01_v01",
+      "destination": "death_02_v02"
+    }
+  ],
+  "code_pixels_edited": false
+}

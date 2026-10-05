@@ -1,0 +1,22 @@
+[
+  {
+    "state": "attack",
+    "index": 2,
+    "version": "03",
+    "ref": "attack_02_v02",
+    "prompt": "Edit this sprite only. It incorrectly contains THREE curved scythe blades. REMOVE the extra blade on SCREEN LEFT that curls below the head around the left side of chest (x340–650,y420–720). Keep exactly TWO blades pointing SCREEN RIGHT: upper right blade and lower right blade. Preserve their two anatomically attached arms, body, head, folded wings on RIGHT, feet, antennae, all colors and exact pose/layout. Removed extra blade becomes transparent space, restore any underlying chest where needed. No new arms or blades. Exact same pixel art, native transparent background, no crop/halo/effects/text.",
+    "status": "fulfilled",
+    "src": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a0fcbf-5349-7dc3-b367-20f513686fb7\\exec-f9c18cda-4d0b-4fa2-8e22-23e1d9745464.png",
+    "dest": "F:/dev/nottgard-survivor/.atena/generated/art-candidates/enemies-durao/aberracao_shu/aberracao_shu_attack_02_v03.png"
+  },
+  {
+    "state": "death",
+    "index": 3,
+    "version": "03",
+    "ref": "death_03_v01",
+    "prompt": "Edit ONLY purple light in this half-fallen sprite. Make eyes and chest gem DARK dim purple without white highlights. KEEP ALL GEOMETRY and pixel positions exactly unchanged: especially height, silhouette size, head, antennae curve and half-fallen body pose. Do not enlarge, rotate, move or redraw any body part. The sprite must keep its original low physical height for death animation continuity. Exactly TWO scythes, TWO legs, closed wings. Preserve original square transparent canvas and margins. No effects/text/background.",
+    "status": "fulfilled",
+    "src": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a0fcbf-5349-7dc3-b367-20f513686fb7\\exec-8bf26740-45bb-4a73-a096-9f1caad5cd53.png",
+    "dest": "F:/dev/nottgard-survivor/.atena/generated/art-candidates/enemies-durao/aberracao_shu/aberracao_shu_death_03_v03.png"
+  }
+]

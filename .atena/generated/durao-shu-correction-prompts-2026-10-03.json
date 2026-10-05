@@ -1,0 +1,16 @@
+[
+  {
+    "state": "move",
+    "index": 3,
+    "ref": "idle_00",
+    "pose": "opposite walking contact: SCREEN RIGHT foot slightly ahead and SCREEN LEFT foot slightly behind. Head and torso camera EXACTLY as image1, face pointing SCREEN LEFT, folded wings visible ONLY along SCREEN RIGHT back. DO NOT mirror character. Change only leg step and small arm sway.",
+    "prompt": "Use case: identity-preserve. Image1 approved idle identity exact camera anatomy palette. Image2 pose continuity reference. ONE corrected full-body PIXEL ART move_3 frame. opposite walking contact: SCREEN RIGHT foot slightly ahead and SCREEN LEFT foot slightly behind. Head and torso camera EXACTLY as image1, face pointing SCREEN LEFT, folded wings visible ONLY along SCREEN RIGHT back. DO NOT mirror character. Change only leg step and small arm sway. Exact TWO scythe arms, TWO legs, same purple eyes/chestgem and two long antennae, closed wings, same slender olive body proportions. No new limb/blade/wing/props. Crisp opaque solid clusters native transparent square canvas. Entire sprite inside central70%, transparent margins ALL edges, base near90%. No glow/halo/outline/particles/floor/shadow/text/blur. No camera turning."
+  },
+  {
+    "state": "attack",
+    "index": 2,
+    "ref": "attack_01",
+    "pose": "peak crossed slash SCREEN RIGHT, extending the TWO attached scythe arms slightly farther from image2. Preserve exact torso/head/leg orientation from image2: head faces SCREEN LEFT, folded wings remain along SCREEN RIGHT back, NEVER put wings on screen left. Both blades crossing in front chest, generous margin all tips.",
+    "prompt": "Use case: identity-preserve. Image1 approved idle identity exact camera anatomy palette. Image2 pose continuity reference. ONE corrected full-body PIXEL ART attack_2 frame. peak crossed slash SCREEN RIGHT, extending the TWO attached scythe arms slightly farther from image2. Preserve exact torso/head/leg orientation from image2: head faces SCREEN LEFT, folded wings remain along SCREEN RIGHT back, NEVER put wings on screen left. Both blades crossing in front chest, generous margin all tips. Exact TWO scythe arms, TWO legs, same purple eyes/chestgem and two long antennae, closed wings, same slender olive body proportions. No new limb/blade/wing/props. Crisp opaque solid clusters native transparent square canvas. Entire sprite inside central70%, transparent margins ALL edges, base near90%. No glow/halo/outline/particles/floor/shadow/text/blur. No camera turning."
+  }
+]
