@@ -47,6 +47,22 @@ linha em "Histórico" (abaixo).
 Avaliada = as EVID dos testers foram triadas. Só então os cartões "aguardando
 playtest" viram verificados ou reabertos.
 
+## Versão 0.3.1 — Minor-update por decisão do dono, a publicar (playtest)
+
+Decisão do dono (2026-10-05): a versão do balanceamento da SPEC-122 e dos inimigos novos do PLAN-053 sai como **0.3.1 "por enquanto"**, em vez de 0.4.0. Pela regra de tipos (acima) isso seria Major, porque traz a raridade Incomum e muda a dificuldade; por isso esta versão **não tem changelog em PDF nem questionário novo**, e o [QUESTIONARIO-006](questionarios/QUESTIONARIO-006-v0.3.0.md) não cobre estes itens.
+
+Notas curtas para o aviso aos testers (lista "O que testar"):
+
+- XP mais lento: o herói deve sair de Dagruve por volta do nível 8 a 10 (antes ~14). [EVID-152](../evidence/EVID-152-b002-xp-ritmo-de-nivel-2026-10-04.md)
+- Armas iniciais mais fracas (Espada Sombria e Raio de Luz atacam mais devagar).
+- Menos baús, fontes e altares espalhados e menos acontecimentos opcionais por mapa.
+- Itens: Raro e Único bem mais raros no começo, nova raridade **Incomum** (entre Mágico e Raro) e preços por raridade.
+- Dano e PV dos inimigos reajustados por fase (mais suave no início, mais duro no fim).
+- Inimigos novos animados em Shedaklah, Durao, Molor e Feng Tu.
+- **Conhecido:** Zynara, Leoric e Nyrelia aparecem de frente ao andar para cima (BUG-027, arte nova ainda não gerada).
+
+Commits: `7d2f262`, `35796ba`, `5fc8d04`, `d86fbef`, `eecced9` (mecânicas, um por commit), `2d3cd14` (arte), mais o commit de versão. `0.3.1` em `core/version.gd` e `export_presets.cfg`.
+
 ## Versão 0.3.0 — Major-update, publicada (playtest)
 
 Pedido do dono (2026-10-03): os testers anteriores não responderam o questionário, só conversaram o que precisava mudar (a conversa levou ao PLAN-055). Por isso o questionário desta versão é **curto (1 página)** e pensado para **novos testers**; leva também o changelog em PDF e um **guia fácil** em PDF. `0.3.0` em `core/version.gd` e `export_presets.cfg`.
@@ -152,6 +168,7 @@ Origem: [PLAN-038](../vault/drafts/PLAN-038-atualizacao-pos-playtests-t01-t02-t0
 
 | Versão | Tipo | Publicada | Commit da build | Avaliada em |
 |---|---|---|---|---|
+| 0.3.1 | Minor (decisão do dono; sem PDF nem questionário novo) | 2026-10-05 (release `latest`, Playtest v0.3.1) | ver título do release | — (aguardando testers) |
 | 0.3.0 | Major (changelog + guia fácil + questionário 006) | 2026-10-03 (release `latest`, Playtest v0.3.0) | ver título do release | — (aguardando testers) |
 | 0.2.3 | Atualização de playtest (pedido do dono; junta 0.2.0 + 0.2.1) | 2026-10-02 (release `latest`, Playtest v0.2.3) | ver título do release | — (aguardando testers) |
 | 0.2.1 | Atualização de playtest (pedido do dono; traz mecânicas) | 2026-10-01 (release `latest`, Playtest v0.2.1) | ver título do release | — (aguardando testers) |
