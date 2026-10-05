@@ -26,6 +26,12 @@
     "bet_win_chance": 0.45,
     "bet_min": 20
   },
+  "xp": {
+    "_spec": "SPEC-122 B-002: ritmo de nivel. need_mult e need_growth multiplicam a curva base; kill_mult reduz o XP coletado.",
+    "need_mult": 1.0,
+    "need_growth": 0.06,
+    "kill_mult": 0.75
+  },
   "level_growth": {
     "start_level": 15,
     "hp_per_level": 1.0

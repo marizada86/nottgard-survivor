@@ -237,7 +237,9 @@ func load_stage(stage_key: String) -> void:
 	stage_changed = true
 
 static func xp_need_for(lv: int) -> int:
-	return int(12.0 + lv * 7.0 + lv * lv * 0.9)
+	var cfg: Dictionary = Data.table("difficulty").get("xp", {})
+	var scale := float(cfg.get("need_mult", 1.0)) * (1.0 + float(cfg.get("need_growth", 0.0)) * lv)
+	return int((12.0 + lv * 7.0 + lv * lv * 0.9) * scale)
 
 func spawn_for_test(id: String, at: Vector2) -> Enemy:
 	return _spawn(id, at, 0.0)
@@ -1541,7 +1543,7 @@ func _drop(kind: String, at: Vector2, value: float) -> void:
 func _collect(kind: String, value: float) -> void:
 	events.append({"type": "pickup", "kind": kind, "pos": hero.pos})
 	match kind:
-		"xp": _add_xp(value * (1.0 + hero.m("xp_pct") + tide_xp_bonus()))
+		"xp": _add_xp(value * float(Data.table("difficulty").get("xp", {}).get("kill_mult", 1.0)) * (1.0 + hero.m("xp_pct") + tide_xp_bonus()))
 		"gold": _add_gold(value)
 		"potion":
 			_heal_hero(hero.max_hp * value)
