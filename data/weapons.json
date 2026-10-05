@@ -1,5 +1,5 @@
 {
-  "espada_sombria":   {"name": "Espada Sombria", "src": "Arma de Durvall", "kind": "melee", "dtype": "fisico", "attr": "forca", "dice": "1d8", "cd": 1.3, "range": 1.9, "cone": 60,
+  "espada_sombria":   {"name": "Espada Sombria", "src": "Arma de Durvall", "kind": "melee", "dtype": "fisico", "attr": "forca", "dice": "1d8", "cd": 1.4, "range": 1.9, "cone": 60,
     "desc": "Golpe em arco à frente. Mira: o inimigo mais próximo (ou o mouse).",
     "levels": [{"dice": "1d10"}, {"cd": -0.1, "cone": 10}, {"dmg": 2}, {"dice": "2d6", "range": 0.3}],
     "evolve": {"passive": "cota_de_malha", "into": "espada_do_receptaculo"}},
@@ -22,8 +22,8 @@
     "evolve": {"passive": "carisma", "into": "julgamento_da_gloria"}},
   "julgamento_da_gloria": {"name": "Julgamento da Glória", "src": "Evolução", "kind": "nova", "dtype": "radiante", "attr": "carisma", "dice": "4d8", "cd": 3.2, "radius": 4.2, "heal": 6, "knock": 1.0, "levels": [], "desc": "Luz que fere e cura.",
     "synergy": {"item_base": "cetro", "name": "Círculo Crescente", "bonus_per_depth": {"area_pct": 0.03}}},
-  "raio_de_luz":      {"name": "Raio de Luz", "src": "Carta: Luz Reveladora", "kind": "bolt", "dtype": "radiante", "attr": "constituicao", "dice": "1d6", "cd": 1.4, "range": 9, "speed": 10, "pierce": 1, "count": 1,
-    "desc": "Projétil de luz que atravessa inimigos.", "levels": [{"dice": "1d8"}, {"pierce": 1}, {"count": 1}, {"dmg": 3, "cd": -0.2}],
+  "raio_de_luz":      {"name": "Raio de Luz", "src": "Carta: Luz Reveladora", "kind": "bolt", "dtype": "radiante", "attr": "constituicao", "dice": "1d6", "cd": 1.5, "range": 9, "speed": 10, "pierce": 1, "count": 1,
+    "desc": "Projétil de luz que atravessa inimigos.", "levels": [{"dice": "1d8"}, {"pierce": 1}, {"count": 1}, {"dmg": 3, "cd": -0.1}],
     "evolve": {"passive": "constituicao", "into": "luz_mais_pura"}},
   "luz_mais_pura":    {"name": "Luz Mais Pura", "src": "Evolução", "kind": "bolt", "dtype": "radiante", "attr": "constituicao", "dice": "3d6", "cd": 1.1, "range": 12, "speed": 13, "pierce": 8, "count": 3, "spread": 18, "levels": [], "desc": "Feixe de Sendrinah.",
     "synergy": {"item_base": "amuleto_simples", "name": "Luz Perene", "bonus_per_depth": {"hp": 3}}},
