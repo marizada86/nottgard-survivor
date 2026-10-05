@@ -28,6 +28,7 @@ func _emit(hero_id: String, seed_v: int, st: Dictionary, b: Battle) -> void:
 		int(float(st.min) * 100.0), st.b50, st.b25, st.dmg, st.boss, st.res])
 
 func _run(hero_id: String, seed_v: int, dt: float, max_stages: int) -> void:
+	seed(seed_v * 7919)  # BAL-018: RNG global do bot reprodutível (empates em _pick)
 	var b := Battle.new(seed_v, hero_id, "dagruve", {"meta_mods": _meta})
 	b.map_size = Vector2(_map_side, _map_side)
 	b.hero.map_size = b.map_size
