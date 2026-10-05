@@ -2538,7 +2538,8 @@ func _director(dt: float) -> void:
 			_spawn(String(w0.id), _ring_pos())
 	_inter_t -= dt
 	if _inter_t <= 0.0:
-		_inter_t = 50.0 + rng.randf() * 25.0
+		var icfg: Dictionary = Data.table("difficulty").get("interactions", {})
+		_inter_t = float(icfg.get("min_seconds", 50.0)) + rng.randf() * float(icfg.get("spread_seconds", 25.0))
 		_spawn_random_interaction()
 	_breakable_t -= dt
 	if _breakable_t <= 0.0:
@@ -2571,7 +2572,7 @@ func _spawn_random_breakable() -> void:
 
 func _spawn_random_interaction() -> void:
 	var alive_n := interactions.filter(func(i): return not i.used and i.kind != "portal" and not bool(i.get("fixed", false))).size()
-	if alive_n >= 4:
+	if alive_n >= int(Data.table("difficulty").get("interactions", {}).get("max_alive", 4)):
 		return
 	var weights: Dictionary = stage.interactions
 	var total := 0.0

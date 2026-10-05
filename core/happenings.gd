@@ -47,7 +47,10 @@ static func select(stage_key: String, defs: Array, seed_value: int) -> Array:
 			optional.append(def)
 		else:
 			fixed.append(def)
-	var picks := mini(optional.size(), 1 + r.randi() % 2)
+	var hcfg: Dictionary = Data.table("difficulty").get("happenings", {})
+	var lo := int(hcfg.get("optional_min", 1))
+	var hi := maxi(lo, int(hcfg.get("optional_max", 2)))
+	var picks := mini(optional.size(), lo + r.randi() % (hi - lo + 1))
 	for i in picks:
 		fixed.append(optional.pop_at(r.randi() % optional.size()))
 	fixed.sort_custom(func(a, b): return float(a.at) < float(b.at))

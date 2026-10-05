@@ -20,14 +20,15 @@ func _quiet(b: Battle) -> void:
 func run() -> Array:
 	var out: Array = []
 
-	# MEC-007: quebráveis mais frequentes que o intervalo antigo de 35-55 s; Carisma encurta
+	# MEC-007 + SPEC-122 B-004: o intervalo vem de data/difficulty.json (breakables); Carisma só encurta
 	var bk_t := _bat(51)
 	var bk_avg := 0.0
 	for i in 40:
 		bk_avg += bk_t._breakable_interval()
 	bk_avg /= 40.0
-	if bk_avg >= 35.0:
-		out.append("intervalo médio dos quebráveis deveria ser menor que o antigo (%.1f s)" % bk_avg)
+	var bk_cfg: Dictionary = Data.table("difficulty").breakables
+	if bk_avg > float(bk_cfg.min_seconds) + float(bk_cfg.spread_seconds) or bk_avg < float(bk_cfg.min_seconds) * 0.6:
+		out.append("intervalo médio dos quebráveis fora da faixa configurada (%.1f s)" % bk_avg)
 	var bk_hi := _bat(51)
 	bk_hi.hero.base_attrs["carisma"] = 20
 	var hi_sum := 0.0

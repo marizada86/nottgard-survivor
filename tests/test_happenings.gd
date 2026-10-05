@@ -82,8 +82,9 @@ func _check_select(out: Array) -> void:
 	if a.map(func(d): return d.id) != b.map(func(d): return d.id):
 		out.append("o sorteio deveria ser determinístico pela semente")
 	var fixed := defs.filter(func(d): return String(d.get("pool", "fixed")) != "optional").size()
-	if a.size() < fixed + 1 or a.size() > fixed + 2:
-		out.append("Durao deveria ter os fixos + 1 ou 2 opcionais (veio %d)" % a.size())
+	var hcfg: Dictionary = Data.table("difficulty").happenings
+	if a.size() < fixed + int(hcfg.optional_min) or a.size() > fixed + int(hcfg.optional_max):
+		out.append("Durao deveria ter os fixos + %d a %d opcionais (veio %d)" % [int(hcfg.optional_min), int(hcfg.optional_max), a.size()])
 	var dag := Happenings.select("dagruve", Data.table("stage_events").dagruve, 3)
 	if dag.size() != Data.table("stage_events").dagruve.size():
 		out.append("Dagruve não tem opcionais: deveria manter todos os eventos")

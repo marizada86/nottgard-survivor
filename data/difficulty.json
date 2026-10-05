@@ -7,9 +7,20 @@
     "max_mult": 1.2,
     "every_mult": 0.85
   },
+  "interactions": {
+    "_spec": "SPEC-122 B-004: baus, fontes e altares aleatorios (antes 50+25 s, ate 4 vivos).",
+    "min_seconds": 80,
+    "spread_seconds": 35,
+    "max_alive": 3
+  },
+  "happenings": {
+    "_spec": "SPEC-122 B-004: sorteio de acontecimentos opcionais por fase (antes 1 a 2).",
+    "optional_min": 0,
+    "optional_max": 1
+  },
   "breakables": {
-    "min_seconds": 22,
-    "spread_seconds": 14,
+    "min_seconds": 32,
+    "spread_seconds": 20,
     "charisma_step": 0.06,
     "loot": {
       "base_chance": 0.55,
