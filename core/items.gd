@@ -1,8 +1,9 @@
 class_name Items
 extends RefCounted
-## Itens estilo Diablo II: comum, mágico (1 afixo), raro (3 afixos) e único (do vault).
+## Itens estilo Diablo II: comum, mágico (1 afixo), incomum (2 afixos), raro (3 afixos) e único (do vault, mods fixos + afixos sorteados).
+## Chances por tier em data/difficulty.json (bloco "rarity").
 
-const RANK := {"comum": 0, "magico": 1, "raro": 2, "unico": 3}
+const RANK := {"comum": 0, "magico": 1, "incomum": 2, "raro": 3, "unico": 4}
 const SLOTS := ["arma", "armadura", "amuleto", "anel"]
 const MAX_LEVEL := 3
 const LEVEL_SCALE_STEP := 0.15  ## +15% nos mods do item por nível acima de 1
@@ -55,33 +56,22 @@ static func upgrade_preview(item: Dictionary) -> String:
 	var next := scaled_mods(item, lvl + 1)
 	return "Nv %d: %s\n      Nv %d: %s\n      Ganho: %s" % [lvl,mods_text(now), lvl + 1, mods_text(next), compare_text(next, now)]
 
-static func roll(rng: RandomNumberGenerator, tier: int, luck: float) -> Dictionary:
-	var db: Dictionary = Data.table("items")
-	var r := rng.randf() - luck * 0.01
-	var unique_chance := 0.05 + tier * 0.02
-	if r < unique_chance:
-		var pool: Array = db.uniques.filter(func(u): return int(u.tier) <= tier + 1)
-		if not pool.is_empty():
-			return unique(pool[rng.randi() % pool.size()])
-	var slot: String = SLOTS[rng.randi() % SLOTS.size()]
-	var bases: Array = db.bases[slot]
-	var base: Dictionary = bases[rng.randi() % bases.size()]
-	var rare_chance := 0.22 + tier * 0.03
-	var magic_chance := 0.5
-	var rarity := "comum"
-	var rr := rng.randf() - luck * 0.01
-	if rr < rare_chance:
-		rarity = "raro"
-	elif rr < rare_chance + magic_chance:
-		rarity = "magico"
-	var mods := {}
-	Hero.add_mods(mods, base.mods)
-	var name_: String = base.name
-	var n_aff := 0 if rarity == "comum" else (1 if rarity == "magico" else 3)
+## Chances de raridade no tier (SPEC-122 B-005). Valores em data/difficulty.json, bloco "rarity".
+static func rarity_chances(tier: int) -> Dictionary:
+	var c: Dictionary = Data.table("difficulty").get("rarity", {})
+	return {
+		"unico": float(c.get("unico_base", 0.05)) + tier * float(c.get("unico_per_tier", 0.02)),
+		"raro": float(c.get("raro_base", 0.22)) + tier * float(c.get("raro_per_tier", 0.03)),
+		"incomum": float(c.get("incomum_base", 0.0)) + tier * float(c.get("incomum_per_tier", 0.0)),
+		"magico": float(c.get("magico", 0.5)),
+	}
+
+## Soma `n` afixos sorteados em `mods`; devolve [prefixo, sufixo] para o nome.
+static func _roll_affixes(rng: RandomNumberGenerator, db: Dictionary, tier: int, n: int, mods: Dictionary) -> Array:
 	var used: Array = []
 	var pre := ""
 	var suf := ""
-	for i in n_aff:
+	for i in n:
 		var af: Dictionary = db.affixes[rng.randi() % db.affixes.size()]
 		if af in used:
 			continue
@@ -94,21 +84,68 @@ static func roll(rng: RandomNumberGenerator, tier: int, luck: float) -> Dictiona
 			pre = af.n
 		elif suf == "":
 			suf = af.n
-	if pre != "":
-		name_ = "%s %s" % [name_, pre]
-	if suf != "":
-		name_ = "%s %s" % [name_, suf]
+	return [pre, suf]
+
+## `min_rarity` ("" = sem piso): baú do chefe garante pelo menos essa raridade (não vira único à força).
+static func roll(rng: RandomNumberGenerator, tier: int, luck: float, min_rarity := "") -> Dictionary:
+	var db: Dictionary = Data.table("items")
+	var ch := rarity_chances(tier)
+	var r := rng.randf() - luck * 0.01
+	if r < float(ch.unico):
+		var pool: Array = db.uniques.filter(func(u): return int(u.tier) <= tier)
+		if not pool.is_empty():
+			return unique(pool[rng.randi() % pool.size()], rng, tier)
+	var slot: String = SLOTS[rng.randi() % SLOTS.size()]
+	var bases: Array = db.bases[slot]
+	var base: Dictionary = bases[rng.randi() % bases.size()]
+	var rarity := "comum"
+	var rr := rng.randf() - luck * 0.01
+	if rr < float(ch.raro):
+		rarity = "raro"
+	elif rr < float(ch.raro) + float(ch.incomum):
+		rarity = "incomum"
+	elif rr < float(ch.raro) + float(ch.incomum) + float(ch.magico):
+		rarity = "magico"
+	if min_rarity != "" and int(RANK[rarity]) < int(RANK[min_rarity]):
+		rarity = min_rarity
+	var mods := {}
+	Hero.add_mods(mods, base.mods)
+	var name_: String = base.name
+	var n_aff := {"comum": 0, "magico": 1, "incomum": 2, "raro": 3}.get(rarity, 0) as int
+	var ps := _roll_affixes(rng, db, tier, n_aff, mods)
+	if ps[0] != "":
+		name_ = "%s %s" % [name_, ps[0]]
+	if ps[1] != "":
+		name_ = "%s %s" % [name_, ps[1]]
 	return {"id": "%s_%s" % [base.id, rarity], "base": base.id, "name": name_, "slot": slot, "rarity": rarity, "mods": mods, "level": 1}
 
 static func hi_scale(k: String) -> float:
 	return 1.0 if k in ["dmg_pct", "speed_pct", "cd_pct", "area_pct", "gold_pct", "xp_pct"] else 0.0
 
-static func unique(u: Dictionary) -> Dictionary:
-	return {"id": u.id, "name": u.name, "slot": u.slot, "rarity": "unico", "mods": u.mods.duplicate(), "weapon": u.get("weapon", ""), "note": u.get("note", "")}
+## Único: mods fixos do vault. Com `rng`, soma `unique_extra_affixes` afixos sorteados (poder acima do raro do mesmo tier).
+static func unique(u: Dictionary, rng: RandomNumberGenerator = null, tier := 0) -> Dictionary:
+	var mods: Dictionary = u.mods.duplicate()
+	if rng != null:
+		var extra := int(Data.table("difficulty").get("rarity", {}).get("unique_extra_affixes", 0))
+		_roll_affixes(rng, Data.table("items"), tier, extra, mods)
+	return {"id": u.id, "name": u.name, "slot": u.slot, "rarity": "unico", "mods": mods, "weapon": u.get("weapon", ""), "note": u.get("note", "")}
+
+const RARITY_LABELS := {"comum": "Comum", "magico": "Mágico", "incomum": "Incomum", "raro": "Raro", "unico": "Único"}
+
+## Nome de exibição da raridade (acento e maiúscula), SPEC-122 E6.
+static func rarity_label(r: String) -> String:
+	return String(RARITY_LABELS.get(r, r.capitalize()))
+
+## Preço em moedas por raridade (SPEC-122 E5): `kind` = "shop" (loja, antes do coin_mult) ou "sell" (venda). Tabela em data/difficulty.json, bloco "prices".
+static func price(kind: String, r: String) -> float:
+	var table: Dictionary = Data.table("difficulty").get("prices", {}).get(kind, {})
+	var fallback := (16.0 + 8.0 * float(RANK.get(r, 0))) if kind == "shop" else 8.0 * (float(RANK.get(r, 0)) + 1.0)
+	return float(table.get(r, fallback))
 
 static func rarity_color(r: String) -> Color:
 	match r:
 		"magico": return Color(0.45, 0.6, 1.0)
+		"incomum": return Color(0.4, 0.85, 0.45)
 		"raro": return Color(1.0, 0.9, 0.3)
 		"unico": return Color(1.0, 0.55, 0.15)
 	return Color(0.85, 0.85, 0.85)

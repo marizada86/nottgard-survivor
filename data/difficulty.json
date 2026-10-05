@@ -37,6 +37,22 @@
     "bet_win_chance": 0.45,
     "bet_min": 20
   },
+  "rarity": {
+    "_spec": "SPEC-122 B-005: chances por tier = base + tier*per_tier; magico fixo; o resto e comum. Unicos so no proprio tier e ganham afixos sorteados.",
+    "unico_base": 0.005,
+    "unico_per_tier": 0.012,
+    "raro_base": 0.04,
+    "raro_per_tier": 0.025,
+    "incomum_base": 0.14,
+    "incomum_per_tier": 0.015,
+    "magico": 0.33,
+    "unique_extra_affixes": 3
+  },
+  "prices": {
+    "_spec": "SPEC-122 E5: preco por raridade. shop = loja (antes do coin_mult da fase); sell = venda. Valores antigos (16+8*rank e 8*(rank+1)) mantidos, Incomum no meio.",
+    "shop": {"comum": 16, "magico": 24, "incomum": 28, "raro": 32, "unico": 40},
+    "sell": {"comum": 8, "magico": 16, "incomum": 20, "raro": 24, "unico": 32}
+  },
   "xp": {
     "_spec": "SPEC-122 B-002: ritmo de nivel. need_mult e need_growth multiplicam a curva base; kill_mult reduz o XP coletado.",
     "need_mult": 1.0,

@@ -1718,7 +1718,7 @@ func _shop_item_detail(item: Dictionary, cur: Variant, price: int) -> Dictionary
 	if cur != null:
 		cur_mods = Items.scaled_mods(cur, int(cur.get("level", 1)))
 		cur_label = "%s Nv %d" % [String(cur.name), int(cur.get("level", 1))]
-	var d := Items.compare_table(item.mods, cur_mods, "%s [%s]" % [String(item.name), String(item.rarity)], cur_label)
+	var d := Items.compare_table(item.mods, cur_mods, "%s [%s]" % [String(item.name), Items.rarity_label(String(item.rarity))], cur_label)
 	if int(hero.gold) >= price:
 		d.footer.append("Preço %d moedas · saldo depois: %d" % [price, int(hero.gold) - price])
 	else:
@@ -1780,7 +1780,7 @@ func _open_shop_event(kind: String) -> void:
 		"loja":
 			for i in 2:
 				var item := Items.roll(rng, tier(), hero.m("carisma") + hero.attr_mod("carisma"))
-				var price := int(round((16.0 + 8.0 * float(Items.RANK[item.rarity])) * float(stage.coin_mult)))
+				var price := int(round(Items.price("shop", String(item.rarity)) * float(stage.coin_mult)))
 				var cur: Variant = hero.items.get(String(item.slot))
 				var compare := ""
 				if cur == null:
@@ -1788,7 +1788,7 @@ func _open_shop_event(kind: String) -> void:
 				else:
 					var cur_mods := Items.scaled_mods(cur, int(cur.get("level", 1)))
 					compare = "Substitui %s Nv %d\nTroca: %s" % [String(cur.name), int(cur.get("level", 1)), Items.compare_text(item.mods, cur_mods)]
-				offer.append(_shop_row("shop_item", "%s [%s] — %d moedas" % [item.name, item.rarity, price],
+				offer.append(_shop_row("shop_item", "%s [%s] — %d moedas" % [item.name, Items.rarity_label(item.rarity), price],
 					"%s\n%s" % [Items.mods_text(item.mods), compare], price, {"item": item, "tooltip": compare,
 						"brief": Items.brief_text(item.mods), "price_text": "%d moedas" % price,
 						"badge": ({"text": "Slot livre"} if cur == null else Items.verdict(item.mods, Items.scaled_mods(cur, int(cur.get("level", 1))))),
@@ -1840,7 +1840,7 @@ func _open_risk_event(kind: String) -> void:
 		else:
 			for slot in hero.items:
 				var it: Dictionary = hero.items[slot]
-				offer.append({"t": "donate", "name": "Doar %s [%s]" % [String(it.name), String(it.rarity)],
+				offer.append({"t": "donate", "name": "Doar %s [%s]" % [String(it.name), Items.rarity_label(String(it.rarity))],
 					"desc": "Perde: %s\nGanha: uma bênção à escolha entre 3." % Items.mods_text(Items.scaled_mods(it, int(it.get("level", 1)))),
 					"slot": slot, "price": 0, "locked": false,
 					"brief": "Perde %s · ganha 1 bênção (escolha entre 3)" % Items.brief_text(Items.scaled_mods(it, int(it.get("level", 1)))),
@@ -1877,11 +1877,7 @@ func _open_chest(it: Dictionary) -> void:
 ## MEC-013: o baú do chefe nunca vem com item comum ou mágico (raro ou único) e nunca é mímico.
 func _open_boss_chest() -> void:
 	var luck := hero.m("carisma") + hero.attr_mod("carisma") + 4.0
-	var item := Items.roll(rng, tier() + 1, luck)
-	for i in 12:
-		if int(Items.RANK[item.rarity]) >= int(Items.RANK["raro"]):
-			break
-		item = Items.roll(rng, tier() + 1, luck)
+	var item := Items.roll(rng, tier() + 1, luck, "raro")
 	events.append({"type": "toast", "text": "Baú do Chefe!", "color": Color(1.0, 0.85, 0.3)})
 	give_item(item)
 
@@ -1892,18 +1888,18 @@ func give_item(item: Dictionary) -> void:
 	if cur == null:
 		_equip_item(item)
 		events.append({"type": "item", "item": item})
-		events.append({"type": "toast", "text": "%s [%s]" % [item.name, item.rarity], "color": Items.rarity_color(item.rarity)})
+		events.append({"type": "toast", "text": "%s [%s]" % [item.name, Items.rarity_label(item.rarity)], "color": Items.rarity_color(item.rarity)})
 		return
 	var cur_now := Items.scaled_mods(cur, int(cur.get("level", 1)))
-	var gold_for_cur: float = 8.0 * float(Items.RANK[cur.rarity] + 1)
-	var gold_for_new: float = 8.0 * float(Items.RANK[item.rarity] + 1)
+	var gold_for_cur: float = Items.price("sell", String(cur.rarity))
+	var gold_for_new: float = Items.price("sell", String(item.rarity))
 	offer = [
-		{"t": "item_swap", "name": "Equipar %s [%s]" % [item.name, item.rarity],
+		{"t": "item_swap", "name": "Equipar %s [%s]" % [item.name, Items.rarity_label(item.rarity)],
 			"desc": "%s\nContra o atual: %s\n(vende %s por %d moedas)" % [Items.mods_text(item.mods), Items.compare_text(item.mods, cur_now), cur.name, int(gold_for_cur)],
 			"keep": item, "sell": cur, "equips": true, "tooltip": "Equipado agora: %s\n%s" % [cur.name, Items.mods_text(cur_now)],
 			"brief": Items.brief_text(item.mods), "badge": Items.verdict(item.mods, cur_now), "price_text": "vende %s: %d" % [cur.name, int(gold_for_cur)],
 			"detail": _swap_detail(item, item.mods, cur, cur_now, "vende %s por %d moedas" % [cur.name, int(gold_for_cur)])},
-		{"t": "item_swap", "name": "Manter %s [%s]" % [cur.name, cur.rarity],
+		{"t": "item_swap", "name": "Manter %s [%s]" % [cur.name, Items.rarity_label(cur.rarity)],
 			"desc": "%s\nContra o novo: %s\n(vende %s por %d moedas)%s" % [Items.mods_text(cur_now), Items.compare_text(cur_now, item.mods), item.name, int(gold_for_new), _keep_hint(String(cur.slot), cur)],
 			"keep": cur, "sell": item, "tooltip": "Novo item: %s\n%s" % [item.name, Items.mods_text(item.mods)],
 			"brief": Items.brief_text(cur_now), "badge": Items.verdict(cur_now, item.mods), "price_text": "vende %s: %d" % [item.name, int(gold_for_new)],
@@ -1929,13 +1925,13 @@ func _resolve_item_choice(keep: Dictionary, sell: Dictionary) -> void:
 	if String(sell.get("weapon", "")) != "" and String(sell.get("weapon", "")) != String(keep.get("weapon", "")):
 		hero.weapons = hero.weapons.filter(func(w): return not (w.granted and w.id == sell.weapon))
 	_equip_item(keep)
-	var g: float = 8.0 * float(Items.RANK[sell.rarity] + 1)
+	var g: float = Items.price("sell", String(sell.rarity))
 	_add_gold(g)
 	events.append({"type": "toast", "text": "%s vendido (+%d moedas)" % [sell.name, int(g)], "color": Items.rarity_color(sell.rarity)})
 
 ## MEC-027: tabela do hover da troca de item (lado principal contra o outro, ambos já escalados).
 func _swap_detail(main: Dictionary, main_mods: Dictionary, other: Dictionary, other_mods: Dictionary, sale_line: String, extra := "") -> Dictionary:
-	var d := Items.compare_table(main_mods, other_mods, "%s [%s]" % [String(main.name), String(main.rarity)], "%s [%s]" % [String(other.name), String(other.rarity)])
+	var d := Items.compare_table(main_mods, other_mods, "%s [%s]" % [String(main.name), Items.rarity_label(String(main.rarity))], "%s [%s]" % [String(other.name), Items.rarity_label(String(other.rarity))])
 	d.footer.append(sale_line)
 	if extra != "":
 		d.footer.append(extra)
