@@ -8,6 +8,22 @@ const SHADOW_LIFT := 0.4
 ## Raio da sombra (px) por px de altura visível do inimigo: grande tem sombra grande, pequeno, pequena.
 const SHADOW_RADIUS_PER_HEIGHT := 0.2
 const ANIMATED := {
+	"lu_yueh": {"cell": Vector2i(256, 384), "body_height": 145.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6, "special": 6}, "flip_h_for_move": true},
+	"discipulo_pestilento": {"cell": Vector2i(256, 384), "body_height": 171.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
+	"cultista_ghaunadaur": {"cell": Vector2i(256, 384), "body_height": 153.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
+	"estatua_do_templo": {"cell": Vector2i(256, 384), "body_height": 152.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
+	"cultista_de_feng_tu": {"cell": Vector2i(256, 384), "body_height": 119.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
+	"larva_de_lu_yueh": {"cell": Vector2i(256, 384), "body_height": 150.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
+	"molydeus_menor": {"source_id": "molydeus_chefe", "cell": Vector2i(256, 384), "body_height": 101.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6, "special": 6}, "flip_h_for_move": true},
+	"molydeus_chefe": {"cell": Vector2i(256, 384), "body_height": 101.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6, "special": 6}, "flip_h_for_move": true},
+	"ezro": {"cell": Vector2i(256, 384), "body_height": 115.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
+	"aberracao_shu": {"cell": Vector2i(256, 384), "body_height": 220.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
+	"carcereiro_de_pedra": {"cell": Vector2i(256, 384), "body_height": 143.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
+	"demonio_de_gehenna": {"cell": Vector2i(256, 384), "body_height": 144.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
+	"alma_penada": {"cell": Vector2i(256, 384), "body_height": 258.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
+	"zuggtmoy": {"cell": Vector2i(256, 384), "body_height": 185.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6, "special": 6}, "flip_h_for_move": true},
+	"receptaculo_de_juiblex": {"cell": Vector2i(256, 384), "body_height": 143.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
+	"gargula": {"cell": Vector2i(256, 384), "body_height": 118.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
 	"pudim_negro": {"cell": Vector2i(256, 384), "body_height": 109.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
 	"slime_de_juiblex": {"cell": Vector2i(256, 384), "body_height": 105.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
 	"esporo_voador": {"cell": Vector2i(256, 384), "body_height": 190.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
@@ -31,6 +47,22 @@ const ANIMATED := {
 }
 ## Linha dos pés no idle (px na célula); ancora o sprite na sombra em vez da borda da célula.
 const FEET_Y := {
+	"lu_yueh": 356.0,
+	"discipulo_pestilento": 356.0,
+	"cultista_ghaunadaur": 356.0,
+	"estatua_do_templo": 356.0,
+	"cultista_de_feng_tu": 356.0,
+	"larva_de_lu_yueh": 356.0,
+	"molydeus_menor": 356.0,
+	"molydeus_chefe": 356.0,
+	"ezro": 356.0,
+	"aberracao_shu": 356.0,
+	"carcereiro_de_pedra": 356.0,
+	"demonio_de_gehenna": 356.0,
+	"alma_penada": 356.0,
+	"zuggtmoy": 356.0,
+	"receptaculo_de_juiblex": 356.0,
+	"gargula": 356.0,
 	"pudim_negro": 356.0,
 	"slime_de_juiblex": 356.0,
 	"esporo_voador": 356.0,
@@ -92,12 +124,13 @@ func _build_animations(enemy_id: String) -> void:
 	_flip_h_for_move = false
 	if ANIMATED.has(enemy_id):
 		var spec: Dictionary = ANIMATED[enemy_id]
+		var source_id := String(spec.get("source_id", enemy_id))
 		_cell = spec.cell
 		_flip_h_for_move = bool(spec.get("flip_h_for_move", false))
 		for state in spec.states:
 			var looped: bool = state in ["idle", "move"]
 			var fps := 9.0 if state == "death" else (10.0 if looped else 12.0)
-			_has_animation = SpriteStripFrames.add_strip(frames, state, "res://assets/animations/enemies/%s/%s.png" % [enemy_id, state], _cell, int(spec.states[state]), fps, looped) or _has_animation
+			_has_animation = SpriteStripFrames.add_strip(frames, state, "res://assets/animations/enemies/%s/%s.png" % [source_id, state], _cell, int(spec.states[state]), fps, looped) or _has_animation
 	sprite.sprite_frames = frames
 	_cache_art_height(enemy_id, frames)
 	sprite.visible = _has_animation
@@ -226,5 +259,3 @@ func _draw() -> void:
 		draw_rect(Rect2(-bar_width * 0.5, top, bar_width * fraction, 3), Color(0.8, 0.15, 0.15))
 	if enemy != null and enemy.stun_t > 0.0:
 		draw_string(ThemeDB.fallback_font, Vector2(-6, -H_BASE * actor_scale - 12), "✦", HORIZONTAL_ALIGNMENT_LEFT, -1, 14, Color(1, 1, 0.5))
-
-

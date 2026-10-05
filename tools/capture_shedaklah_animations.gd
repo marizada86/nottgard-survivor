@@ -2,12 +2,14 @@ extends Node
 
 func _ready() -> void:
 	var id := "servo_de_zuggtmoy"
+	var biome := "shedaklah"
 	for arg in OS.get_cmdline_user_args():
 		if arg.begins_with("--id="): id = arg.substr(5)
+		if arg.begins_with("--biome="): biome = arg.substr(8)
 	Playtest.visible = false
 	Game.qa_sandbox = true
 	Game.qa_launch = {"seed": 12345}
-	Game.run_stage = "shedaklah"
+	Game.run_stage = biome
 	Game.run_hero = "durvall"
 	var run: Node = load("res://ui/run.tscn").instantiate()
 	add_child(run)
@@ -25,7 +27,7 @@ func _ready() -> void:
 			var view: Node2D = load("res://ui/enemy_view.tscn").instantiate()
 			actor.add_child(view)
 			view.setup(Enemy.make(id, Vector2.ZERO))
-			view.position = Vector2(-450 + index * 180, -210 + row * 130)
+			view.position = Vector2(-450 + index * 180, -170 + row * 100)
 			view.sprite.play(state)
 			view.sprite.pause()
 			view.sprite.frame = index

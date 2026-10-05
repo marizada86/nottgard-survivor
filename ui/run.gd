@@ -644,6 +644,9 @@ func _consume_events() -> void:
 				if String(ev.get("ability", "")) == "summon": action = &"special_a"
 				elif String(ev.get("ability", "")) == "ring": action = &"special_b"
 				if String(ev.enemy_id) == "blogbog" and String(ev.get("ability", "")) == "summon": action = &"special"
+				if String(ev.enemy_id) == "zuggtmoy" and String(ev.get("ability", "")) in ["summon", "ring"]: action = &"special"
+				if String(ev.enemy_id) == "molydeus_chefe" and String(ev.get("ability", "")) == "aoe": action = &"special"
+				if String(ev.enemy_id) == "lu_yueh" and String(ev.get("ability", "")) == "aoe": action = &"special"
 				_play_enemy_action(String(ev.enemy_id), ev.pos, action)
 			"telegraph":
 				Sfx.play("enemy.telegraph")
@@ -941,7 +944,7 @@ func _update_low_hp_bark() -> void:
 		_bark("vida")
 
 ## Revelação do loot (SPEC-116 D6): brilho, anel e nome na cor da raridade; a Sorte aparece quando ajudou.
-const LOOT_FX := {"comum": {"ring": 0.8, "sparks": 3, "size": 12}, "magico": {"ring": 1.1, "sparks": 6, "size": 14},
+const LOOT_FX := {"comum": {"ring": 0.8, "sparks": 3, "size": 12}, "magico": {"ring": 1.1, "sparks": 6, "size": 14}, "incomum": {"ring": 1.3, "sparks": 8, "size": 15},
 	"raro": {"ring": 1.5, "sparks": 10, "size": 16}, "unico": {"ring": 2.0, "sparks": 16, "size": 18}}
 func _loot_reveal(item: Dictionary) -> void:
 	if hero_node == null or battle == null:

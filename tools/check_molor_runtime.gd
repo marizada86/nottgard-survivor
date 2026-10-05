@@ -5,16 +5,24 @@ func _init() -> void:
 
 func _check() -> void:
 	var id := "bolha_de_slime"
+	var actual_actor := false
 	for arg in OS.get_cmdline_user_args():
 		if arg.begins_with("--id="):
 			id = arg.substr(5)
+		if arg == "--actual-actor": actual_actor = true
 	var view: Node2D = load("res://ui/enemy_view.tscn").instantiate()
 	root.add_child(view)
-	view.preview_enemy_id = id
-	view._apply_id(id)
+	var actor_scale := 1.0
+	if actual_actor:
+		var actor: Enemy = Enemy.make(id, Vector2.ZERO)
+		actor_scale = actor.scale
+		view.setup(actor)
+	else:
+		view.preview_enemy_id = id
+		view._apply_id(id)
 	assert(view._has_animation)
 	var body_height := float(view.ANIMATED[id].get("body_height", 384.0))
-	assert(is_equal_approx(view.sprite.scale.x * body_height, 62.0))
+	assert(is_equal_approx(view.sprite.scale.x * body_height, 62.0 * actor_scale))
 	assert(view.sprite.offset.y == -164.0)
 	for state in view.ANIMATED[id].states:
 		var frames: SpriteFrames = view.sprite.sprite_frames

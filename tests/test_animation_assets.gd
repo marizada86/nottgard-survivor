@@ -1,6 +1,69 @@
 extends RefCounted
 
 const ASSETS := {
+	"res://assets/animations/enemies/lu_yueh/idle.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/lu_yueh/move.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/lu_yueh/attack.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/lu_yueh/death.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/lu_yueh/special.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/discipulo_pestilento/idle.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/discipulo_pestilento/move.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/discipulo_pestilento/attack.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/discipulo_pestilento/death.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/cultista_ghaunadaur/idle.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/cultista_ghaunadaur/move.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/cultista_ghaunadaur/attack.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/cultista_ghaunadaur/death.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/estatua_do_templo/idle.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/estatua_do_templo/move.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/estatua_do_templo/attack.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/estatua_do_templo/death.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/cultista_de_feng_tu/idle.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/cultista_de_feng_tu/move.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/cultista_de_feng_tu/attack.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/cultista_de_feng_tu/death.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/larva_de_lu_yueh/idle.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/larva_de_lu_yueh/move.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/larva_de_lu_yueh/attack.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/larva_de_lu_yueh/death.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/molydeus_chefe/idle.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/molydeus_chefe/move.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/molydeus_chefe/attack.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/molydeus_chefe/death.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/molydeus_chefe/special.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/ezro/idle.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/ezro/move.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/ezro/attack.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/ezro/death.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/aberracao_shu/idle.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/aberracao_shu/move.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/aberracao_shu/attack.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/aberracao_shu/death.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/carcereiro_de_pedra/idle.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/carcereiro_de_pedra/move.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/carcereiro_de_pedra/attack.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/carcereiro_de_pedra/death.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/demonio_de_gehenna/idle.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/demonio_de_gehenna/move.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/demonio_de_gehenna/attack.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/demonio_de_gehenna/death.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/alma_penada/idle.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/alma_penada/move.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/alma_penada/attack.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/alma_penada/death.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/zuggtmoy/idle.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/zuggtmoy/move.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/zuggtmoy/attack.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/zuggtmoy/death.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/zuggtmoy/special.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/receptaculo_de_juiblex/idle.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/receptaculo_de_juiblex/move.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/receptaculo_de_juiblex/attack.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/receptaculo_de_juiblex/death.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/gargula/idle.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/gargula/move.png": Vector2i(1536, 384),
+	"res://assets/animations/enemies/gargula/attack.png": Vector2i(1024, 384),
+	"res://assets/animations/enemies/gargula/death.png": Vector2i(1536, 384),
 	"res://assets/animations/enemies/pudim_negro/idle.png": Vector2i(1024, 384),
 	"res://assets/animations/enemies/pudim_negro/move.png": Vector2i(1536, 384),
 	"res://assets/animations/enemies/pudim_negro/attack.png": Vector2i(1024, 384),
@@ -163,6 +226,22 @@ const MINIMUM_VISIBLE_COVERAGE := {
 }
 
 const WAVE_ONE_ENEMY_ANIMATIONS := {
+	"lu_yueh": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6, &"special": 6}},
+	"discipulo_pestilento": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
+	"cultista_ghaunadaur": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
+	"estatua_do_templo": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
+	"cultista_de_feng_tu": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
+	"larva_de_lu_yueh": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
+	"molydeus_menor": {"source_id": "molydeus_chefe", "cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6, &"special": 6}},
+	"molydeus_chefe": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6, &"special": 6}},
+	"ezro": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
+	"aberracao_shu": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
+	"carcereiro_de_pedra": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
+	"demonio_de_gehenna": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
+	"alma_penada": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
+	"zuggtmoy": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6, &"special": 6}},
+	"receptaculo_de_juiblex": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
+	"gargula": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
 	"pudim_negro": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
 	"slime_de_juiblex": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
 	"esporo_voador": {"cell": Vector2i(256, 384), "states": {&"idle": 4, &"move": 6, &"attack": 4, &"death": 6}},
@@ -366,10 +445,11 @@ func _validate_wave_one_enemy_assets() -> Array[String]:
 	var failures: Array[String] = []
 	for enemy_id in WAVE_ONE_ENEMY_ANIMATIONS:
 		var spec: Dictionary = WAVE_ONE_ENEMY_ANIMATIONS[enemy_id]
+		var source_id := String(spec.get("source_id", enemy_id))
 		var cell: Vector2i = spec.cell
 		for state in spec.states:
 			var count: int = int(spec.states[state])
-			var path := "res://assets/animations/enemies/%s/%s.png" % [enemy_id, state]
+			var path := "res://assets/animations/enemies/%s/%s.png" % [source_id, state]
 			if not FileAccess.file_exists(path):
 				failures.append("asset da Onda 1 ausente: %s" % path)
 				continue
@@ -649,5 +729,3 @@ func _visible_coverage(image: Image) -> float:
 			if image.get_pixel(x, y).a > 0.04:
 				visible += 1
 	return float(visible) / float(sampled) if sampled > 0 else 0.0
-
-

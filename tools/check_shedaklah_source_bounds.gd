@@ -2,16 +2,27 @@ extends SceneTree
 
 func _init() -> void:
 	var id := OS.get_cmdline_user_args()[0]
-	var base := "res://.atena/generated/art-candidates/enemies-shedaklah/%s/" % id
+	var biome := "shedaklah"
+	var identity_version := "03"
+	for arg in OS.get_cmdline_user_args():
+		if arg.begins_with("--biome="): biome = arg.substr(8)
+		if arg.begins_with("--identity-version="): identity_version = arg.substr(19)
+	var base := "res://.atena/generated/art-candidates/enemies-%s/%s/" % [biome, id]
+	var selection: Dictionary = {}
+	if FileAccess.file_exists(base + "frame-selection.json"):
+		selection = JSON.parse_string(FileAccess.get_file_as_string(base + "frame-selection.json"))
 	var states := {"idle": 4, "move": 6, "attack": 4, "death": 6}
-	if id == "zuggtmoy": states["special"] = 6
+	if id in ["zuggtmoy", "molydeus_chefe", "lu_yueh"]: states["special"] = 6
 	for state in states:
 		for index in states[state]:
 			var path := base + "%s_%s_%02d_v01.png" % [id, state, index]
 			for version in [2, 3]:
 				var retry := base + "%s_%s_%02d_v%02d.png" % [id, state, index, version]
 				if FileAccess.file_exists(retry): path = retry
-			if state == "idle" and index == 0: path = base + id + "_idle_00_v03.png"
+			var frame_choice: Dictionary = selection.get("%s_%02d" % [state, index], {})
+			if frame_choice.has("version"):
+				path = base + "%s_%s_%02d_v%02d.png" % [id, state, index, int(frame_choice.version)]
+			if state == "idle" and index == 0: path = base + id + "_idle_00_v%s.png" % identity_version
 			if not FileAccess.file_exists(path): continue
 			var source := Image.load_from_file(path)
 			if source == null: continue

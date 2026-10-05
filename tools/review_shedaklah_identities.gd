@@ -4,16 +4,21 @@ extends SceneTree
 func _init() -> void:
 	var ids := ["servo_de_zuggtmoy", "cogumelo_fungico", "esporo_voador", "slime_de_juiblex", "pudim_negro", "gargula", "receptaculo_de_juiblex", "zuggtmoy"]
 	var version := "02"
+	var biome := "shedaklah"
 	for arg in OS.get_cmdline_user_args():
 		if arg.begins_with("--version="):
 			version = arg.substr(10)
+		elif arg.begins_with("--biome="):
+			biome = arg.substr(8)
+		elif arg.begins_with("--ids="):
+			ids = Array(arg.substr(6).split(",", false))
 	var review := Image.create(1280, 768, false, Image.FORMAT_RGBA8)
 	for y in 768:
 		for x in 1280:
 			review.set_pixel(x, y, Color("34343c") if ((x / 16 + y / 16) % 2 == 0) else Color("24242e"))
 	for index in ids.size():
 		var id: String = ids[index]
-		var path := "res://.atena/generated/art-candidates/enemies-shedaklah/%s/%s_idle_00_v%s.png" % [id, id, version]
+		var path := "res://.atena/generated/art-candidates/enemies-%s/%s/%s_idle_00_v%s.png" % [biome, id, id, version]
 		var source := Image.load_from_file(path)
 		if source == null:
 			push_error("Missing identity: " + path)
@@ -32,5 +37,5 @@ func _init() -> void:
 		var column := index % 4
 		var row := index / 4
 		review.blend_rect(source, Rect2i(Vector2i.ZERO, source.get_size()), Vector2i(column * 320 + (320 - source.get_width()) / 2, row * 384 + 384 - source.get_height()))
-	print("Shedaklah review result=", review.save_png("res://.atena/generated/priority-review/shedaklah_identities_v%s.png" % version))
+	print("Identity review result=", review.save_png("res://.atena/generated/priority-review/%s_identities_v%s.png" % [biome, version]))
 	quit()

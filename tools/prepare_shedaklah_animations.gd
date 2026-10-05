@@ -3,12 +3,20 @@ extends SceneTree
 
 func _init() -> void:
 	var id := "servo_de_zuggtmoy"
+	var biome := "shedaklah"
+	var identity_version := "03"
 	for arg in OS.get_cmdline_user_args():
 		if arg.begins_with("--id="): id = arg.substr(5)
-	var base := "res://.atena/generated/art-candidates/enemies-shedaklah/%s/" % id
+		if arg.begins_with("--biome="): biome = arg.substr(8)
+		if arg.begins_with("--identity-version="): identity_version = arg.substr(19)
+	var base := "res://.atena/generated/art-candidates/enemies-%s/%s/" % [biome, id]
+	var selection: Dictionary = {}
+	if FileAccess.file_exists(base + "frame-selection.json"):
+		selection = JSON.parse_string(FileAccess.get_file_as_string(base + "frame-selection.json"))
 	var states := {"idle": 4, "move": 6, "attack": 4, "death": 6}
-	if id == "zuggtmoy": states["special"] = 6
-	var identity := Image.load_from_file(base + id + "_idle_00_v03.png")
+	if id in ["zuggtmoy", "molydeus_chefe", "lu_yueh"]: states["special"] = 6
+	var identity_path := base + id + "_idle_00_v%s.png" % identity_version
+	var identity := Image.load_from_file(identity_path)
 	if identity == null:
 		push_error("Missing approved identity: " + id)
 		quit(1)
@@ -26,7 +34,10 @@ func _init() -> void:
 			for version in [2, 3]:
 				var retry := base + "%s_%s_%02d_v%02d.png" % [id, state, index, version]
 				if FileAccess.file_exists(retry): path = retry
-			if state == "idle" and index == 0: path = base + id + "_idle_00_v03.png"
+			var frame_choice: Dictionary = selection.get("%s_%02d" % [state, index], {})
+			if frame_choice.has("version"):
+				path = base + "%s_%s_%02d_v%02d.png" % [id, state, index, int(frame_choice.version)]
+			if state == "idle" and index == 0: path = identity_path
 			var source := Image.load_from_file(path)
 			if source == null:
 				push_error("Missing frame: " + path)
@@ -39,8 +50,9 @@ func _init() -> void:
 				quit(1)
 				return
 			var pose_scale := float(identity.get_height()) / source.get_height()
-			if state == "idle" or (state == "move" and id != "esporo_voador"):
+			if state == "idle" or (state == "move" and id not in ["esporo_voador", "alma_penada", "ezro", "larva_de_lu_yueh"]):
 				pose_scale = idle_height / rect.size.y
+			pose_scale *= float(frame_choice.get("scale_multiplier", 1.0))
 			var anchor := _ground_anchor(source, rect, state, id)
 			# Mesmo limiar de visibilidade da auditoria: ignora alfa residual no cálculo
 			# da escala, mas preserva todos os canais ao amostrar o quadro final.
@@ -108,7 +120,7 @@ func _visible_rect(image: Image) -> Rect2i:
 
 func _ground_anchor(image: Image, rect: Rect2i, state: String, id: String) -> Vector2:
 	# A lança estendida não deve deslocar a origem do ator para o centro da arma.
-	if state == "death" or id == "esporo_voador":
+	if state == "death" or id in ["esporo_voador", "alma_penada"]:
 		return Vector2(rect.get_center().x, rect.end.y)
 	var left := image.get_width()
 	var right := -1
