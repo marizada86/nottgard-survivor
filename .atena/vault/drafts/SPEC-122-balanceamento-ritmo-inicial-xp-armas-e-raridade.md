@@ -1,7 +1,7 @@
 ---
 id: SPEC-122
 title: Balanceamento do ritmo inicial (XP, armas iniciais, eventos e raridade de itens)
-status: implemented-uncommitted
+status: implemented-committed-accepted
 origin: playtest-dono-e-hiago-2026-10-04
 approval: aprovada pelo dono em 2026-10-04 (por lote)
 plan: PLAN-056 (por lote)
@@ -63,3 +63,6 @@ Nota para o fatiamento (E7): XP, armas e eventos mexem só em números de JSON; 
 
 ## Resultado da parte 2 (2026-10-04)
 B-007 e B-008 executados, sem commit. Evidência: EVID-156. Multiplicadores finais das fases 3 a 8 em `data/stages.json`; Goranthis acima do Shendilavri; preço por raridade em dados e rótulos legíveis. Pontos abertos: Docas fácil, Feng-tu abaixo da rampa, confirmação com bot novato.
+
+## Aceite do dono (2026-10-05)
+PLAN-056 revisado e aceito. Commits: 7d2f262 (B-002), 35796ba (B-003), 5fc8d04 (B-004), eecced9 (B-005), d86fbef (B-007), 0cb3e8d (release 0.3.1; o dono decidiu em 2026-10-05 sair tudo como 0.3.1, o que supera a divisao da E7). Os criterios de aceite numericos nao foram fixados e o dono aceitou sem eles. Pontos abertos (Docas facil, Feng-tu, rodada de novato, RNG do bot) seguem no BAL-018.

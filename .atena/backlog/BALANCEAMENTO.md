@@ -99,6 +99,7 @@ Medição do bot em 2026-09-29 (5 sementes, EVID-110) ao lado dos relatos:
 
 Preencher a coluna do bot na primeira rodada por herói e acrescentar linha de
 armas, itens e inimigos quando aparecerem sinais.
+| BAL-018 | Desafio e entretenimento após SPEC-122 e SPEC-124 (intenção do dono, 2026-10-05) | Pedido do dono: balancear para mais desafio e diversão, considerando as atualizações recentes; playtesters ainda vão opinar. Focos escolhidos: densidade e dano dos inimigos, curva de poder do jogador, chefes e picos de tensão, equilíbrio entre heróis. **Só observação:** a base ainda não foi commitada nem validada por playtest (PLAN-056 aguarda revisão; SPEC-124 aguarda playtest) | `data/difficulty.json`, `enemies.json`, `heroes.json`, `weapons.json`, `boss_phases.json` | BAL-001, BAL-013, BAL-014, BAL-016, BAL-017 | sem spec; PLAN-056 fechado em 2026-10-05; herda os pontos abertos da EVID-156 (Docas fácil, Feng-tu 6 %, rodada de bot novato, RNG do bot não semeado); abrir spec quando chegar feedback; medir com o bot por herói antes |
 
 ## Decididos e validados
 

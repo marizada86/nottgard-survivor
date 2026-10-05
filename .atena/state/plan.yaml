@@ -1,34 +1,25 @@
 version: 2
-# Corrigido por Atena (sessao de balanceamento) em 2026-10-04 apos sobrescrita por outra sessao.
-active_plan:
-  id: PLAN-056
-  spec_id: SPEC-122
-  title: Balanceamento do ritmo inicial (XP, armas, eventos, raridade)
-  status: AWAITING_OWNER_REVIEW
-  batches:
-    B-001: {title: Linha de base com o bot, status: DONE, evidence: EVID-151}
-    B-002: {title: XP (curva e XP por inimigo), status: DONE_UNCOMMITTED, evidence: EVID-152}
-    B-003: {title: Armas iniciais, status: DONE_UNCOMMITTED, evidence: EVID-154}
-    B-004: {title: Frequencia de acontecimentos e props, status: DONE_UNCOMMITTED, evidence: EVID-154}
-    B-005: {title: Raridade e nova raridade Incomum, status: DONE_UNCOMMITTED, evidence: EVID-154}
-    B-006: {title: Bot final, evidencia e varredura geral, status: DONE_UNCOMMITTED, evidence: 'EVID-154, EVID-155'}
-  current_batch: null
-  approval:
-    mode: per-batch
-    checkpoint: REVIEW
-    status: PENDING
-    approver: dono
-    date: '2026-10-04'
-    evidence: 'Dono aprovou B-001 a B-006 em chat (2026-10-04). Falta: revisao do dono, entrevista de alinhamento, commit, push e merge (exigem aprovacao explicita).'
+# Reconciliado por Atena em 2026-10-05: PLAN-056 aceito pelo dono; commits reais registrados.
+active_plan: null
 plan_cursor:
-  current: 'SPEC-122 parte 2 (B-007, B-008) concluida e nao commitada (EVID-156). Aguardando revisao do dono; PLAN-053 pode retomar (cota liberou 10:28).'
-  next: 'Dono decide Docas e Feng-tu; commits por mecanica (0.3.1 numeros de XP, armas, eventos, fases; 0.4.0 raridade); depois PLAN-053 (Shu).'
+  current: 'Nenhum plano ativo. PLAN-056 (SPEC-122) aceito e fechado em 2026-10-05.'
+  next: 'Retomar PLAN-053 (imagens, Shu: attack_02, death_03, death_04) e/ou abrir spec de balanceamento BAL-018 (precisa de linha de base do bot por heroi). Push da main (1 a 3 commits a frente) exige aprovacao.'
 suspension:
   suspended_plan_state_file: '.atena/state/plan-053-imagens.yaml'
-  note: 'PLAN-053 (imagens, SPEC-121) suspenso; cota de imagens libera 2026-10-04 10:28 BRT; retoma na Shu (attack_02, death_03, death_04).'
+  note: 'PLAN-053 (imagens, SPEC-121) suspenso; cota de imagens liberou 2026-10-04 10:28 BRT; retoma na Shu (attack_02, death_03, death_04).'
 deferred_requests:
   - id: DEV-001
     request: 'Varredura geral e revisao da movimentacao dos herois (PLAN-057 / SPEC-123), B-001 concluido; estado em .atena/state/plan-057-movimentacao.yaml.'
     status: PAUSED_AT_CHECKPOINT
+completed_plans:
+  - id: PLAN-056
+    spec_id: SPEC-122
+    title: Balanceamento do ritmo inicial (XP, armas, eventos, raridade, fases)
+    status: ACCEPTED_BY_OWNER
+    accepted: '2026-10-05'
+    mode: per-batch
+    batches: {B-001: EVID-151, B-002: EVID-152, B-003: EVID-154, B-004: EVID-154, B-005: EVID-154, B-006: 'EVID-154, EVID-155', B-007: EVID-156, B-008: EVID-156}
+    commits: ['7d2f262 B-002', '35796ba B-003', '5fc8d04 B-004', 'eecced9 B-005', 'd86fbef B-007', '0cb3e8d release 0.3.1']
+    note: 'Pontos abertos transferidos ao BAL-018: Docas facil (3%), Feng-tu 6%, rodada com bot novato, RNG do bot nao semeado. Criterios de aceite numericos (nivel medio mapas 1 e 2; % Raro/Unico no tier 0) nunca fixados; dono aceitou sem eles.'
 completed_side_plans:
-  - {id: PLAN-058, spec_id: SPEC-124, status: IMPLEMENTED_UNCOMMITTED, evidence: EVID-159, note: 'Velocidade dos inimigos +20% (enemy_speed_mult); aguarda playtest e commit.'}
+  - {id: PLAN-058, spec_id: SPEC-124, status: IMPLEMENTED_COMMITTED, commit: 69ec21c, evidence: EVID-159, note: 'Velocidade dos inimigos +20% (enemy_speed_mult); aguarda playtest.'}

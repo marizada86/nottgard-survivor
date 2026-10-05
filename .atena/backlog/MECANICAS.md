@@ -58,6 +58,7 @@
 | MEC-039 | alto | **Segredos e Ecos de Nottgard:** POIs nas bordas, 3 a 5 Ecos (fragmentos do Vault no Diário) e 1 Relíquia por fase; mapa 84×84 nas fases 3 a 8 | IN-050, IN-051 (T03) | ícone de Eco, câmara selada | [SPEC-119](../specs/SPEC-119-segredos-ecos-e-mapa-maior.md) (rascunho) |
 | MEC-040 | médio | **Marcas do Abismo:** dificuldade opcional por fase vencida, com modificadores escolhidos e recompensa maior (não confundir com a "profundidade" do portal) | IN-049 (T03); decisão D2 do dono | — | SPEC-120 (rascunho) |
 | MEC-041 | médio | **NPC de upgrade de magia:** o ferreiro não deve melhorar magias; um NPC próprio faz esse upgrade. Hoje o ferreiro serve a todas as armas | Dono (2026-10-04, sessão de balanceamento) | ícone e fala do NPC (IN a registrar) | sem spec; decisão E10 (2026-10-04): entra na próxima major; ferreiro inalterado até lá |
+| MEC-042 | a definir | **Conteúdo novo: armas, magias e equipamentos.** Direção do dono (2026-10-05): entram em specs futuras, priorizadas pelo feedback dos playtesters; uma spec, um teste e um commit por item | Dono (2026-10-05) | arte e ícones por item | sem spec; aguardando feedback dos playtesters |
 
 ### Como as mecânicas entram em versão
 
