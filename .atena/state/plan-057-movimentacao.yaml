@@ -1,0 +1,15 @@
+# Plano estacionado: criado em 2026-10-04 pela sessão "varredura e movimentação dos heróis".
+# Nasceu como PLAN-056/SPEC-122 e foi renumerado para PLAN-057/SPEC-123 porque outra sessão
+# já tinha reservado PLAN-056/SPEC-122 (balanceamento). O dono aprovou "por lote" nesta sessão.
+version: 2
+plan:
+  id: PLAN-057
+  spec_id: SPEC-123
+  status: BLOCKED_ON_IMAGE_GENERATOR
+  approval: {mode: per-batch, status: APPROVED, approver: dono, date: '2026-10-04'}
+  batches:
+    - {id: B-001, title: 'Varredura sem risco (suíte, auditorias, tabela herói x direção, linha de base dos inimigos)', status: DONE, evidence: EVID-153}
+    - {id: B-002, title: 'Decisão e correção da movimentação dos heróis', status: PARTIAL, done: 'ART-PROMPTS-056 e fila JSON com 6 prompts (Zynara, Leoric, Nyrelia); BUG-027 e ART-033 abertos', pending: 'gerar as 6 tiras (sem gerador de imagem nesta sessão), aprovação visual do dono, integração e auditoria; ajustes de estabilidade dos demais só depois do dono olhar a tabela'}
+    - {id: B-003, title: 'Retomada do PLAN-053 (Shu, Ezro, Molydeus)', status: PENDING_APPROVAL}
+    - {id: B-004, title: 'Preparar o próximo playtest', status: PARTIAL, done: 'EVID-157 (prontidão, frentes misturadas, pendências e ordem recomendada)', pending: 'decisões do dono (ordem de commits, SPEC-120 B, tipo da versão), gerar tiras BUG-027, exportar build e push com aprovação'}
+  next: 'Gerar B01 a B06 num ambiente com o gerador (Codex), aprovar o primeiro quadro de cada herói, integrar e auditar. B-003 e B-004 seguem pendentes de aprovação.'

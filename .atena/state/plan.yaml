@@ -1,8 +1,32 @@
 version: 2
-
-# Nenhum plano ativo. PLAN-055-F5A (SPEC-120 parte A) concluido em 2026-10-03: B-001 a B-003 feitos, B-004 parcial
-# (EVID-149). Parte B (Marcas do Abismo) e SPEC-119 seguem como rascunhos aguardando aprovacao.
-active_plan: null
-plan_cursor: null
-suspension: null
-deferred_requests: []
+# Corrigido por Atena (sessao de balanceamento) em 2026-10-04 apos sobrescrita por outra sessao.
+active_plan:
+  id: PLAN-056
+  spec_id: SPEC-122
+  title: Balanceamento do ritmo inicial (XP, armas, eventos, raridade)
+  status: AWAITING_OWNER_REVIEW
+  batches:
+    B-001: {title: Linha de base com o bot, status: DONE, evidence: EVID-151}
+    B-002: {title: XP (curva e XP por inimigo), status: DONE_UNCOMMITTED, evidence: EVID-152}
+    B-003: {title: Armas iniciais, status: DONE_UNCOMMITTED, evidence: EVID-154}
+    B-004: {title: Frequencia de acontecimentos e props, status: DONE_UNCOMMITTED, evidence: EVID-154}
+    B-005: {title: Raridade e nova raridade Incomum, status: DONE_UNCOMMITTED, evidence: EVID-154}
+    B-006: {title: Bot final, evidencia e varredura geral, status: DONE_UNCOMMITTED, evidence: 'EVID-154, EVID-155'}
+  current_batch: null
+  approval:
+    mode: per-batch
+    checkpoint: REVIEW
+    status: PENDING
+    approver: dono
+    date: '2026-10-04'
+    evidence: 'Dono aprovou B-001 a B-006 em chat (2026-10-04). Falta: revisao do dono, entrevista de alinhamento, commit, push e merge (exigem aprovacao explicita).'
+plan_cursor:
+  current: 'SPEC-122 parte 2 (B-007, B-008) concluida e nao commitada (EVID-156). Aguardando revisao do dono; PLAN-053 pode retomar (cota liberou 10:28).'
+  next: 'Dono decide Docas e Feng-tu; commits por mecanica (0.3.1 numeros de XP, armas, eventos, fases; 0.4.0 raridade); depois PLAN-053 (Shu).'
+suspension:
+  suspended_plan_state_file: '.atena/state/plan-053-imagens.yaml'
+  note: 'PLAN-053 (imagens, SPEC-121) suspenso; cota de imagens libera 2026-10-04 10:28 BRT; retoma na Shu (attack_02, death_03, death_04).'
+deferred_requests:
+  - id: DEV-001
+    request: 'Varredura geral e revisao da movimentacao dos herois (PLAN-057 / SPEC-123), B-001 concluido; estado em .atena/state/plan-057-movimentacao.yaml.'
+    status: PAUSED_AT_CHECKPOINT

@@ -1,0 +1,3 @@
+# Aceite
+
+Identidade aprovada preservada, sem membros extras ou cortes; sequência legível e coerente; morte colapsa progressivamente. Alfa nativo preservado; nenhum halo novo admitido. Tiras completas consumidas pelo runtime com escala, base, duração e limpeza de morte corretas. Fontes versionadas e prompts rastreáveis. Testes focados e suite final sem falhas; smoke das nove fases; manifestos com hashes atuais. Build local inicia, com identificação e hash registrados. Capturas inspecionadas. Playtest humano permanece separado e pendente, sem aprovação inventada. Próximos biomas exigem gate de identidade antes dos ciclos.

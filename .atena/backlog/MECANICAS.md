@@ -57,6 +57,7 @@
 | MEC-038 | alto | **Acontecimentos exclusivos por fase:** 2 ou 3 por fase (um grande), com objetivo opcional, recompensa e consequência; tipos novos `collect`, `escort`, `invasion`, `pact`, `arena`, `rescue`, `map_shift`. Hoje 7 das 9 fases não têm nenhum evento | IN-052 (dono), IN-049 (T03), [EVID-147](../evidence/EVID-147-auditoria-vault-x-jogo-2026-10-03.md) | ART-032 (NPCs e pontos de evento) | [SPEC-118](../specs/SPEC-118-acontecimentos-exclusivos-por-fase.md). **IMPLEMENTADO 2026-10-03**: 10 tipos novos, 2 a 4 acontecimentos de Shedaklah aos Pilares, Zuggtmoy aliada por item-chave, Discípulo Pestilento chefe de Feng-tu; aguarda playtest |
 | MEC-039 | alto | **Segredos e Ecos de Nottgard:** POIs nas bordas, 3 a 5 Ecos (fragmentos do Vault no Diário) e 1 Relíquia por fase; mapa 84×84 nas fases 3 a 8 | IN-050, IN-051 (T03) | ícone de Eco, câmara selada | [SPEC-119](../specs/SPEC-119-segredos-ecos-e-mapa-maior.md) (rascunho) |
 | MEC-040 | médio | **Marcas do Abismo:** dificuldade opcional por fase vencida, com modificadores escolhidos e recompensa maior (não confundir com a "profundidade" do portal) | IN-049 (T03); decisão D2 do dono | — | SPEC-120 (rascunho) |
+| MEC-041 | médio | **NPC de upgrade de magia:** o ferreiro não deve melhorar magias; um NPC próprio faz esse upgrade. Hoje o ferreiro serve a todas as armas | Dono (2026-10-04, sessão de balanceamento) | ícone e fala do NPC (IN a registrar) | sem spec; decisão E10 (2026-10-04): entra na próxima major; ferreiro inalterado até lá |
 
 ### Como as mecânicas entram em versão
 

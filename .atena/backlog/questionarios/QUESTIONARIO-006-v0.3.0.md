@@ -27,3 +27,6 @@ O bot não usa loja, ferreiro nem eventos: tratar como alarme, e a resposta huma
 | 7 | Animações novas | PLAN-053 |
 | 8 | Sons reais | SFX-LISTA-001 |
 | 9 | Variedade depois do 3º/4º mapa | BAL-016, PLAN-055 |
+
+---
+**Adendo 2026-10-04:** os números do bot desta nota são de antes da SPEC-122 (XP, armas, eventos e raridade). Para comparar com respostas novas, use a linha de base de [EVID-154](../../evidence/EVID-154-lotes-b003-a-b006-armas-eventos-raridade-2026-10-04.md); só vale para builds com a SPEC-122.

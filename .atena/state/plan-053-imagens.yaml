@@ -1,0 +1,30 @@
+version: 2
+active_plan:
+  id: PLAN-053
+  spec_id: SPEC-121
+  current_step: S-006
+  total_steps: 7
+  status: ACTIVE
+  approval:
+    mode: per-plan
+    checkpoint: PLAN
+    status: APPROVED
+    approver: dono
+    date: '2026-10-04'
+    evidence: Dono respondeu atena continue após gate explícito das seis identidades v02 e anatomia Lu Yueh seis braços.
+  plan_scope_approval:
+    status: APPROVED
+    approver: dono
+    date: '2026-10-03'
+    evidence: Pedido pode continuar após seleção Por plano; gates visuais preservados.
+plan_cursor:
+  current: 'S-006 Feng Tu completo126quadros/25tiras;build159validada. ShendilavriI01/I02gerados;I03 bloqueadoHTTP429 quota até2026-10-05 12:43:35BRT.'
+  next: 'Após liberação retomar I03Guarda, I04Master e I05Malcanthet; auditar e parar no gate visual FILA017 antes dos ciclos.'
+  review: '.atena/generated/priority-review/shendilavri_identities_v01.png (parcial2de5; sem gate humano ainda)'
+suspension: null
+deferred_requests: []
+
+
+
+
+
