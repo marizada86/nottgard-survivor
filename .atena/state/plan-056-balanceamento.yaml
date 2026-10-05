@@ -30,5 +30,3 @@ deferred_requests:
   - id: DEV-001
     request: 'Varredura geral e revisao da movimentacao dos herois (PLAN-057 / SPEC-123), B-001 concluido; estado em .atena/state/plan-057-movimentacao.yaml.'
     status: PAUSED_AT_CHECKPOINT
-completed_side_plans:
-  - {id: PLAN-058, spec_id: SPEC-124, status: IMPLEMENTED_UNCOMMITTED, evidence: EVID-159, note: 'Velocidade dos inimigos +20% (enemy_speed_mult); aguarda playtest e commit.'}

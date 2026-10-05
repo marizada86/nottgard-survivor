@@ -65,6 +65,8 @@ static func make(enemy_id: String, at: Vector2, minute: float = 0.0, hp_mult: fl
 	e.atk_bonus = int(d.bonus) + int(minute / 4.0) + tier
 	e.xp = int(d.xp)
 	e.speed = float(d.speed)
+	if e.speed > 0.0:
+		e.speed *= float(Data.table("difficulty").get("enemy_speed_mult", 1.0))
 	e.radius = float(d.radius)
 	e.color = Color(float(d.color[0]) / 255.0, float(d.color[1]) / 255.0, float(d.color[2]) / 255.0)
 	e.scale = float(d.get("scale", 1.0))

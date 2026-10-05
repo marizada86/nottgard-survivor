@@ -1,4 +1,6 @@
 {
+  "_enemy_speed": "SPEC-124: multiplicador global da velocidade dos inimigos moveis (speed > 0); 1.0 = valores de enemies.json.",
+  "enemy_speed_mult": 1.2,
   "opening": {
     "hold_seconds": 90,
     "fade_seconds": 240,
