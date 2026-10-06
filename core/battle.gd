@@ -10,6 +10,8 @@ const ENEMY_ATK_RANGE := 0.95
 const ENEMY_ATK_CD := 1.3
 const SPAWN_SLOW := 1.35   # multiplica o intervalo das ondas (ritmo lento)
 const HIT_INVULN := 0.1
+## Revisão das curas: a barreira que nasce do excesso de cura (Bênção da Cura, Resto da Tarn) vai até esta fração do PV máximo (antes 0,25).
+const OVERHEAL_BARRIER_CAP := 0.10
 const HERO_HIT_R := 0.3
 const MAX_PICKUPS := 140
 const AFFIXES := ["veloz", "resistente", "mortal", "avaro"]   # Dagruve e Docas (SPEC-120: não mudam)
@@ -402,7 +404,7 @@ func _heal_hero(amount: float) -> void:
 	hero.hp = minf(hero.max_hp, hero.hp + amount)
 	var excess := maxf(0.0, amount - (hero.hp - before))
 	if excess > 0.0 and _has_boon_effect("overheal_shield"):
-		barrier = minf(hero.max_hp * 0.25, barrier + excess)
+		barrier = minf(hero.max_hp * OVERHEAL_BARRIER_CAP, barrier + excess)
 
 func _update_effect_timers(dt: float) -> void:
 	active_cd = maxf(0.0, active_cd - dt)
@@ -643,15 +645,14 @@ func _fire_nova(p: Dictionary, area: float) -> bool:
 	for e in enemies:
 		if not e.dead and e.pos.distance_to(hero.pos) - e.radius <= r:
 			targets.append(e)
-	if targets.is_empty() and float(p.get("heal", 0.0)) <= 0.0:
-		return false
-	if targets.is_empty() and hero.hp >= hero.max_hp:
+	# A cura da nova (Vela Sagrada, Julgamento da Glória) só vale quando ela fere alguém; sem alvo não dispara nem cura.
+	if targets.is_empty():
 		return false
 	events.append({"type": "nova", "pos": hero.pos, "radius": r, "dtype": p.dtype, "weapon": p.get("_audio_id", p.get("id", ""))})
 	var heal := float(p.get("heal", 0.0))
 	if heal > 0.0:
 		hero.hp = minf(hero.max_hp, hero.hp + heal)
-		events.append({"type": "heal", "pos": hero.pos, "amount": int(heal)})
+		events.append({"type": "heal", "pos": hero.pos, "amount": maxi(1, int(round(heal)))})
 	for t in targets:
 		_hero_hit(t, p, true)
 	return true

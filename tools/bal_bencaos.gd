@@ -1,12 +1,13 @@
 extends SceneTree
 ## Poder das bênçãos (SPEC-129 B-001, BAL-019). Mesmo piloto do tools/bot_curva.gd, mas o herói começa a run
 ## com UMA bênção forçada (ou nenhuma, "none" = controle) e nunca escolhe bênção nos altares (recusa):
-##   godot --headless --path . -s tools/bal_bencaos.gd -- <heroi> <seeds> <bencao_id|none> [dt] [maxfases] [lado] [meta 0=novato 1=veterano]
+##   godot --headless --path . -s tools/bal_bencaos.gd -- <heroi> <seeds> <bencao_id|none> [dt] [maxfases] [lado] [meta 0=novato 1=veterano] [arma:nivel]
 ## Saída CSV (prefixo "CSV;"): bencao;heroi;seed;fase;nv_entrada;nv_saida;dur_s;pv_min_pct;dano_recebido;resultado
 ## Ferramenta de medição: não altera o jogo.
 
 var _map_side := 60.0
 var _meta := {}
+var _weapon := ""
 const METAS := [{}, {"dmg_pct": 0.16, "hp": 8, "ca": 1, "speed_pct": 0.03}]
 
 func _init() -> void:
@@ -19,6 +20,7 @@ func _init() -> void:
 	_map_side = float(a[5]) if a.size() > 5 else 60.0
 	_meta = METAS[clampi(int(a[6]) if a.size() > 6 else 0, 0, 1)]
 	TerrainLayout.scale = _map_side / 40.0
+	_weapon = a[7] if a.size() > 7 else ""  # ex.: vela_sagrada:5 (arma extra no nível dado; "none" na bênção mede só a arma)
 	var boon := {}
 	if boon_id != "none":
 		for b in Data.table("boons").boons:
@@ -45,6 +47,9 @@ func _run(hero_id: String, seed_v: int, dt: float, max_stages: int, boon_id: Str
 	b.map_size = Vector2(_map_side, _map_side)
 	b.hero.map_size = b.map_size
 	b.hero.pos = b.map_size * 0.5
+	if _weapon != "":
+		var wp := _weapon.split(":")
+		b.hero.weapons.append(Weapon.make(wp[0], int(wp[1]) if wp.size() > 1 else 1))
 	if not boon.is_empty():
 		b.hero.boons.append(boon)
 		b.hero.recalc()
