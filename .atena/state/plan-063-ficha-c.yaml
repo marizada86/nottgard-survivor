@@ -1,0 +1,18 @@
+version: 1
+plan:
+  id: PLAN-063
+  spec_id: SPEC-130
+  cards: [MEC-045, ART-035]
+  title: Ficha C em abas, grade de icones e painel de detalhe (layout primeiro; prompts ART-035 depois)
+  status: ACCEPTED_BY_OWNER
+  accepted: '2026-10-06'
+  commits: ['7c4da5d ficha C', '737d3c8 slot de habilidade 72->60 px']
+  kind: side-plan (PLAN-062 segue ativo em outra sessao; arquivos disjuntos: ui/, tests/)
+  approval: {mode: per-plan, status: APPROVED_BY_OWNER, approver: dono, approved_at: '2026-10-06'}
+  decisions: {order: 'layout primeiro, molduras desenhadas por codigo; prompts de arte so depois de validar em jogo', layout: 'SPEC-130 D1-D12'}
+  checkpoint: {step: S-004, status: DONE, next_gate: 'ART-035 prompts quando o dono pedir'}
+  steps:
+    S-001: 'Componente ui/character_sheet.gd (abas, grade, detalhe, coluna do heroi, tooltips CA/CAM) e troca do ItemsPanel no hud'
+    S-002: 'Teste tests/test_character_sheet.gd + run_all + audit_projeto'
+    S-003: 'Capturas (3 herois, 2 resolucoes) e EVID'
+    S-004: 'Cartoes MEC-045/ART-035, spec para accepted-pending-playtest; commit local so com aprovacao'

@@ -114,3 +114,4 @@ informada). Plano: [PLAN-055](../vault/drafts/PLAN-055-mapas-vivos-segredos-e-di
 | IN-055 | Manzi: ficha C com informação demais; espaçar, distribuir e agrupar itens, equipamentos e magias em categorias; criar prompts para embelezar | MEC-045, ART-035 |
 | IN-056 | Manzi: bênção sem opção de não escolher nenhuma; balancear e adicionar bênçãos novas e entidades que concedem | MEC-046, MEC-047, BAL-019 |
 | IN-057 | Manzi: v0.3.0 muito fácil (já em andamento) | BAL-001 (+1 relato), BAL-018 |
+| IN-058 | Manzi (T04, observação final, repassada pelo dono em 2026-10-06): CA e CAM não são claros; algo deve explicar (tooltip: Classe de Armadura e Classe de Armadura Mágica) | MEC-045 (SPEC-130, D8) |
