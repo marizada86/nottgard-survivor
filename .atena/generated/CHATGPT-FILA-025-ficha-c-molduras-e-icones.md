@@ -1,8 +1,8 @@
 ---
 id: "CHATGPT-FILA-025"
 title: "Fila de geração: ficha C, molduras, slots, abas e textura (ART-035)"
-status: "A01 pronta para enviar; demais aguardam a aprovação da A01"
-priority: "normal"
+status: "na fila desde 2026-10-06; A01 pronta para enviar; demais aguardam a aprovação da A01"
+priority: "alta (2ª da fila, logo depois do PLAN-053 em andamento; antes das filas 022 e 023)"
 created: "2026-10-06"
 relations: ["[[ART-PROMPTS-057-ficha-c-molduras-e-icones]]", "[[SPEC-130-ficha-c-em-abas-grade-e-detalhe]]"]
 ---
@@ -16,6 +16,18 @@ Compilação operacional de [[ART-PROMPTS-057-ficha-c-molduras-e-icones]]; em ca
 1. Uma peça por chamada. Anexar as referências do ART-PROMPTS-057 e dizer o papel de cada uma.
 2. Destino dos candidatos: `.atena/generated/art-candidates/ficha-c/<id>_v01.png` (até 3 por peça). Nada entra em `assets/` sem passar na verificação em escala real no jogo.
 3. Marque `[x]` ao gerar e `[a]` ao aprovar.
+
+
+## Prioridade (decidida por Atena em 2026-10-06, a pedido do dono)
+
+**Alta, 2ª da fila de imagens.** Ordem das filas abertas:
+
+1. **PLAN-053** (heróis, Shu: `attack_02`, `death_03`, `death_04`), já em andamento e ligado ao BUG-025.
+2. **Esta fila (ficha C, 10 peças).** Motivos: o layout já foi validado e aceito pelo dono; são poucas imagens, sem animação nem auditoria de quadros; e a SPEC-131 (HUD da run no padrão da ficha C) segue o mesmo visual e pode reaproveitar estas molduras, então a arte pode destravar duas telas.
+3. FILA-021 (E e F, golpes de exceção).
+4. FILA-022 e FILA-023 (projéteis e habilidades), que só começam depois da aprovação do piloto da FILA-020.
+
+Dentro desta fila, a ordem é a da lista da seção "Fila" abaixo: A01 define o tom e vai primeiro.
 
 ## Fila
 

@@ -14,6 +14,8 @@
 
 ### PRIORIDADE ALTA — tiras de heróis (2026-10-02)
 
+**Fila de imagens, ordem de 2026-10-06:** (1) PLAN-053, tiras dos heróis (Shu); (2) [CHATGPT-FILA-025](../generated/CHATGPT-FILA-025-ficha-c-molduras-e-icones.md), ficha C, 10 peças (ART-035; pode servir também à SPEC-131); (3) FILA-021 E e F; (4) FILA-022 e FILA-023 (dependem do piloto da FILA-020).
+
 Fila [CHATGPT-FILA-024](../generated/CHATGPT-FILA-024-regerar-tiras-dos-herois.md) / [ART-PROMPTS-055](../generated/ART-PROMPTS-055-regerar-caminhadas-e-acoes-dos-herois.md): regerar tiras com defeito de dimensão (BUG-025). Passa na frente das demais.
 
 ### Execução local de 2026-10-02
