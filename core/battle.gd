@@ -1458,6 +1458,19 @@ func _combat_count() -> int:
 			n += 1
 	return n
 
+## MEC-051: Graz'zt limpa o mapa. Mata todos os inimigos comuns e destrutíveis, com as mortes e os drops normais;
+## poupam-se chefe, elites (afixo, baú, `elite_only`) e inimigos de objetivo de acontecimento. Devolve quantos morreram.
+func wipe_map() -> int:
+	var n := 0
+	for e in enemies.duplicate():
+		if e.dead or e.is_boss() or e.affix != "" or e.drops_chest or e.has_flag("elite_only") or e.event_tag != "":
+			continue
+		e.split_id = ""  # sem filhotes: a limpeza não pode gerar novos inimigos
+		_kill(e)
+		n += 1
+	events.append({"type": "decoy_blast", "pos": hero.pos, "radius": 10.0, "dtype": "magico"})
+	return n
+
 func _on_boss_dead(e: Enemy) -> void:
 	boss_dead = true
 	stats.bosses += 1
