@@ -9,7 +9,7 @@ enum Aim { AUTO, MOUSE }
 const ENEMY_ATK_RANGE := 0.95
 const ENEMY_ATK_CD := 1.3
 const SPAWN_SLOW := 1.35   # multiplica o intervalo das ondas (ritmo lento)
-const HIT_INVULN := 0.1
+const HIT_INVULN := 0.4
 const HERO_HIT_R := 0.3
 const MAX_PICKUPS := 140
 const AFFIXES := ["veloz", "resistente", "mortal", "avaro"]   # Dagruve e Docas (SPEC-120: não mudam)
@@ -100,7 +100,7 @@ var free_revive_used := false
 var death_reward_rate := 0.5
 var death_reason := ""
 var invuln := 0.0
-var stats := {"kills": 0, "crits": 0, "ones": 0, "elites": 0, "bosses": 0, "chests": 0, "gold": 0.0, "damage_taken": 0.0, "clean_kills": 0, "clean_streak_best": 0, "still_best": 0.0, "stages_cleared": 0, "rituals": 0, "bets_won": 0, "loyalty": 0, "boss_ids": [], "stage_ids": [], "cleared_ids": []}
+var stats := {"boons_declined": 0, "kills": 0, "crits": 0, "ones": 0, "elites": 0, "bosses": 0, "chests": 0, "gold": 0.0, "damage_taken": 0.0, "clean_kills": 0, "clean_streak_best": 0, "still_best": 0.0, "stages_cleared": 0, "rituals": 0, "bets_won": 0, "loyalty": 0, "boss_ids": [], "stage_ids": [], "cleared_ids": []}
 var codex := {"enemies": {}, "items": {}, "weapons": {}}
 var _acc := {}
 var _elites_done := {}
@@ -1957,7 +1957,7 @@ func _register_keep(slot: String) -> void:
 	hero.recalc()
 	events.append({"type": "toast", "text": "Fidelidade recompensada: %s sobe para Nv %d!" % [String(cur.name), int(cur.level)], "color": Color(1.0, 0.85, 0.3)})
 
-func _open_altar() -> void:
+func _open_altar(allow_skip := true) -> void:
 	var boons: Array = Data.table("boons").boons.duplicate()
 	var have: Array = hero.boons.map(func(b): return b.id)
 	boons = boons.filter(func(b): return not (b.id in have))
@@ -1970,6 +1970,9 @@ func _open_altar() -> void:
 	_decorate_offers()
 	if offer.is_empty():
 		return
+	# SPEC-126 (MEC-046): recusar a bênção; consome o altar, sem prêmio. Cartão simples (sem "brief"), sempre por último.
+	if allow_skip:
+		offer.append({"t": "boon_skip", "name": "Recusar a bênção", "desc": "Seguir sem bênção. O altar se apaga."})
 	offer_kind = "altar"
 	state = "altar"
 
@@ -2204,7 +2207,7 @@ func choose(i: int) -> void:
 						hero.weapons = hero.weapons.filter(func(w): return not (w.granted and w.id == donated_weapon))
 					hero.recalc()
 					events.append({"type": "toast", "text": "%s foi doado ao altar." % String(donated.name)})
-					_open_altar()
+					_open_altar(false)  # doação já gastou o item: sem recusa
 					return
 			"gamble":
 				var risk: Dictionary = Data.table("difficulty").get("risk_events", {})
@@ -2263,6 +2266,9 @@ func choose(i: int) -> void:
 			_add_gold(40.0)
 		"boon":
 			hero.boons.append(c.boon)
+		"boon_skip":
+			stats.boons_declined += 1
+			events.append({"type": "toast", "text": "Você recusou a bênção."})
 	if offer_kind == "item":
 		state = "running"
 		offer.clear()

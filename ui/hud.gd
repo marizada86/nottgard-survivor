@@ -207,7 +207,7 @@ func show_offer(b: Battle) -> void:
 	elif shop_titles.has(b.offer_kind):
 		lv_title.text = String(shop_titles[b.offer_kind])
 	else:
-		lv_title.text = "Altar — escolha uma bênção (e sua maldição)"
+		lv_title.text = "Altar — escolha uma bênção (e sua maldição) ou recuse"
 	for i in b.offer.size():
 		var o: Dictionary = b.offer[i]
 		var is_card := o.has("brief")
@@ -246,7 +246,7 @@ func show_offer(b: Battle) -> void:
 			"shop_item": btn.add_theme_color_override("font_color", Items.rarity_color(String(o.item.get("rarity", "comum"))))
 			"shop_item_up": btn.add_theme_color_override("font_color", Items.rarity_color(String(o.get("rarity", "comum"))))
 			"shop_weapon_up", "shop_heal": btn.add_theme_color_override("font_color", Color(1.0, 0.9, 0.5))
-			"shop_leave": btn.add_theme_color_override("font_color", Color(0.6, 0.6, 0.6))
+			"shop_leave", "boon_skip": btn.add_theme_color_override("font_color", Color(0.6, 0.6, 0.6))
 		if is_card:
 			(btn as OfferCard).setup(i, o, btn.get_theme_color("font_color"), icon_tex)
 		else:
