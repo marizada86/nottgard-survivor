@@ -462,6 +462,7 @@ func _draw_over() -> void:
 		var label_w := 220.0 if String(it.kind).begins_with("event_") else 110.0  # SPEC-118: rótulos de evento são nomes longos
 		draw_string(ThemeDB.fallback_font, draw_p + Vector2(-label_w * 0.5, -base_h - 8.0), label, HORIZONTAL_ALIGNMENT_CENTER, label_w, 12, Color(col, 0.95))
 	_draw_happenings()
+	_draw_star_path()
 	for pk in battle.pickups:
 		var p := Iso.to_screen(pk.pos)
 		var pickup_asset: String = {"xp": "xp_shard", "gold": "gold_coin", "potion": "health_potion", "magnet": "magnet"}.get(String(pk.kind), "")
@@ -492,6 +493,27 @@ func _draw_over() -> void:
 			var a := Iso.to_screen(e.pos)
 			var b := Iso.to_screen(e.pos + e.charge_dir * float(e.charge_ab.dist))
 			draw_line(a, b, Color(1.0, 0.25, 0.2, 0.6), 4.0)
+
+## SPEC-129: estrela do Caminho de Tou Um (arte provisória: losango dourado) e seta na borda quando fora da tela.
+func _draw_star_path() -> void:
+	var sp: Variant = battle.kinds.star_pos()
+	if sp == null:
+		return
+	var mp := Iso.to_screen(sp)
+	var pulse := 0.5 + 0.5 * sin(Time.get_ticks_msec() / 220.0)
+	var gold := Color(1.0, 0.86, 0.35)
+	var c := mp + Vector2(0, -34)
+	draw_circle(c, 16.0 + 4.0 * pulse, Color(gold, 0.16 + 0.12 * pulse))
+	draw_colored_polygon(PackedVector2Array([c + Vector2(0, -12), c + Vector2(8, 0), c + Vector2(0, 12), c + Vector2(-8, 0)]), Color(gold, 0.95))
+	draw_string(ThemeDB.fallback_font, c + Vector2(-60, -20), "Estrela do Norte", HORIZONTAL_ALIGNMENT_CENTER, 120, 12, Color(gold, 0.95))
+	var view := get_viewport_rect().grow(-30.0)
+	if view.has_point(get_viewport().get_canvas_transform() * mp):
+		return
+	var hero_p := Iso.to_screen(battle.hero.pos) + Vector2(0, -30)
+	var dir := (mp - hero_p).normalized()
+	var tip := hero_p + dir * 240.0
+	var side := Vector2(-dir.y, dir.x)
+	draw_colored_polygon(PackedVector2Array([tip + dir * 14.0, tip - dir * 6.0 + side * 9.0, tip - dir * 6.0 - side * 9.0]), Color(gold, 0.9))
 
 ## SPEC-118: aliados e peregrinos, círculo da arena e setas na borda para os objetivos fora da tela.
 func _draw_happenings() -> void:

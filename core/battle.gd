@@ -61,6 +61,7 @@ var projectiles: Array = []
 var zones: Array = []
 var decoys: Array = []  # MEC-029: cópias-isca do Passo pelas Sombras
 var happenings := Happenings.new()  # SPEC-118: acontecimentos exclusivos por fase
+var kinds := BoonKinds.new()  # SPEC-129: bênçãos de família (juramento, caminho da estrela)
 var pact_title := ""
 var _seed := 1
 var _decoy_serial := 0
@@ -193,6 +194,7 @@ func load_stage(stage_key: String) -> void:
 	stage_rule = Data.table("stage_rules").get(stage_key, {}).duplicate(true)
 	stage_events = Happenings.select(stage_key, Data.table("stage_events").get(stage_key, []), _seed)
 	happenings.reset()
+	kinds.reset_stage(self)
 	enemies.clear()
 	projectiles.clear()
 	zones.clear()
@@ -531,6 +533,7 @@ func step(screen_dir: Vector2, dt: float) -> void:
 	_stage_rule_step(dt)
 	_stage_event_step()
 	hero.step(screen_dir, dt)
+	kinds.step(self, dt)
 	happenings.post_hero_step(self)
 	_update_postboss_fog(dt)
 	if hero.m("regen") > 0.0:
@@ -1249,6 +1252,7 @@ func _hurt_hero(dmg: float, src: String, bypass_generic_defenses: bool = false) 
 		invuln = maxf(invuln, HIT_INVULN)
 	stats.damage_taken += dmg
 	stats.clean_kills = 0
+	kinds.on_hit(self, src)
 	events.append({"type": "hurt", "pos": hero.pos, "amount": int(dmg)})
 	if _has_boon_effect("pain_retaliation") and not bypass_generic_defenses:
 		for e in enemies:
@@ -1983,6 +1987,9 @@ func _open_altar(allow_skip := true) -> void:
 	state = "altar"
 
 func _boon_effect_desc(id: String) -> String:
+	for bn in Data.table("boons").boons:  # SPEC-129: famílias de bênção descrevem a regra a partir dos dados
+		if String(bn.id) == id and bn.has("kind"):
+			return BoonKinds.describe(bn)
 	var effect := String(Data.table("boon_effects").get(id, {}).get("effect", ""))
 	var descriptions := {
 		"overheal_shield": "Excesso de cura vira barreira.", "stage_heal": "Recupera 15% de PV ao descer.",

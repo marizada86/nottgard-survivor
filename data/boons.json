@@ -13,6 +13,13 @@
     {"id": "ghaunadaur_fome", "god": "Ghaunadaur", "name": "Fome do Abismo", "desc": "Roubo de vida 6%, mas -12 PV máximos.", "mods": {"lifesteal": 0.06, "hp": -12}},
     {"id": "ghaunadaur_olho", "god": "Ghaunadaur", "name": "Olho Devorador", "desc": "+30% de dano, mas recebe +2 de dano por golpe.", "mods": {"dmg_pct": 0.30, "dr": -2}},
     {"id": "tou_um_estrela", "god": "Tou Um", "name": "Guia da Estrela", "desc": "+15% de XP e +10% de velocidade, mas -6% de dano.", "mods": {"xp_pct": 0.15, "speed_pct": 0.10, "dmg_pct": -0.06}},
-    {"id": "helion_saber", "god": "Helion", "name": "Cadernos Vinculados", "desc": "+2 Inteligência, mas -1 Força.", "mods": {"inteligencia": 2, "forca": -1}}
+    {"id": "helion_saber", "god": "Helion", "name": "Cadernos Vinculados", "desc": "+2 Inteligência, mas -1 Força.", "mods": {"inteligencia": 2, "forca": -1}},
+    {"id": "lliira_juramento", "god": "Lliira", "name": "Juramento de Lliira", "desc": "Um juramento periódico: cumpri-lo traz glória; quebrá-lo, o Julgamento (sem perda de PV).", "mods": {}, "kind": "oath",
+     "oath": {"first_delay": 15, "cycle": 75, "window": 40, "max_hits": 3,
+       "reward": {"mods": {"dmg_pct": 0.25, "speed_pct": 0.10}, "duration": 30},
+       "penalty": {"mods": {"dmg_pct": -0.12}, "duration": 20}}},
+    {"id": "tou_um_caminho", "god": "Tou Um", "name": "Caminho da Estrela", "desc": "Siga a estrela do norte e seja curado, mas quem a segue por muito tempo é derrotado no tempo dela.", "mods": {}, "kind": "path",
+     "path": {"spawn_dist": 14, "retreat_dist": 4, "min_far": 10, "cone_deg": 60, "heal": 0.6, "exhaust_after": 60,
+       "exhaust": {"mods": {"speed_pct": -0.10}, "duration": 15}}}
   ]
 }

@@ -23,6 +23,7 @@ var meta_mods := {}
 var bonus_mods := {}      # conquistas
 var temp_mods := {}       # bênção temporária (ritual); vale enquanto temp_t > 0
 var temp_t := 0.0
+var kind_buffs := {}      # SPEC-129: bônus temporários das bênçãos de família (id -> {"mods": {}, "t": s}); vale enquanto t > 0
 var passives := {}        # id -> nível
 var items := {}           # slot -> item
 var boons: Array = []
@@ -76,6 +77,9 @@ func recalc() -> void:
 	add_mods(m, bonus_mods)
 	if temp_t > 0.0:
 		add_mods(m, temp_mods)
+	for kb in kind_buffs.values():
+		if float(kb.t) > 0.0:
+			add_mods(m, kb.mods)
 	var pdata: Dictionary = Data.table("passives")
 	for pid in passives:
 		add_mods(m, pdata[pid].mods, float(passives[pid]))
@@ -103,6 +107,11 @@ func recalc() -> void:
 func level_growth_hp() -> float:
 	var g: Dictionary = Data.table("difficulty").get("level_growth", {})
 	return float(maxi(0, level - int(g.get("start_level", 999)) + 1)) * float(g.get("hp_per_level", 0.0))
+
+## SPEC-129: aplica (ou renova) um bônus temporário de uma bênção de família.
+func set_kind_buff(id: String, buff_mods: Dictionary, seconds: float) -> void:
+	kind_buffs[id] = {"mods": buff_mods.duplicate(), "t": seconds}
+	recalc()
 
 func m(key: String) -> float:
 	return float(mods.get(key, 0.0))
@@ -166,6 +175,15 @@ func step(screen_dir: Vector2, dt: float) -> void:
 		temp_t = maxf(0.0, temp_t - dt)
 		if temp_t <= 0.0:
 			temp_mods = {}
+			recalc()
+	if not kind_buffs.is_empty():
+		var expired := false
+		for id in kind_buffs.keys():
+			kind_buffs[id].t = maxf(0.0, float(kind_buffs[id].t) - dt)
+			if float(kind_buffs[id].t) <= 0.0:
+				kind_buffs.erase(id)
+				expired = true
+		if expired:
 			recalc()
 	slow_t = maxf(0.0, slow_t - dt)
 	stun_t = maxf(0.0, stun_t - dt)
