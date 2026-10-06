@@ -1275,4 +1275,30 @@ func run() -> Array:
 	if not did.decoys.is_empty():
 		out.append("trocar de fase deve limpar as cópias-isca")
 
+	# BUG-032: baús, baú do chefe e portal nunca nascem dentro de bloqueio (herói precisa alcançar)
+	var rk := _bat(132)
+	_quiet(rk)
+	rk.hero.pos = Vector2(10, 10)
+	rk.hero.blockers = [Vector3(25.0, 20.0, 3.0), Vector3(26.5, 21.0, 1.5), Vector3(25.0, 22.5, 2.0)]
+	var rk_boss := rk.spawn_for_test("sacerdote_mente_derretida", Vector2(25, 20))
+	rk._on_boss_dead(rk_boss)
+	var rk_kinds := {}
+	for rk_it in rk.interactions:
+		rk_kinds[String(rk_it.kind)] = true
+		var need := 0.9 if rk_it.kind == "portal" else 0.6
+		if not rk.hero.can_stand(rk_it.pos, need):
+			out.append("%s nasceu dentro de um bloqueio em %s" % [rk_it.kind, str(rk_it.pos)])
+	if not (rk_kinds.has("boss_chest") and rk_kinds.has("portal") and rk_kinds.has("chest")):
+		out.append("morte do chefe deveria criar baús, baú do chefe e portal (%s)" % str(rk_kinds.keys()))
+	var open_b := _bat(133)
+	_quiet(open_b)
+	open_b._add_interaction("chest", Vector2(22, 20))
+	if not open_b.interactions[-1].pos.is_equal_approx(Vector2(22, 20)):
+		out.append("posição livre não deveria ser movida")
+	open_b._add_interaction("poco", Vector2(25, 25), false)
+	open_b.hero.blockers = [Vector3(25.0, 25.0, 3.0)]
+	open_b._add_interaction("poco", Vector2(25, 25), false)
+	if not open_b.interactions[-1].pos.is_equal_approx(Vector2(25, 25)):
+		out.append("interativo fixo (snap = false) deveria manter a posição autorada")
+
 	return out

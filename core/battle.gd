@@ -1434,7 +1434,7 @@ func _place_fixed_interactions() -> void:
 		var at := Vector2(float(entry.pos[0]), float(entry.pos[1]))
 		if at.distance_to(hero.pos) < 3.0:
 			continue
-		_add_interaction(String(entry.kind), at)
+		_add_interaction(String(entry.kind), at, false)
 		interactions[-1].fixed = true
 		interactions[-1].name = String(entry.get("name", ""))
 
@@ -1643,9 +1643,26 @@ func _use_hourglass() -> bool:
 	events.append({"type": "toast", "text": "A ampulheta adiantou %d s! %d inimigos acumulados chegam de uma vez." % [int(skip), burst]})
 	return true
 
-func _add_interaction(kind: String, at: Vector2) -> void:
+## BUG-032: baú, portal e demais interativos nunca nascem dentro de bloqueio de cenário ou terreno.
+## `snap = false` mantém a posição autorada (interativos fixos da fase).
+func _add_interaction(kind: String, at: Vector2, snap: bool = true) -> void:
 	at = at.clamp(Vector2(1, 1), map_size - Vector2(1, 1))
+	if snap:
+		at = _reachable_interaction_spot(at, 0.9 if kind == "portal" else 0.6)
 	interactions.append({"kind": kind, "pos": at, "used": false, "born_at": time})
+
+## Posição pedida ou a mais próxima onde o herói cabe (anéis de até 8 tiles, primeiro ao redor do pedido,
+## depois ao redor do herói); sem nenhuma, o próprio herói.
+func _reachable_interaction_spot(wanted: Vector2, clearance: float) -> Vector2:
+	for center in [wanted, hero.pos]:
+		for ring in 9:
+			var steps := 1 if ring == 0 else 8 * ring
+			for i in steps:
+				var ang := TAU * float(i) / float(steps)
+				var cand: Vector2 = center + Vector2(cos(ang), sin(ang)) * float(ring)
+				if hero.can_stand(cand, clearance):
+					return cand
+	return hero.pos
 
 func _update_interactions(dt: float) -> void:
 	for it in interactions:

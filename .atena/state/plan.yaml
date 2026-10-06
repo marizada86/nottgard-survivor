@@ -7,6 +7,7 @@ plan_cursor:
 proposed_plans:
   - {id: PLAN-065, spec_id: SPEC-132, state_file: '.atena/state/plan-065-lettering-cursor.yaml', status: IN_PROGRESS_B003_WAITING_IMAGE_GENERATOR, approval_mode: per-plan, approved_at: '2026-10-06', note: 'Side-plan aprovado pelo dono em 2026-10-06; B-001 e B-002 feitas (EVID-172); B-003 aguarda o gerador de imagem e a FILA-025; nao e o active_plan.'}
   - {id: PLAN-067, spec_id: SPEC-134, state_file: '.atena/state/plan-067-bau-mimico-e-item.yaml', status: IMPLEMENTED_PENDING_COMMIT, approval_mode: per-plan, approved_at: '2026-10-06', note: 'Side-plan (BUG-030 e BUG-031, relato do Manzi); EVID-173; nao e o active_plan; commit so com aprovacao.'}
+  - {id: PLAN-068, spec_id: SPEC-135, state_file: '.atena/state/plan-068-bau-e-portal-fora-de-bloqueio.yaml', status: IMPLEMENTED_UNCOMMITTED, approval_mode: per-plan, approved_at: '2026-10-06', note: 'Side-plan P0 (BUG-032, relato do Vitao); EVID-174; commit, push e build so com aprovacao; nao e o active_plan.'}
 suspension:
   suspended_plan_state_file: '.atena/state/plan-053-imagens.yaml'
   note: 'PLAN-053 (imagens, SPEC-121) suspenso; cota de imagens liberou 2026-10-04 10:28 BRT; retoma na Shu (attack_02, death_03, death_04).'
