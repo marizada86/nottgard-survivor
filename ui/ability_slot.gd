@@ -2,7 +2,7 @@ class_name AbilitySlot
 extends Control
 ## SPEC-127 (MEC-043): slot da habilidade ativa (Q/RMB) com ícone, varredura de recarga, segundos e brilho ao ficar pronta.
 
-const SIZE := Vector2(72, 72)
+const SIZE := Vector2(60, 60)
 const FLASH_TIME := 0.4
 
 var _icon: Texture2D = null
@@ -51,7 +51,7 @@ func _draw() -> void:
 		draw_texture_rect(_icon, inner, false, Color(0.5, 0.5, 0.55, 1.0) if cooling else Color.WHITE)
 	else:
 		var font := ThemeDB.fallback_font
-		draw_string(font, Vector2(0, SIZE.y * 0.68), _letter, HORIZONTAL_ALIGNMENT_CENTER, SIZE.x, 30, Color(0.9, 0.9, 0.85))
+		draw_string(font, Vector2(0, SIZE.y * 0.68), _letter, HORIZONTAL_ALIGNMENT_CENTER, SIZE.x, 26, Color(0.9, 0.9, 0.85))
 	if cooling:
 		var frac := clampf(_cd / _cd_max, 0.0, 1.0)
 		var center := SIZE * 0.5
@@ -64,8 +64,8 @@ func _draw() -> void:
 		draw_colored_polygon(pts, Color(0, 0, 0, 0.62))
 		var font2 := ThemeDB.fallback_font
 		var txt := cooldown_text(_cd)
-		draw_string_outline(font2, Vector2(0, SIZE.y * 0.6), txt, HORIZONTAL_ALIGNMENT_CENTER, SIZE.x, 26, 6, Color(0, 0, 0, 0.9))
-		draw_string(font2, Vector2(0, SIZE.y * 0.6), txt, HORIZONTAL_ALIGNMENT_CENTER, SIZE.x, 26, Color(1, 1, 1))
+		draw_string_outline(font2, Vector2(0, SIZE.y * 0.6), txt, HORIZONTAL_ALIGNMENT_CENTER, SIZE.x, 22, 5, Color(0, 0, 0, 0.9))
+		draw_string(font2, Vector2(0, SIZE.y * 0.6), txt, HORIZONTAL_ALIGNMENT_CENTER, SIZE.x, 22, Color(1, 1, 1))
 	var border := Color(0.55, 0.55, 0.6)
 	if _guard:
 		border = Color(0.45, 0.75, 1.0)
@@ -75,5 +75,5 @@ func _draw() -> void:
 	if _flash > 0.0:
 		draw_rect(rect, Color(1, 1, 1, 0.55 * _flash / FLASH_TIME))
 	var kfont := ThemeDB.fallback_font
-	draw_string_outline(kfont, Vector2(3, SIZE.y - 4), "Q/RMB", HORIZONTAL_ALIGNMENT_LEFT, -1, 12, 4, Color(0, 0, 0, 0.9))
-	draw_string(kfont, Vector2(3, SIZE.y - 4), "Q/RMB", HORIZONTAL_ALIGNMENT_LEFT, -1, 12, Color(1, 0.95, 0.75))
+	draw_string_outline(kfont, Vector2(3, SIZE.y - 4), "Q/RMB", HORIZONTAL_ALIGNMENT_LEFT, -1, 10, 3, Color(0, 0, 0, 0.9))
+	draw_string(kfont, Vector2(3, SIZE.y - 4), "Q/RMB", HORIZONTAL_ALIGNMENT_LEFT, -1, 10, Color(1, 0.95, 0.75))
