@@ -78,6 +78,12 @@ const FEET_Y := {
 static var _tex_cache := {}
 ## Altura visível (alfa) do primeiro quadro do idle, em px da célula, por inimigo.
 static var _art_height_cache := {}
+## Área visível (alfa) da arte estática, em fração da textura; apoia a base real na sombra.
+static var _static_art_cache := {}
+## Raio mínimo da sombra (px) por px de largura visível da arte estática: carroça larga não fica com sombra de caixote.
+const STATIC_SHADOW_RADIUS_PER_WIDTH := 0.3
+## Fração da largura visível que uma linha precisa ter opaca para valer como base da arte estática.
+const STATIC_BASE_MIN_COVERAGE := 0.1
 
 @export var preview_enemy_id := "zumbi": set = _set_preview_enemy_id
 var enemy: Enemy
@@ -146,6 +152,29 @@ static func _cache_art_height(enemy_id: String, frames: SpriteFrames) -> void:
 	var image := frames.get_frame_texture(&"idle", 0).get_image()
 	if image != null:
 		_art_height_cache[enemy_id] = float(image.get_used_rect().size.y)
+
+## Retângulo visível da textura estática normalizado (0..1); a base (end.y) é a última linha com massa
+## de verdade, ignorando entulho solto e a margem transparente, que não contam como chão.
+func _static_art_rect() -> Rect2:
+	if not _static_art_cache.has(preview_enemy_id):
+		var rect := Rect2(0, 0, 1, 1)
+		var image := tex.get_image() if tex != null else null
+		if image != null and image.get_width() > 0 and image.get_height() > 0:
+			var used := image.get_used_rect()
+			if used.size.x > 0 and used.size.y > 0:
+				var min_pixels := int(ceil(used.size.x * STATIC_BASE_MIN_COVERAGE))
+				var base := used.end.y
+				for y in range(used.end.y - 1, used.position.y - 1, -1):
+					var opaque := 0
+					for x in range(used.position.x, used.end.x):
+						if image.get_pixel(x, y).a > 0.5:
+							opaque += 1
+					if opaque >= min_pixels:
+						base = y + 1
+						break
+				rect = Rect2(Vector2(used.position) / Vector2(image.get_size()), Vector2(used.size.x, base - used.position.y) / Vector2(image.get_size()))
+		_static_art_cache[preview_enemy_id] = rect
+	return _static_art_cache[preview_enemy_id]
 
 ## Altura do inimigo em tela (px); sem tira animada, a arte estática ocupa H_BASE.
 func _visible_height(actor_scale: float) -> float:
@@ -230,6 +259,9 @@ func _draw() -> void:
 	var actor_scale := enemy.scale if enemy != null else 1.0
 	var alpha := 0.45 if enemy != null and (enemy.has_flag("ghost") or enemy.has_flag("illusory")) else 1.0
 	var shadow_radius := _visible_height(actor_scale) * SHADOW_RADIUS_PER_HEIGHT
+	if tex != null and not _has_animation:
+		var static_width := H_BASE * actor_scale * float(tex.get_width()) / float(tex.get_height()) * _static_art_rect().size.x
+		shadow_radius = maxf(shadow_radius, static_width * STATIC_SHADOW_RADIUS_PER_WIDTH)
 	var ground := Vector2(0, -shadow_radius * Iso.TILE_H / Iso.TILE_W * SHADOW_LIFT)
 	draw_colored_polygon(Iso.ground_circle(ground, shadow_radius), Color(0, 0, 0, 0.5 * alpha))
 	if enemy != null and (enemy.affix != "" or not enemy.affixes.is_empty()):
@@ -248,7 +280,9 @@ func _draw() -> void:
 	if tex != null and not _has_animation:
 		var height := H_BASE * actor_scale
 		var width := height * float(tex.get_width()) / float(tex.get_height())
-		draw_texture_rect(tex, Rect2(-width * 0.5, -height, width, height), false)
+		# A base visível (não a borda do arquivo) assenta no centro da sombra.
+		var art := _static_art_rect()
+		draw_texture_rect(tex, Rect2(-width * 0.5, ground.y - height * (art.position.y + art.size.y), width, height), false)
 	elif tex == null and not _has_animation:
 		draw_rect(Rect2(-8 * actor_scale, -34 * actor_scale, 16 * actor_scale, 34 * actor_scale), Color(0.55, 0.15, 0.15))
 	if enemy != null and (enemy.hp < enemy.max_hp or enemy.affix != "" or not enemy.affixes.is_empty() or enemy.is_boss()):
