@@ -75,6 +75,7 @@ func _run(hero_id: String, seed_v: int, dt: float, max_stages: int, boon_id: Str
 			_emit(boon_id, hero_id, seed_v, st, b)
 			n_stages += 1
 			if n_stages > max_stages:
+				_emit_kinds(boon_id, hero_id, seed_v, b)
 				return
 			st = _new_stat(b)
 			last_hp = b.hero.hp
@@ -98,6 +99,10 @@ func _run(hero_id: String, seed_v: int, dt: float, max_stages: int, boon_id: Str
 					b.hero.pos = it.pos
 					b.interact()
 	_emit(boon_id, hero_id, seed_v, st, b)
+	_emit_kinds(boon_id, hero_id, seed_v, b)
+
+func _emit_kinds(boon_id: String, hero_id: String, seed_v: int, b: Battle) -> void:
+	print("KIND;%s;%s;%d;%d;%d;%d" % [boon_id, hero_id, seed_v, b.kinds.oath_kept, b.kinds.oath_broken, b.kinds.star_exhausted])
 
 func _interact(b: Battle) -> void:
 	for it in b.interactions:
@@ -153,6 +158,9 @@ func _move(b: Battle) -> Vector2:
 				var perp := Vector2(-p.dir.y, p.dir.x)
 				v += perp * (1.0 if perp.dot(off) >= 0.0 else -1.0) * 1.5 / maxf(0.5, d)
 	if near == 0 or v.length() < 0.4:
+		var star: Variant = b.kinds.star_pos()  # SPEC-129: Caminho da Estrela; o piloto segue a estrela quando calmo
+		if star != null:
+			v += (star - h.pos).normalized() * 0.8
 		var best: Variant = null
 		var bd := 9.0
 		for pk in b.pickups:

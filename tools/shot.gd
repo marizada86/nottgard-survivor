@@ -20,6 +20,11 @@ func _ready() -> void:
 			run.battle.hero.max_hp = 9999.0
 			run.battle.hero.hp = 9999.0
 		for flag in flags.split(","):
+			if flag.begins_with("boon="):  # SPEC-129: dá a bênção ao herói (ex.: boon=lliira_juramento)
+				for bn in Data.table("boons").boons:
+					if String(bn.id) == flag.trim_prefix("boon="):
+						run.battle.hero.boons.append(bn)
+				run.battle.hero.recalc()
 			if flag.begins_with("god="):
 				var god := flag.trim_prefix("god=")
 				if DivineVisuals.is_divine_affinity(god):
