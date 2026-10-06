@@ -32,10 +32,10 @@ func run() -> Array:
 		b.active_cd_max = 10.0
 		hud.update_stats(b)
 		hud.show_items_panel(b)
-		var txt: String = hud.items_desc_label.text
-		if txt.find("Habilidade [Q/RMB]: %s" % String(abilities[hid].name)) < 0 or txt.find(String(abilities[hid].desc).substr(0, 20)) < 0:
-			out.append("%s: ficha C sem a seção da habilidade" % hid)
-		if txt.find("Recarga %.1f s" % b.active_cooldown_effective()) < 0:
+		var sheet: CharacterSheet = hud.items_panel
+		if sheet._ability_name.text != String(abilities[hid].name) or sheet._ability_desc.text.find(String(abilities[hid].desc).substr(0, 20)) < 0:
+			out.append("%s: ficha C sem o cartão da habilidade" % hid)
+		if sheet._ability_cd.text.find("Recarga %.1f s" % b.active_cooldown_effective()) < 0:
 			out.append("%s: ficha C sem a recarga efetiva (%.1f)" % [hid, b.active_cooldown_effective()])
 		hud.free()
 	return out

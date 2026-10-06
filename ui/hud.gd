@@ -43,14 +43,7 @@ signal items_closed
 @onready var result_background: TextureRect = %ResultBackground
 @onready var revive_panel: PanelContainer = %RevivePanel
 @onready var revive_text: Label = %ReviveText
-@onready var items_panel: PanelContainer = %ItemsPanel
-@onready var items_portrait: TextureRect = %ItemsPortrait
-@onready var items_hero_line: Label = %ItemsHeroLine
-@onready var items_attr_line: Label = %ItemsAttrLine
-@onready var items_bonus_line: Label = %ItemsBonusLine
-@onready var items_slots_label: Label = %ItemsSlotsLabel
-@onready var items_desc_label: RichTextLabel = %ItemsDescLabel
-var _items_portrait_id := ""
+var items_panel: CharacterSheet  # SPEC-130: ficha C em abas (ui/character_sheet.gd)
 var _active_icon_id := ""
 var _ability_slot: AbilitySlot
 var _stage_icon_id := ""
@@ -68,7 +61,6 @@ func _ready() -> void:
 	%PauseHelpBtn.pressed.connect(func(): help_pressed.emit())
 	%ReviveBtn.pressed.connect(func(): revive_pressed.emit())
 	%DeclineReviveBtn.pressed.connect(func(): decline_revive_pressed.emit())
-	%CloseItemsBtn.pressed.connect(func(): items_closed.emit())
 	aim_btn.pressed.connect(func(): aim_pressed.emit())
 	vol_slider.value_changed.connect(func(v: float):
 		Game.profile.data.settings.volume = v
@@ -90,7 +82,10 @@ func _ready() -> void:
 	pause_panel.visible = false
 	result_panel.visible = false
 	revive_panel.visible = false
-	items_panel.visible = false
+	items_panel = CharacterSheet.new()
+	items_panel.name = "ItemsPanel"
+	items_panel.closed.connect(func(): items_closed.emit())
+	add_child(items_panel)
 	prompt_label.text = ""
 	objective_label = Label.new()
 	objective_label.name = "ObjectiveLabel"
@@ -448,70 +443,10 @@ func toast(text: String, color: Color = Color(1, 1, 1)) -> void:
 	tw.tween_callback(l.queue_free)
 
 func show_items_panel(b: Battle) -> void:
-	var h := b.hero
-	if h.id != _items_portrait_id:
-		_items_portrait_id = h.id
-		var portrait_path := "res://assets/portraits/%s.png" % h.id
-		items_portrait.texture = load(portrait_path) if ResourceLoader.exists(portrait_path) else null
-	items_hero_line.text = "%s — Nv %d" % [h.name, h.level]
-	items_attr_line.text = "FOR %d · INT %d · CON %d · CAR %d\nPV %d/%d · CA %d (%d%%) · CAM %d (%d%%)" % [
-		h.attr("forca"), h.attr("inteligencia"), h.attr("constituicao"), h.attr("carisma"),
-		int(ceil(h.hp)), int(h.max_hp), h.ca(), int(h.typed_evasion("fisico") * 100.0), h.cam(), int(h.typed_evasion("magico") * 100.0)]
-	var bonus_text: String = Items.mods_text(h.mods)
-	items_bonus_line.text = ("Bônus ativos (itens, passivas e bênçãos somados): %s" % bonus_text) if bonus_text != "" else "Sem bônus ativos além dos atributos base."
-	var owned_w := 0
-	for w in h.weapons:
-		if not w.granted:
-			owned_w += 1
-	items_slots_label.text = "Feitiços/armas %d/%d    Equipamento %d/%d" % [owned_w, h.weapon_slots(), h.items.size(), Items.SLOTS.size()]
-	var lines: Array = []
-	# SPEC-127 (MEC-044): habilidade ativa (Q/RMB) no topo da ficha
-	if not b.active_def.is_empty():
-		var ab_dmg := b.weapon_damage_text(b.active_def)
-		lines.append("[b]★ Habilidade [Q/RMB]: %s[/b]\n%s\n[color=#e6c76e]Recarga %.1f s%s[/color]%s" % [
-			String(b.active_def.get("name", "")), String(b.active_def.get("desc", "")), b.active_cooldown_effective(),
-			(" (base %.0f s)" % float(b.active_def.get("cooldown", 0.0))) if not is_equal_approx(b.active_cooldown_effective(), float(b.active_def.get("cooldown", 0.0))) else "",
-			("\n[color=#e6c76e]%s[/color]" % ab_dmg) if ab_dmg != "" else ""])
-	for w in h.weapons:
-		var tag := "  [color=#99cc99](item)[/color]" if w.granted else ""
-		var status := ""
-		if w.can_evolve():
-			status = "  [color=#ffd966](pronto para evoluir)[/color]"
-		var dmg_line := b.weapon_damage_text(w.params())
-		var hint := b.evolve_hint(w)
-		lines.append("[b]⚔ %s[/b]%s%s\n%s%s%s" % [w.display_name(), tag, status, String(w.def.get("desc", "")),
-			("\n[color=#e6c76e]%s[/color]" % dmg_line) if dmg_line != "" else "", ("\n[color=#9fb4d8]%s[/color]" % hint) if hint != "" else ""])
-	for pid in h.passives:
-		var p: Dictionary = Data.table("passives")[pid]
-		lines.append("[b]✦ %s Nv %d[/b]\n%s" % [p.name, h.passives[pid], String(p.get("desc", ""))])
-	for slot in Items.SLOTS:
-		if not h.items.has(slot):
-			continue
-		var it: Dictionary = h.items[slot]
-		var lvl_tag := ""
-		if String(it.get("base", "")) != "":
-			var lvl := int(it.get("level", 1))
-			lvl_tag = "  [color=#ffd966](Nv %d/%d%s)[/color]" % [lvl, Items.MAX_LEVEL, " — máximo" if lvl >= Items.MAX_LEVEL else ""]
-		var desc: String = Items.mods_text(it.mods)
-		if String(it.get("note", "")) != "":
-			desc += "\n[i]%s[/i]" % String(it.note)
-		lines.append("[b]◆ %s[/b]%s\n%s" % [it.name, lvl_tag, desc])
-	for bn in h.boons:
-		var god_tag := " (%s)" % String(bn.god) if bn.has("god") else ""
-		lines.append("[b]☼ %s%s[/b]\n%s" % [bn.name, god_tag, String(bn.get("desc", ""))])
-	var wdata: Dictionary = Data.table("weapons")
-	for wid in h.synergies:
-		var syn: Dictionary = wdata.get(wid, {}).get("synergy", {})
-		if syn.is_empty():
-			continue
-		var mult := maxi(1, b.descent_depth)
-		lines.append("[b]♾ Sinergia: %s[/b]\n%s por camada descida (agora ×%d)." % [String(syn.name), Items.mods_text(syn.bonus_per_depth), mult])
-	items_desc_label.text = "\n\n".join(lines) if not lines.is_empty() else "Nenhum item, feitiço ou bênção ainda."
-	items_panel.visible = true
-	%CloseItemsBtn.call_deferred("grab_focus")
+	items_panel.show_sheet(b)
 
 func hide_items_panel() -> void:
-	items_panel.visible = false
+	items_panel.hide_sheet()
 
 func show_pause(v: bool) -> void:
 	pause_panel.visible = v
