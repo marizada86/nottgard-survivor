@@ -1,0 +1,16 @@
+version: 1
+plan:
+  id: PLAN-064
+  spec_id: SPEC-131
+  cards: [MEC-048]
+  title: HUD da run no padrao da ficha C (retrato, barras, icones, atributos, bencaos)
+  status: IMPLEMENTED_PENDING_COMMIT
+  kind: side-plan (PLAN-062 segue ativo em outra sessao; arquivos disjuntos: ui/hud.*, ui/hero_panel.gd, tests/, tools/build_scenes.gd)
+  approval: {mode: per-plan, status: APPROVED_BY_OWNER, approver: dono, approved_at: '2026-10-06'}
+  decisions: {retrato: 'sim, pequeno', estilo: 'translucido com moldura fina', extras: 'icones CA/CAM, bencaos ativas, atributos FOR/INT/CON/CAR'}
+  checkpoint: {step: S-004, status: DONE, evidence: EVID-168, next_gate: 'commit local so com aprovacao explicita'}
+  steps:
+    S-001: 'ui/hero_panel.gd (HeroPanel) + troca do StatBox no hud.tscn/hud.gd/build_scenes.gd'
+    S-002: 'Teste tests/test_hero_panel.gd + ajuste de test_ability_hud + run_all + audit_projeto'
+    S-003: 'Capturas (3 herois, 2 resolucoes) e EVID'
+    S-004: 'Cartao MEC-048, spec para implemented-pending-playtest; commit local so com aprovacao'

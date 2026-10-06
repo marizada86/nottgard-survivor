@@ -14,13 +14,7 @@ signal revive_pressed
 signal decline_revive_pressed
 signal items_closed
 
-@onready var name_label: Label = %NameLabel
-@onready var hp_bar: ProgressBar = %HpBar
-@onready var hp_label: Label = %HpLabel
-@onready var xp_bar: ProgressBar = %XpBar
-@onready var info_label: Label = %InfoLabel
-@onready var active_label: Label = %ActiveLabel
-@onready var active_icon: TextureRect = %ActiveIcon
+@onready var info_label: Label = %InfoLabel  # só as linhas do Estige; o resto do herói está no HeroPanel
 @onready var stage_rule_icon: TextureRect = %StageRuleIcon
 @onready var timer_label: Label = %TimerLabel
 @onready var stage_label: Label = %StageLabel
@@ -44,6 +38,7 @@ signal items_closed
 @onready var revive_panel: PanelContainer = %RevivePanel
 @onready var revive_text: Label = %ReviveText
 var items_panel: CharacterSheet  # SPEC-130: ficha C em abas (ui/character_sheet.gd)
+var hero_panel: HeroPanel  # SPEC-131 (ui/hero_panel.gd)
 var _active_icon_id := ""
 var _ability_slot: AbilitySlot
 var _stage_icon_id := ""
@@ -65,9 +60,12 @@ func _ready() -> void:
 	vol_slider.value_changed.connect(func(v: float):
 		Game.profile.data.settings.volume = v
 		Game.apply_settings())
-	# SPEC-127: o slot com ícone e recarga substitui o texto e o ícone pequeno da pilha de estatísticas
-	active_label.visible = false
-	active_icon.visible = false
+	# SPEC-131: painel do herói no padrão da ficha C, acima das linhas do Estige
+	hero_panel = HeroPanel.new()
+	hero_panel.name = "HeroPanel"
+	$StatBox.add_child(hero_panel)
+	$StatBox.move_child(hero_panel, 0)
+	# SPEC-127: o slot com ícone e recarga fica no centro inferior
 	_ability_slot = AbilitySlot.new()
 	_ability_slot.name = "AbilitySlot"
 	_ability_slot.set_anchors_preset(Control.PRESET_CENTER_BOTTOM)
@@ -128,17 +126,14 @@ func _process(_delta: float) -> void:
 
 func update_stats(b: Battle) -> void:
 	var h := b.hero
-	name_label.text = "%s  ·  Nv %d" % [h.name, h.level]
-	hp_bar.max_value = h.max_hp
-	hp_bar.value = h.hp
-	hp_label.text = "%d / %d%s" % [int(ceil(h.hp)), int(h.max_hp), "  +%d barreira" % int(ceil(b.barrier)) if b.barrier > 0.0 else ""]
-	xp_bar.max_value = h.xp_need
-	xp_bar.value = h.xp
-	info_label.text = "Moedas %d   Abates %d   CA %d (%d%%)  CAM %d (%d%%)" % [int(h.gold), b.stats.kills, h.ca(), int(h.typed_evasion("fisico") * 100.0), h.cam(), int(h.typed_evasion("magico") * 100.0)]
+	hero_panel.update(b)
 	if b.has_styx_contract() and b.styx_exposure > 0.0:
-		info_label.text += "\nEstige %.1f s · INT efetiva %d" % [b.styx_exposure, h.styx_intelligence()]
+		info_label.text = "Estige %.1f s · INT efetiva %d" % [b.styx_exposure, h.styx_intelligence()]
 	elif h.styx_forget_t > 0.0:
-		info_label.text += "\nEsquecimento do Estige %.1f s" % h.styx_forget_t
+		info_label.text = "Esquecimento do Estige %.1f s" % h.styx_forget_t
+	else:
+		info_label.text = ""
+	info_label.visible = info_label.text != ""
 	var ability: Dictionary = Data.table("abilities").get(h.id, {})
 	var ability_id := String(ability.get("id", ""))
 	if ability_id != _active_icon_id:
@@ -498,6 +493,6 @@ var _xp_pulse: Tween
 func pulse_xp() -> void:
 	if _xp_pulse != null and _xp_pulse.is_valid():
 		_xp_pulse.kill()
-	xp_bar.modulate = Color(1.6, 1.5, 1.2)
+	hero_panel.xp_bar.modulate = Color(1.6, 1.5, 1.2)
 	_xp_pulse = create_tween()
-	_xp_pulse.tween_property(xp_bar, "modulate", Color.WHITE, 0.18)
+	_xp_pulse.tween_property(hero_panel.xp_bar, "modulate", Color.WHITE, 0.18)

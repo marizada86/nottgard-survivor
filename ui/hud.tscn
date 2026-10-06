@@ -2,13 +2,6 @@
 
 [ext_resource type="Script" path="res://ui/hud.gd" id="1_rbyyf"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_276te"]
-bg_color = Color(0.25, 0.6, 0.9, 1)
-corner_radius_top_left = 2
-corner_radius_top_right = 2
-corner_radius_bottom_right = 2
-corner_radius_bottom_left = 2
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_546lt"]
 bg_color = Color(0.75, 0.1, 0.1, 1)
 corner_radius_top_left = 2
@@ -56,57 +49,13 @@ tooltip_text = "Velocidade: 1x, 1,5x, 2x (F)"
 toggle_mode = true
 text = "1x"
 
-[node name="NameLabel" type="Label" parent="StatBox" unique_id=13073774]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_font_sizes/font_size = 22
-
-[node name="HpBar" type="ProgressBar" parent="StatBox" unique_id=802970028]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(320, 24)
-layout_mode = 2
-show_percentage = false
-
-[node name="HpLabel" type="Label" parent="StatBox/HpBar" unique_id=520323789]
-unique_name_in_owner = true
-layout_mode = 0
-anchor_right = 1.0
-anchor_bottom = 1.0
-theme_override_font_sizes/font_size = 16
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="XpBar" type="ProgressBar" parent="StatBox" unique_id=1120640279]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(320, 10)
-layout_mode = 2
-theme_override_styles/fill = SubResource("StyleBoxFlat_276te")
-show_percentage = false
-
 [node name="InfoLabel" type="Label" parent="StatBox" unique_id=85989554]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
-
-[node name="ActiveLabel" type="Label" parent="StatBox"]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_font_sizes/font_size = 16
-theme_override_colors/font_color = Color(1, 0.9, 0.5, 1)
-text = "[Q] Habilidade"
-
-[node name="ActiveIcon" type="TextureRect" parent="StatBox"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(34, 34)
-layout_mode = 2
-expand_mode = 3
-stretch_mode = 5
-
-[node name="ItemsHintLabel" type="Label" parent="StatBox"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 14
-theme_override_colors/font_color = Color(0.7, 0.7, 0.65, 1)
-text = "[C] Itens e feitiços"
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.85)
+theme_override_constants/outline_size = 4
 
 [node name="StageRuleIcon" type="TextureRect" parent="."]
 unique_name_in_owner = true

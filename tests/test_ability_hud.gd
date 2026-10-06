@@ -26,8 +26,6 @@ func run() -> Array:
 		var slot: AbilitySlot = hud.get_node("AbilitySlot")
 		if slot == null or slot.tooltip_text.find(String(abilities[hid].name)) < 0:
 			out.append("%s: slot da habilidade ausente ou sem tooltip com o nome" % hid)
-		if hud.active_label.visible or hud.active_icon.visible:
-			out.append("%s: texto e ícone antigos deveriam estar ocultos" % hid)
 		b.active_cd = 5.0
 		b.active_cd_max = 10.0
 		hud.update_stats(b)

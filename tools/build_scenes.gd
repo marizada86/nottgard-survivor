@@ -178,21 +178,7 @@ func _build_hud() -> void:
 	var stat := VBoxContainer.new()
 	stat.position = Vector2(14, 10)
 	_add(h, stat, "StatBox", h)
-	_add(stat, _label("", 22), "NameLabel", h, true)
-	var hp := ProgressBar.new()
-	hp.custom_minimum_size = Vector2(320, 24)
-	hp.show_percentage = false
-	_add(stat, hp, "HpBar", h, true)
-	var hpl := _label("", 16)
-	hpl.set_anchors_preset(Control.PRESET_FULL_RECT)
-	hpl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	hpl.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
-	_add(hp, hpl, "HpLabel", h, true)
-	var xp := ProgressBar.new()
-	xp.custom_minimum_size = Vector2(320, 10)
-	xp.show_percentage = false
-	xp.add_theme_stylebox_override("fill", _flat(Color(0.25, 0.6, 0.9)))
-	_add(stat, xp, "XpBar", h, true)
+	# SPEC-131: o painel do herói (HeroPanel) é montado por código pelo hud.gd; aqui só as linhas do Estige
 	_add(stat, _label("", 16), "InfoLabel", h, true)
 
 	var tl := _label("00:00", 34)
