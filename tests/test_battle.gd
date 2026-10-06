@@ -58,11 +58,58 @@ func run() -> Array:
 	for i in 20:
 		bc.hero.items.clear()
 		bc._open_boss_chest()
+		if bc.state == "item_offer":  # BUG-031: slot vazio pausa; escolher equipa
+			bc.choose(0)
 		var got: Dictionary = bc.hero.items.values()[0] if not bc.hero.items.is_empty() else {}
 		if not got.is_empty() and int(Items.RANK[got.rarity]) < int(Items.RANK["raro"]):
 			bad_rarity += 1
 	if bad_rarity > 0:
 		out.append("baú do chefe entregou item abaixo de raro %d vez(es)" % bad_rarity)
+
+	# BUG-031: item de baú com slot vazio pausa e mostra o item; só equipa ao confirmar
+	var fb := _bat(54)
+	_quiet(fb)
+	fb.hero.items.clear()
+	fb._open_boss_chest()
+	if fb.state != "item_offer" or fb.offer.size() != 1:
+		out.append("baú com slot vazio deveria pausar com 1 opção (estado %s, %d opções)" % [fb.state, fb.offer.size()])
+	elif not fb.hero.items.is_empty():
+		out.append("o item não deveria ser equipado antes da confirmação")
+	else:
+		var shown: Dictionary = fb.offer[0].keep
+		var gold_fb := fb.hero.gold
+		fb.choose(0)
+		if fb.state != "running" or not fb.offer.is_empty():
+			out.append("confirmar o item deveria retomar o jogo")
+		if fb.hero.items.get(String(shown.slot), {}).get("id", "") != shown.id:
+			out.append("confirmar o item deveria equipá-lo")
+		if fb.hero.gold != gold_fb:
+			out.append("equipar em slot vazio não deveria vender nada")
+	# compra na loja continua equipando direto (sem pausa)
+	var sp_buy := _bat(55)
+	_quiet(sp_buy)
+	sp_buy.hero.items.clear()
+	sp_buy.give_item(Items.roll(sp_buy.rng, 3, 0.0))
+	if sp_buy.state != "running" or sp_buy.hero.items.is_empty():
+		out.append("give_item sem aviso deveria equipar direto")
+
+	# BUG-030: o baú que o Mímico larga nunca vira Mímico de novo
+	var mm := _bat(56)
+	_quiet(mm)
+	var mimic := mm.spawn_for_test("mimico", mm.hero.pos + Vector2(3, 0))
+	mimic.drops_chest = true
+	mm._kill(mimic)
+	var dropped := mm.interactions.filter(func(i): return i.kind == "chest")
+	if dropped.size() != 1 or not bool(dropped[0].get("safe", false)):
+		out.append("o baú do Mímico deveria nascer seguro (%d baús)" % dropped.size())
+	else:
+		for n in 40:
+			mm.hero.items.clear()
+			var again: Dictionary = {"kind": "chest", "pos": dropped[0].pos, "used": false, "born_at": 0.0, "safe": true}
+			mm.rng.seed = 1000 + n
+			mm._open_chest(again)
+		if mm.enemies.any(func(e): return e.id == "mimico" and not e.dead and e != mimic):
+			out.append("baú seguro virou Mímico")
 
 	# MEC-018: faixa de dano com atributos; MEC-008: dica de evolução
 	var dm := _bat(61)
@@ -936,6 +983,7 @@ func run() -> Array:
 	_quiet(fog)
 	var fog_boss := fog.spawn_for_test("sacerdote_mente_derretida", Vector2(21, 20))
 	fog._on_boss_dead(fog_boss)
+	fog.interactions.clear()  # os baús do chefe nascem junto do herói e agora pausam o jogo (BUG-031)
 	fog_boss.dead = true
 	fog.step(Vector2.ZERO, 7.9)
 	if fog.fog_state != "grace" or not is_zero_approx(fog.fog_damage_per_second()):

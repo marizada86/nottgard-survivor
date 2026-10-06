@@ -206,7 +206,7 @@ func show_offer(b: Battle) -> void:
 	if b.offer_kind == "levelup":
 		lv_title.text = "Nível %d — escolha (1-%d)" % [b.hero.level, b.offer.size()]
 	elif b.offer_kind == "item":
-		lv_title.text = "Item encontrado — equipar ou manter?"
+		lv_title.text = "Item encontrado no baú — equipar" if b.offer.size() == 1 else "Item encontrado — equipar ou manter?"
 	elif b.offer_kind == "pact":
 		lv_title.text = "%s — escolha ou recuse" % b.pact_title
 	elif shop_titles.has(b.offer_kind):

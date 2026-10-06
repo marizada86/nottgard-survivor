@@ -1,0 +1,19 @@
+# Plano de Atena em 2026-10-06 a pedido do dono (relato do Manzi); aprovado por plano.
+# Side-plan: nao e o active_plan de plan.yaml (PLAN-066 segue la).
+version: 1
+plan:
+  id: PLAN-067
+  spec_id: SPEC-134
+  cards: [BUG-030, BUG-031]
+  title: Bau vira Mimico uma vez so; item de bau com slot vazio pausa e mostra o item
+  status: IMPLEMENTED_PENDING_COMMIT
+  approval: {mode: per-plan, status: APPROVED_BY_OWNER, approver: dono, approved_at: '2026-10-06'}
+  decisions: {escopo_painel: 'so baus (comum e do chefe)'}
+  blocking_gaps: 0
+  checkpoint: {step: S-004, status: PENDING_COMMIT, evidence: EVID-173, next_gate: 'commit local so com aprovacao explicita; push publica a build'}
+  steps:
+    S-001: 'DONE: bau largado pelo Mimico nasce com safe=true (core/battle.gd _kill)'
+    S-002: 'DONE: give_item(announce) abre painel de 1 opcao com slot vazio; baus passam announce (core/battle.gd, ui/hud.gd)'
+    S-003: 'DONE: testes novos em tests/test_battle.gd, suite 0 falhas, bot sem travar (EVID-173)'
+    S-004: 'PENDENTE: commit local so com aprovacao (git add apenas core/battle.gd, ui/hud.gd, tests/test_battle.gd e os registros deste plano)'
+  gates_independent_of_approval_level: ['commit local', 'push', 'build/release']

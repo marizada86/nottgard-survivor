@@ -1356,6 +1356,8 @@ func _kill(e: Enemy) -> void:
 		stats.elites += 1
 		if e.drops_chest or rng.randf() < 0.5:
 			_add_interaction("chest", e.pos)
+			if e.id == "mimico":
+				interactions.back()["safe"] = true  # BUG-030: o baú que o Mímico larga nunca vira Mímico de novo
 		_drop("gold", e.pos, 12.0 * float(stage.coin_mult))
 		if rng.randf() < 0.06:
 			_drop("potion", e.pos, 0.25)
@@ -1882,19 +1884,31 @@ func _open_chest(it: Dictionary) -> void:
 	var luck := hero.m("carisma") + hero.attr_mod("carisma")
 	if _has_boon_effect("lucky_chests"):
 		luck += 4.0
-	give_item(Items.roll(rng, tier(), luck))
+	give_item(Items.roll(rng, tier(), luck), true)
 
 ## MEC-013: o baú do chefe nunca vem com item comum ou mágico (raro ou único) e nunca é mímico.
 func _open_boss_chest() -> void:
 	var luck := hero.m("carisma") + hero.attr_mod("carisma") + 4.0
 	var item := Items.roll(rng, tier() + 1, luck, "raro")
 	events.append({"type": "toast", "text": "Baú do Chefe!", "color": Color(1.0, 0.85, 0.3)})
-	give_item(item)
+	give_item(item, true)
 
-func give_item(item: Dictionary) -> void:
+## `announce`: item achado em baú; com o slot vazio, pausa e mostra o item antes de equipar (BUG-031).
+## Compra na loja e demais origens equipam direto, como antes.
+func give_item(item: Dictionary, announce := false) -> void:
 	codex.items[item.id] = true
 	var slot: String = item.slot
 	var cur: Variant = hero.items.get(slot)
+	if cur == null and announce:
+		offer = [{"t": "item_swap", "name": "Equipar %s [%s]" % [item.name, Items.rarity_label(item.rarity)],
+			"desc": "%s\nO slot de %s está vazio." % [Items.mods_text(item.mods), slot],
+			"keep": item, "sell": {}, "equips": true, "tooltip": "Slot vazio: o item é equipado.\n%s" % Items.mods_text(item.mods),
+			"brief": Items.brief_text(item.mods), "badge": Items.verdict(item.mods, {}), "price_text": "slot vazio",
+			"detail": {"columns": [], "rows": [], "footer": [Items.mods_text(item.mods), "O slot de %s está vazio." % slot]}}]
+		offer_kind = "item"
+		state = "item_offer"
+		events.append({"type": "item_offer", "new_item": item, "current_item": {}})
+		return
 	if cur == null:
 		_equip_item(item)
 		events.append({"type": "item", "item": item})
@@ -1932,6 +1946,9 @@ func _equip_item(item: Dictionary) -> void:
 
 ## A peça que não fica equipada é sempre vendida, nunca só descartada.
 func _resolve_item_choice(keep: Dictionary, sell: Dictionary) -> void:
+	if sell.is_empty():  # slot vazio (BUG-031): só equipa
+		_equip_item(keep)
+		return
 	if String(sell.get("weapon", "")) != "" and String(sell.get("weapon", "")) != String(keep.get("weapon", "")):
 		hero.weapons = hero.weapons.filter(func(w): return not (w.granted and w.id == sell.weapon))
 	_equip_item(keep)
