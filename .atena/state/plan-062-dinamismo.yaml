@@ -4,14 +4,14 @@ plan:
   spec_id: SPEC-129
   cards: [MEC-047, BAL-019]
   title: Dinamismo da run - bencaos divinas e eventos
-  status: DRAFT_AWAITING_APPROVAL_MODE
-  approval: {mode: unconfigured, status: PENDING_OWNER_CHOICE, approver: dono}
-  note: 'Pedido do dono em 2026-10-05 (EVID-165). Nao executavel ate escolher per-plan, per-batch ou per-step e responder D1 a D5 do SPEC-129.'
+  status: ACTIVE
+  approval: {mode: per-batch, status: APPROVED_BY_OWNER, approver: dono, approved_at: '2026-10-06'}
+  decisions: {D1: 'Lliira e Tou Um primeiro', D2: 'rivalidade so troca o Favor, nunca bloqueia', D3: 'maldicao obrigatoria so nas stat atuais; familias novas trazem custo proprio', D4: 'eventos divinos somam (pool optional)', D5: 'Nott fica para depois'}
+  checkpoint: {batch: B-001, status: DONE_AWAITING_OWNER_REVIEW, next_gate: 'aprovacao do dono antes de B-002; commit local do B-001 so com aprovacao'}
   batches:
-    B-001: 'Medir as 14 bencaos atuais com o bot (BAL-019); sem codigo de jogo'
+    B-001: {goal: 'Medir as 14 bencaos atuais com o bot (BAL-019); sem codigo de jogo', evidence: EVID-166, tool: tools/bal_bencaos.gd, result: 'Cura e Fome do Abismo fortes demais; Olho Devorador fraco; maioria neutra (ruido +-0,3)'}
     B-002: 'Motor oath e path + bencao piloto Lliira (Juramento) e Tou Um (Caminho da Estrela)'
     B-003: 'Bencaos novas por deus (stat, cost, delayed), so dados'
     B-004: 'Favor e rivalidade (Feng-tu e Shedaklah)'
     B-005: 'Eventos divinos (Feng-tu e Shedaklah primeiro)'
     B-006: 'Arte e audio: registro ART por bencao e altar'
-  recommended_mode: per-batch

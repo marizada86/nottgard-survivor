@@ -1,8 +1,9 @@
 ---
 id: SPEC-129
 title: Dinamismo da run — bênçãos divinas com dinâmica própria e eventos ligados aos deuses
-status: draft-awaiting-approval
+status: approved-per-batch (2026-10-06); B-001 em execução
 origin: pedido-do-dono-2026-10-05 (após T04)
+approval: dono, 2026-10-06 — por lote; D1 a D5 como sugeridas (Lliira e Tou Um primeiro; rivalidade só troca o Favor; maldição obrigatória só nas `stat` atuais; eventos divinos somam; Nott depois)
 cards: MEC-047, BAL-019, MEC-005, MEC-038
 evidence: EVID-163, EVID-165
 risk: alto (nova forma de jogar); entrega em lotes pequenos, um deus por vez
