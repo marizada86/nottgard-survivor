@@ -54,6 +54,11 @@ func run() -> Array:
 			out.append("%s: fileira de bênçãos com %d ícones, esperado 2" % [hid, p.boon_row.get_child_count()])
 		elif (p.boon_row.get_child(1) as Control).tooltip_text.find("Teste") < 0:
 			out.append("%s: tooltip da bênção sem o deus" % hid)
+		if p._keycap == null or p._sheet_seen:
+			out.append("%s: selo da tecla C ausente ou já marcado como visto" % hid)
+		hud.show_items_panel(b)
+		if not p._sheet_seen or p._keycap.self_modulate != Color.WHITE:
+			out.append("%s: abrir a ficha deveria parar o pulso do selo C" % hid)
 		hud.pulse_xp()
 		hud.free()
 	return out

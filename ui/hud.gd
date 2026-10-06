@@ -438,6 +438,7 @@ func toast(text: String, color: Color = Color(1, 1, 1)) -> void:
 	tw.tween_callback(l.queue_free)
 
 func show_items_panel(b: Battle) -> void:
+	hero_panel.note_sheet_opened()
 	items_panel.show_sheet(b)
 
 func hide_items_panel() -> void:

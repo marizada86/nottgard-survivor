@@ -27,3 +27,8 @@ cards: ["MEC-048"]
 - **Só uma resolução:** a janela de captura ficou em 1280×720 mesmo com `--resolution` (o `stretch` do projeto mantém a base 1280×720), então a captura em segunda resolução do critério de aceite **não foi obtida**. O layout usa o mesmo canvas base nas duas.
 - Tooltips só foram checados por teste (texto), não com o mouse em jogo.
 - A HUD ficou mais alta (~170 px contra ~110 px); o fundo é translúcido (70%). Aguarda o olhar do dono em jogo.
+
+## Ajuste pós-playtest do dono (2026-10-06, depois de 1ef33bf)
+- **Dica da tecla C:** o texto `[C] Ficha` virou um selo de tecla (quadrado dourado com "C" + "Ficha") no canto do painel, com tooltip explicando o que a ficha mostra. O selo pulsa até o jogador abrir a ficha pela primeira vez na run (ou até 90 s) e depois fica fixo. `HeroPanel.note_sheet_opened()` é chamado por `Hud.show_items_panel`.
+- **Opacidade:** fundo do painel 0,70 → 0,35 (`HeroPanel.PANEL_ALPHA`); fundos das barras, do retrato e das bênçãos 0,85/0,8 → 0,5; bordas e marcas de canto mais suaves. Textos mantêm contorno preto para leitura.
+- Teste: `tests/test_hero_panel.gd` cobre o selo e a parada do pulso; `run_all` 0 falhas. Captura em `.atena/generated/spec-131/`.

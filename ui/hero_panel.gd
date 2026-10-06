@@ -15,6 +15,8 @@ const ATTR_NAMES := {"forca": "FOR", "inteligencia": "INT", "constituicao": "CON
 const ATTR_FULL := {"forca": "Força", "inteligencia": "Inteligência", "constituicao": "Constituição", "carisma": "Carisma"}
 const ATTR_COLORS := {"forca": Color(0.92, 0.42, 0.38), "inteligencia": Color(0.96, 0.86, 0.42), "constituicao": Color(0.45, 0.66, 0.96), "carisma": Color(0.78, 0.56, 0.96)}
 const BOON_ICON := 28.0
+const PANEL_ALPHA := 0.35  ## fundo bem translúcido: o jogador enxerga a arena por trás (pedido do dono)
+const HINT_PULSE_UNTIL := 90.0  ## o selo da tecla C pulsa até a ficha ser aberta ou até esse tempo de run
 
 var xp_bar: ProgressBar
 var hp_bar: ProgressBar
@@ -33,11 +35,13 @@ var _chips := {}
 var _hero_id := ""
 var _defense_key := ""
 var _boon_key := ""
+var _keycap: PanelContainer
+var _sheet_seen := false
 
 func _ready() -> void:
 	custom_minimum_size = Vector2(WIDTH, 0)
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
-	add_theme_stylebox_override("panel", _box(Color(0.045, 0.04, 0.06, 0.7), Color(GOLD_DIM, 0.75), 1, 3))
+	add_theme_stylebox_override("panel", _box(Color(0.045, 0.04, 0.06, PANEL_ALPHA), Color(GOLD_DIM, 0.55), 1, 3))
 	draw.connect(_draw_corners)
 	var margin := MarginContainer.new()
 	for side in ["left", "right", "top", "bottom"]:
@@ -86,7 +90,7 @@ func _outlined(l: Label) -> Label:
 func _draw_corners() -> void:
 	var r := Rect2(Vector2.ZERO, size).grow(-2.0)
 	var m := 9.0
-	var c := Color(GOLD, 0.85)
+	var c := Color(GOLD, 0.7)
 	for corner in [r.position, Vector2(r.end.x, r.position.y), Vector2(r.position.x, r.end.y), r.end]:
 		var sx := 1.0 if corner.x <= r.position.x else -1.0
 		var sy := 1.0 if corner.y <= r.position.y else -1.0
@@ -96,7 +100,7 @@ func _draw_corners() -> void:
 func _build_portrait() -> Control:
 	var frame := PanelContainer.new()
 	frame.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	frame.add_theme_stylebox_override("panel", _box(Color(0.08, 0.07, 0.1), GOLD_DIM, 1, 2))
+	frame.add_theme_stylebox_override("panel", _box(Color(0.08, 0.07, 0.1, 0.5), Color(GOLD_DIM, 0.7), 1, 2))
 	_portrait = TextureRect.new()
 	_portrait.custom_minimum_size = Vector2(76, 76)
 	_portrait.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
@@ -122,16 +126,14 @@ func _build_main_column() -> Control:
 	spacer.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	spacer.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	name_row.add_child(spacer)
-	var hint := _label("[C] Ficha", 12, Color(0.7, 0.7, 0.65))
-	hint.size_flags_vertical = Control.SIZE_SHRINK_END
-	name_row.add_child(hint)
+	name_row.add_child(_build_key_hint())
 	col.add_child(name_row)
 	hp_bar = ProgressBar.new()
 	hp_bar.show_percentage = false
 	hp_bar.custom_minimum_size = Vector2(0, 22)
 	hp_bar.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	hp_bar.add_theme_stylebox_override("fill", _box(Color(0.75, 0.14, 0.14), Color(0, 0, 0, 0), 0, 2))
-	hp_bar.add_theme_stylebox_override("background", _box(Color(0.12, 0.05, 0.05, 0.85), Color(0.4, 0.2, 0.2), 1, 2))
+	hp_bar.add_theme_stylebox_override("background", _box(Color(0.12, 0.05, 0.05, 0.5), Color(0.4, 0.2, 0.2, 0.7), 1, 2))
 	col.add_child(hp_bar)
 	barrier_bar = ProgressBar.new()
 	barrier_bar.show_percentage = false
@@ -159,7 +161,7 @@ func _build_main_column() -> Control:
 	xp_bar.custom_minimum_size = Vector2(0, 7)
 	xp_bar.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	xp_bar.add_theme_stylebox_override("fill", _box(Color(0.25, 0.6, 0.9), Color(0, 0, 0, 0), 0, 2))
-	xp_bar.add_theme_stylebox_override("background", _box(Color(0.05, 0.08, 0.12, 0.85), Color(0.18, 0.28, 0.4), 1, 2))
+	xp_bar.add_theme_stylebox_override("background", _box(Color(0.05, 0.08, 0.12, 0.5), Color(0.18, 0.28, 0.4, 0.7), 1, 2))
 	col.add_child(xp_bar)
 	var attrs := HBoxContainer.new()
 	attrs.add_theme_constant_override("separation", 10)
@@ -172,6 +174,32 @@ func _build_main_column() -> Control:
 		attrs.add_child(l)
 	col.add_child(attrs)
 	return col
+
+## Selo de tecla "C" + "Ficha": diz sem texto longo que a tecla abre mais informações do herói.
+## Pulsa até o jogador abrir a ficha pela primeira vez na run (note_sheet_opened).
+func _build_key_hint() -> Control:
+	var box := HBoxContainer.new()
+	box.add_theme_constant_override("separation", 5)
+	box.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	box.mouse_filter = Control.MOUSE_FILTER_PASS
+	box.tooltip_text = "Tecla C: abre a ficha do herói (armas, equipamento, passivas, bênçãos e bônus)."
+	_keycap = PanelContainer.new()
+	_keycap.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	var sb := _box(Color(0.2, 0.16, 0.08, 0.55), GOLD, 2, 4)
+	sb.content_margin_left = 7.0
+	sb.content_margin_right = 7.0
+	sb.content_margin_top = 1.0
+	sb.content_margin_bottom = 1.0
+	_keycap.add_theme_stylebox_override("panel", sb)
+	_keycap.add_child(_outlined(_label("C", 15, GOLD)))
+	box.add_child(_keycap)
+	box.add_child(_outlined(_label("Ficha", 14, Color(0.85, 0.82, 0.72))))
+	return box
+
+## O HUD chama quando a ficha C abre: o selo para de pulsar.
+func note_sheet_opened() -> void:
+	_sheet_seen = true
+	_keycap.self_modulate = Color.WHITE
 
 func _icon_rect(path: String, px: float) -> TextureRect:
 	var t := TextureRect.new()
@@ -238,6 +266,11 @@ func update(b: Battle) -> void:
 		(_chips["ca"] as Control).tooltip_text = CharacterSheet.plain_text(CharacterSheet.defense_tip("ca", h.ca(), ev_ca, h.m("dodge")))
 		(_chips["cam"] as Control).tooltip_text = CharacterSheet.plain_text(CharacterSheet.defense_tip("cam", h.cam(), ev_cam, h.m("dodge")))
 	_update_boons(h.boons)
+	if not _sheet_seen and b.time < HINT_PULSE_UNTIL:
+		var k := 1.0 + 0.55 * (0.5 + 0.5 * sin(float(Time.get_ticks_msec()) * 0.005))
+		_keycap.self_modulate = Color(k, k, k)
+	else:
+		_keycap.self_modulate = Color.WHITE
 
 static func hp_text(hp: float, max_hp: float, barrier: float) -> String:
 	var t := "%d / %d" % [int(ceil(hp)), int(max_hp)]
@@ -266,7 +299,7 @@ func _update_boons(boons: Array) -> void:
 func _boon_icon(bn: Dictionary) -> Control:
 	var frame := PanelContainer.new()
 	frame.mouse_filter = Control.MOUSE_FILTER_PASS
-	frame.add_theme_stylebox_override("panel", _box(Color(0.1, 0.07, 0.14, 0.8), BOON_BORDER, 1, 2))
+	frame.add_theme_stylebox_override("panel", _box(Color(0.1, 0.07, 0.14, 0.5), BOON_BORDER, 1, 2))
 	var god := String(bn.get("god", ""))
 	frame.tooltip_text = "%s%s\n%s" % [String(bn.get("name", "")), (" (bênção de %s)" % god) if god != "" else "", String(bn.get("desc", ""))]
 	var path := "res://assets/icons/boons/%s.png" % String(bn.get("id", ""))
