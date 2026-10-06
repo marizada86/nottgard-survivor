@@ -9,7 +9,7 @@ enum Aim { AUTO, MOUSE }
 const ENEMY_ATK_RANGE := 0.95
 const ENEMY_ATK_CD := 1.3
 const SPAWN_SLOW := 1.35   # multiplica o intervalo das ondas (ritmo lento)
-const HIT_INVULN := 0.4
+const HIT_INVULN := 0.1
 const HERO_HIT_R := 0.3
 const MAX_PICKUPS := 140
 const AFFIXES := ["veloz", "resistente", "mortal", "avaro"]   # Dagruve e Docas (SPEC-120: não mudam)
