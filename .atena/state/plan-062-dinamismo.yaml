@@ -7,11 +7,11 @@ plan:
   status: ACTIVE
   approval: {mode: per-batch, status: APPROVED_BY_OWNER, approver: dono, approved_at: '2026-10-06'}
   decisions: {D1: 'Lliira e Tou Um primeiro', D2: 'rivalidade so troca o Favor, nunca bloqueia', D3: 'maldicao obrigatoria so nas stat atuais; familias novas trazem custo proprio', D4: 'eventos divinos somam (pool optional)', D5: 'Nott fica para depois'}
-  checkpoint: {batch: B-002, status: DONE_AWAITING_OWNER_REVIEW, next_gate: 'dono decide a cura do Caminho da Estrela (0.6 adotado; medicao bruta +0.65/+0.78, EVID-169) e aprova o B-003'}
+  checkpoint: {batch: B-003, status: DONE_AWAITING_OWNER_REVIEW, next_gate: "dono decide: efeito overheal_shield da Cura (codigo) e aprova B-004 (Favor e rivalidade)"}
   batches:
     B-001: {status: DONE_COMMITTED_cbdcae7, goal: 'Medir as 14 bencaos atuais com o bot (BAL-019); sem codigo de jogo', evidence: EVID-166, tool: tools/bal_bencaos.gd, result: 'Cura e Fome do Abismo fortes demais; Olho Devorador fraco; maioria neutra (ruido +-0,3)'}
     B-002: {status: IMPLEMENTED_LOCAL, goal: 'Motor oath e path + bencao piloto Lliira (Juramento) e Tou Um (Caminho da Estrela)', evidence: EVID-169, result: 'Juramento neutro (cumpre 63%); Caminho da Estrela acima do teto na medicao bruta, cura 0.6 adotada'}
-    B-003: 'Bencaos novas por deus (stat, cost, delayed), so dados'
+    B-003: {status: IMPLEMENTED_LOCAL, goal: "9 bencaos novas + rebalanceamento (so dados)", evidence: EVID-170, result: "10 de 12 dentro da meta; Cura +0.61 no veterano (efeito overheal_shield)"}
     B-004: 'Favor e rivalidade (Feng-tu e Shedaklah)'
     B-005: 'Eventos divinos (Feng-tu e Shedaklah primeiro)'
     B-006: 'Arte e audio: registro ART por bencao e altar'
