@@ -73,8 +73,8 @@ func _ready() -> void:
 	_ability_slot.set_anchors_preset(Control.PRESET_CENTER_BOTTOM)
 	_ability_slot.offset_left = -AbilitySlot.SIZE.x * 0.5
 	_ability_slot.offset_right = AbilitySlot.SIZE.x * 0.5
-	_ability_slot.offset_top = -172.0
-	_ability_slot.offset_bottom = -172.0 + AbilitySlot.SIZE.y
+	_ability_slot.offset_top = -138.0
+	_ability_slot.offset_bottom = -138.0 + AbilitySlot.SIZE.y
 	_ability_slot.grow_horizontal = Control.GROW_DIRECTION_BOTH
 	add_child(_ability_slot)
 	boss_panel.visible = false

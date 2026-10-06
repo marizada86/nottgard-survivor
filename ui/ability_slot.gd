@@ -4,6 +4,7 @@ extends Control
 
 const SIZE := Vector2(60, 60)
 const FLASH_TIME := 0.4
+const OPACITY := 0.8  ## o slot fica translúcido para não competir com o combate
 
 var _icon: Texture2D = null
 var _letter := "?"
@@ -18,6 +19,7 @@ func _init() -> void:
 	size = SIZE
 	clip_contents = true
 	mouse_filter = Control.MOUSE_FILTER_PASS
+	modulate.a = OPACITY
 
 func set_ability(name: String, desc: String, icon: Texture2D, key_text: String) -> void:
 	_icon = icon
@@ -43,37 +45,35 @@ static func cooldown_text(cd: float) -> String:
 	return "%.1f" % cd if cd < 10.0 else "%d" % int(ceil(cd))
 
 func _draw() -> void:
-	var rect := Rect2(Vector2.ZERO, SIZE)
-	draw_rect(rect, Color(0.2, 0.18, 0.26, 0.92))
-	var inner := rect.grow(-4.0)
+	# disco suave e translúcido, sem bordas; a tecla fica logo abaixo (pedido do dono: menos "grotesco")
+	var center := Vector2(SIZE.x * 0.5, SIZE.y * 0.5 - 4.0)
+	var radius := SIZE.x * 0.5 - 4.0
+	draw_circle(center, radius, Color(0.12, 0.1, 0.16, 0.55))
 	var cooling := _cd > 0.0
+	var isize := radius * 1.6
 	if _icon != null:
-		draw_texture_rect(_icon, inner, false, Color(0.5, 0.5, 0.55, 1.0) if cooling else Color.WHITE)
+		draw_texture_rect(_icon, Rect2(center - Vector2(isize, isize) * 0.5, Vector2(isize, isize)), false, Color(0.55, 0.55, 0.6, 1.0) if cooling else Color.WHITE)
 	else:
 		var font := ThemeDB.fallback_font
-		draw_string(font, Vector2(0, SIZE.y * 0.68), _letter, HORIZONTAL_ALIGNMENT_CENTER, SIZE.x, 26, Color(0.9, 0.9, 0.85))
+		draw_string(font, Vector2(0, center.y + 9.0), _letter, HORIZONTAL_ALIGNMENT_CENTER, SIZE.x, 26, Color(0.9, 0.9, 0.85))
 	if cooling:
 		var frac := clampf(_cd / _cd_max, 0.0, 1.0)
-		var center := SIZE * 0.5
 		var pts := PackedVector2Array([center])
 		var steps := maxi(2, int(ceil(frac * 48.0)))
 		# varredura horária: a parte ainda em recarga começa no topo e vai até a fração restante
 		for i in steps + 1:
 			var ang := -PI * 0.5 + TAU * (1.0 - frac) + TAU * frac * float(i) / float(steps)
-			pts.append(center + Vector2(cos(ang), sin(ang)) * SIZE.x)
-		draw_colored_polygon(pts, Color(0, 0, 0, 0.62))
+			pts.append(center + Vector2(cos(ang), sin(ang)) * radius)
+		draw_colored_polygon(pts, Color(0, 0, 0, 0.5))
 		var font2 := ThemeDB.fallback_font
 		var txt := cooldown_text(_cd)
-		draw_string_outline(font2, Vector2(0, SIZE.y * 0.6), txt, HORIZONTAL_ALIGNMENT_CENTER, SIZE.x, 22, 5, Color(0, 0, 0, 0.9))
-		draw_string(font2, Vector2(0, SIZE.y * 0.6), txt, HORIZONTAL_ALIGNMENT_CENTER, SIZE.x, 22, Color(1, 1, 1))
-	var border := Color(0.55, 0.55, 0.6)
+		draw_string_outline(font2, Vector2(0, center.y + 8.0), txt, HORIZONTAL_ALIGNMENT_CENTER, SIZE.x, 22, 5, Color(0, 0, 0, 0.9))
+		draw_string(font2, Vector2(0, center.y + 8.0), txt, HORIZONTAL_ALIGNMENT_CENTER, SIZE.x, 22, Color(1, 1, 1))
 	if _guard:
-		border = Color(0.45, 0.75, 1.0)
-	elif not cooling:
-		border = Color(1.0, 0.85, 0.35)
-	draw_rect(rect, border, false, 3.0)
+		draw_circle(center, radius, Color(0.45, 0.75, 1.0, 0.28))
 	if _flash > 0.0:
-		draw_rect(rect, Color(1, 1, 1, 0.55 * _flash / FLASH_TIME))
+		draw_circle(center, radius, Color(1, 1, 1, 0.5 * _flash / FLASH_TIME))
 	var kfont := ThemeDB.fallback_font
-	draw_string_outline(kfont, Vector2(3, SIZE.y - 4), "Q/RMB", HORIZONTAL_ALIGNMENT_LEFT, -1, 10, 3, Color(0, 0, 0, 0.9))
-	draw_string(kfont, Vector2(3, SIZE.y - 4), "Q/RMB", HORIZONTAL_ALIGNMENT_LEFT, -1, 10, Color(1, 0.95, 0.75))
+	var key_y := SIZE.y - 2.0
+	draw_string_outline(kfont, Vector2(0, key_y), "Q/RMB", HORIZONTAL_ALIGNMENT_CENTER, SIZE.x, 10, 3, Color(0, 0, 0, 0.9))
+	draw_string(kfont, Vector2(0, key_y), "Q/RMB", HORIZONTAL_ALIGNMENT_CENTER, SIZE.x, 10, Color(1, 0.95, 0.75, 0.9))
