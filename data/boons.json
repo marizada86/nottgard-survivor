@@ -19,7 +19,7 @@
        "reward": {"mods": {"dmg_pct": 0.25, "speed_pct": 0.10}, "duration": 30},
        "penalty": {"mods": {"dmg_pct": -0.12}, "duration": 20}}},
     {"id": "tou_um_caminho", "god": "Tou Um", "name": "Caminho da Estrela", "desc": "Siga a estrela do norte e seja curado, mas quem a segue por muito tempo é derrotado no tempo dela.", "mods": {}, "kind": "path",
-     "path": {"spawn_dist": 14, "retreat_dist": 4, "min_far": 10, "cone_deg": 60, "heal": 0.6, "exhaust_after": 60,
+     "path": {"spawn_dist": 14, "retreat_dist": 4, "min_far": 10, "cone_deg": 60, "heal": 0.3, "exhaust_after": 60,
        "exhaust": {"mods": {"speed_pct": -0.10}, "duration": 15}}}
   ]
 }
