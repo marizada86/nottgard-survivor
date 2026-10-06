@@ -1434,7 +1434,7 @@ func _place_fixed_interactions() -> void:
 		var at := Vector2(float(entry.pos[0]), float(entry.pos[1]))
 		if at.distance_to(hero.pos) < 3.0:
 			continue
-		_add_interaction(String(entry.kind), at, false)
+		_add_interaction(String(entry.kind), at)
 		interactions[-1].fixed = true
 		interactions[-1].name = String(entry.get("name", ""))
 
@@ -1656,26 +1656,81 @@ func _use_hourglass() -> bool:
 	events.append({"type": "toast", "text": "A ampulheta adiantou %d s! %d inimigos acumulados chegam de uma vez." % [int(skip), burst]})
 	return true
 
-## BUG-032: baú, portal e demais interativos nunca nascem dentro de bloqueio de cenário ou terreno.
-## `snap = false` mantém a posição autorada (interativos fixos da fase).
-func _add_interaction(kind: String, at: Vector2, snap: bool = true) -> void:
+## BUG-032: baú, portal e demais interativos nunca nascem dentro de bloqueio de cenário, terreno ou bolsa fechada.
+func _add_interaction(kind: String, at: Vector2) -> void:
 	at = at.clamp(Vector2(1, 1), map_size - Vector2(1, 1))
-	if snap:
-		at = _reachable_interaction_spot(at, 0.9 if kind == "portal" else 0.6)
+	at = _reachable_interaction_spot(at, 0.9 if kind == "portal" else 0.6)
 	interactions.append({"kind": kind, "pos": at, "used": false, "born_at": time})
 
-## Posição pedida ou a mais próxima onde o herói cabe (anéis de até 8 tiles, primeiro ao redor do pedido,
-## depois ao redor do herói); sem nenhuma, o próprio herói.
+const REACH_CELL := 0.75
+var _reach_cache := PackedByteArray()
+var _reach_key := ""
+
+## Posição pedida ou a mais próxima onde o herói cabe E consegue chegar a pé a partir de onde está
+## (anéis de até 12 tiles ao redor do pedido, depois ao redor do herói); sem nenhuma, o próprio herói.
 func _reachable_interaction_spot(wanted: Vector2, clearance: float) -> Vector2:
+	var reach := _reach_grid()
 	for center in [wanted, hero.pos]:
-		for ring in 9:
+		for ring in 13:
 			var steps := 1 if ring == 0 else 8 * ring
 			for i in steps:
 				var ang := TAU * float(i) / float(steps)
 				var cand: Vector2 = center + Vector2(cos(ang), sin(ang)) * float(ring)
-				if hero.can_stand(cand, clearance):
+				if hero.can_stand(cand, clearance) and _reach_has(reach, cand):
 					return cand
 	return hero.pos
+
+func _reach_dims() -> Vector2i:
+	return Vector2i(ceili(map_size.x / REACH_CELL), ceili(map_size.y / REACH_CELL))
+
+func _reach_has(reach: PackedByteArray, p: Vector2) -> bool:
+	var d := _reach_dims()
+	var cx := clampi(int(p.x / REACH_CELL), 0, d.x - 1)
+	var cy := clampi(int(p.y / REACH_CELL), 0, d.y - 1)
+	return reach[cy * d.x + cx] == 1
+
+## Células (0,75 tile) que o herói alcança andando a partir da posição atual, respeitando bloqueios e terreno.
+## Reaproveita o resultado enquanto herói (célula), mapa e bloqueios não mudam (a morte do chefe cria vários interativos).
+func _reach_grid() -> PackedByteArray:
+	var d := _reach_dims()
+	var start := Vector2i(clampi(int(hero.pos.x / REACH_CELL), 0, d.x - 1), clampi(int(hero.pos.y / REACH_CELL), 0, d.y - 1))
+	var key := "%s|%s|%d|%s" % [stage_id, str(start), hero.blockers.hash(), str(map_size)]
+	if key == _reach_key:
+		return _reach_cache
+	var grid := PackedByteArray()  # 0 = livre e não visitada, 1 = alcançável, 2 = bloqueada (mesmo critério de Hero.can_stand no centro da célula)
+	grid.resize(d.x * d.y)
+	var r := Hero.RADIUS
+	for cy in d.y:
+		for cx in d.x:
+			var p := (Vector2(cx, cy) + Vector2(0.5, 0.5)) * REACH_CELL
+			if p.x < r or p.y < r or p.x > map_size.x - r or p.y > map_size.y - r or TerrainLayout.is_blocked(hero.terrain_id, p):
+				grid[cy * d.x + cx] = 2
+	for b in hero.blockers:
+		var reach_r: float = b.z + r
+		var x0 := maxi(0, int((b.x - reach_r) / REACH_CELL) - 1)
+		var x1 := mini(d.x - 1, int((b.x + reach_r) / REACH_CELL) + 1)
+		var y0 := maxi(0, int((b.y - reach_r) / REACH_CELL) - 1)
+		var y1 := mini(d.y - 1, int((b.y + reach_r) / REACH_CELL) + 1)
+		for cy in range(y0, y1 + 1):
+			for cx in range(x0, x1 + 1):
+				if (Vector2(cx, cy) + Vector2(0.5, 0.5)).distance_to(Vector2(b.x, b.y) / REACH_CELL) * REACH_CELL < reach_r:
+					grid[cy * d.x + cx] = 2
+	var queue: Array[Vector2i] = [start]
+	grid[start.y * d.x + start.x] = 1
+	var head := 0
+	while head < queue.size():
+		var c: Vector2i = queue[head]
+		head += 1
+		for dx in [-1, 0, 1]:
+			for dy in [-1, 0, 1]:
+				var n := Vector2i(c.x + dx, c.y + dy)
+				if n.x < 0 or n.y < 0 or n.x >= d.x or n.y >= d.y or grid[n.y * d.x + n.x] != 0:
+					continue
+				grid[n.y * d.x + n.x] = 1
+				queue.append(n)
+	_reach_cache = grid
+	_reach_key = key
+	return grid
 
 func _update_interactions(dt: float) -> void:
 	for it in interactions:

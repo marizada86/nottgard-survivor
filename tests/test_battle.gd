@@ -1295,10 +1295,29 @@ func run() -> Array:
 	open_b._add_interaction("chest", Vector2(22, 20))
 	if not open_b.interactions[-1].pos.is_equal_approx(Vector2(22, 20)):
 		out.append("posição livre não deveria ser movida")
-	open_b._add_interaction("poco", Vector2(25, 25), false)
+	# BUG-032: o poço/oficina fixos também saem de dentro de bloqueio
 	open_b.hero.blockers = [Vector3(25.0, 25.0, 3.0)]
-	open_b._add_interaction("poco", Vector2(25, 25), false)
-	if not open_b.interactions[-1].pos.is_equal_approx(Vector2(25, 25)):
-		out.append("interativo fixo (snap = false) deveria manter a posição autorada")
+	open_b._add_interaction("poco", Vector2(25, 25))
+	if not open_b.hero.can_stand(open_b.interactions[-1].pos, 0.6):
+		out.append("interativo fixo caiu dentro de um bloqueio em %s" % str(open_b.interactions[-1].pos))
+
+	# BUG-032: o ponto pedido dentro de uma bolsa cercada (sem caminho até o herói) vai para fora dela
+	var pk := _bat(134)
+	_quiet(pk)
+	pk.hero.pos = Vector2(10, 10)
+	var fence: Array = []
+	for i in 24:
+		var a := TAU * float(i) / 24.0
+		fence.append(Vector3(25.0 + cos(a) * 3.0, 20.0 + sin(a) * 3.0, 0.8))
+	pk.hero.blockers = fence
+	var inside := Vector2(25, 20)
+	if not pk.hero.can_stand(inside, 0.9):
+		out.append("preparo do teste: o centro da bolsa deveria estar livre")
+	pk._add_interaction("portal", inside)
+	var pk_pos: Vector2 = pk.interactions[-1].pos
+	if pk_pos.distance_to(inside) < 3.5:
+		out.append("portal ficou dentro da bolsa fechada, inalcançável: %s" % str(pk_pos))
+	if not pk._reach_has(pk._reach_grid(), pk_pos):
+		out.append("portal fora da bolsa mas sem caminho até o herói: %s" % str(pk_pos))
 
 	return out
