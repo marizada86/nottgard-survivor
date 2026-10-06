@@ -1,9 +1,11 @@
 version: 2
 # Reconciliado por Atena em 2026-10-05: PLAN-056 aceito pelo dono; commits reais registrados.
-active_plan: null
+active_plan: {id: PLAN-066, spec_id: SPEC-133, state_file: '.atena/state/plan-066-passo-pelas-sombras.yaml', mode: per-step, checkpoint: 'S-001 aguardando aprovacao'}
 plan_cursor:
   current: 'PLAN-059 (SPEC-125) commitado e publicado (05264f0, 1392627) em 2026-10-05; o playtest decide Docas, Molor e fases finais.'
   next: 'Retomar PLAN-053 (imagens, Shu: attack_02, death_03, death_04) e/ou abrir spec de balanceamento BAL-018 (precisa de linha de base do bot por heroi). Push da main (1 a 3 commits a frente) exige aprovacao.'
+proposed_plans:
+  - {id: PLAN-065, spec_id: SPEC-132, state_file: '.atena/state/plan-065-lettering-cursor.yaml', status: PROPOSED_PENDING_APPROVAL, approval_mode: per-plan, note: 'Lettering e cursor do mouse (2026-10-06); nao executavel ate o dono aprovar; nao e o active_plan.'}
 suspension:
   suspended_plan_state_file: '.atena/state/plan-053-imagens.yaml'
   note: 'PLAN-053 (imagens, SPEC-121) suspenso; cota de imagens liberou 2026-10-04 10:28 BRT; retoma na Shu (attack_02, death_03, death_04).'
