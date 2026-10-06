@@ -77,6 +77,11 @@ Acrescentado depois, ainda na 0.3.1 (build publicada em 2026-10-05): inimigos **
 8. **Itens:** Raro e Único aparecem bem menos no começo? Você viu a raridade verde **Incomum**? Os preços por raridade fazem sentido?
 9. **Mapa:** menos baús, fontes e altares e menos acontecimentos: faz falta ou ficou melhor?
 10. **Inimigos novos animados** em Shedaklah, Durao, Molor e Feng-tu: algum estranho ou com defeito?
+11. **Bênção opcional:** no altar de bênção aparece "Recusar a bênção". Recusar apaga o altar sem prêmio. (No altar da doação não há recusa, porque o item já foi entregue.)
+12. **Habilidade Q/RMB:** o slot da habilidade mostra o ícone, a recarga (varredura e segundos) e brilha ao ficar pronta? Dá para saber a hora de usar sem olhar texto?
+13. **Ficha C em abas:** abas, grade de ícones e detalhe estão claros? A habilidade aparece com descrição e recarga? Os textos de CA e CAM ajudam?
+14. **Painel do herói (canto superior esquerdo):** no mesmo padrão da ficha C; retrato, PV, XP, atributos, moedas, abates, CA e CAM, e as bênçãos ativas estão legíveis? (Sylas agora aparece como Malafas.)
+15. **Invulnerabilidade depois de levar dano:** caiu de 0,4 s para 0,1 s (SPEC-128). Golpes em sequência ficaram mais perigosos? Ficou injusto ou mais tenso?
 
 Para cada morte, traga: herói, fase, tempo e se foi "difícil mas justo" ou "injusto". Se alguma fase ficou fácil, diga qual.
 
