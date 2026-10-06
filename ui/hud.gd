@@ -195,7 +195,7 @@ func update_stats(b: Battle) -> void:
 			pr += "   [E/oeste] Descer ×%.2f" % b.next_reward_multiplier()
 	prompt_label.text = pr
 	objective_label.text = "
-".join(b.happenings.hud_lines(b) + b.kinds.hud_lines(b))
+".join(b.happenings.hud_lines(b) + b.kinds.hud_lines(b) + Favor.hud_lines(h.boons))
 
 func show_offer(b: Battle) -> void:
 	for c in offer_box.get_children():

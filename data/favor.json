@@ -1,0 +1,17 @@
+{
+  "_doc": "SPEC-129 B-004: Favor divino. Cada bênção aceita de um deus soma 1 de Favor a ele. Favor líquido = bênçãos do deus - bênçãos do rival (mínimo 0); rival nunca bloqueia a oferta, só troca o Favor. 'thresholds' = Favor líquido que libera cada nível; os bônus de nível somam.",
+  "thresholds": [2, 3],
+  "gods": {
+    "Sendrinah": {"tiers": [{"hp": 10}, {"hp": 10, "regen": 0.1}]},
+    "Mask": {"tiers": [{"dodge": 0.04}, {"dmg_flat": 1}]},
+    "Lliira": {"tiers": [{"cd_pct": 0.04}, {"xp_pct": 0.06}]},
+    "Shar": {"tiers": [{"dmg_pct": 0.06}, {"dodge": 0.04}]},
+    "Selûne": {"tiers": [{"xp_pct": 0.06}, {"dodge": 0.04}]},
+    "Ghaunadaur": {"tiers": [{"dmg_pct": 0.06}, {"area_pct": 0.06}]},
+    "Tou Um": {"rival": "Lu Yueh", "tiers": [{"speed_pct": 0.04}, {"regen": 0.1}]},
+    "Lu Yueh": {"rival": "Tou Um", "tiers": [{"dmg_pct": 0.05}, {"area_pct": 0.06}]},
+    "Zuggtmoy": {"rival": "Juiblex", "tiers": [{"hp": 8}, {"ca": 1}]},
+    "Juiblex": {"rival": "Zuggtmoy", "tiers": [{"dr": 1}, {"xp_pct": 0.06}]},
+    "Helion": {"tiers": [{"inteligencia": 1}, {"cam": 1}]}
+  }
+}

@@ -96,6 +96,7 @@ func recalc() -> void:
 				add_mods(m, syn.bonus_per_depth, float(maxi(1, descent_depth)))
 	for b in boons:
 		add_mods(m, b.mods)
+	add_mods(m, Favor.mods(boons))  # SPEC-129 B-004
 	mods = m
 	var old_max := max_hp
 	max_hp = maxf(10.0, float(base_hp) + attr_mod("constituicao") * 2.0 + float(m.get("hp", 0.0)) + level_growth_hp())

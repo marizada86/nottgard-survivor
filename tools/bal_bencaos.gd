@@ -22,16 +22,21 @@ func _init() -> void:
 	TerrainLayout.scale = _map_side / 40.0
 	_weapon = a[7] if a.size() > 7 else ""  # ex.: vela_sagrada:5 (arma extra no nível dado; "none" na bênção mede só a arma)
 	var boon := {}
+	var extra: Array = []  # SPEC-129 B-004: "a+b" força duas ou mais bênçãos (mede o Favor)
 	if boon_id != "none":
-		for b in Data.table("boons").boons:
-			if String(b.id) == boon_id:
-				boon = b
-		if boon.is_empty():
-			printerr("bênção desconhecida: " + boon_id)
-			quit(1)
-			return
+		for one in boon_id.split("+"):
+			var found := {}
+			for b in Data.table("boons").boons:
+				if String(b.id) == one:
+					found = b
+			if found.is_empty():
+				printerr("bênção desconhecida: " + one)
+				quit(1)
+				return
+			extra.append(found)
+		boon = extra[0]
 	for s in seeds:
-		_run(hero, s + 1, dt, max_stages, boon_id, boon)
+		_run(hero, s + 1, dt, max_stages, boon_id, extra)
 	quit()
 
 func _new_stat(b: Battle) -> Dictionary:
@@ -41,7 +46,7 @@ func _emit(boon_id: String, hero_id: String, seed_v: int, st: Dictionary, b: Bat
 	print("CSV;%s;%s;%d;%s;%d;%d;%.0f;%d;%.0f;%s" % [boon_id, hero_id, seed_v, st.id, st.lv0, b.hero.level, b.run_time - float(st.t0),
 		int(float(st.min) * 100.0), st.dmg, st.res])
 
-func _run(hero_id: String, seed_v: int, dt: float, max_stages: int, boon_id: String, boon: Dictionary) -> void:
+func _run(hero_id: String, seed_v: int, dt: float, max_stages: int, boon_id: String, boons: Array) -> void:
 	seed(seed_v * 7919)
 	var b := Battle.new(seed_v, hero_id, "dagruve", {"meta_mods": _meta})
 	b.map_size = Vector2(_map_side, _map_side)
@@ -50,8 +55,9 @@ func _run(hero_id: String, seed_v: int, dt: float, max_stages: int, boon_id: Str
 	if _weapon != "":
 		var wp := _weapon.split(":")
 		b.hero.weapons.append(Weapon.make(wp[0], int(wp[1]) if wp.size() > 1 else 1))
-	if not boon.is_empty():
-		b.hero.boons.append(boon)
+	for bn in boons:
+		b.hero.boons.append(bn)
+	if not boons.is_empty():
 		b.hero.recalc()
 		b.hero.hp = b.hero.max_hp
 	var st := _new_stat(b)

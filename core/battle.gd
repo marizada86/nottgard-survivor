@@ -2079,7 +2079,7 @@ func _open_altar(allow_skip := true) -> void:
 	for b in boons.slice(0, 3):
 		offer.append({"t": "boon", "id": b.id, "name": "%s: %s" % [b.god, b.name], "desc": "%s\n%s" % [b.desc, _boon_effect_desc(String(b.id))], "boon": b,
 			"brief": _boon_brief(b), "badge": {"up": _boon_sign_count(b, true), "down": _boon_sign_count(b, false)},
-			"detail": {"columns": [], "rows": [], "footer": [String(b.desc), _boon_effect_desc(String(b.id))]}})
+			"detail": {"columns": [], "rows": [], "footer": [String(b.desc), _boon_effect_desc(String(b.id)), Favor.offer_hint(hero.boons, b)].filter(func(t): return String(t) != "")}})
 	_decorate_offers()
 	if offer.is_empty():
 		return
