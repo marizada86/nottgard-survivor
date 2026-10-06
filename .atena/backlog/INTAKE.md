@@ -19,7 +19,8 @@ jogador no pacote; quem mandou vem do Discord.
 | T01 | Higor (dono/dev) | Conhece o jogo; joga de Brook. **Não** é de primeira vez | 3 | [EVID-106](../evidence/EVID-106-playtest-publico-t01-higor-2026-09-29.md) |
 | T02 | Hiago ("Hiagola", playtester original) | Conhece o jogo e o dev; jogou EVID-091. **Não** é de primeira vez. Fez só o questionário rápido 002 | 2 | [EVID-107](../evidence/EVID-107-playtest-publico-t02-hiago-2026-09-29.md) |
 | T03 | Daniel ("DNA"), herói Kayron | Jogou 56 min até Molor. Primeiro jogador que não é Higor nem Hiago; **primeira vez** (confirmado pelo dono). Só o questionário rápido 002 | 1 | [EVID-108](../evidence/EVID-108-playtest-publico-t03-dna-2026-09-29.md) |
-| T04 | — | — | — | — |
+| T04 | Manzi ("manzera"), herói Sylas | Relato **de segunda mão**: escrito e interpretado por Higor; sem pacote de `evidencias/`. Sobre a v0.3.0 | 0 | [EVID-163](../evidence/EVID-163-relato-t04-manzi-sylas-2026-10-05.md) |
+| T05 | — | — | — | — |
 
 ## 2. Arquivar o bruto (não editar)
 

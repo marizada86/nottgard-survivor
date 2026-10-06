@@ -1,0 +1,9 @@
+version: 1
+plan:
+  id: PLAN-060
+  spec_id: SPEC-126
+  card: MEC-046
+  title: Bencao opcional no altar
+  status: DONE
+  approval: {mode: per-plan, status: APPROVED, approver: dono, date: "2026-10-05"}
+  steps: {S-001: 'Oferta skip no altar e choose()', S-002: 'UI de oferta (hud/offer_card)', S-003: 'Teste e bot (indice)', S-004: 'EVID, cartao MEC-046, commit local'}

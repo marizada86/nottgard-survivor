@@ -2,7 +2,7 @@ version: 2
 # Reconciliado por Atena em 2026-10-05: PLAN-056 aceito pelo dono; commits reais registrados.
 active_plan: null
 plan_cursor:
-  current: 'Nenhum plano ativo. PLAN-056 (SPEC-122) aceito e fechado em 2026-10-05.'
+  current: 'PLAN-059 (SPEC-125) commitado e publicado (05264f0, 1392627) em 2026-10-05; o playtest decide Docas, Molor e fases finais.'
   next: 'Retomar PLAN-053 (imagens, Shu: attack_02, death_03, death_04) e/ou abrir spec de balanceamento BAL-018 (precisa de linha de base do bot por heroi). Push da main (1 a 3 commits a frente) exige aprovacao.'
 suspension:
   suspended_plan_state_file: '.atena/state/plan-053-imagens.yaml'

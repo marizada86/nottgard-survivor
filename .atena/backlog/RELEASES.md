@@ -63,6 +63,25 @@ Notas curtas para o aviso aos testers (lista "O que testar"):
 
 Commits: `7d2f262`, `35796ba`, `5fc8d04`, `d86fbef`, `eecced9` (mecânicas, um por commit), `2d3cd14` (arte), mais o commit de versão. `0.3.1` em `core/version.gd` e `export_presets.cfg`.
 
+Acrescentado depois, ainda na 0.3.1 (build publicada em 2026-10-05): inimigos **20 % mais rápidos** (SPEC-124, `69ec21c`) e **inimigos mais duros de Docas em diante** (SPEC-125, `05264f0`; [EVID-162](../evidence/EVID-162-b003-inimigos-por-fase-2026-10-05.md)). Dagruve, heróis, chefes e curva de poder não mudaram.
+
+### O que testar (lista curta para os testers, 0.3.1)
+
+1. **Início (Dagruve):** continua fácil, certo ou difícil demais? Em que nível você saiu do mapa (esperado: 8 a 10)?
+2. **Docas:** a luta aperta de verdade? Você chegou a ficar com pouco PV ou morreu?
+3. **Shedaklah, Molor e Durao:** o dano dos inimigos machuca sem ser injusto? Se morreu, anote o mapa e o tempo.
+4. **Feng-tu em diante:** se chegou, está fácil, certo ou injusto? (É onde há menos dados.)
+5. **Chefes:** as lutas ficaram longas demais ou continuam rápidas?
+6. **Inimigos mais rápidos:** o kite (fugir e atacar) ainda funciona? Heróis lentos sofrem?
+7. **Armas iniciais:** Espada Sombria e Raio de Luz atacam mais devagar; o começo ficou lento ou mais tenso?
+8. **Itens:** Raro e Único aparecem bem menos no começo? Você viu a raridade verde **Incomum**? Os preços por raridade fazem sentido?
+9. **Mapa:** menos baús, fontes e altares e menos acontecimentos: faz falta ou ficou melhor?
+10. **Inimigos novos animados** em Shedaklah, Durao, Molor e Feng-tu: algum estranho ou com defeito?
+
+Para cada morte, traga: herói, fase, tempo e se foi "difícil mas justo" ou "injusto". Se alguma fase ficou fácil, diga qual.
+
+**Conhecidos (não precisa reportar):** Zynara, Leoric e Nyrelia aparecem de frente ao andar para cima (BUG-027); heróis patinam ao andar de lado (BUG-028); pixels soltos nos heróis (BUG-029).
+
 ## Versão 0.3.0 — Major-update, publicada (playtest)
 
 Pedido do dono (2026-10-03): os testers anteriores não responderam o questionário, só conversaram o que precisava mudar (a conversa levou ao PLAN-055). Por isso o questionário desta versão é **curto (1 página)** e pensado para **novos testers**; leva também o changelog em PDF e um **guia fácil** em PDF. `0.3.0` em `core/version.gd` e `export_presets.cfg`.

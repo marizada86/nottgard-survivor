@@ -4,7 +4,7 @@ plan:
   spec_id: SPEC-125
   card: BAL-018
   title: Balanceamento de desafio e entretenimento sobre a base 0.3.1
-  status: AWAITING_OWNER_REVIEW
+  status: COMPLETED_PUSHED_AWAITING_PLAYTEST
   approval: {mode: per-plan, status: APPROVED, approver: dono, date: '2026-10-05'}
   batches:
     B-001: {title: Linha de base com RNG semeado (novato e veterano), status: DONE_UNCOMMITTED, evidence: EVID-160}

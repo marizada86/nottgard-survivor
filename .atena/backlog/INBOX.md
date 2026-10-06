@@ -109,3 +109,8 @@ informada). Plano: [PLAN-055](../vault/drafts/PLAN-055-mapas-vivos-segredos-e-di
 | IN-050 | Falta coisa para fazer no mapa; mapa maior com coisas escondidas | MEC-012 (reabre com outro escopo), MEC-039 |
 | IN-051 | Referências à história de Nottgard (Vault) no mapa | MEC-032, MEC-039 |
 | IN-052 | Dono: enjoa depois do 3º ou 4º mapa; eventos exclusivos por mapa | MEC-005 (+1 relato), MEC-038 |
+| IN-053 | Manzi (T04, Sylas): usar habilidade (Q/RMB) sem ícone nem indicação de recarga; hoje só há o texto `[Q/RMB/RB] nome — Ns` | MEC-043, ART-034 |
+| IN-054 | Manzi: tecla C devia mostrar o que a habilidade (Q/RMB) faz | MEC-044 |
+| IN-055 | Manzi: ficha C com informação demais; espaçar, distribuir e agrupar itens, equipamentos e magias em categorias; criar prompts para embelezar | MEC-045, ART-035 |
+| IN-056 | Manzi: bênção sem opção de não escolher nenhuma; balancear e adicionar bênçãos novas e entidades que concedem | MEC-046, MEC-047, BAL-019 |
+| IN-057 | Manzi: v0.3.0 muito fácil (já em andamento) | BAL-001 (+1 relato), BAL-018 |

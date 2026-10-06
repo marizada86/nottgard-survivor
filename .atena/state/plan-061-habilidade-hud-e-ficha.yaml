@@ -1,0 +1,9 @@
+version: 1
+plan:
+  id: PLAN-061
+  spec_id: SPEC-127
+  cards: [MEC-043, MEC-044]
+  title: Habilidade ativa com recarga na HUD e descricao na ficha C
+  status: DONE
+  approval: {mode: per-plan, status: APPROVED, approver: dono, date: "2026-10-05"}
+  steps: {S-001: 'Slot de habilidade na HUD (icone, varredura, segundos, brilho)', S-002: 'Secao de habilidade na ficha C', S-003: 'Teste e capturas (3 herois, 2 resolucoes)', S-004: 'EVID, cartoes MEC-043/044, commit local'}
