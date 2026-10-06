@@ -52,6 +52,7 @@ signal items_closed
 @onready var items_desc_label: RichTextLabel = %ItemsDescLabel
 var _items_portrait_id := ""
 var _active_icon_id := ""
+var _ability_slot: AbilitySlot
 var _stage_icon_id := ""
 var objective_label: Label  # SPEC-118: objetivos dos acontecimentos da fase
 
@@ -72,6 +73,18 @@ func _ready() -> void:
 	vol_slider.value_changed.connect(func(v: float):
 		Game.profile.data.settings.volume = v
 		Game.apply_settings())
+	# SPEC-127: o slot com ícone e recarga substitui o texto e o ícone pequeno da pilha de estatísticas
+	active_label.visible = false
+	active_icon.visible = false
+	_ability_slot = AbilitySlot.new()
+	_ability_slot.name = "AbilitySlot"
+	_ability_slot.set_anchors_preset(Control.PRESET_CENTER_BOTTOM)
+	_ability_slot.offset_left = -AbilitySlot.SIZE.x * 0.5
+	_ability_slot.offset_right = AbilitySlot.SIZE.x * 0.5
+	_ability_slot.offset_top = -172.0
+	_ability_slot.offset_bottom = -172.0 + AbilitySlot.SIZE.y
+	_ability_slot.grow_horizontal = Control.GROW_DIRECTION_BOTH
+	add_child(_ability_slot)
 	boss_panel.visible = false
 	levelup_panel.visible = false
 	pause_panel.visible = false
@@ -108,6 +121,8 @@ var _detail_nodes: Array = []
 var _detail_on := false
 
 func _process(_delta: float) -> void:
+	if _ability_slot != null:
+		_ability_slot.visible = not (items_panel.visible or levelup_panel.visible or pause_panel.visible or result_panel.visible or revive_panel.visible)
 	if not levelup_panel.visible or _detail_nodes.is_empty():
 		return
 	var on := Input.is_action_pressed(Game.ACTION_OFFER_DETAILS)
@@ -129,14 +144,14 @@ func update_stats(b: Battle) -> void:
 		info_label.text += "\nEstige %.1f s · INT efetiva %d" % [b.styx_exposure, h.styx_intelligence()]
 	elif h.styx_forget_t > 0.0:
 		info_label.text += "\nEsquecimento do Estige %.1f s" % h.styx_forget_t
-	active_label.text = b.active_status()
-	active_label.modulate = Color(1.0, 0.9, 0.5) if b.active_cd <= 0.0 else Color(0.65, 0.65, 0.65)
 	var ability: Dictionary = Data.table("abilities").get(h.id, {})
 	var ability_id := String(ability.get("id", ""))
 	if ability_id != _active_icon_id:
 		_active_icon_id = ability_id
 		var ability_path := "res://assets/icons/abilities/%s.png" % ability_id
-		active_icon.texture = load(ability_path) if ResourceLoader.exists(ability_path) else null
+		_ability_slot.set_ability(String(ability.get("name", "")), String(ability.get("desc", "")),
+			load(ability_path) if ResourceLoader.exists(ability_path) else null, "Q/RMB")
+	_ability_slot.set_state(b.active_cd, b.active_cd_max, b.active_guard > 0, get_process_delta_time())
 	var stage_icons := {
 		"dagruve": "dagruve_rituals", "shedaklah": "shedaklah_puddles", "molor": "molor_bubbles",
 		"durao": "", "feng_tu": "feng_tu_strikes", "shendilavri": "shendilavri_illusions",
@@ -450,6 +465,13 @@ func show_items_panel(b: Battle) -> void:
 			owned_w += 1
 	items_slots_label.text = "Feitiços/armas %d/%d    Equipamento %d/%d" % [owned_w, h.weapon_slots(), h.items.size(), Items.SLOTS.size()]
 	var lines: Array = []
+	# SPEC-127 (MEC-044): habilidade ativa (Q/RMB) no topo da ficha
+	if not b.active_def.is_empty():
+		var ab_dmg := b.weapon_damage_text(b.active_def)
+		lines.append("[b]★ Habilidade [Q/RMB]: %s[/b]\n%s\n[color=#e6c76e]Recarga %.1f s%s[/color]%s" % [
+			String(b.active_def.get("name", "")), String(b.active_def.get("desc", "")), b.active_cooldown_effective(),
+			(" (base %.0f s)" % float(b.active_def.get("cooldown", 0.0))) if not is_equal_approx(b.active_cooldown_effective(), float(b.active_def.get("cooldown", 0.0))) else "",
+			("\n[color=#e6c76e]%s[/color]" % ab_dmg) if ab_dmg != "" else ""])
 	for w in h.weapons:
 		var tag := "  [color=#99cc99](item)[/color]" if w.granted else ""
 		var status := ""

@@ -132,6 +132,7 @@ var speed_mult := 1.0          # MEC-010: simulação ×1,5 ou ×2, só em fase 
 var cleared_stages: Array = []  # ids das fases que o perfil já venceu (preenchido por ui/run.gd)
 var active_def: Dictionary = {}
 var active_cd := 0.0
+var active_cd_max := 1.0   # SPEC-127: recarga efetiva da última vez que a habilidade foi usada (varredura da HUD)
 var active_buff_t := 0.0
 var time_slow_t := 0.0
 var projectile_slow_t := 0.0
@@ -355,6 +356,10 @@ func _spawn_qa_boss() -> void:
 func toggle_aim() -> void:
 	aim = Aim.MOUSE if aim == Aim.AUTO else Aim.AUTO
 
+## SPEC-127: recarga efetiva da habilidade ativa (mesma conta de use_active), em segundos.
+func active_cooldown_effective() -> float:
+	return maxf(3.0, float(active_def.get("cooldown", 0.0)) * (1.0 - hero.m("cd_pct") * 0.5))
+
 func active_status() -> String:
 	if active_guard > 0:
 		return "[Q/RMB/RB] %s — GUARDA ATIVA" % active_def.name
@@ -471,7 +476,8 @@ func use_active(dir: Vector2 = Vector2.ZERO) -> bool:
 			used = false
 	if not used:
 		return false
-	active_cd = maxf(3.0, float(p.cooldown) * (1.0 - hero.m("cd_pct") * 0.5))
+	active_cd = active_cooldown_effective()
+	active_cd_max = active_cd
 	if _has_item_effect("projectile_slow_on_active"):
 		projectile_slow_t = 4.0
 	events.append({"type": "active", "pos": hero.pos, "radius": radius, "dtype": p.get("dtype", "radiante"), "name": p.name, "hero_id": hero.id, "ability_id": p.id})
