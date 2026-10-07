@@ -10,7 +10,6 @@ const GOLD := Color(1.0, 0.85, 0.4)
 
 var entry: Dictionary = {}
 var _icon: Texture2D = null
-var _frame: StyleBoxTexture
 var _t := 0.0
 
 func setup(e: Dictionary) -> void:
@@ -21,8 +20,6 @@ func setup(e: Dictionary) -> void:
 	mouse_filter = Control.MOUSE_FILTER_STOP
 	var path := String(e.get("icon", ""))
 	_icon = load(path) if path != "" and ResourceLoader.exists(path) else null
-	var border: Color = entry.get("border", Color(0.5, 0.5, 0.55))
-	_frame = SheetArt.frame(SheetArt.SLOT, 10, 0, border.lightened(0.2))
 	focus_entered.connect(func():
 		chosen.emit(self)
 		queue_redraw())
@@ -44,19 +41,21 @@ func _draw() -> void:
 	var rect := Rect2(Vector2.ZERO, SIZE)
 	var font := ThemeDB.fallback_font
 	if is_empty_slot():
-		draw_texture_rect(SheetArt.EMPTY_SLOT, rect, false)
+		draw_rect(rect, Color(0.07, 0.065, 0.085, 0.9))
+		_dashed_frame(rect, Color(0.38, 0.36, 0.42))
 		var cap := String(entry.get("caption", ""))
 		if cap != "":
 			draw_string(font, Vector2(0, SIZE.y * 0.56), cap, HORIZONTAL_ALIGNMENT_CENTER, SIZE.x, 13, Color(0.5, 0.48, 0.55))
 	else:
+		draw_rect(rect, Color(0.12, 0.105, 0.14, 1.0))
 		var inner := rect.grow(-7.0)
-		draw_rect(inner, Color(0.12, 0.105, 0.14, 1.0))
 		if _icon != null:
 			draw_texture_rect(_icon, inner, false)
 		else:
 			var letter := String(entry.get("letter", "?"))
 			draw_string(font, Vector2(0, SIZE.y * 0.68), letter, HORIZONTAL_ALIGNMENT_CENTER, SIZE.x, 32, Color(0.9, 0.88, 0.8))
-		draw_style_box(_frame, rect)
+		var border: Color = entry.get("border", Color(0.5, 0.5, 0.55))
+		draw_rect(rect, border, false, 2.0)
 		var badge := String(entry.get("badge", ""))
 		if badge != "":
 			var is_max := bool(entry.get("badge_max", false))
@@ -74,3 +73,18 @@ func _draw() -> void:
 	if has_focus():
 		draw_rect(rect.grow(2.0), GOLD, false, 3.0)
 
+func _dashed_frame(rect: Rect2, color: Color) -> void:
+	var dash := 6.0
+	var gap := 5.0
+	var x := rect.position.x
+	while x < rect.end.x:
+		var x2 := minf(x + dash, rect.end.x)
+		draw_line(Vector2(x, rect.position.y + 1.0), Vector2(x2, rect.position.y + 1.0), color, 1.5)
+		draw_line(Vector2(x, rect.end.y - 1.0), Vector2(x2, rect.end.y - 1.0), color, 1.5)
+		x += dash + gap
+	var y := rect.position.y
+	while y < rect.end.y:
+		var y2 := minf(y + dash, rect.end.y)
+		draw_line(Vector2(rect.position.x + 1.0, y), Vector2(rect.position.x + 1.0, y2), color, 1.5)
+		draw_line(Vector2(rect.end.x - 1.0, y), Vector2(rect.end.x - 1.0, y2), color, 1.5)
+		y += dash + gap

@@ -1,0 +1,318 @@
+{
+  "plan": "PLAN-070",
+  "tool": "built-in imagegen",
+  "image_pixels_modified": false,
+  "official_admission": false,
+  "runtime_validation": "NOT_PERFORMED",
+  "assets": [
+    {
+      "id": "A01",
+      "file": ".atena/generated/art-candidates/ficha-c/ficha_moldura_painel_v02.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "center_alpha": 0,
+      "alpha_bounds": [
+        29,
+        26,
+        1643,
+        911
+      ],
+      "sha256": "3c4a5bf3a8dbad614f7808a2f58b4868cd99ffa8b0c15424823060f6fe6eb5e6",
+      "human_approval": "APPROVED_WITH_DISCLOSED_SIZE_VARIANCE",
+      "solid_alpha_bounds": [
+        32,
+        31,
+        1640,
+        907
+      ],
+      "solid_pixels_touch_canvas_edge": false
+    },
+    {
+      "id": "A02",
+      "file": ".atena/generated/art-candidates/ficha-c/ficha_moldura_detalhe_v01.png",
+      "size": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "center_alpha": 0,
+      "alpha_bounds": [
+        33,
+        129,
+        2138,
+        690
+      ],
+      "sha256": "2940a3793a9d05c744c8cf3a9f30fecb4a375168ba4f5a01f8d39793cfe76449",
+      "human_approval": "APPROVED_BY_OWNER",
+      "solid_alpha_bounds": [
+        37,
+        133,
+        2135,
+        588
+      ],
+      "solid_pixels_touch_canvas_edge": false
+    },
+    {
+      "id": "A03",
+      "file": ".atena/generated/art-candidates/ficha-c/ficha_slot_moldura_v01.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "center_alpha": 0,
+      "alpha_bounds": [
+        45,
+        39,
+        1209,
+        1222
+      ],
+      "sha256": "9de9f5d7eeead846c189ae3c43a1770eaac12e17f2005bf56dd1a01f5870f841",
+      "human_approval": "APPROVED_BY_OWNER",
+      "solid_alpha_bounds": [
+        48,
+        49,
+        1207,
+        1202
+      ],
+      "solid_pixels_touch_canvas_edge": false
+    },
+    {
+      "id": "A04",
+      "file": ".atena/generated/art-candidates/ficha-c/ficha_slot_vazio_v01.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "center_alpha": 253,
+      "alpha_bounds": [
+        0,
+        0,
+        1215,
+        1220
+      ],
+      "sha256": "c1cc6503fb7b745f0f9e861950371ace1114abe2e3e2572eedb14c7942dea33a",
+      "human_approval": "APPROVED_BY_OWNER",
+      "solid_alpha_bounds": [
+        85,
+        84,
+        1169,
+        1169
+      ],
+      "solid_pixels_touch_canvas_edge": false
+    },
+    {
+      "id": "A05",
+      "file": ".atena/generated/art-candidates/ficha-c/ficha_aba_moldura_v01.png",
+      "size": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "center_alpha": 0,
+      "alpha_bounds": [
+        78,
+        117,
+        2166,
+        668
+      ],
+      "sha256": "8c7f97eae98dd396a9f3009d8d6df61fac7a295337093808b815899d193fa0fb",
+      "human_approval": "APPROVED_BY_OWNER",
+      "solid_alpha_bounds": [
+        81,
+        219,
+        2091,
+        506
+      ],
+      "solid_pixels_touch_canvas_edge": false
+    },
+    {
+      "id": "A06",
+      "file": ".atena/generated/art-candidates/ficha-c/ficha_aba_armas_v01.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "center_alpha": 253,
+      "alpha_bounds": [
+        97,
+        53,
+        1150,
+        1150
+      ],
+      "sha256": "42ab221aef531aee4b83dd6c052581eb6961e8fc4070274f2a04d45726c70d2e",
+      "human_approval": "APPROVED_BY_OWNER",
+      "solid_alpha_bounds": [
+        250,
+        220,
+        1020,
+        995
+      ],
+      "solid_pixels_touch_canvas_edge": false
+    },
+    {
+      "id": "A07",
+      "file": ".atena/generated/art-candidates/ficha-c/ficha_aba_equipamento_v01.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "center_alpha": 253,
+      "alpha_bounds": [
+        0,
+        50,
+        1238,
+        1174
+      ],
+      "sha256": "6ede111844dc276408dfa5b35cf6bfa066a142c378d3000cec597bdfcdc3e533",
+      "human_approval": "APPROVED_BY_OWNER",
+      "solid_alpha_bounds": [
+        107,
+        202,
+        1148,
+        1079
+      ],
+      "solid_pixels_touch_canvas_edge": false
+    },
+    {
+      "id": "A08",
+      "file": ".atena/generated/art-candidates/ficha-c/ficha_aba_passivas_v01.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "center_alpha": 253,
+      "alpha_bounds": [
+        97,
+        53,
+        1059,
+        1182
+      ],
+      "sha256": "c8a4638a0d43143fd4f8c8bc8d0c5260ad6a4e6a3e201f44958b72f60750c766",
+      "human_approval": "APPROVED_BY_OWNER",
+      "solid_alpha_bounds": [
+        267,
+        247,
+        988,
+        1008
+      ],
+      "solid_pixels_touch_canvas_edge": false
+    },
+    {
+      "id": "A09",
+      "file": ".atena/generated/art-candidates/ficha-c/ficha_aba_sinergias_v01.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "center_alpha": 253,
+      "alpha_bounds": [
+        41,
+        50,
+        1210,
+        1150
+      ],
+      "sha256": "2007c6eff346b7c67695ca110d31ca49fbc35b2c68f308c38cf1c7fa25352d09",
+      "human_approval": "APPROVED_BY_OWNER",
+      "solid_alpha_bounds": [
+        73,
+        248,
+        1181,
+        1027
+      ],
+      "solid_pixels_touch_canvas_edge": false
+    },
+    {
+      "id": "A10",
+      "file": ".atena/generated/art-candidates/ficha-c/ficha_fundo_textura_v03.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "alpha_range": [
+        255,
+        255
+      ],
+      "center_alpha": 255,
+      "alpha_bounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "sha256": "52d594e905d1c98a96f61fde5300310c5980db70bb8dd0d8c1e3da5abd36e063",
+      "human_approval": "APPROVED_BY_OWNER",
+      "solid_alpha_bounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "solid_pixels_touch_canvas_edge": true,
+      "luminance_range_0_255": [
+        23.008,
+        34.723
+      ],
+      "luminance_range_percent_of_255": 4.594,
+      "horizontal_edge_mean_rgb_delta": 1.333,
+      "vertical_edge_mean_rgb_delta": 1.38,
+      "mean_neighbor_rgb_delta": 0.817
+    }
+  ],
+  "validation": {
+    "file_count": 10,
+    "all_files_decoded": true,
+    "rgba_candidates_have_transparent_pixels": true,
+    "texture_fully_opaque": true,
+    "texture_luminance_range_within_8_percent": true,
+    "normalized_game_dimensions": "DEFERRED",
+    "nine_slice_runtime_validation": "DEFERRED",
+    "human_review": "All ten candidates visually approved by owner; official admission pending",
+    "no_solid_shape_clipped_at_canvas_edge": true
+  }
+}

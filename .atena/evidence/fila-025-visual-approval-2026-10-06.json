@@ -1,0 +1,94 @@
+{
+  "id": "ASSET-APPROVAL-REGISTER-021",
+  "date_brt": "2026-10-06",
+  "plan": "PLAN-070",
+  "spec": "SPEC-137",
+  "request_classification": "IN_PLAN",
+  "approver": "dono",
+  "authorization_verbatim": "aprovados",
+  "scope": "Aprovacao visual das dez candidatas apresentadas da FILA-025",
+  "status": "APPROVED_VISUAL_CANDIDATES",
+  "assets": [
+    {
+      "id": "A01",
+      "name": "ficha_moldura_painel",
+      "version": "v02",
+      "path": ".atena/generated/art-candidates/ficha-c/ficha_moldura_painel_v02.png",
+      "sha256": "3c4a5bf3a8dbad614f7808a2f58b4868cd99ffa8b0c15424823060f6fe6eb5e6"
+    },
+    {
+      "id": "A03",
+      "name": "ficha_slot_moldura",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/ficha-c/ficha_slot_moldura_v01.png",
+      "sha256": "9de9f5d7eeead846c189ae3c43a1770eaac12e17f2005bf56dd1a01f5870f841"
+    },
+    {
+      "id": "A04",
+      "name": "ficha_slot_vazio",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/ficha-c/ficha_slot_vazio_v01.png",
+      "sha256": "c1cc6503fb7b745f0f9e861950371ace1114abe2e3e2572eedb14c7942dea33a"
+    },
+    {
+      "id": "A02",
+      "name": "ficha_moldura_detalhe",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/ficha-c/ficha_moldura_detalhe_v01.png",
+      "sha256": "2940a3793a9d05c744c8cf3a9f30fecb4a375168ba4f5a01f8d39793cfe76449"
+    },
+    {
+      "id": "A05",
+      "name": "ficha_aba_moldura",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/ficha-c/ficha_aba_moldura_v01.png",
+      "sha256": "8c7f97eae98dd396a9f3009d8d6df61fac7a295337093808b815899d193fa0fb"
+    },
+    {
+      "id": "A06",
+      "name": "ficha_aba_armas",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/ficha-c/ficha_aba_armas_v01.png",
+      "sha256": "42ab221aef531aee4b83dd6c052581eb6961e8fc4070274f2a04d45726c70d2e"
+    },
+    {
+      "id": "A07",
+      "name": "ficha_aba_equipamento",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/ficha-c/ficha_aba_equipamento_v01.png",
+      "sha256": "6ede111844dc276408dfa5b35cf6bfa066a142c378d3000cec597bdfcdc3e533"
+    },
+    {
+      "id": "A08",
+      "name": "ficha_aba_passivas",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/ficha-c/ficha_aba_passivas_v01.png",
+      "sha256": "c8a4638a0d43143fd4f8c8bc8d0c5260ad6a4e6a3e201f44958b72f60750c766"
+    },
+    {
+      "id": "A09",
+      "name": "ficha_aba_sinergias",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/ficha-c/ficha_aba_sinergias_v01.png",
+      "sha256": "2007c6eff346b7c67695ca110d31ca49fbc35b2c68f308c38cf1c7fa25352d09"
+    },
+    {
+      "id": "A10",
+      "name": "ficha_fundo_textura",
+      "version": "v03",
+      "path": ".atena/generated/art-candidates/ficha-c/ficha_fundo_textura_v03.png",
+      "sha256": "52d594e905d1c98a96f61fde5300310c5980db70bb8dd0d8c1e3da5abd36e063"
+    }
+  ],
+  "a01_size_variance_previously_accepted_px": 1.39,
+  "runtime_validation": "NOT_PERFORMED",
+  "official_admission": false,
+  "integration_authorized_by_this_message": false,
+  "pending": [
+    "normalizacao_final",
+    "validacao_nine_slice",
+    "teste_em_escala_real_no_jogo",
+    "spec_e_aprovacao_de_integracao"
+  ],
+  "generation_evidence": ".atena/evidence/fila-025-complete-generation-2026-10-06.json"
+}

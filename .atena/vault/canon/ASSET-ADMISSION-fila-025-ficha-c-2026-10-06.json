@@ -1,0 +1,251 @@
+{
+  "id": "ASSET-ADMISSION-FILA-025",
+  "status": "INTEGRATED_LOCALLY_VALIDATED",
+  "authorization_verbatim": "vamos lá",
+  "source_approval": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-021-ficha-c-2026-10-06.json",
+  "evidence": ".atena/evidence/fila-025-integracao-2026-10-06.json",
+  "assets": [
+    {
+      "id": "A01",
+      "source": ".atena/generated/art-candidates/ficha-c/ficha_moldura_painel_v02.png",
+      "source_sha256": "3c4a5bf3a8dbad614f7808a2f58b4868cd99ffa8b0c15424823060f6fe6eb5e6",
+      "output": "assets/ui/ficha/ficha_moldura_painel.png",
+      "output_sha256": "1576d862265e400e2480d0b3b071850101f60317589b0edd2953d4446e30a72c",
+      "size": [
+        1280,
+        720
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "crop": [
+        29,
+        26,
+        1614,
+        885
+      ],
+      "interpolation": "nearest",
+      "texture_contrast_percent": null
+    },
+    {
+      "id": "A03",
+      "source": ".atena/generated/art-candidates/ficha-c/ficha_slot_moldura_v01.png",
+      "source_sha256": "9de9f5d7eeead846c189ae3c43a1770eaac12e17f2005bf56dd1a01f5870f841",
+      "output": "assets/ui/ficha/ficha_slot_moldura.png",
+      "output_sha256": "9fcc01f98a6d2390fea17d932763a53230941d6ed35c533ff624f4c310a98205",
+      "size": [
+        76,
+        76
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "crop": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "interpolation": "nearest",
+      "texture_contrast_percent": null
+    },
+    {
+      "id": "A04",
+      "source": ".atena/generated/art-candidates/ficha-c/ficha_slot_vazio_v01.png",
+      "source_sha256": "c1cc6503fb7b745f0f9e861950371ace1114abe2e3e2572eedb14c7942dea33a",
+      "output": "assets/ui/ficha/ficha_slot_vazio.png",
+      "output_sha256": "d33086247c0dcf1bffc3849fe42a38273b5f62cbb9d7688dbb744c27636eb822",
+      "size": [
+        76,
+        76
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "crop": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "interpolation": "nearest",
+      "texture_contrast_percent": null
+    },
+    {
+      "id": "A02",
+      "source": ".atena/generated/art-candidates/ficha-c/ficha_moldura_detalhe_v01.png",
+      "source_sha256": "2940a3793a9d05c744c8cf3a9f30fecb4a375168ba4f5a01f8d39793cfe76449",
+      "output": "assets/ui/ficha/ficha_moldura_detalhe.png",
+      "output_sha256": "6930ece272362ada2a364d45f829650b2c2e4d39fcb69fc9c48afd5c8ee7a902",
+      "size": [
+        512,
+        128
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "crop": [
+        33,
+        129,
+        2105,
+        463
+      ],
+      "interpolation": "nearest",
+      "texture_contrast_percent": null
+    },
+    {
+      "id": "A05",
+      "source": ".atena/generated/art-candidates/ficha-c/ficha_aba_moldura_v01.png",
+      "source_sha256": "8c7f97eae98dd396a9f3009d8d6df61fac7a295337093808b815899d193fa0fb",
+      "output": "assets/ui/ficha/ficha_aba_moldura.png",
+      "output_sha256": "3a17767a5e025f97d09aeb4fe501a947fcb1c10924df94e958d418d90d812494",
+      "size": [
+        192,
+        40
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "crop": [
+        77,
+        215,
+        2018,
+        295
+      ],
+      "interpolation": "nearest",
+      "texture_contrast_percent": null
+    },
+    {
+      "id": "A06",
+      "source": ".atena/generated/art-candidates/ficha-c/ficha_aba_armas_v01.png",
+      "source_sha256": "42ab221aef531aee4b83dd6c052581eb6961e8fc4070274f2a04d45726c70d2e",
+      "output": "assets/ui/ficha/ficha_aba_armas.png",
+      "output_sha256": "733f0a26f4880fd58636fe2517a68af717f87c6610e000a214285d395427f0d2",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "crop": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "interpolation": "nearest",
+      "texture_contrast_percent": null
+    },
+    {
+      "id": "A07",
+      "source": ".atena/generated/art-candidates/ficha-c/ficha_aba_equipamento_v01.png",
+      "source_sha256": "6ede111844dc276408dfa5b35cf6bfa066a142c378d3000cec597bdfcdc3e533",
+      "output": "assets/ui/ficha/ficha_aba_equipamento.png",
+      "output_sha256": "26413ac70422492d1713e0f97cb1dcff356d4586826e5ea10921fa081ed8f0f7",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "crop": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "interpolation": "nearest",
+      "texture_contrast_percent": null
+    },
+    {
+      "id": "A08",
+      "source": ".atena/generated/art-candidates/ficha-c/ficha_aba_passivas_v01.png",
+      "source_sha256": "c8a4638a0d43143fd4f8c8bc8d0c5260ad6a4e6a3e201f44958b72f60750c766",
+      "output": "assets/ui/ficha/ficha_aba_passivas.png",
+      "output_sha256": "9561f822964088c8684dcbb90718eb43c774aac5816691d3a6d721942731c59f",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "crop": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "interpolation": "nearest",
+      "texture_contrast_percent": null
+    },
+    {
+      "id": "A09",
+      "source": ".atena/generated/art-candidates/ficha-c/ficha_aba_sinergias_v01.png",
+      "source_sha256": "2007c6eff346b7c67695ca110d31ca49fbc35b2c68f308c38cf1c7fa25352d09",
+      "output": "assets/ui/ficha/ficha_aba_sinergias.png",
+      "output_sha256": "466d9b4b1bbe337c559ba7b7592a8282dde76cb382ab81b2173da1b458d6643b",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "crop": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "interpolation": "nearest",
+      "texture_contrast_percent": null
+    },
+    {
+      "id": "A10",
+      "source": ".atena/generated/art-candidates/ficha-c/ficha_fundo_textura_v03.png",
+      "source_sha256": "52d594e905d1c98a96f61fde5300310c5980db70bb8dd0d8c1e3da5abd36e063",
+      "output": "assets/ui/ficha/ficha_fundo_textura.png",
+      "output_sha256": "a181a0544c300c92a523d25cbd15fa5d3585c9191bafd9cba2dcc6804a1d44d1",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGB",
+      "alpha_range": [
+        255,
+        255
+      ],
+      "crop": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "interpolation": "nearest",
+      "texture_contrast_percent": 4.146980392156861
+    }
+  ],
+  "official_admission": true,
+  "human_visual_approval": "Candidatas aprovadas anteriormente; interface integrada apresentada apos validacao local."
+}

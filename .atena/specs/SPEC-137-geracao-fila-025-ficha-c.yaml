@@ -1,0 +1,63 @@
+id: SPEC-137
+title: Geracao das dez imagens da ficha C
+created: '2026-10-06'
+status: COMPLETED_GENERATION_VISUALLY_APPROVED
+visual_approval_evidence: .atena/evidence/fila-025-visual-approval-2026-10-06.json
+completion_evidence: .atena/evidence/fila-025-complete-generation-2026-10-06.json
+approval: {approver: dono, date: '2026-10-06', basis: 'atena autorizado, de acordo com suas recomendacoes'}
+origin: guided-add
+implementation_preceded_spec: false
+plan: .atena/state/plan-070-fila-025-ficha-c.yaml
+request_classification: PLAN_DEVIATION
+intent_source: Pedido do dono neste chat para gerar as dez imagens da FILA-025.
+scope:
+  - Gerar A01, A03, A04, A02, A05, A06, A07, A08, A09 e A10 com imagegen integrado, uma peca por chamada.
+  - Preservar matrizes versionadas e os prompts exatos em .atena/generated/art-candidates/ficha-c/.
+  - Inspecionar arte, alfa, proporcoes, margens e legibilidade; apresentar A01 ao dono antes de gerar as demais.
+non_goals: [integracao_oficial, mudancas_de_codigo_do_jogo, mudancas_de_layout, alteracao_de_intencao_canonica, merge, commit, push, publicacao]
+inputs:
+  prompts: .atena/generated/ART-PROMPTS-057-ficha-c-molduras-e-icones.md
+  queue: .atena/generated/CHATGPT-FILA-025-ficha-c-molduras-e-icones.md
+  references:
+    - assets/ui/evolucao_painel_moldura.png
+    - assets/icons/ui/ca.png
+    - assets/icons/passives/inteligencia.png
+acceptance:
+  - Dez candidatas distintas, com identificacao A01-A10, sem substituir assets oficiais.
+  - A01 fina e discreta, em 16:9, bordas laterais/base ate 36 px na escala 1280x720; ornamentos somente nos cantos e centro superior.
+  - A02/A05 com bordas uniformes para recorte em nove partes; A03 neutra para tingimento; A04 com contraste baixo.
+  - A06-A09 distinguiveis a 28-32 px; sem texto, personagens ou ornamento atras de texto.
+  - A10 opaca e repetivel, quase preta, sem vinheta nem ponto focal.
+  - Alfa real solicitado ao gerador para A01-A09, em lugar do chroma-key historico; preservar alfa original.
+  - A01 deve receber aprovacao visual humana antes das outras nove; aprovacoes nao podem ser inferidas.
+  - Avaliacao no jogo em escala real e admissao oficial permanecem pendentes para futura spec de integracao.
+impacts:
+  local: Novos candidatos e registros derivados; plano de controles retorna ao mesmo checkpoint apos este trabalho.
+  remote: Apenas prompts de arte e as referencias visuais listadas serao enviados ao imagegen; nenhum codigo, credencial ou registro privado.
+  quota: Dez geracoes iniciais; no maximo tres candidatas por peca, com correcao objetiva; parar se houver limite ou erro persistente.
+gaps:
+  blocking: []
+  resolvable:
+    - id: G-001
+      decision: Usar transparencia nativa conforme skill imagegen; manter A10 opaca.
+    - id: G-002
+      decision: Dimensoes geradas podem diferir das finais; preservar matrizes e registrar dimensoes reais. Normalizacao e integracao nao sao aceite desta geracao.
+  deferred:
+    - Integracao oficial, validacao em runtime e normalizacao final exigem escopo posterior.
+    - A referencia SPEC-130 citada nos prompts nao existe em .atena/specs nesta copia; prompts completos e arte de referencia bastam para gerar candidatos, sem declarar validado o layout.
+plan_of_flight:
+  - B-001/S-001: Registrar suspensao recuperavel do PLAN-068 apos aprovacao de fazer agora.
+  - B-001/S-002: Gerar, guardar e inspecionar A01; apresentar checkpoint visual ao dono.
+  - B-002/S-003: Apos aceite de A01, gerar A03, A04, A02 e A05.
+  - B-003/S-004: Gerar A06, A07, A08 e A09 com referencias de icones.
+  - B-004/S-005: Gerar A10, conferir conjunto, registrar evidencia e restaurar checkpoint anterior.
+validation:
+  - Conferir existencia dos inputs e links do plano antes da aprovacao.
+  - Inspecionar cada imagem e registrar resultados, arquivos, dimensoes e versoes.
+  - Comparar o conjunto aos criterios de arte; nao declarar pronto para runtime sem validacao real.
+evidence:
+  preparation: .atena/evidence/fila-025-preparation-2026-10-06.json
+  generation: A produzir apos aprovacao; nenhuma imagem nova gerada nesta preparacao.
+reconciliation:
+  - Marcar somente geracao efetiva na FILA-025; nao marcar aceite visual ou admissao sem evidencia.
+  - Manter registros de retorno e pedidos pendentes; pull divergente permanece fora deste escopo.

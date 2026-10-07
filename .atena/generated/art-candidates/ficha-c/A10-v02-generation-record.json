@@ -1,0 +1,8 @@
+{
+  "id": "A10",
+  "name": "ficha_fundo_textura",
+  "version": "v02",
+  "source": "C:\\Users\\gui-m\\.codex\\generated_images\\01a113f6-0b0f-7450-8b48-6fbbdaf8e26d\\exec-d1c791da-7022-4ec8-aed7-078fd94486d3.png",
+  "path": ".atena/generated/art-candidates/ficha-c/ficha_fundo_textura_v02.png",
+  "prompt": "Edit this stone UI texture into a MUCH QUIETER almost uniform NEAR-BLACK blue-tinted seamless tile. The original has far too much high-contrast noise, cracks and bright speckles. Reduce contrast dramatically: every visible pixel should be within RGB roughly (18,21,26) to (27,30,35), no black cracks, no bright pixels, no spot lighter than #1B1E23. Center color roughly #171B22. Fine exceptionally subtle tiny pixel-art grain ONLY, all grain variation at most 2-3 RGB levels. Any hairline cracks should be almost invisible, only 1-2 RGB levels darker than surrounding stone; no large polygon slab outlines. No directional gradient, no vignette, no motif, no focal feature, no text, no symbols, no border. Image is opaque RGB edge-to-edge. Square 1024x1024 or nearest square. Perfect horizontal AND vertical tiling: left-right edges match, top-bottom edges match, outermost row/column can have the same near-black #171B22 color with a smooth invisible transition to the near-flat inner grain. This is a subdued UI background behind 14px white and old-gold text, not a detailed dungeon-floor scene. Target max-minus-min luminance under 8 percent of the 0-255 scale, ideally under 5 percent. No transparency."
+}

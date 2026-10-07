@@ -14,7 +14,7 @@
 
 ### PRIORIDADE ALTA — tiras de heróis (2026-10-02)
 
-**Fila de imagens, ordem de 2026-10-06:** (1) PLAN-053, tiras dos heróis (Shu); (2) [CHATGPT-FILA-025](../generated/CHATGPT-FILA-025-ficha-c-molduras-e-icones.md), ficha C, 10 peças (ART-035; pode servir também à SPEC-131); (3) FILA-021 E e F; (4) FILA-022 e FILA-023 (dependem do piloto da FILA-020).
+**Fila de imagens, ordem de 2026-10-06:** (1) PLAN-053, tiras dos heróis; (2) FILA-021 E e F; (3) FILA-022 e FILA-023 (dependem do piloto da FILA-020). [CHATGPT-FILA-025](../generated/CHATGPT-FILA-025-ficha-c-molduras-e-icones.md) concluída: dez peças da ficha C normalizadas e integradas localmente (ART-035 / PLAN-072).
 
 Fila [CHATGPT-FILA-024](../generated/CHATGPT-FILA-024-regerar-tiras-dos-herois.md) / [ART-PROMPTS-055](../generated/ART-PROMPTS-055-regerar-caminhadas-e-acoes-dos-herois.md): regerar tiras com defeito de dimensão (BUG-025). Passa na frente das demais.
 
@@ -73,7 +73,7 @@ As tabelas históricas abaixo preservam a prioridade anterior; esta seção regi
 | ART-032 | sprite + ícone | **NPCs e pontos dos acontecimentos (SPEC-118)**: João Barbosa, desertor, vítima enfeitiçada, Irmã Radiante (Nyxara/Vaelis), Graz'zt (aliado), Reaper barqueiro, Vhaerith na jaula, mercador de Rivenheart; pontos: trono de Zuggtmoy, arco de pedra, massa de Thullgrime, Estrela do Norte, Coração de Limo, esporo e limo; arte própria da Manifestação de Juiblex (hoje usa a do receptáculo). Hoje: figura e losango provisórios | por bioma | MEC-038 (2026-10-03) | aberto |
 | ART-033 | animação | **Costas ao andar para cima** (move_n e move_ne) de Zynara, Leoric e Nyrelia: 6 tiras novas, costas inventadas a partir da frente (decisão de design do dono) | heróis jogáveis | BUG-027 (2026-10-04); [ART-PROMPTS-056](../generated/ART-PROMPTS-056-costas-ao-andar-para-cima-zynara-leoric-nyrelia.md) | prompts prontos; aguarda gerador |
 | ART-034 | ícone/UI | **Ícones das habilidades ativas (Q/RMB)** dos 10 heróis, com variante de recarga (para MEC-043) | habilidades dos heróis | Manzi (T04), IN-053 | **Provável dispensado:** os 10 ícones já existem em `assets/icons/abilities/` (EVID-163); só gerar arte nova se o dono achar os ícones fracos |
-| ART-035 | UI/prompts | **Prompts e arte para embelezar a ficha `C`** (molduras, categorias, ícones de seção; MEC-045) | ficha de personagem | Manzi (T04), IN-055; pedido explícito de criar prompts | **prompts escritos 2026-10-06** em [[ART-PROMPTS-057-ficha-c-molduras-e-icones]] (10 peças, nada gerado; integração no jogo precisa de spec) · base: [[SPEC-130-ficha-c-em-abas-grade-e-detalhe]] |
+| ART-035 | UI/prompts | **Prompts e arte para embelezar a ficha `C`** (molduras, categorias, ícones de seção; MEC-045) | ficha de personagem | Manzi (T04), IN-055; pedido explícito de criar prompts | **10 imagens normalizadas e integradas localmente 2026-10-06 (PLAN-072)**; quatro abas e dez herois validados em 1280x720, desktop/toque simulado; suite zero falhas. [Evidencia](../evidence/fila-025-integracao-2026-10-06.json). Prompts [[ART-PROMPTS-057-ficha-c-molduras-e-icones]] · base: [[SPEC-130-ficha-c-em-abas-grade-e-detalhe]] |
 
 > **Fila consolidada para o ChatGPT:**
 > [CHATGPT-FILA-001](../generated/CHATGPT-FILA-001-prompts-prontos.md) reúne os

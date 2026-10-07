@@ -1,0 +1,91 @@
+{
+  "plan": "PLAN-070",
+  "spec": "SPEC-137",
+  "tool": "built-in imagegen",
+  "a01_approval": "2026-10-06: aprovado, pode continuar",
+  "assets": [
+    {
+      "id": "A03",
+      "name": "ficha_slot_moldura",
+      "refs": [
+        ".atena/generated/art-candidates/ficha-c/ficha_moldura_painel_v02.png"
+      ],
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Create ONE standalone dark fantasy game UI pixel-art asset, flat front view, crisp visible pixel clusters, thick clean dark contours, no painterly blur or 3D. No text, letters, numerals, watermark, logos, characters, background scene, exterior glow or cast shadow. Actual transparent alpha outside the asset, not magenta or painted checkerboard. Preserve safe margins, no cropped edges. Primary request: a single square inventory slot BORDER, thin light desaturated steel gray (about #C8C8CC), slight wear, small chamfered corners with tiny rivets, darker inner rim, restrained bevel. All interior must be empty and truly transparent. Use reference 1 only for the crisp pixel texture and gothic material family; this asset is a NEUTRAL LIGHT STEEL variant for multiplication tinting, do not copy its gold or amber colors. No gold, color accents or glow. Square composition, border about 10% of square width, simple uniform edges for nine-slice use. Designed for 76x76px final display; maximum readability. Render the square border centered and nearly filling a square image with 4% transparent safe margin."
+    },
+    {
+      "id": "A04",
+      "name": "ficha_slot_vazio",
+      "refs": [
+        ".atena/generated/art-candidates/ficha-c/ficha_moldura_painel_v02.png"
+      ],
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Create ONE standalone dark fantasy game UI pixel-art asset, flat front view, crisp visible pixel clusters, thick clean dark contours, no painterly blur or 3D. No text, letters, numerals, watermark, logos, characters, background scene, exterior glow or cast shadow. Actual transparent alpha outside the asset, not magenta or painted checkerboard. Preserve safe margins, no cropped edges. Primary request: a single square empty inventory slot, a recessed dark stone niche with slight softly stepped inner bevel, worn edges, almost black subtly blue-gray solid stone inside and a SMALL VERY FAINT engraved diamond at the center. Reference 1 provides dark gothic material family only; no gold decoration. Low contrast, recessed and quiet, must read less prominently than a light steel inventory border. Slightly chamfered corners. The recess interior itself is opaque stone; only the background outside the square niche is transparent. No vivid colors, illumination or glow; faint central engraving must not read as a collectible item. Square image, object nearly fills it with 4% safe transparent margin. Clear at 76x76px."
+    },
+    {
+      "id": "A02",
+      "name": "ficha_moldura_detalhe",
+      "refs": [
+        ".atena/generated/art-candidates/ficha-c/ficha_moldura_painel_v02.png"
+      ],
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Create ONE standalone dark fantasy game UI pixel-art asset, flat front view, crisp visible pixel clusters, thick clean dark contours, no painterly blur or 3D. No text, letters, numerals, watermark, logos, characters, background scene, exterior glow or cast shadow. Actual transparent alpha outside the asset, not magenta or painted checkerboard. Preserve safe margins, no cropped edges. Primary request: a long shallow RECTANGULAR text-box FRAME of thin dark iron with a narrow worn old-gold inner line. Reference 1 sets the materials, color and pixel texture. Tiny pointed bracket ornaments ONLY at the four corners; straight sides and top/bottom perfectly uniform and smooth for nine-slice stretching. ALL center and exterior truly transparent. The frame rectangle itself MUST be exactly 4:1 in width:height, intended final 512x128px with 16px corner/margin zones. Thin quiet frame, no center-top crest, no middle-side ornament or rivets. Produce a 4:1 wide landscape image if possible; otherwise put ONE 4:1 rectangular band centered in a landscape canvas with empty transparent space above and below. Preserve the ratio of the actual frame rectangle."
+    },
+    {
+      "id": "A05",
+      "name": "ficha_aba_moldura",
+      "refs": [
+        ".atena/generated/art-candidates/ficha-c/ficha_moldura_painel_v02.png"
+      ],
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Create ONE standalone dark fantasy game UI pixel-art asset, flat front view, crisp visible pixel clusters, thick clean dark contours, no painterly blur or 3D. No text, letters, numerals, watermark, logos, characters, background scene, exterior glow or cast shadow. Actual transparent alpha outside the asset, not magenta or painted checkerboard. Preserve safe margins, no cropped edges. Primary request: a single long low rectangular TAB BUTTON FRAME, neutral light desaturated steel gray, chamfered corners, narrow dark inner line, ONE tiny rivet at each end, empty transparent interior. Reference 1 only sets pixel texture and material family, NOT its gold; this piece must be neutral light steel for tinting by game code. Straight thin top, bottom and sides uniform for nine-slice stretching, no ornaments. Frame rectangle width:height about 5:1, intended final 192x40px with 12px corner/margin zones. Allow room for a 16px label later but render no label. Generate wide 5:1 landscape if possible; otherwise one 5:1 band centered in landscape canvas with transparent space above/below. No fill inside."
+    },
+    {
+      "id": "A06",
+      "name": "ficha_aba_armas",
+      "refs": [
+        "assets/icons/ui/ca.png",
+        "assets/icons/passives/inteligencia.png"
+      ],
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Create ONE standalone dark fantasy game UI pixel-art asset, flat front view, crisp visible pixel clusters, thick clean dark contours, no painterly blur or 3D. No text, letters, numerals, watermark, logos, characters, background scene, exterior glow or cast shadow. Actual transparent alpha outside the asset, not magenta or painted checkerboard. Preserve safe margins, no cropped edges. Asset type: inventory category icon for weapons. Reference 1 shield sets line weight, pixel density and steel shading; reference 2 crystal/book sets saturated accent restraint and dark outline. Primary request: a simple steel sword and dark wooden magic staff crossed as an X. Sword has light steel blade, simple hilt and guard, aged gold small fittings. Staff ends in a SMALL violet crystal. One unified bold silhouette, clearly readable at 28px; minimal chunky pixel details, no sparks or loose pixels. Square image, symbol centered with 18% transparent margin. Match existing dark fantasy pixel icons."
+    },
+    {
+      "id": "A07",
+      "name": "ficha_aba_equipamento",
+      "refs": [
+        "assets/icons/ui/ca.png",
+        "assets/icons/passives/inteligencia.png"
+      ],
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Create ONE standalone dark fantasy game UI pixel-art asset, flat front view, crisp visible pixel clusters, thick clean dark contours, no painterly blur or 3D. No text, letters, numerals, watermark, logos, characters, background scene, exterior glow or cast shadow. Actual transparent alpha outside the asset, not magenta or painted checkerboard. Preserve safe margins, no cropped edges. Asset type: inventory category icon for equipment. Reference 1 shield sets line weight, pixel density and steel shading; reference 2 crystal/book sets saturation and dark outline. Primary request: a dark steel breastplate with compact pauldrons; in front of it a SMALL golden ring on one side and a small stone amulet on a SHORT chain on the other. Combine these into one compact readable symbol; dominant armor silhouette. Old gold accents, steel gray and muted amber family. Clear at 28px and grayscale. Square image, 18% transparent margin, no loose floating details."
+    },
+    {
+      "id": "A08",
+      "name": "ficha_aba_passivas",
+      "refs": [
+        "assets/icons/ui/ca.png",
+        "assets/icons/passives/inteligencia.png"
+      ],
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Create ONE standalone dark fantasy game UI pixel-art asset, flat front view, crisp visible pixel clusters, thick clean dark contours, no painterly blur or 3D. No text, letters, numerals, watermark, logos, characters, background scene, exterior glow or cast shadow. Actual transparent alpha outside the asset, not magenta or painted checkerboard. Preserve safe margins, no cropped edges. Asset type: inventory category icon for passive abilities. Reference 1 shield and reference 2 crystal/book set thick dark outline, crisp chunky pixel rendering and subdued gold/amber palette. Primary request: one GOLD FOUR-POINT STAR in front of a SMALL AMBER SUN with SHORT rays, joined as ONE compact emblem. Clearly distinguish front four-point star from rear short-rayed sun, bold simple silhouette, few blocks of color. No aura, no glowing background, no loose sparkle particles, no circular backdrop unrelated to the sun. Legible at 28px and grayscale. Square image, centered with 18% transparent margin."
+    },
+    {
+      "id": "A09",
+      "name": "ficha_aba_sinergias",
+      "refs": [
+        "assets/icons/ui/ca.png",
+        "assets/icons/passives/inteligencia.png"
+      ],
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Create ONE standalone dark fantasy game UI pixel-art asset, flat front view, crisp visible pixel clusters, thick clean dark contours, no painterly blur or 3D. No text, letters, numerals, watermark, logos, characters, background scene, exterior glow or cast shadow. Actual transparent alpha outside the asset, not magenta or painted checkerboard. Preserve safe margins, no cropped edges. Asset type: inventory category icon for synergies. Reference 1 shield and reference 2 crystal/book set outline weight, crisp pixel density and muted aged-gold palette. Primary request: a horizontal INFINITY symbol made of TWO interwoven aged-gold metal loops, a SMALL BLUE-CYAN CRYSTAL at the center crossing, and exactly THREE SMALL PLUS marks close around the emblem. The plus marks are geometric symbols, not letters. Keep them large and close enough to remain coherent at 28px, not stray fragments. One compact readable emblem, hollow loops transparent, strong dark outline, no halo or scene. Square image, 18% transparent margin. Readable in grayscale."
+    },
+    {
+      "id": "A10",
+      "name": "ficha_fundo_textura",
+      "refs": [],
+      "transparent": false,
+      "prompt": "Use case: stylized-concept. Create ONE seamless tileable square opaque RGB stone texture for a dark fantasy game UI panel behind white and gold text. Near-black VERY SUBTLY blue-tinted stone, fine quiet grain, exceptionally sparse barely visible hairline cracks. Maximum luminosity variation 8%, almost flat. Pixel art, crisp understated pixel texture, seamless horizontally AND vertically, all four edges must tile with no seam. No focal point, no vignette, no directional gradient, no highlights, no border, no large crack, no symbols, no lettering, no decoration, no vivid color. Entire canvas opaque texture edge to edge, no transparency. Designed to repeat in a 4x3 panel and remain quiet under 14px text. Square image."
+    }
+  ]
+}
