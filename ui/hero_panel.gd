@@ -36,6 +36,8 @@ var _hero_id := ""
 var _defense_key := ""
 var _boon_key := ""
 var _keycap: PanelContainer
+var _key_label: Label
+var _key_icon: TextureRect
 var _sheet_seen := false
 
 func _ready() -> void:
@@ -64,6 +66,8 @@ func _ready() -> void:
 	boon_row.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	boon_row.visible = false
 	root.add_child(boon_row)
+	Game.controls.changed.connect(_update_key_hint)
+	_update_key_hint()
 
 func _box(bg: Color, border: Color, width: int, radius: int) -> StyleBoxFlat:
 	var sb := StyleBoxFlat.new()
@@ -191,11 +195,26 @@ func _build_key_hint() -> Control:
 	sb.content_margin_top = 1.0
 	sb.content_margin_bottom = 1.0
 	_keycap.add_theme_stylebox_override("panel", sb)
-	_keycap.add_child(_outlined(_label("C", 15, GOLD)))
+	var key_row := HBoxContainer.new()
+	_keycap.add_child(key_row)
+	_key_label = _outlined(_label("C", 15, GOLD))
+	_key_icon = TextureRect.new()
+	_key_icon.custom_minimum_size = Vector2(24, 16)
+	_key_icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	_key_icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	key_row.add_child(_key_icon)
+	key_row.add_child(_key_label)
 	_keycap.visible = not Game.touch_controls_enabled()
 	box.add_child(_keycap)
 	box.add_child(_outlined(_label("Ficha", 14, Color(0.85, 0.82, 0.72))))
 	return box
+
+func _update_key_hint() -> void:
+	_key_icon.texture = Game.controls.glyph("run_items")
+	_key_icon.visible = _key_icon.texture != null
+	_key_label.text = Game.controls.prompt("run_items", "C")
+	_key_label.visible = _key_icon.texture == null
+	_keycap.get_parent().tooltip_text = "%s: abre a ficha do herói." % Game.controls.prompt("run_items", "C")
 
 ## O HUD chama quando a ficha C abre: o selo para de pulsar.
 func note_sheet_opened() -> void:

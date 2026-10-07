@@ -15,6 +15,8 @@ var completed := false
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	Game.controls.changed.connect(_update_hint)
+	_update_hint()
 	if Game.touch_controls_enabled():
 		var bar := HBoxContainer.new()
 		bar.position = Vector2(Game.touch_safe_rect().end.x - 280, Game.touch_safe_rect().position.y)
@@ -33,6 +35,7 @@ func _ready() -> void:
 		TouchUI.prepare(self)
 
 func start_hq(hq: Dictionary) -> void:
+	Game.controls.transition()
 	title_label.text = String(hq.get("title", ""))
 	panels = hq.get("panels", [])
 	panel_index = 0
@@ -58,14 +61,28 @@ func finish() -> void:
 	if is_closed:
 		return
 	is_closed = true
+	Game.controls.transition()
 	visible = false
 	closed.emit()
 
+func _update_hint() -> void:
+	$ControlsHint.text = "Use Próximo para avançar ou Fechar para sair." if Game.touch_controls_enabled() else "%s Avançar · %s Fechar" % [Game.controls.prompt("ui_accept", "Enter / Espaço / clique"), Game.controls.prompt("ui_cancel", "Esc")]
+
 func _input(event: InputEvent) -> void:
-	if is_closed:
+	if is_closed or not Game.controls.accepts(event):
 		return
 	# O bloco de notas (F5) fica por cima da HQ e precisa receber espaço e clique.
 	if Playtest.is_note_open():
+		return
+	if event is InputEventJoypadButton and event.pressed:
+		if event.is_action_pressed("ui_cancel"):
+			finish()
+			Game.controls.transition()
+			get_viewport().set_input_as_handled()
+		elif event.is_action_pressed("ui_accept"):
+			advance()
+			Game.controls.transition()
+			get_viewport().set_input_as_handled()
 		return
 	if Game.touch_controls_enabled() and event is InputEventMouse:
 		return

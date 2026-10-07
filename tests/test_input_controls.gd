@@ -2,6 +2,8 @@ extends RefCounted
 
 func run() -> Array:
 	var failures: Array = []
+	var original: Dictionary = Game.profile.data.settings.get("controller", {}).duplicate(true)
+	Game.profile.data.settings.controller = {}
 	Game.ensure_input_actions()
 	for action in [Game.ACTION_MOVE_LEFT, Game.ACTION_MOVE_RIGHT, Game.ACTION_MOVE_UP, Game.ACTION_MOVE_DOWN,
 		Game.ACTION_AIM_LEFT, Game.ACTION_AIM_RIGHT, Game.ACTION_AIM_UP, Game.ACTION_AIM_DOWN,
@@ -21,15 +23,18 @@ func run() -> Array:
 	_assert_joy_action(failures, JOY_BUTTON_START, Game.ACTION_RUN_PAUSE)
 	_assert_joy_action(failures, JOY_BUTTON_X, Game.ACTION_RUN_INTERACT)
 	_assert_joy_action(failures, JOY_BUTTON_LEFT_SHOULDER, Game.ACTION_RUN_REROLL)
-	_assert_joy_action(failures, JOY_BUTTON_B, &"ui_accept")
-	_assert_joy_action(failures, JOY_BUTTON_A, &"ui_cancel")
+	_assert_joy_action(failures, JOY_BUTTON_A, &"ui_accept")
+	_assert_joy_action(failures, JOY_BUTTON_B, &"ui_cancel")
 	_assert_joy_action(failures, JOY_BUTTON_DPAD_LEFT, &"ui_left")
 	_assert_joy_action(failures, JOY_BUTTON_DPAD_DOWN, &"ui_down")
+	Game.profile.data.settings.controller = original
+	Game.ensure_input_actions()
 	return failures
 
 
 func _assert_joy_action(failures: Array, button: JoyButton, action: StringName) -> void:
 	var event := InputEventJoypadButton.new()
+	event.device = Game.controls.active_device
 	event.button_index = button
 	event.pressed = true
 	if not InputMap.event_is_action(event, action):

@@ -1,0 +1,260 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://ui/ground.gd" id="1_ground"]
+[ext_resource type="PackedScene" path="res://ui/hero_view.tscn" id="2_hero"]
+[ext_resource type="PackedScene" path="res://ui/prop.tscn" id="3_prop"]
+[ext_resource type="PackedScene" path="res://ui/spawn_point.tscn" id="4_spawn"]
+
+[node name="Stage" type="Node2D"]
+
+[node name="Ground" type="Node2D" parent="."]
+z_index = -100
+script = ExtResource("1_ground")
+map_size = Vector2i(60, 60)
+color_a = Color(0.105, 0.145, 0.17, 1)
+color_b = Color(0.14, 0.2, 0.22, 1)
+use_modular_atlas = true
+atlas_columns = 2
+atlas_variants = 4
+visual_seed = 31
+terrain_texture_path = "res://assets/tiles/docas_ground_atlas_v3.png"
+baked_texture_path = "res://assets/tiles/docas_ground_baked_v1.png"
+
+[node name="Sorted" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Hero" parent="Sorted" instance=ExtResource("2_hero")]
+position = Vector2(0, 960)
+
+[node name="DocaOeste" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(-624, 720)
+kind = "doca"
+height = 66.0
+half_width = 52.0
+color = Color(0.27, 0.25, 0.22, 1)
+
+[node name="DocaLeste" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(624, 768)
+kind = "doca"
+height = 62.0
+half_width = 50.0
+color = Color(0.27, 0.25, 0.22, 1)
+
+[node name="Carga" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(-336, 528)
+kind = "carga"
+height = 56.0
+half_width = 44.0
+color = Color(0.32, 0.27, 0.22, 1)
+
+[node name="Barril" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(480, 552)
+kind = "barril"
+height = 54.0
+half_width = 34.0
+color = Color(0.31, 0.25, 0.2, 1)
+
+[node name="Rede" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(120, 432)
+kind = "rede"
+height = 42.0
+half_width = 40.0
+color = Color(0.2, 0.3, 0.3, 1)
+
+[node name="Margem" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(0, 168)
+kind = "margem"
+height = 42.0
+half_width = 58.0
+color = Color(0.12, 0.2, 0.24, 1)
+
+[node name="LivrosDoPorao" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(-120, 804)
+kind = "livros"
+height = 52.0
+half_width = 34.0
+color = Color(0.22, 0.2, 0.18, 1)
+
+[node name="Braseiro" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(336, 960)
+kind = "braseiro"
+height = 60.0
+half_width = 26.0
+color = Color(0.25, 0.22, 0.2, 1)
+
+[node name="SpawnPoints" type="Node2D" parent="."]
+
+[node name="SpawnCriaturas" parent="SpawnPoints" instance=ExtResource("4_spawn")]
+position = Vector2(-624, 1008)
+enemy_id = "criatura_corrompida"
+count = 2
+
+[node name="SpawnSlimes" parent="SpawnPoints" instance=ExtResource("4_spawn")]
+position = Vector2(528, 864)
+enemy_id = "slime_corrosivo"
+count = 2
+
+[node name="SpawnCultistas" parent="SpawnPoints" instance=ExtResource("4_spawn")]
+position = Vector2(96, 1344)
+enemy_id = "cultista_adaga"
+
+[node name="DocaOeste_c1" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(-603.9, 473.9)
+kind = "doca"
+height = 66.0
+half_width = 52.0
+color = Color(0.27, 0.25, 0.22, 1)
+
+[node name="DocaOeste_c2" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(1086.4, 987.4)
+kind = "doca"
+height = 66.0
+half_width = 52.0
+color = Color(0.27, 0.25, 0.22, 1)
+
+[node name="DocaLeste_c1" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(339.6, 871.2)
+kind = "doca"
+height = 62.0
+half_width = 50.0
+color = Color(0.27, 0.25, 0.22, 1)
+
+[node name="Carga_c1" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(-436.8, 329.2)
+kind = "carga"
+height = 56.0
+half_width = 44.0
+color = Color(0.32, 0.27, 0.22, 1)
+
+[node name="Barril_c1" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(57.2, 390.1)
+kind = "barril"
+height = 54.0
+half_width = 34.0
+color = Color(0.31, 0.25, 0.2, 1)
+
+[node name="Rede_c1" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(144.1, 666.1)
+kind = "rede"
+height = 42.0
+half_width = 40.0
+color = Color(0.2, 0.3, 0.3, 1)
+
+[node name="Rede_c2" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(372.2, 713.6)
+kind = "rede"
+height = 42.0
+half_width = 40.0
+color = Color(0.2, 0.3, 0.3, 1)
+
+[node name="Margem_c1" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(-754.3, 878.2)
+kind = "margem"
+height = 42.0
+half_width = 58.0
+color = Color(0.12, 0.2, 0.24, 1)
+
+[node name="LivrosDoPorao_c1" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(215.6, 742.4)
+kind = "livros"
+height = 52.0
+half_width = 34.0
+color = Color(0.22, 0.2, 0.18, 1)
+
+[node name="Braseiro_c1" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(459.4, 1199)
+kind = "braseiro"
+height = 60.0
+half_width = 26.0
+color = Color(0.25, 0.22, 0.2, 1)
+
+[node name="DocaOeste_c2_f1" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(1370.4, 804.4)
+kind = "doca"
+height = 66.0
+half_width = 52.0
+color = Color(0.27, 0.25, 0.22, 1)
+
+[node name="DocaOeste_f2" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(1378.8, 1025.8)
+kind = "doca"
+height = 66.0
+half_width = 52.0
+color = Color(0.27, 0.25, 0.22, 1)
+
+[node name="DocaLeste_f3" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(1288.2, 1111.2)
+kind = "doca"
+height = 62.0
+half_width = 50.0
+color = Color(0.27, 0.25, 0.22, 1)
+
+[node name="Braseiro_c1_f4" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(825.1, 1259.4)
+kind = "braseiro"
+height = 60.0
+half_width = 26.0
+color = Color(0.25, 0.22, 0.2, 1)
+
+[node name="DocaOeste_c1_f5" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(-1141.2, 817.7)
+kind = "doca"
+height = 66.0
+half_width = 52.0
+color = Color(0.27, 0.25, 0.22, 1)
+
+[node name="Rede_f6" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(-263.3, 1057)
+kind = "rede"
+height = 42.0
+half_width = 40.0
+color = Color(0.2, 0.3, 0.3, 1)
+
+[node name="Rede_c1_f7" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(31.1, 1260.4)
+kind = "rede"
+height = 42.0
+half_width = 40.0
+color = Color(0.2, 0.3, 0.3, 1)
+
+[node name="DocaOeste_f8" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(129.6, 1538.3)
+kind = "doca"
+height = 66.0
+half_width = 52.0
+color = Color(0.27, 0.25, 0.22, 1)
+
+[node name="DocaOeste_c1_f9" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(-1448, 987)
+kind = "doca"
+height = 66.0
+half_width = 52.0
+color = Color(0.27, 0.25, 0.22, 1)
+
+[node name="Braseiro_c1_f10" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(-1142.8, 1140.8)
+kind = "braseiro"
+height = 60.0
+half_width = 26.0
+color = Color(0.25, 0.22, 0.2, 1)
+
+[node name="DocaOeste_c1_f11" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(-769, 1394.8)
+kind = "doca"
+height = 66.0
+half_width = 52.0
+color = Color(0.27, 0.25, 0.22, 1)
+
+[node name="Rede_c1_f12" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(-417.6, 1487.7)
+kind = "rede"
+height = 42.0
+half_width = 40.0
+color = Color(0.2, 0.3, 0.3, 1)
+
+[node name="Rede_f13" parent="Sorted" instance=ExtResource("3_prop")]
+position = Vector2(60.1, 1634.2)
+kind = "rede"
+height = 42.0
+half_width = 40.0
+color = Color(0.2, 0.3, 0.3, 1)

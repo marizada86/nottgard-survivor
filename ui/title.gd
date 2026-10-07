@@ -26,6 +26,8 @@ func _ready() -> void:
 	_build_background()
 	_build_logo()
 	_build_prompt()
+	Game.controls.changed.connect(_update_prompt)
+	_update_prompt()
 	_fade = ColorRect.new()
 	_fade.color = Color(0, 0, 0, 1)
 	_fade.set_anchors_preset(Control.PRESET_FULL_RECT)
@@ -114,8 +116,13 @@ func _process(delta: float) -> void:
 		_logo_time += delta
 		_logo_rect.texture = _logo_frames[int(_logo_time * LOGO_FPS) % _logo_frames.size()]
 
+func _update_prompt() -> void:
+	_prompt.text = "%s para jogar" % Game.controls.prompt("ui_accept", "Clique")
+	if Game.touch_controls_enabled():
+		_prompt.text = "Toque para jogar"
+
 func _input(event: InputEvent) -> void:
-	if _leaving:
+	if _leaving or not Game.controls.accepts(event):
 		return
 	var pressed: bool = (event is InputEventMouseButton and event.pressed) \
 		or (event is InputEventKey and event.pressed and not event.echo) \
@@ -125,6 +132,7 @@ func _input(event: InputEvent) -> void:
 		_start()
 
 func _start() -> void:
+	Game.controls.transition()
 	_leaving = true
 	Sfx.play("ui.click")
 	var tw := create_tween()

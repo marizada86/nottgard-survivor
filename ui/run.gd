@@ -32,6 +32,9 @@ const NUMBER_MERGE_MS := 350
 var _recent_numbers := {}  # tid do alvo -> {label, amount, until}: soma acertos rápidos no mesmo alvo (MEC-031 D5)
 var _paused := false
 var _items_shown := false
+var _items_prior_pause := false
+var _items_focus: WeakRef
+var _recovery_offer := false
 var _stage_clear_events_seen: Dictionary = {}
 var _final_victory_event_seen := false
 var _divine_aura: Line2D
@@ -70,6 +73,9 @@ func _ready() -> void:
 	hud.decline_revive_pressed.connect(_decline_revive)
 	hud.items_closed.connect(_close_items_panel)
 	hud.mobile_command.connect(_mobile_command)
+	hud.extract_pressed.connect(_request_extract)
+	hud.pause_items_pressed.connect(_toggle_items_panel)
+	Game.controls.recovery_requested.connect(_controller_recovery)
 	_setup_encounter_overlays()
 	_load_stage()
 	if Game.qa_sandbox:
@@ -266,6 +272,8 @@ func fog_state_is_inactive() -> bool:
 # ------------------------------------------------------------------ entrada
 
 func _unhandled_input(ev: InputEvent) -> void:
+	if not Game.controls.accepts(ev) or hud.has_modal():
+		return
 	if Game.touch_controls_enabled() and ev is InputEventMouse:
 		return
 	if _result_shown or battle.state == "revive_offer":
@@ -302,7 +310,7 @@ func _unhandled_input(ev: InputEvent) -> void:
 			Sfx.play("click")
 		get_viewport().set_input_as_handled()
 	elif ev.is_action_pressed(Game.ACTION_RUN_EXTRACT) and (battle.stage_cleared or battle.final_victory):
-		battle.extract()
+		_request_extract()
 		get_viewport().set_input_as_handled()
 	elif ev.is_action_pressed(Game.ACTION_RUN_ITEMS):
 		_toggle_items_panel()
@@ -315,20 +323,29 @@ func _unhandled_input(ev: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 
 func _toggle_items_panel() -> void:
+	Game.controls.transition()
 	hud.clear_mobile_input()
-	if battle.state != "running":
+	if battle.state not in ["running", "levelup", "altar", "item_offer", "shop"]:
 		return
-	_items_shown = not _items_shown
-	get_tree().paused = _items_shown
 	if _items_shown:
-		hud.show_items_panel(battle)
-	else:
-		hud.hide_items_panel()
+		_close_items_panel()
+		return
+	_items_prior_pause = get_tree().paused
+	var owner := get_viewport().gui_get_focus_owner()
+	_items_focus = weakref(owner) if owner != null else null
+	_items_shown = true
+	get_tree().paused = true
+	hud.show_items_panel(battle)
 
 func _close_items_panel() -> void:
+	Game.controls.transition()
 	_items_shown = false
-	get_tree().paused = false
+	get_tree().paused = _items_prior_pause
 	hud.hide_items_panel()
+	if _items_focus != null:
+		var owner = _items_focus.get_ref()
+		if is_instance_valid(owner) and owner.is_visible_in_tree():
+			owner.call_deferred("grab_focus")
 
 func _toggle_aim() -> void:
 	if Game.touch_controls_enabled():
@@ -340,12 +357,39 @@ func _toggle_aim() -> void:
 		hud.show_pause(true)
 
 func _toggle_pause() -> void:
+	Game.controls.transition()
 	hud.clear_mobile_input()
-	if battle.state != "running":
+	if battle.state != "running" and not _recovery_offer:
 		return
 	_paused = not _paused
 	get_tree().paused = _paused
 	hud.show_pause(_paused)
+	if not _paused and _recovery_offer:
+		_recovery_offer = false
+		if hud.offer_box.get_child_count() > 0:
+			hud.offer_box.get_child(0).call_deferred("grab_focus")
+
+func _request_extract() -> void:
+	if not (battle.stage_cleared or battle.final_victory):
+		return
+	if not _paused:
+		_toggle_pause()
+	hud.confirm_mobile("Extrair e encerrar esta tentativa?", func():
+		get_tree().paused = false
+		_paused = false
+		hud.show_pause(false)
+		battle.extract())
+
+func _controller_recovery(reason: String) -> void:
+	Game.controls.transition()
+	if battle != null and battle.state == "running" and not get_tree().paused:
+		_toggle_pause()
+	elif battle != null and battle.state in ["levelup", "altar", "item_offer", "shop"] and not get_tree().paused:
+		_recovery_offer = true
+		_paused = true
+		get_tree().paused = true
+		hud.show_pause(true)
+	hud.toast(reason)
 
 func _abandon() -> void:
 	hud.clear_mobile_input()
@@ -362,6 +406,7 @@ func _return_to_menu() -> void:
 	Game.goto_menu()
 
 func _on_choose(i: int) -> void:
+	Game.controls.transition()
 	hud.clear_mobile_input()
 	battle.choose(i)
 	Sfx.play("ui.confirm")
@@ -412,13 +457,13 @@ func _mobile_command(action: StringName) -> void:
 			Playtest._guide_body.text = "[b]Controles por toque[/b]\nToque e arraste na área livre de qualquer lado para andar; solte para parar. Use Habilidade e o botão contextual na direita. Ficha abre seus itens; Pausa interrompe a tentativa. A mira é automática.\n\n" + Playtest._guide_body.text
 
 func _notification(what: int) -> void:
-	if what in [NOTIFICATION_APPLICATION_FOCUS_OUT, NOTIFICATION_APPLICATION_PAUSED] and Game.touch_controls_enabled() and is_instance_valid(hud):
+	if what in [NOTIFICATION_APPLICATION_FOCUS_OUT, NOTIFICATION_APPLICATION_PAUSED] and is_instance_valid(hud):
 		hud.clear_mobile_input()
 		if battle != null and battle.state == "running" and not get_tree().paused:
 			_toggle_pause()
 
 func _physics_process(dt: float) -> void:
-	if get_tree().paused or _result_shown:
+	if get_tree().paused or _result_shown or not Game.controls.focused:
 		return
 	if _hit_stop_t > 0.0:  # SPEC-116 D2: pausa curta de acerto importante
 		_hit_stop_t -= dt

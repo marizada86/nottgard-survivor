@@ -23,6 +23,7 @@ var last_summary: Dictionary = {}
 var log_lines: Array = []
 var screen_name := "menu"
 var touch_preview := false
+var controls = preload("res://core/controller_input.gd").new()
 
 func touch_controls_enabled() -> bool:
 	return touch_preview or OS.has_feature("android") or OS.has_feature("ios") or "--mobile-controls" in OS.get_cmdline_user_args()
@@ -61,17 +62,30 @@ const ACTION_RUN_REROLL: StringName = &"run_reroll"
 const ACTION_OFFER_DETAILS: StringName = &"offer_details"
 
 func _ready() -> void:
+	var user_args := OS.get_cmdline_user_args()
+	var profile_arg := user_args.find("--controller-profile")
+	if profile_arg >= 0 and profile_arg + 1 < user_args.size():
+		_save_path = user_args[profile_arg + 1]
+	controls.name = "ControllerInput"
+	add_child(controls)
 	ensure_input_actions()
 	load_profile()
+	ensure_input_actions()
 	apply_settings()
 	if save_notice != "":
 		logline(save_notice)
 	logline("Jogo iniciado v%s (%s)" % [Version.VERSION, Version.build_id()])
 
 func ensure_input_actions() -> void:
+	# Substituir apenas bindings de controle; preservar teclado e mouse.
+	for action in InputMap.get_actions():
+		if String(action).begins_with("joy_") or String(action).begins_with("run_") or action in [&"hero_active", &"offer_details", &"ui_accept", &"ui_cancel", &"ui_left", &"ui_right", &"ui_up", &"ui_down"]:
+			for event in InputMap.action_get_events(action):
+				if event is InputEventJoypadButton or event is InputEventJoypadMotion:
+					InputMap.action_erase_event(action, event)
 	_add_input_event(&"hero_active", _key_event(KEY_Q))
 	_add_input_event(&"hero_active", _mouse_event(MOUSE_BUTTON_RIGHT))
-	_add_input_event(&"hero_active", _joy_button_event(JOY_BUTTON_RIGHT_SHOULDER))
+	_add_input_event(&"hero_active", _joy_button_event(controls.button("hero_active")))
 	_add_input_event(ACTION_MOVE_LEFT, _joy_axis_event(JOY_AXIS_LEFT_X, -1.0))
 	_add_input_event(ACTION_MOVE_RIGHT, _joy_axis_event(JOY_AXIS_LEFT_X, 1.0))
 	_add_input_event(ACTION_MOVE_UP, _joy_axis_event(JOY_AXIS_LEFT_Y, -1.0))
@@ -87,23 +101,20 @@ func ensure_input_actions() -> void:
 	_add_input_event(ACTION_RUN_PAUSE, _key_event(KEY_ESCAPE))
 	_add_input_event(ACTION_RUN_PAUSE, _joy_button_event(JOY_BUTTON_START))
 	_add_input_event(ACTION_RUN_AIM, _key_event(KEY_TAB))
-	_add_input_event(ACTION_RUN_AIM, _joy_button_event(JOY_BUTTON_Y))
+	_add_input_event(ACTION_RUN_AIM, _joy_button_event(controls.button("run_toggle_aim")))
 	_add_input_event(ACTION_RUN_INTERACT, _key_event(KEY_E))
-	_add_input_event(ACTION_RUN_INTERACT, _joy_button_event(JOY_BUTTON_X))
+	_add_input_event(ACTION_RUN_INTERACT, _joy_button_event(controls.button("run_interact")))
 	_add_input_event(ACTION_RUN_EXTRACT, _key_event(KEY_X))
-	_add_input_event(ACTION_RUN_EXTRACT, _joy_button_event(JOY_BUTTON_Y))
 	_add_input_event(ACTION_RUN_ITEMS, _key_event(KEY_C))
-	_add_input_event(ACTION_RUN_ITEMS, _joy_button_event(JOY_BUTTON_BACK))
+	_add_input_event(ACTION_RUN_ITEMS, _joy_button_event(controls.button("run_items")))
 	_add_input_event(ACTION_RUN_SPEED, _key_event(KEY_F))
 	_add_input_event(ACTION_RUN_SPEED, _key_event(KEY_T))
-	_add_input_event(ACTION_RUN_SPEED, _joy_button_event(JOY_BUTTON_DPAD_UP))
 	_add_input_event(ACTION_RUN_REROLL, _key_event(KEY_R))
-	_add_input_event(ACTION_RUN_REROLL, _joy_button_event(JOY_BUTTON_LEFT_SHOULDER))
+	_add_input_event(ACTION_RUN_REROLL, _joy_button_event(controls.button("run_reroll")))
 	_add_input_event(ACTION_OFFER_DETAILS, _key_event(KEY_SHIFT))
-	_add_input_event(ACTION_OFFER_DETAILS, _joy_button_event(JOY_BUTTON_RIGHT_STICK))
-	# A navegação de controles usa a convenção aprovada: leste confirma e sul volta.
-	_add_input_event(&"ui_accept", _joy_button_event(JOY_BUTTON_B))
-	_add_input_event(&"ui_cancel", _joy_button_event(JOY_BUTTON_A))
+	_add_input_event(ACTION_OFFER_DETAILS, _joy_button_event(controls.button("offer_details")))
+	_add_input_event(&"ui_accept", _joy_button_event(controls.action_button("ui_accept")))
+	_add_input_event(&"ui_cancel", _joy_button_event(controls.action_button("ui_cancel")))
 	_add_input_event(&"ui_left", _joy_button_event(JOY_BUTTON_DPAD_LEFT))
 	_add_input_event(&"ui_right", _joy_button_event(JOY_BUTTON_DPAD_RIGHT))
 	_add_input_event(&"ui_up", _joy_button_event(JOY_BUTTON_DPAD_UP))
@@ -114,9 +125,9 @@ func ensure_input_actions() -> void:
 	_add_input_event(&"ui_down", _joy_axis_event(JOY_AXIS_LEFT_Y, 1.0))
 	for action in [ACTION_MOVE_LEFT, ACTION_MOVE_RIGHT, ACTION_MOVE_UP, ACTION_MOVE_DOWN,
 		ACTION_AIM_LEFT, ACTION_AIM_RIGHT, ACTION_AIM_UP, ACTION_AIM_DOWN]:
-		InputMap.action_set_deadzone(action, JOYSTICK_DEADZONE)
+		InputMap.action_set_deadzone(action, controls.deadzone(action in [ACTION_AIM_LEFT, ACTION_AIM_RIGHT, ACTION_AIM_UP, ACTION_AIM_DOWN]))
 	for action in [&"ui_left", &"ui_right", &"ui_up", &"ui_down"]:
-		InputMap.action_set_deadzone(action, JOYSTICK_DEADZONE)
+		InputMap.action_set_deadzone(action, controls.deadzone())
 
 
 func _add_input_event(action: StringName, event: InputEvent) -> void:
@@ -140,9 +151,10 @@ func _mouse_event(button: MouseButton) -> InputEventMouseButton:
 	return mouse
 
 
-func _joy_button_event(button: JoyButton) -> InputEventJoypadButton:
+func _joy_button_event(button: int) -> InputEventJoypadButton:
 	var joy := InputEventJoypadButton.new()
 	joy.button_index = button
+	joy.device = controls.active_device if not controls.disconnected else 99
 	return joy
 
 
@@ -150,22 +162,23 @@ func _joy_axis_event(axis: JoyAxis, value: float) -> InputEventJoypadMotion:
 	var joy := InputEventJoypadMotion.new()
 	joy.axis = axis
 	joy.axis_value = value
+	joy.device = controls.active_device if not controls.disconnected else 99
 	return joy
 
 
-static func stick_vector(raw: Vector2) -> Vector2:
+static func stick_vector(raw: Vector2, deadzone: float = JOYSTICK_DEADZONE) -> Vector2:
 	var length := minf(raw.length(), 1.0)
-	if length <= JOYSTICK_DEADZONE:
+	if length <= deadzone:
 		return Vector2.ZERO
-	return raw.normalized() * inverse_lerp(JOYSTICK_DEADZONE, 1.0, length)
+	return raw.normalized() * inverse_lerp(deadzone, 1.0, length)
 
 
 func movement_joystick() -> Vector2:
-	return stick_vector(Input.get_vector(ACTION_MOVE_LEFT, ACTION_MOVE_RIGHT, ACTION_MOVE_UP, ACTION_MOVE_DOWN, 0.0))
+	return controls.stick()
 
 
 func manual_aim_joystick() -> Vector2:
-	return stick_vector(Input.get_vector(ACTION_AIM_LEFT, ACTION_AIM_RIGHT, ACTION_AIM_UP, ACTION_AIM_DOWN, 0.0))
+	return controls.stick(true)
 
 static func profile_backup_path(path: String) -> String:
 	return path + SAVE_BACKUP_SUFFIX

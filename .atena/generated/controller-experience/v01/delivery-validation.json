@@ -1,0 +1,27 @@
+{
+  "plan": "PLAN-068",
+  "local_passed": true,
+  "errors": [],
+  "local_links_checked": 41,
+  "sources_checked": 70,
+  "captures_checked": [
+    "hud_xbox_1280x720.png",
+    "hud_xbox_1920x1080.png",
+    "ficha_ps5_1280x720.png",
+    "ficha_ps5_1920x1080.png",
+    "oferta_ps5_1280x720.png",
+    "oferta_ps5_1920x1080.png",
+    "pausa_ps5_1280x720.png",
+    "pausa_ps5_1920x1080.png",
+    "opcoes_ps5_1280x720.png",
+    "opcoes_ps5_1920x1080.png",
+    "quartel_xbox_1280x720.png",
+    "quartel_xbox_1920x1080.png",
+    "resultado_xbox_1280x720.png",
+    "resultado_xbox_1920x1080.png"
+  ],
+  "yaml_full_parser_used": false,
+  "hardware_acceptance": false,
+  "status": "AWAITING_HARDWARE_PLAYTEST",
+  "fingerprint": "ba8ea975cdc215765a2817fe9ab56fafaf50213f6f1af57f043e044db3a296c6"
+}

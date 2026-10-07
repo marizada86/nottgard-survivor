@@ -41,6 +41,7 @@ var stages: Array = []
 var codex_ids: Array = []
 var hq_ids: Array[String] = []
 var _reset_armed := false
+var _hq_open := false
 
 func _ready() -> void:
 	Game.screen_name = "menu"
@@ -97,6 +98,16 @@ func _ready() -> void:
 	hq_list.item_selected.connect(_refresh_hq_selection)
 	hq_play_btn.pressed.connect(_open_selected_hq)
 	_refresh_all()
+	var controller_options := preload("res://ui/controller_options.gd").new()
+	$Tabs/Opções/Content.add_child(controller_options)
+	$Tabs/Opções/Content.move_child(controller_options, $Tabs/Opções/Content.get_node("ActionsTitle").get_index())
+	%Tabs.tab_changed.connect(func(_i):
+		Game.controls.transition()
+		_focus_tab.call_deferred())
+	for scroll in find_children("*", "ScrollContainer", true, false):
+		scroll.follow_focus = true
+	%Tabs.get_node("Conquistas").focus_mode = Control.FOCUS_ALL
+	codex_text.focus_mode = Control.FOCUS_ALL
 	if Game.touch_controls_enabled():
 		aim_opt.select(0)
 		aim_opt.disabled = true
@@ -109,6 +120,63 @@ func _ready() -> void:
 	var notice := Game.consume_save_notice()
 	if notice != "":
 		Playtest.toast(notice)
+
+func _focus_tab() -> void:
+	var current: Control = %Tabs.get_current_tab_control()
+	var target := _first_focus(current)
+	if target != null:
+		target.grab_focus()
+
+func _first_focus(node: Node) -> Control:
+	if node is Control and node.is_visible_in_tree() and node.focus_mode != Control.FOCUS_NONE and not (node is BaseButton and node.disabled):
+		return node
+	for child in node.get_children():
+		var target := _first_focus(child)
+		if target != null:
+			return target
+	return null
+
+func _unhandled_input(event: InputEvent) -> void:
+	if not Game.controls.accepts(event) or Game.controls.capture_action != "" or Playtest._guide_open or Playtest._note_open or _hq_open:
+		return
+	if event is InputEventJoypadButton and event.pressed and event.button_index in [JOY_BUTTON_LEFT_SHOULDER, JOY_BUTTON_RIGHT_SHOULDER]:
+		%Tabs.current_tab = posmod(%Tabs.current_tab + (-1 if event.button_index == JOY_BUTTON_LEFT_SHOULDER else 1), %Tabs.get_tab_count())
+		get_viewport().set_input_as_handled()
+
+func _input(event: InputEvent) -> void:
+	if not event is InputEventJoypadButton and not event is InputEventJoypadMotion:
+		return
+	if not event.is_pressed() or not Game.controls.accepts(event) or Playtest._guide_open or _hq_open or Game.controls.capture_action != "":
+		return
+	var owner := get_viewport().gui_get_focus_owner()
+	var right := event.is_action_pressed("ui_right")
+	var left := event.is_action_pressed("ui_left")
+	var target: Control
+	if right or left:
+		if owner == hero_list and right:
+			target = stage_list
+		elif owner == stage_list:
+			target = play_btn if right else hero_list
+		elif owner == play_btn and left:
+			target = stage_list
+		elif owner == codex_list:
+			target = codex_text if right else codex_cat
+		elif owner == codex_text and left:
+			target = codex_list
+		elif owner == codex_cat and right:
+			target = codex_list
+		elif owner == hq_list and right:
+			target = hq_play_btn
+		elif owner == hq_play_btn and left:
+			target = hq_list
+	if target != null and not (target is BaseButton and target.disabled):
+		target.grab_focus()
+		get_viewport().set_input_as_handled()
+	elif owner is RichTextLabel or owner == %Tabs.get_node("Conquistas"):
+		if event.is_action_pressed("ui_down") or event.is_action_pressed("ui_up"):
+			var bar: VScrollBar = owner.get_v_scroll_bar()
+			bar.value += 64 if event.is_action_pressed("ui_down") else -64
+			get_viewport().set_input_as_handled()
 
 func _layout_touch_menu() -> void:
 	var safe := Game.touch_safe_rect()
@@ -407,12 +475,15 @@ func _open_selected_hq() -> void:
 	if hq.is_empty():
 		return
 	var screen = HQ_SCREEN.instantiate()
+	_hq_open = true
 	screen.process_mode = Node.PROCESS_MODE_ALWAYS
 	add_child(screen)
 	screen.call_deferred("start_hq", hq)
 	while not bool(screen.get("is_closed")):
 		await get_tree().process_frame
 	var completed := bool(screen.get("completed"))
+	_hq_open = false
+	hq_play_btn.call_deferred("grab_focus")
 	screen.queue_free()
 	if completed:
 		var newly_earned: Array = Game.profile.mark_hq_seen(hq_id)

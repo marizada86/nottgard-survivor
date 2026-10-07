@@ -55,6 +55,7 @@ var _guide_name_label: Label
 var _name_edit: LineEdit
 var _guide_start: Button
 var _guide_error: Label
+var _guide_return_focus: WeakRef
 var _console: PanelContainer
 var _console_text: RichTextLabel
 var _qa_modal: PanelContainer
@@ -76,6 +77,7 @@ func _ready() -> void:
 	layer = 100
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	_build_ui()
+	Game.controls.changed.connect(_refresh_controller_guide)
 	get_viewport().size_changed.connect(_layout_modals)
 	call_deferred("_layout_modals")
 	if not Version.evidence_enabled():
@@ -560,15 +562,15 @@ static func _guide_text() -> String:
 		+ "3. [b]F5[/b] abre o bloco de notas: escreva o que estranhou ou gostou. Ao fechar, o relato textual é salvo.\n" \
 		+ "4. Envie individualmente o relato, o log e os prints de [b]evidencias[/b] na task correspondente do Discord.\n\n" \
 		+ "[b]Controles do jogo[/b]\n" \
-		+ "Teclado/mouse: WASD/setas movem; Tab alterna mira; Q/botão direito usa habilidade; E interage; X extrai; 1-5 escolhe; R rerrola; T/F acelera; Esc pausa. Controle: analógico esquerdo/direcional move; direito mira no modo manual; RB usa habilidade; oeste interage; norte alterna mira ou extrai; LB rerrola; Start pausa; Back abre itens. Leste confirma e sul volta nas telas.\n" \
+		+ "Teclado/mouse: WASD/setas movem; Tab alterna mira; Q/botão direito usa habilidade; E interage; X extrai; 1-5 escolhe; R rerrola; T/F acelera; Esc pausa. Controle: analógico esquerdo/direcional move; direito mira no modo manual; RB/R1 usa habilidade; X/□ interage; Y/△ alterna mira; LB/L1 rerrola; Menu/Options pausa; View/Share/Create abre a ficha. A/× confirma e B/○ volta no preset Padrão; Legado inverte. Extrair e velocidade ficam na pausa; detalhes com RS/R3; abas L1/LB anterior e R1/RB próxima.\n" \
 		+ "Todas as armas atacam sozinhas. Sobreviva, evolua, derrote o chefe da fase e desça pelo portal.\n\n" \
 		+ qa_shortcuts_text(Version.qa_enabled()) \
 		+ "[color=#aaaaaa]Os prints mostram a tela do jogo. Notas e log têm o nome de usuário do Windows removido.[/color]"
 
 static func game_rules_text() -> String:
 	return "[b]Objetivo[/b]\nSobreviva às ondas, evolua sua build e derrote o chefe da fase. Depois, escolha entre extrair a recompensa atual ou entrar no portal para continuar com mais risco e mais recompensa.\n\n" \
-		+ "[b]Controles[/b]\nTeclado/mouse: WASD ou setas movem; Tab alterna mira automática/manual; Q ou botão direito usa habilidade; E interage; X extrai; T acelera; Esc pausa. Controle: analógico esquerdo ou direcional move; analógico direito mira no modo manual; RB usa habilidade; oeste interage; norte alterna mira ou extrai; Start pausa; Back abre itens. Nas telas, direcional navega, leste confirma e sul volta.\n\n" \
-		+ "[b]Combate e evolução[/b]\nSuas armas atacam automaticamente. Ao subir de nível, escolha uma melhoria pelo foco ou com 1–5; R ou LB rerrola a oferta quando houver rerrolagens. Cada personagem tem uma habilidade ativa própria.\n\n" \
+		+ "[b]Controles[/b]\nTeclado/mouse: WASD ou setas movem; Tab alterna mira automática/manual; Q ou botão direito usa habilidade; E interage; X extrai; T acelera; Esc pausa. Controle: analógico esquerdo ou direcional move; analógico direito mira no modo manual; RB/R1 usa habilidade; X/□ interage; Y/△ alterna mira; Menu/Options pausa; View/Share/Create abre a ficha. Direcional navega; A/× confirma e B/○ volta no Padrão (Legado inverte). Extrair e velocidade ficam na pausa. Nos detalhes, L1/LB anterior e R1/RB próxima.\n\n" \
+		+ "[b]Combate e evolução[/b]\nSuas armas atacam automaticamente. Ao subir de nível, escolha uma melhoria pelo foco ou com 1–5; R ou LB/L1 rerrola a oferta quando houver rerrolagens. Cada personagem tem uma habilidade ativa própria.\n\n" \
 		+ "[b]Decisões da run[/b]\nAltares oferecem uma bênção com uma maldição. Cada andar tem uma regra ambiental: observe os avisos e adapte seu movimento. Chefes mudam de fase quando a vida baixa.\n\n" \
 		+ "[b]Progresso[/b]\nMoedas, desbloqueios e descobertas são garantidos ao encerrar a tentativa. O portal preserva sua build e aumenta o multiplicador de recompensa; extrair encerra a run com segurança."
 
@@ -582,6 +584,8 @@ func toast(text: String) -> void:
 # ------------------------------------------------------------------ teclas
 
 func _input(ev: InputEvent) -> void:
+	if not Game.controls.accepts(ev):
+		return
 	if not ev.is_pressed() or (ev is InputEventKey and ev.echo):
 		return
 	if ev.is_action_pressed(&"ui_cancel"):
@@ -812,6 +816,7 @@ func _on_note_changed() -> void:
 	_count.text = "%d/%d caracteres" % [_edit.text.length(), NOTE_MAX]
 
 func open_guide(first: bool) -> void:
+	_remember_guide_focus()
 	TouchUI.prepare(self)
 	_guide_mode = &"playtest"
 	_guide_open = true
@@ -827,11 +832,15 @@ func open_guide(first: bool) -> void:
 	_name_edit.text = Game.profile.data.name
 	_guide_start.text = "Começar" if first else "Fechar"
 	_name_edit.grab_focus()
+	if Game.controls.is_controller():
+		_guide_start.grab_focus()
+	_refresh_controller_guide()
 
 func open_game_rules() -> void:
 	TouchUI.prepare(self)
 	if _guide_open:
 		return
+	_remember_guide_focus()
 	_guide_mode = &"rules"
 	_guide_open = true
 	_paused_before = get_tree().paused
@@ -845,12 +854,15 @@ func open_game_rules() -> void:
 	_name_edit.visible = false
 	_guide_start.text = "Fechar"
 	_guide_start.grab_focus()
+	_refresh_controller_guide()
 
 func close_guide() -> void:
 	if _guide_mode == &"rules":
 		_close_guide_modal()
 		return
 	var nm := _name_edit.text.strip_edges()
+	if nm == "" and Game.controls.is_controller():
+		nm = "Viajante"
 	if nm == "":
 		if Game.profile.data.name == "":
 			_guide_error.text = "Digite um nome para continuar."
@@ -864,6 +876,7 @@ func close_guide() -> void:
 	_close_guide_modal()
 
 func _close_guide_modal() -> void:
+	Game.controls.transition()
 	_guide_open = false
 	_guide_modal.visible = false
 	get_tree().paused = _paused_before
@@ -871,9 +884,31 @@ func _close_guide_modal() -> void:
 	call_deferred("_restore_menu_focus")
 
 func _restore_menu_focus() -> void:
+	if _guide_return_focus != null:
+		var owner = _guide_return_focus.get_ref()
+		if is_instance_valid(owner) and owner.is_visible_in_tree():
+			owner.grab_focus()
+			return
 	var scene := get_tree().current_scene
 	if scene == null:
 		return
 	var play_btn := scene.get_node_or_null("Tabs/Jogar/Right/PlayBtn") as Button
 	if play_btn != null and not play_btn.disabled:
 		play_btn.grab_focus()
+
+func _remember_guide_focus() -> void:
+	var owner := get_viewport().gui_get_focus_owner()
+	_guide_return_focus = weakref(owner) if owner != null else null
+	Game.controls.transition()
+
+func _refresh_controller_guide() -> void:
+	if not _guide_open:
+		return
+	var base := game_rules_text() if _guide_mode == &"rules" else _guide_text()
+	if Game.controls.is_controller():
+		var guide := "[b]Seu controle · %s[/b]\nAnalógico esquerdo / direcional: andar e navegar. Analógico direito: mira manual.\n" % Game.controls.family()
+		for entry in [["ui_accept", "Confirmar / avançar"], ["ui_cancel", "Voltar / fechar"], ["hero_active", "Habilidade do herói"], ["run_interact", "Interagir"], ["run_toggle_aim", "Alternar mira"], ["run_reroll", "Rerrolar oferta"], ["offer_details", "Alternar detalhes"], ["run_items", "Ficha"], ["run_pause", "Pausa · velocidade e extração"]]:
+			guide += "[img=48x24]res://assets/icons/controller/%s/%d.svg[/img] %s: %s\n" % [Game.controls.family(), Game.controls.action_button(entry[0]), Game.controls.prompt(entry[0], ""), entry[1]]
+		guide += "Abas dos detalhes: %s anterior / %s próxima. Ajuste ícones, zona morta e botões em Controles.\n\n" % [Game.controls.prompt("tab_previous", "Q"), Game.controls.prompt("tab_next", "E")]
+		base = guide + base
+	_guide_body.text = base

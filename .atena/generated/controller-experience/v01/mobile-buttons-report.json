@@ -1,0 +1,583 @@
+{
+	"checks": [
+		{
+			"id": "titulo_entrar_quartel",
+			"passed": true
+		},
+		{
+			"id": "quartel_aba_0",
+			"passed": true
+		},
+		{
+			"id": "quartel_aba_1",
+			"passed": true
+		},
+		{
+			"id": "quartel_aba_2",
+			"passed": true
+		},
+		{
+			"id": "quartel_aba_3",
+			"passed": true
+		},
+		{
+			"id": "quartel_aba_4",
+			"passed": true
+		},
+		{
+			"id": "quartel_aba_5",
+			"passed": true
+		},
+		{
+			"id": "selecionar_heroi",
+			"passed": true
+		},
+		{
+			"id": "selecionar_fase",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_CodexCat",
+			"passed": true
+		},
+		{
+			"id": "abrir_categoria_codex",
+			"passed": true
+		},
+		{
+			"id": "escolher_categoria_codex",
+			"passed": true
+		},
+		{
+			"id": "categoria_codex_conteudo",
+			"passed": true
+		},
+		{
+			"id": "selecionar_entrada_codex",
+			"passed": true
+		},
+		{
+			"id": "detalhe_codex",
+			"passed": true
+		},
+		{
+			"id": "opcao_volume",
+			"passed": true
+		},
+		{
+			"id": "opcao_music_volume",
+			"passed": true
+		},
+		{
+			"id": "opcao_sfx_volume",
+			"passed": true
+		},
+		{
+			"id": "opcao_ambience_volume",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_DiffOpt",
+			"passed": true
+		},
+		{
+			"id": "abrir_dificuldade",
+			"passed": true
+		},
+		{
+			"id": "escolher_dificuldade",
+			"passed": true
+		},
+		{
+			"id": "dificuldade_salva",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_MusicMuteOpt",
+			"passed": true
+		},
+		{
+			"id": "opcao_music_muted",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_SfxMuteOpt",
+			"passed": true
+		},
+		{
+			"id": "opcao_sfx_muted",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_AmbienceMuteOpt",
+			"passed": true
+		},
+		{
+			"id": "opcao_ambience_muted",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_ReducedImpactOpt",
+			"passed": true
+		},
+		{
+			"id": "opcao_reduced_impact",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_BarksOpt",
+			"passed": true
+		},
+		{
+			"id": "opcao_barks",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_GuideBtn",
+			"passed": true
+		},
+		{
+			"id": "guia_quartel",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_@Button@60",
+			"passed": true
+		},
+		{
+			"id": "fechar_guia_quartel",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_AimOpt",
+			"passed": true
+		},
+		{
+			"id": "opcao_desktop_desativada_AimOpt",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_DisplayModeOpt",
+			"passed": true
+		},
+		{
+			"id": "opcao_desktop_desativada_DisplayModeOpt",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_ResolutionOpt",
+			"passed": true
+		},
+		{
+			"id": "opcao_desktop_desativada_ResolutionOpt",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_ResetBtn",
+			"passed": true
+		},
+		{
+			"id": "reset_pede_segundo_toque",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_ResetBtn",
+			"passed": true
+		},
+		{
+			"id": "reset_perfil_descartavel",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_@Button@1760",
+			"passed": true
+		},
+		{
+			"id": "comprar_melhoria_quartel",
+			"passed": true
+		},
+		{
+			"id": "selecionar_lista_hq",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_HqPlayBtn",
+			"passed": true
+		},
+		{
+			"id": "abrir_hq_diario",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_@Button@1947",
+			"passed": true
+		},
+		{
+			"id": "hq_proximo",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_@Button@1948",
+			"passed": true
+		},
+		{
+			"id": "hq_fechar",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_PlayBtn",
+			"passed": true
+		},
+		{
+			"id": "quartel_jogar",
+			"passed": true
+		},
+		{
+			"id": "joystick_lado_180.0",
+			"passed": true
+		},
+		{
+			"id": "habilidade_com_joystick_180.0",
+			"passed": true
+		},
+		{
+			"id": "cancelamento_joystick_180.0",
+			"passed": true
+		},
+		{
+			"id": "joystick_lado_1000.0",
+			"passed": true
+		},
+		{
+			"id": "habilidade_com_joystick_1000.0",
+			"passed": true
+		},
+		{
+			"id": "cancelamento_joystick_1000.0",
+			"passed": true
+		},
+		{
+			"id": "habilidade_bloqueada_na_recarga",
+			"passed": true
+		},
+		{
+			"id": "velocidade_1_5x",
+			"passed": true
+		},
+		{
+			"id": "velocidade_2x",
+			"passed": true
+		},
+		{
+			"id": "velocidade_1x",
+			"passed": true
+		},
+		{
+			"id": "ajuda_combate",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_@Button@60",
+			"passed": true
+		},
+		{
+			"id": "fechar_ajuda_combate",
+			"passed": true
+		},
+		{
+			"id": "abrir_ficha",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_@Button@2023",
+			"passed": true
+		},
+		{
+			"id": "ficha_aba_0",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_@Button@2024",
+			"passed": true
+		},
+		{
+			"id": "ficha_aba_1",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_@Button@2025",
+			"passed": true
+		},
+		{
+			"id": "ficha_aba_2",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_@Button@2026",
+			"passed": true
+		},
+		{
+			"id": "ficha_aba_3",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_@Button@2011",
+			"passed": true
+		},
+		{
+			"id": "ficha_detalhe_ CA 13  ·  9% esquiva",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_@Button@2012",
+			"passed": true
+		},
+		{
+			"id": "ficha_detalhe_ CAM 9  ·  0% esquiva",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_@Button@1997",
+			"passed": true
+		},
+		{
+			"id": "fechar_ficha",
+			"passed": true
+		},
+		{
+			"id": "pausa",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_PauseHelpBtn",
+			"passed": true
+		},
+		{
+			"id": "ajuda_pausa",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_@Button@60",
+			"passed": true
+		},
+		{
+			"id": "volume_pausa",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_ResumeBtn",
+			"passed": true
+		},
+		{
+			"id": "continuar",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_RerollBtn",
+			"passed": true
+		},
+		{
+			"id": "rerrolar",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_@Button@2299",
+			"passed": true
+		},
+		{
+			"id": "melhoria_seleciona",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_@Button@2040",
+			"passed": true
+		},
+		{
+			"id": "confirmar_melhoria",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_@Button@2371",
+			"passed": true
+		},
+		{
+			"id": "recusar_bencao_seleciona",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_@Button@2040",
+			"passed": true
+		},
+		{
+			"id": "recusar_bencao",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_@Button@2383",
+			"passed": true
+		},
+		{
+			"id": "bencao_seleciona",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_@Button@2040",
+			"passed": true
+		},
+		{
+			"id": "confirmar_bencao",
+			"passed": true
+		},
+		{
+			"id": "interagir_loja",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_@Button@2499",
+			"passed": true
+		},
+		{
+			"id": "comprar_loja_seleciona",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_@Button@2040",
+			"passed": true
+		},
+		{
+			"id": "comprar_loja",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_@Button@2615",
+			"passed": true
+		},
+		{
+			"id": "sair_loja_seleciona",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_@Button@2040",
+			"passed": true
+		},
+		{
+			"id": "sair_loja",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_@Button@2627",
+			"passed": true
+		},
+		{
+			"id": "equipar_vender_0_seleciona",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_@Button@2040",
+			"passed": true
+		},
+		{
+			"id": "equipar_vender_0",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_@Button@2701",
+			"passed": true
+		},
+		{
+			"id": "equipar_vender_1_seleciona",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_@Button@2040",
+			"passed": true
+		},
+		{
+			"id": "equipar_vender_1",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_QuitBtn",
+			"passed": true
+		},
+		{
+			"id": "abandonar_pede_confirmacao",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_@Button@2047",
+			"passed": true
+		},
+		{
+			"id": "cancelar_abandono",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_QuitBtn",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_@Button@2045",
+			"passed": true
+		},
+		{
+			"id": "confirmar_abandono",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_ReviveBtn",
+			"passed": true
+		},
+		{
+			"id": "reviver",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_DeclineReviveBtn",
+			"passed": true
+		},
+		{
+			"id": "recusar_reviver",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_@Button@2047",
+			"passed": true
+		},
+		{
+			"id": "cancelar_extracao_por_botao",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_@Button@2045",
+			"passed": true
+		},
+		{
+			"id": "confirmar_extracao",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_AgainBtn",
+			"passed": true
+		},
+		{
+			"id": "resultado_jogar_novamente",
+			"passed": true
+		},
+		{
+			"id": "entrada_unica_MenuBtn",
+			"passed": true
+		},
+		{
+			"id": "resultado_quartel",
+			"passed": true
+		},
+		{
+			"id": "save_real_preservado",
+			"passed": true
+		}
+	],
+	"failures": [],
+	"native_device": false,
+	"pilot": "P067-v02"
+}

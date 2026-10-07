@@ -45,6 +45,9 @@ var _content: VBoxContainer
 var _detail: RichTextLabel
 var _close_btn: Button
 var _stat_tips := {}
+var _previous_hint: Button
+var _next_hint: Button
+var _ability_hint: Label
 
 func _ready() -> void:
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
@@ -78,6 +81,8 @@ func _ready() -> void:
 	root.add_child(body)
 	body.add_child(_build_hero_column())
 	body.add_child(_build_tabs_column())
+	Game.controls.changed.connect(_update_controller_hints)
+	_update_controller_hints()
 	if Game.touch_controls_enabled():
 		_close_btn.text = "Fechar"
 		_close_btn.custom_minimum_size = Vector2(88, 56)
@@ -188,7 +193,8 @@ func _build_ability_card() -> Control:
 	var v := VBoxContainer.new()
 	v.add_theme_constant_override("separation", 3)
 	card.add_child(v)
-	v.add_child(_label("HABILIDADE" if Game.touch_controls_enabled() else "HABILIDADE  [Q/RMB]", 12, GOLD_DIM))
+	_ability_hint = _label("HABILIDADE", 12, GOLD_DIM)
+	v.add_child(_ability_hint)
 	var row := HBoxContainer.new()
 	row.add_theme_constant_override("separation", 8)
 	v.add_child(row)
@@ -217,7 +223,13 @@ func _build_tabs_column() -> Control:
 	var row := HBoxContainer.new()
 	row.add_theme_constant_override("separation", 6)
 	if not Game.touch_controls_enabled():
-		row.add_child(_label("◂ Q / LB", 13, MUTED))
+		_previous_hint = Button.new()
+		_previous_hint.flat = true
+		_previous_hint.custom_minimum_size = Vector2(52, 32)
+		_previous_hint.expand_icon = false
+		_previous_hint.focus_mode = Control.FOCUS_NONE
+		_previous_hint.pressed.connect(cycle_tab.bind(-1))
+		row.add_child(_previous_hint)
 	var group := ButtonGroup.new()
 	for i in TAB_NAMES.size():
 		var tb := Button.new()
@@ -236,7 +248,13 @@ func _build_tabs_column() -> Control:
 		_tab_buttons.append(tb)
 		row.add_child(tb)
 	if not Game.touch_controls_enabled():
-		row.add_child(_label("E / RB ▸", 13, MUTED))
+		_next_hint = Button.new()
+		_next_hint.flat = true
+		_next_hint.custom_minimum_size = Vector2(52, 32)
+		_next_hint.expand_icon = false
+		_next_hint.focus_mode = Control.FOCUS_NONE
+		_next_hint.pressed.connect(cycle_tab.bind(1))
+		row.add_child(_next_hint)
 	col.add_child(row)
 	_scroll = ScrollContainer.new()
 	_scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
@@ -264,13 +282,28 @@ func _build_tabs_column() -> Control:
 # ---------------------------------------------------------------- abertura e estado
 
 func show_sheet(b: Battle) -> void:
+	Game.controls.transition()
 	_b = b
 	_refresh_hero()
 	visible = true
 	set_tab(0)
 
 func hide_sheet() -> void:
+	Game.controls.transition()
 	visible = false
+
+func _update_controller_hints() -> void:
+	if _previous_hint != null:
+		_previous_hint.text = "◂" if Game.controls.is_controller() else "◂ Q"
+		_previous_hint.icon = Game.controls.glyph("tab_previous")
+		_previous_hint.add_theme_constant_override("icon_max_width", 32)
+		_next_hint.text = "▸" if Game.controls.is_controller() else "E ▸"
+		_previous_hint.tooltip_text = Game.controls.prompt("tab_previous", "Q") + " — Aba anterior"
+		_next_hint.tooltip_text = Game.controls.prompt("tab_next", "E") + " — Próxima aba"
+		_next_hint.icon = Game.controls.glyph("tab_next")
+		_next_hint.add_theme_constant_override("icon_max_width", 32)
+	_close_btn.text = "Fechar" if Game.touch_controls_enabled() else "Fechar (%s)" % Game.controls.prompt("ui_cancel", "C")
+	_ability_hint.text = "HABILIDADE" if Game.touch_controls_enabled() else "HABILIDADE [%s]" % Game.controls.prompt("hero_active", "Q/RMB")
 
 func current_tab() -> int:
 	return _tab
@@ -314,7 +347,12 @@ func _first_slot(n: Node) -> SheetSlot:
 	return null
 
 func _input(ev: InputEvent) -> void:
-	if not visible:
+	if not visible or not Game.controls.accepts(ev):
+		return
+	if ev.is_action_pressed("ui_cancel"):
+		closed.emit()
+		Game.controls.transition()
+		get_viewport().set_input_as_handled()
 		return
 	var d := 0
 	if ev is InputEventKey and ev.pressed and not ev.echo:

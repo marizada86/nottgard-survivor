@@ -14,6 +14,7 @@ var _guard := false
 var _flash := 0.0
 var _was_cooling := false
 var _key_text := "Q/RMB"
+var key_icon: Texture2D
 
 func _init() -> void:
 	custom_minimum_size = SIZE
@@ -77,5 +78,8 @@ func _draw() -> void:
 		draw_circle(center, radius, Color(1, 1, 1, 0.5 * _flash / FLASH_TIME))
 	var kfont := ThemeDB.fallback_font
 	var key_y := SIZE.y - 2.0
+	if key_icon != null:
+		draw_texture_rect(key_icon, Rect2(14, SIZE.y - 15, 32, 16), false)
+		return
 	draw_string_outline(kfont, Vector2(0, key_y), _key_text, HORIZONTAL_ALIGNMENT_CENTER, SIZE.x, 10, 3, Color(0, 0, 0, 0.9))
 	draw_string(kfont, Vector2(0, key_y), _key_text, HORIZONTAL_ALIGNMENT_CENTER, SIZE.x, 10, Color(1, 0.95, 0.75, 0.9))
