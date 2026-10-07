@@ -1,7 +1,7 @@
 ---
 id: "SPEC-120"
 title: "Curva base da fase 3 em diante e Marcas do Abismo"
-status: "PARTE A IMPLEMENTADA 2026-10-03 (EVID-149); aguarda playtest. Parte B (Marcas do Abismo) segue rascunho"
+status: "PARTE A IMPLEMENTADA 2026-10-03 (EVID-149); aguarda playtest. Parte B, entrega 1 (5 marcas) IMPLEMENTADA LOCAL 2026-10-07 pela SPEC-141 (EVID-193, EVID-192); restam 4 marcas, relíquia e conquistas por marca na entrega 2"
 created: "2026-10-03"
 relations: ["[[PLAN-055-mapas-vivos-segredos-e-dificuldade-2026-10-03]]", "[[EVID-148-curva-de-dificuldade-por-fase-2026-10-03]]", "[[PLAN-052-padrao-de-qualidade-do-balanceamento-dos-herois-2026-10-02]]"]
 cards: ["BAL-001", "BAL-016", "MEC-040"]

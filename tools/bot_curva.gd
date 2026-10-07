@@ -1,10 +1,11 @@
 extends SceneTree
 ## Curva de dificuldade por fase (PLAN-055 F2). Mesmo piloto do tools/bot.gd, mas mede cada fase:
-##   godot --headless --path . -s tools/bot_curva.gd -- <heroi> <seeds> [dt] [maxfases] [lado] [meta 0=novato 1=veterano 2=loja cheia]
+##   godot --headless --path . -s tools/bot_curva.gd -- <heroi> <seeds> [dt] [maxfases] [lado] [meta 0=novato 1=veterano 2=loja cheia] [marcas]
 ## Saída CSV (prefixo "CSV;"): heroi;seed;fase;nv_entrada;nv_saida;dur_s;pv_min_pct;s_abaixo_50;s_abaixo_25;dano_recebido;chefe_s;resultado
 
 var _map_side := 60.0
 var _meta := {}
+var _marks := {}   # SPEC-141: 7º argumento "horda=3,fome=2" ou "all=3"
 const METAS := [{}, {"dmg_pct": 0.16, "hp": 8, "ca": 1, "speed_pct": 0.03}, {"dmg_pct": 0.4, "hp": 20, "ca": 3, "speed_pct": 0.09, "pickup": 1.2}]
 
 func _init() -> void:
@@ -15,10 +16,25 @@ func _init() -> void:
 	var max_stages := int(a[3]) if a.size() > 3 else 9
 	_map_side = float(a[4]) if a.size() > 4 else 60.0
 	_meta = METAS[clampi(int(a[5]) if a.size() > 5 else 0, 0, 2)]
+	_marks = _parse_marks(a[6] if a.size() > 6 else "")
 	TerrainLayout.scale = _map_side / 40.0
 	for s in seeds:
 		_run(hero, s + 1, dt, max_stages)
 	quit()
+
+## "all=3" liga as cinco marcas no nível 3; "horda=2,fome=1" liga marcas soltas; vazio = sem marcas.
+func _parse_marks(text: String) -> Dictionary:
+	var out := {}
+	for part in text.split(",", false):
+		var kv := part.split("=")
+		if kv.size() != 2:
+			continue
+		if kv[0] == "all":
+			for id in AbyssMarks.ids():
+				out[id] = int(kv[1])
+		else:
+			out[kv[0]] = int(kv[1])
+	return AbyssMarks.normalize(out)
 
 func _new_stat(b: Battle) -> Dictionary:
 	return {"id": b.stage_id, "lv0": b.hero.level, "t0": b.run_time, "min": 1.0, "b50": 0.0, "b25": 0.0, "dmg": 0.0, "boss_t0": -1.0, "boss": -1.0, "res": "?"}
@@ -29,7 +45,7 @@ func _emit(hero_id: String, seed_v: int, st: Dictionary, b: Battle) -> void:
 
 func _run(hero_id: String, seed_v: int, dt: float, max_stages: int) -> void:
 	seed(seed_v * 7919)  # BAL-018: RNG global do bot reprodutível (empates em _pick)
-	var b := Battle.new(seed_v, hero_id, "dagruve", {"meta_mods": _meta})
+	var b := Battle.new(seed_v, hero_id, "dagruve", {"meta_mods": _meta, "abyss_marks": _marks})
 	b.map_size = Vector2(_map_side, _map_side)
 	b.hero.map_size = b.map_size
 	b.hero.pos = b.map_size * 0.5

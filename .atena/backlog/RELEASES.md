@@ -47,6 +47,20 @@ linha em "Histórico" (abaixo).
 Avaliada = as EVID dos testers foram triadas. Só então os cartões "aguardando
 playtest" viram verificados ou reabertos.
 
+## Aguardando versão (sem build)
+
+Itens implementados localmente que **ainda não estão em nenhum `.exe`**; entram na lista "O que testar" da próxima versão exportada.
+
+### Marcas do Abismo (MEC-040, SPEC-141, PLAN-074)
+
+1. **Liberação:** numa fase ainda não vencida, a aba **Marcas** mostra o aviso de bloqueio e os botões desativados; depois de vencer o chefe daquela fase, as marcas liberam.
+2. **Escolha:** na aba Marcas, − e + em cada uma das cinco marcas (0 a 3), com mouse, controle e toque; o total e o bônus de moeda (+10% por ponto) atualizam; a escolha continua depois de fechar o jogo. Na aba Jogar, a fase mostra o resumo ("Marcas do Abismo: nível N...").
+3. **Efeito na run:** o selo roxo "Marcas N" aparece na HUD (passe o mouse para ver a lista). Horda: mais inimigos ao mesmo tempo. Fúria: golpes doem mais. Carapaça: inimigos e chefe com mais PV. Pressa: inimigos mais rápidos. Fome: toda cura rende menos (nível 3 = 25% da cura).
+4. **Run inteira:** as marcas continuam valendo nas fases seguintes, depois do portal.
+5. **Recompensa e recorde:** o resultado mostra "Marcas do Abismo: nível N (moedas +X%)" e "novo recorde" quando vence a fase inicial com nível maior; as conquistas Marcado pelo Abismo (5), Selo do Abismo (10) e Abismo Sem Fundo (15) dão moedas.
+6. **Sem marcas:** a run deve ser igual à de antes (nenhuma marca ligada).
+7. **Perguntar ao tester:** o nível máximo (15) é desafiador ou impossível? Qual marca é a mais injusta?
+
 ## Versão 0.3.2 — Minor-update, build local exportada (publicação pendente)
 
 Decisão do dono (2026-10-06): subir a versão para **0.3.2** e exportar o `.exe` local em `build/`. `0.3.2` em `core/version.gd` e `export_presets.cfg`. Ainda **sem commit de versão nem push**: o CI só publica o release `latest` com a 0.3.2 depois disso.

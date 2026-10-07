@@ -1,0 +1,37 @@
+id: PLAN-074
+spec: SPEC-141
+spec_file: .atena/specs/SPEC-141-marcas-do-abismo-entrega-1.md
+plan_file: .atena/vault/drafts/PLAN-074-marcas-do-abismo-2026-10-07.md
+mode: per-plan
+status: COMPLETED_LOCAL
+approved: '2026-10-07'
+approval_basis: 'Dono: atena, aprovado, pode comecar pelo B-001 (por plano; premissas A1-A3 aceitas como propostas).'
+checkpoint: B-005/S-011
+request_classification: PLAN_DEVIATION
+deviation_id: DEV-006
+authorization_verbatim: 'atena, vamos com a MEC-040'
+decisions:
+  D1: 'Marcas acompanham a run inteira'
+  D2: 'Fatia de 5 marcas: Horda, Furia, Carapaca, Pressa, Fome'
+  D3: 'Liberacao depois da 1a vitoria na fase; atribuir a conquistas (premissa A1)'
+  D4: 'Aprovacao por plano'
+return_note: 'PLAN-071 e o active_plan e segue em B-006/S-011; nada a retomar alem do aceite em aparelho.'
+return:
+  plan: PLAN-071
+  state_file: .atena/state/plan-071-playtest-ranking.yaml
+  checkpoint_observed: B-006/S-011
+  status_observed: LOCAL_DELIVERED_AWAITING_DEVICE_ACCEPTANCE
+  snapshot: .atena/generated/abyss-marks/v01/plan-before-074.yaml
+assumptions_to_confirm: [A1, A2, A3]
+batches:
+  B-001: {title: Dados e nucleo de combate, steps: [S-001, S-002, S-003], status: LOCAL_VERIFIED, evidence: EVID-193}
+  B-002: {title: Perfil, recompensa e conquistas, steps: [S-004, S-005], status: LOCAL_VERIFIED, evidence: EVID-192}
+  B-003: {title: Interface, steps: [S-006, S-007], status: LOCAL_VERIFIED, evidence: EVID-192}
+  B-004: {title: Medicao, steps: [S-008, S-009], status: LOCAL_VERIFIED, evidence: EVID-192}
+  B-005: {title: Validacao e reconciliacao, steps: [S-010, S-011], status: LOCAL_VERIFIED, evidence: EVID-192}
+gates:
+  dependencies: NO_NEW_DEPENDENCIES
+  new_art: NOT_REQUIRED
+  commit_push_build_export: NOT_AUTHORIZED
+  other_sessions_changes: PRESERVE_UNTOUCHED
+blocking_gaps: []

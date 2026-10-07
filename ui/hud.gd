@@ -766,6 +766,8 @@ func show_result(res: Dictionary, summary: Dictionary) -> void:
 		Data.table("heroes")[res.hero].name, Data.table("stages")[res.stage].name, t / 60, t % 60, res.level, res.kills, res.bosses,
 		"extraído" if res.extracted else ("derrota" if res.dead else "final"), int(res.get("descent_depth", 0)), float(res.get("reward_mult", 1.0)),
 		summary.earned, (" (%d%% da tentativa)" % int(round(float(summary.reward_rate) * 100.0))) if float(summary.reward_rate) < 1.0 else "", summary.coins]
+	if int(res.get("abyss_level", 0)) > 0:
+		txt += "\nMarcas do Abismo: nível %d (moedas +%d%%)%s" % [int(res.abyss_level), int(round(AbyssMarks.reward_bonus(res.abyss_marks) * 100.0)), "  ★ novo recorde" if bool(summary.get("abyss_record", false)) else ""]
 	var names: Array = []
 	for id in summary.achievements:
 		for a in Data.table("achievements").achievements:

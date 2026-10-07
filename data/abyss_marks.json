@@ -1,0 +1,12 @@
+{
+  "max_level": 3,
+  "reward_per_point": 0.10,
+  "order": ["horda", "furia", "carapaca", "pressa", "fome"],
+  "marks": {
+    "horda": {"name": "Horda", "per_level": 0.20, "desc": "+20% de inimigos por nível: mais inimigos ao mesmo tempo e nascendo mais depressa."},
+    "furia": {"name": "Fúria", "per_level": 0.15, "desc": "+15% de dano inimigo por nível (golpes e áreas; poças e névoa não mudam)."},
+    "carapaca": {"name": "Carapaça", "per_level": 0.20, "desc": "+20% de PV dos inimigos por nível (chefe incluso; objetos quebráveis não mudam)."},
+    "pressa": {"name": "Pressa", "per_level": 0.10, "desc": "+10% de velocidade dos inimigos por nível (chefes não mudam)."},
+    "fome": {"name": "Fome", "per_level": 0.25, "desc": "−25% de toda cura por nível; no nível 3 só resta 25% da cura."}
+  }
+}

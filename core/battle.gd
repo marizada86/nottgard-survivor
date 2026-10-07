@@ -156,6 +156,15 @@ var tide_kills := 0
 var tide_last_t := -100.0
 var _tide_buffs: Array = []  # instantes (time) em que cada marco expira
 var descent_depth := 0
+## SPEC-141: Marcas do Abismo; valem na run inteira (sobrevivem ao load_stage). Vazio = run idêntica à de antes.
+var abyss_marks: Dictionary = {}
+var abyss_level := 0
+var abyss_start_stage := ""
+var _mk_density := 1.0
+var _mk_dmg := 1.0
+var _mk_hp := 1.0
+var _mk_speed := 1.0
+var _mk_heal := 1.0
 var stage_rule: Dictionary = {}
 var stage_events: Array = []
 var _rule_timer := 0.0
@@ -179,6 +188,7 @@ func _init(seed_value: int = 1, hero_id: String = "durvall", stage_key: String =
 	_seed = seed_value
 	styx_rng.seed = seed_value ^ 0x5179
 	difficulty = float(ctx.get("difficulty", 1.0))
+	_set_abyss_marks(ctx.get("abyss_marks", {}), stage_key)
 	hero = Hero.make(hero_id, ctx.get("meta_mods", {}), ctx.get("bonus_mods", {}))
 	visual_god = String(Data.table("heroes")[hero_id].get("patron", ""))
 	active_def = Data.table("abilities")[hero_id].duplicate(true)
@@ -191,6 +201,27 @@ func _init(seed_value: int = 1, hero_id: String = "durvall", stage_key: String =
 	hero.weapons.append(Weapon.make(start_w))
 	codex.weapons[start_w] = true
 	load_stage(stage_key)
+
+## SPEC-141: grava as marcas da run e pré-calcula os multiplicadores (1.0 sem marcas, para a run seguir idêntica).
+func _set_abyss_marks(raw: Variant, start_stage: String) -> void:
+	abyss_marks = AbyssMarks.normalize(raw)
+	abyss_level = AbyssMarks.total_level(abyss_marks)
+	abyss_start_stage = start_stage
+	_mk_density = AbyssMarks.up_mult(abyss_marks, "horda")
+	_mk_dmg = AbyssMarks.up_mult(abyss_marks, "furia")
+	_mk_hp = AbyssMarks.up_mult(abyss_marks, "carapaca")
+	_mk_speed = AbyssMarks.up_mult(abyss_marks, "pressa")
+	_mk_heal = AbyssMarks.heal_mult(abyss_marks)
+
+## SPEC-141 (Fome): toda cura do herói passa por aqui; sem a marca devolve o valor intacto.
+func _heal_amount(amount: float) -> float:
+	return amount * _mk_heal
+
+## Soma PV direto (sem a barreira por excesso de `_heal_hero`), já com a Fome; registra a cura da run.
+func _add_hp(amount: float) -> void:
+	amount = _heal_amount(amount)
+	run_record.healing += minf(amount, maxf(0.0, hero.max_hp - hero.hp))
+	hero.hp = minf(hero.max_hp, hero.hp + amount)
 
 func load_stage(stage_key: String) -> void:
 	stage_id = stage_key
@@ -378,9 +409,8 @@ func reward_multiplier() -> float:
 
 func _reward_multiplier_for(depth: int) -> float:
 	var values := [1.0, 1.25, 1.55, 1.90]
-	if depth < values.size():
-		return values[depth]
-	return 1.90 + float(depth - 3) * 0.35
+	var base: float = values[depth] if depth < values.size() else 1.90 + float(depth - 3) * 0.35
+	return base * (1.0 + AbyssMarks.reward_bonus(abyss_marks))
 
 func next_reward_multiplier() -> float:
 	return _reward_multiplier_for(descent_depth + 1)
@@ -402,6 +432,7 @@ func _has_item_effect(effect_id: String) -> bool:
 func _heal_hero(amount: float) -> void:
 	if amount <= 0.0:
 		return
+	amount = _heal_amount(amount)
 	var before := hero.hp
 	hero.hp = minf(hero.max_hp, hero.hp + amount)
 	run_record.healing += maxf(0.0, hero.hp - before)
@@ -654,9 +685,8 @@ func _fire_nova(p: Dictionary, area: float) -> bool:
 	events.append({"type": "nova", "pos": hero.pos, "radius": r, "dtype": p.dtype, "weapon": p.get("_audio_id", p.get("id", ""))})
 	var heal := float(p.get("heal", 0.0))
 	if heal > 0.0:
-		run_record.healing += minf(heal, maxf(0.0, hero.max_hp - hero.hp))
-		hero.hp = minf(hero.max_hp, hero.hp + heal)
-		events.append({"type": "heal", "pos": hero.pos, "amount": maxi(1, int(round(heal)))})
+		_add_hp(heal)
+		events.append({"type": "heal", "pos": hero.pos, "amount": maxi(1, int(round(_heal_amount(heal))))})
 	for t in targets:
 		_hero_hit(t, p, true)
 	return true
@@ -737,8 +767,7 @@ func _hero_hit(e: Enemy, p: Dictionary, roll: bool, visual_theme: Dictionary = {
 						_kill(other)
 		var ls := float(p.get("lifesteal", 0.0)) + hero.m("lifesteal")
 		if ls > 0.0:
-			run_record.healing += minf(dmg * ls, maxf(0.0, hero.max_hp - hero.hp))
-			hero.hp = minf(hero.max_hp, hero.hp + dmg * ls)
+			_add_hp(dmg * ls)
 	_apply_effects(e, p)
 	if float(p.get("gold_hit", 0.0)) > 0.0:
 		_add_gold(float(p.gold_hit))
@@ -1234,7 +1263,7 @@ func _hit_chance(accuracy: int, evasion: float) -> float:
 func _stage_dmg_mult(src: String) -> float:
 	if src != "hit" and src != "aoe":
 		return 1.0
-	return float(stage.get("dmg_mult", 1.0))
+	return float(stage.get("dmg_mult", 1.0)) * _mk_dmg
 
 func _hurt_hero(dmg: float, src: String, bypass_generic_defenses: bool = false) -> void:
 	if hero.dead or (invuln > 0.0 and not bypass_generic_defenses):
@@ -1590,7 +1619,7 @@ func _collect(kind: String, value: float) -> void:
 		"gold": _add_gold(value)
 		"potion":
 			_heal_hero(hero.max_hp * value)
-			events.append({"type": "heal", "pos": hero.pos, "amount": int(hero.max_hp * value)})
+			events.append({"type": "heal", "pos": hero.pos, "amount": int(_heal_amount(hero.max_hp * value))})
 		"magnet":
 			for p in pickups:
 				p.magnet = true
@@ -1769,7 +1798,7 @@ func _update_interactions(dt: float) -> void:
 				if _has_boon_effect("weak_fountains"):
 					heal_pct *= 0.5
 				_heal_hero(hero.max_hp * heal_pct)
-				events.append({"type": "heal", "pos": hero.pos, "amount": int(hero.max_hp * heal_pct)})
+				events.append({"type": "heal", "pos": hero.pos, "amount": int(_heal_amount(hero.max_hp * heal_pct))})
 				var spring_text := String(Data.table("stage_story").get(stage_id, {}).get("fonte_uso", "")) if String(it.get("name", "")) != "" else ""
 				events.append({"type": "toast", "text": (spring_text if spring_text != "" else "Fonte: +%d%% PV") % int(round(heal_pct * 100.0))})
 	interactions = interactions.filter(func(i): return not i.used)
@@ -2398,8 +2427,7 @@ func choose(i: int) -> void:
 		"passive":
 			hero.passives[c.id] = int(hero.passives.get(c.id, 0)) + 1
 		"heal":
-			run_record.healing += minf(hero.max_hp * 0.4, maxf(0.0, hero.max_hp - hero.hp))
-			hero.hp = minf(hero.max_hp, hero.hp + hero.max_hp * 0.4)
+			_add_hp(hero.max_hp * 0.4)
 		"gold":
 			_add_gold(40.0)
 		"boon":
@@ -2448,10 +2476,13 @@ func _ring_pos() -> Vector2:
 
 func _spawn(id: String, at: Vector2, minute_override: float = -1.0) -> Enemy:
 	var mn := minute() if minute_override < 0.0 else minute_override
-	var e := Enemy.make(id, at, mn, float(stage.hp_mult) * difficulty, tier())
+	var hp_mark := 1.0 if Data.table("enemies")[id].get("flags", []).has("quebravel") else _mk_hp
+	var e := Enemy.make(id, at, mn, float(stage.hp_mult) * difficulty * hp_mark, tier())
 	e.pos = e.pos.clamp(Vector2(0.6, 0.6), map_size - Vector2(0.6, 0.6))
 	if happenings.enemy_speed_mult != 1.0 and not e.is_boss():
 		e.speed *= happenings.enemy_speed_mult
+	if _mk_speed != 1.0 and not e.is_boss():
+		e.speed *= _mk_speed
 	if _stage_has_rule("illusions") and not e.is_boss() and not e.has_flag("elite_only") and rng.randf() < float(stage_rule.get("chance", 0.12)) and e.xp > 0:
 		e.max_hp = 1.0
 		e.hp = 1.0
@@ -2616,12 +2647,12 @@ func _horde_step(dt: float) -> void:
 		_horde_state = 3
 		return
 	_horde_acc += dt
-	var every := float(w.every) * SPAWN_SLOW
+	var every := float(w.every) * SPAWN_SLOW / _mk_density
 	if _horde_acc < every:
 		return
 	_horde_acc = 0.0
-	var cap := int(float(int(stage.cap) + int(minute()) * 3) * HORDE_CAP_MULT)
-	var room := int(ceil(float(w.max) * HORDE_ROOM_MULT)) - alive(String(w.id))
+	var cap := int(float(int(stage.cap) + int(minute()) * 3) * HORDE_CAP_MULT * _mk_density)
+	var room := int(ceil(float(w.max) * HORDE_ROOM_MULT * _mk_density)) - alive(String(w.id))
 	for i in mini(int(w.n) * HORDE_N_MULT, room):
 		if _combat_count() < cap:
 			_spawn(String(w.id), _ring_pos())
@@ -2631,6 +2662,8 @@ func _director(dt: float) -> void:
 	var opening := opening_factor()
 	var o: Dictionary = Data.table("difficulty").get("opening", {})
 	var cap := int(stage.cap) + int(minute()) * 3 + int(round(float(o.get("cap_bonus", 0)) * opening))
+	if _mk_density != 1.0:
+		cap = int(float(cap) * _mk_density)
 	if _combat_count() < cap:
 		for wi in stage.waves.size():
 			var w: Dictionary = stage.waves[wi]
@@ -2638,9 +2671,10 @@ func _director(dt: float) -> void:
 				continue
 			_acc[wi] = float(_acc.get(wi, 0.0)) + dt
 			var every := float(w.every) * SPAWN_SLOW * lerpf(1.0, float(o.get("every_mult", 1.0)), opening)
+			every /= _mk_density
 			if _acc[wi] >= every:
 				_acc[wi] = 0.0
-				var max_alive := int(ceil(float(w.max) * lerpf(1.0, float(o.get("max_mult", 1.0)), opening)))
+				var max_alive := int(ceil(float(w.max) * lerpf(1.0, float(o.get("max_mult", 1.0)), opening) * _mk_density))
 				var per_wave := int(ceil(float(w.n) * lerpf(1.0, float(o.get("n_mult", 1.0)), opening)))
 				var room := max_alive - alive(String(w.id))
 				for i in mini(per_wave, room):
@@ -2893,6 +2927,7 @@ func _styx_lucidity_test(dc: int) -> void:
 func result() -> Dictionary:
 	return {"won": state == "won", "dead": state == "dead", "extracted": extracted, "time": run_time, "kills": stats.kills,
 		"gold": int(round(stats.gold * reward_multiplier())), "raw_gold": int(stats.gold), "reward_mult": reward_multiplier(), "descent_depth": descent_depth,
+		"abyss_level": abyss_level, "abyss_marks": abyss_marks.duplicate(), "abyss_start_stage": abyss_start_stage,
 		"clean_streak": stats.clean_streak_best, "level": hero.level, "stage": stage_id, "hero": hero.id, "bosses": stats.bosses, "boss_ids": stats.boss_ids, "elites": stats.elites, "crits": stats.crits,
 		"ones": stats.ones, "still": stats.still_best, "rituals": stats.rituals, "bets_won": stats.bets_won, "loyalty": stats.loyalty, "chests": stats.chests, "stages_cleared": stats.stages_cleared, "stage_ids": stats.stage_ids, "cleared_ids": stats.cleared_ids, "final_victory": final_victory, "weapons": hero.weapons.map(func(w): return w.id), "codex": codex,
 		"reward_rate": death_reward_rate if state == "dead" else 1.0, "death_reason": death_reason}

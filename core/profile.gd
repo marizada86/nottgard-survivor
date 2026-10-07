@@ -10,7 +10,7 @@ static func fresh() -> Dictionary:
 		"codex": {"enemies": {}, "items": {}, "weapons": {}},
 		"settings": {"aim": "auto", "volume": 0.7, "music_volume": 0.8, "sfx_volume": 0.9, "ambience_volume": 0.75,
 			"music_muted": false, "sfx_muted": false, "ambience_muted": false,
-			"window_mode": "windowed", "resolution": "1280x720", "fullscreen": false, "difficulty": 0}}
+			"window_mode": "windowed", "resolution": "1280x720", "fullscreen": false, "difficulty": 0, "abyss_marks": {}}}
 
 func _init(d: Dictionary = {}) -> void:
 	data = fresh()
@@ -195,6 +195,7 @@ func apply_run(result: Dictionary) -> Dictionary:
 		st.reached[sid] = true
 	for sid in result.cleared_ids:
 		data.cleared[sid] = true
+	var new_abyss_record := record_abyss(result)
 	var bt: float = float(st.best_time.get(result.stage, 0.0))
 	if bool(result.won) and (bt <= 0.0 or float(result.time) < bt):
 		st.best_time[result.stage] = float(result.time)
@@ -203,7 +204,7 @@ func apply_run(result: Dictionary) -> Dictionary:
 		for k in codex[cat]:
 			data.codex[cat][k] = true
 	var new_ach := check_achievements(result)
-	return {"earned": earned, "coins": coins(), "achievements": new_ach, "reward_rate": reward_rate}
+	return {"earned": earned, "coins": coins(), "achievements": new_ach, "reward_rate": reward_rate, "abyss_record": new_abyss_record}
 
 func stat_value(stat: String, run: Dictionary) -> float:
 	var st: Dictionary = data.stats
@@ -227,6 +228,7 @@ func stat_value(stat: String, run: Dictionary) -> float:
 		"rituals_total": return float(st.get("rituals_total", 0))
 		"bets_won_total": return float(st.get("bets_won_total", 0))
 		"loyalty_total": return float(st.get("loyalty_total", 0))
+		"abyss_best_level": return float(abyss_best_level())
 	if stat.begins_with("hero_deaths_"):
 		return float(st.get("hero_deaths", {}).get(stat.substr(12), 0))
 	if stat.begins_with("hero_cleared_"):
@@ -257,3 +259,36 @@ func achievement_progress(a: Dictionary) -> String:
 		return "✔"
 	var v := stat_value(a.stat, {})
 	return "%d/%d" % [int(minf(v, float(a.value))), int(a.value)]
+
+# ------------------------------------------------------------------ Marcas do Abismo (SPEC-141)
+
+## Recorde por herói e fase inicial: o maior nível com que o chefe da fase inicial caiu. Só conta vitória nela.
+func record_abyss(result: Dictionary) -> bool:
+	var level := int(result.get("abyss_level", 0))
+	var start := String(result.get("abyss_start_stage", ""))
+	if level <= 0 or start == "" or not result.get("cleared_ids", []).has(start):
+		return false
+	var st: Dictionary = data.stats
+	if not st.has("abyss_best"):
+		st["abyss_best"] = {}
+	var hero_id := String(result.get("hero", ""))
+	if not st.abyss_best.has(hero_id):
+		st.abyss_best[hero_id] = {}
+	if int(st.abyss_best[hero_id].get(start, 0)) >= level:
+		return false
+	st.abyss_best[hero_id][start] = level
+	return true
+
+func abyss_best_for(hero_id: String, stage_id: String) -> int:
+	return int(data.stats.get("abyss_best", {}).get(hero_id, {}).get(stage_id, 0))
+
+## Maior nível entre todos os recordes (base das conquistas de 5, 10 e 15 pontos).
+func abyss_best_level() -> int:
+	var best := 0
+	for hero_id in data.stats.get("abyss_best", {}):
+		for stage_id in data.stats.abyss_best[hero_id]:
+			best = maxi(best, int(data.stats.abyss_best[hero_id][stage_id]))
+	return best
+
+func abyss_unlocked(stage_id: String) -> bool:
+	return AbyssMarks.unlocked(data.cleared, stage_id)

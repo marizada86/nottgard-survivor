@@ -87,7 +87,7 @@ func _run_checks() -> void:
 	_record("quartel_aba_proxima", tabs.current_tab == 1)
 	await _button(JOY_BUTTON_LEFT_SHOULDER)
 	_record("quartel_aba_anterior", tabs.current_tab == 0)
-	tabs.current_tab = 4
+	tabs.current_tab = tabs.get_tab_idx_from_control(menu.get_node("Tabs/Opções"))
 	await _frames()
 	menu.guide_btn.grab_focus()
 	Playtest.open_game_rules()

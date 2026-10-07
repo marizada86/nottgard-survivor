@@ -3,6 +3,7 @@ extends Control
 
 const HQ_SCREEN := preload("res://ui/hq_screen.tscn")
 const HQCatalog := preload("res://core/hq_catalog.gd")
+const AbyssPanel := preload("res://ui/abyss_panel.gd")
 
 @onready var coins_label: Label = %CoinsLabel
 @onready var hero_list: ItemList = %HeroList
@@ -40,6 +41,7 @@ var heroes: Array = []
 var stages: Array = []
 var codex_ids: Array = []
 var hq_ids: Array[String] = []
+var abyss_panel: ScrollContainer
 var _reset_armed := false
 var _hq_open := false
 
@@ -102,6 +104,11 @@ func _ready() -> void:
 	reset_btn.pressed.connect(_on_reset)
 	hq_list.item_selected.connect(_refresh_hq_selection)
 	hq_play_btn.pressed.connect(_open_selected_hq)
+	abyss_panel = AbyssPanel.new()
+	abyss_panel.name = "Marcas"
+	%Tabs.add_child(abyss_panel)
+	%Tabs.move_child(abyss_panel, 1)
+	abyss_panel.changed.connect(_refresh_stage)
 	_refresh_all()
 	var controller_options := preload("res://ui/controller_options.gd").new()
 	$Tabs/Opções/Content.add_child(controller_options)
@@ -323,6 +330,8 @@ func _refresh_hero() -> void:
 				txt += "\n\n[color=#888888]Biografia bloqueada: vença uma fase com este herói.[/color]"
 	hero_info.text = txt
 	Game.run_hero = id
+	if abyss_panel != null:
+		abyss_panel.refresh()
 	_update_play()
 
 func _refresh_stage() -> void:
@@ -339,8 +348,11 @@ func _refresh_stage() -> void:
 		txt += "\nMelhor tempo: %d:%02d" % [int(bt) / 60, int(bt) % 60]
 	if not Game.profile.stage_unlocked(id):
 		txt += "\n\n[color=#e0a040]Bloqueada: derrote o chefe de %s.[/color]" % Data.table("stages")[d.unlock].name
+	txt += "\n\n" + AbyssPanel.summary_line(id)
 	stage_info.text = txt
 	Game.run_stage = id
+	if abyss_panel != null:
+		abyss_panel.refresh()
 	_update_play()
 
 func _ambient_text(amb: Array) -> String:

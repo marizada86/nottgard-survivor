@@ -28,6 +28,7 @@ var gold_label: Label
 var kills_label: Label
 var ca_label: Label
 var cam_label: Label
+var abyss_label: Label
 var boon_row: HBoxContainer
 var _portrait: TextureRect
 var _attr_labels := {}
@@ -239,6 +240,10 @@ func _build_chip_row() -> Control:
 	kills_label = _chip(row, "kill", "Abates")
 	ca_label = _chip(row, "ca", "")
 	cam_label = _chip(row, "cam", "")
+	abyss_label = _outlined(_label("", 16, Color(0.78, 0.56, 0.96)))
+	abyss_label.mouse_filter = Control.MOUSE_FILTER_PASS
+	abyss_label.visible = false
+	row.add_child(abyss_label)
 	return row
 
 ## Chip de ícone e valor; o tooltip fica no próprio chip (PASS: não rouba cliques da arena).
@@ -276,6 +281,7 @@ func update(b: Battle) -> void:
 		(_attr_labels[a] as Label).text = "%s %d" % [ATTR_NAMES[a], h.attr(a)]
 	gold_label.text = str(int(h.gold))
 	kills_label.text = str(b.stats.kills)
+	_update_abyss(b)
 	var ev_ca := h.typed_evasion("fisico")
 	var ev_cam := h.typed_evasion("magico")
 	ca_label.text = defense_text(h.ca(), ev_ca)
@@ -291,6 +297,19 @@ func update(b: Battle) -> void:
 		_keycap.self_modulate = Color(k, k, k)
 	else:
 		_keycap.self_modulate = Color.WHITE
+
+## SPEC-141: selo roxo "Marcas N" só quando a run tem Marcas do Abismo; o tooltip lista as marcas.
+func _update_abyss(b: Battle) -> void:
+	abyss_label.visible = b.abyss_level > 0
+	if b.abyss_level <= 0:
+		return
+	abyss_label.text = "Marcas %d" % b.abyss_level
+	var lines: Array = []
+	for id in AbyssMarks.ids():
+		var lv := AbyssMarks.level_of(b.abyss_marks, String(id))
+		if lv > 0:
+			lines.append("%s %d" % [AbyssMarks.cfg().marks[id].name, lv])
+	abyss_label.tooltip_text = "Marcas do Abismo (moedas +%d%%): %s" % [int(round(AbyssMarks.reward_bonus(b.abyss_marks) * 100.0)), ", ".join(lines)]
 
 static func hp_text(hp: float, max_hp: float, barrier: float) -> String:
 	var t := "%d / %d" % [int(ceil(hp)), int(max_hp)]
