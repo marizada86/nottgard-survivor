@@ -337,6 +337,8 @@ func _exit_tree() -> void:
 	if get_tree().process_frame.is_connected(_sync_cursor):
 		get_tree().process_frame.disconnect(_sync_cursor)
 	CursorSkin.reset()
+	if battle != null and not _result_shown:
+		Playtest.record_run(battle)
 
 func _toggle_items_panel() -> void:
 	Game.controls.transition()
@@ -619,10 +621,6 @@ func _record_stage_cleared(stage_id: String, event_type: String) -> void:
 func _present_hqs(hq_ids: Array[String]) -> void:
 	for hq_id in hq_ids:
 		await _present_hq(hq_id)
-
-func _exit_tree() -> void:
-	if battle != null and not _result_shown:
-		Playtest.record_run(battle)
 
 func _present_hq(hq_id: String) -> void:
 	hud.clear_mobile_input()
