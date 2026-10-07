@@ -8,6 +8,7 @@ extends SceneTree
 var _map_side := 60.0
 var _meta := {}
 var _weapon := ""
+var _passive := ""
 const METAS := [{}, {"dmg_pct": 0.16, "hp": 8, "ca": 1, "speed_pct": 0.03}]
 
 func _init() -> void:
@@ -20,7 +21,8 @@ func _init() -> void:
 	_map_side = float(a[5]) if a.size() > 5 else 60.0
 	_meta = METAS[clampi(int(a[6]) if a.size() > 6 else 0, 0, 1)]
 	TerrainLayout.scale = _map_side / 40.0
-	_weapon = a[7] if a.size() > 7 else ""  # ex.: vela_sagrada:5 (arma extra no nível dado; "none" na bênção mede só a arma)
+	_passive = a[8] if a.size() > 8 else ""  # ex.: regeneracao:5 (passiva forçada no nível dado)
+	_weapon = a[7] if a.size() > 7 and a[7] != "-" else ""  # ex.: vela_sagrada:5 (arma extra no nível dado; "none" na bênção mede só a arma)
 	var boon := {}
 	var extra: Array = []  # SPEC-129 B-004: "a+b" força duas ou mais bênçãos (mede o Favor)
 	if boon_id != "none":
@@ -55,9 +57,12 @@ func _run(hero_id: String, seed_v: int, dt: float, max_stages: int, boon_id: Str
 	if _weapon != "":
 		var wp := _weapon.split(":")
 		b.hero.weapons.append(Weapon.make(wp[0], int(wp[1]) if wp.size() > 1 else 1))
+	if _passive != "":
+		var pp := _passive.split(":")
+		b.hero.passives[pp[0]] = int(pp[1]) if pp.size() > 1 else 1
 	for bn in boons:
 		b.hero.boons.append(bn)
-	if not boons.is_empty():
+	if not boons.is_empty() or _passive != "":
 		b.hero.recalc()
 		b.hero.hp = b.hero.max_hp
 	var st := _new_stat(b)

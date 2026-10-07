@@ -6,7 +6,7 @@
   "cota_de_malha":    {"name": "Cota de Malha", "src": "Equipamento", "desc": "+1 CA por nível.", "mods": {"ca": 1}},
   "robe_arcano":      {"name": "Robe Arcano", "src": "Equipamento", "desc": "+1 CAM por nível.", "mods": {"cam": 1}},
   "botas_leves":      {"name": "Botas Leves", "src": "Equipamento", "desc": "+6% de velocidade por nível.", "mods": {"speed_pct": 0.06}},
-  "regeneracao":      {"name": "Regeneração", "src": "Sendrinah", "desc": "+0,4 PV por segundo por nível.", "mods": {"regen": 0.4}},
+  "regeneracao":      {"name": "Regeneração", "src": "Sendrinah", "desc": "+0,12 PV por segundo por nível.", "mods": {"regen": 0.12}},
   "foco_arcano":      {"name": "Foco Arcano", "src": "Poder Místico", "desc": "-6% de recarga das armas por nível.", "mods": {"cd_pct": 0.06}},
   "alcance":          {"name": "Alcance", "src": "Cartas", "desc": "+10% de área e alcance por nível.", "mods": {"area_pct": 0.10}},
   "sabedoria":        {"name": "Sabedoria", "src": "Experiência", "desc": "+10% de XP por nível.", "mods": {"xp_pct": 0.10}},

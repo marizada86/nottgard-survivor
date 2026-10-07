@@ -47,6 +47,21 @@ linha em "Histórico" (abaixo).
 Avaliada = as EVID dos testers foram triadas. Só então os cartões "aguardando
 playtest" viram verificados ou reabertos.
 
+## Versão 0.3.2 — Minor-update, build local exportada (publicação pendente)
+
+Decisão do dono (2026-10-06): subir a versão para **0.3.2** e exportar o `.exe` local em `build/`. `0.3.2` em `core/version.gd` e `export_presets.cfg`. Ainda **sem commit de versão nem push**: o CI só publica o release `latest` com a 0.3.2 depois disso.
+
+Entra, além da 0.3.1 já publicada (commits `cbdcae7` a `ced9d8e`): famílias de bênção Juramento e Caminho (Juramento de Lliira, Caminho da Estrela de Tou Um; cura da Estrela 0,3 PV/s), explosão do Passo pelas Sombras do Sylas `3d8` → `1d10` (BAL-021), arte estática de inimigos assentada na sombra, **baú vira Mímico uma vez só** (BUG-030) e **item de baú com slot vazio pausa e mostra o item** (BUG-031, [EVID-173](../evidence/EVID-173-bau-mimico-e-pausa-ao-pegar-item-2026-10-06.md)).
+
+**Atenção: o `.exe` foi exportado da árvore de trabalho, não de um commit.** Reexportado em 2026-10-06 às 15:51 sobre `a09d460+` (sujo), já com o trabalho da outra sessão (lettering e cursor da SPEC-132). Além do commit, ele leva mudanças ainda **não commitadas**: novas bênçãos e rebalanceamento da SPEC-129 B-003 (`data/boons.json`, `data/boon_effects.json`, `EVID-170`), e o esqueleto de lettering e cursor da SPEC-132 B-002 (`core/game.gd`, `ui/run.gd`, com fallback; sem arte nova). O release `latest` do CI, ao contrário, sairá só do que for commitado.
+
+### O que testar (0.3.2, itens novos)
+
+1. **Baú Mímico:** um baú vira Mímico no máximo uma vez; o baú que ele larga sempre dá item.
+2. **Item de baú:** com o slot vazio, o jogo pausa e mostra o item (ícone, raridade, atributos) com o botão Equipar; confira também o baú do chefe.
+3. **Sylas, Passo pelas Sombras:** a explosão da isca ainda ajuda sem limpar a primeira horda?
+4. **Bênçãos Juramento e Caminho:** aparecem nos altares? A cura da Estrela de Tou Um parece justa?
+
 ## Versão 0.3.1 — Minor-update por decisão do dono, a publicar (playtest)
 
 Decisão do dono (2026-10-05): a versão do balanceamento da SPEC-122 e dos inimigos novos do PLAN-053 sai como **0.3.1 "por enquanto"**, em vez de 0.4.0. Pela regra de tipos (acima) isso seria Major, porque traz a raridade Incomum e muda a dificuldade; por isso esta versão **não tem changelog em PDF nem questionário novo**, e o [QUESTIONARIO-006](questionarios/QUESTIONARIO-006-v0.3.0.md) não cobre estes itens.
@@ -192,6 +207,7 @@ Origem: [PLAN-038](../vault/drafts/PLAN-038-atualizacao-pos-playtests-t01-t02-t0
 
 | Versão | Tipo | Publicada | Commit da build | Avaliada em |
 |---|---|---|---|---|
+| 0.3.2 | Minor (build local exportada; sem PDF nem questionário novo) | pendente (falta commit de versão e push) | `a09d460+` (árvore suja, reexportada 2026-10-06 15:51) | — |
 | 0.3.1 | Minor (decisão do dono; sem PDF nem questionário novo) | 2026-10-05 (release `latest`, Playtest v0.3.1) | ver título do release | — (aguardando testers) |
 | 0.3.0 | Major (changelog + guia fácil + questionário 006) | 2026-10-03 (release `latest`, Playtest v0.3.0) | ver título do release | — (aguardando testers) |
 | 0.2.3 | Atualização de playtest (pedido do dono; junta 0.2.0 + 0.2.1) | 2026-10-02 (release `latest`, Playtest v0.2.3) | ver título do release | — (aguardando testers) |

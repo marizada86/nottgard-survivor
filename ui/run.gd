@@ -59,6 +59,7 @@ func _ready() -> void:
 	var seed := int(Game.qa_launch.get("seed", Time.get_ticks_usec() % 1000000)) if Game.qa_sandbox else int(Time.get_ticks_usec() % 1000000)
 	battle = Battle.new(seed, Game.run_hero, Game.run_stage, Game.battle_ctx())
 	battle.aim = Game.aim_mode()
+	get_tree().process_frame.connect(_sync_cursor)  # SPEC-132: o sinal dispara também com a árvore pausada
 	under.battle = battle
 	over.battle = battle
 	hud.offer_chosen.connect(_on_choose)
@@ -327,6 +328,15 @@ func _unhandled_input(ev: InputEvent) -> void:
 	elif ev.is_action_pressed(Game.ACTION_RUN_AIM):
 		_toggle_aim()
 		get_viewport().set_input_as_handled()
+
+## SPEC-132: mira por mouse só enquanto a run corre; pausa, oferta, painel de itens e resultado voltam ao ponteiro.
+func _sync_cursor() -> void:
+	CursorSkin.sync_run(battle.aim == Battle.Aim.MOUSE, get_tree().paused or battle.state != "running" or _result_shown)
+
+func _exit_tree() -> void:
+	if get_tree().process_frame.is_connected(_sync_cursor):
+		get_tree().process_frame.disconnect(_sync_cursor)
+	CursorSkin.reset()
 
 func _toggle_items_panel() -> void:
 	Game.controls.transition()

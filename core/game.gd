@@ -72,6 +72,7 @@ func _ready() -> void:
 	load_profile()
 	ensure_input_actions()
 	apply_settings()
+	CursorSkin.install(get_tree())  # SPEC-132: cursor temático (sem arte, fica o do sistema)
 	if save_notice != "":
 		logline(save_notice)
 	logline("Jogo iniciado v%s (%s)" % [Version.VERSION, Version.build_id()])

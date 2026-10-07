@@ -6,14 +6,14 @@ plan:
   spec_id: SPEC-134
   cards: [BUG-030, BUG-031]
   title: Bau vira Mimico uma vez so; item de bau com slot vazio pausa e mostra o item
-  status: IMPLEMENTED_PENDING_COMMIT
+  status: IMPLEMENTED_COMMITTED_PUSHED
   approval: {mode: per-plan, status: APPROVED_BY_OWNER, approver: dono, approved_at: '2026-10-06'}
   decisions: {escopo_painel: 'so baus (comum e do chefe)'}
   blocking_gaps: 0
-  checkpoint: {step: S-004, status: PENDING_COMMIT, evidence: EVID-173, next_gate: 'commit local so com aprovacao explicita; push publica a build'}
+  checkpoint: {step: S-004, status: DONE, evidence: EVID-173, commit: ced9d8e, note: 'commit e push aprovados pelo dono em 2026-10-06; aguarda playtest'}
   steps:
     S-001: 'DONE: bau largado pelo Mimico nasce com safe=true (core/battle.gd _kill)'
     S-002: 'DONE: give_item(announce) abre painel de 1 opcao com slot vazio; baus passam announce (core/battle.gd, ui/hud.gd)'
     S-003: 'DONE: testes novos em tests/test_battle.gd, suite 0 falhas, bot sem travar (EVID-173)'
-    S-004: 'PENDENTE: commit local so com aprovacao (git add apenas core/battle.gd, ui/hud.gd, tests/test_battle.gd e os registros deste plano)'
+    S-004: 'DONE (ced9d8e): commit local so com aprovacao (git add apenas core/battle.gd, ui/hud.gd, tests/test_battle.gd e os registros deste plano)'
   gates_independent_of_approval_level: ['commit local', 'push', 'build/release']
