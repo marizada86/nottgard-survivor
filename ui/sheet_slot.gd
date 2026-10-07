@@ -73,4 +73,3 @@ func _draw() -> void:
 			draw_colored_polygon(tri, Color(1.0, 0.88, 0.35, 0.7 + 0.3 * pulse))
 	if has_focus():
 		draw_rect(rect.grow(2.0), GOLD, false, 3.0)
-
