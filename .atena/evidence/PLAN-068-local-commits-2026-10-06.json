@@ -1,0 +1,47 @@
+{
+  "plan": "PLAN-068",
+  "request": "Atena commit",
+  "request_classification": "IN_PLAN_LOCAL_GIT_CHECKPOINT",
+  "base_commit": "503ccec4003efff9260821214e75bf49c1b6ab0b",
+  "branch": "main",
+  "commits": [
+    {
+      "scope": "art",
+      "commit": "eda01cec7f3751e3b1169d6a52993083fbab21d5",
+      "message": "art(controller): add Xbox and PlayStation button glyphs",
+      "files": 105
+    },
+    {
+      "scope": "mechanics",
+      "commit": "14633e2558e446ef2a105b53d4f1a8aed6db2843",
+      "message": "feat(controller): add configurable controls and complete menu navigation",
+      "files": 187
+    },
+    {
+      "scope": "bugs",
+      "commit": "89d2b8cdd1964da23bee5812eda4b11e2cf99c1a",
+      "message": "fix(menu): keep Play visible and focus it when confirming a map",
+      "files": 61
+    }
+  ],
+  "committed_sources_match_validated_pilot": true,
+  "sources_verified": 74,
+  "validated_fingerprint": "814071cc8f1702afe531724d7a6f02f289bb3eca87c548151cefb5d8e91e1d36",
+  "current_central_plan_preserved": "PLAN-071",
+  "concurrent_source_changes_left_in_worktree": [
+    "core/playtest.gd",
+    "ui/run.gd"
+  ],
+  "no_other_plans_committed": true,
+  "index_empty": true,
+  "pushed": false,
+  "hardware_acceptance": false,
+  "operational_receipt_written_after_commits": true,
+  "validation": {
+    "menu_start_checks": 38,
+    "menu_start_failures": 0,
+    "suite_failures": 0,
+    "previous_controller_checks": 90,
+    "previous_mobile_checks": 144
+  }
+}

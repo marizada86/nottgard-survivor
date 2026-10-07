@@ -75,11 +75,13 @@ separado (uma mecânica por commit; números por entidade). Balanceamento vem po
 
 ## Numeração
 
-Próximos livres (2026-10-06, conferido no disco por Atena após a SPEC-131 (HUD da run) e seus registros; SPEC-079 fica
-**reservada** à camada de decais do Lote 2; SPEC-080 é a das HQs): `SPEC-137`, `EVID-177`,
-`PLAN-070`, `ART-PROMPTS-060`, `ART-039`, `MEC-052`, `BUG-033`, `BAL-022`, `IN-059`, `TOOL-005`, jogador `T05`. `tools/backlog_check.ps1` confere se esta linha está atrasada.
+Próximos livres (2026-10-07, após consolidacao dos dois historicos; SPEC-079 fica reservada aos decais e SPEC-080 às HQs): `SPEC-141`, `EVID-188`, `PLAN-074`, `ART-PROMPTS-060`, `ART-039`, `MEC-053`, `BUG-034`, `BAL-022`, `IN-059`, `TOOL-005`, jogador `T05`.
+
+Aliases operacionais da consolidacao: **BUG-033** acompanha o botão Jogar, registrado antes como BUG-030; **MEC-052** acompanha controles Xbox/PlayStation, registrado antes como MEC-050. Os IDs remotos BUG-030 (mímico) e MEC-050 (ícone de doação) permanecem. Arquivos e commits historicos nao foram renomeados. Os caminhos completos distinguem SPEC-133/134/135, PLAN-066/067/068 e EVID-169 a 175; [mapa de colisões](../evidence/consolidacao-id-collisions-2026-10-07.json).
 
 **Colisões históricas** (não renomear; usar o nome completo do arquivo ao
 citar): SPEC-047/048/049/050/054/055 têm dois arquivos cada; EVID-018, 077, 079,
 080, 087, 088, 098, 099 idem; PLAN-016, 023, 035, 041 idem. Daqui pra frente, antes
 de criar qualquer número novo, confira o próximo livre acima e atualize-o.
+
+Nota de publicação (2026-10-07): fontes, imagens e projetos de teste dos pilotos Durvall permanecem locais, aguardando decisão do dono após bloqueio da revisão automática. As referências históricas a `.atena/generated/durvall-*` registram trabalho local; não indicam assets admitidos ou publicados. Os registros e o mapa das referências pendentes estão na evidência de consolidação.

@@ -1,0 +1,421 @@
+{
+  "policy": "Historico preservado; citar caminho completo. Cartoes atuais ganham aliases explicitos.",
+  "duplicated_file_ids": {
+    "SPEC-017": [
+      ".atena/specs/SPEC-017-piloto-animacao-dagruve.md",
+      ".atena/evidence/SPEC-017-dagruve-animated.png",
+      ".atena/evidence/SPEC-017-piloto-animacao-dagruve.md"
+    ],
+    "SPEC-018": [
+      ".atena/specs/SPEC-018-direcoes-de-movimento-durvall.md",
+      ".atena/evidence/SPEC-018-direcoes-de-movimento-durvall.md",
+      ".atena/evidence/SPEC-018-durvall-directions.png"
+    ],
+    "SPEC-019": [
+      ".atena/specs/SPEC-019-modal-responsivo-de-boas-vindas.md",
+      ".atena/evidence/SPEC-019-modal-responsivo-de-boas-vindas.md"
+    ],
+    "SPEC-020": [
+      ".atena/specs/SPEC-020-ferramentas-playtest-e-qa.md",
+      ".atena/evidence/SPEC-020-implementation-2026-09-23.md"
+    ],
+    "SPEC-039": [
+      ".atena/specs/SPEC-039-macroterreno-abissal-montanhas-e-rio-estige.md",
+      ".atena/evidence/SPEC-039-durao-piloto-2026-09-27.png"
+    ],
+    "SPEC-040": [
+      ".atena/specs/SPEC-040-estige-gelatinoso-e-elites-de-juiblex.md",
+      ".atena/evidence/SPEC-040-durao-estige-gelatinoso-2026-09-27.png"
+    ],
+    "SPEC-041": [
+      ".atena/specs/SPEC-041-ancoragem-visual-de-props-no-chao.md",
+      ".atena/evidence/SPEC-041-dagruve-props-2026-09-27.png",
+      ".atena/evidence/SPEC-041-docas-props-2026-09-27.png",
+      ".atena/evidence/SPEC-041-durao-props-2026-09-27.png"
+    ],
+    "SPEC-042": [
+      ".atena/specs/SPEC-042-ancoras-artisticas-e-sombras-de-props.md",
+      ".atena/evidence/SPEC-042-dagruve-ancoras-2026-09-27.png",
+      ".atena/evidence/SPEC-042-docas-ancoras-2026-09-27.png",
+      ".atena/evidence/SPEC-042-durao-ancoras-2026-09-27.png",
+      ".atena/evidence/SPEC-042-pilares-ancoras-2026-09-27.png"
+    ],
+    "SPEC-045": [
+      ".atena/specs/SPEC-045-diagnostico-limitado-dos-assets-de-nyrelia.md",
+      ".atena/evidence/SPEC-045-nyrelia-pilot-frames.png",
+      ".atena/evidence/SPEC-045-nyrelia-qa-baseline-v2.png",
+      ".atena/evidence/SPEC-045-nyrelia-qa-baseline-v3.png",
+      ".atena/evidence/SPEC-045-nyrelia-qa-baseline.png",
+      ".atena/evidence/SPEC-045-nyrelia-runtime-baseline.png"
+    ],
+    "SPEC-047": [
+      ".atena/specs/SPEC-047-reprocessamento-local-dos-candidatos-de-nyrelia.md",
+      ".atena/specs/SPEC-047-terreno-de-shedaklah-e-dois-bracos-do-estige.md",
+      ".atena/evidence/SPEC-047-nyrelia-reprocess-pilot.png",
+      ".atena/evidence/SPEC-047-shedaklah-terrain-2026-09-27.png"
+    ],
+    "SPEC-048": [
+      ".atena/specs/SPEC-048-admissao-das-animacoes-regeneradas-de-nyrelia.md",
+      ".atena/specs/SPEC-048-terreno-de-molor.md",
+      ".atena/evidence/SPEC-048-molor-terrain-2026-09-27.png",
+      ".atena/evidence/SPEC-048-nyrelia-v02-pilot.png"
+    ],
+    "SPEC-049": [
+      ".atena/specs/SPEC-049-preparacao-da-regeneracao-do-piloto-de-leoric.md",
+      ".atena/specs/SPEC-049-terreno-de-durao.md",
+      ".atena/evidence/SPEC-049-leoric-pilot-v01.png"
+    ],
+    "SPEC-050": [
+      ".atena/specs/SPEC-050-atalho-f4-navegador-qa.md",
+      ".atena/specs/SPEC-050-terreno-de-feng-tu.md",
+      ".atena/evidence/SPEC-050-feng-tu-terrain-2026-09-27.png"
+    ],
+    "SPEC-051": [
+      ".atena/specs/SPEC-051-terreno-de-shendilavri.md",
+      ".atena/evidence/SPEC-051-shendilavri-terrain-2026-09-27.png"
+    ],
+    "SPEC-052": [
+      ".atena/specs/SPEC-052-terreno-de-goranthis.md",
+      ".atena/evidence/SPEC-052-goranthis-terrain-2026-09-27.png"
+    ],
+    "SPEC-053": [
+      ".atena/specs/SPEC-053-terreno-dos-pilares.md",
+      ".atena/evidence/SPEC-053-pilares-terrain-2026-09-27.png"
+    ],
+    "SPEC-054": [
+      ".atena/specs/SPEC-054-estige-universal.md",
+      ".atena/specs/SPEC-054-vfx-procedural-para-areas-de-terreno.md",
+      ".atena/evidence/SPEC-054-estige-dagruve-2026-09-27.png",
+      ".atena/evidence/SPEC-054-estige-dagruve-exposicao-2026-09-27.png",
+      ".atena/evidence/SPEC-054-estige-docas-2026-09-27.png",
+      ".atena/evidence/SPEC-054-estige-docas-exposicao-2026-09-27.png",
+      ".atena/evidence/SPEC-054-estige-durao-2026-09-27.png",
+      ".atena/evidence/SPEC-054-estige-durao-exposicao-2026-09-27.png",
+      ".atena/evidence/SPEC-054-estige-feng_tu-2026-09-27.png",
+      ".atena/evidence/SPEC-054-estige-feng_tu-exposicao-2026-09-27.png",
+      ".atena/evidence/SPEC-054-estige-goranthis-2026-09-27.png",
+      ".atena/evidence/SPEC-054-estige-goranthis-exposicao-2026-09-27.png",
+      ".atena/evidence/SPEC-054-estige-molor-2026-09-27.png",
+      ".atena/evidence/SPEC-054-estige-molor-exposicao-2026-09-27.png",
+      ".atena/evidence/SPEC-054-estige-pilares-2026-09-27.png",
+      ".atena/evidence/SPEC-054-estige-pilares-exposicao-2026-09-27.png",
+      ".atena/evidence/SPEC-054-estige-shedaklah-2026-09-27.png",
+      ".atena/evidence/SPEC-054-estige-shedaklah-exposicao-2026-09-27.png",
+      ".atena/evidence/SPEC-054-estige-shendilavri-2026-09-27.png",
+      ".atena/evidence/SPEC-054-estige-shendilavri-exposicao-2026-09-27.png"
+    ],
+    "SPEC-055": [
+      ".atena/specs/SPEC-055-estige-fiel-a-lore.md",
+      ".atena/specs/SPEC-055-particulas-para-areas-de-terreno.md"
+    ],
+    "SPEC-056": [
+      ".atena/specs/SPEC-056-sobreposicao-visual-das-divindades.md",
+      ".atena/evidence/SPEC-056-ghaunadaur-2026-09-27.png",
+      ".atena/evidence/SPEC-056-lliira-2026-09-27.png",
+      ".atena/evidence/SPEC-056-mask-2026-09-27.png",
+      ".atena/evidence/SPEC-056-selune-2026-09-27.png",
+      ".atena/evidence/SPEC-056-sendrinah-2026-09-27.png",
+      ".atena/evidence/SPEC-056-shar-2026-09-27.png",
+      ".atena/evidence/SPEC-056-tou-um-2026-09-27.png"
+    ],
+    "SPEC-081": [
+      ".atena/specs/SPEC-081-comparacao-de-equipamento.md",
+      ".atena/specs/SPEC-081-regressao-bug-013-contato-visual-de-props.md"
+    ],
+    "SPEC-082": [
+      ".atena/specs/SPEC-082-integracao-de-decais-do-lote-2.md",
+      ".atena/specs/SPEC-082-loja-e-ferreiro-mostram-todas-as-opcoes.md",
+      ".atena/specs/SPEC-082-skin-leoric-cartola-e-sobretudo.md"
+    ],
+    "SPEC-099": [
+      ".atena/specs/SPEC-099-integracao-animacoes-cultista-adaga.md",
+      ".atena/specs/SPEC-099-integracao-hqs-hqn-11-a-14.md"
+    ],
+    "SPEC-100": [
+      ".atena/specs/SPEC-100-integracao-estruturas-e-decais-docas.md",
+      ".atena/specs/SPEC-100-integracao-hqn-01-a-10.md"
+    ],
+    "SPEC-101": [
+      ".atena/specs/SPEC-101-polimento-proporcoes-movimento-herois.md",
+      ".atena/evidence/SPEC-101-durvall-motion-pilot.png"
+    ],
+    "SPEC-116": [
+      ".atena/specs/SPEC-116-chao-de-dagruve-assado-procedural.md",
+      ".atena/specs/SPEC-116-dopamina-tematica.md"
+    ],
+    "SPEC-133": [
+      ".atena/specs/SPEC-133-corrida-durvall-2026-10-06.md",
+      ".atena/specs/SPEC-133-reducao-do-dano-do-passo-pelas-sombras.md"
+    ],
+    "SPEC-134": [
+      ".atena/specs/SPEC-134-bau-mimico-unico-e-pausa-ao-pegar-item.md",
+      ".atena/specs/SPEC-134-controles-e-menus-mobile-2026-10-06.md"
+    ],
+    "SPEC-135": [
+      ".atena/specs/SPEC-135-bau-e-portal-fora-de-bloqueio.md",
+      ".atena/specs/SPEC-135-experiencia-controles-xbox-playstation-2026-10-06.md"
+    ],
+    "PLAN-066": [
+      ".atena/state/plan-066-corrida-durvall.yaml",
+      ".atena/state/plan-066-passo-pelas-sombras.yaml"
+    ],
+    "PLAN-067": [
+      ".atena/state/plan-067-bau-mimico-e-item.yaml",
+      ".atena/state/plan-067-controles-e-menus-mobile.yaml"
+    ],
+    "PLAN-068": [
+      ".atena/state/plan-068-bau-e-portal-fora-de-bloqueio.yaml",
+      ".atena/state/plan-068-controles-xbox-playstation.yaml",
+      ".atena/evidence/PLAN-068-local-commits-2026-10-06.json",
+      ".atena/evidence/PLAN-068-referencia-abas-detalhes-2026-10-06.png",
+      ".atena/evidence/PLAN-068-validacao-documental-2026-10-06.json"
+    ],
+    "EVID-002": [
+      ".atena/evidence/EVID-002-f1-shot.png",
+      ".atena/evidence/EVID-002-f1.md"
+    ],
+    "EVID-003": [
+      ".atena/evidence/EVID-003-f2-shot.png",
+      ".atena/evidence/EVID-003-f2.md"
+    ],
+    "EVID-004": [
+      ".atena/evidence/EVID-004-chefe.png",
+      ".atena/evidence/EVID-004-f3-f9.md",
+      ".atena/evidence/EVID-004-levelup.png",
+      ".atena/evidence/EVID-004-menu.png"
+    ],
+    "EVID-007": [
+      ".atena/evidence/EVID-007-mecanicas-game-design.md",
+      ".atena/evidence/EVID-007-plano-total-de-assets.md"
+    ],
+    "EVID-008": [
+      ".atena/evidence/EVID-008-audio-total.md",
+      ".atena/evidence/EVID-008-piloto-assets.png"
+    ],
+    "EVID-018": [
+      ".atena/evidence/EVID-018-legibilidade-visual-e-retorno-divino-2026-09-26.md",
+      ".atena/evidence/EVID-018-velas-de-dagruve.md"
+    ],
+    "EVID-058": [
+      ".atena/evidence/EVID-058-brook-identity-v01-2026-09-29.md",
+      ".atena/evidence/EVID-058-spec-044-lote-maelor-sylas-2026-09-27.md"
+    ],
+    "EVID-059": [
+      ".atena/evidence/EVID-059-reconstrucao-visual-de-brook-2026-09-29.md",
+      ".atena/evidence/EVID-059-spec-044-decisao-maelor-sylas-2026-09-27.md"
+    ],
+    "EVID-060": [
+      ".atena/evidence/EVID-060-brook-aprovacao-final-2026-09-29.md",
+      ".atena/evidence/EVID-060-opcoes-audio-video-2026-09-29.md",
+      ".atena/evidence/EVID-060-spec-044-lote-kayron-leoric-2026-09-27.md"
+    ],
+    "EVID-077": [
+      ".atena/evidence/EVID-077-reprocessamento-local-de-nyrelia-2026-09-27.md",
+      ".atena/evidence/EVID-077-spec-047-shedaklah-estige-2026-09-27.md"
+    ],
+    "EVID-078": [
+      ".atena/evidence/EVID-078-nyrelia-runtime-v02.png",
+      ".atena/evidence/EVID-078-regeneracao-e-admissao-de-nyrelia-2026-09-27.md"
+    ],
+    "EVID-079": [
+      ".atena/evidence/EVID-079-piloto-gerado-de-leoric-2026-09-27.md",
+      ".atena/evidence/EVID-079-spec-048-molor-2026-09-27.md"
+    ],
+    "EVID-080": [
+      ".atena/evidence/EVID-080-atalho-f4-navegador-qa-2026-09-27.md",
+      ".atena/evidence/EVID-080-leoric-lote-candidato-v01.png",
+      ".atena/evidence/EVID-080-lote-candidato-de-leoric-2026-09-27.md",
+      ".atena/evidence/EVID-080-spec-050-feng-tu-2026-09-27.md"
+    ],
+    "EVID-081": [
+      ".atena/evidence/EVID-081-leoric-admissao-oficial-2026-09-27.md",
+      ".atena/evidence/EVID-081-leoric-oficial-runtime-v01.png",
+      ".atena/evidence/EVID-081-spec-051-shendilavri-2026-09-27.md"
+    ],
+    "EVID-084": [
+      ".atena/evidence/EVID-084-estige-universal-2026-09-27.md",
+      ".atena/evidence/EVID-084-spec-054-vfx-areas-2026-09-27.md"
+    ],
+    "EVID-085": [
+      ".atena/evidence/EVID-085-estige-durao-2026-09-27.png",
+      ".atena/evidence/EVID-085-estige-fiel-2026-09-27.md",
+      ".atena/evidence/EVID-085-estige-goranthis-2026-09-27.png",
+      ".atena/evidence/EVID-085-estige-shedaklah-2026-09-27.png",
+      ".atena/evidence/EVID-085-estige-shendilavri-2026-09-27.png",
+      ".atena/evidence/EVID-085-spec-055-particulas-2026-09-27.md"
+    ],
+    "EVID-087": [
+      ".atena/evidence/EVID-087-icones-de-bencaos-de-selune-2026-09-27.md",
+      ".atena/evidence/EVID-087-save-resiliente-e-ajuda-de-regras-2026-09-27.md"
+    ],
+    "EVID-098": [
+      ".atena/evidence/EVID-098-lote-a-quebraveis-candidatos-2026-09-28.md",
+      ".atena/evidence/EVID-098-lote-a-quebraveis-candidatos.png",
+      ".atena/evidence/EVID-098-spec-074-vazamento-do-sandbox-qa-2026-09-28.md"
+    ],
+    "EVID-099": [
+      ".atena/evidence/EVID-099-props-shedaklah-candidatos-2026-09-28.md",
+      ".atena/evidence/EVID-099-props-shedaklah-candidatos-2026-09-28.png",
+      ".atena/evidence/EVID-099-spec-075-sinergias-combinadas-2026-09-28.md"
+    ],
+    "EVID-100": [
+      ".atena/evidence/EVID-100-props-molor-candidatos-2026-09-28.md",
+      ".atena/evidence/EVID-100-props-molor-candidatos-2026-09-28.png"
+    ],
+    "EVID-101": [
+      ".atena/evidence/EVID-101-props-durao-candidatos-2026-09-28.md",
+      ".atena/evidence/EVID-101-props-durao-candidatos-2026-09-28.png"
+    ],
+    "EVID-102": [
+      ".atena/evidence/EVID-102-props-feng-tu-candidatos-2026-09-28.md",
+      ".atena/evidence/EVID-102-props-feng-tu-candidatos-2026-09-28.png"
+    ],
+    "EVID-103": [
+      ".atena/evidence/EVID-103-zumbi-animacoes-candidatas-2026-09-29.png",
+      ".atena/evidence/EVID-103-zumbi-candidatos-2026-09-29.md",
+      ".atena/evidence/EVID-103-zumbi-idle-candidatos-2026-09-29.png"
+    ],
+    "EVID-105": [
+      ".atena/evidence/EVID-105-export-playtest-publico-2026-09-29.md",
+      ".atena/evidence/EVID-105-spec-078-evidencias-diretas-2026-09-29.md"
+    ],
+    "EVID-110": [
+      ".atena/evidence/EVID-110-linha-de-base-do-bot-por-heroi-2026-09-29.md",
+      ".atena/evidence/EVID-110-lote-1-admissao-2026-09-29.md"
+    ],
+    "EVID-111": [
+      ".atena/evidence/EVID-111-hqn-02-candidatas-2026-09-29.md",
+      ".atena/evidence/EVID-111-mapas-60x60-bot-2026-09-29.md"
+    ],
+    "EVID-112": [
+      ".atena/evidence/EVID-112-bug-013-auditoria-final-2026-09-29.md",
+      ".atena/evidence/EVID-112-bug-013-regressao-2026-09-29.md",
+      ".atena/evidence/EVID-112-hqn-03-candidatas-2026-09-29.md",
+      ".atena/evidence/EVID-112-ofertas-em-cartao-2026-09-29.md"
+    ],
+    "EVID-113": [
+      ".atena/evidence/EVID-113-candidatas-lote-2-e-hq-aprovadas-2026-09-29.md",
+      ".atena/evidence/EVID-113-hqn-04-candidatas-2026-09-29.md"
+    ],
+    "EVID-114": [
+      ".atena/evidence/EVID-114-hqn-05-candidatas-2026-09-29.md",
+      ".atena/evidence/EVID-114-leoric-skin-piloto-v01-2026-09-29.md"
+    ],
+    "EVID-115": [
+      ".atena/evidence/EVID-115-hqn-06-e-onda-1-candidatas-2026-09-29.md",
+      ".atena/evidence/EVID-115-leoric-skin-lote-candidato-v01-2026-09-29.md"
+    ],
+    "EVID-116": [
+      ".atena/evidence/EVID-116-hqn-07-candidatas-2026-09-29.md",
+      ".atena/evidence/EVID-116-leoric-skin-admissao-2026-09-29.md"
+    ],
+    "EVID-117": [
+      ".atena/evidence/EVID-117-hqn-08-candidatas-2026-09-29.md",
+      ".atena/evidence/EVID-117-leoric-retrato-pictorico-2026-09-29.md"
+    ],
+    "EVID-118": [
+      ".atena/evidence/EVID-118-hqn-09-candidatas-2026-09-29.md",
+      ".atena/evidence/EVID-118-spec-082-preparacao-de-decais-2026-09-29.md"
+    ],
+    "EVID-119": [
+      ".atena/evidence/EVID-119-correcao-de-alfa-dos-decais-2026-09-29.md",
+      ".atena/evidence/EVID-119-hqn-10-candidatas-2026-09-29.md"
+    ],
+    "EVID-120": [
+      ".atena/evidence/EVID-120-exclusao-de-rios-nos-decais-2026-09-29.md",
+      ".atena/evidence/EVID-120-suporte-controle-joystick-2026-09-29.md"
+    ],
+    "EVID-124": [
+      ".atena/evidence/EVID-124-hqn-11-a-14-candidatas-2026-09-30.md",
+      ".atena/evidence/EVID-124-piloto-cultista-candidatas-geradas-2026-09-29.md"
+    ],
+    "EVID-126": [
+      ".atena/evidence/EVID-126-cultista-adaga-runtime-strips.png",
+      ".atena/evidence/EVID-126-integracao-animacoes-cultista-adaga-2026-09-30.md"
+    ],
+    "EVID-127": [
+      ".atena/evidence/EVID-127-integracao-assets-nao-hq-2026-09-30.md",
+      ".atena/evidence/EVID-127-mobs-wave-1-gate-identidade-2026-09-30.md",
+      ".atena/evidence/EVID-127-mobs-wave-1-gate-identidade-2026-09-30.png"
+    ],
+    "EVID-128": [
+      ".atena/evidence/EVID-128-integracao-hqs-hqn-11-a-14-2026-09-30.md",
+      ".atena/evidence/EVID-128-lote-a-animacoes-mobs-2026-09-30.md",
+      ".atena/evidence/EVID-128-lote-a-cultista_arqueiro-2026-09-30.png",
+      ".atena/evidence/EVID-128-lote-a-cultista_cajado-2026-09-30.png",
+      ".atena/evidence/EVID-128-lote-a-notivago-2026-09-30.png",
+      ".atena/evidence/EVID-128-lote-a-slime_corrosivo-2026-09-30.png"
+    ],
+    "EVID-132": [
+      ".atena/evidence/EVID-132-durvall-cena-contexto-qa.png",
+      ".atena/evidence/EVID-132-durvall-runtime-scale-qa-ampliado-2x.png",
+      ".atena/evidence/EVID-132-durvall-runtime-scale-qa.png",
+      ".atena/evidence/EVID-132-piloto-runtime-escala-direcional-durvall-2026-09-30.md"
+    ],
+    "EVID-133": [
+      ".atena/evidence/EVID-133-inventario-visual-herois-2026-09-30.md",
+      ".atena/evidence/EVID-133-lote-b-arch_hag-2026-09-30.png",
+      ".atena/evidence/EVID-133-lote-b-criatura_corrompida-2026-09-30.png",
+      ".atena/evidence/EVID-133-lote-b-mobs-2026-09-30.md",
+      ".atena/evidence/EVID-133-validacao-f4-previa-direta-hqs-2026-09-30.md"
+    ],
+    "EVID-134": [
+      ".atena/evidence/EVID-134-lote-c-guardiao_verdadeiro-2026-09-30.png",
+      ".atena/evidence/EVID-134-lote-c-mobs-2026-09-30.md",
+      ".atena/evidence/EVID-134-lote-c-tentaculo_kraken-2026-09-30.png"
+    ],
+    "EVID-135": [
+      ".atena/evidence/EVID-135-comparacao-2x-guardiao-copia-2026-09-30.png",
+      ".atena/evidence/EVID-135-comparacao-nativa-guardiao-copia-2026-09-30.png",
+      ".atena/evidence/EVID-135-piloto-guardiao-copia-2026-09-30.md",
+      ".atena/evidence/EVID-135-piloto-guardiao-copia-2026-09-30.png"
+    ],
+    "EVID-136": [
+      ".atena/evidence/EVID-136-ciclo-guardiao-copia-2026-09-30.md",
+      ".atena/evidence/EVID-136-ciclo-guardiao-copia-prancha-2026-09-30.png",
+      ".atena/evidence/EVID-136-ciclo-guardiao-copia-qa-2026-09-30.json"
+    ],
+    "EVID-140": [
+      ".atena/evidence/EVID-140-herois-base-e-bordas-antes-depois.png",
+      ".atena/evidence/EVID-140-normalizacao-base-e-bordas-dos-herois-2026-10-01.md"
+    ],
+    "EVID-164": [
+      ".atena/evidence/EVID-164-janela-de-invulnerabilidade-0-1-s-2026-10-05.md",
+      ".atena/evidence/EVID-164-spec-126-e-127-bencao-opcional-e-habilidade-na-hud-2026-10-05.md"
+    ],
+    "EVID-169": [
+      ".atena/evidence/EVID-169-b002-juramento-e-caminho-da-estrela-2026-10-06.md",
+      ".atena/evidence/EVID-169-durvall-corrida-b001-2026-10-06.md"
+    ],
+    "EVID-170": [
+      ".atena/evidence/EVID-170-b003-novas-bencaos-e-rebalanceamento-2026-10-06.md",
+      ".atena/evidence/EVID-170-durvall-piloto-e-b002-2026-10-06.md"
+    ],
+    "EVID-171": [
+      ".atena/evidence/EVID-171-durvall-v03-playtest-local-2026-10-06.md",
+      ".atena/evidence/EVID-171-passo-pelas-sombras-1d10-2026-10-06.md"
+    ],
+    "EVID-173": [
+      ".atena/evidence/EVID-173-bau-mimico-e-pausa-ao-pegar-item-2026-10-06.md",
+      ".atena/evidence/EVID-173-durvall-revisao-lateral-2026-10-06.md"
+    ],
+    "EVID-174": [
+      ".atena/evidence/EVID-174-bau-e-portal-fora-de-bloqueio-2026-10-06.md",
+      ".atena/evidence/EVID-174-durvall-correcao-empunhadura-2026-10-06.md"
+    ],
+    "EVID-175": [
+      ".atena/evidence/EVID-175-durvall-piloto-articulado-2026-10-06.md",
+      ".atena/evidence/EVID-175-grazzt-limpa-o-mapa-2026-10-06.md"
+    ],
+    "EVID-176": [
+      ".atena/evidence/EVID-176-interativos-alcancaveis-2026-10-06.md",
+      ".atena/evidence/EVID-176-planejamento-mobile-2026-10-06.md"
+    ]
+  },
+  "current_card_aliases": {
+    "BUG-030 controles": "BUG-033",
+    "MEC-050 controles": "MEC-052"
+  },
+  "original_titles_preserved": true,
+  "source_history_renamed": false
+}

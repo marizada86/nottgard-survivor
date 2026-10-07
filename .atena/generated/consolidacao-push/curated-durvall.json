@@ -1,0 +1,1244 @@
+[
+  {
+    "path": ".atena/evidence/EVID-169-durvall-corrida-b001-2026-10-06.md",
+    "bytes": 8105,
+    "sha256": "cdd67a164475751d396fb91f203264be78e2f5de8db201bd545c0b8b34ac660a",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/evidence/EVID-170-durvall-piloto-e-b002-2026-10-06.md",
+    "bytes": 5500,
+    "sha256": "78eadd1551a501cc73bcdb374361394874169e9777a74a385917b5c2fe949c32",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/evidence/EVID-171-durvall-v03-playtest-local-2026-10-06.md",
+    "bytes": 5051,
+    "sha256": "b290245f2fb28746dbd46361e5d394ce784e72ca81b50c02fdea4ee8e7556f2b",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/evidence/EVID-172-durvall-video-pernas-2026-10-06.md",
+    "bytes": 5025,
+    "sha256": "825464d4b80c6ba78623752d1d4de8137a48ddc5ae828cbb59eca0a83145ca9f",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/evidence/EVID-173-durvall-revisao-lateral-2026-10-06.md",
+    "bytes": 6818,
+    "sha256": "d0fd3b2dd8db7117927ae912bd9628fec1a2f65e55c51724871bae45b117ae53",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/evidence/EVID-174-durvall-correcao-empunhadura-2026-10-06.md",
+    "bytes": 2582,
+    "sha256": "0c612e874342a58b72a3adb938eaad79c86774459eba8b9e99ec465eaa969c7d",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/evidence/EVID-175-durvall-piloto-articulado-2026-10-06.md",
+    "bytes": 6141,
+    "sha256": "dc0467d240a88f129409d2e9eb4f27adb9a1ff93809fee02a986b6f0f4dab5a6",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/.gdignore",
+    "bytes": 1,
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/Abrir-teste-Durvall-articulado.cmd",
+    "bytes": 99,
+    "sha256": "aa23aadd2be6d27e528ee258fd896199f957393752e9219b891a218be8b4e132",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/COMO-TESTAR.md",
+    "bytes": 1278,
+    "sha256": "91963145adaf5d9068e476ac61e7c31d1b3341a45f448344eae03f71a33755f7",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/audit-pilot.py",
+    "bytes": 3011,
+    "sha256": "b667507ad33c9d84585bdc8d62f4f7c8c82846956f6e6ba045d3e6a3bcc5700f",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/build-playtest.cjs",
+    "bytes": 2385,
+    "sha256": "754db27718180392a1eb2dcecebbb0ba01633921bb902b9a37ad7fcfbf9daed6",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/capture-preview.ps1",
+    "bytes": 406,
+    "sha256": "a5d66c3409076afd5d85f1e19581ac1dc8115a9b4d1572ab0af0680b331cf7bd",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/components-v01-prompt.txt",
+    "bytes": 2388,
+    "sha256": "5fff5b48073c05624e92fb998d196ff56eac4c29811ea66b166b405709f374eb",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/components-v02-prompt.txt",
+    "bytes": 1172,
+    "sha256": "4f3afb80ca0cedd200c2b89ec58abe55e5133ea954446c18ee75f17b0816d6ce",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/launch-playtest.ps1",
+    "bytes": 982,
+    "sha256": "e8a2e6389a72dfb6c4beb32a2ecd4549c1e4527e782de0fd545787da8b05edf6",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/move_e-rig-v01.png",
+    "bytes": 192073,
+    "sha256": "66ba465fd41804e7030035e8ea57a980852a8b9b4623a95440145c989b5c6309",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/move_e-rig-v02.png",
+    "bytes": 189631,
+    "sha256": "602ea5afd19546252b6172dae05f774998d5fbada7697c6c1f0c97eb1f46d5dc",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/pilot-audit.json",
+    "bytes": 2877,
+    "sha256": "6e78a52dea7e1be3a69a1cc465d2b0d54c7010366757de0247a8fd9749c14ff5",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/pilot_launch.gd",
+    "bytes": 6594,
+    "sha256": "26d703e1ccf85f25652291ed1e23271fe7fc8c8dbd1dbd7b1d4f39d1305692f3",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/playtest-movement-probe.json",
+    "bytes": 493,
+    "sha256": "a90eaa7f6634eba0068b2a700377884f99a5b8c2a591fdea9ea810ec5c456ddd",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/playtest-rig-smoke.json",
+    "bytes": 284,
+    "sha256": "17bb522cd0590be788b40c3f7268f6daf0546eb3f6d671f953ec40dd1c23e908",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/playtest-rig-smoke.png",
+    "bytes": 1227736,
+    "sha256": "9385f44f4d33a709162f0d5089459364f79b290864ff0add12d7bfe295d05ec9",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/playtest-source-hashes.json",
+    "bytes": 965,
+    "sha256": "b2de79dc6362c2c1d9f18c0b0596949b8f9a562f70a694c1e17bfa2a41faa560",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/pose-1.png",
+    "bytes": 96717,
+    "sha256": "5d253e9d21499fa13ceb208649a78dc4f1036b4fd91b7cadced0a203856bccd2",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/pose-2.png",
+    "bytes": 98599,
+    "sha256": "afd4919cd1461cfb083a8f8e22e9f618b7a18c40f573abb07336bed0120dea1b",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/pose-3.png",
+    "bytes": 95995,
+    "sha256": "a5ba6151b33e44170af7c738f2f44250a295c51876cf0823f08968eea8bcf418",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/pose-4.png",
+    "bytes": 97957,
+    "sha256": "c69742d8e32116c737b147e4611baba4f7a996bc51d2e1c49999e6d82746cb7a",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/pose-5.png",
+    "bytes": 98919,
+    "sha256": "d761fdb53cace013e04fb2de4f84b7422ad1787ed4f9ece994b2e2f9d3c3cef4",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/pose-6.png",
+    "bytes": 96524,
+    "sha256": "556ab5a6f5b8429f84dd8baf3cde7a50d6a5198228c142e643c427e3471c6626",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/pose-board-v01.png",
+    "bytes": 240652,
+    "sha256": "59c278dca20ea51863f620cf92881d10169355b1615c7ab59bd684f3905655a6",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/pose-board-v02.png",
+    "bytes": 228944,
+    "sha256": "15f6d7e7c8dd4b2791850e793ba01ea12bfa394ae6c8815f9d05db116a29598a",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/pose-v02-1.png",
+    "bytes": 90895,
+    "sha256": "df7895ad447c791189d521d43d01c24fb46b7cbd3db39b54e5d06a7dd5c85295",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/pose-v02-2.png",
+    "bytes": 86775,
+    "sha256": "7d4093b2b9038729ddb6144038ce903a7e56768828d7a07f3e8f4689721d42b1",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/pose-v02-3.png",
+    "bytes": 88830,
+    "sha256": "9d1f7a762e82f47adda55fc7cf6f5b0b0be0f3a5250ef0bfa15800ac46cf0a11",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/pose-v02-4.png",
+    "bytes": 91262,
+    "sha256": "4b04c3c60c4fe0702d83338d35ff0dd9ad82287f715186854429668461668836",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/pose-v02-5.png",
+    "bytes": 86960,
+    "sha256": "aae38a2ca0431229cd4710c3b1c493a90b9b11925a6fdac2cc644210b633aa95",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/pose-v02-6.png",
+    "bytes": 88791,
+    "sha256": "39e92c168a60afeae85ccd26440c9c49842ed04c99904d76cc8ccb13300cf0ae",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/rig-pose-telemetry-v02.json",
+    "bytes": 761,
+    "sha256": "4540383bc3b7bb749c63a7d4ae16959ab2739af0d00f85c0da6710b996a8a742",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/rig-pose-telemetry.json",
+    "bytes": 761,
+    "sha256": "4540383bc3b7bb749c63a7d4ae16959ab2739af0d00f85c0da6710b996a8a742",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/rig-project/capture.gd",
+    "bytes": 2261,
+    "sha256": "51f20810112930f73e240741f5dd6729357e3874ca3a2a87b7816f168710adbe",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/rig-project/components-v01.png",
+    "bytes": 1017544,
+    "sha256": "2480859f31b049f48a336c48e2e2310ed2261079d23969c30c17d2449ad74528",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/rig-project/components-v02.png",
+    "bytes": 922796,
+    "sha256": "ff6f80b80d4c69a129e5b95175c4f40acb577627461a35a1a82ecca7e3ab6169",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/rig-project/project.godot",
+    "bytes": 401,
+    "sha256": "0b2a4cceb28583e4e4493a84f28e0c06cac12d9bf0c450fa4747d390356ec28f",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-articulated/v01/rig-project/rig.gd",
+    "bytes": 3565,
+    "sha256": "d58ea28e5e33bfd1d510d04115cbd99153e2eb52ad6cf7d55c2e50190a9d777f",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/.gdignore",
+    "bytes": 1,
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/Abrir-teste-Durvall.cmd",
+    "bytes": 99,
+    "sha256": "aa23aadd2be6d27e528ee258fd896199f957393752e9219b891a218be8b4e132",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/COMO-TESTAR.md",
+    "bytes": 1411,
+    "sha256": "c42a7da15ea77f94378b125a5b217ae24cc952888aef4234955b4b5ed91242cc",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/audit-revision.py",
+    "bytes": 1299,
+    "sha256": "2943139ea96b405eae53578b0d94bf7d2d593cbba601d4d71a690254d09f700e",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/baseline-hashes.json",
+    "bytes": 2417,
+    "sha256": "48f2e6cb298601a920f37dc07d3702368bf719d49c6b99c5352b0b227e07c2f7",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/baseline.html",
+    "bytes": 7514139,
+    "sha256": "3929e0505eece172bd57b6e7231bddd231e16103c48101e20e71734094f87179",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/build-baseline.cjs",
+    "bytes": 8215,
+    "sha256": "f6461d0d9a8399670b617738ff0e3ffb7457657089d48d80371dcbeaa853a066",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/build-pilot-preview.cjs",
+    "bytes": 3335,
+    "sha256": "3d7fa8cb8c9c3b1bba99c9ca73c534573a33872e6fffb6ed38db5efcfb8a7d4a",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/build-playtest.cjs",
+    "bytes": 4333,
+    "sha256": "243b460d0190cb944c825c1f8463f4576250c4943a6da754d4bf777d54505556",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/capture-baseline.gd",
+    "bytes": 5275,
+    "sha256": "4243e5781bd498cde8e2e6ebdbcbf400e8fb95f964c4207ae0b6154ba7a6e89a",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/check-local-test.cjs",
+    "bytes": 2497,
+    "sha256": "3538e74d89c014a25f9ac8ed355b699956f3d6305dc4d5501b9540a327004562",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/draw-pose-guide.py",
+    "bytes": 1820,
+    "sha256": "a3ae99a4b45db7f01acfcc3245a430269c78e460dc98e4ef7a892a6494a4096f",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/durvall-sword-grip-corrected-v01-prompt.txt",
+    "bytes": 1438,
+    "sha256": "694b6869f28d47385ea9ddc2403465b755c9be52b91c949a33eb8eddeb228ef8",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/durvall-sword-grip-corrected-v01.png",
+    "bytes": 1677671,
+    "sha256": "7f6cf8606c23e8ed8e63409b5d2ee6aaa78da407f9bad35ce63b8b131d84da03",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/launch-playtest.ps1",
+    "bytes": 985,
+    "sha256": "ced885bd617223813931f6e4241a2618cf313811fa70ca7ec8e56eeccabdf285",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/owner-feedback-sword-knee.png",
+    "bytes": 105666,
+    "sha256": "0e353d28959b3e54a7b8c587491606b815d181be1c15a3f6a4e38baa8d3ee50a",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/pilot-e-audit.json",
+    "bytes": 3697,
+    "sha256": "94b6770857711f5ff33b6242050cc06ce1ea1c223525858a52b9607bcaa4e576",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/pilot-e-comparison-v03.html",
+    "bytes": 10093924,
+    "sha256": "728b09a3e898f7a17e8ee1e2d3e2a63c0a9a5919770c53a0f8c114463b11610b",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/pilot-e-comparison-v03.png",
+    "bytes": 581922,
+    "sha256": "235564ef87835995e10aa692d33cf12503d24cdb0c346c40c372f82061c7ab82",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/pilot-e-manifest.json",
+    "bytes": 1161,
+    "sha256": "bcf08e0c70857f27f7067bfecf56bfc492d531811a1dea63ae028b446dae27ce",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/pilot-e-pose-guide-frame-1.png",
+    "bytes": 8393,
+    "sha256": "6cfce0f08552004bef6c8b44503e22c79836d2b01fed88120cc9c27772c8acea",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/pilot-e-pose-guide-frame-2.png",
+    "bytes": 8012,
+    "sha256": "dc894dc9b6d8810f06a5fd2362eab7a3fc52da0cc247802b27f418b6d37e7e16",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/pilot-e-pose-guide-frame-3.png",
+    "bytes": 8275,
+    "sha256": "7d662882d39a81a5fd9e29c046d86f74b90dfc7a85b4b5a5fcdc4645c56a63fb",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/pilot-e-pose-guide-frame-4.png",
+    "bytes": 8539,
+    "sha256": "a6c438deb04b5bf0e05bba67f8556652260177935e973d9abc62c1b08c6f60a4",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/pilot-e-pose-guide-frame-5.png",
+    "bytes": 8242,
+    "sha256": "50092c5a0b03089e05dd8e6793411de5e509b1ffea0b3184925516770fd9f58c",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/pilot-e-pose-guide-frame-6.png",
+    "bytes": 8423,
+    "sha256": "2a493b2751ff7542b293c3196b88cbb268d13c583889ebbbc81e57149069f1c0",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/pilot-e-pose-guide-v05.png",
+    "bytes": 26877,
+    "sha256": "b7ab1800604de6d858eacdfd350d8a5b8e7347bfe1596d426a95bc9e1c5c732f",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/pilot-e-prompt-v01.txt",
+    "bytes": 2744,
+    "sha256": "74830bdc9701445cb55bc4c543e9971f87181d2e10c609ea36720a6054fe472d",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/pilot-e-prompt-v02.txt",
+    "bytes": 1636,
+    "sha256": "0b009ff35ee66bc510c884f02d8ddcc764e29a58e08086883dc87ad9c477da3f",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/pilot-e-prompt-v03.txt",
+    "bytes": 2913,
+    "sha256": "791b8827afb97fa8827f42529e782e56d7490cdfc67f76711970e86d077e691b",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/pilot-e-prompt-v04.txt",
+    "bytes": 2305,
+    "sha256": "dc44e634fb883f2cdc6dd687f55c473fc25816ca460aeeffd4d75ea2396fa2c4",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/pilot-e-prompt-v05.txt",
+    "bytes": 2152,
+    "sha256": "5f6cae90745666126eefe783c66c59f912a814cecb795757bc35aa2ec396f3f0",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/pilot-e-prompt-v06.txt",
+    "bytes": 1791,
+    "sha256": "5a3e233ba74d8ec675c3739af244995131044acfa6b18589b72edcfa223aad81",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/pilot-e-raw-v01.png",
+    "bytes": 971301,
+    "sha256": "6ab3d2fc006290d7cba4455b445b449e291a4eb25189892359dfdd8a6a92c2af",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/pilot-e-raw-v02.png",
+    "bytes": 1068810,
+    "sha256": "8a42ecbe4dd923abf13c13c9725bda9d07e173eaa638756faa3ed18745122a0d",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/pilot-e-raw-v03.png",
+    "bytes": 1934640,
+    "sha256": "ba326f8fb4dc739ae3238e0a5024cbdda1bce3803830084635632e9df84cb888",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/pilot-e-raw-v04.png",
+    "bytes": 2176936,
+    "sha256": "bf17b4385d5325fcccd72efd4def07c58010f155d0fbe0d105362750bd1d734b",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/pilot-e-raw-v05.png",
+    "bytes": 1947178,
+    "sha256": "e25ee4523add573ca2ad7420c9ea40d9d50f913ef1d99602870e4237afe7505d",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/pilot-e-raw-v06.png",
+    "bytes": 2151228,
+    "sha256": "faca859c141d940b94f72c9643acc1132a6ca49c82efabdf6d9ad24858ea4bc9",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/pilot-e-revision-audit.json",
+    "bytes": 6493,
+    "sha256": "997431a988f8fbd7305c8aedfa90588c1401888a40b8c761026d21602e6a8831",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/pilot-e-revision-comparison.png",
+    "bytes": 985692,
+    "sha256": "58c986e670c4ec6ab4e98c3f757602c067f07d707e9bffb1dbbca32647f16e8c",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/pilot-e-v07-frame-1-prompt.txt",
+    "bytes": 1281,
+    "sha256": "a4ec7656b94b3df27f2b6163335260bf4d8b19baaf3970b5e2c324ae9039a2f3",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/pilot-e-v07-frame-1.png",
+    "bytes": 972303,
+    "sha256": "8da83626238e7f43e500fe361b1638c2a5717e9d945f47af486c66565948f6d4",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/pilot-e-v07-frame-4-prompt.txt",
+    "bytes": 1509,
+    "sha256": "a9c2ade74ee81b38e15eccd8f01b0c0e48947961f12b27f486cb60077733ce89",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/pilot-e-v07-frame-4.png",
+    "bytes": 946646,
+    "sha256": "bce30609ce2554868dc1135d194320ba3c39964626e712aa225642c865c94f5c",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/pilot_launch.gd",
+    "bytes": 4975,
+    "sha256": "038d28c7cda7c6cacc6e09ca3e464376b4cb0aec12d7ebf5fb49d240acddd574",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/pilot_launch.tscn",
+    "bytes": 166,
+    "sha256": "15781944551864d1af33890de6dd3c1d36ab6a7203f1ae759cf843f9ca713e7b",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/playtest-live.pid",
+    "bytes": 6,
+    "sha256": "d637859ea5cdacf0fe6acc1af4aa23a51bf26d43d3d618825ba163cef189cd5a",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/playtest-movement-probe.json",
+    "bytes": 301,
+    "sha256": "41eae7614784044715e281d718af8bd9d5fad7053b82e8ba669c9e663ba6f107",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/playtest-source-hashes.json",
+    "bytes": 965,
+    "sha256": "8740ea9cc32faeffe40baf00d31447a20bd3bf7b02094d6575080d530873988d",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/playtest-v03-smoke.json",
+    "bytes": 278,
+    "sha256": "460e1fe37e2a2536101f7a43ecb22ba648ace730852da594a24747691ba78d05",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/playtest-v03-smoke.png",
+    "bytes": 1238940,
+    "sha256": "1ca8a658ff57989cd7fc9a5d4b3a12deb9ec06a9451148630494549d84c3609b",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/review-video.py",
+    "bytes": 2422,
+    "sha256": "a25f1f28e6c80a74cb5a6580fb6a4c2c46e3997f59be196f37f04ba6789d78b3",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/runtime-baseline.png",
+    "bytes": 739853,
+    "sha256": "431e78d476b04cf62a9b1205fbc083faf17e87048a47ba88fef6f658dd54ab7c",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/runtime-report.json",
+    "bytes": 12603,
+    "sha256": "e25bcd15711bdcb30c4ddc7632e026a3af9b1090aaeecbd7eac3abe9849983cd",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/trace-e.json",
+    "bytes": 415,
+    "sha256": "9093c112c5476d377360efe4ab25973d01282e6e44dd832005dd6d4ac1fb27c7",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/trace-n.json",
+    "bytes": 415,
+    "sha256": "9093c112c5476d377360efe4ab25973d01282e6e44dd832005dd6d4ac1fb27c7",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/trace-ne.json",
+    "bytes": 415,
+    "sha256": "9093c112c5476d377360efe4ab25973d01282e6e44dd832005dd6d4ac1fb27c7",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/trace-nw.json",
+    "bytes": 415,
+    "sha256": "9093c112c5476d377360efe4ab25973d01282e6e44dd832005dd6d4ac1fb27c7",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/trace-s.json",
+    "bytes": 415,
+    "sha256": "9093c112c5476d377360efe4ab25973d01282e6e44dd832005dd6d4ac1fb27c7",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/trace-se.json",
+    "bytes": 415,
+    "sha256": "9093c112c5476d377360efe4ab25973d01282e6e44dd832005dd6d4ac1fb27c7",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/trace-sw.json",
+    "bytes": 415,
+    "sha256": "9093c112c5476d377360efe4ab25973d01282e6e44dd832005dd6d4ac1fb27c7",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/trace-w.json",
+    "bytes": 415,
+    "sha256": "9093c112c5476d377360efe4ab25973d01282e6e44dd832005dd6d4ac1fb27c7",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/full-13s.png",
+    "bytes": 1339767,
+    "sha256": "798c090f847165c81c01b046e6e259cae1d6ed2c206497bdd301044779f45f79",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/full-15s.png",
+    "bytes": 1440277,
+    "sha256": "74af67ace9223a3b0498f32ca1bcae624da32c509c3e50e40768afdb12c130c0",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/full-17s.png",
+    "bytes": 1303750,
+    "sha256": "2a278c2d36c107306cd0b7ef90df5d1213efd7d12f624e9cc856f6765bbc1cbe",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/full-26s.png",
+    "bytes": 1367485,
+    "sha256": "4d0a3e88e57a24c904ce517aa20535bc74155755314ffa00e679278e14b3e5bf",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/full-32s.png",
+    "bytes": 1245815,
+    "sha256": "25807ce6434840153b8acf4eebdc83aac8afe3327044f32ae41223ff346ae20f",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-13s/001.png",
+    "bytes": 39891,
+    "sha256": "ea2e71784e4bd4a6b57d87269a0922c1d799a4d069361b8519201952299de3a6",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-13s/002.png",
+    "bytes": 43504,
+    "sha256": "1ecd2be0a629a3331efddfa3f90e156ff5a60577a9f4671c09fd8874b681aecd",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-13s/003.png",
+    "bytes": 44636,
+    "sha256": "36dfafd510abe2e374c85ae41e6a278990aa301c71a0845c989aa11ebe0be145",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-13s/004.png",
+    "bytes": 47609,
+    "sha256": "020d18204f32d03b0f69e8e23c5f829179ab3b6e3e10644e5cdd037fade2e1ec",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-13s/005.png",
+    "bytes": 47803,
+    "sha256": "a0161982932d9944b6a4de1f52b17c2921bf019a7396596a3d57ded88c1fcb76",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-13s/006.png",
+    "bytes": 45316,
+    "sha256": "88f5f01da2d663783de4f1af27857c3beb9f1cbe0760bea25483842661062be8",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-13s/007.png",
+    "bytes": 43448,
+    "sha256": "53327e9f6113801e26df24f80762b3d984d41255efd340c528cc585cd18a5dd5",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-13s/008.png",
+    "bytes": 42168,
+    "sha256": "022ba2da0ab6837e7e36a8116e1d70469b1efb1039f3e7f74865578e54792fcb",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-13s/009.png",
+    "bytes": 39423,
+    "sha256": "6c38fdc303b6edd495fe0dff96ca654ed1b1ebb75dde0679419f1d22092de6c6",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-13s/010.png",
+    "bytes": 36686,
+    "sha256": "d336829e5c26f85061c91626106c4fba7a543077cff124c181a5f43bd9fe403d",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-13s/011.png",
+    "bytes": 33977,
+    "sha256": "3424fa03d78be1f018d33456b92d581907ba61353bc9246d33b2343c9c2afeb1",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-13s/012.png",
+    "bytes": 31503,
+    "sha256": "6d634f8fc9fb6df32a9627a8b3d7177875b9f0a17cdfe84018f345386a451425",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-13s/013.png",
+    "bytes": 29800,
+    "sha256": "aefe54af7c798740df63056ba7b21efa91ce4df07dc0e45f82a12268a352c6f8",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-13s/014.png",
+    "bytes": 29124,
+    "sha256": "1c13ee5bd9b1c43424cfa082cf9c0de2cb307b5831ea059238a5d18cf9db473d",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-13s/015.png",
+    "bytes": 29413,
+    "sha256": "8d07fa2e99d4838aee9f291c1f0c5b2424572dc57db4d09705fe28ac7f7bc2ca",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-13s/016.png",
+    "bytes": 29729,
+    "sha256": "0f1673501054fce02fe17d01b65f8dc86b47a85bce698665ea38b261262ac784",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-15s/001.png",
+    "bytes": 33923,
+    "sha256": "cd75d0dddf7b330304d10157acc208ff7cbeb5c8a6f2d85ae4098dd5fa25fcdf",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-15s/002.png",
+    "bytes": 37018,
+    "sha256": "0ada63fda26306666156b0a944c4b12decb64bc4bc8e538082ce066ae7b8e635",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-15s/003.png",
+    "bytes": 41761,
+    "sha256": "fd3270221e77b0fb005fad7d14fc8af5d504d1695d9bacdf22aa379d744361e8",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-15s/004.png",
+    "bytes": 47150,
+    "sha256": "990ad031c6b0c2b72d214cfe1c6bad4319b1dce6b50a98d531437153c2bac150",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-15s/005.png",
+    "bytes": 50821,
+    "sha256": "f6ae3919cffb84aa797d9a4148ac1e6df64b7fe58929ca40598c4708560bd5fd",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-15s/006.png",
+    "bytes": 54065,
+    "sha256": "444906f6422cb4899e0f7a2f1ce56eaebc6d261a0d0139b17a0f171ee464a8cf",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-15s/007.png",
+    "bytes": 54926,
+    "sha256": "e424ccddd36e3847ebf00ac69bc7f3550d43bcb3cb1fa39f0e3840ed69a3395c",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-15s/008.png",
+    "bytes": 55767,
+    "sha256": "55d9b163066d3c9b9a1a4cd3c21022f9749cb84e89d9b76d61ee08195b6b29cf",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-15s/009.png",
+    "bytes": 57346,
+    "sha256": "548a19989a32682715be69e3c5b14fb687ef24fbd139c23ff2db72837695b42f",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-15s/010.png",
+    "bytes": 59404,
+    "sha256": "3ec56220ae8c221330269b9d11c0b9b0183f696e6a722f6a6a66992b3ad3866f",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-15s/011.png",
+    "bytes": 60323,
+    "sha256": "116f768e92c8ab163486234c16ae8de29026355a5037854bbbd52bdcfeb1dc67",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-15s/012.png",
+    "bytes": 60247,
+    "sha256": "023fdc4a066cb8b45fcf2db4556d1f010c56b9e3e0b6107f995efa38097d8723",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-15s/013.png",
+    "bytes": 60226,
+    "sha256": "fd601fdeb2a7aa6247530343f09515abd2b858e0ca05b54b3495eb1d78c8660a",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-15s/014.png",
+    "bytes": 60107,
+    "sha256": "f3fed1dec03ac5a4f8670ee6210e15568a61240157e110ca00433b6796233bf8",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-15s/015.png",
+    "bytes": 58333,
+    "sha256": "383db80f2373a9cfb9f4bcff25587e97eef4aeec9c8a273eaf9112cffcd75d3e",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-15s/016.png",
+    "bytes": 56233,
+    "sha256": "bbee6b19eea379e8b3fad3a51861b567d7528d9a6180267821dd727576eac342",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-17s/001.png",
+    "bytes": 37388,
+    "sha256": "4868ef8b14dd5aef863d3e75e12796815d55eb4068fc9ddbc6001eb50431b405",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-17s/002.png",
+    "bytes": 36539,
+    "sha256": "f03d11eef15a6a68b10b30b6113e13e13ddf1816c2e0fc8e8bc892dc7dd38bc3",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-17s/003.png",
+    "bytes": 36359,
+    "sha256": "37f1010764d2e5bb1b59fcc581bf0bee0b56fe8eb528ea7eb71426bc25271b54",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-17s/004.png",
+    "bytes": 34636,
+    "sha256": "c0f6e7eca4dd6b261e114f5b328f163a5150ac04a27a685c5385979549a7d795",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-17s/005.png",
+    "bytes": 34767,
+    "sha256": "f21980c9608854e16aa289f285399e158a171a6557aa0113b8b5df9839ec6fb6",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-17s/006.png",
+    "bytes": 34442,
+    "sha256": "8b9b1daa2569e38d6007153c4a30a982468d0d0cf363043ad65b72cc4aaba6d9",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-17s/007.png",
+    "bytes": 36089,
+    "sha256": "9446f4757779978b8754009e52a166bff7c521511d9914b3a556e8507e0d5297",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-17s/008.png",
+    "bytes": 38488,
+    "sha256": "4a77c0f198c1751b9336b3750a01fbf0a12b4b5dd74144160ac2c81bd67bcc44",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-17s/009.png",
+    "bytes": 41801,
+    "sha256": "0e6d56ee961bdbb5029efb01efcde53a4aca5c66740d51c47df05a34917c0c70",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-17s/010.png",
+    "bytes": 44866,
+    "sha256": "5f9d74b99050b73634ca19a7dbe033c089277ce24d835e608f79ea7a82c576e0",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-17s/011.png",
+    "bytes": 46960,
+    "sha256": "bda6a5465eba89da1581e214b64bcfb46f81f344b0daf636ada06b5d1750882d",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-17s/012.png",
+    "bytes": 49517,
+    "sha256": "e0863303edaa4b8a510056134b96e750079cb9b284626a273e77c66e1ace0d48",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-17s/013.png",
+    "bytes": 52723,
+    "sha256": "8777a52bc994f40ed831f519d16b4f92b8995600732bb1429a3c74b5e5660098",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-17s/014.png",
+    "bytes": 55520,
+    "sha256": "5c626029470cb8b3e2234635118194865dcf13d88554ad8faa996463bc15b10c",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-17s/015.png",
+    "bytes": 56044,
+    "sha256": "121b0acbd7079f1fce05d7030d143686b8e1b0771348cbaae5e408a631e51e36",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-17s/016.png",
+    "bytes": 56587,
+    "sha256": "24f743fbddbd6fff95dc6681e02e512b1f070c7a5dbbd2f2595a355ff451e059",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-26s/001.png",
+    "bytes": 47978,
+    "sha256": "4d6099aeef0c274e5f7239e97d79ff0131888b5c187d77de0f5ffbbe8ed320bc",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-26s/002.png",
+    "bytes": 51455,
+    "sha256": "790b32b70e1a8ac85fd1b19546bf718a97b7623d8478fc01e50c2b94c5444160",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-26s/003.png",
+    "bytes": 50555,
+    "sha256": "357467c1ad74c23cf3454abf46f4e95ede9ce635445b4c3cca75a521d0b11a38",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-26s/004.png",
+    "bytes": 48440,
+    "sha256": "1159b76ee91bfd21809c30ea5409605d6741eb3ff3c747a9b77668a3aafd8110",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-26s/005.png",
+    "bytes": 45282,
+    "sha256": "db33aa90450bf9f7f7db87f3b08588407ee920929109010c1d3e26957d723129",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-26s/006.png",
+    "bytes": 44272,
+    "sha256": "ebdd6c0072e4b4f0587713a4237b9a50cd6dce34c802ba3f45b2ceb2576447a0",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-26s/007.png",
+    "bytes": 42520,
+    "sha256": "d68b809ad2bbc79c9f33ef86434f323e66c531736727ef2022f115666eb514a3",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-26s/008.png",
+    "bytes": 41396,
+    "sha256": "cbe79260916c052c020c85ba0f60b75f9438ba69054aab3f4049b184387b5cdf",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-26s/009.png",
+    "bytes": 39341,
+    "sha256": "c3e083635de4cd02c6615c28a6d0b58c6400cf7c65f7d5141def819e2d792374",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-26s/010.png",
+    "bytes": 37056,
+    "sha256": "1857e88e9e0106981f8500c6933b8a21f4b87b666e61254d89630bb754ac9f43",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-26s/011.png",
+    "bytes": 36903,
+    "sha256": "3af4815fdcf9e5cf700bc7546c1c32e25115d22ec938c18b89d789865fabe54f",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-26s/012.png",
+    "bytes": 36348,
+    "sha256": "38de053ce0248427af0dd2270cb1e88e6dfe3bc2f17d81c4ac187357e813e9e8",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-26s/013.png",
+    "bytes": 33646,
+    "sha256": "48c0e2c25e2248e3b8b48ab033c8d15abca2c7af37cf02e97c355152db1f3e87",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-26s/014.png",
+    "bytes": 32575,
+    "sha256": "f2e98608926ec92c128ae5de5060936ee407e66c103713b3d578ce5a2bfd4df1",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-26s/015.png",
+    "bytes": 32076,
+    "sha256": "92eb2436b9ab5efc8ecff12abebdcdeafb7749b094b2f624d5650b3a35b097a2",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-26s/016.png",
+    "bytes": 32186,
+    "sha256": "74452b6e45d946eba1757c5dab34ed723a5506151971214704b7cfe4e5fcdda8",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-32s/001.png",
+    "bytes": 33921,
+    "sha256": "55a6f35cd8ad6b5cd30ce0fd911c846125ac50b30e43886a54e2ff9491267863",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-32s/002.png",
+    "bytes": 33891,
+    "sha256": "ffa7c3d7866f317b9c891a89dbc5c763daad058ae0e3d3562a673fc610b06896",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-32s/003.png",
+    "bytes": 33505,
+    "sha256": "8fea42a904dfd90c9913f921c573e6ac6550933c05ae572c3b0941cc63886c7c",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-32s/004.png",
+    "bytes": 31938,
+    "sha256": "364bcc76076f972b6821a7ebf8325f645c83b09271cfc08653b4c4c183661bfa",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-32s/005.png",
+    "bytes": 31803,
+    "sha256": "0193d64b8ffb75da0087e773a883edd20a76773a03e6248dc3f763812fb20a6f",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-32s/006.png",
+    "bytes": 30538,
+    "sha256": "4a23f268cb5db52f77098a474fbdfbd9d951fc923cb44a29692bbe1d607062dc",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-32s/007.png",
+    "bytes": 28760,
+    "sha256": "1599cb02c8881a3ee6bb8955028204c6a26aca0fe48ac7c06f5887f23fad83ba",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-32s/008.png",
+    "bytes": 27286,
+    "sha256": "f2503575c21c396582381d903b26015eaefc551b0bc4fe007f9f4c278555b3fa",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-32s/009.png",
+    "bytes": 25458,
+    "sha256": "0bd40def4060ee167852ee3a881e91e8514847cdb32bc20fec0a30cb7385ea7d",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-32s/010.png",
+    "bytes": 23038,
+    "sha256": "6dbc0978942137c8049b94ca2432a8e2da082068c3c957d47c7597ae3c7e31d7",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-32s/011.png",
+    "bytes": 22077,
+    "sha256": "3ba6552792b12f9c0b61644792f541229ba727d82af66f608689678697f020e0",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-32s/012.png",
+    "bytes": 22044,
+    "sha256": "b259465029ad75973763e9b1d323ef5465cb1587168bd02c139758496d6f0817",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-32s/013.png",
+    "bytes": 21417,
+    "sha256": "0db5803344c50c94df61d2554325aac91e4c5a41816f1f31b30bae5496beea0d",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-32s/014.png",
+    "bytes": 22312,
+    "sha256": "a4436d82768d2339c4c0b43e643bca3c1bc1dbe787de3c70dfd200df521ac18b",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-32s/015.png",
+    "bytes": 24006,
+    "sha256": "a14c211b8b39b5989780ea90ea2d38a3ca137d6b9a323931174e09fa313d6d63",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/seq-32s/016.png",
+    "bytes": 25362,
+    "sha256": "b67e3f6c6ece4f59e2f82844a1e54e9cd878a09e5a05b91991187fc43b63dfba",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/sequence-13s.jpg",
+    "bytes": 247421,
+    "sha256": "a9224413cd6f5f4744a4bb177fc174a6faf10aa459b8aebc8650569e6c73d08a",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/sequence-15s.jpg",
+    "bytes": 365564,
+    "sha256": "0fdb8172bcaad23785e6ac8d111e12ba5fb2843b6642af5df76319caf2c0f0d6",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/sequence-17s.jpg",
+    "bytes": 285515,
+    "sha256": "48f1a0931cf2fc508ead1554247f85cda59b1a973f7858aeb8783e4edd9e435c",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/sequence-26s.jpg",
+    "bytes": 255589,
+    "sha256": "63bebddf96c824ab4029cb7d374eb5a5c44c699f24b5b19fa240c60ebe4955e9",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/sequence-32s.jpg",
+    "bytes": 166673,
+    "sha256": "d2038c4ab81afdc87c9ee7de9bbaa0403ee0c8c4e873d1318455334fead57c48",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/source-cycles.png",
+    "bytes": 777095,
+    "sha256": "79c1cacc599edd3776de5716c655ef6c962589fc42745fbc2a49343d3fd84b4a",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/generated/durvall-run-refinement/v01/video-review/timestamps-overview.jpg",
+    "bytes": 373457,
+    "sha256": "f8bc462c2ce7382a662efbe3f1d19df9ea4918288517522ec040fae1b3fd4f9c",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/specs/SPEC-133-corrida-durvall-2026-10-06.md",
+    "bytes": 7637,
+    "sha256": "0bc63449151fe0b94a2e21915d207725f7d67cefbc8020581d88599cd62d7020",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/state/plan-066-corrida-durvall.yaml",
+    "bytes": 6004,
+    "sha256": "4de3d6824a2f254b9eeb0a9a8d78eaef460081a12b027cea43a4b01961acbc3c",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/vault/drafts/PLAN-066-corrida-durvall-2026-10-06.md",
+    "bytes": 4958,
+    "sha256": "3fc2f951c00effc91b3410cf81905d76effc3c95912d378ecea8e522559ef418",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/vault/drafts/PLAN-066-piloto-articulado-2026-10-06.md",
+    "bytes": 4007,
+    "sha256": "2190f36dacd19d94d69e966ae66bedd433b17b898e13a92564f89dae3b54f4fb",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/vault/drafts/PLAN-066-recuperacao-poses-2026-10-06.md",
+    "bytes": 3154,
+    "sha256": "2a31c5f3dfd31cca8fc2bd025859ffbe9ade837c336cb41b21cb1e1c9c78039c",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/vault/drafts/durvall-guia-piloto-e-2026-10-06.md",
+    "bytes": 4389,
+    "sha256": "0acb4a900a07abed650db15736842facc821ded509d8a129c0977196aa741403",
+    "group": "durvall"
+  },
+  {
+    "path": ".atena/vault/research/durvall-corrida-diagnostico-2026-10-06.md",
+    "bytes": 2196,
+    "sha256": "79dff93762dd4651c99822eb5a8744e98fa457cdbc49a45123aa8dfce2a22212",
+    "group": "durvall"
+  }
+]

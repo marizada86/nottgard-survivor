@@ -1,0 +1,45 @@
+version: 1
+plan:
+  id: PLAN-071
+  spec_id: SPEC-138
+  title: Playtest Web e ranking por evidencias Discord
+  status: LOCAL_DELIVERED_AWAITING_DEVICE_ACCEPTANCE
+  origin: guided-add
+  implementation_preceded_spec: false
+  request_classification: PLAN_DEVIATION
+  spec: .atena/specs/SPEC-138-playtest-e-ranking.md
+  source: .atena/vault/drafts/PROPOSTA-playtest-web-e-evidencias-ranking-2026-10-06.md
+  approval:
+    mode: per-plan
+    status: APPROVED_LOCAL
+    approved: '2026-10-06'
+    basis: 'Dono pediu iniciar e selecionou Por plano — executar todo o escopo local aprovado.'
+    checkpoint: ALL_LOCAL_BATCHES
+  checkpoint: {current: B-006, step: S-011, status: LOCAL_DELIVERED}
+  route:
+    deviation_id: DEV-003
+    previous_plan: PLAN-070
+    previous_checkpoint: B-002/S-003
+    recovery_snapshot: .atena/generated/playtest-ranking/v01/plan-before-071.yaml
+    mobile_local_delivery: 503ccec4003efff9260821214e75bf49c1b6ab0b
+    device_acceptance: PENDING_PRESERVED
+  batches:
+    B-001: {steps: [S-001, S-002], title: Contrato e estatisticas Windows, status: LOCAL_VERIFIED}
+    B-002: {steps: [S-003, S-004], title: Botoes e evidencias Web, status: LOCAL_VERIFIED}
+    B-003: {steps: [S-005, S-006], title: Recebimento no site, status: LOCAL_VERIFIED}
+    B-004: {steps: [S-007], title: Importacao Discord, status: LOCAL_VERIFIED}
+    B-005: {steps: [S-008, S-009], title: Ranking e relatorios, status: LOCAL_VERIFIED}
+    B-006: {steps: [S-010, S-011], title: Integracao e reconciliacao, status: LOCAL_VERIFIED}
+  gates:
+    local_implementation: APPROVED
+    dependencies: NO_NEW_DEPENDENCIES
+    production_database: NOT_AUTHORIZED
+    credentials_permissions: NOT_AUTHORIZED
+    publish_push_merge_commit: NOT_AUTHORIZED
+    remote_discord_commands: NOT_AUTHORIZED
+    owner_pipeline: EXTERNAL_DEPENDENCY
+  site_return: {plan: PLAN-060, checkpoint: B-002/S-005, status: PENDING_PUBLICATION}
+  blocking_gaps: []
+  evidence: .atena/evidence/EVID-187-playtest-ranking-local-2026-10-06.md
+  manual_acceptance: [Chrome_Edge_Firefox, fullscreen, touch_device, Windows_export]
+  next: Entrega local estavel; homologar clientes finais e ativar pipeline somente pelo checkpoint operacional autorizado.

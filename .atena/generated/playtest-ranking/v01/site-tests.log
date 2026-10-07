@@ -1,0 +1,123 @@
+▶ acesso administrativo local
+  ✔ exige allowlist e segredo próprios (1.6365ms)
+  ✔ separa tokens e sessões administrativos, sem guardar o token bruto (119.5023ms)
+  ✔ aceita somente assinatura recente e íntegra do bot (0.5915ms)
+✔ acesso administrativo local (123.217ms)
+▶ cliente de cargos do Discord
+  ✔ busca o cargo pelo nome, uma vez só, e dá o cargo (34.647ms)
+  ✔ usuário fora do servidor não é erro (22.7211ms)
+  ✔ tira o cargo (4.406ms)
+  ✔ falha com o status quando o Discord recusa (hierarquia, permissão) (48.7548ms)
+  ✔ falha claramente quando o cargo não existe ou há limite de requisições (5.2743ms)
+✔ cliente de cargos do Discord (118.3098ms)
+▶ confirmação por e-mail
+  ✔ guarda somente o hash e consome o link uma única vez (65.3652ms)
+  ✔ recusa links expirados e limpa registros vencidos (10.5552ms)
+  ✔ exige uma configuração SMTP completa e uma URL segura (0.4643ms)
+✔ confirmação por e-mail (80.2377ms)
+▶ PKCE e state
+  ✔ o challenge é o SHA-256 do verifier (1.3114ms)
+  ✔ gera valores diferentes a cada vez (40.3809ms)
+  ✔ a URL de autorização pede só o escopo identify, com state e PKCE S256 (0.7679ms)
+  ✔ stateMatches compara com exatidão (0.4279ms)
+✔ PKCE e state (86.042ms)
+▶ cookie do fluxo
+  ✔ assina e verifica (4.8545ms)
+  ✔ recusa cookie adulterado, com outro segredo, vencido ou malformado (0.4196ms)
+✔ cookie do fluxo (46.8797ms)
+▶ troca de código e leitura do usuário
+  ✔ envia o code_verifier e devolve o access_token (201.353ms)
+  ✔ falha quando o Discord recusa (26.5911ms)
+  ✔ lê o usuário e usa o nome de exibição quando existe (0.856ms)
+  ✔ recusa ID que não parece um ID do Discord (7.5112ms)
+✔ troca de código e leitura do usuário (236.8471ms)
+▶ limitador de tentativas
+  ✔ bloqueia depois do limite e libera quando a janela passa (2.8211ms)
+  ✔ conta cada chave separadamente (0.3328ms)
+  ✔ tentativas bloqueadas não estendem o bloqueio (0.3388ms)
+✔ limitador de tentativas (4.9276ms)
+▶ enviar candidatura
+  ✔ grava como pendente, com a versão dos termos e um registro de auditoria (48.6417ms)
+  ✔ uma candidatura por conta de Discord (78.5ms)
+  ✔ o mesmo e-mail não vale para duas contas, sem diferenciar maiúsculas (39.0798ms)
+  ✔ celular é opcional (15.8743ms)
+  ✔ menor de idade só entra com os dados do responsável, e fica sinalizado (84.0053ms)
+  ✔ adulto não guarda dados de responsável mesmo que os envie (18.9668ms)
+  ✔ recusa campos inválidos e sem aceite, e não grava nada (13.7308ms)
+  ✔ a visão do candidato não inclui a nota da equipe (30.0946ms)
+✔ enviar candidatura (337.3352ms)
+▶ decisões da equipe
+  ✔ aprovar dá o cargo e registra quem decidiu (75.5738ms)
+  ✔ aprovar quem ainda não entrou no servidor deixa aguardando entrada; sincronizar resolve (32.211ms)
+  ✔ recusar não mexe no cargo (16.1045ms)
+  ✔ revogar tira o cargo (21.9468ms)
+  ✔ recusa transições inválidas e candidatura inexistente (40.6537ms)
+  ✔ se o Discord recusar, o estado não muda (28.3637ms)
+  ✔ sem o bot configurado, aprovar deixa aguardando entrada (60.5818ms)
+  ✔ sincronizar só vale para quem aguarda entrada (120.5035ms)
+  ✔ a auditoria guarda IDs, estados e datas, sem dados pessoais (54.2065ms)
+✔ decisões da equipe (457.7931ms)
+▶ exclusão dos dados
+  ✔ apaga a candidatura e as sessões, tira o cargo e mantém só o registro sem dados pessoais (22.3784ms)
+  ✔ apaga mesmo se o Discord falhar, e deixa o registro para a equipe tirar o cargo (109.0661ms)
+  ✔ não falha para quem não tem candidatura (12.1389ms)
+  ✔ não mexe nos dados de outra pessoa (15.7684ms)
+✔ exclusão dos dados (160.1119ms)
+▶ retenção
+  ✔ apaga só as recusadas há mais de 90 dias (41.3517ms)
+  ✔ não apaga candidaturas aprovadas nem pendentes (40.9113ms)
+✔ retenção (82.5164ms)
+▶ lista da equipe
+  ✔ filtra por status (43.1565ms)
+✔ lista da equipe (43.3012ms)
+▶ cadastro por e-mail e vínculo posterior
+  ✔ recusa vínculo sem identidade de e-mail antes de consultar ou alterar dados (10.854ms)
+  ✔ não libera Discord antes de a equipe aprovar (107.0075ms)
+  ✔ recusa um e-mail confirmado tentando enviar candidatura com outro endereço (32.1536ms)
+  ✔ o bot decide por código sem receber o e-mail e grava a origem Discord (24.7515ms)
+✔ cadastro por e-mail e vínculo posterior (175.1477ms)
+▶ sessões
+  ✔ o banco guarda só o hash do token (59.967ms)
+  ✔ devolve a identidade de uma sessão válida e nada para token errado ou ausente (22.0908ms)
+  ✔ sessão comum dura 30 dias e a da equipe, 12 horas (40.8891ms)
+  ✔ sessão vencida é recusada e apagada (35.5586ms)
+  ✔ logout apaga a sessão; excluir os dados apaga todas as do usuário (18.306ms)
+  ✔ limpa as vencidas (10.0628ms)
+✔ sessões (229.4086ms)
+✔ recebe amostras sinteticas do produtor Godot real sem converter o contrato (161.4297ms)
+▶ estatisticas de playtest
+  ✔ exclui QA incompleta dos denominadores e preserva checkpoint/final de diagnostico (90.6302ms)
+  ✔ recalcula pontos, deduplica envios e nao concede acesso por cadastro (62.5788ms)
+  ✔ aceita checkpoint/final, preserva dono e torna QA/aceleracao permanentes (84.3734ms)
+  ✔ separa progresso inicial e percursos; top um por tester e posicao propria (19.4537ms)
+  ✔ importa linhas boas e rejeita malformadas, build nao cadastrada e origem falsa (13.6619ms)
+  ✔ relatorio inclui denominadores, escolhas, chefes e dano efetivo (35.4516ms)
+  ✔ exclusao da candidatura remove suas partidas e manutencao tem limites explicitos (42.4605ms)
+✔ estatisticas de playtest (350.7045ms)
+▶ transições de status
+  ✔ aprovar vale para pendente, recusada e revogada (2.1701ms)
+  ✔ recusar só vale para pendente ou aguardando entrada (0.3187ms)
+  ✔ revogar só vale para quem está aprovado ou aguardando entrada (0.1821ms)
+  ✔ sincronizar só vale para quem aguarda entrada (0.2551ms)
+  ✔ aprovação aguarda vínculo e cargo depende de Discord depois disso (0.2239ms)
+  ✔ só o estado aprovado tem o cargo (0.1503ms)
+✔ transições de status (5.5259ms)
+▶ validação da candidatura
+  ✔ aceita um adulto sem celular e normaliza os campos (3.7739ms)
+  ✔ celular é opcional; se informado, é normalizado (5.035ms)
+  ✔ rejeita celular inválido (0.802ms)
+  ✔ normalizePhone (0.4419ms)
+  ✔ exige e-mail válido, nome, ao menos uma plataforma e os dois aceites (5.6157ms)
+  ✔ menor de idade precisa de nome, e-mail e autorização do responsável (0.8414ms)
+  ✔ adulto não precisa dos dados do responsável (4.7509ms)
+  ✔ limita os tamanhos (2.0997ms)
+  ✔ todas as mensagens de erro estão em português, mesmo com campos faltando ou de tipo errado (5.3583ms)
+✔ validação da candidatura (31.5196ms)
+ℹ tests 81
+ℹ suites 17
+ℹ pass 81
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8997.0182

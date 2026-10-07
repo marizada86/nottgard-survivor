@@ -1,0 +1,147 @@
+[
+  {
+    "path": "core/evidence_queue.gd",
+    "sha256": "d793e2787304f882fba3b7b3cecbdca2a8d6f6805002c3716630eb4cc7a597bf"
+  },
+  {
+    "path": "core/evidence_queue.gd.uid",
+    "sha256": "d1a03b83f2ed972a1b4f0b2d355c6591da9f861f3d768837e98209731314813c"
+  },
+  {
+    "path": "core/run_record.gd",
+    "sha256": "87ad341bdcf6726daa42442075c38e32a30f79ef8b1efd7d9e2c7ffe924d1ecb"
+  },
+  {
+    "path": "core/run_record.gd.uid",
+    "sha256": "2ceaccadbfdeb311d1f1f560d3627a37bb96daae78b311a98125c2a984536add"
+  },
+  {
+    "path": "tests/test_evidence_queue.gd",
+    "sha256": "64af43a94646a6086d687ec512214a3e051bd410fe1286b30be9e9cd460ca911"
+  },
+  {
+    "path": "tests/test_evidence_queue.gd.uid",
+    "sha256": "65d0d270a78a70ceb9227343755832eadaf5f666fccea294f04129d5aee20378"
+  },
+  {
+    "path": "tests/test_run_record.gd",
+    "sha256": "e8f635af1d60f69c5ab7479169331160c10550b6b9abdb722dfaf92ec93c76d2"
+  },
+  {
+    "path": "tests/test_run_record.gd.uid",
+    "sha256": "bccb345851a612e65970886a2e180e8f02209d91e7e64ae0f7118e1098fe4428"
+  },
+  {
+    "path": "tools/capture_ability_hud.gd.uid",
+    "sha256": "50ddf351a33bad7c61e8ed5928a664685cac9c73c7f981828a60bcbf651c22a4"
+  },
+  {
+    "path": "tools/capture_character_sheet.gd.uid",
+    "sha256": "4d13e56f4ece3232510d35c1ec2e2d6208bef760c5b71e949126b63c04004848"
+  },
+  {
+    "path": "tools/capture_ficha_c_art.gd",
+    "sha256": "939d357dcb2796a90e539a12bfe14841b553674e1a95c1bc2d290c2b2eaad5c0"
+  },
+  {
+    "path": "tools/capture_ficha_c_art.gd.uid",
+    "sha256": "9be9b041f10d4aab753db85c5bd4fb2d5e01d0ec76cebf5ebeb509a6ab5e4d95"
+  },
+  {
+    "path": "tools/capture_ficha_c_art.tscn",
+    "sha256": "f221da07c759962ee5594167fccef6b84d6dd3308ec3a2efbb5e79abe2b41e02"
+  },
+  {
+    "path": "tools/capture_playtest.gd",
+    "sha256": "e89e949884a755b24641d951e600e14fd69636ad47c0b9348027659ae12ebf39"
+  },
+  {
+    "path": "tools/capture_playtest.gd.uid",
+    "sha256": "1f910d3e15bcb9d2e3573d3278dcedb8940083b34e92f262f232a1e6784cfcd5"
+  },
+  {
+    "path": "tools/capture_playtest.tscn",
+    "sha256": "3cef59c080ddefc7b76ed698fee2057d2af5207a6918a1ef133539ffd1584dd4"
+  },
+  {
+    "path": "tools/normalize_ficha_c.gd",
+    "sha256": "fe95e754df80499a76a780d3a42fa33ac2a9c1be95e365a722fdad20661f955c"
+  },
+  {
+    "path": "tools/normalize_ficha_c.gd.uid",
+    "sha256": "412efe47fa9881f5e38ffc91e27d63bf49b2ed4f5d0b1c8c5b8bb8d1896d31e9"
+  },
+  {
+    "path": "tools/playtest_interop.gd",
+    "sha256": "c7da89d0fcd50ede91e6b29dd99bc880e622f71f50ef2d6540c73fbb71f4eac5"
+  },
+  {
+    "path": "tools/playtest_interop.gd.uid",
+    "sha256": "86f0d310cac04322c21613f48c9cb3e3ed7c79b1a15a8eb6eb3d267a44471e68"
+  },
+  {
+    "path": "tools/validate_ficha_c.ps1",
+    "sha256": "a1888680c8ce06e275300f82de4178c09746195c11651b6f0edc8982a404ff37"
+  },
+  {
+    "path": "ui/leaderboard.gd",
+    "sha256": "1b5f8e846a42d8c460c2deac4814d8373a2bb933422f99b110b0c5800e86f4f4"
+  },
+  {
+    "path": "ui/leaderboard.gd.uid",
+    "sha256": "f1d733cbbb7b9a486f8d096dab77d26a526b786e9bc8a0e84adc1cd7a9cb73f9"
+  },
+  {
+    "path": "ui/sheet_art.gd",
+    "sha256": "39a0455a0ac12c95769dbf085c4bb37dcb5e94a9261255905e90d594e7b187a4"
+  },
+  {
+    "path": "ui/sheet_art.gd.uid",
+    "sha256": "f98bd31606d13970bdb3fdd554126f72e8d5ba128e39ff8507c9ee52b12694a2"
+  },
+  {
+    "path": "core/battle.gd",
+    "source_sha256": "2a5b8346f5256c73570d15d19cfdf1afb9d1d82712fc4bb18f9186c6089994d7",
+    "integrated_sha256": "1e6f0e45af18924e5cbd92b1691d91bc777e5d3635ee0618edd2c388b2c4a417"
+  },
+  {
+    "path": "core/happenings.gd",
+    "source_sha256": "ddafc16d4f2665fc692ac5b37595bb050b7a269e6ef56ee399a5048ce65670be",
+    "integrated_sha256": "3ba99aef7ea4c40d9316097f46cf7870626d85582b935ef283eb5b48d7226d04"
+  },
+  {
+    "path": "core/playtest.gd",
+    "source_sha256": "eb9087340f05549ada7bcafda909acd4993d0330402805078d61f75064271247",
+    "integrated_sha256": "a23db840fd6354de184d52f2ec670c6965eac5d759b6b5617c0b8e1b3ef7b428"
+  },
+  {
+    "path": "ui/run.gd",
+    "source_sha256": "bc3eaecbb25951e3b7262d26440e2c9bf5596a537c10a0fc1e67d0ec7c9fe86d",
+    "integrated_sha256": "bc3eaecbb25951e3b7262d26440e2c9bf5596a537c10a0fc1e67d0ec7c9fe86d"
+  },
+  {
+    "path": "ui/menu.gd",
+    "source_sha256": "33d67a8f90c278ce4190e6e5b095d53063cf3402ded840246b5b1742f441e05c",
+    "integrated_sha256": "33d67a8f90c278ce4190e6e5b095d53063cf3402ded840246b5b1742f441e05c"
+  },
+  {
+    "path": "ui/sheet_slot.gd",
+    "source_sha256": "eab9d81eca8646d6837bff2706e23501869e9e2acb9dd81af51128a1882792ca",
+    "integrated_sha256": "eab9d81eca8646d6837bff2706e23501869e9e2acb9dd81af51128a1882792ca"
+  },
+  {
+    "path": "project.godot",
+    "source_sha256": "ada86da060ffdd6cee2d322b9a5db023fe6afc82721d6981358ca008549783b2",
+    "integrated_sha256": "ada86da060ffdd6cee2d322b9a5db023fe6afc82721d6981358ca008549783b2"
+  },
+  {
+    "path": "export_presets.cfg",
+    "source_sha256": "0b64bcbe3270986b6e128d360acf24f69f37abaf2d090bee03a2fd3ff835a78f",
+    "integrated_sha256": "0b64bcbe3270986b6e128d360acf24f69f37abaf2d090bee03a2fd3ff835a78f"
+  },
+  {
+    "path": ".atena/backlog/MECANICAS.md",
+    "source_sha256": "cdf25841bd410361ab5febabd37a7b538eb5f42a695a9823fdd88eeb9edfd652",
+    "integrated_sha256": "6be36bdd0a022fa0e6204dd4de84e44076ae8b3303d9968333958912b3a5c6b3"
+  }
+]

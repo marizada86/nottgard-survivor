@@ -1,0 +1,182 @@
+[
+  {
+    "path": ".atena/evidence/EVID-SPEC-015-playtest-ranking-local-2026-10-06.md",
+    "before": "9cfa4bfb5261bf848ad34edec3c6db9b192f0a4ff0f45567cbebcfb24116fcf8",
+    "after": "1be3cdd135b64395c529435146c0e19726f957a13f3f16d9d5a81ca2c4d9949e"
+  },
+  {
+    "path": ".atena/generated/playtest-ranking/plan-before-071.yaml",
+    "before": "e2dc8ea415bbbe78cd58f320aab7324d724c5f320c0489c5425e88a2238dc11c",
+    "after": "e2dc8ea415bbbe78cd58f320aab7324d724c5f320c0489c5425e88a2238dc11c"
+  },
+  {
+    "path": ".atena/specs/SPEC-015-playtest-ranking/acceptance.md",
+    "before": "e743a3b68ed33e49463047ef88ec75056b1596efab966c049368fdf918c49e20",
+    "after": "e743a3b68ed33e49463047ef88ec75056b1596efab966c049368fdf918c49e20"
+  },
+  {
+    "path": ".atena/specs/SPEC-015-playtest-ranking/plan.md",
+    "before": "491295e10d563620dc64e27f25ef8aa940eb2cf0c26b26d84f333233f8fea3e6",
+    "after": "491295e10d563620dc64e27f25ef8aa940eb2cf0c26b26d84f333233f8fea3e6"
+  },
+  {
+    "path": ".atena/specs/SPEC-015-playtest-ranking/spec.md",
+    "before": "3dd624383fa4c7754dba5cef6d2c8fcda91377bdf9da47873aa43cb2489c9589",
+    "after": "5e1c6fab2f1b348705a4c279a20d1be3eb0ee37ca5c4dab8d884ca829758f6be"
+  },
+  {
+    "path": ".atena/specs/SPEC-015-playtest-ranking/tasks.md",
+    "before": "9a13ecedaccaaca495a9234455059bd66ebbaf9802832a5c7e7779456eb13984",
+    "after": "9a13ecedaccaaca495a9234455059bd66ebbaf9802832a5c7e7779456eb13984"
+  },
+  {
+    "path": ".atena/state/plan-playtest-ranking.yaml",
+    "before": "0da1a38b1f652ef0da169b4f571503f64051de95379fc24a96807e8ede0d092d",
+    "after": "0da1a38b1f652ef0da169b4f571503f64051de95379fc24a96807e8ede0d092d"
+  },
+  {
+    "path": ".atena/state/plan.yaml",
+    "before": "b2220f46531c650792d09b4dee0e1058decfae119be1169ddba15e5412a411c3",
+    "after": "b2220f46531c650792d09b4dee0e1058decfae119be1169ddba15e5412a411c3"
+  },
+  {
+    "path": ".atena/vault/canon/DEC-003-playtest-web-ranking.md",
+    "before": "49d3841df667e23d29f968534c3aeda201fef3cb58e8e243dca30b71bebca252",
+    "after": "49d3841df667e23d29f968534c3aeda201fef3cb58e8e243dca30b71bebca252"
+  },
+  {
+    "path": "app/[locale]/playtest/equipe/estatisticas/page.tsx",
+    "before": "7e20298bbd60f5788881aeb1586fe1c6ee8e7896851e2dde498dc596332ab4c5",
+    "after": "7e20298bbd60f5788881aeb1586fe1c6ee8e7896851e2dde498dc596332ab4c5"
+  },
+  {
+    "path": "app/[locale]/playtest/equipe/page.tsx",
+    "before": "616ad26462005406f78f3c3863e4562830c45c4d4cd97d1c8f8445f8252e14a7",
+    "after": "616ad26462005406f78f3c3863e4562830c45c4d4cd97d1c8f8445f8252e14a7"
+  },
+  {
+    "path": "app/[locale]/playtest/page.tsx",
+    "before": "08bde7225cad57214d2b1420ea33ead93998adf10d5686326c0b64ca005c4fd9",
+    "after": "08bde7225cad57214d2b1420ea33ead93998adf10d5686326c0b64ca005c4fd9"
+  },
+  {
+    "path": "app/[locale]/playtest/ranking/page.tsx",
+    "before": "43d3ed46969696c5364ac6dd94b02befa2ee44d3403ac5e4204ba88e7b3f894a",
+    "after": "43d3ed46969696c5364ac6dd94b02befa2ee44d3403ac5e4204ba88e7b3f894a"
+  },
+  {
+    "path": "app/api/internal/playtest/statistics/route.ts",
+    "before": "23f70e40e4bb0645e33122f67c1f281ef77fdc03d42206e5220cade8344727f3",
+    "after": "23f70e40e4bb0645e33122f67c1f281ef77fdc03d42206e5220cade8344727f3"
+  },
+  {
+    "path": "app/api/playtest/evidence/[id]/route.ts",
+    "before": "ae5963c05a69a31c3c7a2b89d3d6066fd72bb23464c1e4fd0fa3501c28253d55",
+    "after": "ae5963c05a69a31c3c7a2b89d3d6066fd72bb23464c1e4fd0fa3501c28253d55"
+  },
+  {
+    "path": "app/api/playtest/evidence/route.ts",
+    "before": "c4aaa0ddf9a8fe9ee10a46692eb56f4a313beb59e21cfe670fce40fa81d974af",
+    "after": "c4aaa0ddf9a8fe9ee10a46692eb56f4a313beb59e21cfe670fce40fa81d974af"
+  },
+  {
+    "path": "app/api/playtest/leaderboard/route.ts",
+    "before": "c2e5103b1ae0ea999408059adcd0f918ca1294fb9952e8f0a44c455b2c91f668",
+    "after": "c2e5103b1ae0ea999408059adcd0f918ca1294fb9952e8f0a44c455b2c91f668"
+  },
+  {
+    "path": "app/api/playtest/ranking/me/route.ts",
+    "before": "af7a7cfb3bfbbddab2c4d65c3d3ba9e1159c22f22cb933dab4993b4ca9a8773b",
+    "after": "af7a7cfb3bfbbddab2c4d65c3d3ba9e1159c22f22cb933dab4993b4ca9a8773b"
+  },
+  {
+    "path": "app/api/playtest/runs/route.ts",
+    "before": "5a744db48c7ba3d9b05c45dbf163861cc70d7cae0497d76aaf37631b1dd4d3cc",
+    "after": "5a744db48c7ba3d9b05c45dbf163861cc70d7cae0497d76aaf37631b1dd4d3cc"
+  },
+  {
+    "path": "app/api/playtest/statistics/route.ts",
+    "before": "d5a2da1bcfd0a2205faabdb2de1697eb039e994a8b1ba6fc2ec50a20d9808791",
+    "after": "d5a2da1bcfd0a2205faabdb2de1697eb039e994a8b1ba6fc2ec50a20d9808791"
+  },
+  {
+    "path": "components/site/PlaytestRanking.tsx",
+    "before": "053d06d551f2010604fd2208002306af0df520f35c1fc00a9e8b1c5163e5bb9d",
+    "after": "053d06d551f2010604fd2208002306af0df520f35c1fc00a9e8b1c5163e5bb9d"
+  },
+  {
+    "path": "components/site/PlaytestStatistics.tsx",
+    "before": "edbe3244493fdd10890b1e8ae972daf582ef89717201a2f773d35c6eb8b99573",
+    "after": "edbe3244493fdd10890b1e8ae972daf582ef89717201a2f773d35c6eb8b99573"
+  },
+  {
+    "path": "db/schema.ts",
+    "before": "55ee5fd99f56b398e78ab0714c80830f00308d23c57181281a467934add0f51e",
+    "after": "55ee5fd99f56b398e78ab0714c80830f00308d23c57181281a467934add0f51e"
+  },
+  {
+    "path": "docs/playtest-ranking.md",
+    "before": "e5cb3e2cda7b845e0c1c1dbf3cc7e975f2cac87f92946eb9702e5be3a2de4df4",
+    "after": "e5cb3e2cda7b845e0c1c1dbf3cc7e975f2cac87f92946eb9702e5be3a2de4df4"
+  },
+  {
+    "path": "drizzle/0003_playtest_statistics.sql",
+    "before": "98522929826843963e2fe9fd5ca2d4a1214899380c0d034f340f0f0eb2f0666c",
+    "after": "98522929826843963e2fe9fd5ca2d4a1214899380c0d034f340f0f0eb2f0666c"
+  },
+  {
+    "path": "drizzle/meta/_journal.json",
+    "before": "ac12bf38c617979378fa2fa764fe8603231209e4f67b175cb76ccf6e4769ff6e",
+    "after": "ac12bf38c617979378fa2fa764fe8603231209e4f67b175cb76ccf6e4769ff6e"
+  },
+  {
+    "path": "lib/playtest/runtime.ts",
+    "before": "4c0cf5c780321642d630fc5da68b4463d4e6ec3249b841bf01d59e72b7798059",
+    "after": "4c0cf5c780321642d630fc5da68b4463d4e6ec3249b841bf01d59e72b7798059"
+  },
+  {
+    "path": "lib/playtest/statistics-http.ts",
+    "before": "e8e358d9264b17500f31e746dabab8bd4b176c16a733ce7beb735a78476c85f7",
+    "after": "e8e358d9264b17500f31e746dabab8bd4b176c16a733ce7beb735a78476c85f7"
+  },
+  {
+    "path": "lib/playtest/statistics-interop.test.ts",
+    "before": "32c304ef037d7a2e78bf4590387805d4d82a0546c1dae3c20a7b209b57d903d8",
+    "after": "32c304ef037d7a2e78bf4590387805d4d82a0546c1dae3c20a7b209b57d903d8"
+  },
+  {
+    "path": "lib/playtest/statistics-retention.ts",
+    "before": "8b0c45ed6c711208e6690a67d240a5393d1c713a6bb72d3c031074ab0500bd3a",
+    "after": "8b0c45ed6c711208e6690a67d240a5393d1c713a6bb72d3c031074ab0500bd3a"
+  },
+  {
+    "path": "lib/playtest/statistics.test.ts",
+    "before": "a27b1b0faf2a321bd854d889dd1c512efd69c6cb4806fa0aee739b128c219ba6",
+    "after": "a27b1b0faf2a321bd854d889dd1c512efd69c6cb4806fa0aee739b128c219ba6"
+  },
+  {
+    "path": "lib/playtest/statistics.ts",
+    "before": "2a73cb7241f1ee4f4ad0152dc26e20ba086f4b4abe6c09a278e9e521feee8115",
+    "after": "2a73cb7241f1ee4f4ad0152dc26e20ba086f4b4abe6c09a278e9e521feee8115"
+  },
+  {
+    "path": "services/discord/src/playtest-bot.ts",
+    "before": "bd9b66b8a5713bf4dea15bf2498743ea8165353e88a023d9955c5d47ed0db156",
+    "after": "bd9b66b8a5713bf4dea15bf2498743ea8165353e88a023d9955c5d47ed0db156"
+  },
+  {
+    "path": "services/discord/src/register-commands.ts",
+    "before": "b1561092bf8977d2ba8c70d153afd48c96f7e72b0e79df46bf7e4045e465a692",
+    "after": "b1561092bf8977d2ba8c70d153afd48c96f7e72b0e79df46bf7e4045e465a692"
+  },
+  {
+    "path": "services/discord/src/statistics-client.test.ts",
+    "before": "301670c8498871094f938054c34c16457466fe6ef201db1e6b679aa8fa5c7ed3",
+    "after": "301670c8498871094f938054c34c16457466fe6ef201db1e6b679aa8fa5c7ed3"
+  },
+  {
+    "path": "services/discord/src/statistics-client.ts",
+    "before": "6b0f6f76b65e360e4b6cd88308e61560ebc76fe1e0fb14a61d2bb3ceab4cb9a3",
+    "after": "6b0f6f76b65e360e4b6cd88308e61560ebc76fe1e0fb14a61d2bb3ceab4cb9a3"
+  }
+]

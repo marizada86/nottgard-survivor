@@ -1,0 +1,68 @@
+{
+  "plan": "PLAN-071",
+  "spec": "SPEC-138",
+  "status": "GODOT_SOURCES_STABLE_LOCAL_VERIFIED",
+  "sealed_at": "2026-10-07T03:00:18.280387+00:00",
+  "sources": {
+    "core/run_record.gd": "87ad341bdcf6726daa42442075c38e32a30f79ef8b1efd7d9e2c7ffe924d1ecb",
+    "core/evidence_queue.gd": "d793e2787304f882fba3b7b3cecbdca2a8d6f6805002c3716630eb4cc7a597bf",
+    "core/battle.gd": "2a5b8346f5256c73570d15d19cfdf1afb9d1d82712fc4bb18f9186c6089994d7",
+    "core/happenings.gd": "ddafc16d4f2665fc692ac5b37595bb050b7a269e6ef56ee399a5048ce65670be",
+    "core/playtest.gd": "eb9087340f05549ada7bcafda909acd4993d0330402805078d61f75064271247",
+    "ui/run.gd": "bc3eaecbb25951e3b7262d26440e2c9bf5596a537c10a0fc1e67d0ec7c9fe86d",
+    "ui/menu.gd": "33d67a8f90c278ce4190e6e5b095d53063cf3402ded840246b5b1742f441e05c",
+    "ui/leaderboard.gd": "1b5f8e846a42d8c460c2deac4814d8373a2bb933422f99b110b0c5800e86f4f4",
+    "project.godot": "ada86da060ffdd6cee2d322b9a5db023fe6afc82721d6981358ca008549783b2",
+    "export_presets.cfg": "0b64bcbe3270986b6e128d360acf24f69f37abaf2d090bee03a2fd3ff835a78f",
+    "tests/test_run_record.gd": "e8f635af1d60f69c5ab7479169331160c10550b6b9abdb722dfaf92ec93c76d2",
+    "tests/test_evidence_queue.gd": "64af43a94646a6086d687ec512214a3e051bd410fe1286b30be9e9cd460ca911",
+    "tools/playtest_interop.gd": "c7da89d0fcd50ede91e6b29dd99bc880e622f71f50ef2d6540c73fbb71f4eac5",
+    "tools/capture_playtest.gd": "e89e949884a755b24641d951e600e14fd69636ad47c0b9348027659ae12ebf39",
+    "tools/capture_playtest.tscn": "3cef59c080ddefc7b76ed698fee2057d2af5207a6918a1ef133539ffd1584dd4",
+    "core/run_record.gd.uid": "2ceaccadbfdeb311d1f1f560d3627a37bb96daae78b311a98125c2a984536add",
+    "core/evidence_queue.gd.uid": "d1a03b83f2ed972a1b4f0b2d355c6591da9f861f3d768837e98209731314813c",
+    "core/battle.gd.uid": "be47584bacf85cfbac9597e96b49fdd3630bd546370fd976a53b856f515f23de",
+    "core/happenings.gd.uid": "45c04fa312520f3c9cf6d8d52a0a0167bbe638afcc52a6a3df7e520a4d9a69dd",
+    "core/playtest.gd.uid": "2d553d7050d209a6aec26ad9c6fb0ec4792b474005c50d458cb5987ea8e7a86b",
+    "ui/run.gd.uid": "2a2a1464f076c46e11375d01994fbfc030f04ef327c9d9bcc8f0cb9e0b77375b",
+    "ui/menu.gd.uid": "f93ba8160f07d538e25afa8ea3ee0c9f23356c775b08752ad33f4ebd1fb4ccc7",
+    "ui/leaderboard.gd.uid": "f1d733cbbb7b9a486f8d096dab77d26a526b786e9bc8a0e84adc1cd7a9cb73f9",
+    "tests/test_run_record.gd.uid": "bccb345851a612e65970886a2e180e8f02209d91e7e64ae0f7118e1098fe4428",
+    "tests/test_evidence_queue.gd.uid": "65d0d270a78a70ceb9227343755832eadaf5f666fccea294f04129d5aee20378",
+    "tools/playtest_interop.gd.uid": "86f0d310cac04322c21613f48c9cb3e3ed7c79b1a15a8eb6eb3d267a44471e68",
+    "tools/capture_playtest.gd.uid": "1f910d3e15bcb9d2e3573d3278dcedb8940083b34e92f262f232a1e6784cfcd5"
+  },
+  "records": {
+    ".atena/specs/SPEC-138-playtest-e-ranking.md": "f776942c6362e43fa21d3db949574b0e50d55a15571442856f71b9fb0b4dea8d",
+    ".atena/state/plan-071-playtest-ranking.yaml": "a60b1720590ccaaedf2f7b9d3dea7b9ad515bb8708fb51d65be65f6fbdca2823",
+    ".atena/vault/drafts/PROPOSTA-playtest-web-e-evidencias-ranking-2026-10-06.md": "dad618ccd716c4672e40584ce0f3f80c260e3826a52694673ceea0a17df101af",
+    ".atena/vault/canon/DEC-PLAYTEST-RANKING-001.md": "baeb11ec46bf5d2e96089a04658987d39124a8f385824a59aba18b21793a7c18",
+    ".atena/evidence/EVID-187-playtest-ranking-local-2026-10-06.md": "dcf2bcf5671ecf97d863e981073aae31d194345d548bc0c1a85a0a5e1501b3d2"
+  },
+  "central_state": "Preserve other plan facts and recovery chain in .atena/state/plan.yaml; reconcile by three-way comparison, not wholesale replacement.",
+  "checks": {
+    "godot_suite": "zero failures; existing five-resource exit warning",
+    "smoke": "nine stages passed",
+    "web_export": "passed; runtime note/capture/final-run receipt exercised locally",
+    "interop": "Godot producer accepted by website validator"
+  },
+  "limitations": [
+    "Tests precede consolidation with newer remote combat changes; rerun after three-way integration.",
+    "Chrome/Edge/Firefox final clients, fullscreen, touch and Windows executable shortcuts pending manual acceptance.",
+    "No Git, commit, merge or push initiated by this task.",
+    "Site, DB and Discord operations are outside any Godot publication scope."
+  ],
+  "exclude_from_game_publication": [
+    ".atena/generated/playtest-ranking/v01/appdata/",
+    ".atena/generated/playtest-ranking/v01/localappdata/",
+    ".atena/generated/playtest-ranking/v01/tmp/",
+    ".atena/generated/playtest-ranking/v01/site-validation/",
+    ".atena/generated/playtest-ranking/v01/site-files/",
+    ".atena/generated/playtest-ranking/v01/site-backup/",
+    ".atena/generated/playtest-ranking/v01/web/",
+    "*.db",
+    "*.db-*",
+    ".atena/generated/playtest-ranking/v01/http-fixture.json"
+  ],
+  "note": "site-files contains staged website source/document replicas, not game source. Synthetic fixtures contain fake authentication material and are not publication evidence."
+}
