@@ -532,11 +532,7 @@ func show_offer(b: Battle) -> void:
 			btn.pressed.connect(_select_offer.bind(i))
 			_offer_buttons.append(btn)
 		else:
-			btn.pressed.connect(func():
-				if String(o.t) in ["boon_skip", "item_swap"]:
-					confirm_mobile("Confirmar %s?" % o.name, func(): offer_chosen.emit(i))
-				else:
-					offer_chosen.emit(i))
+			btn.pressed.connect(func(): offer_chosen.emit(i))
 		offer_box.add_child(btn)
 		if i == 0:
 			btn.grab_focus()
