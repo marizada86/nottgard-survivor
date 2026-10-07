@@ -3,7 +3,7 @@ spec: SPEC-141
 spec_file: .atena/specs/SPEC-141-marcas-do-abismo-entrega-1.md
 plan_file: .atena/vault/drafts/PLAN-074-marcas-do-abismo-2026-10-07.md
 mode: per-plan
-status: COMPLETED_LOCAL
+status: COMMITTED_LOCAL
 approved: '2026-10-07'
 approval_basis: 'Dono: atena, aprovado, pode comecar pelo B-001 (por plano; premissas A1-A3 aceitas como propostas).'
 checkpoint: B-005/S-011
@@ -24,7 +24,7 @@ return:
   snapshot: .atena/generated/abyss-marks/v01/plan-before-074.yaml
 assumptions_to_confirm: [A1, A2, A3]
 batches:
-  B-001: {title: Dados e nucleo de combate, steps: [S-001, S-002, S-003], status: LOCAL_VERIFIED, evidence: EVID-193}
+  B-001: {title: Dados e nucleo de combate, steps: [S-001, S-002, S-003], status: LOCAL_VERIFIED, evidence: EVID-196}
   B-002: {title: Perfil, recompensa e conquistas, steps: [S-004, S-005], status: LOCAL_VERIFIED, evidence: EVID-192}
   B-003: {title: Interface, steps: [S-006, S-007], status: LOCAL_VERIFIED, evidence: EVID-192}
   B-004: {title: Medicao, steps: [S-008, S-009], status: LOCAL_VERIFIED, evidence: EVID-192}
@@ -35,3 +35,11 @@ gates:
   commit_push_build_export: NOT_AUTHORIZED
   other_sessions_changes: PRESERVE_UNTOUCHED
 blocking_gaps: []
+git_receipt:
+  commit: 78c6f39
+  branch: main
+  authorization: 'atena, pode fazer o commit (2026-10-07)'
+  scope: 'MEC-040 entrega 1; trechos da economia de ouro (PLAN-075) deixados fora do stage'
+  validation: 'arvore staged extraida em pasta isolada: importacao sem erro de script e suite com zero falhas'
+  pushed: false
+  build_exported: false

@@ -42,6 +42,17 @@
     {"id":"cronista_de_nottgard","name":"Cronista de Nottgard","desc":"Leia 5 HQs completas.","stat":"hqs_seen","value":5,"reward":{"coins":300,"text":"300 moedas"}},
     {"id":"marcado_pelo_abismo","name":"Marcado pelo Abismo","desc":"Derrote o chefe da fase inicial com as Marcas do Abismo somando 5 pontos.","stat":"abyss_best_level","value":5,"reward":{"coins":200,"text":"200 moedas"}},
     {"id":"selo_do_abismo","name":"Selo do Abismo","desc":"Derrote o chefe da fase inicial com as Marcas do Abismo somando 10 pontos.","stat":"abyss_best_level","value":10,"reward":{"coins":400,"text":"400 moedas"}},
-    {"id":"abismo_sem_fundo","name":"Abismo Sem Fundo","desc":"Derrote o chefe da fase inicial com as cinco Marcas do Abismo no nível 3 (15 pontos).","stat":"abyss_best_level","value":15,"reward":{"coins":800,"text":"800 moedas"}}
+    {"id":"abismo_sem_fundo","name":"Abismo Sem Fundo","desc":"Derrote o chefe da fase inicial com as Marcas do Abismo somando 15 pontos.","stat":"abyss_best_level","value":15,"reward":{"coins":800,"text":"800 moedas"}},
+    {"id":"coroa_do_abismo","name":"Coroa do Abismo","desc":"Derrote o chefe da fase inicial com as Marcas do Abismo somando 20 pontos.","stat":"abyss_best_level","value":20,"reward":{"coins":1200,"text":"1.200 moedas"}},
+    {"id":"abismo_desperto","name":"Abismo Desperto","desc":"Derrote o chefe da fase inicial com todas as Marcas do Abismo no máximo (25 pontos).","stat":"abyss_best_level","value":25,"reward":{"coins":2000,"text":"2.000 moedas"}},
+    {"id":"marca_carapaca","name":"Marca do Abismo: Carapaça","desc":"Derrote o chefe de Dagruve.","stat":"boss_dagruve","value":1,"reward":{"unlock_mark":"carapaca","text":"Libera a Marca Carapaça"}},
+    {"id":"marca_pressa","name":"Marca do Abismo: Pressa","desc":"Sobreviva 10 minutos numa run.","stat":"run_time","value":600,"reward":{"unlock_mark":"pressa","text":"Libera a Marca Pressa"}},
+    {"id":"marca_horda","name":"Marca do Abismo: Horda","desc":"Derrote 1.000 inimigos (total).","stat":"kills_total","value":1000,"reward":{"unlock_mark":"horda","text":"Libera a Marca Horda"}},
+    {"id":"marca_elites","name":"Marca do Abismo: Elites despertos","desc":"Derrote 25 elites (total).","stat":"elites_total","value":25,"reward":{"unlock_mark":"elites","text":"Libera a Marca Elites despertos"}},
+    {"id":"marca_furia","name":"Marca do Abismo: Fúria","desc":"Derrote 50 inimigos seguidos sem receber dano (na mesma run).","stat":"run_clean_streak","value":50,"reward":{"unlock_mark":"furia","text":"Libera a Marca Fúria"}},
+    {"id":"marca_vivo","name":"Marca do Abismo: Abismo vivo","desc":"Complete 4 fases diferentes.","stat":"stages_cleared","value":4,"reward":{"unlock_mark":"vivo","text":"Libera a Marca Abismo vivo"}},
+    {"id":"marca_fome","name":"Marca do Abismo: Fome","desc":"Chegue ao nível 20 numa run.","stat":"run_level","value":20,"reward":{"unlock_mark":"fome","text":"Libera a Marca Fome"}},
+    {"id":"marca_chefe","name":"Marca do Abismo: Chefe desperto","desc":"Derrote 3 chefes (total).","stat":"bosses_total","value":3,"reward":{"unlock_mark":"chefe","text":"Libera a Marca Chefe desperto"}},
+    {"id":"marca_tregua","name":"Marca do Abismo: Sem trégua","desc":"Derrote 4 chefes numa única run.","stat":"run_bosses","value":4,"reward":{"unlock_mark":"tregua","text":"Libera a Marca Sem trégua"}}
   ]
 }

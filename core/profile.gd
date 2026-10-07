@@ -290,5 +290,10 @@ func abyss_best_level() -> int:
 			best = maxi(best, int(data.stats.abyss_best[hero_id][stage_id]))
 	return best
 
-func abyss_unlocked(stage_id: String) -> bool:
-	return AbyssMarks.unlocked(data.cleared, stage_id)
+## SPEC-143: cada marca é liberada pela sua conquista (campo `requires` em data/abyss_marks.json).
+func abyss_mark_unlocked(id: String) -> bool:
+	var req := AbyssMarks.requires(id)
+	return req == "" or data.achievements.has(req)
+
+func abyss_unlocked_ids() -> Array:
+	return AbyssMarks.ids().filter(func(id): return abyss_mark_unlocked(String(id)))

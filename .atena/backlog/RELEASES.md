@@ -51,15 +51,15 @@ playtest" viram verificados ou reabertos.
 
 Itens implementados localmente que **ainda não estão em nenhum `.exe`**; entram na lista "O que testar" da próxima versão exportada.
 
-### Marcas do Abismo (MEC-040, SPEC-141, PLAN-074)
+### Marcas do Abismo (MEC-040, SPEC-141 e SPEC-143, PLAN-074 e PLAN-076)
 
-1. **Liberação:** numa fase ainda não vencida, a aba **Marcas** mostra o aviso de bloqueio e os botões desativados; depois de vencer o chefe daquela fase, as marcas liberam.
-2. **Escolha:** na aba Marcas, − e + em cada uma das cinco marcas (0 a 3), com mouse, controle e toque; o total e o bônus de moeda (+10% por ponto) atualizam; a escolha continua depois de fechar o jogo. Na aba Jogar, a fase mostra o resumo ("Marcas do Abismo: nível N...").
-3. **Efeito na run:** o selo roxo "Marcas N" aparece na HUD (passe o mouse para ver a lista). Horda: mais inimigos ao mesmo tempo. Fúria: golpes doem mais. Carapaça: inimigos e chefe com mais PV. Pressa: inimigos mais rápidos. Fome: toda cura rende menos (nível 3 = 25% da cura).
+1. **Liberação por conquista:** cada marca nasce bloqueada; a aba **Marcas** mostra, em cada uma, a conquista que falta e a condição (por exemplo "Marca do Abismo: Horda: derrote 1.000 inimigos"). Ao ganhar a conquista, só aquela marca libera, em qualquer fase. Conferir as nove: Carapaça (chefe de Dagruve), Pressa (10 min numa run), Horda (1.000 abates), Elites despertos (25 elites), Fúria (50 abates seguidos sem dano), Abismo vivo (4 fases), Fome (nível 20), Chefe desperto (3 chefes) e Sem trégua (4 chefes numa run).
+2. **Escolha:** na aba Marcas, − e + em cada uma das nove marcas (0 a 3; Sem trégua só 1), com mouse, controle e toque; o total e o bônus de moeda (+10% por ponto) atualizam; a escolha continua depois de fechar o jogo. Na aba Jogar, a fase mostra o resumo ("Marcas do Abismo: nível N...").
+3. **Efeito na run:** o selo roxo "Marcas N" aparece na HUD (passe o mouse para ver a lista). Horda: mais inimigos ao mesmo tempo. Fúria: golpes doem mais. Carapaça: inimigos e chefe com mais PV. Pressa: inimigos mais rápidos. Fome: toda cura rende menos (nível 3 = 25% da cura). Elites despertos: elites com mais afixos (e 1 elite extra por minuto no nível 3). Chefe desperto: chefe com mais PV e uma fase extra a 15% de PV. Abismo vivo: a regra do andar (rituais, poças, raios) acontece mais vezes. Sem trégua: nenhuma loja, ferreiro nem curandeiro na run.
 4. **Run inteira:** as marcas continuam valendo nas fases seguintes, depois do portal.
-5. **Recompensa e recorde:** o resultado mostra "Marcas do Abismo: nível N (moedas +X%)" e "novo recorde" quando vence a fase inicial com nível maior; as conquistas Marcado pelo Abismo (5), Selo do Abismo (10) e Abismo Sem Fundo (15) dão moedas.
+5. **Recompensa e recorde:** o resultado mostra "Marcas do Abismo: nível N (moedas +X%)" e "novo recorde" quando vence a fase inicial com nível maior; as conquistas de pontuação Marcado pelo Abismo (5), Selo do Abismo (10), Abismo Sem Fundo (15), Coroa do Abismo (20) e Abismo Desperto (25) dão moedas.
 6. **Sem marcas:** a run deve ser igual à de antes (nenhuma marca ligada).
-7. **Perguntar ao tester:** o nível máximo (15) é desafiador ou impossível? Qual marca é a mais injusta?
+7. **Perguntar ao tester:** o nível máximo (25) é desafiador ou impossível? Qual marca é a mais injusta?
 
 ## Versão 0.3.2 — Minor-update, build local exportada (publicação pendente)
 

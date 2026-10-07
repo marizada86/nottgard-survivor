@@ -38,6 +38,7 @@ const AFFIX_LEECH := 0.2
 const AFFIX_SUMMON_EVERY := 8.0
 const AFFIX_SUMMON_N := 3
 const AFFIX_FIRST_AFFIXED_STAGE := 2   # `order` da fase em que os afixos novos começam (Shedaklah)
+const TRUCE_KINDS := ["loja", "ferreiro", "curandeiro"]   # SPEC-143: o que a marca Sem trégua tira da run
 const AFFIX_BOSS_FIRST_STAGE := 4      # chefe afixado a partir da quinta fase (Durao)
 ## Cada bioma tem seu próprio quebrável temático, alinhado à família de prop
 ## já usada na fase (ART-PROMPTS-024). Candelabro/caixote continuam
@@ -165,6 +166,12 @@ var _mk_dmg := 1.0
 var _mk_hp := 1.0
 var _mk_speed := 1.0
 var _mk_heal := 1.0
+var _mk_alive := 1.0       # Abismo vivo: a regra do andar acontece mais vezes
+var _mk_boss := 1.0        # Chefe desperto: multiplicador de PV
+var _mk_elites := 0        # Elites despertos: afixos a mais por elite
+var _mk_truce := false     # Sem trégua: sem loja, ferreiro nem curandeiro
+var abyss_rng := RandomNumberGenerator.new()  # RNG própria das marcas novas: não desloca a da batalha
+var _awake_elite_t := 0.0
 var stage_rule: Dictionary = {}
 var stage_events: Array = []
 var _rule_timer := 0.0
@@ -212,6 +219,11 @@ func _set_abyss_marks(raw: Variant, start_stage: String) -> void:
 	_mk_hp = AbyssMarks.up_mult(abyss_marks, "carapaca")
 	_mk_speed = AbyssMarks.up_mult(abyss_marks, "pressa")
 	_mk_heal = AbyssMarks.heal_mult(abyss_marks)
+	_mk_alive = AbyssMarks.up_mult(abyss_marks, "vivo")
+	_mk_boss = AbyssMarks.up_mult(abyss_marks, "chefe")
+	_mk_elites = AbyssMarks.level_of(abyss_marks, "elites")
+	_mk_truce = AbyssMarks.level_of(abyss_marks, "tregua") > 0
+	abyss_rng.seed = _seed ^ 0xA7B155
 
 ## SPEC-141 (Fome): toda cura do herói passa por aqui; sem a marca devolve o valor intacto.
 func _heal_amount(amount: float) -> float:
@@ -223,10 +235,40 @@ func _add_hp(amount: float) -> void:
 	run_record.healing += minf(amount, maxf(0.0, hero.max_hp - hero.hp))
 	hero.hp = minf(hero.max_hp, hero.hp + amount)
 
+## SPEC-143 (Abismo vivo): a regra do andar acontece `_mk_alive` vezes mais; as ilusões ganham chance, o Estige não muda.
+func _apply_alive_mark() -> void:
+	if _mk_alive == 1.0:
+		return
+	if stage_rule.has("interval"):
+		stage_rule["interval"] = float(stage_rule.interval) / _mk_alive
+	if String(stage_rule.get("kind", "")) == "illusions":
+		stage_rule["chance"] = minf(0.5, float(stage_rule.get("chance", 0.12)) * _mk_alive)
+
+## SPEC-143 (Elites despertos): `n` afixos a mais, sem repetir, sorteados na RNG das marcas.
+func _pick_awake_affixes(e: Enemy, n: int) -> Array:
+	var left: Array = (AFFIXES if _stage_order() < AFFIX_FIRST_AFFIXED_STAGE else ELITE_AFFIXES).filter(func(a): return not e.has_affix(String(a)))
+	var picked: Array = []
+	for i in mini(n, left.size()):
+		picked.append(left.pop_at(abyss_rng.randi() % left.size()))
+	return picked
+
+## SPEC-143 (Chefe desperto): mais PV e uma fase extra a 15 %, mais forte por nível.
+func _apply_awake_boss(boss_e: Enemy) -> void:
+	var lv := AbyssMarks.level_of(abyss_marks, "chefe")
+	if lv <= 0:
+		return
+	boss_e.max_hp = round(boss_e.max_hp * _mk_boss)
+	boss_e.hp = boss_e.max_hp
+	var p: Dictionary = AbyssMarks.def("chefe").phase
+	boss_e.phase_defs.append({"at_hp": float(p.at_hp), "announcement": String(p.announcement), "actions": [
+		{"t": "ring", "n": int(p.ring_n) + int(p.ring_n_per_level) * lv, "dice": String(p.dice), "speed": float(p.speed)},
+		{"t": "enrage", "speed": float(p.enrage_speed), "bonus": int(p.enrage_bonus_per_level) * lv}]})
+
 func load_stage(stage_key: String) -> void:
 	stage_id = stage_key
 	stage = Data.table("stages")[stage_key].duplicate(true)
 	stage_rule = Data.table("stage_rules").get(stage_key, {}).duplicate(true)
+	_apply_alive_mark()
 	stage_events = Happenings.select(stage_key, Data.table("stage_events").get(stage_key, []), _seed)
 	happenings.reset()
 	kinds.reset_stage(self)
@@ -253,6 +295,7 @@ func load_stage(stage_key: String) -> void:
 	_horde_state = 0
 	_horde_acc = 0.0
 	_stage_events_done.clear()
+	_awake_elite_t = 0.0
 	_inter_t = 4.0
 	_first_inter = true
 	_breakable_t = 20.0 + rng.randf() * 10.0
@@ -1476,6 +1519,8 @@ func place_scenery() -> int:
 ## Interativos de posição fixa da fase (poço de Dagruve, oficina do cais nas Docas). Reaproveitam as interações existentes.
 func _place_fixed_interactions() -> void:
 	for entry in Data.table("scenery").get(stage_id, {}).get("interativos", []):
+		if _mk_truce and TRUCE_KINDS.has(String(entry.kind)):
+			continue
 		var at := Vector2(float(entry.pos[0]), float(entry.pos[1]))
 		if at.distance_to(hero.pos) < 3.0:
 			continue
@@ -2520,6 +2565,9 @@ func _spawn_elite(id: String, at: Vector2) -> Enemy:
 	else:
 		for a in _pick_affixes(ELITE_AFFIXES, _elite_affix_count()):
 			_apply_affix(e, a)
+	if _mk_elites > 0:
+		for a in _pick_awake_affixes(e, _mk_elites):
+			_apply_affix(e, a)
 	e.affix = e.affixes[0]
 	e.xp *= 3
 	var names: Array = []
@@ -2685,6 +2733,12 @@ func _director(dt: float) -> void:
 		if not _elites_done.has(i) and time >= float(el.at):
 			_elites_done[i] = true
 			_spawn_elite(String(el.id), _ring_pos())
+	if _mk_elites > 0 and not boss_spawned and not stage.elites.is_empty() and _mk_elites >= int(AbyssMarks.def("elites").extra_elite_level):
+		_awake_elite_t += dt
+		if _awake_elite_t >= float(AbyssMarks.def("elites").extra_elite_every):
+			_awake_elite_t = 0.0
+			var awake_pick: Dictionary = stage.elites[abyss_rng.randi() % stage.elites.size()]
+			_spawn_elite(String(awake_pick.id), _ring_pos())
 	if descent_depth > 0 and not stage.elites.is_empty():
 		var pressure_mark := int(time / maxf(70.0, 130.0 - float(descent_depth) * 10.0))
 		var pressure_key := "pressure_%d" % pressure_mark
@@ -2699,6 +2753,7 @@ func _director(dt: float) -> void:
 		boss.max_hp = round(boss.max_hp * scale_extra * (1.0 + 0.3 * tier() * 0.0))
 		boss.hp = boss.max_hp
 		_apply_boss_affix(boss)
+		_apply_awake_boss(boss)
 		happenings.on_boss_spawn(self, boss)
 		codex.enemies[boss.id] = true
 		events.append({"type": "boss", "enemy": boss})
@@ -2749,6 +2804,10 @@ func _spawn_random_interaction() -> void:
 	if alive_n >= int(Data.table("difficulty").get("interactions", {}).get("max_alive", 4)):
 		return
 	var weights: Dictionary = stage.interactions
+	if _mk_truce:
+		weights = weights.duplicate()
+		for k in TRUCE_KINDS:
+			weights.erase(k)
 	var total := 0.0
 	for k in weights:
 		total += float(weights[k])

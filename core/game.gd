@@ -425,14 +425,12 @@ func battle_ctx() -> Dictionary:
 	Hero.add_mods(meta, {"gold_pct": 0.25 * int(profile.data.settings.difficulty)})
 	return {"meta_mods": meta, "bonus_mods": {}, "difficulty": difficulty(), "abyss_marks": run_abyss_marks()}
 
-## Marcas escolhidas no Quartel (SPEC-141); a escolha fica no perfil e só vale se a fase inicial já foi vencida.
+## Marcas escolhidas no Quartel (SPEC-141); a escolha fica no perfil e cada marca só vale se a conquista dela foi ganha (SPEC-143).
 func abyss_marks() -> Dictionary:
 	return AbyssMarks.normalize(profile.data.settings.get("abyss_marks", {}))
 
 func run_abyss_marks() -> Dictionary:
-	if not profile.abyss_unlocked(run_stage):
-		return {}
-	return abyss_marks()
+	return AbyssMarks.keep_unlocked(abyss_marks(), profile.abyss_mark_unlocked)
 
 func set_abyss_marks(marks: Dictionary) -> void:
 	profile.data.settings["abyss_marks"] = AbyssMarks.normalize(marks)

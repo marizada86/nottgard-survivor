@@ -1,0 +1,37 @@
+id: PLAN-076
+spec: SPEC-143
+spec_file: .atena/specs/SPEC-143-marcas-do-abismo-entrega-2.md
+plan_file: .atena/vault/drafts/PLAN-076-marcas-do-abismo-entrega-2-2026-10-07.md
+mode: per-plan
+status: COMPLETED_LOCAL
+approved: '2026-10-07'
+approval_basis: 'Dono: atena, aprovado, pode seguir do B-001 ao B-005 (por plano; premissas B1-B4 aceitas como propostas).'
+checkpoint: B-005/S-012
+request_classification: PLAN_DEVIATION
+deviation_id: DEV-008
+authorization_verbatim: 'atena, vamos para a entrega 2 das Marcas, a ideia das conquistas era que para liberar o uso das marcas deveria destravar as conquistas'
+decisions:
+  D1: 'Liberacao so por conquista (substitui vencer a fase inicial)'
+  D2: 'Uma conquista nova por marca (nove)'
+  D3: 'Aprovacao por plano'
+  D4: 'Escopo: Elites despertos, Chefe desperto, Abismo vivo, Sem trégua; reliquia fora (SPEC-119)'
+return:
+  plan: PLAN-071
+  state_file: .atena/state/plan-071-playtest-ranking.yaml
+  checkpoint_observed: B-006/S-011
+  status_observed: LOCAL_DELIVERED_AWAITING_DEVICE_ACCEPTANCE
+  snapshot: .atena/generated/abyss-marks/v02/plan-before-076.yaml
+base_commit: 78c6f39
+assumptions_to_confirm: [B1, B2, B3, B4]
+batches:
+  B-001: {title: Liberacao por conquista, steps: [S-001, S-002, S-003], status: LOCAL_VERIFIED, evidence: EVID-195}
+  B-002: {title: Quatro marcas no combate, steps: [S-004, S-005, S-006], status: LOCAL_VERIFIED, evidence: EVID-195}
+  B-003: {title: Interface, steps: [S-007, S-008], status: LOCAL_VERIFIED, evidence: EVID-195}
+  B-004: {title: Medicao, steps: [S-009, S-010], status: LOCAL_VERIFIED, evidence: EVID-195}
+  B-005: {title: Validacao e reconciliacao, steps: [S-011, S-012], status: LOCAL_VERIFIED, evidence: EVID-195}
+gates:
+  dependencies: NO_NEW_DEPENDENCIES
+  new_art: NOT_REQUIRED
+  commit_push_build_export: NOT_AUTHORIZED
+  other_sessions_changes: PRESERVE_UNTOUCHED
+blocking_gaps: []

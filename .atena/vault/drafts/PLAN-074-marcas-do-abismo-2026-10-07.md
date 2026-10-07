@@ -3,7 +3,7 @@ id: PLAN-074
 title: Marcas do Abismo, entrega 1 (cinco marcas, run inteira)
 spec: SPEC-141
 cards: [MEC-040, BAL-016]
-status: concluido localmente em 2026-10-07 (B-001 a B-005, EVID-193 e EVID-192); aguarda aprovacao de commit
+status: concluido localmente em 2026-10-07 (B-001 a B-005, EVID-196 e EVID-192); commit 78c6f39 local, sem push
 approval_mode: per-plan
 route: PLAN_DEVIATION (DEV-006); PLAN-071 preservado, retorno em B-006/S-011
 ---

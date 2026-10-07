@@ -1,7 +1,7 @@
 ---
 id: "SPEC-141"
 title: "Marcas do Abismo, entrega 1 (cinco marcas, run inteira)"
-status: "IMPLEMENTADA LOCAL 2026-10-07 (PLAN-074, EVID-193 e EVID-192); aguarda playtest; sem commit"
+status: "IMPLEMENTADA LOCAL 2026-10-07 (PLAN-074, EVID-196 e EVID-192); aguarda playtest; sem commit"
 origin: planned
 implementation_preceded_spec: false
 request_classification: PLAN_DEVIATION
@@ -86,7 +86,7 @@ Elites despertos, Chefe desperto, Abismo vivo, Sem trégua, relíquia (SPEC-119)
 - Fome no nível 3 pode travar builds sem fonte de cura (aceito e sinalizado no Quartel).
 - `core/battle.gd` é um arquivo grande e partilhado: tocar só nos pontos listados, sem refatorar.
 
-## Como ficou (2026-10-07, EVID-193 e EVID-192)
+## Como ficou (2026-10-07, EVID-196 e EVID-192)
 
 Diferenças em relação ao rascunho, todas dentro do escopo aprovado:
 - **Interface:** aba própria **Marcas** (logo depois de Jogar) em vez de painel dentro de Jogar; a aba Jogar mostra só o resumo. Motivo: não mexer no layout de Jogar nem no botão fixo (BUG-033).
@@ -94,3 +94,6 @@ Diferenças em relação ao rascunho, todas dentro do escopo aprovado:
 - **Bot:** a medição usa `tools/bot_curva.gd` (já tinha o perfil veterano e o CSV por fase), não `tools/bot.gd`.
 - **Números:** nenhum ajuste; a meta do aceite 8 foi atingida (todas no nível 3 = 0,00 fases vencidas contra 1,56 sem marcas). Candidatas se o playtest achar injusto: `per_level` de Fome e Fúria.
 - Premissas A1 a A3 mantidas como propostas.
+
+## Atualização (2026-10-07, SPEC-143)
+A **regra de liberação** desta spec (vitória na fase inicial) foi **substituída** pela SPEC-143: cada marca é liberada por uma conquista própria, em qualquer fase. O recorde e as conquistas de pontuação continuam exigindo vencer o chefe da fase inicial com as marcas (agora 5, 10, 15, 20 e 25 pontos). O restante desta spec segue valendo.

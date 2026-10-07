@@ -64,19 +64,16 @@ suspension:
   suspended_plan_state_file: '.atena/state/plan-053-imagens.yaml'
   note: 'PLAN-053 (imagens, SPEC-121) suspenso; cota de imagens liberou 2026-10-04 10:28 BRT; retoma na Shu (attack_02, death_03, death_04).'
 deferred_requests:
-  - id: DEV-008
-    request: 'MEC-040 Marcas do Abismo, entrega 2: liberacao das marcas por conquista (uma conquista nova por marca) e as quatro marcas restantes.'
+  - id: DEV-007
+    request: 'Plano para balancear a obtencao de ouro no jogo (Quartel e run).'
     request_classification: PLAN_DEVIATION
-    status: COMPLETED_LOCAL_RETURNED_TO_PLAN_071
-    proposed_plan: PLAN-076
-    state_file: '.atena/state/plan-076-marcas-do-abismo-entrega-2.yaml'
-    spec: '.atena/specs/SPEC-143-marcas-do-abismo-entrega-2.md'
-    proposal: '.atena/vault/drafts/PLAN-076-marcas-do-abismo-entrega-2-2026-10-07.md'
+    status: B002_DONE_WAITING_PLAN074_B004
+    proposed_plan: PLAN-075
+    state_file: '.atena/state/plan-075-economia-de-ouro.yaml'
+    spec: '.atena/specs/SPEC-142-balanceamento-da-economia-de-ouro.md'
+    proposal: '.atena/vault/drafts/PLAN-075-economia-de-ouro-2026-10-07.md'
     approval_mode: per-plan
-    approval_status: APPROVED_PER_PLAN
-    route: 'Dono pediu a entrega 2 em 2026-10-07; PLAN-071 continua active_plan e volta em B-006/S-011.'
-    recovery_snapshot: '.atena/generated/abyss-marks/v02/plan-before-076.yaml'
-    note: 'Executado B-001 a B-005 em 2026-10-07 (EVID-195); premissas B1 a B4 mantidas; retorno ao PLAN-071 B-006/S-011.'
+    note: 'So rascunho (spec, plano, estado); nada executado no jogo. Aguarda rota (agora e voltar, ou depois), D1 a D3 e nivel de aprovacao.'
   - id: DEV-006
     request: 'MEC-040 Marcas do Abismo: dificuldade opcional; marcas na run inteira, fatia de 5 marcas, liberacao apos a 1a vitoria, conquistas.'
     request_classification: PLAN_DEVIATION
@@ -89,7 +86,7 @@ deferred_requests:
     approval_status: APPROVED_PER_PLAN
     route: 'Dono pediu atena, vamos com a MEC-040 em 2026-10-07; PLAN-071 continua active_plan e volta em B-006/S-011.'
     recovery_snapshot: '.atena/generated/abyss-marks/v01/plan-before-074.yaml'
-    note: 'Executado B-001 a B-005 em 2026-10-07 (EVID-196, EVID-192); premissas A1 a A3 mantidas; retorno ao PLAN-071 B-006/S-011.'
+    note: 'Executado B-001 a B-005 em 2026-10-07 (EVID-193, EVID-192); premissas A1 a A3 mantidas; retorno ao PLAN-071 B-006/S-011.'
   - id: DEV-005
     request: 'Gerar as dez imagens da FILA-025 ficha C, molduras, slots, abas e textura.'
     request_classification: PLAN_DEVIATION
@@ -149,8 +146,7 @@ completed_plans:
     commits: ['7d2f262 B-002', '35796ba B-003', '5fc8d04 B-004', 'eecced9 B-005', 'd86fbef B-007', '0cb3e8d release 0.3.1']
     note: 'Pontos abertos transferidos ao BAL-018: Docas facil (3%), Feng-tu 6%, rodada com bot novato, RNG do bot nao semeado. Criterios de aceite numericos (nivel medio mapas 1 e 2; % Raro/Unico no tier 0) nunca fixados; dono aceitou sem eles.'
 completed_side_plans:
-  - {id: PLAN-076, spec_id: SPEC-143, status: COMPLETED_LOCAL, evidence: [EVID-195], deviation: DEV-008, mode: per-plan, approved: "2026-10-07", note: "MEC-040 Marcas do Abismo, entrega 2 (liberacao por conquista e 4 marcas); sem commit, push nem build; arquivos compartilhados com PLAN-075 pedem git add -p. PLAN-071 continua active_plan em B-006/S-011."}
-  - {id: PLAN-074, spec_id: SPEC-141, status: COMPLETED_LOCAL, evidence: [EVID-196, EVID-192], deviation: DEV-006, mode: per-plan, approved: "2026-10-07", note: "MEC-040 Marcas do Abismo, entrega 1 (5 marcas, run inteira); sem commit, push nem build; arquivos compartilhados com PLAN-075 pedem git add -p (ver EVID-192). PLAN-071 continua active_plan em B-006/S-011."}
+  - {id: PLAN-074, spec_id: SPEC-141, status: COMPLETED_LOCAL, evidence: [EVID-193, EVID-192], deviation: DEV-006, mode: per-plan, approved: "2026-10-07", note: "MEC-040 Marcas do Abismo, entrega 1 (5 marcas, run inteira); sem commit, push nem build; arquivos compartilhados com PLAN-075 pedem git add -p (ver EVID-192). PLAN-071 continua active_plan em B-006/S-011."}
   - {id: PLAN-073, spec_id: SPEC-140, status: AUTHORIZED_SCOPE_PUBLISHED_PILOT_ASSETS_PENDING, commit: 0e5e4977b63e0ba98990e7a2c54f43093098ba31, evidence: ".atena/evidence/consolidacao-push-2026-10-06.json", note: "Main local sincronizada por fast-forward; originais e backups preservados. PLAN-071 e retornos mantidos."}
   - {id: PLAN-058, spec_id: SPEC-124, status: IMPLEMENTED_COMMITTED, commit: 69ec21c, evidence: EVID-159, note: 'Velocidade dos inimigos +20% (enemy_speed_mult); aguarda playtest.'}
   - {id: PLAN-072, spec_id: SPEC-139, status: COMPLETED_LOCAL, evidence: '.atena/evidence/fila-025-integracao-2026-10-06.json', note: 'FILA-025 integrada com autorizacao vamos la; cursor de PLAN-071 preservado.'}

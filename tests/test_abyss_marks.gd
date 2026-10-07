@@ -19,6 +19,7 @@ func run() -> Array:
 	_enemy_marks(out)
 	_density(out)
 	_hunger(out)
+	_new_marks(out)
 	_reward(out)
 	_profile(out)
 	_panel(out)
@@ -33,12 +34,16 @@ func _data(out: Array) -> void:
 		out.append("normalize deveria limitar 0..3 e descartar o desconhecido, veio %s" % str(n))
 	if AbyssMarks.normalize("lixo") != {} or AbyssMarks.normalize(null) != {}:
 		out.append("normalize de valor que não é dicionário deveria dar vazio")
-	if AbyssMarks.total_level(n) != 6 or AbyssMarks.max_total() != 15:
-		out.append("soma 6 e máximo 15 esperados, veio %d e %d" % [AbyssMarks.total_level(n), AbyssMarks.max_total()])
-	if AbyssMarks.unlocked({"dagruve": true}, "docas") or not AbyssMarks.unlocked({"dagruve": true}, "dagruve"):
-		out.append("a liberação deve depender da vitória na fase")
-	if AbyssMarks.ids().size() != 5:
-		out.append("a entrega 1 tem 5 marcas")
+	if AbyssMarks.total_level(n) != 6 or AbyssMarks.max_total() != 25:
+		out.append("soma 6 e máximo 25 esperados, veio %d e %d" % [AbyssMarks.total_level(n), AbyssMarks.max_total()])
+	if AbyssMarks.ids().size() != 9:
+		out.append("a entrega 2 tem 9 marcas")
+	if AbyssMarks.max_level("tregua") != 1 or AbyssMarks.max_level("horda") != 3 or AbyssMarks.normalize({"tregua": 3, "vivo": 9}) != {"tregua": 1, "vivo": 3}:
+		out.append("Sem trégua tem 1 nível e as demais 3")
+	var order: Array = ["carapaca", "pressa", "horda", "elites", "furia", "vivo", "fome", "chefe", "tregua"]
+	if AbyssMarks.ids() != order:
+		out.append("a ordem das marcas deve seguir a progressão: %s" % str(AbyssMarks.ids()))
+	_unlock_by_achievement(out)
 
 ## Sem marcas a run é a de antes: a RNG, os inimigos e o herói andam iguais com ctx vazio, marcas vazias e marcas zeradas.
 func _identity(out: Array) -> void:
@@ -143,15 +148,15 @@ func _result(level: int, marks: Dictionary, start: String, cleared: Array, hero 
 
 func _profile(out: Array) -> void:
 	var p := Profile.new({})
-	if p.abyss_best_level() != 0 or p.abyss_unlocked("dagruve"):
-		out.append("perfil novo: sem recorde e Marcas bloqueadas")
+	if p.abyss_best_level() != 0:
+		out.append("perfil novo: sem recorde")
 	# derrota ou sem vitória na fase inicial: nada de recorde
 	p.apply_run(_result(4, {"horda": 3, "fome": 1}, "dagruve", []))
 	if p.abyss_best_for("durvall", "dagruve") != 0:
 		out.append("sem vencer a fase inicial não deveria gravar recorde")
 	p.apply_run(_result(4, {"horda": 3, "fome": 1}, "dagruve", ["dagruve"]))
-	if p.abyss_best_for("durvall", "dagruve") != 4 or not p.abyss_unlocked("dagruve"):
-		out.append("vitória na fase inicial deveria gravar recorde 4 e liberar as Marcas")
+	if p.abyss_best_for("durvall", "dagruve") != 4:
+		out.append("vitória na fase inicial deveria gravar recorde 4")
 	p.apply_run(_result(2, {"horda": 2}, "dagruve", ["dagruve"]))
 	if p.abyss_best_for("durvall", "dagruve") != 4:
 		out.append("recorde menor não deveria substituir o maior")
@@ -177,13 +182,20 @@ func _profile(out: Array) -> void:
 	var original: Profile = Game.profile
 	var original_stage: String = Game.run_stage
 	Game.profile = Profile.new({})
-	Game.profile.data.settings["abyss_marks"] = {"horda": 2, "fome": 9, "lixo": 1}
+	Game.profile.data.settings["abyss_marks"] = {"horda": 2, "fome": 9, "tregua": 3, "lixo": 1}
 	Game.run_stage = "dagruve"
 	if Game.battle_ctx().abyss_marks != {}:
-		out.append("fase não vencida: battle_ctx deveria ignorar as marcas")
-	Game.profile.data.cleared["dagruve"] = true
-	if Game.battle_ctx().abyss_marks != {"horda": 2, "fome": 3}:
-		out.append("fase vencida: battle_ctx deveria entregar as marcas normalizadas, veio %s" % str(Game.battle_ctx().abyss_marks))
+		out.append("sem conquistas: battle_ctx deveria ignorar todas as marcas")
+	Game.profile.data.achievements["marca_horda"] = true
+	if Game.battle_ctx().abyss_marks != {"horda": 2}:
+		out.append("só a marca liberada vale: veio %s" % str(Game.battle_ctx().abyss_marks))
+	Game.profile.data.achievements["marca_fome"] = true
+	Game.profile.data.achievements["marca_tregua"] = true
+	if Game.battle_ctx().abyss_marks != {"horda": 2, "fome": 3, "tregua": 1}:
+		out.append("marcas liberadas entram normalizadas (Fome 3, Sem trégua 1): veio %s" % str(Game.battle_ctx().abyss_marks))
+	Game.run_stage = "docas"
+	if Game.battle_ctx().abyss_marks != {"horda": 2, "fome": 3, "tregua": 1}:
+		out.append("a liberação não depende da fase")
 	Game.profile = original
 	Game.run_stage = original_stage
 
@@ -211,15 +223,21 @@ func _panel(out: Array) -> void:
 	Engine.get_main_loop().root.add_child(panel)
 	for id in AbyssMarks.ids():
 		var row: Dictionary = panel._rows[id]
-		if not row.minus.disabled or not row.plus.disabled:
-			out.append("fase não vencida: os botões de %s deveriam estar desativados" % id)
-	if not panel._lock.visible or not panel._reset.disabled:
-		out.append("fase não vencida: aviso de bloqueio visível e botão zerar desativado")
+		if not row.minus.disabled or not row.plus.disabled or not row.lock.visible:
+			out.append("sem a conquista, %s deve estar desativada e mostrar a condição" % id)
+	if panel._rows.horda.lock.text.find("Marca do Abismo: Horda") < 0 or panel._rows.horda.lock.text.find("1.000") < 0:
+		out.append("a marca bloqueada deveria citar a conquista e a condição: %s" % panel._rows.horda.lock.text)
+	if not panel._reset.disabled:
+		out.append("sem marcas escolhidas o botão zerar fica desativado")
 	panel._step("horda", 1)
 	if Game.abyss_marks() != {}:
-		out.append("fase bloqueada não pode gravar marcas")
-	Game.profile.data.cleared["dagruve"] = true
+		out.append("marca bloqueada não pode gravar")
+	Game.profile.data.achievements["marca_horda"] = true
+	Game.profile.data.achievements["marca_fome"] = true
+	Game.profile.data.achievements["marca_tregua"] = true
 	panel.refresh()
+	if panel._rows.horda.lock.visible or panel._rows.furia.lock.visible == false:
+		out.append("só a marca liberada perde o aviso")
 	for i in 5:
 		panel._rows.horda.plus.pressed.emit()
 	panel._rows.fome.plus.pressed.emit()
@@ -227,8 +245,13 @@ func _panel(out: Array) -> void:
 		out.append("o + deveria parar em 3: %s" % str(Game.abyss_marks()))
 	if not panel._rows.horda.plus.disabled or panel._rows.horda.minus.disabled:
 		out.append("no nível máximo só o − fica ativo")
-	if panel._total.text.find("4 / 15") < 0 or panel._total.text.find("+40%") < 0:
-		out.append("total deveria mostrar 4 / 15 e +40%%, mostrou: %s" % panel._total.text)
+	panel._rows.tregua.plus.pressed.emit()
+	panel._rows.tregua.plus.pressed.emit()
+	if int(Game.abyss_marks().get("tregua", 0)) != 1 or not panel._rows.tregua.plus.disabled:
+		out.append("Sem trégua tem um nível só")
+	panel._rows.tregua.minus.pressed.emit()
+	if panel._total.text.find("4 / 25") < 0 or panel._total.text.find("+40%") < 0:
+		out.append("total deveria mostrar 4 / 25 e +40%%, mostrou: %s" % panel._total.text)
 	panel._rows.horda.minus.pressed.emit()
 	if int(Game.abyss_marks().get("horda", 0)) != 2:
 		out.append("o − deveria baixar para 2")
@@ -244,7 +267,7 @@ func _panel(out: Array) -> void:
 
 func _menu(out: Array) -> void:
 	var saved := _isolate()
-	Game.profile.data.cleared["dagruve"] = true
+	Game.profile.data.achievements["marca_carapaca"] = true
 	var menu := (load("res://ui/menu.tscn") as PackedScene).instantiate()
 	Engine.get_main_loop().root.add_child(menu)
 	var tabs: TabContainer = menu.get_node("Tabs")
@@ -256,3 +279,162 @@ func _menu(out: Array) -> void:
 		out.append("o botão Jogar deve continuar fixo fora das colunas (BUG-033)")
 	menu.free()
 	_restore(saved)
+
+## B-001 (SPEC-143): cada marca é liberada pela sua conquista, e a conquista não exige marcas.
+func _unlock_by_achievement(out: Array) -> void:
+	var p := Profile.new({})
+	if not p.abyss_unlocked_ids().is_empty():
+		out.append("perfil novo: nenhuma marca liberada")
+	var seen := {}
+	var achievements: Array = Data.table("achievements").achievements
+	for id in AbyssMarks.ids():
+		var req := AbyssMarks.requires(String(id))
+		var ach: Dictionary = {}
+		for a in achievements:
+			if String(a.id) == req:
+				ach = a
+		if req == "" or ach.is_empty():
+			out.append("a marca %s precisa de uma conquista que exista (requires=%s)" % [id, req])
+			continue
+		if seen.has(req):
+			out.append("duas marcas usam a mesma conquista: %s" % req)
+		seen[req] = true
+		if String(ach.reward.get("unlock_mark", "")) != String(id):
+			out.append("a conquista %s deveria liberar a marca %s" % [req, id])
+		if String(ach.stat).begins_with("abyss"):
+			out.append("a conquista %s não pode exigir marcas" % req)
+		var q := Profile.new({})
+		q.data.achievements[req] = true
+		if q.abyss_unlocked_ids() != [id]:
+			out.append("ganhar %s deveria liberar só %s, liberou %s" % [req, id, str(q.abyss_unlocked_ids())])
+	# a pontuação cobre 5 a 25 pontos
+	for want in [5, 10, 15, 20, 25]:
+		if not achievements.any(func(a): return String(a.stat) == "abyss_best_level" and int(a.value) == want):
+			out.append("falta a conquista de %d pontos" % want)
+
+## B-002 (SPEC-143): Elites despertos, Chefe desperto, Abismo vivo e Sem trégua.
+func _quiet(b: Battle) -> Battle:
+	b.stage.waves = []
+	b.hero.weapons.clear()
+	b.hero.max_hp = 999999.0
+	b.hero.hp = 999999.0
+	return b
+
+func _new_marks(out: Array) -> void:
+	_awake_elites(out)
+	_awake_boss(out)
+	_alive(out)
+	_truce(out)
+	var all_max := {}
+	for id in AbyssMarks.ids():
+		all_max[id] = AbyssMarks.max_level(String(id))
+	var b := _bat(all_max)
+	var cap: float = float(b.gold_cfg().get("reward_cap", 99.0)) if b.has_method("gold_cfg") else 99.0   # teto de moeda da economia de ouro (PLAN-075), se existir
+	if b.abyss_level != 25 or not _near(AbyssMarks.reward_bonus(b.abyss_marks), 2.5) or not _near(b.reward_multiplier(), minf(cap, 3.5)):
+		out.append("as nove no máximo = 25 pontos e bônus +250%% (teto de moeda %.2f), veio %d e ×%.3f" % [cap, b.abyss_level, b.reward_multiplier()])
+
+func _awake_elites(out: Array) -> void:
+	for stage in ["dagruve", "shedaklah"]:
+		var base := _bat({}, stage)
+		var e0 := base._spawn_elite("zumbi" if stage == "dagruve" else "pudim_negro", Vector2(31, 31))
+		for lv in [1, 2, 3]:
+			var b := _bat({"elites": lv}, stage)
+			var e := b._spawn_elite("zumbi" if stage == "dagruve" else "pudim_negro", Vector2(31, 31))
+			var pool := 4 if stage == "dagruve" else 9
+			var want: int = mini(e0.affixes.size() + lv, pool)
+			if e.affixes.size() != want:
+				out.append("%s: Elites despertos %d deveria dar %d afixos, deu %d" % [stage, lv, want, e.affixes.size()])
+			if e.affixes.size() != e.affixes.duplicate().filter(func(a): return e.affixes.count(a) == 1).size():
+				out.append("os afixos não podem repetir: %s" % str(e.affixes))
+	# elite extra por minuto só no nível 3, só antes do chefe
+	var counts: Array = []
+	for lv in [0, 2, 3]:
+		var b := _quiet(_bat({"elites": lv} if lv > 0 else {}, "docas"))
+		for i in b.stage.elites.size():
+			b._elites_done[i] = true
+		for i in 1300:
+			b.step(Vector2.ZERO, 0.1)
+		counts.append(b.enemies.filter(func(e): return e.affix != "").size())
+	if counts[0] != 0 or counts[1] != 0:
+		out.append("sem o nível 3 nenhum elite extra deveria nascer: %s" % str(counts))
+	if int(counts[2]) < 2:
+		out.append("nível 3 deveria soltar 1 elite por minuto (2 em 130 s), veio %d" % int(counts[2]))
+
+func _awake_boss(out: Array) -> void:
+	var base := _quiet(_bat({}, "docas"))
+	var marked := _quiet(_bat({"chefe": 2}, "docas"))
+	for b in [base, marked]:
+		b.time = float(b.stage.duration)
+		b.step(Vector2.ZERO, 0.1)
+	if base.boss == null or marked.boss == null:
+		out.append("o chefe deveria nascer na hora")
+		return
+	if absf(marked.boss.max_hp / base.boss.max_hp - 1.6) > 0.03:
+		out.append("Chefe desperto 2 deveria dar +60%% de PV, deu ×%.3f" % (marked.boss.max_hp / base.boss.max_hp))
+	if marked.boss.phase_defs.size() != base.boss.phase_defs.size() + 1 or not _near(float(marked.boss.phase_defs[-1].at_hp), 0.15):
+		out.append("o chefe desperto deveria ganhar uma fase extra a 15%%")
+	if base.boss.phase_defs.size() != Data.table("boss_phases").get(base.boss.id, []).size():
+		out.append("sem a marca o chefe mantém as fases dele")
+	marked.boss.hp = marked.boss.max_hp * 0.14
+	marked._check_boss_phase(marked.boss)
+	if marked.boss.phase_index != marked.boss.phase_defs.size():
+		out.append("a fase extra deveria disparar com todas as anteriores")
+	if not marked.events.any(func(ev): return String(ev.get("text", "")) == "O Abismo desperta o chefe"):
+		out.append("o anúncio da fase extra deveria aparecer")
+	var again := marked.events.size()
+	marked._check_boss_phase(marked.boss)
+	if marked.events.size() != again:
+		out.append("a fase extra dispara uma única vez")
+
+func _alive(out: Array) -> void:
+	var base := _bat({}, "docas")
+	var vivo := _bat({"vivo": 3}, "docas")
+	var ratio: float = float(vivo.stage_rule.interval) / float(base.stage_rule.interval)
+	if absf(ratio - 0.5) > 0.002:
+		out.append("Abismo vivo 3 deveria dobrar a frequência (intervalo ×0,5), deu ×%.4f" % ratio)
+	var l1 := _bat({"vivo": 1}, "docas")
+	if absf(float(l1.stage_rule.interval) / float(base.stage_rule.interval) - 1.0 / 1.3334) > 0.002:
+		out.append("Abismo vivo 1 deveria dar +33%% de frequência")
+	# run inteira: vale na fase seguinte
+	vivo.load_stage("dagruve")
+	if absf(float(vivo.stage_rule.interval) / 55.0 - 0.5) > 0.002:
+		out.append("Abismo vivo deveria seguir na fase seguinte (rituais de Dagruve), intervalo %.2f" % float(vivo.stage_rule.interval))
+	# ilusões ganham chance; o Estige não muda
+	var ill_base := _bat({}, "shendilavri")
+	var ill := _bat({"vivo": 3}, "shendilavri")
+	if not (float(ill.stage_rule.chance) > float(ill_base.stage_rule.chance) * 1.9):
+		out.append("ilusões deveriam ganhar chance com Abismo vivo")
+	var styx_base := _bat({}, "durao")
+	var styx := _bat({"vivo": 3}, "durao")
+	if styx.stage_rule != styx_base.stage_rule:
+		out.append("o Rio Estige não muda com Abismo vivo")
+	if base.stage_rule.interval != Data.table("stage_rules")["docas"].interval:
+		out.append("o dado da fase não pode ser alterado (a regra é copiada)")
+
+func _truce(out: Array) -> void:
+	var kinds := ["loja", "ferreiro", "curandeiro"]
+	for marks in [{}, {"tregua": 1}]:
+		var b := _bat(marks, "docas")
+		b._first_inter = false
+		var seen := {}
+		for i in 400:
+			b.interactions.clear()
+			b._spawn_random_interaction()
+			for it in b.interactions:
+				seen[String(it.kind)] = true
+		var has_shop: bool = kinds.any(func(k): return seen.has(k))
+		if marks.is_empty() and not has_shop:
+			out.append("sem a marca o sorteio deveria produzir loja, ferreiro ou curandeiro")
+		if not marks.is_empty() and has_shop:
+			out.append("Sem trégua: nenhuma loja, ferreiro ou curandeiro deveria nascer: %s" % str(seen.keys()))
+		if not marks.is_empty() and not seen.has("chest"):
+			out.append("o resto das interações continua (baús)")
+		var fixed := _bat(marks, "docas")
+		fixed.hero.pos = Vector2(5, 5)
+		fixed.interactions.clear()
+		fixed._place_fixed_interactions()
+		var fixed_shop := fixed.interactions.any(func(it): return kinds.has(String(it.kind)))
+		if marks.is_empty() and not fixed_shop:
+			out.append("Docas tem o ferreiro fixo da Oficina do Cais")
+		if not marks.is_empty() and fixed_shop:
+			out.append("Sem trégua tira também o ferreiro fixo do cenário")

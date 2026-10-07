@@ -1,6 +1,6 @@
 # EVID-192 — Marcas do Abismo, B-002 a B-005 (perfil, interface, bot e validação)
 
-Plano: PLAN-074 · Spec: SPEC-141 · Cartões: MEC-040, BAL-016 · Data: 2026-10-07 · Continua [EVID-193](EVID-193-marcas-do-abismo-b001-nucleo-de-combate-2026-10-07.md). **Sem commit, push, build nem exportação.**
+Plano: PLAN-074 · Spec: SPEC-141 · Cartões: MEC-040, BAL-016 · Data: 2026-10-07 · Continua [EVID-196](EVID-196-marcas-do-abismo-b001-nucleo-de-combate-2026-10-07.md). **Sem commit, push, build nem exportação.**
 
 ## B-002 Perfil, recompensa e conquistas
 - `core/profile.gd`: `record_abyss` (recorde por herói e fase inicial, só com vitória nela), `abyss_best_for`, `abyss_best_level`, `abyss_unlocked`; `apply_run` devolve `abyss_record`; stat `abyss_best_level`; `settings.abyss_marks` no perfil novo.
@@ -30,7 +30,7 @@ Plano: PLAN-074 · Spec: SPEC-141 · Cartões: MEC-040, BAL-016 · Data: 2026-10
 
 Durvall não vence nem Dagruve sem marcas (0,00 em todas as linhas, exceto 0,17 na Fome): é o BAL-015 já aberto, não efeito das marcas.
 
-- **Meta do aceite 8:** atingida. As cinco marcas no nível 3 derrubam as fases vencidas de 1,56 para 0,00 (menos da metade); sem marcas a run é idêntica à de antes (EVID-193).
+- **Meta do aceite 8:** atingida. As cinco marcas no nível 3 derrubam as fases vencidas de 1,56 para 0,00 (menos da metade); sem marcas a run é idêntica à de antes (EVID-196).
 - **Ordem de dureza (nível 3, isolada):** Fome ≈ Fúria (−64 % e −61 %) > Horda (−29 %) > Pressa (−25 %) > Carapaça (−15 %). Cada marca isolada pesa menos que o conjunto; 5 pontos (todas no nível 1) já cortam 54 %.
 - **Limitações:** o bot não usa loja, ferreiro nem curandeiro e não explora eventos, então a Fome e a Fúria tendem a parecer piores para ele do que para uma pessoa (alarme, não veredito). A amostra de fases 3+ ficou pequena (18 passagens sem marcas), por isso a taxa de passagem dessas fases não foi usada como critério.
 - **S-009:** sem ajuste de número (meta atingida; nenhuma alavanca mexida). Candidata se o playtest achar o nível 3 injusto: reduzir `per_level` de Fome e Fúria em `data/abyss_marks.json`, uma marca por vez.

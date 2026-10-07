@@ -1,4 +1,4 @@
-# EVID-193 — Marcas do Abismo, B-001 (núcleo de combate)
+# EVID-196 — Marcas do Abismo, B-001 (núcleo de combate)
 
 Plano: PLAN-074 · Spec: SPEC-141 · Cartão: MEC-040 · Data: 2026-10-07 · Lote: B-001 (S-001, S-002, S-003). **Sem commit.**
 
@@ -28,4 +28,4 @@ Plano: PLAN-074 · Spec: SPEC-141 · Cartão: MEC-040 · Data: 2026-10-07 · Lot
 - Pendente (B-002 em diante): perfil e liberação, recompensa e conquistas, interface, bot, validação final.
 
 ## Nota de numeração
-Este registro foi aberto como EVID-191 e renumerado para EVID-193 em 2026-10-07, porque a sessão da economia de ouro (PLAN-075) já usava EVID-191 para outro assunto. Os links e referências foram atualizados.
+Este registro foi aberto como EVID-191 e renumerado duas vezes em 2026-10-07: EVID-191 → EVID-193 (a economia de ouro já usava a 191) → EVID-196 (ela também ficou com a 193). Os links e referências foram atualizados.

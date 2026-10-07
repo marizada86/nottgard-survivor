@@ -5,7 +5,7 @@ extends SceneTree
 
 var _map_side := 60.0
 var _meta := {}
-var _marks := {}   # SPEC-141: 7º argumento "horda=3,fome=2" ou "all=3"
+var _marks := {}   # SPEC-141 e SPEC-143: 7º argumento "horda=3,fome=2", "all=3" ou "all=max"
 const METAS := [{}, {"dmg_pct": 0.16, "hp": 8, "ca": 1, "speed_pct": 0.03}, {"dmg_pct": 0.4, "hp": 20, "ca": 3, "speed_pct": 0.09, "pickup": 1.2}]
 
 func _init() -> void:
@@ -22,7 +22,7 @@ func _init() -> void:
 		_run(hero, s + 1, dt, max_stages)
 	quit()
 
-## "all=3" liga as cinco marcas no nível 3; "horda=2,fome=1" liga marcas soltas; vazio = sem marcas.
+## "all=3" liga todas as marcas no nível 3 (limitado ao máximo de cada uma); "all=max" liga todas no máximo; "horda=2,fome=max" liga marcas soltas; vazio = sem marcas.
 func _parse_marks(text: String) -> Dictionary:
 	var out := {}
 	for part in text.split(",", false):
@@ -31,9 +31,9 @@ func _parse_marks(text: String) -> Dictionary:
 			continue
 		if kv[0] == "all":
 			for id in AbyssMarks.ids():
-				out[id] = int(kv[1])
+				out[id] = AbyssMarks.max_level(String(id)) if kv[1] == "max" else int(kv[1])
 		else:
-			out[kv[0]] = int(kv[1])
+			out[kv[0]] = AbyssMarks.max_level(kv[0]) if kv[1] == "max" else int(kv[1])
 	return AbyssMarks.normalize(out)
 
 func _new_stat(b: Battle) -> Dictionary:
