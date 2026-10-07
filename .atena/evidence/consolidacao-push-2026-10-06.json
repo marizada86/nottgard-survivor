@@ -1,0 +1,471 @@
+{
+  "status": "AUTHORIZED_SCOPE_PUBLISHED_PILOT_ASSETS_PENDING",
+  "recorded_at": "2026-10-07T03:10:57.121375+00:00",
+  "authorization": "atena junte tudo que temos e faÃƒÂ§a push",
+  "coordination": "Sim, coordene com esse chat",
+  "remote_commits_incorporated": 13,
+  "local_commits_preserved": 4,
+  "commits": [
+    "b2b9485 art(ficha): record consolidated runtime captures",
+    "67779c4 style(ficha): normalize slot source ending",
+    "8123e1e feat(playtest): integrate local evidence queue and leaderboard",
+    "227f05a merge: reconcile remote main with mobile, controller and ficha work",
+    "7c5edab art(ficha): integrate ten approved character sheet assets",
+    "89d2b8c fix(menu): keep Play visible and focus it when confirming a map"
+  ],
+  "checks": {
+    "import": {
+      "mode": "import",
+      "exit_code": 0,
+      "script_errors": 0,
+      "failures": 0
+    },
+    "tests": {
+      "mode": "tests",
+      "exit_code": 0,
+      "script_errors": 0,
+      "failures": 0
+    },
+    "smoke": {
+      "mode": "smoke",
+      "exit_code": 0,
+      "script_errors": 0,
+      "failures": 0
+    },
+    "capture": {
+      "mode": "capture",
+      "exit_code": 0,
+      "script_errors": 0,
+      "failures": 0
+    }
+  },
+  "source_hash_differences_preserving_remote_changes": {
+    "core/battle.gd": {
+      "sealed": "2a5b8346f5256c73570d15d19cfdf1afb9d1d82712fc4bb18f9186c6089994d7",
+      "consolidated": "1e6f0e45af18924e5cbd92b1691d91bc777e5d3635ee0618edd2c388b2c4a417"
+    },
+    "core/happenings.gd": {
+      "sealed": "ddafc16d4f2665fc692ac5b37595bb050b7a269e6ef56ee399a5048ce65670be",
+      "consolidated": "3ba99aef7ea4c40d9316097f46cf7870626d85582b935ef283eb5b48d7226d04"
+    },
+    "core/playtest.gd": {
+      "sealed": "eb9087340f05549ada7bcafda909acd4993d0330402805078d61f75064271247",
+      "consolidated": "a23db840fd6354de184d52f2ec670c6965eac5d759b6b5617c0b8e1b3ef7b428"
+    }
+  },
+  "contract_valid": true,
+  "historical_missing_local_links": [
+    {
+      "document": ".atena/evidence/EVID-170-durvall-piloto-e-b002-2026-10-06.md",
+      "link": "../generated/durvall-run-refinement/v01/pilot-comparison.log"
+    },
+    {
+      "document": ".atena/evidence/EVID-171-durvall-v03-playtest-local-2026-10-06.md",
+      "link": "../generated/durvall-run-refinement/v01/playtest-smoke.log"
+    },
+    {
+      "document": ".atena/evidence/EVID-175-durvall-piloto-articulado-2026-10-06.md",
+      "link": "../generated/durvall-articulated/v01/capture.log"
+    },
+    {
+      "document": ".atena/evidence/EVID-175-durvall-piloto-articulado-2026-10-06.md",
+      "link": "../generated/durvall-articulated/v01/playtest-smoke.log"
+    }
+  ],
+  "backlog": {
+    "p0": 0,
+    "p1_open": [
+      "BUG-025",
+      "BUG-027",
+      "BUG-028",
+      "BUG-029"
+    ],
+    "organization_alerts": 0
+  },
+  "pilot_publication": {
+    "status": "AWAITING_OWNER_APPROVAL",
+    "initial_auto_review_rejected": {
+      "files": 5200,
+      "bytes": 909755110
+    },
+    "curated_selection": {
+      "files": 207,
+      "bytes": 52921503
+    },
+    "originals_preserved": true,
+    "published": "records only; source/image publication still awaiting owner decision"
+  },
+  "exclusions": [
+    "site-files",
+    "site-backup",
+    "site-validation",
+    "http-fixture.json",
+    "appdata",
+    "localappdata",
+    "web",
+    "tmp",
+    "checks",
+    "full copied Godot pilot projects",
+    "credentials",
+    "databases",
+    "QA profiles"
+  ],
+  "limitations": [
+    "Five-resource suite exit warning already recorded before consolidation.",
+    "Physical controller/browser/touch acceptance pending.",
+    "Historical pilot links point to local-only material pending publication approval."
+  ],
+  "stale_lock": "Empty orphan lock verified without active Git process and saved; no index discarded.",
+  "add_validation": {
+    "contract_valid": true,
+    "yaml_documents": 8,
+    "links_checked": 309,
+    "errors": [],
+    "deferred_pilot_links": [
+      {
+        "document": ".atena/evidence/EVID-169-durvall-corrida-b001-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/baseline.html",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-169-durvall-corrida-b001-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/runtime-baseline.png",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-169-durvall-corrida-b001-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/runtime-report.json",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-169-durvall-corrida-b001-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/baseline-hashes.json",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-170-durvall-piloto-e-b002-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/pilot-e-raw-v01.png",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-170-durvall-piloto-e-b002-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/pilot-e-prompt-v01.txt",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-170-durvall-piloto-e-b002-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/pilot-e-raw-v02.png",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-170-durvall-piloto-e-b002-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/pilot-e-prompt-v02.txt",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-170-durvall-piloto-e-b002-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/pilot-e-raw-v03.png",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-170-durvall-piloto-e-b002-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/pilot-e-prompt-v03.txt",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-170-durvall-piloto-e-b002-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/pilot-e-comparison-v03.png",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-170-durvall-piloto-e-b002-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/pilot-e-comparison-v03.html",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-170-durvall-piloto-e-b002-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/pilot-e-audit.json",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-170-durvall-piloto-e-b002-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/pilot-e-manifest.json",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-170-durvall-piloto-e-b002-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/pilot-comparison.log",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-171-durvall-v03-playtest-local-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/Abrir-teste-Durvall.cmd",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-171-durvall-v03-playtest-local-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/COMO-TESTAR.md",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-171-durvall-v03-playtest-local-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/playtest-v03-smoke.png",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-171-durvall-v03-playtest-local-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/playtest-v03-smoke.json",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-171-durvall-v03-playtest-local-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/playtest-source-hashes.json",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-171-durvall-v03-playtest-local-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/playtest-smoke.log",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-171-durvall-v03-playtest-local-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/playtest-movement-probe.json",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-172-durvall-video-pernas-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/video-review/sequence-13s.jpg",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-172-durvall-video-pernas-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/video-review/sequence-15s.jpg",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-172-durvall-video-pernas-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/video-review/sequence-17s.jpg",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-172-durvall-video-pernas-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/video-review/sequence-26s.jpg",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-172-durvall-video-pernas-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/video-review/sequence-32s.jpg",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-172-durvall-video-pernas-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/video-review/source-cycles.png",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-173-durvall-revisao-lateral-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/pilot-e-raw-v04.png",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-173-durvall-revisao-lateral-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/pilot-e-prompt-v04.txt",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-173-durvall-revisao-lateral-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/pilot-e-raw-v05.png",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-173-durvall-revisao-lateral-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/pilot-e-prompt-v05.txt",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-173-durvall-revisao-lateral-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/pilot-e-raw-v06.png",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-173-durvall-revisao-lateral-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/pilot-e-prompt-v06.txt",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-173-durvall-revisao-lateral-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/pilot-e-revision-audit.json",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-173-durvall-revisao-lateral-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/pilot-e-revision-comparison.png",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-173-durvall-revisao-lateral-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/pilot-e-pose-guide-v05.png",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-173-durvall-revisao-lateral-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/pilot-e-v07-frame-1.png",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-173-durvall-revisao-lateral-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/pilot-e-v07-frame-1-prompt.txt",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-173-durvall-revisao-lateral-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/pilot-e-v07-frame-4.png",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-173-durvall-revisao-lateral-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/pilot-e-v07-frame-4-prompt.txt",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-173-durvall-revisao-lateral-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/owner-feedback-sword-knee.png",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-174-durvall-correcao-empunhadura-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/owner-feedback-sword-knee.png",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-174-durvall-correcao-empunhadura-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/durvall-sword-grip-corrected-v01.png",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-174-durvall-correcao-empunhadura-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/durvall-sword-grip-corrected-v01-prompt.txt",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-175-durvall-piloto-articulado-2026-10-06.md",
+        "link": "../generated/durvall-articulated/v01/rig-project/components-v01.png",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-175-durvall-piloto-articulado-2026-10-06.md",
+        "link": "../generated/durvall-articulated/v01/components-v01-prompt.txt",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-175-durvall-piloto-articulado-2026-10-06.md",
+        "link": "../generated/durvall-articulated/v01/rig-project/components-v02.png",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-175-durvall-piloto-articulado-2026-10-06.md",
+        "link": "../generated/durvall-articulated/v01/components-v02-prompt.txt",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-175-durvall-piloto-articulado-2026-10-06.md",
+        "link": "../generated/durvall-articulated/v01/rig-project/rig.gd",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-175-durvall-piloto-articulado-2026-10-06.md",
+        "link": "../generated/durvall-articulated/v01/pose-board-v02.png",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-175-durvall-piloto-articulado-2026-10-06.md",
+        "link": "../generated/durvall-articulated/v01/move_e-rig-v02.png",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-175-durvall-piloto-articulado-2026-10-06.md",
+        "link": "../generated/durvall-articulated/v01/rig-pose-telemetry-v02.json",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-175-durvall-piloto-articulado-2026-10-06.md",
+        "link": "../generated/durvall-articulated/v01/capture.log",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-175-durvall-piloto-articulado-2026-10-06.md",
+        "link": "../generated/durvall-articulated/v01/Abrir-teste-Durvall-articulado.cmd",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-175-durvall-piloto-articulado-2026-10-06.md",
+        "link": "../generated/durvall-articulated/v01/COMO-TESTAR.md",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-175-durvall-piloto-articulado-2026-10-06.md",
+        "link": "../generated/durvall-articulated/v01/playtest-smoke.log",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-175-durvall-piloto-articulado-2026-10-06.md",
+        "link": "../generated/durvall-articulated/v01/playtest-movement-probe.json",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-175-durvall-piloto-articulado-2026-10-06.md",
+        "link": "../generated/durvall-articulated/v01/playtest-rig-smoke.png",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-175-durvall-piloto-articulado-2026-10-06.md",
+        "link": "../generated/durvall-articulated/v01/playtest-rig-smoke.json",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-175-durvall-piloto-articulado-2026-10-06.md",
+        "link": "../generated/durvall-articulated/v01/pilot-audit.json",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-175-durvall-piloto-articulado-2026-10-06.md",
+        "link": "../generated/durvall-articulated/v01/audit-pilot.py",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-175-durvall-piloto-articulado-2026-10-06.md",
+        "link": "../generated/durvall-articulated/v01/playtest-source-hashes.json",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      },
+      {
+        "document": ".atena/evidence/EVID-175-durvall-piloto-articulado-2026-10-06.md",
+        "link": "../generated/durvall-run-refinement/v01/check-local-test.cjs",
+        "reason": "pilot publication awaiting approval; originals preserved locally"
+      }
+    ],
+    "local_only_references": [
+      {
+        "document": ".atena/evidence/EVID-187-playtest-ranking-local-2026-10-06.md",
+        "link": "../generated/playtest-ranking/v01/web.log",
+        "reason": "raw local browser log; compact browser receipts are published"
+      },
+      {
+        "document": ".atena/evidence/EVID-187-playtest-ranking-local-2026-10-06.md",
+        "link": "D:/dev/marizverso.com/docs/playtest-ranking.md"
+      }
+    ],
+    "report": ".atena/generated/consolidacao-push/checks/add-result.json"
+  },
+  "raw_log_whitespace": "Original site-build.log preserved verbatim, including its final blank line.",
+  "publication": {
+    "verified_at": "2026-10-07T03:17:59.143829+00:00",
+    "commit": "0e5e4977b63e0ba98990e7a2c54f43093098ba31",
+    "local_main": "0e5e4977b63e0ba98990e7a2c54f43093098ba31",
+    "remote_main": "0e5e4977b63e0ba98990e7a2c54f43093098ba31",
+    "force": false,
+    "github_relocation_reported": "https://github.com/marizada86/nottgard-survivor.git",
+    "primary_sync": "fast-forward",
+    "backup_preserved": true,
+    "recovery_stash": "7eef267cc8af417ed743aebefb975527f34ba844"
+  }
+}

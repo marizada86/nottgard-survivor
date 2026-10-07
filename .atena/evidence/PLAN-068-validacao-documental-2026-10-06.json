@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-06",
+  "kind": "planning_document_validation",
+  "plan": "PLAN-068",
+  "spec": "SPEC-135",
+  "passed": true,
+  "errors": [],
+  "local_links_checked": 20,
+  "batches": 4,
+  "steps": 12,
+  "active_plan_preserved": "PLAN-067",
+  "active_plan_checkpoint_observed": "B-003/S-008-S-009",
+  "approval_mode": "per-plan",
+  "execution_started": false,
+  "yaml_full_parser_used": false,
+  "runtime_tests_executed": false,
+  "hardware_playtest_executed": false
+}

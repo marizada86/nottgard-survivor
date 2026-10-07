@@ -1,0 +1,61 @@
+version: 1
+plan:
+  id: PLAN-066
+  spec_id: SPEC-133
+  title: Refinamento da corrida de Durvall
+  status: SUSPENDED_FOR_PLAN_067
+  suspension: {date: '2026-10-06', reason: 'Dono autorizou mobile agora', return_status: AWAITING_OWNER_PLAYTEST, return_checkpoint: B-002/S-005}
+  origin: guided-add
+  implementation_preceded_spec: false
+  source: .atena/vault/drafts/PLAN-066-corrida-durvall-2026-10-06.md
+  spec: .atena/specs/SPEC-133-corrida-durvall-2026-10-06.md
+  approval: {mode: per-batch, status: APPROVED_B002, approver: dono, date: '2026-10-06', basis: 'b-002 aprovado à pergunta conjunta sobre lote e três referências no ImageGen'}
+  checkpoint: {current: B-002, step: S-005, status: AWAITING_OWNER_PLAYTEST, recovery: R-002}
+  batches:
+    B-001: {title: Diagnostico local e guia de poses, steps: [S-001, S-002], status: DONE, evidence: EVID-169, completed: '2026-10-06'}
+    B-002: {title: Piloto lateral E, steps: [S-003, S-004, S-005], status: PARTIAL_AWAITING_VISUAL_REVIEW, evidence: EVID-170, attempts: 3}
+    B-003: {title: Demais direcoes independentes, steps: [S-006, S-007], status: NOT_STARTED}
+    B-004: {title: Admissao e validacao local, steps: [S-008, S-009, S-010], status: NOT_STARTED}
+  defaults:
+    hero: durvall
+    pilot_direction: E
+    frame_count: 6
+    animation_fps: 10
+    gameplay_speed_changed: false
+    candidate_path: .atena/generated/durvall-run-refinement/v01/
+  independent_gates:
+    reference_generation: AUTHORIZED_B002_THREE_DURVALL_PNGS
+    pilot_visual: PENDING_OWNER_REVIEW
+    sequence_visual: PENDING_OWNER_REVIEW
+    commit_push_publication: NOT_AUTHORIZED
+  deferred:
+    - Oito quadros dependem da avaliacao e da escolha explicita.
+    - Sincronizacao automatica com bonus ou lentidao nao faz parte da entrega.
+  request_classification: IN_PLAN
+  central_plan_activated: '2026-10-06'
+  completed_steps: [S-001, S-002, S-003, S-004]
+  evidence: .atena/evidence/EVID-170-durvall-piloto-e-b002-2026-10-06.md
+  authorized_references: [assets/animations/heroes/durvall/idle.png, assets/animations/heroes/durvall/move_e.png, assets/animations/heroes/durvall/move_se.png]
+  candidate_for_review: .atena/generated/durvall-articulated/v01/move_e-rig-v02.png
+  candidate_is_runtime_ready: false
+  articulated_pilot_ready_for_local_test: true
+  official_admission: false
+  remaining_issues: [aceite_visual_do_ciclo_articulado, avaliacao_da_amplitude, rigidez_tronco_e_bracos, emendas_e_proporcoes_das_pernas, demais_direcoes, empacotamento_final]
+  owner_playtest_request: '2026-10-06: preciso testar no jogo pra saber; IN_PLAN no S-005, copia isolada e adapter temporario sem admissao oficial.'
+  playtest_scope: Somente E/W de Durvall na nova copia local R-002 revisao 3, F8 alterna atual e articulado; demais direcoes e acoes atuais. Teste v03 anterior preservado.
+  playtest_evidence: .atena/evidence/EVID-175-durvall-piloto-articulado-2026-10-06.md
+  playtest_launcher: .atena/generated/durvall-articulated/v01/Abrir-teste-Durvall-articulado.cmd
+  owner_movement_report: '2026-10-06: o personagem nao movimenta nesse teste; IN_PLAN no S-005. Guia inicial invisivel pausa a copia; corrigir adapter e validar entrada e deslocamento reais.'
+  movement_fix: 'Revisao 2: boas-vindas dispensadas somente no perfil descartavel; sonda D reconhecida, sem pausa, 91,832 px em 0,4833 s; EVID-171 atualizada.'
+  owner_video_feedback: '2026-10-06: diagonais inferiores parecem sem pernas, NE ruim, N sem troca correta; lateral boa com amplitude excessiva. Recomendacoes IN_PLAN no S-005, sem aceite final.'
+  video_evidence: .atena/evidence/EVID-172-durvall-video-pernas-2026-10-06.md
+  revision_approval: {date: '2026-10-06', approver: dono, basis: 'atena pode seguir as recomendacoes', classification: IN_PLAN, scope: 'Revisao lateral antes das demais direcoes; alternancia A/B e amplitude moderada; nova candidata e teste isolado', max_attempts: 3, attempts: 3}
+  revision_evidence: .atena/evidence/EVID-173-durvall-revisao-lateral-2026-10-06.md
+  revision_result: 'v04/v05/v06 nao passaram na alternancia/apoio/identidade; nenhuma foi integrada. Teste permanece v03 revisao 2.'
+  workflow_recovery: {id: R-001, classification: IN_PLAN, status: REJECTED_CONTACT_PAIR, images: 2, remaining_images: NOT_GENERATED, proposal: .atena/vault/drafts/PLAN-066-recuperacao-poses-2026-10-06.md, basis: 'Revisao tecnica dentro da autorizacao vigente; dupla falhou, outras quatro poses nao geradas.'}
+  method_change: {id: R-002, classification: PLAN_CHANGE_REQUEST, status: IMPLEMENTED_AWAITING_OWNER_PLAYTEST, approver: dono, date: '2026-10-06', basis: 'Imagem e piloto articulado', proposal: .atena/vault/drafts/PLAN-066-piloto-articulado-2026-10-06.md, component_attempts: 2, evidence: .atena/evidence/EVID-175-durvall-piloto-articulado-2026-10-06.md}
+  owner_weapon_feedback: '2026-10-06: espada saiu da mao e foi para o joelho; IN_PLAN S-005. Defeito confirmado na captura, EVID-173 complementada; continuidade da empunhadura explicitada no piloto proposto. Sem nova geracao ou aprovacao R-002.'
+  image_correction: {classification: IN_PLAN, status: APPROVED_BY_OWNER, approval: '2026-10-06: atena corrigir imagem', visual_approval: '2026-10-06: atena aprovado, apos entrega', scope: 'Somente a espada/pegada nos quatro sprites da imagem anexada, preservando poses e fundo; alcance sobre R-002 em esclarecimento.', max_attempts: 3, attempts: 1, output: .atena/generated/durvall-run-refinement/v01/durvall-sword-grip-corrected-v01.png, evidence: .atena/evidence/EVID-174-durvall-correcao-empunhadura-2026-10-06.md}
+  approval_scope_clarification: 'Dono respondeu Imagem e piloto articulado; imagem aceita e R-002 autorizado.'
+  validation: 'R-002: seis poses distintas, fase A/B de meio ciclo, bounds sem recorte; movimento real de 91,832 px por modo e F8 validados. Corpo/bracos fixos e emendas dependem da avaliacao visual.'
+  next: Dono testar lateral no novo launcher R-002 revisao 3 e avaliar passada, alternancia e empunhadura; aceite visual precede B-003/B-004.

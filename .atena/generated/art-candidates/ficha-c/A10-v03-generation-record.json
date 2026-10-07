@@ -1,0 +1,8 @@
+{
+  "id": "A10",
+  "name": "ficha_fundo_textura",
+  "version": "v03",
+  "source": "C:\\Users\\gui-m\\.codex\\generated_images\\01a113f6-0b0f-7450-8b48-6fbbdaf8e26d\\exec-29072a84-0c13-472a-b5cf-ad1457a4f8e5.png",
+  "path": ".atena/generated/art-candidates/ficha-c/ficha_fundo_textura_v03.png",
+  "prompt": "Make this texture substantially more uniform and quieter by reducing all contrast by about 60 percent. Final look: essentially a SOLID VERY DARK BLUE-BLACK #171B22 stone surface with almost invisible tiny pixel grain. No discernible cracks, NO bright flecks, no black marks, no slab shapes, no diagonal scratch, no cloudy patches, no gradient or vignette. Keep opaque square image. Every color channel should stay close to the base (23,27,34) with maximum deviation +/- 4; luminance max-minus-min should be comfortably below 20/255 and preferably below 10/255. Uniform near-flat texture across entire canvas and every edge. Horizontal and vertical seamless repeat, edge pixels all close to the same #171B22 base. This is a nearly flat panel background behind small text, not a dungeon-floor texture or decorative visual. Barely perceptible matte stone grain is sufficient. No text, symbols, objects or transparency."
+}

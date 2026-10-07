@@ -1,0 +1,374 @@
+{
+	"checks": [
+		{
+			"id": "titulo_ao_quartel",
+			"passed": true
+		},
+		{
+			"id": "quartel_aba_proxima",
+			"passed": true
+		},
+		{
+			"id": "quartel_aba_anterior",
+			"passed": true
+		},
+		{
+			"id": "guia_volta_ao_foco",
+			"passed": true
+		},
+		{
+			"id": "hq_avanca",
+			"passed": true
+		},
+		{
+			"id": "hq_volta",
+			"passed": true
+		},
+		{
+			"id": "direcional_heroi_para_fase",
+			"passed": true
+		},
+		{
+			"id": "direcional_fase_para_jogar",
+			"passed": true
+		},
+		{
+			"id": "quartel_inicia_run",
+			"passed": true
+		},
+		{
+			"id": "ficha_por_view",
+			"passed": true
+		},
+		{
+			"id": "xbox_aba_detalhes_0",
+			"passed": true
+		},
+		{
+			"id": "xbox_aba_detalhes_1",
+			"passed": true
+		},
+		{
+			"id": "xbox_aba_detalhes_2",
+			"passed": true
+		},
+		{
+			"id": "xbox_aba_detalhes_3",
+			"passed": true
+		},
+		{
+			"id": "xbox_aba_anterior",
+			"passed": true
+		},
+		{
+			"id": "xbox_abas_sem_habilidade",
+			"passed": true
+		},
+		{
+			"id": "ps4_aba_detalhes_0",
+			"passed": true
+		},
+		{
+			"id": "ps4_aba_detalhes_1",
+			"passed": true
+		},
+		{
+			"id": "ps4_aba_detalhes_2",
+			"passed": true
+		},
+		{
+			"id": "ps4_aba_detalhes_3",
+			"passed": true
+		},
+		{
+			"id": "ps4_aba_anterior",
+			"passed": true
+		},
+		{
+			"id": "ps4_abas_sem_habilidade",
+			"passed": true
+		},
+		{
+			"id": "ps5_aba_detalhes_0",
+			"passed": true
+		},
+		{
+			"id": "ps5_aba_detalhes_1",
+			"passed": true
+		},
+		{
+			"id": "ps5_aba_detalhes_2",
+			"passed": true
+		},
+		{
+			"id": "ps5_aba_detalhes_3",
+			"passed": true
+		},
+		{
+			"id": "ps5_aba_anterior",
+			"passed": true
+		},
+		{
+			"id": "ps5_abas_sem_habilidade",
+			"passed": true
+		},
+		{
+			"id": "generic_aba_detalhes_0",
+			"passed": true
+		},
+		{
+			"id": "generic_aba_detalhes_1",
+			"passed": true
+		},
+		{
+			"id": "generic_aba_detalhes_2",
+			"passed": true
+		},
+		{
+			"id": "generic_aba_detalhes_3",
+			"passed": true
+		},
+		{
+			"id": "generic_aba_anterior",
+			"passed": true
+		},
+		{
+			"id": "generic_abas_sem_habilidade",
+			"passed": true
+		},
+		{
+			"id": "prompts_r1_l1",
+			"passed": true
+		},
+		{
+			"id": "ficha_volta_com_circulo",
+			"passed": true
+		},
+		{
+			"id": "pausa_options",
+			"passed": true
+		},
+		{
+			"id": "ficha_pela_pausa",
+			"passed": true
+		},
+		{
+			"id": "ficha_retorna_pausa",
+			"passed": true
+		},
+		{
+			"id": "opcoes_volta_a_pausa",
+			"passed": true
+		},
+		{
+			"id": "pausa_volta_sem_abandonar",
+			"passed": true
+		},
+		{
+			"id": "direcional_nao_muda_velocidade",
+			"passed": true
+		},
+		{
+			"id": "triangulo_muda_mira_sem_extrair",
+			"passed": true
+		},
+		{
+			"id": "extracao_exige_confirmacao",
+			"passed": true
+		},
+		{
+			"id": "cancelar_extracao_preserva_run",
+			"passed": true
+		},
+		{
+			"id": "desconexao_pausa",
+			"passed": true
+		},
+		{
+			"id": "segundo_controle_nao_retoma",
+			"passed": true
+		},
+		{
+			"id": "reconexao_nao_retoma",
+			"passed": true
+		},
+		{
+			"id": "detalhes_alternaveis",
+			"passed": true
+		},
+		{
+			"id": "detalhes_fecham_sem_manter",
+			"passed": true
+		},
+		{
+			"id": "ficha_sobre_oferta",
+			"passed": true
+		},
+		{
+			"id": "abas_sobre_oferta_sem_rerrolar",
+			"passed": true
+		},
+		{
+			"id": "ficha_retorna_oferta",
+			"passed": true
+		},
+		{
+			"id": "desconexao_na_oferta",
+			"passed": true
+		},
+		{
+			"id": "reconexao_preserva_oferta",
+			"passed": true
+		},
+		{
+			"id": "legado_sul_volta",
+			"passed": true
+		},
+		{
+			"id": "habilidade_durvall_recarga",
+			"passed": true
+		},
+		{
+			"id": "habilidade_brook_recarga",
+			"passed": true
+		},
+		{
+			"id": "habilidade_maelor_recarga",
+			"passed": true
+		},
+		{
+			"id": "habilidade_sylas_recarga",
+			"passed": true
+		},
+		{
+			"id": "habilidade_kayron_recarga",
+			"passed": true
+		},
+		{
+			"id": "habilidade_korrak_recarga",
+			"passed": true
+		},
+		{
+			"id": "habilidade_leoric_recarga",
+			"passed": true
+		},
+		{
+			"id": "habilidade_nyrelia_recarga",
+			"passed": true
+		},
+		{
+			"id": "habilidade_zynara_recarga",
+			"passed": true
+		},
+		{
+			"id": "habilidade_bromnor_recarga",
+			"passed": true
+		},
+		{
+			"id": "confirmar_mantido_nao_aceita_oferta",
+			"passed": true
+		},
+		{
+			"id": "rerrolar_por_lb",
+			"passed": true
+		},
+		{
+			"id": "melhoria_confirma_uma_vez",
+			"passed": true
+		},
+		{
+			"id": "bencao_por_controle",
+			"passed": true
+		},
+		{
+			"id": "recusa_bencao_exige_confirmacao",
+			"passed": true
+		},
+		{
+			"id": "cancelar_recusa_preserva_bencao",
+			"passed": true
+		},
+		{
+			"id": "recusa_confirmada",
+			"passed": true
+		},
+		{
+			"id": "sair_loja_por_controle",
+			"passed": true
+		},
+		{
+			"id": "sair_ferreiro_por_controle",
+			"passed": true
+		},
+		{
+			"id": "sair_curandeiro_por_controle",
+			"passed": true
+		},
+		{
+			"id": "sair_doacao_por_controle",
+			"passed": true
+		},
+		{
+			"id": "sair_aposta_por_controle",
+			"passed": true
+		},
+		{
+			"id": "equipar_vender_0",
+			"passed": true
+		},
+		{
+			"id": "equipar_vender_1",
+			"passed": true
+		},
+		{
+			"id": "reviver_por_controle",
+			"passed": true
+		},
+		{
+			"id": "preferencias_persistem_reload",
+			"passed": true
+		},
+		{
+			"id": "zona_morta_navegacao",
+			"passed": true
+		},
+		{
+			"id": "restaurar_defaults",
+			"passed": true
+		},
+		{
+			"id": "perda_foco_bloqueia",
+			"passed": true
+		},
+		{
+			"id": "foco_nao_retoma_sozinho",
+			"passed": true
+		},
+		{
+			"id": "repouso_60s_sem_troca",
+			"passed": true
+		},
+		{
+			"id": "extracao_ao_resultado",
+			"passed": true
+		},
+		{
+			"id": "resultado_nova_tentativa",
+			"passed": true
+		},
+		{
+			"id": "save_real_preservado",
+			"passed": true
+		}
+	],
+	"devices_detected": [
+		{
+			"guid": "0300fa675e0400008e02000010017801",
+			"id": 0,
+			"name": "XInput Controller"
+		}
+	],
+	"failures": [],
+	"hardware_acceptance": false,
+	"synthetic_input": true
+}

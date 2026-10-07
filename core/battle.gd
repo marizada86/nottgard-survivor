@@ -3,6 +3,8 @@ extends RefCounted
 ## Simulação da run (sem nós, RNG por seed). A UI lê o estado e consome `events`.
 
 const TerrainLayout := preload("res://core/terrain_layout.gd")
+const RunRecordScript := preload("res://core/run_record.gd")
+var run_record = RunRecordScript.new()
 
 enum Aim { AUTO, MOUSE }
 
@@ -402,6 +404,7 @@ func _heal_hero(amount: float) -> void:
 		return
 	var before := hero.hp
 	hero.hp = minf(hero.max_hp, hero.hp + amount)
+	run_record.healing += maxf(0.0, hero.hp - before)
 	var excess := maxf(0.0, amount - (hero.hp - before))
 	if excess > 0.0 and _has_boon_effect("overheal_shield"):
 		barrier = minf(hero.max_hp * OVERHEAL_BARRIER_CAP, barrier + excess)
@@ -651,6 +654,7 @@ func _fire_nova(p: Dictionary, area: float) -> bool:
 	events.append({"type": "nova", "pos": hero.pos, "radius": r, "dtype": p.dtype, "weapon": p.get("_audio_id", p.get("id", ""))})
 	var heal := float(p.get("heal", 0.0))
 	if heal > 0.0:
+		run_record.healing += minf(heal, maxf(0.0, hero.max_hp - hero.hp))
 		hero.hp = minf(hero.max_hp, hero.hp + heal)
 		events.append({"type": "heal", "pos": hero.pos, "amount": maxi(1, int(round(heal)))})
 	for t in targets:
@@ -718,6 +722,7 @@ func _hero_hit(e: Enemy, p: Dictionary, roll: bool, visual_theme: Dictionary = {
 				for pickup in pickups:
 					pickup.magnet = true
 		dmg = maxf(1.0, round(dmg))
+		run_record.hit(String(p.get("_audio_id", p.get("id", "unattributed"))), dmg, e.hp)
 		e.hp -= dmg
 		e.hit_flash = 0.12
 		events.append({"type": "hit", "pos": e.pos, "amount": int(dmg), "crit": crit, "dtype": dtype, "tid": e.get_instance_id(), "visual_theme": resolved_theme})
@@ -725,12 +730,14 @@ func _hero_hit(e: Enemy, p: Dictionary, roll: bool, visual_theme: Dictionary = {
 			for other in enemies:
 				if other != e and not other.dead and other.pos.distance_to(e.pos) <= 2.0:
 					var splash := maxf(1.0, round(dmg * 0.25))
+					run_record.hit("boon:critical_wave", splash, other.hp)
 					other.hp -= splash
 					events.append({"type": "hit", "pos": other.pos, "amount": int(splash), "crit": false, "dtype": dtype, "tid": other.get_instance_id(), "visual_theme": resolved_theme})
 					if other.hp <= 0.0:
 						_kill(other)
 		var ls := float(p.get("lifesteal", 0.0)) + hero.m("lifesteal")
 		if ls > 0.0:
+			run_record.healing += minf(dmg * ls, maxf(0.0, hero.max_hp - hero.hp))
 			hero.hp = minf(hero.max_hp, hero.hp + dmg * ls)
 	_apply_effects(e, p)
 	if float(p.get("gold_hit", 0.0)) > 0.0:
@@ -871,6 +878,7 @@ func _update_zones(dt: float) -> void:
 					for e in enemies:
 						if not e.dead and e.pos.distance_to(z.pos) <= z.radius + e.radius:
 							var env_damage := float(Dice.roll(rng, z.dice) + int(z.bonus / 2))
+							run_record.hit("environment:" + String(z.kind), env_damage, e.hp)
 							e.hp -= env_damage
 							events.append({"type": "hit", "pos": e.pos, "amount": int(env_damage), "crit": false})
 							if z.kind == "bubble" and not e.is_boss():
@@ -889,6 +897,7 @@ func _fire_trap(z: Dictionary) -> void:
 	for e in enemies:
 		if not e.dead and e.pos.distance_to(z.pos) <= float(z.radius) + e.radius:
 			var damage := float(Dice.roll(rng, String(z.dice)) + int(float(z.bonus) / 2.0))
+			run_record.hit("environment:trap", damage, e.hp)
 			e.hp -= damage
 			events.append({"type": "hit", "pos": e.pos, "amount": int(damage), "crit": false})
 			if e.hp <= 0.0:
@@ -934,6 +943,7 @@ func _charmed_step(e: Enemy, dt: float) -> void:
 	elif e.atk_cd <= 0.0:
 		e.atk_cd = ENEMY_ATK_CD
 		var dmg := float(Dice.roll(rng, e.atk_dice) + maxi(0, e.atk_bonus))
+		run_record.hit("effect:charm", dmg, target.hp)
 		target.hp -= dmg
 		events.append({"type": "hit", "pos": target.pos, "amount": int(dmg), "crit": false})
 		if target.hp <= 0.0:
@@ -992,6 +1002,7 @@ func _enemy_step(e: Enemy, dt: float) -> void:
 		_affix_step(e, dt)
 	if e.burn_t > 0.0:
 		e.burn_t -= dt
+		run_record.hit("effect:burn", e.burn_dps * dt, e.hp)
 		e.hp -= e.burn_dps * dt
 		if e.hp <= 0.0:
 			_kill(e)
@@ -1247,6 +1258,7 @@ func _hurt_hero(dmg: float, src: String, bypass_generic_defenses: bool = false) 
 		if dmg <= 0.0:
 			events.append({"type": "text", "pos": hero.pos, "text": "BARREIRA"})
 			return
+	run_record.damage_received += minf(maxf(0.0, hero.hp), dmg)
 	hero.hp -= dmg
 	hero.hit_flash = 0.15
 	if not bypass_generic_defenses:
@@ -1259,6 +1271,7 @@ func _hurt_hero(dmg: float, src: String, bypass_generic_defenses: bool = false) 
 		for e in enemies:
 			if not e.dead and e.pos.distance_to(hero.pos) <= 2.2:
 				var retaliation := maxf(1.0, round(dmg * 0.5))
+				run_record.hit("boon:pain_retaliation", retaliation, e.hp)
 				e.hp -= retaliation
 				events.append({"type": "hit", "pos": e.pos, "amount": int(retaliation), "crit": false})
 				if e.hp <= 0.0:
@@ -1286,6 +1299,7 @@ func accept_revive() -> bool:
 	else:
 		return false
 	hero.dead = false
+	run_record.revives += 1
 	hero.hp = hero.max_hp * 0.5
 	invuln = 3.0
 	for e in enemies:
@@ -1328,6 +1342,7 @@ func tide_xp_bonus() -> float:
 func _kill(e: Enemy) -> void:
 	if e.dead:
 		return
+	run_record.killed("objects" if e.has_flag("quebravel") else "boss" if e.is_boss() else "elite" if e.affix != "" or e.drops_chest else "common")
 	e.dead = true
 	codex.enemies[e.id] = true
 	stats.kills += 1
@@ -1473,6 +1488,7 @@ func wipe_map() -> int:
 	return n
 
 func _on_boss_dead(e: Enemy) -> void:
+	run_record.checkpoint(self, "boss_dead", {"id": e.id})
 	boss_dead = true
 	stats.bosses += 1
 	stats.boss_ids.append(e.id)
@@ -1509,6 +1525,7 @@ func _boss_presentation(boss_id: String) -> Dictionary:
 	return Data.table("boss_presentations").get(boss_id, {}).duplicate(true)
 
 func _start_boss_intro(e: Enemy) -> void:
+	run_record.checkpoint(self, "boss_spawn", {"id": e.id})
 	var presentation := _boss_presentation(e.id)
 	if presentation.is_empty():
 		return
@@ -1623,6 +1640,8 @@ func toggle_speed() -> bool:
 		events.append({"type": "toast", "text": "A velocidade extra libera depois de vencer este mapa."})
 		return false
 	speed_mult = 1.5 if speed_mult < 1.4 else (2.0 if speed_mult < 1.9 else 1.0)
+	if speed_mult > 1.0:
+		run_record.mark("accelerated")
 	events.append({"type": "toast", "text": "Velocidade %s." % speed_label() if speed_mult > 1.0 else "Velocidade normal."})
 	return speed_mult > 1.0
 
@@ -2295,6 +2314,8 @@ func choose(i: int) -> void:
 	if i < 0 or i >= offer.size():
 		return
 	var c: Dictionary = offer[i]
+	if state != "shop" or (not bool(c.get("locked", false)) and hero.gold >= int(c.get("price", c.get("bet", 0)))):
+		run_record.checkpoint(self, "choice", {"offer_kind": offer_kind, "selected": i, "offers": offer.duplicate(true)})
 	if state == "shop":
 		if bool(c.get("locked", false)):
 			return  # sem moedas ou linha informativa: a loja continua aberta
@@ -2377,6 +2398,7 @@ func choose(i: int) -> void:
 		"passive":
 			hero.passives[c.id] = int(hero.passives.get(c.id, 0)) + 1
 		"heal":
+			run_record.healing += minf(hero.max_hp * 0.4, maxf(0.0, hero.max_hp - hero.hp))
 			hero.hp = minf(hero.max_hp, hero.hp + hero.max_hp * 0.4)
 		"gold":
 			_add_gold(40.0)

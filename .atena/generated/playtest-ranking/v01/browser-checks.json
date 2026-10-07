@@ -1,0 +1,34 @@
+{
+  "synthetic_environment": true,
+  "browser": "Codex In-app Browser (Chromium)",
+  "checks": {
+    "central_opened": true,
+    "note_saved_before_consent": true,
+    "anonymous_retry_401_preserved": true,
+    "reload_preserved_pending_note": true,
+    "approved_session_note_received": true,
+    "capture_received": true,
+    "live_run_received_as_diagnostic": true,
+    "note_layout_fixed_and_visually_checked": true
+  },
+  "live_runs": [
+    {
+      "source": "web",
+      "build": "dev",
+      "outcome": "dead",
+      "status": "diagnostic",
+      "seconds": 13.6000000000003,
+      "score": 2
+    }
+  ],
+  "evidence_counts": {
+    "image": 1,
+    "note": 2
+  },
+  "manual_pending": [
+    "Chrome/Edge/Firefox finais",
+    "fullscreen nativo",
+    "dispositivo de toque",
+    "atalhos do executavel Windows"
+  ]
+}

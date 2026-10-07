@@ -41,6 +41,7 @@ var stages: Array = []
 var codex_ids: Array = []
 var hq_ids: Array[String] = []
 var _reset_armed := false
+var _hq_open := false
 
 func _ready() -> void:
 	Game.screen_name = "menu"
@@ -53,6 +54,11 @@ func _ready() -> void:
 	RenderingServer.set_default_clear_color(Color(0.06, 0.05, 0.08))
 	get_tree().paused = false
 	var p: Profile = Game.profile
+	if Version.evidence_enabled():
+		var ranking := VBoxContainer.new()
+		ranking.set_script(preload("res://ui/leaderboard.gd"))
+		ranking.name = "Ranking"
+		%Tabs.add_child(ranking)
 	heroes = p.heroes_sorted()
 	stages = p.stages_sorted()
 	version_label.text = "%s v%s%s" % [Version.GAME_NAME, Version.VERSION, "  ·  build de %s (%s)" % [Version.profile_slug(), Version.build_id()] if Version.evidence_enabled() else ""]
@@ -97,10 +103,128 @@ func _ready() -> void:
 	hq_list.item_selected.connect(_refresh_hq_selection)
 	hq_play_btn.pressed.connect(_open_selected_hq)
 	_refresh_all()
+	var controller_options := preload("res://ui/controller_options.gd").new()
+	$Tabs/Opções/Content.add_child(controller_options)
+	$Tabs/Opções/Content.move_child(controller_options, $Tabs/Opções/Content.get_node("ActionsTitle").get_index())
+	%Tabs.tab_changed.connect(func(_i):
+		Game.controls.transition()
+		_layout_play_action()
+		_focus_tab.call_deferred())
+	Game.controls.changed.connect(_update_play)
+	get_viewport().size_changed.connect(_layout_play_action)
+	_layout_play_action()
+	for scroll in find_children("*", "ScrollContainer", true, false):
+		scroll.follow_focus = true
+	%Tabs.get_node("Conquistas").focus_mode = Control.FOCUS_ALL
+	codex_text.focus_mode = Control.FOCUS_ALL
+	if Game.touch_controls_enabled():
+		aim_opt.select(0)
+		aim_opt.disabled = true
+		display_mode_opt.disabled = true
+		resolution_opt.disabled = true
+		TouchUI.prepare(self)
+		_layout_touch_menu()
+		get_viewport().size_changed.connect(_layout_touch_menu)
 	hero_list.call_deferred("grab_focus")
 	var notice := Game.consume_save_notice()
 	if notice != "":
 		Playtest.toast(notice)
+
+func _focus_tab() -> void:
+	var current: Control = %Tabs.get_current_tab_control()
+	var target := _first_focus(current)
+	if target != null:
+		target.grab_focus()
+
+func _first_focus(node: Node) -> Control:
+	if node is Control and node.is_visible_in_tree() and node.focus_mode != Control.FOCUS_NONE and not (node is BaseButton and node.disabled):
+		return node
+	for child in node.get_children():
+		var target := _first_focus(child)
+		if target != null:
+			return target
+	return null
+
+func _layout_play_action() -> void:
+	var playing_tab: bool = %Tabs.current_tab == 0
+	play_btn.visible = playing_tab
+	var safe: Rect2 = Game.touch_safe_rect() if Game.touch_controls_enabled() else get_viewport_rect().grow(-24)
+	play_btn.offset_right = safe.end.x - get_viewport_rect().size.x
+	play_btn.offset_left = play_btn.offset_right - 320
+	play_btn.offset_bottom = safe.end.y - get_viewport_rect().size.y - 18
+	play_btn.offset_top = play_btn.offset_bottom - 58
+	%Tabs.offset_bottom = play_btn.offset_top - 16 if playing_tab else safe.end.y - get_viewport_rect().size.y - (24 if Game.touch_controls_enabled() else 10)
+
+func _unhandled_input(event: InputEvent) -> void:
+	if not Game.controls.accepts(event) or Game.controls.capture_action != "" or Playtest._guide_open or Playtest._note_open or _hq_open:
+		return
+	if event is InputEventJoypadButton and event.pressed and event.button_index in [JOY_BUTTON_LEFT_SHOULDER, JOY_BUTTON_RIGHT_SHOULDER]:
+		%Tabs.current_tab = posmod(%Tabs.current_tab + (-1 if event.button_index == JOY_BUTTON_LEFT_SHOULDER else 1), %Tabs.get_tab_count())
+		get_viewport().set_input_as_handled()
+
+func _input(event: InputEvent) -> void:
+	if not event is InputEventJoypadButton and not event is InputEventJoypadMotion:
+		return
+	if not event.is_pressed() or not Game.controls.accepts(event) or Playtest._guide_open or _hq_open or Game.controls.capture_action != "":
+		return
+	var owner := get_viewport().gui_get_focus_owner()
+	if owner == stage_list and event.is_action_pressed("ui_accept"):
+		Game.controls.transition()
+		if not play_btn.disabled:
+			play_btn.grab_focus()
+		get_viewport().set_input_as_handled()
+		return
+	var right := event.is_action_pressed("ui_right")
+	var left := event.is_action_pressed("ui_left")
+	var target: Control
+	if right or left:
+		if owner == hero_list and right:
+			target = stage_list
+		elif owner == stage_list:
+			target = play_btn if right else hero_list
+		elif owner == play_btn and left:
+			target = stage_list
+		elif owner == codex_list:
+			target = codex_text if right else codex_cat
+		elif owner == codex_text and left:
+			target = codex_list
+		elif owner == codex_cat and right:
+			target = codex_list
+		elif owner == hq_list and right:
+			target = hq_play_btn
+		elif owner == hq_play_btn and left:
+			target = hq_list
+	if target != null and not (target is BaseButton and target.disabled):
+		target.grab_focus()
+		get_viewport().set_input_as_handled()
+	elif owner is RichTextLabel or owner == %Tabs.get_node("Conquistas"):
+		if event.is_action_pressed("ui_down") or event.is_action_pressed("ui_up"):
+			var bar: VScrollBar = owner.get_v_scroll_bar()
+			bar.value += 64 if event.is_action_pressed("ui_down") else -64
+			get_viewport().set_input_as_handled()
+
+func _layout_touch_menu() -> void:
+	var safe := Game.touch_safe_rect()
+	%Tabs.offset_left = safe.position.x
+	%Tabs.offset_right = safe.end.x - get_viewport_rect().size.x
+	%Tabs.offset_top = safe.position.y + 88
+	%Tabs.offset_bottom = safe.end.y - get_viewport_rect().size.y - 24
+	%Tabs.add_theme_font_size_override("font_size", 20)
+	%Tabs.add_theme_constant_override("side_margin", 12)
+	var bar: TabBar = %Tabs.get_tab_bar()
+	bar.add_theme_font_size_override("font_size", 20)
+	for style_name in ["tab_selected", "tab_unselected", "tab_hovered", "tab_disabled"]:
+		var style: StyleBox = bar.get_theme_stylebox(style_name).duplicate()
+		style.content_margin_top = 14
+		style.content_margin_bottom = 14
+		bar.add_theme_stylebox_override(style_name, style)
+	$Title.position = safe.position
+	$Title.add_theme_font_size_override("font_size", 32)
+	$Subtitle.position = safe.position + Vector2(4, 48)
+	$Tabs/Jogar/Left.custom_minimum_size.x = 240
+	$Tabs/Jogar/Mid.custom_minimum_size.x = 420
+	portrait.custom_minimum_size = Vector2(360, 180)
+	_layout_play_action()
 
 func _refresh_all() -> void:
 	var p: Profile = Game.profile
@@ -138,6 +262,8 @@ func _refresh_all() -> void:
 	display_mode_opt.select(Game.WINDOW_MODES.find(String(p.data.settings.get("window_mode", "windowed"))))
 	resolution_opt.select(Game.SUPPORTED_RESOLUTIONS.find(String(p.data.settings.get("resolution", "1280x720"))))
 	diff_opt.select(int(p.data.settings.difficulty))
+	if Game.touch_controls_enabled():
+		TouchUI.adapt_sizes(self)
 
 
 func _save_audio_setting(key: String, value: float) -> void:
@@ -227,6 +353,8 @@ func _update_play() -> void:
 	var ok: bool = Game.profile.hero_unlocked(Game.run_hero) and Game.profile.stage_unlocked(Game.run_stage)
 	play_btn.disabled = not ok
 	play_btn.text = "JOGAR" if ok else "Bloqueado"
+	play_btn.icon = Game.controls.glyph("ui_accept")
+	play_btn.tooltip_text = "%s para iniciar a tentativa" % Game.controls.prompt("ui_accept", "Enter ou clique")
 
 func _play() -> void:
 	Sfx.play("click")
@@ -375,12 +503,15 @@ func _open_selected_hq() -> void:
 	if hq.is_empty():
 		return
 	var screen = HQ_SCREEN.instantiate()
+	_hq_open = true
 	screen.process_mode = Node.PROCESS_MODE_ALWAYS
 	add_child(screen)
 	screen.call_deferred("start_hq", hq)
 	while not bool(screen.get("is_closed")):
 		await get_tree().process_frame
 	var completed := bool(screen.get("completed"))
+	_hq_open = false
+	hq_play_btn.call_deferred("grab_focus")
 	screen.queue_free()
 	if completed:
 		var newly_earned: Array = Game.profile.mark_hq_seen(hq_id)

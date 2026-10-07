@@ -1,0 +1,52 @@
+{
+  "date_brt": "2026-10-06",
+  "plan": "PLAN-070",
+  "spec": "SPEC-137",
+  "tool": "built-in imagegen",
+  "asset": "A01 ficha_moldura_painel",
+  "prompts": [
+    {
+      "version": "v01",
+      "prompt": "Use case: stylized-concept. Asset type: standalone outer character-sheet UI panel frame for a dark fantasy pixel-art game. Input image 1 is a STYLE REFERENCE ONLY for dark iron, aged gold and subdued amber inner edging. Do not copy its heavy thickness, side ornaments, composition, or large top crest. Create ONE new thin rectangular border, front-facing flat UI artwork, exact 16:9 canvas preferably 1536x864. Both the large empty center and outside the frame must be truly transparent alpha, not magenta, black, or a checkerboard pattern. Frame fills the canvas with a small safe margin to avoid cut-off spikes. At final 1280x720 equivalent, straight side and bottom bands must be at most 36 pixels thick, ideally 24-30px; corner ornaments at most 96px, top-center small ornament at most 56px high. Straight sides and bottom smooth, uniform and repeatable: dark iron strips, small discreet rivets and a thin muted amber inner line. Restrained pointed gothic ornaments ONLY at four corners and one very small ornament centered on top. Clean dark gothic pixel art with visible crisp pixel clusters; dark iron, worn old gold, subdued amber, understated low saturation. Keep most of panel usable area completely empty and transparent. No middle-of-side ornaments, no text, numerals, readable runes, characters, UI content, cast shadows, glow outside the silhouette, 3D plastic relief, saturated gold or bright red. Maintain reference material family with MUCH thinner quieter frame. Produce only this single border asset, no presentation sheet or background.",
+      "references": [
+        "assets/ui/evolucao_painel_moldura.png"
+      ],
+      "output": ".atena/generated/art-candidates/ficha-c/ficha_moldura_painel_v01.png",
+      "top_center_height_px_at_720": 77.28
+    },
+    {
+      "version": "v02",
+      "prompt": "Edit the supplied image of the dark gothic UI frame. Make ONLY a targeted proportional size correction to the five ornament groups. Keep the straight border positions, thin dark-iron bands, worn old-gold palette, muted amber edging, visible pixel texture, exact front view and large transparent empty center unchanged. Shrink the TOP CENTER ornament to 55% of its current width and height, centered on the same top border baseline. Its full vertical extent must be at most 65 pixels in this 1672x941 image (49px at 1280x720). Shrink the FOUR CORNER ornaments to 70% of their current width and height around the corresponding border junctions, keeping their gothic pointed forms, each contained in a roughly 115x115px corner area of the full image (under 90px at 1280x720). Seamlessly continue the straight thin border where the now smaller ornament groups leave a gap. Preserve transparent alpha inside and outside; no background, no magenta, no checkerboard drawing, no fill in center. No new ornament, no text, no letters, no numbers, no broad halo or exterior glow. Same canvas size and 16:9 composition, no cropping. One standalone usable UI frame.",
+      "references": [
+        ".atena/generated/art-candidates/ficha-c/ficha_moldura_painel_v01.png"
+      ],
+      "output": ".atena/generated/art-candidates/ficha-c/ficha_moldura_painel_v02.png",
+      "top_center_height_px_at_720": 57.39,
+      "side_band_px_at_1280": 22.97
+    },
+    {
+      "version": "v03",
+      "prompt": "Precise image edit. Change ONLY the tiny ornament at the CENTER OF THE TOP BORDER. Reduce this top-center diamond/star crest to 65 percent of its current width AND height, still attached and centered on the same thin straight top border. Its full vertical extent must be under 55 pixels in this 1672x941 source canvas. Restore the thin uniform iron and old-gold border in the space revealed by the reduction. Keep all four corner ornaments, all side rivets, border thickness, positions, colors, dark iron pixel texture, subdued amber line, front-facing flat view and canvas exactly unchanged. Both the inner area and outside remain truly transparent alpha. No added object, no text, no glow outside, no painted background or checkerboard. A single UI frame, not a mockup.",
+      "references": [
+        ".atena/generated/art-candidates/ficha-c/ficha_moldura_painel_v02.png"
+      ],
+      "output": ".atena/generated/art-candidates/ficha-c/ficha_moldura_painel_v03.png",
+      "top_center_height_px_at_720": 58.15,
+      "side_band_px_at_1280": 23.73
+    }
+  ],
+  "candidate_for_review": ".atena/generated/art-candidates/ficha-c/ficha_moldura_painel_v02.png",
+  "reason": "v02 is closest to top-center <=56px requirement; 1.39px excess remains, disclosed to owner. v03 did not improve.",
+  "raw_dimensions": [
+    1672,
+    941
+  ],
+  "center_alpha": 0,
+  "human_approval": "PENDING",
+  "official_admission": false,
+  "runtime_validation": "NOT_PERFORMED",
+  "remaining_assets": 9,
+  "max_attempts_reached": true,
+  "acceptance_status": "PARTIAL_PENDING_OWNER_VISUAL_REVIEW_AND_MINOR_SIZE_VARIANCE_DECISION",
+  "normalization": "DEFERRED"
+}

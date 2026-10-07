@@ -1,0 +1,184 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+ERROR: Could not create editor data directory: C:/Users/gui-m/AppData/Roaming/Godot
+   at: EditorPaths (editor/file_system/editor_paths.cpp:201)
+ERROR: Could not create editor config directory: C:/Users/gui-m/AppData/Roaming/Godot
+   at: EditorPaths (editor/file_system/editor_paths.cpp:216)
+
+ERROR: Could not open 'user://' directory: 'user://'.
+   at: _get_and_create_snapshot_storage_dir (modules/objectdb_profiler/editor/objectdb_profiler_panel.cpp:157)
+ERROR: Safe save failed. This may be a permissions problem, but also may happen because you are running a paranoid antivirus. If this is the case, please switch to Windows Defender or disable the 'safe save' option in editor settings. This makes it work, but increases the risk of file corruption in a crash.
+   at: _close (drivers/windows/file_access_windows.cpp:277)
+ERROR: Cannot open directory 'C:/Users/gui-m/AppData/Roaming/Godot/feature_profiles'.
+   at: _update_profile_list (editor/settings/editor_feature_profile.cpp:392)
+[   0% ] first_scan_filesystem | Started Inicialização do Projeto (5 steps)
+[   0% ] first_scan_filesystem | Escaneando estrutura de arquivos...
+[  16% ] first_scan_filesystem | Carregando nomes de classe globais...
+[  33% ] first_scan_filesystem | Verificando GDExtensions...
+[  50% ] first_scan_filesystem | Criando scripts autoload...
+[  66% ] first_scan_filesystem | Inicializando plugins...
+[  83% ] first_scan_filesystem | Iniciando escaneamento de arquivos...
+[ DONE ] first_scan_filesystem
+
+[   0% ] update_scripts_classes | Started Registrando classes globais... (15 steps)
+[   0% ] update_scripts_classes | 
+[   6% ] update_scripts_classes | 
+[  12% ] update_scripts_classes | 
+[  18% ] update_scripts_classes | 
+[  25% ] update_scripts_classes | 
+[  31% ] update_scripts_classes | 
+[  37% ] update_scripts_classes | AbilitySlot
+[  43% ] update_scripts_classes | CharacterSheet
+[  50% ] update_scripts_classes | 
+[  56% ] update_scripts_classes | 
+[  62% ] update_scripts_classes | 
+[  68% ] update_scripts_classes | 
+[  75% ] update_scripts_classes | 
+[  81% ] update_scripts_classes | 
+[  87% ] update_scripts_classes | TouchUI
+[ DONE ] update_scripts_classes
+
+[   0% ] _update_scan_actions | Started Escaneando ações... (40 steps)
+[   0% ] _update_scan_actions | 0.svg
+[   2% ] _update_scan_actions | 1.svg
+[   4% ] _update_scan_actions | 2.svg
+[   7% ] _update_scan_actions | 3.svg
+[   9% ] _update_scan_actions | 4.svg
+[  12% ] _update_scan_actions | 6.svg
+[  14% ] _update_scan_actions | 7.svg
+[  17% ] _update_scan_actions | 8.svg
+[  19% ] _update_scan_actions | 9.svg
+[  21% ] _update_scan_actions | 10.svg
+[  24% ] _update_scan_actions | 0.svg
+[  26% ] _update_scan_actions | 1.svg
+[  29% ] _update_scan_actions | 2.svg
+[  31% ] _update_scan_actions | 3.svg
+[  34% ] _update_scan_actions | 4.svg
+[  36% ] _update_scan_actions | 6.svg
+[  39% ] _update_scan_actions | 7.svg
+[  41% ] _update_scan_actions | 8.svg
+[  43% ] _update_scan_actions | 9.svg
+[  46% ] _update_scan_actions | 10.svg
+[  48% ] _update_scan_actions | 0.svg
+[  51% ] _update_scan_actions | 1.svg
+[  53% ] _update_scan_actions | 2.svg
+[  56% ] _update_scan_actions | 3.svg
+[  58% ] _update_scan_actions | 4.svg
+[  60% ] _update_scan_actions | 6.svg
+[  63% ] _update_scan_actions | 7.svg
+[  65% ] _update_scan_actions | 8.svg
+[  68% ] _update_scan_actions | 9.svg
+[  70% ] _update_scan_actions | 10.svg
+[  73% ] _update_scan_actions | 0.svg
+[  75% ] _update_scan_actions | 1.svg
+[  78% ] _update_scan_actions | 2.svg
+[  80% ] _update_scan_actions | 3.svg
+[  82% ] _update_scan_actions | 4.svg
+[  85% ] _update_scan_actions | 6.svg
+[  87% ] _update_scan_actions | 7.svg
+[  90% ] _update_scan_actions | 8.svg
+[  92% ] _update_scan_actions | 9.svg
+[  95% ] _update_scan_actions | 10.svg
+[ DONE ] _update_scan_actions
+
+[   0% ] reimport | Started (Re)Importando Recursos (40 steps)
+[   0% ] reimport | Preparando arquivos para reimportação...
+[   2% ] reimport | Preparando arquivos para reimportação...
+[   4% ] reimport | Preparando arquivos para reimportação...
+[   7% ] reimport | Preparando arquivos para reimportação...
+[   9% ] reimport | Preparando arquivos para reimportação...
+[  12% ] reimport | Preparando arquivos para reimportação...
+[  14% ] reimport | Preparando arquivos para reimportação...
+[  17% ] reimport | Preparando arquivos para reimportação...
+[  19% ] reimport | Preparando arquivos para reimportação...
+[  21% ] reimport | Preparando arquivos para reimportação...
+[  24% ] reimport | Preparando arquivos para reimportação...
+[  26% ] reimport | Preparando arquivos para reimportação...
+[  29% ] reimport | Preparando arquivos para reimportação...
+[  31% ] reimport | Preparando arquivos para reimportação...
+[  34% ] reimport | Preparando arquivos para reimportação...
+[  36% ] reimport | Preparando arquivos para reimportação...
+[  39% ] reimport | Preparando arquivos para reimportação...
+[  41% ] reimport | Preparando arquivos para reimportação...
+[  43% ] reimport | Preparando arquivos para reimportação...
+[  46% ] reimport | Preparando arquivos para reimportação...
+[  48% ] reimport | Preparando arquivos para reimportação...
+[  51% ] reimport | Preparando arquivos para reimportação...
+[  53% ] reimport | Preparando arquivos para reimportação...
+[  56% ] reimport | Preparando arquivos para reimportação...
+[  58% ] reimport | Preparando arquivos para reimportação...
+[  60% ] reimport | Preparando arquivos para reimportação...
+[  63% ] reimport | Preparando arquivos para reimportação...
+[  65% ] reimport | Preparando arquivos para reimportação...
+[  68% ] reimport | Preparando arquivos para reimportação...
+[  70% ] reimport | Preparando arquivos para reimportação...
+[  73% ] reimport | Preparando arquivos para reimportação...
+[  75% ] reimport | Preparando arquivos para reimportação...
+[  78% ] reimport | Preparando arquivos para reimportação...
+[  80% ] reimport | Preparando arquivos para reimportação...
+[  82% ] reimport | Preparando arquivos para reimportação...
+[  85% ] reimport | Preparando arquivos para reimportação...
+[  87% ] reimport | Preparando arquivos para reimportação...
+[  90% ] reimport | Preparando arquivos para reimportação...
+[  92% ] reimport | Preparando arquivos para reimportação...
+[  95% ] reimport | Preparando arquivos para reimportação...
+[   0% ] reimport | Executando operações pré-reimportação...
+[   0% ] reimport | 0.svg
+[   2% ] reimport | 1.svg
+[   4% ] reimport | 2.svg
+[   7% ] reimport | 3.svg
+[   9% ] reimport | 4.svg
+[  12% ] reimport | 6.svg
+[  14% ] reimport | 7.svg
+[  17% ] reimport | 8.svg
+[  19% ] reimport | 9.svg
+[  21% ] reimport | 10.svg
+[  24% ] reimport | 0.svg
+[  26% ] reimport | 1.svg
+[  29% ] reimport | 2.svg
+[  31% ] reimport | 3.svg
+[  34% ] reimport | 4.svg
+[  36% ] reimport | 6.svg
+[  39% ] reimport | 7.svg
+[  41% ] reimport | 8.svg
+[  43% ] reimport | 9.svg
+[  46% ] reimport | 10.svg
+[  48% ] reimport | 0.svg
+[  51% ] reimport | 1.svg
+[  53% ] reimport | 2.svg
+[  56% ] reimport | 3.svg
+[  58% ] reimport | 4.svg
+[  60% ] reimport | 6.svg
+[  63% ] reimport | 7.svg
+[  65% ] reimport | 8.svg
+[  68% ] reimport | 9.svg
+[  70% ] reimport | 10.svg
+[  73% ] reimport | 0.svg
+[  75% ] reimport | 1.svg
+[  78% ] reimport | 2.svg
+[  80% ] reimport | 3.svg
+[  82% ] reimport | 4.svg
+[  85% ] reimport | 6.svg
+[  87% ] reimport | 7.svg
+[  90% ] reimport | 8.svg
+[  92% ] reimport | 9.svg
+[  95% ] reimport | 10.svg
+[  97% ] reimport | Finalizando Importação de Recursos...
+[ DONE ] reimport
+
+[   0% ] reimport | Started (Re)Importando Recursos (40 steps)
+[   0% ] reimport | Executando operações pós-reimportação...
+[ DONE ] reimport
+
+[   0% ] loading_editor_layout | Started Carregando editor (5 steps)
+[   0% ] loading_editor_layout | Carregando layout do editor...
+[  16% ] loading_editor_layout | Carregando abas...
+[  33% ] loading_editor_layout | Reabrindo cenas...
+[  50% ] loading_editor_layout | Carregando layout do editor central...
+[  66% ] loading_editor_layout | Carregando layout da janela de plugins...
+[  83% ] loading_editor_layout | Layout do editor pronto.
+[ DONE ] loading_editor_layout
+
+ERROR: Can't save resource to empty path. Provide non-empty path or a Resource with non-empty resource_path.
+   at: save (core/io/resource_saver.cpp:108)
+ERROR: Error saving editor settings to 
+   at: save (editor/settings/editor_settings.cpp:1525)

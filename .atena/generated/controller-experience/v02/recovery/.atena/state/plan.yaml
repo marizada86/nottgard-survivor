@@ -1,0 +1,93 @@
+version: 2
+# Reconciliado por Atena em 2026-10-05: PLAN-056 aceito pelo dono; commits reais registrados.
+active_plan:
+  id: PLAN-068
+  spec_id: SPEC-135
+  state_file: '.atena/state/plan-068-controles-xbox-playstation.yaml'
+  mode: per-plan
+  checkpoint: B-004/S-011
+  status: AWAITING_HARDWARE_PLAYTEST
+  approved: '2026-10-06'
+  request_classification: IN_PLAN
+plan_cursor:
+  current: 'PLAN-068 / SPEC-135: P068-v01 implementado e validado localmente; 90 verificacoes controle, 144 mobile, suite zero falhas e smoke nove fases. Aceite fisico Xbox pendente.'
+  next: 'Playtest Xbox do dono; DS4/DualSense pendentes. Retorno ao checkpoint nativo mobile e Durvall preservado; DEV-003 pendente.'
+previous_plan_cursor:
+  current: 'PLAN-059 (SPEC-125) commitado e publicado (05264f0, 1392627) em 2026-10-05; o playtest decide Docas, Molor e fases finais.'
+  next: 'Retomar PLAN-053 (imagens, Shu: attack_02, death_03, death_04) e/ou abrir spec de balanceamento BAL-018 (precisa de linha de base do bot por heroi). Push da main (1 a 3 commits a frente) exige aprovacao.'
+local_git_receipts:
+  - plan: PLAN-067
+    request_classification: IN_PLAN
+    authorization: 'Dono solicitou faca o commit apos correcao mobile.'
+    commit: 503ccec4003efff9260821214e75bf49c1b6ab0b
+    branch: main
+    scope: 'Mobile e suas evidencias; linhas MEC-049/ART-036 isoladas. Durvall/PLAN-068 e outros pedidos preservados.'
+    result: LOCAL_COMMITTED
+    source_validation: 'Hashes do piloto testado conferidos antes do commit; 144 verificacoes zero falhas, suite zero, smoke nove fases.'
+    pushed: false
+    note: 'Estado operacional local reconciliado apos o commit; snapshot do checkpoint Git no plano especifico registra a preparacao anterior.'
+suspension:
+  controller_return:
+    suspended_plan: PLAN-067
+    state_file: '.atena/state/plan-067-controles-e-menus-mobile.yaml'
+    checkpoint: B-003/S-008-S-009
+    prior_status: AWAITING_DEVICE_VALIDATION
+    local_commit: 503ccec4003efff9260821214e75bf49c1b6ab0b
+    evidence: '.atena/evidence/EVID-183-mobile-joystick-direita-e-botoes-2026-10-06.md'
+    approval: '2026-10-06: vamos la, neste chat do PLAN-068 aprovado; iniciar controles agora apos entrega local mobile, preservando aceite nativo pendente.'
+  mobile_return:
+    suspended_plan: PLAN-066
+    state_file: '.atena/state/plan-066-corrida-durvall.yaml'
+    checkpoint: B-002/S-005
+    prior_status: AWAITING_OWNER_PLAYTEST
+    evidence: '.atena/evidence/EVID-175-durvall-piloto-articulado-2026-10-06.md'
+    launcher: '.atena/generated/durvall-articulated/v01/Abrir-teste-Durvall-articulado.cmd'
+    approval: '2026-10-06: sim, mobile agora; retorno a Durvall apos mobile.'
+  suspended_plan_state_file: '.atena/state/plan-053-imagens.yaml'
+  note: 'PLAN-053 (imagens, SPEC-121) suspenso; cota de imagens liberou 2026-10-04 10:28 BRT; retoma na Shu (attack_02, death_03, death_04).'
+deferred_requests:
+  - id: DEV-004
+    request: 'Estruturar plano para otimizar controles Xbox/PlayStation, com icones e funcoes; referencias Vampire Survivors e Death Must Die.'
+    request_classification: PLAN_DEVIATION
+    status: LOCAL_DELIVERED_AWAITING_HARDWARE
+    proposed_plan: PLAN-068
+    proposal: '.atena/vault/drafts/PLAN-068-experiencia-controles-xbox-playstation-2026-10-06.md'
+    state_file: '.atena/state/plan-068-controles-xbox-playstation.yaml'
+    owner_route: '2026-10-06: Planejar agora e deixar a execucao para depois do mobile (recomendado).'
+    approval_mode: per-plan
+    approval_status: APPROVED_PER_PLAN
+    approved: '2026-10-06'
+    approval_basis: 'Dono aprovou por plano com ajuste IN_PLAN: abas dentro dos detalhes L1/LB anterior e R1/RB proxima.'
+    last_request_classification: IN_PLAN
+    note: 'Dono pediu vamos la; execucao local PLAN-068 iniciada apos entrega/commit mobile, com suspensao recuperavel do checkpoint nativo. DEV-003 e retorno a Durvall preservados.'
+  - id: DEV-003
+    request: 'Novo fluxo de playtest/ranking: Web envia estatisticas automaticamente; Windows importa estatisticas dos arquivos de evidencia Discord; botoes F4/F5/F6 e contrato comum de dados.'
+    request_classification: PLAN_DEVIATION
+    proposal_classification: PLAN_CHANGE_REQUEST
+    status: PENDING_AFTER_PLAN_067
+    proposal: '.atena/vault/drafts/PROPOSTA-playtest-web-e-evidencias-ranking-2026-10-06.md'
+    owner_route: '2026-10-06: Implementar depois do plano mobile (recomendado).'
+    approval_mode: unconfigured
+    note: 'Rascunho preparado; sem implementacao ou troca de plano. Pipeline de push/build/publicacao sera estruturado pelo dono; gates remotos separados.'
+  - id: DEV-002
+    request: 'Controles e menus mobile; joystick de toque somente para andar. Proposta solicitada pelo dono em 2026-10-06.'
+    request_classification: PLAN_DEVIATION
+    status: EXECUTING_WITH_RETURN
+    proposed_plan: PLAN-067
+    state_file: '.atena/state/plan-067-controles-e-menus-mobile.yaml'
+    note: 'Dono escolheu per-plan (1) e autorizou sim, mobile agora em 2026-10-06; PLAN-066 suspenso com retorno preservado.'
+  - id: DEV-001
+    request: 'Varredura geral e revisao da movimentacao dos herois (PLAN-057 / SPEC-123), B-001 concluido; estado em .atena/state/plan-057-movimentacao.yaml.'
+    status: PAUSED_AT_CHECKPOINT
+completed_plans:
+  - id: PLAN-056
+    spec_id: SPEC-122
+    title: Balanceamento do ritmo inicial (XP, armas, eventos, raridade, fases)
+    status: ACCEPTED_BY_OWNER
+    accepted: '2026-10-05'
+    mode: per-batch
+    batches: {B-001: EVID-151, B-002: EVID-152, B-003: EVID-154, B-004: EVID-154, B-005: EVID-154, B-006: 'EVID-154, EVID-155', B-007: EVID-156, B-008: EVID-156}
+    commits: ['7d2f262 B-002', '35796ba B-003', '5fc8d04 B-004', 'eecced9 B-005', 'd86fbef B-007', '0cb3e8d release 0.3.1']
+    note: 'Pontos abertos transferidos ao BAL-018: Docas facil (3%), Feng-tu 6%, rodada com bot novato, RNG do bot nao semeado. Criterios de aceite numericos (nivel medio mapas 1 e 2; % Raro/Unico no tier 0) nunca fixados; dono aceitou sem eles.'
+completed_side_plans:
+  - {id: PLAN-058, spec_id: SPEC-124, status: IMPLEMENTED_COMMITTED, commit: 69ec21c, evidence: EVID-159, note: 'Velocidade dos inimigos +20% (enemy_speed_mult); aguarda playtest.'}

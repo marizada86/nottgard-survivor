@@ -2,12 +2,13 @@ class_name CharacterSheet
 extends Control
 ## SPEC-130 (MEC-045): ficha do herói (tecla C). Coluna fixa do herói à esquerda; à direita 4 abas com grade de ícones
 ## e, embaixo, o detalhe do item em foco. Q/E ou LB/RB trocam de aba; setas/direcional movem o foco; o mouse também foca.
-## Estilo e molduras desenhados por código (ART-035 só substitui as molduras depois da validação em jogo).
+## Arte FILA-025 (ART-035); dados e navegacao preservados.
 
 signal closed
 
 const TAB_NAMES := ["Armas e feitiços", "Equipamento", "Passivas e bênçãos", "Sinergias e bônus"]
-const PANEL_SIZE := Vector2(1090, 610)
+const TAB_LABELS := ["Armas", "Equipamento", "Passivas", "Sinergias"]
+const PANEL_SIZE := Vector2(1088, 612)
 const GOLD := Color(0.93, 0.78, 0.4)
 const GOLD_DIM := Color(0.62, 0.5, 0.28)
 const IRON := Color(0.36, 0.35, 0.42)
@@ -45,6 +46,9 @@ var _content: VBoxContainer
 var _detail: RichTextLabel
 var _close_btn: Button
 var _stat_tips := {}
+var _previous_hint: Button
+var _next_hint: Button
+var _ability_hint: Label
 
 func _ready() -> void:
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
@@ -61,12 +65,12 @@ func _ready() -> void:
 	add_child(center)
 	_panel = PanelContainer.new()
 	_panel.custom_minimum_size = PANEL_SIZE
-	_panel.add_theme_stylebox_override("panel", _box(Color(0.045, 0.04, 0.06, 0.985), GOLD_DIM, 2, 3))
+	_panel.add_theme_stylebox_override("panel", SheetArt.background())
 	_panel.draw.connect(_draw_frame)
 	center.add_child(_panel)
 	var margin := MarginContainer.new()
 	for side in ["left", "right", "top", "bottom"]:
-		margin.add_theme_constant_override("margin_" + side, 18)
+		margin.add_theme_constant_override("margin_" + side, 40)
 	_panel.add_child(margin)
 	var root := VBoxContainer.new()
 	root.add_theme_constant_override("separation", 10)
@@ -78,6 +82,13 @@ func _ready() -> void:
 	root.add_child(body)
 	body.add_child(_build_hero_column())
 	body.add_child(_build_tabs_column())
+	Game.controls.changed.connect(_update_controller_hints)
+	_update_controller_hints()
+	if Game.touch_controls_enabled():
+		_close_btn.text = "Fechar"
+		_close_btn.custom_minimum_size = Vector2(88, 56)
+		_panel.custom_minimum_size = Vector2(1088, 650)
+		TouchUI.adapt_sizes(self)
 
 func _box(bg: Color, border: Color, width: int, radius: int) -> StyleBoxFlat:
 	var sb := StyleBoxFlat.new()
@@ -94,16 +105,9 @@ func _label(text: String, size: int, color: Color = Color(0.92, 0.9, 0.86)) -> L
 	l.add_theme_color_override("font_color", color)
 	return l
 
-## Moldura interna fina e marcas de canto, só nas bordas (SPEC-130 D9).
+## A moldura fica atras do conteudo; nao captura foco ou cliques.
 func _draw_frame() -> void:
-	var r := Rect2(Vector2.ZERO, _panel.size).grow(-6.0)
-	_panel.draw_rect(r, Color(0.35, 0.28, 0.18, 0.8), false, 1.0)
-	var m := 16.0
-	for corner in [r.position, Vector2(r.end.x, r.position.y), Vector2(r.position.x, r.end.y), r.end]:
-		var sx := 1.0 if corner.x <= r.position.x else -1.0
-		var sy := 1.0 if corner.y <= r.position.y else -1.0
-		_panel.draw_line(corner, corner + Vector2(m * sx, 0), GOLD, 2.0)
-		_panel.draw_line(corner, corner + Vector2(0, m * sy), GOLD, 2.0)
+	_panel.draw_texture_rect(SheetArt.PANEL, Rect2(Vector2.ZERO, _panel.size), false)
 
 func _build_header() -> Control:
 	var row := HBoxContainer.new()
@@ -120,11 +124,11 @@ func _build_header() -> Control:
 func _build_hero_column() -> Control:
 	var col := VBoxContainer.new()
 	col.custom_minimum_size = Vector2(270, 0)
-	col.add_theme_constant_override("separation", 6)
+	col.add_theme_constant_override("separation", 4 if Game.touch_controls_enabled() else 6)
 	var frame := PanelContainer.new()
-	frame.add_theme_stylebox_override("panel", _box(Color(0.08, 0.07, 0.1), GOLD_DIM, 1, 2))
+	frame.add_theme_stylebox_override("panel", SheetArt.frame(SheetArt.DETAIL, 16, 20))
 	_portrait = TextureRect.new()
-	_portrait.custom_minimum_size = Vector2(266, 130)
+	_portrait.custom_minimum_size = Vector2(250, 70 if Game.touch_controls_enabled() else 90)
 	_portrait.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	_portrait.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 	frame.add_child(_portrait)
@@ -179,11 +183,12 @@ func _stat_button(kind: String) -> Button:
 
 func _build_ability_card() -> Control:
 	var card := PanelContainer.new()
-	card.add_theme_stylebox_override("panel", _padded(_box(Color(0.09, 0.075, 0.11), GOLD_DIM, 1, 2), 8))
+	card.add_theme_stylebox_override("panel", SheetArt.frame(SheetArt.DETAIL, 16, 26))
 	var v := VBoxContainer.new()
 	v.add_theme_constant_override("separation", 3)
 	card.add_child(v)
-	v.add_child(_label("HABILIDADE  [Q/RMB]", 12, GOLD_DIM))
+	_ability_hint = _label("HABILIDADE", 12, GOLD_DIM)
+	v.add_child(_ability_hint)
 	var row := HBoxContainer.new()
 	row.add_theme_constant_override("separation", 8)
 	v.add_child(row)
@@ -201,7 +206,7 @@ func _build_ability_card() -> Control:
 	text.add_child(_ability_cd)
 	_ability_desc = _label("", 13, Color(0.82, 0.82, 0.86))
 	_ability_desc.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	_ability_desc.custom_minimum_size = Vector2(250, 0)
+	_ability_desc.custom_minimum_size = Vector2(240, 0)
 	v.add_child(_ability_desc)
 	return card
 
@@ -211,25 +216,44 @@ func _build_tabs_column() -> Control:
 	col.add_theme_constant_override("separation", 8)
 	var row := HBoxContainer.new()
 	row.add_theme_constant_override("separation", 6)
-	row.add_child(_label("◂ Q / LB", 13, MUTED))
+	if not Game.touch_controls_enabled():
+		_previous_hint = Button.new()
+		_previous_hint.flat = true
+		_previous_hint.custom_minimum_size = Vector2(52, 32)
+		_previous_hint.expand_icon = false
+		_previous_hint.focus_mode = Control.FOCUS_NONE
+		_previous_hint.pressed.connect(cycle_tab.bind(-1))
+		row.add_child(_previous_hint)
 	var group := ButtonGroup.new()
 	for i in TAB_NAMES.size():
 		var tb := Button.new()
-		tb.text = TAB_NAMES[i]
+		tb.text = TAB_LABELS[i]
+		tb.tooltip_text = TAB_NAMES[i]
+		tb.icon = SheetArt.TAB_ICONS[i]
+		tb.expand_icon = true
+		tb.add_theme_constant_override("icon_max_width", 28)
+		tb.custom_minimum_size = Vector2(0, 40)
 		tb.toggle_mode = true
 		tb.button_group = group
 		tb.focus_mode = Control.FOCUS_NONE
 		tb.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-		tb.add_theme_font_size_override("font_size", 16)
-		tb.add_theme_stylebox_override("normal", _box(Color(0.08, 0.07, 0.1), IRON, 1, 2))
-		tb.add_theme_stylebox_override("hover", _box(Color(0.12, 0.1, 0.14), GOLD_DIM, 1, 2))
-		tb.add_theme_stylebox_override("pressed", _box(Color(0.2, 0.16, 0.08), GOLD, 2, 2))
-		tb.add_theme_stylebox_override("hover_pressed", _box(Color(0.2, 0.16, 0.08), GOLD, 2, 2))
+		tb.add_theme_font_size_override("font_size", 14)
+		tb.add_theme_stylebox_override("normal", SheetArt.frame(SheetArt.TAB, 12, 8))
+		tb.add_theme_stylebox_override("hover", SheetArt.frame(SheetArt.TAB, 12, 8, Color(1.15, 1.1, 0.9)))
+		tb.add_theme_stylebox_override("pressed", SheetArt.frame(SheetArt.TAB, 12, 8, Color(1.55, 1.25, 0.6)))
+		tb.add_theme_stylebox_override("hover_pressed", SheetArt.frame(SheetArt.TAB, 12, 8, Color(1.65, 1.35, 0.7)))
 		tb.add_theme_color_override("font_pressed_color", GOLD)
 		tb.pressed.connect(set_tab.bind(i))
 		_tab_buttons.append(tb)
 		row.add_child(tb)
-	row.add_child(_label("E / RB ▸", 13, MUTED))
+	if not Game.touch_controls_enabled():
+		_next_hint = Button.new()
+		_next_hint.flat = true
+		_next_hint.custom_minimum_size = Vector2(52, 32)
+		_next_hint.expand_icon = false
+		_next_hint.focus_mode = Control.FOCUS_NONE
+		_next_hint.pressed.connect(cycle_tab.bind(1))
+		row.add_child(_next_hint)
 	col.add_child(row)
 	_scroll = ScrollContainer.new()
 	_scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
@@ -243,7 +267,7 @@ func _build_tabs_column() -> Control:
 	_scroll.add_child(_content)
 	var detail_frame := PanelContainer.new()
 	detail_frame.custom_minimum_size = Vector2(0, 165)
-	detail_frame.add_theme_stylebox_override("panel", _padded(_box(Color(0.075, 0.065, 0.095), GOLD_DIM, 1, 2), 10))
+	detail_frame.add_theme_stylebox_override("panel", SheetArt.frame(SheetArt.DETAIL, 16, 28))
 	_detail = RichTextLabel.new()
 	_detail.bbcode_enabled = true
 	_detail.scroll_active = true
@@ -257,13 +281,28 @@ func _build_tabs_column() -> Control:
 # ---------------------------------------------------------------- abertura e estado
 
 func show_sheet(b: Battle) -> void:
+	Game.controls.transition()
 	_b = b
 	_refresh_hero()
 	visible = true
 	set_tab(0)
 
 func hide_sheet() -> void:
+	Game.controls.transition()
 	visible = false
+
+func _update_controller_hints() -> void:
+	if _previous_hint != null:
+		_previous_hint.text = "◂" if Game.controls.is_controller() else "◂ Q"
+		_previous_hint.icon = Game.controls.glyph("tab_previous")
+		_previous_hint.add_theme_constant_override("icon_max_width", 32)
+		_next_hint.text = "▸" if Game.controls.is_controller() else "E ▸"
+		_previous_hint.tooltip_text = Game.controls.prompt("tab_previous", "Q") + " — Aba anterior"
+		_next_hint.tooltip_text = Game.controls.prompt("tab_next", "E") + " — Próxima aba"
+		_next_hint.icon = Game.controls.glyph("tab_next")
+		_next_hint.add_theme_constant_override("icon_max_width", 32)
+	_close_btn.text = "Fechar" if Game.touch_controls_enabled() else "Fechar (%s)" % Game.controls.prompt("ui_cancel", "C")
+	_ability_hint.text = "HABILIDADE" if Game.touch_controls_enabled() else "HABILIDADE [%s]" % Game.controls.prompt("hero_active", "Q/RMB")
 
 func current_tab() -> int:
 	return _tab
@@ -307,7 +346,12 @@ func _first_slot(n: Node) -> SheetSlot:
 	return null
 
 func _input(ev: InputEvent) -> void:
-	if not visible:
+	if not visible or not Game.controls.accepts(ev):
+		return
+	if ev.is_action_pressed("ui_cancel"):
+		closed.emit()
+		Game.controls.transition()
+		get_viewport().set_input_as_handled()
 		return
 	var d := 0
 	if ev is InputEventKey and ev.pressed and not ev.echo:
@@ -541,10 +585,10 @@ func bonus_groups() -> Array:
 func _add_bonus_block() -> void:
 	_content.add_child(_label("Bônus totais  (itens, passivas, bênçãos, herói e melhorias somados)", 15, GOLD))
 	var row := HBoxContainer.new()
-	row.add_theme_constant_override("separation", 22)
+	row.add_theme_constant_override("separation", 18)
 	for g in bonus_groups():
 		var col := VBoxContainer.new()
-		col.custom_minimum_size = Vector2(230, 0)
+		col.custom_minimum_size = Vector2(210, 0)
 		col.add_theme_constant_override("separation", 3)
 		col.add_child(_label(String(g.title), 14, Color(0.78, 0.74, 0.62)))
 		if g.rows.is_empty():

@@ -1,0 +1,88 @@
+{
+  "plan": "PLAN-070",
+  "spec": "SPEC-137",
+  "tool": "built-in imagegen",
+  "assets": [
+    {
+      "id": "A01",
+      "name": "ficha_moldura_painel",
+      "version": "v02",
+      "path": ".atena/generated/art-candidates/ficha-c/ficha_moldura_painel_v02.png",
+      "human_approval": "APPROVED_WITH_DISCLOSED_SIZE_VARIANCE"
+    },
+    {
+      "id": "A03",
+      "name": "ficha_slot_moldura",
+      "version": "v01",
+      "source": "C:\\Users\\gui-m\\.codex\\generated_images\\01a113f6-0b0f-7450-8b48-6fbbdaf8e26d\\exec-5b0e4721-009c-4f7c-99e1-2c475e0a3a54.png",
+      "path": ".atena/generated/art-candidates/ficha-c/ficha_slot_moldura_v01.png",
+      "prompt_file": ".atena/generated/art-candidates/ficha-c/remaining-nine-prompts.json",
+      "human_approval": "APPROVED_BY_OWNER"
+    },
+    {
+      "id": "A04",
+      "name": "ficha_slot_vazio",
+      "version": "v01",
+      "source": "C:\\Users\\gui-m\\.codex\\generated_images\\01a113f6-0b0f-7450-8b48-6fbbdaf8e26d\\exec-ec0f3cc3-659e-4e3f-8277-0fbdc8f431a9.png",
+      "path": ".atena/generated/art-candidates/ficha-c/ficha_slot_vazio_v01.png",
+      "human_approval": "APPROVED_BY_OWNER"
+    },
+    {
+      "id": "A02",
+      "name": "ficha_moldura_detalhe",
+      "version": "v01",
+      "source": "C:\\Users\\gui-m\\.codex\\generated_images\\01a113f6-0b0f-7450-8b48-6fbbdaf8e26d\\exec-dd1b742b-6f59-433f-b22d-023d966ffeab.png",
+      "path": ".atena/generated/art-candidates/ficha-c/ficha_moldura_detalhe_v01.png",
+      "human_approval": "APPROVED_BY_OWNER"
+    },
+    {
+      "id": "A05",
+      "name": "ficha_aba_moldura",
+      "version": "v01",
+      "source": "C:\\Users\\gui-m\\.codex\\generated_images\\01a113f6-0b0f-7450-8b48-6fbbdaf8e26d\\exec-b43a602f-2231-418f-81f7-2aee06349dc5.png",
+      "path": ".atena/generated/art-candidates/ficha-c/ficha_aba_moldura_v01.png",
+      "human_approval": "APPROVED_BY_OWNER"
+    },
+    {
+      "id": "A06",
+      "name": "ficha_aba_armas",
+      "version": "v01",
+      "source": "C:\\Users\\gui-m\\.codex\\generated_images\\01a113f6-0b0f-7450-8b48-6fbbdaf8e26d\\exec-8e9be443-22ab-4895-9fdc-fe0db7d3b29a.png",
+      "path": ".atena/generated/art-candidates/ficha-c/ficha_aba_armas_v01.png",
+      "human_approval": "APPROVED_BY_OWNER"
+    },
+    {
+      "id": "A07",
+      "name": "ficha_aba_equipamento",
+      "version": "v01",
+      "source": "C:\\Users\\gui-m\\.codex\\generated_images\\01a113f6-0b0f-7450-8b48-6fbbdaf8e26d\\exec-c2f42890-7104-48f4-b07f-be5a8f15d244.png",
+      "path": ".atena/generated/art-candidates/ficha-c/ficha_aba_equipamento_v01.png",
+      "human_approval": "APPROVED_BY_OWNER"
+    },
+    {
+      "id": "A08",
+      "name": "ficha_aba_passivas",
+      "version": "v01",
+      "source": "C:\\Users\\gui-m\\.codex\\generated_images\\01a113f6-0b0f-7450-8b48-6fbbdaf8e26d\\exec-c0351b64-972c-4ff3-8cdf-dfa52344a79d.png",
+      "path": ".atena/generated/art-candidates/ficha-c/ficha_aba_passivas_v01.png",
+      "human_approval": "APPROVED_BY_OWNER"
+    },
+    {
+      "id": "A09",
+      "name": "ficha_aba_sinergias",
+      "version": "v01",
+      "source": "C:\\Users\\gui-m\\.codex\\generated_images\\01a113f6-0b0f-7450-8b48-6fbbdaf8e26d\\exec-d0c920df-84f0-48c4-9dae-e71a5f3cc4df.png",
+      "path": ".atena/generated/art-candidates/ficha-c/ficha_aba_sinergias_v01.png",
+      "human_approval": "APPROVED_BY_OWNER"
+    },
+    {
+      "id": "A10",
+      "name": "ficha_fundo_textura",
+      "version": "v03",
+      "source": "C:\\Users\\gui-m\\.codex\\generated_images\\01a113f6-0b0f-7450-8b48-6fbbdaf8e26d\\exec-29072a84-0c13-472a-b5cf-ad1457a4f8e5.png",
+      "path": ".atena/generated/art-candidates/ficha-c/ficha_fundo_textura_v03.png",
+      "human_approval": "APPROVED_BY_OWNER"
+    }
+  ],
+  "official_admission": false
+}

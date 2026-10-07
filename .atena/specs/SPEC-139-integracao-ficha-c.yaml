@@ -1,0 +1,40 @@
+id: SPEC-139
+plan: PLAN-072
+title: Normalizar e integrar as dez imagens aprovadas da FILA-025
+origin: planned
+implementation_preceded_spec: false
+request_classification: PLAN_DEVIATION
+authorization:
+  quote: 'vamos lá'
+  context: 'Resposta ao encerramento da geracao: normalizacao e integracao no jogo pendentes.'
+  route: executar agora, preservar PLAN-071 e seus pontos de retorno
+  mode: per-plan
+  basis: 'Continuidade autorizada neste chat; modo por plano ja escolhido para FILA-025.'
+scope:
+  - Normalizacao tecnica das dez candidatas aprovadas, mantendo originais e hashes.
+  - Moldura, fundo, cards, slots e abas da ficha C; painel 1088x612 e margem interna 40.
+  - Validacao em escala real antes da admissao em assets/ui/ficha.
+non_goals:
+  - Novas geracoes, lore, regras de combate ou alteracoes no plano de ranking.
+  - Dependencias, commits, merge, push, publicacao ou exportacao.
+acceptance:
+  - Dez PNGs finais nos tamanhos contratados, nove RGBA e textura RGB.
+  - Quatro abas, detalhes, raridade, niveis, evolucao e foco preservados.
+  - Ficha contida em 1280x720, inclusive controles de toque simulados.
+  - Suite existente sem falhas e capturas inspecionadas das quatro abas.
+impacts: 'Substituicao de arte provisoria; somente UI da ficha e seus recursos.'
+gaps:
+  BLOCKING: []
+  RESOLVABLE: ['Recorte tecnico do excesso transparente em molduras A02/A05; labels curtos com nomes completos em tooltip.']
+  DEFERRED: ['Aceite fisico em dispositivo/controle; publicacao em outro checkpoint.']
+plan_of_flight:
+  - 'S-001: preservar origem e normalizar em staging; registrar transformacoes.'
+  - 'S-002: integrar em staging e capturar desktop/toque; ajustar layout.'
+  - 'S-003: admitir os arquivos apos inspeção, testar e reconciliar fila/backlog/evidencia.'
+validation: 'Godot instalado D:/Godot/godot.exe; testes existentes, screenshots e geometria; perfil QA separado.'
+evidence:
+  source_approval: .atena/vault/canon/ASSET-APPROVAL-REGISTER-021-ficha-c-2026-10-06.json
+  output: .atena/evidence/fila-025-integracao-2026-10-06.json
+recovery: 'Originais intactos; copia dos dois scripts anteriores no staging; restaurar somente arquivos desta integracao.'
+reconciliation: 'ART-035, FILA-025 e plano lateral; PLAN-071 compartilhado preservado.'
+status: COMPLETED_LOCAL

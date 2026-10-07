@@ -1,0 +1,41 @@
+▶ arquivo discord.yaml
+  ✔ é válido e as mensagens cabem no limite do Discord (1.3497ms)
+  ✔ não cria categoria nem canal de artes nesta fase (0.4025ms)
+  ✔ nenhum cargo é mencionável nem tem MentionEveryone (0.1446ms)
+  ✔ os cargos pedidos existem e Playtester não é da equipe (1.0252ms)
+  ✔ só Community Manager tem permissões de moderação (0.2215ms)
+  ✔ só Admin tem Administrator (0.182ms)
+✔ arquivo discord.yaml (5.3153ms)
+▶ permissões
+  ✔ canais de playtest são negados a @everyone e liberados ao Playtester (0.5876ms)
+  ✔ a equipe vê o playtest e escreve nos canais somente leitura; Playtester não escreve (0.3016ms)
+  ✔ canais públicos não têm overwrite de equipe (0.1507ms)
+  ✔ canais de anúncio são somente leitura para @everyone (0.2839ms)
+  ✔ canais de comunidade continuam públicos (0.2258ms)
+  ✔ todo nível de acesso declarado tem preset (0.275ms)
+  ✔ canal staff é negado a @everyone e ao Playtester; só a equipe vê (e escreve, por herdar a permissão base) (0.4674ms)
+  ✔ modos existentes continuam com o mesmo comportamento (regressão) (0.5928ms)
+✔ permissões (3.9135ms)
+▶ plano
+  ✔ em um servidor vazio, cria tudo (1.6875ms)
+  ✔ define o ícone só quando o servidor não tem um, ou com --icon (1.6896ms)
+  ✔ cargos e categorias vêm antes dos canais; configurações do servidor por último (0.3732ms)
+  ✔ é idempotente: servidor já aplicado não gera ações (0.4796ms)
+  ✔ corrige permissão que vazou para um canal de playtest (1.8585ms)
+  ✔ edita mensagem fixa alterada e fixa a que não está fixada, sem duplicar (0.7972ms)
+  ✔ adota canal existente sem categoria em vez de duplicar (0.874ms)
+  ✔ sem modo Community, ignora fórum e stage e avisa (0.4875ms)
+  ✔ avisa quando o tipo do canal existente não bate (0.4957ms)
+  ✔ não apaga nada: prune só lista o que está fora do arquivo (1.0184ms)
+✔ plano (10.4107ms)
+✔ so busca anexos Discord .log limitados e assina os bytes exatos (33.3502ms)
+✔ recusa URLs arbitrarias, executaveis e arquivos grandes sem rede (1.8349ms)
+✔ rejeita importacao recusada e resposta sem corpo (1.2207ms)
+ℹ tests 27
+ℹ suites 3
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2273.5314

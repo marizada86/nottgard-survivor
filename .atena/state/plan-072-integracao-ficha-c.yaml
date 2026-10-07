@@ -1,0 +1,22 @@
+id: PLAN-072
+spec: SPEC-139
+spec_file: .atena/specs/SPEC-139-integracao-ficha-c.yaml
+mode: per-plan
+status: COMPLETED_LOCAL
+checkpoint: S-003
+request_classification: PLAN_DEVIATION
+authorization_verbatim: 'vamos lá'
+approval_context: 'Continuar apos aprovacao visual: normalizacao e integracao pendentes.'
+return:
+  plan: PLAN-071
+  state_file: .atena/state/plan-071-playtest-ranking.yaml
+  checkpoint_observed: B-001/S-001
+  handling: 'Nao substituir cursor compartilhado em uso por outro chat; plano lateral com retorno registrado aqui.'
+steps:
+  - {id: S-001, task: normalizar em staging, status: COMPLETED}
+  - {id: S-002, task: integrar e inspecionar no jogo, status: COMPLETED}
+  - {id: S-003, task: admitir validar reconciliar, status: COMPLETED}
+blocking_gaps: []
+
+evidence: .atena/evidence/fila-025-integracao-2026-10-06.json
+admission: .atena/vault/canon/ASSET-ADMISSION-fila-025-ficha-c-2026-10-06.json

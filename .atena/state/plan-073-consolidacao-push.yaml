@@ -1,0 +1,26 @@
+id: PLAN-073
+spec_id: SPEC-140
+spec: .atena/specs/SPEC-140-consolidacao-e-push.yaml
+mode: per-plan
+status: AUTHORIZED_SCOPE_PUBLISHED_PILOT_ASSETS_PENDING
+request_classification: PLAN_DEVIATION
+authorization_verbatim: 'atena junte tudo que temos e faÃ§a push'
+coordination_authorization: 'Sim, coordene com esse chat'
+checkpoint: S-003
+return:
+  state_file: .atena/state/plan-071-playtest-ranking.yaml
+  handling: preservar checkpoint compartilhado durante consolidacao isolada
+workspace: 'C:/Users/gui-m/.codex/worktrees/consolidacao-push/nottgard-survivors'
+branch: codex/consolidacao-push-2026-10-06
+commits:
+  - {sha: 7c5edab, scope: arte ficha C aprovada}
+  - {sha: 227f05a, scope: incorporacao main remota, conflicts: somente ARTE.md}
+pilot_publication:
+  initial_selection: {files: 5200, bytes: 909755110, status: AUTO_REVIEW_REJECTED}
+  rejection: 'Tamanho/material com aceite visual pendente excede autorizacao especifica; nao executar lote bloqueado.'
+  safer_selection: {files: 207, bytes: 52921503, manifest: .atena/generated/consolidacao-push/curated-durvall.json, status: AWAITING_OWNER_APPROVAL}
+  local_sources_preserved: true
+validated: ["import exit 0", "suite zero falhas", "smoke nove fases", "ficha 21 capturas e zero falhas de geometria", "backlog zero alertas"]
+remaining: ["decisao do dono sobre publicacao dos pilotos Durvall; originais locais preservados"]
+
+publication: {verified_commit: 0e5e4977b63e0ba98990e7a2c54f43093098ba31, local_main_matches_remote: true, force: false, verified: "2026-10-07"}

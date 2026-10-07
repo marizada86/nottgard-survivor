@@ -1,0 +1,101 @@
+{
+  "pilot_id": "P067-v01",
+  "date": "2026-10-06",
+  "engine": "Godot 4.7.2",
+  "kind": "local-source-pilot-not-apk",
+  "plan": "PLAN-067",
+  "spec": "SPEC-134",
+  "native_validated": false,
+  "real_save_preserved_in_integration": true,
+  "sources": {
+    "core/game.gd": "91ef922becfbadcb81fd3b9ff29cf9879a3581f97b79c0b78a439c2f909b19e6",
+    "project.godot": "f23f56e26143977dcc8685aefa0351e5a3531926f244c5413b4f4bb6f038f2d6",
+    "ui/ability_slot.gd": "6d2490c4d81dcefd7ac0a0ca0321c60bebcc67194a1482a6f05227ccea2c8319",
+    "ui/character_sheet.gd": "e4fb9cef07bb36b795fcfe56dff66b4933f396fb2c59f07b7933efd09b300113",
+    "ui/hero_panel.gd": "ef4856e15cc3a3fb6ea7ca1c899d86530fc1f2d9479d84ada385e9c9c382c4a7",
+    "ui/hq_screen.gd": "6face261bf1075f30789a217923f81e29ef5b5620d23ca61eba1c2a22d7b57e6",
+    "ui/hud.gd": "d49dfb385efa339161aa8ced427e47010be628ed71fc497f0d136f96a7f181ed",
+    "ui/menu.gd": "82199f0169911192ce41f9fedbae0a119f37269a0993438ae9e919d3999ca5ee",
+    "ui/run.gd": "9ce609ad028180fdc3ae12f2758a5e964a4a67996c51369f7bff38647fda7764",
+    "ui/mobile_controls.gd": "4f5dbceae1a527f5e3395cb7b8e7cc18e71bb261809fec8c320e2b1f59931906",
+    "ui/touch_ui.gd": "40d18865a370e1e3a9e21a4e84e44f36579d9b865cafa4f2c5f20c9def906e86",
+    "tests/test_mobile_controls.gd": "8d01d4b3bb6c5967951c4715748372af8dd0316db9bbce5ade27119945ec87e6",
+    "tools/mobile_preview.gd": "56bf09cd377cbf6d1bd918370f618d52b8c70361b05cc4736a996aa8485b6921",
+    "tools/mobile_preview.tscn": "7719e3a6c22f103ef9ffdb17ed74d38dd54dcf07742b69fc5bc6a3cb58dcb4e4"
+  },
+  "screenshots": {
+    "combate-1280x960.png": {
+      "width": 1280,
+      "height": 960,
+      "sha256": "d946f1d1924333e109270bacd9dc903d48cb0ad50b89ab7931dff4be7da835d4"
+    },
+    "combate-1600x720.png": {
+      "width": 1600,
+      "height": 720,
+      "sha256": "9c97153d3ecaed3bb81390cb0f2e4c0d68ecd7c81e8e5be1986ef5c02398c886"
+    },
+    "combate-16x9.png": {
+      "width": 1280,
+      "height": 720,
+      "sha256": "8152afff61e076341f5f5874b4d524c43b44aabe1e4e9ecfbdb067298db85415"
+    },
+    "ficha-1280x960.png": {
+      "width": 1280,
+      "height": 960,
+      "sha256": "f4ecd32e1832c5745723703237dd97d9290bd803e5124be894629975e09dea8a"
+    },
+    "ficha-1600x720.png": {
+      "width": 1600,
+      "height": 720,
+      "sha256": "5675040c0b60748f166abe01dedccd6d8e7d8d34f0895a4131b3459df8769555"
+    },
+    "ficha-16x9.png": {
+      "width": 1280,
+      "height": 720,
+      "sha256": "b0c0fd487c23f3fd5ea381c45126dd7aa783dcc09ae1ad6ffc2970741052a170"
+    },
+    "menu-1280x720.png": {
+      "width": 1280,
+      "height": 720,
+      "sha256": "499d9ddf64947576b148b6b0e8d5da2138f4f5593af298bd9ad06e55d591b4ab"
+    },
+    "menu-1280x960.png": {
+      "width": 1280,
+      "height": 960,
+      "sha256": "d7d324733a298851aa776c313a078c9c1aefdcab94ffa46b43f190198a99cc67"
+    },
+    "menu-1600x720.png": {
+      "width": 1600,
+      "height": 720,
+      "sha256": "6223d910b86594ec1bea2e4dd36afdb261f2df7462c859ebf200a3ee86abd37d"
+    },
+    "menu-16x9.png": {
+      "width": 1280,
+      "height": 720,
+      "sha256": "499d9ddf64947576b148b6b0e8d5da2138f4f5593af298bd9ad06e55d591b4ab"
+    },
+    "oferta-16x9.png": {
+      "width": 1280,
+      "height": 720,
+      "sha256": "9a968dd08d145f3090ee851d2c80bf76b68b1ec5bba52775ba72253e11dbecca"
+    }
+  },
+  "logs": {
+    "tests.log": "d93083c6ecb900b5f23846e2c5e27414d97e2cdfc3554ef2aee4c2201319a6bd",
+    "capture-stdout.log": "947b85b8edfa6f68377d15557879715cf8dd15b6aa46c103f7e693503a8815ee",
+    "capture-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "capture.log": "42e77336f86d0d934a5c6981c480fe44668f92318bea94250fb898fd4b5993cb",
+    "smoke-mobile.log": "4877af4111bbb185f3c67d498a9d925efa03d1ac804e52e5ee331f0a0a02a342"
+  },
+  "recovery": {
+    "recovery\\project.godot": "55061a1bcf95cadd8043e1bfab70dd58dc8ff72b25e36bf1e1392db0ea634300",
+    "recovery\\core\\game.gd": "bed419546b1585722fed00021a5f07cc537cf7958967bdcfdf50c038188a30b7",
+    "recovery\\ui\\ability_slot.gd": "5670d5ab301f05bac9f224833953cf25ef32c45751e65f9119dd89f89c26243b",
+    "recovery\\ui\\character_sheet.gd": "f11ef7e32fd903849ce968e9a192fe0d5b4f37d308ad9d9253a4dcac502b312c",
+    "recovery\\ui\\hero_panel.gd": "245ac2c27f481273c3872b73b385954ba1faedfdcab73281871ac889de8bb746",
+    "recovery\\ui\\hq_screen.gd": "5362d97cb36a5a4242b07f6cc735415fea0db0b49f6bc4824c71b96bc7de530c",
+    "recovery\\ui\\hud.gd": "a3500efa5413e6617a427f178f267ce91420fafe857903ffd2ba155ea81d8ad9",
+    "recovery\\ui\\menu.gd": "258b8a396bc9dc76733cc73911497f03e02900663adcd0681650974bc7a08f50",
+    "recovery\\ui\\run.gd": "6ca43ae515aafeae164109bcf603b0759c457a7007616e01c1077aa0034879ed"
+  }
+}

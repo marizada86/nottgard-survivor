@@ -1,0 +1,1022 @@
+{
+  "plan": "PLAN-072",
+  "spec": "SPEC-139",
+  "date_brt": "2026-10-06",
+  "status": "INTEGRATED_LOCALLY_VALIDATED",
+  "authorization_verbatim": "vamos lá",
+  "authorization_context": "Continuidade apos aprovacao visual das dez candidatas; normalizacao e integracao pendentes.",
+  "source_approval": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-021-ficha-c-2026-10-06.json",
+  "transformations": "Godot Image.get_region/resize nearest; recorte do excesso transparente A01/A02/A05; demais somente escala; sem desenho ou retoque.",
+  "assets": [
+    {
+      "id": "A01",
+      "source": ".atena/generated/art-candidates/ficha-c/ficha_moldura_painel_v02.png",
+      "source_sha256": "3c4a5bf3a8dbad614f7808a2f58b4868cd99ffa8b0c15424823060f6fe6eb5e6",
+      "output": "assets/ui/ficha/ficha_moldura_painel.png",
+      "output_sha256": "1576d862265e400e2480d0b3b071850101f60317589b0edd2953d4446e30a72c",
+      "size": [
+        1280,
+        720
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "crop": [
+        29,
+        26,
+        1614,
+        885
+      ],
+      "interpolation": "nearest",
+      "texture_contrast_percent": null
+    },
+    {
+      "id": "A03",
+      "source": ".atena/generated/art-candidates/ficha-c/ficha_slot_moldura_v01.png",
+      "source_sha256": "9de9f5d7eeead846c189ae3c43a1770eaac12e17f2005bf56dd1a01f5870f841",
+      "output": "assets/ui/ficha/ficha_slot_moldura.png",
+      "output_sha256": "9fcc01f98a6d2390fea17d932763a53230941d6ed35c533ff624f4c310a98205",
+      "size": [
+        76,
+        76
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "crop": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "interpolation": "nearest",
+      "texture_contrast_percent": null
+    },
+    {
+      "id": "A04",
+      "source": ".atena/generated/art-candidates/ficha-c/ficha_slot_vazio_v01.png",
+      "source_sha256": "c1cc6503fb7b745f0f9e861950371ace1114abe2e3e2572eedb14c7942dea33a",
+      "output": "assets/ui/ficha/ficha_slot_vazio.png",
+      "output_sha256": "d33086247c0dcf1bffc3849fe42a38273b5f62cbb9d7688dbb744c27636eb822",
+      "size": [
+        76,
+        76
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "crop": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "interpolation": "nearest",
+      "texture_contrast_percent": null
+    },
+    {
+      "id": "A02",
+      "source": ".atena/generated/art-candidates/ficha-c/ficha_moldura_detalhe_v01.png",
+      "source_sha256": "2940a3793a9d05c744c8cf3a9f30fecb4a375168ba4f5a01f8d39793cfe76449",
+      "output": "assets/ui/ficha/ficha_moldura_detalhe.png",
+      "output_sha256": "6930ece272362ada2a364d45f829650b2c2e4d39fcb69fc9c48afd5c8ee7a902",
+      "size": [
+        512,
+        128
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "crop": [
+        33,
+        129,
+        2105,
+        463
+      ],
+      "interpolation": "nearest",
+      "texture_contrast_percent": null
+    },
+    {
+      "id": "A05",
+      "source": ".atena/generated/art-candidates/ficha-c/ficha_aba_moldura_v01.png",
+      "source_sha256": "8c7f97eae98dd396a9f3009d8d6df61fac7a295337093808b815899d193fa0fb",
+      "output": "assets/ui/ficha/ficha_aba_moldura.png",
+      "output_sha256": "3a17767a5e025f97d09aeb4fe501a947fcb1c10924df94e958d418d90d812494",
+      "size": [
+        192,
+        40
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "crop": [
+        77,
+        215,
+        2018,
+        295
+      ],
+      "interpolation": "nearest",
+      "texture_contrast_percent": null
+    },
+    {
+      "id": "A06",
+      "source": ".atena/generated/art-candidates/ficha-c/ficha_aba_armas_v01.png",
+      "source_sha256": "42ab221aef531aee4b83dd6c052581eb6961e8fc4070274f2a04d45726c70d2e",
+      "output": "assets/ui/ficha/ficha_aba_armas.png",
+      "output_sha256": "733f0a26f4880fd58636fe2517a68af717f87c6610e000a214285d395427f0d2",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "crop": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "interpolation": "nearest",
+      "texture_contrast_percent": null
+    },
+    {
+      "id": "A07",
+      "source": ".atena/generated/art-candidates/ficha-c/ficha_aba_equipamento_v01.png",
+      "source_sha256": "6ede111844dc276408dfa5b35cf6bfa066a142c378d3000cec597bdfcdc3e533",
+      "output": "assets/ui/ficha/ficha_aba_equipamento.png",
+      "output_sha256": "26413ac70422492d1713e0f97cb1dcff356d4586826e5ea10921fa081ed8f0f7",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "crop": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "interpolation": "nearest",
+      "texture_contrast_percent": null
+    },
+    {
+      "id": "A08",
+      "source": ".atena/generated/art-candidates/ficha-c/ficha_aba_passivas_v01.png",
+      "source_sha256": "c8a4638a0d43143fd4f8c8bc8d0c5260ad6a4e6a3e201f44958b72f60750c766",
+      "output": "assets/ui/ficha/ficha_aba_passivas.png",
+      "output_sha256": "9561f822964088c8684dcbb90718eb43c774aac5816691d3a6d721942731c59f",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "crop": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "interpolation": "nearest",
+      "texture_contrast_percent": null
+    },
+    {
+      "id": "A09",
+      "source": ".atena/generated/art-candidates/ficha-c/ficha_aba_sinergias_v01.png",
+      "source_sha256": "2007c6eff346b7c67695ca110d31ca49fbc35b2c68f308c38cf1c7fa25352d09",
+      "output": "assets/ui/ficha/ficha_aba_sinergias.png",
+      "output_sha256": "466d9b4b1bbe337c559ba7b7592a8282dde76cb382ab81b2173da1b458d6643b",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "crop": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "interpolation": "nearest",
+      "texture_contrast_percent": null
+    },
+    {
+      "id": "A10",
+      "source": ".atena/generated/art-candidates/ficha-c/ficha_fundo_textura_v03.png",
+      "source_sha256": "52d594e905d1c98a96f61fde5300310c5980db70bb8dd0d8c1e3da5abd36e063",
+      "output": "assets/ui/ficha/ficha_fundo_textura.png",
+      "output_sha256": "a181a0544c300c92a523d25cbd15fa5d3585c9191bafd9cba2dcc6804a1d44d1",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGB",
+      "alpha_range": [
+        255,
+        255
+      ],
+      "crop": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "interpolation": "nearest",
+      "texture_contrast_percent": 4.146980392156861
+    }
+  ],
+  "layouts": {
+    "desktop": {
+      "failures": [],
+      "layouts": [
+        {
+          "label": "inicio_aba0",
+          "panel": [
+            96.0,
+            46.0,
+            1088.0,
+            627.0
+          ],
+          "scroll_height": 276.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "inicio_aba1",
+          "panel": [
+            96.0,
+            46.0,
+            1088.0,
+            627.0
+          ],
+          "scroll_height": 276.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "inicio_aba2",
+          "panel": [
+            96.0,
+            46.0,
+            1088.0,
+            627.0
+          ],
+          "scroll_height": 276.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "inicio_aba3",
+          "panel": [
+            96.0,
+            46.0,
+            1088.0,
+            627.0
+          ],
+          "scroll_height": 276.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "cheio_aba0",
+          "panel": [
+            96.0,
+            46.0,
+            1088.0,
+            627.0
+          ],
+          "scroll_height": 276.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "cheio_aba1",
+          "panel": [
+            96.0,
+            46.0,
+            1088.0,
+            627.0
+          ],
+          "scroll_height": 276.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "cheio_aba2",
+          "panel": [
+            96.0,
+            46.0,
+            1088.0,
+            627.0
+          ],
+          "scroll_height": 276.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "cheio_aba3",
+          "panel": [
+            96.0,
+            46.0,
+            1088.0,
+            627.0
+          ],
+          "scroll_height": 276.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "tooltip_ca",
+          "panel": [
+            96.0,
+            46.0,
+            1088.0,
+            627.0
+          ],
+          "scroll_height": 276.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "controle_xbox",
+          "panel": [
+            96.0,
+            46.0,
+            1088.0,
+            627.0
+          ],
+          "scroll_height": 276.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "controle_playstation",
+          "panel": [
+            96.0,
+            42.0,
+            1088.0,
+            635.0
+          ],
+          "scroll_height": 276.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "heroi_durvall",
+          "panel": [
+            96.0,
+            54.0,
+            1088.0,
+            612.0
+          ],
+          "scroll_height": 253.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "heroi_brook",
+          "panel": [
+            96.0,
+            54.0,
+            1088.0,
+            612.0
+          ],
+          "scroll_height": 253.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "heroi_maelor",
+          "panel": [
+            96.0,
+            54.0,
+            1088.0,
+            612.0
+          ],
+          "scroll_height": 253.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "heroi_sylas",
+          "panel": [
+            96.0,
+            42.0,
+            1088.0,
+            635.0
+          ],
+          "scroll_height": 276.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "heroi_kayron",
+          "panel": [
+            96.0,
+            54.0,
+            1088.0,
+            612.0
+          ],
+          "scroll_height": 253.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "heroi_korrak",
+          "panel": [
+            96.0,
+            54.0,
+            1088.0,
+            612.0
+          ],
+          "scroll_height": 253.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "heroi_leoric",
+          "panel": [
+            96.0,
+            54.0,
+            1088.0,
+            612.0
+          ],
+          "scroll_height": 253.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "heroi_nyrelia",
+          "panel": [
+            96.0,
+            54.0,
+            1088.0,
+            612.0
+          ],
+          "scroll_height": 253.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "heroi_zynara",
+          "panel": [
+            96.0,
+            54.0,
+            1088.0,
+            612.0
+          ],
+          "scroll_height": 253.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "heroi_bromnor",
+          "panel": [
+            96.0,
+            54.0,
+            1088.0,
+            612.0
+          ],
+          "scroll_height": 253.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        }
+      ]
+    },
+    "mobile": {
+      "failures": [],
+      "layouts": [
+        {
+          "label": "inicio_aba0",
+          "panel": [
+            96.0,
+            15.0,
+            1088.0,
+            689.0
+          ],
+          "scroll_height": 306.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "inicio_aba1",
+          "panel": [
+            96.0,
+            15.0,
+            1088.0,
+            689.0
+          ],
+          "scroll_height": 306.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "inicio_aba2",
+          "panel": [
+            96.0,
+            15.0,
+            1088.0,
+            689.0
+          ],
+          "scroll_height": 306.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "inicio_aba3",
+          "panel": [
+            96.0,
+            15.0,
+            1088.0,
+            689.0
+          ],
+          "scroll_height": 306.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "cheio_aba0",
+          "panel": [
+            96.0,
+            15.0,
+            1088.0,
+            689.0
+          ],
+          "scroll_height": 306.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "cheio_aba1",
+          "panel": [
+            96.0,
+            15.0,
+            1088.0,
+            689.0
+          ],
+          "scroll_height": 306.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "cheio_aba2",
+          "panel": [
+            96.0,
+            15.0,
+            1088.0,
+            689.0
+          ],
+          "scroll_height": 306.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "cheio_aba3",
+          "panel": [
+            96.0,
+            15.0,
+            1088.0,
+            689.0
+          ],
+          "scroll_height": 306.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "tooltip_ca",
+          "panel": [
+            96.0,
+            15.0,
+            1088.0,
+            689.0
+          ],
+          "scroll_height": 306.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "heroi_durvall",
+          "panel": [
+            96.0,
+            32.0,
+            1088.0,
+            655.0
+          ],
+          "scroll_height": 272.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "heroi_brook",
+          "panel": [
+            96.0,
+            32.0,
+            1088.0,
+            655.0
+          ],
+          "scroll_height": 272.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "heroi_maelor",
+          "panel": [
+            96.0,
+            35.0,
+            1088.0,
+            650.0
+          ],
+          "scroll_height": 267.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "heroi_sylas",
+          "panel": [
+            96.0,
+            15.0,
+            1088.0,
+            689.0
+          ],
+          "scroll_height": 306.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "heroi_kayron",
+          "panel": [
+            96.0,
+            35.0,
+            1088.0,
+            650.0
+          ],
+          "scroll_height": 267.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "heroi_korrak",
+          "panel": [
+            96.0,
+            35.0,
+            1088.0,
+            650.0
+          ],
+          "scroll_height": 267.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "heroi_leoric",
+          "panel": [
+            96.0,
+            32.0,
+            1088.0,
+            655.0
+          ],
+          "scroll_height": 272.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "heroi_nyrelia",
+          "panel": [
+            96.0,
+            32.0,
+            1088.0,
+            655.0
+          ],
+          "scroll_height": 272.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "heroi_zynara",
+          "panel": [
+            96.0,
+            35.0,
+            1088.0,
+            650.0
+          ],
+          "scroll_height": 267.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        },
+        {
+          "label": "heroi_bromnor",
+          "panel": [
+            96.0,
+            35.0,
+            1088.0,
+            650.0
+          ],
+          "scroll_height": 267.0,
+          "viewport": [
+            1280.0,
+            720.0
+          ]
+        }
+      ]
+    }
+  },
+  "captures": [
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/desktop_inicio_aba0.png",
+      "sha256": "a8d58f851735bce91b6399296748bf6836e831ef2b76622c11b105f258df0c3d"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/desktop_inicio_aba1.png",
+      "sha256": "98837d3d906443b9d1587f6fa93e4e524676c2fe7048c447dc2d0942b879244b"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/desktop_inicio_aba2.png",
+      "sha256": "047181eabf3f4b068494597d46653e6d88d7ca704a0dc163724ba61df7cffd61"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/desktop_inicio_aba3.png",
+      "sha256": "87e526765190bde1fc3a052c724f4a0930575a9b5d962c6ffe80ea95627dae8c"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/desktop_cheio_aba0.png",
+      "sha256": "f9dd416c5392a854159d67fc814ca66867177d1a2dc689bfa063f539f9cda9c0"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/desktop_cheio_aba1.png",
+      "sha256": "bf3d775ec7f1fef0d6ceda44227de7b8b3c8439bb866a64914bc7c9c7df5c305"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/desktop_cheio_aba2.png",
+      "sha256": "2e67afcdc338be0062f3d4235f260db3b058df894caf42b95d5be83cb6953aab"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/desktop_cheio_aba3.png",
+      "sha256": "281e5f9e34fa35b806a30f01c218d3ac92b94fa6bb788669cd1b84573349b984"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/desktop_tooltip_ca.png",
+      "sha256": "012d8e0fb956f37cb117049dae6ff0737ac6a043e2906054309552f1d3f14487"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/desktop_controle_xbox.png",
+      "sha256": "faab537ca93be9f6e37f7bfb98b0a6ee6f8bd51bfa6d5b101ca997a6376aa386"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/desktop_controle_playstation.png",
+      "sha256": "e4f937cb74188eecca10f966ff2e0a1063ea82fb64532aa4fd9d6bc68733acd3"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/desktop_heroi_durvall.png",
+      "sha256": "941a95fad25a6d2e0bdc471b12ea2d298f0b0e2402c1ab1caeaed0f5cc45d8cc"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/desktop_heroi_brook.png",
+      "sha256": "d1f4adc728f1b9e8451d3b9c262d58abbb3c86e94a38cbb34e75a4ca6dbd966a"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/desktop_heroi_maelor.png",
+      "sha256": "cb3f79e0ca24dc48274b35257fed4f854541a75441f15db8c2a0ef51994568a7"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/desktop_heroi_sylas.png",
+      "sha256": "1ff5f395da4ac311d3941536611339b2c4bad83a43bff53fbfb83e54c745bd51"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/desktop_heroi_kayron.png",
+      "sha256": "126435b2836f298185e2b0d3aa7c84b3339cc5f411c852ffa149c1c029dfa6f9"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/desktop_heroi_korrak.png",
+      "sha256": "7052f4c15029848b43db3c62a4803f502aa82acc8d0da2b78ab140b59974c64c"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/desktop_heroi_leoric.png",
+      "sha256": "5c657663af6c86ab3f3068103eda2fd1094a75ea1eb954ee030d5ecb80171469"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/desktop_heroi_nyrelia.png",
+      "sha256": "a45ba368e2f2768c17808fc5ff4103d663b92b79b85d83fb6cd6ead371463d56"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/desktop_heroi_zynara.png",
+      "sha256": "545a434a5ab934cd770453dd315497c7a09164620c5ba5544637b7a570fc1227"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/desktop_heroi_bromnor.png",
+      "sha256": "548ddbd9d27bd0db6a7a2b85122ecc166f7a5ef7f118ee675ea221397c72ae6f"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/mobile_inicio_aba0.png",
+      "sha256": "a6e5059e5224fb7895b5a1ebabe5307719e4edd5798b24525c639e802c62fac1"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/mobile_inicio_aba1.png",
+      "sha256": "1491484838b8f21a278c6672c4289bf5405c99bdcd09e3d31c9153f948584e64"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/mobile_inicio_aba2.png",
+      "sha256": "1ab15390e917d22eb68f0507c08352dd16cb6c5ecbaf798681671106236af228"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/mobile_inicio_aba3.png",
+      "sha256": "9a8312e7af0b1d132c5ffb7528a15cb65a11d17cb16d1ab3d6eba42af7369bf6"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/mobile_cheio_aba0.png",
+      "sha256": "df081c148b8df5821782e0772c1952455bbbb5898c665ad6ae904b7326313530"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/mobile_cheio_aba1.png",
+      "sha256": "e748139aa82f4661cfbbcd7977e996b3e34577f76de987f8d95d144f1f754c97"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/mobile_cheio_aba2.png",
+      "sha256": "a1f7b59f47fe214113e918797f38fc200de7d222706b4944eeb00e972f0be04e"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/mobile_cheio_aba3.png",
+      "sha256": "f7817eff33de32a0f19fcb720f1056cfa54d95d64f41c0299fe4c57b118f8a83"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/mobile_tooltip_ca.png",
+      "sha256": "e914f5b4d0ea293fe770d27e141ddc38892a2d888182c9d770620ea6cac465df"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/mobile_heroi_durvall.png",
+      "sha256": "f01c0713ff95a43ce2af9dceed63d74ac1223acc4dcc5a4cd9d0d66e6351d9f7"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/mobile_heroi_brook.png",
+      "sha256": "207077d617ecb9dbb81a7b3cf974b60362bc674719bdd8a191b4786c6d6e7d63"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/mobile_heroi_maelor.png",
+      "sha256": "7b6859c10eb7883c3b519e3a6d355053d821931ab1a831a6b8695fa57849bf62"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/mobile_heroi_sylas.png",
+      "sha256": "a6e5059e5224fb7895b5a1ebabe5307719e4edd5798b24525c639e802c62fac1"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/mobile_heroi_kayron.png",
+      "sha256": "65aa982725d5a521e60f07cee17d8bef6aeca370fd52d089b583db7ce4218575"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/mobile_heroi_korrak.png",
+      "sha256": "95c9979b62e4376320c3659f7ef9609f9dfde5401f9f37046521df9a2272e07a"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/mobile_heroi_leoric.png",
+      "sha256": "7e36f1887d489e1466d1ef471cab27feed43390ea728f6e407192f940baeb052"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/mobile_heroi_nyrelia.png",
+      "sha256": "8e90e80249bf5d7d216943a281975a6531aafad7aff34cb6d4c535a36ab3c01a"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/mobile_heroi_zynara.png",
+      "sha256": "1933ce24a5f71b6d2137b8ac2cd32274053eb3b9df55d829f6b6d873c64cdd80"
+    },
+    {
+      "path": ".atena/generated/ficha-c-integration/v01/mobile_heroi_bromnor.png",
+      "sha256": "34beeed9f2297234eb165dad25f6effc4f0bbd94d6d5486213f890e5c9f616fd"
+    }
+  ],
+  "validation": {
+    "png_count": 10,
+    "source_hashes_preserved": true,
+    "target_dimensions_pass": true,
+    "runtime_geometry_failures": 0,
+    "desktop_captures": 21,
+    "mobile_captures": 19,
+    "all_heroes": 10,
+    "existing_suite_failures": 0,
+    "existing_suite_exit_code": 0,
+    "contract_valid": true,
+    "source_code_sha256": {
+      "ui/character_sheet.gd": "50078717f2b9ea60086897cf16ba14e6a5673d3d7d1f29843b9207702cfee076",
+      "ui/sheet_slot.gd": "8268016a8a622c49cc5051f1e10d19a3890a935f36eba6f7e7e48a7321b98443",
+      "ui/sheet_art.gd": "39a0455a0ac12c95769dbf085c4bb37dcb5e94a9261255905e90d594e7b187a4"
+    },
+    "notes": [
+      "Suite avisa objetos/recursos ainda em uso no encerramento; nenhuma falha funcional ou erro de script.",
+      "PANEL_SIZE 1088x612 e margem 40; altura se expande conforme conteudo. Todos os casos capturados cabem no viewport.",
+      "Inspecao visual das quatro abas cheias, slots vazios, tooltip, layout mobile e glifos."
+    ],
+    "limits": [
+      "Simulacao de toque e familias de controle; teste fisico continua no plano correspondente.",
+      "Tiling inspecionado visualmente; nao declarado perfeito pixel a pixel."
+    ]
+  },
+  "official_admission": true,
+  "publication": false,
+  "commit": false,
+  "return_plan": "PLAN-071",
+  "reconciliation": [
+    "ART-035",
+    "CHATGPT-FILA-025",
+    "PLAN-072",
+    "SPEC-139"
+  ]
+}

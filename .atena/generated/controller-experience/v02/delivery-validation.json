@@ -1,0 +1,19 @@
+{
+  "plan": "PLAN-068",
+  "local_passed": true,
+  "errors": [],
+  "local_links_checked": 57,
+  "sources_checked": 74,
+  "captures_checked": [
+    "quartel_1280x720.png",
+    "quartel_1600x900.png",
+    "quartel_1920x1080.png",
+    "quartel_1024x768.png",
+    "quartel_1280x600.png",
+    "quartel_960x540.png"
+  ],
+  "yaml_full_parser_used": false,
+  "hardware_acceptance": false,
+  "status": "AWAITING_HARDWARE_PLAYTEST",
+  "fingerprint": "922bd054ed762efba8f4d4bdf9fa72670179d1bc5a5f64976127646ee8e7ec54"
+}

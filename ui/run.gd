@@ -26,12 +26,16 @@ var decoy_nodes := {}  # MEC-029: id da isca (Battle) -> visual
 var enemy_nodes := {}
 var start_pos := Vector2.ZERO
 var _result_shown := false
+var _stats_checkpoint_at := 60.0
 var _shake := 0.0
 var _numbers := 0
 const NUMBER_MERGE_MS := 350
 var _recent_numbers := {}  # tid do alvo -> {label, amount, until}: soma acertos rápidos no mesmo alvo (MEC-031 D5)
 var _paused := false
 var _items_shown := false
+var _items_prior_pause := false
+var _items_focus: WeakRef
+var _recovery_offer := false
 var _stage_clear_events_seen: Dictionary = {}
 var _final_victory_event_seen := false
 var _divine_aura: Line2D
@@ -69,10 +73,19 @@ func _ready() -> void:
 	hud.revive_pressed.connect(_accept_revive)
 	hud.decline_revive_pressed.connect(_decline_revive)
 	hud.items_closed.connect(_close_items_panel)
+	hud.mobile_command.connect(_mobile_command)
+	hud.extract_pressed.connect(_request_extract)
+	hud.pause_items_pressed.connect(_toggle_items_panel)
+	Game.controls.recovery_requested.connect(_controller_recovery)
 	_setup_encounter_overlays()
 	_load_stage()
 	if Game.qa_sandbox:
 		battle.qa_prepare(Game.qa_launch)
+	var stats_ctx := Game.battle_ctx()
+	stats_ctx.task_id = String(Game.profile.data.settings.get("playtest_task", "general"))
+	if Version.evidence_enabled():
+		battle.run_record.begin(battle, stats_ctx, "web" if OS.has_feature("web") else "windows", Game.qa_sandbox)
+	Playtest.record_run(battle)
 	if battle.state == "revive_offer":
 		hud.show_revive_offer(battle)
 	hud.toast("%s — %s" % [battle.stage.name, Data.table("stage_story").get(battle.stage_id, {}).get("epigrafe", battle.stage.sub)], Color(0.9, 0.85, 0.6))
@@ -265,11 +278,15 @@ func fog_state_is_inactive() -> bool:
 # ------------------------------------------------------------------ entrada
 
 func _unhandled_input(ev: InputEvent) -> void:
+	if not Game.controls.accepts(ev) or hud.has_modal():
+		return
+	if Game.touch_controls_enabled() and ev is InputEventMouse:
+		return
 	if _result_shown or battle.state == "revive_offer":
 		return
 	if battle.state == "evolve_cine":
 		# MEC-009: qualquer tecla ou clique pula a cinemática de evolução
-		if (ev is InputEventKey and ev.pressed and not ev.echo) or (ev is InputEventMouseButton and ev.pressed) or (ev is InputEventJoypadButton and ev.pressed):
+		if (ev is InputEventScreenTouch and ev.pressed) or (ev is InputEventKey and ev.pressed and not ev.echo) or (ev is InputEventMouseButton and ev.pressed) or (ev is InputEventJoypadButton and ev.pressed):
 			battle.skip_cine()
 			get_viewport().set_input_as_handled()
 		return
@@ -299,7 +316,7 @@ func _unhandled_input(ev: InputEvent) -> void:
 			Sfx.play("click")
 		get_viewport().set_input_as_handled()
 	elif ev.is_action_pressed(Game.ACTION_RUN_EXTRACT) and (battle.stage_cleared or battle.final_victory):
-		battle.extract()
+		_request_extract()
 		get_viewport().set_input_as_handled()
 	elif ev.is_action_pressed(Game.ACTION_RUN_ITEMS):
 		_toggle_items_panel()
@@ -312,21 +329,33 @@ func _unhandled_input(ev: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 
 func _toggle_items_panel() -> void:
-	if battle.state != "running":
+	Game.controls.transition()
+	hud.clear_mobile_input()
+	if battle.state not in ["running", "levelup", "altar", "item_offer", "shop"]:
 		return
-	_items_shown = not _items_shown
-	get_tree().paused = _items_shown
 	if _items_shown:
-		hud.show_items_panel(battle)
-	else:
-		hud.hide_items_panel()
+		_close_items_panel()
+		return
+	_items_prior_pause = get_tree().paused
+	var owner := get_viewport().gui_get_focus_owner()
+	_items_focus = weakref(owner) if owner != null else null
+	_items_shown = true
+	get_tree().paused = true
+	hud.show_items_panel(battle)
 
 func _close_items_panel() -> void:
+	Game.controls.transition()
 	_items_shown = false
-	get_tree().paused = false
+	get_tree().paused = _items_prior_pause
 	hud.hide_items_panel()
+	if _items_focus != null:
+		var owner = _items_focus.get_ref()
+		if is_instance_valid(owner) and owner.is_visible_in_tree():
+			owner.call_deferred("grab_focus")
 
 func _toggle_aim() -> void:
+	if Game.touch_controls_enabled():
+		return
 	battle.toggle_aim()
 	Game.set_aim(battle.aim)
 	hud.toast("Mira: %s" % ("AUTOMÁTICA" if battle.aim == Battle.Aim.AUTO else "MOUSE"), Color(0.8, 0.9, 1.0))
@@ -334,13 +363,43 @@ func _toggle_aim() -> void:
 		hud.show_pause(true)
 
 func _toggle_pause() -> void:
-	if battle.state != "running":
+	Game.controls.transition()
+	hud.clear_mobile_input()
+	if battle.state != "running" and not _recovery_offer:
 		return
 	_paused = not _paused
 	get_tree().paused = _paused
 	hud.show_pause(_paused)
+	if not _paused and _recovery_offer:
+		_recovery_offer = false
+		if hud.offer_box.get_child_count() > 0:
+			hud.offer_box.get_child(0).call_deferred("grab_focus")
+
+func _request_extract() -> void:
+	if not (battle.stage_cleared or battle.final_victory):
+		return
+	if not _paused:
+		_toggle_pause()
+	hud.confirm_mobile("Extrair e encerrar esta tentativa?", func():
+		get_tree().paused = false
+		_paused = false
+		hud.show_pause(false)
+		battle.extract())
+
+func _controller_recovery(reason: String) -> void:
+	Game.controls.transition()
+	if battle != null and battle.state == "running" and not get_tree().paused:
+		_toggle_pause()
+	elif battle != null and battle.state in ["levelup", "altar", "item_offer", "shop"] and not get_tree().paused:
+		_recovery_offer = true
+		_paused = true
+		get_tree().paused = true
+		hud.show_pause(true)
+	hud.toast(reason)
 
 func _abandon() -> void:
+	battle.death_reason = "abandoned"
+	hud.clear_mobile_input()
 	get_tree().paused = false
 	_paused = false
 	hud.show_pause(false)
@@ -354,6 +413,8 @@ func _return_to_menu() -> void:
 	Game.goto_menu()
 
 func _on_choose(i: int) -> void:
+	Game.controls.transition()
+	hud.clear_mobile_input()
 	battle.choose(i)
 	Sfx.play("ui.confirm")
 	_refresh_offer()
@@ -375,8 +436,41 @@ func _refresh_offer() -> void:
 
 # ------------------------------------------------------------------ loop
 
+func _mobile_command(action: StringName) -> void:
+	if battle.state != "running" or get_tree().paused or _result_shown:
+		return
+	match action:
+		&"hero_active":
+			var target := battle.nearest(battle.hero.pos, 1000.0)
+			var direction := (target.pos - battle.hero.pos).normalized() if target != null else battle.aim_dir
+			battle.use_active(direction)
+		Game.ACTION_RUN_INTERACT:
+			battle.interact()
+			if battle.state != "running" or battle.stage_changed:
+				hud.clear_mobile_input()
+			_refresh_offer()
+		Game.ACTION_RUN_PAUSE: _toggle_pause()
+		Game.ACTION_RUN_ITEMS: _toggle_items_panel()
+		Game.ACTION_RUN_SPEED: battle.toggle_speed()
+		Game.ACTION_RUN_EXTRACT:
+			if battle.stage_cleared or battle.final_victory:
+				_toggle_pause()
+				hud.confirm_mobile("Extrair e encerrar esta tentativa?", func():
+					_toggle_pause()
+					battle.extract(), _toggle_pause)
+		&"touch_help":
+			hud.clear_mobile_input()
+			Playtest.open_game_rules()
+			Playtest._guide_body.text = "[b]Controles por toque[/b]\nToque e arraste na área livre de qualquer lado para andar; solte para parar. Use Habilidade e o botão contextual na direita. Ficha abre seus itens; Pausa interrompe a tentativa. A mira é automática.\n\n" + Playtest._guide_body.text
+
+func _notification(what: int) -> void:
+	if what in [NOTIFICATION_APPLICATION_FOCUS_OUT, NOTIFICATION_APPLICATION_PAUSED] and is_instance_valid(hud):
+		hud.clear_mobile_input()
+		if battle != null and battle.state == "running" and not get_tree().paused:
+			_toggle_pause()
+
 func _physics_process(dt: float) -> void:
-	if get_tree().paused or _result_shown:
+	if get_tree().paused or _result_shown or not Game.controls.focused:
 		return
 	if _hit_stop_t > 0.0:  # SPEC-116 D2: pausa curta de acerto importante
 		_hit_stop_t -= dt
@@ -388,7 +482,12 @@ func _physics_process(dt: float) -> void:
 		Input.is_physical_key_pressed(KEY_S) or Input.is_physical_key_pressed(KEY_DOWN))
 	if d == Vector2.ZERO:
 		d = Game.movement_joystick()
-	if d == Vector2.ZERO and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+	if Game.touch_controls_enabled() and hud.mobile != null:
+		if not hud.mobile.combat_enabled:
+			d = Vector2.ZERO
+		elif hud.mobile.movement != Vector2.ZERO:
+			d = hud.mobile.movement
+	if not Game.touch_controls_enabled() and d == Vector2.ZERO and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		var screen_to_mouse := get_global_mouse_position() - hero_node.position
 		if screen_to_mouse.length() > 4.0:
 			d = screen_to_mouse.normalized()
@@ -436,6 +535,10 @@ func _physics_process(dt: float) -> void:
 		_show_result()
 
 func _process(dt: float) -> void:
+	if battle != null and not _result_shown and battle.run_time >= _stats_checkpoint_at:
+		_stats_checkpoint_at = battle.run_time + 60.0
+		battle.run_record.checkpoint(battle, "minute")
+		Playtest.record_run(battle)
 	if hero_node == null:
 		return
 	_shake = maxf(0.0, _shake - dt * 3.0)
@@ -463,9 +566,13 @@ func _sync() -> void:
 	_update_divine_aura()
 
 func _show_result() -> void:
+	hud.clear_mobile_input()
 	_result_shown = true
 	get_tree().paused = false
 	var res := battle.result()
+	var outcome := "abandoned" if battle.death_reason == "abandoned" else "extracted" if battle.extracted else "won" if res.won else "dead"
+	battle.run_record.checkpoint(battle, "finish")
+	Playtest.record_run(battle, outcome, true)
 	Game.finish_run(res)
 	Sfx.stop_ambience()
 	var new_achievements: Array = Game.last_summary.get("achievements", [])
@@ -476,6 +583,7 @@ func _show_result() -> void:
 	Sfx.start_music("victory" if res.won else "defeat")
 
 func _record_stage_reached(stage_id: String) -> void:
+	battle.run_record.checkpoint(battle, "stage_reached")
 	var hq_ids := HQCatalog.newly_triggered_ids(Game.profile.data, "stage_reached", stage_id)
 	if Game.profile.mark_stage_reached(stage_id):
 		Game.save()
@@ -490,6 +598,7 @@ func _process_hq_milestones() -> void:
 		await _record_stage_cleared(battle.stage_id, "stage_cleared")
 
 func _record_stage_cleared(stage_id: String, event_type: String) -> void:
+	battle.run_record.checkpoint(battle, "stage_cleared", {"event": event_type})
 	var hq_ids := HQCatalog.newly_triggered_ids(Game.profile.data, event_type, stage_id)
 	var changed := Game.profile.mark_stage_reached(stage_id)
 	changed = Game.profile.mark_stage_cleared(stage_id) or changed
@@ -501,7 +610,12 @@ func _present_hqs(hq_ids: Array[String]) -> void:
 	for hq_id in hq_ids:
 		await _present_hq(hq_id)
 
+func _exit_tree() -> void:
+	if battle != null and not _result_shown:
+		Playtest.record_run(battle)
+
 func _present_hq(hq_id: String) -> void:
+	hud.clear_mobile_input()
 	var hq: Dictionary = Data.table("hqs").get(hq_id, {})
 	if hq.is_empty():
 		return

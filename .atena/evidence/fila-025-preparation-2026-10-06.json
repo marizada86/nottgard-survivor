@@ -1,0 +1,16 @@
+{
+  "date_brt": "2026-10-06",
+  "plan": "PLAN-070",
+  "spec": "SPEC-137",
+  "request_classification": "PLAN_DEVIATION",
+  "status": "PREPARED_AWAITING_ROUTE_AND_APPROVAL",
+  "implementation_preceded_spec": false,
+  "reference_images_exist": true,
+  "evolution_frame_visually_inspected": true,
+  "prompts_read": ["ART-PROMPTS-057", "CHATGPT-FILA-025"],
+  "generated_images": 0,
+  "active_plan_preserved": "PLAN-068 / B-004/S-011 / AWAITING_HARDWARE_PLAYTEST",
+  "backlog_check": {"p0": 0, "p1_open": 4, "p1_waiting_playtest": 7, "manual_checks": 8, "organization_alerts": 0},
+  "pull": {"fetched_remote": "9b9401c", "integration": "NOT_PERFORMED", "merge_approval": "PENDING"},
+  "runtime_validation": "NOT_PERFORMED_GENERATION_NOT_STARTED"
+}

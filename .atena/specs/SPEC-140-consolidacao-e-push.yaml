@@ -1,0 +1,42 @@
+id: SPEC-140
+title: Consolidar trabalho local, incorporar main remota e fazer push
+origin: planned
+implementation_preceded_spec: false
+request_classification: PLAN_DEVIATION
+authorization:
+  quote: 'atena junte tudo que temos e faÃ§a push'
+  scope: commits locais, integracao dos historicos e push da main sem force
+  mode: per-plan
+  basis: 'Pedido explicito de consolidacao e publicacao; preferencia por plano ja registrada neste chat.'
+scope:
+  - Reunir codigo, assets admitidos, specs, aprovacoes e evidencias estabilizadas deste repositorio.
+  - Separar commits por mecanica/arte/registros conforme add.yaml.
+  - Incorporar commits remotos preservando comportamentos e registros de ambos os lados.
+  - Testar a versao consolidada e publicar na main, verificando hash remoto.
+non_goals:
+  - Publicacao do site, migracao do banco, registro Discord ou credenciais.
+  - Remocao de trabalho nao concluido, renumeracao silenciosa de IDs historicos, push forcado.
+acceptance:
+  - Nenhum arquivo de codigo em alteracao concorrente entra como entrega completa sem validacao.
+  - Conflitos resolvidos preservando as correcoes remotas e implementacoes locais.
+  - Contrato ADD e links afetados validos; colisÃµes historicas de IDs identificadas por caminho.
+  - Importacao Godot, suite existente e smoke das fases sem falha funcional.
+  - Main local publicada com igualdade do hash no remoto.
+impacts: 'Historico Git e integracao de alteracoes previamente aprovadas; escopo limitado a este projeto.'
+gaps:
+  BLOCKING: []
+  RESOLVABLE: ['13 commits remotos e quatro locais divergentes; mescla sem force.', 'Excluir caches e perfis ficticios; preservar comprovantes e assets utilizados.']
+  DEFERRED: ['Aceites fisicos e bugs P1 previamente abertos; site/banco/Discord fora deste push.']
+plan_of_flight:
+  - 'S-001: inventario, estabilizacao, selecao e snapshot recuperavel.'
+  - 'S-002: commits por escopo e integracao em checkout isolado.'
+  - 'S-003: testes, reconciliacao, push e verificacao remota.'
+validation: 'D:/Godot/godot.exe; tests/run_all.gd; tools/smoke.tscn; backlog_check; inspecao de conflitos e hashes.'
+evidence: .atena/evidence/consolidacao-push-2026-10-06.json
+return: .atena/state/plan-071-playtest-ranking.yaml
+recovery: 'Snapshot local e checkout isolado; preservar checkout compartilhado enquanto outro chat estiver ativo.'
+reconciliation: 'Recibo Git, contratos e estado operacional; manter gates nao autorizados de PLAN-071.'
+status: AUTHORIZED_SCOPE_PUBLISHED_PILOT_ASSETS_PENDING
+
+resolved_gaps: ["PLAN-071 selado pelo chat responsavel; consolidacao passou suite, importacao e nove fases."]
+publication_exception: "Pilotos Durvall: imagens aguardam resposta do dono apos rejeicao automatica do lote volumoso. Registros historicos publicados com referencias locais explicitamente pendentes."

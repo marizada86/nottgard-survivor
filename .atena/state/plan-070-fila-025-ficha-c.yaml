@@ -1,0 +1,42 @@
+version: 1
+plan:
+  id: PLAN-070
+  spec_id: SPEC-137
+  title: Geracao da FILA-025 ficha C
+  spec: .atena/specs/SPEC-137-geracao-fila-025-ficha-c.yaml
+  status: COMPLETED_GENERATION_VISUALLY_APPROVED
+  request_classification: IN_PLAN
+  origin: guided-add
+  implementation_preceded_spec: false
+  approval: {mode: per-plan, status: APPROVED, approver: dono, date: '2026-10-06', basis: 'atena autorizado, de acordo com suas recomendacoes'}
+  owner_route: NOW_WITH_RETURN
+  proposed_return:
+    plan: PLAN-068
+    state_file: .atena/state/plan-068-controles-xbox-playstation.yaml
+    checkpoint: B-004/S-011
+    status: AWAITING_HARDWARE_PLAYTEST
+  checkpoint: {current: B-004/S-005, status: COMPLETED_GENERATION_VISUALLY_APPROVED}
+  batches:
+    B-001: {steps: [S-001, S-002], title: Piloto A01, status: APPROVED_BY_OWNER}
+    B-002: {steps: [S-003], title: Slots e molduras complementares, status: GENERATED_CANDIDATES}
+    B-003: {steps: [S-004], title: Quatro icones de abas, status: GENERATED_CANDIDATES}
+    B-004: {steps: [S-005], title: Textura e fechamento, status: COMPLETED_GENERATION_ONLY}
+  independent_gates:
+    A01_visual: APPROVED_BY_OWNER_V02
+    A02_A10_visual: APPROVED_BY_OWNER_2026_10_06
+    generation_references: AUTHORIZED_PROMPTS_AND_LISTED_ART_REFERENCES
+    official_admission: OUT_OF_SCOPE
+  generated: [A01, A02, A03, A04, A05, A06, A07, A08, A09, A10]
+  candidate_for_review: .atena/generated/art-candidates/ficha-c/ficha_moldura_painel_v02.png
+  evidence: .atena/evidence/fila-025-complete-generation-2026-10-06.json
+  attempts: {A01: 3, A02: 1, A03: 1, A04: 1, A05: 1, A06: 1, A07: 1, A08: 1, A09: 1, A10: 3}
+  selected: {A01: v02, A02: v01, A03: v01, A04: v01, A05: v01, A06: v01, A07: v01, A08: v01, A09: v01, A10: v03}
+  preview: .atena/generated/art-candidates/ficha-c/preview.html
+  bundle: .atena/generated/art-candidates/ficha-c/ficha-c-10-imagens.zip
+  variance: Topo A01 v02 mede 57.39px na escala 720; diferenca de 1.39px aceita explicitamente pelo dono neste chat em 2026-10-06.
+  visual_approval: {asset: A01, version: v02, date: '2026-10-06', approver: dono, basis: 'aprovado, pode continuar', includes_disclosed_variance: true}
+  completed_steps: [S-001, S-002, S-003, S-004, S-005]
+  return_snapshot: .atena/generated/art-candidates/ficha-c/plan-before-fila-025-2026-10-06.yaml
+  final_visual_approval: {date: '2026-10-06', approver: dono, basis: 'aprovados', evidence: .atena/evidence/fila-025-visual-approval-2026-10-06.json}
+  last_note: Dez candidatas geradas, salvas e aprovadas visualmente pelo dono. Normalizacao, teste no jogo e admissao oficial futuras.
+  central_state_reconciliation: PLAN-071 foi ativado por outro chat durante a geracao; preservar plano ativo e cadeia de retorno, sem restaurar snapshot inteiro.

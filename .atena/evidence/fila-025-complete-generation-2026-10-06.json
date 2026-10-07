@@ -1,0 +1,68 @@
+{
+  "date_brt": "2026-10-06",
+  "plan": "PLAN-070",
+  "spec": "SPEC-137",
+  "status": "COMPLETED_GENERATION_ONLY",
+  "origin": "guided-add",
+  "implementation_preceded_spec": false,
+  "request_classification": "IN_PLAN",
+  "tool": "built-in imagegen",
+  "selected_images": 10,
+  "total_generation_calls": 14,
+  "selected_versions": {
+    "A01": "v02",
+    "A02": "v01",
+    "A03": "v01",
+    "A04": "v01",
+    "A05": "v01",
+    "A06": "v01",
+    "A07": "v01",
+    "A08": "v01",
+    "A09": "v01",
+    "A10": "v03"
+  },
+  "a01_human_approval": {
+    "basis": "aprovado, pode continuar",
+    "accepted_top_ornament_variance_px": 1.39
+  },
+  "remaining_nine_human_approval": "APPROVED_BY_OWNER_2026-10-06",
+  "inspection": ".atena/generated/art-candidates/ficha-c/candidate-inspection.json",
+  "preview": ".atena/generated/art-candidates/ficha-c/preview.html",
+  "bundle": ".atena/generated/art-candidates/ficha-c/ficha-c-10-imagens.zip",
+  "prompts": [
+    ".atena/generated/art-candidates/ficha-c/A01-generation-record.json",
+    ".atena/generated/art-candidates/ficha-c/remaining-nine-prompts.json",
+    ".atena/generated/art-candidates/ficha-c/A10-v02-generation-record.json",
+    ".atena/generated/art-candidates/ficha-c/A10-v03-generation-record.json"
+  ],
+  "validation": {
+    "ten_files_decoded": true,
+    "transparency_A01_A09": true,
+    "opaque_A10": true,
+    "no_solid_shape_touches_canvas_edge": true,
+    "texture_luminance_range_percent": 4.594,
+    "texture_luminance_limit_percent": 8,
+    "texture_edge_metrics_recorded": true,
+    "texture_perfect_tiling_not_asserted": true
+  },
+  "deferred": [
+    "normalizacao_final_de_dimensoes",
+    "ajuste_e_teste_nine_slice",
+    "teste_em_escala_real_no_jogo",
+    "integracao_oficial"
+  ],
+  "operational_reconciliation": {
+    "central_plan_last_seen": "PLAN-071 / SPEC-138 / B-001/S-001",
+    "central_plan_preserved": true,
+    "reason": "Outro chat iniciou PLAN-071 durante as geracoes; sua ativacao e registros de retorno preservados.",
+    "eventual_return": "PLAN-068 B-004/S-011 AWAITING_HARDWARE_PLAYTEST",
+    "return_snapshot": ".atena/generated/art-candidates/ficha-c/plan-before-fila-025-2026-10-06.yaml"
+  },
+  "git": {
+    "commit": false,
+    "merge": false,
+    "push": false
+  },
+  "visual_approval_evidence": ".atena/evidence/fila-025-visual-approval-2026-10-06.json",
+  "canonical_visual_approval": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-021-ficha-c-2026-10-06.json"
+}

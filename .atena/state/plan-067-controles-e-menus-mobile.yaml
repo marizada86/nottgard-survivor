@@ -1,0 +1,110 @@
+version: 1
+plan:
+  id: PLAN-067
+  spec_id: SPEC-134
+  title: Controles e menus por toque para mobile
+  status: AWAITING_DEVICE_VALIDATION
+  origin: guided-add
+  implementation_preceded_spec: false
+  request_classification: PLAN_DEVIATION
+  source: .atena/vault/drafts/PLAN-067-controles-e-menus-mobile-2026-10-06.md
+  spec: .atena/specs/SPEC-134-controles-e-menus-mobile-2026-10-06.md
+  approval:
+    mode: per-plan
+    recommended_mode: per-batch
+    status: APPROVED_PER_PLAN
+    approved: '2026-10-06'
+    basis: 'Dono escolheu 1 e confirmou sim, mobile agora.'
+    mode_selected: '2026-10-06'
+    mode_selection_basis: 'Dono respondeu 1 ao seletor de nivel de aprovacao.'
+    approved_checkpoint: ALL_LOCAL_STEPS
+  checkpoint:
+    current: B-003
+    step: S-008/S-009
+    status: AWAITING_NATIVE_APPROVAL_AND_DEVICE
+  execution_started: true
+  local_correction:
+    request_classification: IN_PLAN
+    authorization: '2026-10-06: dono pediu joystick tambem a direita e teste de todos os botoes.'
+    status: LOCAL_DONE
+    scope: 'Remover restricao lateral na arena livre; preservar prioridade da UI e um unico dedo de movimento. Testar comandos e botoes de combate/menus, inclusive condicionais.'
+    validation: 'Regressao direita/esquerda, suite completa e integracao touch com inventario dos botoes e resultados por caso.'
+    recovery: .atena/generated/mobile-controls/v02/recovery/
+    evidence: .atena/evidence/EVID-183-mobile-joystick-direita-e-botoes-2026-10-06.md
+    buttons_checks: 144
+    buttons_failures: 0
+    native_gates: UNCHANGED
+  route:
+    deviation_id: DEV-002
+    status: EXECUTE_NOW_THEN_RETURN
+    recommended: EXECUTE_NOW_THEN_RETURN
+    previous_active_plan: PLAN-066
+    recovery_state: .atena/state/plan-066-corrida-durvall.yaml
+    recovery_checkpoint: B-002/S-005
+    previous_evidence: .atena/evidence/EVID-175-durvall-piloto-articulado-2026-10-06.md
+    suspension_persisted: true
+  batches:
+    B-001: {title: Controles de combate, steps: [S-001, S-002, S-003, S-004], status: LOCAL_DONE, evidence: EVID-180}
+    B-002: {title: Menus por toque, steps: [S-005, S-006, S-007], status: LOCAL_IMPLEMENTED_DEVICE_ACCEPTANCE_PENDING, evidence: EVID-181}
+    B-003: {title: Validacao em celular, steps: [S-008, S-009, S-010], status: PARTIAL_AWAITING_DEVICE_VALIDATION, evidence: EVID-182}
+  defaults:
+    orientation: landscape
+    movement: floating_touch_joystick_either_side
+    touch_joystick_role: movement_only
+    touch_aim: automatic
+    active_ability: separate_right_button
+    interact: contextual_right_button
+    pause_inventory: top_buttons
+    native_target_recommended: Android
+    native_target_confirmed: false
+    device: null
+    output_path: .atena/generated/mobile-controls/v02/
+  independent_gates:
+    native_export: NOT_AUTHORIZED
+    device_installation: NOT_AUTHORIZED
+    dependency_installation: NOT_AUTHORIZED
+    permissions: NOT_AUTHORIZED
+    canonical_intent: NOT_AUTHORIZED
+    local_commit: AUTHORIZED_BY_OWNER_2026_10_06
+    merge_push_publication: NOT_AUTHORIZED
+  git_checkpoint:
+    request_classification: IN_PLAN
+    authorization: 'Dono solicitou faca o commit apos a correcao e validacao mobile.'
+    scope: 'Implementacao mobile, correcao nos dois lados, testes e registros especificos. Preservar Durvall, PLAN-068 e outros pedidos locais.'
+    status: READY_FOR_LOCAL_COMMIT
+  native_validation:
+    status: PENDING_DEVICE_AND_TOOLCHAIN
+    simulated_touch_is_device_acceptance: false
+    checkpoint_without_device: AWAITING_DEVICE_VALIDATION
+    proposal: .atena/vault/drafts/PLAN-067-checkpoint-android-2026-10-06.md
+    toolchain: GODOT_AND_ANDROID_TEMPLATE_PRESENT_JAVA_SDK_INCOMPLETE
+    dependency_export_approval_request: PENDING_OWNER_REPLY
+    device_request: PENDING_OWNER_REPLY
+    apk_produced: false
+    device_test_run: false
+    performance_measured: false
+  deferred: [iOS, manual_touch_aim, second_joystick, portrait_layout, architecture_or_gameplay_optimization]
+  completed_steps: [S-001, S-002, S-003, S-004, S-005, S-006, S-007]
+  step_status:
+    S-008: LOCAL_CHECKS_DONE_DEVICE_ID_PENDING
+    S-009: NOT_STARTED_NATIVE_GATES_PENDING
+    S-010: LOCAL_RECONCILIATION_ONLY_FINAL_ACCEPTANCE_PENDING
+  evidence:
+    planning: .atena/evidence/EVID-176-planejamento-mobile-2026-10-06.md
+    combat: .atena/evidence/EVID-180-mobile-combate-local-2026-10-06.md
+    menus: .atena/evidence/EVID-181-mobile-menus-local-2026-10-06.md
+    native: .atena/evidence/EVID-182-mobile-checkpoint-nativo-2026-10-06.md
+    correction: .atena/evidence/EVID-183-mobile-joystick-direita-e-botoes-2026-10-06.md
+  local_delivery:
+    id: P067-v02
+    launcher: .atena/generated/mobile-controls/v02/Abrir-teste-mobile.cmd
+    manifest: .atena/generated/mobile-controls/v02/manifest.json
+    button_report: .atena/generated/mobile-controls/v02/buttons-report.json
+    suite_failures: 0
+    integration_failures: 0
+    buttons_checks: 144
+    buttons_failures: 0
+    smoke_stages: 9
+    real_save_preserved: true
+    native_acceptance: false
+  next: Resolver aparelho e gates de ferramentas/exportacao; executar S-009 apos autorizacao, concluir aceite e retornar a Durvall.

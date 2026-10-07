@@ -1,0 +1,538 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://ui/ground.gd" id="1_yey4a"]
+[ext_resource type="PackedScene" path="res://ui/hero_view.tscn" id="2_a02yd"]
+[ext_resource type="PackedScene" path="res://ui/prop.tscn" id="3_7o8ei"]
+[ext_resource type="PackedScene" path="res://ui/spawn_point.tscn" id="4_3540k"]
+
+[node name="Stage" type="Node2D" unique_id=559748551]
+
+[node name="Ground" type="Node2D" parent="." unique_id=1803189692]
+z_index = -100
+script = ExtResource("1_yey4a")
+map_size = Vector2i(60, 60)
+color_a = Color(0.11764706, 0.10980392, 0.16470589, 1)
+color_b = Color(0.14901961, 0.13333334, 0.20392157, 1)
+terrain_layout_id = "pilares"
+visual_seed = 800
+use_modular_atlas = true
+atlas_columns = 2
+atlas_variants = 4
+terrain_texture_path = "res://assets/tiles/pilares_ground_atlas_v1.png"
+baked_texture_path = "res://assets/tiles/pilares_ground_baked_v1.png"
+
+[node name="Sorted" type="Node2D" parent="." unique_id=1354938654]
+y_sort_enabled = true
+
+[node name="Hero" parent="Sorted" unique_id=629349748 instance=ExtResource("2_a02yd")]
+position = Vector2(0, 960)
+
+[node name="Prop1" parent="Sorted" unique_id=71309628 instance=ExtResource("3_7o8ei")]
+position = Vector2(-96, 336)
+kind = "pilar_abissal"
+height = 123.31522464752197
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop2" parent="Sorted" unique_id=1622390735 instance=ExtResource("3_7o8ei")]
+position = Vector2(0, 1584)
+kind = "pilar_abissal"
+height = 123.03415775299072
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)
+
+[node name="Prop3" parent="Sorted" unique_id=247512962 instance=ExtResource("3_7o8ei")]
+position = Vector2(336, 1560)
+kind = "pilar_abissal"
+height = 113.79745244979858
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)
+
+[node name="Prop4" parent="Sorted" unique_id=1727682367 instance=ExtResource("3_7o8ei")]
+position = Vector2(768, 912)
+kind = "pilar_abissal"
+height = 96.71528
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop5" parent="Sorted" unique_id=412691642 instance=ExtResource("3_7o8ei")]
+position = Vector2(-144, 216)
+kind = "pilar_abissal"
+height = 146.6213321685791
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop6" parent="Sorted" unique_id=656708136 instance=ExtResource("3_7o8ei")]
+position = Vector2(576, 1104)
+kind = "pilar_abissal"
+height = 125.31299114227295
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop7" parent="Sorted" unique_id=1949273938 instance=ExtResource("3_7o8ei")]
+position = Vector2(768, 1248)
+kind = "pilar_abissal"
+height = 124.73921298980713
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop8" parent="Sorted" unique_id=1982221618 instance=ExtResource("3_7o8ei")]
+position = Vector2(1344, 816)
+kind = "pilar_abissal"
+height = 132.2568941116333
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)
+
+[node name="Prop9" parent="Sorted" unique_id=699409216 instance=ExtResource("3_7o8ei")]
+position = Vector2(-864, 528)
+kind = "pilar_abissal"
+height = 109.60546731948853
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop10" parent="Sorted" unique_id=660147894 instance=ExtResource("3_7o8ei")]
+position = Vector2(-336, 984)
+kind = "pilar_abissal"
+height = 110.27985334396362
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop11" parent="Sorted" unique_id=707901764 instance=ExtResource("3_7o8ei")]
+position = Vector2(624, 1368)
+kind = "pilar_abissal"
+height = 123.81917953491211
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop12" parent="Sorted" unique_id=1985664536 instance=ExtResource("3_7o8ei")]
+position = Vector2(240, 1080)
+kind = "pilar_abissal"
+height = 106.19875431060791
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)
+
+[node name="Prop13" parent="Sorted" unique_id=177609322 instance=ExtResource("3_7o8ei")]
+position = Vector2(-288, 1296)
+kind = "pilar_abissal"
+height = 135.02623558044434
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)
+
+[node name="Prop14" parent="Sorted" unique_id=271815288 instance=ExtResource("3_7o8ei")]
+position = Vector2(-1008, 792)
+kind = "pilar_abissal"
+height = 117.12364912033081
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)
+
+[node name="Prop15" parent="Sorted" unique_id=182239561 instance=ExtResource("3_7o8ei")]
+position = Vector2(768, 1104)
+kind = "pilar_abissal"
+height = 100.23848533630371
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)
+
+[node name="Prop16" parent="Sorted" unique_id=1767171029 instance=ExtResource("3_7o8ei")]
+position = Vector2(-864, 1200)
+kind = "pilar_abissal"
+height = 138.62082481384277
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop17" parent="Sorted" unique_id=159802419 instance=ExtResource("3_7o8ei")]
+position = Vector2(336, 600)
+kind = "pilar_abissal"
+height = 145.36331
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)
+
+[node name="Prop18" parent="Sorted" unique_id=177986067 instance=ExtResource("3_7o8ei")]
+position = Vector2(-480, 432)
+kind = "pilar_abissal"
+height = 122.84182548522949
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop19" parent="Sorted" unique_id=1273963351 instance=ExtResource("3_7o8ei")]
+position = Vector2(912, 792)
+kind = "pilar_abissal"
+height = 130.07845401763916
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop20" parent="Sorted" unique_id=1983488282 instance=ExtResource("3_7o8ei")]
+position = Vector2(0, 576)
+kind = "pilar_abissal"
+height = 122.13852882385254
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)
+
+[node name="Prop21" parent="Sorted" unique_id=84739438 instance=ExtResource("3_7o8ei")]
+position = Vector2(-144, 1224)
+kind = "pilar_abissal"
+height = 105.16942977905273
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop22" parent="Sorted" unique_id=533765513 instance=ExtResource("3_7o8ei")]
+position = Vector2(-192, 1440)
+kind = "pilar_abissal"
+height = 106.55123233795166
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)
+
+[node name="Prop23" parent="Sorted" unique_id=1506345618 instance=ExtResource("3_7o8ei")]
+position = Vector2(192, 288)
+kind = "pilar_abissal"
+height = 122.0813798904419
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop24" parent="Sorted" unique_id=1282568754 instance=ExtResource("3_7o8ei")]
+position = Vector2(-336, 264)
+kind = "pilar_abissal"
+height = 146.2789535522461
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)
+
+[node name="Prop25" parent="Sorted" unique_id=550657008 instance=ExtResource("3_7o8ei")]
+position = Vector2(-1008, 1080)
+kind = "pilar_abissal"
+height = 148.4658
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)
+
+[node name="Prop26" parent="Sorted" unique_id=1770017963 instance=ExtResource("3_7o8ei")]
+position = Vector2(1296, 984)
+kind = "pilar_abissal"
+height = 108.07173728942871
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop27" parent="Sorted" unique_id=566027473 instance=ExtResource("3_7o8ei")]
+position = Vector2(-192, 1536)
+kind = "pilar_abissal"
+height = 109.26206588745117
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop28" parent="Sorted" unique_id=174036152 instance=ExtResource("3_7o8ei")]
+position = Vector2(-1248, 912)
+kind = "pilar_abissal"
+height = 135.7831621170044
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)
+
+[node name="Prop29" parent="Sorted" unique_id=497522021 instance=ExtResource("3_7o8ei")]
+position = Vector2(-480, 1536)
+kind = "pilar_abissal"
+height = 105.12641429901123
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop30" parent="Sorted" unique_id=889061442 instance=ExtResource("3_7o8ei")]
+position = Vector2(-672, 720)
+kind = "pilar_abissal"
+height = 141.51440620422363
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)
+
+[node name="FragmentoFlutuante" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(-1414.7, 877.1)
+kind = "fragmento_01"
+block_radius = 0.0
+
+[node name="PlacaRuna" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(356.4, 884.2)
+kind = "runa_01"
+block_radius = 0.0
+
+[node name="NucleoCristalino" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(1457.8, 830)
+kind = "nucleo_01"
+block_radius = 0.0
+
+[node name="SpawnPoints" type="Node2D" parent="." unique_id=1165027511]
+
+[node name="Spawn1" parent="SpawnPoints" unique_id=1837662586 instance=ExtResource("4_3540k")]
+position = Vector2(432, 1176)
+enemy_id = "cultista_ghaunadaur"
+count = 2
+
+[node name="Spawn2" parent="SpawnPoints" unique_id=800922478 instance=ExtResource("4_3540k")]
+position = Vector2(-720, 888)
+enemy_id = "slime_de_juiblex"
+count = 2
+
+[node name="Spawn3" parent="SpawnPoints" unique_id=2079118705 instance=ExtResource("4_3540k")]
+position = Vector2(528, 696)
+enemy_id = "guardiao_de_goranthis"
+
+[node name="Spawn4" parent="SpawnPoints" unique_id=940371849 instance=ExtResource("4_3540k")]
+position = Vector2(-96, 1344)
+enemy_id = "demonio_de_gehenna"
+
+[node name="Prop1_c1" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(285.2, 357.5)
+kind = "pilar_abissal"
+height = 123.31522464752197
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop1_c2" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(-490.5, 580)
+kind = "pilar_abissal"
+height = 123.31522464752197
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop2_c1" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(315.5, 1403.2)
+kind = "pilar_abissal"
+height = 123.03415775299072
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)
+
+[node name="Prop3_c1" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(67.3, 1371.9)
+kind = "pilar_abissal"
+height = 113.79745244979858
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)
+
+[node name="Prop4_c1" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(237.7, 988.5)
+kind = "pilar_abissal"
+height = 96.71528
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop5_c1" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(219.8, 221.1)
+kind = "pilar_abissal"
+height = 146.6213321685791
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop5_c2" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(-278.1, 343.6)
+kind = "pilar_abissal"
+height = 146.6213321685791
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop6_c1" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(277.7, 1268.9)
+kind = "pilar_abissal"
+height = 125.31299114227295
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop7_c1" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(787, 1015.6)
+kind = "pilar_abissal"
+height = 124.73921298980713
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop8_c1" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(1057.9, 1088.7)
+kind = "pilar_abissal"
+height = 132.2568941116333
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)
+
+[node name="Prop9_c1" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(-657.5, 783.7)
+kind = "pilar_abissal"
+height = 109.60546731948853
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop9_c2" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(-1109, 744)
+kind = "pilar_abissal"
+height = 109.60546731948853
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop10_c1" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(-69.9, 1075.9)
+kind = "pilar_abissal"
+height = 110.27985334396362
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop11_c1" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(927.3, 1305)
+kind = "pilar_abissal"
+height = 123.81917953491211
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop12_c1" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(115.6, 1268.7)
+kind = "pilar_abissal"
+height = 106.19875431060791
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)
+
+[node name="Prop13_c1" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(-481.6, 1185.2)
+kind = "pilar_abissal"
+height = 135.02623558044434
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)
+
+[node name="Prop13_c2" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(-31.2, 1181.5)
+kind = "pilar_abissal"
+height = 135.02623558044434
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)
+
+[node name="Prop14_c1" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(-707.8, 1023)
+kind = "pilar_abissal"
+height = 117.12364912033081
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)
+
+[node name="Prop15_c1" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(346.9, 1075.1)
+kind = "pilar_abissal"
+height = 100.23848533630371
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)
+
+[node name="Prop16_c1" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(-1406.8, 1034.4)
+kind = "pilar_abissal"
+height = 138.62082481384277
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop17_c1" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(-2.7, 649.3)
+kind = "pilar_abissal"
+height = 145.36331
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)
+
+[node name="Prop17_c2" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(-263.3, 674.7)
+kind = "pilar_abissal"
+height = 145.36331
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)
+
+[node name="Prop18_c1" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(-239.8, 293)
+kind = "pilar_abissal"
+height = 122.84182548522949
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop19_c1" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(747, 585.9)
+kind = "pilar_abissal"
+height = 130.07845401763916
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop20_c1" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(110.8, 440.8)
+kind = "pilar_abissal"
+height = 122.13852882385254
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)
+
+[node name="Prop21_c1" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(99.3, 1154.3)
+kind = "pilar_abissal"
+height = 105.16942977905273
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop21_c2" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(-403.1, 1115.4)
+kind = "pilar_abissal"
+height = 105.16942977905273
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop22_c1" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(140.3, 1438.4)
+kind = "pilar_abissal"
+height = 106.55123233795166
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)
+
+[node name="Prop23_c1" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(-45.6, 156.8)
+kind = "pilar_abissal"
+height = 122.0813798904419
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop24_c1" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(42.3, 344.2)
+kind = "pilar_abissal"
+height = 146.2789535522461
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)
+
+[node name="Prop25_c1" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(-696.7, 1280.4)
+kind = "pilar_abissal"
+height = 148.4658
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)
+
+[node name="Prop25_c2" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(-1074.7, 1217.7)
+kind = "pilar_abissal"
+height = 148.4658
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)
+
+[node name="Prop26_c1" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(1639.9, 972.7)
+kind = "pilar_abissal"
+height = 108.07173728942871
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop27_c1" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(22.1, 1746.5)
+kind = "pilar_abissal"
+height = 109.26206588745117
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop28_c1" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(-923.8, 971.4)
+kind = "pilar_abissal"
+height = 135.7831621170044
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)
+
+[node name="Prop29_c1" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(-215.7, 1673.9)
+kind = "pilar_abissal"
+height = 105.12641429901123
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop29_c2" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(-859.9, 1297.1)
+kind = "pilar_abissal"
+height = 105.12641429901123
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="Prop30_c1" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(-1063.9, 945.7)
+kind = "pilar_abissal"
+height = 141.51440620422363
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)
+
+[node name="FragmentoFlutuante_c1" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(-865.5, 701.8)
+kind = "fragmento_01"
+block_radius = 0.0
+
+[node name="PlacaRuna_c1" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(1221.5, 1181.7)
+kind = "runa_01"
+block_radius = 0.0
+
+[node name="NucleoCristalino_c1" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(675.6, 635.1)
+kind = "nucleo_01"
+block_radius = 0.0
+
+[node name="NucleoCristalino_c2" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(822.5, 686.6)
+kind = "nucleo_01"
+block_radius = 0.0
+
+[node name="Prop25_c1_f1" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(390.9, 512.8)
+kind = "pilar_abissal"
+height = 148.4658
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)
+
+[node name="Prop15_c1_f2" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(1186.2, 852.9)
+kind = "pilar_abissal"
+height = 100.23848533630371
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)
+
+[node name="Prop11_f3" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(303.6, 801.7)
+kind = "pilar_abissal"
+height = 123.81917953491211
+color = Color(0.3529412, 0.3137255, 0.47058824, 1)
+
+[node name="NucleoCristalino_c1_f4" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(1040.4, 1247.6)
+kind = "nucleo_01"
+block_radius = 0.0
+
+[node name="Prop14_f5" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(0.9, 823)
+kind = "pilar_abissal"
+height = 117.12364912033081
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)
+
+[node name="Prop25_f6" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(-1158, 850.7)
+kind = "pilar_abissal"
+height = 148.4658
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)
+
+[node name="Prop30_f7" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(476.9, 1578.7)
+kind = "pilar_abissal"
+height = 141.51440620422363
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)
+
+[node name="Prop3_c1_f8" parent="Sorted" instance=ExtResource("3_7o8ei")]
+position = Vector2(-1263.4, 1179.2)
+kind = "pilar_abissal"
+height = 113.79745244979858
+color = Color(0.43058825, 0.39607844, 0.53411764, 1)

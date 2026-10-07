@@ -1,0 +1,65 @@
+{
+  "synthetic": true,
+  "checks": [
+    {
+      "check": "anonymous denied",
+      "passed": true
+    },
+    {
+      "check": "pending denied",
+      "passed": true
+    },
+    {
+      "check": "approved web received",
+      "passed": true
+    },
+    {
+      "check": "web retry idempotent",
+      "passed": true
+    },
+    {
+      "check": "wrong origin denied",
+      "passed": true
+    },
+    {
+      "check": "private note received",
+      "passed": true
+    },
+    {
+      "check": "evidence retry receipt",
+      "passed": true
+    },
+    {
+      "check": "candidate cannot read private note",
+      "passed": true
+    },
+    {
+      "check": "site admin can read note",
+      "passed": true
+    },
+    {
+      "check": "candidate cannot read report",
+      "passed": true
+    },
+    {
+      "check": "admin report contains denominators",
+      "passed": true
+    },
+    {
+      "check": "signed windows import received",
+      "passed": true
+    },
+    {
+      "check": "discord command idempotent",
+      "passed": true
+    },
+    {
+      "check": "unsigned import denied",
+      "passed": true
+    },
+    {
+      "check": "ranking deduplicates player",
+      "passed": true
+    }
+  ]
+}
