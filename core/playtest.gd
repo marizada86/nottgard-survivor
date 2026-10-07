@@ -812,6 +812,7 @@ func _on_note_changed() -> void:
 	_count.text = "%d/%d caracteres" % [_edit.text.length(), NOTE_MAX]
 
 func open_guide(first: bool) -> void:
+	TouchUI.prepare(self)
 	_guide_mode = &"playtest"
 	_guide_open = true
 	_paused_before = get_tree().paused
@@ -828,6 +829,7 @@ func open_guide(first: bool) -> void:
 	_name_edit.grab_focus()
 
 func open_game_rules() -> void:
+	TouchUI.prepare(self)
 	if _guide_open:
 		return
 	_guide_mode = &"rules"

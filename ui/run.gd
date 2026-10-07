@@ -69,6 +69,7 @@ func _ready() -> void:
 	hud.revive_pressed.connect(_accept_revive)
 	hud.decline_revive_pressed.connect(_decline_revive)
 	hud.items_closed.connect(_close_items_panel)
+	hud.mobile_command.connect(_mobile_command)
 	_setup_encounter_overlays()
 	_load_stage()
 	if Game.qa_sandbox:
@@ -265,11 +266,13 @@ func fog_state_is_inactive() -> bool:
 # ------------------------------------------------------------------ entrada
 
 func _unhandled_input(ev: InputEvent) -> void:
+	if Game.touch_controls_enabled() and ev is InputEventMouse:
+		return
 	if _result_shown or battle.state == "revive_offer":
 		return
 	if battle.state == "evolve_cine":
 		# MEC-009: qualquer tecla ou clique pula a cinemática de evolução
-		if (ev is InputEventKey and ev.pressed and not ev.echo) or (ev is InputEventMouseButton and ev.pressed) or (ev is InputEventJoypadButton and ev.pressed):
+		if (ev is InputEventScreenTouch and ev.pressed) or (ev is InputEventKey and ev.pressed and not ev.echo) or (ev is InputEventMouseButton and ev.pressed) or (ev is InputEventJoypadButton and ev.pressed):
 			battle.skip_cine()
 			get_viewport().set_input_as_handled()
 		return
@@ -312,6 +315,7 @@ func _unhandled_input(ev: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 
 func _toggle_items_panel() -> void:
+	hud.clear_mobile_input()
 	if battle.state != "running":
 		return
 	_items_shown = not _items_shown
@@ -327,6 +331,8 @@ func _close_items_panel() -> void:
 	hud.hide_items_panel()
 
 func _toggle_aim() -> void:
+	if Game.touch_controls_enabled():
+		return
 	battle.toggle_aim()
 	Game.set_aim(battle.aim)
 	hud.toast("Mira: %s" % ("AUTOMÁTICA" if battle.aim == Battle.Aim.AUTO else "MOUSE"), Color(0.8, 0.9, 1.0))
@@ -334,6 +340,7 @@ func _toggle_aim() -> void:
 		hud.show_pause(true)
 
 func _toggle_pause() -> void:
+	hud.clear_mobile_input()
 	if battle.state != "running":
 		return
 	_paused = not _paused
@@ -341,6 +348,7 @@ func _toggle_pause() -> void:
 	hud.show_pause(_paused)
 
 func _abandon() -> void:
+	hud.clear_mobile_input()
 	get_tree().paused = false
 	_paused = false
 	hud.show_pause(false)
@@ -354,6 +362,7 @@ func _return_to_menu() -> void:
 	Game.goto_menu()
 
 func _on_choose(i: int) -> void:
+	hud.clear_mobile_input()
 	battle.choose(i)
 	Sfx.play("ui.confirm")
 	_refresh_offer()
@@ -375,6 +384,39 @@ func _refresh_offer() -> void:
 
 # ------------------------------------------------------------------ loop
 
+func _mobile_command(action: StringName) -> void:
+	if battle.state != "running" or get_tree().paused or _result_shown:
+		return
+	match action:
+		&"hero_active":
+			var target := battle.nearest(battle.hero.pos, 1000.0)
+			var direction := (target.pos - battle.hero.pos).normalized() if target != null else battle.aim_dir
+			battle.use_active(direction)
+		Game.ACTION_RUN_INTERACT:
+			battle.interact()
+			if battle.state != "running" or battle.stage_changed:
+				hud.clear_mobile_input()
+			_refresh_offer()
+		Game.ACTION_RUN_PAUSE: _toggle_pause()
+		Game.ACTION_RUN_ITEMS: _toggle_items_panel()
+		Game.ACTION_RUN_SPEED: battle.toggle_speed()
+		Game.ACTION_RUN_EXTRACT:
+			if battle.stage_cleared or battle.final_victory:
+				_toggle_pause()
+				hud.confirm_mobile("Extrair e encerrar esta tentativa?", func():
+					_toggle_pause()
+					battle.extract(), _toggle_pause)
+		&"touch_help":
+			hud.clear_mobile_input()
+			Playtest.open_game_rules()
+			Playtest._guide_body.text = "[b]Controles por toque[/b]\nToque e arraste na área livre de qualquer lado para andar; solte para parar. Use Habilidade e o botão contextual na direita. Ficha abre seus itens; Pausa interrompe a tentativa. A mira é automática.\n\n" + Playtest._guide_body.text
+
+func _notification(what: int) -> void:
+	if what in [NOTIFICATION_APPLICATION_FOCUS_OUT, NOTIFICATION_APPLICATION_PAUSED] and Game.touch_controls_enabled() and is_instance_valid(hud):
+		hud.clear_mobile_input()
+		if battle != null and battle.state == "running" and not get_tree().paused:
+			_toggle_pause()
+
 func _physics_process(dt: float) -> void:
 	if get_tree().paused or _result_shown:
 		return
@@ -388,7 +430,12 @@ func _physics_process(dt: float) -> void:
 		Input.is_physical_key_pressed(KEY_S) or Input.is_physical_key_pressed(KEY_DOWN))
 	if d == Vector2.ZERO:
 		d = Game.movement_joystick()
-	if d == Vector2.ZERO and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+	if Game.touch_controls_enabled() and hud.mobile != null:
+		if not hud.mobile.combat_enabled:
+			d = Vector2.ZERO
+		elif hud.mobile.movement != Vector2.ZERO:
+			d = hud.mobile.movement
+	if not Game.touch_controls_enabled() and d == Vector2.ZERO and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		var screen_to_mouse := get_global_mouse_position() - hero_node.position
 		if screen_to_mouse.length() > 4.0:
 			d = screen_to_mouse.normalized()
@@ -463,6 +510,7 @@ func _sync() -> void:
 	_update_divine_aura()
 
 func _show_result() -> void:
+	hud.clear_mobile_input()
 	_result_shown = true
 	get_tree().paused = false
 	var res := battle.result()
@@ -502,6 +550,7 @@ func _present_hqs(hq_ids: Array[String]) -> void:
 		await _present_hq(hq_id)
 
 func _present_hq(hq_id: String) -> void:
+	hud.clear_mobile_input()
 	var hq: Dictionary = Data.table("hqs").get(hq_id, {})
 	if hq.is_empty():
 		return

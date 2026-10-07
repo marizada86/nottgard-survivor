@@ -1,0 +1,125 @@
+{
+  "pilot_id": "P067-v02",
+  "date": "2026-10-06",
+  "kind": "local-source-pilot-not-apk",
+  "engine": "Godot 4.7.2",
+  "native_validated": false,
+  "checks": 144,
+  "failures": 0,
+  "sources": {
+    "core/game.gd": "91ef922becfbadcb81fd3b9ff29cf9879a3581f97b79c0b78a439c2f909b19e6",
+    "core/playtest.gd": "1758a2ea73fa93d6bfe05588dd09b33c1aa335b0de21268bff9d236216e4ce0c",
+    "project.godot": "9e042b1bc27570f59d11f4305ccc1838536d4e3f810408d012e9e0abc16614b0",
+    "ui/ability_slot.gd": "6d2490c4d81dcefd7ac0a0ca0321c60bebcc67194a1482a6f05227ccea2c8319",
+    "ui/character_sheet.gd": "e4fb9cef07bb36b795fcfe56dff66b4933f396fb2c59f07b7933efd09b300113",
+    "ui/hero_panel.gd": "ef4856e15cc3a3fb6ea7ca1c899d86530fc1f2d9479d84ada385e9c9c382c4a7",
+    "ui/hq_screen.gd": "6face261bf1075f30789a217923f81e29ef5b5620d23ca61eba1c2a22d7b57e6",
+    "ui/hud.gd": "d49dfb385efa339161aa8ced427e47010be628ed71fc497f0d136f96a7f181ed",
+    "ui/menu.gd": "82199f0169911192ce41f9fedbae0a119f37269a0993438ae9e919d3999ca5ee",
+    "ui/run.gd": "93bf7b159954195b6620656cf146253552839e07d07106bef29257c79037a5ef",
+    "ui/mobile_controls.gd": "12f6f662d032b73411341a846efcc115f13efa7c6e5fe3432a4148e709cf1ced",
+    "ui/touch_ui.gd": "32a74be87a2cfc15202af4a1c900edffffff4fd8113e9af3a67d3a0107c9f450",
+    "tests/test_mobile_controls.gd": "5fa17e59ba78893fd3975b28ddf60720448e7de34a2cfaa0fae12fea458c8734",
+    "tools/mobile_preview.gd": "e0b6364f313dbd19c87102a21f5d800fc1ceaf10fd5445f505ea6820b8ce5181",
+    "tools/mobile_preview.tscn": "7719e3a6c22f103ef9ffdb17ed74d38dd54dcf07742b69fc5bc6a3cb58dcb4e4",
+    "tools/mobile_buttons_check.gd": "1554e6e86775e4a4aadf67dfbd0840874290732b38c8ee6efc95755a7102d41e",
+    "tools/mobile_buttons_check.tscn": "f347066128c5639f8718c47f3986e12bb77a17bdfc0077196c16b7554346a938"
+  },
+  "recovery": {
+    "mobile_controls.gd": {
+      "sha256": "4f5dbceae1a527f5e3395cb7b8e7cc18e71bb261809fec8c320e2b1f59931906",
+      "matches_v01": true
+    },
+    "touch_ui.gd": {
+      "sha256": "40d18865a370e1e3a9e21a4e84e44f36579d9b865cafa4f2c5f20c9def906e86",
+      "matches_v01": true
+    },
+    "run.gd": {
+      "sha256": "9ce609ad028180fdc3ae12f2758a5e964a4a67996c51369f7bff38647fda7764",
+      "matches_v01": true
+    },
+    "mobile_preview.gd": {
+      "sha256": "56bf09cd377cbf6d1bd918370f618d52b8c70361b05cc4736a996aa8485b6921",
+      "matches_v01": true
+    },
+    "test_mobile_controls.gd": {
+      "sha256": "8d01d4b3bb6c5967951c4715748372af8dd0316db9bbce5ade27119945ec87e6",
+      "matches_v01": true
+    },
+    "playtest.gd": {
+      "sha256": "6692b2b31a9cad93be6f519acec82cc3aad205b7107f2d8a455ef21cc4a5f20b",
+      "origin": "working-file-before-edit; previously-clean"
+    }
+  },
+  "screenshots": {
+    "combate-1280x960.png": {
+      "width": 1280,
+      "height": 960,
+      "sha256": "0fc18430999c569ca7f1eafb1b591e57d00e8c63c786cf3dc5bc4f5cf291b104"
+    },
+    "combate-1600x720.png": {
+      "width": 1600,
+      "height": 720,
+      "sha256": "29020f92250bcd0f9761f79955927923584f02aeb963ab4e70d60d74dc8749c0"
+    },
+    "combate-16x9.png": {
+      "width": 1280,
+      "height": 720,
+      "sha256": "72c12b5a9fd8999bec1e31a8cb49e5cd2bb23eb1746b2dc5971c67d58e12b44b"
+    },
+    "ficha-1280x960.png": {
+      "width": 1280,
+      "height": 960,
+      "sha256": "24b3c338e0389ae3a0da3b1f321acaf02adafeb97262058323bd9302bb1a8e00"
+    },
+    "ficha-1600x720.png": {
+      "width": 1600,
+      "height": 720,
+      "sha256": "98605f2226136117c24aabf8eedcbaffb0b336e8c48a5b1f7bcb9f35f61b4c2f"
+    },
+    "ficha-16x9.png": {
+      "width": 1280,
+      "height": 720,
+      "sha256": "f1f5d7087efc924d560c24578ce87aebda2be2b65bff5be706ff3a79d2e80b12"
+    },
+    "joystick-direita.png": {
+      "width": 1280,
+      "height": 720,
+      "sha256": "ff7e4af9f185fdeb9c49792eeb56d83aef5c76c2ee4f124436607e86e25420a1"
+    },
+    "menu-1280x720.png": {
+      "width": 1280,
+      "height": 720,
+      "sha256": "499d9ddf64947576b148b6b0e8d5da2138f4f5593af298bd9ad06e55d591b4ab"
+    },
+    "menu-1280x960.png": {
+      "width": 1280,
+      "height": 960,
+      "sha256": "d7d324733a298851aa776c313a078c9c1aefdcab94ffa46b43f190198a99cc67"
+    },
+    "menu-1600x720.png": {
+      "width": 1600,
+      "height": 720,
+      "sha256": "6223d910b86594ec1bea2e4dd36afdb261f2df7462c859ebf200a3ee86abd37d"
+    },
+    "menu-16x9.png": {
+      "width": 1280,
+      "height": 720,
+      "sha256": "499d9ddf64947576b148b6b0e8d5da2138f4f5593af298bd9ad06e55d591b4ab"
+    },
+    "oferta-16x9.png": {
+      "width": 1280,
+      "height": 720,
+      "sha256": "0de0b6700769ad09191917edbdc5aa9694c0f825ef10acb072e4ec81f9f0bcae"
+    }
+  },
+  "logs": {
+    "tests.log": "d93083c6ecb900b5f23846e2c5e27414d97e2cdfc3554ef2aee4c2201319a6bd",
+    "smoke-mobile.log": "4877af4111bbb185f3c67d498a9d925efa03d1ac804e52e5ee331f0a0a02a342",
+    "capture.log": "2f1752f46b0fce1109eae2c3611fbb83d273a32b4f0e0cdc571df5602177ba10",
+    "capture-stdout.log": "3ae1d371a33b6830638b39cf00a8c8f67f5813b1126bf5cf7e9c28b371a66633",
+    "capture-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "buttons-report.json": "7f8cf8697049ac4f35a2f1859e78d9874e43d83bb371bb80dd40fc2230cab14a",
+    "before-fix-tests.log": "abaa9c8f130dd66c73aac5616f6d306ced082f23a7a6121fe51ee663c5b84895"
+  }
+}

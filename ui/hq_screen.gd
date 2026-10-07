@@ -15,6 +15,22 @@ var completed := false
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	if Game.touch_controls_enabled():
+		var bar := HBoxContainer.new()
+		bar.position = Vector2(Game.touch_safe_rect().end.x - 280, Game.touch_safe_rect().position.y)
+		var next := Button.new()
+		next.text = "Próximo"
+		next.custom_minimum_size = Vector2(140, 56)
+		next.pressed.connect(advance)
+		bar.add_child(next)
+		var close := Button.new()
+		close.text = "Fechar"
+		close.custom_minimum_size = Vector2(120, 56)
+		close.pressed.connect(finish)
+		bar.add_child(close)
+		add_child(bar)
+		$ControlsHint.text = "Use Próximo para avançar ou Fechar para sair."
+		TouchUI.prepare(self)
 
 func start_hq(hq: Dictionary) -> void:
 	title_label.text = String(hq.get("title", ""))
@@ -50,6 +66,8 @@ func _input(event: InputEvent) -> void:
 		return
 	# O bloco de notas (F5) fica por cima da HQ e precisa receber espaço e clique.
 	if Playtest.is_note_open():
+		return
+	if Game.touch_controls_enabled() and event is InputEventMouse:
 		return
 	if event is InputEventKey and event.pressed and not event.echo:
 		if event.keycode == KEY_ESCAPE:

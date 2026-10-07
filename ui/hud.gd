@@ -13,6 +13,7 @@ signal speed_pressed
 signal revive_pressed
 signal decline_revive_pressed
 signal items_closed
+signal mobile_command(action: StringName)
 
 @onready var info_label: Label = %InfoLabel  # só as linhas do Estige; o resto do herói está no HeroPanel
 @onready var stage_rule_icon: TextureRect = %StageRuleIcon
@@ -43,12 +44,24 @@ var _active_icon_id := ""
 var _ability_slot: AbilitySlot
 var _stage_icon_id := ""
 var objective_label: Label  # SPEC-118: objetivos dos acontecimentos da fase
+var mobile: MobileControls
+var _battle: Battle
+var _confirm_callback: Callable
+var _cancel_callback: Callable
+var _confirm_dialog: ConfirmationDialog
+var _offer_confirm: Button
+var _offer_selected := -1
+var _offer_buttons: Array[Button] = []
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	reroll_btn.pressed.connect(func(): reroll_pressed.emit())
 	%ResumeBtn.pressed.connect(func(): resume_pressed.emit())
-	%QuitBtn.pressed.connect(func(): quit_pressed.emit())
+	%QuitBtn.pressed.connect(func():
+		if Game.touch_controls_enabled():
+			confirm_mobile("Abandonar esta tentativa?", func(): quit_pressed.emit())
+		else:
+			quit_pressed.emit())
 	%AgainBtn.pressed.connect(func(): again_pressed.emit())
 	%MenuBtn.pressed.connect(func(): menu_pressed.emit())
 	%HelpBtn.pressed.connect(func(): help_pressed.emit())
@@ -98,6 +111,96 @@ func _ready() -> void:
 	objective_label.add_theme_constant_override("outline_size", 5)
 	objective_label.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(objective_label)
+	if Game.touch_controls_enabled():
+		mobile = MobileControls.new()
+		mobile.name = "MobileControls"
+		add_child(mobile)
+		mobile.command.connect(func(action: StringName): mobile_command.emit(action))
+		%HelpBtn.hide()
+		%SpeedBtn.hide()
+		aim_btn.hide()
+		weapons_label.hide()
+		prompt_label.hide()
+		$StatBox.position = Game.touch_safe_rect().position
+		$PausePanel/VBox/PauseItemsHint.text = "Toque em Ficha durante o combate para consultar itens e habilidades."
+		%ResumeBtn.text = "Continuar"
+		%PauseHelpBtn.text = "Como jogar"
+		_setup_mobile_offers()
+		TouchUI.prepare(self)
+		get_viewport().size_changed.connect(func(): mobile.layout_controls(Game.touch_safe_rect()))
+		_confirm_dialog = ConfirmationDialog.new()
+		_confirm_dialog.title = "Confirmar"
+		_confirm_dialog.ok_button_text = "Confirmar"
+		_confirm_dialog.cancel_button_text = "Cancelar"
+		_confirm_dialog.confirmed.connect(_confirm_mobile_action)
+		_confirm_dialog.canceled.connect(_cancel_mobile_action)
+		add_child(_confirm_dialog)
+
+func confirm_mobile(text: String, callback: Callable, on_cancel: Callable = Callable()) -> void:
+	_confirm_callback = callback
+	_cancel_callback = on_cancel
+	clear_mobile_input()
+	_confirm_dialog.dialog_text = text
+	_confirm_dialog.popup_centered(Vector2i(440, 180))
+
+func _confirm_mobile_action() -> void:
+	var callback := _confirm_callback
+	_confirm_callback = Callable()
+	_cancel_callback = Callable()
+	if callback.is_valid():
+		callback.call()
+
+func _cancel_mobile_action() -> void:
+	var callback := _cancel_callback
+	_confirm_callback = Callable()
+	_cancel_callback = Callable()
+	if callback.is_valid():
+		callback.call()
+
+func clear_mobile_input() -> void:
+	if mobile != null:
+		mobile.set_combat_enabled(false)
+
+func _setup_mobile_offers() -> void:
+	var parent := offer_box.get_parent()
+	parent.remove_child(offer_box)
+	var scroll := ScrollContainer.new()
+	scroll.name = "TouchOfferScroll"
+	scroll.custom_minimum_size = Vector2(720, 320)
+	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	parent.add_child(scroll)
+	parent.move_child(scroll, 1)
+	scroll.add_child(offer_box)
+	offer_box.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	_offer_confirm = Button.new()
+	_offer_confirm.text = "Confirmar escolha"
+	_offer_confirm.disabled = true
+	_offer_confirm.custom_minimum_size.y = 56
+	_offer_confirm.pressed.connect(_confirm_offer)
+	parent.add_child(_offer_confirm)
+	parent.move_child(_offer_confirm, 2)
+	levelup_panel.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
+	levelup_panel.offset_left = -380
+	levelup_panel.offset_right = 380
+	levelup_panel.offset_top = -280
+	levelup_panel.offset_bottom = 280
+
+func _select_offer(index: int) -> void:
+	_offer_selected = index
+	_offer_confirm.disabled = false
+	for i in _offer_buttons.size():
+		_offer_buttons[i].modulate = Color(1.0, 0.87, 0.55) if i == index else Color.WHITE
+	for detail in _detail_nodes:
+		detail.visible = int(detail.get_meta("offer_index", -1)) == index
+
+func _confirm_offer() -> void:
+	if _offer_selected < 0 or _offer_confirm.disabled:
+		return
+	var index := _offer_selected
+	_offer_selected = -1
+	_offer_confirm.disabled = true
+	offer_chosen.emit(index)
 
 func _unhandled_input(ev: InputEvent) -> void:
 	if not ev.is_pressed() or (ev is InputEventKey and ev.echo):
@@ -114,9 +217,14 @@ var _detail_nodes: Array = []
 var _detail_on := false
 
 func _process(_delta: float) -> void:
+	if mobile != null:
+		var running := _battle != null and _battle.state == "running" and not get_tree().paused
+		mobile.set_combat_enabled(running and not (items_panel.visible or levelup_panel.visible or pause_panel.visible or result_panel.visible or revive_panel.visible or _confirm_dialog.visible))
 	if _ability_slot != null:
-		_ability_slot.visible = not (items_panel.visible or levelup_panel.visible or pause_panel.visible or result_panel.visible or revive_panel.visible)
+		_ability_slot.visible = mobile == null and not (items_panel.visible or levelup_panel.visible or pause_panel.visible or result_panel.visible or revive_panel.visible)
 	if not levelup_panel.visible or _detail_nodes.is_empty():
+		return
+	if mobile != null:
 		return
 	var on := Input.is_action_pressed(Game.ACTION_OFFER_DETAILS)
 	if on != _detail_on:
@@ -125,6 +233,7 @@ func _process(_delta: float) -> void:
 			n.visible = on
 
 func update_stats(b: Battle) -> void:
+	_battle = b
 	var h := b.hero
 	hero_panel.update(b)
 	if b.has_styx_contract() and b.styx_exposure > 0.0:
@@ -142,6 +251,10 @@ func update_stats(b: Battle) -> void:
 		_ability_slot.set_ability(String(ability.get("name", "")), String(ability.get("desc", "")),
 			load(ability_path) if ResourceLoader.exists(ability_path) else null, "Q/RMB")
 	_ability_slot.set_state(b.active_cd, b.active_cd_max, b.active_guard > 0, get_process_delta_time())
+	if mobile != null:
+		mobile.configure(b)
+		mobile.ability_slot.set_ability(String(ability.get("name", "")), String(ability.get("desc", "")), _ability_slot._icon, "Habilidade")
+		mobile.ability_slot.set_state(b.active_cd, b.active_cd_max, b.active_guard > 0, get_process_delta_time())
 	var stage_icons := {
 		"dagruve": "dagruve_rituals", "shedaklah": "shedaklah_puddles", "molor": "molor_bubbles",
 		"durao": "", "feng_tu": "feng_tu_strikes", "shendilavri": "shendilavri_illusions",
@@ -160,6 +273,8 @@ func update_stats(b: Battle) -> void:
 		timer_label.text = "%02d:%02d" % [t / 60, t % 60]
 	stage_label.text = "%s%s%s" % [b.stage.name, "  (Mira: %s)" % ("AUTO" if b.aim == Battle.Aim.AUTO else "MOUSE"), "  [%s]" % b.speed_label() if b.speed_scale() > 1.0 else ""]
 	%SpeedBtn.visible = b.can_speed_2x()
+	if mobile != null:
+		%SpeedBtn.hide()
 	%SpeedBtn.set_pressed_no_signal(b.speed_scale() > 1.0)
 	%SpeedBtn.text = b.speed_label() if b.can_speed_2x() else "1x"
 	if b.boss != null and not b.boss.dead and b.boss_spawned:
@@ -198,7 +313,13 @@ func update_stats(b: Battle) -> void:
 ".join(b.happenings.hud_lines(b))
 
 func show_offer(b: Battle) -> void:
+	clear_mobile_input()
+	_offer_selected = -1
+	_offer_buttons.clear()
+	if _offer_confirm != null:
+		_offer_confirm.disabled = true
 	for c in offer_box.get_children():
+		offer_box.remove_child(c)
 		c.queue_free()
 	_detail_nodes.clear()
 	_detail_on = false
@@ -262,10 +383,14 @@ func show_offer(b: Battle) -> void:
 			# MEC-023: sem moedas (ou linha informativa): visível, esmaecida e sem efeito
 			btn.disabled = true
 			btn.modulate = Color(1, 1, 1, 0.9)
-		btn.pressed.connect(func(): offer_chosen.emit(i))
+		if mobile != null:
+			btn.pressed.connect(_select_offer.bind(i))
+			_offer_buttons.append(btn)
+		else:
+			btn.pressed.connect(func(): offer_chosen.emit(i))
 		offer_box.add_child(btn)
 		if i == 0:
-			btn.call_deferred("grab_focus")
+			btn.grab_focus()
 		if is_card:
 			var detail := (btn as OfferCard).build_detail(true)
 			if detail != null:
@@ -274,18 +399,24 @@ func show_offer(b: Battle) -> void:
 				wrap.add_theme_constant_override("margin_bottom", 6)
 				wrap.add_child(detail)
 				wrap.visible = false
+				wrap.set_meta("offer_index", i)
 				offer_box.add_child(wrap)
 				_detail_nodes.append(wrap)
 	if b.offer.any(func(o): return o.has("brief")):
 		var hint := Label.new()
-		hint.text = "passe o mouse, segure Shift ou pressione o analógico direito para ver detalhes e comparação"
+		hint.text = "Toque em uma opção para ver os detalhes; depois confirme." if mobile != null else "passe o mouse, segure Shift ou pressione o analógico direito para ver detalhes e comparação"
 		hint.add_theme_font_size_override("font_size", 14)
 		hint.add_theme_color_override("font_color", Color(0.72, 0.72, 0.72))
 		hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		offer_box.add_child(hint)
 	reroll_btn.visible = b.offer_kind == "levelup"
 	reroll_btn.text = "Rerrolar (R/LB) — %d restantes" % b.rerolls
+	if mobile != null:
+		reroll_btn.text = "Rerrolar — %d restantes" % b.rerolls
+		lv_title.text = lv_title.text.get_slice(" — escolha (", 0)
 	reroll_btn.disabled = b.rerolls <= 0
+	if mobile != null:
+		TouchUI.adapt_sizes(offer_box)
 	levelup_panel.visible = true
 
 func hide_offer() -> void:
@@ -445,11 +576,12 @@ func hide_items_panel() -> void:
 	items_panel.hide_sheet()
 
 func show_pause(v: bool) -> void:
+	clear_mobile_input()
 	pause_panel.visible = v
 	if v:
 		aim_btn.text = "Mira: %s (Tab / norte)" % ("AUTO" if Game.aim_mode() == Battle.Aim.AUTO else "MANUAL")
 		vol_slider.value = float(Game.profile.data.settings.volume)
-		%ResumeBtn.call_deferred("grab_focus")
+		_focus_visible.call_deferred(%ResumeBtn)
 
 func show_revive_offer(b: Battle) -> void:
 	hide_offer()
@@ -486,7 +618,11 @@ func show_result(res: Dictionary, summary: Dictionary) -> void:
 		txt += "\n\nConquistas:\n" + "\n".join(names)
 	result_text.text = txt
 	result_panel.visible = true
-	%AgainBtn.call_deferred("grab_focus")
+	_focus_visible.call_deferred(%AgainBtn)
+
+func _focus_visible(button: Control) -> void:
+	if is_instance_valid(button) and button.is_inside_tree() and button.is_visible_in_tree():
+		button.grab_focus()
 
 ## SPEC-116 D3: a barra de XP pisca ao receber moeda ou XP.
 var _xp_pulse: Tween

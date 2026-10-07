@@ -1,0 +1,18 @@
+Piloto mobile local P067-v01
+
+Abra Abrir-teste-mobile.cmd. O piloto usa Godot instalado em D:\Godot.
+No PC, clique e arraste na região esquerda livre para simular o joystick.
+Soltar para o personagem. Os botões à direita usam habilidade e interação.
+Ficha e Pausa ficam no topo. Nas ofertas, selecione e depois confirme.
+
+O perfil separado é preview-profile.json nesta pasta. O progresso normal
+do jogo não é usado para salvar o piloto. A primeira tentativa pode exibir
+HQs; use Próximo e Fechar. As preferências do piloto ficam neste perfil.
+
+O mouse no PC simula um dedo por vez. O teste automatizado também injeta
+toques simultâneos, mas conforto, desempenho e toque no aparelho real
+ainda precisam ser validados. Nenhum APK foi exportado ou instalado.
+
+As capturas PNG e os logs nesta pasta documentam o teste local.
+Os arquivos anteriores do runtime estão em recovery/, obtidos da revisão
+Git anterior porque esses arquivos estavam limpos antes da implementação.

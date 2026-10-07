@@ -1,0 +1,19 @@
+Piloto mobile local P067-v02
+
+Abra Abrir-teste-mobile.cmd. Usa Godot em D:\Godot e perfil separado.
+Toque/clique e arraste na area livre inferior da esquerda OU da direita
+para andar. Soltar/cancelar para o heroi. Um unico dedo controla o joystick;
+o outro pode usar Habilidade ou o botao de interacao sem roubar movimento.
+Toques que comecam sobre botoes e paineis pertencem a interface.
+
+Ficha, Pausa, Ajuda e Velocidade ficam no topo. Velocidade e Extrair
+dependem das regras atuais da fase. Escolhas exigem selecionar e confirmar.
+O progresso normal fica preservado; o piloto salva preview-profile.json aqui.
+Mouse simula um dedo; multitouch foi verificado por eventos sintetizados.
+
+buttons-report.json e os logs registram as provas locais dos botoes.
+Capturas incluem joystick-direita.png. Validacao em celular continua pendente.
+Nao existe APK produzido nesta pasta. Sem exportacao ou instalacao nativa.
+
+recovery/ conserva a versao anterior dos arquivos alterados neste ajuste.
+O piloto v01 permanece como evidencia anterior; seu launcher encaminha a v02.

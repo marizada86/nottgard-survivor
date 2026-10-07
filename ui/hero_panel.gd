@@ -192,6 +192,7 @@ func _build_key_hint() -> Control:
 	sb.content_margin_bottom = 1.0
 	_keycap.add_theme_stylebox_override("panel", sb)
 	_keycap.add_child(_outlined(_label("C", 15, GOLD)))
+	_keycap.visible = not Game.touch_controls_enabled()
 	box.add_child(_keycap)
 	box.add_child(_outlined(_label("Ficha", 14, Color(0.85, 0.82, 0.72))))
 	return box

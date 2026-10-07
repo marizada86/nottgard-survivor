@@ -78,6 +78,11 @@ func _ready() -> void:
 	root.add_child(body)
 	body.add_child(_build_hero_column())
 	body.add_child(_build_tabs_column())
+	if Game.touch_controls_enabled():
+		_close_btn.text = "Fechar"
+		_close_btn.custom_minimum_size = Vector2(88, 56)
+		_panel.custom_minimum_size = Vector2(1090, 650)
+		TouchUI.adapt_sizes(self)
 
 func _box(bg: Color, border: Color, width: int, radius: int) -> StyleBoxFlat:
 	var sb := StyleBoxFlat.new()
@@ -183,7 +188,7 @@ func _build_ability_card() -> Control:
 	var v := VBoxContainer.new()
 	v.add_theme_constant_override("separation", 3)
 	card.add_child(v)
-	v.add_child(_label("HABILIDADE  [Q/RMB]", 12, GOLD_DIM))
+	v.add_child(_label("HABILIDADE" if Game.touch_controls_enabled() else "HABILIDADE  [Q/RMB]", 12, GOLD_DIM))
 	var row := HBoxContainer.new()
 	row.add_theme_constant_override("separation", 8)
 	v.add_child(row)
@@ -211,7 +216,8 @@ func _build_tabs_column() -> Control:
 	col.add_theme_constant_override("separation", 8)
 	var row := HBoxContainer.new()
 	row.add_theme_constant_override("separation", 6)
-	row.add_child(_label("◂ Q / LB", 13, MUTED))
+	if not Game.touch_controls_enabled():
+		row.add_child(_label("◂ Q / LB", 13, MUTED))
 	var group := ButtonGroup.new()
 	for i in TAB_NAMES.size():
 		var tb := Button.new()
@@ -229,7 +235,8 @@ func _build_tabs_column() -> Control:
 		tb.pressed.connect(set_tab.bind(i))
 		_tab_buttons.append(tb)
 		row.add_child(tb)
-	row.add_child(_label("E / RB ▸", 13, MUTED))
+	if not Game.touch_controls_enabled():
+		row.add_child(_label("E / RB ▸", 13, MUTED))
 	col.add_child(row)
 	_scroll = ScrollContainer.new()
 	_scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL

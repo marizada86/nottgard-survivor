@@ -97,10 +97,40 @@ func _ready() -> void:
 	hq_list.item_selected.connect(_refresh_hq_selection)
 	hq_play_btn.pressed.connect(_open_selected_hq)
 	_refresh_all()
+	if Game.touch_controls_enabled():
+		aim_opt.select(0)
+		aim_opt.disabled = true
+		display_mode_opt.disabled = true
+		resolution_opt.disabled = true
+		TouchUI.prepare(self)
+		_layout_touch_menu()
+		get_viewport().size_changed.connect(_layout_touch_menu)
 	hero_list.call_deferred("grab_focus")
 	var notice := Game.consume_save_notice()
 	if notice != "":
 		Playtest.toast(notice)
+
+func _layout_touch_menu() -> void:
+	var safe := Game.touch_safe_rect()
+	%Tabs.offset_left = safe.position.x
+	%Tabs.offset_right = safe.end.x - get_viewport_rect().size.x
+	%Tabs.offset_top = safe.position.y + 88
+	%Tabs.offset_bottom = safe.end.y - get_viewport_rect().size.y - 24
+	%Tabs.add_theme_font_size_override("font_size", 20)
+	%Tabs.add_theme_constant_override("side_margin", 12)
+	var bar: TabBar = %Tabs.get_tab_bar()
+	bar.add_theme_font_size_override("font_size", 20)
+	for style_name in ["tab_selected", "tab_unselected", "tab_hovered", "tab_disabled"]:
+		var style: StyleBox = bar.get_theme_stylebox(style_name).duplicate()
+		style.content_margin_top = 14
+		style.content_margin_bottom = 14
+		bar.add_theme_stylebox_override(style_name, style)
+	$Title.position = safe.position
+	$Title.add_theme_font_size_override("font_size", 32)
+	$Subtitle.position = safe.position + Vector2(4, 48)
+	$Tabs/Jogar/Left.custom_minimum_size.x = 240
+	$Tabs/Jogar/Mid.custom_minimum_size.x = 420
+	portrait.custom_minimum_size = Vector2(360, 180)
 
 func _refresh_all() -> void:
 	var p: Profile = Game.profile
@@ -138,6 +168,8 @@ func _refresh_all() -> void:
 	display_mode_opt.select(Game.WINDOW_MODES.find(String(p.data.settings.get("window_mode", "windowed"))))
 	resolution_opt.select(Game.SUPPORTED_RESOLUTIONS.find(String(p.data.settings.get("resolution", "1280x720"))))
 	diff_opt.select(int(p.data.settings.difficulty))
+	if Game.touch_controls_enabled():
+		TouchUI.adapt_sizes(self)
 
 
 func _save_audio_setting(key: String, value: float) -> void:

@@ -22,6 +22,25 @@ var last_result: Dictionary = {}
 var last_summary: Dictionary = {}
 var log_lines: Array = []
 var screen_name := "menu"
+var touch_preview := false
+
+func touch_controls_enabled() -> bool:
+	return touch_preview or OS.has_feature("android") or OS.has_feature("ios") or "--mobile-controls" in OS.get_cmdline_user_args()
+
+func touch_safe_rect() -> Rect2:
+	var rect := get_viewport().get_visible_rect()
+	if OS.has_feature("android") or OS.has_feature("ios"):
+		var safe := DisplayServer.get_display_safe_area()
+		if safe.size.x > 0 and safe.size.y > 0:
+			var transform := get_viewport().get_screen_transform().affine_inverse()
+			rect = rect.intersection(transform * Rect2(safe))
+	return rect.grow(-16.0)
+
+func touch_target_size() -> float:
+	if OS.has_feature("android") or OS.has_feature("ios"):
+		var scale := get_viewport().get_screen_transform().get_scale().y
+		return maxf(56.0, 48.0 * maxf(1.0, DisplayServer.screen_get_dpi() / 160.0) / maxf(0.1, scale))
+	return 56.0
 
 const JOYSTICK_DEADZONE := 0.24
 const ACTION_MOVE_LEFT: StringName = &"joy_move_left"
@@ -332,6 +351,8 @@ func apply_settings() -> void:
 	AudioServer.set_bus_volume_db(0, linear_to_db(clampf(float(s.volume), 0.0, 1.0)))
 	if has_node("/root/Sfx"):
 		Sfx.apply_mix(s)
+	if OS.has_feature("android") or OS.has_feature("ios"):
+		return
 	var style := String(s.get("window_mode", "windowed"))
 	if not (style in WINDOW_MODES):
 		style = "windowed"
@@ -373,6 +394,8 @@ func toggle_fullscreen() -> void:
 	set_window_mode("windowed" if String(profile.data.settings.get("window_mode", "windowed")) == "fullscreen" else "fullscreen")
 
 func aim_mode() -> int:
+	if touch_controls_enabled():
+		return Battle.Aim.AUTO
 	return Battle.Aim.MOUSE if String(profile.data.settings.aim) == "mouse" else Battle.Aim.AUTO
 
 func set_aim(mode: int) -> void:

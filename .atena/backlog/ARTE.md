@@ -38,6 +38,7 @@ As tabelas históricas abaixo preservam a prioridade anterior; esta seção regi
 
 | ID | Tipo | Item | Sabor Nottgard (preencher no lote) | Origem | Dependência |
 |---|---|---|---|---|---|
+| ART-036 | layout/UI | **Layout mobile por toque:** joystick na arena livre dos dois lados, habilidade/interação à direita, pausa/inventário no topo; áreas de toque, margens e menus. **IMPLEMENTADO LOCAL 2026-10-06**; capturas 16:9/20:9/4:3 verificadas, conforto/dp/recortes reais pendentes. Reutilizar tema/ícones existentes, sem geração de imagens | interface atual de Nottgard | [PLAN-067](../vault/drafts/PLAN-067-controles-e-menus-mobile-2026-10-06.md), [EVID-181](../evidence/EVID-181-mobile-menus-local-2026-10-06.md) | MEC-049; [SPEC-134](../specs/SPEC-134-controles-e-menus-mobile-2026-10-06.md); aguarda aceite em celular  P067-v02: joystick dos dois lados; 144 verificações sem falhas, [EVID-183](../evidence/EVID-183-mobile-joystick-direita-e-botoes-2026-10-06.md). |
 | ART-001 | verificação | Captura runtime do Zumbi v01 em janela interativa (só a prancha foi vista) | Dagruve · Zumbi | [EVID-104](../evidence/EVID-104-zumbi-admissao-2026-09-29.md) | acompanha BUG-001 |
 | ART-002 | layout | Barra de progresso da fase no HUD | a definir | EVID-088 nota 3 | destrava MEC-002; ART-PROMPTS-043 pronto, fila CHATGPT-FILA-012 (U01-U02) |
 | ART-003 | layout | Catálogo de itens do menu Esc: cartas desbloqueadas, silhueta escura para bloqueadas | a definir | EVID-088 nota 2 | destrava MEC-003; ART-PROMPTS-043 pronto, fila CHATGPT-FILA-012 (U03-U04) |

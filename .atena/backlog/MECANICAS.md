@@ -18,6 +18,7 @@
 
 | ID | Risco | Mecânica | Origem | Depende de (arte) | Spec |
 |---|---|---|---|---|---|
+| MEC-049 | alto | **Mobile por toque:** joystick flutuante exclusivo para andar, mira automática, habilidade/interação separadas e menus por toque. **IMPLEMENTADO LOCAL 2026-10-06; aceite em celular pendente**. Suíte/integração zero falhas e smoke nove fases; aparelho e gates do APK pendentes | Dono (2026-10-06); [PLAN-067](../vault/drafts/PLAN-067-controles-e-menus-mobile-2026-10-06.md) | ART-036 (layout por toque) | [SPEC-134](../specs/SPEC-134-controles-e-menus-mobile-2026-10-06.md)  P067-v02: joystick dos dois lados; 144 verificações sem falhas, [EVID-183](../evidence/EVID-183-mobile-joystick-direita-e-botoes-2026-10-06.md). |
 | MEC-001 | baixo | Navegar decisões de run só com teclado: WASD escolhe, Enter confirma (level-up, altar, recompensas, ofertas) | [EVID-088](../evidence/EVID-088-qa-leoric-dagruve-2026-09-27.md) nota 1 · [PLAN-029](../vault/drafts/PLAN-029-triagem-evidencia-qa-leoric-e-ux-2026-09-27.md) | — | — |
 | MEC-002 | baixo | Barra de progresso da fase: quanto falta até o fim do mapa | EVID-088 nota 3 | ART-002 (layout do HUD) | — |
 | MEC-003 | médio | Menu de pausa (Esc) ampliado: catálogo de itens (desbloqueados visíveis, bloqueados escuros sem info) e tela de configurações. O guia `?` já existe (SPEC-057) | EVID-088 nota 2 | ART-003 (layout do catálogo) | — |
