@@ -498,6 +498,9 @@ func _apply_reward(b: Battle, r: Dictionary, at: Vector2) -> void:
 		b.hero.temp_t = float(boon.get("duration", 20.0))
 		b.hero.recalc()
 		b.events.append({"type": "toast", "text": "%s: %s por %d s" % [String(boon.get("name", "Bênção")), Items.mods_text(b.hero.temp_mods), int(b.hero.temp_t)], "color": Color(0.9, 0.85, 0.5)})
+	var god_boons: Array = r.get("god_boon", [])  # SPEC-129 B-005: bênção permanente de um deus (a primeira da lista que o herói ainda não tem)
+	if not god_boons.is_empty():
+		_grant_god_boon(b, god_boons)
 	var flag: Dictionary = r.get("flag", {})
 	if not flag.is_empty():
 		flags[String(flag.get("id", "flag"))] = flag
@@ -514,6 +517,25 @@ func _apply_reward(b: Battle, r: Dictionary, at: Vector2) -> void:
 		for i in int(al.get("n", 2)):
 			_add_ally(b, {"label": String(al.get("label", "aliado")), "sprite": String(al.get("id", "")), "pos": b.hero.pos + Vector2(1.2, 0.0).rotated(float(i) * 2.0),
 				"hp": float(al.get("hp", 40.0)), "life": float(al.get("life", 30.0)), "dice": String(al.get("dice", "1d8")), "speed": float(al.get("speed", 1.5))})
+
+## SPEC-129 B-005: concede uma bênção permanente (como a do altar) e conta para o Favor; se o herói já tem todas, vira moedas.
+func _grant_god_boon(b: Battle, ids: Array) -> void:
+	var have: Array = b.hero.boons.map(func(x): return String(x.id))
+	for id in ids:
+		if String(id) in have:
+			continue
+		for bn in Data.table("boons").boons:
+			if String(bn.id) == String(id):
+				b.hero.boons.append(bn)
+				b.hero.recalc()
+				if DivineVisuals.is_divine_affinity(String(bn.god)):
+					b.visual_god = String(bn.god)
+					b.visual_boon_selected = true
+					b.events.append({"type": "divinity", "god": b.visual_god})
+				b.events.append({"type": "toast", "text": "%s: %s" % [String(bn.god), String(bn.name)], "color": Color(0.9, 0.85, 0.5)})
+				return
+	b._drop("gold", b.hero.pos + Vector2(1.2, 0.0), 40.0 * float(b.stage.coin_mult))
+	b.events.append({"type": "toast", "text": "O deus não tem mais o que dar: moedas no lugar.", "color": Color(0.9, 0.85, 0.5)})
 
 # ------------------------------------------------------------------ UI
 

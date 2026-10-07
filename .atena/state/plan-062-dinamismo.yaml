@@ -7,11 +7,11 @@ plan:
   status: ACTIVE
   approval: {mode: per-batch, status: APPROVED_BY_OWNER, approver: dono, approved_at: '2026-10-06'}
   decisions: {D1: 'Lliira e Tou Um primeiro', D2: 'rivalidade so troca o Favor, nunca bloqueia', D3: 'maldicao obrigatoria so nas stat atuais; familias novas trazem custo proprio', D4: 'eventos divinos somam (pool optional)', D5: 'Nott fica para depois'}
-  checkpoint: {batch: B-004, status: DONE_AWAITING_OWNER_REVIEW, next_gate: "dono aprova B-005 (eventos divinos) e decide o limiar do Favor"}
+  checkpoint: {batch: B-005, status: DONE_AWAITING_OWNER_REVIEW, next_gate: "dono aprova B-006 (registro de arte e audio) ou encerra o PLAN-062 e vai ao playtest"}
   batches:
     B-001: {status: DONE_COMMITTED_cbdcae7, goal: 'Medir as 14 bencaos atuais com o bot (BAL-019); sem codigo de jogo', evidence: EVID-166, tool: tools/bal_bencaos.gd, result: 'Cura e Fome do Abismo fortes demais; Olho Devorador fraco; maioria neutra (ruido +-0,3)'}
     B-002: {status: IMPLEMENTED_LOCAL, goal: 'Motor oath e path + bencao piloto Lliira (Juramento) e Tou Um (Caminho da Estrela)', evidence: EVID-169, result: 'Juramento neutro (cumpre 63%); Caminho da Estrela acima do teto na medicao bruta, cura 0.6 adotada'}
     B-003: {status: IMPLEMENTED_LOCAL, goal: "9 bencaos novas + rebalanceamento (so dados)", evidence: EVID-170, result: "10 de 12 dentro da meta; Cura +0.61 no veterano (efeito overheal_shield)"}
     B-004: {status: IMPLEMENTED_LOCAL, goal: "Favor e rivalidade (Feng-tu e Shedaklah) + 4 bencaos de Zuggtmoy e Juiblex", evidence: EVID-179, result: "Favor pequeno; rivalidade so troca o Favor; bencaos novas dentro da meta apos 1 ajuste"}
-    B-005: 'Eventos divinos (Feng-tu e Shedaklah primeiro)'
+    B-005: {status: IMPLEMENTED_LOCAL, goal: "Eventos divinos (Altar disputado em Feng-tu e Shedaklah, recompensa god_boon)", evidence: EVID-180, result: "2 eventos opcionais; bot nao mede pactos; aguarda playtest"}
     B-006: 'Arte e audio: registro ART por bencao e altar'
