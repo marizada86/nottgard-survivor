@@ -11,6 +11,18 @@ const GUIDE_MARGIN := 24.0
 const NOTE_MAX_SIZE := Vector2(760, 470)
 const NOTE_MARGIN := 24.0
 const HQ_SCREEN := preload("res://ui/hq_screen.tscn")
+const QueueScript := preload("res://core/evidence_queue.gd")
+var evidence_queue = QueueScript.new()
+var _last_run: Dictionary = {}
+var _central: PanelContainer
+var _central_scroll: ScrollContainer
+var _playtest_bar: HBoxContainer
+var _central_status: Label
+var _central_paused := false
+var _web_receipt: JavaScriptObject
+var _inflight := ""
+var _inflight_revision := ""
+var _inflight_started := 0.0
 const QA_RUN_DESTINATIONS := [
 	["Inicio da run", "running"],
 	["Quadrinho (prévia)", "comic_preview"],
@@ -44,6 +56,7 @@ var _logged_line_count := 0
 
 var _toast: Label
 var _pad: PanelContainer
+var _note_content: VBoxContainer
 var _edit: TextEdit
 var _count: Label
 var _guide_modal: Control
@@ -77,6 +90,7 @@ func _ready() -> void:
 	layer = 100
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	_build_ui()
+	_build_playtest_buttons()
 	Game.controls.changed.connect(_refresh_controller_guide)
 	get_viewport().size_changed.connect(_layout_modals)
 	call_deferred("_layout_modals")
@@ -105,31 +119,32 @@ func _build_ui() -> void:
 	add_child(_toast)
 
 	_pad = PanelContainer.new()
-	_pad.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
 	_pad.visible = false
 	add_child(_pad)
+	var outer_scroll := ScrollContainer.new()
+	outer_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	_pad.add_child(outer_scroll)
 	var v := VBoxContainer.new()
-	_pad.add_child(v)
+	v.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	_note_content = v
+	outer_scroll.add_child(v)
 	var t := Label.new()
-	t.text = "Bloco de notas (F5) — salva um relato textual com o contexto atual"
+	t.text = "Relato — guarda o contexto atual" if OS.has_feature("web") else "Bloco de notas (F5) — salva um relato textual com o contexto atual"
+	t.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	v.add_child(t)
-	var note_scroll := ScrollContainer.new()
-	note_scroll.custom_minimum_size = Vector2(0, 130)
-	note_scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	v.add_child(note_scroll)
 	_edit = TextEdit.new()
-	_edit.custom_minimum_size = Vector2(0, 300)
+	_edit.custom_minimum_size = Vector2(0, 130)
 	_edit.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	_edit.wrap_mode = TextEdit.LINE_WRAPPING_BOUNDARY
 	_edit.placeholder_text = "Escreva o que viu: o que estranhou, o que funcionou, o que falhou..."
 	_edit.text_changed.connect(_on_note_changed)
-	note_scroll.add_child(_edit)
+	v.add_child(_edit)
 	_count = Label.new()
 	v.add_child(_count)
 	var actions := VBoxContainer.new()
 	v.add_child(actions)
 	var ok := Button.new()
-	ok.text = "Guardar e fechar (F5)"
+	ok.text = "Guardar e fechar" if OS.has_feature("web") else "Guardar e fechar (F5)"
 	ok.pressed.connect(close_note)
 	actions.add_child(ok)
 	var hint := Label.new()
@@ -495,6 +510,8 @@ func _layout_guide() -> void:
 func _layout_modals() -> void:
 	_layout_guide()
 	_layout_note()
+	if _central != null and _central.visible:
+		_layout_playtest()
 
 func _layout_note() -> void:
 	if _pad == null:
@@ -504,6 +521,8 @@ func _layout_note() -> void:
 	_pad.custom_minimum_size = panel_size
 	_pad.size = panel_size
 	_pad.position = (viewport_size - panel_size) * 0.5
+	_note_content.custom_minimum_size.x = maxf(1.0, panel_size.x - 32.0)
+	_edit.custom_minimum_size.y = maxf(100.0, panel_size.y - 160.0)
 
 static func guide_panel_size(viewport_size: Vector2) -> Vector2:
 	var available := viewport_size - Vector2(GUIDE_MARGIN * 2.0, GUIDE_MARGIN * 2.0)
@@ -551,10 +570,14 @@ static func qa_shortcuts_text(qa_enabled: bool) -> String:
 	var shortcuts := "[b]Teclas de teste[/b]: "
 	if qa_enabled:
 		shortcuts += "F4 Navegador QA (pausa e prévia de HQ) · "
+	else:
+		shortcuts += "F4 Central Playtest · "
 	shortcuts += "F5 nota · F6 print · F11 tela cheia · F12 diagnóstico · F1 este guia\n"
 	return shortcuts
 
 static func _guide_text() -> String:
+	if OS.has_feature("web"):
+		return "[b]Playtest no navegador[/b]\nUse os botoes [b]Playtest[/b], [b]Relatar[/b] e [b]Capturar[/b]. Eles funcionam com mouse ou toque e em tela cheia.\n\nAs estatisticas sao guardadas neste navegador. Na central Playtest, identifique-se no site e autorize o envio para participar do ranking. Sem conexao, a fila tenta novamente; voce pode baixar os arquivos pendentes.\n\nNao inclua dados pessoais nos relatos ou capturas. Partidas QA, aceleradas e builds nao cadastradas ficam fora do ranking.\n\n" + game_rules_text()
 	return "Este jogo [b]ainda não foi lançado[/b]: você está testando uma versão em construção (v%s). O que você reportar muda o jogo de verdade.\n\n" % Version.VERSION \
 		+ "[b]O que fazer[/b]\n" \
 		+ "1. Jogue seguindo o que foi pedido a você (uma fase, um herói, um chefe...). Não precisa jogar tudo.\n" \
@@ -589,6 +612,10 @@ func _input(ev: InputEvent) -> void:
 	if not ev.is_pressed() or (ev is InputEventKey and ev.echo):
 		return
 	if ev.is_action_pressed(&"ui_cancel"):
+		if _central != null and _central.visible:
+			close_playtest()
+			get_viewport().set_input_as_handled()
+			return
 		if _note_open:
 			close_note()
 			get_viewport().set_input_as_handled()
@@ -603,12 +630,18 @@ func _input(ev: InputEvent) -> void:
 			return
 	if not ev is InputEventKey:
 		return
+	if OS.has_feature("web") and ev.physical_keycode in [KEY_F4, KEY_F5, KEY_F6]:
+		return
 	var shortcut := shortcut_action(ev)
 	if shortcut == &"fullscreen":
 		Game.toggle_fullscreen()
 		get_viewport().set_input_as_handled()
 		return
 	if not Version.evidence_enabled():
+		return
+	if ev.physical_keycode == KEY_F4 and not Version.qa_enabled():
+		open_playtest()
+		get_viewport().set_input_as_handled()
 		return
 	if shortcut == &"console":
 		_open_console()
@@ -684,7 +717,7 @@ func _uses_executable_evidence_directory() -> bool:
 ## para que o caminho nunca saia relativo.
 func _evidence_root() -> String:
 	if _evidence_dir == "":
-		_evidence_dir = evidence_directory_for_executable(OS.get_executable_path())
+		_evidence_dir = evidence_directory_for_executable(OS.get_executable_path()) if _uses_executable_evidence_directory() and not OS.has_feature("web") else "user://evidencias"
 	return _evidence_dir
 
 func _images_dir() -> String:
@@ -726,14 +759,16 @@ func _show_evidence_error(message: String) -> void:
 func _append_text(path: String, text: String) -> bool:
 	if not _prepare_evidence_dir() or not is_allowed_evidence_path(path):
 		return false
-	var file := FileAccess.open(path, FileAccess.READ_WRITE)
+	var file := FileAccess.open(path, FileAccess.READ_WRITE if FileAccess.file_exists(path) else FileAccess.WRITE)
 	if file == null:
 		_show_evidence_error("Não foi possível gravar em evidencias ao lado do executável. Verifique a permissão da pasta da build.")
 		return false
 	file.seek_end()
 	file.store_string(text)
+	file.flush()
+	var ok := file.get_error() == OK
 	file.close()
-	return true
+	return ok
 
 func _write_binary(path: String, bytes: PackedByteArray) -> bool:
 	if not _prepare_evidence_dir() or not is_allowed_evidence_path(path):
@@ -747,6 +782,8 @@ func _write_binary(path: String, bytes: PackedByteArray) -> bool:
 	return true
 
 func _write_note(text: String, ctx: Dictionary) -> bool:
+	if OS.has_feature("web"):
+		return queue_evidence("note", {"text": scrub(text), "context": ctx})
 	var entry := "\n[%s]\nContexto: %s\n%s\n" % [Time.get_datetime_string_from_system(), scrub(JSON.stringify(ctx)), scrub(text)]
 	return _append_text(_relato_path(), entry)
 
@@ -762,15 +799,20 @@ func _sync_game_log() -> void:
 
 func take_print() -> void:
 	if _note_open:
-		toast("Feche o bloco de notas (F5) antes de tirar um print.")
+		toast("Feche o relato antes de tirar uma captura.")
 		return
 	if _guide_open:
 		return
+	close_playtest()
 	if not _prepare_evidence_dir():
 		return
 	var png: PackedByteArray = await _capture()
 	if png.is_empty():
 		_show_evidence_error("Não foi possível capturar a tela para salvar o print.")
+		return
+	if OS.has_feature("web"):
+		if queue_evidence("image", {"png_base64": Marshalls.raw_to_base64(png), "context": context()}):
+			toast("Captura salva na fila de evidencias")
 		return
 	var dt := Time.get_datetime_dict_from_system()
 	var stem := "print-%04d-%02d-%02d-%02d%02d%02d" % [dt.year, dt.month, dt.day, dt.hour, dt.minute, dt.second]
@@ -787,7 +829,184 @@ func take_print() -> void:
 func is_note_open() -> bool:
 	return _note_open
 
+func record_run(b: Object, outcome := "incomplete", final := false) -> void:
+	if not Version.evidence_enabled() or b.run_record.run_id == "":
+		return
+	_last_run = b.run_record.snapshot(b, outcome)
+	if OS.has_feature("web"):
+		evidence_queue.enqueue(_last_run.run_id, "/api/playtest/runs", {"run": _last_run})
+		return
+	if not _prepare_evidence_dir():
+		return
+	var line := JSON.stringify(_last_run) + "\n"
+	if final:
+		if _append_statistics(line):
+			DirAccess.remove_absolute(_evidence_root().path_join("logs/%s-active.log" % _last_run.run_id))
+	else:
+		_write_binary(_evidence_root().path_join("logs/%s-active.log" % _last_run.run_id), line.to_utf8_buffer())
+
+func _append_statistics(line: String) -> bool:
+	var index := 0
+	var path := _evidence_root().path_join("logs/estatisticas.log")
+	while FileAccess.file_exists(path):
+		var f := FileAccess.open(path, FileAccess.READ)
+		var length := f.get_length()
+		f.close()
+		if length + line.to_utf8_buffer().size() <= 4 * 1024 * 1024 and FileAccess.get_file_as_string(path).count("\n") < 200:
+			break
+		index += 1
+		path = _evidence_root().path_join("logs/estatisticas-%03d.log" % index)
+	return _append_text(path, line)
+
+func queue_evidence(kind: String, payload: Dictionary) -> bool:
+	var id := Crypto.new().generate_random_bytes(16).hex_encode()
+	payload = payload.duplicate(true)
+	payload.merge({"evidence_id": id, "kind": kind, "run_id": _last_run.get("run_id", ""), "build_id": Version.build_id(),
+		"task_id": String(_last_run.get("context", {}).get("task_id", Game.profile.data.settings.get("playtest_task", "general")))})
+	return evidence_queue.enqueue(id, "/api/playtest/evidence", payload)
+
+func _build_playtest_buttons() -> void:
+	if not Version.evidence_enabled():
+		return
+	var bar := HBoxContainer.new()
+	_playtest_bar = bar
+	bar.set_anchors_and_offsets_preset(Control.PRESET_TOP_RIGHT)
+	bar.position = Vector2(-320, 56)
+	add_child(bar)
+	for action in [["Playtest", open_playtest], ["Relatar", open_note], ["Capturar", take_print]]:
+		var button := Button.new()
+		button.text = action[0]
+		button.custom_minimum_size = Vector2(100, 48)
+		button.pressed.connect(action[1])
+		bar.add_child(button)
+	_central = PanelContainer.new()
+	_central.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
+	_central.visible = false
+	add_child(_central)
+	_central_scroll = ScrollContainer.new()
+	_central_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	_central.add_child(_central_scroll)
+	var box := VBoxContainer.new()
+	box.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	_central_scroll.add_child(box)
+	_central_status = Label.new()
+	_central_status.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	box.add_child(_central_status)
+	var task := LineEdit.new()
+	task.placeholder_text = "Task da proxima partida (general)"
+	task.text = String(Game.profile.data.settings.get("playtest_task", "general"))
+	task.text_changed.connect(func(value): Game.profile.data.settings.playtest_task = value.strip_edges(); Game.save())
+	box.add_child(task)
+	if OS.has_feature("web"):
+		var consent := CheckBox.new()
+		consent.text = "Autorizar envio"
+		consent.button_pressed = bool(Game.profile.data.settings.get("playtest_upload", false))
+		consent.toggled.connect(func(on): Game.profile.data.settings.playtest_upload = on; Game.save())
+		box.add_child(consent)
+		var privacy := Label.new()
+		privacy.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		privacy.text = "Enviar partidas, relatos e capturas ao site. Identidade publica por pseudonimo; relatos e imagens sao privados da equipe. Evite dados pessoais."
+		box.add_child(privacy)
+		var sign_in := Button.new()
+		sign_in.text = "Entrar no site"
+		sign_in.pressed.connect(func(): JavaScriptBridge.eval("window.open('/playtest','_blank','noopener')"))
+		box.add_child(sign_in)
+		var download := Button.new()
+		download.text = "Baixar pendentes"
+		download.pressed.connect(download_pending)
+		box.add_child(download)
+		var retry := Button.new()
+		retry.text = "Tentar envio agora"
+		retry.pressed.connect(func(): evidence_queue.retry_now())
+		box.add_child(retry)
+	else:
+		var instructions := Label.new()
+		instructions.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		instructions.text = "F5 relata · F6 captura. Envie logs/estatisticas.log e os arquivos numerados pelo comando /playtest enviar na task do Discord. Relatos e prints vao separados."
+		box.add_child(instructions)
+	var close := Button.new()
+	close.text = "Voltar ao jogo"
+	close.pressed.connect(close_playtest)
+	box.add_child(close)
+
+func open_playtest() -> void:
+	if _central == null or _note_open or _guide_open:
+		return
+	if _central.visible:
+		close_playtest()
+		return
+	_central_paused = get_tree().paused
+	get_tree().paused = true
+	_central.visible = true
+	TouchUI.prepare(self)
+	_central_status.text = "Build %s\n%s\nTask: %s\nO ranking aceita somente testers aprovados." % [Version.build_id(), evidence_queue.status, String(Game.profile.data.settings.get("playtest_task", "general"))]
+	_layout_playtest()
+
+func _layout_playtest() -> void:
+	_central.size = Vector2(minf(480, get_viewport().get_visible_rect().size.x - 32), minf(420 if OS.has_feature("web") else 320, get_viewport().get_visible_rect().size.y - 32))
+	_central.position = (get_viewport().get_visible_rect().size - _central.size) * 0.5
+
+func close_playtest() -> void:
+	if _central != null and _central.visible:
+		_central.visible = false
+		get_tree().paused = _central_paused
+
+func download_pending() -> void:
+	if not OS.has_feature("web"):
+		return
+	var stats := ""
+	for entry in evidence_queue.entries:
+		if entry.endpoint == "/api/playtest/runs":
+			stats += JSON.stringify(entry.payload.run) + "\n"
+		elif entry.payload.kind == "note":
+			JavaScriptBridge.download_buffer(JSON.stringify(entry.payload).to_utf8_buffer(), "relato-%s.txt" % entry.id, "text/plain")
+		elif entry.payload.kind == "image":
+			JavaScriptBridge.download_buffer(Marshalls.base64_to_raw(entry.payload.png_base64), "print-%s.png" % entry.id, "image/png")
+	if stats != "":
+		JavaScriptBridge.download_buffer(stats.to_utf8_buffer(), "estatisticas.log", "text/plain")
+
+func _process(_delta: float) -> void:
+	if _playtest_bar != null:
+		_playtest_bar.visible = not _guide_open and not _note_open and not _qa_open
+	if _central != null and _central.visible:
+		_central_status.text = "Build %s\n%s\nO ranking aceita somente testers aprovados." % [Version.build_id(), evidence_queue.status]
+	if not Version.evidence_enabled() or not OS.has_feature("web") or not bool(Game.profile.data.settings.get("playtest_upload", false)):
+		return
+	if _inflight != "":
+		if Time.get_unix_time_from_system() - _inflight_started > 25.0:
+			evidence_queue.fail(_inflight, _inflight_revision)
+			_inflight = ""
+		return
+	if evidence_queue.entries.is_empty():
+		return
+	var entry: Dictionary = evidence_queue.pending()
+	if entry.is_empty():
+		return
+	if _web_receipt == null:
+		_web_receipt = JavaScriptBridge.create_callback(_web_received)
+		JavaScriptBridge.get_interface("window").nottgardEvidenceReceipt = _web_receipt
+	_inflight = entry.id
+	_inflight_revision = entry.revision
+	_inflight_started = Time.get_unix_time_from_system()
+	evidence_queue.status = "Enviando"
+	var token: String = entry.id + ":" + entry.revision
+	var js := "fetch(%s,{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json'},body:%s}).then(async r=>{let d=await r.json();window.nottgardEvidenceReceipt(%s,JSON.stringify({ok:r.ok&&d.ok&&(d.run_id||d.evidence_id)===%s,code:r.status}));}).catch(()=>window.nottgardEvidenceReceipt(%s,'{\"ok\":false}'));" % [JSON.stringify(entry.endpoint), JSON.stringify(JSON.stringify(entry.payload)), JSON.stringify(token), JSON.stringify(entry.id), JSON.stringify(token)]
+	JavaScriptBridge.eval(js)
+
+func _web_received(args: Array) -> void:
+	if args.size() != 2 or String(args[0]) != _inflight + ":" + _inflight_revision:
+		return
+	var receipt = JSON.parse_string(String(args[1]))
+	if receipt is Dictionary and receipt.get("ok", false):
+		evidence_queue.acknowledge(_inflight, _inflight_revision)
+	else:
+		evidence_queue.fail(_inflight, _inflight_revision, int(receipt.get("code", 0)) if receipt is Dictionary else 0)
+	_inflight = ""
+
 func open_note() -> void:
+	if _guide_open or _note_open:
+		return
+	close_playtest()
 	_pending_ctx = context()
 	_note_open = true
 	_paused_before = get_tree().paused
@@ -807,7 +1026,7 @@ func close_note() -> void:
 	if text != "":
 		if _write_note(text, _pending_ctx):
 			Game.logline("Evidência: relato registrado")
-			toast("Relato salvo em evidencias/relato.txt")
+			toast("Relato salvo na fila de evidencias" if OS.has_feature("web") else "Relato salvo em evidencias/relato.txt")
 
 func _on_note_changed() -> void:
 	if _edit.text.length() > NOTE_MAX:

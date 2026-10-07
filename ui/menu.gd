@@ -54,6 +54,11 @@ func _ready() -> void:
 	RenderingServer.set_default_clear_color(Color(0.06, 0.05, 0.08))
 	get_tree().paused = false
 	var p: Profile = Game.profile
+	if Version.evidence_enabled():
+		var ranking := VBoxContainer.new()
+		ranking.set_script(preload("res://ui/leaderboard.gd"))
+		ranking.name = "Ranking"
+		%Tabs.add_child(ranking)
 	heroes = p.heroes_sorted()
 	stages = p.stages_sorted()
 	version_label.text = "%s v%s%s" % [Version.GAME_NAME, Version.VERSION, "  ·  build de %s (%s)" % [Version.profile_slug(), Version.build_id()] if Version.evidence_enabled() else ""]

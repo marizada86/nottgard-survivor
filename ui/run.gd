@@ -26,6 +26,7 @@ var decoy_nodes := {}  # MEC-029: id da isca (Battle) -> visual
 var enemy_nodes := {}
 var start_pos := Vector2.ZERO
 var _result_shown := false
+var _stats_checkpoint_at := 60.0
 var _shake := 0.0
 var _numbers := 0
 const NUMBER_MERGE_MS := 350
@@ -80,6 +81,11 @@ func _ready() -> void:
 	_load_stage()
 	if Game.qa_sandbox:
 		battle.qa_prepare(Game.qa_launch)
+	var stats_ctx := Game.battle_ctx()
+	stats_ctx.task_id = String(Game.profile.data.settings.get("playtest_task", "general"))
+	if Version.evidence_enabled():
+		battle.run_record.begin(battle, stats_ctx, "web" if OS.has_feature("web") else "windows", Game.qa_sandbox)
+	Playtest.record_run(battle)
 	if battle.state == "revive_offer":
 		hud.show_revive_offer(battle)
 	hud.toast("%s — %s" % [battle.stage.name, Data.table("stage_story").get(battle.stage_id, {}).get("epigrafe", battle.stage.sub)], Color(0.9, 0.85, 0.6))
@@ -392,6 +398,7 @@ func _controller_recovery(reason: String) -> void:
 	hud.toast(reason)
 
 func _abandon() -> void:
+	battle.death_reason = "abandoned"
 	hud.clear_mobile_input()
 	get_tree().paused = false
 	_paused = false
@@ -528,6 +535,10 @@ func _physics_process(dt: float) -> void:
 		_show_result()
 
 func _process(dt: float) -> void:
+	if battle != null and not _result_shown and battle.run_time >= _stats_checkpoint_at:
+		_stats_checkpoint_at = battle.run_time + 60.0
+		battle.run_record.checkpoint(battle, "minute")
+		Playtest.record_run(battle)
 	if hero_node == null:
 		return
 	_shake = maxf(0.0, _shake - dt * 3.0)
@@ -559,6 +570,9 @@ func _show_result() -> void:
 	_result_shown = true
 	get_tree().paused = false
 	var res := battle.result()
+	var outcome := "abandoned" if battle.death_reason == "abandoned" else "extracted" if battle.extracted else "won" if res.won else "dead"
+	battle.run_record.checkpoint(battle, "finish")
+	Playtest.record_run(battle, outcome, true)
 	Game.finish_run(res)
 	Sfx.stop_ambience()
 	var new_achievements: Array = Game.last_summary.get("achievements", [])
@@ -569,6 +583,7 @@ func _show_result() -> void:
 	Sfx.start_music("victory" if res.won else "defeat")
 
 func _record_stage_reached(stage_id: String) -> void:
+	battle.run_record.checkpoint(battle, "stage_reached")
 	var hq_ids := HQCatalog.newly_triggered_ids(Game.profile.data, "stage_reached", stage_id)
 	if Game.profile.mark_stage_reached(stage_id):
 		Game.save()
@@ -583,6 +598,7 @@ func _process_hq_milestones() -> void:
 		await _record_stage_cleared(battle.stage_id, "stage_cleared")
 
 func _record_stage_cleared(stage_id: String, event_type: String) -> void:
+	battle.run_record.checkpoint(battle, "stage_cleared", {"event": event_type})
 	var hq_ids := HQCatalog.newly_triggered_ids(Game.profile.data, event_type, stage_id)
 	var changed := Game.profile.mark_stage_reached(stage_id)
 	changed = Game.profile.mark_stage_cleared(stage_id) or changed
@@ -593,6 +609,10 @@ func _record_stage_cleared(stage_id: String, event_type: String) -> void:
 func _present_hqs(hq_ids: Array[String]) -> void:
 	for hq_id in hq_ids:
 		await _present_hq(hq_id)
+
+func _exit_tree() -> void:
+	if battle != null and not _result_shown:
+		Playtest.record_run(battle)
 
 func _present_hq(hq_id: String) -> void:
 	hud.clear_mobile_input()

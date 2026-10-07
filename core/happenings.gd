@@ -288,6 +288,7 @@ func _soldier_step(b: Battle, a: Dictionary, dt: float) -> void:
 	elif float(a.atk_cd) <= 0.0:
 		a.atk_cd = 1.0
 		var dmg := float(Dice.roll(b.rng, String(a.dice)))
+		b.run_record.hit("effect:ally", dmg, target.hp)
 		target.hp -= dmg
 		target.hit_flash = 0.12
 		b.events.append({"type": "hit", "pos": target.pos, "amount": int(dmg), "crit": false})
