@@ -1,7 +1,7 @@
 {
-  "status": "VALIDATED_READY_TO_PUBLISH",
+  "status": "AUTHORIZED_SCOPE_PUBLISHED_PILOT_ASSETS_PENDING",
   "recorded_at": "2026-10-07T03:10:57.121375+00:00",
-  "authorization": "atena junte tudo que temos e faÃ§a push",
+  "authorization": "atena junte tudo que temos e faÃƒÂ§a push",
   "coordination": "Sim, coordene com esse chat",
   "remote_commits_incorporated": 13,
   "local_commits_preserved": 4,
@@ -92,7 +92,8 @@
       "files": 207,
       "bytes": 52921503
     },
-    "originals_preserved": true
+    "originals_preserved": true,
+    "published": "records only; source/image publication still awaiting owner decision"
   },
   "exclusions": [
     "site-files",
@@ -455,5 +456,16 @@
     ],
     "report": ".atena/generated/consolidacao-push/checks/add-result.json"
   },
-  "raw_log_whitespace": "Original site-build.log preserved verbatim, including its final blank line."
+  "raw_log_whitespace": "Original site-build.log preserved verbatim, including its final blank line.",
+  "publication": {
+    "verified_at": "2026-10-07T03:17:59.143829+00:00",
+    "commit": "0e5e4977b63e0ba98990e7a2c54f43093098ba31",
+    "local_main": "0e5e4977b63e0ba98990e7a2c54f43093098ba31",
+    "remote_main": "0e5e4977b63e0ba98990e7a2c54f43093098ba31",
+    "force": false,
+    "github_relocation_reported": "https://github.com/marizada86/nottgard-survivor.git",
+    "primary_sync": "fast-forward",
+    "backup_preserved": true,
+    "recovery_stash": "7eef267cc8af417ed743aebefb975527f34ba844"
+  }
 }

@@ -2,9 +2,9 @@ id: PLAN-073
 spec_id: SPEC-140
 spec: .atena/specs/SPEC-140-consolidacao-e-push.yaml
 mode: per-plan
-status: VALIDATED_READY_TO_PUBLISH
+status: AUTHORIZED_SCOPE_PUBLISHED_PILOT_ASSETS_PENDING
 request_classification: PLAN_DEVIATION
-authorization_verbatim: 'atena junte tudo que temos e faça push'
+authorization_verbatim: 'atena junte tudo que temos e faÃ§a push'
 coordination_authorization: 'Sim, coordene com esse chat'
 checkpoint: S-003
 return:
@@ -21,4 +21,6 @@ pilot_publication:
   safer_selection: {files: 207, bytes: 52921503, manifest: .atena/generated/consolidacao-push/curated-durvall.json, status: AWAITING_OWNER_APPROVAL}
   local_sources_preserved: true
 validated: ["import exit 0", "suite zero falhas", "smoke nove fases", "ficha 21 capturas e zero falhas de geometria", "backlog zero alertas"]
-remaining: ["push sem force", "sincronizacao local e verificacao remota", "decisao sobre publicacao dos pilotos"]
+remaining: ["decisao do dono sobre publicacao dos pilotos Durvall; originais locais preservados"]
+
+publication: {verified_commit: 0e5e4977b63e0ba98990e7a2c54f43093098ba31, local_main_matches_remote: true, force: false, verified: "2026-10-07"}

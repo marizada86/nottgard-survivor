@@ -16,15 +16,16 @@ previous_plan_cursor:
   current: 'PLAN-059 (SPEC-125) commitado e publicado (05264f0, 1392627) em 2026-10-05; o playtest decide Docas, Molor e fases finais.'
   next: 'Retomar PLAN-053 (imagens, Shu: attack_02, death_03, death_04) e/ou abrir spec de balanceamento BAL-018 (precisa de linha de base do bot por heroi). Push da main (1 a 3 commits a frente) exige aprovacao.'
 local_git_receipts:
+  - {plan: PLAN-073, request_classification: PLAN_DEVIATION, authorization: "atena junte tudo que temos e faça push", commit: 0e5e4977b63e0ba98990e7a2c54f43093098ba31, branch: main, result: PUBLISHED_VERIFIED, pushed: true, evidence: ".atena/evidence/consolidacao-push-2026-10-06.json", note: "Codigo, arte aprovada, mobile, controles, ranking e correcoes remotas publicados; imagens dos pilotos Durvall permanecem locais aguardando decisao."}
   - plan: PLAN-067
     request_classification: IN_PLAN
     authorization: 'Dono solicitou faca o commit apos correcao mobile.'
     commit: 503ccec4003efff9260821214e75bf49c1b6ab0b
     branch: main
     scope: 'Mobile e suas evidencias; linhas MEC-049/ART-036 isoladas. Durvall/PLAN-068 e outros pedidos preservados.'
-    result: LOCAL_COMMITTED
+    result: PUBLISHED
     source_validation: 'Hashes do piloto testado conferidos antes do commit; 144 verificacoes zero falhas, suite zero, smoke nove fases.'
-    pushed: false
+    pushed: true
     note: 'Estado operacional local reconciliado apos o commit; snapshot do checkpoint Git no plano especifico registra a preparacao anterior.'
 suspension:
   playtest_ranking_return:
@@ -99,7 +100,7 @@ deferred_requests:
     proposed_plan: PLAN-071
     state_file: '.atena/state/plan-071-playtest-ranking.yaml'
     spec: '.atena/specs/SPEC-138-playtest-e-ranking.md'
-    approval_basis: '2026-10-06: inicie a implementacao; Por plano — executar todo o escopo local aprovado.'
+    approval_basis: '2026-10-06: inicie a implementacao; Por plano â€” executar todo o escopo local aprovado.'
     note: 'Mobile entregue localmente; aceite nativo preservado. Pipeline do dono e gates remotos separados.'
   - id: DEV-002
     request: 'Controles e menus mobile; joystick de toque somente para andar. Proposta solicitada pelo dono em 2026-10-06.'
@@ -122,6 +123,7 @@ completed_plans:
     commits: ['7d2f262 B-002', '35796ba B-003', '5fc8d04 B-004', 'eecced9 B-005', 'd86fbef B-007', '0cb3e8d release 0.3.1']
     note: 'Pontos abertos transferidos ao BAL-018: Docas facil (3%), Feng-tu 6%, rodada com bot novato, RNG do bot nao semeado. Criterios de aceite numericos (nivel medio mapas 1 e 2; % Raro/Unico no tier 0) nunca fixados; dono aceitou sem eles.'
 completed_side_plans:
+  - {id: PLAN-073, spec_id: SPEC-140, status: AUTHORIZED_SCOPE_PUBLISHED_PILOT_ASSETS_PENDING, commit: 0e5e4977b63e0ba98990e7a2c54f43093098ba31, evidence: ".atena/evidence/consolidacao-push-2026-10-06.json", note: "Main local sincronizada por fast-forward; originais e backups preservados. PLAN-071 e retornos mantidos."}
   - {id: PLAN-058, spec_id: SPEC-124, status: IMPLEMENTED_COMMITTED, commit: 69ec21c, evidence: EVID-159, note: 'Velocidade dos inimigos +20% (enemy_speed_mult); aguarda playtest.'}
   - {id: PLAN-072, spec_id: SPEC-139, status: COMPLETED_LOCAL, evidence: '.atena/evidence/fila-025-integracao-2026-10-06.json', note: 'FILA-025 integrada com autorizacao vamos la; cursor de PLAN-071 preservado.'}
   - {id: PLAN-066, spec_id: SPEC-133, status: IMPLEMENTED_PUBLISHED, commit: d370a14, evidence: EVID-171, mode: per-step, closed: '2026-10-06', note: 'Sylas, blast_dice 3d8 -> 1d10 (BAL-021); publicado na main; aguarda playtest; reverter = 3d8.'}
