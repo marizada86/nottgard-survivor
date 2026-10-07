@@ -1,0 +1,19 @@
+# Plano de Atena em 2026-10-06 a pedido do dono (relato do Vitão); aprovado por plano.
+# Side-plan: nao e o active_plan de plan.yaml.
+version: 1
+plan:
+  id: PLAN-068
+  spec_id: SPEC-135
+  cards: [BUG-032]
+  title: Bau, bau do chefe e portal nao nascem dentro de bloqueio de cenario
+  status: IMPLEMENTED_COMMITTED_PUSHED
+  approval: {mode: per-plan, status: APPROVED_BY_OWNER, approver: dono, approved_at: '2026-10-06'}
+  decisions: {prioridade: P0, escopo: 'global em _add_interaction; fixos autorados ficam de fora'}
+  blocking_gaps: 0
+  checkpoint: {step: S-004, status: DONE, commit: 9f32c8a, evidence: EVID-174, note: 'commit, push e exportacao do build so com aprovacao; push publica o release latest'}
+  steps:
+    S-001: 'DONE: _add_interaction resolve posicao alcancavel (core/battle.gd)'
+    S-002: 'DONE: interativos fixos com snap=false'
+    S-003: 'DONE: teste novo em tests/test_battle.gd; suite 0 falhas; bot sem erro (EVID-174)'
+    S-004: 'DONE: commit local e push aprovados pelo dono em 2026-10-06; build local (.exe) nao exportado'
+  gates_independent_of_approval_level: ['commit local', 'push', 'build/release']

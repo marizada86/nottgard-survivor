@@ -507,6 +507,8 @@ func _apply_reward(b: Battle, r: Dictionary, at: Vector2) -> void:
 	if not sp.is_empty():
 		for i in int(sp.get("n", 3)):
 			b._spawn(String(sp.id), at + Vector2(b.rng.randf_range(-2.0, 2.0), b.rng.randf_range(-2.0, 2.0)))
+	if bool(r.get("wipe", false)):
+		b.wipe_map()
 	var al: Dictionary = r.get("allies", {})
 	if not al.is_empty():
 		for i in int(al.get("n", 2)):

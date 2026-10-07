@@ -1,0 +1,19 @@
+# Plano de Atena em 2026-10-06 a pedido do dono (relato do Manzi); aprovado por plano.
+# Side-plan: nao e o active_plan de plan.yaml.
+version: 1
+plan:
+  id: PLAN-069
+  spec_id: SPEC-136
+  cards: [MEC-051]
+  title: Graz'zt limpa o mapa (mata comuns e destrutiveis, poupa chefe e elites)
+  status: IMPLEMENTED_COMMITTED_PUSHED
+  approval: {mode: per-plan, status: APPROVED_BY_OWNER, approver: dono, approved_at: '2026-10-06'}
+  decisions: {drops: 'normais (_kill)', ally: 'segue 25 s, sem mudar PV/dano', custo: 'inalterado'}
+  blocking_gaps: 0
+  checkpoint: {step: S-004, status: DONE, commit: f17fae9, evidence: EVID-175, note: 'commit (separado do PLAN-068), push e build so com aprovacao; push publica o release latest'}
+  steps:
+    S-001: 'DONE: Battle.wipe_map (core/battle.gd)'
+    S-002: 'DONE: efeito wipe em happenings._apply_reward e no evento o_nome_tres_vezes'
+    S-003: 'DONE: teste _check_grazzt_wipe; suite 0 falhas; mutacao confirma o teste; bot sem erro (EVID-175)'
+    S-004: 'DONE: commit local e push aprovados pelo dono em 2026-10-06; build local (.exe) nao exportado'
+  gates_independent_of_approval_level: ['commit local', 'push', 'build/release']

@@ -1,0 +1,17 @@
+version: 1
+plan:
+  id: PLAN-066
+  spec_id: SPEC-133
+  cards: [BAL-021]
+  title: Reduzir o dano da explosao do Passo pelas Sombras (Sylas), 3d8 -> 1d10
+  status: COMPLETED_PUBLISHED
+  kind: side-plan (arquivos disjuntos das mudancas soltas da SPEC-129 B-003: boons, boon_effects, enemy_view)
+  approval: {mode: per-step, status: APPROVED_BY_OWNER, approver: dono, approved_at: '2026-10-06'}
+  decisions: {valor: '1d10', escopo: 'so blast_dice; raio, atracao, duracao, PV, recarga mantidos'}
+  checkpoint: {step: S-004, status: DONE, commit: d370a14, evidence: EVID-171, closed_by_owner: '2026-10-06', next_gate: 'playtest decide se baixa mais (blast_radius ou decoy_aggro)'}
+  step_log: {S-001: 'DONE, aprovada pelo dono em 2026-10-06', S-002: 'DONE, testes 0 falhas e bot antes/depois (EVID-171); executada em seguida porque o dono pediu commit e push na mesma mensagem', S-003: 'DONE', S-004: 'DONE, commit d370a14 e push (a main ja o tinha quando o push foi pedido)'}
+  steps:
+    S-001: 'Editar data/abilities.json: sylas.blast_dice 3d8 -> 1d10'
+    S-002: 'Rodar a suite de testes e, se viavel, o bot com o Sylas (antes/depois)'
+    S-003: 'EVID, cartao BAL-021, nota na SPEC-114 e status da SPEC-133'
+    S-004: 'Commit local so com aprovacao explicita (git add apenas dos arquivos deste plano)'

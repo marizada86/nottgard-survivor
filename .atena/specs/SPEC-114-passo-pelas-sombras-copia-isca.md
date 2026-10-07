@@ -33,3 +33,4 @@ Bot (3 sementes, Dagruve): níveis de Sylas 12, 17 e 4 contra 4, 3 e 12 antes; u
 - Visual provisório: o próprio sprite do Sylas em roxo translúcido. Arte própria e VFX da explosão em ART-027.
 - Inimigos à distância ainda atiram na direção da cópia; seus projéteis só ferem o herói (sem efeito na cópia).
 - Conferir em run real e ajustar números no playtest.
+- **2026-10-06 (SPEC-133, BAL-021):** `blast_dice` baixou de `3d8` para `1d10` (a explosão limpava a fase 1); ver EVID-171.

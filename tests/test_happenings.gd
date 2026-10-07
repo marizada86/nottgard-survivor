@@ -47,6 +47,7 @@ func run() -> Array:
 	_check_intercept(out)
 	_check_invasion_rescue_arena(out)
 	_check_pact(out)
+	_check_grazzt_wipe(out)
 	_check_shift_pilgrimage_quake(out)
 	return out
 
@@ -232,6 +233,43 @@ func _check_invasion_rescue_arena(out: Array) -> void:
 	a._kill(_tagged(a)[0])
 	if not a.happenings.arena.is_empty() or not a.hero.temp_mods.has("speed_pct"):
 		out.append("vencer o duelo deveria abrir a arena e dar a Primeira aprovação")
+
+func _check_grazzt_wipe(out: Array) -> void:
+	var b := _bat("goranthis")
+	var common := [b.spawn_for_test("ezro", b.hero.pos + Vector2(6, 0)), b.spawn_for_test("ezro", b.hero.pos + Vector2(-6, 2))]
+	var breakable := b.spawn_for_test("estatua_rachada_quebravel", b.hero.pos + Vector2(4, 4))
+	var boss := b.spawn_for_test("sacerdote_mente_derretida", b.hero.pos + Vector2(8, 8))
+	var elite := b.spawn_for_test("ezro", b.hero.pos + Vector2(-8, 8))
+	elite.affix = "explosivo"
+	var chest_elite := b.spawn_for_test("ezro", b.hero.pos + Vector2(8, -8))
+	chest_elite.drops_chest = true
+	var bound := b.spawn_for_test("ezro", b.hero.pos + Vector2(-8, -8))
+	bound.event_tag = "OBJ"
+	b.hero.gold = 100
+	_fire(b, "goranthis", "o_nome_tres_vezes")
+	var p: Dictionary = _points(b, "event_pact")[0]
+	b.hero.pos = p.pos
+	p.born_at = -10.0
+	if not b.interact() or b.state != "shop":
+		out.append("E no eco de Graz'zt deveria abrir o pacto")
+		return
+	var kills0 := int(b.stats.kills)
+	b.choose(0)
+	for e in common:
+		if not e.dead:
+			out.append("Graz'zt deveria matar o inimigo comum")
+	if not breakable.dead:
+		out.append("Graz'zt deveria destruir os destrutíveis")
+	if boss.dead or elite.dead or chest_elite.dead or bound.dead:
+		out.append("chefe, elites e inimigos de objetivo devem sobreviver à limpeza")
+	if int(b.stats.kills) < kills0 + 3:
+		out.append("as mortes da limpeza deveriam contar como mortes normais")
+	if b.happenings.allies.is_empty():
+		out.append("Graz'zt deveria continuar lutando ao lado do herói")
+	if b.hero.gold > 70:
+		out.append("o pacto de Graz'zt deveria custar um terço das moedas (restam %d)" % int(b.hero.gold))
+	if not b.events.any(func(ev): return ev.type == "decoy_blast"):
+		out.append("a limpeza deveria emitir o evento visual")
 
 func _check_pact(out: Array) -> void:
 	var b := _bat("shendilavri")

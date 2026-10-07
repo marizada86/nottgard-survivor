@@ -1,8 +1,9 @@
 ---
 id: SPEC-129
 title: Dinamismo da run — bênçãos divinas com dinâmica própria e eventos ligados aos deuses
-status: draft-awaiting-approval
+status: approved-per-batch (2026-10-06); B-001 em execução
 origin: pedido-do-dono-2026-10-05 (após T04)
+approval: dono, 2026-10-06 — por lote; D1 a D5 como sugeridas (Lliira e Tou Um primeiro; rivalidade só troca o Favor; maldição obrigatória só nas `stat` atuais; eventos divinos somam; Nott depois)
 cards: MEC-047, BAL-019, MEC-005, MEC-038
 evidence: EVID-163, EVID-165
 risk: alto (nova forma de jogar); entrega em lotes pequenos, um deus por vez
@@ -78,3 +79,32 @@ Alto no conjunto, baixo por lote (um commit isolado, `git revert`). O principal 
 
 ## Fora do escopo
 Armas, magias e equipamentos novos (MEC-042); NPC de upgrade de magia (MEC-041); Marcas do Abismo (MEC-040); ficha `C` e habilidade ativa (MEC-043 a MEC-045, SPEC-127).
+
+## B-002 detalhado (proposta para confirmação do dono, 2026-10-06)
+
+Duas bênçãos novas, cada uma de uma família nova, sem alterar as 14 atuais (que ficam no ar como controle; ver EVID-166). Ambas entram no sorteio do altar como as demais.
+
+### 1. `lliira_juramento` — **Juramento de Lliira** (família `oath`)
+Base no Vault: Lliira é a divindade de Brook; o *Julgamento da Glória* cobra "atos que ofuscam as palavras" e "cumpra seu juramento, ou o julgamento será inevitável". Quem quebra o juramento pode pedir perdão (a bênção não mata).
+- **Ciclo:** a cada **75 s** abre-se um juramento de **40 s**: *"Aguente 40 s levando no máximo 3 golpes."* O HUD mostra o prazo e os golpes restantes.
+- **Cumprido:** **Glória** por 30 s: +25% de dano, +10% de velocidade (reaproveita `temp_mods`, o mesmo mecanismo da Bênção do Selo).
+- **Quebrado (4º golpe):** **Julgamento** por 20 s: −12% de dano; sem perda de PV, sem morte, o juramento seguinte começa no próximo ciclo.
+- **Sem custo fixo:** a bênção não dá estatística própria; todo o valor vem de cumprir ou não (custo próprio, como decidido em D3).
+- Parâmetros em dados (`oath`: `cycle`, `window`, `max_hits`, `reward`, `penalty`), ajustáveis sem mexer em código.
+
+### 2. `tou_um_caminho` — **Caminho da Estrela** (família `path`)
+Base no Vault: a Estrela do Norte é uma **miragem que não se aproxima**; quem a segue com fé é curado, mas **quem a segue por muito tempo "acaba derrotado, no tempo dela"**.
+- Uma **estrela** aparece no mapa a uns 14 tiles do herói; quando ele chega a 4 tiles, ela **recua** para outro ponto distante (sempre dentro do mapa, a mais de 10 tiles do herói).
+- **Seguir** (andar com a estrela dentro de ±60° da direção do movimento) cura **+1,2 PV/s** enquanto durar. Parado ou fugindo, não cura.
+- **Fé demais:** a cada **60 s acumulados seguindo** vem a **Exaustão**: −10% de velocidade por 15 s (o "tempo dela"); o contador zera.
+- Marcador na tela e seta na borda (arte provisória: losango dourado; ART a registrar).
+- Faz o jogador **atravessar o mapa** em vez de ficar parado; o risco é puxar o herói para uma horda.
+
+### Implementação (sem tocar em arquivos de outras sessões)
+- Novo `core/boon_kinds.gd` (classe `BoonKinds`) com o estado e a lógica de `oath` e `path`; `core/battle.gd` ganha só os ganchos (chamada em `step`, contagem de golpes no dano e limpeza no início de fase). `data/boons.json` ganha `kind` e os blocos de parâmetros; `data/boon_effects.json` ganha `oath_glory` e `star_path`; `_boon_effect_desc` ganha as duas descrições.
+- Interface: linha de juramento e marcador da estrela em `ui/hud.gd` / `ui/overlay.gd`; cartão de oferta mostra o custo e a regra antes de aceitar (SPEC-094).
+- `tools/bal_bencaos.gd`: o piloto passa a **seguir a estrela** quando calmo, senão o Tou Um mediria zero por culpa do bot.
+- Testes novos `tests/test_boon_kinds.gd`: juramento cumprido, quebrado (nunca mata), reinício no ciclo seguinte; estrela recua, cura só ao seguir, exaustão aos 60 s; semente fixa. `tests/run_all.gd` 0 falhas e `tools/audit_projeto.gd` 0 erros.
+
+### Aceite e reversão
+Duas bênçãos aparecem no altar com texto claro; as 14 antigas ficam idênticas; bot mede as duas (EVID-169) sem passar de +0,5 fase nem ficar abaixo do controle em mais de 0,3; um commit por bênção (`git revert`), motor primeiro.

@@ -61,6 +61,7 @@ var projectiles: Array = []
 var zones: Array = []
 var decoys: Array = []  # MEC-029: cópias-isca do Passo pelas Sombras
 var happenings := Happenings.new()  # SPEC-118: acontecimentos exclusivos por fase
+var kinds := BoonKinds.new()  # SPEC-129: bênçãos de família (juramento, caminho da estrela)
 var pact_title := ""
 var _seed := 1
 var _decoy_serial := 0
@@ -193,6 +194,7 @@ func load_stage(stage_key: String) -> void:
 	stage_rule = Data.table("stage_rules").get(stage_key, {}).duplicate(true)
 	stage_events = Happenings.select(stage_key, Data.table("stage_events").get(stage_key, []), _seed)
 	happenings.reset()
+	kinds.reset_stage(self)
 	enemies.clear()
 	projectiles.clear()
 	zones.clear()
@@ -531,6 +533,7 @@ func step(screen_dir: Vector2, dt: float) -> void:
 	_stage_rule_step(dt)
 	_stage_event_step()
 	hero.step(screen_dir, dt)
+	kinds.step(self, dt)
 	happenings.post_hero_step(self)
 	_update_postboss_fog(dt)
 	if hero.m("regen") > 0.0:
@@ -1249,6 +1252,7 @@ func _hurt_hero(dmg: float, src: String, bypass_generic_defenses: bool = false) 
 		invuln = maxf(invuln, HIT_INVULN)
 	stats.damage_taken += dmg
 	stats.clean_kills = 0
+	kinds.on_hit(self, src)
 	events.append({"type": "hurt", "pos": hero.pos, "amount": int(dmg)})
 	if _has_boon_effect("pain_retaliation") and not bypass_generic_defenses:
 		for e in enemies:
@@ -1352,6 +1356,8 @@ func _kill(e: Enemy) -> void:
 		stats.elites += 1
 		if e.drops_chest or rng.randf() < 0.5:
 			_add_interaction("chest", e.pos)
+			if e.id == "mimico":
+				interactions.back()["safe"] = true  # BUG-030: o baú que o Mímico larga nunca vira Mímico de novo
 		_drop("gold", e.pos, 12.0 * float(stage.coin_mult))
 		if rng.randf() < 0.06:
 			_drop("potion", e.pos, 0.25)
@@ -1450,6 +1456,19 @@ func _combat_count() -> int:
 	for e in enemies:
 		if not e.has_flag("quebravel"):
 			n += 1
+	return n
+
+## MEC-051: Graz'zt limpa o mapa. Mata todos os inimigos comuns e destrutíveis, com as mortes e os drops normais;
+## poupam-se chefe, elites (afixo, baú, `elite_only`) e inimigos de objetivo de acontecimento. Devolve quantos morreram.
+func wipe_map() -> int:
+	var n := 0
+	for e in enemies.duplicate():
+		if e.dead or e.is_boss() or e.affix != "" or e.drops_chest or e.has_flag("elite_only") or e.event_tag != "":
+			continue
+		e.split_id = ""  # sem filhotes: a limpeza não pode gerar novos inimigos
+		_kill(e)
+		n += 1
+	events.append({"type": "decoy_blast", "pos": hero.pos, "radius": 10.0, "dtype": "magico"})
 	return n
 
 func _on_boss_dead(e: Enemy) -> void:
@@ -1637,9 +1656,81 @@ func _use_hourglass() -> bool:
 	events.append({"type": "toast", "text": "A ampulheta adiantou %d s! %d inimigos acumulados chegam de uma vez." % [int(skip), burst]})
 	return true
 
+## BUG-032: baú, portal e demais interativos nunca nascem dentro de bloqueio de cenário, terreno ou bolsa fechada.
 func _add_interaction(kind: String, at: Vector2) -> void:
 	at = at.clamp(Vector2(1, 1), map_size - Vector2(1, 1))
+	at = _reachable_interaction_spot(at, 0.9 if kind == "portal" else 0.6)
 	interactions.append({"kind": kind, "pos": at, "used": false, "born_at": time})
+
+const REACH_CELL := 0.75
+var _reach_cache := PackedByteArray()
+var _reach_key := ""
+
+## Posição pedida ou a mais próxima onde o herói cabe E consegue chegar a pé a partir de onde está
+## (anéis de até 12 tiles ao redor do pedido, depois ao redor do herói); sem nenhuma, o próprio herói.
+func _reachable_interaction_spot(wanted: Vector2, clearance: float) -> Vector2:
+	var reach := _reach_grid()
+	for center in [wanted, hero.pos]:
+		for ring in 13:
+			var steps := 1 if ring == 0 else 8 * ring
+			for i in steps:
+				var ang := TAU * float(i) / float(steps)
+				var cand: Vector2 = center + Vector2(cos(ang), sin(ang)) * float(ring)
+				if hero.can_stand(cand, clearance) and _reach_has(reach, cand):
+					return cand
+	return hero.pos
+
+func _reach_dims() -> Vector2i:
+	return Vector2i(ceili(map_size.x / REACH_CELL), ceili(map_size.y / REACH_CELL))
+
+func _reach_has(reach: PackedByteArray, p: Vector2) -> bool:
+	var d := _reach_dims()
+	var cx := clampi(int(p.x / REACH_CELL), 0, d.x - 1)
+	var cy := clampi(int(p.y / REACH_CELL), 0, d.y - 1)
+	return reach[cy * d.x + cx] == 1
+
+## Células (0,75 tile) que o herói alcança andando a partir da posição atual, respeitando bloqueios e terreno.
+## Reaproveita o resultado enquanto herói (célula), mapa e bloqueios não mudam (a morte do chefe cria vários interativos).
+func _reach_grid() -> PackedByteArray:
+	var d := _reach_dims()
+	var start := Vector2i(clampi(int(hero.pos.x / REACH_CELL), 0, d.x - 1), clampi(int(hero.pos.y / REACH_CELL), 0, d.y - 1))
+	var key := "%s|%s|%d|%s" % [stage_id, str(start), hero.blockers.hash(), str(map_size)]
+	if key == _reach_key:
+		return _reach_cache
+	var grid := PackedByteArray()  # 0 = livre e não visitada, 1 = alcançável, 2 = bloqueada (mesmo critério de Hero.can_stand no centro da célula)
+	grid.resize(d.x * d.y)
+	var r := Hero.RADIUS
+	for cy in d.y:
+		for cx in d.x:
+			var p := (Vector2(cx, cy) + Vector2(0.5, 0.5)) * REACH_CELL
+			if p.x < r or p.y < r or p.x > map_size.x - r or p.y > map_size.y - r or TerrainLayout.is_blocked(hero.terrain_id, p):
+				grid[cy * d.x + cx] = 2
+	for b in hero.blockers:
+		var reach_r: float = b.z + r
+		var x0 := maxi(0, int((b.x - reach_r) / REACH_CELL) - 1)
+		var x1 := mini(d.x - 1, int((b.x + reach_r) / REACH_CELL) + 1)
+		var y0 := maxi(0, int((b.y - reach_r) / REACH_CELL) - 1)
+		var y1 := mini(d.y - 1, int((b.y + reach_r) / REACH_CELL) + 1)
+		for cy in range(y0, y1 + 1):
+			for cx in range(x0, x1 + 1):
+				if (Vector2(cx, cy) + Vector2(0.5, 0.5)).distance_to(Vector2(b.x, b.y) / REACH_CELL) * REACH_CELL < reach_r:
+					grid[cy * d.x + cx] = 2
+	var queue: Array[Vector2i] = [start]
+	grid[start.y * d.x + start.x] = 1
+	var head := 0
+	while head < queue.size():
+		var c: Vector2i = queue[head]
+		head += 1
+		for dx in [-1, 0, 1]:
+			for dy in [-1, 0, 1]:
+				var n := Vector2i(c.x + dx, c.y + dy)
+				if n.x < 0 or n.y < 0 or n.x >= d.x or n.y >= d.y or grid[n.y * d.x + n.x] != 0:
+					continue
+				grid[n.y * d.x + n.x] = 1
+				queue.append(n)
+	_reach_cache = grid
+	_reach_key = key
+	return grid
 
 func _update_interactions(dt: float) -> void:
 	for it in interactions:
@@ -1878,19 +1969,31 @@ func _open_chest(it: Dictionary) -> void:
 	var luck := hero.m("carisma") + hero.attr_mod("carisma")
 	if _has_boon_effect("lucky_chests"):
 		luck += 4.0
-	give_item(Items.roll(rng, tier(), luck))
+	give_item(Items.roll(rng, tier(), luck), true)
 
 ## MEC-013: o baú do chefe nunca vem com item comum ou mágico (raro ou único) e nunca é mímico.
 func _open_boss_chest() -> void:
 	var luck := hero.m("carisma") + hero.attr_mod("carisma") + 4.0
 	var item := Items.roll(rng, tier() + 1, luck, "raro")
 	events.append({"type": "toast", "text": "Baú do Chefe!", "color": Color(1.0, 0.85, 0.3)})
-	give_item(item)
+	give_item(item, true)
 
-func give_item(item: Dictionary) -> void:
+## `announce`: item achado em baú; com o slot vazio, pausa e mostra o item antes de equipar (BUG-031).
+## Compra na loja e demais origens equipam direto, como antes.
+func give_item(item: Dictionary, announce := false) -> void:
 	codex.items[item.id] = true
 	var slot: String = item.slot
 	var cur: Variant = hero.items.get(slot)
+	if cur == null and announce:
+		offer = [{"t": "item_swap", "name": "Equipar %s [%s]" % [item.name, Items.rarity_label(item.rarity)],
+			"desc": "%s\nO slot de %s está vazio." % [Items.mods_text(item.mods), slot],
+			"keep": item, "sell": {}, "equips": true, "tooltip": "Slot vazio: o item é equipado.\n%s" % Items.mods_text(item.mods),
+			"brief": Items.brief_text(item.mods), "badge": Items.verdict(item.mods, {}), "price_text": "slot vazio",
+			"detail": {"columns": [], "rows": [], "footer": [Items.mods_text(item.mods), "O slot de %s está vazio." % slot]}}]
+		offer_kind = "item"
+		state = "item_offer"
+		events.append({"type": "item_offer", "new_item": item, "current_item": {}})
+		return
 	if cur == null:
 		_equip_item(item)
 		events.append({"type": "item", "item": item})
@@ -1928,6 +2031,9 @@ func _equip_item(item: Dictionary) -> void:
 
 ## A peça que não fica equipada é sempre vendida, nunca só descartada.
 func _resolve_item_choice(keep: Dictionary, sell: Dictionary) -> void:
+	if sell.is_empty():  # slot vazio (BUG-031): só equipa
+		_equip_item(keep)
+		return
 	if String(sell.get("weapon", "")) != "" and String(sell.get("weapon", "")) != String(keep.get("weapon", "")):
 		hero.weapons = hero.weapons.filter(func(w): return not (w.granted and w.id == sell.weapon))
 	_equip_item(keep)
@@ -1983,6 +2089,9 @@ func _open_altar(allow_skip := true) -> void:
 	state = "altar"
 
 func _boon_effect_desc(id: String) -> String:
+	for bn in Data.table("boons").boons:  # SPEC-129: famílias de bênção descrevem a regra a partir dos dados
+		if String(bn.id) == id and bn.has("kind"):
+			return BoonKinds.describe(bn)
 	var effect := String(Data.table("boon_effects").get(id, {}).get("effect", ""))
 	var descriptions := {
 		"overheal_shield": "Excesso de cura vira barreira.", "stage_heal": "Recupera 15% de PV ao descer.",
