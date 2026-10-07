@@ -1,0 +1,159 @@
+{
+	"checks": [
+		{
+			"id": "standard_habilitado",
+			"passed": true
+		},
+		{
+			"id": "visivel_1280x720",
+			"passed": true
+		},
+		{
+			"id": "visivel_1600x900",
+			"passed": true
+		},
+		{
+			"id": "visivel_1920x1080",
+			"passed": true
+		},
+		{
+			"id": "visivel_1024x768",
+			"passed": true
+		},
+		{
+			"id": "visivel_1280x600",
+			"passed": true
+		},
+		{
+			"id": "visivel_960x540",
+			"passed": true
+		},
+		{
+			"id": "conteudo_excedente_nao_oculta_jogar",
+			"passed": true
+		},
+		{
+			"id": "jogar_oculto_outras_abas",
+			"passed": true
+		},
+		{
+			"id": "standard_alcancavel_direcional",
+			"passed": true
+		},
+		{
+			"id": "standard_icone_confirmacao",
+			"passed": true
+		},
+		{
+			"id": "mapa_bloqueado_nao_encaminha",
+			"passed": true
+		},
+		{
+			"id": "standard_confirmar_mapa_foca_jogar",
+			"passed": true
+		},
+		{
+			"id": "standard_confirmar_mantido_nao_inicia",
+			"passed": true
+		},
+		{
+			"id": "standard_inicia_tentativa",
+			"passed": true
+		},
+		{
+			"id": "ps4_habilitado",
+			"passed": true
+		},
+		{
+			"id": "ps4_alcancavel_direcional",
+			"passed": true
+		},
+		{
+			"id": "ps4_icone_confirmacao",
+			"passed": true
+		},
+		{
+			"id": "ps4_confirmar_mapa_foca_jogar",
+			"passed": true
+		},
+		{
+			"id": "ps4_confirmar_mantido_nao_inicia",
+			"passed": true
+		},
+		{
+			"id": "ps4_inicia_tentativa",
+			"passed": true
+		},
+		{
+			"id": "ps5_habilitado",
+			"passed": true
+		},
+		{
+			"id": "ps5_alcancavel_direcional",
+			"passed": true
+		},
+		{
+			"id": "ps5_icone_confirmacao",
+			"passed": true
+		},
+		{
+			"id": "ps5_confirmar_mapa_foca_jogar",
+			"passed": true
+		},
+		{
+			"id": "ps5_confirmar_mantido_nao_inicia",
+			"passed": true
+		},
+		{
+			"id": "ps5_inicia_tentativa",
+			"passed": true
+		},
+		{
+			"id": "legacy_habilitado",
+			"passed": true
+		},
+		{
+			"id": "legacy_alcancavel_direcional",
+			"passed": true
+		},
+		{
+			"id": "legacy_icone_confirmacao",
+			"passed": true
+		},
+		{
+			"id": "legacy_confirmar_mapa_foca_jogar",
+			"passed": true
+		},
+		{
+			"id": "legacy_confirmar_mantido_nao_inicia",
+			"passed": true
+		},
+		{
+			"id": "legacy_inicia_tentativa",
+			"passed": true
+		},
+		{
+			"id": "mouse_habilitado",
+			"passed": true
+		},
+		{
+			"id": "mouse_inicia_tentativa",
+			"passed": true
+		},
+		{
+			"id": "touch_habilitado",
+			"passed": true
+		},
+		{
+			"id": "touch_inicia_tentativa",
+			"passed": true
+		},
+		{
+			"id": "perfil_real_preservado",
+			"passed": true
+		}
+	],
+	"failures": [],
+	"hardware_acceptance": false,
+	"synthetic_input": true
+}

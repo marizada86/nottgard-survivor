@@ -24,9 +24,10 @@ Os cartões trazem só o **estado atual**; o texto integral de cada um está em
 
 ## Abertos
 
+| BUG-030 | P1 | Botão Jogar não encontrado no Quartel com heróis/fases; dono não conseguiu iniciar tentativa com Xbox | Dono, 2026-10-06; [EVID-185](../evidence/EVID-185-quartel-botao-jogar-2026-10-06.md) | **IMPLEMENTADO LOCAL 2026-10-06 — P068-v02:** botão fixado fora das colunas, ícone de confirmação e área reservada; 21 verificações de acesso e início sem falhas. Causa exata na tela do dono não confirmada; aguarda reteste físico | SPEC-135 |
+
 | ID | Sev | Título | Origem | Situação | Spec |
 |---|---|---|---|---|---|
-| BUG-030 | P1 | Botão Jogar não encontrado no Quartel com heróis/fases; dono não conseguiu iniciar tentativa com Xbox | Dono, 2026-10-06; [EVID-185](../evidence/EVID-185-quartel-botao-jogar-2026-10-06.md) | **IMPLEMENTADO LOCAL 2026-10-06 — P068-v03:** botão fixado fora das colunas, ícone de confirmação e área reservada; confirmação no mapa direciona o foco para Jogar; 38 verificações de acesso e início sem falhas. Causa exata na tela do dono não confirmada; aguarda reteste físico; [EVID-186](../evidence/EVID-186-quartel-confirmar-mapa-para-jogar-2026-10-06.md) | SPEC-135 |
 | BUG-001 | P1 | Zumbi novo (SPEC-061) sem captura visual em run real: o renderer headless não gerou viewport | [EVID-104](../evidence/EVID-104-zumbi-admissao-2026-09-29.md) | **IMPLEMENTADO 2026-10-01 — verificado em run real** (janela do jogo, Dagruve): idle, andar, flash de acerto e morte (abates contabilizados) renderizam corretos; ataque não isolado em quadro. Fechar no próximo playtest se não reaparecer | SPEC-061 |
 | BUG-002 | P2 | Possíveis assets animados com opacidade fraca (Sacerdote da Mente Derretida) | [PLAN-032](../vault/drafts/PLAN-032-proxima-atualizacao-pos-playtest-2026-09-28.md) | Auditado 2026-09-29: **sem evidência de defeito**; falta só o olho na run QA (PLAN-039). [Histórico](#bug-002) | — |
 

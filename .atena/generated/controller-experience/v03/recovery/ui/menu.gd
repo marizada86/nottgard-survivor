@@ -163,12 +163,6 @@ func _input(event: InputEvent) -> void:
 	if not event.is_pressed() or not Game.controls.accepts(event) or Playtest._guide_open or _hq_open or Game.controls.capture_action != "":
 		return
 	var owner := get_viewport().gui_get_focus_owner()
-	if owner == stage_list and event.is_action_pressed("ui_accept"):
-		Game.controls.transition()
-		if not play_btn.disabled:
-			play_btn.grab_focus()
-		get_viewport().set_input_as_handled()
-		return
 	var right := event.is_action_pressed("ui_right")
 	var left := event.is_action_pressed("ui_left")
 	var target: Control

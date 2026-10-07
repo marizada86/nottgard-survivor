@@ -1,7 +1,7 @@
 extends Node
 @onready var root: Window = get_tree().root
 ## Provas por eventos sinteticos e capturas; perfil separado do progresso real.
-const OUTPUT := "res://.atena/generated/controller-experience/v02/"
+const OUTPUT := "res://.atena/generated/controller-experience/v01/"
 var checks: Array[Dictionary] = []
 var failures: Array[String] = []
 var capture := false

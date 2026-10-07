@@ -1,0 +1,90 @@
+version: 1
+plan:
+  id: PLAN-068
+  spec_id: SPEC-135
+  title: Experiencia com controles Xbox e PlayStation
+  status: AWAITING_HARDWARE_PLAYTEST
+  origin: guided-add
+  implementation_preceded_spec: false
+  request_classification: PLAN_DEVIATION
+  source: .atena/vault/drafts/PLAN-068-experiencia-controles-xbox-playstation-2026-10-06.md
+  spec: .atena/specs/SPEC-135-experiencia-controles-xbox-playstation-2026-10-06.md
+  evidence: .atena/evidence/EVID-184-controles-xbox-playstation-local-2026-10-06.md
+  approval:
+    mode: per-plan
+    recommended_mode: per-batch
+    status: APPROVED_PER_PLAN
+    approved: '2026-10-06'
+    basis: 'Dono: atena dentro de detalhes a mudanca de abas deve acontecer com R1/L1 para PlayStation e RB/LB para xbox. (imagem de referencia) aprovado, por plano.'
+    approved_checkpoint: ALL_LOCAL_STEPS_AFTER_MOBILE
+    canonical_revision: APPROVED_SCOPE_RECONCILE_AFTER_VALIDATION
+  checkpoint:
+    current: B-004
+    step: S-011
+    status: AWAITING_HARDWARE_PLAYTEST
+  execution_started: true
+  route:
+    deviation_id: DEV-004
+    status: EXECUTE_NOW_THEN_RETURN
+    activation_authorization: '2026-10-06: vamos la; plano ja aprovado per-plan e mobile entregue/commitado localmente.'
+    owner_decision: '2026-10-06: Planejar agora e deixar a execucao para depois do mobile (recomendado).'
+    active_plan_preserved: PLAN-067
+    recovery_checkpoint: B-003/S-008-S-009
+    suspension_persisted: true
+    note: 'Mobile suspenso apenas no checkpoint nativo pendente; entrega local em 503ccec preservada. DEV-003 e retorno a Durvall permanecem.'
+  batches:
+    B-001: {title: Funcoes e ergonomia, steps: [S-001, S-002, S-003], status: LOCAL_VALIDATED}
+    B-002: {title: Icones e instrucoes, steps: [S-004, S-005, S-006], status: LOCAL_VALIDATED}
+    B-003: {title: Jornada e ajustes, steps: [S-007, S-008, S-009], status: LOCAL_VALIDATED}
+    B-004: {title: Validacao e reconciliacao, steps: [S-010, S-011, S-012], status: AWAITING_HARDWARE_PLAYTEST}
+  defaults:
+    target: Windows_PC
+    families: [Xbox, DualShock_4, DualSense, Generic]
+    preset: standard_south_accept_east_cancel
+    legacy_preset: available
+    aim: preserve_existing_preference
+    active_ability: RB_R1
+    interact: X_square
+    aim_toggle: Y_triangle
+    details_tab_previous: LB_L1
+    details_tab_next: RB_R1
+    details_tab_priority: consume_before_reroll_and_hero_active
+    details_tab_reference: .atena/evidence/PLAN-068-referencia-abas-detalhes-2026-10-06.png
+    extraction_and_speed: pause_menu
+    deadzone_movement: 0.24
+    deadzone_aim: 0.24
+    deadzone_range: [0.10, 0.40]
+    navigation_repeat_delay_seconds: 0.35
+    navigation_repeat_interval_seconds: 0.12
+    glyph_source: local_vector_or_native_ui
+    glyph_override: [Automatic, Xbox, PlayStation_DS4, PlayStation_DualSense, Generic]
+    output_path: .atena/generated/controller-experience/v01/
+  independent_gates:
+    canonical_intent: APPROVED_SPEC_135_SCOPE_AFTER_VALIDATION
+    material_architecture_outside_scope: NOT_AUTHORIZED
+    dependencies_permissions: NOT_AUTHORIZED
+    export_publication_external_sharing: NOT_AUTHORIZED
+    commit_merge_push: NOT_AUTHORIZED
+  hardware_validation:
+    status: AWAITING_OWNER_XBOX_PLAYTEST
+    synthetic_tests_are_hardware_acceptance: false
+    Xbox: ENUMERATED_NOT_PHYSICALLY_TESTED
+    owner_available: Xbox
+    owner_model: UNKNOWN
+    owner_transport: UNKNOWN
+    detected_name: 'XInput Controller'
+    detected_guid: '0300fa675e0400008e02000010017801'
+    DualShock_4: NOT_TESTED
+    DualSense: NOT_TESTED
+    checkpoint_without_device: AWAITING_HARDWARE_PLAYTEST
+  deferred: [vibration, adaptive_triggers, axis_trigger_remap, touchpad_alias, console_export, physical_controller_web_mobile_validation]
+  backlog: {mechanics: MEC-050, art: ART-037}
+  completed_steps: [S-001, S-002, S-003, S-004, S-005, S-006, S-007, S-008, S-009, S-010]
+  reconciliation: LOCAL_RECONCILED_S_012_PHYSICAL_PENDING
+  local_pilot: .atena/generated/controller-experience/v01/Abrir-teste-Xbox.cmd
+  local_validation: {controller_checks: 90, mobile_checks: 144, suite_failures: 0, smoke_stages: 9, hardware_acceptance: false}
+  last_request:
+    classification: IN_PLAN
+    date: '2026-10-06'
+    request: 'vamos la: iniciar PLAN-068 aprovado apos entrega local mobile; retorno preservado.'
+  next: 'Dono testar P068-v01 com Xbox; informar modelo/transporte e resultados. S-011 e conclusao de S-012 pendentes; retorno mobile preservado.'

@@ -141,20 +141,11 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 bbcode_enabled = true
 
-[node name="PlayBtn" type="Button" parent="." unique_id=1521846620]
+[node name="PlayBtn" type="Button" parent="Tabs/Jogar/Right" unique_id=1521846620]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(320, 58)
-layout_mode = 0
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = -344.0
-offset_right = -24.0
-offset_top = -100.0
-offset_bottom = -42.0
+custom_minimum_size = Vector2(0, 58)
+layout_mode = 2
 theme_override_font_sizes/font_size = 28
-theme_override_constants/icon_max_width = 32
 text = "JOGAR"
 
 [node name="Melhorias" type="ScrollContainer" parent="Tabs" unique_id=788457525]

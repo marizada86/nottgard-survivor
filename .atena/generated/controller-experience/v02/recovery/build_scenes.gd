@@ -405,15 +405,9 @@ func _build_menu() -> void:
 	_add(right, _fill(_rich(150)), "StageInfo", m, true)
 	var pb := Button.new()
 	pb.text = "JOGAR"
-	pb.custom_minimum_size = Vector2(320, 58)
-	pb.set_anchors_preset(Control.PRESET_BOTTOM_RIGHT)
-	pb.offset_left = -344
-	pb.offset_right = -24
-	pb.offset_top = -100
-	pb.offset_bottom = -42
+	pb.custom_minimum_size = Vector2(0, 58)
 	pb.add_theme_font_size_override("font_size", 28)
-	pb.add_theme_constant_override("icon_max_width", 32)
-	_add(m, pb, "PlayBtn", m, true)
+	_add(right, pb, "PlayBtn", m, true)
 
 	# Melhorias
 	var sc1 := ScrollContainer.new()

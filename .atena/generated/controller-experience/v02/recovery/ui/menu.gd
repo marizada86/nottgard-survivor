@@ -103,11 +103,7 @@ func _ready() -> void:
 	$Tabs/Opções/Content.move_child(controller_options, $Tabs/Opções/Content.get_node("ActionsTitle").get_index())
 	%Tabs.tab_changed.connect(func(_i):
 		Game.controls.transition()
-		_layout_play_action()
 		_focus_tab.call_deferred())
-	Game.controls.changed.connect(_update_play)
-	get_viewport().size_changed.connect(_layout_play_action)
-	_layout_play_action()
 	for scroll in find_children("*", "ScrollContainer", true, false):
 		scroll.follow_focus = true
 	%Tabs.get_node("Conquistas").focus_mode = Control.FOCUS_ALL
@@ -140,16 +136,6 @@ func _first_focus(node: Node) -> Control:
 			return target
 	return null
 
-func _layout_play_action() -> void:
-	var playing_tab: bool = %Tabs.current_tab == 0
-	play_btn.visible = playing_tab
-	var safe: Rect2 = Game.touch_safe_rect() if Game.touch_controls_enabled() else get_viewport_rect().grow(-24)
-	play_btn.offset_right = safe.end.x - get_viewport_rect().size.x
-	play_btn.offset_left = play_btn.offset_right - 320
-	play_btn.offset_bottom = safe.end.y - get_viewport_rect().size.y - 18
-	play_btn.offset_top = play_btn.offset_bottom - 58
-	%Tabs.offset_bottom = play_btn.offset_top - 16 if playing_tab else safe.end.y - get_viewport_rect().size.y - (24 if Game.touch_controls_enabled() else 10)
-
 func _unhandled_input(event: InputEvent) -> void:
 	if not Game.controls.accepts(event) or Game.controls.capture_action != "" or Playtest._guide_open or Playtest._note_open or _hq_open:
 		return
@@ -163,12 +149,6 @@ func _input(event: InputEvent) -> void:
 	if not event.is_pressed() or not Game.controls.accepts(event) or Playtest._guide_open or _hq_open or Game.controls.capture_action != "":
 		return
 	var owner := get_viewport().gui_get_focus_owner()
-	if owner == stage_list and event.is_action_pressed("ui_accept"):
-		Game.controls.transition()
-		if not play_btn.disabled:
-			play_btn.grab_focus()
-		get_viewport().set_input_as_handled()
-		return
 	var right := event.is_action_pressed("ui_right")
 	var left := event.is_action_pressed("ui_left")
 	var target: Control
@@ -219,7 +199,6 @@ func _layout_touch_menu() -> void:
 	$Tabs/Jogar/Left.custom_minimum_size.x = 240
 	$Tabs/Jogar/Mid.custom_minimum_size.x = 420
 	portrait.custom_minimum_size = Vector2(360, 180)
-	_layout_play_action()
 
 func _refresh_all() -> void:
 	var p: Profile = Game.profile
@@ -348,8 +327,6 @@ func _update_play() -> void:
 	var ok: bool = Game.profile.hero_unlocked(Game.run_hero) and Game.profile.stage_unlocked(Game.run_stage)
 	play_btn.disabled = not ok
 	play_btn.text = "JOGAR" if ok else "Bloqueado"
-	play_btn.icon = Game.controls.glyph("ui_accept")
-	play_btn.tooltip_text = "%s para iniciar a tentativa" % Game.controls.prompt("ui_accept", "Enter ou clique")
 
 func _play() -> void:
 	Sfx.play("click")

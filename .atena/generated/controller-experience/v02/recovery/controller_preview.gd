@@ -1,5 +1,5 @@
 extends Node
-## Piloto interativo P068-v03: progresso e ajustes separados do perfil real.
+## Piloto interativo P068-v01: progresso e ajustes separados do perfil real.
 const PILOT_PROFILE := "res://.atena/generated/controller-experience/v01/pilot-profile.json"
 
 func _ready() -> void:
@@ -18,12 +18,12 @@ func _start() -> void:
 	if Playtest._guide_open:
 		Playtest._close_guide_modal()
 	Game.save()
-	Game.logline("Piloto P068-v03; perfil isolado; aceite fisico pendente.")
+	Game.logline("Piloto P068-v01; perfil isolado; aceite fisico pendente.")
 	var banner := CanvasLayer.new()
 	banner.layer = 99
 	get_tree().root.add_child(banner)
 	var label := Label.new()
-	label.text = "P068-v03 · Piloto Xbox · Perfil de teste"
+	label.text = "P068-v01 · Piloto Xbox · Perfil de teste"
 	label.position = Vector2(16, 696)
 	label.add_theme_font_size_override("font_size", 12)
 	label.add_theme_color_override("font_outline_color", Color.BLACK)
