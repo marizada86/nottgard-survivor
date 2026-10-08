@@ -460,7 +460,12 @@ func _draw_over() -> void:
 			draw_colored_polygon(PackedVector2Array([draw_p + Vector2(0, -18), draw_p + Vector2(14, 0), draw_p + Vector2(0, 9), draw_p + Vector2(-14, 0)]), Color(col, 0.35))
 			draw_rect(Rect2(draw_p + Vector2(-9, -22), Vector2(18, 16)), col.darkened(0.2))
 		var label_w := 220.0 if String(it.kind).begins_with("event_") else 110.0  # SPEC-118: rótulos de evento são nomes longos
-		draw_string(ThemeDB.fallback_font, draw_p + Vector2(-label_w * 0.5, -base_h - 8.0), label, HORIZONTAL_ALIGNMENT_CENTER, label_w, 12, Color(col, 0.95))
+		if String(it.kind).begins_with("event_"):
+			# SPEC-147: rótulo de quest maior e com contorno, para não se perder no cenário
+			draw_string_outline(ThemeDB.fallback_font, draw_p + Vector2(-label_w * 0.5, -base_h - 8.0), label, HORIZONTAL_ALIGNMENT_CENTER, label_w, 15, 5, Color(0, 0, 0, 0.85))
+			draw_string(ThemeDB.fallback_font, draw_p + Vector2(-label_w * 0.5, -base_h - 8.0), label, HORIZONTAL_ALIGNMENT_CENTER, label_w, 15, Color(col.lightened(0.25), 1.0))
+		else:
+			draw_string(ThemeDB.fallback_font, draw_p + Vector2(-label_w * 0.5, -base_h - 8.0), label, HORIZONTAL_ALIGNMENT_CENTER, label_w, 12, Color(col, 0.95))
 	_draw_happenings()
 	_draw_star_path()
 	for pk in battle.pickups:
@@ -515,6 +520,22 @@ func _draw_star_path() -> void:
 	var side := Vector2(-dir.y, dir.x)
 	draw_colored_polygon(PackedVector2Array([tip + dir * 14.0, tip - dir * 6.0 + side * 9.0, tip - dir * 6.0 - side * 9.0]), Color(gold, 0.9))
 
+## SPEC-147: realce de item, alvo, NPC ou inimigo da quest que está dentro da tela. A cor vem do marcador, mas nunca
+## fica apagada: o anel e a seta usam a cor com brilho mínimo para se destacar do cenário.
+func _draw_quest_highlight(m: Dictionary) -> void:
+	var t := Time.get_ticks_msec() / 1000.0
+	var pulse := 0.5 + 0.5 * sin(t * 5.0)
+	var base: Color = m.color
+	var col := base.lightened(0.35)
+	col.a = 1.0
+	draw_polyline(_ellipse_closed(m.pos, 0.8 + 0.18 * pulse), Color(col, 0.55 + 0.4 * pulse), 3.0)
+	draw_polyline(_ellipse_closed(m.pos, 1.25 + 0.3 * pulse), Color(col, 0.25 * (1.0 - pulse) + 0.1), 2.0)
+	var p := Iso.to_screen(m.pos)
+	var tip := p + Vector2(0, -84.0 + 5.0 * sin(t * 4.0))
+	var tri := PackedVector2Array([tip, tip + Vector2(-10, -16), tip + Vector2(10, -16)])
+	draw_colored_polygon(tri, Color(0, 0, 0, 0.55))
+	draw_colored_polygon(PackedVector2Array([tip + Vector2(0, -2), tip + Vector2(-8, -15), tip + Vector2(8, -15)]), col)
+
 ## SPEC-118: aliados e peregrinos, círculo da arena e setas na borda para os objetivos fora da tela.
 func _draw_happenings() -> void:
 	var hp_ := battle.happenings
@@ -541,9 +562,11 @@ func _draw_happenings() -> void:
 	var view := get_viewport_rect().grow(-30.0)
 	for m in hp_.markers(battle):
 		var mp := Iso.to_screen(m.pos)
-		# só aponta o que está fora da tela
+		# SPEC-147 (IN-071): dentro da tela o alvo da quest ganha anel pulsante e uma seta que balança sobre ele
 		if view.has_point(get_viewport().get_canvas_transform() * mp):
+			_draw_quest_highlight(m)
 			continue
+		# fora da tela, uma seta na borda aponta o caminho
 		var off := mp - hero_p
 		var dir := off.normalized()
 		var tip := hero_p + dir * 240.0
