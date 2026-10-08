@@ -16,6 +16,7 @@ func run() -> Array:
 	out.append_array(_armas())
 	out.append_array(_primeiro_bau())
 	out.append_array(_ficha())
+	out.append_array(_bonus())
 	return out
 
 ## B-001: C fecha a ficha; a ficha abre nas ofertas; a nota (F5) prende a HUD.
@@ -262,6 +263,25 @@ func _ficha() -> Array:
 		break
 	if not found:
 		out.append("nenhum item com base nos 60 sorteios (teste sem cobertura)")
+	sheet.free()
+	return out
+
+## MEC-054: a linha de bônus mostra o nome antes do valor (IN-061).
+func _bonus() -> Array:
+	var out: Array = []
+	var tree := Engine.get_main_loop() as SceneTree
+	var b := Battle.new(3, "sylas", "dagruve")
+	var sheet := CharacterSheet.new()
+	tree.root.add_child(sheet)
+	sheet.show_sheet(b)
+	b.hero.mods["dmg_pct"] = 0.28
+	var row: HBoxContainer = sheet._bonus_row({"key": "dmg_pct", "label": "Dano", "value": "+28%"})
+	var texts: Array = []
+	for c in row.get_children():
+		if c is Label and (c as Label).text != "◆":
+			texts.append((c as Label).text)
+	if texts != ["Dano", "+28%"]:
+		out.append("linha de bônus deve ser nome e depois valor, achei %s" % [texts])
 	sheet.free()
 	return out
 

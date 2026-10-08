@@ -645,10 +645,9 @@ func _bonus_row(r: Dictionary) -> Control:
 		dot.custom_minimum_size = Vector2(18, 0)
 		dot.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		h.add_child(dot)
-	var value := _label(String(r.value), 15, Color(0.6, 0.9, 0.6) if not String(r.value).begins_with("-") else Color(0.95, 0.5, 0.45))
-	value.custom_minimum_size = Vector2(54, 0)
-	h.add_child(value)
+	# SPEC-147 (IN-061): nome antes do valor ("Dano 28%"), como o Manzi pediu
 	h.add_child(_label(String(r.label), 15))
+	h.add_child(_label(String(r.value), 15, Color(0.6, 0.9, 0.6) if not String(r.value).begins_with("-") else Color(0.95, 0.5, 0.45)))
 	return h
 
 func _padded(sb: StyleBoxFlat, margin: float) -> StyleBoxFlat:
