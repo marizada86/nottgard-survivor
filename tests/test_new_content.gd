@@ -60,6 +60,7 @@ func run() -> Array:
 	_fireball(out)
 	_shadow_blade(out)
 	_armor_break(out)
+	_items(out)
 	return out
 
 # ---------------------------------------------------------------- W1 Bola de Fogo (SPEC-150)
@@ -165,3 +166,49 @@ func _armor_break(out: Array) -> void:
 		out.append("Romper Armadura deveria ferir ou enfraquecer o alvo em 40 golpes")
 	if not _offered("romper_armadura"):
 		out.append("Romper Armadura deveria aparecer nas ofertas NOVA")
+
+# ---------------------------------------------------------------- Equipamentos únicos (SPEC-151)
+# id -> {slot, tier, mods, curse (mod negativo esperado), weapon}. Uma entrada por commit.
+const ITEMS := {
+	"cajado_familia_infernum": {"slot": "arma", "tier": 3, "mods": {"inteligencia": 2, "cam": 1, "area_pct": 0.1}},
+}
+
+func _items(out: Array) -> void:
+	var db: Dictionary = Data.table("items")
+	var labels: Dictionary = Items.MOD_LABELS
+	for id in ITEMS:
+		var want: Dictionary = ITEMS[id]
+		var def := {}
+		for u in db.uniques:
+			if String(u.id) == String(id):
+				def = u
+		if def.is_empty():
+			out.append("item %s deveria existir em uniques" % id)
+			continue
+		if String(def.slot) != String(want.slot) or int(def.tier) != int(want.tier):
+			out.append("%s deveria ser %s tier %d (é %s tier %d)" % [id, want.slot, want.tier, def.slot, def.tier])
+		if String(def.get("note", "")) == "":
+			out.append("%s deveria ter nota" % id)
+		for k in want.mods:
+			if not labels.has(k):
+				out.append("%s: chave de bônus desconhecida %s" % [id, k])
+			if absf(float(def.mods.get(k, 0.0)) - float(want.mods[k])) > 0.0001:
+				out.append("%s: %s deveria valer %s (vale %s)" % [id, k, want.mods[k], def.mods.get(k, 0)])
+		if def.mods.size() != want.mods.size():
+			out.append("%s: bônus a mais ou a menos (%s)" % [id, str(def.mods)])
+		if String(def.get("weapon", "")) != String(want.get("weapon", "")):
+			out.append("%s: arma concedida deveria ser '%s'" % [id, want.get("weapon", "")])
+		# equipar aplica os bônus ao herói e trocar os retira
+		var b := _bat(21)
+		var before := {}
+		for k in want.mods:
+			before[k] = b.hero.m(k)
+		b._equip_item(Items.unique(def))
+		for k in want.mods:
+			if absf(b.hero.m(k) - before[k] - float(want.mods[k])) > 0.0001:
+				out.append("%s: equipar deveria somar %s %s (somou %s)" % [id, k, want.mods[k], b.hero.m(k) - before[k]])
+		# só cai a partir do tier
+		var below: Array = db.uniques.filter(func(u): return int(u.tier) <= int(want.tier) - 1 and String(u.id) == String(id))
+		var at: Array = db.uniques.filter(func(u): return int(u.tier) <= int(want.tier) and String(u.id) == String(id))
+		if not below.is_empty() or at.is_empty():
+			out.append("%s deveria entrar no sorteio só a partir do tier %d" % [id, want.tier])

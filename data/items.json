@@ -52,6 +52,7 @@
     {"id": "luneta_de_korrak", "name": "Luneta de Korrak", "slot": "anel", "tier": 2, "mods": {"hit": 3, "crit_overflow_bonus": 0.03}},
     {"id": "olho_de_ghaunadaur", "name": "Olho de Ghaunadaur", "slot": "amuleto", "tier": 6, "mods": {"dmg_pct": 0.25, "hp": -6}, "note": "Poder que cobra um preço."},
     {"id": "lasca_de_ailalore", "name": "Lasca de Ailalore", "slot": "anel", "tier": 4, "mods": {"area_pct": 0.15, "cd_pct": 0.08}, "note": "Fragmento de uma estrela caída."},
-    {"id": "colar_runico_de_thalion", "name": "Colar Rúnico de Thalion", "slot": "amuleto", "tier": 3, "mods": {"inteligencia": 2, "xp_pct": 0.10}}
+    {"id": "colar_runico_de_thalion", "name": "Colar Rúnico de Thalion", "slot": "amuleto", "tier": 3, "mods": {"inteligencia": 2, "xp_pct": 0.10}},
+    {"id":"cajado_familia_infernum","name":"Cajado da Família Infernum","slot":"arma","tier":3,"mods":{"inteligencia":2,"cam":1,"area_pct":0.1},"note":"Relíquia da família Infernum, feita de Yggdrasil e cravejada com pedras da estrela de Eléstria."}
   ]
 }
