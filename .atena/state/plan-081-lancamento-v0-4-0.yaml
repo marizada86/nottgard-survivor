@@ -9,7 +9,7 @@ request_classification: PLAN_DEVIATION
 deviation_id: DEV-013
 authorization_verbatim: 'atena, planeje a v0.4.0 agora'
 approval_basis: 'Dono escolheu por plano, MEC-039 fatia piloto, MEC-041 + 3 armas/magias + 6 itens, arte provisoria nao trava (2026-10-08). Falta o aviso explicito de inicio.'
-checkpoint: B-005 concluido local (commits locais aguardam ratificacao do dono); proximo B-006/S-017 (portao de conteudo dos Ecos)
+checkpoint: B-006/S-017 (proposta de Ecos, POIs e reliquias pronta, aguarda o dono)
 return:
   plan: PLAN-071
   state_file: .atena/state/plan-071-playtest-ranking.yaml
@@ -29,8 +29,8 @@ batches:
   B-002: {title: Bugs e verificacao, steps: [S-005, S-006, S-007], status: DONE, note: 'S-006 dispensado pelo dono em 2026-10-08 (como na 0.2.0): o reteste vai para O que testar da 0.4.0'}
   B-003: {title: Arte e audio provisorios, steps: [S-008, S-009], status: DONE_LOCAL, note: 'EVID-204; commit aguarda aprovacao'}
   B-004: {title: MEC-041 NPC de upgrade de magia, steps: [S-010, S-011, S-012], status: DONE_LOCAL, note: 'SPEC-149 e EVID-205; commit aguarda aprovacao'}
-  B-005: {title: MEC-042 conteudo novo, steps: [S-013, S-014, S-015, S-016], status: DONE_LOCAL, note: 'Portao aprovado pelo dono (2026-10-08), com o Coracao da Dominancia (7 equipamentos). EVID-206; commits locais 40ec60d a ac339b7; ratificados pelo dono em 2026-10-08 ("1. sim"); nao publicados.'}
-  B-006: {title: MEC-039 fatia piloto, steps: [S-017, S-018, S-019, S-020], status: PENDING, note: 'Portao de conteudo: Ecos e reliquias aprovados pelo dono antes do codigo.'}
+  B-005: {title: MEC-042 conteudo novo, steps: [S-013, S-014, S-015, S-016], status: DONE, note: 'Portao aprovado pelo dono (2026-10-08), com o Coracao da Dominancia (7 equipamentos). EVID-206; commits locais 40ec60d a ac339b7; ratificados pelo dono em 2026-10-08 ("1. sim"); nao publicados.'}
+  B-006: {title: MEC-039 fatia piloto, steps: [S-017, S-018, S-019, S-020], status: IN_PROGRESS, note: 'Portao de conteudo: Ecos e reliquias aprovados pelo dono antes do codigo.'}
   B-007: {title: Balanceamento, steps: [S-021, S-022], status: PENDING}
   B-008: {title: Fechamento e lancamento, steps: [S-023, S-024, S-025, S-026, S-027, S-028], status: PENDING, note: 'Push, exportacao e aviso aos testers so com aprovacao explicita.'}
 steps:
@@ -50,7 +50,7 @@ steps:
   S-014: 'DONE (SPEC-150 e SPEC-151). SPEC-150 (armas e magias) e SPEC-151 (equipamentos) apos aprovacao da lista.'
   S-015: 'DONE local (10 commits de item, EVID-206). data/weapons.json, data/items.json, data/item_effects.json e codigo necessario; um commit por item; teste por item.'
   S-016: 'DONE local (tools/bal_conteudo_novo.gd; 2 ajustes BAL-025; bot por heroi em B-007). tools/bal_armas.gd e tools/bal_itens.gd antes e depois; ajustar uma alavanca por vez.'
-  S-017: 'Portao de conteudo: propor Ecos (3 a 5 por fase), pontos de interesse e reliquia das tres fases e levar ao dono; sem segredos do mestre.'
+  S-017: 'PROPOSTA PRONTA (.atena/vault/drafts/PROPOSTA-ecos-pois-e-reliquias-fatia-piloto-v0-4-0-2026-10-08.md), aguarda aprovacao do dono. Portao de conteudo: propor Ecos (3 a 5 por fase), pontos de interesse e reliquia das tres fases e levar ao dono; sem segredos do mestre.'
   S-018: 'SPEC-152: 84x84 (enlarge_stage_maps, rebalance_stage_props, bake_ground), POIs em dados, Ecos, reliquia; testes de mapa e de dados.'
   S-019: 'Codigo: coletavel Eco, aba Ecos no Diario, contador e pista, camara/reliquia; sem consumir a RNG da batalha; um commit por mecanica.'
   S-020: 'Medir desempenho (60 fps) em 84x84 no .exe; se cair, reduzir para 72x72 (risco G5).'

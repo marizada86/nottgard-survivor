@@ -13,8 +13,8 @@ active_plan:
   deviation_id: DEV-013
   start_authorization_verbatim: 'atena, inicie o PLAN-081 em B-001'
 plan_cursor:
-  current: 'PLAN-081 / SPEC-148 (v0.4.0): B-001 a B-004 commitados; B-005 (MEC-042: 3 armas, 2 evolucoes, 7 equipamentos com o Coracao da Dominancia) implementado e commitado LOCAL sem aprovacao especifica (EVID-206); suite 0 falhas; docs do B-005 ainda sem commit.'
-  next: 'O dono ratifica (ou desfaz) os commits locais do B-005; depois B-006 (MEC-039 fatia piloto: portao de conteudo dos Ecos, SPEC-152).'
+  current: 'PLAN-081 / SPEC-148 (v0.4.0): B-001 a B-005 concluidos e commitados (commits do B-005 ratificados pelo dono). B-006 aberto: proposta de Ecos, POIs e reliquias (S-017) pronta, aguarda o dono; docs ainda sem commit.'
+  next: 'O dono decide a proposta de Ecos, POIs e reliquias (S-017); depois SPEC-152 e implementacao (S-018 a S-020).'
 suspended_active_plan:
   id: PLAN-071
   spec_id: SPEC-138
