@@ -55,6 +55,7 @@
     {"id": "colar_runico_de_thalion", "name": "Colar Rúnico de Thalion", "slot": "amuleto", "tier": 3, "mods": {"inteligencia": 2, "xp_pct": 0.10}},
     {"id":"cajado_familia_infernum","name":"Cajado da Família Infernum","slot":"arma","tier":3,"mods":{"inteligencia":2,"cam":1,"area_pct":0.1},"note":"Relíquia da família Infernum, feita de Yggdrasil e cravejada com pedras da estrela de Eléstria."},
     {"id":"wave_of_terror","name":"Wave of Terror","slot":"arma","tier":5,"mods":{"forca":1,"dmg_pct":0.15,"hp":-8},"note":"Espada mágica de ácido que oculta em sombras. Traz a Maldição da Ambição Sombria."},
-    {"id":"colar_visao_verdadeira","name":"Colar de visão verdadeira do Santuário","slot":"amuleto","tier":2,"mods":{"hit":2,"crit_overflow_bonus":0.03},"note":"Colar do Santuário de Astherion, com o olho de Ghaunadaur: concede visão verdadeira."}
+    {"id":"colar_visao_verdadeira","name":"Colar de visão verdadeira do Santuário","slot":"amuleto","tier":2,"mods":{"hit":2,"crit_overflow_bonus":0.03},"note":"Colar do Santuário de Astherion, com o olho de Ghaunadaur: concede visão verdadeira."},
+    {"id":"detector_arcano","name":"Detector Arcano","slot":"anel","tier":1,"mods":{"pickup":1.5,"sorte":2},"note":"Aparelho que detecta assinaturas mágicas."}
   ]
 }
