@@ -9,6 +9,20 @@ completo em [INTAKE.md](INTAKE.md).
 | ID | Chegou | Origem | Resumo | Destino sugerido |
 |---|---|---|---|---|
 | IN-032 | 2026-09-29 | [EVID-107](../evidence/EVID-107-playtest-publico-t02-hiago-2026-09-29.md) S2 | Print de Bromnor sem nota (PV 10/60, 00:48). Perguntar a Hiago o que mostrava | Aguardando resposta (ver a seção abaixo) |
+| IN-059 | 2026-10-07 | [EVID-199](../evidence/EVID-199-relato-t04-manzi-v032-2026-10-07.md) #1 | Manzi (T04, v0.3.2): mostrar evoluções de arma/skill com mais detalhe e os próximos níveis | MEC-053 (PLAN-080, implementado local) |
+| IN-060 | 2026-10-07 | EVID-199 #2 | Manzi: Ctrl deveria mostrar as melhorias dos próximos níveis (Shift já faz isso nas ofertas, MEC-027) | MEC-053 (sem Ctrl, decisão do dono); confirmar com Manzi se era Shift |
+| IN-061 | 2026-10-07 | EVID-199 #3 | Manzi: na aba Sinergias/bônus, nome antes do valor ("Dano - 28%") | MEC-054 (implementado local) |
+| IN-062 | 2026-10-07 | EVID-199 #4 | Manzi: C não abre durante escolha de magia/item/loja (`ui/run.gd:299-310` corta, mas a HUD abre desde `14633e2`, posterior à v0.3.2) | Já corrigido no HEAD (`14633e2`); verificado e coberto por teste em PLAN-080 S-002; confirmar em run real |
+| IN-063 | 2026-10-07 | EVID-199 #5 | Manzi: arma base reaparece como "NOVA" depois de evoluir (`core/battle.gd:2294`) | BUG-037 (implementado local) |
+| IN-064 | 2026-10-07 | EVID-199 #6 | Manzi: mostrar na HUD o debuff do lago (Estige hoje só tem texto, `ui/hud.gd:376`) | MEC-056 (implementado local); perguntar a fase ao Manzi |
+| IN-065 | 2026-10-07 | EVID-199 #7 | Manzi: baú cai logo ao trocar de mapa (`_inter_t = 4.0`, primeiro interativo sempre baú) | BAL-024 (atrasado para 45 s; implementado local) |
+| IN-066 | 2026-10-07 | [EVID-200](../evidence/EVID-200-relato-t03-daniel-v033-2026-10-07.md) #1 | Daniel (T03, v0.3.3): com o bloco de notas (F5) aberto o resto do jogo continua interativo (HUD clicável, atalhos sem foco no campo) | BUG-035 (implementado local) |
+| IN-067 | 2026-10-07 | EVID-200 #2 | Daniel: C (Fechar) não fecha a ficha; `ui/hud.gd:335` e `has_modal` cortam antes. Soma-se a BUG-003 e ao IN-062 do Manzi | BUG-034 (implementado local; BUG-003) |
+| IN-068 | 2026-10-07 | EVID-200 #3 | Daniel: ranking da tela inicial não atualiza; verificar se só ocorre ao zerar a campanha (lista só carrega no botão Atualizar; Windows não envia ao site) | MEC-057 (carregar ao abrir a aba, implementado local); o resto aguarda o Daniel e o PLAN-071 |
+| IN-069 | 2026-10-07 | EVID-200 #4 | Daniel: textos sobrepostos no meio da tela, mais com quest (`ObjectiveLabel` y=74, `BossPanel` y=74, `ToastBox` y=130) | BUG-036 (implementado local) |
+| IN-070 | 2026-10-07 | EVID-200 #5 | Daniel: quests com destaque visual maior (hoje 1 linha de texto) | MEC-055 (implementado local) |
+| IN-071 | 2026-10-07 | EVID-200 #6 | Daniel: itens/alvos ligados à quest com destaque (seta só fora da tela) | MEC-055 (implementado local) |
+| IN-072 | 2026-10-07 | EVID-200 #7 | Daniel: revisar posição e espaçamento dos textos da HUD | BUG-036 (implementado local) |
 
 ## Perguntas para o próximo playtest
 
@@ -23,6 +37,8 @@ entram no próximo questionário e na conversa com o tester. Fonte:
 | T02 Hiago | "Manter um item 3 vezes consecutivas" = recusar a troca 3 vezes seguidas, ou é sobre a tela de oferta? | MEC-021 |
 | T02 Hiago | "Durar apenas 5 min" é o tempo da perda de INT do Estige (hoje permanente na run)? | MEC-022 |
 | T02 Hiago | "Fontes menos frequentes" eram as fontes de "+% PV"? | MEC-020 |
+| T04 Manzi | Em qual fase estava o lago? A linha "Estige" apareceu na HUD? O pedido do Ctrl era na verdade o Shift? | IN-064, IN-060 |
+| T03 Daniel | No ranking: a lista ficou vazia, desatualizada ou só faltou a sua partida? Foi depois de morrer, extrair ou zerar? Clicou em "Atualizar"? "Quest" são os objetivos de fase (coletar, escoltar, resgatar)? | IN-068, IN-070 |
 | Todos | Perguntas novas da versão 0.2.0 (lista "O que testar" em [RELEASES.md](RELEASES.md)) | verificação dos cartões implementados |
 
 ## Classificados

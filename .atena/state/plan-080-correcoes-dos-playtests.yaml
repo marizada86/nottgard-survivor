@@ -1,0 +1,58 @@
+id: PLAN-080
+spec: SPEC-147
+spec_file: .atena/specs/SPEC-147-correcoes-dos-playtests-v032-e-v033.md
+proposal: .atena/vault/drafts/PLAN-080-correcoes-dos-playtests-v032-e-v033-2026-10-08.md
+mode: per-plan
+status: COMPLETED_LOCAL
+completed: '2026-10-08'
+evidence: EVID-201
+created: '2026-10-08'
+request_classification: PLAN_DEVIATION
+deviation_id: DEV-012
+authorization_verbatim: 'Atena, monte o plano agora'
+approval_basis: 'Dono escolheu por plano, fazer agora e voltar, baú atrasado, sem Ctrl e ranking só ao abrir a aba (2026-10-08). Falta o aviso explícito de início.'
+checkpoint: B-005/S-015 (concluido)
+return:
+  plan: PLAN-071
+  state_file: .atena/state/plan-071-playtest-ranking.yaml
+  checkpoint_observed: B-006/S-011
+  snapshot: .atena/generated/playtest-fixes-080/plan-before-080.yaml
+decisions_taken:
+  approval_mode: 'per-plan (2026-10-08)'
+  route: '2026-10-08: fazer agora e voltar ao PLAN-071'
+  first_chest: '2026-10-08: atrasar o primeiro interativo para 45 s, ainda baú'
+  ctrl: '2026-10-08: sem tecla nova; próximo nível e evolução no detalhe da ficha C'
+  ranking: '2026-10-08: só carregar ao abrir a aba; o resto espera o Daniel e o PLAN-071'
+sources: [EVID-199, EVID-200]
+batches:
+  B-001: {title: Entrada e ficha C, steps: [S-001, S-002, S-003], status: DONE, note: 'S-002 verificado: a HUD ja abre a ficha nas ofertas (14633e2); sem correcao. Teste tests/test_playtest_fixes.gd falha 4x no HEAD e passa com a correcao.'}
+  B-002: {title: HUD do topo e quests, steps: [S-004, S-005, S-006, S-007], status: DONE, note: 'TopStack (ui/hud.gd), QuestPanel (ui/quest_panel.gd), realce no overlay, StatusChip (ui/status_chip.gd), toast do Playtest movido para baixo.'}
+  B-003: {title: Armas e primeiro interativo, steps: [S-008, S-009], status: DONE, note: 'Mutacao: sem o filtro as 8 bases voltam; com ele nenhuma.'}
+  B-004: {title: Ficha C e ranking, steps: [S-010, S-011, S-012], status: DONE}
+  B-005: {title: Validacao e retorno, steps: [S-013, S-014, S-015], status: DONE, note: 'Suite, smoke, kit_test, capturas e EVID-201.'}
+steps:
+  S-001: 'ui/hud.gd, ui/run.gd: C fecha a ficha (teclado e controle); teste.'
+  S-002: 'Verificar a ficha nas ofertas levelup, altar, item_offer e shop; corrigir so se falhar.'
+  S-003: 'core/playtest.gd, ui/hud.gd, ui/run.gd: bloco de notas modal (fundo, has_modal, pausa restaurada); testes.'
+  S-004: 'ui/hud.gd, ui/hud.tscn: painel de objetivos com altura propria; BossPanel e ToastBox abaixo; limite de 4 linhas; teste de retangulos.'
+  S-005: 'ui/hud.gd: painel de quests com moldura, progresso, tempo e pulso.'
+  S-006: 'ui/overlay.gd: destaque de item, alvo, NPC e inimigo da quest dentro da tela.'
+  S-007: 'ui/hud.gd, ui/hero_panel.gd: chip de status do Estige.'
+  S-008: 'core/battle.gd: _build_offer sem a arma base quando a evolucao e possuida; teste.'
+  S-009: 'core/battle.gd: primeiro interativo aos 45 s; testes dependentes.'
+  S-010: 'ui/character_sheet.gd: proximo nivel e evolucao no detalhe de armas, passivas e itens base.'
+  S-011: 'ui/character_sheet.gd: nome antes do valor em Bonus totais.'
+  S-012: 'ui/leaderboard.gd: refresh na primeira exibicao da aba.'
+  S-013: 'Suite completa, smoke das nove fases, kit_test, capturas.'
+  S-014: 'Cartoes BUG/MEC/BAL, INBOX, README, backlog_check, EVID.'
+  S-015: 'Reconciliar plan.yaml (DEV-012) e voltar ao PLAN-071 B-006/S-011.'
+gates:
+  dependencies: NO_NEW_DEPENDENCIES
+  new_art: NOT_REQUIRED
+  commit_push_build_export: NOT_AUTHORIZED
+  other_sessions_changes: PRESERVE_UNTOUCHED
+  files_expected: [ui/hud.gd, ui/hud.tscn, ui/run.gd, ui/overlay.gd, ui/hero_panel.gd, ui/character_sheet.gd, ui/leaderboard.gd, core/battle.gd, core/playtest.gd, tests/]
+blocking_gaps: []
+return_to: PLAN-071 (B-006/S-011, active_plan sem alteracao ate o inicio)
+commit_push_build_export: NOT_PERFORMED
+new_files: [ui/quest_panel.gd, ui/status_chip.gd, tests/test_playtest_fixes.gd, tools/run_one_test.gd, tools/capture_quest_hud.gd, tools/capture_quest_hud.tscn]
