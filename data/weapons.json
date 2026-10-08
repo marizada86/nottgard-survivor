@@ -77,5 +77,7 @@
   "romper_armadura":  {"name": "Romper Armadura", "src": "Carta: Romper Armadura", "kind": "melee", "dtype": "fisico", "attr": "forca", "dice": "1d6", "cd": 1.5, "range": 1.8, "cone": 55, "weaken": 1,
     "desc": "Golpe que quebra a guarda: reduz CA e CAM do alvo.", "levels": [{"dice": "1d8"}, {"weaken": 1}, {"cd": -0.2}, {"dice": "2d6", "dmg": 2}],
     "evolve": {"passive": "cota_de_malha", "into": "esmagar_defesas"}},
-  "esmagar_defesas":  {"name": "Esmagar Defesas", "src": "Evolução", "kind": "melee", "dtype": "fisico", "attr": "forca", "dice": "3d8", "cd": 1.1, "range": 2.4, "cone": 90, "weaken": 3, "levels": [], "desc": "Rasga a guarda de qualquer um."}
+  "esmagar_defesas":  {"name": "Esmagar Defesas", "src": "Evolução", "kind": "melee", "dtype": "fisico", "attr": "forca", "dice": "3d8", "cd": 1.1, "range": 2.4, "cone": 90, "weaken": 3, "levels": [], "desc": "Rasga a guarda de qualquer um."},
+  "dominio_da_vontade": {"name": "Domínio da Vontade", "src": "Item: Coração da Dominância", "kind": "bolt", "dtype": "magico", "attr": "carisma", "dice": "1d6", "cd": 4.5, "range": 9, "speed": 12, "pierce": 0, "count": 1, "stun": 3.0,
+    "desc": "Sugestão: o alvo perde os ataques e obedece.", "levels": []}
 }

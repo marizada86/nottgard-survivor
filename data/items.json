@@ -58,6 +58,7 @@
     {"id":"colar_visao_verdadeira","name":"Colar de visão verdadeira do Santuário","slot":"amuleto","tier":2,"mods":{"hit":2,"crit_overflow_bonus":0.03},"note":"Colar do Santuário de Astherion, com o olho de Ghaunadaur: concede visão verdadeira."},
     {"id":"detector_arcano","name":"Detector Arcano","slot":"anel","tier":1,"mods":{"pickup":1.5,"sorte":2},"note":"Aparelho que detecta assinaturas mágicas."},
     {"id":"dispositivo_antimagia_gilly","name":"Dispositivo Antimagia de Gilly","slot":"armadura","tier":4,"mods":{"cam":3,"inteligencia":-1},"note":"Projeta um escudo antimagia; o custo é sentido por quem o usa."},
-    {"id":"dispositivo_das_docas","name":"Dispositivo das Docas","slot":"amuleto","tier":1,"mods":{"dr":1,"ca":1},"note":"Mecanismo do porto das Docas que afasta as criaturas do mar."}
+    {"id":"dispositivo_das_docas","name":"Dispositivo das Docas","slot":"amuleto","tier":1,"mods":{"dr":1,"ca":1},"note":"Mecanismo do porto das Docas que afasta as criaturas do mar."},
+    {"id":"coracao_da_dominancia","name":"Coração da Dominância","slot":"arma","tier":5,"mods":{"hit":2,"cam":1,"carisma":1},"weapon":"dominio_da_vontade","note":"Troféu da vontade: nasceu quando o portador resistiu à Rainha das Súcubos e conquistou seu respeito."}
   ]
 }

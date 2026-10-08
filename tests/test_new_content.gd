@@ -61,6 +61,7 @@ func run() -> Array:
 	_shadow_blade(out)
 	_armor_break(out)
 	_items(out)
+	_coracao(out)
 	return out
 
 # ---------------------------------------------------------------- W1 Bola de Fogo (SPEC-150)
@@ -170,6 +171,7 @@ func _armor_break(out: Array) -> void:
 # ---------------------------------------------------------------- Equipamentos únicos (SPEC-151)
 # id -> {slot, tier, mods, curse (mod negativo esperado), weapon}. Uma entrada por commit.
 const ITEMS := {
+	"coracao_da_dominancia": {"slot": "arma", "tier": 5, "mods": {"hit": 2, "cam": 1, "carisma": 1}, "weapon": "dominio_da_vontade"},
 	"dispositivo_das_docas": {"slot": "amuleto", "tier": 1, "mods": {"dr": 1, "ca": 1}},
 	"dispositivo_antimagia_gilly": {"slot": "armadura", "tier": 4, "mods": {"cam": 3, "inteligencia": -1}},
 	"detector_arcano": {"slot": "anel", "tier": 1, "mods": {"pickup": 1.5, "sorte": 2}},
@@ -217,3 +219,40 @@ func _items(out: Array) -> void:
 		var at: Array = db.uniques.filter(func(u): return int(u.tier) <= int(want.tier) and String(u.id) == String(id))
 		if not below.is_empty() or at.is_empty():
 			out.append("%s deveria entrar no sorteio só a partir do tier %d" % [id, want.tier])
+
+# ---------------------------------------------------------------- E7 Coração da Dominância (SPEC-151)
+func _coracao(out: Array) -> void:
+	var d := _valid_weapon(out, "dominio_da_vontade", "bolt", "magico", true, 0)
+	if d.is_empty():
+		return
+	if String(d.attr) != "carisma" or float(d.get("stun", 0.0)) != 3.0 or not String(d.src).begins_with("Item"):
+		out.append("Domínio da Vontade deveria ser magia de carisma que atordoa 3 s, concedida por item (%s)" % str(d))
+	var def := {}
+	for u in Data.table("items").uniques:
+		if String(u.id) == "coracao_da_dominancia":
+			def = u
+	if def.is_empty():
+		return
+	var b := _bat(22, "sylas")
+	var heart := Items.unique(def)
+	b._equip_item(heart)
+	var granted: Array = b.hero.weapons.filter(func(w): return w.id == "dominio_da_vontade" and w.granted)
+	if granted.size() != 1:
+		out.append("equipar o Coração da Dominância deveria conceder Domínio da Vontade (%d)" % granted.size())
+	# a arma concedida não é melhorável (Arcanista e ferreiro a ignoram)
+	b._open_shop_event("arcanista")
+	if b.offer.any(func(o): return String(o.t) == "shop_weapon_up" and String(o.weapon_id) == "dominio_da_vontade"):
+		out.append("o Arcanista não deveria melhorar a arma concedida")
+	# atordoa alvo comum, não chefe
+	var foe := _foe(b, b.hero.pos + Vector2(2, 0))
+	b._apply_effects(foe, Weapon.make("dominio_da_vontade").params())
+	if foe.stun_t < 2.99:
+		out.append("Domínio da Vontade deveria atordoar um alvo comum por 3 s (%s)" % foe.stun_t)
+	# trocar o Coração tira a arma concedida
+	var other: Dictionary = {}
+	for u in Data.table("items").uniques:
+		if String(u.id) == "cajado_familia_infernum":
+			other = Items.unique(u)
+	b._resolve_item_choice(other, heart)
+	if b.hero.weapons.any(func(w): return w.id == "dominio_da_vontade"):
+		out.append("trocar o Coração da Dominância deveria retirar Domínio da Vontade")
