@@ -2,6 +2,8 @@ extends SceneTree
 ## Curva de dificuldade por fase (PLAN-055 F2). Mesmo piloto do tools/bot.gd, mas mede cada fase:
 ##   godot --headless --path . -s tools/bot_curva.gd -- <heroi> <seeds> [dt] [maxfases] [lado] [meta 0=novato 1=veterano 2=loja cheia] [marcas]
 ## Saída CSV (prefixo "CSV;"): heroi;seed;fase;nv_entrada;nv_saida;dur_s;pv_min_pct;s_abaixo_50;s_abaixo_25;dano_recebido;chefe_s;resultado
+## BAL-023 (venda = só da run, fora do total): junto de cada CSV sai uma linha "GOLD;" com moedas brutas da fase por fonte:
+##   GOLD;heroi;seed;fase;total;abate;elite;chefe;quebravel;evento;venda;oferta;arma;outro
 
 var _map_side := 60.0
 var _meta := {}
@@ -37,11 +39,18 @@ func _parse_marks(text: String) -> Dictionary:
 	return AbyssMarks.normalize(out)
 
 func _new_stat(b: Battle) -> Dictionary:
-	return {"id": b.stage_id, "lv0": b.hero.level, "t0": b.run_time, "min": 1.0, "b50": 0.0, "b25": 0.0, "dmg": 0.0, "boss_t0": -1.0, "boss": -1.0, "res": "?"}
+	return {"id": b.stage_id, "lv0": b.hero.level, "g0": float(b.stats.gold), "src0": b.stats.gold_src.duplicate(), "ext0": b.stats.gold_extra.duplicate(), "t0": b.run_time, "min": 1.0, "b50": 0.0, "b25": 0.0, "dmg": 0.0, "boss_t0": -1.0, "boss": -1.0, "res": "?"}
 
 func _emit(hero_id: String, seed_v: int, st: Dictionary, b: Battle) -> void:
 	print("CSV;%s;%d;%s;%d;%d;%.0f;%d;%.0f;%.0f;%.0f;%.0f;%s" % [hero_id, seed_v, st.id, st.lv0, b.hero.level, b.run_time - float(st.t0),
 		int(float(st.min) * 100.0), st.b50, st.b25, st.dmg, st.boss, st.res])
+	var cols: Array = []
+	for k in ["abate", "elite", "chefe", "quebravel", "evento", "venda", "oferta", "arma", "outro"]:
+		if k == "venda":  # SPEC-142: venda vale só na run (fora do total do Quartel)
+			cols.append("%.0f" % (float(b.stats.gold_extra.get(k, 0.0)) - float(st.ext0.get(k, 0.0))))
+		else:
+			cols.append("%.0f" % (float(b.stats.gold_src.get(k, 0.0)) - float(st.src0.get(k, 0.0))))
+	print("GOLD;%s;%d;%s;%.0f;%s" % [hero_id, seed_v, st.id, float(b.stats.gold) - float(st.g0), ";".join(cols)])
 
 func _run(hero_id: String, seed_v: int, dt: float, max_stages: int) -> void:
 	seed(seed_v * 7919)  # BAL-018: RNG global do bot reprodutível (empates em _pick)

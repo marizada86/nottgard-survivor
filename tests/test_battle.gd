@@ -161,6 +161,70 @@ func run() -> Array:
 		dn.choose(0)
 		if dn.hero.items.has("anel") or dn.state != "altar" or dn.offer.size() < 1:
 			out.append("doar deveria remover o item e abrir a escolha de bênção (estado %s)" % dn.state)
+	var gs := _bat(81)  # BAL-023: telemetria de ouro por fonte soma o total e não muda valores
+	_quiet(gs)
+	gs._drop("gold", gs.hero.pos, 7.0, "abate")
+	gs._collect("gold", 7.0, "abate")
+	gs._add_gold(3.0, "venda")
+	gs._add_gold(2.0)
+	var gs_sum := 0.0
+	for k in gs.stats.gold_src:
+		gs_sum += float(gs.stats.gold_src[k])
+	if gs_sum != float(gs.stats.gold) or float(gs.stats.gold) != 12.0:
+		out.append("gold_src deveria somar o ouro bruto da run (soma %s, ouro %s)" % [gs_sum, gs.stats.gold])
+	if float(gs.stats.gold_src.get("abate", 0.0)) != 7.0 or float(gs.stats.gold_src.get("venda", 0.0)) != 3.0 or float(gs.stats.gold_src.get("outro", 0.0)) != 2.0:
+		out.append("gold_src deveria separar abate, venda e outro: %s" % str(gs.stats.gold_src))
+	if not gs.result().has("gold_src"):
+		out.append("result() deveria expor gold_src")
+	# BAL-023 B-003 (SPEC-142): bônus de moedas proporcional em qualquer fase (M5)
+	for sid in ["dagruve", "docas"]:
+		var gp := _bat(84, "durvall", sid)
+		_quiet(gp)
+		var cm := float(gp.stage.coin_mult)
+		var base_sum := 0.0
+		var plus_sum := 0.0
+		for i in 1000:
+			base_sum += gp._kill_gold_value()
+		gp.hero.mods["gold_pct"] = 0.1
+		gp._gold_carry = 0.0
+		for i in 1000:
+			plus_sum += gp._kill_gold_value()
+		if absf(base_sum - 1000.0 * cm) > 1.5 or absf(plus_sum - 1100.0 * cm) > 1.5:
+			out.append("gold_pct +10%% deveria dar +10%% de moedas em %s (base %.1f, com bônus %.1f)" % [sid, base_sum, plus_sum])
+	# valor-base no Quartel: ouro escalado por coin_mult entra dividido por ele; a oferta fixa não
+	var gm := _bat(85, "durvall", "docas")
+	_quiet(gm)
+	gm._collect("gold", 13.5, "abate")
+	if absf(float(gm.stats.gold) - 10.0) > 0.001 or gm.hero.gold != 13:
+		out.append("ouro de Docas deveria valer 13 na run e 10 no Quartel (run %d, Quartel %s)" % [gm.hero.gold, gm.stats.gold])
+	gm._add_gold(40.0, "oferta", false)
+	if absf(float(gm.stats.gold) - 50.0) > 0.001:
+		out.append("a Bolsa de Moedas fixa deveria entrar inteira no Quartel (agora %s)" % gm.stats.gold)
+	# venda: acompanha coin_mult na run e não entra no Quartel
+	if absf(gm.sell_value("comum") - 8.0 * 1.35) > 0.001:
+		out.append("venda de peça deveria acompanhar o coin_mult da fase")
+	var q_before := float(gm.stats.gold)
+	gm._add_gold(gm.sell_value("raro"), "venda", true, false)
+	if float(gm.stats.gold) != q_before or float(gm.stats.gold_extra.get("venda", 0.0)) <= 0.0:
+		out.append("venda de peça não deve entrar no ouro do Quartel")
+	# Chicote Avarento: teto de moedas por segundo
+	var gh := _bat(86)
+	_quiet(gh)
+	gh.run_time = 100.0
+	for i in 50:
+		gh._pay_gold_hit(1.0)
+	if float(gh.stats.gold_src.get("arma", 0.0)) != 1.0:
+		out.append("Chicote deveria pagar uma vez por intervalo (pagou %s)" % gh.stats.gold_src.get("arma", 0.0))
+	gh.run_time = 100.0 + 1.0 / float(gh.gold_cfg().get("gold_hit_per_second", 0.15)) + 0.1
+	gh._pay_gold_hit(1.0)
+	if float(gh.stats.gold_src.get("arma", 0.0)) != 2.0:
+		out.append("Chicote deveria pagar de novo depois do intervalo")
+	# teto do multiplicador de recompensa (M3)
+	var gr := _bat(87)
+	gr._set_abyss_marks({"horda": 3, "furia": 3, "carapaca": 3, "pressa": 3, "fome": 3}, "dagruve")
+	gr.descent_depth = 3
+	if gr.reward_multiplier() > 3.0001 or gr.next_reward_multiplier() > 3.0001:
+		out.append("multiplicador de recompensa deveria respeitar o teto 3,0 (agora %s)" % gr.reward_multiplier())
 	var gb := _bat(82)
 	_quiet(gb)
 	gb.hero.gold = 100

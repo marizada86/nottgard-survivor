@@ -488,7 +488,7 @@ func _apply_reward(b: Battle, r: Dictionary, at: Vector2) -> void:
 	if bool(r.get("boss_chest", false)):
 		b._add_interaction("boss_chest", at + Vector2(0.0, 1.2))
 	if float(r.get("gold", 0.0)) > 0.0:
-		b._drop("gold", at, float(r.gold) * float(b.stage.coin_mult))
+		b._drop("gold", at, float(r.gold) * float(b.stage.coin_mult), "evento")
 	if float(r.get("heal_pct", 0.0)) > 0.0:
 		var amount := b.hero.max_hp * float(r.heal_pct)
 		b._heal_hero(amount)
@@ -535,7 +535,7 @@ func _grant_god_boon(b: Battle, ids: Array) -> void:
 					b.events.append({"type": "divinity", "god": b.visual_god})
 				b.events.append({"type": "toast", "text": "%s: %s" % [String(bn.god), String(bn.name)], "color": Color(0.9, 0.85, 0.5)})
 				return
-	b._drop("gold", b.hero.pos + Vector2(1.2, 0.0), 40.0 * float(b.stage.coin_mult))
+	b._drop("gold", b.hero.pos + Vector2(1.2, 0.0), 40.0 * float(b.stage.coin_mult), "evento")
 	b.events.append({"type": "toast", "text": "O deus não tem mais o que dar: moedas no lugar.", "color": Color(0.9, 0.85, 0.5)})
 
 # ------------------------------------------------------------------ UI

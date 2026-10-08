@@ -22,6 +22,8 @@ func run() -> Array:
 		failures.append("schema vazou segredo ou ID nao foi gerado")
 	if not result.eligibility_reasons.has("qa") or not result.eligibility_reasons.has("accelerated"):
 		failures.append("QA/aceleracao precisam persistir no resultado")
+	if not result.result.has("gold_src") or not result.result.has("raw_gold"):
+		failures.append("registro da run deve levar raw_gold e gold_src (BAL-023)")
 	if JSON.parse_string(json) == null or result.history.size() < 2:
 		failures.append("resultado nao serializa ou historico esta ausente")
 	return failures

@@ -11,7 +11,6 @@ enum Aim { AUTO, MOUSE }
 const ENEMY_ATK_RANGE := 0.95
 const ENEMY_ATK_CD := 1.3
 const SPAWN_SLOW := 1.35   # multiplica o intervalo das ondas (ritmo lento)
-const FIRST_INTERACTION_SECONDS := 45.0   # SPEC-147 (IN-065): o primeiro interativo (sempre baú) só surge depois disso; era 4 s
 const HIT_INVULN := 0.1
 ## Revisão das curas: a barreira que nasce do excesso de cura (Bênção da Cura, Resto da Tarn) vai até esta fração do PV máximo (antes 0,25).
 const OVERHEAL_BARRIER_CAP := 0.10
@@ -39,7 +38,6 @@ const AFFIX_LEECH := 0.2
 const AFFIX_SUMMON_EVERY := 8.0
 const AFFIX_SUMMON_N := 3
 const AFFIX_FIRST_AFFIXED_STAGE := 2   # `order` da fase em que os afixos novos começam (Shedaklah)
-const TRUCE_KINDS := ["loja", "ferreiro", "curandeiro"]   # SPEC-143: o que a marca Sem trégua tira da run
 const AFFIX_BOSS_FIRST_STAGE := 4      # chefe afixado a partir da quinta fase (Durao)
 ## Cada bioma tem seu próprio quebrável temático, alinhado à família de prop
 ## já usada na fase (ART-PROMPTS-024). Candelabro/caixote continuam
@@ -107,7 +105,7 @@ var free_revive_used := false
 var death_reward_rate := 0.5
 var death_reason := ""
 var invuln := 0.0
-var stats := {"boons_declined": 0, "kills": 0, "crits": 0, "ones": 0, "elites": 0, "bosses": 0, "chests": 0, "gold": 0.0, "gold_src": {}, "gold_extra": {}, "damage_taken": 0.0, "clean_kills": 0, "clean_streak_best": 0, "still_best": 0.0, "stages_cleared": 0, "rituals": 0, "bets_won": 0, "loyalty": 0, "boss_ids": [], "stage_ids": [], "cleared_ids": []}
+var stats := {"boons_declined": 0, "kills": 0, "crits": 0, "ones": 0, "elites": 0, "bosses": 0, "chests": 0, "gold": 0.0, "gold_src": {}, "damage_taken": 0.0, "clean_kills": 0, "clean_streak_best": 0, "still_best": 0.0, "stages_cleared": 0, "rituals": 0, "bets_won": 0, "loyalty": 0, "boss_ids": [], "stage_ids": [], "cleared_ids": []}
 var codex := {"enemies": {}, "items": {}, "weapons": {}}
 var _acc := {}
 var _elites_done := {}
@@ -167,19 +165,11 @@ var _mk_dmg := 1.0
 var _mk_hp := 1.0
 var _mk_speed := 1.0
 var _mk_heal := 1.0
-var _mk_alive := 1.0       # Abismo vivo: a regra do andar acontece mais vezes
-var _mk_boss := 1.0        # Chefe desperto: multiplicador de PV
-var _mk_elites := 0        # Elites despertos: afixos a mais por elite
-var _mk_truce := false     # Sem trégua: sem loja, ferreiro nem curandeiro
-var abyss_rng := RandomNumberGenerator.new()  # RNG própria das marcas novas: não desloca a da batalha
-var _awake_elite_t := 0.0
 var stage_rule: Dictionary = {}
 var stage_events: Array = []
 var _rule_timer := 0.0
 var _rule_index := -1
 var _effect_cd := {}
-var _gold_carry := 0.0  # SPEC-142: resto fracionário do ouro por abate (bônus de moedas proporcional)
-var _gold_hit_t := 0.0  # SPEC-142: próximo instante em que o Chicote Avarento volta a pagar
 var _stage_events_done := {}
 var _hero_moving := false
 var still_t := 0.0
@@ -222,11 +212,6 @@ func _set_abyss_marks(raw: Variant, start_stage: String) -> void:
 	_mk_hp = AbyssMarks.up_mult(abyss_marks, "carapaca")
 	_mk_speed = AbyssMarks.up_mult(abyss_marks, "pressa")
 	_mk_heal = AbyssMarks.heal_mult(abyss_marks)
-	_mk_alive = AbyssMarks.up_mult(abyss_marks, "vivo")
-	_mk_boss = AbyssMarks.up_mult(abyss_marks, "chefe")
-	_mk_elites = AbyssMarks.level_of(abyss_marks, "elites")
-	_mk_truce = AbyssMarks.level_of(abyss_marks, "tregua") > 0
-	abyss_rng.seed = _seed ^ 0xA7B155
 
 ## SPEC-141 (Fome): toda cura do herói passa por aqui; sem a marca devolve o valor intacto.
 func _heal_amount(amount: float) -> float:
@@ -238,40 +223,10 @@ func _add_hp(amount: float) -> void:
 	run_record.healing += minf(amount, maxf(0.0, hero.max_hp - hero.hp))
 	hero.hp = minf(hero.max_hp, hero.hp + amount)
 
-## SPEC-143 (Abismo vivo): a regra do andar acontece `_mk_alive` vezes mais; as ilusões ganham chance, o Estige não muda.
-func _apply_alive_mark() -> void:
-	if _mk_alive == 1.0:
-		return
-	if stage_rule.has("interval"):
-		stage_rule["interval"] = float(stage_rule.interval) / _mk_alive
-	if String(stage_rule.get("kind", "")) == "illusions":
-		stage_rule["chance"] = minf(0.5, float(stage_rule.get("chance", 0.12)) * _mk_alive)
-
-## SPEC-143 (Elites despertos): `n` afixos a mais, sem repetir, sorteados na RNG das marcas.
-func _pick_awake_affixes(e: Enemy, n: int) -> Array:
-	var left: Array = (AFFIXES if _stage_order() < AFFIX_FIRST_AFFIXED_STAGE else ELITE_AFFIXES).filter(func(a): return not e.has_affix(String(a)))
-	var picked: Array = []
-	for i in mini(n, left.size()):
-		picked.append(left.pop_at(abyss_rng.randi() % left.size()))
-	return picked
-
-## SPEC-143 (Chefe desperto): mais PV e uma fase extra a 15 %, mais forte por nível.
-func _apply_awake_boss(boss_e: Enemy) -> void:
-	var lv := AbyssMarks.level_of(abyss_marks, "chefe")
-	if lv <= 0:
-		return
-	boss_e.max_hp = round(boss_e.max_hp * _mk_boss)
-	boss_e.hp = boss_e.max_hp
-	var p: Dictionary = AbyssMarks.def("chefe").phase
-	boss_e.phase_defs.append({"at_hp": float(p.at_hp), "announcement": String(p.announcement), "actions": [
-		{"t": "ring", "n": int(p.ring_n) + int(p.ring_n_per_level) * lv, "dice": String(p.dice), "speed": float(p.speed)},
-		{"t": "enrage", "speed": float(p.enrage_speed), "bonus": int(p.enrage_bonus_per_level) * lv}]})
-
 func load_stage(stage_key: String) -> void:
 	stage_id = stage_key
 	stage = Data.table("stages")[stage_key].duplicate(true)
 	stage_rule = Data.table("stage_rules").get(stage_key, {}).duplicate(true)
-	_apply_alive_mark()
 	stage_events = Happenings.select(stage_key, Data.table("stage_events").get(stage_key, []), _seed)
 	happenings.reset()
 	kinds.reset_stage(self)
@@ -298,8 +253,7 @@ func load_stage(stage_key: String) -> void:
 	_horde_state = 0
 	_horde_acc = 0.0
 	_stage_events_done.clear()
-	_awake_elite_t = 0.0
-	_inter_t = FIRST_INTERACTION_SECONDS
+	_inter_t = 4.0
 	_first_inter = true
 	_breakable_t = 20.0 + rng.randf() * 10.0
 	_amb_puddle = 9.0
@@ -456,7 +410,7 @@ func reward_multiplier() -> float:
 func _reward_multiplier_for(depth: int) -> float:
 	var values := [1.0, 1.25, 1.55, 1.90]
 	var base: float = values[depth] if depth < values.size() else 1.90 + float(depth - 3) * 0.35
-	return minf(float(gold_cfg().get("reward_cap", 99.0)), base * (1.0 + AbyssMarks.reward_bonus(abyss_marks)))
+	return base * (1.0 + AbyssMarks.reward_bonus(abyss_marks))
 
 func next_reward_multiplier() -> float:
 	return _reward_multiplier_for(descent_depth + 1)
@@ -816,7 +770,7 @@ func _hero_hit(e: Enemy, p: Dictionary, roll: bool, visual_theme: Dictionary = {
 			_add_hp(dmg * ls)
 	_apply_effects(e, p)
 	if float(p.get("gold_hit", 0.0)) > 0.0:
-		_pay_gold_hit(float(p.gold_hit))
+		_add_gold(float(p.gold_hit), "arma")
 	if e.hp <= 0.0 and not e.dead:
 		_kill(e)
 	return true
@@ -1436,8 +1390,8 @@ func _kill(e: Enemy) -> void:
 				other.burn_dps = maxf(other.burn_dps, 4.0)
 	if xp_v > 0.0:
 		_drop("xp", e.pos, xp_v)
-	if e.xp > 0 and rng.randf() < 0.22:
-		_drop("gold", e.pos, _kill_gold_value() * (5.0 if e.affix == "avaro" else 1.0), "abate")
+	if e.xp > 0 and rng.randf() < 0.22 + hero.m("gold_pct") * 0.05:
+		_drop("gold", e.pos, maxf(1.0, round(float(stage.coin_mult) * (1.0 + hero.m("gold_pct")))) * (5.0 if e.affix == "avaro" else 1.0), "abate")
 	if e.split_id != "":
 		for i in 2:
 			_spawn(e.split_id, e.pos + Vector2(rng.randf_range(-0.6, 0.6), rng.randf_range(-0.6, 0.6)))
@@ -1522,8 +1476,6 @@ func place_scenery() -> int:
 ## Interativos de posição fixa da fase (poço de Dagruve, oficina do cais nas Docas). Reaproveitam as interações existentes.
 func _place_fixed_interactions() -> void:
 	for entry in Data.table("scenery").get(stage_id, {}).get("interativos", []):
-		if _mk_truce and TRUCE_KINDS.has(String(entry.kind)):
-			continue
 		var at := Vector2(float(entry.pos[0]), float(entry.pos[1]))
 		if at.distance_to(hero.pos) < 3.0:
 			continue
@@ -1672,45 +1624,10 @@ func _collect(kind: String, value: float, src: String = "") -> void:
 			for p in pickups:
 				p.magnet = true
 
-func gold_cfg() -> Dictionary:
-	return Data.table("difficulty").get("gold", {})
-
-## Moedas da run (`v` já vem multiplicado por `coin_mult` quando `scaled`). Para o Quartel (`stats.gold`) entra o valor-base:
-## `v / coin_mult^meta_coin_exponent`. `to_meta` falso = vale só na run (`stats.gold_extra`, não infla a recompensa).
-func _add_gold(v: float, src: String = "outro", scaled: bool = true, to_meta: bool = true) -> void:
+func _add_gold(v: float, src: String = "outro") -> void:
 	hero.gold += int(v)
-	if not to_meta:
-		stats.gold_extra[src] = float(stats.gold_extra.get(src, 0.0)) + v
-		return
-	var meta := v
-	if scaled:
-		meta = v / pow(maxf(1.0, float(stage.coin_mult)), float(gold_cfg().get("meta_coin_exponent", 0.0)))
-	stats.gold += meta
-	stats.gold_src[src] = float(stats.gold_src.get(src, 0.0)) + meta
-
-## Valor de uma moeda largada por abate: `coin_mult × (1 + gold_pct)` sem arredondar; o resto fracionário
-## acumula para o próximo abate (esperado exato, sem sortear e sem mexer na RNG da batalha).
-func _kill_gold_value() -> float:
-	var v := float(stage.coin_mult) * (1.0 + hero.m("gold_pct")) + _gold_carry
-	if v < 1.0:
-		_gold_carry = 0.0
-		return 1.0
-	var whole := floorf(v)
-	_gold_carry = v - whole
-	return whole
-
-## Chicote Avarento: +`g` moeda por acerto, no máximo `gold_hit_per_second` por segundo (valor-base × coin_mult).
-func _pay_gold_hit(g: float) -> void:
-	var rate := float(gold_cfg().get("gold_hit_per_second", 0.0))
-	if rate > 0.0:
-		if run_time < _gold_hit_t:
-			return
-		_gold_hit_t = run_time + g / rate
-	_add_gold(g * float(stage.coin_mult), "arma")
-
-## Preço de venda de uma peça: acompanha o `coin_mult` da fase, como a loja.
-func sell_value(rarity: String) -> float:
-	return Items.price("sell", rarity) * float(stage.coin_mult)
+	stats.gold += v
+	stats.gold_src[src] = float(stats.gold_src.get(src, 0.0)) + v
 
 func _add_xp(v: float) -> void:
 	hero.xp += v
@@ -2133,8 +2050,8 @@ func give_item(item: Dictionary, announce := false) -> void:
 		events.append({"type": "toast", "text": "%s [%s]" % [item.name, Items.rarity_label(item.rarity)], "color": Items.rarity_color(item.rarity)})
 		return
 	var cur_now := Items.scaled_mods(cur, int(cur.get("level", 1)))
-	var gold_for_cur: float = sell_value(String(cur.rarity))
-	var gold_for_new: float = sell_value(String(item.rarity))
+	var gold_for_cur: float = Items.price("sell", String(cur.rarity))
+	var gold_for_new: float = Items.price("sell", String(item.rarity))
 	offer = [
 		{"t": "item_swap", "name": "Equipar %s [%s]" % [item.name, Items.rarity_label(item.rarity)],
 			"desc": "%s\nContra o atual: %s\n(vende %s por %d moedas)" % [Items.mods_text(item.mods), Items.compare_text(item.mods, cur_now), cur.name, int(gold_for_cur)],
@@ -2170,8 +2087,8 @@ func _resolve_item_choice(keep: Dictionary, sell: Dictionary) -> void:
 	if String(sell.get("weapon", "")) != "" and String(sell.get("weapon", "")) != String(keep.get("weapon", "")):
 		hero.weapons = hero.weapons.filter(func(w): return not (w.granted and w.id == sell.weapon))
 	_equip_item(keep)
-	var g: float = sell_value(String(sell.rarity))
-	_add_gold(g, "venda", true, not bool(gold_cfg().get("run_only_sell", false)))
+	var g: float = Items.price("sell", String(sell.rarity))
+	_add_gold(g, "venda")
 	events.append({"type": "toast", "text": "%s vendido (+%d moedas)" % [sell.name, int(g)], "color": Items.rarity_color(sell.rarity)})
 
 ## MEC-027: tabela do hover da troca de item (lado principal contra o outro, ambos já escalados).
@@ -2290,13 +2207,10 @@ func _build_offer() -> Array:
 		if not syn.is_empty() and not hero.synergies.has(w.id) and _has_maxed_accessory(String(syn.item_base)):
 			pool.append({"t": "synergy_activate", "id": w.id, "name": "SINERGIA: %s" % String(syn.name), "desc": "%s por camada descida (agora: ×%d)." % [Items.mods_text(syn.bonus_per_depth), maxi(1, descent_depth)], "weight": 9.0, "role": "synergy"})
 	if owned_w < hero.weapon_slots():
-		var evolved_bases := _evolved_base_ids()
 		for wid in wdata:
 			var d: Dictionary = wdata[wid]
 			if String(d.src).begins_with("Evolu") or String(d.src).begins_with("Item"):
 				continue
-			if evolved_bases.has(String(wid)):
-				continue  # SPEC-147 (IN-063): a arma base já virou a evolução que o herói tem
 			if hero.weapons.any(func(w): return w.id == wid):
 				continue
 			pool.append({"t": "weapon_new", "id": wid, "name": "NOVA: %s" % d.name, "desc": d.desc, "weight": 2.0, "role": _weapon_offer_role(d)})
@@ -2326,16 +2240,6 @@ func _build_offer() -> Array:
 		out.append({"t": "gold", "id": "gold", "name": "Bolsa de Moedas", "desc": "+40 moedas.", "weight": 1.0})
 	for o in out:
 		_decorate_offer(o)
-	return out
-
-## SPEC-147 (IN-063): ids das armas base cuja evolução o herói possui; elas não voltam como "NOVA" nas ofertas.
-func _evolved_base_ids() -> Dictionary:
-	var out := {}
-	var wdata: Dictionary = Data.table("weapons")
-	for wid in wdata:
-		var evo: Dictionary = wdata[wid].get("evolve", {})
-		if not evo.is_empty() and hero.weapons.any(func(w): return w.id == String(evo.into)):
-			out[String(wid)] = true
 	return out
 
 func _weighted_pick(candidates: Array) -> Dictionary:
@@ -2399,24 +2303,6 @@ func evolve_hint(w: Weapon) -> String:
 	if missing.is_empty():
 		return "Pronta para evoluir em %s: escolha a evolução no próximo level-up." % into
 	return "Evolui em %s com nível %d + passiva %s. Falta: %s." % [into, Weapon.MAX_LEVEL, pname, ", ".join(missing)]
-
-## SPEC-147 (IN-059): o que o próximo nível da arma muda; "" no nível máximo ou quando a arma não evolui por níveis.
-func next_level_text(w: Weapon) -> String:
-	if w.level >= w.max_level():
-		return ""
-	return _level_desc(w)
-
-## SPEC-147 (IN-059): o que a evolução da arma traz (nome, descrição e faixa de dano); "" quando ela não evolui.
-func evolution_text(w: Weapon) -> String:
-	if not w.def.has("evolve"):
-		return ""
-	var into := Weapon.make(String(w.def.evolve.into))
-	var t := "%s: %s" % [into.display_name(), String(into.def.get("desc", ""))]
-	var dmg := weapon_damage_text(into.params())
-	if dmg != "":
-		t += "
-" + dmg
-	return t
 
 func _level_desc(w: Weapon) -> String:
 	var lv: Array = w.def.get("levels", [])
@@ -2544,7 +2430,7 @@ func choose(i: int) -> void:
 		"heal":
 			_add_hp(hero.max_hp * 0.4)
 		"gold":
-			_add_gold(40.0, "oferta", false)
+			_add_gold(40.0, "oferta")
 		"boon":
 			hero.boons.append(c.boon)
 		"boon_skip":
@@ -2634,9 +2520,6 @@ func _spawn_elite(id: String, at: Vector2) -> Enemy:
 		_apply_affix(e, AFFIXES[rng.randi() % AFFIXES.size()])
 	else:
 		for a in _pick_affixes(ELITE_AFFIXES, _elite_affix_count()):
-			_apply_affix(e, a)
-	if _mk_elites > 0:
-		for a in _pick_awake_affixes(e, _mk_elites):
 			_apply_affix(e, a)
 	e.affix = e.affixes[0]
 	e.xp *= 3
@@ -2803,12 +2686,6 @@ func _director(dt: float) -> void:
 		if not _elites_done.has(i) and time >= float(el.at):
 			_elites_done[i] = true
 			_spawn_elite(String(el.id), _ring_pos())
-	if _mk_elites > 0 and not boss_spawned and not stage.elites.is_empty() and _mk_elites >= int(AbyssMarks.def("elites").extra_elite_level):
-		_awake_elite_t += dt
-		if _awake_elite_t >= float(AbyssMarks.def("elites").extra_elite_every):
-			_awake_elite_t = 0.0
-			var awake_pick: Dictionary = stage.elites[abyss_rng.randi() % stage.elites.size()]
-			_spawn_elite(String(awake_pick.id), _ring_pos())
 	if descent_depth > 0 and not stage.elites.is_empty():
 		var pressure_mark := int(time / maxf(70.0, 130.0 - float(descent_depth) * 10.0))
 		var pressure_key := "pressure_%d" % pressure_mark
@@ -2823,7 +2700,6 @@ func _director(dt: float) -> void:
 		boss.max_hp = round(boss.max_hp * scale_extra * (1.0 + 0.3 * tier() * 0.0))
 		boss.hp = boss.max_hp
 		_apply_boss_affix(boss)
-		_apply_awake_boss(boss)
 		happenings.on_boss_spawn(self, boss)
 		codex.enemies[boss.id] = true
 		events.append({"type": "boss", "enemy": boss})
@@ -2874,10 +2750,6 @@ func _spawn_random_interaction() -> void:
 	if alive_n >= int(Data.table("difficulty").get("interactions", {}).get("max_alive", 4)):
 		return
 	var weights: Dictionary = stage.interactions
-	if _mk_truce:
-		weights = weights.duplicate()
-		for k in TRUCE_KINDS:
-			weights.erase(k)
 	var total := 0.0
 	for k in weights:
 		total += float(weights[k])
@@ -3055,7 +2927,7 @@ func _styx_lucidity_test(dc: int) -> void:
 
 func result() -> Dictionary:
 	return {"won": state == "won", "dead": state == "dead", "extracted": extracted, "time": run_time, "kills": stats.kills,
-		"gold": int(round(stats.gold * reward_multiplier())), "raw_gold": int(stats.gold), "gold_src": stats.gold_src.duplicate(), "gold_extra": stats.gold_extra.duplicate(), "reward_mult": reward_multiplier(), "descent_depth": descent_depth,
+		"gold": int(round(stats.gold * reward_multiplier())), "raw_gold": int(stats.gold), "gold_src": stats.gold_src.duplicate(), "reward_mult": reward_multiplier(), "descent_depth": descent_depth,
 		"abyss_level": abyss_level, "abyss_marks": abyss_marks.duplicate(), "abyss_start_stage": abyss_start_stage,
 		"clean_streak": stats.clean_streak_best, "level": hero.level, "stage": stage_id, "hero": hero.id, "bosses": stats.bosses, "boss_ids": stats.boss_ids, "elites": stats.elites, "crits": stats.crits,
 		"ones": stats.ones, "still": stats.still_best, "rituals": stats.rituals, "bets_won": stats.bets_won, "loyalty": stats.loyalty, "chests": stats.chests, "stages_cleared": stats.stages_cleared, "stage_ids": stats.stage_ids, "cleared_ids": stats.cleared_ids, "final_victory": final_victory, "weapons": hero.weapons.map(func(w): return w.id), "codex": codex,

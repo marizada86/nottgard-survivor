@@ -1,13 +1,6 @@
 {
   "_enemy_speed": "SPEC-124: multiplicador global da velocidade dos inimigos moveis (speed > 0); 1.0 = valores de enemies.json.",
   "enemy_speed_mult": 1.2,
-  "gold": {
-    "_spec": "SPEC-142 B-003 (BAL-023): economia de ouro. meta_coin_exponent: o ouro de cada fase entra no Quartel dividido por coin_mult^expoente (1.0 = valor-base, sem a inflacao x5 das fases finais; 0 = como antes). gold_hit_per_second: teto de moedas por segundo do Chicote Avarento (valor-base, sem coin_mult). reward_cap: teto do multiplicador de recompensa (descida x Marcas). run_only_sell: venda de pecas vale na run (escalada por coin_mult) mas nao entra no Quartel.",
-    "meta_coin_exponent": 1.0,
-    "gold_hit_per_second": 0.15,
-    "reward_cap": 3.0,
-    "run_only_sell": true
-  },
   "opening": {
     "hold_seconds": 90,
     "fade_seconds": 240,

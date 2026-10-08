@@ -1,0 +1,40 @@
+id: PLAN-075
+spec: SPEC-142
+spec_file: .atena/specs/SPEC-142-balanceamento-da-economia-de-ouro.md
+plan_file: .atena/vault/drafts/PLAN-075-economia-de-ouro-2026-10-07.md
+mode: per-plan
+status: COMPLETED_LOCAL
+created: '2026-10-07'
+request_classification: PLAN_DEVIATION
+deviation_id: DEV-007
+authorization_verbatim: 'atena, faca um plano para balancear a obtencao de ouro no jogo'
+checkpoint: B-005/S-012 (concluido)
+return:
+  plan: PLAN-071
+  state_file: .atena/state/plan-071-playtest-ranking.yaml
+  checkpoint_observed: B-006/S-011
+  also_running: PLAN-074 (DEV-006)
+decisions_taken:
+  route: "2026-10-07: medir ja, corrigir depois (B-001 e B-002 agora; B-003 espera PLAN-074 B-004)"
+  D1: "ambos, Quartel primeiro"
+  D2: "~20 vitorias para comprar tudo"
+  approval: "per-plan (2026-10-07)"
+decisions_pending:
+  D3: 'alavanca principal (recomendado: corrigir escala antes de custo)'
+batches:
+  B-001: {title: Telemetria e linha de base, steps: [S-001, S-002, S-003], status: DONE, evidence: EVID-191}
+  B-002: {title: Metas numericas (checkpoint do dono), steps: [S-004, S-005], status: DONE, targets: "M1-M6 confirmadas pelo dono em 2026-10-07 (EVID-191)"}
+  B-003: {title: Correcoes de escala, steps: [S-006, S-007, S-008], status: DONE, evidence: EVID-193}
+  B-004: {title: Custos e economia da run, steps: [S-009, S-010], status: SKIPPED_BY_OWNER, note: "2026-10-07: pula a B-004; revisitar so se o playtest com gold_src reprovar M1 ou M6"}
+  B-005: {title: Validacao e reconciliacao, steps: [S-011, S-012], status: DONE, evidence: EVID-194}
+gates:
+  dependencies: NO_NEW_DEPENDENCIES
+  new_art: NOT_REQUIRED
+  commit_push_build_export: NOT_AUTHORIZED
+  other_sessions_changes: PRESERVE_UNTOUCHED
+  player_profiles: NOT_MODIFIED
+blocking_gaps: []
+completed: '2026-10-07'
+return_to: PLAN-071 (B-006/S-011, active_plan sem alteracao)
+commit_push_build_export: NOT_PERFORMED
+open_items: [servidor aceitar gold_src/gold_extra em result, calibrar M1 e M6 com playtest, interpretacao da M4]
