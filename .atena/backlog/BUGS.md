@@ -46,6 +46,17 @@ abaixo. Cada item vira BUG-nnn se falhar.
 | BUG-009 | P2 | Botão de menu do HUD encerra o sandbox QA; `qa.cenario` correto no manifesto | SPEC-074 |
 | BUG-010 | P1 | Sinergias combinadas arma + acessório + magia | SPEC-075 |
 
+### Conhecidos na v0.4.0 (PLAN-081 / SPEC-148, 2026-10-08)
+
+Decisão do dono: estes defeitos **não entram** na 0.4.0 e vão para a caixa "Conhecidos" do changelog, para o tester não gastar relato neles. O que muda é só se o especialista Caio devolver uma correção do BUG-028 antes do fechamento: ela entra como minor-fix com teste.
+
+- Zynara, Leoric e Nyrelia mostram o rosto ao andar para cima (BUG-027, P1).
+- Heróis patinam ao andar de lado e nas diagonais (BUG-028, P1); o pacote para o Caio fica em `.atena/generated/caio-durvall/`, só local.
+- Pixels soltos nos heróis (BUG-029, P1) e dimensões ao andar e atacar (BUG-025, P1, parcial).
+- HQ "A Peregrinação da Estrela", quadro 2: braço do Korrak fundido ao machado (BUG-022, P2).
+
+Reteste em run real exigido antes do fechamento (S-006): BUG-033 (botão Jogar com controle) e as verificações BUG-003 a BUG-010; o que não for visto entra em "O que testar".
+
 ### Defeitos relatados em playtest
 
 | ID | Sev | Título | Origem | Situação | Spec |

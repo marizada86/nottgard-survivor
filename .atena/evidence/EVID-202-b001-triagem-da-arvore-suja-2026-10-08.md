@@ -84,3 +84,13 @@ Cópia limpa do `HEAD` (`git archive`) em pasta isolada do scratchpad; importaç
 | G5 | documentos de estado (commit seguinte; o hash fica no `git log`) |
 
 D1: `backlog_check` caiu de 3 para 0 alertas de organização. D2: o ZIP fica local, anotado no SPEC-146. D3: `unit-profile.json` e `.bak` ficaram fora do Git. Nenhum push foi feito.
+
+## S-004 final e S-005 — `HEAD` `5953d44` (cópia limpa via `git archive`, com `.atena/`)
+
+| Verificação | Resultado |
+|---|---|
+| `tests/run_all.gd` | `testes: 0 falha(s)`, saída 0 |
+| `res://tools/smoke.tscn` (nove fases) | `smoke: ok`, saída 0 |
+| `res://tools/kit_test.tscn` | `kit: OK`, saída 0. Precisa de janela: em `--headless` o `take_print` espera uma captura que o renderizador dummy não entrega e o teste trava (saída 124); rodado com `--resolution 640x360` |
+
+Os avisos de RIDs e objetos vazados ao sair são do encerramento do Godot, sem falha de teste. **B-001 concluído.** G6 (versão) continua como alteração local até B-008.

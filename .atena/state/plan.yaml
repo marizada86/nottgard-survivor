@@ -13,8 +13,8 @@ active_plan:
   deviation_id: DEV-013
   start_authorization_verbatim: 'atena, inicie o PLAN-081 em B-001'
 plan_cursor:
-  current: 'PLAN-081 / SPEC-148 (v0.4.0): B-001 S-001 a S-003 feitos (EVID-202, commits 020642b a 2a18614 e G5); S-004 final (suite no HEAD) pendente.'
-  next: 'S-004 suite completa no HEAD final; depois B-002 (bugs e verificacao).'
+  current: 'PLAN-081 / SPEC-148 (v0.4.0): B-001 e B-002 concluidos; B-003 feito local (EVID-204: fallback de icone de bencao por divindade; suite 0 falhas); commit aguarda aprovacao.'
+  next: 'Aprovar o commit do B-003; depois B-004 (MEC-041, SPEC-149).'
 suspended_active_plan:
   id: PLAN-071
   spec_id: SPEC-138

@@ -9,7 +9,7 @@ request_classification: PLAN_DEVIATION
 deviation_id: DEV-013
 authorization_verbatim: 'atena, planeje a v0.4.0 agora'
 approval_basis: 'Dono escolheu por plano, MEC-039 fatia piloto, MEC-041 + 3 armas/magias + 6 itens, arte provisoria nao trava (2026-10-08). Falta o aviso explicito de inicio.'
-checkpoint: B-001/S-004 (commits G1 a G5 e D1 feitos; falta a suite no HEAD final)
+checkpoint: B-003 concluido local; aguarda aprovacao do commit; proximo B-004/S-010
 return:
   plan: PLAN-071
   state_file: .atena/state/plan-071-playtest-ranking.yaml
@@ -25,9 +25,9 @@ decisions_taken:
   route: 'Planejar agora; PLAN-071 preservado e retomado em B-006/S-011'
 sources: [RELEASES.md, BUGS.md, MECANICAS.md, ARTE.md, BALANCEAMENTO.md, SPEC-119, SPEC-147]
 batches:
-  B-001: {title: Higiene da arvore e linha de base, steps: [S-001, S-002, S-003, S-004], status: IN_PROGRESS, note: 'Sem mudar o jogo. Commits so com aprovacao explicita.'}
-  B-002: {title: Bugs e verificacao, steps: [S-005, S-006, S-007], status: PENDING}
-  B-003: {title: Arte e audio provisorios, steps: [S-008, S-009], status: PENDING}
+  B-001: {title: Higiene da arvore e linha de base, steps: [S-001, S-002, S-003, S-004], status: DONE, note: 'EVID-202; commits 020642b a 5953d44; suite, smoke e kit_test no HEAD 5953d44 sem falhas.'}
+  B-002: {title: Bugs e verificacao, steps: [S-005, S-006, S-007], status: DONE, note: 'S-006 dispensado pelo dono em 2026-10-08 (como na 0.2.0): o reteste vai para O que testar da 0.4.0'}
+  B-003: {title: Arte e audio provisorios, steps: [S-008, S-009], status: DONE_LOCAL, note: 'EVID-204; commit aguarda aprovacao'}
   B-004: {title: MEC-041 NPC de upgrade de magia, steps: [S-010, S-011, S-012], status: PENDING}
   B-005: {title: MEC-042 conteudo novo, steps: [S-013, S-014, S-015, S-016], status: PENDING, note: 'Portao de conteudo: lista aprovada pelo dono antes do codigo.'}
   B-006: {title: MEC-039 fatia piloto, steps: [S-017, S-018, S-019, S-020], status: PENDING, note: 'Portao de conteudo: Ecos e reliquias aprovados pelo dono antes do codigo.'}
@@ -37,12 +37,12 @@ steps:
   S-001: 'DONE (EVID-202). tools/backlog_check.ps1 (via powershell -ExecutionPolicy Bypass) e lista de bugs abertos; registrar no EVID.'
   S-002: 'DONE (EVID-202). Triar git status em G1 ouro, G2 F7/ZIP, G3 lettering/cursor, G4 diagnostico e pacote Caio, G5 documentos Atena, G6 versao; mapa arquivo -> grupo.'
   S-003: 'DONE (020642b, 4a33764, 421dd29, ad3220d, 2a18614 e G5). Commits por grupo G1 a G5 (trechos de arquivos compartilhados via hash-object/update-index a partir do HEAD); G6 fica para B-008. Cada commit com aprovacao.'
-  S-004: 'PARCIAL (EVID-202: HEAD 94a6a2f, 0 falhas; repetir no HEAD final). Cópia limpa do HEAD: suite sem falhas; anotar testes que dependem de .atena.'
-  S-005: 'Suite completa (tests/run_all.gd), smoke das nove fases e tools/kit_test.gd sobre a arvore separada.'
-  S-006: 'Reteste do BUG-033 e das verificacoes BUG-003 a 010 em run real; o que nao for visto vai para O que testar.'
-  S-007: 'Atualizar BUGS.md: Conhecidos (BUG-027, 028, 029, 022); correcao do BUG-028 do especialista Caio entra como minor-fix se chegar.'
-  S-008: 'Integrar com fallback a arte aprovada pelo dono (lettering/cursor ART-036/037, icones de bencaos ART-038); marcar o resto como provisorio.'
-  S-009: 'Icones provisorios de Eco e do NPC de magia (vetores locais ou itens existentes), sem geracao de imagem.'
+  S-004: 'DONE (EVID-202: HEAD 94a6a2f e 5953d44, 0 falhas). Cópia limpa do HEAD: suite sem falhas; anotar testes que dependem de .atena.'
+  S-005: 'DONE (EVID-202: suite, smoke e kit_test OK no HEAD 5953d44). Suite completa (tests/run_all.gd), smoke das nove fases e tools/kit_test.gd sobre a arvore separada.'
+  S-006: 'DISPENSADO pelo dono (2026-10-08, "dispenso o reteste"); roteiro em EVID-203 vira O que testar. Reteste do BUG-033 e das verificacoes BUG-003 a 010 em run real; o que nao for visto vai para O que testar.'
+  S-007: 'DONE (BUGS.md: Conhecidos na v0.4.0). Atualizar BUGS.md: Conhecidos (BUG-027, 028, 029, 022); correcao do BUG-028 do especialista Caio entra como minor-fix se chegar.'
+  S-008: 'DONE local (EVID-204): fallback de icone de bencao por divindade; lettering e cursor sem arte, nada a integrar. Integrar com fallback a arte aprovada pelo dono (lettering/cursor ART-036/037, icones de bencaos ART-038); marcar o resto como provisorio.'
+  S-009: 'ADIADO para B-004 e B-006 (entidades ainda nao existem; EVID-204). Icones provisorios de Eco e do NPC de magia (vetores locais ou itens existentes), sem geracao de imagem.'
   S-010: 'SPEC-149 (MEC-041): regras, preco, rerrolagem, interacao com Marcas e Sem tregua; teste antes do codigo.'
   S-011: 'core/battle.gd, data/stage_events.json ou level_design.json, ui/overlay.gd, ui/hud.gd: NPC de magia e ferreiro so para armas corpo a corpo e equipamentos; um commit.'
   S-012: 'Teste dos dois lados (ferreiro e NPC); bot sem regressao; cartao MEC-041.'
