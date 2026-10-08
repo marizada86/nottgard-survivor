@@ -9,7 +9,7 @@ request_classification: PLAN_DEVIATION
 deviation_id: DEV-013
 authorization_verbatim: 'atena, planeje a v0.4.0 agora'
 approval_basis: 'Dono escolheu por plano, MEC-039 fatia piloto, MEC-041 + 3 armas/magias + 6 itens, arte provisoria nao trava (2026-10-08). Falta o aviso explicito de inicio.'
-checkpoint: B-003 concluido local; aguarda aprovacao do commit; proximo B-004/S-010
+checkpoint: B-004 concluido local; aguarda aprovacao do commit; B-005/S-013 proposta de conteudo pronta, aguarda o dono
 return:
   plan: PLAN-071
   state_file: .atena/state/plan-071-playtest-ranking.yaml
@@ -28,7 +28,7 @@ batches:
   B-001: {title: Higiene da arvore e linha de base, steps: [S-001, S-002, S-003, S-004], status: DONE, note: 'EVID-202; commits 020642b a 5953d44; suite, smoke e kit_test no HEAD 5953d44 sem falhas.'}
   B-002: {title: Bugs e verificacao, steps: [S-005, S-006, S-007], status: DONE, note: 'S-006 dispensado pelo dono em 2026-10-08 (como na 0.2.0): o reteste vai para O que testar da 0.4.0'}
   B-003: {title: Arte e audio provisorios, steps: [S-008, S-009], status: DONE_LOCAL, note: 'EVID-204; commit aguarda aprovacao'}
-  B-004: {title: MEC-041 NPC de upgrade de magia, steps: [S-010, S-011, S-012], status: PENDING}
+  B-004: {title: MEC-041 NPC de upgrade de magia, steps: [S-010, S-011, S-012], status: DONE_LOCAL, note: 'SPEC-149 e EVID-205; commit aguarda aprovacao'}
   B-005: {title: MEC-042 conteudo novo, steps: [S-013, S-014, S-015, S-016], status: PENDING, note: 'Portao de conteudo: lista aprovada pelo dono antes do codigo.'}
   B-006: {title: MEC-039 fatia piloto, steps: [S-017, S-018, S-019, S-020], status: PENDING, note: 'Portao de conteudo: Ecos e reliquias aprovados pelo dono antes do codigo.'}
   B-007: {title: Balanceamento, steps: [S-021, S-022], status: PENDING}
@@ -42,11 +42,11 @@ steps:
   S-006: 'DISPENSADO pelo dono (2026-10-08, "dispenso o reteste"); roteiro em EVID-203 vira O que testar. Reteste do BUG-033 e das verificacoes BUG-003 a 010 em run real; o que nao for visto vai para O que testar.'
   S-007: 'DONE (BUGS.md: Conhecidos na v0.4.0). Atualizar BUGS.md: Conhecidos (BUG-027, 028, 029, 022); correcao do BUG-028 do especialista Caio entra como minor-fix se chegar.'
   S-008: 'DONE local (EVID-204): fallback de icone de bencao por divindade; lettering e cursor sem arte, nada a integrar. Integrar com fallback a arte aprovada pelo dono (lettering/cursor ART-036/037, icones de bencaos ART-038); marcar o resto como provisorio.'
-  S-009: 'ADIADO para B-004 e B-006 (entidades ainda nao existem; EVID-204). Icones provisorios de Eco e do NPC de magia (vetores locais ou itens existentes), sem geracao de imagem.'
-  S-010: 'SPEC-149 (MEC-041): regras, preco, rerrolagem, interacao com Marcas e Sem tregua; teste antes do codigo.'
-  S-011: 'core/battle.gd, data/stage_events.json ou level_design.json, ui/overlay.gd, ui/hud.gd: NPC de magia e ferreiro so para armas corpo a corpo e equipamentos; um commit.'
-  S-012: 'Teste dos dois lados (ferreiro e NPC); bot sem regressao; cartao MEC-041.'
-  S-013: 'Portao de conteudo: propor 3 armas/magias e 6 equipamentos a partir do Vault (EVID-147 sec. 4) e levar ao dono.'
+  S-009: 'Parte do Arcanista feita em B-004 (losango roxo provisorio e alias de som; EVID-205); Eco segue para B-006 (EVID-204). Icones provisorios de Eco e do NPC de magia (vetores locais ou itens existentes), sem geracao de imagem.'
+  S-010: 'DONE (SPEC-149). SPEC-149 (MEC-041): regras, preco, rerrolagem, interacao com Marcas e Sem tregua; teste antes do codigo.'
+  S-011: 'DONE local (EVID-205). core/battle.gd, data/stage_events.json ou level_design.json, ui/overlay.gd, ui/hud.gd: NPC de magia e ferreiro so para armas corpo a corpo e equipamentos; um commit.'
+  S-012: 'DONE local (EVID-205: mutacao 4 falhas, suite 0, audit 0 erros, smoke ok; bot comparado em B-007). Teste dos dois lados (ferreiro e NPC); bot sem regressao; cartao MEC-041.'
+  S-013: 'PROPOSTA PRONTA (.atena/vault/drafts/PROPOSTA-conteudo-novo-v0-4-0-...md), aguarda aprovacao do dono. Portao de conteudo: propor 3 armas/magias e 6 equipamentos a partir do Vault (EVID-147 sec. 4) e levar ao dono.'
   S-014: 'SPEC-150 (armas e magias) e SPEC-151 (equipamentos) apos aprovacao da lista.'
   S-015: 'data/weapons.json, data/items.json, data/item_effects.json e codigo necessario; um commit por item; teste por item.'
   S-016: 'tools/bal_armas.gd e tools/bal_itens.gd antes e depois; ajustar uma alavanca por vez.'
