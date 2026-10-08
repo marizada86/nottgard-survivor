@@ -177,7 +177,7 @@ const ITEMS := {
 	"dispositivo_antimagia_gilly": {"slot": "armadura", "tier": 4, "mods": {"cam": 3, "inteligencia": -1}},
 	"detector_arcano": {"slot": "anel", "tier": 1, "mods": {"pickup": 1.5, "sorte": 2}},
 	"colar_visao_verdadeira": {"slot": "amuleto", "tier": 2, "mods": {"hit": 2, "crit_overflow_bonus": 0.03}},
-	"wave_of_terror": {"slot": "arma", "tier": 5, "mods": {"forca": 1, "dmg_pct": 0.15, "hp": -8}},
+	"wave_of_terror": {"slot": "arma", "tier": 5, "mods": {"forca": 1, "dmg_pct": 0.2, "hp": -8}},
 	"cajado_familia_infernum": {"slot": "arma", "tier": 3, "mods": {"inteligencia": 2, "cam": 1, "area_pct": 0.1}},
 }
 
