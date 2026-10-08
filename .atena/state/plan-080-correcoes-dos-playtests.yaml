@@ -56,3 +56,21 @@ blocking_gaps: []
 return_to: PLAN-071 (B-006/S-011, active_plan sem alteracao ate o inicio)
 commit_push_build_export: NOT_PERFORMED
 new_files: [ui/quest_panel.gd, ui/status_chip.gd, tests/test_playtest_fixes.gd, tools/run_one_test.gd, tools/capture_quest_hud.gd, tools/capture_quest_hud.tscn]
+local_git_receipts:
+  authorization: 'prepare os commits separados por mecanica (2026-10-08)'
+  branch: main
+  base: 525cd25
+  commits:
+    - {sha: 531d1eb, scope: 'BUG-034 e BUG-035'}
+    - {sha: c4d1925, scope: 'BUG-036 e MEC-055 (pilha do topo e painel de quests)'}
+    - {sha: c4516d1, scope: 'MEC-055 (realce no mundo)'}
+    - {sha: 529341a, scope: 'MEC-056'}
+    - {sha: c618acc, scope: 'BUG-037'}
+    - {sha: df9f1f5, scope: 'BAL-024'}
+    - {sha: e67406a, scope: 'MEC-053'}
+    - {sha: 31d4a81, scope: 'MEC-054'}
+    - {sha: 38a313c, scope: 'MEC-057'}
+    - {sha: d34b696, scope: 'ferramentas'}
+    - {sha: bd5c080, scope: 'documentos, evidencias e backlog'}
+  pushed: false
+  note: 'So os trechos do PLAN-080 foram commitados; F7/ZIP (PLAN-078), ouro (PLAN-075), versao 0.3.3, export_presets, lettering e planos 074/076 seguem como alteracoes locais. Verificado em copia limpa do HEAD: suite sem falhas de codigo (2 testes dependem de .atena, ausente na copia).'
