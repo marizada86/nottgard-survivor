@@ -71,5 +71,7 @@
   "bola_de_fogo":     {"name": "Bola de Fogo", "src": "Carta: Bola de Fogo", "kind": "nova", "dtype": "fogo", "attr": "inteligencia", "dice": "3d6", "cd": 6.0, "radius": 3.4,
     "desc": "Explosão de fogo que atinge todos ao redor.", "levels": [{"dice": "3d8"}, {"radius": 0.5}, {"cd": -0.8}, {"dice": "4d8", "dmg": 2}],
     "evolve": {"passive": "foco_arcano", "into": "tormenta_de_fogo"}},
-  "tormenta_de_fogo": {"name": "Tormenta de Fogo", "src": "Evolução", "kind": "nova", "dtype": "fogo", "attr": "inteligencia", "dice": "5d8", "cd": 4.0, "radius": 5.0, "levels": [], "desc": "O céu queima."}
+  "tormenta_de_fogo": {"name": "Tormenta de Fogo", "src": "Evolução", "kind": "nova", "dtype": "fogo", "attr": "inteligencia", "dice": "5d8", "cd": 4.0, "radius": 5.0, "levels": [], "desc": "O céu queima."},
+  "lamina_de_sombra": {"name": "Lâmina de Sombra", "src": "Carta: Lâmina de Sombra", "kind": "bolt", "dtype": "magico", "attr": "inteligencia", "dice": "1d8", "cd": 1.8, "range": 9, "speed": 11, "pierce": 1, "count": 1, "ignore_def": 1,
+    "desc": "Lâmina de sombra que ignora parte da defesa mágica do alvo.", "levels": [{"dice": "1d10"}, {"pierce": 1}, {"cd": -0.2}, {"count": 1, "ignore_def": 1}]}
 }

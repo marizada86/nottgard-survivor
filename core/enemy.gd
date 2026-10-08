@@ -91,6 +91,7 @@ func has_flag(f: String) -> bool:
 func is_boss() -> bool:
 	return "boss" in flags
 
-func typed_evasion(dtype: String) -> float:
-	var defense := ca if dtype == "fisico" else cam
+## `ignore` (SPEC-150, `ignore_def` da arma) desconta pontos da defesa usada antes da esquiva.
+func typed_evasion(dtype: String, ignore := 0) -> float:
+	var defense := (ca if dtype == "fisico" else cam) - maxi(0, ignore)
 	return clampf(float(defense - 10) * 0.03, 0.0, 0.30)

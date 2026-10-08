@@ -58,6 +58,7 @@ func _offered(id: String) -> bool:
 func run() -> Array:
 	var out: Array = []
 	_fireball(out)
+	_shadow_blade(out)
 	return out
 
 # ---------------------------------------------------------------- W1 Bola de Fogo (SPEC-150)
@@ -89,3 +90,40 @@ func _fireball(out: Array) -> void:
 		out.append("Bola de Fogo Nv 5 deveria ser 4d8, maior e mais rápida (%s, raio %s, recarga %s)" % [nv.dice, nv.radius, nv.cd])
 	if not _offered("bola_de_fogo"):
 		out.append("Bola de Fogo deveria aparecer nas ofertas NOVA")
+
+# ---------------------------------------------------------------- W2 Lâmina de Sombra (SPEC-150)
+func _shadow_blade(out: Array) -> void:
+	var d := _valid_weapon(out, "lamina_de_sombra", "bolt", "magico", true, 4)
+	if d.is_empty():
+		return
+	if d.has("evolve"):
+		out.append("Lâmina de Sombra não evolui na 0.4.0")
+	if int(d.get("ignore_def", 0)) != 1 or int(Weapon.make("lamina_de_sombra", 5).params().get("ignore_def", 0)) != 2:
+		out.append("Lâmina de Sombra deveria ignorar 1 de defesa e 2 no Nv 5")
+	var e := Enemy.make("zumbi", Vector2(0, 0), 0.0, 1.0, 0)
+	e.cam = 20
+	if e.typed_evasion("magico", 5) >= e.typed_evasion("magico"):
+		out.append("ignorar defesa deveria reduzir a esquiva do alvo")
+	if e.typed_evasion("magico", 100) != 0.0:
+		out.append("ignorar defesa de mais não pode dar esquiva negativa")
+	e.ca = 20
+	e.cam = 10
+	if e.typed_evasion("fisico", 5) >= e.typed_evasion("fisico"):
+		out.append("ignorar defesa em ataque físico deveria descontar a CA")
+	# a chance de acerto sobe de verdade em _hero_hit: alvo de CAM 20, mesma semente, com e sem ignore_def
+	var hits := {}
+	for ignore in [0, 6]:
+		var b := _bat(9)
+		var foe := _foe(b, b.hero.pos + Vector2(3, 0))
+		foe.cam = 20
+		foe.max_hp = 1.0e9
+		foe.hp = 1.0e9
+		var n := 0
+		for i in 500:
+			if b._hero_hit(foe, {"dice": "1d4", "dtype": "magico", "attr": "inteligencia", "ignore_def": ignore}, true):
+				n += 1
+		hits[ignore] = n
+	if int(hits[6]) <= int(hits[0]) + 25:
+		out.append("ignore_def deveria aumentar os acertos contra CAM alta (sem: %d, com: %d de 500)" % [hits[0], hits[6]])
+	if not _offered("lamina_de_sombra"):
+		out.append("Lâmina de Sombra deveria aparecer nas ofertas NOVA")

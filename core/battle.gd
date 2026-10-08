@@ -772,7 +772,7 @@ func _hero_hit(e: Enemy, p: Dictionary, roll: bool, visual_theme: Dictionary = {
 		var acc := hero.prof + hero.attr_mod(attr) + int(hero.m("hit")) + int(p.get("acc", 0))
 		if r == 1:
 			stats.ones += 1
-		if r == 1 or (r != 20 and rng.randf() >= _hit_chance(acc, e.typed_evasion(dtype))):
+		if r == 1 or (r != 20 and rng.randf() >= _hit_chance(acc, e.typed_evasion(dtype, int(p.get("ignore_def", 0))))):
 			events.append({"type": "miss", "pos": e.pos})
 			return false
 		crit = r == 20 or rng.randf() < hero.crit_chance(r + acc)
@@ -2439,7 +2439,7 @@ func _level_desc(w: Weapon) -> String:
 	if w.level - 1 >= lv.size():
 		return ""
 	var labels := {"dice": "dado", "cd": "recarga (s)", "cone": "cone", "dmg": "dano", "range": "alcance", "stun": "atordoamento", "radius": "raio",
-		"pierce": "perfuração", "count": "projéteis", "weaken": "enfraquece", "duration": "duração", "heal": "cura", "mark": "marca",
+		"pierce": "perfuração", "count": "projéteis", "weaken": "enfraquece", "ignore_def": "ignora defesa", "duration": "duração", "heal": "cura", "mark": "marca",
 		"gold_hit": "moedas/golpe", "knock": "empurrão", "burn": "queimadura", "lifesteal": "roubo de vida", "slow": "lentidão"}
 	var parts: Array = []
 	for k in lv[w.level - 1]:
