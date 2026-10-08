@@ -67,5 +67,9 @@
   "cajado_dos_desejos": {"name": "Cajado dos Desejos Sussurrantes", "src": "Item: Cajado dos Desejos Sussurrantes", "kind": "bolt", "dtype": "magico", "attr": "carisma", "dice": "1d6", "cd": 2.4, "range": 9, "speed": 8, "pierce": 0, "count": 3, "spread": 30,
     "desc": "Desejos sussurrados em leque.", "levels": [{"dmg": 1}, {"count": 1}, {"dice": "1d8"}, {"cd": -0.4, "dmg": 2}]},
   "ampulheta": {"name": "Ampulheta do Silêncio Eterno", "src": "Item: Ampulheta do Silêncio Eterno", "kind": "nova", "dtype": "magico", "attr": "inteligencia", "dice": "2d8", "cd": 5.0, "radius": 4.0, "stun": 1.5,
-    "desc": "Silêncio: todos ao redor param.", "levels": [{"stun": 0.5}, {"cd": -1.0}, {"radius": 1.0}, {"stun": 1.0}]}
+    "desc": "Silêncio: todos ao redor param.", "levels": [{"stun": 0.5}, {"cd": -1.0}, {"radius": 1.0}, {"stun": 1.0}]},
+  "bola_de_fogo":     {"name": "Bola de Fogo", "src": "Carta: Bola de Fogo", "kind": "nova", "dtype": "fogo", "attr": "inteligencia", "dice": "3d6", "cd": 6.0, "radius": 3.4,
+    "desc": "Explosão de fogo que atinge todos ao redor.", "levels": [{"dice": "3d8"}, {"radius": 0.5}, {"cd": -0.8}, {"dice": "4d8", "dmg": 2}],
+    "evolve": {"passive": "foco_arcano", "into": "tormenta_de_fogo"}},
+  "tormenta_de_fogo": {"name": "Tormenta de Fogo", "src": "Evolução", "kind": "nova", "dtype": "fogo", "attr": "inteligencia", "dice": "5d8", "cd": 4.0, "radius": 5.0, "levels": [], "desc": "O céu queima."}
 }
