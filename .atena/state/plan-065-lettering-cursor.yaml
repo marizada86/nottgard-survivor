@@ -1,0 +1,25 @@
+# Plano proposto por Atena em 2026-10-06 a pedido do dono; aprovado por plano no mesmo dia.
+# Side-plan: nao e o active_plan de plan.yaml (PLAN-066 segue la). B-001 e B-002 feitas; B-003 espera o gerador de imagem.
+version: 2
+plan:
+  id: PLAN-065
+  spec_id: SPEC-132
+  cards: [ART-039, ART-040, MEC-058]
+  title: Lettering do jogo (logo, banners, placas) e cursor do mouse tematicos
+  status: IN_PROGRESS
+  approval: {mode: per-plan, status: APPROVED_BY_OWNER, approver: dono, approved_at: '2026-10-06', scope_started: 'B-001 e B-002 (pedido do dono na mesma mensagem)'}
+  decisions:
+    lettering: 'quatro frentes: logo do titulo, banners de fim de fase, banners de momento, cabecalhos de tela e HQ'
+    cursor: 'menu + mira (ponteiro, mao sobre botao, mira)'
+    fila_de_imagens: 'depois da ficha C (CHATGPT-FILA-025), antes dos VFX'
+  blocking_gaps: 0
+  assumed_defaults: [G-1, G-2, G-3, G-4, G-5]
+  checkpoint: {step: S-008, status: DONE, evidence: EVID-172, next: 'B-003 depende do gerador de imagem (dono/Codex) e da FILA-025 antes; commits so com aprovacao explicita'}
+  batches:
+    B-001: {title: 'Direcao, inventario e prompts (sem codigo)', steps: [S-001, S-002, S-003, S-004], status: DONE, evidence: EVID-172}
+    B-002: {title: 'Esqueleto de codigo com fallback (cursor, lettering, testes)', steps: [S-005, S-006, S-007, S-008], status: DONE, evidence: EVID-172, uncommitted: 'working tree; commit de codigo so apos B-004 e com aprovacao'}
+    B-003: {title: 'Arte: gerar, normalizar, aprovar (G1, G2), admitir', steps: [S-009, S-010, S-011, S-012, S-013], status: PENDING, depends: 'gerador de imagem (dono/Codex); fila apos FILA-025'}
+    B-004: {title: 'Integracao, verificacao e fechamento', steps: [S-014, S-015, S-016], status: PENDING, depends: 'B-003; commits de PLAN-063/064 para ui/hud.gd, ui/character_sheet.gd, ui/hero_panel.gd'}
+  gates_independent_of_approval_level: ['G1 aprovacao visual da logo', 'G2 aprovacao visual por peca', 'commit local', 'push', 'build/release']
+  commits: 'dois, separados: arte (S-013) e codigo (S-016); mecanica nao divide commit com arte'
+  files: {spec: '.atena/vault/drafts/SPEC-132-lettering-e-cursor-do-jogo.md', plan: '.atena/vault/drafts/PLAN-065-lettering-e-cursor-2026-10-06.md'}

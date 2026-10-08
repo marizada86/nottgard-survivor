@@ -1,0 +1,11 @@
+{
+	"_note": "SPEC-132/MEC-058. Pecas de lettering e placas (ART-039). 'size' e o tamanho final (banners: maximo); 'margins' = esquerda, direita, topo, base da placa de nove fatias.",
+	"logo": {"kind": "banner", "path": "res://assets/ui/title/logo.png", "size": [1100, 176]},
+	"prompt_clique": {"kind": "banner", "path": "res://assets/ui/title/prompt_clique.png", "size": [480, 64]},
+	"banner_vitoria": {"kind": "banner", "path": "res://assets/ui/lettering/banner_vitoria.png", "size": [720, 160]},
+	"banner_derrota": {"kind": "banner", "path": "res://assets/ui/lettering/banner_derrota.png", "size": [720, 160]},
+	"banner_evolucao": {"kind": "banner", "path": "res://assets/ui/lettering/banner_evolucao.png", "size": [640, 110]},
+	"placa_titulo_larga": {"kind": "plate", "path": "res://assets/ui/lettering/placa_titulo_larga.png", "size": [640, 96], "margins": [56, 56, 28, 28]},
+	"placa_titulo_secao": {"kind": "plate", "path": "res://assets/ui/lettering/placa_titulo_secao.png", "size": [320, 48], "margins": [32, 32, 16, 16]},
+	"placa_chefe": {"kind": "plate", "path": "res://assets/ui/lettering/placa_chefe.png", "size": [720, 112], "margins": [80, 80, 36, 36]}
+}
