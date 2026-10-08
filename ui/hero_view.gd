@@ -70,6 +70,12 @@ var _walk_phase := 0.0
 var _walk_sector := -1
 var _still_ticks := 0
 
+## Diagnóstico opt-in do BUG-028 (SPEC-144); tudo isto fica nulo/falso sem --walk-debug.
+var _trace: WalkTrace = null
+var _dbg_ready := false
+var _dbg_smooth := false
+var _dbg_force := Vector2.ZERO
+
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 func _ready() -> void:
@@ -135,6 +141,11 @@ static func display_scale(hero: String) -> float:
 	return float(HERO_DISPLAY_HEIGHT[key]) / float(HERO_IDLE_ART_HEIGHT[key])
 
 func sync_visual(screen_position: Vector2, is_dead: bool, is_flash: bool) -> void:
+	if not _dbg_ready:
+		_walk_debug_setup()
+	var trace_before := {}
+	if _trace != null and _has_animation:
+		trace_before = {"anim": sprite.animation, "frame": sprite.frame}
 	var moving := screen_position.distance_squared_to(_last_screen_position) > 0.04
 	position = screen_position
 	dead = is_dead
@@ -146,7 +157,7 @@ func sync_visual(screen_position: Vector2, is_dead: bool, is_flash: bool) -> voi
 			sprite.play(&"death")
 		elif not dead and not _action_locked:
 			var desired: StringName = &"idle"
-			var smoothing := WALK_SMOOTHING_HEROES.has(StringName(_active_hero_id))
+			var smoothing := _dbg_smooth or WALK_SMOOTHING_HEROES.has(StringName(_active_hero_id))
 			_still_ticks = 0 if moving else _still_ticks + 1
 			var walking := moving or (smoothing and _walk_sector >= 0 and _still_ticks < WALK_STOP_GRACE_TICKS)
 			if not walking:
@@ -157,6 +168,8 @@ func sync_visual(screen_position: Vector2, is_dead: bool, is_flash: bool) -> voi
 				movement_delta = _stable_direction(screen_position - _last_screen_position) if smoothing else screen_position - _last_screen_position
 			elif walking:
 				movement_delta = Vector2.RIGHT.rotated(_walk_sector * TAU / 8.0)
+			if _dbg_force != Vector2.ZERO and walking:
+				movement_delta = _dbg_force
 			_procedural_walking = walking and uses_procedural_walk_for_direction(_active_hero_id, movement_delta)
 			if uses_procedural_walk(_active_hero_id) and (not walking or _procedural_walking):
 				sprite.flip_h = false
@@ -168,8 +181,51 @@ func sync_visual(screen_position: Vector2, is_dead: bool, is_flash: bool) -> voi
 					sprite.rotation = 0.0
 			if sprite.animation != desired:
 				sprite.play(desired)
+	if _trace != null and _has_animation:
+		_walk_debug_tick(screen_position, moving, trace_before)
 	_last_screen_position = screen_position
 	queue_redraw()
+
+## Liga o diagnóstico uma vez (SPEC-144). Só o herói da run ("Hero") grava; cópias e visuais de menu ficam de fora.
+func _walk_debug_setup() -> void:
+	_dbg_ready = true
+	if Engine.is_editor_hint() or not WalkTrace.enabled():
+		return
+	_dbg_smooth = WalkTrace.option("walk-smooth") != ""
+	_dbg_force = WalkTrace.forced_direction()
+	var fps := WalkTrace.option("walk-fps")
+	if fps != "" and sprite != null and sprite.sprite_frames != null:
+		for animation in sprite.sprite_frames.get_animation_names():
+			if String(animation).begins_with("move"):
+				sprite.sprite_frames.set_animation_speed(animation, float(fps))
+	if name != &"Hero":
+		return
+	_trace = WalkTrace.open(_active_hero_id, get_instance_id())
+	if _trace != null:
+		if sprite != null:
+			sprite.frame_changed.connect(_on_walk_debug_frame)
+		if WalkTrace.option("walk-controls") != "":
+			WalkDebugControls.install(get_tree())
+
+func _walk_debug_tick(screen_position: Vector2, moving: bool, before: Dictionary) -> void:
+	if _trace.owner_id != get_instance_id():
+		return
+	var delta := screen_position - _last_screen_position
+	var sector := int(posmod(roundi(delta.angle() / (TAU / 8.0)), 8)) if moving else -1
+	var frames := sprite.sprite_frames.get_frame_count(sprite.animation) if sprite.sprite_frames.has_animation(sprite.animation) else 0
+	var events := _trace.record_tick(screen_position, delta, moving, _still_ticks, sector, before, sprite.animation, sprite.frame, sprite.flip_h, sprite.speed_scale, WalkTrace.input_pressed(), frames)
+	if not events.is_empty() and _trace.should_break(events):
+		breakpoint  # SPEC-144: parou porque a condição de --walk-break foi atendida; veja `events` e `before`
+
+func _on_walk_debug_frame() -> void:
+	if _trace != null and _trace.owner_id == get_instance_id():
+		_trace.record_frame(sprite.animation, sprite.frame)
+
+func _exit_tree() -> void:
+	if _trace != null and _trace.owner_id == get_instance_id():
+		print("WalkTrace: ", _trace.summary())
+		_trace.close()
+		_trace = null
 
 ## Devolve o vetor unitário do setor de caminhada, mantendo o setor anterior perto da fronteira.
 func _stable_direction(delta: Vector2) -> Vector2:

@@ -1,0 +1,49 @@
+id: PLAN-077
+spec: SPEC-144
+spec_file: .atena/specs/SPEC-144-diagnostico-do-patinar-ao-andar-bug-028.md
+mode: per-plan
+status: COMPLETED_LOCAL
+completed: '2026-10-07'
+evidence: EVID-197
+approved: '2026-10-07'
+approval_basis: 'Dono: atena, aprovado, pode seguir do B-001 ao B-004 (por plano).'
+created: '2026-10-07'
+request_classification: PLAN_DEVIATION
+deviation_id: DEV-009
+authorization_verbatim: 'atena, tem como fazer uma log e uma forma de colocar breakpoint para testar a real causa do bug?'
+checkpoint: B-004/S-009 (concluido)
+return:
+  plan: PLAN-071
+  state_file: .atena/state/plan-071-playtest-ranking.yaml
+  checkpoint_observed: B-006/S-011
+  snapshot: .atena/generated/walk-debug/plan-before-077.yaml
+decisions_taken:
+  route: "2026-10-07: fazer agora e voltar ao PLAN-071"
+  approval_mode: "per-plan (2026-10-07)"
+batches:
+  B-001: {title: Log opt-in WalkTrace, steps: [S-001, S-002], status: DONE}
+  B-002: {title: Gancho de breakpoint e controles de diagnostico, steps: [S-003, S-004], status: DONE}
+  B-003: {title: Medicao offline da passada e teste, steps: [S-005, S-006], status: DONE}
+  B-004: {title: Coleta, evidencia e relatorio H1-H5, steps: [S-007, S-008, S-009], status: DONE}
+steps:
+  S-001: 'Criar WalkTrace (CSV em user://walk_trace/, ligado por --walk-debug ou NOTT_WALK_DEBUG=1; desligado por padrao).'
+  S-002: 'Ligar WalkTrace em HeroView.sync_visual com colunas e eventos da SPEC-144.'
+  S-003: 'Adicionar _walk_break_check() com breakpoint condicional (3 condicoes).'
+  S-004: 'Congelar/avancar tick e --walk-force=<direcao>, so com a flag.'
+  S-005: 'tools/measure_walk_stride.gd: passada por quadro e por tira, todos os herois.'
+  S-006: 'tests/test_walk_trace.gd: 8 direcoes sem troca de tira/queda ao idle; log desligado por padrao; suite sem falhas.'
+  S-007: 'Lancador .cmd em .atena/generated/walk-debug/ para o dono coletar CSV no .exe ou no editor.'
+  S-008: 'Rodar simulacao e medicao; classificar H1-H5 com numeros.'
+  S-009: 'EVID de diagnostico, atualizar BUG-028 no backlog com a conclusao, retornar ao PLAN-071 B-006/S-011.'
+gates:
+  dependencies: NO_NEW_DEPENDENCIES
+  new_art: NOT_REQUIRED
+  bug_fix: OUT_OF_SCOPE (spec propria depois)
+  commit_push_build_export: NOT_AUTHORIZED
+  other_sessions_changes: PRESERVE_UNTOUCHED
+  files_edited: [ui/hero_view.gd]
+blocking_gaps: []
+return_to: PLAN-071 (B-006/S-011, active_plan sem alteracao)
+commit_push_build_export: NOT_PERFORMED
+additions_beyond_spec: [walk-smooth e walk-fps como flags de experimento opt-in para H1 e H3]
+open_items: [coleta do dono nos modos 1, 3 e 5 do lancador para H5 e mouse/analogico; correcao do BUG-028 exige spec propria]

@@ -64,18 +64,6 @@ suspension:
   suspended_plan_state_file: '.atena/state/plan-053-imagens.yaml'
   note: 'PLAN-053 (imagens, SPEC-121) suspenso; cota de imagens liberou 2026-10-04 10:28 BRT; retoma na Shu (attack_02, death_03, death_04).'
 deferred_requests:
-  - id: DEV-009
-    request: 'Log e gancho de breakpoint para achar a causa real do BUG-028 (herois patinam ao andar de lado e nas diagonais).'
-    request_classification: PLAN_DEVIATION
-    status: COMPLETED_LOCAL_RETURNED_TO_PLAN_071
-    proposed_plan: PLAN-077
-    state_file: '.atena/state/plan-077-diagnostico-patinar.yaml'
-    spec: '.atena/specs/SPEC-144-diagnostico-do-patinar-ao-andar-bug-028.md'
-    approval_mode: per-plan
-    approval_status: APPROVED_PER_PLAN
-    route: 'Dono escolheu fazer agora e voltar (2026-10-07); PLAN-071 continua active_plan e volta em B-006/S-011.'
-    recovery_snapshot: '.atena/generated/walk-debug/plan-before-077.yaml'
-    note: 'Executado B-001 a B-004 em 2026-10-07 (EVID-197); sem correcao do bug; aguarda coleta do dono; retorno ao PLAN-071 B-006/S-011.'
   - id: DEV-008
     request: 'MEC-040 Marcas do Abismo, entrega 2: liberacao das marcas por conquista (uma conquista nova por marca) e as quatro marcas restantes.'
     request_classification: PLAN_DEVIATION
@@ -89,6 +77,16 @@ deferred_requests:
     route: 'Dono pediu a entrega 2 em 2026-10-07; PLAN-071 continua active_plan e volta em B-006/S-011.'
     recovery_snapshot: '.atena/generated/abyss-marks/v02/plan-before-076.yaml'
     note: 'Executado B-001 a B-005 em 2026-10-07 (EVID-195); premissas B1 a B4 mantidas; retorno ao PLAN-071 B-006/S-011.'
+  - id: DEV-007
+    request: 'Plano para balancear a obtencao de ouro no jogo (Quartel e run).'
+    request_classification: PLAN_DEVIATION
+    status: COMPLETED_LOCAL
+    proposed_plan: PLAN-075
+    state_file: '.atena/state/plan-075-economia-de-ouro.yaml'
+    spec: '.atena/specs/SPEC-142-balanceamento-da-economia-de-ouro.md'
+    proposal: '.atena/vault/drafts/PLAN-075-economia-de-ouro-2026-10-07.md'
+    approval_mode: per-plan
+    note: 'Concluido localmente em 2026-10-07 (EVID-191, EVID-193, EVID-194); B-004 pulada pelo dono; sem commit. PLAN-071 continua active_plan.'
   - id: DEV-006
     request: 'MEC-040 Marcas do Abismo: dificuldade opcional; marcas na run inteira, fatia de 5 marcas, liberacao apos a 1a vitoria, conquistas.'
     request_classification: PLAN_DEVIATION
@@ -162,6 +160,7 @@ completed_plans:
     note: 'Pontos abertos transferidos ao BAL-018: Docas facil (3%), Feng-tu 6%, rodada com bot novato, RNG do bot nao semeado. Criterios de aceite numericos (nivel medio mapas 1 e 2; % Raro/Unico no tier 0) nunca fixados; dono aceitou sem eles.'
 completed_side_plans:
   - {id: PLAN-076, spec_id: SPEC-143, status: COMPLETED_LOCAL, evidence: [EVID-195], deviation: DEV-008, mode: per-plan, approved: "2026-10-07", note: "MEC-040 Marcas do Abismo, entrega 2 (liberacao por conquista e 4 marcas); sem commit, push nem build; arquivos compartilhados com PLAN-075 pedem git add -p. PLAN-071 continua active_plan em B-006/S-011."}
+  - {id: PLAN-075, spec_id: SPEC-142, status: COMPLETED_LOCAL, evidence: "EVID-191, EVID-193, EVID-194", closed: "2026-10-07", mode: per-plan, note: "Economia de ouro (BAL-023): telemetria, gold_pct proporcional, venda escalada e so da run, ouro do Quartel em valor-base, Chicote 0,15/s, teto 3,0 na recompensa; B-004 pulada pelo dono; sem commit; aguarda playtest com gold_src. PLAN-071 continua active_plan."}
   - {id: PLAN-074, spec_id: SPEC-141, status: COMPLETED_LOCAL, evidence: [EVID-196, EVID-192], deviation: DEV-006, mode: per-plan, approved: "2026-10-07", note: "MEC-040 Marcas do Abismo, entrega 1 (5 marcas, run inteira); sem commit, push nem build; arquivos compartilhados com PLAN-075 pedem git add -p (ver EVID-192). PLAN-071 continua active_plan em B-006/S-011."}
   - {id: PLAN-073, spec_id: SPEC-140, status: AUTHORIZED_SCOPE_PUBLISHED_PILOT_ASSETS_PENDING, commit: 0e5e4977b63e0ba98990e7a2c54f43093098ba31, evidence: ".atena/evidence/consolidacao-push-2026-10-06.json", note: "Main local sincronizada por fast-forward; originais e backups preservados. PLAN-071 e retornos mantidos."}
   - {id: PLAN-058, spec_id: SPEC-124, status: IMPLEMENTED_COMMITTED, commit: 69ec21c, evidence: EVID-159, note: 'Velocidade dos inimigos +20% (enemy_speed_mult); aguarda playtest.'}
