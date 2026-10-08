@@ -478,6 +478,13 @@ func _fill_hqs() -> void:
 		var unlocked: bool = Game.profile.data.cleared.has(stage_id)
 		hq_ids.append("chr:%s" % stage_id)
 		hq_list.add_item(("Crônica: %s" if unlocked else "🔒 Crônica: %s") % Data.table("stages")[stage_id].name)
+	# SPEC-152: Ecos de Nottgard por fase da fatia piloto (3/4 achados, relíquia pega)
+	var secrets: Dictionary = Data.table("secrets")
+	for stage_id in stage_ids:
+		if not secrets.has(stage_id):
+			continue
+		hq_ids.append("eco:%s" % stage_id)
+		hq_list.add_item("✦ Ecos: %s  (%d/%d%s)" % [Data.table("stages")[stage_id].name, Game.profile.ecos_found(stage_id), Array(secrets[stage_id].ecos).size(), " · Relíquia ✓" if Game.profile.data.relics.has(stage_id) else ""])
 	if hq_ids.is_empty():
 		hq_info.text = "Nenhuma HQ desbloqueada."
 		hq_play_btn.disabled = true
@@ -485,9 +492,33 @@ func _fill_hqs() -> void:
 	hq_list.select(0)
 	_refresh_hq_selection(0)
 
+## SPEC-152: texto da entrada "Ecos" de uma fase no Diário: achados com texto e fonte, os demais escondidos.
+static func eco_diary_text(stage_id: String) -> String:
+	var spec: Dictionary = Data.table("secrets").get(stage_id, {})
+	var stage_name := String(Data.table("stages").get(stage_id, {}).get("name", stage_id))
+	var lines: Array = ["[b]Ecos de Nottgard — %s[/b]" % stage_name]
+	var found: Dictionary = Dictionary(Game.profile.data.ecos.get(stage_id, {}))
+	var total := Array(spec.get("ecos", [])).size()
+	lines.append("%d de %d Ecos achados · Relíquia: %s
+" % [found.size(), total, "pega" if Game.profile.data.relics.has(stage_id) else "ainda trancada ou não pega"])
+	for eco in spec.get("ecos", []):
+		if found.has(String(eco.id)):
+			lines.append("✦ %s
+[color=#9a90b0]Fonte: %s[/color]
+" % [String(eco.texto), String(eco.get("fonte_vault", ""))])
+		else:
+			lines.append("[color=#777777]🔒 Eco escondido[/color]
+")
+	return "
+".join(lines)
+
 func _refresh_hq_selection(index: int) -> void:
 	if index < 0 or index >= hq_ids.size():
 		hq_info.text = ""
+		hq_play_btn.disabled = true
+		return
+	if String(hq_ids[index]).begins_with("eco:"):
+		hq_info.text = eco_diary_text(String(hq_ids[index]).substr(4))
 		hq_play_btn.disabled = true
 		return
 	if String(hq_ids[index]).begins_with("chr:"):
@@ -509,7 +540,7 @@ func _open_selected_hq() -> void:
 	if selected.is_empty():
 		return
 	var hq_id: String = hq_ids[selected[0]]
-	if hq_id.begins_with("chr:"):
+	if hq_id.begins_with("chr:") or hq_id.begins_with("eco:"):
 		return
 	var hq: Dictionary = Data.table("hqs").get(hq_id, {})
 	if hq.is_empty():

@@ -31,7 +31,7 @@ func _scan_res(area: String, v: Variant, path: String) -> void:
 
 func _init() -> void:
 	var names := ["abilities", "achievements", "audio_manifest", "barks", "boon_effects", "boons", "boss_phases", "boss_presentations", "chronicles", "difficulty",
-		"enemies", "ground_decals", "hero_bios", "heroes", "hqs", "item_effects", "items", "level_design", "passives", "prop_visuals", "scenery", "stage_events",
+		"enemies", "ground_decals", "hero_bios", "heroes", "hqs", "item_effects", "items", "level_design", "passives", "prop_visuals", "scenery", "secrets", "stage_events",
 		"stage_rules", "stage_story", "stage_structures", "stages", "upgrades", "weapons"]
 	for n in names:
 		_scan_res("res-" + n, _t(n), n)

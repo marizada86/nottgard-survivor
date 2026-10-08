@@ -483,6 +483,8 @@ func _timeout(b: Battle, obj: Dictionary) -> void:
 			_fail(b, obj, obj.pos)
 
 func _apply_reward(b: Battle, r: Dictionary, at: Vector2) -> void:
+	if bool(r.get("unlock_chamber", false)):  # SPEC-152: o acontecimento-chave abre a câmara selada da fase
+		b.unlock_chamber()
 	for i in int(r.get("chest", 0)):
 		b._add_interaction("chest", at + Vector2(1.2 * float(i), 0.6))
 	if bool(r.get("boss_chest", false)):

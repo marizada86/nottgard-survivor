@@ -40,6 +40,8 @@ var affixes: Array = []    # SPEC-120: todos os afixos (elite e chefe)
 var affix_t := 0.0         # SPEC-120: relógio do afixo invocador
 var dead := false
 var drops_chest := false
+var lair := false          # SPEC-152: elite de covil, parado até o herói chegar perto
+var lair_reward := ""      # SPEC-152: "boss_chest" = larga baú de chefe ao morrer
 var hit_flash := 0.0
 var charmed_t := 0.0
 var phase_index := 0

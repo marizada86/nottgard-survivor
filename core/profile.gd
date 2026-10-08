@@ -5,7 +5,7 @@ extends RefCounted
 var data := {}
 
 static func fresh() -> Dictionary:
-	return {"name": "", "coins": 0, "upgrades": {}, "achievements": {}, "cleared": {}, "hqs_seen": {}, "welcome_seen": false,
+	return {"name": "", "coins": 0, "upgrades": {}, "achievements": {}, "cleared": {}, "hqs_seen": {}, "ecos": {}, "relics": {}, "welcome_seen": false,
 		"stats": {"kills_total": 0, "gold_total": 0, "chests_total": 0, "bosses_total": 0, "elites_total": 0, "boss_kills": {}, "heroes_played": {}, "reached": {}, "runs": 0, "deaths": 0, "best_time": {}},
 		"codex": {"enemies": {}, "items": {}, "weapons": {}},
 		"settings": {"aim": "auto", "volume": 0.7, "music_volume": 0.8, "sfx_volume": 0.9, "ambience_volume": 0.75,
@@ -41,6 +41,33 @@ func mark_stage_cleared(stage_id: String) -> bool:
 		return false
 	data.cleared[stage_id] = true
 	return true
+
+## SPEC-152: Ecos de Nottgard por fase (`ecos[fase][id]`) e relíquias já pegas (`relics[fase]`). Devolvem true só na primeira vez.
+func mark_eco_found(stage_id: String, eco_id: String) -> bool:
+	if stage_id == "" or eco_id == "":
+		return false
+	if not data.ecos.has(stage_id):
+		data.ecos[stage_id] = {}
+	if data.ecos[stage_id].has(eco_id):
+		return false
+	data.ecos[stage_id][eco_id] = true
+	return true
+
+func mark_relic_taken(stage_id: String) -> bool:
+	if stage_id == "" or data.relics.has(stage_id):
+		return false
+	data.relics[stage_id] = true
+	return true
+
+func ecos_found(stage_id: String) -> int:
+	return Dictionary(data.ecos.get(stage_id, {})).size()
+
+## Todos os Ecos da fase e a relíquia: base da conquista "Ecos de <fase>".
+func secrets_complete(stage_id: String) -> bool:
+	var spec: Dictionary = Data.table("secrets").get(stage_id, {})
+	if spec.is_empty():
+		return false
+	return ecos_found(stage_id) >= Array(spec.get("ecos", [])).size() and data.relics.has(stage_id)
 
 func mark_hq_seen(hq_id: String) -> Array:
 	if hq_id == "" or not Data.table("hqs").has(hq_id) or data.hqs_seen.has(hq_id):
@@ -229,6 +256,8 @@ func stat_value(stat: String, run: Dictionary) -> float:
 		"bets_won_total": return float(st.get("bets_won_total", 0))
 		"loyalty_total": return float(st.get("loyalty_total", 0))
 		"abyss_best_level": return float(abyss_best_level())
+	if stat.begins_with("secrets_"):
+		return 1.0 if secrets_complete(stat.substr(8)) else 0.0
 	if stat.begins_with("hero_deaths_"):
 		return float(st.get("hero_deaths", {}).get(stat.substr(12), 0))
 	if stat.begins_with("hero_cleared_"):

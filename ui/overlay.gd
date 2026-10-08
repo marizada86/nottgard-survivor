@@ -412,6 +412,7 @@ func _draw_over() -> void:
 			# Eventos com PNG oficial em assets/interactions/<tipo>.png; sem PNG (doacao, aposta, ampulheta) o quadrado colorido com rótulo é o provisório
 			"loja": col = Color(1.0, 0.85, 0.3); label = "loja [E/oeste]"; asset = "loja"
 			"ferreiro": col = Color(1.0, 0.5, 0.2); label = ("%s [E/oeste]" % String(it.name).to_lower()) if String(it.get("name", "")) != "" else "ferreiro [E/oeste]"; asset = "ferreiro"
+			"camara": col = Color(0.85, 0.7, 1.0); label = "câmara [E/oeste]" if battle.chamber_unlocked else "câmara selada"; asset = "camara_selada"  # SPEC-152: sem PNG (ART-043), vale o losango provisório
 			"arcanista": col = Color(0.6, 0.45, 1.0); label = "arcanista [E/oeste]"; asset = "arcanista"  # SPEC-149: sem PNG (ART-041), vale o losango roxo provisório
 			"curandeiro": col = Color(0.4, 1.0, 0.5); label = "curandeiro [E/oeste]"; asset = "curandeiro"
 			"doacao": col = Color(0.75, 0.45, 1.0); label = "altar da doação [E/oeste]"; asset = "doacao"
@@ -468,6 +469,7 @@ func _draw_over() -> void:
 		else:
 			draw_string(ThemeDB.fallback_font, draw_p + Vector2(-label_w * 0.5, -base_h - 8.0), label, HORIZONTAL_ALIGNMENT_CENTER, label_w, 12, Color(col, 0.95))
 	_draw_happenings()
+	_draw_ecos()
 	_draw_star_path()
 	for pk in battle.pickups:
 		var p := Iso.to_screen(pk.pos)
@@ -536,6 +538,21 @@ func _draw_quest_highlight(m: Dictionary) -> void:
 	var tri := PackedVector2Array([tip, tip + Vector2(-10, -16), tip + Vector2(10, -16)])
 	draw_colored_polygon(tri, Color(0, 0, 0, 0.55))
 	draw_colored_polygon(PackedVector2Array([tip + Vector2(0, -2), tip + Vector2(-8, -15), tip + Vector2(8, -15)]), col)
+
+## SPEC-152: Ecos ainda não pegos brilham de leve quando o herói chega a `eco_pista` tiles (pista, não caça cega).
+func _draw_ecos() -> void:
+	var clue := float(Data.table("secrets").get("_regras", {}).get("eco_pista", 6.0))
+	for eco in battle.ecos:
+		if eco.found:
+			continue
+		var dist: float = battle.hero.pos.distance_to(eco.pos)
+		if dist > clue:
+			continue
+		var p := Iso.to_screen(eco.pos)
+		var strength := 1.0 - clampf(dist / clue, 0.0, 1.0)
+		var pulse := 0.5 + 0.5 * sin(Time.get_ticks_msec() / 220.0)
+		draw_circle(p + Vector2(0, -18), 10.0 + 6.0 * pulse, Color(0.8, 0.62, 1.0, (0.10 + 0.22 * strength) * (0.6 + 0.4 * pulse)))
+		draw_circle(p + Vector2(0, -18), 4.0, Color(0.95, 0.88, 1.0, 0.35 + 0.5 * strength))
 
 ## SPEC-118: aliados e peregrinos, círculo da arena e setas na borda para os objetivos fora da tela.
 func _draw_happenings() -> void:

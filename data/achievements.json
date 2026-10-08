@@ -53,6 +53,9 @@
     {"id":"marca_vivo","name":"Marca do Abismo: Abismo vivo","desc":"Complete 4 fases diferentes.","stat":"stages_cleared","value":4,"reward":{"unlock_mark":"vivo","text":"Libera a Marca Abismo vivo"}},
     {"id":"marca_fome","name":"Marca do Abismo: Fome","desc":"Chegue ao nível 20 numa run.","stat":"run_level","value":20,"reward":{"unlock_mark":"fome","text":"Libera a Marca Fome"}},
     {"id":"marca_chefe","name":"Marca do Abismo: Chefe desperto","desc":"Derrote 3 chefes (total).","stat":"bosses_total","value":3,"reward":{"unlock_mark":"chefe","text":"Libera a Marca Chefe desperto"}},
-    {"id":"marca_tregua","name":"Marca do Abismo: Sem trégua","desc":"Derrote 4 chefes numa única run.","stat":"run_bosses","value":4,"reward":{"unlock_mark":"tregua","text":"Libera a Marca Sem trégua"}}
+    {"id":"marca_tregua","name":"Marca do Abismo: Sem trégua","desc":"Derrote 4 chefes numa única run.","stat":"run_bosses","value":4,"reward":{"unlock_mark":"tregua","text":"Libera a Marca Sem trégua"}},
+    {"id":"ecos_shedaklah","name":"Ecos de Shedaklah","desc":"Ache os 4 Ecos de Nottgard de Shedaklah e abra a relíquia da fase (em qualquer run).","stat":"secrets_shedaklah","value":1,"reward":{"coins":300}},
+    {"id":"ecos_molor","name":"Ecos de Molor","desc":"Ache os 4 Ecos de Nottgard de Molor e abra a relíquia da fase (em qualquer run).","stat":"secrets_molor","value":1,"reward":{"coins":300}},
+    {"id":"ecos_durao","name":"Ecos de Durao","desc":"Ache os 4 Ecos de Nottgard de Durao e abra a relíquia da fase (em qualquer run).","stat":"secrets_durao","value":1,"reward":{"coins":300}}
   ]
 }

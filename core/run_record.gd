@@ -99,7 +99,7 @@ static func score(counters: Dictionary, cleared: Array) -> Dictionary:
 func snapshot(b: Object, outcome := "incomplete") -> Dictionary:
 	var result: Dictionary = b.result()
 	var balance := {}
-	for table in ["heroes", "weapons", "enemies", "difficulty", "stages", "items", "boons", "passives", "abilities", "upgrades", "item_effects", "boon_effects", "boss_phases", "stage_rules", "stage_events", "scenery", "stage_structures", "level_design"]:
+	for table in ["heroes", "weapons", "enemies", "difficulty", "stages", "items", "boons", "passives", "abilities", "upgrades", "item_effects", "boon_effects", "boss_phases", "stage_rules", "stage_events", "scenery", "secrets", "stage_structures", "level_design"]:
 		balance[table] = Data.table(table)
 	balance.rules = {"build": Version.build_id(), "score": SCORE_VERSION}
 	var record: Dictionary = {"schema_version": SCHEMA_VERSION, "game_id": "nottgard-survivors", "run_id": run_id,

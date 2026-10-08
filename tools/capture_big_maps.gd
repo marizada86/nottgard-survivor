@@ -30,5 +30,16 @@ func _ready() -> void:
 	await get_tree().create_timer(0.3).timeout
 	await RenderingServer.frame_post_draw
 	get_viewport().get_texture().get_image().save_png("res://.atena/generated/big-maps/%s_%s_overview.png" % [stage, tag])
+	# SPEC-152: cada ponto de interesse com o herói por perto (o Eco brilha a até eco_pista tiles)
+	var b: Battle = run.battle
+	for poi in b.secrets_spec().get("pois", []):
+		var at := Vector2(float(poi.pos[0]), float(poi.pos[1]))
+		b.hero.pos = at + Vector2(-3.0, 1.5)
+		run.hero_node.position = Iso.to_screen(b.hero.pos)
+		run.camera.position = Iso.to_screen(at)
+		run.camera.zoom = Vector2(0.9, 0.9)
+		await get_tree().create_timer(0.25).timeout
+		await RenderingServer.frame_post_draw
+		get_viewport().get_texture().get_image().save_png("res://.atena/generated/big-maps/%s_%s_poi_%s.png" % [stage, tag, String(poi.kind)])
 	print("capture_big_maps: %s lado=%d props=%d" % [stage, int(side), run.sorted.get_child_count()])
 	get_tree().quit()

@@ -784,6 +784,19 @@ func _consume_events() -> void:
 			"toast":
 				hud.toast(ev.text, ev.get("color", Color(1, 1, 1)))
 				Game.logline(String(ev.text))
+			"relic":
+				# SPEC-152: a relíquia da fase conta para a conquista "Ecos de <fase>" e vai ao Diário
+				if Game.profile.mark_relic_taken(String(ev.stage)):
+					Game.save()
+				Sfx.play("progress.item")
+			"eco":
+				# SPEC-152: o Eco vai para o Diário na hora (gravado ao pegar) e a faixa aparece sem pausar o jogo
+				var is_new: bool = Game.profile.mark_eco_found(String(ev.stage), String(ev.id))
+				if is_new:
+					Game.save()
+				hud.show_eco(String(ev.texto), String(ev.fonte), not is_new)
+				Sfx.play("progress.item")
+				Game.logline("Eco: %s" % String(ev.id))
 	battle.events.clear()
 
 func _play_enemy_action(enemy_id: String, ground_position: Vector2, action: StringName) -> void:

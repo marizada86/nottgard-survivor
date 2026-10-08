@@ -53,6 +53,8 @@ var objective_label: Label  # linhas de status (juramento, buffs, Favor) abaixo 
 var quest_panel: QuestPanel  # SPEC-147: objetivos dos acontecimentos da fase (SPEC-118)
 var top_stack: VBoxContainer  # SPEC-147: chefe, quests, status e avisos empilhados no topo central
 var status_chip: StatusChip  # SPEC-147: Estige (na água) e Esquecimento
+var eco_banner: EcoBanner     # SPEC-152: faixa do Eco de Nottgard (6 s, sem pausar)
+var eco_counter: Label        # SPEC-152: "Ecos 1/4", só depois do primeiro achado na fase
 var mobile: MobileControls
 var _battle: Battle
 var _confirm_callback: Callable
@@ -115,6 +117,26 @@ func _ready() -> void:
 	_build_top_stack()
 	status_chip = StatusChip.new()
 	$StatBox.add_child(status_chip)
+	eco_counter = Label.new()
+	eco_counter.name = "EcoCounter"
+	eco_counter.visible = false
+	eco_counter.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	eco_counter.add_theme_font_size_override("font_size", 14)
+	eco_counter.add_theme_color_override("font_color", Color(0.85, 0.72, 1.0))
+	eco_counter.add_theme_color_override("font_outline_color", Color(0, 0, 0, 0.85))
+	eco_counter.add_theme_constant_override("outline_size", 4)
+	$StatBox.add_child(eco_counter)
+	eco_banner = EcoBanner.new()
+	eco_banner.anchor_left = 0.5
+	eco_banner.anchor_right = 0.5
+	eco_banner.anchor_top = 1.0
+	eco_banner.anchor_bottom = 1.0
+	eco_banner.offset_left = -310.0
+	eco_banner.offset_right = 310.0
+	eco_banner.offset_top = -210.0
+	eco_banner.offset_bottom = -110.0
+	eco_banner.grow_vertical = Control.GROW_DIRECTION_BEGIN
+	add_child(eco_banner)
 	if Game.touch_controls_enabled():
 		mobile = MobileControls.new()
 		mobile.name = "MobileControls"
@@ -480,9 +502,9 @@ func update_stats(b: Battle) -> void:
 	weapons_label.text = "\n".join(lines)
 	var pr := ""
 	for it in b.interactions:
-		if not it.used and it.kind in ["altar", "ritual", "portal", "loja", "ferreiro", "arcanista", "curandeiro", "ampulheta", "doacao", "aposta", "event_pact"] and it.pos.distance_to(h.pos) <= 1.6:
+		if not it.used and it.kind in ["altar", "ritual", "portal", "loja", "ferreiro", "arcanista", "curandeiro", "ampulheta", "doacao", "aposta", "event_pact", "camara"] and it.pos.distance_to(h.pos) <= 1.6:
 			pr = "[%s] " % Game.controls.prompt("run_interact", "E") + {"altar": "rezar no altar", "ritual": "iniciar o ritual", "portal": "descer pelo portal",
-				"loja": "negociar na loja", "ferreiro": "forjar no ferreiro", "arcanista": "estudar com o arcanista", "curandeiro": "buscar cura", "ampulheta": "girar a ampulheta (+60 s, inimigos acumulados)", "doacao": "doar um item por uma bênção", "aposta": "arriscar moedas na mesa",
+				"loja": "negociar na loja", "ferreiro": "forjar no ferreiro", "arcanista": "estudar com o arcanista", "camara": "abrir a câmara selada", "curandeiro": "buscar cura", "ampulheta": "girar a ampulheta (+60 s, inimigos acumulados)", "doacao": "doar um item por uma bênção", "aposta": "arriscar moedas na mesa",
 				"event_pact": "%s" % String(it.get("label", "pacto")).replace(" [E/oeste]", "")}[it.kind]
 	if pr == "" and (b.stage_cleared or b.final_victory):
 		pr = "[%s] Pausa → Extrair ×%.2f" % [Game.controls.prompt("run_pause", "Esc"), b.reward_multiplier()]
@@ -490,6 +512,9 @@ func update_stats(b: Battle) -> void:
 			pr += "   [%s] Descer ×%.2f" % [Game.controls.prompt("run_interact", "E"), b.next_reward_multiplier()]
 	prompt_label.text = pr
 	quest_panel.update_entries(b.happenings.hud_entries(b), b.happenings.carrying_text())
+	var eco_progress := b.ecos_progress()
+	eco_counter.visible = eco_progress.x > 0
+	eco_counter.text = "✦ Ecos %d/%d" % [eco_progress.x, eco_progress.y]
 	var status_lines: Array = b.kinds.hud_lines(b) + Favor.hud_lines(h.boons)
 	if status_lines.size() > STATUS_MAX_LINES:
 		status_lines = status_lines.slice(0, STATUS_MAX_LINES - 1) + ["+%d efeitos" % (status_lines.size() - STATUS_MAX_LINES + 1)]
@@ -745,6 +770,10 @@ func hide_evolution() -> void:
 		_evo_root.queue_free()
 		_evo_root = null
 	_evo_key = ""
+
+## SPEC-152: Eco de Nottgard recolhido (faixa de `faixa_segundos`, sem pausar).
+func show_eco(text: String, source: String, known: bool) -> void:
+	eco_banner.show_eco(text, source, known, float(Data.table("secrets").get("_regras", {}).get("faixa_segundos", 6.0)))
 
 func toast(text: String, color: Color = Color(1, 1, 1)) -> void:
 	if toast_box.get_child_count() >= 4:

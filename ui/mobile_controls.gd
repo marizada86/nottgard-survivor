@@ -69,13 +69,13 @@ static func interaction_label(b: Battle) -> String:
 	var nearest := 1.6
 	var kind := ""
 	for it in b.interactions:
-		if not it.used and b.time - float(it.get("born_at", 0.0)) >= 0.65 and it.kind in ["altar", "ritual", "portal", "loja", "ferreiro", "arcanista", "curandeiro", "ampulheta", "doacao", "aposta", "event_pact"]:
+		if not it.used and b.time - float(it.get("born_at", 0.0)) >= 0.65 and it.kind in ["altar", "ritual", "portal", "loja", "ferreiro", "arcanista", "curandeiro", "ampulheta", "doacao", "aposta", "event_pact", "camara"]:
 			var distance: float = it.pos.distance_to(b.hero.pos)
 			if distance <= nearest:
 				nearest = distance
 				kind = String(it.kind)
 	return {"altar": "Rezar", "ritual": "Ativar", "portal": "Descer", "loja": "Comprar", "ferreiro": "Forjar", "arcanista": "Estudar",
-		"curandeiro": "Curar", "ampulheta": "Girar", "doacao": "Doar", "aposta": "Apostar", "event_pact": "Conversar"}.get(kind, "")
+		"curandeiro": "Curar", "ampulheta": "Girar", "doacao": "Doar", "aposta": "Apostar", "event_pact": "Conversar", "camara": "Abrir"}.get(kind, "")
 
 func press(finger: int, point: Vector2, allow_movement: bool) -> bool:
 	if not combat_enabled or _fingers.has(finger):

@@ -73,6 +73,9 @@ var _seed := 1
 var _decoy_serial := 0
 var pickups: Array = []
 var interactions: Array = []
+var chamber_unlocked := false   # SPEC-152: a chave da fase já abriu a câmara selada
+var relic_taken := false
+var ecos: Array = []   # SPEC-152: Ecos de Nottgard da fase ({id, pos, found, texto, fonte, onde})
 var events: Array = []
 var aim := Aim.AUTO
 var aim_dir := Vector2(1, 1).normalized()
@@ -107,7 +110,7 @@ var free_revive_used := false
 var death_reward_rate := 0.5
 var death_reason := ""
 var invuln := 0.0
-var stats := {"boons_declined": 0, "kills": 0, "crits": 0, "ones": 0, "elites": 0, "bosses": 0, "chests": 0, "gold": 0.0, "gold_src": {}, "gold_extra": {}, "damage_taken": 0.0, "clean_kills": 0, "clean_streak_best": 0, "still_best": 0.0, "stages_cleared": 0, "rituals": 0, "bets_won": 0, "loyalty": 0, "boss_ids": [], "stage_ids": [], "cleared_ids": []}
+var stats := {"boons_declined": 0, "kills": 0, "crits": 0, "ones": 0, "elites": 0, "bosses": 0, "chests": 0, "gold": 0.0, "gold_src": {}, "gold_extra": {}, "damage_taken": 0.0, "clean_kills": 0, "clean_streak_best": 0, "still_best": 0.0, "stages_cleared": 0, "rituals": 0, "bets_won": 0, "loyalty": 0, "boss_ids": [], "stage_ids": [], "cleared_ids": [], "ecos": []}
 var codex := {"enemies": {}, "items": {}, "weapons": {}}
 var _acc := {}
 var _elites_done := {}
@@ -281,6 +284,9 @@ func load_stage(stage_key: String) -> void:
 	decoys.clear()  # a cópia-isca do Passo pelas Sombras não atravessa de fase
 	pickups.clear()
 	interactions.clear()
+	ecos.clear()
+	chamber_unlocked = false
+	relic_taken = false
 	time = 0.0
 	boss = null
 	boss_spawned = false
@@ -632,6 +638,7 @@ func step(screen_dir: Vector2, dt: float) -> void:
 	enemies = enemies.filter(func(x): return not x.dead)
 	_update_pickups(dt)
 	_update_interactions(dt)
+	_update_ecos()
 	_director(dt)
 
 func _build_grid() -> void:
@@ -1086,6 +1093,11 @@ func _enemy_step(e: Enemy, dt: float) -> void:
 		e.mark_t -= dt
 		if e.mark_t <= 0.0:
 			e.mark = 0.0
+	if e.lair:  # SPEC-152: elite de covil dorme até o herói chegar a `covil_acorda` tiles
+		if hero.pos.distance_to(e.pos) > float(secrets_rules().get("covil_acorda", 8.0)):
+			return
+		e.lair = false
+		events.append({"type": "toast", "text": "O covil acorda: %s" % e.name, "color": Color(0.9, 0.55, 0.55)})
 	if e.stun_t > 0.0:
 		e.stun_t -= dt
 		return
@@ -1446,7 +1458,7 @@ func _kill(e: Enemy) -> void:
 	if e.affix != "" or e.drops_chest:
 		stats.elites += 1
 		if e.drops_chest or rng.randf() < 0.5:
-			_add_interaction("chest", e.pos)
+			_add_interaction("boss_chest" if e.lair_reward == "boss_chest" else "chest", e.pos)
 			if e.id == "mimico":
 				interactions.back()["safe"] = true  # BUG-030: o baú que o Mímico larga nunca vira Mímico de novo
 		_drop("gold", e.pos, 12.0 * float(stage.coin_mult), "elite")
@@ -1517,7 +1529,105 @@ func place_scenery() -> int:
 		placed += 1
 	_place_traps()
 	_place_fixed_interactions()
+	_place_secrets()
 	return placed
+
+## SPEC-152 (MEC-039, fatia piloto): segredos da fase (data/secrets.json). Posição fixa, sem consumir a RNG da batalha.
+func secrets_spec() -> Dictionary:
+	return Data.table("secrets").get(stage_id, {})
+
+func secrets_rules() -> Dictionary:
+	return Data.table("secrets").get("_regras", {})
+
+func _place_secrets() -> int:
+	var spec := secrets_spec()
+	if spec.is_empty():
+		return 0
+	var placed := 0
+	for poi in spec.get("pois", []):
+		var at := Vector2(float(poi.pos[0]), float(poi.pos[1]))
+		match String(poi.kind):
+			"ruina":
+				_add_interaction("chest", at)
+				interactions[-1].safe = true   # o baú da ruína nunca vira Mímico
+				interactions[-1].fixed = true
+				interactions[-1].name = String(poi.name)
+				placed += 1
+			"camara":
+				_add_interaction("camara", at)
+				interactions[-1].fixed = true
+				interactions[-1].name = String(poi.name)
+				placed += 1
+			"covil":
+				var wanted := _free_scenery_spot(at, float(Data.table("enemies").get(String(poi.elite), {}).get("radius", 0.6)))
+				if wanted.x < 0.0:
+					continue
+				var count_before := events.size()
+				var lair_elite := _spawn_elite(String(poi.elite), wanted)
+				while events.size() > count_before:   # o aviso "Elite: ..." só aparece quando o covil acorda
+					events.pop_back()
+				lair_elite.lair = true
+				lair_elite.drops_chest = true
+				lair_elite.lair_reward = "boss_chest"
+				placed += 1
+	for eco in spec.get("ecos", []):
+		var wanted := Vector2(float(eco.pos[0]), float(eco.pos[1]))
+		if String(eco.onde) == "destrutivel":
+			var spot := _free_scenery_spot(wanted + Vector2(1.2, 0.0), float(Data.table("enemies").get(String(eco.quebravel), {}).get("radius", 0.35)))
+			if spot.x >= 0.0:
+				_spawn(String(eco.quebravel), spot)
+		var eco_at := _reachable_interaction_spot(wanted, 0.5)
+		ecos.append({"id": String(eco.id), "pos": eco_at, "found": false, "texto": String(eco.texto), "fonte": String(eco.get("fonte_vault", "")), "onde": String(eco.onde)})
+		placed += 1
+	return placed
+
+## A chave da fase (reward `unlock_chamber` do acontecimento) abre a câmara selada.
+func unlock_chamber() -> void:
+	if chamber_unlocked or secrets_spec().is_empty():
+		return
+	chamber_unlocked = true
+	events.append({"type": "toast", "text": "Algo se abriu: a câmara selada da fase está liberada.", "color": Color(0.85, 0.72, 1.0)})
+
+## Câmara selada (E): trancada sem a chave; aberta, entrega a relíquia da fase uma vez por run (cópia garantida, o item continua no sorteio).
+func _open_chamber() -> bool:
+	if relic_taken:
+		return false
+	if not chamber_unlocked:
+		events.append({"type": "toast", "text": "A câmara está selada. Algo da fase a abrirá.", "color": Color(0.8, 0.75, 0.9)})
+		return false
+	var relic: Dictionary = secrets_spec().get("relic", {})
+	var ids: Array = relic.get("items", [])
+	if ids.is_empty():
+		return false
+	var pick := RandomNumberGenerator.new()   # RNG própria: sortear a relíquia não mexe na sequência da batalha
+	pick.seed = hash(stage_id) ^ _seed
+	var item_id := String(ids[pick.randi() % ids.size()])
+	for u in Data.table("items").uniques:
+		if String(u.id) != item_id:
+			continue
+		relic_taken = true
+		events.append({"type": "relic", "stage": stage_id, "item": item_id, "nome": String(relic.get("nome", "Relíquia"))})
+		events.append({"type": "toast", "text": "%s: %s" % [String(relic.get("nome", "Relíquia")), String(u.name)], "color": Color(1.0, 0.8, 0.4)})
+		give_item(Items.unique(u), true)
+		return true
+	return false
+
+## Eco ao alcance: recolhe sozinho. O evento "eco" leva o texto à UI (faixa de 6 s, sem pausar) e ao perfil (Diário).
+func _update_ecos() -> void:
+	var reach := float(secrets_rules().get("eco_alcance", 1.2))
+	for eco in ecos:
+		if not eco.found and hero.pos.distance_to(eco.pos) <= reach:
+			eco.found = true
+			stats.ecos.append(eco.id)
+			events.append({"type": "eco", "id": eco.id, "stage": stage_id, "texto": eco.texto, "fonte": eco.fonte, "pos": eco.pos})
+
+## Quantos Ecos desta fase já foram pegos nesta run e quantos existem.
+func ecos_progress() -> Vector2i:
+	var n := 0
+	for eco in ecos:
+		if eco.found:
+			n += 1
+	return Vector2i(n, ecos.size())
 
 ## Interativos de posição fixa da fase (poço de Dagruve, oficina do cais nas Docas). Reaproveitam as interações existentes.
 func _place_fixed_interactions() -> void:
@@ -1894,7 +2004,7 @@ func interact() -> bool:
 	var best: Dictionary = {}
 	var bd := 1.6
 	for it in interactions:
-		if not it.used and time - float(it.get("born_at", 0.0)) >= 0.65 and it.kind in ["altar", "ritual", "portal", "loja", "ferreiro", "arcanista", "curandeiro", "ampulheta", "doacao", "aposta", "event_pact"]:
+		if not it.used and time - float(it.get("born_at", 0.0)) >= 0.65 and it.kind in ["altar", "ritual", "portal", "loja", "ferreiro", "arcanista", "curandeiro", "ampulheta", "doacao", "aposta", "event_pact", "camara"]:
 			var d: float = it.pos.distance_to(hero.pos)
 			if d <= bd:
 				bd = d
@@ -1926,6 +2036,10 @@ func interact() -> bool:
 			happenings.open_pact(self, best)
 		"ampulheta":
 			if not _use_hourglass():
+				best.used = false
+				return false
+		"camara":
+			if not _open_chamber():
 				best.used = false
 				return false
 	return true
