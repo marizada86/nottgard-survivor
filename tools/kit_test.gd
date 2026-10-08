@@ -1,5 +1,5 @@
 extends Node
-## Teste interativo do kit: F4, relato, log e print direto em evidencias/.
+## Teste interativo do kit: F4, relato, log, print direto em evidencias/ e ZIP do F7.
 ## godot --path . res://tools/kit_test.tscn
 
 const TEST_ROOT := "res://.atena/generated/playtest-kit-test"
@@ -38,19 +38,23 @@ func _ready() -> void:
 			found_print = true
 	if not found_print:
 		fails.append("F6 nao criou PNG em evidencias/imagens")
-	var found_zip := false
-	for file in DirAccess.get_files_at(root):
-		if file.ends_with(".zip"):
-			found_zip = true
-	if found_zip:
-		fails.append("o kit nao pode criar ZIP")
+	var zip_folder := root.get_base_dir()
+	var zips_before := _zips_in(zip_folder)
+	Playtest.zip_evidence()
+	var new_zips := _zips_in(zip_folder).filter(func(f): return not zips_before.has(f))
+	if new_zips.size() != 1:
+		fails.append("F7 deveria criar exatamente um ZIP ao lado de evidencias, criou %d" % new_zips.size())
+	for zip_file in new_zips:
+		DirAccess.remove_absolute(zip_folder.path_join(zip_file))
+	if not FileAccess.file_exists(root.path_join("relato.txt")):
+		fails.append("F7 nao pode mover o relato.txt")
 	var relato := FileAccess.get_file_as_string(root.path_join("relato.txt"))
 	if relato.contains(OS.get_environment("USERNAME")) and OS.get_environment("USERNAME").length() > 2:
 		fails.append("relato.txt vazou o usuario do Windows")
 	if Playtest.shortcut_action(_key(KEY_F5)) != &"note" or Playtest.shortcut_action(_key(KEY_F6)) != &"screenshot":
 		fails.append("F5/F6 nao resolveram para as acoes esperadas")
-	if Playtest.shortcut_action(_key(KEY_F7)) != &"":
-		fails.append("F7 ainda possui acao")
+	if Playtest.shortcut_action(_key(KEY_F7)) != &"zip":
+		fails.append("F7 nao resolveu para a acao zip")
 	print("kit: %s" % ("OK" if fails.is_empty() else str(fails)))
 	_cleanup_test_root()
 	get_tree().quit(1 if not fails.is_empty() else 0)
@@ -60,6 +64,9 @@ func _key(keycode: Key) -> InputEventKey:
 	event.pressed = true
 	event.physical_keycode = keycode
 	return event
+
+func _zips_in(folder: String) -> Array:
+	return Array(DirAccess.get_files_at(folder)).filter(func(f): return String(f).begins_with("evidencias-") and String(f).ends_with(".zip"))
 
 func _cleanup_test_root() -> void:
 	var root := ProjectSettings.globalize_path(TEST_ROOT)

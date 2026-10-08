@@ -21,13 +21,15 @@ Survivor-like lento e legível, ambientado em Nottgard, com foco no **Plano Abis
 | **F4** | abre o Navegador QA na build de playtest |
 | **F5** | bloco de notas; grava relato textual com data, hora e contexto |
 | **F6** | print da tela |
+| **F7** | reúne `evidencias/` num ZIP ao lado do executável (copia; mantém os originais) |
 | F1 / F11 | guia / tela cheia |
 
 Depois de cada chefe, **X** extrai e garante a recompensa atual; **E** entra no portal, mantém a build e aumenta o multiplicador de risco e recompensa. Cada camada possui uma regra ambiental própria, e os chefes mudam de fase em 70% e 35% de vida.
 
 As evidências ficam ao lado do executável em `evidencias/`: `relato.txt`,
 `logs/jogo.log` e os PNGs de `imagens/`. Envie os arquivos de texto e imagem
-individualmente na task correspondente do Discord.
+individualmente na task correspondente do Discord. **F7** gera
+`evidencias-AAAA-MM-DD-HHMMSS.zip` na mesma pasta do executável, para guardar tudo junto.
 
 ## Desenvolver
 

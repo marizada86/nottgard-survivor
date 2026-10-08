@@ -568,6 +568,8 @@ static func shortcut_action(ev: InputEvent) -> StringName:
 			return &"note"
 		KEY_F6:
 			return &"screenshot"
+		KEY_F7:
+			return &"zip"
 		KEY_F11:
 			return &"fullscreen"
 		KEY_F12:
@@ -585,7 +587,7 @@ static func qa_shortcuts_text(qa_enabled: bool) -> String:
 		shortcuts += "F4 Navegador QA (pausa e prévia de HQ) · "
 	else:
 		shortcuts += "F4 Central Playtest · "
-	shortcuts += "F5 nota · F6 print · F11 tela cheia · F12 diagnóstico · F1 este guia\n"
+	shortcuts += "F5 nota · F6 print · F7 ZIP das evidências · F11 tela cheia · F12 diagnóstico · F1 este guia\n"
 	return shortcuts
 
 static func _guide_text() -> String:
@@ -596,7 +598,8 @@ static func _guide_text() -> String:
 		+ "1. Jogue seguindo o que foi pedido a você (uma fase, um herói, um chefe...). Não precisa jogar tudo.\n" \
 		+ "2. [b]F6[/b] tira um print na hora certa (não pausa).\n" \
 		+ "3. [b]F5[/b] abre o bloco de notas: escreva o que estranhou ou gostou. Ao fechar, o relato textual é salvo.\n" \
-		+ "4. Envie individualmente o relato, o log e os prints de [b]evidencias[/b] na task correspondente do Discord.\n\n" \
+		+ "4. [b]F7[/b] reúne relato, log e prints num ZIP ao lado do executável (os arquivos originais ficam em [b]evidencias[/b]).\n" \
+		+ "5. Envie o relato, o log e os prints de [b]evidencias[/b] na task correspondente do Discord; o ZIP serve para guardar tudo junto.\n\n" \
 		+ "[b]Controles do jogo[/b]\n" \
 		+ "Teclado/mouse: WASD/setas movem; Tab alterna mira; Q/botão direito usa habilidade; E interage; X extrai; 1-5 escolhe; R rerrola; T/F acelera; Esc pausa. Controle: analógico esquerdo/direcional move; direito mira no modo manual; RB/R1 usa habilidade; X/□ interage; Y/△ alterna mira; LB/L1 rerrola; Menu/Options pausa; View/Share/Create abre a ficha. A/× confirma e B/○ volta no preset Padrão; Legado inverte. Extrair e velocidade ficam na pausa; detalhes com RS/R3; abas L1/LB anterior e R1/RB próxima.\n" \
 		+ "Todas as armas atacam sozinhas. Sobreviva, evolua, derrote o chefe da fase e desça pelo portal.\n\n" \
@@ -648,7 +651,7 @@ func _input(ev: InputEvent) -> void:
 			return
 	if not ev is InputEventKey:
 		return
-	if OS.has_feature("web") and ev.physical_keycode in [KEY_F4, KEY_F5, KEY_F6]:
+	if OS.has_feature("web") and ev.physical_keycode in [KEY_F4, KEY_F5, KEY_F6, KEY_F7]:
 		return
 	var shortcut := shortcut_action(ev)
 	if shortcut == &"fullscreen":
@@ -684,6 +687,9 @@ func _input(ev: InputEvent) -> void:
 			get_viewport().set_input_as_handled()
 		&"screenshot":
 			take_print()
+			get_viewport().set_input_as_handled()
+		&"zip":
+			zip_evidence()
 			get_viewport().set_input_as_handled()
 		&"guide":
 			if _guide_open:
@@ -844,6 +850,78 @@ func take_print() -> void:
 	Game.logline("Evidência: print salvo em imagens/%s" % path.get_file())
 	toast("Print salvo em evidencias/imagens/%s" % path.get_file())
 
+## Arquivos de evidência permitidos sob `root`, como caminhos relativos ordenados.
+static func evidence_files(root: String, rel := "") -> Array:
+	var out: Array = []
+	var dir := DirAccess.open(root.path_join(rel) if rel != "" else root)
+	if dir == null:
+		return out
+	var folders := Array(dir.get_directories())
+	folders.sort()
+	for sub in folders:
+		out.append_array(evidence_files(root, String(sub) if rel == "" else rel.path_join(String(sub))))
+	var names := Array(dir.get_files())
+	names.sort()
+	for file_name in names:
+		var path := String(file_name) if rel == "" else rel.path_join(String(file_name))
+		if is_allowed_evidence_path(path):
+			out.append(path)
+	return out
+
+## Nome do ZIP em `folder`, sem sobrescrever um existente (-02, -03...).
+static func unique_zip_path(folder: String, dt: Dictionary) -> String:
+	var stem := "evidencias-%04d-%02d-%02d-%02d%02d%02d" % [dt.year, dt.month, dt.day, dt.hour, dt.minute, dt.second]
+	var path := folder.path_join(stem + ".zip")
+	var sequence := 2
+	while FileAccess.file_exists(path):
+		path = folder.path_join("%s-%02d.zip" % [stem, sequence])
+		sequence += 1
+	return path
+
+## Copia (sem mover) os arquivos de `root` para `zip_path`, sob a pasta evidencias/. Devolve a
+## quantidade de arquivos, 0 se não havia nada a empacotar ou -1 em falha (sem ZIP parcial).
+static func build_evidence_zip(root: String, zip_path: String) -> int:
+	var files := evidence_files(root)
+	if files.is_empty():
+		return 0
+	var zip := ZIPPacker.new()
+	if zip.open(zip_path) != OK:
+		return -1
+	var ok := true
+	for rel in files:
+		var bytes := FileAccess.get_file_as_bytes(root.path_join(String(rel)))
+		if FileAccess.get_open_error() != OK or zip.start_file("%s/%s" % [EVIDENCE_FOLDER, rel]) != OK or zip.write_file(bytes) != OK:
+			ok = false
+			break
+		zip.close_file()
+	zip.close()
+	if not ok:
+		DirAccess.remove_absolute(zip_path)
+		return -1
+	return files.size()
+
+func zip_evidence() -> void:
+	if _note_open:
+		toast("Feche o relato antes de reunir as evidências.")
+		return
+	if _guide_open:
+		return
+	close_playtest()
+	if _evidence_error != "":
+		_show_evidence_error(_evidence_error)
+		return
+	var folder := _evidence_root().get_base_dir()
+	var path := unique_zip_path(folder, Time.get_datetime_dict_from_system())
+	var count := build_evidence_zip(_evidence_root(), path)
+	if count == 0:
+		toast("Nada para reunir: ainda não há relato, log nem print em evidencias.")
+		return
+	if count < 0:
+		_show_evidence_error("Não foi possível gravar o ZIP ao lado do executável. Verifique a permissão da pasta da build.")
+		return
+	Game.logline("Evidência: ZIP salvo (%s, %d arquivos)" % [path.get_file(), count])
+	toast("ZIP salvo: %s (%d arquivos)" % [path.get_file(), count])
+
 func is_note_open() -> bool:
 	return _note_open
 
@@ -944,7 +1022,7 @@ func _build_playtest_buttons() -> void:
 	else:
 		var instructions := Label.new()
 		instructions.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		instructions.text = "F5 relata · F6 captura. Envie logs/estatisticas.log e os arquivos numerados pelo comando /playtest enviar na task do Discord. Relatos e prints vao separados."
+		instructions.text = "F5 relata · F6 captura · F7 reune tudo num ZIP ao lado do executavel. Envie logs/estatisticas.log e os arquivos numerados pelo comando /playtest enviar na task do Discord. Relatos e prints vao separados."
 		box.add_child(instructions)
 	var close := Button.new()
 	close.text = "Voltar ao jogo"

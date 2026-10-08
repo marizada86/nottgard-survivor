@@ -11,7 +11,8 @@ func run() -> Array:
 	_assert_note_panel_size(failures, Vector2(320, 480), Vector2(272, 432))
 	_assert_shortcut(failures, KEY_F5, &"note")
 	_assert_shortcut(failures, KEY_F6, &"screenshot")
-	_assert_shortcut(failures, KEY_F7, &"")
+	_assert_shortcut(failures, KEY_F7, &"zip")
+	_assert_shortcut(failures, KEY_F8, &"")
 	_assert_shortcut(failures, KEY_F11, &"fullscreen")
 	_assert_shortcut(failures, KEY_F12, &"console")
 	_assert_shortcut(failures, KEY_ESCAPE, &"")
@@ -72,13 +73,64 @@ func run() -> Array:
 	if rules.find("Seu nome") >= 0 or rules.find("[b]Objetivo[/b]") < 0 or rules.find("[b]Progresso[/b]") < 0:
 		failures.append("ajuda de regras deveria explicar o jogo sem pedir nome")
 	var guide := PlaytestScript._guide_text()
-	if guide.find("F7") >= 0 or guide.to_lower().find(".zip") >= 0:
-		failures.append("guia de playtest ainda referencia F7 ou ZIP")
+	if guide.find("F7") < 0 or guide.find("ZIP") < 0:
+		failures.append("guia de playtest deveria explicar o F7 e o ZIP")
+	_check_evidence_zip(failures)
 	if PlaytestScript.qa_shortcuts_text(true).find("F4 Navegador QA") < 0:
 		failures.append("guia QA deveria explicar F4")
 	if PlaytestScript.qa_shortcuts_text(false).find("F4 Navegador QA") >= 0:
 		failures.append("guia publico nao deveria anunciar o atalho do Navegador QA")
 	return failures
+
+func _check_evidence_zip(failures: Array) -> void:
+	var base := "user://test_evidence_zip"
+	var root := base.path_join("evidencias")
+	_remove_tree(base)
+	DirAccess.make_dir_recursive_absolute(root.path_join("logs"))
+	DirAccess.make_dir_recursive_absolute(root.path_join("imagens"))
+	if PlaytestScript.build_evidence_zip(root, base.path_join("vazio.zip")) != 0 or FileAccess.file_exists(base.path_join("vazio.zip")):
+		failures.append("pasta sem arquivos nao deveria gerar ZIP")
+	var contents := {"relato.txt": "nota", "logs/jogo.log": "linha", "imagens/print-1.png": "png", "logs/save.dat": "x", "manifest.json": "{}"}
+	for rel in contents:
+		var f := FileAccess.open(root.path_join(rel), FileAccess.WRITE)
+		f.store_string(contents[rel])
+		f.close()
+	var dt := {"year": 2026, "month": 10, "day": 7, "hour": 1, "minute": 2, "second": 3}
+	var first := PlaytestScript.unique_zip_path(base, dt)
+	if first.get_file() != "evidencias-2026-10-07-010203.zip":
+		failures.append("nome do ZIP inesperado: %s" % first.get_file())
+	if PlaytestScript.build_evidence_zip(root, first) != 3:
+		failures.append("ZIP deveria conter so os 3 arquivos permitidos")
+	var second := PlaytestScript.unique_zip_path(base, dt)
+	if second == first or second.get_file() != "evidencias-2026-10-07-010203-02.zip":
+		failures.append("segundo ZIP no mesmo segundo nao pode sobrescrever o primeiro: %s" % second.get_file())
+	if PlaytestScript.build_evidence_zip(root, second) != 3:
+		failures.append("segundo ZIP nao deveria incluir o primeiro")
+	var reader := ZIPReader.new()
+	if reader.open(first) != OK:
+		failures.append("ZIP nao abriu para leitura")
+	else:
+		var names := Array(reader.get_files()).filter(func(n): return not String(n).ends_with("/"))
+		names.sort()
+		if names != ["evidencias/imagens/print-1.png", "evidencias/logs/jogo.log", "evidencias/relato.txt"]:
+			failures.append("conteudo do ZIP inesperado: %s" % [names])
+		elif reader.read_file("evidencias/relato.txt").get_string_from_utf8() != "nota":
+			failures.append("conteudo de relato.txt corrompido no ZIP")
+		reader.close()
+	for rel in ["relato.txt", "logs/jogo.log", "imagens/print-1.png"]:
+		if not FileAccess.file_exists(root.path_join(rel)):
+			failures.append("original %s nao pode ser movido nem apagado" % rel)
+	_remove_tree(base)
+
+func _remove_tree(path: String) -> void:
+	var dir := DirAccess.open(path)
+	if dir == null:
+		return
+	for sub in dir.get_directories():
+		_remove_tree(path.path_join(sub))
+	for file_name in dir.get_files():
+		DirAccess.remove_absolute(path.path_join(file_name))
+	DirAccess.remove_absolute(path)
 
 func _assert_panel_size(failures: Array, viewport_size: Vector2, expected: Vector2) -> void:
 	if PlaytestScript.guide_panel_size(viewport_size) != expected:

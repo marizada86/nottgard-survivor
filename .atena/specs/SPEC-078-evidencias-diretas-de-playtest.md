@@ -2,6 +2,9 @@
 
 Status: **implementada e validada (2026-09-29)**.
 
+> Atualização 2026-10-07: o ponto "F7 não possui ação" e o não objetivo "Não criar ZIP" foram substituídos pela
+> [SPEC-145](SPEC-145-f7-zip-de-evidencias.md) (F7 reúne `evidencias/` num ZIP ao lado do executável). O restante vale.
+
 ## Decisão
 
 Substituir o kit de evidências baseado em rascunho e ZIP por arquivos diretos

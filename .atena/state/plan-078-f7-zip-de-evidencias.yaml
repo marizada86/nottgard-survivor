@@ -1,0 +1,43 @@
+id: PLAN-078
+spec: SPEC-145
+spec_file: .atena/specs/SPEC-145-f7-zip-de-evidencias.md
+mode: per-plan
+status: COMPLETED_LOCAL
+completed: '2026-10-07'
+evidence: EVID-198
+approved: '2026-10-07'
+approval_basis: 'Dono respondeu as perguntas de rota, nivel e conteudo (fazer agora e voltar; por plano; copiar e manter tudo).'
+created: '2026-10-07'
+request_classification: PLAN_DEVIATION
+deviation_id: DEV-010
+authorization_verbatim: 'atena tem como ao apertar F7 compilar tudo em zip para a mesma pasta do executavel do playtest ?'
+checkpoint: B-003/S-006 (concluido)
+return:
+  plan: PLAN-071
+  state_file: .atena/state/plan-071-playtest-ranking.yaml
+  checkpoint_observed: B-006/S-011
+  snapshot: .atena/generated/playtest-zip/plan-before-078.yaml
+decisions_taken:
+  route: "2026-10-07: fazer agora e voltar ao PLAN-071"
+  approval_mode: "per-plan (2026-10-07)"
+  contents: "2026-10-07: copiar e manter tudo (originais intactos)"
+batches:
+  B-001: {title: Empacotador e tecla F7, steps: [S-001, S-002], status: DONE}
+  B-002: {title: Textos, testes e reconciliacao SPEC-078, steps: [S-003, S-004], status: DONE}
+  B-003: {title: Validacao, evidencia e retorno, steps: [S-005, S-006], status: DONE}
+steps:
+  S-001: 'core/playtest.gd: build_evidence_zip(root, zip_path), zip_path_for(root, datetime), acao zip no shortcut_action.'
+  S-002: 'core/playtest.gd: tratar F7 (nao Web, evidencia habilitada, sem nota/guia abertos), aviso e log.'
+  S-003: 'Guia F1, rodape da central, README; reconciliar nota na SPEC-078.'
+  S-004: 'tests/test_playtest.gd e tools/kit_test.gd: F7 vira zip; teste do empacotador com pasta temporaria.'
+  S-005: 'Suite completa (godot --headless -s tests/run_all.gd) e kit_test.'
+  S-006: 'EVID, atualizar plan.yaml (DEV-010) e voltar ao PLAN-071 B-006/S-011.'
+gates:
+  dependencies: NO_NEW_DEPENDENCIES
+  new_art: NOT_REQUIRED
+  commit_push_build_export: NOT_AUTHORIZED
+  other_sessions_changes: PRESERVE_UNTOUCHED
+  files_edited: [core/playtest.gd, tests/test_playtest.gd, tools/kit_test.gd, README.md]
+blocking_gaps: []
+return_to: PLAN-071 (B-006/S-011, active_plan sem alteracao)
+commit_push_build_export: NOT_PERFORMED
