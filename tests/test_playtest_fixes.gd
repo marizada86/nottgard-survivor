@@ -13,6 +13,7 @@ func run() -> Array:
 	out.append_array(_entrada())
 	out.append_array(_topo())
 	out.append_array(_estige())
+	out.append_array(_armas())
 	return out
 
 ## B-001: C fecha a ficha; a ficha abre nas ofertas; a nota (F5) prende a HUD.
@@ -153,5 +154,38 @@ func _estige() -> Array:
 	if not hud.styx_status(plain).is_empty():
 		out.append("fases sem o contrato do Estige não mostram o indicador")
 	hud.free()
+	return out
+
+## B-003 S-008: depois de evoluir, a arma base não volta como "NOVA" nas ofertas (IN-063).
+func _armas() -> Array:
+	var out: Array = []
+	var wdata: Dictionary = Data.table("weapons")
+	var evolving: Array = []
+	for wid in wdata:
+		if wdata[wid].has("evolve"):
+			evolving.append(String(wid))
+	if evolving.size() != 8:
+		out.append("esperava 8 armas que evoluem, achei %d (atualize o teste se o conteúdo mudou)" % evolving.size())
+	for base in evolving:
+		var into := String(wdata[base].evolve.into)
+		var b := Battle.new(3, "sylas", "dagruve")
+		b.hero.weapons.clear()
+		b.hero.weapons.append(Weapon.make(into))
+		var base_seen := 0
+		for i in 150:
+			for o in b._build_offer():
+				if String(o.get("t", "")) == "weapon_new" and String(o.id) == base:
+					base_seen += 1
+		if base_seen > 0:
+			out.append("%s: a base voltou %d vez(es) como NOVA depois de evoluir para %s" % [base, base_seen, into])
+		# controle: sem a evolução a base continua aparecendo
+		b.hero.weapons.clear()
+		var control := 0
+		for i in 400:
+			for o in b._build_offer():
+				if String(o.get("t", "")) == "weapon_new" and String(o.id) == base:
+					control += 1
+		if control == 0:
+			out.append("%s: controle falhou, a base nunca foi oferecida sem a evolução" % base)
 	return out
 

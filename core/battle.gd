@@ -2251,10 +2251,13 @@ func _build_offer() -> Array:
 		if not syn.is_empty() and not hero.synergies.has(w.id) and _has_maxed_accessory(String(syn.item_base)):
 			pool.append({"t": "synergy_activate", "id": w.id, "name": "SINERGIA: %s" % String(syn.name), "desc": "%s por camada descida (agora: ×%d)." % [Items.mods_text(syn.bonus_per_depth), maxi(1, descent_depth)], "weight": 9.0, "role": "synergy"})
 	if owned_w < hero.weapon_slots():
+		var evolved_bases := _evolved_base_ids()
 		for wid in wdata:
 			var d: Dictionary = wdata[wid]
 			if String(d.src).begins_with("Evolu") or String(d.src).begins_with("Item"):
 				continue
+			if evolved_bases.has(String(wid)):
+				continue  # SPEC-147 (IN-063): a arma base já virou a evolução que o herói tem
 			if hero.weapons.any(func(w): return w.id == wid):
 				continue
 			pool.append({"t": "weapon_new", "id": wid, "name": "NOVA: %s" % d.name, "desc": d.desc, "weight": 2.0, "role": _weapon_offer_role(d)})
@@ -2284,6 +2287,16 @@ func _build_offer() -> Array:
 		out.append({"t": "gold", "id": "gold", "name": "Bolsa de Moedas", "desc": "+40 moedas.", "weight": 1.0})
 	for o in out:
 		_decorate_offer(o)
+	return out
+
+## SPEC-147 (IN-063): ids das armas base cuja evolução o herói possui; elas não voltam como "NOVA" nas ofertas.
+func _evolved_base_ids() -> Dictionary:
+	var out := {}
+	var wdata: Dictionary = Data.table("weapons")
+	for wid in wdata:
+		var evo: Dictionary = wdata[wid].get("evolve", {})
+		if not evo.is_empty() and hero.weapons.any(func(w): return w.id == String(evo.into)):
+			out[String(wid)] = true
 	return out
 
 func _weighted_pick(candidates: Array) -> Dictionary:
