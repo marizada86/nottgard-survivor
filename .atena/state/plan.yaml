@@ -64,6 +64,19 @@ suspension:
   suspended_plan_state_file: '.atena/state/plan-053-imagens.yaml'
   note: 'PLAN-053 (imagens, SPEC-121) suspenso; cota de imagens liberou 2026-10-04 10:28 BRT; retoma na Shu (attack_02, death_03, death_04).'
 deferred_requests:
+  - id: DEV-013
+    request: 'Plano para lancar a v0.4.0 (Major: changelog PDF, guia facil, questionario 007, plano PLAN-nnn aprovado).'
+    request_classification: PLAN_DEVIATION
+    status: DEFERRED_PENDING
+    recorded: '2026-10-08'
+    route: 'Dono escolheu adiar (2026-10-08): seguir o PLAN-071 e planejar a v0.4.0 quando ele fechar ou quando o dono pedir.'
+    owner_scope_choice: 'Consolidar + conteudo novo: consolidacao (arvore suja em commits por mecanica, suite/fumaca/bot, fecho do lote de bugs, versao, PDFs) mais mecanicas grandes marcadas para a proxima major (MEC-041 NPC de upgrade de magia, MEC-039 segredos e mapa maior, MEC-042 itens/armas/magias novos). Quais entram e a ordem ficam para a spec.'
+    context_found:
+      - 'Ultima versao publicada: 0.3.1. 0.3.2 e 0.3.3 so existem como .exe local; core/version.gd em HEAD marca 0.3.2 e a 0.3.3 esta na arvore suja.'
+      - 'Aguardando versao: Marcas do Abismo (MEC-040), economia de ouro (BAL-023), PLAN-080 (BUG-034 a 037, MEC-053 a 057, BAL-024), controles Xbox/PS e mobile (aceite fisico pendente), bencaos, ranking/F7.'
+      - 'Bugs: P0=0, P1 abertos=4 (BUG-027, BUG-028, BUG-029, BUG-033), 14 implementados aguardando playtest, 8 verificacoes manuais pendentes.'
+      - 'Arvore de trabalho com 56 arquivos alterados ou novos de varias sessoes; separar antes de qualquer commit de versao.'
+    next_when_resumed: 'Abrir SPEC e proposta PLAN-081 (rascunho em .atena/vault/drafts/), resolver gaps BLOCKING (escopo das mecanicas, destino do BUG-028/027/029, ART-036/037), pedir nivel de aprovacao.'
   - id: DEV-012
     request: 'Plano para os relatos de playtest de Manzi (v0.3.2, EVID-199) e Daniel (v0.3.3, EVID-200): ficha C, bloco de notas modal, sobreposicao e destaque de quests, arma base reofertada, primeiro bau, proximo nivel na ficha.'
     request_classification: PLAN_DEVIATION
