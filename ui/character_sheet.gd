@@ -489,7 +489,7 @@ func _synergy_sections() -> Array:
 		var syn: Dictionary = wdata.get(wid, {}).get("synergy", {})
 		if syn.is_empty():
 			continue
-		entries.append({"icon": "res://assets/icons/weapons/%s.png" % String(wid), "letter": String(syn.name).substr(0, 1), "border": GOLD,
+		entries.append({"icon": Items.weapon_icon(String(wid)), "letter": String(syn.name).substr(0, 1), "border": GOLD,
 			"badge": "×%d" % mult, "badge_max": false, "evolve": false, "empty": false,
 			"detail": "[font_size=22][b]♾ Sinergia: %s[/b][/font_size]\n%s por camada descida (agora ×%d)." % [String(syn.name), Items.mods_text(syn.bonus_per_depth), mult]})
 	return [{"title": "Sinergias  %d" % entries.size(), "entries": entries, "empty_text": "Nenhuma sinergia ainda."}]
@@ -514,7 +514,7 @@ func _weapon_entry(w: Weapon) -> Dictionary:
 	if evo_text != "":
 		detail += "\n\n[b][color=#ffb36b]Evolução:[/color][/b] %s" % evo_text
 	var multi := w.max_level() > 1
-	return {"icon": "res://assets/icons/weapons/%s.png" % w.id, "letter": String(w.def.name).substr(0, 1),
+	return {"icon": Items.weapon_icon(String(w.id)), "letter": String(w.def.name).substr(0, 1),
 		"border": GRANTED_BORDER if w.granted else IRON, "badge": ("Nv%d" % w.level) if multi else "★",
 		"badge_max": (w.level >= w.max_level()) if multi else true, "evolve": w.can_evolve(), "empty": false, "detail": detail}
 
@@ -539,7 +539,7 @@ func _item_entry(it: Dictionary) -> Dictionary:
 	if String(it.get("note", "")) != "":
 		detail += "\n[i]%s[/i]" % String(it.note)
 	var icon_id := String(it.get("base", it.get("id", "")))
-	return {"icon": "res://assets/icons/items/%s.png" % icon_id, "letter": String(it.name).substr(0, 1), "border": color,
+	return {"icon": Items.item_icon(icon_id), "letter": String(it.name).substr(0, 1), "border": color,
 		"badge": ("Nv%d" % lvl) if has_base else "", "badge_max": lvl >= Items.MAX_LEVEL, "evolve": false, "empty": false, "detail": detail}
 
 func _passive_entry(pid: String, level: int) -> Dictionary:

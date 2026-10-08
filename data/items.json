@@ -53,12 +53,12 @@
     {"id": "olho_de_ghaunadaur", "name": "Olho de Ghaunadaur", "slot": "amuleto", "tier": 6, "mods": {"dmg_pct": 0.25, "hp": -6}, "note": "Poder que cobra um preço."},
     {"id": "lasca_de_ailalore", "name": "Lasca de Ailalore", "slot": "anel", "tier": 4, "mods": {"area_pct": 0.15, "cd_pct": 0.08}, "note": "Fragmento de uma estrela caída."},
     {"id": "colar_runico_de_thalion", "name": "Colar Rúnico de Thalion", "slot": "amuleto", "tier": 3, "mods": {"inteligencia": 2, "xp_pct": 0.10}},
-    {"id":"cajado_familia_infernum","name":"Cajado da Família Infernum","slot":"arma","tier":3,"mods":{"inteligencia":2,"cam":1,"area_pct":0.1},"note":"Relíquia da família Infernum, feita de Yggdrasil e cravejada com pedras da estrela de Eléstria."},
-    {"id":"wave_of_terror","name":"Wave of Terror","slot":"arma","tier":5,"mods":{"forca":1,"dmg_pct":0.15,"hp":-8},"note":"Espada mágica de ácido que oculta em sombras. Traz a Maldição da Ambição Sombria."},
-    {"id":"colar_visao_verdadeira","name":"Colar de visão verdadeira do Santuário","slot":"amuleto","tier":2,"mods":{"hit":2,"crit_overflow_bonus":0.03},"note":"Colar do Santuário de Astherion, com o olho de Ghaunadaur: concede visão verdadeira."},
-    {"id":"detector_arcano","name":"Detector Arcano","slot":"anel","tier":1,"mods":{"pickup":1.5,"sorte":2},"note":"Aparelho que detecta assinaturas mágicas."},
-    {"id":"dispositivo_antimagia_gilly","name":"Dispositivo Antimagia de Gilly","slot":"armadura","tier":4,"mods":{"cam":3,"inteligencia":-1},"note":"Projeta um escudo antimagia; o custo é sentido por quem o usa."},
-    {"id":"dispositivo_das_docas","name":"Dispositivo das Docas","slot":"amuleto","tier":1,"mods":{"dr":1,"ca":1},"note":"Mecanismo do porto das Docas que afasta as criaturas do mar."},
-    {"id":"coracao_da_dominancia","name":"Coração da Dominância","slot":"arma","tier":5,"mods":{"hit":2,"cam":1,"carisma":1},"weapon":"dominio_da_vontade","note":"Troféu da vontade: nasceu quando o portador resistiu à Rainha das Súcubos e conquistou seu respeito."}
+    {"id":"cajado_familia_infernum","icon_like":"cajado","name":"Cajado da Família Infernum","slot":"arma","tier":3,"mods":{"inteligencia":2,"cam":1,"area_pct":0.1},"note":"Relíquia da família Infernum, feita de Yggdrasil e cravejada com pedras da estrela de Eléstria."},
+    {"id":"wave_of_terror","icon_like":"espada_longa","name":"Wave of Terror","slot":"arma","tier":5,"mods":{"forca":1,"dmg_pct":0.15,"hp":-8},"note":"Espada mágica de ácido que oculta em sombras. Traz a Maldição da Ambição Sombria."},
+    {"id":"colar_visao_verdadeira","icon_like":"amuleto_simples","name":"Colar de visão verdadeira do Santuário","slot":"amuleto","tier":2,"mods":{"hit":2,"crit_overflow_bonus":0.03},"note":"Colar do Santuário de Astherion, com o olho de Ghaunadaur: concede visão verdadeira."},
+    {"id":"detector_arcano","icon_like":"anel_simples","name":"Detector Arcano","slot":"anel","tier":1,"mods":{"pickup":1.5,"sorte":2},"note":"Aparelho que detecta assinaturas mágicas."},
+    {"id":"dispositivo_antimagia_gilly","icon_like":"cota","name":"Dispositivo Antimagia de Gilly","slot":"armadura","tier":4,"mods":{"cam":3,"inteligencia":-1},"note":"Projeta um escudo antimagia; o custo é sentido por quem o usa."},
+    {"id":"dispositivo_das_docas","icon_like":"amuleto_simples","name":"Dispositivo das Docas","slot":"amuleto","tier":1,"mods":{"dr":1,"ca":1},"note":"Mecanismo do porto das Docas que afasta as criaturas do mar."},
+    {"id":"coracao_da_dominancia","icon_like":"cetro","name":"Coração da Dominância","slot":"arma","tier":5,"mods":{"hit":2,"cam":1,"carisma":1},"weapon":"dominio_da_vontade","note":"Troféu da vontade: nasceu quando o portador resistiu à Rainha das Súcubos e conquistou seu respeito."}
   ]
 }

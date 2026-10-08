@@ -62,6 +62,7 @@ func run() -> Array:
 	_armor_break(out)
 	_items(out)
 	_coracao(out)
+	_icons(out)
 	return out
 
 # ---------------------------------------------------------------- W1 Bola de Fogo (SPEC-150)
@@ -256,3 +257,16 @@ func _coracao(out: Array) -> void:
 	b._resolve_item_choice(other, heart)
 	if b.hero.weapons.any(func(w): return w.id == "dominio_da_vontade"):
 		out.append("trocar o Coração da Dominância deveria retirar Domínio da Vontade")
+
+# ---------------------------------------------------------------- Ícones provisórios (ART-042)
+func _icons(out: Array) -> void:
+	for id in ["bola_de_fogo", "tormenta_de_fogo", "lamina_de_sombra", "romper_armadura", "esmagar_defesas", "dominio_da_vontade"]:
+		if not ResourceLoader.exists(Items.weapon_icon(id)):
+			out.append("arma %s deveria ter ícone provisório (icon_like)" % id)
+	for id in ITEMS:
+		if not ResourceLoader.exists(Items.item_icon(String(id))):
+			out.append("item %s deveria ter ícone provisório (icon_like)" % id)
+	if Items.weapon_icon("espada_sombria") != "res://assets/icons/weapons/espada_sombria.png":
+		out.append("arma com ícone próprio deveria usá-lo")
+	if Items.item_icon("nao_existe") != "res://assets/icons/items/nao_existe.png":
+		out.append("id desconhecido deveria devolver o caminho próprio")

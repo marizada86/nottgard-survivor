@@ -2862,6 +2862,72 @@
       "pitch_jitter": 0.035,
       "cooldown_ms": 800,
       "priority": 5
+    },
+    "weapon.bola_de_fogo.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.descarga_estelar.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.descarga_estelar.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.tormenta_de_fogo.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.chuva_de_estrelas.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.chuva_de_estrelas.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.lamina_de_sombra.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.lamina_trovejante.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.lamina_trovejante.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.romper_armadura.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.golpe_esmagador.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.golpe_esmagador.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.esmagar_defesas.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.golpe_do_juizo.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.golpe_do_juizo.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.dominio_da_vontade.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.dominar_pessoa.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.dominar_pessoa.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
     }
   },
   "aliases": {

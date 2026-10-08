@@ -159,6 +159,27 @@ const STAT_WEIGHT := {"dmg_pct": 10.0, "cd_pct": 9.0, "speed_pct": 8.0, "hp": 8.
 	"regen": 6.0, "forca": 6.0, "inteligencia": 6.0, "constituicao": 6.0, "dodge": 6.0, "carisma": 5.0, "area_pct": 5.0,
 	"crit_overflow_bonus": 5.0, "crit_overflow_step": 5.0, "hit": 4.0, "xp_pct": 4.0, "gold_pct": 3.0, "pickup": 3.0, "sorte": 4.0}
 
+## Ícone de arma ou item. Sem PNG próprio, usa o de `icon_like` do dado (provisório, ART-042); sem isso, devolve o caminho próprio
+## (inexistente) e a UI cai na letra.
+static func weapon_icon(id: String) -> String:
+	var own := "res://assets/icons/weapons/%s.png" % id
+	if ResourceLoader.exists(own):
+		return own
+	var like := String(Data.table("weapons").get(id, {}).get("icon_like", ""))
+	var alt := "res://assets/icons/weapons/%s.png" % like
+	return alt if like != "" and ResourceLoader.exists(alt) else own
+
+static func item_icon(id: String) -> String:
+	var own := "res://assets/icons/items/%s.png" % id
+	if ResourceLoader.exists(own):
+		return own
+	for u in Data.table("items").get("uniques", []):
+		if String(u.get("id", "")) == id:
+			var like := String(u.get("icon_like", ""))
+			var alt := "res://assets/icons/items/%s.png" % like
+			return alt if like != "" and ResourceLoader.exists(alt) else own
+	return own
+
 static func mod_label(k: String) -> String:
 	return String(MOD_LABELS.get(k, k))
 

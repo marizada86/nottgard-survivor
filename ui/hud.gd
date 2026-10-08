@@ -534,15 +534,15 @@ func show_offer(b: Battle) -> void:
 			btn.custom_minimum_size = Vector2(620, 62)
 		var icon_path := ""
 		match String(o.t):
-			"item_swap": icon_path = "res://assets/icons/items/%s.png" % String(o.keep.get("base", o.keep.get("id", "")))
-			"weapon_new", "weapon_up": icon_path = "res://assets/icons/weapons/%s.png" % String(o.id)
-			"evolve": icon_path = "res://assets/icons/weapons/%s.png" % String(o.into)
+			"item_swap": icon_path = Items.item_icon(String(o.keep.get("base", o.keep.get("id", ""))))
+			"weapon_new", "weapon_up": icon_path = Items.weapon_icon(String(o.id))
+			"evolve": icon_path = Items.weapon_icon(String(o.into))
 			"passive": icon_path = "res://assets/icons/passives/%s.png" % String(o.id)
 			"boon": icon_path = BoonKinds.icon_path_for_id(String(o.id))
 			"heal": icon_path = "res://assets/pickups/health_potion.png"
 			"gold": icon_path = "res://assets/pickups/gold_coin.png"
-			"shop_item": icon_path = "res://assets/icons/items/%s.png" % String(o.item.get("base", o.item.get("id", "")))
-			"shop_weapon_up": icon_path = "res://assets/icons/weapons/%s.png" % String(o.weapon_id)
+			"shop_item": icon_path = Items.item_icon(String(o.item.get("base", o.item.get("id", ""))))
+			"shop_weapon_up": icon_path = Items.weapon_icon(String(o.weapon_id))
 			"shop_heal": icon_path = "res://assets/pickups/health_potion.png"
 			"shop_item_up": icon_path = "res://assets/icons/items/%s.png" % String(o.base)
 		var icon_tex: Texture2D = load(icon_path) if ResourceLoader.exists(icon_path) else null
@@ -705,7 +705,7 @@ func show_evolution(b: Battle) -> void:
 			icons.add_child(arrow)
 			continue
 		var icon := TextureRect.new()
-		var path := "res://assets/icons/weapons/%s.png" % String(pair[0])
+		var path := Items.weapon_icon(String(pair[0]))
 		icon.texture = load(path) if ResourceLoader.exists(path) else null
 		icon.custom_minimum_size = Vector2(float(pair[1]), float(pair[1]))
 		icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
