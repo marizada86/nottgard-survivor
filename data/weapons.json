@@ -73,5 +73,9 @@
     "evolve": {"passive": "foco_arcano", "into": "tormenta_de_fogo"}},
   "tormenta_de_fogo": {"name": "Tormenta de Fogo", "src": "Evolução", "kind": "nova", "dtype": "fogo", "attr": "inteligencia", "dice": "5d8", "cd": 4.0, "radius": 5.0, "levels": [], "desc": "O céu queima."},
   "lamina_de_sombra": {"name": "Lâmina de Sombra", "src": "Carta: Lâmina de Sombra", "kind": "bolt", "dtype": "magico", "attr": "inteligencia", "dice": "1d8", "cd": 1.8, "range": 9, "speed": 11, "pierce": 1, "count": 1, "ignore_def": 1,
-    "desc": "Lâmina de sombra que ignora parte da defesa mágica do alvo.", "levels": [{"dice": "1d10"}, {"pierce": 1}, {"cd": -0.2}, {"count": 1, "ignore_def": 1}]}
+    "desc": "Lâmina de sombra que ignora parte da defesa mágica do alvo.", "levels": [{"dice": "1d10"}, {"pierce": 1}, {"cd": -0.2}, {"count": 1, "ignore_def": 1}]},
+  "romper_armadura":  {"name": "Romper Armadura", "src": "Carta: Romper Armadura", "kind": "melee", "dtype": "fisico", "attr": "forca", "dice": "1d6", "cd": 1.5, "range": 1.8, "cone": 55, "weaken": 1,
+    "desc": "Golpe que quebra a guarda: reduz CA e CAM do alvo.", "levels": [{"dice": "1d8"}, {"weaken": 1}, {"cd": -0.2}, {"dice": "2d6", "dmg": 2}],
+    "evolve": {"passive": "cota_de_malha", "into": "esmagar_defesas"}},
+  "esmagar_defesas":  {"name": "Esmagar Defesas", "src": "Evolução", "kind": "melee", "dtype": "fisico", "attr": "forca", "dice": "3d8", "cd": 1.1, "range": 2.4, "cone": 90, "weaken": 3, "levels": [], "desc": "Rasga a guarda de qualquer um."}
 }

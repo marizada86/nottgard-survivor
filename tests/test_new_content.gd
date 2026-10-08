@@ -59,6 +59,7 @@ func run() -> Array:
 	var out: Array = []
 	_fireball(out)
 	_shadow_blade(out)
+	_armor_break(out)
 	return out
 
 # ---------------------------------------------------------------- W1 Bola de Fogo (SPEC-150)
@@ -127,3 +128,40 @@ func _shadow_blade(out: Array) -> void:
 		out.append("ignore_def deveria aumentar os acertos contra CAM alta (sem: %d, com: %d de 500)" % [hits[0], hits[6]])
 	if not _offered("lamina_de_sombra"):
 		out.append("Lâmina de Sombra deveria aparecer nas ofertas NOVA")
+
+# ---------------------------------------------------------------- W3 Romper Armadura (SPEC-150)
+func _armor_break(out: Array) -> void:
+	var d := _valid_weapon(out, "romper_armadura", "melee", "fisico", false, 4)
+	if d.is_empty():
+		return
+	if not d.has("evolve") or String(d.evolve.passive) != "cota_de_malha" or String(d.evolve.into) != "esmagar_defesas":
+		out.append("Romper Armadura deveria evoluir com Cota de Malha em Esmagar Defesas")
+	var evo := _valid_weapon(out, "esmagar_defesas", "melee", "fisico", false, 0)
+	if not evo.is_empty() and (String(evo.get("src", "")) != "Evolução" or int(evo.get("weaken", 0)) != 3):
+		out.append("Esmagar Defesas deveria ser evolução com enfraquece 3")
+	var b := _bat(11)
+	var foe := _foe(b, b.hero.pos + Vector2(1.0, 0.0))
+	foe.ca = 14
+	foe.cam = 12
+	b._apply_effects(foe, Weapon.make("romper_armadura").params())
+	if foe.ca != 13 or foe.cam != 11:
+		out.append("Romper Armadura Nv 1 deveria tirar 1 de CA e de CAM (CA %d, CAM %d)" % [foe.ca, foe.cam])
+	b._apply_effects(foe, Weapon.make("romper_armadura", 3).params())
+	if foe.ca != 11 or foe.cam != 9:
+		out.append("Romper Armadura Nv 3 deveria tirar 2 (CA %d, CAM %d)" % [foe.ca, foe.cam])
+	var shot := _bat(12)
+	var w := Weapon.make("romper_armadura")
+	shot.hero.weapons.append(w)
+	var near := _foe(shot, shot.hero.pos + Vector2(1.2, 0.0))
+	near.max_hp = 1.0e6
+	near.hp = 1.0e6
+	var fired := false
+	for i in 40:
+		if shot._fire_melee(w.params(), 1.0):
+			fired = true
+	if not fired:
+		out.append("Romper Armadura deveria golpear um alvo no cone")
+	if near.ca >= 12 and near.hp >= near.max_hp:
+		out.append("Romper Armadura deveria ferir ou enfraquecer o alvo em 40 golpes")
+	if not _offered("romper_armadura"):
+		out.append("Romper Armadura deveria aparecer nas ofertas NOVA")
