@@ -32,7 +32,7 @@ Pedido do dono (2026-10-08): "atena, vamos fazer um plano para trabalhar para la
 | Tipo | Major (0.4.0), com PDF, guia fácil e questionário 007 |
 | Escopo | **Consolidar + conteúdo novo** |
 | MEC-039 | **Fatia piloto:** Ecos, pontos de interesse, aba de Ecos no Diário e 1 relíquia em 3 fases (Shedaklah, Molor, Durao), com mapa 84×84 só nelas |
-| MEC-041 + MEC-042 | NPC de upgrade de magia (o ferreiro deixa de melhorar magias) + **3 armas/magias novas** + **6 equipamentos** |
+| MEC-041 + MEC-042 | NPC de upgrade de magia (o ferreiro deixa de melhorar magias) + **3 armas/magias novas** + **6 equipamentos**. **Emenda 2026-10-08 (portão de conteúdo, `IN_PLAN`):** aprovado como recomendado, evolução só para a Bola de Fogo e o Romper Armadura, e **7 equipamentos**: o Coração da Dominância entra por pedido do Manzi, via dono |
 | Arte pendente | **Não trava** o lançamento: sai provisória e marcada; arte aprovada até o fechamento entra |
 | Aprovação | **Por plano** (uma aprovação para o escopo). Commit, push, exportação e publicação seguem exigindo aprovação explícita (`add.yaml`) |
 | Rota | Planejar agora; PLAN-071 preservado e retomado em B-006/S-011 depois |

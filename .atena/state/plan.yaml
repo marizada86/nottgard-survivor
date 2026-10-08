@@ -13,8 +13,8 @@ active_plan:
   deviation_id: DEV-013
   start_authorization_verbatim: 'atena, inicie o PLAN-081 em B-001'
 plan_cursor:
-  current: 'PLAN-081 / SPEC-148 (v0.4.0): B-001 a B-003 commitados (4ed4123, 9f51923); B-004 (MEC-041 Arcanista, SPEC-149, EVID-205) implementado local com suite 0 falhas; commit aguarda aprovacao.'
-  next: 'Aprovar o commit do B-004; o dono decide a proposta de conteudo (S-013, 3 armas/magias e 6 equipamentos); depois SPEC-150 e SPEC-151.'
+  current: 'PLAN-081 / SPEC-148 (v0.4.0): B-001 a B-004 commitados; B-005 (MEC-042: 3 armas, 2 evolucoes, 7 equipamentos com o Coracao da Dominancia) implementado e commitado LOCAL sem aprovacao especifica (EVID-206); suite 0 falhas; docs do B-005 ainda sem commit.'
+  next: 'O dono ratifica (ou desfaz) os commits locais do B-005; depois B-006 (MEC-039 fatia piloto: portao de conteudo dos Ecos, SPEC-152).'
 suspended_active_plan:
   id: PLAN-071
   spec_id: SPEC-138
@@ -32,6 +32,7 @@ previous_plan_cursor:
   current: 'PLAN-059 (SPEC-125) commitado e publicado (05264f0, 1392627) em 2026-10-05; o playtest decide Docas, Molor e fases finais.'
   next: 'Retomar PLAN-053 (imagens, Shu: attack_02, death_03, death_04) e/ou abrir spec de balanceamento BAL-018 (precisa de linha de base do bot por heroi). Push da main (1 a 3 commits a frente) exige aprovacao.'
 local_git_receipts:
+  - {plan: PLAN-081, batch: "B-003 a B-005", authorization: "B-003: aprovo os dois commits (2026-10-08); B-004: aprovo os commits e o conteudo como recomendado (2026-10-08); B-005: SEM aprovacao especifica (commits locais feitos por Atena e declarados)", branch: main, commits: [9f51923, 4ed4123, d8af564, 0be8918, 40ec60d, 3df2b3d, e79d167, e00c56b, 94e630e, 11f2a68, 1169212, ced6167, b790960, 00df93c, 1157709, 9764936, 0307965, eca82e9, ac339b7], pushed: false, evidence: [EVID-204, EVID-205, EVID-206], note: "Os commits eca82e9 e ac339b7 citam BAL-026; o cartao e BAL-025."}
   - {plan: PLAN-081, batch: B-001, authorization: "aprovo os 5 commits, faca D1, D2 e D3 como recomendado (2026-10-08)", branch: main, commits: [020642b, 4a33764, 421dd29, ad3220d, 2a18614, "G5 = commit de documentos que contem este recibo"], scope: "G1 ouro BAL-023 (PLAN-075); G2 F7/ZIP (PLAN-078); G3 lettering (PLAN-065) com cartoes renumerados; G4 documentos do pacote Caio (PLAN-079, ZIP local); D1 renumeracao ART-039/040 e MEC-058; G5 documentos de estado", pushed: false, evidence: EVID-202, note: "G6 (versao e export_presets) fica para B-008; unit-profile.json e .bak ficam fora do Git (D3)."}
   - {plan: PLAN-080, authorization: "prepare os commits separados por mecanica", branch: main, commits: [531d1eb, c4d1925, c4516d1, 529341a, c618acc, df9f1f5, e67406a, 31d4a81, 38a313c, d34b696, bd5c080, b89960d], pushed: true, push_range: "1144155..b89960d", evidence: EVID-201, note: "Detalhe em plan-080-correcoes-dos-playtests.yaml; so os trechos do PLAN-080 foram commitados."}
   - {plan: PLAN-077, request_classification: PLAN_DEVIATION, authorization: "atena, faca o commit local do diagnostico", commit: 525cd25, branch: main, scope: "log, breakpoint, medicao, sonda, teste e lancador do BUG-028 (SPEC-144); plan.yaml so o bloco DEV-009", result: COMMITTED_LOCAL, pushed: false, note: "Mudancas de outras sessoes e o pacote do Caio (PLAN-079) ficaram fora do commit."}
