@@ -10,7 +10,7 @@
 [node name="Ground" type="Node2D" parent="." unique_id=1016906222]
 z_index = -100
 script = ExtResource("1_y2hap")
-map_size = Vector2i(60, 60)
+map_size = Vector2i(84, 84)
 color_a = Color(0.14117648, 0.13333334, 0.15686275, 1)
 color_b = Color(0.18039216, 0.15686275, 0.1882353, 1)
 terrain_layout_id = "shedaklah"
@@ -19,310 +19,310 @@ use_modular_atlas = true
 atlas_columns = 2
 atlas_variants = 4
 terrain_texture_path = "res://assets/tiles/shedaklah_ground_atlas_v1.png"
-baked_texture_path = "res://assets/tiles/shedaklah_ground_baked_v1.png"
+baked_texture_path = "res://assets/tiles/shedaklah_ground_baked_v2.png"
 
 [node name="Sorted" type="Node2D" parent="." unique_id=378418535]
 y_sort_enabled = true
 
 [node name="Hero" parent="Sorted" unique_id=629349748 instance=ExtResource("2_a3pe8")]
-position = Vector2(0, 960)
+position = Vector2(0, 1344)
 
 [node name="Prop1" parent="Sorted" unique_id=71309628 instance=ExtResource("3_3nth8")]
-position = Vector2(-720, 936)
+position = Vector2(-1008, 1310.4)
 kind = "cogumelo"
 height = 49.69575643539429
 half_width = 18.19339
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop2" parent="Sorted" unique_id=1412033284 instance=ExtResource("3_3nth8")]
-position = Vector2(-144, 696)
+position = Vector2(-201.6, 974.4)
 kind = "cogumelo"
 height = 54.358983755111694
 half_width = 18.01687
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop3" parent="Sorted" unique_id=280625260 instance=ExtResource("3_3nth8")]
-position = Vector2(0, 1680)
+position = Vector2(0, 2352)
 kind = "cogumelo"
 height = 43.84714984893799
 half_width = 24.156181
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop4" parent="Sorted" unique_id=1941080090 instance=ExtResource("3_3nth8")]
-position = Vector2(432, 648)
+position = Vector2(604.8, 907.2)
 kind = "cogumelo"
 height = 44.2154905796051
 half_width = 18.985367
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop5" parent="Sorted" unique_id=1191316415 instance=ExtResource("3_3nth8")]
-position = Vector2(432, 1368)
+position = Vector2(604.8, 1915.2)
 kind = "cogumelo"
 height = 36.97096359729767
 half_width = 16.384735
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop6" parent="Sorted" unique_id=577974457 instance=ExtResource("3_3nth8")]
-position = Vector2(192, 240)
+position = Vector2(268.8, 336)
 kind = "cogumelo"
 height = 42.16295516490936
 half_width = 22.205137
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop7" parent="Sorted" unique_id=659925237 instance=ExtResource("3_3nth8")]
-position = Vector2(-1248, 1104)
+position = Vector2(-1747.2, 1545.6)
 kind = "cogumelo"
 height = 42.39640414714813
 half_width = 21.44054
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop8" parent="Sorted" unique_id=78580647 instance=ExtResource("3_3nth8")]
-position = Vector2(1248, 864)
+position = Vector2(1747.2, 1209.6)
 kind = "cogumelo"
 height = 47.7649986743927
 half_width = 22.078606
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop9" parent="Sorted" unique_id=1990541766 instance=ExtResource("3_3nth8")]
-position = Vector2(192, 1104)
+position = Vector2(268.8, 1545.6)
 kind = "cogumelo"
 height = 38.54989731311798
 half_width = 21.231333
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop10" parent="Sorted" unique_id=1773767858 instance=ExtResource("3_3nth8")]
-position = Vector2(960, 1248)
+position = Vector2(1344, 1747.2)
 kind = "cogumelo"
 height = 52.512816429138184
 half_width = 20.632092
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop11" parent="Sorted" unique_id=961586627 instance=ExtResource("3_3nth8")]
-position = Vector2(672, 768)
+position = Vector2(940.8, 1075.2)
 kind = "cogumelo"
 height = 45.33498406410217
 half_width = 18.763058
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop12" parent="Sorted" unique_id=460045692 instance=ExtResource("3_3nth8")]
-position = Vector2(-480, 384)
+position = Vector2(-672, 537.6)
 kind = "cogumelo"
 height = 46.279977560043335
 half_width = 21.918175
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop13" parent="Sorted" unique_id=1331049764 instance=ExtResource("3_3nth8")]
-position = Vector2(864, 1104)
+position = Vector2(1209.6, 1545.6)
 kind = "cogumelo"
 height = 48.338833
 half_width = 21.024376
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop14" parent="Sorted" unique_id=2146475176 instance=ExtResource("3_3nth8")]
-position = Vector2(480, 528)
+position = Vector2(672, 739.2)
 kind = "cogumelo"
 height = 42.27370250225067
 half_width = 21.100248
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop15" parent="Sorted" unique_id=2092841652 instance=ExtResource("3_3nth8")]
-position = Vector2(768, 1008)
+position = Vector2(1075.2, 1411.2)
 kind = "cogumelo"
 height = 55.96166157722473
 half_width = 22.259052
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop16" parent="Sorted" unique_id=547152093 instance=ExtResource("3_3nth8")]
-position = Vector2(-528, 1368)
+position = Vector2(-739.2, 1915.2)
 kind = "cogumelo"
 height = 57.041985511779785
 half_width = 22.79286
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop17" parent="Sorted" unique_id=1868384031 instance=ExtResource("3_3nth8")]
-position = Vector2(1440, 816)
+position = Vector2(2016, 1142.4)
 kind = "cogumelo"
 height = 49.36292219161987
 half_width = 19.097412
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop18" parent="Sorted" unique_id=1961209834 instance=ExtResource("3_3nth8")]
-position = Vector2(-1536, 864)
+position = Vector2(-2150.4, 1209.6)
 kind = "cogumelo"
 height = 45.02758836746216
 half_width = 18.743422
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop19" parent="Sorted" unique_id=991999833 instance=ExtResource("3_3nth8")]
-position = Vector2(-336, 1368)
+position = Vector2(-470.4, 1915.2)
 kind = "cogumelo"
 height = 43.7205274105072
 half_width = 18.777115
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop20" parent="Sorted" unique_id=1853230693 instance=ExtResource("3_3nth8")]
-position = Vector2(-1104, 936)
+position = Vector2(-1545.6, 1310.4)
 kind = "cogumelo"
 height = 48.99901223182678
 half_width = 23.322485
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop21" parent="Sorted" unique_id=1633617310 instance=ExtResource("3_3nth8")]
-position = Vector2(-720, 1176)
+position = Vector2(-1008, 1646.4)
 kind = "cogumelo"
 height = 45.965521693229675
 half_width = 18.492119
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop22" parent="Sorted" unique_id=422878086 instance=ExtResource("3_3nth8")]
-position = Vector2(-720, 1368)
+position = Vector2(-1008, 1915.2)
 kind = "cogumelo"
 height = 43.749404191970825
 half_width = 25.392557
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop23" parent="Sorted" unique_id=358261952 instance=ExtResource("3_3nth8")]
-position = Vector2(864, 768)
+position = Vector2(1209.6, 1075.2)
 kind = "cogumelo"
 height = 47.565855264663696
 half_width = 20.14679
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop24" parent="Sorted" unique_id=7087487 instance=ExtResource("3_3nth8")]
-position = Vector2(-192, 192)
+position = Vector2(-268.8, 268.8)
 kind = "cogumelo"
 height = 48.82864689826965
 half_width = 17.482485
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop25" parent="Sorted" unique_id=543190756 instance=ExtResource("3_3nth8")]
-position = Vector2(1488, 1032)
+position = Vector2(2083.2, 1444.8)
 kind = "cogumelo"
 height = 41.120904207229614
 half_width = 21.578302
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop26" parent="Sorted" unique_id=1462968616 instance=ExtResource("3_3nth8")]
-position = Vector2(288, 768)
+position = Vector2(403.2, 1075.2)
 kind = "cogumelo"
 height = 51.44182014465332
 half_width = 19.271389
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop27" parent="Sorted" unique_id=2021579811 instance=ExtResource("3_3nth8")]
-position = Vector2(432, 840)
+position = Vector2(604.8, 1176)
 kind = "cogumelo"
 height = 42.563177704811096
 half_width = 18.847837
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop28" parent="Sorted" unique_id=1775850794 instance=ExtResource("3_3nth8")]
-position = Vector2(-384, 576)
+position = Vector2(-537.6, 806.4)
 kind = "cogumelo"
 height = 50.91259527206421
 half_width = 24.537338
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop29" parent="Sorted" unique_id=678152901 instance=ExtResource("3_3nth8")]
-position = Vector2(-1632, 960)
+position = Vector2(-2284.8, 1344)
 kind = "cogumelo"
 height = 40.63190174102783
 half_width = 22.802006
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop30" parent="Sorted" unique_id=2102998691 instance=ExtResource("3_3nth8")]
-position = Vector2(-912, 1224)
+position = Vector2(-1276.8, 1713.6)
 kind = "cogumelo"
 height = 54.6033616065979
 half_width = 19.947561
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop31" parent="Sorted" unique_id=1020508363 instance=ExtResource("3_3nth8")]
-position = Vector2(1248, 1104)
+position = Vector2(1747.2, 1545.6)
 kind = "cogumelo"
 height = 43.09405314922333
 half_width = 24.420826
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop32" parent="Sorted" unique_id=1924128075 instance=ExtResource("3_3nth8")]
-position = Vector2(0, 624)
+position = Vector2(0, 873.6)
 kind = "cogumelo"
 height = 45.35480189323425
 half_width = 16.59812
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop33" parent="Sorted" unique_id=1025859527 instance=ExtResource("3_3nth8")]
-position = Vector2(-192, 336)
+position = Vector2(-268.8, 470.4)
 kind = "cogumelo"
 height = 43.12378811836243
 half_width = 25.636513
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop34" parent="Sorted" unique_id=1679806049 instance=ExtResource("3_3nth8")]
-position = Vector2(1584, 888)
+position = Vector2(2217.6, 1243.2)
 kind = "cogumelo"
 height = 40.0382
 half_width = 21.908014
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop35" parent="Sorted" unique_id=935613123 instance=ExtResource("3_3nth8")]
-position = Vector2(-816, 744)
+position = Vector2(-1142.4, 1041.6)
 kind = "cogumelo"
 height = 49.41627240180969
 half_width = 17.883038
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop36" parent="Sorted" unique_id=412787761 instance=ExtResource("3_3nth8")]
-position = Vector2(-384, 1584)
+position = Vector2(-537.6, 2217.6)
 kind = "cogumelo"
 height = 53.91879105567932
 half_width = 23.423481
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop37" parent="Sorted" unique_id=99590887 instance=ExtResource("3_3nth8")]
-position = Vector2(-816, 648)
+position = Vector2(-1142.4, 907.2)
 kind = "cogumelo"
 height = 50.864229679107666
 half_width = 16.846718
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop38" parent="Sorted" unique_id=1956014198 instance=ExtResource("3_3nth8")]
-position = Vector2(672, 432)
+position = Vector2(940.8, 604.8)
 kind = "cogumelo"
 height = 50.4026563167572
 half_width = 23.4787
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop39" parent="Sorted" unique_id=850227408 instance=ExtResource("3_3nth8")]
-position = Vector2(-192, 1104)
+position = Vector2(-268.8, 1545.6)
 kind = "cogumelo"
 height = 40.00410318374634
 half_width = 19.034279
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop40" parent="Sorted" unique_id=1152012481 instance=ExtResource("3_3nth8")]
-position = Vector2(672, 1392)
+position = Vector2(940.8, 1948.8)
 kind = "cogumelo"
 height = 47.862387895584106
 half_width = 25.92108
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="EsporoCluster" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-1056, 744)
+position = Vector2(-1478.4, 1041.6)
 kind = "esporo_01"
 height = 82.0
 half_width = 25.0
 block_radius = 0.0
 
 [node name="EsporoTrio" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-27.3, 1126.4)
+position = Vector2(-38.2, 1577)
 kind = "esporo_02"
 height = 70.0
 half_width = 28.0
 block_radius = 0.0
 
 [node name="LodoFungico" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-132.2, 1673.1)
+position = Vector2(-185.1, 2342.3)
 kind = "lodo_01"
 height = 44.0
 half_width = 46.0
@@ -331,543 +331,1572 @@ block_radius = 0.0
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=1723495585]
 
 [node name="Spawn1" parent="SpawnPoints" unique_id=1837662586 instance=ExtResource("4_xu3x4")]
-position = Vector2(432, 1176)
+position = Vector2(604.8, 1646.4)
 enemy_id = "servo_de_zuggtmoy"
 count = 2
 
 [node name="Spawn2" parent="SpawnPoints" unique_id=1131140656 instance=ExtResource("4_xu3x4")]
-position = Vector2(-720, 888)
+position = Vector2(-1008, 1243.2)
 enemy_id = "cogumelo_fungico"
 count = 2
 
 [node name="Spawn3" parent="SpawnPoints" unique_id=766514874 instance=ExtResource("4_xu3x4")]
-position = Vector2(528, 696)
+position = Vector2(739.2, 974.4)
 enemy_id = "esporo_voador"
 
 [node name="Spawn4" parent="SpawnPoints" unique_id=661575089 instance=ExtResource("4_xu3x4")]
-position = Vector2(-96, 1344)
+position = Vector2(-134.4, 1881.6)
 enemy_id = "slime_de_juiblex"
 
 [node name="Prop1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-643.6, 1103.9)
+position = Vector2(-901, 1545.5)
 kind = "cogumelo"
 height = 49.69575643539429
 half_width = 18.19339
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop1_c2" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-284.3, 842.1)
+position = Vector2(-398, 1178.9)
 kind = "cogumelo"
 height = 49.69575643539429
 half_width = 18.19339
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop2_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-235.5, 484.5)
+position = Vector2(-329.7, 678.3)
 kind = "cogumelo"
 height = 54.358983755111694
 half_width = 18.01687
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop3_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-195.6, 1547.8)
+position = Vector2(-273.8, 2166.9)
 kind = "cogumelo"
 height = 43.84714984893799
 half_width = 24.156181
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop4_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-7.5, 689.6)
+position = Vector2(-10.5, 965.4)
 kind = "cogumelo"
 height = 44.2154905796051
 half_width = 18.985367
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop5_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(628.1, 1090.8)
+position = Vector2(879.3, 1527.1)
 kind = "cogumelo"
 height = 36.97096359729767
 half_width = 16.384735
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop5_c2" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(806.5, 1170.9)
+position = Vector2(1129.1, 1639.3)
 kind = "cogumelo"
 height = 36.97096359729767
 half_width = 16.384735
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop6_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(187.1, 539)
+position = Vector2(261.9, 754.6)
 kind = "cogumelo"
 height = 42.16295516490936
 half_width = 22.205137
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop7_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-810.1, 1080.5)
+position = Vector2(-1134.1, 1512.7)
 kind = "cogumelo"
 height = 42.39640414714813
 half_width = 21.44054
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop8_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(1042.6, 1101.3)
+position = Vector2(1459.6, 1541.8)
 kind = "cogumelo"
 height = 47.7649986743927
 half_width = 22.078606
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop9_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(612.7, 1176.6)
+position = Vector2(857.8, 1647.2)
 kind = "cogumelo"
 height = 38.54989731311798
 half_width = 21.231333
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop9_c2" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-51, 1234)
+position = Vector2(-71.4, 1727.6)
 kind = "cogumelo"
 height = 38.54989731311798
 half_width = 21.231333
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop10_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(407.6, 1136)
+position = Vector2(570.6, 1590.4)
 kind = "cogumelo"
 height = 52.512816429138184
 half_width = 20.632092
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop11_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(860.3, 879.5)
+position = Vector2(1204.4, 1231.3)
 kind = "cogumelo"
 height = 45.33498406410217
 half_width = 18.763058
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop12_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-361.6, 510)
+position = Vector2(-506.2, 714)
 kind = "cogumelo"
 height = 46.279977560043335
 half_width = 21.918175
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop13_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(609, 987.7)
+position = Vector2(852.6, 1382.8)
 kind = "cogumelo"
 height = 48.338833
 half_width = 21.024376
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop13_c2" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(305, 438.8)
+position = Vector2(427, 614.3)
 kind = "cogumelo"
 height = 48.338833
 half_width = 21.024376
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop14_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(531.1, 813.6)
+position = Vector2(743.5, 1139)
 kind = "cogumelo"
 height = 42.27370250225067
 half_width = 21.100248
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop15_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(451, 1048.1)
+position = Vector2(631.4, 1467.3)
 kind = "cogumelo"
 height = 55.96166157722473
 half_width = 22.259052
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop16_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-306.2, 1151)
+position = Vector2(-428.7, 1611.4)
 kind = "cogumelo"
 height = 57.041985511779785
 half_width = 22.79286
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop17_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(1193.6, 919)
+position = Vector2(1671, 1286.6)
 kind = "cogumelo"
 height = 49.36292219161987
 half_width = 19.097412
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop17_c2" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(1011.5, 967.2)
+position = Vector2(1416.1, 1354.1)
 kind = "cogumelo"
 height = 49.36292219161987
 half_width = 19.097412
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop18_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-1250.1, 944.9)
+position = Vector2(-1750.1, 1322.9)
 kind = "cogumelo"
 height = 45.02758836746216
 half_width = 18.743422
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop19_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(81.1, 1301.3)
+position = Vector2(113.5, 1821.8)
 kind = "cogumelo"
 height = 43.7205274105072
 half_width = 18.777115
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop20_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-1175.5, 1248.9)
+position = Vector2(-1645.7, 1748.5)
 kind = "cogumelo"
 height = 48.99901223182678
 half_width = 23.322485
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop21_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-440.2, 1057.6)
+position = Vector2(-616.3, 1480.6)
 kind = "cogumelo"
 height = 45.965521693229675
 half_width = 18.492119
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop21_c2" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-233.8, 1254.3)
+position = Vector2(-327.3, 1756)
 kind = "cogumelo"
 height = 45.965521693229675
 half_width = 18.492119
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop22_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-326.8, 1502.1)
+position = Vector2(-457.5, 2102.9)
 kind = "cogumelo"
 height = 43.749404191970825
 half_width = 25.392557
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop23_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(366.9, 921.8)
+position = Vector2(513.7, 1290.5)
 kind = "cogumelo"
 height = 47.565855264663696
 half_width = 20.14679
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop24_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-401.5, 299.4)
+position = Vector2(-562.1, 419.2)
 kind = "cogumelo"
 height = 48.82864689826965
 half_width = 17.482485
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop25_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(1125.4, 823.7)
+position = Vector2(1575.6, 1153.2)
 kind = "cogumelo"
 height = 41.120904207229614
 half_width = 21.578302
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop25_c2" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(1176.4, 1013.5)
+position = Vector2(1647, 1418.9)
 kind = "cogumelo"
 height = 41.120904207229614
 half_width = 21.578302
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop26_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-91.2, 835.1)
+position = Vector2(-127.7, 1169.1)
 kind = "cogumelo"
 height = 51.44182014465332
 half_width = 19.271389
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop27_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(264.8, 1042.5)
+position = Vector2(370.7, 1459.5)
 kind = "cogumelo"
 height = 42.563177704811096
 half_width = 18.847837
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop28_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-671.1, 756.6)
+position = Vector2(-939.5, 1059.2)
 kind = "cogumelo"
 height = 50.91259527206421
 half_width = 24.537338
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop29_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-1063.6, 1087.2)
+position = Vector2(-1489, 1522.1)
 kind = "cogumelo"
 height = 40.63190174102783
 half_width = 22.802006
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop29_c2" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-1021.2, 881.4)
+position = Vector2(-1429.7, 1234)
 kind = "cogumelo"
 height = 40.63190174102783
 half_width = 22.802006
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop30_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-869.7, 1398.5)
+position = Vector2(-1217.6, 1957.9)
 kind = "cogumelo"
 height = 54.6033616065979
 half_width = 19.947561
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop31_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(1350.3, 945.8)
+position = Vector2(1890.4, 1324.1)
 kind = "cogumelo"
 height = 43.09405314922333
 half_width = 24.420826
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop32_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(306, 848.8)
+position = Vector2(428.4, 1188.3)
 kind = "cogumelo"
 height = 45.35480189323425
 half_width = 16.59812
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop33_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(131.5, 336)
+position = Vector2(184.1, 470.4)
 kind = "cogumelo"
 height = 43.12378811836243
 half_width = 25.636513
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop33_c2" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-518.2, 568.7)
+position = Vector2(-725.5, 796.2)
 kind = "cogumelo"
 height = 43.12378811836243
 half_width = 25.636513
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop34_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(1308.1, 808.9)
+position = Vector2(1831.3, 1132.5)
 kind = "cogumelo"
 height = 40.0382
 half_width = 21.908014
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop35_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-449.9, 779.4)
+position = Vector2(-629.9, 1091.2)
 kind = "cogumelo"
 height = 49.41627240180969
 half_width = 17.883038
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop36_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-590.6, 1492.5)
+position = Vector2(-826.8, 2089.5)
 kind = "cogumelo"
 height = 53.91879105567932
 half_width = 23.423481
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop37_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-242.4, 659.7)
+position = Vector2(-339.4, 923.6)
 kind = "cogumelo"
 height = 50.864229679107666
 half_width = 16.846718
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop37_c2" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-324.8, 775.5)
+position = Vector2(-454.7, 1085.7)
 kind = "cogumelo"
 height = 50.864229679107666
 half_width = 16.846718
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop38_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(315.6, 274.9)
+position = Vector2(441.8, 384.9)
 kind = "cogumelo"
 height = 50.4026563167572
 half_width = 23.4787
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop39_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-442.4, 1280.2)
+position = Vector2(-619.4, 1792.3)
 kind = "cogumelo"
 height = 40.00410318374634
 half_width = 19.034279
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop40_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(1090.2, 1254.8)
+position = Vector2(1526.3, 1756.7)
 kind = "cogumelo"
 height = 47.862387895584106
 half_width = 25.92108
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="EsporoCluster_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-565.5, 756.5)
+position = Vector2(-791.7, 1059.1)
 kind = "esporo_01"
 height = 82.0
 half_width = 25.0
 block_radius = 0.0
 
 [node name="EsporoCluster_c2" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-654, 543)
+position = Vector2(-915.6, 760.2)
 kind = "esporo_01"
 height = 82.0
 half_width = 25.0
 block_radius = 0.0
 
 [node name="EsporoTrio_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(981.9, 672.7)
+position = Vector2(1374.7, 941.8)
 kind = "esporo_02"
 height = 70.0
 half_width = 28.0
 block_radius = 0.0
 
 [node name="LodoFungico_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(514.3, 1410.4)
+position = Vector2(720, 1974.6)
 kind = "lodo_01"
 height = 44.0
 half_width = 46.0
 block_radius = 0.0
 
 [node name="Prop11_c1_f1" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-52.7, 131.8)
+position = Vector2(-73.8, 184.5)
 kind = "cogumelo"
 height = 45.33498406410217
 half_width = 18.763058
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop10_c1_f2" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(86.1, 264.5)
+position = Vector2(120.5, 370.3)
 kind = "cogumelo"
 height = 52.512816429138184
 half_width = 20.632092
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="LodoFungico_c1_f3" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(355.5, 503.9)
+position = Vector2(497.7, 705.5)
 kind = "lodo_01"
 height = 44.0
 half_width = 46.0
 block_radius = 0.0
 
 [node name="Prop25_c2_f4" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(687.9, 533.6)
+position = Vector2(963.1, 747)
 kind = "cogumelo"
 height = 41.120904207229614
 half_width = 21.578302
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop25_c1_f5" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(829.1, 545)
+position = Vector2(1160.7, 763)
 kind = "cogumelo"
 height = 41.120904207229614
 half_width = 21.578302
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop5_c1_f6" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-68.4, 574.6)
+position = Vector2(-95.8, 804.4)
 kind = "cogumelo"
 height = 36.97096359729767
 half_width = 16.384735
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop36_f7" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-632.1, 650.7)
+position = Vector2(-884.9, 911)
 kind = "cogumelo"
 height = 53.91879105567932
 half_width = 23.423481
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop9_c1_f8" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(83.4, 850)
+position = Vector2(116.8, 1190)
 kind = "cogumelo"
 height = 38.54989731311798
 half_width = 21.231333
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop8_c1_f9" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(55, 1075.6)
+position = Vector2(77, 1505.8)
 kind = "cogumelo"
 height = 47.7649986743927
 half_width = 22.078606
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop10_f10" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(581.3, 1363.5)
+position = Vector2(813.8, 1908.9)
 kind = "cogumelo"
 height = 52.512816429138184
 half_width = 20.632092
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop9_f11" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(759.7, 1220.4)
+position = Vector2(1063.6, 1708.6)
 kind = "cogumelo"
 height = 38.54989731311798
 half_width = 21.231333
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop5_c2_f12" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-1072.9, 812.3)
+position = Vector2(-1502.1, 1137.2)
 kind = "cogumelo"
 height = 36.97096359729767
 half_width = 16.384735
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop28_f13" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-625.4, 989.6)
+position = Vector2(-875.6, 1385.4)
 kind = "cogumelo"
 height = 50.91259527206421
 half_width = 24.537338
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop30_c1_f14" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(54.8, 1360.2)
+position = Vector2(76.7, 1904.3)
 kind = "cogumelo"
 height = 54.6033616065979
 half_width = 19.947561
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop29_c2_f15" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(56, 1457.1)
+position = Vector2(78.4, 2039.9)
 kind = "cogumelo"
 height = 40.63190174102783
 half_width = 22.802006
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop24_f16" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(345.9, 1498.4)
+position = Vector2(484.3, 2097.8)
 kind = "cogumelo"
 height = 48.82864689826965
 half_width = 17.482485
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop23_f17" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(193.5, 1585)
+position = Vector2(270.9, 2219)
 kind = "cogumelo"
 height = 47.565855264663696
 half_width = 20.14679
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop27_f18" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-1381.1, 980.1)
+position = Vector2(-1933.5, 1372.1)
 kind = "cogumelo"
 height = 42.563177704811096
 half_width = 18.847837
 color = Color(0.54901963, 0.39215687, 0.50980395, 1)
 
 [node name="Prop5_f19" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-1198, 1169.4)
+position = Vector2(-1677.2, 1637.2)
 kind = "cogumelo"
 height = 36.97096359729767
 half_width = 16.384735
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="Prop1_f20" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(-151.7, 1732.8)
+position = Vector2(-212.4, 2425.9)
 kind = "cogumelo"
 height = 49.69575643539429
 half_width = 18.19339
 color = Color(0.60313725, 0.46509805, 0.5686275, 1)
 
 [node name="LodoFungico_c1_f21" parent="Sorted" instance=ExtResource("3_3nth8")]
-position = Vector2(121.6, 1638.4)
+position = Vector2(170.2, 2293.8)
+kind = "lodo_01"
+height = 44.0
+half_width = 46.0
+block_radius = 0.0
+
+[node name="Prop1_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-931.6, 1478.3)
+kind = "cogumelo"
+height = 49.69575643539429
+half_width = 18.19339
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop1_c2_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-572.3, 1216.5)
+kind = "cogumelo"
+height = 49.69575643539429
+half_width = 18.19339
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop2_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-293.1, 762.9)
+kind = "cogumelo"
+height = 54.358983755111694
+half_width = 18.01687
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop3_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-195.6, 2219.8)
+kind = "cogumelo"
+height = 43.84714984893799
+half_width = 24.156181
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop4_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(165.3, 948.8)
+kind = "cogumelo"
+height = 44.2154905796051
+half_width = 18.985367
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop5_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(574.2, 2064)
+kind = "cogumelo"
+height = 36.97096359729767
+half_width = 16.384735
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop5_c2_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(364.2, 2032.7)
+kind = "cogumelo"
+height = 36.97096359729767
+half_width = 16.384735
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop6_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(263.9, 635)
+kind = "cogumelo"
+height = 42.16295516490936
+half_width = 22.205137
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop7_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-1309.3, 1522.1)
+kind = "cogumelo"
+height = 42.39640414714813
+half_width = 21.44054
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop8_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(1541.8, 1446.9)
+kind = "cogumelo"
+height = 47.7649986743927
+half_width = 22.078606
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop9_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(689.5, 1618.2)
+kind = "cogumelo"
+height = 38.54989731311798
+half_width = 21.231333
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop9_c2_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(25.8, 1675.6)
+kind = "cogumelo"
+height = 38.54989731311798
+half_width = 21.231333
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop10_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(767.1, 1675.8)
+kind = "cogumelo"
+height = 52.512816429138184
+half_width = 20.632092
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop11_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(1129.1, 1186.7)
+kind = "cogumelo"
+height = 45.33498406410217
+half_width = 18.763058
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop12_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-395.6, 384.2)
+kind = "cogumelo"
+height = 46.279977560043335
+half_width = 21.918175
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop13_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(954.6, 1429.3)
+kind = "cogumelo"
+height = 48.338833
+half_width = 21.024376
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop13_c2_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(1483.7, 1829.4)
+kind = "cogumelo"
+height = 48.338833
+half_width = 21.024376
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop14_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(1030.5, 939.2)
+kind = "cogumelo"
+height = 42.27370250225067
+half_width = 21.100248
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop15_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(758.2, 1451.3)
+kind = "cogumelo"
+height = 55.96166157722473
+half_width = 22.259052
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop16_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-987.9, 2128.2)
+kind = "cogumelo"
+height = 57.041985511779785
+half_width = 22.79286
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop17_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(1451, 1116.4)
+kind = "cogumelo"
+height = 49.36292219161987
+half_width = 19.097412
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop17_c2_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(1713.5, 1136.8)
+kind = "cogumelo"
+height = 49.36292219161987
+half_width = 19.097412
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop18_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-1864.5, 1290.5)
+kind = "cogumelo"
+height = 45.02758836746216
+half_width = 18.743422
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop19_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-53.3, 1848.5)
+kind = "cogumelo"
+height = 43.7205274105072
+half_width = 18.777115
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop20_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-1535, 1447)
+kind = "cogumelo"
+height = 48.99901223182678
+half_width = 23.322485
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop21_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-728.2, 1528)
+kind = "cogumelo"
+height = 45.965521693229675
+half_width = 18.492119
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop21_c2_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-535.4, 1854.2)
+kind = "cogumelo"
+height = 45.965521693229675
+half_width = 18.492119
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop22_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-1426.8, 1818.6)
+kind = "cogumelo"
+height = 43.749404191970825
+half_width = 25.392557
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop23_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(1502.7, 937.8)
+kind = "cogumelo"
+height = 47.565855264663696
+half_width = 20.14679
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop24_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-508.4, 369.8)
+kind = "cogumelo"
+height = 48.82864689826965
+half_width = 17.482485
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop25_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(2061.5, 1229.2)
+kind = "cogumelo"
+height = 41.120904207229614
+half_width = 21.578302
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop25_c2_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(1905.4, 1620.6)
+kind = "cogumelo"
+height = 41.120904207229614
+half_width = 21.578302
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop26_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(24, 1142.3)
+kind = "cogumelo"
+height = 51.44182014465332
+half_width = 19.271389
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop27_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(437.6, 1378.5)
+kind = "cogumelo"
+height = 42.563177704811096
+half_width = 18.847837
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop28_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-824.7, 987)
+kind = "cogumelo"
+height = 50.91259527206421
+half_width = 24.537338
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop29_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-1716.4, 1471.2)
+kind = "cogumelo"
+height = 40.63190174102783
+half_width = 22.802006
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop29_c2_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-2016.8, 1601)
+kind = "cogumelo"
+height = 40.63190174102783
+half_width = 22.802006
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop30_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-1210.5, 1576.3)
+kind = "cogumelo"
+height = 54.6033616065979
+half_width = 19.947561
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop31_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(1849.5, 1387.4)
+kind = "cogumelo"
+height = 43.09405314922333
+half_width = 24.420826
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop32_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(306, 1098.4)
+kind = "cogumelo"
+height = 45.35480189323425
+half_width = 16.59812
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop33_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-490.1, 646.5)
+kind = "cogumelo"
+height = 43.12378811836243
+half_width = 25.636513
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop33_c2_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(28.8, 443.6)
+kind = "cogumelo"
+height = 43.12378811836243
+half_width = 25.636513
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop34_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(1741.8, 1378.7)
+kind = "cogumelo"
+height = 40.0382
+half_width = 21.908014
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop35_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-996.8, 803.9)
+kind = "cogumelo"
+height = 49.41627240180969
+half_width = 17.883038
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop36_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-883.7, 1995.6)
+kind = "cogumelo"
+height = 53.91879105567932
+half_width = 23.423481
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop37_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-568.8, 918.9)
+kind = "cogumelo"
+height = 50.864229679107666
+half_width = 16.846718
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop37_c2_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-651.2, 1034.7)
+kind = "cogumelo"
+height = 50.864229679107666
+half_width = 16.846718
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop38_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(584.4, 447.7)
+kind = "cogumelo"
+height = 50.4026563167572
+half_width = 23.4787
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop39_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-156.3, 1251.7)
+kind = "cogumelo"
+height = 40.00410318374634
+half_width = 19.034279
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop40_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(989.9, 1756.4)
+kind = "cogumelo"
+height = 47.862387895584106
+half_width = 25.92108
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="EsporoCluster_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-1216.5, 943.8)
+kind = "esporo_01"
+height = 82.0
+half_width = 25.0
+block_radius = 0.0
+
+[node name="EsporoCluster_c2_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-1076.4, 840.6)
+kind = "esporo_01"
+height = 82.0
+half_width = 25.0
+block_radius = 0.0
+
+[node name="EsporoTrio_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(522.3, 1636.8)
+kind = "esporo_02"
+height = 70.0
+half_width = 28.0
+block_radius = 0.0
+
+[node name="LodoFungico_c1_2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-488.3, 2294.2)
+kind = "lodo_01"
+height = 44.0
+half_width = 46.0
+block_radius = 0.0
+
+[node name="Prop1_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-890.3, 1713.5)
+kind = "cogumelo"
+height = 49.69575643539429
+half_width = 18.19339
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop1_c2_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-224.2, 1445.9)
+kind = "cogumelo"
+height = 49.69575643539429
+half_width = 18.19339
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop1_c2_c2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-731.2, 1165.8)
+kind = "cogumelo"
+height = 49.69575643539429
+half_width = 18.19339
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop2_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(124.5, 657.7)
+kind = "cogumelo"
+height = 54.358983755111694
+half_width = 18.01687
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop3_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-545.2, 2065.7)
+kind = "cogumelo"
+height = 43.84714984893799
+half_width = 24.156181
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop4_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(66.3, 828.5)
+kind = "cogumelo"
+height = 44.2154905796051
+half_width = 18.985367
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop5_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(1070.7, 1274.9)
+kind = "cogumelo"
+height = 36.97096359729767
+half_width = 16.384735
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop5_c1_c2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(503.6, 1472.4)
+kind = "cogumelo"
+height = 36.97096359729767
+half_width = 16.384735
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop5_c2_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(1599, 1493.4)
+kind = "cogumelo"
+height = 36.97096359729767
+half_width = 16.384735
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop6_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-117.4, 695.1)
+kind = "cogumelo"
+height = 42.16295516490936
+half_width = 22.205137
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop7_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-618.8, 1415.9)
+kind = "cogumelo"
+height = 42.39640414714813
+half_width = 21.44054
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop8_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(935.5, 1710.2)
+kind = "cogumelo"
+height = 47.7649986743927
+half_width = 22.078606
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop8_c1_c2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(1309.8, 1244.7)
+kind = "cogumelo"
+height = 47.7649986743927
+half_width = 22.078606
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop9_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(788.2, 1780.9)
+kind = "cogumelo"
+height = 38.54989731311798
+half_width = 21.231333
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop9_c2_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-195, 1947.5)
+kind = "cogumelo"
+height = 38.54989731311798
+half_width = 21.231333
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop10_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(151.5, 1693.7)
+kind = "cogumelo"
+height = 52.512816429138184
+half_width = 20.632092
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop11_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(870.8, 1243.8)
+kind = "cogumelo"
+height = 45.33498406410217
+half_width = 18.763058
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop11_c1_c2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(1315.9, 1391.2)
+kind = "cogumelo"
+height = 45.33498406410217
+half_width = 18.763058
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop12_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-646.7, 466.5)
+kind = "cogumelo"
+height = 46.279977560043335
+half_width = 21.918175
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop13_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(311.4, 1387.2)
+kind = "cogumelo"
+height = 48.338833
+half_width = 21.024376
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop13_c2_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(284.4, 420.9)
+kind = "cogumelo"
+height = 48.338833
+half_width = 21.024376
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop14_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(561.4, 1004.9)
+kind = "cogumelo"
+height = 42.27370250225067
+half_width = 21.100248
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop14_c1_c2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(804.7, 873)
+kind = "cogumelo"
+height = 42.27370250225067
+half_width = 21.100248
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop15_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(1010.4, 1370)
+kind = "cogumelo"
+height = 55.96166157722473
+half_width = 22.259052
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop16_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-352.6, 1361.2)
+kind = "cogumelo"
+height = 57.041985511779785
+half_width = 22.79286
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop17_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(1934.2, 1246)
+kind = "cogumelo"
+height = 49.36292219161987
+half_width = 19.097412
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop17_c2_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(1633.3, 1103.6)
+kind = "cogumelo"
+height = 49.36292219161987
+half_width = 19.097412
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop17_c2_c2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(820, 1301.3)
+kind = "cogumelo"
+height = 49.36292219161987
+half_width = 19.097412
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop18_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-1129.3, 1294.3)
+kind = "cogumelo"
+height = 45.02758836746216
+half_width = 18.743422
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop19_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(609.3, 1811.7)
+kind = "cogumelo"
+height = 43.7205274105072
+half_width = 18.777115
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop20_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-1401.4, 1680.2)
+kind = "cogumelo"
+height = 48.99901223182678
+half_width = 23.322485
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop21_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-367.4, 1697.5)
+kind = "cogumelo"
+height = 45.965521693229675
+half_width = 18.492119
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop21_c1_c2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-1172.9, 1415.5)
+kind = "cogumelo"
+height = 45.965521693229675
+half_width = 18.492119
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop21_c2_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-182.8, 1885.3)
+kind = "cogumelo"
+height = 45.965521693229675
+half_width = 18.492119
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop22_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-73.6, 2163.8)
+kind = "cogumelo"
+height = 43.749404191970825
+half_width = 25.392557
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop23_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(234.3, 1259.2)
+kind = "cogumelo"
+height = 47.565855264663696
+half_width = 20.14679
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop24_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-50.4, 512)
+kind = "cogumelo"
+height = 48.82864689826965
+half_width = 17.482485
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop24_c1_c2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-241.2, 551.9)
+kind = "cogumelo"
+height = 48.82864689826965
+half_width = 17.482485
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop25_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(1414.5, 863.8)
+kind = "cogumelo"
+height = 41.120904207229614
+half_width = 21.578302
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop25_c2_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(1732.9, 1641.9)
+kind = "cogumelo"
+height = 41.120904207229614
+half_width = 21.578302
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop26_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(159.8, 1135.7)
+kind = "cogumelo"
+height = 51.44182014465332
+half_width = 19.271389
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop27_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(104.8, 1587.5)
+kind = "cogumelo"
+height = 42.563177704811096
+half_width = 18.847837
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop27_c1_c2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(204.4, 1644.6)
+kind = "cogumelo"
+height = 42.563177704811096
+half_width = 18.847837
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop28_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-718, 1334.9)
+kind = "cogumelo"
+height = 50.91259527206421
+half_width = 24.537338
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop29_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-1891.8, 1440.3)
+kind = "cogumelo"
+height = 40.63190174102783
+half_width = 22.802006
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop29_c2_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-1248.5, 1016.4)
+kind = "cogumelo"
+height = 40.63190174102783
+half_width = 22.802006
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop30_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-690.4, 1868)
+kind = "cogumelo"
+height = 54.6033616065979
+half_width = 19.947561
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop30_c1_c2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-1079.9, 1774.7)
+kind = "cogumelo"
+height = 54.6033616065979
+half_width = 19.947561
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop31_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(1508.8, 1204.2)
+kind = "cogumelo"
+height = 43.09405314922333
+half_width = 24.420826
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop32_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(692.4, 936.7)
+kind = "cogumelo"
+height = 45.35480189323425
+half_width = 16.59812
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop33_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(734.7, 487.7)
+kind = "cogumelo"
+height = 43.12378811836243
+half_width = 25.636513
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop33_c2_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-973.6, 861)
+kind = "cogumelo"
+height = 43.12378811836243
+half_width = 25.636513
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop33_c2_c2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-224.8, 883.8)
+kind = "cogumelo"
+height = 43.12378811836243
+half_width = 25.636513
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop34_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(1604.3, 1245.3)
+kind = "cogumelo"
+height = 40.0382
+half_width = 21.908014
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop35_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-1007.6, 1221.1)
+kind = "cogumelo"
+height = 49.41627240180969
+half_width = 17.883038
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop36_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-1117, 1995.5)
+kind = "cogumelo"
+height = 53.91879105567932
+half_width = 23.423481
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop37_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-215.8, 1202.5)
+kind = "cogumelo"
+height = 50.864229679107666
+half_width = 16.846718
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop37_c1_c2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(105.6, 894.2)
+kind = "cogumelo"
+height = 50.864229679107666
+half_width = 16.846718
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop37_c2_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-424, 875.5)
+kind = "cogumelo"
+height = 50.864229679107666
+half_width = 16.846718
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop38_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(529.2, 557.7)
+kind = "cogumelo"
+height = 50.4026563167572
+half_width = 23.4787
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop39_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-1183, 1682.1)
+kind = "cogumelo"
+height = 40.00410318374634
+half_width = 19.034279
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop40_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(1311.9, 1960.7)
+kind = "cogumelo"
+height = 47.862387895584106
+half_width = 25.92108
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop40_c1_c2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(1409.4, 1905.7)
+kind = "cogumelo"
+height = 47.862387895584106
+half_width = 25.92108
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="EsporoCluster_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-666.8, 1253)
+kind = "esporo_01"
+height = 82.0
+half_width = 25.0
+block_radius = 0.0
+
+[node name="EsporoCluster_c2_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-847.4, 517.2)
+kind = "esporo_01"
+height = 82.0
+half_width = 25.0
+block_radius = 0.0
+
+[node name="EsporoTrio_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(1635.2, 1029.7)
+kind = "esporo_02"
+height = 70.0
+half_width = 28.0
+block_radius = 0.0
+
+[node name="LodoFungico_c1_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(356.9, 2119.8)
+kind = "lodo_01"
+height = 44.0
+half_width = 46.0
+block_radius = 0.0
+
+[node name="LodoFungico_c1_c2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(420.8, 2200.4)
+kind = "lodo_01"
+height = 44.0
+half_width = 46.0
+block_radius = 0.0
+
+[node name="Prop10_c1_f2_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-26.2, 656.7)
+kind = "cogumelo"
+height = 52.512816429138184
+half_width = 20.632092
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="LodoFungico_c1_f3_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(190.5, 699.2)
+kind = "lodo_01"
+height = 44.0
+half_width = 46.0
+block_radius = 0.0
+
+[node name="Prop25_c2_f4_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(449.2, 852.5)
+kind = "cogumelo"
+height = 41.120904207229614
+half_width = 21.578302
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop25_c2_f4_c2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(860.2, 960.1)
+kind = "cogumelo"
+height = 41.120904207229614
+half_width = 21.578302
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop25_c1_f5_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(704.5, 659.7)
+kind = "cogumelo"
+height = 41.120904207229614
+half_width = 21.578302
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop5_c1_f6_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(305.8, 807.2)
+kind = "cogumelo"
+height = 36.97096359729767
+half_width = 16.384735
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop36_f7_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-589.6, 1163.5)
+kind = "cogumelo"
+height = 53.91879105567932
+half_width = 23.423481
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop9_c1_f8_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(396.5, 1011.3)
+kind = "cogumelo"
+height = 38.54989731311798
+half_width = 21.231333
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop9_c1_f8_c2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(738.8, 1205.3)
+kind = "cogumelo"
+height = 38.54989731311798
+half_width = 21.231333
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop8_c1_f9_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(470.6, 1574.5)
+kind = "cogumelo"
+height = 47.7649986743927
+half_width = 22.078606
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop10_f10_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(1358, 1815.2)
+kind = "cogumelo"
+height = 52.512816429138184
+half_width = 20.632092
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop9_f11_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(546.9, 1707.4)
+kind = "cogumelo"
+height = 38.54989731311798
+half_width = 21.231333
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop5_c2_f12_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-1699.5, 1388.8)
+kind = "cogumelo"
+height = 36.97096359729767
+half_width = 16.384735
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop5_c2_f12_c2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-1266.7, 1267.4)
+kind = "cogumelo"
+height = 36.97096359729767
+half_width = 16.384735
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop28_f13_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-558.2, 1547.7)
+kind = "cogumelo"
+height = 50.91259527206421
+half_width = 24.537338
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop30_c1_f14_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(194.1, 2089.6)
+kind = "cogumelo"
+height = 54.6033616065979
+half_width = 19.947561
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop29_c2_f15_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(410.8, 1839.6)
+kind = "cogumelo"
+height = 40.63190174102783
+half_width = 22.802006
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop24_f16_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(219.4, 1877.3)
+kind = "cogumelo"
+height = 48.82864689826965
+half_width = 17.482485
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop24_f16_c2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(415.2, 1783.3)
+kind = "cogumelo"
+height = 48.82864689826965
+half_width = 17.482485
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop23_f17_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(486.9, 2010.3)
+kind = "cogumelo"
+height = 47.565855264663696
+half_width = 20.14679
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop27_f18_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-1433.7, 1334.3)
+kind = "cogumelo"
+height = 42.563177704811096
+half_width = 18.847837
+color = Color(0.54901963, 0.39215687, 0.50980395, 1)
+
+[node name="Prop5_f19_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-1068.6, 1597.6)
+kind = "cogumelo"
+height = 36.97096359729767
+half_width = 16.384735
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop1_f20_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-669.5, 2257)
+kind = "cogumelo"
+height = 49.69575643539429
+half_width = 18.19339
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="Prop1_f20_c2" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(-370.1, 2224.1)
+kind = "cogumelo"
+height = 49.69575643539429
+half_width = 18.19339
+color = Color(0.60313725, 0.46509805, 0.5686275, 1)
+
+[node name="LodoFungico_c1_f21_c1" parent="Sorted" instance=ExtResource("3_3nth8")]
+position = Vector2(158.3, 2005)
 kind = "lodo_01"
 height = 44.0
 half_width = 46.0

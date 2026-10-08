@@ -11,12 +11,12 @@
 [node name="Ground" type="Node2D" parent="." unique_id=333420340]
 z_index = -100
 script = ExtResource("1_t7b4e")
-map_size = Vector2i(60, 60)
+map_size = Vector2i(84, 84)
 color_a = Color(0.20392157, 0.15686275, 0.13333334, 1)
 color_b = Color(0.24313726, 0.18431373, 0.14901961, 1)
 terrain_layout_id = "durao"
 visual_seed = 274
-baked_texture_path = "res://assets/tiles/durao_ground_baked_v1.png"
+baked_texture_path = "res://assets/tiles/durao_ground_baked_v2.png"
 
 [node name="Sorted" type="Node2D" parent="." unique_id=125176944]
 y_sort_enabled = true
@@ -26,204 +26,204 @@ script = ExtResource("5_terrain")
 terrain_layout_id = "durao"
 
 [node name="Hero" parent="Sorted" unique_id=629349748 instance=ExtResource("2_l16w6")]
-position = Vector2(0, 960)
+position = Vector2(0, 1344)
 
 [node name="Prop1" parent="Sorted" unique_id=71309628 instance=ExtResource("3_4tb0h")]
-position = Vector2(1200, 1032)
+position = Vector2(1680, 1444.8)
 kind = "rocha"
 height = 84.82065796852112
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop2" parent="Sorted" unique_id=1749728044 instance=ExtResource("3_4tb0h")]
-position = Vector2(624, 984)
+position = Vector2(873.6, 1377.6)
 kind = "rocha"
 height = 86.5052843093872
 color = Color(0.45129412, 0.3822745, 0.34776473, 1)
 
 [node name="Prop3" parent="Sorted" unique_id=404713869 instance=ExtResource("3_4tb0h")]
-position = Vector2(-816, 936)
+position = Vector2(-1142.4, 1310.4)
 kind = "rocha"
 height = 60.542757511138916
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop4" parent="Sorted" unique_id=1057023444 instance=ExtResource("3_4tb0h")]
-position = Vector2(336, 1320)
+position = Vector2(470.4, 1848)
 kind = "rocha"
 height = 73.21301579475403
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop5" parent="Sorted" unique_id=111220789 instance=ExtResource("3_4tb0h")]
-position = Vector2(576, 1392)
+position = Vector2(806.4, 1948.8)
 kind = "rocha"
 height = 59.89753246307373
 color = Color(0.45129412, 0.3822745, 0.34776473, 1)
 
 [node name="Prop6" parent="Sorted" unique_id=1747830231 instance=ExtResource("3_4tb0h")]
-position = Vector2(1152, 768)
+position = Vector2(1612.8, 1075.2)
 kind = "rocha"
 height = 78.2253885269165
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop7" parent="Sorted" unique_id=2024013269 instance=ExtResource("3_4tb0h")]
-position = Vector2(-96, 384)
+position = Vector2(-134.4, 537.6)
 kind = "rocha"
 height = 59.612287282943726
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop8" parent="Sorted" unique_id=85199516 instance=ExtResource("3_4tb0h")]
-position = Vector2(-192, 1296)
+position = Vector2(-268.8, 1814.4)
 kind = "rocha"
 height = 56.518545746803284
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop9" parent="Sorted" unique_id=753325200 instance=ExtResource("3_4tb0h")]
-position = Vector2(-384, 1392)
+position = Vector2(-537.6, 1948.8)
 kind = "rocha"
 height = 60.1432740688324
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop10" parent="Sorted" unique_id=2126641120 instance=ExtResource("3_4tb0h")]
-position = Vector2(-720, 696)
+position = Vector2(-1008, 974.4)
 kind = "rocha"
 height = 70.06933569908142
 color = Color(0.45129412, 0.3822745, 0.34776473, 1)
 
 [node name="Prop11" parent="Sorted" unique_id=122247528 instance=ExtResource("3_4tb0h")]
-position = Vector2(-336, 840)
+position = Vector2(-470.4, 1176)
 kind = "rocha"
 height = 72.26208448410034
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop12" parent="Sorted" unique_id=352559789 instance=ExtResource("3_4tb0h")]
-position = Vector2(-240, 264)
+position = Vector2(-336, 369.6)
 kind = "rocha"
 height = 68.04185688495636
 color = Color(0.45129412, 0.3822745, 0.34776473, 1)
 
 [node name="Prop13" parent="Sorted" unique_id=59346526 instance=ExtResource("3_4tb0h")]
-position = Vector2(480, 1104)
+position = Vector2(672, 1545.6)
 kind = "rocha"
 height = 71.6392731666565
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop14" parent="Sorted" unique_id=121963103 instance=ExtResource("3_4tb0h")]
-position = Vector2(-624, 1224)
+position = Vector2(-873.6, 1713.6)
 kind = "rocha"
 height = 83.70109796524048
 color = Color(0.45129412, 0.3822745, 0.34776473, 1)
 
 [node name="Prop15" parent="Sorted" unique_id=422051853 instance=ExtResource("3_4tb0h")]
-position = Vector2(-48, 1128)
+position = Vector2(-67.2, 1579.2)
 kind = "rocha"
 height = 58.80247235298157
 color = Color(0.45129412, 0.3822745, 0.34776473, 1)
 
 [node name="Prop16" parent="Sorted" unique_id=1216586953 instance=ExtResource("3_4tb0h")]
-position = Vector2(-48, 168)
+position = Vector2(-67.2, 235.2)
 kind = "rocha"
 height = 72.64520406723022
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop17" parent="Sorted" unique_id=1005251235 instance=ExtResource("3_4tb0h")]
-position = Vector2(48, 456)
+position = Vector2(67.2, 638.4)
 kind = "rocha"
 height = 85.059072971344
 color = Color(0.45129412, 0.3822745, 0.34776473, 1)
 
 [node name="Prop18" parent="Sorted" unique_id=1028665978 instance=ExtResource("3_4tb0h")]
-position = Vector2(1008, 1272)
+position = Vector2(1411.2, 1780.8)
 kind = "rocha"
 height = 84.2688512802124
 color = Color(0.45129412, 0.3822745, 0.34776473, 1)
 
 [node name="Prop19" parent="Sorted" unique_id=1424580574 instance=ExtResource("3_4tb0h")]
-position = Vector2(432, 408)
+position = Vector2(604.8, 571.2)
 kind = "rocha"
 height = 70.31641244888306
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop20" parent="Sorted" unique_id=640238105 instance=ExtResource("3_4tb0h")]
-position = Vector2(96, 624)
+position = Vector2(134.4, 873.6)
 kind = "rocha"
 height = 61.75642
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop21" parent="Sorted" unique_id=57987494 instance=ExtResource("3_4tb0h")]
-position = Vector2(960, 576)
+position = Vector2(1344, 806.4)
 kind = "rocha"
 height = 82.69304752349854
 color = Color(0.45129412, 0.3822745, 0.34776473, 1)
 
 [node name="Prop22" parent="Sorted" unique_id=1295011276 instance=ExtResource("3_4tb0h")]
-position = Vector2(720, 1176)
+position = Vector2(1008, 1646.4)
 kind = "rocha"
 height = 58.31282079219818
 color = Color(0.45129412, 0.3822745, 0.34776473, 1)
 
 [node name="Prop23" parent="Sorted" unique_id=1106116286 instance=ExtResource("3_4tb0h")]
-position = Vector2(-240, 696)
+position = Vector2(-336, 974.4)
 kind = "rocha"
 height = 65.67667841911316
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop24" parent="Sorted" unique_id=1397722226 instance=ExtResource("3_4tb0h")]
-position = Vector2(0, 1680)
+position = Vector2(0, 2352)
 kind = "rocha"
 height = 57.799466252326965
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop25" parent="Sorted" unique_id=192188294 instance=ExtResource("3_4tb0h")]
-position = Vector2(-768, 1392)
+position = Vector2(-1075.2, 1948.8)
 kind = "rocha"
 height = 64.04104769229889
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop26" parent="Sorted" unique_id=514010486 instance=ExtResource("3_4tb0h")]
-position = Vector2(240, 216)
+position = Vector2(336, 302.4)
 kind = "rocha"
 height = 73.06962966918945
 color = Color(0.45129412, 0.3822745, 0.34776473, 1)
 
 [node name="Prop27" parent="Sorted" unique_id=547402155 instance=ExtResource("3_4tb0h")]
-position = Vector2(240, 696)
+position = Vector2(336, 974.4)
 kind = "rocha"
 height = 74.06096577644348
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop28" parent="Sorted" unique_id=499164839 instance=ExtResource("3_4tb0h")]
-position = Vector2(-432, 1080)
+position = Vector2(-604.8, 1512)
 kind = "rocha"
 height = 71.78789138793945
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop29" parent="Sorted" unique_id=136326350 instance=ExtResource("3_4tb0h")]
-position = Vector2(-1152, 1104)
+position = Vector2(-1612.8, 1545.6)
 kind = "rocha"
 height = 78.3557403087616
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop30" parent="Sorted" unique_id=663201073 instance=ExtResource("3_4tb0h")]
-position = Vector2(-240, 504)
+position = Vector2(-336, 705.6)
 kind = "rocha"
 height = 68.71849954128265
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="CorrentePartida" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(-1056, 720)
+position = Vector2(-1478.4, 1008)
 kind = "corrente_01"
 height = 46.0
 half_width = 45.0
 block_radius = 0.0
 
 [node name="PosteComGrilhao" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(504.4, 1454)
+position = Vector2(706.2, 2035.6)
 kind = "corrente_02"
 height = 76.0
 half_width = 32.0
 block_radius = 0.0
 
 [node name="OssosPrisioneiro" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(-1342.9, 830.3)
+position = Vector2(-1880.1, 1162.4)
 kind = "osso_01"
 height = 56.0
 half_width = 44.0
@@ -232,359 +232,1042 @@ block_radius = 0.0
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=241119624]
 
 [node name="Spawn1" parent="SpawnPoints" unique_id=1837662586 instance=ExtResource("4_i64nu")]
-position = Vector2(432, 1176)
+position = Vector2(604.8, 1646.4)
 enemy_id = "alma_penada"
 count = 2
 
 [node name="Spawn2" parent="SpawnPoints" unique_id=2008417751 instance=ExtResource("4_i64nu")]
-position = Vector2(-720, 888)
+position = Vector2(-1008, 1243.2)
 enemy_id = "demonio_de_gehenna"
 count = 2
 
 [node name="Spawn3" parent="SpawnPoints" unique_id=249764219 instance=ExtResource("4_i64nu")]
-position = Vector2(528, 696)
+position = Vector2(739.2, 974.4)
 enemy_id = "carcereiro_de_pedra"
 
 [node name="Spawn4" parent="SpawnPoints" unique_id=739564422 instance=ExtResource("4_i64nu")]
-position = Vector2(-96, 1344)
+position = Vector2(-134.4, 1881.6)
 enemy_id = "aberracao_shu"
 
 [node name="Prop1_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(1488.6, 954.2)
+position = Vector2(2084, 1335.9)
 kind = "rocha"
 height = 84.82065796852112
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop1_c2" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(1353.7, 890.7)
+position = Vector2(1895.2, 1247)
 kind = "rocha"
 height = 84.82065796852112
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop2_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(228.6, 1088.5)
+position = Vector2(320, 1523.9)
 kind = "rocha"
 height = 86.5052843093872
 color = Color(0.45129412, 0.3822745, 0.34776473, 1)
 
 [node name="Prop3_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(-1388.1, 943.2)
+position = Vector2(-1943.3, 1320.5)
 kind = "rocha"
 height = 60.542757511138916
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop4_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(108, 1395.9)
+position = Vector2(151.2, 1954.3)
 kind = "rocha"
 height = 73.21301579475403
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop5_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(220.5, 1395.5)
+position = Vector2(308.7, 1953.7)
 kind = "rocha"
 height = 59.89753246307373
 color = Color(0.45129412, 0.3822745, 0.34776473, 1)
 
 [node name="Prop5_c2" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(582.7, 1248.1)
+position = Vector2(815.8, 1747.3)
 kind = "rocha"
 height = 59.89753246307373
 color = Color(0.45129412, 0.3822745, 0.34776473, 1)
 
 [node name="Prop6_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(675.6, 891.8)
+position = Vector2(945.8, 1248.5)
 kind = "rocha"
 height = 78.2253885269165
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop7_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(-378.7, 466.2)
+position = Vector2(-530.2, 652.7)
 kind = "rocha"
 height = 59.612287282943726
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop8_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(-574.9, 1062.2)
+position = Vector2(-804.9, 1487.1)
 kind = "rocha"
 height = 56.518545746803284
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop9_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(-221.5, 1105.6)
+position = Vector2(-310.1, 1547.8)
 kind = "rocha"
 height = 60.1432740688324
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop9_c2" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(-491.3, 1216)
+position = Vector2(-687.8, 1702.4)
 kind = "rocha"
 height = 60.1432740688324
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop10_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(-733.2, 874.1)
+position = Vector2(-1026.5, 1223.7)
 kind = "rocha"
 height = 70.06933569908142
 color = Color(0.45129412, 0.3822745, 0.34776473, 1)
 
 [node name="Prop11_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(-234.7, 1030.7)
+position = Vector2(-328.6, 1443)
 kind = "rocha"
 height = 72.26208448410034
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop12_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(304.2, 379.3)
+position = Vector2(425.9, 531)
 kind = "rocha"
 height = 68.04185688495636
 color = Color(0.45129412, 0.3822745, 0.34776473, 1)
 
 [node name="Prop13_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(15.1, 1074.3)
+position = Vector2(21.1, 1504)
 kind = "rocha"
 height = 71.6392731666565
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop13_c2" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(608.7, 1313.7)
+position = Vector2(852.2, 1839.2)
 kind = "rocha"
 height = 71.6392731666565
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop14_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(-586.6, 917.6)
+position = Vector2(-821.2, 1284.6)
 kind = "rocha"
 height = 83.70109796524048
 color = Color(0.45129412, 0.3822745, 0.34776473, 1)
 
 [node name="Prop15_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(247.1, 897.7)
+position = Vector2(345.9, 1256.8)
 kind = "rocha"
 height = 58.80247235298157
 color = Color(0.45129412, 0.3822745, 0.34776473, 1)
 
 [node name="Prop16_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(258.2, 287.2)
+position = Vector2(361.5, 402.1)
 kind = "rocha"
 height = 72.64520406723022
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop17_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(620.7, 560.3)
+position = Vector2(869, 784.4)
 kind = "rocha"
 height = 85.059072971344
 color = Color(0.45129412, 0.3822745, 0.34776473, 1)
 
 [node name="Prop17_c2" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(28.8, 244.4)
+position = Vector2(40.3, 342.2)
 kind = "rocha"
 height = 85.059072971344
 color = Color(0.45129412, 0.3822745, 0.34776473, 1)
 
 [node name="Prop18_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(1292.3, 1065.9)
+position = Vector2(1809.2, 1492.3)
 kind = "rocha"
 height = 84.2688512802124
 color = Color(0.45129412, 0.3822745, 0.34776473, 1)
 
 [node name="Prop19_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(-31.8, 590.2)
+position = Vector2(-44.5, 826.3)
 kind = "rocha"
 height = 70.31641244888306
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop20_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(-375.4, 712.9)
+position = Vector2(-525.6, 998.1)
 kind = "rocha"
 height = 61.75642
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop21_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(727.8, 715.1)
+position = Vector2(1018.9, 1001.1)
 kind = "rocha"
 height = 82.69304752349854
 color = Color(0.45129412, 0.3822745, 0.34776473, 1)
 
 [node name="Prop21_c2" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(412.4, 555.5)
+position = Vector2(577.4, 777.7)
 kind = "rocha"
 height = 82.69304752349854
 color = Color(0.45129412, 0.3822745, 0.34776473, 1)
 
 [node name="Prop22_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(449.2, 904)
+position = Vector2(628.9, 1265.6)
 kind = "rocha"
 height = 58.31282079219818
 color = Color(0.45129412, 0.3822745, 0.34776473, 1)
 
 [node name="Prop23_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(-782.8, 777.6)
+position = Vector2(-1095.9, 1088.6)
 kind = "rocha"
 height = 65.67667841911316
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop24_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(-184.9, 1576.2)
+position = Vector2(-258.9, 2206.7)
 kind = "rocha"
 height = 57.799466252326965
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop25_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(-254.6, 1221.5)
+position = Vector2(-356.4, 1710.1)
 kind = "rocha"
 height = 64.04104769229889
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop25_c2" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(-1044.3, 1246)
+position = Vector2(-1462, 1744.4)
 kind = "rocha"
 height = 64.04104769229889
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop26_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(1394.8, 836.4)
+position = Vector2(1952.7, 1171)
 kind = "rocha"
 height = 73.06962966918945
 color = Color(0.45129412, 0.3822745, 0.34776473, 1)
 
 [node name="Prop27_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(276.6, 513.5)
+position = Vector2(387.2, 718.9)
 kind = "rocha"
 height = 74.06096577644348
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop28_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(-499.6, 879.7)
+position = Vector2(-699.4, 1231.6)
 kind = "rocha"
 height = 71.78789138793945
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop29_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(-735.9, 1038)
+position = Vector2(-1030.3, 1453.2)
 kind = "rocha"
 height = 78.3557403087616
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop29_c2" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(-847.6, 1151.4)
+position = Vector2(-1186.6, 1612)
 kind = "rocha"
 height = 78.3557403087616
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop30_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(-741.3, 551.8)
+position = Vector2(-1037.8, 772.5)
 kind = "rocha"
 height = 68.71849954128265
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="CorrentePartida_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(-731.9, 976.4)
+position = Vector2(-1024.7, 1367)
 kind = "corrente_01"
 height = 46.0
 half_width = 45.0
 block_radius = 0.0
 
 [node name="PosteComGrilhao_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(785.7, 532.8)
+position = Vector2(1100, 745.9)
 kind = "corrente_02"
 height = 76.0
 half_width = 32.0
 block_radius = 0.0
 
 [node name="OssosPrisioneiro_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(-685.3, 1318.7)
+position = Vector2(-959.4, 1846.2)
 kind = "osso_01"
 height = 56.0
 half_width = 44.0
 block_radius = 0.0
 
 [node name="OssosPrisioneiro_c2" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(-234.1, 1716.6)
+position = Vector2(-327.7, 2403.2)
 kind = "osso_01"
 height = 56.0
 half_width = 44.0
 block_radius = 0.0
 
 [node name="Prop26_c1_f1" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(1249.3, 867)
+position = Vector2(1749, 1213.8)
 kind = "rocha"
 height = 73.06962966918945
 color = Color(0.45129412, 0.3822745, 0.34776473, 1)
 
 [node name="Prop21_c2_f2" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(1610.9, 932.3)
+position = Vector2(2255.3, 1305.2)
 kind = "rocha"
 height = 82.69304752349854
 color = Color(0.45129412, 0.3822745, 0.34776473, 1)
 
 [node name="Prop30_c1_f3" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(277.1, 811.5)
+position = Vector2(387.9, 1136.1)
 kind = "rocha"
 height = 68.71849954128265
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop25_c2_f4" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(555.6, 928.1)
+position = Vector2(777.8, 1299.3)
 kind = "rocha"
 height = 64.04104769229889
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop13_f5" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(1116.4, 1270.4)
+position = Vector2(1563, 1778.6)
 kind = "rocha"
 height = 71.6392731666565
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop16_c1_f6" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(-957.9, 634.8)
+position = Vector2(-1341.1, 888.7)
 kind = "rocha"
 height = 72.64520406723022
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop1_c2_f7" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(296.3, 1042.9)
+position = Vector2(414.8, 1460.1)
 kind = "rocha"
 height = 84.82065796852112
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop15_c1_f8" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(-937.9, 751.7)
+position = Vector2(-1313.1, 1052.4)
 kind = "rocha"
 height = 58.80247235298157
 color = Color(0.45129412, 0.3822745, 0.34776473, 1)
 
 [node name="Prop19_c1_f9" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(632, 1523.2)
+position = Vector2(884.8, 2132.5)
 kind = "rocha"
 height = 70.31641244888306
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop3_f10" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(483.1, 1525.6)
+position = Vector2(676.3, 2135.8)
 kind = "rocha"
 height = 60.542757511138916
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop6_c1_f11" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(-1437.5, 991.2)
+position = Vector2(-2012.5, 1387.7)
 kind = "rocha"
 height = 78.2253885269165
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop23_c1_f12" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(-1661, 999.8)
+position = Vector2(-2325.4, 1399.7)
 kind = "rocha"
 height = 65.67667841911316
 color = Color(0.3764706, 0.29803923, 0.25882354, 1)
 
 [node name="Prop15_c1_f13" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(-157.7, 1492.7)
+position = Vector2(-220.8, 2089.8)
 kind = "rocha"
 height = 58.80247235298157
 color = Color(0.45129412, 0.3822745, 0.34776473, 1)
 
 [node name="OssosPrisioneiro_c2_f14" parent="Sorted" instance=ExtResource("3_4tb0h")]
-position = Vector2(198.9, 1698.1)
+position = Vector2(278.5, 2377.3)
+kind = "osso_01"
+height = 56.0
+half_width = 44.0
+block_radius = 0.0
+
+[node name="Prop1_c1_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(1968.6, 1367)
+kind = "rocha"
+height = 84.82065796852112
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop1_c2_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(1910.6, 1576.6)
+kind = "rocha"
+height = 84.82065796852112
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop2_c1_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(945.5, 1085.7)
+kind = "rocha"
+height = 86.5052843093872
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop3_c1_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-1714.5, 1317.6)
+kind = "rocha"
+height = 60.542757511138916
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop4_c1_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(517.6, 2025.1)
+kind = "rocha"
+height = 73.21301579475403
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop5_c1_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(1188.8, 1795.2)
+kind = "rocha"
+height = 59.89753246307373
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop5_c2_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(377.5, 1811.4)
+kind = "rocha"
+height = 59.89753246307373
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop6_c1_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(1142.1, 1012.6)
+kind = "rocha"
+height = 78.2253885269165
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop7_c1_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-417.1, 619.8)
+kind = "rocha"
+height = 59.612287282943726
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop8_c1_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-651.7, 1580.6)
+kind = "rocha"
+height = 56.518545746803284
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop9_c1_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-801.2, 1990.4)
+kind = "rocha"
+height = 60.1432740688324
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop9_c2_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-644.9, 1772.8)
+kind = "rocha"
+height = 60.1432740688324
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop10_c1_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-1021.2, 1152.5)
+kind = "rocha"
+height = 70.06933569908142
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop11_c1_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-369.1, 1366.7)
+kind = "rocha"
+height = 72.26208448410034
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop12_c1_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(208.2, 484.9)
+kind = "rocha"
+height = 68.04185688495636
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop13_c1_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(72.6, 1453.4)
+kind = "rocha"
+height = 71.6392731666565
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop13_c2_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(899.2, 1300.2)
+kind = "rocha"
+height = 71.6392731666565
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop14_c1_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-482.6, 1562.1)
+kind = "rocha"
+height = 83.70109796524048
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop15_c1_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(227.9, 1348.9)
+kind = "rocha"
+height = 58.80247235298157
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop16_c1_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(239, 354.4)
+kind = "rocha"
+height = 72.64520406723022
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop17_c1_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(687, 609.9)
+kind = "rocha"
+height = 85.059072971344
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop17_c2_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(545.9, 665.6)
+kind = "rocha"
+height = 85.059072971344
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop18_c1_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(1780.4, 1687.8)
+kind = "rocha"
+height = 84.2688512802124
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop19_c1_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(141, 753.4)
+kind = "rocha"
+height = 70.31641244888306
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop20_c1_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(259.1, 632.1)
+kind = "rocha"
+height = 61.75642
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop21_c1_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(839.9, 682.5)
+kind = "rocha"
+height = 82.69304752349854
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop21_c2_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(1171.3, 687.9)
+kind = "rocha"
+height = 82.69304752349854
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop22_c1_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(737.2, 1374.4)
+kind = "rocha"
+height = 58.31282079219818
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop23_c1_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-878.8, 1056)
+kind = "rocha"
+height = 65.67667841911316
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop24_c1_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-184.9, 2248.2)
+kind = "rocha"
+height = 57.799466252326965
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop25_c1_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-909.7, 2086.3)
+kind = "rocha"
+height = 64.04104769229889
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop25_c2_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-1351.5, 1802.8)
+kind = "rocha"
+height = 64.04104769229889
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop26_c1_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(101.2, 162.8)
+kind = "rocha"
+height = 73.06962966918945
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop27_c1_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(749.1, 1190.8)
+kind = "rocha"
+height = 74.06096577644348
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop28_c1_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-672.4, 1311.7)
+kind = "rocha"
+height = 71.78789138793945
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop29_c1_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-1196.7, 1479.6)
+kind = "rocha"
+height = 78.3557403087616
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop29_c2_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-1790.5, 1389)
+kind = "rocha"
+height = 78.3557403087616
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop30_c1_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-837.3, 753.4)
+kind = "rocha"
+height = 68.71849954128265
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="CorrentePartida_c1_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-1585, 1263.8)
+kind = "corrente_01"
+height = 46.0
+half_width = 45.0
+block_radius = 0.0
+
+[node name="PosteComGrilhao_c1_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(932.3, 1959.1)
+kind = "corrente_02"
+height = 76.0
+half_width = 32.0
+block_radius = 0.0
+
+[node name="OssosPrisioneiro_c1_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-1509.9, 1185.2)
+kind = "osso_01"
+height = 56.0
+half_width = 44.0
+block_radius = 0.0
+
+[node name="OssosPrisioneiro_c2_2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-1657.7, 934.8)
+kind = "osso_01"
+height = 56.0
+half_width = 44.0
+block_radius = 0.0
+
+[node name="Prop1_c1_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(1469, 1377.5)
+kind = "rocha"
+height = 84.82065796852112
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop1_c2_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(1761.6, 1017.1)
+kind = "rocha"
+height = 84.82065796852112
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop2_c1_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(603.1, 1472.4)
+kind = "rocha"
+height = 86.5052843093872
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop3_c1_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-2060.6, 1187.3)
+kind = "rocha"
+height = 60.542757511138916
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop3_c1_c2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-1765.6, 1080.8)
+kind = "rocha"
+height = 60.542757511138916
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop4_c1_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(425.1, 1909.2)
+kind = "rocha"
+height = 73.21301579475403
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop5_c1_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(877.8, 2015.4)
+kind = "rocha"
+height = 59.89753246307373
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop5_c2_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(1104.2, 1946.1)
+kind = "rocha"
+height = 59.89753246307373
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop6_c1_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(1578.4, 1264)
+kind = "rocha"
+height = 78.2253885269165
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop6_c1_c2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(522.9, 1151.4)
+kind = "rocha"
+height = 78.2253885269165
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop7_c1_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-526.1, 831.4)
+kind = "rocha"
+height = 59.612287282943726
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop8_c1_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-915.8, 1241.2)
+kind = "rocha"
+height = 56.518545746803284
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop9_c1_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-546.9, 1461.1)
+kind = "rocha"
+height = 60.1432740688324
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop9_c2_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-1050.1, 1512.4)
+kind = "rocha"
+height = 60.1432740688324
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop9_c2_c2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-1186.4, 1779.3)
+kind = "rocha"
+height = 60.1432740688324
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop10_c1_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-537.5, 1248.2)
+kind = "rocha"
+height = 70.06933569908142
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop11_c1_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-693.6, 1398.4)
+kind = "rocha"
+height = 72.26208448410034
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop12_c1_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(662.7, 436.6)
+kind = "rocha"
+height = 68.04185688495636
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop13_c1_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(351.7, 1384.6)
+kind = "rocha"
+height = 71.6392731666565
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop13_c1_c2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-230, 1414)
+kind = "rocha"
+height = 71.6392731666565
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop13_c2_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(1172.3, 1989.7)
+kind = "rocha"
+height = 71.6392731666565
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop14_c1_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-697.4, 1152.6)
+kind = "rocha"
+height = 83.70109796524048
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop15_c1_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(661.6, 1005.3)
+kind = "rocha"
+height = 58.80247235298157
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop16_c1_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(311.7, 544.1)
+kind = "rocha"
+height = 72.64520406723022
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop16_c1_c2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(225.7, 271.5)
+kind = "rocha"
+height = 72.64520406723022
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop17_c1_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(926.3, 586.5)
+kind = "rocha"
+height = 85.059072971344
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop17_c2_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-460.1, 387.5)
+kind = "rocha"
+height = 85.059072971344
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop18_c1_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(2111.3, 1422.2)
+kind = "rocha"
+height = 84.2688512802124
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop19_c1_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-387.1, 752.7)
+kind = "rocha"
+height = 70.31641244888306
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop19_c1_c2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-588.9, 741.4)
+kind = "rocha"
+height = 70.31641244888306
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop20_c1_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-120.1, 972.1)
+kind = "rocha"
+height = 61.75642
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop21_c1_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(615.6, 860)
+kind = "rocha"
+height = 82.69304752349854
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop21_c2_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(676.9, 932.3)
+kind = "rocha"
+height = 82.69304752349854
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop22_c1_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(1036.2, 1160.2)
+kind = "rocha"
+height = 58.31282079219818
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop22_c1_c2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(453, 1024.2)
+kind = "rocha"
+height = 58.31282079219818
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop23_c1_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-1309.6, 965.9)
+kind = "rocha"
+height = 65.67667841911316
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop24_c1_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-343.7, 2347.4)
+kind = "rocha"
+height = 57.799466252326965
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop25_c1_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-807.4, 1599.1)
+kind = "rocha"
+height = 64.04104769229889
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop25_c2_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-1322, 1592.2)
+kind = "rocha"
+height = 64.04104769229889
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop25_c2_c2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-950, 1610.7)
+kind = "rocha"
+height = 64.04104769229889
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop26_c1_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(2260, 1223.9)
+kind = "rocha"
+height = 73.06962966918945
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop27_c1_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(323.5, 861)
+kind = "rocha"
+height = 74.06096577644348
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop28_c1_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-279.9, 1240.7)
+kind = "rocha"
+height = 71.78789138793945
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop29_c1_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-1290.5, 1205.9)
+kind = "rocha"
+height = 78.3557403087616
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop29_c1_c2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-1410.2, 1647.3)
+kind = "rocha"
+height = 78.3557403087616
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop29_c2_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-1576.1, 1594.9)
+kind = "rocha"
+height = 78.3557403087616
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop30_c1_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-691.4, 790.5)
+kind = "rocha"
+height = 68.71849954128265
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="CorrentePartida_c1_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-1266.6, 1144.6)
+kind = "corrente_01"
+height = 46.0
+half_width = 45.0
+block_radius = 0.0
+
+[node name="PosteComGrilhao_c1_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(1168.7, 957.8)
+kind = "corrente_02"
+height = 76.0
+half_width = 32.0
+block_radius = 0.0
+
+[node name="PosteComGrilhao_c1_c2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(1060.6, 1061.7)
+kind = "corrente_02"
+height = 76.0
+half_width = 32.0
+block_radius = 0.0
+
+[node name="OssosPrisioneiro_c1_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-1198.3, 1947.3)
+kind = "osso_01"
+height = 56.0
+half_width = 44.0
+block_radius = 0.0
+
+[node name="OssosPrisioneiro_c2_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(156.6, 2453.1)
+kind = "osso_01"
+height = 56.0
+half_width = 44.0
+block_radius = 0.0
+
+[node name="Prop26_c1_f1_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(2200.1, 1387.2)
+kind = "rocha"
+height = 73.06962966918945
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop21_c2_f2_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(1777.4, 1323.3)
+kind = "rocha"
+height = 82.69304752349854
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop21_c2_f2_c2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(2125.9, 1537.6)
+kind = "rocha"
+height = 82.69304752349854
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop30_c1_f3_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(713.7, 1053.2)
+kind = "rocha"
+height = 68.71849954128265
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop25_c2_f4_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(376.6, 1062)
+kind = "rocha"
+height = 64.04104769229889
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop13_f5_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(1121.5, 1857.1)
+kind = "rocha"
+height = 71.6392731666565
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop16_c1_f6_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-1286.4, 732.2)
+kind = "rocha"
+height = 72.64520406723022
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop16_c1_f6_c2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-1705.2, 1135.4)
+kind = "rocha"
+height = 72.64520406723022
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop1_c2_f7_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(221.3, 1279.2)
+kind = "rocha"
+height = 84.82065796852112
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop15_c1_f8_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-1434.3, 840.2)
+kind = "rocha"
+height = 58.80247235298157
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="Prop19_c1_f9_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(483.3, 2193.1)
+kind = "rocha"
+height = 70.31641244888306
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop3_f10_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(81.6, 2055.5)
+kind = "rocha"
+height = 60.542757511138916
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop3_f10_c2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(260.4, 2043.5)
+kind = "rocha"
+height = 60.542757511138916
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop6_c1_f11_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-1791.6, 1631.9)
+kind = "rocha"
+height = 78.2253885269165
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop23_c1_f12_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-2304.3, 1225.3)
+kind = "rocha"
+height = 65.67667841911316
+color = Color(0.3764706, 0.29803923, 0.25882354, 1)
+
+[node name="Prop15_c1_f13_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(-505.6, 2369.3)
+kind = "rocha"
+height = 58.80247235298157
+color = Color(0.45129412, 0.3822745, 0.34776473, 1)
+
+[node name="OssosPrisioneiro_c2_f14_c1" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(92.8, 2531.8)
+kind = "osso_01"
+height = 56.0
+half_width = 44.0
+block_radius = 0.0
+
+[node name="OssosPrisioneiro_c2_f14_c2" parent="Sorted" instance=ExtResource("3_4tb0h")]
+position = Vector2(535.4, 2103.4)
 kind = "osso_01"
 height = 56.0
 half_width = 44.0

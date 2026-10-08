@@ -17,6 +17,8 @@ static func attach_for_stage(parent: Node2D, stage_key: String, start_ground: Ve
 		return null
 	var target_data: Array = profile.get("target", [map_size.x * 0.5, map_size.y * 0.5])
 	var target := Vector2(float(target_data[0]), float(target_data[1]))
+	if profile.has("target"):
+		target *= map_size.x / 60.0  # SPEC-152: o alvo foi desenhado para 60x60
 	var ground := resolve_ground_position(stage_key, target, start_ground, map_size, blockers)
 	if not is_finite(ground.x) or not is_finite(ground.y):
 		return null

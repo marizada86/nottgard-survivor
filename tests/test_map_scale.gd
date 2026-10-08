@@ -3,6 +3,12 @@ extends RefCounted
 ## com TerrainLayout.scale (= lado / 40); as cenas de fase têm map_size 60x60, o herói no centro e os props
 ## distribuídos (nenhum fora da margem, nenhuma célula de 12x12 vazia).
 
+## SPEC-152: a fatia piloto de segredos usa 84x84 em Shedaklah, Molor e Durao; as demais fases seguem 60x60.
+const BIG := ["shedaklah", "molor", "durao"]
+
+static func side_of(sid: String) -> int:
+	return 84 if BIG.has(sid) else 60
+
 const STAGES := ["dagruve", "docas", "shedaklah", "molor", "durao", "feng_tu", "shendilavri", "goranthis", "pilares"]
 
 func run() -> Array:
@@ -36,11 +42,13 @@ func run() -> Array:
 	# cenas: 60x60 e herói no centro (screen (0, 960) = chão (30, 30))
 	for sid in STAGES:
 		var text := FileAccess.get_file_as_string("res://ui/stages/%s.tscn" % sid)
-		if text.find("map_size = Vector2i(60, 60)") < 0:
-			out.append("%s: cena deveria ter map_size 60x60" % sid)
+		var side := side_of(sid)
+		if text.find("map_size = Vector2i(%d, %d)" % [side, side]) < 0:
+			out.append("%s: cena deveria ter map_size %dx%d" % [sid, side, side])
+		var hero_pos := "position = Vector2(0, %d)" % (side * 16)
 		var hero_at := text.find("[node name=\"Hero\"")
-		if hero_at < 0 or text.find("position = Vector2(0, 960)", hero_at) < 0 or text.find("position = Vector2(0, 960)", hero_at) - hero_at > 200:
-			out.append("%s: herói deveria começar no centro do mapa 60x60" % sid)
+		if hero_at < 0 or text.find(hero_pos, hero_at) < 0 or text.find(hero_pos, hero_at) - hero_at > 200:
+			out.append("%s: herói deveria começar no centro do mapa %dx%d" % [sid, side, side])
 
 	# distribuição dos props: nenhum fora da margem e nenhuma célula de 12x12 vazia
 	var re_header := RegEx.create_from_string("^\\[node name=\"([^\"]+)\"[^\n]*parent=\"Sorted\"[^\n]*instance=")
@@ -62,18 +70,21 @@ func run() -> Array:
 				var pm := re_pos.search(line)
 				if pm != null:
 					var g := Iso.to_ground(Vector2(float(pm.get_string(1)), float(pm.get_string(2))))
-					if g.x < 2.0 or g.y < 2.0 or g.x > 58.0 or g.y > 58.0:
+					if g.x < 2.0 or g.y < 2.0 or g.x > float(side_of(sid)) - 2.0 or g.y > float(side_of(sid)) - 2.0:
 						outside += 1
-					var key := Vector2i(clampi(int(g.x / 12.0), 0, 4), clampi(int(g.y / 12.0), 0, 4))
+					var cells_per_side := side_of(sid) / 12
+					var key := Vector2i(clampi(int(g.x / 12.0), 0, cells_per_side - 1), clampi(int(g.y / 12.0), 0, cells_per_side - 1))
 					counts[key] = int(counts.get(key, 0)) + 1
 					in_prop = false
 		if outside > 0:
 			out.append("%s: %d prop(s) fora da margem do mapa" % [sid, outside])
 		var empty := 0
-		for cx in 5:
-			for cy in 5:
+		for cx in side_of(sid) / 12:
+			for cy in side_of(sid) / 12:
 				if int(counts.get(Vector2i(cx, cy), 0)) == 0:
 					empty += 1
-		if empty > 0:
+		# 84x84 (SPEC-152): os props da cena são só o ponto de partida; em runtime valem os aglomerados do level design. Uma célula pode ficar vazia (montanha ou água)
+		var allowed_empty := 1 if side_of(sid) > 60 else 0
+		if empty > allowed_empty:
 			out.append("%s: %d célula(s) 12x12 sem nenhum prop" % [sid, empty])
 	return out

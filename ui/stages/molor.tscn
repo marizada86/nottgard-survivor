@@ -10,7 +10,7 @@
 [node name="Ground" type="Node2D" parent="." unique_id=388352511]
 z_index = -100
 script = ExtResource("1_koa63")
-map_size = Vector2i(60, 60)
+map_size = Vector2i(84, 84)
 color_a = Color(0.09411765, 0.15686275, 0.11764706, 1)
 color_b = Color(0.11764706, 0.19607843, 0.14117648, 1)
 terrain_layout_id = "molor"
@@ -19,324 +19,324 @@ use_modular_atlas = true
 atlas_columns = 2
 atlas_variants = 4
 terrain_texture_path = "res://assets/tiles/molor_ground_atlas_v1.png"
-baked_texture_path = "res://assets/tiles/molor_ground_baked_v1.png"
+baked_texture_path = "res://assets/tiles/molor_ground_baked_v2.png"
 
 [node name="Sorted" type="Node2D" parent="." unique_id=707647655]
 y_sort_enabled = true
 
 [node name="Hero" parent="Sorted" unique_id=629349748 instance=ExtResource("2_udx7a")]
-position = Vector2(0, 960)
+position = Vector2(0, 1344)
 
 [node name="Prop1" parent="Sorted" unique_id=71309628 instance=ExtResource("3_tp1vc")]
-position = Vector2(288, 1200)
+position = Vector2(403.2, 1680)
 kind = "bolha"
 height = 39.421210289001465
 half_width = 19.577894
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop2" parent="Sorted" unique_id=778280658 instance=ExtResource("3_tp1vc")]
-position = Vector2(-48, 600)
+position = Vector2(-67.2, 840)
 kind = "bolha"
 height = 46.10381603240967
 half_width = 20.286762
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop3" parent="Sorted" unique_id=1145570349 instance=ExtResource("3_tp1vc")]
-position = Vector2(-336, 936)
+position = Vector2(-470.4, 1310.4)
 kind = "bolha"
 height = 42.91611671447754
 half_width = 16.558489
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop4" parent="Sorted" unique_id=394771806 instance=ExtResource("3_tp1vc")]
-position = Vector2(48, 1272)
+position = Vector2(67.2, 1780.8)
 kind = "bolha"
 height = 46.437482833862305
 half_width = 20.00281
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop5" parent="Sorted" unique_id=1129452503 instance=ExtResource("3_tp1vc")]
-position = Vector2(0, 720)
+position = Vector2(0, 1008)
 kind = "bolha"
 height = 41.93882942199707
 half_width = 24.573063
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop6" parent="Sorted" unique_id=431880248 instance=ExtResource("3_tp1vc")]
-position = Vector2(144, 1368)
+position = Vector2(201.6, 1915.2)
 kind = "bolha"
 height = 45.25572
 half_width = 21.626223
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop7" parent="Sorted" unique_id=90773137 instance=ExtResource("3_tp1vc")]
-position = Vector2(-384, 1536)
+position = Vector2(-537.6, 2150.4)
 kind = "bolha"
 height = 48.88082027435303
 half_width = 16.74827
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop8" parent="Sorted" unique_id=206375127 instance=ExtResource("3_tp1vc")]
-position = Vector2(-240, 1368)
+position = Vector2(-336, 1915.2)
 kind = "bolha"
 height = 36.66116237640381
 half_width = 16.97958
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop9" parent="Sorted" unique_id=2082201429 instance=ExtResource("3_tp1vc")]
-position = Vector2(-48, 168)
+position = Vector2(-67.2, 235.2)
 kind = "bolha"
 height = 49.610819816589355
 half_width = 23.76641
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop10" parent="Sorted" unique_id=1752712867 instance=ExtResource("3_tp1vc")]
-position = Vector2(288, 816)
+position = Vector2(403.2, 1142.4)
 kind = "bolha"
 height = 36.49092674255371
 half_width = 22.88701
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop11" parent="Sorted" unique_id=1665624927 instance=ExtResource("3_tp1vc")]
-position = Vector2(816, 1176)
+position = Vector2(1142.4, 1646.4)
 kind = "bolha"
 height = 35.673294
 half_width = 23.229557
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop12" parent="Sorted" unique_id=1243601023 instance=ExtResource("3_tp1vc")]
-position = Vector2(288, 1488)
+position = Vector2(403.2, 2083.2)
 kind = "bolha"
 height = 39.80032
 half_width = 20.24377
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop13" parent="Sorted" unique_id=1213025851 instance=ExtResource("3_tp1vc")]
-position = Vector2(528, 1464)
+position = Vector2(739.2, 2049.6)
 kind = "bolha"
 height = 33.80992650985718
 half_width = 17.841808
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop14" parent="Sorted" unique_id=649306684 instance=ExtResource("3_tp1vc")]
-position = Vector2(720, 984)
+position = Vector2(1008, 1377.6)
 kind = "bolha"
 height = 43.756985664367676
 half_width = 23.935638
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop15" parent="Sorted" unique_id=810046089 instance=ExtResource("3_tp1vc")]
-position = Vector2(-864, 1296)
+position = Vector2(-1209.6, 1814.4)
 kind = "bolha"
 height = 33.95949125289917
 half_width = 20.050632
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop16" parent="Sorted" unique_id=986405423 instance=ExtResource("3_tp1vc")]
-position = Vector2(1584, 984)
+position = Vector2(2217.6, 1377.6)
 kind = "bolha"
 height = 45.3479
 half_width = 24.885231
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop17" parent="Sorted" unique_id=817834061 instance=ExtResource("3_tp1vc")]
-position = Vector2(576, 1248)
+position = Vector2(806.4, 1747.2)
 kind = "bolha"
 height = 43.02588939666748
 half_width = 21.065063
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop18" parent="Sorted" unique_id=1717734097 instance=ExtResource("3_tp1vc")]
-position = Vector2(-720, 648)
+position = Vector2(-1008, 907.2)
 kind = "bolha"
 height = 36.693726
 half_width = 24.683882
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop19" parent="Sorted" unique_id=1288328501 instance=ExtResource("3_tp1vc")]
-position = Vector2(-432, 504)
+position = Vector2(-604.8, 705.6)
 kind = "bolha"
 height = 42.631802558898926
 half_width = 17.121105
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop20" parent="Sorted" unique_id=1009566199 instance=ExtResource("3_tp1vc")]
-position = Vector2(-1200, 792)
+position = Vector2(-1680, 1108.8)
 kind = "bolha"
 height = 34.65304374694824
 half_width = 23.786682
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop21" parent="Sorted" unique_id=42876946 instance=ExtResource("3_tp1vc")]
-position = Vector2(-624, 1224)
+position = Vector2(-873.6, 1713.6)
 kind = "bolha"
 height = 45.360107
 half_width = 19.411407
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop22" parent="Sorted" unique_id=150490669 instance=ExtResource("3_tp1vc")]
-position = Vector2(-720, 1128)
+position = Vector2(-1008, 1579.2)
 kind = "bolha"
 height = 33.84821891784668
 half_width = 18.900574
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop23" parent="Sorted" unique_id=140323066 instance=ExtResource("3_tp1vc")]
-position = Vector2(-240, 744)
+position = Vector2(-336, 1041.6)
 kind = "bolha"
 height = 32.456493
 half_width = 19.032099
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop24" parent="Sorted" unique_id=1766663148 instance=ExtResource("3_tp1vc")]
-position = Vector2(1008, 744)
+position = Vector2(1411.2, 1041.6)
 kind = "bolha"
 height = 46.20020866394043
 half_width = 20.50922
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop25" parent="Sorted" unique_id=458763026 instance=ExtResource("3_tp1vc")]
-position = Vector2(48, 1128)
+position = Vector2(67.2, 1579.2)
 kind = "bolha"
 height = 36.70416
 half_width = 23.118832
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop26" parent="Sorted" unique_id=312933808 instance=ExtResource("3_tp1vc")]
-position = Vector2(432, 1128)
+position = Vector2(604.8, 1579.2)
 kind = "bolha"
 height = 33.36005210876465
 half_width = 17.224348
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop27" parent="Sorted" unique_id=611075379 instance=ExtResource("3_tp1vc")]
-position = Vector2(-576, 1008)
+position = Vector2(-806.4, 1411.2)
 kind = "bolha"
 height = 48.726616
 half_width = 22.289717
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop28" parent="Sorted" unique_id=777699904 instance=ExtResource("3_tp1vc")]
-position = Vector2(-1440, 1056)
+position = Vector2(-2016, 1478.4)
 kind = "bolha"
 height = 32.31115102767944
 half_width = 20.451683
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop29" parent="Sorted" unique_id=2016173680 instance=ExtResource("3_tp1vc")]
-position = Vector2(-96, 1488)
+position = Vector2(-134.4, 2083.2)
 kind = "bolha"
 height = 47.601414
 half_width = 24.023493
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop30" parent="Sorted" unique_id=1580610078 instance=ExtResource("3_tp1vc")]
-position = Vector2(-912, 984)
+position = Vector2(-1276.8, 1377.6)
 kind = "bolha"
 height = 46.814404
 half_width = 23.463568
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop31" parent="Sorted" unique_id=169924601 instance=ExtResource("3_tp1vc")]
-position = Vector2(-624, 1368)
+position = Vector2(-873.6, 1915.2)
 kind = "bolha"
 height = 47.543163
 half_width = 23.714905
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop32" parent="Sorted" unique_id=1238635581 instance=ExtResource("3_tp1vc")]
-position = Vector2(-144, 264)
+position = Vector2(-201.6, 369.6)
 kind = "bolha"
 height = 32.85992383956909
 half_width = 19.48677
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop33" parent="Sorted" unique_id=1666619383 instance=ExtResource("3_tp1vc")]
-position = Vector2(-672, 816)
+position = Vector2(-940.8, 1142.4)
 kind = "bolha"
 height = 44.699383
 half_width = 25.761078
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop34" parent="Sorted" unique_id=1477951845 instance=ExtResource("3_tp1vc")]
-position = Vector2(1200, 696)
+position = Vector2(1680, 974.4)
 kind = "bolha"
 height = 46.69010639190674
 half_width = 18.317608
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop35" parent="Sorted" unique_id=859947722 instance=ExtResource("3_tp1vc")]
-position = Vector2(1344, 768)
+position = Vector2(1881.6, 1075.2)
 kind = "bolha"
 height = 40.57631492614746
 half_width = 21.978941
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop36" parent="Sorted" unique_id=116166061 instance=ExtResource("3_tp1vc")]
-position = Vector2(0, 1680)
+position = Vector2(0, 2352)
 kind = "bolha"
 height = 44.062933921813965
 half_width = 20.819912
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop37" parent="Sorted" unique_id=1079055483 instance=ExtResource("3_tp1vc")]
-position = Vector2(-240, 648)
+position = Vector2(-336, 907.2)
 kind = "bolha"
 height = 34.60712909698486
 half_width = 22.8666
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop38" parent="Sorted" unique_id=476266379 instance=ExtResource("3_tp1vc")]
-position = Vector2(1344, 960)
+position = Vector2(1881.6, 1344)
 kind = "bolha"
 height = 32.88114786148071
 half_width = 19.007118
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop39" parent="Sorted" unique_id=1431913751 instance=ExtResource("3_tp1vc")]
-position = Vector2(912, 984)
+position = Vector2(1276.8, 1377.6)
 kind = "bolha"
 height = 32.511892318725586
 half_width = 24.670954
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop40" parent="Sorted" unique_id=1393166245 instance=ExtResource("3_tp1vc")]
-position = Vector2(-960, 1200)
+position = Vector2(-1344, 1680)
 kind = "bolha"
 height = 33.5956072807312
 half_width = 20.737898
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop41" parent="Sorted" unique_id=79752998 instance=ExtResource("3_tp1vc")]
-position = Vector2(-912, 1080)
+position = Vector2(-1276.8, 1512)
 kind = "bolha"
 height = 41.238389015197754
 half_width = 22.95707
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop42" parent="Sorted" unique_id=786904906 instance=ExtResource("3_tp1vc")]
-position = Vector2(912, 552)
+position = Vector2(1276.8, 772.8)
 kind = "bolha"
 height = 42.86801815032959
 half_width = 17.45795
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="EstalactiteViscosa" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(978.2, 1101.2)
+position = Vector2(1369.5, 1541.7)
 kind = "estalactite_01"
 height = 90.0
 half_width = 32.0
 block_radius = 0.0
 
 [node name="EstalactitesRachadas" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(1210.2, 1033.4)
+position = Vector2(1694.3, 1446.8)
 kind = "estalactite_02"
 height = 84.0
 half_width = 35.0
 block_radius = 0.0
 
 [node name="ResinaAcida" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-342.5, 256.2)
+position = Vector2(-479.5, 358.7)
 kind = "resina_01"
 height = 54.0
 half_width = 46.0
@@ -345,613 +345,1754 @@ block_radius = 0.0
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=965905639]
 
 [node name="Spawn1" parent="SpawnPoints" unique_id=1837662586 instance=ExtResource("4_whu23")]
-position = Vector2(432, 1176)
+position = Vector2(604.8, 1646.4)
 enemy_id = "bolha_de_slime"
 count = 2
 
 [node name="Spawn2" parent="SpawnPoints" unique_id=1020507186 instance=ExtResource("4_whu23")]
-position = Vector2(-720, 888)
+position = Vector2(-1008, 1243.2)
 enemy_id = "slime_de_juiblex"
 count = 2
 
 [node name="Spawn3" parent="SpawnPoints" unique_id=1552226311 instance=ExtResource("4_whu23")]
-position = Vector2(528, 696)
+position = Vector2(739.2, 974.4)
 enemy_id = "cultista_thullgrime"
 
 [node name="Spawn4" parent="SpawnPoints" unique_id=1945726195 instance=ExtResource("4_whu23")]
-position = Vector2(-96, 1344)
+position = Vector2(-134.4, 1881.6)
 enemy_id = "pudim_negro"
 
 [node name="Prop1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-291.8, 1249.7)
+position = Vector2(-408.5, 1749.6)
 kind = "bolha"
 height = 39.421210289001465
 half_width = 19.577894
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop1_c2" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(509.9, 1031.5)
+position = Vector2(713.9, 1444.1)
 kind = "bolha"
 height = 39.421210289001465
 half_width = 19.577894
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop2_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(431.8, 466.2)
+position = Vector2(604.5, 652.7)
 kind = "bolha"
 height = 46.10381603240967
 half_width = 20.286762
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop3_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-259.5, 1093.1)
+position = Vector2(-363.3, 1530.3)
 kind = "bolha"
 height = 42.91611671447754
 half_width = 16.558489
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop4_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(329.8, 1267.3)
+position = Vector2(461.7, 1774.2)
 kind = "bolha"
 height = 46.437482833862305
 half_width = 20.00281
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop5_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-158.8, 832.8)
+position = Vector2(-222.3, 1165.9)
 kind = "bolha"
 height = 41.93882942199707
 half_width = 24.573063
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop5_c2" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(88.4, 425.3)
+position = Vector2(123.8, 595.4)
 kind = "bolha"
 height = 41.93882942199707
 half_width = 24.573063
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop6_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(466.7, 1509.5)
+position = Vector2(653.4, 2113.3)
 kind = "bolha"
 height = 45.25572
 half_width = 21.626223
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop7_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-102, 1384.7)
+position = Vector2(-142.8, 1938.6)
 kind = "bolha"
 height = 48.88082027435303
 half_width = 16.74827
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop8_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-563.2, 1425.3)
+position = Vector2(-788.5, 1995.4)
 kind = "bolha"
 height = 36.66116237640381
 half_width = 16.97958
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop9_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(301.3, 231.1)
+position = Vector2(421.8, 323.5)
 kind = "bolha"
 height = 49.610819816589355
 half_width = 23.76641
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop9_c2" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(708.6, 675.9)
+position = Vector2(992, 946.3)
 kind = "bolha"
 height = 49.610819816589355
 half_width = 23.76641
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop10_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(804.5, 712.6)
+position = Vector2(1126.3, 997.6)
 kind = "bolha"
 height = 36.49092674255371
 half_width = 22.88701
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop11_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(341.9, 1376.4)
+position = Vector2(478.7, 1927)
 kind = "bolha"
 height = 35.673294
 half_width = 23.229557
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop12_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(449.5, 1269.4)
+position = Vector2(629.3, 1777.2)
 kind = "bolha"
 height = 39.80032
 half_width = 20.24377
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop13_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(14.5, 1367.4)
+position = Vector2(20.3, 1914.4)
 kind = "bolha"
 height = 33.80992650985718
 half_width = 17.841808
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop13_c2" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(703.3, 1290.1)
+position = Vector2(984.6, 1806.1)
 kind = "bolha"
 height = 33.80992650985718
 half_width = 17.841808
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop14_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(459.2, 835)
+position = Vector2(642.9, 1169)
 kind = "bolha"
 height = 43.756985664367676
 half_width = 23.935638
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop15_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-439.4, 1348.8)
+position = Vector2(-615.2, 1888.3)
 kind = "bolha"
 height = 33.95949125289917
 half_width = 20.050632
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop16_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(1403, 1087.7)
+position = Vector2(1964.2, 1522.8)
 kind = "bolha"
 height = 45.3479
 half_width = 24.885231
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop17_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(383.6, 958.2)
+position = Vector2(537, 1341.5)
 kind = "bolha"
 height = 43.02588939666748
 half_width = 21.065063
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop17_c2" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(854.3, 1299)
+position = Vector2(1196, 1818.6)
 kind = "bolha"
 height = 43.02588939666748
 half_width = 21.065063
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop18_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-213.2, 491)
+position = Vector2(-298.5, 687.4)
 kind = "bolha"
 height = 36.693726
 half_width = 24.683882
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop19_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-585.1, 752.9)
+position = Vector2(-819.1, 1054.1)
 kind = "bolha"
 height = 42.631802558898926
 half_width = 17.121105
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop20_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-1188.7, 980)
+position = Vector2(-1664.2, 1372)
 kind = "bolha"
 height = 34.65304374694824
 half_width = 23.786682
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop21_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-599.8, 1507.5)
+position = Vector2(-839.7, 2110.5)
 kind = "bolha"
 height = 45.360107
 half_width = 19.411407
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop21_c2" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-555.1, 939.8)
+position = Vector2(-777.1, 1315.7)
 kind = "bolha"
 height = 45.360107
 half_width = 19.411407
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop22_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-263.2, 996.4)
+position = Vector2(-368.5, 1395)
 kind = "bolha"
 height = 33.84821891784668
 half_width = 18.900574
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop23_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-364.9, 587.7)
+position = Vector2(-510.9, 822.8)
 kind = "bolha"
 height = 32.456493
 half_width = 19.032099
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop24_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(875.7, 901.5)
+position = Vector2(1226, 1262.1)
 kind = "bolha"
 height = 46.20020866394043
 half_width = 20.50922
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop25_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-489.1, 1037)
+position = Vector2(-684.7, 1451.8)
 kind = "bolha"
 height = 36.70416
 half_width = 23.118832
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop25_c2" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-189.5, 890.5)
+position = Vector2(-265.3, 1246.7)
 kind = "bolha"
 height = 36.70416
 half_width = 23.118832
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop26_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(222.7, 858.3)
+position = Vector2(311.8, 1201.6)
 kind = "bolha"
 height = 33.36005210876465
 half_width = 17.224348
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop27_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-958.6, 859)
+position = Vector2(-1342, 1202.6)
 kind = "bolha"
 height = 48.726616
 half_width = 22.289717
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop28_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-1231.2, 1164.5)
+position = Vector2(-1723.7, 1630.3)
 kind = "bolha"
 height = 32.31115102767944
 half_width = 20.451683
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop29_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-514.6, 1540.3)
+position = Vector2(-720.4, 2156.4)
 kind = "bolha"
 height = 47.601414
 half_width = 24.023493
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop29_c2" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-113.4, 1658.7)
+position = Vector2(-158.8, 2322.2)
 kind = "bolha"
 height = 47.601414
 half_width = 24.023493
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop30_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-1364.2, 1001.4)
+position = Vector2(-1909.9, 1402)
 kind = "bolha"
 height = 46.814404
 half_width = 23.463568
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop31_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-251.8, 1303.5)
+position = Vector2(-352.5, 1824.9)
 kind = "bolha"
 height = 47.543163
 half_width = 23.714905
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop32_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(142.9, 226.6)
+position = Vector2(200.1, 317.2)
 kind = "bolha"
 height = 32.85992383956909
 half_width = 19.48677
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop33_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-838.3, 613.9)
+position = Vector2(-1173.6, 859.5)
 kind = "bolha"
 height = 44.699383
 half_width = 25.761078
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop33_c2" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-494.8, 673.4)
+position = Vector2(-692.7, 942.8)
 kind = "bolha"
 height = 44.699383
 half_width = 25.761078
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop34_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-1236.8, 923.5)
+position = Vector2(-1731.5, 1292.9)
 kind = "bolha"
 height = 46.69010639190674
 half_width = 18.317608
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop35_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(1146, 879)
+position = Vector2(1604.4, 1230.6)
 kind = "bolha"
 height = 40.57631492614746
 half_width = 21.978941
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop36_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(81.1, 1508.3)
+position = Vector2(113.5, 2111.6)
 kind = "bolha"
 height = 44.062933921813965
 half_width = 20.819912
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop37_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-507.6, 620.3)
+position = Vector2(-710.6, 868.4)
 kind = "bolha"
 height = 34.60712909698486
 half_width = 22.8666
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop37_c2" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(274.5, 611.9)
+position = Vector2(384.3, 856.7)
 kind = "bolha"
 height = 34.60712909698486
 half_width = 22.8666
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop38_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(1171.6, 811.7)
+position = Vector2(1640.2, 1136.4)
 kind = "bolha"
 height = 32.88114786148071
 half_width = 19.007118
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop39_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(588.6, 932.1)
+position = Vector2(824, 1304.9)
 kind = "bolha"
 height = 32.511892318725586
 half_width = 24.670954
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop40_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-1259, 1087)
+position = Vector2(-1762.6, 1521.8)
 kind = "bolha"
 height = 33.5956072807312
 half_width = 20.737898
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop41_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-1260.6, 872.8)
+position = Vector2(-1764.8, 1221.9)
 kind = "bolha"
 height = 41.238389015197754
 half_width = 22.95707
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop41_c2" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-1206.3, 1231.5)
+position = Vector2(-1688.8, 1724.1)
 kind = "bolha"
 height = 41.238389015197754
 half_width = 22.95707
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop42_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(461.6, 755.9)
+position = Vector2(646.2, 1058.3)
 kind = "bolha"
 height = 42.86801815032959
 half_width = 17.45795
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="EstalactiteViscosa_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-561, 472.4)
+position = Vector2(-785.4, 661.4)
 kind = "estalactite_01"
 height = 90.0
 half_width = 32.0
 block_radius = 0.0
 
 [node name="EstalactitesRachadas_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(578, 447.5)
+position = Vector2(809.2, 626.5)
 kind = "estalactite_02"
 height = 84.0
 half_width = 35.0
 block_radius = 0.0
 
 [node name="ResinaAcida_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(631.9, 1482.3)
+position = Vector2(884.7, 2075.2)
 kind = "resina_01"
 height = 54.0
 half_width = 46.0
 block_radius = 0.0
 
 [node name="ResinaAcida_c2" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(85.1, 1606.3)
+position = Vector2(119.1, 2248.8)
 kind = "resina_01"
 height = 54.0
 half_width = 46.0
 block_radius = 0.0
 
 [node name="Prop25_c1_f1" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(18.5, 224.3)
+position = Vector2(25.9, 314)
 kind = "bolha"
 height = 36.70416
 half_width = 23.118832
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="EstalactiteViscosa_f2" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(319.9, 350.4)
+position = Vector2(447.9, 490.6)
 kind = "estalactite_01"
 height = 90.0
 half_width = 32.0
 block_radius = 0.0
 
 [node name="Prop10_f3" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(230.7, 406.9)
+position = Vector2(323, 569.7)
 kind = "bolha"
 height = 36.49092674255371
 half_width = 22.88701
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop12_c1_f4" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(836.9, 588.3)
+position = Vector2(1171.7, 823.6)
 kind = "bolha"
 height = 39.80032
 half_width = 20.24377
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop27_f5" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(704.7, 534)
+position = Vector2(986.6, 747.6)
 kind = "bolha"
 height = 48.726616
 half_width = 22.289717
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop41_c1_f6" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(1329.6, 905.1)
+position = Vector2(1861.4, 1267.1)
 kind = "bolha"
 height = 41.238389015197754
 half_width = 22.95707
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop14_c1_f7" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(1450.5, 960.5)
+position = Vector2(2030.7, 1344.7)
 kind = "bolha"
 height = 43.756985664367676
 half_width = 23.935638
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop30_f8" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(1430.3, 1037)
+position = Vector2(2002.4, 1451.8)
 kind = "bolha"
 height = 46.814404
 half_width = 23.463568
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop11_f9" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-606.4, 408.8)
+position = Vector2(-849, 572.3)
 kind = "bolha"
 height = 35.673294
 half_width = 23.229557
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop28_c1_f10" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-306.8, 336.1)
+position = Vector2(-429.5, 470.5)
 kind = "bolha"
 height = 32.31115102767944
 half_width = 20.451683
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop28_c1_f11" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-72.7, 537.1)
+position = Vector2(-101.8, 751.9)
 kind = "bolha"
 height = 32.31115102767944
 half_width = 20.451683
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop14_f12" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(1030.9, 979.5)
+position = Vector2(1443.3, 1371.3)
 kind = "bolha"
 height = 43.756985664367676
 half_width = 23.935638
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop31_f13" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(1256.1, 1188)
+position = Vector2(1758.5, 1663.2)
 kind = "bolha"
 height = 47.543163
 half_width = 23.714905
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="EstalactitesRachadas_c1_f14" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(1305.4, 1114.1)
+position = Vector2(1827.6, 1559.7)
 kind = "estalactite_02"
 height = 84.0
 half_width = 35.0
 block_radius = 0.0
 
 [node name="Prop35_f15" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-978.8, 614.8)
+position = Vector2(-1370.3, 860.7)
 kind = "bolha"
 height = 40.57631492614746
 half_width = 21.978941
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop2_f16" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-614.7, 541.7)
+position = Vector2(-860.6, 758.4)
 kind = "bolha"
 height = 46.10381603240967
 half_width = 20.286762
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop19_f17" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(254.7, 984.5)
+position = Vector2(356.6, 1378.3)
 kind = "bolha"
 height = 42.631802558898926
 half_width = 17.121105
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop34_c1_f18" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(19, 840.2)
+position = Vector2(26.6, 1176.3)
 kind = "bolha"
 height = 46.69010639190674
 half_width = 18.317608
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop8_c1_f19" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(607.2, 1356.5)
+position = Vector2(850.1, 1899.1)
 kind = "bolha"
 height = 36.66116237640381
 half_width = 16.97958
 color = Color(0.27450982, 0.54901963, 0.3529412, 1)
 
 [node name="Prop22_f20" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-1266, 729.6)
+position = Vector2(-1772.4, 1021.4)
 kind = "bolha"
 height = 33.84821891784668
 half_width = 18.900574
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop37_c1_f21" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-936.1, 733.8)
+position = Vector2(-1310.5, 1027.3)
 kind = "bolha"
 height = 34.60712909698486
 half_width = 22.8666
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop39_f22" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-1035.8, 959.4)
+position = Vector2(-1450.1, 1343.2)
 kind = "bolha"
 height = 32.511892318725586
 half_width = 24.670954
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop6_f23" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-371.8, 1210.9)
+position = Vector2(-520.5, 1695.3)
 kind = "bolha"
 height = 45.25572
 half_width = 21.626223
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop10_c1_f24" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-1561.9, 951.3)
+position = Vector2(-2186.7, 1331.8)
 kind = "bolha"
 height = 36.49092674255371
 half_width = 22.88701
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop25_f25" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-1492.4, 890.7)
+position = Vector2(-2089.4, 1247)
 kind = "bolha"
 height = 36.70416
 half_width = 23.118832
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop9_f26" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-180.1, 1560.2)
+position = Vector2(-252.1, 2184.3)
 kind = "bolha"
 height = 49.610819816589355
 half_width = 23.76641
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="Prop26_c1_f27" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(-222.7, 1722.1)
+position = Vector2(-311.8, 2410.9)
 kind = "bolha"
 height = 33.36005210876465
 half_width = 17.224348
 color = Color(0.36156863, 0.60313725, 0.43058825, 1)
 
 [node name="ResinaAcida_f28" parent="Sorted" instance=ExtResource("3_tp1vc")]
-position = Vector2(92.4, 1766.8)
+position = Vector2(129.4, 2473.5)
+kind = "resina_01"
+height = 54.0
+half_width = 46.0
+block_radius = 0.0
+
+[node name="Prop1_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(111.4, 1515.7)
+kind = "bolha"
+height = 39.421210289001465
+half_width = 19.577894
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop1_c2_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(349.4, 1824.5)
+kind = "bolha"
+height = 39.421210289001465
+half_width = 19.577894
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop2_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(412.6, 706.2)
+kind = "bolha"
+height = 46.10381603240967
+half_width = 20.286762
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop3_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-203.1, 1402.1)
+kind = "bolha"
+height = 42.91611671447754
+half_width = 16.558489
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop4_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-188.3, 1621.2)
+kind = "bolha"
+height = 46.437482833862305
+half_width = 20.00281
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop5_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-158.8, 1120.8)
+kind = "bolha"
+height = 41.93882942199707
+half_width = 24.573063
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop5_c2_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(88.4, 713.3)
+kind = "bolha"
+height = 41.93882942199707
+half_width = 24.573063
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop6_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(524.3, 2056.7)
+kind = "bolha"
+height = 45.25572
+half_width = 21.626223
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop7_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-255.6, 1999.1)
+kind = "bolha"
+height = 48.88082027435303
+half_width = 16.74827
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop8_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-659.2, 1972.5)
+kind = "bolha"
+height = 36.66116237640381
+half_width = 16.97958
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop9_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-400.3, 275.2)
+kind = "bolha"
+height = 49.610819816589355
+half_width = 23.76641
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop9_c2_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(262.3, 252.3)
+kind = "bolha"
+height = 49.610819816589355
+half_width = 23.76641
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop10_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-77.1, 1204.9)
+kind = "bolha"
+height = 36.49092674255371
+half_width = 22.88701
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop11_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(668.3, 1846.8)
+kind = "bolha"
+height = 35.673294
+half_width = 23.229557
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop12_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(564.7, 1864.6)
+kind = "bolha"
+height = 39.80032
+half_width = 20.24377
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop13_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(718, 2233)
+kind = "bolha"
+height = 33.80992650985718
+half_width = 17.841808
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop13_c2_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(151.4, 1966.8)
+kind = "bolha"
+height = 33.80992650985718
+half_width = 17.841808
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop14_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(747.2, 1228.6)
+kind = "bolha"
+height = 43.756985664367676
+half_width = 23.935638
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop15_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-661.7, 1733.9)
+kind = "bolha"
+height = 33.95949125289917
+half_width = 20.050632
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop16_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(1940.9, 1221.5)
+kind = "bolha"
+height = 45.3479
+half_width = 24.885231
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop17_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(530.9, 1733.6)
+kind = "bolha"
+height = 43.02588939666748
+half_width = 21.065063
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop17_c2_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(1123.4, 1907.7)
+kind = "bolha"
+height = 43.02588939666748
+half_width = 21.065063
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop18_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-501.2, 750.2)
+kind = "bolha"
+height = 36.693726
+half_width = 24.683882
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop19_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-82.6, 621.3)
+kind = "bolha"
+height = 42.631802558898926
+half_width = 17.121105
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop20_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-1873.8, 1288.8)
+kind = "bolha"
+height = 34.65304374694824
+half_width = 23.786682
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop21_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-1417.3, 1834.1)
+kind = "bolha"
+height = 45.360107
+half_width = 19.411407
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop21_c2_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-750.8, 1859.8)
+kind = "bolha"
+height = 45.360107
+half_width = 19.411407
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop22_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-551.2, 1447.6)
+kind = "bolha"
+height = 33.84821891784668
+half_width = 18.900574
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop23_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-460.9, 885.3)
+kind = "bolha"
+height = 32.456493
+half_width = 19.032099
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop24_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(1694.6, 915.4)
+kind = "bolha"
+height = 46.20020866394043
+half_width = 20.50922
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop25_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-469.9, 1488.2)
+kind = "bolha"
+height = 36.70416
+half_width = 23.118832
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop25_c2_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(390.8, 1614.7)
+kind = "bolha"
+height = 36.70416
+half_width = 23.118832
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop26_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(857.4, 1423)
+kind = "bolha"
+height = 33.36005210876465
+half_width = 17.224348
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop27_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-508.1, 1399.2)
+kind = "bolha"
+height = 48.726616
+half_width = 22.289717
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop28_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-1807.2, 1586.9)
+kind = "bolha"
+height = 32.31115102767944
+half_width = 20.451683
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop29_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(241, 2049.5)
+kind = "bolha"
+height = 47.601414
+half_width = 24.023493
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop29_c2_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-151.8, 2253.9)
+kind = "bolha"
+height = 47.601414
+half_width = 24.023493
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop30_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-1385.2, 1575.3)
+kind = "bolha"
+height = 46.814404
+half_width = 23.463568
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop31_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-1375.8, 1883.6)
+kind = "bolha"
+height = 47.543163
+half_width = 23.714905
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop32_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-66.9, 543.6)
+kind = "bolha"
+height = 32.85992383956909
+half_width = 19.48677
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop33_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-1107.1, 940.3)
+kind = "bolha"
+height = 44.699383
+half_width = 25.761078
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop33_c2_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-763.6, 999.8)
+kind = "bolha"
+height = 44.699383
+half_width = 25.761078
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop34_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(2049.3, 1126.2)
+kind = "bolha"
+height = 46.69010639190674
+half_width = 18.317608
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop35_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(1683.6, 1186.2)
+kind = "bolha"
+height = 40.57631492614746
+half_width = 21.978941
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop36_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(486.2, 2180.5)
+kind = "bolha"
+height = 44.062933921813965
+half_width = 20.819912
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop37_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-603.6, 879.5)
+kind = "bolha"
+height = 34.60712909698486
+half_width = 22.8666
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop37_c2_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(178.5, 871.1)
+kind = "bolha"
+height = 34.60712909698486
+half_width = 22.8666
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop38_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(2210.9, 1509.1)
+kind = "bolha"
+height = 32.88114786148071
+half_width = 19.007118
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop39_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(953.4, 1325.7)
+kind = "bolha"
+height = 32.511892318725586
+half_width = 24.670954
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop40_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-1643, 1567)
+kind = "bolha"
+height = 33.5956072807312
+half_width = 20.737898
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop41_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-1669.8, 1477.8)
+kind = "bolha"
+height = 41.238389015197754
+half_width = 22.95707
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop41_c2_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-1571.1, 1663.5)
+kind = "bolha"
+height = 41.238389015197754
+half_width = 22.95707
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop42_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(826.4, 976.7)
+kind = "bolha"
+height = 42.86801815032959
+half_width = 17.45795
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="EstalactiteViscosa_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(1561.1, 1414.6)
+kind = "estalactite_01"
+height = 90.0
+half_width = 32.0
+block_radius = 0.0
+
+[node name="EstalactitesRachadas_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(1727.9, 1594.1)
+kind = "estalactite_02"
+height = 84.0
+half_width = 35.0
+block_radius = 0.0
+
+[node name="ResinaAcida_c1_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-275.4, 555.6)
+kind = "resina_01"
+height = 54.0
+half_width = 46.0
+block_radius = 0.0
+
+[node name="ResinaAcida_c2_2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-716.6, 558)
+kind = "resina_01"
+height = 54.0
+half_width = 46.0
+block_radius = 0.0
+
+[node name="Prop1_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(141.2, 1644.5)
+kind = "bolha"
+height = 39.421210289001465
+half_width = 19.577894
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop1_c2_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(845.4, 1578.8)
+kind = "bolha"
+height = 39.421210289001465
+half_width = 19.577894
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop2_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(886.9, 583.9)
+kind = "bolha"
+height = 46.10381603240967
+half_width = 20.286762
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop3_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-908.6, 1491)
+kind = "bolha"
+height = 42.91611671447754
+half_width = 16.558489
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop3_c1_c2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(194.7, 1427.3)
+kind = "bolha"
+height = 42.91611671447754
+half_width = 16.558489
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop4_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(206.4, 1821.3)
+kind = "bolha"
+height = 46.437482833862305
+half_width = 20.00281
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop5_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(106.2, 1057.1)
+kind = "bolha"
+height = 41.93882942199707
+half_width = 24.573063
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop5_c2_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-350.7, 764.6)
+kind = "bolha"
+height = 41.93882942199707
+half_width = 24.573063
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop6_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(577.8, 2298.8)
+kind = "bolha"
+height = 45.25572
+half_width = 21.626223
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop6_c1_c2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(361.9, 2270.5)
+kind = "bolha"
+height = 45.25572
+half_width = 21.626223
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop7_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-520.6, 1763.9)
+kind = "bolha"
+height = 48.88082027435303
+half_width = 16.74827
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop8_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-262.7, 1868.1)
+kind = "bolha"
+height = 36.66116237640381
+half_width = 16.97958
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop9_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(7.1, 427.4)
+kind = "bolha"
+height = 49.610819816589355
+half_width = 23.76641
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop9_c2_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(1010.7, 1147)
+kind = "bolha"
+height = 49.610819816589355
+half_width = 23.76641
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop9_c2_c2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(881.9, 1202.5)
+kind = "bolha"
+height = 49.610819816589355
+half_width = 23.76641
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop10_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(763.6, 1073.2)
+kind = "bolha"
+height = 36.49092674255371
+half_width = 22.88701
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop11_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(999.5, 1859.4)
+kind = "bolha"
+height = 35.673294
+half_width = 23.229557
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop12_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(921.4, 1524.4)
+kind = "bolha"
+height = 39.80032
+half_width = 20.24377
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop13_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(108.3, 2055.8)
+kind = "bolha"
+height = 33.80992650985718
+half_width = 17.841808
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop13_c1_c2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-236.2, 1771.5)
+kind = "bolha"
+height = 33.80992650985718
+half_width = 17.841808
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop13_c2_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(992.1, 1998.3)
+kind = "bolha"
+height = 33.80992650985718
+half_width = 17.841808
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop14_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(431.8, 1000.8)
+kind = "bolha"
+height = 43.756985664367676
+half_width = 23.935638
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop15_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-268.1, 1674.5)
+kind = "bolha"
+height = 33.95949125289917
+half_width = 20.050632
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop16_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(1630.6, 1295.6)
+kind = "bolha"
+height = 45.3479
+half_width = 24.885231
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop16_c1_c2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(1795.5, 1717.3)
+kind = "bolha"
+height = 45.3479
+half_width = 24.885231
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop17_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(441.2, 1075.8)
+kind = "bolha"
+height = 43.02588939666748
+half_width = 21.065063
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop17_c2_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(1207.2, 1954.8)
+kind = "bolha"
+height = 43.02588939666748
+half_width = 21.065063
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop18_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-690.3, 753.8)
+kind = "bolha"
+height = 36.693726
+half_width = 24.683882
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop19_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-707.1, 1212.1)
+kind = "bolha"
+height = 42.631802558898926
+half_width = 17.121105
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop19_c1_c2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-1218, 1153.2)
+kind = "bolha"
+height = 42.631802558898926
+half_width = 17.121105
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop20_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-2132, 1159.7)
+kind = "bolha"
+height = 34.65304374694824
+half_width = 23.786682
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop21_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-496.7, 1890.8)
+kind = "bolha"
+height = 45.360107
+half_width = 19.411407
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop21_c2_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-566.6, 1582.6)
+kind = "bolha"
+height = 45.360107
+half_width = 19.411407
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop22_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-796.1, 1627.5)
+kind = "bolha"
+height = 33.84821891784668
+half_width = 18.900574
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop22_c1_c2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-48.9, 1495)
+kind = "bolha"
+height = 33.84821891784668
+half_width = 18.900574
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop23_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-251.5, 940.6)
+kind = "bolha"
+height = 32.456493
+half_width = 19.032099
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop24_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(1362.7, 1110)
+kind = "bolha"
+height = 46.20020866394043
+half_width = 20.50922
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop25_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-1050.8, 1277.7)
+kind = "bolha"
+height = 36.70416
+half_width = 23.118832
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop25_c2_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(99.8, 1137.8)
+kind = "bolha"
+height = 36.70416
+half_width = 23.118832
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop25_c2_c2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-462.3, 1045)
+kind = "bolha"
+height = 36.70416
+half_width = 23.118832
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop26_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(429.1, 1499.9)
+kind = "bolha"
+height = 33.36005210876465
+half_width = 17.224348
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop27_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-721.7, 1154.1)
+kind = "bolha"
+height = 48.726616
+half_width = 22.289717
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop28_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-1278.7, 1598.4)
+kind = "bolha"
+height = 32.31115102767944
+half_width = 20.451683
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop29_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-1016, 1893.1)
+kind = "bolha"
+height = 47.601414
+half_width = 24.023493
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop29_c1_c2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-476.4, 2236.3)
+kind = "bolha"
+height = 47.601414
+half_width = 24.023493
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop29_c2_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(262.7, 2253.3)
+kind = "bolha"
+height = 47.601414
+half_width = 24.023493
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop30_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-1649.1, 1194.8)
+kind = "bolha"
+height = 46.814404
+half_width = 23.463568
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop31_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-79.2, 2027.9)
+kind = "bolha"
+height = 47.543163
+half_width = 23.714905
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop32_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(556.2, 357.2)
+kind = "bolha"
+height = 32.85992383956909
+half_width = 19.48677
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop32_c1_c2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(624.1, 438.9)
+kind = "bolha"
+height = 32.85992383956909
+half_width = 19.48677
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop33_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-1563, 911.8)
+kind = "bolha"
+height = 44.699383
+half_width = 25.761078
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop33_c2_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-1014.9, 845.4)
+kind = "bolha"
+height = 44.699383
+half_width = 25.761078
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop34_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-1428.4, 1173)
+kind = "bolha"
+height = 46.69010639190674
+half_width = 18.317608
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop35_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(1563.4, 1544.1)
+kind = "bolha"
+height = 40.57631492614746
+half_width = 21.978941
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop35_c1_c2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(1294.7, 1059.5)
+kind = "bolha"
+height = 40.57631492614746
+half_width = 21.978941
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop36_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(287.4, 1884.6)
+kind = "bolha"
+height = 44.062933921813965
+half_width = 20.819912
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop37_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-1327.8, 920.1)
+kind = "bolha"
+height = 34.60712909698486
+half_width = 22.8666
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop37_c2_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(334.2, 1075.9)
+kind = "bolha"
+height = 34.60712909698486
+half_width = 22.8666
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop38_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(1738.3, 1346.9)
+kind = "bolha"
+height = 32.88114786148071
+half_width = 19.007118
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop38_c1_c2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(1451.6, 978.3)
+kind = "bolha"
+height = 32.88114786148071
+half_width = 19.007118
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop39_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(449, 1551.4)
+kind = "bolha"
+height = 32.511892318725586
+half_width = 24.670954
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop40_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-1613.6, 1294.9)
+kind = "bolha"
+height = 33.5956072807312
+half_width = 20.737898
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop41_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-2334.4, 1324)
+kind = "bolha"
+height = 41.238389015197754
+half_width = 22.95707
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop41_c2_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-1978.4, 1607.3)
+kind = "bolha"
+height = 41.238389015197754
+half_width = 22.95707
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop41_c2_c2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-1519.6, 1856.2)
+kind = "bolha"
+height = 41.238389015197754
+half_width = 22.95707
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop42_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(1168.5, 1096.3)
+kind = "bolha"
+height = 42.86801815032959
+half_width = 17.45795
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="EstalactiteViscosa_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-1246.5, 819.7)
+kind = "estalactite_01"
+height = 90.0
+half_width = 32.0
+block_radius = 0.0
+
+[node name="EstalactitesRachadas_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(591.3, 921)
+kind = "estalactite_02"
+height = 84.0
+half_width = 35.0
+block_radius = 0.0
+
+[node name="ResinaAcida_c1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(302.2, 2112.8)
+kind = "resina_01"
+height = 54.0
+half_width = 46.0
+block_radius = 0.0
+
+[node name="ResinaAcida_c1_c2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(679.8, 1967.5)
+kind = "resina_01"
+height = 54.0
+half_width = 46.0
+block_radius = 0.0
+
+[node name="ResinaAcida_c2_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(336.8, 2385.3)
+kind = "resina_01"
+height = 54.0
+half_width = 46.0
+block_radius = 0.0
+
+[node name="Prop25_c1_f1_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-277.1, 254.7)
+kind = "bolha"
+height = 36.70416
+half_width = 23.118832
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="EstalactiteViscosa_f2_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(159.3, 384.2)
+kind = "estalactite_01"
+height = 90.0
+half_width = 32.0
+block_radius = 0.0
+
+[node name="Prop10_f3_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(780.7, 516.7)
+kind = "bolha"
+height = 36.49092674255371
+half_width = 22.88701
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop10_f3_c2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(446, 768.8)
+kind = "bolha"
+height = 36.49092674255371
+half_width = 22.88701
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop12_c1_f4_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(785.7, 923.2)
+kind = "bolha"
+height = 39.80032
+half_width = 20.24377
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop27_f5_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(602.3, 749.5)
+kind = "bolha"
+height = 48.726616
+half_width = 22.289717
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop41_c1_f6_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(2094.7, 1421.3)
+kind = "bolha"
+height = 41.238389015197754
+half_width = 22.95707
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop14_c1_f7_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(1471.7, 1244.7)
+kind = "bolha"
+height = 43.756985664367676
+half_width = 23.935638
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop14_c1_f7_c2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(1849.7, 1504)
+kind = "bolha"
+height = 43.756985664367676
+half_width = 23.935638
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop30_f8_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(2377.5, 1366.8)
+kind = "bolha"
+height = 46.814404
+half_width = 23.463568
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop11_f9_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-601.3, 376.9)
+kind = "bolha"
+height = 35.673294
+half_width = 23.229557
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop28_c1_f10_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-210.1, 307.3)
+kind = "bolha"
+height = 32.31115102767944
+half_width = 20.451683
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop28_c1_f11_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(312.5, 660.3)
+kind = "bolha"
+height = 32.31115102767944
+half_width = 20.451683
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop28_c1_f11_c2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-238.6, 623.9)
+kind = "bolha"
+height = 32.31115102767944
+half_width = 20.451683
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop14_f12_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(1565.2, 1644.2)
+kind = "bolha"
+height = 43.756985664367676
+half_width = 23.935638
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop31_f13_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(2057.1, 1578.3)
+kind = "bolha"
+height = 47.543163
+half_width = 23.714905
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="EstalactitesRachadas_c1_f14_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(1510.2, 1460.3)
+kind = "estalactite_02"
+height = 84.0
+half_width = 35.0
+block_radius = 0.0
+
+[node name="Prop35_f15_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-1005, 643.3)
+kind = "bolha"
+height = 40.57631492614746
+half_width = 21.978941
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop35_f15_c2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-1059.7, 719.9)
+kind = "bolha"
+height = 40.57631492614746
+half_width = 21.978941
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop2_f16_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-430, 983.1)
+kind = "bolha"
+height = 46.10381603240967
+half_width = 20.286762
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop19_f17_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(272.5, 1556.9)
+kind = "bolha"
+height = 42.631802558898926
+half_width = 17.121105
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop34_c1_f18_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-248.3, 1460.5)
+kind = "bolha"
+height = 46.69010639190674
+half_width = 18.317608
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop8_c1_f19_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(1165.7, 1750)
+kind = "bolha"
+height = 36.66116237640381
+half_width = 16.97958
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop8_c1_f19_c2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(441.7, 1870.2)
+kind = "bolha"
+height = 36.66116237640381
+half_width = 16.97958
+color = Color(0.27450982, 0.54901963, 0.3529412, 1)
+
+[node name="Prop22_f20_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-1464.9, 1071.7)
+kind = "bolha"
+height = 33.84821891784668
+half_width = 18.900574
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop37_c1_f21_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-1735.2, 1158)
+kind = "bolha"
+height = 34.60712909698486
+half_width = 22.8666
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop39_f22_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-1144.7, 1574.7)
+kind = "bolha"
+height = 32.511892318725586
+half_width = 24.670954
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop6_f23_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-127.9, 1674.3)
+kind = "bolha"
+height = 45.25572
+half_width = 21.626223
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop6_f23_c2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-24.9, 1745.6)
+kind = "bolha"
+height = 45.25572
+half_width = 21.626223
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop10_c1_f24_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-1839.6, 1465.2)
+kind = "bolha"
+height = 36.49092674255371
+half_width = 22.88701
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop25_f25_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-2185.7, 1408.9)
+kind = "bolha"
+height = 36.70416
+half_width = 23.118832
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop9_f26_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-266.4, 2474.5)
+kind = "bolha"
+height = 49.610819816589355
+half_width = 23.76641
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop26_c1_f27_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(266.3, 2481.7)
+kind = "bolha"
+height = 33.36005210876465
+half_width = 17.224348
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="Prop26_c1_f27_c2" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(-535.6, 2285.6)
+kind = "bolha"
+height = 33.36005210876465
+half_width = 17.224348
+color = Color(0.36156863, 0.60313725, 0.43058825, 1)
+
+[node name="ResinaAcida_f28_c1" parent="Sorted" instance=ExtResource("3_tp1vc")]
+position = Vector2(237.2, 2332.4)
 kind = "resina_01"
 height = 54.0
 half_width = 46.0

@@ -1,14 +1,16 @@
 extends SceneTree
-## MEC-012: amplia as cenas de fase de 40x40 para 60x60 (fator 1,5).
+## MEC-012: amplia as cenas de fase de 40x40 para 60x60 (fator 1,5). SPEC-152: aceita `de`, `para` e a lista de fases
+## (ex.: `-- 60 84 shedaklah molor durao`, fator 1,4); sem argumentos mantém 40 -> 60 em todas as fases.
 ##  - multiplica a posição de todos os nós em Sorted (herói e props) e SpawnPoints pelo fator (a projeção é linear);
 ##  - define map_size = 60x60 no nó Ground;
 ##  - acrescenta cópias determinísticas de props (1,25 por prop original) para manter a densidade por tile,
 ##    evitando montanhas, água do Estige, o ponto inicial e outros props.
-## É idempotente: cena que já tem map_size no Ground é ignorada.
-## Uso: godot --headless --path . -s tools/enlarge_stage_maps.gd
+## É idempotente: cena cujo map_size já é o novo é ignorada; a que não está no tamanho `de` também.
+## Uso: godot --headless --path . -s tools/enlarge_stage_maps.gd [-- <de> <para> <fase>...]
 
-const FACTOR := 1.5
-const NEW_SIZE := 60
+var FACTOR := 1.5        # posição nova = antiga x (para / de)
+var NEW_SIZE := 60
+var FROM_SIZE := 40
 const MIN_GAP := 2.3
 
 func _fmt(v: float) -> String:
@@ -25,9 +27,17 @@ func _frac(h: int, salt: int) -> float:
 	return float(x % 10000) / 10000.0
 
 func _init() -> void:
-	TerrainLayout.scale = FACTOR
+	var args := OS.get_cmdline_user_args()
+	var only: Array = []
+	if args.size() >= 3:
+		FROM_SIZE = int(args[0])
+		NEW_SIZE = int(args[1])
+		only = Array(args).slice(2)
+	FACTOR = float(NEW_SIZE) / float(FROM_SIZE)
+	TerrainLayout.scale = float(NEW_SIZE) / 40.0  # o layout de terreno foi desenhado para 40x40
 	for sid in Data.table("stages").keys():
-		_convert(String(sid))
+		if only.is_empty() or only.has(String(sid)):
+			_convert(String(sid))
 	quit()
 
 func _convert(sid: String) -> void:
@@ -57,8 +67,13 @@ func _convert(sid: String) -> void:
 			out.append(line)
 			continue
 		if in_ground and line.begins_with("map_size"):
-			print("%s: já convertida, ignorada" % sid)
-			return
+			var current := RegEx.create_from_string("Vector2i\\((\\d+)").search(line)
+			var side := int(current.get_string(1)) if current != null else 0
+			if side != FROM_SIZE:
+				print("%s: mapa %d, esperado %d (ou já convertida); ignorada" % [sid, side, FROM_SIZE])
+				return
+			out.append("map_size = Vector2i(%d, %d)" % [NEW_SIZE, NEW_SIZE])
+			continue
 		var pm := re_pos.search(line)
 		if pm != null and (cur_parent == "Sorted" or cur_parent == "SpawnPoints"):
 			var p := Vector2(float(pm.get_string(1)), float(pm.get_string(2))) * FACTOR
@@ -71,12 +86,14 @@ func _convert(sid: String) -> void:
 		out.append(line)
 		if not cur_prop.is_empty() and line != "":
 			cur_prop.body.append(line)
-		if in_ground and line.begins_with("script = "):
+		if in_ground and line.begins_with("script = ") and FROM_SIZE == 40:
 			out.append("map_size = Vector2i(%d, %d)" % [NEW_SIZE, NEW_SIZE])
 	# cópias de props
 	var placed: Array = []
+	var used_names := {}
 	for pr in props:
 		placed.append(Iso.to_ground(pr.pos))
+		used_names[String(pr.name)] = true
 	var hero_start := Vector2(NEW_SIZE, NEW_SIZE) * 0.5
 	var mountains := TerrainLayout.mountain_anchors(sid)
 	var copies := 0
@@ -111,7 +128,13 @@ func _convert(sid: String) -> void:
 				var s := Iso.to_screen(g)
 				var header := String(pr.header)
 				var hm := RegEx.create_from_string(" unique_id=[0-9]+").sub(header, "", true)
-				hm = hm.replace("name=\"%s\"" % pr.name, "name=\"%s_c%d\"" % [pr.name, k + 1])
+				var copy_name := "%s_c%d" % [pr.name, k + 1]
+				var bump := 2
+				while used_names.has(copy_name):  # SPEC-152: reconversão não pode repetir nome de cópia anterior
+					copy_name = "%s_c%d_%d" % [pr.name, k + 1, bump]
+					bump += 1
+				used_names[copy_name] = true
+				hm = hm.replace("name=\"%s\"" % pr.name, "name=\"%s\"" % copy_name)
 				extra.append("")
 				extra.append(hm)
 				for bl in pr.body:

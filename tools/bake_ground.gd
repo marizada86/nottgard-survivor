@@ -1,9 +1,10 @@
 extends SceneTree
 ## Assa o chão de um bioma em uma única imagem isométrica contínua (PLAN-054, F2).
 ## O desenho é feito em coordenadas de mundo (tiles), então lajes, terra e musgo não têm costura entre células.
-## Uso: godot --headless --path . -s tools/bake_ground.gd -- <dagruve|docas|shedaklah|molor|durao|feng_tu|shendilavri|goranthis|pilares> <saida.png>
+## Uso: godot --headless --path . -s tools/bake_ground.gd -- <dagruve|docas|shedaklah|molor|durao|feng_tu|shendilavri|goranthis|pilares> <saida.png> [lado]
+## `lado` (SPEC-152) é o lado do mapa em tiles; 60 por padrão. O level design foi desenhado em 60x60 e é escalado por lado/60.
 
-const SIZE := 60
+var SIZE := 60
 const HALF_W := 32  # TILE_W / 2
 const HALF_H := 16  # TILE_H / 2
 
@@ -21,10 +22,12 @@ var _grain := FastNoiseLite.new()
 
 func _init() -> void:
 	var args := OS.get_cmdline_user_args()
-	if args.size() != 2 or not (["dagruve", "docas"] + LAYOUT_STAGES).has(args[0]):
-		push_error("Uso: bake_ground.gd <dagruve> <saida.png>")
+	if args.size() < 2 or args.size() > 3 or not (["dagruve", "docas"] + LAYOUT_STAGES).has(args[0]):
+		push_error("Uso: bake_ground.gd <fase> <saida.png> [lado]")
 		quit(1)
 		return
+	if args.size() == 3:
+		SIZE = int(args[2])
 	_setup_noise()
 	var biome := String(args[0])
 	if LAYOUT_STAGES.has(biome):
@@ -382,13 +385,14 @@ func _apply_zones(stage: String) -> void:
 	if chao.is_empty():
 		return
 	var cells := SIZE * GRID_RES
+	var design_scale := float(SIZE) / 60.0
 	for j in cells:
 		for i in cells:
 			var idx := j * cells + i
 			var base := String(_grid[idx])
 			if WATER.has(base) or base.ends_with("wall") or base.ends_with("foundation") or base == "slope":
 				continue
-			var p := Vector2((i + 0.5) / GRID_RES, (j + 0.5) / GRID_RES)
+			var p := Vector2((i + 0.5) / GRID_RES, (j + 0.5) / GRID_RES) / design_scale  # coordenadas do desenho (60x60)
 			var m := base
 			for dom in chao.get("dominancia", []):
 				var v: float = p.x if String(dom.axis) == "x" else p.y
