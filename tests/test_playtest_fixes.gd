@@ -14,6 +14,7 @@ func run() -> Array:
 	out.append_array(_topo())
 	out.append_array(_estige())
 	out.append_array(_armas())
+	out.append_array(_primeiro_bau())
 	return out
 
 ## B-001: C fecha a ficha; a ficha abre nas ofertas; a nota (F5) prende a HUD.
@@ -187,5 +188,30 @@ func _armas() -> Array:
 					control += 1
 		if control == 0:
 			out.append("%s: controle falhou, a base nunca foi oferecida sem a evolução" % base)
+	return out
+
+## B-003 S-009: o primeiro interativo da fase só surge depois de 45 s e é baú (IN-065).
+func _primeiro_bau() -> Array:
+	var out: Array = []
+	if Battle.FIRST_INTERACTION_SECONDS < 40.0:
+		out.append("o primeiro interativo deve demorar pelo menos 40 s (hoje %.0f)" % Battle.FIRST_INTERACTION_SECONDS)
+	var b := Battle.new(3, "sylas", "dagruve")
+	b.stage.waves = []
+	b.stage.elites = []
+	b.stage.duration = 99999
+	b._breakable_t = 99999.0
+	if not is_equal_approx(b._inter_t, Battle.FIRST_INTERACTION_SECONDS):
+		out.append("load_stage deve armar o primeiro interativo para %.0f s (achei %.1f)" % [Battle.FIRST_INTERACTION_SECONDS, b._inter_t])
+	var floating := func(): return b.interactions.filter(func(i): return not i.used and not bool(i.get("fixed", false)) and i.kind != "portal")
+	var before: int = floating.call().size()
+	for i in int((Battle.FIRST_INTERACTION_SECONDS - 2.0) / 0.1):
+		b.step(Vector2.ZERO, 0.1)
+	if floating.call().size() != before:
+		out.append("surgiu um interativo antes de %.0f s" % Battle.FIRST_INTERACTION_SECONDS)
+	for i in 40:
+		b.step(Vector2.ZERO, 0.1)
+	var spawned: Array = floating.call()
+	if spawned.size() != before + 1 or String(spawned.back().kind) != "chest":
+		out.append("depois de %.0f s o primeiro interativo deve ser um baú (achei %s)" % [Battle.FIRST_INTERACTION_SECONDS, spawned.map(func(i): return i.kind)])
 	return out
 

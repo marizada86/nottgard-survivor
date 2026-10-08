@@ -11,6 +11,7 @@ enum Aim { AUTO, MOUSE }
 const ENEMY_ATK_RANGE := 0.95
 const ENEMY_ATK_CD := 1.3
 const SPAWN_SLOW := 1.35   # multiplica o intervalo das ondas (ritmo lento)
+const FIRST_INTERACTION_SECONDS := 45.0   # SPEC-147 (IN-065): o primeiro interativo (sempre baú) só surge depois disso; era 4 s
 const HIT_INVULN := 0.1
 ## Revisão das curas: a barreira que nasce do excesso de cura (Bênção da Cura, Resto da Tarn) vai até esta fração do PV máximo (antes 0,25).
 const OVERHEAL_BARRIER_CAP := 0.10
@@ -296,7 +297,7 @@ func load_stage(stage_key: String) -> void:
 	_horde_acc = 0.0
 	_stage_events_done.clear()
 	_awake_elite_t = 0.0
-	_inter_t = 4.0
+	_inter_t = FIRST_INTERACTION_SECONDS
 	_first_inter = true
 	_breakable_t = 20.0 + rng.randf() * 10.0
 	_amb_puddle = 9.0
