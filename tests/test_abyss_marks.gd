@@ -412,7 +412,7 @@ func _alive(out: Array) -> void:
 		out.append("o dado da fase não pode ser alterado (a regra é copiada)")
 
 func _truce(out: Array) -> void:
-	var kinds := ["loja", "ferreiro", "curandeiro"]
+	var kinds := ["loja", "ferreiro", "arcanista", "curandeiro"]
 	for marks in [{}, {"tregua": 1}]:
 		var b := _bat(marks, "docas")
 		b._first_inter = false

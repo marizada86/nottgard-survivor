@@ -412,6 +412,7 @@ func _draw_over() -> void:
 			# Eventos com PNG oficial em assets/interactions/<tipo>.png; sem PNG (doacao, aposta, ampulheta) o quadrado colorido com rótulo é o provisório
 			"loja": col = Color(1.0, 0.85, 0.3); label = "loja [E/oeste]"; asset = "loja"
 			"ferreiro": col = Color(1.0, 0.5, 0.2); label = ("%s [E/oeste]" % String(it.name).to_lower()) if String(it.get("name", "")) != "" else "ferreiro [E/oeste]"; asset = "ferreiro"
+			"arcanista": col = Color(0.6, 0.45, 1.0); label = "arcanista [E/oeste]"; asset = "arcanista"  # SPEC-149: sem PNG (ART-041), vale o losango roxo provisório
 			"curandeiro": col = Color(0.4, 1.0, 0.5); label = "curandeiro [E/oeste]"; asset = "curandeiro"
 			"doacao": col = Color(0.75, 0.45, 1.0); label = "altar da doação [E/oeste]"; asset = "doacao"
 			"aposta": col = Color(0.95, 0.8, 0.3); label = "mesa de aposta [E/oeste]"; asset = "aposta"

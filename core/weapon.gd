@@ -18,6 +18,13 @@ static func make(weapon_id: String, lvl: int = 1) -> Weapon:
 	w.timer = 0.4
 	return w
 
+## SPEC-149 (MEC-041): magia é o que o Arcanista melhora; arma é o que o ferreiro melhora. `spell` explícito no JSON manda;
+## sem ele, é magia tudo que não é corpo a corpo e todo ataque de dano mágico (inclui a Estocada Mística).
+static func is_spell(d: Dictionary) -> bool:
+	if d.has("spell"):
+		return bool(d.spell)
+	return String(d.get("kind", "melee")) != "melee" or String(d.get("dtype", "")) == "magico"
+
 func max_level() -> int:
 	return MAX_LEVEL if not def.get("levels", []).is_empty() else 1
 

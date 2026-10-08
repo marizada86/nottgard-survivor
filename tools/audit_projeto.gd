@@ -110,7 +110,7 @@ func _init() -> void:
 			if not enemies.has(String(el.id)):
 				_e("stages", "%s: elite inexistente %s" % [k, el.id])
 		for ik in s.get("interactions", {}):
-			if not (String(ik) in ["chest", "fountain", "altar", "ritual", "loja", "ferreiro", "curandeiro", "ampulheta", "doacao", "aposta"]):
+			if not (String(ik) in ["chest", "fountain", "altar", "ritual", "loja", "ferreiro", "arcanista", "curandeiro", "ampulheta", "doacao", "aposta"]):
 				_w("stages", "%s: interação desconhecida %s" % [k, ik])
 		for t in ["boss_phases", "boss_presentations"]:
 			if enemies.has(String(s.get("boss", ""))) and not _t(t).has(String(s.boss)):

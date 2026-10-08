@@ -39,7 +39,7 @@ const AFFIX_LEECH := 0.2
 const AFFIX_SUMMON_EVERY := 8.0
 const AFFIX_SUMMON_N := 3
 const AFFIX_FIRST_AFFIXED_STAGE := 2   # `order` da fase em que os afixos novos começam (Shedaklah)
-const TRUCE_KINDS := ["loja", "ferreiro", "curandeiro"]   # SPEC-143: o que a marca Sem trégua tira da run
+const TRUCE_KINDS := ["loja", "ferreiro", "arcanista", "curandeiro"]   # SPEC-143: o que a marca Sem trégua tira da run
 const AFFIX_BOSS_FIRST_STAGE := 4      # chefe afixado a partir da quinta fase (Durao)
 ## Cada bioma tem seu próprio quebrável temático, alinhado à família de prop
 ## já usada na fase (ART-PROMPTS-024). Candelabro/caixote continuam
@@ -170,7 +170,7 @@ var _mk_heal := 1.0
 var _mk_alive := 1.0       # Abismo vivo: a regra do andar acontece mais vezes
 var _mk_boss := 1.0        # Chefe desperto: multiplicador de PV
 var _mk_elites := 0        # Elites despertos: afixos a mais por elite
-var _mk_truce := false     # Sem trégua: sem loja, ferreiro nem curandeiro
+var _mk_truce := false     # Sem trégua: sem loja, ferreiro, arcanista nem curandeiro
 var abyss_rng := RandomNumberGenerator.new()  # RNG própria das marcas novas: não desloca a da batalha
 var _awake_elite_t := 0.0
 var stage_rule: Dictionary = {}
@@ -1894,7 +1894,7 @@ func interact() -> bool:
 	var best: Dictionary = {}
 	var bd := 1.6
 	for it in interactions:
-		if not it.used and time - float(it.get("born_at", 0.0)) >= 0.65 and it.kind in ["altar", "ritual", "portal", "loja", "ferreiro", "curandeiro", "ampulheta", "doacao", "aposta", "event_pact"]:
+		if not it.used and time - float(it.get("born_at", 0.0)) >= 0.65 and it.kind in ["altar", "ritual", "portal", "loja", "ferreiro", "arcanista", "curandeiro", "ampulheta", "doacao", "aposta", "event_pact"]:
 			var d: float = it.pos.distance_to(hero.pos)
 			if d <= bd:
 				bd = d
@@ -1918,7 +1918,7 @@ func interact() -> bool:
 			events.append({"type": "toast", "text": "O ritual atrai algo..."})
 		"portal":
 			enter_next_stage()
-		"loja", "ferreiro", "curandeiro":
+		"loja", "ferreiro", "arcanista", "curandeiro":
 			_open_shop_event(String(best.kind))
 		"doacao", "aposta":
 			_open_risk_event(String(best.kind))
@@ -2004,6 +2004,20 @@ func _boon_brief(b: Dictionary) -> String:
 func _shop_info(name: String, desc: String) -> Dictionary:
 	return {"t": "shop_info", "name": name, "desc": desc, "price": 0, "locked": true}
 
+## SPEC-149: armas (ferreiro) ou magias (Arcanista) que ainda podem subir de nível; preço igual nos dois.
+func _upgradable_weapons(spells: bool) -> Array:
+	return hero.weapons.filter(func(w): return not w.granted and w.level < w.max_level() and Weapon.is_spell(w.def) == spells)
+
+func _has_upgradable_spell() -> bool:
+	return not _upgradable_weapons(true).is_empty()
+
+func _append_weapon_up_rows(spells: bool) -> void:
+	for w in _upgradable_weapons(spells).slice(0, 2):
+		var price := int(round((20.0 + 10.0 * float(w.level)) * float(stage.coin_mult)))
+		offer.append(_shop_row("shop_weapon_up", "%s → Nv %d — %d moedas" % [w.def.name, w.level + 1, price],
+			_level_desc(w), price, {"weapon_id": w.id, "brief": _level_brief(w), "badge": {"text": "Nv %d → %d" % [w.level, w.level + 1]},
+				"price_text": "%d moedas" % price, "detail": {"columns": [], "rows": [], "footer": Array(_level_desc(w).split("\n"))}}))
+
 func _open_shop_event(kind: String) -> void:
 	offer = []
 	match kind:
@@ -2023,13 +2037,14 @@ func _open_shop_event(kind: String) -> void:
 						"brief": Items.brief_text(item.mods), "price_text": "%d moedas" % price,
 						"badge": ({"text": "Slot livre"} if cur == null else Items.verdict(item.mods, Items.scaled_mods(cur, int(cur.get("level", 1))))),
 						"detail": _shop_item_detail(item, cur, price)}))
+		"arcanista":
+			# SPEC-149 (MEC-041): o Arcanista melhora só magias; armas e equipamentos são do ferreiro
+			_append_weapon_up_rows(true)
+			if offer.is_empty():
+				offer.append(_shop_info("Nada para estudar", "Nenhuma magia sua pode melhorar agora. Armas e equipamentos são com o ferreiro."))
 		"ferreiro":
-			var eligible: Array = hero.weapons.filter(func(w): return not w.granted and w.level < w.max_level())
-			for w in eligible.slice(0, 2):
-				var price := int(round((20.0 + 10.0 * float(w.level)) * float(stage.coin_mult)))
-				offer.append(_shop_row("shop_weapon_up", "%s → Nv %d — %d moedas" % [w.def.name, w.level + 1, price],
-					_level_desc(w), price, {"weapon_id": w.id, "brief": _level_brief(w), "badge": {"text": "Nv %d → %d" % [w.level, w.level + 1]},
-						"price_text": "%d moedas" % price, "detail": {"columns": [], "rows": [], "footer": Array(_level_desc(w).split("\n"))}}))
+			_append_weapon_up_rows(false)
+			var smith_spells_only := offer.is_empty()
 			for slot in hero.items:
 				var it: Dictionary = hero.items[slot]
 				var lvl := int(it.get("level", 1))
@@ -2044,7 +2059,8 @@ func _open_shop_event(kind: String) -> void:
 						"brief": "Ganho: %s" % Items.compare_text(Items.scaled_mods(it, lvl + 1), Items.scaled_mods(it, lvl)), "badge": {"text": "Nv %d → %d" % [lvl, lvl + 1]},
 						"price_text": "%d moedas" % item_price, "detail": _forge_detail(it, lvl)}))
 			if offer.is_empty():
-				offer.append(_shop_info("Nada para melhorar", "Suas armas e equipamentos já estão no nível máximo, ou não há nada forjável equipado."))
+				var hint := " Magias são com o Arcanista." if smith_spells_only and _has_upgradable_spell() else ""
+				offer.append(_shop_info("Nada para melhorar", "Suas armas e equipamentos já estão no nível máximo, ou não há nada forjável equipado." + hint))
 		"curandeiro":
 			var missing := hero.max_hp - hero.hp
 			if missing > 1.0:

@@ -480,9 +480,9 @@ func update_stats(b: Battle) -> void:
 	weapons_label.text = "\n".join(lines)
 	var pr := ""
 	for it in b.interactions:
-		if not it.used and it.kind in ["altar", "ritual", "portal", "loja", "ferreiro", "curandeiro", "ampulheta", "doacao", "aposta", "event_pact"] and it.pos.distance_to(h.pos) <= 1.6:
+		if not it.used and it.kind in ["altar", "ritual", "portal", "loja", "ferreiro", "arcanista", "curandeiro", "ampulheta", "doacao", "aposta", "event_pact"] and it.pos.distance_to(h.pos) <= 1.6:
 			pr = "[%s] " % Game.controls.prompt("run_interact", "E") + {"altar": "rezar no altar", "ritual": "iniciar o ritual", "portal": "descer pelo portal",
-				"loja": "negociar na loja", "ferreiro": "forjar no ferreiro", "curandeiro": "buscar cura", "ampulheta": "girar a ampulheta (+60 s, inimigos acumulados)", "doacao": "doar um item por uma bênção", "aposta": "arriscar moedas na mesa",
+				"loja": "negociar na loja", "ferreiro": "forjar no ferreiro", "arcanista": "estudar com o arcanista", "curandeiro": "buscar cura", "ampulheta": "girar a ampulheta (+60 s, inimigos acumulados)", "doacao": "doar um item por uma bênção", "aposta": "arriscar moedas na mesa",
 				"event_pact": "%s" % String(it.get("label", "pacto")).replace(" [E/oeste]", "")}[it.kind]
 	if pr == "" and (b.stage_cleared or b.final_victory):
 		pr = "[%s] Pausa → Extrair ×%.2f" % [Game.controls.prompt("run_pause", "Esc"), b.reward_multiplier()]
@@ -511,7 +511,7 @@ func show_offer(b: Battle) -> void:
 	_detail_nodes.clear()
 	_detail_on = false
 	_offer_hint = null
-	var shop_titles := {"shop_loja": "Loja — compre ou saia", "shop_ferreiro": "Ferreiro — forje uma arma", "shop_curandeiro": "Curandeiro — cure suas feridas", "shop_doacao": "Altar da Doação — troque um item por uma bênção", "shop_aposta": "Mesa de Aposta — arrisque suas moedas"}
+	var shop_titles := {"shop_loja": "Loja — compre ou saia", "shop_ferreiro": "Ferreiro — forje uma arma ou equipamento", "shop_arcanista": "Arcanista — aprimore uma magia", "shop_curandeiro": "Curandeiro — cure suas feridas", "shop_doacao": "Altar da Doação — troque um item por uma bênção", "shop_aposta": "Mesa de Aposta — arrisque suas moedas"}
 	if b.offer_kind == "levelup":
 		lv_title.text = "Nível %d — escolha (1-%d)" % [b.hero.level, b.offer.size()]
 	elif b.offer_kind == "item":

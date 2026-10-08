@@ -16,6 +16,6 @@
       "phase": {"at_hp": 0.15, "announcement": "O Abismo desperta o chefe", "ring_n": 8, "ring_n_per_level": 4, "dice": "1d8", "speed": 5.0, "enrage_speed": 1.1, "enrage_bonus_per_level": 1},
       "desc": "+30% de PV do chefe por nível e uma fase extra a 15% de PV, mais forte a cada nível."},
     "tregua": {"name": "Sem trégua", "requires": "marca_tregua", "max_level": 1, "per_level": 1,
-      "desc": "Sem loja, ferreiro nem curandeiro durante a run inteira."}
+      "desc": "Sem loja, ferreiro, arcanista nem curandeiro durante a run inteira."}
   }
 }
