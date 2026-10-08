@@ -57,9 +57,22 @@ Itens implementados localmente que **ainda não estão em nenhum `.exe`**; entra
 2. **Escolha:** na aba Marcas, − e + em cada uma das nove marcas (0 a 3; Sem trégua só 1), com mouse, controle e toque; o total e o bônus de moeda (+10% por ponto) atualizam; a escolha continua depois de fechar o jogo. Na aba Jogar, a fase mostra o resumo ("Marcas do Abismo: nível N...").
 3. **Efeito na run:** o selo roxo "Marcas N" aparece na HUD (passe o mouse para ver a lista). Horda: mais inimigos ao mesmo tempo. Fúria: golpes doem mais. Carapaça: inimigos e chefe com mais PV. Pressa: inimigos mais rápidos. Fome: toda cura rende menos (nível 3 = 25% da cura). Elites despertos: elites com mais afixos (e 1 elite extra por minuto no nível 3). Chefe desperto: chefe com mais PV e uma fase extra a 15% de PV. Abismo vivo: a regra do andar (rituais, poças, raios) acontece mais vezes. Sem trégua: nenhuma loja, ferreiro nem curandeiro na run.
 4. **Run inteira:** as marcas continuam valendo nas fases seguintes, depois do portal.
-5. **Recompensa e recorde:** o resultado mostra "Marcas do Abismo: nível N (moedas +X%)" e "novo recorde" quando vence a fase inicial com nível maior; as conquistas de pontuação Marcado pelo Abismo (5), Selo do Abismo (10), Abismo Sem Fundo (15), Coroa do Abismo (20) e Abismo Desperto (25) dão moedas.
+5. **Recompensa e recorde:** o resultado mostra "Marcas do Abismo: nível N (moedas +X%)" e "novo recorde" quando vence a fase inicial com nível maior; as conquistas de pontuação Marcado pelo Abismo (5), Selo do Abismo (10), Abismo Sem Fundo (15), Coroa do Abismo (20) e Abismo Desperto (25) dão moedas. **Atenção:** o teto de moeda da economia de ouro (`reward_cap` 3,0) limita o bônus acima de 20 pontos.
 6. **Sem marcas:** a run deve ser igual à de antes (nenhuma marca ligada).
 7. **Perguntar ao tester:** o nível máximo (25) é desafiador ou impossível? Qual marca é a mais injusta?
+
+### Economia de ouro (BAL-023, SPEC-142, PLAN-075)
+
+1. **Ganho no Quartel menor nas fases finais:** o ouro de cada fase entra no Quartel em valor-base (sem o ×5 das fases finais). Uma vitória até Feng-tu deve render algo perto de 9.000 a 13.000 moedas (antes ~23.000 a 30.000). Anote quanto a tela de resultado mostra.
+2. **Bônus de moedas:** Ganância, Anel de Prata, Carisma e a Aura Amarela agora valem em qualquer fase (+10% de bônus = +10% de moedas).
+3. **Venda de peças:** vende por mais nas fases altas (acompanha o preço da loja), mas **não conta mais para o Quartel**, só para gastar na run.
+4. **Chicote Avarento:** rende no máximo 0,15 moeda por segundo; não é mais uma máquina de dinheiro.
+5. **Teto da recompensa:** descida e Marcas do Abismo juntas nunca passam de ×3,0.
+6. **Perguntar ao tester:** a primeira compra no Quartel chega em até 2 runs? O ritmo de ~20 vitórias para comprar tudo parece justo? Os arquivos de estatística da run trazem `gold_src` (ouro por fonte), que calibra a meta.
+
+## Versão 0.3.3 — build local exportada (publicação pendente)
+
+Decisão do dono (2026-10-07): subir para **0.3.3** e exportar o `.exe` local `build/NottgardSurvivors-Playtest 0.3.3.exe` (22:44). `0.3.3` em `core/version.gd` e `export_presets.cfg`. **Sem commit de versão nem push** (push na `main` publica o release `latest`). Exportada da árvore de trabalho sobre `1144155+` (suja): leva as Marcas do Abismo (commits `78c6f39`, `1144155`) e a economia de ouro (BAL-023, ainda sem commit) das seções "Aguardando versão" acima, mais o diagnóstico opt-in do BUG-028 (inerte sem `--walk-debug`). Suíte 0 falhas e fumaça ok antes do export. Atenção: por conter mecânica nova (Marcas do Abismo), pela regra de tipos seria Major; o número 0.3.3 foi escolha do dono.
 
 ## Versão 0.3.2 — Minor-update, build local exportada (publicação pendente)
 

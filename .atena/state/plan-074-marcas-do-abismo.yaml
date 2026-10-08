@@ -3,7 +3,7 @@ spec: SPEC-141
 spec_file: .atena/specs/SPEC-141-marcas-do-abismo-entrega-1.md
 plan_file: .atena/vault/drafts/PLAN-074-marcas-do-abismo-2026-10-07.md
 mode: per-plan
-status: COMMITTED_LOCAL
+status: COMMITTED_PUSHED
 approved: '2026-10-07'
 approval_basis: 'Dono: atena, aprovado, pode comecar pelo B-001 (por plano; premissas A1-A3 aceitas como propostas).'
 checkpoint: B-005/S-011
@@ -41,5 +41,6 @@ git_receipt:
   authorization: 'atena, pode fazer o commit (2026-10-07)'
   scope: 'MEC-040 entrega 1; trechos da economia de ouro (PLAN-075) deixados fora do stage'
   validation: 'arvore staged extraida em pasta isolada: importacao sem erro de script e suite com zero falhas'
-  pushed: false
+  pushed: true
+  push_note: 'publicado junto da entrega 2 (1144155) em 2026-10-07'
   build_exported: false

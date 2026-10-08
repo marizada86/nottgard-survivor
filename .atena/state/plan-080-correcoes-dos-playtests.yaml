@@ -72,5 +72,7 @@ local_git_receipts:
     - {sha: 38a313c, scope: 'MEC-057'}
     - {sha: d34b696, scope: 'ferramentas'}
     - {sha: bd5c080, scope: 'documentos, evidencias e backlog'}
-  pushed: false
+  pushed: true
+  pushed_at: '2026-10-08'
+  push_range: 1144155..b89960d
   note: 'So os trechos do PLAN-080 foram commitados; F7/ZIP (PLAN-078), ouro (PLAN-075), versao 0.3.3, export_presets, lettering e planos 074/076 seguem como alteracoes locais. Verificado em copia limpa do HEAD: suite sem falhas de codigo (2 testes dependem de .atena, ausente na copia).'

@@ -1,0 +1,77 @@
+id: PLAN-081
+spec: SPEC-148
+spec_file: .atena/specs/SPEC-148-lancamento-da-v0-4-0.md
+proposal: .atena/vault/drafts/PLAN-081-lancamento-da-v0-4-0-2026-10-08.md
+mode: per-plan
+status: EXECUTING
+created: '2026-10-08'
+request_classification: PLAN_DEVIATION
+deviation_id: DEV-013
+authorization_verbatim: 'atena, planeje a v0.4.0 agora'
+approval_basis: 'Dono escolheu por plano, MEC-039 fatia piloto, MEC-041 + 3 armas/magias + 6 itens, arte provisoria nao trava (2026-10-08). Falta o aviso explicito de inicio.'
+checkpoint: B-001/S-004 (commits G1 a G5 e D1 feitos; falta a suite no HEAD final)
+return:
+  plan: PLAN-071
+  state_file: .atena/state/plan-071-playtest-ranking.yaml
+  checkpoint_observed: B-006/S-011
+  snapshot: .atena/generated/v040-release/plan-before-081.yaml
+decisions_taken:
+  release_type: 'Major 0.4.0: changelog PDF, guia facil, questionario 007 (2026-10-08)'
+  scope: 'Consolidar + conteudo novo (2026-10-08)'
+  mec_039: 'Fatia piloto: Shedaklah, Molor e Durao, mapa 84x84 so nelas (2026-10-08)'
+  content: 'MEC-041 + 3 armas/magias + 6 equipamentos (2026-10-08)'
+  art: 'Arte pendente nao trava; sai provisoria e marcada (2026-10-08)'
+  approval_mode: 'per-plan (2026-10-08)'
+  route: 'Planejar agora; PLAN-071 preservado e retomado em B-006/S-011'
+sources: [RELEASES.md, BUGS.md, MECANICAS.md, ARTE.md, BALANCEAMENTO.md, SPEC-119, SPEC-147]
+batches:
+  B-001: {title: Higiene da arvore e linha de base, steps: [S-001, S-002, S-003, S-004], status: IN_PROGRESS, note: 'Sem mudar o jogo. Commits so com aprovacao explicita.'}
+  B-002: {title: Bugs e verificacao, steps: [S-005, S-006, S-007], status: PENDING}
+  B-003: {title: Arte e audio provisorios, steps: [S-008, S-009], status: PENDING}
+  B-004: {title: MEC-041 NPC de upgrade de magia, steps: [S-010, S-011, S-012], status: PENDING}
+  B-005: {title: MEC-042 conteudo novo, steps: [S-013, S-014, S-015, S-016], status: PENDING, note: 'Portao de conteudo: lista aprovada pelo dono antes do codigo.'}
+  B-006: {title: MEC-039 fatia piloto, steps: [S-017, S-018, S-019, S-020], status: PENDING, note: 'Portao de conteudo: Ecos e reliquias aprovados pelo dono antes do codigo.'}
+  B-007: {title: Balanceamento, steps: [S-021, S-022], status: PENDING}
+  B-008: {title: Fechamento e lancamento, steps: [S-023, S-024, S-025, S-026, S-027, S-028], status: PENDING, note: 'Push, exportacao e aviso aos testers so com aprovacao explicita.'}
+steps:
+  S-001: 'DONE (EVID-202). tools/backlog_check.ps1 (via powershell -ExecutionPolicy Bypass) e lista de bugs abertos; registrar no EVID.'
+  S-002: 'DONE (EVID-202). Triar git status em G1 ouro, G2 F7/ZIP, G3 lettering/cursor, G4 diagnostico e pacote Caio, G5 documentos Atena, G6 versao; mapa arquivo -> grupo.'
+  S-003: 'DONE (020642b, 4a33764, 421dd29, ad3220d, 2a18614 e G5). Commits por grupo G1 a G5 (trechos de arquivos compartilhados via hash-object/update-index a partir do HEAD); G6 fica para B-008. Cada commit com aprovacao.'
+  S-004: 'PARCIAL (EVID-202: HEAD 94a6a2f, 0 falhas; repetir no HEAD final). Cópia limpa do HEAD: suite sem falhas; anotar testes que dependem de .atena.'
+  S-005: 'Suite completa (tests/run_all.gd), smoke das nove fases e tools/kit_test.gd sobre a arvore separada.'
+  S-006: 'Reteste do BUG-033 e das verificacoes BUG-003 a 010 em run real; o que nao for visto vai para O que testar.'
+  S-007: 'Atualizar BUGS.md: Conhecidos (BUG-027, 028, 029, 022); correcao do BUG-028 do especialista Caio entra como minor-fix se chegar.'
+  S-008: 'Integrar com fallback a arte aprovada pelo dono (lettering/cursor ART-036/037, icones de bencaos ART-038); marcar o resto como provisorio.'
+  S-009: 'Icones provisorios de Eco e do NPC de magia (vetores locais ou itens existentes), sem geracao de imagem.'
+  S-010: 'SPEC-149 (MEC-041): regras, preco, rerrolagem, interacao com Marcas e Sem tregua; teste antes do codigo.'
+  S-011: 'core/battle.gd, data/stage_events.json ou level_design.json, ui/overlay.gd, ui/hud.gd: NPC de magia e ferreiro so para armas corpo a corpo e equipamentos; um commit.'
+  S-012: 'Teste dos dois lados (ferreiro e NPC); bot sem regressao; cartao MEC-041.'
+  S-013: 'Portao de conteudo: propor 3 armas/magias e 6 equipamentos a partir do Vault (EVID-147 sec. 4) e levar ao dono.'
+  S-014: 'SPEC-150 (armas e magias) e SPEC-151 (equipamentos) apos aprovacao da lista.'
+  S-015: 'data/weapons.json, data/items.json, data/item_effects.json e codigo necessario; um commit por item; teste por item.'
+  S-016: 'tools/bal_armas.gd e tools/bal_itens.gd antes e depois; ajustar uma alavanca por vez.'
+  S-017: 'Portao de conteudo: propor Ecos (3 a 5 por fase), pontos de interesse e reliquia das tres fases e levar ao dono; sem segredos do mestre.'
+  S-018: 'SPEC-152: 84x84 (enlarge_stage_maps, rebalance_stage_props, bake_ground), POIs em dados, Ecos, reliquia; testes de mapa e de dados.'
+  S-019: 'Codigo: coletavel Eco, aba Ecos no Diario, contador e pista, camara/reliquia; sem consumir a RNG da batalha; um commit por mecanica.'
+  S-020: 'Medir desempenho (60 fps) em 84x84 no .exe; se cair, reduzir para 72x72 (risco G5).'
+  S-021: 'Linha de base do bot por heroi (comparar com EVID-110, 142, 144, 160, 193) e ajustes so em JSON.'
+  S-022: 'Conferir gold_src (BAL-023) nos pacotes dos testers; atualizar BALANCEAMENTO.md.'
+  S-023: 'Versao 0.4.0 em core/version.gd e export_presets.cfg (G6); RELEASES.md absorvendo 0.3.2 e 0.3.3; backlog_check antes de commitar.'
+  S-024: 'CHANGELOG-0.4.0.html e PDF (Chrome headless), conferir as paginas; GUIA-FACIL-0.4.0.html e PDF.'
+  S-025: 'QUESTIONARIO-007 (mapa pergunta -> cartao) e PDF.'
+  S-026: 'Suite, smoke, kit_test e bot na arvore final; exportar o .exe em build/ de commit limpo, com hash no rodape.'
+  S-027: 'Commit de versao e documentos (aprovacao); push na main so com aprovacao explicita separada (publica o latest).'
+  S-028: 'EVID final, reconciliar plan.yaml (DEV-013) e voltar ao PLAN-071 em B-006/S-011.'
+gates:
+  dependencies: NO_NEW_DEPENDENCIES
+  new_image_generation: NOT_IN_SCOPE
+  commit: EXPLICIT_APPROVAL_PER_COMMIT
+  push_publish_export: EXPLICIT_APPROVAL_SEPARATE
+  content_gate: 'Armas, magias, equipamentos, Ecos e reliquias passam pelo dono antes do codigo (independe do nivel de aprovacao)'
+  master_canon: 'Nada de canone do mestre sem decisao do dono'
+  other_sessions_changes: PRESERVE_UNTOUCHED
+  destructive_git: 'Sem checkout, reset ou clean sobre arquivos sujos'
+blocking_gaps: []
+non_blocking_gaps: [G1, G2, G3, G4, G5, G6]
+return_to: PLAN-071 (B-006/S-011, active_plan sem alteracao ate o inicio)
+commit_push_build_export: NOT_PERFORMED

@@ -1,21 +1,6 @@
 version: 2
 # Reconciliado por Atena em 2026-10-05: PLAN-056 aceito pelo dono; commits reais registrados.
 active_plan:
-  id: PLAN-081
-  spec_id: SPEC-148
-  state_file: '.atena/state/plan-081-lancamento-v0-4-0.yaml'
-  mode: per-plan
-  checkpoint: B-001/S-001
-  status: EXECUTING
-  approved: '2026-10-08'
-  started: '2026-10-08'
-  request_classification: PLAN_DEVIATION
-  deviation_id: DEV-013
-  start_authorization_verbatim: 'atena, inicie o PLAN-081 em B-001'
-plan_cursor:
-  current: 'PLAN-081 / SPEC-148 (v0.4.0): B-001 S-001 a S-003 feitos (EVID-202, commits 020642b a 2a18614 e G5); S-004 final (suite no HEAD) pendente.'
-  next: 'S-004 suite completa no HEAD final; depois B-002 (bugs e verificacao).'
-suspended_active_plan:
   id: PLAN-071
   spec_id: SPEC-138
   state_file: '.atena/state/plan-071-playtest-ranking.yaml'
@@ -23,16 +8,14 @@ suspended_active_plan:
   checkpoint: B-006/S-011
   status: LOCAL_DELIVERED_AWAITING_DEVICE_ACCEPTANCE
   approved: '2026-10-06'
-  suspended_by: PLAN-081
-  suspended_at: '2026-10-08'
-  snapshot: '.atena/generated/v040-release/plan-before-081-start.yaml'
-  resume_note: 'Retomar em B-006/S-011 quando o PLAN-081 fechar ou o dono pedir; falta o aceite dos clientes finais (ranking e F7) e os gates remotos.'
-  previous_plan_cursor_text: 'PLAN-071 / SPEC-138: fontes locais estaveis e verificadas; EVID-187; aceite dos clientes finais e ativacao separados. Proximo: homologar clientes finais; pipeline do dono e gates remotos separados; preservar cadeia de retorno.'
+  request_classification: IN_PLAN
+plan_cursor:
+  current: 'PLAN-071 / SPEC-138: fontes locais estaveis e verificadas; EVID-187; aceite dos clientes finais e ativacao separados.'
+  next: 'Homologar clientes finais; pipeline do dono e gates remotos separados; preservar cadeia de retorno.'
 previous_plan_cursor:
   current: 'PLAN-059 (SPEC-125) commitado e publicado (05264f0, 1392627) em 2026-10-05; o playtest decide Docas, Molor e fases finais.'
   next: 'Retomar PLAN-053 (imagens, Shu: attack_02, death_03, death_04) e/ou abrir spec de balanceamento BAL-018 (precisa de linha de base do bot por heroi). Push da main (1 a 3 commits a frente) exige aprovacao.'
 local_git_receipts:
-  - {plan: PLAN-081, batch: B-001, authorization: "aprovo os 5 commits, faca D1, D2 e D3 como recomendado (2026-10-08)", branch: main, commits: [020642b, 4a33764, 421dd29, ad3220d, 2a18614, "G5 = commit de documentos que contem este recibo"], scope: "G1 ouro BAL-023 (PLAN-075); G2 F7/ZIP (PLAN-078); G3 lettering (PLAN-065) com cartoes renumerados; G4 documentos do pacote Caio (PLAN-079, ZIP local); D1 renumeracao ART-039/040 e MEC-058; G5 documentos de estado", pushed: false, evidence: EVID-202, note: "G6 (versao e export_presets) fica para B-008; unit-profile.json e .bak ficam fora do Git (D3)."}
   - {plan: PLAN-080, authorization: "prepare os commits separados por mecanica", branch: main, commits: [531d1eb, c4d1925, c4516d1, 529341a, c618acc, df9f1f5, e67406a, 31d4a81, 38a313c, d34b696, bd5c080, b89960d], pushed: true, push_range: "1144155..b89960d", evidence: EVID-201, note: "Detalhe em plan-080-correcoes-dos-playtests.yaml; so os trechos do PLAN-080 foram commitados."}
   - {plan: PLAN-077, request_classification: PLAN_DEVIATION, authorization: "atena, faca o commit local do diagnostico", commit: 525cd25, branch: main, scope: "log, breakpoint, medicao, sonda, teste e lancador do BUG-028 (SPEC-144); plan.yaml so o bloco DEV-009", result: COMMITTED_LOCAL, pushed: false, note: "Mudancas de outras sessoes e o pacote do Caio (PLAN-079) ficaram fora do commit."}
   - {plan: PLAN-073, request_classification: PLAN_DEVIATION, authorization: "atena junte tudo que temos e faça push", commit: 0e5e4977b63e0ba98990e7a2c54f43093098ba31, branch: main, result: PUBLISHED_VERIFIED, pushed: true, evidence: ".atena/evidence/consolidacao-push-2026-10-06.json", note: "Codigo, arte aprovada, mobile, controles, ranking e correcoes remotas publicados; imagens dos pilotos Durvall permanecem locais aguardando decisao."}
@@ -86,18 +69,9 @@ deferred_requests:
   - id: DEV-013
     request: 'Plano para lancar a v0.4.0 (Major: changelog PDF, guia facil, questionario 007, plano PLAN-nnn aprovado).'
     request_classification: PLAN_DEVIATION
-    status: EXECUTING_PLAN_081
+    status: DEFERRED_PENDING
     recorded: '2026-10-08'
-    reopened: '2026-10-08'
-    reopened_authorization_verbatim: 'atena, planeje a v0.4.0 agora'
-    recovery_snapshot: '.atena/generated/v040-release/plan-before-081.yaml'
-    route: 'Dono adiou (2026-10-08) e reabriu na mesma sessao com planeje a v0.4.0 agora; PLAN-071 continua active_plan e volta em B-006/S-011.'
-    proposed_plan: PLAN-081
-    state_file: '.atena/state/plan-081-lancamento-v0-4-0.yaml'
-    spec: '.atena/specs/SPEC-148-lancamento-da-v0-4-0.md'
-    proposal: '.atena/vault/drafts/PLAN-081-lancamento-da-v0-4-0-2026-10-08.md'
-    approval_mode: per-plan
-    approval_status: APPROVED_PER_PLAN_STARTED_2026-10-08
+    route: 'Dono escolheu adiar (2026-10-08): seguir o PLAN-071 e planejar a v0.4.0 quando ele fechar ou quando o dono pedir.'
     owner_scope_choice: 'Consolidar + conteudo novo: consolidacao (arvore suja em commits por mecanica, suite/fumaca/bot, fecho do lote de bugs, versao, PDFs) mais mecanicas grandes marcadas para a proxima major (MEC-041 NPC de upgrade de magia, MEC-039 segredos e mapa maior, MEC-042 itens/armas/magias novos). Quais entram e a ordem ficam para a spec.'
     context_found:
       - 'Ultima versao publicada: 0.3.1. 0.3.2 e 0.3.3 so existem como .exe local; core/version.gd em HEAD marca 0.3.2 e a 0.3.3 esta na arvore suja.'
