@@ -170,6 +170,7 @@ func _armor_break(out: Array) -> void:
 # ---------------------------------------------------------------- Equipamentos únicos (SPEC-151)
 # id -> {slot, tier, mods, curse (mod negativo esperado), weapon}. Uma entrada por commit.
 const ITEMS := {
+	"dispositivo_das_docas": {"slot": "amuleto", "tier": 1, "mods": {"dr": 1, "ca": 1}},
 	"dispositivo_antimagia_gilly": {"slot": "armadura", "tier": 4, "mods": {"cam": 3, "inteligencia": -1}},
 	"detector_arcano": {"slot": "anel", "tier": 1, "mods": {"pickup": 1.5, "sorte": 2}},
 	"colar_visao_verdadeira": {"slot": "amuleto", "tier": 2, "mods": {"hit": 2, "crit_overflow_bonus": 0.03}},
