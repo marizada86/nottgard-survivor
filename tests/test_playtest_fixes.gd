@@ -172,8 +172,8 @@ func _armas() -> Array:
 	for wid in wdata:
 		if wdata[wid].has("evolve"):
 			evolving.append(String(wid))
-	if evolving.size() != 8:
-		out.append("esperava 8 armas que evoluem, achei %d (atualize o teste se o conteúdo mudou)" % evolving.size())
+	if evolving.size() != 10:
+		out.append("esperava 10 armas que evoluem, achei %d (atualize o teste se o conteúdo mudou)" % evolving.size())
 	for base in evolving:
 		var into := String(wdata[base].evolve.into)
 		var b := Battle.new(3, "sylas", "dagruve")
