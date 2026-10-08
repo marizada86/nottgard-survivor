@@ -17,6 +17,7 @@ func run() -> Array:
 	out.append_array(_primeiro_bau())
 	out.append_array(_ficha())
 	out.append_array(_bonus())
+	out.append_array(_ranking())
 	return out
 
 ## B-001: C fecha a ficha; a ficha abre nas ofertas; a nota (F5) prende a HUD.
@@ -85,6 +86,10 @@ func _entrada() -> Array:
 		out.append("has_modal() não deve valer sem painel aberto")
 	hud.free()
 	return out
+
+func _objective(i: int, kind := "collect") -> Dictionary:
+	return {"id": "o%d" % i, "kind": kind, "title": "Objetivo %d" % i, "text": "Reúna os fragmentos do santuário e leve-os até o altar antes que o prazo termine", "ends_at": 120.0,
+		"need": 3, "got": 1, "done": false, "failed": false}
 
 ## B-002 S-004: o topo central empilha chefe, quests, status e avisos sem interseção, em qualquer quantidade de linhas.
 func _topo() -> Array:
@@ -285,3 +290,10 @@ func _bonus() -> Array:
 	sheet.free()
 	return out
 
+## MEC-057: o ranking carrega ao abrir a aba, no máximo uma vez a cada 5 s (IN-068).
+func _ranking() -> Array:
+	var out: Array = []
+	var board := load("res://ui/leaderboard.gd")
+	if not board.auto_refresh_due(-1, 1000) or board.auto_refresh_due(1000, 3000) or not board.auto_refresh_due(1000, 6001):
+		out.append("auto_refresh_due: -1 dispara, <5 s não, >=5 s dispara")
+	return out

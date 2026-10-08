@@ -10,6 +10,7 @@ var _callback: JavaScriptObject
 var _sequence := 0
 var _board := ""
 var _boards: Array = []
+var _last_refresh_ms := -1
 
 func _ready() -> void:
 	name = "Ranking"
@@ -59,8 +60,19 @@ func _ready() -> void:
 		else:
 			OS.shell_open(SITE + "/playtest/ranking"))
 	add_child(full)
+	visibility_changed.connect(_on_visibility_changed)
+	_on_visibility_changed()
+
+## SPEC-147 (IN-068): a lista carrega sozinha quando a aba aparece, no máximo uma vez a cada 5 s.
+static func auto_refresh_due(last_ms: int, now_ms: int) -> bool:
+	return last_ms < 0 or now_ms - last_ms >= 5000
+
+func _on_visibility_changed() -> void:
+	if is_visible_in_tree() and auto_refresh_due(_last_refresh_ms, Time.get_ticks_msec()):
+		refresh()
 
 func refresh() -> void:
+	_last_refresh_ms = Time.get_ticks_msec()
 	_sequence += 1
 	_status.text = "Carregando ranking..."
 	var mode: String = ["score", "survival", "speed"][_mode.selected]
