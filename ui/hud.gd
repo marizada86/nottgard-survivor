@@ -21,7 +21,7 @@ const STATUS_MAX_LINES := 4
 const STACK_TOP := 90.0   # abaixo do relógio, do nome da fase e do ícone da regra
 const STACK_WIDTH := 680.0
 
-@onready var info_label: Label = %InfoLabel  # só as linhas do Estige; o resto do herói está no HeroPanel
+@onready var info_label: Label = %InfoLabel  # sem uso desde a SPEC-147 (o Estige virou o StatusChip); o herói está no HeroPanel
 @onready var stage_rule_icon: TextureRect = %StageRuleIcon
 @onready var timer_label: Label = %TimerLabel
 @onready var stage_label: Label = %StageLabel
@@ -52,6 +52,7 @@ var _stage_icon_id := ""
 var objective_label: Label  # linhas de status (juramento, buffs, Favor) abaixo do painel de quests
 var quest_panel: QuestPanel  # SPEC-147: objetivos dos acontecimentos da fase (SPEC-118)
 var top_stack: VBoxContainer  # SPEC-147: chefe, quests, status e avisos empilhados no topo central
+var status_chip: StatusChip  # SPEC-147: Estige (na água) e Esquecimento
 var mobile: MobileControls
 var _battle: Battle
 var _confirm_callback: Callable
@@ -112,6 +113,8 @@ func _ready() -> void:
 	add_child(items_panel)
 	prompt_label.text = ""
 	_build_top_stack()
+	status_chip = StatusChip.new()
+	$StatBox.add_child(status_chip)
 	if Game.touch_controls_enabled():
 		mobile = MobileControls.new()
 		mobile.name = "MobileControls"
@@ -214,6 +217,17 @@ func _restore_modal_focus() -> void:
 		var owner = _focus_before_modal.get_ref()
 		if is_instance_valid(owner) and owner.is_visible_in_tree():
 			owner.grab_focus()
+
+## SPEC-147 (IN-064): estado do Estige para o StatusChip; {} quando não há nada a mostrar.
+static func styx_status(b: Battle) -> Dictionary:
+	var h := b.hero
+	if b.has_styx_contract() and b.styx_exposure > 0.0:
+		return {"kind": "water", "title": "RIO ESTIGE", "text": "%.1f s na água · INT efetiva %d" % [b.styx_exposure, h.styx_intelligence()],
+			"tip": "Rio Estige: a cada segundo na água há um teste de lucidez; cada falha tira 1 de INT por alguns minutos. Ao sair depois de 2 s ou mais, o Esquecimento impede de voltar à água por um tempo."}
+	if h.styx_forget_t > 0.0:
+		return {"kind": "forget", "title": "ESQUECIMENTO", "text": "%.1f s sem poder voltar à água" % h.styx_forget_t,
+			"tip": "Esquecimento do Estige: você não consegue se aproximar do rio enquanto durar."}
+	return {}
 
 ## SPEC-147 (IN-069, IN-072): barra do chefe, quests, linhas de status e avisos numa pilha só; o container empilha,
 ## então nenhum desses blocos cobre outro, qualquer que seja o número de linhas.
@@ -403,13 +417,7 @@ func update_stats(b: Battle) -> void:
 	_battle = b
 	var h := b.hero
 	hero_panel.update(b)
-	if b.has_styx_contract() and b.styx_exposure > 0.0:
-		info_label.text = "Estige %.1f s · INT efetiva %d" % [b.styx_exposure, h.styx_intelligence()]
-	elif h.styx_forget_t > 0.0:
-		info_label.text = "Esquecimento do Estige %.1f s" % h.styx_forget_t
-	else:
-		info_label.text = ""
-	info_label.visible = info_label.text != ""
+	status_chip.show_status(styx_status(b))
 	var ability: Dictionary = Data.table("abilities").get(h.id, {})
 	var ability_id := String(ability.get("id", ""))
 	if ability_id != _active_icon_id:

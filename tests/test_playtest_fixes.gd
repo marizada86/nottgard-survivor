@@ -12,6 +12,7 @@ func run() -> Array:
 	var out: Array = []
 	out.append_array(_entrada())
 	out.append_array(_topo())
+	out.append_array(_estige())
 	return out
 
 ## B-001: C fecha a ficha; a ficha abre nas ofertas; a nota (F5) prende a HUD.
@@ -122,5 +123,35 @@ func _topo() -> Array:
 		if count <= 3 and fixed_bottom > 720.0 * 0.6:
 			out.append("chefe, quests e status ocupam demais a tela com %d objetivos (até y=%.0f)" % [count, fixed_bottom])
 		hud.free()
+	return out
+
+## B-002 S-007: o Estige vira um indicador de estado na HUD (IN-064).
+func _estige() -> Array:
+	var out: Array = []
+	var tree := Engine.get_main_loop() as SceneTree
+	var b := Battle.new(3, "sylas", "durao")
+	var hud: Node = load("res://ui/hud.tscn").instantiate()
+	tree.root.add_child(hud)
+	hud.update_stats(b)
+	if hud.status_chip.visible:
+		out.append("fora da água e sem Esquecimento o indicador do Estige deve estar escondido")
+	b.styx_exposure = 2.5
+	hud.update_stats(b)
+	if not hud.status_chip.visible or hud.status_chip.kind != "water" or hud.status_chip._text.text.find("2.5") < 0 or hud.status_chip.tooltip_text == "":
+		out.append("na água o indicador deve mostrar o tempo (2.5 s), a INT efetiva e uma dica")
+	b.styx_exposure = 0.0
+	b.hero.styx_forget_t = 4.0
+	hud.update_stats(b)
+	if not hud.status_chip.visible or hud.status_chip.kind != "forget":
+		out.append("com Esquecimento o indicador deve aparecer como 'forget'")
+	b.hero.styx_forget_t = 0.0
+	hud.update_stats(b)
+	if hud.status_chip.visible:
+		out.append("o indicador deve sumir quando o Esquecimento acaba")
+	var plain := Battle.new(3, "sylas", "dagruve")
+	plain.styx_exposure = 3.0
+	if not hud.styx_status(plain).is_empty():
+		out.append("fases sem o contrato do Estige não mostram o indicador")
+	hud.free()
 	return out
 
