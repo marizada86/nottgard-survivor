@@ -56,6 +56,7 @@ var _logged_line_count := 0
 
 var _toast: Label
 var _pad: PanelContainer
+var _overlay_shade: ColorRect  # SPEC-147: fundo que absorve o mouse enquanto a nota (F5) ou a Central (F4) estão abertas
 var _note_content: VBoxContainer
 var _edit: TextEdit
 var _count: Label
@@ -117,6 +118,14 @@ func _build_ui() -> void:
 	_toast.add_theme_constant_override("outline_size", 6)
 	_toast.modulate.a = 0.0
 	add_child(_toast)
+
+	_overlay_shade = ColorRect.new()
+	_overlay_shade.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	_overlay_shade.color = Color(0.015, 0.01, 0.025, 0.55)
+	_overlay_shade.mouse_filter = Control.MOUSE_FILTER_STOP
+	_overlay_shade.visible = false
+	_overlay_shade.gui_input.connect(_on_shade_input)
+	add_child(_overlay_shade)
 
 	_pad = PanelContainer.new()
 	_pad.visible = false
@@ -611,6 +620,11 @@ func _input(ev: InputEvent) -> void:
 		return
 	if not ev.is_pressed() or (ev is InputEventKey and ev.echo):
 		return
+	if _note_open:
+		# SPEC-147: o foco fica no bloco de notas até ele fechar (o campo reclama o foco se algo o tirar).
+		var focused := get_viewport().gui_get_focus_owner()
+		if focused == null or not (focused == _pad or _pad.is_ancestor_of(focused)):
+			_edit.grab_focus()
 	if ev.is_action_pressed(&"ui_cancel"):
 		if _central != null and _central.visible:
 			close_playtest()
@@ -829,6 +843,10 @@ func take_print() -> void:
 func is_note_open() -> bool:
 	return _note_open
 
+## Bloco de notas, guia ou Central Playtest por cima da tela atual: o resto da UI não pode consumir teclas.
+func is_overlay_open() -> bool:
+	return _note_open or _guide_open or (_central != null and _central.visible)
+
 func record_run(b: Object, outcome := "incomplete", final := false) -> void:
 	if not Version.evidence_enabled() or b.run_record.run_id == "":
 		return
@@ -938,6 +956,7 @@ func open_playtest() -> void:
 	_central_paused = get_tree().paused
 	get_tree().paused = true
 	_central.visible = true
+	_refresh_shade()
 	TouchUI.prepare(self)
 	_central_status.text = "Build %s\n%s\nTask: %s\nO ranking aceita somente testers aprovados." % [Version.build_id(), evidence_queue.status, String(Game.profile.data.settings.get("playtest_task", "general"))]
 	_layout_playtest()
@@ -949,7 +968,17 @@ func _layout_playtest() -> void:
 func close_playtest() -> void:
 	if _central != null and _central.visible:
 		_central.visible = false
+		_refresh_shade()
 		get_tree().paused = _central_paused
+
+## SPEC-147: o fundo só aparece com a nota ou a Central abertas e devolve o foco ao campo de texto.
+func _refresh_shade() -> void:
+	if _overlay_shade != null:
+		_overlay_shade.visible = _note_open or (_central != null and _central.visible)
+
+func _on_shade_input(ev: InputEvent) -> void:
+	if _note_open and ev is InputEventMouseButton and ev.pressed:
+		_edit.grab_focus()
 
 func download_pending() -> void:
 	if not OS.has_feature("web"):
@@ -1012,6 +1041,7 @@ func open_note() -> void:
 	_paused_before = get_tree().paused
 	get_tree().paused = true
 	_pad.visible = true
+	_refresh_shade()
 	_edit.text = ""
 	_on_note_changed()
 	_edit.grab_focus()
@@ -1021,6 +1051,7 @@ func close_note() -> void:
 		return
 	_note_open = false
 	_pad.visible = false
+	_refresh_shade()
 	get_tree().paused = _paused_before
 	var text := _edit.text.strip_edges().substr(0, NOTE_MAX)
 	if text != "":

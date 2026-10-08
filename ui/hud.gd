@@ -222,7 +222,7 @@ func _restore_modal_focus() -> void:
 			owner.grab_focus()
 
 func has_modal() -> bool:
-	return _confirm_dialog.visible or _controls_panel.visible or items_panel.visible or pause_panel.visible or Playtest._guide_open
+	return _confirm_dialog.visible or _controls_panel.visible or items_panel.visible or pause_panel.visible or Playtest.is_overlay_open()
 
 func _confirmation_input(event: InputEvent) -> void:
 	if not Game.controls.accepts(event):
@@ -332,7 +332,13 @@ func _unhandled_input(ev: InputEvent) -> void:
 			_close_controls()
 			get_viewport().set_input_as_handled()
 		return
-	if Playtest._guide_open or items_panel.visible:
+	if Playtest.is_overlay_open():
+		return  # SPEC-147: nota (F5), guia (F1) e Central (F4) prendem o foco; a HUD não reage a nada
+	if items_panel.visible:
+		# SPEC-147 (BUG-003): C fecha a ficha, como o botão "Fechar (C)" promete; Esc fecha pelo `_input` da própria ficha.
+		if ev.is_action_pressed(Game.ACTION_RUN_ITEMS) or ev.is_action_pressed(&"ui_cancel"):
+			items_closed.emit()
+			get_viewport().set_input_as_handled()
 		return
 	if levelup_panel.visible and not pause_panel.visible and ev.is_action_pressed(Game.ACTION_RUN_ITEMS):
 		pause_items_pressed.emit()
@@ -345,9 +351,6 @@ func _unhandled_input(ev: InputEvent) -> void:
 	if (ev.is_action_pressed(Game.ACTION_RUN_PAUSE) or ev.is_action_pressed(&"ui_cancel")) and pause_panel.visible:
 		resume_pressed.emit()
 		get_viewport().set_input_as_handled()
-	elif (ev.is_action_pressed(Game.ACTION_RUN_ITEMS) or ev.is_action_pressed(&"ui_cancel")) and items_panel.visible:
-		items_closed.emit()
-		get_viewport().set_input_as_handled()
 
 ## MEC-027: segurar Shift abre o detalhe de todas as opções, para quem joga sem mouse.
 var _detail_nodes: Array = []
@@ -356,7 +359,7 @@ var _detail_on := false
 func _process(_delta: float) -> void:
 	if mobile != null:
 		var running := _battle != null and _battle.state == "running" and not get_tree().paused
-		mobile.set_combat_enabled(running and not (items_panel.visible or levelup_panel.visible or pause_panel.visible or result_panel.visible or revive_panel.visible or _confirm_dialog.visible))
+		mobile.set_combat_enabled(running and not (Playtest.is_overlay_open() or items_panel.visible or levelup_panel.visible or pause_panel.visible or result_panel.visible or revive_panel.visible or _confirm_dialog.visible))
 	if _ability_slot != null:
 		_ability_slot.visible = mobile == null and not (items_panel.visible or levelup_panel.visible or pause_panel.visible or result_panel.visible or revive_panel.visible)
 	if not levelup_panel.visible or _detail_nodes.is_empty():

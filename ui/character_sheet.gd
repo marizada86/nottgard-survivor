@@ -346,7 +346,8 @@ func _first_slot(n: Node) -> SheetSlot:
 	return null
 
 func _input(ev: InputEvent) -> void:
-	if not visible or not Game.controls.accepts(ev):
+	if not visible or Playtest.is_overlay_open() or not Game.controls.accepts(ev):
+		# Com o bloco de notas (F5) aberto, Q/E são letras do texto e Esc fecha a nota, não a ficha.
 		return
 	if ev.is_action_pressed("ui_cancel"):
 		closed.emit()

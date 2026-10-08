@@ -79,6 +79,37 @@ func run() -> Array:
 		out.append("bônus de FOR (passiva) deveria aparecer na lista total")
 	sheet2.free()
 
+	# bloco de notas (F5) aberto por cima da ficha: Q/E são texto, Esc fecha a nota (não a ficha)
+	var sheet3 := CharacterSheet.new()
+	(Engine.get_main_loop() as SceneTree).root.add_child(sheet3)
+	sheet3.show_sheet(Battle.new(3, "sylas", "dagruve"))
+	var closed_count := [0]
+	sheet3.closed.connect(func(): closed_count[0] += 1)
+	var was_open: bool = Playtest._note_open
+	Playtest._note_open = true
+	for code in [KEY_Q, KEY_E]:
+		var key := InputEventKey.new()
+		key.keycode = code
+		key.pressed = true
+		sheet3._input(key)
+		if sheet3.current_tab() != 0:
+			out.append("com o bloco de notas aberto, %s não pode trocar a aba da ficha" % OS.get_keycode_string(code))
+	var esc := InputEventKey.new()
+	esc.keycode = KEY_ESCAPE
+	esc.pressed = true
+	sheet3._input(esc)
+	if closed_count[0] != 0:
+		out.append("com o bloco de notas aberto, Esc não pode fechar a ficha")
+	Playtest._note_open = false
+	var key_e := InputEventKey.new()
+	key_e.keycode = KEY_E
+	key_e.pressed = true
+	sheet3._input(key_e)
+	if sheet3.current_tab() != 1:
+		out.append("sem o bloco de notas, E deveria trocar para a aba 1 da ficha")
+	Playtest._note_open = was_open
+	sheet3.free()
+
 	# ajuda de CA/CAM (IN-058)
 	var tip_ca := CharacterSheet.defense_tip("ca", 14, 0.12)
 	var tip_cam := CharacterSheet.defense_tip("cam", 9, 0.0)
