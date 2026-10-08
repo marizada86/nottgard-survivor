@@ -564,7 +564,7 @@ static func passive_mods_at(pid: String, level: int) -> Dictionary:
 
 func _boon_entry(bn: Dictionary) -> Dictionary:
 	var god := String(bn.get("god", ""))
-	return {"icon": "res://assets/icons/boons/%s.png" % String(bn.get("id", "")), "letter": String(bn.get("name", "?")).substr(0, 1), "border": BOON_BORDER,
+	return {"icon": BoonKinds.icon_path(bn), "letter": String(bn.get("name", "?")).substr(0, 1), "border": BOON_BORDER,
 		"badge": "", "badge_max": false, "evolve": false, "empty": false,
 		"detail": "[font_size=22][b]☼ %s[/b][/font_size]%s\n%s" % [String(bn.get("name", "")), ("\n[color=#c9a8ee]Bênção de %s[/color]" % god) if god != "" else "", String(bn.get("desc", ""))]}
 

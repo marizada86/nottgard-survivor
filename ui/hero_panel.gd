@@ -341,7 +341,7 @@ func _boon_icon(bn: Dictionary) -> Control:
 	frame.add_theme_stylebox_override("panel", _box(Color(0.1, 0.07, 0.14, 0.5), BOON_BORDER, 1, 2))
 	var god := String(bn.get("god", ""))
 	frame.tooltip_text = "%s%s\n%s" % [String(bn.get("name", "")), (" (bênção de %s)" % god) if god != "" else "", String(bn.get("desc", ""))]
-	var path := "res://assets/icons/boons/%s.png" % String(bn.get("id", ""))
+	var path := BoonKinds.icon_path(bn)
 	if ResourceLoader.exists(path):
 		frame.add_child(_icon_rect(path, BOON_ICON))
 	else:

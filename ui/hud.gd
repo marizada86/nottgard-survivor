@@ -538,7 +538,7 @@ func show_offer(b: Battle) -> void:
 			"weapon_new", "weapon_up": icon_path = "res://assets/icons/weapons/%s.png" % String(o.id)
 			"evolve": icon_path = "res://assets/icons/weapons/%s.png" % String(o.into)
 			"passive": icon_path = "res://assets/icons/passives/%s.png" % String(o.id)
-			"boon": icon_path = "res://assets/icons/boons/%s.png" % String(o.id)
+			"boon": icon_path = BoonKinds.icon_path_for_id(String(o.id))
 			"heal": icon_path = "res://assets/pickups/health_potion.png"
 			"gold": icon_path = "res://assets/pickups/gold_coin.png"
 			"shop_item": icon_path = "res://assets/icons/items/%s.png" % String(o.item.get("base", o.item.get("id", "")))

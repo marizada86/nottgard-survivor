@@ -19,6 +19,28 @@ var _seeded := false
 var _prev_pos := Vector2.ZERO
 var _have_prev := false
 
+## Ícone da bênção. Enquanto a arte própria não existe (ART-038), usa o ícone de outra bênção da mesma divindade;
+## sem nenhum da divindade, devolve o caminho próprio (inexistente) e quem chama cai na letra.
+static func icon_path(bn: Dictionary) -> String:
+	var own := "res://assets/icons/boons/%s.png" % String(bn.get("id", ""))
+	if ResourceLoader.exists(own):
+		return own
+	var god := String(bn.get("god", ""))
+	if god != "":
+		for other in Data.table("boons").get("boons", []):
+			if String(other.get("god", "")) != god:
+				continue
+			var alt := "res://assets/icons/boons/%s.png" % String(other.get("id", ""))
+			if ResourceLoader.exists(alt):
+				return alt
+	return own
+
+static func icon_path_for_id(id: String) -> String:
+	for bn in Data.table("boons").get("boons", []):
+		if String(bn.get("id", "")) == id:
+			return icon_path(bn)
+	return "res://assets/icons/boons/%s.png" % id
+
 static func boon_of(b: Battle, kind: String) -> Dictionary:
 	for bn in b.hero.boons:
 		if String(bn.get("kind", "")) == kind:
