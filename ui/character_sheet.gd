@@ -23,6 +23,9 @@ const BONUS_GROUPS := [
 	{"title": "Utilidade", "keys": []},  # tudo que sobrar
 ]
 const EXTRA_LABELS := {"weapon_slots": "espaços de arma", "rerolls": "rerrolagens", "choices": "opções extras", "revive": "revives", "low_hp_dmg": "dano com PV baixo"}
+const PASSIVE_MAX_LEVEL := 5   # igual ao limite das ofertas de level-up (Battle._build_offer)
+const DETAIL_HEIGHT := 265.0   # SPEC-147: cabe o próximo nível e a evolução sem rolar tanto
+const DETAIL_HEIGHT_BONUS := 110.0   # a aba de bônus precisa da grade, não do detalhe
 const STAT_ICONS := {"ca": "ca", "cam": "cam", "hp": "health", "xp_pct": "xp", "gold_pct": "coin"}
 
 var _b: Battle
@@ -44,6 +47,7 @@ var _tab_buttons: Array = []
 var _scroll: ScrollContainer
 var _content: VBoxContainer
 var _detail: RichTextLabel
+var _detail_frame: PanelContainer
 var _close_btn: Button
 var _stat_tips := {}
 var _previous_hint: Button
@@ -257,7 +261,7 @@ func _build_tabs_column() -> Control:
 	col.add_child(row)
 	_scroll = ScrollContainer.new()
 	_scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	_scroll.custom_minimum_size = Vector2(0, 250)
+	_scroll.custom_minimum_size = Vector2(0, 150)
 	_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
 	_scroll.follow_focus = true
 	col.add_child(_scroll)
@@ -265,8 +269,9 @@ func _build_tabs_column() -> Control:
 	_content.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	_content.add_theme_constant_override("separation", 6)
 	_scroll.add_child(_content)
-	var detail_frame := PanelContainer.new()
-	detail_frame.custom_minimum_size = Vector2(0, 165)
+	_detail_frame = PanelContainer.new()
+	var detail_frame := _detail_frame
+	detail_frame.custom_minimum_size = Vector2(0, DETAIL_HEIGHT)
 	detail_frame.add_theme_stylebox_override("panel", SheetArt.frame(SheetArt.DETAIL, 16, 28))
 	_detail = RichTextLabel.new()
 	_detail.bbcode_enabled = true
@@ -323,6 +328,7 @@ func set_tab(i: int) -> void:
 		_add_section(s)
 	if _tab == 3:
 		_add_bonus_block()
+	_detail_frame.custom_minimum_size.y = DETAIL_HEIGHT_BONUS if _tab == 3 else DETAIL_HEIGHT
 	_detail.text = "[color=#9a9aa6]Escolha um item na grade para ver o detalhe.[/color]"
 	_scroll.scroll_vertical = 0
 	call_deferred("_focus_first")
@@ -498,6 +504,15 @@ func _weapon_entry(w: Weapon) -> Dictionary:
 	var hint := _b.evolve_hint(w)
 	var detail := "[font_size=22][b]%s[/b][/font_size]%s%s\n%s%s%s" % [w.display_name(), tag, status, String(w.def.get("desc", "")),
 		("\n[color=#e6c76e]%s[/color]" % dmg_line) if dmg_line != "" else "", ("\n[color=#9fb4d8]%s[/color]" % hint) if hint != "" else ""]
+	# SPEC-147 (IN-059): o que o próximo nível muda e no que a arma evolui
+	var next_text := _b.next_level_text(w)
+	if next_text != "":
+		detail += "\n\n[b][color=#99cc99]Próximo nível (Nv %d):[/color][/b]\n%s" % [w.level + 1, next_text]
+	elif w.max_level() > 1:
+		detail += "\n\n[color=#ffd966]Nível máximo.[/color]"
+	var evo_text := _b.evolution_text(w)
+	if evo_text != "":
+		detail += "\n\n[b][color=#ffb36b]Evolução:[/color][/b] %s" % evo_text
 	var multi := w.max_level() > 1
 	return {"icon": "res://assets/icons/weapons/%s.png" % w.id, "letter": String(w.def.name).substr(0, 1),
 		"border": GRANTED_BORDER if w.granted else IRON, "badge": ("Nv%d" % w.level) if multi else "★",
@@ -515,6 +530,8 @@ func _item_entry(it: Dictionary) -> Dictionary:
 	var mods := Items.scaled_mods(it, lvl)
 	for k in mods:
 		detail += "\n• %s %s" % [Items.mod_value_text(k, float(mods[k])), Items.mod_label(k)]
+	if has_base and lvl < Items.MAX_LEVEL:
+		detail += "\n[color=#99cc99]Próximo nível (Nv %d): %s[/color]" % [lvl + 1, Items.mods_text(Items.scaled_mods(it, lvl + 1))]
 	if lvl >= Items.MAX_LEVEL:
 		var sup := Items.super_mods(it)
 		if not sup.is_empty():
@@ -528,9 +545,22 @@ func _item_entry(it: Dictionary) -> Dictionary:
 func _passive_entry(pid: String, level: int) -> Dictionary:
 	var p: Dictionary = Data.table("passives")[pid]
 	var src := String(p.get("src", ""))
+	var detail := "[font_size=22][b]✦ %s  Nv %d[/b][/font_size]%s\n%s" % [String(p.name), level, ("\n[color=#9a9aa6]%s[/color]" % src) if src != "" else "", String(p.get("desc", ""))]
+	detail += "\n[color=#e6c76e]Agora: %s[/color]" % Items.mods_text(passive_mods_at(pid, level))
+	if level < PASSIVE_MAX_LEVEL:
+		detail += "\n\n[b][color=#99cc99]Próximo nível (Nv %d):[/color][/b] %s" % [level + 1, Items.mods_text(passive_mods_at(pid, level + 1))]
+	else:
+		detail += "\n\n[color=#ffd966]Nível máximo.[/color]"
 	return {"icon": "res://assets/icons/passives/%s.png" % pid, "letter": String(p.name).substr(0, 1), "border": IRON,
-		"badge": "Nv%d" % level, "badge_max": false, "evolve": false, "empty": false,
-		"detail": "[font_size=22][b]✦ %s  Nv %d[/b][/font_size]%s\n%s" % [String(p.name), level, ("\n[color=#9a9aa6]%s[/color]" % src) if src != "" else "", String(p.get("desc", ""))]}
+		"badge": "Nv%d" % level, "badge_max": level >= PASSIVE_MAX_LEVEL, "evolve": false, "empty": false, "detail": detail}
+
+## SPEC-147: bônus total de uma passiva no nível dado (os mods da tabela valem por nível).
+static func passive_mods_at(pid: String, level: int) -> Dictionary:
+	var out := {}
+	var mods: Dictionary = Data.table("passives").get(pid, {}).get("mods", {})
+	for k in mods:
+		out[k] = float(mods[k]) * float(level)
+	return out
 
 func _boon_entry(bn: Dictionary) -> Dictionary:
 	var god := String(bn.get("god", ""))

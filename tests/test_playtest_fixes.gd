@@ -15,6 +15,7 @@ func run() -> Array:
 	out.append_array(_estige())
 	out.append_array(_armas())
 	out.append_array(_primeiro_bau())
+	out.append_array(_ficha())
 	return out
 
 ## B-001: C fecha a ficha; a ficha abre nas ofertas; a nota (F5) prende a HUD.
@@ -213,5 +214,54 @@ func _primeiro_bau() -> Array:
 	var spawned: Array = floating.call()
 	if spawned.size() != before + 1 or String(spawned.back().kind) != "chest":
 		out.append("depois de %.0f s o primeiro interativo deve ser um baú (achei %s)" % [Battle.FIRST_INTERACTION_SECONDS, spawned.map(func(i): return i.kind)])
+	return out
+
+## MEC-053: a ficha mostra o próximo nível e a evolução de armas, passivas e itens base (IN-059).
+func _ficha() -> Array:
+	var out: Array = []
+	var tree := Engine.get_main_loop() as SceneTree
+	var b := Battle.new(3, "sylas", "dagruve")
+	var sheet := CharacterSheet.new()
+	tree.root.add_child(sheet)
+	sheet.show_sheet(b)
+	# arma que evolui: próximo nível + evolução; no nível máximo, sem "próximo nível"
+	var w := Weapon.make("espada_sombria")
+	var d: String = sheet._weapon_entry(w).detail
+	if d.find("Próximo nível (Nv 2)") < 0 or d.find("Evolução:") < 0 or d.find("Espada do Receptáculo") < 0:
+		out.append("arma Nv1 que evolui: faltou 'Próximo nível (Nv 2)' ou a evolução na ficha")
+	w.level = w.max_level()
+	d = sheet._weapon_entry(w).detail
+	if d.find("Próximo nível") >= 0 or d.find("Nível máximo") < 0 or d.find("Evolução:") < 0:
+		out.append("arma no nível máximo: deve dizer 'Nível máximo' e manter a evolução")
+	# arma que não evolui: sem bloco de evolução
+	var plain := Weapon.make("golpe_esmagador")
+	d = sheet._weapon_entry(plain).detail
+	if d.find("Evolução:") >= 0 or d.find("Próximo nível (Nv 2)") < 0:
+		out.append("arma sem evolução: só o próximo nível, sem bloco de evolução")
+	# passiva: valor agora e do próximo nível; no nível 5, máximo
+	d = sheet._passive_entry("forca", 2).detail
+	if d.find("Próximo nível (Nv 3)") < 0 or d.find("+3") < 0 or d.find("+2") < 0:
+		out.append("passiva Nv2: faltou o efeito de agora (+2) e do próximo nível (+3): %s" % d)
+	if sheet._passive_entry("forca", CharacterSheet.PASSIVE_MAX_LEVEL).detail.find("Nível máximo") < 0:
+		out.append("passiva no nível 5 deve dizer 'Nível máximo'")
+	# item com base: próximo nível enquanto não é o máximo
+	var rng := RandomNumberGenerator.new()
+	rng.seed = 11
+	var found := false
+	for i in 60:
+		var it := Items.roll(rng, 2, 0.0)
+		if String(it.get("base", "")) == "":
+			continue
+		found = true
+		it["level"] = 1
+		if sheet._item_entry(it).detail.find("Próximo nível (Nv 2)") < 0:
+			out.append("item base Nv1 sem 'Próximo nível' na ficha")
+		it["level"] = Items.MAX_LEVEL
+		if sheet._item_entry(it).detail.find("Próximo nível") >= 0:
+			out.append("item no nível máximo não deve oferecer 'Próximo nível'")
+		break
+	if not found:
+		out.append("nenhum item com base nos 60 sorteios (teste sem cobertura)")
+	sheet.free()
 	return out
 

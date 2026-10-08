@@ -2362,6 +2362,24 @@ func evolve_hint(w: Weapon) -> String:
 		return "Pronta para evoluir em %s: escolha a evolução no próximo level-up." % into
 	return "Evolui em %s com nível %d + passiva %s. Falta: %s." % [into, Weapon.MAX_LEVEL, pname, ", ".join(missing)]
 
+## SPEC-147 (IN-059): o que o próximo nível da arma muda; "" no nível máximo ou quando a arma não evolui por níveis.
+func next_level_text(w: Weapon) -> String:
+	if w.level >= w.max_level():
+		return ""
+	return _level_desc(w)
+
+## SPEC-147 (IN-059): o que a evolução da arma traz (nome, descrição e faixa de dano); "" quando ela não evolui.
+func evolution_text(w: Weapon) -> String:
+	if not w.def.has("evolve"):
+		return ""
+	var into := Weapon.make(String(w.def.evolve.into))
+	var t := "%s: %s" % [into.display_name(), String(into.def.get("desc", ""))]
+	var dmg := weapon_damage_text(into.params())
+	if dmg != "":
+		t += "
+" + dmg
+	return t
+
 func _level_desc(w: Weapon) -> String:
 	var lv: Array = w.def.get("levels", [])
 	if w.level - 1 >= lv.size():
