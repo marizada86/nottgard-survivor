@@ -540,21 +540,36 @@ func _grant_god_boon(b: Battle, ids: Array) -> void:
 
 # ------------------------------------------------------------------ UI
 
-## Linhas para o HUD: título, progresso e tempo restante de cada objetivo aberto.
-func hud_lines(b: Battle) -> Array:
+## SPEC-147: objetivos abertos como dados para o painel de quests: {id, kind, title, text, need, have, left}.
+## `left` são os segundos restantes, ou -1 quando o objetivo não tem prazo.
+func hud_entries(b: Battle) -> Array:
 	var out: Array = []
 	for obj in objectives:
 		if bool(obj.done) or bool(obj.failed) or String(obj.text) == "":
 			continue
-		var line := "◆ %s — %s" % [String(obj.title), String(obj.text)]
-		if int(obj.need) > 1:
-			var have := int(obj.got) + carrying.filter(func(c): return c.obj == obj.id).size() if String(obj.kind) == "collect" else int(obj.got)
-			line += " (%d/%d)" % [have, int(obj.need)]
-		if float(obj.ends_at) > 0.0:
-			line += " · %d s" % maxi(0, int(ceil(float(obj.ends_at) - b.time)))
+		var have := int(obj.got)
+		if String(obj.kind) == "collect":
+			have += carrying.filter(func(c): return c.obj == obj.id).size()
+		out.append({"id": String(obj.id), "kind": String(obj.kind), "title": String(obj.title), "text": String(obj.text), "need": int(obj.need), "have": have,
+			"left": maxf(0.0, float(obj.ends_at) - b.time) if float(obj.ends_at) > 0.0 else -1.0})
+	return out
+
+## Nomes dos itens que o herói carrega para a quest, separados por vírgula ("" quando não carrega nada).
+func carrying_text() -> String:
+	return ", ".join(carrying.map(func(c): return String(c.label)))
+
+## Linhas para o HUD: título, progresso e tempo restante de cada objetivo aberto.
+func hud_lines(b: Battle) -> Array:
+	var out: Array = []
+	for e in hud_entries(b):
+		var line := "◆ %s — %s" % [e.title, e.text]
+		if int(e.need) > 1:
+			line += " (%d/%d)" % [int(e.have), int(e.need)]
+		if float(e.left) >= 0.0:
+			line += " · %d s" % int(ceil(float(e.left)))
 		out.append(line)
 	if not carrying.is_empty():
-		out.append("Carregando: %s" % ", ".join(carrying.map(func(c): return String(c.label))))
+		out.append("Carregando: %s" % carrying_text())
 	return out
 
 ## Pontos que merecem seta na borda da tela (destino, itens, NPCs, peregrino).

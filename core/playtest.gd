@@ -108,10 +108,14 @@ func _ready() -> void:
 
 func _build_ui() -> void:
 	_toast = Label.new()
-	_toast.set_anchors_preset(Control.PRESET_CENTER_TOP)
-	_toast.position = Vector2(0, 8)
+	# SPEC-147: antes ficava em y=8, por cima do relógio da fase; agora fica acima do slot da habilidade
+	_toast.set_anchors_preset(Control.PRESET_CENTER_BOTTOM)
 	_toast.custom_minimum_size = Vector2(700, 0)
-	_toast.position.x = -350
+	_toast.offset_left = -350.0
+	_toast.offset_right = 350.0
+	_toast.offset_top = -196.0
+	_toast.offset_bottom = -166.0
+	_toast.grow_vertical = Control.GROW_DIRECTION_BEGIN
 	_toast.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_toast.add_theme_color_override("font_color", Color(1, 0.95, 0.6))
 	_toast.add_theme_color_override("font_outline_color", Color(0, 0, 0))

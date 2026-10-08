@@ -17,6 +17,10 @@ signal mobile_command(action: StringName)
 signal extract_pressed
 signal pause_items_pressed
 
+const STATUS_MAX_LINES := 4
+const STACK_TOP := 90.0   # abaixo do relógio, do nome da fase e do ícone da regra
+const STACK_WIDTH := 680.0
+
 @onready var info_label: Label = %InfoLabel  # só as linhas do Estige; o resto do herói está no HeroPanel
 @onready var stage_rule_icon: TextureRect = %StageRuleIcon
 @onready var timer_label: Label = %TimerLabel
@@ -45,7 +49,9 @@ var hero_panel: HeroPanel  # SPEC-131 (ui/hero_panel.gd)
 var _active_icon_id := ""
 var _ability_slot: AbilitySlot
 var _stage_icon_id := ""
-var objective_label: Label  # SPEC-118: objetivos dos acontecimentos da fase
+var objective_label: Label  # linhas de status (juramento, buffs, Favor) abaixo do painel de quests
+var quest_panel: QuestPanel  # SPEC-147: objetivos dos acontecimentos da fase (SPEC-118)
+var top_stack: VBoxContainer  # SPEC-147: chefe, quests, status e avisos empilhados no topo central
 var mobile: MobileControls
 var _battle: Battle
 var _confirm_callback: Callable
@@ -105,19 +111,7 @@ func _ready() -> void:
 	items_panel.closed.connect(func(): items_closed.emit())
 	add_child(items_panel)
 	prompt_label.text = ""
-	objective_label = Label.new()
-	objective_label.name = "ObjectiveLabel"
-	objective_label.set_anchors_preset(Control.PRESET_CENTER_TOP)
-	objective_label.offset_left = -360.0
-	objective_label.offset_right = 360.0
-	objective_label.offset_top = 74.0
-	objective_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	objective_label.add_theme_font_size_override("font_size", 16)
-	objective_label.add_theme_color_override("font_color", Color(0.98, 0.86, 0.55))
-	objective_label.add_theme_color_override("font_outline_color", Color(0, 0, 0, 0.85))
-	objective_label.add_theme_constant_override("outline_size", 5)
-	objective_label.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	add_child(objective_label)
+	_build_top_stack()
 	if Game.touch_controls_enabled():
 		mobile = MobileControls.new()
 		mobile.name = "MobileControls"
@@ -220,6 +214,39 @@ func _restore_modal_focus() -> void:
 		var owner = _focus_before_modal.get_ref()
 		if is_instance_valid(owner) and owner.is_visible_in_tree():
 			owner.grab_focus()
+
+## SPEC-147 (IN-069, IN-072): barra do chefe, quests, linhas de status e avisos numa pilha só; o container empilha,
+## então nenhum desses blocos cobre outro, qualquer que seja o número de linhas.
+func _build_top_stack() -> void:
+	top_stack = VBoxContainer.new()
+	top_stack.name = "TopStack"
+	top_stack.set_anchors_preset(Control.PRESET_CENTER_TOP)
+	top_stack.offset_left = -STACK_WIDTH * 0.5
+	top_stack.offset_right = STACK_WIDTH * 0.5
+	top_stack.offset_top = STACK_TOP
+	top_stack.grow_horizontal = Control.GROW_DIRECTION_BOTH
+	top_stack.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	top_stack.add_theme_constant_override("separation", 6)
+	add_child(top_stack)
+	boss_panel.reparent(top_stack, false)
+	boss_panel.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	quest_panel = QuestPanel.new()
+	quest_panel.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	top_stack.add_child(quest_panel)
+	objective_label = Label.new()
+	objective_label.name = "ObjectiveLabel"
+	objective_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	objective_label.add_theme_font_size_override("font_size", 15)
+	objective_label.add_theme_color_override("font_color", Color(0.98, 0.86, 0.55))
+	objective_label.add_theme_color_override("font_outline_color", Color(0, 0, 0, 0.85))
+	objective_label.add_theme_constant_override("outline_size", 5)
+	objective_label.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	objective_label.visible = false
+	top_stack.add_child(objective_label)
+	toast_box.reparent(top_stack, false)
+	toast_box.size_flags_horizontal = Control.SIZE_FILL
+	# a pilha fica na ordem de desenho que o ToastBox tinha: abaixo da ficha C, das ofertas e das pausas
+	move_child(top_stack, prompt_label.get_index())
 
 func has_modal() -> bool:
 	return _confirm_dialog.visible or _controls_panel.visible or items_panel.visible or pause_panel.visible or Playtest.is_overlay_open()
@@ -454,8 +481,13 @@ func update_stats(b: Battle) -> void:
 		if b.stage.get("next", "") != "":
 			pr += "   [%s] Descer ×%.2f" % [Game.controls.prompt("run_interact", "E"), b.next_reward_multiplier()]
 	prompt_label.text = pr
+	quest_panel.update_entries(b.happenings.hud_entries(b), b.happenings.carrying_text())
+	var status_lines: Array = b.kinds.hud_lines(b) + Favor.hud_lines(h.boons)
+	if status_lines.size() > STATUS_MAX_LINES:
+		status_lines = status_lines.slice(0, STATUS_MAX_LINES - 1) + ["+%d efeitos" % (status_lines.size() - STATUS_MAX_LINES + 1)]
 	objective_label.text = "
-".join(b.happenings.hud_lines(b) + b.kinds.hud_lines(b) + Favor.hud_lines(h.boons))
+".join(status_lines)
+	objective_label.visible = objective_label.text != ""
 
 func show_offer(b: Battle) -> void:
 	Game.controls.transition()

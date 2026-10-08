@@ -11,6 +11,7 @@ func _key(code: Key) -> InputEventKey:
 func run() -> Array:
 	var out: Array = []
 	out.append_array(_entrada())
+	out.append_array(_topo())
 	return out
 
 ## B-001: C fecha a ficha; a ficha abre nas ofertas; a nota (F5) prende a HUD.
@@ -78,5 +79,48 @@ func _entrada() -> Array:
 	if hud.has_modal() and not Playtest.is_overlay_open():
 		out.append("has_modal() não deve valer sem painel aberto")
 	hud.free()
+	return out
+
+## B-002 S-004: o topo central empilha chefe, quests, status e avisos sem interseção, em qualquer quantidade de linhas.
+func _topo() -> Array:
+	var out: Array = []
+	var tree := Engine.get_main_loop() as SceneTree
+	for count in [0, 1, 3, 6]:
+		var b := Battle.new(3, "sylas", "dagruve")
+		var hud: Node = load("res://ui/hud.tscn").instantiate()
+		tree.root.add_child(hud)
+		b.happenings.objectives.clear()
+		for i in count:
+			b.happenings.objectives.append(_objective(i))
+		hud.update_stats(b)
+		hud.boss_panel.visible = true
+		hud.objective_label.text = "a\nb\nc\nd"
+		hud.objective_label.visible = true
+		for i in 4:
+			hud.toast("Aviso %d com texto bem comprido para quebrar a linha na largura do bloco de avisos do topo da tela" % i)
+		var stack: VBoxContainer = hud.top_stack
+		stack.notification(Container.NOTIFICATION_SORT_CHILDREN)
+		var rects: Array = []
+		for c in stack.get_children():
+			if (c as Control).visible:
+				rects.append([c.name, (c as Control).get_rect()])
+		for i in rects.size():
+			for j in range(i + 1, rects.size()):
+				if (rects[i][1] as Rect2).intersects(rects[j][1]):
+					out.append("topo com %d objetivos: %s e %s se sobrepõem (%s / %s)" % [count, rects[i][0], rects[j][0], rects[i][1], rects[j][1]])
+		if count > 0 and not hud.quest_panel.visible:
+			out.append("com %d objetivos o painel de quests deve aparecer" % count)
+		if count == 0 and hud.quest_panel.visible:
+			out.append("sem objetivos o painel de quests não deve aparecer")
+		if count == 6 and hud.quest_panel._rows.get_child_count() != QuestPanel.MAX_ROWS + 1:
+			out.append("6 objetivos devem mostrar %d linhas e um '+N' (viu %d filhos)" % [QuestPanel.MAX_ROWS, hud.quest_panel._rows.get_child_count()])
+		# o que não é aviso passageiro (chefe, quests, status) não pode passar de 60% da altura de 720 px com até 3 objetivos
+		var fixed_bottom := stack.position.y
+		for r in rects:
+			if r[0] != "ToastBox":
+				fixed_bottom = maxf(fixed_bottom, stack.position.y + (r[1] as Rect2).end.y)
+		if count <= 3 and fixed_bottom > 720.0 * 0.6:
+			out.append("chefe, quests e status ocupam demais a tela com %d objetivos (até y=%.0f)" % [count, fixed_bottom])
+		hud.free()
 	return out
 
