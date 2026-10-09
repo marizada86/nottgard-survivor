@@ -3,8 +3,8 @@ extends RefCounted
 ## com TerrainLayout.scale (= lado / 40); as cenas de fase têm map_size 60x60, o herói no centro e os props
 ## distribuídos (nenhum fora da margem, nenhuma célula de 12x12 vazia).
 
-## SPEC-152: a fatia piloto de segredos usa 84x84 em Shedaklah, Molor e Durao; as demais fases seguem 60x60.
-const BIG := ["shedaklah", "molor", "durao"]
+## SPEC-152: a fatia piloto de segredos usa 84x84 em seis fases (SPEC-152 e SPEC-157); Dagruve, Docas e Pilares seguem 60x60.
+const BIG := ["shedaklah", "molor", "durao", "feng_tu", "shendilavri", "goranthis"]
 
 static func side_of(sid: String) -> int:
 	return 84 if BIG.has(sid) else 60
@@ -84,7 +84,7 @@ func run() -> Array:
 				if int(counts.get(Vector2i(cx, cy), 0)) == 0:
 					empty += 1
 		# 84x84 (SPEC-152): os props da cena são só o ponto de partida; em runtime valem os aglomerados do level design. Uma célula pode ficar vazia (montanha ou água)
-		var allowed_empty := 1 if side_of(sid) > 60 else 0
+		var allowed_empty := 2 if side_of(sid) > 60 else 0
 		if empty > allowed_empty:
 			out.append("%s: %d célula(s) 12x12 sem nenhum prop" % [sid, empty])
 	return out

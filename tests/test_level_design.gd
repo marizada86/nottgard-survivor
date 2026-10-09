@@ -11,7 +11,7 @@ func run() -> Array:
 		if String(stage_id).begins_with("_"):
 			continue
 		# SPEC-152: Shedaklah, Molor e Durao em 84x84 (cópias de aglomerados), as demais em 60x60
-		var side := 84.0 if ["shedaklah", "molor", "durao"].has(stage_id) else 60.0
+		var side := 84.0 if ["shedaklah", "molor", "durao", "feng_tu", "shendilavri", "goranthis"].has(stage_id) else 60.0
 		var map_size := Vector2(side, side)
 		var start := map_size * 0.5
 		TerrainLayout.scale = map_size.x / 40.0

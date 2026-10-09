@@ -36,7 +36,7 @@ func run() -> Array:
 		out.append("rocha deveria ter ficha visual e sombra dinâmica própria")
 	prop.free()
 
-	# BUG-011: o Espelho de Shendilavri tem de ficar dentro da área andável (40x40 tiles), não na parede (y = -0,5).
+	# BUG-011: o Espelho de Shendilavri tem de ficar dentro da área andável (o mapa inteiro), não na parede (y = -0,5).
 	var scene_text := FileAccess.get_file_as_string("res://ui/stages/shendilavri.tscn")
 	var at := scene_text.find("[node name=\"Espelho\"")
 	if at < 0:
@@ -46,6 +46,8 @@ func run() -> Array:
 		var pos_end := scene_text.find(")", pos_at)
 		var nums := scene_text.substr(pos_at + 19, pos_end - pos_at - 19).split(",")
 		var ground := Iso.to_ground(Vector2(float(nums[0]), float(nums[1])))
-		if ground.x < 1.0 or ground.y < 1.0 or ground.x > 39.0 or ground.y > 39.0:
+		var side_match := RegEx.create_from_string("map_size = Vector2i\\((\\d+)").search(scene_text)
+		var side := float(side_match.get_string(1)) if side_match != null else 40.0  # SPEC-157: o mapa pode ser 60 ou 84
+		if ground.x < 1.0 or ground.y < 1.0 or ground.x > side - 1.0 or ground.y > side - 1.0:
 			out.append("Espelho de Shendilavri fora da área andável: chão (%.1f, %.1f)" % [ground.x, ground.y])
 	return out
