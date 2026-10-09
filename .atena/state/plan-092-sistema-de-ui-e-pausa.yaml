@@ -2,7 +2,7 @@ id: PLAN-092
 spec: SPEC-165
 spec_file: .atena/specs/SPEC-165-sistema-de-ui-e-menu-de-pausa-mec-003.md
 mode: per-plan
-status: APPROVED_EXECUTING_ON_BRANCH
+status: IMPLEMENTED_ON_BRANCH_AWAITING_OWNER_REVIEW
 created: '2026-10-09'
 request_classification: PLAN_DEVIATION
 deviation_id: DEV-027
@@ -12,10 +12,10 @@ approval_note: 'por plano; dono ausente por cerca de 4 horas: executar tudo em b
 interview: 'Dores: telas diferentes entre si, dificil achar as coisas, fluxo e navegacao; escopo: sistema de UI + menu de pausa; arte: UI por codigo, sem arte nova (2026-10-09)'
 return: {plan: PLAN-071, checkpoint_observed: B-006/S-011}
 batches:
-  B-001: {title: UiKit e ficha C sem mudanca visual, steps: [S-001, S-002, S-003], status: PENDING}
-  B-002: {title: Catalogo e componente de opcoes, steps: [S-004, S-005, S-006], status: PENDING}
-  B-003: {title: Menu de pausa novo e fluxo, steps: [S-007, S-008, S-009], status: PENDING}
-  B-004: {title: Capturas, verificacao e registro, steps: [S-010, S-011], status: PENDING}
+  B-001: {title: UiKit e ficha C sem mudanca visual, steps: [S-001, S-002, S-003], status: DONE_ON_BRANCH}
+  B-002: {title: Catalogo e componente de opcoes, steps: [S-004, S-005, S-006], status: DONE_ON_BRANCH}
+  B-003: {title: Menu de pausa novo e fluxo, steps: [S-007, S-008, S-009], status: DONE_ON_BRANCH}
+  B-004: {title: Capturas, verificacao e registro, steps: [S-010, S-011], status: DONE_ON_BRANCH}
 steps:
   S-001: 'Capturas "antes" da ficha C (desktop e celular) e inventario das constantes visuais.'
   S-002: 'ui/ui_kit.gd com paleta, box, label, abas, slot e dicas; ficha C passa a usa-lo.'
@@ -38,4 +38,4 @@ gates:
   other_sessions_changes: PRESERVE_UNTOUCHED
 blocking_gaps: []
 non_blocking_gaps: [P1, P2, P3]
-commit_push_build_export: NOT_PERFORMED
+commit_push_build_export: "COMMITTED_ON_BRANCH atena/eventos-e-ui-fase1 (sem merge na main, push, exportacao nem aviso aos testers)"

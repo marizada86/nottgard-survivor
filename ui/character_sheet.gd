@@ -8,13 +8,13 @@ signal closed
 
 const TAB_NAMES := ["Armas e feitiços", "Equipamento", "Passivas e bênçãos", "Sinergias e bônus"]
 const TAB_LABELS := ["Armas", "Equipamento", "Passivas", "Sinergias"]
-const PANEL_SIZE := Vector2(1088, 612)
-const GOLD := Color(0.93, 0.78, 0.4)
-const GOLD_DIM := Color(0.62, 0.5, 0.28)
-const IRON := Color(0.36, 0.35, 0.42)
+const PANEL_SIZE := UiKit.WINDOW_SIZE
+const GOLD := UiKit.GOLD   # SPEC-165: o padrão visual mora no UiKit
+const GOLD_DIM := UiKit.GOLD_DIM
+const IRON := UiKit.IRON
 const BOON_BORDER := Color(0.72, 0.5, 0.92)
 const GRANTED_BORDER := Color(0.45, 0.8, 0.5)
-const MUTED := Color(0.62, 0.62, 0.68)
+const MUTED := UiKit.MUTED
 const ATTR_COLORS := {"forca": Color(0.92, 0.42, 0.38), "inteligencia": Color(0.96, 0.86, 0.42), "constituicao": Color(0.45, 0.66, 0.96), "carisma": Color(0.78, 0.56, 0.96)}
 const SLOT_NAMES := {"arma": "Arma", "armadura": "Armadura", "amuleto": "Amuleto", "anel": "Anel"}
 const BONUS_GROUPS := [
@@ -58,23 +58,14 @@ func _ready() -> void:
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	mouse_filter = Control.MOUSE_FILTER_STOP
 	visible = false
-	var dim := ColorRect.new()
-	dim.color = Color(0, 0, 0, 0.7)
-	dim.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	dim.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	add_child(dim)
+	add_child(UiKit.dim())
 	var center := CenterContainer.new()
 	center.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	center.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(center)
-	_panel = PanelContainer.new()
-	_panel.custom_minimum_size = PANEL_SIZE
-	_panel.add_theme_stylebox_override("panel", SheetArt.background())
-	_panel.draw.connect(_draw_frame)
+	_panel = UiKit.window(PANEL_SIZE)
 	center.add_child(_panel)
-	var margin := MarginContainer.new()
-	for side in ["left", "right", "top", "bottom"]:
-		margin.add_theme_constant_override("margin_" + side, 40)
+	var margin := UiKit.margin(40)
 	_panel.add_child(margin)
 	var root := VBoxContainer.new()
 	root.add_theme_constant_override("separation", 10)
@@ -95,23 +86,10 @@ func _ready() -> void:
 		TouchUI.adapt_sizes(self)
 
 func _box(bg: Color, border: Color, width: int, radius: int) -> StyleBoxFlat:
-	var sb := StyleBoxFlat.new()
-	sb.bg_color = bg
-	sb.border_color = border
-	sb.set_border_width_all(width)
-	sb.set_corner_radius_all(radius)
-	return sb
+	return UiKit.box(bg, border, width, radius)
 
-func _label(text: String, size: int, color: Color = Color(0.92, 0.9, 0.86)) -> Label:
-	var l := Label.new()
-	l.text = text
-	l.add_theme_font_size_override("font_size", size)
-	l.add_theme_color_override("font_color", color)
-	return l
-
-## A moldura fica atras do conteudo; nao captura foco ou cliques.
-func _draw_frame() -> void:
-	_panel.draw_texture_rect(SheetArt.PANEL, Rect2(Vector2.ZERO, _panel.size), false)
+func _label(text: String, size: int, color: Color = UiKit.TEXT) -> Label:
+	return UiKit.label(text, size, color)
 
 func _build_header() -> Control:
 	var row := HBoxContainer.new()
@@ -221,41 +199,17 @@ func _build_tabs_column() -> Control:
 	var row := HBoxContainer.new()
 	row.add_theme_constant_override("separation", 6)
 	if not Game.touch_controls_enabled():
-		_previous_hint = Button.new()
-		_previous_hint.flat = true
-		_previous_hint.custom_minimum_size = Vector2(52, 32)
-		_previous_hint.expand_icon = false
-		_previous_hint.focus_mode = Control.FOCUS_NONE
+		_previous_hint = UiKit.hint_button()
 		_previous_hint.pressed.connect(cycle_tab.bind(-1))
 		row.add_child(_previous_hint)
 	var group := ButtonGroup.new()
 	for i in TAB_NAMES.size():
-		var tb := Button.new()
-		tb.text = TAB_LABELS[i]
-		tb.tooltip_text = TAB_NAMES[i]
-		tb.icon = SheetArt.TAB_ICONS[i]
-		tb.expand_icon = true
-		tb.add_theme_constant_override("icon_max_width", 28)
-		tb.custom_minimum_size = Vector2(0, 40)
-		tb.toggle_mode = true
-		tb.button_group = group
-		tb.focus_mode = Control.FOCUS_NONE
-		tb.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-		tb.add_theme_font_size_override("font_size", 14)
-		tb.add_theme_stylebox_override("normal", SheetArt.frame(SheetArt.TAB, 12, 8))
-		tb.add_theme_stylebox_override("hover", SheetArt.frame(SheetArt.TAB, 12, 8, Color(1.15, 1.1, 0.9)))
-		tb.add_theme_stylebox_override("pressed", SheetArt.frame(SheetArt.TAB, 12, 8, Color(1.55, 1.25, 0.6)))
-		tb.add_theme_stylebox_override("hover_pressed", SheetArt.frame(SheetArt.TAB, 12, 8, Color(1.65, 1.35, 0.7)))
-		tb.add_theme_color_override("font_pressed_color", GOLD)
+		var tb := UiKit.tab_button(TAB_LABELS[i], TAB_NAMES[i], SheetArt.TAB_ICONS[i], group)
 		tb.pressed.connect(set_tab.bind(i))
 		_tab_buttons.append(tb)
 		row.add_child(tb)
 	if not Game.touch_controls_enabled():
-		_next_hint = Button.new()
-		_next_hint.flat = true
-		_next_hint.custom_minimum_size = Vector2(52, 32)
-		_next_hint.expand_icon = false
-		_next_hint.focus_mode = Control.FOCUS_NONE
+		_next_hint = UiKit.hint_button()
 		_next_hint.pressed.connect(cycle_tab.bind(1))
 		row.add_child(_next_hint)
 	col.add_child(row)
@@ -297,15 +251,7 @@ func hide_sheet() -> void:
 	visible = false
 
 func _update_controller_hints() -> void:
-	if _previous_hint != null:
-		_previous_hint.text = "◂" if Game.controls.is_controller() else "◂ Q"
-		_previous_hint.icon = Game.controls.glyph("tab_previous")
-		_previous_hint.add_theme_constant_override("icon_max_width", 32)
-		_next_hint.text = "▸" if Game.controls.is_controller() else "E ▸"
-		_previous_hint.tooltip_text = Game.controls.prompt("tab_previous", "Q") + " — Aba anterior"
-		_next_hint.tooltip_text = Game.controls.prompt("tab_next", "E") + " — Próxima aba"
-		_next_hint.icon = Game.controls.glyph("tab_next")
-		_next_hint.add_theme_constant_override("icon_max_width", 32)
+	UiKit.update_tab_hints(_previous_hint, _next_hint)
 	_close_btn.text = "Fechar" if Game.touch_controls_enabled() else "Fechar (%s)" % Game.controls.prompt("ui_cancel", "C")
 	_ability_hint.text = "HABILIDADE" if Game.touch_controls_enabled() else "HABILIDADE [%s]" % Game.controls.prompt("hero_active", "Q/RMB")
 
@@ -360,17 +306,7 @@ func _input(ev: InputEvent) -> void:
 		Game.controls.transition()
 		get_viewport().set_input_as_handled()
 		return
-	var d := 0
-	if ev is InputEventKey and ev.pressed and not ev.echo:
-		if ev.keycode == KEY_Q:
-			d = -1
-		elif ev.keycode == KEY_E:
-			d = 1
-	elif ev is InputEventJoypadButton and ev.pressed:
-		if ev.button_index == JOY_BUTTON_LEFT_SHOULDER:
-			d = -1
-		elif ev.button_index == JOY_BUTTON_RIGHT_SHOULDER:
-			d = 1
+	var d := UiKit.tab_step(ev)
 	if d != 0:
 		cycle_tab(d)
 		get_viewport().set_input_as_handled()

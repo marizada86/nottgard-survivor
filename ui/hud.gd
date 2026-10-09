@@ -57,6 +57,8 @@ var eco_banner: EcoBanner     # SPEC-152: faixa do Eco de Nottgard (6 s, sem pau
 var eco_counter: Label        # SPEC-152: "Ecos 1/4", só depois do primeiro achado na fase
 var mobile: MobileControls
 var event_pointer: EventPointer  # SPEC-159 (MEC-061): setas de evento na borda da tela
+var pause_menu: PauseMenu   # SPEC-165 (MEC-003): menu de pausa em abas
+var _pause_box: VBoxContainer  # os botões antigos da pausa; ficam dentro da aba Jogo
 var stage_progress: StageProgress  # SPEC-163 (MEC-002): barra de progresso da fase sob o relógio
 var _battle: Battle
 var _confirm_callback: Callable
@@ -76,6 +78,7 @@ var _offer_hint: Label
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	_pause_box = $PausePanel/VBox   # SPEC-165: antes de qualquer uso; a caixa vai para dentro da aba Jogo no fim do _ready
 	reroll_btn.pressed.connect(func(): reroll_pressed.emit())
 	%ResumeBtn.pressed.connect(func(): resume_pressed.emit())
 	%QuitBtn.pressed.connect(func():
@@ -150,7 +153,7 @@ func _ready() -> void:
 		weapons_label.hide()
 		prompt_label.hide()
 		$StatBox.position = Game.touch_safe_rect().position
-		$PausePanel/VBox/PauseItemsHint.text = "Toque em Ficha durante o combate para consultar itens e habilidades."
+		_pause_box.get_node("PauseItemsHint").text = "Toque em Ficha durante o combate para consultar itens e habilidades."
 		%ResumeBtn.text = "Continuar"
 		%PauseHelpBtn.text = "Como jogar"
 		_setup_mobile_offers()
@@ -192,9 +195,10 @@ func _ready() -> void:
 	stage_progress.offset_bottom = 47.0
 	add_child(stage_progress)
 	event_pointer.avoid_nodes.append(stage_progress)
+	_build_pause_menu()
 
 func _setup_controller_pause() -> void:
-	var box: VBoxContainer = $PausePanel/VBox
+	var box: VBoxContainer = _pause_box
 	_pause_items = Button.new()
 	_pause_items.text = "Ficha do herói"
 	_pause_items.pressed.connect(func(): pause_items_pressed.emit())
@@ -322,7 +326,7 @@ func _update_controller_prompts() -> void:
 		button.icon = Game.controls.glyph(entry[1])
 		button.expand_icon = true
 		button.add_theme_constant_override("icon_max_width", 28)
-	$PausePanel/VBox/PauseItemsHint.text = "Ficha: %s · Detalhes: %s · Abas: %s / %s" % [Game.controls.prompt("run_items", "C"), Game.controls.prompt("offer_details", "Shift"), Game.controls.prompt("tab_previous", "Q"), Game.controls.prompt("tab_next", "E")]
+	_pause_box.get_node("PauseItemsHint").text = "Ficha: %s · Detalhes: %s · Abas: %s / %s" % [Game.controls.prompt("run_items", "C"), Game.controls.prompt("offer_details", "Shift"), Game.controls.prompt("tab_previous", "Q"), Game.controls.prompt("tab_next", "E")]
 	%ResumeBtn.text = "Continuar (%s)" % Game.controls.prompt("run_pause", "Esc") if mobile == null else "Continuar"
 	if is_instance_valid(_offer_hint):
 		_offer_hint.text = "%s Confirmar · %s Detalhes · %s Ficha" % [Game.controls.prompt("ui_accept", "Enter"), Game.controls.prompt("offer_details", "Shift"), Game.controls.prompt("run_items", "C")] if Game.controls.is_controller() else "W/S ou setas escolhem, Enter confirma, 1 a 9 escolhem direto. Passe o mouse ou segure Shift para ver detalhes e comparação."
@@ -868,6 +872,7 @@ func show_pause(v: bool) -> void:
 	clear_mobile_input()
 	pause_panel.visible = v
 	if v:
+		pause_menu.show_menu(_battle)   # SPEC-165: volta à aba Jogo e marca o que apareceu nesta run
 		aim_btn.text = "Mira: %s (%s)" % ["AUTO" if Game.aim_mode() == Battle.Aim.AUTO else "MANUAL", Game.controls.prompt("run_toggle_aim", "Tab")]
 		vol_slider.value = float(Game.profile.data.settings.volume)
 		_focus_visible.call_deferred(%ResumeBtn)
@@ -926,3 +931,18 @@ func pulse_xp() -> void:
 	hero_panel.xp_bar.modulate = Color(1.6, 1.5, 1.2)
 	_xp_pulse = create_tween()
 	_xp_pulse.tween_property(hero_panel.xp_bar, "modulate", Color.WHITE, 0.18)
+
+## SPEC-165 (MEC-003): o painel de pausa vira a janela padrão com abas (Jogo, Catálogo, Configurações).
+## Os botões antigos são reaproveitados dentro da aba Jogo e a linha de volume dentro de Configurações.
+func _build_pause_menu() -> void:
+	UiKit.apply_window(pause_panel, UiKit.WINDOW_SIZE_TOUCH if Game.touch_controls_enabled() else UiKit.WINDOW_SIZE)
+	var margin := UiKit.margin(40)
+	pause_panel.add_child(margin)
+	pause_menu = PauseMenu.new()
+	pause_menu.name = "PauseMenu"
+	margin.add_child(pause_menu)
+	var title: Control = _pause_box.get_node_or_null("PauseTitle")
+	if title != null:
+		title.hide()   # o cabeçalho "PAUSA" agora é do PauseMenu
+	pause_menu.build(_pause_box, _pause_box.get_node("VolRow"))
+	pause_menu.is_blocked = func(): return items_panel.visible or _controls_panel.visible or _confirm_dialog.visible or Playtest.is_overlay_open()

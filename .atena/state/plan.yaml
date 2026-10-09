@@ -117,7 +117,7 @@ deferred_requests:
   - id: DEV-027
     request: 'MEC-003: melhorar a interface, considerar uma nova UI (entrevista: sistema de UI + menu de pausa, UI por codigo).'
     request_classification: PLAN_DEVIATION
-    status: APPROVED_EXECUTING_ON_BRANCH
+    status: IMPLEMENTED_ON_BRANCH_AWAITING_OWNER_REVIEW
     recorded: '2026-10-09'
     authorization_verbatim: 'sobre a MEC-003 vamos trabalhar para melhorar a interface, talvez refazer o jogo esta maior e recebeu muitas atualizacoes, considerar uma nova UI'
     proposed_plan: PLAN-092
