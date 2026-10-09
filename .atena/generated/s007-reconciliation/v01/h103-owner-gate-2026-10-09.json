@@ -1,0 +1,55 @@
+{
+  "id": "GATE-FILA-023-H103-2026-10-09",
+  "timestamp": "2026-10-09T14:18:07.194403+00:00",
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "checkpoint": "S-007/VFX/FILA-023/H103-APPROVAL",
+  "status": "PENDING_OWNER_APPROVAL",
+  "frame": "H103",
+  "version": "v01",
+  "candidate": ".atena/generated/art-candidates/vfx/durvall_ruptura_sombria/durvall_ruptura_sombria_peak_v01.png",
+  "sha256": "e5f022ec1c630409f6405add4250ebfc73ebe052ea233e8c227ec5ce67fe8974",
+  "visual_inspected": true,
+  "review": ".atena/generated/s007-reconciliation/v01/h103-reference-comparison-2026-10-09.png",
+  "prompts_and_native_audit": ".atena/generated/s007-reconciliation/v01/mh-generation-jobs-2026-10-09.json",
+  "source_instruction": ".atena/generated/CHATGPT-FILA-023-vfx-habilidades-dos-herois.md",
+  "canonical_source": ".atena/generated/ART-PROMPTS-054-vfx-habilidades-dos-herois.md",
+  "instruction": "Para cada efeito, gere primeiro o quadro marcado GATE, pare e devolva ao dono.",
+  "visual_review": {
+    "subject": "Heavy right-facing wide sweeping cleave, jagged dark torn middle and thin internal fissures, brightest broad white-gray band",
+    "view": "flat top-down",
+    "readable_at96": true,
+    "no_visible_cuts": true,
+    "no_character_weapon_hand_text": true,
+    "approved_pilot_style_compared": true
+  },
+  "technical_notes": {
+    "native_dimensions": [
+      1254,
+      1254
+    ],
+    "requested_dimensions": [
+      1024,
+      1024
+    ],
+    "visible_bbox_above12": [
+      208,
+      56,
+      1130,
+      1178
+    ],
+    "outer_border_max_luminance": 2,
+    "maximum_channel_difference": 10,
+    "normalization": "Native bytes preserved; future downsample to1024 and pivot alignment; exact zero RGB not claimed",
+    "art_subject_degrees": 170,
+    "existing_gameplay_cone_degrees": 85,
+    "scope": "Canonical art prompt followed; runtime mechanics unchanged"
+  },
+  "runtime_admission": false,
+  "official_manifest_assets": 202,
+  "manifest_file_sha256": "52384ac0f88ffca25952099d6c7f0e58224e7d235012ea284f55198cc2406f6a",
+  "remaining_native_vfx_frames": 59,
+  "other_Durvall_frames_generated": 0,
+  "next_if_approved": "Generate H101,H102,H104,H105,H106 individually with approved H103, then only H201 Brook marked gate.",
+  "ranking_return": "PLAN-071 B-006/S-011 preserved"
+}

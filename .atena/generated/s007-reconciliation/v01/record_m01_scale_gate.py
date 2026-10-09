@@ -1,0 +1,9 @@
+from pathlib import Path
+import json,re
+from datetime import datetime,timezone
+out=Path(__file__).parent;root=out.parents[3];jp=out/'mh-generation-jobs-2026-10-09.json';d=json.loads(jp.read_text(encoding='utf-8'));j=next(x for x in d['jobs'] if x['code']=='M01');assert j['version']=='v03' and j['status']=='REJECTED_VISUAL';j['rejection_reason']='Third version enlarged initial ring instead of reaching about10%of M03 peak radius; retry limit reached.';jp.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+v2=next(x for x in d['rejected_native_versions'] if x['code']=='M01' and x['version']=='v02')
+g=dict(id='GATE-M01-SCALE-2026-10-09',status='PENDING_OWNER_DECISION',timestamp=datetime.now(timezone.utc).isoformat(),plan='PLAN-053',frame='M01',max_versions=3,preferred_candidate=v2['destination'],preferred_version='v02',sha256=v2['sha256'],reason='Three native attempts did not reach about10%of approved peak radius. v02 is smallest, roughly14%of peak radius visually, centered quiet white-gray ring.',owner_choice='Accept v02 as scale exception, or keep M01 pending.',independent_work='M02,M04,M05,M06 within approved remaining-M scope; no H103 before M decision.',runtime_admission=False)
+(out/'m01-scale-owner-gate-2026-10-09.json').write_text(json.dumps(g,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+p=root/'.atena/state/plan-053-imagens.yaml';t=p.read_text(encoding='utf-8-sig');assert '\nm01_scale_decision:' not in t;t+='\nm01_scale_decision:\n  id: GATE-M01-SCALE-2026-10-09\n  status: PENDING_OWNER_DECISION\n  frame: M01\n  max_versions: 3\n  preferred_version: v02\n  receipt: .atena/generated/s007-reconciliation/v01/m01-scale-owner-gate-2026-10-09.json\n  independent_work: M02,M04,M05,M06 within approved scope only\n';p.write_text(t,encoding='utf-8')
+print('M01 scale owner decision pending; independent approved M frames remain executable')

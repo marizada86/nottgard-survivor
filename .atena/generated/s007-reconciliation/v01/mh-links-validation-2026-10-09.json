@@ -1,0 +1,97 @@
+{
+  "status": "PASSED",
+  "links": [
+    {
+      "document": ".atena/evidence/s007-fila022-completa-h103-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/m03-owner-approval-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-fila022-completa-h103-gate-2026-10-09.md",
+      "target": "../vault/canon/ASSET-APPROVAL-REGISTER-031-vfx-ampulheta-silencio-2026-10-09.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-fila022-completa-h103-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/m01-scale-owner-approval-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-fila022-completa-h103-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/m01-scale-owner-gate-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-fila022-completa-h103-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/ampulheta-silencio-sequence-audit-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-fila022-completa-h103-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/ampulheta-silencio-six-frame-review-2026-10-09.png",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-fila022-completa-h103-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/ampulheta-silencio-sequence-review-2026-10-09.gif",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-fila022-completa-h103-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/fila022-complete-native-audit-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-fila022-completa-h103-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/h103-owner-gate-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-fila022-completa-h103-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/h103-reference-comparison-2026-10-09.png",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-fila022-completa-h103-gate-2026-10-09.md",
+      "target": "../generated/art-candidates/vfx/durvall_ruptura_sombria/durvall_ruptura_sombria_peak_v01.png",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-fila022-completa-h103-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/mh-generation-jobs-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-fila022-completa-h103-gate-2026-10-09.md",
+      "target": "../generated/n03-publication-2026-10-09/receipt.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-031-vfx-ampulheta-silencio-2026-10-09.md",
+      "target": "../../generated/s007-reconciliation/v01/m03-owner-approval-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-031-vfx-ampulheta-silencio-2026-10-09.md",
+      "target": "../../generated/art-candidates/vfx/ampulheta_silencio/ampulheta_silencio_peak_v01.png",
+      "exists": true
+    },
+    {
+      "document": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-031-vfx-ampulheta-silencio-2026-10-09.md",
+      "target": "../../generated/s007-reconciliation/v01/m01-scale-owner-approval-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-031-vfx-ampulheta-silencio-2026-10-09.md",
+      "target": "../../generated/s007-reconciliation/v01/m01-scale-owner-gate-2026-10-09.json",
+      "exists": true
+    }
+  ],
+  "source_hashes_verified": 7,
+  "rejected_native_hashes_verified": 5,
+  "fila022_source_hashes_verified": 36,
+  "manifest_assets": 202,
+  "manifest_sha256": "52384ac0f88ffca25952099d6c7f0e58224e7d235012ea284f55198cc2406f6a",
+  "gate": "GATE-FILA-023-H103-2026-10-09",
+  "scale_exception": "ACCEPTED_OWNER_EXCEPTION"
+}

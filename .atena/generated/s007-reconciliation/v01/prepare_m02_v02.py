@@ -1,0 +1,8 @@
+from pathlib import Path
+import json,copy
+out=Path(__file__).parent;root=out.parents[3];p=out/'mh-generation-jobs-2026-10-09.json';d=json.loads(p.read_text(encoding='utf-8'));j=next(x for x in d['jobs'] if x['code']=='M02');assert j['status']=='GENERATED_VISUALLY_INSPECTED' and j['version']=='v01';old=copy.deepcopy(j);old.update(status='REJECTED_VISUAL',rejection_reason='Sequence review bright radius proxy229/433=52.9%of peak, larger than grow target45%; native scaling refinement needed.');d['rejected_native_versions'].append(old);target=str(root/j['destination']);base=j['prompt']
+for k in list(j):
+ if k not in ['code','effect','name','prompt','referenced_image_paths','transparent_background','source_queue']:del j[k]
+j.update(version='v02',status='PENDING',destination='.atena/generated/art-candidates/vfx/ampulheta_silencio/ampulheta_silencio_grow_v02.png');j['referenced_image_paths'].append(target)
+j['prompt']=base+'\n\nReference3 is EDIT TARGET M02 v01, rejected ONLY for oversized grow ring. SHRINK entire ring/hourglass/grains uniformly to80%of its current diameter, keeping exact pivot atcanvascenter, quiet open BLACK interior, same EIGHT motifs and painted glow, unchanged black square canvas. Reference1 approved peak remains identity reference, not target size. Intended grow radius about45%of peak; actual bright-ring radius target190pixels on1254canvas rather than current229pixels. No new rays, no motif simplification, no brightness amplification. The full ring diameter should be400pixels orless, all grains within480pixelcentralregion. Generate one native revised frame.'
+assert not (root/j['destination']).exists();p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8');print('M02 v02 prepared; original v01 preserved')

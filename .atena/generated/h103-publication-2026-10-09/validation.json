@@ -1,0 +1,731 @@
+{
+  "status": "PASSED",
+  "source_hashes_verified": 37,
+  "historical_native_versions_verified": 8,
+  "manifest_assets": 202,
+  "manifest_sha256": "52384ac0f88ffca25952099d6c7f0e58224e7d235012ea284f55198cc2406f6a",
+  "runtime_changes": false,
+  "prior_checks": ".atena/generated/image-queue-publication-2026-10-09/checks.json",
+  "checks": "Metadata/previews only: no new runtime test claimed; prior runtime validation remains applicable. Source hashes and helper syntax checked; no full YAML parser claimed.",
+  "links_checked": 128,
+  "links": [
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../vault/research/RESEARCH-003-paleta-das-deidades-2026-09-27.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../vault/research/RESEARCH-001-abismo-bestiario-visual-2026-09-21.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../generated/CHATGPT-FILA-025-ficha-c-molduras-e-icones.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../generated/CHATGPT-FILA-024-regerar-tiras-dos-herois.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../generated/ART-PROMPTS-055-regerar-caminhadas-e-acoes-dos-herois.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../vault/drafts/PLAN-053-fila-de-imagens-2026-10-02.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../evidence/EVID-145-fila-de-imagens-prioritaria-2026-10-02.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../vault/drafts/PLAN-068-experiencia-controles-xbox-playstation-2026-10-06.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../specs/SPEC-135-experiencia-controles-xbox-playstation-2026-10-06.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../evidence/EVID-184-controles-xbox-playstation-local-2026-10-06.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../vault/drafts/PLAN-067-controles-e-menus-mobile-2026-10-06.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../evidence/EVID-181-mobile-menus-local-2026-10-06.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../specs/SPEC-134-controles-e-menus-mobile-2026-10-06.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../evidence/EVID-183-mobile-joystick-direita-e-botoes-2026-10-06.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../evidence/EVID-104-zumbi-admissao-2026-09-29.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../evidence/EVID-106-playtest-publico-t01-higor-2026-09-29.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../evidence/EVID-106-playtest-publico-t01-higor-2026-09-29.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../evidence/EVID-106-playtest-publico-t01-higor-2026-09-29.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../evidence/EVID-106-playtest-publico-t01-higor-2026-09-29.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../evidence/EVID-106-playtest-publico-t01-higor-2026-09-29.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../vault/drafts/PLAN-040-hqs-novas-highlights-do-vault-2026-09-29.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../generated/ART-PROMPTS-027-hqs-novas-guia-de-estilo-e-piloto.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../evidence/EVID-109-importacao-das-hqs-do-nottcard-2026-09-29.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../specs/SPEC-080-hqs-de-transicao-do-nottcard.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../evidence/EVID-106-playtest-publico-t01-higor-2026-09-29.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../evidence/EVID-106-playtest-publico-t01-higor-2026-09-29.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../evidence/EVID-107-playtest-publico-t02-hiago-2026-09-29.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../evidence/EVID-108-playtest-publico-t03-dna-2026-09-29.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../evidence/EVID-108-playtest-publico-t03-dna-2026-09-29.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../vault/drafts/PLAN-041-animacao-padrao-zumbi-para-inimigos-e-interacoes-2026-09-29.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../evidence/EVID-104-zumbi-admissao-2026-09-29.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../vault/drafts/PLAN-048-geracao-animacoes-mobs-onda-1-2026-09-30.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../generated/ART-PROMPTS-032-mobs-onda-1-identidade.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../evidence/EVID-127-mobs-wave-1-gate-identidade-2026-09-30.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../specs/SPEC-111-admissao-animacoes-mobs-onda-1.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../evidence/EVID-138-admissao-animacoes-mobs-onda-1-2026-09-30.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../generated/ART-PROMPTS-044-mobs-shedaklah.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../vault/drafts/PLAN-041-animacao-padrao-zumbi-para-inimigos-e-interacoes-2026-09-29.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../evidence/EVID-139-playtest-higor-qa-14b15e4-2026-10-01.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../evidence/EVID-139-playtest-higor-qa-14b15e4-2026-10-01.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../evidence/EVID-139-playtest-higor-qa-14b15e4-2026-10-01.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../evidence/EVID-139-playtest-higor-qa-14b15e4-2026-10-01.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../vault/drafts/PLAN-051-vfx-de-ataques-e-magias-2026-10-01.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../evidence/s007-arco-fogo-completo-p01-gate-2026-10-09.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../evidence/s007-fila022-completa-h103-gate-2026-10-09.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../evidence/s007-fila022-completa-h103-gate-2026-10-09.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../generated/ART-PROMPTS-056-costas-ao-andar-para-cima-zynara-leoric-nyrelia.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../evidence/fila-025-integracao-2026-10-06.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../generated/CHATGPT-FILA-001-prompts-prontos.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../generated/CHATGPT-FILA-002-hqs-ondas-1-e-2.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../generated/ART-PROMPTS-028-hqs-onda-1.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../generated/ART-PROMPTS-029-hqs-onda-2.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../generated/CHATGPT-FILA-003-hqs-trilha-c.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../generated/ART-PROMPTS-030-hqs-trilha-c.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../generated/ART-PROMPTS-039-miniatura-das-docas.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../generated/CHATGPT-FILA-009-fundo-da-tela-de-titulo.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../generated/CHATGPT-FILA-010-piloto-cenario-dagruve-docas.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../generated/CHATGPT-FILA-011-isca-sylas-e-eventos.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../generated/CHATGPT-FILA-012-ui-e-vfx-pendentes.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../vault/drafts/PLAN-048-geracao-animacoes-mobs-onda-1-2026-09-30.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../generated/CHATGPT-FILA-014-mobs-molor.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../generated/CHATGPT-FILA-013-mobs-shedaklah.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../generated/CHATGPT-FILA-015-mobs-durao.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../generated/CHATGPT-FILA-016-mobs-feng-tu.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../generated/CHATGPT-FILA-017-mobs-shendilavri.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../generated/CHATGPT-FILA-018-mobs-goranthis.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../generated/CHATGPT-FILA-019-mobs-pilares.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../generated/ART-PROMPTS-025-lote-1-nevoa-bau-de-chefe-imas-e-npcs.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../generated/ART-PROMPTS-026-lote-2-camada-de-cenario-por-bioma.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../vault/drafts/PLAN-035-geracao-de-assets-pendentes-2026-09-28.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../vault/drafts/PLAN-040-hqs-novas-highlights-do-vault-2026-09-29.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../generated/ART-PROMPTS-027-hqs-novas-guia-de-estilo-e-piloto.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../evidence/EVID-109-importacao-das-hqs-do-nottcard-2026-09-29.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../specs/SPEC-080-hqs-de-transicao-do-nottcard.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../generated/ART-PROMPTS-031-piloto-animacao-cultista-adaga.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/backlog/ARTE.md",
+      "target": "../generated/CHATGPT-FILA-004-piloto-cultista-adaga.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/EVID-145-fila-de-imagens-prioritaria-2026-10-02.md",
+      "target": "../vault/drafts/PLAN-053-fila-de-imagens-2026-10-02.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/EVID-145-fila-de-imagens-prioritaria-2026-10-02.md",
+      "target": "../generated/feng-tu-final-contract-validation-2026-10-04.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/h103-publication-2026-10-09.md",
+      "target": "../generated/h103-publication-2026-10-09/plan.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/h103-publication-2026-10-09.md",
+      "target": "../generated/h103-publication-2026-10-09/scope.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/h103-publication-2026-10-09.md",
+      "target": "../generated/h103-publication-2026-10-09/validation.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/h103-publication-2026-10-09.md",
+      "target": "s007-fila022-completa-h103-gate-2026-10-09.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/n03-approval-publication-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/n03-owner-approval-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/n03-approval-publication-2026-10-09.md",
+      "target": "../vault/canon/ASSET-APPROVAL-REGISTER-030-vfx-pulso-radiante-2026-10-09.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/n03-approval-publication-2026-10-09.md",
+      "target": "../generated/n03-publication-2026-10-09/plan.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/n03-approval-publication-2026-10-09.md",
+      "target": "../generated/n03-publication-2026-10-09/validation.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/n03-approval-publication-2026-10-09.md",
+      "target": "../generated/n03-publication-2026-10-09/receipt.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-fila022-completa-h103-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/m03-owner-approval-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-fila022-completa-h103-gate-2026-10-09.md",
+      "target": "../vault/canon/ASSET-APPROVAL-REGISTER-031-vfx-ampulheta-silencio-2026-10-09.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-fila022-completa-h103-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/m01-scale-owner-approval-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-fila022-completa-h103-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/m01-scale-owner-gate-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-fila022-completa-h103-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/ampulheta-silencio-sequence-audit-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-fila022-completa-h103-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/ampulheta-silencio-six-frame-review-2026-10-09.png",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-fila022-completa-h103-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/ampulheta-silencio-sequence-review-2026-10-09.gif",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-fila022-completa-h103-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/fila022-complete-native-audit-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-fila022-completa-h103-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/h103-owner-gate-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-fila022-completa-h103-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/h103-reference-comparison-2026-10-09.png",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-fila022-completa-h103-gate-2026-10-09.md",
+      "target": "../generated/art-candidates/vfx/durvall_ruptura_sombria/durvall_ruptura_sombria_peak_v01.png",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-fila022-completa-h103-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/mh-generation-jobs-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-fila022-completa-h103-gate-2026-10-09.md",
+      "target": "../generated/n03-publication-2026-10-09/receipt.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-onda-cortante-completa-n03-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/r01-owner-approval-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-onda-cortante-completa-n03-gate-2026-10-09.md",
+      "target": "../vault/canon/ASSET-APPROVAL-REGISTER-029-vfx-onda-cortante-2026-10-09.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-onda-cortante-completa-n03-gate-2026-10-09.md",
+      "target": "../generated/image-queue-publication-2026-10-09/publication-receipt.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-onda-cortante-completa-n03-gate-2026-10-09.md",
+      "target": "../generated/image-queue-publication-2026-10-09/exact-publication-owner-approval.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-onda-cortante-completa-n03-gate-2026-10-09.md",
+      "target": "../generated/image-queue-publication-2026-10-09/checks.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-onda-cortante-completa-n03-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/onda-cortante-sequence-audit-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-onda-cortante-completa-n03-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/onda-cortante-eight-frame-review-2026-10-09.png",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-onda-cortante-completa-n03-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/onda-cortante-flight-review-2026-10-09.gif",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-onda-cortante-completa-n03-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/onda-cortante-impact-review-2026-10-09.gif",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-onda-cortante-completa-n03-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/n03-owner-gate-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-onda-cortante-completa-n03-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/n03-reference-comparison-2026-10-09.png",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-onda-cortante-completa-n03-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/rn-generation-jobs-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-pulso-radiante-completo-m03-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/n03-owner-approval-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-pulso-radiante-completo-m03-gate-2026-10-09.md",
+      "target": "../vault/canon/ASSET-APPROVAL-REGISTER-030-vfx-pulso-radiante-2026-10-09.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-pulso-radiante-completo-m03-gate-2026-10-09.md",
+      "target": "../generated/n03-publication-2026-10-09/receipt.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-pulso-radiante-completo-m03-gate-2026-10-09.md",
+      "target": "../generated/n03-publication-2026-10-09/validation.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-pulso-radiante-completo-m03-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/pulso-radiante-sequence-audit-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-pulso-radiante-completo-m03-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/pulso-radiante-six-frame-review-2026-10-09.png",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-pulso-radiante-completo-m03-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/pulso-radiante-sequence-review-2026-10-09.gif",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-pulso-radiante-completo-m03-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/m03-owner-gate-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-pulso-radiante-completo-m03-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/m03-reference-comparison-2026-10-09.png",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-pulso-radiante-completo-m03-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/nm-generation-jobs-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-pulso-radiante-completo-m03-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/pulse-phase-radius-audit-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/specs/SPEC-121-retomada-fila-imagens/publication-h103-checkpoint-2026-10-09.md",
+      "target": "../../generated/h103-publication-2026-10-09/plan.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-031-vfx-ampulheta-silencio-2026-10-09.md",
+      "target": "../../generated/s007-reconciliation/v01/m03-owner-approval-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-031-vfx-ampulheta-silencio-2026-10-09.md",
+      "target": "../../generated/art-candidates/vfx/ampulheta_silencio/ampulheta_silencio_peak_v01.png",
+      "exists": true
+    },
+    {
+      "document": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-031-vfx-ampulheta-silencio-2026-10-09.md",
+      "target": "../../generated/s007-reconciliation/v01/m01-scale-owner-approval-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-031-vfx-ampulheta-silencio-2026-10-09.md",
+      "target": "../../generated/s007-reconciliation/v01/m01-scale-owner-gate-2026-10-09.json",
+      "exists": true
+    }
+  ],
+  "python_helpers_parsed": 23,
+  "staged_files_checked": 71,
+  "staged_diff_check": "PASSED",
+  "payload": "Metadata, previews, source audits and operational records only",
+  "staged_preview_bytes": 2077981,
+  "staged_paths": [
+    ".atena/backlog/ARTE.md",
+    ".atena/evidence/EVID-145-fila-de-imagens-prioritaria-2026-10-02.md",
+    ".atena/evidence/h103-publication-2026-10-09.md",
+    ".atena/evidence/n03-approval-publication-2026-10-09.md",
+    ".atena/evidence/s007-fila022-completa-h103-gate-2026-10-09.md",
+    ".atena/evidence/s007-onda-cortante-completa-n03-gate-2026-10-09.md",
+    ".atena/evidence/s007-pulso-radiante-completo-m03-gate-2026-10-09.md",
+    ".atena/generated/ART-PROMPTS-053-vfx-projeteis-e-explosoes.md",
+    ".atena/generated/ART-PROMPTS-054-vfx-habilidades-dos-herois.md",
+    ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+    ".atena/generated/CHATGPT-FILA-023-vfx-habilidades-dos-herois.md",
+    ".atena/generated/h103-publication-2026-10-09/commit-message.txt",
+    ".atena/generated/h103-publication-2026-10-09/pathspec.nul",
+    ".atena/generated/h103-publication-2026-10-09/plan-053-imagens-before.json",
+    ".atena/generated/h103-publication-2026-10-09/plan-before.json",
+    ".atena/generated/h103-publication-2026-10-09/plan.json",
+    ".atena/generated/h103-publication-2026-10-09/prepare.py",
+    ".atena/generated/h103-publication-2026-10-09/record_after_push.py",
+    ".atena/generated/h103-publication-2026-10-09/scope.json",
+    ".atena/generated/h103-publication-2026-10-09/seal.py",
+    ".atena/generated/h103-publication-2026-10-09/validation.json",
+    ".atena/generated/n03-publication-2026-10-09/plan.json",
+    ".atena/generated/n03-publication-2026-10-09/receipt.json",
+    ".atena/generated/n03-publication-2026-10-09/resume_after_push.py",
+    ".atena/generated/s007-reconciliation/v01/accept_m01_scale_exception.py",
+    ".atena/generated/s007-reconciliation/v01/ampulheta-silencio-sequence-audit-2026-10-09.json",
+    ".atena/generated/s007-reconciliation/v01/ampulheta-silencio-sequence-review-2026-10-09.gif",
+    ".atena/generated/s007-reconciliation/v01/ampulheta-silencio-six-frame-review-2026-10-09.png",
+    ".atena/generated/s007-reconciliation/v01/audit_pulse_radius.py",
+    ".atena/generated/s007-reconciliation/v01/complete_m_sequence.py",
+    ".atena/generated/s007-reconciliation/v01/complete_n_sequence.py",
+    ".atena/generated/s007-reconciliation/v01/fila022-complete-native-audit-2026-10-09.json",
+    ".atena/generated/s007-reconciliation/v01/finalize_m_h103_gate.py",
+    ".atena/generated/s007-reconciliation/v01/finalize_n_m03_gate.py",
+    ".atena/generated/s007-reconciliation/v01/h103-owner-gate-2026-10-09.json",
+    ".atena/generated/s007-reconciliation/v01/h103-reference-comparison-2026-10-09.png",
+    ".atena/generated/s007-reconciliation/v01/m01-scale-owner-approval-2026-10-09.json",
+    ".atena/generated/s007-reconciliation/v01/m01-scale-owner-gate-2026-10-09.json",
+    ".atena/generated/s007-reconciliation/v01/m03-owner-approval-2026-10-09.json",
+    ".atena/generated/s007-reconciliation/v01/m03-owner-gate-2026-10-09.json",
+    ".atena/generated/s007-reconciliation/v01/m03-reference-comparison-2026-10-09.png",
+    ".atena/generated/s007-reconciliation/v01/mh-generation-jobs-2026-10-09.json",
+    ".atena/generated/s007-reconciliation/v01/mh-links-validation-2026-10-09.json",
+    ".atena/generated/s007-reconciliation/v01/nm-generation-jobs-2026-10-09.json",
+    ".atena/generated/s007-reconciliation/v01/nm-links-validation-2026-10-09.json",
+    ".atena/generated/s007-reconciliation/v01/prepare_m01_v02.py",
+    ".atena/generated/s007-reconciliation/v01/prepare_m01_v03.py",
+    ".atena/generated/s007-reconciliation/v01/prepare_m02_v02.py",
+    ".atena/generated/s007-reconciliation/v01/prepare_m02_v03.py",
+    ".atena/generated/s007-reconciliation/v01/prepare_m_review_helper.py",
+    ".atena/generated/s007-reconciliation/v01/prepare_mh_review_helpers.py",
+    ".atena/generated/s007-reconciliation/v01/pulse-phase-radius-audit-2026-10-09.json",
+    ".atena/generated/s007-reconciliation/v01/pulso-radiante-sequence-audit-2026-10-09.json",
+    ".atena/generated/s007-reconciliation/v01/pulso-radiante-sequence-review-2026-10-09.gif",
+    ".atena/generated/s007-reconciliation/v01/pulso-radiante-six-frame-review-2026-10-09.png",
+    ".atena/generated/s007-reconciliation/v01/record_m01_scale_gate.py",
+    ".atena/generated/s007-reconciliation/v01/resume_m_prepare_remaining.py",
+    ".atena/generated/s007-reconciliation/v01/review_h103.py",
+    ".atena/generated/s007-reconciliation/v01/review_m03.py",
+    ".atena/generated/s007-reconciliation/v01/review_m_sequence.py",
+    ".atena/generated/s007-reconciliation/v01/review_n_sequence.py",
+    ".atena/generated/s007-reconciliation/v01/revise_n01.py",
+    ".atena/generated/s007-reconciliation/v01/revise_n01_v03.py",
+    ".atena/generated/s007-reconciliation/v01/revise_n02.py",
+    ".atena/specs/SPEC-121-retomada-fila-imagens/plan.md",
+    ".atena/specs/SPEC-121-retomada-fila-imagens/publication-h103-checkpoint-2026-10-09.md",
+    ".atena/specs/SPEC-121-retomada-fila-imagens/tasks.md",
+    ".atena/state/plan-053-imagens.yaml",
+    ".atena/state/plan.yaml",
+    ".atena/vault/canon/ASSET-APPROVAL-REGISTER-031-vfx-ampulheta-silencio-2026-10-09.md",
+    ".atena/vault/drafts/PLAN-053-fila-de-imagens-2026-10-02.md"
+  ]
+}

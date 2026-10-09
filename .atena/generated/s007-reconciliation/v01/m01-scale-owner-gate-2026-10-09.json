@@ -1,0 +1,18 @@
+{
+  "id": "GATE-M01-SCALE-2026-10-09",
+  "status": "ACCEPTED_OWNER_EXCEPTION",
+  "timestamp": "2026-10-09T14:04:53.835735+00:00",
+  "plan": "PLAN-053",
+  "frame": "M01",
+  "max_versions": 3,
+  "preferred_candidate": ".atena/generated/art-candidates/vfx/ampulheta_silencio/ampulheta_silencio_spark_v02.png",
+  "preferred_version": "v02",
+  "sha256": "81573c62610071adfd806ddc0c893bcfce42ad73bc9a4878eb5d547241c6ee37",
+  "reason": "Three native attempts did not reach about10%of approved peak radius. v02 is smallest, roughly14%of peak radius visually, centered quiet white-gray ring.",
+  "owner_choice": "Accept v02 as scale exception, or keep M01 pending.",
+  "independent_work": "Owner exception resolved; remaining M and H103 gate authorized by original per-plan scope.",
+  "runtime_admission": false,
+  "owner_reply": "Aceitar M01 v02 como exceção de escala",
+  "approved_at": "2026-10-09T14:06:05.103327+00:00",
+  "approval_receipt": ".atena/generated/s007-reconciliation/v01/m01-scale-owner-approval-2026-10-09.json"
+}

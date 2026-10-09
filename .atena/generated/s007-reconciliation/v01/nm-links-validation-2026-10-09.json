@@ -1,0 +1,76 @@
+{
+  "status": "PASSED",
+  "links": [
+    {
+      "document": ".atena/evidence/s007-pulso-radiante-completo-m03-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/n03-owner-approval-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-pulso-radiante-completo-m03-gate-2026-10-09.md",
+      "target": "../vault/canon/ASSET-APPROVAL-REGISTER-030-vfx-pulso-radiante-2026-10-09.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-pulso-radiante-completo-m03-gate-2026-10-09.md",
+      "target": "../generated/n03-publication-2026-10-09/receipt.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-pulso-radiante-completo-m03-gate-2026-10-09.md",
+      "target": "../generated/n03-publication-2026-10-09/validation.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-pulso-radiante-completo-m03-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/pulso-radiante-sequence-audit-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-pulso-radiante-completo-m03-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/pulso-radiante-six-frame-review-2026-10-09.png",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-pulso-radiante-completo-m03-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/pulso-radiante-sequence-review-2026-10-09.gif",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-pulso-radiante-completo-m03-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/m03-owner-gate-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-pulso-radiante-completo-m03-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/m03-reference-comparison-2026-10-09.png",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-pulso-radiante-completo-m03-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/nm-generation-jobs-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-pulso-radiante-completo-m03-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/pulse-phase-radius-audit-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-030-vfx-pulso-radiante-2026-10-09.md",
+      "target": "../../generated/s007-reconciliation/v01/n03-owner-approval-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-030-vfx-pulso-radiante-2026-10-09.md",
+      "target": "../../generated/art-candidates/vfx/pulso_radiante/pulso_radiante_peak_v01.png",
+      "exists": true
+    }
+  ],
+  "source_hashes_verified": 7,
+  "rejected_native_hashes_verified": 3,
+  "manifest_assets": 202,
+  "manifest_sha256": "52384ac0f88ffca25952099d6c7f0e58224e7d235012ea284f55198cc2406f6a",
+  "gate": "GATE-FILA-022-M03-2026-10-09",
+  "publication_status": "PUBLISHED_VERIFIED"
+}

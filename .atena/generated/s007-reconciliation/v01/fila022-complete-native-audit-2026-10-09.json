@@ -1,0 +1,634 @@
+{
+  "status": "COMPLETE_GENERATION_CANDIDATES",
+  "timestamp": "2026-10-09T14:18:07.194403+00:00",
+  "plan": "PLAN-053",
+  "queue": "FILA-022",
+  "count": 36,
+  "sources": [
+    {
+      "code": "P01",
+      "path": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_fly_00_v01.png",
+      "sha256": "a321dde3ebdce44f469c46a4147a4400bd97f3e958ec5ab0cb109338adaea752",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 13.811896349544297,
+      "visible_fraction_above12": 0.0888881257805962,
+      "central_hot_light_centroid_normalized": [
+        0.48735400260497347,
+        0.4964182591937981
+      ]
+    },
+    {
+      "code": "P02",
+      "path": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_fly_01_v01.png",
+      "sha256": "bc48320c2de5aef68717bfe74679965fd2526ccd30369666735b181a6dab96ba",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 15.370481445021863,
+      "visible_fraction_above12": 0.09874748492225198,
+      "central_hot_light_centroid_normalized": [
+        0.4863686779266139,
+        0.4961639258861543
+      ]
+    },
+    {
+      "code": "P03",
+      "path": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_fly_02_v01.png",
+      "sha256": "0d98f6826b1612f18307337cda34be0fed6709dd095fe6517dd21cd30b2f3f60",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 13.592671871065223,
+      "visible_fraction_above12": 0.08572440598378649,
+      "central_hot_light_centroid_normalized": [
+        0.48678429511912175,
+        0.49568803203115497
+      ]
+    },
+    {
+      "code": "P04",
+      "path": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_fly_03_v01.png",
+      "sha256": "cf569ff20892598e4d399a4ee2d8fe8bb7f974cc6e8198e6067a0906d0729d92",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 12.39339059189223,
+      "visible_fraction_above12": 0.08134797992516452,
+      "central_hot_light_centroid_normalized": [
+        0.4857063253428609,
+        0.49801503147684884
+      ]
+    },
+    {
+      "code": "P05",
+      "path": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_hit_00_v01.png",
+      "sha256": "1166c89f27735cb9d8e8a7425d4e7dc85d38712fb42148b9de2d6749ee6b3b3f",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 14.316417766178532,
+      "visible_fraction_above12": 0.09557486219536081
+    },
+    {
+      "code": "P06",
+      "path": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_hit_01_v01.png",
+      "sha256": "cd8de8d95839ac8700975d1f73f867bab4325e4c19be3252476d22e6ef1dca5c",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 33.15371989855747,
+      "visible_fraction_above12": 0.22738846536378643
+    },
+    {
+      "code": "P07",
+      "path": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_hit_02_v01.png",
+      "sha256": "11d77ed513ab15a253f053964c719a6e87829ffb3fda9f87587b3e65c3dd4f7c",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 13.066007595471207,
+      "visible_fraction_above12": 0.15677169580468497
+    },
+    {
+      "code": "P08",
+      "path": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_hit_03_v01.png",
+      "sha256": "97062541c2bab36d8451892dadefb7553e21eeb723afa0d3f83912b6693df2f1",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 1.439003482317509,
+      "visible_fraction_above12": 0.02190120800042734
+    },
+    {
+      "code": "Q01",
+      "path": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_fly_00_v03.png",
+      "sha256": "be4fc0674b455b2efb5609e27c4228569b22d274cfb077665b09f778f5fc88fb",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v03",
+      "mean_luminance": 9.3887432623897,
+      "visible_fraction_above12": 0.08435081105693042,
+      "central_hot_light_centroid_normalized": [
+        0.49558026483846324,
+        0.5020071242430542
+      ]
+    },
+    {
+      "code": "Q02",
+      "path": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_fly_01_v01.png",
+      "sha256": "034eb57a9646d3de68662c0408c9b3b98827538560c7a03318f31e88f2eff1ef",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 10.666457447809751,
+      "visible_fraction_above12": 0.0924149579400146,
+      "central_hot_light_centroid_normalized": [
+        0.4796692471743191,
+        0.502520748729376
+      ]
+    },
+    {
+      "code": "Q03",
+      "path": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_fly_02_v01.png",
+      "sha256": "5010a77a124a1c3f72b831783aa650146e9deaea790e538ca3d94a140b47d711",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 8.781938625743713,
+      "visible_fraction_above12": 0.07789046343566615,
+      "central_hot_light_centroid_normalized": [
+        0.4917715092183404,
+        0.5013109490621003
+      ]
+    },
+    {
+      "code": "Q04",
+      "path": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_fly_03_v01.png",
+      "sha256": "67347db56ac39ff33a1d73ff991e4274ecafa2c9e8549e05f4a447e77f6c9f89",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 7.039883218994274,
+      "visible_fraction_above12": 0.07585677983562647,
+      "central_hot_light_centroid_normalized": [
+        0.5080508903492501,
+        0.5028582599254316
+      ]
+    },
+    {
+      "code": "Q05",
+      "path": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_hit_00_v01.png",
+      "sha256": "7164675a2489957161b03aac30f967f6b25be79418407d6545af0f669484892b",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 8.064125261682552,
+      "visible_fraction_above12": 0.07513627842260429
+    },
+    {
+      "code": "Q06",
+      "path": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_hit_01_v01.png",
+      "sha256": "8388c93447f69e80064d03fc4fc0016d01bf57f700e42b6dd806ceb363b29b08",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 29.769438911909322,
+      "visible_fraction_above12": 0.2601404373627995
+    },
+    {
+      "code": "Q07",
+      "path": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_hit_02_v01.png",
+      "sha256": "b3c77052708c70a1db60ff187cdc5d7c0bd3a092a68095ada0a3056b3face503",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 11.613830956251002,
+      "visible_fraction_above12": 0.18517013499385698
+    },
+    {
+      "code": "Q08",
+      "path": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_hit_03_v01.png",
+      "sha256": "224a23efd7fdfffd220d621ec82bc62193c6ad826515897fe9cdb3613fd66954",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 1.508071777966011,
+      "visible_fraction_above12": 0.03319012334373704
+    },
+    {
+      "code": "R01",
+      "path": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_fly_00_v02.png",
+      "sha256": "53f665277345e5a59d093f25e5f3f9ebfd800a1b146c535d0b48513b4e4308f1",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v02",
+      "mean_luminance": 10.552484680601024,
+      "visible_fraction_above12": 0.07416967458518706,
+      "central_hot_light_centroid_normalized": [
+        0.5809216255092068,
+        0.5005883000177849
+      ]
+    },
+    {
+      "code": "R02",
+      "path": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_fly_01_v01.png",
+      "sha256": "2c83e4d6759beaa50bd339e7a365b2f2cf87b6db7543885f72a961aae98ad844",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 11.523336487514277,
+      "visible_fraction_above12": 0.07837185758364303,
+      "central_hot_light_centroid_normalized": [
+        0.5801609919995767,
+        0.4993470472624687
+      ]
+    },
+    {
+      "code": "R03",
+      "path": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_fly_02_v01.png",
+      "sha256": "8e053772e4805e2ffd2c20715e89d7e8c44d088a6f87abc4c45bd7d6c542193b",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 10.499500164068284,
+      "visible_fraction_above12": 0.07446410720145295,
+      "central_hot_light_centroid_normalized": [
+        0.5808166570617251,
+        0.49725113994418696
+      ]
+    },
+    {
+      "code": "R04",
+      "path": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_fly_03_v01.png",
+      "sha256": "a636ee836297e261874a26a096a64e0ed8748d720b6f89e0aca0ebb472166b43",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 8.359809375548483,
+      "visible_fraction_above12": 0.06789120110701577,
+      "central_hot_light_centroid_normalized": [
+        0.581630476941512,
+        0.49750471114133465
+      ]
+    },
+    {
+      "code": "R05",
+      "path": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_hit_00_v02.png",
+      "sha256": "7fbbdadd57d6af7152b54c8dc6ca6fd76e29703990bf8e5e89cada58a45d0ae4",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v02",
+      "mean_luminance": 9.301187396503439,
+      "visible_fraction_above12": 0.08170600489915524
+    },
+    {
+      "code": "R06",
+      "path": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_hit_01_v01.png",
+      "sha256": "fc2013656b41122311941289fb851347751b0a2b230975476304f63a5fb342c2",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 41.02424395045901,
+      "visible_fraction_above12": 0.331000765651987
+    },
+    {
+      "code": "R07",
+      "path": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_hit_02_v01.png",
+      "sha256": "79296cd598e203e1d3034fdd526fd92e1599ce86bac042aa3210df2474fa4672",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 13.19009154755818,
+      "visible_fraction_above12": 0.16980622136754092
+    },
+    {
+      "code": "R08",
+      "path": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_hit_03_v01.png",
+      "sha256": "0ca2b691f2a420f7338b9eb68a8616213901cc94d4f06a70e4482beaa7c98c08",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 1.9334181655385383,
+      "visible_fraction_above12": 0.036806620727547444
+    },
+    {
+      "code": "N01",
+      "path": ".atena/generated/art-candidates/vfx/pulso_radiante/pulso_radiante_spark_v03.png",
+      "sha256": "9fe7d8581307d7ed26a1159400f07a15bf730f543e9b70c55c873eb2bd93610d",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v03",
+      "visible_bbox_above12": [
+        530,
+        532,
+        724,
+        722
+      ],
+      "mean_luminance": 1.0380873708121252,
+      "visible_fraction_above12": 0.011638673310796202,
+      "hot_light_centroid_normalized": [
+        0.499628974948102,
+        0.4995388576596982
+      ],
+      "bright_ring_radius_proxy_px": 50
+    },
+    {
+      "code": "N02",
+      "path": ".atena/generated/art-candidates/vfx/pulso_radiante/pulso_radiante_grow_v02.png",
+      "sha256": "d74634c93e7ceaf7d6a599b98b5a3274a54d1cf0e104ad34509b5fb21c409fb4",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v02",
+      "visible_bbox_above12": [
+        343,
+        330,
+        910,
+        879
+      ],
+      "mean_luminance": 11.300377229866024,
+      "visible_fraction_above12": 0.08286402173332418,
+      "hot_light_centroid_normalized": [
+        0.49881645456401075,
+        0.4808137628853632
+      ],
+      "bright_ring_radius_proxy_px": 179
+    },
+    {
+      "code": "N03",
+      "path": ".atena/generated/art-candidates/vfx/pulso_radiante/pulso_radiante_peak_v01.png",
+      "sha256": "1bfa8061aec59959de9115ad5dcb94b3e27d5706ffdb86a3e99b8c7e7bf898ec",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "visible_bbox_above12": [
+        38,
+        48,
+        1215,
+        1193
+      ],
+      "mean_luminance": 47.23823096235587,
+      "visible_fraction_above12": 0.3455176290734085,
+      "hot_light_centroid_normalized": [
+        0.4996810660820343,
+        0.49550131904258665
+      ],
+      "bright_ring_radius_proxy_px": 429
+    },
+    {
+      "code": "N04",
+      "path": ".atena/generated/art-candidates/vfx/pulso_radiante/pulso_radiante_hold_v01.png",
+      "sha256": "42153c36d26464061070d376604458ebacfd9e1c23694900b808e5de036f75e8",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "visible_bbox_above12": [
+        53,
+        52,
+        1198,
+        1187
+      ],
+      "mean_luminance": 28.682057925006806,
+      "visible_fraction_above12": 0.26086030285224443,
+      "hot_light_centroid_normalized": [
+        0.4995163594862943,
+        0.5029547004530556
+      ],
+      "bright_ring_radius_proxy_px": 430
+    },
+    {
+      "code": "N05",
+      "path": ".atena/generated/art-candidates/vfx/pulso_radiante/pulso_radiante_fade_v01.png",
+      "sha256": "950453ad5f247610a32c32d59164edd6f7bb556e09fa452cf2666c9e680e82e5",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "visible_bbox_above12": [
+        62,
+        47,
+        1190,
+        1187
+      ],
+      "mean_luminance": 11.528533254987549,
+      "visible_fraction_above12": 0.17381762729282246
+    },
+    {
+      "code": "N06",
+      "path": ".atena/generated/art-candidates/vfx/pulso_radiante/pulso_radiante_dissipate_v01.png",
+      "sha256": "5d652aa925f3645e70772e4ec7ef36e654832021b65bc2919c1ab111d2f53188",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "visible_bbox_above12": [
+        114,
+        104,
+        1140,
+        1100
+      ],
+      "mean_luminance": 0.3534991058914504,
+      "visible_fraction_above12": 0.0035509972553538407
+    },
+    {
+      "code": "M01",
+      "path": ".atena/generated/art-candidates/vfx/ampulheta_silencio/ampulheta_silencio_spark_v02.png",
+      "sha256": "81573c62610071adfd806ddc0c893bcfce42ad73bc9a4878eb5d547241c6ee37",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v02",
+      "visible_bbox_above12": [
+        536,
+        531,
+        717,
+        717
+      ],
+      "mean_luminance": 0.7352173205232888,
+      "visible_fraction_above12": 0.007398970821282581,
+      "hot_light_centroid_normalized": [
+        0.4992483681416172,
+        0.4981360340368759
+      ],
+      "bright_ring_radius_proxy_px": 55
+    },
+    {
+      "code": "M02",
+      "path": ".atena/generated/art-candidates/vfx/ampulheta_silencio/ampulheta_silencio_grow_v03.png",
+      "sha256": "cb5a2ba306a4c8aa09867c42bddae9bf375412329568d56846e821155b5bb3d5",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v03",
+      "visible_bbox_above12": [
+        354,
+        357,
+        900,
+        893
+      ],
+      "mean_luminance": 7.231335007084189,
+      "visible_fraction_above12": 0.06956177234444673,
+      "hot_light_centroid_normalized": [
+        0.4987398156200119,
+        0.4992253404313826
+      ],
+      "bright_ring_radius_proxy_px": 214
+    },
+    {
+      "code": "M03",
+      "path": ".atena/generated/art-candidates/vfx/ampulheta_silencio/ampulheta_silencio_peak_v01.png",
+      "sha256": "a5d4870493878d18ff7a1aeca003b23642f7ef07cdb3ad46289b688a12673866",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "visible_bbox_above12": [
+        118,
+        118,
+        1136,
+        1117
+      ],
+      "mean_luminance": 19.36817113466572,
+      "visible_fraction_above12": 0.1879249559304961,
+      "hot_light_centroid_normalized": [
+        0.4967609897928539,
+        0.49047947691226196
+      ],
+      "bright_ring_radius_proxy_px": 433
+    },
+    {
+      "code": "M04",
+      "path": ".atena/generated/art-candidates/vfx/ampulheta_silencio/ampulheta_silencio_hold_v01.png",
+      "sha256": "f8a804729941fa556994b108caf88ffb90247ec7205dc99addfaef2d19d757d2",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "visible_bbox_above12": [
+        126,
+        119,
+        1127,
+        1111
+      ],
+      "mean_luminance": 11.187492527897968,
+      "visible_fraction_above12": 0.12052532374869318,
+      "hot_light_centroid_normalized": [
+        0.500919364572895,
+        0.49259289599286427
+      ],
+      "bright_ring_radius_proxy_px": 437
+    },
+    {
+      "code": "M05",
+      "path": ".atena/generated/art-candidates/vfx/ampulheta_silencio/ampulheta_silencio_fade_v01.png",
+      "sha256": "086b5b3ed2ecafd57a15d742d1381ef102cd7e2850e0e9c311a9d067f2bcbea9",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "visible_bbox_above12": [
+        124,
+        117,
+        1137,
+        1106
+      ],
+      "mean_luminance": 6.091022921229419,
+      "visible_fraction_above12": 0.09047348325867591
+    },
+    {
+      "code": "M06",
+      "path": ".atena/generated/art-candidates/vfx/ampulheta_silencio/ampulheta_silencio_dissipate_v01.png",
+      "sha256": "35bf9fcc44accaf13d4cb0c7804d6045b7b321bd2a4882e76eb3ca448aba7527",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "visible_bbox_above12": [
+        137,
+        126,
+        1120,
+        1101
+      ],
+      "mean_luminance": 1.5947697829465646,
+      "visible_fraction_above12": 0.033873105265701586
+    }
+  ],
+  "sequences": [
+    {
+      "effect": "orbe-radiante",
+      "frames": 8,
+      "receipt": ".atena/generated/s007-reconciliation/v01/orbe-radiante-sequence-audit-2026-10-09.json"
+    },
+    {
+      "effect": "orbe-arcano",
+      "frames": 8,
+      "receipt": ".atena/generated/s007-reconciliation/v01/orbe-arcano-sequence-audit-2026-10-09.json"
+    },
+    {
+      "effect": "onda-cortante",
+      "frames": 8,
+      "receipt": ".atena/generated/s007-reconciliation/v01/onda-cortante-sequence-audit-2026-10-09.json"
+    },
+    {
+      "effect": "pulso-radiante",
+      "frames": 6,
+      "receipt": ".atena/generated/s007-reconciliation/v01/pulso-radiante-sequence-audit-2026-10-09.json"
+    },
+    {
+      "effect": "ampulheta-silencio",
+      "frames": 6,
+      "receipt": ".atena/generated/s007-reconciliation/v01/ampulheta-silencio-sequence-audit-2026-10-09.json"
+    }
+  ],
+  "source_hashes_verified": 36,
+  "runtime_admission": false,
+  "manifest_assets": 202,
+  "manifest_sha256": "52384ac0f88ffca25952099d6c7f0e58224e7d235012ea284f55198cc2406f6a",
+  "human_approval": "Each effect gate approved; M01 v02 scale exception explicitly approved; no individual approval invented for remaining frames",
+  "integration": "Pending"
+}

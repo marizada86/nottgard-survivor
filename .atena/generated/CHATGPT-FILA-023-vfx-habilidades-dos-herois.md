@@ -2,7 +2,7 @@
 id: "CHATGPT-FILA-023"
 type: "fila-de-prompts"
 title: "Fila de VFX: das habilidades dos 10 heróis (ART-030) (60 imagens)"
-status: "pronta para envio, mas só depois de o piloto (CHATGPT-FILA-020) ser aprovado; nada executado"
+status: "H103 v01 pico candidato, gate humano pendente; FILA0231/60 geradas,59 restantes; sem runtime"
 created: "2026-10-01"
 relations: ["[[ART-PROMPTS-054-vfx-habilidades-dos-herois]]", "[[PLAN-051-vfx-de-ataques-e-magias-2026-10-01]]"]
 ---
@@ -41,7 +41,7 @@ A single frame of a 2D game visual effect, pure top-down view as if lying flat o
 
 #### H103 - `durvall_ruptura_sombria_peak` - peak (GATE)
 
-- [ ] gerada · [ ] aprovada · candidata: `.atena/generated/art-candidates/vfx/durvall_ruptura_sombria/durvall_ruptura_sombria_peak_v01.png`
+- [x] gerada · [ ] aprovada · candidata: `.atena/generated/art-candidates/vfx/durvall_ruptura_sombria/durvall_ruptura_sombria_peak_v01.png` — pico gerado/revisado; gate humano pendente antes dos outros cinco Durvall.
 
 ```text
 A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a huge heavy cleaving rift: a wide sweeping cut of about 170 degrees with a jagged torn line ripping through the middle of the band, like armor being split open, thin dark cracks inside the bright band, reach about 45 percent of the image width. Frame 3 of 6, peak: PEAK frame, the brightest and widest: the full shape at its maximum length and thickness, a hot white core with a gray soft halo, a few sparks flying off the tip.

@@ -1,5 +1,5 @@
 {
-  "status": "VALIDATED_READY_TO_COMMIT",
+  "status": "PUBLISHED_VERIFIED",
   "request_classification": "PLAN_DEVIATION",
   "authorization": "aprovado, commit e pus",
   "route": "publish-now-then-return",
@@ -10,5 +10,7 @@
   "remote_url": "https://github.com/marizada86/nottgard-survivor.git",
   "native_sources": "Ignored candidates remain local; no force-add.",
   "scope": "Current R sequence previews, native audit/prompts, N03 approval and publication reconciliation. No main merge.",
-  "return_checkpoint": "S-007/VFX/FILA-022/N-REMAINING"
+  "return_checkpoint": "S-007/VFX/FILA-022/N-REMAINING",
+  "commit": "881f1334c7b2514c1c5a3c416932757e9b023ba5",
+  "verification_receipt": ".atena/generated/n03-publication-2026-10-09/receipt.json"
 }

@@ -3,7 +3,7 @@ active_plan:
   id: PLAN-053
   spec_id: SPEC-121
   current_step: S-007
-  checkpoint: DEV-006/S-002
+  checkpoint: DEV-006/S-003
   total_steps: 7
   status: SUSPENDED_FOR_GIT_PUBLICATION
   approval:
@@ -19,10 +19,10 @@ active_plan:
     date: '2026-10-03'
     evidence: Pedido pode continuar após seleção Por plano; gates visuais preservados.
 plan_cursor:
-  current: 'DEV-006/S-002 commit/push solicitado; onda cortante oito candidatas revisadas e N03 v01 aprovada.'
-  next: 'Apos push verificado retornar a N01,N02,N04,N05,N06; depois somente gate M03. Retorno PLAN-071 preservado.'
-  review: '.atena/generated/s007-reconciliation/v01/n03-reference-comparison-2026-10-09.png'
-  evidence: '.atena/evidence/s007-onda-cortante-completa-n03-gate-2026-10-09.md'
+  current: 'DEV006/S003 commit/push solicitado; FILA02236/36 candidatas revisadas; H103 permanece pendente.'
+  next: 'Após push verificado retornar ao aceite H103;59 fontes VFX restantes. PLAN071 B006/S011 preservado.'
+  review: '.atena/generated/s007-reconciliation/v01/h103-reference-comparison-2026-10-09.png'
+  evidence: '.atena/evidence/s007-fila022-completa-h103-gate-2026-10-09.md'
 identity_gate:
   id: GATE-PILARES-IDENTITY-V01
   status: APPROVED
@@ -108,22 +108,20 @@ pilares_recovery_decision:
   approval_receipt: .atena/generated/pilares-resume/v01/attack03-pendant-owner-approval-2026-10-08.json
 
 vfx_gate:
-  id: GATE-FILA-022-N03-2026-10-09
-  status: APPROVED
-  frame: N03
+  id: GATE-FILA-023-H103-2026-10-09
+  status: PENDING_OWNER_APPROVAL
+  frame: H103
   version: v01
   generated: 1
-  remaining_native_vfx_frames: 71
+  remaining_native_vfx_frames: 59
   official_manifest_assets: 202
   runtime_admission: false
-  receipt: .atena/generated/s007-reconciliation/v01/n03-owner-gate-2026-10-09.json
-  owner_reply: "aprovado, commit e pus"
-  approval_receipt: .atena/generated/s007-reconciliation/v01/n03-owner-approval-2026-10-09.json
+  receipt: .atena/generated/s007-reconciliation/v01/h103-owner-gate-2026-10-09.json
 
 vfx_generation_progress:
-  jobs: .atena/generated/s007-reconciliation/v01/rn-generation-jobs-2026-10-09.json
-  native_generated_since_R01: 8
-  last_frame: N03
+  jobs: .atena/generated/s007-reconciliation/v01/mh-generation-jobs-2026-10-09.json
+  native_generated_since_M03: 6
+  last_frame: H103
 
 completed_vfx_gates:
   arco_largo_radiante:
@@ -196,6 +194,35 @@ completed_vfx_gates:
     approval_receipt: .atena/generated/s007-reconciliation/v01/r01-owner-approval-2026-10-09.json
     completion_receipt: .atena/generated/s007-reconciliation/v01/onda-cortante-sequence-audit-2026-10-09.json
 
+  pulso_radiante:
+    id: GATE-FILA-022-N03-2026-10-09
+    status: APPROVED
+    frame: N03
+    version: v01
+    generated: 6
+    remaining_native_vfx_frames: 66
+    official_manifest_assets: 202
+    runtime_admission: false
+    receipt: .atena/generated/s007-reconciliation/v01/n03-owner-gate-2026-10-09.json
+    owner_reply: "aprovado, commit e pus"
+    approval_receipt: .atena/generated/s007-reconciliation/v01/n03-owner-approval-2026-10-09.json
+    completion_receipt: .atena/generated/s007-reconciliation/v01/pulso-radiante-sequence-audit-2026-10-09.json
+
+  ampulheta_silencio:
+    id: GATE-FILA-022-M03-2026-10-09
+    status: APPROVED
+    frame: M03
+    version: v01
+    generated: 6
+    remaining_native_vfx_frames: 60
+    official_manifest_assets: 202
+    runtime_admission: false
+    receipt: .atena/generated/s007-reconciliation/v01/m03-owner-gate-2026-10-09.json
+    owner_reply: "atena aprovado, continue"
+    approval_receipt: .atena/generated/s007-reconciliation/v01/m03-owner-approval-2026-10-09.json
+    completion_receipt: .atena/generated/s007-reconciliation/v01/ampulheta-silencio-sequence-audit-2026-10-09.json
+    scale_exception_receipt: .atena/generated/s007-reconciliation/v01/m01-scale-owner-approval-2026-10-09.json
+
 image_git_publication:
   id: DEV-006
   status: PUBLISHED_VERIFIED
@@ -211,10 +238,34 @@ image_git_publication:
 
 image_git_n03_publication:
   id: DEV-006
-  status: VALIDATED_READY_TO_COMMIT
+  status: PUBLISHED_VERIFIED
   mode: per-plan
   checkpoint: DEV-006/S-002
   authorization: "aprovado, commit e pus"
   route: publish-now-then-return
   receipt: .atena/generated/n03-publication-2026-10-09/plan.json
   return_checkpoint: S-007/VFX/FILA-022/N-REMAINING
+  commit: 881f1334c7b2514c1c5a3c416932757e9b023ba5
+  verification_receipt: .atena/generated/n03-publication-2026-10-09/receipt.json
+
+m01_scale_decision:
+  id: GATE-M01-SCALE-2026-10-09
+  status: ACCEPTED_OWNER_EXCEPTION
+  frame: M01
+  max_versions: 3
+  preferred_version: v02
+  receipt: .atena/generated/s007-reconciliation/v01/m01-scale-owner-gate-2026-10-09.json
+  independent_work: M02,M04,M05,M06 within approved scope only
+  owner_reply: "Aceitar M01 v02 como exceção de escala"
+  approval_receipt: .atena/generated/s007-reconciliation/v01/m01-scale-owner-approval-2026-10-09.json
+
+image_git_h103_publication:
+  id: DEV-006
+  status: VALIDATED_READY_TO_COMMIT
+  mode: per-plan
+  checkpoint: DEV-006/S-003
+  authorization: "atena, commit e push"
+  route: publish-now-then-return
+  receipt: .atena/generated/h103-publication-2026-10-09/plan.json
+  return_checkpoint: S-007/VFX/FILA-023/H103-APPROVAL
+  return_status: AWAITING_OWNER_APPROVAL

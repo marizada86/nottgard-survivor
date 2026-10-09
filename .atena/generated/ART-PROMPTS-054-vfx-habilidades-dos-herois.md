@@ -2,7 +2,7 @@
 id: "ART-PROMPTS-054"
 type: "prompts-de-arte"
 title: "VFX das habilidades dos 10 heróis (ART-030)"
-status: "pronto para envio depois do piloto; nada gerado"
+status: "H103 v01 pico candidato, gate humano pendente; FILA0231/60 geradas,59 restantes; sem runtime"
 created: "2026-10-01"
 relations: ["[[PLAN-051-vfx-de-ataques-e-magias-2026-10-01]]", "[[CHATGPT-FILA-023-vfx-habilidades-dos-herois]]", "[[ART-PROMPTS-051-piloto-vfx-corpo-a-corpo-fisico]]"]
 sources: ["data/weapons.json", "data/abilities.json", "ui/run.gd", "core/divine_visuals.gd"]

@@ -1,0 +1,18 @@
+{
+  "status": "VALIDATED_READY_TO_COMMIT",
+  "request_classification": "PLAN_DEVIATION",
+  "authorization": "atena, commit e push",
+  "route": "publish-now-then-return",
+  "route_basis": "Explicit commit/push request follows current image deliverables; prior same-thread publication route and destination preserved.",
+  "approval_mode": "per-plan",
+  "checkpoint": "DEV-006/S-003",
+  "base": "881f1334c7b2514c1c5a3c416932757e9b023ba5",
+  "branch": "codex/fila-imagens-2026-10-09",
+  "remote_url": "https://github.com/marizada86/nottgard-survivor.git",
+  "native_sources": "Ignored candidates remain local; no force-add.",
+  "scope": "N and M sequence previews, prompts, approvals, scale exception, FILA022 closure, H103 pending gate and previous publication reconciliation. No runtime changes.",
+  "return_checkpoint": "S-007/VFX/FILA-023/H103-APPROVAL",
+  "return_status": "AWAITING_OWNER_APPROVAL",
+  "H103_visual_approval": "PENDING; commit/push authorization does not approve the image",
+  "main_merge": false
+}
