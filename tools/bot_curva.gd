@@ -182,12 +182,16 @@ func _move(b: Battle) -> Vector2:
 				var d2: float = it.pos.distance_to(h.pos)
 				if d2 < 16.0:
 					v += (it.pos - h.pos).normalized() * 0.5
-	# fica longe das bordas
+	# fica longe das bordas (SPEC-158: com a faixa de névoa ligada, recua mais cedo e com mais força)
 	var m := 3.0
-	if h.pos.x < m: v.x += (m - h.pos.x)
-	if h.pos.y < m: v.y += (m - h.pos.y)
-	if h.pos.x > b.map_size.x - m: v.x -= (h.pos.x - (b.map_size.x - m))
-	if h.pos.y > b.map_size.y - m: v.y -= (h.pos.y - (b.map_size.y - m))
+	var k := 1.0
+	if b.edge_band_tiles() > 0.0:
+		m = b.edge_band_tiles() + 2.0
+		k = 3.0
+	if h.pos.x < m: v.x += k * (m - h.pos.x)
+	if h.pos.y < m: v.y += k * (m - h.pos.y)
+	if h.pos.x > b.map_size.x - m: v.x -= k * (h.pos.x - (b.map_size.x - m))
+	if h.pos.y > b.map_size.y - m: v.y -= k * (h.pos.y - (b.map_size.y - m))
 	# quando o boss existe e está calmo, aproxima para causar dano
 	if b.boss != null and not b.boss.dead and near < 3:
 		v += (b.boss.pos - h.pos).normalized() * 0.5

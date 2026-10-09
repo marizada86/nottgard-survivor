@@ -109,6 +109,12 @@ func _ready() -> void:
 		if "styx" in flags:
 			run.battle.hero.pos = TerrainLayout.styx_sample(Game.run_stage)
 			run.battle._stage_rule_step(0.1)
+		# SPEC-158: edge=<distancia> leva o herói a essa distância (tiles) da borda oeste; edge_exp=<s> simula a exposição
+		for flag in flags.split(","):
+			if flag.begins_with("edge="):
+				run.battle.hero.pos = Vector2(float(flag.trim_prefix("edge=")), run.battle.map_size.y * 0.5)
+			if flag.begins_with("edge_exp="):
+				run.battle.edge_exposure = float(flag.trim_prefix("edge_exp="))
 	else:
 		var m: Node = load("res://ui/menu.tscn").instantiate()
 		add_child(m)
