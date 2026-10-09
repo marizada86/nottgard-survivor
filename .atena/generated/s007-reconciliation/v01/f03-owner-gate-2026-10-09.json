@@ -1,0 +1,48 @@
+{
+  "id": "GATE-FILA-021-F03-2026-10-09",
+  "timestamp": "2026-10-09T03:20:14.643768+00:00",
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "checkpoint": "S-007/VFX/FILA-021/F03-APPROVAL",
+  "status": "APPROVED",
+  "frame": "F03",
+  "version": "v01",
+  "candidate": ".atena/generated/art-candidates/vfx/arco_largo_fogo/arco_largo_fogo_peak_v01.png",
+  "sha256": "9893fc40652c2d2efdafb468a12f9c13dba1f2e239496eebc6cbefb0b892fc8a",
+  "visual_inspected": true,
+  "review": ".atena/generated/s007-reconciliation/v01/f03-reference-comparison-2026-10-09.png",
+  "prompts_and_native_audit": ".atena/generated/s007-reconciliation/v01/ef-generation-jobs-2026-10-09.json",
+  "source_instruction": ".atena/generated/CHATGPT-FILA-021-vfx-corpo-a-corpo-excecoes.md",
+  "instruction": "Para cada efeito, gere primeiro o quadro marcado GATE, pare e devolva ao dono.",
+  "visual_review": {
+    "direction": "RIGHT",
+    "view": "flat top-down",
+    "subject": "heavy wide fire arc with licking flame tongues and small embers in neutral white/gray",
+    "no_character_weapon_hand_text": true,
+    "readable_at96": true,
+    "approved_pilot_style_compared": true,
+    "no_visible_cuts": true
+  },
+  "technical_notes": {
+    "native_dimensions": [
+      1254,
+      1254
+    ],
+    "requested_dimensions": [
+      1024,
+      1024
+    ],
+    "outer_border_max_luminance": 2,
+    "maximum_channel_difference": 9,
+    "normalization": "deferred technical downsample; native sources preserved; exact zero RGB background not claimed"
+  },
+  "runtime_admission": false,
+  "official_manifest_assets": 202,
+  "manifest_file_sha256": "52384ac0f88ffca25952099d6c7f0e58224e7d235012ea284f55198cc2406f6a",
+  "remaining_native_vfx_frames": 101,
+  "other_F_frames_generated": 0,
+  "next_if_approved": "Generate F01/F02/F04/F05/F06 individually using approved F03; then continue to next FILA022 gate under current plan",
+  "ranking_return": "PLAN-071 B-006/S-011 preserved",
+  "owner_reply": "atena, aprovado, continue",
+  "approval_receipt": ".atena/generated/s007-reconciliation/v01/f03-owner-approval-2026-10-09.json"
+}

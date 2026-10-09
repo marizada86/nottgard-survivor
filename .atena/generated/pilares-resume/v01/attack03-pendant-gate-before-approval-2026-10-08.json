@@ -1,0 +1,31 @@
+{
+  "id": "GATE-PILARES-ATTACK03-PENDANT-2026-10-08",
+  "status": "PENDING_OWNER_DECISION",
+  "frame": "attack_03",
+  "max_versions": 3,
+  "reason": "Small intermediate gold pendant still has green drop after v01/v02/v03. Three original arms and two main lamps preserved; no fourth version without owner extension.",
+  "options": [
+    "Accept bounded green pendant exception in attack_03 only",
+    "Authorize one additional native correction"
+  ],
+  "preview": ".atena/generated/pilares-resume/v01/attack_03_v03_lamp_detail.png",
+  "independent_work": "COMPLETE: 26 selected sources, five candidate strips, native/cell bounds and alpha passed; no official admission",
+  "sources": [
+    {
+      "version": 1,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_attack_03_v01.png",
+      "sha256": "80a89975f59dc6b64fb5fc255fd9ecffbf14e97aa6906fc3c8fe3aa5468fa91b"
+    },
+    {
+      "version": 2,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_attack_03_v02.png",
+      "sha256": "d4e9580b2f3611f9a0e3e96136325296c8b57db77709996b6f8803843fbbe318"
+    },
+    {
+      "version": 3,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_attack_03_v03.png",
+      "sha256": "9832f2355974c1e34ed629189ff6cb3f61548f4b0958a136711977b2c8fca20e"
+    }
+  ],
+  "candidate_receipt": ".atena/generated/pilares-resume/v01/sintese_abissal-candidate-gate-receipt.json"
+}

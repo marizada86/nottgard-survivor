@@ -1,0 +1,17 @@
+{
+  "id": "death_tyrant",
+  "state": "move",
+  "index": 3,
+  "version": 2,
+  "date": "2026-10-08",
+  "refs": [
+    "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_move_03_v01.png",
+    "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_idle_00_v01.png",
+    "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/assets/enemies/death_tyrant.png"
+  ],
+  "prompt": "Use case: precise-object-edit. Image1 edit target has SEVEN small ocular stalks and is missing its original EIGHTH lowest RIGHT eye stalk. Image2 approved idle and image3 static show correct EIGHT stalks. Restore ONLY that missing original LOWEST RIGHT stalk with its blue vertical-pupil eye, emerging from the sphere's lowerRIGHT edge behind/right of the lower humanoid face/shoulder, below the other right-side eye. Keep ALL seven existing stalks in exactly their current positions: THREE on LEFT, ONE above CENTER, THREE on RIGHT. Add the missing LOWEST fourth RIGHT stalk so final count is THREE LEFT + ONE TOP + FOUR RIGHT = EXACTLY EIGHT smaller attached ocular stalks/eyes, PLUS the unchanged one large central eye. Do not remove or duplicate any existing eye, do not make nine. Keep exact current sphere pose, gray-purple spikes and gold symbols, central blue pupil, lower humanoid face lookingRIGHT, mouth/beard tendrils, TWO withered human arms, tattered wine/black-purple robe and gold chains/pendants unchanged. Missing eighth stalk is same gray-purple with bone collar and BLUE eye as approved reference, firmly ATTACHED to sphere, not a human arm or floating eye. Preserve camera/scale/proportions/crisp dark fantasy isometric pixelart. Entire restored character inside generous transparent margins, ALL eight tips/cloth/chain ends intact; native transparent alpha background and opaque solid silhouette. No legs, shadow, ground, glow, rays, particles or text.",
+  "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-913d29d2-ea03-46ff-9221-68390523af37.png",
+  "workspace_path": "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_move_03_v02.png",
+  "output_hint": "Generated images are saved to C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be as C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-913d29d2-ea03-46ff-9221-68390523af37.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "error": null
+}

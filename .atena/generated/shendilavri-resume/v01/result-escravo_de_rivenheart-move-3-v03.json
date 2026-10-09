@@ -1,0 +1,10 @@
+{
+  "id": "escravo_de_rivenheart",
+  "state": "move",
+  "index": 3,
+  "version": 3,
+  "prompt": "Edit the FIRST attached game sprite. Preserve the identity, face looking RIGHT, head, hair, torso, two arms, modest crimson/cream dress, wrist shackles and chains, palette, camera, crisp pixel art, and native transparent background. Change ONLY the lower-body walking articulation below the hips into the exact opposite stride. IMPORTANT: the currently frontmost pale leg visible through the slit of the dress must bend at the knee BACKWARDS to screen LEFT with its bare foot at the leftmost side of the silhouette. The other leg coming from behind the dress must extend FORWARD diagonally to screen RIGHT, its bare foot at the rightmost side of the silhouette. This swaps which leg is in front; it is NOT the same leg pose as the first image. Show two separate knees, two legs and two feet, with ankle shackles preserved. Do not flip the whole sprite, turn the head or duplicate legs. Use second attached approved idle sprite to preserve face/body/clothing and third static for supporting details. Entire character in square1254x1254 canvas with empty transparent margins, no ground or shadows. ONE full-body animation frame, no sheet.",
+  "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-bf0edebe-1ee0-4817-8117-60f3475232f7.png",
+  "path": "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-shendilavri/escravo_de_rivenheart/escravo_de_rivenheart_move_03_v03.png",
+  "status": "generated_pending_review"
+}

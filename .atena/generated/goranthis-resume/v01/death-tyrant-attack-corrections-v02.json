@@ -1,0 +1,33 @@
+{
+  "jobs": [
+    {
+      "id": "death_tyrant",
+      "state": "attack",
+      "index": 0,
+      "version": 2,
+      "date": "2026-10-08",
+      "refs": [
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_attack_00_v01.png",
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_idle_00_v01.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Image1 is edit target, image2 approved anatomy reference. Remove ONLY the extraneous THIRD human arm and dangling claw at lower SCREEN RIGHT beside the wine robe (below the raised right hand). Keep the TWO intended arms: bent hand at SCREEN LEFT and raised bent hand at upper SCREEN RIGHT. The emptied area is transparent background with original robe/chain silhouette intact. Preserve EXACTLY EIGHT attached small blue ocular stalks (THREE left + ONE top + FOUR right including lowest right beside lower human face), ONE central blue eye, original gray-purple spiked sphere, lower humanoid face looking RIGHT, mouth/beard tendrils, all gold chains/symbols and wine black robe. Keep identical anticipation pose/proportions/camera/pixelart; no new limb, no legs. Complete silhouette with transparent margins, native alpha background, solid opaque character. No shadow, glow, particles, rays or text."
+    },
+    {
+      "id": "death_tyrant",
+      "state": "attack",
+      "index": 1,
+      "version": 2,
+      "date": "2026-10-08",
+      "refs": [
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_attack_01_v01.png",
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_move_02_v02.png",
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_idle_00_v01.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Image1 edit target has SEVEN small ocular stalks; images2 and3 show correct eight. Restore ONLY the missing LOWEST RIGHT original eighth ocular stalk emerging from the sphere lowerRIGHT beside/behind lower humanoid face and shoulder, BELOW the current third right eye. Keep every existing eye in current exact position: THREE left, ONE top, THREE right. Final is THREE LEFT + ONE TOP + FOUR RIGHT = EXACTLY EIGHT smaller attached stalks with blue eyes and vertical pupils, PLUS unchanged central large blue eye. Preserve current forward-right attack pose, TWO human arms/hands, sphere spikes and gray-purple palette, lower face lookingRIGHT, mouth/beard tendrils, tattered robe and gold chains. All eight small eye tips separate and visible; none removed/duplicated, no legs/new human arm. Entire character inside transparent margin including rightmost eye tip. Native alpha transparent background and solid opaque character, crisp original pixelart. No shadow, glow/rays/projectile or text."
+    }
+  ],
+  "rejected": {
+    "attack_00_v01": "Extra third human arm at lower right.",
+    "attack_01_v01": "Seven smaller ocular stalks; lowest RIGHT eighth missing."
+  }
+}

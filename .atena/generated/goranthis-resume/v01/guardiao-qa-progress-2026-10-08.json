@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-08",
+  "status": "REVIEW_DEATH04_V03_IN_FLIGHT",
+  "new_unique_frames": 18,
+  "official_assets": 0,
+  "remaining_new_frames": 64,
+  "selected_corrections": {
+    "move_03": 2,
+    "move_05": 2,
+    "attack_02": 2,
+    "death_02": 2
+  },
+  "rejected": {
+    "death_04_v02": "Right wing clipped, bbox right equals canvas1254"
+  },
+  "death_05": "NOT_GENERATED"
+}

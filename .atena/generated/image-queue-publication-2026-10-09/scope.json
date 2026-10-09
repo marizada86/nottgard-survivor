@@ -1,0 +1,3277 @@
+{
+  "status": "SELECTED_FOR_REVIEW",
+  "files": 812,
+  "bytes": 83111264,
+  "largest_bytes": 3608920,
+  "selected": [
+    {
+      "path": ".atena/backlog/ARTE.md",
+      "bytes": 31688
+    },
+    {
+      "path": ".atena/evidence/EVID-145-fila-de-imagens-prioritaria-2026-10-02.md",
+      "bytes": 59978
+    },
+    {
+      "path": ".atena/evidence/goranthis-complete-2026-10-08.md",
+      "bytes": 1541
+    },
+    {
+      "path": ".atena/evidence/goranthis-cultista_de_socothbenoth-cycles-2026-10-08.md",
+      "bytes": 680
+    },
+    {
+      "path": ".atena/evidence/goranthis-death-tyrant-anatomy-gate-2026-10-08.md",
+      "bytes": 1416
+    },
+    {
+      "path": ".atena/evidence/goranthis-death_tyrant-cycles-2026-10-08.md",
+      "bytes": 1163
+    },
+    {
+      "path": ".atena/evidence/goranthis-guardiao_de_goranthis-cycles-2026-10-08.md",
+      "bytes": 683
+    },
+    {
+      "path": ".atena/evidence/goranthis-identities-2026-10-07.md",
+      "bytes": 1191
+    },
+    {
+      "path": ".atena/evidence/goranthis-socothbenoth-candidate-gate-2026-10-08.md",
+      "bytes": 1642
+    },
+    {
+      "path": ".atena/evidence/goranthis-socothbenoth-cycles-2026-10-08.md",
+      "bytes": 1096
+    },
+    {
+      "path": ".atena/evidence/image-queue-publication-2026-10-09.md",
+      "bytes": 1997
+    },
+    {
+      "path": ".atena/evidence/pilares-complete-2026-10-08.md",
+      "bytes": 1671
+    },
+    {
+      "path": ".atena/evidence/pilares-identity-gate-2026-10-08.md",
+      "bytes": 1500
+    },
+    {
+      "path": ".atena/evidence/pilares-sintese-abissal-candidate-gate-2026-10-08.md",
+      "bytes": 2561
+    },
+    {
+      "path": ".atena/evidence/pilares-sintese_abissal-cycles-2026-10-08.md",
+      "bytes": 805
+    },
+    {
+      "path": ".atena/evidence/s007-arco-fogo-completo-p01-gate-2026-10-09.md",
+      "bytes": 2821
+    },
+    {
+      "path": ".atena/evidence/s007-arco-radiante-completo-f03-gate-2026-10-09.md",
+      "bytes": 2896
+    },
+    {
+      "path": ".atena/evidence/s007-orbe-arcano-completo-r01-gate-2026-10-09.md",
+      "bytes": 2835
+    },
+    {
+      "path": ".atena/evidence/s007-orbe-radiante-completo-q01-gate-2026-10-09.md",
+      "bytes": 3244
+    },
+    {
+      "path": ".atena/evidence/s007-vfx-e03-gate-2026-10-09.md",
+      "bytes": 2388
+    },
+    {
+      "path": ".atena/evidence/shendilavri-complete-2026-10-07.md",
+      "bytes": 1558
+    },
+    {
+      "path": ".atena/evidence/shendilavri-escravo-cycles-2026-10-07.md",
+      "bytes": 1280
+    },
+    {
+      "path": ".atena/evidence/shendilavri-guarda_do_castelo-cycles-2026-10-07.md",
+      "bytes": 667
+    },
+    {
+      "path": ".atena/evidence/shendilavri-identities-resume-2026-10-07.md",
+      "bytes": 3158
+    },
+    {
+      "path": ".atena/evidence/shendilavri-malcanthet-cycles-2026-10-07.md",
+      "bytes": 646
+    },
+    {
+      "path": ".atena/evidence/shendilavri-master_of_cruelties-cycles-2026-10-07.md",
+      "bytes": 664
+    },
+    {
+      "path": ".atena/evidence/shendilavri-sucubo-cycles-2026-10-07.md",
+      "bytes": 632
+    },
+    {
+      "path": ".atena/evidence/shendilavri-sucubo-preview-2026-10-07.md",
+      "bytes": 1567
+    },
+    {
+      "path": ".atena/generated/ART-PROMPTS-048-mobs-shendilavri.md",
+      "bytes": 10382
+    },
+    {
+      "path": ".atena/generated/ART-PROMPTS-049-mobs-goranthis.md",
+      "bytes": 8715
+    },
+    {
+      "path": ".atena/generated/ART-PROMPTS-050-mobs-pilares.md",
+      "bytes": 6218
+    },
+    {
+      "path": ".atena/generated/ART-PROMPTS-052-vfx-corpo-a-corpo-excecoes.md",
+      "bytes": 3357
+    },
+    {
+      "path": ".atena/generated/ART-PROMPTS-053-vfx-projeteis-e-explosoes.md",
+      "bytes": 3619
+    },
+    {
+      "path": ".atena/generated/CHATGPT-FILA-017-mobs-shendilavri.md",
+      "bytes": 8123
+    },
+    {
+      "path": ".atena/generated/CHATGPT-FILA-018-mobs-goranthis.md",
+      "bytes": 6289
+    },
+    {
+      "path": ".atena/generated/CHATGPT-FILA-019-mobs-pilares.md",
+      "bytes": 3065
+    },
+    {
+      "path": ".atena/generated/CHATGPT-FILA-021-vfx-corpo-a-corpo-excecoes.md",
+      "bytes": 35378
+    },
+    {
+      "path": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "bytes": 50374
+    },
+    {
+      "path": ".atena/generated/PRIORITY-IMAGES-2026-10-02.json",
+      "bytes": 47821
+    },
+    {
+      "path": ".atena/generated/goranthis-complete-build-validation-2026-10-08.json",
+      "bytes": 3486
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/approve_and_prepare.py",
+      "bytes": 3879
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/approve_socothbenoth_move_2026-10-08.py",
+      "bytes": 3737
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/audit_identity_gate.py",
+      "bytes": 7672
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/audit_native_actor.py",
+      "bytes": 2187
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/check_actor.ps1",
+      "bytes": 1796
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/check_links_and_prompts.py",
+      "bytes": 1635
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/check_socothbenoth_trigger.gd",
+      "bytes": 2044
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/complete_actor.py",
+      "bytes": 8090
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/cultista-action-progress-2026-10-08.json",
+      "bytes": 2386
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/cultista-action-source-audit-in-progress.json",
+      "bytes": 5463
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/cultista-generation-prompts-2026-10-08.json",
+      "bytes": 34406
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/cultista-locomotion-progress-2026-10-08.json",
+      "bytes": 2363
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/cultista-locomotion-source-audit.json",
+      "bytes": 3603
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/cultista-qa-notes-2026-10-08.json",
+      "bytes": 600
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/cultista_de_socothbenoth-completion-receipt.json",
+      "bytes": 18689
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/cultista_de_socothbenoth-selected-source-audit.json",
+      "bytes": 7903
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/cultista_de_socothbenoth_attack_review.gif",
+      "bytes": 48759
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/cultista_de_socothbenoth_compact_review.png",
+      "bytes": 509692
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/cultista_de_socothbenoth_death_review.gif",
+      "bytes": 69856
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/cultista_de_socothbenoth_idle_review.gif",
+      "bytes": 46966
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/cultista_de_socothbenoth_move_review.gif",
+      "bytes": 74942
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/cultista_death04_composited_review.png",
+      "bytes": 894467
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/cultista_locomotion_sources_review.png",
+      "bytes": 1074343
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/death-tyrant-action-prompts-2026-10-08.json",
+      "bytes": 19299
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/death-tyrant-action-qa-notes-2026-10-08.json",
+      "bytes": 1166
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/death-tyrant-all-action-corrections-v02.json",
+      "bytes": 8796
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/death-tyrant-attack-corrections-v02.json",
+      "bytes": 3318
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/death-tyrant-death-anatomy-approval-2026-10-08.json",
+      "bytes": 3200
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/death-tyrant-death-anatomy-gate-2026-10-08.json",
+      "bytes": 2832
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/death-tyrant-death-anatomy-gate-2026-10-08.png",
+      "bytes": 692985
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/death-tyrant-death-corrections-v02.json",
+      "bytes": 3711
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/death-tyrant-death-final-corrections-v03.json",
+      "bytes": 3402
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/death-tyrant-death-v03-full-jobset.json",
+      "bytes": 4918
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/death-tyrant-gate-checks-2026-10-08.json",
+      "bytes": 339
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/death-tyrant-generation-prompts-2026-10-08.json",
+      "bytes": 32267
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/death-tyrant-locomotion-progress-2026-10-08.json",
+      "bytes": 2135
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/death-tyrant-locomotion-v01-audit.json",
+      "bytes": 2973
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/death-tyrant-move-corrections-v02.json",
+      "bytes": 6377
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/death-tyrant-move-v02-audit.json",
+      "bytes": 841
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/death-tyrant-qa-notes-2026-10-08.json",
+      "bytes": 464
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/death_tyrant-completion-receipt.json",
+      "bytes": 17510
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/death_tyrant-native-audit.json",
+      "bytes": 6746
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/death_tyrant-selected-source-audit.json",
+      "bytes": 7426
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/death_tyrant_attack_review.gif",
+      "bytes": 68987
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/death_tyrant_compact_review.png",
+      "bytes": 744101
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/death_tyrant_death_review.gif",
+      "bytes": 105976
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/death_tyrant_idle_review.gif",
+      "bytes": 60584
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/death_tyrant_move_review.gif",
+      "bytes": 100016
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/death_tyrant_native_review.png",
+      "bytes": 2128677
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/death_tyrant_packed_readable.png",
+      "bytes": 916933
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/export_local_build.ps1",
+      "bytes": 2343
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/final-selected-prompts.json",
+      "bytes": 7176
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/guardiao-corrections-2026-10-08.json",
+      "bytes": 6756
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/guardiao-generation-progress.json",
+      "bytes": 2172
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/guardiao-generation-prompts.json",
+      "bytes": 29775
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/guardiao-qa-notes-2026-10-08.json",
+      "bytes": 946
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/guardiao-qa-progress-2026-10-08.json",
+      "bytes": 399
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/guardiao-resume-progress-2026-10-08.json",
+      "bytes": 3438
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/guardiao_de_goranthis-completion-receipt.json",
+      "bytes": 18062
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/guardiao_de_goranthis-selected-source-audit.json",
+      "bytes": 7780
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/guardiao_de_goranthis_attack_review.gif",
+      "bytes": 55808
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/guardiao_de_goranthis_compact_review.png",
+      "bytes": 506926
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/guardiao_de_goranthis_death_review.gif",
+      "bytes": 68604
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/guardiao_de_goranthis_idle_review.gif",
+      "bytes": 46360
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/guardiao_de_goranthis_move_review.gif",
+      "bytes": 71939
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/guardiao_ground_review.png",
+      "bytes": 359205
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/identity-gate-receipt.json",
+      "bytes": 3105
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/identity-progress.json",
+      "bytes": 1113
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/identity-prompts.json",
+      "bytes": 8572
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/illusion-reuse-integration-receipt.json",
+      "bytes": 1062
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/illusion-reuse-preparation-2026-10-08.json",
+      "bytes": 678
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/local-build-process-receipt.json",
+      "bytes": 360
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/owner-pause-2026-10-07.json",
+      "bytes": 2949
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/prepare_enemy_cycles.gd",
+      "bytes": 7031
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/progress-2026-10-08.json",
+      "bytes": 443
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/record_biome_build.py",
+      "bytes": 8198
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/record_death_anatomy_gate.py",
+      "bytes": 5883
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/record_owner_pause.py",
+      "bytes": 5050
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/record_socothbenoth_candidate_gate.py",
+      "bytes": 9087
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/register_illusion_reuse.py",
+      "bytes": 2239
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-cultista_de_socothbenoth-attack-0-v1.json",
+      "bytes": 2750
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-cultista_de_socothbenoth-attack-1-v1.json",
+      "bytes": 2745
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-cultista_de_socothbenoth-attack-2-v1.json",
+      "bytes": 2756
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-cultista_de_socothbenoth-attack-2-v2.json",
+      "bytes": 2383
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-cultista_de_socothbenoth-attack-3-v1.json",
+      "bytes": 2713
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-cultista_de_socothbenoth-death-0-v1.json",
+      "bytes": 2723
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-cultista_de_socothbenoth-death-1-v1.json",
+      "bytes": 2991
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-cultista_de_socothbenoth-death-2-v1.json",
+      "bytes": 3056
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-cultista_de_socothbenoth-death-3-v1.json",
+      "bytes": 3063
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-cultista_de_socothbenoth-death-4-v1.json",
+      "bytes": 3247
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-cultista_de_socothbenoth-death-5-v1.json",
+      "bytes": 2496
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-cultista_de_socothbenoth-idle-1-v1.json",
+      "bytes": 2728
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-cultista_de_socothbenoth-idle-2-v1.json",
+      "bytes": 2704
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-cultista_de_socothbenoth-idle-3-v1.json",
+      "bytes": 2686
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-cultista_de_socothbenoth-move-0-v1.json",
+      "bytes": 2747
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-cultista_de_socothbenoth-move-1-v1.json",
+      "bytes": 2709
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-cultista_de_socothbenoth-move-2-v1.json",
+      "bytes": 2689
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-cultista_de_socothbenoth-move-3-v1.json",
+      "bytes": 2720
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-cultista_de_socothbenoth-move-4-v1.json",
+      "bytes": 2690
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-cultista_de_socothbenoth-move-5-v1.json",
+      "bytes": 2718
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-cultista_de_socothbenoth-v1.json",
+      "bytes": 2479
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-cultista_de_socothbenoth-v2.json",
+      "bytes": 1756
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-death_tyrant-attack-0-v1.json",
+      "bytes": 2846
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-death_tyrant-attack-0-v2.json",
+      "bytes": 2313
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-death_tyrant-attack-1-v1.json",
+      "bytes": 2825
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-death_tyrant-attack-1-v2.json",
+      "bytes": 2568
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-death_tyrant-attack-2-v1.json",
+      "bytes": 2872
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-death_tyrant-attack-3-v1.json",
+      "bytes": 2824
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-death_tyrant-death-0-v1.json",
+      "bytes": 2833
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-death_tyrant-death-1-v1.json",
+      "bytes": 3105
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-death_tyrant-death-2-v1.json",
+      "bytes": 3117
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-death_tyrant-death-2-v2.json",
+      "bytes": 2609
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-death_tyrant-death-2-v3.json",
+      "bytes": 2513
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-death_tyrant-death-3-v1.json",
+      "bytes": 3182
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-death_tyrant-death-3-v2.json",
+      "bytes": 2823
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-death_tyrant-death-3-v3.json",
+      "bytes": 2517
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-death_tyrant-death-4-v1.json",
+      "bytes": 3339
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-death_tyrant-death-4-v2.json",
+      "bytes": 2820
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-death_tyrant-death-4-v3.json",
+      "bytes": 2470
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-death_tyrant-death-5-v1.json",
+      "bytes": 1974
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-death_tyrant-idle-1-v1.json",
+      "bytes": 2606
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-death_tyrant-idle-2-v1.json",
+      "bytes": 2594
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-death_tyrant-idle-3-v1.json",
+      "bytes": 2528
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-death_tyrant-move-0-v1.json",
+      "bytes": 2579
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-death_tyrant-move-1-v1.json",
+      "bytes": 2547
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-death_tyrant-move-2-v1.json",
+      "bytes": 2581
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-death_tyrant-move-2-v2.json",
+      "bytes": 2954
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-death_tyrant-move-3-v1.json",
+      "bytes": 2601
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-death_tyrant-move-3-v2.json",
+      "bytes": 2954
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-death_tyrant-move-4-v1.json",
+      "bytes": 2550
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-death_tyrant-move-4-v2.json",
+      "bytes": 2954
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-death_tyrant-move-5-v1.json",
+      "bytes": 2559
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-death_tyrant-v1.json",
+      "bytes": 2497
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-guardiao_de_goranthis-attack-0-v1.json",
+      "bytes": 2034
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-guardiao_de_goranthis-attack-1-v1.json",
+      "bytes": 2029
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-guardiao_de_goranthis-attack-2-v1.json",
+      "bytes": 2099
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-guardiao_de_goranthis-attack-2-v2.json",
+      "bytes": 2100
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-guardiao_de_goranthis-attack-3-v1.json",
+      "bytes": 1990
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-guardiao_de_goranthis-death-0-v1.json",
+      "bytes": 2002
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-guardiao_de_goranthis-death-1-v1.json",
+      "bytes": 1975
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-guardiao_de_goranthis-death-2-v1.json",
+      "bytes": 2011
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-guardiao_de_goranthis-death-2-v2.json",
+      "bytes": 1862
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-guardiao_de_goranthis-death-3-v1.json",
+      "bytes": 2097
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-guardiao_de_goranthis-death-4-v1.json",
+      "bytes": 2169
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-guardiao_de_goranthis-death-4-v2.json",
+      "bytes": 1961
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-guardiao_de_goranthis-death-4-v3.json",
+      "bytes": 1905
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-guardiao_de_goranthis-death-5-v1.json",
+      "bytes": 2343
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-guardiao_de_goranthis-idle-1-v1.json",
+      "bytes": 1969
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-guardiao_de_goranthis-idle-2-v1.json",
+      "bytes": 1936
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-guardiao_de_goranthis-idle-3-v1.json",
+      "bytes": 1933
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-guardiao_de_goranthis-move-0-v1.json",
+      "bytes": 2038
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-guardiao_de_goranthis-move-1-v1.json",
+      "bytes": 1968
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-guardiao_de_goranthis-move-2-v1.json",
+      "bytes": 1987
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-guardiao_de_goranthis-move-3-v1.json",
+      "bytes": 2069
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-guardiao_de_goranthis-move-3-v2.json",
+      "bytes": 1928
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-guardiao_de_goranthis-move-4-v1.json",
+      "bytes": 2220
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-guardiao_de_goranthis-move-5-v1.json",
+      "bytes": 2216
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-guardiao_de_goranthis-move-5-v2.json",
+      "bytes": 1964
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-guardiao_de_goranthis-v1.json",
+      "bytes": 2391
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-socothbenoth-attack-0-v1.json",
+      "bytes": 2922
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-socothbenoth-attack-1-v1.json",
+      "bytes": 2887
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-socothbenoth-attack-2-v1.json",
+      "bytes": 2862
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-socothbenoth-attack-3-v1.json",
+      "bytes": 2868
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-socothbenoth-death-0-v1.json",
+      "bytes": 2854
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-socothbenoth-death-1-v1.json",
+      "bytes": 3024
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-socothbenoth-death-2-v1.json",
+      "bytes": 3036
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-socothbenoth-death-3-v1.json",
+      "bytes": 3064
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-socothbenoth-death-4-v1.json",
+      "bytes": 3193
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-socothbenoth-death-5-v1.json",
+      "bytes": 3339
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-socothbenoth-idle-1-v1.json",
+      "bytes": 2671
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-socothbenoth-idle-2-v1.json",
+      "bytes": 2652
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-socothbenoth-idle-3-v1.json",
+      "bytes": 2630
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-socothbenoth-move-0-v1.json",
+      "bytes": 2721
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-socothbenoth-move-1-v1.json",
+      "bytes": 2654
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-socothbenoth-move-2-v1.json",
+      "bytes": 2670
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-socothbenoth-move-3-v1.json",
+      "bytes": 2694
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-socothbenoth-move-3-v2.json",
+      "bytes": 2760
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-socothbenoth-move-3-v3.json",
+      "bytes": 2596
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-socothbenoth-move-4-v1.json",
+      "bytes": 2649
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-socothbenoth-move-4-v2.json",
+      "bytes": 2798
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-socothbenoth-move-4-v3.json",
+      "bytes": 2625
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-socothbenoth-move-5-v1.json",
+      "bytes": 2655
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-socothbenoth-special-0-v1.json",
+      "bytes": 2905
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-socothbenoth-special-1-v1.json",
+      "bytes": 2895
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-socothbenoth-special-2-v1.json",
+      "bytes": 2900
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-socothbenoth-special-3-v1.json",
+      "bytes": 2955
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-socothbenoth-special-4-v1.json",
+      "bytes": 2883
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-socothbenoth-special-5-v1.json",
+      "bytes": 2930
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/result-socothbenoth-v1.json",
+      "bytes": 2573
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/resume-2026-10-08.json",
+      "bytes": 484
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/resume-2026-10-08.py",
+      "bytes": 2295
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/review_actor.py",
+      "bytes": 1759
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/setup_pipeline.py",
+      "bytes": 1306
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/socothbenoth-action-prompts-2026-10-08.json",
+      "bytes": 18927
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/socothbenoth-candidate-review-receipt-2026-10-08.json",
+      "bytes": 21365
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/socothbenoth-completion-receipt.json",
+      "bytes": 23583
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/socothbenoth-final-prompts-2026-10-08.json",
+      "bytes": 14539
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/socothbenoth-generation-prompts-2026-10-08.json",
+      "bytes": 44446
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/socothbenoth-locomotion-qa-notes-2026-10-08.json",
+      "bytes": 797
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/socothbenoth-move-approval-2026-10-08.json",
+      "bytes": 1154
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/socothbenoth-move-corrections-v02.json",
+      "bytes": 3944
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/socothbenoth-move-final-corrections-v03.json",
+      "bytes": 3608
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/socothbenoth-move-owner-gate-2026-10-08.json",
+      "bytes": 2717
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/socothbenoth-move-owner-preview-2026-10-08.gif",
+      "bytes": 276735
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/socothbenoth-move-owner-preview-2026-10-08.png",
+      "bytes": 588334
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/socothbenoth-native-audit.json",
+      "bytes": 8789
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/socothbenoth-qa-notes-2026-10-08.json",
+      "bytes": 769
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/socothbenoth-selected-source-audit.json",
+      "bytes": 9675
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/socothbenoth_all_cycles_owner_preview.gif",
+      "bytes": 1640184
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/socothbenoth_attack_owner_preview.gif",
+      "bytes": 127752
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/socothbenoth_attack_review.gif",
+      "bytes": 90105
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/socothbenoth_compact_review.png",
+      "bytes": 1069378
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/socothbenoth_death_owner_preview.gif",
+      "bytes": 140245
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/socothbenoth_death_review.gif",
+      "bytes": 100112
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/socothbenoth_idle_owner_preview.gif",
+      "bytes": 103962
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/socothbenoth_idle_review.gif",
+      "bytes": 73816
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/socothbenoth_move_owner_preview.gif",
+      "bytes": 171117
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/socothbenoth_move_review.gif",
+      "bytes": 120865
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/socothbenoth_native_review.png",
+      "bytes": 2494042
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/socothbenoth_special_owner_preview.gif",
+      "bytes": 177765
+    },
+    {
+      "path": ".atena/generated/goranthis-resume/v01/socothbenoth_special_review.gif",
+      "bytes": 125554
+    },
+    {
+      "path": ".atena/generated/image-queue-publication-2026-10-09/art-pathspec.nul",
+      "bytes": 56860
+    },
+    {
+      "path": ".atena/generated/image-queue-publication-2026-10-09/before-plan-053-imagens.yaml",
+      "bytes": 7456
+    },
+    {
+      "path": ".atena/generated/image-queue-publication-2026-10-09/before-plan.yaml",
+      "bytes": 11508
+    },
+    {
+      "path": ".atena/generated/image-queue-publication-2026-10-09/checks.json",
+      "bytes": 1009
+    },
+    {
+      "path": ".atena/generated/image-queue-publication-2026-10-09/prepare_publication.py",
+      "bytes": 7641
+    },
+    {
+      "path": ".atena/generated/image-queue-publication-2026-10-09/publication-plan.json",
+      "bytes": 1459
+    },
+    {
+      "path": ".atena/generated/image-queue-publication-2026-10-09/run_checks.ps1",
+      "bytes": 2026
+    },
+    {
+      "path": ".atena/generated/image-queue-publication-2026-10-09/scope.json",
+      "bytes": 101824
+    },
+    {
+      "path": ".atena/generated/image-queue-publication-2026-10-09/seal_precommit.py",
+      "bytes": 3502
+    },
+    {
+      "path": ".atena/generated/image-queue-publication-2026-10-09/select_scope.py",
+      "bytes": 2740
+    },
+    {
+      "path": ".atena/generated/image-queue-publication-2026-10-09/source-validation.json",
+      "bytes": 345
+    },
+    {
+      "path": ".atena/generated/pilares-complete-build-validation-2026-10-08.json",
+      "bytes": 3359
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/action-final-prompts-2026-10-08.json",
+      "bytes": 25368
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/action-prompts-2026-10-08.json",
+      "bytes": 24489
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/anchor_root_trunk.py",
+      "bytes": 1557
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/approve_attack03_2026-10-08.py",
+      "bytes": 4611
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/attack03-pendant-gate-before-approval-2026-10-08.json",
+      "bytes": 1520
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/attack03-pendant-owner-approval-2026-10-08.json",
+      "bytes": 1117
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/attack03-pendant-owner-gate-2026-10-08.json",
+      "bytes": 1672
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/attack_03_v02_lamp_detail.png",
+      "bytes": 222645
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/attack_03_v03_lamp_detail.png",
+      "bytes": 221472
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/audit_native_actor.py",
+      "bytes": 2225
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/check_actor.ps1",
+      "bytes": 1792
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/check_sintese_abissal_trigger.gd",
+      "bytes": 2097
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/complete_actor.py",
+      "bytes": 8756
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/cycle-prompts-2026-10-08.json",
+      "bytes": 60437
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/death_00_v02_lamp_detail.png",
+      "bytes": 217317
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/export_local_build.ps1",
+      "bytes": 2357
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/finish-prompts-2026-10-08.json",
+      "bytes": 18465
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/generation-progress.json",
+      "bytes": 4956
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/identity-framing-v02-prompts-2026-10-08.json",
+      "bytes": 2939
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/identity-gate-before-approval-2026-10-08.json",
+      "bytes": 3387
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/identity-gate-receipt.json",
+      "bytes": 3504
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/identity-prompt-2026-10-08.json",
+      "bytes": 1940
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/local-build-process-receipt.json",
+      "bytes": 358
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/move-lantern-corrections-v02-2026-10-08.json",
+      "bytes": 6840
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/prepare_enemy_cycles.gd",
+      "bytes": 7050
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/prop-correction-prompts-v02-2026-10-08.json",
+      "bytes": 6818
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/record_biome_build.py",
+      "bytes": 7334
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/record_candidate_gate.py",
+      "bytes": 9009
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/record_generation.py",
+      "bytes": 1347
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/record_identity_gate_2026-10-08.py",
+      "bytes": 8214
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/record_recovery_gate.py",
+      "bytes": 2047
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-attack-0-v1.json",
+      "bytes": 3583
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-attack-1-v1.json",
+      "bytes": 3592
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-attack-2-v1.json",
+      "bytes": 3674
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-attack-3-v1.json",
+      "bytes": 3542
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-attack-3-v2.json",
+      "bytes": 2604
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-attack-3-v3.json",
+      "bytes": 2307
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-death-0-v1.json",
+      "bytes": 3561
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-death-0-v2.json",
+      "bytes": 2601
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-death-1-v1.json",
+      "bytes": 3905
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-death-1-v2.json",
+      "bytes": 2601
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-death-2-v1.json",
+      "bytes": 4294
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-death-2-v2.json",
+      "bytes": 2710
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-death-3-v1.json",
+      "bytes": 4302
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-death-4-v1.json",
+      "bytes": 4421
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-death-5-v1.json",
+      "bytes": 2092
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-idle-0-v1.json",
+      "bytes": 2627
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-idle-0-v2.json",
+      "bytes": 3497
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-idle-1-v1.json",
+      "bytes": 3253
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-idle-2-v1.json",
+      "bytes": 3245
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-idle-3-v1.json",
+      "bytes": 3226
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-move-0-v1.json",
+      "bytes": 3342
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-move-0-v2.json",
+      "bytes": 4243
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-move-1-v1.json",
+      "bytes": 3273
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-move-2-v1.json",
+      "bytes": 3298
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-move-2-v2.json",
+      "bytes": 4199
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-move-3-v1.json",
+      "bytes": 3343
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-move-4-v1.json",
+      "bytes": 3252
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-move-5-v1.json",
+      "bytes": 3272
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-special-0-v1.json",
+      "bytes": 3541
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-special-0-v2.json",
+      "bytes": 2376
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-special-1-v1.json",
+      "bytes": 3939
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-special-1-v2.json",
+      "bytes": 2376
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-special-2-v1.json",
+      "bytes": 3961
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-special-2-v2.json",
+      "bytes": 2376
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-special-3-v1.json",
+      "bytes": 4054
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-special-3-v2.json",
+      "bytes": 2702
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-special-4-v1.json",
+      "bytes": 3991
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-special-4-v2.json",
+      "bytes": 2376
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/result-sintese_abissal-special-5-v1.json",
+      "bytes": 3985
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/review_actor.py",
+      "bytes": 1757
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/review_lamp_details.py",
+      "bytes": 429
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/root-trunk-anchoring-review.json",
+      "bytes": 5139
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/select_candidate_cycles.py",
+      "bytes": 1630
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/sintese_abissal-candidate-gate-receipt.json",
+      "bytes": 39274
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/sintese_abissal-completion-receipt.json",
+      "bytes": 23767
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/sintese_abissal-native-audit.json",
+      "bytes": 8883
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/sintese_abissal-selected-source-audit.json",
+      "bytes": 9767
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/sintese_abissal_attack_review.gif",
+      "bytes": 117470
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/sintese_abissal_compact_review.png",
+      "bytes": 1648188
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/sintese_abissal_death_review.gif",
+      "bytes": 145561
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/sintese_abissal_identity_composite_v01.png",
+      "bytes": 2174561
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/sintese_abissal_identity_composite_v02.png",
+      "bytes": 1379985
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/sintese_abissal_idle_review.gif",
+      "bytes": 120385
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/sintese_abissal_move_review.gif",
+      "bytes": 184085
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/sintese_abissal_native_review.png",
+      "bytes": 3608920
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/sintese_abissal_special_review.gif",
+      "bytes": 182933
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/special-pendant-correction-prompts-v02-2026-10-08.json",
+      "bytes": 7248
+    },
+    {
+      "path": ".atena/generated/pilares-resume/v01/special03-clipping-correction-v02-2026-10-08.json",
+      "bytes": 1752
+    },
+    {
+      "path": ".atena/generated/priority-review/cultista_de_socothbenoth_all_states.png",
+      "bytes": 574266
+    },
+    {
+      "path": ".atena/generated/priority-review/cultista_de_socothbenoth_attack.png",
+      "bytes": 115270
+    },
+    {
+      "path": ".atena/generated/priority-review/cultista_de_socothbenoth_death.png",
+      "bytes": 168304
+    },
+    {
+      "path": ".atena/generated/priority-review/cultista_de_socothbenoth_idle.png",
+      "bytes": 110082
+    },
+    {
+      "path": ".atena/generated/priority-review/cultista_de_socothbenoth_move.png",
+      "bytes": 177355
+    },
+    {
+      "path": ".atena/generated/priority-review/cultista_de_socothbenoth_runtime.png",
+      "bytes": 1468038
+    },
+    {
+      "path": ".atena/generated/priority-review/death_tyrant_all_states.png",
+      "bytes": 842928
+    },
+    {
+      "path": ".atena/generated/priority-review/death_tyrant_attack.png",
+      "bytes": 173849
+    },
+    {
+      "path": ".atena/generated/priority-review/death_tyrant_death.png",
+      "bytes": 265843
+    },
+    {
+      "path": ".atena/generated/priority-review/death_tyrant_idle.png",
+      "bytes": 149478
+    },
+    {
+      "path": ".atena/generated/priority-review/death_tyrant_move.png",
+      "bytes": 250408
+    },
+    {
+      "path": ".atena/generated/priority-review/death_tyrant_runtime.png",
+      "bytes": 1621273
+    },
+    {
+      "path": ".atena/generated/priority-review/escravo_de_rivenheart_all_states.png",
+      "bytes": 394399
+    },
+    {
+      "path": ".atena/generated/priority-review/escravo_de_rivenheart_attack.png",
+      "bytes": 84904
+    },
+    {
+      "path": ".atena/generated/priority-review/escravo_de_rivenheart_death.png",
+      "bytes": 123093
+    },
+    {
+      "path": ".atena/generated/priority-review/escravo_de_rivenheart_idle.png",
+      "bytes": 69982
+    },
+    {
+      "path": ".atena/generated/priority-review/escravo_de_rivenheart_move.png",
+      "bytes": 114087
+    },
+    {
+      "path": ".atena/generated/priority-review/escravo_de_rivenheart_runtime.png",
+      "bytes": 1217232
+    },
+    {
+      "path": ".atena/generated/priority-review/goranthis_identities_v01.png",
+      "bytes": 1173075
+    },
+    {
+      "path": ".atena/generated/priority-review/guarda_do_castelo_all_states.png",
+      "bytes": 299830
+    },
+    {
+      "path": ".atena/generated/priority-review/guarda_do_castelo_attack.png",
+      "bytes": 59378
+    },
+    {
+      "path": ".atena/generated/priority-review/guarda_do_castelo_death.png",
+      "bytes": 86505
+    },
+    {
+      "path": ".atena/generated/priority-review/guarda_do_castelo_idle.png",
+      "bytes": 57630
+    },
+    {
+      "path": ".atena/generated/priority-review/guarda_do_castelo_move.png",
+      "bytes": 93995
+    },
+    {
+      "path": ".atena/generated/priority-review/guarda_do_castelo_runtime.png",
+      "bytes": 1256668
+    },
+    {
+      "path": ".atena/generated/priority-review/guardiao_de_goranthis_all_states.png",
+      "bytes": 574584
+    },
+    {
+      "path": ".atena/generated/priority-review/guardiao_de_goranthis_attack.png",
+      "bytes": 133744
+    },
+    {
+      "path": ".atena/generated/priority-review/guardiao_de_goranthis_death.png",
+      "bytes": 163625
+    },
+    {
+      "path": ".atena/generated/priority-review/guardiao_de_goranthis_idle.png",
+      "bytes": 106885
+    },
+    {
+      "path": ".atena/generated/priority-review/guardiao_de_goranthis_move.png",
+      "bytes": 167988
+    },
+    {
+      "path": ".atena/generated/priority-review/guardiao_de_goranthis_runtime.png",
+      "bytes": 1504802
+    },
+    {
+      "path": ".atena/generated/priority-review/ilusao_de_socothbenoth_runtime.png",
+      "bytes": 1444504
+    },
+    {
+      "path": ".atena/generated/priority-review/malcanthet_all_states.png",
+      "bytes": 993222
+    },
+    {
+      "path": ".atena/generated/priority-review/malcanthet_attack.png",
+      "bytes": 162823
+    },
+    {
+      "path": ".atena/generated/priority-review/malcanthet_death.png",
+      "bytes": 164077
+    },
+    {
+      "path": ".atena/generated/priority-review/malcanthet_idle.png",
+      "bytes": 155189
+    },
+    {
+      "path": ".atena/generated/priority-review/malcanthet_move.png",
+      "bytes": 261166
+    },
+    {
+      "path": ".atena/generated/priority-review/malcanthet_runtime.png",
+      "bytes": 1579854
+    },
+    {
+      "path": ".atena/generated/priority-review/malcanthet_special.png",
+      "bytes": 246040
+    },
+    {
+      "path": ".atena/generated/priority-review/master_of_cruelties_all_states.png",
+      "bytes": 520284
+    },
+    {
+      "path": ".atena/generated/priority-review/master_of_cruelties_attack.png",
+      "bytes": 125252
+    },
+    {
+      "path": ".atena/generated/priority-review/master_of_cruelties_death.png",
+      "bytes": 131072
+    },
+    {
+      "path": ".atena/generated/priority-review/master_of_cruelties_idle.png",
+      "bytes": 98779
+    },
+    {
+      "path": ".atena/generated/priority-review/master_of_cruelties_move.png",
+      "bytes": 161976
+    },
+    {
+      "path": ".atena/generated/priority-review/master_of_cruelties_runtime.png",
+      "bytes": 1392845
+    },
+    {
+      "path": ".atena/generated/priority-review/pilares_identity_gate_v02.png",
+      "bytes": 706827
+    },
+    {
+      "path": ".atena/generated/priority-review/sintese_abissal_all_states.png",
+      "bytes": 1865303
+    },
+    {
+      "path": ".atena/generated/priority-review/sintese_abissal_attack.png",
+      "bytes": 288579
+    },
+    {
+      "path": ".atena/generated/priority-review/sintese_abissal_death.png",
+      "bytes": 361649
+    },
+    {
+      "path": ".atena/generated/priority-review/sintese_abissal_idle.png",
+      "bytes": 294991
+    },
+    {
+      "path": ".atena/generated/priority-review/sintese_abissal_move.png",
+      "bytes": 457342
+    },
+    {
+      "path": ".atena/generated/priority-review/sintese_abissal_runtime.png",
+      "bytes": 1887615
+    },
+    {
+      "path": ".atena/generated/priority-review/sintese_abissal_special.png",
+      "bytes": 458303
+    },
+    {
+      "path": ".atena/generated/priority-review/socothbenoth_all_states.png",
+      "bytes": 1214659
+    },
+    {
+      "path": ".atena/generated/priority-review/socothbenoth_attack.png",
+      "bytes": 216361
+    },
+    {
+      "path": ".atena/generated/priority-review/socothbenoth_death.png",
+      "bytes": 235300
+    },
+    {
+      "path": ".atena/generated/priority-review/socothbenoth_idle.png",
+      "bytes": 173793
+    },
+    {
+      "path": ".atena/generated/priority-review/socothbenoth_move.png",
+      "bytes": 290064
+    },
+    {
+      "path": ".atena/generated/priority-review/socothbenoth_runtime.png",
+      "bytes": 1767975
+    },
+    {
+      "path": ".atena/generated/priority-review/socothbenoth_special.png",
+      "bytes": 295467
+    },
+    {
+      "path": ".atena/generated/priority-review/sucubo_all_states.png",
+      "bytes": 624871
+    },
+    {
+      "path": ".atena/generated/priority-review/sucubo_attack.png",
+      "bytes": 131898
+    },
+    {
+      "path": ".atena/generated/priority-review/sucubo_death.png",
+      "bytes": 179674
+    },
+    {
+      "path": ".atena/generated/priority-review/sucubo_idle.png",
+      "bytes": 119948
+    },
+    {
+      "path": ".atena/generated/priority-review/sucubo_move.png",
+      "bytes": 190026
+    },
+    {
+      "path": ".atena/generated/priority-review/sucubo_runtime.png",
+      "bytes": 1232981
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/approve_e03_prepare_remaining.py",
+      "bytes": 6055
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/approve_f03_prepare_remaining.py",
+      "bytes": 8205
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/approve_p01_prepare_remaining.py",
+      "bytes": 8329
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/approve_q01_prepare_remaining.py",
+      "bytes": 9110
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/approved-pilot-A03-v02-reference.png",
+      "bytes": 578731
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/arco-fogo-review-2026-10-09.gif",
+      "bytes": 120035
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/arco-fogo-sequence-audit-2026-10-09.json",
+      "bytes": 3624
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/arco-fogo-six-frame-review-2026-10-09.png",
+      "bytes": 561777
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/arco-radiante-review-2026-10-09.gif",
+      "bytes": 136740
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/arco-radiante-sequence-audit-2026-10-09.json",
+      "bytes": 3693
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/arco-radiante-six-frame-review-2026-10-09.png",
+      "bytes": 629666
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/audit_q01_center.py",
+      "bytes": 1177
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/clarify_decay_phases.py",
+      "bytes": 1427
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/complete_e_sequence.py",
+      "bytes": 3301
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/complete_f_sequence.py",
+      "bytes": 3470
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/complete_p_sequence.py",
+      "bytes": 3654
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/complete_q_sequence.py",
+      "bytes": 3638
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/e01-v02-correction.json",
+      "bytes": 5769
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/e02-v02-correction.json",
+      "bytes": 3085
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/e03-audit-2026-10-09.json",
+      "bytes": 835
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/e03-gate-links-validation-2026-10-09.json",
+      "bytes": 2942
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/e03-native-result-2026-10-09.json",
+      "bytes": 332
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/e03-owner-approval-2026-10-09.json",
+      "bytes": 648
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/e03-owner-gate-2026-10-09.json",
+      "bytes": 2072
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/e03-prompt-2026-10-09.json",
+      "bytes": 2645
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/e03-reference-comparison-2026-10-09.png",
+      "bytes": 294153
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/ef-generation-jobs-2026-10-09.json",
+      "bytes": 29661
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/ef-links-validation-2026-10-09.json",
+      "bytes": 2492
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/f03-owner-approval-2026-10-09.json",
+      "bytes": 635
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/f03-owner-gate-2026-10-09.json",
+      "bytes": 2136
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/f03-reference-comparison-2026-10-09.png",
+      "bytes": 299391
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/final_q_center_notes.py",
+      "bytes": 865
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/finalize_e_f_gate.py",
+      "bytes": 9303
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/finalize_f_p01_gate.py",
+      "bytes": 10339
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/finalize_p_q01_gate.py",
+      "bytes": 11565
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/finalize_q_r01_gate.py",
+      "bytes": 11340
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/fp-generation-jobs-2026-10-09.json",
+      "bytes": 20951
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/fp-links-validation-2026-10-09.json",
+      "bytes": 2424
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/orbe-arcano-eight-frame-review-2026-10-09.png",
+      "bytes": 940697
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/orbe-arcano-flight-review-2026-10-09.gif",
+      "bytes": 105011
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/orbe-arcano-impact-review-2026-10-09.gif",
+      "bytes": 106303
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/orbe-arcano-sequence-audit-2026-10-09.json",
+      "bytes": 5312
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/orbe-radiante-eight-frame-review-2026-10-09.png",
+      "bytes": 867898
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/orbe-radiante-flight-review-2026-10-09.gif",
+      "bytes": 81728
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/orbe-radiante-impact-review-2026-10-09.gif",
+      "bytes": 109798
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/orbe-radiante-sequence-audit-2026-10-09.json",
+      "bytes": 5322
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/p01-owner-approval-2026-10-09.json",
+      "bytes": 599
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/p01-owner-gate-2026-10-09.json",
+      "bytes": 2301
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/p01-reference-comparison-2026-10-09.png",
+      "bytes": 211859
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/pq-generation-jobs-2026-10-09.json",
+      "bytes": 36866
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/pq-links-validation-2026-10-09.json",
+      "bytes": 2973
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/prepare_e03.py",
+      "bytes": 4657
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/prepare_q01_center_correction.py",
+      "bytes": 2639
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/prepare_q01_center_v03.py",
+      "bytes": 2893
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/prepare_q_sequence_helpers.py",
+      "bytes": 509
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/prepare_r01_lightning_correction.py",
+      "bytes": 3330
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/q01-centering-audit-2026-10-09.json",
+      "bytes": 1458
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/q01-owner-approval-2026-10-09.json",
+      "bytes": 627
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/q01-owner-gate-2026-10-09.json",
+      "bytes": 9429
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/q01-reference-comparison-2026-10-09.png",
+      "bytes": 324302
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/qr-generation-jobs-2026-10-09.json",
+      "bytes": 34010
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/qr-links-validation-2026-10-09.json",
+      "bytes": 2948
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/r01-owner-approval-2026-10-09.json",
+      "bytes": 743
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/r01-owner-gate-2026-10-09.json",
+      "bytes": 5631
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/r01-reference-comparison-2026-10-09.png",
+      "bytes": 315729
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/r01-v01-rejected-lightning-review-2026-10-09.png",
+      "bytes": 202546
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/reconciliation-2026-10-09.json",
+      "bytes": 10565
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/record_e03_gate.py",
+      "bytes": 7588
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/record_vfx_frame.py",
+      "bytes": 2901
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/review_e03.py",
+      "bytes": 1848
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/review_e_sequence.py",
+      "bytes": 1954
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/review_f_peak.py",
+      "bytes": 968
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/review_f_sequence.py",
+      "bytes": 1942
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/review_p01.py",
+      "bytes": 958
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/review_p_sequence.py",
+      "bytes": 2758
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/review_q01.py",
+      "bytes": 950
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/review_q_sequence.py",
+      "bytes": 2775
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/review_r01.py",
+      "bytes": 959
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/support_p_impact_decay.py",
+      "bytes": 1568
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/support_q_impact_decay.py",
+      "bytes": 1572
+    },
+    {
+      "path": ".atena/generated/s007-reconciliation/v01/update_q01_gate_version_support.py",
+      "bytes": 2233
+    },
+    {
+      "path": ".atena/generated/shendilavri-complete-build-validation-2026-10-07.json",
+      "bytes": 1640
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/approve_sucubo.py",
+      "bytes": 2528
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/candidate-audit-2026-10-07.json",
+      "bytes": 3502
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/check_actor.ps1",
+      "bytes": 1777
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/check_malcanthet_trigger.gd",
+      "bytes": 1297
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/check_source_bounds.gd",
+      "bytes": 2060
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/complete_actor.py",
+      "bytes": 6843
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/complete_escravo.py",
+      "bytes": 6245
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/escravo-completion-receipt.json",
+      "bytes": 12400
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/escravo-cycle-prompts-2026-10-07.json",
+      "bytes": 23722
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/escravo-death03-correction-prompt-v02.json",
+      "bytes": 1211
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/escravo-move03-correction-prompt-v02.json",
+      "bytes": 1916
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/escravo-partial-source-audit.json",
+      "bytes": 9388
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/escravo_move_partial_review.gif",
+      "bytes": 134257
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/escravo_move_partial_review.png",
+      "bytes": 271516
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/guarda-cycle-prompts-2026-10-07.json",
+      "bytes": 25609
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/guarda-death05-v02-prompt.json",
+      "bytes": 1316
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/guarda_do_castelo-completion-receipt.json",
+      "bytes": 17776
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/guarda_do_castelo-selected-source-audit.json",
+      "bytes": 7668
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/guarda_do_castelo_attack_review.gif",
+      "bytes": 26901
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/guarda_do_castelo_compact_review.png",
+      "bytes": 268203
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/guarda_do_castelo_death_review.gif",
+      "bytes": 38350
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/guarda_do_castelo_idle_review.gif",
+      "bytes": 26016
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/guarda_do_castelo_move_review.gif",
+      "bytes": 42127
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/malcanthet-completion-receipt.json",
+      "bytes": 21744
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/malcanthet-generation-prompts.json",
+      "bytes": 34102
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/malcanthet-selected-source-audit.json",
+      "bytes": 9623
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/malcanthet_attack_review.gif",
+      "bytes": 68861
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/malcanthet_compact_review.png",
+      "bytes": 874356
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/malcanthet_death_review.gif",
+      "bytes": 69522
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/malcanthet_idle_review.gif",
+      "bytes": 67297
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/malcanthet_move_review.gif",
+      "bytes": 110128
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/malcanthet_special_review.gif",
+      "bytes": 105466
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/master-generation-prompts.json",
+      "bytes": 19203
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/master_of_cruelties-completion-receipt.json",
+      "bytes": 17973
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/master_of_cruelties-selected-source-audit.json",
+      "bytes": 7747
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/master_of_cruelties_attack_review.gif",
+      "bytes": 55825
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/master_of_cruelties_compact_review.png",
+      "bytes": 459931
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/master_of_cruelties_death_review.gif",
+      "bytes": 57226
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/master_of_cruelties_idle_review.gif",
+      "bytes": 45035
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/master_of_cruelties_move_review.gif",
+      "bytes": 72494
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/plan-before-resume-2026-10-07.yaml",
+      "bytes": 10862
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/prepare_enemy_cycles.gd",
+      "bytes": 6876
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/prompts-and-results-2026-10-07.json",
+      "bytes": 5995
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/reconcile_checkpoint.py",
+      "bytes": 1574
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/record_biome_build.py",
+      "bytes": 7142
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/record_sucubo_preview.py",
+      "bytes": 7565
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-escravo_de_rivenheart-attack-0-v01.json",
+      "bytes": 1622
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-escravo_de_rivenheart-attack-1-v01.json",
+      "bytes": 1612
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-escravo_de_rivenheart-attack-2-v01.json",
+      "bytes": 1636
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-escravo_de_rivenheart-attack-3-v01.json",
+      "bytes": 1595
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-escravo_de_rivenheart-death-0-v01.json",
+      "bytes": 1597
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-escravo_de_rivenheart-death-1-v01.json",
+      "bytes": 1592
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-escravo_de_rivenheart-death-2-v01.json",
+      "bytes": 1589
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-escravo_de_rivenheart-death-3-v01.json",
+      "bytes": 1623
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-escravo_de_rivenheart-death-3-v02.json",
+      "bytes": 1591
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-escravo_de_rivenheart-death-4-v01.json",
+      "bytes": 1629
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-escravo_de_rivenheart-death-5-v01.json",
+      "bytes": 1551
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-escravo_de_rivenheart-idle-1-v01.json",
+      "bytes": 1600
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-escravo_de_rivenheart-idle-2-v01.json",
+      "bytes": 1611
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-escravo_de_rivenheart-idle-3-v01.json",
+      "bytes": 1596
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-escravo_de_rivenheart-move-0-v01.json",
+      "bytes": 1631
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-escravo_de_rivenheart-move-1-v01.json",
+      "bytes": 1617
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-escravo_de_rivenheart-move-2-v01.json",
+      "bytes": 1606
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-escravo_de_rivenheart-move-3-v01.json",
+      "bytes": 1626
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-escravo_de_rivenheart-move-3-v02.json",
+      "bytes": 2295
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-escravo_de_rivenheart-move-3-v03.json",
+      "bytes": 1616
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-escravo_de_rivenheart-move-4-v01.json",
+      "bytes": 1606
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-escravo_de_rivenheart-move-5-v01.json",
+      "bytes": 1609
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-guarda_do_castelo-attack-0-v1.json",
+      "bytes": 1786
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-guarda_do_castelo-attack-1-v1.json",
+      "bytes": 1874
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-guarda_do_castelo-attack-2-v1.json",
+      "bytes": 1804
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-guarda_do_castelo-attack-3-v1.json",
+      "bytes": 1660
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-guarda_do_castelo-death-0-v1.json",
+      "bytes": 1640
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-guarda_do_castelo-death-1-v1.json",
+      "bytes": 1897
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-guarda_do_castelo-death-2-v1.json",
+      "bytes": 1927
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-guarda_do_castelo-death-3-v1.json",
+      "bytes": 1961
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-guarda_do_castelo-death-4-v1.json",
+      "bytes": 1970
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-guarda_do_castelo-death-5-v1.json",
+      "bytes": 1475
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-guarda_do_castelo-idle-1-v1.json",
+      "bytes": 1625
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-guarda_do_castelo-idle-2-v1.json",
+      "bytes": 1606
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-guarda_do_castelo-idle-3-v1.json",
+      "bytes": 1609
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-guarda_do_castelo-move-0-v1.json",
+      "bytes": 1859
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-guarda_do_castelo-move-1-v1.json",
+      "bytes": 1664
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-guarda_do_castelo-move-2-v1.json",
+      "bytes": 1718
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-guarda_do_castelo-move-3-v1.json",
+      "bytes": 1828
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-guarda_do_castelo-move-4-v1.json",
+      "bytes": 1748
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-guarda_do_castelo-move-5-v1.json",
+      "bytes": 1733
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-malcanthet-attack-0-v1.json",
+      "bytes": 1710
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-malcanthet-attack-0-v2.json",
+      "bytes": 1250
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-malcanthet-attack-0-v3.json",
+      "bytes": 1277
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-malcanthet-attack-1-v1.json",
+      "bytes": 1711
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-malcanthet-attack-2-v1.json",
+      "bytes": 1732
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-malcanthet-attack-3-v1.json",
+      "bytes": 1674
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-malcanthet-death-0-v1.json",
+      "bytes": 1962
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-malcanthet-death-1-v1.json",
+      "bytes": 2221
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-malcanthet-death-2-v1.json",
+      "bytes": 2411
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-malcanthet-death-2-v2.json",
+      "bytes": 1348
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-malcanthet-death-3-v1.json",
+      "bytes": 1831
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-malcanthet-death-4-v1.json",
+      "bytes": 1864
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-malcanthet-death-5-v1.json",
+      "bytes": 1782
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-malcanthet-idle-1-v1.json",
+      "bytes": 1700
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-malcanthet-idle-2-v1.json",
+      "bytes": 1671
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-malcanthet-idle-3-v1.json",
+      "bytes": 1668
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-malcanthet-move-0-v1.json",
+      "bytes": 1730
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-malcanthet-move-1-v1.json",
+      "bytes": 1681
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-malcanthet-move-2-v1.json",
+      "bytes": 1682
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-malcanthet-move-2-v2.json",
+      "bytes": 2186
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-malcanthet-move-3-v1.json",
+      "bytes": 2097
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-malcanthet-move-3-v2.json",
+      "bytes": 1374
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-malcanthet-move-3-v3.json",
+      "bytes": 1319
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-malcanthet-move-4-v1.json",
+      "bytes": 2176
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-malcanthet-move-5-v1.json",
+      "bytes": 2602
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-malcanthet-move-5-v2.json",
+      "bytes": 1194
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-malcanthet-special-0-v1.json",
+      "bytes": 1931
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-malcanthet-special-0-v2.json",
+      "bytes": 1761
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-malcanthet-special-1-v1.json",
+      "bytes": 1933
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-malcanthet-special-2-v1.json",
+      "bytes": 1950
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-malcanthet-special-3-v1.json",
+      "bytes": 1966
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-malcanthet-special-4-v1.json",
+      "bytes": 1971
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-malcanthet-special-5-v1.json",
+      "bytes": 1937
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-malcanthet-special-5-v2.json",
+      "bytes": 1832
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-master_of_cruelties-attack-0-v1.json",
+      "bytes": 1416
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-master_of_cruelties-attack-1-v1.json",
+      "bytes": 1424
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-master_of_cruelties-attack-2-v1.json",
+      "bytes": 1480
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-master_of_cruelties-attack-3-v1.json",
+      "bytes": 1409
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-master_of_cruelties-death-0-v1.json",
+      "bytes": 1439
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-master_of_cruelties-death-1-v1.json",
+      "bytes": 1432
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-master_of_cruelties-death-2-v1.json",
+      "bytes": 1446
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-master_of_cruelties-death-2-v2.json",
+      "bytes": 1300
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-master_of_cruelties-death-3-v1.json",
+      "bytes": 1472
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-master_of_cruelties-death-3-v2.json",
+      "bytes": 1293
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-master_of_cruelties-death-3-v3.json",
+      "bytes": 918
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-master_of_cruelties-death-4-v1.json",
+      "bytes": 1500
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-master_of_cruelties-death-4-v2.json",
+      "bytes": 1256
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-master_of_cruelties-death-5-v1.json",
+      "bytes": 1159
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-master_of_cruelties-idle-1-v1.json",
+      "bytes": 1427
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-master_of_cruelties-idle-2-v1.json",
+      "bytes": 1407
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-master_of_cruelties-idle-3-v1.json",
+      "bytes": 1396
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-master_of_cruelties-move-0-v1.json",
+      "bytes": 1452
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-master_of_cruelties-move-1-v1.json",
+      "bytes": 1438
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-master_of_cruelties-move-2-v1.json",
+      "bytes": 1437
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-master_of_cruelties-move-3-v1.json",
+      "bytes": 1493
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-master_of_cruelties-move-3-v2.json",
+      "bytes": 1268
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-master_of_cruelties-move-4-v1.json",
+      "bytes": 1422
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-master_of_cruelties-move-4-v2.json",
+      "bytes": 1198
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-master_of_cruelties-move-5-v1.json",
+      "bytes": 1438
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-sucubo-attack-0-v1.json",
+      "bytes": 1652
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-sucubo-attack-1-v1.json",
+      "bytes": 1645
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-sucubo-attack-1-v2.json",
+      "bytes": 2222
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-sucubo-attack-2-v1.json",
+      "bytes": 1664
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-sucubo-attack-2-v2.json",
+      "bytes": 2241
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-sucubo-attack-3-v1.json",
+      "bytes": 1623
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-sucubo-death-0-v1.json",
+      "bytes": 1622
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-sucubo-death-1-v1.json",
+      "bytes": 1804
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-sucubo-death-2-v1.json",
+      "bytes": 1804
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-sucubo-death-3-v1.json",
+      "bytes": 1863
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-sucubo-death-4-v1.json",
+      "bytes": 1867
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-sucubo-death-4-v2.json",
+      "bytes": 1528
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-sucubo-death-4-v3.json",
+      "bytes": 1819
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-sucubo-death-5-v1.json",
+      "bytes": 352
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-sucubo-death-5-v2.json",
+      "bytes": 1337
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-sucubo-death-5-v3.json",
+      "bytes": 1600
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-sucubo-idle-1-v1.json",
+      "bytes": 1648
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-sucubo-idle-2-v1.json",
+      "bytes": 1626
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-sucubo-idle-3-v1.json",
+      "bytes": 1605
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-sucubo-move-0-v1.json",
+      "bytes": 1644
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-sucubo-move-1-v1.json",
+      "bytes": 1627
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-sucubo-move-2-v1.json",
+      "bytes": 1629
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-sucubo-move-2-v2.json",
+      "bytes": 1402
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-sucubo-move-3-v1.json",
+      "bytes": 1745
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-sucubo-move-3-v2.json",
+      "bytes": 1593
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-sucubo-move-3-v3.json",
+      "bytes": 1815
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-sucubo-move-4-v1.json",
+      "bytes": 1650
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-sucubo-move-4-v2.json",
+      "bytes": 1338
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-sucubo-move-4-v3.json",
+      "bytes": 1586
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/result-sucubo-move-5-v1.json",
+      "bytes": 1647
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/review_actor.py",
+      "bytes": 1742
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/review_candidates.py",
+      "bytes": 2868
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/review_escravo_partial.py",
+      "bytes": 1997
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/review_sucubo_sources.py",
+      "bytes": 1240
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/review_sucubo_walk.py",
+      "bytes": 1113
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/shendilavri_identities_v01_complete.png",
+      "bytes": 724601
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/sucubo-completion-receipt.json",
+      "bytes": 16986
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/sucubo-cycle-prompts-2026-10-07.json",
+      "bytes": 24722
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/sucubo-preview-receipt.json",
+      "bytes": 2410
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/sucubo-selected-source-audit.json",
+      "bytes": 9131
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/sucubo-walk-decision.json",
+      "bytes": 763
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/sucubo_attack_review.gif",
+      "bytes": 58146
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/sucubo_compact_review.png",
+      "bytes": 541933
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/sucubo_death_review.gif",
+      "bytes": 79105
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/sucubo_idle_review.gif",
+      "bytes": 53435
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/sucubo_move_partial_review.gif",
+      "bytes": 199184
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/sucubo_move_partial_review.png",
+      "bytes": 399556
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/sucubo_move_review.gif",
+      "bytes": 83538
+    },
+    {
+      "path": ".atena/generated/shendilavri-resume/v01/validate_records.py",
+      "bytes": 1344
+    },
+    {
+      "path": ".atena/specs/SPEC-121-retomada-fila-imagens/plan.md",
+      "bytes": 15797
+    },
+    {
+      "path": ".atena/specs/SPEC-121-retomada-fila-imagens/publication-checkpoint-2026-10-09.md",
+      "bytes": 737
+    },
+    {
+      "path": ".atena/specs/SPEC-121-retomada-fila-imagens/tasks.md",
+      "bytes": 19195
+    },
+    {
+      "path": ".atena/state/plan-053-imagens.yaml",
+      "bytes": 7892
+    },
+    {
+      "path": ".atena/state/plan.yaml",
+      "bytes": 11802
+    },
+    {
+      "path": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-022-shendilavri-identidades-2026-10-07.md",
+      "bytes": 3180
+    },
+    {
+      "path": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-023-goranthis-identidades-2026-10-07.md",
+      "bytes": 2416
+    },
+    {
+      "path": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-024-pilares-identidade-2026-10-08.md",
+      "bytes": 1548
+    },
+    {
+      "path": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-025-vfx-arco-radiante-2026-10-09.md",
+      "bytes": 893
+    },
+    {
+      "path": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-026-vfx-arco-fogo-2026-10-09.md",
+      "bytes": 881
+    },
+    {
+      "path": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-027-vfx-orbe-radiante-2026-10-09.md",
+      "bytes": 846
+    },
+    {
+      "path": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-028-vfx-orbe-arcano-2026-10-09.md",
+      "bytes": 856
+    },
+    {
+      "path": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-029-vfx-onda-cortante-2026-10-09.md",
+      "bytes": 787
+    },
+    {
+      "path": ".atena/vault/drafts/PLAN-053-fila-de-imagens-2026-10-02.md",
+      "bytes": 34902
+    },
+    {
+      "path": "assets/animations/enemies/cultista_de_socothbenoth/attack.png",
+      "bytes": 122650
+    },
+    {
+      "path": "assets/animations/enemies/cultista_de_socothbenoth/attack.png.import",
+      "bytes": 973
+    },
+    {
+      "path": "assets/animations/enemies/cultista_de_socothbenoth/death.png",
+      "bytes": 227111
+    },
+    {
+      "path": "assets/animations/enemies/cultista_de_socothbenoth/death.png.import",
+      "bytes": 970
+    },
+    {
+      "path": "assets/animations/enemies/cultista_de_socothbenoth/idle.png",
+      "bytes": 116483
+    },
+    {
+      "path": "assets/animations/enemies/cultista_de_socothbenoth/idle.png.import",
+      "bytes": 966
+    },
+    {
+      "path": "assets/animations/enemies/cultista_de_socothbenoth/move.png",
+      "bytes": 188334
+    },
+    {
+      "path": "assets/animations/enemies/cultista_de_socothbenoth/move.png.import",
+      "bytes": 967
+    },
+    {
+      "path": "assets/animations/enemies/death_tyrant/attack.png",
+      "bytes": 185916
+    },
+    {
+      "path": "assets/animations/enemies/death_tyrant/attack.png.import",
+      "bytes": 960
+    },
+    {
+      "path": "assets/animations/enemies/death_tyrant/death.png",
+      "bytes": 324856
+    },
+    {
+      "path": "assets/animations/enemies/death_tyrant/death.png.import",
+      "bytes": 958
+    },
+    {
+      "path": "assets/animations/enemies/death_tyrant/idle.png",
+      "bytes": 160960
+    },
+    {
+      "path": "assets/animations/enemies/death_tyrant/idle.png.import",
+      "bytes": 955
+    },
+    {
+      "path": "assets/animations/enemies/death_tyrant/move.png",
+      "bytes": 268671
+    },
+    {
+      "path": "assets/animations/enemies/death_tyrant/move.png.import",
+      "bytes": 955
+    },
+    {
+      "path": "assets/animations/enemies/escravo_de_rivenheart/attack.png",
+      "bytes": 91182
+    },
+    {
+      "path": "assets/animations/enemies/escravo_de_rivenheart/attack.png.import",
+      "bytes": 969
+    },
+    {
+      "path": "assets/animations/enemies/escravo_de_rivenheart/death.png",
+      "bytes": 129847
+    },
+    {
+      "path": "assets/animations/enemies/escravo_de_rivenheart/death.png.import",
+      "bytes": 967
+    },
+    {
+      "path": "assets/animations/enemies/escravo_de_rivenheart/idle.png",
+      "bytes": 73724
+    },
+    {
+      "path": "assets/animations/enemies/escravo_de_rivenheart/idle.png.import",
+      "bytes": 964
+    },
+    {
+      "path": "assets/animations/enemies/escravo_de_rivenheart/move.png",
+      "bytes": 121495
+    },
+    {
+      "path": "assets/animations/enemies/escravo_de_rivenheart/move.png.import",
+      "bytes": 964
+    },
+    {
+      "path": "assets/animations/enemies/guarda_do_castelo/attack.png",
+      "bytes": 62238
+    },
+    {
+      "path": "assets/animations/enemies/guarda_do_castelo/attack.png.import",
+      "bytes": 966
+    },
+    {
+      "path": "assets/animations/enemies/guarda_do_castelo/death.png",
+      "bytes": 90139
+    },
+    {
+      "path": "assets/animations/enemies/guarda_do_castelo/death.png.import",
+      "bytes": 963
+    },
+    {
+      "path": "assets/animations/enemies/guarda_do_castelo/idle.png",
+      "bytes": 60048
+    },
+    {
+      "path": "assets/animations/enemies/guarda_do_castelo/idle.png.import",
+      "bytes": 959
+    },
+    {
+      "path": "assets/animations/enemies/guarda_do_castelo/move.png",
+      "bytes": 99095
+    },
+    {
+      "path": "assets/animations/enemies/guarda_do_castelo/move.png.import",
+      "bytes": 960
+    },
+    {
+      "path": "assets/animations/enemies/guardiao_de_goranthis/attack.png",
+      "bytes": 141146
+    },
+    {
+      "path": "assets/animations/enemies/guardiao_de_goranthis/attack.png.import",
+      "bytes": 969
+    },
+    {
+      "path": "assets/animations/enemies/guardiao_de_goranthis/death.png",
+      "bytes": 172510
+    },
+    {
+      "path": "assets/animations/enemies/guardiao_de_goranthis/death.png.import",
+      "bytes": 967
+    },
+    {
+      "path": "assets/animations/enemies/guardiao_de_goranthis/idle.png",
+      "bytes": 111982
+    },
+    {
+      "path": "assets/animations/enemies/guardiao_de_goranthis/idle.png.import",
+      "bytes": 964
+    },
+    {
+      "path": "assets/animations/enemies/guardiao_de_goranthis/move.png",
+      "bytes": 177415
+    },
+    {
+      "path": "assets/animations/enemies/guardiao_de_goranthis/move.png.import",
+      "bytes": 964
+    },
+    {
+      "path": "assets/animations/enemies/malcanthet/attack.png",
+      "bytes": 172934
+    },
+    {
+      "path": "assets/animations/enemies/malcanthet/attack.png.import",
+      "bytes": 959
+    },
+    {
+      "path": "assets/animations/enemies/malcanthet/death.png",
+      "bytes": 172217
+    },
+    {
+      "path": "assets/animations/enemies/malcanthet/death.png.import",
+      "bytes": 956
+    },
+    {
+      "path": "assets/animations/enemies/malcanthet/idle.png",
+      "bytes": 165007
+    },
+    {
+      "path": "assets/animations/enemies/malcanthet/idle.png.import",
+      "bytes": 953
+    },
+    {
+      "path": "assets/animations/enemies/malcanthet/move.png",
+      "bytes": 276678
+    },
+    {
+      "path": "assets/animations/enemies/malcanthet/move.png.import",
+      "bytes": 953
+    },
+    {
+      "path": "assets/animations/enemies/malcanthet/special.png",
+      "bytes": 261924
+    },
+    {
+      "path": "assets/animations/enemies/malcanthet/special.png.import",
+      "bytes": 961
+    },
+    {
+      "path": "assets/animations/enemies/master_of_cruelties/attack.png",
+      "bytes": 134482
+    },
+    {
+      "path": "assets/animations/enemies/master_of_cruelties/attack.png.import",
+      "bytes": 968
+    },
+    {
+      "path": "assets/animations/enemies/master_of_cruelties/death.png",
+      "bytes": 137385
+    },
+    {
+      "path": "assets/animations/enemies/master_of_cruelties/death.png.import",
+      "bytes": 964
+    },
+    {
+      "path": "assets/animations/enemies/master_of_cruelties/idle.png",
+      "bytes": 104837
+    },
+    {
+      "path": "assets/animations/enemies/master_of_cruelties/idle.png.import",
+      "bytes": 962
+    },
+    {
+      "path": "assets/animations/enemies/master_of_cruelties/move.png",
+      "bytes": 171482
+    },
+    {
+      "path": "assets/animations/enemies/master_of_cruelties/move.png.import",
+      "bytes": 962
+    },
+    {
+      "path": "assets/animations/enemies/sintese_abissal/attack.png",
+      "bytes": 395040
+    },
+    {
+      "path": "assets/animations/enemies/sintese_abissal/attack.png.import",
+      "bytes": 964
+    },
+    {
+      "path": "assets/animations/enemies/sintese_abissal/death.png",
+      "bytes": 546658
+    },
+    {
+      "path": "assets/animations/enemies/sintese_abissal/death.png.import",
+      "bytes": 960
+    },
+    {
+      "path": "assets/animations/enemies/sintese_abissal/idle.png",
+      "bytes": 427153
+    },
+    {
+      "path": "assets/animations/enemies/sintese_abissal/idle.png.import",
+      "bytes": 958
+    },
+    {
+      "path": "assets/animations/enemies/sintese_abissal/move.png",
+      "bytes": 642871
+    },
+    {
+      "path": "assets/animations/enemies/sintese_abissal/move.png.import",
+      "bytes": 958
+    },
+    {
+      "path": "assets/animations/enemies/sintese_abissal/special.png",
+      "bytes": 629542
+    },
+    {
+      "path": "assets/animations/enemies/sintese_abissal/special.png.import",
+      "bytes": 967
+    },
+    {
+      "path": "assets/animations/enemies/socothbenoth/attack.png",
+      "bytes": 233659
+    },
+    {
+      "path": "assets/animations/enemies/socothbenoth/attack.png.import",
+      "bytes": 961
+    },
+    {
+      "path": "assets/animations/enemies/socothbenoth/death.png",
+      "bytes": 272305
+    },
+    {
+      "path": "assets/animations/enemies/socothbenoth/death.png.import",
+      "bytes": 957
+    },
+    {
+      "path": "assets/animations/enemies/socothbenoth/idle.png",
+      "bytes": 186482
+    },
+    {
+      "path": "assets/animations/enemies/socothbenoth/idle.png.import",
+      "bytes": 955
+    },
+    {
+      "path": "assets/animations/enemies/socothbenoth/move.png",
+      "bytes": 309073
+    },
+    {
+      "path": "assets/animations/enemies/socothbenoth/move.png.import",
+      "bytes": 955
+    },
+    {
+      "path": "assets/animations/enemies/socothbenoth/special.png",
+      "bytes": 320736
+    },
+    {
+      "path": "assets/animations/enemies/socothbenoth/special.png.import",
+      "bytes": 963
+    },
+    {
+      "path": "assets/animations/enemies/sucubo/attack.png",
+      "bytes": 141005
+    },
+    {
+      "path": "assets/animations/enemies/sucubo/attack.png.import",
+      "bytes": 955
+    },
+    {
+      "path": "assets/animations/enemies/sucubo/death.png",
+      "bytes": 191052
+    },
+    {
+      "path": "assets/animations/enemies/sucubo/death.png.import",
+      "bytes": 952
+    },
+    {
+      "path": "assets/animations/enemies/sucubo/idle.png",
+      "bytes": 128305
+    },
+    {
+      "path": "assets/animations/enemies/sucubo/idle.png.import",
+      "bytes": 949
+    },
+    {
+      "path": "assets/animations/enemies/sucubo/move.png",
+      "bytes": 203035
+    },
+    {
+      "path": "assets/animations/enemies/sucubo/move.png.import",
+      "bytes": 948
+    },
+    {
+      "path": "tests/test_animation_assets.gd",
+      "bytes": 48022
+    },
+    {
+      "path": "tests/test_evidence_queue.gd",
+      "bytes": 1325
+    },
+    {
+      "path": "tools/capture_shedaklah_animations.gd",
+      "bytes": 1353
+    },
+    {
+      "path": "tools/check_molor_runtime.gd",
+      "bytes": 2033
+    },
+    {
+      "path": "tools/install_shedaklah_animations.ps1",
+      "bytes": 4583
+    },
+    {
+      "path": "ui/enemy_view.gd",
+      "bytes": 18897
+    },
+    {
+      "path": "ui/run.gd",
+      "bytes": 45402
+    }
+  ],
+  "cursor_support_separate_commit": [
+    "ui/cursor_skin.gd",
+    "ui/cursor_skin.gd.uid",
+    "data/cursor.json"
+  ],
+  "excluded_untracked": [
+    ".atena/generated/controller-experience/v01/unit-profile.json",
+    ".atena/generated/controller-experience/v01/unit-profile.json.bak",
+    ".atena/generated/image-queue-publication-2026-10-09/local-profile/Godot/cache/editor_doc_cache-4.7.res",
+    ".atena/generated/image-queue-publication-2026-10-09/local-profile/Godot/editor_settings-4.7.tres",
+    "tests/test_divine_events.gd.uid",
+    "tests/test_nova_heal.gd.uid",
+    "tools/capture_ability_hud.gd.uid",
+    "tools/capture_character_sheet.gd.uid"
+  ],
+  "ignored_native_sources": "remain local; no force-add",
+  "force_add_qa_logs": [
+    ".atena/generated/image-queue-publication-2026-10-09/import-isolated.log",
+    ".atena/generated/image-queue-publication-2026-10-09/suite.log",
+    ".atena/generated/image-queue-publication-2026-10-09/smoke.log"
+  ]
+}

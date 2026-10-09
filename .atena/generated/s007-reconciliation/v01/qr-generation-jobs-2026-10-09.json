@@ -1,0 +1,365 @@
+{
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "generator": "built-in imagegen",
+  "remaining_at_start": 87,
+  "counter_field": "native_generated_since_Q01",
+  "approval_receipt": ".atena/generated/s007-reconciliation/v01/q01-owner-approval-2026-10-09.json",
+  "native_originals_preserved": true,
+  "jobs": [
+    {
+      "code": "Q02",
+      "effect": "orbe_arcano",
+      "name": "orbe_arcano_fly_01",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a swirling arcane orb: a small dense bright core inside a thin rotating ring with tiny circular glyph marks on the ring, and a wispy smoky trail pointing LEFT because it flies to the RIGHT. Frame 2 of 8, fly 01: flight frame 2 of 4: the same projectile, its glow pulsing slightly brighter and the tail flickering a little longer. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED Q01 v03 for arcane orb identity and CENTERED core placement. Reference2 is the APPROVED physical pilot for painted white-core/gray-falloff STYLE ONLY. Generate ONLY Q02 phase specified above, never a contact sheet. Flat ground-plane view, exact canvas-center core pivot; all glow and particles inside pure-black margins. Neutral white/gray; no text, character, weapon, hand or scene. Small glyphs must be abstract CIRCLES, not readable letters.\nFLIGHT LOOP: Keep exactly the approved Q01 core and circular glyph-ring center, diameter and shape. Center of dense white core at50% canvas width/height, not bounding box center. Only slightly brighter pulse and slightly longer wispy LEFT tail. No orb translation/scaling.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\orbe_arcano\\orbe_arcano_fly_00_v03.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_fly_01_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "generated_at": "2026-10-09T04:19:54.043100+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-4925c892-a92e-4e41-9700-55c893784d63.png",
+      "sha256": "034eb57a9646d3de68662c0408c9b3b98827538560c7a03318f31e88f2eff1ef",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        86,
+        453,
+        809,
+        804
+      ],
+      "outer_border_max_luminance": 2,
+      "maximum_channel_difference": 10,
+      "mean_luminance": 10.666457447809751,
+      "visible_fraction_above12": 0.0924149579400146,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "Q03",
+      "effect": "orbe_arcano",
+      "name": "orbe_arcano_fly_02",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a swirling arcane orb: a small dense bright core inside a thin rotating ring with tiny circular glyph marks on the ring, and a wispy smoky trail pointing LEFT because it flies to the RIGHT. Frame 3 of 8, fly 02: flight frame 3 of 4: the same projectile, its inner details rotated a quarter turn, the tail a little shorter. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED Q01 v03 for arcane orb identity and CENTERED core placement. Reference2 is the APPROVED physical pilot for painted white-core/gray-falloff STYLE ONLY. Generate ONLY Q03 phase specified above, never a contact sheet. Flat ground-plane view, exact canvas-center core pivot; all glow and particles inside pure-black margins. Neutral white/gray; no text, character, weapon, hand or scene. Small glyphs must be abstract CIRCLES, not readable letters.\nFLIGHT LOOP: Keep the exact approved Q01 core and thin glyph-ring center, circular diameter and shape. Rotate only painted internal swirls and small ring motifs a quarter turn; left wispy tail slightly shorter. No orb translation/scaling, no changing tail direction.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\orbe_arcano\\orbe_arcano_fly_00_v03.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_fly_02_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "generated_at": "2026-10-09T04:21:55.368240+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-8e7065dc-46a2-473d-b34f-c6aafc86a60a.png",
+      "sha256": "5010a77a124a1c3f72b831783aa650146e9deaea790e538ca3d94a140b47d711",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        187,
+        462,
+        808,
+        802
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 9,
+      "mean_luminance": 8.781938625743713,
+      "visible_fraction_above12": 0.07789046343566615,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "Q04",
+      "effect": "orbe_arcano",
+      "name": "orbe_arcano_fly_03",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a swirling arcane orb: a small dense bright core inside a thin rotating ring with tiny circular glyph marks on the ring, and a wispy smoky trail pointing LEFT because it flies to the RIGHT. Frame 4 of 8, fly 03: flight frame 4 of 4: the same projectile, glow slightly dimmer, so that the next frame flows back into frame 1. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED Q01 v03 for arcane orb identity and CENTERED core placement. Reference2 is the APPROVED physical pilot for painted white-core/gray-falloff STYLE ONLY. Generate ONLY Q04 phase specified above, never a contact sheet. Flat ground-plane view, exact canvas-center core pivot; all glow and particles inside pure-black margins. Neutral white/gray; no text, character, weapon, hand or scene. Small glyphs must be abstract CIRCLES, not readable letters.\nLOOP CLOSURE: Exact approved Q01 core/ring center, diameter, circular shape and small circular glyph motifs. Slightly dimmer glow and original left smoky trail length so Q04 returns gently to Q01 with no position or size jump.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\orbe_arcano\\orbe_arcano_fly_00_v03.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_fly_03_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "generated_at": "2026-10-09T04:22:43.107298+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-10ff3bf5-eabf-427d-9ce5-16cd06659a38.png",
+      "sha256": "67347db56ac39ff33a1d73ff991e4274ecafa2c9e8549e05f4a447e77f6c9f89",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        103,
+        460,
+        800,
+        800
+      ],
+      "outer_border_max_luminance": 2,
+      "maximum_channel_difference": 10,
+      "mean_luminance": 7.039883218994274,
+      "visible_fraction_above12": 0.07585677983562647,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "Q05",
+      "effect": "orbe_arcano",
+      "name": "orbe_arcano_hit_00",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a swirling arcane orb: a small dense bright core inside a thin rotating ring with tiny circular glyph marks on the ring, and a wispy smoky trail pointing LEFT because it flies to the RIGHT. Frame 5 of 8, hit 00: impact frame 1 of 4: the projectile has just hit, a bright flash burst with tiny sparks starting, no tail anymore, about 60 percent of the final size. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED Q01 v03 for arcane orb identity and CENTERED core placement. Reference2 is the APPROVED physical pilot for painted white-core/gray-falloff STYLE ONLY. Generate ONLY Q05 phase specified above, never a contact sheet. Flat ground-plane view, exact canvas-center core pivot; all glow and particles inside pure-black margins. Neutral white/gray; no text, character, weapon, hand or scene. Small glyphs must be abstract CIRCLES, not readable letters.\nIMPACT START: No tail or left smoky stream. The arcane orb has collided: a COMPACT centered circular flash, thin ring with tiny abstract circular glyph motifs and only tiny radial sparks beginning, about60% of the coming impact peak diameter. Same centered core pivot as approved Q01. Early impact only, not full burst. White/gray painted light, no readable text.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\orbe_arcano\\orbe_arcano_fly_00_v03.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_hit_00_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "generated_at": "2026-10-09T04:23:30.931751+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-684fec6d-3bc0-43af-a618-c9d1b64313e8.png",
+      "sha256": "7164675a2489957161b03aac30f967f6b25be79418407d6545af0f669484892b",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        410,
+        414,
+        891,
+        827
+      ],
+      "outer_border_max_luminance": 2,
+      "maximum_channel_difference": 11,
+      "mean_luminance": 8.064125261682552,
+      "visible_fraction_above12": 0.07513627842260429,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "Q06",
+      "effect": "orbe_arcano",
+      "name": "orbe_arcano_hit_01",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a swirling arcane orb: a small dense bright core inside a thin rotating ring with tiny circular glyph marks on the ring, and a wispy smoky trail pointing LEFT because it flies to the RIGHT. Frame 6 of 8, hit 01: impact frame 2 of 4, the PEAK of the impact: the brightest burst at maximum size, a hot white core and radiating sparks. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED Q01 v03 for arcane orb identity and CENTERED core placement. Reference2 is the APPROVED physical pilot for painted white-core/gray-falloff STYLE ONLY. Generate ONLY Q06 phase specified above, never a contact sheet. Flat ground-plane view, exact canvas-center core pivot; all glow and particles inside pure-black margins. Neutral white/gray; no text, character, weapon, hand or scene. Small glyphs must be abstract CIRCLES, not readable letters.\nIMPACT PEAK: No tail or left smoky stream. Centered arcane burst at maximum impact size: hot white core inside expanding circular arcane ring, small abstract circular glyph fragments and short sparks/ribbons radiating evenly around the center. Brightest phase; flat face-on circle, comfortable black margins outside all spark tips. Exact canvas-centered pivot as Q01.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\orbe_arcano\\orbe_arcano_fly_00_v03.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_hit_01_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "generated_at": "2026-10-09T04:24:22.088959+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-dd5d66c4-27a4-40d7-8f18-c09e813b7780.png",
+      "sha256": "8388c93447f69e80064d03fc4fc0016d01bf57f700e42b6dd806ceb363b29b08",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        168,
+        167,
+        1095,
+        1030
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 12,
+      "mean_luminance": 29.769438911909322,
+      "visible_fraction_above12": 0.2601404373627995,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "Q07",
+      "effect": "orbe_arcano",
+      "name": "orbe_arcano_hit_02",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a swirling arcane orb: a small dense bright core inside a thin rotating ring with tiny circular glyph marks on the ring, and a wispy smoky trail pointing LEFT because it flies to the RIGHT. Frame 7 of 8, hit 02: impact frame 3 of 4: the burst expanding into fragments and a thin ring, dimmer gray. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED Q01 v03 for arcane orb identity and CENTERED core placement. Reference2 is the APPROVED physical pilot for painted white-core/gray-falloff STYLE ONLY. Generate ONLY Q07 phase specified above, never a contact sheet. Flat ground-plane view, exact canvas-center core pivot; all glow and particles inside pure-black margins. Neutral white/gray; no text, character, weapon, hand or scene. Small glyphs must be abstract CIRCLES, not readable letters.\nIMPACT DECAY: No tail or left smoke stream and NO solid bright white core or intact orb. Expand burst into a centered THIN GRAY ring, dim broken circular glyph fragments and radial smoky fragments. Clearly dimmer than peak, black open center. Same pivot and painted glow texture as Q01.\n\nReference3 is the preceding GENERATED Q06 arcane IMPACT PEAK as technical phase-continuity support, not a separately human-approved frame. Preserve its exact center and arcane ring/glyph shape relationships while removing the solid white core and following the requested dim decay phase. The approved Q01 identity (reference1) and physical style pilot (reference2) remain authoritative. No flight tail. Expanding thin gray ring and broken glyph fragments beyond the old core, dimmer than Q06, black open center.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\orbe_arcano\\orbe_arcano_fly_00_v03.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\orbe_arcano\\orbe_arcano_hit_01_v01.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_hit_02_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "supporting_phase_reference": {
+        "code": "Q06",
+        "path": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_hit_01_v01.png",
+        "sha256": "8388c93447f69e80064d03fc4fc0016d01bf57f700e42b6dd806ceb363b29b08",
+        "role": "Preceding generated impact peak, technical continuity only; not separately owner-approved"
+      },
+      "generated_at": "2026-10-09T04:25:16.519993+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-1d594f83-3ad0-473c-86db-0ec318110c61.png",
+      "sha256": "b3c77052708c70a1db60ff187cdc5d7c0bd3a092a68095ada0a3056b3face503",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        139,
+        124,
+        1127,
+        1088
+      ],
+      "outer_border_max_luminance": 2,
+      "maximum_channel_difference": 7,
+      "mean_luminance": 11.613830956251002,
+      "visible_fraction_above12": 0.18517013499385698,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "Q08",
+      "effect": "orbe_arcano",
+      "name": "orbe_arcano_hit_03",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a swirling arcane orb: a small dense bright core inside a thin rotating ring with tiny circular glyph marks on the ring, and a wispy smoky trail pointing LEFT because it flies to the RIGHT. Frame 8 of 8, hit 03: impact frame 4 of 4: only faint scattered specks and a barely visible ring remain, almost black. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED Q01 v03 for arcane orb identity and CENTERED core placement. Reference2 is the APPROVED physical pilot for painted white-core/gray-falloff STYLE ONLY. Generate ONLY Q08 phase specified above, never a contact sheet. Flat ground-plane view, exact canvas-center core pivot; all glow and particles inside pure-black margins. Neutral white/gray; no text, character, weapon, hand or scene. Small glyphs must be abstract CIRCLES, not readable letters.\nFINAL IMPACT: Almost pure BLACK; only a barely visible DARK GRAY centered broken ring and a few very faint scattered circular fragments/specks. No white core, bright sparks, intact orb, tail or leftward smoke. Same exact canvas-center pivot.\n\nReference3 is the preceding GENERATED Q06 arcane IMPACT PEAK as technical phase-continuity support, not a separately human-approved frame. Preserve its exact center and arcane ring/glyph shape relationships while removing the solid white core and following the requested dim decay phase. The approved Q01 identity (reference1) and physical style pilot (reference2) remain authoritative. No flight tail. Almost black remnants: only a barely visible dark gray broken ring and sparse faint fragments, no white core or bright sparks.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\orbe_arcano\\orbe_arcano_fly_00_v03.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\orbe_arcano\\orbe_arcano_hit_01_v01.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_hit_03_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "supporting_phase_reference": {
+        "code": "Q06",
+        "path": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_hit_01_v01.png",
+        "sha256": "8388c93447f69e80064d03fc4fc0016d01bf57f700e42b6dd806ceb363b29b08",
+        "role": "Preceding generated impact peak, technical continuity only; not separately owner-approved"
+      },
+      "generated_at": "2026-10-09T04:26:06.225031+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-a3c15276-3f8d-4500-907c-f2536641f54e.png",
+      "sha256": "224a23efd7fdfffd220d621ec82bc62193c6ad826515897fe9cdb3613fd66954",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        303,
+        269,
+        980,
+        963
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 5,
+      "mean_luminance": 1.508071777966011,
+      "visible_fraction_above12": 0.03319012334373704,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "R01",
+      "effect": "onda_cortante",
+      "name": "onda_cortante_fly_00",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "version": "v02",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "destination": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_fly_00_v02.png",
+      "correction_reason": "Crescent shape, scale and rightward direction passed, but fine jagged lightning insufficiently distinguished from painted blade texture at96px; native edit requested before owner gate.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\onda_cortante\\onda_cortante_fly_00_v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "reference_roles": [
+        "R01 v01 native crescent edit target, not human approved",
+        "A03 v02 approved painted white/gray glow style"
+      ],
+      "prompt": "Edit the FIRST attached image: this is R01 v01, a single flying energy crescent frame. The SECOND image is approved painted white/gray glow STYLE only. Keep the first image crescent EXACTLY at the same position, same scale, same right-facing curvature, same thin white painted blade and tapered tips pointing backward LEFT, black background and square canvas. No movement, no enlargement, no rotation, no additional blade or ring.\n\nCHANGE ONLY THE LIGHTNING DETAIL: add a few clearly recognizable THIN angular zigzag ELECTRIC ARCS crackling close along the OUTER CONVEX RIGHT EDGE of the crescent. Small branching white/gray lightning filaments with sharp bends and a few forked tips, concentrated close to the blade edge, readable as lightning even when reduced to96px. The main energy blade remains thin and dominant; do not turn it into a giant explosion or add long bolts across the canvas. Distinguish lightning from smooth brush streaks and detached diamond sparks. Preserve stylized hand-painted white bright core and soft gray falloff.\n\nOnly ONE first flight frame of this cutting-wave projectile, flat top-down as drawn on the ground. Pure BLACK background, WHITE/GRAY effect only. No color, person, hand, weapon, readable text, border, scene, shadow, ground or perspective. Keep all glow and fine lightning safely inside the generous black margins. Requested1024x1024; preserve native square layout.",
+      "generated_at": "2026-10-09T04:29:38.837953+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-4f339012-973b-4673-bd62-4360483f2b5e.png",
+      "sha256": "53f665277345e5a59d093f25e5f3f9ebfd800a1b146c535d0b48513b4e4308f1",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        454,
+        311,
+        884,
+        934
+      ],
+      "outer_border_max_luminance": 2,
+      "maximum_channel_difference": 9,
+      "mean_luminance": 10.552484680601024,
+      "visible_fraction_above12": 0.07416967458518706,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    }
+  ],
+  "rejected_native_versions": [
+    {
+      "code": "R01",
+      "effect": "onda_cortante",
+      "name": "onda_cortante_fly_00",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a thin crescent blade of energy, curved with its tips pointing backward to the LEFT because it flies to the RIGHT, with fine jagged lightning crackling along its edge. Frame 1 of 8, fly 00: flight frame 1 of 4 (these four frames loop): the projectile in flight at its normal size, tail streaming behind it.\n\nAttached approved physical pilot is STYLE ONLY for white painted core and soft gray glow. Generate a NEW compact flying crescent blade of energy with fine jagged white/gray lightning crackling along its edge. Tips point backward LEFT while convex leading edge faces RIGHT. Flat face-on ground-plane shape, no perspective or ellipse. Center the projectile near exact canvas center, with generous black margins on every side. Only this first flight frame, normal compact size; do not copy the full-canvas sweep scale of the pilot. No color, weapon, hand, character, readable text, border, ground or scene.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_fly_00_v01.png",
+      "status": "REJECTED_VISUAL",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "generated_at": "2026-10-09T04:27:47.595389+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-ed0ec5e3-9e88-4d00-8d71-a927d02f6f98.png",
+      "sha256": "57cfcf3a79a49fb33ece1f87298351e811ab4029107ba1720e2d2c071bad203a",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        453,
+        311,
+        852,
+        934
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 8,
+      "mean_luminance": 9.581987719043877,
+      "visible_fraction_above12": 0.06728007854928027,
+      "native_bytes_preserved": true,
+      "runtime_admission": false,
+      "rejection_reason": "Crescent shape, scale and rightward direction passed, but fine jagged lightning insufficiently distinguished from painted blade texture at96px; native edit requested before owner gate."
+    }
+  ]
+}

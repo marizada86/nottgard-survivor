@@ -1,0 +1,94 @@
+{
+  "id": "GATE-FILA-022-N03-2026-10-09",
+  "timestamp": "2026-10-09T12:53:52.121692+00:00",
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "checkpoint": "S-007/VFX/FILA-022/N03-APPROVAL",
+  "status": "APPROVED",
+  "frame": "N03",
+  "version": "v01",
+  "candidate": ".atena/generated/art-candidates/vfx/pulso_radiante/pulso_radiante_peak_v01.png",
+  "sha256": "1bfa8061aec59959de9115ad5dcb94b3e27d5706ffdb86a3e99b8c7e7bf898ec",
+  "visual_inspected": true,
+  "review": ".atena/generated/s007-reconciliation/v01/n03-reference-comparison-2026-10-09.png",
+  "prompts_and_native_audit": ".atena/generated/s007-reconciliation/v01/rn-generation-jobs-2026-10-09.json",
+  "source_instruction": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+  "canonical_source": ".atena/generated/ART-PROMPTS-053-vfx-projeteis-e-explosoes.md",
+  "instruction": "Para cada efeito, gere primeiro o quadro marcado GATE, pare e devolva ao dono.",
+  "visual_review": {
+    "subject": "Bright thin centered circular radiant pulse ring, softer band just inside and short outward rays, maximum peak",
+    "view": "flat top-down",
+    "readable_at96": true,
+    "no_visible_cuts": true,
+    "no_character_weapon_hand_readable_text": true,
+    "approved_pilot_style_compared": true
+  },
+  "technical_notes": {
+    "native_dimensions": [
+      1254,
+      1254
+    ],
+    "requested_dimensions": [
+      1024,
+      1024
+    ],
+    "visible_bbox_above12": [
+      38,
+      48,
+      1215,
+      1193
+    ],
+    "outer_border_max_luminance": 1,
+    "maximum_channel_difference": 9,
+    "normalization": "Native bytes preserved; future technical downsample to1024; exact zero RGB not claimed"
+  },
+  "rejected_versions": [
+    {
+      "code": "R05",
+      "effect": "onda_cortante",
+      "name": "onda_cortante_hit_00",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a thin crescent blade of energy, curved with its tips pointing backward to the LEFT because it flies to the RIGHT, with fine jagged lightning crackling along its edge. Frame 5 of 8, hit 00: impact frame 1 of 4: the projectile has just hit, a bright flash burst with tiny sparks starting, no tail anymore, about 60 percent of the final size. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED R01 v02 cutting-wave identity/position including fine jagged lightning. Reference2 is APPROVED physical pilot painted white-core/gray-glow STYLE ONLY. Generate ONLY R05 phase, never a montage. Native square1024 requested, flat overhead view, white/gray effect only, pure black background and safe margins. No weapon, hand, character, scene, border, ground or readable text.\nIMPACT START: No flight tail or intact flying crescent. The blade has collided: compact centered white flash with only tiny radial sparks beginning, short broken blade-energy fragments and fine electric filaments. About60% of coming peak size; early impact only. Exact canvas-center flash pivot. No glyphs, circles-as-symbols or readable text.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\onda_cortante\\onda_cortante_fly_00_v02.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_hit_00_v01.png",
+      "status": "REJECTED_VISUAL",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "generated_at": "2026-10-09T05:11:02.665713+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-77f174aa-92e7-4e09-b8bb-e0d06a7b7924.png",
+      "sha256": "4c125070e6dc6eeffa26e2b7ba56fc5090491a81e2ee886934e24f64609c349d",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        405,
+        284,
+        939,
+        938
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 10,
+      "mean_luminance": 13.738967997781899,
+      "visible_fraction_above12": 0.1070946177972116,
+      "native_bytes_preserved": true,
+      "runtime_admission": false,
+      "rejection_reason": "Impact start still retained a large intact flying crescent; hot flash displaced right of canvas center. Native phase correction required."
+    }
+  ],
+  "runtime_admission": false,
+  "official_manifest_assets": 202,
+  "manifest_file_sha256": "52384ac0f88ffca25952099d6c7f0e58224e7d235012ea284f55198cc2406f6a",
+  "remaining_native_vfx_frames": 71,
+  "other_N_frames_generated": 0,
+  "next_if_approved": "Generate N01,N02,N04,N05,N06 individually using approved N03, then M03 hourglass silence PEAK gate only.",
+  "ranking_return": "PLAN-071 B-006/S-011 preserved",
+  "owner_reply": "aprovado, commit e pus",
+  "approval_receipt": ".atena/generated/s007-reconciliation/v01/n03-owner-approval-2026-10-09.json"
+}

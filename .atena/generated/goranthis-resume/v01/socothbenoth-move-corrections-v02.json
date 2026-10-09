@@ -1,0 +1,31 @@
+{
+  "jobs": [
+    {
+      "id": "socothbenoth",
+      "state": "move",
+      "index": 3,
+      "version": 2,
+      "date": "2026-10-08",
+      "refs": [
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_move_03_v01.png",
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_move_00_v01.png",
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_idle_00_v01.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Image1 target keeps SAME foreground leg leading as image2 move00; correct ONLY legs/stride and lowest robe folds into OPPOSITE CONTACT. Move the currently LONG FRONT/SCREENRIGHT ivory-green armored leg BACKWARD toward SCREENLEFT, bending knee so its GOLD boot TRAILS at LEFT behind torso. Swing the formerly shorter BACK/SCREENLEFT leg FORWARD toward SCREENRIGHT, its gold boot clearly LEADS at RIGHT, crossing under robe from the back/LEFT hip. Final TWO legs only: near/foreground shin slants BACKLEFT, far leg extends FORWARDRIGHT. Do NOT keep existing foreground leg leading; do NOT mirror image/body. Opposite contact, clear longer step and hips slightlyHIGH. Preserve exact upper body/camera facingRIGHT, TWO original human arms with long fingers, FOUR original bone horn prongs/red membrane, wine robe, gold chains, green veined ivory armor, attached black tentacles with EXACTLY TWO yellow-eyed serpent heads. No new leg/arm/serpent head or changed hand. Native-alpha TRANSPARENT background and opaque solid full character, all horns/fingers/tentacle/robe/boot ends inside transparent margins, no visible glow/shadow/haze/text/projectile. Same crisp isometric pixelart/proportions."
+    },
+    {
+      "id": "socothbenoth",
+      "state": "move",
+      "index": 4,
+      "version": 2,
+      "date": "2026-10-08",
+      "refs": [
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_move_04_v01.png",
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_move_00_v01.png",
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_idle_00_v01.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Image1 target keeps SAME foreground leg leading as image2 move00; correct ONLY legs/stride and lowest robe folds into OPPOSITE CONTACT. Move the currently LONG FRONT/SCREENRIGHT ivory-green armored leg BACKWARD toward SCREENLEFT, bending knee so its GOLD boot TRAILS at LEFT behind torso. Swing the formerly shorter BACK/SCREENLEFT leg FORWARD toward SCREENRIGHT, its gold boot clearly LEADS at RIGHT, crossing under robe from the back/LEFT hip. Final TWO legs only: near/foreground shin slants BACKLEFT, far leg extends FORWARDRIGHT. Do NOT keep existing foreground leg leading; do NOT mirror image/body. Weight transfer on far leading RIGHT boot, near knee bending/passingleftback, torso slightlyLOW. Preserve exact upper body/camera facingRIGHT, TWO original human arms with long fingers, FOUR original bone horn prongs/red membrane, wine robe, gold chains, green veined ivory armor, attached black tentacles with EXACTLY TWO yellow-eyed serpent heads. No new leg/arm/serpent head or changed hand. Native-alpha TRANSPARENT background and opaque solid full character, all horns/fingers/tentacle/robe/boot ends inside transparent margins, no visible glow/shadow/haze/text/projectile. Same crisp isometric pixelart/proportions."
+    }
+  ],
+  "rejected": "move03/04v01 retained foreground leg leading as first contact; require opposite stride."
+}

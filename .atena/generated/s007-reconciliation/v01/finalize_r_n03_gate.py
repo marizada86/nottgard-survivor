@@ -1,0 +1,64 @@
+from pathlib import Path
+import json,re,hashlib,sys
+from datetime import datetime,timezone
+root=Path(__file__).resolve().parents[4];out=Path(__file__).parent
+assert '--visual-inspected' in sys.argv
+read=lambda p:p.read_text(encoding='utf-8-sig')
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+save=lambda p,d:p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+d=json.loads(read(out/'rn-generation-jobs-2026-10-09.json'));j=next(x for x in d['jobs'] if x['code']=='N03');seq=json.loads(read(out/'onda-cortante-sequence-audit-2026-10-09.json'));prior=json.loads(read(out/'r01-owner-gate-2026-10-09.json'))
+assert seq['status']=='COMPLETE_CANDIDATE_SEQUENCE_VISUALLY_REVIEWED' and j['status']=='GENERATED_VISUALLY_INSPECTED' and prior['status']=='APPROVED'
+for row in seq['sources']:assert sha(root/row['path'])==row['sha256']
+for job in d['jobs']:assert sha(root/job['destination'])==job['sha256']==sha(Path(job['original_path']))
+for rejected in d.get('rejected_native_versions',[]):assert sha(root/rejected['destination'])==rejected['sha256']==sha(Path(rejected['original_path']))
+manifest=root/'.atena/generated/PRIORITY-IMAGES-2026-10-02.json';m=json.loads(read(manifest));assert m['count']==len(m['assets'])==202 and sha(manifest)==prior['manifest_file_sha256']
+pub=json.loads(read(root/'.atena/generated/image-queue-publication-2026-10-09/publication-receipt.json'));assert pub['status']=='PUBLISHED_VERIFIED' and pub['pushed'] and pub['remote_sha']=='a39b6f0be50633c35327584314d52093c29c743d'
+assert (out/'n03-reference-comparison-2026-10-09.png').is_file()
+g=dict(id='GATE-FILA-022-N03-2026-10-09',timestamp=datetime.now(timezone.utc).isoformat(),plan='PLAN-053',spec='SPEC-121',checkpoint='S-007/VFX/FILA-022/N03-APPROVAL',status='PENDING_OWNER_APPROVAL',frame='N03',version=j['version'],candidate=j['destination'],sha256=j['sha256'],visual_inspected=True,review='.atena/generated/s007-reconciliation/v01/n03-reference-comparison-2026-10-09.png',prompts_and_native_audit='.atena/generated/s007-reconciliation/v01/rn-generation-jobs-2026-10-09.json',source_instruction='.atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md',canonical_source='.atena/generated/ART-PROMPTS-053-vfx-projeteis-e-explosoes.md',instruction='Para cada efeito, gere primeiro o quadro marcado GATE, pare e devolva ao dono.',visual_review=dict(subject='Bright thin centered circular radiant pulse ring, softer band just inside and short outward rays, maximum peak',view='flat top-down',readable_at96=True,no_visible_cuts=True,no_character_weapon_hand_readable_text=True,approved_pilot_style_compared=True),technical_notes=dict(native_dimensions=j['native_dimensions'],requested_dimensions=[1024,1024],visible_bbox_above12=j['visible_bbox_above12'],outer_border_max_luminance=j['outer_border_max_luminance'],maximum_channel_difference=j['maximum_channel_difference'],normalization='Native bytes preserved; future technical downsample to1024; exact zero RGB not claimed'),rejected_versions=d.get('rejected_native_versions',[]),runtime_admission=False,official_manifest_assets=202,manifest_file_sha256=sha(manifest),remaining_native_vfx_frames=71,other_N_frames_generated=0,next_if_approved='Generate N01,N02,N04,N05,N06 individually using approved N03, then M03 hourglass silence PEAK gate only.',ranking_return='PLAN-071 B-006/S-011 preserved')
+gp=out/'n03-owner-gate-2026-10-09.json';assert not gp.exists();save(gp,g)
+for name in ['CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md','ART-PROMPTS-053-vfx-projeteis-e-explosoes.md']:
+ p=root/'.atena/generated'/name;t=read(p)
+ if name.startswith('CHATGPT'):
+  t,n=re.subn(r'(#### N03[^\n]+\n\n)- \[ \] gerada[^\n]+',r'\g<1>- [x] gerada · [ ] aprovada · candidata: `'+j['destination']+'` — pico gerado/revisado, gate humano pendente.',t);assert n==1
+ old='Onda cortante oito candidatas revisadas, R01 v02 aprovada; push concluído e verificado; gerando somente N03 peak';new='Onda cortante oito candidatas revisadas, R01 v02 aprovada; push concluído e verificado; N03 '+j['version']+' pico candidato, gate pendente; demais11 quadros pendentes';assert old in t;t=t.replace(old,new);p.write_text(t,encoding='utf-8')
+for rel in ['.atena/state/plan.yaml','.atena/state/plan-053-imagens.yaml']:
+ p=root/rel;t=read(p).replace('EXECUTING_N_GATE','AWAITING_OWNER_APPROVAL').replace('checkpoint: S-007/VFX/FILA-022/N03\n','checkpoint: S-007/VFX/FILA-022/N03-APPROVAL\n')
+ t=t.replace('S-007 onda cortante oito candidatas revisadas; gerando somente gate N03 peak. Dois commits publicados e verificados.','S-007 onda cortante oito candidatas revisadas; N03 '+j['version']+' pico gerado, gate humano pendente. Dois commits publicados e verificados.')
+ t=t.replace('Devolver N03 peak ao dono antes dos cinco demais N. Retorno PLAN-071 preservado.','Aguardar N03 antes dos cinco demais N e gate M03; 71 fontes VFX restantes. Retorno PLAN-071 preservado.')
+ t=t.replace('S-007 orbe arcano completo como candidata; aguardando gate humano R01. PLAN-071 preservado.','S-007 onda cortante completa como candidata; aguardando gate humano N03. PLAN-071 preservado.')
+ if rel.endswith('plan-053-imagens.yaml'):
+  active=re.search(r'\nactive_plan:\n(.*?)(?=\n\S|\Z)',t,re.S);assert active;b=active[1]
+  if not re.search(r'^  checkpoint:',b,re.M):b=b.replace('  current_step: S-007\n','  current_step: S-007\n  checkpoint: S-007/VFX/FILA-022/N03-APPROVAL\n')
+  else:b=re.sub(r'^  checkpoint: [^\n]+','  checkpoint: S-007/VFX/FILA-022/N03-APPROVAL',b,flags=re.M)
+  t=t[:active.start(1)]+b+t[active.end(1):]
+  cursor=re.search(r'\nplan_cursor:\n(.*?)(?=\n\S|\Z)',t,re.S);assert cursor;b=cursor[1];b=re.sub(r'^  review: [^\n]+',"  review: '.atena/generated/s007-reconciliation/v01/n03-reference-comparison-2026-10-09.png'",b,flags=re.M);b=re.sub(r'^  evidence: [^\n]+',"  evidence: '.atena/evidence/s007-onda-cortante-completa-n03-gate-2026-10-09.md'",b,flags=re.M);t=t[:cursor.start(1)]+b+t[cursor.end(1):]
+  match=re.search(r'\nvfx_gate:\n(.*?)(?=\n\S|\Z)',t,re.S);assert match;previous=match[1];assert 'status: APPROVED' in previous and 'frame: R01' in previous
+  b='\nvfx_gate:\n  id: '+g['id']+'\n  status: PENDING_OWNER_APPROVAL\n  frame: N03\n  version: '+j['version']+'\n  generated: 1\n  remaining_native_vfx_frames: 71\n  official_manifest_assets: 202\n  runtime_admission: false\n  receipt: .atena/generated/s007-reconciliation/v01/n03-owner-gate-2026-10-09.json\n';t=t[:match.start()]+b+t[match.end():]
+  archive=re.search(r'\ncompleted_vfx_gates:\n(.*?)(?=\n\S|\Z)',t,re.S);assert archive and '\n  onda_cortante:\n' not in t
+  previous=re.sub(r'(  remaining_native_vfx_frames: )\d+',r'\g<1>72',previous)
+  extra='\n  onda_cortante:\n'+''.join('  '+line+'\n' for line in previous.rstrip().splitlines())+'    completion_receipt: .atena/generated/s007-reconciliation/v01/onda-cortante-sequence-audit-2026-10-09.json\n'
+  t=t[:archive.end(1)]+extra+t[archive.end(1):]
+ p.write_text(t,encoding='utf-8')
+ev=root/'.atena/evidence/s007-onda-cortante-completa-n03-gate-2026-10-09.md'
+text='# S-007 — Onda cortante gerada e gate do pulso radiante\n\nPLAN-053/SPEC-121, IN_PLAN, per-plan preservado. “atena, commit push e continue” aceitou contextualmente R01 v02 e pediu publicação antes de continuar. [Aprovação R01](../generated/s007-reconciliation/v01/r01-owner-approval-2026-10-09.json), [registro canônico](../vault/canon/ASSET-APPROVAL-REGISTER-029-vfx-onda-cortante-2026-10-09.md).\n\n'
+text+='Após rejeição automática do push amplo, o dono autorizou o conteúdo e destino exatos com “Autorizar este lote e destino”. Dois commits afcf882 e a39b6f0 publicados na branch codex/fila-imagens-2026-10-09; ref remota verificada, sem merge na main. Import, suite e smoke aprovados antes do commit; nenhuma nova execução atribuída às candidatas locais posteriores. [Publicação verificada](../generated/image-queue-publication-2026-10-09/publication-receipt.json), [aprovação exata](../generated/image-queue-publication-2026-10-09/exact-publication-owner-approval.json), [checks](../generated/image-queue-publication-2026-10-09/checks.json).\n\n'
+text+='Onda cortante: oito candidatas revisadas, R01 v02 aprovado; os sete outros quadros têm inspeção técnica, sem alegar aceite humano individual. Quatro voos mantêm crescente para direita, pontas à esquerda, raios finos e variação de brilho/detalhes internos; fechamento R04/R01 conferido. Quatro impactos centrados sem cauda: flash inicial pequeno, pico R06, expansão cinza fragmentada e resíduos fracos. [Recibo](../generated/s007-reconciliation/v01/onda-cortante-sequence-audit-2026-10-09.json), [prancha96px](../generated/s007-reconciliation/v01/onda-cortante-eight-frame-review-2026-10-09.png), [voo](../generated/s007-reconciliation/v01/onda-cortante-flight-review-2026-10-09.gif), [impacto](../generated/s007-reconciliation/v01/onda-cortante-impact-review-2026-10-09.gif).\n\n'
+text+='N03 '+j['version']+': somente o pico do pulso radiante gerado. Anel circular branco fino centrado, banda suave interna e raios curtos externos, vista superior plana; leitura96px e estilo do piloto conferidos. [Gate pendente](../generated/s007-reconciliation/v01/n03-owner-gate-2026-10-09.json), [comparação](../generated/s007-reconciliation/v01/n03-reference-comparison-2026-10-09.png), [prompts e auditoria nativa](../generated/s007-reconciliation/v01/rn-generation-jobs-2026-10-09.json). Os cinco outros N aguardam aprovação deste pico; depois somente gate M03.\n\n'
+text+='Nove fontes selecionadas verificadas por hash; originais preservados byte a byte e eventuais versões rejeitadas mantidas. Saídas nativas quadradas preservadas requerem normalização futura para1024; fundo visualmente preto com diferenças mínimas de canais auditadas, sem alegar zero RGB exato. Redimensionamento somente de prévias, sem limpeza de pixels. Manifesto202 byte a byte inalterado desde R01; nenhuma admissão runtime dos VFX. FILA02225/36 fontes geradas,11 restantes; com FILA02360, restam71 fontes VFX. S007 aberto no gate N03; retorno PLAN071 B006/S011 e demais suspensões preservados.\n'
+if any(x['code']=='R05' for x in d.get('rejected_native_versions',[])):
+ text+='\nR05 v01 rejeitada por manter crescente intacto e flash deslocado; v02 corrigida por geração nativa para flash compacto centrado sem lâmina em voo. Versão rejeitada e original preservados com motivo no arquivo de jobs. Prompt R06 esclarecido para continuidade do impacto radial, mantendo o pedido canônico de pico. R05/R06 são apoios técnicos de fase; não são alegados como gates aprovados individualmente pelo dono.\n'
+ev.write_text(text,encoding='utf-8')
+entry='\n2026-10-09 — R01 v02 aprovada por continuação contextual; publicação afcf882/a39b6f0 concluída após autorização específica do lote/destino, ref remota verificada. Onda cortante oito candidatas revisadas; N03 '+j['version']+' pico gerado/revisado, gate humano pendente antes dos cinco demais N e depois gate M03. FILA02225/36;71 fontes VFX restantes. Manifesto202 inalterado, sem admissão runtime. Evidência s007-onda-cortante-completa-n03-gate-2026-10-09.md. Retorno PLAN071 preservado.\n'
+for rel in ['.atena/evidence/EVID-145-fila-de-imagens-prioritaria-2026-10-02.md','.atena/specs/SPEC-121-retomada-fila-imagens/tasks.md','.atena/specs/SPEC-121-retomada-fila-imagens/plan.md','.atena/vault/drafts/PLAN-053-fila-de-imagens-2026-10-02.md','.atena/evidence/s007-orbe-arcano-completo-r01-gate-2026-10-09.md']:
+ p=root/rel;p.write_text(read(p)+entry,encoding='utf-8')
+backlog=root/'.atena/backlog/ARTE.md';lines=read(backlog).splitlines();found=0
+for i,line in enumerate(lines):
+ if line.startswith('| ART-029 |'):
+  found+=1;fields=line.split('|');fields[-2]=' **2026-10-09:** onda cortante oito candidatas revisadas, R01 v02 aprovado; N03 pulso radiante '+j['version']+' pico candidato, gate humano pendente antes de cinco N e gate M03. FILA02225/36 fontes geradas;11 faltantes. [Evidência](../evidence/s007-onda-cortante-completa-n03-gate-2026-10-09.md). Integração pendente; item aberto. ';lines[i]='|'.join(fields)
+assert found==1;backlog.write_text('\n'.join(lines)+'\n',encoding='utf-8')
+links=[]
+for p in [ev,root/'.atena/vault/canon/ASSET-APPROVAL-REGISTER-029-vfx-onda-cortante-2026-10-09.md']:
+ for target in re.findall(r'\]\(([^)]+)\)',read(p)):
+  assert (p.parent/target).resolve().is_file(),(p,target);links.append(dict(document=p.relative_to(root).as_posix(),target=target,exists=True))
+save(out/'rn-links-validation-2026-10-09.json',dict(status='PASSED',links=links,source_hashes_verified=9,rejected_native_hashes_verified=len(d.get('rejected_native_versions',[])),manifest_assets=202,manifest_sha256=sha(manifest),gate=g['id'],publication_status=pub['status']))
+print(json.dumps(dict(status='R_COMPLETE_N03_PENDING_OWNER_APPROVAL',remaining_native_vfx_frames=71,official_manifest_assets=202,links_checked=len(links))))

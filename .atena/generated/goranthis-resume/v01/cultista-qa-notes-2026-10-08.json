@@ -1,0 +1,11 @@
+{
+  "actor": "cultista_de_socothbenoth",
+  "selected_sources": 20,
+  "selected_attack02_version": 2,
+  "rejected_attack02v01": "Gold staff top clipped at y=0",
+  "native_alpha_preserved": true,
+  "death04_05_hidden_RGB_glow": "Alpha zero outside opaque silhouette, composited review shows no glow",
+  "transforms": "Torso x-anchor offsets avoid trailing robe hem; final death ground offsets -30, source RGB/alpha untouched",
+  "illusion": "Reused source Cultista, exact atlas paths and alpha0.45 verified by actual actor test; corrected capture inspected",
+  "human_playtest": "Pending"
+}

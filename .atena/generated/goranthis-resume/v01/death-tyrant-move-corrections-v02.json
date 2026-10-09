@@ -1,0 +1,44 @@
+{
+  "jobs": [
+    {
+      "id": "death_tyrant",
+      "state": "move",
+      "index": 2,
+      "version": 2,
+      "date": "2026-10-08",
+      "refs": [
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_move_02_v01.png",
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_idle_00_v01.png",
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/assets/enemies/death_tyrant.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Image1 edit target has SEVEN small ocular stalks and is missing its original EIGHTH lowest RIGHT eye stalk. Image2 approved idle and image3 static show correct EIGHT stalks. Restore ONLY that missing original LOWEST RIGHT stalk with its blue vertical-pupil eye, emerging from the sphere's lowerRIGHT edge behind/right of the lower humanoid face/shoulder, below the other right-side eye. Keep ALL seven existing stalks in exactly their current positions: THREE on LEFT, ONE above CENTER, THREE on RIGHT. Add the missing LOWEST fourth RIGHT stalk so final count is THREE LEFT + ONE TOP + FOUR RIGHT = EXACTLY EIGHT smaller attached ocular stalks/eyes, PLUS the unchanged one large central eye. Do not remove or duplicate any existing eye, do not make nine. Keep exact current sphere pose, gray-purple spikes and gold symbols, central blue pupil, lower humanoid face lookingRIGHT, mouth/beard tendrils, TWO withered human arms, tattered wine/black-purple robe and gold chains/pendants unchanged. Missing eighth stalk is same gray-purple with bone collar and BLUE eye as approved reference, firmly ATTACHED to sphere, not a human arm or floating eye. Preserve camera/scale/proportions/crisp dark fantasy isometric pixelart. Entire restored character inside generous transparent margins, ALL eight tips/cloth/chain ends intact; native transparent alpha background and opaque solid silhouette. No legs, shadow, ground, glow, rays, particles or text."
+    },
+    {
+      "id": "death_tyrant",
+      "state": "move",
+      "index": 3,
+      "version": 2,
+      "date": "2026-10-08",
+      "refs": [
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_move_03_v01.png",
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_idle_00_v01.png",
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/assets/enemies/death_tyrant.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Image1 edit target has SEVEN small ocular stalks and is missing its original EIGHTH lowest RIGHT eye stalk. Image2 approved idle and image3 static show correct EIGHT stalks. Restore ONLY that missing original LOWEST RIGHT stalk with its blue vertical-pupil eye, emerging from the sphere's lowerRIGHT edge behind/right of the lower humanoid face/shoulder, below the other right-side eye. Keep ALL seven existing stalks in exactly their current positions: THREE on LEFT, ONE above CENTER, THREE on RIGHT. Add the missing LOWEST fourth RIGHT stalk so final count is THREE LEFT + ONE TOP + FOUR RIGHT = EXACTLY EIGHT smaller attached ocular stalks/eyes, PLUS the unchanged one large central eye. Do not remove or duplicate any existing eye, do not make nine. Keep exact current sphere pose, gray-purple spikes and gold symbols, central blue pupil, lower humanoid face lookingRIGHT, mouth/beard tendrils, TWO withered human arms, tattered wine/black-purple robe and gold chains/pendants unchanged. Missing eighth stalk is same gray-purple with bone collar and BLUE eye as approved reference, firmly ATTACHED to sphere, not a human arm or floating eye. Preserve camera/scale/proportions/crisp dark fantasy isometric pixelart. Entire restored character inside generous transparent margins, ALL eight tips/cloth/chain ends intact; native transparent alpha background and opaque solid silhouette. No legs, shadow, ground, glow, rays, particles or text."
+    },
+    {
+      "id": "death_tyrant",
+      "state": "move",
+      "index": 4,
+      "version": 2,
+      "date": "2026-10-08",
+      "refs": [
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_move_04_v01.png",
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_idle_00_v01.png",
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/assets/enemies/death_tyrant.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Image1 edit target has SEVEN small ocular stalks and is missing its original EIGHTH lowest RIGHT eye stalk. Image2 approved idle and image3 static show correct EIGHT stalks. Restore ONLY that missing original LOWEST RIGHT stalk with its blue vertical-pupil eye, emerging from the sphere's lowerRIGHT edge behind/right of the lower humanoid face/shoulder, below the other right-side eye. Keep ALL seven existing stalks in exactly their current positions: THREE on LEFT, ONE above CENTER, THREE on RIGHT. Add the missing LOWEST fourth RIGHT stalk so final count is THREE LEFT + ONE TOP + FOUR RIGHT = EXACTLY EIGHT smaller attached ocular stalks/eyes, PLUS the unchanged one large central eye. Do not remove or duplicate any existing eye, do not make nine. Keep exact current sphere pose, gray-purple spikes and gold symbols, central blue pupil, lower humanoid face lookingRIGHT, mouth/beard tendrils, TWO withered human arms, tattered wine/black-purple robe and gold chains/pendants unchanged. Missing eighth stalk is same gray-purple with bone collar and BLUE eye as approved reference, firmly ATTACHED to sphere, not a human arm or floating eye. Preserve camera/scale/proportions/crisp dark fantasy isometric pixelart. Entire restored character inside generous transparent margins, ALL eight tips/cloth/chain ends intact; native transparent alpha background and opaque solid silhouette. No legs, shadow, ground, glow, rays, particles or text."
+    }
+  ],
+  "rejected": "Move02/03/04v01 have only seven smaller ocular stalks; lowest RIGHT eighth is absent."
+}

@@ -1,0 +1,16 @@
+{
+  "id": "cultista_de_socothbenoth",
+  "state": "move",
+  "index": 3,
+  "version": 1,
+  "date": "2026-10-08",
+  "refs": [
+    "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/assets/enemies/cultista_de_socothbenoth.png",
+    "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/cultista_de_socothbenoth/cultista_de_socothbenoth_idle_00_v02.png"
+  ],
+  "prompt": "Create exactly ONE complete animation frame of the APPROVED Sacerdote de Ilusoes shown in image2. Image1 is static identity and image2 is approved right-facing pose. Keep main PALE human face on RIGHT, looking toward RIGHT, with attached red screaming mask behind it on LEFT, same solar gold crown. Maintain exact cream/wine/gold long robe, black inset front, hanging gold ornaments, gold pointed shoes, attached solid fleshy pink ribbons. ONE gold staff topped with the same oval pale facial mirror and attached red mask/pink ribbons remains in ORIGINAL SCREENRIGHT hand; SCREENLEFT hand is the free gesturing hand. Exactly TWO human arms/hands and TWO legs/shoes below robe; all masks remain attached props, no extra people or heads. Preserve three-quarter camera facingRIGHT, same body size, palette, dark fantasy isometric pixelart, crisp edges/controlled dithering. Native transparent background, opaque solid silhouette (no translucent flesh/cloth). Full crown, staff top/butt, ribbons, robe hem, hands and feet inside canvas with at least8% side margins. No ground/shadow, scenery, text, UI, glow, particles, projectiles, loose effects or new props. POSE move_03: OPPOSITE contact: FAR shoe now leads to RIGHT/front, original NEAR shoe trails LEFT/rear. Clearly alternate which leg is ahead; keep robe and staff unmirrored.",
+  "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-97331b37-697e-4550-8761-612473dc6719.png",
+  "workspace_path": "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/cultista_de_socothbenoth/cultista_de_socothbenoth_move_03_v01.png",
+  "output_hint": "Generated images are saved to C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be as C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-97331b37-697e-4550-8761-612473dc6719.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "error": null
+}

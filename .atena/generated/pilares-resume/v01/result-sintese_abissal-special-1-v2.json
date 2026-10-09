@@ -1,0 +1,16 @@
+{
+  "job": {
+    "id": "sintese_abissal",
+    "state": "special",
+    "index": 1,
+    "version": 2,
+    "date": "2026-10-08",
+    "refs": [
+      "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_01_v01.png"
+    ],
+    "prompt": "Edit this attached SINGLE animation frame, preserving the EXACT pose, scale, anatomy, core light, native pixel art and alpha. Only correct the extra small green-droplet pendants: retain TWO genuine lamps, the large bell-lamp hanging from the upper RIGHT hand and the smaller bell-lamp hanging from the lower RIGHT hand. REMOVE every other secondary tiny bell-with-green-drop attached to dangling finger chains. REPLACE each of those secondary motifs ENTIRELY with a SOLID ROUND GOLD MEDALLION/coin on the SAME chain, without holes, green, liquid or drips. There should be only TWO green-dripping objects afterward. It is crucial to change the entire secondary bell into solid GOLD COIN, not leave its bottom drop. The large original lamp and the main small lamp remain unchanged and green; both original hands remain. Keep EXACT same THREE ARMS: one cage arm from LEFT shoulder acrossfront, two lamp arms RIGHT, same ONE LEFT wing, connected WHITE ROOT base and clothing/core. No added or duplicated limb, lamp or wing. Whole sprite inside native transparent padding, opaque solid material, no halo, background or text."
+  },
+  "source_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-d69ba5e1-d8ba-4f8f-a7a1-0b30bc8e0897.png",
+  "workspace_path": "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_01_v02.png",
+  "output_hint": "Generated images are saved to C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be as C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-d69ba5e1-d8ba-4f8f-a7a1-0b30bc8e0897.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+}

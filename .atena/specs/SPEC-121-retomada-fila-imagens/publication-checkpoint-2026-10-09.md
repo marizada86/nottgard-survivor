@@ -1,0 +1,3 @@
+# Checkpoint Git solicitado pelo dono
+
+DEV-006, PLAN_DEVIATION: “atena, commit push e continue”. Executar commit/push agora e voltar à fila; autorização e preferência per-plan existentes. [Escopo e aceite](../../generated/image-queue-publication-2026-10-09/publication-plan.json). O plano original fica suspenso durante este checkpoint e o retorno ao ranking permanece preservado. Publicar em branch codex/fila-imagens-2026-10-09, sem merge na main. Arte runtime e evidências; fontes ignoradas ficam locais. CursorSkin existente já exigido pelo código recebe commit separado. Checks: manifesto202, import/suite/smoke, escopo staged, hashes/ref remota, retomada R02–R08 e próximo gate N03. Originais não são removidos.

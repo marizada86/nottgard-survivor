@@ -1,0 +1,141 @@
+{
+  "status": "COMPLETE_CANDIDATE_SEQUENCE_VISUALLY_REVIEWED",
+  "sources": [
+    {
+      "code": "P01",
+      "path": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_fly_00_v01.png",
+      "sha256": "a321dde3ebdce44f469c46a4147a4400bd97f3e958ec5ab0cb109338adaea752",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 13.811896349544297,
+      "visible_fraction_above12": 0.0888881257805962,
+      "central_hot_light_centroid_normalized": [
+        0.48735400260497347,
+        0.4964182591937981
+      ]
+    },
+    {
+      "code": "P02",
+      "path": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_fly_01_v01.png",
+      "sha256": "bc48320c2de5aef68717bfe74679965fd2526ccd30369666735b181a6dab96ba",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 15.370481445021863,
+      "visible_fraction_above12": 0.09874748492225198,
+      "central_hot_light_centroid_normalized": [
+        0.4863686779266139,
+        0.4961639258861543
+      ]
+    },
+    {
+      "code": "P03",
+      "path": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_fly_02_v01.png",
+      "sha256": "0d98f6826b1612f18307337cda34be0fed6709dd095fe6517dd21cd30b2f3f60",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 13.592671871065223,
+      "visible_fraction_above12": 0.08572440598378649,
+      "central_hot_light_centroid_normalized": [
+        0.48678429511912175,
+        0.49568803203115497
+      ]
+    },
+    {
+      "code": "P04",
+      "path": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_fly_03_v01.png",
+      "sha256": "cf569ff20892598e4d399a4ee2d8fe8bb7f974cc6e8198e6067a0906d0729d92",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 12.39339059189223,
+      "visible_fraction_above12": 0.08134797992516452,
+      "central_hot_light_centroid_normalized": [
+        0.4857063253428609,
+        0.49801503147684884
+      ]
+    },
+    {
+      "code": "P05",
+      "path": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_hit_00_v01.png",
+      "sha256": "1166c89f27735cb9d8e8a7425d4e7dc85d38712fb42148b9de2d6749ee6b3b3f",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 14.316417766178532,
+      "visible_fraction_above12": 0.09557486219536081
+    },
+    {
+      "code": "P06",
+      "path": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_hit_01_v01.png",
+      "sha256": "cd8de8d95839ac8700975d1f73f867bab4325e4c19be3252476d22e6ef1dca5c",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 33.15371989855747,
+      "visible_fraction_above12": 0.22738846536378643
+    },
+    {
+      "code": "P07",
+      "path": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_hit_02_v01.png",
+      "sha256": "11d77ed513ab15a253f053964c719a6e87829ffb3fda9f87587b3e65c3dd4f7c",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 13.066007595471207,
+      "visible_fraction_above12": 0.15677169580468497
+    },
+    {
+      "code": "P08",
+      "path": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_hit_03_v01.png",
+      "sha256": "97062541c2bab36d8451892dadefb7553e21eeb723afa0d3f83912b6693df2f1",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 1.439003482317509,
+      "visible_fraction_above12": 0.02190120800042734
+    }
+  ],
+  "flight_centroid_spread_normalized": [
+    0.001647677262112568,
+    0.002326999445693867
+  ],
+  "centroid_method": "Central30%-70% crop, weights max(luminance-180,0)^2; proxy for hot light consistency, not exact ring pivot",
+  "native_sources_preserved": true,
+  "preview_only": true,
+  "runtime_admission": false,
+  "manifest_assets": 202,
+  "timestamp": "2026-10-09T03:57:46.395251+00:00",
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "visual_inspected": true,
+  "visual_review": "Four flight frames keep round centered orb and left tail, small glow/detail/tail changes, final flight returns to first. Four centered impacts lose tail, flash peaks at P06, then breaks into dim fragments/ring and faint specks. Native frames and96px montage inspected; no visible cuts.",
+  "human_gate_approval": ".atena/generated/s007-reconciliation/v01/p01-owner-approval-2026-10-09.json",
+  "review": ".atena/generated/s007-reconciliation/v01/orbe-radiante-eight-frame-review-2026-10-09.png",
+  "preview_gifs": [
+    ".atena/generated/s007-reconciliation/v01/orbe-radiante-flight-review-2026-10-09.gif",
+    ".atena/generated/s007-reconciliation/v01/orbe-radiante-impact-review-2026-10-09.gif"
+  ],
+  "other_frames_human_approval": "not individually claimed",
+  "remaining_native_vfx_frames": 88,
+  "next": "Q01 arcane orb first flight gate only",
+  "native_dimensions_note": "Native square sources retained; requested1024 normalization deferred"
+}

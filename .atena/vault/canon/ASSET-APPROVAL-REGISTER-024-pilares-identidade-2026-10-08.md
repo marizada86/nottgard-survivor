@@ -1,0 +1,7 @@
+# ASSET-APPROVAL-REGISTER-024 — Identidade de Pilares
+
+Após comparação fonte/candidata e a pergunta “Aprova a identidade v02 para gerar os 25 quadros restantes?”, o dono respondeu “atena, aprovado, continue”. Aprovação de I01 Síntese Abissal v02 e continuação dos 25 ciclos registrada como IN_PLAN, PLAN-053/SPEC-121, per-plan preservado. Nenhum ciclo ainda não produzido é declarado revisado; gates por limite de tentativas e demais salvaguardas continuam independentes.
+
+SHA256 v02: b4aee47efb39cbb8d3dabf3060441006392e30d820fcae0641bcfbece4a5d992. V01 preservada por margem insuficiente. Alfa nativo e margem v02 auditados. [Prancha aprovada](../../generated/priority-review/pilares_identity_gate_v02.png). [Recibo, versões e prompts](../../generated/pilares-resume/v01/identity-gate-receipt.json). Sem autorização Git/publicação, alterações de lore ou combate.
+
+2026-10-08 — Após apresentação da recuperação attack03v03 e pergunta sobre aceitar a pequena gota verde num pingente ou autorizar nova correção, o dono respondeu “aprovado, continue”. Aceite da candidata apresentada, com exceção limitada a attack03v03, SHA2569832f2355974c1e34ed629189ff6cb3f61548f4b0958a136711977b2c8fca20e. Não autoriza quarta versão nem estende a exceção aos outros estados. Três braços originais e dois lampiões principais preservados; sem alegar aprovação humana individual de todos os ciclos. [Recibo da aprovação](../../generated/pilares-resume/v01/attack03-pendant-owner-approval-2026-10-08.json).

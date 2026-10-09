@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-10-09T04:49:57.017588+00:00",
+  "status": "APPROVED_CONTEXTUAL_OWNER_REPLY",
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "classification": "IN_PLAN",
+  "frame": "R01",
+  "version": "v02",
+  "sha256": "53f665277345e5a59d093f25e5f3f9ebfd800a1b146c535d0b48513b4e4308f1",
+  "owner_reply": "atena, commit push e continue",
+  "context": "Reply immediately after question approving R01 v02 to generate remaining seven frames. Continue is interpreted as contextual acceptance of the presented gate, with commit/push first.",
+  "scope": "R01 v02 visual acceptance and generation R02-R08, then N03 mandatory gate. Publication authorized separately by explicit commit/push request.",
+  "runtime_admission": false
+}

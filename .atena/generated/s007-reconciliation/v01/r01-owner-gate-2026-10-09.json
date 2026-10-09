@@ -1,0 +1,89 @@
+{
+  "id": "GATE-FILA-022-R01-2026-10-09",
+  "timestamp": "2026-10-09T04:29:56.927915+00:00",
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "checkpoint": "S-007/VFX/FILA-022/R01-APPROVAL",
+  "status": "APPROVED",
+  "frame": "R01",
+  "version": "v02",
+  "candidate": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_fly_00_v02.png",
+  "sha256": "53f665277345e5a59d093f25e5f3f9ebfd800a1b146c535d0b48513b4e4308f1",
+  "visual_inspected": true,
+  "review": ".atena/generated/s007-reconciliation/v01/r01-reference-comparison-2026-10-09.png",
+  "prompts_and_native_audit": ".atena/generated/s007-reconciliation/v01/qr-generation-jobs-2026-10-09.json",
+  "source_instruction": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+  "canonical_source": ".atena/generated/ART-PROMPTS-053-vfx-projeteis-e-explosoes.md",
+  "instruction": "Para cada efeito, gere primeiro o quadro marcado GATE, pare e devolva ao dono.",
+  "visual_review": {
+    "subject": "Thin flying crescent blade with fine jagged lightning along its edge",
+    "view": "flat top-down",
+    "direction": "RIGHT",
+    "tips": "backward LEFT",
+    "readable_at96": true,
+    "no_visible_cuts": true,
+    "no_character_weapon_hand_readable_text": true,
+    "approved_pilot_style_compared": true
+  },
+  "technical_notes": {
+    "native_dimensions": [
+      1254,
+      1254
+    ],
+    "requested_dimensions": [
+      1024,
+      1024
+    ],
+    "outer_border_max_luminance": 2,
+    "maximum_channel_difference": 9,
+    "normalization": "Native bytes preserved; future technical downsample to1024; exact zero RGB not claimed"
+  },
+  "rejected_versions": [
+    {
+      "code": "R01",
+      "effect": "onda_cortante",
+      "name": "onda_cortante_fly_00",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a thin crescent blade of energy, curved with its tips pointing backward to the LEFT because it flies to the RIGHT, with fine jagged lightning crackling along its edge. Frame 1 of 8, fly 00: flight frame 1 of 4 (these four frames loop): the projectile in flight at its normal size, tail streaming behind it.\n\nAttached approved physical pilot is STYLE ONLY for white painted core and soft gray glow. Generate a NEW compact flying crescent blade of energy with fine jagged white/gray lightning crackling along its edge. Tips point backward LEFT while convex leading edge faces RIGHT. Flat face-on ground-plane shape, no perspective or ellipse. Center the projectile near exact canvas center, with generous black margins on every side. Only this first flight frame, normal compact size; do not copy the full-canvas sweep scale of the pilot. No color, weapon, hand, character, readable text, border, ground or scene.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_fly_00_v01.png",
+      "status": "REJECTED_VISUAL",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "generated_at": "2026-10-09T04:27:47.595389+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-ed0ec5e3-9e88-4d00-8d71-a927d02f6f98.png",
+      "sha256": "57cfcf3a79a49fb33ece1f87298351e811ab4029107ba1720e2d2c071bad203a",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        453,
+        311,
+        852,
+        934
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 8,
+      "mean_luminance": 9.581987719043877,
+      "visible_fraction_above12": 0.06728007854928027,
+      "native_bytes_preserved": true,
+      "runtime_admission": false,
+      "rejection_reason": "Crescent shape, scale and rightward direction passed, but fine jagged lightning insufficiently distinguished from painted blade texture at96px; native edit requested before owner gate."
+    }
+  ],
+  "runtime_admission": false,
+  "official_manifest_assets": 202,
+  "manifest_file_sha256": "52384ac0f88ffca25952099d6c7f0e58224e7d235012ea284f55198cc2406f6a",
+  "remaining_native_vfx_frames": 79,
+  "other_R_frames_generated": 0,
+  "next_if_approved": "Generate R02-R08 individually using approved R01: three flight and four impact frames, then N03 mandatory peak gate before remaining radiant pulse frames.",
+  "ranking_return": "PLAN-071 B-006/S-011 preserved",
+  "owner_reply": "atena, commit push e continue",
+  "approval_receipt": ".atena/generated/s007-reconciliation/v01/r01-owner-approval-2026-10-09.json"
+}

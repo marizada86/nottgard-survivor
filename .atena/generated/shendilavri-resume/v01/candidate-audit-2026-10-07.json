@@ -1,0 +1,167 @@
+[
+  {
+    "id": "escravo_de_rivenheart",
+    "version": "v01",
+    "path": ".atena/generated/art-candidates/enemies-shendilavri/escravo_de_rivenheart/escravo_de_rivenheart_idle_00_v01.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": "67a5d956df538883f7d196692b4215c48e467f15fb793482357a9311ad1d0a56",
+    "raw_alpha_bbox": [
+      97,
+      21,
+      1214,
+      1214
+    ],
+    "visible_alpha_threshold": 11,
+    "visible_bbox": [
+      403,
+      66,
+      813,
+      1173
+    ],
+    "solid_bbox": [
+      407,
+      68,
+      805,
+      1172
+    ],
+    "clipped": false,
+    "transparent_pixels": 1299983,
+    "solidity": 0.947583,
+    "human_approval": "pending"
+  },
+  {
+    "id": "sucubo",
+    "version": "v01",
+    "path": ".atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_idle_00_v01.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": "095218f4b25d3bc7088fac39f1c7ee494df7e9b20a9be43be5a674e14a9d5663",
+    "raw_alpha_bbox": [
+      21,
+      21,
+      1218,
+      1226
+    ],
+    "visible_alpha_threshold": 11,
+    "visible_bbox": [
+      284,
+      31,
+      1040,
+      1224
+    ],
+    "solid_bbox": [
+      286,
+      32,
+      1035,
+      1220
+    ],
+    "clipped": false,
+    "transparent_pixels": 1144892,
+    "solidity": 0.947266,
+    "human_approval": "pending"
+  },
+  {
+    "id": "guarda_do_castelo",
+    "version": "v01",
+    "path": ".atena/generated/art-candidates/enemies-shendilavri/guarda_do_castelo/guarda_do_castelo_idle_00_v01.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": "d19ed08c35723b673ccfd54a7e67a4d5c3499370376a492dcb606b7170f37aa7",
+    "raw_alpha_bbox": [
+      63,
+      21,
+      1214,
+      1254
+    ],
+    "visible_alpha_threshold": 11,
+    "visible_bbox": [
+      299,
+      31,
+      945,
+      1224
+    ],
+    "solid_bbox": [
+      305,
+      45,
+      943,
+      1216
+    ],
+    "clipped": false,
+    "transparent_pixels": 1226489,
+    "solidity": 0.952245,
+    "human_approval": "pending"
+  },
+  {
+    "id": "master_of_cruelties",
+    "version": "v02",
+    "path": ".atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_idle_00_v02.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": "fe0ad4addf9f6a063d24a551b782562e94f0e862a6aeb0975224ee0b9e3acb79",
+    "raw_alpha_bbox": [
+      21,
+      19,
+      1216,
+      1230
+    ],
+    "visible_alpha_threshold": 11,
+    "visible_bbox": [
+      210,
+      86,
+      1067,
+      1209
+    ],
+    "solid_bbox": [
+      213,
+      94,
+      1061,
+      1188
+    ],
+    "clipped": false,
+    "transparent_pixels": 1016536,
+    "solidity": 0.956007,
+    "human_approval": "pending"
+  },
+  {
+    "id": "malcanthet",
+    "version": "v01",
+    "path": ".atena/generated/art-candidates/enemies-shendilavri/malcanthet/malcanthet_idle_00_v01.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": "d4fc8f7fd85c922d054da573f6722850fc766abdd16ab7e984e5b9846619d496",
+    "raw_alpha_bbox": [
+      0,
+      7,
+      1230,
+      1254
+    ],
+    "visible_alpha_threshold": 11,
+    "visible_bbox": [
+      166,
+      13,
+      1091,
+      1242
+    ],
+    "solid_bbox": [
+      168,
+      17,
+      1086,
+      1236
+    ],
+    "clipped": false,
+    "transparent_pixels": 865802,
+    "solidity": 0.959811,
+    "human_approval": "pending"
+  }
+]

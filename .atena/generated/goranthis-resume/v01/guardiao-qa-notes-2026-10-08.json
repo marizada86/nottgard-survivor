@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-08",
+  "actor": "guardiao_de_goranthis",
+  "status": "INTEGRATED_LOCAL_VALIDATED",
+  "native_png_versions_preserved": 26,
+  "selected_sources": 20,
+  "official_strips": 4,
+  "rejected": {
+    "move_03_v01": "Same leading leg",
+    "move_05_v01": "Wide contact instead of closing passing",
+    "attack_02_v01": "Three arms",
+    "death_02_v01": "Head and wings rise after death01",
+    "death_04_v01": "Body fall direction reverses",
+    "death_04_v02": "Right wing clips canvas edge"
+  },
+  "selected_corrections": {
+    "move_03": 2,
+    "move_05": 2,
+    "attack_02": 2,
+    "death_02": 2,
+    "death_04": 3
+  },
+  "technical_transform": "Torso anchor offsets for idle/move/attack; attack01 uniform scale1.1; death03-05 ground offsets -40, source RGB/alpha untouched.",
+  "human_acceptance": "Identity approved; cycles technically admitted under approved per-plan scope, human playtest pending."
+}

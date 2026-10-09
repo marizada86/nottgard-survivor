@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-08",
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "request_classification": "IN_PLAN",
+  "status": "ACCEPTED_OWNER_EXCEPTION",
+  "owner_reply": "atena, aprovado, continue",
+  "question": "Aceita esta marcha deslizante como exce\u00e7\u00e3o?",
+  "scope": [
+    "move_03",
+    "move_04"
+  ],
+  "frames": [
+    {
+      "frame": "move_03",
+      "version": 3,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_move_03_v03.png",
+      "sha256": "afe2030984571f7b77a2ea3f12bac8779ccbc15ae9952028795a6ab87168db61"
+    },
+    {
+      "frame": "move_04",
+      "version": 3,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_move_04_v03.png",
+      "sha256": "ab2f0c3915762e1bf871d6b75369879e2cf714128827354f70898f3e1c354c13"
+    }
+  ],
+  "extra_attempts_authorized": false,
+  "exception": "Sliding gait with same foreground leg leading in move03/04; no claim of clear opposite contact.",
+  "preview": ".atena/generated/goranthis-resume/v01/socothbenoth_move_owner_preview.gif",
+  "gate": "GATE-SOCOTHBENOTH-MOVE-2026-10-08"
+}

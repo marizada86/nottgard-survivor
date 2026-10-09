@@ -1,0 +1,14 @@
+{
+  "status": "VALIDATED_READY_TO_COMMIT",
+  "request_classification": "PLAN_DEVIATION",
+  "authorization": "aprovado, commit e pus",
+  "route": "publish-now-then-return",
+  "approval_mode": "per-plan",
+  "checkpoint": "DEV-006/S-002",
+  "base": "a39b6f0be50633c35327584314d52093c29c743d",
+  "branch": "codex/fila-imagens-2026-10-09",
+  "remote_url": "https://github.com/marizada86/nottgard-survivor.git",
+  "native_sources": "Ignored candidates remain local; no force-add.",
+  "scope": "Current R sequence previews, native audit/prompts, N03 approval and publication reconciliation. No main merge.",
+  "return_checkpoint": "S-007/VFX/FILA-022/N-REMAINING"
+}

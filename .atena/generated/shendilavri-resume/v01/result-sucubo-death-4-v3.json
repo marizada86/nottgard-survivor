@@ -1,0 +1,10 @@
+{
+  "id": "sucubo",
+  "state": "death",
+  "index": 4,
+  "version": 3,
+  "prompt": "Create the next settled death frame from reference1, preserving EXACT arm and weapon ownership. Reference1 is near-final fallen pose. Reference2 approved standing design identifies hand binding. Fully dead horizontal on side, closed eyes, head slightly lower, legs folded, wings drooped. The NEAR foreground arm visible at screen center-left must remain EMPTY with open palm resting in front of torso around x690,y1000. It must NEVER hold the sword. The FAR arm behind the torso remains the sword arm: its hand holds the hilt at SCREEN RIGHT beside the head around x990,y960. Show that far forearm and wrist clearly, not a disconnected hand. One curved sword only. Rotate its far wrist so entire curved blade lies diagonally DOWN LEFT, with blade tip around x850,y1130, entirely within canvas instead of extending out the right edge. Preserve its actual blade length/detail. Precisely TWO arms, TWO legs, TWO horns, TWO attached wings, ONE attached tail. Same face, hair, black/gold leather armor and tall boots. Preserve physical sizes and camera, never shrink or zoom. Tail tip curled within x100 or more; all subject including both hands, horns and complete blade comfortably contained in native transparent1254x1254 square. Solid opaque dark fantasy pixel art, transparent background and gaps. No floor, cast shadow, VFX, halos, blur, text, extra limbs or rising pose.",
+  "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-55778d5b-1081-4128-90d2-cd7f61acfb75.png",
+  "workspace_path": "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_death_04_v03.png",
+  "status": "generated_pending_review"
+}

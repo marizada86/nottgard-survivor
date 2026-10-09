@@ -2,7 +2,7 @@
 id: "ART-PROMPTS-053"
 type: "prompts-de-arte"
 title: "VFX de projéteis e explosões (ART-029)"
-status: "pronto para envio depois do piloto; nada gerado"
+status: "Orbe radiante oito candidatas revisadas, P01 aprovada; Orbe arcano oito candidatas revisadas, Q01 v03 aprovada; Onda cortante oito candidatas revisadas, R01 v02 aprovada; push concluído e verificado; N03 v01 pico aprovado; commit/push solicitado antes dos cinco demais N; M03 pendente; EVID-145"
 created: "2026-10-01"
 relations: ["[[PLAN-051-vfx-de-ataques-e-magias-2026-10-01]]", "[[CHATGPT-FILA-022-vfx-projeteis-e-explosoes]]", "[[ART-PROMPTS-051-piloto-vfx-corpo-a-corpo-fisico]]"]
 sources: ["data/weapons.json", "data/abilities.json", "ui/run.gd", "core/divine_visuals.gd"]

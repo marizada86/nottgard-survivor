@@ -1,0 +1,44 @@
+{
+  "rows": [
+    {
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_fly_00_v01.png",
+      "core_hotlight_centroid_proxy_normalized": [
+        0.5368709248981137,
+        0.4946560645874018
+      ],
+      "offset_from_canvas_center_normalized": [
+        0.03687092489811372,
+        -0.0053439354125982
+      ],
+      "note": "Technical hotlight proxy, not exact geometric pivot; native pixels unchanged."
+    },
+    {
+      "version": "v02",
+      "path": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_fly_00_v02.png",
+      "core_hotlight_centroid_proxy_normalized": [
+        0.531140138173482,
+        0.495725869062453
+      ],
+      "offset_from_canvas_center_normalized": [
+        0.031140138173482046,
+        -0.004274130937547027
+      ],
+      "note": "Technical hotlight proxy, not exact geometric pivot; native pixels unchanged."
+    },
+    {
+      "version": "v03",
+      "path": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_fly_00_v03.png",
+      "core_hotlight_centroid_proxy_normalized": [
+        0.5018831330590182,
+        0.5022579475595151
+      ],
+      "offset_from_canvas_center_normalized": [
+        0.001883133059018216,
+        0.002257947559515139
+      ],
+      "note": "Technical hotlight proxy, not exact geometric pivot; native pixels unchanged."
+    }
+  ],
+  "native_sources_unchanged": true
+}

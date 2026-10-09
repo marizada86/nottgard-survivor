@@ -1,0 +1,20 @@
+{
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "checkpoint": "S-007/VFX/FILA-021/E03",
+  "generator": "built-in imagegen",
+  "frame": "E03",
+  "version": "v01",
+  "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a very wide sweeping arc of about 220 degrees made of a bright thick band with short radiating light rays and tiny star-shaped glints along its outer edge, holy and heavy, reach about 45 percent of the image width. Frame 3 of 6, peak: PEAK frame, the brightest and widest: the full shape at its maximum length and thickness, a hot white core with a gray soft halo, a few sparks flying off the tip.\n\nThe attached image is a STYLE REFERENCE ONLY: the approved physical pilot peak. Match its painted line texture, white core and gray glow, but draw the new wider radiant arc of about 220 degrees specified above, with short light rays and tiny star-shaped glints. The arc is centered on the exact image center as its pivot and faces RIGHT. Keep the whole arc, glow, ray ends and sparks inside the square with black margins. Generate this single peak frame only.",
+  "transparent_background": false,
+  "destination": ".atena/generated/art-candidates/vfx/arco_largo_radiante/arco_largo_radiante_peak_v01.png",
+  "reference": {
+    "role": "approved style reference",
+    "path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png",
+    "original_path": "F:/dev/nottgard-survivor/.atena/generated/art-candidates/vfx-pilot/melee_fisico_corte_medio_03_v02.png",
+    "sha256": "a31737e4d14662677063a6b7a9c19681b207b57bfe8a43b00d40e5adaeff9991",
+    "approval_source": ".atena/generated/CHATGPT-FILA-020-piloto-vfx-corpo-a-corpo-fisico.md"
+  },
+  "source": ".atena/generated/CHATGPT-FILA-021-vfx-corpo-a-corpo-excecoes.md",
+  "canonical_source": ".atena/generated/ART-PROMPTS-052-vfx-corpo-a-corpo-excecoes.md"
+}

@@ -1,0 +1,97 @@
+{
+  "date": "2026-10-08",
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "status": "AWAITING_OWNER_DECISION",
+  "checkpoint": "S-006/GORANTHIS/DEATH_TYRANT/DEATH-ANATOMY-DECISION",
+  "reason": "death02/03/04 remain seven visible smaller ocular stalks after three versions; approved identity has eight.",
+  "policy": ".atena/add.yaml autonomy.max_retries: 3",
+  "frames": [
+    {
+      "frame": "idle_00",
+      "version": 1,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_idle_00_v01.png",
+      "sha256": "a5fbce68afbf3cfb6ccd5239f300120e74c8cc9c9e9cf3c15d004e3ce9b58edc",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        230,
+        34,
+        1040,
+        1211
+      ],
+      "solidity": 0.946015674654584,
+      "clipped": false,
+      "visible_smaller_stalks": 8
+    },
+    {
+      "frame": "death_02",
+      "version": 3,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_death_02_v03.png",
+      "sha256": "ed730b26ae3bcdd65d22c94a8a681bf7a5598b96e1c452477d7c98b6f6c88dd5",
+      "size": [
+        1117,
+        1408
+      ],
+      "bbox": [
+        73,
+        179,
+        1116,
+        1362
+      ],
+      "solidity": 0.9823656815482429,
+      "clipped": false,
+      "visible_smaller_stalks": 7
+    },
+    {
+      "frame": "death_03",
+      "version": 3,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_death_03_v03.png",
+      "sha256": "218f66a1cfdd0a51ef9dd43648b53bbfaf19caf64acfe38811a5abb91346882a",
+      "size": [
+        1312,
+        1199
+      ],
+      "bbox": [
+        45,
+        65,
+        1296,
+        1132
+      ],
+      "solidity": 0.9819509546130102,
+      "clipped": false,
+      "visible_smaller_stalks": 7
+    },
+    {
+      "frame": "death_04",
+      "version": 3,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_death_04_v03.png",
+      "sha256": "f315d515d4b9d0636308cb9269e8f7b7ca9df10a8e4e8bdff3c5de68f570a5b7",
+      "size": [
+        1536,
+        1024
+      ],
+      "bbox": [
+        37,
+        147,
+        1477,
+        966
+      ],
+      "solidity": 0.9797905256558386,
+      "clipped": false,
+      "visible_smaller_stalks": 7
+    }
+  ],
+  "review": ".atena/generated/goranthis-resume/v01/death-tyrant-death-anatomy-gate-2026-10-08.png",
+  "official_tyrant_assets_installed": 0,
+  "death05_generated": false,
+  "socothbenoth_cycles_generated": 0,
+  "options": [
+    "Accept seven visible stalks as scoped exception for death02-05",
+    "Defer Death Tyrant and proceed with Socothbenoth",
+    "Authorize one extra attempt per affected frame"
+  ],
+  "return_plan": "PLAN-071 preserved"
+}

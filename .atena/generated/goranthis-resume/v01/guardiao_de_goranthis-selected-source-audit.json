@@ -1,0 +1,382 @@
+[
+  {
+    "state": "attack",
+    "index": 0,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_attack_00_v01.png",
+    "bbox": [
+      185,
+      43,
+      1049,
+      1200
+    ],
+    "solidity": 0.9664113181663868,
+    "clipped": false,
+    "packed_bbox": [
+      60,
+      203,
+      175,
+      357
+    ]
+  },
+  {
+    "state": "attack",
+    "index": 1,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_attack_01_v01.png",
+    "bbox": [
+      71,
+      186,
+      1246,
+      1143
+    ],
+    "solidity": 0.9629643712688696,
+    "clipped": false,
+    "packed_bbox": [
+      63,
+      217,
+      234,
+      357
+    ]
+  },
+  {
+    "state": "attack",
+    "index": 2,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_attack_02_v02.png",
+    "bbox": [
+      21,
+      23,
+      1244,
+      1243
+    ],
+    "solidity": 0.9731642440867898,
+    "clipped": false,
+    "packed_bbox": [
+      56,
+      195,
+      218,
+      357
+    ]
+  },
+  {
+    "state": "attack",
+    "index": 3,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_attack_03_v01.png",
+    "bbox": [
+      350,
+      53,
+      963,
+      1201
+    ],
+    "solidity": 0.9705663582673009,
+    "clipped": false,
+    "packed_bbox": [
+      82,
+      204,
+      163,
+      357
+    ]
+  },
+  {
+    "state": "death",
+    "index": 0,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_death_00_v01.png",
+    "bbox": [
+      273,
+      50,
+      1089,
+      1205
+    ],
+    "solidity": 0.9659651409164858,
+    "clipped": false,
+    "packed_bbox": [
+      75,
+      204,
+      182,
+      357
+    ]
+  },
+  {
+    "state": "death",
+    "index": 1,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_death_01_v01.png",
+    "bbox": [
+      315,
+      79,
+      1026,
+      1197
+    ],
+    "solidity": 0.962541395805225,
+    "clipped": false,
+    "packed_bbox": [
+      81,
+      209,
+      176,
+      357
+    ]
+  },
+  {
+    "state": "death",
+    "index": 2,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_death_02_v02.png",
+    "bbox": [
+      54,
+      475,
+      1238,
+      1171
+    ],
+    "solidity": 0.9723503455922784,
+    "clipped": false,
+    "packed_bbox": [
+      50,
+      264,
+      207,
+      357
+    ]
+  },
+  {
+    "state": "death",
+    "index": 3,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_death_03_v01.png",
+    "bbox": [
+      41,
+      325,
+      1224,
+      1033
+    ],
+    "solidity": 0.9691100014854257,
+    "clipped": false,
+    "packed_bbox": [
+      50,
+      268,
+      207,
+      362
+    ]
+  },
+  {
+    "state": "death",
+    "index": 4,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_death_04_v03.png",
+    "bbox": [
+      32,
+      442,
+      1247,
+      962
+    ],
+    "solidity": 0.9756279292131717,
+    "clipped": false,
+    "packed_bbox": [
+      48,
+      293,
+      209,
+      362
+    ]
+  },
+  {
+    "state": "death",
+    "index": 5,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_death_05_v01.png",
+    "bbox": [
+      31,
+      437,
+      1247,
+      966
+    ],
+    "solidity": 0.9766572235099255,
+    "clipped": false,
+    "packed_bbox": [
+      48,
+      292,
+      209,
+      362
+    ]
+  },
+  {
+    "state": "idle",
+    "index": 0,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_idle_00_v01.png",
+    "bbox": [
+      351,
+      53,
+      943,
+      1194
+    ],
+    "solidity": 0.9664380290220448,
+    "clipped": false,
+    "packed_bbox": [
+      84,
+      206,
+      162,
+      357
+    ]
+  },
+  {
+    "state": "idle",
+    "index": 1,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_idle_01_v01.png",
+    "bbox": [
+      319,
+      17,
+      986,
+      1223
+    ],
+    "solidity": 0.971625965729715,
+    "clipped": false,
+    "packed_bbox": [
+      81,
+      206,
+      164,
+      357
+    ]
+  },
+  {
+    "state": "idle",
+    "index": 2,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_idle_02_v01.png",
+    "bbox": [
+      337,
+      49,
+      967,
+      1197
+    ],
+    "solidity": 0.9702644691279282,
+    "clipped": false,
+    "packed_bbox": [
+      81,
+      206,
+      164,
+      357
+    ]
+  },
+  {
+    "state": "idle",
+    "index": 3,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_idle_03_v01.png",
+    "bbox": [
+      353,
+      49,
+      953,
+      1193
+    ],
+    "solidity": 0.9694153739458767,
+    "clipped": false,
+    "packed_bbox": [
+      83,
+      206,
+      162,
+      357
+    ]
+  },
+  {
+    "state": "move",
+    "index": 0,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_move_00_v01.png",
+    "bbox": [
+      333,
+      30,
+      988,
+      1190
+    ],
+    "solidity": 0.9673421601409413,
+    "clipped": false,
+    "packed_bbox": [
+      81,
+      206,
+      166,
+      357
+    ]
+  },
+  {
+    "state": "move",
+    "index": 1,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_move_01_v01.png",
+    "bbox": [
+      324,
+      59,
+      985,
+      1195
+    ],
+    "solidity": 0.9666868852653988,
+    "clipped": false,
+    "packed_bbox": [
+      79,
+      206,
+      166,
+      357
+    ]
+  },
+  {
+    "state": "move",
+    "index": 2,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_move_02_v01.png",
+    "bbox": [
+      347,
+      45,
+      964,
+      1208
+    ],
+    "solidity": 0.9646763774785908,
+    "clipped": false,
+    "packed_bbox": [
+      81,
+      206,
+      162,
+      357
+    ]
+  },
+  {
+    "state": "move",
+    "index": 3,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_move_03_v02.png",
+    "bbox": [
+      321,
+      26,
+      1009,
+      1183
+    ],
+    "solidity": 0.9687296605988749,
+    "clipped": false,
+    "packed_bbox": [
+      82,
+      206,
+      172,
+      356
+    ]
+  },
+  {
+    "state": "move",
+    "index": 4,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_move_04_v01.png",
+    "bbox": [
+      322,
+      33,
+      1014,
+      1170
+    ],
+    "solidity": 0.9636863135786017,
+    "clipped": false,
+    "packed_bbox": [
+      82,
+      206,
+      174,
+      357
+    ]
+  },
+  {
+    "state": "move",
+    "index": 5,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_move_05_v02.png",
+    "bbox": [
+      321,
+      22,
+      1012,
+      1199
+    ],
+    "solidity": 0.9701407175524078,
+    "clipped": false,
+    "packed_bbox": [
+      80,
+      206,
+      169,
+      357
+    ]
+  }
+]

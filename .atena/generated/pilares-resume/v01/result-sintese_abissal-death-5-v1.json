@@ -1,0 +1,16 @@
+{
+  "job": {
+    "id": "sintese_abissal",
+    "state": "death",
+    "index": 5,
+    "version": 1,
+    "date": "2026-10-08",
+    "refs": [
+      "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_death_04_v01.png"
+    ],
+    "prompt": "Create exactly ONE final-settle animation frame from this attached death04. Preserve its EXACT collapsed corpse identity, proportions, camera, pose, scale, colours and connections. Frame death05 is a tiny final settle only: lower the head/crown slightly without lifting any body part. Keep the ONE original wing attached backLEFT, ONE original cage arm and TWO original lamp arms, exactly TWO attached green lamps, crown LOWRIGHT and connected WHITE ROOT base towardLEFT. Core OFF nearly BLACK with no luminous star or purple point; all little eye apertures closed dark, not glowing. Preserve original gold bells as plain gold with no additional green lamp. No reset/rising or humanoid legs. Same pixel-art corpse; entire silhouette with generous transparent native-alpha margins; no ground, cast shadow, halo, loose particles, rays or text."
+  },
+  "source_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-662356ad-e1dc-417c-af29-1cc9b393257f.png",
+  "workspace_path": "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_death_05_v01.png",
+  "output_hint": "Generated images are saved to C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be as C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-662356ad-e1dc-417c-af29-1cc9b393257f.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+}

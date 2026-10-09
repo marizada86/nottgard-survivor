@@ -32,6 +32,7 @@ previous_plan_cursor:
   current: 'PLAN-059 (SPEC-125) commitado e publicado (05264f0, 1392627) em 2026-10-05; o playtest decide Docas, Molor e fases finais.'
   next: 'Retomar PLAN-053 (imagens, Shu: attack_02, death_03, death_04) e/ou abrir spec de balanceamento BAL-018 (precisa de linha de base do bot por heroi). Push da main (1 a 3 commits a frente) exige aprovacao.'
 local_git_receipts:
+  - {plan: PLAN-083, request_classification: PLAN_DEVIATION, deviation: DEV-021, route: execute-now-and-return, authorization: "aprovado, seguir recomendacoes; depois: aprovado, faca o commit do merge (2026-10-09)", branch: "merge/animacoes-shendilavri-2026-10-09", scope: "merge de codex/fila-imagens-2026-10-09 (animacoes de Shendilavri, Goranthis e Pilares; SPEC-121/PLAN-053) na main ae8368b, feito em worktree isolado F:\\dev\\nottgard-survivor-merge", conflicts: "8, so documentacao/estado e data/cursor.json (mantida a da main); plan.yaml da main preservado", verification: "importacao limpa, testes 0 falhas, fumaca 9 fases ok, export Windows ok (exe nao executado)", build: "build/NottgardSurvivors-Playtest 0.4.0 anim-shendilavri.exe (ae8368b+, local)", pushed: false, note: "Registro feito post-hoc: o desvio foi aprovado pelo dono mas persistido so no commit. Main nao atualizada; push e fast-forward da main exigem aprovacao separada. PLAN-083 segue ativo."}
   - {plan: PLAN-084, batch: "push", authorization: "atena, opcao 1, faca o commit do reparo e o push (2026-10-09)", branch: main, commits: [ca53950], pushed: true, push_range: "325982b..ca53950", scope: "18 commits de varias sessoes (MEC-001, MEC-050, mapas 84x84 e segredos do PLAN-083, nevoa MEC-059/060); ca53950 = reparo do core/battle.gd, que nao compilava no HEAD por blocos do SPEC-157 fora do lugar (commit 5828a4a)", verification: "checkout limpo do HEAD reparado: testes 0 falhas, smoke ok", ci: "Build and Release disparado pelo push; resultado nao verificado aqui (gh ausente)", note: "O release latest passa a apontar para ca53950; a versao segue 0.4.0. Ficaram locais: trechos do SPEC-160 em core/battle.gd e demais arquivos do PLAN-086, assets novos (arlindo, erik, modify_memory, navios_em_chamas, heroes_screen/kayron)."}
   - {plan: PLAN-084, deviation: DEV-019, authorization: "atena, commit (2026-10-09)", branch: main, commits: [3c55756, 0d74969, 07e885a], pushed: false, evidence: EVID-220, scope: "3c55756 = MEC-059/MEC-060 (codigo, so os trechos da nevoa em core/battle.gd); 0d74969 = ferramentas (bot e captura); 07e885a = SPEC-158, EVID-220, PLAN-084 e cartoes", note: "Sem push, build nem exportacao. Mudancas de outras sessoes ficaram fora (SPEC-157 em battle.gd, DEV-018/020, MEC-061 a MEC-063)."}
   - {plan: PLAN-081, batch: "fechamento (push 2)", authorization: "atena, faca o push (2026-10-09)", branch: main, commits: [e1933be, 325982b], pushed: true, push_range: "aa496f2..325982b", scope: "e1933be = BUG-038 altar oco sobre a estrada (SPEC-153, EVID-210, ART-044; outra sessao); 325982b = fecha o PLAN-081, EVID-209 e retorno ao PLAN-071", ci: "novo Build and Release disparado pelo push; resultado nao verificado aqui", note: "O release latest passa a mostrar 325982b no titulo; a versao segue 0.4.0."}
@@ -55,6 +56,13 @@ local_git_receipts:
     pushed: true
     note: 'Estado operacional local reconciliado apos o commit; snapshot do checkpoint Git no plano especifico registra a preparacao anterior.'
 suspension:
+  ranking_return_after_images:
+    suspended_plan: PLAN-071
+    state_file: '.atena/state/plan-071-playtest-ranking.yaml'
+    checkpoint: B-006/S-011
+    prior_status: LOCAL_DELIVERED_AWAITING_DEVICE_ACCEPTANCE
+    snapshot: '.atena/generated/shendilavri-resume/v01/plan-before-resume-2026-10-07.yaml'
+    approval: '2026-10-07: dono respondeu atena, continue apos pergunta explicita sobre retomar imagens preservando retorno ao ranking.'
   playtest_ranking_return:
     suspended_plan: PLAN-070
     latest_status: COMPLETED_GENERATION_VISUALLY_APPROVED
@@ -89,7 +97,7 @@ suspension:
     launcher: '.atena/generated/durvall-articulated/v01/Abrir-teste-Durvall-articulado.cmd'
     approval: '2026-10-06: sim, mobile agora; retorno a Durvall apos mobile.'
   suspended_plan_state_file: '.atena/state/plan-053-imagens.yaml'
-  note: 'PLAN-053 (imagens, SPEC-121) suspenso; cota de imagens liberou 2026-10-04 10:28 BRT; retoma na Shu (attack_02, death_03, death_04).'
+  note: 'PLAN-053 retomado; biomas ate Pilares completos localmente. S-007 onda cortante completa como candidata; aguardando gate humano N03. PLAN-071 preservado. PLAN-071 suspenso com retorno acima.'
 deferred_requests:
   - id: DEV-018
     request: "Preparar um plano para introduzir Arlindo Orlando (importante na historia) como personagem jogavel, como Erik Blackthorn."
@@ -373,3 +381,26 @@ proposed_plans:
   - {id: PLAN-067, spec_id: SPEC-134, state_file: '.atena/state/plan-067-bau-mimico-e-item.yaml', status: IMPLEMENTED_COMMITTED_PUSHED, commit: ced9d8e, approval_mode: per-plan, approved_at: '2026-10-06', note: 'Side-plan (BUG-030 e BUG-031, relato do Manzi); EVID-173; nao e o active_plan; commit so com aprovacao.'}
   - {id: PLAN-068, spec_id: SPEC-135, state_file: '.atena/state/plan-068-bau-e-portal-fora-de-bloqueio.yaml', status: IMPLEMENTED_COMMITTED_PUSHED, commit: 9f32c8a, approval_mode: per-plan, approved_at: '2026-10-06', note: 'Side-plan P0 (BUG-032, relato do Vitao); EVID-174; commit, push e build so com aprovacao; nao e o active_plan.'}
   - {id: PLAN-069, spec_id: SPEC-136, state_file: '.atena/state/plan-069-grazzt-limpa-o-mapa.yaml', status: IMPLEMENTED_COMMITTED_PUSHED, commit: f17fae9, approval_mode: per-plan, approved_at: '2026-10-06', note: 'Side-plan (MEC-051, relato do Manzi); EVID-175; commit separado do PLAN-068, push e build so com aprovacao; nao e o active_plan.'}
+
+image_git_publication:
+  id: DEV-006
+  status: PUBLISHED_VERIFIED
+  mode: per-plan
+  checkpoint: DEV-006/S-001
+  authorization: "atena, commit push e continue"
+  route: publish-now-then-return
+  receipt: .atena/generated/image-queue-publication-2026-10-09/publication-plan.json
+  return_checkpoint: S-007/VFX/FILA-022/R-REMAINING
+  exact_owner_reply: "Autorizar este lote e destino"
+  remote_sha: a39b6f0be50633c35327584314d52093c29c743d
+  verification_receipt: .atena/generated/image-queue-publication-2026-10-09/publication-receipt.json
+
+image_git_n03_publication:
+  id: DEV-006
+  status: VALIDATED_READY_TO_COMMIT
+  mode: per-plan
+  checkpoint: DEV-006/S-002
+  authorization: "aprovado, commit e pus"
+  route: publish-now-then-return
+  receipt: .atena/generated/n03-publication-2026-10-09/plan.json
+  return_checkpoint: S-007/VFX/FILA-022/N-REMAINING

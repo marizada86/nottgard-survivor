@@ -1,0 +1,10 @@
+{
+  "id": "sucubo",
+  "state": "move",
+  "index": 3,
+  "version": 3,
+  "prompt": "Correct ONLY the walking leg pose of this sprite. Retain the entire identity and upper body facing RIGHT exactly as shown. IMPORTANT: do NOT retain its current forward exposed-thigh pose. Rebuild the two connected leg postures as follows on the SAME 1254x1254 canvas: near leg with visible red bare thigh and gold garter starts at the hip around x660,y600 and slopes BACK DOWN LEFT to its armored knee around x480,y870, continuing to its trailing boot around x410,y1120 with heel lifted. The FAR leg emerges behind the hip around x690,y650 and strides FORWARD DOWN RIGHT to its knee around x820,y880 and its planted boot around x930,y1150. Near red thigh is on the LEFT side of the lower body, far boot is on the RIGHT side. Precisely two legs total with correct anatomical connections. This is the opposite walking contact, not the same pose with wider stance. The red bare thigh with garter MUST NOT cross downward toward screen-right. Preserve head size, torso, two arms, sword in the same screen-right hand, two wings, two horns, single attached tail, black and gold armor and boots, pixel art palette, scale and camera. Adjust attached skirt cloth to fit changed legs. Full isolated sprite, generous margins, fully native transparent alpha background and gaps. No ground, shadow, halos, blur, streaks, text or VFX. Do not mirror the whole sprite or swap sword hand.",
+  "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-01a0eb3c-ccf9-4adb-94e6-cb260d4ad3b6.png",
+  "workspace_path": "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_move_03_v03.png",
+  "status": "generated_pending_review"
+}

@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-07",
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "actor": "sucubo",
+  "status": "PREVIEW_READY_AWAITING_WALK_DECISION",
+  "selected_frames": 20,
+  "new_selected_frames": 19,
+  "preserved_pngs": 30,
+  "generated_attempts": 30,
+  "source_audit": ".atena/generated/shendilavri-resume/v01/sucubo-selected-source-audit.json",
+  "strips": [
+    {
+      "state": "idle",
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/sucubo/strips/idle.png",
+      "size": [
+        1024,
+        384
+      ],
+      "sha256": "98e4c074dbd72d3e3458d680f0b007ae963e94351e09a654658b7aa25a91460a",
+      "solidity": 0.9538205323623226
+    },
+    {
+      "state": "move",
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/sucubo/strips/move.png",
+      "size": [
+        1536,
+        384
+      ],
+      "sha256": "515186cf050e4efcfcfdefd0960292c5e79236ff683b8815882f66bc7f98f4f0",
+      "solidity": 0.9550390347764371
+    },
+    {
+      "state": "attack",
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/sucubo/strips/attack.png",
+      "size": [
+        1024,
+        384
+      ],
+      "sha256": "8d1485f1005fd94d97c07dfd5548039900d966c37aa781bb39d528cb7a3e6e89",
+      "solidity": 0.9548662609318264
+    },
+    {
+      "state": "death",
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/sucubo/strips/death.png",
+      "size": [
+        1536,
+        384
+      ],
+      "sha256": "47d59a24f2e58151bee9752096866fe0f8e2bffc681cd07524aba2a0c8447dc7",
+      "solidity": 0.9649701971572673
+    }
+  ],
+  "installed": false,
+  "owner_decision": ".atena/generated/shendilavri-resume/v01/sucubo-walk-decision.json",
+  "review": ".atena/generated/shendilavri-resume/v01/sucubo_compact_review.png",
+  "death_note": "death04 v03 keeps blade in far hand. death05 v03 existing fabric settles over fallen body; plate armor v02 rejected. Technical anchors -66/-70 keep body stable when blade points below body. No alpha cleanup or redraw.",
+  "runtime_checks": "Not run: official admission waits for owner walk exception.",
+  "record_links_verified": 14,
+  "admission_guard_checked": "Installer rejected PENDING_OWNER_DECISION sucubo/move04 before writes; official view/test/manifest hashes unchanged.",
+  "git_diff_check": "Passed, no whitespace errors; CRLF normalization warnings only."
+}

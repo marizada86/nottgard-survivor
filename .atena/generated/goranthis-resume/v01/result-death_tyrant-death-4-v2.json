@@ -1,0 +1,17 @@
+{
+  "id": "death_tyrant",
+  "state": "death",
+  "index": 4,
+  "version": 2,
+  "date": "2026-10-08",
+  "refs": [
+    "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_death_04_v01.png",
+    "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_move_02_v02.png",
+    "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_idle_00_v01.png"
+  ],
+  "prompt": "Use case: precise-object-edit. Image1 fully fallen death pose is edit target; image2 and3 show original anatomy with EIGHT small ocular stalks. Image1 has only SIX small tips (three left, one top, two right). Restore the TWO missing LOWER RIGHT original ocular stalks below the two existing right stalks, beside/behind lower humanoid face. Keep all SIX existing stalks/tips and add just TWO right lower ones, firmly attached, drooping/resting LOW beside sphere with their eyes FULLY CLOSED. Final THREE LEFT + ONE TOP + FOUR RIGHT = EIGHT small attached ocular stalks/tips, all CLOSED; central large eye also CLOSED unchanged. Do not open eye or add blue light. Preserve this exact fully collapsed low pose with sphere and lower humanoid head LOW atRIGHT and long wine robe/chains spreadLEFT; TWO resting original human arms/hands only, spikes gold symbols mouth/beard tendrils intact. Reframe a WIDER canvas with generous transparent margins on all sides, whole rightmost tips and resting right hand restored complete, no clipping. Uniform body scaling for framing only. Character remains fully fallen, no upright/rising/hover. Opaque solid silhouette and native alpha transparent background, same crisp dark fantasy pixelart. No shadow/glow/particles/rays/new prop/legs/text.",
+  "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-7a2eb82f-6cc2-4a5d-9cb9-f671069fb601.png",
+  "workspace_path": "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_death_04_v02.png",
+  "output_hint": "Generated images are saved to C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be as C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-7a2eb82f-6cc2-4a5d-9cb9-f671069fb601.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "error": null
+}

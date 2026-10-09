@@ -1,0 +1,17 @@
+{
+  "id": "death_tyrant",
+  "state": "death",
+  "index": 1,
+  "version": 1,
+  "date": "2026-10-08",
+  "refs": [
+    "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/assets/enemies/death_tyrant.png",
+    "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_idle_00_v01.png",
+    "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_death_00_v01.png"
+  ],
+  "prompt": "Create exactly ONE complete animation sprite of the approved Death Tyrant. Image1 static identity; image2 approved idle00 fixes proportions and camera. Preserve gray-purple SPIKED ocular SPHERE, ONE central BLUE eye with vertical pupil, EXACTLY EIGHT attached ocular stalks with ONE smaller eye each: eight stalks/eight small eyes, never seven/nine/ten. Original small-eye layout has THREE stalks on LEFT, ONE above CENTER, FOUR on RIGHT including the LOWEST eighth eye beside the lower humanoid face. Preserve all eight original stalks and their distinct tips in every pose; no lowestRIGHT omission. Retain original deformed humanoid FACE below sphere, TWO hanging withered human ARMS/hands, long tattered black-purple robe panels, gold symbols/chains/pendants and original mouth/beard tendrils. NO LEGS or invented limbs. Match camera3/4 facingRIGHT and lower human face lookingRIGHT; same physical body scale/palette/crisp dark fantasy isometric pixelart. One isolated opaque solid character with native alpha transparent background, full silhouette including ALL stalk tips, spikes, hands and cloth/chain ends inside generous transparent margins8% all sides. Eyes/blue illumination stays INSIDE eyes, no bloom/rays/projectile. No ground/shadow, mist, detached particles/effects, new props, text, UI or second character. POSE death_01: Sag deeper: central eye nearly closed, four lower stalk-eyes CLOSED, four upper stalk-eyes half-open; exactly eight original stalks droop, sphere lowers, lower humanoid face bows, two arms drop. Image3 is previous death pose: continue lowering its body without recovery or mirroring.",
+  "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-213040ea-c148-46eb-b18b-b1f5d978cb56.png",
+  "workspace_path": "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_death_01_v01.png",
+  "output_hint": "Generated images are saved to C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be as C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-213040ea-c148-46eb-b18b-b1f5d978cb56.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "error": null
+}

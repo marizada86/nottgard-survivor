@@ -2,11 +2,14 @@ extends RefCounted
 const Queue := preload("res://core/evidence_queue.gd")
 
 func run() -> Array:
-	var path := "user://queue-test.json"
+	var directory := "res://.atena/generated/test-state"
+	DirAccess.make_dir_recursive_absolute(directory)
+	var path := directory + "/queue-test.json"
 	DirAccess.remove_absolute(path)
 	var queue = Queue.new(path)
 	var failures: Array = []
-	queue.enqueue("run", "/api/playtest/runs", {"run": {"outcome": "incomplete"}})
+	if not queue.enqueue("run", "/api/playtest/runs", {"run": {"outcome": "incomplete"}}):
+		return ["fila de teste nao conseguiu gravar arquivo local"]
 	var revision: String = queue.entries[0].revision
 	queue.enqueue("run", "/api/playtest/runs", {"run": {"outcome": "won"}})
 	queue.acknowledge("run", revision)

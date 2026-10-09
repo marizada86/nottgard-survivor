@@ -1,0 +1,382 @@
+[
+  {
+    "state": "attack",
+    "index": 0,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/guarda_do_castelo/guarda_do_castelo_attack_00_v01.png",
+    "bbox": [
+      257,
+      29,
+      1198,
+      1225
+    ],
+    "solidity": 0.9532803239943467,
+    "clipped": false,
+    "packed_bbox": [
+      108,
+      227,
+      210,
+      356
+    ]
+  },
+  {
+    "state": "attack",
+    "index": 1,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/guarda_do_castelo/guarda_do_castelo_attack_01_v01.png",
+    "bbox": [
+      61,
+      129,
+      1245,
+      1192
+    ],
+    "solidity": 0.959352070863101,
+    "clipped": false,
+    "packed_bbox": [
+      106,
+      242,
+      234,
+      356
+    ]
+  },
+  {
+    "state": "attack",
+    "index": 2,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/guarda_do_castelo/guarda_do_castelo_attack_02_v01.png",
+    "bbox": [
+      65,
+      125,
+      1239,
+      1205
+    ],
+    "solidity": 0.9527920420870947,
+    "clipped": false,
+    "packed_bbox": [
+      105,
+      240,
+      232,
+      357
+    ]
+  },
+  {
+    "state": "attack",
+    "index": 3,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/guarda_do_castelo/guarda_do_castelo_attack_03_v01.png",
+    "bbox": [
+      353,
+      20,
+      948,
+      1226
+    ],
+    "solidity": 0.959127850916032,
+    "clipped": false,
+    "packed_bbox": [
+      106,
+      227,
+      170,
+      357
+    ]
+  },
+  {
+    "state": "death",
+    "index": 0,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/guarda_do_castelo/guarda_do_castelo_death_00_v01.png",
+    "bbox": [
+      250,
+      41,
+      1028,
+      1209
+    ],
+    "solidity": 0.9586144153840208,
+    "clipped": false,
+    "packed_bbox": [
+      86,
+      230,
+      171,
+      357
+    ]
+  },
+  {
+    "state": "death",
+    "index": 1,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/guarda_do_castelo/guarda_do_castelo_death_01_v01.png",
+    "bbox": [
+      110,
+      30,
+      1097,
+      1211
+    ],
+    "solidity": 0.9642444820842813,
+    "clipped": false,
+    "packed_bbox": [
+      75,
+      229,
+      182,
+      357
+    ]
+  },
+  {
+    "state": "death",
+    "index": 2,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/guarda_do_castelo/guarda_do_castelo_death_02_v01.png",
+    "bbox": [
+      85,
+      252,
+      1150,
+      1180
+    ],
+    "solidity": 0.9665482858817592,
+    "clipped": false,
+    "packed_bbox": [
+      71,
+      257,
+      186,
+      356
+    ]
+  },
+  {
+    "state": "death",
+    "index": 3,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/guarda_do_castelo/guarda_do_castelo_death_03_v01.png",
+    "bbox": [
+      70,
+      333,
+      1222,
+      1139
+    ],
+    "solidity": 0.9603504862644554,
+    "clipped": false,
+    "packed_bbox": [
+      66,
+      269,
+      191,
+      357
+    ]
+  },
+  {
+    "state": "death",
+    "index": 4,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/guarda_do_castelo/guarda_do_castelo_death_04_v01.png",
+    "bbox": [
+      22,
+      405,
+      1235,
+      1096
+    ],
+    "solidity": 0.9702059429988236,
+    "clipped": false,
+    "packed_bbox": [
+      63,
+      282,
+      194,
+      356
+    ]
+  },
+  {
+    "state": "death",
+    "index": 5,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/guarda_do_castelo/guarda_do_castelo_death_05_v02.png",
+    "bbox": [
+      35,
+      420,
+      1238,
+      1095
+    ],
+    "solidity": 0.9714977991090369,
+    "clipped": false,
+    "packed_bbox": [
+      64,
+      284,
+      193,
+      357
+    ]
+  },
+  {
+    "state": "idle",
+    "index": 0,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/guarda_do_castelo/guarda_do_castelo_idle_00_v01.png",
+    "bbox": [
+      299,
+      31,
+      945,
+      1224
+    ],
+    "solidity": 0.9522454900971363,
+    "clipped": false,
+    "packed_bbox": [
+      100,
+      228,
+      170,
+      357
+    ]
+  },
+  {
+    "state": "idle",
+    "index": 1,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/guarda_do_castelo/guarda_do_castelo_idle_01_v01.png",
+    "bbox": [
+      285,
+      29,
+      952,
+      1228
+    ],
+    "solidity": 0.9553150344041854,
+    "clipped": false,
+    "packed_bbox": [
+      99,
+      228,
+      170,
+      357
+    ]
+  },
+  {
+    "state": "idle",
+    "index": 2,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/guarda_do_castelo/guarda_do_castelo_idle_02_v01.png",
+    "bbox": [
+      299,
+      28,
+      957,
+      1223
+    ],
+    "solidity": 0.9579154191050253,
+    "clipped": false,
+    "packed_bbox": [
+      100,
+      228,
+      170,
+      357
+    ]
+  },
+  {
+    "state": "idle",
+    "index": 3,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/guarda_do_castelo/guarda_do_castelo_idle_03_v01.png",
+    "bbox": [
+      300,
+      32,
+      950,
+      1229
+    ],
+    "solidity": 0.9576347149145695,
+    "clipped": false,
+    "packed_bbox": [
+      100,
+      228,
+      170,
+      357
+    ]
+  },
+  {
+    "state": "move",
+    "index": 0,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/guarda_do_castelo/guarda_do_castelo_move_00_v01.png",
+    "bbox": [
+      294,
+      29,
+      1009,
+      1178
+    ],
+    "solidity": 0.955553674723761,
+    "clipped": false,
+    "packed_bbox": [
+      61,
+      228,
+      141,
+      357
+    ]
+  },
+  {
+    "state": "move",
+    "index": 1,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/guarda_do_castelo/guarda_do_castelo_move_03_v01.png",
+    "bbox": [
+      276,
+      31,
+      984,
+      1179
+    ],
+    "solidity": 0.9536645841871106,
+    "clipped": false,
+    "packed_bbox": [
+      64,
+      228,
+      144,
+      357
+    ]
+  },
+  {
+    "state": "move",
+    "index": 2,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/guarda_do_castelo/guarda_do_castelo_move_02_v01.png",
+    "bbox": [
+      326,
+      32,
+      964,
+      1211
+    ],
+    "solidity": 0.9540698379803452,
+    "clipped": false,
+    "packed_bbox": [
+      85,
+      228,
+      155,
+      357
+    ]
+  },
+  {
+    "state": "move",
+    "index": 3,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/guarda_do_castelo/guarda_do_castelo_move_04_v01.png",
+    "bbox": [
+      255,
+      27,
+      1044,
+      1158
+    ],
+    "solidity": 0.9566017322115845,
+    "clipped": false,
+    "packed_bbox": [
+      48,
+      228,
+      138,
+      357
+    ]
+  },
+  {
+    "state": "move",
+    "index": 4,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/guarda_do_castelo/guarda_do_castelo_move_01_v01.png",
+    "bbox": [
+      281,
+      18,
+      972,
+      1177
+    ],
+    "solidity": 0.9538443273983431,
+    "clipped": false,
+    "packed_bbox": [
+      77,
+      229,
+      153,
+      357
+    ]
+  },
+  {
+    "state": "move",
+    "index": 5,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/guarda_do_castelo/guarda_do_castelo_move_05_v01.png",
+    "bbox": [
+      299,
+      30,
+      982,
+      1196
+    ],
+    "solidity": 0.9557619299705059,
+    "clipped": false,
+    "packed_bbox": [
+      72,
+      229,
+      147,
+      357
+    ]
+  }
+]

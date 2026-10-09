@@ -1,0 +1,70 @@
+{
+  "status": "PASSED",
+  "links": [
+    {
+      "document": ".atena/evidence/s007-orbe-arcano-completo-r01-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/q01-owner-approval-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-orbe-arcano-completo-r01-gate-2026-10-09.md",
+      "target": "../vault/canon/ASSET-APPROVAL-REGISTER-028-vfx-orbe-arcano-2026-10-09.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-orbe-arcano-completo-r01-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/orbe-arcano-sequence-audit-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-orbe-arcano-completo-r01-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/orbe-arcano-eight-frame-review-2026-10-09.png",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-orbe-arcano-completo-r01-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/orbe-arcano-flight-review-2026-10-09.gif",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-orbe-arcano-completo-r01-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/orbe-arcano-impact-review-2026-10-09.gif",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-orbe-arcano-completo-r01-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/r01-owner-gate-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-orbe-arcano-completo-r01-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/r01-reference-comparison-2026-10-09.png",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-orbe-arcano-completo-r01-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/qr-generation-jobs-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-orbe-arcano-completo-r01-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/r01-v01-rejected-lightning-review-2026-10-09.png",
+      "exists": true
+    },
+    {
+      "document": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-028-vfx-orbe-arcano-2026-10-09.md",
+      "target": "../../generated/s007-reconciliation/v01/q01-owner-approval-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-028-vfx-orbe-arcano-2026-10-09.md",
+      "target": "../../generated/art-candidates/vfx/orbe_arcano/orbe_arcano_fly_00_v03.png",
+      "exists": true
+    }
+  ],
+  "source_hashes_verified": 9,
+  "rejected_native_hashes_verified": 1,
+  "manifest_assets": 202,
+  "manifest_sha256": "52384ac0f88ffca25952099d6c7f0e58224e7d235012ea284f55198cc2406f6a",
+  "gate": "GATE-FILA-022-R01-2026-10-09"
+}

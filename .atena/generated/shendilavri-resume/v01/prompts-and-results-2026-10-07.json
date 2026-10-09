@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-07",
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "classification": "PLAN_DEVIATION",
+  "owner_authorization": "atena, continue após pergunta explícita sobre retomar imagens agora e preservar retorno PLAN-071",
+  "approval_mode": "per-plan",
+  "calls": [
+    {
+      "id": "guarda_do_castelo",
+      "index": 3,
+      "version": 1,
+      "prompt": "Create ONE fullbody neutral IDLE game sprite using attachedstatic asEXACTidentityreference, preserve silhouette/anatomy/palette/costume/props details. Threequarterfront facingRIGHT darkfantasyisometricpixelart, crisppixelcontrolleddithering, opaquesolidbody nativefullytransparentalpha backgroundANDgaps. Square1254x1254canvas, WHOLE silhouette center withATLEAST8% EMPTY TRANSPARENT MARGINS onALLsides; no clipping. No aura/halo/fog/glow/floor/ground/shadow/particles/motionlines/effects/blur/text/UI/othercharacters. Attachedcloth/chains/wings/weaponssolidandreadable. Black spikedplate armoredknight TWOarms TWOlegs hornedhelmet crimsoncape, SCREENLEFT handholds ONE SAME long serratedSPEAR supportednearfeet, SCREENRIGHT emptyhand. Entire spearfromtiptobutt andhelmet insidecanvas. Neutralupright.",
+      "tool": "image_gen.imagegen",
+      "reference": "assets/enemies/guarda_do_castelo.png",
+      "output": "guarda_do_castelo/guarda_do_castelo_idle_00_v01.png"
+    },
+    {
+      "id": "master_of_cruelties",
+      "index": 4,
+      "version": 1,
+      "prompt": "Create ONE fullbody neutral IDLE game sprite using attachedstatic asEXACTidentityreference, preserve silhouette/anatomy/palette/costume/props details. Threequarterfront facingRIGHT darkfantasyisometricpixelart, crisppixelcontrolleddithering, opaquesolidbody nativefullytransparentalpha backgroundANDgaps. Square1254x1254canvas, WHOLE silhouette center withATLEAST8% EMPTY TRANSPARENT MARGINS onALLsides; no clipping. No aura/halo/fog/glow/floor/ground/shadow/particles/motionlines/effects/blur/text/UI/othercharacters. Attachedcloth/chains/wings/weaponssolidandreadable. Tall wingeddemon TWOarms TWOlegs TWOlargeblackredbatwings, hornedhead with pale face/goldfacearmor, attached goldsunornamentchest, longblackcrimsonrobes/armor, longclawedhands. Neutralupright semiopenwings allwingtipsclawsfeetintact, preserve referenceface/anatomy no maskreplacement.",
+      "tool": "image_gen.imagegen",
+      "reference": "assets/enemies/master_of_cruelties.png",
+      "output": "master_of_cruelties/master_of_cruelties_idle_00_v01.png",
+      "selected": false,
+      "rejection": "Tallest horn touches upper edge"
+    },
+    {
+      "id": "master_of_cruelties",
+      "index": 4,
+      "version": 2,
+      "prompt": "Create ONE fullbody neutral IDLE game sprite using attachedstatic asEXACTidentityreference, preserve silhouette/anatomy/palette/costume/props details. Threequarterfront facingRIGHT darkfantasyisometricpixelart, crisppixelcontrolleddithering, opaquesolidbody nativefullytransparentalpha backgroundANDgaps. Square1254x1254canvas, WHOLE silhouette center withATLEAST8% EMPTY TRANSPARENT MARGINS onALLsides; no clipping. No aura/halo/fog/glow/floor/ground/shadow/particles/motionlines/effects/blur/text/UI/othercharacters. Attachedcloth/chains/wings/weaponssolidandreadable. Tall wingeddemon TWOarms TWOlegs TWOlargeblackredbatwings, hornedhead with pale face/goldfacearmor, attached goldsunornamentchest, longblackcrimsonrobes/armor, longclawedhands. Neutralupright semiopenwings allwingtipsclawsfeetintact, preserve referenceface/anatomy no maskreplacement.\nCRITICAL FRAMING CORRECTION: Preserve this exact identity and pose, but reduce the entire character's scale within the square canvas to occupy at most 78 percent of canvas height. Every horn tip, wingtip and foot must be completely visible, with a minimum 10 percent genuinely empty transparent margin ABOVE the tallest horn and BELOW both feet and at both sides. Restore the missing tallest horn tip. No pixels touching canvas edges. Do not add halo, shadow or background.",
+      "tool": "image_gen.imagegen",
+      "references": [
+        "assets/enemies/master_of_cruelties.png",
+        ".atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_idle_00_v01.png"
+      ],
+      "output": "master_of_cruelties/master_of_cruelties_idle_00_v02.png",
+      "selected": true
+    },
+    {
+      "id": "malcanthet",
+      "index": 5,
+      "version": 1,
+      "prompt": "Create ONE fullbody neutral IDLE game sprite using attachedstatic asEXACTidentityreference, preserve silhouette/anatomy/palette/costume/props details. Threequarterfront facingRIGHT darkfantasyisometricpixelart, crisppixelcontrolleddithering, opaquesolidbody nativefullytransparentalpha backgroundANDgaps. Square1254x1254canvas, WHOLE silhouette center withATLEAST8% EMPTY TRANSPARENT MARGINS onALLsides; no clipping. No aura/halo/fog/glow/floor/ground/shadow/particles/motionlines/effects/blur/text/UI/othercharacters. Attachedcloth/chains/wings/weaponssolidandreadable. Adult red demonqueen TWOarms TWOlegs TWOlargeblackredbatwings ONElongtail TWOcurvedhorns/crown blackgoldarmor rubyaccents tallboots. SCREENLEFTemptyhandextended, SCREENRIGHThandholds SAME amethystmirrorSCEPTER. Neutralupright, allwingtips/tailtip/crownhorns/scepter/feetinsidecanvas, noextraweapons.",
+      "tool": "image_gen.imagegen",
+      "reference": "assets/enemies/malcanthet.png",
+      "output": "malcanthet/malcanthet_idle_00_v01.png"
+    }
+  ],
+  "original_candidates": {
+    "source_replica": "F:/dev/nottgard-survivor/.atena/generated/art-candidates/enemies-shendilavri",
+    "ids": [
+      "escravo_de_rivenheart",
+      "sucubo"
+    ],
+    "action": "copied unchanged into worktree",
+    "historical_prompts": ".atena/generated/shendilavri-identity-prompts-2026-10-04.json"
+  },
+  "status": "AWAITING_IDENTITY_APPROVAL",
+  "cycles_generated": 0,
+  "official_assets_installed": 0,
+  "alpha": "native unchanged",
+  "next": "Owner approval of five selected identity candidates before cycles."
+}

@@ -1,0 +1,44 @@
+{
+  "candidate": ".atena/generated/art-candidates/vfx/arco_largo_radiante/arco_largo_radiante_peak_v01.png",
+  "sha256": "aa72cc5f234bda6ef82c91b8a26690e25514f8c25fd7826f520f07caed978640",
+  "native_dimensions": [
+    1254,
+    1254
+  ],
+  "mode": "RGB",
+  "black_corners": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      2,
+      1
+    ],
+    [
+      0,
+      1,
+      0
+    ]
+  ],
+  "maximum_channel_difference": 11,
+  "outer_border_max_luminance": 2,
+  "visible_bbox_above12": [
+    206,
+    35,
+    1170,
+    1205
+  ],
+  "canvas_square": true,
+  "reference_sha256": "a31737e4d14662677063a6b7a9c19681b207b57bfe8a43b00d40e5adaeff9991",
+  "native_bytes_preserved": true,
+  "preview_only_resampling": true,
+  "runtime_admission": false
+}

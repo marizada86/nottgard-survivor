@@ -2,7 +2,7 @@
 id: "CHATGPT-FILA-021"
 type: "fila-de-prompts"
 title: "Fila de VFX: do corpo a corpo — exceções do kit (ART-028) (24 imagens)"
-status: "C03 v02 e D03 v01 aprovados; Estocada e Chicote completos e integrados localmente; E e F pendentes; EVID-145"
+status: "C03 v02 e D03 v01 aprovados; Estocada e Chicote completos e integrados localmente; Arco radiante seis quadros gerados e revisados, E03 v01 aprovada; Arco de fogo seis quadros gerados e revisados, F03 v01 aprovada; FILA021 geração completa, E/F candidatas; EVID-145"
 created: "2026-10-01"
 relations: ["[[ART-PROMPTS-052-vfx-corpo-a-corpo-excecoes]]", "[[PLAN-051-vfx-de-ataques-e-magias-2026-10-01]]"]
 ---
@@ -129,7 +129,7 @@ Cobre: Golpe do Juízo (cone 120°), Martelo da Glória (cone 90°).
 
 #### E01 - `arco_largo_radiante_start` - start
 
-- [ ] gerada · [ ] aprovada · candidata: `.atena/generated/art-candidates/vfx/arco_largo_radiante/arco_largo_radiante_start_v01.png`
+- [x] gerada · [ ] aprovada · candidata: `.atena/generated/art-candidates/vfx/arco_largo_radiante/arco_largo_radiante_start_v02.png` — revisada tecnicamente; v01 preservada por curva dupla rejeitada.
 
 ```text
 A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a very wide sweeping arc of about 220 degrees made of a bright thick band with short radiating light rays and tiny star-shaped glints along its outer edge, holy and heavy, reach about 45 percent of the image width. Frame 1 of 6, start: the very first instant: a thin sharp bright sliver just beginning at the center, only about one quarter of the final length, a few tiny sparks right at the origin. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.
@@ -137,7 +137,7 @@ A single frame of a 2D game visual effect, pure top-down view as if lying flat o
 
 #### E02 - `arco_largo_radiante_sweep` - sweep
 
-- [ ] gerada · [ ] aprovada · candidata: `.atena/generated/art-candidates/vfx/arco_largo_radiante/arco_largo_radiante_sweep_v01.png`
+- [x] gerada · [ ] aprovada · candidata: `.atena/generated/art-candidates/vfx/arco_largo_radiante/arco_largo_radiante_sweep_v02.png` — revisada tecnicamente; pico E03 aprovado como referência.
 
 ```text
 A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a very wide sweeping arc of about 220 degrees made of a bright thick band with short radiating light rays and tiny star-shaped glints along its outer edge, holy and heavy, reach about 45 percent of the image width. Frame 2 of 6, sweep: the strike sweeping outward: the shape growing fast, a bright leading edge with a thin faint trail behind it, about 60 percent of the final reach. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.
@@ -145,7 +145,7 @@ A single frame of a 2D game visual effect, pure top-down view as if lying flat o
 
 #### E03 - `arco_largo_radiante_peak` - peak (GATE)
 
-- [ ] gerada · [ ] aprovada · candidata: `.atena/generated/art-candidates/vfx/arco_largo_radiante/arco_largo_radiante_peak_v01.png`
+- [x] gerada · [a] aprovada · candidata: `.atena/generated/art-candidates/vfx/arco_largo_radiante/arco_largo_radiante_peak_v01.png` — E03 v01: aprovada pelo dono em 2026-10-09, fonte nativa preservada.
 
 ```text
 A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a very wide sweeping arc of about 220 degrees made of a bright thick band with short radiating light rays and tiny star-shaped glints along its outer edge, holy and heavy, reach about 45 percent of the image width. Frame 3 of 6, peak: PEAK frame, the brightest and widest: the full shape at its maximum length and thickness, a hot white core with a gray soft halo, a few sparks flying off the tip.
@@ -153,7 +153,7 @@ A single frame of a 2D game visual effect, pure top-down view as if lying flat o
 
 #### E04 - `arco_largo_radiante_hold` - hold
 
-- [ ] gerada · [ ] aprovada · candidata: `.atena/generated/art-candidates/vfx/arco_largo_radiante/arco_largo_radiante_hold_v01.png`
+- [x] gerada · [ ] aprovada · candidata: `.atena/generated/art-candidates/vfx/arco_largo_radiante/arco_largo_radiante_hold_v01.png` — revisada tecnicamente; pico E03 aprovado como referência.
 
 ```text
 A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a very wide sweeping arc of about 220 degrees made of a bright thick band with short radiating light rays and tiny star-shaped glints along its outer edge, holy and heavy, reach about 45 percent of the image width. Frame 4 of 6, hold: the shape still fully extended but starting to thin out, the white core narrowing, edges becoming ragged, fewer sparks. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.
@@ -161,7 +161,7 @@ A single frame of a 2D game visual effect, pure top-down view as if lying flat o
 
 #### E05 - `arco_largo_radiante_fade` - fade
 
-- [ ] gerada · [ ] aprovada · candidata: `.atena/generated/art-candidates/vfx/arco_largo_radiante/arco_largo_radiante_fade_v01.png`
+- [x] gerada · [ ] aprovada · candidata: `.atena/generated/art-candidates/vfx/arco_largo_radiante/arco_largo_radiante_fade_v01.png` — revisada tecnicamente; pico E03 aprovado como referência.
 
 ```text
 A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a very wide sweeping arc of about 220 degrees made of a bright thick band with short radiating light rays and tiny star-shaped glints along its outer edge, holy and heavy, reach about 45 percent of the image width. Frame 5 of 6, fade: the shape breaking apart: fragmented streaks and broken pieces, dimmer gray, the edges dissolving. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.
@@ -169,7 +169,7 @@ A single frame of a 2D game visual effect, pure top-down view as if lying flat o
 
 #### E06 - `arco_largo_radiante_dissipate` - dissipate
 
-- [ ] gerada · [ ] aprovada · candidata: `.atena/generated/art-candidates/vfx/arco_largo_radiante/arco_largo_radiante_dissipate_v01.png`
+- [x] gerada · [ ] aprovada · candidata: `.atena/generated/art-candidates/vfx/arco_largo_radiante/arco_largo_radiante_dissipate_v01.png` — revisada tecnicamente; pico E03 aprovado como referência.
 
 ```text
 A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a very wide sweeping arc of about 220 degrees made of a bright thick band with short radiating light rays and tiny star-shaped glints along its outer edge, holy and heavy, reach about 45 percent of the image width. Frame 6 of 6, dissipate: the last moment: only a few faint wisps and tiny specks remain, almost black, nothing bright. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.
@@ -181,7 +181,7 @@ Cobre: Machado de Xar'gath (fogo, cone 100°).
 
 #### F01 - `arco_largo_fogo_start` - start
 
-- [ ] gerada · [ ] aprovada · candidata: `.atena/generated/art-candidates/vfx/arco_largo_fogo/arco_largo_fogo_start_v01.png`
+- [x] gerada · [ ] aprovada · candidata: `.atena/generated/art-candidates/vfx/arco_largo_fogo/arco_largo_fogo_start_v01.png` — revisada tecnicamente; F03 aprovado como referência.
 
 ```text
 A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a very wide sweeping arc of about 200 degrees, a thick band whose outer rim has flame-like licking tongues and small embers drifting off it, heavy and infernal, reach about 45 percent of the image width. Frame 1 of 6, start: the very first instant: a thin sharp bright sliver just beginning at the center, only about one quarter of the final length, a few tiny sparks right at the origin. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.
@@ -189,7 +189,7 @@ A single frame of a 2D game visual effect, pure top-down view as if lying flat o
 
 #### F02 - `arco_largo_fogo_sweep` - sweep
 
-- [ ] gerada · [ ] aprovada · candidata: `.atena/generated/art-candidates/vfx/arco_largo_fogo/arco_largo_fogo_sweep_v01.png`
+- [x] gerada · [ ] aprovada · candidata: `.atena/generated/art-candidates/vfx/arco_largo_fogo/arco_largo_fogo_sweep_v01.png` — revisada tecnicamente; F03 aprovado como referência.
 
 ```text
 A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a very wide sweeping arc of about 200 degrees, a thick band whose outer rim has flame-like licking tongues and small embers drifting off it, heavy and infernal, reach about 45 percent of the image width. Frame 2 of 6, sweep: the strike sweeping outward: the shape growing fast, a bright leading edge with a thin faint trail behind it, about 60 percent of the final reach. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.
@@ -197,7 +197,7 @@ A single frame of a 2D game visual effect, pure top-down view as if lying flat o
 
 #### F03 - `arco_largo_fogo_peak` - peak (GATE)
 
-- [ ] gerada · [ ] aprovada · candidata: `.atena/generated/art-candidates/vfx/arco_largo_fogo/arco_largo_fogo_peak_v01.png`
+- [x] gerada · [a] aprovada · candidata: `.atena/generated/art-candidates/vfx/arco_largo_fogo/arco_largo_fogo_peak_v01.png` — F03 v01: aprovada pelo dono em 2026-10-09; fonte nativa preservada.
 
 ```text
 A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a very wide sweeping arc of about 200 degrees, a thick band whose outer rim has flame-like licking tongues and small embers drifting off it, heavy and infernal, reach about 45 percent of the image width. Frame 3 of 6, peak: PEAK frame, the brightest and widest: the full shape at its maximum length and thickness, a hot white core with a gray soft halo, a few sparks flying off the tip.
@@ -205,7 +205,7 @@ A single frame of a 2D game visual effect, pure top-down view as if lying flat o
 
 #### F04 - `arco_largo_fogo_hold` - hold
 
-- [ ] gerada · [ ] aprovada · candidata: `.atena/generated/art-candidates/vfx/arco_largo_fogo/arco_largo_fogo_hold_v01.png`
+- [x] gerada · [ ] aprovada · candidata: `.atena/generated/art-candidates/vfx/arco_largo_fogo/arco_largo_fogo_hold_v01.png` — revisada tecnicamente; F03 aprovado como referência.
 
 ```text
 A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a very wide sweeping arc of about 200 degrees, a thick band whose outer rim has flame-like licking tongues and small embers drifting off it, heavy and infernal, reach about 45 percent of the image width. Frame 4 of 6, hold: the shape still fully extended but starting to thin out, the white core narrowing, edges becoming ragged, fewer sparks. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.
@@ -213,7 +213,7 @@ A single frame of a 2D game visual effect, pure top-down view as if lying flat o
 
 #### F05 - `arco_largo_fogo_fade` - fade
 
-- [ ] gerada · [ ] aprovada · candidata: `.atena/generated/art-candidates/vfx/arco_largo_fogo/arco_largo_fogo_fade_v01.png`
+- [x] gerada · [ ] aprovada · candidata: `.atena/generated/art-candidates/vfx/arco_largo_fogo/arco_largo_fogo_fade_v01.png` — revisada tecnicamente; F03 aprovado como referência.
 
 ```text
 A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a very wide sweeping arc of about 200 degrees, a thick band whose outer rim has flame-like licking tongues and small embers drifting off it, heavy and infernal, reach about 45 percent of the image width. Frame 5 of 6, fade: the shape breaking apart: fragmented streaks and broken pieces, dimmer gray, the edges dissolving. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.
@@ -221,7 +221,7 @@ A single frame of a 2D game visual effect, pure top-down view as if lying flat o
 
 #### F06 - `arco_largo_fogo_dissipate` - dissipate
 
-- [ ] gerada · [ ] aprovada · candidata: `.atena/generated/art-candidates/vfx/arco_largo_fogo/arco_largo_fogo_dissipate_v01.png`
+- [x] gerada · [ ] aprovada · candidata: `.atena/generated/art-candidates/vfx/arco_largo_fogo/arco_largo_fogo_dissipate_v01.png` — revisada tecnicamente; F03 aprovado como referência.
 
 ```text
 A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a very wide sweeping arc of about 200 degrees, a thick band whose outer rim has flame-like licking tongues and small embers drifting off it, heavy and infernal, reach about 45 percent of the image width. Frame 6 of 6, dissipate: the last moment: only a few faint wisps and tiny specks remain, almost black, nothing bright. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.

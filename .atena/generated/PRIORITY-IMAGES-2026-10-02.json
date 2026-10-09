@@ -2,7 +2,7 @@
   "created": "2026-10-02",
   "generator": "built-in imagegen",
   "authorization": "Pedido do dono em 2026-10-02",
-  "count": 159,
+  "count": 202,
   "assets": [
     {
       "path": "assets/stages/docas_thumb.png",
@@ -1118,6 +1118,307 @@
       "height": 384,
       "corner_alpha": 0,
       "sha256": "756c16c05593ccf837cbef78c1848367504dac6d9b582cde97c61e540fe35040"
+    },
+    {
+      "path": "assets/animations/enemies/escravo_de_rivenheart/idle.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "b978268f6b541504a97d7a0d0087a8578ce900c8ac7ee75bcc23ff03f4c2f9d4"
+    },
+    {
+      "path": "assets/animations/enemies/escravo_de_rivenheart/move.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "bcdfeeba1d8a274ea6483bf6ed26a29980d85248d06d12b73f1347e927528ad9"
+    },
+    {
+      "path": "assets/animations/enemies/escravo_de_rivenheart/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "50a08a25168bd1adfc92512e611a8baf818e4ec8d46fd129e44743dbe9adc4be"
+    },
+    {
+      "path": "assets/animations/enemies/escravo_de_rivenheart/death.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "82da1463824989be95e483683985114cde78718b4c44e7236b244887ce9f806b"
+    },
+    {
+      "path": "assets/animations/enemies/sucubo/idle.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "98e4c074dbd72d3e3458d680f0b007ae963e94351e09a654658b7aa25a91460a"
+    },
+    {
+      "path": "assets/animations/enemies/sucubo/move.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "515186cf050e4efcfcfdefd0960292c5e79236ff683b8815882f66bc7f98f4f0"
+    },
+    {
+      "path": "assets/animations/enemies/sucubo/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "8d1485f1005fd94d97c07dfd5548039900d966c37aa781bb39d528cb7a3e6e89"
+    },
+    {
+      "path": "assets/animations/enemies/sucubo/death.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "47d59a24f2e58151bee9752096866fe0f8e2bffc681cd07524aba2a0c8447dc7"
+    },
+    {
+      "path": "assets/animations/enemies/guarda_do_castelo/idle.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "d78762ce6dc708f9099908e94b2cbbc2eab0d4abc5aa403169640f36b77dbc87"
+    },
+    {
+      "path": "assets/animations/enemies/guarda_do_castelo/move.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "7794749f281d7ff3a96c13852197a4777a00b6347486a77d6f79225d63141a7a"
+    },
+    {
+      "path": "assets/animations/enemies/guarda_do_castelo/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "ed8a0c74f737a2e1d976229eb8f82ab24b556707e8ecb8f2b1871bbffba3e498"
+    },
+    {
+      "path": "assets/animations/enemies/guarda_do_castelo/death.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "7b8fab52f8119524be837a72537b6400e3f2d8d4fe29235787a78aa39f289022"
+    },
+    {
+      "path": "assets/animations/enemies/master_of_cruelties/idle.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "a3291bc8d5ceca76c4ad783c9b86f8009d3219cd94d2b165b2a4ac3ea1ab639a"
+    },
+    {
+      "path": "assets/animations/enemies/master_of_cruelties/move.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "2ed520b38ff9fe52a2e9f9429ca51d6476ae717f9598be858dbc68abfafd36aa"
+    },
+    {
+      "path": "assets/animations/enemies/master_of_cruelties/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "b15b694f57945fe5b9fe8d9cb0ae642df730810e8761ded2d40c6de0c952cbd0"
+    },
+    {
+      "path": "assets/animations/enemies/master_of_cruelties/death.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "07efd309f1c5949b00e5b68b3c5b6d1556f679fecdf2f849852b9aa86fe3f199"
+    },
+    {
+      "path": "assets/animations/enemies/malcanthet/idle.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "93f07f206b0c9e8202406562b7fd756dfd379225e8b815a2caa79db04be00850"
+    },
+    {
+      "path": "assets/animations/enemies/malcanthet/move.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "24d66ebbdf0c1d9d8b1e302d8040604ea1a76f0672d96818d06581ff713ef6a2"
+    },
+    {
+      "path": "assets/animations/enemies/malcanthet/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "bb5f7db2a85ce11c1dad4fdd9e8f10a86dc8608e88953140efe993142c08484b"
+    },
+    {
+      "path": "assets/animations/enemies/malcanthet/death.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "5d092a690fcff86b3425c93fe435a087f46ab033395ec76c0c7d79ac575a7dc8"
+    },
+    {
+      "path": "assets/animations/enemies/malcanthet/special.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "c1e7df38a51cbff3edebc4d63b66082e1b576665861fb680ce261a2fe4176ca1"
+    },
+    {
+      "path": "assets/animations/enemies/guardiao_de_goranthis/idle.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "05c1c1bf90240fb95f51212c2497614c987e6574effc3c02d97081782426d0ea"
+    },
+    {
+      "path": "assets/animations/enemies/guardiao_de_goranthis/move.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "f9c79a1d455a9321d4cab77fb622cca85dbaa0c9a5f7b960512e397ea480eb28"
+    },
+    {
+      "path": "assets/animations/enemies/guardiao_de_goranthis/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "720911dcdab3bcd755b973bce563ef85aa1ef30b3a50fb6ea9c839745d613edc"
+    },
+    {
+      "path": "assets/animations/enemies/guardiao_de_goranthis/death.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "24ec5ecd3c4263b98578f58845b685470ba55f5f35bf4ddecf9d822f1bfa534b"
+    },
+    {
+      "path": "assets/animations/enemies/cultista_de_socothbenoth/idle.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "664e84044a652dfb5a4ca7e883366a3d815f3f468d57b417d41520fe63235aed"
+    },
+    {
+      "path": "assets/animations/enemies/cultista_de_socothbenoth/move.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "ddf247588d243e373d7c820df36df2b4e7fe0406aed0e8d5f78c2e8589dabbb4"
+    },
+    {
+      "path": "assets/animations/enemies/cultista_de_socothbenoth/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "d5d98a03a505051c9ecb57d68d09a03ec38bb6cfd69bc363b27c69f764f24fa2"
+    },
+    {
+      "path": "assets/animations/enemies/cultista_de_socothbenoth/death.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "f1bae02f6a528af61a845f58bd7a5662f0d06727ca1777aad6fc7bec45204de0"
+    },
+    {
+      "path": "assets/animations/enemies/death_tyrant/idle.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "3cba261d08ffd884c187dadfb34d62b3571ae92d2e5ea6b0913a85f16f5f2a00"
+    },
+    {
+      "path": "assets/animations/enemies/death_tyrant/move.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "1e33d3f9ad666e728cdd1973a0297ad40e85c7303a214d855313725ca9b185fd"
+    },
+    {
+      "path": "assets/animations/enemies/death_tyrant/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "f7db2b3d72080e679fdaad35e05929e3df71ddf7a0724ea9895e0344e91f3d98"
+    },
+    {
+      "path": "assets/animations/enemies/death_tyrant/death.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "d339e26d17bff944e9cc4b603f2374a333cadddc531c22f3c9246dd21371cf95"
+    },
+    {
+      "path": "assets/animations/enemies/socothbenoth/idle.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "1a9d277392867652044a20240e6faaf788f206d9ccad94a5ed772134e0fe2958"
+    },
+    {
+      "path": "assets/animations/enemies/socothbenoth/move.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "431d3023114116450ff578bfd0dcd13e571724dc23928aa6bcfee1ab508e2881"
+    },
+    {
+      "path": "assets/animations/enemies/socothbenoth/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "f35378884d970009d13e5b2b977eedc1d4b57b275dec9a59fae5e3621321ba85"
+    },
+    {
+      "path": "assets/animations/enemies/socothbenoth/death.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "caed8031c033bb151e723c0f9bf451f464747f19dcf8b5f0f5506f6dfa8f3420"
+    },
+    {
+      "path": "assets/animations/enemies/socothbenoth/special.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "8f939378068cb01e421846b305fc0b45df64df46ce66a56718a678aea44022a9"
+    },
+    {
+      "path": "assets/animations/enemies/sintese_abissal/idle.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "fd3abdde66369a3f0b3b31e660b12f31fd3b16bf0a0f7e62ff7712a5377577c7"
+    },
+    {
+      "path": "assets/animations/enemies/sintese_abissal/move.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "1b17252bd8000f5b09c728e3960f703ec3e37520308ead2e70028848685eb80b"
+    },
+    {
+      "path": "assets/animations/enemies/sintese_abissal/attack.png",
+      "width": 1024,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "d049e171a886bb716c554a55c8ca830f4b5a275b85584f4291dfa109135ce4c1"
+    },
+    {
+      "path": "assets/animations/enemies/sintese_abissal/death.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "1fb62c1ef7dedaa16967cceb2c51f0bfef2ccd16d4a73bcff05b0a355e56edc8"
+    },
+    {
+      "path": "assets/animations/enemies/sintese_abissal/special.png",
+      "width": 1536,
+      "height": 384,
+      "corner_alpha": 0,
+      "sha256": "27d21fdd7f39a99efe517174f67934ba6a09784a091ff18cdc20f0ddd0f2773d"
     }
   ]
 }

@@ -1,0 +1,31 @@
+{
+  "code": "E01",
+  "effect": "arco_largo_radiante",
+  "name": "arco_largo_radiante_start",
+  "version": "v02",
+  "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a very wide sweeping arc of about 220 degrees made of a bright thick band with short radiating light rays and tiny star-shaped glints along its outer edge, holy and heavy, reach about 45 percent of the image width. Frame 1 of 6, start: the very first instant: a thin sharp bright sliver just beginning at the center, only about one quarter of the final length, a few tiny sparks right at the origin. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference image 1 is the APPROVED E03 peak for this exact radiant arc. Reference image 2 is the APPROVED physical pilot for painted white-core/gray-glow STYLE ONLY. Generate ONLY the E01 phase specified above, not the peak again. Keep the same exact ground-flat orientation, canvas-center pivot and RIGHT-facing direction as E03. Preserve the radiant arc motif and painted texture, with its brightness, extent, thickness and fragmentation following this frame phase. Pure BLACK everywhere outside the effect, no saturation or scene. Keep all effect pixels, glow and sparks inside the canvas margins.\nCRITICAL GEOMETRY CLARIFICATION: only ONE thin simple C-shaped arc opening toward LEFT and bulging toward RIGHT, exactly like a small weak beginning of the approved E03 crescent. One continuous curved stroke, not two lobes. The pivot is the canvas center. The small arc radius is roughly 12% of canvas width, so it is a tiny short early sliver immediately to the right of the center, not a large tall arc. Do not form an hourglass, bow tie, mirrored upper/lower crescents, double arcs, an inward pinch, a figure eight, or a full bright peak. Keep only a few tiny origin sparks.",
+  "referenced_image_paths": [
+    "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\arco_largo_radiante\\arco_largo_radiante_peak_v01.png",
+    "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+  ],
+  "destination": ".atena/generated/art-candidates/vfx/arco_largo_radiante/arco_largo_radiante_start_v02.png",
+  "status": "PENDING",
+  "transparent_background": false,
+  "rejected_versions": [
+    {
+      "code": "E01",
+      "effect": "arco_largo_radiante",
+      "name": "arco_largo_radiante_start",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a very wide sweeping arc of about 220 degrees made of a bright thick band with short radiating light rays and tiny star-shaped glints along its outer edge, holy and heavy, reach about 45 percent of the image width. Frame 1 of 6, start: the very first instant: a thin sharp bright sliver just beginning at the center, only about one quarter of the final length, a few tiny sparks right at the origin. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference image 1 is the APPROVED E03 peak for this exact radiant arc. Reference image 2 is the APPROVED physical pilot for painted white-core/gray-glow STYLE ONLY. Generate ONLY the E01 phase specified above, not the peak again. Keep the same exact ground-flat orientation, canvas-center pivot and RIGHT-facing direction as E03. Preserve the radiant arc motif and painted texture, with its brightness, extent, thickness and fragmentation following this frame phase. Pure BLACK everywhere outside the effect, no saturation or scene. Keep all effect pixels, glow and sparks inside the canvas margins.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\arco_largo_radiante\\arco_largo_radiante_peak_v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/arco_largo_radiante/arco_largo_radiante_start_v01.png",
+      "status": "REJECTED_VISUAL",
+      "transparent_background": false,
+      "rejection": "Hourglass/double inward arcs; phase should have a single C-shaped sliver."
+    }
+  ]
+}

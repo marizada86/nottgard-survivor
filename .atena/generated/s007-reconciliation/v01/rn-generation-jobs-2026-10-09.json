@@ -1,0 +1,370 @@
+{
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "generator": "built-in imagegen",
+  "remaining_at_start": 79,
+  "counter_field": "native_generated_since_R01",
+  "approval_receipt": ".atena/generated/s007-reconciliation/v01/r01-owner-approval-2026-10-09.json",
+  "native_originals_preserved": true,
+  "jobs": [
+    {
+      "code": "R02",
+      "effect": "onda_cortante",
+      "name": "onda_cortante_fly_01",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a thin crescent blade of energy, curved with its tips pointing backward to the LEFT because it flies to the RIGHT, with fine jagged lightning crackling along its edge. Frame 2 of 8, fly 01: flight frame 2 of 4: the same projectile, its glow pulsing slightly brighter and the tail flickering a little longer. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED R01 v02 cutting-wave identity/position including fine jagged lightning. Reference2 is APPROVED physical pilot painted white-core/gray-glow STYLE ONLY. Generate ONLY R02 phase, never a montage. Native square1024 requested, flat overhead view, white/gray effect only, pure black background and safe margins. No weapon, hand, character, scene, border, ground or readable text.\nFLIGHT LOOP: Preserve EXACT approved R01 v02 crescent position, diameter, curvature and LEFT-pointing tapered tips. Main blade still leads RIGHT. Glow only slightly brighter and short trailing edge light flickers slightly longer. Keep visible fine angular lightning filaments close along the convex RIGHT edge. No translation, scaling or rotation of the crescent.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\onda_cortante\\onda_cortante_fly_00_v02.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_fly_01_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "generated_at": "2026-10-09T05:07:12.670507+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-970771d0-e73b-449c-bbec-3840ce17c210.png",
+      "sha256": "2c83e4d6759beaa50bd339e7a365b2f2cf87b6db7543885f72a961aae98ad844",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        452,
+        305,
+        894,
+        939
+      ],
+      "outer_border_max_luminance": 2,
+      "maximum_channel_difference": 9,
+      "mean_luminance": 11.523336487514277,
+      "visible_fraction_above12": 0.07837185758364303,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "R03",
+      "effect": "onda_cortante",
+      "name": "onda_cortante_fly_02",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a thin crescent blade of energy, curved with its tips pointing backward to the LEFT because it flies to the RIGHT, with fine jagged lightning crackling along its edge. Frame 3 of 8, fly 02: flight frame 3 of 4: the same projectile, its inner details rotated a quarter turn, the tail a little shorter. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED R01 v02 cutting-wave identity/position including fine jagged lightning. Reference2 is APPROVED physical pilot painted white-core/gray-glow STYLE ONLY. Generate ONLY R03 phase, never a montage. Native square1024 requested, flat overhead view, white/gray effect only, pure black background and safe margins. No weapon, hand, character, scene, border, ground or readable text.\nFLIGHT LOOP: Exact same approved R01 v02 position, shape, diameter, RIGHT-facing crescent and LEFT-pointing tips. Change only the inner painted light details through a quarter-turn phase and slightly shorten trailing wisps. This is internal detail motion ONLY: NEVER rotate the overall crescent or its direction. Fine jagged lightning remains along leading convex edge.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\onda_cortante\\onda_cortante_fly_00_v02.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_fly_02_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "generated_at": "2026-10-09T05:09:06.045966+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-219671d8-78fe-4fcc-a281-8448f760bfb0.png",
+      "sha256": "8e053772e4805e2ffd2c20715e89d7e8c44d088a6f87abc4c45bd7d6c542193b",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        457,
+        313,
+        886,
+        934
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 11,
+      "mean_luminance": 10.499500164068284,
+      "visible_fraction_above12": 0.07446410720145295,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "R04",
+      "effect": "onda_cortante",
+      "name": "onda_cortante_fly_03",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a thin crescent blade of energy, curved with its tips pointing backward to the LEFT because it flies to the RIGHT, with fine jagged lightning crackling along its edge. Frame 4 of 8, fly 03: flight frame 4 of 4: the same projectile, glow slightly dimmer, so that the next frame flows back into frame 1. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED R01 v02 cutting-wave identity/position including fine jagged lightning. Reference2 is APPROVED physical pilot painted white-core/gray-glow STYLE ONLY. Generate ONLY R04 phase, never a montage. Native square1024 requested, flat overhead view, white/gray effect only, pure black background and safe margins. No weapon, hand, character, scene, border, ground or readable text.\nLOOP CLOSURE: Preserve exactly approved R01 v02 crescent position, size, direction and silhouette. Slightly dimmer white/gray glow and original short trailing edge length so returning to R01 is a gentle pulse with no jump in position, size or orientation. Retain fine jagged electric filaments along right edge.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\onda_cortante\\onda_cortante_fly_00_v02.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_fly_03_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "generated_at": "2026-10-09T05:09:55.986366+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-457089d3-9136-4125-a247-75eeadaffb16.png",
+      "sha256": "a636ee836297e261874a26a096a64e0ed8748d720b6f89e0aca0ebb472166b43",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        454,
+        312,
+        885,
+        933
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 7,
+      "mean_luminance": 8.359809375548483,
+      "visible_fraction_above12": 0.06789120110701577,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "R05",
+      "effect": "onda_cortante",
+      "name": "onda_cortante_hit_00",
+      "version": "v02",
+      "destination": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_hit_00_v02.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\onda_cortante\\onda_cortante_hit_00_v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\onda_cortante\\onda_cortante_fly_00_v02.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Asset: ONE early collision flash frame for a2D game, square1024, opaque visually pure black canvas. Reference1 is the REJECTED impact frame to correct. Reference2 is APPROVED cutting-wave identity for white/gray fine lightning texture ONLY, NEVER its crescent silhouette. Reference3 is APPROVED painted white-core gray-falloff STYLE ONLY. Correct reference1 into a COMPACT early impact: REMOVE the entire large intact CRESCENT, ALL long curved blade arcs and ALL flight trails. Move the small white flash core to exact canvas center (50%width,50%height). Keep only that small bright compact flash, a FEW short nascent radial sparks and tiny disconnected angular energy fragments with fine electric filaments. Entire compact burst within central40%of canvas, about60%of upcoming full impact peak size, generous black margins. No intact curved flying blade, no tail, no large ring, no glyphs, no symbols, no character, no weapon, no hand, no ground, no perspective, no text. Flat overhead light effect, same painted texture. Single image, never a montage.",
+      "generated_at": "2026-10-09T12:48:29.196701+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-296c98d1-9ae4-4565-a7a0-fd3a6107c1b5.png",
+      "sha256": "7fbbdadd57d6af7152b54c8dc6ca6fd76e29703990bf8e5e89cada58a45d0ae4",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        381,
+        365,
+        899,
+        889
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 8,
+      "mean_luminance": 9.301187396503439,
+      "visible_fraction_above12": 0.08170600489915524,
+      "native_bytes_preserved": true,
+      "runtime_admission": false,
+      "recovery_note": "Generation result from interrupted exec403 recovered from its newest native PNG in the task image directory, visually inspected before byte-identical ingestion. No generation retry was made."
+    },
+    {
+      "code": "R06",
+      "effect": "onda_cortante",
+      "name": "onda_cortante_hit_01",
+      "version": "v01",
+      "prompt": "Use case: stylized-concept. ONE2D game VFX IMPACT PEAK frame R06, square1024 canvas, pure black background, flat overhead view. Reference1 is APPROVED cutting-wave flight identity for white/gray jagged lightning and painted light texture ONLY: DO NOT copy its intact crescent shape. Reference2 is APPROVED physical pilot STYLE ONLY. Reference3 is preceding GENERATED R05 early collision flash, technical continuity only, not separately owner-approved. Create the next phase of reference3: a MAXIMUM-SIZE BRIGHTEST energy collision BURST, substantially larger than R05 (R05 was about60%of this peak size), hot white compact flash core exactly at canvas center, many short angular radial blade-energy fragments, sparks and fine jagged electric filaments in all directions. Entire burst centered and within central80%ofcanvas, generous black margins beyond every particle. White and gray ONLY, bright painted core with soft gray light falloff. The flying blade has ceased to exist: NO intact crescent, NO long curved blade arc, NO flight tail, NO sideways smoke stream. NO glyphs, symbols, letters, orb motifs, character, weapon, hand, scene, ground, shadow or perspective. Only a centered expanding radial collision flash, NEVER a montage.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\onda_cortante\\onda_cortante_fly_00_v02.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\onda_cortante\\onda_cortante_hit_00_v02.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_hit_01_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "source_prompt_before_phase_clarification": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a thin crescent blade of energy, curved with its tips pointing backward to the LEFT because it flies to the RIGHT, with fine jagged lightning crackling along its edge. Frame 6 of 8, hit 01: impact frame 2 of 4, the PEAK of the impact: the brightest burst at maximum size, a hot white core and radiating sparks. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED R01 v02 cutting-wave identity/position including fine jagged lightning. Reference2 is APPROVED physical pilot painted white-core/gray-glow STYLE ONLY. Generate ONLY R06 phase, never a montage. Native square1024 requested, flat overhead view, white/gray effect only, pure black background and safe margins. No weapon, hand, character, scene, border, ground or readable text.\nIMPACT PEAK: No flight tail or intact flying crescent. Brightest maximum-size centered energy collision burst with hot white flash core and radiating short blade-energy fragments, sparks and fine jagged electric filaments. Flat ground-plane light, exact canvas-center pivot, generous black margins beyond all particle tips. No glyph symbols or arcane orb motifs.",
+      "supporting_phase_reference": {
+        "code": "R05",
+        "path": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_hit_00_v02.png",
+        "sha256": "7fbbdadd57d6af7152b54c8dc6ca6fd76e29703990bf8e5e89cada58a45d0ae4",
+        "role": "Generated early impact technical phase support, not separately human-approved"
+      },
+      "generated_at": "2026-10-09T12:49:41.958869+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-1f0629e1-713b-42f4-826e-0e267299fcfb.png",
+      "sha256": "fc2013656b41122311941289fb851347751b0a2b230975476304f63a5fb342c2",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        48,
+        91,
+        1164,
+        1140
+      ],
+      "outer_border_max_luminance": 2,
+      "maximum_channel_difference": 12,
+      "mean_luminance": 41.02424395045901,
+      "visible_fraction_above12": 0.331000765651987,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "R07",
+      "effect": "onda_cortante",
+      "name": "onda_cortante_hit_02",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a thin crescent blade of energy, curved with its tips pointing backward to the LEFT because it flies to the RIGHT, with fine jagged lightning crackling along its edge. Frame 7 of 8, hit 02: impact frame 3 of 4: the burst expanding into fragments and a thin ring, dimmer gray. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED R01 v02 cutting-wave identity/position including fine jagged lightning. Reference2 is APPROVED physical pilot painted white-core/gray-glow STYLE ONLY. Generate ONLY R07 phase, never a montage. Native square1024 requested, flat overhead view, white/gray effect only, pure black background and safe margins. No weapon, hand, character, scene, border, ground or readable text.\nIMPACT DECAY: No solid white core, intact projectile or left flight tail. Centered thin expanding GRAY ring with dim broken blade-energy fragments and fine fading electric filaments, clearly dimmer than peak, open black center. Keep exact pivot and painted light texture. No glyphs or readable text.\n\nReference3 is the preceding GENERATED R06 cutting-wave IMPACT PEAK as technical phase-continuity support, not separately human-approved. Preserve its exact center and fragmented blade-energy texture while removing ALL solid white core and following requested dim decay phase. Approved R01 identity (reference1) and physical style pilot (reference2) remain authoritative. No intact flying crescent, tail, glyphs or orb motifs. Thin expanding GRAY broken ring and dim blade-energy fragments with fading fine electric filaments, clearly dimmer than R06, open black center.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\onda_cortante\\onda_cortante_fly_00_v02.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\onda_cortante\\onda_cortante_hit_01_v01.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_hit_02_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "supporting_phase_reference": {
+        "code": "R06",
+        "path": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_hit_01_v01.png",
+        "sha256": "fc2013656b41122311941289fb851347751b0a2b230975476304f63a5fb342c2",
+        "role": "Preceding generated impact peak, technical continuity only; not separately owner-approved"
+      },
+      "generated_at": "2026-10-09T12:50:42.994262+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-d648bc8d-3ee7-455a-9ecf-a7b71da65875.png",
+      "sha256": "79296cd598e203e1d3034fdd526fd92e1599ce86bac042aa3210df2474fa4672",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        66,
+        136,
+        1140,
+        1129
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 9,
+      "mean_luminance": 13.19009154755818,
+      "visible_fraction_above12": 0.16980622136754092,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "R08",
+      "effect": "onda_cortante",
+      "name": "onda_cortante_hit_03",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a thin crescent blade of energy, curved with its tips pointing backward to the LEFT because it flies to the RIGHT, with fine jagged lightning crackling along its edge. Frame 8 of 8, hit 03: impact frame 4 of 4: only faint scattered specks and a barely visible ring remain, almost black. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED R01 v02 cutting-wave identity/position including fine jagged lightning. Reference2 is APPROVED physical pilot painted white-core/gray-glow STYLE ONLY. Generate ONLY R08 phase, never a montage. Native square1024 requested, flat overhead view, white/gray effect only, pure black background and safe margins. No weapon, hand, character, scene, border, ground or readable text.\nFINAL IMPACT: Almost entirely BLACK with a barely visible DARK GRAY centered broken ring and sparse faint specks or broken energy fragments. No white core, bright lightning, intact projectile, flight tail or left smoke stream. Same exact canvas-center pivot.\n\nReference3 is the preceding GENERATED R06 cutting-wave IMPACT PEAK as technical phase-continuity support, not separately human-approved. Preserve its exact center and fragmented blade-energy texture while removing ALL solid white core and following requested dim decay phase. Approved R01 identity (reference1) and physical style pilot (reference2) remain authoritative. No intact flying crescent, tail, glyphs or orb motifs. Almost black remnants: barely visible dark gray broken ring and sparse faint fragments. No white core, bright lightning or bright sparks.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\onda_cortante\\onda_cortante_fly_00_v02.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\onda_cortante\\onda_cortante_hit_01_v01.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_hit_03_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "supporting_phase_reference": {
+        "code": "R06",
+        "path": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_hit_01_v01.png",
+        "sha256": "fc2013656b41122311941289fb851347751b0a2b230975476304f63a5fb342c2",
+        "role": "Preceding generated impact peak, technical continuity only; not separately owner-approved"
+      },
+      "generated_at": "2026-10-09T12:51:32.008527+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-75ee6eca-0ee2-432e-9d45-4ecec7bd282c.png",
+      "sha256": "0ca2b691f2a420f7338b9eb68a8616213901cc94d4f06a70e4482beaa7c98c08",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        98,
+        145,
+        1112,
+        1093
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 6,
+      "mean_luminance": 1.9334181655385383,
+      "visible_fraction_above12": 0.036806620727547444,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "N03",
+      "effect": "pulso_radiante",
+      "name": "pulso_radiante_peak",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a perfectly round, centered pulse of light on the ground: a bright thin ring with a softer wide band just inside it and short light rays pointing outward. Frame 3 of 6, peak: PEAK frame: the full shape at maximum radius and brightness, hot white core, crisp detail.\n\nThe attachment is APPROVED physical pilot painted white core and gray soft falloff STYLE ONLY. Generate a NEW perfectly round radiant light PULSE at its maximum peak, not a crescent or flying projectile. ONE thin bright circular ring centered exactly on the canvas, soft wider glow band just INSIDE that ring, short outward light rays distributed radially. Perfect circular face-on shape, flat ground-plane top-down, no ellipse, horizon or perspective. Comfortable BLACK margins around full ring and all ray tips; native square1024 requested. White/gray only, no glyphs, letters, characters, hands, weapon, scene or ground texture. Only this N03 PEAK gate frame; no other pulse phases.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/pulso_radiante/pulso_radiante_peak_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "generated_at": "2026-10-09T12:53:28.101273+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-ddaf10b3-040c-42ad-abc3-61d1a43f7f0d.png",
+      "sha256": "1bfa8061aec59959de9115ad5dcb94b3e27d5706ffdb86a3e99b8c7e7bf898ec",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        38,
+        48,
+        1215,
+        1193
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 9,
+      "mean_luminance": 47.23823096235587,
+      "visible_fraction_above12": 0.3455176290734085,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    }
+  ],
+  "rejected_native_versions": [
+    {
+      "code": "R05",
+      "effect": "onda_cortante",
+      "name": "onda_cortante_hit_00",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a thin crescent blade of energy, curved with its tips pointing backward to the LEFT because it flies to the RIGHT, with fine jagged lightning crackling along its edge. Frame 5 of 8, hit 00: impact frame 1 of 4: the projectile has just hit, a bright flash burst with tiny sparks starting, no tail anymore, about 60 percent of the final size. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED R01 v02 cutting-wave identity/position including fine jagged lightning. Reference2 is APPROVED physical pilot painted white-core/gray-glow STYLE ONLY. Generate ONLY R05 phase, never a montage. Native square1024 requested, flat overhead view, white/gray effect only, pure black background and safe margins. No weapon, hand, character, scene, border, ground or readable text.\nIMPACT START: No flight tail or intact flying crescent. The blade has collided: compact centered white flash with only tiny radial sparks beginning, short broken blade-energy fragments and fine electric filaments. About60% of coming peak size; early impact only. Exact canvas-center flash pivot. No glyphs, circles-as-symbols or readable text.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\onda_cortante\\onda_cortante_fly_00_v02.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_hit_00_v01.png",
+      "status": "REJECTED_VISUAL",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "generated_at": "2026-10-09T05:11:02.665713+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-77f174aa-92e7-4e09-b8bb-e0d06a7b7924.png",
+      "sha256": "4c125070e6dc6eeffa26e2b7ba56fc5090491a81e2ee886934e24f64609c349d",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        405,
+        284,
+        939,
+        938
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 10,
+      "mean_luminance": 13.738967997781899,
+      "visible_fraction_above12": 0.1070946177972116,
+      "native_bytes_preserved": true,
+      "runtime_admission": false,
+      "rejection_reason": "Impact start still retained a large intact flying crescent; hot flash displaced right of canvas center. Native phase correction required."
+    }
+  ]
+}
