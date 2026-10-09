@@ -95,20 +95,6 @@ suspension:
   suspended_plan_state_file: '.atena/state/plan-053-imagens.yaml'
   note: 'PLAN-053 retomado; biomas ate Pilares completos localmente. S-007 onda cortante completa como candidata; aguardando gate humano N03. PLAN-071 preservado. PLAN-071 suspenso com retorno acima.'
 deferred_requests:
-  - id: DEV-023
-    request: 'Novas recomendacoes sem assets enquanto os assets nao chegam: divida de verificacao manual em testes e linha de base nova do bot.'
-    request_classification: PLAN_DEVIATION
-    status: COMPLETED_LOCAL_AWAITING_COMMIT
-    recorded: '2026-10-09'
-    authorization_verbatim: 'atena, aprovo por plano por que estou de saida pretendo deixar uma atividade que consome muito tempo'
-    proposed_plan: PLAN-088
-    state_file: '.atena/state/plan-088-verificacao-manual-e-bot.yaml'
-    spec: '.atena/specs/SPEC-162-divida-de-verificacao-manual-e-linha-de-base-do-bot.md'
-    approval_mode: per-plan
-    approved: '2026-10-09'
-    recovery_snapshot: '.atena/generated/plan-088/plan-before-088.yaml'
-    route: 'Desvio do PLAN-071 (parado aguardando aceite em aparelho); retorno ao PLAN-071 B-006/S-011.'
-    note: 'Dono ausente: trabalho local, sem commit, push nem exportacao; numeros de balanceamento nao mudam sem aprovacao.'
   - id: DEV-022
     request: 'Plano recomendado que nao dependa nem envolva assets/movimentacao: fechar a 0.4.0 e organizar planos e specs.'
     request_classification: PLAN_DEVIATION

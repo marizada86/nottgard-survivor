@@ -12,7 +12,7 @@ no [README](README.md); estado atual sai de `tools/backlog_check.ps1`.
 - **P1** (quebra uma função, tem contorno) e **P2** (cosmético): acumulam.
 - O lote de bugs fecha no **próximo playtest com versão nova** (regra do dono).
   O gatilho de 5 ou mais P1 continua servindo de **aviso**, não de bloqueio.
-- Verificação manual pendente (BUG-003 a 010) não conta como defeito: é dívida
+- Verificação manual pendente (hoje só o BUG-007; BUG-003 a 010 menos o 007 foram pagos por teste automático, EVID-224) não conta como defeito: é dívida
   a pagar no playtest.
 - **Lembrete da Atena:** no início de cada sessão e antes de export/commit ela
   informa quantos P0/P1 estão abertos, rodando
@@ -37,14 +37,7 @@ abaixo. Cada item vira BUG-nnn se falhar.
 
 | ID | Sev | Verificar | Spec |
 |---|---|---|---|
-| BUG-003 | P1 | Painel `C` / ficha de personagem, rolagem, fechar com `C` e `Esc` | SPEC-059 |
-| BUG-004 | P1 | Escolha equipar/vender: moeda creditada, arma some ao vender | SPEC-060 |
-| BUG-005 | P1 | Quebráveis por bioma, drop enviesado, respawn por tempo, poção só de elite. **Parcial (EVID-106):** quebrar funciona; faltam drop, respawn e poção | SPEC-063 |
-| BUG-006 | P1 | Loja, ferreiro, curandeiro: preço, "Sair" sem custo, ouro histórico intacto. **Parcial (EVID-106):** ferreiro e curandeiro OK; faltam loja e "Sair" | SPEC-064 |
 | BUG-007 | P1 | Segurar clique esquerdo para andar (sem mover ao clicar em painel) | SPEC-072 |
-| BUG-008 | P1 | Nível de equipamento e super-upgrade (duplicata e ferreiro) | SPEC-073 |
-| BUG-009 | P2 | Botão de menu do HUD encerra o sandbox QA; `qa.cenario` correto no manifesto | SPEC-074 |
-| BUG-010 | P1 | Sinergias combinadas arma + acessório + magia | SPEC-075 |
 
 ### Conhecidos na v0.4.0 (PLAN-081 / SPEC-148, 2026-10-08)
 
@@ -107,6 +100,13 @@ os cartões Minor-fix do período viram o bloco "Pequenos ajustes" do changelog
 | BUG-013 | Props flutuando no cenário | 2026-09-29 | [EVID-121](../evidence/EVID-121-aprovacao-visual-de-decais-e-bug-013-2026-09-29.md) |
 | BUG-016 | Minor-fix: lista de feitiços/equipamentos cortada no canto inferior esquerdo do HUD quando é longa (`WeaponsLabel` crescia para baixo; agora `grow_vertical` para cima e base -24) | 2026-09-30 | Relato do dono (print); `ui/hud.tscn`, `tools/build_scenes.gd` |
 | BUG-017 | Minor-fix: cartão da bênção Sorriso da Sorte mostrava "-1 dmg_flat"; agora "-1 dano por acerto" (`MOD_LABELS` sem `dmg_flat`) | 2026-09-30 | Relato do dono (print); `core/items.gd` |
+| BUG-003 | Verificação: ficha `C` (abrir e fechar com `C` e `Esc`). A rolagem antiga foi substituída pela ficha em abas e grade (SPEC-130) | 2026-10-09 (teste automático) | [EVID-224](../evidence/EVID-224-plan-088-divida-de-verificacao-manual-2026-10-09.md): `test_playtest_fixes.gd` `_entrada` |
+| BUG-004 | Verificação: equipar ou vender na oferta de item (moeda creditada, arma some) | 2026-10-09 (teste automático) | EVID-224: `test_battle.gd` 9b e 9c |
+| BUG-005 | Verificação: quebráveis por bioma, drop, respawn por tempo e poção só de elite | 2026-10-09 (teste automático) | EVID-224: `test_battle.gd` 9c a 9d-2 e `test_manual_debt.gd` (respawn) |
+| BUG-006 | Verificação: loja, ferreiro e curandeiro (preço, "Sair" sem custo, ouro do Quartel intacto) | 2026-10-09 (teste automático) | EVID-224: `test_battle.gd` 9e e `test_manual_debt.gd` (stats.gold) |
+| BUG-008 | Verificação: nível de equipamento e super-upgrade (duplicata e ferreiro) | 2026-10-09 (teste automático) | EVID-224: `test_battle.gd` 9f |
+| BUG-009 | Verificação: o botão de menu encerra o sandbox QA sem vazar para a run normal | 2026-10-09 (teste automático) | EVID-224: `test_qa_sandbox.gd` |
+| BUG-010 | Verificação: sinergias arma evoluída + acessório no nível máximo + magia | 2026-10-09 (teste automático) | EVID-224: `test_battle.gd` 10b |
 | BUG-024 | Minor-fix: número de dano fundido (MEC-031 D5) acusava "instância já liberada" no console quando o número flutuante anterior já tinha sumido; agora valida antes de tipar (`ui/run.gd` `_merge_damage_number`). Achado em captura de run de Dagruve | 2026-10-01 | **Corrigido 2026-10-01**; sem efeito visível, só erro de console |
 
 ## Histórico dos cartões

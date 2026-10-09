@@ -1,0 +1,36 @@
+id: PLAN-088
+spec: SPEC-162
+spec_file: .atena/specs/SPEC-162-divida-de-verificacao-manual-e-linha-de-base-do-bot.md
+mode: per-plan
+status: COMPLETED_LOCAL_AWAITING_COMMIT
+created: '2026-10-09'
+approved: '2026-10-09'
+request_classification: PLAN_DEVIATION
+deviation_id: DEV-023
+authorization_verbatim: 'atena, aprovo por plano por que estou de saida pretendo deixar uma atividade que consome muito tempo (2026-10-09)'
+checkpoint: B-001 e B-002 feitos local; commit aguarda o dono; propostas do EVID-225 aguardam o dono
+return:
+  plan: PLAN-071
+  state_file: .atena/state/plan-071-playtest-ranking.yaml
+  checkpoint_observed: B-006/S-011
+  snapshot: .atena/generated/plan-088/plan-before-088.yaml
+batches:
+  B-001: {title: Divida de verificacao manual, steps: [S-001, S-002, S-003, S-004], status: DONE_LOCAL, evidence: EVID-224}
+  B-002: {title: Linha de base nova do bot, steps: [S-005, S-006, S-007], status: DONE_LOCAL, evidence: EVID-225, note: "nenhum numero alterado; proposta no EVID-225"}
+steps:
+  S-001: 'Auditar BUG-003 a BUG-008 e BUG-010 contra a suite atual (coberto / lacuna / precisa de olho humano).'
+  S-002: 'Escrever os testes que faltam (um por lacuna) e provar cada um com mutacao.'
+  S-003: 'Suite completa, smoke e kit_test.'
+  S-004: 'EVID-224 e atualizacao dos cartoes (so o que o teste provar sai da lista).'
+  S-005: 'Rodar o bot por heroi (.atena/generated/plan-088/run_bot.sh), 12 herois, metas 0 e 1, 15 sementes.'
+  S-006: 'Agregar, comparar com EVID-208/217/219 e listar outliers.'
+  S-007: 'EVID-225 com a proposta de ajustes em JSON (sem aplicar) e cartoes BAL.'
+gates:
+  dependencies: NO_NEW_DEPENDENCIES
+  assets: NOT_IN_SCOPE
+  balance_numbers: NOT_CHANGED_WITHOUT_OWNER_APPROVAL
+  commit: EXPLICIT_APPROVAL
+  push_publish_export: EXPLICIT_APPROVAL_SEPARATE
+  other_sessions_changes: PRESERVE_UNTOUCHED
+blocking_gaps: []
+commit_push_build_export: "NOT_PERFORMED (commit aguarda o dono, que saiu)"
