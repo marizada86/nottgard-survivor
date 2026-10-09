@@ -17,6 +17,7 @@ const HIT_INVULN := 0.1
 const OVERHEAL_BARRIER_CAP := 0.10
 const HERO_HIT_R := 0.3
 const MAX_PICKUPS := 140
+const AREA_KINDS := ["nova", "zone", "slam", "guard_nova", "fire_zone", "forget_nova"]   # SPEC-160: o que conta como golpe em área (area_dmg_pct)
 const AFFIXES := ["veloz", "resistente", "mortal", "avaro"]   # Dagruve e Docas (SPEC-120: não mudam)
 ## SPEC-120: da terceira fase em diante os elites sorteiam destes, e o chefe usa BOSS_AFFIXES.
 const ELITE_AFFIXES := ["veloz", "resistente", "mortal", "avaro", "blindado", "explosivo", "vampirico", "invocador", "escudeiro"]
@@ -567,6 +568,20 @@ func use_active(dir: Vector2 = Vector2.ZERO) -> bool:
 				events.append({"type": "text", "pos": charm_target.pos, "text": "dominado"})
 		"time_stop":
 			time_slow_t = float(p.duration)
+		"forget_nova":   # SPEC-160: Modify Memory (Arlindo): inimigos próximos esquecem o herói e perdem os ataques
+			for e in enemies:
+				if e.dead or e.has_flag("quebravel") or e.pos.distance_to(hero.pos) > radius + e.radius:
+					continue
+				var forget := float(p.get("duration", 2.0))
+				e.stun_t = maxf(e.stun_t, minf(forget * 0.3, 0.6) if e.is_boss() else forget)
+			events.append({"type": "nova", "pos": hero.pos, "radius": radius, "dtype": "magico", "weapon": String(p.get("id", ""))})
+		"fire_zone":   # SPEC-160: Navios em Chamas (Erik): faixa de fogo à frente do herói
+			var fwd := dir.normalized() if dir.length() > 0.01 else Vector2(1, 1).normalized()
+			var zone_at := (hero.pos + fwd * float(p.get("reach", 2.5))).clamp(Vector2(1, 1), map_size - Vector2(1, 1))
+			var zone_area := 1.0 + hero.m("area_pct")
+			var zone_theme := DivineVisuals.resolve(hero.id, visual_god, visual_boon_selected)
+			zones.append({"owner": "hero", "kind": "zone", "pos": zone_at, "radius": float(p.radius) * zone_area, "life": float(p.get("duration", 8.0)), "tick": float(p.get("tick", 0.5)), "acc": 0.0, "p": p, "visual_theme": zone_theme})
+			events.append({"type": "zone", "pos": zone_at, "radius": float(p.radius) * zone_area, "dtype": "fogo", "weapon": String(p.get("id", "")), "visual_theme": zone_theme})
 		"guard_nova":
 			active_guard = int(p.get("charges", 1))
 			active_guard_t = 5.0
@@ -807,6 +822,10 @@ func _hero_hit(e: Enemy, p: Dictionary, roll: bool, visual_theme: Dictionary = {
 			shadow_charge = false
 		if hero.hp < hero.max_hp * 0.5:
 			pct += hero.m("low_hp_dmg")
+		if dtype == "fogo":   # SPEC-160: Incendiário Procurado (Erik)
+			pct += hero.m("fire_pct")
+		if AREA_KINDS.has(String(p.get("kind", ""))):
+			pct += hero.m("area_dmg_pct")
 		dmg *= maxf(0.2, pct) * (1.0 + e.mark) * float(e.resist.get(dtype, 1.0)) * _shield_factor(e)
 		if crit:
 			dmg *= 2.0
@@ -1633,6 +1652,8 @@ func _update_ecos() -> void:
 		if not eco.found and hero.pos.distance_to(eco.pos) <= reach:
 			eco.found = true
 			stats.ecos.append(eco.id)
+			if hero.m("eco_xp_pct") > 0.0:   # SPEC-160: Olhos de Andarilho (Arlindo): cada Eco rende XP
+				_add_xp(hero.xp_need * hero.m("eco_xp_pct"))
 			events.append({"type": "eco", "id": eco.id, "stage": stage_id, "texto": eco.texto, "fonte": eco.fonte, "pos": eco.pos})
 
 ## Quantos Ecos desta fase já foram pegos nesta run e quantos existem.

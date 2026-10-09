@@ -2928,6 +2928,50 @@
       "pitch_jitter": 0.035,
       "cooldown_ms": 55,
       "priority": 2
+    },
+    "weapon.memoria_alterada.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.dominar_pessoa.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.dominar_pessoa.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.tocha_do_incendiario.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.espada_sombria.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.espada_sombria.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "hero.arlindo.active": {
+      "files": [
+        "res://assets/audio/sfx/hero/hero.sylas.active_01.wav",
+        "res://assets/audio/sfx/hero/hero.sylas.active_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -6,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 250,
+      "priority": 4
+    },
+    "hero.erik.active": {
+      "files": [
+        "res://assets/audio/sfx/hero/hero.korrak.active_01.wav",
+        "res://assets/audio/sfx/hero/hero.korrak.active_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -6,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 250,
+      "priority": 4
     }
   },
   "aliases": {

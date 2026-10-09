@@ -62,7 +62,7 @@ func run() -> Array:
 		if a.reward.has("unlock_stage") and not stages.has(a.reward.unlock_stage):
 			out.append("conquista %s: fase %s inexistente" % [a.id, a.reward.unlock_stage])
 	var abilities: Dictionary = Data.table("abilities")
-	var ability_kinds := ["cleave", "guard", "healing_aura", "dash_weaken", "overdrive", "slam", "star_burst", "charm", "time_stop", "guard_nova"]
+	var ability_kinds := ["cleave", "guard", "healing_aura", "dash_weaken", "overdrive", "slam", "star_burst", "charm", "time_stop", "guard_nova", "forget_nova", "fire_zone"]
 	for hid in heroes:
 		if not abilities.has(hid):
 			out.append("herói %s sem habilidade ativa" % hid)

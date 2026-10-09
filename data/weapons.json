@@ -79,5 +79,9 @@
     "evolve": {"passive": "cota_de_malha", "into": "esmagar_defesas"}},
   "esmagar_defesas":  {"name": "Esmagar Defesas", "src": "Evolução", "icon_like": "golpe_do_juizo", "kind": "melee", "dtype": "fisico", "attr": "forca", "dice": "3d8", "cd": 1.1, "range": 2.4, "cone": 90, "weaken": 3, "levels": [], "desc": "Rasga a guarda de qualquer um."},
   "dominio_da_vontade": {"name": "Domínio da Vontade", "src": "Item: Coração da Dominância", "icon_like": "dominar_pessoa", "kind": "bolt", "dtype": "magico", "attr": "carisma", "dice": "1d6", "cd": 4.5, "range": 9, "speed": 12, "pierce": 0, "count": 1, "stun": 3.0,
-    "desc": "Sugestão: o alvo perde os ataques e obedece.", "levels": []}
+    "desc": "Sugestão: o alvo perde os ataques e obedece.", "levels": []},
+  "memoria_alterada": {"name": "Memória Alterada", "src": "Magia de Arlindo Orlando", "icon_like": "dominar_pessoa", "kind": "bolt", "dtype": "magico", "attr": "carisma", "dice": "1d6", "cd": 2.2, "range": 8.5, "speed": 10, "pierce": 0, "count": 1, "slow": 2.0,
+    "desc": "Projétil de memória: o alvo fica lento.", "levels": [{"dice": "1d8"}, {"slow": 0.5}, {"cd": -0.3}, {"count": 1, "dmg": 2}]},
+  "tocha_do_incendiario": {"name": "Tocha do Incendiário", "src": "Arma de Erik Blackthorn", "icon_like": "espada_sombria", "kind": "melee", "dtype": "fogo", "attr": "forca", "dice": "1d8", "cd": 1.5, "range": 1.8, "cone": 70, "burn": 2,
+    "desc": "Golpe de tocha em arco: queima o alvo.", "levels": [{"dice": "1d10"}, {"cone": 10}, {"dmg": 2}, {"dice": "2d6", "range": 0.3}]}
 }

@@ -2,7 +2,7 @@ extends RefCounted
 ## SPEC-149 (MEC-041): o ferreiro melhora armas e equipamentos; o Arcanista melhora magias.
 
 const WEAPONS := ["espada_sombria", "espada_do_receptaculo", "golpe_esmagador", "adaga_rapida", "rajada_infinita", "golpe_atordoante", "romper_armadura", "esmagar_defesas",
-	"golpe_do_juizo", "chicote_avarento", "martelo_da_gloria", "machado_de_xargath", "lamina_da_digestao"]
+	"golpe_do_juizo", "chicote_avarento", "martelo_da_gloria", "machado_de_xargath", "lamina_da_digestao", "tocha_do_incendiario"]
 
 func _bat(seed_value := 1, hero := "durvall", stage := "dagruve") -> Battle:
 	var b := Battle.new(seed_value, hero, stage)

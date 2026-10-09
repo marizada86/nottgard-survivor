@@ -20,7 +20,7 @@
   "leoric": {"name": "Leoric", "title": "Gnomo · Modo de Constelação", "attrs": {"forca": 8, "inteligencia": 14, "constituicao": 12, "carisma": 16}, "base_hp": 30, "prof": 2, "armor": {"ca": 2, "cam": 2},
     "weapon": "sopro_de_estrela", "unlock": "ach:aluris", "color": [140, 90, 50], "hair": [150, 140, 130],
     "passive": {"name": "Constelação", "desc": "+25% de alcance de coleta e área.", "mods": {"pickup": 0.6, "area_pct": 0.15}}},
-  "nyrelia": {"name": "Nyrelia", "title": "Sacerdotisa de Mask · Greenholders", "attrs": {"forca": 8, "inteligencia": 14, "constituicao": 12, "carisma": 16}, "base_hp": 30, "prof": 2, "armor": {"ca": 1, "cam": 3},
+  "nyrelia": {"name": "Nyrelia", "title": "Sacerdotisa de Mask · Grimholders", "attrs": {"forca": 8, "inteligencia": 14, "constituicao": 12, "carisma": 16}, "base_hp": 30, "prof": 2, "armor": {"ca": 1, "cam": 3},
     "weapon": "dominar_pessoa", "unlock": "ach:pilares_ativos", "color": [200, 180, 60], "hair": [50, 40, 30],
     "passive": {"name": "Aura Amarela", "desc": "+10% de moedas e XP.", "mods": {"gold_pct": 0.10, "xp_pct": 0.10}}},
   "zynara": {"name": "Zynara Vellen", "title": "Alta Conselheira de Rodhe's Bridge", "attrs": {"forca": 9, "inteligencia": 16, "constituicao": 12, "carisma": 15}, "base_hp": 32, "prof": 2, "armor": {"ca": 1, "cam": 3},
@@ -28,5 +28,11 @@
     "passive": {"name": "Rede de Informação", "desc": "+1 opção nos level-ups.", "mods": {"choices": 1}}},
   "bromnor": {"name": "Bromnor Martelo da Luz", "title": "Anão · Alto Conselheiro de Fateridge", "attrs": {"forca": 16, "inteligencia": 10, "constituicao": 16, "carisma": 14}, "base_hp": 42, "prof": 3, "armor": {"ca": 5, "cam": -2},
     "weapon": "martelo_da_gloria", "unlock": "ach:cacador_de_chefes", "color": [150, 120, 80], "hair": [200, 200, 200],
-    "passive": {"name": "Concórdia Eterna", "desc": "-2 de dano recebido e +2 CA.", "mods": {"dr": 2, "ca": 2}}}
+    "passive": {"name": "Concórdia Eterna", "desc": "-2 de dano recebido e +2 CA.", "mods": {"dr": 2, "ca": 2}}},
+  "arlindo": {"name": "Arlindo Orlando", "title": "Humano · Líder dos Grimholders", "attrs": {"forca": 10, "inteligencia": 13, "constituicao": 14, "carisma": 15}, "base_hp": 34, "prof": 2, "armor": {"ca": 2, "cam": 0},
+    "weapon": "memoria_alterada", "unlock": "ach:ecos_dagruve", "color": [90, 60, 45], "hair": [170, 170, 170], "art_like": "sylas",
+    "passive": {"name": "Olhos de Andarilho", "desc": "Ecos brilham de mais longe e cada Eco rende XP.", "mods": {"eco_pista_pct": 0.5, "eco_xp_pct": 0.2}}},
+  "erik": {"name": "Erik Blackthorn", "title": "Humano · Batedor dos Grimholders", "attrs": {"forca": 16, "inteligencia": 12, "constituicao": 13, "carisma": 10}, "base_hp": 38, "prof": 2, "armor": {"ca": 4, "cam": -1},
+    "weapon": "tocha_do_incendiario", "unlock": "ach:ecos_docas", "color": [110, 75, 45], "hair": [30, 30, 40], "art_like": "durvall",
+    "passive": {"name": "Incendiário Procurado", "desc": "Fogo e golpes em área causam 15% a mais.", "mods": {"fire_pct": 0.15, "area_dmg_pct": 0.15}}}
 }

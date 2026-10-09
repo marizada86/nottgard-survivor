@@ -12,18 +12,54 @@ const SHADOW_RADIUS_PER_HEIGHT := 0.2
 const HERO_FEET_Y := {
 	&"korrak": 350.0, &"kayron": 376.0, &"sylas": 376.0, &"maelor": 364.0, &"nyrelia": 368.0,
 	&"durvall": 376.0, &"zynara": 376.0, &"bromnor": 364.0, &"leoric": 368.0, &"brook": 368.0,
+	&"arlindo": 376.0, &"erik": 376.0,   # SPEC-160: iguais aos de Sylas e Durvall (arte provisória por art_like)
 }
+## SPEC-154 (BUG-029): tiras pré-reduzidas para o tamanho de tela, por herói. `dir` = pasta das tiras reduzidas e `factor` = redução
+## sobre a célula 256x384 (altura em tela / altura da arte, ou o dobro). Sem entrada vale o conjunto original. Reverter = apagar a entrada.
+const HERO_STRIP_SET := {}   # vazio por decisão do dono (2026-10-09): a variante C do piloto do Kayron não agradou; o jogo usa as tiras originais
+## Capturas e testes: sobrepõe a tabela sem mexer no código (herói -> {"dir", "factor", "pad"}).
+static var strip_override := {}
+
+static func strip_set(hero: String) -> Dictionary:
+	var key := StringName(hero)
+	if strip_override.has(key):
+		return strip_override[key]
+	return HERO_STRIP_SET.get(key, {})
+
+static func strip_factor(hero: String) -> float:
+	return float(strip_set(hero).get("factor", 1.0))
+
+## Margem transparente (px) em volta de cada quadro reduzido, para nada ser cortado na borda da célula (`pad` da tabela).
+static func strip_pad(hero: String) -> int:
+	return int(strip_set(hero).get("pad", 0))
+
+## Célula das tiras do herói: 256x384 no conjunto original; reduzida (arredondada para cima) mais a margem no conjunto reduzido.
+## SPEC-160: sem arte própria (idle.png), o herói usa a animação de `art_like` (provisório, como o `icon_like` dos itens).
+static func art_id(hero: String) -> String:
+	if ResourceLoader.exists("res://assets/animations/heroes/%s/idle.png" % hero):
+		return hero
+	return String(Data.table("heroes").get(hero, {}).get("art_like", hero))
+
+static func cell_of(hero: String) -> Vector2i:
+	var f := strip_factor(hero)
+	if f == 1.0:
+		return CELL
+	var pad := strip_pad(hero)
+	return Vector2i(ceili(float(CELL.x) * f) + 2 * pad, ceili(float(CELL.y) * f) + 2 * pad)
+
 ## Altura do herói em tela (px), pela raça (humano 1,75 m = 64 px; piso de 40 px para os pequenos).
 ## Korrak 2,32 m e Leoric ~1 m vêm do Vault; as demais são médias de D&D.
 const HERO_DISPLAY_HEIGHT := {
 	&"korrak": 76.0, &"kayron": 66.0, &"sylas": 64.0, &"maelor": 64.0, &"nyrelia": 62.0,
 	&"durvall": 60.0, &"zynara": 60.0, &"bromnor": 48.0, &"leoric": 40.0, &"brook": 40.0,
+	&"arlindo": 62.0, &"erik": 64.0,   # SPEC-160: humanos (1,75 m = 64 px; Arlindo um pouco curvado)
 }
 ## Altura visível (alfa) do idle de cada herói na célula 256x384; ver tools/audit_hero_motion.gd.
 ## Se a arte for regenerada, atualizar aqui (tests/test_animation_assets.gd confere).
 const HERO_IDLE_ART_HEIGHT := {
 	&"korrak": 267.0, &"kayron": 316.0, &"sylas": 304.0, &"maelor": 299.0, &"nyrelia": 352.0,
 	&"durvall": 231.0, &"zynara": 368.0, &"bromnor": 241.0, &"leoric": 224.0, &"brook": 259.0,
+	&"arlindo": 304.0, &"erik": 231.0,   # SPEC-160: altura do idle emprestado (Sylas, Durvall); trocar quando houver arte própria (alvos 290 e 300)
 }
 ## Heróis cujas tiras de caminhada têm o machado cortado na borda da célula e proporção diferente do idle.
 ## Eles andam com o próprio idle (sem espelhar, para a arma ficar sempre do mesmo lado) e um balanço procedural.
@@ -108,23 +144,25 @@ func _build_animations() -> void:
 	if not is_node_ready():
 		return
 	var frames := SpriteStripFrames.empty()
-	var root := "res://assets/animations/heroes/%s" % _active_hero_id
+	var strips := strip_set(_active_hero_id)
+	var root := String(strips.get("dir", "res://assets/animations/heroes/%s" % art_id(_active_hero_id)))
+	var cell := cell_of(_active_hero_id)
 	_has_animation = false
-	_has_animation = SpriteStripFrames.add_strip(frames, &"idle", "%s/idle.png" % root, CELL, 4, 8.0, true) or _has_animation
-	_has_animation = SpriteStripFrames.add_strip(frames, &"move", "%s/move.png" % root, CELL, 6, 10.0, true) or _has_animation
+	_has_animation = SpriteStripFrames.add_strip(frames, &"idle", "%s/idle.png" % root, cell, 4, 8.0, true) or _has_animation
+	_has_animation = SpriteStripFrames.add_strip(frames, &"move", "%s/move.png" % root, cell, 6, 10.0, true) or _has_animation
 	for direction in WALK_SOURCE_DIRECTIONS:
 		var animation: StringName = StringName("move_%s" % direction)
-		_has_animation = SpriteStripFrames.add_strip(frames, animation, "%s/%s.png" % [root, animation], CELL, 6, 10.0, true) or _has_animation
-	_has_animation = SpriteStripFrames.add_strip(frames, &"attack", "%s/attack.png" % root, CELL, 4, 12.0, false) or _has_animation
-	_has_animation = SpriteStripFrames.add_strip(frames, &"active", "%s/active.png" % root, CELL, 6, 12.0, false) or _has_animation
-	_has_animation = SpriteStripFrames.add_strip(frames, &"death", "%s/death.png" % root, CELL, 6, 9.0, false) or _has_animation
+		_has_animation = SpriteStripFrames.add_strip(frames, animation, "%s/%s.png" % [root, animation], cell, 6, 10.0, true) or _has_animation
+	_has_animation = SpriteStripFrames.add_strip(frames, &"attack", "%s/attack.png" % root, cell, 4, 12.0, false) or _has_animation
+	_has_animation = SpriteStripFrames.add_strip(frames, &"active", "%s/active.png" % root, cell, 6, 12.0, false) or _has_animation
+	_has_animation = SpriteStripFrames.add_strip(frames, &"death", "%s/death.png" % root, cell, 6, 9.0, false) or _has_animation
 	# Uma folha isolada nao deve ocultar o retrato estatico do heroi.
 	_has_animation = frames.has_animation(&"idle")
 	sprite.sprite_frames = frames
 	sprite.visible = _has_animation
 	# Ancora os pés (e não a borda da célula) na origem, onde fica a sombra.
-	var baseline_y: float = HERO_FEET_Y.get(StringName(_active_hero_id), float(CELL.y))
-	sprite.offset = Vector2(0, CELL.y * 0.5 - baseline_y)
+	var baseline_y: float = HERO_FEET_Y.get(StringName(_active_hero_id), float(CELL.y)) * strip_factor(_active_hero_id) + float(strip_pad(_active_hero_id))
+	sprite.offset = Vector2(0, cell.y * 0.5 - baseline_y)
 	sprite.scale = Vector2.ONE * display_scale(_active_hero_id)
 	sprite.position = Vector2.ZERO
 	sprite.rotation = 0.0
@@ -138,7 +176,7 @@ static func display_scale(hero: String) -> float:
 	var key := StringName(hero)
 	if not HERO_DISPLAY_HEIGHT.has(key) or not HERO_IDLE_ART_HEIGHT.has(key):
 		return DISPLAY_HEIGHT / CELL.y
-	return float(HERO_DISPLAY_HEIGHT[key]) / float(HERO_IDLE_ART_HEIGHT[key])
+	return float(HERO_DISPLAY_HEIGHT[key]) / (float(HERO_IDLE_ART_HEIGHT[key]) * strip_factor(hero))
 
 func sync_visual(screen_position: Vector2, is_dead: bool, is_flash: bool) -> void:
 	if not _dbg_ready:

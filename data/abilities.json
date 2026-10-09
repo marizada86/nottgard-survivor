@@ -8,5 +8,7 @@
   "leoric": {"id": "constelacao", "name": "Constelação", "kind": "star_burst", "cooldown": 13.0, "count": 8, "dice": "2d8", "dtype": "radiante", "attr": "carisma", "speed": 13, "range": 11, "desc": "Dispara uma constelação de projéteis em todas as direções."},
   "nyrelia": {"id": "dominacao", "name": "Dominação", "kind": "charm", "cooldown": 17.0, "duration": 7.0, "range": 7.0, "desc": "Converte temporariamente um inimigo comum em aliado."},
   "zynara": {"id": "suspensao_temporal", "name": "Suspensão Temporal", "kind": "time_stop", "cooldown": 14.0, "duration": 4.0, "radius": 7.0, "desc": "Quase paralisa inimigos e projéteis próximos."},
-  "bromnor": {"id": "concordia", "name": "Concórdia", "kind": "guard_nova", "cooldown": 16.0, "radius": 3.5, "dice": "2d8", "dtype": "radiante", "attr": "forca", "knock": 2.5, "charges": 1, "desc": "Ganha guarda e repele os inimigos ao redor."}
+  "bromnor": {"id": "concordia", "name": "Concórdia", "kind": "guard_nova", "cooldown": 16.0, "radius": 3.5, "dice": "2d8", "dtype": "radiante", "attr": "forca", "knock": 2.5, "charges": 1, "desc": "Ganha guarda e repele os inimigos ao redor."},
+  "arlindo": {"id": "modify_memory", "name": "Modify Memory", "kind": "forget_nova", "cooldown": 18.0, "radius": 4.0, "duration": 2.0, "dtype": "magico", "desc": "Inimigos por perto esquecem você e perdem os ataques por 2 s."},
+  "erik": {"id": "navios_em_chamas", "name": "Navios em Chamas", "kind": "fire_zone", "cooldown": 16.0, "radius": 2.6, "reach": 2.5, "duration": 8.0, "tick": 0.5, "dice": "1d6", "dtype": "fogo", "attr": "forca", "desc": "Faixa de fogo à frente que fere os inimigos por 8 s."}
 }

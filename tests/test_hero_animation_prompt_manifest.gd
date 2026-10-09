@@ -12,7 +12,10 @@ func run() -> Array[String]:
 	var manifest: Variant = JSON.parse_string(file.get_as_text()) if file != null else null
 	if not manifest is Dictionary:
 		return ["manifesto de prompts de animação ausente ou inválido"]
-	var heroes: Dictionary = Data.table("heroes")
+	var heroes: Dictionary = {}
+	for hero_id in Data.table("heroes"):
+		if not Data.table("heroes")[hero_id].has("art_like"):   # SPEC-160: Arlindo e Erik têm pacote próprio (ART-PROMPTS-060)
+			heroes[hero_id] = Data.table("heroes")[hero_id]
 	var covered: Dictionary = manifest.get("heroes", {})
 	if covered.size() != heroes.size():
 		failures.append("manifesto cobre %d heróis; esperado %d" % [covered.size(), heroes.size()])

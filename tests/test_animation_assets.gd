@@ -747,7 +747,7 @@ func _validate_hero_display_scale() -> Array[String]:
 			failures.append("herói sem altura de exibição: %s" % hero_id)
 			continue
 		var image := Image.new()
-		if image.load(ProjectSettings.globalize_path("res://assets/animations/heroes/%s/idle.png" % hero_id)) != OK:
+		if image.load(ProjectSettings.globalize_path("res://assets/animations/heroes/%s/idle.png" % script.art_id(String(hero_id)))) != OK:   # SPEC-160: art_like até haver arte própria
 			failures.append("idle ilegível: %s" % hero_id)
 			continue
 		var measured: Array[int] = []
@@ -771,7 +771,7 @@ func _validate_hero_display_scale() -> Array[String]:
 	for hero_id in heights:
 		if hero_id != &"korrak" and float(heights[hero_id]) >= float(heights[&"korrak"]):
 			failures.append("%s não pode ser tão alto quanto Korrak" % hero_id)
-		if absf(script.display_scale(String(hero_id)) * float(art[hero_id]) - float(heights[hero_id])) > 0.5:
+		if absf(script.display_scale(String(hero_id)) * float(art[hero_id]) * script.strip_factor(String(hero_id)) - float(heights[hero_id])) > 0.5:
 			failures.append("escala de %s não entrega a altura-alvo" % hero_id)
 	return failures
 

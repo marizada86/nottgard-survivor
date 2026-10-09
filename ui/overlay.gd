@@ -543,7 +543,7 @@ func _draw_quest_highlight(m: Dictionary) -> void:
 
 ## SPEC-152: Ecos ainda não pegos brilham de leve quando o herói chega a `eco_pista` tiles (pista, não caça cega).
 func _draw_ecos() -> void:
-	var clue := float(Data.table("secrets").get("_regras", {}).get("eco_pista", 6.0))
+	var clue := float(Data.table("secrets").get("_regras", {}).get("eco_pista", 6.0)) * (1.0 + battle.hero.m("eco_pista_pct"))   # SPEC-160: Olhos de Andarilho
 	for eco in battle.ecos:
 		if eco.found:
 			continue
