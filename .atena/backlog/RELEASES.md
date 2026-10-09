@@ -49,9 +49,47 @@ playtest" viram verificados ou reabertos.
 
 ## Aguardando versão (sem build)
 
-Itens implementados localmente que **ainda não estão em nenhum `.exe`**; entram na lista "O que testar" da próxima versão exportada.
+Nada: tudo o que estava aqui entrou na [0.4.0](#versão-040--major-update-pronta-publicação-pendente).
 
-### Marcas do Abismo (MEC-040, SPEC-141 e SPEC-143, PLAN-074 e PLAN-076)
+## Versão 0.4.0 — Major-update, pronta (publicação pendente)
+
+Plano [PLAN-081](../vault/drafts/PLAN-081-lancamento-da-v0-4-0-2026-10-08.md) / [SPEC-148](../specs/SPEC-148-lancamento-da-v0-4-0.md). **Absorve a 0.3.2 e a 0.3.3** (só existiram como `.exe` local; ficam como histórico, abaixo) e tudo o que estava em "Aguardando versão". Changelog do tester: **0.3.1 → 0.4.0** ([CHANGELOG 0.4.0](changelogs/CHANGELOG%200.4.0%20-%20Nottgard%20Survivors.pdf), fonte [HTML](changelogs/CHANGELOG-0.4.0.html)), [GUIA FACIL 0.4.0](changelogs/GUIA%20FACIL%200.4.0%20-%20Nottgard%20Survivors.pdf) e [QUESTIONARIO Rápido - 007](questionarios/QUESTIONARIO%20R%C3%A1pido%20-%20007.pdf) (mapa em [QUESTIONARIO-007](questionarios/QUESTIONARIO-007-v0.4.0.md)). `0.4.0` em `core/version.gd` e `export_presets.cfg`. Evidências: EVID-202 a 208 e o EVID final do B-008.
+
+**Conteúdo novo desta major (um commit por mecânica):** Arcanista (MEC-041), Bola de Fogo, Lâmina de Sombra e Romper Armadura com duas evoluções e sete equipamentos únicos, entre eles o Coração da Dominância (MEC-042), e a fatia piloto de segredos com mapa 84×84, Ecos, câmaras e relíquias em Shedaklah, Molor e Durao (MEC-039, MEC-012). Arte e som desses itens são **provisórios** (ART-042, ART-043, ART-006).
+
+### O que testar (0.4.0)
+
+1. **Marcas do Abismo** (Quartel → Marcas): nove marcas, cada uma liberada por uma conquista; − e + escolhem o nível; efeito na run inteira.
+2. **Ouro:** o ganho no Quartel ficou menor nas fases finais; a venda de peças vale só na run; o Chicote Avarento rende pouco. A primeira compra no Quartel chega em até duas runs?
+3. **Arcanista:** evento novo que melhora **magias**. O **ferreiro** agora melhora só **armas e equipamentos**. Dá para entender quem faz o quê?
+4. **Armas e magias novas:** Bola de Fogo, Lâmina de Sombra e Romper Armadura (e as evoluções Tormenta de Fogo e Esmagar Defesas) aparecem no level-up? Parecem fortes ou fracas demais?
+5. **Equipamentos únicos novos:** Cajado da Família Infernum, Wave of Terror, Colar de visão verdadeira, Detector Arcano, Dispositivo Antimagia de Gilly, Dispositivo das Docas e **Coração da Dominância** (concede a magia Domínio da Vontade).
+6. **Mapas maiores com segredos** (Shedaklah, Molor e Durao, 84×84): Ecos de Nottgard (brilham de perto; texto vai ao Diário), ruína com baú, covil com elite que acorda, câmara selada com **relíquia**. Vale a pena explorar? Os mapas ficaram vazios demais?
+7. **Diário → Ecos:** cada fase mostra "Ecos n/4" e a relíquia; conquista "Ecos de <fase>".
+8. **Ficha C:** C abre e fecha; mostra próximo nível e evolução das armas; bônus com o nome antes do valor.
+9. **HUD:** nada sobreposto no topo; quests em destaque com realce no mundo; indicador do Estige; o bloco de notas (F5) prende o foco.
+10. **Primeiro baú** só aos 45 s; a arma base não volta como "NOVA" depois de evoluir.
+11. **Bênçãos:** Juramento de Lliira, Caminho da Estrela e as outras novas; Favor e rivalidade; recusar a bênção.
+12. **Curas mais fracas** (Vela Sagrada, Regeneração, Machado de Xar'gath): ainda dá para ficar imortal?
+13. **Controles:** Xbox e PlayStation (ícones, mapa Padrão/Legado, L1/LB e R1/RB nas abas) e **toque no celular** (ainda em teste de aparelho).
+14. **Ranking** na tela inicial (carrega ao abrir a aba) e **F7** (reúne as evidências num ZIP ao lado do executável).
+15. **Verificações pendentes** (reteste dispensado em 2026-10-08): fechar a ficha com C e Esc; loja, ferreiro e curandeiro com "Sair"; equipar ou vender item; quebráveis (drop, respawn, poção só de elite); segurar o clique para andar; nível de equipamento; sinergias arma + acessório + magia.
+
+**Conhecidos (não precisa reportar):** heróis patinam ao andar de lado (BUG-028); Zynara, Leoric e Nyrelia aparecem de frente ao andar para cima (BUG-027); pixels soltos nos heróis (BUG-029); HQ da Peregrinação com o braço do Korrak fundido ao machado (BUG-022); ícones e sons de itens, Ecos e câmaras são provisórios.
+
+### Fechar a versão (checklist)
+
+- [x] Suíte, smoke e bot por herói (EVID-208)
+- [x] `VERSION` e `file_version`/`product_version` em 0.4.0 no mesmo commit
+- [x] Esta seção e a tabela de histórico; `backlog_check` sem alertas
+- [ ] `.exe` exportado de commit limpo, com o hash no rodapé (EVID final)
+- [ ] Push na `main` (publica o `latest`): **só com aprovação do dono**
+- [ ] Aviso aos testers com os três PDFs (changelog, guia fácil e questionário 007)
+
+### Detalhe de itens que vinham como "Aguardando versão"
+
+
+#### Marcas do Abismo (MEC-040, SPEC-141 e SPEC-143, PLAN-074 e PLAN-076)
 
 1. **Liberação por conquista:** cada marca nasce bloqueada; a aba **Marcas** mostra, em cada uma, a conquista que falta e a condição (por exemplo "Marca do Abismo: Horda: derrote 1.000 inimigos"). Ao ganhar a conquista, só aquela marca libera, em qualquer fase. Conferir as nove: Carapaça (chefe de Dagruve), Pressa (10 min numa run), Horda (1.000 abates), Elites despertos (25 elites), Fúria (50 abates seguidos sem dano), Abismo vivo (4 fases), Fome (nível 20), Chefe desperto (3 chefes) e Sem trégua (4 chefes numa run).
 2. **Escolha:** na aba Marcas, − e + em cada uma das nove marcas (0 a 3; Sem trégua só 1), com mouse, controle e toque; o total e o bônus de moeda (+10% por ponto) atualizam; a escolha continua depois de fechar o jogo. Na aba Jogar, a fase mostra o resumo ("Marcas do Abismo: nível N...").
@@ -61,7 +99,7 @@ Itens implementados localmente que **ainda não estão em nenhum `.exe`**; entra
 6. **Sem marcas:** a run deve ser igual à de antes (nenhuma marca ligada).
 7. **Perguntar ao tester:** o nível máximo (25) é desafiador ou impossível? Qual marca é a mais injusta?
 
-### Economia de ouro (BAL-023, SPEC-142, PLAN-075)
+#### Economia de ouro (BAL-023, SPEC-142, PLAN-075)
 
 1. **Ganho no Quartel menor nas fases finais:** o ouro de cada fase entra no Quartel em valor-base (sem o ×5 das fases finais). Uma vitória até Feng-tu deve render algo perto de 9.000 a 13.000 moedas (antes ~23.000 a 30.000). Anote quanto a tela de resultado mostra.
 2. **Bônus de moedas:** Ganância, Anel de Prata, Carisma e a Aura Amarela agora valem em qualquer fase (+10% de bônus = +10% de moedas).
@@ -70,11 +108,13 @@ Itens implementados localmente que **ainda não estão em nenhum `.exe`**; entra
 5. **Teto da recompensa:** descida e Marcas do Abismo juntas nunca passam de ×3,0.
 6. **Perguntar ao tester:** a primeira compra no Quartel chega em até 2 runs? O ritmo de ~20 vitórias para comprar tudo parece justo? Os arquivos de estatística da run trazem `gold_src` (ouro por fonte), que calibra a meta.
 
-## Versão 0.3.3 — build local exportada (publicação pendente)
+
+
+## Versão 0.3.3 — build local exportada (absorvida pela 0.4.0)
 
 Decisão do dono (2026-10-07): subir para **0.3.3** e exportar o `.exe` local `build/NottgardSurvivors-Playtest 0.3.3.exe` (22:44). `0.3.3` em `core/version.gd` e `export_presets.cfg`. **Sem commit de versão nem push** (push na `main` publica o release `latest`). Exportada da árvore de trabalho sobre `1144155+` (suja): leva as Marcas do Abismo (commits `78c6f39`, `1144155`) e a economia de ouro (BAL-023, ainda sem commit) das seções "Aguardando versão" acima, mais o diagnóstico opt-in do BUG-028 (inerte sem `--walk-debug`). Suíte 0 falhas e fumaça ok antes do export. Atenção: por conter mecânica nova (Marcas do Abismo), pela regra de tipos seria Major; o número 0.3.3 foi escolha do dono.
 
-## Versão 0.3.2 — Minor-update, build local exportada (publicação pendente)
+## Versão 0.3.2 — Minor-update, build local exportada (absorvida pela 0.4.0)
 
 Decisão do dono (2026-10-06): subir a versão para **0.3.2** e exportar o `.exe` local em `build/`. `0.3.2` em `core/version.gd` e `export_presets.cfg`. Ainda **sem commit de versão nem push**: o CI só publica o release `latest` com a 0.3.2 depois disso.
 
@@ -234,6 +274,7 @@ Origem: [PLAN-038](../vault/drafts/PLAN-038-atualizacao-pos-playtests-t01-t02-t0
 
 | Versão | Tipo | Publicada | Commit da build | Avaliada em |
 |---|---|---|---|---|
+| 0.4.0 | Major (changelog 0.3.1 → 0.4.0 + guia fácil + questionário 007; absorve 0.3.2 e 0.3.3) | pendente (falta o `.exe` de commit limpo e o push) | a registrar no EVID final | — |
 | 0.3.2 | Minor (build local exportada; sem PDF nem questionário novo) | pendente (falta commit de versão e push) | `a09d460+` (árvore suja, reexportada 2026-10-06 15:51) | — |
 | 0.3.1 | Minor (decisão do dono; sem PDF nem questionário novo) | 2026-10-05 (release `latest`, Playtest v0.3.1) | ver título do release | — (aguardando testers) |
 | 0.3.0 | Major (changelog + guia fácil + questionário 006) | 2026-10-03 (release `latest`, Playtest v0.3.0) | ver título do release | — (aguardando testers) |

@@ -1,7 +1,7 @@
 class_name Version
 extends RefCounted
 
-const VERSION := "0.3.2"
+const VERSION := "0.4.0"
 const GAME_NAME := "Nottgard Survivors"
 
 enum BuildProfile { PRODUCTION, PUBLIC_PLAYTEST, QA_INTERNAL }
