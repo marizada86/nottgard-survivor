@@ -1,10 +1,10 @@
 {
-  "_nota": "SPEC-158 (MEC-059, MEC-060). Dano em fracao da vida maxima por segundo; mesmos valores da Mare de Dagruve (boss_presentations.json).",
+  "_nota": "SPEC-158 (MEC-059, MEC-060). Dano em fracao da vida maxima por segundo. A borda foi subida de 2%-6% (igual a Mare de Dagruve) para 3%-9% a pedido do dono em 2026-10-09; a Mare segue 2%-6%.",
   "edge": {
     "edge_band_tiles": 3.0,
     "telegraph_tiles": 6.0,
-    "start_dps_pct": 0.02,
-    "max_dps_pct": 0.06,
+    "start_dps_pct": 0.03,
+    "max_dps_pct": 0.09,
     "ramp_seconds": 20.0,
     "decay_mult": 2.0
   },

@@ -44,18 +44,24 @@ func run() -> Array:
 	var out: Array = []
 	var cfg: Dictionary = Data.table("fog")
 
-	# 1) A faixa de 3 tiles fere a 2% e chega a 6% da vida máxima por segundo em 20 s de exposição contínua
+	# 1) A faixa de 3 tiles fere do dano inicial ao máximo de data/fog.json (hoje 3% a 9% da vida máxima por segundo) em 20 s de exposição contínua
+	var edge_cfg: Dictionary = cfg.edge
+	var e_start := float(edge_cfg.start_dps_pct)
+	var e_max := float(edge_cfg.max_dps_pct)
 	var b := _bat()
 	if b.edge_band_tiles() != 3.0:
 		out.append("a faixa de borda deveria ter 3 tiles (data/fog.json)")
 	var first := _edge_loss(b, Vector2(2.5, 30), 1.0)
-	if first < 0.0199 or first > 0.0225:
-		out.append("o primeiro segundo na faixa deveria custar ~2%% da vida (custou %.4f)" % first)
+	var first_hi := e_start + (e_max - e_start) / float(edge_cfg.ramp_seconds) + 0.0005
+	if first < e_start - 0.0001 or first > first_hi:
+		out.append("o primeiro segundo na faixa deveria custar ~%.1f%% da vida (custou %.4f)" % [e_start * 100.0, first])
 	var last := 0.0
 	for i in 25:
 		last = _edge_loss(b, Vector2(2.5, 30), 1.0)
-	if absf(last - 0.06) > 0.0005:
-		out.append("a exposição longa deveria chegar a 6%% da vida por segundo (chegou a %.4f)" % last)
+	if absf(last - e_max) > 0.0005:
+		out.append("a exposição longa deveria chegar a %.1f%% da vida por segundo (chegou a %.4f)" % [e_max * 100.0, last])
+	if e_max <= e_start:
+		out.append("o dano máximo da borda deveria passar do inicial")
 
 	# 2) Fora da faixa nada acontece; as quatro bordas valem; o limite é 3 tiles
 	var c := _bat()
@@ -106,7 +112,7 @@ func run() -> Array:
 	if warns != 1:
 		out.append("o aviso da borda deveria sair uma vez (saiu %d)" % warns)
 
-	# 6) Maré e borda juntas não somam: vale o maior dos dois
+	# 6) Maré e borda juntas não somam: vale o maior dos dois (a borda só acrescenta o que passa da Maré)
 	var s := _bat()
 	s.fog_state = "advancing"
 	s.fog_config = cfg.postboss.duplicate(true)
@@ -115,14 +121,21 @@ func run() -> Array:
 	s.fog_intensity = 1.0
 	s.hero.pos = Vector2(1, 1)
 	s.hero.hp = s.hero.max_hp
-	s.edge_exposure = 99.0   # a borda já estaria em 6%, igual à Maré cheia
+	s.edge_exposure = 99.0   # a borda já está no dano máximo
+	var tide_pct := s.postboss_fog_pct_at_hero()
+	if absf(tide_pct - float(cfg.postboss.max_dps_pct)) > 0.0001:
+		out.append("a Maré cheia deveria valer %.1f%% (%.4f)" % [float(cfg.postboss.max_dps_pct) * 100.0, tide_pct])
 	var before := s.hero.hp
 	s._update_edge_fog(1.0)
-	var edge_only := before - s.hero.hp
-	if absf(edge_only - 0.0) > 0.0001:
-		out.append("com a Maré cobrindo o herói em 6%%, a borda não pode somar (somou %.2f)" % edge_only)
-	if absf(s.postboss_fog_pct_at_hero() - 0.06) > 0.0001:
-		out.append("a Maré cheia deveria valer 6%% (%.4f)" % s.postboss_fog_pct_at_hero())
+	var extra_ratio := (before - s.hero.hp) / s.hero.max_hp
+	if absf(extra_ratio - maxf(0.0, e_max - tide_pct)) > 0.0001:
+		out.append("a borda deveria acrescentar só o que passa da Maré (%.4f, esperado %.4f)" % [extra_ratio, maxf(0.0, e_max - tide_pct)])
+	s.fog_config["start_dps_pct"] = 0.5   # Maré mais forte que a borda: a borda não acrescenta nada
+	s.fog_config["max_dps_pct"] = 0.5
+	before = s.hero.hp
+	s._update_edge_fog(1.0)
+	if before - s.hero.hp > 0.0001:
+		out.append("com a Maré mais forte que a borda, a borda não pode somar")
 
 	# 7) Maré em todas as fases com próximo mapa; Pilares fica de fora
 	var with_fog := 0
