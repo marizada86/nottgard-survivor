@@ -3,13 +3,13 @@ spec: SPEC-148
 spec_file: .atena/specs/SPEC-148-lancamento-da-v0-4-0.md
 proposal: .atena/vault/drafts/PLAN-081-lancamento-da-v0-4-0-2026-10-08.md
 mode: per-plan
-status: EXECUTING
+status: COMPLETED_PUBLISHED
 created: '2026-10-08'
 request_classification: PLAN_DEVIATION
 deviation_id: DEV-013
 authorization_verbatim: 'atena, planeje a v0.4.0 agora'
 approval_basis: 'Dono escolheu por plano, MEC-039 fatia piloto, MEC-041 + 3 armas/magias + 6 itens, arte provisoria nao trava (2026-10-08). Falta o aviso explicito de inicio.'
-checkpoint: B-008/S-026 (versao 0.4.0, RELEASES, PDFs e questionario prontos na arvore; aguardam commit, exportacao e push)
+checkpoint: B-008/S-028 (concluido; pendentes: aviso aos testers e .exe local opcional)
 return:
   plan: PLAN-071
   state_file: .atena/state/plan-071-playtest-ranking.yaml
@@ -32,7 +32,7 @@ batches:
   B-005: {title: MEC-042 conteudo novo, steps: [S-013, S-014, S-015, S-016], status: DONE, note: 'Portao aprovado pelo dono (2026-10-08), com o Coracao da Dominancia (7 equipamentos). EVID-206; commits locais 40ec60d a ac339b7; ratificados pelo dono em 2026-10-08 ("1. sim"); nao publicados.'}
   B-006: {title: MEC-039 fatia piloto, steps: [S-017, S-018, S-019, S-020], status: DONE, note: 'commits cfb7bdc (mapa 84x84) e cb38b9b (segredos) aprovados pelo dono em 2026-10-08', note: 'Portao de conteudo: Ecos e reliquias aprovados pelo dono antes do codigo.'}
   B-007: {title: Balanceamento, steps: [S-021, S-022], status: DONE, note: 'EVID-208: sem regressao; nenhum numero mexido; gold_src dos testers inexistente'}
-  B-008: {title: Fechamento e lancamento, steps: [S-023, S-024, S-025, S-026, S-027, S-028], status: IN_PROGRESS, note: 'Push, exportacao e aviso aos testers so com aprovacao explicita.'}
+  B-008: {title: Fechamento e lancamento, steps: [S-023, S-024, S-025, S-026, S-027, S-028], status: DONE_WITH_PENDING, note: 'Push, exportacao e aviso aos testers so com aprovacao explicita.'}
 steps:
   S-001: 'DONE (EVID-202). tools/backlog_check.ps1 (via powershell -ExecutionPolicy Bypass) e lista de bugs abertos; registrar no EVID.'
   S-002: 'DONE (EVID-202). Triar git status em G1 ouro, G2 F7/ZIP, G3 lettering/cursor, G4 diagnostico e pacote Caio, G5 documentos Atena, G6 versao; mapa arquivo -> grupo.'
@@ -59,9 +59,9 @@ steps:
   S-023: 'DONE na arvore (0.4.0 em version.gd e export_presets.cfg; RELEASES.md com a secao 0.4.0; backlog_check 0 alertas). Versao 0.4.0 em core/version.gd e export_presets.cfg (G6); RELEASES.md absorvendo 0.3.2 e 0.3.3; backlog_check antes de commitar.'
   S-024: 'DONE na arvore (CHANGELOG-0.4.0 html e pdf 4 paginas; GUIA-FACIL-0.4.0 html e pdf 2 paginas). CHANGELOG-0.4.0.html e PDF (Chrome headless), conferir as paginas; GUIA-FACIL-0.4.0.html e PDF.'
   S-025: 'DONE na arvore (QUESTIONARIO-007 md, html e pdf 1 pagina). QUESTIONARIO-007 (mapa pergunta -> cartao) e PDF.'
-  S-026: 'Suite, smoke, kit_test e bot na arvore final; exportar o .exe em build/ de commit limpo, com hash no rodape.'
-  S-027: 'Commit de versao e documentos (aprovacao); push na main so com aprovacao explicita separada (publica o latest).'
-  S-028: 'EVID final, reconciliar plan.yaml (DEV-013) e voltar ao PLAN-071 em B-006/S-011.'
+  S-026: 'PARCIAL (EVID-209): suite, smoke, kit_test e audit OK na arvore da 0.4.0; o .exe local NAO foi exportado (o dono nao pediu; o .exe dos testers vem do CI); desempenho medido so em janela. Suite, smoke, kit_test e bot na arvore final; exportar o .exe em build/ de commit limpo, com hash no rodape.'
+  S-027: 'DONE (commit 5850182 e push 94a6a2f..aa496f2 aprovados pelo dono em 2026-10-08; release Playtest v0.4.0); o AVISO aos testers e acao do dono e segue pendente. Commit de versao e documentos (aprovacao); push na main so com aprovacao explicita separada (publica o latest).'
+  S-028: 'DONE (EVID-209; plan.yaml reconciliado; PLAN-071 retomado em B-006/S-011). EVID final, reconciliar plan.yaml (DEV-013) e voltar ao PLAN-071 em B-006/S-011.'
 gates:
   dependencies: NO_NEW_DEPENDENCIES
   new_image_generation: NOT_IN_SCOPE

@@ -1,21 +1,6 @@
 version: 2
 # Reconciliado por Atena em 2026-10-05: PLAN-056 aceito pelo dono; commits reais registrados.
 active_plan:
-  id: PLAN-081
-  spec_id: SPEC-148
-  state_file: '.atena/state/plan-081-lancamento-v0-4-0.yaml'
-  mode: per-plan
-  checkpoint: B-001/S-001
-  status: EXECUTING
-  approved: '2026-10-08'
-  started: '2026-10-08'
-  request_classification: PLAN_DEVIATION
-  deviation_id: DEV-013
-  start_authorization_verbatim: 'atena, inicie o PLAN-081 em B-001'
-plan_cursor:
-  current: 'PLAN-081 / SPEC-148 (v0.4.0): B-001 a B-007 concluidos e commitados (ate 4e88dbb). B-008: versao 0.4.0, RELEASES, changelog PDF, guia facil e questionario 007 prontos na arvore (suite, smoke, kit_test e audit OK); aguardam commit, exportacao do .exe de commit limpo e push, cada um com aprovacao.'
-  next: 'Aprovar o commit da versao 0.4.0 (S-023 a S-025); exportar o .exe de commit limpo (S-026); push e aviso aos testers so com aprovacao separada (S-027).'
-suspended_active_plan:
   id: PLAN-071
   spec_id: SPEC-138
   state_file: '.atena/state/plan-071-playtest-ranking.yaml'
@@ -23,15 +8,18 @@ suspended_active_plan:
   checkpoint: B-006/S-011
   status: LOCAL_DELIVERED_AWAITING_DEVICE_ACCEPTANCE
   approved: '2026-10-06'
-  suspended_by: PLAN-081
-  suspended_at: '2026-10-08'
-  snapshot: '.atena/generated/v040-release/plan-before-081-start.yaml'
-  resume_note: 'Retomar em B-006/S-011 quando o PLAN-081 fechar ou o dono pedir; falta o aceite dos clientes finais (ranking e F7) e os gates remotos.'
-  previous_plan_cursor_text: 'PLAN-071 / SPEC-138: fontes locais estaveis e verificadas; EVID-187; aceite dos clientes finais e ativacao separados. Proximo: homologar clientes finais; pipeline do dono e gates remotos separados; preservar cadeia de retorno.'
+  resumed: '2026-10-08'
+  resumed_after: PLAN-081
+  request_classification: IN_PLAN
+plan_cursor:
+  current: 'PLAN-071 / SPEC-138 retomado em 2026-10-08 depois do PLAN-081 (v0.4.0 publicada, EVID-209): fontes locais estaveis e verificadas; EVID-187; aceite dos clientes finais (ranking e F7) e gates remotos separados.'
+  next: 'Homologar clientes finais; pipeline do dono e gates remotos separados; preservar cadeia de retorno. Pendentes do PLAN-081: aviso aos testers com os tres PDFs (acao do dono) e exportacao local opcional do .exe.'
 previous_plan_cursor:
   current: 'PLAN-059 (SPEC-125) commitado e publicado (05264f0, 1392627) em 2026-10-05; o playtest decide Docas, Molor e fases finais.'
   next: 'Retomar PLAN-053 (imagens, Shu: attack_02, death_03, death_04) e/ou abrir spec de balanceamento BAL-018 (precisa de linha de base do bot por heroi). Push da main (1 a 3 commits a frente) exige aprovacao.'
 local_git_receipts:
+  - {plan: PLAN-071, deviation: DEV-015, authorization: "atena commite e rode a suite completa (2026-10-08)", branch: main, commits: [e1933be], pushed: false, evidence: EVID-210, scope: "ui/overlay.gd (altar usa o sprite estatico), BUG-038, ART-044, SPEC-153, EVID-210, DEV-015", note: "Suite completa 0 falhas antes do commit. plan.yaml commitado so com o bloco DEV-015; o fechamento do PLAN-081 (plan.yaml, plan-081, RELEASES) e o EVID-209 seguem sem commit, de outra sessao. Sem push nem exportacao."}
+  - {plan: PLAN-081, batch: "B-008 push", authorization: "atena, commit e push (2026-10-08)", branch: main, commits: [5850182, aa496f2], pushed: true, push_range: "94a6a2f..aa496f2", ci: "Build and Release #131; release latest = Playtest v0.4.0 (aa496f29a053c697c755b35554d01e7931e6fd01), pre-release, 4 assets", evidence: EVID-209, note: "aa496f2 = atualizacao do ADD no AGENTS.md (outra sessao). Ficam locais por decisao: ZIP do Caio, unit-profile e capturas extras de big-maps."}
   - {plan: PLAN-081, batch: B-007 e B-008 (versao), authorization: "aprovo o commit, siga para o B-008; aprovo o commit da versao 0.4.0 (2026-10-08)", branch: main, commits: [4e88dbb, "versao 0.4.0 = commit seguinte"], scope: "B-007 documentos; versao 0.4.0, RELEASES, changelog e guia em PDF, questionario 007", pushed: false, note: "exportacao do .exe e push exigem aprovacao separada"}
   - {plan: PLAN-081, batch: B-006, authorization: "aprovo os 3 commits, siga para o B-007 (2026-10-08)", branch: main, commits: [cfb7bdc, cb38b9b, "documentos = commit seguinte"], scope: "MEC-012 mapa 84x84; MEC-039 segredos; documentos", pushed: false, evidence: EVID-207}
   - {plan: PLAN-081, batch: "B-003 a B-005", authorization: "B-003: aprovo os dois commits (2026-10-08); B-004: aprovo os commits e o conteudo como recomendado (2026-10-08); B-005: SEM aprovacao especifica (commits locais feitos por Atena e declarados)", branch: main, commits: [9f51923, 4ed4123, d8af564, 0be8918, 40ec60d, 3df2b3d, e79d167, e00c56b, 94e630e, 11f2a68, 1169212, ced6167, b790960, 00df93c, 1157709, 9764936, 0307965, eca82e9, ac339b7], pushed: false, evidence: [EVID-204, EVID-205, EVID-206], note: "Os commits eca82e9 e ac339b7 citam BAL-026; o cartao e BAL-025."}
@@ -115,7 +103,7 @@ deferred_requests:
   - id: DEV-013
     request: 'Plano para lancar a v0.4.0 (Major: changelog PDF, guia facil, questionario 007, plano PLAN-nnn aprovado).'
     request_classification: PLAN_DEVIATION
-    status: EXECUTING_PLAN_081
+    status: COMPLETED_PUBLISHED_RETURNED_TO_PLAN_071
     recorded: '2026-10-08'
     reopened: '2026-10-08'
     reopened_authorization_verbatim: 'atena, planeje a v0.4.0 agora'
@@ -126,7 +114,10 @@ deferred_requests:
     spec: '.atena/specs/SPEC-148-lancamento-da-v0-4-0.md'
     proposal: '.atena/vault/drafts/PLAN-081-lancamento-da-v0-4-0-2026-10-08.md'
     approval_mode: per-plan
-    approval_status: APPROVED_PER_PLAN_STARTED_2026-10-08
+    approval_status: APPROVED_PER_PLAN_COMPLETED_2026-10-08
+    closed: '2026-10-08'
+    evidence: [EVID-202, EVID-203, EVID-204, EVID-205, EVID-206, EVID-207, EVID-208, EVID-209]
+    note: 'PLAN-081 concluido: v0.4.0 commitada e publicada (push 94a6a2f..aa496f2); PLAN-071 retomado em B-006/S-011. Pendentes: aviso aos testers e .exe local opcional.'
     owner_scope_choice: 'Consolidar + conteudo novo: consolidacao (arvore suja em commits por mecanica, suite/fumaca/bot, fecho do lote de bugs, versao, PDFs) mais mecanicas grandes marcadas para a proxima major (MEC-041 NPC de upgrade de magia, MEC-039 segredos e mapa maior, MEC-042 itens/armas/magias novos). Quais entram e a ordem ficam para a spec.'
     context_found:
       - 'Ultima versao publicada: 0.3.1. 0.3.2 e 0.3.3 so existem como .exe local; core/version.gd em HEAD marca 0.3.2 e a 0.3.3 esta na arvore suja.'
@@ -277,6 +268,7 @@ completed_plans:
     commits: ['7d2f262 B-002', '35796ba B-003', '5fc8d04 B-004', 'eecced9 B-005', 'd86fbef B-007', '0cb3e8d release 0.3.1']
     note: 'Pontos abertos transferidos ao BAL-018: Docas facil (3%), Feng-tu 6%, rodada com bot novato, RNG do bot nao semeado. Criterios de aceite numericos (nivel medio mapas 1 e 2; % Raro/Unico no tier 0) nunca fixados; dono aceitou sem eles.'
 completed_side_plans:
+  - {id: PLAN-081, spec_id: SPEC-148, status: COMPLETED_PUBLISHED, evidence: [EVID-202, EVID-203, EVID-204, EVID-205, EVID-206, EVID-207, EVID-208, EVID-209], deviation: DEV-013, mode: per-plan, approved: "2026-10-08", closed: "2026-10-08", commit: aa496f2, note: "Lancamento da v0.4.0 (Major): higiene da arvore, Arcanista (MEC-041), 3 armas e 7 equipamentos (MEC-042), fatia piloto de segredos com mapa 84x84 (MEC-039, MEC-012), balanceamento medido, changelog, guia facil e questionario 007. Push 94a6a2f..aa496f2; release Playtest v0.4.0. PLAN-071 retomado."}
   - {id: PLAN-076, spec_id: SPEC-143, status: COMPLETED_LOCAL, evidence: [EVID-195], deviation: DEV-008, mode: per-plan, approved: "2026-10-07", note: "MEC-040 Marcas do Abismo, entrega 2 (liberacao por conquista e 4 marcas); sem commit, push nem build; arquivos compartilhados com PLAN-075 pedem git add -p. PLAN-071 continua active_plan em B-006/S-011."}
   - {id: PLAN-075, spec_id: SPEC-142, status: COMPLETED_LOCAL, evidence: "EVID-191, EVID-193, EVID-194", closed: "2026-10-07", mode: per-plan, note: "Economia de ouro (BAL-023): telemetria, gold_pct proporcional, venda escalada e so da run, ouro do Quartel em valor-base, Chicote 0,15/s, teto 3,0 na recompensa; B-004 pulada pelo dono; sem commit; aguarda playtest com gold_src. PLAN-071 continua active_plan."}
   - {id: PLAN-074, spec_id: SPEC-141, status: COMPLETED_LOCAL, evidence: [EVID-196, EVID-192], deviation: DEV-006, mode: per-plan, approved: "2026-10-07", note: "MEC-040 Marcas do Abismo, entrega 1 (5 marcas, run inteira); sem commit, push nem build; arquivos compartilhados com PLAN-075 pedem git add -p (ver EVID-192). PLAN-071 continua active_plan em B-006/S-011."}

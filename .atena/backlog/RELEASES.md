@@ -51,7 +51,7 @@ playtest" viram verificados ou reabertos.
 
 Nada: tudo o que estava aqui entrou na [0.4.0](#versão-040--major-update-pronta-publicação-pendente).
 
-## Versão 0.4.0 — Major-update, pronta (publicação pendente)
+## Versão 0.4.0 — Major-update, publicada (aviso aos testers pendente)
 
 Plano [PLAN-081](../vault/drafts/PLAN-081-lancamento-da-v0-4-0-2026-10-08.md) / [SPEC-148](../specs/SPEC-148-lancamento-da-v0-4-0.md). **Absorve a 0.3.2 e a 0.3.3** (só existiram como `.exe` local; ficam como histórico, abaixo) e tudo o que estava em "Aguardando versão". Changelog do tester: **0.3.1 → 0.4.0** ([CHANGELOG 0.4.0](changelogs/CHANGELOG%200.4.0%20-%20Nottgard%20Survivors.pdf), fonte [HTML](changelogs/CHANGELOG-0.4.0.html)), [GUIA FACIL 0.4.0](changelogs/GUIA%20FACIL%200.4.0%20-%20Nottgard%20Survivors.pdf) e [QUESTIONARIO Rápido - 007](questionarios/QUESTIONARIO%20R%C3%A1pido%20-%20007.pdf) (mapa em [QUESTIONARIO-007](questionarios/QUESTIONARIO-007-v0.4.0.md)). `0.4.0` em `core/version.gd` e `export_presets.cfg`. Evidências: EVID-202 a 208 e o EVID final do B-008.
 
@@ -82,9 +82,9 @@ Plano [PLAN-081](../vault/drafts/PLAN-081-lancamento-da-v0-4-0-2026-10-08.md) / 
 - [x] Suíte, smoke e bot por herói (EVID-208)
 - [x] `VERSION` e `file_version`/`product_version` em 0.4.0 no mesmo commit
 - [x] Esta seção e a tabela de histórico; `backlog_check` sem alertas
-- [ ] `.exe` exportado de commit limpo, com o hash no rodapé (EVID final)
-- [ ] Push na `main` (publica o `latest`): **só com aprovação do dono**
-- [ ] Aviso aos testers com os três PDFs (changelog, guia fácil e questionário 007)
+- [ ] `.exe` local exportado de commit limpo (**não feito**: o `.exe` dos testers é o do CI; exportar só se o dono pedir)
+- [x] Push na `main` em 2026-10-08 (`94a6a2f..aa496f2`); release `latest` = *Playtest v0.4.0 (aa496f2…)*, pré-release ([EVID-209](../evidence/EVID-209-b008-publicacao-da-v0-4-0-2026-10-08.md))
+- [ ] Aviso aos testers com os três PDFs (changelog, guia fácil e questionário 007): **ação do dono**; antes, conferir que o rodapé do jogo baixado diz 0.4.0
 
 ### Detalhe de itens que vinham como "Aguardando versão"
 
@@ -274,7 +274,7 @@ Origem: [PLAN-038](../vault/drafts/PLAN-038-atualizacao-pos-playtests-t01-t02-t0
 
 | Versão | Tipo | Publicada | Commit da build | Avaliada em |
 |---|---|---|---|---|
-| 0.4.0 | Major (changelog 0.3.1 → 0.4.0 + guia fácil + questionário 007; absorve 0.3.2 e 0.3.3) | pendente (falta o `.exe` de commit limpo e o push) | a registrar no EVID final | — |
+| 0.4.0 | Major (changelog 0.3.1 → 0.4.0 + guia fácil + questionário 007; absorve 0.3.2 e 0.3.3) | 2026-10-08 (release `latest`, Playtest v0.4.0) | `aa496f2` | — (aguardando testers) |
 | 0.3.2 | Minor (build local exportada; sem PDF nem questionário novo) | pendente (falta commit de versão e push) | `a09d460+` (árvore suja, reexportada 2026-10-06 15:51) | — |
 | 0.3.1 | Minor (decisão do dono; sem PDF nem questionário novo) | 2026-10-05 (release `latest`, Playtest v0.3.1) | ver título do release | — (aguardando testers) |
 | 0.3.0 | Major (changelog + guia fácil + questionário 006) | 2026-10-03 (release `latest`, Playtest v0.3.0) | ver título do release | — (aguardando testers) |
