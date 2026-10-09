@@ -99,16 +99,14 @@ deferred_requests:
   - id: DEV-024
     request: 'Barra de progresso da fase na HUD (MEC-002), proximo item sem assets apos o PLAN-088.'
     request_classification: PLAN_DEVIATION
-    status: IMPLEMENTED_LOCAL_AWAITING_COMMIT
+    status: PLANNED_AWAITING_APPROVAL
     recorded: '2026-10-09'
     authorization_verbatim: 'atena, vamos prosseguir (escopo escolhido pela Atena)'
     proposed_plan: PLAN-089
     state_file: '.atena/state/plan-089-barra-de-progresso-da-fase.yaml'
     spec: '.atena/specs/SPEC-163-barra-de-progresso-da-fase-mec-002.md'
-    approval_mode: per-plan
-    approved: '2026-10-09'
-    recovery_snapshot: '.atena/generated/plan-089/plan-before-089.yaml'
-    route: 'Desvio do PLAN-071; retorno ao PLAN-071 B-006/S-011.'
+    approval_mode: unconfigured
+    route: 'Desvio do PLAN-071; nao executavel ate o dono escolher o nivel de aprovacao.'
   - id: DEV-023
     request: 'Novas recomendacoes sem assets enquanto os assets nao chegam: divida de verificacao manual em testes e linha de base nova do bot.'
     request_classification: PLAN_DEVIATION

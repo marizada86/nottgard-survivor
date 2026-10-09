@@ -57,6 +57,7 @@ var eco_banner: EcoBanner     # SPEC-152: faixa do Eco de Nottgard (6 s, sem pau
 var eco_counter: Label        # SPEC-152: "Ecos 1/4", só depois do primeiro achado na fase
 var mobile: MobileControls
 var event_pointer: EventPointer  # SPEC-159 (MEC-061): setas de evento na borda da tela
+var stage_progress: StageProgress  # SPEC-163 (MEC-002): barra de progresso da fase sob o relógio
 var _battle: Battle
 var _confirm_callback: Callable
 var _cancel_callback: Callable
@@ -181,6 +182,16 @@ func _ready() -> void:
 	event_pointer.avoid_nodes = [top_stack, $StatBox, timer_label, stage_label, stage_rule_icon, _ability_slot]
 	add_child(event_pointer)
 	move_child(event_pointer, 0)
+	# SPEC-163 (MEC-002): barra fina colada à base do relógio (fica entre o relógio e o nome da fase)
+	stage_progress = StageProgress.new()
+	stage_progress.name = "StageProgress"
+	stage_progress.set_anchors_preset(Control.PRESET_CENTER_TOP)
+	stage_progress.offset_left = -90.0
+	stage_progress.offset_right = 90.0
+	stage_progress.offset_top = 43.0
+	stage_progress.offset_bottom = 47.0
+	add_child(stage_progress)
+	event_pointer.avoid_nodes.append(stage_progress)
 
 func _setup_controller_pause() -> void:
 	var box: VBoxContainer = $PausePanel/VBox
@@ -431,6 +442,9 @@ func _process(_delta: float) -> void:
 	if event_pointer != null:
 		event_pointer.battle = _battle
 		event_pointer.visible = _battle != null and _battle.state == "running" and not (items_panel.visible or levelup_panel.visible or pause_panel.visible or result_panel.visible or revive_panel.visible)
+	if stage_progress != null:   # SPEC-163: some junto do relógio (mesmos casos do EventPointer)
+		stage_progress.battle = _battle
+		stage_progress.visible = _battle != null and _battle.state == "running" and not (items_panel.visible or levelup_panel.visible or pause_panel.visible or result_panel.visible or revive_panel.visible)
 	if mobile != null:
 		var running := _battle != null and _battle.state == "running" and not get_tree().paused
 		mobile.set_combat_enabled(running and not (Playtest.is_overlay_open() or items_panel.visible or levelup_panel.visible or pause_panel.visible or result_panel.visible or revive_panel.visible or _confirm_dialog.visible))
