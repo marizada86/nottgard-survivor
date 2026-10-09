@@ -189,12 +189,12 @@ var _effect_cd := {}
 var _gold_carry := 0.0  # SPEC-142: resto fracionário do ouro por abate (bônus de moedas proporcional)
 var _gold_hit_t := 0.0  # SPEC-142: próximo instante em que o Chicote Avarento volta a pagar
 var _stage_events_done := {}
+var _key_wave: Array = []  # SPEC-157: inimigos do acontecimento-chave de onda (Docas); abatidos todos, a câmara abre
 var _hero_moving := false
 var still_t := 0.0
 ## Afinidade estritamente visual; a aura só é habilitada por uma escolha divina.
 var visual_god := ""
 var visual_boon_selected := false
-var _key_wave: Array = []  # SPEC-157: inimigos do acontecimento-chave de onda (Docas); abatidos todos, a câmara abre
 ## Estado ambiental do Estige. A RNG é separada para não deslocar a batalha.
 var styx_rng := RandomNumberGenerator.new()
 var styx_exposure := 0.0
@@ -312,6 +312,7 @@ func load_stage(stage_key: String) -> void:
 	_horde_state = 0
 	_horde_acc = 0.0
 	_stage_events_done.clear()
+	_key_wave.clear()
 	_awake_elite_t = 0.0
 	_inter_t = FIRST_INTERACTION_SECONDS
 	_first_inter = true
@@ -319,7 +320,6 @@ func load_stage(stage_key: String) -> void:
 	_amb_puddle = 9.0
 	_amb_strike = 6.0
 	_rule_timer = minf(8.0, float(stage_rule.get("interval", 8.0)))
-	_key_wave.clear()
 	_rule_index = -1
 	styx_exposure = 0.0
 	styx_test_next = 1.0
@@ -927,6 +927,8 @@ func _update_zones(dt: float) -> void:
 				events.append({"type": "toast", "text": "Ritual interrompido: os reforços foram impedidos."})
 				stats.rituals += 1
 				_grant_ritual_blessing()
+				if bool(z.get("unlock_chamber", false)):  # SPEC-157: o ritual de Dagruve é a chave da câmara
+					unlock_chamber()
 			elif z.delay <= 0.0:
 				if stage.waves.is_empty():
 					events.append({"type": "toast", "text": "O ritual se desfaz."})
@@ -935,8 +937,6 @@ func _update_zones(dt: float) -> void:
 						var wave: Dictionary = stage.waves[rng.randi() % stage.waves.size()]
 						_spawn(String(wave.id), z.pos + Vector2(rng.randf_range(-1.5, 1.5), rng.randf_range(-1.5, 1.5)))
 					events.append({"type": "toast", "text": "O ritual trouxe reforços!"})
-				if bool(z.get("unlock_chamber", false)):  # SPEC-157: o ritual de Dagruve é a chave da câmara
-					unlock_chamber()
 			else:
 				keep.append(z)
 		elif z.kind == "trap":
@@ -1575,7 +1575,9 @@ func _place_secrets() -> int:
 				if wanted.x < 0.0:
 					continue
 				var count_before := events.size()
+				var rng_before := rng.state   # SPEC-157: os afixos do covil não mexem na sequência da batalha
 				var lair_elite := _spawn_elite(String(poi.elite), wanted)
+				rng.state = rng_before
 				while events.size() > count_before:   # o aviso "Elite: ..." só aparece quando o covil acorda
 					events.pop_back()
 				lair_elite.lair = true
@@ -1583,9 +1585,7 @@ func _place_secrets() -> int:
 				lair_elite.lair_reward = "boss_chest"
 				placed += 1
 	for eco in spec.get("ecos", []):
-				var rng_before := rng.state   # SPEC-157: os afixos do covil não mexem na sequência da batalha
 		var wanted := Vector2(float(eco.pos[0]), float(eco.pos[1]))
-				rng.state = rng_before
 		if String(eco.onde) == "destrutivel":
 			var spot := _free_scenery_spot(wanted + Vector2(1.2, 0.0), float(Data.table("enemies").get(String(eco.quebravel), {}).get("radius", 0.35)))
 			if spot.x >= 0.0:
@@ -3124,6 +3124,9 @@ func _stage_rule_step(dt: float) -> void:
 	_apply_rule_kind(kind, dt)
 
 func _stage_event_step() -> void:
+	if not _key_wave.is_empty() and _key_wave.all(func(e): return e.dead):
+		_key_wave.clear()
+		unlock_chamber()
 	for event_def in stage_events:
 		var event_id := String(event_def.get("id", ""))
 		if event_id == "" or _stage_events_done.has(event_id):
@@ -3137,6 +3140,10 @@ func _stage_event_step() -> void:
 		if time >= at:
 			_stage_events_done[event_id] = true
 			_fire_stage_event(event_def)
+
+## SPEC-157: o acontecimento da fase traz `reward.unlock_chamber` (a chave da câmara selada).
+func _event_unlocks_chamber(event_def: Dictionary) -> bool:
+	return bool(Dictionary(event_def.get("reward", {})).get("unlock_chamber", false))
 
 func _fire_stage_event(event_def: Dictionary) -> void:
 	if happenings.fire(self, event_def):
@@ -3184,9 +3191,6 @@ func _apply_rule_kind(kind: String, dt: float) -> void:
 			pass # Já aplicado pela camada ambiental compartilhada acima.
 		"strikes":
 			_amb_strike -= dt
-	if not _key_wave.is_empty() and _key_wave.all(func(e): return e.dead):
-		_key_wave.clear()
-		unlock_chamber()
 			if _amb_strike <= 0.0:
 				_amb_strike = float(stage_rule.get("interval", 4.5)) + rng.randf_range(-1.0, 1.0)
 				var at := hero.pos + Vector2(rng.randf_range(-3, 3), rng.randf_range(-3, 3))
@@ -3201,10 +3205,6 @@ func _apply_rule_kind(kind: String, dt: float) -> void:
 					"interrupt": float(stage_rule.interrupt), "progress": 0.0, "life": 99.0})
 				events.append({"type": "toast", "text": "Ritual da Névoa: fique no selo para impedir os reforços!"})
 		"bubbles":
-## SPEC-157: o acontecimento da fase traz `reward.unlock_chamber` (a chave da câmara selada).
-func _event_unlocks_chamber(event_def: Dictionary) -> bool:
-	return bool(Dictionary(event_def.get("reward", {})).get("unlock_chamber", false))
-
 			_rule_timer -= dt
 			if _rule_timer <= 0.0:
 				_rule_timer = float(stage_rule.interval)
