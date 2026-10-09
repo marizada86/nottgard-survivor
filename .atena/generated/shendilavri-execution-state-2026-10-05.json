@@ -1,0 +1,26 @@
+{
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "status": "suspended_for_commit_push",
+  "approval_mode": "per-plan",
+  "identity_approval": "approved by owner 2026-10-05: atena, aprovado, continue",
+  "generated": [
+    "escravo_de_rivenheart",
+    "sucubo",
+    "guarda_do_castelo",
+    "master_of_cruelties",
+    "malcanthet"
+  ],
+  "remaining": [],
+  "cycles_generated": 0,
+  "official_assets_installed": 0,
+  "manifest_assets": 159,
+  "previous_quota_reset_brt": "2026-10-05 12:43:35 -03:00",
+  "generation_tool": "image_gen.imagegen",
+  "prompt_set": "shendilavri-identity-prompts-2026-10-05.json",
+  "results": "shendilavri-identity-results-2026-10-05.json",
+  "audit": "shendilavri-identity-audit-2026-10-05.json",
+  "review": "priority-review/shendilavri_identities_v02.png",
+  "next": "DEV-002 commit/push autorizado; depois retornar Escravo idle_01 (zero ciclos gerados).",
+  "identity_register": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-021-shendilavri-identidades-2026-10-05.md"
+}

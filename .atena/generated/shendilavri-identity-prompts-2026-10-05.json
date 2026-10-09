@@ -1,0 +1,44 @@
+[
+  {
+    "id": "guarda_do_castelo",
+    "version": 1,
+    "prompt": "Create ONE full-body neutral IDLE game sprite using attached static as EXACT identity reference, preserve silhouette, anatomy, palette, costume and props. Three-quarter front facing RIGHT, dark fantasy isometric pixel art, crisp pixel controlled dithering. Opaque solid body, native fully transparent alpha background AND gaps. Square canvas, WHOLE silhouette centered with AT LEAST 8% EMPTY TRANSPARENT MARGINS on ALL sides; no clipping. No aura, halo, fog, glow, floor, ground, shadow, particles, motion lines, effects, blur, text, UI or other characters. Black spiked plate armored knight, TWO arms TWO legs, horned helmet, crimson cape. SCREEN LEFT hand holds ONE SAME long serrated SPEAR supported near feet; SCREEN RIGHT empty hand. Entire spear from tip to butt and helmet inside canvas. Neutral upright. Image is the static identity reference; generate the neutral idle pilot with that exact identity.",
+    "tool": "image_gen.imagegen",
+    "transparent_background": true
+  },
+  {
+    "id": "guarda_do_castelo",
+    "version": 2,
+    "prompt": "Edit the attached guard sprite ONLY to correct framing. Keep exact identity, same pose, anatomy, armor, crimson cape, serrated spear, colors, pixel art and solid alpha. ZOOM OUT strongly: character and whole spear should occupy only 65% of image HEIGHT, centered inside a square transparent canvas. Leave 17% completely transparent padding above spear tip AND below boots. Keep ALL spear and helmet complete and no added props. Native transparent background including gaps. No shadow, ground, halo, glow or aura. Do not crop or extend spear or anatomy. The only requested change is smaller sprite centered with generous transparent padding.",
+    "tool": "image_gen.imagegen",
+    "transparent_background": true
+  },
+  {
+    "id": "master_of_cruelties",
+    "version": 1,
+    "prompt": "Create ONE full-body neutral IDLE game sprite using attached static as EXACT identity reference. Preserve silhouette, anatomy, palette, costume, props and facial identity. Three-quarter front facing RIGHT dark fantasy isometric pixel art, crisp pixel controlled dithering, opaque solid body, native fully transparent alpha background AND gaps. Square canvas. Make character fit within central 80% of canvas: WHOLE silhouette including wings, horns, claws and feet centered with AT LEAST 10% EMPTY TRANSPARENT MARGINS on ALL sides. No clipping. No aura, halo, fog, glow, floor, ground, shadow, particles, motion lines, effects, blur, text, UI or other characters. Tall winged demon TWO arms TWO legs TWO large black red bat wings, horned head with pale face and gold face armor, attached gold sun ornament on chest, long black crimson robes and armor, long clawed hands. Neutral upright semi-open wings, all wing tips claws feet intact. Preserve reference face and anatomy; no mask replacement. Image is static reference. Generate exact identity in neutral idle pilot.",
+    "tool": "image_gen.imagegen",
+    "transparent_background": true
+  },
+  {
+    "id": "master_of_cruelties",
+    "version": 2,
+    "prompt": "Edit the attached Master of Cruelties sprite ONLY to correct framing. Keep exact identity, same pose, pale face, gold face armor, horns, TWO wings, TWO arms TWO legs, long claws, gold chest ornament, black crimson costume, colors, pixel art and solid alpha. ZOOM OUT strongly: whole demon with wings and horns should occupy only 65% of image HEIGHT, centered inside square transparent canvas. Leave 17% completely transparent padding above highest horn AND below feet. Entire wing tips and claws preserved. Native transparent background and gaps. No shadow, ground, halo, glow or aura. Do not crop or add anatomy. Only requested change is smaller sprite centered with generous transparent padding.",
+    "tool": "image_gen.imagegen",
+    "transparent_background": true
+  },
+  {
+    "id": "malcanthet",
+    "version": 1,
+    "prompt": "Create ONE full-body neutral IDLE game sprite using attached static as EXACT identity reference. Preserve silhouette, anatomy, palette, costume, props and face. Three-quarter front facing RIGHT dark fantasy isometric pixel art, crisp pixel controlled dithering, opaque solid body, native fully transparent alpha background AND gaps. Square canvas. Zoom OUT from reference: WHOLE silhouette only occupies central 75% of canvas, including wing tips, tail tip, crown horns, scepter and feet. AT LEAST 12% EMPTY TRANSPARENT MARGINS on ALL sides, especially TOP and BOTTOM. No clipping. No aura, halo, fog, glow, floor, ground, shadow, particles, motion lines, effects, blur, text, UI or other characters. Adult red demon queen TWO arms TWO legs TWO large black red bat wings ONE long tail TWO curved horns and crown, black gold armor with ruby accents tall boots. SCREEN LEFT empty hand extended; SCREEN RIGHT hand holds SAME amethyst mirror SCEPTER. Neutral upright, no extra weapons. Preserve reference costume. Image is static identity reference, generate neutral idle pilot.",
+    "tool": "image_gen.imagegen",
+    "transparent_background": true
+  },
+  {
+    "id": "malcanthet",
+    "version": 2,
+    "prompt": "Edit attached Malcanthet sprite ONLY to correct framing. Preserve exact face, same idle pose, red skin, TWO curved horns and crown, TWO arms TWO legs, TWO wings ONE tail, black gold ruby armor and tall boots, extended empty hand on screen LEFT and amethyst mirror scepter held on screen RIGHT, palette and pixel art. ZOOM OUT strongly so the whole sprite occupies only 65% of image HEIGHT. Center in a square native transparent canvas with at least 17% EMPTY TRANSPARENT padding above horns AND below feet. All wing tips, tail tip and scepter inside canvas. Solid opaque body, transparent gaps. No ground, shadow, halo, aura, particles, glow or new anatomy. Only requested change is smaller sprite centered with generous transparent padding.",
+    "tool": "image_gen.imagegen",
+    "transparent_background": true
+  }
+]
