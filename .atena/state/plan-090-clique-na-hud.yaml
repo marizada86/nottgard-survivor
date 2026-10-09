@@ -2,13 +2,13 @@ id: PLAN-090
 spec: SPEC-072
 spec_file: .atena/specs/SPEC-072-segurar-clique-para-andar.md
 mode: per-plan
-status: IMPLEMENTED_LOCAL_AWAITING_COMMIT
+status: COMMITTED_LOCAL_AWAITING_PLAYTEST
 created: '2026-10-09'
 approved: '2026-10-09'
 request_classification: PLAN_DEVIATION
 deviation_id: DEV-025
 authorization_verbatim: 'atena, ainda nao atualize os documentos com a barra estou esperando assets, vamos seguir com mudancas e commits (2026-10-09)'
-checkpoint: concluido (S-001 a S-004); aguarda commit
+checkpoint: concluido; commit 4fb2ab9; aguarda playtest
 return:
   plan: PLAN-071
   checkpoint_observed: B-006/S-011
@@ -27,4 +27,4 @@ gates:
   documents_for_testers: NOT_UPDATED_BY_OWNER_DECISION   # barra e este ajuste ficam fora dos documentos por enquanto
   other_sessions_changes: PRESERVE_UNTOUCHED
 blocking_gaps: []
-commit_push_build_export: NOT_PERFORMED
+commit_push_build_export: "COMMITTED_LOCAL (4fb2ab9); push, exportacao e aviso aos testers NOT_PERFORMED"
