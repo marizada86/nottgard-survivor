@@ -99,20 +99,6 @@ suspension:
   suspended_plan_state_file: '.atena/state/plan-053-imagens.yaml'
   note: 'PLAN-053 retomado; biomas ate Pilares completos localmente. S-007 onda cortante completa como candidata; aguardando gate humano N03. PLAN-071 preservado. PLAN-071 suspenso com retorno acima.'
 deferred_requests:
-  - id: DEV-022
-    request: 'Plano recomendado que nao dependa nem envolva assets/movimentacao: fechar a 0.4.0 e organizar planos e specs.'
-    request_classification: PLAN_DEVIATION
-    status: EXECUTING_PLAN_087
-    recorded: '2026-10-09'
-    authorization_verbatim: 'atena, por plano faça recomendações (2026-10-09)'
-    proposed_plan: PLAN-087
-    state_file: '.atena/state/plan-087-fechar-e-organizar-a-0-4-0.yaml'
-    spec: '.atena/specs/SPEC-161-fechar-e-organizar-a-0-4-0-sem-assets.md'
-    approval_mode: per-plan
-    approved: '2026-10-09'
-    recovery_snapshot: '.atena/generated/organizacao-087/plan-before-087.yaml'
-    route: 'B-001 fecha o PLAN-083 (dentro do plano ativo); B-002 a B-005 sao desvio. Retorno: PLAN-083 -> PLAN-071.'
-    note: 'Commits por grupo, push, exportacao e remocao de planos/specs seguem exigindo aprovacao explicita.'
   - id: DEV-018
     request: "Preparar um plano para introduzir Arlindo Orlando (importante na historia) como personagem jogavel, como Erik Blackthorn."
     request_classification: PLAN_DEVIATION
@@ -158,8 +144,8 @@ deferred_requests:
     approved: '2026-10-09'
     owner_decisions: 'Rota: tratar tudo como v0.4.0 (nao divulgada); estilo: seta na borda + distancia; escopo: todos os de quest com posicao; ordem: em paralelo ao PLAN-084 (resposta do dono em 2026-10-09)'
     recovery_snapshot: '.atena/generated/mec-061-seta-de-evento/plan-before-085-start.yaml'
-    note: 'Sem troca de versao (0.4.0). Suite 0 falhas, smoke, kit_test e audit ok (EVID-221). Commit, exportacao e push so com aprovacao explicita separada. Nao alterou active_plan: correu em paralelo ao PLAN-084. Entra nos documentos dos testers da 0.4.0 so quando commitada (decisao do dono, ver EVID-218).'
-    evidence: '.atena/evidence/EVID-221-mec-061-seta-de-evento-na-borda-da-tela-2026-10-09.md'
+    note: 'Sem troca de versao (0.4.0). Suite 0 falhas, smoke, kit_test e audit ok (EVID-219). Commit, exportacao e push so com aprovacao explicita separada. Nao alterou active_plan: correu em paralelo ao PLAN-084. Entra nos documentos dos testers da 0.4.0 so quando commitada (decisao do dono, ver EVID-218).'
+    evidence: '.atena/evidence/EVID-219-mec-061-seta-de-evento-na-borda-da-tela-2026-10-09.md'
   - id: DEV-017
     request: "Item 8 da lista sem assets: plano da v0.5.0, segredos (Ecos, camaras, reliquias, mapa maior) nas outras fases."
     request_classification: PLAN_DEVIATION

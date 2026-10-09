@@ -1,8 +1,10 @@
 ---
 id: PLAN-086
 title: Arlindo Orlando como herói jogável (rascunho)
-status: DRAFT planejado em 2026-10-09; nada executado; aguarda rota (DEV-018), decisões de conteúdo, nível de aprovação e início explícito
+status: planejado em 2026-10-09 como SPEC-160; decisoes de escopo do dono registradas; aguarda nivel de aprovacao e portao de conteudo
 approval_mode: unconfigured
+spec: SPEC-160
+state_file: .atena/state/plan-086-arlindo-e-erik-jogaveis.yaml
 route: PLAN_DEVIATION (DEV-018) registrado como adiado, só planejamento; PLAN-083 segue ativo
 origin: pedido do dono em 2026-10-09 ("preparar um plano para introduzir personagem Arlindo Orlando (importante na história) vamos colocá-lo como jogável assim como Erik Blackthorn")
 ---
@@ -67,3 +69,9 @@ O dono afirmou em 2026-10-09 que **só existem Grimhold e Grimholders**. O Vault
 ## 7. Gates
 
 Sem dependências novas; sem geração de imagens; só lore do Vault (nada de segredo do mestre: Adam, o colar, a Síntese); commit e push só com aprovação explícita; originais e mudanças de outras sessões intactos.
+
+## 8. Decisões do dono (2026-10-09) e estado
+
+- **D1:** Arlindo **e** Erik no mesmo plano. **D2:** Arlindo de suporte e controle. **D3:** passiva Olhos de Andarilho. **D4:** desbloqueio pela conquista Ecos de Dagruve (Erik: proposta Ecos de Docas, a aprovar). **D6:** agora, dentro da 0.4.0.
+- Spec: [SPEC-160](../../specs/SPEC-160-arlindo-orlando-e-erik-blackthorn-jogaveis.md). Estado e lotes (B-001 a B-006, S-001 a S-016): `.atena/state/plan-086-arlindo-e-erik-jogaveis.yaml`. Nível de aprovação ainda não escolhido.
+- Fica pendente o portão de conteúdo (números, nomes, textos) e a decisão G3 (arte provisória).

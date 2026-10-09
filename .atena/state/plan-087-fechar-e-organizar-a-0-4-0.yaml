@@ -1,0 +1,42 @@
+id: PLAN-087
+spec: SPEC-161
+spec_file: .atena/specs/SPEC-161-fechar-e-organizar-a-0-4-0-sem-assets.md
+mode: per-plan
+status: LOCAL_DONE_AWAITING_APPROVALS
+created: '2026-10-09'
+approved: '2026-10-09'
+request_classification: PLAN_DEVIATION
+deviation_id: DEV-022
+authorization_verbatim: 'atena, por plano faça recomendações (2026-10-09)'
+checkpoint: B-001 a B-005 feitos local; aguardam aprovacao dos commits por grupo (mapa-de-pendencias.md) e a escolha A/B/C/D do inventario
+return:
+  plan: PLAN-083
+  note: 'B-001 fecha o PLAN-083 (S-023/S-024) e devolve ao PLAN-071'
+  snapshot: .atena/generated/organizacao-087/plan-before-087.yaml
+batches:
+  B-001: {title: Fechar o PLAN-083, steps: [S-001, S-002, S-003], status: PARTIAL, note: "S-001 feito (novidade da nevoa nos documentos e PDFs refeitos); S-002 e S-003 aguardam commit dos grupos 1 a 4"}
+  B-002: {title: Triagem do que esta pendente, steps: [S-004, S-005, S-006], status: DONE_LOCAL}
+  B-003: {title: Inventario de planos e specs, steps: [S-007, S-008], status: DONE_LOCAL, deliverable: ".atena/generated/organizacao-087/inventario-de-planos-e-specs.md"}
+  B-004: {title: Balanceamento do Arlindo (BAL-027), steps: [S-009, S-010], status: DONE_LOCAL, decision: "manter; pergunta no roteiro de playtest"}
+  B-005: {title: Roteiro de playtest consolidado, steps: [S-011], status: DONE_LOCAL}
+steps:
+  S-001: 'Conferir changelog, guia facil e questionario 007 contra o RELEASES.md e o que esta commitado; listar o que falta.'
+  S-002: 'Preparar o commit de documentos (S-023 do PLAN-083) e pedir aprovacao ao dono.'
+  S-003: 'EVID final do PLAN-083 e reconciliacao do plan.yaml (S-024); retorno ao PLAN-071.'
+  S-004: 'Mapa de pendencias: arquivo -> plano/spec; ressaltar arquivos que misturam planos.'
+  S-005: 'Resolver colisao de ID (dois EVID-219) sem perder links.'
+  S-006: 'Propor grupos de commit (um por mecanica) e pedir aprovacao.'
+  S-007: 'Inventario de planos (state/) e specs: status, ultimo uso, dono do fechamento.'
+  S-008: 'Proposta de arquivamento em .atena/vault/drafts/; sem remover.'
+  S-009: 'Ler BAL-027 e EVID-219; recomendar ajuste ou manter; medir so se o dono aprovar numeros.'
+  S-010: 'Registrar decisao no BALANCEAMENTO.md.'
+  S-011: 'Roteiro de playtest da 0.4.0 refeita (o que testar, build, procedimento, criterios).'
+gates:
+  dependencies: NO_NEW_DEPENDENCIES
+  assets: NOT_IN_SCOPE
+  commit: EXPLICIT_APPROVAL_PER_COMMIT_GROUP
+  push_publish_export: EXPLICIT_APPROVAL_SEPARATE
+  other_sessions_changes: PRESERVE_UNTOUCHED
+  removal_of_plans_and_specs: NOT_WITHOUT_EXPLICIT_APPROVAL
+blocking_gaps: []
+commit_push_build_export: NOT_PERFORMED

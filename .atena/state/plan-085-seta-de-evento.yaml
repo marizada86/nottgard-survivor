@@ -1,0 +1,47 @@
+id: PLAN-085
+spec: SPEC-159
+spec_file: .atena/specs/SPEC-159-seta-de-evento-na-borda-da-tela-mec-061.md
+mode: per-plan
+status: IMPLEMENTED_LOCAL_AWAITING_PLAYTEST
+created: '2026-10-09'
+approved: '2026-10-09'
+checkpoint: DONE (B-003/S-009); aguarda commit e playtest
+request_classification: PLAN_DEVIATION
+deviation_id: DEV-020
+authorization_verbatim: 'Atena vamos fazer um plano para adicionar um indicador de evento quando tiver um evento no mapa aparecer uma seta indicando onde ele esta caso nao esteja na tela visivel'
+owner_decisions:
+  route: 'tratar tudo como v0.4.0 pois ela ainda nao foi divulgada, ainda podemos atualizar e pedir o testes das novas implementacoes (2026-10-09)'
+  style: 'Seta na borda + distancia'
+  scope: 'Todos os de quest com posicao'
+return:
+  plan: "quem estiver ativo ao iniciar (hoje PLAN-084, nevoa; depois PLAN-083)"
+  state_file: "conferir plan.yaml ao iniciar (PLAN-084 em .atena/state/plan-084-nevoa-de-borda-e-de-fim-de-fase.yaml; PLAN-083 em plan-083-segredos-nas-outras-fases.yaml)"
+  checkpoint_observed: B-001/S-001
+  snapshot: a gravar em .atena/generated/mec-061-seta-de-evento/plan-before-085-start.yaml ao iniciar
+batches:
+  B-001: {title: Nucleo e testes, steps: [S-001, S-002, S-003], status: DONE_LOCAL}
+  B-002: {title: Desenho na HUD, steps: [S-004, S-005, S-006], status: DONE_LOCAL}
+  B-003: {title: Validacao e registro, steps: [S-007, S-008, S-009], status: DONE_LOCAL}
+steps:
+  S-001: 'ui/event_pointer.gd: EventPointer.edge_point(view, hero_screen, target_screen) puro, mais fusao de marcadores proximos e limite de 6.'
+  S-002: 'core/happenings.gd: markers() com label e kind; incluir arena e Estrela do Norte; Ecos fora.'
+  S-003: 'tests/test_event_pointer.gd (oito direcoes, dentro da tela, alvo sobre o heroi, fusao, mutacao) e markers em tests/test_happenings; registrar em run_all.'
+  S-004: 'Controle de HUD em espaco de tela: seta, contorno, texto Nome · distancia, margem e desvio do painel de quests e dos controles de toque.'
+  S-005: 'Remover as setas antigas de ui/overlay.gd (fora da tela em _draw_happenings e _draw_star_path); manter o anel de SPEC-147.'
+  S-006: 'Pulso de entrada de evento novo; setas somem com a HUD em pausa, oferta e fim de run.'
+  S-007: 'Suite completa, smoke, kit_test, audit_projeto; run real com evento a 15 tiles; mobile_preview 1280x720 e 375x812.'
+  S-008: 'Capturas antes/depois (1280x720 e 1920x1080), EVID-215, cartao MEC-061 e INBOX; backlog_check.'
+  S-009: 'Aviso de playtest (o que testar, build, criterios); reconciliar plan.yaml (DEV-020) e voltar ao PLAN-083 em B-001/S-001. Commit, exportacao e push so com aprovacao explicita separada.'
+gates:
+  dependencies: NO_NEW_DEPENDENCIES
+  new_image_generation: NOT_IN_SCOPE
+  version: KEEP_0_4_0
+  commit: EXPLICIT_APPROVAL_PER_COMMIT
+  push_publish_export: EXPLICIT_APPROVAL_SEPARATE
+  other_sessions_changes: PRESERVE_UNTOUCHED   # ha mudancas nao commitadas do PLAN-083 (B-003) e de outras sessoes
+blocking_gaps: []
+non_blocking_gaps: [G1, G2, G3]
+return_to: "o plano ativo no momento do inicio (hoje PLAN-084; sob ele, PLAN-083 em B-001/S-001); plan.yaml so muda ao iniciar"
+commit_push_build_export: NOT_PERFORMED
+evidence: .atena/evidence/EVID-221-mec-061-seta-de-evento-na-borda-da-tela-2026-10-09.md
+result: 'Seta na borda com nome e distancia, fusao, desvio da HUD e do toque; suite 0 falhas; playtest pendente; 1920x1080 e 812x375 sem captura propria.'

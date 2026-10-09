@@ -1,0 +1,65 @@
+id: PLAN-086
+spec: SPEC-160
+spec_file: .atena/specs/SPEC-160-arlindo-orlando-e-erik-blackthorn-jogaveis.md
+proposal: .atena/vault/drafts/PLAN-086-arlindo-orlando-jogavel-2026-10-09.md
+mode: per-plan
+status: EXECUTING
+created: '2026-10-09'
+request_classification: PLAN_DEVIATION
+deviation_id: DEV-018
+authorization_verbatim: 'atena enquanto isso vamos para arlindo orlando'
+return:
+  plan: PLAN-083
+  state_file: .atena/state/plan-083-segredos-nas-outras-fases.yaml
+  checkpoint_observed: 'B-006 local pronto; aguardando o dono dizer o que mais entra na 0.4.0'
+  snapshot: .atena/generated/arlindo/plan-before-086.yaml
+checkpoint: B-006 em andamento (S-014 feito; S-015 feito; S-016 aguardando aprovacao dos commits e, a parte, do push)
+batches:
+  B-001: {title: Conteudo (fichas, numeros, textos), steps: [S-001, S-002, S-003], status: DONE, note: 'Conteudo aprovado pelo dono em 2026-10-09; Nyrelia passa a Grimholders; prompts em ART-PROMPTS-060 e CHATGPT-FILA-027.'}
+  B-002: {title: Arlindo Orlando (dados, codigo, testes), steps: [S-004, S-005, S-006], status: DONE, evidence: EVID-219}
+  B-003: {title: Erik Blackthorn (dados, codigo, testes), steps: [S-007, S-008, S-009], status: DONE, evidence: EVID-219}
+  B-004: {title: Visual provisorio e selecao, steps: [S-010, S-011], status: DONE, evidence: EVID-219}
+  B-005: {title: Balanceamento, steps: [S-012, S-013], status: DONE, evidence: EVID-219}
+  B-006: {title: Fechamento (0.4.0 refeita), steps: [S-014, S-015, S-016], status: LOCAL_DONE_AWAITING_COMMIT, note: 'Push, exportacao e aviso aos testers so com aprovacao explicita.'}
+steps:
+  S-001: 'Ler os blocos aprovados de Arlindo e Erik no Vault e a ficha do Erik no Nottcard; fechar fatos permitidos e proibidos.'
+  S-002: 'Propor numeros finais, nomes de arma e ativa, bio e 3 falas de cada heroi; portao de conteudo com o dono.'
+  S-003: 'Decidir arte provisoria (art_like) ou esperar sprites (G3); cartoes MEC-062 e MEC-063; snapshot do plan.yaml.'
+  S-004: 'heroes.json, weapons.json, abilities.json, hero_bios, barks e audio alias do Arlindo.'
+  S-005: 'Olhos de Andarilho no Battle (eco_pista x mod e XP por Eco) e ativa Modify Memory.'
+  S-006: 'Conquista Ecos de Dagruve libera o Arlindo, bio_arlindo; teste com mutacao; suite e smoke.'
+  S-007: 'heroes.json, weapons.json, abilities.json, hero_bios, barks e audio alias do Erik.'
+  S-008: 'Incendiario Procurado (fogo e area +%), Tocha do Incendiario e Navios em Chamas.'
+  S-009: 'Conquista Ecos de Docas libera o Erik, bio_erik; teste com mutacao; suite e smoke.'
+  S-010: 'art_like em heroes.json e HeroView (se G3 aprovado), marca de arte provisoria na selecao; lista de doze em test_animation_assets.'
+  S-011: 'Capturas da selecao e de uma partida com cada heroi; kit_test.'
+  S-012: 'Bot por heroi (12 herois, 15 sementes) com e sem a faixa de borda; comparar com EVID-217.'
+  S-013: 'Ajustes so em JSON; BAL e EVID.'
+  S-014: 'RELEASES (0.4.0), changelog, guia e questionario 007 com os dois herois.'
+  S-015: 'Verificacao final (suite, smoke, kit_test, audit, bot); backlog_check.'
+  S-016: 'Commit com aprovacao; push so com aprovacao explicita separada; EVID final e retorno ao PLAN-083.'
+gates:
+  dependencies: NO_NEW_DEPENDENCIES
+  new_image_generation: NOT_IN_SCOPE
+  content_gate: 'Numeros, textos e nomes passam pelo dono antes do codigo'
+  vault_reading: 'Texto so de fatos dos blocos aprovados; Grimholders no jogo'
+  master_canon: 'Nada de canone do mestre (Adam, colar, Sintese)'
+  commit: EXPLICIT_APPROVAL_PER_COMMIT
+  push_publish_export: EXPLICIT_APPROVAL_SEPARATE
+  other_sessions_changes: PRESERVE_UNTOUCHED
+blocking_gaps: []
+non_blocking_gaps: [G1, G2, G3, G4]
+decisions_taken:
+  scope: 'Arlindo e Erik juntos (dono, 2026-10-09)'
+  arlindo_style: 'Suporte e controle'
+  arlindo_passive: 'Olhos de Andarilho (Ecos e camaras de mais longe, bonus de XP)'
+  arlindo_unlock: 'Conquista Ecos de Dagruve'
+  version: 'Entram na 0.4.0 refeita; sem troca de versao'
+  approval_mode: 'per-plan (dono, 2026-10-09)'
+  art: 'art_like provisorio (G3 aprovado)'
+  proposal: .atena/vault/drafts/PROPOSTA-arlindo-e-erik-jogaveis-2026-10-09.md
+commit_push_build_export: NOT_PERFORMED
+content_gate_passed:
+  recorded: '2026-10-09'
+  approved: 'numeros, nomes, bios e falas de Arlindo e Erik; Erik desbloqueia por Ecos de Docas; art_like Sylas (Arlindo) e Durvall (Erik); Nyrelia vira Grimholders'
+  art_priority: 'Dono pediu prompts para o ChatGPT e prioridade maxima para os assets de Erik e Arlindo (ART-045)'

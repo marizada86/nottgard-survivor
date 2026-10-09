@@ -7,10 +7,16 @@
   bestiário ([RESEARCH-001](../vault/research/RESEARCH-001-abismo-bestiario-visual-2026-09-21.md)),
   sem inventar lore. Sem história: a lore é só sabor.
 - Itens abertos acumulam até fechar um **lote**. O lote sai como um único
-  `ART-PROMPTS-NNN` (próximo livre: **059**) para o gerador de imagem.
+  `ART-PROMPTS-NNN` (próximo livre: **061**) para o gerador de imagem.
 - Candidatos ficam em `.atena/generated/` até admissão explícita do dono.
 
 ## Abertos
+
+### PRIORIDADE MÁXIMA — Erik Blackthorn e Arlindo Orlando (2026-10-09)
+
+| ID | Tipo | Item | Sabor Nottgard | Origem | Dependência |
+|---|---|---|---|---|---|
+| ART-045 | retrato + tiras | **Erik e Arlindo jogáveis:** retrato de seleção (1536×1024) e nove tiras de animação cada (`idle`, cinco `move_*`, `attack`, `active`, `death`), a partir dos retratos do Nottcard; ordem de cota: ER01, ER02, AO01, AO02 primeiro | Grimholders, névoa, Amuleto da Luz (Erik); andarilho de Dagruve e magia de memória (Arlindo) | pedido do dono 2026-10-09; [ART-PROMPTS-060](../generated/ART-PROMPTS-060-erik-e-arlindo-jogaveis.md), [CHATGPT-FILA-027](../generated/CHATGPT-FILA-027-erik-e-arlindo.md) | [SPEC-160](../specs/SPEC-160-arlindo-orlando-e-erik-blackthorn-jogaveis.md); até chegar, `art_like` provisório (Sylas e Durvall) |
 
 ### PRIORIDADE ALTA — tiras de heróis (2026-10-02)
 

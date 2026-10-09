@@ -75,7 +75,7 @@ separado (uma mecânica por commit; números por entidade). Balanceamento vem po
 
 ## Numeração
 
-Próximos livres (2026-10-08, após o PLAN-081 e a renumeração do lettering; SPEC-079 fica reservada aos decais e SPEC-080 às HQs; SPEC-152 usada pela fatia piloto de Ecos do PLAN-081; o altar oco consumiu a spec 153, a evidência 210 e a arte 044): `SPEC-161`, `EVID-219`, `PLAN-087`, `ART-PROMPTS-060`, `ART-045`, `MEC-064`, `BUG-039`, `BAL-027`, `IN-073`, `TOOL-005`, jogador `T05`.
+Próximos livres (2026-10-08, após o PLAN-081 e a renumeração do lettering; SPEC-079 fica reservada aos decais e SPEC-080 às HQs; SPEC-152 usada pela fatia piloto de Ecos do PLAN-081; o altar oco consumiu a spec 153, a evidência 210 e a arte 044): `SPEC-161`, `EVID-220`, `PLAN-087`, `ART-PROMPTS-061`, `ART-046`, `MEC-064`, `BUG-039`, `BAL-028`, `IN-073`, `TOOL-005`, jogador `T05`.
 
 Aliases operacionais da consolidacao: **BUG-033** acompanha o botão Jogar, registrado antes como BUG-030; **MEC-052** acompanha controles Xbox/PlayStation, registrado antes como MEC-050. Os IDs remotos BUG-030 (mímico) e MEC-050 (ícone de doação) permanecem. Arquivos e commits historicos nao foram renomeados. Os caminhos completos distinguem SPEC-133/134/135, PLAN-066/067/068 e EVID-169 a 176 (o EVID-176 de interativos alcançáveis do BUG-032 divide o número com o planejamento mobile); [mapa de colisões](../evidence/consolidacao-id-collisions-2026-10-07.json).
 
