@@ -10,7 +10,7 @@
 [node name="Ground" type="Node2D" parent="." unique_id=603268212]
 z_index = -100
 script = ExtResource("1_tyyt6")
-map_size = Vector2i(60, 60)
+map_size = Vector2i(84, 84)
 color_a = Color(0.14117648, 0.16470589, 0.1882353, 1)
 color_b = Color(0.17254902, 0.20392157, 0.22745098, 1)
 terrain_layout_id = "feng_tu"
@@ -19,240 +19,240 @@ use_modular_atlas = true
 atlas_columns = 2
 atlas_variants = 4
 terrain_texture_path = "res://assets/tiles/feng_tu_ground_atlas_v1.png"
-baked_texture_path = "res://assets/tiles/feng_tu_ground_baked_v1.png"
+baked_texture_path = "res://assets/tiles/feng_tu_ground_baked_v2.png"
 
 [node name="Sorted" type="Node2D" parent="." unique_id=563941160]
 y_sort_enabled = true
 
 [node name="Hero" parent="Sorted" unique_id=629349748 instance=ExtResource("2_qvmi2")]
-position = Vector2(0, 960)
+position = Vector2(0, 1344)
 
 [node name="Prop1" parent="Sorted" unique_id=71309628 instance=ExtResource("3_3tivj")]
-position = Vector2(-384, 1440)
+position = Vector2(-537.6, 2016)
 kind = "torii"
 height = 89.17123794555664
 half_width = 30.0
 color = Color(0.5882353, 0.23529412, 0.19607843, 1)
 
 [node name="Prop2" parent="Sorted" unique_id=2123219009 instance=ExtResource("3_3tivj")]
-position = Vector2(528, 696)
+position = Vector2(739.2, 974.4)
 kind = "torii"
 height = 65.32234
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop3" parent="Sorted" unique_id=294277149 instance=ExtResource("3_3tivj")]
-position = Vector2(-912, 936)
+position = Vector2(-1276.8, 1310.4)
 kind = "torii"
 height = 85.71130752563477
 half_width = 30.0
 color = Color(0.5882353, 0.23529412, 0.19607843, 1)
 
 [node name="Prop4" parent="Sorted" unique_id=826972368 instance=ExtResource("3_3tivj")]
-position = Vector2(-240, 1656)
+position = Vector2(-336, 2318.4)
 kind = "torii"
 height = 81.29786491394043
 half_width = 30.0
 color = Color(0.5882353, 0.23529412, 0.19607843, 1)
 
 [node name="Prop5" parent="Sorted" unique_id=789093384 instance=ExtResource("3_3tivj")]
-position = Vector2(-624, 840)
+position = Vector2(-873.6, 1176)
 kind = "torii"
 height = 86.69416427612305
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop6" parent="Sorted" unique_id=1462769771 instance=ExtResource("3_3tivj")]
-position = Vector2(480, 960)
+position = Vector2(672, 1344)
 kind = "torii"
 height = 93.69183540344238
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop7" parent="Sorted" unique_id=4060828 instance=ExtResource("3_3tivj")]
-position = Vector2(1152, 720)
+position = Vector2(1612.8, 1008)
 kind = "torii"
 height = 88.59352
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop8" parent="Sorted" unique_id=1585376198 instance=ExtResource("3_3tivj")]
-position = Vector2(48, 360)
+position = Vector2(67.2, 504)
 kind = "torii"
 height = 82.04441
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop9" parent="Sorted" unique_id=493207554 instance=ExtResource("3_3tivj")]
-position = Vector2(528, 456)
+position = Vector2(739.2, 638.4)
 kind = "torii"
 height = 98.26992988586426
 half_width = 30.0
 color = Color(0.5882353, 0.23529412, 0.19607843, 1)
 
 [node name="Prop10" parent="Sorted" unique_id=1724642633 instance=ExtResource("3_3tivj")]
-position = Vector2(-432, 648)
+position = Vector2(-604.8, 907.2)
 kind = "torii"
 height = 85.13012
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop11" parent="Sorted" unique_id=1033531075 instance=ExtResource("3_3tivj")]
-position = Vector2(0, 1296)
+position = Vector2(0, 1814.4)
 kind = "torii"
 height = 79.16815757751465
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop12" parent="Sorted" unique_id=506786297 instance=ExtResource("3_3tivj")]
-position = Vector2(-384, 768)
+position = Vector2(-537.6, 1075.2)
 kind = "torii"
 height = 93.69793891906738
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop13" parent="Sorted" unique_id=1762651258 instance=ExtResource("3_3tivj")]
-position = Vector2(-192, 1488)
+position = Vector2(-268.8, 2083.2)
 kind = "torii"
 height = 68.05207252502441
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop14" parent="Sorted" unique_id=360206471 instance=ExtResource("3_3tivj")]
-position = Vector2(1632, 912)
+position = Vector2(2284.8, 1276.8)
 kind = "torii"
 height = 88.67554664611816
 half_width = 30.0
 color = Color(0.5882353, 0.23529412, 0.19607843, 1)
 
 [node name="Prop15" parent="Sorted" unique_id=29651623 instance=ExtResource("3_3tivj")]
-position = Vector2(144, 1224)
+position = Vector2(201.6, 1713.6)
 kind = "torii"
 height = 97.00784683227539
 half_width = 30.0
 color = Color(0.5882353, 0.23529412, 0.19607843, 1)
 
 [node name="Prop16" parent="Sorted" unique_id=243873931 instance=ExtResource("3_3tivj")]
-position = Vector2(864, 576)
+position = Vector2(1209.6, 806.4)
 kind = "torii"
 height = 81.02394
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop17" parent="Sorted" unique_id=1346534299 instance=ExtResource("3_3tivj")]
-position = Vector2(720, 1416)
+position = Vector2(1008, 1982.4)
 kind = "torii"
 height = 70.89077
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop18" parent="Sorted" unique_id=631031455 instance=ExtResource("3_3tivj")]
-position = Vector2(48, 648)
+position = Vector2(67.2, 907.2)
 kind = "torii"
 height = 95.33055305480957
 half_width = 30.0
 color = Color(0.5882353, 0.23529412, 0.19607843, 1)
 
 [node name="Prop19" parent="Sorted" unique_id=1083629560 instance=ExtResource("3_3tivj")]
-position = Vector2(432, 1224)
+position = Vector2(604.8, 1713.6)
 kind = "torii"
 height = 70.35643577575684
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop20" parent="Sorted" unique_id=539562335 instance=ExtResource("3_3tivj")]
-position = Vector2(-192, 672)
+position = Vector2(-268.8, 940.8)
 kind = "torii"
 height = 79.30246353149414
 half_width = 30.0
 color = Color(0.5882353, 0.23529412, 0.19607843, 1)
 
 [node name="Prop21" parent="Sorted" unique_id=2103212575 instance=ExtResource("3_3tivj")]
-position = Vector2(672, 1200)
+position = Vector2(940.8, 1680)
 kind = "torii"
 height = 86.67757034301758
 half_width = 30.0
 color = Color(0.5882353, 0.23529412, 0.19607843, 1)
 
 [node name="Prop22" parent="Sorted" unique_id=592977122 instance=ExtResource("3_3tivj")]
-position = Vector2(-1152, 960)
+position = Vector2(-1612.8, 1344)
 kind = "torii"
 height = 83.901215
 half_width = 30.0
 color = Color(0.5882353, 0.23529412, 0.19607843, 1)
 
 [node name="Prop23" parent="Sorted" unique_id=961255191 instance=ExtResource("3_3tivj")]
-position = Vector2(-720, 696)
+position = Vector2(-1008, 974.4)
 kind = "torii"
 height = 68.5360860824585
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop24" parent="Sorted" unique_id=2004349250 instance=ExtResource("3_3tivj")]
-position = Vector2(0, 144)
+position = Vector2(0, 201.6)
 kind = "torii"
 height = 66.70025
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop25" parent="Sorted" unique_id=1124970584 instance=ExtResource("3_3tivj")]
-position = Vector2(720, 1080)
+position = Vector2(1008, 1512)
 kind = "torii"
 height = 65.24452
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop26" parent="Sorted" unique_id=362400822 instance=ExtResource("3_3tivj")]
-position = Vector2(-1296, 744)
+position = Vector2(-1814.4, 1041.6)
 kind = "torii"
 height = 80.24088859558105
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop27" parent="Sorted" unique_id=1018506370 instance=ExtResource("3_3tivj")]
-position = Vector2(960, 1152)
+position = Vector2(1344, 1612.8)
 kind = "torii"
 height = 77.45337963104248
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop28" parent="Sorted" unique_id=773818711 instance=ExtResource("3_3tivj")]
-position = Vector2(-288, 384)
+position = Vector2(-403.2, 537.6)
 kind = "torii"
 height = 72.344475
 half_width = 30.0
 color = Color(0.5882353, 0.23529412, 0.19607843, 1)
 
 [node name="Prop29" parent="Sorted" unique_id=1559690950 instance=ExtResource("3_3tivj")]
-position = Vector2(-912, 1128)
+position = Vector2(-1276.8, 1579.2)
 kind = "torii"
 height = 98.50214004516602
 half_width = 30.0
 color = Color(0.5882353, 0.23529412, 0.19607843, 1)
 
 [node name="Prop30" parent="Sorted" unique_id=935539826 instance=ExtResource("3_3tivj")]
-position = Vector2(528, 1320)
+position = Vector2(739.2, 1848)
 kind = "torii"
 height = 66.08195304870605
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="LanternaIntacta" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(-1588.2, 1032.9)
+position = Vector2(-2223.5, 1446.1)
 kind = "lanterna_01"
 height = 90.0
 half_width = 34.0
 block_radius = 0.0
 
 [node name="LanternaRasgada" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(1200, 768)
+position = Vector2(1680, 1075.2)
 kind = "lanterna_02"
 height = 90.0
 half_width = 34.0
 block_radius = 0.0
 
 [node name="SinoTemplo" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(266.5, 846.5)
+position = Vector2(373.1, 1185.1)
 kind = "sino_01"
 height = 86.0
 half_width = 42.0
@@ -261,438 +261,1257 @@ block_radius = 0.0
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=1037812085]
 
 [node name="Spawn1" parent="SpawnPoints" unique_id=1837662586 instance=ExtResource("4_cl6t8")]
-position = Vector2(432, 1176)
+position = Vector2(604.8, 1646.4)
 enemy_id = "larva_de_lu_yueh"
 count = 2
 
 [node name="Spawn2" parent="SpawnPoints" unique_id=1753873454 instance=ExtResource("4_cl6t8")]
-position = Vector2(-720, 888)
+position = Vector2(-1008, 1243.2)
 enemy_id = "cultista_de_feng_tu"
 count = 2
 
 [node name="Spawn3" parent="SpawnPoints" unique_id=288932138 instance=ExtResource("4_cl6t8")]
-position = Vector2(528, 696)
+position = Vector2(739.2, 974.4)
 enemy_id = "estatua_do_templo"
 
 [node name="Spawn4" parent="SpawnPoints" unique_id=1239354490 instance=ExtResource("4_cl6t8")]
-position = Vector2(-96, 1344)
+position = Vector2(-134.4, 1881.6)
 enemy_id = "cultista_ghaunadaur"
 
 [node name="Prop1_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(150.9, 1360.5)
+position = Vector2(211.3, 1904.7)
 kind = "torii"
 height = 89.17123794555664
 half_width = 30.0
 color = Color(0.5882353, 0.23529412, 0.19607843, 1)
 
 [node name="Prop1_c2" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(-47.8, 1399.3)
+position = Vector2(-66.9, 1959)
 kind = "torii"
 height = 89.17123794555664
 half_width = 30.0
 color = Color(0.5882353, 0.23529412, 0.19607843, 1)
 
 [node name="Prop2_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(171.7, 490.3)
+position = Vector2(240.4, 686.4)
 kind = "torii"
 height = 65.32234
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop3_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(-855.9, 751.4)
+position = Vector2(-1198.3, 1052)
 kind = "torii"
 height = 85.71130752563477
 half_width = 30.0
 color = Color(0.5882353, 0.23529412, 0.19607843, 1)
 
 [node name="Prop4_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(57.1, 1449.9)
+position = Vector2(79.9, 2029.9)
 kind = "torii"
 height = 81.29786491394043
 half_width = 30.0
 color = Color(0.5882353, 0.23529412, 0.19607843, 1)
 
 [node name="Prop5_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(-504.6, 693.3)
+position = Vector2(-706.4, 970.6)
 kind = "torii"
 height = 86.69416427612305
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop5_c2" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(-263, 1074.8)
+position = Vector2(-368.2, 1504.7)
 kind = "torii"
 height = 86.69416427612305
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop6_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(1020.6, 809.4)
+position = Vector2(1428.8, 1133.2)
 kind = "torii"
 height = 93.69183540344238
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop7_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(734.8, 614.2)
+position = Vector2(1028.7, 859.9)
 kind = "torii"
 height = 88.59352
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop8_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(412.7, 394)
+position = Vector2(577.8, 551.6)
 kind = "torii"
 height = 82.04441
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop9_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(251.4, 336.5)
+position = Vector2(352, 471.1)
 kind = "torii"
 height = 98.26992988586426
 half_width = 30.0
 color = Color(0.5882353, 0.23529412, 0.19607843, 1)
 
 [node name="Prop9_c2" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(123.7, 565)
+position = Vector2(173.2, 791)
 kind = "torii"
 height = 98.26992988586426
 half_width = 30.0
 color = Color(0.5882353, 0.23529412, 0.19607843, 1)
 
 [node name="Prop10_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(-756.7, 767.4)
+position = Vector2(-1059.4, 1074.4)
 kind = "torii"
 height = 85.13012
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop11_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(-482.2, 1328.3)
+position = Vector2(-675.1, 1859.6)
 kind = "torii"
 height = 79.16815757751465
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop12_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(-277.1, 596.9)
+position = Vector2(-387.9, 835.7)
 kind = "torii"
 height = 93.69793891906738
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop13_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(-412.4, 1270.7)
+position = Vector2(-577.4, 1779)
 kind = "torii"
 height = 68.05207252502441
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop13_c2" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(343.6, 1527.7)
+position = Vector2(481, 2138.8)
 kind = "torii"
 height = 68.05207252502441
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop14_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(1320, 831.9)
+position = Vector2(1848, 1164.7)
 kind = "torii"
 height = 88.67554664611816
 half_width = 30.0
 color = Color(0.5882353, 0.23529412, 0.19607843, 1)
 
 [node name="Prop15_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(-367.5, 1184.6)
+position = Vector2(-514.5, 1658.4)
 kind = "torii"
 height = 97.00784683227539
 half_width = 30.0
 color = Color(0.5882353, 0.23529412, 0.19607843, 1)
 
 [node name="Prop16_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(1343.6, 759.4)
+position = Vector2(1881, 1063.2)
 kind = "torii"
 height = 81.02394
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop17_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(356.7, 1579.4)
+position = Vector2(499.4, 2211.2)
 kind = "torii"
 height = 70.89077
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop17_c2" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(718.1, 1279.7)
+position = Vector2(1005.3, 1791.6)
 kind = "torii"
 height = 70.89077
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop18_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(63.6, 508.8)
+position = Vector2(89, 712.3)
 kind = "torii"
 height = 95.33055305480957
 half_width = 30.0
 color = Color(0.5882353, 0.23529412, 0.19607843, 1)
 
 [node name="Prop19_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(527.6, 1042)
+position = Vector2(738.6, 1458.8)
 kind = "torii"
 height = 70.35643577575684
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop20_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(-380.4, 903.6)
+position = Vector2(-532.6, 1265)
 kind = "torii"
 height = 79.30246353149414
 half_width = 30.0
 color = Color(0.5882353, 0.23529412, 0.19607843, 1)
 
 [node name="Prop21_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(968.5, 1056.1)
+position = Vector2(1355.9, 1478.5)
 kind = "torii"
 height = 86.67757034301758
 half_width = 30.0
 color = Color(0.5882353, 0.23529412, 0.19607843, 1)
 
 [node name="Prop21_c2" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(1143.8, 1153.6)
+position = Vector2(1601.3, 1615)
 kind = "torii"
 height = 86.67757034301758
 half_width = 30.0
 color = Color(0.5882353, 0.23529412, 0.19607843, 1)
 
 [node name="Prop22_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(-1343.2, 867.6)
+position = Vector2(-1880.5, 1214.6)
 kind = "torii"
 height = 83.901215
 half_width = 30.0
 color = Color(0.5882353, 0.23529412, 0.19607843, 1)
 
 [node name="Prop23_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(-767, 897.1)
+position = Vector2(-1073.8, 1255.9)
 kind = "torii"
 height = 68.5360860824585
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop24_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(355.4, 268.4)
+position = Vector2(497.6, 375.8)
 kind = "torii"
 height = 66.70025
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop25_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(330.4, 956.4)
+position = Vector2(462.6, 1339)
 kind = "torii"
 height = 65.24452
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop25_c2" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(288.2, 1271.5)
+position = Vector2(403.5, 1780.1)
 kind = "torii"
 height = 65.24452
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop26_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(-907.8, 537.3)
+position = Vector2(-1270.9, 752.2)
 kind = "torii"
 height = 80.24088859558105
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop27_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(500.3, 1126)
+position = Vector2(700.4, 1576.4)
 kind = "torii"
 height = 77.45337963104248
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop28_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(-0.9, 587.7)
+position = Vector2(-1.3, 822.8)
 kind = "torii"
 height = 72.344475
 half_width = 30.0
 color = Color(0.5882353, 0.23529412, 0.19607843, 1)
 
 [node name="Prop29_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(-361, 1056.2)
+position = Vector2(-505.4, 1478.7)
 kind = "torii"
 height = 98.50214004516602
 half_width = 30.0
 color = Color(0.5882353, 0.23529412, 0.19607843, 1)
 
 [node name="Prop29_c2" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(-583.3, 1126.9)
+position = Vector2(-816.6, 1577.7)
 kind = "torii"
 height = 98.50214004516602
 half_width = 30.0
 color = Color(0.5882353, 0.23529412, 0.19607843, 1)
 
 [node name="Prop30_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(929.1, 1281.6)
+position = Vector2(1300.7, 1794.2)
 kind = "torii"
 height = 66.08195304870605
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="LanternaIntacta_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(-1393.6, 790.3)
+position = Vector2(-1951, 1106.4)
 kind = "lanterna_01"
 height = 90.0
 half_width = 34.0
 block_radius = 0.0
 
 [node name="LanternaRasgada_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(1327.4, 891.3)
+position = Vector2(1858.4, 1247.8)
 kind = "lanterna_02"
 height = 90.0
 half_width = 34.0
 block_radius = 0.0
 
 [node name="SinoTemplo_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(304.4, 1638.4)
+position = Vector2(426.2, 2293.8)
 kind = "sino_01"
 height = 86.0
 half_width = 42.0
 block_radius = 0.0
 
 [node name="SinoTemplo_c2" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(625.4, 1370.4)
+position = Vector2(875.6, 1918.6)
 kind = "sino_01"
 height = 86.0
 half_width = 42.0
 block_radius = 0.0
 
 [node name="Prop30_f1" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(187.2, 188.3)
+position = Vector2(262.1, 263.6)
 kind = "torii"
 height = 66.08195304870605
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop14_c1_f2" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(-89.5, 199.2)
+position = Vector2(-125.3, 278.9)
 kind = "torii"
 height = 88.67554664611816
 half_width = 30.0
 color = Color(0.5882353, 0.23529412, 0.19607843, 1)
 
 [node name="Prop11_c1_f3" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(600.5, 515.9)
+position = Vector2(840.7, 722.3)
 kind = "torii"
 height = 79.16815757751465
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop1_c2_f4" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(1426.5, 1058.4)
+position = Vector2(1997.1, 1481.8)
 kind = "torii"
 height = 89.17123794555664
 half_width = 30.0
 color = Color(0.5882353, 0.23529412, 0.19607843, 1)
 
 [node name="Prop20_c1_f5" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(-261.3, 450.3)
+position = Vector2(-365.8, 630.4)
 kind = "torii"
 height = 79.30246353149414
 half_width = 30.0
 color = Color(0.5882353, 0.23529412, 0.19607843, 1)
 
 [node name="Prop4_f6" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(-430, 506)
+position = Vector2(-602, 708.4)
 kind = "torii"
 height = 81.29786491394043
 half_width = 30.0
 color = Color(0.5882353, 0.23529412, 0.19607843, 1)
 
 [node name="Prop10_c1_f7" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(222.2, 722.5)
+position = Vector2(311.1, 1011.5)
 kind = "torii"
 height = 85.13012
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop29_c1_f8" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(901.5, 960.7)
+position = Vector2(1262.1, 1345)
 kind = "torii"
 height = 98.50214004516602
 half_width = 30.0
 color = Color(0.5882353, 0.23529412, 0.19607843, 1)
 
 [node name="Prop12_c1_f9" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(-715.2, 450.4)
+position = Vector2(-1001.3, 630.6)
 kind = "torii"
 height = 93.69793891906738
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop2_c1_f10" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(8.5, 1115.3)
+position = Vector2(11.9, 1561.4)
 kind = "torii"
 height = 65.32234
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop19_c1_f11" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(-8.5, 821.3)
+position = Vector2(-11.9, 1149.8)
 kind = "torii"
 height = 70.35643577575684
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop25_c2_f12" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(-1612.9, 974.7)
+position = Vector2(-2258.1, 1364.6)
 kind = "torii"
 height = 65.24452
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="Prop21_c1_f13" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(-1238.2, 1107.1)
+position = Vector2(-1733.5, 1549.9)
 kind = "torii"
 height = 86.67757034301758
 half_width = 30.0
 color = Color(0.5882353, 0.23529412, 0.19607843, 1)
 
 [node name="Prop16_c1_f14" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(-698.2, 1264)
+position = Vector2(-977.5, 1769.6)
 kind = "torii"
 height = 81.02394
 half_width = 30.0
 color = Color(0.6376471, 0.32705882, 0.292549, 1)
 
 [node name="SinoTemplo_c1_f15" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(-804.7, 1417.6)
+position = Vector2(-1126.6, 1984.6)
 kind = "sino_01"
 height = 86.0
 half_width = 42.0
 block_radius = 0.0
 
 [node name="Prop1_f16" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(-496.9, 1527.6)
+position = Vector2(-695.7, 2138.6)
 kind = "torii"
 height = 89.17123794555664
 half_width = 30.0
 color = Color(0.5882353, 0.23529412, 0.19607843, 1)
 
 [node name="Prop29_c2_f17" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(-38, 1691.1)
+position = Vector2(-53.2, 2367.5)
 kind = "torii"
 height = 98.50214004516602
 half_width = 30.0
 color = Color(0.5882353, 0.23529412, 0.19607843, 1)
 
 [node name="Prop16_f18" parent="Sorted" instance=ExtResource("3_3tivj")]
-position = Vector2(137.9, 1712.4)
+position = Vector2(193.1, 2397.4)
+kind = "torii"
+height = 81.02394
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop1_c1_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-371.8, 2148.4)
+kind = "torii"
+height = 89.17123794555664
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop1_c2_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-201.4, 1975.3)
+kind = "torii"
+height = 89.17123794555664
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop2_c1_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(382.9, 768.7)
+kind = "torii"
+height = 65.32234
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop3_c1_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-1220.7, 1125.8)
+kind = "torii"
+height = 85.71130752563477
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop4_c1_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-866, 2165.5)
+kind = "torii"
+height = 81.29786491394043
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop5_c1_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-754.2, 1029.3)
+kind = "torii"
+height = 86.69416427612305
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop5_c2_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-512.6, 1410.8)
+kind = "torii"
+height = 86.69416427612305
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop6_c1_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(1212.6, 1193.4)
+kind = "torii"
+height = 93.69183540344238
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop7_c1_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(2073, 1220.6)
+kind = "torii"
+height = 88.59352
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop8_c1_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(431.9, 538)
+kind = "torii"
+height = 82.04441
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop9_c1_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(578.1, 760.8)
+kind = "torii"
+height = 98.26992988586426
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop9_c2_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(1011.4, 784)
+kind = "torii"
+height = 98.26992988586426
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop10_c1_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-929.5, 1026.6)
+kind = "torii"
+height = 85.13012
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop11_c1_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-482.2, 1846.7)
+kind = "torii"
+height = 79.16815757751465
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop12_c1_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-430.7, 904.1)
+kind = "torii"
+height = 93.69793891906738
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop13_c1_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-369.2, 2247.9)
+kind = "torii"
+height = 68.05207252502441
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop13_c2_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(266.8, 2122.9)
+kind = "torii"
+height = 68.05207252502441
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop14_c1_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(1972.8, 1196.7)
+kind = "torii"
+height = 88.67554664611816
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop15_c1_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-309.9, 1674.2)
+kind = "torii"
+height = 97.00784683227539
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop16_c1_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(1598.2, 941.5)
+kind = "torii"
+height = 81.02394
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop17_c1_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(615.6, 2132.8)
+kind = "torii"
+height = 70.89077
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop17_c2_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(927.1, 2136)
+kind = "torii"
+height = 70.89077
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop18_c1_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(293.2, 1093.4)
+kind = "torii"
+height = 95.33055305480957
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop19_c1_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(890, 1600.7)
+kind = "torii"
+height = 70.35643577575684
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop20_c1_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-457.2, 1172.4)
+kind = "torii"
+height = 79.30246353149414
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop21_c1_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(1237.3, 1536.1)
+kind = "torii"
+height = 86.67757034301758
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop21_c2_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(1210.3, 1943.7)
+kind = "torii"
+height = 86.67757034301758
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop22_c1_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-1706, 1076.1)
+kind = "torii"
+height = 83.901215
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop23_c1_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-1364.4, 808.5)
+kind = "torii"
+height = 68.5360860824585
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop24_c1_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(355.4, 326)
+kind = "torii"
+height = 66.70025
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop25_c1_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(1451.7, 1385.8)
+kind = "torii"
+height = 65.24452
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop25_c2_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(1231.6, 1649.2)
+kind = "torii"
+height = 65.24452
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop26_c1_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-1550.6, 860.5)
+kind = "torii"
+height = 80.24088859558105
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop27_c1_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(1568.9, 1769.6)
+kind = "torii"
+height = 77.45337963104248
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop28_c1_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-116.1, 741.3)
+kind = "torii"
+height = 72.344475
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop29_c1_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-1476.9, 1792.9)
+kind = "torii"
+height = 98.50214004516602
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop29_c2_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-844.2, 1760.9)
+kind = "torii"
+height = 98.50214004516602
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop30_c1_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(1140.3, 1809.6)
+kind = "torii"
+height = 66.08195304870605
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="LanternaIntacta_c1_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-1879.6, 1677.8)
+kind = "lanterna_01"
+height = 90.0
+half_width = 34.0
+block_radius = 0.0
+
+[node name="LanternaRasgada_c1_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(1408.3, 1255.9)
+kind = "lanterna_02"
+height = 90.0
+half_width = 34.0
+block_radius = 0.0
+
+[node name="SinoTemplo_c1_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(344.4, 1402.3)
+kind = "sino_01"
+height = 86.0
+half_width = 42.0
+block_radius = 0.0
+
+[node name="SinoTemplo_c2_2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(737.1, 1122.1)
+kind = "sino_01"
+height = 86.0
+half_width = 42.0
+block_radius = 0.0
+
+[node name="Prop1_c1_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(546.3, 1989.4)
+kind = "torii"
+height = 89.17123794555664
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop1_c2_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-445.9, 1743.8)
+kind = "torii"
+height = 89.17123794555664
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop2_c1_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-236.1, 614.9)
+kind = "torii"
+height = 65.32234
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop3_c1_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-1443.8, 1303)
+kind = "torii"
+height = 85.71130752563477
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop3_c1_c2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-1156.8, 1187.3)
+kind = "torii"
+height = 85.71130752563477
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop4_c1_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(381.1, 1892)
+kind = "torii"
+height = 81.29786491394043
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop5_c1_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-1045.8, 885.1)
+kind = "torii"
+height = 86.69416427612305
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop5_c2_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-657.9, 1648.7)
+kind = "torii"
+height = 86.69416427612305
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop6_c1_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(1777.2, 1049.9)
+kind = "torii"
+height = 93.69183540344238
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop6_c1_c2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(1286, 918.4)
+kind = "torii"
+height = 93.69183540344238
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop7_c1_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(719, 759)
+kind = "torii"
+height = 88.59352
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop8_c1_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(170.2, 629)
+kind = "torii"
+height = 82.04441
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop9_c1_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-79.8, 363.8)
+kind = "torii"
+height = 98.26992988586426
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop9_c2_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-3.3, 991.8)
+kind = "torii"
+height = 98.26992988586426
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop9_c2_c2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(121.2, 1068)
+kind = "torii"
+height = 98.26992988586426
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop10_c1_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-1441.7, 1114.8)
+kind = "torii"
+height = 85.13012
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop11_c1_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-729.1, 2054.5)
+kind = "torii"
+height = 79.16815757751465
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop12_c1_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-155.5, 1031.9)
+kind = "torii"
+height = 93.69793891906738
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop13_c1_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-286.5, 1545.6)
+kind = "torii"
+height = 68.05207252502441
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop13_c1_c2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-1143.7, 1822.9)
+kind = "torii"
+height = 68.05207252502441
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop13_c2_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-30.4, 2149.7)
+kind = "torii"
+height = 68.05207252502441
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop14_c1_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(1432.7, 1330.4)
+kind = "torii"
+height = 88.67554664611816
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop15_c1_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-42.4, 1476.3)
+kind = "torii"
+height = 97.00784683227539
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop16_c1_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(1547.6, 1254.9)
+kind = "torii"
+height = 81.02394
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop16_c1_c2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(1439.3, 864.2)
+kind = "torii"
+height = 81.02394
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop17_c1_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(221.2, 2064)
+kind = "torii"
+height = 70.89077
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop17_c2_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(599.5, 1838.1)
+kind = "torii"
+height = 70.89077
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop18_c1_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-493.6, 726.1)
+kind = "torii"
+height = 95.33055305480957
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop19_c1_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(781.3, 1654.1)
+kind = "torii"
+height = 70.35643577575684
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop19_c1_c2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(1069.4, 1677.6)
+kind = "torii"
+height = 70.35643577575684
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop20_c1_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-910.6, 1125.3)
+kind = "torii"
+height = 79.30246353149414
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop21_c1_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(868.1, 1283.7)
+kind = "torii"
+height = 86.67757034301758
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop21_c2_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(1683.6, 1386.8)
+kind = "torii"
+height = 86.67757034301758
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop22_c1_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-2228.6, 1303.9)
+kind = "torii"
+height = 83.901215
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop22_c1_c2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-1298.4, 1207.9)
+kind = "torii"
+height = 83.901215
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop23_c1_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-1222.6, 1404.9)
+kind = "torii"
+height = 68.5360860824585
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop24_c1_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(118.4, 426.9)
+kind = "torii"
+height = 66.70025
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop25_c1_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(159.4, 1259.8)
+kind = "torii"
+height = 65.24452
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop25_c2_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(642.1, 1648.5)
+kind = "torii"
+height = 65.24452
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop25_c2_c2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(456.8, 1518.9)
+kind = "torii"
+height = 65.24452
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop26_c1_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-1166.2, 892.4)
+kind = "torii"
+height = 80.24088859558105
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop27_c1_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(826.2, 1729.3)
+kind = "torii"
+height = 77.45337963104248
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop28_c1_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-358.3, 720.5)
+kind = "torii"
+height = 72.344475
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop29_c1_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(68.7, 1457.7)
+kind = "torii"
+height = 98.50214004516602
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop29_c1_c2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-232, 1468.6)
+kind = "torii"
+height = 98.50214004516602
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop29_c2_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-1141, 1574)
+kind = "torii"
+height = 98.50214004516602
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop30_c1_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(742.3, 1785.3)
+kind = "torii"
+height = 66.08195304870605
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="LanternaIntacta_c1_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-1645.4, 1016.2)
+kind = "lanterna_01"
+height = 90.0
+half_width = 34.0
+block_radius = 0.0
+
+[node name="LanternaRasgada_c1_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(1886, 1489.3)
+kind = "lanterna_02"
+height = 90.0
+half_width = 34.0
+block_radius = 0.0
+
+[node name="LanternaRasgada_c1_c2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(1514.7, 1178.8)
+kind = "lanterna_02"
+height = 90.0
+half_width = 34.0
+block_radius = 0.0
+
+[node name="SinoTemplo_c1_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(145, 2235.6)
+kind = "sino_01"
+height = 86.0
+half_width = 42.0
+block_radius = 0.0
+
+[node name="SinoTemplo_c2_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(762.1, 2120.9)
+kind = "sino_01"
+height = 86.0
+half_width = 42.0
+block_radius = 0.0
+
+[node name="Prop30_f1_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(240, 461.1)
+kind = "torii"
+height = 66.08195304870605
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop14_c1_f2_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-476.6, 354.8)
+kind = "torii"
+height = 88.67554664611816
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop14_c1_f2_c2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(108.2, 570)
+kind = "torii"
+height = 88.67554664611816
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop11_c1_f3_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(1130.9, 877.6)
+kind = "torii"
+height = 79.16815757751465
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop1_c2_f4_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(2294, 1406.9)
+kind = "torii"
+height = 89.17123794555664
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop20_c1_f5_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-628.8, 845.6)
+kind = "torii"
+height = 79.30246353149414
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop4_f6_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-690.1, 456.1)
+kind = "torii"
+height = 81.29786491394043
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop4_f6_c2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-44.3, 592.9)
+kind = "torii"
+height = 81.29786491394043
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop10_c1_f7_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-34.1, 887.7)
+kind = "torii"
+height = 85.13012
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop29_c1_f8_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(817.6, 1554.2)
+kind = "torii"
+height = 98.50214004516602
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop12_c1_f9_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-718.1, 553.3)
+kind = "torii"
+height = 93.69793891906738
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop2_c1_f10_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(163.6, 1426.3)
+kind = "torii"
+height = 65.32234
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop2_c1_f10_c2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(273.9, 1466.5)
+kind = "torii"
+height = 65.32234
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop19_c1_f11_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(359.4, 1321.1)
+kind = "torii"
+height = 70.35643577575684
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop25_c2_f12_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-1965.7, 1640.2)
+kind = "torii"
+height = 65.24452
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop21_c1_f13_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-1519.8, 1735.3)
+kind = "torii"
+height = 86.67757034301758
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop16_c1_f14_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-855.2, 1892.7)
+kind = "torii"
+height = 81.02394
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop16_c1_f14_c2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-1344, 1661.5)
+kind = "torii"
+height = 81.02394
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="SinoTemplo_c1_f15_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-654.7, 2190)
+kind = "sino_01"
+height = 86.0
+half_width = 42.0
+block_radius = 0.0
+
+[node name="Prop1_f16_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-130.7, 2255.2)
+kind = "torii"
+height = 89.17123794555664
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop29_c2_f17_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-112.9, 2554.6)
+kind = "torii"
+height = 98.50214004516602
+half_width = 30.0
+color = Color(0.5882353, 0.23529412, 0.19607843, 1)
+
+[node name="Prop16_f18_c1" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(20.2, 2250.4)
+kind = "torii"
+height = 81.02394
+half_width = 30.0
+color = Color(0.6376471, 0.32705882, 0.292549, 1)
+
+[node name="Prop16_f18_c2" parent="Sorted" instance=ExtResource("3_3tivj")]
+position = Vector2(-385.6, 2423.4)
 kind = "torii"
 height = 81.02394
 half_width = 30.0
