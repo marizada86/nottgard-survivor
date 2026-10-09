@@ -1,22 +1,6 @@
 version: 2
 # Reconciliado por Atena em 2026-10-05: PLAN-056 aceito pelo dono; commits reais registrados.
 active_plan:
-  id: PLAN-083
-  spec_id: SPEC-157
-  state_file: '.atena/state/plan-083-segredos-nas-outras-fases.yaml'
-  mode: per-plan
-  checkpoint: B-001/S-001
-  status: EXECUTING
-  resumed_after: {deviation: DEV-019, plan: PLAN-084, at: '2026-10-09', evidence: EVID-220, note: 'PLAN-084 concluido local; o PLAN-083 seguiu em outra sessao durante o desvio'}
-  approved: '2026-10-09'
-  started: '2026-10-09'
-  request_classification: PLAN_DEVIATION
-  deviation_id: DEV-017
-  start_authorization_verbatim: 'Rota: faca agora; aprovacao: por plano; portao de conteudo: o escopo (resposta do dono em 2026-10-09)'
-plan_cursor:
-  current: 'PLAN-083 / SPEC-157 (v0.5.0): iniciado; escopo aprovado pelo dono; Ecos, reliquias e Espelho aguardam o portao de conteudo; commits so com aprovacao explicita.'
-  next: 'S-001 relato da 0.4.0 (nenhum ainda); S-003 Ecos de Dagruve e Docas a partir do Vault; B-003 mapas 84x84 de Feng-tu, Shendilavri e Goranthis (independe do portao); depois portao de conteudo.'
-suspended_active_plan:
   id: PLAN-071
   spec_id: SPEC-138
   state_file: '.atena/state/plan-071-playtest-ranking.yaml'
@@ -24,14 +8,26 @@ suspended_active_plan:
   checkpoint: B-006/S-011
   status: LOCAL_DELIVERED_AWAITING_DEVICE_ACCEPTANCE
   approved: '2026-10-06'
-  suspended_by: PLAN-083
-  suspended_at: '2026-10-09'
-  snapshot: '.atena/generated/v050-release/plan-before-083-start.yaml'
-  resume_note: 'Retomar em B-006/S-011 quando o PLAN-083 fechar ou o dono pedir; falta o aceite dos clientes finais (ranking e F7) e os gates remotos.'
+  resumed: '2026-10-09'
+  resumed_after: {plan: PLAN-083, also: [PLAN-084, PLAN-085, PLAN-086, PLAN-087], at: '2026-10-09', evidence: EVID-223}
+  request_classification: IN_PLAN
+  resume_note: 'Falta o aceite dos clientes finais (ranking e F7) e os gates remotos; push, exportacao e aviso aos testers da 0.4.0 refeita seguem pendentes de aprovacao.'
+plan_cursor:
+  current: 'PLAN-071 / SPEC-138 retomado em 2026-10-09 apos fechar o PLAN-083 (0.4.0 refeita, EVID-218 e EVID-223). Commits locais da 0.4.0 refeita feitos (d83c106, 2d929b0, 10c833d, c0ebc87); nada publicado.'
+  next: 'Dono decide: push (republica o latest), exportacao do .exe local e aviso aos testers; escolha A/B/C/D do inventario (.atena/generated/organizacao-087/). BUG-025/027/028/029 aguardam a solucao de arte do dono.'
+closed_plan_snapshot:
+  id: PLAN-083
+  spec_id: SPEC-157
+  state_file: '.atena/state/plan-083-segredos-nas-outras-fases.yaml'
+  status: COMPLETED_LOCAL_COMMITTED
+  closed: '2026-10-09'
+  evidence: [EVID-218, EVID-223]
+  restored_snapshot: '.atena/generated/v050-release/plan-before-083-start.yaml'
 previous_plan_cursor:
   current: 'PLAN-059 (SPEC-125) commitado e publicado (05264f0, 1392627) em 2026-10-05; o playtest decide Docas, Molor e fases finais.'
   next: 'Retomar PLAN-053 (imagens, Shu: attack_02, death_03, death_04) e/ou abrir spec de balanceamento BAL-018 (precisa de linha de base do bot por heroi). Push da main (1 a 3 commits a frente) exige aprovacao.'
 local_git_receipts:
+  - {plan: PLAN-087, request_classification: PLAN_DEVIATION, deviation: DEV-022, authorization: "atena, aprovo os commits, comeca pelo grupo 1; segue para o grupo 2; aprovo os grupos 3 e 4, pode seguir (2026-10-09)", branch: main, commits: [d83c106, 2d929b0, 10c833d, c0ebc87], pushed: false, evidence: [EVID-218, EVID-222, EVID-223], scope: "d83c106 = Arlindo e Erik jogaveis (MEC-062, MEC-063); 2d929b0 = seta de evento (MEC-061); 10c833d = specs, planos, evidencias e cartoes; c0ebc87 = documentos da 0.4.0 refeita (changelog, guia, questionario 007, RELEASES)", verification: "worktree limpo: grupo 1 testes 0 falhas; grupo 2 testes 0 falhas e smoke ok (9 fases); grupos 3 e 4 so documentos", note: "Sem push, exportacao nem aviso aos testers. BUGS.md (BUG-029) e demais itens do PLAN-082 ficaram fora, de outra sessao. Este recibo e o fechamento do PLAN-083 entram no commit seguinte."}
   - {plan: PLAN-083, request_classification: PLAN_DEVIATION, deviation: DEV-021, route: execute-now-and-return, authorization: "aprovado, seguir recomendacoes; depois: aprovado, faca o commit do merge (2026-10-09)", commits: [727718b], pushed: true, push_range: "ae8368b..727718b", authorization_push: "atena, faca o push (2026-10-09)", ci: "Build and Release disparado pelo push; resultado nao verificado aqui (gh ausente)", branch: main, scope: "merge de codex/fila-imagens-2026-10-09 (animacoes de Shendilavri, Goranthis e Pilares; SPEC-121/PLAN-053) na main ae8368b, feito em worktree isolado F:\\dev\\nottgard-survivor-merge", conflicts: "8, so documentacao/estado e data/cursor.json (mantida a da main); plan.yaml da main preservado", verification: "importacao limpa, testes 0 falhas, fumaca 9 fases ok, export Windows ok (exe nao executado)", build: "build/NottgardSurvivors-Playtest 0.4.0 anim-shendilavri.exe (ae8368b+, local)", note: "Registro feito post-hoc: o desvio foi aprovado pelo dono mas persistido so no commit. Main nao atualizada; push e fast-forward da main exigem aprovacao separada. PLAN-083 segue ativo."}
   - {plan: PLAN-084, batch: "push", authorization: "atena, opcao 1, faca o commit do reparo e o push (2026-10-09)", branch: main, commits: [ca53950], pushed: true, push_range: "325982b..ca53950", scope: "18 commits de varias sessoes (MEC-001, MEC-050, mapas 84x84 e segredos do PLAN-083, nevoa MEC-059/060); ca53950 = reparo do core/battle.gd, que nao compilava no HEAD por blocos do SPEC-157 fora do lugar (commit 5828a4a)", verification: "checkout limpo do HEAD reparado: testes 0 falhas, smoke ok", ci: "Build and Release disparado pelo push; resultado nao verificado aqui (gh ausente)", note: "O release latest passa a apontar para ca53950; a versao segue 0.4.0. Ficaram locais: trechos do SPEC-160 em core/battle.gd e demais arquivos do PLAN-086, assets novos (arlindo, erik, modify_memory, navios_em_chamas, heroes_screen/kayron)."}
   - {plan: PLAN-084, deviation: DEV-019, authorization: "atena, commit (2026-10-09)", branch: main, commits: [3c55756, 0d74969, 07e885a], pushed: false, evidence: EVID-220, scope: "3c55756 = MEC-059/MEC-060 (codigo, so os trechos da nevoa em core/battle.gd); 0d74969 = ferramentas (bot e captura); 07e885a = SPEC-158, EVID-220, PLAN-084 e cartoes", note: "Sem push, build nem exportacao. Mudancas de outras sessoes ficaram fora (SPEC-157 em battle.gd, DEV-018/020, MEC-061 a MEC-063)."}
@@ -102,7 +98,7 @@ deferred_requests:
   - id: DEV-022
     request: 'Plano recomendado que nao dependa nem envolva assets/movimentacao: fechar a 0.4.0 e organizar planos e specs.'
     request_classification: PLAN_DEVIATION
-    status: EXECUTING_PLAN_087
+    status: COMPLETED_LOCAL_COMMITTED_AWAITING_OWNER_CHOICES
     recorded: '2026-10-09'
     authorization_verbatim: 'atena, por plano faça recomendações (2026-10-09)'
     proposed_plan: PLAN-087
@@ -116,7 +112,7 @@ deferred_requests:
   - id: DEV-018
     request: "Preparar um plano para introduzir Arlindo Orlando (importante na historia) como personagem jogavel, como Erik Blackthorn."
     request_classification: PLAN_DEVIATION
-    status: EXECUTING_PLAN_086
+    status: COMMITTED_LOCAL_AWAITING_PLAYTEST (d83c106)
     route: 'Fazer agora enquanto o PLAN-083 aguarda (dono, 2026-10-09: atena enquanto isso vamos para arlindo orlando)'
     recovery_snapshot: '.atena/generated/arlindo/plan-before-086.yaml'
     approval_mode: per-plan
@@ -147,7 +143,7 @@ deferred_requests:
   - id: DEV-020
     request: 'Indicador de evento: seta na borda da tela, com distancia, apontando eventos de quest fora da tela visivel (MEC-061).'
     request_classification: PLAN_DEVIATION
-    status: IMPLEMENTED_LOCAL_AWAITING_PLAYTEST
+    status: COMMITTED_LOCAL_AWAITING_PLAYTEST (2d929b0)
     recorded: '2026-10-09'
     authorization_verbatim: 'Atena vamos fazer um plano para adicionar um indicador de evento quando tiver um evento no mapa aparecer uma seta indicando onde ele esta caso nao esteja na tela visivel'
     proposed_plan: PLAN-085
@@ -163,7 +159,7 @@ deferred_requests:
   - id: DEV-017
     request: "Item 8 da lista sem assets: plano da v0.5.0, segredos (Ecos, camaras, reliquias, mapa maior) nas outras fases."
     request_classification: PLAN_DEVIATION
-    status: EXECUTING_PLAN_083
+    status: COMPLETED_LOCAL_COMMITTED (EVID-223)
     recorded: "2026-10-09"
     authorization_verbatim: "atena, aprovo os 2 commits, siga para o item 8"
     proposed_plan: PLAN-083
