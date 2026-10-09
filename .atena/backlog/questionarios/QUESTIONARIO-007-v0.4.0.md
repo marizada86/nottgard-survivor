@@ -1,6 +1,6 @@
 # QUESTIONARIO-007 — Versão 0.4.0
 
-Criado em 2026-10-08 (PLAN-081 B-008). Arquivo para os testers: `QUESTIONARIO Rápido - 007.pdf` (fonte em `.html`, mesma pasta; gerado com
+Criado em 2026-10-08 (PLAN-081 B-008); **refeito em 2026-10-09** (PLAN-083 B-006: segredos nos oito mapas e ofertas pelo teclado; a versão continua 0.4.0). Arquivo para os testers: `QUESTIONARIO Rápido - 007.pdf` (fonte em `.html`, mesma pasta; gerado com
 `chrome --headless --print-to-pdf`; uma página A4). Cobre **0.3.1 → 0.4.0**: 4 linhas de dificuldade por faixa de mapas (Fácil demais · Na medida · Difícil demais · Não cheguei),
 "onde e quando morreu pela primeira vez", 11 frases com Concordo · Em parte · Discordo · Não notei, 3 prioridades, comentário livre e nota 0 a 10.
 Pergunta nova no cabeçalho: com o que jogou (teclado e mouse, controle, celular).
@@ -15,7 +15,7 @@ Pergunta nova no cabeçalho: com o que jogou (teclado e mouse, controle, celular
 | # | Tema | Cartão |
 |--:|---|---|
 | A–D | Dificuldade por faixa de mapas (comparar com o bot, EVID-208) | BAL-016, BAL-001, BAL-018 |
-| 1, 2 | Mapas 84×84, Ecos, ruína, covil, câmara selada | MEC-039, MEC-012 (SPEC-152) |
+| 1, 2 | Segredos em oito mapas (seis em 84×84): Ecos, ruína, covil, câmara selada | MEC-039, MEC-012 (SPEC-152, SPEC-157) |
 | 3 | Arcanista e ferreiro | MEC-041 (SPEC-149) |
 | 4 | Bola de Fogo, Lâmina de Sombra, Romper Armadura | MEC-042 (SPEC-150), BAL-025 |
 | 5 | Equipamentos únicos novos, Coração da Dominância | MEC-042 (SPEC-151), BAL-025 |
@@ -23,6 +23,6 @@ Pergunta nova no cabeçalho: com o que jogou (teclado e mouse, controle, celular
 | 8 | Moedas | BAL-023 (SPEC-142), `gold_src` das estatísticas |
 | 9 | Curas mais fracas | BAL-022 |
 | 10 | Ficha C, quests, HUD sem sobreposição | BUG-034 a BUG-037, MEC-053 a MEC-056 (SPEC-147) |
-| 11 | Controle Xbox/PlayStation e toque no celular | MEC-052, MEC-049, ART-037 (ícones de controle) |
+| 11 | Controle Xbox/PlayStation, toque no celular e ofertas só com W/A, S/D e Enter | MEC-052, MEC-049, ART-037 (ícones de controle), MEC-001 (SPEC-156) |
 
 Perguntas abertas para a conversa: a fase em que o Manzi viu o lago (indicador do Estige, MEC-056); se o Daniel viu o ranking atualizar (MEC-057).

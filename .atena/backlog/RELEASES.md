@@ -51,11 +51,13 @@ playtest" viram verificados ou reabertos.
 
 Nada: tudo o que estava aqui entrou na [0.4.0](#versão-040--major-update-pronta-publicação-pendente).
 
-## Versão 0.4.0 — Major-update, publicada (aviso aos testers pendente)
+## Versão 0.4.0 — Major-update, refeita em 2026-10-09 (a publicada precisa ser republicada; aviso aos testers pendente)
+
+**Refeita (decisão do dono, 2026-10-09):** não haverá 0.5.0. Os testers nunca receberam o aviso da 0.4.0, então tudo o que entrou depois da publicação de 2026-10-08 passa a fazer parte da **mesma 0.4.0** (`VERSION` e `export_presets.cfg` não mudam): segredos nos oito mapas (PLAN-083, SPEC-157), W/A e S/D nas ofertas da run (MEC-001, SPEC-156), ícone nas linhas Doar (MEC-050, SPEC-155) e o altar oco consertado (BUG-038). Changelog, guia e questionário 007 foram refeitos (EVID-218). **Só se publica com push; a release `latest` atual ainda tem a versão de 2026-10-08.** Névoa de borda (SPEC-158) e setas de evento (SPEC-159) são de outra sessão e entram aqui só quando commitadas.
 
 Plano [PLAN-081](../vault/drafts/PLAN-081-lancamento-da-v0-4-0-2026-10-08.md) / [SPEC-148](../specs/SPEC-148-lancamento-da-v0-4-0.md). **Absorve a 0.3.2 e a 0.3.3** (só existiram como `.exe` local; ficam como histórico, abaixo) e tudo o que estava em "Aguardando versão". Changelog do tester: **0.3.1 → 0.4.0** ([CHANGELOG 0.4.0](changelogs/CHANGELOG%200.4.0%20-%20Nottgard%20Survivors.pdf), fonte [HTML](changelogs/CHANGELOG-0.4.0.html)), [GUIA FACIL 0.4.0](changelogs/GUIA%20FACIL%200.4.0%20-%20Nottgard%20Survivors.pdf) e [QUESTIONARIO Rápido - 007](questionarios/QUESTIONARIO%20R%C3%A1pido%20-%20007.pdf) (mapa em [QUESTIONARIO-007](questionarios/QUESTIONARIO-007-v0.4.0.md)). `0.4.0` em `core/version.gd` e `export_presets.cfg`. Evidências: EVID-202 a 208 e o EVID final do B-008.
 
-**Conteúdo novo desta major (um commit por mecânica):** Arcanista (MEC-041), Bola de Fogo, Lâmina de Sombra e Romper Armadura com duas evoluções e sete equipamentos únicos, entre eles o Coração da Dominância (MEC-042), e a fatia piloto de segredos com mapa 84×84, Ecos, câmaras e relíquias em Shedaklah, Molor e Durao (MEC-039, MEC-012). Arte e som desses itens são **provisórios** (ART-042, ART-043, ART-006).
+**Conteúdo novo desta major (um commit por mecânica):** Arcanista (MEC-041), Bola de Fogo, Lâmina de Sombra e Romper Armadura com duas evoluções e sete equipamentos únicos, entre eles o Coração da Dominância (MEC-042), e os segredos (Ecos, câmaras e relíquias) em **oito mapas**: Shedaklah, Molor, Durao, Feng-tu, Shendilavri e Goranthis em 84×84, Dagruve e Docas em 60×60, mais o Espelho das Almas Desejantes (MEC-039, MEC-012). Arte e som desses itens são **provisórios** (ART-042, ART-043, ART-006).
 
 ### O que testar (0.4.0)
 
@@ -64,8 +66,8 @@ Plano [PLAN-081](../vault/drafts/PLAN-081-lancamento-da-v0-4-0-2026-10-08.md) / 
 3. **Arcanista:** evento novo que melhora **magias**. O **ferreiro** agora melhora só **armas e equipamentos**. Dá para entender quem faz o quê?
 4. **Armas e magias novas:** Bola de Fogo, Lâmina de Sombra e Romper Armadura (e as evoluções Tormenta de Fogo e Esmagar Defesas) aparecem no level-up? Parecem fortes ou fracas demais?
 5. **Equipamentos únicos novos:** Cajado da Família Infernum, Wave of Terror, Colar de visão verdadeira, Detector Arcano, Dispositivo Antimagia de Gilly, Dispositivo das Docas e **Coração da Dominância** (concede a magia Domínio da Vontade).
-6. **Mapas maiores com segredos** (Shedaklah, Molor e Durao, 84×84): Ecos de Nottgard (brilham de perto; texto vai ao Diário), ruína com baú, covil com elite que acorda, câmara selada com **relíquia**. Vale a pena explorar? Os mapas ficaram vazios demais?
-7. **Diário → Ecos:** cada fase mostra "Ecos n/4" e a relíquia; conquista "Ecos de <fase>".
+6. **Mapas com segredos** (Dagruve, Docas, Shedaklah, Molor, Durao, Feng-tu, Shendilavri e Goranthis; os seis últimos em 84×84): Ecos de Nottgard (brilham de perto; texto vai ao Diário), ruína com baú, covil com elite que acorda, câmara selada com **relíquia**. Vale a pena explorar? Os mapas ficaram vazios demais?
+7. **Diário → Ecos:** cada fase mostra "Ecos n/4" e a relíquia; conquista "Ecos de <fase>". A câmara abre ao cumprir o acontecimento principal (Dagruve: interromper o selo; Docas: derrotar a onda do cais; Shendilavri: libertar as vítimas, agora toda partida; Goranthis: acontece sozinho). Espelho das Almas Desejantes (Goranthis): carisma e sorte.
 8. **Ficha C:** C abre e fecha; mostra próximo nível e evolução das armas; bônus com o nome antes do valor.
 9. **HUD:** nada sobreposto no topo; quests em destaque com realce no mundo; indicador do Estige; o bloco de notas (F5) prende o foco.
 10. **Primeiro baú** só aos 45 s; a arma base não volta como "NOVA" depois de evoluir.
@@ -73,7 +75,8 @@ Plano [PLAN-081](../vault/drafts/PLAN-081-lancamento-da-v0-4-0-2026-10-08.md) / 
 12. **Curas mais fracas** (Vela Sagrada, Regeneração, Machado de Xar'gath): ainda dá para ficar imortal?
 13. **Controles:** Xbox e PlayStation (ícones, mapa Padrão/Legado, L1/LB e R1/RB nas abas) e **toque no celular** (ainda em teste de aparelho).
 14. **Ranking** na tela inicial (carrega ao abrir a aba) e **F7** (reúne as evidências num ZIP ao lado do executável).
-15. **Verificações pendentes** (reteste dispensado em 2026-10-08): fechar a ficha com C e Esc; loja, ferreiro e curandeiro com "Sair"; equipar ou vender item; quebráveis (drop, respawn, poção só de elite); segurar o clique para andar; nível de equipamento; sinergias arma + acessório + magia.
+15. **Ofertas pelo teclado:** W/A e S/D escolhem a opção, Enter confirma; no Altar da Doação, as linhas Doar mostram o ícone do item.
+16. **Verificações pendentes** (reteste dispensado em 2026-10-08): fechar a ficha com C e Esc; loja, ferreiro e curandeiro com "Sair"; equipar ou vender item; quebráveis (drop, respawn, poção só de elite); segurar o clique para andar; nível de equipamento; sinergias arma + acessório + magia.
 
 **Conhecidos (não precisa reportar):** heróis patinam ao andar de lado (BUG-028); Zynara, Leoric e Nyrelia aparecem de frente ao andar para cima (BUG-027); pixels soltos nos heróis (BUG-029); HQ da Peregrinação com o braço do Korrak fundido ao machado (BUG-022); ícones e sons de itens, Ecos e câmaras são provisórios.
 
@@ -84,7 +87,8 @@ Plano [PLAN-081](../vault/drafts/PLAN-081-lancamento-da-v0-4-0-2026-10-08.md) / 
 - [x] Esta seção e a tabela de histórico; `backlog_check` sem alertas
 - [ ] `.exe` local exportado de commit limpo (**não feito**: o `.exe` dos testers é o do CI; exportar só se o dono pedir)
 - [x] Push na `main` em 2026-10-08 (`94a6a2f..aa496f2`); release `latest` = *Playtest v0.4.0 (aa496f2…)*, pré-release ([EVID-209](../evidence/EVID-209-b008-publicacao-da-v0-4-0-2026-10-08.md))
-- [ ] Aviso aos testers com os três PDFs (changelog, guia fácil e questionário 007): **ação do dono**; antes, conferir que o rodapé do jogo baixado diz 0.4.0
+- [ ] **Republicar a 0.4.0** (push na `main` com a árvore limpa de código de outras sessões ou depois que elas fecharem): **aprovação à parte**
+- [ ] Aviso aos testers com os três PDFs refeitos (changelog 0.3.1 → 0.4.0, guia fácil e questionário 007): **ação do dono**; antes, conferir que o rodapé do jogo baixado diz 0.4.0 e que o `latest` é o da republicação
 
 ### Detalhe de itens que vinham como "Aguardando versão"
 

@@ -10,7 +10,7 @@ created: '2026-10-09'
 request_classification: PLAN_DEVIATION
 deviation_id: DEV-017
 authorization_verbatim: 'atena, aprovo os 2 commits, siga para o item 8'
-checkpoint: B-004 concluido localmente; B-005 (bot por heroi) em execucao; commits de B-002 e B-004 aguardam aprovacao
+checkpoint: B-006 pronto localmente (S-019 a S-022); aguardando aprovacao do commit dos documentos (S-023) e, a parte, do push que republica a 0.4.0
 return:
   plan: PLAN-071
   state_file: .atena/state/plan-071-playtest-ranking.yaml
@@ -21,8 +21,8 @@ batches:
   B-002: {title: Dagruve e Docas (60x60), steps: [S-005, S-006, S-007, S-008], status: IMPLEMENTED_LOCAL_AWAITING_COMMIT, evidence: EVID-215, note: 'Conteudo aprovado em 2026-10-09 (Grimhold; Arch-hag sustenta o ritual). S-005 a S-008 feitos; commits aguardam aprovacao.'}
   B-003: {title: Mapas 84x84 de Feng-tu, Shendilavri e Goranthis, steps: [S-009, S-010, S-011, S-012], status: IMPLEMENTED_LOCAL_AWAITING_COMMIT, evidence: EVID-214, note: 'Suite, smoke e FPS ok; commits aguardam aprovacao.'}
   B-004: {title: Segredos em 84x84 e Espelho, steps: [S-013, S-014, S-015, S-016], status: IMPLEMENTED_LOCAL_AWAITING_COMMIT, evidence: EVID-216, note: 'Espelho sem rerrolagem (padrao G2, sem resposta especifica do dono); vitimas_drenadas agora fixo.'}
-  B-005: {title: Balanceamento, steps: [S-017, S-018], status: PENDING}
-  B-006: {title: Fechamento v0.5.0, steps: [S-019, S-020, S-021, S-022, S-023, S-024], status: PENDING, note: 'Push, exportacao e aviso aos testers so com aprovacao explicita.'}
+  B-005: {title: Balanceamento, steps: [S-017, S-018], status: MEASURED, evidence: EVID-217, note: 'Segredos sem regressao; queda do bot atribuida a nevoa de borda do SPEC-158 (outra sessao). BAL-026.'}
+  B-006: {title: 'Fechamento: 0.4.0 refeita (sem 0.5.0)', steps: [S-019, S-020, S-021, S-022, S-023, S-024], status: LOCAL_DONE_AWAITING_COMMIT_AND_PUSH, evidence: EVID-218, note: 'Mudanca de rota do dono em 2026-10-09: nao ha 0.5.0; refazer a 0.4.0 com tudo e limpar planos e specs. Push, exportacao e aviso aos testers so com aprovacao explicita.'}
 steps:
   S-001: 'Ler o relato dos testers da 0.4.0 (INBOX/INTAKE); registrar o que muda no plano.'
   S-002: 'Portao de conteudo: Ecos, reliquias, Espelho (com ou sem rerrolagem) e escopo, com o dono.'
@@ -42,9 +42,9 @@ steps:
   S-016: 'Suite, smoke, capturas e commits.'
   S-017: 'Bot por heroi antes e depois (EVID-208 como linha de base); ajustes so em JSON.'
   S-018: 'gold_src dos testers, BALANCEAMENTO.md e cartoes.'
-  S-019: 'Versao 0.5.0 em core/version.gd e export_presets.cfg; RELEASES.md.'
-  S-020: 'Changelog 0.4.0 -> 0.5.0 (HTML e PDF) e guia facil 0.5.0.'
-  S-021: 'Questionario 008 (md, html e pdf).'
+  S-019: 'REVISADO: a versao continua 0.4.0 (sem mexer em core/version.gd nem export_presets.cfg); atualizar a secao 0.4.0 do RELEASES.md.'
+  S-020: 'REVISADO: refazer o changelog 0.3.1 -> 0.4.0 (HTML e PDF) e o guia facil 0.4.0 com os segredos das oito fases e o que entrou depois da publicacao.'
+  S-021: 'REVISADO: atualizar o questionario 007 (md, html e pdf); sem questionario 008.'
   S-022: 'Verificacao final (suite, smoke, kit_test, audit, bot); backlog_check.'
   S-023: 'Commit da versao; push so com aprovacao explicita separada (publica o latest).'
   S-024: 'EVID final, reconciliar plan.yaml (DEV-017) e voltar ao PLAN-071.'
@@ -65,3 +65,8 @@ decisions_taken:
   route: 'Fazer agora, sem esperar o relato da 0.4.0 (2026-10-09)'
   approval_mode: 'per-plan (2026-10-09)'
   content_gate: 'Escopo aprovado (cinco fases; Pilares fora; 84x84 so em Feng-tu, Shendilavri e Goranthis). Ecos, reliquias e Espelho ainda aguardam o dono.'
+route_change:
+  recorded: '2026-10-09'
+  classification: PLAN_CHANGE_REQUEST
+  authorization_verbatim: 'vamos refazer a 0.4.0 com todas as novas atualizacoes e tentar limpar o maior numero possivel de planos e specs, esta acumulando muita coisa e estou ficando perdido'
+  effects: 'Sem 0.5.0 e sem questionario 008; changelog parte da 0.3.1 (testers nunca receberam a 0.4.0); nevoa de borda e setas (outra sessao) so entram no documento quando commitadas. Limpeza de planos e specs vira pedido proprio (inventario antes de qualquer remocao).'
