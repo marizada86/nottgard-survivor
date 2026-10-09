@@ -69,7 +69,7 @@ static func interaction_label(b: Battle) -> String:
 	var nearest := 1.6
 	var kind := ""
 	for it in b.interactions:
-		if not it.used and b.time - float(it.get("born_at", 0.0)) >= 0.65 and it.kind in ["altar", "ritual", "portal", "loja", "ferreiro", "arcanista", "curandeiro", "ampulheta", "doacao", "aposta", "event_pact", "camara"]:
+		if not it.used and b.time - float(it.get("born_at", 0.0)) >= 0.65 and (it.kind in ["altar", "ritual", "portal", "loja", "ferreiro", "arcanista", "curandeiro", "ampulheta", "doacao", "aposta", "event_pact", "camara"] or RandomEvents.is_kind(String(it.kind))):
 			var distance: float = it.pos.distance_to(b.hero.pos)
 			if distance <= nearest:
 				nearest = distance

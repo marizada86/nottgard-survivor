@@ -503,6 +503,12 @@ func update_stats(b: Battle) -> void:
 	else:
 		timer_label.text = "%02d:%02d" % [t / 60, t % 60]
 	stage_label.text = "%s%s%s" % [b.stage.name, "  (Mira: %s)" % ("AUTO" if b.aim == Battle.Aim.AUTO else "MOUSE"), "  [%s]" % b.speed_label() if b.speed_scale() > 1.0 else ""]
+	# SPEC-164: o eclipse ativo aparece ao lado do nome da fase, com o tempo que falta
+	if not b.world_mod.is_empty():
+		stage_label.text += "   ◐ %s %d s" % [String(b.world_mod.name), int(ceil(float(b.world_mod.t)))]
+		stage_label.add_theme_color_override("font_color", Color(0.95, 0.4, 0.4) if String(b.world_mod.id) == "rubro" else Color(0.75, 0.85, 1.0))
+	else:
+		stage_label.add_theme_color_override("font_color", Color(0.75, 0.7, 0.6, 1))
 	%SpeedBtn.visible = b.can_speed_2x()
 	if mobile != null:
 		%SpeedBtn.hide()
@@ -531,7 +537,7 @@ func update_stats(b: Battle) -> void:
 	weapons_label.text = "\n".join(lines)
 	var pr := ""
 	for it in b.interactions:
-		if not it.used and it.kind in ["altar", "ritual", "portal", "loja", "ferreiro", "arcanista", "curandeiro", "ampulheta", "doacao", "aposta", "event_pact", "camara"] and it.pos.distance_to(h.pos) <= 1.6:
+		if not it.used and (it.kind in ["altar", "ritual", "portal", "loja", "ferreiro", "arcanista", "curandeiro", "ampulheta", "doacao", "aposta", "event_pact", "camara"] or RandomEvents.is_kind(String(it.kind))) and it.pos.distance_to(h.pos) <= 1.6:
 			pr = "[%s] " % Game.controls.prompt("run_interact", "E") + {"altar": "rezar no altar", "ritual": "iniciar o ritual", "portal": "descer pelo portal",
 				"loja": "negociar na loja", "ferreiro": "forjar no ferreiro", "arcanista": "estudar com o arcanista", "camara": "abrir a câmara selada", "curandeiro": "buscar cura", "ampulheta": "girar a ampulheta (+60 s, inimigos acumulados)", "doacao": "doar um item por uma bênção", "aposta": "arriscar moedas na mesa",
 				"event_pact": "%s" % String(it.get("label", "pacto")).replace(" [E/oeste]", "")}[it.kind]
@@ -572,6 +578,8 @@ func show_offer(b: Battle) -> void:
 		lv_title.text = "Item encontrado no baú — equipar" if b.offer.size() == 1 else "Item encontrado — equipar ou manter?"
 	elif b.offer_kind == "pact":
 		lv_title.text = "%s — escolha ou recuse" % b.pact_title
+	elif b.offer_kind.begins_with("shop_") and RandomEvents.is_kind(b.offer_kind.substr(5)):   # SPEC-164
+		lv_title.text = RandomEvents.title(b.offer_kind.substr(5))
 	elif shop_titles.has(b.offer_kind):
 		lv_title.text = String(shop_titles[b.offer_kind])
 	else:

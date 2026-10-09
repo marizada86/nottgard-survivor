@@ -21,6 +21,7 @@ var base_cam := 10
 var hero_mods := {}
 var meta_mods := {}
 var bonus_mods := {}      # conquistas
+var run_mods := {}        # SPEC-164: bônus permanentes da run vindos de eventos (Pacto de Sangue, Contador de Histórias)
 var temp_mods := {}       # bênção temporária (ritual); vale enquanto temp_t > 0
 var temp_t := 0.0
 var kind_buffs := {}      # SPEC-129: bônus temporários das bênçãos de família (id -> {"mods": {}, "t": s}); vale enquanto t > 0
@@ -75,6 +76,7 @@ func recalc() -> void:
 	add_mods(m, hero_mods)
 	add_mods(m, meta_mods)
 	add_mods(m, bonus_mods)
+	add_mods(m, run_mods)
 	if temp_t > 0.0:
 		add_mods(m, temp_mods)
 	for kb in kind_buffs.values():

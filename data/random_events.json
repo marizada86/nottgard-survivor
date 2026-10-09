@@ -1,0 +1,54 @@
+{
+  "_spec": "SPEC-164 (MEC-005): seis eventos aleatorios genericos. Conteudo: vault/drafts/PROPOSTA-eventos-aleatorios-mec-005-2026-10-09.md (aprovado como esta em 2026-10-09). Pesos por fase em stages.json (interactions).",
+  "events": {
+    "pacto_sangue": {
+      "name": "Pacto de Sangue", "label": "pacto", "color": [0.9, 0.2, 0.25],
+      "intro": "Um selo de cera vermelha pulsa no chão. Algo promete força em troca do que corre nas suas veias.",
+      "max_loss_pct": 0.45, "min_max_hp": 20,
+      "options": [
+        {"id": "menor", "name": "Selo menor", "hp_pct": 0.15, "dmg_pct": 0.12},
+        {"id": "maior", "name": "Selo maior", "hp_pct": 0.30, "dmg_pct": 0.25}
+      ]
+    },
+    "relicario": {
+      "name": "Relicário Lacrado", "label": "relicário", "color": [0.75, 0.6, 0.25],
+      "intro": "Um cofre de ferro com fechadura de ossos. Só abre com sangue ou com ouro.",
+      "blood_hp_pct": 0.25, "blood_min_hp_pct": 0.40, "blood_rarity": "raro",
+      "gold_cost": 200, "gold_rarity": "magico"
+    },
+    "peregrino": {
+      "name": "Peregrino Ferido", "label": "peregrino", "color": [0.55, 0.8, 1.0],
+      "intro": "Um viajante caído ao lado da estrada, a mão no flanco. 'Por favor...'",
+      "help_gold_pct": 0.30, "help_buff": {"xp_pct": 0.08, "pickup": 0.6}, "help_buff_seconds": 120.0, "help_xp_pct": 0.25,
+      "talk_xp_pct": 0.15,
+      "steal_gold": 15, "steal_ambush": 6
+    },
+    "contador": {
+      "name": "Contador de Histórias", "label": "contador", "color": [0.45, 0.85, 0.5],
+      "intro": "Uma figura de capuz junto a uma fogueira baixa: 'Escolha que história quer levar daqui.'",
+      "show": 3,
+      "stories": [
+        {"id": "caminham", "name": "Dos que Caminham", "mods": {"speed_pct": 0.06}},
+        {"id": "colhem", "name": "Dos que Colhem", "mods": {"pickup": 0.5}},
+        {"id": "lutam", "name": "Dos que Lutam", "mods": {"dmg_pct": 0.05}},
+        {"id": "resistem", "name": "Dos que Resistem", "mods": {"ca": 1}},
+        {"id": "lembram", "name": "Dos que Lembram", "mods": {"xp_pct": 0.06}},
+        {"id": "esperam", "name": "Dos que Esperam", "mods": {"cd_pct": 0.06}}
+      ]
+    },
+    "carroca": {
+      "name": "Carroça Abandonada", "label": "carroça", "color": [1.0, 0.55, 0.2],
+      "intro": "Uma carroça tombada, a carga espalhada. Pode ser só sorte. Pode ser isca.",
+      "loot_chance": 0.60, "loot_gold": 40, "loot_rarity": "raro", "ambush_enemies": 8, "ambush_radius": 4.0
+    },
+    "eclipse_pedra": {
+      "name": "Pedra do Eclipse", "label": "eclipse", "color": [0.6, 0.35, 0.9],
+      "intro": "Uma pedra negra que não reflete luz. Quando você a toca, o céu se fecha.",
+      "seconds": 90.0,
+      "options": [
+        {"id": "rubro", "name": "Eclipse Rubro", "enemy_speed": 1.25, "enemy_dmg": 1.25, "xp": 1.5, "gold": 1.5},
+        {"id": "prateado", "name": "Eclipse Prateado", "enemy_speed": 0.8, "enemy_dmg": 0.8, "xp": 0.8, "gold": 0.8}
+      ]
+    }
+  }
+}

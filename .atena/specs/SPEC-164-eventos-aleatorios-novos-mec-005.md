@@ -1,7 +1,7 @@
 ---
 id: "SPEC-164"
 title: "Seis eventos aleatórios novos (MEC-005)"
-status: "APROVADA por plano em 2026-10-09 (DEV-026, PLAN-091); conteúdo aprovado como está; em execução em branch isolada"
+status: "IMPLEMENTADA em branch atena/eventos-e-ui-fase1 em 2026-10-09 (EVID-228); aguarda conferência e merge do dono; aceite subjetivo pendente do playtest"
 origin: planned
 implementation_preceded_spec: false
 request_classification: PLAN_DEVIATION

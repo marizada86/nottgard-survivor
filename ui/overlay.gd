@@ -419,7 +419,11 @@ func _draw_over() -> void:
 			"aposta": col = Color(0.95, 0.8, 0.3); label = "mesa de aposta [E/oeste]"; asset = "aposta"
 			"ampulheta": col = Color(0.85, 0.75, 1.0); label = "ampulheta [E/oeste]"; asset = "ampulheta"
 			# SPEC-118: pontos dos acontecimentos (item, destino, NPC, pacto, estrela) trazem rótulo e cor próprios
-			_: col = it.get("color", Color.WHITE); label = String(it.get("label", "")); asset = String(it.get("asset", ""))
+			_:
+				if RandomEvents.is_kind(String(it.kind)):   # SPEC-164: sem PNG, vale o losango colorido provisório (ART registrada)
+					col = RandomEvents.color(String(it.kind)); label = RandomEvents.label(String(it.kind)); asset = String(it.kind)
+				else:
+					col = it.get("color", Color.WHITE); label = String(it.get("label", "")); asset = String(it.get("asset", ""))
 		# A simulação também bloqueia interação durante estes 0,65 s de entrada.
 		if arrival < 0.35:
 			var target_alpha := 0.25 + 0.45 * arrival / 0.35

@@ -86,6 +86,8 @@ var run_time := 0.0
 var state := "running"   # running | levelup | altar | item_offer | shop | evolve_cine | revive_offer | dead | won
 var offer: Array = []
 var offer_kind := ""
+var world_mod := {}            # SPEC-164: Pedra do Eclipse ativa (multiplicadores e relógio); vazio = nenhuma
+var event_blood_lost := 0.0     # SPEC-164: PV máximos perdidos em Pactos de Sangue na run (teto de 45%)
 var pending_levels := 0
 var rerolls := 0
 var boss: Enemy = null
@@ -648,6 +650,7 @@ func step(screen_dir: Vector2, dt: float) -> void:
 	kinds.step(self, dt)
 	happenings.post_hero_step(self)
 	_update_postboss_fog(dt)
+	_update_world_mod(dt)
 	_update_edge_fog(dt)
 	if hero.m("regen") > 0.0:
 		_heal_hero(hero.m("regen") * dt)
@@ -1156,7 +1159,7 @@ func _enemy_step(e: Enemy, dt: float) -> void:
 		e.ab_cd[i] -= dt
 		if e.ab_cd[i] <= 0.0 and _use_ability(e, i, e.abilities[i], dist, to):
 			e.ab_cd[i] = float(e.abilities[i].cd) * (0.85 + rng.randf() * 0.3)
-	var spd := e.speed * (0.5 if e.slow_t > 0.0 else 1.0)
+	var spd := e.speed * (0.5 if e.slow_t > 0.0 else 1.0) * RandomEvents.world_mult(world_mod, "enemy_speed", e.is_boss())   # SPEC-164: Eclipse
 	if e.speed > 0.0 and dist > 0.001:
 		var dir := to / dist
 		var mv := Vector2.ZERO
@@ -1338,7 +1341,7 @@ func _enemy_hit_hero(bonus: int, dice: String, dtype: String, is_proj: bool, dam
 		if _has_item_effect("dodge_empower"):
 			shadow_charge = true
 		return
-	var dmg := float(Dice.roll(rng, dice)) * (2.0 if r == 20 else 1.0) * damage_mult
+	var dmg := float(Dice.roll(rng, dice)) * (2.0 if r == 20 else 1.0) * damage_mult * RandomEvents.world_mult(world_mod, "enemy_dmg", by != null and by.is_boss())   # SPEC-164: Eclipse
 	var hp_before: float = hero.hp
 	_hurt_hero(dmg, "hit")
 	if by != null and not by.dead and by.has_affix("vampirico"):
@@ -1467,7 +1470,7 @@ func _kill(e: Enemy) -> void:
 	_tide_kill()
 	stats.clean_kills += 1
 	stats.clean_streak_best = maxi(int(stats.clean_streak_best), int(stats.clean_kills))
-	var xp_v := float(e.xp)
+	var xp_v := float(e.xp) * RandomEvents.world_mult(world_mod, "xp", e.is_boss())   # SPEC-164: Eclipse
 	events.append({"type": "kill", "pos": e.pos, "enemy": e})
 	if e.has_affix("explosivo"):
 		_affix_explode(e)
@@ -1480,7 +1483,7 @@ func _kill(e: Enemy) -> void:
 	if xp_v > 0.0:
 		_drop("xp", e.pos, xp_v)
 	if e.xp > 0 and rng.randf() < 0.22:
-		_drop("gold", e.pos, _kill_gold_value() * (5.0 if e.affix == "avaro" else 1.0), "abate")
+		_drop("gold", e.pos, _kill_gold_value() * (5.0 if e.affix == "avaro" else 1.0) * RandomEvents.world_mult(world_mod, "gold", e.is_boss()), "abate")   # SPEC-164: Eclipse
 	if e.split_id != "":
 		for i in 2:
 			_spawn(e.split_id, e.pos + Vector2(rng.randf_range(-0.6, 0.6), rng.randf_range(-0.6, 0.6)))
@@ -2089,7 +2092,7 @@ func interact() -> bool:
 	var best: Dictionary = {}
 	var bd := 1.6
 	for it in interactions:
-		if not it.used and time - float(it.get("born_at", 0.0)) >= 0.65 and it.kind in ["altar", "ritual", "portal", "loja", "ferreiro", "arcanista", "curandeiro", "ampulheta", "doacao", "aposta", "event_pact", "camara"]:
+		if not it.used and time - float(it.get("born_at", 0.0)) >= 0.65 and (it.kind in ["altar", "ritual", "portal", "loja", "ferreiro", "arcanista", "curandeiro", "ampulheta", "doacao", "aposta", "event_pact", "camara"] or RandomEvents.is_kind(String(it.kind))):
 			var d: float = it.pos.distance_to(hero.pos)
 			if d <= bd:
 				bd = d
@@ -2117,6 +2120,8 @@ func interact() -> bool:
 			_open_shop_event(String(best.kind))
 		"doacao", "aposta":
 			_open_risk_event(String(best.kind))
+		"pacto_sangue", "relicario", "peregrino", "contador", "carroca", "eclipse_pedra":   # SPEC-164 (MEC-005)
+			_open_random_event(String(best.kind))
 		"event_pact":
 			happenings.open_pact(self, best)
 		"ampulheta":
@@ -2274,6 +2279,38 @@ func _open_shop_event(kind: String) -> void:
 	state = "shop"
 
 ## MEC-005: eventos de risco e recompensa. Doação: sacrifica um equipamento por uma bênção à escolha. Aposta: moedas em jogo.
+## SPEC-164 (MEC-005): abre um dos seis eventos aleatórios novos (sempre pausa e sempre oferece "Sair" sem custo).
+func _open_random_event(kind: String) -> void:
+	offer = RandomEvents.open(self, kind)
+	_decorate_offers()
+	offer_kind = "shop_%s" % kind
+	state = "shop"
+	events.append({"type": "toast", "text": RandomEvents.intro(kind)})
+
+## SPEC-164: inimigos comuns da fase em círculo ao redor do herói (vingança do peregrino, emboscada da carroça);
+## `with_elite` junta um elite que solta um baú.
+func spawn_ambush(count: int, radius: float, with_elite := false) -> void:
+	var waves: Array = stage.waves
+	if waves.is_empty():
+		return
+	for i in count:
+		var ang := TAU * float(i) / float(maxi(1, count))
+		var w: Dictionary = waves[rng.randi() % waves.size()]
+		_spawn(String(w.id), (hero.pos + Vector2(cos(ang), sin(ang)) * radius).clamp(Vector2.ONE, map_size - Vector2.ONE))
+	if with_elite and not stage.elites.is_empty():
+		var el: Dictionary = stage.elites[rng.randi() % stage.elites.size()]
+		var boss_e := _spawn_elite(String(el.id), (hero.pos + Vector2(radius, 0.0)).clamp(Vector2.ONE, map_size - Vector2.ONE))
+		boss_e.drops_chest = true
+
+## SPEC-164: o relógio do Eclipse; ao acabar, os multiplicadores saem.
+func _update_world_mod(dt: float) -> void:
+	if world_mod.is_empty():
+		return
+	world_mod.t = float(world_mod.t) - dt
+	if float(world_mod.t) <= 0.0:
+		events.append({"type": "toast", "text": "O eclipse passa."})
+		world_mod = {}
+
 func _open_risk_event(kind: String) -> void:
 	offer = []
 	var cfg: Dictionary = Data.table("difficulty").get("risk_events", {})
@@ -2717,6 +2754,8 @@ func choose(i: int) -> void:
 						events.append({"type": "toast", "text": "A casa vence: -%d moedas." % int(c.bet), "color": Color(0.9, 0.4, 0.4)})
 			"pact":
 				happenings.choose_pact(self, c)
+			"ev_choice":   # SPEC-164: eventos aleatórios (pacto, relicário, peregrino, contador, carroça, eclipse)
+				RandomEvents.apply(self, c)
 			"shop_item_up":
 				if hero.gold >= int(c.price) and hero.items.has(String(c.slot)):
 					hero.items[String(c.slot)].level = int(hero.items[String(c.slot)].get("level", 1)) + 1
@@ -3103,6 +3142,8 @@ func _spawn_random_interaction() -> void:
 		if roll <= 0.0:
 			kind = k
 			break
+	if kind == "eclipse_pedra" and not world_mod.is_empty():
+		return   # SPEC-164: só um eclipse por vez
 	if _first_inter:
 		_first_inter = false
 		kind = "chest"

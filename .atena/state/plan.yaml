@@ -103,7 +103,7 @@ deferred_requests:
   - id: DEV-026
     request: 'MEC-005: implementar mais eventos aleatorios (entrevista: 6 eventos genericos, 4 tipos, todas as fases).'
     request_classification: PLAN_DEVIATION
-    status: APPROVED_EXECUTING_ON_BRANCH
+    status: IMPLEMENTED_ON_BRANCH_AWAITING_OWNER_REVIEW
     recorded: '2026-10-09'
     authorization_verbatim: 'MEC-005 vamos implementar, me entreviste se necessario'
     proposed_plan: PLAN-091

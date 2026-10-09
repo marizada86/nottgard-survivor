@@ -17,6 +17,7 @@
 | ID | Tipo | Item | Sabor Nottgard | Origem | Dependência |
 |---|---|---|---|---|---|
 | ART-045 | retrato + tiras | **Erik e Arlindo jogáveis:** retrato de seleção (1536×1024) e nove tiras de animação cada (`idle`, cinco `move_*`, `attack`, `active`, `death`), a partir dos retratos do Nottcard; ordem de cota: ER01, ER02, AO01, AO02 primeiro | Grimholders, névoa, Amuleto da Luz (Erik); andarilho de Dagruve e magia de memória (Arlindo) | pedido do dono 2026-10-09; [ART-PROMPTS-060](../generated/ART-PROMPTS-060-erik-e-arlindo-jogaveis.md), [CHATGPT-FILA-027](../generated/CHATGPT-FILA-027-erik-e-arlindo.md) | [SPEC-160](../specs/SPEC-160-arlindo-orlando-e-erik-blackthorn-jogaveis.md); até chegar, `art_like` provisório (Sylas e Durvall) |
+| ART-046 | props + ícones | **Seis eventos aleatórios (MEC-005):** props de mapa e ícones para Pacto de Sangue, Relicário Lacrado, Peregrino Ferido, Contador de Histórias, Carroça Abandonada e Pedra do Eclipse (hoje losango colorido com rótulo; o Peregrino e o Contador pedem figura de NPC) | sombra e pedra de Nottgard; vermelho de cera, ferro com ossos, fogueira baixa, carroça tombada, pedra negra | [SPEC-164](../specs/SPEC-164-eventos-aleatorios-novos-mec-005.md) | provisório até a arte; sem bloquear o jogo |
 
 ### PRIORIDADE ALTA — tiras de heróis (2026-10-02)
 

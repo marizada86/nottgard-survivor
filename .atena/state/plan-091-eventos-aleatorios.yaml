@@ -2,7 +2,7 @@ id: PLAN-091
 spec: SPEC-164
 spec_file: .atena/specs/SPEC-164-eventos-aleatorios-novos-mec-005.md
 mode: per-plan
-status: APPROVED_EXECUTING_ON_BRANCH
+status: IMPLEMENTED_ON_BRANCH_AWAITING_OWNER_REVIEW
 created: '2026-10-09'
 request_classification: PLAN_DEVIATION
 deviation_id: DEV-026
@@ -12,10 +12,10 @@ approval_note: 'por plano; dono ausente por cerca de 4 horas: executar tudo em b
 interview: 'Tipos: risco e recompensa, NPC e lore, emboscadas, eventos que mudam a run (todos); escopo: 6 eventos genericos em todas as fases (2026-10-09)'
 return: {plan: PLAN-071, checkpoint_observed: B-006/S-011}
 batches:
-  B-001: {title: Dados e motor com Pacto de Sangue e Relicario, steps: [S-001, S-002, S-003], status: PENDING}
-  B-002: {title: Peregrino Ferido e Contador de Historias, steps: [S-004, S-005], status: PENDING}
-  B-003: {title: Carroca Abandonada e Pedra do Eclipse (mundo e HUD), steps: [S-006, S-007, S-008], status: PENDING}
-  B-004: {title: Integracao, bot e registro, steps: [S-009, S-010, S-011], status: PENDING}
+  B-001: {title: Dados e motor com Pacto de Sangue e Relicario, steps: [S-001, S-002, S-003], status: DONE_ON_BRANCH}
+  B-002: {title: Peregrino Ferido e Contador de Historias, steps: [S-004, S-005], status: DONE_ON_BRANCH}
+  B-003: {title: Carroca Abandonada e Pedra do Eclipse (mundo e HUD), steps: [S-006, S-007, S-008], status: DONE_ON_BRANCH}
+  B-004: {title: Integracao, bot e registro, steps: [S-009, S-010, S-011], status: DONE_ON_BRANCH}
 steps:
   S-001: 'data/random_events.json e core/random_events.gd (contas puras).'
   S-002: 'Integracao no Battle: sorteio por peso, interact(), choose(); losango provisorio.'
@@ -27,7 +27,7 @@ steps:
   S-008: 'Chip do eclipse na HUD e captura; testes.'
   S-009: 'Pesos em stages.json para as 9 fases; teste de dados e de integracao.'
   S-010: 'Suite, smoke, kit_test, bot (45 sementes, 2 herois) e EVID.'
-  S-011: 'Cartoes MEC-005, ART dos seis props e RELEASES (so apos o dono liberar os documentos).'
+  S-011: "Cartoes MEC-005, BAL-029, ART-046 feitos; RELEASES e documentos dos testers NAO atualizados (decisao do dono: aguardando assets)."
 gates:
   content_gate: 'Proposta aprovada pelo dono antes do codigo'
   dependencies: NO_NEW_DEPENDENCIES
@@ -39,4 +39,4 @@ gates:
 blocking_gaps: []
 content_approved: "Aprovo como esta (dono, 2026-10-09): proposta revisao 1 vira CANON de trabalho"
 non_blocking_gaps: [P1, P2, P3]
-commit_push_build_export: NOT_PERFORMED
+commit_push_build_export: "COMMITTED_ON_BRANCH atena/eventos-e-ui-fase1 (sem merge na main, push, exportacao nem aviso aos testers)"
