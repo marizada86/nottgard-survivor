@@ -103,29 +103,25 @@ deferred_requests:
   - id: DEV-026
     request: 'MEC-005: implementar mais eventos aleatorios (entrevista: 6 eventos genericos, 4 tipos, todas as fases).'
     request_classification: PLAN_DEVIATION
-    status: APPROVED_EXECUTING_ON_BRANCH
+    status: PLANNED_AWAITING_APPROVAL
     recorded: '2026-10-09'
     authorization_verbatim: 'MEC-005 vamos implementar, me entreviste se necessario'
     proposed_plan: PLAN-091
     state_file: '.atena/state/plan-091-eventos-aleatorios.yaml'
     spec: '.atena/specs/SPEC-164-eventos-aleatorios-novos-mec-005.md'
     content_proposal: '.atena/vault/drafts/PROPOSTA-eventos-aleatorios-mec-005-2026-10-09.md'
-    approval_mode: per-plan
-    approved: '2026-10-09'
-    branch: atena/eventos-e-ui-fase1
+    approval_mode: unconfigured
     route: 'Desvio do PLAN-071; bloqueio: aprovacao do conteudo pelo dono.'
   - id: DEV-027
     request: 'MEC-003: melhorar a interface, considerar uma nova UI (entrevista: sistema de UI + menu de pausa, UI por codigo).'
     request_classification: PLAN_DEVIATION
-    status: APPROVED_EXECUTING_ON_BRANCH
+    status: PLANNED_AWAITING_APPROVAL
     recorded: '2026-10-09'
     authorization_verbatim: 'sobre a MEC-003 vamos trabalhar para melhorar a interface, talvez refazer o jogo esta maior e recebeu muitas atualizacoes, considerar uma nova UI'
     proposed_plan: PLAN-092
     state_file: '.atena/state/plan-092-sistema-de-ui-e-pausa.yaml'
     spec: '.atena/specs/SPEC-165-sistema-de-ui-e-menu-de-pausa-mec-003.md'
-    approval_mode: per-plan
-    approved: '2026-10-09'
-    branch: atena/eventos-e-ui-fase1
+    approval_mode: unconfigured
     route: 'Desvio do PLAN-071; direcao visual DRAFT, o dono aprova na primeira captura.'
   - id: DEV-025
     request: 'Seguir com mudancas sem assets: ultima verificacao manual (BUG-007, segurar o clique para andar) feita com a janela aberta; achou e corrigiu o BUG-039.'

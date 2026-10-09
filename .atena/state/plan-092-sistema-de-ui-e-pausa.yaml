@@ -1,0 +1,41 @@
+id: PLAN-092
+spec: SPEC-165
+spec_file: .atena/specs/SPEC-165-sistema-de-ui-e-menu-de-pausa-mec-003.md
+mode: per-plan
+status: APPROVED_EXECUTING_ON_BRANCH
+created: '2026-10-09'
+request_classification: PLAN_DEVIATION
+deviation_id: DEV-027
+authorization_verbatim: 'sobre a MEC-003 vamos trabalhar para melhorar a interface, talvez refazer o jogo esta maior e recebeu muitas atualizacoes, considerar uma nova UI (2026-10-09)'
+approved: '2026-10-09'
+approval_note: 'por plano; dono ausente por cerca de 4 horas: executar tudo em branch local isolada (atena/eventos-e-ui-fase1), sem merge na main; o dono confere e aprova ao voltar'
+interview: 'Dores: telas diferentes entre si, dificil achar as coisas, fluxo e navegacao; escopo: sistema de UI + menu de pausa; arte: UI por codigo, sem arte nova (2026-10-09)'
+return: {plan: PLAN-071, checkpoint_observed: B-006/S-011}
+batches:
+  B-001: {title: UiKit e ficha C sem mudanca visual, steps: [S-001, S-002, S-003], status: PENDING}
+  B-002: {title: Catalogo e componente de opcoes, steps: [S-004, S-005, S-006], status: PENDING}
+  B-003: {title: Menu de pausa novo e fluxo, steps: [S-007, S-008, S-009], status: PENDING}
+  B-004: {title: Capturas, verificacao e registro, steps: [S-010, S-011], status: PENDING}
+steps:
+  S-001: 'Capturas "antes" da ficha C (desktop e celular) e inventario das constantes visuais.'
+  S-002: 'ui/ui_kit.gd com paleta, box, label, abas, slot e dicas; ficha C passa a usa-lo.'
+  S-003: 'Teste dos valores do UiKit e comparacao antes/depois da ficha C.'
+  S-004: 'Catalog.entries(categoria, perfil) puro e testes (bloqueado, visto na run).'
+  S-005: 'ui/options_panel.gd compartilhado (audio, exibicao, mira, falas, impacto) com os controles do test_options_menu.'
+  S-006: 'Aba Catalogo (grade e detalhe) com foco por controle.'
+  S-007: 'ui/pause_menu.gd: abas Jogo, Catalogo, Configuracoes, Controles; substitui o PausePanel.'
+  S-008: 'Fluxo: Esc/B, L1/R1, foco inicial, celular; ligacao em hud.gd e run.gd.'
+  S-009: 'Testes de navegacao e do modelo de abas; mutacao.'
+  S-010: 'Capturas desktop, celular e controle; pedir ao dono a aprovacao da direcao visual.'
+  S-011: 'Suite, smoke, kit_test, EVID e cartao MEC-003 (documentos dos testers so quando o dono liberar).'
+gates:
+  visual_direction: 'DRAFT: o dono aprova na primeira captura'
+  dependencies: NO_NEW_DEPENDENCIES
+  assets: NOT_IN_SCOPE
+  commit: EXPLICIT_APPROVAL
+  push_publish_export: EXPLICIT_APPROVAL_SEPARATE
+  documents_for_testers: NOT_UPDATED_UNTIL_OWNER_RELEASES
+  other_sessions_changes: PRESERVE_UNTOUCHED
+blocking_gaps: []
+non_blocking_gaps: [P1, P2, P3]
+commit_push_build_export: NOT_PERFORMED
