@@ -46,6 +46,7 @@ var _boss_intro_art: TextureRect
 var _boss_intro_title: Label
 var _boss_intro_subtitle: Label
 var _fog_edges: Array[TextureRect] = []
+var _edge_fog: EdgeFog
 var _texture_cache: Dictionary = {}
 var _stage_background: CanvasLayer
 
@@ -127,6 +128,11 @@ func _load_stage() -> void:
 	decals.enabled = true
 	stage_root.add_child(decals)
 	var msize := Vector2(ground.map_size)
+	_edge_fog = EdgeFog.new()   # SPEC-158: faixa de névoa junto às bordas do mapa
+	_edge_fog.name = "EdgeFog"
+	_edge_fog.map_size = msize
+	_edge_fog.band = battle.edge_band_tiles()
+	stage_root.add_child(_edge_fog)
 	TerrainLayout.scale = msize.x / 40.0  # MEC-012: layouts foram desenhados para 40x40
 	battle.map_size = msize
 	battle.hero.map_size = msize
@@ -559,6 +565,8 @@ func _process(dt: float) -> void:
 	_shake = maxf(0.0, _shake - dt * 3.0)
 	camera.position = hero_node.position + Vector2(randf_range(-1, 1), randf_range(-1, 1)) * _shake * 6.0
 	_update_fog_overlay()
+	if _edge_fog != null and is_instance_valid(_edge_fog):
+		_edge_fog.proximity = battle.edge_proximity(battle.hero.pos)
 	_update_low_hp_bark()
 
 func _sync() -> void:

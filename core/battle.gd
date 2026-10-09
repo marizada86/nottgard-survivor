@@ -99,6 +99,11 @@ var fog_state := "inactive" # inactive | grace | warning | advancing
 var fog_elapsed := 0.0
 var fog_intensity := 0.0
 var fog_config: Dictionary = {}
+## SPEC-158 (MEC-059): névoa de borda. `edge_exposure` = segundos contínuos na faixa (cai ao sair); exposto à UI e aos testes.
+var edge_exposure := 0.0
+var _edge_warned := false
+## QA (SPEC-158): NOTT_SEM_NEVOA=1 desliga a faixa de borda e a Maré padrão (ficam só as Marés declaradas por chefe em boss_presentations.json), para medir com e sem a mecânica.
+var _fog_rules_off := OS.get_environment("NOTT_SEM_NEVOA") != ""
 var final_victory := false
 var extracted := false
 var stage_changed := false
@@ -299,6 +304,8 @@ func load_stage(stage_key: String) -> void:
 	fog_elapsed = 0.0
 	fog_intensity = 0.0
 	fog_config.clear()
+	edge_exposure = 0.0
+	_edge_warned = false
 	_acc.clear()
 	_elites_done.clear()
 	_shielders.clear()
@@ -626,6 +633,7 @@ func step(screen_dir: Vector2, dt: float) -> void:
 	kinds.step(self, dt)
 	happenings.post_hero_step(self)
 	_update_postboss_fog(dt)
+	_update_edge_fog(dt)
 	if hero.m("regen") > 0.0:
 		_heal_hero(hero.m("regen") * dt)
 	_build_grid()
@@ -1725,12 +1733,17 @@ func _start_boss_intro(e: Enemy) -> void:
 	boss_intro_remaining = clampf(float(presentation.get("pause_seconds", 1.0)), 0.8, 1.2)
 	events.append({"type": "boss_intro", "enemy": e, "presentation": presentation})
 
+## MEC-060: toda fase com próximo mapa recebe a Maré após o chefe, com o padrão de data/fog.json;
+## `fog` em boss_presentations.json sobrescreve campo a campo. A frente anda na mesma velocidade (tiles/s) em 60x60 e 84x84.
 func _start_postboss_fog(boss_id: String) -> void:
 	var presentation := _boss_presentation(boss_id)
-	var config: Dictionary = presentation.get("fog", {})
+	var config: Dictionary = {} if _fog_rules_off else Data.table("fog").get("postboss", {}).duplicate(true)
+	config.merge(presentation.get("fog", {}), true)
 	if not bool(config.get("enabled", false)):
 		return
-	fog_config = config.duplicate(true)
+	if not config.has("advance_seconds"):
+		config["advance_seconds"] = float(config.get("advance_seconds_per_60_tiles", 28.0)) * minf(map_size.x, map_size.y) / 60.0
+	fog_config = config
 	fog_state = "grace"
 	fog_elapsed = 0.0
 	fog_intensity = 0.0
@@ -1756,11 +1769,53 @@ func _update_postboss_fog(dt: float) -> void:
 	var advance_time := fog_elapsed - grace - warning
 	var advance_seconds := maxf(1.0, float(fog_config.get("advance_seconds", 28.0)))
 	fog_intensity = clampf(advance_time / advance_seconds, 0.0, 1.0)
-	var edge_distance := minf(minf(hero.pos.x, map_size.x - hero.pos.x), minf(hero.pos.y, map_size.y - hero.pos.y))
-	var fog_depth := minf(map_size.x, map_size.y) * 0.5 * fog_intensity
-	if edge_distance > fog_depth:
+	var pct := postboss_fog_pct_at_hero()
+	if pct <= 0.0:
 		return
-	_hurt_hero(hero.max_hp * fog_damage_per_second() * dt, "mare_nevoa", true)
+	_hurt_hero(hero.max_hp * pct * dt, "mare_nevoa", true)
+
+## Fração da vida por segundo que a Maré aplica ao herói agora (0 fora da frente ou fora do avanço).
+func postboss_fog_pct_at_hero() -> float:
+	if fog_state != "advancing":
+		return 0.0
+	var fog_depth := minf(map_size.x, map_size.y) * 0.5 * fog_intensity
+	if edge_distance(hero.pos) > fog_depth:
+		return 0.0
+	return fog_damage_per_second()
+
+func edge_distance(p: Vector2) -> float:
+	return minf(minf(p.x, map_size.x - p.x), minf(p.y, map_size.y - p.y))
+
+func edge_band_tiles() -> float:
+	return 0.0 if _fog_rules_off else float(Data.table("fog").get("edge", {}).get("edge_band_tiles", 3.0))
+
+func in_edge_band(p: Vector2) -> bool:
+	return edge_distance(p) <= edge_band_tiles()
+
+## 0..1: quão perto da borda o herói está, a partir de `telegraph_tiles` (a UI usa para mostrar a faixa).
+func edge_proximity(p: Vector2) -> float:
+	var cfg: Dictionary = Data.table("fog").get("edge", {})
+	var reach := maxf(edge_band_tiles() + 0.01, float(cfg.get("telegraph_tiles", 6.0)))
+	return clampf((reach - edge_distance(p)) / reach, 0.0, 1.0)
+
+## MEC-059 / SPEC-158: a faixa junto às bordas fere com o mesmo dano da Maré de Dagruve (2% a 6% da vida máxima por
+## segundo, verdadeiro), subindo com a exposição contínua. Se a Maré também fere, vale o maior dos dois, nunca a soma.
+func _update_edge_fog(dt: float) -> void:
+	var cfg: Dictionary = Data.table("fog").get("edge", {})
+	if hero.dead or cfg.is_empty() or _fog_rules_off:
+		return
+	if not in_edge_band(hero.pos):
+		edge_exposure = maxf(0.0, edge_exposure - dt * float(cfg.get("decay_mult", 2.0)))
+		return
+	if not _edge_warned:
+		_edge_warned = true
+		events.append({"type": "toast", "text": "A névoa queima junto às bordas do mapa: afaste-se.", "color": Color(0.58, 0.9, 0.58)})
+	edge_exposure += dt
+	var ratio := clampf(edge_exposure / maxf(1.0, float(cfg.get("ramp_seconds", 20.0))), 0.0, 1.0)
+	var pct := lerpf(float(cfg.get("start_dps_pct", 0.02)), float(cfg.get("max_dps_pct", 0.06)), ratio)
+	var extra := pct - postboss_fog_pct_at_hero()
+	if extra > 0.0:
+		_hurt_hero(hero.max_hp * extra * dt, "borda_nevoa", true)
 
 func fog_damage_per_second() -> float:
 	if fog_state != "advancing":
@@ -1907,8 +1962,11 @@ func _use_hourglass() -> bool:
 
 ## BUG-032: baú, portal e demais interativos nunca nascem dentro de bloqueio de cenário, terreno ou bolsa fechada.
 func _add_interaction(kind: String, at: Vector2) -> void:
-	at = at.clamp(Vector2(1, 1), map_size - Vector2(1, 1))
+	# SPEC-158: nada necessário (baú, portal, altar) nasce na faixa da névoa de borda
+	var safe := Vector2.ONE * (edge_band_tiles() + 1.0)
+	at = at.clamp(safe, map_size - safe)
 	at = _reachable_interaction_spot(at, 0.9 if kind == "portal" else 0.6)
+	at = at.clamp(safe, map_size - safe)
 	interactions.append({"kind": kind, "pos": at, "used": false, "born_at": time})
 
 const REACH_CELL := 0.75
