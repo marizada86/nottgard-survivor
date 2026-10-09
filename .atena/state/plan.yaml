@@ -88,6 +88,15 @@ suspension:
   suspended_plan_state_file: '.atena/state/plan-053-imagens.yaml'
   note: 'PLAN-053 (imagens, SPEC-121) suspenso; cota de imagens liberou 2026-10-04 10:28 BRT; retoma na Shu (attack_02, death_03, death_04).'
 deferred_requests:
+  - id: DEV-018
+    request: "Preparar um plano para introduzir Arlindo Orlando (importante na historia) como personagem jogavel, como Erik Blackthorn."
+    request_classification: PLAN_DEVIATION
+    status: DEFERRED_PLANNING_ONLY
+    draft_plan: PLAN-086
+    draft_file: ".atena/vault/drafts/PLAN-086-arlindo-orlando-jogavel-2026-10-09.md"
+    recorded: "2026-10-09"
+    authorization_verbatim: "preparar um plano para introduzir personagem Arlindo Orlando (importante na historia) vamos coloca-lo como jogavel assim como Erik Blackthorn"
+    note: "Registrado durante o PLAN-083 (B-002). O dono mandou seguir o plano ativo; o rascunho do plano (SPEC e PLAN, sem execucao) sai quando o dono pedir ou ao fechar um lote. Lore so do Vault, sem canone do mestre."
   - id: DEV-017
     request: "Item 8 da lista sem assets: plano da v0.5.0, segredos (Ecos, camaras, reliquias, mapa maior) nas outras fases."
     request_classification: PLAN_DEVIATION

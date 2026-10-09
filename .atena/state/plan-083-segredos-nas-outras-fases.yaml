@@ -4,22 +4,23 @@ spec_file: .atena/specs/SPEC-157-segredos-nas-outras-fases-v0-5-0.md
 proposal: .atena/vault/drafts/PLAN-083-segredos-nas-outras-fases-v0-5-0-2026-10-09.md
 content_proposal: .atena/vault/drafts/PROPOSTA-segredos-nas-outras-fases-v0-5-0-2026-10-09.md
 mode: per-plan
-status: EXECUTING
+status: SUSPENDED_FOR_DEV-019
+suspension: {deviation: DEV-019, plan: PLAN-084, at: '2026-10-09', snapshot: '.atena/generated/nevoa-borda/plan-083-before-084.yaml', resume: 'B-001/S-001'}
 created: '2026-10-09'
 request_classification: PLAN_DEVIATION
 deviation_id: DEV-017
 authorization_verbatim: 'atena, aprovo os 2 commits, siga para o item 8'
-checkpoint: B-001/S-001
+checkpoint: B-004 concluido localmente; B-005 (bot por heroi) em execucao; commits de B-002 e B-004 aguardam aprovacao
 return:
   plan: PLAN-071
   state_file: .atena/state/plan-071-playtest-ranking.yaml
   checkpoint_observed: B-006/S-011
   snapshot: .atena/generated/v050-release/plan-before-083-start.yaml
 batches:
-  B-001: {title: Prontidao, steps: [S-001, S-002, S-003, S-004], status: IN_PROGRESS, note: 'Portao do dono: relato da 0.4.0 e conteudo.'}
-  B-002: {title: Dagruve e Docas (60x60), steps: [S-005, S-006, S-007, S-008], status: PENDING}
+  B-001: {title: Prontidao, steps: [S-001, S-002, S-003, S-004], status: IN_PROGRESS, note: 'S-001: nenhum relato da 0.4.0 ate 2026-10-09. S-003 feito e aprovado com correcoes. Portao de conteudo: Ecos e reliquias aprovados; Espelho com ou sem rerrolagem ainda sem resposta (padrao: sem).'}
+  B-002: {title: Dagruve e Docas (60x60), steps: [S-005, S-006, S-007, S-008], status: IMPLEMENTED_LOCAL_AWAITING_COMMIT, evidence: EVID-215, note: 'Conteudo aprovado em 2026-10-09 (Grimhold; Arch-hag sustenta o ritual). S-005 a S-008 feitos; commits aguardam aprovacao.'}
   B-003: {title: Mapas 84x84 de Feng-tu, Shendilavri e Goranthis, steps: [S-009, S-010, S-011, S-012], status: IMPLEMENTED_LOCAL_AWAITING_COMMIT, evidence: EVID-214, note: 'Suite, smoke e FPS ok; commits aguardam aprovacao.'}
-  B-004: {title: Segredos em 84x84 e Espelho, steps: [S-013, S-014, S-015, S-016], status: PENDING}
+  B-004: {title: Segredos em 84x84 e Espelho, steps: [S-013, S-014, S-015, S-016], status: IMPLEMENTED_LOCAL_AWAITING_COMMIT, evidence: EVID-216, note: 'Espelho sem rerrolagem (padrao G2, sem resposta especifica do dono); vitimas_drenadas agora fixo.'}
   B-005: {title: Balanceamento, steps: [S-017, S-018], status: PENDING}
   B-006: {title: Fechamento v0.5.0, steps: [S-019, S-020, S-021, S-022, S-023, S-024], status: PENDING, note: 'Push, exportacao e aviso aos testers so com aprovacao explicita.'}
 steps:

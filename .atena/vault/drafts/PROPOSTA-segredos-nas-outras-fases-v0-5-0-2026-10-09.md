@@ -89,3 +89,39 @@ Em Durao, Vhaerith pede uma runa; a de Feng-tu "não é a que ele pediu" (S18). 
 4. **Cadeia da runa de Vhaerith:** 0.6.0 (recomendado), agora ou nunca.
 5. **Exclusividade das relíquias:** manter a cópia garantida sem retirar do sorteio (recomendado, como na 0.4.0).
 6. **Tempo de execução:** começar já, ou **esperar o relato dos testers da 0.4.0** (recomendado: o que eles disserem sobre os mapas grandes e os Ecos decide se vale ampliar mais três mapas).
+
+## 7. Ecos de Dagruve e Docas — rascunho (S-003, 2026-10-09; DRAFT, aguarda o dono)
+
+Páginas lidas em 2026-10-09: `04_Locais/Dagruve.md` e `04_Locais/Docas.md`, ambas com a etiqueta `conteudo-nao-revelado`. Regra do EVID-147: nessas páginas só valem a **Base canônica** e as **consolidações aprovadas**. Dagruve tem o bloco "Consolidação aprovada — Sessões 01–09" (S7-08, S7-19, S7-26, S9-37), e é dele que saem os quatro Ecos. **Docas não tem bloco de consolidação aprovada**: só a Base canônica do prólogo (G-26) é inequívoca; os trechos das Sessões 02 e 13 estão na página, mas sem o marcador de aprovação. Os Ecos 2 a 4 abaixo dependem de você aceitá-los assim (ou trocá-los por Ecos da Base canônica).
+
+Fora de uso, de propósito: "Adam irá salvá-los" (Dagruve, S3), a Sylas/Tarn além do que o bloco aprovado diz, Willie, a Profecia da Última Estrela, a divindade adormecida das criaturas aquáticas (S20 p2) e a fusão do EVID-147 §3. A Carta de Trégua (Grimhold) **não** é fundida a Greenhold, como a página manda.
+
+### Dagruve
+
+| Id | Onde | Texto (rascunho) | Fonte |
+|---|---|---|---|
+| eco_dag_1 | ruína (capela) | No cemitério de Dagruve, do outro lado do caminho das lápides, há uma capela abandonada. A névoa ali é a mais densa. | S7-19 |
+| eco_dag_2 | ruína (capela) | Os Guardas Celestiais enviados ao último ponto de névoa não voltaram. Helion pediu que alguém fechasse a abertura. | S7-08 |
+| eco_dag_3 | câmara | Perto da fratura, um portal leva a névoa de uma dimensão que contém só um santuário. O cão de caça chama essa fonte de "seu pulmão". | S7-26 |
+| eco_dag_4 | destrutível | Os Grimholders dizem que, muito antes de existir Dagruve, "aqui era nosso": a cidade se chamava Grimhold. | S9-37 (nome corrigido pelo dono) |
+
+### Docas
+
+| Id | Onde | Texto (rascunho) | Fonte |
+|---|---|---|---|
+| eco_doc_1 | ruína | As Docas movem o comércio de Nottgard: manutenção de barcos, galpões de suprimentos e carroças para os outros distritos. Gilly é o conselheiro. | Base canônica (G-26) |
+| eco_doc_2 | ruína | No porão de um galpão, junto a uma porta, uma inscrição abissal diz: "Seremos um só". | S2 (sem marcador) |
+| eco_doc_3 | câmara | No porão havia um caixão de pedra vazio, alimentado por sangue que descia de uma abertura no andar de cima. | S2 (sem marcador) |
+| eco_doc_4 | destrutível | Num navio abandonado, uma Arch-hag sustentava um ritual de invocação para trazer um Kraken. | S13 (sem marcador; redação corrigida pelo dono) |
+
+### Decisões pedidas
+
+1. Aprovar (ou ajustar) os 8 textos acima.
+2. Docas: aceitar os Ecos 2 a 4 mesmo sem o marcador de consolidação aprovada, ou trocá-los por algo da Base canônica.
+3. Os 12 Ecos de Feng-tu, Shendilavri e Goranthis (§3), as relíquias (§2) e o Espelho (com ou sem rerrolagem grátis) seguem pendentes do mesmo portão.
+
+### Correções e aprovação do dono (2026-10-09)
+
+- Não existem Greenhold nem Greenholders: só **Grimhold** e **Grimholders**. O Vault (`Dagruve.md`, S9-37) ainda grafa Greenhold/Greenholders; o texto do jogo segue o dono, e o Vault, somente leitura aqui, fica para ele corrigir.
+- O eco_doc_4 passa a dizer que a **Arch-hag sustentava o ritual** que invocava o Kraken.
+- "O restante está aprovado": os demais 6 textos de Dagruve e Docas (inclui os Ecos 2 a 4 de Docas sem marcador), os 12 Ecos da seção 3, as relíquias da seção 2 e o Espelho. **Pendente de esclarecimento:** o Espelho com ou sem rerrolagem (padrão registrado: sem).
