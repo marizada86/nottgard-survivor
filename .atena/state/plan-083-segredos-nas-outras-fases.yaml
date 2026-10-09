@@ -1,0 +1,66 @@
+id: PLAN-083
+spec: SPEC-157
+spec_file: .atena/specs/SPEC-157-segredos-nas-outras-fases-v0-5-0.md
+proposal: .atena/vault/drafts/PLAN-083-segredos-nas-outras-fases-v0-5-0-2026-10-09.md
+content_proposal: .atena/vault/drafts/PROPOSTA-segredos-nas-outras-fases-v0-5-0-2026-10-09.md
+mode: per-plan
+status: EXECUTING
+created: '2026-10-09'
+request_classification: PLAN_DEVIATION
+deviation_id: DEV-017
+authorization_verbatim: 'atena, aprovo os 2 commits, siga para o item 8'
+checkpoint: B-001/S-001
+return:
+  plan: PLAN-071
+  state_file: .atena/state/plan-071-playtest-ranking.yaml
+  checkpoint_observed: B-006/S-011
+  snapshot: .atena/generated/v050-release/plan-before-083-start.yaml
+batches:
+  B-001: {title: Prontidao, steps: [S-001, S-002, S-003, S-004], status: IN_PROGRESS, note: 'Portao do dono: relato da 0.4.0 e conteudo.'}
+  B-002: {title: Dagruve e Docas (60x60), steps: [S-005, S-006, S-007, S-008], status: PENDING}
+  B-003: {title: Mapas 84x84 de Feng-tu, Shendilavri e Goranthis, steps: [S-009, S-010, S-011, S-012], status: PENDING}
+  B-004: {title: Segredos em 84x84 e Espelho, steps: [S-013, S-014, S-015, S-016], status: PENDING}
+  B-005: {title: Balanceamento, steps: [S-017, S-018], status: PENDING}
+  B-006: {title: Fechamento v0.5.0, steps: [S-019, S-020, S-021, S-022, S-023, S-024], status: PENDING, note: 'Push, exportacao e aviso aos testers so com aprovacao explicita.'}
+steps:
+  S-001: 'Ler o relato dos testers da 0.4.0 (INBOX/INTAKE); registrar o que muda no plano.'
+  S-002: 'Portao de conteudo: Ecos, reliquias, Espelho (com ou sem rerrolagem) e escopo, com o dono.'
+  S-003: 'Ler as paginas do Vault de Dagruve e Docas, conferir conteudo-nao-revelado e escrever os 8 Ecos para aprovacao.'
+  S-004: 'SPECs filhas e cartoes (um por mecanica); snapshot do plan.yaml.'
+  S-005: 'data/secrets.json: Dagruve e Docas; sondagem de chao dos POIs.'
+  S-006: 'reward unlock_chamber em ritual_da_nevoa e cais_atacado; reliquias Broche Celestial e Colar dos Tentaculos.'
+  S-007: 'Conquistas ecos_dagruve e ecos_docas; generalizar tests/test_secrets.gd para 5 fases.'
+  S-008: 'Suite, smoke e capturas das duas fases; commits.'
+  S-009: 'Feng-tu: enlarge 60->84, bake v2, escala de desenho, test_map_scale e FPS.'
+  S-010: 'Shendilavri: idem.'
+  S-011: 'Goranthis: idem.'
+  S-012: 'Capturas e EVID dos tres mapas; commits (um por fase).'
+  S-013: 'secrets.json: Feng-tu, Shendilavri e Goranthis (POIs, Ecos, reliquias).'
+  S-014: 'Espelho das Almas Desejantes em data/items.json (e free_reroll_per_stage se aprovado), com teste.'
+  S-015: 'Chaves unlock_chamber (escolta_do_peregrino, vitimas_drenadas fixo, do_trono_ao_lodo) e conquistas.'
+  S-016: 'Suite, smoke, capturas e commits.'
+  S-017: 'Bot por heroi antes e depois (EVID-208 como linha de base); ajustes so em JSON.'
+  S-018: 'gold_src dos testers, BALANCEAMENTO.md e cartoes.'
+  S-019: 'Versao 0.5.0 em core/version.gd e export_presets.cfg; RELEASES.md.'
+  S-020: 'Changelog 0.4.0 -> 0.5.0 (HTML e PDF) e guia facil 0.5.0.'
+  S-021: 'Questionario 008 (md, html e pdf).'
+  S-022: 'Verificacao final (suite, smoke, kit_test, audit, bot); backlog_check.'
+  S-023: 'Commit da versao; push so com aprovacao explicita separada (publica o latest).'
+  S-024: 'EVID final, reconciliar plan.yaml (DEV-017) e voltar ao PLAN-071.'
+gates:
+  dependencies: NO_NEW_DEPENDENCIES
+  new_image_generation: NOT_IN_SCOPE
+  content_gate: 'Ecos, reliquias e Espelho passam pelo dono antes do codigo'
+  vault_reading: 'Texto so depois de ler a pagina do Vault e conferir conteudo-nao-revelado'
+  master_canon: 'Nada de canone do mestre sem decisao do dono'
+  commit: EXPLICIT_APPROVAL_PER_COMMIT
+  push_publish_export: EXPLICIT_APPROVAL_SEPARATE
+  other_sessions_changes: PRESERVE_UNTOUCHED
+blocking_gaps: []
+non_blocking_gaps: [G1, G2, G3]
+return_to: PLAN-071 (B-006/S-011, active_plan sem alteracao ate o inicio)
+commit_push_build_export: NOT_PERFORMED
+decisions_taken:
+  route: 'Fazer agora, sem esperar o relato da 0.4.0 (2026-10-09)'
+  approval_mode: 'per-plan (2026-10-09)'
+  content_gate: 'Escopo aprovado (cinco fases; Pilares fora; 84x84 so em Feng-tu, Shendilavri e Goranthis). Ecos, reliquias e Espelho ainda aguardam o dono.'

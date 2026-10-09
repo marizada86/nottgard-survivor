@@ -1,21 +1,6 @@
 version: 2
 # Reconciliado por Atena em 2026-10-05: PLAN-056 aceito pelo dono; commits reais registrados.
 active_plan:
-  id: PLAN-083
-  spec_id: SPEC-157
-  state_file: '.atena/state/plan-083-segredos-nas-outras-fases.yaml'
-  mode: per-plan
-  checkpoint: B-001/S-001
-  status: EXECUTING
-  approved: '2026-10-09'
-  started: '2026-10-09'
-  request_classification: PLAN_DEVIATION
-  deviation_id: DEV-017
-  start_authorization_verbatim: 'Rota: faca agora; aprovacao: por plano; portao de conteudo: o escopo (resposta do dono em 2026-10-09)'
-plan_cursor:
-  current: 'PLAN-083 / SPEC-157 (v0.5.0): iniciado; escopo aprovado pelo dono; Ecos, reliquias e Espelho aguardam o portao de conteudo; commits so com aprovacao explicita.'
-  next: 'S-001 relato da 0.4.0 (nenhum ainda); S-003 Ecos de Dagruve e Docas a partir do Vault; B-003 mapas 84x84 de Feng-tu, Shendilavri e Goranthis (independe do portao); depois portao de conteudo.'
-suspended_active_plan:
   id: PLAN-071
   spec_id: SPEC-138
   state_file: '.atena/state/plan-071-playtest-ranking.yaml'
@@ -23,10 +8,12 @@ suspended_active_plan:
   checkpoint: B-006/S-011
   status: LOCAL_DELIVERED_AWAITING_DEVICE_ACCEPTANCE
   approved: '2026-10-06'
-  suspended_by: PLAN-083
-  suspended_at: '2026-10-09'
-  snapshot: '.atena/generated/v050-release/plan-before-083-start.yaml'
-  resume_note: 'Retomar em B-006/S-011 quando o PLAN-083 fechar ou o dono pedir; falta o aceite dos clientes finais (ranking e F7) e os gates remotos.'
+  resumed: '2026-10-09'
+  resumed_after: PLAN-082
+  request_classification: IN_PLAN
+plan_cursor:
+  current: 'PLAN-071 / SPEC-138 retomado em 2026-10-09: o PLAN-082 (BUG-029) foi pausado porque o dono nao adotou a variante C e vai buscar outra solucao para os assets dos personagens principais; fontes locais estaveis e verificadas; EVID-187; aceite dos clientes finais (ranking e F7) e gates remotos separados.'
+  next: 'Seguir com o que nao depende de assets (aviso aos testers, aceite do PLAN-071, itens do backlog sem arte); BUG-029, BUG-027, BUG-028 e BUG-025 aguardam a nova solucao de arte do dono.'
 previous_plan_cursor:
   current: 'PLAN-059 (SPEC-125) commitado e publicado (05264f0, 1392627) em 2026-10-05; o playtest decide Docas, Molor e fases finais.'
   next: 'Retomar PLAN-053 (imagens, Shu: attack_02, death_03, death_04) e/ou abrir spec de balanceamento BAL-018 (precisa de linha de base do bot por heroi). Push da main (1 a 3 commits a frente) exige aprovacao.'
@@ -88,21 +75,6 @@ suspension:
   suspended_plan_state_file: '.atena/state/plan-053-imagens.yaml'
   note: 'PLAN-053 (imagens, SPEC-121) suspenso; cota de imagens liberou 2026-10-04 10:28 BRT; retoma na Shu (attack_02, death_03, death_04).'
 deferred_requests:
-  - id: DEV-017
-    request: "Item 8 da lista sem assets: plano da v0.5.0, segredos (Ecos, camaras, reliquias, mapa maior) nas outras fases."
-    request_classification: PLAN_DEVIATION
-    status: EXECUTING_PLAN_083
-    recorded: "2026-10-09"
-    authorization_verbatim: "atena, aprovo os 2 commits, siga para o item 8"
-    proposed_plan: PLAN-083
-    state_file: ".atena/state/plan-083-segredos-nas-outras-fases.yaml"
-    spec: ".atena/specs/SPEC-157-segredos-nas-outras-fases-v0-5-0.md"
-    proposal: ".atena/vault/drafts/PLAN-083-segredos-nas-outras-fases-v0-5-0-2026-10-09.md"
-    content_proposal: ".atena/vault/drafts/PROPOSTA-segredos-nas-outras-fases-v0-5-0-2026-10-09.md"
-    approval_mode: per-plan
-    recovery_snapshot: ".atena/generated/v050-release/plan-before-083.yaml"
-    route: "Dono escolheu fazer agora (2026-10-09), sem esperar o relato da 0.4.0; aprovacao por plano; portao de conteudo: so o escopo aprovado. PLAN-071 suspenso com snapshot, retorno em B-006/S-011."
-    note: "So planejamento (rascunho permitido); nada executado. PLAN-071 continua active_plan."
   - id: DEV-016
     request: 'Item 7 da lista sem assets: MEC-001, navegar as decisoes da run so com o teclado (WASD escolhe, Enter confirma).'
     request_classification: PLAN_DEVIATION
