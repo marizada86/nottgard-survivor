@@ -4,8 +4,8 @@ spec_file: .atena/specs/SPEC-157-segredos-nas-outras-fases-v0-5-0.md
 proposal: .atena/vault/drafts/PLAN-083-segredos-nas-outras-fases-v0-5-0-2026-10-09.md
 content_proposal: .atena/vault/drafts/PROPOSTA-segredos-nas-outras-fases-v0-5-0-2026-10-09.md
 mode: per-plan
-status: SUSPENDED_FOR_DEV-019
-suspension: {deviation: DEV-019, plan: PLAN-084, at: '2026-10-09', snapshot: '.atena/generated/nevoa-borda/plan-083-before-084.yaml', resume: 'B-001/S-001'}
+status: EXECUTING
+suspension_history: {deviation: DEV-019, plan: PLAN-084, at: '2026-10-09', snapshot: '.atena/generated/nevoa-borda/plan-083-before-084.yaml', resume: 'B-001/S-001'}
 created: '2026-10-09'
 request_classification: PLAN_DEVIATION
 deviation_id: DEV-017

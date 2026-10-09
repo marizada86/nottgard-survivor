@@ -7,6 +7,7 @@ active_plan:
   mode: per-plan
   checkpoint: B-001/S-001
   status: EXECUTING
+  resumed_after: {deviation: DEV-019, plan: PLAN-084, at: '2026-10-09', evidence: EVID-220, note: 'PLAN-084 concluido local; o PLAN-083 seguiu em outra sessao durante o desvio'}
   approved: '2026-10-09'
   started: '2026-10-09'
   request_classification: PLAN_DEVIATION
@@ -97,6 +98,23 @@ deferred_requests:
     recorded: "2026-10-09"
     authorization_verbatim: "preparar um plano para introduzir personagem Arlindo Orlando (importante na historia) vamos coloca-lo como jogavel assim como Erik Blackthorn"
     note: "Registrado durante o PLAN-083 (B-002). O dono mandou seguir o plano ativo; o rascunho do plano (SPEC e PLAN, sem execucao) sai quando o dono pedir ou ao fechar um lote. Lore so do Vault, sem canone do mestre."
+  - id: DEV-019
+    request: 'Nevoa punitiva contra jogadores que ficam no canto do mapa: (1) perto das bordas, dano por segundo igual ao da Mare de Nevoa de Dagruve; (2) Mare de Nevoa no fim da fase em todos os mapas, exceto o ultimo (Pilares).'
+    request_classification: PLAN_DEVIATION
+    status: COMPLETED_LOCAL_RETURNED_TO_PLAN_083
+    recorded: '2026-10-09'
+    authorization_verbatim: 'Fazer agora e voltar (Recomendado)'
+    proposed_plan: PLAN-084
+    state_file: '.atena/state/plan-084-nevoa-de-borda-e-de-fim-de-fase.yaml'
+    spec: '.atena/specs/SPEC-158-nevoa-de-borda-e-de-fim-de-fase.md'
+    cards: [MEC-059, MEC-060]
+    approval_mode: per-plan
+    approved: "2026-10-09"
+    approved_defaults: "P1 a P5 da SPEC-158 (dono, 2026-10-09)"
+    recovery_snapshot: '.atena/generated/nevoa-borda/plan-before-084.yaml'
+    route: 'Dono escolheu fazer agora e voltar (2026-10-09); PLAN-083 suspenso no B-001/S-001, retorno apos o PLAN-084.'
+    evidence: EVID-220
+    result: 'MEC-059 e MEC-060 implementados local: faixa de 3 tiles, 2% a 6% da vida por segundo, Mare em todas as fases com proximo mapa; suite 0 falhas, smoke e kit_test ok; bot que evita a faixa iguala o controle (0,94 fases); sem commit, push nem exportacao.'
   - id: DEV-017
     request: "Item 8 da lista sem assets: plano da v0.5.0, segredos (Ecos, camaras, reliquias, mapa maior) nas outras fases."
     request_classification: PLAN_DEVIATION

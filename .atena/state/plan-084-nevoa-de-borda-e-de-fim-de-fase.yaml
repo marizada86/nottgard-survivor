@@ -1,0 +1,46 @@
+id: PLAN-084
+spec: SPEC-158
+spec_file: .atena/specs/SPEC-158-nevoa-de-borda-e-de-fim-de-fase.md
+mode: per-plan   # escolhido pelo dono em 2026-10-09
+status: COMPLETED_LOCAL
+created: '2026-10-09'
+request_classification: PLAN_DEVIATION
+deviation_id: DEV-019
+authorization_verbatim: 'Fazer agora e voltar (Recomendado)'
+checkpoint: concluido (S-001 a S-011); evidencia EVID-220
+approved: '2026-10-09'
+approved_defaults: 'P1 a P5 da SPEC-158 confirmados pelo dono em 2026-10-09'
+cards: [MEC-059, MEC-060]
+return:
+  plan: PLAN-083
+  state_file: .atena/state/plan-083-segredos-nas-outras-fases.yaml
+  checkpoint_observed: B-001/S-001
+  snapshot: .atena/generated/nevoa-borda/plan-before-084.yaml
+batches:
+  B-001: {title: Dados e nucleo, steps: [S-001, S-002, S-003, S-004], status: DONE_LOCAL, evidence: EVID-220}
+  B-002: {title: Aviso e faixa visivel, steps: [S-005, S-006], status: DONE_LOCAL, evidence: EVID-220}
+  B-003: {title: Testes e verificacao, steps: [S-007, S-008, S-009], status: DONE_LOCAL, evidence: EVID-220}
+  B-004: {title: Fechamento e retorno, steps: [S-010, S-011], status: DONE_LOCAL, evidence: EVID-220}
+steps:
+  S-001: 'data/fog.json (edge e postboss) e leitura em core/battle.gd; Maré lê o padrao quando o chefe nao tem fog proprio.'
+  S-002: 'Exposicao de borda em Battle (faixa de 3 tiles, rampa 2%-6%, queda ao dobro, maior-dos-dois com a Mare); expor edge_exposure para UI e testes.'
+  S-003: 'Mare em todos os chefes de fases com next; advance_seconds proporcional ao mapa; Pilares fora.'
+  S-004: 'Portal da morte do chefe empurrado para fora da faixa; varredura dos 9 mapas por baus, altares, POIs e camaras dentro da faixa (corrigir so em JSON).'
+  S-005: 'Toast de primeira entrada por fase; faixa de nevoa no mundo com nevoa_borda_01.png, mais forte perto da borda (sem arte nova).'
+  S-006: 'Captura de tela da faixa em Dagruve (60x60) e Durao (84x84); conferir legibilidade sobre o chao.'
+  S-007: 'tests/test_fog_edge.gd: dano, exposicao, nao-soma, 8 fases com Mare e Pilares sem, velocidade da frente, varredura da faixa, mutacao.'
+  S-008: 'Suite completa, smoke das 9 fases, kit_test, backlog_check.'
+  S-009: 'Bot por heroi antes e depois (linha de base EVID-208); registrar o que muda; nada de balanceamento fora de JSON.'
+  S-010: 'EVID, cartoes MEC-059/MEC-060 e RELEASES.md (O que testar); commit so com aprovacao explicita.'
+  S-011: 'Reconciliar plan.yaml (DEV-019), retomar o PLAN-083 em B-001/S-001.'
+gates:
+  dependencies: NO_NEW_DEPENDENCIES
+  new_image_generation: NOT_IN_SCOPE
+  commit: EXPLICIT_APPROVAL
+  push_publish_export: EXPLICIT_APPROVAL_SEPARATE
+  other_sessions_changes: PRESERVE_UNTOUCHED   # arvore tem mudancas de outras sessoes (PLAN-083 B-003, tests/, ui/hero_view.gd); git add -p
+blocking_gaps: []
+resolvable_gaps: [P1, P2, P3, P4, P5]   # padroes recomendados na SPEC-158
+deferred_gaps: ['balancear a Mare por fase depois do playtest']
+unverified_by_model: 'se a punicao inibe o canto e se a Mare da tempo de chegar ao portal; depende de playtest'
+commit_push_build_export: NOT_PERFORMED   # commit so com aprovacao e git add -p
