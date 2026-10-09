@@ -43,3 +43,7 @@ status: "publicada; aviso aos testers e .exe local pendentes"
 3. **Abrir o PDF do changelog** e conferir a paginação (4 páginas esperadas).
 4. **Aceite físico** pendente: Xbox/PlayStation, celular e ranking (PLAN-071, PLAN-067, PLAN-068).
 5. **Playtest** da 0.4.0: arte e som provisórios (ART-042, ART-043, ART-006) e a dificuldade dos mapas 84×84.
+
+## Adendo (2026-10-09): segundo push
+
+A pedido do dono ("faça o push"), `aa496f2..325982b` (2 commits: `e1933be`, documentos do BUG-038 da outra sessão, e `325982b`, o fechamento do PLAN-081). O push dispara outro Build and Release; o release `latest` passa a trazer `325982b` no título, com a versão ainda 0.4.0. Resultado do CI não verificado aqui.
