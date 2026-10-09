@@ -189,6 +189,7 @@ var still_t := 0.0
 ## Afinidade estritamente visual; a aura só é habilitada por uma escolha divina.
 var visual_god := ""
 var visual_boon_selected := false
+var _key_wave: Array = []  # SPEC-157: inimigos do acontecimento-chave de onda (Docas); abatidos todos, a câmara abre
 ## Estado ambiental do Estige. A RNG é separada para não deslocar a batalha.
 var styx_rng := RandomNumberGenerator.new()
 var styx_exposure := 0.0
@@ -311,6 +312,7 @@ func load_stage(stage_key: String) -> void:
 	_amb_puddle = 9.0
 	_amb_strike = 6.0
 	_rule_timer = minf(8.0, float(stage_rule.get("interval", 8.0)))
+	_key_wave.clear()
 	_rule_index = -1
 	styx_exposure = 0.0
 	styx_test_next = 1.0
@@ -925,6 +927,8 @@ func _update_zones(dt: float) -> void:
 						var wave: Dictionary = stage.waves[rng.randi() % stage.waves.size()]
 						_spawn(String(wave.id), z.pos + Vector2(rng.randf_range(-1.5, 1.5), rng.randf_range(-1.5, 1.5)))
 					events.append({"type": "toast", "text": "O ritual trouxe reforços!"})
+				if bool(z.get("unlock_chamber", false)):  # SPEC-157: o ritual de Dagruve é a chave da câmara
+					unlock_chamber()
 			else:
 				keep.append(z)
 		elif z.kind == "trap":
@@ -1571,7 +1575,9 @@ func _place_secrets() -> int:
 				lair_elite.lair_reward = "boss_chest"
 				placed += 1
 	for eco in spec.get("ecos", []):
+				var rng_before := rng.state   # SPEC-157: os afixos do covil não mexem na sequência da batalha
 		var wanted := Vector2(float(eco.pos[0]), float(eco.pos[1]))
+				rng.state = rng_before
 		if String(eco.onde) == "destrutivel":
 			var spot := _free_scenery_spot(wanted + Vector2(1.2, 0.0), float(Data.table("enemies").get(String(eco.quebravel), {}).get("radius", 0.35)))
 			if spot.x >= 0.0:
@@ -3083,12 +3089,14 @@ func _fire_stage_event(event_def: Dictionary) -> void:
 	match kind:
 		"ritual":
 			zones.append({"owner": "stage", "kind": "rule_ritual", "pos": at, "radius": 1.7, "delay": float(stage_rule.get("delay", 7.0)), "total": float(stage_rule.get("delay", 7.0)),
-				"interrupt": float(stage_rule.get("interrupt", 1.5)), "progress": 0.0, "life": 99.0})
+				"interrupt": float(stage_rule.get("interrupt", 1.5)), "progress": 0.0, "life": 99.0, "unlock_chamber": _event_unlocks_chamber(event_def)})
 		"hazard":
 			zones.append({"owner": "stage", "kind": "puddle", "pos": at, "radius": 1.35, "grows": true, "delay": 0.0, "life": 10.0, "acc": 0.0})
 		"wave":
 			for i in int(event_def.get("count", 1)):
-				_spawn(String(event_def.get("enemy_id", "zumbi")), at + Vector2(rng.randf_range(-1.4, 1.4), rng.randf_range(-1.4, 1.4)))
+				var raider := _spawn(String(event_def.get("enemy_id", "zumbi")), at + Vector2(rng.randf_range(-1.4, 1.4), rng.randf_range(-1.4, 1.4)))
+				if _event_unlocks_chamber(event_def):
+					_key_wave.append(raider)
 		"elite":
 			_spawn_elite(String(event_def.get("enemy_id", "criatura_corrompida")), at)
 	events.append({"type": "stage_event", "id": String(event_def.get("id", "")), "text": String(event_def.get("result_text", event_def.get("title", ""))), "pos": at})
@@ -3118,6 +3126,9 @@ func _apply_rule_kind(kind: String, dt: float) -> void:
 			pass # Já aplicado pela camada ambiental compartilhada acima.
 		"strikes":
 			_amb_strike -= dt
+	if not _key_wave.is_empty() and _key_wave.all(func(e): return e.dead):
+		_key_wave.clear()
+		unlock_chamber()
 			if _amb_strike <= 0.0:
 				_amb_strike = float(stage_rule.get("interval", 4.5)) + rng.randf_range(-1.0, 1.0)
 				var at := hero.pos + Vector2(rng.randf_range(-3, 3), rng.randf_range(-3, 3))
@@ -3132,6 +3143,10 @@ func _apply_rule_kind(kind: String, dt: float) -> void:
 					"interrupt": float(stage_rule.interrupt), "progress": 0.0, "life": 99.0})
 				events.append({"type": "toast", "text": "Ritual da Névoa: fique no selo para impedir os reforços!"})
 		"bubbles":
+## SPEC-157: o acontecimento da fase traz `reward.unlock_chamber` (a chave da câmara selada).
+func _event_unlocks_chamber(event_def: Dictionary) -> bool:
+	return bool(Dictionary(event_def.get("reward", {})).get("unlock_chamber", false))
+
 			_rule_timer -= dt
 			if _rule_timer <= 0.0:
 				_rule_timer = float(stage_rule.interval)

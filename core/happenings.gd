@@ -101,6 +101,7 @@ func fire(b: Battle, def: Dictionary) -> bool:
 				if not e.is_boss():
 					e.speed *= mult
 			obj.done = true
+			_apply_reward(b, def.get("reward", {}), b.hero.pos)   # SPEC-157: Goranthis abre a câmara quando o paraíso cai
 		"pilgrimage":
 			var curse: Dictionary = def.get("curse", {})
 			b.hero.temp_mods = Dictionary(curse.get("mods", {})).duplicate()

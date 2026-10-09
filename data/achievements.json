@@ -56,6 +56,11 @@
     {"id":"marca_tregua","name":"Marca do Abismo: Sem trégua","desc":"Derrote 4 chefes numa única run.","stat":"run_bosses","value":4,"reward":{"unlock_mark":"tregua","text":"Libera a Marca Sem trégua"}},
     {"id":"ecos_shedaklah","name":"Ecos de Shedaklah","desc":"Ache os 4 Ecos de Nottgard de Shedaklah e abra a relíquia da fase (em qualquer run).","stat":"secrets_shedaklah","value":1,"reward":{"coins":300}},
     {"id":"ecos_molor","name":"Ecos de Molor","desc":"Ache os 4 Ecos de Nottgard de Molor e abra a relíquia da fase (em qualquer run).","stat":"secrets_molor","value":1,"reward":{"coins":300}},
-    {"id":"ecos_durao","name":"Ecos de Durao","desc":"Ache os 4 Ecos de Nottgard de Durao e abra a relíquia da fase (em qualquer run).","stat":"secrets_durao","value":1,"reward":{"coins":300}}
+    {"id":"ecos_durao","name":"Ecos de Durao","desc":"Ache os 4 Ecos de Nottgard de Durao e abra a relíquia da fase (em qualquer run).","stat":"secrets_durao","value":1,"reward":{"coins":300}},
+    {"id":"ecos_dagruve","name":"Ecos de Dagruve","desc":"Ache os 4 Ecos de Nottgard de Dagruve e abra a relíquia da fase (em qualquer run).","stat":"secrets_dagruve","value":1,"reward":{"coins":300}},
+    {"id":"ecos_docas","name":"Ecos de Docas","desc":"Ache os 4 Ecos de Nottgard das Docas e abra a relíquia da fase (em qualquer run).","stat":"secrets_docas","value":1,"reward":{"coins":300}},
+    {"id":"ecos_feng_tu","name":"Ecos de Feng-tu","desc":"Ache os 4 Ecos de Nottgard de Feng-tu e abra a relíquia da fase (em qualquer run).","stat":"secrets_feng_tu","value":1,"reward":{"coins":300}},
+    {"id":"ecos_shendilavri","name":"Ecos de Shendilavri","desc":"Ache os 4 Ecos de Nottgard de Shendilavri e abra a relíquia da fase (em qualquer run).","stat":"secrets_shendilavri","value":1,"reward":{"coins":300}},
+    {"id":"ecos_goranthis","name":"Ecos de Goranthis","desc":"Ache os 4 Ecos de Nottgard de Goranthis e abra a relíquia da fase (em qualquer run).","stat":"secrets_goranthis","value":1,"reward":{"coins":300}}
   ]
 }

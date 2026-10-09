@@ -59,6 +59,7 @@
     {"id":"detector_arcano","icon_like":"anel_simples","name":"Detector Arcano","slot":"anel","tier":1,"mods":{"pickup":1,"sorte":2},"note":"Aparelho que detecta assinaturas mágicas."},
     {"id":"dispositivo_antimagia_gilly","icon_like":"cota","name":"Dispositivo Antimagia de Gilly","slot":"armadura","tier":4,"mods":{"cam":3,"inteligencia":-1},"note":"Projeta um escudo antimagia; o custo é sentido por quem o usa."},
     {"id":"dispositivo_das_docas","icon_like":"amuleto_simples","name":"Dispositivo das Docas","slot":"amuleto","tier":1,"mods":{"dr":1,"ca":1},"note":"Mecanismo do porto das Docas que afasta as criaturas do mar."},
-    {"id":"coracao_da_dominancia","icon_like":"cetro","name":"Coração da Dominância","slot":"arma","tier":5,"mods":{"hit":2,"cam":1,"carisma":1},"weapon":"dominio_da_vontade","note":"Troféu da vontade: nasceu quando o portador resistiu à Rainha das Súcubos e conquistou seu respeito."}
+    {"id":"coracao_da_dominancia","icon_like":"cetro","name":"Coração da Dominância","slot":"arma","tier":5,"mods":{"hit":2,"cam":1,"carisma":1},"weapon":"dominio_da_vontade","note":"Troféu da vontade: nasceu quando o portador resistiu à Rainha das Súcubos e conquistou seu respeito."},
+    {"id":"espelho_das_almas_desejantes","icon_like":"amuleto_simples","name":"Espelho das Almas Desejantes","slot":"amuleto","tier":5,"mods":{"carisma":2,"sorte":3},"note":"Mostra o maior desejo de quem o encara. Guardado na sala de música do Castelo Argento."}
   ]
 }

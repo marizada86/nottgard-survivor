@@ -1199,13 +1199,13 @@ func run() -> Array:
 			out.append("%s: place_scenery não pode consumir a RNG da batalha" % scenery_stage)
 		var near := 0
 		for e in sc.enemies:
-			if not e.has_flag("quebravel"):
+			if not e.has_flag("quebravel") and not e.lair:   # SPEC-157: o covil do segredo é um elite dormente
 				out.append("%s: destrutível fixo inesperado %s" % [scenery_stage, e.id])
 			if e.pos.distance_to(sc.hero.pos) < 4.0:
 				near += 1
 		if near > 0:
 			out.append("%s: destrutível fixo nasceu colado no herói" % scenery_stage)
-		if sc._combat_count() != 0:
+		if sc._combat_count() != sc.enemies.filter(func(e): return e.lair).size():
 			out.append("destrutíveis não devem contar no limite de inimigos")
 	var no_scenery := _bat(74, "durvall", "shedaklah")
 	if no_scenery.place_scenery() != 0:
@@ -1273,7 +1273,7 @@ func run() -> Array:
 		lb.place_scenery()
 		var fixed_kinds: Array = []
 		for inter in lb.interactions:
-			if bool(inter.get("fixed", false)):
+			if bool(inter.get("fixed", false)) and not ["chest", "camara"].has(String(inter.kind)):   # SPEC-157: baú da ruína e câmara são dos segredos
 				fixed_kinds.append(String(inter.kind))
 		var want_kinds: Array = Data.table("scenery")[lay_stage].interativos.map(func(i): return String(i.kind))
 		if fixed_kinds != want_kinds:

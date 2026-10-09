@@ -1,12 +1,18 @@
 extends RefCounted
-## SPEC-152 (MEC-039, fatia piloto): pontos de interesse, covil e Ecos de Shedaklah, Molor e Durao (84x84).
+## SPEC-152 e SPEC-157 (MEC-039): pontos de interesse, covil e Ecos de Shedaklah, Molor e Durao (84x84) e de Dagruve e Docas (60x60).
 
-const STAGES := ["shedaklah", "molor", "durao"]
+const STAGES := ["shedaklah", "molor", "durao", "dagruve", "docas", "feng_tu", "shendilavri", "goranthis"]
+const SMALL := ["dagruve", "docas"]
 const FORBIDDEN := ["adam", "astherion", "vanimelda", "mystralia", "arco 02", "síntese", "fusão"]
 
+func side_of(stage: String) -> int:
+	return 60 if SMALL.has(stage) else 84
+
 func _bat(stage: String, seed_value := 5) -> Battle:
+	var side := side_of(stage)
+	TerrainLayout.scale = float(side) / 40.0
 	var b := Battle.new(seed_value, "durvall", stage)
-	b.map_size = Vector2(84, 84)
+	b.map_size = Vector2(side, side)
 	b.hero.map_size = b.map_size
 	b.hero.pos = b.map_size * 0.5
 	b.stage.waves = []
@@ -19,7 +25,6 @@ func _bat(stage: String, seed_value := 5) -> Battle:
 func run() -> Array:
 	var out: Array = []
 	var saved := TerrainLayout.scale
-	TerrainLayout.scale = 84.0 / 40.0
 	_data(out)
 	for stage in STAGES:
 		_placement(out, stage)
@@ -29,6 +34,7 @@ func run() -> Array:
 	_diary(out)
 	_relics(out)
 	_keys(out)
+	_key_events(out)
 	_achievements(out)
 	TerrainLayout.scale = saved
 	return out
@@ -112,8 +118,9 @@ func _placement(out: Array, stage: String) -> void:
 		if eco.pos.distance_to(b.hero.pos) < 8.0:
 			out.append("%s: o Eco %s nasce perto demais do início" % [stage, eco.id])
 	for p in points:
-		if p.x < 3.0 or p.y < 3.0 or p.x > 81.0 or p.y > 81.0:
-			out.append("%s: ponto fora da margem do mapa 84x84 %s" % [stage, str(p)])
+		var side := float(side_of(stage))
+		if p.x < 3.0 or p.y < 3.0 or p.x > side - 3.0 or p.y > side - 3.0:
+			out.append("%s: ponto fora da margem do mapa %dx%d %s" % [stage, int(side), int(side), str(p)])
 		if TerrainLayout.is_blocked(stage, p) or TerrainLayout.is_styx_water(stage, p):
 			out.append("%s: ponto sobre água ou terreno bloqueado %s" % [stage, str(p)])
 	# a distância a pé do início ao ponto mais afastado precisa ser razoável (SPEC-119: POI a até ~25 s do centro)
@@ -220,7 +227,7 @@ func _chamber_bat(stage: String, seed_value := 7) -> Battle:
 	return b
 
 func _relics(out: Array) -> void:
-	var expected := {"shedaklah": ["manto_do_pantano"], "molor": ["lamina_da_digestao", "anel_resistencia_abissal"], "durao": ["machado_de_xargath"]}
+	var expected := {"shedaklah": ["manto_do_pantano"], "molor": ["lamina_da_digestao", "anel_resistencia_abissal"], "durao": ["machado_de_xargath"], "dagruve": ["broche_celestial"], "docas": ["colar_dos_tentaculos"], "feng_tu": ["sopro_de_estrela"], "shendilavri": ["cajado_dos_desejos"], "goranthis": ["espelho_das_almas_desejantes"]}
 	for stage in STAGES:
 		var b := _chamber_bat(stage)
 		if b.interact() or not b.events.any(func(ev): return String(ev.type) == "toast" and String(ev.text).begins_with("A câmara está selada")):
@@ -270,7 +277,7 @@ func _relics(out: Array) -> void:
 
 func _keys(out: Array) -> void:
 	# o reward do acontecimento-chave abre a câmara; Durao sempre tem a arena
-	var keys := {"shedaklah": "portal_sem_vao", "molor": "ritual_de_estagnacao", "durao": "arena_do_testador"}
+	var keys := {"shedaklah": "portal_sem_vao", "molor": "ritual_de_estagnacao", "durao": "arena_do_testador", "dagruve": "ritual_da_nevoa", "docas": "cais_atacado", "feng_tu": "escolta_do_peregrino", "shendilavri": "vitimas_drenadas", "goranthis": "do_trono_ao_lodo"}
 	for stage in keys:
 		var def := {}
 		for ev in Data.table("stage_events")[stage]:
@@ -284,6 +291,68 @@ func _keys(out: Array) -> void:
 		b.happenings._apply_reward(b, def.reward, b.hero.pos)
 		if not b.chamber_unlocked:
 			out.append("%s: aplicar o reward deveria destrancar a câmara" % stage)
+
+func _event_def(stage: String, id: String) -> Dictionary:
+	for ev in Data.table("stage_events")[stage]:
+		if String(ev.id) == id:
+			return ev
+	return {}
+
+## SPEC-157: as chaves "antigas" (ritual e onda) abrem a câmara pelo próprio jeito de cada uma.
+func _key_events(out: Array) -> void:
+	# Dagruve: interromper o selo do Ritual da Névoa
+	var b := _chamber_bat("dagruve")
+	var def := _event_def("dagruve", "ritual_da_nevoa")
+	b._fire_stage_event(def)
+	var seals: Array = b.zones.filter(func(z): return String(z.kind) == "rule_ritual")
+	if seals.size() != 1 or not bool(seals[0].get("unlock_chamber", false)):
+		out.append("dagruve: o selo do Ritual da Névoa deveria nascer marcado como chave da câmara")
+	else:
+		b.hero.pos = seals[0].pos
+		for i in 40:
+			b._update_zones(0.1)
+		if not b.chamber_unlocked:
+			out.append("dagruve: interromper o selo deveria abrir a câmara")
+	var ignored := _chamber_bat("dagruve")
+	ignored._fire_stage_event(def)
+	ignored.hero.pos = Vector2(1.0, 1.0)
+	for i in 400:
+		ignored._update_zones(0.1)
+	if ignored.chamber_unlocked:
+		out.append("dagruve: deixar o selo acabar não pode abrir a câmara")
+	# Docas: derrotar a onda do Cais atacado
+	var d := _chamber_bat("docas")
+	d._fire_stage_event(_event_def("docas", "cais_atacado"))
+	var raiders: Array = d._key_wave.duplicate()
+	if raiders.size() != 3:
+		out.append("docas: a onda do Cais atacado deveria ter 3 criaturas-chave (%d)" % raiders.size())
+	else:
+		d._stage_event_step()
+		if d.chamber_unlocked:
+			out.append("docas: a câmara não pode abrir com a onda viva")
+		for i in 2:
+			d._kill(raiders[i])
+			d._stage_event_step()
+		if d.chamber_unlocked:
+			out.append("docas: a câmara abriu antes da última criatura cair")
+		d._kill(raiders[2])
+		d._stage_event_step()
+		if not d.chamber_unlocked:
+			out.append("docas: derrotar as 3 criaturas deveria abrir a câmara")
+	# Goranthis: o paraíso cai (map_shift) e a câmara abre; um map_shift sem reward não abre
+	var g := _chamber_bat("goranthis")
+	g.happenings.fire(g, _event_def("goranthis", "do_trono_ao_lodo"))
+	if not g.chamber_unlocked:
+		out.append("goranthis: Do trono ao lodo deveria abrir a câmara")
+	var g2 := _chamber_bat("goranthis")
+	g2.happenings.fire(g2, {"id": "teste", "kind": "map_shift", "enemy_speed": 1.0})
+	if g2.chamber_unlocked:
+		out.append("goranthis: um map_shift sem reward não pode abrir a câmara")
+	# uma onda sem reward.unlock_chamber não cria criaturas-chave
+	var other := _chamber_bat("docas")
+	other._fire_stage_event({"id": "teste", "kind": "wave", "enemy_id": "criatura_corrompida", "count": 2})
+	if not other._key_wave.is_empty():
+		out.append("docas: uma onda comum não pode virar chave da câmara")
 
 func _achievements(out: Array) -> void:
 	var ids := {}
