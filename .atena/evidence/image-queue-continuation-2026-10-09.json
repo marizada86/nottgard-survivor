@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-09",
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "classification": "IN_PLAN",
+  "authorization": "atena revisa a fila de imagens e execute as prioridades por aqui, continuando o processo de outra sessão, para isso primeiro faça um commit push, e pull",
+  "source_commit": "fa73b36",
+  "branch": "codex/fila-imagens-continuacao-2026-10-09",
+  "approval_mode": "per-plan",
+  "checkpoint": "S-007/VFX/FILA-023/H103-APPROVAL",
+  "status": "SYNC_PREPARED_OWNER_VISUAL_GATE_PENDING",
+  "queue": "FILA-022 36/36 candidatas; FILA-023 1/60; 59 fontes restantes",
+  "content_state": "H103 v01 DRAFT, sem admissao runtime",
+  "next": "Aprovar H103 v01; gerar H101,H102,H104,H105,H106; depois somente gate H201 Brook",
+  "central_plan_preserved": "PLAN-083",
+  "remote": "https://github.com/marizada86/nottgard-survivor.git"
+}
