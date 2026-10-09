@@ -9,7 +9,7 @@ request_classification: PLAN_DEVIATION
 deviation_id: DEV-013
 authorization_verbatim: 'atena, planeje a v0.4.0 agora'
 approval_basis: 'Dono escolheu por plano, MEC-039 fatia piloto, MEC-041 + 3 armas/magias + 6 itens, arte provisoria nao trava (2026-10-08). Falta o aviso explicito de inicio.'
-checkpoint: B-006 concluido e commitado (cfb7bdc, cb38b9b); B-007/S-021 em andamento
+checkpoint: B-007 concluido (EVID-208), docs sem commit; proximo B-008 (fechamento e lancamento)
 return:
   plan: PLAN-071
   state_file: .atena/state/plan-071-playtest-ranking.yaml
@@ -31,7 +31,7 @@ batches:
   B-004: {title: MEC-041 NPC de upgrade de magia, steps: [S-010, S-011, S-012], status: DONE_LOCAL, note: 'SPEC-149 e EVID-205; commit aguarda aprovacao'}
   B-005: {title: MEC-042 conteudo novo, steps: [S-013, S-014, S-015, S-016], status: DONE, note: 'Portao aprovado pelo dono (2026-10-08), com o Coracao da Dominancia (7 equipamentos). EVID-206; commits locais 40ec60d a ac339b7; ratificados pelo dono em 2026-10-08 ("1. sim"); nao publicados.'}
   B-006: {title: MEC-039 fatia piloto, steps: [S-017, S-018, S-019, S-020], status: DONE, note: 'commits cfb7bdc (mapa 84x84) e cb38b9b (segredos) aprovados pelo dono em 2026-10-08', note: 'Portao de conteudo: Ecos e reliquias aprovados pelo dono antes do codigo.'}
-  B-007: {title: Balanceamento, steps: [S-021, S-022], status: IN_PROGRESS}
+  B-007: {title: Balanceamento, steps: [S-021, S-022], status: DONE, note: 'EVID-208: sem regressao; nenhum numero mexido; gold_src dos testers inexistente'}
   B-008: {title: Fechamento e lancamento, steps: [S-023, S-024, S-025, S-026, S-027, S-028], status: PENDING, note: 'Push, exportacao e aviso aos testers so com aprovacao explicita.'}
 steps:
   S-001: 'DONE (EVID-202). tools/backlog_check.ps1 (via powershell -ExecutionPolicy Bypass) e lista de bugs abertos; registrar no EVID.'
@@ -54,8 +54,8 @@ steps:
   S-018: 'DONE local (SPEC-152; mapa 84x84, POIs, Ecos, reliquias; EVID-207). SPEC-152: 84x84 (enlarge_stage_maps, rebalance_stage_props, bake_ground), POIs em dados, Ecos, reliquia; testes de mapa e de dados.'
   S-019: 'DONE local (Eco, faixa, Diario, camara; EVID-207). Codigo: coletavel Eco, aba Ecos no Diario, contador e pista, camara/reliquia; sem consumir a RNG da batalha; um commit por mecanica.'
   S-020: 'DONE em janela (59,6 a 59,9 FPS em 84x84; repetir no .exe em S-026). Medir desempenho (60 fps) em 84x84 no .exe; se cair, reduzir para 72x72 (risco G5).'
-  S-021: 'Linha de base do bot por heroi (comparar com EVID-110, 142, 144, 160, 193) e ajustes so em JSON.'
-  S-022: 'Conferir gold_src (BAL-023) nos pacotes dos testers; atualizar BALANCEAMENTO.md.'
+  S-021: 'DONE (EVID-208: 15 sementes, antes e depois, sem regressao). Linha de base do bot por heroi (comparar com EVID-110, 142, 144, 160, 193) e ajustes so em JSON.'
+  S-022: 'DONE (EVID-208: sem gold_src de tester; BALANCEAMENTO.md atualizado). Conferir gold_src (BAL-023) nos pacotes dos testers; atualizar BALANCEAMENTO.md.'
   S-023: 'Versao 0.4.0 em core/version.gd e export_presets.cfg (G6); RELEASES.md absorvendo 0.3.2 e 0.3.3; backlog_check antes de commitar.'
   S-024: 'CHANGELOG-0.4.0.html e PDF (Chrome headless), conferir as paginas; GUIA-FACIL-0.4.0.html e PDF.'
   S-025: 'QUESTIONARIO-007 (mapa pergunta -> cartao) e PDF.'

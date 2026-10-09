@@ -13,8 +13,8 @@ active_plan:
   deviation_id: DEV-013
   start_authorization_verbatim: 'atena, inicie o PLAN-081 em B-001'
 plan_cursor:
-  current: 'PLAN-081 / SPEC-148 (v0.4.0): B-001 a B-005 concluidos e commitados. B-006 (MEC-039 fatia piloto, SPEC-152, EVID-207) implementado local: mapa 84x84 no indice, segredos na arvore; suite 0 falhas; commits aguardam aprovacao.'
-  next: 'O dono aprova os commits do B-006 (mapa 84x84; segredos; documentos); depois B-007 (bot por heroi e gold_src).'
+  current: 'PLAN-081 / SPEC-148 (v0.4.0): B-001 a B-006 concluidos e commitados (ate ea9100f). B-007 (bot por heroi e ouro, EVID-208) medido: sem regressao; documentos aguardam commit.'
+  next: 'Commit dos documentos do B-007 (aprovacao); depois B-008: versao 0.4.0, RELEASES, changelog PDF, guia facil, questionario 007, export do .exe de commit limpo.'
 suspended_active_plan:
   id: PLAN-071
   spec_id: SPEC-138
