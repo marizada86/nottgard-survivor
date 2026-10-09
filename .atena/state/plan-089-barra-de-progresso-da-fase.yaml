@@ -2,7 +2,7 @@ id: PLAN-089
 spec: SPEC-163
 spec_file: .atena/specs/SPEC-163-barra-de-progresso-da-fase-mec-002.md
 mode: per-plan
-status: IMPLEMENTED_LOCAL_AWAITING_COMMIT
+status: COMMITTED_LOCAL_AWAITING_PLAYTEST
 created: '2026-10-09'
 request_classification: PLAN_DEVIATION
 deviation_id: DEV-024
@@ -31,4 +31,4 @@ gates:
   other_sessions_changes: PRESERVE_UNTOUCHED
 blocking_gaps: []
 non_blocking_gaps: [P1, P2, P3]
-commit_push_build_export: NOT_PERFORMED   # commit so com aprovacao
+commit_push_build_export: "COMMITTED_LOCAL (2205341); push, exportacao e aviso aos testers NOT_PERFORMED"
