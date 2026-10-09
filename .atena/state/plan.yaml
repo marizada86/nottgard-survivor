@@ -75,6 +75,16 @@ suspension:
   suspended_plan_state_file: '.atena/state/plan-053-imagens.yaml'
   note: 'PLAN-053 (imagens, SPEC-121) suspenso; cota de imagens liberou 2026-10-04 10:28 BRT; retoma na Shu (attack_02, death_03, death_04).'
 deferred_requests:
+  - id: DEV-016
+    request: 'Item 7 da lista sem assets: MEC-001, navegar as decisoes da run so com o teclado (WASD escolhe, Enter confirma).'
+    request_classification: PLAN_DEVIATION
+    status: COMPLETED_LOCAL_RETURNED_TO_PLAN_071
+    recorded: '2026-10-09'
+    authorization_verbatim: 'atena, aprovo os 2 commits, siga para o item 7'
+    spec: '.atena/specs/SPEC-156-decisoes-da-run-so-com-o-teclado-mec-001.md'
+    evidence: EVID-213
+    route: 'Dono pediu para seguir para o item (2026-10-09); executado agora e devolvido ao PLAN-071 em B-006/S-011.'
+    note: 'Verificado antes de codar: 1 a 9, setas e Enter ja existiam; so faltava o WASD. Sem commit, push, build ou exportacao.'
   - id: DEV-015
     request: 'Item 6 da lista sem assets: MEC-050, icone do item nas linhas Doar do Altar da Doacao.'
     request_classification: PLAN_DEVIATION
