@@ -56,6 +56,7 @@ var status_chip: StatusChip  # SPEC-147: Estige (na água) e Esquecimento
 var eco_banner: EcoBanner     # SPEC-152: faixa do Eco de Nottgard (6 s, sem pausar)
 var eco_counter: Label        # SPEC-152: "Ecos 1/4", só depois do primeiro achado na fase
 var mobile: MobileControls
+var event_pointer: EventPointer  # SPEC-159 (MEC-061): setas de evento na borda da tela
 var _battle: Battle
 var _confirm_callback: Callable
 var _cancel_callback: Callable
@@ -173,6 +174,13 @@ func _ready() -> void:
 	_confirm_dialog.window_input.connect(_confirmation_input)
 	Game.controls.changed.connect(_update_controller_prompts)
 	_update_controller_prompts()
+	# SPEC-159 (MEC-061): setas na borda para os eventos de quest fora da tela; ficam sob os painéis e fogem deles
+	event_pointer = EventPointer.new()
+	event_pointer.name = "EventPointer"
+	event_pointer.mobile = mobile
+	event_pointer.avoid_nodes = [top_stack, $StatBox, timer_label, stage_label, stage_rule_icon, _ability_slot]
+	add_child(event_pointer)
+	move_child(event_pointer, 0)
 
 func _setup_controller_pause() -> void:
 	var box: VBoxContainer = $PausePanel/VBox
@@ -420,6 +428,9 @@ var _detail_nodes: Array = []
 var _detail_on := false
 
 func _process(_delta: float) -> void:
+	if event_pointer != null:
+		event_pointer.battle = _battle
+		event_pointer.visible = _battle != null and _battle.state == "running" and not (items_panel.visible or levelup_panel.visible or pause_panel.visible or result_panel.visible or revive_panel.visible)
 	if mobile != null:
 		var running := _battle != null and _battle.state == "running" and not get_tree().paused
 		mobile.set_combat_enabled(running and not (Playtest.is_overlay_open() or items_panel.visible or levelup_panel.visible or pause_panel.visible or result_panel.visible or revive_panel.visible or _confirm_dialog.visible))

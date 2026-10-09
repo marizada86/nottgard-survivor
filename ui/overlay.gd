@@ -504,7 +504,7 @@ func _draw_over() -> void:
 			var b := Iso.to_screen(e.pos + e.charge_dir * float(e.charge_ab.dist))
 			draw_line(a, b, Color(1.0, 0.25, 0.2, 0.6), 4.0)
 
-## SPEC-129: estrela do Caminho de Tou Um (arte provisória: losango dourado) e seta na borda quando fora da tela.
+## SPEC-129: estrela do Caminho de Tou Um (arte provisória: losango dourado). A seta de fora da tela é da HUD (SPEC-159).
 func _draw_star_path() -> void:
 	var sp: Variant = battle.kinds.star_pos()
 	if sp == null:
@@ -516,14 +516,6 @@ func _draw_star_path() -> void:
 	draw_circle(c, 16.0 + 4.0 * pulse, Color(gold, 0.16 + 0.12 * pulse))
 	draw_colored_polygon(PackedVector2Array([c + Vector2(0, -12), c + Vector2(8, 0), c + Vector2(0, 12), c + Vector2(-8, 0)]), Color(gold, 0.95))
 	draw_string(ThemeDB.fallback_font, c + Vector2(-60, -20), "Estrela do Norte", HORIZONTAL_ALIGNMENT_CENTER, 120, 12, Color(gold, 0.95))
-	var view := get_viewport_rect().grow(-30.0)
-	if view.has_point(get_viewport().get_canvas_transform() * mp):
-		return
-	var hero_p := Iso.to_screen(battle.hero.pos) + Vector2(0, -30)
-	var dir := (mp - hero_p).normalized()
-	var tip := hero_p + dir * 240.0
-	var side := Vector2(-dir.y, dir.x)
-	draw_colored_polygon(PackedVector2Array([tip + dir * 14.0, tip - dir * 6.0 + side * 9.0, tip - dir * 6.0 - side * 9.0]), Color(gold, 0.9))
 
 ## SPEC-147: realce de item, alvo, NPC ou inimigo da quest que está dentro da tela. A cor vem do marcador, mas nunca
 ## fica apagada: o anel e a seta usam a cor com brilho mínimo para se destacar do cenário.
@@ -578,18 +570,11 @@ func _draw_happenings() -> void:
 		draw_rect(Rect2(p + Vector2(-20, -h - 10), Vector2(40, 4)), Color(0, 0, 0, 0.6))
 		draw_rect(Rect2(p + Vector2(-20, -h - 10), Vector2(40 * frac, 4)), Color(0.4, 1.0, 0.5))
 		draw_string(ThemeDB.fallback_font, p + Vector2(-60, -h - 14), String(a.label), HORIZONTAL_ALIGNMENT_CENTER, 120, 12, Color(0.75, 1.0, 0.8))
-	var hero_p := Iso.to_screen(battle.hero.pos) + Vector2(0, -30)
-	var view := get_viewport_rect().grow(-30.0)
+	var view := get_viewport_rect().grow(-EventPointer.MARGIN)
 	for m in hp_.markers(battle):
-		var mp := Iso.to_screen(m.pos)
-		# SPEC-147 (IN-071): dentro da tela o alvo da quest ganha anel pulsante e uma seta que balança sobre ele
-		if view.has_point(get_viewport().get_canvas_transform() * mp):
+		# SPEC-147 (IN-071): dentro da tela o alvo da quest ganha anel pulsante e uma seta que balança sobre ele;
+		# fora dela, a seta na borda é da HUD (SPEC-159, EventPointer)
+		if String(m.kind) in ["arena", "north_star"]:
+			continue   # já têm desenho próprio (círculo da arena, losango da estrela)
+		if view.has_point(get_viewport().get_canvas_transform() * Iso.to_screen(m.pos)):
 			_draw_quest_highlight(m)
-			continue
-		# fora da tela, uma seta na borda aponta o caminho
-		var off := mp - hero_p
-		var dir := off.normalized()
-		var tip := hero_p + dir * 240.0
-		var side := Vector2(-dir.y, dir.x)
-		var col: Color = m.color
-		draw_colored_polygon(PackedVector2Array([tip + dir * 14.0, tip - dir * 6.0 + side * 9.0, tip - dir * 6.0 - side * 9.0]), Color(col, 0.9))

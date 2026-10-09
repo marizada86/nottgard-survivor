@@ -575,19 +575,34 @@ func hud_lines(b: Battle) -> Array:
 		out.append("Carregando: %s" % carrying_text())
 	return out
 
-## Pontos que merecem seta na borda da tela (destino, itens, NPCs, peregrino).
+## Pontos que merecem seta na borda da tela (destino, itens, NPCs, peregrino, escolta, arena, Estrela do Norte).
+## SPEC-159: cada ponto traz `kind`, `label` curto (até 18 letras) e `key` estável para a seta lembrar o pulso de entrada.
+## Segredos (Ecos, altares da fase) ficam de fora de propósito: a pista deles é só de perto (`eco_pista`).
 func markers(b: Battle) -> Array:
 	var out: Array = []
 	for it in b.interactions:
 		if not it.used and String(it.kind).begins_with("event_"):
-			out.append({"pos": it.pos, "color": it.get("color", Color.WHITE)})
+			out.append(_marker(String(it.kind), it.pos, it.get("color", Color.WHITE), String(it.get("label", "")), String(it.get("obj", ""))))
 	for a in allies:
 		if String(a.role) == "escort":
-			out.append({"pos": a.pos, "color": Color(0.75, 0.9, 1.0)})
+			out.append(_marker("escort", a.pos, Color(0.75, 0.9, 1.0), String(a.label), String(a.get("obj", ""))))
 	for e in b.enemies:
 		if e.event_tag != "" and not e.dead and (e.event_item != "" or e.affix != ""):
-			out.append({"pos": e.pos, "color": Color(1.0, 0.5, 0.4)})
+			out.append(_marker("enemy", e.pos, Color(1.0, 0.5, 0.4), String(e.event_item) if e.event_item != "" else "Alvo", String(e.event_tag)))
+	if not arena.is_empty():
+		out.append(_marker("arena", arena.pos, Color(1.0, 0.55, 0.2), "Arena", String(arena.obj)))
+	var star: Variant = b.kinds.star_pos()
+	if star != null:
+		out.append(_marker("north_star", star, Color(1.0, 0.86, 0.35), "Estrela do Norte", ""))
 	return out
+
+func _marker(kind: String, pos: Vector2, color: Color, label: String, obj: String) -> Dictionary:
+	var text := label.get_slice(" [", 0).strip_edges()   # "Pacto [E/oeste]" -> "Pacto"
+	if text == "":
+		text = "Evento"
+	if text.length() > 18:
+		text = text.substr(0, 17) + "…"
+	return {"kind": kind, "pos": pos, "color": color, "label": text, "key": "%s|%s|%s" % [kind, obj, text]}
 
 # ------------------------------------------------------------------ util
 
