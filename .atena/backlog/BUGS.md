@@ -12,7 +12,7 @@ no [README](README.md); estado atual sai de `tools/backlog_check.ps1`.
 - **P1** (quebra uma função, tem contorno) e **P2** (cosmético): acumulam.
 - O lote de bugs fecha no **próximo playtest com versão nova** (regra do dono).
   O gatilho de 5 ou mais P1 continua servindo de **aviso**, não de bloqueio.
-- Verificação manual pendente (hoje só o BUG-007; BUG-003 a 010 menos o 007 foram pagos por teste automático, EVID-224) não conta como defeito: é dívida
+- Verificação manual pendente (zerada em 2026-10-09: BUG-003 a 010 pagos por teste automático, EVID-224, e pelo teste com janela do BUG-007, EVID-227) não conta como defeito: é dívida
   a pagar no playtest.
 - **Lembrete da Atena:** no início de cada sessão e antes de export/commit ela
   informa quantos P0/P1 estão abertos, rodando
@@ -37,7 +37,6 @@ abaixo. Cada item vira BUG-nnn se falhar.
 
 | ID | Sev | Verificar | Spec |
 |---|---|---|---|
-| BUG-007 | P1 | Segurar clique esquerdo para andar (sem mover ao clicar em painel) | SPEC-072 |
 
 ### Conhecidos na v0.4.0 (PLAN-081 / SPEC-148, 2026-10-08)
 
@@ -59,6 +58,7 @@ Reteste em run real exigido antes do fechamento (S-006): BUG-033 (botão Jogar c
 | BUG-036 | P1 | **Textos sobrepostos no topo da tela, mais com quests** (objetivos, barra do chefe e avisos disputavam o mesmo espaço; o aviso do Playtest cobria o relógio) | Daniel (T03), EVID-200 IN-069, IN-072 | **IMPLEMENTADO LOCAL 2026-10-08 (PLAN-080); aguarda playtest.** Pilha vertical no topo (chefe, quests, status, avisos); aviso do Playtest movido para baixo; teste de retângulos | SPEC-147 |
 | BUG-037 | P1 | **Arma base reaparece como "NOVA" depois de evoluir** (as 8 armas que evoluem) | Manzi (T04, v0.3.2), [EVID-199](../evidence/EVID-199-relato-t04-manzi-v032-2026-10-07.md) IN-063 | **IMPLEMENTADO LOCAL 2026-10-08 (PLAN-080); aguarda playtest.** Sem o filtro as 8 bases voltam; com ele nenhuma | SPEC-147 |
 | BUG-038 | P2 | **Altar de bênção parece oco: o chão e a estrada aparecem através do corpo de pedra** (só poço, brasas e velas eram visíveis). Não era ordem de desenho (o overlay do altar é z=60, a estrada z=-90): o sheet animado `assets/animations/interactions/altar_active.png` tem o corpo com alfa 0 | Dono, 2026-10-08 (print do altar sobre a estrada); [EVID-210](../evidence/EVID-210-bug-038-altar-oco-sobre-a-estrada-2026-10-08.md) | **IMPLEMENTADO LOCAL 2026-10-08 (Direct Execution, post-hoc); aguarda playtest.** `ui/overlay.gd`: o altar usa o sprite estático completo (`assets/interactions/altar_active.png`); perde o brilho animado no repouso até o sheet ser refeito ([ART-044](ARTE.md)). Conferido em captura de Dagruve com o altar sobre a estrada | [SPEC-153](../specs/SPEC-153-altar-oco-sobre-a-estrada-bug-038.md) |
+| BUG-039 | P2 | **Clicar num botão ou painel da HUD fazia o herói andar até lá** (1x, Ajuda, Pausa, painel do herói, slot da habilidade): o "segurar o clique para andar" lia o botão esquerdo sem olhar se o cursor estava sobre a HUD. Achado ao pagar a verificação do BUG-007 | Verificação do BUG-007 ([SPEC-072](../specs/SPEC-072-segurar-clique-para-andar.md)); [EVID-227](../evidence/EVID-227-plan-090-clique-na-hud-nao-move-o-heroi-2026-10-09.md) | **IMPLEMENTADO LOCAL 2026-10-09 (PLAN-090):** `Hero.mouse_walk_dir` (conta pura, `core/hero.gd`) + `Hud.pointer_over_ui()` (`gui_get_hovered_control`); antes o herói andou 2,95 (botão 1x) e 4,32 (painel) tiles num teste com a janela aberta, depois 0,00; no mundo segue andando. Teste `tests/test_mouse_walk.gd`; aguarda playtest | SPEC-072 |
 | BUG-011 | P1 | Espelho de Shendilavri fora do mapa, sem interação | [EVID-106](../evidence/EVID-106-playtest-publico-t01-higor-2026-09-29.md) IN-015 | **IMPLEMENTADO 2026-09-29 (PLAN-038)**: Espelho movido para (22.5, 3.0); aguarda run real em Shendilavri. [Histórico](#bug-011) | — |
 | BUG-012 | P1 | Inimigos travam em objetos e param de perseguir (deveriam deslizar) | EVID-106 IN-009 (Durao); confirmado por 3 de 3 testers | **IMPLEMENTADO 2026-09-29**: `hero.can_stand` no lugar de `is_free` + `Battle._enemy_move` contorna obstáculos; aguarda run real em Durao. [Histórico](#bug-012) | — |
 | BUG-014 | P1 | Ritual: concluir não dá recompensa e a penalidade vira XP | EVID-106 IN-001 (Dagruve, regra `rituals`) | **Reclassificado como mecânica (D1, 2026-09-29):** recompensa em MEC-026 (SPEC-084); aguarda playtest. T03 discorda (contestado). [Histórico](#bug-014) | — |
@@ -107,6 +107,7 @@ os cartões Minor-fix do período viram o bloco "Pequenos ajustes" do changelog
 | BUG-008 | Verificação: nível de equipamento e super-upgrade (duplicata e ferreiro) | 2026-10-09 (teste automático) | EVID-224: `test_battle.gd` 9f |
 | BUG-009 | Verificação: o botão de menu encerra o sandbox QA sem vazar para a run normal | 2026-10-09 (teste automático) | EVID-224: `test_qa_sandbox.gd` |
 | BUG-010 | Verificação: sinergias arma evoluída + acessório no nível máximo + magia | 2026-10-09 (teste automático) | EVID-224: `test_battle.gd` 10b |
+| BUG-007 | Verificação: segurar o clique esquerdo para andar (sem mover ao clicar em painel). Teste com a janela aberta (`tools/probe_mouse_walk.tscn`) achou o defeito BUG-039, corrigido | 2026-10-09 | [EVID-227](../evidence/EVID-227-plan-090-clique-na-hud-nao-move-o-heroi-2026-10-09.md) |
 | BUG-024 | Minor-fix: número de dano fundido (MEC-031 D5) acusava "instância já liberada" no console quando o número flutuante anterior já tinha sumido; agora valida antes de tipar (`ui/run.gd` `_merge_damage_number`). Achado em captura de run de Dagruve | 2026-10-01 | **Corrigido 2026-10-01**; sem efeito visível, só erro de console |
 
 ## Histórico dos cartões

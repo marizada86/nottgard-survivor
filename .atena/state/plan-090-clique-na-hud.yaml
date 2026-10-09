@@ -1,0 +1,30 @@
+id: PLAN-090
+spec: SPEC-072
+spec_file: .atena/specs/SPEC-072-segurar-clique-para-andar.md
+mode: per-plan
+status: IMPLEMENTED_LOCAL_AWAITING_COMMIT
+created: '2026-10-09'
+approved: '2026-10-09'
+request_classification: PLAN_DEVIATION
+deviation_id: DEV-025
+authorization_verbatim: 'atena, ainda nao atualize os documentos com a barra estou esperando assets, vamos seguir com mudancas e commits (2026-10-09)'
+checkpoint: concluido (S-001 a S-004); aguarda commit
+return:
+  plan: PLAN-071
+  checkpoint_observed: B-006/S-011
+batches:
+  B-001: {title: Verificar e corrigir, steps: [S-001, S-002, S-003, S-004], status: DONE_LOCAL, evidence: EVID-227}
+steps:
+  S-001: 'Sonda com a janela aberta (hover por posicao) e medir o defeito no ui/run.gd antigo.'
+  S-002: 'Hero.mouse_walk_dir, Hud.pointer_over_ui e o trecho de ui/run.gd; tests/test_mouse_walk.gd com mutacao.'
+  S-003: 'Sonda de integracao antes e depois; suite, smoke e kit_test.'
+  S-004: 'BUG-039, BUG-007 fechado, adendo na SPEC-072 e EVID-227.'
+gates:
+  dependencies: NO_NEW_DEPENDENCIES
+  assets: NOT_IN_SCOPE
+  commit: EXPLICIT_APPROVAL
+  push_publish_export: EXPLICIT_APPROVAL_SEPARATE
+  documents_for_testers: NOT_UPDATED_BY_OWNER_DECISION   # barra e este ajuste ficam fora dos documentos por enquanto
+  other_sessions_changes: PRESERVE_UNTOUCHED
+blocking_gaps: []
+commit_push_build_export: NOT_PERFORMED

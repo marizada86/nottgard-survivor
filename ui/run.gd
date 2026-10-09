@@ -508,10 +508,8 @@ func _physics_process(dt: float) -> void:
 			d = Vector2.ZERO
 		elif hud.mobile.movement != Vector2.ZERO:
 			d = hud.mobile.movement
-	if not Game.touch_controls_enabled() and d == Vector2.ZERO and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-		var screen_to_mouse := get_global_mouse_position() - hero_node.position
-		if screen_to_mouse.length() > 4.0:
-			d = screen_to_mouse.normalized()
+	if not Game.touch_controls_enabled():   # SPEC-072 / BUG-007: segurar o clique anda até o cursor, exceto sobre a HUD
+		d = Hero.mouse_walk_dir(d, Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT), hud.pointer_over_ui(), get_global_mouse_position() - hero_node.position)
 	var mouse_position := get_global_mouse_position()
 	if mouse_position != _last_mouse_position:
 		_controller_aim_active = false

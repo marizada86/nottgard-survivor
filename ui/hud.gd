@@ -357,6 +357,10 @@ func _cancel_mobile_action() -> void:
 		callback.call()
 	_restore_modal_focus()
 
+## SPEC-072 / BUG-007: o cursor está sobre algum controle da HUD (botão, painel); clicar ali não faz o herói andar.
+func pointer_over_ui() -> bool:
+	return get_viewport().gui_get_hovered_control() != null
+
 func clear_mobile_input() -> void:
 	if mobile != null:
 		mobile.set_combat_enabled(false)

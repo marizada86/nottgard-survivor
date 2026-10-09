@@ -99,6 +99,21 @@ suspension:
   suspended_plan_state_file: '.atena/state/plan-053-imagens.yaml'
   note: 'PLAN-053 retomado; biomas ate Pilares completos localmente. S-007 onda cortante completa como candidata; aguardando gate humano N03. PLAN-071 preservado. PLAN-071 suspenso com retorno acima.'
 deferred_requests:
+  - id: DEV-025
+    request: 'Seguir com mudancas sem assets: ultima verificacao manual (BUG-007, segurar o clique para andar) feita com a janela aberta; achou e corrigiu o BUG-039.'
+    request_classification: PLAN_DEVIATION
+    status: IMPLEMENTED_LOCAL_AWAITING_COMMIT
+    recorded: '2026-10-09'
+    authorization_verbatim: 'atena, ainda nao atualize os documentos com a barra estou esperando assets, vamos seguir com mudancas e commits'
+    proposed_plan: PLAN-090
+    state_file: '.atena/state/plan-090-clique-na-hud.yaml'
+    spec: '.atena/specs/SPEC-072-segurar-clique-para-andar.md'
+    cards: [BUG-007, BUG-039]
+    approval_mode: per-plan
+    approved: '2026-10-09'
+    route: 'Desvio do PLAN-071; retorno ao PLAN-071 B-006/S-011.'
+    evidence: EVID-227
+    note: 'Documentos dos testers NAO atualizados (decisao do dono: aguardando assets).'
   - id: DEV-024
     request: 'Barra de progresso da fase na HUD (MEC-002), proximo item sem assets apos o PLAN-088.'
     request_classification: PLAN_DEVIATION

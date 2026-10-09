@@ -163,6 +163,13 @@ func speed_px() -> float:
 static func movement_input(left: bool, right: bool, up: bool, down: bool) -> Vector2:
 	return Vector2(int(right) - int(left), int(down) - int(up))
 
+## SPEC-072 / BUG-007: com o botão esquerdo segurado, sem tecla de movimento e com o cursor no mundo (não sobre a HUD),
+## o herói anda até o cursor; a zona morta evita tremer quando o clique cai em cima do herói.
+static func mouse_walk_dir(keys_dir: Vector2, left_pressed: bool, over_ui: bool, to_mouse: Vector2, dead_zone := 4.0) -> Vector2:
+	if keys_dir != Vector2.ZERO or not left_pressed or over_ui or to_mouse.length() <= dead_zone:
+		return keys_dir
+	return to_mouse.normalized()
+
 func pickup_range() -> float:
 	return 1.4 + m("pickup") + attr_mod("carisma") * 0.1
 

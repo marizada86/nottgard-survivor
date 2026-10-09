@@ -93,3 +93,7 @@ Vampire Survivors)".
 - Exceção: entrada de mouse não é exercitada por suíte/smoke (ambos
   simulam `Battle` sem passar por `ui/run.gd`) — sem checagem manual
   interativa nesta sessão, ver EVID-096.
+
+## Adendo (2026-10-09, PLAN-090, BUG-039)
+
+A verificação manual do BUG-007 ("sem mover ao clicar em painel") achou um defeito: o clique sobre a HUD (botão 1x, Ajuda, painel do herói, slot da habilidade) também fazia o herói andar até o botão, porque só as telas que pausam a batalha eram protegidas. Correção: `Hero.mouse_walk_dir(keys, pressed, over_ui, to_mouse)` (conta pura, `tests/test_mouse_walk.gd`) e `Hud.pointer_over_ui()` (`Viewport.gui_get_hovered_control`). Segurar o clique no mundo segue andando; WASD continua com prioridade. Evidência: [EVID-227](../evidence/EVID-227-plan-090-clique-na-hud-nao-move-o-heroi-2026-10-09.md).
