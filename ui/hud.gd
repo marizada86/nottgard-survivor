@@ -306,7 +306,7 @@ func _update_controller_prompts() -> void:
 	$PausePanel/VBox/PauseItemsHint.text = "Ficha: %s · Detalhes: %s · Abas: %s / %s" % [Game.controls.prompt("run_items", "C"), Game.controls.prompt("offer_details", "Shift"), Game.controls.prompt("tab_previous", "Q"), Game.controls.prompt("tab_next", "E")]
 	%ResumeBtn.text = "Continuar (%s)" % Game.controls.prompt("run_pause", "Esc") if mobile == null else "Continuar"
 	if is_instance_valid(_offer_hint):
-		_offer_hint.text = "%s Confirmar · %s Detalhes · %s Ficha" % [Game.controls.prompt("ui_accept", "Enter"), Game.controls.prompt("offer_details", "Shift"), Game.controls.prompt("run_items", "C")] if Game.controls.is_controller() else "Passe o mouse ou segure Shift para ver detalhes e comparação."
+		_offer_hint.text = "%s Confirmar · %s Detalhes · %s Ficha" % [Game.controls.prompt("ui_accept", "Enter"), Game.controls.prompt("offer_details", "Shift"), Game.controls.prompt("run_items", "C")] if Game.controls.is_controller() else "W/S ou setas escolhem, Enter confirma, 1 a 9 escolhem direto. Passe o mouse ou segure Shift para ver detalhes e comparação."
 	if _battle != null and levelup_panel.visible and mobile == null:
 		reroll_btn.text = "Rerrolar (%s) — %d restantes" % [Game.controls.prompt("run_reroll", "R"), _battle.rerolls]
 
@@ -758,6 +758,27 @@ func hide_evolution() -> void:
 		_evo_root.queue_free()
 		_evo_root = null
 	_evo_key = ""
+
+## MEC-001 (SPEC-156): W e A voltam uma opção, S e D avançam (as setas já movem o foco pelo próprio Godot); outras teclas não mexem.
+static func offer_key_step(physical_keycode: int) -> int:
+	match physical_keycode:
+		KEY_W, KEY_A: return -1
+		KEY_S, KEY_D: return 1
+	return 0
+
+## Move o foco para a opção anterior (-1) ou seguinte (+1) da oferta aberta, dando a volta e pulando as travadas
+## (sem moeda). Devolve false se não houver opção que aceite foco. Enter ou Espaço confirmam o botão focado.
+func offer_focus_step(step: int) -> bool:
+	var options: Array = []
+	for c in offer_box.get_children():
+		if c is Button and not (c as Button).disabled and (c as Button).focus_mode != Control.FOCUS_NONE and (c as Button).is_visible_in_tree():
+			options.append(c)
+	if options.is_empty():
+		return false
+	var current := options.find(get_viewport().gui_get_focus_owner())
+	var next := 0 if current < 0 and step > 0 else (options.size() - 1 if current < 0 else posmod(current + step, options.size()))
+	(options[next] as Button).grab_focus()
+	return true
 
 ## Caminho do ícone de uma opção de oferta ("" = sem ícone). MEC-050: a linha "Doar" do Altar da Doação usa o ícone do item doado.
 static func offer_icon_path(o: Dictionary) -> String:

@@ -308,6 +308,9 @@ func _unhandled_input(ev: InputEvent) -> void:
 			if offer_key >= KEY_1 and offer_key <= KEY_9:
 				_on_choose(offer_key - KEY_1)
 				get_viewport().set_input_as_handled()
+			elif hud.offer_key_step(offer_key) != 0:  # MEC-001: W/A e S/D escolhem a opção; Enter confirma
+				hud.offer_focus_step(hud.offer_key_step(offer_key))
+				get_viewport().set_input_as_handled()
 		return
 	if ev.is_action_pressed(Game.ACTION_RUN_PAUSE):
 		_toggle_pause()
