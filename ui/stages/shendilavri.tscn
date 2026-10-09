@@ -10,7 +10,7 @@
 [node name="Ground" type="Node2D" parent="." unique_id=447917201]
 z_index = -100
 script = ExtResource("1_83ovl")
-map_size = Vector2i(60, 60)
+map_size = Vector2i(84, 84)
 color_a = Color(0.20392157, 0.11764706, 0.17254902, 1)
 color_b = Color(0.2509804, 0.14117648, 0.20392157, 1)
 terrain_layout_id = "shendilavri"
@@ -19,689 +19,1514 @@ use_modular_atlas = true
 atlas_columns = 2
 atlas_variants = 4
 terrain_texture_path = "res://assets/tiles/shendilavri_ground_atlas_v1.png"
-baked_texture_path = "res://assets/tiles/shendilavri_ground_baked_v1.png"
+baked_texture_path = "res://assets/tiles/shendilavri_ground_baked_v2.png"
 
 [node name="Sorted" type="Node2D" parent="." unique_id=1353919478]
 y_sort_enabled = true
 
 [node name="Hero" parent="Sorted" unique_id=629349748 instance=ExtResource("2_h4h1k")]
-position = Vector2(0, 960)
+position = Vector2(0, 1344)
 
 [node name="Prop1" parent="Sorted" unique_id=71309628 instance=ExtResource("3_hgfgd")]
-position = Vector2(192, 768)
+position = Vector2(268.8, 1075.2)
 kind = "cristal"
 height = 72.67596
 color = Color(0.54901963, 0.23529412, 0.39215687, 1)
 
 [node name="Prop2" parent="Sorted" unique_id=1364928834 instance=ExtResource("3_hgfgd")]
-position = Vector2(624, 600)
+position = Vector2(873.6, 840)
 kind = "cristal"
 height = 58.306732
 color = Color(0.54901963, 0.23529412, 0.39215687, 1)
 
 [node name="Prop3" parent="Sorted" unique_id=771603056 instance=ExtResource("3_hgfgd")]
-position = Vector2(-576, 1248)
+position = Vector2(-806.4, 1747.2)
 kind = "cristal"
 height = 52.311947
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop4" parent="Sorted" unique_id=1747862366 instance=ExtResource("3_hgfgd")]
-position = Vector2(-336, 552)
+position = Vector2(-470.4, 772.8)
 kind = "cristal"
 height = 61.058407
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop5" parent="Sorted" unique_id=1024179555 instance=ExtResource("3_hgfgd")]
-position = Vector2(-1152, 720)
+position = Vector2(-1612.8, 1008)
 kind = "cristal"
 height = 67.90521
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop6" parent="Sorted" unique_id=1439224802 instance=ExtResource("3_hgfgd")]
-position = Vector2(1536, 1008)
+position = Vector2(2150.4, 1411.2)
 kind = "cristal"
 height = 74.96579
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop7" parent="Sorted" unique_id=272757137 instance=ExtResource("3_hgfgd")]
-position = Vector2(336, 888)
+position = Vector2(470.4, 1243.2)
 kind = "cristal"
 height = 57.335045
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop8" parent="Sorted" unique_id=1577308904 instance=ExtResource("3_hgfgd")]
-position = Vector2(-432, 1416)
+position = Vector2(-604.8, 1982.4)
 kind = "cristal"
 height = 60.72767
 color = Color(0.54901963, 0.23529412, 0.39215687, 1)
 
 [node name="Prop9" parent="Sorted" unique_id=1110188362 instance=ExtResource("3_hgfgd")]
-position = Vector2(-1584, 888)
+position = Vector2(-2217.6, 1243.2)
 kind = "cristal"
 height = 78.91531
 color = Color(0.54901963, 0.23529412, 0.39215687, 1)
 
 [node name="Prop10" parent="Sorted" unique_id=177603148 instance=ExtResource("3_hgfgd")]
-position = Vector2(48, 1128)
+position = Vector2(67.2, 1579.2)
 kind = "cristal"
 height = 75.588066
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop11" parent="Sorted" unique_id=308744892 instance=ExtResource("3_hgfgd")]
-position = Vector2(-816, 984)
+position = Vector2(-1142.4, 1377.6)
 kind = "cristal"
 height = 56.90702
 color = Color(0.54901963, 0.23529412, 0.39215687, 1)
 
 [node name="Prop12" parent="Sorted" unique_id=1767565670 instance=ExtResource("3_hgfgd")]
-position = Vector2(336, 1128)
+position = Vector2(470.4, 1579.2)
 kind = "cristal"
 height = 56.39044
 color = Color(0.54901963, 0.23529412, 0.39215687, 1)
 
 [node name="Prop13" parent="Sorted" unique_id=860469442 instance=ExtResource("3_hgfgd")]
-position = Vector2(-864, 816)
+position = Vector2(-1209.6, 1142.4)
 kind = "cristal"
 height = 57.314724
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop14" parent="Sorted" unique_id=404028891 instance=ExtResource("3_hgfgd")]
-position = Vector2(528, 888)
+position = Vector2(739.2, 1243.2)
 kind = "cristal"
 height = 75.20148
 color = Color(0.54901963, 0.23529412, 0.39215687, 1)
 
 [node name="Prop15" parent="Sorted" unique_id=969183574 instance=ExtResource("3_hgfgd")]
-position = Vector2(1344, 1056)
+position = Vector2(1881.6, 1478.4)
 kind = "cristal"
 height = 63.6082
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop16" parent="Sorted" unique_id=1706937533 instance=ExtResource("3_hgfgd")]
-position = Vector2(96, 1728)
+position = Vector2(134.4, 2419.2)
 kind = "cristal"
 height = 57.2879
 color = Color(0.54901963, 0.23529412, 0.39215687, 1)
 
 [node name="Prop17" parent="Sorted" unique_id=1040714080 instance=ExtResource("3_hgfgd")]
-position = Vector2(240, 360)
+position = Vector2(336, 504)
 kind = "cristal"
 height = 78.5767
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop18" parent="Sorted" unique_id=1794630369 instance=ExtResource("3_hgfgd")]
-position = Vector2(720, 1176)
+position = Vector2(1008, 1646.4)
 kind = "cristal"
 height = 74.70838
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop19" parent="Sorted" unique_id=1551245915 instance=ExtResource("3_hgfgd")]
-position = Vector2(720, 888)
+position = Vector2(1008, 1243.2)
 kind = "cristal"
 height = 72.216736
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop20" parent="Sorted" unique_id=507581074 instance=ExtResource("3_hgfgd")]
-position = Vector2(-624, 840)
+position = Vector2(-873.6, 1176)
 kind = "cristal"
 height = 69.76789
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop21" parent="Sorted" unique_id=1898894899 instance=ExtResource("3_hgfgd")]
-position = Vector2(-192, 1392)
+position = Vector2(-268.8, 1948.8)
 kind = "cristal"
 height = 75.60764
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop22" parent="Sorted" unique_id=1421404006 instance=ExtResource("3_hgfgd")]
-position = Vector2(432, 1464)
+position = Vector2(604.8, 2049.6)
 kind = "cristal"
 height = 73.846634
 color = Color(0.54901963, 0.23529412, 0.39215687, 1)
 
 [node name="Prop23" parent="Sorted" unique_id=581417617 instance=ExtResource("3_hgfgd")]
-position = Vector2(-192, 1200)
+position = Vector2(-268.8, 1680)
 kind = "cristal"
 height = 78.28928
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop24" parent="Sorted" unique_id=653145766 instance=ExtResource("3_hgfgd")]
-position = Vector2(-192, 432)
+position = Vector2(-268.8, 604.8)
 kind = "cristal"
 height = 53.916122
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop25" parent="Sorted" unique_id=67928183 instance=ExtResource("3_hgfgd")]
-position = Vector2(0, 1536)
+position = Vector2(0, 2150.4)
 kind = "cristal"
 height = 57.43168
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop26" parent="Sorted" unique_id=1425085285 instance=ExtResource("3_hgfgd")]
-position = Vector2(432, 1320)
+position = Vector2(604.8, 1848)
 kind = "cristal"
 height = 65.34908
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop27" parent="Sorted" unique_id=1332456377 instance=ExtResource("3_hgfgd")]
-position = Vector2(0, 672)
+position = Vector2(0, 940.8)
 kind = "cristal"
 height = 59.72276
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop28" parent="Sorted" unique_id=1571866641 instance=ExtResource("3_hgfgd")]
-position = Vector2(720, 1368)
+position = Vector2(1008, 1915.2)
 kind = "cristal"
 height = 57.45184
 color = Color(0.54901963, 0.23529412, 0.39215687, 1)
 
 [node name="Prop29" parent="Sorted" unique_id=1464643953 instance=ExtResource("3_hgfgd")]
-position = Vector2(-192, 240)
+position = Vector2(-268.8, 336)
 kind = "cristal"
 height = 74.38002
 color = Color(0.54901963, 0.23529412, 0.39215687, 1)
 
 [node name="Prop30" parent="Sorted" unique_id=1623916199 instance=ExtResource("3_hgfgd")]
-position = Vector2(192, 1392)
+position = Vector2(268.8, 1948.8)
 kind = "cristal"
 height = 77.42009
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop31" parent="Sorted" unique_id=497185180 instance=ExtResource("3_hgfgd")]
-position = Vector2(384, 624)
+position = Vector2(537.6, 873.6)
 kind = "cristal"
 height = 67.53464
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop32" parent="Sorted" unique_id=640664038 instance=ExtResource("3_hgfgd")]
-position = Vector2(-624, 1080)
+position = Vector2(-873.6, 1512)
 kind = "cristal"
 height = 64.834015
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop33" parent="Sorted" unique_id=210941562 instance=ExtResource("3_hgfgd")]
-position = Vector2(288, 1248)
+position = Vector2(403.2, 1747.2)
 kind = "cristal"
 height = 57.895508
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop34" parent="Sorted" unique_id=558848017 instance=ExtResource("3_hgfgd")]
-position = Vector2(-432, 648)
+position = Vector2(-604.8, 907.2)
 kind = "cristal"
 height = 58.39059
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Veu" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-203.8, 1474.3)
+position = Vector2(-285.3, 2064)
 kind = "veu_01"
 block_radius = 0.0
 
 [node name="Taca" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-1087.7, 1042.4)
+position = Vector2(-1522.8, 1459.4)
 kind = "taca_01"
 block_radius = 0.0
 
 [node name="Espelho" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(936, 612)
+position = Vector2(1310.4, 856.8)
 kind = "espelho_ornado_01"
 block_radius = 0.0
 
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=749900560]
 
 [node name="Spawn1" parent="SpawnPoints" unique_id=1837662586 instance=ExtResource("4_xlgwy")]
-position = Vector2(432, 1176)
+position = Vector2(604.8, 1646.4)
 enemy_id = "escravo_de_rivenheart"
 count = 2
 
 [node name="Spawn2" parent="SpawnPoints" unique_id=1371884580 instance=ExtResource("4_xlgwy")]
-position = Vector2(-720, 888)
+position = Vector2(-1008, 1243.2)
 enemy_id = "sucubo"
 count = 2
 
 [node name="Spawn3" parent="SpawnPoints" unique_id=1190111160 instance=ExtResource("4_xlgwy")]
-position = Vector2(528, 696)
+position = Vector2(739.2, 974.4)
 enemy_id = "ilusao_de_sucubo"
 
 [node name="Spawn4" parent="SpawnPoints" unique_id=1572094091 instance=ExtResource("4_xlgwy")]
-position = Vector2(-96, 1344)
+position = Vector2(-134.4, 1881.6)
 enemy_id = "guarda_do_castelo"
 
 [node name="Prop1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(619.1, 686.5)
+position = Vector2(866.7, 961.1)
 kind = "cristal"
 height = 72.67596
 color = Color(0.54901963, 0.23529412, 0.39215687, 1)
 
 [node name="Prop1_c2" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-215.4, 756)
+position = Vector2(-301.6, 1058.4)
 kind = "cristal"
 height = 72.67596
 color = Color(0.54901963, 0.23529412, 0.39215687, 1)
 
 [node name="Prop2_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(304.2, 769.9)
+position = Vector2(425.9, 1077.9)
 kind = "cristal"
 height = 58.306732
 color = Color(0.54901963, 0.23529412, 0.39215687, 1)
 
 [node name="Prop3_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-907, 1208.8)
+position = Vector2(-1269.8, 1692.3)
 kind = "cristal"
 height = 52.311947
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop4_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(120.5, 478.6)
+position = Vector2(168.7, 670)
 kind = "cristal"
 height = 61.058407
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop5_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-552.1, 650.6)
+position = Vector2(-772.9, 910.8)
 kind = "cristal"
 height = 67.90521
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop5_c2" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-702.1, 624.5)
+position = Vector2(-982.9, 874.3)
 kind = "cristal"
 height = 67.90521
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop6_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(1036.7, 1102.5)
+position = Vector2(1451.4, 1543.5)
 kind = "cristal"
 height = 74.96579
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop7_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(506, 602.2)
+position = Vector2(708.4, 843.1)
 kind = "cristal"
 height = 57.335045
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop8_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-204.5, 1259.2)
+position = Vector2(-286.3, 1762.9)
 kind = "cristal"
 height = 60.72767
 color = Color(0.54901963, 0.23529412, 0.39215687, 1)
 
 [node name="Prop9_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-958.2, 924.3)
+position = Vector2(-1341.5, 1294)
 kind = "cristal"
 height = 78.91531
 color = Color(0.54901963, 0.23529412, 0.39215687, 1)
 
 [node name="Prop9_c2" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-1283.2, 1007.6)
+position = Vector2(-1796.5, 1410.6)
 kind = "cristal"
 height = 78.91531
 color = Color(0.54901963, 0.23529412, 0.39215687, 1)
 
 [node name="Prop10_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(350.4, 941.7)
+position = Vector2(490.6, 1318.4)
 kind = "cristal"
 height = 75.588066
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop11_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-1069.4, 823.8)
+position = Vector2(-1497.2, 1153.3)
 kind = "cristal"
 height = 56.90702
 color = Color(0.54901963, 0.23529412, 0.39215687, 1)
 
 [node name="Prop12_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(270.7, 1328.3)
+position = Vector2(379, 1859.6)
 kind = "cristal"
 height = 56.39044
 color = Color(0.54901963, 0.23529412, 0.39215687, 1)
 
 [node name="Prop13_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-488.5, 831.5)
+position = Vector2(-683.9, 1164.1)
 kind = "cristal"
 height = 57.314724
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop13_c2" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-640.7, 970.5)
+position = Vector2(-897, 1358.7)
 kind = "cristal"
 height = 57.314724
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop14_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(51.6, 770.4)
+position = Vector2(72.2, 1078.6)
 kind = "cristal"
 height = 75.20148
 color = Color(0.54901963, 0.23529412, 0.39215687, 1)
 
 [node name="Prop15_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(1128.2, 887.6)
+position = Vector2(1579.5, 1242.6)
 kind = "cristal"
 height = 63.6082
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop16_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-234.6, 1712.7)
+position = Vector2(-328.4, 2397.8)
 kind = "cristal"
 height = 57.2879
 color = Color(0.54901963, 0.23529412, 0.39215687, 1)
 
 [node name="Prop17_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(171.6, 616.6)
+position = Vector2(240.2, 863.2)
 kind = "cristal"
 height = 78.5767
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop17_c2" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(330.8, 530.6)
+position = Vector2(463.1, 742.8)
 kind = "cristal"
 height = 78.5767
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop18_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(510.4, 1393.3)
+position = Vector2(714.6, 1950.6)
 kind = "cristal"
 height = 74.70838
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop19_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(936, 771.5)
+position = Vector2(1310.4, 1080.1)
 kind = "cristal"
 height = 72.216736
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop20_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-831.2, 721.3)
+position = Vector2(-1163.7, 1009.8)
 kind = "cristal"
 height = 69.76789
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop21_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-690, 1392.2)
+position = Vector2(-966, 1949.1)
 kind = "cristal"
 height = 75.60764
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop21_c2" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-717.5, 1237.1)
+position = Vector2(-1004.5, 1731.9)
 kind = "cristal"
 height = 75.60764
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop22_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-65.5, 1476)
+position = Vector2(-91.7, 2066.4)
 kind = "cristal"
 height = 73.846634
 color = Color(0.54901963, 0.23529412, 0.39215687, 1)
 
 [node name="Prop23_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-621, 1176.3)
+position = Vector2(-869.4, 1646.8)
 kind = "cristal"
 height = 78.28928
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop24_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-193.3, 604.7)
+position = Vector2(-270.6, 846.6)
 kind = "cristal"
 height = 53.916122
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop25_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-327.9, 258.7)
+position = Vector2(-459.1, 362.2)
 kind = "cristal"
 height = 57.43168
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop25_c2" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(311.9, 1430.4)
+position = Vector2(436.7, 2002.6)
 kind = "cristal"
 height = 57.43168
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop26_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(146.3, 1065.4)
+position = Vector2(204.8, 1491.6)
 kind = "cristal"
 height = 65.34908
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop27_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-340.3, 689.6)
+position = Vector2(-476.4, 965.4)
 kind = "cristal"
 height = 59.72276
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop28_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(1016.3, 1308.9)
+position = Vector2(1422.8, 1832.5)
 kind = "cristal"
 height = 57.45184
 color = Color(0.54901963, 0.23529412, 0.39215687, 1)
 
 [node name="Prop29_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(252, 450.6)
+position = Vector2(352.8, 630.8)
 kind = "cristal"
 height = 74.38002
 color = Color(0.54901963, 0.23529412, 0.39215687, 1)
 
 [node name="Prop29_c2" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(28.8, 100.4)
+position = Vector2(40.3, 140.6)
 kind = "cristal"
 height = 74.38002
 color = Color(0.54901963, 0.23529412, 0.39215687, 1)
 
 [node name="Prop30_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(140.9, 1214.3)
+position = Vector2(197.3, 1700)
 kind = "cristal"
 height = 77.42009
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop31_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(454.3, 928.4)
+position = Vector2(636, 1299.8)
 kind = "cristal"
 height = 67.53464
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop32_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-342.5, 1354.1)
+position = Vector2(-479.5, 1895.7)
 kind = "cristal"
 height = 64.834015
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop33_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(560.2, 1035)
+position = Vector2(784.3, 1449)
 kind = "cristal"
 height = 57.895508
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop33_c2" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-119, 1350.3)
+position = Vector2(-166.6, 1890.4)
 kind = "cristal"
 height = 57.895508
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop34_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-389.5, 808.7)
+position = Vector2(-545.3, 1132.2)
 kind = "cristal"
 height = 58.39059
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Veu_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-508.4, 516.3)
+position = Vector2(-711.8, 722.8)
 kind = "veu_01"
 block_radius = 0.0
 
 [node name="Taca_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(806, 1242.2)
+position = Vector2(1128.4, 1739.1)
 kind = "taca_01"
 block_radius = 0.0
 
 [node name="Espelho_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(464.1, 443.1)
+position = Vector2(649.7, 620.3)
 kind = "espelho_ornado_01"
 block_radius = 0.0
 
 [node name="Espelho_c2" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(600.5, 456.4)
+position = Vector2(840.7, 639)
 kind = "espelho_ornado_01"
 block_radius = 0.0
 
 [node name="Prop12_f1" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(208.7, 244)
+position = Vector2(292.2, 341.6)
 kind = "cristal"
 height = 56.39044
 color = Color(0.54901963, 0.23529412, 0.39215687, 1)
 
 [node name="Prop12_f2" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-64.7, 142.7)
+position = Vector2(-90.6, 199.8)
 kind = "cristal"
 height = 56.39044
 color = Color(0.54901963, 0.23529412, 0.39215687, 1)
 
 [node name="Prop6_c1_f3" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(1055.4, 717)
+position = Vector2(1477.6, 1003.8)
 kind = "cristal"
 height = 74.96579
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop6_c1_f4" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(1140.7, 787.9)
+position = Vector2(1597, 1103.1)
 kind = "cristal"
 height = 74.96579
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop32_c1_f5" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(1291.3, 944.2)
+position = Vector2(1807.8, 1321.9)
 kind = "cristal"
 height = 64.834015
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop32_c1_f6" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(1418.4, 861.4)
+position = Vector2(1985.8, 1206)
 kind = "cristal"
 height = 64.834015
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop32_c1_f7" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(1476.1, 950.7)
+position = Vector2(2066.5, 1331)
 kind = "cristal"
 height = 64.834015
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop32_c1_f8" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-136.7, 368.7)
+position = Vector2(-191.4, 516.2)
 kind = "cristal"
 height = 64.834015
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop32_c1_f9" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-405, 298.8)
+position = Vector2(-567, 418.3)
 kind = "cristal"
 height = 64.834015
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop27_f10" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(1148.7, 1107.1)
+position = Vector2(1608.2, 1549.9)
 kind = "cristal"
 height = 59.72276
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop27_f11" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(908.1, 1114.1)
+position = Vector2(1271.3, 1559.7)
 kind = "cristal"
 height = 59.72276
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop5_c2_f12" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(214.6, 996.4)
+position = Vector2(300.4, 1395)
 kind = "cristal"
 height = 67.90521
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop5_c2_f13" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-40.5, 1093.9)
+position = Vector2(-56.7, 1531.5)
 kind = "cristal"
 height = 67.90521
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop5_c2_f14" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(177.2, 888.8)
+position = Vector2(248.1, 1244.3)
 kind = "cristal"
 height = 67.90521
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop31_c1_f15" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-987.2, 752.4)
+position = Vector2(-1382.1, 1053.4)
 kind = "cristal"
 height = 67.53464
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop31_c1_f16" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-1097.9, 890)
+position = Vector2(-1537.1, 1246)
 kind = "cristal"
 height = 67.53464
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop26_f17" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-138.5, 1153.7)
+position = Vector2(-193.9, 1615.2)
 kind = "cristal"
 height = 65.34908
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop26_f18" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(344.2, 1528.2)
+position = Vector2(481.9, 2139.5)
 kind = "cristal"
 height = 65.34908
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop26_f19" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(178.9, 1548.6)
+position = Vector2(250.5, 2168)
 kind = "cristal"
 height = 65.34908
 color = Color(0.60313725, 0.32705882, 0.46509805, 1)
 
 [node name="Prop2_c1_f20" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-1430.6, 1055.9)
+position = Vector2(-2002.8, 1478.3)
 kind = "cristal"
 height = 58.306732
 color = Color(0.54901963, 0.23529412, 0.39215687, 1)
 
 [node name="Prop2_c1_f21" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-1457.6, 857.2)
+position = Vector2(-2040.6, 1200.1)
 kind = "cristal"
 height = 58.306732
 color = Color(0.54901963, 0.23529412, 0.39215687, 1)
 
 [node name="Prop2_c1_f22" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-1026.8, 1240.9)
+position = Vector2(-1437.5, 1737.3)
 kind = "cristal"
 height = 58.306732
 color = Color(0.54901963, 0.23529412, 0.39215687, 1)
 
 [node name="Prop2_c1_f23" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-1295.5, 1156.8)
+position = Vector2(-1813.7, 1619.5)
 kind = "cristal"
 height = 58.306732
 color = Color(0.54901963, 0.23529412, 0.39215687, 1)
 
 [node name="Prop2_c1_f24" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-542.7, 1347)
+position = Vector2(-759.8, 1885.8)
 kind = "cristal"
 height = 58.306732
 color = Color(0.54901963, 0.23529412, 0.39215687, 1)
 
 [node name="Prop2_c1_f25" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-372.5, 1537.7)
+position = Vector2(-521.5, 2152.8)
 kind = "cristal"
 height = 58.306732
 color = Color(0.54901963, 0.23529412, 0.39215687, 1)
 
 [node name="Prop2_c1_f26" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(-460.3, 1571.8)
+position = Vector2(-644.4, 2200.5)
 kind = "cristal"
 height = 58.306732
 color = Color(0.54901963, 0.23529412, 0.39215687, 1)
 
 [node name="Prop28_c1_f27" parent="Sorted" instance=ExtResource("3_hgfgd")]
-position = Vector2(74.3, 1615.8)
+position = Vector2(104, 2262.1)
+kind = "cristal"
+height = 57.45184
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop1_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(695.9, 993.7)
+kind = "cristal"
+height = 72.67596
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop1_c2_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-138.6, 1063.2)
+kind = "cristal"
+height = 72.67596
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop2_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(553.8, 1009.9)
+kind = "cristal"
+height = 58.306732
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop3_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-1165.9, 1956.8)
+kind = "cristal"
+height = 52.311947
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop4_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-802.4, 515.5)
+kind = "cristal"
+height = 61.058407
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop5_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-1012.9, 938.6)
+kind = "cristal"
+height = 67.90521
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop5_c2_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-1933.7, 1061.5)
+kind = "cristal"
+height = 67.90521
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop6_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(2091.8, 1548.4)
+kind = "cristal"
+height = 74.96579
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop7_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(201.2, 1192.8)
+kind = "cristal"
+height = 57.335045
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop8_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-201.8, 2150.6)
+kind = "cristal"
+height = 60.72767
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop9_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-1866.5, 1004.1)
+kind = "cristal"
+height = 78.91531
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop9_c2_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-1770.9, 1315.8)
+kind = "cristal"
+height = 78.91531
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop10_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(73.1, 1768.3)
+kind = "cristal"
+height = 75.588066
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop11_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-1395.8, 1217.4)
+kind = "cristal"
+height = 56.90702
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop12_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(482.8, 1435.9)
+kind = "cristal"
+height = 56.39044
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop13_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-726.2, 1292.8)
+kind = "cristal"
+height = 57.314724
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop13_c2_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-1634.2, 1297.1)
+kind = "cristal"
+height = 57.314724
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop14_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(628.1, 1084.9)
+kind = "cristal"
+height = 75.20148
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop15_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(2332.8, 1306.6)
+kind = "cristal"
+height = 63.6082
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop16_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-196.2, 2403.9)
+kind = "cristal"
+height = 57.2879
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop17_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(267.6, 760.6)
+kind = "cristal"
+height = 78.5767
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop17_c2_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(639, 718.7)
+kind = "cristal"
+height = 78.5767
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop18_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(798.4, 1863.7)
+kind = "cristal"
+height = 74.70838
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop19_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(1224, 1126.7)
+kind = "cristal"
+height = 72.216736
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop20_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-1080.8, 1057.3)
+kind = "cristal"
+height = 69.76789
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop21_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-766.8, 1949)
+kind = "cristal"
+height = 75.60764
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop21_c2_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(129.9, 1848.8)
+kind = "cristal"
+height = 75.60764
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop22_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(548.5, 2261.8)
+kind = "cristal"
+height = 73.846634
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop23_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-697.8, 1656.3)
+kind = "cristal"
+height = 78.28928
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop24_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-64.3, 832.4)
+kind = "cristal"
+height = 53.916122
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop25_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-530.4, 2320.1)
+kind = "cristal"
+height = 57.43168
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop25_c2_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(94.2, 1990.9)
+kind = "cristal"
+height = 57.43168
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop26_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(319.1, 1593.4)
+kind = "cristal"
+height = 65.34908
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop27_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-340.3, 958.4)
+kind = "cristal"
+height = 59.72276
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop28_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(1304.3, 1856.1)
+kind = "cristal"
+height = 57.45184
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop29_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(175.2, 546.6)
+kind = "cristal"
+height = 74.38002
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop29_c2_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-72.6, 112.4)
+kind = "cristal"
+height = 74.38002
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop30_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(217.7, 1771.1)
+kind = "cristal"
+height = 77.42009
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop31_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(607.9, 1178)
+kind = "cristal"
+height = 67.53464
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop32_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-1191.4, 1281.7)
+kind = "cristal"
+height = 64.834015
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop33_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(675.4, 1534.2)
+kind = "cristal"
+height = 57.895508
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop33_c2_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-3.8, 1849.5)
+kind = "cristal"
+height = 57.895508
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop34_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-845.8, 1108.1)
+kind = "cristal"
+height = 58.39059
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Veu_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-133.9, 1943.6)
+kind = "veu_01"
+block_radius = 0.0
+
+[node name="Taca_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-1519.4, 1651.7)
+kind = "taca_01"
+block_radius = 0.0
+
+[node name="Espelho_c1_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(1037.2, 836.8)
+kind = "espelho_ornado_01"
+block_radius = 0.0
+
+[node name="Espelho_c2_2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(974.9, 701.2)
+kind = "espelho_ornado_01"
+block_radius = 0.0
+
+[node name="Prop1_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(1167.4, 692.9)
+kind = "cristal"
+height = 72.67596
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop1_c2_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-156.5, 1231.1)
+kind = "cristal"
+height = 72.67596
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop2_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(911.9, 1270.6)
+kind = "cristal"
+height = 58.306732
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop3_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-1446, 1581)
+kind = "cristal"
+height = 52.311947
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop3_c1_c2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-1675.8, 1607.2)
+kind = "cristal"
+height = 52.311947
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop4_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(97.5, 885.2)
+kind = "cristal"
+height = 61.058407
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop5_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-755.1, 1207.1)
+kind = "cristal"
+height = 67.90521
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop5_c2_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-678.9, 797.5)
+kind = "cristal"
+height = 67.90521
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop6_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(1142.9, 1591.8)
+kind = "cristal"
+height = 74.96579
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop6_c1_c2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(1342.6, 1375.4)
+kind = "cristal"
+height = 74.96579
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop7_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(787.3, 1084.3)
+kind = "cristal"
+height = 57.335045
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop8_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-643.8, 1733.5)
+kind = "cristal"
+height = 60.72767
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop9_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-1006.5, 1121.8)
+kind = "cristal"
+height = 78.91531
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop9_c2_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-2258.7, 1329.1)
+kind = "cristal"
+height = 78.91531
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop9_c2_c2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-1957.3, 1614.5)
+kind = "cristal"
+height = 78.91531
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop10_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(302.5, 1538.4)
+kind = "cristal"
+height = 75.588066
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop11_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-1503, 1302.9)
+kind = "cristal"
+height = 56.90702
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop12_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(581.7, 1767.3)
+kind = "cristal"
+height = 56.39044
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop13_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-1039.8, 1265.7)
+kind = "cristal"
+height = 57.314724
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop13_c1_c2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-372.1, 1297.6)
+kind = "cristal"
+height = 57.314724
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop13_c2_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-1180.7, 1486.3)
+kind = "cristal"
+height = 57.314724
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop14_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(555.5, 933.8)
+kind = "cristal"
+height = 75.20148
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop15_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(1951.7, 1273.4)
+kind = "cristal"
+height = 63.6082
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop16_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(170.6, 2365.6)
+kind = "cristal"
+height = 57.2879
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop16_c1_c2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-333.8, 2221.3)
+kind = "cristal"
+height = 57.2879
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop17_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(232.8, 1131.9)
+kind = "cristal"
+height = 78.5767
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop17_c2_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(222.2, 966.6)
+kind = "cristal"
+height = 78.5767
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop18_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(1025.1, 2028.3)
+kind = "cristal"
+height = 74.70838
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop19_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(994.6, 1330.6)
+kind = "cristal"
+height = 72.216736
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop19_c1_c2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(750.1, 1145.9)
+kind = "cristal"
+height = 72.216736
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop20_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-698.8, 969.6)
+kind = "cristal"
+height = 69.76789
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop21_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-393.3, 1937.7)
+kind = "cristal"
+height = 75.60764
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop21_c2_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-1060.9, 2047.4)
+kind = "cristal"
+height = 75.60764
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop22_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(64.9, 2313.1)
+kind = "cristal"
+height = 73.846634
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop22_c1_c2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-122.7, 2290.5)
+kind = "cristal"
+height = 73.846634
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop23_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-1098.3, 1568.8)
+kind = "cristal"
+height = 78.28928
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop24_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-185.6, 1126.5)
+kind = "cristal"
+height = 53.916122
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop25_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-534.8, 669.9)
+kind = "cristal"
+height = 57.43168
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop25_c2_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(142.2, 2119.3)
+kind = "cristal"
+height = 57.43168
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop25_c2_c2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(749.6, 1795.2)
+kind = "cristal"
+height = 57.43168
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop26_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-176.2, 1738.7)
+kind = "cristal"
+height = 65.34908
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop27_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-718.1, 847.6)
+kind = "cristal"
+height = 59.72276
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop28_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(1159.2, 1971.9)
+kind = "cristal"
+height = 57.45184
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop29_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(443.7, 402)
+kind = "cristal"
+height = 74.38002
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop29_c1_c2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(617.7, 490.3)
+kind = "cristal"
+height = 74.38002
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop29_c2_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(478.4, 347.3)
+kind = "cristal"
+height = 74.38002
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop30_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-164.8, 1496.3)
+kind = "cristal"
+height = 77.42009
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop31_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(36.4, 1203)
+kind = "cristal"
+height = 67.53464
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop32_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-462.4, 2074.7)
+kind = "cristal"
+height = 64.834015
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop32_c1_c2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-563.3, 1594.6)
+kind = "cristal"
+height = 64.834015
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop33_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(894.3, 1600.9)
+kind = "cristal"
+height = 57.895508
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop33_c2_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-668, 2041.2)
+kind = "cristal"
+height = 57.895508
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop34_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-293.8, 1183.8)
+kind = "cristal"
+height = 58.39059
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Veu_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-387.2, 614)
+kind = "veu_01"
+block_radius = 0.0
+
+[node name="Veu_c1_c2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-722.4, 481.9)
+kind = "veu_01"
+block_radius = 0.0
+
+[node name="Taca_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(957.5, 1451.1)
+kind = "taca_01"
+block_radius = 0.0
+
+[node name="Espelho_c1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(723.9, 933)
+kind = "espelho_ornado_01"
+block_radius = 0.0
+
+[node name="Espelho_c2_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(607.7, 416.9)
+kind = "espelho_ornado_01"
+block_radius = 0.0
+
+[node name="Prop12_f1_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(439.7, 536.7)
+kind = "cristal"
+height = 56.39044
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop12_f1_c2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(211.1, 621.4)
+kind = "cristal"
+height = 56.39044
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop12_f2_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(19.3, 510)
+kind = "cristal"
+height = 56.39044
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop6_c1_f3_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(1845.2, 1111.3)
+kind = "cristal"
+height = 74.96579
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop6_c1_f4_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(1349, 1314.5)
+kind = "cristal"
+height = 74.96579
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop32_c1_f5_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(1503, 1200.7)
+kind = "cristal"
+height = 64.834015
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop32_c1_f5_c2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(1626.8, 1454.7)
+kind = "cristal"
+height = 64.834015
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop32_c1_f6_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(1786.7, 1420.9)
+kind = "cristal"
+height = 64.834015
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop32_c1_f7_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(1727.1, 1542.8)
+kind = "cristal"
+height = 64.834015
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop32_c1_f8_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-355, 715.8)
+kind = "cristal"
+height = 64.834015
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop32_c1_f9_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-327.3, 282.4)
+kind = "cristal"
+height = 64.834015
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop32_c1_f9_c2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-147.1, 251.6)
+kind = "cristal"
+height = 64.834015
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop27_f10_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(1160.2, 1388.1)
+kind = "cristal"
+height = 59.72276
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop27_f11_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(857.3, 1544.1)
+kind = "cristal"
+height = 59.72276
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop5_c2_f12_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(335, 1203)
+kind = "cristal"
+height = 67.90521
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop5_c2_f13_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-410.6, 1515.1)
+kind = "cristal"
+height = 67.90521
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop5_c2_f13_c2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-499, 1398.4)
+kind = "cristal"
+height = 67.90521
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop5_c2_f14_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(140.1, 1017.6)
+kind = "cristal"
+height = 67.90521
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop31_c1_f15_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-1478.9, 818.2)
+kind = "cristal"
+height = 67.53464
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop31_c1_f16_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-1034.3, 1202.1)
+kind = "cristal"
+height = 67.53464
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop26_f17_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-286.5, 1858.8)
+kind = "cristal"
+height = 65.34908
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop26_f17_c2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-421.2, 1728.4)
+kind = "cristal"
+height = 65.34908
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop26_f18_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(908.1, 2009.1)
+kind = "cristal"
+height = 65.34908
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop26_f19_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(618.4, 2221.2)
+kind = "cristal"
+height = 65.34908
+color = Color(0.60313725, 0.32705882, 0.46509805, 1)
+
+[node name="Prop2_c1_f20_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-1712.7, 1717.3)
+kind = "cristal"
+height = 58.306732
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop2_c1_f21_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-1800, 1478.6)
+kind = "cristal"
+height = 58.306732
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop2_c1_f21_c2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-2387.3, 1264)
+kind = "cristal"
+height = 58.306732
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop2_c1_f22_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-1837.2, 1691.1)
+kind = "cristal"
+height = 58.306732
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop2_c1_f23_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-1340.3, 1537.1)
+kind = "cristal"
+height = 58.306732
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop2_c1_f24_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-1016.2, 1801.1)
+kind = "cristal"
+height = 58.306732
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop2_c1_f25_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-498.5, 2370.5)
+kind = "cristal"
+height = 58.306732
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop2_c1_f25_c2" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-943.8, 2078.1)
+kind = "cristal"
+height = 58.306732
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop2_c1_f26_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(-179.7, 1997.5)
+kind = "cristal"
+height = 58.306732
+color = Color(0.54901963, 0.23529412, 0.39215687, 1)
+
+[node name="Prop28_c1_f27_c1" parent="Sorted" instance=ExtResource("3_hgfgd")]
+position = Vector2(432.7, 2348.6)
 kind = "cristal"
 height = 57.45184
 color = Color(0.54901963, 0.23529412, 0.39215687, 1)
