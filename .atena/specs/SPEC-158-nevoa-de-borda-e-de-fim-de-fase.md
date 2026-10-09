@@ -75,3 +75,7 @@ Mudar o dano ou o ritmo da Maré de Dagruve; arte nova; punir inimigos; alterar 
 ## Lacunas
 
 Nenhuma `BLOCKING`. P1 a P5 são `RESOLVABLE` com padrão recomendado. `DEFERRED`: balancear a Maré por fase (grace e dano por tier) depois do playtest.
+
+## Ajuste de 2026-10-09: dano da borda subido para 3% a 9%
+
+O dono achou a largura da faixa (3 tiles) "muito boa" e o dano pouco punitivo. Mudança só em `data/fog.json` → `edge`: `start_dps_pct` 0,02 → **0,03** e `max_dps_pct` 0,06 → **0,09** (+50%). A rampa (20 s), a queda e a faixa não mudam; **a Maré de fim de fase segue em 2% a 6%**. Com isso o dano máximo da borda passa o da Maré, então a regra "vale o maior dos dois" acrescenta a diferença (3% por segundo) quando o herói está na faixa dentro da Maré. A regra 3 e a linha P1 desta spec descrevem o valor original (2% a 6%, igual à Maré). `tests/test_fog_edge.gd` agora lê os valores do JSON. Não repeti a rodada do bot (o bot que recua da faixa não é afetado; o que foge para a borda já morria antes). Efeito em jogador humano: não verificado.

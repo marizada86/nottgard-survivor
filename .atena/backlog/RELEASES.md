@@ -51,7 +51,7 @@ playtest" viram verificados ou reabertos.
 
 Tudo o que estava aqui entrou na [0.4.0](#versão-040--major-update-pronta-publicação-pendente). Desde então:
 
-- **MEC-059 e MEC-060, névoa punitiva** ([SPEC-158](../specs/SPEC-158-nevoa-de-borda-e-de-fim-de-fase.md), PLAN-084; implementado e commitado local em 3c55756, sem push): faixa de 3 tiles junto às bordas fere de 2% a 6% da vida máxima por segundo (dano verdadeiro, sobe com a exposição contínua) nas 9 fases; a Maré de Névoa passa a nascer após o chefe em todas as fases com próximo mapa (menos Pilares). **O que testar:** ficar no canto deve doer e o aviso deve aparecer; a faixa verde deve mostrar onde o dano começa; depois do chefe dá tempo de chegar ao portal. Ajustes em `data/fog.json`.
+- **MEC-059 e MEC-060, névoa punitiva** ([SPEC-158](../specs/SPEC-158-nevoa-de-borda-e-de-fim-de-fase.md), PLAN-084; implementado e commitado local em 3c55756, sem push): faixa de 3 tiles junto às bordas fere de 3% a 9% da vida máxima por segundo (dano verdadeiro, sobe com a exposição contínua) nas 9 fases; a Maré de Névoa passa a nascer após o chefe em todas as fases com próximo mapa (menos Pilares). **O que testar:** ficar no canto deve doer e o aviso deve aparecer; a faixa verde deve mostrar onde o dano começa; depois do chefe dá tempo de chegar ao portal. Ajustes em `data/fog.json`.
 
 ## Versão 0.4.0 — Major-update, refeita em 2026-10-09 (a publicada precisa ser republicada; aviso aos testers pendente)
 
