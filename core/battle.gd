@@ -2202,7 +2202,7 @@ func _open_risk_event(kind: String) -> void:
 				var it: Dictionary = hero.items[slot]
 				offer.append({"t": "donate", "name": "Doar %s [%s]" % [String(it.name), Items.rarity_label(String(it.rarity))],
 					"desc": "Perde: %s\nGanha: uma bênção à escolha entre 3." % Items.mods_text(Items.scaled_mods(it, int(it.get("level", 1)))),
-					"slot": slot, "price": 0, "locked": false,
+					"slot": slot, "price": 0, "locked": false, "base": String(it.get("base", it.get("id", ""))),  # MEC-050: ícone do item doado
 					"brief": "Perde %s · ganha 1 bênção (escolha entre 3)" % Items.brief_text(Items.scaled_mods(it, int(it.get("level", 1)))),
 					"detail": {"columns": [], "rows": [], "footer": ["Perde: %s" % Items.mods_text(Items.scaled_mods(it, int(it.get("level", 1)))), "Ganha: uma bênção à escolha entre 3."]}})
 	else:

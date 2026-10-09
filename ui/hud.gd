@@ -557,19 +557,7 @@ func show_offer(b: Battle) -> void:
 			btn.text = "%d.  %s%s\n      %s" % [i + 1, "[%s] " % role if role != "" else "", o.name, o.desc]
 			btn.alignment = HORIZONTAL_ALIGNMENT_LEFT
 			btn.custom_minimum_size = Vector2(620, 62)
-		var icon_path := ""
-		match String(o.t):
-			"item_swap": icon_path = Items.item_icon(String(o.keep.get("base", o.keep.get("id", ""))))
-			"weapon_new", "weapon_up": icon_path = Items.weapon_icon(String(o.id))
-			"evolve": icon_path = Items.weapon_icon(String(o.into))
-			"passive": icon_path = "res://assets/icons/passives/%s.png" % String(o.id)
-			"boon": icon_path = BoonKinds.icon_path_for_id(String(o.id))
-			"heal": icon_path = "res://assets/pickups/health_potion.png"
-			"gold": icon_path = "res://assets/pickups/gold_coin.png"
-			"shop_item": icon_path = Items.item_icon(String(o.item.get("base", o.item.get("id", ""))))
-			"shop_weapon_up": icon_path = Items.weapon_icon(String(o.weapon_id))
-			"shop_heal": icon_path = "res://assets/pickups/health_potion.png"
-			"shop_item_up": icon_path = "res://assets/icons/items/%s.png" % String(o.base)
+		var icon_path := offer_icon_path(o)
 		var icon_tex: Texture2D = load(icon_path) if ResourceLoader.exists(icon_path) else null
 		if icon_tex != null and not is_card:
 			btn.icon = icon_tex
@@ -770,6 +758,22 @@ func hide_evolution() -> void:
 		_evo_root.queue_free()
 		_evo_root = null
 	_evo_key = ""
+
+## Caminho do ícone de uma opção de oferta ("" = sem ícone). MEC-050: a linha "Doar" do Altar da Doação usa o ícone do item doado.
+static func offer_icon_path(o: Dictionary) -> String:
+	match String(o.t):
+		"item_swap": return Items.item_icon(String(o.keep.get("base", o.keep.get("id", ""))))
+		"weapon_new", "weapon_up": return Items.weapon_icon(String(o.id))
+		"evolve": return Items.weapon_icon(String(o.into))
+		"passive": return "res://assets/icons/passives/%s.png" % String(o.id)
+		"boon": return BoonKinds.icon_path_for_id(String(o.id))
+		"heal", "shop_heal": return "res://assets/pickups/health_potion.png"
+		"gold": return "res://assets/pickups/gold_coin.png"
+		"shop_item": return Items.item_icon(String(o.item.get("base", o.item.get("id", ""))))
+		"shop_weapon_up": return Items.weapon_icon(String(o.weapon_id))
+		"shop_item_up": return "res://assets/icons/items/%s.png" % String(o.base)
+		"donate": return Items.item_icon(String(o.get("base", "")))
+	return ""
 
 ## SPEC-152: Eco de Nottgard recolhido (faixa de `faixa_segundos`, sem pausar).
 func show_eco(text: String, source: String, known: bool) -> void:

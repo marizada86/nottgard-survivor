@@ -409,7 +409,7 @@ func _draw_over() -> void:
 			"altar": col = Color(0.8, 0.4, 1.0); label = "altar [E/oeste]"; asset = "altar_active"
 			"ritual": col = Color(0.9, 0.2, 0.2); label = "ritual [E/oeste]"; asset = "ritual"
 			"portal": col = Color(0.3, 1.0, 0.6); label = "portal [E/oeste]"; asset = "portal"
-			# Eventos com PNG oficial em assets/interactions/<tipo>.png; sem PNG (doacao, aposta, ampulheta) o quadrado colorido com rótulo é o provisório
+			# Eventos com PNG oficial em assets/interactions/<tipo>.png (loja, ferreiro, curandeiro, doação, aposta, ampulheta); sem PNG (arcanista, câmara) o quadrado colorido com rótulo é o provisório
 			"loja": col = Color(1.0, 0.85, 0.3); label = "loja [E/oeste]"; asset = "loja"
 			"ferreiro": col = Color(1.0, 0.5, 0.2); label = ("%s [E/oeste]" % String(it.name).to_lower()) if String(it.get("name", "")) != "" else "ferreiro [E/oeste]"; asset = "ferreiro"
 			"camara": col = Color(0.85, 0.7, 1.0); label = "câmara [E/oeste]" if battle.chamber_unlocked else "câmara selada"; asset = "camara_selada"  # SPEC-152: sem PNG (ART-043), vale o losango provisório
