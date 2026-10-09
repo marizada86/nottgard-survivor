@@ -1,0 +1,6 @@
+{
+	"_note": "SPEC-132/MEC-049. Hotspots PROVISORIOS (pixels da imagem final) ate a arte da ART-037 ser admitida; a normalizacao S-011 grava os valores reais.",
+	"cursor_ponteiro": {"shape": "arrow", "size": [32, 32], "hotspot": [2, 2]},
+	"cursor_mao": {"shape": "pointing_hand", "size": [32, 32], "hotspot": [10, 2]},
+	"cursor_mira": {"shape": "cross", "size": [40, 40], "hotspot": [20, 20]}
+}
