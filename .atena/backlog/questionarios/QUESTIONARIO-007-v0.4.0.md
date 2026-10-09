@@ -2,7 +2,7 @@
 
 Criado em 2026-10-08 (PLAN-081 B-008); **refeito em 2026-10-09** (PLAN-083 B-006: segredos nos oito mapas e ofertas pelo teclado; a versão continua 0.4.0). Arquivo para os testers: `QUESTIONARIO Rápido - 007.pdf` (fonte em `.html`, mesma pasta; gerado com
 `chrome --headless --print-to-pdf`; uma página A4). Cobre **0.3.1 → 0.4.0**: 4 linhas de dificuldade por faixa de mapas (Fácil demais · Na medida · Difícil demais · Não cheguei),
-"onde e quando morreu pela primeira vez", 11 frases com Concordo · Em parte · Discordo · Não notei, 3 prioridades, comentário livre e nota 0 a 10.
+"onde e quando morreu pela primeira vez", 12 frases com Concordo · Em parte · Discordo · Não notei, 3 prioridades, comentário livre e nota 0 a 10.
 Pergunta nova no cabeçalho: com o que jogou (teclado e mouse, controle, celular).
 
 ## Regra de leitura
@@ -23,6 +23,7 @@ Pergunta nova no cabeçalho: com o que jogou (teclado e mouse, controle, celular
 | 8 | Moedas | BAL-023 (SPEC-142), `gold_src` das estatísticas |
 | 9 | Curas mais fracas | BAL-022 |
 | 10 | Ficha C, quests, HUD sem sobreposição | BUG-034 a BUG-037, MEC-053 a MEC-056 (SPEC-147) |
+| 12 | Arlindo Orlando e Erik Blackthorn: arma, habilidade, passiva e desbloqueio | MEC-062, MEC-063 (SPEC-160) |
 | 11 | Controle Xbox/PlayStation, toque no celular e ofertas só com W/A, S/D e Enter | MEC-052, MEC-049, ART-037 (ícones de controle), MEC-001 (SPEC-156) |
 
 Perguntas abertas para a conversa: a fase em que o Manzi viu o lago (indicador do Estige, MEC-056); se o Daniel viu o ranking atualizar (MEC-057).
