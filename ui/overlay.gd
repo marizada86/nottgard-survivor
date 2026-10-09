@@ -447,7 +447,9 @@ func _draw_over() -> void:
 		var animation_id: String = {"fountain": "fountain_active", "altar": "altar_active", "ritual": "ritual", "portal": "portal"}.get(String(it.kind), "")
 		var animation_count: int = {"fountain_active": 6, "altar_active": 6, "ritual": 8, "portal": 8}.get(animation_id, 0)
 		var animation_texture := _texture("res://assets/animations/interactions/%s.png" % animation_id) if animation_id != "" else null
-		if scenery_texture != null:
+		# O sheet animado do altar tem o corpo de pedra transparente (só poço e chamas): o chão e a estrada apareciam através dele.
+		# Enquanto o sheet não for refeito, o altar usa o sprite estático completo.
+		if scenery_texture != null or String(it.kind) == "altar":
 			animation_texture = null
 		if animation_texture != null and animation_count > 0:
 			var h := base_h

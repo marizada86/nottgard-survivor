@@ -86,6 +86,22 @@ suspension:
   suspended_plan_state_file: '.atena/state/plan-053-imagens.yaml'
   note: 'PLAN-053 (imagens, SPEC-121) suspenso; cota de imagens liberou 2026-10-04 10:28 BRT; retoma na Shu (attack_02, death_03, death_04).'
 deferred_requests:
+  - id: DEV-015
+    request: 'Altar de bencao bugado sobre a estrada (o dono supos ordem de desenho: o altar deve vir a frente da estrada).'
+    request_classification: PLAN_DEVIATION
+    origin: post-hoc
+    implementation_preceded_spec: true
+    status: COMPLETED_LOCAL_RETURNED_TO_PLAN_071
+    recorded: '2026-10-08'
+    approval_mode: direct-execution
+    approval_status: DIRECT_EXECUTION_RECONCILED_POST_HOC
+    authorization_verbatim: 'atena sim, registre no backlog e reconcilie'
+    spec: '.atena/specs/SPEC-153-altar-oco-sobre-a-estrada-bug-038.md'
+    evidence: EVID-210
+    cards: [BUG-038, ART-044]
+    result: 'Causa: sheet animado altar_active com corpo de pedra de alfa 0 (nao era z-order; overlay z=60, estrada z=-90). ui/overlay.gd: altar usa o sprite estatico. Verificado por parse, test_animation_assets e captura; suite completa nao rodada; run real pendente.'
+    route: 'Executado como Direct Execution antes da spec e registrado depois a pedido do dono; PLAN-071 continua active_plan em B-006/S-011.'
+    note: 'Sem commit, push ou exportacao; o .exe local fica desatualizado ate a proxima exportacao.'
   - id: DEV-014
     request: 'Atualizar o ADD deste projeto para a versao nova de https://github.com/guimariz/atena-driven-development.git (upstream 39473e7, 2026-10-07, ainda ADD v0.2).'
     request_classification: PLAN_DEVIATION
