@@ -1,0 +1,42 @@
+from pathlib import Path
+import json,re,subprocess
+from datetime import datetime,timezone
+root=Path.cwd();out=Path(__file__).parent;pub=root/'.atena/generated/image-queue-publication-2026-10-09'
+read=lambda p:p.read_text(encoding='utf-8-sig')
+save=lambda p,d:p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+g=json.loads(read(out/'r01-owner-gate-2026-10-09.json'));assert g['status']=='APPROVED' and g['version']=='v02'
+head=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip();assert head.startswith('a39b6f0')
+save(pub/'publication-receipt.json',dict(status='LOCAL_COMMITTED_PUSH_REJECTED_PENDING_EXACT_OWNER_APPROVAL',timestamp=datetime.now(timezone.utc).isoformat(),commits=['afcf882',head],branch='codex/fila-imagens-2026-10-09',remote_url='https://github.com/marizada86/nottgard-survivor.git',pushed=False,files=815,bytes_approx=83111264,auto_review_rejection='Broad 815-file batch including internal evidence and project assets to unverified external origin. General push authorization insufficient for exact payload/destination. Do not bypass.',exact_owner_question='Authorize these two commits and exact payload on the named GitHub repository/branch without main merge, or keep local.',unaffected_work='Local R02-R08 and N03 generation continues under existing image authorization.'))
+q=root/'.atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md';t=read(q);t=t.replace('R01 v02 aprovada; commit/push antes dos sete R restantes; N/M pendentes','R01 v02 aprovada; sete R restantes em geração; push aguarda aceite exato; N/M pendentes');q.write_text(t,encoding='utf-8')
+art=root/'.atena/generated/ART-PROMPTS-053-vfx-projeteis-e-explosoes.md';canonical=read(art);art.write_text(canonical.replace('R01 v02 aprovada; commit/push antes dos sete R restantes; N/M pendentes','R01 v02 aprovada; sete R restantes em geração; push aguarda aceite exato; N/M pendentes'),encoding='utf-8')
+anchor=root/g['candidate'];pilot=out/'approved-pilot-A03-v02-reference.png';jobs=[]
+notes={
+ 'R02':'FLIGHT LOOP: Preserve EXACT approved R01 v02 crescent position, diameter, curvature and LEFT-pointing tapered tips. Main blade still leads RIGHT. Glow only slightly brighter and short trailing edge light flickers slightly longer. Keep visible fine angular lightning filaments close along the convex RIGHT edge. No translation, scaling or rotation of the crescent.',
+ 'R03':'FLIGHT LOOP: Exact same approved R01 v02 position, shape, diameter, RIGHT-facing crescent and LEFT-pointing tips. Change only the inner painted light details through a quarter-turn phase and slightly shorten trailing wisps. This is internal detail motion ONLY: NEVER rotate the overall crescent or its direction. Fine jagged lightning remains along leading convex edge.',
+ 'R04':'LOOP CLOSURE: Preserve exactly approved R01 v02 crescent position, size, direction and silhouette. Slightly dimmer white/gray glow and original short trailing edge length so returning to R01 is a gentle pulse with no jump in position, size or orientation. Retain fine jagged electric filaments along right edge.',
+ 'R05':'IMPACT START: No flight tail or intact flying crescent. The blade has collided: compact centered white flash with only tiny radial sparks beginning, short broken blade-energy fragments and fine electric filaments. About60% of coming peak size; early impact only. Exact canvas-center flash pivot. No glyphs, circles-as-symbols or readable text.',
+ 'R06':'IMPACT PEAK: No flight tail or intact flying crescent. Brightest maximum-size centered energy collision burst with hot white flash core and radiating short blade-energy fragments, sparks and fine jagged electric filaments. Flat ground-plane light, exact canvas-center pivot, generous black margins beyond all particle tips. No glyph symbols or arcane orb motifs.',
+ 'R07':'IMPACT DECAY: No solid white core, intact projectile or left flight tail. Centered thin expanding GRAY ring with dim broken blade-energy fragments and fine fading electric filaments, clearly dimmer than peak, open black center. Keep exact pivot and painted light texture. No glyphs or readable text.',
+ 'R08':'FINAL IMPACT: Almost entirely BLACK with a barely visible DARK GRAY centered broken ring and sparse faint specks or broken energy fragments. No white core, bright lightning, intact projectile, flight tail or left smoke stream. Same exact canvas-center pivot.'
+}
+for code in ['R02','R03','R04','R05','R06','R07','R08','N03']:
+ m=re.search(r'#### '+code+r' - `([^`]+)`.*?```text\s*(.*?)\s*```',t,re.S);assert m;name,prompt=m.groups()
+ assert re.search(r'Subject: (.*?) Frame ',prompt).group(1) in canonical
+ effect='onda_cortante' if code.startswith('R') else 'pulso_radiante';dest=root/f'.atena/generated/art-candidates/vfx/{effect}/{name}_v01.png';assert not dest.exists();dest.parent.mkdir(parents=True,exist_ok=True)
+ if code.startswith('R'):
+  refs=[str(anchor),str(pilot)];prompt+='\n\nReference1 is APPROVED R01 v02 cutting-wave identity/position including fine jagged lightning. Reference2 is APPROVED physical pilot painted white-core/gray-glow STYLE ONLY. Generate ONLY '+code+' phase, never a montage. Native square1024 requested, flat overhead view, white/gray effect only, pure black background and safe margins. No weapon, hand, character, scene, border, ground or readable text.\n'+notes[code]
+ else:
+  refs=[str(pilot)];prompt+='\n\nThe attachment is APPROVED physical pilot painted white core and gray soft falloff STYLE ONLY. Generate a NEW perfectly round radiant light PULSE at its maximum peak, not a crescent or flying projectile. ONE thin bright circular ring centered exactly on the canvas, soft wider glow band just INSIDE that ring, short outward light rays distributed radially. Perfect circular face-on shape, flat ground-plane top-down, no ellipse, horizon or perspective. Comfortable BLACK margins around full ring and all ray tips; native square1024 requested. White/gray only, no glyphs, letters, characters, hands, weapon, scene or ground texture. Only this N03 PEAK gate frame; no other pulse phases.'
+ jobs.append(dict(code=code,effect=effect,name=name,version='v01',prompt=prompt,referenced_image_paths=refs,destination=dest.relative_to(root).as_posix(),status='PENDING',transparent_background=False,source_queue=q.relative_to(root).as_posix()))
+save(out/'rn-generation-jobs-2026-10-09.json',dict(plan='PLAN-053',spec='SPEC-121',generator='built-in imagegen',remaining_at_start=79,counter_field='native_generated_since_R01',approval_receipt=g['approval_receipt'],native_originals_preserved=True,jobs=jobs))
+for rel in ['.atena/state/plan.yaml','.atena/state/plan-053-imagens.yaml']:
+ p=root/rel;s=read(p).replace('status: SUSPENDED_FOR_GIT_PUBLICATION','status: EXECUTING_R_REMAINING',1).replace('checkpoint: DEV-006/S-001','checkpoint: S-007/VFX/FILA-022/R-REMAINING',1)
+ s=s.replace('DEV-006 commit/push autorizado; R01 v02 aceita contextualmente; fila suspensa durante publicacao.','S-007 R01 v02 aprovada; gerando sete R, depois somente gate N03. Dois commits locais; push aguarda aprovacao exata.')
+ s=s.replace('Apos push verificado, retomar R02-R08 e gate N03. Retorno PLAN-071 preservado.','Revisar voo e impactos R e devolver gate N03 ao dono. Push pendente; retorno PLAN-071 preservado.')
+ s=s.replace('  request_classification: PLAN_DEVIATION','  request_classification: IN_PLAN',1)
+ m=re.search(r'\nimage_git_publication:\n(.*?)(?=\n\S|\Z)',s,re.S);assert m;b=m.group(1).replace('  status: EXECUTING','  status: AWAITING_EXACT_PUBLICATION_APPROVAL');s=s[:m.start(1)]+b+s[m.end(1):]
+ if rel.endswith('plan-053-imagens.yaml'):
+  m=re.search(r'\nvfx_generation_progress:\n(.*?)(?=\n\S|\Z)',s,re.S);assert m;s=s[:m.start(1)]+'  jobs: .atena/generated/s007-reconciliation/v01/rn-generation-jobs-2026-10-09.json\n  native_generated_since_R01: 0\n  last_frame: none\n'+s[m.end(1):]
+ p.write_text(s,encoding='utf-8')
+p=root/'.atena/evidence/image-queue-publication-2026-10-09.md';p.write_text(read(p)+'\nResultado real: afcf882 e a39b6f0 criados localmente. Push rejeitado pela revisão automática por lote amplo e destino/payload sem autorização específica. [Recibo do bloqueio](../generated/image-queue-publication-2026-10-09/publication-receipt.json). Pergunta exata enviada ao dono; sem push e sem contorno da rejeição. Geração local R02–R08/N03 retomada como trabalho independente autorizado.\n',encoding='utf-8')
+print(json.dumps(dict(status='R_REMAINING_READY_PUSH_PENDING_EXACT_APPROVAL',jobs=8,next_gate='N03')))

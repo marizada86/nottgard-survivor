@@ -5,14 +5,14 @@ active_plan:
   spec_id: SPEC-121
   state_file: '.atena/state/plan-053-imagens.yaml'
   mode: per-plan
-  checkpoint: DEV-006/S-001
+  checkpoint: DEV-006/S-002
   status: SUSPENDED_FOR_GIT_PUBLICATION
   approved: '2026-10-03'
   resumed: '2026-10-07'
   request_classification: PLAN_DEVIATION
 plan_cursor:
-  current: 'DEV-006 commit/push autorizado; R01 v02 aceita contextualmente; fila suspensa durante publicacao.'
-  next: 'Apos push verificado, retomar R02-R08 e gate N03. Retorno PLAN-071 preservado.'
+  current: 'DEV-006/S-002 commit/push solicitado; onda cortante oito candidatas revisadas e N03 v01 aprovada.'
+  next: 'Apos push verificado retornar a N01,N02,N04,N05,N06; depois somente gate M03. Retorno PLAN-071 preservado.'
 previous_plan_cursor:
   current: 'PLAN-059 (SPEC-125) commitado e publicado (05264f0, 1392627) em 2026-10-05; o playtest decide Docas, Molor e fases finais.'
   next: 'Retomar PLAN-053 (imagens, Shu: attack_02, death_03, death_04) e/ou abrir spec de balanceamento BAL-018 (precisa de linha de base do bot por heroi). Push da main (1 a 3 commits a frente) exige aprovacao.'
@@ -70,7 +70,7 @@ suspension:
     launcher: '.atena/generated/durvall-articulated/v01/Abrir-teste-Durvall-articulado.cmd'
     approval: '2026-10-06: sim, mobile agora; retorno a Durvall apos mobile.'
   suspended_plan_state_file: '.atena/state/plan-053-imagens.yaml'
-  note: 'PLAN-053 retomado; biomas ate Pilares completos localmente. S-007 orbe arcano completo como candidata; aguardando gate humano R01. PLAN-071 preservado. PLAN-071 suspenso com retorno acima.'
+  note: 'PLAN-053 retomado; biomas ate Pilares completos localmente. S-007 onda cortante completa como candidata; aguardando gate humano N03. PLAN-071 preservado. PLAN-071 suspenso com retorno acima.'
 deferred_requests:
   - id: DEV-005
     request: 'Gerar as dez imagens da FILA-025 ficha C, molduras, slots, abas e textura.'
@@ -143,10 +143,23 @@ proposed_plans:
 
 image_git_publication:
   id: DEV-006
-  status: EXECUTING
+  status: PUBLISHED_VERIFIED
   mode: per-plan
   checkpoint: DEV-006/S-001
   authorization: "atena, commit push e continue"
   route: publish-now-then-return
   receipt: .atena/generated/image-queue-publication-2026-10-09/publication-plan.json
   return_checkpoint: S-007/VFX/FILA-022/R-REMAINING
+  exact_owner_reply: "Autorizar este lote e destino"
+  remote_sha: a39b6f0be50633c35327584314d52093c29c743d
+  verification_receipt: .atena/generated/image-queue-publication-2026-10-09/publication-receipt.json
+
+image_git_n03_publication:
+  id: DEV-006
+  status: VALIDATED_READY_TO_COMMIT
+  mode: per-plan
+  checkpoint: DEV-006/S-002
+  authorization: "aprovado, commit e pus"
+  route: publish-now-then-return
+  receipt: .atena/generated/n03-publication-2026-10-09/plan.json
+  return_checkpoint: S-007/VFX/FILA-022/N-REMAINING

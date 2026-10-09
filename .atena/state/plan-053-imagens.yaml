@@ -3,6 +3,7 @@ active_plan:
   id: PLAN-053
   spec_id: SPEC-121
   current_step: S-007
+  checkpoint: DEV-006/S-002
   total_steps: 7
   status: SUSPENDED_FOR_GIT_PUBLICATION
   approval:
@@ -18,10 +19,10 @@ active_plan:
     date: '2026-10-03'
     evidence: Pedido pode continuar após seleção Por plano; gates visuais preservados.
 plan_cursor:
-  current: 'DEV-006 commit/push autorizado; R01 v02 aceita contextualmente; fila suspensa durante publicacao.'
-  next: 'Apos push verificado, retomar R02-R08 e gate N03. Retorno PLAN-071 preservado.'
-  review: '.atena/generated/pilares-resume/v01/sintese_abissal_compact_review.png'
-  evidence: '.atena/evidence/pilares-complete-2026-10-08.md'
+  current: 'DEV-006/S-002 commit/push solicitado; onda cortante oito candidatas revisadas e N03 v01 aprovada.'
+  next: 'Apos push verificado retornar a N01,N02,N04,N05,N06; depois somente gate M03. Retorno PLAN-071 preservado.'
+  review: '.atena/generated/s007-reconciliation/v01/n03-reference-comparison-2026-10-09.png'
+  evidence: '.atena/evidence/s007-onda-cortante-completa-n03-gate-2026-10-09.md'
 identity_gate:
   id: GATE-PILARES-IDENTITY-V01
   status: APPROVED
@@ -107,22 +108,22 @@ pilares_recovery_decision:
   approval_receipt: .atena/generated/pilares-resume/v01/attack03-pendant-owner-approval-2026-10-08.json
 
 vfx_gate:
-  id: GATE-FILA-022-R01-2026-10-09
+  id: GATE-FILA-022-N03-2026-10-09
   status: APPROVED
-  frame: R01
-  version: v02
+  frame: N03
+  version: v01
   generated: 1
-  remaining_native_vfx_frames: 79
+  remaining_native_vfx_frames: 71
   official_manifest_assets: 202
   runtime_admission: false
-  receipt: .atena/generated/s007-reconciliation/v01/r01-owner-gate-2026-10-09.json
-  owner_reply: "atena, commit push e continue"
-  approval_receipt: .atena/generated/s007-reconciliation/v01/r01-owner-approval-2026-10-09.json
+  receipt: .atena/generated/s007-reconciliation/v01/n03-owner-gate-2026-10-09.json
+  owner_reply: "aprovado, commit e pus"
+  approval_receipt: .atena/generated/s007-reconciliation/v01/n03-owner-approval-2026-10-09.json
 
 vfx_generation_progress:
-  jobs: .atena/generated/s007-reconciliation/v01/qr-generation-jobs-2026-10-09.json
-  native_generated_since_Q01: 8
-  last_frame: R01
+  jobs: .atena/generated/s007-reconciliation/v01/rn-generation-jobs-2026-10-09.json
+  native_generated_since_R01: 8
+  last_frame: N03
 
 completed_vfx_gates:
   arco_largo_radiante:
@@ -181,12 +182,39 @@ completed_vfx_gates:
     approval_receipt: .atena/generated/s007-reconciliation/v01/q01-owner-approval-2026-10-09.json
     completion_receipt: .atena/generated/s007-reconciliation/v01/orbe-arcano-sequence-audit-2026-10-09.json
 
+  onda_cortante:
+    id: GATE-FILA-022-R01-2026-10-09
+    status: APPROVED
+    frame: R01
+    version: v02
+    generated: 8
+    remaining_native_vfx_frames: 72
+    official_manifest_assets: 202
+    runtime_admission: false
+    receipt: .atena/generated/s007-reconciliation/v01/r01-owner-gate-2026-10-09.json
+    owner_reply: "atena, commit push e continue"
+    approval_receipt: .atena/generated/s007-reconciliation/v01/r01-owner-approval-2026-10-09.json
+    completion_receipt: .atena/generated/s007-reconciliation/v01/onda-cortante-sequence-audit-2026-10-09.json
+
 image_git_publication:
   id: DEV-006
-  status: EXECUTING
+  status: PUBLISHED_VERIFIED
   mode: per-plan
   checkpoint: DEV-006/S-001
   authorization: "atena, commit push e continue"
   route: publish-now-then-return
   receipt: .atena/generated/image-queue-publication-2026-10-09/publication-plan.json
   return_checkpoint: S-007/VFX/FILA-022/R-REMAINING
+  exact_owner_reply: "Autorizar este lote e destino"
+  remote_sha: a39b6f0be50633c35327584314d52093c29c743d
+  verification_receipt: .atena/generated/image-queue-publication-2026-10-09/publication-receipt.json
+
+image_git_n03_publication:
+  id: DEV-006
+  status: VALIDATED_READY_TO_COMMIT
+  mode: per-plan
+  checkpoint: DEV-006/S-002
+  authorization: "aprovado, commit e pus"
+  route: publish-now-then-return
+  receipt: .atena/generated/n03-publication-2026-10-09/plan.json
+  return_checkpoint: S-007/VFX/FILA-022/N-REMAINING

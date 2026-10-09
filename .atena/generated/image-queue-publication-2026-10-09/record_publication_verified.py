@@ -1,0 +1,16 @@
+from pathlib import Path
+import json,re
+from datetime import datetime,timezone
+root=Path(__file__).resolve().parents[3];out=Path(__file__).parent
+sha='a39b6f0be50633c35327584314d52093c29c743d';stamp=datetime.now(timezone.utc).isoformat()
+approval=dict(answer='Autorizar este lote e destino',question='A revisão automática bloqueou o push por considerar o lote de 815 arquivos amplo e exigir aprovação deste destino e conteúdo exatos. Você autoriza publicar os commits afcf882 (suporte CursorSkin) e a39b6f0 (animações integradas, ferramentas, previews e evidências da fila; cerca de 83 MB; fontes nativas ignoradas ficam locais) em https://github.com/marizada86/nottgard-survivor, branch codex/fila-imagens-2026-10-09, sem merge na main?',question_item_id='["request_user_input_async","call_466765cf2efe47dc8914265cc629d54e",0]',recorded_at=stamp)
+(out/'exact-publication-owner-approval.json').write_text(json.dumps(approval,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+for name in ['publication-receipt.json','publication-plan.json']:
+ p=out/name;d=json.loads(p.read_text(encoding='utf-8-sig'));d['prior_status']=d['status'];d.update(status='PUBLISHED_VERIFIED',pushed=True,published_at=stamp,remote_ref='refs/heads/codex/fila-imagens-2026-10-09',remote_sha=sha,verification='Successful git push followed by git ls-remote --heads returning exactly the local HEAD SHA.',exact_owner_approval=approval,merge_main=False);p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+for rel in ['.atena/state/plan.yaml','.atena/state/plan-053-imagens.yaml']:
+ p=root/rel;t=p.read_text(encoding='utf-8-sig');t=t.replace('Dois commits locais; push aguarda aprovacao exata.','Dois commits publicados e ref remota verificada.').replace('Push pendente; retorno PLAN-071 preservado.','Push concluido; retorno PLAN-071 preservado.')
+ m=re.search(r'\nimage_git_publication:\n(.*?)(?=\n\S|\Z)',t,re.S);assert m;b=m[1].replace('status: AWAITING_EXACT_PUBLICATION_APPROVAL','status: PUBLISHED_VERIFIED');b+='  exact_owner_reply: "Autorizar este lote e destino"\n  remote_sha: '+sha+'\n  verification_receipt: .atena/generated/image-queue-publication-2026-10-09/publication-receipt.json\n';t=t[:m.start(1)]+b+t[m.end(1):];p.write_text(t,encoding='utf-8')
+for name in ['CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md','ART-PROMPTS-053-vfx-projeteis-e-explosoes.md']:
+ p=root/'.atena/generated'/name;t=p.read_text(encoding='utf-8-sig').replace('push aguarda aceite exato','push concluído e verificado');p.write_text(t,encoding='utf-8')
+with (root/'.atena/evidence/image-queue-publication-2026-10-09.md').open('a',encoding='utf-8') as f:f.write('\n\nPublicação confirmada: o dono respondeu **Autorizar este lote e destino** à pergunta exata dos dois commits, 815 arquivos, cerca de83MB, repositório e branch. Push terminou com exit0; git ls-remote confirmou `'+sha+'` em `refs/heads/codex/fila-imagens-2026-10-09`. Nenhum merge na main. Retorno executável: PLAN-053 S-007/R-REMAINING, preservando PLAN-071. [Recibo](../generated/image-queue-publication-2026-10-09/publication-receipt.json), [aprovação exata](../generated/image-queue-publication-2026-10-09/exact-publication-owner-approval.json).\n')
+print(json.dumps(dict(status='PUBLISHED_VERIFIED',remote_sha=sha,next='R02-R08 then N03 only')))

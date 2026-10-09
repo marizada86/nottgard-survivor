@@ -1,0 +1,141 @@
+{
+  "status": "COMPLETE_CANDIDATE_SEQUENCE_VISUALLY_REVIEWED",
+  "sources": [
+    {
+      "code": "R01",
+      "path": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_fly_00_v02.png",
+      "sha256": "53f665277345e5a59d093f25e5f3f9ebfd800a1b146c535d0b48513b4e4308f1",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v02",
+      "mean_luminance": 10.552484680601024,
+      "visible_fraction_above12": 0.07416967458518706,
+      "central_hot_light_centroid_normalized": [
+        0.5809216255092068,
+        0.5005883000177849
+      ]
+    },
+    {
+      "code": "R02",
+      "path": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_fly_01_v01.png",
+      "sha256": "2c83e4d6759beaa50bd339e7a365b2f2cf87b6db7543885f72a961aae98ad844",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 11.523336487514277,
+      "visible_fraction_above12": 0.07837185758364303,
+      "central_hot_light_centroid_normalized": [
+        0.5801609919995767,
+        0.4993470472624687
+      ]
+    },
+    {
+      "code": "R03",
+      "path": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_fly_02_v01.png",
+      "sha256": "8e053772e4805e2ffd2c20715e89d7e8c44d088a6f87abc4c45bd7d6c542193b",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 10.499500164068284,
+      "visible_fraction_above12": 0.07446410720145295,
+      "central_hot_light_centroid_normalized": [
+        0.5808166570617251,
+        0.49725113994418696
+      ]
+    },
+    {
+      "code": "R04",
+      "path": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_fly_03_v01.png",
+      "sha256": "a636ee836297e261874a26a096a64e0ed8748d720b6f89e0aca0ebb472166b43",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 8.359809375548483,
+      "visible_fraction_above12": 0.06789120110701577,
+      "central_hot_light_centroid_normalized": [
+        0.581630476941512,
+        0.49750471114133465
+      ]
+    },
+    {
+      "code": "R05",
+      "path": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_hit_00_v02.png",
+      "sha256": "7fbbdadd57d6af7152b54c8dc6ca6fd76e29703990bf8e5e89cada58a45d0ae4",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v02",
+      "mean_luminance": 9.301187396503439,
+      "visible_fraction_above12": 0.08170600489915524
+    },
+    {
+      "code": "R06",
+      "path": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_hit_01_v01.png",
+      "sha256": "fc2013656b41122311941289fb851347751b0a2b230975476304f63a5fb342c2",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 41.02424395045901,
+      "visible_fraction_above12": 0.331000765651987
+    },
+    {
+      "code": "R07",
+      "path": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_hit_02_v01.png",
+      "sha256": "79296cd598e203e1d3034fdd526fd92e1599ce86bac042aa3210df2474fa4672",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 13.19009154755818,
+      "visible_fraction_above12": 0.16980622136754092
+    },
+    {
+      "code": "R08",
+      "path": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_hit_03_v01.png",
+      "sha256": "0ca2b691f2a420f7338b9eb68a8616213901cc94d4f06a70e4482beaa7c98c08",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 1.9334181655385383,
+      "visible_fraction_above12": 0.036806620727547444
+    }
+  ],
+  "flight_centroid_spread_normalized": [
+    0.0014694849419353284,
+    0.0033371600735979112
+  ],
+  "centroid_method": "Central30%-70% crop, weights max(luminance-180,0)^2; proxy for hot light consistency, not exact crescent pivot",
+  "native_sources_preserved": true,
+  "preview_only": true,
+  "runtime_admission": false,
+  "manifest_assets": 202,
+  "timestamp": "2026-10-09T12:51:49.134118+00:00",
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "visual_inspected": true,
+  "visual_review": "Four flight frames preserve the right-facing crescent and leftward tapered tips with fine jagged lightning; light/internal texture changes and R04-R01 closure reviewed. Four centered impacts have no intact flying crescent or tail: compact start, brightest peak R06, dim expanding fragmented ring, faint remnants. Native sources and96px montage inspected; no visible edge cuts.",
+  "human_gate_approval": ".atena/generated/s007-reconciliation/v01/r01-owner-approval-2026-10-09.json",
+  "review": ".atena/generated/s007-reconciliation/v01/onda-cortante-eight-frame-review-2026-10-09.png",
+  "preview_gifs": [
+    ".atena/generated/s007-reconciliation/v01/onda-cortante-flight-review-2026-10-09.gif",
+    ".atena/generated/s007-reconciliation/v01/onda-cortante-impact-review-2026-10-09.gif"
+  ],
+  "other_frames_human_approval": "Not individually claimed",
+  "remaining_native_vfx_frames": 72,
+  "next": "N03 radiant pulse PEAK gate only",
+  "native_dimensions_note": "Native square bytes retained; technical normalization to1024 deferred"
+}
