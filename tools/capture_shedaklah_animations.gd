@@ -27,6 +27,7 @@ func _ready() -> void:
 			var view: Node2D = load("res://ui/enemy_view.tscn").instantiate()
 			actor.add_child(view)
 			view.setup(Enemy.make(id, Vector2.ZERO))
+			view.sync_visual(view.position)
 			view.position = Vector2(-450 + index * 180, -170 + row * 100)
 			view.sprite.play(state)
 			view.sprite.pause()

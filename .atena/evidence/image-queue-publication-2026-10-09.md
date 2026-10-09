@@ -1,0 +1,9 @@
+# Publicação Git da fila de imagens
+
+Autorização: “atena, commit push e continue”. DEV-006, PLAN_DEVIATION: publicar agora e retornar ao PLAN-053/SPEC-121, modo per-plan preservado. [Plano e escopo](../generated/image-queue-publication-2026-10-09/publication-plan.json), [seleção de arquivos](../generated/image-queue-publication-2026-10-09/scope.json), [202 hashes e237 referências de fontes/tiras](../generated/image-queue-publication-2026-10-09/source-validation.json), [checks](../generated/image-queue-publication-2026-10-09/checks.json).
+
+Branch codex/fila-imagens-2026-10-09 baseada em ac14526. Sem merge na main de outro worktree. Commit de suporte CursorSkin separado: arquivo já exigido por ui/run.gd e ausente do checkout versionado, com fonte idêntica ao blob já publicado em origin/main. Commit de arte reúne dez atores/43 tiras de Shendilavri, Goranthis e Pilares, reusos e gatilhos visuais existentes, ferramentas, previews e evidências. VFX E/F/P/Q permanecem candidatas; R01 v02 aceita contextualmente pelo comando de continuação. Fontes candidatas e originais ignorados pelo .gitignore ficam locais, sem remoção; não se apresenta Git como backup integral das fontes.
+
+Importação, suíte e smoke: exit0, zero falhas de scripts/testes. Perfil Godot temporário dentro do workspace. Aviso de acesso ao repositório de certificados do sandbox registrado nos logs; não afeta os checks locais e não foi ocultado. Escopo sem arquivos do perfil de controles ou sua cópia bak, sem perfil temporário do editor. Nenhuma mecânica nova ou aceite fictício de playtest. Backlog: quatro P1 abertos, dez implementados aguardando playtest, oito verificações manuais; IDs duplicados ART036/037 e MEC049 seguem registrados.
+
+Após push e comparação da ref remota, retomar R02–R08, depois N03 gate do pulso radiante. Retorno PLAN071 B006/S011 preservado. Recibo final de publicação é operacional local, criado somente após a confirmação remota real.

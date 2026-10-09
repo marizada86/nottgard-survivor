@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-07",
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "request": "atena, pausar",
+  "classification": "IN_PLAN",
+  "status": "PAUSED_BY_OWNER",
+  "checkpoint": "S-006/GORANTHIS/GUARDIAO/REVIEW-MOVE03",
+  "identity_gate": "APPROVED",
+  "generated_new_frames": 7,
+  "guardiao_total_sources": 8,
+  "remaining_guardiao_new_frames": 12,
+  "remaining_goranthis_new_frames": 75,
+  "official_goranthis_assets": 0,
+  "preserved": [
+    {
+      "state": "idle",
+      "index": 1,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_idle_01_v01.png",
+      "sha256": "1049f187ce0bf8fcb19be154ebd2e9c4281c2f4e740a76942224a21712f1c053",
+      "status": "GENERATED_PENDING_QA"
+    },
+    {
+      "state": "idle",
+      "index": 2,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_idle_02_v01.png",
+      "sha256": "31a35104b9f28b6c719f18a962a44abcffddde21bd5fd29553967a9f7146f67e",
+      "status": "GENERATED_PENDING_QA"
+    },
+    {
+      "state": "idle",
+      "index": 3,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_idle_03_v01.png",
+      "sha256": "639e403742a8b2e08b65a41ec9f3f1f4e6ecac4b1aba095c62f8ee08956bb888",
+      "status": "GENERATED_PENDING_QA"
+    },
+    {
+      "state": "move",
+      "index": 0,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_move_00_v01.png",
+      "sha256": "94983ebcca4a4f0e4a5ce70ab8e5ef210676bb0af0613434f291ad3ef8e346a3",
+      "status": "GENERATED_PENDING_QA"
+    },
+    {
+      "state": "move",
+      "index": 1,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_move_01_v01.png",
+      "sha256": "f577e8b520c40a0e742fb2e9150a37be928e12dde603ee2d329a93f9c2fe5ae5",
+      "status": "GENERATED_PENDING_QA"
+    },
+    {
+      "state": "move",
+      "index": 2,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_move_02_v01.png",
+      "sha256": "6db2c7fcec552fba303959a3d90aa019f59e4d52cb664e0abdbab1b6391eb4ca",
+      "status": "GENERATED_PENDING_QA"
+    },
+    {
+      "state": "move",
+      "index": 3,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_move_03_v01.png",
+      "sha256": "11f053a902a9e265927fd590fa6033219cc7f3c65ae981e68ceae39bd5349468",
+      "status": "GENERATED_PENDING_QA"
+    }
+  ],
+  "in_flight": "Generation loop terminated before next call; move03 already returned and was copied during pause persistence.",
+  "resume_next": "Inspect saved move03 for opposite contact; then continue move04/move05, attack00-03, death00-05. No new generation while paused.",
+  "return_plan": "PLAN-071"
+}

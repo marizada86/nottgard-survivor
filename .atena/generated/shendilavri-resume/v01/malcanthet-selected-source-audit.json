@@ -1,0 +1,496 @@
+[
+  {
+    "state": "attack",
+    "index": 0,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/malcanthet/malcanthet_attack_00_v03.png",
+    "bbox": [
+      164,
+      11,
+      1104,
+      1238
+    ],
+    "solidity": 0.9686335468277228,
+    "clipped": false,
+    "packed_bbox": [
+      48,
+      195,
+      172,
+      357
+    ]
+  },
+  {
+    "state": "attack",
+    "index": 1,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/malcanthet/malcanthet_attack_01_v01.png",
+    "bbox": [
+      54,
+      24,
+      1214,
+      1234
+    ],
+    "solidity": 0.9622337150278639,
+    "clipped": false,
+    "packed_bbox": [
+      23,
+      198,
+      175,
+      357
+    ]
+  },
+  {
+    "state": "attack",
+    "index": 2,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/malcanthet/malcanthet_attack_02_v01.png",
+    "bbox": [
+      55,
+      38,
+      1245,
+      1208
+    ],
+    "solidity": 0.9602246132687674,
+    "clipped": false,
+    "packed_bbox": [
+      32,
+      203,
+      188,
+      357
+    ]
+  },
+  {
+    "state": "attack",
+    "index": 3,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/malcanthet/malcanthet_attack_03_v01.png",
+    "bbox": [
+      154,
+      11,
+      1123,
+      1238
+    ],
+    "solidity": 0.9662667559222522,
+    "clipped": false,
+    "packed_bbox": [
+      45,
+      195,
+      172,
+      357
+    ]
+  },
+  {
+    "state": "death",
+    "index": 0,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/malcanthet/malcanthet_death_00_v01.png",
+    "bbox": [
+      138,
+      97,
+      1138,
+      1209
+    ],
+    "solidity": 0.96709969397602,
+    "clipped": false,
+    "packed_bbox": [
+      63,
+      210,
+      194,
+      357
+    ]
+  },
+  {
+    "state": "death",
+    "index": 1,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/malcanthet/malcanthet_death_01_v01.png",
+    "bbox": [
+      131,
+      262,
+      1174,
+      1169
+    ],
+    "solidity": 0.9688584575009336,
+    "clipped": false,
+    "packed_bbox": [
+      60,
+      238,
+      197,
+      356
+    ]
+  },
+  {
+    "state": "death",
+    "index": 2,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/malcanthet/malcanthet_death_02_v02.png",
+    "bbox": [
+      24,
+      446,
+      1253,
+      1153
+    ],
+    "solidity": 0.9777476776610114,
+    "clipped": false,
+    "packed_bbox": [
+      48,
+      264,
+      210,
+      357
+    ]
+  },
+  {
+    "state": "death",
+    "index": 3,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/malcanthet/malcanthet_death_03_v01.png",
+    "bbox": [
+      13,
+      549,
+      1247,
+      1107
+    ],
+    "solidity": 0.975320583885406,
+    "clipped": false,
+    "packed_bbox": [
+      47,
+      283,
+      210,
+      357
+    ]
+  },
+  {
+    "state": "death",
+    "index": 4,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/malcanthet/malcanthet_death_04_v01.png",
+    "bbox": [
+      24,
+      661,
+      1235,
+      1120
+    ],
+    "solidity": 0.9784607008363455,
+    "clipped": false,
+    "packed_bbox": [
+      49,
+      296,
+      208,
+      357
+    ]
+  },
+  {
+    "state": "death",
+    "index": 5,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/malcanthet/malcanthet_death_05_v01.png",
+    "bbox": [
+      24,
+      661,
+      1237,
+      1122
+    ],
+    "solidity": 0.9818630109079579,
+    "clipped": false,
+    "packed_bbox": [
+      49,
+      296,
+      208,
+      357
+    ]
+  },
+  {
+    "state": "idle",
+    "index": 0,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/malcanthet/malcanthet_idle_00_v01.png",
+    "bbox": [
+      166,
+      13,
+      1091,
+      1242
+    ],
+    "solidity": 0.9598109392929348,
+    "clipped": false,
+    "packed_bbox": [
+      48,
+      195,
+      170,
+      357
+    ]
+  },
+  {
+    "state": "idle",
+    "index": 1,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/malcanthet/malcanthet_idle_01_v01.png",
+    "bbox": [
+      172,
+      29,
+      1121,
+      1238
+    ],
+    "solidity": 0.9657620141609481,
+    "clipped": false,
+    "packed_bbox": [
+      45,
+      195,
+      172,
+      357
+    ]
+  },
+  {
+    "state": "idle",
+    "index": 2,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/malcanthet/malcanthet_idle_02_v01.png",
+    "bbox": [
+      159,
+      16,
+      1122,
+      1239
+    ],
+    "solidity": 0.96715004742908,
+    "clipped": false,
+    "packed_bbox": [
+      43,
+      195,
+      171,
+      357
+    ]
+  },
+  {
+    "state": "idle",
+    "index": 3,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/malcanthet/malcanthet_idle_03_v01.png",
+    "bbox": [
+      158,
+      25,
+      1122,
+      1233
+    ],
+    "solidity": 0.9623122075025822,
+    "clipped": false,
+    "packed_bbox": [
+      44,
+      195,
+      173,
+      357
+    ]
+  },
+  {
+    "state": "move",
+    "index": 0,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/malcanthet/malcanthet_move_00_v01.png",
+    "bbox": [
+      177,
+      17,
+      1203,
+      1236
+    ],
+    "solidity": 0.9632788605138466,
+    "clipped": false,
+    "packed_bbox": [
+      36,
+      195,
+      172,
+      357
+    ]
+  },
+  {
+    "state": "move",
+    "index": 1,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/malcanthet/malcanthet_move_01_v01.png",
+    "bbox": [
+      152,
+      31,
+      1171,
+      1226
+    ],
+    "solidity": 0.9633048303980973,
+    "clipped": false,
+    "packed_bbox": [
+      32,
+      195,
+      170,
+      357
+    ]
+  },
+  {
+    "state": "move",
+    "index": 2,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/malcanthet/malcanthet_move_02_v02.png",
+    "bbox": [
+      146,
+      25,
+      1172,
+      1232
+    ],
+    "solidity": 0.9627099444323064,
+    "clipped": false,
+    "packed_bbox": [
+      42,
+      195,
+      180,
+      357
+    ]
+  },
+  {
+    "state": "move",
+    "index": 3,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/malcanthet/malcanthet_move_03_v03.png",
+    "bbox": [
+      175,
+      15,
+      1231,
+      1228
+    ],
+    "solidity": 0.9754618563136526,
+    "clipped": false,
+    "packed_bbox": [
+      50,
+      195,
+      191,
+      357
+    ]
+  },
+  {
+    "state": "move",
+    "index": 4,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/malcanthet/malcanthet_move_04_v01.png",
+    "bbox": [
+      158,
+      50,
+      1222,
+      1227
+    ],
+    "solidity": 0.970576232933782,
+    "clipped": false,
+    "packed_bbox": [
+      30,
+      195,
+      176,
+      357
+    ]
+  },
+  {
+    "state": "move",
+    "index": 5,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/malcanthet/malcanthet_move_05_v02.png",
+    "bbox": [
+      122,
+      29,
+      1159,
+      1223
+    ],
+    "solidity": 0.9710309430982579,
+    "clipped": false,
+    "packed_bbox": [
+      42,
+      195,
+      182,
+      357
+    ]
+  },
+  {
+    "state": "special",
+    "index": 0,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/malcanthet/malcanthet_special_00_v02.png",
+    "bbox": [
+      61,
+      12,
+      1205,
+      1243
+    ],
+    "solidity": 0.9718187092895343,
+    "clipped": false,
+    "packed_bbox": [
+      49,
+      195,
+      200,
+      357
+    ]
+  },
+  {
+    "state": "special",
+    "index": 1,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/malcanthet/malcanthet_special_01_v01.png",
+    "bbox": [
+      41,
+      9,
+      1240,
+      1241
+    ],
+    "solidity": 0.9619018999390074,
+    "clipped": false,
+    "packed_bbox": [
+      44,
+      195,
+      202,
+      357
+    ]
+  },
+  {
+    "state": "special",
+    "index": 2,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/malcanthet/malcanthet_special_02_v01.png",
+    "bbox": [
+      49,
+      16,
+      1219,
+      1238
+    ],
+    "solidity": 0.9685814561520467,
+    "clipped": false,
+    "packed_bbox": [
+      47,
+      196,
+      201,
+      357
+    ]
+  },
+  {
+    "state": "special",
+    "index": 3,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/malcanthet/malcanthet_special_03_v01.png",
+    "bbox": [
+      45,
+      8,
+      1215,
+      1240
+    ],
+    "solidity": 0.9641028313055964,
+    "clipped": false,
+    "packed_bbox": [
+      30,
+      195,
+      184,
+      357
+    ]
+  },
+  {
+    "state": "special",
+    "index": 4,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/malcanthet/malcanthet_special_04_v01.png",
+    "bbox": [
+      44,
+      18,
+      1236,
+      1241
+    ],
+    "solidity": 0.9601104115466265,
+    "clipped": false,
+    "packed_bbox": [
+      31,
+      196,
+      188,
+      357
+    ]
+  },
+  {
+    "state": "special",
+    "index": 5,
+    "path": "res://.atena/generated/art-candidates/enemies-shendilavri/malcanthet/malcanthet_special_05_v02.png",
+    "bbox": [
+      222,
+      12,
+      1045,
+      1242
+    ],
+    "solidity": 0.9696623456557717,
+    "clipped": false,
+    "packed_bbox": [
+      55,
+      195,
+      164,
+      357
+    ]
+  }
+]

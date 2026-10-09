@@ -1,0 +1,17 @@
+{
+  "job": {
+    "id": "sintese_abissal",
+    "state": "idle",
+    "index": 0,
+    "version": 2,
+    "date": "2026-10-08",
+    "refs": [
+      "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/assets/enemies/sintese_abissal.png",
+      "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_idle_00_v01.png"
+    ],
+    "prompt": "Create exactly ONE full-body neutral idle pilot of A Sintese Abissal, using attached static sprite as EXACT identity reference. Preserve colossal fused figure, ONE large crimson bat wing attached behind on SCREENLEFT, original cage-armored gauntlet and clawed forearm on SCREENLEFT (character's right arm), white ROOT/bone trunk and branching crown studded with PINK mushrooms, green veined body inside white roots, small PURPLE luminous chest core strictly INSIDE chest, wine tattered robe and gold chains. Preserve original lamp-holding limb and bell-lantern assembly at SCREENRIGHT, with same number/shape/attachment of bells and solid green dripping material as reference. Do not swap arm/wing/lantern sides or invent an extra arm, wing, head, weapon or detached lamp. Match original unique face/root-crown, all fingers, armor cages, fungi and linked chains. Upright imposing neutral idle, three-quarter front camera facingRIGHT, same palette and dark fantasy isometric PIXEL ART with crisp dithering, solid opaque isolated subject. Entire silhouette including ALL wing/horn/root tips, claws, lantern tops/green drips, robe and chain ends inside generous transparent margins8% each side. Truly native alpha TRANSPARENT background. Green drips, pink fungi and all other materials remain attached and opaque. No cast shadow, ground, smoke, bloom, rays, detached particles, scenic background, text, UI, logo, watermark or second character. FRAMING CORRECTION ONLY: image2 is the current full-body candidate. Preserve that SAME complete character, pose, proportions, all original arms/wing/mushroom crown/two green dripping lanterns and exact attachments; do not redesign or add details. Fit the entire character SMALLER in the canvas, at most 80% of canvas width AND 80% of canvas height. Leave visibly ample empty TRANSPARENT padding, at least TEN PERCENT on EACH side including ABOVE highest mushroom and BELOW lowest root. Wing left tip, right claw/lantern tips and bottom roots must all remain far inside the canvas. Do not crop, zoom, fill the frame or create a background glow. Native alpha background0, opaque existing character only."
+  },
+  "source_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-152376fa-7222-45cb-beba-96583aee41c6.png",
+  "workspace_path": "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_idle_00_v02.png",
+  "output_hint": "Generated images are saved to C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be as C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-152376fa-7222-45cb-beba-96583aee41c6.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+}

@@ -1,0 +1,134 @@
+version: 2
+# Reconciliado por Atena em 2026-10-05: PLAN-056 aceito pelo dono; commits reais registrados.
+active_plan:
+  id: PLAN-071
+  spec_id: SPEC-138
+  state_file: '.atena/state/plan-071-playtest-ranking.yaml'
+  mode: per-plan
+  checkpoint: B-006/S-011
+  status: LOCAL_DELIVERED_AWAITING_DEVICE_ACCEPTANCE
+  approved: '2026-10-06'
+  request_classification: IN_PLAN
+plan_cursor:
+  current: 'PLAN-071 / SPEC-138: fontes locais estaveis e verificadas; EVID-187; aceite dos clientes finais e ativacao separados.'
+  next: 'Homologar clientes finais; pipeline do dono e gates remotos separados; preservar cadeia de retorno.'
+previous_plan_cursor:
+  current: 'PLAN-059 (SPEC-125) commitado e publicado (05264f0, 1392627) em 2026-10-05; o playtest decide Docas, Molor e fases finais.'
+  next: 'Retomar PLAN-053 (imagens, Shu: attack_02, death_03, death_04) e/ou abrir spec de balanceamento BAL-018 (precisa de linha de base do bot por heroi). Push da main (1 a 3 commits a frente) exige aprovacao.'
+local_git_receipts:
+  - {plan: PLAN-073, request_classification: PLAN_DEVIATION, authorization: "atena junte tudo que temos e faça push", commit: 0e5e4977b63e0ba98990e7a2c54f43093098ba31, branch: main, result: PUBLISHED_VERIFIED, pushed: true, evidence: ".atena/evidence/consolidacao-push-2026-10-06.json", note: "Codigo, arte aprovada, mobile, controles, ranking e correcoes remotas publicados; imagens dos pilotos Durvall permanecem locais aguardando decisao."}
+  - plan: PLAN-067
+    request_classification: IN_PLAN
+    authorization: 'Dono solicitou faca o commit apos correcao mobile.'
+    commit: 503ccec4003efff9260821214e75bf49c1b6ab0b
+    branch: main
+    scope: 'Mobile e suas evidencias; linhas MEC-049/ART-036 isoladas. Durvall/PLAN-068 e outros pedidos preservados.'
+    result: PUBLISHED
+    source_validation: 'Hashes do piloto testado conferidos antes do commit; 144 verificacoes zero falhas, suite zero, smoke nove fases.'
+    pushed: true
+    note: 'Estado operacional local reconciliado apos o commit; snapshot do checkpoint Git no plano especifico registra a preparacao anterior.'
+suspension:
+  playtest_ranking_return:
+    suspended_plan: PLAN-070
+    latest_status: COMPLETED_GENERATION_VISUALLY_APPROVED
+    completion_evidence: '.atena/evidence/fila-025-complete-generation-2026-10-06.json'
+    resume_note: 'Geracao FILA-025 concluida durante PLAN-071; estado PLAN-070 registra dez candidatas. Retorno eventual a controles preservado em ficha_c_return.'
+    checkpoint: B-002/S-003
+    prior_status: EXECUTING_REMAINING_NINE
+    snapshot: '.atena/generated/playtest-ranking/v01/plan-before-071.yaml'
+    approval: '2026-10-06: iniciar playtest/ranking por plano; preservar pontos de retorno.'
+  ficha_c_return:
+    suspended_plan: PLAN-068
+    state_file: '.atena/state/plan-068-controles-xbox-playstation.yaml'
+    checkpoint: B-004/S-011
+    prior_status: AWAITING_HARDWARE_PLAYTEST
+    snapshot: '.atena/generated/art-candidates/ficha-c/plan-before-fila-025-2026-10-06.yaml'
+    prior_cursor: 'PLAN-068 / SPEC-135: P068-v03: confirmar mapa foca Jogar; nova confirmacao inicia tentativa. 38 verificacoes acesso e suite zero falhas; regressao anterior em EVID-185. Aceite fisico Xbox pendente.'
+    approval: '2026-10-06: atena autorizado, de acordo com suas recomendacoes; gerar FILA-025 agora, por plano, com retorno.'
+  controller_return:
+    suspended_plan: PLAN-067
+    state_file: '.atena/state/plan-067-controles-e-menus-mobile.yaml'
+    checkpoint: B-003/S-008-S-009
+    prior_status: AWAITING_DEVICE_VALIDATION
+    local_commit: 503ccec4003efff9260821214e75bf49c1b6ab0b
+    evidence: '.atena/evidence/EVID-183-mobile-joystick-direita-e-botoes-2026-10-06.md'
+    approval: '2026-10-06: vamos la, neste chat do PLAN-068 aprovado; iniciar controles agora apos entrega local mobile, preservando aceite nativo pendente.'
+  mobile_return:
+    suspended_plan: PLAN-066
+    state_file: '.atena/state/plan-066-corrida-durvall.yaml'
+    checkpoint: B-002/S-005
+    prior_status: AWAITING_OWNER_PLAYTEST
+    evidence: '.atena/evidence/EVID-175-durvall-piloto-articulado-2026-10-06.md'
+    launcher: '.atena/generated/durvall-articulated/v01/Abrir-teste-Durvall-articulado.cmd'
+    approval: '2026-10-06: sim, mobile agora; retorno a Durvall apos mobile.'
+  suspended_plan_state_file: '.atena/state/plan-053-imagens.yaml'
+  note: 'PLAN-053 (imagens, SPEC-121) suspenso; cota de imagens liberou 2026-10-04 10:28 BRT; retoma na Shu (attack_02, death_03, death_04).'
+deferred_requests:
+  - id: DEV-005
+    request: 'Gerar as dez imagens da FILA-025 ficha C, molduras, slots, abas e textura.'
+    request_classification: PLAN_DEVIATION
+    status: COMPLETED_GENERATION_ONLY
+    proposed_plan: PLAN-070
+    state_file: '.atena/state/plan-070-fila-025-ficha-c.yaml'
+    spec: '.atena/specs/SPEC-137-geracao-fila-025-ficha-c.yaml'
+    approval_mode: per-plan
+    approved: '2026-10-06'
+    note: 'Dez candidatas geradas e aprovadas visualmente pelo dono em 2026-10-06 (aprovados). Integracao posterior autorizada com vamos la e concluida localmente no PLAN-072; evidencia fila-025-integracao-2026-10-06.json. PLAN-071 ativo e cadeia de retorno preservados.'
+  - id: DEV-004
+    request: 'Estruturar plano para otimizar controles Xbox/PlayStation, com icones e funcoes; referencias Vampire Survivors e Death Must Die.'
+    request_classification: PLAN_DEVIATION
+    status: LOCAL_DELIVERED_AWAITING_HARDWARE
+    proposed_plan: PLAN-068
+    proposal: '.atena/vault/drafts/PLAN-068-experiencia-controles-xbox-playstation-2026-10-06.md'
+    state_file: '.atena/state/plan-068-controles-xbox-playstation.yaml'
+    owner_route: '2026-10-06: Planejar agora e deixar a execucao para depois do mobile (recomendado).'
+    approval_mode: per-plan
+    approval_status: APPROVED_PER_PLAN
+    approved: '2026-10-06'
+    approval_basis: 'Dono aprovou por plano com ajuste IN_PLAN: abas dentro dos detalhes L1/LB anterior e R1/RB proxima.'
+    last_request_classification: IN_PLAN
+    note: 'Dono pediu vamos la; execucao local PLAN-068 iniciada apos entrega/commit mobile, com suspensao recuperavel do checkpoint nativo. DEV-003 e retorno a Durvall preservados.'
+  - id: DEV-003
+    request: 'Novo fluxo de playtest/ranking: Web envia estatisticas automaticamente; Windows importa estatisticas dos arquivos de evidencia Discord; botoes F4/F5/F6 e contrato comum de dados.'
+    request_classification: PLAN_DEVIATION
+    proposal_classification: PLAN_CHANGE_REQUEST
+    status: LOCAL_DELIVERED_WITH_RETURN
+    proposal: '.atena/vault/drafts/PROPOSTA-playtest-web-e-evidencias-ranking-2026-10-06.md'
+    owner_route: '2026-10-06: Implementar depois do plano mobile (recomendado).'
+    approval_mode: per-plan
+    approval_status: APPROVED_LOCAL
+    proposed_plan: PLAN-071
+    state_file: '.atena/state/plan-071-playtest-ranking.yaml'
+    spec: '.atena/specs/SPEC-138-playtest-e-ranking.md'
+    approval_basis: '2026-10-06: inicie a implementacao; Por plano â€” executar todo o escopo local aprovado.'
+    note: 'Mobile entregue localmente; aceite nativo preservado. Pipeline do dono e gates remotos separados.'
+  - id: DEV-002
+    request: 'Controles e menus mobile; joystick de toque somente para andar. Proposta solicitada pelo dono em 2026-10-06.'
+    request_classification: PLAN_DEVIATION
+    status: EXECUTING_WITH_RETURN
+    proposed_plan: PLAN-067
+    state_file: '.atena/state/plan-067-controles-e-menus-mobile.yaml'
+    note: 'Dono escolheu per-plan (1) e autorizou sim, mobile agora em 2026-10-06; PLAN-066 suspenso com retorno preservado.'
+  - id: DEV-001
+    request: 'Varredura geral e revisao da movimentacao dos herois (PLAN-057 / SPEC-123), B-001 concluido; estado em .atena/state/plan-057-movimentacao.yaml.'
+    status: PAUSED_AT_CHECKPOINT
+completed_plans:
+  - id: PLAN-056
+    spec_id: SPEC-122
+    title: Balanceamento do ritmo inicial (XP, armas, eventos, raridade, fases)
+    status: ACCEPTED_BY_OWNER
+    accepted: '2026-10-05'
+    mode: per-batch
+    batches: {B-001: EVID-151, B-002: EVID-152, B-003: EVID-154, B-004: EVID-154, B-005: EVID-154, B-006: 'EVID-154, EVID-155', B-007: EVID-156, B-008: EVID-156}
+    commits: ['7d2f262 B-002', '35796ba B-003', '5fc8d04 B-004', 'eecced9 B-005', 'd86fbef B-007', '0cb3e8d release 0.3.1']
+    note: 'Pontos abertos transferidos ao BAL-018: Docas facil (3%), Feng-tu 6%, rodada com bot novato, RNG do bot nao semeado. Criterios de aceite numericos (nivel medio mapas 1 e 2; % Raro/Unico no tier 0) nunca fixados; dono aceitou sem eles.'
+completed_side_plans:
+  - {id: PLAN-073, spec_id: SPEC-140, status: AUTHORIZED_SCOPE_PUBLISHED_PILOT_ASSETS_PENDING, commit: 0e5e4977b63e0ba98990e7a2c54f43093098ba31, evidence: ".atena/evidence/consolidacao-push-2026-10-06.json", note: "Main local sincronizada por fast-forward; originais e backups preservados. PLAN-071 e retornos mantidos."}
+  - {id: PLAN-058, spec_id: SPEC-124, status: IMPLEMENTED_COMMITTED, commit: 69ec21c, evidence: EVID-159, note: 'Velocidade dos inimigos +20% (enemy_speed_mult); aguarda playtest.'}
+  - {id: PLAN-072, spec_id: SPEC-139, status: COMPLETED_LOCAL, evidence: '.atena/evidence/fila-025-integracao-2026-10-06.json', note: 'FILA-025 integrada com autorizacao vamos la; cursor de PLAN-071 preservado.'}
+  - {id: PLAN-066, spec_id: SPEC-133, status: IMPLEMENTED_PUBLISHED, commit: d370a14, evidence: EVID-171, mode: per-step, closed: '2026-10-06', note: 'Sylas, blast_dice 3d8 -> 1d10 (BAL-021); publicado na main; aguarda playtest; reverter = 3d8.'}
+proposed_plans:
+  - {id: PLAN-065, spec_id: SPEC-132, state_file: '.atena/state/plan-065-lettering-cursor.yaml', status: IN_PROGRESS_B003_WAITING_IMAGE_GENERATOR, approval_mode: per-plan, approved_at: '2026-10-06', note: 'Side-plan aprovado pelo dono em 2026-10-06; B-001 e B-002 feitas (EVID-172); B-003 aguarda o gerador de imagem e a FILA-025; nao e o active_plan.'}
+  - {id: PLAN-067, spec_id: SPEC-134, state_file: '.atena/state/plan-067-bau-mimico-e-item.yaml', status: IMPLEMENTED_COMMITTED_PUSHED, commit: ced9d8e, approval_mode: per-plan, approved_at: '2026-10-06', note: 'Side-plan (BUG-030 e BUG-031, relato do Manzi); EVID-173; nao e o active_plan; commit so com aprovacao.'}
+  - {id: PLAN-068, spec_id: SPEC-135, state_file: '.atena/state/plan-068-bau-e-portal-fora-de-bloqueio.yaml', status: IMPLEMENTED_COMMITTED_PUSHED, commit: 9f32c8a, approval_mode: per-plan, approved_at: '2026-10-06', note: 'Side-plan P0 (BUG-032, relato do Vitao); EVID-174; commit, push e build so com aprovacao; nao e o active_plan.'}
+  - {id: PLAN-069, spec_id: SPEC-136, state_file: '.atena/state/plan-069-grazzt-limpa-o-mapa.yaml', status: IMPLEMENTED_COMMITTED_PUSHED, commit: f17fae9, approval_mode: per-plan, approved_at: '2026-10-06', note: 'Side-plan (MEC-051, relato do Manzi); EVID-175; commit separado do PLAN-068, push e build so com aprovacao; nao e o active_plan.'}

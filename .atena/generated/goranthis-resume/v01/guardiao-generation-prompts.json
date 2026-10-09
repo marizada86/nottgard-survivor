@@ -1,0 +1,206 @@
+{
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "id": "guardiao_de_goranthis",
+  "jobs": [
+    {
+      "id": "guardiao_de_goranthis",
+      "state": "idle",
+      "index": 1,
+      "version": 1,
+      "prompt": "Use case: identity-preserve. ONE animation sprite of Guardiao do Paraiso. Image1 static exact identity, Image2 approved idle00 proportions/palette/camera. Preserve ivory MARBLE body with original green veins/vines, gold crown and laurels, TWO white feathered wings, TWO humanoid arms/TWO humanoid legs, ivory/gold draped cloth and ornaments, ONE long gold spear with sun-disc fitting and gold leaf tip held by ORIGINAL screenLEFT hand. Other screenRIGHT hand stays empty. No weapon hand swap, no mirror flip. Crisp dark-fantasy isometric pixel art facing RIGHT, 3/4 front view. Same apparent body size and exact clothing/stone design.1254square with FULL silhouette including complete spear tip/shaft/butt, crown, wing tips, feet and fabric tips INSIDE clear transparent margins >=70px all sides. Solid opaque character, native transparent background/gaps. No ground, castshadow, scenery, glow, magic circles, projectiles, loose particles, dust, text, UI, other character, extra limbs or duplicate spear. Frame idle_01: Breathing: chest slightly expands, wings settle a fraction, original planted spear still vertical, both feet stay same grounded positions.",
+      "refs": [
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/assets/enemies/guardiao_de_goranthis.png",
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_idle_00_v01.png"
+      ]
+    },
+    {
+      "id": "guardiao_de_goranthis",
+      "state": "idle",
+      "index": 2,
+      "version": 1,
+      "prompt": "Use case: identity-preserve. ONE animation sprite of Guardiao do Paraiso. Image1 static exact identity, Image2 approved idle00 proportions/palette/camera. Preserve ivory MARBLE body with original green veins/vines, gold crown and laurels, TWO white feathered wings, TWO humanoid arms/TWO humanoid legs, ivory/gold draped cloth and ornaments, ONE long gold spear with sun-disc fitting and gold leaf tip held by ORIGINAL screenLEFT hand. Other screenRIGHT hand stays empty. No weapon hand swap, no mirror flip. Crisp dark-fantasy isometric pixel art facing RIGHT, 3/4 front view. Same apparent body size and exact clothing/stone design.1254square with FULL silhouette including complete spear tip/shaft/butt, crown, wing tips, feet and fabric tips INSIDE clear transparent margins >=70px all sides. Solid opaque character, native transparent background/gaps. No ground, castshadow, scenery, glow, magic circles, projectiles, loose particles, dust, text, UI, other character, extra limbs or duplicate spear. Frame idle_02: Subtle weight shift toward rear leg, feathers shift slightly, spear in same hand vertical, still neutral.",
+      "refs": [
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/assets/enemies/guardiao_de_goranthis.png",
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_idle_00_v01.png"
+      ]
+    },
+    {
+      "id": "guardiao_de_goranthis",
+      "state": "idle",
+      "index": 3,
+      "version": 1,
+      "prompt": "Use case: identity-preserve. ONE animation sprite of Guardiao do Paraiso. Image1 static exact identity, Image2 approved idle00 proportions/palette/camera. Preserve ivory MARBLE body with original green veins/vines, gold crown and laurels, TWO white feathered wings, TWO humanoid arms/TWO humanoid legs, ivory/gold draped cloth and ornaments, ONE long gold spear with sun-disc fitting and gold leaf tip held by ORIGINAL screenLEFT hand. Other screenRIGHT hand stays empty. No weapon hand swap, no mirror flip. Crisp dark-fantasy isometric pixel art facing RIGHT, 3/4 front view. Same apparent body size and exact clothing/stone design.1254square with FULL silhouette including complete spear tip/shaft/butt, crown, wing tips, feet and fabric tips INSIDE clear transparent margins >=70px all sides. Solid opaque character, native transparent background/gaps. No ground, castshadow, scenery, glow, magic circles, projectiles, loose particles, dust, text, UI, other character, extra limbs or duplicate spear. Frame idle_03: Return to approved idle stance for seamless loop, head and crown fixed, planted spear stays same hand.",
+      "refs": [
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/assets/enemies/guardiao_de_goranthis.png",
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_idle_00_v01.png"
+      ]
+    },
+    {
+      "id": "guardiao_de_goranthis",
+      "state": "move",
+      "index": 0,
+      "version": 1,
+      "prompt": "Use case: identity-preserve. ONE animation sprite of Guardiao do Paraiso. Image1 static exact identity, Image2 approved idle00 proportions/palette/camera. Preserve ivory MARBLE body with original green veins/vines, gold crown and laurels, TWO white feathered wings, TWO humanoid arms/TWO humanoid legs, ivory/gold draped cloth and ornaments, ONE long gold spear with sun-disc fitting and gold leaf tip held by ORIGINAL screenLEFT hand. Other screenRIGHT hand stays empty. No weapon hand swap, no mirror flip. Crisp dark-fantasy isometric pixel art facing RIGHT, 3/4 front view. Same apparent body size and exact clothing/stone design.1254square with FULL silhouette including complete spear tip/shaft/butt, crown, wing tips, feet and fabric tips INSIDE clear transparent margins >=70px all sides. Solid opaque character, native transparent background/gaps. No ground, castshadow, scenery, glow, magic circles, projectiles, loose particles, dust, text, UI, other character, extra limbs or duplicate spear. Frame move_00: First contact walking RIGHT: near prominent leg steps FORWARD toward RIGHT, other far leg trails toward LEFT. Two different feet, grounded, wings partly closed, spear near vertical held same screenLEFT hand.",
+      "refs": [
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/assets/enemies/guardiao_de_goranthis.png",
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_idle_00_v01.png"
+      ]
+    },
+    {
+      "id": "guardiao_de_goranthis",
+      "state": "move",
+      "index": 1,
+      "version": 1,
+      "prompt": "Use case: identity-preserve. ONE animation sprite of Guardiao do Paraiso. Image1 static exact identity, Image2 approved idle00 proportions/palette/camera. Preserve ivory MARBLE body with original green veins/vines, gold crown and laurels, TWO white feathered wings, TWO humanoid arms/TWO humanoid legs, ivory/gold draped cloth and ornaments, ONE long gold spear with sun-disc fitting and gold leaf tip held by ORIGINAL screenLEFT hand. Other screenRIGHT hand stays empty. No weapon hand swap, no mirror flip. Crisp dark-fantasy isometric pixel art facing RIGHT, 3/4 front view. Same apparent body size and exact clothing/stone design.1254square with FULL silhouette including complete spear tip/shaft/butt, crown, wing tips, feet and fabric tips INSIDE clear transparent margins >=70px all sides. Solid opaque character, native transparent background/gaps. No ground, castshadow, scenery, glow, magic circles, projectiles, loose particles, dust, text, UI, other character, extra limbs or duplicate spear. Frame move_01: Weight transfer on forward near leg, knee flexes slightly, far foot starts leaving rear ground. Maintain first lead, one spear same hand.",
+      "refs": [
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/assets/enemies/guardiao_de_goranthis.png",
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_idle_00_v01.png"
+      ]
+    },
+    {
+      "id": "guardiao_de_goranthis",
+      "state": "move",
+      "index": 2,
+      "version": 1,
+      "prompt": "Use case: identity-preserve. ONE animation sprite of Guardiao do Paraiso. Image1 static exact identity, Image2 approved idle00 proportions/palette/camera. Preserve ivory MARBLE body with original green veins/vines, gold crown and laurels, TWO white feathered wings, TWO humanoid arms/TWO humanoid legs, ivory/gold draped cloth and ornaments, ONE long gold spear with sun-disc fitting and gold leaf tip held by ORIGINAL screenLEFT hand. Other screenRIGHT hand stays empty. No weapon hand swap, no mirror flip. Crisp dark-fantasy isometric pixel art facing RIGHT, 3/4 front view. Same apparent body size and exact clothing/stone design.1254square with FULL silhouette including complete spear tip/shaft/butt, crown, wing tips, feet and fabric tips INSIDE clear transparent margins >=70px all sides. Solid opaque character, native transparent background/gaps. No ground, castshadow, scenery, glow, magic circles, projectiles, loose particles, dust, text, UI, other character, extra limbs or duplicate spear. Frame move_02: PASSING pose: far trailing foot passes beside supporting near foot under hips, knees close together, trailing heel raised. Not another forward wide contact.",
+      "refs": [
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/assets/enemies/guardiao_de_goranthis.png",
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_idle_00_v01.png"
+      ]
+    },
+    {
+      "id": "guardiao_de_goranthis",
+      "state": "move",
+      "index": 3,
+      "version": 1,
+      "prompt": "Use case: identity-preserve. ONE animation sprite of Guardiao do Paraiso. Image1 static exact identity, Image2 approved idle00 proportions/palette/camera. Preserve ivory MARBLE body with original green veins/vines, gold crown and laurels, TWO white feathered wings, TWO humanoid arms/TWO humanoid legs, ivory/gold draped cloth and ornaments, ONE long gold spear with sun-disc fitting and gold leaf tip held by ORIGINAL screenLEFT hand. Other screenRIGHT hand stays empty. No weapon hand swap, no mirror flip. Crisp dark-fantasy isometric pixel art facing RIGHT, 3/4 front view. Same apparent body size and exact clothing/stone design.1254square with FULL silhouette including complete spear tip/shaft/butt, crown, wing tips, feet and fabric tips INSIDE clear transparent margins >=70px all sides. Solid opaque character, native transparent background/gaps. No ground, castshadow, scenery, glow, magic circles, projectiles, loose particles, dust, text, UI, other character, extra limbs or duplicate spear. Frame move_03: OPPOSITE CONTACT walking RIGHT: the previously forward NEAR leg now trails toward LEFT and the FAR leg steps forward to RIGHT; two separate legs physically exchange front/back, not same near-leg lead. Same spear hand, wings partly closed.",
+      "refs": [
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/assets/enemies/guardiao_de_goranthis.png",
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_idle_00_v01.png"
+      ]
+    },
+    {
+      "id": "guardiao_de_goranthis",
+      "state": "move",
+      "index": 4,
+      "version": 1,
+      "prompt": "Use case: identity-preserve. ONE animation sprite of Guardiao do Paraiso. Image1 static exact identity, Image2 approved idle00 proportions/palette/camera. Preserve ivory MARBLE body with original green veins/vines, gold crown and laurels, TWO white feathered wings, TWO humanoid arms/TWO humanoid legs, ivory/gold draped cloth and ornaments, ONE long gold spear with sun-disc fitting and gold leaf tip held by ORIGINAL screenLEFT hand. Other screenRIGHT hand stays empty. No weapon hand swap, no mirror flip. Crisp dark-fantasy isometric pixel art facing RIGHT, 3/4 front view. Same apparent body size and exact clothing/stone design.1254square with FULL silhouette including complete spear tip/shaft/butt, crown, wing tips, feet and fabric tips INSIDE clear transparent margins >=70px all sides. Solid opaque character, native transparent background/gaps. No ground, castshadow, scenery, glow, magic circles, projectiles, loose particles, dust, text, UI, other character, extra limbs or duplicate spear. Frame move_04: Opposite weight transfer: FAR leg remains the forward supporting leg on RIGHT, near leg trails behindLEFT with heel rising. Match opposite contact.",
+      "refs": [
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/assets/enemies/guardiao_de_goranthis.png",
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_idle_00_v01.png"
+      ]
+    },
+    {
+      "id": "guardiao_de_goranthis",
+      "state": "move",
+      "index": 5,
+      "version": 1,
+      "prompt": "Use case: identity-preserve. ONE animation sprite of Guardiao do Paraiso. Image1 static exact identity, Image2 approved idle00 proportions/palette/camera. Preserve ivory MARBLE body with original green veins/vines, gold crown and laurels, TWO white feathered wings, TWO humanoid arms/TWO humanoid legs, ivory/gold draped cloth and ornaments, ONE long gold spear with sun-disc fitting and gold leaf tip held by ORIGINAL screenLEFT hand. Other screenRIGHT hand stays empty. No weapon hand swap, no mirror flip. Crisp dark-fantasy isometric pixel art facing RIGHT, 3/4 front view. Same apparent body size and exact clothing/stone design.1254square with FULL silhouette including complete spear tip/shaft/butt, crown, wing tips, feet and fabric tips INSIDE clear transparent margins >=70px all sides. Solid opaque character, native transparent background/gaps. No ground, castshadow, scenery, glow, magic circles, projectiles, loose particles, dust, text, UI, other character, extra limbs or duplicate spear. Frame move_05: Closing passing pose: near trailing foot starts passing under hips toward next first contact, two feet close; wings/cloth settle to start loop.",
+      "refs": [
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/assets/enemies/guardiao_de_goranthis.png",
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_idle_00_v01.png"
+      ]
+    },
+    {
+      "id": "guardiao_de_goranthis",
+      "state": "attack",
+      "index": 0,
+      "version": 1,
+      "prompt": "Use case: identity-preserve. ONE animation sprite of Guardiao do Paraiso. Image1 static exact identity, Image2 approved idle00 proportions/palette/camera. Preserve ivory MARBLE body with original green veins/vines, gold crown and laurels, TWO white feathered wings, TWO humanoid arms/TWO humanoid legs, ivory/gold draped cloth and ornaments, ONE long gold spear with sun-disc fitting and gold leaf tip held by ORIGINAL screenLEFT hand. Other screenRIGHT hand stays empty. No weapon hand swap, no mirror flip. Crisp dark-fantasy isometric pixel art facing RIGHT, 3/4 front view. Same apparent body size and exact clothing/stone design.1254square with FULL silhouette including complete spear tip/shaft/butt, crown, wing tips, feet and fabric tips INSIDE clear transparent margins >=70px all sides. Solid opaque character, native transparent background/gaps. No ground, castshadow, scenery, glow, magic circles, projectiles, loose particles, dust, text, UI, other character, extra limbs or duplicate spear. Frame attack_00: Anticipation: lean back slightly, screenLEFT holding hand draws spear to side, spear tilts diagonally upRIGHT, screenRIGHT free hand stays empty by torso. Two grounded feet.",
+      "refs": [
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/assets/enemies/guardiao_de_goranthis.png",
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_idle_00_v01.png"
+      ]
+    },
+    {
+      "id": "guardiao_de_goranthis",
+      "state": "attack",
+      "index": 1,
+      "version": 1,
+      "prompt": "Use case: identity-preserve. ONE animation sprite of Guardiao do Paraiso. Image1 static exact identity, Image2 approved idle00 proportions/palette/camera. Preserve ivory MARBLE body with original green veins/vines, gold crown and laurels, TWO white feathered wings, TWO humanoid arms/TWO humanoid legs, ivory/gold draped cloth and ornaments, ONE long gold spear with sun-disc fitting and gold leaf tip held by ORIGINAL screenLEFT hand. Other screenRIGHT hand stays empty. No weapon hand swap, no mirror flip. Crisp dark-fantasy isometric pixel art facing RIGHT, 3/4 front view. Same apparent body size and exact clothing/stone design.1254square with FULL silhouette including complete spear tip/shaft/butt, crown, wing tips, feet and fabric tips INSIDE clear transparent margins >=70px all sides. Solid opaque character, native transparent background/gaps. No ground, castshadow, scenery, glow, magic circles, projectiles, loose particles, dust, text, UI, other character, extra limbs or duplicate spear. Frame attack_01: Begin thrust to RIGHT: original spear hand pushes long spear diagonally forwardRIGHT, shoulder follows, wings open a little. Complete spear tip/shaft/butt inside frame.",
+      "refs": [
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/assets/enemies/guardiao_de_goranthis.png",
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_idle_00_v01.png"
+      ]
+    },
+    {
+      "id": "guardiao_de_goranthis",
+      "state": "attack",
+      "index": 2,
+      "version": 1,
+      "prompt": "Use case: identity-preserve. ONE animation sprite of Guardiao do Paraiso. Image1 static exact identity, Image2 approved idle00 proportions/palette/camera. Preserve ivory MARBLE body with original green veins/vines, gold crown and laurels, TWO white feathered wings, TWO humanoid arms/TWO humanoid legs, ivory/gold draped cloth and ornaments, ONE long gold spear with sun-disc fitting and gold leaf tip held by ORIGINAL screenLEFT hand. Other screenRIGHT hand stays empty. No weapon hand swap, no mirror flip. Crisp dark-fantasy isometric pixel art facing RIGHT, 3/4 front view. Same apparent body size and exact clothing/stone design.1254square with FULL silhouette including complete spear tip/shaft/butt, crown, wing tips, feet and fabric tips INSIDE clear transparent margins >=70px all sides. Solid opaque character, native transparent background/gaps. No ground, castshadow, scenery, glow, magic circles, projectiles, loose particles, dust, text, UI, other character, extra limbs or duplicate spear. Frame attack_02: IMPACT: extend original spear arm in a clear diagonal thrust toward upperRIGHT with short wing spread. Spear one uninterrupted shaft, both ends complete, keep spear in ORIGINAL screenLEFT hand, near free hand EMPTY. No beam or projectile.",
+      "refs": [
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/assets/enemies/guardiao_de_goranthis.png",
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_idle_00_v01.png"
+      ]
+    },
+    {
+      "id": "guardiao_de_goranthis",
+      "state": "attack",
+      "index": 3,
+      "version": 1,
+      "prompt": "Use case: identity-preserve. ONE animation sprite of Guardiao do Paraiso. Image1 static exact identity, Image2 approved idle00 proportions/palette/camera. Preserve ivory MARBLE body with original green veins/vines, gold crown and laurels, TWO white feathered wings, TWO humanoid arms/TWO humanoid legs, ivory/gold draped cloth and ornaments, ONE long gold spear with sun-disc fitting and gold leaf tip held by ORIGINAL screenLEFT hand. Other screenRIGHT hand stays empty. No weapon hand swap, no mirror flip. Crisp dark-fantasy isometric pixel art facing RIGHT, 3/4 front view. Same apparent body size and exact clothing/stone design.1254square with FULL silhouette including complete spear tip/shaft/butt, crown, wing tips, feet and fabric tips INSIDE clear transparent margins >=70px all sides. Solid opaque character, native transparent background/gaps. No ground, castshadow, scenery, glow, magic circles, projectiles, loose particles, dust, text, UI, other character, extra limbs or duplicate spear. Frame attack_03: Recovery: draw spear back toward original upright position in same screenLEFT hand, body straightens, wings relax, feet grounded.",
+      "refs": [
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/assets/enemies/guardiao_de_goranthis.png",
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_idle_00_v01.png"
+      ]
+    },
+    {
+      "id": "guardiao_de_goranthis",
+      "state": "death",
+      "index": 0,
+      "version": 1,
+      "prompt": "Use case: identity-preserve. ONE animation sprite of Guardiao do Paraiso. Image1 static exact identity, Image2 approved idle00 proportions/palette/camera. Preserve ivory MARBLE body with original green veins/vines, gold crown and laurels, TWO white feathered wings, TWO humanoid arms/TWO humanoid legs, ivory/gold draped cloth and ornaments, ONE long gold spear with sun-disc fitting and gold leaf tip held by ORIGINAL screenLEFT hand. Other screenRIGHT hand stays empty. No weapon hand swap, no mirror flip. Crisp dark-fantasy isometric pixel art facing RIGHT, 3/4 front view. Same apparent body size and exact clothing/stone design.1254square with FULL silhouette including complete spear tip/shaft/butt, crown, wing tips, feet and fabric tips INSIDE clear transparent margins >=70px all sides. Solid opaque character, native transparent background/gaps. No ground, castshadow, scenery, glow, magic circles, projectiles, loose particles, dust, text, UI, other character, extra limbs or duplicate spear. Frame death_00: Impact: marble body bends at waist, knees start flexing, head lowers, wings descend slightly, same holding hand grips spear leaning towardRIGHT.",
+      "refs": [
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/assets/enemies/guardiao_de_goranthis.png",
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_idle_00_v01.png"
+      ]
+    },
+    {
+      "id": "guardiao_de_goranthis",
+      "state": "death",
+      "index": 1,
+      "version": 1,
+      "prompt": "Use case: identity-preserve. ONE animation sprite of Guardiao do Paraiso. Image1 static exact identity, Image2 approved idle00 proportions/palette/camera. Preserve ivory MARBLE body with original green veins/vines, gold crown and laurels, TWO white feathered wings, TWO humanoid arms/TWO humanoid legs, ivory/gold draped cloth and ornaments, ONE long gold spear with sun-disc fitting and gold leaf tip held by ORIGINAL screenLEFT hand. Other screenRIGHT hand stays empty. No weapon hand swap, no mirror flip. Crisp dark-fantasy isometric pixel art facing RIGHT, 3/4 front view. Same apparent body size and exact clothing/stone design.1254square with FULL silhouette including complete spear tip/shaft/butt, crown, wing tips, feet and fabric tips INSIDE clear transparent margins >=70px all sides. Solid opaque character, native transparent background/gaps. No ground, castshadow, scenery, glow, magic circles, projectiles, loose particles, dust, text, UI, other character, extra limbs or duplicate spear. Frame death_01: Knees buckle: body crouches lower than prior frame, head/crown and wings descend, spear tilts lower in original hand.",
+      "refs": [
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/assets/enemies/guardiao_de_goranthis.png",
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_idle_00_v01.png"
+      ]
+    },
+    {
+      "id": "guardiao_de_goranthis",
+      "state": "death",
+      "index": 2,
+      "version": 1,
+      "prompt": "Use case: identity-preserve. ONE animation sprite of Guardiao do Paraiso. Image1 static exact identity, Image2 approved idle00 proportions/palette/camera. Preserve ivory MARBLE body with original green veins/vines, gold crown and laurels, TWO white feathered wings, TWO humanoid arms/TWO humanoid legs, ivory/gold draped cloth and ornaments, ONE long gold spear with sun-disc fitting and gold leaf tip held by ORIGINAL screenLEFT hand. Other screenRIGHT hand stays empty. No weapon hand swap, no mirror flip. Crisp dark-fantasy isometric pixel art facing RIGHT, 3/4 front view. Same apparent body size and exact clothing/stone design.1254square with FULL silhouette including complete spear tip/shaft/butt, crown, wing tips, feet and fabric tips INSIDE clear transparent margins >=70px all sides. Solid opaque character, native transparent background/gaps. No ground, castshadow, scenery, glow, magic circles, projectiles, loose particles, dust, text, UI, other character, extra limbs or duplicate spear. Frame death_02: Fall further: both knees near ground, torso begins leaning sidewardsRIGHT, crown below crouch height, wings droop, spear held low diagonally beside body.",
+      "refs": [
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/assets/enemies/guardiao_de_goranthis.png",
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_idle_00_v01.png"
+      ]
+    },
+    {
+      "id": "guardiao_de_goranthis",
+      "state": "death",
+      "index": 3,
+      "version": 1,
+      "prompt": "Use case: identity-preserve. ONE animation sprite of Guardiao do Paraiso. Image1 static exact identity, Image2 approved idle00 proportions/palette/camera. Preserve ivory MARBLE body with original green veins/vines, gold crown and laurels, TWO white feathered wings, TWO humanoid arms/TWO humanoid legs, ivory/gold draped cloth and ornaments, ONE long gold spear with sun-disc fitting and gold leaf tip held by ORIGINAL screenLEFT hand. Other screenRIGHT hand stays empty. No weapon hand swap, no mirror flip. Crisp dark-fantasy isometric pixel art facing RIGHT, 3/4 front view. Same apparent body size and exact clothing/stone design.1254square with FULL silhouette including complete spear tip/shaft/butt, crown, wing tips, feet and fabric tips INSIDE clear transparent margins >=70px all sides. Solid opaque character, native transparent background/gaps. No ground, castshadow, scenery, glow, magic circles, projectiles, loose particles, dust, text, UI, other character, extra limbs or duplicate spear. Frame death_03: Semi-collapsed side fall toRIGHT: hips and torso approach ground, head much LOWER than kneeling frame; wings fold down with body, spear descends toward horizontal alongside body in original holding hand. No standing up or high raised wing.",
+      "refs": [
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/assets/enemies/guardiao_de_goranthis.png",
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_idle_00_v01.png"
+      ]
+    },
+    {
+      "id": "guardiao_de_goranthis",
+      "state": "death",
+      "index": 4,
+      "version": 1,
+      "prompt": "Use case: identity-preserve. ONE animation sprite of Guardiao do Paraiso. Image1 static exact identity, Image2 approved idle00 proportions/palette/camera. Preserve ivory MARBLE body with original green veins/vines, gold crown and laurels, TWO white feathered wings, TWO humanoid arms/TWO humanoid legs, ivory/gold draped cloth and ornaments, ONE long gold spear with sun-disc fitting and gold leaf tip held by ORIGINAL screenLEFT hand. Other screenRIGHT hand stays empty. No weapon hand swap, no mirror flip. Crisp dark-fantasy isometric pixel art facing RIGHT, 3/4 front view. Same apparent body size and exact clothing/stone design.1254square with FULL silhouette including complete spear tip/shaft/butt, crown, wing tips, feet and fabric tips INSIDE clear transparent margins >=70px all sides. Solid opaque character, native transparent background/gaps. No ground, castshadow, scenery, glow, magic circles, projectiles, loose particles, dust, text, UI, other character, extra limbs or duplicate spear. Frame death_04: Full side collapse: body lies on RIGHT side, head/crown low next to shoulder, wings resting folded beside back, two arms/two legs intact. Entire gold spear lies horizontal along body still in ORIGINAL holding hand, free hand resting, cloth drapes over folded legs. All parts intact, no dust/gore/detached parts.",
+      "refs": [
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/assets/enemies/guardiao_de_goranthis.png",
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_idle_00_v01.png"
+      ]
+    }
+  ],
+  "final_death_frame": "Generate after visual inspection of death04; keep its resting pose."
+}

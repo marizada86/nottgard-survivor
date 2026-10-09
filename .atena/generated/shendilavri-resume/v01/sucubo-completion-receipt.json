@@ -1,0 +1,607 @@
+{
+  "date": "2026-10-07",
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "actor": "sucubo",
+  "status": "INTEGRATED_LOCAL_VALIDATED",
+  "sources": [
+    {
+      "state": "attack",
+      "index": 0,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_attack_00_v01.png",
+      "sha256": "39377681e78fb6ef71c1103988d371b92d3adb272996e39bfca5ac1c145bf234",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        243,
+        30,
+        1118,
+        1233
+      ],
+      "solidity": 0.9571717879388294,
+      "clipped": false,
+      "anchor": "(639.0, 1231.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "attack",
+      "index": 1,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_attack_01_v02.png",
+      "sha256": "34786a60c84d97ed481f9e0038f1c3531759f1a95bd5aacc7406f442d1c3c6dc",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        68,
+        41,
+        1209,
+        1219
+      ],
+      "solidity": 0.9527260068894968,
+      "clipped": false,
+      "anchor": "(754.5, 1217.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "attack",
+      "index": 2,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_attack_02_v02.png",
+      "sha256": "7560dd99b583ab24b1279793f1e6b30b0f75b43b89d588cb4ea4f3ab5b4fcd57",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        88,
+        48,
+        1189,
+        1220
+      ],
+      "solidity": 0.9538205254246546,
+      "clipped": false,
+      "anchor": "(565.5, 1218.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "attack",
+      "index": 3,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_attack_03_v01.png",
+      "sha256": "033b95af3586ba5ffa7fd17cc290aee8db644e8f316c089d8d1a0f09500274c9",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        283,
+        32,
+        1028,
+        1224
+      ],
+      "solidity": 0.9562628778331232,
+      "clipped": false,
+      "anchor": "(806.5, 1223.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "death",
+      "index": 0,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_death_00_v01.png",
+      "sha256": "78b8011cebd0dff28952f06b96841ce0fdccf514193b8df5aa967f90c787d2c0",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        244,
+        35,
+        1068,
+        1222
+      ],
+      "solidity": 0.9525349001197111,
+      "clipped": false,
+      "anchor": "(657.0, 1221.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "death",
+      "index": 1,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_death_01_v01.png",
+      "sha256": "40cc421f67c4a9aa8d60042909d2088596f78c7bfb823ed08de247fda917d5c3",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        144,
+        234,
+        1159,
+        1252
+      ],
+      "solidity": 0.9660770326774256,
+      "clipped": false,
+      "anchor": "(651.0, 1248.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "death",
+      "index": 2,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_death_02_v01.png",
+      "sha256": "b3698caa21137d1ab4655752f99213402c8f6af4f96d1f6beda109115732d3f0",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        120,
+        269,
+        1219,
+        1223
+      ],
+      "solidity": 0.9668284427593333,
+      "clipped": false,
+      "anchor": "(669.0, 1222.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "death",
+      "index": 3,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_death_03_v01.png",
+      "sha256": "a3fd83e90806f301bb9fe207e030696f345b4d9961a5864f2519857619778e59",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        52,
+        476,
+        1229,
+        1077
+      ],
+      "solidity": 0.9668745082843085,
+      "clipped": false,
+      "anchor": "(640.0, 1075.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "death",
+      "index": 4,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_death_04_v03.png",
+      "sha256": "151d95f18fbf0e3bb612fd98c6ceb253822f2bb509f8062dea9e5293c5c37cc6",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        26,
+        479,
+        1236,
+        1139
+      ],
+      "solidity": 0.9675097470758772,
+      "clipped": false,
+      "anchor": "(631.0, 1071.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "death",
+      "index": 5,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_death_05_v03.png",
+      "sha256": "e51d42647b4ae54af235ac00e302bf759436ca175aed63d30b645be755d576a4",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        23,
+        476,
+        1240,
+        1141
+      ],
+      "solidity": 0.9731515520514619,
+      "clipped": false,
+      "anchor": "(631.0, 1070.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "idle",
+      "index": 0,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_idle_00_v01.png",
+      "sha256": "095218f4b25d3bc7088fac39f1c7ee494df7e9b20a9be43be5a674e14a9d5663",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        284,
+        31,
+        1040,
+        1224
+      ],
+      "solidity": 0.9472658113596802,
+      "clipped": false,
+      "anchor": "(806.5, 1223.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "idle",
+      "index": 1,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_idle_01_v01.png",
+      "sha256": "97af5d3230fa8346897ee011f6dde7fd3a7716322e58da8a2bc60d5b3375e2fa",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        276,
+        30,
+        1046,
+        1223
+      ],
+      "solidity": 0.9544852372797522,
+      "clipped": false,
+      "anchor": "(806.5, 1222.0)",
+      "scale": 1.00084033613445
+    },
+    {
+      "state": "idle",
+      "index": 2,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_idle_02_v01.png",
+      "sha256": "b406aa4637e8142fd4de11c713a8e0790d4278921124607bfd47f4a7bed3917e",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        278,
+        31,
+        1059,
+        1220
+      ],
+      "solidity": 0.9534864207889638,
+      "clipped": false,
+      "anchor": "(812.0, 1218.0)",
+      "scale": 1.00421585160202
+    },
+    {
+      "state": "idle",
+      "index": 3,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_idle_03_v01.png",
+      "sha256": "5c7ac709663bbe07f226c8fabce1f905d9f75d383c4385f38940e616900e0af6",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        284,
+        32,
+        1043,
+        1225
+      ],
+      "solidity": 0.9568170888105162,
+      "clipped": false,
+      "anchor": "(806.5, 1223.0)",
+      "scale": 1.00084033613445
+    },
+    {
+      "state": "move",
+      "index": 0,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_move_00_v01.png",
+      "sha256": "7c6323fe0898789c31e1c4045d84084bad588dfb58c2099167a570b63d8debc8",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        275,
+        30,
+        1062,
+        1221
+      ],
+      "solidity": 0.955053794402649,
+      "clipped": false,
+      "anchor": "(861.5, 1220.0)",
+      "scale": 1.00168208578638
+    },
+    {
+      "state": "move",
+      "index": 1,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_move_01_v01.png",
+      "sha256": "696a480b369aa5cd43eea07f8b61bd8acc3d823ff43d386422e7f8344e31a9cf",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        277,
+        38,
+        1068,
+        1222
+      ],
+      "solidity": 0.953704937120416,
+      "clipped": false,
+      "anchor": "(838.5, 1221.0)",
+      "scale": 1.00761421319797
+    },
+    {
+      "state": "move",
+      "index": 2,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_move_02_v02.png",
+      "sha256": "98df0670122ac8daa99ab774d5be86232259d926a6f1866e1d3f4aca00fe6396",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        244,
+        26,
+        1074,
+        1211
+      ],
+      "solidity": 0.9618706794994332,
+      "clipped": false,
+      "anchor": "(773.0, 1209.0)",
+      "scale": 1.00846740050804
+    },
+    {
+      "state": "move",
+      "index": 3,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_move_03_v03.png",
+      "sha256": "73c1f43c67bc729f2884aa57a040cf9a79edf82e96db0b8346d768e20b143c9d",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        246,
+        29,
+        1073,
+        1200
+      ],
+      "solidity": 0.9590260466980569,
+      "clipped": false,
+      "anchor": "(944.0, 1198.0)",
+      "scale": 1.01969178082192
+    },
+    {
+      "state": "move",
+      "index": 4,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_move_04_v01.png",
+      "sha256": "228cb521e2c954983369b0c3b4864cc46f6189eefeeceea75d6d2df60519e4f4",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        271,
+        35,
+        1076,
+        1219
+      ],
+      "solidity": 0.9546240994461865,
+      "clipped": false,
+      "anchor": "(837.5, 1218.0)",
+      "scale": 1.00846740050804
+    },
+    {
+      "state": "move",
+      "index": 5,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_move_05_v01.png",
+      "sha256": "884f0e85c9c59942d79b848e1f735d6fd5308c65a2fe7421fe12b3bbd3ec9520",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        287,
+        33,
+        1045,
+        1214
+      ],
+      "solidity": 0.9533738356849182,
+      "clipped": false,
+      "anchor": "(871.5, 1212.0)",
+      "scale": 1.01103565365025
+    }
+  ],
+  "assets": [
+    {
+      "state": "attack",
+      "path": "assets/animations/enemies/sucubo/attack.png",
+      "size": [
+        1024,
+        384
+      ],
+      "sha256": "8d1485f1005fd94d97c07dfd5548039900d966c37aa781bb39d528cb7a3e6e89"
+    },
+    {
+      "state": "death",
+      "path": "assets/animations/enemies/sucubo/death.png",
+      "size": [
+        1536,
+        384
+      ],
+      "sha256": "47d59a24f2e58151bee9752096866fe0f8e2bffc681cd07524aba2a0c8447dc7"
+    },
+    {
+      "state": "idle",
+      "path": "assets/animations/enemies/sucubo/idle.png",
+      "size": [
+        1024,
+        384
+      ],
+      "sha256": "98e4c074dbd72d3e3458d680f0b007ae963e94351e09a654658b7aa25a91460a"
+    },
+    {
+      "state": "move",
+      "path": "assets/animations/enemies/sucubo/move.png",
+      "size": [
+        1536,
+        384
+      ],
+      "sha256": "515186cf050e4efcfcfdefd0960292c5e79236ff683b8815882f66bc7f98f4f0"
+    }
+  ],
+  "packing": {
+    "body_height": 177.375355665801,
+    "cell": [
+      256,
+      384
+    ],
+    "feet_y": 356,
+    "fit": 0.148929769660622,
+    "id": "sucubo",
+    "native_alpha": true,
+    "sources": {
+      "attack": [
+        {
+          "anchor": "(639.0, 1231.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_attack_00_v01.png",
+          "scale": 1.0
+        },
+        {
+          "anchor": "(754.5, 1217.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_attack_01_v02.png",
+          "scale": 1.0
+        },
+        {
+          "anchor": "(565.5, 1218.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_attack_02_v02.png",
+          "scale": 1.0
+        },
+        {
+          "anchor": "(806.5, 1223.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_attack_03_v01.png",
+          "scale": 1.0
+        }
+      ],
+      "death": [
+        {
+          "anchor": "(657.0, 1221.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_death_00_v01.png",
+          "scale": 1.0
+        },
+        {
+          "anchor": "(651.0, 1248.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_death_01_v01.png",
+          "scale": 1.0
+        },
+        {
+          "anchor": "(669.0, 1222.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_death_02_v01.png",
+          "scale": 1.0
+        },
+        {
+          "anchor": "(640.0, 1075.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_death_03_v01.png",
+          "scale": 1.0
+        },
+        {
+          "anchor": "(631.0, 1071.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_death_04_v03.png",
+          "scale": 1.0
+        },
+        {
+          "anchor": "(631.0, 1070.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_death_05_v03.png",
+          "scale": 1.0
+        }
+      ],
+      "idle": [
+        {
+          "anchor": "(806.5, 1223.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_idle_00_v01.png",
+          "scale": 1.0
+        },
+        {
+          "anchor": "(806.5, 1222.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_idle_01_v01.png",
+          "scale": 1.00084033613445
+        },
+        {
+          "anchor": "(812.0, 1218.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_idle_02_v01.png",
+          "scale": 1.00421585160202
+        },
+        {
+          "anchor": "(806.5, 1223.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_idle_03_v01.png",
+          "scale": 1.00084033613445
+        }
+      ],
+      "move": [
+        {
+          "anchor": "(861.5, 1220.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_move_00_v01.png",
+          "scale": 1.00168208578638
+        },
+        {
+          "anchor": "(838.5, 1221.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_move_01_v01.png",
+          "scale": 1.00761421319797
+        },
+        {
+          "anchor": "(773.0, 1209.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_move_02_v02.png",
+          "scale": 1.00846740050804
+        },
+        {
+          "anchor": "(944.0, 1198.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_move_03_v03.png",
+          "scale": 1.01969178082192
+        },
+        {
+          "anchor": "(837.5, 1218.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_move_04_v01.png",
+          "scale": 1.00846740050804
+        },
+        {
+          "anchor": "(871.5, 1212.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/sucubo/sucubo_move_05_v01.png",
+          "scale": 1.01103565365025
+        }
+      ]
+    }
+  },
+  "checks": {
+    "queue": {
+      "path": ".atena/generated/shendilavri-resume/v01/sucubo-queue.log",
+      "passed": true,
+      "marker": "Animation queue: 0 failure(s)"
+    },
+    "runtime": {
+      "path": ".atena/generated/shendilavri-resume/v01/sucubo-runtime.log",
+      "passed": true,
+      "marker": "death cleanup OK"
+    },
+    "suite": {
+      "path": ".atena/generated/shendilavri-resume/v01/sucubo-suite.log",
+      "passed": true,
+      "marker": "testes: 0 falha(s)"
+    },
+    "smoke": {
+      "path": ".atena/generated/shendilavri-resume/v01/sucubo-smoke.log",
+      "passed": true,
+      "marker": "smoke: ok"
+    },
+    "capture": {
+      "path": ".atena/generated/shendilavri-resume/v01/sucubo-capture.log",
+      "passed": true,
+      "marker": "Shedaklah capture result=0"
+    },
+    "reuse": {
+      "path": ".atena/generated/shendilavri-resume/v01/ilusao_de_sucubo-runtime.log",
+      "id": "ilusao_de_sucubo",
+      "source_id": "sucubo",
+      "alpha": 0.45,
+      "passed": true
+    }
+  },
+  "manifest_verified": 167,
+  "capture": ".atena/generated/priority-review/sucubo_runtime.png",
+  "native_alpha_preserved": true,
+  "next_actor": "guarda_do_castelo",
+  "remaining_new_frames": 63
+}

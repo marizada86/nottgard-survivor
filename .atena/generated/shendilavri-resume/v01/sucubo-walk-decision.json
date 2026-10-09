@@ -1,0 +1,16 @@
+{
+  "status": "APPROVED_EXCEPTION",
+  "reason": "move04 reached three versions; v02 returns wrong leading leg and v03 has ambiguous extra leg anatomy, both rejected. Preview uses v01 with short opposite contact.",
+  "preview_versions": [
+    1,
+    1,
+    2,
+    3,
+    1,
+    1
+  ],
+  "alternation": "Opposite contact achieved at move03 v03; move02 v02 is proper passing pose; move04 v01 returns early.",
+  "approval_scope": "Short opposite contact for Sucubo only, selected versions1/1/2/3/1/1. Local admission authorized within PLAN-053; no Git or publication authorization.",
+  "approved_at": "2026-10-07",
+  "authorization": "Dono respondeu aprovado, continue apos entrega da previa e decisao explicita sobre aceitar contato oposto curto."
+}

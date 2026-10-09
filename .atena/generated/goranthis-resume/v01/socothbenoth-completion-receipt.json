@@ -1,0 +1,799 @@
+{
+  "date": "2026-10-08",
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "actor": "socothbenoth",
+  "status": "INTEGRATED_LOCAL_VALIDATED",
+  "sources": [
+    {
+      "state": "attack",
+      "index": 0,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_attack_00_v01.png",
+      "sha256": "adeff690b6e412def2452c039fc467ac819fe6e58aedba3238164de1f737f723",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        113,
+        22,
+        1147,
+        1220
+      ],
+      "solidity": 0.9537348531088684,
+      "clipped": false,
+      "anchor": "(630.0, 1218.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "attack",
+      "index": 1,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_attack_01_v01.png",
+      "sha256": "c917758eb7a34ae37a38bd9916d04014ce7d961c205bf4adcfe4d7fcbd456b05",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        41,
+        37,
+        1224,
+        1221
+      ],
+      "solidity": 0.9543526831288683,
+      "clipped": false,
+      "anchor": "(632.0, 1220.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "attack",
+      "index": 2,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_attack_02_v01.png",
+      "sha256": "719504bd0bdcf37b13be9d1f03d2ffc2ad0f3da5d67cf27bd032d4eac9b5db34",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        28,
+        48,
+        1235,
+        1223
+      ],
+      "solidity": 0.9501467290495833,
+      "clipped": false,
+      "anchor": "(631.5, 1221.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "attack",
+      "index": 3,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_attack_03_v01.png",
+      "sha256": "f6fb12087336bee52b3e007441ce62fe10b1ab40d281777286bcf537b8cd88f3",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        235,
+        21,
+        1045,
+        1207
+      ],
+      "solidity": 0.9526054972821684,
+      "clipped": false,
+      "anchor": "(640.5, 1206.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "death",
+      "index": 0,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_death_00_v01.png",
+      "sha256": "3c50308df8c284a695e879718f05a8ddb426e13cb6e0e6337c71d70ec229d38b",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        210,
+        34,
+        1048,
+        1220
+      ],
+      "solidity": 0.9542222702267843,
+      "clipped": false,
+      "anchor": "(629.0, 1218.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "death",
+      "index": 1,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_death_01_v01.png",
+      "sha256": "ddedc2859d86dc84a1c52963ce0517136810795154807f222e317b65f2510a7f",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        79,
+        110,
+        1185,
+        1218
+      ],
+      "solidity": 0.9663206552865862,
+      "clipped": false,
+      "anchor": "(632.0, 1217.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "death",
+      "index": 2,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_death_02_v01.png",
+      "sha256": "63955fd1a67e464b7b75b061aa15e8bce8fce2c94427e0cf1b9a692ac8288871",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        46,
+        266,
+        1225,
+        1157
+      ],
+      "solidity": 0.9722534515386265,
+      "clipped": false,
+      "anchor": "(635.0, 1155.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "death",
+      "index": 3,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_death_03_v01.png",
+      "sha256": "54f0a356f9cc94f499fb6c1d06af6118438986d0147bf6375b39f3f81ea2621e",
+      "size": [
+        1536,
+        1024
+      ],
+      "bbox": [
+        43,
+        123,
+        1505,
+        962
+      ],
+      "solidity": 0.9708736536160028,
+      "clipped": false,
+      "anchor": "(774.0, 931.0)",
+      "scale": 0.89396484375
+    },
+    {
+      "state": "death",
+      "index": 4,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_death_04_v01.png",
+      "sha256": "d5588d6427a1da9e80032836c2b17f9289b5dedd995180a95a367d6bb7e1f328",
+      "size": [
+        1774,
+        887
+      ],
+      "bbox": [
+        52,
+        180,
+        1742,
+        842
+      ],
+      "solidity": 0.9732608816344659,
+      "clipped": false,
+      "anchor": "(896.0, 810.0)",
+      "scale": 0.763427282976325
+    },
+    {
+      "state": "death",
+      "index": 5,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_death_05_v01.png",
+      "sha256": "9a73c63aef29730d65b9574faac0de6ac38a3aac0d0c7db3700db22b0a243cfd",
+      "size": [
+        1774,
+        887
+      ],
+      "bbox": [
+        21,
+        172,
+        1758,
+        846
+      ],
+      "solidity": 0.9740123399944747,
+      "clipped": false,
+      "anchor": "(889.0, 814.0)",
+      "scale": 0.763427282976325
+    },
+    {
+      "state": "idle",
+      "index": 0,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_idle_00_v01.png",
+      "sha256": "81953b545a4d266f75d84ca1da1a8e3fd164a562dfe99becca2b10a8fd89ef9f",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        240,
+        19,
+        1006,
+        1203
+      ],
+      "solidity": 0.9465852523746979,
+      "clipped": false,
+      "anchor": "(623.0, 1200.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "idle",
+      "index": 1,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_idle_01_v01.png",
+      "sha256": "882d6612ffea566ce568a89e37cf6436c0311cfe04e9e54f59e6bf6a783601f6",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        205,
+        23,
+        1048,
+        1217
+      ],
+      "solidity": 0.9567539776020342,
+      "clipped": false,
+      "anchor": "(627.5, 1216.0)",
+      "scale": 0.989093959731544
+    },
+    {
+      "state": "idle",
+      "index": 2,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_idle_02_v01.png",
+      "sha256": "c1ca0241fa02ca7351861ec8037e29e6e1a3071f816478dce91354b3d9a46389",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        204,
+        5,
+        1102,
+        1216
+      ],
+      "solidity": 0.9458806426456811,
+      "clipped": false,
+      "anchor": "(654.5, 1214.0)",
+      "scale": 0.976801988400994
+    },
+    {
+      "state": "idle",
+      "index": 3,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_idle_03_v01.png",
+      "sha256": "b56dbdd6f6ea6382ddada0f23f7d11ca2120138e17f8c10955b612ad4e2d2416",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        241,
+        11,
+        1085,
+        1234
+      ],
+      "solidity": 0.9583380304074719,
+      "clipped": false,
+      "anchor": "(663.0, 1232.0)",
+      "scale": 0.966393442622951
+    },
+    {
+      "state": "move",
+      "index": 0,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_move_00_v01.png",
+      "sha256": "24c528618980f290399b8dc350a9ac1cdb90b75ff5c4219c94249a66b93b85be",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        108,
+        31,
+        1133,
+        1219
+      ],
+      "solidity": 0.9587910212385393,
+      "clipped": false,
+      "anchor": "(620.0, 1218.0)",
+      "scale": 0.994097807757167
+    },
+    {
+      "state": "move",
+      "index": 1,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_move_01_v01.png",
+      "sha256": "9fb74615c724e4b5bb22402cfd132554b9067a38181eb823628bd3bce7f232ef",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        119,
+        45,
+        1135,
+        1215
+      ],
+      "solidity": 0.9585520739887502,
+      "clipped": false,
+      "anchor": "(628.5, 1213.0)",
+      "scale": 1.01028277634961
+    },
+    {
+      "state": "move",
+      "index": 2,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_move_02_v01.png",
+      "sha256": "1b7e40ad56a375d51cce4f4c49a8303f9b3edb2d3db6f14a04157e4bb00a0e60",
+      "size": [
+        1199,
+        1312
+      ],
+      "bbox": [
+        90,
+        32,
+        1115,
+        1282
+      ],
+      "solidity": 0.9527226926697189,
+      "clipped": false,
+      "anchor": "(602.0, 1281.0)",
+      "scale": 0.943955164131305
+    },
+    {
+      "state": "move",
+      "index": 3,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_move_03_v03.png",
+      "sha256": "afe2030984571f7b77a2ea3f12bac8779ccbc15ae9952028795a6ab87168db61",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        87,
+        20,
+        1195,
+        1214
+      ],
+      "solidity": 0.9656022053243716,
+      "clipped": false,
+      "anchor": "(641.5, 1212.0)",
+      "scale": 0.990756302521008
+    },
+    {
+      "state": "move",
+      "index": 4,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_move_04_v03.png",
+      "sha256": "ab2f0c3915762e1bf871d6b75369879e2cf714128827354f70898f3e1c354c13",
+      "size": [
+        1158,
+        1358
+      ],
+      "bbox": [
+        12,
+        10,
+        1144,
+        1338
+      ],
+      "solidity": 0.9657039831280895,
+      "clipped": false,
+      "anchor": "(578.0, 1336.0)",
+      "scale": 0.890483383685801
+    },
+    {
+      "state": "move",
+      "index": 5,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_move_05_v01.png",
+      "sha256": "9dd1dba42ac9d45afbdece3cbf589771b00ffbc82d0d4f28c244812b93458c75",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        237,
+        22,
+        1029,
+        1205
+      ],
+      "solidity": 0.95799352445247,
+      "clipped": false,
+      "anchor": "(633.0, 1204.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "special",
+      "index": 0,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_special_00_v01.png",
+      "sha256": "b41dfc03bca0ab9a85b0952827d2c125d234b25e25848e9e947edb5c5f25ffac",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        239,
+        18,
+        1070,
+        1209
+      ],
+      "solidity": 0.9508200836981691,
+      "clipped": false,
+      "anchor": "(654.5, 1208.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "special",
+      "index": 1,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_special_01_v01.png",
+      "sha256": "ad2880dc26d8001d087c12458e45c946d43084a4fcdb2d2bd6f0158cbc9aefcc",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        221,
+        18,
+        1109,
+        1207
+      ],
+      "solidity": 0.9436514561546319,
+      "clipped": false,
+      "anchor": "(665.5, 1206.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "special",
+      "index": 2,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_special_02_v01.png",
+      "sha256": "80886622b0b6e7483497e005a1c44744cf6f564a76ada30e67b8693379b55bc6",
+      "size": [
+        1199,
+        1312
+      ],
+      "bbox": [
+        66,
+        13,
+        1170,
+        1272
+      ],
+      "solidity": 0.9438268288737927,
+      "clipped": false,
+      "anchor": "(618.0, 1270.0)",
+      "scale": 0.955792682926829
+    },
+    {
+      "state": "special",
+      "index": 3,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_special_03_v01.png",
+      "sha256": "e635b3ae43d42598e14896150048a724140c2e299818a03cc96ffdf5d2be158e",
+      "size": [
+        1162,
+        1354
+      ],
+      "bbox": [
+        50,
+        8,
+        1143,
+        1315
+      ],
+      "solidity": 0.9444755652732854,
+      "clipped": false,
+      "anchor": "(596.5, 1313.0)",
+      "scale": 0.926144756277696
+    },
+    {
+      "state": "special",
+      "index": 4,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_special_04_v01.png",
+      "sha256": "5f910e25edad9efdc25bf9e02f2b4a428d21dd607ac97ffe9fc5b8af79b7b469",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        176,
+        35,
+        1157,
+        1206
+      ],
+      "solidity": 0.9431983428104548,
+      "clipped": false,
+      "anchor": "(666.0, 1204.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "special",
+      "index": 5,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_special_05_v01.png",
+      "sha256": "58c7823afa89553a47027aa5dfc8abac21e8259987bb617e45053baf09da4bfa",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        235,
+        19,
+        1021,
+        1206
+      ],
+      "solidity": 0.9572883455091674,
+      "clipped": false,
+      "anchor": "(627.5, 1205.0)",
+      "scale": 1.0
+    }
+  ],
+  "assets": [
+    {
+      "state": "attack",
+      "path": "assets/animations/enemies/socothbenoth/attack.png",
+      "size": [
+        1024,
+        384
+      ],
+      "sha256": "f35378884d970009d13e5b2b977eedc1d4b57b275dec9a59fae5e3621321ba85"
+    },
+    {
+      "state": "death",
+      "path": "assets/animations/enemies/socothbenoth/death.png",
+      "size": [
+        1536,
+        384
+      ],
+      "sha256": "caed8031c033bb151e723c0f9bf451f464747f19dcf8b5f0f5506f6dfa8f3420"
+    },
+    {
+      "state": "idle",
+      "path": "assets/animations/enemies/socothbenoth/idle.png",
+      "size": [
+        1024,
+        384
+      ],
+      "sha256": "1a9d277392867652044a20240e6faaf788f206d9ccad94a5ed772134e0fe2958"
+    },
+    {
+      "state": "move",
+      "path": "assets/animations/enemies/socothbenoth/move.png",
+      "size": [
+        1536,
+        384
+      ],
+      "sha256": "431d3023114116450ff578bfd0dcd13e571724dc23928aa6bcfee1ab508e2881"
+    },
+    {
+      "state": "special",
+      "path": "assets/animations/enemies/socothbenoth/special.png",
+      "size": [
+        1536,
+        384
+      ],
+      "sha256": "8f939378068cb01e421846b305fc0b45df64df46ce66a56718a678aea44022a9"
+    }
+  ],
+  "packing": {
+    "body_height": 188.378892942556,
+    "cell": [
+      256,
+      384
+    ],
+    "feet_y": 356,
+    "fit": 0.159778535150599,
+    "id": "socothbenoth",
+    "native_alpha": true,
+    "sources": {
+      "attack": [
+        {
+          "anchor": "(630.0, 1218.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_attack_00_v01.png",
+          "scale": 1.0
+        },
+        {
+          "anchor": "(632.0, 1220.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_attack_01_v01.png",
+          "scale": 1.0
+        },
+        {
+          "anchor": "(631.5, 1221.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_attack_02_v01.png",
+          "scale": 1.0
+        },
+        {
+          "anchor": "(640.5, 1206.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_attack_03_v01.png",
+          "scale": 1.0
+        }
+      ],
+      "death": [
+        {
+          "anchor": "(629.0, 1218.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_death_00_v01.png",
+          "scale": 1.0
+        },
+        {
+          "anchor": "(632.0, 1217.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_death_01_v01.png",
+          "scale": 1.0
+        },
+        {
+          "anchor": "(635.0, 1155.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_death_02_v01.png",
+          "scale": 1.0
+        },
+        {
+          "anchor": "(774.0, 931.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_death_03_v01.png",
+          "scale": 0.89396484375
+        },
+        {
+          "anchor": "(896.0, 810.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_death_04_v01.png",
+          "scale": 0.763427282976325
+        },
+        {
+          "anchor": "(889.0, 814.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_death_05_v01.png",
+          "scale": 0.763427282976325
+        }
+      ],
+      "idle": [
+        {
+          "anchor": "(623.0, 1200.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_idle_00_v01.png",
+          "scale": 1.0
+        },
+        {
+          "anchor": "(627.5, 1216.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_idle_01_v01.png",
+          "scale": 0.989093959731544
+        },
+        {
+          "anchor": "(654.5, 1214.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_idle_02_v01.png",
+          "scale": 0.976801988400994
+        },
+        {
+          "anchor": "(663.0, 1232.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_idle_03_v01.png",
+          "scale": 0.966393442622951
+        }
+      ],
+      "move": [
+        {
+          "anchor": "(620.0, 1218.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_move_00_v01.png",
+          "scale": 0.994097807757167
+        },
+        {
+          "anchor": "(628.5, 1213.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_move_01_v01.png",
+          "scale": 1.01028277634961
+        },
+        {
+          "anchor": "(602.0, 1281.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_move_02_v01.png",
+          "scale": 0.943955164131305
+        },
+        {
+          "anchor": "(641.5, 1212.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_move_03_v03.png",
+          "scale": 0.990756302521008
+        },
+        {
+          "anchor": "(578.0, 1336.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_move_04_v03.png",
+          "scale": 0.890483383685801
+        },
+        {
+          "anchor": "(633.0, 1204.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_move_05_v01.png",
+          "scale": 1.0
+        }
+      ],
+      "special": [
+        {
+          "anchor": "(654.5, 1208.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_special_00_v01.png",
+          "scale": 1.0
+        },
+        {
+          "anchor": "(665.5, 1206.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_special_01_v01.png",
+          "scale": 1.0
+        },
+        {
+          "anchor": "(618.0, 1270.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_special_02_v01.png",
+          "scale": 0.955792682926829
+        },
+        {
+          "anchor": "(596.5, 1313.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_special_03_v01.png",
+          "scale": 0.926144756277696
+        },
+        {
+          "anchor": "(666.0, 1204.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_special_04_v01.png",
+          "scale": 1.0
+        },
+        {
+          "anchor": "(627.5, 1205.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_special_05_v01.png",
+          "scale": 1.0
+        }
+      ]
+    }
+  },
+  "checks": {
+    "queue": {
+      "path": ".atena/generated/goranthis-resume/v01/socothbenoth-queue.log",
+      "marker": "Animation queue: 0 failure(s)",
+      "passed": true
+    },
+    "runtime": {
+      "path": ".atena/generated/goranthis-resume/v01/socothbenoth-runtime.log",
+      "marker": "death cleanup OK",
+      "passed": true
+    },
+    "suite": {
+      "path": ".atena/generated/goranthis-resume/v01/socothbenoth-suite.log",
+      "marker": "testes: 0 falha(s)",
+      "passed": true
+    },
+    "smoke": {
+      "path": ".atena/generated/goranthis-resume/v01/socothbenoth-smoke.log",
+      "marker": "smoke: ok",
+      "passed": true
+    },
+    "capture": {
+      "path": ".atena/generated/goranthis-resume/v01/socothbenoth-capture.log",
+      "marker": "Shedaklah capture result=0",
+      "passed": true
+    },
+    "real_trigger": {
+      "path": ".atena/generated/goranthis-resume/v01/socothbenoth-trigger.log",
+      "passed": true,
+      "marker": "actual aoe telegraph/summon/ring -> special, unlock and puddle -> attack OK",
+      "scope": "Actual Battle events routed through Run consumer; unrelated summon text omitted from minimal fixture."
+    }
+  },
+  "manifest_verified": 197,
+  "capture": ".atena/generated/priority-review/socothbenoth_runtime.png",
+  "native_alpha_preserved": true,
+  "next_actor": "pilares",
+  "remaining_new_frames": 0,
+  "owner_exception": {
+    "date": "2026-10-08",
+    "plan": "PLAN-053",
+    "spec": "SPEC-121",
+    "request_classification": "IN_PLAN",
+    "status": "ACCEPTED_OWNER_EXCEPTION",
+    "owner_reply": "atena, aprovado, continue",
+    "question": "Aceita esta marcha deslizante como exce\u00e7\u00e3o?",
+    "scope": [
+      "move_03",
+      "move_04"
+    ],
+    "frames": [
+      {
+        "frame": "move_03",
+        "version": 3,
+        "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_move_03_v03.png",
+        "sha256": "afe2030984571f7b77a2ea3f12bac8779ccbc15ae9952028795a6ab87168db61"
+      },
+      {
+        "frame": "move_04",
+        "version": 3,
+        "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_move_04_v03.png",
+        "sha256": "ab2f0c3915762e1bf871d6b75369879e2cf714128827354f70898f3e1c354c13"
+      }
+    ],
+    "extra_attempts_authorized": false,
+    "exception": "Sliding gait with same foreground leg leading in move03/04; no claim of clear opposite contact.",
+    "preview": ".atena/generated/goranthis-resume/v01/socothbenoth_move_owner_preview.gif",
+    "gate": "GATE-SOCOTHBENOTH-MOVE-2026-10-08"
+  },
+  "capture_inspected": true
+}

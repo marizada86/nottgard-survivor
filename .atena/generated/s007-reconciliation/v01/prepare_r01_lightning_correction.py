@@ -1,0 +1,16 @@
+from pathlib import Path
+import json,re,shutil
+root=Path(__file__).resolve().parents[4];out=Path(__file__).parent
+p=out/'qr-generation-jobs-2026-10-09.json';d=json.loads(p.read_text(encoding='utf-8'));j=next(x for x in d['jobs'] if x['code']=='R01')
+assert j['status']=='GENERATED_VISUALLY_INSPECTED' and j['version']=='v01'
+reason='Crescent shape, scale and rightward direction passed, but fine jagged lightning insufficiently distinguished from painted blade texture at96px; native edit requested before owner gate.'
+prior=dict(j);prior.update(status='REJECTED_VISUAL',rejection_reason=reason)
+d.setdefault('rejected_native_versions',[]).append(prior)
+preview=out/'r01-v01-rejected-lightning-review-2026-10-09.png';assert not preview.exists();shutil.copyfile(out/'r01-reference-comparison-2026-10-09.png',preview)
+new={k:v for k,v in j.items() if k in ['code','effect','name','transparent_background','source_queue']}
+new.update(version='v02',status='PENDING',destination='.atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_fly_00_v02.png',correction_reason=reason,referenced_image_paths=[str(root/j['destination']),str(out/'approved-pilot-A03-v02-reference.png')],reference_roles=['R01 v01 native crescent edit target, not human approved','A03 v02 approved painted white/gray glow style'],prompt='Edit the FIRST attached image: this is R01 v01, a single flying energy crescent frame. The SECOND image is approved painted white/gray glow STYLE only. Keep the first image crescent EXACTLY at the same position, same scale, same right-facing curvature, same thin white painted blade and tapered tips pointing backward LEFT, black background and square canvas. No movement, no enlargement, no rotation, no additional blade or ring.\n\nCHANGE ONLY THE LIGHTNING DETAIL: add a few clearly recognizable THIN angular zigzag ELECTRIC ARCS crackling close along the OUTER CONVEX RIGHT EDGE of the crescent. Small branching white/gray lightning filaments with sharp bends and a few forked tips, concentrated close to the blade edge, readable as lightning even when reduced to96px. The main energy blade remains thin and dominant; do not turn it into a giant explosion or add long bolts across the canvas. Distinguish lightning from smooth brush streaks and detached diamond sparks. Preserve stylized hand-painted white bright core and soft gray falloff.\n\nOnly ONE first flight frame of this cutting-wave projectile, flat top-down as drawn on the ground. Pure BLACK background, WHITE/GRAY effect only. No color, person, hand, weapon, readable text, border, scene, shadow, ground or perspective. Keep all glow and fine lightning safely inside the generous black margins. Requested1024x1024; preserve native square layout.')
+assert not (root/new['destination']).exists();d['jobs'][d['jobs'].index(j)]=new;p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+state=root/'.atena/state/plan-053-imagens.yaml';t=state.read_text(encoding='utf-8');m=re.search(r'\nvfx_gate:\n(.*?)(?=\n\S|\Z)',t,re.S);assert m
+b=re.sub(r'(  remaining_native_vfx_frames: )\d+',r'\g<1>80',m.group(1));t=t[:m.start(1)]+b+t[m.end(1):]
+t=re.sub(r'(  native_generated_since_Q01: )\d+',r'\g<1>7',t);t=t.replace('  last_frame: R01','  last_frame: Q08');state.write_text(t,encoding='utf-8')
+print(json.dumps(new,ensure_ascii=False))

@@ -1,0 +1,7 @@
+# Shendilavri — conclusão local
+
+PLAN-053/SPEC-121 S-006, IN_PLAN. Cinco atores, 106 quadros, 21 tiras integrados e captura de cada ator inspecionada. Ilusão reutiliza Súcubo com alfa 0,45. Exceções de marcha limitadas a Escravo e Súcubo, conforme registro 022. Malcanthet: 26 fontes sem cortes, morte progressiva; versões em frame-selection.json e transformações em packing.json. Dois quadros especiais corrigidos para início e recuperação baixos; nenhuma mudança em combate. O teste usa Battle._use_ability real, recebe telegraph e confirma special, desbloqueio e ataque normal.
+
+[Recibo da build e hashes](../generated/shendilavri-complete-build-validation-2026-10-07.json). [Recibo de Malcanthet](../generated/shendilavri-resume/v01/malcanthet-completion-receipt.json). [Captura](../generated/priority-review/malcanthet_runtime.png). [Gatilho real](../generated/shendilavri-resume/v01/malcanthet-trigger-v02.log).
+
+Suite e fila zero falhas; smoke nove fases; escala/base/ações/limpeza passaram, inclusive reuso da Ilusão. Manifesto 180/180 hashes válidos. Exportação e EXE60 frames exit0. Build ac14526+, 411300112 bytes, SHA256 277f4c31f6148f20a4d95cb265a055bdee3409ec58665929006e416ef16e7f48. Local: build/image-priority-shendilavri-complete/NottgardSurvivors.exe. Avisos de certificados/editor_settings ambientais registrados. Playtest humano pendente; BUG-025/027/028/029 abertos, sem P0. Sem commit/push/publicação. Próximo: quatro pilotos Goranthis e aprovação humana antes dos ciclos. Retorno PLAN-071 preservado.

@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-08",
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "request_classification": "IN_PLAN",
+  "gate": "GATE-PILARES-ATTACK03-PENDANT-2026-10-08",
+  "status": "ACCEPTED_OWNER_EXCEPTION",
+  "owner_reply": "aprovado, continue",
+  "interpretation": "Approval of presented attack03v03 candidate and bounded green pendant exception, not authorization for fourth correction.",
+  "exception_scope": [
+    "attack_03"
+  ],
+  "version": 3,
+  "source": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_attack_03_v03.png",
+  "sha256": "9832f2355974c1e34ed629189ff6cb3f61548f4b0958a136711977b2c8fca20e",
+  "exception": "Small intermediate gold pendant retains one green drop. Exactly three original arms and two main original lamps remain.",
+  "preview": ".atena/generated/pilares-resume/v01/attack_03_v03_lamp_detail.png",
+  "approval_context": "Owner replied to final question about accepting the small green pendant in attack03 or authorizing another native correction. Presented candidate approved with continue; no further native generation of attack03."
+}

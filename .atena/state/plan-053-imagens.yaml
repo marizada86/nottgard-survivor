@@ -2,9 +2,9 @@ version: 2
 active_plan:
   id: PLAN-053
   spec_id: SPEC-121
-  current_step: S-006
+  current_step: S-007
   total_steps: 7
-  status: ACTIVE
+  status: SUSPENDED_FOR_GIT_PUBLICATION
   approval:
     mode: per-plan
     checkpoint: PLAN
@@ -18,13 +18,175 @@ active_plan:
     date: '2026-10-03'
     evidence: Pedido pode continuar após seleção Por plano; gates visuais preservados.
 plan_cursor:
-  current: 'S-006 Feng Tu completo126quadros/25tiras;build159validada. ShendilavriI01/I02gerados;I03 bloqueadoHTTP429 quota até2026-10-05 12:43:35BRT.'
-  next: 'Após liberação retomar I03Guarda, I04Master e I05Malcanthet; auditar e parar no gate visual FILA017 antes dos ciclos.'
-  review: '.atena/generated/priority-review/shendilavri_identities_v01.png (parcial2de5; sem gate humano ainda)'
+  current: 'DEV-006 commit/push autorizado; R01 v02 aceita contextualmente; fila suspensa durante publicacao.'
+  next: 'Apos push verificado, retomar R02-R08 e gate N03. Retorno PLAN-071 preservado.'
+  review: '.atena/generated/pilares-resume/v01/sintese_abissal_compact_review.png'
+  evidence: '.atena/evidence/pilares-complete-2026-10-08.md'
+identity_gate:
+  id: GATE-PILARES-IDENTITY-V01
+  status: APPROVED
+  approved_at: 2026-10-08
+  approval_evidence: Dono respondeu atena, aprovado, continue ao gate I01v02 e 25 ciclos.
+  register: .atena/vault/canon/ASSET-APPROVAL-REGISTER-024-pilares-identidade-2026-10-08.md
+  generated: 1
+  candidate_versions: {I01: v02}
+  selected_versions: {I01: v02}
+  cycles_generated: 25
+  official_assets_installed: 5
+  remaining_new_frames: 0
+  source: assets/enemies/sintese_abissal.png
+  receipt: .atena/generated/pilares-resume/v01/identity-gate-receipt.json
+completed_identity_gates:
+  goranthis:
+    id: GATE-GORANTHIS-IDENTITIES-V01
+    status: APPROVED
+    approved_at: 2026-10-07
+    approval_evidence: Dono respondeu atena continue apos gate I01-I04.
+    register: .atena/vault/canon/ASSET-APPROVAL-REGISTER-023-goranthis-identidades-2026-10-07.md
+    generated: 4
+    selected_versions: {I01: v01, I02: v02, I03: v01, I04: v01}
+    cycles_generated: 82
+    official_assets_installed: 17
+    remaining_new_frames: 0
+    receipt: .atena/generated/goranthis-resume/v01/identity-gate-receipt.json
+    completion_receipt: .atena/generated/goranthis-complete-build-validation-2026-10-08.json
+  shendilavri:
+    id: GATE-SHENDILAVRI-IDENTITIES-V01
+    status: APPROVED
+    approved_at: '2026-10-07'
+    approval_evidence: 'Dono respondeu atena, aprovado prossiga ao gate das cinco identidades.'
+    register: '.atena/vault/canon/ASSET-APPROVAL-REGISTER-022-shendilavri-identidades-2026-10-07.md'
+    generated: 5
+    selected_versions: {I01: v01, I02: v01, I03: v01, I04: v02, I05: v01}
+    cycles_generated: 101
+    official_assets_installed: 21
+owner_pause:
+  status: RESUMED
+  resumed_at: 2026-10-08
+  resume_receipt: .atena/generated/goranthis-resume/v01/resume-2026-10-08.json
+  requested_at: 2026-10-07
+  request: atena, pausar
+  checkpoint: S-006/GORANTHIS/GUARDIAO/REVIEW-MOVE03
+  receipt: .atena/generated/goranthis-resume/v01/owner-pause-2026-10-07.json
 suspension: null
 deferred_requests: []
 
+pending_owner_decision:
+  id: GATE-DEATH-TYRANT-DEATH-ANATOMY-2026-10-08
+  status: ACCEPTED_CONTEXTUAL_OWNER_APPROVAL
+  owner_reply: atena, prossiga
+  exception_scope: [death_02, death_03, death_04, death_05]
+  frames: [death_02, death_03, death_04]
+  max_versions: 3
+  visible_smaller_stalks: 7
+  approved_identity_smaller_stalks: 8
+  receipt: .atena/generated/goranthis-resume/v01/death-tyrant-death-anatomy-gate-2026-10-08.json
 
+pending_cycle_decision:
+  id: GATE-SOCOTHBENOTH-MOVE-2026-10-08
+  status: ACCEPTED_OWNER_EXCEPTION
+  owner_reply: atena, aprovado, continue
+  approval_receipt: .atena/generated/goranthis-resume/v01/socothbenoth-move-approval-2026-10-08.json
+  checkpoint: BEFORE_SOCOTHBENOTH_INTEGRATION
+  frames: [move_03, move_04]
+  max_versions: 3
+  reason: Same foreground leg still leads; opposite contact not clear.
+  independent_work: COMPLETED; all 26 source frames reviewed and packed as candidates.
+  receipt: .atena/generated/goranthis-resume/v01/socothbenoth-move-owner-gate-2026-10-08.json
 
+pilares_recovery_decision:
+  id: GATE-PILARES-ATTACK03-PENDANT-2026-10-08
+  status: ACCEPTED_OWNER_EXCEPTION
+  frame: attack_03
+  max_versions: 3
+  checkpoint: BEFORE_PILARES_INTEGRATION
+  reason: Small intermediate pendant retains green drop after three versions.
+  independent_work: COMPLETE; 26 sources and five candidate strips reviewed; no official admission.
+  receipt: .atena/generated/pilares-resume/v01/attack03-pendant-owner-gate-2026-10-08.json
+  owner_reply: aprovado, continue
+  approval_receipt: .atena/generated/pilares-resume/v01/attack03-pendant-owner-approval-2026-10-08.json
 
+vfx_gate:
+  id: GATE-FILA-022-R01-2026-10-09
+  status: APPROVED
+  frame: R01
+  version: v02
+  generated: 1
+  remaining_native_vfx_frames: 79
+  official_manifest_assets: 202
+  runtime_admission: false
+  receipt: .atena/generated/s007-reconciliation/v01/r01-owner-gate-2026-10-09.json
+  owner_reply: "atena, commit push e continue"
+  approval_receipt: .atena/generated/s007-reconciliation/v01/r01-owner-approval-2026-10-09.json
 
+vfx_generation_progress:
+  jobs: .atena/generated/s007-reconciliation/v01/qr-generation-jobs-2026-10-09.json
+  native_generated_since_Q01: 8
+  last_frame: R01
+
+completed_vfx_gates:
+  arco_largo_radiante:
+    id: GATE-FILA-021-E03-2026-10-09
+    status: APPROVED
+    frame: E03
+    version: v01
+    generated: 6
+    remaining_native_vfx_frames: 101
+    official_manifest_assets: 202
+    runtime_admission: false
+    receipt: .atena/generated/s007-reconciliation/v01/e03-owner-gate-2026-10-09.json
+    owner_reply: "atena, aprovado, continue"
+    approval_receipt: .atena/generated/s007-reconciliation/v01/e03-owner-approval-2026-10-09.json
+    completion_receipt: .atena/generated/s007-reconciliation/v01/arco-radiante-sequence-audit-2026-10-09.json
+
+  arco_largo_fogo:
+    id: GATE-FILA-021-F03-2026-10-09
+    status: APPROVED
+    frame: F03
+    version: v01
+    generated: 6
+    remaining_native_vfx_frames: 95
+    official_manifest_assets: 202
+    runtime_admission: false
+    receipt: .atena/generated/s007-reconciliation/v01/f03-owner-gate-2026-10-09.json
+    owner_reply: "atena, aprovado, continue"
+    approval_receipt: .atena/generated/s007-reconciliation/v01/f03-owner-approval-2026-10-09.json
+    completion_receipt: .atena/generated/s007-reconciliation/v01/arco-fogo-sequence-audit-2026-10-09.json
+
+  orbe_radiante:
+    id: GATE-FILA-022-P01-2026-10-09
+    status: APPROVED
+    frame: P01
+    version: v01
+    generated: 8
+    remaining_native_vfx_frames: 87
+    official_manifest_assets: 202
+    runtime_admission: false
+    receipt: .atena/generated/s007-reconciliation/v01/p01-owner-gate-2026-10-09.json
+    owner_reply: "atena, aprovado, continue"
+    approval_receipt: .atena/generated/s007-reconciliation/v01/p01-owner-approval-2026-10-09.json
+    completion_receipt: .atena/generated/s007-reconciliation/v01/orbe-radiante-sequence-audit-2026-10-09.json
+
+  orbe_arcano:
+    id: GATE-FILA-022-Q01-2026-10-09
+    status: APPROVED
+    frame: Q01
+    version: v03
+    generated: 8
+    remaining_native_vfx_frames: 79
+    official_manifest_assets: 202
+    runtime_admission: false
+    receipt: .atena/generated/s007-reconciliation/v01/q01-owner-gate-2026-10-09.json
+    owner_reply: "atena, aprovado, continue"
+    approval_receipt: .atena/generated/s007-reconciliation/v01/q01-owner-approval-2026-10-09.json
+    completion_receipt: .atena/generated/s007-reconciliation/v01/orbe-arcano-sequence-audit-2026-10-09.json
+
+image_git_publication:
+  id: DEV-006
+  status: EXECUTING
+  mode: per-plan
+  checkpoint: DEV-006/S-001
+  authorization: "atena, commit push e continue"
+  route: publish-now-then-return
+  receipt: .atena/generated/image-queue-publication-2026-10-09/publication-plan.json
+  return_checkpoint: S-007/VFX/FILA-022/R-REMAINING

@@ -337,6 +337,8 @@ func _exit_tree() -> void:
 	if get_tree().process_frame.is_connected(_sync_cursor):
 		get_tree().process_frame.disconnect(_sync_cursor)
 	CursorSkin.reset()
+	if battle != null and not _result_shown:
+		Playtest.record_run(battle)
 
 func _toggle_items_panel() -> void:
 	Game.controls.transition()
@@ -620,10 +622,6 @@ func _present_hqs(hq_ids: Array[String]) -> void:
 	for hq_id in hq_ids:
 		await _present_hq(hq_id)
 
-func _exit_tree() -> void:
-	if battle != null and not _result_shown:
-		Playtest.record_run(battle)
-
 func _present_hq(hq_id: String) -> void:
 	hud.clear_mobile_input()
 	var hq: Dictionary = Data.table("hqs").get(hq_id, {})
@@ -768,13 +766,15 @@ func _consume_events() -> void:
 				if String(ev.get("ability", "")) == "summon": action = &"special_a"
 				elif String(ev.get("ability", "")) == "ring": action = &"special_b"
 				if String(ev.enemy_id) == "blogbog" and String(ev.get("ability", "")) == "summon": action = &"special"
-				if String(ev.enemy_id) == "zuggtmoy" and String(ev.get("ability", "")) in ["summon", "ring"]: action = &"special"
+				if String(ev.enemy_id) in ["zuggtmoy", "socothbenoth", "sintese_abissal"] and String(ev.get("ability", "")) in ["summon", "ring"]: action = &"special"
 				if String(ev.enemy_id) == "molydeus_chefe" and String(ev.get("ability", "")) == "aoe": action = &"special"
 				if String(ev.enemy_id) == "lu_yueh" and String(ev.get("ability", "")) == "aoe": action = &"special"
 				_play_enemy_action(String(ev.enemy_id), ev.pos, action)
 			"telegraph":
 				Sfx.play("enemy.telegraph")
 				Sfx.play_enemy(String(ev.get("enemy_id", "")), "action")
+				if String(ev.get("enemy_id", "")) in ["malcanthet", "socothbenoth", "sintese_abissal"]:
+					_play_enemy_action(String(ev.enemy_id), ev.pos, &"special")
 			"trap_warn":
 				Sfx.play("enemy.telegraph")
 			"windup":

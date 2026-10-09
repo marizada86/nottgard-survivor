@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-08",
+  "actor": "ilusao_de_socothbenoth",
+  "source_id": "cultista_de_socothbenoth",
+  "native_pngs_generated": 0,
+  "body_height": 139,
+  "feet_y": 356,
+  "states": {
+    "idle": 4,
+    "move": 6,
+    "attack": 4,
+    "death": 6
+  },
+  "existing_alpha": 0.45,
+  "status": "REGISTERED_RUNTIME_VALIDATED",
+  "authorization": "ART-PROMPTS-049 reuse rule under approved PLAN-053/SPEC-121.",
+  "static_asset_preserved": true,
+  "combat_data_unchanged": true,
+  "runtime_check": {
+    "path": ".atena/generated/goranthis-resume/v01/ilusao_de_socothbenoth-runtime.log",
+    "id": "ilusao_de_socothbenoth",
+    "source_id": "cultista_de_socothbenoth",
+    "alpha": 0.45,
+    "passed": true
+  },
+  "capture": ".atena/generated/priority-review/ilusao_de_socothbenoth_runtime.png",
+  "capture_check": ".atena/generated/goranthis-resume/v01/ilusao_de_socothbenoth-capture.log",
+  "capture_inspected": true,
+  "capture_tool_fix": "sync_visual immediately after setup applies real actor opacity before freezing each pose"
+}

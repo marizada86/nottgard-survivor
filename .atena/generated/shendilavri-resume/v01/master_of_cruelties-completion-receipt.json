@@ -1,0 +1,600 @@
+{
+  "date": "2026-10-07",
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "actor": "master_of_cruelties",
+  "status": "INTEGRATED_LOCAL_VALIDATED",
+  "sources": [
+    {
+      "state": "attack",
+      "index": 0,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_attack_00_v01.png",
+      "sha256": "a9db0643cdd7941268239a75d82563e1572f51ef60fba7b6954eef8d03868ef8",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        111,
+        15,
+        1180,
+        1236
+      ],
+      "solidity": 0.9538060728857717,
+      "clipped": false,
+      "anchor": "(510.0, 1234.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "attack",
+      "index": 1,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_attack_01_v01.png",
+      "sha256": "708f304222df67e03840c69610908803c094b74d87c265c978602f4d47905a06",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        41,
+        36,
+        1239,
+        1220
+      ],
+      "solidity": 0.9491938278964661,
+      "clipped": false,
+      "anchor": "(449.0, 1218.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "attack",
+      "index": 2,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_attack_02_v01.png",
+      "sha256": "2be5ae0ac210ab06eb1e5af575ef6733e98665f80c1c13a37649e8796d4619ee",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        38,
+        31,
+        1238,
+        1234
+      ],
+      "solidity": 0.9505160172942326,
+      "clipped": false,
+      "anchor": "(516.0, 1231.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "attack",
+      "index": 3,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_attack_03_v01.png",
+      "sha256": "4d4c4770528113a023eb0f7a55566208bf8a7c83b1cbdc1d7b23d6dfe2d62b3c",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        166,
+        30,
+        1113,
+        1225
+      ],
+      "solidity": 0.9589570632590362,
+      "clipped": false,
+      "anchor": "(651.5, 1224.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "death",
+      "index": 0,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_death_00_v01.png",
+      "sha256": "3c74d1798d3cfd07a8a133a833781d9435eb78b84fbfc3b67002a27d1bc8776a",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        191,
+        132,
+        1131,
+        1205
+      ],
+      "solidity": 0.9574523311054266,
+      "clipped": false,
+      "anchor": "(661.0, 1203.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "death",
+      "index": 1,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_death_01_v01.png",
+      "sha256": "ee68560fb4e54cf328907583861c54127476e6a24bf61b03211992bb3dde1f91",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        49,
+        238,
+        1229,
+        1205
+      ],
+      "solidity": 0.9602723017287073,
+      "clipped": false,
+      "anchor": "(639.0, 1203.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "death",
+      "index": 2,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_death_02_v02.png",
+      "sha256": "f0ee9f764f1c18b6b8372e132ee9cdc994fd364064e46c3ec823d99abf9ed633",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        9,
+        454,
+        1247,
+        1147
+      ],
+      "solidity": 0.9657525512827368,
+      "clipped": false,
+      "anchor": "(627.0, 1145.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "death",
+      "index": 3,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_death_03_v03.png",
+      "sha256": "8dd41be2fd249873a3dabe802cc68f4183303d34c17354cb81ad35f15b699280",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        10,
+        604,
+        1246,
+        1154
+      ],
+      "solidity": 0.972008833256583,
+      "clipped": false,
+      "anchor": "(627.0, 1152.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "death",
+      "index": 4,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_death_04_v02.png",
+      "sha256": "3e995a4e0b9b83a7696b68fd5c7299adff9134abfa173897785d3325f3b108ed",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        16,
+        613,
+        1248,
+        1091
+      ],
+      "solidity": 0.976922530516791,
+      "clipped": false,
+      "anchor": "(632.0, 1090.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "death",
+      "index": 5,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_death_05_v01.png",
+      "sha256": "9b60179b87bd73345a3a5a8528f82a6fde286852ddb6ef10288df659d6ac882e",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        19,
+        452,
+        1251,
+        934
+      ],
+      "solidity": 0.9778374837924904,
+      "clipped": false,
+      "anchor": "(635.0, 932.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "idle",
+      "index": 0,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_idle_00_v02.png",
+      "sha256": "fe0ad4addf9f6a063d24a551b782562e94f0e862a6aeb0975224ee0b9e3acb79",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        210,
+        86,
+        1067,
+        1209
+      ],
+      "solidity": 0.9560068142041581,
+      "clipped": false,
+      "anchor": "(626.5, 1207.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "idle",
+      "index": 1,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_idle_01_v01.png",
+      "sha256": "cf5278601370b987fbf1c182a3c0cc10ecc9966c9e3714ee5290add5b837d737",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        166,
+        41,
+        1122,
+        1232
+      ],
+      "solidity": 0.9568278080864231,
+      "clipped": false,
+      "anchor": "(641.5, 1231.0)",
+      "scale": 0.942760942760943
+    },
+    {
+      "state": "idle",
+      "index": 2,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_idle_02_v01.png",
+      "sha256": "cfce8f460918cb510191b0a6ccba95b68cc6ba49dd6b38c1501cdf514db49e19",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        161,
+        27,
+        1141,
+        1239
+      ],
+      "solidity": 0.9574795397206326,
+      "clipped": false,
+      "anchor": "(622.0, 1238.0)",
+      "scale": 0.925619834710744
+    },
+    {
+      "state": "idle",
+      "index": 3,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_idle_03_v01.png",
+      "sha256": "65f5f3479dc8b662dd4954067219858c1ba964b9a22fbffbb9f28fc3e0c8a0c1",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        187,
+        16,
+        1145,
+        1237
+      ],
+      "solidity": 0.9558834557374642,
+      "clipped": false,
+      "anchor": "(655.0, 1235.0)",
+      "scale": 0.920295809367297
+    },
+    {
+      "state": "move",
+      "index": 0,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_move_00_v01.png",
+      "sha256": "d6359857c712e36af8f7e1c17ef331ce10b51272dc103350e9e8da03f62bbfb8",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        119,
+        10,
+        1197,
+        1226
+      ],
+      "solidity": 0.9635212666761804,
+      "clipped": false,
+      "anchor": "(945.5, 1225.0)",
+      "scale": 0.922570016474465
+    },
+    {
+      "state": "move",
+      "index": 1,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_move_01_v01.png",
+      "sha256": "ea2e5f99690d3082e0210ab23cb4a33cbfbc2464e3c62bba8e681f709241b0bb",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        126,
+        33,
+        1165,
+        1232
+      ],
+      "solidity": 0.9551830055276636,
+      "clipped": false,
+      "anchor": "(852.5, 1231.0)",
+      "scale": 0.935672514619883
+    },
+    {
+      "state": "move",
+      "index": 2,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_move_02_v01.png",
+      "sha256": "eac33a012e0071c8d87d27064fd0b8a5cbb0527dad57384d41bc6ca7c06460f3",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        143,
+        30,
+        1126,
+        1207
+      ],
+      "solidity": 0.958062381173885,
+      "clipped": false,
+      "anchor": "(670.5, 1205.0)",
+      "scale": 0.954003407155026
+    },
+    {
+      "state": "move",
+      "index": 3,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_move_03_v02.png",
+      "sha256": "9db1128f7e293ec04eb615e2c49803d35d7a789109c8a37e6eb7164a15f59886",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        161,
+        34,
+        1159,
+        1224
+      ],
+      "solidity": 0.9606720046104139,
+      "clipped": false,
+      "anchor": "(1074.5, 1222.0)",
+      "scale": 0.944350758853288
+    },
+    {
+      "state": "move",
+      "index": 4,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_move_04_v02.png",
+      "sha256": "1e79582b78db42753307aa9dce9fdd26d0fad72b2b64e67f78df9dc3cc5dbb58",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        132,
+        43,
+        1190,
+        1220
+      ],
+      "solidity": 0.9684777710233599,
+      "clipped": false,
+      "anchor": "(1099.0, 1219.0)",
+      "scale": 0.954003407155026
+    },
+    {
+      "state": "move",
+      "index": 5,
+      "path": ".atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_move_05_v01.png",
+      "sha256": "f6a3a85b72f3c20e2cc06b67178a1cdd893591225a93b133f5d7f6fe63318964",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        145,
+        33,
+        1126,
+        1222
+      ],
+      "solidity": 0.9557296315524846,
+      "clipped": false,
+      "anchor": "(866.0, 1221.0)",
+      "scale": 0.943555181128896
+    }
+  ],
+  "assets": [
+    {
+      "state": "attack",
+      "path": "assets/animations/enemies/master_of_cruelties/attack.png",
+      "size": [
+        1024,
+        384
+      ],
+      "sha256": "b15b694f57945fe5b9fe8d9cb0ae642df730810e8761ded2d40c6de0c952cbd0"
+    },
+    {
+      "state": "death",
+      "path": "assets/animations/enemies/master_of_cruelties/death.png",
+      "size": [
+        1536,
+        384
+      ],
+      "sha256": "07efd309f1c5949b00e5b68b3c5b6d1556f679fecdf2f849852b9aa86fe3f199"
+    },
+    {
+      "state": "idle",
+      "path": "assets/animations/enemies/master_of_cruelties/idle.png",
+      "size": [
+        1024,
+        384
+      ],
+      "sha256": "a3291bc8d5ceca76c4ad783c9b86f8009d3219cd94d2b165b2a4ac3ea1ab639a"
+    },
+    {
+      "state": "move",
+      "path": "assets/animations/enemies/master_of_cruelties/move.png",
+      "size": [
+        1536,
+        384
+      ],
+      "sha256": "2ed520b38ff9fe52a2e9f9429ca51d6476ae717f9598be858dbc68abfafd36aa"
+    }
+  ],
+  "packing": {
+    "body_height": 128.690795363341,
+    "cell": [
+      256,
+      384
+    ],
+    "feet_y": 356,
+    "fit": 0.114902495860126,
+    "id": "master_of_cruelties",
+    "native_alpha": true,
+    "sources": {
+      "attack": [
+        {
+          "anchor": "(510.0, 1234.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_attack_00_v01.png",
+          "scale": 1.0
+        },
+        {
+          "anchor": "(449.0, 1218.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_attack_01_v01.png",
+          "scale": 1.0
+        },
+        {
+          "anchor": "(516.0, 1231.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_attack_02_v01.png",
+          "scale": 1.0
+        },
+        {
+          "anchor": "(651.5, 1224.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_attack_03_v01.png",
+          "scale": 1.0
+        }
+      ],
+      "death": [
+        {
+          "anchor": "(661.0, 1203.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_death_00_v01.png",
+          "scale": 1.0
+        },
+        {
+          "anchor": "(639.0, 1203.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_death_01_v01.png",
+          "scale": 1.0
+        },
+        {
+          "anchor": "(627.0, 1145.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_death_02_v02.png",
+          "scale": 1.0
+        },
+        {
+          "anchor": "(627.0, 1152.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_death_03_v03.png",
+          "scale": 1.0
+        },
+        {
+          "anchor": "(632.0, 1090.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_death_04_v02.png",
+          "scale": 1.0
+        },
+        {
+          "anchor": "(635.0, 932.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_death_05_v01.png",
+          "scale": 1.0
+        }
+      ],
+      "idle": [
+        {
+          "anchor": "(626.5, 1207.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_idle_00_v02.png",
+          "scale": 1.0
+        },
+        {
+          "anchor": "(641.5, 1231.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_idle_01_v01.png",
+          "scale": 0.942760942760943
+        },
+        {
+          "anchor": "(622.0, 1238.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_idle_02_v01.png",
+          "scale": 0.925619834710744
+        },
+        {
+          "anchor": "(655.0, 1235.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_idle_03_v01.png",
+          "scale": 0.920295809367297
+        }
+      ],
+      "move": [
+        {
+          "anchor": "(945.5, 1225.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_move_00_v01.png",
+          "scale": 0.922570016474465
+        },
+        {
+          "anchor": "(852.5, 1231.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_move_01_v01.png",
+          "scale": 0.935672514619883
+        },
+        {
+          "anchor": "(670.5, 1205.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_move_02_v01.png",
+          "scale": 0.954003407155026
+        },
+        {
+          "anchor": "(1074.5, 1222.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_move_03_v02.png",
+          "scale": 0.944350758853288
+        },
+        {
+          "anchor": "(1099.0, 1219.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_move_04_v02.png",
+          "scale": 0.954003407155026
+        },
+        {
+          "anchor": "(866.0, 1221.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-shendilavri/master_of_cruelties/master_of_cruelties_move_05_v01.png",
+          "scale": 0.943555181128896
+        }
+      ]
+    }
+  },
+  "checks": {
+    "queue": {
+      "path": ".atena/generated/shendilavri-resume/v01/master_of_cruelties-queue.log",
+      "passed": true,
+      "marker": "Animation queue: 0 failure(s)"
+    },
+    "runtime": {
+      "path": ".atena/generated/shendilavri-resume/v01/master_of_cruelties-runtime.log",
+      "passed": true,
+      "marker": "death cleanup OK"
+    },
+    "suite": {
+      "path": ".atena/generated/shendilavri-resume/v01/master_of_cruelties-suite.log",
+      "passed": true,
+      "marker": "testes: 0 falha(s)"
+    },
+    "smoke": {
+      "path": ".atena/generated/shendilavri-resume/v01/master_of_cruelties-smoke.log",
+      "passed": true,
+      "marker": "smoke: ok"
+    },
+    "capture": {
+      "path": ".atena/generated/shendilavri-resume/v01/master_of_cruelties-capture.log",
+      "passed": true,
+      "marker": "Shedaklah capture result=0"
+    }
+  },
+  "manifest_verified": 175,
+  "capture": ".atena/generated/priority-review/master_of_cruelties_runtime.png",
+  "native_alpha_preserved": true,
+  "next_actor": "malcanthet",
+  "remaining_new_frames": 25
+}

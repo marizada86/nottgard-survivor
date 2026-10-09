@@ -1,0 +1,1127 @@
+{
+  "date": "2026-10-08",
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "request_classification": "IN_PLAN",
+  "approval_mode": "per-plan",
+  "status": "CANDIDATE_CYCLES_READY_PENDING_ATTACK03_DECISION",
+  "sources": [
+    {
+      "state": "attack",
+      "index": 0,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_attack_00_v01.png",
+      "sha256": "4f16ac4387f214feddac9ad887fe751bcc18fe512e26e4f1e99a0573447d7908",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        32,
+        11,
+        1010,
+        1460
+      ],
+      "packed_bbox": [
+        48,
+        138,
+        195,
+        357
+      ],
+      "solidity": 0.9480741674653169
+    },
+    {
+      "state": "attack",
+      "index": 1,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_attack_01_v01.png",
+      "sha256": "623fbe4a1c591bc3776267325448252e5489c13414b0e5b695abff7d812efeb7",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        25,
+        99,
+        1002,
+        1463
+      ],
+      "packed_bbox": [
+        47,
+        138,
+        204,
+        357
+      ],
+      "solidity": 0.9445637224848443
+    },
+    {
+      "state": "attack",
+      "index": 2,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_attack_02_v01.png",
+      "sha256": "544bd8dd490a072b20ffdee4d904b30155456b9c7246658cb6207763eebce6be",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        33,
+        119,
+        994,
+        1455
+      ],
+      "packed_bbox": [
+        51,
+        138,
+        208,
+        357
+      ],
+      "solidity": 0.9474681512936994
+    },
+    {
+      "state": "attack",
+      "index": 3,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_attack_03_v03.png",
+      "sha256": "9832f2355974c1e34ed629189ff6cb3f61548f4b0958a136711977b2c8fca20e",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        17,
+        7,
+        1016,
+        1481
+      ],
+      "packed_bbox": [
+        48,
+        139,
+        196,
+        357
+      ],
+      "solidity": 0.9645082595802897
+    },
+    {
+      "state": "death",
+      "index": 0,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_death_00_v02.png",
+      "sha256": "0a45b9179375017fce5180cad651b9d57b7ff415ae346d555da331c3d596ae5a",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        25,
+        17,
+        1001,
+        1472
+      ],
+      "packed_bbox": [
+        55,
+        137,
+        202,
+        357
+      ],
+      "solidity": 0.9563335772877068
+    },
+    {
+      "state": "death",
+      "index": 1,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_death_01_v02.png",
+      "sha256": "9c9c38ad5997ba677901b15a9e671dd5925029d89d22ea841067db3959633541",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        11,
+        106,
+        999,
+        1478
+      ],
+      "packed_bbox": [
+        54,
+        150,
+        203,
+        357
+      ],
+      "solidity": 0.95967017266771
+    },
+    {
+      "state": "death",
+      "index": 2,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_death_02_v02.png",
+      "sha256": "f792d74d8a5214bc1d546e02b96bf9a72e91fc3051fee74f604931e536df43df",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        29,
+        141,
+        998,
+        1251
+      ],
+      "packed_bbox": [
+        48,
+        173,
+        209,
+        357
+      ],
+      "solidity": 0.9632530670644464
+    },
+    {
+      "state": "death",
+      "index": 3,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_death_03_v01.png",
+      "sha256": "25c995cc171de32bdb8adb474de2f643d1e80824c7d66c7284b6e7ee401f46ff",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        17,
+        688,
+        1004,
+        1394
+      ],
+      "packed_bbox": [
+        36,
+        230,
+        222,
+        363
+      ],
+      "solidity": 0.9567520684878511
+    },
+    {
+      "state": "death",
+      "index": 4,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_death_04_v01.png",
+      "sha256": "38c5f1187df1155348bc3474382e1288339c9c39518ef4b8ec2ed7c1ad82cf2b",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        11,
+        661,
+        1013,
+        1329
+      ],
+      "packed_bbox": [
+        34,
+        237,
+        223,
+        363
+      ],
+      "solidity": 0.9634671799422803
+    },
+    {
+      "state": "death",
+      "index": 5,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_death_05_v01.png",
+      "sha256": "0629e4ac46b5c0bc1b27244577ddcf4e7ff6e5ee883ce74d1ec5a3b4be9e9841",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        12,
+        622,
+        1017,
+        1299
+      ],
+      "packed_bbox": [
+        34,
+        235,
+        223,
+        363
+      ],
+      "solidity": 0.9719617687980159
+    },
+    {
+      "state": "idle",
+      "index": 0,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_idle_00_v02.png",
+      "sha256": "b4aee47efb39cbb8d3dabf3060441006392e30d820fcae0641bcfbece4a5d992",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        141,
+        207,
+        915,
+        1365
+      ],
+      "packed_bbox": [
+        48,
+        138,
+        194,
+        357
+      ],
+      "solidity": 0.94300990209735
+    },
+    {
+      "state": "idle",
+      "index": 1,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_idle_01_v01.png",
+      "sha256": "3c8acb6d337aa522381d239e35242599539bb08dafa528699697cd251d90b618",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        77,
+        130,
+        979,
+        1443
+      ],
+      "packed_bbox": [
+        46,
+        138,
+        196,
+        357
+      ],
+      "solidity": 0.9541289210995485
+    },
+    {
+      "state": "idle",
+      "index": 2,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_idle_02_v01.png",
+      "sha256": "68495e4787cf1d470c44a19394f18a1cc8502f15ddbbbd84323ee7377e30acf1",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        72,
+        100,
+        996,
+        1450
+      ],
+      "packed_bbox": [
+        47,
+        139,
+        197,
+        357
+      ],
+      "solidity": 0.9469631594837525
+    },
+    {
+      "state": "idle",
+      "index": 3,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_idle_03_v01.png",
+      "sha256": "1910d95af2d58c20d316be2e3422721490130015bf8ebfcd1b707a9632515e00",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        66,
+        118,
+        984,
+        1441
+      ],
+      "packed_bbox": [
+        46,
+        138,
+        198,
+        357
+      ],
+      "solidity": 0.9463538566441398
+    },
+    {
+      "state": "move",
+      "index": 0,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_move_00_v02.png",
+      "sha256": "9bdf7840e93513c2064d8c4a52dd2f64c9e4328053ad1324f6f6c4f06cb7100c",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        12,
+        135,
+        1008,
+        1461
+      ],
+      "packed_bbox": [
+        22,
+        138,
+        186,
+        357
+      ],
+      "solidity": 0.9432577948240191
+    },
+    {
+      "state": "move",
+      "index": 1,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_move_01_v01.png",
+      "sha256": "28a3bb0cacb1d64443069b4d6a64851604466b166b68f805f1d5cc20ff3cc338",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        56,
+        162,
+        993,
+        1437
+      ],
+      "packed_bbox": [
+        35,
+        138,
+        196,
+        357
+      ],
+      "solidity": 0.9475244848843645
+    },
+    {
+      "state": "move",
+      "index": 2,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_move_02_v02.png",
+      "sha256": "cec206fcce8ecd5292f26104a8e9eb8a43bd6c2c0cd20b101b954c53ad74b6ab",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        54,
+        142,
+        997,
+        1439
+      ],
+      "packed_bbox": [
+        33,
+        138,
+        192,
+        357
+      ],
+      "solidity": 0.9484756963595811
+    },
+    {
+      "state": "move",
+      "index": 3,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_move_03_v01.png",
+      "sha256": "d239a52cc1ec25d0af865ab9063a3504e2f0d7b7cd5c3b0e6482338dcda19c37",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        32,
+        147,
+        1012,
+        1468
+      ],
+      "packed_bbox": [
+        24,
+        138,
+        186,
+        357
+      ],
+      "solidity": 0.9441468430272411
+    },
+    {
+      "state": "move",
+      "index": 4,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_move_04_v01.png",
+      "sha256": "dfd54551159098f845fba23c1e728ba023e1bde5606f2f7bdfa330959a323dd9",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        38,
+        135,
+        994,
+        1435
+      ],
+      "packed_bbox": [
+        30,
+        139,
+        190,
+        357
+      ],
+      "solidity": 0.9426949652668781
+    },
+    {
+      "state": "move",
+      "index": 5,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_move_05_v01.png",
+      "sha256": "19fb5309463e9bc0d5bf08cb2d2e16cc0a1eb5f8d360aa1776ddd545d1c28c86",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        33,
+        90,
+        987,
+        1437
+      ],
+      "packed_bbox": [
+        42,
+        138,
+        196,
+        357
+      ],
+      "solidity": 0.9518135546937718
+    },
+    {
+      "state": "special",
+      "index": 0,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_00_v02.png",
+      "sha256": "23f5e9709fb7d98006779f72afb10f51b59c85054bbf3b52d04f6da5fcd6e6af",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        30,
+        123,
+        1005,
+        1455
+      ],
+      "packed_bbox": [
+        43,
+        139,
+        203,
+        357
+      ],
+      "solidity": 0.9645713249271546
+    },
+    {
+      "state": "special",
+      "index": 1,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_01_v02.png",
+      "sha256": "1154fda32a1617a0bf729acef12196db69fa8a45a5adc7962f948bbc775a576f",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        29,
+        80,
+        1014,
+        1477
+      ],
+      "packed_bbox": [
+        51,
+        139,
+        205,
+        357
+      ],
+      "solidity": 0.9603117114952197
+    },
+    {
+      "state": "special",
+      "index": 2,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_02_v02.png",
+      "sha256": "d13955528128b92a979c5c4b70992080e78cfe2ec770ed80e78437cdba1be96c",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        30,
+        63,
+        1015,
+        1479
+      ],
+      "packed_bbox": [
+        48,
+        139,
+        200,
+        357
+      ],
+      "solidity": 0.9678844076379589
+    },
+    {
+      "state": "special",
+      "index": 3,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_03_v02.png",
+      "sha256": "98dd3dd54ce96a1c9108e97d661bfe0fa81f8b4b00689741c277b8af351cf528",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        53,
+        176,
+        989,
+        1410
+      ],
+      "packed_bbox": [
+        40,
+        139,
+        205,
+        357
+      ],
+      "solidity": 0.9553754711624384
+    },
+    {
+      "state": "special",
+      "index": 4,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_04_v02.png",
+      "sha256": "735e8da79cb1e586a43761191edffa44dcf4333097fc1f4497cf8292aaadefae",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        24,
+        97,
+        1012,
+        1455
+      ],
+      "packed_bbox": [
+        42,
+        139,
+        201,
+        357
+      ],
+      "solidity": 0.9625552809942297
+    },
+    {
+      "state": "special",
+      "index": 5,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_05_v01.png",
+      "sha256": "e9e95793eace77f4524d594c0960589baf09c3ce91e13ea1bcbd1bd6730a0581",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        39,
+        80,
+        983,
+        1428
+      ],
+      "packed_bbox": [
+        45,
+        138,
+        198,
+        357
+      ],
+      "solidity": 0.9557572261124603
+    }
+  ],
+  "strips": [
+    {
+      "state": "attack",
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/strips/attack.png",
+      "sha256": "d049e171a886bb716c554a55c8ca830f4b5a275b85584f4291dfa109135ce4c1",
+      "size": [
+        1024,
+        384
+      ]
+    },
+    {
+      "state": "death",
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/strips/death.png",
+      "sha256": "1fb62c1ef7dedaa16967cceb2c51f0bfef2ccd16d4a73bcff05b0a355e56edc8",
+      "size": [
+        1536,
+        384
+      ]
+    },
+    {
+      "state": "idle",
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/strips/idle.png",
+      "sha256": "fd3abdde66369a3f0b3b31e660b12f31fd3b16bf0a0f7e62ff7712a5377577c7",
+      "size": [
+        1024,
+        384
+      ]
+    },
+    {
+      "state": "move",
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/strips/move.png",
+      "sha256": "1b17252bd8000f5b09c728e3960f703ec3e37520308ead2e70028848685eb80b",
+      "size": [
+        1536,
+        384
+      ]
+    },
+    {
+      "state": "special",
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/strips/special.png",
+      "sha256": "27d21fdd7f39a99efe517174f67934ba6a09784a091ff18cdc20f0ddd0f2773d",
+      "size": [
+        1536,
+        384
+      ]
+    }
+  ],
+  "source_versions_preserved": [
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_attack_00_v01.png",
+      "sha256": "4f16ac4387f214feddac9ad887fe751bcc18fe512e26e4f1e99a0573447d7908"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_attack_01_v01.png",
+      "sha256": "623fbe4a1c591bc3776267325448252e5489c13414b0e5b695abff7d812efeb7"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_attack_02_v01.png",
+      "sha256": "544bd8dd490a072b20ffdee4d904b30155456b9c7246658cb6207763eebce6be"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_attack_03_v01.png",
+      "sha256": "80a89975f59dc6b64fb5fc255fd9ecffbf14e97aa6906fc3c8fe3aa5468fa91b"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_attack_03_v02.png",
+      "sha256": "d4e9580b2f3611f9a0e3e96136325296c8b57db77709996b6f8803843fbbe318"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_attack_03_v03.png",
+      "sha256": "9832f2355974c1e34ed629189ff6cb3f61548f4b0958a136711977b2c8fca20e"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_death_00_v01.png",
+      "sha256": "45a632b773df5a71c755df193572bc4d9b37d962aff48cec016a523beb547b5f"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_death_00_v02.png",
+      "sha256": "0a45b9179375017fce5180cad651b9d57b7ff415ae346d555da331c3d596ae5a"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_death_01_v01.png",
+      "sha256": "0ff3b2b6e83318945269bd86bccd071fe3841bae77cee4603edc0b61868f967c"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_death_01_v02.png",
+      "sha256": "9c9c38ad5997ba677901b15a9e671dd5925029d89d22ea841067db3959633541"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_death_02_v01.png",
+      "sha256": "309b4165c679113034e417502e695e3a5a5f59f379f28e5d3614d1d3dc03af79"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_death_02_v02.png",
+      "sha256": "f792d74d8a5214bc1d546e02b96bf9a72e91fc3051fee74f604931e536df43df"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_death_03_v01.png",
+      "sha256": "25c995cc171de32bdb8adb474de2f643d1e80824c7d66c7284b6e7ee401f46ff"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_death_04_v01.png",
+      "sha256": "38c5f1187df1155348bc3474382e1288339c9c39518ef4b8ec2ed7c1ad82cf2b"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_death_05_v01.png",
+      "sha256": "0629e4ac46b5c0bc1b27244577ddcf4e7ff6e5ee883ce74d1ec5a3b4be9e9841"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_idle_00_v01.png",
+      "sha256": "b822e9e620c1d3e99a97f6b05d63739fbf0d9b800c8b566e94a2456978614e41"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_idle_00_v02.png",
+      "sha256": "b4aee47efb39cbb8d3dabf3060441006392e30d820fcae0641bcfbece4a5d992"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_idle_01_v01.png",
+      "sha256": "3c8acb6d337aa522381d239e35242599539bb08dafa528699697cd251d90b618"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_idle_02_v01.png",
+      "sha256": "68495e4787cf1d470c44a19394f18a1cc8502f15ddbbbd84323ee7377e30acf1"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_idle_03_v01.png",
+      "sha256": "1910d95af2d58c20d316be2e3422721490130015bf8ebfcd1b707a9632515e00"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_move_00_v01.png",
+      "sha256": "91498b9f2daee8d68a66ffa0294fb62b191ae184cea2b0ba5330c64e2d2f2abd"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_move_00_v02.png",
+      "sha256": "9bdf7840e93513c2064d8c4a52dd2f64c9e4328053ad1324f6f6c4f06cb7100c"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_move_01_v01.png",
+      "sha256": "28a3bb0cacb1d64443069b4d6a64851604466b166b68f805f1d5cc20ff3cc338"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_move_02_v01.png",
+      "sha256": "c59bed4e70425f6249b4ad4c7fa92d2ce688e29ab92e6066c0b079e4900e05c0"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_move_02_v02.png",
+      "sha256": "cec206fcce8ecd5292f26104a8e9eb8a43bd6c2c0cd20b101b954c53ad74b6ab"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_move_03_v01.png",
+      "sha256": "d239a52cc1ec25d0af865ab9063a3504e2f0d7b7cd5c3b0e6482338dcda19c37"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_move_04_v01.png",
+      "sha256": "dfd54551159098f845fba23c1e728ba023e1bde5606f2f7bdfa330959a323dd9"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_move_05_v01.png",
+      "sha256": "19fb5309463e9bc0d5bf08cb2d2e16cc0a1eb5f8d360aa1776ddd545d1c28c86"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_00_v01.png",
+      "sha256": "4a8173d6eca1f69246dfc41393568aeb6456315521d3bb90f85f427773112b44"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_00_v02.png",
+      "sha256": "23f5e9709fb7d98006779f72afb10f51b59c85054bbf3b52d04f6da5fcd6e6af"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_01_v01.png",
+      "sha256": "c1cc0d370e030ba1bd8d1b7324b3800d8296594268f0666854cb8300d5f12664"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_01_v02.png",
+      "sha256": "1154fda32a1617a0bf729acef12196db69fa8a45a5adc7962f948bbc775a576f"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_02_v01.png",
+      "sha256": "41bdf333e554dcf2e04767e2f9b83b6c93f89fb13ab7b47ae99a96d64ae076cf"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_02_v02.png",
+      "sha256": "d13955528128b92a979c5c4b70992080e78cfe2ec770ed80e78437cdba1be96c"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_03_v01.png",
+      "sha256": "cc25e305ec70431b21d39eef79ca416427921891ebcbf9fb913f4cc89896cc3f"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_03_v02.png",
+      "sha256": "98dd3dd54ce96a1c9108e97d661bfe0fa81f8b4b00689741c277b8af351cf528"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_04_v01.png",
+      "sha256": "57cf1c896aa0b11f5fd71bf6aabc9eabedf6155bb0bc65a023db05c2909619c5"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_04_v02.png",
+      "sha256": "735e8da79cb1e586a43761191edffa44dcf4333097fc1f4497cf8292aaadefae"
+    },
+    {
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_05_v01.png",
+      "sha256": "e9e95793eace77f4524d594c0960589baf09c3ce91e13ea1bcbd1bd6730a0581"
+    }
+  ],
+  "packing": {
+    "body_height": 217.760866938524,
+    "cell": [
+      256,
+      384
+    ],
+    "feet_y": 356,
+    "fit": 0.188537547132921,
+    "id": "sintese_abissal",
+    "native_alpha": true,
+    "sources": {
+      "attack": [
+        {
+          "anchor": "(569.0, 1458.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_attack_00_v01.png",
+          "scale": 0.799307958477509
+        },
+        {
+          "anchor": "(531.0, 1461.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_attack_01_v01.png",
+          "scale": 0.849264705882353
+        },
+        {
+          "anchor": "(505.0, 1453.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_attack_02_v01.png",
+          "scale": 0.867117117117117
+        },
+        {
+          "anchor": "(561.0, 1480.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_attack_03_v03.png",
+          "scale": 0.784646739130435
+        }
+      ],
+      "death": [
+        {
+          "anchor": "(513.0, 1471.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_death_00_v02.png",
+          "scale": 0.8
+        },
+        {
+          "anchor": "(505.0, 1476.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_death_01_v02.png",
+          "scale": 0.8
+        },
+        {
+          "anchor": "(514.0, 1249.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_death_02_v02.png",
+          "scale": 0.88
+        },
+        {
+          "anchor": "(510.0, 1360.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_death_03_v01.png",
+          "scale": 1.0
+        },
+        {
+          "anchor": "(512.0, 1297.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_death_04_v01.png",
+          "scale": 1.0
+        },
+        {
+          "anchor": "(514.0, 1265.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_death_05_v01.png",
+          "scale": 1.0
+        }
+      ],
+      "idle": [
+        {
+          "anchor": "(566.0, 1364.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_idle_00_v02.png",
+          "scale": 1.0
+        },
+        {
+          "anchor": "(572.0, 1441.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_idle_01_v01.png",
+          "scale": 0.882352941176471
+        },
+        {
+          "anchor": "(575.0, 1447.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_idle_02_v01.png",
+          "scale": 0.858098068350669
+        },
+        {
+          "anchor": "(565.0, 1439.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_idle_03_v01.png",
+          "scale": 0.875663381349507
+        }
+      ],
+      "move": [
+        {
+          "anchor": "(656.0, 1460.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_move_00_v02.png",
+          "scale": 0.873015873015873
+        },
+        {
+          "anchor": "(599.0, 1434.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_move_01_v01.png",
+          "scale": 0.909448818897638
+        },
+        {
+          "anchor": "(620.0, 1437.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_move_02_v02.png",
+          "scale": 0.893271461716937
+        },
+        {
+          "anchor": "(665.0, 1465.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_move_03_v01.png",
+          "scale": 0.877659574468085
+        },
+        {
+          "anchor": "(627.0, 1432.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_move_04_v01.png",
+          "scale": 0.891203703703704
+        },
+        {
+          "anchor": "(569.0, 1434.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_move_05_v01.png",
+          "scale": 0.860655737704918
+        }
+      ],
+      "special": [
+        {
+          "anchor": "(550.0, 1454.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_00_v02.png",
+          "scale": 0.868421052631579
+        },
+        {
+          "anchor": "(526.0, 1476.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_01_v02.png",
+          "scale": 0.827956989247312
+        },
+        {
+          "anchor": "(553.0, 1477.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_02_v02.png",
+          "scale": 0.817409766454352
+        },
+        {
+          "anchor": "(554.0, 1409.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_03_v02.png",
+          "scale": 0.9375
+        },
+        {
+          "anchor": "(560.0, 1454.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_04_v02.png",
+          "scale": 0.851769911504425
+        },
+        {
+          "anchor": "(553.0, 1426.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_05_v01.png",
+          "scale": 0.859375
+        }
+      ]
+    }
+  },
+  "selection": {
+    "idle_00": {
+      "version": 2,
+      "approval_status": "APPROVED_IDENTITY",
+      "anchor_x_offset": 56.5,
+      "anchor_x_reason": "Median of opaque ivory root/bone in lower trunk, excluding extended foremost root tip. Technical anchoring only; native RGBA unchanged."
+    },
+    "move_00": {
+      "version": 2,
+      "reason": "v01 extra green dripping ornament rejected; v02 preserves only the two original green lamps, plain gold other pendants.",
+      "anchor_x_offset": -297.5,
+      "anchor_x_reason": "Median of opaque ivory root/bone in lower trunk, excluding extended foremost root tip. Technical anchoring only; native RGBA unchanged."
+    },
+    "move_02": {
+      "version": 2,
+      "reason": "v01 extra green dripping ornament rejected; v02 preserves only the two original green lamps, plain gold other pendants.",
+      "anchor_x_offset": -114.5,
+      "anchor_x_reason": "Median of opaque ivory root/bone in lower trunk, excluding extended foremost root tip. Technical anchoring only; native RGBA unchanged."
+    },
+    "attack_03": {
+      "version": 3,
+      "approval_status": "PENDING_OWNER_DECISION",
+      "reason": "Small intermediate gold pendant still has green drop after v01/v02/v03. Three original arms and two main lamps preserved; no fourth version without owner extension.",
+      "scale_multiplier": 0.7846467391304348,
+      "technical_scale_reason": "Uniform apparent standing body scale relative to approved idle; native RGBA unchanged.",
+      "anchor_x_offset": 100.0,
+      "anchor_x_reason": "Median of opaque ivory root/bone in lower trunk, excluding extended foremost root tip. Technical anchoring only; native RGBA unchanged."
+    },
+    "attack_00": {
+      "version": 1,
+      "scale_multiplier": 0.7993079584775087,
+      "technical_scale_reason": "Uniform apparent standing body scale relative to approved idle; native RGBA unchanged.",
+      "anchor_x_offset": 55.5,
+      "anchor_x_reason": "Median of opaque ivory root/bone in lower trunk, excluding extended foremost root tip. Technical anchoring only; native RGBA unchanged."
+    },
+    "attack_01": {
+      "version": 1,
+      "scale_multiplier": 0.8492647058823529,
+      "technical_scale_reason": "Uniform apparent standing body scale relative to approved idle; native RGBA unchanged.",
+      "anchor_x_offset": 61.0,
+      "anchor_x_reason": "Median of opaque ivory root/bone in lower trunk, excluding extended foremost root tip. Technical anchoring only; native RGBA unchanged."
+    },
+    "attack_02": {
+      "version": 1,
+      "scale_multiplier": 0.8671171171171171,
+      "technical_scale_reason": "Uniform apparent standing body scale relative to approved idle; native RGBA unchanged.",
+      "anchor_x_offset": -43.0,
+      "anchor_x_reason": "Median of opaque ivory root/bone in lower trunk, excluding extended foremost root tip. Technical anchoring only; native RGBA unchanged."
+    },
+    "special_00": {
+      "version": 2,
+      "scale_multiplier": 0.868421052631579,
+      "technical_scale_reason": "Uniform apparent standing body scale relative to approved idle; native RGBA unchanged.",
+      "anchor_x_offset": 42.5,
+      "anchor_x_reason": "Median of opaque ivory root/bone in lower trunk, excluding extended foremost root tip. Technical anchoring only; native RGBA unchanged."
+    },
+    "special_01": {
+      "version": 2,
+      "scale_multiplier": 0.8279569892473119,
+      "technical_scale_reason": "Uniform apparent standing body scale relative to approved idle; native RGBA unchanged.",
+      "anchor_x_offset": 41.0,
+      "anchor_x_reason": "Median of opaque ivory root/bone in lower trunk, excluding extended foremost root tip. Technical anchoring only; native RGBA unchanged."
+    },
+    "special_02": {
+      "version": 2,
+      "scale_multiplier": 0.8174097664543525,
+      "technical_scale_reason": "Uniform apparent standing body scale relative to approved idle; native RGBA unchanged.",
+      "anchor_x_offset": 60.0,
+      "anchor_x_reason": "Median of opaque ivory root/bone in lower trunk, excluding extended foremost root tip. Technical anchoring only; native RGBA unchanged."
+    },
+    "special_03": {
+      "version": 2,
+      "scale_multiplier": 0.9375,
+      "technical_scale_reason": "Uniform apparent standing body scale relative to approved idle; native RGBA unchanged.",
+      "anchor_x_offset": 78.0,
+      "anchor_x_reason": "Median of opaque ivory root/bone in lower trunk, excluding extended foremost root tip. Technical anchoring only; native RGBA unchanged."
+    },
+    "special_04": {
+      "version": 2,
+      "scale_multiplier": 0.8517699115044248,
+      "technical_scale_reason": "Uniform apparent standing body scale relative to approved idle; native RGBA unchanged.",
+      "anchor_x_offset": 82.5,
+      "anchor_x_reason": "Median of opaque ivory root/bone in lower trunk, excluding extended foremost root tip. Technical anchoring only; native RGBA unchanged."
+    },
+    "special_05": {
+      "version": 1,
+      "scale_multiplier": 0.859375,
+      "technical_scale_reason": "Uniform apparent standing body scale relative to approved idle; native RGBA unchanged.",
+      "anchor_x_offset": 81.5,
+      "anchor_x_reason": "Median of opaque ivory root/bone in lower trunk, excluding extended foremost root tip. Technical anchoring only; native RGBA unchanged."
+    },
+    "death_00": {
+      "version": 2,
+      "scale_multiplier": 0.8,
+      "reason": "v01 extra outer green pendant rejected; v02 preserves two main lamps. Uniform native-scale compensation keeps progressive collapse, not height normalization of death."
+    },
+    "death_01": {
+      "version": 2,
+      "scale_multiplier": 0.8,
+      "reason": "v01 extra outer green pendant rejected; v02 preserves two main lamps. Uniform native-scale compensation keeps progressive collapse, not height normalization of death."
+    },
+    "death_02": {
+      "version": 2,
+      "scale_multiplier": 0.88,
+      "reason": "v01 extra outer green pendant rejected; v02 preserves two main lamps. Uniform native-scale compensation keeps progressive collapse, not height normalization of death."
+    },
+    "death_03": {
+      "version": 1,
+      "anchor_y_offset": -30.0,
+      "reason": "Final collapsed source kept; technical support anchor above hanging lamp drips."
+    },
+    "death_04": {
+      "version": 1,
+      "anchor_y_offset": -30.0,
+      "reason": "Final collapsed source kept; technical support anchor above hanging lamp drips."
+    },
+    "death_05": {
+      "version": 1,
+      "anchor_y_offset": -30.0,
+      "reason": "Final collapsed source kept; technical support anchor above hanging lamp drips."
+    },
+    "idle_01": {
+      "anchor_x_offset": 65.5,
+      "anchor_x_reason": "Median of opaque ivory root/bone in lower trunk, excluding extended foremost root tip. Technical anchoring only; native RGBA unchanged."
+    },
+    "idle_02": {
+      "anchor_x_offset": 71.5,
+      "anchor_x_reason": "Median of opaque ivory root/bone in lower trunk, excluding extended foremost root tip. Technical anchoring only; native RGBA unchanged."
+    },
+    "idle_03": {
+      "anchor_x_offset": 60.5,
+      "anchor_x_reason": "Median of opaque ivory root/bone in lower trunk, excluding extended foremost root tip. Technical anchoring only; native RGBA unchanged."
+    },
+    "move_01": {
+      "anchor_x_offset": 34.0,
+      "anchor_x_reason": "Median of opaque ivory root/bone in lower trunk, excluding extended foremost root tip. Technical anchoring only; native RGBA unchanged."
+    },
+    "move_03": {
+      "anchor_x_offset": -144.5,
+      "anchor_x_reason": "Median of opaque ivory root/bone in lower trunk, excluding extended foremost root tip. Technical anchoring only; native RGBA unchanged."
+    },
+    "move_04": {
+      "anchor_x_offset": 96.0,
+      "anchor_x_reason": "Median of opaque ivory root/bone in lower trunk, excluding extended foremost root tip. Technical anchoring only; native RGBA unchanged."
+    },
+    "move_05": {
+      "anchor_x_offset": 63.5,
+      "anchor_x_reason": "Median of opaque ivory root/bone in lower trunk, excluding extended foremost root tip. Technical anchoring only; native RGBA unchanged."
+    }
+  },
+  "native_alpha_preserved": true,
+  "technical_review_inspected": true,
+  "min_source_solidity": 0.9426949652668781,
+  "native_and_cell_clipping": false,
+  "manifest_verified": 197,
+  "official_actor_assets_installed": 0,
+  "runtime_checks": "not run: actor admission awaiting owner decision",
+  "build": "not exported: actor admission awaiting owner decision",
+  "pending_owner_gate": "GATE-PILARES-ATTACK03-PENDANT-2026-10-08",
+  "review": ".atena/generated/pilares-resume/v01/sintese_abissal_compact_review.png",
+  "notes": "Three original arms, two main lamps and single left wing reviewed. Special00-04v02 replace secondary green-drip ornaments with plain gold medallions; special03v02 also restores complete lamp margin. Attack03v03 retains one tiny green drop on a secondary pendant; decision still pending. No acceptance of the exception is inferred. White connected root base; no humanoid leg alternation required. Death core dark from02 through05; terminal corpse preserved. Uniform standing scale and lower-trunk root/bone anchor compensate native canvas scale and extended roots, preserving native RGBA."
+}

@@ -1,0 +1,604 @@
+{
+  "date": "2026-10-08",
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "actor": "death_tyrant",
+  "status": "INTEGRATED_LOCAL_VALIDATED",
+  "sources": [
+    {
+      "state": "attack",
+      "index": 0,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_attack_00_v02.png",
+      "sha256": "4de6cac755ec2f3189db0bd3bc27450c5cc7d4a2478ff401533470fd766a24b6",
+      "size": [
+        1199,
+        1312
+      ],
+      "bbox": [
+        170,
+        46,
+        1060,
+        1267
+      ],
+      "solidity": 0.9585497321296919,
+      "clipped": false,
+      "anchor": "(741.0, 1266.0)",
+      "scale": 0.955792682926829
+    },
+    {
+      "state": "attack",
+      "index": 1,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_attack_01_v02.png",
+      "sha256": "960c507827235220de80410dc880b71f808b3dd2bea8d4238f3f4749f45ac258",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        215,
+        26,
+        1211,
+        1238
+      ],
+      "solidity": 0.9657083293789118,
+      "clipped": false,
+      "anchor": "(587.5, 1236.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "attack",
+      "index": 2,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_attack_02_v01.png",
+      "sha256": "4f633300ebbdf32bf85fbd0beaad8126c6b3e3634b89a82fe841b9162c7b55cc",
+      "size": [
+        1218,
+        1292
+      ],
+      "bbox": [
+        188,
+        31,
+        1167,
+        1271
+      ],
+      "solidity": 0.9550605711587484,
+      "clipped": false,
+      "anchor": "(656.5, 1269.0)",
+      "scale": 0.970588235294118
+    },
+    {
+      "state": "attack",
+      "index": 3,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_attack_03_v01.png",
+      "sha256": "b63c90c5d980e957fd1a260d02c5882099746099848bce9c4d569aad3d365ae1",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        219,
+        44,
+        1042,
+        1213
+      ],
+      "solidity": 0.9540852260843211,
+      "clipped": false,
+      "anchor": "(709.5, 1208.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "death",
+      "index": 0,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_death_00_v01.png",
+      "sha256": "94514e4bd6eff6056b0c28bb01f41876eee3ca9b7b0ae254c06ca34ebe7a95fd",
+      "size": [
+        1116,
+        1410
+      ],
+      "bbox": [
+        75,
+        47,
+        1052,
+        1382
+      ],
+      "solidity": 0.9584259764232076,
+      "clipped": false,
+      "anchor": "(564.0, 1380.0)",
+      "scale": 0.88936170212766
+    },
+    {
+      "state": "death",
+      "index": 1,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_death_01_v01.png",
+      "sha256": "d32db579b2baa8af2318f345e24bcf421d6271aa7385dead76b46ea5f2cf228f",
+      "size": [
+        1116,
+        1409
+      ],
+      "bbox": [
+        113,
+        91,
+        1052,
+        1379
+      ],
+      "solidity": 0.960398449730803,
+      "clipped": false,
+      "anchor": "(583.0, 1371.0)",
+      "scale": 0.889992902767921
+    },
+    {
+      "state": "death",
+      "index": 2,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_death_02_v03.png",
+      "sha256": "ed730b26ae3bcdd65d22c94a8a681bf7a5598b96e1c452477d7c98b6f6c88dd5",
+      "size": [
+        1117,
+        1408
+      ],
+      "bbox": [
+        73,
+        179,
+        1116,
+        1362
+      ],
+      "solidity": 0.9823656815482429,
+      "clipped": false,
+      "anchor": "(594.0, 1360.0)",
+      "scale": 0.84609375
+    },
+    {
+      "state": "death",
+      "index": 3,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_death_03_v03.png",
+      "sha256": "218f66a1cfdd0a51ef9dd43648b53bbfaf19caf64acfe38811a5abb91346882a",
+      "size": [
+        1312,
+        1199
+      ],
+      "bbox": [
+        45,
+        65,
+        1296,
+        1132
+      ],
+      "solidity": 0.9819509546130102,
+      "clipped": false,
+      "anchor": "(671.0, 1101.0)",
+      "scale": 0.920366972477064
+    },
+    {
+      "state": "death",
+      "index": 4,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_death_04_v03.png",
+      "sha256": "f315d515d4b9d0636308cb9269e8f7b7ca9df10a8e4e8bdff3c5de68f570a5b7",
+      "size": [
+        1536,
+        1024
+      ],
+      "bbox": [
+        37,
+        147,
+        1477,
+        966
+      ],
+      "solidity": 0.9797905256558386,
+      "clipped": false,
+      "anchor": "(758.0, 933.0)",
+      "scale": 0.9796875
+    },
+    {
+      "state": "death",
+      "index": 5,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_death_05_v01.png",
+      "sha256": "455132fa38a369ff725cd4232aab08dbfca70a4ce67d40e945468be802a25ff0",
+      "size": [
+        1536,
+        1024
+      ],
+      "bbox": [
+        44,
+        146,
+        1479,
+        968
+      ],
+      "solidity": 0.9810625201152419,
+      "clipped": false,
+      "anchor": "(762.0, 936.0)",
+      "scale": 0.9796875
+    },
+    {
+      "state": "idle",
+      "index": 0,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_idle_00_v01.png",
+      "sha256": "a5fbce68afbf3cfb6ccd5239f300120e74c8cc9c9e9cf3c15d004e3ce9b58edc",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        230,
+        34,
+        1040,
+        1211
+      ],
+      "solidity": 0.946015674654584,
+      "clipped": false,
+      "anchor": "(712.0, 1210.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "idle",
+      "index": 1,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_idle_01_v01.png",
+      "sha256": "435bde765554999a433cb20c32c3976ecdd4b70a464e40dc067e9578e0369ab2",
+      "size": [
+        1128,
+        1394
+      ],
+      "bbox": [
+        170,
+        64,
+        1034,
+        1349
+      ],
+      "solidity": 0.9563902764393623,
+      "clipped": false,
+      "anchor": "(698.0, 1344.0)",
+      "scale": 0.918622848200313
+    },
+    {
+      "state": "idle",
+      "index": 2,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_idle_02_v01.png",
+      "sha256": "4cc56d0b9bc7feb5dfe572da28d2e11bdc7e5cabf2bc0d0d4531c5083dec48bb",
+      "size": [
+        1199,
+        1312
+      ],
+      "bbox": [
+        170,
+        32,
+        1075,
+        1283
+      ],
+      "solidity": 0.9575178097838564,
+      "clipped": false,
+      "anchor": "(701.5, 1279.0)",
+      "scale": 0.942215088282504
+    },
+    {
+      "state": "idle",
+      "index": 3,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_idle_03_v01.png",
+      "sha256": "b9a22fed6568ca3784b1884d1a4726ce5d5ea0774eb31c5d2e28932e789f221b",
+      "size": [
+        1222,
+        1287
+      ],
+      "bbox": [
+        195,
+        36,
+        1052,
+        1246
+      ],
+      "solidity": 0.9599168043309516,
+      "clipped": false,
+      "anchor": "(708.5, 1244.0)",
+      "scale": 0.974273858921162
+    },
+    {
+      "state": "move",
+      "index": 0,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_move_00_v01.png",
+      "sha256": "e8fe9e642e31590f9739ac6e14b4cc1f0033b5e19b4ad52c6982abd4b8afd61b",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox": [
+        273,
+        68,
+        1203,
+        1215
+      ],
+      "solidity": 0.9532034907115247,
+      "clipped": false,
+      "anchor": "(705.0, 1230.0)",
+      "scale": 1.02982456140351
+    },
+    {
+      "state": "move",
+      "index": 1,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_move_01_v01.png",
+      "sha256": "ad8f182427813f40bf81c5ef5a08be6dbcf934dc51e39e7b5121bd41890b856e",
+      "size": [
+        1183,
+        1329
+      ],
+      "bbox": [
+        223,
+        64,
+        1130,
+        1287
+      ],
+      "solidity": 0.9536896572847264,
+      "clipped": false,
+      "anchor": "(643.0, 1293.0)",
+      "scale": 0.964667214461791
+    },
+    {
+      "state": "move",
+      "index": 2,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_move_02_v02.png",
+      "sha256": "3a1472459cc51a3f55dec8e1d5170b666e5a6b27bf9b66d96565c5698ded489e",
+      "size": [
+        1199,
+        1312
+      ],
+      "bbox": [
+        265,
+        33,
+        1130,
+        1280
+      ],
+      "solidity": 0.959299917697504,
+      "clipped": false,
+      "anchor": "(705.5, 1268.0)",
+      "scale": 0.943729903536978
+    },
+    {
+      "state": "move",
+      "index": 3,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_move_03_v02.png",
+      "sha256": "4f402a495c1d13a379327264d9952c1603da1f2176153b815ee5fdb1ab73901e",
+      "size": [
+        1206,
+        1305
+      ],
+      "bbox": [
+        123,
+        31,
+        1181,
+        1285
+      ],
+      "solidity": 0.9609105295841986,
+      "clipped": false,
+      "anchor": "(791.5, 1263.0)",
+      "scale": 0.938449240607514
+    },
+    {
+      "state": "move",
+      "index": 4,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_move_04_v02.png",
+      "sha256": "a80eadb368271595de6270c86415a00d73fdec858a4cdc8a74c7033c4131461e",
+      "size": [
+        1233,
+        1276
+      ],
+      "bbox": [
+        195,
+        87,
+        1095,
+        1242
+      ],
+      "solidity": 0.9682198730539103,
+      "clipped": false,
+      "anchor": "(718.5, 1230.0)",
+      "scale": 1.01998262380539
+    },
+    {
+      "state": "move",
+      "index": 5,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_move_05_v01.png",
+      "sha256": "a7f1e12c8548ecdbdffbf4ccf54079d91b041f43e714eba8f2e4826d3024fa6f",
+      "size": [
+        1205,
+        1305
+      ],
+      "bbox": [
+        168,
+        35,
+        1054,
+        1274
+      ],
+      "solidity": 0.9579591489843905,
+      "clipped": false,
+      "anchor": "(697.5, 1283.0)",
+      "scale": 0.949838187702265
+    }
+  ],
+  "assets": [
+    {
+      "state": "attack",
+      "path": "assets/animations/enemies/death_tyrant/attack.png",
+      "size": [
+        1024,
+        384
+      ],
+      "sha256": "f7db2b3d72080e679fdaad35e05929e3df71ddf7a0724ea9895e0344e91f3d98"
+    },
+    {
+      "state": "death",
+      "path": "assets/animations/enemies/death_tyrant/death.png",
+      "size": [
+        1536,
+        384
+      ],
+      "sha256": "d339e26d17bff944e9cc4b603f2374a333cadddc531c22f3c9246dd21371cf95"
+    },
+    {
+      "state": "idle",
+      "path": "assets/animations/enemies/death_tyrant/idle.png",
+      "size": [
+        1024,
+        384
+      ],
+      "sha256": "3cba261d08ffd884c187dadfb34d62b3571ae92d2e5ea6b0913a85f16f5f2a00"
+    },
+    {
+      "state": "move",
+      "path": "assets/animations/enemies/death_tyrant/move.png",
+      "size": [
+        1536,
+        384
+      ],
+      "sha256": "1e33d3f9ad666e728cdd1973a0297ad40e85c7303a214d855313725ca9b185fd"
+    }
+  ],
+  "packing": {
+    "body_height": 176.177782002201,
+    "cell": [
+      256,
+      384
+    ],
+    "feet_y": 356,
+    "fit": 0.150066253834924,
+    "id": "death_tyrant",
+    "native_alpha": true,
+    "sources": {
+      "attack": [
+        {
+          "anchor": "(741.0, 1266.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_attack_00_v02.png",
+          "scale": 0.955792682926829
+        },
+        {
+          "anchor": "(587.5, 1236.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_attack_01_v02.png",
+          "scale": 1.0
+        },
+        {
+          "anchor": "(656.5, 1269.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_attack_02_v01.png",
+          "scale": 0.970588235294118
+        },
+        {
+          "anchor": "(709.5, 1208.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_attack_03_v01.png",
+          "scale": 1.0
+        }
+      ],
+      "death": [
+        {
+          "anchor": "(564.0, 1380.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_death_00_v01.png",
+          "scale": 0.88936170212766
+        },
+        {
+          "anchor": "(583.0, 1371.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_death_01_v01.png",
+          "scale": 0.889992902767921
+        },
+        {
+          "anchor": "(594.0, 1360.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_death_02_v03.png",
+          "scale": 0.84609375
+        },
+        {
+          "anchor": "(671.0, 1101.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_death_03_v03.png",
+          "scale": 0.920366972477064
+        },
+        {
+          "anchor": "(758.0, 933.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_death_04_v03.png",
+          "scale": 0.9796875
+        },
+        {
+          "anchor": "(762.0, 936.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_death_05_v01.png",
+          "scale": 0.9796875
+        }
+      ],
+      "idle": [
+        {
+          "anchor": "(712.0, 1210.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_idle_00_v01.png",
+          "scale": 1.0
+        },
+        {
+          "anchor": "(698.0, 1344.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_idle_01_v01.png",
+          "scale": 0.918622848200313
+        },
+        {
+          "anchor": "(701.5, 1279.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_idle_02_v01.png",
+          "scale": 0.942215088282504
+        },
+        {
+          "anchor": "(708.5, 1244.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_idle_03_v01.png",
+          "scale": 0.974273858921162
+        }
+      ],
+      "move": [
+        {
+          "anchor": "(705.0, 1230.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_move_00_v01.png",
+          "scale": 1.02982456140351
+        },
+        {
+          "anchor": "(643.0, 1293.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_move_01_v01.png",
+          "scale": 0.964667214461791
+        },
+        {
+          "anchor": "(705.5, 1268.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_move_02_v02.png",
+          "scale": 0.943729903536978
+        },
+        {
+          "anchor": "(791.5, 1263.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_move_03_v02.png",
+          "scale": 0.938449240607514
+        },
+        {
+          "anchor": "(718.5, 1230.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_move_04_v02.png",
+          "scale": 1.01998262380539
+        },
+        {
+          "anchor": "(697.5, 1283.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_move_05_v01.png",
+          "scale": 0.949838187702265
+        }
+      ]
+    }
+  },
+  "checks": {
+    "queue": {
+      "path": ".atena/generated/goranthis-resume/v01/death_tyrant-queue.log",
+      "marker": "Animation queue: 0 failure(s)",
+      "passed": true
+    },
+    "runtime": {
+      "path": ".atena/generated/goranthis-resume/v01/death_tyrant-runtime.log",
+      "marker": "death cleanup OK",
+      "passed": true
+    },
+    "capture": {
+      "path": ".atena/generated/goranthis-resume/v01/death_tyrant-capture.log",
+      "marker": "Shedaklah capture result=0",
+      "passed": true
+    }
+  },
+  "manifest_verified": 192,
+  "capture": ".atena/generated/priority-review/death_tyrant_runtime.png",
+  "native_alpha_preserved": true,
+  "next_actor": "socothbenoth",
+  "remaining_new_frames": 25,
+  "owner_exception": {
+    "scope": [
+      "death_02",
+      "death_03",
+      "death_04",
+      "death_05"
+    ],
+    "visible_smaller_stalks": 7,
+    "identity_smaller_stalks": 8,
+    "owner_reply": "atena, prossiga",
+    "approval_receipt": ".atena/generated/goranthis-resume/v01/death-tyrant-death-anatomy-approval-2026-10-08.json",
+    "interpretation_disclosed": true
+  },
+  "capture_inspected": true
+}

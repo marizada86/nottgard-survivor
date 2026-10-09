@@ -1,0 +1,16 @@
+{
+  "id": "death_tyrant",
+  "state": "death",
+  "index": 2,
+  "version": 3,
+  "date": "2026-10-08",
+  "refs": [
+    "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_death_02_v02.png",
+    "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_idle_00_v01.png"
+  ],
+  "prompt": "Edit IMAGE1. Add ONE missing small ocular stalk and CLOSED eye. Image1 currently has SEVEN smaller eyes: 3 left, 1 above, 3 right. Image2 identity has EIGHT: 3 left, 1 above, 4 right. ADD the original EIGHTH lowest RIGHT stalk on sphere lower-right rim behind the humanoid head, curling down to a NEW small CLOSED eye just to RIGHT of the humanoid cheek/hair, approximately 83% canvas width and 78% height. This new eighth eye is BELOW all existing right eyes, ABOVE the resting right hand. It must be clearly separately visible, NOT concealed behind hair, NOT just moving an existing eye. Keep ALL seven existing closed eyes and their stalks unchanged. End result EIGHT separate smaller closed-eye tips plus the large central closed eye. Keep exact deep sagging kneeling body pose, two human arms, robe/gold chains, spikes/tendrils and pixelart unchanged. Whole character including all EIGHT closed eyes must have clear transparent margins on all sides; widen canvas if needed to restore rightmost cut edge. Native transparent background, opaque solid subject. No blue light, extra limb, ninth eye, ground, shadow, effects or text.",
+  "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-7ec40de4-ec2d-44f4-b539-2ebe901515a8.png",
+  "workspace_path": "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_death_02_v03.png",
+  "output_hint": "Generated images are saved to C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be as C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-7ec40de4-ec2d-44f4-b539-2ebe901515a8.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "error": null
+}

@@ -21,6 +21,14 @@ func _check() -> void:
 		view.preview_enemy_id = id
 		view._apply_id(id)
 	assert(view._has_animation)
+	if actual_actor and id in ["ilusao_de_sucubo", "ilusao_de_socothbenoth"]:
+		view.sync_visual(view.position)
+		assert(is_equal_approx(view.sprite.modulate.a, 0.45))
+		var reused_source := "sucubo" if id == "ilusao_de_sucubo" else "cultista_de_socothbenoth"
+		assert(String(view.ANIMATED[id].source_id) == reused_source)
+		for state in view.ANIMATED[id].states:
+			var texture: AtlasTexture = view.sprite.sprite_frames.get_frame_texture(state, 0)
+			assert(texture.atlas.resource_path == "res://assets/animations/enemies/%s/%s.png" % [reused_source, state])
 	var body_height := float(view.ANIMATED[id].get("body_height", 384.0))
 	assert(is_equal_approx(view.sprite.scale.x * body_height, 62.0 * actor_scale))
 	assert(view.sprite.offset.y == -164.0)

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "guardiao_de_goranthis",
+    "version": 1,
+    "path": ".atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_idle_00_v01.png",
+    "prompt": "Use case: identity-preserve. Create ONE full-body neutral idle_00 game sprite from attached static EXACT identity reference. Preserve its face, anatomy, number of limbs and props, clothing, materials, palette, silhouette and visual hierarchy. Dark-fantasy crisp isometric pixel art, controlled dithering, opaque solid silhouette, three-quarter front view facing RIGHT. Whole character fully inside1254square canvas with >=100px transparent margin on ALL sides, including tallest weapon/horn/tentacle and all cloth tips. Neutral idle, anchored visual base, same proportions, no cropping. Native transparent background, no ground, cast shadow, scenery, gradient, blur, motion lines, effects, particles, magic circle, text, logo, UI, extra character or duplicate members. Ivory marble angel with original green veins/vines, exact gold crown and cloth ornaments, TWO white feathered wings partially closed, two human arms/two human legs and one complete tall GOLD SPEAR held by ORIGINAL screenLEFT hand. Other screenRIGHT hand stays empty. The source spear top touches image edge: reconstruct its whole pointed spearhead with CLEAR upper transparent margin, preserve same spear design. Spear planted upright, body regal and still. Full wings/feet/spear inside all margins.",
+    "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-54357ae4-25ec-42ea-a555-ea75449e9b90.png",
+    "reference": "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/assets/enemies/guardiao_de_goranthis.png",
+    "tool": "built-in image_gen"
+  },
+  {
+    "id": "cultista_de_socothbenoth",
+    "version": 2,
+    "path": ".atena/generated/art-candidates/enemies-goranthis/cultista_de_socothbenoth/cultista_de_socothbenoth_idle_00_v02.png",
+    "prompt": "Use case: identity-preserve. Correct ONLY the HEAD orientation in this existing illusion priest game sprite. PRIMARY PALE humanoid face must turn in three-quarter view looking toward SCREEN RIGHT: its nose clearly points toward RIGHT and gaze RIGHT, rather than the current left. Keep the original attached RED secondary face/mask as part of same head behind the primary face, not another floating head. Crown follows head. Keep EVERYTHING ELSE unchanged: screenRIGHT hand holds same complete gold staff with pale-face mirror and attached pink flesh ribbons, screenLEFT hand stays empty extended; cream/wine opaque robes, golden trim and hanging ornaments, two arms/two boots, torso pose, props, full-body framing, scale, palette and crisp pixel-art style. DO NOT horizontally flip entire sprite or swap staff hand. Camera3/4 front and full body facingRIGHT. One isolated character native transparent background with opaque silhouette, no ground/shadow/text/new props/extra limbs/extra faces. All crown points/staff/robe tips completely inside1254square with transparent margins.",
+    "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-8625771d-0c97-419c-beb5-247eccb6457e.png",
+    "reference": "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/cultista_de_socothbenoth/cultista_de_socothbenoth_idle_00_v01.png",
+    "tool": "built-in image_gen"
+  },
+  {
+    "id": "death_tyrant",
+    "version": 1,
+    "path": ".atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_idle_00_v01.png",
+    "prompt": "Use case: identity-preserve. Create ONE full-body neutral idle_00 game sprite from attached static EXACT identity reference. Preserve its face, anatomy, number of limbs and props, clothing, materials, palette, silhouette and visual hierarchy. Dark-fantasy crisp isometric pixel art, controlled dithering, opaque solid silhouette, three-quarter front view facing RIGHT. Whole character fully inside1254square canvas with >=100px transparent margin on ALL sides, including tallest weapon/horn/tentacle and all cloth tips. Neutral idle, anchored visual base, same proportions, no cropping. Native transparent background, no ground, cast shadow, scenery, gradient, blur, motion lines, effects, particles, magic circle, text, logo, UI, extra character or duplicate members. Original floating gray-purple spiked ocular sphere with ONE large central BLUE vertical-pupil eye and EIGHT attached stalks, each with one smaller BLUE eye, preserve eight from reference without adding eyes/stalks. Below sphere retain original deformed humanoid face, TWO hanging withered humanoid arms, long tattered black-purple robe and gold chain ornaments. Preserve exact source anatomy and silhouette, no invented legs, no legs/ground/support. Neutral hovering pose, stalks steady, central eye open. Full lower cloth tip/chains/all eight eye stalks inside margins.",
+    "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-eda8ecbe-2230-45a8-9228-b4f1101b1fc5.png",
+    "reference": "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/assets/enemies/death_tyrant.png",
+    "tool": "built-in image_gen"
+  },
+  {
+    "id": "socothbenoth",
+    "version": 1,
+    "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_idle_00_v01.png",
+    "prompt": "Use case: identity-preserve. Create ONE full-body neutral idle_00 game sprite from attached static EXACT identity reference. Preserve its face, anatomy, number of limbs and props, clothing, materials, palette, silhouette and visual hierarchy. Dark-fantasy crisp isometric pixel art, controlled dithering, opaque solid silhouette, three-quarter front view facing RIGHT. Whole character fully inside1254square canvas with >=100px transparent margin on ALL sides, including tallest weapon/horn/tentacle and all cloth tips. Neutral idle, anchored visual base, same proportions, no cropping. Native transparent background, no ground, cast shadow, scenery, gradient, blur, motion lines, effects, particles, magic circle, text, logo, UI, extra character or duplicate members. Original tall wine and ivory robed ruler, skeletal pale horned HEAD/mask with large bone horns and red-orange inner prongs, green veined chest inset, TWO long thin humanoid arms and original hand positions, gold chain/shoulder jewelry. Preserve EXACT attached black serpent/tentacle shapes emerging behind shoulders from reference, including two visible shadowy heads with tiny yellow eyes; solid attached silhouettes, no floating smoke or duplicate serpents. Upright neutral imposing posture, full long wine/ivory robe tails and horns complete inside margins. Hands empty as original; no staff or new props.",
+    "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-1f9e211a-1e87-46c4-9eea-2af034a06f81.png",
+    "reference": "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/assets/enemies/socothbenoth.png",
+    "tool": "built-in image_gen"
+  }
+]

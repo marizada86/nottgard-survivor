@@ -1,0 +1,16 @@
+{
+  "id": "death_tyrant",
+  "state": "attack",
+  "index": 0,
+  "version": 2,
+  "date": "2026-10-08",
+  "refs": [
+    "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_attack_00_v01.png",
+    "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_idle_00_v01.png"
+  ],
+  "prompt": "Use case: precise-object-edit. Image1 is edit target, image2 approved anatomy reference. Remove ONLY the extraneous THIRD human arm and dangling claw at lower SCREEN RIGHT beside the wine robe (below the raised right hand). Keep the TWO intended arms: bent hand at SCREEN LEFT and raised bent hand at upper SCREEN RIGHT. The emptied area is transparent background with original robe/chain silhouette intact. Preserve EXACTLY EIGHT attached small blue ocular stalks (THREE left + ONE top + FOUR right including lowest right beside lower human face), ONE central blue eye, original gray-purple spiked sphere, lower humanoid face looking RIGHT, mouth/beard tendrils, all gold chains/symbols and wine black robe. Keep identical anticipation pose/proportions/camera/pixelart; no new limb, no legs. Complete silhouette with transparent margins, native alpha background, solid opaque character. No shadow, glow, particles, rays or text.",
+  "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-7417578a-055e-4bd1-abdc-8290a08b4dcd.png",
+  "workspace_path": "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_attack_00_v02.png",
+  "output_hint": "Generated images are saved to C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be as C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-7417578a-055e-4bd1-abdc-8290a08b4dcd.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "error": null
+}

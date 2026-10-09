@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-08",
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "status": "PILARES_LOCAL_COMPLETE",
+  "build_id": "ac14526+",
+  "build_info": {
+    "date": "2026-10-09T02:54:01Z",
+    "commit": "ac14526+"
+  },
+  "path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\build\\image-priority-pilares-complete\\NottgardSurvivors.exe",
+  "bytes": 416497672,
+  "sha256": "82cce68ab370d99630c97879d7e14ea02d33f1d2fa2273eeb3e2df36ac46676c",
+  "manifest_assets": 202,
+  "frames": 26,
+  "strips": 5,
+  "actors": [
+    "sintese_abissal"
+  ],
+  "checks": {
+    "queue": {
+      "path": ".atena/generated/pilares-resume/v01/sintese_abissal-queue.log",
+      "passed": true,
+      "marker": "Animation queue: 0 failure(s)"
+    },
+    "runtime": {
+      "path": ".atena/generated/pilares-resume/v01/sintese_abissal-runtime.log",
+      "passed": true,
+      "marker": "death cleanup OK"
+    },
+    "suite": {
+      "path": ".atena/generated/pilares-resume/v01/sintese_abissal-suite.log",
+      "passed": true,
+      "marker": "testes: 0 falha(s)"
+    },
+    "smoke": {
+      "path": ".atena/generated/pilares-resume/v01/sintese_abissal-smoke.log",
+      "passed": true,
+      "marker": "smoke: ok"
+    },
+    "capture": {
+      "path": ".atena/generated/pilares-resume/v01/sintese_abissal-capture.log",
+      "passed": true,
+      "marker": "Shedaklah capture result=0"
+    },
+    "trigger": {
+      "path": ".atena/generated/pilares-resume/v01/sintese_abissal-trigger.log",
+      "passed": true,
+      "marker": "actual aoe telegraph/summon/ring -> special, unlock and puddle -> attack OK"
+    }
+  },
+  "export_exit": 0,
+  "exe_exit": 0,
+  "exe_frames": 60,
+  "native_alpha_preserved": true,
+  "capture_inspected": true,
+  "human_playtest": "pending",
+  "next_checkpoint": "S-007/RECONCILIATION",
+  "notes": "One cage arm, two lamp arms, two green lamps, one left wing and root base reviewed. Technical packing preserves native RGBA. Actual aoe telegraph/summon/ring trigger special; combat unchanged. PLAN-071 return preserved. Small extra green pendant drop is explicitly accepted only in attack03v03.",
+  "owner_exception": {
+    "date": "2026-10-08",
+    "plan": "PLAN-053",
+    "spec": "SPEC-121",
+    "request_classification": "IN_PLAN",
+    "gate": "GATE-PILARES-ATTACK03-PENDANT-2026-10-08",
+    "status": "ACCEPTED_OWNER_EXCEPTION",
+    "owner_reply": "aprovado, continue",
+    "interpretation": "Approval of presented attack03v03 candidate and bounded green pendant exception, not authorization for fourth correction.",
+    "exception_scope": [
+      "attack_03"
+    ],
+    "version": 3,
+    "source": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_attack_03_v03.png",
+    "sha256": "9832f2355974c1e34ed629189ff6cb3f61548f4b0958a136711977b2c8fca20e",
+    "exception": "Small intermediate gold pendant retains one green drop. Exactly three original arms and two main original lamps remain.",
+    "preview": ".atena/generated/pilares-resume/v01/attack_03_v03_lamp_detail.png",
+    "approval_context": "Owner replied to final question about accepting the small green pendant in attack03 or authorizing another native correction. Presented candidate approved with continue; no further native generation of attack03."
+  }
+}

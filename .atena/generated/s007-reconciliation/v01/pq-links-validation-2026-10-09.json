@@ -1,0 +1,70 @@
+{
+  "status": "PASSED",
+  "links": [
+    {
+      "document": ".atena/evidence/s007-orbe-radiante-completo-q01-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/p01-owner-approval-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-orbe-radiante-completo-q01-gate-2026-10-09.md",
+      "target": "../vault/canon/ASSET-APPROVAL-REGISTER-027-vfx-orbe-radiante-2026-10-09.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-orbe-radiante-completo-q01-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/orbe-radiante-sequence-audit-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-orbe-radiante-completo-q01-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/orbe-radiante-eight-frame-review-2026-10-09.png",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-orbe-radiante-completo-q01-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/orbe-radiante-flight-review-2026-10-09.gif",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-orbe-radiante-completo-q01-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/orbe-radiante-impact-review-2026-10-09.gif",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-orbe-radiante-completo-q01-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/q01-owner-gate-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-orbe-radiante-completo-q01-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/q01-reference-comparison-2026-10-09.png",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-orbe-radiante-completo-q01-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/pq-generation-jobs-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-orbe-radiante-completo-q01-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/q01-centering-audit-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-027-vfx-orbe-radiante-2026-10-09.md",
+      "target": "../../generated/s007-reconciliation/v01/p01-owner-approval-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-027-vfx-orbe-radiante-2026-10-09.md",
+      "target": "../../generated/art-candidates/vfx/orbe_radiante/orbe_radiante_fly_00_v01.png",
+      "exists": true
+    }
+  ],
+  "source_hashes_verified": 9,
+  "rejected_native_hashes_verified": 2,
+  "manifest_assets": 202,
+  "manifest_sha256": "52384ac0f88ffca25952099d6c7f0e58224e7d235012ea284f55198cc2406f6a",
+  "gate": "GATE-FILA-022-Q01-2026-10-09"
+}

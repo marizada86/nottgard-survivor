@@ -1,0 +1,51 @@
+{
+  "id": "GATE-FILA-022-P01-2026-10-09",
+  "timestamp": "2026-10-09T03:36:49.701178+00:00",
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "checkpoint": "S-007/VFX/FILA-022/P01-APPROVAL",
+  "status": "APPROVED",
+  "frame": "P01",
+  "version": "v01",
+  "candidate": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_fly_00_v01.png",
+  "sha256": "a321dde3ebdce44f469c46a4147a4400bd97f3e958ec5ab0cb109338adaea752",
+  "visual_inspected": true,
+  "review": ".atena/generated/s007-reconciliation/v01/p01-reference-comparison-2026-10-09.png",
+  "prompts_and_native_audit": ".atena/generated/s007-reconciliation/v01/fp-generation-jobs-2026-10-09.json",
+  "source_instruction": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+  "canonical_source": ".atena/generated/ART-PROMPTS-053-vfx-projeteis-e-explosoes.md",
+  "instruction": "Para cada efeito, gere primeiro o quadro marcado GATE, pare e devolva ao dono.",
+  "visual_review": {
+    "subject": "round radiant projectile with bright white core, gray halo, short pointed left tail and tiny star sparks",
+    "view": "flat top-down",
+    "orb_pivot": "canvas center",
+    "flight_direction": "RIGHT",
+    "tail_direction": "LEFT",
+    "readable_at96": true,
+    "no_visible_cuts": true,
+    "no_character_weapon_hand_text": true,
+    "approved_pilot_style_compared": true
+  },
+  "technical_notes": {
+    "native_dimensions": [
+      1254,
+      1254
+    ],
+    "requested_dimensions": [
+      1024,
+      1024
+    ],
+    "outer_border_max_luminance": 1,
+    "maximum_channel_difference": 9,
+    "normalization": "Native retained byte-for-byte; later technical downsample needed; exact zero RGB not claimed"
+  },
+  "runtime_admission": false,
+  "official_manifest_assets": 202,
+  "manifest_file_sha256": "52384ac0f88ffca25952099d6c7f0e58224e7d235012ea284f55198cc2406f6a",
+  "remaining_native_vfx_frames": 95,
+  "other_P_frames_generated": 0,
+  "next_if_approved": "Generate P02-P08 individually from approved P01: three flight frames and four impact frames; then Q01 gate",
+  "ranking_return": "PLAN-071 B-006/S-011 preserved",
+  "owner_reply": "atena, aprovado, continue",
+  "approval_receipt": ".atena/generated/s007-reconciliation/v01/p01-owner-approval-2026-10-09.json"
+}

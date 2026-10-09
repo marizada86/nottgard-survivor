@@ -1,0 +1,382 @@
+[
+  {
+    "state": "attack",
+    "index": 0,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/cultista_de_socothbenoth/cultista_de_socothbenoth_attack_00_v01.png",
+    "bbox": [
+      218,
+      33,
+      1130,
+      1223
+    ],
+    "solidity": 0.9660468447438925,
+    "clipped": false,
+    "packed_bbox": [
+      75,
+      219,
+      180,
+      357
+    ]
+  },
+  {
+    "state": "attack",
+    "index": 1,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/cultista_de_socothbenoth/cultista_de_socothbenoth_attack_01_v01.png",
+    "bbox": [
+      89,
+      17,
+      1206,
+      1237
+    ],
+    "solidity": 0.9629586549645766,
+    "clipped": false,
+    "packed_bbox": [
+      64,
+      216,
+      192,
+      357
+    ]
+  },
+  {
+    "state": "attack",
+    "index": 2,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/cultista_de_socothbenoth/cultista_de_socothbenoth_attack_02_v02.png",
+    "bbox": [
+      44,
+      27,
+      1183,
+      1265
+    ],
+    "solidity": 0.9686285778538499,
+    "clipped": false,
+    "packed_bbox": [
+      60,
+      220,
+      186,
+      356
+    ]
+  },
+  {
+    "state": "attack",
+    "index": 3,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/cultista_de_socothbenoth/cultista_de_socothbenoth_attack_03_v01.png",
+    "bbox": [
+      224,
+      6,
+      1092,
+      1227
+    ],
+    "solidity": 0.9614630364390934,
+    "clipped": false,
+    "packed_bbox": [
+      79,
+      216,
+      180,
+      357
+    ]
+  },
+  {
+    "state": "death",
+    "index": 0,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/cultista_de_socothbenoth/cultista_de_socothbenoth_death_00_v01.png",
+    "bbox": [
+      64,
+      49,
+      1096,
+      1318
+    ],
+    "solidity": 0.9700569522337419,
+    "clipped": false,
+    "packed_bbox": [
+      74,
+      222,
+      183,
+      357
+    ]
+  },
+  {
+    "state": "death",
+    "index": 1,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/cultista_de_socothbenoth/cultista_de_socothbenoth_death_01_v01.png",
+    "bbox": [
+      58,
+      75,
+      1161,
+      1249
+    ],
+    "solidity": 0.9762453444894451,
+    "clipped": false,
+    "packed_bbox": [
+      68,
+      227,
+      189,
+      357
+    ]
+  },
+  {
+    "state": "death",
+    "index": 2,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/cultista_de_socothbenoth/cultista_de_socothbenoth_death_02_v01.png",
+    "bbox": [
+      56,
+      75,
+      1202,
+      1210
+    ],
+    "solidity": 0.9734201504634722,
+    "clipped": false,
+    "packed_bbox": [
+      62,
+      226,
+      195,
+      357
+    ]
+  },
+  {
+    "state": "death",
+    "index": 3,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/cultista_de_socothbenoth/cultista_de_socothbenoth_death_03_v01.png",
+    "bbox": [
+      26,
+      193,
+      1236,
+      1182
+    ],
+    "solidity": 0.9773003179497062,
+    "clipped": false,
+    "packed_bbox": [
+      59,
+      242,
+      198,
+      357
+    ]
+  },
+  {
+    "state": "death",
+    "index": 4,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/cultista_de_socothbenoth/cultista_de_socothbenoth_death_04_v01.png",
+    "bbox": [
+      44,
+      381,
+      1520,
+      837
+    ],
+    "solidity": 0.9757239279940957,
+    "clipped": false,
+    "packed_bbox": [
+      24,
+      296,
+      233,
+      361
+    ]
+  },
+  {
+    "state": "death",
+    "index": 5,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/cultista_de_socothbenoth/cultista_de_socothbenoth_death_05_v01.png",
+    "bbox": [
+      25,
+      357,
+      1525,
+      810
+    ],
+    "solidity": 0.9791300220907163,
+    "clipped": false,
+    "packed_bbox": [
+      23,
+      297,
+      234,
+      361
+    ]
+  },
+  {
+    "state": "idle",
+    "index": 0,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/cultista_de_socothbenoth/cultista_de_socothbenoth_idle_00_v02.png",
+    "bbox": [
+      227,
+      15,
+      1045,
+      1225
+    ],
+    "solidity": 0.9679638604742516,
+    "clipped": false,
+    "packed_bbox": [
+      79,
+      217,
+      173,
+      357
+    ]
+  },
+  {
+    "state": "idle",
+    "index": 1,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/cultista_de_socothbenoth/cultista_de_socothbenoth_idle_01_v01.png",
+    "bbox": [
+      222,
+      16,
+      1054,
+      1225
+    ],
+    "solidity": 0.9663295644999766,
+    "clipped": false,
+    "packed_bbox": [
+      80,
+      217,
+      176,
+      357
+    ]
+  },
+  {
+    "state": "idle",
+    "index": 2,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/cultista_de_socothbenoth/cultista_de_socothbenoth_idle_02_v01.png",
+    "bbox": [
+      181,
+      35,
+      1064,
+      1274
+    ],
+    "solidity": 0.9666210119239446,
+    "clipped": false,
+    "packed_bbox": [
+      78,
+      217,
+      178,
+      357
+    ]
+  },
+  {
+    "state": "idle",
+    "index": 3,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/cultista_de_socothbenoth/cultista_de_socothbenoth_idle_03_v01.png",
+    "bbox": [
+      172,
+      37,
+      1050,
+      1277
+    ],
+    "solidity": 0.9647133992274703,
+    "clipped": false,
+    "packed_bbox": [
+      77,
+      217,
+      176,
+      357
+    ]
+  },
+  {
+    "state": "move",
+    "index": 0,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/cultista_de_socothbenoth/cultista_de_socothbenoth_move_00_v01.png",
+    "bbox": [
+      176,
+      22,
+      1116,
+      1201
+    ],
+    "solidity": 0.9655137029944837,
+    "clipped": false,
+    "packed_bbox": [
+      68,
+      217,
+      179,
+      357
+    ]
+  },
+  {
+    "state": "move",
+    "index": 1,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/cultista_de_socothbenoth/cultista_de_socothbenoth_move_01_v01.png",
+    "bbox": [
+      153,
+      26,
+      1138,
+      1189
+    ],
+    "solidity": 0.965470086009328,
+    "clipped": false,
+    "packed_bbox": [
+      61,
+      217,
+      179,
+      357
+    ]
+  },
+  {
+    "state": "move",
+    "index": 2,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/cultista_de_socothbenoth/cultista_de_socothbenoth_move_02_v01.png",
+    "bbox": [
+      152,
+      29,
+      1047,
+      1330
+    ],
+    "solidity": 0.9689126855598518,
+    "clipped": false,
+    "packed_bbox": [
+      77,
+      217,
+      173,
+      357
+    ]
+  },
+  {
+    "state": "move",
+    "index": 3,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/cultista_de_socothbenoth/cultista_de_socothbenoth_move_03_v01.png",
+    "bbox": [
+      177,
+      12,
+      1103,
+      1211
+    ],
+    "solidity": 0.9686204724061322,
+    "clipped": false,
+    "packed_bbox": [
+      70,
+      217,
+      178,
+      357
+    ]
+  },
+  {
+    "state": "move",
+    "index": 4,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/cultista_de_socothbenoth/cultista_de_socothbenoth_move_04_v01.png",
+    "bbox": [
+      85,
+      11,
+      1178,
+      1266
+    ],
+    "solidity": 0.9684379155919696,
+    "clipped": false,
+    "packed_bbox": [
+      60,
+      217,
+      181,
+      357
+    ]
+  },
+  {
+    "state": "move",
+    "index": 5,
+    "path": "res://.atena/generated/art-candidates/enemies-goranthis/cultista_de_socothbenoth/cultista_de_socothbenoth_move_05_v01.png",
+    "bbox": [
+      190,
+      17,
+      1051,
+      1285
+    ],
+    "solidity": 0.9669873811548884,
+    "clipped": false,
+    "packed_bbox": [
+      81,
+      217,
+      175,
+      357
+    ]
+  }
+]

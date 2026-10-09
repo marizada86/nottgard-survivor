@@ -1,0 +1,39 @@
+{
+  "id": "GATE-FILA-021-E03-2026-10-09",
+  "timestamp": "2026-10-09T03:06:05.080331+00:00",
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "checkpoint": "S-007/VFX/FILA-021/E03-APPROVAL",
+  "status": "APPROVED",
+  "frame": "E03",
+  "version": "v01",
+  "candidate": ".atena/generated/art-candidates/vfx/arco_largo_radiante/arco_largo_radiante_peak_v01.png",
+  "sha256": "aa72cc5f234bda6ef82c91b8a26690e25514f8c25fd7826f520f07caed978640",
+  "visual_inspected": true,
+  "review": ".atena/generated/s007-reconciliation/v01/e03-reference-comparison-2026-10-09.png",
+  "prompt": ".atena/generated/s007-reconciliation/v01/e03-prompt-2026-10-09.json",
+  "audit": ".atena/generated/s007-reconciliation/v01/e03-audit-2026-10-09.json",
+  "source_instruction": ".atena/generated/CHATGPT-FILA-021-vfx-corpo-a-corpo-excecoes.md",
+  "instruction": "Para cada efeito, gere primeiro o quadro marcado GATE, pare e devolva ao dono.",
+  "visual_review": {
+    "direction": "RIGHT",
+    "view": "flat top-down",
+    "subject": "wide radiant arc with short rays and star-shaped glints",
+    "no_character_weapon_hand_text": true,
+    "readable_at96": true,
+    "approved_pilot_style_comparison": true,
+    "no_visible_cuts": true
+  },
+  "technical_notes": [
+    "Native output is 1254x1254; requested canvas 1024x1024. Native is preserved; later technical downsampling is required for admission.",
+    "Background appears black; outer border luminance is 0-2/255, channel difference up to11/255. Do not claim exact zero RGB or exact channel equality. No source cleanup performed."
+  ],
+  "runtime_admission": false,
+  "manifest_assets": 202,
+  "remaining_native_vfx_frames": 107,
+  "other_E_frames_generated": 0,
+  "next_if_approved": "Generate E01/E02/E04/E05/E06 individually using E03 as the approved reference; next F03 gate follows only after E.",
+  "ranking_return": "PLAN-071 B-006/S-011 preserved",
+  "owner_reply": "atena, aprovado, continue",
+  "approval_receipt": ".atena/generated/s007-reconciliation/v01/e03-owner-approval-2026-10-09.json"
+}

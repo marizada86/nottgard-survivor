@@ -1,0 +1,96 @@
+[
+  {
+    "id": "sintese_abissal",
+    "state": "attack",
+    "index": 3,
+    "version": 3,
+    "date": "2026-10-08",
+    "refs": [
+      "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_attack_03_v02.png"
+    ],
+    "prompt": "Edit this ONE attached animation frame. Preserve EXACT same full-body pose, scale, camera, identity, anatomy and all colours/alpha except ONE tiny pendant's dripping green. There are TWO original green lamps that MUST remain: LARGE lamp under upper RIGHT hand and SMALL lamp under INNER side of lower RIGHT hand. There is an EXTRA tiny green drop under the little gold bell on the INTERMEDIATE VERTICAL CHAIN, just LEFT of the LARGE green lamp and ABOVE/ between the two RIGHT hands (around x900 y685-715 on the 1024x1536 reference). Change that INTERMEDIATE tiny bell/drop to plain solid GOLD, with absolutely no green. Its shape and chain remain. The OUTER lowest finger bell is already gold; leave it. EXACTLY TWO green lamp shapes afterward, not three. Preserve all THREE existing arms, one cage arm at LEFT and two lamp arms RIGHT, single wingLEFT, attached white root base, body clothing and recovery pose. No new lamps or parts. Native transparent background; every tip inside clear padding; solid opaque sprite, no halo, ground, shadows or text."
+  },
+  {
+    "id": "sintese_abissal",
+    "state": "death",
+    "index": 5,
+    "version": 1,
+    "date": "2026-10-08",
+    "refs": [
+      "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_death_04_v01.png"
+    ],
+    "prompt": "Create exactly ONE final-settle animation frame from this attached death04. Preserve its EXACT collapsed corpse identity, proportions, camera, pose, scale, colours and connections. Frame death05 is a tiny final settle only: lower the head/crown slightly without lifting any body part. Keep the ONE original wing attached backLEFT, ONE original cage arm and TWO original lamp arms, exactly TWO attached green lamps, crown LOWRIGHT and connected WHITE ROOT base towardLEFT. Core OFF nearly BLACK with no luminous star or purple point; all little eye apertures closed dark, not glowing. Preserve original gold bells as plain gold with no additional green lamp. No reset/rising or humanoid legs. Same pixel-art corpse; entire silhouette with generous transparent native-alpha margins; no ground, cast shadow, halo, loose particles, rays or text."
+  },
+  {
+    "id": "sintese_abissal",
+    "state": "special",
+    "index": 0,
+    "version": 1,
+    "date": "2026-10-08",
+    "refs": [
+      "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/assets/enemies/sintese_abissal.png",
+      "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_idle_00_v02.png"
+    ],
+    "prompt": "Create exactly ONE full-body animation frame of APPROVED A Sintese Abissal. Image1 static fixes identity; image2 approved idle00v02 fixes exact anatomy, camera, palette, proportions; image3 when supplied shows a preceding phase to advance, not another character. Preserve ONE crimson bat WING attached behind SCREENLEFT; EXACTLY THREE existing arms: ONE huge cage-armored gauntlet/clawed arm rooted at SCREENLEFT shoulder (character right arm), TWO original lamp-bearing arms at SCREENRIGHT stacked upper/lower. Upper hand holds original BIG gold bell-lantern with solid attached GREEN drips, lower hand holds original SMALL gold bell-lantern with green drips. Preserve same fingers/chains/bells and their attachments, no hand/prop swap. Green root-trunk body enclosed in ivory-white bone/roots with pink mushroom crown and fungi, same small yellow-green eye details, wine tattered robe/gold chains and PURPLE chest core strictly confined INSIDE trunk. Original foot/base is a connected WHITE ROOT cluster, NEVER invent human legs or extra arms/wings/heads/lamps. All original parts stay attached as one solid physical figure. Match approved crisp dark-fantasy isometric PIXEL ART, 3/4 front facingRIGHT, same apparent body scale. Entire silhouette tips of wing/crown/claws/lanterns/drips/roots/chains inside ample native-alpha TRANSPARENT padding; subject occupies at most80% of width AND height, at least10% clear padding on EVERY side. Tall2:3 canvas except wide collapsed death poses when needed. Opaque solid materials, no looseparticles/glowcloud/backgroundhalo/castshadow/ground/scenery/text/UI/projectile/circle. Move the ORIGINAL arms rather than adding duplicates; ONE original cage arm and TWO original lamp arms total. POSE special_00: Anticipation: purple chestcore pulse intensifies ONLYINSIDE chest, original cage arm draws inward fromLEFT, two original lamp arms prepare swinging onRIGHT, wing stable. Exactly TWO and only TWO green-dripping lamps: LARGE upper-hand lamp and SMALL inner lower-hand lamp. All other bells, ornaments and outer lower fingers retain plain solid GOLD without green tips or drips. Do not add any third lamp. Preserve original THREE arms."
+  },
+  {
+    "id": "sintese_abissal",
+    "state": "special",
+    "index": 1,
+    "version": 1,
+    "date": "2026-10-08",
+    "refs": [
+      "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/assets/enemies/sintese_abissal.png",
+      "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_idle_00_v02.png"
+    ],
+    "prompt": "Create exactly ONE full-body animation frame of APPROVED A Sintese Abissal. Image1 static fixes identity; image2 approved idle00v02 fixes exact anatomy, camera, palette, proportions; image3 when supplied shows a preceding phase to advance, not another character. Preserve ONE crimson bat WING attached behind SCREENLEFT; EXACTLY THREE existing arms: ONE huge cage-armored gauntlet/clawed arm rooted at SCREENLEFT shoulder (character right arm), TWO original lamp-bearing arms at SCREENRIGHT stacked upper/lower. Upper hand holds original BIG gold bell-lantern with solid attached GREEN drips, lower hand holds original SMALL gold bell-lantern with green drips. Preserve same fingers/chains/bells and their attachments, no hand/prop swap. Green root-trunk body enclosed in ivory-white bone/roots with pink mushroom crown and fungi, same small yellow-green eye details, wine tattered robe/gold chains and PURPLE chest core strictly confined INSIDE trunk. Original foot/base is a connected WHITE ROOT cluster, NEVER invent human legs or extra arms/wings/heads/lamps. All original parts stay attached as one solid physical figure. Match approved crisp dark-fantasy isometric PIXEL ART, 3/4 front facingRIGHT, same apparent body scale. Entire silhouette tips of wing/crown/claws/lanterns/drips/roots/chains inside ample native-alpha TRANSPARENT padding; subject occupies at most80% of width AND height, at least10% clear padding on EVERY side. Tall2:3 canvas except wide collapsed death poses when needed. Opaque solid materials, no looseparticles/glowcloud/backgroundhalo/castshadow/ground/scenery/text/UI/projectile/circle. Move the ORIGINAL arms rather than adding duplicates; ONE original cage arm and TWO original lamp arms total. POSE special_01: Start: cage arm moves forward acrossfront towardRIGHT from original LEFT shoulder, two original lamp limbs swing attachedlamps outwardRIGHT gently, core strongerINSIDE. Exactly TWO and only TWO green-dripping lamps: LARGE upper-hand lamp and SMALL inner lower-hand lamp. All other bells, ornaments and outer lower fingers retain plain solid GOLD without green tips or drips. Do not add any third lamp. Preserve original THREE arms."
+  },
+  {
+    "id": "sintese_abissal",
+    "state": "special",
+    "index": 2,
+    "version": 1,
+    "date": "2026-10-08",
+    "refs": [
+      "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/assets/enemies/sintese_abissal.png",
+      "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_idle_00_v02.png"
+    ],
+    "prompt": "Create exactly ONE full-body animation frame of APPROVED A Sintese Abissal. Image1 static fixes identity; image2 approved idle00v02 fixes exact anatomy, camera, palette, proportions; image3 when supplied shows a preceding phase to advance, not another character. Preserve ONE crimson bat WING attached behind SCREENLEFT; EXACTLY THREE existing arms: ONE huge cage-armored gauntlet/clawed arm rooted at SCREENLEFT shoulder (character right arm), TWO original lamp-bearing arms at SCREENRIGHT stacked upper/lower. Upper hand holds original BIG gold bell-lantern with solid attached GREEN drips, lower hand holds original SMALL gold bell-lantern with green drips. Preserve same fingers/chains/bells and their attachments, no hand/prop swap. Green root-trunk body enclosed in ivory-white bone/roots with pink mushroom crown and fungi, same small yellow-green eye details, wine tattered robe/gold chains and PURPLE chest core strictly confined INSIDE trunk. Original foot/base is a connected WHITE ROOT cluster, NEVER invent human legs or extra arms/wings/heads/lamps. All original parts stay attached as one solid physical figure. Match approved crisp dark-fantasy isometric PIXEL ART, 3/4 front facingRIGHT, same apparent body scale. Entire silhouette tips of wing/crown/claws/lanterns/drips/roots/chains inside ample native-alpha TRANSPARENT padding; subject occupies at most80% of width AND height, at least10% clear padding on EVERY side. Tall2:3 canvas except wide collapsed death poses when needed. Opaque solid materials, no looseparticles/glowcloud/backgroundhalo/castshadow/ground/scenery/text/UI/projectile/circle. Move the ORIGINAL arms rather than adding duplicates; ONE original cage arm and TWO original lamp arms total. POSE special_02: Rise: cage arm extends furtherRIGHT acrossbody, both lamps swing wider/higher in originalRIGHT hands, purple core strongest but onlyopaqueinsidechest, foldedwing partopensLEFT stillattached. Exactly TWO and only TWO green-dripping lamps: LARGE upper-hand lamp and SMALL inner lower-hand lamp. All other bells, ornaments and outer lower fingers retain plain solid GOLD without green tips or drips. Do not add any third lamp. Preserve original THREE arms."
+  },
+  {
+    "id": "sintese_abissal",
+    "state": "special",
+    "index": 3,
+    "version": 1,
+    "date": "2026-10-08",
+    "refs": [
+      "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/assets/enemies/sintese_abissal.png",
+      "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_idle_00_v02.png"
+    ],
+    "prompt": "Create exactly ONE full-body animation frame of APPROVED A Sintese Abissal. Image1 static fixes identity; image2 approved idle00v02 fixes exact anatomy, camera, palette, proportions; image3 when supplied shows a preceding phase to advance, not another character. Preserve ONE crimson bat WING attached behind SCREENLEFT; EXACTLY THREE existing arms: ONE huge cage-armored gauntlet/clawed arm rooted at SCREENLEFT shoulder (character right arm), TWO original lamp-bearing arms at SCREENRIGHT stacked upper/lower. Upper hand holds original BIG gold bell-lantern with solid attached GREEN drips, lower hand holds original SMALL gold bell-lantern with green drips. Preserve same fingers/chains/bells and their attachments, no hand/prop swap. Green root-trunk body enclosed in ivory-white bone/roots with pink mushroom crown and fungi, same small yellow-green eye details, wine tattered robe/gold chains and PURPLE chest core strictly confined INSIDE trunk. Original foot/base is a connected WHITE ROOT cluster, NEVER invent human legs or extra arms/wings/heads/lamps. All original parts stay attached as one solid physical figure. Match approved crisp dark-fantasy isometric PIXEL ART, 3/4 front facingRIGHT, same apparent body scale. Entire silhouette tips of wing/crown/claws/lanterns/drips/roots/chains inside ample native-alpha TRANSPARENT padding; subject occupies at most80% of width AND height, at least10% clear padding on EVERY side. Tall2:3 canvas except wide collapsed death poses when needed. Opaque solid materials, no looseparticles/glowcloud/backgroundhalo/castshadow/ground/scenery/text/UI/projectile/circle. Move the ORIGINAL arms rather than adding duplicates; ONE original cage arm and TWO original lamp arms total. POSE special_03: PEAK: original cage gauntlet fullyadvancedRIGHT acrossfront and both original lamp-bearing arms raised/spreadRIGHT with BIG/SMALL lamps swinging attached. One batwing openspartiallyLEFT, chestcorebrightPURPLE strictlyINSIDEtrunk, exact THREEarms, no new wing/arm/head/lantern or ray. Exactly TWO and only TWO green-dripping lamps: LARGE upper-hand lamp and SMALL inner lower-hand lamp. All other bells, ornaments and outer lower fingers retain plain solid GOLD without green tips or drips. Do not add any third lamp. Preserve original THREE arms."
+  },
+  {
+    "id": "sintese_abissal",
+    "state": "special",
+    "index": 4,
+    "version": 1,
+    "date": "2026-10-08",
+    "refs": [
+      "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/assets/enemies/sintese_abissal.png",
+      "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_idle_00_v02.png"
+    ],
+    "prompt": "Create exactly ONE full-body animation frame of APPROVED A Sintese Abissal. Image1 static fixes identity; image2 approved idle00v02 fixes exact anatomy, camera, palette, proportions; image3 when supplied shows a preceding phase to advance, not another character. Preserve ONE crimson bat WING attached behind SCREENLEFT; EXACTLY THREE existing arms: ONE huge cage-armored gauntlet/clawed arm rooted at SCREENLEFT shoulder (character right arm), TWO original lamp-bearing arms at SCREENRIGHT stacked upper/lower. Upper hand holds original BIG gold bell-lantern with solid attached GREEN drips, lower hand holds original SMALL gold bell-lantern with green drips. Preserve same fingers/chains/bells and their attachments, no hand/prop swap. Green root-trunk body enclosed in ivory-white bone/roots with pink mushroom crown and fungi, same small yellow-green eye details, wine tattered robe/gold chains and PURPLE chest core strictly confined INSIDE trunk. Original foot/base is a connected WHITE ROOT cluster, NEVER invent human legs or extra arms/wings/heads/lamps. All original parts stay attached as one solid physical figure. Match approved crisp dark-fantasy isometric PIXEL ART, 3/4 front facingRIGHT, same apparent body scale. Entire silhouette tips of wing/crown/claws/lanterns/drips/roots/chains inside ample native-alpha TRANSPARENT padding; subject occupies at most80% of width AND height, at least10% clear padding on EVERY side. Tall2:3 canvas except wide collapsed death poses when needed. Opaque solid materials, no looseparticles/glowcloud/backgroundhalo/castshadow/ground/scenery/text/UI/projectile/circle. Move the ORIGINAL arms rather than adding duplicates; ONE original cage arm and TWO original lamp arms total. POSE special_04: Sustain prior special03 PEAK with tiny physical sway, same exact three-arm configuration, originalLEFTrooted cage arm acrossfrontRIGHT, two raised originallamp arms with TWOlampsRIGHT, onewingLEFT, purplecoreinside only. Exactly TWO and only TWO green-dripping lamps: LARGE upper-hand lamp and SMALL inner lower-hand lamp. All other bells, ornaments and outer lower fingers retain plain solid GOLD without green tips or drips. Do not add any third lamp. Preserve original THREE arms."
+  },
+  {
+    "id": "sintese_abissal",
+    "state": "special",
+    "index": 5,
+    "version": 1,
+    "date": "2026-10-08",
+    "refs": [
+      "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/assets/enemies/sintese_abissal.png",
+      "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_idle_00_v02.png"
+    ],
+    "prompt": "Create exactly ONE full-body animation frame of APPROVED A Sintese Abissal. Image1 static fixes identity; image2 approved idle00v02 fixes exact anatomy, camera, palette, proportions; image3 when supplied shows a preceding phase to advance, not another character. Preserve ONE crimson bat WING attached behind SCREENLEFT; EXACTLY THREE existing arms: ONE huge cage-armored gauntlet/clawed arm rooted at SCREENLEFT shoulder (character right arm), TWO original lamp-bearing arms at SCREENRIGHT stacked upper/lower. Upper hand holds original BIG gold bell-lantern with solid attached GREEN drips, lower hand holds original SMALL gold bell-lantern with green drips. Preserve same fingers/chains/bells and their attachments, no hand/prop swap. Green root-trunk body enclosed in ivory-white bone/roots with pink mushroom crown and fungi, same small yellow-green eye details, wine tattered robe/gold chains and PURPLE chest core strictly confined INSIDE trunk. Original foot/base is a connected WHITE ROOT cluster, NEVER invent human legs or extra arms/wings/heads/lamps. All original parts stay attached as one solid physical figure. Match approved crisp dark-fantasy isometric PIXEL ART, 3/4 front facingRIGHT, same apparent body scale. Entire silhouette tips of wing/crown/claws/lanterns/drips/roots/chains inside ample native-alpha TRANSPARENT padding; subject occupies at most80% of width AND height, at least10% clear padding on EVERY side. Tall2:3 canvas except wide collapsed death poses when needed. Opaque solid materials, no looseparticles/glowcloud/backgroundhalo/castshadow/ground/scenery/text/UI/projectile/circle. Move the ORIGINAL arms rather than adding duplicates; ONE original cage arm and TWO original lamp arms total. POSE special_05: Clear RECOVERY, ORIGINAL cage arm withdraws backlowSCREENLEFT, BOTH lamp-bearing arms/lamps lowerRIGHT towardapprovedidle, chestcorepulse reduces and wing settles attachedLEFT; do not draw another peak or add arms. Exactly TWO and only TWO green-dripping lamps: LARGE upper-hand lamp and SMALL inner lower-hand lamp. All other bells, ornaments and outer lower fingers retain plain solid GOLD without green tips or drips. Do not add any third lamp. Preserve original THREE arms."
+  }
+]

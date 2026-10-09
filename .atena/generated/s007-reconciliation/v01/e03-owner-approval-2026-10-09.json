@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-10-09T03:08:58.382637+00:00",
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "classification": "IN_PLAN",
+  "status": "APPROVED",
+  "owner_reply": "atena, aprovado, continue",
+  "context": "Reply to E03 approval question for generation of five remaining radiant arc frames",
+  "gate_id": "GATE-FILA-021-E03-2026-10-09",
+  "frame": "E03",
+  "version": "v01",
+  "sha256": "aa72cc5f234bda6ef82c91b8a26690e25514f8c25fd7826f520f07caed978640",
+  "scope": "Visual E03 peak approval and five E frames, then next existing FILA021 gate; no blanket approval of F03 or future unseen frames",
+  "runtime_admission": false
+}

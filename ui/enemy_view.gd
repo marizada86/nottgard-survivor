@@ -8,6 +8,18 @@ const SHADOW_LIFT := 0.4
 ## Raio da sombra (px) por px de altura visível do inimigo: grande tem sombra grande, pequeno, pequena.
 const SHADOW_RADIUS_PER_HEIGHT := 0.2
 const ANIMATED := {
+	"sintese_abissal": {"cell": Vector2i(256, 384), "body_height": 218.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6, "special": 6}, "flip_h_for_move": true},
+	"socothbenoth": {"cell": Vector2i(256, 384), "body_height": 188.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6, "special": 6}, "flip_h_for_move": true},
+	"death_tyrant": {"cell": Vector2i(256, 384), "body_height": 176.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
+	"ilusao_de_socothbenoth": {"source_id": "cultista_de_socothbenoth", "cell": Vector2i(256, 384), "body_height": 139.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
+	"cultista_de_socothbenoth": {"cell": Vector2i(256, 384), "body_height": 139.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
+	"guardiao_de_goranthis": {"cell": Vector2i(256, 384), "body_height": 150.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
+	"malcanthet": {"cell": Vector2i(256, 384), "body_height": 161.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6, "special": 6}, "flip_h_for_move": true},
+	"master_of_cruelties": {"cell": Vector2i(256, 384), "body_height": 129.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
+	"guarda_do_castelo": {"cell": Vector2i(256, 384), "body_height": 128.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
+	"ilusao_de_sucubo": {"source_id": "sucubo", "cell": Vector2i(256, 384), "body_height": 177.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
+	"sucubo": {"cell": Vector2i(256, 384), "body_height": 177.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
+	"escravo_de_rivenheart": {"cell": Vector2i(256, 384), "body_height": 153.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
 	"lu_yueh": {"cell": Vector2i(256, 384), "body_height": 145.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6, "special": 6}, "flip_h_for_move": true},
 	"discipulo_pestilento": {"cell": Vector2i(256, 384), "body_height": 171.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
 	"cultista_ghaunadaur": {"cell": Vector2i(256, 384), "body_height": 153.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
@@ -47,6 +59,18 @@ const ANIMATED := {
 }
 ## Linha dos pés no idle (px na célula); ancora o sprite na sombra em vez da borda da célula.
 const FEET_Y := {
+	"sintese_abissal": 356.0,
+	"socothbenoth": 356.0,
+	"death_tyrant": 356.0,
+	"ilusao_de_socothbenoth": 356.0,
+	"cultista_de_socothbenoth": 356.0,
+	"guardiao_de_goranthis": 356.0,
+	"malcanthet": 356.0,
+	"master_of_cruelties": 356.0,
+	"guarda_do_castelo": 356.0,
+	"ilusao_de_sucubo": 356.0,
+	"sucubo": 356.0,
+	"escravo_de_rivenheart": 356.0,
 	"lu_yueh": 356.0,
 	"discipulo_pestilento": 356.0,
 	"cultista_ghaunadaur": 356.0,

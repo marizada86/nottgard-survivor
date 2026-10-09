@@ -1,0 +1,59 @@
+{
+  "status": "PASSED",
+  "links": [
+    {
+      "document": ".atena/evidence/s007-arco-fogo-completo-p01-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/f03-owner-approval-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-arco-fogo-completo-p01-gate-2026-10-09.md",
+      "target": "../vault/canon/ASSET-APPROVAL-REGISTER-026-vfx-arco-fogo-2026-10-09.md",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-arco-fogo-completo-p01-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/arco-fogo-sequence-audit-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-arco-fogo-completo-p01-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/arco-fogo-six-frame-review-2026-10-09.png",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-arco-fogo-completo-p01-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/arco-fogo-review-2026-10-09.gif",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-arco-fogo-completo-p01-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/p01-owner-gate-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-arco-fogo-completo-p01-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/p01-reference-comparison-2026-10-09.png",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-arco-fogo-completo-p01-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/fp-generation-jobs-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-026-vfx-arco-fogo-2026-10-09.md",
+      "target": "../../generated/s007-reconciliation/v01/f03-owner-approval-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-026-vfx-arco-fogo-2026-10-09.md",
+      "target": "../../generated/art-candidates/vfx/arco_largo_fogo/arco_largo_fogo_peak_v01.png",
+      "exists": true
+    }
+  ],
+  "source_hashes_verified": 7,
+  "manifest_assets": 202,
+  "manifest_sha256": "52384ac0f88ffca25952099d6c7f0e58224e7d235012ea284f55198cc2406f6a",
+  "gate": "GATE-FILA-022-P01-2026-10-09"
+}

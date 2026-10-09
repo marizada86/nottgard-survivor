@@ -2,7 +2,7 @@
 id: "ART-PROMPTS-048"
 type: "prompts-de-arte"
 title: "Animações dos inimigos de Shendilavri — identidade e ciclos"
-status: "2 de 5 pilotos gerados — quota até2026-10-05 12:43:35BRT; gatependente"
+status: "concluido localmente — 106 quadros, 21 tiras, build validada; playtest humano pendente"
 created: "2026-10-01"
 relations: ["[[PLAN-041-animacao-padrao-zumbi-para-inimigos-e-interacoes-2026-09-29]]", "[[PLAN-048-geracao-animacoes-mobs-onda-1-2026-09-30]]", "[[ART-PROMPTS-033-mobs-onda-1-lote-a]]"]
 ---

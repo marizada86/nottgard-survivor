@@ -1,0 +1,12 @@
+from pathlib import Path
+import json,hashlib
+root=Path(__file__).resolve().parents[4];out=Path(__file__).parent
+p=out/'sucubo-preview-receipt.json';receipt=json.loads(p.read_text())
+for row in receipt['strips']:
+ assert hashlib.sha256((root/row['path']).read_bytes()).hexdigest()==row['sha256']
+p=out/'sucubo-walk-decision.json';r=json.loads(p.read_text());r['status']='APPROVED_EXCEPTION';r['approved_at']='2026-10-07';r['authorization']='Dono respondeu aprovado, continue apos entrega da previa e decisao explicita sobre aceitar contato oposto curto.';r['approval_scope']='Short opposite contact for Sucubo only, selected versions1/1/2/3/1/1. Local admission authorized within PLAN-053; no Git or publication authorization.';p.write_text(json.dumps(r,indent=2)+'\n',encoding='utf-8')
+p=root/'.atena/generated/art-candidates/enemies-shendilavri/sucubo/frame-selection.json';r=json.loads(p.read_text());r['move_04']['approval_status']='APPROVED_EXCEPTION';r['move_04']['reason']='Dono aprovou contato oposto curto com aprovado, continue; v01 selecionada; v02/v03 rejeitadas preservadas.';p.write_text(json.dumps(r,indent=2)+'\n',encoding='utf-8')
+p=root/'.atena/vault/canon/ASSET-APPROVAL-REGISTER-022-shendilavri-identidades-2026-10-07.md';t=p.read_text(encoding='utf-8');t+='\n## Excecao aprovada — caminhada do Sucubo\n\nEm 2026-10-07, apos a previa completa e a decisao explicita sobre contato oposto de um quadro, o dono respondeu aprovado, continue. Aceito o contato oposto curto da caminhada de Sucubo; versoes move00/01/04/05 v01, move02 v02 e move03 v03. Excecao limitada ao ritmo dessa caminhada; anatomia, cortes e alfa continuam sob contrato. Decisao: .atena/generated/shendilavri-resume/v01/sucubo-walk-decision.json. Integracao e reuso da Ilusao seguem PLAN-053, sem nova autorizacao para Git/publicacao.\n';p.write_text(t,encoding='utf-8')
+for rel in ['.atena/state/plan.yaml','.atena/state/plan-053-imagens.yaml']:
+ p=root/rel;t=p.read_text(encoding='utf-8').replace('status: AWAITING_OWNER_DECISION','status: EXECUTING_CYCLES').replace('SUCUBO-WALK-DECISION','SUCUBO-INTEGRATION');t=t.replace('aguardando decisao sobre contato oposto curto.','contato oposto curto aprovado pelo dono; integrar Sucubo e validar Ilusao.').replace('Aguardando decisao caminhada de contato oposto curto; nenhuma admissao Sucubo.','Contato oposto curto aprovado; admissao e validacao Sucubo/Ilusao em andamento.');p.write_text(t,encoding='utf-8')
+print('Approval recorded; selected strip hashes unchanged; checkpoint executable.')

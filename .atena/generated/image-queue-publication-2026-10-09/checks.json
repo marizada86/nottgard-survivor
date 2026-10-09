@@ -1,0 +1,29 @@
+[
+  {
+    "check": "import-isolated",
+    "environment_certificate_notice": true,
+    "blocking_errors": [],
+    "exit": 0,
+    "passed": true,
+    "marker": "loading_editor_layout",
+    "log": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\image-queue-publication-2026-10-09\\import-isolated.log"
+  },
+  {
+    "check": "suite",
+    "environment_certificate_notice": true,
+    "blocking_errors": [],
+    "exit": 0,
+    "passed": true,
+    "marker": "testes: 0 falha(s)",
+    "log": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\image-queue-publication-2026-10-09\\suite.log"
+  },
+  {
+    "check": "smoke",
+    "environment_certificate_notice": true,
+    "blocking_errors": [],
+    "exit": 0,
+    "passed": true,
+    "marker": "smoke: ok",
+    "log": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\image-queue-publication-2026-10-09\\smoke.log"
+  }
+]

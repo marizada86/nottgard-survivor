@@ -1,0 +1,138 @@
+{
+  "id": "GATE-FILA-022-Q01-2026-10-09",
+  "timestamp": "2026-10-09T04:02:22.555464+00:00",
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "checkpoint": "S-007/VFX/FILA-022/Q01-APPROVAL",
+  "status": "APPROVED",
+  "frame": "Q01",
+  "version": "v03",
+  "candidate": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_fly_00_v03.png",
+  "sha256": "be4fc0674b455b2efb5609e27c4228569b22d274cfb077665b09f778f5fc88fb",
+  "visual_inspected": true,
+  "review": ".atena/generated/s007-reconciliation/v01/q01-reference-comparison-2026-10-09.png",
+  "prompts_and_native_audit": ".atena/generated/s007-reconciliation/v01/pq-generation-jobs-2026-10-09.json",
+  "source_instruction": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+  "canonical_source": ".atena/generated/ART-PROMPTS-053-vfx-projeteis-e-explosoes.md",
+  "instruction": "Para cada efeito, gere primeiro o quadro marcado GATE, pare e devolva ao dono.",
+  "visual_review": {
+    "subject": "compact bright arcane core, thin circular ring with small circular glyph marks and wispy smoky left trail",
+    "view": "flat top-down",
+    "orb_pivot": "Visually centered core; hotlight centroid proxy within0.23 percent per axis of canvas center; exact geometric pivot not claimed.",
+    "flight_direction": "RIGHT",
+    "trail_direction": "LEFT",
+    "readable_at96": true,
+    "no_visible_cuts": true,
+    "no_character_weapon_hand_readable_text": true,
+    "approved_pilot_style_compared": true
+  },
+  "technical_notes": {
+    "native_dimensions": [
+      1254,
+      1254
+    ],
+    "requested_dimensions": [
+      1024,
+      1024
+    ],
+    "outer_border_max_luminance": 2,
+    "maximum_channel_difference": 10,
+    "normalization": "Native bytes retained; technical downsample deferred; exact zero RGB not claimed"
+  },
+  "rejected_versions": [
+    {
+      "code": "Q01",
+      "effect": "orbe_arcano",
+      "name": "orbe_arcano_fly_00",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a swirling arcane orb: a small dense bright core inside a thin rotating ring with tiny circular glyph marks on the ring, and a wispy smoky trail pointing LEFT because it flies to the RIGHT. Frame 1 of 8, fly 00: flight frame 1 of 4 (these four frames loop): the projectile in flight at its normal size, tail streaming behind it.\n\nThe attached approved physical pilot is a STYLE REFERENCE ONLY for painted light texture, white core and gray falloff. Generate the NEW arcane projectile specified above, not a crescent or radiant orb: a compact dense white core centered exactly on the canvas, surrounded by ONE thin circular rotating ring with tiny abstract circular glyph marks, and a wispy smoky trail flowing LEFT because it travels RIGHT. Flat ground-plane drawing, no 3D sphere or perspective, no readable letters, no color. Only this first flight frame; all ring, smoky trail, glow and particles safely inside pure-black margins.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_fly_00_v01.png",
+      "status": "REJECTED_VISUAL",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "generated_at": "2026-10-09T03:58:43.683136+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-98fe287f-edfe-4a5d-bb75-24c551a89a06.png",
+      "sha256": "0fd8ce091b9e1655b9e701d2a9b3a6a8ba65d44c613e379c648a0bf19e08f787",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        163,
+        459,
+        828,
+        774
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 9,
+      "mean_luminance": 7.852965566010139,
+      "visible_fraction_above12": 0.07582625550391855,
+      "native_bytes_preserved": true,
+      "runtime_admission": false,
+      "rejection_reason": "Native Q01 v01 ring/core visually displaced right of canvas center, approximately 5 percent of canvas width; preserve native source and correct with imagegen."
+    },
+    {
+      "code": "Q01",
+      "effect": "orbe_arcano",
+      "name": "orbe_arcano_fly_00",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "version": "v02",
+      "status": "REJECTED_VISUAL",
+      "destination": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_fly_00_v02.png",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\orbe_arcano\\orbe_arcano_fly_00_v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "correction_reason": "Native Q01 v01 ring/core visually displaced right of canvas center, approximately 5 percent of canvas width; preserve native source and correct with imagegen.",
+      "reference_roles": [
+        "Q01 v01 unapproved native geometry to correct",
+        "A03 v02 approved style reference"
+      ],
+      "prompt": "Edit the FIRST attached image (Q01 v01 arcane orb); the SECOND attachment is the approved white/gray painted glow STYLE reference only. Produce ONE corrected first-flight arcane orb frame, never a contact sheet. Preserve its compact dense bright white core, thin circular ring with tiny abstract circular glyph marks, wispy smoky trail extending LEFT for RIGHTWARD flight, hand-painted white/gray glow, pure black background, flat top-down view and circular ring seen face-on.\n\nCRITICAL POSITION CORRECTION: the first image has the core and ring noticeably too far RIGHT. Move the entire effect approximately 60 pixels LEFT on the same square canvas. Put the geometric CENTER of the bright core AND the surrounding ring at EXACT CANVAS CENTER (50 percent width, 50 percent height). The trailing smoke is asymmetric and extends left, so do NOT center the bounding box of the whole effect. Center the ORB CORE AND RING themselves. Preserve their circular shape and scale; preserve the smoky tail relative to the orb. Generous black margins and all particles/glow inside. Requested1024x1024 square, core and ring center at512,512; if native size differs, use exact50 percent center. No color, readable text, character, weapon, hand, scene, border, ground or perspective. Only fix centered placement; do not change the design into a radiant orb or crescent.",
+      "generated_at": "2026-10-09T04:00:26.948392+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-4fa649f0-0db8-4dd6-8e44-7fea64195f38.png",
+      "sha256": "3c478b4d335a3711955bd2ad63a2e71e94398e3b312ad7ae8b497337838b69b8",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        96,
+        432,
+        868,
+        807
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 10,
+      "mean_luminance": 12.25076501606343,
+      "visible_fraction_above12": 0.11035690574849477,
+      "native_bytes_preserved": true,
+      "runtime_admission": false,
+      "rejection_reason": "Native edit v02 retained ring/core right of center; third and final native centering attempt uses approved centered radiant orb as position reference only."
+    }
+  ],
+  "runtime_admission": false,
+  "official_manifest_assets": 202,
+  "manifest_file_sha256": "52384ac0f88ffca25952099d6c7f0e58224e7d235012ea284f55198cc2406f6a",
+  "remaining_native_vfx_frames": 87,
+  "other_Q_frames_generated": 0,
+  "next_if_approved": "Generate Q02-Q08 individually from approved Q01: three flight and four impact frames; then R01 gate",
+  "ranking_return": "PLAN-071 B-006/S-011 preserved",
+  "centering_audit": ".atena/generated/s007-reconciliation/v01/q01-centering-audit-2026-10-09.json",
+  "core_hotlight_centroid_proxy_normalized": [
+    0.5018831330590182,
+    0.5022579475595151
+  ],
+  "owner_reply": "atena, aprovado, continue",
+  "approval_receipt": ".atena/generated/s007-reconciliation/v01/q01-owner-approval-2026-10-09.json"
+}

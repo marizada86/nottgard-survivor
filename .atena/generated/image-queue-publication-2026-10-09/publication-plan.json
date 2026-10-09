@@ -1,0 +1,28 @@
+{
+  "id": "DEV-006-GIT-PUBLICATION-2026-10-09",
+  "classification": "PLAN_DEVIATION",
+  "authorization_verbatim": "atena, commit push e continue",
+  "route": "commit/push now, then return to PLAN-053 images",
+  "approval_mode": "per-plan",
+  "approval_basis": "Existing per-plan preference plus explicit commit/push instruction; no new approval request needed.",
+  "status": "VALIDATED_READY_TO_COMMIT",
+  "checkpoint": "DEV-006/S-001",
+  "branch": "codex/fila-imagens-2026-10-09",
+  "remote": "origin",
+  "base_commit": "ac145263a6ef35b3c90fe57be9f301cfd30b50a2",
+  "scope": "Runtime art and queue records created since ac14526; existing missing cursor support in separate commit. Sources ignored by .gitignore remain local. No main merge or changes in other worktrees.",
+  "acceptance": [
+    "manifest202 source hashes valid",
+    "Godot import/suite/smoke pass",
+    "review staged scope, size and whitespace",
+    "create local commits and push named branch without force",
+    "verify remote ref equals published commit",
+    "resume R02-R08 then N03 gate"
+  ],
+  "recovery": "Local originals preserved; do not reset, clean, force-push or modify another worktree.",
+  "return_checkpoint": "S-007/VFX/FILA-022/R-REMAINING",
+  "ranking_return": "PLAN-071 B-006/S-011 preserved",
+  "cursor_support_commit": "afcf8825ec2a4cac57e7adb2568da608b0200dcc",
+  "checks": "checks.json",
+  "source_validation": "source-validation.json"
+}

@@ -1,0 +1,786 @@
+{
+  "date": "2026-10-08",
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "actor": "sintese_abissal",
+  "status": "INTEGRATED_LOCAL_VALIDATED",
+  "sources": [
+    {
+      "state": "attack",
+      "index": 0,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_attack_00_v01.png",
+      "sha256": "4f16ac4387f214feddac9ad887fe751bcc18fe512e26e4f1e99a0573447d7908",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        32,
+        11,
+        1010,
+        1460
+      ],
+      "solidity": 0.9480741674653169,
+      "clipped": false,
+      "anchor": "(569.0, 1458.0)",
+      "scale": 0.799307958477509
+    },
+    {
+      "state": "attack",
+      "index": 1,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_attack_01_v01.png",
+      "sha256": "623fbe4a1c591bc3776267325448252e5489c13414b0e5b695abff7d812efeb7",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        25,
+        99,
+        1002,
+        1463
+      ],
+      "solidity": 0.9445637224848443,
+      "clipped": false,
+      "anchor": "(531.0, 1461.0)",
+      "scale": 0.849264705882353
+    },
+    {
+      "state": "attack",
+      "index": 2,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_attack_02_v01.png",
+      "sha256": "544bd8dd490a072b20ffdee4d904b30155456b9c7246658cb6207763eebce6be",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        33,
+        119,
+        994,
+        1455
+      ],
+      "solidity": 0.9474681512936994,
+      "clipped": false,
+      "anchor": "(505.0, 1453.0)",
+      "scale": 0.867117117117117
+    },
+    {
+      "state": "attack",
+      "index": 3,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_attack_03_v03.png",
+      "sha256": "9832f2355974c1e34ed629189ff6cb3f61548f4b0958a136711977b2c8fca20e",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        17,
+        7,
+        1016,
+        1481
+      ],
+      "solidity": 0.9645082595802897,
+      "clipped": false,
+      "anchor": "(561.0, 1480.0)",
+      "scale": 0.784646739130435
+    },
+    {
+      "state": "death",
+      "index": 0,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_death_00_v02.png",
+      "sha256": "0a45b9179375017fce5180cad651b9d57b7ff415ae346d555da331c3d596ae5a",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        25,
+        17,
+        1001,
+        1472
+      ],
+      "solidity": 0.9563335772877068,
+      "clipped": false,
+      "anchor": "(513.0, 1471.0)",
+      "scale": 0.8
+    },
+    {
+      "state": "death",
+      "index": 1,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_death_01_v02.png",
+      "sha256": "9c9c38ad5997ba677901b15a9e671dd5925029d89d22ea841067db3959633541",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        11,
+        106,
+        999,
+        1478
+      ],
+      "solidity": 0.95967017266771,
+      "clipped": false,
+      "anchor": "(505.0, 1476.0)",
+      "scale": 0.8
+    },
+    {
+      "state": "death",
+      "index": 2,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_death_02_v02.png",
+      "sha256": "f792d74d8a5214bc1d546e02b96bf9a72e91fc3051fee74f604931e536df43df",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        29,
+        141,
+        998,
+        1251
+      ],
+      "solidity": 0.9632530670644464,
+      "clipped": false,
+      "anchor": "(514.0, 1249.0)",
+      "scale": 0.88
+    },
+    {
+      "state": "death",
+      "index": 3,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_death_03_v01.png",
+      "sha256": "25c995cc171de32bdb8adb474de2f643d1e80824c7d66c7284b6e7ee401f46ff",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        17,
+        688,
+        1004,
+        1394
+      ],
+      "solidity": 0.9567520684878511,
+      "clipped": false,
+      "anchor": "(510.0, 1360.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "death",
+      "index": 4,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_death_04_v01.png",
+      "sha256": "38c5f1187df1155348bc3474382e1288339c9c39518ef4b8ec2ed7c1ad82cf2b",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        11,
+        661,
+        1013,
+        1329
+      ],
+      "solidity": 0.9634671799422803,
+      "clipped": false,
+      "anchor": "(512.0, 1297.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "death",
+      "index": 5,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_death_05_v01.png",
+      "sha256": "0629e4ac46b5c0bc1b27244577ddcf4e7ff6e5ee883ce74d1ec5a3b4be9e9841",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        12,
+        622,
+        1017,
+        1299
+      ],
+      "solidity": 0.9719617687980159,
+      "clipped": false,
+      "anchor": "(514.0, 1265.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "idle",
+      "index": 0,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_idle_00_v02.png",
+      "sha256": "b4aee47efb39cbb8d3dabf3060441006392e30d820fcae0641bcfbece4a5d992",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        141,
+        207,
+        915,
+        1365
+      ],
+      "solidity": 0.94300990209735,
+      "clipped": false,
+      "anchor": "(566.0, 1364.0)",
+      "scale": 1.0
+    },
+    {
+      "state": "idle",
+      "index": 1,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_idle_01_v01.png",
+      "sha256": "3c8acb6d337aa522381d239e35242599539bb08dafa528699697cd251d90b618",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        77,
+        130,
+        979,
+        1443
+      ],
+      "solidity": 0.9541289210995485,
+      "clipped": false,
+      "anchor": "(572.0, 1441.0)",
+      "scale": 0.882352941176471
+    },
+    {
+      "state": "idle",
+      "index": 2,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_idle_02_v01.png",
+      "sha256": "68495e4787cf1d470c44a19394f18a1cc8502f15ddbbbd84323ee7377e30acf1",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        72,
+        100,
+        996,
+        1450
+      ],
+      "solidity": 0.9469631594837525,
+      "clipped": false,
+      "anchor": "(575.0, 1447.0)",
+      "scale": 0.858098068350669
+    },
+    {
+      "state": "idle",
+      "index": 3,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_idle_03_v01.png",
+      "sha256": "1910d95af2d58c20d316be2e3422721490130015bf8ebfcd1b707a9632515e00",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        66,
+        118,
+        984,
+        1441
+      ],
+      "solidity": 0.9463538566441398,
+      "clipped": false,
+      "anchor": "(565.0, 1439.0)",
+      "scale": 0.875663381349507
+    },
+    {
+      "state": "move",
+      "index": 0,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_move_00_v02.png",
+      "sha256": "9bdf7840e93513c2064d8c4a52dd2f64c9e4328053ad1324f6f6c4f06cb7100c",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        12,
+        135,
+        1008,
+        1461
+      ],
+      "solidity": 0.9432577948240191,
+      "clipped": false,
+      "anchor": "(656.0, 1460.0)",
+      "scale": 0.873015873015873
+    },
+    {
+      "state": "move",
+      "index": 1,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_move_01_v01.png",
+      "sha256": "28a3bb0cacb1d64443069b4d6a64851604466b166b68f805f1d5cc20ff3cc338",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        56,
+        162,
+        993,
+        1437
+      ],
+      "solidity": 0.9475244848843645,
+      "clipped": false,
+      "anchor": "(599.0, 1434.0)",
+      "scale": 0.909448818897638
+    },
+    {
+      "state": "move",
+      "index": 2,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_move_02_v02.png",
+      "sha256": "cec206fcce8ecd5292f26104a8e9eb8a43bd6c2c0cd20b101b954c53ad74b6ab",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        54,
+        142,
+        997,
+        1439
+      ],
+      "solidity": 0.9484756963595811,
+      "clipped": false,
+      "anchor": "(620.0, 1437.0)",
+      "scale": 0.893271461716937
+    },
+    {
+      "state": "move",
+      "index": 3,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_move_03_v01.png",
+      "sha256": "d239a52cc1ec25d0af865ab9063a3504e2f0d7b7cd5c3b0e6482338dcda19c37",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        32,
+        147,
+        1012,
+        1468
+      ],
+      "solidity": 0.9441468430272411,
+      "clipped": false,
+      "anchor": "(665.0, 1465.0)",
+      "scale": 0.877659574468085
+    },
+    {
+      "state": "move",
+      "index": 4,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_move_04_v01.png",
+      "sha256": "dfd54551159098f845fba23c1e728ba023e1bde5606f2f7bdfa330959a323dd9",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        38,
+        135,
+        994,
+        1435
+      ],
+      "solidity": 0.9426949652668781,
+      "clipped": false,
+      "anchor": "(627.0, 1432.0)",
+      "scale": 0.891203703703704
+    },
+    {
+      "state": "move",
+      "index": 5,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_move_05_v01.png",
+      "sha256": "19fb5309463e9bc0d5bf08cb2d2e16cc0a1eb5f8d360aa1776ddd545d1c28c86",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        33,
+        90,
+        987,
+        1437
+      ],
+      "solidity": 0.9518135546937718,
+      "clipped": false,
+      "anchor": "(569.0, 1434.0)",
+      "scale": 0.860655737704918
+    },
+    {
+      "state": "special",
+      "index": 0,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_00_v02.png",
+      "sha256": "23f5e9709fb7d98006779f72afb10f51b59c85054bbf3b52d04f6da5fcd6e6af",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        30,
+        123,
+        1005,
+        1455
+      ],
+      "solidity": 0.9645713249271546,
+      "clipped": false,
+      "anchor": "(550.0, 1454.0)",
+      "scale": 0.868421052631579
+    },
+    {
+      "state": "special",
+      "index": 1,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_01_v02.png",
+      "sha256": "1154fda32a1617a0bf729acef12196db69fa8a45a5adc7962f948bbc775a576f",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        29,
+        80,
+        1014,
+        1477
+      ],
+      "solidity": 0.9603117114952197,
+      "clipped": false,
+      "anchor": "(526.0, 1476.0)",
+      "scale": 0.827956989247312
+    },
+    {
+      "state": "special",
+      "index": 2,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_02_v02.png",
+      "sha256": "d13955528128b92a979c5c4b70992080e78cfe2ec770ed80e78437cdba1be96c",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        30,
+        63,
+        1015,
+        1479
+      ],
+      "solidity": 0.9678844076379589,
+      "clipped": false,
+      "anchor": "(553.0, 1477.0)",
+      "scale": 0.817409766454352
+    },
+    {
+      "state": "special",
+      "index": 3,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_03_v02.png",
+      "sha256": "98dd3dd54ce96a1c9108e97d661bfe0fa81f8b4b00689741c277b8af351cf528",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        53,
+        176,
+        989,
+        1410
+      ],
+      "solidity": 0.9553754711624384,
+      "clipped": false,
+      "anchor": "(554.0, 1409.0)",
+      "scale": 0.9375
+    },
+    {
+      "state": "special",
+      "index": 4,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_04_v02.png",
+      "sha256": "735e8da79cb1e586a43761191edffa44dcf4333097fc1f4497cf8292aaadefae",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        24,
+        97,
+        1012,
+        1455
+      ],
+      "solidity": 0.9625552809942297,
+      "clipped": false,
+      "anchor": "(560.0, 1454.0)",
+      "scale": 0.851769911504425
+    },
+    {
+      "state": "special",
+      "index": 5,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_05_v01.png",
+      "sha256": "e9e95793eace77f4524d594c0960589baf09c3ce91e13ea1bcbd1bd6730a0581",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        39,
+        80,
+        983,
+        1428
+      ],
+      "solidity": 0.9557572261124603,
+      "clipped": false,
+      "anchor": "(553.0, 1426.0)",
+      "scale": 0.859375
+    }
+  ],
+  "assets": [
+    {
+      "state": "attack",
+      "path": "assets/animations/enemies/sintese_abissal/attack.png",
+      "size": [
+        1024,
+        384
+      ],
+      "sha256": "d049e171a886bb716c554a55c8ca830f4b5a275b85584f4291dfa109135ce4c1"
+    },
+    {
+      "state": "death",
+      "path": "assets/animations/enemies/sintese_abissal/death.png",
+      "size": [
+        1536,
+        384
+      ],
+      "sha256": "1fb62c1ef7dedaa16967cceb2c51f0bfef2ccd16d4a73bcff05b0a355e56edc8"
+    },
+    {
+      "state": "idle",
+      "path": "assets/animations/enemies/sintese_abissal/idle.png",
+      "size": [
+        1024,
+        384
+      ],
+      "sha256": "fd3abdde66369a3f0b3b31e660b12f31fd3b16bf0a0f7e62ff7712a5377577c7"
+    },
+    {
+      "state": "move",
+      "path": "assets/animations/enemies/sintese_abissal/move.png",
+      "size": [
+        1536,
+        384
+      ],
+      "sha256": "1b17252bd8000f5b09c728e3960f703ec3e37520308ead2e70028848685eb80b"
+    },
+    {
+      "state": "special",
+      "path": "assets/animations/enemies/sintese_abissal/special.png",
+      "size": [
+        1536,
+        384
+      ],
+      "sha256": "27d21fdd7f39a99efe517174f67934ba6a09784a091ff18cdc20f0ddd0f2773d"
+    }
+  ],
+  "packing": {
+    "body_height": 217.760866938524,
+    "cell": [
+      256,
+      384
+    ],
+    "feet_y": 356,
+    "fit": 0.188537547132921,
+    "id": "sintese_abissal",
+    "native_alpha": true,
+    "sources": {
+      "attack": [
+        {
+          "anchor": "(569.0, 1458.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_attack_00_v01.png",
+          "scale": 0.799307958477509
+        },
+        {
+          "anchor": "(531.0, 1461.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_attack_01_v01.png",
+          "scale": 0.849264705882353
+        },
+        {
+          "anchor": "(505.0, 1453.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_attack_02_v01.png",
+          "scale": 0.867117117117117
+        },
+        {
+          "anchor": "(561.0, 1480.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_attack_03_v03.png",
+          "scale": 0.784646739130435
+        }
+      ],
+      "death": [
+        {
+          "anchor": "(513.0, 1471.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_death_00_v02.png",
+          "scale": 0.8
+        },
+        {
+          "anchor": "(505.0, 1476.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_death_01_v02.png",
+          "scale": 0.8
+        },
+        {
+          "anchor": "(514.0, 1249.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_death_02_v02.png",
+          "scale": 0.88
+        },
+        {
+          "anchor": "(510.0, 1360.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_death_03_v01.png",
+          "scale": 1.0
+        },
+        {
+          "anchor": "(512.0, 1297.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_death_04_v01.png",
+          "scale": 1.0
+        },
+        {
+          "anchor": "(514.0, 1265.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_death_05_v01.png",
+          "scale": 1.0
+        }
+      ],
+      "idle": [
+        {
+          "anchor": "(566.0, 1364.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_idle_00_v02.png",
+          "scale": 1.0
+        },
+        {
+          "anchor": "(572.0, 1441.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_idle_01_v01.png",
+          "scale": 0.882352941176471
+        },
+        {
+          "anchor": "(575.0, 1447.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_idle_02_v01.png",
+          "scale": 0.858098068350669
+        },
+        {
+          "anchor": "(565.0, 1439.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_idle_03_v01.png",
+          "scale": 0.875663381349507
+        }
+      ],
+      "move": [
+        {
+          "anchor": "(656.0, 1460.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_move_00_v02.png",
+          "scale": 0.873015873015873
+        },
+        {
+          "anchor": "(599.0, 1434.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_move_01_v01.png",
+          "scale": 0.909448818897638
+        },
+        {
+          "anchor": "(620.0, 1437.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_move_02_v02.png",
+          "scale": 0.893271461716937
+        },
+        {
+          "anchor": "(665.0, 1465.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_move_03_v01.png",
+          "scale": 0.877659574468085
+        },
+        {
+          "anchor": "(627.0, 1432.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_move_04_v01.png",
+          "scale": 0.891203703703704
+        },
+        {
+          "anchor": "(569.0, 1434.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_move_05_v01.png",
+          "scale": 0.860655737704918
+        }
+      ],
+      "special": [
+        {
+          "anchor": "(550.0, 1454.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_00_v02.png",
+          "scale": 0.868421052631579
+        },
+        {
+          "anchor": "(526.0, 1476.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_01_v02.png",
+          "scale": 0.827956989247312
+        },
+        {
+          "anchor": "(553.0, 1477.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_02_v02.png",
+          "scale": 0.817409766454352
+        },
+        {
+          "anchor": "(554.0, 1409.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_03_v02.png",
+          "scale": 0.9375
+        },
+        {
+          "anchor": "(560.0, 1454.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_04_v02.png",
+          "scale": 0.851769911504425
+        },
+        {
+          "anchor": "(553.0, 1426.0)",
+          "path": "res://.atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_special_05_v01.png",
+          "scale": 0.859375
+        }
+      ]
+    }
+  },
+  "checks": {
+    "queue": {
+      "path": ".atena/generated/pilares-resume/v01/sintese_abissal-queue.log",
+      "marker": "Animation queue: 0 failure(s)",
+      "passed": true
+    },
+    "runtime": {
+      "path": ".atena/generated/pilares-resume/v01/sintese_abissal-runtime.log",
+      "marker": "death cleanup OK",
+      "passed": true
+    },
+    "suite": {
+      "path": ".atena/generated/pilares-resume/v01/sintese_abissal-suite.log",
+      "marker": "testes: 0 falha(s)",
+      "passed": true
+    },
+    "smoke": {
+      "path": ".atena/generated/pilares-resume/v01/sintese_abissal-smoke.log",
+      "marker": "smoke: ok",
+      "passed": true
+    },
+    "capture": {
+      "path": ".atena/generated/pilares-resume/v01/sintese_abissal-capture.log",
+      "marker": "Shedaklah capture result=0",
+      "passed": true
+    },
+    "trigger": {
+      "path": ".atena/generated/pilares-resume/v01/sintese_abissal-trigger.log",
+      "marker": "actual aoe telegraph/summon/ring -> special, unlock and puddle -> attack OK",
+      "passed": true
+    }
+  },
+  "manifest_verified": 202,
+  "capture": ".atena/generated/priority-review/sintese_abissal_runtime.png",
+  "native_alpha_preserved": true,
+  "capture_inspected": true,
+  "next_actor": "s007",
+  "remaining_new_frames": 0,
+  "owner_exception": {
+    "date": "2026-10-08",
+    "plan": "PLAN-053",
+    "spec": "SPEC-121",
+    "request_classification": "IN_PLAN",
+    "gate": "GATE-PILARES-ATTACK03-PENDANT-2026-10-08",
+    "status": "ACCEPTED_OWNER_EXCEPTION",
+    "owner_reply": "aprovado, continue",
+    "interpretation": "Approval of presented attack03v03 candidate and bounded green pendant exception, not authorization for fourth correction.",
+    "exception_scope": [
+      "attack_03"
+    ],
+    "version": 3,
+    "source": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_attack_03_v03.png",
+    "sha256": "9832f2355974c1e34ed629189ff6cb3f61548f4b0958a136711977b2c8fca20e",
+    "exception": "Small intermediate gold pendant retains one green drop. Exactly three original arms and two main original lamps remain.",
+    "preview": ".atena/generated/pilares-resume/v01/attack_03_v03_lamp_detail.png",
+    "approval_context": "Owner replied to final question about accepting the small green pendant in attack03 or authorizing another native correction. Presented candidate approved with continue; no further native generation of attack03."
+  }
+}

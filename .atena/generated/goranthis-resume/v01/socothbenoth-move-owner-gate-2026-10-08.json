@@ -1,0 +1,92 @@
+{
+  "date": "2026-10-08",
+  "plan": "PLAN-053",
+  "actor": "socothbenoth",
+  "status": "PENDING_OWNER_CYCLE_DECISION",
+  "gate": "GATE-SOCOTHBENOTH-MOVE-2026-10-08",
+  "reason": "move03/04 still appear to retain foreground leg leading after three versions; no clear opposite contact.",
+  "max_versions": 3,
+  "frames": [
+    {
+      "index": 0,
+      "version": 1,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_move_00_v01.png",
+      "sha256": "24c528618980f290399b8dc350a9ac1cdb90b75ff5c4219c94249a66b93b85be",
+      "bbox": [
+        108,
+        31,
+        1133,
+        1219
+      ],
+      "solidity": 0.9587910212385393
+    },
+    {
+      "index": 1,
+      "version": 1,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_move_01_v01.png",
+      "sha256": "9fb74615c724e4b5bb22402cfd132554b9067a38181eb823628bd3bce7f232ef",
+      "bbox": [
+        119,
+        45,
+        1135,
+        1215
+      ],
+      "solidity": 0.9585520739887502
+    },
+    {
+      "index": 2,
+      "version": 1,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_move_02_v01.png",
+      "sha256": "1b7e40ad56a375d51cce4f4c49a8303f9b3edb2d3db6f14a04157e4bb00a0e60",
+      "bbox": [
+        90,
+        32,
+        1115,
+        1282
+      ],
+      "solidity": 0.9527226926697189
+    },
+    {
+      "index": 3,
+      "version": 3,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_move_03_v03.png",
+      "sha256": "afe2030984571f7b77a2ea3f12bac8779ccbc15ae9952028795a6ab87168db61",
+      "bbox": [
+        87,
+        20,
+        1195,
+        1214
+      ],
+      "solidity": 0.9656022053243716
+    },
+    {
+      "index": 4,
+      "version": 3,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_move_04_v03.png",
+      "sha256": "ab2f0c3915762e1bf871d6b75369879e2cf714128827354f70898f3e1c354c13",
+      "bbox": [
+        12,
+        10,
+        1144,
+        1338
+      ],
+      "solidity": 0.9657039831280895
+    },
+    {
+      "index": 5,
+      "version": 1,
+      "path": ".atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_move_05_v01.png",
+      "sha256": "9dd1dba42ac9d45afbdece3cbf589771b00ffbc82d0d4f28c244812b93458c75",
+      "bbox": [
+        237,
+        22,
+        1029,
+        1205
+      ],
+      "solidity": 0.95799352445247
+    }
+  ],
+  "preview": "source montage/GIF, native pixels preserved, not a runtime capture",
+  "integration_blocked": true,
+  "other_approved_cycles_continue": true
+}

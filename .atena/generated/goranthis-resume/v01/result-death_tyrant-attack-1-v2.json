@@ -1,0 +1,17 @@
+{
+  "id": "death_tyrant",
+  "state": "attack",
+  "index": 1,
+  "version": 2,
+  "date": "2026-10-08",
+  "refs": [
+    "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_attack_01_v01.png",
+    "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_move_02_v02.png",
+    "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_idle_00_v01.png"
+  ],
+  "prompt": "Use case: precise-object-edit. Image1 edit target has SEVEN small ocular stalks; images2 and3 show correct eight. Restore ONLY the missing LOWEST RIGHT original eighth ocular stalk emerging from the sphere lowerRIGHT beside/behind lower humanoid face and shoulder, BELOW the current third right eye. Keep every existing eye in current exact position: THREE left, ONE top, THREE right. Final is THREE LEFT + ONE TOP + FOUR RIGHT = EXACTLY EIGHT smaller attached stalks with blue eyes and vertical pupils, PLUS unchanged central large blue eye. Preserve current forward-right attack pose, TWO human arms/hands, sphere spikes and gray-purple palette, lower face lookingRIGHT, mouth/beard tendrils, tattered robe and gold chains. All eight small eye tips separate and visible; none removed/duplicated, no legs/new human arm. Entire character inside transparent margin including rightmost eye tip. Native alpha transparent background and solid opaque character, crisp original pixelart. No shadow, glow/rays/projectile or text.",
+  "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-0e96a169-5220-4110-abec-e9eeae5fe6dc.png",
+  "workspace_path": "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_attack_01_v02.png",
+  "output_hint": "Generated images are saved to C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be as C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-0e96a169-5220-4110-abec-e9eeae5fe6dc.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "error": null
+}

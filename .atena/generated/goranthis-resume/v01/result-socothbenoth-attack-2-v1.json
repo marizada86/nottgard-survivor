@@ -1,0 +1,16 @@
+{
+  "id": "socothbenoth",
+  "state": "attack",
+  "index": 2,
+  "version": 1,
+  "date": "2026-10-08",
+  "refs": [
+    "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/assets/enemies/socothbenoth.png",
+    "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_idle_00_v01.png"
+  ],
+  "prompt": "Create exactly ONE full-body animation sprite of approved Socothbenoth. Image1 static fixes identity, image2 approved idle00 fixes proportions/camera/palette, additional image3 when present guides preceding pose. Tall wine-red robe with ivory BONE/root armor over green marble veined body, original elongated ivory MASK/HEAD with FOUR dominant bone HORN prongs and red inner membranes, gold jewelry/chains/shoulders. Preserve EXACTLY TWO slender humanoid arms with long bony fingers, no held props. Preserve attached BLACK serpentine tentacles from BACK and EXACTLY TWO shadow-serpent HEADS with tiny YELLOW eyes (one originally behind each shoulder), no third head, no duplicated body or detached smoke. Match source's attached tentacle roots and curly silhouettes; all are opaque physical shapes, not fog. Same 3/4 front facingRIGHT, no weapon/hand swap. Opaque solid character, crisp dark fantasy isometric pixelart, full silhouette ALL horn tips/fingers/robe/tentacle ends inside generous native-alpha TRANSPARENT margins8% each side. No ground/castshadow/glow/cloud/looseparticles/projectile/circle/text/UI. Keep source anatomy and uniform body scale; do not invent extra arms, legs, horns, serpent heads. POSE attack_02: peak RIGHT hand and attached right tentacle strike, torso forwardRIGHT, same TWO arms and TWO shadow heads, no projectile/smoke. Move the ORIGINAL existing two arms to this pose rather than adding arms; exactly ONE hand per arm, TWO hands total. Never leave an original dangling hand plus a newly posed duplicate.",
+  "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-1867b358-7d1c-41ab-aaed-8660e225aa63.png",
+  "workspace_path": "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/socothbenoth/socothbenoth_attack_02_v01.png",
+  "output_hint": "Generated images are saved to C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be as C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-1867b358-7d1c-41ab-aaed-8660e225aa63.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "error": null
+}

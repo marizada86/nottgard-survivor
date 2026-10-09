@@ -1,0 +1,110 @@
+{
+  "date": "2026-10-08",
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "gate": "GATE-PILARES-IDENTITY-V01",
+  "status": "APPROVED",
+  "request_classification": "IN_PLAN",
+  "approval_mode": "per-plan",
+  "approved": true,
+  "source": {
+    "path": "assets/enemies/sintese_abissal.png",
+    "sha256": "ce3fa3402af350c9a340c0f118d10294bdd09154fca4c909b8b4e72040e7b4f8"
+  },
+  "candidate": {
+    "version": 2,
+    "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_idle_00_v02.png",
+    "sha256": "b4aee47efb39cbb8d3dabf3060441006392e30d820fcae0641bcfbece4a5d992",
+    "size": [
+      1024,
+      1536
+    ],
+    "bbox": [
+      141,
+      207,
+      915,
+      1365
+    ],
+    "solidity": 0.94300990209735,
+    "margins": [
+      0.1376953125,
+      0.134765625,
+      0.1064453125,
+      0.111328125
+    ],
+    "clipped": false,
+    "corner_alpha": 0,
+    "status": "APPROVED"
+  },
+  "versions": [
+    {
+      "version": 1,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_idle_00_v01.png",
+      "sha256": "b822e9e620c1d3e99a97f6b05d63739fbf0d9b800c8b566e94a2456978614e41",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        35,
+        9,
+        998,
+        1518
+      ],
+      "solidity": 0.949127094092455,
+      "margins": [
+        0.0341796875,
+        0.005859375,
+        0.025390625,
+        0.01171875
+      ],
+      "clipped": false,
+      "corner_alpha": 0,
+      "status": "REJECTED_FRAMING_MARGIN"
+    },
+    {
+      "version": 2,
+      "path": ".atena/generated/art-candidates/enemies-pilares/sintese_abissal/sintese_abissal_idle_00_v02.png",
+      "sha256": "b4aee47efb39cbb8d3dabf3060441006392e30d820fcae0641bcfbece4a5d992",
+      "size": [
+        1024,
+        1536
+      ],
+      "bbox": [
+        141,
+        207,
+        915,
+        1365
+      ],
+      "solidity": 0.94300990209735,
+      "margins": [
+        0.1376953125,
+        0.134765625,
+        0.1064453125,
+        0.111328125
+      ],
+      "clipped": false,
+      "corner_alpha": 0,
+      "status": "CANDIDATE_AWAITING_OWNER_APPROVAL"
+    }
+  ],
+  "review": ".atena/generated/priority-review/pilares_identity_gate_v02.png",
+  "review_method": "Technical nearest composition only, source native RGBA preserved; no alpha cleanup or RGB modification.",
+  "generator": "built-in imagegen",
+  "prompt_records": [
+    ".atena/generated/pilares-resume/v01/identity-prompt-2026-10-08.json",
+    ".atena/generated/pilares-resume/v01/identity-framing-v02-prompts-2026-10-08.json"
+  ],
+  "reviewed_features": "One crimson wing and cage gauntlet/claw at SCREENLEFT; white roots/pink fungi, green body/purple chest core; original two lamp-bearing limbs at SCREENRIGHT with two green dripping lamps. Full tips retained.",
+  "native_alpha_valid": true,
+  "halo_review": "Generated RGB preview glow lies outside native visible alpha; dark composite inspected, no visible background halo.",
+  "cycles_generated": 0,
+  "remaining_cycle_frames": 25,
+  "official_assets_installed": 0,
+  "prior_biome_receipt": ".atena/generated/goranthis-complete-build-validation-2026-10-08.json",
+  "human_identity_approval": "APPROVED",
+  "return_plan": "PLAN-071",
+  "approved_at": "2026-10-08",
+  "owner_reply": "atena, aprovado, continue",
+  "approval_question": "Aprova a identidade v02 para gerar os 25 quadros restantes?"
+}

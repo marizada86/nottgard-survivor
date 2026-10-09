@@ -1,0 +1,7 @@
+# Goranthis — conclusão local
+
+PLAN-053/SPEC-121 S-006, IN_PLAN. Quatro atores, 86 fontes, 17 tiras integradas; captura de cada ator inspecionada. Ilusão usa Cultista com alfa 0,45, sem novos PNGs. Exceção visual do Death Tyrant limitada a death02-05 com sete hastes visíveis; contexto exato da aprovação preservado no recibo. Socothbenoth: exceção de marcha aprovada explicitamente para move03/04v03, com a mesma perna à frente; não se alega contato oposto claro. 26 fontes, morte progressiva, especial de seis quadros. Battle._use_ability real emite telegraph no aoe e enemy_action em summon/ring; todos acionam special, desbloqueiam e preservam puddle como attack. Combate sem alterações.
+
+[Recibo da build e hashes](../generated/goranthis-complete-build-validation-2026-10-08.json). [Socothbenoth](../generated/goranthis-resume/v01/socothbenoth-completion-receipt.json). [Captura](../generated/priority-review/socothbenoth_runtime.png). [Gatilho real](../generated/goranthis-resume/v01/socothbenoth-trigger.log).
+
+Suite/fila zero falhas, smoke nove fases; manifesto 197/197 hashes válidos. Exportação e EXE 60 frames exit0. Build ac14526+, 414328808 bytes, SHA256 8d2f1965957add779bd669d287f028f626cfd2affa9ab6394cd4a0feeed9660c. Playtest humano pendente; avisos ambientais de certificados/editor_settings registrados. Bugs abertos conforme backlog-preexport.log. Sem commit/push/publicação. Próximo: um piloto de Síntese Abissal/Pilares e aprovação humana antes de 25 ciclos; retorno PLAN-071 preservado.

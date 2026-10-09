@@ -1,0 +1,21 @@
+{
+  "actor": "socothbenoth",
+  "date": "2026-10-08",
+  "status": "THREE_VERSIONS_EXHAUSTED_MOVE03_04_REQUIRES_OWNER_BEFORE_INTEGRATION",
+  "idle_move_native_bounds_passed": 10,
+  "two_serpent_heads_preserved": true,
+  "two_human_arms_preserved": true,
+  "rejected": {
+    "move_03_v01": "Same foreground leg leading as move00.",
+    "move_04_v01": "Same foreground leg leading, no clear opposite weight transfer.",
+    "move_03_v02": "Leg swap not clear.",
+    "move_04_v02": "Leg swap not clear."
+  },
+  "max_versions": 3,
+  "owner_exceptions_from_other_actors_not_extended": true,
+  "selected_for_preview": {
+    "move_03": 3,
+    "move_04": 3
+  },
+  "interpretation": "Same foreground leg appears to lead in opposite contact and transfer; no hidden alternation claimed."
+}

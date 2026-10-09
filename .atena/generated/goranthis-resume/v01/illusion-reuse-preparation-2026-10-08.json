@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-08",
+  "id": "ilusao_de_socothbenoth",
+  "status": "PREPARED_NOT_INTEGRATED",
+  "existing_animated_source": null,
+  "static_image": "assets/enemies/ilusao_de_socothbenoth.png",
+  "selected_authorized_source": "cultista_de_socothbenoth",
+  "basis": "ART-PROMPTS-049 permits Cultista or Socothbenoth reuse without new PNGs. Select Cultista four-state source for common illusion; original static image is preserved.",
+  "existing_flags": [
+    "illusory"
+  ],
+  "existing_runtime_alpha": 0.45,
+  "implementation": "Register source_id after Cultista integration, then verify real actor source atlas and opacity. No combat data or flags change."
+}

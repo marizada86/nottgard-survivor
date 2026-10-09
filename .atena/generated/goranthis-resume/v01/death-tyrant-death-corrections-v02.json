@@ -1,0 +1,30 @@
+{
+  "jobs": [
+    {
+      "id": "death_tyrant",
+      "state": "death",
+      "index": 2,
+      "version": 2,
+      "date": "2026-10-08",
+      "refs": [
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_death_02_v01.png",
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_move_02_v02.png",
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_idle_00_v01.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Image1 edit target shows SEVEN smaller ocular stalks and misses the LOWEST RIGHT eighth. Image2 and3 show correct eight. Restore the missing LOWEST RIGHT original stalk emerging from lowerRIGHT sphere beside/behind lower humanoid face/shoulder, BELOW other right eyes, firmly attached and drooping with its eye FULLY CLOSED. Keep ALL existing seven stalks in same poses, ALL eyes CLOSED including unchanged central eye. Final EXACTLY EIGHT smaller attached ocular stalks/tips: THREE left, ONE top, FOUR right. No blue light or newly opened eye. Preserve current low sagging collapse with robe pooling under body pose and body proportions. Preserve TWO human arms resting, gray-purple spikes and sphere, mouth/beard tendrils, robe panels, gold chains and symbols. No legs/new limb or ninth stalk. Entire silhouette including restored tip inside generous transparent margins. Preserve crisp dark fantasy isometric pixelart and opaque solid character, native alpha transparent background. No shadow, glow, particles, rays, ground or text."
+    },
+    {
+      "id": "death_tyrant",
+      "state": "death",
+      "index": 3,
+      "version": 2,
+      "date": "2026-10-08",
+      "refs": [
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_death_03_v01.png",
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_move_02_v02.png",
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_idle_00_v01.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Image1 edit target shows SEVEN smaller ocular stalks and misses the LOWEST RIGHT eighth. Image2 and3 show correct eight. Restore the missing LOWEST RIGHT original stalk emerging from lowerRIGHT sphere beside/behind lower humanoid face/shoulder, BELOW other right eyes, firmly attached and drooping with its eye FULLY CLOSED. Keep ALL existing seven stalks in same poses, ALL eyes CLOSED including unchanged central eye. Final EXACTLY EIGHT smaller attached ocular stalks/tips: THREE left, ONE top, FOUR right. No blue light or newly opened eye. Preserve current semi-fallen tiltedRIGHT sphere and lower humanoid face with robe extendingLEFT pose and body proportions. Preserve TWO human arms resting, gray-purple spikes and sphere, mouth/beard tendrils, robe panels, gold chains and symbols. No legs/new limb or ninth stalk. Reframe with a WIDER canvas and generous transparent margins so the formerly clipped RIGHTMOST stalk tip is restored whole, plus all eight tips and cloth/chains fit completely inside. Scale entire body uniformly only for framing; do not crop or shrink one part.  Preserve crisp dark fantasy isometric pixelart and opaque solid character, native alpha transparent background. No shadow, glow, particles, rays, ground or text."
+    }
+  ]
+}

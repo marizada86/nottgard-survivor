@@ -1,0 +1,16 @@
+{
+  "id": "death_tyrant",
+  "state": "move",
+  "index": 3,
+  "version": 1,
+  "date": "2026-10-08",
+  "refs": [
+    "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/assets/enemies/death_tyrant.png",
+    "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_idle_00_v01.png"
+  ],
+  "prompt": "Create exactly ONE complete animation sprite of the approved Death Tyrant. Image1 static identity; image2 approved idle00 fixes proportions and camera. Preserve gray-purple SPIKED ocular SPHERE, ONE central BLUE eye with vertical pupil, EXACTLY EIGHT attached ocular stalks with ONE smaller eye each: eight stalks/eight small eyes, never seven/nine/ten. Retain original deformed humanoid FACE below sphere, TWO hanging withered human ARMS/hands, long tattered black-purple robe panels, gold symbols/chains/pendants and original mouth/beard tendrils. NO LEGS or invented limbs. Match camera3/4 facingRIGHT and lower human face lookingRIGHT; same physical body scale/palette/crisp dark fantasy isometric pixelart. One isolated opaque solid character with native alpha transparent background, full silhouette including ALL stalk tips, spikes, hands and cloth/chain ends inside generous transparent margins8% all sides. Eyes/blue illumination stays INSIDE eyes, no bloom/rays/projectile. No ground/shadow, mist, detached particles/effects, new props, text, UI or second character. POSE move_03: OPPOSITE hover sway: near stalks reach gently forwardRIGHT and far stalks trail LEFT, reversing sway from passing pose without mirroring body or adding/removing eye stalks; same two arms/robe.",
+  "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-0b32cbdf-aa82-456e-884f-e16cd6f1b253.png",
+  "workspace_path": "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/death_tyrant/death_tyrant_move_03_v01.png",
+  "output_hint": "Generated images are saved to C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be as C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-0b32cbdf-aa82-456e-884f-e16cd6f1b253.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "error": null
+}

@@ -1,0 +1,54 @@
+{
+  "jobs": [
+    {
+      "state": "attack",
+      "index": 2,
+      "version": 2,
+      "refs": [
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_attack_02_v01.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Correct this erroneous sprite with THREE arms into exactly TWO arms. REMOVE the EXTRA raised green-veined arm that extends to upperRIGHT and the raised hand on the upper spear shaft. KEEP original SCREENLEFT shoulder's plain marble arm and its low hand holding spear near waist, and KEEP the original SCREENRIGHT shoulder's descending green-veined arm with empty hand by hip. Only these TWO arms remain. Keep the whole diagonal gold spear supported ONLY by original low screenLEFT plain hand; spear continuous straight from butt lowerLEFT to sun-disc leaf tip upperRIGHT, not duplicated/broken. Keep wings, legs, head, cloth and exact pose unchanged. Restore appropriate transparent gap behind removed extra arm without damaging wing or spear. ONE isolated full-body animation sprite of exact approved Guardiao do Paraiso, ivory marble/green veins, gold crown, ivory gold cloth, TWO white feathered wings, exactly TWO arms TWO legs, ONE complete gold spear held by original plain marble hand from SCREENLEFT shoulder, other green-veined arm from SCREENRIGHT shoulder stays empty. Preserve camera3/4 facingRIGHT, palette/proportions/crisp isometric pixelart. Complete spear tip/butt/wings/crown/feet/cloth inside1254square native transparent margins, opaque solid silhouette; no ground/shadow/extra limb/extra spear/new props/effects/text. ",
+      "id": "guardiao_de_goranthis",
+      "date": "2026-10-08"
+    },
+    {
+      "state": "death",
+      "index": 2,
+      "version": 2,
+      "refs": [
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_death_01_v01.png"
+      ],
+      "prompt": "Use case: identity-preserve. Next progressive fall AFTER this death01 reference, same physical scale. Both knees now rest low, torso leans farther toward RIGHT, head/crown LOWER than reference, around lower half of1254canvas rather than raised at center. Both wings fold DOWN, upper wing joints lower than reference, no raised/flying wings. Spear descends to low diagonal alongside body in same plain original holding hand. Keep head on RIGHT of body and knees/feet moreLEFT, camera unchanged. No rising back up. Two arms/twolegs/twowings. ONE isolated full-body animation sprite of exact approved Guardiao do Paraiso, ivory marble/green veins, gold crown, ivory gold cloth, TWO white feathered wings, exactly TWO arms TWO legs, ONE complete gold spear held by original plain marble hand from SCREENLEFT shoulder, other green-veined arm from SCREENRIGHT shoulder stays empty. Preserve camera3/4 facingRIGHT, palette/proportions/crisp isometric pixelart. Complete spear tip/butt/wings/crown/feet/cloth inside1254square native transparent margins, opaque solid silhouette; no ground/shadow/extra limb/extra spear/new props/effects/text. ",
+      "id": "guardiao_de_goranthis",
+      "date": "2026-10-08"
+    },
+    {
+      "state": "death",
+      "index": 4,
+      "version": 2,
+      "refs": [
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_death_03_v01.png"
+      ],
+      "prompt": "Use case: identity-preserve. Next FULL SIDE COLLAPSE after this semi-fall reference. KEEP SAME FALL DIRECTION: HEAD and gold CROWN on SCREENRIGHT, feet and folded legs on SCREENLEFT. Do NOT reverse or mirror body. Lower torso and face until fully resting sideways, crown/head LOW on RIGHT, two wings fold low beside back. The existing spear descends alongside body, leaf spearhead with sun-disc still on RIGHT, butt on LEFT, original plain holding hand stays on shaft; green other hand empty lowrest. Preserve exact marble angel identity, body scale, cloth and gold armor. Two intact arms/twolegs/twowings. No revived/seated upright pose. ONE isolated full-body animation sprite of exact approved Guardiao do Paraiso, ivory marble/green veins, gold crown, ivory gold cloth, TWO white feathered wings, exactly TWO arms TWO legs, ONE complete gold spear held by original plain marble hand from SCREENLEFT shoulder, other green-veined arm from SCREENRIGHT shoulder stays empty. Preserve camera3/4 facingRIGHT, palette/proportions/crisp isometric pixelart. Complete spear tip/butt/wings/crown/feet/cloth inside1254square native transparent margins, opaque solid silhouette; no ground/shadow/extra limb/extra spear/new props/effects/text. ",
+      "id": "guardiao_de_goranthis",
+      "date": "2026-10-08"
+    },
+    {
+      "state": "move",
+      "index": 5,
+      "version": 2,
+      "refs": [
+        "C:/Users/Higor Rossini/.codex/worktrees/e36f/nottgard-survivor/.atena/generated/art-candidates/enemies-goranthis/guardiao_de_goranthis/guardiao_de_goranthis_move_03_v02.png"
+      ],
+      "prompt": "Use case: identity-preserve. Closing PASSING phase of walking cycle after corrected opposite contact reference. Near GREEN-veined leg swings FORWARD from LEFT rear: bend knee and bring its foot UNDER HIPS, close beside far supporting plain leg. Two knees and ankles now CLOSE together under pelvis, not wide opposite-contact stance. Far plain leg supports onRIGHT while green trailing toe passes inward; body neutral about to lead green leg forward at next move00. Original plain screenLEFT hand holds upright spear, empty green screenRIGHT arm atside. Preserve SAME two legs, same high gold ankle guards, no third foot, same body scale/camera. ONE isolated full-body animation sprite of exact approved Guardiao do Paraiso, ivory marble/green veins, gold crown, ivory gold cloth, TWO white feathered wings, exactly TWO arms TWO legs, ONE complete gold spear held by original plain marble hand from SCREENLEFT shoulder, other green-veined arm from SCREENRIGHT shoulder stays empty. Preserve camera3/4 facingRIGHT, palette/proportions/crisp isometric pixelart. Complete spear tip/butt/wings/crown/feet/cloth inside1254square native transparent margins, opaque solid silhouette; no ground/shadow/extra limb/extra spear/new props/effects/text. ",
+      "id": "guardiao_de_goranthis",
+      "date": "2026-10-08"
+    }
+  ],
+  "rejected": {
+    "attack_02_v01": "Third raised arm.",
+    "death_02_v01": "Head and wings rise after prior collapse.",
+    "death_04_v01": "Reverses direction of head/feet and spear from death03.",
+    "move_05_v01": "Closing pose remains too wide, requiring clearer passing."
+  }
+}

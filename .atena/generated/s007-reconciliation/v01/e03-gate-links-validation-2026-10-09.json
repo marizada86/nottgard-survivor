@@ -1,0 +1,77 @@
+{
+  "status": "PASSED",
+  "links": [
+    {
+      "document": ".atena/evidence/pilares-complete-2026-10-08.md",
+      "target": "../generated/pilares-complete-build-validation-2026-10-08.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/pilares-complete-2026-10-08.md",
+      "target": "../generated/pilares-resume/v01/sintese_abissal-completion-receipt.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/pilares-complete-2026-10-08.md",
+      "target": "../generated/priority-review/sintese_abissal_runtime.png",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/pilares-complete-2026-10-08.md",
+      "target": "../generated/pilares-resume/v01/sintese_abissal-trigger.log",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/pilares-complete-2026-10-08.md",
+      "target": "../generated/pilares-resume/v01/attack03-pendant-owner-approval-2026-10-08.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-024-pilares-identidade-2026-10-08.md",
+      "target": "../../generated/priority-review/pilares_identity_gate_v02.png",
+      "exists": true
+    },
+    {
+      "document": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-024-pilares-identidade-2026-10-08.md",
+      "target": "../../generated/pilares-resume/v01/identity-gate-receipt.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-024-pilares-identidade-2026-10-08.md",
+      "target": "../../generated/pilares-resume/v01/attack03-pendant-owner-approval-2026-10-08.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-vfx-e03-gate-2026-10-09.md",
+      "target": "../generated/pilares-complete-build-validation-2026-10-08.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-vfx-e03-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/reconciliation-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-vfx-e03-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/e03-owner-gate-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-vfx-e03-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/e03-reference-comparison-2026-10-09.png",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-vfx-e03-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/e03-prompt-2026-10-09.json",
+      "exists": true
+    },
+    {
+      "document": ".atena/evidence/s007-vfx-e03-gate-2026-10-09.md",
+      "target": "../generated/s007-reconciliation/v01/e03-audit-2026-10-09.json",
+      "exists": true
+    }
+  ],
+  "manifest_assets": 202,
+  "pending_owner_gate": "GATE-FILA-021-E03-2026-10-09"
+}

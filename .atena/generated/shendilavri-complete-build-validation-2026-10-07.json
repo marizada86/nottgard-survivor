@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-07",
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "status": "SHENDILAVRI_LOCAL_COMPLETE",
+  "build_id": "ac14526+",
+  "build_info": {
+    "commit": "ac14526+",
+    "date": "2026-10-07T22:42:33Z"
+  },
+  "path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\build\\image-priority-shendilavri-complete\\NottgardSurvivors.exe",
+  "bytes": 411300112,
+  "sha256": "277f4c31f6148f20a4d95cb265a055bdee3409ec58665929006e416ef16e7f48",
+  "manifest_assets": 180,
+  "frames": 106,
+  "strips": 21,
+  "actors": [
+    "escravo_de_rivenheart",
+    "sucubo",
+    "guarda_do_castelo",
+    "master_of_cruelties",
+    "malcanthet"
+  ],
+  "reused_actor": "ilusao_de_sucubo",
+  "reused_source": "sucubo",
+  "reused_alpha": 0.45,
+  "checks": {
+    "queue": ".atena/generated/shendilavri-resume/v01/malcanthet-queue.log",
+    "runtime": ".atena/generated/shendilavri-resume/v01/malcanthet-runtime.log",
+    "suite": ".atena/generated/shendilavri-resume/v01/malcanthet-suite.log",
+    "smoke": ".atena/generated/shendilavri-resume/v01/malcanthet-smoke.log",
+    "capture": ".atena/generated/shendilavri-resume/v01/malcanthet-capture.log"
+  },
+  "trigger": ".atena/generated/shendilavri-resume/v01/malcanthet-trigger-v02.log",
+  "export_exit": 0,
+  "exe_exit": 0,
+  "exe_frames": 60,
+  "human_playtest": "pending",
+  "next_checkpoint": "GATE-GORANTHIS-IDENTITIES-V01",
+  "notes": "Native alpha preserved. Existing visual aoe telegraph triggers special, with no combat changes. Environmental root certificate/editor settings errors remain in logs. No commit/push/publication."
+}
