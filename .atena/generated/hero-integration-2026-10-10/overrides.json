@@ -1,0 +1,710 @@
+{
+  "AO03": {
+    "source_sha256": "c8756558d5badef2b0c2a5a2cc536344ce85e8222c6bdae088cd8e3298c32588",
+    "method": "one alpha-connected character per frame; preview only",
+    "preview_suffix": "regions-v01",
+    "frames": [
+      {
+        "frame": 1,
+        "path": "review-frame-extraction/AO03-v01/frame-1.png",
+        "bbox_source": [
+          17,
+          47,
+          390,
+          697
+        ],
+        "seed": [
+          171,
+          300
+        ]
+      },
+      {
+        "frame": 2,
+        "path": "review-frame-extraction/AO03-v01/frame-2.png",
+        "bbox_source": [
+          369,
+          49,
+          699,
+          704
+        ],
+        "seed": [
+          512,
+          300
+        ]
+      },
+      {
+        "frame": 3,
+        "path": "review-frame-extraction/AO03-v01/frame-3.png",
+        "bbox_source": [
+          713,
+          47,
+          1054,
+          697
+        ],
+        "seed": [
+          853,
+          300
+        ]
+      },
+      {
+        "frame": 4,
+        "path": "review-frame-extraction/AO03-v01/frame-4.png",
+        "bbox_source": [
+          1051,
+          56,
+          1404,
+          690
+        ],
+        "seed": [
+          1195,
+          300
+        ]
+      },
+      {
+        "frame": 5,
+        "path": "review-frame-extraction/AO03-v01/frame-5.png",
+        "bbox_source": [
+          1388,
+          53,
+          1698,
+          703
+        ],
+        "seed": [
+          1536,
+          300
+        ]
+      },
+      {
+        "frame": 6,
+        "path": "review-frame-extraction/AO03-v01/frame-6.png",
+        "bbox_source": [
+          1724,
+          57,
+          2033,
+          704
+        ],
+        "seed": [
+          1877,
+          300
+        ]
+      }
+    ]
+  },
+  "ER03": {
+    "source_sha256": "a4320d91eb7625513df699205d8a427972e6b721adc36ee13c527071487c8939",
+    "method": "one alpha-connected character per frame; original poses retained; preview only",
+    "preview_suffix": "original-regions-v01",
+    "frames": [
+      {
+        "frame": 1,
+        "path": "review-frame-extraction/ER03-original-v01/frame-1.png",
+        "bbox_source": [
+          12,
+          100,
+          301,
+          698
+        ],
+        "seed": [
+          165,
+          317
+        ],
+        "source_canvas_edge": false
+      },
+      {
+        "frame": 2,
+        "path": "review-frame-extraction/ER03-original-v01/frame-2.png",
+        "bbox_source": [
+          292,
+          100,
+          615,
+          679
+        ],
+        "seed": [
+          495,
+          317
+        ],
+        "source_canvas_edge": false
+      },
+      {
+        "frame": 3,
+        "path": "review-frame-extraction/ER03-original-v01/frame-3.png",
+        "bbox_source": [
+          567,
+          105,
+          888,
+          691
+        ],
+        "seed": [
+          826,
+          317
+        ],
+        "source_canvas_edge": false
+      },
+      {
+        "frame": 4,
+        "path": "review-frame-extraction/ER03-original-v01/frame-4.png",
+        "bbox_source": [
+          835,
+          106,
+          1155,
+          683
+        ],
+        "seed": [
+          1035,
+          109
+        ],
+        "source_canvas_edge": false
+      },
+      {
+        "frame": 5,
+        "path": "review-frame-extraction/ER03-original-v01/frame-5.png",
+        "bbox_source": [
+          1113,
+          105,
+          1427,
+          692
+        ],
+        "seed": [
+          1183,
+          317
+        ],
+        "source_canvas_edge": false
+      },
+      {
+        "frame": 6,
+        "path": "review-frame-extraction/ER03-original-v01/frame-6.png",
+        "bbox_source": [
+          1401,
+          104,
+          1709,
+          692
+        ],
+        "seed": [
+          1487,
+          317
+        ],
+        "source_canvas_edge": false
+      },
+      {
+        "frame": 7,
+        "path": "review-frame-extraction/ER03-original-v01/frame-7.png",
+        "bbox_source": [
+          1675,
+          105,
+          1977,
+          689
+        ],
+        "seed": [
+          1817,
+          317
+        ],
+        "source_canvas_edge": false
+      }
+    ],
+    "expected_frames": 6,
+    "observed_frames": 7,
+    "source_canvas_edge_frames": []
+  },
+  "ER04": {
+    "source_sha256": "e6f2221b56fa7be7d74b04530a3571cd8802b4b92ffb29346a544fa18299ea57",
+    "method": "one alpha-connected character per frame; original poses retained; preview only",
+    "preview_suffix": "original-regions-v01",
+    "frames": [
+      {
+        "frame": 1,
+        "path": "review-frame-extraction/ER04-original-v01/frame-1.png",
+        "bbox_source": [
+          13,
+          121,
+          339,
+          729
+        ],
+        "seed": [
+          161,
+          326
+        ],
+        "source_canvas_edge": false
+      },
+      {
+        "frame": 2,
+        "path": "review-frame-extraction/ER04-original-v01/frame-2.png",
+        "bbox_source": [
+          344,
+          122,
+          668,
+          731
+        ],
+        "seed": [
+          483,
+          326
+        ],
+        "source_canvas_edge": false
+      },
+      {
+        "frame": 3,
+        "path": "review-frame-extraction/ER04-original-v01/frame-3.png",
+        "bbox_source": [
+          671,
+          122,
+          970,
+          732
+        ],
+        "seed": [
+          805,
+          326
+        ],
+        "source_canvas_edge": false
+      },
+      {
+        "frame": 4,
+        "path": "review-frame-extraction/ER04-original-v01/frame-4.png",
+        "bbox_source": [
+          971,
+          129,
+          1292,
+          724
+        ],
+        "seed": [
+          1127,
+          326
+        ],
+        "source_canvas_edge": false
+      },
+      {
+        "frame": 5,
+        "path": "review-frame-extraction/ER04-original-v01/frame-5.png",
+        "bbox_source": [
+          1301,
+          121,
+          1612,
+          729
+        ],
+        "seed": [
+          1449,
+          326
+        ],
+        "source_canvas_edge": false
+      },
+      {
+        "frame": 6,
+        "path": "review-frame-extraction/ER04-original-v01/frame-6.png",
+        "bbox_source": [
+          1614,
+          121,
+          1925,
+          730
+        ],
+        "seed": [
+          1771,
+          326
+        ],
+        "source_canvas_edge": false
+      }
+    ],
+    "expected_frames": 6,
+    "observed_frames": 6,
+    "source_canvas_edge_frames": []
+  },
+  "ER05": {
+    "source_sha256": "c4cf640e0bfb3948b0a16a3f99978eb0b047c454799f12412c699d6078b91ba3",
+    "method": "one alpha-connected character per frame; original poses retained; preview only",
+    "preview_suffix": "original-regions-v01",
+    "frames": [
+      {
+        "frame": 1,
+        "path": "review-frame-extraction/ER05-original-v01/frame-1.png",
+        "bbox_source": [
+          34,
+          51,
+          359,
+          705
+        ],
+        "seed": [
+          170,
+          307
+        ],
+        "source_canvas_edge": false
+      },
+      {
+        "frame": 2,
+        "path": "review-frame-extraction/ER05-original-v01/frame-2.png",
+        "bbox_source": [
+          367,
+          50,
+          673,
+          700
+        ],
+        "seed": [
+          511,
+          307
+        ],
+        "source_canvas_edge": false
+      },
+      {
+        "frame": 3,
+        "path": "review-frame-extraction/ER05-original-v01/frame-3.png",
+        "bbox_source": [
+          691,
+          55,
+          1001,
+          688
+        ],
+        "seed": [
+          853,
+          307
+        ],
+        "source_canvas_edge": false
+      },
+      {
+        "frame": 4,
+        "path": "review-frame-extraction/ER05-original-v01/frame-4.png",
+        "bbox_source": [
+          1027,
+          53,
+          1359,
+          706
+        ],
+        "seed": [
+          1194,
+          307
+        ],
+        "source_canvas_edge": false
+      },
+      {
+        "frame": 5,
+        "path": "review-frame-extraction/ER05-original-v01/frame-5.png",
+        "bbox_source": [
+          1378,
+          55,
+          1687,
+          703
+        ],
+        "seed": [
+          1535,
+          307
+        ],
+        "source_canvas_edge": false
+      },
+      {
+        "frame": 6,
+        "path": "review-frame-extraction/ER05-original-v01/frame-6.png",
+        "bbox_source": [
+          1718,
+          56,
+          2020,
+          690
+        ],
+        "seed": [
+          1877,
+          307
+        ],
+        "source_canvas_edge": false
+      }
+    ],
+    "expected_frames": 6,
+    "observed_frames": 6,
+    "source_canvas_edge_frames": []
+  },
+  "ER06": {
+    "source_sha256": "1121c10194add75a03465c82f469091ba6ec89021f10fac0018b0172e258c0e9",
+    "method": "one alpha-connected character per frame; original poses retained; preview only",
+    "preview_suffix": "original-regions-v01",
+    "frames": [
+      {
+        "frame": 1,
+        "path": "review-frame-extraction/ER06-original-v01/frame-1.png",
+        "bbox_source": [
+          10,
+          112,
+          335,
+          694
+        ],
+        "seed": [
+          170,
+          307
+        ],
+        "source_canvas_edge": false
+      },
+      {
+        "frame": 2,
+        "path": "review-frame-extraction/ER06-original-v01/frame-2.png",
+        "bbox_source": [
+          348,
+          111,
+          674,
+          692
+        ],
+        "seed": [
+          511,
+          307
+        ],
+        "source_canvas_edge": false
+      },
+      {
+        "frame": 3,
+        "path": "review-frame-extraction/ER06-original-v01/frame-3.png",
+        "bbox_source": [
+          703,
+          100,
+          1032,
+          689
+        ],
+        "seed": [
+          853,
+          307
+        ],
+        "source_canvas_edge": false
+      },
+      {
+        "frame": 4,
+        "path": "review-frame-extraction/ER06-original-v01/frame-4.png",
+        "bbox_source": [
+          1045,
+          104,
+          1363,
+          694
+        ],
+        "seed": [
+          1194,
+          307
+        ],
+        "source_canvas_edge": false
+      },
+      {
+        "frame": 5,
+        "path": "review-frame-extraction/ER06-original-v01/frame-5.png",
+        "bbox_source": [
+          1382,
+          106,
+          1702,
+          700
+        ],
+        "seed": [
+          1535,
+          307
+        ],
+        "source_canvas_edge": false
+      },
+      {
+        "frame": 6,
+        "path": "review-frame-extraction/ER06-original-v01/frame-6.png",
+        "bbox_source": [
+          1719,
+          101,
+          2048,
+          697
+        ],
+        "seed": [
+          1877,
+          307
+        ],
+        "source_canvas_edge": true
+      }
+    ],
+    "expected_frames": 6,
+    "observed_frames": 6,
+    "source_canvas_edge_frames": [
+      6
+    ]
+  },
+  "AO04": {
+    "source_sha256": "8feae12325f647a118947654fae47b0fa5e3002b3c0bb436102c857c25b23b0b",
+    "method": "one alpha-connected character per frame; original poses retained; preview only",
+    "preview_suffix": "original-regions-v01",
+    "frames": [
+      {
+        "frame": 1,
+        "path": "review-frame-extraction/AO04-original-v01/frame-1.png",
+        "bbox_source": [
+          6,
+          78,
+          311,
+          736
+        ],
+        "seed": [
+          161,
+          324
+        ],
+        "source_canvas_edge": false
+      },
+      {
+        "frame": 2,
+        "path": "review-frame-extraction/AO04-original-v01/frame-2.png",
+        "bbox_source": [
+          332,
+          96,
+          619,
+          726
+        ],
+        "seed": [
+          485,
+          324
+        ],
+        "source_canvas_edge": false
+      },
+      {
+        "frame": 3,
+        "path": "review-frame-extraction/AO04-original-v01/frame-3.png",
+        "bbox_source": [
+          649,
+          95,
+          932,
+          741
+        ],
+        "seed": [
+          809,
+          324
+        ],
+        "source_canvas_edge": false
+      },
+      {
+        "frame": 4,
+        "path": "review-frame-extraction/AO04-original-v01/frame-4.png",
+        "bbox_source": [
+          960,
+          93,
+          1294,
+          744
+        ],
+        "seed": [
+          1132,
+          324
+        ],
+        "source_canvas_edge": false
+      },
+      {
+        "frame": 5,
+        "path": "review-frame-extraction/AO04-original-v01/frame-5.png",
+        "bbox_source": [
+          1300,
+          96,
+          1587,
+          741
+        ],
+        "seed": [
+          1456,
+          324
+        ],
+        "source_canvas_edge": false
+      },
+      {
+        "frame": 6,
+        "path": "review-frame-extraction/AO04-original-v01/frame-6.png",
+        "bbox_source": [
+          1612,
+          96,
+          1933,
+          741
+        ],
+        "seed": [
+          1780,
+          324
+        ],
+        "source_canvas_edge": false
+      }
+    ],
+    "expected_frames": 6,
+    "observed_frames": 6,
+    "source_canvas_edge_frames": []
+  },
+  "AO07": {
+    "source_sha256": "fd28f0e31899eda21c4e8fbf3241f25935fcd2dcd4300afb602dd7297e0104f7",
+    "method": "one alpha-connected character per frame; original poses retained; preview only",
+    "preview_suffix": "original-regions-v01",
+    "frames": [
+      {
+        "frame": 1,
+        "path": "review-frame-extraction/AO07-original-v01/frame-1.png",
+        "bbox_source": [
+          63,
+          44,
+          373,
+          702
+        ],
+        "seed": [
+          170,
+          307
+        ],
+        "source_canvas_edge": false
+      },
+      {
+        "frame": 2,
+        "path": "review-frame-extraction/AO07-original-v01/frame-2.png",
+        "bbox_source": [
+          423,
+          56,
+          702,
+          703
+        ],
+        "seed": [
+          511,
+          307
+        ],
+        "source_canvas_edge": false
+      },
+      {
+        "frame": 3,
+        "path": "review-frame-extraction/AO07-original-v01/frame-3.png",
+        "bbox_source": [
+          737,
+          49,
+          1015,
+          702
+        ],
+        "seed": [
+          853,
+          307
+        ],
+        "source_canvas_edge": false
+      },
+      {
+        "frame": 4,
+        "path": "review-frame-extraction/AO07-original-v01/frame-4.png",
+        "bbox_source": [
+          1047,
+          51,
+          1342,
+          702
+        ],
+        "seed": [
+          1194,
+          307
+        ],
+        "source_canvas_edge": false
+      },
+      {
+        "frame": 5,
+        "path": "review-frame-extraction/AO07-original-v01/frame-5.png",
+        "bbox_source": [
+          1394,
+          58,
+          1672,
+          688
+        ],
+        "seed": [
+          1535,
+          307
+        ],
+        "source_canvas_edge": false
+      },
+      {
+        "frame": 6,
+        "path": "review-frame-extraction/AO07-original-v01/frame-6.png",
+        "bbox_source": [
+          1710,
+          50,
+          2017,
+          706
+        ],
+        "seed": [
+          1877,
+          307
+        ],
+        "source_canvas_edge": false
+      }
+    ],
+    "expected_frames": 6,
+    "observed_frames": 6,
+    "source_canvas_edge_frames": []
+  }
+}

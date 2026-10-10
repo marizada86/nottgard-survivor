@@ -1,0 +1,20 @@
+plan: PLAN-053
+spec: .atena/specs/SPEC-hero-integration-2026-10-10.md
+revision: v04
+classification: IN_PLAN
+mode: per-plan
+status: PREPARED_FOR_APPROVED_COMMIT_MERGE_PUSH
+checkpoint: GIT/COMMIT
+authorization: 'atena commit push e merge'
+authorized_at: '2026-10-10'
+scope: 'Erik e Arlindo: 18 tiras, dois retratos, sprites estaticos, carregador, testes e evidencias da integracao'
+branch: codex/erik-arlindo-integracao-2026-10-10
+destination: main
+remote: origin
+remote_url: https://github.com/marizada86/nottgard-survivor.git
+human_playtest: PENDING
+content_state: DRAFT
+exceptions: 'ER03 sete poses e ER06 cinco quadros integros aprovados pelo dono'
+checks: .atena/generated/hero-integration-2026-10-10/verification.json
+return_checkpoint: PLAN-071/B-006/S-011
+preservation: 'Main tem mudancas de outra sessao. plan.yaml local nao sera commitado; originais e backups ficam locais conforme politica de fontes.'

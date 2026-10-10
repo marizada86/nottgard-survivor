@@ -14,7 +14,7 @@ func run() -> Array[String]:
 		return ["manifesto de prompts de animação ausente ou inválido"]
 	var heroes: Dictionary = {}
 	for hero_id in Data.table("heroes"):
-		if not Data.table("heroes")[hero_id].has("art_like"):   # SPEC-160: Arlindo e Erik têm pacote próprio (ART-PROMPTS-060)
+		if hero_id not in ["arlindo", "erik"]:   # Separate approved packet ART-PROMPTS-060/FILA-027, independent of runtime art_like.
 			heroes[hero_id] = Data.table("heroes")[hero_id]
 	var covered: Dictionary = manifest.get("heroes", {})
 	if covered.size() != heroes.size():

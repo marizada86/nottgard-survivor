@@ -436,15 +436,18 @@ func _walk_metrics(path: String) -> Dictionary:
 	var heights: Array[int] = []
 	var bottoms: Array[int] = []
 	var masses: Array[int] = []
-	for index in image.get_width() / 256:
-		var left := 256
+	var hero: String = path.get_base_dir().get_file()
+	var view: Script = load("res://ui/hero_view.gd")
+	var cell_width: int = view.cell_of(hero).x
+	for index in image.get_width() / cell_width:
+		var left := cell_width
 		var top := 384
 		var right := -1
 		var bottom := -1
 		var mass := 0
 		for y in 384:
-			for x in 256:
-				if image.get_pixel(index * 256 + x, y).a < 0.10:
+			for x in cell_width:
+				if image.get_pixel(index * cell_width + x, y).a < 0.10:
 					continue
 				mass += 1
 				left = mini(left, x)
@@ -453,7 +456,7 @@ func _walk_metrics(path: String) -> Dictionary:
 				bottom = maxi(bottom, y)
 		if right < left:
 			continue
-		frames.append({"height": bottom - top + 1, "bottom": bottom + 1, "mass": mass, "edge": left <= 1 or top <= 1 or right >= 254 or bottom >= 382})
+		frames.append({"height": bottom - top + 1, "bottom": bottom + 1, "mass": mass, "edge": left <= 1 or top <= 1 or right >= cell_width - 2 or bottom >= 382})
 		heights.append(bottom - top + 1)
 		bottoms.append(bottom + 1)
 		masses.append(mass)
@@ -751,12 +754,13 @@ func _validate_hero_display_scale() -> Array[String]:
 			failures.append("idle ilegível: %s" % hero_id)
 			continue
 		var measured: Array[int] = []
-		for frame in image.get_width() / 256:
+		var cell_width: int = script.cell_of(String(hero_id)).x
+		for frame in image.get_width() / cell_width:
 			var top := 384
 			var bottom := -1
 			for y in 384:
-				for x in 256:
-					if image.get_pixel(frame * 256 + x, y).a >= 0.10:
+				for x in cell_width:
+					if image.get_pixel(frame * cell_width + x, y).a >= 0.10:
 						top = mini(top, y)
 						bottom = maxi(bottom, y)
 			measured.append(bottom - top + 1)

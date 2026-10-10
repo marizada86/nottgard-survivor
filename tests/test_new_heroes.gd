@@ -36,8 +36,8 @@ func _data(out: Array) -> void:
 			out.append("%s deveria existir em heroes.json" % id)
 			continue
 		var h: Dictionary = heroes[id]
-		if String(h.get("art_like", "")) == "" or not heroes.has(String(h.art_like)):
-			out.append("%s: art_like provisório inexistente" % id)
+		if h.has("art_like"):
+			out.append("%s: ainda usa arte provisória" % id)
 		if not Data.table("weapons").has(String(h.weapon)) or not Data.table("abilities").has(id):
 			out.append("%s: arma ou habilidade ausente" % id)
 		if not Data.table("hero_bios").has(id) or not Data.table("barks").has(id):
@@ -47,8 +47,8 @@ func _data(out: Array) -> void:
 		if not ResourceLoader.exists("res://assets/portraits/%s.png" % id):
 			out.append("%s: sem retrato" % id)
 	var view: Script = load("res://ui/hero_view.gd")
-	if view.art_id("arlindo") != "sylas" or view.art_id("erik") != "durvall" or view.art_id("brook") != "brook":
-		out.append("art_id: Arlindo usa Sylas, Erik usa Durvall e os demais a própria arte (%s, %s)" % [view.art_id("arlindo"), view.art_id("erik")])
+	if view.art_id("arlindo") != "arlindo" or view.art_id("erik") != "erik" or view.art_id("brook") != "brook":
+		out.append("art_id: os heróis devem usar a própria arte")
 	var grimholders := 0
 	for id in heroes:
 		if JSON.stringify(heroes[id]).to_lower().find("greenhold") >= 0 or String(Data.table("hero_bios").get(id, "")).to_lower().find("greenhold") >= 0:

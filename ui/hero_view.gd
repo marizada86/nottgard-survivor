@@ -3,6 +3,9 @@ extends Node2D
 ## Visual do herói. A posição inicial do nó no editor é o ponto de partida da run.
 
 const CELL := Vector2i(256, 384)
+## Wider source cells keep Erik's torch and Arlindo's spell inside the frame.
+const HERO_SOURCE_CELL := {&"arlindo": Vector2i(384, 384), &"erik": Vector2i(384, 384)}
+const HERO_WALK_FRAME_COUNTS := {&"erik": {&"move_e": 7, &"move_ne": 5}}
 const DISPLAY_HEIGHT := 72.0
 ## A âncora é o pixel mais baixo da arte (ponta do pé da frente); erguer a sombra põe o corpo no meio dela.
 const SHADOW_LIFT := 0.4
@@ -12,7 +15,7 @@ const SHADOW_RADIUS_PER_HEIGHT := 0.2
 const HERO_FEET_Y := {
 	&"korrak": 350.0, &"kayron": 376.0, &"sylas": 376.0, &"maelor": 364.0, &"nyrelia": 368.0,
 	&"durvall": 376.0, &"zynara": 376.0, &"bromnor": 364.0, &"leoric": 368.0, &"brook": 368.0,
-	&"arlindo": 376.0, &"erik": 376.0,   # SPEC-160: iguais aos de Sylas e Durvall (arte provisória por art_like)
+	&"arlindo": 368.0, &"erik": 368.0,
 }
 ## SPEC-154 (BUG-029): tiras pré-reduzidas para o tamanho de tela, por herói. `dir` = pasta das tiras reduzidas e `factor` = redução
 ## sobre a célula 256x384 (altura em tela / altura da arte, ou o dobro). Sem entrada vale o conjunto original. Reverter = apagar a entrada.
@@ -42,10 +45,11 @@ static func art_id(hero: String) -> String:
 
 static func cell_of(hero: String) -> Vector2i:
 	var f := strip_factor(hero)
+	var source_cell: Vector2i = HERO_SOURCE_CELL.get(StringName(hero), CELL)
 	if f == 1.0:
-		return CELL
+		return source_cell
 	var pad := strip_pad(hero)
-	return Vector2i(ceili(float(CELL.x) * f) + 2 * pad, ceili(float(CELL.y) * f) + 2 * pad)
+	return Vector2i(ceili(float(source_cell.x) * f) + 2 * pad, ceili(float(source_cell.y) * f) + 2 * pad)
 
 ## Altura do herói em tela (px), pela raça (humano 1,75 m = 64 px; piso de 40 px para os pequenos).
 ## Korrak 2,32 m e Leoric ~1 m vêm do Vault; as demais são médias de D&D.
@@ -59,7 +63,7 @@ const HERO_DISPLAY_HEIGHT := {
 const HERO_IDLE_ART_HEIGHT := {
 	&"korrak": 267.0, &"kayron": 316.0, &"sylas": 304.0, &"maelor": 299.0, &"nyrelia": 352.0,
 	&"durvall": 231.0, &"zynara": 368.0, &"bromnor": 241.0, &"leoric": 224.0, &"brook": 259.0,
-	&"arlindo": 304.0, &"erik": 231.0,   # SPEC-160: altura do idle emprestado (Sylas, Durvall); trocar quando houver arte própria (alvos 290 e 300)
+	&"arlindo": 290.0, &"erik": 300.0,
 }
 ## Heróis cujas tiras de caminhada têm o machado cortado na borda da célula e proporção diferente do idle.
 ## Eles andam com o próprio idle (sem espelhar, para a arma ficar sempre do mesmo lado) e um balanço procedural.
@@ -152,7 +156,8 @@ func _build_animations() -> void:
 	_has_animation = SpriteStripFrames.add_strip(frames, &"move", "%s/move.png" % root, cell, 6, 10.0, true) or _has_animation
 	for direction in WALK_SOURCE_DIRECTIONS:
 		var animation: StringName = StringName("move_%s" % direction)
-		_has_animation = SpriteStripFrames.add_strip(frames, animation, "%s/%s.png" % [root, animation], cell, 6, 10.0, true) or _has_animation
+		var count: int = HERO_WALK_FRAME_COUNTS.get(StringName(_active_hero_id), {}).get(animation, 6)
+		_has_animation = SpriteStripFrames.add_strip(frames, animation, "%s/%s.png" % [root, animation], cell, count, 10.0, true) or _has_animation
 	_has_animation = SpriteStripFrames.add_strip(frames, &"attack", "%s/attack.png" % root, cell, 4, 12.0, false) or _has_animation
 	_has_animation = SpriteStripFrames.add_strip(frames, &"active", "%s/active.png" % root, cell, 6, 12.0, false) or _has_animation
 	_has_animation = SpriteStripFrames.add_strip(frames, &"death", "%s/death.png" % root, cell, 6, 9.0, false) or _has_animation

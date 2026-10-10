@@ -1,0 +1,422 @@
+{
+  "files": 104,
+  "bytes": 29478864,
+  "entries": [
+    {
+      "path": ".atena/backlog/ARTE.md",
+      "bytes": 37900
+    },
+    {
+      "path": ".atena/evidence/hero-own-art-integration-2026-10-10.md",
+      "bytes": 3887
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/.gitignore",
+      "bytes": 53
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/Jogar-Arlindo.cmd",
+      "bytes": 245
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/Jogar-Erik.cmd",
+      "bytes": 242
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/arlindo-active-runtime.png",
+      "bytes": 1246712
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/arlindo-active.gif",
+      "bytes": 194536
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/arlindo-attack.gif",
+      "bytes": 136430
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/arlindo-death.gif",
+      "bytes": 163476
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/arlindo-idle-runtime.png",
+      "bytes": 1247155
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/arlindo-idle.gif",
+      "bytes": 122503
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/arlindo-launch.log",
+      "bytes": 441
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/arlindo-move_e-runtime.png",
+      "bytes": 1245785
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/arlindo-move_e.gif",
+      "bytes": 174422
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/arlindo-move_n.gif",
+      "bytes": 182082
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/arlindo-move_ne.gif",
+      "bytes": 170897
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/arlindo-move_s.gif",
+      "bytes": 173053
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/arlindo-move_se.gif",
+      "bytes": 190093
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/capture-isolated.log",
+      "bytes": 342
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/erik-active-runtime.png",
+      "bytes": 1244077
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/erik-active.gif",
+      "bytes": 244303
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/erik-attack.gif",
+      "bytes": 177577
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/erik-death.gif",
+      "bytes": 171476
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/erik-idle-runtime.png",
+      "bytes": 1244872
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/erik-idle.gif",
+      "bytes": 155373
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/erik-launch.log",
+      "bytes": 441
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/erik-move_e-runtime.png",
+      "bytes": 1244597
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/erik-move_e.gif",
+      "bytes": 253659
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/erik-move_n.gif",
+      "bytes": 196581
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/erik-move_ne.gif",
+      "bytes": 179627
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/erik-move_s.gif",
+      "bytes": 202791
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/erik-move_se.gif",
+      "bytes": 213690
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/gallery.py",
+      "bytes": 2076
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/import-final.log",
+      "bytes": 1584
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/index.html",
+      "bytes": 2427
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/overrides.json",
+      "bytes": 15013
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/pack.py",
+      "bytes": 7963
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/packed-board.png",
+      "bytes": 1859089
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/packing.json",
+      "bytes": 20645
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/prepare.py",
+      "bytes": 1192
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/result-runtime.png",
+      "bytes": 446847
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/smoke.log",
+      "bytes": 796
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/source-manifest.json",
+      "bytes": 32873
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/sources-board.png",
+      "bytes": 1218721
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/suite-verified.log",
+      "bytes": 1550
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/verification.json",
+      "bytes": 303
+    },
+    {
+      "path": ".atena/generated/hero-integration-2026-10-10/verify_delivery.py",
+      "bytes": 1538
+    },
+    {
+      "path": ".atena/specs/SPEC-hero-integration-2026-10-10.md",
+      "bytes": 2338
+    },
+    {
+      "path": ".atena/state/hero-art-integration-publication.yaml",
+      "bytes": 911
+    },
+    {
+      "path": "assets/animations/heroes/arlindo/active.png",
+      "bytes": 524158
+    },
+    {
+      "path": "assets/animations/heroes/arlindo/active.png.import",
+      "bytes": 955
+    },
+    {
+      "path": "assets/animations/heroes/arlindo/attack.png",
+      "bytes": 440049
+    },
+    {
+      "path": "assets/animations/heroes/arlindo/attack.png.import",
+      "bytes": 954
+    },
+    {
+      "path": "assets/animations/heroes/arlindo/death.png",
+      "bytes": 497445
+    },
+    {
+      "path": "assets/animations/heroes/arlindo/death.png.import",
+      "bytes": 952
+    },
+    {
+      "path": "assets/animations/heroes/arlindo/idle.png",
+      "bytes": 309838
+    },
+    {
+      "path": "assets/animations/heroes/arlindo/idle.png.import",
+      "bytes": 949
+    },
+    {
+      "path": "assets/animations/heroes/arlindo/move_e.png",
+      "bytes": 522297
+    },
+    {
+      "path": "assets/animations/heroes/arlindo/move_e.png.import",
+      "bytes": 954
+    },
+    {
+      "path": "assets/animations/heroes/arlindo/move_n.png",
+      "bytes": 476408
+    },
+    {
+      "path": "assets/animations/heroes/arlindo/move_n.png.import",
+      "bytes": 955
+    },
+    {
+      "path": "assets/animations/heroes/arlindo/move_ne.png",
+      "bytes": 380018
+    },
+    {
+      "path": "assets/animations/heroes/arlindo/move_ne.png.import",
+      "bytes": 958
+    },
+    {
+      "path": "assets/animations/heroes/arlindo/move_s.png",
+      "bytes": 477657
+    },
+    {
+      "path": "assets/animations/heroes/arlindo/move_s.png.import",
+      "bytes": 955
+    },
+    {
+      "path": "assets/animations/heroes/arlindo/move_se.png",
+      "bytes": 430357
+    },
+    {
+      "path": "assets/animations/heroes/arlindo/move_se.png.import",
+      "bytes": 957
+    },
+    {
+      "path": "assets/animations/heroes/erik/active.png",
+      "bytes": 826941
+    },
+    {
+      "path": "assets/animations/heroes/erik/active.png.import",
+      "bytes": 951
+    },
+    {
+      "path": "assets/animations/heroes/erik/attack.png",
+      "bytes": 662286
+    },
+    {
+      "path": "assets/animations/heroes/erik/attack.png.import",
+      "bytes": 952
+    },
+    {
+      "path": "assets/animations/heroes/erik/death.png",
+      "bytes": 473285
+    },
+    {
+      "path": "assets/animations/heroes/erik/death.png.import",
+      "bytes": 949
+    },
+    {
+      "path": "assets/animations/heroes/erik/idle.png",
+      "bytes": 488413
+    },
+    {
+      "path": "assets/animations/heroes/erik/idle.png.import",
+      "bytes": 946
+    },
+    {
+      "path": "assets/animations/heroes/erik/move_e.png",
+      "bytes": 740390
+    },
+    {
+      "path": "assets/animations/heroes/erik/move_e.png.import",
+      "bytes": 952
+    },
+    {
+      "path": "assets/animations/heroes/erik/move_n.png",
+      "bytes": 516767
+    },
+    {
+      "path": "assets/animations/heroes/erik/move_n.png.import",
+      "bytes": 952
+    },
+    {
+      "path": "assets/animations/heroes/erik/move_ne.png",
+      "bytes": 592643
+    },
+    {
+      "path": "assets/animations/heroes/erik/move_ne.png.import",
+      "bytes": 955
+    },
+    {
+      "path": "assets/animations/heroes/erik/move_s.png",
+      "bytes": 643941
+    },
+    {
+      "path": "assets/animations/heroes/erik/move_s.png.import",
+      "bytes": 952
+    },
+    {
+      "path": "assets/animations/heroes/erik/move_se.png",
+      "bytes": 577033
+    },
+    {
+      "path": "assets/animations/heroes/erik/move_se.png.import",
+      "bytes": 955
+    },
+    {
+      "path": "assets/heroes/arlindo.png",
+      "bytes": 78279
+    },
+    {
+      "path": "assets/heroes/arlindo.png.import",
+      "bytes": 939
+    },
+    {
+      "path": "assets/heroes/erik.png",
+      "bytes": 123870
+    },
+    {
+      "path": "assets/heroes/erik.png.import",
+      "bytes": 930
+    },
+    {
+      "path": "assets/portraits/arlindo.png",
+      "bytes": 2512446
+    },
+    {
+      "path": "assets/portraits/erik.png",
+      "bytes": 2645551
+    },
+    {
+      "path": "data/heroes.json",
+      "bytes": 5505
+    },
+    {
+      "path": "tests/test_animation_assets.gd",
+      "bytes": 47626
+    },
+    {
+      "path": "tests/test_hero_animation_prompt_manifest.gd",
+      "bytes": 2789
+    },
+    {
+      "path": "tests/test_hero_own_art.gd",
+      "bytes": 1426
+    },
+    {
+      "path": "tests/test_hero_own_art.gd.uid",
+      "bytes": 20
+    },
+    {
+      "path": "tests/test_new_heroes.gd",
+      "bytes": 7593
+    },
+    {
+      "path": "tools/capture_hero_own_art.gd",
+      "bytes": 1284
+    },
+    {
+      "path": "tools/capture_hero_own_art.gd.uid",
+      "bytes": 20
+    },
+    {
+      "path": "tools/capture_hero_own_art.tscn",
+      "bytes": 184
+    },
+    {
+      "path": "tools/hero_art_playtest.gd",
+      "bytes": 609
+    },
+    {
+      "path": "tools/hero_art_playtest.gd.uid",
+      "bytes": 20
+    },
+    {
+      "path": "tools/hero_art_playtest.tscn",
+      "bytes": 179
+    },
+    {
+      "path": "ui/hero_view.gd",
+      "bytes": 17331
+    }
+  ]
+}

@@ -1,0 +1,1182 @@
+[
+  {
+    "code": "AO02",
+    "hero": "arlindo",
+    "animation": "idle",
+    "count": 4,
+    "source_sha256": "e6df81e5fb10c896a4a43b9f05fcb0da8df1aad15c811f9f0ee92a9132615dbf",
+    "path": "assets/animations/heroes/arlindo/idle.png",
+    "frames": [
+      {
+        "frame": 0,
+        "bbox": [
+          132,
+          76,
+          252,
+          367
+        ],
+        "scale": 0.3956343792633015
+      },
+      {
+        "frame": 1,
+        "bbox": [
+          130,
+          77,
+          253,
+          367
+        ],
+        "scale": 0.3956343792633015
+      },
+      {
+        "frame": 2,
+        "bbox": [
+          130,
+          76,
+          254,
+          367
+        ],
+        "scale": 0.3956343792633015
+      },
+      {
+        "frame": 3,
+        "bbox": [
+          131,
+          78,
+          252,
+          367
+        ],
+        "scale": 0.3956343792633015
+      }
+    ]
+  },
+  {
+    "code": "AO03",
+    "hero": "arlindo",
+    "animation": "move_e",
+    "count": 6,
+    "source_sha256": "c8756558d5badef2b0c2a5a2cc536344ce85e8222c6bdae088cd8e3298c32588",
+    "path": "assets/animations/heroes/arlindo/move_e.png",
+    "frames": [
+      {
+        "frame": 0,
+        "bbox": [
+          109,
+          76,
+          275,
+          367
+        ],
+        "scale": 0.4503105590062112
+      },
+      {
+        "frame": 1,
+        "bbox": [
+          118,
+          74,
+          265,
+          367
+        ],
+        "scale": 0.4503105590062112
+      },
+      {
+        "frame": 2,
+        "bbox": [
+          116,
+          76,
+          268,
+          367
+        ],
+        "scale": 0.4503105590062112
+      },
+      {
+        "frame": 3,
+        "bbox": [
+          113,
+          84,
+          270,
+          367
+        ],
+        "scale": 0.4503105590062112
+      },
+      {
+        "frame": 4,
+        "bbox": [
+          123,
+          76,
+          261,
+          367
+        ],
+        "scale": 0.4503105590062112
+      },
+      {
+        "frame": 5,
+        "bbox": [
+          123,
+          78,
+          260,
+          367
+        ],
+        "scale": 0.4503105590062112
+      }
+    ]
+  },
+  {
+    "code": "AO04",
+    "hero": "arlindo",
+    "animation": "move_se",
+    "count": 6,
+    "source_sha256": "8feae12325f647a118947654fae47b0fa5e3002b3c0bb436102c857c25b23b0b",
+    "path": "assets/animations/heroes/arlindo/move_se.png",
+    "frames": [
+      {
+        "frame": 0,
+        "bbox": [
+          124,
+          71,
+          260,
+          367
+        ],
+        "scale": 0.453125
+      },
+      {
+        "frame": 1,
+        "bbox": [
+          128,
+          84,
+          256,
+          367
+        ],
+        "scale": 0.453125
+      },
+      {
+        "frame": 2,
+        "bbox": [
+          129,
+          76,
+          255,
+          367
+        ],
+        "scale": 0.453125
+      },
+      {
+        "frame": 3,
+        "bbox": [
+          117,
+          74,
+          266,
+          367
+        ],
+        "scale": 0.453125
+      },
+      {
+        "frame": 4,
+        "bbox": [
+          128,
+          77,
+          256,
+          367
+        ],
+        "scale": 0.453125
+      },
+      {
+        "frame": 5,
+        "bbox": [
+          120,
+          77,
+          263,
+          367
+        ],
+        "scale": 0.453125
+      }
+    ]
+  },
+  {
+    "code": "AO05",
+    "hero": "arlindo",
+    "animation": "move_s",
+    "count": 6,
+    "source_sha256": "fcf1f0dc1fe81be057c7b19ba1a7fce6d01ddb15d889d03a7a61dd24f0a06666",
+    "path": "assets/animations/heroes/arlindo/move_s.png",
+    "frames": [
+      {
+        "frame": 0,
+        "bbox": [
+          129,
+          76,
+          254,
+          367
+        ],
+        "scale": 0.4289940828402367
+      },
+      {
+        "frame": 1,
+        "bbox": [
+          129,
+          80,
+          255,
+          367
+        ],
+        "scale": 0.4289940828402367
+      },
+      {
+        "frame": 2,
+        "bbox": [
+          127,
+          73,
+          256,
+          367
+        ],
+        "scale": 0.4289940828402367
+      },
+      {
+        "frame": 3,
+        "bbox": [
+          131,
+          77,
+          253,
+          367
+        ],
+        "scale": 0.4289940828402367
+      },
+      {
+        "frame": 4,
+        "bbox": [
+          128,
+          79,
+          255,
+          367
+        ],
+        "scale": 0.4289940828402367
+      },
+      {
+        "frame": 5,
+        "bbox": [
+          129,
+          74,
+          255,
+          367
+        ],
+        "scale": 0.4289940828402367
+      }
+    ]
+  },
+  {
+    "code": "AO06",
+    "hero": "arlindo",
+    "animation": "move_ne",
+    "count": 6,
+    "source_sha256": "16a161b38cab86efa4557e026110b52214f992cd27000f03a9de0fdfaba5c650",
+    "path": "assets/animations/heroes/arlindo/move_ne.png",
+    "frames": [
+      {
+        "frame": 0,
+        "bbox": [
+          123,
+          76,
+          260,
+          367
+        ],
+        "scale": 0.4692556634304207
+      },
+      {
+        "frame": 1,
+        "bbox": [
+          125,
+          77,
+          259,
+          367
+        ],
+        "scale": 0.4692556634304207
+      },
+      {
+        "frame": 2,
+        "bbox": [
+          126,
+          79,
+          257,
+          367
+        ],
+        "scale": 0.4692556634304207
+      },
+      {
+        "frame": 3,
+        "bbox": [
+          127,
+          76,
+          256,
+          367
+        ],
+        "scale": 0.4692556634304207
+      },
+      {
+        "frame": 4,
+        "bbox": [
+          125,
+          76,
+          258,
+          367
+        ],
+        "scale": 0.4692556634304207
+      },
+      {
+        "frame": 5,
+        "bbox": [
+          128,
+          76,
+          255,
+          367
+        ],
+        "scale": 0.4692556634304207
+      }
+    ]
+  },
+  {
+    "code": "AO07",
+    "hero": "arlindo",
+    "animation": "move_n",
+    "count": 6,
+    "source_sha256": "fd28f0e31899eda21c4e8fbf3241f25935fcd2dcd4300afb602dd7297e0104f7",
+    "path": "assets/animations/heroes/arlindo/move_n.png",
+    "frames": [
+      {
+        "frame": 0,
+        "bbox": [
+          123,
+          74,
+          260,
+          367
+        ],
+        "scale": 0.44891640866873067
+      },
+      {
+        "frame": 1,
+        "bbox": [
+          130,
+          79,
+          253,
+          367
+        ],
+        "scale": 0.44891640866873067
+      },
+      {
+        "frame": 2,
+        "bbox": [
+          130,
+          76,
+          253,
+          367
+        ],
+        "scale": 0.44891640866873067
+      },
+      {
+        "frame": 3,
+        "bbox": [
+          127,
+          77,
+          257,
+          367
+        ],
+        "scale": 0.44891640866873067
+      },
+      {
+        "frame": 4,
+        "bbox": [
+          130,
+          86,
+          253,
+          367
+        ],
+        "scale": 0.44891640866873067
+      },
+      {
+        "frame": 5,
+        "bbox": [
+          124,
+          75,
+          260,
+          367
+        ],
+        "scale": 0.44891640866873067
+      }
+    ]
+  },
+  {
+    "code": "AO08",
+    "hero": "arlindo",
+    "animation": "attack",
+    "count": 4,
+    "source_sha256": "4e00d8ae2a73a9ef2d10be145a02a17813b55ea5546dc34309abc542c9a3ca0c",
+    "path": "assets/animations/heroes/arlindo/attack.png",
+    "frames": [
+      {
+        "frame": 0,
+        "bbox": [
+          118,
+          76,
+          266,
+          367
+        ],
+        "scale": 0.4184704184704185
+      },
+      {
+        "frame": 1,
+        "bbox": [
+          97,
+          76,
+          286,
+          367
+        ],
+        "scale": 0.4184704184704185
+      },
+      {
+        "frame": 2,
+        "bbox": [
+          61,
+          76,
+          321,
+          367
+        ],
+        "scale": 0.4184704184704185
+      },
+      {
+        "frame": 3,
+        "bbox": [
+          119,
+          76,
+          265,
+          367
+        ],
+        "scale": 0.4184704184704185
+      }
+    ]
+  },
+  {
+    "code": "AO09",
+    "hero": "arlindo",
+    "animation": "active",
+    "count": 6,
+    "source_sha256": "b07733b52c8c55f0fb8ecee6afa175976e844594ba805ab9c76ad1b45726f724",
+    "path": "assets/animations/heroes/arlindo/active.png",
+    "frames": [
+      {
+        "frame": 0,
+        "bbox": [
+          133,
+          77,
+          251,
+          367
+        ],
+        "scale": 0.4654895666131621
+      },
+      {
+        "frame": 1,
+        "bbox": [
+          129,
+          79,
+          256,
+          367
+        ],
+        "scale": 0.4654895666131621
+      },
+      {
+        "frame": 2,
+        "bbox": [
+          112,
+          78,
+          273,
+          367
+        ],
+        "scale": 0.4654895666131621
+      },
+      {
+        "frame": 3,
+        "bbox": [
+          97,
+          76,
+          287,
+          367
+        ],
+        "scale": 0.4654895666131621
+      },
+      {
+        "frame": 4,
+        "bbox": [
+          118,
+          77,
+          265,
+          367
+        ],
+        "scale": 0.4654895666131621
+      },
+      {
+        "frame": 5,
+        "bbox": [
+          133,
+          77,
+          250,
+          367
+        ],
+        "scale": 0.4654895666131621
+      }
+    ]
+  },
+  {
+    "code": "AO10",
+    "hero": "arlindo",
+    "animation": "death",
+    "count": 6,
+    "source_sha256": "103b76a306d4721ba45e9670de4e52beb230f2663e3c95e4f71ad8370792575e",
+    "path": "assets/animations/heroes/arlindo/death.png",
+    "frames": [
+      {
+        "frame": 0,
+        "bbox": [
+          103,
+          77,
+          281,
+          367
+        ],
+        "scale": 0.6131078224101479
+      },
+      {
+        "frame": 1,
+        "bbox": [
+          103,
+          123,
+          279,
+          367
+        ],
+        "scale": 0.6131078224101479
+      },
+      {
+        "frame": 2,
+        "bbox": [
+          104,
+          185,
+          279,
+          367
+        ],
+        "scale": 0.6131078224101479
+      },
+      {
+        "frame": 3,
+        "bbox": [
+          64,
+          211,
+          320,
+          367
+        ],
+        "scale": 0.6131078224101479
+      },
+      {
+        "frame": 4,
+        "bbox": [
+          62,
+          242,
+          322,
+          366
+        ],
+        "scale": 0.6131078224101479
+      },
+      {
+        "frame": 5,
+        "bbox": [
+          82,
+          250,
+          302,
+          366
+        ],
+        "scale": 0.6131078224101479
+      }
+    ]
+  },
+  {
+    "code": "ER02",
+    "hero": "erik",
+    "animation": "idle",
+    "count": 4,
+    "source_sha256": "340fbe94fb9246f840ca2d7c328e609090678e2c2a50a167552f4bb905f0fae4",
+    "path": "assets/animations/heroes/erik/idle.png",
+    "frames": [
+      {
+        "frame": 0,
+        "bbox": [
+          109,
+          67,
+          275,
+          367
+        ],
+        "scale": 0.41379310344827586
+      },
+      {
+        "frame": 1,
+        "bbox": [
+          108,
+          67,
+          276,
+          367
+        ],
+        "scale": 0.41379310344827586
+      },
+      {
+        "frame": 2,
+        "bbox": [
+          110,
+          67,
+          273,
+          367
+        ],
+        "scale": 0.41379310344827586
+      },
+      {
+        "frame": 3,
+        "bbox": [
+          111,
+          67,
+          272,
+          367
+        ],
+        "scale": 0.41379310344827586
+      }
+    ]
+  },
+  {
+    "code": "ER03",
+    "hero": "erik",
+    "animation": "move_e",
+    "count": 7,
+    "source_sha256": "a4320d91eb7625513df699205d8a427972e6b721adc36ee13c527071487c8939",
+    "path": "assets/animations/heroes/erik/move_e.png",
+    "frames": [
+      {
+        "frame": 0,
+        "bbox": [
+          119,
+          61,
+          264,
+          366
+        ],
+        "scale": 0.5172413793103449
+      },
+      {
+        "frame": 1,
+        "bbox": [
+          110,
+          71,
+          273,
+          366
+        ],
+        "scale": 0.5172413793103449
+      },
+      {
+        "frame": 2,
+        "bbox": [
+          111,
+          67,
+          273,
+          366
+        ],
+        "scale": 0.5172413793103449
+      },
+      {
+        "frame": 3,
+        "bbox": [
+          111,
+          72,
+          273,
+          367
+        ],
+        "scale": 0.5172413793103449
+      },
+      {
+        "frame": 4,
+        "bbox": [
+          113,
+          66,
+          271,
+          366
+        ],
+        "scale": 0.5172413793103449
+      },
+      {
+        "frame": 5,
+        "bbox": [
+          114,
+          66,
+          269,
+          366
+        ],
+        "scale": 0.5172413793103449
+      },
+      {
+        "frame": 6,
+        "bbox": [
+          116,
+          68,
+          268,
+          366
+        ],
+        "scale": 0.5172413793103449
+      }
+    ]
+  },
+  {
+    "code": "ER04",
+    "hero": "erik",
+    "animation": "move_se",
+    "count": 6,
+    "source_sha256": "e6f2221b56fa7be7d74b04530a3571cd8802b4b92ffb29346a544fa18299ea57",
+    "path": "assets/animations/heroes/erik/move_se.png",
+    "frames": [
+      {
+        "frame": 0,
+        "bbox": [
+          112,
+          66,
+          272,
+          367
+        ],
+        "scale": 0.4983388704318937
+      },
+      {
+        "frame": 1,
+        "bbox": [
+          112,
+          66,
+          271,
+          367
+        ],
+        "scale": 0.4983388704318937
+      },
+      {
+        "frame": 2,
+        "bbox": [
+          118,
+          65,
+          265,
+          367
+        ],
+        "scale": 0.4983388704318937
+      },
+      {
+        "frame": 3,
+        "bbox": [
+          113,
+          72,
+          271,
+          367
+        ],
+        "scale": 0.4983388704318937
+      },
+      {
+        "frame": 4,
+        "bbox": [
+          115,
+          66,
+          268,
+          367
+        ],
+        "scale": 0.4983388704318937
+      },
+      {
+        "frame": 5,
+        "bbox": [
+          115,
+          66,
+          268,
+          367
+        ],
+        "scale": 0.4983388704318937
+      }
+    ]
+  },
+  {
+    "code": "ER05",
+    "hero": "erik",
+    "animation": "move_s",
+    "count": 6,
+    "source_sha256": "c4cf640e0bfb3948b0a16a3f99978eb0b047c454799f12412c699d6078b91ba3",
+    "path": "assets/animations/heroes/erik/move_s.png",
+    "frames": [
+      {
+        "frame": 0,
+        "bbox": [
+          117,
+          64,
+          267,
+          367
+        ],
+        "scale": 0.4665629860031104
+      },
+      {
+        "frame": 1,
+        "bbox": [
+          121,
+          66,
+          262,
+          367
+        ],
+        "scale": 0.4665629860031104
+      },
+      {
+        "frame": 2,
+        "bbox": [
+          120,
+          74,
+          263,
+          367
+        ],
+        "scale": 0.4665629860031104
+      },
+      {
+        "frame": 3,
+        "bbox": [
+          115,
+          64,
+          268,
+          367
+        ],
+        "scale": 0.4665629860031104
+      },
+      {
+        "frame": 4,
+        "bbox": [
+          121,
+          67,
+          263,
+          367
+        ],
+        "scale": 0.4665629860031104
+      },
+      {
+        "frame": 5,
+        "bbox": [
+          122,
+          73,
+          261,
+          367
+        ],
+        "scale": 0.4665629860031104
+      }
+    ]
+  },
+  {
+    "code": "ER06",
+    "hero": "erik",
+    "animation": "move_ne",
+    "count": 5,
+    "source_sha256": "1121c10194add75a03465c82f469091ba6ec89021f10fac0018b0172e258c0e9",
+    "path": "assets/animations/heroes/erik/move_ne.png",
+    "frames": [
+      {
+        "frame": 0,
+        "bbox": [
+          110,
+          71,
+          273,
+          366
+        ],
+        "scale": 0.5145797598627787
+      },
+      {
+        "frame": 1,
+        "bbox": [
+          110,
+          70,
+          274,
+          367
+        ],
+        "scale": 0.5145797598627787
+      },
+      {
+        "frame": 2,
+        "bbox": [
+          109,
+          67,
+          274,
+          366
+        ],
+        "scale": 0.5145797598627787
+      },
+      {
+        "frame": 3,
+        "bbox": [
+          112,
+          66,
+          272,
+          366
+        ],
+        "scale": 0.5145797598627787
+      },
+      {
+        "frame": 4,
+        "bbox": [
+          111,
+          64,
+          272,
+          366
+        ],
+        "scale": 0.5145797598627787
+      }
+    ]
+  },
+  {
+    "code": "ER07",
+    "hero": "erik",
+    "animation": "move_n",
+    "count": 6,
+    "source_sha256": "6ae2917e571612e40a64bbe9d8264508ee0ee6489e2620e8f4c6194df76d5323",
+    "path": "assets/animations/heroes/erik/move_n.png",
+    "frames": [
+      {
+        "frame": 0,
+        "bbox": [
+          122,
+          59,
+          261,
+          367
+        ],
+        "scale": 0.47619047619047616
+      },
+      {
+        "frame": 1,
+        "bbox": [
+          122,
+          69,
+          261,
+          367
+        ],
+        "scale": 0.47619047619047616
+      },
+      {
+        "frame": 2,
+        "bbox": [
+          122,
+          72,
+          262,
+          367
+        ],
+        "scale": 0.47619047619047616
+      },
+      {
+        "frame": 3,
+        "bbox": [
+          121,
+          60,
+          262,
+          367
+        ],
+        "scale": 0.47619047619047616
+      },
+      {
+        "frame": 4,
+        "bbox": [
+          122,
+          71,
+          261,
+          367
+        ],
+        "scale": 0.47619047619047616
+      },
+      {
+        "frame": 5,
+        "bbox": [
+          121,
+          66,
+          262,
+          367
+        ],
+        "scale": 0.47619047619047616
+      }
+    ]
+  },
+  {
+    "code": "ER08",
+    "hero": "erik",
+    "animation": "attack",
+    "count": 4,
+    "source_sha256": "60f43fd2a81ca3e51f3d9655cf1c4d36127a28e0b7309b9a7aa70ddfd2c880d8",
+    "path": "assets/animations/heroes/erik/attack.png",
+    "frames": [
+      {
+        "frame": 0,
+        "bbox": [
+          80,
+          67,
+          304,
+          367
+        ],
+        "scale": 0.5067567567567568
+      },
+      {
+        "frame": 1,
+        "bbox": [
+          59,
+          69,
+          325,
+          366
+        ],
+        "scale": 0.5067567567567568
+      },
+      {
+        "frame": 2,
+        "bbox": [
+          39,
+          93,
+          344,
+          366
+        ],
+        "scale": 0.5067567567567568
+      },
+      {
+        "frame": 3,
+        "bbox": [
+          74,
+          67,
+          308,
+          367
+        ],
+        "scale": 0.5067567567567568
+      }
+    ]
+  },
+  {
+    "code": "ER09",
+    "hero": "erik",
+    "animation": "active",
+    "count": 6,
+    "source_sha256": "b32eb2cb7159b0c24cf8fff4174fe77324a4d18745651dae3286a587f2291bd1",
+    "path": "assets/animations/heroes/erik/active.png",
+    "frames": [
+      {
+        "frame": 0,
+        "bbox": [
+          99,
+          67,
+          284,
+          366
+        ],
+        "scale": 0.6263048016701461
+      },
+      {
+        "frame": 1,
+        "bbox": [
+          93,
+          89,
+          290,
+          366
+        ],
+        "scale": 0.6263048016701461
+      },
+      {
+        "frame": 2,
+        "bbox": [
+          82,
+          126,
+          302,
+          366
+        ],
+        "scale": 0.6263048016701461
+      },
+      {
+        "frame": 3,
+        "bbox": [
+          78,
+          94,
+          305,
+          366
+        ],
+        "scale": 0.6263048016701461
+      },
+      {
+        "frame": 4,
+        "bbox": [
+          84,
+          80,
+          300,
+          366
+        ],
+        "scale": 0.6263048016701461
+      },
+      {
+        "frame": 5,
+        "bbox": [
+          102,
+          84,
+          281,
+          366
+        ],
+        "scale": 0.6263048016701461
+      }
+    ]
+  },
+  {
+    "code": "ER10",
+    "hero": "erik",
+    "animation": "death",
+    "count": 6,
+    "source_sha256": "2f8ca3ecf43fbd643ba3db7f32bc5a0c4525728692e2ab33b2ee89bf9ba83993",
+    "path": "assets/animations/heroes/erik/death.png",
+    "frames": [
+      {
+        "frame": 0,
+        "bbox": [
+          116,
+          67,
+          268,
+          366
+        ],
+        "scale": 0.5736137667304015
+      },
+      {
+        "frame": 1,
+        "bbox": [
+          110,
+          119,
+          273,
+          367
+        ],
+        "scale": 0.5736137667304015
+      },
+      {
+        "frame": 2,
+        "bbox": [
+          103,
+          161,
+          281,
+          366
+        ],
+        "scale": 0.5736137667304015
+      },
+      {
+        "frame": 3,
+        "bbox": [
+          88,
+          168,
+          296,
+          366
+        ],
+        "scale": 0.5736137667304015
+      },
+      {
+        "frame": 4,
+        "bbox": [
+          70,
+          244,
+          313,
+          366
+        ],
+        "scale": 0.5736137667304015
+      },
+      {
+        "frame": 5,
+        "bbox": [
+          75,
+          255,
+          309,
+          367
+        ],
+        "scale": 0.5736137667304015
+      }
+    ]
+  }
+]
