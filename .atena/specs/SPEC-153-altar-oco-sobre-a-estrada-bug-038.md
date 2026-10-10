@@ -1,7 +1,7 @@
 ---
 id: SPEC-153
 title: Altar oco sobre a estrada (BUG-038)
-status: implemented-local
+status: "IMPLEMENTADA e publicada em 2026-10-08 (EVID-210, e1933be); aguarda a arte do altar animado (ART-044)"
 origin: post-hoc
 implementation_preceded_spec: true
 created: 2026-10-08

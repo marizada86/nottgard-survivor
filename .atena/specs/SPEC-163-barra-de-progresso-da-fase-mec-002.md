@@ -1,7 +1,7 @@
 ---
 id: "SPEC-163"
 title: "Barra de progresso da fase na HUD (MEC-002)"
-status: "IMPLEMENTADA local em 2026-10-09 (EVID-226); sem commit; aceite subjetivo pendente do playtest"
+status: "IMPLEMENTADA e publicada (2205341, EVID-226); aceite subjetivo pendente do playtest"
 origin: planned
 implementation_preceded_spec: false
 request_classification: PLAN_DEVIATION

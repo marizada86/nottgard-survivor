@@ -2,7 +2,7 @@ id: PLAN-084
 spec: SPEC-158
 spec_file: .atena/specs/SPEC-158-nevoa-de-borda-e-de-fim-de-fase.md
 mode: per-plan   # escolhido pelo dono em 2026-10-09
-status: COMPLETED_LOCAL
+status: COMMITTED_PUSHED   # 3c55756, 0d74969, 07e885a no origin; dano 3% a 9% em ded7059
 created: '2026-10-09'
 request_classification: PLAN_DEVIATION
 deviation_id: DEV-019

@@ -4,7 +4,7 @@ active_plan:
   id: PLAN-056
   spec_id: SPEC-122
   title: Balanceamento do ritmo inicial (XP, armas, eventos, raridade)
-  status: AWAITING_OWNER_REVIEW
+  status: ACCEPTED_BY_OWNER_CLOSED   # aceito em 2026-10-05 (63b6394); status atualizado em 2026-10-09 (indice de planos e specs)
   batches:
     B-001: {title: Linha de base com o bot, status: DONE, evidence: EVID-151}
     B-002: {title: XP (curva e XP por inimigo), status: DONE_UNCOMMITTED, evidence: EVID-152}

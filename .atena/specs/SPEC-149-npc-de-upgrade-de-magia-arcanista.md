@@ -1,7 +1,7 @@
 ---
 id: "SPEC-149"
 title: "NPC de upgrade de magia: o Arcanista (MEC-041)"
-status: "EM EXECUCAO em 2026-10-08 (PLAN-081 B-004)"
+status: "IMPLEMENTADA e publicada (PLAN-081 B-004, EVID-205); aguarda playtest e arte própria (ART-041)"
 origin: planned
 implementation_preceded_spec: false
 request_classification: PLAN_DEVIATION

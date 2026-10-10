@@ -64,6 +64,8 @@ Cada trilha guarda as próprias regras no topo do seu arquivo; aqui só o mapa:
 | Mecânicas | [MECANICAS.md](MECANICAS.md) | Sem limite por versão; uma spec, um teste e um commit por mecânica |
 | Bugs | [BUGS.md](BUGS.md) | P0 na hora; P1/P2 acumulam; lote fecha no próximo playtest; **Minor-fix** sem spec nem EVID |
 | Balanceamento | [BALANCEAMENTO.md](BALANCEAMENTO.md) | Um cartão por entidade e sintoma; duas fontes para decidir; uma alavanca por vez |
+
+**Índices (o que está vivo):** [planos](../state/INDEX.md) (ativo, publicados aguardando playtest, esperando arte ou aparelho, fechados) e [specs](../specs/INDEX.md) (gerado por `node tools/atena_index.js`).
 | Ferramentas | [FERRAMENTAS.md](FERRAMENTAS.md) | Kit de evidência, CI, scripts e export; build de playtest sempre com `stamp_build.ps1` |
 | Perguntas aos testers | [INBOX.md](INBOX.md) | Dúvidas não bloqueiam; entram no questionário seguinte |
 

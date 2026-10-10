@@ -1,7 +1,7 @@
 ---
 id: "SPEC-164"
 title: "Seis eventos aleatórios novos (MEC-005)"
-status: "IMPLEMENTADA e mesclada na main em 2026-10-09 (ac2bc86, EVID-228); sem push; aceite subjetivo pendente do playtest"
+status: "IMPLEMENTADA e publicada (ac2bc86, EVID-228); aceite subjetivo pendente do playtest"
 origin: planned
 implementation_preceded_spec: false
 request_classification: PLAN_DEVIATION

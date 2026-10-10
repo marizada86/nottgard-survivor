@@ -1,7 +1,7 @@
 ---
 id: "SPEC-158"
 title: "Névoa punitiva: borda do mapa e Maré de fim de fase em todos os mapas (MEC-059, MEC-060)"
-status: "APROVADA por plano em 2026-10-09 (DEV-019, PLAN-084); padroes P1 a P5 confirmados; em execucao"
+status: "IMPLEMENTADA e publicada em 2026-10-09 (PLAN-084, EVID-220; dano ajustado para 3% a 9% em ded7059); aguarda playtest"
 origin: planned
 implementation_preceded_spec: false
 request_classification: PLAN_DEVIATION

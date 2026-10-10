@@ -1,7 +1,7 @@
 ---
 id: "SPEC-155"
 title: "Ícone do item nas linhas Doar do Altar da Doação (MEC-050)"
-status: "IMPLEMENTADA localmente em 2026-10-09 (EVID-212); sem commit"
+status: "IMPLEMENTADA e publicada em 2026-10-09 (EVID-212, eeb6327); aguarda playtest"
 origin: planned
 implementation_preceded_spec: false
 request_classification: PLAN_DEVIATION

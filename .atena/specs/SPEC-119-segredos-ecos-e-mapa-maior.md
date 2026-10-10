@@ -1,7 +1,7 @@
 ---
 id: "SPEC-119"
 title: "Segredos, Ecos de Nottgard e mapa maior"
-status: "rascunho para aprovação do dono (2026-10-03)"
+status: "SUBSTITUÍDA em 2026-10-09 pela SPEC-152 (fatia piloto, implementada) e pela SPEC-157 (demais fases, executada); rascunho mantido como origem"
 created: "2026-10-03"
 relations: ["[[PLAN-055-mapas-vivos-segredos-e-dificuldade-2026-10-03]]", "[[EVID-147-auditoria-vault-x-jogo-2026-10-03]]", "[[SPEC-093-mapas-60x60]]", "[[SPEC-115-riqueza-de-cenario-piloto-dagruve-docas]]", "[[SPEC-117-alma-e-historia-na-run]]"]
 cards: ["MEC-012", "MEC-032", "MEC-039"]

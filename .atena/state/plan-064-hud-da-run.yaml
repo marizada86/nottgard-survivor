@@ -4,7 +4,7 @@ plan:
   spec_id: SPEC-131
   cards: [MEC-048]
   title: HUD da run no padrao da ficha C (retrato, barras, icones, atributos, bencaos)
-  status: IMPLEMENTED_PENDING_COMMIT
+  status: COMMITTED_PUSHED_AWAITING_PLAYTEST   # SPEC-131: 1ef33bf e 9663f25 no origin
   kind: side-plan (PLAN-062 segue ativo em outra sessao; arquivos disjuntos: ui/hud.*, ui/hero_panel.gd, tests/, tools/build_scenes.gd)
   approval: {mode: per-plan, status: APPROVED_BY_OWNER, approver: dono, approved_at: '2026-10-06'}
   decisions: {retrato: 'sim, pequeno', estilo: 'translucido com moldura fina', extras: 'icones CA/CAM, bencaos ativas, atributos FOR/INT/CON/CAR'}

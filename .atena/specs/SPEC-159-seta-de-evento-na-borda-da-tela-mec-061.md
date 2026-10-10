@@ -1,7 +1,7 @@
 ---
 id: "SPEC-159"
 title: "Seta de evento na borda da tela, com distância (MEC-061)"
-status: "IMPLEMENTADA localmente em 2026-10-09 (EVID-221); sem commit; aceite subjetivo pendente do playtest"
+status: "IMPLEMENTADA e publicada (2d929b0, EVID-221); aceite subjetivo pendente do playtest"
 origin: planned
 implementation_preceded_spec: false
 request_classification: PLAN_DEVIATION

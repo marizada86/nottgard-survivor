@@ -1,7 +1,7 @@
 ---
 id: "SPEC-151"
 title: "Sete equipamentos únicos do Vault, com o Coração da Dominância (MEC-042)"
-status: "EM EXECUCAO em 2026-10-08 (PLAN-081 B-005)"
+status: "IMPLEMENTADA e publicada (PLAN-081 B-005, EVID-206); aguarda playtest e ícones (ART-042)"
 origin: planned
 implementation_preceded_spec: false
 request_classification: PLAN_DEVIATION

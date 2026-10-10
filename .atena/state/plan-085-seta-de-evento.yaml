@@ -2,7 +2,7 @@ id: PLAN-085
 spec: SPEC-159
 spec_file: .atena/specs/SPEC-159-seta-de-evento-na-borda-da-tela-mec-061.md
 mode: per-plan
-status: IMPLEMENTED_LOCAL_AWAITING_PLAYTEST
+status: COMMITTED_PUSHED_AWAITING_PLAYTEST   # 2d929b0
 created: '2026-10-09'
 approved: '2026-10-09'
 checkpoint: DONE (B-003/S-009); aguarda commit e playtest

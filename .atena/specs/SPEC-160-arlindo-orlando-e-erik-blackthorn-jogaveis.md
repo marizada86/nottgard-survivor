@@ -1,7 +1,7 @@
 ---
 id: "SPEC-160"
 title: "Arlindo Orlando e Erik Blackthorn como heróis jogáveis"
-status: "IMPLEMENTADA LOCAL em 2026-10-09 (EVID-219) com arte provisória; sem commit; arte própria (ART-045) e ajuste do Arlindo (BAL-027) pendentes"
+status: "IMPLEMENTADA com arte provisória e publicada (d83c106, EVID-219); arte própria (ART-045) e decisão do BAL-027 (manter) pendentes de playtest"
 origin: planned
 implementation_preceded_spec: false
 request_classification: PLAN_DEVIATION

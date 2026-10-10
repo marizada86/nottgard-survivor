@@ -3,7 +3,7 @@ spec: SPEC-160
 spec_file: .atena/specs/SPEC-160-arlindo-orlando-e-erik-blackthorn-jogaveis.md
 proposal: .atena/vault/drafts/PLAN-086-arlindo-orlando-jogavel-2026-10-09.md
 mode: per-plan
-status: EXECUTING
+status: COMMITTED_PUSHED_AWAITING_PLAYTEST   # d83c106; arte propria (ART-045) pendente
 created: '2026-10-09'
 request_classification: PLAN_DEVIATION
 deviation_id: DEV-018

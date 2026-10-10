@@ -1,7 +1,7 @@
 ---
 id: "SPEC-152"
 title: "Fatia piloto de segredos: mapa 84×84, pontos de interesse, Ecos, relíquias e aba do Diário (MEC-039)"
-status: "EM EXECUCAO em 2026-10-08 (PLAN-081 B-006)"
+status: "IMPLEMENTADA e publicada (fatia piloto, PLAN-081 B-006); ampliada às oito fases pela SPEC-157; aguarda playtest e arte (ART-043)"
 origin: planned
 implementation_preceded_spec: false
 request_classification: PLAN_DEVIATION

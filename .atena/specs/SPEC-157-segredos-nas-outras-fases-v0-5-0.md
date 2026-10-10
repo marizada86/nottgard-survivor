@@ -1,7 +1,7 @@
 ---
 id: "SPEC-157"
 title: "Segredos nas outras fases e lançamento da v0.5.0 (Major)"
-status: "PLANEJADA em 2026-10-09 (PLAN-083); aguarda rota, nível de aprovação e portão de conteúdo; nada executado"
+status: "EXECUTADA em 2026-10-09 (PLAN-083, EVID-214 a EVID-218) e publicada; não houve 0.5.0: tudo virou a 0.4.0 refeita"
 origin: planned
 implementation_preceded_spec: false
 request_classification: PLAN_DEVIATION

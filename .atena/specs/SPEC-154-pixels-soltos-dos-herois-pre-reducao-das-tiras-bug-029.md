@@ -1,7 +1,7 @@
 ---
 id: "SPEC-154"
 title: "Pixels soltos nos heróis: pré-redução das tiras para o tamanho de tela (BUG-029)"
-status: "EM EXECUCAO em 2026-10-09 (PLAN-082): piloto do Kayron integrado; expansão aguarda a aprovação do lote 1"
+status: "PAUSADA em 2026-10-09 (PLAN-082): o dono não adotou a variante C; HERO_STRIP_SET vazio e BUG-029 aberto; registros e ferramentas commitados (eb57860)"
 origin: planned
 implementation_preceded_spec: false
 request_classification: PLAN_DEVIATION

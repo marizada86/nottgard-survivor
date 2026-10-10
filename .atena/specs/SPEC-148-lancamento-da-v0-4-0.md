@@ -1,7 +1,7 @@
 ---
 id: "SPEC-148"
 title: "Lançamento da v0.4.0 (Major): consolidar o que existe e entregar conteúdo novo"
-status: "PLANEJADA em 2026-10-08 (PLAN-081); aguarda início explícito; nada executado"
+status: "PUBLICADA na 0.4.0 em 2026-10-08 (EVID-209) e refeita em 2026-10-09 (EVID-218; sem 0.5.0)"
 origin: planned
 implementation_preceded_spec: false
 request_classification: PLAN_DEVIATION

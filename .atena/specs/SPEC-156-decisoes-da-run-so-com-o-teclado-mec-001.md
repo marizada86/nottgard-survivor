@@ -1,7 +1,7 @@
 ---
 id: "SPEC-156"
 title: "Decisões da run só com o teclado: W/S escolhem, Enter confirma (MEC-001)"
-status: "IMPLEMENTADA localmente em 2026-10-09 (EVID-213); sem commit"
+status: "IMPLEMENTADA e publicada em 2026-10-09 (EVID-213, f8111ec); aguarda playtest"
 origin: planned
 implementation_preceded_spec: false
 request_classification: PLAN_DEVIATION

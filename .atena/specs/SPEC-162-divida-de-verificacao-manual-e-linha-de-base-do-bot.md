@@ -1,7 +1,7 @@
 ---
 id: "SPEC-162"
 title: "Dívida de verificação manual em testes automáticos e linha de base nova do bot"
-status: "APROVADA por plano em 2026-10-09 (DEV-023, PLAN-088); em execução"
+status: "EXECUTADA em 2026-10-09 (PLAN-088, EVID-224 e EVID-225); propostas de balanceamento aguardam o playtest"
 origin: planned
 implementation_preceded_spec: false
 request_classification: PLAN_DEVIATION

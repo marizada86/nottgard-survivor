@@ -1,7 +1,7 @@
 ---
 id: "SPEC-161"
 title: "Fechar e organizar a 0.4.0 (trilha sem assets nem movimentação)"
-status: "APROVADA por plano em 2026-10-09 (DEV-022, PLAN-087); escopo recomendado pela Atena aceito pelo dono"
+status: "EXECUTADA em 2026-10-09 (PLAN-087, EVID-222 e EVID-223)"
 origin: planned
 implementation_preceded_spec: false
 request_classification: PLAN_DEVIATION
