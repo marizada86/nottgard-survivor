@@ -1,0 +1,27 @@
+{
+  "code": "I01",
+  "item": "lliira_juramento",
+  "prompt": "Use case: precise-object-edit. Preserve the supplied blessing icon EXACTLY, its shapes, colors, pixel-art style and identity. Change only framing: uniformly shrink the entire composition to the CENTRAL 50 PERCENT of a square canvas. Center on both axes, at least 25 percent genuinely transparent empty padding on EVERY side including all ribbon tips and star glow. No new objects, no background, no text, no border. Preserve exactly five fingers and gold, blue and dry-red ribbons; red ribbon loose at its end.",
+  "references": [
+    {
+      "path": "assets/icons/boons/lliira_alegria.png",
+      "sha256": "4fab3de8e67b026285462ec4b03fb2e156e298ef563d57f7d5488c1b18214362",
+      "role": "deity family anchor"
+    },
+    {
+      "path": "assets/icons/boons/lliira_sorte.png",
+      "sha256": "54249770a446d2c7bbe35f897ca804c155c6068d8c218153fbae20145dd2f6ec",
+      "role": "deity family anchor"
+    }
+  ],
+  "state": "GENERATED_PENDING_VISUAL_ACCEPTANCE",
+  "content_state": "DRAFT",
+  "runtime_admission": false,
+  "actual_references": [
+    "C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/.atena/generated/fila028-remaining-2026-10-10/native-sources/I01_v01.png"
+  ],
+  "version": "v02",
+  "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-0f5c2dfd-be9e-4481-94f4-6551133a1b50.png",
+  "destination": ".atena/generated/fila028-remaining-2026-10-10/native-sources/I01_v02.png",
+  "native_destination": ".atena/generated/art-candidates/fila028-remaining/I01_v02.png"
+}

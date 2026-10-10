@@ -1,0 +1,140 @@
+{
+  "approval_date": "2026-10-10",
+  "authority": "owner",
+  "owner_reply": "atena, aprovo tudo ... vamos continuar a produção de assets",
+  "scope": "Visual acceptance of selected source versions only",
+  "accepted_exceptions": [
+    "IC04 v02 margin 14.51 percent",
+    "IC03 v02 one pixel tolerance"
+  ],
+  "entries": [
+    {
+      "code": "IC01",
+      "version": "v01",
+      "path": ".atena\\generated\\fila028-icons-2026-10-10\\native-sources\\IC01_v01.png",
+      "sha256": "c9a201de0b906328ae58928d2b475317e0dcda95c3fc771b1adcf51269eaf841",
+      "visual_state": "CANON",
+      "runtime_admission": false
+    },
+    {
+      "code": "IC02",
+      "version": "v02",
+      "path": ".atena\\generated\\fila028-icons-2026-10-10\\native-sources\\IC02_v02.png",
+      "sha256": "d26b1e8456187ce1274401a646dacb3667f3228e0bf85c94dddd57b5701d9020",
+      "visual_state": "CANON",
+      "runtime_admission": false
+    },
+    {
+      "code": "IC03",
+      "version": "v02",
+      "path": ".atena\\generated\\fila028-icons-2026-10-10\\native-sources\\IC03_v02.png",
+      "sha256": "93405a3b4764d20507633ab559cf581595c36ee3185edd1a30a362ebc3cba385",
+      "visual_state": "CANON",
+      "runtime_admission": false
+    },
+    {
+      "code": "IC04",
+      "version": "v02",
+      "path": ".atena\\generated\\fila028-icons-2026-10-10\\native-sources\\IC04_v02.png",
+      "sha256": "aca0836a3f910024ad300ee63fc7730d7a0758f4a87529815f2dbf235ba533cb",
+      "visual_state": "CANON",
+      "runtime_admission": false
+    },
+    {
+      "code": "IC05",
+      "version": "v03",
+      "path": ".atena\\generated\\fila028-icons-2026-10-10\\native-sources\\IC05_v03.png",
+      "sha256": "8678674e83f81538f9c19783c342249625c9f5bd34711b2ac11491394aa965d3",
+      "visual_state": "CANON",
+      "runtime_admission": false
+    },
+    {
+      "code": "IC06",
+      "version": "v01",
+      "path": ".atena\\generated\\fila028-icons-2026-10-10\\native-sources\\IC06_v01.png",
+      "sha256": "3bc2c0308a492ee8164218286d46b44c916282159a130c85e5305bc5fb9a4820",
+      "visual_state": "CANON",
+      "runtime_admission": false
+    },
+    {
+      "code": "IC07",
+      "version": "v01",
+      "path": ".atena\\generated\\fila028-icons-2026-10-10\\native-sources\\IC07_v01.png",
+      "sha256": "db689bb4c203dfd48aef5e27e27ec06327edea23f486759219b112ad160977e3",
+      "visual_state": "CANON",
+      "runtime_admission": false
+    },
+    {
+      "code": "IC08",
+      "version": "v02",
+      "path": ".atena\\generated\\fila028-icons-2026-10-10\\native-sources\\IC08_v02.png",
+      "sha256": "d7e958bc197bda00c4a50de1f6312dce80e9af38a0eb102cc7a803a6ce98cae4",
+      "visual_state": "CANON",
+      "runtime_admission": false
+    },
+    {
+      "code": "IC09",
+      "version": "v02",
+      "path": ".atena\\generated\\fila028-icons-2026-10-10\\native-sources\\IC09_v02.png",
+      "sha256": "321082bb7f0383a52c0b188f5d8e892cf580d7974613b48411170dd647a1bf2b",
+      "visual_state": "CANON",
+      "runtime_admission": false
+    },
+    {
+      "code": "IC10",
+      "version": "v01",
+      "path": ".atena\\generated\\fila028-icons-2026-10-10\\native-sources\\IC10_v01.png",
+      "sha256": "19bb80611abe7ebf9883a27e040945376b64238edcee6630db9a470344e97a90",
+      "visual_state": "CANON",
+      "runtime_admission": false
+    },
+    {
+      "code": "IC11",
+      "version": "v01",
+      "path": ".atena\\generated\\fila028-icons-2026-10-10\\native-sources\\IC11_v01.png",
+      "sha256": "8a1e58c4715a58b55fd8473feb7ad70edf47ebbb8abb5bdcc1fdb0896a4a6459",
+      "visual_state": "CANON",
+      "runtime_admission": false
+    },
+    {
+      "code": "IC12",
+      "version": "v02",
+      "path": ".atena\\generated\\fila028-icons-2026-10-10\\native-sources\\IC12_v02.png",
+      "sha256": "0e0b5b2ac34cb00a17f5775be2a80f3f1dbc5aeca65d832ab283ed7660268630",
+      "visual_state": "CANON",
+      "runtime_admission": false
+    },
+    {
+      "code": "IC13",
+      "version": "v02",
+      "path": ".atena\\generated\\fila028-icons-2026-10-10\\native-sources\\IC13_v02.png",
+      "sha256": "04058478cb6210fa1ff07ade9beafafddfc9321c5ab1ee5a403c40b54e5d09b4",
+      "visual_state": "CANON",
+      "runtime_admission": false
+    },
+    {
+      "code": "AR01",
+      "version": "v02",
+      "path": ".atena\\generated\\fila028-ar-se-2026-10-10\\native-sources\\AR01_v02.png",
+      "sha256": "ec841f2ae35f89f80af419e01a7510edbc8628b6c5a7bfc1700a4151d1e0dc03",
+      "visual_state": "CANON",
+      "runtime_admission": false
+    },
+    {
+      "code": "SE01",
+      "version": "v03",
+      "path": ".atena\\generated\\fila028-ar-se-2026-10-10\\native-sources\\SE01_v03.png",
+      "sha256": "3c802d25fc4fdf77c02b38bb3b6469804ed1f0b2541e7e4cf957533632f56d08",
+      "visual_state": "CANON",
+      "runtime_admission": false
+    },
+    {
+      "code": "SE02",
+      "version": "v03",
+      "path": ".atena\\generated\\fila028-ar-se-2026-10-10\\native-sources\\SE02_v03.png",
+      "sha256": "d31f373d4bb2baa332c10b60941f2f0ef27ca78cc1964159bdf4f82956781451",
+      "visual_state": "CANON",
+      "runtime_admission": false
+    }
+  ]
+}

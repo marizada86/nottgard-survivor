@@ -1,0 +1,27 @@
+{
+  "code": "SE06",
+  "item": "ruina_shedaklah",
+  "prompt": "Use case: precise-object-edit. Preserve the supplied isolated ruin EXACTLY: its architecture, materials, palette, three-quarter camera, lighting and all requested objects. Change only framing: uniformly SHRINK THE ENTIRE COMPOSITION including all shadow, mist and fragments to fit within CENTRAL 60 PERCENT of square canvas height and width, centered both axes. At least 20 percent completely empty padding on all four sides. Uniform solid cyan #00FFFF background, absolutely no gradient or new background. No text, no new objects, no insignia. ",
+  "references": [
+    {
+      "path": "assets/interactions/loja.png",
+      "sha256": "b7c092ab509af9687288004d3b0c693f470487b8bd4dbea2f46b353f336afba7",
+      "role": "style anchor"
+    },
+    {
+      "path": "assets/interactions/doacao.png",
+      "sha256": "df364ad5b3672c04f61a4cd0eef2e6185218c518d31217b299a2c6abb27fee0d",
+      "role": "style anchor"
+    }
+  ],
+  "state": "GENERATED_PENDING_VISUAL_ACCEPTANCE",
+  "content_state": "DRAFT",
+  "runtime_admission": false,
+  "actual_references": [
+    "C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/.atena/generated/fila028-remaining-2026-10-10/native-sources/SE06_v01.png"
+  ],
+  "version": "v02",
+  "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-8b70bda0-e142-4c0e-bbec-1bec4bdac663.png",
+  "destination": ".atena/generated/fila028-remaining-2026-10-10/native-sources/SE06_v02.png",
+  "native_destination": ".atena/generated/art-candidates/fila028-remaining/SE06_v02.png"
+}

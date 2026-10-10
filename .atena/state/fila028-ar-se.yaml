@@ -6,16 +6,16 @@ approval_mode: per-plan
 mode_basis: 'Escolha anterior Por plano preservada'
 scope_approval: APPROVED
 owner_reply: 'Aprovo esse plano'
-status: GENERATED_AUDITED_AWAITING_OWNER_REVIEW
-checkpoint: S-004/OWNER-VISUAL-REVIEW
-content_state: DRAFT
+status: VISUALLY_APPROVED_PREPARATION_PENDING
+checkpoint: S-004/ACCEPTED
+content_state: CANON_SOURCE_VISUAL_ONLY
 runtime_admission: false
 ordered_codes: [AR01, SE01, SE02, AUDIT]
 total_steps: 4
 completed_steps: 4
 previous_commit: 0e2d2e6772d315f06608c69aa1d61d630d596148
 se03_gate: APPROVED_SE02_REFERENCE_REQUIRED
-next_objective: 'Dono revisar AR01 v02, SE01 v03 e SE02 v03; SE03 depende do aceite da SE02'
+next_objective: 'Preparar proximo escopo de producao; recorte e integracao dependem de plano proprio'
 return_checkpoint: S-007/ORIGINAL-GENERATIONS/NORMALIZATION-EXTRACTION-11
 selection: {AR01: v02, SE01: v03, SE02: v03}
 gallery: .atena/generated/fila028-ar-se-2026-10-10/index.html
@@ -25,10 +25,12 @@ technical_reservations: ['Fundo ciano com variacoes de ate 9 niveis RGB; uniform
 next_inputs: 'Galeria, fontes nativas, prompts e auditoria'
 next_output: 'Aceite visual identificado por codigo/versao ou correcoes'
 next_checks: 'Identidade, tres selos, leitura a 80/48px e fundo para recorte'
-next_approval: PENDING_OWNER_VISUAL_ACCEPTANCE
+next_approval: APPROVED_SOURCE_VISUAL_ONLY
 commit_push_authorization: 'atena commit e push'
 git_checkpoint: PUSHED_REMOTE_SHA_VERIFIED
 commit: 1a0051599195c57e309cf30cd68bcf3a19ea9b36
 remote_sha: 1a0051599195c57e309cf30cd68bcf3a19ea9b36
 git_branch: codex/assets-preparation-2026-10-10
 git_scope: 'Lote AR01/SE01/SE02 DRAFT e registros; branch inclui commits locais anteriores de preparacao e IC'
+visual_approval_reply: 'atena, aprovo tudo'
+visual_register: .atena/vault/canon/ASSET-APPROVAL-FILA028-IC-AR-SE-2026-10-10.md
