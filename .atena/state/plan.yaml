@@ -105,6 +105,17 @@ suspension:
   suspended_plan_state_file: '.atena/state/plan-053-imagens.yaml'
   note: 'PLAN-053 retomado; biomas ate Pilares completos localmente. S-007 onda cortante completa como candidata; aguardando gate humano N03. PLAN-071 preservado. PLAN-071 suspenso com retorno acima.'
 deferred_requests:
+  - id: DEV-030
+    request: 'Remover o balao de CA e CAM ao passar o mouse nos chips da HUD (a ficha C ja explica).'
+    request_classification: PLAN_DEVIATION
+    status: COMMITTED_LOCAL_AWAITING_PLAYTEST
+    recorded: '2026-10-10'
+    authorization_verbatim: 'atena, ficou muito bom, pode remover esse balao informando CA e CAM ao passar o mouse, o proprio menu "c" ja esta cumprindo esse papel de passar a informacao'
+    route: 'Pedido explicito de executar; fazer agora e voltar ao PLAN-071 (checkpoint B-006/S-011 inalterado). Commit local; sem push.'
+    scope: 'ui/hero_panel.gd (chips CA e CAM sem dica), tests/test_hero_panel.gd; ficha C intacta'
+    evidence: EVID-233
+    verification: 'suite 0 falhas; smoke ok; 1 mutacao do teste'
+    note: 'Botoes CA/CAM dentro da ficha C mantem tooltip; decisao do dono.'
   - id: DEV-029
     request: 'Bug visual no Quartel (aba Diario, HqInfo): texto sobrepoe a moldura de detalhe e a moldura aparece comprimida/deformada.'
     request_classification: PLAN_DEVIATION

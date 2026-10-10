@@ -37,9 +37,10 @@ func run() -> Array:
 		if p._portrait.texture == null:
 			out.append("%s: sem retrato no painel" % hid)
 		for chip in ["ca", "cam"]:
+			# a explicação de CA e CAM mora na ficha (tecla C); o chip da HUD não abre balão
 			var tip := (p._chips[chip] as Control).tooltip_text
-			if tip.find("Classe de Armadura") < 0 or tip.find("[") >= 0:
-				out.append("%s: tooltip de %s sem texto ou com BBCode ('%s')" % [hid, chip, tip])
+			if tip != "":
+				out.append("%s: o chip %s não deveria ter dica ao passar o mouse ('%s')" % [hid, chip, tip])
 		if p.boon_row.visible:
 			out.append("%s: fileira de bênçãos deveria estar oculta sem bênção" % hid)
 		b.barrier = 7.0

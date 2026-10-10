@@ -34,7 +34,6 @@ var _portrait: TextureRect
 var _attr_labels := {}
 var _chips := {}
 var _hero_id := ""
-var _defense_key := ""
 var _boon_key := ""
 var _keycap: PanelContainer
 var _key_label: Label
@@ -286,11 +285,7 @@ func update(b: Battle) -> void:
 	var ev_cam := h.typed_evasion("magico")
 	ca_label.text = defense_text(h.ca(), ev_ca)
 	cam_label.text = defense_text(h.cam(), ev_cam)
-	var key := "%d|%d|%d|%d|%f" % [h.ca(), h.cam(), int(ev_ca * 100.0), int(ev_cam * 100.0), h.m("dodge")]
-	if key != _defense_key:
-		_defense_key = key
-		(_chips["ca"] as Control).tooltip_text = CharacterSheet.plain_text(CharacterSheet.defense_tip("ca", h.ca(), ev_ca, h.m("dodge")))
-		(_chips["cam"] as Control).tooltip_text = CharacterSheet.plain_text(CharacterSheet.defense_tip("cam", h.cam(), ev_cam, h.m("dodge")))
+	# CA e CAM não têm dica ao passar o mouse: a explicação completa é da ficha (tecla C), que é onde o jogador a procura
 	_update_boons(h.boons)
 	if not _sheet_seen and b.time < HINT_PULSE_UNTIL:
 		var k := 1.0 + 0.55 * (0.5 + 0.5 * sin(float(Time.get_ticks_msec()) * 0.005))
