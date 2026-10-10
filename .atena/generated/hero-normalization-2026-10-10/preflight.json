@@ -1,0 +1,1403 @@
+{
+  "strips_checked": 16,
+  "prior_extractions_available": 5,
+  "extraction_review_needed": [
+    "AO02",
+    "AO05",
+    "AO06",
+    "AO08",
+    "AO09",
+    "AO10",
+    "ER02",
+    "ER07",
+    "ER08",
+    "ER09",
+    "ER10"
+  ],
+  "reports": [
+    {
+      "code": "AO02",
+      "frames": [
+        {
+          "frame": 1,
+          "bbox": [
+            117,
+            18,
+            421,
+            754
+          ],
+          "width": 304,
+          "height": 736,
+          "edge": false,
+          "maximum_fit_scale": 0.47282608695652173
+        },
+        {
+          "frame": 2,
+          "bbox": [
+            103,
+            19,
+            415,
+            752
+          ],
+          "width": 312,
+          "height": 733,
+          "edge": false,
+          "maximum_fit_scale": 0.4747612551159618
+        },
+        {
+          "frame": 3,
+          "bbox": [
+            95,
+            16,
+            409,
+            752
+          ],
+          "width": 314,
+          "height": 736,
+          "edge": false,
+          "maximum_fit_scale": 0.47282608695652173
+        },
+        {
+          "frame": 4,
+          "bbox": [
+            89,
+            20,
+            396,
+            752
+          ],
+          "width": 307,
+          "height": 732,
+          "edge": false,
+          "maximum_fit_scale": 0.47540983606557374
+        }
+      ],
+      "extraction_review_needed": true,
+      "edge_frames": [],
+      "shared_fit_scale_upper_bound": 0.47282608695652173,
+      "body_landmarks": "PENDING_NOT_INFERRED_FROM_EFFECT_BOUNDS",
+      "feet_anchor": "PENDING",
+      "artistic_review": "PENDING",
+      "runtime_admission": false
+    },
+    {
+      "code": "AO03",
+      "frames": [
+        {
+          "frame": 1,
+          "bbox": [
+            3,
+            49,
+            370,
+            694
+          ],
+          "width": 367,
+          "height": 645,
+          "edge": false,
+          "maximum_fit_scale": 0.5395348837209303
+        },
+        {
+          "frame": 2,
+          "bbox": [
+            2,
+            51,
+            328,
+            702
+          ],
+          "width": 326,
+          "height": 651,
+          "edge": false,
+          "maximum_fit_scale": 0.5345622119815668
+        },
+        {
+          "frame": 3,
+          "bbox": [
+            3,
+            49,
+            338,
+            695
+          ],
+          "width": 335,
+          "height": 646,
+          "edge": false,
+          "maximum_fit_scale": 0.5386996904024768
+        },
+        {
+          "frame": 4,
+          "bbox": [
+            3,
+            59,
+            350,
+            687
+          ],
+          "width": 347,
+          "height": 628,
+          "edge": false,
+          "maximum_fit_scale": 0.554140127388535
+        },
+        {
+          "frame": 5,
+          "bbox": [
+            2,
+            56,
+            308,
+            701
+          ],
+          "width": 306,
+          "height": 645,
+          "edge": false,
+          "maximum_fit_scale": 0.5395348837209303
+        },
+        {
+          "frame": 6,
+          "bbox": [
+            2,
+            59,
+            307,
+            702
+          ],
+          "width": 305,
+          "height": 643,
+          "edge": false,
+          "maximum_fit_scale": 0.5412130637636081
+        }
+      ],
+      "extraction_review_needed": false,
+      "edge_frames": [],
+      "shared_fit_scale_upper_bound": 0.5345622119815668,
+      "body_landmarks": "PENDING_NOT_INFERRED_FROM_EFFECT_BOUNDS",
+      "feet_anchor": "PENDING",
+      "artistic_review": "PENDING",
+      "runtime_admission": false
+    },
+    {
+      "code": "AO04",
+      "frames": [
+        {
+          "frame": 1,
+          "bbox": [
+            1,
+            80,
+            302,
+            733
+          ],
+          "width": 301,
+          "height": 653,
+          "edge": true,
+          "maximum_fit_scale": 0.5329249617151608
+        },
+        {
+          "frame": 2,
+          "bbox": [
+            2,
+            99,
+            285,
+            725
+          ],
+          "width": 283,
+          "height": 626,
+          "edge": false,
+          "maximum_fit_scale": 0.5559105431309904
+        },
+        {
+          "frame": 3,
+          "bbox": [
+            3,
+            98,
+            281,
+            738
+          ],
+          "width": 278,
+          "height": 640,
+          "edge": false,
+          "maximum_fit_scale": 0.54375
+        },
+        {
+          "frame": 4,
+          "bbox": [
+            3,
+            96,
+            331,
+            741
+          ],
+          "width": 328,
+          "height": 645,
+          "edge": false,
+          "maximum_fit_scale": 0.5395348837209303
+        },
+        {
+          "frame": 5,
+          "bbox": [
+            2,
+            98,
+            285,
+            739
+          ],
+          "width": 283,
+          "height": 641,
+          "edge": false,
+          "maximum_fit_scale": 0.5429017160686428
+        },
+        {
+          "frame": 6,
+          "bbox": [
+            3,
+            98,
+            319,
+            738
+          ],
+          "width": 316,
+          "height": 640,
+          "edge": false,
+          "maximum_fit_scale": 0.54375
+        }
+      ],
+      "extraction_review_needed": false,
+      "edge_frames": [
+        1
+      ],
+      "shared_fit_scale_upper_bound": 0.5329249617151608,
+      "body_landmarks": "PENDING_NOT_INFERRED_FROM_EFFECT_BOUNDS",
+      "feet_anchor": "PENDING",
+      "artistic_review": "PENDING",
+      "runtime_admission": false
+    },
+    {
+      "code": "AO05",
+      "frames": [
+        {
+          "frame": 1,
+          "bbox": [
+            41,
+            35,
+            332,
+            713
+          ],
+          "width": 291,
+          "height": 678,
+          "edge": false,
+          "maximum_fit_scale": 0.5132743362831859
+        },
+        {
+          "frame": 2,
+          "bbox": [
+            22,
+            34,
+            316,
+            704
+          ],
+          "width": 294,
+          "height": 670,
+          "edge": false,
+          "maximum_fit_scale": 0.5194029850746269
+        },
+        {
+          "frame": 3,
+          "bbox": [
+            10,
+            33,
+            311,
+            718
+          ],
+          "width": 301,
+          "height": 685,
+          "edge": false,
+          "maximum_fit_scale": 0.5080291970802919
+        },
+        {
+          "frame": 4,
+          "bbox": [
+            22,
+            34,
+            309,
+            710
+          ],
+          "width": 287,
+          "height": 676,
+          "edge": false,
+          "maximum_fit_scale": 0.514792899408284
+        },
+        {
+          "frame": 5,
+          "bbox": [
+            15,
+            34,
+            312,
+            707
+          ],
+          "width": 297,
+          "height": 673,
+          "edge": false,
+          "maximum_fit_scale": 0.5170876671619614
+        },
+        {
+          "frame": 6,
+          "bbox": [
+            5,
+            33,
+            301,
+            716
+          ],
+          "width": 296,
+          "height": 683,
+          "edge": false,
+          "maximum_fit_scale": 0.5095168374816984
+        }
+      ],
+      "extraction_review_needed": true,
+      "edge_frames": [],
+      "shared_fit_scale_upper_bound": 0.5080291970802919,
+      "body_landmarks": "PENDING_NOT_INFERRED_FROM_EFFECT_BOUNDS",
+      "feet_anchor": "PENDING",
+      "artistic_review": "PENDING",
+      "runtime_admission": false
+    },
+    {
+      "code": "AO06",
+      "frames": [
+        {
+          "frame": 1,
+          "bbox": [
+            18,
+            102,
+            310,
+            722
+          ],
+          "width": 292,
+          "height": 620,
+          "edge": false,
+          "maximum_fit_scale": 0.5612903225806452
+        },
+        {
+          "frame": 2,
+          "bbox": [
+            29,
+            104,
+            314,
+            721
+          ],
+          "width": 285,
+          "height": 617,
+          "edge": true,
+          "maximum_fit_scale": 0.5640194489465153
+        },
+        {
+          "frame": 3,
+          "bbox": [
+            33,
+            100,
+            313,
+            714
+          ],
+          "width": 280,
+          "height": 614,
+          "edge": true,
+          "maximum_fit_scale": 0.5667752442996743
+        },
+        {
+          "frame": 4,
+          "bbox": [
+            16,
+            100,
+            291,
+            721
+          ],
+          "width": 275,
+          "height": 621,
+          "edge": false,
+          "maximum_fit_scale": 0.5603864734299517
+        },
+        {
+          "frame": 5,
+          "bbox": [
+            26,
+            98,
+            311,
+            717
+          ],
+          "width": 285,
+          "height": 619,
+          "edge": false,
+          "maximum_fit_scale": 0.5621970920840065
+        },
+        {
+          "frame": 6,
+          "bbox": [
+            26,
+            100,
+            298,
+            721
+          ],
+          "width": 272,
+          "height": 621,
+          "edge": false,
+          "maximum_fit_scale": 0.5603864734299517
+        }
+      ],
+      "extraction_review_needed": true,
+      "edge_frames": [
+        2,
+        3
+      ],
+      "shared_fit_scale_upper_bound": 0.5603864734299517,
+      "body_landmarks": "PENDING_NOT_INFERRED_FROM_EFFECT_BOUNDS",
+      "feet_anchor": "PENDING",
+      "artistic_review": "PENDING",
+      "runtime_admission": false
+    },
+    {
+      "code": "AO07",
+      "frames": [
+        {
+          "frame": 1,
+          "bbox": [
+            3,
+            46,
+            308,
+            700
+          ],
+          "width": 305,
+          "height": 654,
+          "edge": false,
+          "maximum_fit_scale": 0.5321100917431193
+        },
+        {
+          "frame": 2,
+          "bbox": [
+            3,
+            59,
+            276,
+            700
+          ],
+          "width": 273,
+          "height": 641,
+          "edge": false,
+          "maximum_fit_scale": 0.5429017160686428
+        },
+        {
+          "frame": 3,
+          "bbox": [
+            3,
+            51,
+            276,
+            699
+          ],
+          "width": 273,
+          "height": 648,
+          "edge": false,
+          "maximum_fit_scale": 0.5370370370370371
+        },
+        {
+          "frame": 4,
+          "bbox": [
+            3,
+            53,
+            293,
+            700
+          ],
+          "width": 290,
+          "height": 647,
+          "edge": false,
+          "maximum_fit_scale": 0.5378670788253478
+        },
+        {
+          "frame": 5,
+          "bbox": [
+            3,
+            61,
+            276,
+            686
+          ],
+          "width": 273,
+          "height": 625,
+          "edge": false,
+          "maximum_fit_scale": 0.5568
+        },
+        {
+          "frame": 6,
+          "bbox": [
+            3,
+            51,
+            305,
+            703
+          ],
+          "width": 302,
+          "height": 652,
+          "edge": false,
+          "maximum_fit_scale": 0.5337423312883436
+        }
+      ],
+      "extraction_review_needed": false,
+      "edge_frames": [],
+      "shared_fit_scale_upper_bound": 0.5321100917431193,
+      "body_landmarks": "PENDING_NOT_INFERRED_FROM_EFFECT_BOUNDS",
+      "feet_anchor": "PENDING",
+      "artistic_review": "PENDING",
+      "runtime_admission": false
+    },
+    {
+      "code": "AO08",
+      "frames": [
+        {
+          "frame": 1,
+          "bbox": [
+            67,
+            27,
+            512,
+            721
+          ],
+          "width": 445,
+          "height": 694,
+          "edge": true,
+          "maximum_fit_scale": 0.5014409221902018
+        },
+        {
+          "frame": 2,
+          "bbox": [
+            0,
+            24,
+            512,
+            720
+          ],
+          "width": 512,
+          "height": 696,
+          "edge": true,
+          "maximum_fit_scale": 0.4609375
+        },
+        {
+          "frame": 3,
+          "bbox": [
+            0,
+            26,
+            512,
+            720
+          ],
+          "width": 512,
+          "height": 694,
+          "edge": true,
+          "maximum_fit_scale": 0.4609375
+        },
+        {
+          "frame": 4,
+          "bbox": [
+            0,
+            23,
+            436,
+            721
+          ],
+          "width": 436,
+          "height": 698,
+          "edge": true,
+          "maximum_fit_scale": 0.498567335243553
+        }
+      ],
+      "extraction_review_needed": true,
+      "edge_frames": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "shared_fit_scale_upper_bound": 0.4609375,
+      "body_landmarks": "PENDING_NOT_INFERRED_FROM_EFFECT_BOUNDS",
+      "feet_anchor": "PENDING",
+      "artistic_review": "PENDING",
+      "runtime_admission": false
+    },
+    {
+      "code": "AO09",
+      "frames": [
+        {
+          "frame": 1,
+          "bbox": [
+            38,
+            86,
+            330,
+            709
+          ],
+          "width": 292,
+          "height": 623,
+          "edge": true,
+          "maximum_fit_scale": 0.5585874799357945
+        },
+        {
+          "frame": 2,
+          "bbox": [
+            0,
+            89,
+            331,
+            706
+          ],
+          "width": 331,
+          "height": 617,
+          "edge": true,
+          "maximum_fit_scale": 0.5640194489465153
+        },
+        {
+          "frame": 3,
+          "bbox": [
+            0,
+            91,
+            330,
+            711
+          ],
+          "width": 330,
+          "height": 620,
+          "edge": true,
+          "maximum_fit_scale": 0.5612903225806452
+        },
+        {
+          "frame": 4,
+          "bbox": [
+            0,
+            86,
+            331,
+            711
+          ],
+          "width": 331,
+          "height": 625,
+          "edge": true,
+          "maximum_fit_scale": 0.5568
+        },
+        {
+          "frame": 5,
+          "bbox": [
+            0,
+            88,
+            330,
+            711
+          ],
+          "width": 330,
+          "height": 623,
+          "edge": true,
+          "maximum_fit_scale": 0.5585874799357945
+        },
+        {
+          "frame": 6,
+          "bbox": [
+            0,
+            87,
+            293,
+            710
+          ],
+          "width": 293,
+          "height": 623,
+          "edge": true,
+          "maximum_fit_scale": 0.5585874799357945
+        }
+      ],
+      "extraction_review_needed": true,
+      "edge_frames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "shared_fit_scale_upper_bound": 0.5568,
+      "body_landmarks": "PENDING_NOT_INFERRED_FROM_EFFECT_BOUNDS",
+      "feet_anchor": "PENDING",
+      "artistic_review": "PENDING",
+      "runtime_admission": false
+    },
+    {
+      "code": "AO10",
+      "frames": [
+        {
+          "frame": 1,
+          "bbox": [
+            19,
+            150,
+            341,
+            624
+          ],
+          "width": 322,
+          "height": 474,
+          "edge": true,
+          "maximum_fit_scale": 0.7329192546583851
+        },
+        {
+          "frame": 2,
+          "bbox": [
+            0,
+            225,
+            341,
+            624
+          ],
+          "width": 341,
+          "height": 399,
+          "edge": true,
+          "maximum_fit_scale": 0.6920821114369502
+        },
+        {
+          "frame": 3,
+          "bbox": [
+            0,
+            314,
+            342,
+            625
+          ],
+          "width": 342,
+          "height": 311,
+          "edge": true,
+          "maximum_fit_scale": 0.6900584795321637
+        },
+        {
+          "frame": 4,
+          "bbox": [
+            0,
+            369,
+            341,
+            624
+          ],
+          "width": 341,
+          "height": 255,
+          "edge": true,
+          "maximum_fit_scale": 0.6920821114369502
+        },
+        {
+          "frame": 5,
+          "bbox": [
+            0,
+            433,
+            341,
+            647
+          ],
+          "width": 341,
+          "height": 214,
+          "edge": true,
+          "maximum_fit_scale": 0.6920821114369502
+        },
+        {
+          "frame": 6,
+          "bbox": [
+            0,
+            476,
+            333,
+            666
+          ],
+          "width": 333,
+          "height": 190,
+          "edge": true,
+          "maximum_fit_scale": 0.7087087087087087
+        }
+      ],
+      "extraction_review_needed": true,
+      "edge_frames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "shared_fit_scale_upper_bound": 0.6900584795321637,
+      "body_landmarks": "PENDING_NOT_INFERRED_FROM_EFFECT_BOUNDS",
+      "feet_anchor": "PENDING",
+      "artistic_review": "PENDING",
+      "runtime_admission": false
+    },
+    {
+      "code": "ER02",
+      "frames": [
+        {
+          "frame": 1,
+          "bbox": [
+            73,
+            27,
+            486,
+            753
+          ],
+          "width": 413,
+          "height": 726,
+          "edge": false,
+          "maximum_fit_scale": 0.4793388429752066
+        },
+        {
+          "frame": 2,
+          "bbox": [
+            42,
+            27,
+            461,
+            753
+          ],
+          "width": 419,
+          "height": 726,
+          "edge": false,
+          "maximum_fit_scale": 0.4793388429752066
+        },
+        {
+          "frame": 3,
+          "bbox": [
+            35,
+            27,
+            440,
+            752
+          ],
+          "width": 405,
+          "height": 725,
+          "edge": false,
+          "maximum_fit_scale": 0.48
+        },
+        {
+          "frame": 4,
+          "bbox": [
+            24,
+            26,
+            422,
+            753
+          ],
+          "width": 398,
+          "height": 727,
+          "edge": false,
+          "maximum_fit_scale": 0.4786795048143054
+        }
+      ],
+      "extraction_review_needed": true,
+      "edge_frames": [],
+      "shared_fit_scale_upper_bound": 0.4786795048143054,
+      "body_landmarks": "PENDING_NOT_INFERRED_FROM_EFFECT_BOUNDS",
+      "feet_anchor": "PENDING",
+      "artistic_review": "PENDING",
+      "runtime_admission": false
+    },
+    {
+      "code": "ER04",
+      "frames": [
+        {
+          "frame": 1,
+          "bbox": [
+            2,
+            124,
+            324,
+            726
+          ],
+          "width": 322,
+          "height": 602,
+          "edge": false,
+          "maximum_fit_scale": 0.5780730897009967
+        },
+        {
+          "frame": 2,
+          "bbox": [
+            2,
+            124,
+            322,
+            729
+          ],
+          "width": 320,
+          "height": 605,
+          "edge": false,
+          "maximum_fit_scale": 0.5752066115702479
+        },
+        {
+          "frame": 3,
+          "bbox": [
+            3,
+            125,
+            296,
+            729
+          ],
+          "width": 293,
+          "height": 604,
+          "edge": false,
+          "maximum_fit_scale": 0.5761589403973509
+        },
+        {
+          "frame": 4,
+          "bbox": [
+            2,
+            131,
+            319,
+            722
+          ],
+          "width": 317,
+          "height": 591,
+          "edge": false,
+          "maximum_fit_scale": 0.5888324873096447
+        },
+        {
+          "frame": 5,
+          "bbox": [
+            3,
+            124,
+            308,
+            726
+          ],
+          "width": 305,
+          "height": 602,
+          "edge": false,
+          "maximum_fit_scale": 0.5780730897009967
+        },
+        {
+          "frame": 6,
+          "bbox": [
+            2,
+            124,
+            309,
+            728
+          ],
+          "width": 307,
+          "height": 604,
+          "edge": false,
+          "maximum_fit_scale": 0.5761589403973509
+        }
+      ],
+      "extraction_review_needed": false,
+      "edge_frames": [],
+      "shared_fit_scale_upper_bound": 0.5752066115702479,
+      "body_landmarks": "PENDING_NOT_INFERRED_FROM_EFFECT_BOUNDS",
+      "feet_anchor": "PENDING",
+      "artistic_review": "PENDING",
+      "runtime_admission": false
+    },
+    {
+      "code": "ER05",
+      "frames": [
+        {
+          "frame": 1,
+          "bbox": [
+            2,
+            53,
+            323,
+            703
+          ],
+          "width": 321,
+          "height": 650,
+          "edge": false,
+          "maximum_fit_scale": 0.5353846153846153
+        },
+        {
+          "frame": 2,
+          "bbox": [
+            2,
+            52,
+            303,
+            698
+          ],
+          "width": 301,
+          "height": 646,
+          "edge": false,
+          "maximum_fit_scale": 0.5386996904024768
+        },
+        {
+          "frame": 3,
+          "bbox": [
+            3,
+            57,
+            308,
+            686
+          ],
+          "width": 305,
+          "height": 629,
+          "edge": false,
+          "maximum_fit_scale": 0.5532591414944356
+        },
+        {
+          "frame": 4,
+          "bbox": [
+            3,
+            55,
+            330,
+            704
+          ],
+          "width": 327,
+          "height": 649,
+          "edge": false,
+          "maximum_fit_scale": 0.5362095531587057
+        },
+        {
+          "frame": 5,
+          "bbox": [
+            1,
+            58,
+            307,
+            701
+          ],
+          "width": 306,
+          "height": 643,
+          "edge": true,
+          "maximum_fit_scale": 0.5412130637636081
+        },
+        {
+          "frame": 6,
+          "bbox": [
+            3,
+            58,
+            300,
+            688
+          ],
+          "width": 297,
+          "height": 630,
+          "edge": false,
+          "maximum_fit_scale": 0.5523809523809524
+        }
+      ],
+      "extraction_review_needed": false,
+      "edge_frames": [
+        5
+      ],
+      "shared_fit_scale_upper_bound": 0.5353846153846153,
+      "body_landmarks": "PENDING_NOT_INFERRED_FROM_EFFECT_BOUNDS",
+      "feet_anchor": "PENDING",
+      "artistic_review": "PENDING",
+      "runtime_admission": false
+    },
+    {
+      "code": "ER07",
+      "frames": [
+        {
+          "frame": 1,
+          "bbox": [
+            28,
+            51,
+            321,
+            697
+          ],
+          "width": 293,
+          "height": 646,
+          "edge": false,
+          "maximum_fit_scale": 0.5386996904024768
+        },
+        {
+          "frame": 2,
+          "bbox": [
+            32,
+            72,
+            324,
+            703
+          ],
+          "width": 292,
+          "height": 631,
+          "edge": false,
+          "maximum_fit_scale": 0.5515055467511886
+        },
+        {
+          "frame": 3,
+          "bbox": [
+            18,
+            71,
+            312,
+            692
+          ],
+          "width": 294,
+          "height": 621,
+          "edge": false,
+          "maximum_fit_scale": 0.5603864734299517
+        },
+        {
+          "frame": 4,
+          "bbox": [
+            9,
+            68,
+            306,
+            714
+          ],
+          "width": 297,
+          "height": 646,
+          "edge": false,
+          "maximum_fit_scale": 0.5386996904024768
+        },
+        {
+          "frame": 5,
+          "bbox": [
+            10,
+            69,
+            302,
+            689
+          ],
+          "width": 292,
+          "height": 620,
+          "edge": false,
+          "maximum_fit_scale": 0.5612903225806452
+        },
+        {
+          "frame": 6,
+          "bbox": [
+            4,
+            69,
+            303,
+            701
+          ],
+          "width": 299,
+          "height": 632,
+          "edge": false,
+          "maximum_fit_scale": 0.5506329113924051
+        }
+      ],
+      "extraction_review_needed": true,
+      "edge_frames": [],
+      "shared_fit_scale_upper_bound": 0.5386996904024768,
+      "body_landmarks": "PENDING_NOT_INFERRED_FROM_EFFECT_BOUNDS",
+      "feet_anchor": "PENDING",
+      "artistic_review": "PENDING",
+      "runtime_admission": false
+    },
+    {
+      "code": "ER08",
+      "frames": [
+        {
+          "frame": 1,
+          "bbox": [
+            42,
+            109,
+            512,
+            705
+          ],
+          "width": 470,
+          "height": 596,
+          "edge": true,
+          "maximum_fit_scale": 0.502127659574468
+        },
+        {
+          "frame": 2,
+          "bbox": [
+            0,
+            107,
+            512,
+            706
+          ],
+          "width": 512,
+          "height": 599,
+          "edge": true,
+          "maximum_fit_scale": 0.4609375
+        },
+        {
+          "frame": 3,
+          "bbox": [
+            0,
+            151,
+            512,
+            692
+          ],
+          "width": 512,
+          "height": 541,
+          "edge": true,
+          "maximum_fit_scale": 0.4609375
+        },
+        {
+          "frame": 4,
+          "bbox": [
+            0,
+            112,
+            477,
+            705
+          ],
+          "width": 477,
+          "height": 593,
+          "edge": true,
+          "maximum_fit_scale": 0.4947589098532495
+        }
+      ],
+      "extraction_review_needed": true,
+      "edge_frames": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "shared_fit_scale_upper_bound": 0.4609375,
+      "body_landmarks": "PENDING_NOT_INFERRED_FROM_EFFECT_BOUNDS",
+      "feet_anchor": "PENDING",
+      "artistic_review": "PENDING",
+      "runtime_admission": false
+    },
+    {
+      "code": "ER09",
+      "frames": [
+        {
+          "frame": 1,
+          "bbox": [
+            21,
+            134,
+            317,
+            614
+          ],
+          "width": 296,
+          "height": 480,
+          "edge": false,
+          "maximum_fit_scale": 0.725
+        },
+        {
+          "frame": 2,
+          "bbox": [
+            8,
+            179,
+            341,
+            622
+          ],
+          "width": 333,
+          "height": 443,
+          "edge": true,
+          "maximum_fit_scale": 0.7087087087087087
+        },
+        {
+          "frame": 3,
+          "bbox": [
+            0,
+            252,
+            342,
+            636
+          ],
+          "width": 342,
+          "height": 384,
+          "edge": true,
+          "maximum_fit_scale": 0.6900584795321637
+        },
+        {
+          "frame": 4,
+          "bbox": [
+            0,
+            197,
+            341,
+            634
+          ],
+          "width": 341,
+          "height": 437,
+          "edge": true,
+          "maximum_fit_scale": 0.6920821114369502
+        },
+        {
+          "frame": 5,
+          "bbox": [
+            0,
+            191,
+            341,
+            643
+          ],
+          "width": 341,
+          "height": 452,
+          "edge": true,
+          "maximum_fit_scale": 0.6920821114369502
+        },
+        {
+          "frame": 6,
+          "bbox": [
+            0,
+            158,
+            331,
+            648
+          ],
+          "width": 331,
+          "height": 490,
+          "edge": true,
+          "maximum_fit_scale": 0.710204081632653
+        }
+      ],
+      "extraction_review_needed": true,
+      "edge_frames": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "shared_fit_scale_upper_bound": 0.6900584795321637,
+      "body_landmarks": "PENDING_NOT_INFERRED_FROM_EFFECT_BOUNDS",
+      "feet_anchor": "PENDING",
+      "artistic_review": "PENDING",
+      "runtime_admission": false
+    },
+    {
+      "code": "ER10",
+      "frames": [
+        {
+          "frame": 1,
+          "bbox": [
+            31,
+            99,
+            362,
+            623
+          ],
+          "width": 331,
+          "height": 524,
+          "edge": true,
+          "maximum_fit_scale": 0.6641221374045801
+        },
+        {
+          "frame": 2,
+          "bbox": [
+            0,
+            194,
+            362,
+            627
+          ],
+          "width": 362,
+          "height": 433,
+          "edge": true,
+          "maximum_fit_scale": 0.6519337016574586
+        },
+        {
+          "frame": 3,
+          "bbox": [
+            0,
+            256,
+            362,
+            627
+          ],
+          "width": 362,
+          "height": 371,
+          "edge": true,
+          "maximum_fit_scale": 0.6519337016574586
+        },
+        {
+          "frame": 4,
+          "bbox": [
+            0,
+            333,
+            362,
+            612
+          ],
+          "width": 362,
+          "height": 279,
+          "edge": true,
+          "maximum_fit_scale": 0.6519337016574586
+        },
+        {
+          "frame": 5,
+          "bbox": [
+            0,
+            432,
+            362,
+            652
+          ],
+          "width": 362,
+          "height": 220,
+          "edge": true,
+          "maximum_fit_scale": 0.6519337016574586
+        },
+        {
+          "frame": 6,
+          "bbox": [
+            0,
+            449,
+            344,
+            645
+          ],
+          "width": 344,
+          "height": 196,
+          "edge": true,
+          "maximum_fit_scale": 0.686046511627907
+        }
+      ],
+      "extraction_review_needed": true,
+      "edge_frames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "shared_fit_scale_upper_bound": 0.6519337016574586,
+      "body_landmarks": "PENDING_NOT_INFERRED_FROM_EFFECT_BOUNDS",
+      "feet_anchor": "PENDING",
+      "artistic_review": "PENDING",
+      "runtime_admission": false
+    }
+  ],
+  "source_hashes_passed": true,
+  "no_raster_output": true,
+  "geometry_only": true,
+  "next": "Review extraction and body/feet landmarks before applying common scale; alpha extent includes magic effects and cannot establish body height."
+}

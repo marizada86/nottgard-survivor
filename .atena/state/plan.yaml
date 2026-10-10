@@ -1,4 +1,29 @@
 version: 2
+image_queue_resume_2026_10_10:
+  request_classification: PLAN_DEVIATION
+  route: publish-now-then-return-to-image-queue
+  authorization: 'Main com publicação do latest e branch da fila'
+  publication_status: PUSHED_REMOTE_SHA_VERIFIED
+  main_sha: 60fd1fff18d4a56a4df26391fcfb47216ee2ed40
+  image_branch_sha: cf17d7c3a0ff059320c7f580fd6a7d4ef8ec8aa1
+  ci_status: NOT_VERIFIED
+  source_state: 'C:/Users/Higor Rossini/.codex/worktrees/20f4/nottgard-survivor/.atena/state/dev-024-art045-pilots.yaml'
+  plan: PLAN-053
+  revision: DEV-024/v03
+  checkpoint: S-007/ORIGINAL-GENERATIONS/REVIEW
+  content_state: DRAFT
+  runtime_admission: false
+  source_decision: APPROVED_RECOMMENDED_ROUTE_DECIDE_BEFORE_INTEGRATION
+  owner_reply: 'atena, aprovado'
+  route_scope: 'Preparar demais pecas; ER03 sete poses candidato; ER06 separado pelo corte; decidir antes da integracao'
+  preparation_status: COMPLETED_SOURCE_SNAPSHOT_AND_GEOMETRY_PREFLIGHT
+  prepared_strips: 16
+  prior_extractions_available: 5
+  extraction_review_remaining: 11
+  preparation_manifest: .atena/generated/hero-normalization-2026-10-10/manifest.json
+  preflight: .atena/generated/hero-normalization-2026-10-10/preflight.json
+  next_objective: 'Revisar extracao das 11 tiras e marcar corpo/pes antes de aplicar escala comum e pivo'
+  evidence: .atena/evidence/image-queue-resume-2026-10-10.md
 # Reconciliado por Atena em 2026-10-05: PLAN-056 aceito pelo dono; commits reais registrados.
 active_plan:
   id: PLAN-071

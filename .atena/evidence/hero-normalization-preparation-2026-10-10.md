@@ -1,0 +1,11 @@
+# Preparação de normalização — 2026-10-10
+
+PLAN-053/SPEC-121 S-007, DEV-024 v03, IN_PLAN, per-plan. Dono respondeu “atena, aprovado” à rota recomendada: preparar demais peças, manter ER03 com sete poses como candidato e separar ER06 pelo corte, com decisão antes da integração. Não é aprovação de exceção, integração ou promoção canônica.
+
+Prontidão visual: ART-PROMPTS-060 contém identidade Erik/Arlindo, referências Nottcard somente leitura, câmera isométrica, personagem isolado e alfa, células 256×384, base 368 e alturas de corpo 300/290. Conteúdo DRAFT v03; primeiras tiragens selecionadas preservadas, ER02 v02 preservado; correção de passada continua cancelada. Nenhuma identidade nova ou lore produzida.
+
+Saída local: [galeria](../generated/hero-normalization-2026-10-10/index.html), [manifesto](../generated/hero-normalization-2026-10-10/manifest.json), [pré-verificação](../generated/hero-normalization-2026-10-10/preflight.json). Copiadas 20 fontes sem alteração de bytes e extrações prévias rastreadas por hash. Dois retratos preservados, 16 tiras preparadas, ER03 candidato e ER06 separado. As fontes permanecem na worktree 20f4; esta worktree guarda um snapshot de preparação, sem substituir seu estado ou arquivos.
+
+Verificação: 20 hashes de fontes e cópias conferidos; links locais da galeria existentes; 16 tiras analisadas em memória para dimensões, alfa visível e limites de ajuste geométrico. Cinco possuem extrações prévias; onze precisam revisão da extração. Limites de alfa incluem efeitos, portanto não provam altura do corpo nem posição dos pés. Nenhuma nova imagem recortada/redimensionada foi gravada por esta preparação; nenhuma tira está declarada normalizada, artisticamente aprovada ou admitida.
+
+Resultado do objetivo autorizado de preparação: concluído. Próximo objetivo preparado: revisar extrações de AO02/05/06/08/09/10 e ER02/07/08/09/10, conferir associações dos efeitos nas cinco extrações prévias e marcar corpo/pés; saída prevista: mapas de extração e parâmetros de escala/pivô auditáveis antes do empacotamento. Checagens: hashes originais, contagem, pixels preservados, limites, massa/escala constante, base e revisão visual. Preparação permanece autorizada per-plan; ER03/ER06 e admissão runtime ficam nos gates humanos anteriores. Nenhum commit ou push novo nesta aprovação.
