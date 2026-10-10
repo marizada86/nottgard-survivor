@@ -105,6 +105,27 @@ suspension:
   suspended_plan_state_file: '.atena/state/plan-053-imagens.yaml'
   note: 'PLAN-053 retomado; biomas ate Pilares completos localmente. S-007 onda cortante completa como candidata; aguardando gate humano N03. PLAN-071 preservado. PLAN-071 suspenso com retorno acima.'
 deferred_requests:
+  - id: DEV-032
+    request: 'Bug visual na ficha C: borda do item selecionado (anel de foco do slot) cortada.'
+    request_classification: PLAN_DEVIATION
+    status: COMMITTED_LOCAL_AWAITING_PLAYTEST
+    recorded: '2026-10-10'
+    authorization_verbatim: 'borda do item selecionado esta cortando'
+    route: 'Pedido de correcao explicito; fazer agora e voltar ao PLAN-071 (checkpoint B-006/S-011 inalterado). Commit local; sem push.'
+    scope: 'ui/character_sheet.gd (folga da grade), ui/sheet_slot.gd (constantes do anel), tests/test_character_sheet.gd, tools/capture_character_sheet.gd (--dir)'
+    bug: BUG-041
+    evidence: EVID-234
+    verification: 'suite 0 falhas; smoke ok; mobile_buttons_check 146/0; controller_check 90/0; 1 mutacao do teste'
+  - id: DEV-032
+    request: 'Preparar o prompt de arte do botao JOGAR do Quartel para o ChatGPT (moldura de botao de acao).'
+    request_classification: PLAN_DEVIATION
+    status: DRAFTED_LOCAL_AWAITING_OWNER_GENERATION
+    recorded: '2026-10-10'
+    authorization_verbatim: 'atena, pode preparar o prompt para o chatGPT'
+    route: 'Pedido explicito de executar; fazer agora e voltar ao PLAN-071 (checkpoint B-006/S-011 inalterado). So documentos; nada em assets/ nem no codigo; sem commit; sem push.'
+    scope: '.atena/generated/ART-PROMPTS-062-botao-de-acao-jogar.md, .atena/generated/CHATGPT-FILA-029-botao-de-acao-jogar.md, .atena/backlog/ARTE.md (ART-047, proximo livre 063)'
+    evidence: ART-PROMPTS-062
+    verification: 'revisao de formato contra ART-PROMPTS-057/CHATGPT-FILA-025; dimensoes e papel das referencias conferidos nos arquivos; nenhuma imagem gerada (aguarda o dono)'
   - id: DEV-031
     request: 'Tirar a tooltip de CA e CAM dos botoes da ficha C (menu c); complementa o DEV-030.'
     request_classification: PLAN_DEVIATION

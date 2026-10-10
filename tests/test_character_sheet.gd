@@ -44,6 +44,12 @@ func run() -> Array:
 			out.append("%s: os botões CA/CAM da ficha não deveriam ter dica ao passar o mouse" % hid)
 		if String(sheet._stat_tips.get("ca", "")).find("Classe de Armadura (CA)") < 0:
 			out.append("%s: o detalhe da CA sumiu da ficha" % hid)
+		# BUG-041: o anel de foco do slot sai do retângulo dele; a grade precisa de folga dentro do ScrollContainer, senão o anel é cortado
+		var room: Container = sheet._content.get_parent() as Container
+		var ring := SheetSlot.FOCUS_RING_GROW + SheetSlot.FOCUS_RING_WIDTH / 2.0
+		if room == null or room.get_parent() != sheet._scroll or float(room.get_theme_constant("margin_left")) < ring or float(room.get_theme_constant("margin_top")) < ring \
+				or float(room.get_theme_constant("margin_right")) < ring or float(room.get_theme_constant("margin_bottom")) < ring:
+			out.append("%s: a grade da ficha não tem folga para o anel de foco do slot" % hid)
 		sheet.free()
 
 	# herói cheio: equipamento, passivas, bênçãos

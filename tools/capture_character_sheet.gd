@@ -1,12 +1,15 @@
 extends Node
 ## SPEC-130: capturas da ficha C (4 abas, herói em início de run e herói cheio, foco em CA).
-## godot --path . res://tools/capture_character_sheet.tscn --resolution 1280x720 -- --hero=sylas
+## godot --path . res://tools/capture_character_sheet.tscn --resolution 1280x720 -- --hero=sylas [--dir=res://pasta/]
 
 func _ready() -> void:
 	var hero := "sylas"
+	var dir := "res://.atena/generated/spec-130/"
 	for argument in OS.get_cmdline_user_args():
 		if argument.begins_with("--hero="):
 			hero = argument.trim_prefix("--hero=")
+		elif argument.begins_with("--dir="):
+			dir = argument.trim_prefix("--dir=")
 	Playtest.visible = false
 	Game.qa_sandbox = true
 	Game.qa_launch = {"seed": 12345}
@@ -19,7 +22,6 @@ func _ready() -> void:
 	run.set_physics_process(false)
 	var size := get_viewport().get_visible_rect().size
 	var tag := "%s_%dx%d" % [hero, int(size.x), int(size.y)]
-	var dir := "res://.atena/generated/spec-130/"
 	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(dir))
 	var b: Battle = run.battle
 	b.active_cd = 4.0

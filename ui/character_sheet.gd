@@ -24,6 +24,7 @@ const BONUS_GROUPS := [
 ]
 const EXTRA_LABELS := {"weapon_slots": "espaços de arma", "rerolls": "rerrolagens", "choices": "opções extras", "revive": "revives", "low_hp_dmg": "dano com PV baixo"}
 const PASSIVE_MAX_LEVEL := 5   # igual ao limite das ofertas de level-up (Battle._build_offer)
+const SLOT_FOCUS_ROOM := 6   # folga em volta da grade para o anel de foco do slot (SheetSlot.FOCUS_RING_GROW + FOCUS_RING_WIDTH)
 const DETAIL_HEIGHT := 265.0   # SPEC-147: cabe o próximo nível e a evolução sem rolar tanto
 const DETAIL_HEIGHT_BONUS := 110.0   # a aba de bônus precisa da grade, não do detalhe
 const STAT_ICONS := {"ca": "ca", "cam": "cam", "hp": "health", "xp_pct": "xp", "gold_pct": "coin"}
@@ -219,10 +220,14 @@ func _build_tabs_column() -> Control:
 	_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
 	_scroll.follow_focus = true
 	col.add_child(_scroll)
+	# o anel de foco do slot sai do retângulo dele (grow 2 + metade da linha de 3 px); sem folga, o ScrollContainer o recorta (BUG-041)
+	var scroll_margin := UiKit.margin(SLOT_FOCUS_ROOM)
+	scroll_margin.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	_scroll.add_child(scroll_margin)
 	_content = VBoxContainer.new()
 	_content.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	_content.add_theme_constant_override("separation", 6)
-	_scroll.add_child(_content)
+	scroll_margin.add_child(_content)
 	_detail_frame = PanelContainer.new()
 	var detail_frame := _detail_frame
 	detail_frame.custom_minimum_size = Vector2(0, DETAIL_HEIGHT)

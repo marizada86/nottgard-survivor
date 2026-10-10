@@ -7,6 +7,8 @@ signal chosen(slot: SheetSlot)
 
 const SIZE := Vector2(76, 76)
 const GOLD := Color(1.0, 0.85, 0.4)
+const FOCUS_RING_GROW := 2.0    # o anel de foco sai do slot por esta folga mais metade da linha
+const FOCUS_RING_WIDTH := 3.0
 
 var entry: Dictionary = {}
 var _icon: Texture2D = null
@@ -72,4 +74,4 @@ func _draw() -> void:
 			var tri := PackedVector2Array([Vector2(SIZE.x - 17.0, 15.0), Vector2(SIZE.x - 5.0, 15.0), Vector2(SIZE.x - 11.0, 4.0)])
 			draw_colored_polygon(tri, Color(1.0, 0.88, 0.35, 0.7 + 0.3 * pulse))
 	if has_focus():
-		draw_rect(rect.grow(2.0), GOLD, false, 3.0)
+		draw_rect(rect.grow(FOCUS_RING_GROW), GOLD, false, FOCUS_RING_WIDTH)
