@@ -24,3 +24,16 @@
 - Margem maior reduz a área útil do texto: o `StageInfo` da aba Jogar mostra uma linha a menos (rola como antes).
 - A ficha C segue com recorte 16 (estrelas esticadas nos três usos); decisão do dono se entra no mesmo ajuste.
 - Em `HqInfo` o `[b]` do título não aparece em negrito (fonte sem variante); fora do escopo.
+
+## Adendo — texto rolado passava por cima da moldura (mesmo dia, mesmo desvio DEV-029)
+**Origem:** dono, print do painel de fase da aba Jogar rolado até o fim: linhas de texto cobrindo a faixa dourada, em cima e embaixo.
+
+**Causa:** o `RichTextLabel` só recua o início do texto pelas margens do estilo; não recorta nelas. Ao rolar, o texto é desenhado na área da margem, sobre a moldura (a correção do recorte e da margem não podia resolver isso).
+
+**Correção:** `UiKit.style_text` põe a moldura num `PanelContainer` pai (mesmo lugar, mesmas flags e tamanho mínimo) e o texto, com `clip_contents` e sem margem própria, fica dentro das margens da moldura; o foco clareia a moldura como antes. Nó sem pai mantém a moldura no próprio estilo. Os nomes únicos (`%HeroInfo` etc.) não mudam; o caminho dos nós ganha um nível (`...Frame`).
+- `tools/capture_quartel.gd` passa a gerar também as capturas com o texto rolado até o fim (`*_rolado_*`).
+- `tests/test_ui_kit.gd`: pai com moldura no mesmo índice, recorte ≥ 34, margem ≥ 22, `clip_contents`, flags e tamanho herdados, nó solto não quebra.
+
+**Verificação:** capturas em `.atena/generated/dev-029/capturas-2/` (Jogar rolado: herói e fase dentro da moldura); suite 0 falhas; smoke ok; `kit: OK`; `mobile_buttons_check` 146/0; `controller_check` 90/0; mutação (`clip_contents = false`) → 1 falha; hash do save real antes = depois.
+
+**Pendências:** aguarda playtest do dono (inclui rolar com mouse, controle e toque). A ficha C segue fora.

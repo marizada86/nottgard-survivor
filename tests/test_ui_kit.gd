@@ -65,21 +65,42 @@ func run() -> Array:
 		out.append("eco, soltar a tecla e outros botões não trocam de aba")
 
 	# moldura de detalhe (DEV-029): o recorte cobre as estrelas dos cantos e o texto fica além da borda visível (22 px)
+	# BUG-040: o texto rico fica num PanelContainer com a moldura e é recortado ao próprio retângulo; senão, ao rolar, passa por cima dela
+	var holder := VBoxContainer.new()
+	var before := Control.new()
 	var rich := RichTextLabel.new()
+	rich.custom_minimum_size = Vector2(0, 240)
+	rich.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	holder.add_child(before)
+	holder.add_child(rich)
 	UiKit.style_text(rich)
-	for style_name in ["normal", "focus"]:
-		var style := rich.get_theme_stylebox(style_name) as StyleBoxTexture
-		if style == null or style.texture != SheetArt.DETAIL:
-			out.append("o texto rico deveria usar a moldura de detalhe (%s)" % style_name)
-			continue
-		for side in [SIDE_LEFT, SIDE_TOP, SIDE_RIGHT, SIDE_BOTTOM]:
-			if style.get_texture_margin(side) < 34.0:
-				out.append("o recorte da moldura de detalhe corta as estrelas dos cantos (%s)" % style_name)
-				break
-			if style.get_content_margin(side) < 22.0:
-				out.append("o texto invade a borda visível da moldura de detalhe (%s)" % style_name)
-				break
-	rich.free()
+	var wrapper := rich.get_parent() as PanelContainer
+	if wrapper == null or wrapper.get_parent() != holder or wrapper.get_index() != 1:
+		out.append("o texto rico deveria ganhar um PanelContainer de moldura no mesmo lugar do pai")
+	else:
+		var framed := wrapper.get_theme_stylebox("panel") as StyleBoxTexture
+		if framed == null or framed.texture != SheetArt.DETAIL:
+			out.append("a moldura do texto rico deveria ser a de detalhe")
+		else:
+			for side in [SIDE_LEFT, SIDE_TOP, SIDE_RIGHT, SIDE_BOTTOM]:
+				if framed.get_texture_margin(side) < 34.0:
+					out.append("o recorte da moldura de detalhe corta as estrelas dos cantos")
+					break
+				if framed.get_content_margin(side) < 22.0:
+					out.append("o texto invade a borda visível da moldura de detalhe")
+					break
+		if not rich.clip_contents:
+			out.append("o texto rico tem de ser recortado ao próprio retângulo (rolar não pode cobrir a moldura)")
+		if wrapper.custom_minimum_size != Vector2(0, 240) or wrapper.size_flags_vertical != Control.SIZE_EXPAND_FILL:
+			out.append("a moldura deveria herdar o tamanho mínimo e as flags do texto")
+		if rich.get_theme_stylebox("normal").get_minimum_size() != Vector2.ZERO:
+			out.append("o texto dentro da moldura não deveria ter margem própria")
+	holder.free()
+	var loose := RichTextLabel.new()
+	UiKit.style_text(loose)   # sem pai: não pode quebrar
+	if loose.get_theme_stylebox("normal") as StyleBoxTexture == null:
+		out.append("o texto solto mantém a moldura no próprio estilo")
+	loose.free()
 	var detail_frame_node := UiKit.detail_frame()
 	var detail_style := detail_frame_node.get_theme_stylebox("panel") as StyleBoxTexture
 	if detail_style == null or detail_style.get_texture_margin(SIDE_TOP) < 34.0 or detail_style.get_content_margin(SIDE_TOP) < 22.0:

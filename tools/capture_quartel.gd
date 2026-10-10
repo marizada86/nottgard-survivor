@@ -41,6 +41,17 @@ func _ready() -> void:
 		await get_tree().create_timer(0.3).timeout
 		var tab_name := String(tabs.get_child(i).name)
 		names.append(tab_name)
-		await _shot("%02d_quartel_%s" % [i + 1, tab_name.to_lower().replace("í", "i").replace("ó", "o").replace("ç", "c").replace("õ", "o")])
+		var slug := tab_name.to_lower().replace("í", "i").replace("ó", "o").replace("ç", "c").replace("õ", "o")
+		await _shot("%02d_quartel_%s" % [i + 1, slug])
+		# BUG-040: texto rolado até o fim não pode passar por cima da moldura
+		var rolled := false
+		for text_name in ["hero_info", "stage_info", "codex_text", "hq_info"]:
+			var text: RichTextLabel = menu.get(text_name)
+			if text.is_visible_in_tree():
+				var bar: VScrollBar = text.get_v_scroll_bar()
+				bar.value = bar.max_value
+				rolled = true
+		if rolled:
+			await _shot("%02d_quartel_%s_rolado" % [i + 1, slug])
 	print("abas: ", names)
 	get_tree().quit()

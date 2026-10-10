@@ -116,7 +116,8 @@ deferred_requests:
     related_plan: PLAN-093
     bug: BUG-040
     evidence: EVID-232
-    verification: 'suite 0 falhas; kit_test OK; smoke ok; backlog_check sem alertas; 2 mutacoes do teste; save real inalterado'
+    verification: 'suite 0 falhas; kit_test OK; smoke ok; mobile_buttons_check 146/0; controller_check 90/0; backlog_check sem alertas; 3 mutacoes do teste; save real inalterado'
+    addendum: '2026-10-10: texto rolado cobria a moldura; corrigido com PanelContainer pai e clip_contents (EVID-232, adendo); commit proprio.'
     return: 'Retorno ao PLAN-071 (checkpoint B-006/S-011 inalterado). Sem push, exportacao nem aviso aos testers.'
   - id: DEV-028
     request: 'Lote 2 da nova UI (MEC-003): Quartel, selecao de heroi e mapa e titulo no UiKit, com OptionsPanel e Catalog no lugar das copias do menu.gd.'

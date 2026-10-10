@@ -148,6 +148,33 @@ static func style_list(list: ItemList) -> void:
 	list.add_theme_color_override("font_selected_color", Color(1.0, 0.93, 0.72))
 
 ## Texto rico de detalhe (herói, fase, códex, diário) dentro da moldura de detalhe.
+## O `RichTextLabel` só recua o início do texto pelas margens do estilo e não recorta nelas: ao rolar, o texto passava por cima da
+## moldura (BUG-040). Por isso a moldura fica num `PanelContainer` pai e o texto, recortado ao próprio retângulo, dentro das margens.
+## Sem pai (nó solto), mantém a moldura no próprio texto.
 static func style_text(text: RichTextLabel) -> void:
-	text.add_theme_stylebox_override("normal", SheetArt.detail())
-	text.add_theme_stylebox_override("focus", SheetArt.detail(SheetArt.DETAIL_PADDING, Color(1.3, 1.15, 0.8)))
+	var parent := text.get_parent()
+	if parent == null:
+		text.add_theme_stylebox_override("normal", SheetArt.detail())
+		text.add_theme_stylebox_override("focus", SheetArt.detail(SheetArt.DETAIL_PADDING, Color(1.3, 1.15, 0.8)))
+		return
+	var frame := PanelContainer.new()
+	frame.name = "%sFrame" % text.name
+	frame.add_theme_stylebox_override("panel", SheetArt.detail())
+	frame.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	frame.size_flags_horizontal = text.size_flags_horizontal
+	frame.size_flags_vertical = text.size_flags_vertical
+	frame.size_flags_stretch_ratio = text.size_flags_stretch_ratio
+	frame.custom_minimum_size = text.custom_minimum_size
+	text.custom_minimum_size = Vector2.ZERO
+	var index := text.get_index()
+	parent.add_child(frame)
+	parent.move_child(frame, index)
+	text.reparent(frame, false)
+	text.clip_contents = true
+	text.size_flags_horizontal = Control.SIZE_FILL | Control.SIZE_EXPAND
+	text.size_flags_vertical = Control.SIZE_FILL | Control.SIZE_EXPAND
+	text.add_theme_stylebox_override("normal", StyleBoxEmpty.new())
+	text.add_theme_stylebox_override("focus", StyleBoxEmpty.new())
+	# o foco aparece como antes: a moldura clareia
+	text.focus_entered.connect(func(): frame.self_modulate = Color(1.3, 1.15, 0.8))
+	text.focus_exited.connect(func(): frame.self_modulate = Color.WHITE)
