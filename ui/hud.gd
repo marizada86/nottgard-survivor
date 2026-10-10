@@ -862,15 +862,25 @@ func toast(text: String, color: Color = Color(1, 1, 1)) -> void:
 
 func show_items_panel(b: Battle) -> void:
 	hero_panel.note_sheet_opened()
+	var was_open := items_panel.visible
 	items_panel.show_sheet(b)
+	if not was_open:
+		UiKit.fade_in(items_panel)
 
 func hide_items_panel() -> void:
+	if items_panel.visible:
+		UiKit.dissolve_from_screen(get_tree())   # antes de esconder: a foto leva a ficha
 	items_panel.hide_sheet()
 
 func show_pause(v: bool) -> void:
 	Game.controls.transition()
 	clear_mobile_input()
+	var was_open := pause_panel.visible
+	if was_open and not v:
+		UiKit.dissolve_from_screen(get_tree())
 	pause_panel.visible = v
+	if v and not was_open:
+		UiKit.fade_in(pause_panel)
 	if v:
 		pause_menu.show_menu(_battle)   # SPEC-165: volta à aba Jogo e marca o que apareceu nesta run
 		aim_btn.text = "Mira: %s (%s)" % ["AUTO" if Game.aim_mode() == Battle.Aim.AUTO else "MANUAL", Game.controls.prompt("run_toggle_aim", "Tab")]
@@ -886,10 +896,15 @@ func show_revive_offer(b: Battle) -> void:
 	preview.reward_rate = 0.3
 	var pending := Game.profile.preview_earned(preview)
 	revive_text.text = "Seu herói caiu. Deseja reviver com 50%% de PV?\n\nSe encerrar agora, receberá +%d moedas (30%% da tentativa)." % pending
+	var revive_was_open := revive_panel.visible
 	revive_panel.visible = true
+	if not revive_was_open:
+		UiKit.fade_in(revive_panel)
 	%ReviveBtn.grab_focus()
 
 func hide_revive_offer() -> void:
+	if revive_panel.visible:
+		UiKit.dissolve_from_screen(get_tree())
 	revive_panel.visible = false
 
 func show_result(res: Dictionary, summary: Dictionary) -> void:
@@ -915,7 +930,10 @@ func show_result(res: Dictionary, summary: Dictionary) -> void:
 	if not names.is_empty():
 		txt += "\n\nConquistas:\n" + "\n".join(names)
 	result_text.text = txt
+	var result_was_open := result_panel.visible
 	result_panel.visible = true
+	if not result_was_open:
+		UiKit.fade_in(result_panel)
 	_focus_visible.call_deferred(%AgainBtn)
 
 func _focus_visible(button: Control) -> void:

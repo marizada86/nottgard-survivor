@@ -30,10 +30,71 @@ static func label(text: String, size: int, color: Color = TEXT) -> Label:
 	l.add_theme_color_override("font_color", color)
 	return l
 
+## Transição entre o jogo e as janelas (ficha, pausa, resultado): a janela aparece com um fade curto e, ao fechar, uma foto da tela
+## dissolve por cima do jogo que já voltou. O fundo da janela e o escurecimento são um pouco translúcidos, para o jogo continuar
+## presente atrás. Valores de gosto: ajustar aqui, num lugar só.
+const FADE_IN := 0.14
+const FADE_OUT := 0.18
+const WINDOW_ALPHA := 0.9    # opacidade do fundo da janela padrão (a moldura segue opaca)
+const DIM_ALPHA := 0.5       # escurecimento atrás da ficha (era 0,7)
+
+## Sem fade nas capturas e verificações (`qa_sandbox`): elas fotografam logo depois de abrir.
+static func fades_enabled() -> bool:
+	return not Game.qa_sandbox
+
+## A janela passa de transparente a opaca. O estado (`visible`) muda na hora; só a aparência anima.
+## Funciona com o jogo pausado: a animação roda mesmo assim. O fade só começa dois quadros depois: abrir a janela é o quadro mais
+## pesado e o tempo dele (delta grande) consumiria o fade inteiro de uma vez.
+static func fade_in(node: CanvasItem, duration: float = FADE_IN) -> void:
+	var id := (int(node.get_meta("ui_fade_id")) if node.has_meta("ui_fade_id") else 0) + 1
+	node.set_meta("ui_fade_id", id)
+	var previous = node.get_meta("ui_fade") if node.has_meta("ui_fade") else null
+	if previous is Tween and (previous as Tween).is_valid():
+		(previous as Tween).kill()
+	if not fades_enabled() or not node.is_inside_tree():
+		node.modulate.a = 1.0
+		return
+	node.modulate.a = 0.0
+	var tree := node.get_tree()
+	await tree.process_frame
+	await tree.process_frame
+	if not is_instance_valid(node) or not node.is_inside_tree() or int(node.get_meta("ui_fade_id")) != id:
+		return   # fechou ou reabriu no meio: quem veio depois cuida do alfa
+	if not node.visible:
+		node.modulate.a = 1.0   # escondida antes do fade começar: não deixar transparente para a próxima abertura
+		return
+	var tw := node.create_tween().set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
+	tw.tween_property(node, "modulate:a", 1.0, duration)
+	node.set_meta("ui_fade", tw)
+
+## Chamar ANTES de esconder a janela: tira uma foto da tela (com a janela) e a dissolve por cima do jogo, que já segue ao vivo.
+## Devolve a camada criada (ou nulo quando não há o que dissolver).
+static func dissolve_from_screen(tree: SceneTree, duration: float = FADE_OUT) -> CanvasLayer:
+	if not fades_enabled() or tree == null or DisplayServer.get_name() == "headless":
+		return null
+	var image := tree.root.get_texture().get_image()
+	if image == null or image.is_empty():
+		return null
+	var layer := CanvasLayer.new()
+	layer.layer = 90
+	layer.process_mode = Node.PROCESS_MODE_ALWAYS
+	var shot := TextureRect.new()
+	shot.texture = ImageTexture.create_from_image(image)
+	shot.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	shot.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	shot.stretch_mode = TextureRect.STRETCH_SCALE
+	shot.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	layer.add_child(shot)
+	tree.root.add_child(layer)
+	var tw := layer.create_tween().set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
+	tw.tween_property(shot, "modulate:a", 0.0, duration)
+	tw.tween_callback(layer.queue_free)
+	return layer
+
 ## Escurece o que está atrás de uma janela modal; não captura o mouse.
 static func dim() -> ColorRect:
 	var d := ColorRect.new()
-	d.color = Color(0, 0, 0, 0.7)
+	d.color = Color(0, 0, 0, DIM_ALPHA)
 	d.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	d.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	return d
@@ -47,7 +108,9 @@ static func window(size: Vector2) -> PanelContainer:
 ## Dá a um painel que já existe (como o `PausePanel` da HUD) o estilo da janela padrão.
 static func apply_window(panel: PanelContainer, size: Vector2) -> void:
 	panel.custom_minimum_size = size
-	panel.add_theme_stylebox_override("panel", SheetArt.background())
+	var background := SheetArt.background()
+	background.modulate_color = Color(1, 1, 1, WINDOW_ALPHA)
+	panel.add_theme_stylebox_override("panel", background)
 	panel.draw.connect(func(): panel.draw_texture_rect(SheetArt.PANEL, Rect2(Vector2.ZERO, panel.size), false))
 
 ## Moldura do detalhe e margem padrão (a mesma da ficha C).

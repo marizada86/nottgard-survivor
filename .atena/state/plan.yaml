@@ -105,6 +105,17 @@ suspension:
   suspended_plan_state_file: '.atena/state/plan-053-imagens.yaml'
   note: 'PLAN-053 retomado; biomas ate Pilares completos localmente. S-007 onda cortante completa como candidata; aguardando gate humano N03. PLAN-071 preservado. PLAN-071 suspenso com retorno acima.'
 deferred_requests:
+  - id: DEV-033
+    request: 'Melhorar a opacidade para deixar a troca entre jogo e menu mais suave (MEC-003): fade e fundo mais translucido; ficha C, pausa, resultado e revive.'
+    request_classification: PLAN_DEVIATION
+    status: COMMITTED_LOCAL_AWAITING_PLAYTEST
+    recorded: '2026-10-10'
+    authorization_verbatim: 'agora vamos melhorar a opacidade para deixar a troca entre jogo e menu mais suave'
+    route: 'Pedido explicito; escolhas do dono: os dois efeitos e telas ficha C, pausa, resultado e revive. Fazer agora e voltar ao PLAN-071 (checkpoint B-006/S-011 inalterado). Commit local; sem push.'
+    scope: 'ui/ui_kit.gd (fade_in, dissolve_from_screen, WINDOW_ALPHA, DIM_ALPHA), ui/hud.gd, tests/test_ui_kit.gd, tools/capture_transition e tools/probe_fade'
+    evidence: EVID-235
+    verification: 'suite 0 falhas; smoke ok; kit_test OK; mobile_buttons_check 146/0; controller_check 90/0; sonda do fade'
+    note: 'Subjetivo (suavidade, legibilidade a 90%) aguarda playtest; level-up e Quartel fora.'
   - id: DEV-032
     request: 'Bug visual na ficha C: borda do item selecionado (anel de foco do slot) cortada.'
     request_classification: PLAN_DEVIATION

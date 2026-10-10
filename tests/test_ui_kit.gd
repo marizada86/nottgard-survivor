@@ -107,6 +107,39 @@ func run() -> Array:
 		out.append("a moldura de detalhe da pausa deveria usar o mesmo recorte e a mesma margem")
 	detail_frame_node.free()
 
+	# transição jogo ↔ janela: fade ao abrir, fundo e escurecimento um pouco translúcidos; o estado (visible) não espera a animação
+	var tree := Engine.get_main_loop() as SceneTree
+	var faded := Control.new()
+	tree.root.add_child(faded)
+	var qa_before := Game.qa_sandbox
+	Game.qa_sandbox = false
+	UiKit.fade_in(faded)
+	if faded.modulate.a != 0.0 or int(faded.get_meta("ui_fade_id", 0)) != 1:
+		out.append("fade_in deveria começar transparente e numerar a abertura")
+	if not faded.visible:
+		out.append("fade_in não pode mexer no visible")
+	UiKit.fade_in(faded)   # reabrir antes do fade começar: vale só a última abertura
+	if faded.modulate.a != 0.0 or int(faded.get_meta("ui_fade_id", 0)) != 2:
+		out.append("um novo fade_in deveria passar a vez da abertura anterior")
+	Game.qa_sandbox = true
+	UiKit.fade_in(faded)
+	if faded.modulate.a != 1.0:
+		out.append("em qa_sandbox (capturas e verificações) não pode haver fade")
+	if UiKit.dissolve_from_screen(tree) != null:
+		out.append("em qa_sandbox não deveria dissolver a tela")
+	Game.qa_sandbox = qa_before
+	faded.free()
+	if UiKit.WINDOW_ALPHA >= 1.0 or UiKit.WINDOW_ALPHA < 0.7 or UiKit.DIM_ALPHA >= 0.7 or UiKit.DIM_ALPHA <= 0.0:
+		out.append("fundo da janela e escurecimento deveriam ser translúcidos, mas legíveis")
+	var win_probe := UiKit.window(Vector2(100, 100))
+	if not is_equal_approx((win_probe.get_theme_stylebox("panel") as StyleBoxTexture).modulate_color.a, UiKit.WINDOW_ALPHA):
+		out.append("o fundo da janela padrão deveria usar WINDOW_ALPHA")
+	win_probe.free()
+	var dimmer := UiKit.dim()
+	if not is_equal_approx(dimmer.color.a, UiKit.DIM_ALPHA):
+		out.append("o escurecimento deveria usar DIM_ALPHA")
+	dimmer.free()
+
 	# janela padrão
 	var win := UiKit.window(Vector2(800, 500))
 	if win.custom_minimum_size != Vector2(800, 500) or not win.has_theme_stylebox_override("panel"):
