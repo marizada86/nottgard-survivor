@@ -7,7 +7,7 @@
   bestiário ([RESEARCH-001](../vault/research/RESEARCH-001-abismo-bestiario-visual-2026-09-21.md)),
   sem inventar lore. Sem história: a lore é só sabor.
 - Itens abertos acumulam até fechar um **lote**. O lote sai como um único
-  `ART-PROMPTS-NNN` (próximo livre: **062**) para o gerador de imagem.
+  `ART-PROMPTS-NNN` (próximo livre: **063**) para o gerador de imagem.
 - Candidatos ficam em `.atena/generated/` até admissão explícita do dono.
 
 ## Abertos
@@ -18,6 +18,7 @@
 |---|---|---|---|---|---|
 | ART-045 | retrato + tiras | **Erik e Arlindo jogáveis:** retrato de seleção (1536×1024) e nove tiras de animação cada (`idle`, cinco `move_*`, `attack`, `active`, `death`), a partir dos retratos do Nottcard; ordem de cota: ER01, ER02, AO01, AO02 primeiro | Grimholders, névoa, Amuleto da Luz (Erik); andarilho de Dagruve e magia de memória (Arlindo) | pedido do dono 2026-10-09; [ART-PROMPTS-060](../generated/ART-PROMPTS-060-erik-e-arlindo-jogaveis.md), [CHATGPT-FILA-027](../generated/CHATGPT-FILA-027-erik-e-arlindo.md) | [SPEC-160](../specs/SPEC-160-arlindo-orlando-e-erik-blackthorn-jogaveis.md); até chegar, `art_like` provisório (Sylas e Durvall) |
 | ART-046 | props + ícones | **Seis eventos aleatórios (MEC-005):** props de mapa e ícones para Pacto de Sangue, Relicário Lacrado, Peregrino Ferido, Contador de Histórias, Carroça Abandonada e Pedra do Eclipse (hoje losango colorido com rótulo; o Peregrino e o Contador pedem figura de NPC) | sombra e pedra de Nottgard; vermelho de cera, ferro com ossos, fogueira baixa, carroça tombada, pedra negra | [SPEC-164](../specs/SPEC-164-eventos-aleatorios-novos-mec-005.md) | **prompts EV01 a EV06 em [[ART-PROMPTS-061-eventos-arcanista-icones-segredos-e-altar]], fila [CHATGPT-FILA-028](../generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md) (2026-10-09)**; provisório até a arte; sem bloquear o jogo |
+| ART-047 | UI/moldura | **Botão de ação principal (JOGAR):** moldura de nove fatias, aço neutro e interior de pedra escura, 320×64 com fatias 28/28/20/20; o código escreve o rótulo e o glifo e tinge os estados. Serve também ao `HqPlayBtn`, Continuar e Fechar | o botão atual é `StyleBoxFlat` por código; as abas já usam `ficha_aba_moldura` | pergunta do dono 2026-10-10; [ART-PROMPTS-062](../generated/ART-PROMPTS-062-botao-de-acao-jogar.md), [CHATGPT-FILA-029](../generated/CHATGPT-FILA-029-botao-de-acao-jogar.md) | 1 geração; integração pede spec e aprovação (SPEC-166 definiu "nada em `assets/`"); sem bloquear o jogo; **DRAFT r1, nenhuma peça gerada** |
 
 ### PRIORIDADE ALTA — tiras de heróis (2026-10-02)
 
