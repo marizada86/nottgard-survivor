@@ -12,6 +12,8 @@ func run() -> Array:
 	var out: Array = []
 	out.append_array(_entrada())
 	out.append_array(_topo())
+	out.append_array(_avisos())
+	out.append_array(_questlog())
 	out.append_array(_estige())
 	out.append_array(_armas())
 	out.append_array(_primeiro_bau())
@@ -133,6 +135,149 @@ func _topo() -> Array:
 			out.append("chefe, quests e status ocupam demais a tela com %d objetivos (até y=%.0f)" % [count, fixed_bottom])
 		hud.free()
 	return out
+
+## SPEC-168 (MEC-064): o questlog mora à direita, sem moldura, translúcido, e não toca nada do topo nem da ficha.
+func _questlog() -> Array:
+	var out: Array = []
+	var tree := Engine.get_main_loop() as SceneTree
+	var base_toast_y := -1.0
+	for count in [0, 1, 3, 6]:
+		var b := Battle.new(3, "sylas", "dagruve")
+		var hud: Node = load("res://ui/hud.tscn").instantiate()
+		tree.root.add_child(hud)
+		b.happenings.objectives.clear()
+		for i in count:
+			var o := _objective(i)
+			o["ends_at"] = b.time + 90.0 - float(i) * 30.0   # o último é o mais urgente
+			b.happenings.objectives.append(o)
+		hud.boss_panel.visible = true
+		hud.update_stats(b)
+		hud.toast("Aviso de teste")
+		hud.top_stack.notification(Container.NOTIFICATION_SORT_CHILDREN)
+		var log: QuestPanel = hud.quest_panel
+		if log.get_parent() == hud.top_stack:
+			out.append("o questlog não pode ficar dentro da pilha do topo")
+		var toast_y: float = hud.toast_box.get_global_rect().position.y
+		if base_toast_y < 0.0:
+			base_toast_y = toast_y
+		elif absf(toast_y - base_toast_y) > 0.5:
+			out.append("com %d objetivos os avisos começam em y=%.0f (sem quests: %.0f)" % [count, toast_y, base_toast_y])
+		if count == 0:
+			if log.visible:
+				out.append("sem objetivos o questlog deve estar escondido")
+			hud.free()
+			continue
+		log.size = log.get_combined_minimum_size()
+		var r := log.get_global_rect()
+		var view := Rect2(Vector2.ZERO, Vector2(1280, 720))
+		if not view.encloses(r):
+			out.append("com %d objetivos o questlog %s sai da tela" % [count, r])
+		for n in [hud.get_node("HelpBtn"), hud.get_node("SpeedBtn"), hud.boss_panel, hud.toast_box, hud.objective_label, hud.hero_panel, hud.timer_label, hud.stage_label]:
+			if (n as Control).is_visible_in_tree() and (n as Control).get_global_rect().intersects(r):
+				out.append("com %d objetivos o questlog %s toca %s %s" % [count, r, n.name, (n as Control).get_global_rect()])
+		var style := log.get_theme_stylebox("panel")
+		if not style is StyleBoxEmpty:
+			out.append("o questlog não tem moldura nem fundo (viu %s)" % style.get_class())
+		if log._pulse != null and log._pulse.is_valid():
+			log._pulse.custom_step(1.0)   # o brilho do aviso termina e o questlog volta ao repouso
+		if log.modulate.a >= 1.0 or log.modulate.a < 0.5:
+			out.append("o questlog deve ser translúcido (alpha %.2f)" % log.modulate.a)
+		var bars := 0
+		for n in log.find_children("*", "ProgressBar", true, false):
+			bars += 1
+		if bars > 0:
+			out.append("o questlog não tem barra de progresso (viu %d)" % bars)
+		var rows: int = log._rows.get_child_count()
+		if rows != mini(count, QuestPanel.MAX_ROWS) + (1 if count > QuestPanel.MAX_ROWS else 0):
+			out.append("com %d objetivos o questlog tem %d linhas" % [count, rows])
+		# descrição só no objetivo mais urgente: o último dos que cabem (prazo menor)
+		var described := 0
+		for row in log._rows.get_children():
+			if row.get_child_count() > 1:
+				described += 1
+		if described != 1:
+			out.append("com %d objetivos %d linhas têm descrição (deve ser 1, a do mais urgente)" % [count, described])
+		hud.free()
+	# o mais urgente é o de menor prazo; sem prazo, o primeiro
+	if QuestPanel.urgent_index([{"left": 50.0}, {"left": 12.0}, {"left": 80.0}]) != 1:
+		out.append("urgent_index deve escolher o menor prazo")
+	if QuestPanel.urgent_index([{"left": -1.0}, {"left": -1.0}]) != 0:
+		out.append("urgent_index sem prazos deve escolher o primeiro")
+	return out
+
+## SPEC-167 (BUG-042): avisos do topo. Limite real na rajada do mesmo quadro, teto de altura, um longo por vez e a ficha livre.
+func _avisos() -> Array:
+	var out: Array = []
+	var tree := Engine.get_main_loop() as SceneTree
+	var b := Battle.new(3, "sylas", "dagruve")
+	var hud: Node = load("res://ui/hud.tscn").instantiate()
+	tree.root.add_child(hud)
+	hud.update_stats(b)
+	if not (hud.toast_rect() as Rect2).size == Vector2.ZERO:
+		out.append("sem avisos vivos o retângulo de avisos deve ser vazio")
+	# rajada: seis avisos no mesmo quadro (conquista, Estige, névoa, Maré...); `queue_free` só age no fim do quadro
+	for i in 6:
+		hud.toast("Aviso curto número %d" % i)
+	var live: Array = hud._live_toasts()
+	if live.size() > hud.TOAST_MAX_COUNT:
+		out.append("rajada de 6 avisos deixou %d vivos (limite %d)" % [live.size(), hud.TOAST_MAX_COUNT])
+	if hud.toast_box.get_child_count() > hud.TOAST_MAX_COUNT:
+		out.append("a rajada deixou %d filhos no bloco de avisos (o mais antigo sai na hora)" % hud.toast_box.get_child_count())
+	if live.is_empty() or (live[live.size() - 1] as Label).text != "Aviso curto número 5":
+		out.append("o aviso mais novo deve continuar na tela")
+	_sort_top(hud)
+	var span := _toast_span(hud)
+	if span > hud.TOAST_MAX_HEIGHT + 1.0:
+		out.append("avisos curtos ocupam %.0f px (teto %.0f)" % [span, hud.TOAST_MAX_HEIGHT])
+	hud.free()
+	# longos: epígrafe, rumor e um curto
+	hud = load("res://ui/hud.tscn").instantiate()
+	tree.root.add_child(hud)
+	hud.update_stats(b)
+	var epigraph := "Dagruve — O distrito que Nottgard esqueceu. A névoa entra por uma fratura no cemitério, e os cultistas esperam um messias: Adam."
+	var rumor := "Dizem nas Docas que um homem de colar estranho comprou passagem para uma ilha que não consta em nenhuma carta."
+	hud.toast(epigraph)
+	hud.toast(rumor)
+	hud.toast("Mira: AUTOMÁTICA")
+	var longs := 0
+	for c in hud._live_toasts():
+		if (c as Label).text.length() > hud.TOAST_LONG_CHARS:
+			longs += 1
+	if longs != 1:
+		out.append("epígrafe e rumor juntos: %d avisos longos vivos (deve ser 1, o outro espera)" % longs)
+	if hud._long_toast_queue.size() != 1:
+		out.append("o rumor deve esperar na fila (viu %d)" % hud._long_toast_queue.size())
+	_sort_top(hud)
+	var panel: Rect2 = hud.hero_panel.get_global_rect()
+	var box: Rect2 = hud.toast_box.get_global_rect()
+	if panel.size.x < 100.0:
+		out.append("a ficha do herói não mediu no teste (largura %.0f)" % panel.size.x)
+	elif box.intersects(panel):
+		out.append("o bloco de avisos %s invade a ficha do herói %s" % [box, panel])
+	if _toast_span(hud) > hud.TOAST_MAX_HEIGHT + 1.0:
+		out.append("epígrafe e curto ocupam %.0f px (teto %.0f)" % [_toast_span(hud), hud.TOAST_MAX_HEIGHT])
+	hud._drop_toast(hud._long_toast)   # a epígrafe termina: o rumor entra
+	var texts: Array = []
+	for c in hud._live_toasts():
+		texts.append((c as Label).text)
+	if not texts.has(rumor) or texts.has(epigraph) or not hud._long_toast_queue.is_empty():
+		out.append("ao terminar a epígrafe o rumor deve entrar e a fila esvaziar (viu %s)" % [texts])
+	hud.free()
+	return out
+
+func _sort_top(hud: Node) -> void:
+	hud.top_stack.notification(Container.NOTIFICATION_SORT_CHILDREN)
+	hud.toast_box.notification(Container.NOTIFICATION_SORT_CHILDREN)
+
+## Altura entre o topo do primeiro aviso e a base do último, já com o layout resolvido.
+func _toast_span(hud: Node) -> float:
+	var top := INF
+	var bottom := -INF
+	for c in hud._live_toasts():
+		var r := (c as Control).get_rect()
+		top = minf(top, r.position.y)
+		bottom = maxf(bottom, r.end.y)
+	return 0.0 if top == INF else bottom - top
 
 ## B-002 S-007: o Estige vira um indicador de estado na HUD (IN-064).
 func _estige() -> Array:

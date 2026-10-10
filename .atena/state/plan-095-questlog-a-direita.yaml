@@ -1,0 +1,35 @@
+id: PLAN-095
+spec: SPEC-168
+spec_file: .atena/specs/SPEC-168-questlog-a-direita-sem-moldura-mec-064.md
+mode: per-plan
+status: IMPLEMENTED_LOCAL_AWAITING_PLAYTEST
+created: '2026-10-10'
+request_classification: PLAN_DEVIATION
+deviation_id: DEV-035
+authorization_verbatim: 'atena, pode seguir as recomendações, eu estive pensando num "questlog" na direita do jogo sem interface para ser translucido e o jogador não perder informação na tela'
+approval_basis: 'Dono escolheu: questlog substitui (a) e (b); titulo, progresso e prazo com descricao so do mais urgente; status no topo; por plano (2026-10-10).'
+checkpoint: B-002/S-005 (concluido)
+return:
+  plan: PLAN-071
+  state_file: .atena/state/plan-071-playtest-ranking.yaml
+  checkpoint_observed: B-006/S-011
+batches:
+  B-001: {title: Questlog, steps: [S-001, S-002, S-003], status: DONE_LOCAL}
+  B-002: {title: Testes e registro, steps: [S-004, S-005], status: DONE_LOCAL}
+steps:
+  S-001: 'ui/quest_panel.gd: apresentacao sem moldura, a direita, translucida; linha por objetivo; descricao so do mais urgente.'
+  S-002: 'ui/hud.gd: questlog fora do TopStack, ancorado no topo direito; setas de evento desviam dele.'
+  S-003: 'Conferir mobile (preview) e a ordem de desenho.'
+  S-004: 'tests/test_playtest_fixes.gd: retangulos, estilo, linhas, descricao do urgente; mutacao.'
+  S-005: 'Capturas, EVID-237, cartao MEC-064, indices, nota na EVID-236 e voltar ao PLAN-071.'
+gates:
+  dependencies: NO_NEW_DEPENDENCIES
+  new_art: NOT_REQUIRED
+  commit_push_build_export: NOT_AUTHORIZED
+  other_sessions_changes: PRESERVE_UNTOUCHED
+  files_expected: [ui/quest_panel.gd, ui/hud.gd, tests/test_playtest_fixes.gd]
+blocking_gaps: []
+return_to: PLAN-071 (B-006/S-011, active_plan sem alteração)
+commit_push_build_export: NOT_PERFORMED
+evidence: EVID-237
+verification: 'test_playtest_fixes 0 falhas; mutacao 2 falhas; smoke ok; kit_test OK; mobile_buttons_check 146/0; controller_check 90/0; suite 2 falhas fora do escopo (test_new_heroes: arte integrada pelo commit ce2d259 de outra sessao)'

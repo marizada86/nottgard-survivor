@@ -106,6 +106,35 @@ suspension:
   suspended_plan_state_file: '.atena/state/plan-053-imagens.yaml'
   note: 'PLAN-053 retomado; biomas ate Pilares completos localmente. S-007 onda cortante completa como candidata; aguardando gate humano N03. PLAN-071 preservado. PLAN-071 suspenso com retorno acima.'
 deferred_requests:
+  - id: DEV-035
+    request: 'Questlog na direita do jogo, sem interface e translucido, para o jogador nao perder informacao na tela (resolve a pendencia 1 da EVID-236).'
+    request_classification: PLAN_DEVIATION
+    status: IMPLEMENTED_LOCAL_AWAITING_PLAYTEST
+    evidence: EVID-237
+    verification: 'test_playtest_fixes 0 falhas; mutacao 2 falhas; smoke ok; kit_test OK; mobile_buttons_check 146/0; controller_check 90/0; suite 2 falhas fora do escopo (test_new_heroes)'
+    note: 'Sem commit, push, exportacao nem aviso. Substitui as correcoes (a) e (b) da EVID-236.'
+    recorded: '2026-10-10'
+    authorization_verbatim: 'pode seguir as recomendações, eu estive pensando num "questlog" na direita do jogo sem interface para ser translucido e o jogador não perder informação na tela'
+    route: 'Dono escolheu: o questlog substitui as correcoes (a) e (b); fazer agora e voltar ao PLAN-071 (B-006/S-011 inalterado), por plano. Sem commit, push, exportacao nem aviso aos testers.'
+    plan: PLAN-095
+    spec: SPEC-168
+    card: MEC-064
+    scope: 'ui/quest_panel.gd, ui/hud.gd, tests/test_playtest_fixes.gd'
+  - id: DEV-034
+    request: 'Arrumar o BUG-036 (textos sobrepostos no centro da tela); sintoma escolhido: avisos sobre avisos.'
+    request_classification: PLAN_DEVIATION
+    status: IMPLEMENTED_LOCAL_AWAITING_PLAYTEST
+    evidence: EVID-236
+    verification: 'suite 0 falhas; mutacao 3 falhas; smoke ok; kit_test OK; mobile_buttons_check 146/0; controller_check 90/0'
+    note: 'Sem commit, push, exportacao nem aviso. Pendencia: com 3 quests e chefe a pilha de avisos fica sobre a cabeca do heroi (EVID-236 item 1); decisao do dono.'
+    recorded: '2026-10-10'
+    authorization_verbatim: 'atena vamos tentar arrumar isso: BUG-036 / PLAN-080 / SPEC-147'
+    route: 'Dono escolheu fazer agora e voltar ao PLAN-071 (checkpoint B-006/S-011 inalterado), por plano. Sem commit, push, exportacao nem aviso aos testers.'
+    plan: PLAN-094
+    spec: SPEC-167
+    bug: BUG-042
+    scope: 'ui/hud.gd (toast: limite real, teto de altura, largura, fila de longos), ui/run.gd (_bark espera a pilha), tests/test_playtest_fixes.gd'
+    evidence_before: '.atena/generated/bug-036-diag/'
   - id: DEV-033
     request: 'Melhorar a opacidade para deixar a troca entre jogo e menu mais suave (MEC-003): fade e fundo mais translucido; ficha C, pausa, resultado e revive.'
     request_classification: PLAN_DEVIATION

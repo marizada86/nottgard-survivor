@@ -34,6 +34,8 @@ O código está na `main` (e, exceto o PLAN-093, no `origin`); o que falta é **
 | PLAN-091 | SPEC-164 | Seis eventos aleatórios novos | Playtest (equilíbrio, BAL-029); arte ART-046 (FILA-028) |
 | PLAN-092 | SPEC-165 | UiKit e menu de pausa em abas | Playtest e **aprovação da direção visual** (rascunho); lote 2 da UI |
 | PLAN-093 | SPEC-166 | Nova UI, lote 2: Quartel no UiKit, Códex no Catalog, Opções no OptionsPanel | Playtest (publicação: push pendente) |
+| PLAN-094 | SPEC-167 | Avisos do topo sem acumular nem colidir (BUG-042, continua o BUG-036) | Playtest; decisão do dono sobre a pilha com quests e chefe (EVID-236) |
+| PLAN-095 | SPEC-168 | Questlog à direita, sem moldura e translúcido (MEC-064) | Playtest |
 
 ## Esperando arte, aparelho ou o dono
 

@@ -3,8 +3,21 @@ spec: .atena/specs/SPEC-hero-integration-2026-10-10.md
 revision: v04
 classification: IN_PLAN
 mode: per-plan
-status: PREPARED_FOR_APPROVED_COMMIT_MERGE_PUSH
-checkpoint: GIT/COMMIT
+status: PUBLISHED_REMOTE_SHA_VERIFIED_AWAITING_BUILD_AND_HUMAN_PLAYTEST
+checkpoint: GIT/COMPLETE
+exact_owner_approval: 'atena, autorizado e aprovado, principalmente erik e arlindo'
+exact_approval_scope: 'Resposta a pergunta especifica: ce2d259, 105 arquivos (~29.5 MB), cinco ancestrais, repositorio marizada86/nottgard-survivor, main e build/release'
+integration_commit: ce2d259088a05201d288bd568a35fa4e4886e474
+main_merge: fast-forward
+main_before: bfdb5ca
+main_after: ce2d259
+push_executed: true
+remote_sha_verified: ce2d259088a05201d288bd568a35fa4e4886e474
+push_range: 60fd1ff..ce2d259
+workflow_run: https://github.com/marizada86/nottgard-survivor/actions/runs/38026139860
+workflow_status_at_check: in_progress
+auto_review_rejection: '105 files including screenshots/logs/assets to external GitHub; general push authorization deemed insufficient for exact payload and destination'
+pending_question: null
 authorization: 'atena commit push e merge'
 authorized_at: '2026-10-10'
 scope: 'Erik e Arlindo: 18 tiras, dois retratos, sprites estaticos, carregador, testes e evidencias da integracao'

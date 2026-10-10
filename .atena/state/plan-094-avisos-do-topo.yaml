@@ -1,0 +1,39 @@
+id: PLAN-094
+spec: SPEC-167
+spec_file: .atena/specs/SPEC-167-avisos-do-topo-sem-acumular-nem-colidir-bug-042.md
+mode: per-plan
+status: IMPLEMENTED_LOCAL_AWAITING_PLAYTEST
+created: '2026-10-10'
+request_classification: PLAN_DEVIATION
+deviation_id: DEV-034
+authorization_verbatim: 'atena vamos tentar arrumar isso: BUG-036 / PLAN-080 / SPEC-147'
+approval_basis: 'Dono escolheu por plano, avisos longos um de cada vez, fala do herói espera a pilha liberar e fazer agora e voltar (2026-10-10).'
+checkpoint: B-003/S-006 (concluido)
+return:
+  plan: PLAN-071
+  state_file: .atena/state/plan-071-playtest-ranking.yaml
+  checkpoint_observed: B-006/S-011
+batches:
+  B-001: {title: Avisos, steps: [S-001, S-002, S-003], status: DONE_LOCAL}
+  B-002: {title: Fala do herói, steps: [S-004], status: DONE_LOCAL}
+  B-003: {title: Testes e registro, steps: [S-005, S-006], status: DONE_LOCAL}
+steps:
+  S-001: 'ui/hud.gd: limite real de avisos (vivos) e teto de altura; o mais antigo sai na hora.'
+  S-002: 'ui/hud.gd: largura de aviso de 470 px, livre da ficha.'
+  S-003: 'ui/hud.gd: avisos longos em fila, um por vez.'
+  S-004: 'ui/run.gd: fala do herói espera a pilha liberar (máx. 6 s).'
+  S-005: 'tests/test_playtest_fixes.gd: rajada no mesmo quadro, retângulos contra a ficha em 1280x720; mutação.'
+  S-006: 'Capturas depois, EVID-236, cartão BUG-042, índices, reconciliar plan.yaml e voltar ao PLAN-071.'
+gates:
+  dependencies: NO_NEW_DEPENDENCIES
+  new_art: NOT_REQUIRED
+  commit_push_build_export: NOT_AUTHORIZED
+  other_sessions_changes: PRESERVE_UNTOUCHED
+  files_expected: [ui/hud.gd, ui/run.gd, tests/test_playtest_fixes.gd]
+blocking_gaps: []
+return_to: PLAN-071 (B-006/S-011, active_plan sem alteração)
+evidence_before: .atena/generated/bug-036-diag/
+commit_push_build_export: NOT_PERFORMED
+evidence: EVID-236
+verification: 'suite 0 falhas; mutacao 3 falhas; smoke ok; kit_test OK; mobile_buttons_check 146/0; controller_check 90/0; run real sem quests (4 avisos, 92 px, fala livre)'
+residual: 'quests e chefe vivos: pilha de avisos em y=247-340 sobre a cabeca do heroi (EVID-236 pendencia 1)'

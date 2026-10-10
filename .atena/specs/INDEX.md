@@ -213,6 +213,8 @@ Gerado por `node tools/atena_index.js` (não editar à mão). Agrupa pelo **stat
 | [SPEC-164](SPEC-164-eventos-aleatorios-novos-mec-005.md) | Seis eventos aleatórios novos (MEC-005) | IMPLEMENTADA e publicada (ac2bc86, EVID-228); aceite subjetivo pendente do playtest |
 | [SPEC-165](SPEC-165-sistema-de-ui-e-menu-de-pausa-mec-003.md) | Sistema de UI e novo menu de pausa (MEC-003, fase 1) | IMPLEMENTADA e publicada (455beca, EVID-229); direção visual ainda DRAFT: aguarda aprovação do dono |
 | [SPEC-166](SPEC-166-nova-ui-lote-2-quartel-selecao-e-titulo-mec-003.md) | Nova UI, lote 2: Quartel, seleção de herói e mapa, e título no UiKit (MEC-003) | IMPLEMENTADA em 2026-10-09 (PLAN-093, EVID-231); aguarda playtest; título sem mudança por escolha (P3) |
+| [SPEC-167](SPEC-167-avisos-do-topo-sem-acumular-nem-colidir-bug-042.md) | Avisos do topo sem acumular nem colidir com a ficha e a fala do herói (BUG-042, continua o BUG-036) | IMPLEMENTADA LOCAL em 2026-10-10 (PLAN-094, EVID-236); aguarda playtest; pendência com quests e chefe |
+| [SPEC-168](SPEC-168-questlog-a-direita-sem-moldura-mec-064.md) | Questlog à direita, sem moldura e translúcido (MEC-064; resolve a pendência da EVID-236) | IMPLEMENTADA LOCAL em 2026-10-10 (PLAN-095, EVID-237); aguarda playtest |
 
 ## Substituída (2)
 

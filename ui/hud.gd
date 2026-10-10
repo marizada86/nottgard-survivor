@@ -19,7 +19,13 @@ signal pause_items_pressed
 
 const STATUS_MAX_LINES := 4
 const STACK_TOP := 90.0   # abaixo do relógio, do nome da fase e do ícone da regra
-const STACK_WIDTH := 680.0
+const STACK_WIDTH := 640.0   # a barra do chefe tem 580 px; 640 deixa a direita livre para o questlog (x >= 968)
+const QUESTLOG_TOP := 66.0        # abaixo dos botões 1x e ? (y 12 a 58)
+const QUESTLOG_MARGIN := 12.0
+const TOAST_MAX_COUNT := 4
+const TOAST_MAX_HEIGHT := 120.0   # cabe a epígrafe de 2 linhas e mais 3 avisos curtos; abaixo disso fica acima da fala do herói
+const TOAST_WIDTH := 470.0        # 640 - 235 = 405 > 385: não encosta na ficha do herói
+const TOAST_LONG_CHARS := 60
 
 @onready var info_label: Label = %InfoLabel  # sem uso desde a SPEC-147 (o Estige virou o StatusChip); o herói está no HeroPanel
 @onready var stage_rule_icon: TextureRect = %StageRuleIcon
@@ -54,6 +60,8 @@ var quest_panel: QuestPanel  # SPEC-147: objetivos dos acontecimentos da fase (S
 var top_stack: VBoxContainer  # SPEC-147: chefe, quests, status e avisos empilhados no topo central
 var status_chip: StatusChip  # SPEC-147: Estige (na água) e Esquecimento
 var eco_banner: EcoBanner     # SPEC-152: faixa do Eco de Nottgard (6 s, sem pausar)
+var _long_toast: Label            # SPEC-167: o aviso longo vivo (só um por vez)
+var _long_toast_queue: Array = []   # avisos longos à espera: [texto, cor]
 var eco_counter: Label        # SPEC-152: "Ecos 1/4", só depois do primeiro achado na fase
 var mobile: MobileControls
 var event_pointer: EventPointer  # SPEC-159 (MEC-061): setas de evento na borda da tela
@@ -158,7 +166,10 @@ func _ready() -> void:
 		%PauseHelpBtn.text = "Como jogar"
 		_setup_mobile_offers()
 		TouchUI.prepare(self)
-		get_viewport().size_changed.connect(func(): mobile.layout_controls(Game.touch_safe_rect()))
+		_place_questlog()
+		get_viewport().size_changed.connect(func():
+			mobile.layout_controls(Game.touch_safe_rect())
+			_place_questlog())
 		_confirm_dialog = ConfirmationDialog.new()
 		_confirm_dialog.title = "Confirmar"
 		_confirm_dialog.ok_button_text = "Confirmar"
@@ -195,6 +206,7 @@ func _ready() -> void:
 	stage_progress.offset_bottom = 47.0
 	add_child(stage_progress)
 	event_pointer.avoid_nodes.append(stage_progress)
+	event_pointer.avoid_nodes.append(quest_panel)   # SPEC-168: a seta de evento não cobre o questlog
 	_build_pause_menu()
 
 func _setup_controller_pause() -> void:
@@ -274,7 +286,7 @@ static func styx_status(b: Battle) -> Dictionary:
 			"tip": "Esquecimento do Estige: você não consegue se aproximar do rio enquanto durar."}
 	return {}
 
-## SPEC-147 (IN-069, IN-072): barra do chefe, quests, linhas de status e avisos numa pilha só; o container empilha,
+## SPEC-147 (IN-069, IN-072): barra do chefe, linhas de status e avisos numa pilha só (as quests moraram aqui até a SPEC-168); o container empilha,
 ## então nenhum desses blocos cobre outro, qualquer que seja o número de linhas.
 func _build_top_stack() -> void:
 	top_stack = VBoxContainer.new()
@@ -289,9 +301,15 @@ func _build_top_stack() -> void:
 	add_child(top_stack)
 	boss_panel.reparent(top_stack, false)
 	boss_panel.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	# SPEC-168: o questlog mora no canto direito, fora da pilha do topo, abaixo dos botões 1x e ?
 	quest_panel = QuestPanel.new()
-	quest_panel.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-	top_stack.add_child(quest_panel)
+	quest_panel.set_anchors_preset(Control.PRESET_TOP_RIGHT)
+	quest_panel.offset_left = -(QuestPanel.LOG_WIDTH + QUESTLOG_MARGIN)
+	quest_panel.offset_right = -QUESTLOG_MARGIN
+	quest_panel.offset_top = QUESTLOG_TOP
+	quest_panel.grow_horizontal = Control.GROW_DIRECTION_BEGIN
+	quest_panel.grow_vertical = Control.GROW_DIRECTION_END
+	add_child(quest_panel)
 	objective_label = Label.new()
 	objective_label.name = "ObjectiveLabel"
 	objective_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
@@ -303,9 +321,18 @@ func _build_top_stack() -> void:
 	objective_label.visible = false
 	top_stack.add_child(objective_label)
 	toast_box.reparent(top_stack, false)
-	toast_box.size_flags_horizontal = Control.SIZE_FILL
+	toast_box.size_flags_horizontal = Control.SIZE_SHRINK_CENTER   # SPEC-167: só a largura do aviso, livre da ficha
+	toast_box.custom_minimum_size.x = TOAST_WIDTH
 	# a pilha fica na ordem de desenho que o ToastBox tinha: abaixo da ficha C, das ofertas e das pausas
 	move_child(top_stack, prompt_label.get_index())
+	move_child(quest_panel, prompt_label.get_index())
+
+## SPEC-168: no celular os botões de topo (Pausa, Ficha, Ajuda, 1x) ocupam o canto; o questlog desce para baixo deles.
+func _place_questlog() -> void:
+	var top := QUESTLOG_TOP
+	if mobile != null and is_instance_valid(mobile) and mobile.regions.has(Game.ACTION_RUN_PAUSE):
+		top = maxf(top, (mobile.regions[Game.ACTION_RUN_PAUSE] as Rect2).end.y + 8.0)
+	quest_panel.offset_top = top
 
 func has_modal() -> bool:
 	return _confirm_dialog.visible or _controls_panel.visible or items_panel.visible or pause_panel.visible or Playtest.is_overlay_open()
@@ -841,24 +868,76 @@ static func offer_icon_path(o: Dictionary) -> String:
 func show_eco(text: String, source: String, known: bool) -> void:
 	eco_banner.show_eco(text, source, known, float(Data.table("secrets").get("_regras", {}).get("faixa_segundos", 6.0)))
 
+## SPEC-167 (BUG-042): avisos do topo. No máximo `TOAST_MAX_COUNT` vivos e `TOAST_MAX_HEIGHT` px de altura (o mais antigo sai na
+## hora, sem esperar o `queue_free`), na largura `TOAST_WIDTH` que deixa a ficha livre; avisos longos (epígrafe, rumor) entram um por vez.
 func toast(text: String, color: Color = Color(1, 1, 1)) -> void:
-	if toast_box.get_child_count() >= 4:
-		toast_box.get_child(0).queue_free()
+	if text.length() > TOAST_LONG_CHARS and is_instance_valid(_long_toast):
+		_long_toast_queue.append([text, color])
+		return
+	_show_toast(text, color)
+
+func _show_toast(text: String, color: Color) -> void:
 	var l := Label.new()
 	l.text = text
 	l.modulate = color
 	l.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	if text.length() > 60:
-		# epígrafes de fase (SPEC-117) são longas: quebram em até 640 px e ficam mais tempo na tela
-		l.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		l.custom_minimum_size.x = 640.0
 	l.add_theme_color_override("font_outline_color", Color(0, 0, 0))
 	l.add_theme_constant_override("outline_size", 5)
+	var long := text.length() > TOAST_LONG_CHARS
+	if long:
+		# epígrafes de fase (SPEC-117) são longas: quebram na largura do aviso e ficam mais tempo na tela
+		l.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		_long_toast = l
+	l.custom_minimum_size.x = TOAST_WIDTH
+	l.set_meta("toast_h", _toast_height(l, text))
 	toast_box.add_child(l)
-	var tw := create_tween()
-	tw.tween_interval(3.0 + maxf(0.0, float(text.length() - 60)) * 0.04)
+	_trim_toasts()
+	var tw := l.create_tween()
+	tw.tween_interval(3.0 + maxf(0.0, float(text.length() - TOAST_LONG_CHARS)) * 0.04)
 	tw.tween_property(l, "modulate:a", 0.0, 0.6)
-	tw.tween_callback(l.queue_free)
+	tw.tween_callback(_drop_toast.bind(l))
+
+## Altura estimada do aviso na largura do bloco (o layout só mede no quadro seguinte).
+func _toast_height(l: Label, text: String) -> float:
+	var font := l.get_theme_font("font")
+	var font_size := l.get_theme_font_size("font_size")
+	return font.get_multiline_string_size(text, HORIZONTAL_ALIGNMENT_CENTER, TOAST_WIDTH, font_size,
+			-1, TextServer.BREAK_WORD_BOUND | TextServer.BREAK_MANDATORY).y
+
+func _live_toasts() -> Array:
+	var live: Array = []
+	for c in toast_box.get_children():
+		if not c.is_queued_for_deletion():
+			live.append(c)
+	return live
+
+func _trim_toasts() -> void:
+	var live := _live_toasts()
+	var gap := float(toast_box.get_theme_constant("separation"))
+	while live.size() > 1:
+		var height := 0.0
+		for c in live:
+			height += float(c.get_meta("toast_h", 20.0)) + gap
+		if live.size() <= TOAST_MAX_COUNT and height - gap <= TOAST_MAX_HEIGHT:
+			break
+		_drop_toast(live.pop_front())
+
+func _drop_toast(l: Variant) -> void:
+	if not is_instance_valid(l) or l.is_queued_for_deletion():
+		return
+	toast_box.remove_child(l)
+	l.queue_free()
+	if l == _long_toast:
+		_long_toast = null
+		if not _long_toast_queue.is_empty():
+			var next: Array = _long_toast_queue.pop_front()
+			_show_toast(String(next[0]), next[1])
+
+## Retângulo na tela ocupado pelos avisos vivos (vazio quando não há aviso); a fala do herói o consulta.
+func toast_rect() -> Rect2:
+	if _live_toasts().is_empty():
+		return Rect2()
+	return toast_box.get_global_rect()
 
 func show_items_panel(b: Battle) -> void:
 	hero_panel.note_sheet_opened()

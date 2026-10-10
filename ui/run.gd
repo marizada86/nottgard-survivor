@@ -566,6 +566,7 @@ func _process(dt: float) -> void:
 	if _edge_fog != null and is_instance_valid(_edge_fog):
 		_edge_fog.proximity = battle.edge_proximity(battle.hero.pos)
 	_update_low_hp_bark()
+	_update_pending_bark()
 
 func _sync() -> void:
 	var h := battle.hero
@@ -1053,7 +1054,39 @@ var _bark_label: Label
 var _bark_low_armed := true
 var _bark_low_last_ms := -100000
 
+## SPEC-167 (BUG-042): a fala não aparece por cima dos avisos do topo; espera a pilha liberar o retângulo (no máximo 6 s).
+const BARK_SIZE := Vector2(190, 36)
+const BARK_WAIT_MS := 6000
+var _bark_pending := ""
+var _bark_pending_since := 0
+
+func _bark_rect() -> Rect2:
+	return Rect2(fx.get_global_transform_with_canvas() * (hero_node.position + Vector2(-95, -118)), BARK_SIZE)
+
+func _bark_blocked() -> bool:
+	if hud == null or hero_node == null:
+		return false
+	var toasts: Rect2 = hud.toast_rect()
+	return toasts.size != Vector2.ZERO and toasts.intersects(_bark_rect())
+
 func _bark(trigger: String) -> void:
+	if hero_node == null or battle == null or not bool(Game.profile.data.settings.get("barks", true)):
+		return
+	# o aviso e a fala costumam nascer no mesmo quadro e o layout da pilha só assenta no seguinte: decide no próximo `_process`
+	if _bark_pending == "":
+		_bark_pending_since = Time.get_ticks_msec()
+	_bark_pending = trigger
+
+func _update_pending_bark() -> void:
+	if _bark_pending == "" or hero_node == null:
+		return
+	if _bark_blocked() and Time.get_ticks_msec() - _bark_pending_since < BARK_WAIT_MS:
+		return
+	var trigger := _bark_pending
+	_bark_pending = ""
+	_bark_now(trigger)
+
+func _bark_now(trigger: String) -> void:
 	if hero_node == null or battle == null or not bool(Game.profile.data.settings.get("barks", true)):
 		return
 	var lines: Array = Data.table("barks").get(battle.hero.id, {}).get(trigger, [])
