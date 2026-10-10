@@ -1,0 +1,252 @@
+{
+  "revision": "FILA-028-AR-SE/v01",
+  "content_state": "DRAFT",
+  "tool": "built-in imagegen",
+  "selection": {
+    "AR01": "v02",
+    "SE01": "v03",
+    "SE02": "v03"
+  },
+  "reports": [
+    {
+      "code": "AR01",
+      "version": "v01",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "12e9a33b51971e33d373935d56afd042ea0510d19d54e4cd42ccb761b1f7fef5",
+      "source_copy_hash_pass": true,
+      "reference_hash_pass": true,
+      "border_dominant_rgb": [
+        1,
+        251,
+        253
+      ],
+      "border_max_variation": 6,
+      "border_target_cyan_max_error": 8,
+      "foreground_bbox_approx": [
+        282,
+        64,
+        1019,
+        1195
+      ],
+      "foreground_height_fraction": 0.9019,
+      "margin_fraction_approx": 0.047,
+      "square": true,
+      "selected": false
+    },
+    {
+      "code": "AR01",
+      "version": "v02",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "ec841f2ae35f89f80af419e01a7510edbc8628b6c5a7bfc1700a4151d1e0dc03",
+      "source_copy_hash_pass": true,
+      "reference_hash_pass": true,
+      "border_dominant_rgb": [
+        1,
+        252,
+        253
+      ],
+      "border_max_variation": 7,
+      "border_target_cyan_max_error": 8,
+      "foreground_bbox_approx": [
+        362,
+        200,
+        925,
+        1070
+      ],
+      "foreground_height_fraction": 0.6938,
+      "margin_fraction_approx": 0.1467,
+      "square": true,
+      "selected": true
+    },
+    {
+      "code": "SE01",
+      "version": "v01",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "a72a631a2be504b6593583c014f20185d497af6ec74cedcbb7a13418a1b614e5",
+      "source_copy_hash_pass": true,
+      "reference_hash_pass": true,
+      "border_dominant_rgb": [
+        1,
+        252,
+        253
+      ],
+      "border_max_variation": 7,
+      "border_target_cyan_max_error": 8,
+      "foreground_bbox_approx": [
+        381,
+        150,
+        872,
+        1075
+      ],
+      "foreground_height_fraction": 0.7376,
+      "margin_fraction_approx": 0.1196,
+      "square": true,
+      "selected": false
+    },
+    {
+      "code": "SE01",
+      "version": "v02",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "ac39ce999d9b7f4886e8578e4a4fc7f328350cc5fb018b121ac1cba3b1feded4",
+      "source_copy_hash_pass": true,
+      "reference_hash_pass": true,
+      "border_dominant_rgb": [
+        1,
+        253,
+        253
+      ],
+      "border_max_variation": 7,
+      "border_target_cyan_max_error": 8,
+      "foreground_bbox_approx": [
+        424,
+        144,
+        863,
+        1094
+      ],
+      "foreground_height_fraction": 0.7576,
+      "margin_fraction_approx": 0.1148,
+      "square": true,
+      "selected": false
+    },
+    {
+      "code": "SE01",
+      "version": "v03",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "3c802d25fc4fdf77c02b38bb3b6469804ed1f0b2541e7e4cf957533632f56d08",
+      "source_copy_hash_pass": true,
+      "reference_hash_pass": true,
+      "border_dominant_rgb": [
+        1,
+        253,
+        253
+      ],
+      "border_max_variation": 8,
+      "border_target_cyan_max_error": 9,
+      "foreground_bbox_approx": [
+        483,
+        268,
+        794,
+        945
+      ],
+      "foreground_height_fraction": 0.5399,
+      "margin_fraction_approx": 0.2137,
+      "square": true,
+      "selected": true
+    },
+    {
+      "code": "SE02",
+      "version": "v01",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "0f6b89be2d37d311f98ea601649a1fe81029d441c168315fab9f3c00cbe045a9",
+      "source_copy_hash_pass": true,
+      "reference_hash_pass": true,
+      "border_dominant_rgb": [
+        1,
+        250,
+        253
+      ],
+      "border_max_variation": 7,
+      "border_target_cyan_max_error": 9,
+      "foreground_bbox_approx": [
+        89,
+        61,
+        1181,
+        1193
+      ],
+      "foreground_height_fraction": 0.9027,
+      "margin_fraction_approx": 0.0486,
+      "square": true,
+      "selected": false
+    },
+    {
+      "code": "SE02",
+      "version": "v02",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "99c6c77090c8bce3124d8196cfb83dabb1e350e618a5c5741f26deef784cf8c7",
+      "source_copy_hash_pass": true,
+      "reference_hash_pass": true,
+      "border_dominant_rgb": [
+        1,
+        251,
+        253
+      ],
+      "border_max_variation": 9,
+      "border_target_cyan_max_error": 10,
+      "foreground_bbox_approx": [
+        89,
+        157,
+        1181,
+        1193
+      ],
+      "foreground_height_fraction": 0.8262,
+      "margin_fraction_approx": 0.0486,
+      "square": true,
+      "selected": false
+    },
+    {
+      "code": "SE02",
+      "version": "v03",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "d31f373d4bb2baa332c10b60941f2f0ef27ca78cc1964159bdf4f82956781451",
+      "source_copy_hash_pass": true,
+      "reference_hash_pass": true,
+      "border_dominant_rgb": [
+        1,
+        251,
+        253
+      ],
+      "border_max_variation": 7,
+      "border_target_cyan_max_error": 8,
+      "foreground_bbox_approx": [
+        218,
+        273,
+        1040,
+        1031
+      ],
+      "foreground_height_fraction": 0.6045,
+      "margin_fraction_approx": 0.1707,
+      "square": true,
+      "selected": true
+    }
+  ],
+  "visual_acceptance": "PENDING_OWNER",
+  "runtime_admission": false,
+  "method": "Read-only RGB analysis. Foreground bbox excludes colors within 35 levels of dominant border cyan; glow bounds approximate, not a final mask.",
+  "pending": [
+    "Owner artistic acceptance and 80/48px readability",
+    "Background removal and final export deferred",
+    "SE03 requires approved SE02 reference"
+  ]
+}

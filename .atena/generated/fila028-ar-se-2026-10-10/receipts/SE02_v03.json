@@ -1,0 +1,27 @@
+{
+  "code": "SE02",
+  "item": "camara_selada",
+  "prompt": "Use case: precise-object-edit. Change ONLY SCALE AND FRAMING. Preserve the supplied plain sealed crypt doorway exactly: stone arch, closed iron door, three wax seals, faint violet bottom slit, cracks, style and palette. Uniformly shrink the WHOLE doorway with its stone base to occupy CENTRAL 60 PERCENT of square canvas height, centered, at least 20 percent flat empty padding above and below and on both sides. Do not crop or add anything. Uniform solid cyan #00FFFF background with no gradient or scenery.",
+  "references": [
+    {
+      "path": "assets/interactions/loja.png",
+      "sha256": "b7c092ab509af9687288004d3b0c693f470487b8bd4dbea2f46b353f336afba7",
+      "role": "style anchor"
+    },
+    {
+      "path": "assets/interactions/doacao.png",
+      "sha256": "df364ad5b3672c04f61a4cd0eef2e6185218c518d31217b299a2c6abb27fee0d",
+      "role": "style anchor"
+    }
+  ],
+  "state": "GENERATED_PENDING_VISUAL_ACCEPTANCE",
+  "content_state": "DRAFT",
+  "runtime_admission": false,
+  "actual_references": [
+    "C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/.atena/generated/fila028-ar-se-2026-10-10/native-sources/SE02_v02.png"
+  ],
+  "version": "v03",
+  "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-9ce59bf0-5046-4ab7-90a5-d20b48fa6b8c.png",
+  "destination": ".atena/generated/fila028-ar-se-2026-10-10/native-sources/SE02_v03.png",
+  "native_destination": ".atena/generated/art-candidates/fila028-ar-se/SE02_v03.png"
+}

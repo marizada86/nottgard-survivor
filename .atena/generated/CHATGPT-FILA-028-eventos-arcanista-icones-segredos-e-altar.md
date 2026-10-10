@@ -1,7 +1,7 @@
 ---
 id: "CHATGPT-FILA-028"
 title: "Fila de geração: eventos aleatórios, Arcanista, ícones das armas e equipamentos novos, segredos e altar animado"
-status: "2026-10-10: AL01 e EV01–EV06 aceitas visualmente; IC01–IC13 geradas DRAFT com auditoria e aceite pendente; preparacao runtime pendente; AR/SE/BN nao iniciados"
+status: "2026-10-10: AL01 e EV01–EV06 aceitas visualmente; IC01–IC13 geradas DRAFT com auditoria e aceite pendente; preparacao runtime pendente; AR01/SE01/SE02 geradas DRAFT; SE03/ruinas/BN nao iniciados"
 priority: "normal: depois da FILA-027 (Erik e Arlindo)"
 created: "2026-10-09"
 relations: ["[[ART-PROMPTS-061-eventos-arcanista-icones-segredos-e-altar]]", "[[ART-PROMPTS-059-icones-das-bencaos-novas]]", "[[SPEC-164-eventos-aleatorios-novos-mec-005]]"]
@@ -69,12 +69,12 @@ Equipamentos únicos (`assets/icons/items/`):
 
 ## 4. AR: Arcanista (ART-041)
 
-- [ ] gerada · [ ] aprovada: AR01 `arcanista` (NPC, fundo ciano)
+- [x] gerada · [ ] aprovada: AR01 `arcanista` (NPC, fundo ciano)
 
 ## 5. SE: segredos da fatia piloto (ART-043)
 
-- [ ] gerada · [ ] aprovada: SE01 `eco` (miniatura 128 × 128, fundo ciano)
-- [ ] gerada · [ ] aprovada: SE02 `camara_selada` (fundo ciano)
+- [x] gerada · [ ] aprovada: SE01 `eco` (miniatura 128 × 128, fundo ciano)
+- [x] gerada · [ ] aprovada: SE02 `camara_selada` (fundo ciano)
 - [ ] gerada · [ ] aprovada: SE03 `camara_aberta` (com a SE02 aprovada anexada)
 
 ## 6. SE: ruína de cada fase (ART-043)

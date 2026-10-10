@@ -1,4 +1,23 @@
 version: 2
+fila028_publish_2026_10_10:
+  request_classification: PLAN_DEVIATION
+  route: commit-push-requested-assets-then-return-to-visual-review
+  authorization: 'atena commit e push'
+  mode: per-plan
+  checkpoint: GIT/COMMIT-PUSH-VERIFY
+  status: AUTHORIZED_PREPARED
+  branch: codex/assets-preparation-2026-10-10
+  main_in_scope: false
+  return_checkpoint: S-004/OWNER-VISUAL-REVIEW
+fila028_ar_se_2026_10_10:
+  state_file: .atena/state/fila028-ar-se.yaml
+  status: GENERATED_AUDITED_AWAITING_OWNER_REVIEW
+  mode: per-plan
+  checkpoint: S-004/OWNER-VISUAL-REVIEW
+  scope_approval: 'Aprovo esse plano'
+  evidence: .atena/evidence/fila028-ar-se-2026-10-10.md
+  content_state: DRAFT
+  runtime_admission: false
 fila028_icons_2026_10_10:
   state_file: .atena/state/fila028-icons.yaml
   status: GENERATED_AUDITED_AWAITING_OWNER_REVIEW
@@ -9,6 +28,7 @@ fila028_icons_2026_10_10:
   content_state: DRAFT
   runtime_admission: false
   evidence: .atena/evidence/fila028-icons-2026-10-10.md
+  commit: 0e2d2e6772d315f06608c69aa1d61d630d596148
 fila028_generation_2026_10_10:
   state_file: .atena/state/fila028-generation.yaml
   mode: per-plan

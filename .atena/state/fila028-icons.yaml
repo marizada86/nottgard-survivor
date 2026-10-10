@@ -25,5 +25,6 @@ next_output: 'Aceite ou correcoes identificando codigo e versao; nenhuma promoca
 next_checks: 'IC04 margem, IC03 tolerancia, IC05 tres partes e IC09 tres pontas'
 next_approval: PENDING_OWNER_VISUAL_ACCEPTANCE
 commit_authorization: 'atena, commit e continue'
-commit_status: AUTHORIZED_PREPARED
+commit_status: COMMITTED_LOCAL
+commit: 0e2d2e6772d315f06608c69aa1d61d630d596148
 commit_scope: 'IC01-IC13 DRAFT, fontes, prompts, galeria, auditoria e estado; aceite visual permanece pendente'
