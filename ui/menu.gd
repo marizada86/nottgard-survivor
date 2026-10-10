@@ -17,18 +17,21 @@ const AbyssPanel := preload("res://ui/abyss_panel.gd")
 @onready var codex_cat: OptionButton = %CodexCat
 @onready var codex_list: ItemList = %CodexList
 @onready var codex_text: RichTextLabel = %CodexText
-@onready var aim_opt: OptionButton = %AimOpt
-@onready var vol_opt: HSlider = %VolOpt
-@onready var music_vol_opt: HSlider = %MusicVolOpt
-@onready var sfx_vol_opt: HSlider = %SfxVolOpt
-@onready var ambience_vol_opt: HSlider = %AmbienceVolOpt
-@onready var music_mute_opt: CheckBox = %MusicMuteOpt
-@onready var sfx_mute_opt: CheckBox = %SfxMuteOpt
-@onready var ambience_mute_opt: CheckBox = %AmbienceMuteOpt
-@onready var reduced_impact_opt: CheckBox = %ReducedImpactOpt
-@onready var barks_opt: CheckBox = %BarksOpt
-@onready var display_mode_opt: OptionButton = %DisplayModeOpt
-@onready var resolution_opt: OptionButton = %ResolutionOpt
+## SPEC-166 (MEC-003 lote 2): as opções vêm do OptionsPanel (mesmo componente da pausa); estes nomes são apelidos dos controles dele,
+## para as verificações e o foco por controle seguirem valendo.
+var options_panel: OptionsPanel
+var aim_opt: OptionButton
+var vol_opt: HSlider
+var music_vol_opt: HSlider
+var sfx_vol_opt: HSlider
+var ambience_vol_opt: HSlider
+var music_mute_opt: CheckBox
+var sfx_mute_opt: CheckBox
+var ambience_mute_opt: CheckBox
+var reduced_impact_opt: CheckBox
+var barks_opt: CheckBox
+var display_mode_opt: OptionButton
+var resolution_opt: OptionButton
 @onready var diff_opt: OptionButton = %DiffOpt
 @onready var guide_btn: Button = %GuideBtn
 @onready var reset_btn: Button = %ResetBtn
@@ -67,34 +70,25 @@ func _ready() -> void:
 	hero_list.item_selected.connect(func(_i): _refresh_hero())
 	stage_list.item_selected.connect(func(_i): _refresh_stage())
 	play_btn.pressed.connect(_play)
+	options_panel = OptionsPanel.new()   # SPEC-166: no lugar dos controles que o menu montava um a um
+	$Tabs/Opções/Content.add_child(options_panel)
+	$Tabs/Opções/Content.move_child(options_panel, 0)
+	aim_opt = options_panel.aim
+	vol_opt = options_panel.master_vol
+	music_vol_opt = options_panel.music_vol
+	sfx_vol_opt = options_panel.sfx_vol
+	ambience_vol_opt = options_panel.ambience_vol
+	music_mute_opt = options_panel.music_mute
+	sfx_mute_opt = options_panel.sfx_mute
+	ambience_mute_opt = options_panel.ambience_mute
+	reduced_impact_opt = options_panel.reduced_impact
+	barks_opt = options_panel.barks
+	display_mode_opt = options_panel.display_mode
+	resolution_opt = options_panel.resolution
 	codex_cat.item_selected.connect(func(_i): _fill_codex())
 	codex_list.item_selected.connect(_show_codex)
-	for t in ["Inimigos", "Armas", "Itens"]:
-		codex_cat.add_item(t)
-	aim_opt.add_item("Automática (inimigo mais próximo)")
-	aim_opt.add_item("Mouse (mira no cursor)")
-	aim_opt.item_selected.connect(func(i):
-		Game.set_aim(Battle.Aim.MOUSE if i == 1 else Battle.Aim.AUTO))
-	vol_opt.value_changed.connect(func(v):
-		Game.profile.data.settings.volume = v
-		Game.apply_settings()
-		Game.save())
-	music_vol_opt.value_changed.connect(func(v): _save_audio_setting("music_volume", v))
-	sfx_vol_opt.value_changed.connect(func(v): _save_audio_setting("sfx_volume", v))
-	ambience_vol_opt.value_changed.connect(func(v): _save_audio_setting("ambience_volume", v))
-	music_mute_opt.toggled.connect(func(muted): _save_audio_mute("music", muted))
-	sfx_mute_opt.toggled.connect(func(muted): _save_audio_mute("sfx", muted))
-	ambience_mute_opt.toggled.connect(func(muted): _save_audio_mute("ambience", muted))
-	reduced_impact_opt.toggled.connect(func(on): _save_reduced_impact(on))
-	barks_opt.toggled.connect(func(on): _save_barks(on))
-	for label in ["Janela", "Sem borda", "Tela cheia (F11)"]:
-		display_mode_opt.add_item(label)
-	display_mode_opt.item_selected.connect(func(index):
-		Game.set_window_mode(String(Game.WINDOW_MODES[index])))
-	for resolution in Game.SUPPORTED_RESOLUTIONS:
-		resolution_opt.add_item(resolution)
-	resolution_opt.item_selected.connect(func(index):
-		Game.set_resolution(resolution_opt.get_item_text(index)))
+	for cat in Catalog.CATEGORIES:
+		codex_cat.add_item(String(Catalog.LABELS[cat]))   # SPEC-166: os mesmos nomes do catalogo da pausa
 	for i in 4:
 		diff_opt.add_item("Maldição %d  (inimigos +%d%%, moedas +%d%%)" % [i, i * 25, i * 25])
 	diff_opt.item_selected.connect(func(i):
@@ -109,6 +103,12 @@ func _ready() -> void:
 	%Tabs.add_child(abyss_panel)
 	%Tabs.move_child(abyss_panel, 1)
 	abyss_panel.changed.connect(_refresh_stage)
+	# SPEC-166: moldura e abas no padrão da ficha C (só estilo; estrutura e nomes inalterados)
+	UiKit.style_tab_container(%Tabs)
+	for list in [hero_list, stage_list, codex_list, hq_list]:
+		UiKit.style_list(list)
+	for text in [hero_info, stage_info, codex_text, hq_info]:
+		UiKit.style_text(text)
 	_refresh_all()
 	var controller_options := preload("res://ui/controller_options.gd").new()
 	$Tabs/Opções/Content.add_child(controller_options)
@@ -160,7 +160,7 @@ func _layout_play_action() -> void:
 	play_btn.offset_left = play_btn.offset_right - 320
 	play_btn.offset_bottom = safe.end.y - get_viewport_rect().size.y - 18
 	play_btn.offset_top = play_btn.offset_bottom - 58
-	%Tabs.offset_bottom = play_btn.offset_top - 16 if playing_tab else safe.end.y - get_viewport_rect().size.y - (24 if Game.touch_controls_enabled() else 10)
+	%Tabs.offset_bottom = play_btn.offset_top - 34 if playing_tab else safe.end.y - get_viewport_rect().size.y - (24 if Game.touch_controls_enabled() else 10)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if not Game.controls.accepts(event) or Game.controls.capture_action != "" or Playtest._guide_open or Playtest._note_open or _hq_open:
@@ -256,48 +256,11 @@ func _refresh_all() -> void:
 	_fill_achievements()
 	_fill_codex()
 	_fill_hqs()
-	aim_opt.select(1 if Game.aim_mode() == Battle.Aim.MOUSE else 0)
-	vol_opt.set_value_no_signal(float(p.data.settings.volume))
-	music_vol_opt.set_value_no_signal(float(p.data.settings.music_volume))
-	sfx_vol_opt.set_value_no_signal(float(p.data.settings.sfx_volume))
-	ambience_vol_opt.set_value_no_signal(float(p.data.settings.ambience_volume))
-	music_mute_opt.set_pressed_no_signal(bool(p.data.settings.get("music_muted", false)))
-	sfx_mute_opt.set_pressed_no_signal(bool(p.data.settings.get("sfx_muted", false)))
-	ambience_mute_opt.set_pressed_no_signal(bool(p.data.settings.get("ambience_muted", false)))
-	reduced_impact_opt.set_pressed_no_signal(bool(p.data.settings.get("reduced_impact", false)))
-	barks_opt.set_pressed_no_signal(bool(p.data.settings.get("barks", true)))
-	display_mode_opt.select(Game.WINDOW_MODES.find(String(p.data.settings.get("window_mode", "windowed"))))
-	resolution_opt.select(Game.SUPPORTED_RESOLUTIONS.find(String(p.data.settings.get("resolution", "1280x720"))))
+	options_panel.refresh()   # SPEC-166: aim, volumes, mudos, falas, impacto, modo de tela e resolucao
 	diff_opt.select(int(p.data.settings.difficulty))
 	if Game.touch_controls_enabled():
 		TouchUI.adapt_sizes(self)
 
-
-func _save_audio_setting(key: String, value: float) -> void:
-	Game.profile.data.settings[key] = value
-	if value > 0.0001:
-		var channel := key.trim_suffix("_volume")
-		Game.profile.data.settings["%s_muted" % channel] = false
-		match channel:
-			"music": music_mute_opt.set_pressed_no_signal(false)
-			"sfx": sfx_mute_opt.set_pressed_no_signal(false)
-			"ambience": ambience_mute_opt.set_pressed_no_signal(false)
-	Game.apply_settings()
-	Game.save()
-
-
-func _save_barks(on: bool) -> void:
-	Game.profile.data.settings["barks"] = on
-	Game.save()
-
-func _save_reduced_impact(on: bool) -> void:
-	Game.profile.data.settings["reduced_impact"] = on
-	Game.save()
-
-func _save_audio_mute(channel: String, muted: bool) -> void:
-	Game.profile.data.settings["%s_muted" % channel] = muted
-	Game.apply_settings()
-	Game.save()
 
 func _ach_name(id: String) -> String:
 	for a in Data.table("achievements").achievements:
@@ -415,29 +378,16 @@ func _fill_achievements() -> void:
 
 # ------------------------------------------------------------------ códex
 
+## SPEC-166: o códex do Quartel usa o mesmo Catalog do menu de pausa (entradas, bloqueados e detalhe).
 func _fill_codex() -> void:
 	codex_list.clear()
 	codex_ids.clear()
 	codex_text.text = ""
-	var cat: String = ["enemies", "weapons", "items"][codex_cat.selected if codex_cat.selected >= 0 else 0]
-	var seen: Dictionary = Game.profile.data.codex[cat]
-	var src: Dictionary
-	if cat == "items":
-		src = {}
-		for u in Data.table("items").uniques:
-			src[u.id] = u
-	else:
-		src = Data.table(cat)
-	for id in src:
-		codex_ids.append(id)
-		var known: bool = seen.has(id)
-		var icon_path := ""
-		match cat:
-			"enemies": icon_path = "res://assets/enemies/%s.png" % id
-			"weapons": icon_path = "res://assets/icons/weapons/%s.png" % id
-			"items": icon_path = "res://assets/icons/items/%s.png" % id
-		var icon: Texture2D = load(icon_path) if known and ResourceLoader.exists(icon_path) else null
-		codex_list.add_item(String(src[id].name) if known else "???", icon)
+	var cat: String = Catalog.CATEGORIES[clampi(codex_cat.selected, 0, Catalog.CATEGORIES.size() - 1)]
+	for e in Catalog.entries(cat, Game.profile.data.codex):
+		codex_ids.append(e.id)
+		var icon: Texture2D = load(String(e.icon)) if bool(e.known) and ResourceLoader.exists(String(e.icon)) else null
+		codex_list.add_item(String(e.name), icon)
 	_codex_cat_cache = cat
 
 var _codex_cat_cache := "enemies"
@@ -445,19 +395,7 @@ var _codex_cat_cache := "enemies"
 func _show_codex(i: int) -> void:
 	var id: String = codex_ids[i]
 	var cat := _codex_cat_cache
-	if not Game.profile.data.codex[cat].has(id):
-		codex_text.text = "[color=#888888]Ainda não descoberto.[/color]"
-		return
-	if cat == "enemies":
-		var d: Dictionary = Data.table("enemies")[id]
-		codex_text.text = "[b]%s[/b]\nPV %d · CA %d (%d%%) · CAM %d (%d%%) · dano %s · velocidade %.1f\n\n%s\nResistências: %s" % [d.name, d.hp, d.ca, clampi((int(d.ca) - 10) * 3, 0, 30), d.cam, clampi((int(d.cam) - 10) * 3, 0, 30), d.atk, float(d.speed), d.get("note", ""), str(d.get("resist", "nenhuma"))]
-	elif cat == "weapons":
-		var d: Dictionary = Data.table("weapons")[id]
-		codex_text.text = "[b]%s[/b]\nOrigem: %s\nTipo: %s · dano %s (%s, atributo %s) · recarga %.1fs\n\n%s" % [d.name, d.src, d.kind, d.dice if d.dice != "" else "—", d.dtype, d.attr, float(d.cd), d.desc]
-	else:
-		for u in Data.table("items").uniques:
-			if u.id == id:
-				codex_text.text = "[b]%s[/b] [color=#ff8c26](único · %s)[/color]\n%s\n\n%s" % [u.name, u.slot, Items.mods_text(u.mods), u.get("note", "")]
+	codex_text.text = Catalog.detail(cat, id, Game.profile.data.codex[cat].has(id))
 
 # ------------------------------------------------------------------ histórias
 

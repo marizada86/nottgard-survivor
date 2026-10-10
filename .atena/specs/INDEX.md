@@ -7,9 +7,9 @@ Gerado por `node tools/atena_index.js` (não editar à mão). Agrupa pelo **stat
 | aberta (rascunho ou planejada) | 6 |
 | aprovada, sem fechar | 4 |
 | pausada | 2 |
-| entregue | 153 |
+| entregue | 154 |
 | substituída | 2 |
-| **total** | **167** |
+| **total** | **168** |
 
 ## Números repetidos
 
@@ -55,7 +55,7 @@ Gerado por `node tools/atena_index.js` (não editar à mão). Agrupa pelo **stat
 | [SPEC-101](SPEC-101-polimento-proporcoes-movimento-herois.md) | Auditoria e piloto de proporções no movimento dos heróis | SPEC-106 de Durvall aprovada; produção pausada por falta de fluxo local 2D adequado |
 | [SPEC-154](SPEC-154-pixels-soltos-dos-herois-pre-reducao-das-tiras-bug-029.md) | Pixels soltos nos heróis: pré-redução das tiras para o tamanho de tela (BUG-029) | PAUSADA em 2026-10-09 (PLAN-082): o dono não adotou a variante C; HERO_STRIP_SET vazio e BUG-029 aberto; registros e ferramentas commitados (eb57860) |
 
-## Entregue (153)
+## Entregue (154)
 
 | Spec | Título | Status |
 |---|---|---|
@@ -212,6 +212,7 @@ Gerado por `node tools/atena_index.js` (não editar à mão). Agrupa pelo **stat
 | [SPEC-163](SPEC-163-barra-de-progresso-da-fase-mec-002.md) | Barra de progresso da fase na HUD (MEC-002) | IMPLEMENTADA e publicada (2205341, EVID-226); aceite subjetivo pendente do playtest |
 | [SPEC-164](SPEC-164-eventos-aleatorios-novos-mec-005.md) | Seis eventos aleatórios novos (MEC-005) | IMPLEMENTADA e publicada (ac2bc86, EVID-228); aceite subjetivo pendente do playtest |
 | [SPEC-165](SPEC-165-sistema-de-ui-e-menu-de-pausa-mec-003.md) | Sistema de UI e novo menu de pausa (MEC-003, fase 1) | IMPLEMENTADA e publicada (455beca, EVID-229); direção visual ainda DRAFT: aguarda aprovação do dono |
+| [SPEC-166](SPEC-166-nova-ui-lote-2-quartel-selecao-e-titulo-mec-003.md) | Nova UI, lote 2: Quartel, seleção de herói e mapa, e título no UiKit (MEC-003) | IMPLEMENTADA em 2026-10-09 (PLAN-093, EVID-231); aguarda playtest; título sem mudança por escolha (P3) |
 
 ## Substituída (2)
 

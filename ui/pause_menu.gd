@@ -92,8 +92,9 @@ func _build_settings_page(volume_row: Control) -> Control:
 	_settings_box.add_child(UiKit.label("VOLUME GERAL", 16, UiKit.GOLD))
 	options = OptionsPanel.new()
 	_settings_box.add_child(options)
-	# a mira já tem o botão da aba Jogo (com a tecla Tab); aqui ela só confundiria
+	# a mira já tem o botão da aba Jogo (com a tecla Tab) e o volume mestre já está na linha acima; aqui só confundiriam
 	options.aim.get_parent().hide()
+	options.master_vol.get_parent().hide()
 	return scroll
 
 func _build_catalog_page() -> Control:

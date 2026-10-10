@@ -119,3 +119,35 @@ static func tab_step(ev: InputEvent) -> int:
 		if ev.button_index == JOY_BUTTON_RIGHT_SHOULDER:
 			return 1
 	return 0
+
+## SPEC-166 (MEC-003 lote 2): o padrão da ficha C num `TabContainer` nativo (o Quartel): abas com a moldura da ficha e painel
+## de conteúdo com a moldura de detalhe. Só o estilo muda: nomes de nós, ordem das abas e navegação seguem os mesmos.
+static func style_tab_container(tabs: TabContainer) -> void:
+	# os itens de tema das abas pertencem ao TabContainer (que os repassa ao TabBar interno)
+	var bar := tabs.get_tab_bar()
+	for node in [tabs, bar]:
+		node.add_theme_stylebox_override("tab_unselected", SheetArt.frame(SheetArt.TAB, 12, 8))
+		node.add_theme_stylebox_override("tab_hovered", SheetArt.frame(SheetArt.TAB, 12, 8, Color(1.15, 1.1, 0.9)))
+		node.add_theme_stylebox_override("tab_selected", SheetArt.frame(SheetArt.TAB, 12, 8, Color(1.55, 1.25, 0.6)))
+		node.add_theme_stylebox_override("tab_focus", box(Color(0, 0, 0, 0), GOLD, 2, 4))
+		node.add_theme_color_override("font_selected_color", GOLD)
+		node.add_theme_color_override("font_unselected_color", TEXT)
+		node.add_theme_color_override("font_hovered_color", Color(1.0, 0.95, 0.8))
+		node.add_theme_font_size_override("font_size", 16)
+	# painel de conteúdo discreto (fundo escuro e borda fina): as molduras ornamentadas ficam nos detalhes, sem moldura dentro de moldura
+	var panel := box(Color(0.045, 0.04, 0.065, 0.84), GOLD_DIM, 2, 6)
+	panel.set_content_margin_all(14)
+	tabs.add_theme_stylebox_override("panel", panel)
+
+## Lista (`ItemList`) no padrão: fundo escuro, borda de ouro apagado e seleção dourada.
+static func style_list(list: ItemList) -> void:
+	list.add_theme_stylebox_override("panel", box(Color(0.06, 0.05, 0.08, 0.88), GOLD_DIM, 1, 4))
+	list.add_theme_stylebox_override("focus", box(Color(0, 0, 0, 0), GOLD, 2, 4))
+	list.add_theme_stylebox_override("selected", box(Color(0.33, 0.26, 0.1, 0.9), GOLD_DIM, 1, 3))
+	list.add_theme_stylebox_override("selected_focus", box(Color(0.45, 0.35, 0.13, 0.95), GOLD, 2, 3))
+	list.add_theme_color_override("font_selected_color", Color(1.0, 0.93, 0.72))
+
+## Texto rico de detalhe (herói, fase, códex, diário) dentro da moldura de detalhe.
+static func style_text(text: RichTextLabel) -> void:
+	text.add_theme_stylebox_override("normal", SheetArt.frame(SheetArt.DETAIL, 16, 18))
+	text.add_theme_stylebox_override("focus", SheetArt.frame(SheetArt.DETAIL, 16, 18, Color(1.3, 1.15, 0.8)))

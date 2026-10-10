@@ -107,14 +107,13 @@ deferred_requests:
   - id: DEV-028
     request: 'Lote 2 da nova UI (MEC-003): Quartel, selecao de heroi e mapa e titulo no UiKit, com OptionsPanel e Catalog no lugar das copias do menu.gd.'
     request_classification: PLAN_DEVIATION
-    status: IMPLEMENTED_LOCAL_AWAITING_PLAYTEST
+    status: PLANNED_AWAITING_APPROVAL
     recorded: '2026-10-09'
     authorization_verbatim: 'atena vamos para o item 2: Lote 2 da nova UI: Quartel, selecao de heroi e mapa e titulo no UiKit, com o OptionsPanel e o Catalog no lugar das copias do menu.gd'
     proposed_plan: PLAN-093
     state_file: '.atena/state/plan-093-nova-ui-lote-2.yaml'
     spec: '.atena/specs/SPEC-166-nova-ui-lote-2-quartel-selecao-e-titulo-mec-003.md'
-    approval_mode: per-plan
-    approved: '2026-10-09'
+    approval_mode: unconfigured
     route: 'Desvio do PLAN-071; direcao visual DRAFT (aprovar na primeira captura).'
   - id: DEV-026
     request: 'MEC-005: implementar mais eventos aleatorios (entrevista: 6 eventos genericos, 4 tipos, todas as fases).'

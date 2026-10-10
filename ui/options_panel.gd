@@ -1,11 +1,12 @@
 class_name OptionsPanel
 extends VBoxContainer
 ## SPEC-165 (MEC-003): configurações do jogo num componente só (áudio, mira, falas, impacto reduzido, tela).
-## Lê e grava no mesmo lugar que a aba Opções do Quartel (`profile.data.settings`, `Game.apply_settings`, `Game.save`);
-## o Quartel passa a usá-lo num lote seguinte. O volume geral fica de fora: continua no `%VolSlider` do menu de pausa.
+## Lê e grava no mesmo lugar que a aba Opções do Quartel (`profile.data.settings`, `Game.apply_settings`, `Game.save`) e é usado por ela
+## e pelo menu de pausa (a pausa esconde o volume mestre, que já tem o `%VolSlider`, e a mira, que tem o botão da aba Jogo).
 
 signal changed
 
+var master_vol: HSlider
 var aim: OptionButton
 var music_vol: HSlider
 var sfx_vol: HSlider
@@ -23,6 +24,7 @@ func _init() -> void:
 	add_theme_constant_override("separation", 8)
 	size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	add_child(UiKit.label("ÁUDIO", 16, UiKit.GOLD))
+	master_vol = _slider_row("Volume mestre", func(v): _save_master(v))
 	music_vol = _slider_row("Música", func(v): _save_volume("music_volume", v))
 	music_mute = _check("Música sem som", func(on): _save_mute("music", on))
 	sfx_vol = _slider_row("Efeitos", func(v): _save_volume("sfx_volume", v))
@@ -100,6 +102,7 @@ func refresh() -> void:
 	var s: Dictionary = Game.profile.data.settings
 	_syncing = true
 	aim.select(1 if Game.aim_mode() == Battle.Aim.MOUSE else 0)
+	master_vol.value = float(s.get("volume", 1.0))
 	music_vol.value = float(s.get("music_volume", 1.0))
 	sfx_vol.value = float(s.get("sfx_volume", 1.0))
 	ambience_vol.value = float(s.get("ambience_volume", 1.0))
@@ -114,6 +117,12 @@ func refresh() -> void:
 
 func _save(key: String, value: Variant) -> void:
 	Game.profile.data.settings[key] = value
+	Game.save()
+	changed.emit()
+
+func _save_master(value: float) -> void:
+	Game.profile.data.settings.volume = value
+	Game.apply_settings()
 	Game.save()
 	changed.emit()
 

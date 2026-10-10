@@ -2,7 +2,7 @@
 
 Atualizado em 2026-10-09 (Atena). Cada linha liga o plano à spec, ao que ele é e ao que **ainda falta**. O estado operacional (plano ativo, recibos de commit, desvios) fica em [`plan.yaml`](plan.yaml); o índice das specs, em [`../specs/INDEX.md`](../specs/INDEX.md) (gerado por `node tools/atena_index.js`). Os arquivos de plano não foram movidos nem renomeados: links antigos continuam valendo.
 
-**Resumo:** 1 plano ativo · 18 entregues e publicados, aguardando playtest ou arte · 9 esperando arte, aparelho ou o dono · 12 fechados sem pendência. Total de arquivos de plano em `state/`: 40.
+**Resumo:** 1 plano ativo · 19 entregues, aguardando playtest ou arte · 9 esperando arte, aparelho ou o dono · 12 fechados sem pendência. Total de arquivos de plano em `state/`: 41.
 
 ## Ativo
 
@@ -10,9 +10,9 @@ Atualizado em 2026-10-09 (Atena). Cada linha liga o plano à spec, ao que ele é
 |---|---|---|---|
 | PLAN-071 | SPEC-138 | Playtest Web e ranking por evidências do Discord | Aceite nos clientes finais (ranking e F7) e gates remotos; retomado em B-006/S-011 |
 
-## Entregues e publicados, aguardando playtest
+## Entregues, aguardando playtest
 
-O código está na `main` e no `origin`; o que falta é **o dono jogar** (e, onde indicado, arte).
+O código está na `main` (e, exceto o PLAN-093, no `origin`); o que falta é **o dono jogar** (e, onde indicado, arte).
 
 | Plano | Spec | O que é | Falta |
 |---|---|---|---|
@@ -33,6 +33,7 @@ O código está na `main` e no `origin`; o que falta é **o dono jogar** (e, ond
 | PLAN-090 | SPEC-072 | Clicar na HUD não move o herói (BUG-039) | Playtest |
 | PLAN-091 | SPEC-164 | Seis eventos aleatórios novos | Playtest (equilíbrio, BAL-029); arte ART-046 (FILA-028) |
 | PLAN-092 | SPEC-165 | UiKit e menu de pausa em abas | Playtest e **aprovação da direção visual** (rascunho); lote 2 da UI |
+| PLAN-093 | SPEC-166 | Nova UI, lote 2: Quartel no UiKit, Códex no Catalog, Opções no OptionsPanel | Playtest (publicação: push pendente) |
 
 ## Esperando arte, aparelho ou o dono
 

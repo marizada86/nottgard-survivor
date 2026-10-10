@@ -1,0 +1,42 @@
+id: PLAN-093
+spec: SPEC-166
+spec_file: .atena/specs/SPEC-166-nova-ui-lote-2-quartel-selecao-e-titulo-mec-003.md
+mode: per-plan
+status: IMPLEMENTED_LOCAL_AWAITING_PLAYTEST
+created: '2026-10-09'
+request_classification: PLAN_DEVIATION
+deviation_id: DEV-028
+authorization_verbatim: 'atena vamos para o item 2: Lote 2 da nova UI: Quartel, selecao de heroi e mapa e titulo no UiKit, com o OptionsPanel e o Catalog no lugar das copias do menu.gd (2026-10-09)'
+approved: '2026-10-09'
+owner_decisions: 'direcao visual aprovada (padrao da ficha C e da pausa); escopo: restilizar e unificar (mesma estrutura); aprovacao por plano (2026-10-09)'
+return: {plan: PLAN-071, checkpoint_observed: B-006/S-011}
+batches:
+  B-001: {title: Moldura e abas do Quartel no UiKit, steps: [S-001, S-002], status: DONE_LOCAL}
+  B-002: {title: Codex no Catalog, steps: [S-003, S-004], status: DONE_LOCAL}
+  B-003: {title: Opcoes no OptionsPanel, steps: [S-005, S-006, S-007], status: DONE_LOCAL}
+  B-004: {title: Selecao de heroi e mapa e titulo, steps: [S-008, S-009], status: DONE_LOCAL}
+  B-005: {title: Verificacao e registro, steps: [S-010, S-011, S-012], status: DONE_LOCAL}
+steps:
+  S-001: 'Capturas "antes" do titulo e das 8 abas (desktop e celular) e inventario do que as verificacoes exigem do menu.gd.'
+  S-002: 'TabBar do Quartel com os estilos de aba do UiKit e moldura no conteudo; nomes de nos e ordem inalterados.'
+  S-003: 'menu.gd monta o Codex com Catalog.entries e Catalog.detail; mesmos nos (codex_cat, codex_list, codex_text).'
+  S-004: 'Teste: o Codex do Quartel entrega o mesmo que o Catalog; mutacao.'
+  S-005: 'OptionsPanel na aba Opcoes; variaveis antigas viram apelidos; volume mestre, mira, maldicao, controles, guia e reset ficam no menu.'
+  S-006: 'Atualizar test_options_menu ao novo caminho; teste dos apelidos.'
+  S-007: 'Persistencia das opcoes igual a de antes (mesmas chaves do perfil).'
+  S-008: 'Moldura de detalhe do UiKit na selecao de heroi e de mapa; foco igual.'
+  S-009: 'Titulo: so fonte, cor e prompt de controle do UiKit.'
+  S-010: 'mobile_buttons_check 146/0, controller_check --headless 90/0, suite, smoke e kit_test.'
+  S-011: 'Capturas "depois" e pedido de aprovacao da direcao visual.'
+  S-012: 'EVID, cartao MEC-003 e atualizacao dos indices.'
+gates:
+  visual_direction: 'DRAFT: o dono aprova na primeira captura'
+  dependencies: NO_NEW_DEPENDENCIES
+  assets: NOT_IN_SCOPE
+  commit: EXPLICIT_APPROVAL
+  push_publish_export: EXPLICIT_APPROVAL_SEPARATE
+  documents_for_testers: NOT_UPDATED_UNTIL_OWNER_RELEASES
+  other_sessions_changes: PRESERVE_UNTOUCHED
+blocking_gaps: []
+non_blocking_gaps: [P1, P2, P3, P4]
+commit_push_build_export: "COMMITTED_LOCAL (commit seguinte); push, exportacao e aviso aos testers NOT_PERFORMED"
