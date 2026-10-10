@@ -1,0 +1,19 @@
+{
+  "id": "AO01-v01",
+  "state": "DRAFT",
+  "status": "PENDING_OWNER_VISUAL_APPROVAL",
+  "candidate": ".atena/generated/art-candidates/heroes-novos/arlindo/ao01-retrato-v01.png",
+  "sha256": "7b77f90efb3ce5f2266ad7569bbcfb52b91fe0225df6ea80c04070d4d7f9750e",
+  "size": [
+    1536,
+    1024
+  ],
+  "tool": "built-in imagegen",
+  "prompt": ".atena/generated/art045-priority-review/v01/ao01-prompt-v01.txt",
+  "visual_review": "Older face, gray beard, brown hat/coat, wine scarf and clasped gloves preserved; wet stone alley and amber lamp; pictorial finish, no visible text",
+  "runtime_admission": false,
+  "next": "AO02 idle with approved portrait, four cells, true alpha, southeast pose",
+  "owner_reply": "atena aprovado, execute o plano, por lotes está demorando, a intenção é que quando eu chegar daqui 4 horas eu verifique o maior numero de assets.",
+  "visual_approval": "APPROVED_BY_OWNER",
+  "content_state": "CANON_VISUAL_REVISION"
+}

@@ -1,0 +1,49 @@
+{
+  "id": "DEV-024",
+  "classification": "PLAN_DEVIATION",
+  "status": "APPROVED_EXECUTING",
+  "priority": "ART-045/FILA-027 before VFX",
+  "remote_update": false,
+  "main_local_revision": "240f629",
+  "sources": [
+    {
+      "source": "F:\\dev\\nottgard-survivor\\.atena\\generated\\ART-PROMPTS-060-erik-e-arlindo-jogaveis.md",
+      "snapshot": ".atena/generated/art045-priority-review/v01/ART-PROMPTS-060-erik-e-arlindo-jogaveis.md",
+      "sha256": "22ab9d930680ba0822685d81c0800704e83f9451af85eefdac4bf333f1111421",
+      "authority": "Read-only source; visual production remains DRAFT"
+    },
+    {
+      "source": "F:\\dev\\nottgard-survivor\\.atena\\generated\\CHATGPT-FILA-027-erik-e-arlindo.md",
+      "snapshot": ".atena/generated/art045-priority-review/v01/CHATGPT-FILA-027-erik-e-arlindo.md",
+      "sha256": "46cd600941cf2ccfde5983d75c55f630c820794f7edfd474094444753e42ab9d",
+      "authority": "Read-only source; visual production remains DRAFT"
+    },
+    {
+      "source": "F:\\dev\\nottcard\\assets\\portraits\\erik.png",
+      "snapshot": ".atena/generated/art045-priority-review/v01/erik.png",
+      "sha256": "14962b0bd9c5ba8c2b30973eade460148402f70a38dee575e04a47000fc30a8a",
+      "authority": "Read-only source; visual production remains DRAFT"
+    },
+    {
+      "source": "F:\\dev\\nottcard\\assets\\portraits\\arlindo.png",
+      "snapshot": ".atena/generated/art045-priority-review/v01/arlindo.png",
+      "sha256": "415274c56a0e4e386b0fc09952a152ea3fec0582ccb6c4e0ca5e88bb7c8e6dad",
+      "authority": "Read-only source; visual production remains DRAFT"
+    }
+  ],
+  "return_checkpoint": "S-007/VFX/FILA-023/H-REMAINING",
+  "remaining_vfx": 41,
+  "proposed_scope": [
+    "ER01 portrait",
+    "ER02 idle",
+    "AO01 portrait",
+    "AO02 idle"
+  ],
+  "approval_mode_proposed": "per-plan",
+  "visual_gates": "Owner approval of each portrait before idle; idle before further strips",
+  "runtime_admission": false,
+  "owner_reply": "atena prossiga conforme as recomendações",
+  "route": "execute-now-then-return",
+  "approval_mode": "per-plan",
+  "approved_scope": "Four pilots ER01 ER02 AO01 AO02, five ordered steps; separate visual gates"
+}

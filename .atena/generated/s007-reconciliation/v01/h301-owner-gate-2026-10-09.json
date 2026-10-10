@@ -1,0 +1,43 @@
+{
+  "id": "GATE-FILA-023-H301-2026-10-09",
+  "status": "APPROVED",
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "checkpoint": "S-007/VFX/FILA-023/H301-APPROVAL",
+  "frame": "H301",
+  "version": "v01",
+  "candidate": ".atena/generated/art-candidates/vfx/maelor_comunhao/maelor_comunhao_loop_00_v01.png",
+  "sha256": "ed622fe59738017a625ebd2daaf90d2f738213d1fca299d9240d08ccd3fd3969",
+  "review": ".atena/generated/s007-reconciliation/v01/h301-reference-comparison-2026-10-09.png",
+  "prompts_and_native_audit": ".atena/generated/s007-reconciliation/v01/bm-generation-jobs-2026-10-09.json",
+  "source_instruction": ".atena/generated/CHATGPT-FILA-023-vfx-habilidades-dos-herois.md",
+  "instruction": "Para cada efeito, gere primeiro o quadro marcado GATE, pare e devolva ao dono.",
+  "visual_inspected": true,
+  "visual_review": "Gentle healing light ring and soft halo, clear small plus-shaped sparkles around rim and drifting grains, open dark interior; flat top-down white-gray VFX; no character/weapon/text/cuts;96px review prepared",
+  "native_dimensions": [
+    1254,
+    1254
+  ],
+  "technical_notes": {
+    "requested": [
+      1024,
+      1024
+    ],
+    "native": [
+      1254,
+      1254
+    ],
+    "outer_border_max_luminance": 1,
+    "maximum_channel_difference": 8,
+    "normalization": "Native bytes preserved;1024 normalization and exact pivot alignment deferred; exact zero RGB not claimed"
+  },
+  "runtime_admission": false,
+  "official_manifest_assets": 202,
+  "manifest_file_sha256": "09928dd3c6f336d8ed1fc356f088e062a1d7adaf61d08fd51754cb3dfc56c913",
+  "remaining_native_vfx_frames": 47,
+  "other_Maelor_frames_generated": 0,
+  "next_if_approved": "Generate H302-H306 individually using approved H301; review six-frame loop; then only H403 Sylas peak gate.",
+  "recorded_at": "2026-10-09T15:08:13.798722+00:00",
+  "owner_reply": "atena, aprovo, continue",
+  "approval_receipt": ".atena/generated/s007-reconciliation/v01/h301-owner-approval-2026-10-09.json"
+}

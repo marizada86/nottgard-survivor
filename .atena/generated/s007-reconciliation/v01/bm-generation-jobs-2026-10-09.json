@@ -1,0 +1,220 @@
+{
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "generator": "built-in imagegen",
+  "remaining_at_start": 53,
+  "counter_field": "native_generated_since_H201",
+  "approval_receipt": ".atena/generated/s007-reconciliation/v01/h201-owner-approval-2026-10-09.json",
+  "jobs": [
+    {
+      "code": "H202",
+      "name": "brook_guarda_de_lliira_loop_01",
+      "effect": "brook_guarda_de_lliira",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a protective dome barrier seen from above: a round translucent shield ring around the center with a soft inner glow and small three-pointed star marks spaced on the rim, calm and steady. Frame 2 of 6, loop 01: phase 2 of the loop: the same pattern advanced by one sixth of the cycle (rotating or pulsing slightly). Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\nReference1 is CANON APPROVED H201 v02: preserve it as exact identity and geometry anchor. SAME four white THREE-POINTED TRI-RAY/Y-shaped stars in EXACT top,right,bottom,left slots, each EXACTLY THREE long triangular tips at120degree intervals; NO fourth tip, NO cross or diamond hole. Keep ALL symbols and ring positions STATIC; animate ONLY a subtle calm BREATHING of glow as the permitted pulsing cycle. Keep source circle center, radius, thickness and hand-painted texture unchanged; no rotation, scaling, drift, broad rays or new sparks/objects. Phase60degrees of gentle breathing glow: inner halo slightly brighter than gate, about8% stronger. Ring radius, width, marks and their positions EXACTLY FIXED. One frame, no sheet. Flat top-down, white-gray light, BLACK empty center and outside, safe margins,1024square requested, no character/weapon/text/ground.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\brook_guarda_de_lliira\\brook_guarda_de_lliira_loop_00_v02.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/brook_guarda_de_lliira/brook_guarda_de_lliira_loop_01_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "generated_at": "2026-10-09T15:01:45.636949+00:00",
+      "original_path": "C:/Users/Higor Rossini/.codex/generated_images/01a12116-a4f7-7623-abef-db43878f0eea/exec-97aef987-df3e-4d3e-a14f-59a6cbdea0f4.png",
+      "sha256": "9dfd35c3d44f632a910699f121adcdbfb92b1b9570f897e16fae2a0a581ea193",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        81,
+        74,
+        1172,
+        1130
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 10,
+      "mean_luminance": 35.29187683940895,
+      "visible_fraction_above12": 0.27418417364274833,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "H203",
+      "name": "brook_guarda_de_lliira_loop_02",
+      "effect": "brook_guarda_de_lliira",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a protective dome barrier seen from above: a round translucent shield ring around the center with a soft inner glow and small three-pointed star marks spaced on the rim, calm and steady. Frame 3 of 6, loop 02: phase 3 of the loop: advanced by two sixths of the cycle. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\nReference1 is CANON APPROVED H201 v02: preserve it as exact identity and geometry anchor. SAME four white THREE-POINTED TRI-RAY/Y-shaped stars in EXACT top,right,bottom,left slots, each EXACTLY THREE long triangular tips at120degree intervals; NO fourth tip, NO cross or diamond hole. Keep ALL symbols and ring positions STATIC; animate ONLY a subtle calm BREATHING of glow as the permitted pulsing cycle. Keep source circle center, radius, thickness and hand-painted texture unchanged; no rotation, scaling, drift, broad rays or new sparks/objects. Phase120degrees of gentle breathing glow: inner halo modestly stronger than gate, about12% brighter, still calm and open black interior. Exact same radius, band width and star slots. One frame, no sheet. Flat top-down, white-gray light, BLACK empty center and outside, safe margins,1024square requested, no character/weapon/text/ground.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\brook_guarda_de_lliira\\brook_guarda_de_lliira_loop_00_v02.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/brook_guarda_de_lliira/brook_guarda_de_lliira_loop_02_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "generated_at": "2026-10-09T15:03:00.366137+00:00",
+      "original_path": "C:/Users/Higor Rossini/.codex/generated_images/01a12116-a4f7-7623-abef-db43878f0eea/exec-b391ec10-dedc-40e1-9ef7-d0ab9ee2d01f.png",
+      "sha256": "d8b58bc231a433cf8d33ea4bc19a55f7362afcba71e27b1c58ae67389694522e",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        79,
+        71,
+        1174,
+        1135
+      ],
+      "outer_border_max_luminance": 2,
+      "maximum_channel_difference": 9,
+      "mean_luminance": 36.7350519803932,
+      "visible_fraction_above12": 0.29486313652770463,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "H204",
+      "name": "brook_guarda_de_lliira_loop_03",
+      "effect": "brook_guarda_de_lliira",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a protective dome barrier seen from above: a round translucent shield ring around the center with a soft inner glow and small three-pointed star marks spaced on the rim, calm and steady. Frame 4 of 6, loop 03: phase 4 of the loop: advanced by three sixths of the cycle, the halfway point. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\nReference1 is CANON APPROVED H201 v02: preserve it as exact identity and geometry anchor. SAME four white THREE-POINTED TRI-RAY/Y-shaped stars in EXACT top,right,bottom,left slots, each EXACTLY THREE long triangular tips at120degree intervals; NO fourth tip, NO cross or diamond hole. Keep ALL symbols and ring positions STATIC; animate ONLY a subtle calm BREATHING of glow as the permitted pulsing cycle. Keep source circle center, radius, thickness and hand-painted texture unchanged; no rotation, scaling, drift, broad rays or new sparks/objects. Phase180degrees: glow returns to APPROVED gate baseline, ring and three-point stars remain fixed. No new objects or expansion. One frame, no sheet. Flat top-down, white-gray light, BLACK empty center and outside, safe margins,1024square requested, no character/weapon/text/ground.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\brook_guarda_de_lliira\\brook_guarda_de_lliira_loop_00_v02.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/brook_guarda_de_lliira/brook_guarda_de_lliira_loop_03_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "generated_at": "2026-10-09T15:03:43.511108+00:00",
+      "original_path": "C:/Users/Higor Rossini/.codex/generated_images/01a12116-a4f7-7623-abef-db43878f0eea/exec-ca957879-3c14-469b-94ee-7179b782e68f.png",
+      "sha256": "a146a13a5af5a533f3e3f199bd37870520d95abd6d2f6339bd74032b6e0ac74f",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        85,
+        77,
+        1169,
+        1123
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 11,
+      "mean_luminance": 30.27546174410944,
+      "visible_fraction_above12": 0.25437579013504474,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "H205",
+      "name": "brook_guarda_de_lliira_loop_04",
+      "effect": "brook_guarda_de_lliira",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a protective dome barrier seen from above: a round translucent shield ring around the center with a soft inner glow and small three-pointed star marks spaced on the rim, calm and steady. Frame 5 of 6, loop 04: phase 5 of the loop: advanced by four sixths of the cycle. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\nReference1 is CANON APPROVED H201 v02: preserve it as exact identity and geometry anchor. SAME four white THREE-POINTED TRI-RAY/Y-shaped stars in EXACT top,right,bottom,left slots, each EXACTLY THREE long triangular tips at120degree intervals; NO fourth tip, NO cross or diamond hole. Keep ALL symbols and ring positions STATIC; animate ONLY a subtle calm BREATHING of glow as the permitted pulsing cycle. Keep source circle center, radius, thickness and hand-painted texture unchanged; no rotation, scaling, drift, broad rays or new sparks/objects. Phase240degrees: gentle quiet minimum of glow, about8% lower halo intensity than gate, ring core still visible. Exact unchanged radius, width and fixed four star marks. One frame, no sheet. Flat top-down, white-gray light, BLACK empty center and outside, safe margins,1024square requested, no character/weapon/text/ground.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\brook_guarda_de_lliira\\brook_guarda_de_lliira_loop_00_v02.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/brook_guarda_de_lliira/brook_guarda_de_lliira_loop_04_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "generated_at": "2026-10-09T15:04:33.912129+00:00",
+      "original_path": "C:/Users/Higor Rossini/.codex/generated_images/01a12116-a4f7-7623-abef-db43878f0eea/exec-5710f71c-c15d-4423-91ee-2c18c6f64932.png",
+      "sha256": "795e92c2e1bc58c2ed2f2431e5ae586d063de694c5dc78d65306282a54daf01b",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        87,
+        82,
+        1167,
+        1121
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 9,
+      "mean_luminance": 24.70647802629671,
+      "visible_fraction_above12": 0.23470222242571775,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "H206",
+      "name": "brook_guarda_de_lliira_loop_05",
+      "effect": "brook_guarda_de_lliira",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a protective dome barrier seen from above: a round translucent shield ring around the center with a soft inner glow and small three-pointed star marks spaced on the rim, calm and steady. Frame 6 of 6, loop 05: phase 6 of the loop: advanced by five sixths of the cycle, so that the next frame flows back into phase 1 without a visible jump. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\nReference1 is CANON APPROVED H201 v02: preserve it as exact identity and geometry anchor. SAME four white THREE-POINTED TRI-RAY/Y-shaped stars in EXACT top,right,bottom,left slots, each EXACTLY THREE long triangular tips at120degree intervals; NO fourth tip, NO cross or diamond hole. Keep ALL symbols and ring positions STATIC; animate ONLY a subtle calm BREATHING of glow as the permitted pulsing cycle. Keep source circle center, radius, thickness and hand-painted texture unchanged; no rotation, scaling, drift, broad rays or new sparks/objects. Phase300degrees: recovering toward gate baseline, about5% lower halo intensity than gate; next frame gate closes softly. SAME ring shape, center, radius, width, texture and exact four star positions. No disappear/fade-out; this is a steady looping barrier. One frame, no sheet. Flat top-down, white-gray light, BLACK empty center and outside, safe margins,1024square requested, no character/weapon/text/ground.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\brook_guarda_de_lliira\\brook_guarda_de_lliira_loop_00_v02.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/brook_guarda_de_lliira/brook_guarda_de_lliira_loop_05_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "generated_at": "2026-10-09T15:05:45.183755+00:00",
+      "original_path": "C:/Users/Higor Rossini/.codex/generated_images/01a12116-a4f7-7623-abef-db43878f0eea/exec-058851d7-2ef6-4c06-a04f-b0cd9055bfd5.png",
+      "sha256": "f353d745355e6d4792d793e3e473c06c6b20a50302f50f65703ea5960f8c3270",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        88,
+        81,
+        1167,
+        1119
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 9,
+      "mean_luminance": 27.178553986096166,
+      "visible_fraction_above12": 0.24152059502097276,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "H301",
+      "name": "maelor_comunhao_loop_00",
+      "effect": "maelor_comunhao",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a gentle healing aura: a wide soft circle of light with small plus-shaped sparkles rising and drifting outward, and a slow pulsing ring. Frame 1 of 6, loop 00: phase 1 of a seamless 6-frame loop: the pattern at 0 degrees of its cycle.\nReference is approved white-gray hand-painted VFX STYLE ONLY, not its crescent shape. Generate ONLY first Maelor healing-aura LOOP GATE. Gentle wide perfectly round soft circle of light and slow pulsing ring, centered, thin luminous ring with soft inward glow and small CLEAR PLUS-SHAPED healing sparkles distributed around circle, outward drifting tiny grains. Plus marks are small symmetric four equal perpendicular arms, not stars, letters or realistic medical props. Peaceful open dark interior, pure visually BLACK canvas beyond glow, safe margins, no flash core, explosions, ground, characters, weapon, hands, text, perspective or montage. Flat top-down, neutral white/light-gray only, readable96px,1024square requested.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/maelor_comunhao/maelor_comunhao_loop_00_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "generated_at": "2026-10-09T15:08:11.280900+00:00",
+      "original_path": "C:/Users/Higor Rossini/.codex/generated_images/01a12116-a4f7-7623-abef-db43878f0eea/exec-c5f1cd76-f257-4a01-810b-191dd81bfd12.png",
+      "sha256": "ed622fe59738017a625ebd2daaf90d2f738213d1fca299d9240d08ccd3fd3969",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        137,
+        111,
+        1117,
+        1111
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 8,
+      "mean_luminance": 27.655070600235547,
+      "visible_fraction_above12": 0.2612952745790822,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    }
+  ]
+}

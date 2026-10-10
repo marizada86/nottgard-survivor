@@ -1,0 +1,30 @@
+{
+  "id": "GATE-FILA-023-H201-2026-10-09",
+  "status": "APPROVED",
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "checkpoint": "S-007/VFX/FILA-023/H201-APPROVAL",
+  "frame": "H201",
+  "version": "v02",
+  "candidate": ".atena/generated/art-candidates/vfx/brook_guarda_de_lliira/brook_guarda_de_lliira_loop_00_v02.png",
+  "sha256": "076c90602cf4f72e7e78df90791e8dbda1d47be473f81c1687e9c91347af9166",
+  "review": ".atena/generated/s007-reconciliation/v01/h201-reference-comparison-2026-10-09.png",
+  "prompts_and_native_audit": ".atena/generated/s007-reconciliation/v01/hb-generation-jobs-2026-10-09.json",
+  "source_instruction": ".atena/generated/CHATGPT-FILA-023-vfx-habilidades-dos-herois.md",
+  "instruction": "Para cada efeito, gere primeiro o quadro marcado GATE, pare e devolva ao dono.",
+  "visual_inspected": true,
+  "visual_review": "Flat centered white-gray protective ring, black interior, gentle inward halo, four small THREE-point star marks; no visible cuts or character/weapon/text;96px preview prepared",
+  "native_dimensions": [
+    1254,
+    1254
+  ],
+  "technical_notes": "Native1254 preserved byte-for-byte;1024 normalization and pivot alignment deferred. Border luminance2, max channel difference8; exact RGB zero not claimed.",
+  "runtime_admission": false,
+  "official_manifest_assets": 202,
+  "manifest_file_sha256": "09928dd3c6f336d8ed1fc356f088e062a1d7adaf61d08fd51754cb3dfc56c913",
+  "remaining_native_vfx_frames": 53,
+  "next_if_approved": "Generate H202,H203,H204,H205,H206 individually using H201v02; review six-frame loop; then only next hero gate H301 Maelor.",
+  "recorded_at": "2026-10-09T14:52:03.634124+00:00",
+  "owner_reply": "atena, aprovo, continue",
+  "approval_receipt": ".atena/generated/s007-reconciliation/v01/h201-owner-approval-2026-10-09.json"
+}

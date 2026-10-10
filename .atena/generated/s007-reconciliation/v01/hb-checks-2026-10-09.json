@@ -1,0 +1,17 @@
+{
+  "status": "PASSED",
+  "links_checked": 11,
+  "new_selected_native_hashes": 6,
+  "rejected_native_hashes": 2,
+  "durvall_total_hashes": 6,
+  "manifest_assets": 202,
+  "manifest_sha256": "09928dd3c6f336d8ed1fc356f088e062a1d7adaf61d08fd51754cb3dfc56c913",
+  "manifest_history_comparison": {
+    "historical_sha256": "52384ac0f88ffca25952099d6c7f0e58224e7d235012ea284f55198cc2406f6a",
+    "checkout_sha256": "09928dd3c6f336d8ed1fc356f088e062a1d7adaf61d08fd51754cb3dfc56c913",
+    "head_content_equal": true,
+    "historical_hash_match": false
+  },
+  "remaining": 53,
+  "visual_gate": "H201v02_PENDING_OWNER_APPROVAL"
+}

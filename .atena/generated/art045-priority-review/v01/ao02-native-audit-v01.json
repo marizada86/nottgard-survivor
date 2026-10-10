@@ -1,0 +1,25 @@
+{
+  "id": "AO02-v01",
+  "state": "DRAFT",
+  "status": "GENERATED_PENDING_REVIEW",
+  "candidate": ".atena\\generated\\art-candidates\\heroes-novos\\arlindo\\ao02-idle-v01.png",
+  "sha256": "e6df81e5fb10c896a4a43b9f05fcb0da8df1aad15c811f9f0ee92a9132615dbf",
+  "size": [
+    2048,
+    768
+  ],
+  "requested": [
+    1024,
+    384
+  ],
+  "alpha_extrema": [
+    0,
+    254
+  ],
+  "technical_pending": [
+    "Exact grid resolution",
+    "Body height290 and baseline368",
+    "Human visual review"
+  ],
+  "runtime_admission": false
+}

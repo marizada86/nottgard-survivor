@@ -1,0 +1,72 @@
+{
+  "id": "ER02-v02",
+  "state": "DRAFT",
+  "status": "PENDING_VISUAL_APPROVAL_WITH_TECHNICAL_NORMALIZATION_PENDING",
+  "candidate": ".atena\\generated\\art-candidates\\heroes-novos\\erik\\er02-idle-v02.png",
+  "sha256": "340fbe94fb9246f840ca2d7c328e609090678e2c2a50a167552f4bb905f0fae4",
+  "size": [
+    2048,
+    768
+  ],
+  "requested": [
+    1024,
+    384
+  ],
+  "alpha_extrema": [
+    0,
+    254
+  ],
+  "transparent_fraction": 0.4844957987467448,
+  "frames": [
+    {
+      "frame": 1,
+      "bbox": [
+        96,
+        30,
+        485,
+        752
+      ],
+      "edge_alpha_max": 1
+    },
+    {
+      "frame": 2,
+      "bbox": [
+        60,
+        29,
+        459,
+        752
+      ],
+      "edge_alpha_max": 0
+    },
+    {
+      "frame": 3,
+      "bbox": [
+        60,
+        28,
+        439,
+        752
+      ],
+      "edge_alpha_max": 1
+    },
+    {
+      "frame": 4,
+      "bbox": [
+        47,
+        29,
+        422,
+        752
+      ],
+      "edge_alpha_max": 1
+    }
+  ],
+  "visual_review": "Four southeast poses; anatomical right-hand torch corrected; appearance matches approved Erik. Breathing subtle, flame changes. Body height excludes sword/flame and is not certified by this alpha audit.",
+  "pending": [
+    "Normalize grid resolution by approved asset workflow",
+    "Exact body height300/baseline368 validation",
+    "Owner idle visual acceptance"
+  ],
+  "runtime_admission": false,
+  "owner_reply": "atena aprovado, execute o plano, por lotes está demorando, a intenção é que quando eu chegar daqui 4 horas eu verifique o maior numero de assets.",
+  "visual_approval": "APPROVED_BY_OWNER",
+  "content_state": "CANON_VISUAL_REVISION"
+}

@@ -1,0 +1,300 @@
+{
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "generator": "built-in imagegen",
+  "remaining_at_start": 59,
+  "counter_field": "native_generated_since_H103",
+  "approval_receipt": ".atena/generated/s007-reconciliation/v01/h103-owner-approval-2026-10-09.json",
+  "jobs": [
+    {
+      "code": "H101",
+      "effect": "durvall_ruptura_sombria",
+      "name": "durvall_ruptura_sombria_start",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a huge heavy cleaving rift: a wide sweeping cut of about 170 degrees with a jagged torn line ripping through the middle of the band, like armor being split open, thin dark cracks inside the bright band, reach about 45 percent of the image width. Frame 1 of 6, start: the very first instant: a thin sharp bright sliver just beginning at the center, only about one quarter of the final length, a few tiny sparks right at the origin. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\nReference1 is APPROVED H103 v01 Durvall PEAK, authoritative shape, jagged cracks, orientation and pivot. Reference2 is approved physical pilot STYLE ONLY. Generate ONLY H101, one native square frame, no montage. Safe BLACK margins beyond all light. START only: a small short thin bright sliver beginning at the exact central origin, quarter final reach; most canvas BLACK. No full-sized crescent. Preserve jagged torn cut identity.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\durvall_ruptura_sombria\\durvall_ruptura_sombria_peak_v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/durvall_ruptura_sombria/durvall_ruptura_sombria_start_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "generated_at": "2026-10-09T14:44:14.339534+00:00",
+      "original_path": "C:/Users/Higor Rossini/.codex/generated_images/01a12116-a4f7-7623-abef-db43878f0eea/exec-3342511d-d187-412f-a614-836a588f1350.png",
+      "sha256": "00b891b430ae103cf252d2fb84cd871baffa6c924d16910dc2df7f985ce48844",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        606,
+        434,
+        886,
+        775
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 8,
+      "mean_luminance": 3.5478322637098763,
+      "visible_fraction_above12": 0.029036270537151927,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "H102",
+      "effect": "durvall_ruptura_sombria",
+      "name": "durvall_ruptura_sombria_sweep",
+      "version": "v02",
+      "prompt": "Generate ONE early-growth frame of approved torn cleave shown in reference1. Flat top-down, white-gray light on entirely BLACK square. SAME RIGHT-facing crescent shape, dark jagged center crack, painted white core/gray wisps; but crescent luminous bounding box MUST fit inside CENTRAL 50% of canvas: x40%..76%, y25%..75%. This is60% of peak reach and height, NOT peak extent. Exact pivot canvas center; leave TOP QUARTER and BOTTOM QUARTER entirely BLACK, broad empty LEFT half. Bright advancing edge, dim thin trailing wisps, tiny sparse sparks. No objects, text, weapon, hand, character, ground, perspective, montage. Requested1024square. Reference2 STYLE ONLY. Early expanding sweep, significantly smaller than full peak.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\durvall_ruptura_sombria\\durvall_ruptura_sombria_peak_v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/durvall_ruptura_sombria/durvall_ruptura_sombria_sweep_v02.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "generated_at": "2026-10-09T14:45:55.962105+00:00",
+      "original_path": "C:/Users/Higor Rossini/.codex/generated_images/01a12116-a4f7-7623-abef-db43878f0eea/exec-5a5a5069-d815-43fd-8548-0d8c56cf77d0.png",
+      "sha256": "809ecc013e2443033ef335632db7a9691d022f3321da017ca426326fb3e2020e",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        476,
+        284,
+        997,
+        944
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 12,
+      "mean_luminance": 13.240618855388435,
+      "visible_fraction_above12": 0.08777271582610288,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "H104",
+      "effect": "durvall_ruptura_sombria",
+      "name": "durvall_ruptura_sombria_hold",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a huge heavy cleaving rift: a wide sweeping cut of about 170 degrees with a jagged torn line ripping through the middle of the band, like armor being split open, thin dark cracks inside the bright band, reach about 45 percent of the image width. Frame 4 of 6, hold: the shape still fully extended but starting to thin out, the white core narrowing, edges becoming ragged, fewer sparks. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\nReference1 is APPROVED H103 v01 Durvall PEAK, authoritative shape, jagged cracks, orientation and pivot. Reference2 is approved physical pilot STYLE ONLY. Generate ONLY H104, one native square frame, no montage. Safe BLACK margins beyond all light. HOLD: same full-sized crescent extent and jagged dark central crack as approved peak, but visibly narrower white band, less glow and fewer sparks. Do not shift pivot.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\durvall_ruptura_sombria\\durvall_ruptura_sombria_peak_v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/durvall_ruptura_sombria/durvall_ruptura_sombria_hold_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "generated_at": "2026-10-09T14:46:37.427251+00:00",
+      "original_path": "C:/Users/Higor Rossini/.codex/generated_images/01a12116-a4f7-7623-abef-db43878f0eea/exec-ca3f9519-0174-4dc2-bbe5-49fa2cc7ebba.png",
+      "sha256": "341e6fa8418c4d4aca7f06b21116c3be8ff634cbb2fd6340da7c47dd283a3556",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        264,
+        72,
+        1090,
+        1155
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 12,
+      "mean_luminance": 23.654878551315218,
+      "visible_fraction_above12": 0.16964660454965164,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "H105",
+      "effect": "durvall_ruptura_sombria",
+      "name": "durvall_ruptura_sombria_fade",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a huge heavy cleaving rift: a wide sweeping cut of about 170 degrees with a jagged torn line ripping through the middle of the band, like armor being split open, thin dark cracks inside the bright band, reach about 45 percent of the image width. Frame 5 of 6, fade: the shape breaking apart: fragmented streaks and broken pieces, dimmer gray, the edges dissolving. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\nReference1 is APPROVED H103 v01 Durvall PEAK, authoritative shape, jagged cracks, orientation and pivot. Reference2 is approved physical pilot STYLE ONLY. Generate ONLY H105, one native square frame, no montage. Safe BLACK margins beyond all light. FADE: same outer extent/pivot, torn band breaking into separated dim GRAY fragments, black gaps, no continuous white band. Much dimmer than hold.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\durvall_ruptura_sombria\\durvall_ruptura_sombria_peak_v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/durvall_ruptura_sombria/durvall_ruptura_sombria_fade_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "generated_at": "2026-10-09T14:47:23.144679+00:00",
+      "original_path": "C:/Users/Higor Rossini/.codex/generated_images/01a12116-a4f7-7623-abef-db43878f0eea/exec-e0998efc-357c-41dd-ab06-5dcc0cefe615.png",
+      "sha256": "17bbd4c6c43348370cb860feeb1eb10113d2bbb35a1a980d0c37bbced2ad02a2",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        215,
+        60,
+        1130,
+        1169
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 10,
+      "mean_luminance": 9.735240849695646,
+      "visible_fraction_above12": 0.13503455608718767,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "H106",
+      "effect": "durvall_ruptura_sombria",
+      "name": "durvall_ruptura_sombria_dissipate",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a huge heavy cleaving rift: a wide sweeping cut of about 170 degrees with a jagged torn line ripping through the middle of the band, like armor being split open, thin dark cracks inside the bright band, reach about 45 percent of the image width. Frame 6 of 6, dissipate: the last moment: only a few faint wisps and tiny specks remain, almost black, nothing bright. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\nReference1 is APPROVED H103 v01 Durvall PEAK, authoritative shape, jagged cracks, orientation and pivot. Reference2 is approved physical pilot STYLE ONLY. Generate ONLY H106, one native square frame, no montage. Safe BLACK margins beyond all light. DISSIPATE: nearly BLACK canvas, only few extremely faint dark-gray curved scraps/specks at same outer extent. No intact band or bright crescent.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\durvall_ruptura_sombria\\durvall_ruptura_sombria_peak_v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/durvall_ruptura_sombria/durvall_ruptura_sombria_dissipate_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "generated_at": "2026-10-09T14:48:17.897575+00:00",
+      "original_path": "C:/Users/Higor Rossini/.codex/generated_images/01a12116-a4f7-7623-abef-db43878f0eea/exec-0d4d43af-58cb-4d8c-82c5-cd317fb7332d.png",
+      "sha256": "86c6d108e6b7034acbec687bcfc7ea1537cde6480b389b7870b0b5cb5826314c",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        648,
+        162,
+        1118,
+        1077
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 5,
+      "mean_luminance": 0.45893269130488973,
+      "visible_fraction_above12": 0.007401514515591574,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "H201",
+      "effect": "brook_guarda_de_lliira",
+      "name": "brook_guarda_de_lliira_loop_00",
+      "version": "v02",
+      "prompt": "EDIT reference image. Preserve same centered flat top-down ROUND white-gray painted protective energy ring, soft inward light halo, pure BLACK square background, comfortable margins, no scene or objects. Change ONLY the FOUR rim symbols: replace EVERY four-point diamond/sparkle with a THREE-POINTED STAR with EXACTLY THREE long triangular arms equally spaced120degrees. Each symbol a clear filled white concave TRI-RAY or Y-shaped star, three tips only, NO fourth tip, NO diamond center hole, NO plus/cross. Use THREE-point silhouettes with one tip up and two downward diagonals, at all four rim slots (top,right,bottom,left). Avoid ordinary four-point sparkle. Keep symbols small (roughly7%canvaswidth), ring glow/style, circular symmetry and centered black interior. No text, character, shield prop, weapon, ground or perspective. One frame, requested1024square.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\brook_guarda_de_lliira\\brook_guarda_de_lliira_loop_00_v01.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/brook_guarda_de_lliira/brook_guarda_de_lliira_loop_00_v02.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "generated_at": "2026-10-09T14:50:11.508508+00:00",
+      "original_path": "C:/Users/Higor Rossini/.codex/generated_images/01a12116-a4f7-7623-abef-db43878f0eea/exec-49bf5405-45d1-4248-922e-5be4cb8e6e0b.png",
+      "sha256": "076c90602cf4f72e7e78df90791e8dbda1d47be473f81c1687e9c91347af9166",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        84,
+        79,
+        1170,
+        1122
+      ],
+      "outer_border_max_luminance": 2,
+      "maximum_channel_difference": 8,
+      "mean_luminance": 29.775797511758228,
+      "visible_fraction_above12": 0.25340346298543226,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    }
+  ],
+  "rejected_versions": [
+    {
+      "code": "H102",
+      "effect": "durvall_ruptura_sombria",
+      "name": "durvall_ruptura_sombria_sweep",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a huge heavy cleaving rift: a wide sweeping cut of about 170 degrees with a jagged torn line ripping through the middle of the band, like armor being split open, thin dark cracks inside the bright band, reach about 45 percent of the image width. Frame 2 of 6, sweep: the strike sweeping outward: the shape growing fast, a bright leading edge with a thin faint trail behind it, about 60 percent of the final reach. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\nReference1 is APPROVED H103 v01 Durvall PEAK, authoritative shape, jagged cracks, orientation and pivot. Reference2 is approved physical pilot STYLE ONLY. Generate ONLY H102, one native square frame, no montage. Safe BLACK margins beyond all light. SWEEP growth only: about60% of approved peak reach, growing broad right-facing torn band, bright leading edge and faint trailing wisps. Clearly smaller than peak.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\durvall_ruptura_sombria\\durvall_ruptura_sombria_peak_v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/durvall_ruptura_sombria/durvall_ruptura_sombria_sweep_v01.png",
+      "status": "REJECTED_VISUAL",
+      "transparent_background": false,
+      "generated_at": "2026-10-09T14:45:08.448301+00:00",
+      "original_path": "C:/Users/Higor Rossini/.codex/generated_images/01a12116-a4f7-7623-abef-db43878f0eea/exec-ebec2bbe-6eee-4793-aa89-6f62fe1b1424.png",
+      "sha256": "133fab19caf65d04aa3ae177b086108553dc16b4e43e33d8ee17423d732c4e08",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        405,
+        169,
+        1039,
+        1061
+      ],
+      "outer_border_max_luminance": 2,
+      "maximum_channel_difference": 12,
+      "mean_luminance": 23.017499344998715,
+      "visible_fraction_above12": 0.1530604458078646,
+      "native_bytes_preserved": true,
+      "runtime_admission": false,
+      "rejection_reason": "Sweep too close to peak extent; needs early growth about60% reach."
+    },
+    {
+      "code": "H201",
+      "effect": "brook_guarda_de_lliira",
+      "name": "brook_guarda_de_lliira_loop_00",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a protective dome barrier seen from above: a round translucent shield ring around the center with a soft inner glow and small three-pointed star marks spaced on the rim, calm and steady. Frame 1 of 6, loop 00: phase 1 of a seamless 6-frame loop: the pattern at 0 degrees of its cycle.\nReference is approved painted white-gray VFX STYLE ONLY, never its crescent shape. Generate ONLY H201 Brook protective ring first loop GATE: perfectly round, flat top-down centered translucent light barrier ring, gentle inner glow, small THREE-POINTED STAR marks spaced on its rim. Pure black background, white-gray light, safe margins, no actual shield prop, dome perspective, character or text. Readable at96px; no montage.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/brook_guarda_de_lliira/brook_guarda_de_lliira_loop_00_v01.png",
+      "status": "REJECTED_VISUAL",
+      "transparent_background": false,
+      "generated_at": "2026-10-09T14:49:25.831943+00:00",
+      "original_path": "C:/Users/Higor Rossini/.codex/generated_images/01a12116-a4f7-7623-abef-db43878f0eea/exec-f9b3457f-27c3-4e83-a960-261ab39b8de1.png",
+      "sha256": "f73b6547d7e57f0a172c2f81c6571dafd20b3a115e74c1c32301a73fda1d18df",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        83,
+        84,
+        1171,
+        1148
+      ],
+      "outer_border_max_luminance": 2,
+      "maximum_channel_difference": 8,
+      "mean_luminance": 30.390787756690553,
+      "visible_fraction_above12": 0.25609151194646035,
+      "native_bytes_preserved": true,
+      "runtime_admission": false,
+      "rejection_reason": "Four-point sparkle marks instead of required three-point stars."
+    }
+  ]
+}

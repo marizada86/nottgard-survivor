@@ -5,14 +5,14 @@ active_plan:
   spec_id: SPEC-121
   state_file: '.atena/state/plan-053-imagens.yaml'
   mode: per-plan
-  checkpoint: DEV-006/S-003
-  status: SUSPENDED_FOR_GIT_PUBLICATION
+  checkpoint: S-007/VFX/FILA-023/REVIEW-60
+  status: NATIVE_GENERATION_COMPLETE_REVIEW_PENDING
   approved: '2026-10-03'
   resumed: '2026-10-07'
   request_classification: PLAN_DEVIATION
 plan_cursor:
-  current: 'DEV006/S003 commit/push solicitado; FILA02236/36 candidatas revisadas; H103 permanece pendente.'
-  next: 'Após push verificado retornar ao aceite H103;59 fontes VFX restantes. PLAN071 B006/S011 preservado.'
+  current: 'FILA02360/60 geradas; quatro pilotos ART045 gerados; revisao e normalizacao pendentes.'
+  next: 'Revisar galeria64; normalizar grade/pivo; admissao runtime depende do aceite.'
 previous_plan_cursor:
   current: 'PLAN-059 (SPEC-125) commitado e publicado (05264f0, 1392627) em 2026-10-05; o playtest decide Docas, Molor e fases finais.'
   next: 'Retomar PLAN-053 (imagens, Shu: attack_02, death_03, death_04) e/ou abrir spec de balanceamento BAL-018 (precisa de linha de base do bot por heroi). Push da main (1 a 3 commits a frente) exige aprovacao.'
@@ -113,7 +113,7 @@ deferred_requests:
   - id: DEV-002
     request: 'Controles e menus mobile; joystick de toque somente para andar. Proposta solicitada pelo dono em 2026-10-06.'
     request_classification: PLAN_DEVIATION
-    status: EXECUTING_WITH_RETURN
+    status: NATIVE_GENERATION_COMPLETE_REVIEW_PENDING
     proposed_plan: PLAN-067
     state_file: '.atena/state/plan-067-controles-e-menus-mobile.yaml'
     note: 'Dono escolheu per-plan (1) e autorizou sim, mobile agora em 2026-10-06; PLAN-066 suspenso com retorno preservado.'
@@ -175,4 +175,43 @@ image_git_h103_publication:
   route: publish-now-then-return
   receipt: .atena/generated/h103-publication-2026-10-09/plan.json
   return_checkpoint: S-007/VFX/FILA-023/H103-APPROVAL
-  return_status: AWAITING_OWNER_APPROVAL
+  return_status: NATIVE_GENERATION_COMPLETE_REVIEW_PENDING
+
+image_queue_continuation_2026_10_09:
+  plan: PLAN-053
+  state_file: .atena/state/plan-053-imagens.yaml
+  branch: codex/fila-imagens-continuacao-2026-10-09
+  local_commit: 373979b
+  classification: IN_PLAN
+  checkpoint: S-007/VFX/FILA-023/REVIEW-60
+  status: NATIVE_GENERATION_COMPLETE_REVIEW_PENDING
+  remote_review: explicitly_authorized_and_push_pull_verified
+  visual_gate: H403_v02_APPROVED
+  remaining_native_vfx_frames: 0
+  active_plan_in_this_branch: PLAN-053
+  main_plan_083: separate_branch_unchanged
+
+image_priority_review_2026_10_09:
+  deviation: DEV-024
+  status: NATIVE_GENERATION_COMPLETE_REVIEW_PENDING
+  proposal: .atena/generated/art045-priority-review/v01/proposal.md
+  receipt: .atena/generated/art045-priority-review/v01/review.json
+  h403_v02: APPROVED_BY_OWNER
+  return_checkpoint: S-007/VFX/FILA-023/H-REMAINING
+  remaining_native_vfx_frames: 0
+
+continuous_draft_execution:
+  approval_mode: per-plan
+  status: APPROVED
+  receipt: .atena/generated/art045-priority-review/v01/continuous-draft-authorization-v02.json
+  human_review: deferred_until_owner_returns
+  runtime_admission: false
+
+continuous_generation_result:
+  status: NATIVE_GENERATION_COMPLETE_REVIEW_PENDING
+  native_vfx: 60
+  remaining_native_vfx_frames: 0
+  hero_pilot_pieces: 4
+  gallery: .atena/generated/continuous-draft-2026-10-09/index.html
+  audit: .atena/generated/continuous-draft-2026-10-09/completion-audit.json
+  runtime_admission: false

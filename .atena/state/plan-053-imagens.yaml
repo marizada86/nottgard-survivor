@@ -3,9 +3,9 @@ active_plan:
   id: PLAN-053
   spec_id: SPEC-121
   current_step: S-007
-  checkpoint: DEV-006/S-003
+  checkpoint: S-007/VFX/FILA-023/REVIEW-60
   total_steps: 7
-  status: SUSPENDED_FOR_GIT_PUBLICATION
+  status: NATIVE_GENERATION_COMPLETE_REVIEW_PENDING
   approval:
     mode: per-plan
     checkpoint: PLAN
@@ -19,10 +19,10 @@ active_plan:
     date: '2026-10-03'
     evidence: Pedido pode continuar após seleção Por plano; gates visuais preservados.
 plan_cursor:
-  current: 'DEV006/S003 commit/push solicitado; FILA02236/36 candidatas revisadas; H103 permanece pendente.'
-  next: 'Após push verificado retornar ao aceite H103;59 fontes VFX restantes. PLAN071 B006/S011 preservado.'
-  review: '.atena/generated/s007-reconciliation/v01/h103-reference-comparison-2026-10-09.png'
-  evidence: '.atena/evidence/s007-fila022-completa-h103-gate-2026-10-09.md'
+  current: 'FILA02360/60 geradas; quatro pilotos ART045 gerados; revisao e normalizacao pendentes.'
+  next: 'Revisar galeria64; normalizar grade/pivo; admissao runtime depende do aceite.'
+  review: '.atena/generated/s007-reconciliation/v01/h403-reference-comparison-2026-10-09.png'
+  evidence: '.atena/evidence/s007-maelor-completo-sylas-gate-2026-10-09.md'
 identity_gate:
   id: GATE-PILARES-IDENTITY-V01
   status: APPROVED
@@ -108,20 +108,18 @@ pilares_recovery_decision:
   approval_receipt: .atena/generated/pilares-resume/v01/attack03-pendant-owner-approval-2026-10-08.json
 
 vfx_gate:
-  id: GATE-FILA-023-H103-2026-10-09
-  status: PENDING_OWNER_APPROVAL
-  frame: H103
-  version: v01
-  generated: 1
-  remaining_native_vfx_frames: 59
-  official_manifest_assets: 202
+  id: GATE-FILA-023-H403-2026-10-09
+  status: APPROVED_BY_OWNER
+  frame: H403
+  version: v02
+  remaining_native_vfx_frames: 0
   runtime_admission: false
-  receipt: .atena/generated/s007-reconciliation/v01/h103-owner-gate-2026-10-09.json
+  receipt: .atena/generated/s007-reconciliation/v01/h403-owner-gate-2026-10-09.json
 
 vfx_generation_progress:
-  jobs: .atena/generated/s007-reconciliation/v01/mh-generation-jobs-2026-10-09.json
-  native_generated_since_M03: 6
-  last_frame: H103
+  jobs: .atena/generated/s007-reconciliation/v01/ms-generation-jobs-2026-10-09.json
+  native_generated_since_H301: 6
+  last_frame: H403
 
 completed_vfx_gates:
   arco_largo_radiante:
@@ -130,7 +128,7 @@ completed_vfx_gates:
     frame: E03
     version: v01
     generated: 6
-    remaining_native_vfx_frames: 101
+    remaining_native_vfx_frames: 0
     official_manifest_assets: 202
     runtime_admission: false
     receipt: .atena/generated/s007-reconciliation/v01/e03-owner-gate-2026-10-09.json
@@ -144,7 +142,7 @@ completed_vfx_gates:
     frame: F03
     version: v01
     generated: 6
-    remaining_native_vfx_frames: 95
+    remaining_native_vfx_frames: 0
     official_manifest_assets: 202
     runtime_admission: false
     receipt: .atena/generated/s007-reconciliation/v01/f03-owner-gate-2026-10-09.json
@@ -158,7 +156,7 @@ completed_vfx_gates:
     frame: P01
     version: v01
     generated: 8
-    remaining_native_vfx_frames: 87
+    remaining_native_vfx_frames: 0
     official_manifest_assets: 202
     runtime_admission: false
     receipt: .atena/generated/s007-reconciliation/v01/p01-owner-gate-2026-10-09.json
@@ -172,7 +170,7 @@ completed_vfx_gates:
     frame: Q01
     version: v03
     generated: 8
-    remaining_native_vfx_frames: 79
+    remaining_native_vfx_frames: 0
     official_manifest_assets: 202
     runtime_admission: false
     receipt: .atena/generated/s007-reconciliation/v01/q01-owner-gate-2026-10-09.json
@@ -186,7 +184,7 @@ completed_vfx_gates:
     frame: R01
     version: v02
     generated: 8
-    remaining_native_vfx_frames: 72
+    remaining_native_vfx_frames: 0
     official_manifest_assets: 202
     runtime_admission: false
     receipt: .atena/generated/s007-reconciliation/v01/r01-owner-gate-2026-10-09.json
@@ -200,7 +198,7 @@ completed_vfx_gates:
     frame: N03
     version: v01
     generated: 6
-    remaining_native_vfx_frames: 66
+    remaining_native_vfx_frames: 0
     official_manifest_assets: 202
     runtime_admission: false
     receipt: .atena/generated/s007-reconciliation/v01/n03-owner-gate-2026-10-09.json
@@ -214,7 +212,7 @@ completed_vfx_gates:
     frame: M03
     version: v01
     generated: 6
-    remaining_native_vfx_frames: 60
+    remaining_native_vfx_frames: 0
     official_manifest_assets: 202
     runtime_admission: false
     receipt: .atena/generated/s007-reconciliation/v01/m03-owner-gate-2026-10-09.json
@@ -268,4 +266,55 @@ image_git_h103_publication:
   route: publish-now-then-return
   receipt: .atena/generated/h103-publication-2026-10-09/plan.json
   return_checkpoint: S-007/VFX/FILA-023/H103-APPROVAL
-  return_status: AWAITING_OWNER_APPROVAL
+  return_status: NATIVE_GENERATION_COMPLETE_REVIEW_PENDING
+
+completed_durvall_gate:
+  frame: H103
+  version: v01
+  status: APPROVED
+  receipt: .atena/generated/s007-reconciliation/v01/h103-owner-approval-2026-10-09.json
+  sequence: .atena/generated/s007-reconciliation/v01/durvall-sequence-native-audit-2026-10-09.json
+
+continuation_sync:
+  status: PUBLISHED_VERIFIED
+  commit: 373979b
+  receipt: .atena/generated/s007-reconciliation/v01/continuation-git-receipt-2026-10-09.json
+
+completed_brook_gate:
+  frame: H201
+  version: v02
+  status: APPROVED
+  receipt: .atena/generated/s007-reconciliation/v01/h201-owner-approval-2026-10-09.json
+  sequence: .atena/generated/s007-reconciliation/v01/brook-sequence-native-audit-2026-10-09.json
+
+completed_maelor_gate:
+  frame: H301
+  version: v01
+  status: APPROVED
+  receipt: .atena/generated/s007-reconciliation/v01/h301-owner-approval-2026-10-09.json
+  sequence: .atena/generated/s007-reconciliation/v01/maelor-sequence-native-audit-2026-10-09.json
+
+image_priority_review_2026_10_09:
+  deviation: DEV-024
+  status: NATIVE_GENERATION_COMPLETE_REVIEW_PENDING
+  proposal: .atena/generated/art045-priority-review/v01/proposal.md
+  receipt: .atena/generated/art045-priority-review/v01/review.json
+  h403_v02: APPROVED_BY_OWNER
+  return_checkpoint: S-007/VFX/FILA-023/H-REMAINING
+  remaining_native_vfx_frames: 0
+
+continuous_draft_execution:
+  approval_mode: per-plan
+  status: APPROVED
+  receipt: .atena/generated/art045-priority-review/v01/continuous-draft-authorization-v02.json
+  human_review: deferred_until_owner_returns
+  runtime_admission: false
+
+continuous_generation_result:
+  status: NATIVE_GENERATION_COMPLETE_REVIEW_PENDING
+  native_vfx: 60
+  remaining_native_vfx_frames: 0
+  hero_pilot_pieces: 4
+  gallery: .atena/generated/continuous-draft-2026-10-09/index.html
+  audit: .atena/generated/continuous-draft-2026-10-09/completion-audit.json
+  runtime_admission: false

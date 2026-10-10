@@ -1,0 +1,47 @@
+{
+  "id": "GATE-FILA-023-H403-2026-10-09",
+  "status": "APPROVED_BY_OWNER",
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "checkpoint": "S-007/VFX/FILA-023/H403-APPROVAL",
+  "frame": "H403",
+  "version": "v02",
+  "candidate": ".atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_peak_v02.png",
+  "sha256": "d9b23e455cf3b7a83e8e6c10820227b2cb829cb09949ed2b1abeb16bb9aa9919",
+  "review": ".atena/generated/s007-reconciliation/v01/h403-reference-comparison-2026-10-09.png",
+  "prompts_and_native_audit": ".atena/generated/s007-reconciliation/v01/ms-generation-jobs-2026-10-09.json",
+  "source_instruction": ".atena/generated/CHATGPT-FILA-023-vfx-habilidades-dos-herois.md",
+  "instruction": "Para cada efeito, gere primeiro o quadro marcado GATE, pare e devolva ao dono.",
+  "visual_inspected": true,
+  "visual_review": "Horizontal right-facing shadow-smoke ribbon, bright leading core and torn wispy tail around center; three small abstract mask-shaped light glints. No character/weapon/text/cuts;96px review prepared",
+  "technical_notes": {
+    "native_dimensions": [
+      1254,
+      1254
+    ],
+    "requested": [
+      1024,
+      1024
+    ],
+    "visible_bbox_above12": [
+      566,
+      511,
+      1214,
+      737
+    ],
+    "outer_border_max_luminance": 1,
+    "maximum_channel_difference": 12,
+    "normalization": "Native1254 preserved;1024 normalization/exact pivot alignment deferred; no exact zero RGB claimed"
+  },
+  "runtime_admission": false,
+  "official_manifest_assets": 202,
+  "manifest_file_sha256": "09928dd3c6f336d8ed1fc356f088e062a1d7adaf61d08fd51754cb3dfc56c913",
+  "remaining_native_vfx_frames": 41,
+  "other_Sylas_frames_generated": 0,
+  "next_if_approved": "Generate H401,H402,H404,H405,H406 using H403 approved; review six-frame dash sequence; then only H501 Kayron first loop gate.",
+  "recorded_at": "2026-10-09T15:19:53.519050+00:00",
+  "owner_reply": "atena, aprovado cheque se há atualizações na prioridade da fila e continue",
+  "approved_revision": "H403 v02",
+  "content_state": "CANON",
+  "approval_scope": "Only H403 v02 visual candidate; no runtime admission"
+}

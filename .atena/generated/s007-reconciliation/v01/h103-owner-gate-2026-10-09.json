@@ -4,7 +4,7 @@
   "plan": "PLAN-053",
   "spec": "SPEC-121",
   "checkpoint": "S-007/VFX/FILA-023/H103-APPROVAL",
-  "status": "PENDING_OWNER_APPROVAL",
+  "status": "APPROVED",
   "frame": "H103",
   "version": "v01",
   "candidate": ".atena/generated/art-candidates/vfx/durvall_ruptura_sombria/durvall_ruptura_sombria_peak_v01.png",
@@ -51,5 +51,7 @@
   "remaining_native_vfx_frames": 59,
   "other_Durvall_frames_generated": 0,
   "next_if_approved": "Generate H101,H102,H104,H105,H106 individually with approved H103, then only H201 Brook marked gate.",
-  "ranking_return": "PLAN-071 B-006/S-011 preserved"
+  "ranking_return": "PLAN-071 B-006/S-011 preserved",
+  "owner_reply": "2. aprovado",
+  "approval_receipt": ".atena/generated/s007-reconciliation/v01/h103-owner-approval-2026-10-09.json"
 }

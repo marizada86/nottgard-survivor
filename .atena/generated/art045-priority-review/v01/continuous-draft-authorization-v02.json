@@ -1,0 +1,11 @@
+{
+  "revision": "v02",
+  "classification": "IN_PLAN",
+  "owner_reply": "atena aprovado, execute o plano, por lotes está demorando, a intenção é que quando eu chegar daqui 4 horas eu verifique o maior numero de assets.",
+  "approval_mode": "per-plan",
+  "execution": "Generate remaining approved plan assets continuously as DRAFT, including experimental effect gates; human review deferred until owner returns",
+  "canonical_promotion": "Only explicitly approved ER02v02 and AO01v01; future assets DRAFT",
+  "runtime_admission": false,
+  "scope": "Complete AO02, then remaining41 native frames FILA023; other16 hero strips outside bounded side scope",
+  "technical_pending": "Normalize and validate idle grid/body height/pivot before integration"
+}

@@ -1,0 +1,26 @@
+{
+  "revision": "v01",
+  "state": "DRAFT",
+  "identity": "Erik Nottcard portrait primary; visible appearance preserved, pre-shaving version",
+  "scene": "Chest-up portrait in dark blue mist forest",
+  "style": "Brook and Leoric approved pictorial finish; reference subjects not transferred",
+  "authority": "Owner approves candidate revision; no new lore or runtime admission",
+  "blocking_gaps": [],
+  "deferred": [
+    "Human visual approval of ER01 before ER02"
+  ],
+  "references": [
+    {
+      "path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art045-priority-review\\v01\\erik.png",
+      "sha256": "14962b0bd9c5ba8c2b30973eade460148402f70a38dee575e04a47000fc30a8a"
+    },
+    {
+      "path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\assets\\portraits\\brook.png",
+      "sha256": "795dd8b283aa15d20e1de302fc8772dbfa31cc89d8ac469e34c11cbfc6061dfd"
+    },
+    {
+      "path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\assets\\portraits\\leoric.png",
+      "sha256": "b25ae3839e5a7bf3e760d38f7505d82d35ddcbf4f383a16d0cf4b36d787785df"
+    }
+  ]
+}

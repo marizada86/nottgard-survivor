@@ -1,0 +1,16 @@
+{
+  "status": "PASSED",
+  "links_checked": 12,
+  "new_selected_native_hashes": 6,
+  "brook_total_hashes": 6,
+  "manifest_assets": 202,
+  "manifest_sha256": "09928dd3c6f336d8ed1fc356f088e062a1d7adaf61d08fd51754cb3dfc56c913",
+  "remaining": 47,
+  "visual_gate": "H301v01_PENDING_OWNER_APPROVAL",
+  "loop_seam_preview_difference": {
+    "from_frame": "H206",
+    "to_frame": "H201",
+    "mean_abs_preview_luminance_difference": 2.8128949652777777
+  },
+  "state_cursors_verified": true
+}
