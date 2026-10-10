@@ -1,0 +1,479 @@
+{
+  "revision": "FILA-028-IC/v01",
+  "content_state": "DRAFT",
+  "tool": "built-in imagegen",
+  "selected": [
+    {
+      "code": "IC01",
+      "item": "bola_de_fogo",
+      "version": "v01",
+      "file": "native-sources/IC01_v01.png",
+      "geometry": {
+        "code": "IC01",
+        "version": "v01",
+        "size": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "sha256": "c9a201de0b906328ae58928d2b475317e0dcda95c3fc771b1adcf51269eaf841",
+        "bbox": [
+          225,
+          244,
+          1041,
+          1020
+        ],
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "margin_fraction": 0.1699,
+        "margin_pass": true,
+        "margin_nominal_pass": true,
+        "margin_rounding_tolerance_pixels": 1,
+        "native_alpha_pass": true,
+        "runtime_admission": false
+      },
+      "note": "",
+      "human_approval": false,
+      "content_state": "DRAFT"
+    },
+    {
+      "code": "IC02",
+      "item": "tormenta_de_fogo",
+      "version": "v02",
+      "file": "native-sources/IC02_v02.png",
+      "geometry": {
+        "code": "IC02",
+        "version": "v02",
+        "size": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "sha256": "d26b1e8456187ce1274401a646dacb3667f3228e0bf85c94dddd57b5701d9020",
+        "bbox": [
+          322,
+          316,
+          962,
+          942
+        ],
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "margin_fraction": 0.2329,
+        "margin_pass": true,
+        "margin_nominal_pass": true,
+        "margin_rounding_tolerance_pixels": 1,
+        "native_alpha_pass": true,
+        "runtime_admission": false
+      },
+      "note": "",
+      "human_approval": false,
+      "content_state": "DRAFT"
+    },
+    {
+      "code": "IC03",
+      "item": "lamina_de_sombra",
+      "version": "v02",
+      "file": "native-sources/IC03_v02.png",
+      "geometry": {
+        "code": "IC03",
+        "version": "v02",
+        "size": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "sha256": "93405a3b4764d20507633ab559cf581595c36ee3185edd1a30a362ebc3cba385",
+        "bbox": [
+          240,
+          229,
+          1066,
+          1030
+        ],
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "margin_fraction": 0.1499,
+        "margin_pass": true,
+        "margin_nominal_pass": false,
+        "margin_rounding_tolerance_pixels": 1,
+        "native_alpha_pass": true,
+        "runtime_admission": false
+      },
+      "note": "Margem 14,99%; passa apenas com tolerância explícita de um pixel. Critério nominal não atingido.",
+      "human_approval": false,
+      "content_state": "DRAFT"
+    },
+    {
+      "code": "IC04",
+      "item": "romper_armadura",
+      "version": "v02",
+      "file": "native-sources/IC04_v02.png",
+      "geometry": {
+        "code": "IC04",
+        "version": "v02",
+        "size": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "sha256": "aca0836a3f910024ad300ee63fc7730d7a0758f4a87529815f2dbf235ba533cb",
+        "bbox": [
+          234,
+          274,
+          1072,
+          1011
+        ],
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "margin_fraction": 0.1451,
+        "margin_pass": false,
+        "margin_nominal_pass": false,
+        "margin_rounding_tolerance_pixels": 1,
+        "native_alpha_pass": true,
+        "runtime_admission": false
+      },
+      "note": "RESSALVA: v02 com margem 14,51%, abaixo de 15%. v03 rejeitada por névoa acrescentada. Três tentativas esgotadas; exceção não aprovada.",
+      "human_approval": false,
+      "content_state": "DRAFT"
+    },
+    {
+      "code": "IC05",
+      "item": "esmagar_defesas",
+      "version": "v03",
+      "file": "native-sources/IC05_v03.png",
+      "geometry": {
+        "code": "IC05",
+        "version": "v03",
+        "size": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "sha256": "8678674e83f81538f9c19783c342249625c9f5bd34711b2ac11491394aa965d3",
+        "bbox": [
+          331,
+          354,
+          946,
+          937
+        ],
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "margin_fraction": 0.2456,
+        "margin_pass": true,
+        "margin_nominal_pass": true,
+        "margin_rounding_tolerance_pixels": 1,
+        "native_alpha_pass": true,
+        "runtime_admission": false
+      },
+      "note": "v03 separa três partes grandes; confirmar leitura dessa separação a 48 px.",
+      "human_approval": false,
+      "content_state": "DRAFT"
+    },
+    {
+      "code": "IC06",
+      "item": "dominio_da_vontade",
+      "version": "v01",
+      "file": "native-sources/IC06_v01.png",
+      "geometry": {
+        "code": "IC06",
+        "version": "v01",
+        "size": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "sha256": "3bc2c0308a492ee8164218286d46b44c916282159a130c85e5305bc5fb9a4820",
+        "bbox": [
+          338,
+          202,
+          906,
+          1047
+        ],
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "margin_fraction": 0.1611,
+        "margin_pass": true,
+        "margin_nominal_pass": true,
+        "margin_rounding_tolerance_pixels": 1,
+        "native_alpha_pass": true,
+        "runtime_admission": false
+      },
+      "note": "",
+      "human_approval": false,
+      "content_state": "DRAFT"
+    },
+    {
+      "code": "IC07",
+      "item": "cajado_familia_infernum",
+      "version": "v01",
+      "file": "native-sources/IC07_v01.png",
+      "geometry": {
+        "code": "IC07",
+        "version": "v01",
+        "size": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "sha256": "db689bb4c203dfd48aef5e27e27ec06327edea23f486759219b112ad160977e3",
+        "bbox": [
+          394,
+          240,
+          938,
+          1023
+        ],
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "margin_fraction": 0.1842,
+        "margin_pass": true,
+        "margin_nominal_pass": true,
+        "margin_rounding_tolerance_pixels": 1,
+        "native_alpha_pass": true,
+        "runtime_admission": false
+      },
+      "note": "",
+      "human_approval": false,
+      "content_state": "DRAFT"
+    },
+    {
+      "code": "IC08",
+      "item": "wave_of_terror",
+      "version": "v02",
+      "file": "native-sources/IC08_v02.png",
+      "geometry": {
+        "code": "IC08",
+        "version": "v02",
+        "size": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "sha256": "d7e958bc197bda00c4a50de1f6312dce80e9af38a0eb102cc7a803a6ce98cae4",
+        "bbox": [
+          327,
+          298,
+          958,
+          995
+        ],
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "margin_fraction": 0.2065,
+        "margin_pass": true,
+        "margin_nominal_pass": true,
+        "margin_rounding_tolerance_pixels": 1,
+        "native_alpha_pass": true,
+        "runtime_admission": false
+      },
+      "note": "",
+      "human_approval": false,
+      "content_state": "DRAFT"
+    },
+    {
+      "code": "IC09",
+      "item": "colar_visao_verdadeira",
+      "version": "v02",
+      "file": "native-sources/IC09_v02.png",
+      "geometry": {
+        "code": "IC09",
+        "version": "v02",
+        "size": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "sha256": "321082bb7f0383a52c0b188f5d8e892cf580d7974613b48411170dd647a1bf2b",
+        "bbox": [
+          391,
+          311,
+          864,
+          942
+        ],
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "margin_fraction": 0.248,
+        "margin_pass": true,
+        "margin_nominal_pass": true,
+        "margin_rounding_tolerance_pixels": 1,
+        "native_alpha_pass": true,
+        "runtime_admission": false
+      },
+      "note": "Confirmar as três pontas do pingente e distinguir conectores superiores.",
+      "human_approval": false,
+      "content_state": "DRAFT"
+    },
+    {
+      "code": "IC10",
+      "item": "detector_arcano",
+      "version": "v01",
+      "file": "native-sources/IC10_v01.png",
+      "geometry": {
+        "code": "IC10",
+        "version": "v01",
+        "size": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "sha256": "19bb80611abe7ebf9883a27e040945376b64238edcee6630db9a470344e97a90",
+        "bbox": [
+          300,
+          271,
+          970,
+          948
+        ],
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "margin_fraction": 0.2161,
+        "margin_pass": true,
+        "margin_nominal_pass": true,
+        "margin_rounding_tolerance_pixels": 1,
+        "native_alpha_pass": true,
+        "runtime_admission": false
+      },
+      "note": "",
+      "human_approval": false,
+      "content_state": "DRAFT"
+    },
+    {
+      "code": "IC11",
+      "item": "dispositivo_antimagia_gilly",
+      "version": "v01",
+      "file": "native-sources/IC11_v01.png",
+      "geometry": {
+        "code": "IC11",
+        "version": "v01",
+        "size": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "sha256": "8a1e58c4715a58b55fd8473feb7ad70edf47ebbb8abb5bdcc1fdb0896a4a6459",
+        "bbox": [
+          229,
+          269,
+          1028,
+          925
+        ],
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "margin_fraction": 0.1802,
+        "margin_pass": true,
+        "margin_nominal_pass": true,
+        "margin_rounding_tolerance_pixels": 1,
+        "native_alpha_pass": true,
+        "runtime_admission": false
+      },
+      "note": "",
+      "human_approval": false,
+      "content_state": "DRAFT"
+    },
+    {
+      "code": "IC12",
+      "item": "dispositivo_das_docas",
+      "version": "v02",
+      "file": "native-sources/IC12_v02.png",
+      "geometry": {
+        "code": "IC12",
+        "version": "v02",
+        "size": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "sha256": "0e0b5b2ac34cb00a17f5775be2a80f3f1dbc5aeca65d832ab283ed7660268630",
+        "bbox": [
+          433,
+          319,
+          829,
+          954
+        ],
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "margin_fraction": 0.2392,
+        "margin_pass": true,
+        "margin_nominal_pass": true,
+        "margin_rounding_tolerance_pixels": 1,
+        "native_alpha_pass": true,
+        "runtime_admission": false
+      },
+      "note": "",
+      "human_approval": false,
+      "content_state": "DRAFT"
+    },
+    {
+      "code": "IC13",
+      "item": "coracao_da_dominancia",
+      "version": "v02",
+      "file": "native-sources/IC13_v02.png",
+      "geometry": {
+        "code": "IC13",
+        "version": "v02",
+        "size": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "sha256": "04058478cb6210fa1ff07ade9beafafddfc9321c5ab1ee5a403c40b54e5d09b4",
+        "bbox": [
+          426,
+          304,
+          934,
+          974
+        ],
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "margin_fraction": 0.2233,
+        "margin_pass": true,
+        "margin_nominal_pass": true,
+        "margin_rounding_tolerance_pixels": 1,
+        "native_alpha_pass": true,
+        "runtime_admission": false
+      },
+      "note": "",
+      "human_approval": false,
+      "content_state": "DRAFT"
+    }
+  ],
+  "versions": 23,
+  "native_alpha_pass": true,
+  "selected_margin_pass": 12,
+  "reference_hashes_pass": true,
+  "source_copy_hashes_pass": true,
+  "visual_review": "PENDING_OWNER",
+  "runtime_admission": false,
+  "exception_approval": false,
+  "rejected_versions": {
+    "IC04_v03": "Unrequested gray fog/background around composition"
+  },
+  "pending": [
+    "IC04 margin exception or future correction scope",
+    "IC03 one-pixel tolerance review",
+    "Artistic acceptance and 48px readability for all icons",
+    "Native square dimensions vary; final 128px export deferred"
+  ]
+}

@@ -1,7 +1,7 @@
 ---
 id: "CHATGPT-FILA-028"
 title: "Fila de geração: eventos aleatórios, Arcanista, ícones das armas e equipamentos novos, segredos e altar animado"
-status: "2026-10-10: AL01 e EV01–EV06 aceitas visualmente; preparacao runtime pendente; demais blocos nao iniciados"
+status: "2026-10-10: AL01 e EV01–EV06 aceitas visualmente; IC01–IC13 geradas DRAFT com auditoria e aceite pendente; preparacao runtime pendente; AR/SE/BN nao iniciados"
 priority: "normal: depois da FILA-027 (Erik e Arlindo)"
 created: "2026-10-09"
 relations: ["[[ART-PROMPTS-061-eventos-arcanista-icones-segredos-e-altar]]", "[[ART-PROMPTS-059-icones-das-bencaos-novas]]", "[[SPEC-164-eventos-aleatorios-novos-mec-005]]"]
@@ -50,22 +50,22 @@ Compilação operacional de [[ART-PROMPTS-061-eventos-arcanista-icones-segredos-
 
 Armas e feitiços (`assets/icons/weapons/`):
 
-- [ ] gerada · [ ] aprovada: IC01 `bola_de_fogo`
-- [ ] gerada · [ ] aprovada: IC02 `tormenta_de_fogo`
-- [ ] gerada · [ ] aprovada: IC03 `lamina_de_sombra`
-- [ ] gerada · [ ] aprovada: IC04 `romper_armadura`
-- [ ] gerada · [ ] aprovada: IC05 `esmagar_defesas`
-- [ ] gerada · [ ] aprovada: IC06 `dominio_da_vontade`
+- [x] gerada · [ ] aprovada: IC01 `bola_de_fogo`
+- [x] gerada · [ ] aprovada: IC02 `tormenta_de_fogo`
+- [x] gerada · [ ] aprovada: IC03 `lamina_de_sombra`
+- [x] gerada · [ ] aprovada: IC04 `romper_armadura`
+- [x] gerada · [ ] aprovada: IC05 `esmagar_defesas`
+- [x] gerada · [ ] aprovada: IC06 `dominio_da_vontade`
 
 Equipamentos únicos (`assets/icons/items/`):
 
-- [ ] gerada · [ ] aprovada: IC07 `cajado_familia_infernum`
-- [ ] gerada · [ ] aprovada: IC08 `wave_of_terror`
-- [ ] gerada · [ ] aprovada: IC09 `colar_visao_verdadeira`
-- [ ] gerada · [ ] aprovada: IC10 `detector_arcano`
-- [ ] gerada · [ ] aprovada: IC11 `dispositivo_antimagia_gilly`
-- [ ] gerada · [ ] aprovada: IC12 `dispositivo_das_docas`
-- [ ] gerada · [ ] aprovada: IC13 `coracao_da_dominancia` (com a referência do dono)
+- [x] gerada · [ ] aprovada: IC07 `cajado_familia_infernum`
+- [x] gerada · [ ] aprovada: IC08 `wave_of_terror`
+- [x] gerada · [ ] aprovada: IC09 `colar_visao_verdadeira`
+- [x] gerada · [ ] aprovada: IC10 `detector_arcano`
+- [x] gerada · [ ] aprovada: IC11 `dispositivo_antimagia_gilly`
+- [x] gerada · [ ] aprovada: IC12 `dispositivo_das_docas`
+- [x] gerada · [ ] aprovada: IC13 `coracao_da_dominancia` (com a referência do dono)
 
 ## 4. AR: Arcanista (ART-041)
 

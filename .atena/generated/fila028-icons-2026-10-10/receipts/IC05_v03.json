@@ -1,0 +1,28 @@
+{
+  "code": "IC05",
+  "item": "esmagar_defesas",
+  "prompt": "Use case: precise-object-edit. Edit the supplied transparent game icon. Preserve its identity, palette, dark pixel-painted style, lighting and all shapes. Change only framing: uniformly SHRINK THE ENTIRE COMPOSITION to occupy the CENTRAL 40 PERCENT of a square canvas, centered horizontally and vertically. Leave at least 30 percent genuinely transparent empty padding on ALL FOUR sides, including every glow and fragment. Do not crop anything. No new background, text or border. PRIMARY REQUIRED OBJECT CORRECTION: split the large LEFT breastplate half horizontally into TWO visibly separate large pieces with a transparent gap. Together with the already separate RIGHT plate, there must be exactly THREE LARGE PLATE CHUNKS. Small chips do not count. Keep mace identity, larger head and cracked handle. Absolutely no fog or new background.",
+  "references": [
+    {
+      "path": "assets/icons/weapons/descarga_estelar.png",
+      "sha256": "3cac724853cb9361b0be56dcdbad5939cb5c5aa9f8813d53cbf00972dfc2c224",
+      "role": "family style anchor"
+    },
+    {
+      "path": "assets/icons/weapons/golpe_esmagador.png",
+      "sha256": "254c901dc2ccbdc90dd97f6664a7c878702e0b539b263b50eec415e682f1ac5b",
+      "role": "family style anchor"
+    }
+  ],
+  "native_destination": ".atena/generated/art-candidates/fila028-icons/IC05_v03.png",
+  "state": "GENERATED_PENDING_VISUAL_ACCEPTANCE",
+  "content_state": "DRAFT",
+  "runtime_admission": false,
+  "actual_references": [
+    "C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/.atena/generated/fila028-icons-2026-10-10/native-sources/IC05_v02.png"
+  ],
+  "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-aa85a9d2-082f-45c4-ac89-43d3180c6502.png",
+  "version": "v03",
+  "destination": ".atena/generated/fila028-icons-2026-10-10/native-sources/IC05_v03.png",
+  "correction": "Framing margin; PRIMARY REQUIRED OBJECT CORRECTION: split the large LEFT breastplate half horizontally into TWO visibly separate large pieces with a transparent gap. Together with the already separate RIGHT plate, there must be exactly THREE LARGE PLATE CHUNKS. Small chips do not count. Keep mace identity, larger head and cracked handle. Absolutely no fog or new background."
+}

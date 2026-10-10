@@ -1,0 +1,34 @@
+{
+  "code": "IC06",
+  "item": "dominio_da_vontade",
+  "prompt": "Use case: stylized-concept. One painted dark pixel-art game item or ability icon, thick dark outline, clear readable materials, high contrast, upper-left lighting. Single central object or compact magical gesture, three-quarter view, at least 15 percent clear margin on every side. Genuine transparent background. Square native source, request 1024x1024. Readable silhouette at 48px, eventual game target 128x128. No lettering, numerals, extra hands, frame, scenery, logo or watermark; no color touching image edges. References are style anchors unless explicitly identified as object identity. No background disk or decorative border. IC06: Olho aberto, sem pupila definida, cercado por três fios de névoa rosa-violeta que se prendem a uma silhueta humana mínima (marionete); sem mãos. Mesma família de `dominar_pessoa`. IMPORTANT framing: the whole icon occupies only the middle 50 percent of the square canvas, with generous transparent empty space surrounding all mist tendrils. Exactly one open EYE with no defined pupil and exactly THREE pink-violet mist strings attached to ONE minimal generic humanoid puppet silhouette. NO real human hands, gloves or controller bars, even though the family reference contains a hand; that reference supplies palette and puppet motif only.",
+  "references": [
+    {
+      "path": "assets/icons/weapons/descarga_estelar.png",
+      "sha256": "3cac724853cb9361b0be56dcdbad5939cb5c5aa9f8813d53cbf00972dfc2c224",
+      "role": "family style anchor"
+    },
+    {
+      "path": "assets/icons/weapons/golpe_esmagador.png",
+      "sha256": "254c901dc2ccbdc90dd97f6664a7c878702e0b539b263b50eec415e682f1ac5b",
+      "role": "family style anchor"
+    },
+    {
+      "path": "assets/icons/weapons/dominar_pessoa.png",
+      "sha256": "49935fbab37cacc7dafe92ce1c2ea991f2db6b85eadd027839d92db8524be316",
+      "role": "family style anchor"
+    }
+  ],
+  "native_destination": ".atena/generated/art-candidates/fila028-icons/IC06_v01.png",
+  "state": "GENERATED_PENDING_VISUAL_ACCEPTANCE",
+  "content_state": "DRAFT",
+  "runtime_admission": false,
+  "actual_references": [
+    "C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/assets/icons/weapons/descarga_estelar.png",
+    "C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/assets/icons/weapons/golpe_esmagador.png",
+    "C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/assets/icons/weapons/dominar_pessoa.png"
+  ],
+  "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-8574d15e-3c48-441d-b089-6d9757fe655c.png",
+  "version": "v01",
+  "destination": ".atena/generated/fila028-icons-2026-10-10/native-sources/IC06_v01.png"
+}

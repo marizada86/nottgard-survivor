@@ -1,0 +1,28 @@
+{
+  "code": "IC09",
+  "item": "colar_visao_verdadeira",
+  "prompt": "Use case: stylized-concept. One painted dark pixel-art game item or ability icon, thick dark outline, clear readable materials, high contrast, upper-left lighting. Single central object or compact magical gesture, three-quarter view, at least 15 percent clear margin on every side. Genuine transparent background. Square native source, request 1024x1024. Readable silhouette at 48px, eventual game target 128x128. No lettering, numerals, extra hands, frame, scenery, logo or watermark; no color touching image edges. References are style anchors unless explicitly identified as object identity. No background disk or decorative border. IC09: Colar de corrente de prata escura com um pingente em forma de olho aberto de três pontas (o olho de Ghaunadaur): íris roxa fria, esclera cinza, legível a 48 px. IMPORTANT framing: small complete necklace centered in middle 50 percent of transparent square, at least 20 percent empty space on all sides. DARK SILVER CHAIN with ONE OPEN EYE pendant, exactly THREE tapered points on its eye-shaped setting. Cold purple iris, gray sclera. No tentacles, skulls, writing, extra pendants or additional emblems. Family necklace reference only gives medium and materials, not tentacle shape.",
+  "references": [
+    {
+      "path": "assets/icons/items/machado_de_xargath.png",
+      "sha256": "c9f3d101f1eba187016c4d1a546a1960529eb153b32ef07bd98d4758197867e0",
+      "role": "family style anchor"
+    },
+    {
+      "path": "assets/icons/items/colar_dos_tentaculos.png",
+      "sha256": "1e97f9943f6735efcb64401907bf3c312ecb61241c57f20e85ac5bcd3b393663",
+      "role": "family style anchor"
+    }
+  ],
+  "native_destination": ".atena/generated/art-candidates/fila028-icons/IC09_v01.png",
+  "state": "GENERATED_PENDING_VISUAL_ACCEPTANCE",
+  "content_state": "DRAFT",
+  "runtime_admission": false,
+  "actual_references": [
+    "C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/assets/icons/items/machado_de_xargath.png",
+    "C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/assets/icons/items/colar_dos_tentaculos.png"
+  ],
+  "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-d64908ec-c725-4c90-802d-41c560beda18.png",
+  "version": "v01",
+  "destination": ".atena/generated/fila028-icons-2026-10-10/native-sources/IC09_v01.png"
+}

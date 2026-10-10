@@ -1,4 +1,14 @@
 version: 2
+fila028_icons_2026_10_10:
+  state_file: .atena/state/fila028-icons.yaml
+  status: GENERATED_AUDITED_AWAITING_OWNER_REVIEW
+  mode: per-plan
+  checkpoint: S-014/OWNER-VISUAL-REVIEW
+  scope_approval: 'atena aprovado continue'
+  previous_commit: 3b99d62
+  content_state: DRAFT
+  runtime_admission: false
+  evidence: .atena/evidence/fila028-icons-2026-10-10.md
 fila028_generation_2026_10_10:
   state_file: .atena/state/fila028-generation.yaml
   mode: per-plan

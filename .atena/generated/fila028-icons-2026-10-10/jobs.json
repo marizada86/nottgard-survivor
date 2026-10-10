@@ -1,0 +1,335 @@
+{
+  "plan": "PLAN-053/SPEC-121",
+  "revision": "FILA-028-IC/v01",
+  "source_prompt_file": ".atena\\generated\\ART-PROMPTS-061-eventos-arcanista-icones-segredos-e-altar.md",
+  "source_prompt_sha256": "897316f4033a1620a17f81ac68655deb7dfcefbd8b975ef57f3771538f6b324d",
+  "approval_mode": "per-plan",
+  "scope_approval": "APPROVED",
+  "tool": "built-in imagegen",
+  "jobs": [
+    {
+      "code": "IC01",
+      "item": "bola_de_fogo",
+      "prompt": "Use case: stylized-concept. One painted dark pixel-art game item or ability icon, thick dark outline, clear readable materials, high contrast, upper-left lighting. Single central object or compact magical gesture, three-quarter view, at least 15 percent clear margin on every side. Genuine transparent background. Square native source, request 1024x1024. Readable silhouette at 48px, eventual game target 128x128. No lettering, numerals, extra hands, frame, scenery, logo or watermark; no color touching image edges. References are style anchors unless explicitly identified as object identity. No background disk or decorative border. IC01: Esfera de fogo laranja-vermelha com cauda curta e centro amarelo-branco, desenhada como um projétil prestes a explodir; chamas angulares, sem rosto.",
+      "references": [
+        {
+          "path": "assets/icons/weapons/descarga_estelar.png",
+          "sha256": "3cac724853cb9361b0be56dcdbad5939cb5c5aa9f8813d53cbf00972dfc2c224",
+          "role": "family style anchor"
+        },
+        {
+          "path": "assets/icons/weapons/golpe_esmagador.png",
+          "sha256": "254c901dc2ccbdc90dd97f6664a7c878702e0b539b263b50eec415e682f1ac5b",
+          "role": "family style anchor"
+        }
+      ],
+      "native_destination": ".atena/generated/art-candidates/fila028-icons/IC01_v01.png",
+      "state": "GENERATED_PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "selected_version": "v01",
+      "selected_source": ".atena/generated/fila028-icons-2026-10-10/native-sources/IC01_v01.png",
+      "scope_approval": "APPROVED"
+    },
+    {
+      "code": "IC02",
+      "item": "tormenta_de_fogo",
+      "prompt": "Use case: stylized-concept. One painted dark pixel-art game item or ability icon, thick dark outline, clear readable materials, high contrast, upper-left lighting. Single central object or compact magical gesture, three-quarter view, at least 15 percent clear margin on every side. Genuine transparent background. Square native source, request 1024x1024. Readable silhouette at 48px, eventual game target 128x128. No lettering, numerals, extra hands, frame, scenery, logo or watermark; no color touching image edges. References are style anchors unless explicitly identified as object identity. No background disk or decorative border. IC02: Evolução da bola de fogo (mesma forma-base): um grupo compacto de quatro esferas de fogo caindo em arcos paralelos sobre uma faixa de chamas baixas.",
+      "references": [
+        {
+          "path": "assets/icons/weapons/descarga_estelar.png",
+          "sha256": "3cac724853cb9361b0be56dcdbad5939cb5c5aa9f8813d53cbf00972dfc2c224",
+          "role": "family style anchor"
+        },
+        {
+          "path": "assets/icons/weapons/golpe_esmagador.png",
+          "sha256": "254c901dc2ccbdc90dd97f6664a7c878702e0b539b263b50eec415e682f1ac5b",
+          "role": "family style anchor"
+        }
+      ],
+      "native_destination": ".atena/generated/art-candidates/fila028-icons/IC02_v01.png",
+      "state": "GENERATED_PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "selected_version": "v02",
+      "selected_source": ".atena/generated/fila028-icons-2026-10-10/native-sources/IC02_v02.png",
+      "scope_approval": "APPROVED"
+    },
+    {
+      "code": "IC03",
+      "item": "lamina_de_sombra",
+      "prompt": "Use case: stylized-concept. One painted dark pixel-art game item or ability icon, thick dark outline, clear readable materials, high contrast, upper-left lighting. Single central object or compact magical gesture, three-quarter view, at least 15 percent clear margin on every side. Genuine transparent background. Square native source, request 1024x1024. Readable silhouette at 48px, eventual game target 128x128. No lettering, numerals, extra hands, frame, scenery, logo or watermark; no color touching image edges. References are style anchors unless explicitly identified as object identity. No background disk or decorative border. IC03: Lâmina curva de sombra roxo-escura, quase translúcida, com uma fenda branco-azulada no fio que corta um véu arcano; diagonal ascendente.",
+      "references": [
+        {
+          "path": "assets/icons/weapons/descarga_estelar.png",
+          "sha256": "3cac724853cb9361b0be56dcdbad5939cb5c5aa9f8813d53cbf00972dfc2c224",
+          "role": "family style anchor"
+        },
+        {
+          "path": "assets/icons/weapons/golpe_esmagador.png",
+          "sha256": "254c901dc2ccbdc90dd97f6664a7c878702e0b539b263b50eec415e682f1ac5b",
+          "role": "family style anchor"
+        }
+      ],
+      "native_destination": ".atena/generated/art-candidates/fila028-icons/IC03_v01.png",
+      "state": "GENERATED_PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "selected_version": "v02",
+      "selected_source": ".atena/generated/fila028-icons-2026-10-10/native-sources/IC03_v02.png",
+      "scope_approval": "APPROVED"
+    },
+    {
+      "code": "IC04",
+      "item": "romper_armadura",
+      "prompt": "Use case: stylized-concept. One painted dark pixel-art game item or ability icon, thick dark outline, clear readable materials, high contrast, upper-left lighting. Single central object or compact magical gesture, three-quarter view, at least 15 percent clear margin on every side. Genuine transparent background. Square native source, request 1024x1024. Readable silhouette at 48px, eventual game target 128x128. No lettering, numerals, extra hands, frame, scenery, logo or watermark; no color touching image edges. References are style anchors unless explicitly identified as object identity. No background disk or decorative border. IC04: Maça de guerra de ferro no instante do impacto contra uma peitoral de placas que racha em duas, estilhaços presos ao conjunto.",
+      "references": [
+        {
+          "path": "assets/icons/weapons/descarga_estelar.png",
+          "sha256": "3cac724853cb9361b0be56dcdbad5939cb5c5aa9f8813d53cbf00972dfc2c224",
+          "role": "family style anchor"
+        },
+        {
+          "path": "assets/icons/weapons/golpe_esmagador.png",
+          "sha256": "254c901dc2ccbdc90dd97f6664a7c878702e0b539b263b50eec415e682f1ac5b",
+          "role": "family style anchor"
+        }
+      ],
+      "native_destination": ".atena/generated/art-candidates/fila028-icons/IC04_v01.png",
+      "state": "GENERATED_PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "selected_version": "v02",
+      "selected_source": ".atena/generated/fila028-icons-2026-10-10/native-sources/IC04_v02.png",
+      "scope_approval": "APPROVED"
+    },
+    {
+      "code": "IC05",
+      "item": "esmagar_defesas",
+      "prompt": "Use case: stylized-concept. One painted dark pixel-art game item or ability icon, thick dark outline, clear readable materials, high contrast, upper-left lighting. Single central object or compact magical gesture, three-quarter view, at least 15 percent clear margin on every side. Genuine transparent background. Square native source, request 1024x1024. Readable silhouette at 48px, eventual game target 128x128. No lettering, numerals, extra hands, frame, scenery, logo or watermark; no color touching image edges. References are style anchors unless explicitly identified as object identity. No background disk or decorative border. IC05: Evolução do romper armadura: o mesmo martelo ampliado, com a placa quebrada em três pedaços e uma rachadura que sobe pelo cabo.",
+      "references": [
+        {
+          "path": "assets/icons/weapons/descarga_estelar.png",
+          "sha256": "3cac724853cb9361b0be56dcdbad5939cb5c5aa9f8813d53cbf00972dfc2c224",
+          "role": "family style anchor"
+        },
+        {
+          "path": "assets/icons/weapons/golpe_esmagador.png",
+          "sha256": "254c901dc2ccbdc90dd97f6664a7c878702e0b539b263b50eec415e682f1ac5b",
+          "role": "family style anchor"
+        }
+      ],
+      "native_destination": ".atena/generated/art-candidates/fila028-icons/IC05_v01.png",
+      "state": "GENERATED_PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "selected_version": "v03",
+      "selected_source": ".atena/generated/fila028-icons-2026-10-10/native-sources/IC05_v03.png",
+      "scope_approval": "APPROVED"
+    },
+    {
+      "code": "IC06",
+      "item": "dominio_da_vontade",
+      "prompt": "Use case: stylized-concept. One painted dark pixel-art game item or ability icon, thick dark outline, clear readable materials, high contrast, upper-left lighting. Single central object or compact magical gesture, three-quarter view, at least 15 percent clear margin on every side. Genuine transparent background. Square native source, request 1024x1024. Readable silhouette at 48px, eventual game target 128x128. No lettering, numerals, extra hands, frame, scenery, logo or watermark; no color touching image edges. References are style anchors unless explicitly identified as object identity. No background disk or decorative border. IC06: Olho aberto, sem pupila definida, cercado por três fios de névoa rosa-violeta que se prendem a uma silhueta humana mínima (marionete); sem mãos. Mesma família de `dominar_pessoa`.",
+      "references": [
+        {
+          "path": "assets/icons/weapons/descarga_estelar.png",
+          "sha256": "3cac724853cb9361b0be56dcdbad5939cb5c5aa9f8813d53cbf00972dfc2c224",
+          "role": "family style anchor"
+        },
+        {
+          "path": "assets/icons/weapons/golpe_esmagador.png",
+          "sha256": "254c901dc2ccbdc90dd97f6664a7c878702e0b539b263b50eec415e682f1ac5b",
+          "role": "family style anchor"
+        },
+        {
+          "path": "assets/icons/weapons/dominar_pessoa.png",
+          "sha256": "49935fbab37cacc7dafe92ce1c2ea991f2db6b85eadd027839d92db8524be316",
+          "role": "family style anchor"
+        }
+      ],
+      "native_destination": ".atena/generated/art-candidates/fila028-icons/IC06_v01.png",
+      "state": "GENERATED_PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "selected_version": "v01",
+      "selected_source": ".atena/generated/fila028-icons-2026-10-10/native-sources/IC06_v01.png",
+      "scope_approval": "APPROVED"
+    },
+    {
+      "code": "IC07",
+      "item": "cajado_familia_infernum",
+      "prompt": "Use case: stylized-concept. One painted dark pixel-art game item or ability icon, thick dark outline, clear readable materials, high contrast, upper-left lighting. Single central object or compact magical gesture, three-quarter view, at least 15 percent clear margin on every side. Genuine transparent background. Square native source, request 1024x1024. Readable silhouette at 48px, eventual game target 128x128. No lettering, numerals, extra hands, frame, scenery, logo or watermark; no color touching image edges. References are style anchors unless explicitly identified as object identity. No background disk or decorative border. IC07: Cajado de madeira clara de Yggdrasil, nós e veios visíveis, cravejado com pedras azul-brancas da estrela de Eléstria na ponta; relíquia de família, bem cuidada.",
+      "references": [
+        {
+          "path": "assets/icons/items/machado_de_xargath.png",
+          "sha256": "c9f3d101f1eba187016c4d1a546a1960529eb153b32ef07bd98d4758197867e0",
+          "role": "family style anchor"
+        },
+        {
+          "path": "assets/icons/items/colar_dos_tentaculos.png",
+          "sha256": "1e97f9943f6735efcb64401907bf3c312ecb61241c57f20e85ac5bcd3b393663",
+          "role": "family style anchor"
+        }
+      ],
+      "native_destination": ".atena/generated/art-candidates/fila028-icons/IC07_v01.png",
+      "state": "GENERATED_PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "selected_version": "v01",
+      "selected_source": ".atena/generated/fila028-icons-2026-10-10/native-sources/IC07_v01.png",
+      "scope_approval": "APPROVED"
+    },
+    {
+      "code": "IC08",
+      "item": "wave_of_terror",
+      "prompt": "Use case: stylized-concept. One painted dark pixel-art game item or ability icon, thick dark outline, clear readable materials, high contrast, upper-left lighting. Single central object or compact magical gesture, three-quarter view, at least 15 percent clear margin on every side. Genuine transparent background. Square native source, request 1024x1024. Readable silhouette at 48px, eventual game target 128x128. No lettering, numerals, extra hands, frame, scenery, logo or watermark; no color touching image edges. References are style anchors unless explicitly identified as object identity. No background disk or decorative border. IC08: Espada longa de lâmina negra com acabamento ácido esverdeado escorrendo pelo fio, sombras presas à guarda; sensação de maldição, sem caveiras nem texto.",
+      "references": [
+        {
+          "path": "assets/icons/items/machado_de_xargath.png",
+          "sha256": "c9f3d101f1eba187016c4d1a546a1960529eb153b32ef07bd98d4758197867e0",
+          "role": "family style anchor"
+        },
+        {
+          "path": "assets/icons/items/colar_dos_tentaculos.png",
+          "sha256": "1e97f9943f6735efcb64401907bf3c312ecb61241c57f20e85ac5bcd3b393663",
+          "role": "family style anchor"
+        }
+      ],
+      "native_destination": ".atena/generated/art-candidates/fila028-icons/IC08_v01.png",
+      "state": "GENERATED_PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "selected_version": "v02",
+      "selected_source": ".atena/generated/fila028-icons-2026-10-10/native-sources/IC08_v02.png",
+      "scope_approval": "APPROVED"
+    },
+    {
+      "code": "IC09",
+      "item": "colar_visao_verdadeira",
+      "prompt": "Use case: stylized-concept. One painted dark pixel-art game item or ability icon, thick dark outline, clear readable materials, high contrast, upper-left lighting. Single central object or compact magical gesture, three-quarter view, at least 15 percent clear margin on every side. Genuine transparent background. Square native source, request 1024x1024. Readable silhouette at 48px, eventual game target 128x128. No lettering, numerals, extra hands, frame, scenery, logo or watermark; no color touching image edges. References are style anchors unless explicitly identified as object identity. No background disk or decorative border. IC09: Colar de corrente de prata escura com um pingente em forma de olho aberto de três pontas (o olho de Ghaunadaur): íris roxa fria, esclera cinza, legível a 48 px.",
+      "references": [
+        {
+          "path": "assets/icons/items/machado_de_xargath.png",
+          "sha256": "c9f3d101f1eba187016c4d1a546a1960529eb153b32ef07bd98d4758197867e0",
+          "role": "family style anchor"
+        },
+        {
+          "path": "assets/icons/items/colar_dos_tentaculos.png",
+          "sha256": "1e97f9943f6735efcb64401907bf3c312ecb61241c57f20e85ac5bcd3b393663",
+          "role": "family style anchor"
+        }
+      ],
+      "native_destination": ".atena/generated/art-candidates/fila028-icons/IC09_v01.png",
+      "state": "GENERATED_PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "selected_version": "v02",
+      "selected_source": ".atena/generated/fila028-icons-2026-10-10/native-sources/IC09_v02.png",
+      "scope_approval": "APPROVED"
+    },
+    {
+      "code": "IC10",
+      "item": "detector_arcano",
+      "prompt": "Use case: stylized-concept. One painted dark pixel-art game item or ability icon, thick dark outline, clear readable materials, high contrast, upper-left lighting. Single central object or compact magical gesture, three-quarter view, at least 15 percent clear margin on every side. Genuine transparent background. Square native source, request 1024x1024. Readable silhouette at 48px, eventual game target 128x128. No lettering, numerals, extra hands, frame, scenery, logo or watermark; no color touching image edges. References are style anchors unless explicitly identified as object identity. No background disk or decorative border. IC10: Anel de latão com uma lente pequena e uma agulha fina que oscila, runas apagadas na argola; sensação de instrumento, não de joia.",
+      "references": [
+        {
+          "path": "assets/icons/items/machado_de_xargath.png",
+          "sha256": "c9f3d101f1eba187016c4d1a546a1960529eb153b32ef07bd98d4758197867e0",
+          "role": "family style anchor"
+        },
+        {
+          "path": "assets/icons/items/colar_dos_tentaculos.png",
+          "sha256": "1e97f9943f6735efcb64401907bf3c312ecb61241c57f20e85ac5bcd3b393663",
+          "role": "family style anchor"
+        }
+      ],
+      "native_destination": ".atena/generated/art-candidates/fila028-icons/IC10_v01.png",
+      "state": "GENERATED_PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "selected_version": "v01",
+      "selected_source": ".atena/generated/fila028-icons-2026-10-10/native-sources/IC10_v01.png",
+      "scope_approval": "APPROVED"
+    },
+    {
+      "code": "IC11",
+      "item": "dispositivo_antimagia_gilly",
+      "prompt": "Use case: stylized-concept. One painted dark pixel-art game item or ability icon, thick dark outline, clear readable materials, high contrast, upper-left lighting. Single central object or compact magical gesture, three-quarter view, at least 15 percent clear margin on every side. Genuine transparent background. Square native source, request 1024x1024. Readable silhouette at 48px, eventual game target 128x128. No lettering, numerals, extra hands, frame, scenery, logo or watermark; no color touching image edges. References are style anchors unless explicitly identified as object identity. No background disk or decorative border. IC11: Peitoral-engenhoca de chapa e engrenagens aparentes, com uma lente circular azul no centro que projeta um escudo hexagonal; aparência de invenção gnômica, não de armadura de cavaleiro.",
+      "references": [
+        {
+          "path": "assets/icons/items/machado_de_xargath.png",
+          "sha256": "c9f3d101f1eba187016c4d1a546a1960529eb153b32ef07bd98d4758197867e0",
+          "role": "family style anchor"
+        },
+        {
+          "path": "assets/icons/items/colar_dos_tentaculos.png",
+          "sha256": "1e97f9943f6735efcb64401907bf3c312ecb61241c57f20e85ac5bcd3b393663",
+          "role": "family style anchor"
+        }
+      ],
+      "native_destination": ".atena/generated/art-candidates/fila028-icons/IC11_v01.png",
+      "state": "GENERATED_PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "selected_version": "v01",
+      "selected_source": ".atena/generated/fila028-icons-2026-10-10/native-sources/IC11_v01.png",
+      "scope_approval": "APPROVED"
+    },
+    {
+      "code": "IC12",
+      "item": "dispositivo_das_docas",
+      "prompt": "Use case: stylized-concept. One painted dark pixel-art game item or ability icon, thick dark outline, clear readable materials, high contrast, upper-left lighting. Single central object or compact magical gesture, three-quarter view, at least 15 percent clear margin on every side. Genuine transparent background. Square native source, request 1024x1024. Readable silhouette at 48px, eventual game target 128x128. No lettering, numerals, extra hands, frame, scenery, logo or watermark; no color touching image edges. References are style anchors unless explicitly identified as object identity. No background disk or decorative border. IC12: Mecanismo de bronze e cordas, do tamanho de um amuleto, com uma pequena hélice e uma âncora estilizada; sensação de porto e maresia, sem texto.",
+      "references": [
+        {
+          "path": "assets/icons/items/machado_de_xargath.png",
+          "sha256": "c9f3d101f1eba187016c4d1a546a1960529eb153b32ef07bd98d4758197867e0",
+          "role": "family style anchor"
+        },
+        {
+          "path": "assets/icons/items/colar_dos_tentaculos.png",
+          "sha256": "1e97f9943f6735efcb64401907bf3c312ecb61241c57f20e85ac5bcd3b393663",
+          "role": "family style anchor"
+        }
+      ],
+      "native_destination": ".atena/generated/art-candidates/fila028-icons/IC12_v01.png",
+      "state": "GENERATED_PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "selected_version": "v02",
+      "selected_source": ".atena/generated/fila028-icons-2026-10-10/native-sources/IC12_v02.png",
+      "scope_approval": "APPROVED"
+    },
+    {
+      "code": "IC13",
+      "item": "coracao_da_dominancia",
+      "prompt": "Use case: stylized-concept. One painted dark pixel-art game item or ability icon, thick dark outline, clear readable materials, high contrast, upper-left lighting. Single central object or compact magical gesture, three-quarter view, at least 15 percent clear margin on every side. Genuine transparent background. Square native source, request 1024x1024. Readable silhouette at 48px, eventual game target 128x128. No lettering, numerals, extra hands, frame, scenery, logo or watermark; no color touching image edges. References are style anchors unless explicitly identified as object identity. No background disk or decorative border. IC13: Anexar a referência do dono. Cajado de osso branco perolado terminando em um coração cristalino rosa com luz interna, envolto em filamentos roxos e carmesim; troféu da vontade, elegante e perigoso. A referência prevalece sobre o texto. The owner heart-staff reference is the authoritative identity, overriding textual visual details if they differ.",
+      "references": [
+        {
+          "path": "assets/icons/items/machado_de_xargath.png",
+          "sha256": "c9f3d101f1eba187016c4d1a546a1960529eb153b32ef07bd98d4758197867e0",
+          "role": "family style anchor"
+        },
+        {
+          "path": "assets/icons/items/colar_dos_tentaculos.png",
+          "sha256": "1e97f9943f6735efcb64401907bf3c312ecb61241c57f20e85ac5bcd3b393663",
+          "role": "family style anchor"
+        },
+        {
+          "path": ".atena/generated/item-refs/coracao-da-dominancia-referencia.webp",
+          "sha256": "65e3c2aaf29bc7f4e35b13f629c5f9f9744eb9151d9738ddfcf114ab4fbd39ad",
+          "role": "identity authority"
+        }
+      ],
+      "native_destination": ".atena/generated/art-candidates/fila028-icons/IC13_v01.png",
+      "state": "GENERATED_PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "selected_version": "v02",
+      "selected_source": ".atena/generated/fila028-icons-2026-10-10/native-sources/IC13_v02.png",
+      "scope_approval": "APPROVED"
+    }
+  ],
+  "status": "GENERATED_AUDITED_AWAITING_OWNER_REVIEW",
+  "completed_steps": 14
+}

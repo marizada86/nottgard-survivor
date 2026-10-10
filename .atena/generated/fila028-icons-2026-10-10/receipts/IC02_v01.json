@@ -1,0 +1,29 @@
+{
+  "code": "IC02",
+  "item": "tormenta_de_fogo",
+  "prompt": "Use case: stylized-concept. One painted dark pixel-art game item or ability icon, thick dark outline, clear readable materials, high contrast, upper-left lighting. Single central object or compact magical gesture, three-quarter view, at least 15 percent clear margin on every side. Genuine transparent background. Square native source, request 1024x1024. Readable silhouette at 48px, eventual game target 128x128. No lettering, numerals, extra hands, frame, scenery, logo or watermark; no color touching image edges. References are style anchors unless explicitly identified as object identity. No background disk or decorative border. IC02: Evolução da bola de fogo (mesma forma-base): um grupo compacto de quatro esferas de fogo caindo em arcos paralelos sobre uma faixa de chamas baixas. Use the appended IC01 fireball as the exact base shape and palette for the FOUR fireballs. Arrange four distinct balls falling in parallel arcs above a low compact band of fire; preserve 15% transparent margin.",
+  "references": [
+    {
+      "path": "assets/icons/weapons/descarga_estelar.png",
+      "sha256": "3cac724853cb9361b0be56dcdbad5939cb5c5aa9f8813d53cbf00972dfc2c224",
+      "role": "family style anchor"
+    },
+    {
+      "path": "assets/icons/weapons/golpe_esmagador.png",
+      "sha256": "254c901dc2ccbdc90dd97f6664a7c878702e0b539b263b50eec415e682f1ac5b",
+      "role": "family style anchor"
+    }
+  ],
+  "native_destination": ".atena/generated/art-candidates/fila028-icons/IC02_v01.png",
+  "state": "GENERATED_PENDING_VISUAL_ACCEPTANCE",
+  "content_state": "DRAFT",
+  "runtime_admission": false,
+  "actual_references": [
+    "C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/assets/icons/weapons/descarga_estelar.png",
+    "C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/assets/icons/weapons/golpe_esmagador.png",
+    "C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/.atena/generated/fila028-icons-2026-10-10/native-sources/IC01_v01.png"
+  ],
+  "version": "v01",
+  "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-ddc174e1-4a35-4204-a30e-88bd54f522a5.png",
+  "destination": ".atena/generated/fila028-icons-2026-10-10/native-sources/IC02_v01.png"
+}
