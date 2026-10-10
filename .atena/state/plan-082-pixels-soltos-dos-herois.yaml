@@ -1,0 +1,49 @@
+id: PLAN-082
+spec: SPEC-154
+spec_file: .atena/specs/SPEC-154-pixels-soltos-dos-herois-pre-reducao-das-tiras-bug-029.md
+proposal: .atena/vault/drafts/PLAN-082-pixels-soltos-dos-herois-bug-029-2026-10-09.md
+mode: per-plan
+status: PAUSED_NOT_ADOPTED
+created: '2026-10-09'
+request_classification: PLAN_DEVIATION
+deviation_id: DEV-014
+authorization_verbatim: 'atena, abra o plano do BUG-029'
+checkpoint: B-002/S-007 (pausado: o dono nao adotou a variante C)
+return:
+  plan: PLAN-071
+  state_file: .atena/state/plan-071-playtest-ranking.yaml
+  checkpoint_observed: B-006/S-011
+  snapshot: .atena/generated/bug-029-reducao/plan-before-082-start.yaml
+batches:
+  B-001: {title: Ferramenta e piloto no Kayron, steps: [S-001, S-002, S-003, S-004], status: DONE, note: 'S-004 e portao visual do dono.'}
+  B-002: {title: Integracao e testes (so o Kayron), steps: [S-005, S-006, S-007], status: DONE_LOCAL}
+  B-003: {title: Expansao por lotes, steps: [S-008, S-009, S-010], status: PENDING, note: 'Aprovacao visual a cada lote.'}
+  B-004: {title: Validacao e registro, steps: [S-011, S-012, S-013], status: PENDING}
+steps:
+  S-001: 'DONE (tools/reduce_hero_strips.gd; hero_view com HERO_STRIP_SET e strip_override; EVID-211). tools/reduce_hero_strips.gd (modos A, B, C; quadro a quadro; alfa pre-multiplicado; deterministica).'
+  S-002: 'DONE (EVID-211: tres variantes do Kayron, medidas). Rodar as tres variantes no Kayron e medir altura, pes, quadros cortados e solidez.'
+  S-003: 'DONE (capturas em .atena/generated/bug-029-reducao/capturas; zoom 1,0, 1,5 e 2,0). Capturas em jogo (zoom 1,0, 1,5, 2,0; 1280x720 e 1920x1080) com o atual ao lado.'
+  S-004: 'DONE: o dono escolheu a variante C em 2026-10-09, com a ressalva de nao cortar as pontas (margem de 2 px). 
+  S-005: 'DONE local (HERO_STRIP_SET[kayron], pad, cell_of; EVID-211). ui/hero_view.gd: HERO_STRIP_SET e recalculo de CELL, HERO_IDLE_ART_HEIGHT, HERO_FEET_Y e display_scale.'
+  S-006: 'DONE local (tests/test_hero_strips.gd; test_animation_assets ajustado). Teste novo e ajuste de tests/test_animation_assets.gd.'
+  S-007: 'DONE local (suite 0 falhas, smoke ok, kit OK, audit 0 erros, capturas finais). Suite, smoke, kit_test e captura em corrida real.'
+  S-008: 'Lote 1: Korrak, Durvall, Sylas.'
+  S-009: 'Lote 2: Maelor, Nyrelia, Zynara.'
+  S-010: 'Lote 3: Bromnor, Leoric, Brook.'
+  S-011: 'Suite, smoke, kit_test, audit_projeto; tamanho do repositorio; originais intactos.'
+  S-012: 'Cartoes BUG-029 e BUG-025, INBOX, backlog_check, EVID.'
+  S-013: 'Reconciliar plan.yaml (DEV-014) e voltar ao PLAN-071 em B-006/S-011.'
+gates:
+  dependencies: NO_NEW_DEPENDENCIES
+  new_image_generation: NOT_IN_SCOPE
+  visual_approval: OWNER_REQUIRED_BEFORE_ANY_APPEARANCE_CHANGE
+  commit: EXPLICIT_APPROVAL_PER_COMMIT
+  push_publish_export: EXPLICIT_APPROVAL_SEPARATE
+  originals: NEVER_DELETED
+  other_sessions_changes: PRESERVE_UNTOUCHED
+blocking_gaps: []
+non_blocking_gaps: [G1, G2, G3, G4]
+return_to: PLAN-071 (B-006/S-011, active_plan sem alteracao ate o inicio)
+commit_push_build_export: NOT_PERFORMED
+owner_decision: '2026-10-09: nao gostei; vou encontrar uma solucao para os assets dos personagens principais, nem que tenha que refazer. Seguir sem assets.'
+result: 'HERO_STRIP_SET voltou a vazio; ferramentas e tiras do piloto ficam locais, sem commit; B-003 e B-004 nao executados.'
