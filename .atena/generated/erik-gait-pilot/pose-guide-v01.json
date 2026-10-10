@@ -1,0 +1,77 @@
+{
+  "kind": "Procedural pose diagram, not an edit of character art",
+  "poses": [
+    {
+      "contact": "A",
+      "hip": [
+        190,
+        330
+      ],
+      "near_right": [
+        [
+          190,
+          330
+        ],
+        [
+          242,
+          425
+        ],
+        [
+          292,
+          525
+        ]
+      ],
+      "far_left": [
+        [
+          190,
+          330
+        ],
+        [
+          135,
+          425
+        ],
+        [
+          82,
+          525
+        ]
+      ],
+      "foreground_order": "near_right_on_top"
+    },
+    {
+      "contact": "B",
+      "hip": [
+        590,
+        330
+      ],
+      "near_right": [
+        [
+          590,
+          330
+        ],
+        [
+          532,
+          425
+        ],
+        [
+          482,
+          525
+        ]
+      ],
+      "far_left": [
+        [
+          590,
+          330
+        ],
+        [
+          640,
+          425
+        ],
+        [
+          692,
+          525
+        ]
+      ],
+      "foreground_order": "near_right_on_top"
+    }
+  ]
+}

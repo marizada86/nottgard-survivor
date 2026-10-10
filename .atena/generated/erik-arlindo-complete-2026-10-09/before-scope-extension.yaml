@@ -1,0 +1,24 @@
+id: DEV-024
+revision: v01
+status: GENERATED_SCOPE_COMPLETE_REVIEW_PENDING
+approval_mode: per-plan
+owner_reply: "atena prossiga conforme as recomendações"
+parent: PLAN-053
+parent_status: RESUMED_CONTINUOUS_DRAFT
+return_checkpoint: S-007/VFX/FILA-023/H-REMAINING
+checkpoint: S-005/AO02
+steps:
+  - {id: S-001, task: visual preparation, status: COMPLETED}
+  - {id: S-002, task: ER01 portrait, status: APPROVED_BY_OWNER}
+  - {id: S-003, task: ER02 idle, status: GENERATED_AUDITED_PENDING_ACCEPTANCE}
+  - {id: S-004, task: AO01 portrait, status: APPROVED_BY_OWNER}
+  - {id: S-005, task: AO02 idle, status: GENERATED_AUDITED_PENDING_REVIEW}
+runtime_admission: false
+content_state: DRAFT
+
+continuous_draft_execution:
+  approval_mode: per-plan
+  status: APPROVED
+  receipt: .atena/generated/art045-priority-review/v01/continuous-draft-authorization-v02.json
+  human_review: deferred_until_owner_returns
+  runtime_admission: false

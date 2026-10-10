@@ -1,0 +1,25 @@
+{
+  "id": "DEV-024",
+  "revision": "v03",
+  "classification": "PLAN_CHANGE_REQUEST",
+  "owner_request": "atena, vamos continuar a produção de assets e finalizar erik e arlindo se tiver algo faltando",
+  "approval_mode": "per-plan",
+  "scope": "Extend four pilot pieces to all20 FILA027pieces; generate16 missing strips and validate/present as DRAFT",
+  "impact": {
+    "scope": "16 additional strips, no gameplay changes",
+    "decisions": "Keep identities/palette/camera and native references; no canon promotion of unapproved idle",
+    "acceptance": "20 native assets present; exact grid/alpha/height/baseline and human review before admission",
+    "evidence": "Preserve originals, hashes, prompts, native metrics and previews",
+    "recovery": "Previous side-plan state saved; PLAN053 review60 return preserved",
+    "checkpoints": "Continuous DRAFT production as requested earlier; no lot/step pauses; runtime gate independent"
+  },
+  "runtime_admission": false,
+  "dependency_changes": false,
+  "reference_authority": {
+    "erik": "Approved ER01v01 and ER02v02",
+    "arlindo": "Approved AO01v01; AO02v01 DRAFT consistency anchor authorized for experimental production"
+  },
+  "sources": [
+    "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art045-priority-review\\v01\\ART-PROMPTS-060-erik-e-arlindo-jogaveis.md"
+  ]
+}

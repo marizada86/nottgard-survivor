@@ -1,0 +1,122 @@
+{
+  "native_files": [
+    {
+      "file": "pose-guide-v01.png",
+      "sha256": "922380021045dfb5aae4d38b8ec182a71ad7fcbd504834869b4088480deb23a3",
+      "size": [
+        800,
+        640
+      ]
+    },
+    {
+      "file": "cycle-guide-v01.png",
+      "sha256": "42fb7df5304f4f73438a59e1bd3cf9ec5d2ca530a383ce948c3197cd1814dc0a",
+      "size": [
+        2400,
+        640
+      ]
+    },
+    {
+      "file": "guided-contacts-v01.png",
+      "sha256": "712c795a17a6dcf2ee9ef91fe26af87cf9e8deda932ab0b10ca87d2bf277623e",
+      "size": [
+        1774,
+        887
+      ]
+    },
+    {
+      "file": "guided-colored-contacts-v01.png",
+      "sha256": "1695cfac9d9b1f067ef282531b9538b32db1544de6941e18b20f62afef227b26",
+      "size": [
+        1402,
+        1122
+      ]
+    },
+    {
+      "file": "guided-final-contacts-v01.png",
+      "sha256": "3125fa4a0d17bedb8992c5b6835c052c566df353569e9b331af19c0afe24cba2",
+      "size": [
+        1402,
+        1122
+      ]
+    },
+    {
+      "file": "erik-move-e-guided-v01.png",
+      "sha256": "b5abd14230632cfaf9e2fe5c503ef4b526309b275651c4c6122a050ed336eae9",
+      "size": [
+        2172,
+        724
+      ]
+    }
+  ],
+  "frames": [
+    {
+      "frame": 1,
+      "bounds": [
+        16,
+        106,
+        340,
+        631
+      ],
+      "nonempty": true
+    },
+    {
+      "frame": 2,
+      "bounds": [
+        56,
+        105,
+        324,
+        635
+      ],
+      "nonempty": true
+    },
+    {
+      "frame": 3,
+      "bounds": [
+        20,
+        110,
+        350,
+        629
+      ],
+      "nonempty": true
+    },
+    {
+      "frame": 4,
+      "bounds": [
+        15,
+        106,
+        361,
+        631
+      ],
+      "nonempty": true
+    },
+    {
+      "frame": 5,
+      "bounds": [
+        72,
+        106,
+        332,
+        636
+      ],
+      "nonempty": true
+    },
+    {
+      "frame": 6,
+      "bounds": [
+        13,
+        107,
+        353,
+        630
+      ],
+      "nonempty": true
+    }
+  ],
+  "visually_observed_figures": 6,
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "final_grid_pass": false,
+  "review": "DRAFT: apparent opposite foreground-leg overlap in contacts1/4, human gait review pending",
+  "runtime_admission": false
+}

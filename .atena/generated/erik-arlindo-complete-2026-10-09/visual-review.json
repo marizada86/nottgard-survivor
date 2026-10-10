@@ -1,0 +1,14 @@
+{
+  "reviewer": "Atena",
+  "kind": "visual_inspection_of_generated_native_sources",
+  "owner_approval": false,
+  "findings": {
+    "ER03": {"retry": true, "flags": ["SEVEN_FIGURES_INSTEAD_OF_SIX", "EAST_DIRECTION_NOT_CLEAR", "RIGHT_EDGE_CLIPPED"]},
+    "ER04": {"retry": true, "flags": ["FRAME_SPACING_TOO_TIGHT", "ALTERNATING_CONTACT_POSES_UNCLEAR"]},
+    "ER05": {"retry": false, "flags": ["GRID_NORMALIZATION_PENDING"], "observations": "Six frontal figures, right-hand torch, alternating contact legs visible."},
+    "ER06": {"retry": false, "flags": ["GRID_NORMALIZATION_PENDING"], "observations": "Six northeast rear three-quarter figures; torch on anatomical right."},
+    "ER07": {"retry": false, "flags": ["GRID_NORMALIZATION_PENDING"], "observations": "Six north-facing back figures, torch on anatomical right."},
+    "ER08": {"retry": true, "flags": ["FLAME_CROSSES_FRAME_BOUNDARY"]},
+    "ER09": {"retry": false, "flags": ["GRID_NORMALIZATION_PENDING"], "observations": "Six phases; right torch planting and fire band peak in fourth figure."}
+  }
+}

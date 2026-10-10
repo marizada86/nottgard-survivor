@@ -3,7 +3,7 @@ active_plan:
   id: PLAN-053
   spec_id: SPEC-121
   current_step: S-007
-  checkpoint: S-007/VFX/FILA-023/REVIEW-60
+  checkpoint: DEV-024/ORIGINAL-GENERATIONS/RESTORED
   total_steps: 7
   status: NATIVE_GENERATION_COMPLETE_REVIEW_PENDING
   approval:
@@ -19,8 +19,8 @@ active_plan:
     date: '2026-10-03'
     evidence: Pedido pode continuar após seleção Por plano; gates visuais preservados.
 plan_cursor:
-  current: 'FILA02360/60 geradas; quatro pilotos ART045 gerados; revisao e normalizacao pendentes.'
-  next: 'Revisar galeria64; normalizar grade/pivo; admissao runtime depende do aceite.'
+  current: 'FILA02360/60 e FILA02720/20 nativas geradas; revisao e normalizacao pendentes.'
+  next: 'Revisar galeria20 Erik/Arlindo e galeria60 VFX; corrigir alertas e normalizar grade/pivo antes da admissao.'
   review: '.atena/generated/s007-reconciliation/v01/h403-reference-comparison-2026-10-09.png'
   evidence: '.atena/evidence/s007-maelor-completo-sylas-gate-2026-10-09.md'
 identity_gate:
@@ -318,3 +318,12 @@ continuous_generation_result:
   gallery: .atena/generated/continuous-draft-2026-10-09/index.html
   audit: .atena/generated/continuous-draft-2026-10-09/completion-audit.json
   runtime_admission: false
+
+hero_full_production_2026_10_09:
+  deviation: DEV-024
+  revision: v03
+  status: NATIVE_GENERATION_COMPLETE_REVIEW_PENDING
+  mode: per-plan
+  state_file: .atena/state/dev-024-art045-pilots.yaml
+  return_checkpoint: S-007/VFX/FILA-023/REVIEW-60
+  remaining_pieces: 0

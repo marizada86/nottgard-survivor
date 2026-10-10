@@ -1,0 +1,14 @@
+{
+  "source_sha256": "cb7251670ea860bf59edcb14a8b61a34eb7386d32e3737a2015ffa08b4937828",
+  "method": "two depth pose templates anchored at opposite hips; preserve painted pixels, no shin rotation or mesh stretch",
+  "source_unchanged": true,
+  "contact_a": {
+    "right_leg": "back",
+    "left_leg": "front"
+  },
+  "contact_b": {
+    "right_leg": "front",
+    "left_leg": "back"
+  },
+  "runtime_admission": false
+}

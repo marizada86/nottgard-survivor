@@ -1,0 +1,144 @@
+{
+  "kind": "Manual visual inspection by Atena; not an automated frame-count detector",
+  "selected": [
+    {
+      "code": "ER03",
+      "selected": ".atena/generated/art-candidates/heroes-novos/erik/er03-move_e-v03.png",
+      "observed_figures": 6,
+      "flags": [
+        "WALK_LOOP_CONTACT_REVIEW_PENDING",
+        "EAST_PROFILE_CAMERA_REVIEW_PENDING"
+      ],
+      "owner_approval": false
+    },
+    {
+      "code": "ER04",
+      "selected": ".atena/generated/art-candidates/heroes-novos/erik/er04-move_se-v02.png",
+      "observed_figures": 6,
+      "flags": [
+        "WALK_LOOP_CONTACT_REVIEW_PENDING"
+      ],
+      "owner_approval": false
+    },
+    {
+      "code": "ER05",
+      "selected": ".atena/generated/art-candidates/heroes-novos/erik/er05-move_s-v01.png",
+      "observed_figures": 6,
+      "flags": [
+        "WALK_LOOP_CONTACT_REVIEW_PENDING"
+      ],
+      "owner_approval": false
+    },
+    {
+      "code": "ER06",
+      "selected": ".atena/generated/art-candidates/heroes-novos/erik/er06-move_ne-v01.png",
+      "observed_figures": 6,
+      "flags": [
+        "WALK_LOOP_CONTACT_REVIEW_PENDING"
+      ],
+      "owner_approval": false
+    },
+    {
+      "code": "ER07",
+      "selected": ".atena/generated/art-candidates/heroes-novos/erik/er07-move_n-v01.png",
+      "observed_figures": 6,
+      "flags": [
+        "WALK_LOOP_CONTACT_REVIEW_PENDING"
+      ],
+      "owner_approval": false
+    },
+    {
+      "code": "ER08",
+      "selected": ".atena/generated/art-candidates/heroes-novos/erik/er08-attack-v02.png",
+      "observed_figures": 4,
+      "flags": [],
+      "owner_approval": false
+    },
+    {
+      "code": "ER09",
+      "selected": ".atena/generated/art-candidates/heroes-novos/erik/er09-active-v01.png",
+      "observed_figures": 6,
+      "flags": [],
+      "owner_approval": false
+    },
+    {
+      "code": "ER10",
+      "selected": ".atena/generated/art-candidates/heroes-novos/erik/er10-death-v01.png",
+      "observed_figures": 6,
+      "flags": [],
+      "owner_approval": false
+    },
+    {
+      "code": "AO03",
+      "selected": ".atena/generated/art-candidates/heroes-novos/arlindo/ao03-move_e-v01.png",
+      "observed_figures": 6,
+      "flags": [
+        "WALK_LOOP_CONTACT_REVIEW_PENDING"
+      ],
+      "owner_approval": false
+    },
+    {
+      "code": "AO04",
+      "selected": ".atena/generated/art-candidates/heroes-novos/arlindo/ao04-move_se-v02.png",
+      "observed_figures": 6,
+      "flags": [
+        "WALK_LOOP_CONTACT_REVIEW_PENDING"
+      ],
+      "owner_approval": false
+    },
+    {
+      "code": "AO05",
+      "selected": ".atena/generated/art-candidates/heroes-novos/arlindo/ao05-move_s-v01.png",
+      "observed_figures": 6,
+      "flags": [
+        "WALK_LOOP_CONTACT_REVIEW_PENDING"
+      ],
+      "owner_approval": false
+    },
+    {
+      "code": "AO06",
+      "selected": ".atena/generated/art-candidates/heroes-novos/arlindo/ao06-move_ne-v02.png",
+      "observed_figures": 6,
+      "flags": [
+        "WALK_LOOP_CONTACT_REVIEW_PENDING"
+      ],
+      "owner_approval": false
+    },
+    {
+      "code": "AO07",
+      "selected": ".atena/generated/art-candidates/heroes-novos/arlindo/ao07-move_n-v01.png",
+      "observed_figures": 6,
+      "flags": [
+        "WALK_LOOP_CONTACT_REVIEW_PENDING"
+      ],
+      "owner_approval": false
+    },
+    {
+      "code": "AO08",
+      "selected": ".atena/generated/art-candidates/heroes-novos/arlindo/ao08-attack-v02.png",
+      "observed_figures": 4,
+      "flags": [],
+      "owner_approval": false
+    },
+    {
+      "code": "AO09",
+      "selected": ".atena/generated/art-candidates/heroes-novos/arlindo/ao09-active-v02.png",
+      "observed_figures": 6,
+      "flags": [],
+      "owner_approval": false
+    },
+    {
+      "code": "AO10",
+      "selected": ".atena/generated/art-candidates/heroes-novos/arlindo/ao10-death-v01.png",
+      "observed_figures": 6,
+      "flags": [],
+      "owner_approval": false
+    }
+  ],
+  "notes": [
+    "EDGE_CONTENT tests provisional equal-width cells and includes semi-transparent glow; it is not proof of source clipping.",
+    "Native dimensions differ from final256x384 cell contract.",
+    "ER03v03 keeps torch on camera-near right arm in all six figures; gait contact continuity still needs review.",
+    "AO08v02 right-hand projectile and AO09v02 compact ring visually checked."
+  ]
+}

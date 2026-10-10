@@ -1,18 +1,34 @@
 id: DEV-024
-revision: v01
-status: GENERATED_SCOPE_COMPLETE_REVIEW_PENDING
+revision: v03
+status: NATIVE_GENERATION_COMPLETE_REVIEW_PENDING
 approval_mode: per-plan
 owner_reply: "atena prossiga conforme as recomendações"
 parent: PLAN-053
 parent_status: RESUMED_CONTINUOUS_DRAFT
-return_checkpoint: S-007/VFX/FILA-023/H-REMAINING
-checkpoint: S-005/AO02
+return_checkpoint: S-007/VFX/FILA-023/REVIEW-60
+checkpoint: ORIGINAL-GENERATIONS/RESTORED
 steps:
   - {id: S-001, task: visual preparation, status: COMPLETED}
   - {id: S-002, task: ER01 portrait, status: APPROVED_BY_OWNER}
-  - {id: S-003, task: ER02 idle, status: GENERATED_AUDITED_PENDING_ACCEPTANCE}
+  - {id: S-003, task: ER02 idle, status: APPROVED_BY_OWNER}
   - {id: S-004, task: AO01 portrait, status: APPROVED_BY_OWNER}
   - {id: S-005, task: AO02 idle, status: GENERATED_AUDITED_PENDING_REVIEW}
+  - {id: S-006, task: ER03, status: GENERATED_AUDITED_PENDING_REVIEW}
+  - {id: S-007, task: ER04, status: GENERATED_AUDITED_PENDING_REVIEW}
+  - {id: S-008, task: ER05, status: GENERATED_AUDITED_PENDING_REVIEW}
+  - {id: S-009, task: ER06, status: GENERATED_AUDITED_PENDING_REVIEW}
+  - {id: S-010, task: ER07, status: GENERATED_AUDITED_PENDING_REVIEW}
+  - {id: S-011, task: ER08, status: GENERATED_AUDITED_PENDING_REVIEW}
+  - {id: S-012, task: ER09, status: GENERATED_AUDITED_PENDING_REVIEW}
+  - {id: S-013, task: ER10, status: GENERATED_AUDITED_PENDING_REVIEW}
+  - {id: S-014, task: AO03, status: GENERATED_AUDITED_PENDING_REVIEW}
+  - {id: S-015, task: AO04, status: GENERATED_AUDITED_PENDING_REVIEW}
+  - {id: S-016, task: AO05, status: GENERATED_AUDITED_PENDING_REVIEW}
+  - {id: S-017, task: AO06, status: GENERATED_AUDITED_PENDING_REVIEW}
+  - {id: S-018, task: AO07, status: GENERATED_AUDITED_PENDING_REVIEW}
+  - {id: S-019, task: AO08, status: GENERATED_AUDITED_PENDING_REVIEW}
+  - {id: S-020, task: AO09, status: GENERATED_AUDITED_PENDING_REVIEW}
+  - {id: S-021, task: AO10, status: GENERATED_AUDITED_PENDING_REVIEW}
 runtime_admission: false
 content_state: DRAFT
 
@@ -22,3 +38,85 @@ continuous_draft_execution:
   receipt: .atena/generated/art045-priority-review/v01/continuous-draft-authorization-v02.json
   human_review: deferred_until_owner_returns
   runtime_admission: false
+
+full_scope_extension:
+  approval_mode: per-plan
+  owner_request: "Continuar a produção e finalizar Erik e Arlindo se faltar algo"
+  impact: .atena/generated/erik-arlindo-complete-2026-10-09/scope-extension-v03.json
+  jobs: .atena/generated/erik-arlindo-complete-2026-10-09/jobs.json
+  total_pieces: 20
+  remaining_pieces: 0
+  return_checkpoint: S-007/VFX/FILA-023/REVIEW-60
+
+completion_review:
+  native_pieces: 20
+  newly_generated_strips: 16
+  gallery: .atena/generated/erik-arlindo-complete-2026-10-09/index.html
+  audit: .atena/generated/erik-arlindo-complete-2026-10-09/review-audit.json
+  human_review: PENDING
+  grid_and_pivot_normalization: PENDING
+  runtime_admission: false
+
+layered_pilot:
+  owner_authorization: .atena/generated/erik-gait-pilot/layered-v01/authorization.json
+  candidate: .atena/generated/art-candidates/heroes-novos/erik/er03-move_e-layered-v01.png
+  review: .atena/generated/erik-gait-pilot/layered-v01/index.html
+  geometric_checks: PASSED
+  artistic_review: OWNER_APPROVED_PILOT_FOR_TRIAL
+  runtime_admission: false
+
+layered_trial:
+  approval: .atena/generated/erik-gait-pilot/layered-v01/owner-trial-approval.json
+  engine: PASS_ISOLATED_GAME_LOADER
+  review: .atena/generated/erik-gait-pilot/layered-v01/try-walk.html
+  full_game: NOT_RUN_HERO_ABSENT_IN_CHECKOUT
+  runtime_admission: false
+
+reference_production:
+  request_classification: IN_PLAN
+  owner_request: '2026-10-10: sim atena, retome'
+  approval_mode: per-plan
+  checkpoint: ORIGINAL-GENERATIONS/RESTORED
+  evidence: .atena/generated/erik-gait-reference-production/resume.md
+  runtime_admission: false
+
+
+
+controlled_walk_review:
+  new_candidates: 9
+  human_art_review_pending: 0 # nove derivados descartados da selecao pelo dono
+  texture_refinement_required: CANCELLED_BY_OWNER
+  gallery: .atena/generated/erik-gait-reference-production/index.html
+  audit: .atena/generated/erik-gait-reference-production/review-audit.json
+  runtime_admission: false
+
+owner_restore_first_generations:
+  status: COMPLETED_LOCAL
+  request_classification: IN_PLAN_RECOVERY
+  owner_request: "desisto volte para as primeiras tiragens geradas"
+  gait_correction: CANCELLED_BY_OWNER
+  selected: FIRST_GENERATIONS_V01
+  approved_idle_preserved: ER02_V02
+  discarded_variants: PRESERVED_HISTORY_ONLY
+  gallery: .atena/generated/erik-arlindo-complete-2026-10-09/index.html
+  receipt: .atena/generated/erik-arlindo-complete-2026-10-09/restore-first-generations-2026-10-10/receipt.json
+  runtime_admission: false
+
+original_preview_fix:
+  code: AO03
+  classification: IN_PLAN
+  status: PREVIEW_FIXED_SOURCE_PRESERVED
+  evidence: .atena/evidence/ao03-preview-fragment-2026-10-10.md
+  gait_correction: CANCELLED_BY_OWNER
+  runtime_admission: false
+
+owner_approved_preview_commit:
+  date: '2026-10-10'
+  owner_reply: 'atena aprovado e commit, vamos seguir adiante'
+  accepted: AO03_CORRECTED_PREVIEW
+  authorization: LOCAL_COMMIT
+  receipt: .atena/evidence/hero-originals-commit-authorization-2026-10-10.json
+  next: AUDIT_REMAINING_ORIGINAL_WALK_PREVIEWS
+  gait_correction: CANCELLED_BY_OWNER
+  runtime_admission: false
+  push_authorized: false

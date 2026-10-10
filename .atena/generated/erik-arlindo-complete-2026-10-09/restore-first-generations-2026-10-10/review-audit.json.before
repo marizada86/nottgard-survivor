@@ -1,0 +1,127 @@
+{
+  "total_available": 20,
+  "expected": 20,
+  "files": [
+    {
+      "code": "AO01",
+      "exists": true,
+      "sha256": "7b77f90efb3ce5f2266ad7569bbcfb52b91fe0225df6ea80c04070d4d7f9750e",
+      "record_matches": true
+    },
+    {
+      "code": "AO02",
+      "exists": true,
+      "sha256": "e6df81e5fb10c896a4a43b9f05fcb0da8df1aad15c811f9f0ee92a9132615dbf",
+      "record_matches": true
+    },
+    {
+      "code": "AO03",
+      "exists": true,
+      "sha256": "c8756558d5badef2b0c2a5a2cc536344ce85e8222c6bdae088cd8e3298c32588",
+      "record_matches": true
+    },
+    {
+      "code": "AO04",
+      "exists": true,
+      "sha256": "3a8bd2101b2c5a8c47186a26d98d419c13f08081b568ad4a2514f97ff68a35a7",
+      "record_matches": true
+    },
+    {
+      "code": "AO05",
+      "exists": true,
+      "sha256": "fcf1f0dc1fe81be057c7b19ba1a7fce6d01ddb15d889d03a7a61dd24f0a06666",
+      "record_matches": true
+    },
+    {
+      "code": "AO06",
+      "exists": true,
+      "sha256": "5075f59e15ed8a464424dd2750eb6ad8aa84775b583d372d1237a010973ef88e",
+      "record_matches": true
+    },
+    {
+      "code": "AO07",
+      "exists": true,
+      "sha256": "fd28f0e31899eda21c4e8fbf3241f25935fcd2dcd4300afb602dd7297e0104f7",
+      "record_matches": true
+    },
+    {
+      "code": "AO08",
+      "exists": true,
+      "sha256": "047ef0fd4465a83b3737293ebd4626ee829e2dfe0373d159cf44b83ed82b6979",
+      "record_matches": true
+    },
+    {
+      "code": "AO09",
+      "exists": true,
+      "sha256": "035bc831f7f20dfb8e61ae82c002cf019ee9a1e4bb78dbac319180660fa2f075",
+      "record_matches": true
+    },
+    {
+      "code": "AO10",
+      "exists": true,
+      "sha256": "103b76a306d4721ba45e9670de4e52beb230f2663e3c95e4f71ad8370792575e",
+      "record_matches": true
+    },
+    {
+      "code": "ER01",
+      "exists": true,
+      "sha256": "0551a2b2059a970c8df8c8452a3af77704371f98acea5a0dda223cb2dd750d07",
+      "record_matches": true
+    },
+    {
+      "code": "ER02",
+      "exists": true,
+      "sha256": "340fbe94fb9246f840ca2d7c328e609090678e2c2a50a167552f4bb905f0fae4",
+      "record_matches": true
+    },
+    {
+      "code": "ER03",
+      "exists": true,
+      "sha256": "7cd4eccd003d9df5eecfcbc96fb4bd3b7b53246bbc6275eb3055dcaab3198eaa",
+      "record_matches": true
+    },
+    {
+      "code": "ER04",
+      "exists": true,
+      "sha256": "df764cb4edfcabfd2aedf48c9177b16cd5b3e3042472b964ea16345c6172d3e8",
+      "record_matches": true
+    },
+    {
+      "code": "ER05",
+      "exists": true,
+      "sha256": "c4cf640e0bfb3948b0a16a3f99978eb0b047c454799f12412c699d6078b91ba3",
+      "record_matches": true
+    },
+    {
+      "code": "ER06",
+      "exists": true,
+      "sha256": "1121c10194add75a03465c82f469091ba6ec89021f10fac0018b0172e258c0e9",
+      "record_matches": true
+    },
+    {
+      "code": "ER07",
+      "exists": true,
+      "sha256": "6ae2917e571612e40a64bbe9d8264508ee0ee6489e2620e8f4c6194df76d5323",
+      "record_matches": true
+    },
+    {
+      "code": "ER08",
+      "exists": true,
+      "sha256": "4ca74e3ee1e124779cd39f70f6253bf854e89e6773c72bd4b9c5c69b29fabdfa",
+      "record_matches": true
+    },
+    {
+      "code": "ER09",
+      "exists": true,
+      "sha256": "b32eb2cb7159b0c24cf8fff4174fe77324a4d18745651dae3286a587f2291bd1",
+      "record_matches": true
+    },
+    {
+      "code": "ER10",
+      "exists": true,
+      "sha256": "2f8ca3ecf43fbd643ba3db7f32bc5a0c4525728692e2ab33b2ee89bf9ba83993",
+      "record_matches": true
+    }
+  ],
+  "runtime_admission": false
+}

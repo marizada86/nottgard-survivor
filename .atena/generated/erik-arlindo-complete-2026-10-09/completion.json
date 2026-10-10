@@ -1,0 +1,13 @@
+{
+  "native_count": 20,
+  "new_strips": 16,
+  "correction_candidates": 8,
+  "hashes_verified": 16,
+  "native_alpha_verified": true,
+  "exact_grid_passed": 0,
+  "runtime_admission": false,
+  "human_review": "PENDING",
+  "planned_godot_checks": "Candidate audit executed in isolated project:14 six-frame strips,84 frames,38 edge alerts,0 empty. audit_strip_edges.gd absent; runtime motion pending.",
+  "recovery": "Previous originals and every retry retained; official manifest and runtime untouched",
+  "godot_candidate_audit": ".atena/generated/erik-arlindo-complete-2026-10-09/godot-candidate-audit-isolated.log"
+}

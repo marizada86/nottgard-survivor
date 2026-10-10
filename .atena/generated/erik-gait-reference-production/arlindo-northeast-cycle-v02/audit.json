@@ -1,0 +1,272 @@
+{
+  "source_sha256": "ff60ae7faacb5f598a6675698d6a9afe9737d4b57dddd194cfd100de434f7f60",
+  "method": "continuous whole-leg mesh; no separately rotated knee or ankle pieces",
+  "frames": [
+    {
+      "frame": 1,
+      "joints": {
+        "near": [
+          [
+            161,
+            470
+          ],
+          [
+            126,
+            535
+          ],
+          [
+            112,
+            591
+          ]
+        ],
+        "far": [
+          [
+            249,
+            460
+          ],
+          [
+            260,
+            500
+          ],
+          [
+            272,
+            533
+          ]
+        ],
+        "support": "near"
+      },
+      "support_correction_y": 5,
+      "bounds": [
+        49,
+        78,
+        200,
+        368
+      ]
+    },
+    {
+      "frame": 2,
+      "joints": {
+        "near": [
+          [
+            161,
+            470
+          ],
+          [
+            155,
+            535
+          ],
+          [
+            155,
+            591
+          ]
+        ],
+        "far": [
+          [
+            249,
+            460
+          ],
+          [
+            250,
+            520
+          ],
+          [
+            250,
+            552
+          ]
+        ],
+        "support": "near"
+      },
+      "support_correction_y": 5,
+      "bounds": [
+        49,
+        78,
+        200,
+        368
+      ]
+    },
+    {
+      "frame": 3,
+      "joints": {
+        "near": [
+          [
+            161,
+            470
+          ],
+          [
+            175,
+            535
+          ],
+          [
+            190,
+            591
+          ]
+        ],
+        "far": [
+          [
+            249,
+            460
+          ],
+          [
+            230,
+            535
+          ],
+          [
+            227,
+            570
+          ]
+        ],
+        "support": "near"
+      },
+      "support_correction_y": 5,
+      "bounds": [
+        49,
+        78,
+        200,
+        368
+      ]
+    },
+    {
+      "frame": 4,
+      "joints": {
+        "near": [
+          [
+            161,
+            470
+          ],
+          [
+            159,
+            510
+          ],
+          [
+            147,
+            533
+          ]
+        ],
+        "far": [
+          [
+            249,
+            460
+          ],
+          [
+            263,
+            535
+          ],
+          [
+            280,
+            591
+          ]
+        ],
+        "support": "far"
+      },
+      "support_correction_y": 5,
+      "bounds": [
+        49,
+        78,
+        202,
+        368
+      ]
+    },
+    {
+      "frame": 5,
+      "joints": {
+        "near": [
+          [
+            161,
+            470
+          ],
+          [
+            143,
+            522
+          ],
+          [
+            130,
+            552
+          ]
+        ],
+        "far": [
+          [
+            249,
+            460
+          ],
+          [
+            250,
+            535
+          ],
+          [
+            253,
+            591
+          ]
+        ],
+        "support": "far"
+      },
+      "support_correction_y": 5,
+      "bounds": [
+        49,
+        78,
+        200,
+        368
+      ]
+    },
+    {
+      "frame": 6,
+      "joints": {
+        "near": [
+          [
+            161,
+            470
+          ],
+          [
+            133,
+            536
+          ],
+          [
+            115,
+            570
+          ]
+        ],
+        "far": [
+          [
+            249,
+            460
+          ],
+          [
+            227,
+            535
+          ],
+          [
+            220,
+            591
+          ]
+        ],
+        "support": "far"
+      },
+      "support_correction_y": 5,
+      "bounds": [
+        49,
+        78,
+        200,
+        368
+      ]
+    }
+  ],
+  "cell": [
+    256,
+    384
+  ],
+  "atlas": [
+    1536,
+    384
+  ],
+  "support_baselines": [
+    368,
+    368,
+    368,
+    368,
+    368,
+    368
+  ],
+  "geometric_alternation": true,
+  "source_unchanged": true,
+  "artistic_review": "PENDING",
+  "runtime_admission": false
+}

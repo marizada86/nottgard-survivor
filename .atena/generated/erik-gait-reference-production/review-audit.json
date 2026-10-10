@@ -1,0 +1,676 @@
+{
+  "date": "2026-10-10",
+  "request_classification": "IN_PLAN",
+  "approval_mode": "per-plan",
+  "nine_new_derivatives": true,
+  "eight_candidates_for_art_review": true,
+  "one_texture_refinement_required": "AO03",
+  "originals": [
+    {
+      "code": "ER03",
+      "unchanged": true
+    },
+    {
+      "code": "ER04",
+      "unchanged": true
+    },
+    {
+      "code": "ER05",
+      "unchanged": true
+    },
+    {
+      "code": "ER06",
+      "unchanged": true
+    },
+    {
+      "code": "ER07",
+      "unchanged": true
+    },
+    {
+      "code": "ER08",
+      "unchanged": true
+    },
+    {
+      "code": "ER09",
+      "unchanged": true
+    },
+    {
+      "code": "ER10",
+      "unchanged": true
+    },
+    {
+      "code": "AO03",
+      "unchanged": true
+    },
+    {
+      "code": "AO04",
+      "unchanged": true
+    },
+    {
+      "code": "AO05",
+      "unchanged": true
+    },
+    {
+      "code": "AO06",
+      "unchanged": true
+    },
+    {
+      "code": "AO07",
+      "unchanged": true
+    },
+    {
+      "code": "AO08",
+      "unchanged": true
+    },
+    {
+      "code": "AO09",
+      "unchanged": true
+    },
+    {
+      "code": "AO10",
+      "unchanged": true
+    }
+  ],
+  "rows": [
+    {
+      "code": "ER03",
+      "hero": "erik",
+      "direction": "e",
+      "candidate": ".atena/generated/art-candidates/heroes-novos/erik/er03-move_e-layered-v01.png",
+      "sha256": "1191ee722bf1f86e4a74caed3e04f8bd4e6550a453c29a6ae252b7d89e0eeaa8",
+      "frames": 6,
+      "size": [
+        1536,
+        384
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "bounds": [
+        [
+          57,
+          68,
+          228,
+          368
+        ],
+        [
+          80,
+          68,
+          228,
+          368
+        ],
+        [
+          72,
+          68,
+          228,
+          368
+        ],
+        [
+          64,
+          68,
+          228,
+          368
+        ],
+        [
+          80,
+          68,
+          228,
+          368
+        ],
+        [
+          65,
+          68,
+          228,
+          368
+        ]
+      ],
+      "distinct_frames": 6,
+      "support_baseline": 368,
+      "upper_body_pixels_identical": true,
+      "artistic_status": "OWNER_APPROVED_PILOT_FOR_TRIAL",
+      "runtime_admission": false
+    },
+    {
+      "code": "ER04",
+      "hero": "erik",
+      "direction": "se",
+      "candidate": ".atena/generated/art-candidates/heroes-novos/erik/er04-move_se-templates-v01.png",
+      "sha256": "0d79e9d09ac26967e27f1292923095381afe1d695111e1e8744f4b1695eb6e7f",
+      "frames": 6,
+      "size": [
+        1536,
+        384
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "bounds": [
+        [
+          41,
+          68,
+          220,
+          368
+        ],
+        [
+          41,
+          68,
+          211,
+          368
+        ],
+        [
+          41,
+          68,
+          211,
+          368
+        ],
+        [
+          41,
+          68,
+          211,
+          368
+        ],
+        [
+          41,
+          68,
+          211,
+          368
+        ],
+        [
+          41,
+          68,
+          211,
+          368
+        ]
+      ],
+      "distinct_frames": 6,
+      "support_baseline": 368,
+      "upper_body_pixels_identical": true,
+      "artistic_status": "DRAFT_ART_REVIEW_PENDING",
+      "runtime_admission": false
+    },
+    {
+      "code": "ER05",
+      "hero": "erik",
+      "direction": "s",
+      "candidate": ".atena/generated/art-candidates/heroes-novos/erik/er05-move_s-templates-v01.png",
+      "sha256": "336814b5a516fa69f1f14e4cda1ff4fa6e1acb46418efea81938c28cf1ead721",
+      "frames": 6,
+      "size": [
+        1536,
+        384
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "bounds": [
+        [
+          53,
+          68,
+          201,
+          368
+        ],
+        [
+          53,
+          68,
+          201,
+          368
+        ],
+        [
+          53,
+          68,
+          201,
+          368
+        ],
+        [
+          53,
+          68,
+          201,
+          368
+        ],
+        [
+          53,
+          68,
+          201,
+          368
+        ],
+        [
+          53,
+          68,
+          201,
+          368
+        ]
+      ],
+      "distinct_frames": 6,
+      "support_baseline": 368,
+      "upper_body_pixels_identical": true,
+      "artistic_status": "DRAFT_ART_REVIEW_PENDING",
+      "runtime_admission": false
+    },
+    {
+      "code": "ER06",
+      "hero": "erik",
+      "direction": "ne",
+      "candidate": ".atena/generated/art-candidates/heroes-novos/erik/er06-move_ne-templates-v01.png",
+      "sha256": "1746310bb18f38264b902c9a4d75e7e4c0da162c4c95a298b9b91e4447d02e2d",
+      "frames": 6,
+      "size": [
+        1536,
+        384
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "bounds": [
+        [
+          41,
+          68,
+          207,
+          368
+        ],
+        [
+          41,
+          68,
+          207,
+          368
+        ],
+        [
+          41,
+          68,
+          207,
+          368
+        ],
+        [
+          41,
+          68,
+          207,
+          368
+        ],
+        [
+          41,
+          68,
+          207,
+          368
+        ],
+        [
+          41,
+          68,
+          207,
+          368
+        ]
+      ],
+      "distinct_frames": 6,
+      "support_baseline": 368,
+      "upper_body_pixels_identical": true,
+      "artistic_status": "DRAFT_ART_REVIEW_PENDING",
+      "runtime_admission": false
+    },
+    {
+      "code": "ER07",
+      "hero": "erik",
+      "direction": "n",
+      "candidate": ".atena/generated/art-candidates/heroes-novos/erik/er07-move_n-templates-v01.png",
+      "sha256": "24e46266a571b224059084275b8931eb30c9608db192e308110ec0ea99e533a5",
+      "frames": 6,
+      "size": [
+        1536,
+        384
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "bounds": [
+        [
+          51,
+          49,
+          196,
+          368
+        ],
+        [
+          51,
+          49,
+          196,
+          368
+        ],
+        [
+          51,
+          49,
+          196,
+          368
+        ],
+        [
+          51,
+          49,
+          196,
+          368
+        ],
+        [
+          51,
+          49,
+          196,
+          368
+        ],
+        [
+          51,
+          49,
+          196,
+          368
+        ]
+      ],
+      "distinct_frames": 6,
+      "support_baseline": 368,
+      "upper_body_pixels_identical": true,
+      "artistic_status": "DRAFT_ART_REVIEW_PENDING",
+      "runtime_admission": false
+    },
+    {
+      "code": "AO03",
+      "hero": "arlindo",
+      "direction": "e",
+      "candidate": ".atena/generated/art-candidates/heroes-novos/arlindo/ao03-move_e-templates-v02.png",
+      "sha256": "a30d7dcac4b206eb674308b430d971cd47962952f11edfb40da1ccabe1935fcd",
+      "frames": 6,
+      "size": [
+        1536,
+        384
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "bounds": [
+        [
+          54,
+          78,
+          217,
+          368
+        ],
+        [
+          54,
+          78,
+          202,
+          368
+        ],
+        [
+          54,
+          78,
+          202,
+          368
+        ],
+        [
+          54,
+          78,
+          202,
+          368
+        ],
+        [
+          54,
+          78,
+          202,
+          368
+        ],
+        [
+          54,
+          78,
+          206,
+          368
+        ]
+      ],
+      "distinct_frames": 6,
+      "support_baseline": 368,
+      "upper_body_pixels_identical": true,
+      "artistic_status": "DRAFT_TEXTURE_REFINEMENT_REQUIRED",
+      "runtime_admission": false
+    },
+    {
+      "code": "AO04",
+      "hero": "arlindo",
+      "direction": "se",
+      "candidate": ".atena/generated/art-candidates/heroes-novos/arlindo/ao04-move_se-templates-v02.png",
+      "sha256": "b78cf111b84579eae4ea5031b4251ed721f07097ab2b19069e1088ed50be14af",
+      "frames": 6,
+      "size": [
+        1536,
+        384
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "bounds": [
+        [
+          47,
+          78,
+          201,
+          368
+        ],
+        [
+          47,
+          78,
+          201,
+          368
+        ],
+        [
+          47,
+          78,
+          201,
+          368
+        ],
+        [
+          47,
+          78,
+          201,
+          368
+        ],
+        [
+          47,
+          78,
+          201,
+          368
+        ],
+        [
+          47,
+          78,
+          201,
+          368
+        ]
+      ],
+      "distinct_frames": 6,
+      "support_baseline": 368,
+      "upper_body_pixels_identical": true,
+      "artistic_status": "DRAFT_ART_REVIEW_PENDING",
+      "runtime_admission": false
+    },
+    {
+      "code": "AO05",
+      "hero": "arlindo",
+      "direction": "s",
+      "candidate": ".atena/generated/art-candidates/heroes-novos/arlindo/ao05-move_s-templates-v01.png",
+      "sha256": "dce151f06b45b87f67972e7751e2d5e761c4c8f0eaaf1ed05f99867fafa58e8d",
+      "frames": 6,
+      "size": [
+        1536,
+        384
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "bounds": [
+        [
+          65,
+          78,
+          190,
+          368
+        ],
+        [
+          65,
+          78,
+          190,
+          368
+        ],
+        [
+          65,
+          78,
+          190,
+          368
+        ],
+        [
+          65,
+          78,
+          190,
+          368
+        ],
+        [
+          65,
+          78,
+          190,
+          368
+        ],
+        [
+          65,
+          78,
+          190,
+          368
+        ]
+      ],
+      "distinct_frames": 6,
+      "support_baseline": 368,
+      "upper_body_pixels_identical": true,
+      "artistic_status": "DRAFT_ART_REVIEW_PENDING",
+      "runtime_admission": false
+    },
+    {
+      "code": "AO06",
+      "hero": "arlindo",
+      "direction": "ne",
+      "candidate": ".atena/generated/art-candidates/heroes-novos/arlindo/ao06-move_ne-templates-v02.png",
+      "sha256": "9bfe19a4c59b82da5e7852cec0fd05628b772ea3bb386ffa14b6d76cc3da6d8c",
+      "frames": 6,
+      "size": [
+        1536,
+        384
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "bounds": [
+        [
+          49,
+          78,
+          200,
+          368
+        ],
+        [
+          49,
+          78,
+          200,
+          368
+        ],
+        [
+          49,
+          78,
+          200,
+          368
+        ],
+        [
+          49,
+          78,
+          202,
+          368
+        ],
+        [
+          49,
+          78,
+          200,
+          368
+        ],
+        [
+          49,
+          78,
+          200,
+          368
+        ]
+      ],
+      "distinct_frames": 6,
+      "support_baseline": 368,
+      "upper_body_pixels_identical": true,
+      "artistic_status": "DRAFT_ART_REVIEW_PENDING",
+      "runtime_admission": false
+    },
+    {
+      "code": "AO07",
+      "hero": "arlindo",
+      "direction": "n",
+      "candidate": ".atena/generated/art-candidates/heroes-novos/arlindo/ao07-move_n-templates-v01.png",
+      "sha256": "1785b4e2983582331ed957d8df89becbc7d894c0eab9441215dad6e4e6a2197c",
+      "frames": 6,
+      "size": [
+        1536,
+        384
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "bounds": [
+        [
+          56,
+          78,
+          191,
+          368
+        ],
+        [
+          56,
+          78,
+          191,
+          368
+        ],
+        [
+          56,
+          78,
+          191,
+          368
+        ],
+        [
+          56,
+          78,
+          191,
+          368
+        ],
+        [
+          56,
+          78,
+          191,
+          368
+        ],
+        [
+          56,
+          78,
+          191,
+          368
+        ]
+      ],
+      "distinct_frames": 6,
+      "support_baseline": 368,
+      "upper_body_pixels_identical": true,
+      "artistic_status": "DRAFT_ART_REVIEW_PENDING",
+      "runtime_admission": false
+    }
+  ],
+  "gallery_links": "PASS",
+  "runtime_admission": false,
+  "commit_push": false,
+  "limitations": [
+    "Review is not owner artistic approval.",
+    "Trunk/flame fixed: focus is gait correction; evaluate stiffness.",
+    "No full game admission or gameplay test.",
+    "Frame-to-frame smoothing and coat hems may still need art adjustments."
+  ],
+  "gallery_javascript_syntax": "PASS_NODE_CHECK"
+}

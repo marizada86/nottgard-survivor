@@ -5,14 +5,14 @@ active_plan:
   spec_id: SPEC-121
   state_file: '.atena/state/plan-053-imagens.yaml'
   mode: per-plan
-  checkpoint: S-007/VFX/FILA-023/REVIEW-60
+  checkpoint: DEV-024/ORIGINAL-GENERATIONS/RESTORED
   status: NATIVE_GENERATION_COMPLETE_REVIEW_PENDING
   approved: '2026-10-03'
   resumed: '2026-10-07'
-  request_classification: PLAN_DEVIATION
+  request_classification: IN_PLAN
 plan_cursor:
-  current: 'FILA02360/60 geradas; quatro pilotos ART045 gerados; revisao e normalizacao pendentes.'
-  next: 'Revisar galeria64; normalizar grade/pivo; admissao runtime depende do aceite.'
+  current: 'FILA02360/60 e FILA02720/20 nativas geradas; revisao e normalizacao pendentes.'
+  next: 'Primeiras tiragens Erik/Arlindo selecionadas pelo dono; correcao de gait cancelada. Revisao geral e admissao runtime permanecem separadas.'
 previous_plan_cursor:
   current: 'PLAN-059 (SPEC-125) commitado e publicado (05264f0, 1392627) em 2026-10-05; o playtest decide Docas, Molor e fases finais.'
   next: 'Retomar PLAN-053 (imagens, Shu: attack_02, death_03, death_04) e/ou abrir spec de balanceamento BAL-018 (precisa de linha de base do bot por heroi). Push da main (1 a 3 commits a frente) exige aprovacao.'
@@ -215,3 +215,12 @@ continuous_generation_result:
   gallery: .atena/generated/continuous-draft-2026-10-09/index.html
   audit: .atena/generated/continuous-draft-2026-10-09/completion-audit.json
   runtime_admission: false
+
+hero_full_production_2026_10_09:
+  deviation: DEV-024
+  revision: v03
+  status: NATIVE_GENERATION_COMPLETE_REVIEW_PENDING
+  mode: per-plan
+  state_file: .atena/state/dev-024-art045-pilots.yaml
+  return_checkpoint: S-007/VFX/FILA-023/REVIEW-60
+  remaining_pieces: 0

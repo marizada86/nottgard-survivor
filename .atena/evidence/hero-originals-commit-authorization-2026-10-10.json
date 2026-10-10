@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-10",
+  "owner_request": "atena aprovado e commit, vamos seguir adiante",
+  "classification": "IN_PLAN",
+  "authorization": "LOCAL_COMMIT_CURRENT_HERO_WORK",
+  "acceptance": "AO03_CORRECTED_REVIEW_PREVIEW",
+  "selection": "FIRST_GENERATIONS_PRESERVED",
+  "history": "LATER_VARIANTS_PRESERVED_NOT_ACTIVE",
+  "gait_correction": "CANCELLED_BY_OWNER",
+  "validation": "20 gallery sources match recorded hashes; gallery links exist; AO03 six disjoint characters and frame4 visually checked",
+  "open_p1": ["BUG-025", "BUG-027", "BUG-028", "BUG-029"],
+  "next": "Audit remaining original walk previews for frame-boundary fragments, then normalize only validated separations",
+  "runtime_admission": false,
+  "push_authorized": false
+}

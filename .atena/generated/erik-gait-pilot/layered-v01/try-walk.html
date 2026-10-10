@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="pt-BR"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Erik — teste de caminhada</title>
+<style>body{background:#18202b;color:#eef4fc;font:16px system-ui;margin:32px auto;max-width:1000px;padding:0 20px}button,input{font:inherit}button{padding:10px 16px;border:0;border-radius:8px;background:#70cef1;color:#142330;cursor:pointer}.controls{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin:20px 0}.poses{display:flex;gap:20px;flex-wrap:wrap}figure{margin:0;text-align:center}canvas{width:256px;height:384px;background:repeating-conic-gradient(#303843 0% 25%,#37424f 0% 50%) 0/20px 20px;border-radius:8px}figcaption{margin:10px}a{color:#8addfb}p{line-height:1.5}</style>
+<h1>Erik — teste de caminhada</h1>
+<p>Piloto aprovado para experimentar. Compare a perna próxima nos contatos 1 e 4 e observe as emendas nos joelhos e no quadril.</p>
+<div class="controls"><button id="toggle">Pausar</button><button id="next">Avançar um quadro</button><label>Velocidade <input id="speed" type="range" min="4" max="14" value="10"> <span id="fps">10</span> quadros/s</label></div>
+<div class="poses"><figure><canvas id="live" width="256" height="384"></canvas><figcaption id="frame">Quadro 1 de 6</figcaption></figure><figure><canvas id="contactA" width="256" height="384"></canvas><figcaption>Contato 1</figcaption></figure><figure><canvas id="contactB" width="256" height="384"></canvas><figcaption>Contato 4</figcaption></figure></div>
+<p id="state">Carregando a tira…</p><p><a href="index.html">Revisão completa</a> · <a href="godot-test/test.log">Resultado do teste Godot</a></p>
+<script>
+const atlas=new Image(),live=document.querySelector('#live'),toggle=document.querySelector('#toggle'),speed=document.querySelector('#speed');let frame=0,playing=true,last=0,ready=false;
+function paint(canvas,index){const context=canvas.getContext('2d');context.clearRect(0,0,256,384);context.drawImage(atlas,index*256,0,256,384,0,0,256,384)}
+function update(){if(!ready)return;paint(live,frame);document.querySelector('#frame').textContent=`Quadro ${frame+1} de 6`}
+atlas.onload=()=>{ready=true;update();paint(document.querySelector('#contactA'),0);paint(document.querySelector('#contactB'),3);document.querySelector('#state').textContent='Teste visual isolado. A tira ainda não foi integrada ao jogo deste checkout.'};
+atlas.onerror=()=>document.querySelector('#state').textContent='Não foi possível carregar a tira local.';
+atlas.src='erik-move-e-layered-1536x384.png';
+toggle.onclick=()=>{playing=!playing;toggle.textContent=playing?'Pausar':'Reproduzir';last=0};
+document.querySelector('#next').onclick=()=>{playing=false;toggle.textContent='Reproduzir';frame=(frame+1)%6;update();last=0};
+speed.oninput=()=>{document.querySelector('#fps').textContent=speed.value;last=0};
+function tick(time){if(playing&&ready){if(!last)last=time;const duration=1000/Number(speed.value),steps=Math.floor((time-last)/duration);if(steps){frame=(frame+steps)%6;last+=steps*duration;update()}}requestAnimationFrame(tick)}requestAnimationFrame(tick);
+</script></html>

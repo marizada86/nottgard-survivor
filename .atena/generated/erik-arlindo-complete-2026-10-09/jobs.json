@@ -1,0 +1,2685 @@
+{
+  "plan": "DEV-024/v03",
+  "state": "DRAFT",
+  "jobs": [
+    {
+      "code": "ER03",
+      "hero": "erik",
+      "piece": "`move_e`",
+      "request": "Andando para a **direita**; 6 quadros, passada firme, tocha à direita, capa/cachecol balançando dentro da folga. Anexar o `idle` aprovado.",
+      "frames": 6,
+      "destination": ".atena/generated/art-candidates/heroes-novos/erik/er03-move_e-v01.png",
+      "references": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\erik\\er02-idle-v02.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\erik\\er01-retrato-v01.png"
+      ],
+      "status": "DRAFT_OWNER_SELECTED_FIRST_GENERATION",
+      "sha256": "a4320d91eb7625513df699205d8a427972e6b721adc36ee13c527071487c8939",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-96a34d10-c793-4960-a413-08633d81291e.png",
+      "native_size": [
+        1983,
+        793
+      ],
+      "native_mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_fraction": 0.4481720093684083,
+      "frame_audit": [
+        {
+          "frame": 1,
+          "bbox_alpha26": [
+            15,
+            103,
+            330,
+            695
+          ],
+          "edge_alpha_max": 252,
+          "edge_content": true
+        },
+        {
+          "frame": 2,
+          "bbox_alpha26": [
+            0,
+            103,
+            331,
+            676
+          ],
+          "edge_alpha_max": 254,
+          "edge_content": true
+        },
+        {
+          "frame": 3,
+          "bbox_alpha26": [
+            0,
+            108,
+            330,
+            688
+          ],
+          "edge_alpha_max": 253,
+          "edge_content": true
+        },
+        {
+          "frame": 4,
+          "bbox_alpha26": [
+            0,
+            108,
+            331,
+            684
+          ],
+          "edge_alpha_max": 254,
+          "edge_content": true
+        },
+        {
+          "frame": 5,
+          "bbox_alpha26": [
+            0,
+            107,
+            330,
+            689
+          ],
+          "edge_alpha_max": 255,
+          "edge_content": true
+        },
+        {
+          "frame": 6,
+          "bbox_alpha26": [
+            0,
+            108,
+            322,
+            686
+          ],
+          "edge_alpha_max": 253,
+          "edge_content": true
+        }
+      ],
+      "technical_flags": [
+        "DIMENSION_MISMATCH",
+        "EDGE_CONTENT"
+      ],
+      "runtime_admission": false,
+      "selection": {
+        "active": true,
+        "owner_request": "desisto volte para as primeiras tiragens geradas",
+        "date": "2026-10-10",
+        "classification": "IN_PLAN_RECOVERY",
+        "gait_correction": "CANCELLED_BY_OWNER",
+        "runtime_admission": false
+      },
+      "preserved_variants": [
+        {
+          "code": "ER03",
+          "hero": "erik",
+          "piece": "`move_e`",
+          "request": "Andando para a **direita**; 6 quadros, passada firme, tocha à direita, capa/cachecol balançando dentro da folga. Anexar o `idle` aprovado.",
+          "frames": 6,
+          "destination": ".atena/generated/art-candidates/heroes-novos/erik/er03-move_e-v02.png",
+          "references": [
+            "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\erik\\er02-idle-v02.png",
+            "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\erik\\er01-retrato-v01.png"
+          ],
+          "status": "GENERATED_DRAFT_PENDING_REVIEW",
+          "sha256": "25ec53e5c9f98cbd074656827a265f3068088576d4cf6130771d80ec159ac9a7",
+          "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-53661d74-e2d0-445c-865b-0b5f6eda54ad.png",
+          "native_size": [
+            2048,
+            768
+          ],
+          "native_mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            254
+          ],
+          "transparent_fraction": 0.6023324330647787,
+          "frame_audit": [
+            {
+              "frame": 1,
+              "bbox_alpha26": [
+                17,
+                156,
+                341,
+                639
+              ],
+              "edge_alpha_max": 251,
+              "edge_content": true
+            },
+            {
+              "frame": 2,
+              "bbox_alpha26": [
+                0,
+                156,
+                319,
+                636
+              ],
+              "edge_alpha_max": 252,
+              "edge_content": true
+            },
+            {
+              "frame": 3,
+              "bbox_alpha26": [
+                5,
+                156,
+                323,
+                636
+              ],
+              "edge_alpha_max": 1,
+              "edge_content": false
+            },
+            {
+              "frame": 4,
+              "bbox_alpha26": [
+                5,
+                159,
+                341,
+                632
+              ],
+              "edge_alpha_max": 245,
+              "edge_content": true
+            },
+            {
+              "frame": 5,
+              "bbox_alpha26": [
+                0,
+                158,
+                337,
+                638
+              ],
+              "edge_alpha_max": 244,
+              "edge_content": true
+            },
+            {
+              "frame": 6,
+              "bbox_alpha26": [
+                1,
+                157,
+                322,
+                638
+              ],
+              "edge_alpha_max": 4,
+              "edge_content": false
+            }
+          ],
+          "technical_flags": [
+            "DIMENSION_MISMATCH",
+            "EDGE_CONTENT"
+          ],
+          "runtime_admission": false
+        },
+        {
+          "code": "ER03",
+          "hero": "erik",
+          "piece": "`move_e`",
+          "request": "Andando para a **direita**; 6 quadros, passada firme, tocha à direita, capa/cachecol balançando dentro da folga. Anexar o `idle` aprovado.",
+          "frames": 6,
+          "destination": ".atena/generated/art-candidates/heroes-novos/erik/er03-move_e-v03.png",
+          "references": [
+            "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\erik\\er02-idle-v02.png",
+            "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\erik\\er01-retrato-v01.png"
+          ],
+          "status": "GENERATED_DRAFT_GAIT_CORRECTION_REQUIRED",
+          "sha256": "7cd4eccd003d9df5eecfcbc96fb4bd3b7b53246bbc6275eb3055dcaab3198eaa",
+          "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-5c9ecec2-e526-49c2-b72f-74762bb08438.png",
+          "native_size": [
+            2048,
+            768
+          ],
+          "native_mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            254
+          ],
+          "transparent_fraction": 0.5864251454671224,
+          "frame_audit": [
+            {
+              "frame": 1,
+              "bbox_alpha26": [
+                1,
+                138,
+                341,
+                640
+              ],
+              "edge_alpha_max": 251,
+              "edge_content": true
+            },
+            {
+              "frame": 2,
+              "bbox_alpha26": [
+                0,
+                141,
+                335,
+                640
+              ],
+              "edge_alpha_max": 250,
+              "edge_content": true
+            },
+            {
+              "frame": 3,
+              "bbox_alpha26": [
+                3,
+                139,
+                342,
+                640
+              ],
+              "edge_alpha_max": 245,
+              "edge_content": true
+            },
+            {
+              "frame": 4,
+              "bbox_alpha26": [
+                0,
+                141,
+                333,
+                640
+              ],
+              "edge_alpha_max": 249,
+              "edge_content": true
+            },
+            {
+              "frame": 5,
+              "bbox_alpha26": [
+                1,
+                140,
+                337,
+                640
+              ],
+              "edge_alpha_max": 4,
+              "edge_content": false
+            },
+            {
+              "frame": 6,
+              "bbox_alpha26": [
+                2,
+                139,
+                342,
+                640
+              ],
+              "edge_alpha_max": 238,
+              "edge_content": true
+            }
+          ],
+          "technical_flags": [
+            "DIMENSION_MISMATCH",
+            "EDGE_CONTENT"
+          ],
+          "runtime_admission": false,
+          "visual_flags": [
+            "WALK_LOOP_CONTACT_REVIEW_PENDING",
+            "EAST_PROFILE_CAMERA_REVIEW_PENDING"
+          ],
+          "visually_observed_figure_count": 6,
+          "visual_review": "OWNER_REPORTED_NON_ALTERNATING_GAIT; REVIEW_AND_CORRECTION_REQUIRED",
+          "owner_report_evidence": ".atena/evidence/hero-gait-owner-report-2026-10-09.md",
+          "controlled_layer_candidate": {
+            "path": ".atena/generated/art-candidates/heroes-novos/erik/er03-move_e-layered-v01.png",
+            "sha256": "1191ee722bf1f86e4a74caed3e04f8bd4e6550a453c29a6ae252b7d89e0eeaa8",
+            "size": [
+              1536,
+              384
+            ],
+            "status": "OWNER_APPROVED_PILOT_FOR_TRIAL_ENGINE_CHECK_PASSED",
+            "review": ".atena/generated/erik-gait-pilot/layered-v01/index.html"
+          }
+        }
+      ]
+    },
+    {
+      "code": "ER04",
+      "hero": "erik",
+      "piece": "`move_se`",
+      "request": "Andando para baixo e à direita.",
+      "frames": 6,
+      "destination": ".atena/generated/art-candidates/heroes-novos/erik/er04-move_se-v01.png",
+      "references": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\erik\\er02-idle-v02.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\erik\\er01-retrato-v01.png"
+      ],
+      "status": "DRAFT_OWNER_SELECTED_FIRST_GENERATION",
+      "sha256": "e6f2221b56fa7be7d74b04530a3571cd8802b4b92ffb29346a544fa18299ea57",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-b6532bb8-01e1-4ce4-b789-459d617cc58c.png",
+      "native_size": [
+        1932,
+        814
+      ],
+      "native_mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_fraction": 0.49159188833101874,
+      "frame_audit": [
+        {
+          "frame": 1,
+          "bbox_alpha26": [
+            16,
+            124,
+            322,
+            726
+          ],
+          "edge_alpha_max": 252,
+          "edge_content": true
+        },
+        {
+          "frame": 2,
+          "bbox_alpha26": [
+            0,
+            125,
+            322,
+            728
+          ],
+          "edge_alpha_max": 253,
+          "edge_content": true
+        },
+        {
+          "frame": 3,
+          "bbox_alpha26": [
+            0,
+            125,
+            322,
+            729
+          ],
+          "edge_alpha_max": 253,
+          "edge_content": true
+        },
+        {
+          "frame": 4,
+          "bbox_alpha26": [
+            0,
+            131,
+            322,
+            721
+          ],
+          "edge_alpha_max": 251,
+          "edge_content": true
+        },
+        {
+          "frame": 5,
+          "bbox_alpha26": [
+            0,
+            124,
+            321,
+            726
+          ],
+          "edge_alpha_max": 154,
+          "edge_content": true
+        },
+        {
+          "frame": 6,
+          "bbox_alpha26": [
+            7,
+            124,
+            312,
+            727
+          ],
+          "edge_alpha_max": 3,
+          "edge_content": false
+        }
+      ],
+      "technical_flags": [
+        "DIMENSION_MISMATCH",
+        "EDGE_CONTENT"
+      ],
+      "runtime_admission": false,
+      "selection": {
+        "active": true,
+        "owner_request": "desisto volte para as primeiras tiragens geradas",
+        "date": "2026-10-10",
+        "classification": "IN_PLAN_RECOVERY",
+        "gait_correction": "CANCELLED_BY_OWNER",
+        "runtime_admission": false
+      },
+      "preserved_variants": [
+        {
+          "code": "ER04",
+          "hero": "erik",
+          "piece": "`move_se`",
+          "request": "Andando para baixo e à direita.",
+          "frames": 6,
+          "destination": ".atena/generated/art-candidates/heroes-novos/erik/er04-move_se-v02.png",
+          "references": [
+            "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\erik\\er02-idle-v02.png",
+            "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\erik\\er01-retrato-v01.png"
+          ],
+          "status": "GENERATED_DRAFT_GAIT_CORRECTION_REQUIRED",
+          "sha256": "df764cb4edfcabfd2aedf48c9177b16cd5b3e3042472b964ea16345c6172d3e8",
+          "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-8858ba6a-8f6f-4837-8979-042a5b595bad.png",
+          "native_size": [
+            2048,
+            768
+          ],
+          "native_mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            254
+          ],
+          "transparent_fraction": 0.6095066070556641,
+          "frame_audit": [
+            {
+              "frame": 1,
+              "bbox_alpha26": [
+                45,
+                133,
+                341,
+                644
+              ],
+              "edge_alpha_max": 143,
+              "edge_content": true
+            },
+            {
+              "frame": 2,
+              "bbox_alpha26": [
+                46,
+                132,
+                341,
+                631
+              ],
+              "edge_alpha_max": 253,
+              "edge_content": true
+            },
+            {
+              "frame": 3,
+              "bbox_alpha26": [
+                0,
+                132,
+                334,
+                637
+              ],
+              "edge_alpha_max": 253,
+              "edge_content": true
+            },
+            {
+              "frame": 4,
+              "bbox_alpha26": [
+                29,
+                133,
+                335,
+                643
+              ],
+              "edge_alpha_max": 1,
+              "edge_content": false
+            },
+            {
+              "frame": 5,
+              "bbox_alpha26": [
+                37,
+                135,
+                331,
+                640
+              ],
+              "edge_alpha_max": 1,
+              "edge_content": false
+            },
+            {
+              "frame": 6,
+              "bbox_alpha26": [
+                35,
+                133,
+                324,
+                637
+              ],
+              "edge_alpha_max": 1,
+              "edge_content": false
+            }
+          ],
+          "technical_flags": [
+            "DIMENSION_MISMATCH",
+            "EDGE_CONTENT"
+          ],
+          "runtime_admission": false,
+          "visual_flags": [
+            "WALK_LOOP_CONTACT_REVIEW_PENDING"
+          ],
+          "visually_observed_figure_count": 6,
+          "visual_review": "OWNER_REPORTED_NON_ALTERNATING_GAIT; REVIEW_AND_CORRECTION_REQUIRED",
+          "owner_report_evidence": ".atena/evidence/hero-gait-owner-report-2026-10-09.md",
+          "controlled_gait_candidate": {
+            "code": "ER04",
+            "hero": "erik",
+            "direction": "se",
+            "candidate": ".atena/generated/art-candidates/heroes-novos/erik/er04-move_se-templates-v01.png",
+            "sha256": "0d79e9d09ac26967e27f1292923095381afe1d695111e1e8744f4b1695eb6e7f",
+            "frames": 6,
+            "size": [
+              1536,
+              384
+            ],
+            "alpha_extrema": [
+              0,
+              255
+            ],
+            "bounds": [
+              [
+                41,
+                68,
+                220,
+                368
+              ],
+              [
+                41,
+                68,
+                211,
+                368
+              ],
+              [
+                41,
+                68,
+                211,
+                368
+              ],
+              [
+                41,
+                68,
+                211,
+                368
+              ],
+              [
+                41,
+                68,
+                211,
+                368
+              ],
+              [
+                41,
+                68,
+                211,
+                368
+              ]
+            ],
+            "distinct_frames": 6,
+            "support_baseline": 368,
+            "upper_body_pixels_identical": true,
+            "artistic_status": "DRAFT_ART_REVIEW_PENDING",
+            "runtime_admission": false
+          }
+        }
+      ]
+    },
+    {
+      "code": "ER05",
+      "hero": "erik",
+      "piece": "`move_s`",
+      "request": "Andando para baixo, de frente.",
+      "frames": 6,
+      "destination": ".atena/generated/art-candidates/heroes-novos/erik/er05-move_s-v01.png",
+      "references": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\erik\\er02-idle-v02.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\erik\\er01-retrato-v01.png"
+      ],
+      "status": "DRAFT_OWNER_SELECTED_FIRST_GENERATION",
+      "sha256": "c4cf640e0bfb3948b0a16a3f99978eb0b047c454799f12412c699d6078b91ba3",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-d67ae8ed-66d1-41f7-a76f-0b441e4985ca.png",
+      "native_size": [
+        2048,
+        768
+      ],
+      "native_mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_fraction": 0.490325927734375,
+      "frame_audit": [
+        {
+          "frame": 1,
+          "bbox_alpha26": [
+            37,
+            53,
+            341,
+            703
+          ],
+          "edge_alpha_max": 253,
+          "edge_content": true
+        },
+        {
+          "frame": 2,
+          "bbox_alpha26": [
+            0,
+            53,
+            329,
+            697
+          ],
+          "edge_alpha_max": 253,
+          "edge_content": true
+        },
+        {
+          "frame": 3,
+          "bbox_alpha26": [
+            12,
+            57,
+            316,
+            685
+          ],
+          "edge_alpha_max": 1,
+          "edge_content": false
+        },
+        {
+          "frame": 4,
+          "bbox_alpha26": [
+            6,
+            56,
+            332,
+            704
+          ],
+          "edge_alpha_max": 1,
+          "edge_content": false
+        },
+        {
+          "frame": 5,
+          "bbox_alpha26": [
+            15,
+            58,
+            319,
+            701
+          ],
+          "edge_alpha_max": 1,
+          "edge_content": false
+        },
+        {
+          "frame": 6,
+          "bbox_alpha26": [
+            15,
+            59,
+            311,
+            687
+          ],
+          "edge_alpha_max": 0,
+          "edge_content": false
+        }
+      ],
+      "technical_flags": [
+        "DIMENSION_MISMATCH",
+        "EDGE_CONTENT"
+      ],
+      "runtime_admission": false,
+      "visual_flags": [
+        "WALK_LOOP_CONTACT_REVIEW_PENDING"
+      ],
+      "visually_observed_figure_count": 6,
+      "visual_review": "OWNER_REPORTED_NON_ALTERNATING_GAIT; REVIEW_AND_CORRECTION_REQUIRED",
+      "owner_report_evidence": ".atena/evidence/hero-gait-owner-report-2026-10-09.md",
+      "selection": {
+        "active": true,
+        "owner_request": "desisto volte para as primeiras tiragens geradas",
+        "date": "2026-10-10",
+        "classification": "IN_PLAN_RECOVERY",
+        "gait_correction": "CANCELLED_BY_OWNER",
+        "runtime_admission": false
+      },
+      "preserved_variants": []
+    },
+    {
+      "code": "ER06",
+      "hero": "erik",
+      "piece": "`move_ne`",
+      "request": "Andando para cima e à direita; espada nas costas visível.",
+      "frames": 6,
+      "destination": ".atena/generated/art-candidates/heroes-novos/erik/er06-move_ne-v01.png",
+      "references": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\erik\\er02-idle-v02.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\erik\\er01-retrato-v01.png"
+      ],
+      "status": "DRAFT_OWNER_SELECTED_FIRST_GENERATION",
+      "sha256": "1121c10194add75a03465c82f469091ba6ec89021f10fac0018b0172e258c0e9",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-1afde257-0168-4364-83f0-4e9e4f126337.png",
+      "native_size": [
+        2048,
+        768
+      ],
+      "native_mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_fraction": 0.5181223551432291,
+      "frame_audit": [
+        {
+          "frame": 1,
+          "bbox_alpha26": [
+            13,
+            115,
+            332,
+            691
+          ],
+          "edge_alpha_max": 2,
+          "edge_content": false
+        },
+        {
+          "frame": 2,
+          "bbox_alpha26": [
+            10,
+            113,
+            330,
+            690
+          ],
+          "edge_alpha_max": 2,
+          "edge_content": false
+        },
+        {
+          "frame": 3,
+          "bbox_alpha26": [
+            24,
+            103,
+            342,
+            686
+          ],
+          "edge_alpha_max": 234,
+          "edge_content": true
+        },
+        {
+          "frame": 4,
+          "bbox_alpha26": [
+            0,
+            107,
+            336,
+            691
+          ],
+          "edge_alpha_max": 86,
+          "edge_content": true
+        },
+        {
+          "frame": 5,
+          "bbox_alpha26": [
+            20,
+            109,
+            334,
+            697
+          ],
+          "edge_alpha_max": 8,
+          "edge_content": false
+        },
+        {
+          "frame": 6,
+          "bbox_alpha26": [
+            16,
+            104,
+            342,
+            694
+          ],
+          "edge_alpha_max": 28,
+          "edge_content": true
+        }
+      ],
+      "technical_flags": [
+        "DIMENSION_MISMATCH",
+        "EDGE_CONTENT"
+      ],
+      "runtime_admission": false,
+      "visual_flags": [
+        "WALK_LOOP_CONTACT_REVIEW_PENDING"
+      ],
+      "visually_observed_figure_count": 6,
+      "visual_review": "OWNER_REPORTED_NON_ALTERNATING_GAIT; REVIEW_AND_CORRECTION_REQUIRED",
+      "owner_report_evidence": ".atena/evidence/hero-gait-owner-report-2026-10-09.md",
+      "selection": {
+        "active": true,
+        "owner_request": "desisto volte para as primeiras tiragens geradas",
+        "date": "2026-10-10",
+        "classification": "IN_PLAN_RECOVERY",
+        "gait_correction": "CANCELLED_BY_OWNER",
+        "runtime_admission": false
+      },
+      "preserved_variants": []
+    },
+    {
+      "code": "ER07",
+      "hero": "erik",
+      "piece": "`move_n`",
+      "request": "Andando para cima, **de costas** (não de frente).",
+      "frames": 6,
+      "destination": ".atena/generated/art-candidates/heroes-novos/erik/er07-move_n-v01.png",
+      "references": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\erik\\er02-idle-v02.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\erik\\er01-retrato-v01.png"
+      ],
+      "status": "DRAFT_OWNER_SELECTED_FIRST_GENERATION",
+      "sha256": "6ae2917e571612e40a64bbe9d8264508ee0ee6489e2620e8f4c6194df76d5323",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-28028a57-45db-471b-80d9-85bf4bc90ae7.png",
+      "native_size": [
+        1983,
+        793
+      ],
+      "native_mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_fraction": 0.521119935593783,
+      "frame_audit": [
+        {
+          "frame": 1,
+          "bbox_alpha26": [
+            29,
+            51,
+            321,
+            697
+          ],
+          "edge_alpha_max": 1,
+          "edge_content": false
+        },
+        {
+          "frame": 2,
+          "bbox_alpha26": [
+            32,
+            74,
+            323,
+            703
+          ],
+          "edge_alpha_max": 2,
+          "edge_content": false
+        },
+        {
+          "frame": 3,
+          "bbox_alpha26": [
+            18,
+            74,
+            312,
+            692
+          ],
+          "edge_alpha_max": 1,
+          "edge_content": false
+        },
+        {
+          "frame": 4,
+          "bbox_alpha26": [
+            9,
+            68,
+            305,
+            713
+          ],
+          "edge_alpha_max": 1,
+          "edge_content": false
+        },
+        {
+          "frame": 5,
+          "bbox_alpha26": [
+            10,
+            70,
+            301,
+            689
+          ],
+          "edge_alpha_max": 1,
+          "edge_content": false
+        },
+        {
+          "frame": 6,
+          "bbox_alpha26": [
+            4,
+            70,
+            301,
+            701
+          ],
+          "edge_alpha_max": 2,
+          "edge_content": false
+        }
+      ],
+      "technical_flags": [
+        "DIMENSION_MISMATCH"
+      ],
+      "runtime_admission": false,
+      "visual_flags": [
+        "WALK_LOOP_CONTACT_REVIEW_PENDING"
+      ],
+      "visually_observed_figure_count": 6,
+      "visual_review": "OWNER_REPORTED_NON_ALTERNATING_GAIT; REVIEW_AND_CORRECTION_REQUIRED",
+      "owner_report_evidence": ".atena/evidence/hero-gait-owner-report-2026-10-09.md",
+      "selection": {
+        "active": true,
+        "owner_request": "desisto volte para as primeiras tiragens geradas",
+        "date": "2026-10-10",
+        "classification": "IN_PLAN_RECOVERY",
+        "gait_correction": "CANCELLED_BY_OWNER",
+        "runtime_admission": false
+      },
+      "preserved_variants": []
+    },
+    {
+      "code": "ER08",
+      "hero": "erik",
+      "piece": "`attack` (4 quadros, golpe de tocha em cone)",
+      "request": "Golpe amplo de tocha à frente (sudeste), arco de fogo curto no quadro 2 e 3, volta à guarda no 4. O corpo avança na horizontal; a altura não muda.",
+      "frames": 4,
+      "destination": ".atena/generated/art-candidates/heroes-novos/erik/er08-attack-v01.png",
+      "references": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\erik\\er02-idle-v02.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\erik\\er01-retrato-v01.png"
+      ],
+      "status": "DRAFT_OWNER_SELECTED_FIRST_GENERATION",
+      "sha256": "60f43fd2a81ca3e51f3d9655cf1c4d36127a28e0b7309b9a7aa70ddfd2c880d8",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-6bae3580-f1af-4e55-b1db-5fbb9228d271.png",
+      "native_size": [
+        2048,
+        768
+      ],
+      "native_mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_fraction": 0.5683784484863281,
+      "frame_audit": [
+        {
+          "frame": 1,
+          "bbox_alpha26": [
+            42,
+            113,
+            512,
+            705
+          ],
+          "edge_alpha_max": 253,
+          "edge_content": true
+        },
+        {
+          "frame": 2,
+          "bbox_alpha26": [
+            0,
+            124,
+            512,
+            705
+          ],
+          "edge_alpha_max": 253,
+          "edge_content": true
+        },
+        {
+          "frame": 3,
+          "bbox_alpha26": [
+            0,
+            152,
+            512,
+            692
+          ],
+          "edge_alpha_max": 253,
+          "edge_content": true
+        },
+        {
+          "frame": 4,
+          "bbox_alpha26": [
+            0,
+            112,
+            476,
+            705
+          ],
+          "edge_alpha_max": 253,
+          "edge_content": true
+        }
+      ],
+      "technical_flags": [
+        "DIMENSION_MISMATCH",
+        "EDGE_CONTENT"
+      ],
+      "runtime_admission": false,
+      "selection": {
+        "active": true,
+        "owner_request": "desisto volte para as primeiras tiragens geradas",
+        "date": "2026-10-10",
+        "classification": "IN_PLAN_RECOVERY",
+        "gait_correction": "CANCELLED_BY_OWNER",
+        "runtime_admission": false
+      },
+      "preserved_variants": [
+        {
+          "code": "ER08",
+          "hero": "erik",
+          "piece": "`attack` (4 quadros, golpe de tocha em cone)",
+          "request": "Golpe amplo de tocha à frente (sudeste), arco de fogo curto no quadro 2 e 3, volta à guarda no 4. O corpo avança na horizontal; a altura não muda.",
+          "frames": 4,
+          "destination": ".atena/generated/art-candidates/heroes-novos/erik/er08-attack-v02.png",
+          "references": [
+            "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\erik\\er02-idle-v02.png",
+            "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\erik\\er01-retrato-v01.png"
+          ],
+          "status": "GENERATED_DRAFT_PENDING_REVIEW",
+          "sha256": "4ca74e3ee1e124779cd39f70f6253bf854e89e6773c72bd4b9c5c69b29fabdfa",
+          "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-6c8db8ca-574e-4a2b-b421-c0668a30abeb.png",
+          "native_size": [
+            2048,
+            768
+          ],
+          "native_mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            254
+          ],
+          "transparent_fraction": 0.6397380828857422,
+          "frame_audit": [
+            {
+              "frame": 1,
+              "bbox_alpha26": [
+                110,
+                91,
+                460,
+                667
+              ],
+              "edge_alpha_max": 1,
+              "edge_content": false
+            },
+            {
+              "frame": 2,
+              "bbox_alpha26": [
+                60,
+                134,
+                485,
+                665
+              ],
+              "edge_alpha_max": 0,
+              "edge_content": false
+            },
+            {
+              "frame": 3,
+              "bbox_alpha26": [
+                38,
+                139,
+                512,
+                659
+              ],
+              "edge_alpha_max": 71,
+              "edge_content": true
+            },
+            {
+              "frame": 4,
+              "bbox_alpha26": [
+                88,
+                91,
+                431,
+                668
+              ],
+              "edge_alpha_max": 11,
+              "edge_content": false
+            }
+          ],
+          "technical_flags": [
+            "DIMENSION_MISMATCH",
+            "EDGE_CONTENT"
+          ],
+          "runtime_admission": false,
+          "visual_flags": [],
+          "visually_observed_figure_count": 4,
+          "visual_review": "COUNT_CHECKED; HUMAN_ACCEPTANCE_AND_MOTION_PENDING"
+        }
+      ]
+    },
+    {
+      "code": "ER09",
+      "hero": "erik",
+      "piece": "`active` (6 quadros, \"Navios em Chamas\")",
+      "request": "Ele crava a tocha no chão à frente e uma **faixa de fogo** corre para a frente; no quadro 4 o fogo está no pico. O fogo fica dentro da célula.",
+      "frames": 6,
+      "destination": ".atena/generated/art-candidates/heroes-novos/erik/er09-active-v01.png",
+      "references": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\erik\\er02-idle-v02.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\erik\\er01-retrato-v01.png"
+      ],
+      "status": "DRAFT_OWNER_SELECTED_FIRST_GENERATION",
+      "sha256": "b32eb2cb7159b0c24cf8fff4174fe77324a4d18745651dae3286a587f2291bd1",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-bc99537d-6c7e-4be1-b2ee-7d2510cd763a.png",
+      "native_size": [
+        2048,
+        768
+      ],
+      "native_mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_fraction": 0.626031239827474,
+      "frame_audit": [
+        {
+          "frame": 1,
+          "bbox_alpha26": [
+            21,
+            134,
+            317,
+            613
+          ],
+          "edge_alpha_max": 1,
+          "edge_content": false
+        },
+        {
+          "frame": 2,
+          "bbox_alpha26": [
+            8,
+            179,
+            341,
+            621
+          ],
+          "edge_alpha_max": 237,
+          "edge_content": true
+        },
+        {
+          "frame": 3,
+          "bbox_alpha26": [
+            0,
+            252,
+            342,
+            635
+          ],
+          "edge_alpha_max": 252,
+          "edge_content": true
+        },
+        {
+          "frame": 4,
+          "bbox_alpha26": [
+            0,
+            198,
+            341,
+            633
+          ],
+          "edge_alpha_max": 253,
+          "edge_content": true
+        },
+        {
+          "frame": 5,
+          "bbox_alpha26": [
+            0,
+            191,
+            341,
+            643
+          ],
+          "edge_alpha_max": 253,
+          "edge_content": true
+        },
+        {
+          "frame": 6,
+          "bbox_alpha26": [
+            0,
+            158,
+            331,
+            647
+          ],
+          "edge_alpha_max": 253,
+          "edge_content": true
+        }
+      ],
+      "technical_flags": [
+        "DIMENSION_MISMATCH",
+        "EDGE_CONTENT"
+      ],
+      "runtime_admission": false,
+      "visual_flags": [],
+      "visually_observed_figure_count": 6,
+      "visual_review": "COUNT_CHECKED; HUMAN_ACCEPTANCE_AND_MOTION_PENDING",
+      "selection": {
+        "active": true,
+        "owner_request": "desisto volte para as primeiras tiragens geradas",
+        "date": "2026-10-10",
+        "classification": "IN_PLAN_RECOVERY",
+        "gait_correction": "CANCELLED_BY_OWNER",
+        "runtime_admission": false
+      },
+      "preserved_variants": []
+    },
+    {
+      "code": "ER10",
+      "hero": "erik",
+      "piece": "`death` (6 quadros)",
+      "request": "Cai de joelhos e tomba de lado, tocha rolando; o medalhão apaga no último quadro.",
+      "frames": 6,
+      "destination": ".atena/generated/art-candidates/heroes-novos/erik/er10-death-v01.png",
+      "references": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\erik\\er02-idle-v02.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\erik\\er01-retrato-v01.png"
+      ],
+      "status": "DRAFT_OWNER_SELECTED_FIRST_GENERATION",
+      "sha256": "2f8ca3ecf43fbd643ba3db7f32bc5a0c4525728692e2ab33b2ee89bf9ba83993",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-8672eb80-82ea-4c29-a7bd-08b5bdf6b974.png",
+      "native_size": [
+        2172,
+        724
+      ],
+      "native_mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_fraction": 0.6970508633232604,
+      "frame_audit": [
+        {
+          "frame": 1,
+          "bbox_alpha26": [
+            37,
+            99,
+            362,
+            622
+          ],
+          "edge_alpha_max": 251,
+          "edge_content": true
+        },
+        {
+          "frame": 2,
+          "bbox_alpha26": [
+            0,
+            195,
+            362,
+            627
+          ],
+          "edge_alpha_max": 255,
+          "edge_content": true
+        },
+        {
+          "frame": 3,
+          "bbox_alpha26": [
+            0,
+            256,
+            362,
+            627
+          ],
+          "edge_alpha_max": 255,
+          "edge_content": true
+        },
+        {
+          "frame": 4,
+          "bbox_alpha26": [
+            0,
+            333,
+            362,
+            611
+          ],
+          "edge_alpha_max": 253,
+          "edge_content": true
+        },
+        {
+          "frame": 5,
+          "bbox_alpha26": [
+            0,
+            432,
+            362,
+            646
+          ],
+          "edge_alpha_max": 255,
+          "edge_content": true
+        },
+        {
+          "frame": 6,
+          "bbox_alpha26": [
+            0,
+            449,
+            344,
+            645
+          ],
+          "edge_alpha_max": 255,
+          "edge_content": true
+        }
+      ],
+      "technical_flags": [
+        "DIMENSION_MISMATCH",
+        "EDGE_CONTENT"
+      ],
+      "runtime_admission": false,
+      "visual_flags": [],
+      "visually_observed_figure_count": 6,
+      "visual_review": "COUNT_CHECKED; HUMAN_ACCEPTANCE_AND_MOTION_PENDING",
+      "selection": {
+        "active": true,
+        "owner_request": "desisto volte para as primeiras tiragens geradas",
+        "date": "2026-10-10",
+        "classification": "IN_PLAN_RECOVERY",
+        "gait_correction": "CANCELLED_BY_OWNER",
+        "runtime_admission": false
+      },
+      "preserved_variants": []
+    },
+    {
+      "code": "AO03",
+      "hero": "arlindo",
+      "piece": "`move_e`",
+      "request": "Andando para a **direita**, passo curto de andarilho, casaco e cachecol balançando dentro da folga.",
+      "frames": 6,
+      "destination": ".atena/generated/art-candidates/heroes-novos/arlindo/ao03-move_e-v01.png",
+      "references": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\arlindo\\ao02-idle-v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\arlindo\\ao01-retrato-v01.png"
+      ],
+      "status": "DRAFT_OWNER_SELECTED_FIRST_GENERATION",
+      "sha256": "c8756558d5badef2b0c2a5a2cc536344ce85e8222c6bdae088cd8e3298c32588",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-81002b7b-b0de-466b-9f2a-d2929c00bc2c.png",
+      "native_size": [
+        2048,
+        768
+      ],
+      "native_mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_fraction": 0.5274340311686198,
+      "frame_audit": [
+        {
+          "frame": 1,
+          "bbox_alpha26": [
+            20,
+            49,
+            341,
+            694
+          ],
+          "edge_alpha_max": 252,
+          "edge_content": true
+        },
+        {
+          "frame": 2,
+          "bbox_alpha26": [
+            0,
+            51,
+            341,
+            701
+          ],
+          "edge_alpha_max": 252,
+          "edge_content": true
+        },
+        {
+          "frame": 3,
+          "bbox_alpha26": [
+            0,
+            49,
+            342,
+            694
+          ],
+          "edge_alpha_max": 253,
+          "edge_content": true
+        },
+        {
+          "frame": 4,
+          "bbox_alpha26": [
+            0,
+            59,
+            341,
+            687
+          ],
+          "edge_alpha_max": 253,
+          "edge_content": true
+        },
+        {
+          "frame": 5,
+          "bbox_alpha26": [
+            0,
+            56,
+            331,
+            700
+          ],
+          "edge_alpha_max": 253,
+          "edge_content": true
+        },
+        {
+          "frame": 6,
+          "bbox_alpha26": [
+            21,
+            60,
+            325,
+            701
+          ],
+          "edge_alpha_max": 0,
+          "edge_content": false
+        }
+      ],
+      "technical_flags": [
+        "DIMENSION_MISMATCH",
+        "EDGE_CONTENT"
+      ],
+      "runtime_admission": false,
+      "visual_flags": [
+        "WALK_LOOP_CONTACT_REVIEW_PENDING"
+      ],
+      "visually_observed_figure_count": 6,
+      "visual_review": "OWNER_REPORTED_NON_ALTERNATING_GAIT; REVIEW_AND_CORRECTION_REQUIRED",
+      "owner_report_evidence": ".atena/evidence/hero-gait-owner-report-2026-10-09.md",
+      "selection": {
+        "active": true,
+        "owner_request": "desisto volte para as primeiras tiragens geradas",
+        "date": "2026-10-10",
+        "classification": "IN_PLAN_RECOVERY",
+        "gait_correction": "CANCELLED_BY_OWNER",
+        "runtime_admission": false
+      },
+      "preserved_variants": []
+    },
+    {
+      "code": "AO04",
+      "hero": "arlindo",
+      "piece": "`move_se`",
+      "request": "Para baixo e à direita.",
+      "frames": 6,
+      "destination": ".atena/generated/art-candidates/heroes-novos/arlindo/ao04-move_se-v01.png",
+      "references": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\arlindo\\ao02-idle-v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\arlindo\\ao01-retrato-v01.png"
+      ],
+      "status": "DRAFT_OWNER_SELECTED_FIRST_GENERATION",
+      "sha256": "8feae12325f647a118947654fae47b0fa5e3002b3c0bb436102c857c25b23b0b",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-1530d60f-912c-4f10-bbaf-501f28a468fc.png",
+      "native_size": [
+        1942,
+        809
+      ],
+      "native_mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_fraction": 0.5043950714095672,
+      "frame_audit": [
+        {
+          "frame": 1,
+          "bbox_alpha26": [
+            9,
+            81,
+            308,
+            733
+          ],
+          "edge_alpha_max": 4,
+          "edge_content": false
+        },
+        {
+          "frame": 2,
+          "bbox_alpha26": [
+            12,
+            99,
+            293,
+            723
+          ],
+          "edge_alpha_max": 1,
+          "edge_content": false
+        },
+        {
+          "frame": 3,
+          "bbox_alpha26": [
+            5,
+            98,
+            324,
+            738
+          ],
+          "edge_alpha_max": 253,
+          "edge_content": true
+        },
+        {
+          "frame": 4,
+          "bbox_alpha26": [
+            0,
+            96,
+            320,
+            741
+          ],
+          "edge_alpha_max": 254,
+          "edge_content": true
+        },
+        {
+          "frame": 5,
+          "bbox_alpha26": [
+            9,
+            98,
+            324,
+            738
+          ],
+          "edge_alpha_max": 248,
+          "edge_content": true
+        },
+        {
+          "frame": 6,
+          "bbox_alpha26": [
+            0,
+            98,
+            312,
+            738
+          ],
+          "edge_alpha_max": 250,
+          "edge_content": true
+        }
+      ],
+      "technical_flags": [
+        "DIMENSION_MISMATCH",
+        "EDGE_CONTENT"
+      ],
+      "runtime_admission": false,
+      "selection": {
+        "active": true,
+        "owner_request": "desisto volte para as primeiras tiragens geradas",
+        "date": "2026-10-10",
+        "classification": "IN_PLAN_RECOVERY",
+        "gait_correction": "CANCELLED_BY_OWNER",
+        "runtime_admission": false
+      },
+      "preserved_variants": [
+        {
+          "code": "AO04",
+          "hero": "arlindo",
+          "piece": "`move_se`",
+          "request": "Para baixo e à direita.",
+          "frames": 6,
+          "destination": ".atena/generated/art-candidates/heroes-novos/arlindo/ao04-move_se-v02.png",
+          "references": [
+            "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\arlindo\\ao02-idle-v01.png",
+            "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\arlindo\\ao01-retrato-v01.png"
+          ],
+          "status": "GENERATED_DRAFT_GAIT_CORRECTION_REQUIRED",
+          "sha256": "3a8bd2101b2c5a8c47186a26d98d419c13f08081b568ad4a2514f97ff68a35a7",
+          "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-4b524240-62f0-4f70-b65f-1e4d69f47610.png",
+          "native_size": [
+            2048,
+            768
+          ],
+          "native_mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            254
+          ],
+          "transparent_fraction": 0.6456476847330729,
+          "frame_audit": [
+            {
+              "frame": 1,
+              "bbox_alpha26": [
+                48,
+                121,
+                328,
+                653
+              ],
+              "edge_alpha_max": 1,
+              "edge_content": false
+            },
+            {
+              "frame": 2,
+              "bbox_alpha26": [
+                48,
+                121,
+                322,
+                649
+              ],
+              "edge_alpha_max": 1,
+              "edge_content": false
+            },
+            {
+              "frame": 3,
+              "bbox_alpha26": [
+                57,
+                121,
+                293,
+                650
+              ],
+              "edge_alpha_max": 1,
+              "edge_content": false
+            },
+            {
+              "frame": 4,
+              "bbox_alpha26": [
+                19,
+                119,
+                309,
+                651
+              ],
+              "edge_alpha_max": 1,
+              "edge_content": false
+            },
+            {
+              "frame": 5,
+              "bbox_alpha26": [
+                23,
+                120,
+                299,
+                653
+              ],
+              "edge_alpha_max": 1,
+              "edge_content": false
+            },
+            {
+              "frame": 6,
+              "bbox_alpha26": [
+                30,
+                120,
+                277,
+                649
+              ],
+              "edge_alpha_max": 1,
+              "edge_content": false
+            }
+          ],
+          "technical_flags": [
+            "DIMENSION_MISMATCH"
+          ],
+          "runtime_admission": false,
+          "visual_flags": [
+            "WALK_LOOP_CONTACT_REVIEW_PENDING"
+          ],
+          "visually_observed_figure_count": 6,
+          "visual_review": "OWNER_REPORTED_NON_ALTERNATING_GAIT; REVIEW_AND_CORRECTION_REQUIRED",
+          "owner_report_evidence": ".atena/evidence/hero-gait-owner-report-2026-10-09.md",
+          "controlled_gait_candidate": {
+            "code": "AO04",
+            "hero": "arlindo",
+            "direction": "se",
+            "candidate": ".atena/generated/art-candidates/heroes-novos/arlindo/ao04-move_se-templates-v02.png",
+            "sha256": "b78cf111b84579eae4ea5031b4251ed721f07097ab2b19069e1088ed50be14af",
+            "frames": 6,
+            "size": [
+              1536,
+              384
+            ],
+            "alpha_extrema": [
+              0,
+              255
+            ],
+            "bounds": [
+              [
+                47,
+                78,
+                201,
+                368
+              ],
+              [
+                47,
+                78,
+                201,
+                368
+              ],
+              [
+                47,
+                78,
+                201,
+                368
+              ],
+              [
+                47,
+                78,
+                201,
+                368
+              ],
+              [
+                47,
+                78,
+                201,
+                368
+              ],
+              [
+                47,
+                78,
+                201,
+                368
+              ]
+            ],
+            "distinct_frames": 6,
+            "support_baseline": 368,
+            "upper_body_pixels_identical": true,
+            "artistic_status": "DRAFT_ART_REVIEW_PENDING",
+            "runtime_admission": false
+          }
+        }
+      ]
+    },
+    {
+      "code": "AO05",
+      "hero": "arlindo",
+      "piece": "`move_s`",
+      "request": "Para baixo, de frente.",
+      "frames": 6,
+      "destination": ".atena/generated/art-candidates/heroes-novos/arlindo/ao05-move_s-v01.png",
+      "references": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\arlindo\\ao02-idle-v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\arlindo\\ao01-retrato-v01.png"
+      ],
+      "status": "DRAFT_OWNER_SELECTED_FIRST_GENERATION",
+      "sha256": "fcf1f0dc1fe81be057c7b19ba1a7fce6d01ddb15d889d03a7a61dd24f0a06666",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-7f1cf25b-32f4-4e79-b57f-c67dd041d500.png",
+      "native_size": [
+        2048,
+        768
+      ],
+      "native_mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_fraction": 0.4991766611735026,
+      "frame_audit": [
+        {
+          "frame": 1,
+          "bbox_alpha26": [
+            41,
+            36,
+            332,
+            713
+          ],
+          "edge_alpha_max": 0,
+          "edge_content": false
+        },
+        {
+          "frame": 2,
+          "bbox_alpha26": [
+            22,
+            35,
+            316,
+            704
+          ],
+          "edge_alpha_max": 1,
+          "edge_content": false
+        },
+        {
+          "frame": 3,
+          "bbox_alpha26": [
+            11,
+            34,
+            311,
+            717
+          ],
+          "edge_alpha_max": 0,
+          "edge_content": false
+        },
+        {
+          "frame": 4,
+          "bbox_alpha26": [
+            24,
+            35,
+            308,
+            710
+          ],
+          "edge_alpha_max": 0,
+          "edge_content": false
+        },
+        {
+          "frame": 5,
+          "bbox_alpha26": [
+            16,
+            34,
+            311,
+            707
+          ],
+          "edge_alpha_max": 1,
+          "edge_content": false
+        },
+        {
+          "frame": 6,
+          "bbox_alpha26": [
+            6,
+            34,
+            300,
+            715
+          ],
+          "edge_alpha_max": 0,
+          "edge_content": false
+        }
+      ],
+      "technical_flags": [
+        "DIMENSION_MISMATCH"
+      ],
+      "runtime_admission": false,
+      "visual_flags": [
+        "WALK_LOOP_CONTACT_REVIEW_PENDING"
+      ],
+      "visually_observed_figure_count": 6,
+      "visual_review": "OWNER_REPORTED_NON_ALTERNATING_GAIT; REVIEW_AND_CORRECTION_REQUIRED",
+      "owner_report_evidence": ".atena/evidence/hero-gait-owner-report-2026-10-09.md",
+      "selection": {
+        "active": true,
+        "owner_request": "desisto volte para as primeiras tiragens geradas",
+        "date": "2026-10-10",
+        "classification": "IN_PLAN_RECOVERY",
+        "gait_correction": "CANCELLED_BY_OWNER",
+        "runtime_admission": false
+      },
+      "preserved_variants": []
+    },
+    {
+      "code": "AO06",
+      "hero": "arlindo",
+      "piece": "`move_ne`",
+      "request": "Para cima e à direita.",
+      "frames": 6,
+      "destination": ".atena/generated/art-candidates/heroes-novos/arlindo/ao06-move_ne-v01.png",
+      "references": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\arlindo\\ao02-idle-v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\arlindo\\ao01-retrato-v01.png"
+      ],
+      "status": "DRAFT_OWNER_SELECTED_FIRST_GENERATION",
+      "sha256": "16a161b38cab86efa4557e026110b52214f992cd27000f03a9de0fdfaba5c650",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-2615374d-085e-4d79-83cf-a9a9de511ad8.png",
+      "native_size": [
+        1881,
+        836
+      ],
+      "native_mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_fraction": 0.589300204258653,
+      "frame_audit": [
+        {
+          "frame": 1,
+          "bbox_alpha26": [
+            18,
+            103,
+            310,
+            722
+          ],
+          "edge_alpha_max": 4,
+          "edge_content": false
+        },
+        {
+          "frame": 2,
+          "bbox_alpha26": [
+            29,
+            104,
+            314,
+            720
+          ],
+          "edge_alpha_max": 120,
+          "edge_content": true
+        },
+        {
+          "frame": 3,
+          "bbox_alpha26": [
+            33,
+            102,
+            313,
+            714
+          ],
+          "edge_alpha_max": 85,
+          "edge_content": true
+        },
+        {
+          "frame": 4,
+          "bbox_alpha26": [
+            16,
+            102,
+            290,
+            721
+          ],
+          "edge_alpha_max": 4,
+          "edge_content": false
+        },
+        {
+          "frame": 5,
+          "bbox_alpha26": [
+            28,
+            99,
+            311,
+            717
+          ],
+          "edge_alpha_max": 5,
+          "edge_content": false
+        },
+        {
+          "frame": 6,
+          "bbox_alpha26": [
+            27,
+            102,
+            298,
+            721
+          ],
+          "edge_alpha_max": 4,
+          "edge_content": false
+        }
+      ],
+      "technical_flags": [
+        "DIMENSION_MISMATCH",
+        "EDGE_CONTENT"
+      ],
+      "runtime_admission": false,
+      "selection": {
+        "active": true,
+        "owner_request": "desisto volte para as primeiras tiragens geradas",
+        "date": "2026-10-10",
+        "classification": "IN_PLAN_RECOVERY",
+        "gait_correction": "CANCELLED_BY_OWNER",
+        "runtime_admission": false
+      },
+      "preserved_variants": [
+        {
+          "code": "AO06",
+          "hero": "arlindo",
+          "piece": "`move_ne`",
+          "request": "Para cima e à direita.",
+          "frames": 6,
+          "destination": ".atena/generated/art-candidates/heroes-novos/arlindo/ao06-move_ne-v02.png",
+          "references": [
+            "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\arlindo\\ao02-idle-v01.png",
+            "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\arlindo\\ao01-retrato-v01.png"
+          ],
+          "status": "GENERATED_DRAFT_GAIT_CORRECTION_REQUIRED",
+          "sha256": "5075f59e15ed8a464424dd2750eb6ad8aa84775b583d372d1237a010973ef88e",
+          "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-cb8f0aee-370c-441d-a8c9-e1207119abc0.png",
+          "native_size": [
+            2048,
+            768
+          ],
+          "native_mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            254
+          ],
+          "transparent_fraction": 0.7071577707926432,
+          "frame_audit": [
+            {
+              "frame": 1,
+              "bbox_alpha26": [
+                68,
+                132,
+                330,
+                627
+              ],
+              "edge_alpha_max": 1,
+              "edge_content": false
+            },
+            {
+              "frame": 2,
+              "bbox_alpha26": [
+                18,
+                128,
+                341,
+                628
+              ],
+              "edge_alpha_max": 253,
+              "edge_content": true
+            },
+            {
+              "frame": 3,
+              "bbox_alpha26": [
+                0,
+                128,
+                342,
+                624
+              ],
+              "edge_alpha_max": 253,
+              "edge_content": true
+            },
+            {
+              "frame": 4,
+              "bbox_alpha26": [
+                0,
+                129,
+                341,
+                627
+              ],
+              "edge_alpha_max": 253,
+              "edge_content": true
+            },
+            {
+              "frame": 5,
+              "bbox_alpha26": [
+                0,
+                125,
+                341,
+                627
+              ],
+              "edge_alpha_max": 254,
+              "edge_content": true
+            },
+            {
+              "frame": 6,
+              "bbox_alpha26": [
+                0,
+                128,
+                146,
+                625
+              ],
+              "edge_alpha_max": 254,
+              "edge_content": true
+            }
+          ],
+          "technical_flags": [
+            "DIMENSION_MISMATCH",
+            "EDGE_CONTENT"
+          ],
+          "runtime_admission": false,
+          "visual_flags": [
+            "WALK_LOOP_CONTACT_REVIEW_PENDING"
+          ],
+          "visually_observed_figure_count": 6,
+          "visual_review": "OWNER_REPORTED_NON_ALTERNATING_GAIT; REVIEW_AND_CORRECTION_REQUIRED",
+          "owner_report_evidence": ".atena/evidence/hero-gait-owner-report-2026-10-09.md",
+          "controlled_gait_candidate": {
+            "code": "AO06",
+            "hero": "arlindo",
+            "direction": "ne",
+            "candidate": ".atena/generated/art-candidates/heroes-novos/arlindo/ao06-move_ne-templates-v02.png",
+            "sha256": "9bfe19a4c59b82da5e7852cec0fd05628b772ea3bb386ffa14b6d76cc3da6d8c",
+            "frames": 6,
+            "size": [
+              1536,
+              384
+            ],
+            "alpha_extrema": [
+              0,
+              255
+            ],
+            "bounds": [
+              [
+                49,
+                78,
+                200,
+                368
+              ],
+              [
+                49,
+                78,
+                200,
+                368
+              ],
+              [
+                49,
+                78,
+                200,
+                368
+              ],
+              [
+                49,
+                78,
+                202,
+                368
+              ],
+              [
+                49,
+                78,
+                200,
+                368
+              ],
+              [
+                49,
+                78,
+                200,
+                368
+              ]
+            ],
+            "distinct_frames": 6,
+            "support_baseline": 368,
+            "upper_body_pixels_identical": true,
+            "artistic_status": "DRAFT_ART_REVIEW_PENDING",
+            "runtime_admission": false
+          }
+        }
+      ]
+    },
+    {
+      "code": "AO07",
+      "hero": "arlindo",
+      "piece": "`move_n`",
+      "request": "Para cima, **de costas**; o chapéu e a gola alta dominam a silhueta.",
+      "frames": 6,
+      "destination": ".atena/generated/art-candidates/heroes-novos/arlindo/ao07-move_n-v01.png",
+      "references": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\arlindo\\ao02-idle-v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\arlindo\\ao01-retrato-v01.png"
+      ],
+      "status": "DRAFT_OWNER_SELECTED_FIRST_GENERATION",
+      "sha256": "fd28f0e31899eda21c4e8fbf3241f25935fcd2dcd4300afb602dd7297e0104f7",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-7e8a7545-a8c3-4b6e-8402-cbffc073b513.png",
+      "native_size": [
+        2048,
+        768
+      ],
+      "native_mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_fraction": 0.5322532653808594,
+      "frame_audit": [
+        {
+          "frame": 1,
+          "bbox_alpha26": [
+            66,
+            47,
+            341,
+            699
+          ],
+          "edge_alpha_max": 253,
+          "edge_content": true
+        },
+        {
+          "frame": 2,
+          "bbox_alpha26": [
+            0,
+            59,
+            341,
+            700
+          ],
+          "edge_alpha_max": 253,
+          "edge_content": true
+        },
+        {
+          "frame": 3,
+          "bbox_alpha26": [
+            0,
+            52,
+            330,
+            699
+          ],
+          "edge_alpha_max": 252,
+          "edge_content": true
+        },
+        {
+          "frame": 4,
+          "bbox_alpha26": [
+            26,
+            54,
+            315,
+            699
+          ],
+          "edge_alpha_max": 1,
+          "edge_content": false
+        },
+        {
+          "frame": 5,
+          "bbox_alpha26": [
+            32,
+            61,
+            304,
+            686
+          ],
+          "edge_alpha_max": 1,
+          "edge_content": false
+        },
+        {
+          "frame": 6,
+          "bbox_alpha26": [
+            7,
+            53,
+            309,
+            703
+          ],
+          "edge_alpha_max": 1,
+          "edge_content": false
+        }
+      ],
+      "technical_flags": [
+        "DIMENSION_MISMATCH",
+        "EDGE_CONTENT"
+      ],
+      "runtime_admission": false,
+      "visual_flags": [
+        "WALK_LOOP_CONTACT_REVIEW_PENDING"
+      ],
+      "visually_observed_figure_count": 6,
+      "visual_review": "OWNER_REPORTED_NON_ALTERNATING_GAIT; REVIEW_AND_CORRECTION_REQUIRED",
+      "owner_report_evidence": ".atena/evidence/hero-gait-owner-report-2026-10-09.md",
+      "selection": {
+        "active": true,
+        "owner_request": "desisto volte para as primeiras tiragens geradas",
+        "date": "2026-10-10",
+        "classification": "IN_PLAN_RECOVERY",
+        "gait_correction": "CANCELLED_BY_OWNER",
+        "runtime_admission": false
+      },
+      "preserved_variants": []
+    },
+    {
+      "code": "AO08",
+      "hero": "arlindo",
+      "piece": "`attack` (4 quadros, \"Memória Alterada\")",
+      "request": "Ele estende a mão direita à frente (sudeste) e solta um **projétil de luz azul-esverdeada** com fiapos violeta no quadro 3; o projétil sai do quadro ou termina dentro da folga.",
+      "frames": 4,
+      "destination": ".atena/generated/art-candidates/heroes-novos/arlindo/ao08-attack-v01.png",
+      "references": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\arlindo\\ao02-idle-v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\arlindo\\ao01-retrato-v01.png"
+      ],
+      "status": "DRAFT_OWNER_SELECTED_FIRST_GENERATION",
+      "sha256": "4e00d8ae2a73a9ef2d10be145a02a17813b55ea5546dc34309abc542c9a3ca0c",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-fac4cf71-6aaa-4788-a9c6-62ec22337717.png",
+      "native_size": [
+        2048,
+        768
+      ],
+      "native_mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_fraction": 0.5627772013346354,
+      "frame_audit": [
+        {
+          "frame": 1,
+          "bbox_alpha26": [
+            67,
+            27,
+            512,
+            720
+          ],
+          "edge_alpha_max": 253,
+          "edge_content": true
+        },
+        {
+          "frame": 2,
+          "bbox_alpha26": [
+            0,
+            24,
+            512,
+            720
+          ],
+          "edge_alpha_max": 254,
+          "edge_content": true
+        },
+        {
+          "frame": 3,
+          "bbox_alpha26": [
+            0,
+            26,
+            512,
+            720
+          ],
+          "edge_alpha_max": 253,
+          "edge_content": true
+        },
+        {
+          "frame": 4,
+          "bbox_alpha26": [
+            0,
+            24,
+            436,
+            720
+          ],
+          "edge_alpha_max": 240,
+          "edge_content": true
+        }
+      ],
+      "technical_flags": [
+        "DIMENSION_MISMATCH",
+        "EDGE_CONTENT"
+      ],
+      "runtime_admission": false,
+      "selection": {
+        "active": true,
+        "owner_request": "desisto volte para as primeiras tiragens geradas",
+        "date": "2026-10-10",
+        "classification": "IN_PLAN_RECOVERY",
+        "gait_correction": "CANCELLED_BY_OWNER",
+        "runtime_admission": false
+      },
+      "preserved_variants": [
+        {
+          "code": "AO08",
+          "hero": "arlindo",
+          "piece": "`attack` (4 quadros, \"Memória Alterada\")",
+          "request": "Ele estende a mão direita à frente (sudeste) e solta um **projétil de luz azul-esverdeada** com fiapos violeta no quadro 3; o projétil sai do quadro ou termina dentro da folga.",
+          "frames": 4,
+          "destination": ".atena/generated/art-candidates/heroes-novos/arlindo/ao08-attack-v02.png",
+          "references": [
+            "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\arlindo\\ao02-idle-v01.png",
+            "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\arlindo\\ao01-retrato-v01.png"
+          ],
+          "status": "GENERATED_DRAFT_PENDING_REVIEW",
+          "sha256": "047ef0fd4465a83b3737293ebd4626ee829e2dfe0373d159cf44b83ed82b6979",
+          "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-a484e386-19f9-42ce-b858-7de06a48166e.png",
+          "native_size": [
+            2048,
+            768
+          ],
+          "native_mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            254
+          ],
+          "transparent_fraction": 0.6960474650065104,
+          "frame_audit": [
+            {
+              "frame": 1,
+              "bbox_alpha26": [
+                104,
+                83,
+                377,
+                674
+              ],
+              "edge_alpha_max": 1,
+              "edge_content": false
+            },
+            {
+              "frame": 2,
+              "bbox_alpha26": [
+                72,
+                86,
+                374,
+                674
+              ],
+              "edge_alpha_max": 1,
+              "edge_content": false
+            },
+            {
+              "frame": 3,
+              "bbox_alpha26": [
+                81,
+                86,
+                460,
+                674
+              ],
+              "edge_alpha_max": 1,
+              "edge_content": false
+            },
+            {
+              "frame": 4,
+              "bbox_alpha26": [
+                103,
+                84,
+                377,
+                674
+              ],
+              "edge_alpha_max": 1,
+              "edge_content": false
+            }
+          ],
+          "technical_flags": [
+            "DIMENSION_MISMATCH"
+          ],
+          "runtime_admission": false,
+          "visual_flags": [],
+          "visually_observed_figure_count": 4,
+          "visual_review": "COUNT_CHECKED; HUMAN_ACCEPTANCE_AND_MOTION_PENDING"
+        }
+      ]
+    },
+    {
+      "code": "AO09",
+      "hero": "arlindo",
+      "piece": "`active` (6 quadros, \"Modify Memory\")",
+      "request": "Duas mãos às têmporas/à frente, **anel de luz azul-esverdeada** se expande ao redor dele até o quadro 4 e se desfaz. O anel fica dentro da célula.",
+      "frames": 6,
+      "destination": ".atena/generated/art-candidates/heroes-novos/arlindo/ao09-active-v01.png",
+      "references": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\arlindo\\ao02-idle-v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\arlindo\\ao01-retrato-v01.png"
+      ],
+      "status": "DRAFT_OWNER_SELECTED_FIRST_GENERATION",
+      "sha256": "b07733b52c8c55f0fb8ecee6afa175976e844594ba805ab9c76ad1b45726f724",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-8a6f5449-07b1-4a39-8c6e-5de5e3164918.png",
+      "native_size": [
+        1983,
+        793
+      ],
+      "native_mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_fraction": 0.4596841119248798,
+      "frame_audit": [
+        {
+          "frame": 1,
+          "bbox_alpha26": [
+            38,
+            86,
+            330,
+            709
+          ],
+          "edge_alpha_max": 253,
+          "edge_content": true
+        },
+        {
+          "frame": 2,
+          "bbox_alpha26": [
+            0,
+            89,
+            331,
+            706
+          ],
+          "edge_alpha_max": 255,
+          "edge_content": true
+        },
+        {
+          "frame": 3,
+          "bbox_alpha26": [
+            0,
+            91,
+            330,
+            711
+          ],
+          "edge_alpha_max": 253,
+          "edge_content": true
+        },
+        {
+          "frame": 4,
+          "bbox_alpha26": [
+            0,
+            87,
+            331,
+            711
+          ],
+          "edge_alpha_max": 252,
+          "edge_content": true
+        },
+        {
+          "frame": 5,
+          "bbox_alpha26": [
+            0,
+            89,
+            330,
+            711
+          ],
+          "edge_alpha_max": 253,
+          "edge_content": true
+        },
+        {
+          "frame": 6,
+          "bbox_alpha26": [
+            0,
+            87,
+            291,
+            710
+          ],
+          "edge_alpha_max": 253,
+          "edge_content": true
+        }
+      ],
+      "technical_flags": [
+        "DIMENSION_MISMATCH",
+        "EDGE_CONTENT"
+      ],
+      "runtime_admission": false,
+      "selection": {
+        "active": true,
+        "owner_request": "desisto volte para as primeiras tiragens geradas",
+        "date": "2026-10-10",
+        "classification": "IN_PLAN_RECOVERY",
+        "gait_correction": "CANCELLED_BY_OWNER",
+        "runtime_admission": false
+      },
+      "preserved_variants": [
+        {
+          "code": "AO09",
+          "hero": "arlindo",
+          "piece": "`active` (6 quadros, \"Modify Memory\")",
+          "request": "Duas mãos às têmporas/à frente, **anel de luz azul-esverdeada** se expande ao redor dele até o quadro 4 e se desfaz. O anel fica dentro da célula.",
+          "frames": 6,
+          "destination": ".atena/generated/art-candidates/heroes-novos/arlindo/ao09-active-v02.png",
+          "references": [
+            "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\arlindo\\ao02-idle-v01.png",
+            "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\arlindo\\ao01-retrato-v01.png"
+          ],
+          "status": "GENERATED_DRAFT_PENDING_REVIEW",
+          "sha256": "035bc831f7f20dfb8e61ae82c002cf019ee9a1e4bb78dbac319180660fa2f075",
+          "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-bbed976c-1aa6-4158-af20-5f3ffb17a10c.png",
+          "native_size": [
+            2048,
+            768
+          ],
+          "native_mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            254
+          ],
+          "transparent_fraction": 0.6065527598063151,
+          "frame_audit": [
+            {
+              "frame": 1,
+              "bbox_alpha26": [
+                42,
+                97,
+                280,
+                659
+              ],
+              "edge_alpha_max": 1,
+              "edge_content": false
+            },
+            {
+              "frame": 2,
+              "bbox_alpha26": [
+                13,
+                115,
+                310,
+                659
+              ],
+              "edge_alpha_max": 1,
+              "edge_content": false
+            },
+            {
+              "frame": 3,
+              "bbox_alpha26": [
+                18,
+                114,
+                342,
+                659
+              ],
+              "edge_alpha_max": 252,
+              "edge_content": true
+            },
+            {
+              "frame": 4,
+              "bbox_alpha26": [
+                0,
+                108,
+                302,
+                659
+              ],
+              "edge_alpha_max": 252,
+              "edge_content": true
+            },
+            {
+              "frame": 5,
+              "bbox_alpha26": [
+                17,
+                114,
+                302,
+                659
+              ],
+              "edge_alpha_max": 1,
+              "edge_content": false
+            },
+            {
+              "frame": 6,
+              "bbox_alpha26": [
+                42,
+                98,
+                280,
+                659
+              ],
+              "edge_alpha_max": 0,
+              "edge_content": false
+            }
+          ],
+          "technical_flags": [
+            "DIMENSION_MISMATCH",
+            "EDGE_CONTENT"
+          ],
+          "runtime_admission": false,
+          "visual_flags": [],
+          "visually_observed_figure_count": 6,
+          "visual_review": "COUNT_CHECKED; HUMAN_ACCEPTANCE_AND_MOTION_PENDING"
+        }
+      ]
+    },
+    {
+      "code": "AO10",
+      "hero": "arlindo",
+      "piece": "`death` (6 quadros)",
+      "request": "Cai devagar de joelhos, o chapéu rola, as luvas soltam fiapos de luz que se apagam.",
+      "frames": 6,
+      "destination": ".atena/generated/art-candidates/heroes-novos/arlindo/ao10-death-v01.png",
+      "references": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\arlindo\\ao02-idle-v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\arlindo\\ao01-retrato-v01.png"
+      ],
+      "status": "DRAFT_OWNER_SELECTED_FIRST_GENERATION",
+      "sha256": "103b76a306d4721ba45e9670de4e52beb230f2663e3c95e4f71ad8370792575e",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-d2f68219-21de-4137-8e83-f7097ac6cdf4.png",
+      "native_size": [
+        2048,
+        768
+      ],
+      "native_mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_fraction": 0.7423407236735026,
+      "frame_audit": [
+        {
+          "frame": 1,
+          "bbox_alpha26": [
+            19,
+            151,
+            341,
+            624
+          ],
+          "edge_alpha_max": 251,
+          "edge_content": true
+        },
+        {
+          "frame": 2,
+          "bbox_alpha26": [
+            0,
+            226,
+            341,
+            624
+          ],
+          "edge_alpha_max": 253,
+          "edge_content": true
+        },
+        {
+          "frame": 3,
+          "bbox_alpha26": [
+            0,
+            314,
+            342,
+            625
+          ],
+          "edge_alpha_max": 253,
+          "edge_content": true
+        },
+        {
+          "frame": 4,
+          "bbox_alpha26": [
+            0,
+            370,
+            341,
+            624
+          ],
+          "edge_alpha_max": 253,
+          "edge_content": true
+        },
+        {
+          "frame": 5,
+          "bbox_alpha26": [
+            0,
+            441,
+            341,
+            646
+          ],
+          "edge_alpha_max": 253,
+          "edge_content": true
+        },
+        {
+          "frame": 6,
+          "bbox_alpha26": [
+            0,
+            477,
+            332,
+            666
+          ],
+          "edge_alpha_max": 253,
+          "edge_content": true
+        }
+      ],
+      "technical_flags": [
+        "DIMENSION_MISMATCH",
+        "EDGE_CONTENT"
+      ],
+      "runtime_admission": false,
+      "visual_flags": [],
+      "visually_observed_figure_count": 6,
+      "visual_review": "COUNT_CHECKED; HUMAN_ACCEPTANCE_AND_MOTION_PENDING",
+      "selection": {
+        "active": true,
+        "owner_request": "desisto volte para as primeiras tiragens geradas",
+        "date": "2026-10-10",
+        "classification": "IN_PLAN_RECOVERY",
+        "gait_correction": "CANCELLED_BY_OWNER",
+        "runtime_admission": false
+      },
+      "preserved_variants": []
+    }
+  ],
+  "generated": 16,
+  "remaining": 0
+}

@@ -1,0 +1,93 @@
+{
+  "AO03": {
+    "source_sha256": "c8756558d5badef2b0c2a5a2cc536344ce85e8222c6bdae088cd8e3298c32588",
+    "method": "one alpha-connected character per frame; preview only",
+    "preview_suffix": "regions-v01",
+    "frames": [
+      {
+        "frame": 1,
+        "path": "review-frame-extraction/AO03-v01/frame-1.png",
+        "bbox_source": [
+          17,
+          47,
+          390,
+          697
+        ],
+        "seed": [
+          171,
+          300
+        ]
+      },
+      {
+        "frame": 2,
+        "path": "review-frame-extraction/AO03-v01/frame-2.png",
+        "bbox_source": [
+          369,
+          49,
+          699,
+          704
+        ],
+        "seed": [
+          512,
+          300
+        ]
+      },
+      {
+        "frame": 3,
+        "path": "review-frame-extraction/AO03-v01/frame-3.png",
+        "bbox_source": [
+          713,
+          47,
+          1054,
+          697
+        ],
+        "seed": [
+          853,
+          300
+        ]
+      },
+      {
+        "frame": 4,
+        "path": "review-frame-extraction/AO03-v01/frame-4.png",
+        "bbox_source": [
+          1051,
+          56,
+          1404,
+          690
+        ],
+        "seed": [
+          1195,
+          300
+        ]
+      },
+      {
+        "frame": 5,
+        "path": "review-frame-extraction/AO03-v01/frame-5.png",
+        "bbox_source": [
+          1388,
+          53,
+          1698,
+          703
+        ],
+        "seed": [
+          1536,
+          300
+        ]
+      },
+      {
+        "frame": 6,
+        "path": "review-frame-extraction/AO03-v01/frame-6.png",
+        "bbox_source": [
+          1724,
+          57,
+          2033,
+          704
+        ],
+        "seed": [
+          1877,
+          300
+        ]
+      }
+    ]
+  }
+}

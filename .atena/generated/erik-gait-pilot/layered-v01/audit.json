@@ -1,0 +1,105 @@
+{
+  "source_unchanged": true,
+  "bone_lengths_preserved": true,
+  "opposite_contacts": true,
+  "frames": [
+    {
+      "frame": 1,
+      "bounds": [
+        57,
+        68,
+        228,
+        368
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "margin_pass": true,
+      "baseline": 368
+    },
+    {
+      "frame": 2,
+      "bounds": [
+        80,
+        68,
+        228,
+        368
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "margin_pass": true,
+      "baseline": 368
+    },
+    {
+      "frame": 3,
+      "bounds": [
+        72,
+        68,
+        228,
+        368
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "margin_pass": true,
+      "baseline": 368
+    },
+    {
+      "frame": 4,
+      "bounds": [
+        64,
+        68,
+        228,
+        368
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "margin_pass": true,
+      "baseline": 368
+    },
+    {
+      "frame": 5,
+      "bounds": [
+        80,
+        68,
+        228,
+        368
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "margin_pass": true,
+      "baseline": 368
+    },
+    {
+      "frame": 6,
+      "bounds": [
+        65,
+        68,
+        228,
+        368
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "margin_pass": true,
+      "baseline": 368
+    }
+  ],
+  "sha256": "1191ee722bf1f86e4a74caed3e04f8bd4e6550a453c29a6ae252b7d89e0eeaa8",
+  "human_review": "PENDING",
+  "runtime_admission": false,
+  "limitations": [
+    "Masks use visible source parts; hip/knee seams and hidden surfaces require artistic review.",
+    "Torch and torso remain fixed; this pilot validates leg alternation.",
+    "No evidence of foot-slip-free runtime locomotion; motion review required."
+  ]
+}

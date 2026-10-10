@@ -1,0 +1,32 @@
+{
+  "revision": "v03",
+  "state": "DRAFT",
+  "identity": "Visible costumes and faces from approved portraits; Erik pre-shaving, no new lore. Arlindo idle remains DRAFT.",
+  "scene": "Isolated2D isometric hero; five screen directions; attack/active/death faceSE; realalpha no floor or castshadow",
+  "authority": "ART-PROMPTS060 snapshot; owner request to finishmissingassets; prior continuousdraftmode",
+  "references": [
+    {
+      "path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\erik\\er02-idle-v02.png",
+      "sha256": "340fbe94fb9246f840ca2d7c328e609090678e2c2a50a167552f4bb905f0fae4"
+    },
+    {
+      "path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\erik\\er01-retrato-v01.png",
+      "sha256": "0551a2b2059a970c8df8c8452a3af77704371f98acea5a0dda223cb2dd750d07"
+    },
+    {
+      "path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\arlindo\\ao02-idle-v01.png",
+      "sha256": "e6df81e5fb10c896a4a43b9f05fcb0da8df1aad15c811f9f0ee92a9132615dbf"
+    },
+    {
+      "path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\heroes-novos\\arlindo\\ao01-retrato-v01.png",
+      "sha256": "7b77f90efb3ce5f2266ad7569bbcfb52b91fe0225df6ea80c04070d4d7f9750e"
+    }
+  ],
+  "blocking_gaps": [],
+  "deferred": [
+    "Arlindo idle human visual approval",
+    "Exact dimension/height/pivot validation",
+    "Runtime admission"
+  ],
+  "audit_limitation": "Referenced audit_strip_edges.gd absent in this checkout; use local read-only candidate audit and equivalent alpha edge inspection; do not claim missing check passed"
+}

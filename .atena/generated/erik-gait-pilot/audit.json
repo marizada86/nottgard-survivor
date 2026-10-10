@@ -1,0 +1,47 @@
+{
+  "status": "PILOT_NOT_ACCEPTED",
+  "attempts": 3,
+  "checks": [
+    {
+      "file": "contacts-v01.png",
+      "sha256": "ccd0f20ad430e59d8894acdc38f64b011637af1989a3f74124d0b05e6c0cf729",
+      "size": [
+        1774,
+        887
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "result": "REPROVADO: dois contatos com mesma perna à frente."
+    },
+    {
+      "file": "contact-b-v01.png",
+      "sha256": "cda5cce52da2bf29c3ba65bcbb3afdec92c0f977af937a847e7e7f68108904e5",
+      "size": [
+        1381,
+        1139
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "result": "REPROVADO: contato oposto não demonstrado com clareza."
+    },
+    {
+      "file": "contact-b-v02.png",
+      "sha256": "44b2b222cfd78663221e8033aa1134580647c8c728547a7dd22950aa3f88be73",
+      "size": [
+        1024,
+        1536
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "result": "REPROVADO para continuidade: perna próxima recua, mas câmera, traje, tocha e escala divergem do contato A."
+    }
+  ],
+  "runtime_admission": false,
+  "next": "Controlled pose guide preserving original camera and equipment; do not extrapolate rejected pilot."
+}
