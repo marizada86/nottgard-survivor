@@ -39,4 +39,4 @@ gates:
   other_sessions_changes: PRESERVE_UNTOUCHED
 blocking_gaps: []
 non_blocking_gaps: [P1, P2, P3, P4]
-commit_push_build_export: "COMMITTED_LOCAL (commit seguinte); push, exportacao e aviso aos testers NOT_PERFORMED"
+commit_push_build_export: "COMMITTED_LOCAL (72de2df); push, exportacao e aviso aos testers NOT_PERFORMED"
