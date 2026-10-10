@@ -968,17 +968,20 @@ func queue_evidence(kind: String, payload: Dictionary) -> bool:
 func _build_playtest_buttons() -> void:
 	if not Version.evidence_enabled():
 		return
-	var bar := HBoxContainer.new()
-	_playtest_bar = bar
-	bar.set_anchors_and_offsets_preset(Control.PRESET_TOP_RIGHT)
-	bar.position = Vector2(-320, 56)
-	add_child(bar)
-	for action in [["Playtest", open_playtest], ["Relatar", open_note], ["Capturar", take_print]]:
-		var button := Button.new()
-		button.text = action[0]
-		button.custom_minimum_size = Vector2(100, 48)
-		button.pressed.connect(action[1])
-		bar.add_child(button)
+	# No navegador as teclas F4-F7 são ignoradas, então os botões são o único caminho; no
+	# executável o mesmo vale pelas teclas (F4 central, F5 nota, F6 print) e a barra só atrapalha.
+	if OS.has_feature("web"):
+		var bar := HBoxContainer.new()
+		_playtest_bar = bar
+		bar.set_anchors_and_offsets_preset(Control.PRESET_TOP_RIGHT)
+		bar.position = Vector2(-320, 56)
+		add_child(bar)
+		for action in [["Playtest", open_playtest], ["Relatar", open_note], ["Capturar", take_print]]:
+			var button := Button.new()
+			button.text = action[0]
+			button.custom_minimum_size = Vector2(100, 48)
+			button.pressed.connect(action[1])
+			bar.add_child(button)
 	_central = PanelContainer.new()
 	_central.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
 	_central.visible = false
