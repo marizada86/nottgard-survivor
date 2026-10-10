@@ -265,6 +265,14 @@
 			"passed": true
 		},
 		{
+			"id": "habilidade_arlindo_recarga",
+			"passed": true
+		},
+		{
+			"id": "habilidade_erik_recarga",
+			"passed": true
+		},
+		{
 			"id": "confirmar_mantido_nao_aceita_oferta",
 			"passed": true
 		},
@@ -281,15 +289,7 @@
 			"passed": true
 		},
 		{
-			"id": "recusa_bencao_exige_confirmacao",
-			"passed": true
-		},
-		{
-			"id": "cancelar_recusa_preserva_bencao",
-			"passed": true
-		},
-		{
-			"id": "recusa_confirmada",
+			"id": "recusa_bencao_aplica_direto",
 			"passed": true
 		},
 		{

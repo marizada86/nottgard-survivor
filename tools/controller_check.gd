@@ -60,6 +60,8 @@ func _run_checks() -> void:
 	capture = "--controller-capture" in OS.get_cmdline_user_args()
 	Input.use_accumulated_input = false
 	real_before = Game.real_save_signature()
+	# Perfil e save de teste: sem isto qualquer Game.save() do fluxo (fim de run, Ecos, opções) grava o perfil de teste no save real (user://profile.json)
+	Game._save_path = OUTPUT + "integration-profile.json"
 	Game.profile = Profile.new({"name": "Controle local", "welcome_seen": true})
 	for id in Data.table("hqs"):
 		Game.profile.data.hqs_seen[id] = true
@@ -72,6 +74,7 @@ func _run_checks() -> void:
 	Game.controls.disconnected = false
 	Game.controls.focused = true
 	Game.profile.data.settings.controller = {"family": "xbox"}
+	Game.save()   # o título recarrega o perfil do arquivo: o fixture precisa estar no arquivo de teste (antes isso só funcionava por gravar no save real)
 	Game.ensure_input_actions()
 	var title: Control = load("res://ui/title.tscn").instantiate()
 	root.add_child(title)
@@ -310,11 +313,8 @@ func _rare_contexts(run: Node) -> void:
 			buttons.append(child)
 	buttons.back().grab_focus()
 	await _button(JOY_BUTTON_A)
-	_record("recusa_bencao_exige_confirmacao", run.hud._confirm_dialog.visible and run.battle.state == "altar")
-	await _button(JOY_BUTTON_B)
-	_record("cancelar_recusa_preserva_bencao", run.battle.state == "altar")
-	await _choice(run, run.battle.offer.size() - 1)
-	_record("recusa_confirmada", run.battle.state == "running")
+	# d702247 (2026-10-07): no desktop e no controle recusar a bênção aplica direto, sem janela "Confirmar ...?"
+	_record("recusa_bencao_aplica_direto", not run.hud._confirm_dialog.visible and run.battle.state == "running" and int(run.battle.stats.boons_declined) >= 1)
 	run.battle.hero.gold = 10000
 	for kind in ["loja", "ferreiro", "curandeiro", "doacao", "aposta"]:
 		run.battle._open_shop_event(kind)

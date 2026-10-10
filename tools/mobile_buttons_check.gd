@@ -216,6 +216,14 @@ func _check_all_buttons() -> void:
 	get_tree().current_scene.queue_free()
 	await _frames()
 
+## Índice da aba pelo nome do nó: o Quartel ganhou abas (Marcas, Ranking) e os índices fixos saíram do lugar.
+func _tab(tabs: TabContainer, node_name: String) -> int:
+	var control := tabs.get_node_or_null(node_name)
+	var index := tabs.get_tab_idx_from_control(control) if control != null else -1
+	if index < 0:
+		failures.append("aba do Quartel não encontrada: " + node_name)
+	return maxi(index, 0)
+
 func _check_menu(menu: Node) -> void:
 	var tabs: TabContainer = menu.get_node("%Tabs")
 	var bar := tabs.get_tab_bar()
@@ -227,13 +235,13 @@ func _check_menu(menu: Node) -> void:
 	await _frames()
 	await _list_item(menu.hero_list, 0, "heroi")
 	await _list_item(menu.stage_list, 0, "fase")
-	tabs.current_tab = 3
+	tabs.current_tab = _tab(tabs, "Códex")
 	await _frames()
 	await _popup_option(menu.codex_cat, 1, "categoria_codex")
 	_record("categoria_codex_conteudo", menu._codex_cat_cache == "weapons")
 	await _list_item(menu.codex_list, 0, "entrada_codex")
 	_record("detalhe_codex", menu.codex_text.text != "")
-	tabs.current_tab = 4
+	tabs.current_tab = _tab(tabs, "Opções")
 	await _frames()
 	for pair in [[menu.vol_opt, "volume"], [menu.music_vol_opt, "music_volume"], [menu.sfx_vol_opt, "sfx_volume"], [menu.ambience_vol_opt, "ambience_volume"]]:
 		await _slider(pair[0], pair[1], "opcao_" + pair[1])
@@ -259,7 +267,7 @@ func _check_menu(menu: Node) -> void:
 	Game.profile = Profile.new(saved)
 	Game.profile.data.coins = 10000
 	menu._refresh_all()
-	tabs.current_tab = 1
+	tabs.current_tab = _tab(tabs, "Melhorias")
 	await _frames()
 	for row in menu.upgrade_box.get_children():
 		var button := row.get_child(1) as Button
@@ -268,7 +276,7 @@ func _check_menu(menu: Node) -> void:
 			await _button(button)
 			_record("comprar_melhoria_quartel", Game.profile.coins() < coins)
 			break
-	tabs.current_tab = 5
+	tabs.current_tab = _tab(tabs, "Diário")
 	await _frames()
 	await _list_item(menu.hq_list, 0, "lista_hq")
 	await _button(menu.hq_play_btn)

@@ -16,6 +16,7 @@ procedimentos. Prefixo `TOOL-nnn`. Mesma regra de estado dos outros backlogs.
 | ID | Item | Evidência |
 |---|---|---|
 | TOOL-001 | Identificador da build: `Version.build_id()` lê `data/build_info.json` (gravado por `tools/stamp_build.ps1` ou pelo CI). Aparece no rodapé do menu, no log (`Jogo iniciado`) e em cada nota (`"commit"`). Sem o arquivo mostra `dev`; `+` no fim indica árvore com alterações | PLAN-041 · implementado 2026-09-29 |
+| TOOL-005 | **Verificações gravavam no save real:** `controller_check` trocava o perfil sem redirecionar `_save_path` e o `smoke` marcava fases como alcançadas e salvava em `user://profile.json`; corrigidos (perfil e arquivo descartáveis). Também: `mobile_buttons_check` com índices fixos de aba do Quartel (agora por nome) e `controller_check` com a expectativa velha de confirmação ao recusar bênção (removida em `d702247`). Resultado: controller 90/0, mobile 146/0. **O save real do dono já estava com o perfil de teste** | [EVID-230](../evidence/EVID-230-falhas-antigas-das-verificacoes-e-save-real-2026-10-09.md) |
 | — | Kit de evidências direto, sem ZIP nem manifesto | [SPEC-078](../specs/SPEC-078-evidencias-diretas-de-playtest.md) |
 | — | Recebimento de imagens do ChatGPT | [RECEBIMENTO-DE-ASSETS](RECEBIMENTO-DE-ASSETS.md) |
 
@@ -30,3 +31,13 @@ godot --headless --path . --export-release "Windows Playtest Publico" build/Nott
 Build de playtest sempre com `tools/stamp_build.ps1`, para gravar o commit no
 rodapé, no log e nas notas. O CI já grava o commit sozinho no passo "Gravar o identificador da build".
 `data/build_info.json` fica fora do git de propósito.
+
+## Rodar as verificações de controle e celular sem tocar no save real
+
+```bash
+godot --headless --path . res://tools/controller_check.tscn --resolution 1280x720   # 90 verificações, ~70 s (inclui o repouso de 60 s)
+godot --path . res://tools/mobile_buttons_check.tscn --resolution 1280x720          # 146 verificações; precisa de janela
+godot --headless --path . res://tools/smoke.tscn                                    # nove fases
+```
+
+As três usam perfil e arquivo descartáveis. **Se a janela for fechada de fora durante o repouso de 60 s, o controller_check termina sem resumo**; por isso `--headless`. `save_real_preservado` compara o hash de `user://profile.json` antes e depois.

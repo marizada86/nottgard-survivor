@@ -3,6 +3,9 @@ extends Node
 
 func _ready() -> void:
 	Playtest.visible = false
+	# Perfil e save descartaveis: abrir cada fase marca a fase como alcancada e salva; sem isto o save real do jogador e alterado
+	Game._save_path = "user://smoke-profile.json"
+	Game.profile = Profile.new({"name": "Fumaca", "welcome_seen": true})
 	var menu: Node = load("res://ui/menu.tscn").instantiate()
 	add_child(menu)
 	await get_tree().create_timer(0.3).timeout
