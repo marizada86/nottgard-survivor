@@ -1,0 +1,113 @@
+{
+  "tool": "built-in imagegen",
+  "content_state": "DRAFT",
+  "runtime_admission": false,
+  "selected": {
+    "AL01": "v02",
+    "EV01": "v02",
+    "EV02": "v01",
+    "EV03": "v01",
+    "EV04": "v02",
+    "EV05": "v02",
+    "EV06": "v02"
+  },
+  "records": [
+    {
+      "code": "AL01",
+      "version": "v01",
+      "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-4162c31d-3392-4780-8b1b-d4e4e0d5427b.png",
+      "destination": ".atena/generated/fila028-generation-2026-10-10/native-sources/AL01_v01.png",
+      "prompt": "Use case: stylized-concept. Generate a native game sprite animation sheet AL01, using the first reference altar_active.png as identity authority and the other references only as dark pixel-art style anchors. Six frames arranged exactly 3 columns by 2 rows, read left to right then top to bottom. Same dark stone altar, red drape, circular basin and FOUR candles, whole object centered at identical position and scale in every cell. Dark crisp pixel art, three-quarter isometric camera, upper-left lighting. Stone, cloth, basin and metal remain identical and fully opaque across all six frames; vary ONLY the candle flames and embers inside the basin in a subtle seamless cycle. Uniform solid magenta #FF00FF background, including gaps between objects. No transparency within the altar, no scenery, no cast shadow, no lettering, numbers, cell outlines, watermark or characters. Keep every altar entirely inside its cell with generous clearance, no overlap with neighbors. Preserve the reference silhouette and structural detail. This is a DRAFT native source for later packing to six 192x192 cells; do not add labels.",
+      "candidate_copy": ".atena/generated/art-candidates/fila028/AL01_v01.png"
+    },
+    {
+      "code": "AL01",
+      "version": "v02",
+      "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-7b64ee9f-30cc-49e4-a57b-8bd3f263cf45.png",
+      "destination": ".atena/generated/fila028-generation-2026-10-10/native-sources/AL01_v02.png",
+      "prompt": "Use case: stylized-concept. Generate a native game sprite animation sheet AL01, using the first reference altar_active.png as identity authority and the other references only as dark pixel-art style anchors. Six frames arranged exactly 3 columns by 2 rows, read left to right then top to bottom. Same dark stone altar, red drape, circular basin and FOUR candles, whole object centered at identical position and scale in every cell. Dark crisp pixel art, three-quarter isometric camera, upper-left lighting. Stone, cloth, basin and metal remain identical and fully opaque across all six frames; vary ONLY the candle flames and embers inside the basin in a subtle seamless cycle. Uniform solid magenta #FF00FF background, including gaps between objects. No transparency within the altar, no scenery, no cast shadow, no lettering, numbers, cell outlines, watermark or characters. Keep every altar entirely inside its cell with generous clearance, no overlap with neighbors. Preserve the reference silhouette and structural detail. This is a DRAFT native source for later packing to six 192x192 cells; do not add labels. Targeted correction: the previous sheet showed only three candles. There must be FOUR clearly visible candles with four distinguishable candle bodies on each altar: preserve the three reference candles and include the fourth on the back-right corner without changing stone, cloth or basin. Keep the six-cell structure and candle positions constant; only flames and embers animate.",
+      "candidate_copy": ".atena/generated/art-candidates/fila028/AL01_v02.png"
+    },
+    {
+      "code": "EV01",
+      "version": "v01",
+      "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-fc14acf6-2f8f-4d2c-89e2-7404e0e81f7a.png",
+      "destination": ".atena/generated/fila028-generation-2026-10-10/native-sources/EV01_v01.png",
+      "prompt": "Use case: stylized-concept. Single interactive object for a dark 2D isometric game, not a sheet. Match dark crisp pixel art of the two reference images (style anchors only, do not copy their objects). Three-quarter isometric view, upper-left main light, dark gray-purple stone and dark metal, one main accent color, whole object centered around 70% of image height, generous clearance on all sides. Square image. Uniform flat solid magenta #FF00FF backdrop. Small soft contact shadow allowed, no halo. No text, letters, numerals, frame, logo, watermark, scenery, new faction emblems or deity symbols. EV01 Pacto de Sangue: a cracked dark stone slab planted on the ground, a pulsating red wax seal centered on it engraved with one simple angular abstract glyph (no letters), three small drops of dark dried blood around it and one small dagger embedded beside the seal. A faint red glow rises from the seal. No characters. Distinct compact slab silhouette.",
+      "candidate_copy": ".atena/generated/art-candidates/fila028/EV01_v01.png"
+    },
+    {
+      "code": "EV01",
+      "version": "v02",
+      "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-28f79d38-dd71-4b50-a309-51b8ae956428.png",
+      "destination": ".atena/generated/fila028-generation-2026-10-10/native-sources/EV01_v02.png",
+      "prompt": "Use case: stylized-concept. Single interactive object for a dark 2D isometric game, not a sheet. Match dark crisp pixel art of the two reference images (style anchors only, do not copy their objects). Three-quarter isometric view, upper-left main light, dark gray-purple stone and dark metal, one main accent color, whole object centered around 70% of image height, generous clearance on all sides. Square image. Uniform flat solid magenta #FF00FF backdrop. Small soft contact shadow allowed, no halo. No text, letters, numerals, frame, logo, watermark, scenery, new faction emblems or deity symbols. EV01 Pacto de Sangue correction: one LOW FLAT cracked stone slab, unadorned rough dark stone. Red wax seal engraved with a simple angular abstract diamond glyph, exactly THREE small dried blood drops beside it and one SMALL dagger embedded next to the seal; very faint red wisps. The slab must NOT resemble an altar or donation pedestal: NO red fabric, NO drape, NO metal bands, NO gold chains, NO rings, NO chest or plinth. Keep silhouette a simple horizontal slab close to ground. Reference images only for pixel texture and lighting, do not borrow their structures or accessories.",
+      "candidate_copy": ".atena/generated/art-candidates/fila028/EV01_v02.png"
+    },
+    {
+      "code": "EV02",
+      "version": "v01",
+      "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-42b63f47-ed4a-4262-a30a-a2890719d859.png",
+      "destination": ".atena/generated/fila028-generation-2026-10-10/native-sources/EV02_v01.png",
+      "prompt": "Use case: stylized-concept. Single interactive object for a dark 2D isometric game, not a sheet. Match dark crisp pixel art of the two reference images (style anchors only, do not copy their objects). Three-quarter isometric view, upper-left main light, dark gray-purple stone and dark metal, one main accent color, whole object centered around 70% of image height, generous clearance on all sides. Square image. Uniform flat solid magenta #FF00FF backdrop. Small soft contact shadow allowed, no halo. No text, letters, numerals, frame, logo, watermark, scenery, new faction emblems or deity symbols. EV02 Relicário Lacrado: one small closed dark iron chest with a rounded domed lid and a lock made from interlocking BONES, thick chain wrapped once around the closed chest, subdued dark-gold reflections on the worn metal. No light escaping, no glow, chest completely sealed. Distinct rounded chest silhouette. No extra objects, candles, skull faces, cloth drapes or pedestal.",
+      "candidate_copy": ".atena/generated/art-candidates/fila028/EV02_v01.png"
+    },
+    {
+      "code": "EV03",
+      "version": "v01",
+      "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-d0f2144a-e3d7-44df-9248-573cacda73ec.png",
+      "destination": ".atena/generated/fila028-generation-2026-10-10/native-sources/EV03_v01.png",
+      "prompt": "Use case: stylized-concept. Single interactive object for a dark 2D isometric game, not a sheet. Match dark crisp pixel art of the two reference images (style anchors only, do not copy their objects). Three-quarter isometric view, upper-left main light, dark gray-purple stone and dark metal, one main accent color, whole object centered around 70% of image height, generous clearance on all sides. Square image. Uniform flat solid magenta #FF00FF backdrop. Small soft contact shadow allowed, no halo. No text, letters, numerals, frame, logo, watermark, scenery, new faction emblems or deity symbols. EV03 Peregrino Ferido: exactly ONE generic human traveler sitting slumped on the ground leaning against a broken stone milestone. Torn LIGHT BLUE cloak and hood, one hand presses the side of the torso, one simple travel bag beside him, pained posture, readable simple silhouette with face not detailed. Small event NPC intended to read at about 80 pixels tall. No faction armor, no emblem or religious insignia, no drawn weapon, no additional person. No shrine, donation pedestal or storefront. Keep one seated human plus small stone and bag as a single isolated composition.",
+      "candidate_copy": ".atena/generated/art-candidates/fila028/EV03_v01.png"
+    },
+    {
+      "code": "EV04",
+      "version": "v01",
+      "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-40ef901d-48ce-4161-9b79-a77ae1d15e2e.png",
+      "destination": ".atena/generated/fila028-generation-2026-10-10/native-sources/EV04_v01.png",
+      "prompt": "Use case: stylized-concept. Single interactive object for a dark 2D isometric game, not a sheet. Match dark crisp pixel art of the two reference images (style anchors only, do not copy their objects). Three-quarter isometric view, upper-left main light, dark gray-purple stone and dark metal, one main accent color, whole object centered around 70% of image height, generous clearance on all sides. Square image. Uniform flat solid magenta #FF00FF backdrop. Small soft contact shadow allowed, no halo. No text, letters, numerals, frame, logo, watermark, scenery, new faction emblems or deity symbols. EV04 Contador de Histórias: exactly ONE generic hooded human sitting on a low stump beside a SMALL low campfire. Moss-green cloak, face entirely shadowed in hood. An open scroll lies across the knees; no readable text on parchment, only faint smudged strokes. Firelight outlines the hood edge. Both hands natural and relaxed, no extra limbs. No emblem, religious symbol, faction armor or weapon. Isolated small event NPC and small fire as one composition, readable around 80 pixels. Do not copy a stall, shrine or altar from reference.",
+      "candidate_copy": ".atena/generated/art-candidates/fila028/EV04_v01.png"
+    },
+    {
+      "code": "EV04",
+      "version": "v02",
+      "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-be5fcc85-4849-4847-9f93-4f9eb09b9436.png",
+      "destination": ".atena/generated/fila028-generation-2026-10-10/native-sources/EV04_v02.png",
+      "prompt": "Use case: stylized-concept. Single interactive object for a dark 2D isometric game, not a sheet. Match dark crisp pixel art of the two reference images (style anchors only, do not copy their objects). Three-quarter isometric view, upper-left main light, dark gray-purple stone and dark metal, one main accent color, whole object centered around 70% of image height, generous clearance on all sides. Square image. Uniform flat solid magenta #FF00FF backdrop. Small soft contact shadow allowed, no halo. No text, letters, numerals, frame, logo, watermark, scenery, new faction emblems or deity symbols. EV04 corrected Contador de Histórias: exactly ONE generic hooded human seated on a low stump, moss-green cloak, face entirely shadowed. OPEN PARCHMENT SCROLL ON KNEES MUST BE BLANK: no writing, letters, runes, symbols or pseudo-text; only natural paper texture. Both hands natural, one relaxed on scroll, the other modest storytelling gesture. Beside him a very SMALL LOW campfire below knee height, a few logs and stones. No bag, no bundles, no extra accessories or extra person, no symbol or emblem. Compact seated-NPC silhouette, readable at 80 px, dark crisp pixel art like reference.",
+      "candidate_copy": ".atena/generated/art-candidates/fila028/EV04_v02.png"
+    },
+    {
+      "code": "EV05",
+      "version": "v01",
+      "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-1a89304b-0bcb-474c-bebc-5eaa1a3d7df5.png",
+      "destination": ".atena/generated/fila028-generation-2026-10-10/native-sources/EV05_v01.png",
+      "prompt": "Use case: stylized-concept. Single interactive object for a dark 2D isometric game, not a sheet. Match dark crisp pixel art of the two reference images (style anchors only, do not copy their objects). Three-quarter isometric view, upper-left main light, dark gray-purple stone and dark metal, one main accent color, whole object centered around 70% of image height, generous clearance on all sides. Square image. Uniform flat solid magenta #FF00FF backdrop. Small soft contact shadow allowed, no halo. No text, letters, numerals, frame, logo, watermark, scenery, new faction emblems or deity symbols. EV05 Carroça Abandonada: one dark wooden wagon overturned onto its SIDE, one broken wheel detached nearby, open crates and torn sacks scattered around it, one fallen lit lantern casting a faint ORANGE light. Arrangement suggests luck or a lure. No bodies, people, monsters, animals or text. Clear overturned-cart silhouette, whole cart and props within generous margins. No shrine or shop canopy. Match restrained dark pixel-art palette, weathered wood, iron fastenings.",
+      "candidate_copy": ".atena/generated/art-candidates/fila028/EV05_v01.png"
+    },
+    {
+      "code": "EV05",
+      "version": "v02",
+      "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-b034d61e-2a61-4c61-b5a9-783b6c3eeda2.png",
+      "destination": ".atena/generated/fila028-generation-2026-10-10/native-sources/EV05_v02.png",
+      "prompt": "Use case: stylized-concept. Single interactive object for a dark 2D isometric game, not a sheet. Match dark crisp pixel art of the two reference images (style anchors only, do not copy their objects). Three-quarter isometric view, upper-left main light, dark gray-purple stone and dark metal, one main accent color, whole object centered around 70% of image height, generous clearance on all sides. Square image. Uniform flat solid magenta #FF00FF backdrop. Small soft contact shadow allowed, no halo. No text, letters, numerals, frame, logo, watermark, scenery, new faction emblems or deity symbols. EV05 corrected Carroça Abandonada: one plain dark wooden transport wagon overturned onto its side, a broken wheel detached nearby, two open wooden crates and torn plain burlap sacks scattered around, one fallen lit lantern casting faint orange light. Crates and sacks do NOT reveal specific valuable contents. No red cloth, no canopy, no fabric drapes, no coins, no treasure, no bottles, no weapons, no bodies, humans, enemies or animals. Keep the subject recognizably a simple overturned transport wagon, not an overturned shop stall. Weathered wood, dark iron fastenings, compact readable silhouette.",
+      "candidate_copy": ".atena/generated/art-candidates/fila028/EV05_v02.png"
+    },
+    {
+      "code": "EV06",
+      "version": "v01",
+      "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-d5a4977c-2eea-4b66-a320-612bdca472ee.png",
+      "destination": ".atena/generated/fila028-generation-2026-10-10/native-sources/EV06_v01.png",
+      "prompt": "Use case: stylized-concept. Single interactive object for a dark 2D isometric game, not a sheet. Match dark crisp pixel art of the two reference images (style anchors only, do not copy their objects). Three-quarter isometric view, upper-left main light, dark gray-purple stone and dark metal, one main accent color, whole object centered around 70% of image height, generous clearance on all sides. Square image. Uniform flat solid CYAN #00FFFF backdrop. Small soft contact shadow allowed, no halo. No text, letters, numerals, frame, logo, watermark, scenery, new faction emblems or deity symbols. EV06 Pedra do Eclipse: one LOW monolith of matte BLACK stone, smoothly weathered and absorbing light with NO bright surface reflection. A narrow ring of cold PURPLE light encircles its top edge like an eclipse outline. Fine cracks and faint worn abstract nonlinguistic grooves near the base, no readable letters, no religious or faction icon. Isolated black stone silhouette, restrained purple accent. NO pedestal, gold chains, red cloth, candles, shrine, person, scenery or extra props. Entire monolith inside margins. Backdrop uniform CYAN #00FFFF, never magenta.",
+      "candidate_copy": ".atena/generated/art-candidates/fila028/EV06_v01.png"
+    },
+    {
+      "code": "EV06",
+      "version": "v02",
+      "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-0555adb9-ea0e-4deb-aae8-6e7d21c1f1cb.png",
+      "destination": ".atena/generated/fila028-generation-2026-10-10/native-sources/EV06_v02.png",
+      "prompt": "Use case: stylized-concept. Single interactive object for a dark 2D isometric game, not a sheet. Match dark crisp pixel art of the two reference images (style anchors only, do not copy their objects). Three-quarter isometric view, upper-left main light, dark gray-purple stone and dark metal, one main accent color, whole object centered around 70% of image height, generous clearance on all sides. Square image. Uniform flat solid CYAN #00FFFF backdrop. Small soft contact shadow allowed, no halo. No text, letters, numerals, frame, logo, watermark, scenery, new faction emblems or deity symbols. EV06 corrected Pedra do Eclipse: ONE LOW BROAD BLACK MONOLITH, object height about equal to its width, not a tall tower or pile of rocks. Smooth monolithic MATTE dark black stone with only a few FINE HAIRLINE cracks. Very subdued lighting, no glossy reflections, no chunky protrusions or separate rubble. Narrow cold PURPLE glowing rim follows its flat circular top perimeter like an eclipse. Near its base, a few barely visible worn abstract grooves, no letters or recognizable symbols. No pedestal, jewelry, fabric, characters or scenery. Clear squat monolith silhouette, isolated with generous margin. Uniform flat CYAN #00FFFF background. Dark crisp pixel art matching the reference medium.",
+      "candidate_copy": ".atena/generated/art-candidates/fila028/EV06_v02.png"
+    }
+  ],
+  "approval_register": ".atena/vault/canon/ASSET-APPROVAL-FILA028-AL-EV-2026-10-10.md"
+}

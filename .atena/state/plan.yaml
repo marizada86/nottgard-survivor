@@ -1,4 +1,17 @@
 version: 2
+fila028_generation_2026_10_10:
+  state_file: .atena/state/fila028-generation.yaml
+  mode: per-plan
+  checkpoint: S-008/ACCEPTED
+  status: VISUALLY_APPROVED_LOCAL_COMMIT_AUTHORIZED
+  visual_register: .atena/vault/canon/ASSET-APPROVAL-FILA028-AL-EV-2026-10-10.md
+  evidence: .atena/evidence/fila028-generation-2026-10-10.md
+  scope: [AL01, EV01, EV02, EV03, EV04, EV05, EV06]
+  content_state: DRAFT
+  runtime_admission: false
+  owner_reply: 'Por plano (recomendado)'
+  commit_preparation: 3fd8fd9
+  return_checkpoint: S-007/ORIGINAL-GENERATIONS/NORMALIZATION-EXTRACTION-11
 image_queue_resume_2026_10_10:
   request_classification: PLAN_DEVIATION
   route: publish-now-then-return-to-image-queue

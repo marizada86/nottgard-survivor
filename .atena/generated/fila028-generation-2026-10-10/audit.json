@@ -1,0 +1,531 @@
+{
+  "plan": "PLAN-053/SPEC-121",
+  "revision": "FILA-028/v01",
+  "approval_mode": "per-plan",
+  "selected_pieces": 7,
+  "native_versions": 12,
+  "source_hashes_passed": true,
+  "references": [
+    {
+      "path": "assets/interactions/altar_active.png",
+      "sha256": "e00fc07ba7cdb8e5dd6870455c061a0c94038327d140c5b06147fb33844a39e1",
+      "role": "AL01 identity authority",
+      "state": "EXISTING_PROJECT_REFERENCE"
+    },
+    {
+      "path": "assets/interactions/loja.png",
+      "sha256": "b7c092ab509af9687288004d3b0c693f470487b8bd4dbea2f46b353f336afba7",
+      "role": "style anchor",
+      "state": "EXISTING_PROJECT_REFERENCE"
+    },
+    {
+      "path": "assets/interactions/doacao.png",
+      "sha256": "df364ad5b3672c04f61a4cd0eef2e6185218c518d31217b299a2c6abb27fee0d",
+      "role": "style anchor",
+      "state": "EXISTING_PROJECT_REFERENCE"
+    }
+  ],
+  "reports": [
+    {
+      "code": "AL01",
+      "version": "v01",
+      "selected_for_review": false,
+      "sha256": "21c040ca9989d77383be57bed1f1f523a7863e48a0aeaf96d39f54704e008c62",
+      "source_copy_matches": true,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "corner_rgb": [
+        [
+          241,
+          12,
+          241
+        ],
+        [
+          245,
+          18,
+          242
+        ],
+        [
+          234,
+          34,
+          234
+        ],
+        [
+          239,
+          31,
+          237
+        ]
+      ],
+      "background_family": "magenta",
+      "exact_background_uniformity": "NOT_PROVEN",
+      "square": false,
+      "content_state": "DRAFT",
+      "human_approval": "PENDING",
+      "runtime_admission": false,
+      "visual_notes": "Prior version retained; objective correction recorded in subsequent prompt."
+    },
+    {
+      "code": "AL01",
+      "version": "v02",
+      "selected_for_review": true,
+      "sha256": "67e4b8d9ea29fb9475ad3eda355bbe3ba775fd4149eae8e0f3766b0ffd57e10d",
+      "source_copy_matches": true,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "corner_rgb": [
+        [
+          236,
+          12,
+          241
+        ],
+        [
+          240,
+          21,
+          241
+        ],
+        [
+          232,
+          42,
+          236
+        ],
+        [
+          237,
+          33,
+          237
+        ]
+      ],
+      "background_family": "magenta",
+      "exact_background_uniformity": "NOT_PROVEN",
+      "square": false,
+      "content_state": "CANON_VISUAL_SOURCE",
+      "human_approval": "APPROVED_BY_OWNER_2026-10-10",
+      "runtime_admission": false,
+      "visual_notes": "Quatro velas na v02; a referência estática mostra três chamas visíveis. A contagem textual de quatro foi usada nesta candidata: aceite de identidade registrado. Grade 3×2 nativa; posição/escala e invariância exata do corpo, montagem, recorte e alfa do corpo ainda precisam verificação."
+    },
+    {
+      "code": "EV01",
+      "version": "v01",
+      "selected_for_review": false,
+      "sha256": "bcaefc9898d13b7554edaf35dbe6ba2b339159fe0f799a18a22d5bd1de843aa9",
+      "source_copy_matches": true,
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "corner_rgb": [
+        [
+          237,
+          14,
+          240
+        ],
+        [
+          245,
+          20,
+          244
+        ],
+        [
+          236,
+          35,
+          237
+        ],
+        [
+          238,
+          30,
+          239
+        ]
+      ],
+      "background_family": "magenta",
+      "exact_background_uniformity": "NOT_PROVEN",
+      "square": true,
+      "content_state": "DRAFT",
+      "human_approval": "PENDING",
+      "runtime_admission": false,
+      "visual_notes": "Prior version retained; objective correction recorded in subsequent prompt."
+    },
+    {
+      "code": "EV01",
+      "version": "v02",
+      "selected_for_review": true,
+      "sha256": "ca9f3a0b4262f47179925a3d4ef33349545e058c2dd994c0052ab35b33043dc7",
+      "source_copy_matches": true,
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "corner_rgb": [
+        [
+          239,
+          13,
+          241
+        ],
+        [
+          247,
+          18,
+          244
+        ],
+        [
+          239,
+          36,
+          239
+        ],
+        [
+          242,
+          30,
+          241
+        ]
+      ],
+      "background_family": "magenta",
+      "exact_background_uniformity": "NOT_PROVEN",
+      "square": true,
+      "content_state": "CANON_VISUAL_SOURCE",
+      "human_approval": "APPROVED_BY_OWNER_2026-10-10",
+      "runtime_admission": false,
+      "visual_notes": "v02 removeu tecido, correntes e adornos; três gotas visíveis e selo angular. Aceite visual registrado."
+    },
+    {
+      "code": "EV02",
+      "version": "v01",
+      "selected_for_review": true,
+      "sha256": "f527418202c5156c5996c48b9fdd156ffa69044d69be43dd796106cafbfff0fd",
+      "source_copy_matches": true,
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "corner_rgb": [
+        [
+          242,
+          13,
+          242
+        ],
+        [
+          246,
+          15,
+          244
+        ],
+        [
+          237,
+          33,
+          237
+        ],
+        [
+          241,
+          29,
+          239
+        ]
+      ],
+      "background_family": "magenta",
+      "exact_background_uniformity": "NOT_PROVEN",
+      "square": true,
+      "content_state": "CANON_VISUAL_SOURCE",
+      "human_approval": "APPROVED_BY_OWNER_2026-10-10",
+      "runtime_admission": false,
+      "visual_notes": "Cofre lacrado com correntes e ossos, sem luz saindo. Aceite visual registrado."
+    },
+    {
+      "code": "EV03",
+      "version": "v01",
+      "selected_for_review": true,
+      "sha256": "ec5e95cdf195bd8ab0f24abb194668b1715bf2884e4b4dd5715343f91dbaf300",
+      "source_copy_matches": true,
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "corner_rgb": [
+        [
+          240,
+          15,
+          240
+        ],
+        [
+          245,
+          16,
+          242
+        ],
+        [
+          238,
+          36,
+          236
+        ],
+        [
+          241,
+          29,
+          239
+        ]
+      ],
+      "background_family": "magenta",
+      "exact_background_uniformity": "NOT_PROVEN",
+      "square": true,
+      "content_state": "CANON_VISUAL_SOURCE",
+      "human_approval": "APPROVED_BY_OWNER_2026-10-10",
+      "runtime_admission": false,
+      "visual_notes": "Um viajante genérico, capa azul-clara, bolsa e marco. Aceite visual registrado."
+    },
+    {
+      "code": "EV04",
+      "version": "v01",
+      "selected_for_review": false,
+      "sha256": "39924f24ad1ce53428b3d7ac660be2b340aea7754aa769042f64fc4226888155",
+      "source_copy_matches": true,
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "corner_rgb": [
+        [
+          240,
+          13,
+          240
+        ],
+        [
+          246,
+          18,
+          244
+        ],
+        [
+          238,
+          36,
+          238
+        ],
+        [
+          241,
+          30,
+          240
+        ]
+      ],
+      "background_family": "magenta",
+      "exact_background_uniformity": "NOT_PROVEN",
+      "square": true,
+      "content_state": "DRAFT",
+      "human_approval": "PENDING",
+      "runtime_admission": false,
+      "visual_notes": "Prior version retained; objective correction recorded in subsequent prompt."
+    },
+    {
+      "code": "EV04",
+      "version": "v02",
+      "selected_for_review": true,
+      "sha256": "1e89e4d2ada3ccb5cb5bf666b7e068cb8a06c8f5a9bd665e01d5516ca59e34e0",
+      "source_copy_matches": true,
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "corner_rgb": [
+        [
+          240,
+          15,
+          241
+        ],
+        [
+          244,
+          17,
+          241
+        ],
+        [
+          240,
+          37,
+          239
+        ],
+        [
+          242,
+          30,
+          240
+        ]
+      ],
+      "background_family": "magenta",
+      "exact_background_uniformity": "NOT_PROVEN",
+      "square": true,
+      "content_state": "CANON_VISUAL_SOURCE",
+      "human_approval": "APPROVED_BY_OWNER_2026-10-10",
+      "runtime_admission": false,
+      "visual_notes": "v02 removeu bolsa e marcas do pergaminho; rosto na sombra e fogueira menor. Aceite visual registrado."
+    },
+    {
+      "code": "EV05",
+      "version": "v01",
+      "selected_for_review": false,
+      "sha256": "fe3372f9863a47fa3d938a4be8a7695c0d04596a48e4a2010bde04497b3186de",
+      "source_copy_matches": true,
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "corner_rgb": [
+        [
+          239,
+          13,
+          240
+        ],
+        [
+          244,
+          15,
+          242
+        ],
+        [
+          238,
+          37,
+          239
+        ],
+        [
+          239,
+          30,
+          238
+        ]
+      ],
+      "background_family": "magenta",
+      "exact_background_uniformity": "NOT_PROVEN",
+      "square": true,
+      "content_state": "DRAFT",
+      "human_approval": "PENDING",
+      "runtime_admission": false,
+      "visual_notes": "Prior version retained; objective correction recorded in subsequent prompt."
+    },
+    {
+      "code": "EV05",
+      "version": "v02",
+      "selected_for_review": true,
+      "sha256": "69bfac35a7819f8e56f17a982fd4e045de61fcb8bf947c7265a4f671fa81c568",
+      "source_copy_matches": true,
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "corner_rgb": [
+        [
+          241,
+          12,
+          241
+        ],
+        [
+          245,
+          15,
+          242
+        ],
+        [
+          236,
+          34,
+          236
+        ],
+        [
+          241,
+          31,
+          239
+        ]
+      ],
+      "background_family": "magenta",
+      "exact_background_uniformity": "NOT_PROVEN",
+      "square": true,
+      "content_state": "CANON_VISUAL_SOURCE",
+      "human_approval": "APPROVED_BY_OWNER_2026-10-10",
+      "runtime_admission": false,
+      "visual_notes": "v02 removeu tecido, moedas e garrafa; carroça tombada, caixotes, sacos e lanterna. Aceite visual registrado."
+    },
+    {
+      "code": "EV06",
+      "version": "v01",
+      "selected_for_review": false,
+      "sha256": "bd5a7c33abeb8887c9053b9376995cb400d2876e0ade6bd4a238b2cdf86c3efd",
+      "source_copy_matches": true,
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "corner_rgb": [
+        [
+          5,
+          247,
+          251
+        ],
+        [
+          4,
+          249,
+          250
+        ],
+        [
+          9,
+          247,
+          249
+        ],
+        [
+          5,
+          248,
+          251
+        ]
+      ],
+      "background_family": "cyan",
+      "exact_background_uniformity": "NOT_PROVEN",
+      "square": true,
+      "content_state": "DRAFT",
+      "human_approval": "PENDING",
+      "runtime_admission": false,
+      "visual_notes": "Prior version retained; objective correction recorded in subsequent prompt."
+    },
+    {
+      "code": "EV06",
+      "version": "v02",
+      "selected_for_review": true,
+      "sha256": "1cdb112dfbb9665746602566d2ef02a7614b21df0b46a180a733ea4fc2538ecc",
+      "source_copy_matches": true,
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "corner_rgb": [
+        [
+          7,
+          249,
+          252
+        ],
+        [
+          4,
+          248,
+          250
+        ],
+        [
+          9,
+          247,
+          249
+        ],
+        [
+          6,
+          249,
+          251
+        ]
+      ],
+      "background_family": "cyan",
+      "exact_background_uniformity": "NOT_PROVEN",
+      "square": true,
+      "content_state": "CANON_VISUAL_SOURCE",
+      "human_approval": "APPROVED_BY_OWNER_2026-10-10",
+      "runtime_admission": false,
+      "visual_notes": "v02 reduziu altura e fragmentação; pedra baixa com aro roxo, ciano ao fundo. Acabamento e proporção aceitos visualmente."
+    }
+  ],
+  "content_state": "SELECTED_CANON_PRIOR_VERSIONS_DRAFT",
+  "runtime_admission": false,
+  "pending": [
+    "background removal and exact uniformity",
+    "AL01 packing, invariant body and body alpha mask check",
+    "80px readability in game context"
+  ],
+  "checks_scope": "Native-file metadata, SHA256, corners, link existence and visual review. No runtime or enjoyment claim.",
+  "approval_register": ".atena/vault/canon/ASSET-APPROVAL-FILA028-AL-EV-2026-10-10.md"
+}

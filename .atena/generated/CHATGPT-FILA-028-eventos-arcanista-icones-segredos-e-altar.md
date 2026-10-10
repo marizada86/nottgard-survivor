@@ -1,7 +1,7 @@
 ---
 id: "CHATGPT-FILA-028"
 title: "Fila de geração: eventos aleatórios, Arcanista, ícones das armas e equipamentos novos, segredos e altar animado"
-status: "criada 2026-10-09; nenhuma peça gerada; aguardando o dono enviar ao ChatGPT"
+status: "2026-10-10: AL01 e EV01–EV06 aceitas visualmente; preparacao runtime pendente; demais blocos nao iniciados"
 priority: "normal: depois da FILA-027 (Erik e Arlindo)"
 created: "2026-10-09"
 relations: ["[[ART-PROMPTS-061-eventos-arcanista-icones-segredos-e-altar]]", "[[ART-PROMPTS-059-icones-das-bencaos-novas]]", "[[SPEC-164-eventos-aleatorios-novos-mec-005]]"]
@@ -35,16 +35,16 @@ Compilação operacional de [[ART-PROMPTS-061-eventos-arcanista-icones-segredos-
 
 ## 1. AL: altar animado (ART-044)
 
-- [ ] gerada · [ ] aprovada: AL01 `altar_active` (grade 3×2 → sheet 1152 × 192)
+- [x] gerada · [x] aprovada: AL01 `altar_active` (v02, fonte nativa grade 3×2; sheet 1152 × 192 ainda não montado)
 
 ## 2. EV: eventos aleatórios (ART-046)
 
-- [ ] gerada · [ ] aprovada: EV01 `pacto_sangue`
-- [ ] gerada · [ ] aprovada: EV02 `relicario`
-- [ ] gerada · [ ] aprovada: EV03 `peregrino` (NPC)
-- [ ] gerada · [ ] aprovada: EV04 `contador` (NPC)
-- [ ] gerada · [ ] aprovada: EV05 `carroca`
-- [ ] gerada · [ ] aprovada: EV06 `eclipse_pedra` (fundo ciano)
+- [x] gerada · [x] aprovada: EV01 `pacto_sangue` (v02)
+- [x] gerada · [x] aprovada: EV02 `relicario` (v01)
+- [x] gerada · [x] aprovada: EV03 `peregrino` (NPC, v01)
+- [x] gerada · [x] aprovada: EV04 `contador` (NPC, v02)
+- [x] gerada · [x] aprovada: EV05 `carroca` (v02)
+- [x] gerada · [x] aprovada: EV06 `eclipse_pedra` (fundo ciano, v02)
 
 ## 3. IC: ícones das armas e equipamentos novos (ART-042)
 
