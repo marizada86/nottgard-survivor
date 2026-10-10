@@ -328,8 +328,6 @@ func _refresh_hero() -> void:
 	_ca_btn.text = " CA %d  ·  %d%% esquiva" % [h.ca(), int(h.typed_evasion("fisico") * 100.0)]
 	_cam_btn.text = " CAM %d  ·  %d%% esquiva" % [h.cam(), int(h.typed_evasion("magico") * 100.0)]
 	_stat_tips = {"ca": defense_tip("ca", h.ca(), h.typed_evasion("fisico"), h.m("dodge")), "cam": defense_tip("cam", h.cam(), h.typed_evasion("magico"), h.m("dodge"))}
-	_ca_btn.tooltip_text = plain_text(_stat_tips.ca)
-	_cam_btn.tooltip_text = plain_text(_stat_tips.cam)
 	var a: Dictionary = _b.active_def
 	if a.is_empty():
 		_ability_name.text = ""
@@ -357,12 +355,6 @@ static func defense_tip(kind: String, value: int, evasion: float, dodge := 0.0) 
 	if dodge > 0.0:
 		t += "\nA esquiva geral (%d%%) é somada a esta, por fora." % int(round(dodge * 100.0))
 	return t
-
-## Tira o BBCode para tooltips nativos (também usado pelo HeroPanel, SPEC-131).
-static func plain_text(bb: String) -> String:
-	var r := RegEx.new()
-	r.compile("\\[/?[a-z_]+[^\\]]*\\]")
-	return r.sub(bb, "", true)
 
 func _show_stat_tip(kind: String) -> void:
 	_detail.text = String(_stat_tips.get(kind, ""))

@@ -39,6 +39,11 @@ func run() -> Array:
 						out.append("%s: aba %d sem ícone em %s" % [hid, sec_i, e.get("icon", "")])
 		if sheet._ability_name.text != String(b.active_def.get("name", "")):
 			out.append("%s: cartão de habilidade sem o nome" % hid)
+		# CA e CAM explicam no painel de detalhe da ficha; o botão não abre balão (dono, 2026-10-10)
+		if sheet._ca_btn.tooltip_text != "" or sheet._cam_btn.tooltip_text != "":
+			out.append("%s: os botões CA/CAM da ficha não deveriam ter dica ao passar o mouse" % hid)
+		if String(sheet._stat_tips.get("ca", "")).find("Classe de Armadura (CA)") < 0:
+			out.append("%s: o detalhe da CA sumiu da ficha" % hid)
 		sheet.free()
 
 	# herói cheio: equipamento, passivas, bênçãos

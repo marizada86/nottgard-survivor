@@ -15,3 +15,10 @@ Suite 0 falhas; smoke ok; mutação (dica de volta no chip CA) → falhas no tes
 ## Pendências
 - Aguarda playtest do dono. Os botões CA/CAM **dentro da ficha C** (`_ca_btn`, `_cam_btn`) ainda têm tooltip; não foram tocados porque o pedido citava a HUD. Decisão do dono se saem também.
 - Não capturei o balão em execução (o tooltip nativo não aparece em captura); a verificação é por valor da propriedade.
+
+## Adendo — botões CA/CAM da ficha C (mesmo dia, DEV-031)
+**Origem:** dono: "pode tirar a tooltip de CA e CAM do menu c, foi uma ideia ruim era só isso". Resolve a pendência acima.
+- `ui/character_sheet.gd`: `_ca_btn` e `_cam_btn` sem `tooltip_text`; o texto segue no painel de detalhe (`_stat_tips`, `defense_tip`). Removido `plain_text` (só servia aos tooltips nativos e ficou sem uso) e o teste dele em `test_hero_panel.gd`.
+- `tests/test_character_sheet.gd`: botões sem dica e detalhe da CA presente (dez heróis).
+- Verificação: suite 0 falhas; smoke ok; mutação (dica de volta no botão CAM) → falha nos dez heróis; valor restaurado.
+- Aguarda playtest do dono.

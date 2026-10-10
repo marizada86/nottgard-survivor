@@ -9,8 +9,6 @@ func run() -> Array:
 		out.append("hp_text com barreira: '%s'" % HeroPanel.hp_text(27.0, 48.0, 4.2))
 	if HeroPanel.defense_text(15, 0.15) != "15 (15%)":
 		out.append("defense_text: '%s'" % HeroPanel.defense_text(15, 0.15))
-	if CharacterSheet.plain_text("[font_size=22][b]CA[/b][/font_size]\nok [color=#e6c76e]x[/color]") != "CA\nok x":
-		out.append("plain_text não removeu o BBCode: '%s'" % CharacterSheet.plain_text("[font_size=22][b]CA[/b][/font_size]\nok [color=#e6c76e]x[/color]"))
 	var tree := Engine.get_main_loop() as SceneTree
 	for hid in Data.table("heroes"):
 		var b := Battle.new(3, hid, "dagruve")
