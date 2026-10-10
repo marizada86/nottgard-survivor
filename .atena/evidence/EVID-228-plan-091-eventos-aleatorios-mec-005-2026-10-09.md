@@ -4,7 +4,7 @@ title: "PLAN-091: seis eventos aleatórios novos (MEC-005, SPEC-164)"
 created: "2026-10-09"
 spec: "SPEC-164"
 cards: ["MEC-005", "BAL-029", "ART-046"]
-status: "implementado na branch atena/eventos-e-ui-fase1; aguarda a conferência e o merge do dono; aceite subjetivo pendente do playtest"
+status: "mesclado na main (local, sem push); aceite subjetivo pendente do playtest"
 ---
 
 # EVID-228 — Seis eventos aleatórios

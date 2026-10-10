@@ -1,7 +1,7 @@
 ---
 id: "SPEC-165"
 title: "Sistema de UI e novo menu de pausa (MEC-003, fase 1)"
-status: "IMPLEMENTADA em branch atena/eventos-e-ui-fase1 em 2026-10-09 (EVID-229); direção visual ainda DRAFT; aguarda conferência, merge e aprovação do dono"
+status: "IMPLEMENTADA e mesclada na main em 2026-10-09 (455beca, EVID-229); sem push; direção visual ainda DRAFT: aguarda aprovação do dono"
 origin: planned
 implementation_preceded_spec: false
 request_classification: PLAN_DEVIATION

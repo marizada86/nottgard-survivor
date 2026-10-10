@@ -2,7 +2,7 @@ id: PLAN-091
 spec: SPEC-164
 spec_file: .atena/specs/SPEC-164-eventos-aleatorios-novos-mec-005.md
 mode: per-plan
-status: IMPLEMENTED_ON_BRANCH_AWAITING_OWNER_REVIEW
+status: MERGED_LOCAL_AWAITING_PLAYTEST
 created: '2026-10-09'
 request_classification: PLAN_DEVIATION
 deviation_id: DEV-026
@@ -39,4 +39,4 @@ gates:
 blocking_gaps: []
 content_approved: "Aprovo como esta (dono, 2026-10-09): proposta revisao 1 vira CANON de trabalho"
 non_blocking_gaps: [P1, P2, P3]
-commit_push_build_export: "COMMITTED_ON_BRANCH atena/eventos-e-ui-fase1 (sem merge na main, push, exportacao nem aviso aos testers)"
+commit_push_build_export: "MERGED_LOCAL_FF (ac2bc86, 455beca); push, exportacao e aviso aos testers NOT_PERFORMED"

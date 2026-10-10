@@ -27,6 +27,7 @@ previous_plan_cursor:
   current: 'PLAN-059 (SPEC-125) commitado e publicado (05264f0, 1392627) em 2026-10-05; o playtest decide Docas, Molor e fases finais.'
   next: 'Retomar PLAN-053 (imagens, Shu: attack_02, death_03, death_04) e/ou abrir spec de balanceamento BAL-018 (precisa de linha de base do bot por heroi). Push da main (1 a 3 commits a frente) exige aprovacao.'
 local_git_receipts:
+  - {plan: PLAN-091, also: PLAN-092, request_classification: PLAN_DEVIATION, deviation: [DEV-026, DEV-027], authorization: "por plano (2026-10-09); atena, aprovo o merge da branch na main (2026-10-09)", branch: main, merged_from: atena/eventos-e-ui-fase1, merge: fast-forward, commits: [ac2bc86, 455beca], pushed: false, evidence: [EVID-228, EVID-229], scope: "PLAN-091 = seis eventos aleatorios novos (MEC-005, SPEC-164); PLAN-092 = UiKit e menu de pausa em abas (MEC-003 fase 1, SPEC-165)", verification: "na main integrada: suite 0 falhas, smoke ok, kit_test OK, backlog_check sem alertas; antes do merge, na branch: controller_check e mobile_buttons_check com as mesmas falhas da linha de base (3 e 34)", note: "Sem push, exportacao nem aviso aos testers. Documentos dos testers NAO atualizados (barra, seta, eventos e pausa). Direcao visual da UI segue DRAFT ate o dono aprovar. Falhas do controller_check e do mobile_buttons_check ja existiam na branch antes das mudancas; causa nao investigada."}
   - {plan: PLAN-090, request_classification: PLAN_DEVIATION, deviation: DEV-025, authorization: "atena, ainda nao atualize os documentos com a barra estou esperando assets, vamos seguir com mudancas e commits (2026-10-09)", branch: main, commits: [4fb2ab9], pushed: false, evidence: EVID-227, scope: "Hero.mouse_walk_dir, Hud.pointer_over_ui, ui/run.gd, tests/test_mouse_walk.gd, tools/probe_mouse_walk, BUG-039, BUG-007 fechado, adendo da SPEC-072", verification: "suite 0 falhas, smoke ok, kit_test OK, backlog_check sem alertas; 3 mutacoes; sonda com janela antes e depois", note: "Sem push, exportacao nem aviso aos testers. Documentos dos testers NAO atualizados (barra e este ajuste), por decisao do dono. BUGS.md (BUG-029, PLAN-082) ficou fora."}
   - {plan: PLAN-088, batch: "push", authorization: "atena, faca o push (2026-10-09)", branch: main, commits: [d83c106, 2d929b0, 10c833d, c0ebc87, 240f629, 04d829c, af53e65, 2205341, c60f2e6], pushed: true, push_range: "727718b..c60f2e6", scope: "9 commits de outras sessoes: Arlindo e Erik jogaveis (MEC-062/063), seta de evento (MEC-061), fecho do PLAN-083 e documentos da 0.4.0 refeita, PLAN-088 (divida de verificacao manual e linha de base do bot), barra de progresso da fase (MEC-002) e recibos", verification: "checkout limpo do HEAD (git archive): testes 0 falhas, smoke ok", ci: "Build and Release disparado pelo push; resultado nao verificado aqui (gh ausente)", note: "Os recibos de PLAN-087/088/089 abaixo dizem pushed:false porque foram escritos antes deste push; este recibo os supera. O remoto ja tinha 727718b (mescla de codex/fila-imagens: animacoes de Shendilavri, Goranthis e Pilares)."}
   - {plan: PLAN-053, batch: "push das identidades de Shendilavri", authorization: "atena, mescle as identidades na main; atena, faca o push (2026-10-09)", branch: main, commits: [02d0ba2, ae8368b, f99bdd7], pushed: true, push_range: "ca53950..ae8368b", scope: "mescla de codex/shendilavri-identidades (5 identidades aprovadas em 2026-10-05, registro de aprovacao em canon e auditorias; so candidatos em .atena/generated); conflito so em plan.yaml, mantida a versao da main; 02d0ba2 = recibo do push anterior", ci: "nao verificado aqui (gh ausente)"}
@@ -103,7 +104,7 @@ deferred_requests:
   - id: DEV-026
     request: 'MEC-005: implementar mais eventos aleatorios (entrevista: 6 eventos genericos, 4 tipos, todas as fases).'
     request_classification: PLAN_DEVIATION
-    status: IMPLEMENTED_ON_BRANCH_AWAITING_OWNER_REVIEW
+    status: MERGED_LOCAL_AWAITING_PLAYTEST
     recorded: '2026-10-09'
     authorization_verbatim: 'MEC-005 vamos implementar, me entreviste se necessario'
     proposed_plan: PLAN-091
@@ -117,7 +118,7 @@ deferred_requests:
   - id: DEV-027
     request: 'MEC-003: melhorar a interface, considerar uma nova UI (entrevista: sistema de UI + menu de pausa, UI por codigo).'
     request_classification: PLAN_DEVIATION
-    status: IMPLEMENTED_ON_BRANCH_AWAITING_OWNER_REVIEW
+    status: MERGED_LOCAL_AWAITING_PLAYTEST
     recorded: '2026-10-09'
     authorization_verbatim: 'sobre a MEC-003 vamos trabalhar para melhorar a interface, talvez refazer o jogo esta maior e recebeu muitas atualizacoes, considerar uma nova UI'
     proposed_plan: PLAN-092

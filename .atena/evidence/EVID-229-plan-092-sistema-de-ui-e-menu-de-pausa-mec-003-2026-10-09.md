@@ -4,7 +4,7 @@ title: "PLAN-092: sistema de UI (UiKit) e novo menu de pausa em abas (MEC-003, f
 created: "2026-10-09"
 spec: "SPEC-165"
 cards: ["MEC-003"]
-status: "implementado na branch atena/eventos-e-ui-fase1; aguarda a conferência e a aprovação da direção visual pelo dono"
+status: "mesclado na main (local, sem push); aguarda a aprovação da direção visual pelo dono"
 ---
 
 # EVID-229 — UiKit e menu de pausa em abas
