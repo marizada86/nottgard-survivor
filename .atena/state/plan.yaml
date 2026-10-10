@@ -105,6 +105,19 @@ suspension:
   suspended_plan_state_file: '.atena/state/plan-053-imagens.yaml'
   note: 'PLAN-053 retomado; biomas ate Pilares completos localmente. S-007 onda cortante completa como candidata; aguardando gate humano N03. PLAN-071 preservado. PLAN-071 suspenso com retorno acima.'
 deferred_requests:
+  - id: DEV-029
+    request: 'Bug visual no Quartel (aba Diario, HqInfo): texto sobrepoe a moldura de detalhe e a moldura aparece comprimida/deformada.'
+    request_classification: PLAN_DEVIATION
+    status: COMMITTED_LOCAL_AWAITING_PLAYTEST
+    recorded: '2026-10-10'
+    authorization_verbatim: 'atena, 1.'
+    route: 'Fazer agora e voltar ao PLAN-071 (checkpoint B-006/S-011 preservado). Escopo: SheetArt.detail + UiKit.style_text e UiKit.detail_frame; ficha C (character_sheet.gd) fica fora. Commit local; sem push.'
+    cause: 'ficha_moldura_detalhe.png (512x128) tem 10 px transparentes, faixa de 10 a 21 px e estrelas ate x~29/y~33; recorte de 16 px corta a faixa e as estrelas e a margem de texto de 18 px fica dentro da faixa.'
+    related_plan: PLAN-093
+    bug: BUG-040
+    evidence: EVID-232
+    verification: 'suite 0 falhas; kit_test OK; smoke ok; backlog_check sem alertas; 2 mutacoes do teste; save real inalterado'
+    return: 'Retorno ao PLAN-071 (checkpoint B-006/S-011 inalterado). Sem push, exportacao nem aviso aos testers.'
   - id: DEV-028
     request: 'Lote 2 da nova UI (MEC-003): Quartel, selecao de heroi e mapa e titulo no UiKit, com OptionsPanel e Catalog no lugar das copias do menu.gd.'
     request_classification: PLAN_DEVIATION

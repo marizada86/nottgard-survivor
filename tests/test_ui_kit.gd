@@ -64,6 +64,28 @@ func run() -> Array:
 	if UiKit.tab_step(_key(KEY_E, true, true)) != 0 or UiKit.tab_step(_key(KEY_E, false)) != 0 or UiKit.tab_step(_key(KEY_W)) != 0 or UiKit.tab_step(_pad(JOY_BUTTON_A)) != 0:
 		out.append("eco, soltar a tecla e outros botões não trocam de aba")
 
+	# moldura de detalhe (DEV-029): o recorte cobre as estrelas dos cantos e o texto fica além da borda visível (22 px)
+	var rich := RichTextLabel.new()
+	UiKit.style_text(rich)
+	for style_name in ["normal", "focus"]:
+		var style := rich.get_theme_stylebox(style_name) as StyleBoxTexture
+		if style == null or style.texture != SheetArt.DETAIL:
+			out.append("o texto rico deveria usar a moldura de detalhe (%s)" % style_name)
+			continue
+		for side in [SIDE_LEFT, SIDE_TOP, SIDE_RIGHT, SIDE_BOTTOM]:
+			if style.get_texture_margin(side) < 34.0:
+				out.append("o recorte da moldura de detalhe corta as estrelas dos cantos (%s)" % style_name)
+				break
+			if style.get_content_margin(side) < 22.0:
+				out.append("o texto invade a borda visível da moldura de detalhe (%s)" % style_name)
+				break
+	rich.free()
+	var detail_frame_node := UiKit.detail_frame()
+	var detail_style := detail_frame_node.get_theme_stylebox("panel") as StyleBoxTexture
+	if detail_style == null or detail_style.get_texture_margin(SIDE_TOP) < 34.0 or detail_style.get_content_margin(SIDE_TOP) < 22.0:
+		out.append("a moldura de detalhe da pausa deveria usar o mesmo recorte e a mesma margem")
+	detail_frame_node.free()
+
 	# janela padrão
 	var win := UiKit.window(Vector2(800, 500))
 	if win.custom_minimum_size != Vector2(800, 500) or not win.has_theme_stylebox_override("panel"):

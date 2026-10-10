@@ -53,7 +53,7 @@ static func apply_window(panel: PanelContainer, size: Vector2) -> void:
 ## Moldura do detalhe e margem padrão (a mesma da ficha C).
 static func detail_frame() -> PanelContainer:
 	var frame := PanelContainer.new()
-	frame.add_theme_stylebox_override("panel", SheetArt.frame(SheetArt.DETAIL, 16, 28))
+	frame.add_theme_stylebox_override("panel", SheetArt.detail())
 	return frame
 
 static func margin(all := 40) -> MarginContainer:
@@ -149,5 +149,5 @@ static func style_list(list: ItemList) -> void:
 
 ## Texto rico de detalhe (herói, fase, códex, diário) dentro da moldura de detalhe.
 static func style_text(text: RichTextLabel) -> void:
-	text.add_theme_stylebox_override("normal", SheetArt.frame(SheetArt.DETAIL, 16, 18))
-	text.add_theme_stylebox_override("focus", SheetArt.frame(SheetArt.DETAIL, 16, 18, Color(1.3, 1.15, 0.8)))
+	text.add_theme_stylebox_override("normal", SheetArt.detail())
+	text.add_theme_stylebox_override("focus", SheetArt.detail(SheetArt.DETAIL_PADDING, Color(1.3, 1.15, 0.8)))

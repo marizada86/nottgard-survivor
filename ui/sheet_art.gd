@@ -20,6 +20,14 @@ static func frame(texture: Texture2D, slices: float, padding: float, tint: Color
 	style.set_content_margin_all(padding)
 	return style
 
+## Moldura de detalhe (512x128): 10 px transparentes, faixa de 10 a 21 px e estrelas nos cantos até ~34 px.
+## O recorte tem de cobrir as estrelas, senão a faixa e os cantos são esticados; a margem de texto fica além da borda visível (22 px).
+const DETAIL_SLICE := 34.0
+const DETAIL_PADDING := 26.0
+
+static func detail(padding: float = DETAIL_PADDING, tint: Color = Color.WHITE) -> StyleBoxTexture:
+	return frame(DETAIL, DETAIL_SLICE, padding, tint)
+
 static func background() -> StyleBoxTexture:
 	var style := StyleBoxTexture.new()
 	style.texture = BACKGROUND
