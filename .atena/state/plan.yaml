@@ -4,8 +4,10 @@ fila028_publish_2026_10_10:
   route: commit-push-requested-assets-then-return-to-visual-review
   authorization: 'atena commit e push'
   mode: per-plan
-  checkpoint: GIT/COMMIT-PUSH-VERIFY
-  status: AUTHORIZED_PREPARED
+  checkpoint: GIT/VERIFIED
+  status: PUSHED_REMOTE_SHA_VERIFIED
+  commit: 1a0051599195c57e309cf30cd68bcf3a19ea9b36
+  remote_sha: 1a0051599195c57e309cf30cd68bcf3a19ea9b36
   branch: codex/assets-preparation-2026-10-10
   main_in_scope: false
   return_checkpoint: S-004/OWNER-VISUAL-REVIEW

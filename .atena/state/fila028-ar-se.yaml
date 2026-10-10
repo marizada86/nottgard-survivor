@@ -27,6 +27,8 @@ next_output: 'Aceite visual identificado por codigo/versao ou correcoes'
 next_checks: 'Identidade, tres selos, leitura a 80/48px e fundo para recorte'
 next_approval: PENDING_OWNER_VISUAL_ACCEPTANCE
 commit_push_authorization: 'atena commit e push'
-git_checkpoint: AUTHORIZED_PREPARED
+git_checkpoint: PUSHED_REMOTE_SHA_VERIFIED
+commit: 1a0051599195c57e309cf30cd68bcf3a19ea9b36
+remote_sha: 1a0051599195c57e309cf30cd68bcf3a19ea9b36
 git_branch: codex/assets-preparation-2026-10-10
 git_scope: 'Lote AR01/SE01/SE02 DRAFT e registros; branch inclui commits locais anteriores de preparacao e IC'
