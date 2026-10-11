@@ -59,4 +59,20 @@ func run() -> Array:
 	if not (fallback is Label) or (fallback as Label).text != "Teste":
 		out.append("plate_label sem arte deveria devolver o Label estilizado")
 	fallback.free()
+	# Resultado reutilizado: Vitória -> derrota -> arte ausente, sem duplicar imagem ou perder texto.
+	var result := Label.new()
+	result.text = "Você caiu..."
+	if Lettering.has_art("banner_vitoria") and Lettering.has_art("banner_derrota"):
+		Lettering.set_banner(result, "banner_vitoria", 104)
+		Lettering.set_banner(result, "banner_derrota", 104)
+		var image := result.get_node_or_null("LetteringBanner") as TextureRect
+		if image == null or image.texture != Lettering.texture("banner_derrota") or result.get_child_count() != 1:
+			out.append("troca de resultado duplicou ou manteve o banner anterior")
+	Lettering.set_banner(result, "arte_inexistente", 104)
+	if result.text != "Você caiu..." or result.self_modulate.a != 1.0 or result.custom_minimum_size != Vector2.ZERO:
+		out.append("fallback do banner perdeu o texto ou o layout original")
+	var leftover := result.get_node_or_null("LetteringBanner") as TextureRect
+	if leftover != null and leftover.visible:
+		out.append("fallback deixou banner anterior visível")
+	result.free()
 	return out

@@ -1,0 +1,25 @@
+{
+  "kind": "real_runtime_synthetic_QA",
+  "profile": "res://.atena/generated/fila026-integration-2026-10-11/capture-mobile-profile.json",
+  "records": [
+    {
+      "path": "res://.atena/generated/fila026-integration-2026-10-11/mobile/titulo_1280x720.png",
+      "save_status": 0,
+      "screen": "titulo",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "res://.atena/generated/fila026-integration-2026-10-11/mobile/quartel_1280x720.png",
+      "save_status": 0,
+      "screen": "quartel",
+      "size": [
+        1280,
+        720
+      ]
+    }
+  ],
+  "touch_preview": true
+}

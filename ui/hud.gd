@@ -746,6 +746,7 @@ func show_evolution(b: Battle) -> void:
 	title.add_theme_color_override("font_color", Color(1.0, 0.85, 0.3))
 	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	col.add_child(title)
+	Lettering.set_banner(title, "banner_evolucao", 92.0)
 	var icons := HBoxContainer.new()
 	icons.alignment = BoxContainer.ALIGNMENT_CENTER
 	icons.add_theme_constant_override("separation", 26)
@@ -898,6 +899,7 @@ func show_result(res: Dictionary, summary: Dictionary) -> void:
 	pause_panel.visible = false
 	hide_revive_offer()
 	result_title.text = "Vitória!" if res.won else "Você caiu..."
+	Lettering.set_banner(result_title, "banner_vitoria" if res.won else "banner_derrota", 104.0)
 	var background_path := "res://assets/ui/backgrounds/victory_background.png" if res.won else "res://assets/ui/backgrounds/defeat_background.png"
 	result_background.texture = load(background_path) if ResourceLoader.exists(background_path) else null
 	var t := int(res.time)

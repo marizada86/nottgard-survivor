@@ -8,8 +8,11 @@ scope_approval: EXISTING_PLAN_APPROVAL_2026_10_06
 g1_owner_reply: 'Aprovo L01 v01'
 g1_selected: L01_v01
 g1_status: ACCEPTED
-status: ART_COMMITTED_PUSH_VERIFIED_WAITING_S014
-checkpoint: B-004/S-014/OWNER_INTEGRATION_GATE
+status: S016_COMMIT_AUTHORIZED
+checkpoint: B-004/S-016/CODE_COMMIT_AUTHORIZED
+integration_owner_reply: 'atena, vamos seguir para o proximo'
+integration_revision: FILA026-INTEGRATION/v01
+g5_verification: '7c4da5d e 1ef33bf ancestrais de HEAD; arquivos HUD/ficha/hero_panel sem diff local'
 art_commit: 86c453fe2f6328b9495f8bb0cdc36618e02111f2
 art_push_verification: REMOTE_SHA_MATCH
 git_authorization: 'atena, aprovado commite e push'
@@ -17,10 +20,10 @@ git_branch: codex/assets-preparation-2026-10-10
 admission_authorization: 'Autorizo a admissão e validação'
 admission_authorized_at: '2026-10-11'
 admission_scope: 'Dez PNGs aceitos, hotspots, imports, manifesto e testes cursor/lettering; sem commit, push ou build'
-current_step_position: 14
+current_step_position: 16
 total_steps: 16
-completed_steps: 13
-current_activity: 'S013 concluida; integracao das demais telas aguarda S014'
+completed_steps: 15
+current_activity: 'Integracao e verificacao completas; fechamento local pronto, commit de codigo pendente'
 admitted: 10
 admission_validation: PASS
 admission_receipt: .atena/generated/fila026-remaining-2026-10-11/admission-receipt.json
@@ -38,12 +41,25 @@ owner_g2_reply: 'Aprovo as nove revisões v01'
 visual_register: .atena/vault/canon/ASSET-APPROVAL-FILA026-G2-v01.md
 owner_receipt: .atena/generated/fila026-remaining-2026-10-11/owner-approval.json
 admission_proposal: .atena/generated/fila026-remaining-2026-10-11/admission-proposal.json
-integration_authorization: S013_ADMISSION_ONLY_REMAINING_S014_PENDING
+integration_authorization: S014_AUTHORIZED_BY_CONTEXTUAL_CONTINUATION_2026_10_11
 optional_L02: DEFERRED_OPTIONAL
 cursor_hotspots: {C01: [1, 1], C02: [4, 1], C03: [20, 20]}
 gallery: .atena/generated/fila026-remaining-2026-10-11/index.html
 jobs: .atena/generated/fila026-remaining-2026-10-11/jobs.json
 audit: .atena/generated/fila026-remaining-2026-10-11/audit.json
 evidence: .atena/evidence/fila026-remaining-2026-10-11.md
-next_objective: 'Gate S014: integracao das demais telas; depois S015 validacao completa e S016 fechamento'
-commit_push_authorization: APPROVED_EXPLICITLY_2026_10_11
+next_objective: 'Obter aprovacao explicita para commit separado MEC-058/codigo; playtest humano e publicacao em gates proprios'
+commit_push_authorization: ART_CHECKPOINT_ONLY_ALREADY_EXECUTED
+integration_validation: PASS_LOCAL
+integration_evidence: .atena/evidence/fila026-integration-2026-10-11.md
+integration_gallery: .atena/generated/fila026-integration-2026-10-11/index.html
+integration_audit: .atena/generated/fila026-integration-2026-10-11/audit.json
+integration_code_state: LOCAL_UNCOMMITTED
+code_commit_authorization: APPROVED_EXPLICITLY_2026_10_11
+code_push_build_authorization: NOT_AUTHORIZED
+human_playtest: PENDING
+step_results:
+  S-014: DONE_LOCAL_INTEGRATION
+  S-015: DONE_SUITE_0_FAILURES_AUDIT_0_ERRORS_9_WARNINGS_SMOKE_9_STAGES_18_CAPTURES
+  S-016: RECORDS_PREPARED_CODE_COMMIT_PENDING
+code_commit_owner_reply: "atena, commit e vamos criar as proximas imagens"

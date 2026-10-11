@@ -3,11 +3,13 @@ id: PLAN-065
 title: Lettering do jogo e cursor do mouse temáticos
 spec: SPEC-132
 cards: [ART-039, ART-040, MEC-058]
-status: S013 concluida, arte commitada e push verificado; S014 integracao pendente
+status: S014 e S015 concluidas; S016 registros prontos, commit de codigo pendente
 approval_mode: per-plan
 ---
 
 # PLAN-065
+
+Continuação 2026-10-11 autorizada com **“atena, vamos seguir para o proximo”**: S014 integração e S015 verificação concluídas. S016/16 atual, quinze passos concluídos, nenhum após o atual; registros reconciliados, commit isolado de MEC-058/código aguarda aprovação explícita. Suíte 0 falhas, auditoria 0 erros/9 avisos, smoke nove fases e 18 capturas. [Evidência e roteiro](../../evidence/fila026-integration-2026-10-11.md). Playtest humano, push e build pendentes em seus gates. As passagens seguintes preservam checkpoints históricos.
 
 Publicação posterior 2026-10-11: dono autorizou **“atena, aprovado commite e push”**. Commit de arte `86c453f` publicado e SHA remoto conferido; [evidência](../../evidence/fila026-publication-2026-10-11.md). B003/S013 concluída. Atual S014 (14/16, treze passos concluídos, dois após o atual), integração das demais telas ainda pendente. Os registros seguintes são históricos.
 

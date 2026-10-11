@@ -3,15 +3,16 @@ fila026_remaining_2026_10_11:
   state_file: .atena/state/fila026-remaining.yaml
   plan: PLAN-065
   revision: FILA026-REMAINING/v01
-  status: ART_COMMITTED_PUSH_VERIFIED_WAITING_S014
+  status: S016_COMMIT_AUTHORIZED
   mode: per-plan
-  checkpoint: B-004/S-014/OWNER_INTEGRATION_GATE
+  checkpoint: B-004/S-016/CODE_COMMIT_AUTHORIZED
+  integration_owner_reply: 'atena, vamos seguir para o proximo'
   art_commit: 86c453fe2f6328b9495f8bb0cdc36618e02111f2
   art_push_verification: REMOTE_SHA_MATCH
   git_authorization: 'atena, aprovado commite e push'
   admission_authorization: 'Autorizo a admissão e validação'
-  current_step_position: 14
-  completed_steps: 13
+  current_step_position: 16
+  completed_steps: 15
   total_steps: 16
   generated: 9
   prepared: 9
@@ -25,7 +26,17 @@ fila026_remaining_2026_10_11:
   admission_evidence: .atena/evidence/fila026-admission-2026-10-11.md
   gallery: .atena/generated/fila026-remaining-2026-10-11/index.html
   evidence: .atena/evidence/fila026-remaining-2026-10-11.md
-  next_objective: 'S014 integracao pendente; S015 validacao completa; L02 opcional deferida'
+  next_objective: 'Commit separado MEC-058/codigo aguarda aprovacao explicita; playtest pendente'
+  integration_revision: FILA026-INTEGRATION/v01
+  integration_evidence: .atena/evidence/fila026-integration-2026-10-11.md
+  integration_gallery: .atena/generated/fila026-integration-2026-10-11/index.html
+  integration_audit: .atena/generated/fila026-integration-2026-10-11/audit.json
+  suite_failures: 0
+  captures: 18
+  code_commit_authorization: APPROVED_EXPLICITLY_2026_10_11
+  code_push_build_authorization: NOT_AUTHORIZED
+  human_playtest: PENDING
+  code_commit_owner_reply: "atena, commit e vamos criar as proximas imagens"
 fila026_l01_2026_10_11:
   plan: PLAN-065
   state_file: .atena/state/plan-065-lettering-cursor.yaml

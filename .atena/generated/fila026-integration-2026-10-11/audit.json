@@ -1,0 +1,360 @@
+{
+  "plan": "PLAN-065",
+  "spec": "SPEC-132",
+  "revision": "FILA026-INTEGRATION/v01",
+  "status": "PASS_LOCAL_IMPLEMENTED_PENDING_PLAYTEST",
+  "code_state": "LOCAL_UNCOMMITTED",
+  "visual_content_state": "CANON_ACCEPTED_V01_UNCHANGED",
+  "suite": {
+    "exit_code": 0,
+    "failures": 0,
+    "known_diagnostics": "Missing Arlindo/Erik idle images already absent in HEAD; resource/RID shutdown diagnostics remain"
+  },
+  "project_audit": {
+    "exit_code": 0,
+    "errors": 0,
+    "warnings": 9
+  },
+  "smoke": {
+    "exit_code": 0,
+    "running_stages": 9
+  },
+  "g5_commits_verified_ancestors": [
+    "7c4da5d",
+    "1ef33bf"
+  ],
+  "capture_processes_exit_code": 0,
+  "capture_kind": "actual_runtime_synthetic_QA",
+  "captures": [
+    {
+      "path": "res://.atena/generated/fila026-integration-2026-10-11/titulo_1280x720.png",
+      "save_status": 0,
+      "screen": "titulo",
+      "size": [
+        1280,
+        720
+      ],
+      "relative_path": "titulo_1280x720.png",
+      "sha256": "c7bfe19efe0dc1a2af29c7580e9336a7d9b3698046bb2d25d8379f82dc7d3dd7",
+      "technical_visual_review": "COMPLETED"
+    },
+    {
+      "path": "res://.atena/generated/fila026-integration-2026-10-11/quartel_1280x720.png",
+      "save_status": 0,
+      "screen": "quartel",
+      "size": [
+        1280,
+        720
+      ],
+      "relative_path": "quartel_1280x720.png",
+      "sha256": "4edc088badb690b13eabd85e62de5f3e424bf4ad6f249d26990de50742643472",
+      "technical_visual_review": "COMPLETED"
+    },
+    {
+      "path": "res://.atena/generated/fila026-integration-2026-10-11/hq_1280x720.png",
+      "save_status": 0,
+      "screen": "hq",
+      "size": [
+        1280,
+        720
+      ],
+      "relative_path": "hq_1280x720.png",
+      "sha256": "4f98ff32f8aa117ccc5b6d4a8b12897e31312d9bae07cd81c81275d8dfbc7aa0",
+      "technical_visual_review": "COMPLETED"
+    },
+    {
+      "path": "res://.atena/generated/fila026-integration-2026-10-11/vitoria_1280x720.png",
+      "save_status": 0,
+      "screen": "vitoria",
+      "size": [
+        1280,
+        720
+      ],
+      "relative_path": "vitoria_1280x720.png",
+      "sha256": "1838578917e3d4162d4df389e51a96c968af542897b7c88d8231ecc6dfc4c952",
+      "technical_visual_review": "COMPLETED"
+    },
+    {
+      "path": "res://.atena/generated/fila026-integration-2026-10-11/derrota_1280x720.png",
+      "save_status": 0,
+      "screen": "derrota",
+      "size": [
+        1280,
+        720
+      ],
+      "relative_path": "derrota_1280x720.png",
+      "sha256": "3d0426102253dfed0f32fa7bd2bc84d48c8b6d57d2c51df67ae5b48e4013180c",
+      "technical_visual_review": "COMPLETED"
+    },
+    {
+      "path": "res://.atena/generated/fila026-integration-2026-10-11/evolucao_1280x720.png",
+      "save_status": 0,
+      "screen": "evolucao",
+      "size": [
+        1280,
+        720
+      ],
+      "relative_path": "evolucao_1280x720.png",
+      "sha256": "4079b5deea11d953f361355f612e6fe0c02ca1e41cb34d26724e1da264decf6e",
+      "technical_visual_review": "COMPLETED"
+    },
+    {
+      "path": "res://.atena/generated/fila026-integration-2026-10-11/chefe_1280x720.png",
+      "save_status": 0,
+      "screen": "chefe",
+      "size": [
+        1280,
+        720
+      ],
+      "relative_path": "chefe_1280x720.png",
+      "sha256": "2bef0aea9f85df5597574b4843f4001d69c52c005b5fb05bf8c592a693cac249",
+      "technical_visual_review": "COMPLETED"
+    },
+    {
+      "path": "res://.atena/generated/fila026-integration-2026-10-11/ficha_1280x720.png",
+      "save_status": 0,
+      "screen": "ficha",
+      "size": [
+        1280,
+        720
+      ],
+      "relative_path": "ficha_1280x720.png",
+      "sha256": "f36dd540ff7ffb263a4ecc67ee5aff364c1409137e61493ad10dddc734581752",
+      "technical_visual_review": "COMPLETED"
+    },
+    {
+      "path": "res://.atena/generated/fila026-integration-2026-10-11/titulo_1920x1080.png",
+      "save_status": 0,
+      "screen": "titulo",
+      "size": [
+        1920,
+        1080
+      ],
+      "relative_path": "titulo_1920x1080.png",
+      "sha256": "ffe6a504bdffc013bc68adcaa0cc42430bc27fc9d9b567f19e3248e2e8398a35",
+      "technical_visual_review": "COMPLETED"
+    },
+    {
+      "path": "res://.atena/generated/fila026-integration-2026-10-11/quartel_1920x1080.png",
+      "save_status": 0,
+      "screen": "quartel",
+      "size": [
+        1920,
+        1080
+      ],
+      "relative_path": "quartel_1920x1080.png",
+      "sha256": "3a3f2393eb2aeddbd0fe62b7e56651df49303aa5f55c2b202a78780b6ebd4df7",
+      "technical_visual_review": "COMPLETED"
+    },
+    {
+      "path": "res://.atena/generated/fila026-integration-2026-10-11/hq_1920x1080.png",
+      "save_status": 0,
+      "screen": "hq",
+      "size": [
+        1920,
+        1080
+      ],
+      "relative_path": "hq_1920x1080.png",
+      "sha256": "4f63cc0f97537b231c85932305737c5395f1749a8ce8c078d47ba7e44f9928ea",
+      "technical_visual_review": "COMPLETED"
+    },
+    {
+      "path": "res://.atena/generated/fila026-integration-2026-10-11/vitoria_1920x1080.png",
+      "save_status": 0,
+      "screen": "vitoria",
+      "size": [
+        1920,
+        1080
+      ],
+      "relative_path": "vitoria_1920x1080.png",
+      "sha256": "e25c258522a510c2d54eb3e815ceaca33f6760fed1704b3b4f54c57186c68858",
+      "technical_visual_review": "COMPLETED"
+    },
+    {
+      "path": "res://.atena/generated/fila026-integration-2026-10-11/derrota_1920x1080.png",
+      "save_status": 0,
+      "screen": "derrota",
+      "size": [
+        1920,
+        1080
+      ],
+      "relative_path": "derrota_1920x1080.png",
+      "sha256": "3216bbb3fcee2d213d51730d749e1da38afe06dc584fb34d68d8e268b459eac2",
+      "technical_visual_review": "COMPLETED"
+    },
+    {
+      "path": "res://.atena/generated/fila026-integration-2026-10-11/evolucao_1920x1080.png",
+      "save_status": 0,
+      "screen": "evolucao",
+      "size": [
+        1920,
+        1080
+      ],
+      "relative_path": "evolucao_1920x1080.png",
+      "sha256": "4639d7de02d672ed39fa102126b09e70730fa2b3b805fef76503ec69f7881381",
+      "technical_visual_review": "COMPLETED"
+    },
+    {
+      "path": "res://.atena/generated/fila026-integration-2026-10-11/chefe_1920x1080.png",
+      "save_status": 0,
+      "screen": "chefe",
+      "size": [
+        1920,
+        1080
+      ],
+      "relative_path": "chefe_1920x1080.png",
+      "sha256": "86056d45a367d134c7011167ff27f6abc871247a3d124007758941aba457cd2b",
+      "technical_visual_review": "COMPLETED"
+    },
+    {
+      "path": "res://.atena/generated/fila026-integration-2026-10-11/ficha_1920x1080.png",
+      "save_status": 0,
+      "screen": "ficha",
+      "size": [
+        1920,
+        1080
+      ],
+      "relative_path": "ficha_1920x1080.png",
+      "sha256": "4de95043be233a345663ec293bb2f9eae07b7f34103070472874d08d3bb2f498",
+      "technical_visual_review": "COMPLETED"
+    },
+    {
+      "path": "res://.atena/generated/fila026-integration-2026-10-11/mobile/titulo_1280x720.png",
+      "save_status": 0,
+      "screen": "titulo",
+      "size": [
+        1280,
+        720
+      ],
+      "relative_path": "mobile/titulo_1280x720.png",
+      "sha256": "1d572b88b46848f90afca938092bcc25d2af0c9922bfc34bd1f917c6a095aad5",
+      "technical_visual_review": "COMPLETED_TOUCH_PREVIEW"
+    },
+    {
+      "path": "res://.atena/generated/fila026-integration-2026-10-11/mobile/quartel_1280x720.png",
+      "save_status": 0,
+      "screen": "quartel",
+      "size": [
+        1280,
+        720
+      ],
+      "relative_path": "mobile/quartel_1280x720.png",
+      "sha256": "c32e08a296546a45cea1d970996eeb36045a833c7c794cf1401e9946d2c5226c",
+      "technical_visual_review": "COMPLETED_TOUCH_PREVIEW"
+    }
+  ],
+  "touch_header_layout": {
+    "overlap": false,
+    "subtitle_bottom": 99.0,
+    "subtitle_top": 80.0,
+    "tabs_top": 120.0,
+    "title_bottom": 72.0
+  },
+  "accepted_runtime_assets": [
+    {
+      "code": "L01",
+      "revision": "v01",
+      "path": "assets/ui/title/logo.png",
+      "sha256": "5d5214fbfad023c90ecd8e46a86f8efeded578e9a8009b685d3ff2f04b4eecb5"
+    },
+    {
+      "code": "L03",
+      "revision": "v01",
+      "path": "assets/ui/lettering/banner_vitoria.png",
+      "sha256": "a1e49651d87284593a7f7a405e3cb893335ecf1c15daefb3377ece0c520a0633"
+    },
+    {
+      "code": "L04",
+      "revision": "v01",
+      "path": "assets/ui/lettering/banner_derrota.png",
+      "sha256": "c7b6476dcd4e8a184d1cd80df82fa87f78e11632c66d343d56ce701316f86187"
+    },
+    {
+      "code": "L05",
+      "revision": "v01",
+      "path": "assets/ui/lettering/banner_evolucao.png",
+      "sha256": "0402d2523fea04a44b9618a9f6059d82099dfa5c3ed812d7024489061e24184b"
+    },
+    {
+      "code": "P01",
+      "revision": "v01",
+      "path": "assets/ui/lettering/placa_titulo_larga.png",
+      "sha256": "24a4d122d5da2407e0aa945f02dfa80dbca9998cd158de2829bb1210694bd6b4"
+    },
+    {
+      "code": "P02",
+      "revision": "v01",
+      "path": "assets/ui/lettering/placa_titulo_secao.png",
+      "sha256": "6c50e27c2242c08573fb5d83b4c3475ad31eebcdffc33035491e53b21fe30a77"
+    },
+    {
+      "code": "P03",
+      "revision": "v01",
+      "path": "assets/ui/lettering/placa_chefe.png",
+      "sha256": "87a2ed9f6fbd81b66b577f8bc66726d296a2c398df8b8dddd15e34ea3ae398f8"
+    },
+    {
+      "code": "C01",
+      "revision": "v01",
+      "path": "assets/ui/cursor/cursor_ponteiro.png",
+      "sha256": "13e1ff47d863fce8170b57e4436932e67024a3c655d635c616a130204d2f8954"
+    },
+    {
+      "code": "C02",
+      "revision": "v01",
+      "path": "assets/ui/cursor/cursor_mao.png",
+      "sha256": "735e8c39c7c390f27f930907d63e189c1d5f36dca95a7c19c1b5e87bd542e138"
+    },
+    {
+      "code": "C03",
+      "revision": "v01",
+      "path": "assets/ui/cursor/cursor_mira.png",
+      "sha256": "1ce67285efb10cd4fc40f8e0049915234447e52076d01a89ccdd2f653534286e"
+    }
+  ],
+  "manifest_unchanged_sha256": "a59180b6f663ffa1367dd2f412d3e697568c5af3d719679069ee79d504f71f03",
+  "code_sha256": {
+    "ui/lettering.gd": "e1a5fabdad9c275153eee82493158fb82d1ef3ec48390df0ac029cd733f86753",
+    "ui/hud.gd": "cd4e17dcbce5dae145db306e0083b180a86e6656cd55fb5068667bef97b61c5b",
+    "ui/run.gd": "d7634234c672f28b30631f11d9a3c853f94550a5f9bd05ad88f97015f77ce79a",
+    "ui/hq_screen.gd": "5a83883aac50da745ef2a308b636397d4041776f2b4b5c6a8315b0267cf47856",
+    "ui/menu.gd": "0d6e1a747d79fa43ef9ea333204a4389f0c7acd84929edacd4c76a47828cd73e",
+    "ui/character_sheet.gd": "6d19ec99f6e4de6a28d8057686403b23a0e1c8622e76aa98a360c44e4a37a99f",
+    "tests/test_lettering_assets.gd": "10c3926898b4ba68d1dbc45229ba0731d3eef4dfb3e567bd02b29cc9bfd8da66"
+  },
+  "logs_sha256": {
+    "suite.log": "a7a6684f670b3afb43e7b2db85f899e3ac4430bdb49c7cf438d34f92db1afb80",
+    "suite-errors.log": "6f53834c0211ea9444d4edf33504e933d138fb749887c8efcb37344d123ae1eb",
+    "project-audit.log": "e2b51909b9976ec7b7206289e9161f4aa22b1a33b6a9693f6ed0c146fd59fc71",
+    "project-audit-errors.log": "55ec4d52d455e119a3110576c6df672abe97f2f82c8056f982322f8da3395802",
+    "smoke.log": "0d1bc31f7c90a4b1040e903b1445bd8943c5df519fb58ec8d1f3114f68d1236a",
+    "smoke-errors.log": "1ff647914e7564b03646eab664c4f364295e6ac8c498669ed5fe77b0a44fbf05",
+    "capture1280.log": "04510ce7ce2cc4f84e2155a6e79ad6362da6703131c60ddd6f96cd4d637c4c1f",
+    "capture1280-errors.log": "1b9509fd7fe113d3ce828cac554237d6c4bdeef4013a34d7a7c844b7f566b593",
+    "capture1920.log": "b1f48d22b0209b68a9d7ba42392d3228a48b90d8d029e500593e93f698e039a4",
+    "capture1920-errors.log": "f386faffb7c0e91014373222665ce695b474857eff6736b910f0656feee29366",
+    "capture-mobile.log": "e78599610bb668cd7450edc8a74f9ced3a13e82a684e58d792a9f06e2973dfb5",
+    "capture-mobile-errors.log": "816d0c281c1d3806d45d5b97682a0135a6b027db4d75e9d7baf1b5b70863e731"
+  },
+  "checks": {
+    "fallback_banner_reuse_and_restore": "PASS_IN_FULL_SUITE",
+    "cursor_auto_mouse_modal_contract": "PASS_IN_FULL_SUITE",
+    "plan071_active_state_and_return_chain": "UNCHANGED",
+    "version_export_configuration": "UNCHANGED",
+    "runtime_asset_bytes": "UNCHANGED",
+    "git_diff_check": "PASS"
+  },
+  "coverage_limits": [
+    "HQ initial Uma Noite sem Fim and Dagruve boss used for runtime screenshots",
+    "Touch is desktop preview, not native device acceptance",
+    "OS cursor does not appear in viewport screenshots; real-window human check pending",
+    "Synthetic QA captures do not represent a human playtest or gameplay satisfaction"
+  ],
+  "publication": {
+    "code_commit": "AUTHORIZED_EXPLICITLY_PENDING_GIT_EXECUTION",
+    "code_push": "NOT_AUTHORIZED",
+    "build_release": "NOT_AUTHORIZED",
+    "head_unchanged": "c8abf75d1fbbeb077f16afcde4a9be5ff0b2051c",
+    "authorization": "atena, commit e vamos criar as proximas imagens"
+  }
+}
