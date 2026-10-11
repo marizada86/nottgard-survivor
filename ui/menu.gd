@@ -338,7 +338,12 @@ func _play() -> void:
 # ------------------------------------------------------------------ melhorias
 
 func _fill_upgrades() -> void:
+	# BUG-043: as linhas são refeitas a cada compra; sem isto o botão focado morria junto e o controle ficava sem foco.
+	var focus_id := _focused_upgrade_id()
+	var upgrade_scroll := _upgrade_scroll()
+	var scroll_at := upgrade_scroll.scroll_vertical if upgrade_scroll != null else 0
 	for c in upgrade_box.get_children():
+		upgrade_box.remove_child(c)   # sai da árvore já (libera o foco e não duplica linhas no mesmo quadro)
 		c.queue_free()
 	var p: Profile = Game.profile
 	for u in p.upgrade_defs():
@@ -357,6 +362,7 @@ func _fill_upgrades() -> void:
 		btn.text = "Bloqueado" if locked_by != "" else ("Comprar (%d)" % cost if cost >= 0 else "Máximo")
 		btn.disabled = locked_by != "" or cost < 0 or cost > p.coins()
 		btn.custom_minimum_size = Vector2(160, 44)
+		btn.set_meta("upgrade_id", String(u.id))
 		btn.pressed.connect(func():
 			if p.buy_upgrade(u.id):
 				Sfx.play("item")
@@ -364,6 +370,51 @@ func _fill_upgrades() -> void:
 				_refresh_all())
 		row.add_child(btn)
 		upgrade_box.add_child(row)
+	if focus_id != "":
+		_restore_upgrade_focus.call_deferred(focus_id, scroll_at)
+
+func _upgrade_scroll() -> ScrollContainer:
+	return upgrade_box.get_parent() as ScrollContainer
+
+## Id da melhoria cujo botão tem o foco agora ("" se o foco está fora da lista).
+func _focused_upgrade_id() -> String:
+	if not is_inside_tree():
+		return ""
+	var focus_owner := get_viewport().gui_get_focus_owner()
+	if focus_owner != null and upgrade_box.is_ancestor_of(focus_owner) and focus_owner.has_meta("upgrade_id"):
+		return String(focus_owner.get_meta("upgrade_id"))
+	return ""
+
+## Devolve o foco ao botão da mesma melhoria; se ele ficou desabilitado (máximo ou sem moedas), ao próximo
+## habilitado da lista, depois ao anterior e, por fim, ao primeiro foco da aba.
+func _restore_upgrade_focus(focus_id: String, scroll_at: int) -> void:
+	var buttons: Array = []
+	for row in upgrade_box.get_children():
+		for child in row.get_children():
+			if child is Button and child.has_meta("upgrade_id"):
+				buttons.append(child)
+	var at := -1
+	for i in buttons.size():
+		if String(buttons[i].get_meta("upgrade_id")) == focus_id:
+			at = i
+	var target: Button
+	if at >= 0:
+		for i in range(at, buttons.size()):
+			if not buttons[i].disabled:
+				target = buttons[i]
+				break
+		if target == null:
+			for i in range(at - 1, -1, -1):
+				if not buttons[i].disabled:
+					target = buttons[i]
+					break
+	var scroll := _upgrade_scroll()
+	if scroll != null:
+		scroll.scroll_vertical = scroll_at
+	if target != null and target.is_visible_in_tree():
+		target.grab_focus()
+	else:
+		_focus_tab()
 
 func _fill_achievements() -> void:
 	for c in ach_box.get_children():

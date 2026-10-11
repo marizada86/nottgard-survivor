@@ -83,6 +83,38 @@ func run() -> Array:
 	if menu.codex_cat.get_item_text(2) != String(Catalog.LABELS["items"]):
 		out.append("os nomes das categorias do códex são os do Catalog")
 
+	# BUG-043: refazer as linhas de melhorias não deixa botão velho no quadro e o foco volta a um botão de compra
+	Game.profile.data.coins = 100000
+	tabs.current_tab = names.find("Melhorias")
+	menu._refresh_all()
+	var buy_buttons: Array = []
+	for row in menu.upgrade_box.get_children():
+		var b := row.get_child(1) as Button
+		if b != null and not b.disabled:
+			buy_buttons.append(b)
+	if buy_buttons.size() < 2:
+		out.append("o teste de melhorias precisa de 2 botões de compra habilitados (achou %d)" % buy_buttons.size())
+	else:
+		var first_id := String(buy_buttons[0].get_meta("upgrade_id", ""))
+		buy_buttons[0].grab_focus()
+		if menu._focused_upgrade_id() != first_id or first_id == "":
+			out.append("o botão focado deveria ser reconhecido pelo id da melhoria")
+		# a melhoria focada chega ao máximo: o botão vira "Máximo" (desabilitado) e o foco precisa ir a outro botão
+		var costs: Array = []
+		for u in Game.profile.upgrade_defs():
+			if String(u.id) == first_id:
+				costs = u.costs
+		Game.profile.data.upgrades[first_id] = costs.size()
+		menu._refresh_all()
+		if menu.upgrade_box.get_child_count() != Game.profile.upgrade_defs().size():
+			out.append("refazer as linhas não pode deixar linhas velhas na lista (%d)" % menu.upgrade_box.get_child_count())
+		menu._restore_upgrade_focus(first_id, 0)
+		var focus_now := tree.root.gui_get_focus_owner()
+		if not (focus_now is Button) or not menu.upgrade_box.is_ancestor_of(focus_now) or (focus_now as Button).disabled:
+			out.append("após a compra o foco deveria cair num botão de melhoria habilitado")
+		elif String(focus_now.get_meta("upgrade_id", "")) == first_id:
+			out.append("a melhoria no máximo está desabilitada: o foco deveria ir ao botão vizinho")
+
 	menu.queue_free()
 	Game.profile = saved_profile
 	Game._save_path = saved_path
