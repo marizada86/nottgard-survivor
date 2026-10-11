@@ -1,0 +1,33 @@
+id: PLAN-097
+spec: SPEC-170
+spec_file: .atena/specs/SPEC-170-foco-do-controle-ao-comprar-melhoria-bug-043.md
+mode: per-plan
+status: IMPLEMENTED_LOCAL_AWAITING_PLAYTEST
+created: '2026-10-10'
+request_classification: PLAN_DEVIATION
+deviation_id: DEV-037
+authorization_verbatim: 'atena, 1.'
+approval_basis: 'Dono escolheu fazer agora e voltar ao PLAN-071; resposta unica "1" aceita para a rota e para o nivel por plano (ambas as perguntas tinham 1 = fazer agora / por plano) (2026-10-10).'
+checkpoint: B-001/S-004 (concluido)
+return:
+  plan: PLAN-071
+  state_file: .atena/state/plan-071-playtest-ranking.yaml
+  checkpoint_observed: B-006/S-011
+batches:
+  B-001: {title: Foco ao comprar melhoria, steps: [S-001, S-002, S-003, S-004], status: DONE_LOCAL}
+steps:
+  S-001: 'ui/menu.gd: guardar o id focado, tirar as linhas velhas da arvore, devolver o foco (mesma melhoria, depois vizinho habilitado, depois primeiro foco da aba) e a rolagem.'
+  S-002: 'tools/controller_check.gd: compra com A no controle, foco apos a compra e segunda compra; mutacao.'
+  S-003: 'tests/test_quartel.gd: id focado, melhoria no maximo, linhas velhas, foco no vizinho; mutacao.'
+  S-004: 'Suite, smoke, kit_test, mobile_buttons_check, controller_check; EVID-239, cartao BUG-043, IN-073, indices.'
+gates:
+  dependencies: NO_NEW_DEPENDENCIES
+  new_art: NOT_REQUIRED
+  commit_push_build_export: NOT_AUTHORIZED
+  other_sessions_changes: PRESERVE_UNTOUCHED
+  files_expected: [ui/menu.gd, tools/controller_check.gd, tests/test_quartel.gd]
+blocking_gaps: []
+return_to: PLAN-071 (B-006/S-011, active_plan sem alteracao)
+commit_push_build_export: NOT_PERFORMED
+evidence: EVID-239
+verification: 'suite 0 falhas; controller_check 94/0 (4 verificacoes novas; mutacao: 2 falhas); mobile_buttons_check 146/0; smoke ok; kit_test OK'

@@ -23,6 +23,7 @@ completo em [INTAKE.md](INTAKE.md).
 | IN-070 | 2026-10-07 | EVID-200 #5 | Daniel: quests com destaque visual maior (hoje 1 linha de texto) | MEC-055 (implementado local) |
 | IN-071 | 2026-10-07 | EVID-200 #6 | Daniel: itens/alvos ligados à quest com destaque (seta só fora da tela) | MEC-055 (implementado local) |
 | IN-072 | 2026-10-07 | EVID-200 #7 | Daniel: revisar posição e espaçamento dos textos da HUD | BUG-036 (implementado local) |
+| IN-073 | 2026-10-10 | Relato do dono (Hiago, T02) | Hiago: ao comprar um upgrade em melhorias no controle o input some e não dá para comprar mais nada até apertar R1/RB ou L1/LB | BUG-043 (implementado local) |
 
 ## Perguntas para o próximo playtest
 

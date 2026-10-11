@@ -55,7 +55,7 @@ Gerado por `node tools/atena_index.js` (não editar à mão). Agrupa pelo **stat
 | [SPEC-101](SPEC-101-polimento-proporcoes-movimento-herois.md) | Auditoria e piloto de proporções no movimento dos heróis | SPEC-106 de Durvall aprovada; produção pausada por falta de fluxo local 2D adequado |
 | [SPEC-154](SPEC-154-pixels-soltos-dos-herois-pre-reducao-das-tiras-bug-029.md) | Pixels soltos nos heróis: pré-redução das tiras para o tamanho de tela (BUG-029) | PAUSADA em 2026-10-09 (PLAN-082): o dono não adotou a variante C; HERO_STRIP_SET vazio e BUG-029 aberto; registros e ferramentas commitados (eb57860) |
 
-## Entregue (154)
+## Entregue (156)
 
 | Spec | Título | Status |
 |---|---|---|
@@ -215,6 +215,8 @@ Gerado por `node tools/atena_index.js` (não editar à mão). Agrupa pelo **stat
 | [SPEC-166](SPEC-166-nova-ui-lote-2-quartel-selecao-e-titulo-mec-003.md) | Nova UI, lote 2: Quartel, seleção de herói e mapa, e título no UiKit (MEC-003) | IMPLEMENTADA em 2026-10-09 (PLAN-093, EVID-231); aguarda playtest; título sem mudança por escolha (P3) |
 | [SPEC-167](SPEC-167-avisos-do-topo-sem-acumular-nem-colidir-bug-042.md) | Avisos do topo sem acumular nem colidir com a ficha e a fala do herói (BUG-042, continua o BUG-036) | IMPLEMENTADA LOCAL em 2026-10-10 (PLAN-094, EVID-236); aguarda playtest; pendência com quests e chefe |
 | [SPEC-168](SPEC-168-questlog-a-direita-sem-moldura-mec-064.md) | Questlog à direita, sem moldura e translúcido (MEC-064; resolve a pendência da EVID-236) | IMPLEMENTADA LOCAL em 2026-10-10 (PLAN-095, EVID-237); aguarda playtest |
+| [SPEC-170](SPEC-170-foco-do-controle-ao-comprar-melhoria-bug-043.md) | Foco do controle ao comprar melhoria no Quartel (BUG-043) | IMPLEMENTADA LOCAL em 2026-10-10 (PLAN-097, EVID-239); aguarda playtest |
+| [SPEC-171](SPEC-171-bateria-da-0-4-0-e-revisao-de-desempenho-por-idade.md) | Bateria de testes da 0.4.0 e revisão de desempenho do código mais antigo | IMPLEMENTADA LOCAL em 2026-10-10 (PLAN-098, EVID-240); aguarda playtest |
 
 ## Substituída (2)
 

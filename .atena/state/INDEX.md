@@ -36,6 +36,8 @@ O código está na `main` (e, exceto o PLAN-093, no `origin`); o que falta é **
 | PLAN-093 | SPEC-166 | Nova UI, lote 2: Quartel no UiKit, Códex no Catalog, Opções no OptionsPanel | Playtest (publicação: push pendente) |
 | PLAN-094 | SPEC-167 | Avisos do topo sem acumular nem colidir (BUG-042, continua o BUG-036) | Playtest; decisão do dono sobre a pilha com quests e chefe (EVID-236) |
 | PLAN-095 | SPEC-168 | Questlog à direita, sem moldura e translúcido (MEC-064) | Playtest |
+| PLAN-097 | SPEC-170 | Foco do controle ao comprar melhoria (BUG-043) | Playtest no controle (EVID-239) |
+| PLAN-098 | SPEC-171 | Bateria da 0.4.0 e revisão de desempenho (can_stand indexado, grade de alcance por componentes) | Playtest em máquina fraca (EVID-240) |
 
 ## Esperando arte, aparelho ou o dono
 

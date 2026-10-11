@@ -1,0 +1,10 @@
+suite rc=0 dur=43s
+smoke rc=0 dur=19s
+controller_check rc=0 dur=71s
+mobile_buttons_check rc=0 dur=15s
+kit_test rc=0 dur=4s
+audit_projeto rc=0 dur=2s
+backlog_check rc=0 dur=1s
+perf_probe_sim rc=0 dur=288s
+perf_probe_funcoes rc=0 dur=120s
+FIM

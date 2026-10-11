@@ -106,6 +106,34 @@ suspension:
   suspended_plan_state_file: '.atena/state/plan-053-imagens.yaml'
   note: 'PLAN-053 retomado; biomas ate Pilares completos localmente. S-007 onda cortante completa como candidata; aguardando gate humano N03. PLAN-071 preservado. PLAN-071 suspenso com retorno acima.'
 deferred_requests:
+  - id: DEV-038
+    request: 'Bateria de testes do release candidate 0.4.0 e revisao do que nunca foi otimizado, priorizando o mais antigo.'
+    request_classification: PLAN_DEVIATION
+    status: IMPLEMENTED_LOCAL_AWAITING_PLAYTEST
+    evidence: EVID-240
+    verification: 'suite 0 falhas; smoke ok; controller_check 94/0; mobile_buttons_check 146/0; kit_test OK; hash do estado igual nas 9 fases; custo por passo -4% a -49%; picos de interativos 25-58 ms para <=1,6 ms'
+    note: 'Sem commit, push, exportacao nem aviso. Alterados core/hero.gd e core/battle.gd; novos tests/test_blocker_index.gd, tests/test_reach_grid.gd, tools/perf_probe.*'
+    recorded: '2026-10-10'
+    authorization_verbatim: 'atena, vamos fazer uma bateria de testes para essa atualização e revisar o que não foi otimizado desde o inicio do projeto, priorizar o que for mais antigo'
+    route: 'Dono escolheu: fazer agora e voltar ao PLAN-071 (B-006/S-011 inalterado); release candidate 0.4.0 inteiro; medir primeiro e aplicar so o seguro; por plano. Sem commit, push, exportacao nem aviso aos testers.'
+    plan: PLAN-098
+    spec: SPEC-171
+    scope: 'tools/perf_probe.*, relatorios; otimizacoes so se preservarem o resultado (core/battle.gd, ui/ground.gd, ui/prop.gd, core/sfx.gd, core/game.gd)'
+  - id: DEV-037
+    request: 'BUG-043 (Hiago): ao comprar uma melhoria jogando no controle, o foco some e nao da para comprar mais nada ate trocar de aba com R1/RB ou L1/LB.'
+    request_classification: PLAN_DEVIATION
+    status: IMPLEMENTED_LOCAL_AWAITING_PLAYTEST
+    evidence: EVID-239
+    verification: 'suite 0 falhas; controller_check 94/0 (sem a correcao: 2 falhas); mobile_buttons_check 146/0; smoke ok; kit_test OK'
+    note: 'Sem commit, push, exportacao nem aviso. Rank de contribuicoes nao alterado (IN-073 do Hiago aguarda pontuacao do dono).'
+    recorded: '2026-10-10'
+    authorization_verbatim: 'atena, 1.'
+    route: 'Dono escolheu: fazer agora e voltar ao PLAN-071 (B-006/S-011 inalterado); por plano. Sem commit, push, exportacao nem aviso aos testers.'
+    plan: PLAN-097
+    spec: SPEC-170
+    bug: BUG-043
+    scope: 'ui/menu.gd (_fill_upgrades), tests/test_quartel.gd'
+    cause: '_fill_upgrades destroi todas as linhas, inclusive o botao focado, e nao devolve o foco a nenhum botao novo.'
   - id: DEV-035
     request: 'Questlog na direita do jogo, sem interface e translucido, para o jogador nao perder informacao na tela (resolve a pendencia 1 da EVID-236).'
     request_classification: PLAN_DEVIATION

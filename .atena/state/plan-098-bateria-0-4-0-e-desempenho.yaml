@@ -1,0 +1,41 @@
+id: PLAN-098
+spec: SPEC-171
+spec_file: .atena/specs/SPEC-171-bateria-da-0-4-0-e-revisao-de-desempenho-por-idade.md
+mode: per-plan
+status: IMPLEMENTED_LOCAL_AWAITING_PLAYTEST
+created: '2026-10-10'
+request_classification: PLAN_DEVIATION
+deviation_id: DEV-038
+authorization_verbatim: 'atena, vamos fazer uma bateria de testes para essa atualização e revisar o que não foi otimizado desde o inicio do projeto, priorizar o que for mais antigo'
+approval_basis: 'Dono escolheu: fazer agora e voltar ao PLAN-071; release candidate 0.4.0 inteiro; medir primeiro e aplicar so o seguro; por plano (2026-10-10).'
+checkpoint: B-003/S-008 (concluido)
+return:
+  plan: PLAN-071
+  state_file: .atena/state/plan-071-playtest-ranking.yaml
+  checkpoint_observed: B-006/S-011
+batches:
+  B-001: {title: Bateria do release candidate 0.4.0, steps: [S-001, S-002, S-003, S-004], status: DONE_LOCAL}
+  B-002: {title: Medicao de desempenho por idade, steps: [S-005, S-006], status: DONE_LOCAL}
+  B-003: {title: Otimizacoes que preservam resultado, steps: [S-007, S-008], status: DONE_LOCAL}
+steps:
+  S-001: 'Linha de base: HEAD, arvore de trabalho, hash do save real, versao do motor.'
+  S-002: 'Verificacoes existentes: suite, smoke, kit_test, mobile_buttons_check, controller_check, audit_projeto, backlog_check; varredura de erros e avisos nos logs.'
+  S-003: 'Bateria nova: bot em todas as fases e herois com sementes fixas, comparacao com checkout limpo do HEAD.'
+  S-004: 'Relatorio da bateria (EVID-240).'
+  S-005: 'tools/perf_probe.gd: custo por step e sub-rotina por fase, nos e orfaos.'
+  S-006: 'Ranking por idade e custo; separar seguro de nao seguro.'
+  S-007: 'Aplicar so o seguro: hash de estado por semente igual, suite 0 falhas, ganho medido.'
+  S-008: 'Evidencia, cartoes, indices e retorno ao PLAN-071.'
+gates:
+  dependencies: NO_NEW_DEPENDENCIES
+  balance_data_art_audio_version: NOT_ALTERED
+  commit_push_build_export: NOT_AUTHORIZED
+  other_sessions_changes: PRESERVE_UNTOUCHED
+  files_expected: [tools/perf_probe.gd, tools/perf_probe.tscn, core/battle.gd, ui/ground.gd, ui/prop.gd, core/sfx.gd, core/game.gd]
+blocking_gaps: []
+return_to: PLAN-071 (B-006/S-011, active_plan sem alteracao)
+commit_push_build_export: NOT_PERFORMED
+evidence: EVID-240
+verification: 'bateria antes e depois: suite 0 falhas, smoke ok, controller_check 94/0, mobile_buttons_check 146/0, kit_test OK, audit_projeto 0 erros; hash do estado final igual nas 9 fases; save real intocado'
+applied: [O1 Hero.can_stand com indice espacial, O2 _reach_grid por componentes, O3 EMPTY_CELL]
+not_applied: 'ver EVID-240 secao 4'
