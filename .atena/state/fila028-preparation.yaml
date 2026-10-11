@@ -29,7 +29,9 @@ evidence: .atena/evidence/fila028-preparation-2026-10-10.md
 gallery: .atena/generated/fila028-preparation-2026-10-10/index.html
 source_hashes_unchanged: true
 owner_preparation_acceptance: PENDING
-commit_push: AUTHORIZED_BY_OWNER
+commit_push: PUSHED_REMOTE_SHA_VERIFIED
+preparation_commit: 711e585371bbb785a1ccefde77dfa0a2de648a95
+verified_remote_sha: 711e585371bbb785a1ccefde77dfa0a2de648a95
 git_authorization: 'atena, commit e push'
 git_branch: codex/assets-preparation-2026-10-10
 next_output: 'PNG finais em pacote local, mascaras/parametros, auditoria e galeria'

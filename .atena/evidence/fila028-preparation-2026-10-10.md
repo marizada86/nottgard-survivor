@@ -2,6 +2,8 @@
 
 ## Publicação solicitada após entrega
 
+Resultado: pacote commitado em `711e585371bbb785a1ccefde77dfa0a2de648a95` (79 arquivos), push normal origin concluído de 859cc4e até 711e585 na branch da fila, incluindo 09bdda2. `git ls-remote --heads` confirmou SHA remoto igual ao commit. Este recibo operacional será commitado e publicado na mesma autorização; sem alterar derivadas ou aceite. CI não verificado.
+
 Dono autorizou “atena, commit e push”. Desvio operacional aprovado: commitar e publicar o pacote e registros na branch `codex/assets-preparation-2026-10-10`, remoto origin já conhecido, depois retornar ao checkpoint de revisão. Inclui o commit local anterior 09bdda2 ainda não publicado. Não é aceite visual das derivadas; AL01 retido e revisão humana pendente preservados. Main, integração e promoção de conteúdo não fazem parte desta publicação. Checks de integridade, links, escopo Git e backlog repetidos antes do commit.
 
 Autorização: dono, “Aprovo a preparação das 34 fontes”, escopo/método determinístico Godot aprovados por plano. [Spec](../specs/SPEC-121-retomada-fila-imagens/preparation-fila028-v01.md), [estado](../state/fila028-preparation.yaml), [galeria](../generated/fila028-preparation-2026-10-10/index.html), [manifesto](../generated/fila028-preparation-2026-10-10/manifest.json), [auditoria](../generated/fila028-preparation-2026-10-10/audit.json), [parâmetros/máscaras](../generated/fila028-preparation-2026-10-10/parameters.json).

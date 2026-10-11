@@ -4,8 +4,10 @@ fila028_preparation_publish_2026_10_10:
   route: commit-push-authorized-preparation-then-return-to-owner-review
   authorization: 'atena, commit e push'
   mode: per-plan
-  status: AUTHORIZED
-  checkpoint: GIT/COMMIT_PUSH
+  status: PUSHED_REMOTE_SHA_VERIFIED
+  checkpoint: GIT/VERIFIED
+  commit: 711e585371bbb785a1ccefde77dfa0a2de648a95
+  remote_sha: 711e585371bbb785a1ccefde77dfa0a2de648a95
   branch: codex/assets-preparation-2026-10-10
   main_in_scope: false
   return_checkpoint: S-007/OWNER-PREPARATION-REVIEW
