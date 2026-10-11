@@ -1,0 +1,831 @@
+{
+  "background": "edge_connected_selected_hue_only",
+  "chroma_min": 0.45,
+  "interior_holes": "visually confirmed arch/window/cloth/rim voids only",
+  "opposite_channel_ratio_max": 0.55,
+  "reports": [
+    {
+      "code": "IC01",
+      "filter": "nearest",
+      "method": "preserve_alpha_resize",
+      "minimum_margin_px": 20,
+      "offset": [
+        19,
+        19
+      ],
+      "resize": [
+        89,
+        89
+      ],
+      "source_foreground_rect": [
+        31,
+        19,
+        1209,
+        1235
+      ]
+    },
+    {
+      "code": "IC02",
+      "filter": "nearest",
+      "method": "preserve_alpha_resize",
+      "minimum_margin_px": 20,
+      "offset": [
+        19,
+        19
+      ],
+      "resize": [
+        89,
+        89
+      ],
+      "source_foreground_rect": [
+        0,
+        35,
+        1240,
+        1219
+      ]
+    },
+    {
+      "code": "IC03",
+      "filter": "nearest",
+      "method": "preserve_alpha_resize",
+      "minimum_margin_px": 20,
+      "offset": [
+        17,
+        17
+      ],
+      "resize": [
+        94,
+        94
+      ],
+      "source_foreground_rect": [
+        41,
+        55,
+        1161,
+        1175
+      ]
+    },
+    {
+      "code": "IC04",
+      "filter": "nearest",
+      "method": "preserve_alpha_resize",
+      "minimum_margin_px": 20,
+      "offset": [
+        19,
+        19
+      ],
+      "resize": [
+        89,
+        89
+      ],
+      "source_foreground_rect": [
+        0,
+        23,
+        1234,
+        1205
+      ]
+    },
+    {
+      "code": "IC05",
+      "filter": "nearest",
+      "method": "preserve_alpha_resize",
+      "minimum_margin_px": 20,
+      "offset": [
+        18,
+        18
+      ],
+      "resize": [
+        91,
+        91
+      ],
+      "source_foreground_rect": [
+        0,
+        21,
+        1218,
+        1195
+      ]
+    },
+    {
+      "code": "IC06",
+      "filter": "nearest",
+      "method": "preserve_alpha_resize",
+      "minimum_margin_px": 20,
+      "offset": [
+        19,
+        19
+      ],
+      "resize": [
+        90,
+        90
+      ],
+      "source_foreground_rect": [
+        0,
+        37,
+        1224,
+        1183
+      ]
+    },
+    {
+      "code": "IC07",
+      "filter": "nearest",
+      "method": "preserve_alpha_resize",
+      "minimum_margin_px": 20,
+      "offset": [
+        16,
+        16
+      ],
+      "resize": [
+        96,
+        96
+      ],
+      "source_foreground_rect": [
+        45,
+        53,
+        1147,
+        1141
+      ]
+    },
+    {
+      "code": "IC08",
+      "filter": "nearest",
+      "method": "preserve_alpha_resize",
+      "minimum_margin_px": 20,
+      "offset": [
+        10,
+        10
+      ],
+      "resize": [
+        107,
+        107
+      ],
+      "source_foreground_rect": [
+        298,
+        85,
+        821,
+        1036
+      ]
+    },
+    {
+      "code": "IC09",
+      "filter": "nearest",
+      "method": "preserve_alpha_resize",
+      "minimum_margin_px": 20,
+      "offset": [
+        18,
+        18
+      ],
+      "resize": [
+        91,
+        91
+      ],
+      "source_foreground_rect": [
+        0,
+        0,
+        1208,
+        1164
+      ]
+    },
+    {
+      "code": "IC10",
+      "filter": "nearest",
+      "method": "preserve_alpha_resize",
+      "minimum_margin_px": 20,
+      "offset": [
+        18,
+        18
+      ],
+      "resize": [
+        92,
+        92
+      ],
+      "source_foreground_rect": [
+        33,
+        21,
+        1193,
+        1193
+      ]
+    },
+    {
+      "code": "IC11",
+      "filter": "nearest",
+      "method": "preserve_alpha_resize",
+      "minimum_margin_px": 20,
+      "offset": [
+        19,
+        19
+      ],
+      "resize": [
+        90,
+        90
+      ],
+      "source_foreground_rect": [
+        0,
+        15,
+        1216,
+        1229
+      ]
+    },
+    {
+      "code": "IC12",
+      "filter": "nearest",
+      "method": "preserve_alpha_resize",
+      "minimum_margin_px": 20,
+      "offset": [
+        16,
+        16
+      ],
+      "resize": [
+        95,
+        95
+      ],
+      "source_foreground_rect": [
+        69,
+        73,
+        1157,
+        1110
+      ]
+    },
+    {
+      "code": "IC13",
+      "filter": "nearest",
+      "method": "preserve_alpha_resize",
+      "minimum_margin_px": 20,
+      "offset": [
+        6,
+        6
+      ],
+      "resize": [
+        116,
+        116
+      ],
+      "source_foreground_rect": [
+        282,
+        301,
+        950,
+        905
+      ]
+    },
+    {
+      "code": "AR01",
+      "filter": "nearest",
+      "method": "chroma_key_resize",
+      "minimum_margin_px": 0,
+      "offset": [
+        0,
+        0
+      ],
+      "resize": [
+        256,
+        256
+      ],
+      "source_foreground_rect": [
+        363,
+        200,
+        562,
+        869
+      ]
+    },
+    {
+      "code": "SE01",
+      "filter": "nearest",
+      "method": "chroma_key_resize",
+      "minimum_margin_px": 0,
+      "offset": [
+        0,
+        0
+      ],
+      "resize": [
+        128,
+        128
+      ],
+      "source_foreground_rect": [
+        484,
+        269,
+        309,
+        675
+      ]
+    },
+    {
+      "code": "SE02",
+      "filter": "nearest",
+      "method": "chroma_key_foreground_crop_pair",
+      "offset": [
+        44,
+        56
+      ],
+      "pair_reference": "SE02 silhouette height 154 and base 210; camera/detail identity remains human review",
+      "resize": [
+        167,
+        154
+      ],
+      "source_foreground_rect": [
+        218,
+        274,
+        821,
+        756
+      ]
+    },
+    {
+      "code": "SE03",
+      "filter": "nearest",
+      "method": "chroma_key_foreground_crop_pair",
+      "offset": [
+        44,
+        56
+      ],
+      "pair_reference": "SE02 silhouette height 154 and base 210; camera/detail identity remains human review",
+      "resize": [
+        167,
+        154
+      ],
+      "source_foreground_rect": [
+        270,
+        277,
+        730,
+        674
+      ]
+    },
+    {
+      "code": "SE04",
+      "filter": "nearest",
+      "method": "chroma_key_resize",
+      "minimum_margin_px": 0,
+      "offset": [
+        0,
+        0
+      ],
+      "resize": [
+        256,
+        256
+      ],
+      "source_foreground_rect": [
+        204,
+        217,
+        844,
+        820
+      ]
+    },
+    {
+      "code": "SE05",
+      "filter": "nearest",
+      "method": "chroma_key_resize",
+      "minimum_margin_px": 0,
+      "offset": [
+        0,
+        0
+      ],
+      "resize": [
+        256,
+        256
+      ],
+      "source_foreground_rect": [
+        197,
+        249,
+        861,
+        731
+      ]
+    },
+    {
+      "code": "SE06",
+      "filter": "nearest",
+      "method": "chroma_key_resize",
+      "minimum_margin_px": 0,
+      "offset": [
+        0,
+        0
+      ],
+      "resize": [
+        256,
+        256
+      ],
+      "source_foreground_rect": [
+        286,
+        253,
+        689,
+        727
+      ]
+    },
+    {
+      "code": "SE07",
+      "filter": "nearest",
+      "method": "chroma_key_resize",
+      "minimum_margin_px": 0,
+      "offset": [
+        0,
+        0
+      ],
+      "resize": [
+        256,
+        256
+      ],
+      "source_foreground_rect": [
+        266,
+        247,
+        724,
+        746
+      ]
+    },
+    {
+      "code": "SE08",
+      "filter": "nearest",
+      "method": "chroma_key_resize",
+      "minimum_margin_px": 0,
+      "offset": [
+        0,
+        0
+      ],
+      "resize": [
+        256,
+        256
+      ],
+      "source_foreground_rect": [
+        225,
+        265,
+        803,
+        665
+      ]
+    },
+    {
+      "code": "SE09",
+      "filter": "nearest",
+      "method": "chroma_key_resize",
+      "minimum_margin_px": 0,
+      "offset": [
+        0,
+        0
+      ],
+      "resize": [
+        256,
+        256
+      ],
+      "source_foreground_rect": [
+        278,
+        263,
+        686,
+        713
+      ]
+    },
+    {
+      "code": "SE10",
+      "filter": "nearest",
+      "method": "chroma_key_resize",
+      "minimum_margin_px": 0,
+      "offset": [
+        0,
+        0
+      ],
+      "resize": [
+        256,
+        256
+      ],
+      "source_foreground_rect": [
+        248,
+        234,
+        782,
+        779
+      ]
+    },
+    {
+      "code": "SE11",
+      "filter": "nearest",
+      "method": "chroma_key_resize",
+      "minimum_margin_px": 0,
+      "offset": [
+        0,
+        0
+      ],
+      "resize": [
+        256,
+        256
+      ],
+      "source_foreground_rect": [
+        186,
+        215,
+        882,
+        825
+      ]
+    },
+    {
+      "code": "I01",
+      "filter": "nearest",
+      "method": "preserve_alpha_resize",
+      "minimum_margin_px": 24,
+      "offset": [
+        21,
+        21
+      ],
+      "resize": [
+        85,
+        85
+      ],
+      "source_foreground_rect": [
+        88,
+        23,
+        1110,
+        1184
+      ]
+    },
+    {
+      "code": "I02",
+      "filter": "nearest",
+      "method": "preserve_alpha_resize",
+      "minimum_margin_px": 24,
+      "offset": [
+        15,
+        15
+      ],
+      "resize": [
+        97,
+        97
+      ],
+      "source_foreground_rect": [
+        162,
+        273,
+        1030,
+        899
+      ]
+    },
+    {
+      "anchor": "native_cell_origin",
+      "body_invariance": "requires_audit",
+      "code": "AL01",
+      "frame_size": 192,
+      "method": "six_grid_cells_nearest"
+    },
+    {
+      "code": "EV01",
+      "filter": "nearest",
+      "method": "chroma_key_resize",
+      "minimum_margin_px": 0,
+      "offset": [
+        0,
+        0
+      ],
+      "resize": [
+        256,
+        256
+      ],
+      "source_foreground_rect": [
+        123,
+        309,
+        1012,
+        751
+      ]
+    },
+    {
+      "code": "EV02",
+      "filter": "nearest",
+      "method": "chroma_key_resize",
+      "minimum_margin_px": 0,
+      "offset": [
+        0,
+        0
+      ],
+      "resize": [
+        256,
+        256
+      ],
+      "source_foreground_rect": [
+        171,
+        243,
+        912,
+        866
+      ]
+    },
+    {
+      "code": "EV03",
+      "filter": "nearest",
+      "method": "chroma_key_resize",
+      "minimum_margin_px": 0,
+      "offset": [
+        0,
+        0
+      ],
+      "resize": [
+        256,
+        256
+      ],
+      "source_foreground_rect": [
+        113,
+        203,
+        1001,
+        858
+      ]
+    },
+    {
+      "code": "EV04",
+      "filter": "nearest",
+      "method": "chroma_key_resize",
+      "minimum_margin_px": 0,
+      "offset": [
+        0,
+        0
+      ],
+      "resize": [
+        256,
+        256
+      ],
+      "source_foreground_rect": [
+        262,
+        205,
+        818,
+        843
+      ]
+    },
+    {
+      "code": "EV05",
+      "filter": "nearest",
+      "method": "chroma_key_resize",
+      "minimum_margin_px": 0,
+      "offset": [
+        0,
+        0
+      ],
+      "resize": [
+        256,
+        256
+      ],
+      "source_foreground_rect": [
+        81,
+        197,
+        1104,
+        832
+      ]
+    },
+    {
+      "code": "EV06",
+      "filter": "nearest",
+      "method": "chroma_key_resize",
+      "minimum_margin_px": 0,
+      "offset": [
+        0,
+        0
+      ],
+      "resize": [
+        256,
+        256
+      ],
+      "source_foreground_rect": [
+        140,
+        323,
+        974,
+        734
+      ]
+    }
+  ],
+  "reviewed_hole_seed_rects_on_256_canvas": {
+    "EV05": [
+      [
+        69,
+        87,
+        73,
+        98
+      ],
+      [
+        25,
+        128,
+        80,
+        178
+      ]
+    ],
+    "SE05": [
+      [
+        64,
+        98,
+        73,
+        107
+      ],
+      [
+        201,
+        111,
+        214,
+        142
+      ],
+      [
+        51,
+        128,
+        56,
+        147
+      ],
+      [
+        139,
+        194,
+        144,
+        198
+      ]
+    ],
+    "SE06": [
+      [
+        106,
+        94,
+        131,
+        151
+      ],
+      [
+        148,
+        99,
+        153,
+        105
+      ],
+      [
+        169,
+        103,
+        177,
+        113
+      ]
+    ],
+    "SE07": [
+      [
+        90,
+        76,
+        122,
+        128
+      ],
+      [
+        134,
+        88,
+        171,
+        132
+      ]
+    ],
+    "SE08": [
+      [
+        126,
+        71,
+        140,
+        92
+      ],
+      [
+        143,
+        88,
+        157,
+        116
+      ],
+      [
+        165,
+        111,
+        170,
+        117
+      ],
+      [
+        185,
+        125,
+        190,
+        132
+      ],
+      [
+        195,
+        126,
+        198,
+        135
+      ]
+    ],
+    "SE10": [
+      [
+        101,
+        64,
+        133,
+        143
+      ],
+      [
+        147,
+        79,
+        164,
+        150
+      ],
+      [
+        172,
+        131,
+        194,
+        139
+      ],
+      [
+        179,
+        155,
+        185,
+        165
+      ]
+    ],
+    "SE11": [
+      [
+        87,
+        59,
+        101,
+        105
+      ],
+      [
+        139,
+        84,
+        149,
+        119
+      ],
+      [
+        164,
+        89,
+        186,
+        131
+      ]
+    ]
+  },
+  "source_canvas": "preserved except paired chamber foreground crops",
+  "tool": "Godot 4.7.2 Image"
+}

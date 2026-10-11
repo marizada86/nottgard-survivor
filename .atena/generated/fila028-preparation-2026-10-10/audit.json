@@ -1,0 +1,1395 @@
+{
+  "revision": "FILA-028-PREP/v01",
+  "sources": 34,
+  "source_hashes_unchanged": true,
+  "reports": [
+    {
+      "code": "IC01",
+      "version": "v01",
+      "source_sha256": "c9a201de0b906328ae58928d2b475317e0dcda95c3fc771b1adcf51269eaf841",
+      "source_unchanged": true,
+      "output_sha256": "acbee13cc408c869d562787b2c0aed9e4a337be4c99a37a63e477181990e991b",
+      "mode": "RGBA",
+      "size": [
+        128,
+        128
+      ],
+      "dimensions_pass": true,
+      "bbox": [
+        25,
+        36,
+        101,
+        101
+      ],
+      "margins_px": [
+        25,
+        36,
+        27,
+        27
+      ],
+      "required_margin_px": 20,
+      "margin_pass": true,
+      "nonzero_alpha_pixels": 1655,
+      "fractional_alpha_pixels": 1644,
+      "edge_alpha_pixels": 0,
+      "cyan_hue_pixels": 0,
+      "magenta_hue_pixels": 2,
+      "visual_state": "DRAFT_TECHNICAL",
+      "runtime_admission": false,
+      "visible_rgb_palette_from_source": true,
+      "visible_alpha_values_from_source": true,
+      "technical_status": "METRICS_PASS_VISUAL_REVIEW_PENDING"
+    },
+    {
+      "code": "IC02",
+      "version": "v02",
+      "source_sha256": "d26b1e8456187ce1274401a646dacb3667f3228e0bf85c94dddd57b5701d9020",
+      "source_unchanged": true,
+      "output_sha256": "f540a20278456d49a620e2935f2ab2c5047ba618bd84bb2a8359ec607420d39b",
+      "mode": "RGBA",
+      "size": [
+        128,
+        128
+      ],
+      "dimensions_pass": true,
+      "bbox": [
+        21,
+        31,
+        101,
+        99
+      ],
+      "margins_px": [
+        21,
+        31,
+        27,
+        29
+      ],
+      "required_margin_px": 20,
+      "margin_pass": true,
+      "nonzero_alpha_pixels": 1272,
+      "fractional_alpha_pixels": 1268,
+      "edge_alpha_pixels": 0,
+      "cyan_hue_pixels": 0,
+      "magenta_hue_pixels": 0,
+      "visual_state": "DRAFT_TECHNICAL",
+      "runtime_admission": false,
+      "visible_rgb_palette_from_source": true,
+      "visible_alpha_values_from_source": true,
+      "technical_status": "METRICS_PASS_VISUAL_REVIEW_PENDING"
+    },
+    {
+      "code": "IC03",
+      "version": "v02",
+      "source_sha256": "93405a3b4764d20507633ab559cf581595c36ee3185edd1a30a362ebc3cba385",
+      "source_unchanged": true,
+      "output_sha256": "60978a596d0050fec3ed4edbaf696f817b42c3047f02acc48dadbb0ca19d2a16",
+      "mode": "RGBA",
+      "size": [
+        128,
+        128
+      ],
+      "dimensions_pass": true,
+      "bbox": [
+        35,
+        30,
+        97,
+        94
+      ],
+      "margins_px": [
+        35,
+        30,
+        31,
+        34
+      ],
+      "required_margin_px": 20,
+      "margin_pass": true,
+      "nonzero_alpha_pixels": 1227,
+      "fractional_alpha_pixels": 1220,
+      "edge_alpha_pixels": 0,
+      "cyan_hue_pixels": 18,
+      "magenta_hue_pixels": 55,
+      "visual_state": "DRAFT_TECHNICAL",
+      "runtime_admission": false,
+      "visible_rgb_palette_from_source": true,
+      "visible_alpha_values_from_source": true,
+      "technical_status": "METRICS_PASS_VISUAL_REVIEW_PENDING"
+    },
+    {
+      "code": "IC04",
+      "version": "v02",
+      "source_sha256": "aca0836a3f910024ad300ee63fc7730d7a0758f4a87529815f2dbf235ba533cb",
+      "source_unchanged": true,
+      "output_sha256": "e28c4dec2fc31b6dfb76a9710835745eccf32e45dcdbbac057a0460f028abd09",
+      "mode": "RGBA",
+      "size": [
+        128,
+        128
+      ],
+      "dimensions_pass": true,
+      "bbox": [
+        31,
+        38,
+        100,
+        99
+      ],
+      "margins_px": [
+        31,
+        38,
+        28,
+        29
+      ],
+      "required_margin_px": 20,
+      "margin_pass": true,
+      "nonzero_alpha_pixels": 1727,
+      "fractional_alpha_pixels": 1725,
+      "edge_alpha_pixels": 0,
+      "cyan_hue_pixels": 0,
+      "magenta_hue_pixels": 0,
+      "visual_state": "DRAFT_TECHNICAL",
+      "runtime_admission": false,
+      "visible_rgb_palette_from_source": true,
+      "visible_alpha_values_from_source": true,
+      "technical_status": "METRICS_PASS_VISUAL_REVIEW_PENDING"
+    },
+    {
+      "code": "IC05",
+      "version": "v03",
+      "source_sha256": "8678674e83f81538f9c19783c342249625c9f5bd34711b2ac11491394aa965d3",
+      "source_unchanged": true,
+      "output_sha256": "115d31d7d861f9c7a3d1c58ce42b4b82880079370015ec062c6444f23eed25fc",
+      "mode": "RGBA",
+      "size": [
+        128,
+        128
+      ],
+      "dimensions_pass": true,
+      "bbox": [
+        26,
+        43,
+        105,
+        106
+      ],
+      "margins_px": [
+        26,
+        43,
+        23,
+        22
+      ],
+      "required_margin_px": 20,
+      "margin_pass": true,
+      "nonzero_alpha_pixels": 971,
+      "fractional_alpha_pixels": 965,
+      "edge_alpha_pixels": 0,
+      "cyan_hue_pixels": 1,
+      "magenta_hue_pixels": 1,
+      "visual_state": "DRAFT_TECHNICAL",
+      "runtime_admission": false,
+      "visible_rgb_palette_from_source": true,
+      "visible_alpha_values_from_source": true,
+      "technical_status": "METRICS_PASS_VISUAL_REVIEW_PENDING"
+    },
+    {
+      "code": "IC06",
+      "version": "v01",
+      "source_sha256": "3bc2c0308a492ee8164218286d46b44c916282159a130c85e5305bc5fb9a4820",
+      "source_unchanged": true,
+      "output_sha256": "136fa0e45b51d47278cc3dc074765d567f3ac1e0f5cf02239b5ee9769ee845f5",
+      "mode": "RGBA",
+      "size": [
+        128,
+        128
+      ],
+      "dimensions_pass": true,
+      "bbox": [
+        28,
+        33,
+        85,
+        107
+      ],
+      "margins_px": [
+        28,
+        33,
+        43,
+        21
+      ],
+      "required_margin_px": 20,
+      "margin_pass": true,
+      "nonzero_alpha_pixels": 1301,
+      "fractional_alpha_pixels": 1301,
+      "edge_alpha_pixels": 0,
+      "cyan_hue_pixels": 0,
+      "magenta_hue_pixels": 435,
+      "visual_state": "DRAFT_TECHNICAL",
+      "runtime_admission": false,
+      "visible_rgb_palette_from_source": true,
+      "visible_alpha_values_from_source": true,
+      "technical_status": "METRICS_PASS_VISUAL_REVIEW_PENDING"
+    },
+    {
+      "code": "IC07",
+      "version": "v01",
+      "source_sha256": "db689bb4c203dfd48aef5e27e27ec06327edea23f486759219b112ad160977e3",
+      "source_unchanged": true,
+      "output_sha256": "232162f425d96f57d2a4a20fb296b1cd5a26d0277422db1973f2ff61470e2142",
+      "mode": "RGBA",
+      "size": [
+        128,
+        128
+      ],
+      "dimensions_pass": true,
+      "bbox": [
+        46,
+        34,
+        88,
+        95
+      ],
+      "margins_px": [
+        46,
+        34,
+        40,
+        33
+      ],
+      "required_margin_px": 20,
+      "margin_pass": true,
+      "nonzero_alpha_pixels": 702,
+      "fractional_alpha_pixels": 700,
+      "edge_alpha_pixels": 0,
+      "cyan_hue_pixels": 1,
+      "magenta_hue_pixels": 0,
+      "visual_state": "DRAFT_TECHNICAL",
+      "runtime_admission": false,
+      "visible_rgb_palette_from_source": true,
+      "visible_alpha_values_from_source": true,
+      "technical_status": "METRICS_PASS_VISUAL_REVIEW_PENDING"
+    },
+    {
+      "code": "IC08",
+      "version": "v02",
+      "source_sha256": "d7e958bc197bda00c4a50de1f6312dce80e9af38a0eb102cc7a803a6ce98cae4",
+      "source_unchanged": true,
+      "output_sha256": "d03bf703b8267fcebc94bfd280734e54920cfc8280f6e90efece83f7b8b70297",
+      "mode": "RGBA",
+      "size": [
+        128,
+        128
+      ],
+      "dimensions_pass": true,
+      "bbox": [
+        35,
+        35,
+        92,
+        95
+      ],
+      "margins_px": [
+        35,
+        35,
+        36,
+        33
+      ],
+      "required_margin_px": 20,
+      "margin_pass": true,
+      "nonzero_alpha_pixels": 812,
+      "fractional_alpha_pixels": 810,
+      "edge_alpha_pixels": 0,
+      "cyan_hue_pixels": 0,
+      "magenta_hue_pixels": 1,
+      "visual_state": "DRAFT_TECHNICAL",
+      "runtime_admission": false,
+      "visible_rgb_palette_from_source": true,
+      "visible_alpha_values_from_source": true,
+      "technical_status": "METRICS_PASS_VISUAL_REVIEW_PENDING"
+    },
+    {
+      "code": "IC09",
+      "version": "v02",
+      "source_sha256": "321082bb7f0383a52c0b188f5d8e892cf580d7974613b48411170dd647a1bf2b",
+      "source_unchanged": true,
+      "output_sha256": "015cbd7252a22a44e29070c6af2680c604c9471793829ce19fd978f6a453ed0b",
+      "mode": "RGBA",
+      "size": [
+        128,
+        128
+      ],
+      "dimensions_pass": true,
+      "bbox": [
+        46,
+        40,
+        81,
+        87
+      ],
+      "margins_px": [
+        46,
+        40,
+        47,
+        41
+      ],
+      "required_margin_px": 20,
+      "margin_pass": true,
+      "nonzero_alpha_pixels": 633,
+      "fractional_alpha_pixels": 629,
+      "edge_alpha_pixels": 0,
+      "cyan_hue_pixels": 0,
+      "magenta_hue_pixels": 20,
+      "visual_state": "DRAFT_TECHNICAL",
+      "runtime_admission": false,
+      "visible_rgb_palette_from_source": true,
+      "visible_alpha_values_from_source": true,
+      "technical_status": "METRICS_PASS_VISUAL_REVIEW_PENDING"
+    },
+    {
+      "code": "IC10",
+      "version": "v01",
+      "source_sha256": "19bb80611abe7ebf9883a27e040945376b64238edcee6630db9a470344e97a90",
+      "source_unchanged": true,
+      "output_sha256": "28c2b29999d9320a6cf9d35c7ab4a25424e5815b7006120ceacac4228b23a9e2",
+      "mode": "RGBA",
+      "size": [
+        128,
+        128
+      ],
+      "dimensions_pass": true,
+      "bbox": [
+        34,
+        38,
+        103,
+        97
+      ],
+      "margins_px": [
+        34,
+        38,
+        25,
+        31
+      ],
+      "required_margin_px": 20,
+      "margin_pass": true,
+      "nonzero_alpha_pixels": 1588,
+      "fractional_alpha_pixels": 1581,
+      "edge_alpha_pixels": 0,
+      "cyan_hue_pixels": 0,
+      "magenta_hue_pixels": 0,
+      "visual_state": "DRAFT_TECHNICAL",
+      "runtime_admission": false,
+      "visible_rgb_palette_from_source": true,
+      "visible_alpha_values_from_source": true,
+      "technical_status": "METRICS_PASS_VISUAL_REVIEW_PENDING"
+    },
+    {
+      "code": "IC11",
+      "version": "v01",
+      "source_sha256": "8a1e58c4715a58b55fd8473feb7ad70edf47ebbb8abb5bdcc1fdb0896a4a6459",
+      "source_unchanged": true,
+      "output_sha256": "a62d5e82bed4615013de261f38744c19b88ed52352dc5936c3bf3456b7fe8aa4",
+      "mode": "RGBA",
+      "size": [
+        128,
+        128
+      ],
+      "dimensions_pass": true,
+      "bbox": [
+        31,
+        38,
+        101,
+        86
+      ],
+      "margins_px": [
+        31,
+        38,
+        27,
+        42
+      ],
+      "required_margin_px": 20,
+      "margin_pass": true,
+      "nonzero_alpha_pixels": 1989,
+      "fractional_alpha_pixels": 1989,
+      "edge_alpha_pixels": 0,
+      "cyan_hue_pixels": 354,
+      "magenta_hue_pixels": 0,
+      "visual_state": "DRAFT_TECHNICAL",
+      "runtime_admission": false,
+      "visible_rgb_palette_from_source": true,
+      "visible_alpha_values_from_source": true,
+      "technical_status": "METRICS_PASS_VISUAL_REVIEW_PENDING"
+    },
+    {
+      "code": "IC12",
+      "version": "v02",
+      "source_sha256": "0e0b5b2ac34cb00a17f5775be2a80f3f1dbc5aeca65d832ab283ed7660268630",
+      "source_unchanged": true,
+      "output_sha256": "005491b516d995cd36e68f43cacd514a7242b73f211843d84f5460b34c567d2d",
+      "mode": "RGBA",
+      "size": [
+        128,
+        128
+      ],
+      "dimensions_pass": true,
+      "bbox": [
+        49,
+        40,
+        79,
+        88
+      ],
+      "margins_px": [
+        49,
+        40,
+        49,
+        40
+      ],
+      "required_margin_px": 20,
+      "margin_pass": true,
+      "nonzero_alpha_pixels": 847,
+      "fractional_alpha_pixels": 846,
+      "edge_alpha_pixels": 0,
+      "cyan_hue_pixels": 0,
+      "magenta_hue_pixels": 0,
+      "visual_state": "DRAFT_TECHNICAL",
+      "runtime_admission": false,
+      "visible_rgb_palette_from_source": true,
+      "visible_alpha_values_from_source": true,
+      "technical_status": "METRICS_PASS_VISUAL_REVIEW_PENDING"
+    },
+    {
+      "code": "IC13",
+      "version": "v02",
+      "source_sha256": "04058478cb6210fa1ff07ade9beafafddfc9321c5ab1ee5a403c40b54e5d09b4",
+      "source_unchanged": true,
+      "output_sha256": "55fe65825a65ab7b75cb834b1af7ae661060ec766c1c33d396ed2b1ea31d1998",
+      "mode": "RGBA",
+      "size": [
+        128,
+        128
+      ],
+      "dimensions_pass": true,
+      "bbox": [
+        45,
+        34,
+        92,
+        96
+      ],
+      "margins_px": [
+        45,
+        34,
+        36,
+        32
+      ],
+      "required_margin_px": 20,
+      "margin_pass": true,
+      "nonzero_alpha_pixels": 903,
+      "fractional_alpha_pixels": 902,
+      "edge_alpha_pixels": 0,
+      "cyan_hue_pixels": 0,
+      "magenta_hue_pixels": 34,
+      "visual_state": "DRAFT_TECHNICAL",
+      "runtime_admission": false,
+      "visible_rgb_palette_from_source": true,
+      "visible_alpha_values_from_source": true,
+      "technical_status": "METRICS_PASS_VISUAL_REVIEW_PENDING"
+    },
+    {
+      "code": "AR01",
+      "version": "v02",
+      "source_sha256": "ec841f2ae35f89f80af419e01a7510edbc8628b6c5a7bfc1700a4151d1e0dc03",
+      "source_unchanged": true,
+      "output_sha256": "99130e68a2271e7e4e21bca54028f63c1136a969214a837a1e7ee5d3e71dbb3a",
+      "mode": "RGBA",
+      "size": [
+        256,
+        256
+      ],
+      "dimensions_pass": true,
+      "bbox": [
+        74,
+        41,
+        189,
+        218
+      ],
+      "margins_px": [
+        74,
+        41,
+        67,
+        38
+      ],
+      "required_margin_px": 0,
+      "margin_pass": true,
+      "nonzero_alpha_pixels": 12891,
+      "fractional_alpha_pixels": 0,
+      "edge_alpha_pixels": 0,
+      "cyan_hue_pixels": 18,
+      "magenta_hue_pixels": 545,
+      "visual_state": "DRAFT_TECHNICAL",
+      "runtime_admission": false,
+      "visible_rgb_palette_from_source": true,
+      "visible_alpha_values_from_source": true,
+      "keyed_hue": "cyan",
+      "remaining_key_hue_pixels": 18,
+      "mask_scope": "edge connected plus documented visually confirmed interior holes",
+      "technical_status": "METRICS_PASS_VISUAL_REVIEW_PENDING"
+    },
+    {
+      "code": "SE01",
+      "version": "v03",
+      "source_sha256": "3c802d25fc4fdf77c02b38bb3b6469804ed1f0b2541e7e4cf957533632f56d08",
+      "source_unchanged": true,
+      "output_sha256": "00bd931215078db6c970886aae447afa353897a4be785589137fc9616b19a002",
+      "mode": "RGBA",
+      "size": [
+        128,
+        128
+      ],
+      "dimensions_pass": true,
+      "bbox": [
+        49,
+        27,
+        81,
+        96
+      ],
+      "margins_px": [
+        49,
+        27,
+        47,
+        32
+      ],
+      "required_margin_px": 0,
+      "margin_pass": true,
+      "nonzero_alpha_pixels": 888,
+      "fractional_alpha_pixels": 0,
+      "edge_alpha_pixels": 0,
+      "cyan_hue_pixels": 27,
+      "magenta_hue_pixels": 1,
+      "visual_state": "DRAFT_TECHNICAL",
+      "runtime_admission": false,
+      "visible_rgb_palette_from_source": true,
+      "visible_alpha_values_from_source": true,
+      "keyed_hue": "cyan",
+      "remaining_key_hue_pixels": 27,
+      "mask_scope": "edge connected plus documented visually confirmed interior holes",
+      "technical_status": "METRICS_PASS_VISUAL_REVIEW_PENDING"
+    },
+    {
+      "code": "SE02",
+      "version": "v03",
+      "source_sha256": "d31f373d4bb2baa332c10b60941f2f0ef27ca78cc1964159bdf4f82956781451",
+      "source_unchanged": true,
+      "output_sha256": "417cc37b899b4b7f8d811f753741eaeae9c4423c092d8bc7e66033d336386a4a",
+      "mode": "RGBA",
+      "size": [
+        256,
+        256
+      ],
+      "dimensions_pass": true,
+      "bbox": [
+        44,
+        56,
+        211,
+        210
+      ],
+      "margins_px": [
+        44,
+        56,
+        45,
+        46
+      ],
+      "required_margin_px": 0,
+      "margin_pass": true,
+      "nonzero_alpha_pixels": 17319,
+      "fractional_alpha_pixels": 0,
+      "edge_alpha_pixels": 0,
+      "cyan_hue_pixels": 0,
+      "magenta_hue_pixels": 277,
+      "visual_state": "DRAFT_TECHNICAL",
+      "runtime_admission": false,
+      "visible_rgb_palette_from_source": true,
+      "visible_alpha_values_from_source": true,
+      "keyed_hue": "cyan",
+      "remaining_key_hue_pixels": 0,
+      "mask_scope": "edge connected plus documented visually confirmed interior holes",
+      "technical_status": "METRICS_PASS_VISUAL_REVIEW_PENDING",
+      "pair_body_height_px": 154,
+      "pair_scale_status": "HEIGHT_BASE_NORMALIZED_CAMERA_IDENTITY_REVIEW_PENDING",
+      "pair_height_base_match": true
+    },
+    {
+      "code": "SE03",
+      "version": "v02",
+      "source_sha256": "2d358a599468def8ea992f3734ce2526f4a5749696cb48f47f773edf6dd3c532",
+      "source_unchanged": true,
+      "output_sha256": "0c6f45dece0434306399a771ae2918fdadcda30a38203c62ac31dbc238673d8a",
+      "mode": "RGBA",
+      "size": [
+        256,
+        256
+      ],
+      "dimensions_pass": true,
+      "bbox": [
+        44,
+        56,
+        211,
+        210
+      ],
+      "margins_px": [
+        44,
+        56,
+        45,
+        46
+      ],
+      "required_margin_px": 0,
+      "margin_pass": true,
+      "nonzero_alpha_pixels": 18175,
+      "fractional_alpha_pixels": 0,
+      "edge_alpha_pixels": 0,
+      "cyan_hue_pixels": 3,
+      "magenta_hue_pixels": 1676,
+      "visual_state": "DRAFT_TECHNICAL",
+      "runtime_admission": false,
+      "visible_rgb_palette_from_source": true,
+      "visible_alpha_values_from_source": true,
+      "keyed_hue": "cyan",
+      "remaining_key_hue_pixels": 3,
+      "mask_scope": "edge connected plus documented visually confirmed interior holes",
+      "technical_status": "METRICS_PASS_VISUAL_REVIEW_PENDING",
+      "pair_body_height_px": 154,
+      "pair_scale_status": "HEIGHT_BASE_NORMALIZED_CAMERA_IDENTITY_REVIEW_PENDING",
+      "pair_height_base_match": true
+    },
+    {
+      "code": "SE04",
+      "version": "v02",
+      "source_sha256": "9d8ca6904396ee74143961201c6c880cda479494ff7a4cc5ba541c592d318475",
+      "source_unchanged": true,
+      "output_sha256": "dbca7885d5a14c70f0f644cc00723fce28e8090da59200977937f1f91fe76581",
+      "mode": "RGBA",
+      "size": [
+        256,
+        256
+      ],
+      "dimensions_pass": true,
+      "bbox": [
+        42,
+        44,
+        214,
+        212
+      ],
+      "margins_px": [
+        42,
+        44,
+        42,
+        44
+      ],
+      "required_margin_px": 0,
+      "margin_pass": true,
+      "nonzero_alpha_pixels": 15776,
+      "fractional_alpha_pixels": 0,
+      "edge_alpha_pixels": 0,
+      "cyan_hue_pixels": 19,
+      "magenta_hue_pixels": 0,
+      "visual_state": "DRAFT_TECHNICAL",
+      "runtime_admission": false,
+      "visible_rgb_palette_from_source": true,
+      "visible_alpha_values_from_source": true,
+      "keyed_hue": "cyan",
+      "remaining_key_hue_pixels": 19,
+      "mask_scope": "edge connected plus documented visually confirmed interior holes",
+      "technical_status": "METRICS_PASS_VISUAL_REVIEW_PENDING"
+    },
+    {
+      "code": "SE05",
+      "version": "v02",
+      "source_sha256": "d6d8dc7126c66e410c3854ead49b752b268c2686dbb572aaae236ffc9e70f698",
+      "source_unchanged": true,
+      "output_sha256": "62bbbefc4cfda83d3de2a6e0034dd1d0fa0dc66324245ba12249016a7eca8a1b",
+      "mode": "RGBA",
+      "size": [
+        256,
+        256
+      ],
+      "dimensions_pass": true,
+      "bbox": [
+        40,
+        51,
+        216,
+        200
+      ],
+      "margins_px": [
+        40,
+        51,
+        40,
+        56
+      ],
+      "required_margin_px": 0,
+      "margin_pass": true,
+      "nonzero_alpha_pixels": 18056,
+      "fractional_alpha_pixels": 0,
+      "edge_alpha_pixels": 0,
+      "cyan_hue_pixels": 2,
+      "magenta_hue_pixels": 0,
+      "visual_state": "DRAFT_TECHNICAL",
+      "runtime_admission": false,
+      "visible_rgb_palette_from_source": true,
+      "visible_alpha_values_from_source": true,
+      "keyed_hue": "cyan",
+      "remaining_key_hue_pixels": 2,
+      "mask_scope": "edge connected plus documented visually confirmed interior holes",
+      "technical_status": "METRICS_PASS_VISUAL_REVIEW_PENDING"
+    },
+    {
+      "code": "SE06",
+      "version": "v02",
+      "source_sha256": "0a95482b09eb9716896f4d95b2a98ab83ab80afb53f80773b4cae8fbef0fee64",
+      "source_unchanged": true,
+      "output_sha256": "f0285a7578b0c1fff0c92ed4d01a931f9b10ecabc1b45608caf3636ee31da289",
+      "mode": "RGBA",
+      "size": [
+        256,
+        256
+      ],
+      "dimensions_pass": true,
+      "bbox": [
+        58,
+        52,
+        199,
+        200
+      ],
+      "margins_px": [
+        58,
+        52,
+        57,
+        56
+      ],
+      "required_margin_px": 0,
+      "margin_pass": true,
+      "nonzero_alpha_pixels": 13626,
+      "fractional_alpha_pixels": 0,
+      "edge_alpha_pixels": 0,
+      "cyan_hue_pixels": 16,
+      "magenta_hue_pixels": 0,
+      "visual_state": "DRAFT_TECHNICAL",
+      "runtime_admission": false,
+      "visible_rgb_palette_from_source": true,
+      "visible_alpha_values_from_source": true,
+      "keyed_hue": "cyan",
+      "remaining_key_hue_pixels": 16,
+      "mask_scope": "edge connected plus documented visually confirmed interior holes",
+      "technical_status": "METRICS_PASS_VISUAL_REVIEW_PENDING"
+    },
+    {
+      "code": "SE07",
+      "version": "v02",
+      "source_sha256": "b88bbba9ab01a558bc087d5e7f6114001d1b1ab3440984ad4700520d6766ed9f",
+      "source_unchanged": true,
+      "output_sha256": "22bae573cfba69f3a947fae91b29abae2c7552a8eb216e7eca0c3387cb1d9a30",
+      "mode": "RGBA",
+      "size": [
+        256,
+        256
+      ],
+      "dimensions_pass": true,
+      "bbox": [
+        54,
+        50,
+        202,
+        203
+      ],
+      "margins_px": [
+        54,
+        50,
+        54,
+        53
+      ],
+      "required_margin_px": 0,
+      "margin_pass": true,
+      "nonzero_alpha_pixels": 14758,
+      "fractional_alpha_pixels": 0,
+      "edge_alpha_pixels": 0,
+      "cyan_hue_pixels": 0,
+      "magenta_hue_pixels": 0,
+      "visual_state": "DRAFT_TECHNICAL",
+      "runtime_admission": false,
+      "visible_rgb_palette_from_source": true,
+      "visible_alpha_values_from_source": true,
+      "keyed_hue": "cyan",
+      "remaining_key_hue_pixels": 0,
+      "mask_scope": "edge connected plus documented visually confirmed interior holes",
+      "technical_status": "METRICS_PASS_VISUAL_REVIEW_PENDING"
+    },
+    {
+      "code": "SE08",
+      "version": "v02",
+      "source_sha256": "70f158ada8e744de13761439eeac30b52e4f994c6d1731d6c88237ea6e62672c",
+      "source_unchanged": true,
+      "output_sha256": "eabc7ec8b7831bd6667bca124f06d0328af8755ded4b74774602e7199a491393",
+      "mode": "RGBA",
+      "size": [
+        256,
+        256
+      ],
+      "dimensions_pass": true,
+      "bbox": [
+        46,
+        54,
+        210,
+        190
+      ],
+      "margins_px": [
+        46,
+        54,
+        46,
+        66
+      ],
+      "required_margin_px": 0,
+      "margin_pass": true,
+      "nonzero_alpha_pixels": 13517,
+      "fractional_alpha_pixels": 0,
+      "edge_alpha_pixels": 0,
+      "cyan_hue_pixels": 17,
+      "magenta_hue_pixels": 0,
+      "visual_state": "DRAFT_TECHNICAL",
+      "runtime_admission": false,
+      "visible_rgb_palette_from_source": true,
+      "visible_alpha_values_from_source": true,
+      "keyed_hue": "cyan",
+      "remaining_key_hue_pixels": 17,
+      "mask_scope": "edge connected plus documented visually confirmed interior holes",
+      "technical_status": "METRICS_PASS_VISUAL_REVIEW_PENDING"
+    },
+    {
+      "code": "SE09",
+      "version": "v02",
+      "source_sha256": "f242b5c3146fab23b0a91ea7799785dc28885ec0c73498190d0db258b3702971",
+      "source_unchanged": true,
+      "output_sha256": "bfba3d732c57399ab626ded2a3fc6f84ffd6387f9b6c74cd86bfea822dfe3353",
+      "mode": "RGBA",
+      "size": [
+        256,
+        256
+      ],
+      "dimensions_pass": true,
+      "bbox": [
+        57,
+        54,
+        197,
+        199
+      ],
+      "margins_px": [
+        57,
+        54,
+        59,
+        57
+      ],
+      "required_margin_px": 0,
+      "margin_pass": true,
+      "nonzero_alpha_pixels": 11628,
+      "fractional_alpha_pixels": 0,
+      "edge_alpha_pixels": 0,
+      "cyan_hue_pixels": 18,
+      "magenta_hue_pixels": 0,
+      "visual_state": "DRAFT_TECHNICAL",
+      "runtime_admission": false,
+      "visible_rgb_palette_from_source": true,
+      "visible_alpha_values_from_source": true,
+      "keyed_hue": "cyan",
+      "remaining_key_hue_pixels": 18,
+      "mask_scope": "edge connected plus documented visually confirmed interior holes",
+      "technical_status": "METRICS_PASS_VISUAL_REVIEW_PENDING"
+    },
+    {
+      "code": "SE10",
+      "version": "v02",
+      "source_sha256": "d5eab0df3f6bf47674d4010f70af8b4142bf1a4e048ae88329e291b9d1fa10be",
+      "source_unchanged": true,
+      "output_sha256": "92d8581c57854fd7517c194554e9d08972af886ce42813e0a00a22b6153f4780",
+      "mode": "RGBA",
+      "size": [
+        256,
+        256
+      ],
+      "dimensions_pass": true,
+      "bbox": [
+        51,
+        48,
+        210,
+        207
+      ],
+      "margins_px": [
+        51,
+        48,
+        46,
+        49
+      ],
+      "required_margin_px": 0,
+      "margin_pass": true,
+      "nonzero_alpha_pixels": 13633,
+      "fractional_alpha_pixels": 0,
+      "edge_alpha_pixels": 0,
+      "cyan_hue_pixels": 9,
+      "magenta_hue_pixels": 0,
+      "visual_state": "DRAFT_TECHNICAL",
+      "runtime_admission": false,
+      "visible_rgb_palette_from_source": true,
+      "visible_alpha_values_from_source": true,
+      "keyed_hue": "cyan",
+      "remaining_key_hue_pixels": 9,
+      "mask_scope": "edge connected plus documented visually confirmed interior holes",
+      "technical_status": "METRICS_PASS_VISUAL_REVIEW_PENDING"
+    },
+    {
+      "code": "SE11",
+      "version": "v02",
+      "source_sha256": "3f95ad9cd1a252a231a970ce3d7d47eea6307f1b7ab16bc547cdaf061b3f2106",
+      "source_unchanged": true,
+      "output_sha256": "00b594ae1e037af4d6b26f7533d64ea72f16d28cf89b5370efba5ebec0e65bab",
+      "mode": "RGBA",
+      "size": [
+        256,
+        256
+      ],
+      "dimensions_pass": true,
+      "bbox": [
+        38,
+        44,
+        218,
+        212
+      ],
+      "margins_px": [
+        38,
+        44,
+        38,
+        44
+      ],
+      "required_margin_px": 0,
+      "margin_pass": true,
+      "nonzero_alpha_pixels": 19428,
+      "fractional_alpha_pixels": 0,
+      "edge_alpha_pixels": 0,
+      "cyan_hue_pixels": 8,
+      "magenta_hue_pixels": 0,
+      "visual_state": "DRAFT_TECHNICAL",
+      "runtime_admission": false,
+      "visible_rgb_palette_from_source": true,
+      "visible_alpha_values_from_source": true,
+      "keyed_hue": "cyan",
+      "remaining_key_hue_pixels": 8,
+      "mask_scope": "edge connected plus documented visually confirmed interior holes",
+      "technical_status": "METRICS_PASS_VISUAL_REVIEW_PENDING"
+    },
+    {
+      "code": "I01",
+      "version": "v03",
+      "source_sha256": "5efa3d0ccb28bfb5e85fe91db4a086db8e603e9361ec86509142639bdbc83113",
+      "source_unchanged": true,
+      "output_sha256": "10711178d46408a191894b42ef79a8b99b981dbdb9a1dfcfa70c4c2ecb523f94",
+      "mode": "RGBA",
+      "size": [
+        128,
+        128
+      ],
+      "dimensions_pass": true,
+      "bbox": [
+        54,
+        44,
+        78,
+        86
+      ],
+      "margins_px": [
+        54,
+        44,
+        50,
+        42
+      ],
+      "required_margin_px": 24,
+      "margin_pass": true,
+      "nonzero_alpha_pixels": 470,
+      "fractional_alpha_pixels": 470,
+      "edge_alpha_pixels": 0,
+      "cyan_hue_pixels": 0,
+      "magenta_hue_pixels": 0,
+      "visual_state": "DRAFT_TECHNICAL",
+      "runtime_admission": false,
+      "visible_rgb_palette_from_source": true,
+      "visible_alpha_values_from_source": true,
+      "technical_status": "METRICS_PASS_VISUAL_REVIEW_PENDING"
+    },
+    {
+      "code": "I02",
+      "version": "v02",
+      "source_sha256": "6775ebae8d4ac23623f7289a3260ddcc80f24f2b0710f18b13ca91fc5baa08a7",
+      "source_unchanged": true,
+      "output_sha256": "453e372719f4135cf186da2478b1898b44011ebffd8ad7e23a7fc4f945eb8900",
+      "mode": "RGBA",
+      "size": [
+        128,
+        128
+      ],
+      "dimensions_pass": true,
+      "bbox": [
+        47,
+        36,
+        80,
+        94
+      ],
+      "margins_px": [
+        47,
+        36,
+        48,
+        34
+      ],
+      "required_margin_px": 24,
+      "margin_pass": true,
+      "nonzero_alpha_pixels": 857,
+      "fractional_alpha_pixels": 853,
+      "edge_alpha_pixels": 0,
+      "cyan_hue_pixels": 53,
+      "magenta_hue_pixels": 0,
+      "visual_state": "DRAFT_TECHNICAL",
+      "runtime_admission": false,
+      "visible_rgb_palette_from_source": true,
+      "visible_alpha_values_from_source": true,
+      "technical_status": "METRICS_PASS_VISUAL_REVIEW_PENDING"
+    },
+    {
+      "code": "AL01",
+      "version": "v02",
+      "source_sha256": "67e4b8d9ea29fb9475ad3eda355bbe3ba775fd4149eae8e0f3766b0ffd57e10d",
+      "source_unchanged": true,
+      "output_sha256": "bba7b91e3c261f3a66637fd74277e1d6b8788c8ac986e457c2bfdfe171c2caad",
+      "mode": "RGBA",
+      "size": [
+        1152,
+        192
+      ],
+      "dimensions_pass": true,
+      "bbox": [
+        18,
+        17,
+        1141,
+        171
+      ],
+      "margins_px": [
+        18,
+        17,
+        11,
+        21
+      ],
+      "required_margin_px": 0,
+      "margin_pass": true,
+      "nonzero_alpha_pixels": 87638,
+      "fractional_alpha_pixels": 0,
+      "edge_alpha_pixels": 0,
+      "cyan_hue_pixels": 0,
+      "magenta_hue_pixels": 2,
+      "visual_state": "DRAFT_TECHNICAL",
+      "runtime_admission": false,
+      "visible_rgb_palette_from_source": true,
+      "visible_alpha_values_from_source": true,
+      "keyed_hue": "magenta",
+      "remaining_key_hue_pixels": 2,
+      "mask_scope": "edge connected plus documented visually confirmed interior holes",
+      "technical_status": "HELD_ALTAR_INVARIANCE",
+      "body_roi_xyxy": [
+        65,
+        110,
+        125,
+        140
+      ],
+      "body_roi_nonopaque_pixels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "body_rgb_changed_pixels_vs_first": [
+        1779,
+        1795,
+        1750,
+        1784,
+        1790
+      ],
+      "frame_bases": [
+        [
+          18,
+          171,
+          182
+        ],
+        [
+          18,
+          171,
+          181
+        ],
+        [
+          18,
+          171,
+          181
+        ],
+        [
+          18,
+          171,
+          182
+        ],
+        [
+          18,
+          171,
+          181
+        ],
+        [
+          18,
+          171,
+          181
+        ]
+      ],
+      "body_roi_invariance_pass": false,
+      "body_opacity_roi_pass": true,
+      "full_body_opacity": "manual review required beyond explicit ROI",
+      "anchor_definition": "foreground left edge and bottom row; not animated flame",
+      "anchor_pass": true,
+      "frame_width_consistency": false,
+      "loop_seam_changed_pixels": 14694
+    },
+    {
+      "code": "EV01",
+      "version": "v02",
+      "source_sha256": "ca9f3a0b4262f47179925a3d4ef33349545e058c2dd994c0052ab35b33043dc7",
+      "source_unchanged": true,
+      "output_sha256": "40bddb0d4a7292b92739f4c620b4d8f3fea543907450e7a9fbb06082eb4e28ae",
+      "mode": "RGBA",
+      "size": [
+        256,
+        256
+      ],
+      "dimensions_pass": true,
+      "bbox": [
+        25,
+        63,
+        232,
+        216
+      ],
+      "margins_px": [
+        25,
+        63,
+        24,
+        40
+      ],
+      "required_margin_px": 0,
+      "margin_pass": true,
+      "nonzero_alpha_pixels": 14877,
+      "fractional_alpha_pixels": 0,
+      "edge_alpha_pixels": 0,
+      "cyan_hue_pixels": 0,
+      "magenta_hue_pixels": 1,
+      "visual_state": "DRAFT_TECHNICAL",
+      "runtime_admission": false,
+      "visible_rgb_palette_from_source": true,
+      "visible_alpha_values_from_source": true,
+      "keyed_hue": "magenta",
+      "remaining_key_hue_pixels": 1,
+      "mask_scope": "edge connected plus documented visually confirmed interior holes",
+      "technical_status": "METRICS_PASS_VISUAL_REVIEW_PENDING"
+    },
+    {
+      "code": "EV02",
+      "version": "v01",
+      "source_sha256": "f527418202c5156c5996c48b9fdd156ffa69044d69be43dd796106cafbfff0fd",
+      "source_unchanged": true,
+      "output_sha256": "eaf5fbf3a3bfcd820c699ce6a9934d3149e71cea27ab08b57921bac3173bf609",
+      "mode": "RGBA",
+      "size": [
+        256,
+        256
+      ],
+      "dimensions_pass": true,
+      "bbox": [
+        35,
+        50,
+        221,
+        226
+      ],
+      "margins_px": [
+        35,
+        50,
+        35,
+        30
+      ],
+      "required_margin_px": 0,
+      "margin_pass": true,
+      "nonzero_alpha_pixels": 23327,
+      "fractional_alpha_pixels": 0,
+      "edge_alpha_pixels": 0,
+      "cyan_hue_pixels": 0,
+      "magenta_hue_pixels": 0,
+      "visual_state": "DRAFT_TECHNICAL",
+      "runtime_admission": false,
+      "visible_rgb_palette_from_source": true,
+      "visible_alpha_values_from_source": true,
+      "keyed_hue": "magenta",
+      "remaining_key_hue_pixels": 0,
+      "mask_scope": "edge connected plus documented visually confirmed interior holes",
+      "technical_status": "METRICS_PASS_VISUAL_REVIEW_PENDING"
+    },
+    {
+      "code": "EV03",
+      "version": "v01",
+      "source_sha256": "ec5e95cdf195bd8ab0f24abb194668b1715bf2884e4b4dd5715343f91dbaf300",
+      "source_unchanged": true,
+      "output_sha256": "86175ac2edaa85a3a576ef9c54b824b06bd6a6af9e14a1d287dcef81ee61a0cd",
+      "mode": "RGBA",
+      "size": [
+        256,
+        256
+      ],
+      "dimensions_pass": true,
+      "bbox": [
+        23,
+        41,
+        227,
+        216
+      ],
+      "margins_px": [
+        23,
+        41,
+        29,
+        40
+      ],
+      "required_margin_px": 0,
+      "margin_pass": true,
+      "nonzero_alpha_pixels": 17754,
+      "fractional_alpha_pixels": 0,
+      "edge_alpha_pixels": 0,
+      "cyan_hue_pixels": 0,
+      "magenta_hue_pixels": 6,
+      "visual_state": "DRAFT_TECHNICAL",
+      "runtime_admission": false,
+      "visible_rgb_palette_from_source": true,
+      "visible_alpha_values_from_source": true,
+      "keyed_hue": "magenta",
+      "remaining_key_hue_pixels": 6,
+      "mask_scope": "edge connected plus documented visually confirmed interior holes",
+      "technical_status": "METRICS_PASS_VISUAL_REVIEW_PENDING"
+    },
+    {
+      "code": "EV04",
+      "version": "v02",
+      "source_sha256": "1e89e4d2ada3ccb5cb5bf666b7e068cb8a06c8f5a9bd665e01d5516ca59e34e0",
+      "source_unchanged": true,
+      "output_sha256": "0e553e882c195ea52a58563929dfa5e50db28f8362b0a60f030efd8eaba67941",
+      "mode": "RGBA",
+      "size": [
+        256,
+        256
+      ],
+      "dimensions_pass": true,
+      "bbox": [
+        53,
+        42,
+        219,
+        214
+      ],
+      "margins_px": [
+        53,
+        42,
+        37,
+        42
+      ],
+      "required_margin_px": 0,
+      "margin_pass": true,
+      "nonzero_alpha_pixels": 15624,
+      "fractional_alpha_pixels": 0,
+      "edge_alpha_pixels": 0,
+      "cyan_hue_pixels": 0,
+      "magenta_hue_pixels": 2,
+      "visual_state": "DRAFT_TECHNICAL",
+      "runtime_admission": false,
+      "visible_rgb_palette_from_source": true,
+      "visible_alpha_values_from_source": true,
+      "keyed_hue": "magenta",
+      "remaining_key_hue_pixels": 2,
+      "mask_scope": "edge connected plus documented visually confirmed interior holes",
+      "technical_status": "METRICS_PASS_VISUAL_REVIEW_PENDING"
+    },
+    {
+      "code": "EV05",
+      "version": "v02",
+      "source_sha256": "69bfac35a7819f8e56f17a982fd4e045de61fcb8bf947c7265a4f671fa81c568",
+      "source_unchanged": true,
+      "output_sha256": "27ec98c36fa53bae5a360c86fb7ee1f50247850d7e0c822e75aaa93e54299f59",
+      "mode": "RGBA",
+      "size": [
+        256,
+        256
+      ],
+      "dimensions_pass": true,
+      "bbox": [
+        17,
+        40,
+        242,
+        210
+      ],
+      "margins_px": [
+        17,
+        40,
+        14,
+        46
+      ],
+      "required_margin_px": 0,
+      "margin_pass": true,
+      "nonzero_alpha_pixels": 23602,
+      "fractional_alpha_pixels": 0,
+      "edge_alpha_pixels": 0,
+      "cyan_hue_pixels": 0,
+      "magenta_hue_pixels": 36,
+      "visual_state": "DRAFT_TECHNICAL",
+      "runtime_admission": false,
+      "visible_rgb_palette_from_source": true,
+      "visible_alpha_values_from_source": true,
+      "keyed_hue": "magenta",
+      "remaining_key_hue_pixels": 36,
+      "mask_scope": "edge connected plus documented visually confirmed interior holes",
+      "technical_status": "METRICS_PASS_VISUAL_REVIEW_PENDING"
+    },
+    {
+      "code": "EV06",
+      "version": "v02",
+      "source_sha256": "1cdb112dfbb9665746602566d2ef02a7614b21df0b46a180a733ea4fc2538ecc",
+      "source_unchanged": true,
+      "output_sha256": "56edac77bd08bee4de1a3fb038a8e33b1e4407a560a3a0fdb77ce1ed6cc016ab",
+      "mode": "RGBA",
+      "size": [
+        256,
+        256
+      ],
+      "dimensions_pass": true,
+      "bbox": [
+        29,
+        66,
+        227,
+        216
+      ],
+      "margins_px": [
+        29,
+        66,
+        29,
+        40
+      ],
+      "required_margin_px": 0,
+      "margin_pass": true,
+      "nonzero_alpha_pixels": 25352,
+      "fractional_alpha_pixels": 0,
+      "edge_alpha_pixels": 0,
+      "cyan_hue_pixels": 0,
+      "magenta_hue_pixels": 501,
+      "visual_state": "DRAFT_TECHNICAL",
+      "runtime_admission": false,
+      "visible_rgb_palette_from_source": true,
+      "visible_alpha_values_from_source": true,
+      "keyed_hue": "cyan",
+      "remaining_key_hue_pixels": 0,
+      "mask_scope": "edge connected plus documented visually confirmed interior holes",
+      "technical_status": "METRICS_PASS_VISUAL_REVIEW_PENDING"
+    }
+  ],
+  "visual_review": "PENDING",
+  "runtime_admission": false,
+  "limitations": [
+    "Hue counts include legitimate object colors; not proof of residue.",
+    "Altar body ROI is a conservative sample, not whole-body segmentation.",
+    "SE02/SE03 proportional foreground scaling matches silhouette height/base, not camera geometry."
+  ]
+}
