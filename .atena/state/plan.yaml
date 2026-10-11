@@ -13,16 +13,19 @@ fila028_preparation_publish_2026_10_10:
   return_checkpoint: S-007/OWNER-PREPARATION-REVIEW
 fila028_preparation_2026_10_10:
   state_file: .atena/state/fila028-preparation.yaml
-  status: DELIVERED_DRAFT_WITH_HELD_ALTAR_AWAITING_OWNER_REVIEW
+  status: ACCEPTED_33_HELD_ALTAR
   mode: per-plan
-  checkpoint: S-007/OWNER-PREPARATION-REVIEW
+  checkpoint: S-007/ACCEPTED_WITH_HELD_ALTAR
+  owner_acceptance: 'continuando do ultimo checkpoint, está aprovado, pode comitar'
+  accepted_derivatives: 33
+  visual_register: .atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md
   scope_approval: 'Aprovo a preparação das 34 fontes'
   completed_steps: 6
   total_steps: 6
   held: [AL01]
   evidence: .atena/evidence/fila028-preparation-2026-10-10.md
   source_state: CANON_SOURCE_VISUAL_ONLY
-  derived_state: DRAFT_TECHNICAL
+  derived_state: MIXED_CANON_PREPARATION_33_DRAFT_ALTAR
   runtime_admission: false
 fila028_remaining_2026_10_10:
   state_file: .atena/state/fila028-remaining.yaml

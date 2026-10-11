@@ -1,9 +1,9 @@
 {
   "revision": "FILA-028-PREP/v01",
-  "status": "DELIVERED_DRAFT_WITH_HELD_ALTAR_AWAITING_OWNER_REVIEW",
+  "status": "ACCEPTED_33_HELD_ALTAR",
   "previous_commit": "09bdda2df184e15cf5748c4c779acebe1f360978",
   "source_visual_state": "CANON",
-  "derived_output_state": "DRAFT_TECHNICAL",
+  "derived_output_state": "MIXED_CANON_PREPARATION_33_DRAFT_ALTAR",
   "runtime_admission": false,
   "entries": [
     {
@@ -24,7 +24,8 @@
       ],
       "operation": "preserve_alpha_resize",
       "hash_verified": true,
-      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC01_v01.png"
+      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC01_v01.png",
+      "derived_state": "CANON_PREPARATION_VISUAL_ONLY"
     },
     {
       "code": "IC02",
@@ -44,7 +45,8 @@
       ],
       "operation": "preserve_alpha_resize",
       "hash_verified": true,
-      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC02_v02.png"
+      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC02_v02.png",
+      "derived_state": "CANON_PREPARATION_VISUAL_ONLY"
     },
     {
       "code": "IC03",
@@ -64,7 +66,8 @@
       ],
       "operation": "preserve_alpha_resize",
       "hash_verified": true,
-      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC03_v02.png"
+      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC03_v02.png",
+      "derived_state": "CANON_PREPARATION_VISUAL_ONLY"
     },
     {
       "code": "IC04",
@@ -84,7 +87,8 @@
       ],
       "operation": "preserve_alpha_resize",
       "hash_verified": true,
-      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC04_v02.png"
+      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC04_v02.png",
+      "derived_state": "CANON_PREPARATION_VISUAL_ONLY"
     },
     {
       "code": "IC05",
@@ -104,7 +108,8 @@
       ],
       "operation": "preserve_alpha_resize",
       "hash_verified": true,
-      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC05_v03.png"
+      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC05_v03.png",
+      "derived_state": "CANON_PREPARATION_VISUAL_ONLY"
     },
     {
       "code": "IC06",
@@ -124,7 +129,8 @@
       ],
       "operation": "preserve_alpha_resize",
       "hash_verified": true,
-      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC06_v01.png"
+      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC06_v01.png",
+      "derived_state": "CANON_PREPARATION_VISUAL_ONLY"
     },
     {
       "code": "IC07",
@@ -144,7 +150,8 @@
       ],
       "operation": "preserve_alpha_resize",
       "hash_verified": true,
-      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC07_v01.png"
+      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC07_v01.png",
+      "derived_state": "CANON_PREPARATION_VISUAL_ONLY"
     },
     {
       "code": "IC08",
@@ -164,7 +171,8 @@
       ],
       "operation": "preserve_alpha_resize",
       "hash_verified": true,
-      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC08_v02.png"
+      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC08_v02.png",
+      "derived_state": "CANON_PREPARATION_VISUAL_ONLY"
     },
     {
       "code": "IC09",
@@ -184,7 +192,8 @@
       ],
       "operation": "preserve_alpha_resize",
       "hash_verified": true,
-      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC09_v02.png"
+      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC09_v02.png",
+      "derived_state": "CANON_PREPARATION_VISUAL_ONLY"
     },
     {
       "code": "IC10",
@@ -204,7 +213,8 @@
       ],
       "operation": "preserve_alpha_resize",
       "hash_verified": true,
-      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC10_v01.png"
+      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC10_v01.png",
+      "derived_state": "CANON_PREPARATION_VISUAL_ONLY"
     },
     {
       "code": "IC11",
@@ -224,7 +234,8 @@
       ],
       "operation": "preserve_alpha_resize",
       "hash_verified": true,
-      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC11_v01.png"
+      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC11_v01.png",
+      "derived_state": "CANON_PREPARATION_VISUAL_ONLY"
     },
     {
       "code": "IC12",
@@ -244,7 +255,8 @@
       ],
       "operation": "preserve_alpha_resize",
       "hash_verified": true,
-      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC12_v02.png"
+      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC12_v02.png",
+      "derived_state": "CANON_PREPARATION_VISUAL_ONLY"
     },
     {
       "code": "IC13",
@@ -264,7 +276,8 @@
       ],
       "operation": "preserve_alpha_resize",
       "hash_verified": true,
-      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC13_v02.png"
+      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC13_v02.png",
+      "derived_state": "CANON_PREPARATION_VISUAL_ONLY"
     },
     {
       "code": "AR01",
@@ -284,7 +297,8 @@
       ],
       "operation": "chroma_key_resize",
       "hash_verified": true,
-      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/AR01_v02.png"
+      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/AR01_v02.png",
+      "derived_state": "CANON_PREPARATION_VISUAL_ONLY"
     },
     {
       "code": "SE01",
@@ -304,7 +318,8 @@
       ],
       "operation": "chroma_key_resize",
       "hash_verified": true,
-      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE01_v03.png"
+      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE01_v03.png",
+      "derived_state": "CANON_PREPARATION_VISUAL_ONLY"
     },
     {
       "code": "SE02",
@@ -324,7 +339,8 @@
       ],
       "operation": "chroma_key_resize",
       "hash_verified": true,
-      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE02_v03.png"
+      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE02_v03.png",
+      "derived_state": "CANON_PREPARATION_VISUAL_ONLY"
     },
     {
       "code": "SE03",
@@ -344,7 +360,8 @@
       ],
       "operation": "chroma_key_resize",
       "hash_verified": true,
-      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE03_v02.png"
+      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE03_v02.png",
+      "derived_state": "CANON_PREPARATION_VISUAL_ONLY"
     },
     {
       "code": "SE04",
@@ -364,7 +381,8 @@
       ],
       "operation": "chroma_key_resize",
       "hash_verified": true,
-      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE04_v02.png"
+      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE04_v02.png",
+      "derived_state": "CANON_PREPARATION_VISUAL_ONLY"
     },
     {
       "code": "SE05",
@@ -384,7 +402,8 @@
       ],
       "operation": "chroma_key_resize",
       "hash_verified": true,
-      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE05_v02.png"
+      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE05_v02.png",
+      "derived_state": "CANON_PREPARATION_VISUAL_ONLY"
     },
     {
       "code": "SE06",
@@ -404,7 +423,8 @@
       ],
       "operation": "chroma_key_resize",
       "hash_verified": true,
-      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE06_v02.png"
+      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE06_v02.png",
+      "derived_state": "CANON_PREPARATION_VISUAL_ONLY"
     },
     {
       "code": "SE07",
@@ -424,7 +444,8 @@
       ],
       "operation": "chroma_key_resize",
       "hash_verified": true,
-      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE07_v02.png"
+      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE07_v02.png",
+      "derived_state": "CANON_PREPARATION_VISUAL_ONLY"
     },
     {
       "code": "SE08",
@@ -444,7 +465,8 @@
       ],
       "operation": "chroma_key_resize",
       "hash_verified": true,
-      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE08_v02.png"
+      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE08_v02.png",
+      "derived_state": "CANON_PREPARATION_VISUAL_ONLY"
     },
     {
       "code": "SE09",
@@ -464,7 +486,8 @@
       ],
       "operation": "chroma_key_resize",
       "hash_verified": true,
-      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE09_v02.png"
+      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE09_v02.png",
+      "derived_state": "CANON_PREPARATION_VISUAL_ONLY"
     },
     {
       "code": "SE10",
@@ -484,7 +507,8 @@
       ],
       "operation": "chroma_key_resize",
       "hash_verified": true,
-      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE10_v02.png"
+      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE10_v02.png",
+      "derived_state": "CANON_PREPARATION_VISUAL_ONLY"
     },
     {
       "code": "SE11",
@@ -504,7 +528,8 @@
       ],
       "operation": "chroma_key_resize",
       "hash_verified": true,
-      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE11_v02.png"
+      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE11_v02.png",
+      "derived_state": "CANON_PREPARATION_VISUAL_ONLY"
     },
     {
       "code": "I01",
@@ -524,7 +549,8 @@
       ],
       "operation": "preserve_alpha_resize",
       "hash_verified": true,
-      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/I01_v03.png"
+      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/I01_v03.png",
+      "derived_state": "CANON_PREPARATION_VISUAL_ONLY"
     },
     {
       "code": "I02",
@@ -544,7 +570,8 @@
       ],
       "operation": "preserve_alpha_resize",
       "hash_verified": true,
-      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/I02_v02.png"
+      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/I02_v02.png",
+      "derived_state": "CANON_PREPARATION_VISUAL_ONLY"
     },
     {
       "code": "AL01",
@@ -569,7 +596,8 @@
         2
       ],
       "native_grid_divisible": true,
-      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/AL01_v02.png"
+      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/AL01_v02.png",
+      "derived_state": "DRAFT_HELD"
     },
     {
       "code": "EV01",
@@ -589,7 +617,8 @@
       ],
       "operation": "chroma_key_resize",
       "hash_verified": true,
-      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/EV01_v02.png"
+      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/EV01_v02.png",
+      "derived_state": "CANON_PREPARATION_VISUAL_ONLY"
     },
     {
       "code": "EV02",
@@ -609,7 +638,8 @@
       ],
       "operation": "chroma_key_resize",
       "hash_verified": true,
-      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/EV02_v01.png"
+      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/EV02_v01.png",
+      "derived_state": "CANON_PREPARATION_VISUAL_ONLY"
     },
     {
       "code": "EV03",
@@ -629,7 +659,8 @@
       ],
       "operation": "chroma_key_resize",
       "hash_verified": true,
-      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/EV03_v01.png"
+      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/EV03_v01.png",
+      "derived_state": "CANON_PREPARATION_VISUAL_ONLY"
     },
     {
       "code": "EV04",
@@ -649,7 +680,8 @@
       ],
       "operation": "chroma_key_resize",
       "hash_verified": true,
-      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/EV04_v02.png"
+      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/EV04_v02.png",
+      "derived_state": "CANON_PREPARATION_VISUAL_ONLY"
     },
     {
       "code": "EV05",
@@ -669,7 +701,8 @@
       ],
       "operation": "chroma_key_resize",
       "hash_verified": true,
-      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/EV05_v02.png"
+      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/EV05_v02.png",
+      "derived_state": "CANON_PREPARATION_VISUAL_ONLY"
     },
     {
       "code": "EV06",
@@ -689,7 +722,8 @@
       ],
       "operation": "chroma_key_resize",
       "hash_verified": true,
-      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/EV06_v02.png"
+      "proposed_output": ".atena/generated/fila028-preparation-2026-10-10/normalized/EV06_v02.png",
+      "derived_state": "CANON_PREPARATION_VISUAL_ONLY"
     }
   ],
   "scope_approval": "Aprovo a preparação das 34 fontes",
@@ -697,5 +731,7 @@
     "AL01"
   ],
   "audit": "audit.json",
-  "gallery": "index.html"
+  "gallery": "index.html",
+  "owner_acceptance_register": "approved-derivatives.json",
+  "owner_reply": "continuando do ultimo checkpoint, está aprovado, pode comitar"
 }

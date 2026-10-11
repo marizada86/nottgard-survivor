@@ -1,0 +1,311 @@
+{
+  "revision": "FILA-028-PREP/v01",
+  "authority": "owner",
+  "authorization": "continuando do ultimo checkpoint, está aprovado, pode comitar",
+  "request_classification": "IN_PLAN",
+  "accepted_count": 33,
+  "held": [
+    "AL01"
+  ],
+  "held_reason": "Body invariance failed; no waiver or correction authorized",
+  "runtime_admission": false,
+  "entries": [
+    {
+      "code": "IC01",
+      "source_version": "v01",
+      "derived_revision": "FILA-028-PREP/v01",
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC01_v01.png",
+      "sha256": "acbee13cc408c869d562787b2c0aed9e4a337be4c99a37a63e477181990e991b",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_admission": false
+    },
+    {
+      "code": "IC02",
+      "source_version": "v02",
+      "derived_revision": "FILA-028-PREP/v01",
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC02_v02.png",
+      "sha256": "f540a20278456d49a620e2935f2ab2c5047ba618bd84bb2a8359ec607420d39b",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_admission": false
+    },
+    {
+      "code": "IC03",
+      "source_version": "v02",
+      "derived_revision": "FILA-028-PREP/v01",
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC03_v02.png",
+      "sha256": "60978a596d0050fec3ed4edbaf696f817b42c3047f02acc48dadbb0ca19d2a16",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_admission": false
+    },
+    {
+      "code": "IC04",
+      "source_version": "v02",
+      "derived_revision": "FILA-028-PREP/v01",
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC04_v02.png",
+      "sha256": "e28c4dec2fc31b6dfb76a9710835745eccf32e45dcdbbac057a0460f028abd09",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_admission": false
+    },
+    {
+      "code": "IC05",
+      "source_version": "v03",
+      "derived_revision": "FILA-028-PREP/v01",
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC05_v03.png",
+      "sha256": "115d31d7d861f9c7a3d1c58ce42b4b82880079370015ec062c6444f23eed25fc",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_admission": false
+    },
+    {
+      "code": "IC06",
+      "source_version": "v01",
+      "derived_revision": "FILA-028-PREP/v01",
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC06_v01.png",
+      "sha256": "136fa0e45b51d47278cc3dc074765d567f3ac1e0f5cf02239b5ee9769ee845f5",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_admission": false
+    },
+    {
+      "code": "IC07",
+      "source_version": "v01",
+      "derived_revision": "FILA-028-PREP/v01",
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC07_v01.png",
+      "sha256": "232162f425d96f57d2a4a20fb296b1cd5a26d0277422db1973f2ff61470e2142",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_admission": false
+    },
+    {
+      "code": "IC08",
+      "source_version": "v02",
+      "derived_revision": "FILA-028-PREP/v01",
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC08_v02.png",
+      "sha256": "d03bf703b8267fcebc94bfd280734e54920cfc8280f6e90efece83f7b8b70297",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_admission": false
+    },
+    {
+      "code": "IC09",
+      "source_version": "v02",
+      "derived_revision": "FILA-028-PREP/v01",
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC09_v02.png",
+      "sha256": "015cbd7252a22a44e29070c6af2680c604c9471793829ce19fd978f6a453ed0b",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_admission": false
+    },
+    {
+      "code": "IC10",
+      "source_version": "v01",
+      "derived_revision": "FILA-028-PREP/v01",
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC10_v01.png",
+      "sha256": "28c2b29999d9320a6cf9d35c7ab4a25424e5815b7006120ceacac4228b23a9e2",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_admission": false
+    },
+    {
+      "code": "IC11",
+      "source_version": "v01",
+      "derived_revision": "FILA-028-PREP/v01",
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC11_v01.png",
+      "sha256": "a62d5e82bed4615013de261f38744c19b88ed52352dc5936c3bf3456b7fe8aa4",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_admission": false
+    },
+    {
+      "code": "IC12",
+      "source_version": "v02",
+      "derived_revision": "FILA-028-PREP/v01",
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC12_v02.png",
+      "sha256": "005491b516d995cd36e68f43cacd514a7242b73f211843d84f5460b34c567d2d",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_admission": false
+    },
+    {
+      "code": "IC13",
+      "source_version": "v02",
+      "derived_revision": "FILA-028-PREP/v01",
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC13_v02.png",
+      "sha256": "55fe65825a65ab7b75cb834b1af7ae661060ec766c1c33d396ed2b1ea31d1998",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_admission": false
+    },
+    {
+      "code": "AR01",
+      "source_version": "v02",
+      "derived_revision": "FILA-028-PREP/v01",
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/AR01_v02.png",
+      "sha256": "99130e68a2271e7e4e21bca54028f63c1136a969214a837a1e7ee5d3e71dbb3a",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_admission": false
+    },
+    {
+      "code": "SE01",
+      "source_version": "v03",
+      "derived_revision": "FILA-028-PREP/v01",
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE01_v03.png",
+      "sha256": "00bd931215078db6c970886aae447afa353897a4be785589137fc9616b19a002",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_admission": false
+    },
+    {
+      "code": "SE02",
+      "source_version": "v03",
+      "derived_revision": "FILA-028-PREP/v01",
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE02_v03.png",
+      "sha256": "417cc37b899b4b7f8d811f753741eaeae9c4423c092d8bc7e66033d336386a4a",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_admission": false
+    },
+    {
+      "code": "SE03",
+      "source_version": "v02",
+      "derived_revision": "FILA-028-PREP/v01",
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE03_v02.png",
+      "sha256": "0c6f45dece0434306399a771ae2918fdadcda30a38203c62ac31dbc238673d8a",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_admission": false
+    },
+    {
+      "code": "SE04",
+      "source_version": "v02",
+      "derived_revision": "FILA-028-PREP/v01",
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE04_v02.png",
+      "sha256": "dbca7885d5a14c70f0f644cc00723fce28e8090da59200977937f1f91fe76581",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_admission": false
+    },
+    {
+      "code": "SE05",
+      "source_version": "v02",
+      "derived_revision": "FILA-028-PREP/v01",
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE05_v02.png",
+      "sha256": "62bbbefc4cfda83d3de2a6e0034dd1d0fa0dc66324245ba12249016a7eca8a1b",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_admission": false
+    },
+    {
+      "code": "SE06",
+      "source_version": "v02",
+      "derived_revision": "FILA-028-PREP/v01",
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE06_v02.png",
+      "sha256": "f0285a7578b0c1fff0c92ed4d01a931f9b10ecabc1b45608caf3636ee31da289",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_admission": false
+    },
+    {
+      "code": "SE07",
+      "source_version": "v02",
+      "derived_revision": "FILA-028-PREP/v01",
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE07_v02.png",
+      "sha256": "22bae573cfba69f3a947fae91b29abae2c7552a8eb216e7eca0c3387cb1d9a30",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_admission": false
+    },
+    {
+      "code": "SE08",
+      "source_version": "v02",
+      "derived_revision": "FILA-028-PREP/v01",
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE08_v02.png",
+      "sha256": "eabc7ec8b7831bd6667bca124f06d0328af8755ded4b74774602e7199a491393",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_admission": false
+    },
+    {
+      "code": "SE09",
+      "source_version": "v02",
+      "derived_revision": "FILA-028-PREP/v01",
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE09_v02.png",
+      "sha256": "bfba3d732c57399ab626ded2a3fc6f84ffd6387f9b6c74cd86bfea822dfe3353",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_admission": false
+    },
+    {
+      "code": "SE10",
+      "source_version": "v02",
+      "derived_revision": "FILA-028-PREP/v01",
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE10_v02.png",
+      "sha256": "92d8581c57854fd7517c194554e9d08972af886ce42813e0a00a22b6153f4780",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_admission": false
+    },
+    {
+      "code": "SE11",
+      "source_version": "v02",
+      "derived_revision": "FILA-028-PREP/v01",
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE11_v02.png",
+      "sha256": "00b594ae1e037af4d6b26f7533d64ea72f16d28cf89b5370efba5ebec0e65bab",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_admission": false
+    },
+    {
+      "code": "I01",
+      "source_version": "v03",
+      "derived_revision": "FILA-028-PREP/v01",
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/I01_v03.png",
+      "sha256": "10711178d46408a191894b42ef79a8b99b981dbdb9a1dfcfa70c4c2ecb523f94",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_admission": false
+    },
+    {
+      "code": "I02",
+      "source_version": "v02",
+      "derived_revision": "FILA-028-PREP/v01",
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/I02_v02.png",
+      "sha256": "453e372719f4135cf186da2478b1898b44011ebffd8ad7e23a7fc4f945eb8900",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_admission": false
+    },
+    {
+      "code": "EV01",
+      "source_version": "v02",
+      "derived_revision": "FILA-028-PREP/v01",
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/EV01_v02.png",
+      "sha256": "40bddb0d4a7292b92739f4c620b4d8f3fea543907450e7a9fbb06082eb4e28ae",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_admission": false
+    },
+    {
+      "code": "EV02",
+      "source_version": "v01",
+      "derived_revision": "FILA-028-PREP/v01",
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/EV02_v01.png",
+      "sha256": "eaf5fbf3a3bfcd820c699ce6a9934d3149e71cea27ab08b57921bac3173bf609",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_admission": false
+    },
+    {
+      "code": "EV03",
+      "source_version": "v01",
+      "derived_revision": "FILA-028-PREP/v01",
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/EV03_v01.png",
+      "sha256": "86175ac2edaa85a3a576ef9c54b824b06bd6a6af9e14a1d287dcef81ee61a0cd",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_admission": false
+    },
+    {
+      "code": "EV04",
+      "source_version": "v02",
+      "derived_revision": "FILA-028-PREP/v01",
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/EV04_v02.png",
+      "sha256": "0e553e882c195ea52a58563929dfa5e50db28f8362b0a60f030efd8eaba67941",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_admission": false
+    },
+    {
+      "code": "EV05",
+      "source_version": "v02",
+      "derived_revision": "FILA-028-PREP/v01",
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/EV05_v02.png",
+      "sha256": "27ec98c36fa53bae5a360c86fb7ee1f50247850d7e0c822e75aaa93e54299f59",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_admission": false
+    },
+    {
+      "code": "EV06",
+      "source_version": "v02",
+      "derived_revision": "FILA-028-PREP/v01",
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/EV06_v02.png",
+      "sha256": "56edac77bd08bee4de1a3fb038a8e33b1e4407a560a3a0fdb77ce1ed6cc016ab",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_admission": false
+    }
+  ]
+}

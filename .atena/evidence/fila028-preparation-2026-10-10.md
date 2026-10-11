@@ -1,5 +1,11 @@
 # FILA-028-PREP/v01 — preparação técnica local DRAFT
 
+## Aceite posterior do checkpoint
+
+Dono: “continuando do ultimo checkpoint, está aprovado, pode comitar”. IN_PLAN: 33 derivadas da revisão FILA-028-PREP/v01 aceitas e promovidas a CANON de preparação visual, identificadas por código/revisão/path/SHA256 no [registro](../generated/fila028-preparation-2026-10-10/approved-derivatives.json) e [canon de aceite](../vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md). AL01 e seis frames DRAFT retidos, sem exceção de invariância. As observações DRAFT/revisão pendente abaixo descrevem a entrega anterior; este aceite resolve a revisão visual das outras 33 peças, sem modificar métricas ou imagens.
+
+Hashes das 34 fontes e derivadas novamente conferidos; galeria reconciliada com aceite de 33 e retenção de AL01. Aprovação permite commit local destes registros, sem novo push ou integração. Backlog permanece P0=0, quatro P1 abertos, quatorze implementados aguardando playtest. Próximo objetivo preparado: definir escopo de correção do altar, entradas fonte v02/frames/ROI/auditoria, saída plano de correção com contrato de corpo invariável e opacidade; execução ainda sem aprovação. PLAN-071 e retorno dos heróis preservados.
+
 ## Publicação solicitada após entrega
 
 Resultado: pacote commitado em `711e585371bbb785a1ccefde77dfa0a2de648a95` (79 arquivos), push normal origin concluído de 859cc4e até 711e585 na branch da fila, incluindo 09bdda2. `git ls-remote --heads` confirmou SHA remoto igual ao commit. Este recibo operacional será commitado e publicado na mesma autorização; sem alterar derivadas ou aceite. CI não verificado.
