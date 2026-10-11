@@ -1,0 +1,19 @@
+# FILA-026 — admissão e validação S013
+
+Checkpoint Git posterior: **“atena, aprovado commite e push”** autoriza o commit de arte da FILA-026 e o push na branch existente `codex/assets-preparation-2026-10-10`. Preparação em andamento; os estados de commit não autorizado abaixo descrevem o escopo anterior de admissão. Main, integração S014 e build não entram neste checkpoint. Mudanças locais dos heróis preservadas fora do commit; o push transporta também os dois commits anteriores já aprovados da FILA-028.
+
+PLAN-065/SPEC-132, IN_PLAN, modo per-plan preservado. Autorização explícita: **“Autorizo a admissão e validação”**, para dez PNGs aceitos (L01 v01 + L03–L05, P01–P03, C01–C03 v01), hotspots reais, imports, manifesto e testes existentes. Sem commit, push ou build; nenhum hookup adicional S014 foi executado.
+
+Entradas visuais CANON: [L01 G1](../vault/canon/ASSET-APPROVAL-FILA026-L01-v01.md), [nove G2](../vault/canon/ASSET-APPROVAL-FILA026-G2-v01.md), [proposta aprovada](../generated/fila026-remaining-2026-10-11/admission-proposal.json). Identidade N/A, UI sem personagem/entidade. Nenhuma lacuna BLOCKING na admissão. L02 opcional deferida.
+
+Dez cópias byte a byte em `assets/ui/title/`, `assets/ui/lettering/` e `assets/ui/cursor/`; hashes preparados/finais idênticos. Nenhum destino existente sobrescrito. `data/cursor.json` atualizado para C01 (1,1), C02 (4,1), C03 (20,20), com formas/tamanhos preservados. O manifesto de produção passou de 269 para 279 entradas e o valor esperado acompanha o incremento; as 269 entradas anteriores foram comparadas e permanecem iguais. Backups exatos do manifesto e cursor anteriores em `admission-recovery/` no pacote.
+
+[Recibo de admissão](../generated/fila026-remaining-2026-10-11/admission-receipt.json) · [Registro canônico de admissão 031](../vault/canon/ASSET-APPROVAL-REGISTER-031-fila026-admission-2026-10-11.json) · [Manifesto de produção](../generated/ASSET-PRODUCTION-MANIFEST-001.json).
+
+Godot 4.7.2 stable: importação concluída e dez texturas carregadas nos tamanhos exatos. A primeira chamada com saída redirecionada não produziu log útil e terminou; a tentativa de encerrar o PID foi recusada pelo próprio guard de identidade, sem encerrar processo. Repetição com path absoluto/cache permitido concluiu; sem processo residual na inspeção. Avisos do sandbox sobre log de usuário/certificados ocorreram no runner, sem impedir resultados verificados.
+
+[Runner de verificação](../generated/fila026-remaining-2026-10-11/validate_admission.gd) executou `tests/test_cursor.gd` e `tests/test_lettering_assets.gd` existentes: **zero falhas**. [Resultado Godot](../generated/fila026-remaining-2026-10-11/admission-godot-check.json) confirma dez recursos, dimensões, margens/cantos das placas e banners, formas do cursor, hotspots, regras AUTO/MOUSE/modais e fallback. São verificações técnicas; não provam experiência em janela real nem substituem playtest. S015 (suíte completa/capturas) continua pendente.
+
+S013: admissão/validação concluídas, commit de arte pendente. Posição 13/16, doze passos integralmente concluídos; três após o atual. Próximo objetivo: checkpoint de commit de arte S013, separado do código conforme plano e política Git; entradas: dez PNGs, metadata `.import`, hotspots, registros/manifesto/evidência. Commit não autorizado neste escopo. S014 conecta banners/placas restantes sob checkpoint próprio; S015 verifica escopo completo; S016 reconcilia e fecha. PLAN-071 e cadeia de retornos preservados. Backlog: zero P0, quatro P1 abertos (BUG-025/027/028/029), 14 implementados aguardando playtest, zero alertas.
+
+Contrato final PASS: hashes aceitos, imports, manifesto e links locais conferidos; `git diff --check` sem erros. Apenas `data/cursor.json` mudou entre os arquivos de runtime já versionados; os dez PNGs e `.import` são novos. Nenhum código de UI, dependência, commit, push ou build alterado/executado. Os avisos CRLF do Git são informativos.

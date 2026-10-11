@@ -1,0 +1,202 @@
+{
+  "plan": "PLAN-065",
+  "spec": "SPEC-132",
+  "queue": "FILA-026",
+  "step": "S-009",
+  "step_position": 9,
+  "total_steps": 16,
+  "revision": "L01/v01",
+  "content_state": "MIXED_CANON_VISUAL_G1_V01_DRAFT_V02",
+  "runtime_admission": false,
+  "tool": "built-in imagegen for generation/edit; Godot 4.7.2 for approved deterministic key/crop/resize",
+  "reference_hashes": {
+    "assets/ui/title/title_background.png": "6a0d949542c2ac0dc1b12d1612b13c49754c926c5d47af90a6fca8fc85cea471",
+    "assets/ui/evolucao_painel_moldura.png": "cd8863b5733b44248217a8020069ca140d48fa525a73009e246ae5e76b7689c0"
+  },
+  "generated_candidates": 2,
+  "recommended": "v02",
+  "gate": "G1_ACCEPTED",
+  "records": [
+    {
+      "content_state": "CANON_VISUAL_G1_REFERENCE",
+      "final": "prepared/L01_v01.png",
+      "final_size": [
+        700,
+        176
+      ],
+      "interpolation": "nearest",
+      "key_pixels_removed": 1224313,
+      "native": "prepared/L01_v01_native.png",
+      "padded_crop": [
+        0,
+        309,
+        1536,
+        695
+      ],
+      "revision": "v01",
+      "runtime_admission": false,
+      "small": "previews/L01_v01_300x48.png",
+      "small_size": [
+        191,
+        48
+      ],
+      "source": "C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/.atena/generated/art-candidates/lettering/l01_v01.png",
+      "source_bbox": [
+        3,
+        313,
+        1533,
+        691
+      ],
+      "source_size": [
+        1536,
+        1024
+      ],
+      "title": "previews/L01_v01_title_1280x720.png",
+      "source_sha256": "4018e2bbc3ed4b41628e4296e3308d2748ea36050a013e75de48d02ff3feb5c2",
+      "local_source_snapshot": "sources/L01_v01.png",
+      "key_rule": "g,b>90; g-r,b-r>25; abs(g-b)<65; remove cyan key and cyan antialias residue only",
+      "checks": {
+        "source_snapshot_identical": true,
+        "crop_matches_exact_key_mask": true,
+        "non_key_pixels_unchanged": true,
+        "rgba": true,
+        "proportional_resize": true,
+        "exact_text_visual_review": "NOTTGARD / SURVIVORS; checked letter by letter",
+        "title_composite": "Illustrative composition on actual title art, y=24; not a runtime capture",
+        "human_style_acceptance": "ACCEPTED_G1",
+        "human_small_size_acceptance": "ACCEPTED_G1"
+      },
+      "outputs": {
+        "native": {
+          "path": "prepared/L01_v01_native.png",
+          "size": [
+            1536,
+            386
+          ],
+          "sha256": "d867798ef23671cc7d5d188ea246a953687cb805bc4b35f89ff82abafd1409d9"
+        },
+        "final": {
+          "path": "prepared/L01_v01.png",
+          "size": [
+            700,
+            176
+          ],
+          "sha256": "5d5214fbfad023c90ecd8e46a86f8efeded578e9a8009b685d3ff2f04b4eecb5"
+        },
+        "small": {
+          "path": "previews/L01_v01_300x48.png",
+          "size": [
+            191,
+            48
+          ],
+          "sha256": "4604b72d4e53be0af2965381ea8e8228645396cf87740559eecef70ac9b49cef"
+        },
+        "title": {
+          "path": "previews/L01_v01_title_1280x720.png",
+          "size": [
+            1280,
+            720
+          ],
+          "sha256": "5e81cc0be042c5bda88db06f318b40af17adb96194e10074c684590545671ae5"
+        }
+      }
+    },
+    {
+      "content_state": "DRAFT_NOT_SELECTED",
+      "final": "prepared/L01_v02.png",
+      "final_size": [
+        905,
+        176
+      ],
+      "interpolation": "nearest",
+      "key_pixels_removed": 1324082,
+      "native": "prepared/L01_v02_native.png",
+      "padded_crop": [
+        14,
+        373,
+        1522,
+        666
+      ],
+      "revision": "v02",
+      "runtime_admission": false,
+      "small": "previews/L01_v02_300x48.png",
+      "small_size": [
+        247,
+        48
+      ],
+      "source": "C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/.atena/generated/art-candidates/lettering/l01_v02.png",
+      "source_bbox": [
+        18,
+        377,
+        1518,
+        662
+      ],
+      "source_size": [
+        1536,
+        1024
+      ],
+      "title": "previews/L01_v02_title_1280x720.png",
+      "source_sha256": "67fdcd3bcbd07606c9ee6d3e00ba0a0460edcbf6759fe48ea5167230b50250f2",
+      "local_source_snapshot": "sources/L01_v02.png",
+      "key_rule": "g,b>90; g-r,b-r>25; abs(g-b)<65; remove cyan key and cyan antialias residue only",
+      "checks": {
+        "source_snapshot_identical": true,
+        "crop_matches_exact_key_mask": true,
+        "non_key_pixels_unchanged": true,
+        "rgba": true,
+        "proportional_resize": true,
+        "exact_text_visual_review": "NOTTGARD / SURVIVORS; checked letter by letter",
+        "title_composite": "Illustrative composition on actual title art, y=24; not a runtime capture",
+        "human_style_acceptance": "NOT_SELECTED",
+        "human_small_size_acceptance": "NOT_SELECTED"
+      },
+      "outputs": {
+        "native": {
+          "path": "prepared/L01_v02_native.png",
+          "size": [
+            1508,
+            293
+          ],
+          "sha256": "86ff6f78d181999b990855ebbaa3f26b6a92c96dd308b54cace1c71a83d7bb4e"
+        },
+        "final": {
+          "path": "prepared/L01_v02.png",
+          "size": [
+            905,
+            176
+          ],
+          "sha256": "440dea65d38f6a504ca6450f4a679f716b19dccaf9e46881c112fc61c34d2bb9"
+        },
+        "small": {
+          "path": "previews/L01_v02_300x48.png",
+          "size": [
+            247,
+            48
+          ],
+          "sha256": "a27526cb60df526139161884eaaa60867bd9aea035d90b8860539897bfd83f16"
+        },
+        "title": {
+          "path": "previews/L01_v02_title_1280x720.png",
+          "size": [
+            1280,
+            720
+          ],
+          "sha256": "b9a846d3900dabfe8b5c90d1e211385fcb03317271ad9fb06b9db9ea24bd91ae"
+        }
+      }
+    }
+  ],
+  "next": "After G1: L03 victory banner, then L04/L05/P01/P02/P03/C01/C02/C03. L02 remains optional. No automatic admission, commit or push.",
+  "owner_selection": {
+    "date": "2026-10-11",
+    "gate": "G1",
+    "status": "ACCEPTED",
+    "owner_reply": "Aprovo L01 v01",
+    "selected": "v01",
+    "content_state": "CANON_VISUAL_G1_REFERENCE",
+    "scope": "Estilo e leitura em caixa 300x48 da L01 v01; referencia das demais pecas",
+    "runtime_admission": false,
+    "register": ".atena/vault/canon/ASSET-APPROVAL-FILA026-L01-v01.md"
+  },
+  "selected": "v01"
+}

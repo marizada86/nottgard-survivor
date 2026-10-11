@@ -1,0 +1,94 @@
+{
+	"records": [
+		{
+			"base": "assets/ui/backgrounds/victory_background.png",
+			"code": "L03",
+			"kind": "illustrative_composite_not_runtime_integration",
+			"path": "previews/L03_context_1280x720.png",
+			"position": [
+				364,
+				120
+			]
+		},
+		{
+			"base": "assets/ui/backgrounds/defeat_background.png",
+			"code": "L04",
+			"kind": "illustrative_composite_not_runtime_integration",
+			"path": "previews/L04_context_1280x720.png",
+			"position": [
+				280,
+				120
+			]
+		},
+		{
+			"base": "assets/ui/evolucao_painel_moldura.png",
+			"code": "L05",
+			"kind": "illustrative_composite_not_runtime_integration",
+			"path": "previews/L05_context_1280x720.png",
+			"position": [
+				371,
+				120
+			]
+		},
+		{
+			"base": ".atena/generated/ficha-c-integration/v01/desktop_heroi_durvall.png",
+			"code": "P01",
+			"kind": "illustrative_composite_not_runtime_integration",
+			"path": "previews/P01_context_1280x720.png",
+			"position": [
+				320,
+				90
+			]
+		},
+		{
+			"base": ".atena/generated/ficha-c-integration/v01/desktop_heroi_durvall.png",
+			"code": "P02",
+			"kind": "illustrative_composite_not_runtime_integration",
+			"path": "previews/P02_context_1280x720.png",
+			"position": [
+				480,
+				90
+			]
+		},
+		{
+			"base": ".atena/generated/ficha-c-integration/v01/desktop_heroi_durvall.png",
+			"code": "P03",
+			"kind": "illustrative_composite_not_runtime_integration",
+			"path": "previews/P03_context_1280x720.png",
+			"position": [
+				280,
+				90
+			]
+		},
+		{
+			"base": ".atena/generated/ficha-c-integration/v01/desktop_heroi_durvall.png",
+			"code": "C01",
+			"kind": "illustrative_composite_not_runtime_integration",
+			"path": "previews/C01_context_1280x720.png",
+			"position": [
+				1159,
+				124
+			]
+		},
+		{
+			"base": ".atena/generated/ficha-c-integration/v01/desktop_heroi_durvall.png",
+			"code": "C02",
+			"kind": "illustrative_composite_not_runtime_integration",
+			"path": "previews/C02_context_1280x720.png",
+			"position": [
+				566,
+				164
+			]
+		},
+		{
+			"base": ".atena/generated/ficha-c-integration/v01/desktop_heroi_durvall.png",
+			"code": "C03",
+			"kind": "illustrative_composite_not_runtime_integration",
+			"path": "previews/C03_context_1280x720.png",
+			"position": [
+				255,
+				195
+			]
+		}
+	]
+}

@@ -3,11 +3,17 @@ id: PLAN-065
 title: Lettering do jogo e cursor do mouse temáticos
 spec: SPEC-132
 cards: [ART-039, ART-040, MEC-058]
-status: aprovado por plano em 2026-10-06; B-001 e B-002 feitas (EVID-172); B-003 aguarda o gerador de imagem
+status: aprovado por plano; G1 e G2 aceitos; S013 admissao e validacao concluidas, commit de arte pendente
 approval_mode: per-plan
 ---
 
 # PLAN-065
+
+Admissão autorizada em 2026-10-11 com **“Autorizo a admissão e validação”**: dez PNGs copiados sem alteração, hotspots atualizados, imports/manifesto/testes de cursor e lettering PASS. [Evidência S013](../../evidence/fila026-admission-2026-10-11.md). S013 permanece atual (13/16, doze passos completos), pois o commit de arte está explicitamente excluído da autorização. S014/S015/S016 ainda pendentes; sem hookups adicionais, push ou build. Os registros seguintes preservam os checkpoints históricos de produção e aceite.
+
+Aceite G2 em 2026-10-11: **“Aprovo as nove revisões v01”** para L03–L05, P01–P03 e C01–C03. Nove fontes e derivados promovidos a CANON visual; [registro](../canon/ASSET-APPROVAL-FILA026-G2-v01.md). Posição 13/16, doze passos concluídos, três após o atual. Proposta S013 pronta em `.atena/generated/fila026-remaining-2026-10-11/admission-proposal.json`: dez PNGs (L01 + nove G2) e hotspots reais. Nada admitido no runtime. A pergunta G2 preservou explicitamente os gates de admissão/integração e Git; a resposta atual não os autoriza. PLAN-071 e retornos preservados.
+
+Retomada 2026-10-11: G1 **“Aprovo L01 v01”** registrado; referência visual CANON, sem admissão. Nove fontes e preparações DRAFT v01 produzidas/auditadas. Estado atual em `.atena/state/fila026-remaining.yaml`; galeria `.atena/generated/fila026-remaining-2026-10-11/index.html`; evidência `.atena/evidence/fila026-remaining-2026-10-11.md`. S-012/G2 pendente por peça; L02 opcional deferida. PLAN-071 preservado.
 
 Spec: [[SPEC-132-lettering-e-cursor-do-jogo]]. Estado operacional: `.atena/state/plan-065-lettering-cursor.yaml`.
 

@@ -3,7 +3,7 @@
     "project":  "Nottgard Survivors",
     "generated_at":  "2026-09-24",
     "specification":  "SPEC-015-producao-total-de-assets-visuais; SPEC-022-props-de-dagruve-braseiros; SPEC-023-props-de-dagruve-caixotes; SPEC-024-props-de-dagruve-velas; SPEC-025-props-de-dagruve-livros; SPEC-026-props-de-dagruve-barris; SPEC-027-props-de-dagruve-redes; SPEC-028-props-de-dagruve-ossos; SPEC-029-props-de-dagruve-estrutura-de-doca; SPEC-030-props-de-dagruve-carga",
-    "expected_png_files":  269,
+    "expected_png_files":  279,
     "expected_imagegen_calls":  258,
     "entries":  [
                     {
@@ -5035,6 +5035,186 @@
                                          "built-in ImageGen; normalized 1280x1280 to 128x128; alpha=True",
                                          "visual approval recorded 2026-09-27"
                                      ]
+                    },
+                    {
+                        "asset_id": "logo",
+                        "family": "ui/title",
+                        "generation_mode": "imagegen",
+                        "final_path": "assets/ui/title/logo.png",
+                        "candidate_path": ".atena/generated/fila026-l01-2026-10-11/prepared/L01_v01.png",
+                        "prompt_id": "ART-PROMPTS-058",
+                        "dimensions": "700x176",
+                        "alpha": true,
+                        "references": [],
+                        "status": "admitted",
+                        "selected_version": "v01",
+                        "sha256": "5d5214fbfad023c90ecd8e46a86f8efeded578e9a8009b685d3ff2f04b4eecb5",
+                        "approval_register": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-031-fila026-admission-2026-10-11.json",
+                        "qa_notes": [
+                            "G1/G2 visually accepted; deterministic Godot preparation; byte-identical authorized runtime admission S013; remaining UI hookups are S014."
+                        ]
+                    },
+                    {
+                        "asset_id": "banner_vitoria",
+                        "family": "ui/lettering",
+                        "generation_mode": "imagegen",
+                        "final_path": "assets/ui/lettering/banner_vitoria.png",
+                        "candidate_path": ".atena/generated/fila026-remaining-2026-10-11/prepared/L03_v01.png",
+                        "prompt_id": "ART-PROMPTS-058",
+                        "dimensions": "551x160",
+                        "alpha": true,
+                        "references": [],
+                        "status": "admitted",
+                        "selected_version": "v01",
+                        "sha256": "a1e49651d87284593a7f7a405e3cb893335ecf1c15daefb3377ece0c520a0633",
+                        "approval_register": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-031-fila026-admission-2026-10-11.json",
+                        "qa_notes": [
+                            "G1/G2 visually accepted; deterministic Godot preparation; byte-identical authorized runtime admission S013; remaining UI hookups are S014."
+                        ]
+                    },
+                    {
+                        "asset_id": "banner_derrota",
+                        "family": "ui/lettering",
+                        "generation_mode": "imagegen",
+                        "final_path": "assets/ui/lettering/banner_derrota.png",
+                        "candidate_path": ".atena/generated/fila026-remaining-2026-10-11/prepared/L04_v01.png",
+                        "prompt_id": "ART-PROMPTS-058",
+                        "dimensions": "720x135",
+                        "alpha": true,
+                        "references": [],
+                        "status": "admitted",
+                        "selected_version": "v01",
+                        "sha256": "c7b6476dcd4e8a184d1cd80df82fa87f78e11632c66d343d56ce701316f86187",
+                        "approval_register": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-031-fila026-admission-2026-10-11.json",
+                        "qa_notes": [
+                            "G1/G2 visually accepted; deterministic Godot preparation; byte-identical authorized runtime admission S013; remaining UI hookups are S014."
+                        ]
+                    },
+                    {
+                        "asset_id": "banner_evolucao",
+                        "family": "ui/lettering",
+                        "generation_mode": "imagegen",
+                        "final_path": "assets/ui/lettering/banner_evolucao.png",
+                        "candidate_path": ".atena/generated/fila026-remaining-2026-10-11/prepared/L05_v01.png",
+                        "prompt_id": "ART-PROMPTS-058",
+                        "dimensions": "537x110",
+                        "alpha": true,
+                        "references": [],
+                        "status": "admitted",
+                        "selected_version": "v01",
+                        "sha256": "0402d2523fea04a44b9618a9f6059d82099dfa5c3ed812d7024489061e24184b",
+                        "approval_register": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-031-fila026-admission-2026-10-11.json",
+                        "qa_notes": [
+                            "G1/G2 visually accepted; deterministic Godot preparation; byte-identical authorized runtime admission S013; remaining UI hookups are S014."
+                        ]
+                    },
+                    {
+                        "asset_id": "placa_titulo_larga",
+                        "family": "ui/lettering",
+                        "generation_mode": "imagegen",
+                        "final_path": "assets/ui/lettering/placa_titulo_larga.png",
+                        "candidate_path": ".atena/generated/fila026-remaining-2026-10-11/prepared/P01_v01.png",
+                        "prompt_id": "ART-PROMPTS-058",
+                        "dimensions": "640x96",
+                        "alpha": true,
+                        "references": [],
+                        "status": "admitted",
+                        "selected_version": "v01",
+                        "sha256": "24a4d122d5da2407e0aa945f02dfa80dbca9998cd158de2829bb1210694bd6b4",
+                        "approval_register": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-031-fila026-admission-2026-10-11.json",
+                        "qa_notes": [
+                            "G1/G2 visually accepted; deterministic Godot preparation; byte-identical authorized runtime admission S013; remaining UI hookups are S014."
+                        ]
+                    },
+                    {
+                        "asset_id": "placa_titulo_secao",
+                        "family": "ui/lettering",
+                        "generation_mode": "imagegen",
+                        "final_path": "assets/ui/lettering/placa_titulo_secao.png",
+                        "candidate_path": ".atena/generated/fila026-remaining-2026-10-11/prepared/P02_v01.png",
+                        "prompt_id": "ART-PROMPTS-058",
+                        "dimensions": "320x48",
+                        "alpha": true,
+                        "references": [],
+                        "status": "admitted",
+                        "selected_version": "v01",
+                        "sha256": "6c50e27c2242c08573fb5d83b4c3475ad31eebcdffc33035491e53b21fe30a77",
+                        "approval_register": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-031-fila026-admission-2026-10-11.json",
+                        "qa_notes": [
+                            "G1/G2 visually accepted; deterministic Godot preparation; byte-identical authorized runtime admission S013; remaining UI hookups are S014."
+                        ]
+                    },
+                    {
+                        "asset_id": "placa_chefe",
+                        "family": "ui/lettering",
+                        "generation_mode": "imagegen",
+                        "final_path": "assets/ui/lettering/placa_chefe.png",
+                        "candidate_path": ".atena/generated/fila026-remaining-2026-10-11/prepared/P03_v01.png",
+                        "prompt_id": "ART-PROMPTS-058",
+                        "dimensions": "720x112",
+                        "alpha": true,
+                        "references": [],
+                        "status": "admitted",
+                        "selected_version": "v01",
+                        "sha256": "87a2ed9f6fbd81b66b577f8bc66726d296a2c398df8b8dddd15e34ea3ae398f8",
+                        "approval_register": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-031-fila026-admission-2026-10-11.json",
+                        "qa_notes": [
+                            "G1/G2 visually accepted; deterministic Godot preparation; byte-identical authorized runtime admission S013; remaining UI hookups are S014."
+                        ]
+                    },
+                    {
+                        "asset_id": "cursor_ponteiro",
+                        "family": "ui/cursor",
+                        "generation_mode": "imagegen",
+                        "final_path": "assets/ui/cursor/cursor_ponteiro.png",
+                        "candidate_path": ".atena/generated/fila026-remaining-2026-10-11/prepared/C01_v01.png",
+                        "prompt_id": "ART-PROMPTS-058",
+                        "dimensions": "32x32",
+                        "alpha": true,
+                        "references": [],
+                        "status": "admitted",
+                        "selected_version": "v01",
+                        "sha256": "13e1ff47d863fce8170b57e4436932e67024a3c655d635c616a130204d2f8954",
+                        "approval_register": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-031-fila026-admission-2026-10-11.json",
+                        "qa_notes": [
+                            "G1/G2 visually accepted; deterministic Godot preparation; byte-identical authorized runtime admission S013; remaining UI hookups are S014."
+                        ]
+                    },
+                    {
+                        "asset_id": "cursor_mao",
+                        "family": "ui/cursor",
+                        "generation_mode": "imagegen",
+                        "final_path": "assets/ui/cursor/cursor_mao.png",
+                        "candidate_path": ".atena/generated/fila026-remaining-2026-10-11/prepared/C02_v01.png",
+                        "prompt_id": "ART-PROMPTS-058",
+                        "dimensions": "32x32",
+                        "alpha": true,
+                        "references": [],
+                        "status": "admitted",
+                        "selected_version": "v01",
+                        "sha256": "735e8c39c7c390f27f930907d63e189c1d5f36dca95a7c19c1b5e87bd542e138",
+                        "approval_register": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-031-fila026-admission-2026-10-11.json",
+                        "qa_notes": [
+                            "G1/G2 visually accepted; deterministic Godot preparation; byte-identical authorized runtime admission S013; remaining UI hookups are S014."
+                        ]
+                    },
+                    {
+                        "asset_id": "cursor_mira",
+                        "family": "ui/cursor",
+                        "generation_mode": "imagegen",
+                        "final_path": "assets/ui/cursor/cursor_mira.png",
+                        "candidate_path": ".atena/generated/fila026-remaining-2026-10-11/prepared/C03_v01.png",
+                        "prompt_id": "ART-PROMPTS-058",
+                        "dimensions": "40x40",
+                        "alpha": true,
+                        "references": [],
+                        "status": "admitted",
+                        "selected_version": "v01",
+                        "sha256": "1ce67285efb10cd4fc40f8e0049915234447e52076d01a89ccdd2f653534286e",
+                        "approval_register": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-031-fila026-admission-2026-10-11.json",
+                        "qa_notes": [
+                            "G1/G2 visually accepted; deterministic Godot preparation; byte-identical authorized runtime admission S013; remaining UI hookups are S014."
+                        ]
                     }
                 ],
     "logical_reuse":  {

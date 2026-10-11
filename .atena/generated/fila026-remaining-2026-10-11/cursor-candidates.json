@@ -1,0 +1,43 @@
+{
+  "status": "CANON_VISUAL_G2_ADMITTED",
+  "cursors": {
+    "C01": {
+      "path": "prepared/C01_v01.png",
+      "size": [
+        32,
+        32
+      ],
+      "hotspot": [
+        1,
+        1
+      ],
+      "runtime_admission": true
+    },
+    "C02": {
+      "path": "prepared/C02_v01.png",
+      "size": [
+        32,
+        32
+      ],
+      "hotspot": [
+        4,
+        1
+      ],
+      "runtime_admission": true
+    },
+    "C03": {
+      "path": "prepared/C03_v01.png",
+      "size": [
+        40,
+        40
+      ],
+      "hotspot": [
+        20,
+        20
+      ],
+      "runtime_admission": true
+    }
+  },
+  "owner_approval": "owner-approval.json",
+  "admission_receipt": "admission-receipt.json"
+}

@@ -1,5 +1,5 @@
 # Plano proposto por Atena em 2026-10-06 a pedido do dono; aprovado por plano no mesmo dia.
-# Side-plan: nao e o active_plan de plan.yaml (PLAN-066 segue la). B-001 e B-002 feitas; B-003 espera o gerador de imagem.
+# Side-plan: nao substitui PLAN-071 em plan.yaml. Admissao S013 validada; commit de arte pendente.
 version: 2
 plan:
   id: PLAN-065
@@ -14,11 +14,53 @@ plan:
     fila_de_imagens: 'depois da ficha C (CHATGPT-FILA-025), antes dos VFX'
   blocking_gaps: 0
   assumed_defaults: [G-1, G-2, G-3, G-4, G-5]
-  checkpoint: {step: S-008, status: DONE, evidence: EVID-172, next: 'B-003 depende do gerador de imagem (dono/Codex) e da FILA-025 antes; commits so com aprovacao explicita'}
+  checkpoint: {step: S-013, status: COMMIT_PUSH_AUTHORIZED_IN_PROGRESS, evidence: '.atena/evidence/fila026-admission-2026-10-11.md', next: 'Commit e push da FILA026 autorizados; S014 permanece pendente'}
+  git_authorization: 'atena, aprovado commite e push'
+  admission_authorization: 'Autorizo a admissão e validação'
+  admission_status: ADMITTED_VALIDATED
+  admission_register: .atena/vault/canon/ASSET-APPROVAL-REGISTER-031-fila026-admission-2026-10-11.json
+  remaining_state: .atena/state/fila026-remaining.yaml
+  completed_step_positions: 12
+  current_step_position: 13
+  total_steps: 16
+  g2:
+    status: ACCEPTED_PER_PIECE
+    owner_reply: 'Aprovo as nove revisões v01'
+    accepted: [L03_v01, L04_v01, L05_v01, P01_v01, P02_v01, P03_v01, C01_v01, C02_v01, C03_v01]
+    visual_register: .atena/vault/canon/ASSET-APPROVAL-FILA026-G2-v01.md
+    content_state: CANON_VISUAL_G2
+    runtime_admission: true
+  g1:
+    status: ACCEPTED
+    owner_reply: 'Aprovo L01 v01'
+    selected: L01_v01
+    visual_register: .atena/vault/canon/ASSET-APPROVAL-FILA026-L01-v01.md
+    content_state: CANON_VISUAL_G1_REFERENCE
+    runtime_admission: true
+  continuation_2026_10_11:
+    request: 'atena continue a geração de imagens'
+    request_classification: IN_PLAN
+    approval_basis: EXISTING_PER_PLAN_APPROVAL_2026_10_06
+    fila025_dependency: ACCEPTED_AND_DELIVERED
+    current_piece: L03_L04_L05_P01_P02_P03_C01_C02_C03_v01
+    remaining_gallery: .atena/generated/fila026-remaining-2026-10-11/index.html
+    remaining_audit: .atena/generated/fila026-remaining-2026-10-11/audit.json
+    generated_candidates: 2
+    recommended_candidate: L01_v02
+    technical_checks: PASS
+    source_hashes: ['4018e2bbc3ed4b41628e4296e3308d2748ea36050a013e75de48d02ff3feb5c2', '67fdcd3bcbd07606c9ee6d3e00ba0a0460edcbf6759fe48ea5167230b50250f2']
+    gallery: .atena/generated/fila026-l01-2026-10-11/index.html
+    audit: .atena/generated/fila026-l01-2026-10-11/audit.json
+    content_state: CANON_VISUAL_G2
+    identity: 'N/A — lettering sem personagem ou entidade'
+    reference_authority: 'ART-PROMPTS-058; materiais locais e paleta do titulo; sem lore nova'
+    remaining_visual_gate: NONE_FOR_NINE_ACCEPTED_V01
+    runtime_admission: true
+    commit_push_authorization: NOT_AUTHORIZED_BY_CONTINUATION
   batches:
     B-001: {title: 'Direcao, inventario e prompts (sem codigo)', steps: [S-001, S-002, S-003, S-004], status: DONE, evidence: EVID-172}
     B-002: {title: 'Esqueleto de codigo com fallback (cursor, lettering, testes)', steps: [S-005, S-006, S-007, S-008], status: DONE, evidence: EVID-172, uncommitted: 'working tree; commit de codigo so apos B-004 e com aprovacao'}
-    B-003: {title: 'Arte: gerar, normalizar, aprovar (G1, G2), admitir', steps: [S-009, S-010, S-011, S-012, S-013], status: PENDING, depends: 'gerador de imagem (dono/Codex); fila apos FILA-025'}
+    B-003: {title: 'Arte: gerar, normalizar, aprovar (G1, G2), admitir', steps: [S-009, S-010, S-011, S-012, S-013], status: ADMITTED_VALIDATED_WAITING_ART_COMMIT_S013, depends: 'G1 e G2 aceitos; admissao validada; falta commit de arte autorizado'}
     B-004: {title: 'Integracao, verificacao e fechamento', steps: [S-014, S-015, S-016], status: PENDING, depends: 'B-003; commits de PLAN-063/064 para ui/hud.gd, ui/character_sheet.gd, ui/hero_panel.gd'}
   gates_independent_of_approval_level: ['G1 aprovacao visual da logo', 'G2 aprovacao visual por peca', 'commit local', 'push', 'build/release']
   commits: 'dois, separados: arte (S-013) e codigo (S-016); mecanica nao divide commit com arte'

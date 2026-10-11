@@ -1,0 +1,281 @@
+{
+  "plan": "PLAN-065",
+  "spec": "SPEC-132",
+  "revision": "FILA026-REMAINING/v01",
+  "approval_mode": "per-plan",
+  "g1": "ACCEPTED_L01_v01",
+  "current_step": "S-013/ART_COMMIT_GATE",
+  "total": 9,
+  "generated": 9,
+  "content_state": "CANON_VISUAL_G2",
+  "runtime_admission": true,
+  "optional_L02": "DEFERRED_OPTIONAL_NOT_GENERATED",
+  "reference_hashes": {
+    ".atena/generated/fila026-l01-2026-10-11/prepared/L01_v01.png": "5d5214fbfad023c90ecd8e46a86f8efeded578e9a8009b685d3ff2f04b4eecb5",
+    "assets/ui/backgrounds/defeat_background.png": "3c9c07f798e2c34bc3d9ec0bde40cb6de4bffeb54ec32d79495793f27f3b3943",
+    "assets/ui/backgrounds/victory_background.png": "787f2656c8698249fbb4db551f16f600f77e10811959156799646e9f48350936",
+    "assets/ui/evolucao_painel_moldura.png": "cd8863b5733b44248217a8020069ca140d48fa525a73009e246ae5e76b7689c0",
+    "assets/ui/ficha/ficha_moldura_painel.png": "1576d862265e400e2480d0b3b071850101f60317589b0edd2953d4446e30a72c"
+  },
+  "jobs": [
+    {
+      "code": "L03",
+      "revision": "v01",
+      "kind": "lettering",
+      "target": [
+        720,
+        160
+      ],
+      "content_state": "CANON_VISUAL_G2",
+      "runtime_admission": true,
+      "status": "GENERATED",
+      "references": [
+        ".atena/generated/fila026-l01-2026-10-11/prepared/L01_v01.png",
+        "assets/ui/backgrounds/victory_background.png"
+      ],
+      "prompt": "Use case: stylized-concept. Produce ONE isolated frontal flat pixel-art game UI asset on a completely solid uniform magenta #FF00FF backdrop, including every internal hole. No gradients in the key background. Dense crisp dark-fantasy pixel art; forged worn old gold and near-black iron, shallow bevel, near-black outline, Gothic abstract spikes/arcs at ends only. Match the approved L01 v01 reference material family. No characters, scenery, cast shadow, watermark, readable runes, heraldic crest, extra symbols or extra text. Keep all artwork well inside the canvas with safety margins, hard clean key edges, no glow outside the object. Image1: approved L01 v01 style/material reference only, not an edit target; do not reproduce its words. Image2: actual result-screen backdrop for palette/contrast only; do not reproduce the scenery. Exact text: \"Vitória!\" in ONE line, title case exactly as written, capital V, acute accent on lowercase ó, final exclamation mark. Verify V i t ó r i a !. Gothic broad serif lettering, luminous worn old gold with a restrained warm amber accent, brighter than the logo but in the same family. Tiny symmetric pointed Gothic ornaments at both ends, never over the letters. Landscape 1536x1024 canvas; central wide band content aspect about4.5:1; generous magenta above/below and 60px lateral margins. Text must remain legible after a proportional fit within720x160.",
+      "text": "Vitória!",
+      "background": "assets/ui/backgrounds/victory_background.png",
+      "source": "sources/L03_v01.png",
+      "source_sha256": "ad346142fe9362a7ce2401f5e98ad38285af5177f3c5fe4bafef92e0a8a7c0bd",
+      "source_size": [
+        1536,
+        1024
+      ],
+      "tool": "built-in imagegen",
+      "owner_acceptance": "ACCEPTED_G2_v01"
+    },
+    {
+      "code": "L04",
+      "revision": "v01",
+      "kind": "lettering",
+      "target": [
+        720,
+        160
+      ],
+      "content_state": "CANON_VISUAL_G2",
+      "runtime_admission": true,
+      "status": "GENERATED",
+      "references": [
+        ".atena/generated/fila026-l01-2026-10-11/prepared/L01_v01.png",
+        "assets/ui/backgrounds/defeat_background.png"
+      ],
+      "prompt": "Use case: stylized-concept. Produce ONE isolated frontal flat pixel-art game UI asset on a completely solid uniform magenta #FF00FF backdrop, including every internal hole. No gradients in the key background. Dense crisp dark-fantasy pixel art; forged worn old gold and near-black iron, shallow bevel, near-black outline, Gothic abstract spikes/arcs at ends only. Match the approved L01 v01 reference material family. No characters, scenery, cast shadow, watermark, readable runes, heraldic crest, extra symbols or extra text. Keep all artwork well inside the canvas with safety margins, hard clean key edges, no glow outside the object. Image1: approved L01 v01 style/material reference only, not an edit target; do not reproduce its words. Image2: actual result-screen backdrop for palette/contrast only; do not reproduce the scenery. Exact text: \"Você caiu...\" in ONE line, title case exactly as written. Circumflex on ê, THREE separate period dots at the end (not one ellipsis glyph). Verify V o c ê [space] c a i u . . . . Worn dim old gold and dark cracked iron, restrained almost extinguished cold violet fissures contained inside outlines. Minimal broken Gothic ornaments at the far ends, sombre fallen mood. Landscape1536x1024 canvas; content aspect at least4.5:1, keep large solid magenta margin. Clear readable letters, no ornament touching letters or accent. Fit within720x160.",
+      "text": "Você caiu...",
+      "background": "assets/ui/backgrounds/defeat_background.png",
+      "source": "sources/L04_v01.png",
+      "source_sha256": "edabab76d8b055cc40f089c7cd2bf5a027b6ef32cb5a45fec125019239f84647",
+      "source_size": [
+        2172,
+        724
+      ],
+      "tool": "built-in imagegen",
+      "owner_acceptance": "ACCEPTED_G2_v01"
+    },
+    {
+      "code": "L05",
+      "revision": "v01",
+      "kind": "lettering",
+      "target": [
+        640,
+        110
+      ],
+      "content_state": "CANON_VISUAL_G2",
+      "runtime_admission": true,
+      "status": "GENERATED",
+      "references": [
+        ".atena/generated/fila026-l01-2026-10-11/prepared/L01_v01.png",
+        "assets/ui/evolucao_painel_moldura.png"
+      ],
+      "prompt": "Use case: stylized-concept. Produce ONE isolated frontal flat pixel-art game UI asset on a completely solid uniform magenta #FF00FF backdrop, including every internal hole. No gradients in the key background. Dense crisp dark-fantasy pixel art; forged worn old gold and near-black iron, shallow bevel, near-black outline, Gothic abstract spikes/arcs at ends only. Match the approved L01 v01 reference material family. No characters, scenery, cast shadow, watermark, readable runes, heraldic crest, extra symbols or extra text. Keep all artwork well inside the canvas with safety margins, hard clean key edges, no glow outside the object. Image1: approved L01 v01 style/material reference only, not an edit target; do not reproduce its words. Image2: evolution UI frame for material/contrast, do not copy its composition. Exact single-line text: \"EVOLUÇÃO\", all uppercase. Correct cedilla below Ç and tilde above Ã; verify E V O L U Ç Ã O. Bright worn forged old gold, tiny amber flecks confined to the contours, two small four-point stars at far lateral ends. Match approved logo Gothic serif family. No additional stars or text. Landscape1536x1024 canvas with content band aspect about5.8:1; keep the cedilla and tilde clearly separate within generous margins. Fit proportionally within640x110.",
+      "text": "EVOLUÇÃO",
+      "background": "assets/ui/evolucao_painel_moldura.png",
+      "source": "sources/L05_v01.png",
+      "source_sha256": "630dba868bc0c45938d30e7840d64b1d99c16e31c1d6b7e0bfa611d654053a6f",
+      "source_size": [
+        2004,
+        785
+      ],
+      "tool": "built-in imagegen",
+      "owner_acceptance": "ACCEPTED_G2_v01"
+    },
+    {
+      "code": "P01",
+      "revision": "v01",
+      "kind": "plate",
+      "target": [
+        640,
+        96
+      ],
+      "content_state": "CANON_VISUAL_G2",
+      "runtime_admission": true,
+      "status": "GENERATED",
+      "references": [
+        ".atena/generated/fila026-l01-2026-10-11/prepared/L01_v01.png",
+        "assets/ui/ficha/ficha_moldura_painel.png"
+      ],
+      "prompt": "Use case: stylized-concept. Produce ONE isolated frontal flat pixel-art game UI asset on a completely solid uniform magenta #FF00FF backdrop, including every internal hole. No gradients in the key background. Dense crisp dark-fantasy pixel art; forged worn old gold and near-black iron, shallow bevel, near-black outline, Gothic abstract spikes/arcs at ends only. Match the approved L01 v01 reference material family. No characters, scenery, cast shadow, watermark, readable runes, heraldic crest, extra symbols or extra text. Keep all artwork well inside the canvas with safety margins, hard clean key edges, no glow outside the object. Image1: approved L01 v01 style/material reference only, not an edit target; do not reproduce its words. Image2: approved ficha C frame for dark iron/old-gold finish only; do not render its whole rectangular frame. NO TEXT. Wide, low symmetrical Gothic title plate for nine-slice UI, content aspect6.67:1. Blackened iron with a very thin old-gold border and discreet rivets; far ends have small arches/spikes entirely contained in the outer8.75percent width of each end. The central82.5percent must be perfectly UNIFORM HORIZONTALLY, each horizontal row a single constant material tone, absolutely no grain, rivets, scratches, texture changes or decoration in the middle. Dark nearly-black blank center for light text. End ornaments may occupy up to56px on a640px plate; middle open text band40px in96px totalheight. Render on1536x1024 canvas as a wide band with lateral safe margins. No purple glowing line in the middle.",
+      "slices": [
+        56,
+        56,
+        28,
+        28
+      ],
+      "source": "sources/P01_v01.png",
+      "source_sha256": "9d5e1b528054108f4aefcaf3d868502d4665334d4c77720aee487d6a27c94688",
+      "source_size": [
+        1536,
+        1024
+      ],
+      "tool": "built-in imagegen",
+      "owner_acceptance": "ACCEPTED_G2_v01"
+    },
+    {
+      "code": "P02",
+      "revision": "v01",
+      "kind": "plate",
+      "target": [
+        320,
+        48
+      ],
+      "content_state": "CANON_VISUAL_G2",
+      "runtime_admission": true,
+      "status": "GENERATED",
+      "references": [
+        ".atena/generated/fila026-l01-2026-10-11/prepared/L01_v01.png",
+        "assets/ui/ficha/ficha_moldura_painel.png"
+      ],
+      "prompt": "Use case: stylized-concept. Produce ONE isolated frontal flat pixel-art game UI asset on a completely solid uniform magenta #FF00FF backdrop, including every internal hole. No gradients in the key background. Dense crisp dark-fantasy pixel art; forged worn old gold and near-black iron, shallow bevel, near-black outline, Gothic abstract spikes/arcs at ends only. Match the approved L01 v01 reference material family. No characters, scenery, cast shadow, watermark, readable runes, heraldic crest, extra symbols or extra text. Keep all artwork well inside the canvas with safety margins, hard clean key edges, no glow outside the object. Image1: approved L01 v01 style/material reference only, not an edit target; do not reproduce its words. Image2: approved ficha C frame for dark iron/old-gold finish only; do not render its whole rectangular frame. NO TEXT. Very simple narrow symmetrical Gothic section plate, aspect6.67:1. Blackened iron with thin muted old-gold border and tiny single spikes at far ends; simpler and quieter than a main title plaque. All ornament confined to the outer10percent width of each end. The central80percent must be perfectly UNIFORM HORIZONTALLY, each row one constant dark tone, no grain, rivets, scratches, texture variations or central decoration. Nine-slice targets: left/right32px, top/bottom16px on a320x48plate. Blank dark center, no symbols. Landscape1536x1024 canvas with generous magenta margins.",
+      "slices": [
+        32,
+        32,
+        16,
+        16
+      ],
+      "source": "sources/P02_v01.png",
+      "source_sha256": "9466c812254bdc684ebd2ab8e16db8bf8430e2b77b95aa6c1cd0943ac5e1cffa",
+      "source_size": [
+        1536,
+        1024
+      ],
+      "tool": "built-in imagegen",
+      "owner_acceptance": "ACCEPTED_G2_v01"
+    },
+    {
+      "code": "P03",
+      "revision": "v01",
+      "kind": "plate",
+      "target": [
+        720,
+        112
+      ],
+      "content_state": "CANON_VISUAL_G2",
+      "runtime_admission": true,
+      "status": "GENERATED",
+      "references": [
+        ".atena/generated/fila026-l01-2026-10-11/prepared/L01_v01.png",
+        "assets/ui/ficha/ficha_moldura_painel.png"
+      ],
+      "prompt": "Use case: stylized-concept. Produce ONE isolated frontal flat pixel-art game UI asset on a completely solid uniform magenta #FF00FF backdrop, including every internal hole. No gradients in the key background. Dense crisp dark-fantasy pixel art; forged worn old gold and near-black iron, shallow bevel, near-black outline, Gothic abstract spikes/arcs at ends only. Match the approved L01 v01 reference material family. No characters, scenery, cast shadow, watermark, readable runes, heraldic crest, extra symbols or extra text. Keep all artwork well inside the canvas with safety margins, hard clean key edges, no glow outside the object. Image1: approved L01 v01 style/material reference only, not an edit target; do not reproduce its words. Image2: approved ficha C frame for dark iron/old-gold finish only; do not render its whole rectangular frame. NO TEXT. Low wide symmetrical boss nameplate, aspect6.43:1. Neutral nearly colourless blackened iron so runtime tinting can colour it. More threatening Gothic spikes and iron horns only at the far ends; a restrained thin worn-gold edge. Ornament entirely in the outer11.1percent width of each end. The central77.8percent must be perfectly UNIFORM HORIZONTALLY, each row a single constant dark iron tone; no grain, scratches, gradients along x, decoration or rivets in the center. Blank center56px high on112px totalheight. Nine-slice left/right80px, top/bottom36px at720x112. No biome colours or purple glow. Landscape1536x1024 canvas with safe margins.",
+      "slices": [
+        80,
+        80,
+        36,
+        36
+      ],
+      "source": "sources/P03_v01.png",
+      "source_sha256": "9b965e07ae920890c26542ea82c398d5ce73d985a44c05a3ba70fe47873fdaf4",
+      "source_size": [
+        1536,
+        1024
+      ],
+      "tool": "built-in imagegen",
+      "owner_acceptance": "ACCEPTED_G2_v01"
+    },
+    {
+      "code": "C01",
+      "revision": "v01",
+      "kind": "cursor",
+      "target": [
+        32,
+        32
+      ],
+      "content_state": "CANON_VISUAL_G2",
+      "runtime_admission": true,
+      "status": "GENERATED",
+      "references": [
+        ".atena/generated/fila026-l01-2026-10-11/prepared/L01_v01.png"
+      ],
+      "prompt": "Use case: stylized-concept. Produce ONE isolated frontal flat pixel-art game UI asset on a completely solid uniform magenta #FF00FF backdrop, including every internal hole. No gradients in the key background. Dense crisp dark-fantasy pixel art; forged worn old gold and near-black iron, shallow bevel, near-black outline, Gothic abstract spikes/arcs at ends only. Match the approved L01 v01 reference material family. No characters, scenery, cast shadow, watermark, readable runes, heraldic crest, extra symbols or extra text. Keep all artwork well inside the canvas with safety margins, hard clean key edges, no glow outside the object. Image1: approved L01 v01 style/material reference only, not an edit target; do not reproduce its words. Square canvas, render one very simple BIG cursor silhouette filling almost all the canvas with4percent safety margin, designed to downsample to a tiny game mouse cursor. Clear near-black outer outline and old-gold inner rim, blackened iron body, one tiny subtle violet accent, no fine detail. Source is a4xcursor concept; retain a square canvas for deterministic reduction, no lettering or ornamental frame. A sharp diagonally tilted arrow pointer, exact pointed tip near the upper-left corner at about(4percent,4percent), triangular iron head, short clear tail toward bottom-right. The point is the click hotspot. Strong simple arrow silhouette, no sword or spear.",
+      "hotspot_role": "TIP_TOP_LEFT",
+      "source": "sources/C01_v01.png",
+      "source_sha256": "7a9b2a90b2c6bf083749a339e1f0f2fcfdd8fcdece432ab692d9fab8622cd988",
+      "source_size": [
+        1254,
+        1254
+      ],
+      "tool": "built-in imagegen",
+      "owner_acceptance": "ACCEPTED_G2_v01"
+    },
+    {
+      "code": "C02",
+      "revision": "v01",
+      "kind": "cursor",
+      "target": [
+        32,
+        32
+      ],
+      "content_state": "CANON_VISUAL_G2",
+      "runtime_admission": true,
+      "status": "GENERATED",
+      "references": [
+        ".atena/generated/fila026-l01-2026-10-11/prepared/L01_v01.png"
+      ],
+      "prompt": "Use case: stylized-concept. Produce ONE isolated frontal flat pixel-art game UI asset on a completely solid uniform magenta #FF00FF backdrop, including every internal hole. No gradients in the key background. Dense crisp dark-fantasy pixel art; forged worn old gold and near-black iron, shallow bevel, near-black outline, Gothic abstract spikes/arcs at ends only. Match the approved L01 v01 reference material family. No characters, scenery, cast shadow, watermark, readable runes, heraldic crest, extra symbols or extra text. Keep all artwork well inside the canvas with safety margins, hard clean key edges, no glow outside the object. Image1: approved L01 v01 style/material reference only, not an edit target; do not reproduce its words. Square canvas, render one very simple BIG cursor silhouette filling almost all the canvas with4percent safety margin, designed to downsample to a tiny game mouse cursor. Clear near-black outer outline and old-gold inner rim, blackened iron body, one tiny subtle violet accent, no fine detail. Source is a4xcursor concept; retain a square canvas for deterministic reduction, no lettering or ornamental frame. A Gothic iron gauntlet mouse-hand cursor. Index finger extended upward and slightly left; other fingers curled closed, old-gold rims on the knuckles. Only one raised index finger, its topmost tip at about(20percent,4percent), clearly the highest-leftmost point and click hotspot. Recognizable pointing-hand silhouette rather than clenched fist or skeletal hand.",
+      "hotspot_role": "INDEX_FINGERTIP",
+      "source": "sources/C02_v01.png",
+      "source_sha256": "a13e7dad815a5914ca41e9a00dad23e4c5df7d55d41e0a9ce7030e26f60e2c0b",
+      "source_size": [
+        1254,
+        1254
+      ],
+      "tool": "built-in imagegen",
+      "owner_acceptance": "ACCEPTED_G2_v01"
+    },
+    {
+      "code": "C03",
+      "revision": "v01",
+      "kind": "cursor",
+      "target": [
+        40,
+        40
+      ],
+      "content_state": "CANON_VISUAL_G2",
+      "runtime_admission": true,
+      "status": "GENERATED",
+      "references": [
+        ".atena/generated/fila026-l01-2026-10-11/prepared/L01_v01.png"
+      ],
+      "prompt": "Use case: stylized-concept. Produce ONE isolated frontal flat pixel-art game UI asset on a completely solid uniform magenta #FF00FF backdrop, including every internal hole. No gradients in the key background. Dense crisp dark-fantasy pixel art; forged worn old gold and near-black iron, shallow bevel, near-black outline, Gothic abstract spikes/arcs at ends only. Match the approved L01 v01 reference material family. No characters, scenery, cast shadow, watermark, readable runes, heraldic crest, extra symbols or extra text. Keep all artwork well inside the canvas with safety margins, hard clean key edges, no glow outside the object. Image1: approved L01 v01 style/material reference only, not an edit target; do not reproduce its words. Square canvas, render one very simple BIG cursor silhouette filling almost all the canvas with4percent safety margin, designed to downsample to a tiny game mouse cursor. Clear near-black outer outline and old-gold inner rim, blackened iron body, one tiny subtle violet accent, no fine detail. Source is a4xcursor concept; retain a square canvas for deterministic reduction, no lettering or ornamental frame. Perfectly centered symmetric thin circular reticle of iron with an old-gold rim. Four identical cross tick marks at top,bottom,left,right extending inward and outward from the ring. Entire center is solid magenta and completely empty; NO central dot. Center exactly at canvas center; four-fold rotational symmetry. No diagonal ticks or random violet ornament that breaks symmetry. Sharp thin rim suitable for40x40display.",
+      "hotspot_role": "CENTER",
+      "hotspot": [
+        20,
+        20
+      ],
+      "source": "sources/C03_v01.png",
+      "source_sha256": "18d0bff0822ed44d4c5dfe6ec8395d04e930a3dbb57d3b6b6aa1266988fed906",
+      "source_size": [
+        1254,
+        1254
+      ],
+      "tool": "built-in imagegen",
+      "owner_acceptance": "ACCEPTED_G2_v01"
+    }
+  ],
+  "normalization_contract": "Godot native key tolerance plus1pxerosion, proportional fit without enlargement; plate9slicevalidation; cursor hotspots and center; capture previews; G2 before admission",
+  "status": "ADMITTED_VALIDATED_WAITING_ART_COMMIT",
+  "owner_approval": "owner-approval.json",
+  "owner_g2_status": "ACCEPTED_PER_PIECE",
+  "admission_receipt": "admission-receipt.json",
+  "next": "Authorized admission/targeted checks complete; art commit and further UI hookups remain gated."
+}

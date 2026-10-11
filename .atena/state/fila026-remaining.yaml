@@ -1,0 +1,47 @@
+version: 1
+plan: PLAN-065
+spec: SPEC-132
+revision: FILA026-REMAINING/v01
+request_classification: IN_PLAN
+approval_mode: per-plan
+scope_approval: EXISTING_PLAN_APPROVAL_2026_10_06
+g1_owner_reply: 'Aprovo L01 v01'
+g1_selected: L01_v01
+g1_status: ACCEPTED
+status: COMMIT_PUSH_AUTHORIZED_IN_PROGRESS
+checkpoint: B-003/S-013/COMMIT_PUSH
+git_authorization: 'atena, aprovado commite e push'
+git_branch: codex/assets-preparation-2026-10-10
+admission_authorization: 'Autorizo a admissão e validação'
+admission_authorized_at: '2026-10-11'
+admission_scope: 'Dez PNGs aceitos, hotspots, imports, manifesto e testes cursor/lettering; sem commit, push ou build'
+current_step_position: 13
+total_steps: 16
+completed_steps: 12
+current_activity: 'Commit de arte e push autorizados em preparacao'
+admitted: 10
+admission_validation: PASS
+admission_receipt: .atena/generated/fila026-remaining-2026-10-11/admission-receipt.json
+admission_register: .atena/vault/canon/ASSET-APPROVAL-REGISTER-031-fila026-admission-2026-10-11.json
+admission_evidence: .atena/evidence/fila026-admission-2026-10-11.md
+generated: 9
+prepared: 9
+scope: [L03, L04, L05, P01, P02, P03, C01, C02, C03]
+versions: {L03: v01, L04: v01, L05: v01, P01: v01, P02: v01, P03: v01, C01: v01, C02: v01, C03: v01}
+content_state: CANON_VISUAL_G2
+runtime_admission: true
+technical_status: PASS
+owner_g2_status: ACCEPTED_PER_PIECE
+owner_g2_reply: 'Aprovo as nove revisões v01'
+visual_register: .atena/vault/canon/ASSET-APPROVAL-FILA026-G2-v01.md
+owner_receipt: .atena/generated/fila026-remaining-2026-10-11/owner-approval.json
+admission_proposal: .atena/generated/fila026-remaining-2026-10-11/admission-proposal.json
+integration_authorization: S013_ADMISSION_ONLY_REMAINING_S014_PENDING
+optional_L02: DEFERRED_OPTIONAL
+cursor_hotspots: {C01: [1, 1], C02: [4, 1], C03: [20, 20]}
+gallery: .atena/generated/fila026-remaining-2026-10-11/index.html
+jobs: .atena/generated/fila026-remaining-2026-10-11/jobs.json
+audit: .atena/generated/fila026-remaining-2026-10-11/audit.json
+evidence: .atena/evidence/fila026-remaining-2026-10-11.md
+next_objective: 'Gate de commit de arte S013; depois S014 usos restantes e S015 validacao completa'
+commit_push_authorization: APPROVED_EXPLICITLY_2026_10_11
