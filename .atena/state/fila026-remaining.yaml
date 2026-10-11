@@ -8,17 +8,19 @@ scope_approval: EXISTING_PLAN_APPROVAL_2026_10_06
 g1_owner_reply: 'Aprovo L01 v01'
 g1_selected: L01_v01
 g1_status: ACCEPTED
-status: COMMIT_PUSH_AUTHORIZED_IN_PROGRESS
-checkpoint: B-003/S-013/COMMIT_PUSH
+status: ART_COMMITTED_PUSH_VERIFIED_WAITING_S014
+checkpoint: B-004/S-014/OWNER_INTEGRATION_GATE
+art_commit: 86c453fe2f6328b9495f8bb0cdc36618e02111f2
+art_push_verification: REMOTE_SHA_MATCH
 git_authorization: 'atena, aprovado commite e push'
 git_branch: codex/assets-preparation-2026-10-10
 admission_authorization: 'Autorizo a admissão e validação'
 admission_authorized_at: '2026-10-11'
 admission_scope: 'Dez PNGs aceitos, hotspots, imports, manifesto e testes cursor/lettering; sem commit, push ou build'
-current_step_position: 13
+current_step_position: 14
 total_steps: 16
-completed_steps: 12
-current_activity: 'Commit de arte e push autorizados em preparacao'
+completed_steps: 13
+current_activity: 'S013 concluida; integracao das demais telas aguarda S014'
 admitted: 10
 admission_validation: PASS
 admission_receipt: .atena/generated/fila026-remaining-2026-10-11/admission-receipt.json
@@ -43,5 +45,5 @@ gallery: .atena/generated/fila026-remaining-2026-10-11/index.html
 jobs: .atena/generated/fila026-remaining-2026-10-11/jobs.json
 audit: .atena/generated/fila026-remaining-2026-10-11/audit.json
 evidence: .atena/evidence/fila026-remaining-2026-10-11.md
-next_objective: 'Gate de commit de arte S013; depois S014 usos restantes e S015 validacao completa'
+next_objective: 'Gate S014: integracao das demais telas; depois S015 validacao completa e S016 fechamento'
 commit_push_authorization: APPROVED_EXPLICITLY_2026_10_11

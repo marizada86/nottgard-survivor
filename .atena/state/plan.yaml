@@ -3,13 +3,15 @@ fila026_remaining_2026_10_11:
   state_file: .atena/state/fila026-remaining.yaml
   plan: PLAN-065
   revision: FILA026-REMAINING/v01
-  status: COMMIT_PUSH_AUTHORIZED_IN_PROGRESS
+  status: ART_COMMITTED_PUSH_VERIFIED_WAITING_S014
   mode: per-plan
-  checkpoint: B-003/S-013/COMMIT_PUSH
+  checkpoint: B-004/S-014/OWNER_INTEGRATION_GATE
+  art_commit: 86c453fe2f6328b9495f8bb0cdc36618e02111f2
+  art_push_verification: REMOTE_SHA_MATCH
   git_authorization: 'atena, aprovado commite e push'
   admission_authorization: 'Autorizo a admissão e validação'
-  current_step_position: 13
-  completed_steps: 12
+  current_step_position: 14
+  completed_steps: 13
   total_steps: 16
   generated: 9
   prepared: 9
@@ -23,7 +25,7 @@ fila026_remaining_2026_10_11:
   admission_evidence: .atena/evidence/fila026-admission-2026-10-11.md
   gallery: .atena/generated/fila026-remaining-2026-10-11/index.html
   evidence: .atena/evidence/fila026-remaining-2026-10-11.md
-  next_objective: 'Gate S013: commit de arte; S014 e S015 pendentes; L02 opcional deferida'
+  next_objective: 'S014 integracao pendente; S015 validacao completa; L02 opcional deferida'
 fila026_l01_2026_10_11:
   plan: PLAN-065
   state_file: .atena/state/plan-065-lettering-cursor.yaml
@@ -44,7 +46,7 @@ fila026_l01_2026_10_11:
   runtime_admission: true
   gallery: .atena/generated/fila026-l01-2026-10-11/index.html
   evidence: .atena/evidence/fila026-l01-2026-10-11.md
-  next_objective: 'L01 v01 admitida e validada em S013; aguarda commit de arte'
+  next_objective: 'L01 v01 admitida, commitada e publicada em S013; S014 permanece pendente'
 fila028_altar_correction_2026_10_10:
   state_file: .atena/state/fila028-altar-correction.yaml
   revision: AL01-CORR/v01

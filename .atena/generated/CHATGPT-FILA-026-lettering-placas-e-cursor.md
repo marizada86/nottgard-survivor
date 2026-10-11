@@ -1,7 +1,7 @@
 ---
 id: "CHATGPT-FILA-026"
 title: "Fila de geração: lettering, placas de título e cursor (ART-039, ART-040)"
-status: "Dez PNGs v01 aceitos e admitidos, validacao PASS; S013 aguarda commit de arte; L02 opcional deferida"
+status: "Dez PNGs v01 aceitos/admitidos/commitados/publicados, validacao PASS; S014 integracao pendente; L02 opcional deferida"
 priority: "3ª: PLAN-053 (heróis) → FILA-025 (ficha C) → esta → FILA-021 → FILA-022/023"
 created: "2026-10-06"
 relations: ["[[ART-PROMPTS-058-lettering-placas-e-cursor]]", "[[SPEC-132-lettering-e-cursor-do-jogo]]", "[[PLAN-065-lettering-e-cursor-2026-10-06]]"]
@@ -36,6 +36,8 @@ Compilação operacional de [[ART-PROMPTS-058-lettering-placas-e-cursor]]; em ca
 Alinhamento com a ficha C: as placas P01 e P02 só são geradas **depois da aprovação da A01** da FILA-025, para herdarem o mesmo ferro e ouro.
 
 ## Mensagens
+
+Publicação posterior 2026-10-11: autorização **“atena, aprovado commite e push”**; arte `86c453f` publicada e SHA remoto verificado na branch da fila. [Evidência](../evidence/fila026-publication-2026-10-11.md). S013 concluída; S014 integração das demais telas pendente. Os registros abaixo são históricos.
 
 Admissão posterior em 2026-10-11: **“Autorizo a admissão e validação”**. Dez PNGs (L01 + nove G2) admitidos; imports e testes de cursor/lettering sem falhas. [Recibo](fila026-remaining-2026-10-11/admission-receipt.json) e [evidência](../evidence/fila026-admission-2026-10-11.md). Commit de arte S013, hookups S014 e verificação completa S015 permanecem pendentes; registros abaixo são históricos.
 

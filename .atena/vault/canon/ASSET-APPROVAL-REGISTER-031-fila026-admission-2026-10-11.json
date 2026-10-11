@@ -147,5 +147,26 @@
   "manifest": ".atena/generated/ASSET-PRODUCTION-MANIFEST-001.json",
   "tests_status": "PASS",
   "commit_push_build_authorized": false,
-  "remaining": "S013 art commit; S014 remaining UI hookups; S015 full suite/captures/playtest; S016 closure/code commit."
+  "remaining": "S014 remaining UI hookups; S015 full verification/playtest; S016 closure/code commit.",
+  "publication": {
+    "plan": "PLAN-065",
+    "step": "S-013",
+    "request_classification": "IN_PLAN",
+    "authorization": "atena, aprovado commite e push",
+    "branch": "codex/assets-preparation-2026-10-10",
+    "date": "2026-10-11",
+    "status": "ART_COMMIT_PUSH_VERIFIED",
+    "art_commit": "86c453fe2f6328b9495f8bb0cdc36618e02111f2",
+    "remote_tip_at_art_verification": "86c453fe2f6328b9495f8bb0cdc36618e02111f2",
+    "remote_before": "85ee82ab4366c0d14a60e44e3b9c7a060dcf38c7",
+    "also_delivered_prior_commits": [
+      "7af88e7",
+      "1e05a69"
+    ],
+    "force_push": false,
+    "main_changed": false,
+    "build_run": false,
+    "hero_changes_committed": false,
+    "next_checkpoint": "S-014/OWNER_INTEGRATION_GATE"
+  }
 }

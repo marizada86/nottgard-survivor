@@ -3,11 +3,13 @@ id: PLAN-065
 title: Lettering do jogo e cursor do mouse temáticos
 spec: SPEC-132
 cards: [ART-039, ART-040, MEC-058]
-status: aprovado por plano; G1 e G2 aceitos; S013 admissao e validacao concluidas, commit de arte pendente
+status: S013 concluida, arte commitada e push verificado; S014 integracao pendente
 approval_mode: per-plan
 ---
 
 # PLAN-065
+
+Publicação posterior 2026-10-11: dono autorizou **“atena, aprovado commite e push”**. Commit de arte `86c453f` publicado e SHA remoto conferido; [evidência](../../evidence/fila026-publication-2026-10-11.md). B003/S013 concluída. Atual S014 (14/16, treze passos concluídos, dois após o atual), integração das demais telas ainda pendente. Os registros seguintes são históricos.
 
 Admissão autorizada em 2026-10-11 com **“Autorizo a admissão e validação”**: dez PNGs copiados sem alteração, hotspots atualizados, imports/manifesto/testes de cursor e lettering PASS. [Evidência S013](../../evidence/fila026-admission-2026-10-11.md). S013 permanece atual (13/16, doze passos completos), pois o commit de arte está explicitamente excluído da autorização. S014/S015/S016 ainda pendentes; sem hookups adicionais, push ou build. Os registros seguintes preservam os checkpoints históricos de produção e aceite.
 

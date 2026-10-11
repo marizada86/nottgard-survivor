@@ -63,3 +63,6 @@ page=page.replace('O G2 é aceite artístico por peça. Admissão, integração,
                   'G2 e admissão autorizada concluídos. Composições acima permanecem ilustrativas. Commit de arte e integração das demais telas aguardam seus checkpoints; sem push ou build.')
 path.write_text(page,encoding='utf-8')
 print(json.dumps(dict(admitted=10,imports='PASS',targeted_tests='PASS',manifest='PASS',next='ART_COMMIT_GATE')))
+if (base/'publication.json').exists():
+    import runpy
+    runpy.run_path(str(base/'reconcile_publication.py'))

@@ -9,6 +9,7 @@ assert [r['code'] for r in audit['records']]==['L03','L04','L05','P01','P02','P0
 approval_path=base/'owner-approval.json'
 approved=approval_path.exists()
 admitted=(base/'admission-receipt.json').exists()
+published=(base/'publication.json').exists()
 expected_state='CANON_VISUAL_G2' if approved else 'DRAFT'
 assert all(r['content_state']==expected_state and r['runtime_admission']==admitted for r in audit['records'])
 if approved:
@@ -51,8 +52,10 @@ if approved:
 if admitted:
     paths.append(root/'.atena/evidence/fila026-admission-2026-10-11.md')
     admission=json.loads((base/'admission-receipt.json').read_text(encoding='utf-8'))
-    assert admission['status']=='ADMITTED_VALIDATED_WAITING_ART_COMMIT'
+    assert admission['status'] in ['ADMITTED_VALIDATED_WAITING_ART_COMMIT','ART_COMMITTED_PUSH_VERIFIED_WAITING_S014']
     assert admission['tests_status']==admission['imports_status']=='PASS'
+if published:
+    paths.append(root/'.atena/evidence/fila026-publication-2026-10-11.md')
 for path in paths:
     text=path.read_text(encoding='utf-8')
     links=re.findall(r'(?:src|href)="([^"]+)"',text) if path.suffix=='.html' else re.findall(r'\]\(([^)]+)\)',text)
@@ -69,9 +72,12 @@ captures={p:hashlib.sha256((root/p).read_bytes()).hexdigest() for p in ['.atena/
 result=dict(local_links_verified=count,technical_audit='PASS',selected_logo='v01',
             accepted_logo_derivatives_unchanged=True,nine_revision_state=expected_state,optional_L02_deferred=True,
             PLAN071_and_returns_unchanged=True,runtime_admitted=admitted,runtime_changes_authorized=True,preview_reference_hashes=captures,
-            commits_created=0,pushes_performed=0,owner_G2='ACCEPTED_PER_PIECE' if approved else 'PENDING')
+            art_commits_created=1 if published else 0,art_push_verified=published,owner_G2='ACCEPTED_PER_PIECE' if approved else 'PENDING')
 (base/'contract-check.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 jobs.update(current_step='S-013/ART_COMMIT_GATE' if admitted else ('S-013/ADMISSION_GATE' if approved else 'S-012/G2'),
             status='ADMITTED_VALIDATED_WAITING_ART_COMMIT' if admitted else ('VISUALLY_ACCEPTED_WAITING_ADMISSION_GATE' if approved else 'GENERATED_PREPARED_AUDITED_WAITING_G2'))
 (base/'jobs.json').write_text(json.dumps(jobs,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+if published:
+    import runpy
+    runpy.run_path(str(base/'reconcile_publication.py'))
 print(json.dumps(result,ensure_ascii=False))

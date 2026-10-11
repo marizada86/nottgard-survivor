@@ -1,5 +1,7 @@
 # FILA-026 — admissão e validação S013
 
+Resultado Git posterior: commit de arte `86c453f` publicado e SHA remoto verificado; [evidência de publicação](fila026-publication-2026-10-11.md). S013 concluída, próximo S014. O texto de autorização/preparação pendente abaixo preserva o histórico anterior ao push.
+
 Checkpoint Git posterior: **“atena, aprovado commite e push”** autoriza o commit de arte da FILA-026 e o push na branch existente `codex/assets-preparation-2026-10-10`. Preparação em andamento; os estados de commit não autorizado abaixo descrevem o escopo anterior de admissão. Main, integração S014 e build não entram neste checkpoint. Mudanças locais dos heróis preservadas fora do commit; o push transporta também os dois commits anteriores já aprovados da FILA-028.
 
 PLAN-065/SPEC-132, IN_PLAN, modo per-plan preservado. Autorização explícita: **“Autorizo a admissão e validação”**, para dez PNGs aceitos (L01 v01 + L03–L05, P01–P03, C01–C03 v01), hotspots reais, imports, manifesto e testes existentes. Sem commit, push ou build; nenhum hookup adicional S014 foi executado.
