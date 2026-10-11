@@ -133,6 +133,7 @@ var _amb_strike := 6.0
 var _cur_angle := 0.0
 var _trickle := 0.0
 var _grid := {}
+const EMPTY_CELL: Array = []   # PLAN-098: consulta de célula vazia sem alocar um Array novo por inimigo e por passo
 var _first_inter := true
 var _spawn_serial := 0
 var _cine_queue: Array = []      # MEC-009: evoluções aguardando a mini-cinemática
@@ -1175,7 +1176,7 @@ func _enemy_step(e: Enemy, dt: float) -> void:
 	var k := Vector2i(int(floor(e.pos.x)), int(floor(e.pos.y)))
 	for dx in range(-1, 2):
 		for dy in range(-1, 2):
-			var cell: Array = _grid.get(Vector2i(k.x + dx, k.y + dy), [])
+			var cell: Array = _grid.get(Vector2i(k.x + dx, k.y + dy), EMPTY_CELL)
 			for o in cell:
 				if o != e:
 					var off: Vector2 = e.pos - o.pos
@@ -2022,13 +2023,49 @@ func _reach_has(reach: PackedByteArray, p: Vector2) -> bool:
 
 ## Células (0,75 tile) que o herói alcança andando a partir da posição atual, respeitando bloqueios e terreno.
 ## Reaproveita o resultado enquanto herói (célula), mapa e bloqueios não mudam (a morte do chefe cria vários interativos).
+## PLAN-098 (SPEC-171): a parte que não depende da posição do herói (células bloqueadas e componentes livres) é calculada
+## uma vez por fase e mapa (`_reach_static`, aquecida em `place_scenery`); aqui só se escolhem os componentes tocados
+## pela célula do herói. O resultado é byte a byte o da busca em largura anterior (tests/test_reach_grid.gd).
 func _reach_grid() -> PackedByteArray:
 	var d := _reach_dims()
 	var start := Vector2i(clampi(int(hero.pos.x / REACH_CELL), 0, d.x - 1), clampi(int(hero.pos.y / REACH_CELL), 0, d.y - 1))
 	var key := "%s|%s|%d|%s" % [stage_id, str(start), hero.blockers.hash(), str(map_size)]
 	if key == _reach_key:
 		return _reach_cache
-	var grid := PackedByteArray()  # 0 = livre e não visitada, 1 = alcançável, 2 = bloqueada (mesmo critério de Hero.can_stand no centro da célula)
+	_reach_static()
+	# a busca partia da célula do herói (marcada mesmo se bloqueada) e entrava em vizinhas livres: o alcance é a própria
+	# célula mais os componentes livres que ela ou suas 8 vizinhas tocam
+	var wanted := {}
+	for dx in [-1, 0, 1]:
+		for dy in [-1, 0, 1]:
+			var nx: int = start.x + dx
+			var ny: int = start.y + dy
+			if nx < 0 or ny < 0 or nx >= d.x or ny >= d.y:
+				continue
+			var label: int = _reach_labels[ny * d.x + nx]
+			if label > 0:
+				wanted[label] = true
+	var grid := _reach_blocked.duplicate()   # 0 = livre e não visitada, 2 = bloqueada
+	var labels := _reach_labels
+	for i in grid.size():
+		if labels[i] > 0 and wanted.has(labels[i]):
+			grid[i] = 1
+	grid[start.y * d.x + start.x] = 1
+	_reach_cache = grid
+	_reach_key = key
+	return grid
+
+var _reach_static_key := ""
+var _reach_blocked := PackedByteArray()   # 0 = livre, 2 = bloqueada (mesmo critério de Hero.can_stand no centro da célula)
+var _reach_labels := PackedInt32Array()   # 0 = bloqueada; >0 = componente livre (vizinhança de 8)
+
+## Células bloqueadas e componentes livres do mapa; refeito só quando fase, mapa ou bloqueios mudam.
+func _reach_static() -> void:
+	var key := "%s|%d|%s|%s" % [stage_id, hero.blockers.hash(), str(map_size), hero.terrain_id]
+	if key == _reach_static_key:
+		return
+	var d := _reach_dims()
+	var grid := PackedByteArray()
 	grid.resize(d.x * d.y)
 	var r := Hero.RADIUS
 	for cy in d.y:
@@ -2046,22 +2083,35 @@ func _reach_grid() -> PackedByteArray:
 			for cx in range(x0, x1 + 1):
 				if (Vector2(cx, cy) + Vector2(0.5, 0.5)).distance_to(Vector2(b.x, b.y) / REACH_CELL) * REACH_CELL < reach_r:
 					grid[cy * d.x + cx] = 2
-	var queue: Array[Vector2i] = [start]
-	grid[start.y * d.x + start.x] = 1
-	var head := 0
-	while head < queue.size():
-		var c: Vector2i = queue[head]
-		head += 1
-		for dx in [-1, 0, 1]:
-			for dy in [-1, 0, 1]:
-				var n := Vector2i(c.x + dx, c.y + dy)
-				if n.x < 0 or n.y < 0 or n.x >= d.x or n.y >= d.y or grid[n.y * d.x + n.x] != 0:
-					continue
-				grid[n.y * d.x + n.x] = 1
-				queue.append(n)
-	_reach_cache = grid
-	_reach_key = key
-	return grid
+	var labels := PackedInt32Array()
+	labels.resize(d.x * d.y)
+	var next_label := 0
+	var queue := PackedInt32Array()
+	for seed_index in grid.size():
+		if grid[seed_index] != 0 or labels[seed_index] != 0:
+			continue
+		next_label += 1
+		labels[seed_index] = next_label
+		queue.clear()
+		queue.append(seed_index)
+		var head := 0
+		while head < queue.size():
+			var idx := queue[head]
+			head += 1
+			var cx := idx % d.x
+			var cy := idx / d.x
+			var x_lo := maxi(0, cx - 1)
+			var x_hi := mini(d.x - 1, cx + 1)
+			for ny in range(maxi(0, cy - 1), mini(d.y - 1, cy + 1) + 1):
+				var row := ny * d.x
+				for nx in range(x_lo, x_hi + 1):
+					var n := row + nx
+					if grid[n] == 0 and labels[n] == 0:
+						labels[n] = next_label
+						queue.append(n)
+	_reach_blocked = grid
+	_reach_labels = labels
+	_reach_static_key = key
 
 func _update_interactions(dt: float) -> void:
 	for it in interactions:

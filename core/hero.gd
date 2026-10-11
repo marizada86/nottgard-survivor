@@ -225,7 +225,45 @@ func can_stand(p: Vector2, r: float = RADIUS) -> bool:
 		return false
 	if TerrainLayout.is_blocked(terrain_id, p):
 		return false
-	for b in blockers:
-		if p.distance_to(Vector2(b.x, b.y)) < b.z + r:
-			return false
+	if blockers.is_empty():
+		return true
+	_index_blockers()
+	# PLAN-098 (SPEC-171): só os bloqueios das células próximas; o teste de cada um é o mesmo de antes.
+	var reach := _bk_max_z + r + 0.01
+	var x0 := int(floor((p.x - reach) / BLOCKER_CELL))
+	var x1 := int(floor((p.x + reach) / BLOCKER_CELL))
+	var y0 := int(floor((p.y - reach) / BLOCKER_CELL))
+	var y1 := int(floor((p.y + reach) / BLOCKER_CELL))
+	for cx in range(x0, x1 + 1):
+		for cy in range(y0, y1 + 1):
+			var cell: Variant = _bk_cells.get(Vector2i(cx, cy))
+			if cell == null:
+				continue
+			for b in cell:
+				if p.distance_to(Vector2(b.x, b.y)) < b.z + r:
+					return false
 	return true
+
+## Índice espacial dos bloqueios (PLAN-098). can_stand roda por inimigo e por passo; percorrer todos os bloqueios
+## (até ~200 por fase) custava ~20 µs por chamada. O índice é refeito quando o conteúdo do array muda (hash + tamanho),
+## então anexar, limpar ou trocar o array continua valendo sem avisar ninguém.
+const BLOCKER_CELL := 6.0
+var _bk_hash := 0
+var _bk_size := -1
+var _bk_cells: Dictionary = {}   # Vector2i (célula) -> Array de bloqueios cujo centro cai nela
+var _bk_max_z := 0.0
+
+func _index_blockers() -> void:
+	var h := blockers.hash()
+	if h == _bk_hash and blockers.size() == _bk_size:
+		return
+	_bk_hash = h
+	_bk_size = blockers.size()
+	_bk_cells = {}
+	_bk_max_z = 0.0
+	for b in blockers:
+		_bk_max_z = maxf(_bk_max_z, b.z)
+		var key := Vector2i(int(floor(b.x / BLOCKER_CELL)), int(floor(b.y / BLOCKER_CELL)))
+		if not _bk_cells.has(key):
+			_bk_cells[key] = []
+		_bk_cells[key].append(b)
