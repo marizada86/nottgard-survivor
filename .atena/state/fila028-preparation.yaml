@@ -6,6 +6,9 @@ approval_mode: per-plan
 mode_basis: 'Escolha anterior Por plano preservada'
 scope_approval: 'Aprovo a preparação das 34 fontes'
 status: ACCEPTED_33_HELD_ALTAR
+altar_hold_resolution: ACCEPTED_CORRECTION_AL01_CORR_v01
+altar_visual_register: .atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md
+current_prepared_inventory: .atena/generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json
 checkpoint: S-007/ACCEPTED_WITH_HELD_ALTAR
 source_state: CANON_SOURCE_VISUAL_ONLY
 derived_state: MIXED_CANON_PREPARATION_33_DRAFT_ALTAR

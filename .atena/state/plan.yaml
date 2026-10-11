@@ -1,4 +1,24 @@
 version: 2
+fila028_altar_correction_2026_10_10:
+  state_file: .atena/state/fila028-altar-correction.yaml
+  revision: AL01-CORR/v01
+  status: VISUALLY_ACCEPTED_PREPARATION_CANON
+  mode: per-plan
+  checkpoint: S-006/ACCEPTED
+  scope_approval: 'Aprovo a correção do altar'
+  completed_steps: 5
+  total_steps: 5
+  evidence: .atena/evidence/fila028-altar-correction-2026-10-10.md
+  source_state: CANON_AL01_v02
+  output_state: CANON_PREPARATION_VISUAL_ONLY
+  owner_visual_acceptance: 'Aprovo com ciclo de 900 ms'
+  accepted_cycle_ms: 900
+  visual_register: .atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md
+  current_prepared_assets: 34
+  local_commit_authorization: 'aprovado, commit'
+  local_commit_authorization_date: '2026-10-11'
+  push_authorization: NOT_AUTHORIZED_FOR_CORRECTION
+  runtime_admission: false
 fila028_preparation_publish_2026_10_10:
   request_classification: PLAN_DEVIATION
   route: commit-push-authorized-preparation-then-return-to-owner-review

@@ -1,7 +1,7 @@
 ---
 id: "CHATGPT-FILA-028"
 title: "Fila de geração: eventos aleatórios, Arcanista, ícones das armas e equipamentos novos, segredos e altar animado"
-status: "2026-10-10: AL01 e EV01–EV06 aceitas visualmente; IC01–IC13 aceitas visualmente; preparacao runtime pendente; AR01/SE01/SE02 aceitas visualmente; SE03-SE11 e I01/I02 aceitas visualmente; todas as 34 fontes aceitas, preparacao pendente"
+status: "2026-10-10: 34 fontes aceitas; 34 preparacoes visuais CANON aceitas, incluindo correcao AL01-CORR/v01 com ciclo 900 ms; integracao runtime pendente; loop antigo do altar retido como historico"
 priority: "normal: depois da FILA-027 (Erik e Arlindo)"
 created: "2026-10-09"
 relations: ["[[ART-PROMPTS-061-eventos-arcanista-icones-segredos-e-altar]]", "[[ART-PROMPTS-059-icones-das-bencaos-novas]]", "[[SPEC-164-eventos-aleatorios-novos-mec-005]]"]
