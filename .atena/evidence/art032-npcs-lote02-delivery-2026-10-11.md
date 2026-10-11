@@ -1,0 +1,32 @@
+# ART-032 LOTE02/v01 — entrega DRAFT, 2026-10-11
+
+[Plano](../vault/drafts/PLAN-ART032-NPCS-LOTE02-v01.md), modo per-plan, execução aprovada **antes da geração** com “Aprovo as seis peças DRAFT”. Quatro de cinco etapas concluídas; S-005 visual pendente. [Preparação anterior](art032-npcs-lote02-preparation-2026-10-11.md) preserva a prontidão e o estado pré-G0. [Estado atual](../state/art032-npcs-lote02.yaml).
+
+| Candidata DRAFT | Fonte nativa selecionada | Margem mínima alfa >8 | Alfa máximo na borda |
+|---|---|---:|---:|
+| NP04 Nyxara v02 | [PNG](../generated/art032-npcs-lote02-2026-10-11/sources/NP04_nyxara_v02.png) | 15,31% | 1/255 |
+| NP05 Vaelis v01 | [PNG](../generated/art032-npcs-lote02-2026-10-11/sources/NP05_vaelis_v01.png) | 11,88% | 1/255 |
+| NP06 Graz’zt aliado v02 | [PNG](../generated/art032-npcs-lote02-2026-10-11/sources/NP06_grazzt_aliado_v02.png) | 12,28% | 1/255 |
+| NP07 Reaper barqueiro v01 | [PNG](../generated/art032-npcs-lote02-2026-10-11/sources/NP07_reaper_barqueiro_v01.png) | 16,59% | 1/255 |
+| NP08 Vhaerith Aetherion v01 | [PNG](../generated/art032-npcs-lote02-2026-10-11/sources/NP08_vhaerith_aetherion_v01.png) | 12,60% | 0/255 |
+| NP09 mercador de Rivenheart v01 | [PNG](../generated/art032-npcs-lote02-2026-10-11/sources/NP09_mercador_rivenheart_v01.png) | 14,51% | 1/255 |
+
+Oito saídas via **built-in image_gen**, na ordem NP04–NP09 com correções antes de avançar. Todas as fontes nativas reais 1254×1254 PNG RGBA (pedido 1024×1024), copiadas byte a byte com hash idêntico ao original. Nenhum PNG fonte redimensionado/limpo. Cinco fontes têm resíduo nativo de alfa 1/255 na borda, preservado; isso não é corte visível do corpo/acessório. Transparência real e margem mínima contratada de 10% passam em todas as candidatas; bbox alfa >8 é aproximação de visibilidade.
+
+Histórico: [NP04 v01](../generated/art032-npcs-lote02-2026-10-11/sources/NP04_nyxara_v01.png) teve margem 4,78%; correção dirigida de enquadramento via imagegen criou v02. [NP06 v01](../generated/art032-npcs-lote02-2026-10-11/sources/NP06_grazzt_aliado_v01.png) apresentou orelha élfica não prevista; v02 corrigiu para orelha arredondada, evitando transferência de identidade da referência Durvall. Ambas v01 preservadas, não selecionadas. Prompts seguintes reforçaram apenas a invariância de enquadramento/margem; nenhuma mudança de lore, escopo ou estilo.
+
+Papéis/contexto e revisões das referências estruturados antes da produção. Vault de Nottgard e Nottcard somente leitura; lore canônica define papéis, mas detalhes físicos/figurino não documentados são hipóteses DRAFT. Nyxara e Vaelis têm fontes separadas. Reaper/mercador com rosto oculto, sem fixar espécie/gênero; Graz’zt com proposta física experimental, sem anatomia externa tratada como canon. Vhaerith é elfo confirmado; seu pergaminho/adornos de cinto são detalhes de figurino proposto, não a runa pedida ou conclusão de quest. Padrões de roupa e ornamentos não afirmam símbolos sagrados. Jaula, canoa, ambientes e cenas não incluídos. [Jobs, hashes, prompts efetivos e origem de cada saída](../generated/art032-npcs-lote02-2026-10-11/jobs.json); [prompts completos com histórico](../generated/art032-npcs-lote02-2026-10-11/prompts.md).
+
+[Auditoria](../generated/art032-npcs-lote02-2026-10-11/audit.json): PASS_WITH_NATIVE_ALPHA_NOTE. Hashes dos originais, referências, quatro fontes aceitas do piloto, arquivos runtime/assets/data/testes protegidos e cadeia ativa PLAN-071 verificados inalterados. HEAD fc5c709f3ef5c4acdc7c5a8a842747b72c7f70ec. Sem integração, normalização/admissão, promoção a CANON, commit, push ou build. Testes de gameplay não reexecutados, pois nenhum código/runtime mudou; nenhum playtest realizado.
+
+[Galeria](../generated/art032-npcs-lote02-2026-10-11/index.html): todos os links locais e sete prévias/metadados verificados. Browser não usado para file://, seguindo o bloqueio já registrado no piloto; sem contorno e sem alegar renderização HTML verificada. [Prancha Godot](../generated/art032-npcs-lote02-2026-10-11/review-reading.png) completa 1000×1120, inspeção Atena: seis atores distinguíveis a 80px; Graz’zt também a 128px. Recorte visível feito apenas em memória; fontes intactas. [QA](../generated/art032-npcs-lote02-2026-10-11/gallery-qa.json), [render log](../generated/art032-npcs-lote02-2026-10-11/preview-renderer/render-log.txt). Primeira captura por janela foi limitada pelo monitor e cortou a segunda linha; refeita em SubViewport independente. Avisos ambientais de cache de shader/certificados não impediram o PNG; nenhuma operação de rede.
+
+## Próximo checkpoint
+
+Verificação final: `git diff --check` sem erros; `tools/backlog_check.ps1 -Brief`: P0=0, P1 abertos=4, P1 implementados aguardando playtest=14, verificações manuais pendentes=0 e alertas de organização=0. HEAD permanece fc5c709f3ef5c4acdc7c5a8a842747b72c7f70ec. Nenhum staging/commit; alterações alheias pré-existentes preservadas.
+
+S-005, posição 5/5, quatro concluídos, zero após o passo atual. Dono avaliar **NP04 v02, NP05 v01, NP06 v02, NP07 v01, NP08 v01, NP09 v01**: estilo/câmera, propostas físicas, diferenciação das Irmãs, leitura a 80px e Graz’zt a 128px. Saída: aceite visual explícito dessas revisões ou ajustes por código. Adequação subjetiva permanece pendente; leitura técnica não equivale a aceite humano ou teste de contraste sobre os mapas. Aceite não autoriza integração, CANON, commit ou push. Demais pontos de ART-032 permanecem abertos.
+
+## Aceite visual registrado — 2026-10-11
+
+O dono respondeu **“Aprovo visualmente as seis revisões”** à pergunta que identificava **NP04 v02, NP05 v01, NP06 v02, NP07 v01, NP08 v01 e NP09 v01**, com propostas físicas/figurinos, diferença das Irmãs, leitura 80/128px e alfa residual 1/255 em cinco fontes. [Recibo exato com hashes](../generated/art032-npcs-lote02-2026-10-11/visual-acceptance.json). **S-005 concluído; 5/5, zero passos restantes.** Seções anteriores preservam o histórico antes do aceite; o fechamento presente é o estado atual. Todas as seis revisões seguem DRAFT; versões históricas NP04/NP06 v01 não foram aceitas. Sem CANON, normalização/admissão, integração, commit, push ou build. Aceite visual não é playtest ou avaliação nos mapas. Registro/estado/jobs/auditoria/QA/galeria/backlog reconciliados; fontes nativas, piloto anterior e cadeia PLAN-071 protegidos. Próxima frente preparada é o plano dos pontos restantes ART-032, com prontidão/escopo ainda por definir e aprovar.

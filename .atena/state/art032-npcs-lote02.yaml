@@ -1,0 +1,41 @@
+version: 1
+plan: PLAN-ART032-NPCS-LOTE02
+revision: v01
+card: ART-032
+request_classification: PLAN_CHANGE_REQUEST
+route: PREPARE_NEXT_IMAGE_LOT_PRESERVE_CLOSED_PILOT_PLAN071_AND_HERO_REVIEW
+owner_reply: 'Produzir as próximas imagens de ART-032'
+status: COMPLETED_VISUALLY_ACCEPTED_DRAFT
+approval_mode: per-plan
+approval_status: APPROVED_EXPLICITLY
+content_state: DRAFT
+checkpoint: S-005/OWNER_VISUAL_ACCEPTANCE_RECORDED
+current_step_position: 5
+completed_steps: 5
+total_steps: 5
+remaining_steps_after_current: 0
+ordered_steps: [S-001, S-002, S-003, S-004, S-005]
+completed_ordered_steps: [S-001, S-002, S-003, S-004, S-005]
+proposed_sources: [NP04_NYXARA_v01, NP05_VAELIS_v01, NP06_GRAZZT_v01, NP07_REAPER_v01, NP08_VHAERITH_v01, NP09_MERCADOR_v01]
+generated: 6
+blocking_visual_gaps: 0
+runtime_admission: false
+canonical_promotion: false
+git_publication_build: NOT_AUTHORIZED
+visual_bible: .atena/vault/drafts/PLAN-ART032-NPCS-LOTE02-v01.md
+output_package: .atena/generated/art032-npcs-lote02-2026-10-11
+evidence: .atena/evidence/art032-npcs-lote02-delivery-2026-10-11.md
+next_objective: 'Preparar plano futuro dos pontos restantes ART-032, mantendo as dez fontes aceitas; geração ainda depende de escopo aprovado'
+preserved_checkpoint: PLAN071_AND_HERO_EXTRACTION_REVIEW
+scope_owner_reply: "Aprovo as seis peças DRAFT"
+approved_date: "2026-10-11"
+human_visual_acceptance: APPROVED_EXPLICITLY
+review_candidates: [NP04_v02, NP05_v01, NP06_v02, NP07_v01, NP08_v01, NP09_v01]
+native_outputs_preserved: 8
+technical_status: PASS_WITH_NATIVE_ALPHA_NOTE
+reading_preview: .atena/generated/art032-npcs-lote02-2026-10-11/review-reading.png
+gallery_browser_verification: NOT_ATTEMPTED_KNOWN_FILE_URL_POLICY_BLOCK
+visual_owner_reply: "Aprovo visualmente as seis revisões"
+visual_accepted_revisions: [NP04_v02, NP05_v01, NP06_v02, NP07_v01, NP08_v01, NP09_v01]
+visual_acceptance_receipt: .atena/generated/art032-npcs-lote02-2026-10-11/visual-acceptance.json
+next_execution_authorized: false

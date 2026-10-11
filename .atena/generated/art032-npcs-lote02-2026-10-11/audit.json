@@ -1,0 +1,371 @@
+{
+  "plan": "PLAN-ART032-NPCS-LOTE02",
+  "revision": "v01",
+  "content_state": "DRAFT",
+  "authorization": "Aprovo as seis peças DRAFT",
+  "mode": "per-plan",
+  "status": "PASS_WITH_NATIVE_ALPHA_NOTE",
+  "review_candidates": 6,
+  "native_outputs": 8,
+  "requested_canvas": [
+    1024,
+    1024
+  ],
+  "native_canvas_actual": [
+    1254,
+    1254
+  ],
+  "image_tool": "built-in image_gen",
+  "native_resizing_cleaning": "NOT_PERFORMED",
+  "source_reference_hashes": "PASS",
+  "prior_four_accepted_source_hashes": "PASS",
+  "runtime_assets_code_data_tests": "UNCHANGED_HASH_VERIFIED",
+  "plan071_return_chain": "UNCHANGED_HASH_VERIFIED",
+  "head": "fc5c709f3ef5c4acdc7c5a8a842747b72c7f70ec",
+  "human_visual_acceptance": "APPROVED_EXPLICITLY",
+  "records": [
+    {
+      "code": "NP04",
+      "title": "Nyxara",
+      "revision": "v02",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP04_nyxara_v02.png",
+      "sha256": "ef545d2a49727264401e19e3d2dd7f9b653551bc0aefa41616298fc1f583a5c1",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox_alpha_above8": [
+        376,
+        249,
+        968,
+        1062
+      ],
+      "margins_px": [
+        376,
+        249,
+        286,
+        192
+      ],
+      "minimum_margin_percent": 15.31,
+      "border_max_alpha": 1,
+      "border_exactly_empty": false,
+      "checks": {
+        "png_rgba": true,
+        "square_canvas": true,
+        "native_copy_hash": true,
+        "real_transparent_alpha": true,
+        "margin_10_percent_met": true,
+        "no_visible_border_clipping_alpha_above8": true
+      },
+      "recommended_for_owner_review": true,
+      "content_state": "DRAFT",
+      "human_visual_acceptance": "APPROVED_EXPLICITLY",
+      "runtime_admission": false,
+      "preview_heights": [
+        80
+      ]
+    },
+    {
+      "code": "NP05",
+      "title": "Vaelis",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP05_vaelis_v01.png",
+      "sha256": "0dc79c51e38ddfca4ae47bc2d549fe9ba162eb7d410eefa9ae5b66806bca0def",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox_alpha_above8": [
+        402,
+        213,
+        865,
+        1105
+      ],
+      "margins_px": [
+        402,
+        213,
+        389,
+        149
+      ],
+      "minimum_margin_percent": 11.88,
+      "border_max_alpha": 1,
+      "border_exactly_empty": false,
+      "checks": {
+        "png_rgba": true,
+        "square_canvas": true,
+        "native_copy_hash": true,
+        "real_transparent_alpha": true,
+        "margin_10_percent_met": true,
+        "no_visible_border_clipping_alpha_above8": true
+      },
+      "recommended_for_owner_review": true,
+      "content_state": "DRAFT",
+      "human_visual_acceptance": "APPROVED_EXPLICITLY",
+      "runtime_admission": false,
+      "preview_heights": [
+        80
+      ]
+    },
+    {
+      "code": "NP06",
+      "title": "Graz'zt aliado",
+      "revision": "v02",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP06_grazzt_aliado_v02.png",
+      "sha256": "90fc10b2430106b0bc5d96b3607e3ad736c65d80cfe70d0e60c9916d314f8618",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox_alpha_above8": [
+        318,
+        239,
+        1047,
+        1100
+      ],
+      "margins_px": [
+        318,
+        239,
+        207,
+        154
+      ],
+      "minimum_margin_percent": 12.28,
+      "border_max_alpha": 1,
+      "border_exactly_empty": false,
+      "checks": {
+        "png_rgba": true,
+        "square_canvas": true,
+        "native_copy_hash": true,
+        "real_transparent_alpha": true,
+        "margin_10_percent_met": true,
+        "no_visible_border_clipping_alpha_above8": true
+      },
+      "recommended_for_owner_review": true,
+      "content_state": "DRAFT",
+      "human_visual_acceptance": "APPROVED_EXPLICITLY",
+      "runtime_admission": false,
+      "preview_heights": [
+        80,
+        128
+      ]
+    },
+    {
+      "code": "NP07",
+      "title": "Reaper barqueiro",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP07_reaper_barqueiro_v01.png",
+      "sha256": "1ddc09c66221fe19593e0f2c2a76823dd1db0760cb67f99f67c12cd42cd11642",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox_alpha_above8": [
+        364,
+        255,
+        909,
+        1046
+      ],
+      "margins_px": [
+        364,
+        255,
+        345,
+        208
+      ],
+      "minimum_margin_percent": 16.59,
+      "border_max_alpha": 1,
+      "border_exactly_empty": false,
+      "checks": {
+        "png_rgba": true,
+        "square_canvas": true,
+        "native_copy_hash": true,
+        "real_transparent_alpha": true,
+        "margin_10_percent_met": true,
+        "no_visible_border_clipping_alpha_above8": true
+      },
+      "recommended_for_owner_review": true,
+      "content_state": "DRAFT",
+      "human_visual_acceptance": "APPROVED_EXPLICITLY",
+      "runtime_admission": false,
+      "preview_heights": [
+        80
+      ]
+    },
+    {
+      "code": "NP08",
+      "title": "Vhaerith Aetherion",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP08_vhaerith_aetherion_v01.png",
+      "sha256": "fe79429dc82351130d0a2ab95b10e98df5f94bf12be7f0904888ba4016ed06de",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox_alpha_above8": [
+        421,
+        226,
+        812,
+        1096
+      ],
+      "margins_px": [
+        421,
+        226,
+        442,
+        158
+      ],
+      "minimum_margin_percent": 12.6,
+      "border_max_alpha": 0,
+      "border_exactly_empty": true,
+      "checks": {
+        "png_rgba": true,
+        "square_canvas": true,
+        "native_copy_hash": true,
+        "real_transparent_alpha": true,
+        "margin_10_percent_met": true,
+        "no_visible_border_clipping_alpha_above8": true
+      },
+      "recommended_for_owner_review": true,
+      "content_state": "DRAFT",
+      "human_visual_acceptance": "APPROVED_EXPLICITLY",
+      "runtime_admission": false,
+      "preview_heights": [
+        80
+      ]
+    },
+    {
+      "code": "NP09",
+      "title": "Mercador de Rivenheart",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP09_mercador_rivenheart_v01.png",
+      "sha256": "0bcefb637594d1cda861d05cd14a7b47f06297a2e79bfb60098b809ccc84b1f9",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox_alpha_above8": [
+        372,
+        226,
+        905,
+        1072
+      ],
+      "margins_px": [
+        372,
+        226,
+        349,
+        182
+      ],
+      "minimum_margin_percent": 14.51,
+      "border_max_alpha": 1,
+      "border_exactly_empty": false,
+      "checks": {
+        "png_rgba": true,
+        "square_canvas": true,
+        "native_copy_hash": true,
+        "real_transparent_alpha": true,
+        "margin_10_percent_met": true,
+        "no_visible_border_clipping_alpha_above8": true
+      },
+      "recommended_for_owner_review": true,
+      "content_state": "DRAFT",
+      "human_visual_acceptance": "APPROVED_EXPLICITLY",
+      "runtime_admission": false,
+      "preview_heights": [
+        80
+      ]
+    },
+    {
+      "code": "NP04",
+      "title": "Nyxara",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP04_nyxara_v01.png",
+      "sha256": "e3ac6b90a7a208b79af2f03bbf92f27de0f429e74aaf3bffbf9c37783a9fff33",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox_alpha_above8": [
+        285,
+        65,
+        1090,
+        1194
+      ],
+      "margins_px": [
+        285,
+        65,
+        164,
+        60
+      ],
+      "minimum_margin_percent": 4.78,
+      "border_max_alpha": 1,
+      "border_exactly_empty": false,
+      "checks": {
+        "png_rgba": true,
+        "square_canvas": true,
+        "native_copy_hash": true,
+        "real_transparent_alpha": true,
+        "margin_10_percent_met": false,
+        "no_visible_border_clipping_alpha_above8": true
+      },
+      "recommended_for_owner_review": false,
+      "content_state": "DRAFT",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "preview_heights": [
+        80
+      ]
+    },
+    {
+      "code": "NP06",
+      "title": "Graz'zt aliado",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP06_grazzt_aliado_v01.png",
+      "sha256": "f0f25bf12f997022c3b1f01f0615d61b60b75825a23cc76b7f6c79c65760eb0e",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox_alpha_above8": [
+        320,
+        240,
+        1046,
+        1097
+      ],
+      "margins_px": [
+        320,
+        240,
+        208,
+        157
+      ],
+      "minimum_margin_percent": 12.52,
+      "border_max_alpha": 1,
+      "border_exactly_empty": false,
+      "checks": {
+        "png_rgba": true,
+        "square_canvas": true,
+        "native_copy_hash": true,
+        "real_transparent_alpha": true,
+        "margin_10_percent_met": true,
+        "no_visible_border_clipping_alpha_above8": true
+      },
+      "recommended_for_owner_review": false,
+      "content_state": "DRAFT",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "preview_heights": [
+        80,
+        128
+      ]
+    }
+  ],
+  "notes": [
+    "Five selected sources have native alpha 1/255 on borders; Vhaerith has exactly empty borders; no cleaning performed",
+    "NP04 v01 preserved, not selected: native margin 4.78%; v02 reframing passes",
+    "NP06 v01 preserved, not selected: unintended pointed ear; v02 rounded ear correction",
+    "Native candidates displayed and inspected; proposed physiques/costume ornamentation remain DRAFT, not canonical species or sacred symbols",
+    "Vhaerith belt pouch/rolled parchment ornament is DRAFT costume detail, not the rune he requested or a granted quest item",
+    "Reading previews crop visible bbox alpha >8 in memory only; not final normalized PNGs or runtime captures",
+    "No game tests/playtest/build/integration/commit/push for isolated image production"
+  ],
+  "gallery_qa": "gallery-qa.json",
+  "reading_preview": "review-reading.png",
+  "browser_render_verification": "NOT_ATTEMPTED_KNOWN_FILE_URL_POLICY_BLOCK_FROM_PILOT",
+  "visual_acceptance_receipt": "visual-acceptance.json"
+}

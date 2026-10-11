@@ -1,0 +1,568 @@
+{
+  "plan": "PLAN-ART032-NPCS-PILOTO",
+  "revision": "v01",
+  "state": "DRAFT",
+  "approval": "APPROVED_PER_PLAN",
+  "identity_status": "NAMED_ROLE_VERIFIED_PHYSICAL_APPEARANCE_DRAFT_HYPOTHESES",
+  "scene_context": "ESCORT_FENGTU_RESCUE_DURAO_RESCUE_SHENDILAVRI_GUIDE_STAR_FENGTU",
+  "blocking_gaps": 0,
+  "sources": [
+    {
+      "path": "F:/dev/nottgard-vault/03_NPCs/João Barbosa.md",
+      "sha256": "838a86760bf6dd9312fffd47a738d13d4fe092be1098432e0783a8d591ce66fb",
+      "authority": "CANON_LORE_READ_ONLY"
+    },
+    {
+      "path": "F:/dev/nottgard-vault/12_Lore/Tou Um.md",
+      "sha256": "b46c8d1f5c8f94862ea31d01d532a9d01e043cd4b1f9b4061a0e14175701a58f",
+      "authority": "CANON_LORE_READ_ONLY"
+    },
+    {
+      "path": "F:/dev/nottgard-vault/12_Lore/Tou Um e Lu Yueh.md",
+      "sha256": "155359b595509d366a89158990a4bccf41f1922ce0532dba6cfe952924a6e08b",
+      "authority": "CANON_LORE_READ_ONLY"
+    },
+    {
+      "path": "F:/dev/nottgard-vault/10_Sessões/Arco 01 - Nottgard, A Noite Sem Fim/Sessão 16.md",
+      "sha256": "0f86fa66e2de5fe3a72895691a8d4d269a4785d95d1bb434edf9fce7ed10c1c3",
+      "authority": "CANON_LORE_READ_ONLY"
+    },
+    {
+      "path": "F:/dev/nottgard-vault/10_Sessões/Arco 01 - Nottgard, A Noite Sem Fim/Sessão 18.md",
+      "sha256": "90c6862204c453a259b9e30ede686a6a2f3693cb1172f5cee3ac36a062692b3c",
+      "authority": "CANON_LORE_READ_ONLY"
+    },
+    {
+      "path": "data/stage_events.json",
+      "sha256": "7d6f8dae1962cbf97208c86a95104446af37fc09daf332a98298d7d9e4e4186a",
+      "authority": "PROJECT_CONTEXT"
+    },
+    {
+      "path": ".atena/vault/canon/PLAN-001-nottgard-survivors.md",
+      "sha256": "f886646498b8918016c29480311b4a8e1eb578515ebcdf9fe4c5e8cd0d4afc1b",
+      "authority": "PROJECT_CONTEXT"
+    }
+  ],
+  "style_references": [
+    {
+      "path": "assets/interactions/curandeiro.png",
+      "sha256": "ef6656e0c333193a1d8e427a347ce43394dcaacbcc4fab2f5c96ea3eac998f0b",
+      "role": "STYLE_OR_CAMERA_NOT_IDENTITY"
+    },
+    {
+      "path": "assets/animations/heroes/durvall/idle.png",
+      "sha256": "a483864e5764c63ce11412099dbb0fd9d26b4caea78c14f0f1df0d69f4c12f06",
+      "role": "STYLE_OR_CAMERA_NOT_IDENTITY"
+    }
+  ],
+  "visual_bible": ".atena/vault/drafts/PLAN-ART032-NPCS-PILOTO-v01.md",
+  "jobs": [
+    {
+      "code": "NP01",
+      "name": "joao_barbosa",
+      "prompt": "Use case: identity-preserve. Edit the attached João Barbosa DRAFT sprite with ONE targeted correction: more empty transparent canvas around the entire existing figure. Preserve the exact proposed character identity, face, dark hair and beard, layered blue/ivory pilgrim robe, scarf, walking staff, pouch, sandals, pose, direction, isometric camera, upper-left lighting, painted pixel-art finish and color palette. Do not redesign any feature. Uniformly make the WHOLE character with every accessory about 25 percent smaller relative to this same square canvas, and center it. Enforce generous fully transparent margins: head around y=20 percent, lowest sandal/staff tip around y=80 percent, nothing outside the middle 70 percent of the canvas. Keep proportions and both feet/staff intact. Requested square1024 canvas, genuine transparent alpha background. Single complete figure, no ground shadow, scenery, text, borders, halo, additional objects or multiple views. This is a framing correction of the same DRAFT character, not a new identity.",
+      "preview_heights": [
+        80
+      ],
+      "revision": "v02",
+      "content_state": "DRAFT",
+      "status": "VISUALLY_ACCEPTED_DRAFT_NOT_ADMITTED",
+      "transparent_background": true,
+      "destination": ".atena/generated/art032-npcs-2026-10-11/sources/NP01_joao_barbosa_v02.png",
+      "references": [
+        ".atena/generated/art032-npcs-2026-10-11/sources/NP01_joao_barbosa_v01.png"
+      ],
+      "runtime_admission": false,
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-2851b003-10bd-4ff3-874f-f88218744c67.png",
+      "generated_at_utc": "2026-10-11T15:45:16.979977+00:00",
+      "tool": "built-in image_gen",
+      "sha256": "9148e0a1a7c839871fd771201ddc64f9a96d77ebaee37ce6c25fc4622bac9ccc",
+      "inspection": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "visible_bbox_alpha_above8": [
+          402,
+          242,
+          901,
+          1064
+        ],
+        "margins_px": [
+          402,
+          242,
+          353,
+          190
+        ],
+        "minimum_margin_fraction": 0.15151515151515152,
+        "transparent_fraction": 0.84731284133198,
+        "semi_transparent_pixels": 239651,
+        "border_max_alpha": 0,
+        "border_exactly_empty": true,
+        "alpha_genuine": true,
+        "no_visible_border_clipping_alpha_above8": true,
+        "requested_10_percent_margin_met": true,
+        "native_bytes_preserved": true
+      },
+      "correction_of": "9794fd350de5699bed77c53383fc0ac79fbe08407583fc8e80fd32dc26248683",
+      "audit": {
+        "code": "NP01",
+        "revision": "v02",
+        "path": ".atena/generated/art032-npcs-2026-10-11/sources/NP01_joao_barbosa_v02.png",
+        "sha256": "9148e0a1a7c839871fd771201ddc64f9a96d77ebaee37ce6c25fc4622bac9ccc",
+        "size": [
+          1254,
+          1254
+        ],
+        "bbox_alpha_above8": [
+          402,
+          242,
+          901,
+          1064
+        ],
+        "margins_px": [
+          402,
+          242,
+          353,
+          190
+        ],
+        "minimum_margin_percent": 15.15,
+        "border_max_alpha": 0,
+        "border_exactly_empty": true,
+        "border_note": "None",
+        "checks": {
+          "png_rgba": true,
+          "square_canvas": true,
+          "native_copy_hash": true,
+          "real_transparent_alpha": true,
+          "no_visible_border_clipping_alpha_above8": true,
+          "requested_margin_10_percent": true
+        },
+        "recommended_for_owner_review": true,
+        "content_state": "DRAFT",
+        "runtime_admission": false,
+        "human_visual_acceptance": "APPROVED_EXPLICITLY",
+        "inspection": "NATIVE_TECHNICAL_VISUAL_INSPECTION_COMPLETED",
+        "preview_heights": [
+          80
+        ]
+      },
+      "human_visual_acceptance": "APPROVED_EXPLICITLY"
+    },
+    {
+      "code": "NP02",
+      "name": "desertor_durao",
+      "prompt": "Use case: stylized-concept.\nAsset type: ONE standalone static DRAFT sprite for Nottgard Survivors, a dark fantasy 2D isometric game. Requested square 1024x1024 with genuine transparent alpha background.\nStyle: detailed painted pixel-art with deliberate pixel clusters, matching the reference assets' elevated three-quarter isometric camera and upper-left lighting. Not flat vector, not photorealistic, not chibi. Reference 1 (curandeiro) is materials/pixel-painting STYLE ONLY, not an identity or scene to copy. Reference 2 (Durvall idle strip) is CAMERA/PIXEL-PAINTING ONLY, not his race, face, weapon or clothing, and NOT a request for multiple figures.\nComposition: exactly ONE full-body figure, looking and standing toward lower-right, centered, neutral idle pose, entire head, feet and every accessory comfortably inside the canvas with at least 10 percent transparent margins on all sides. Visible subject about 70 percent of canvas height. No zoomed head portrait, no multiple views, no sprite sheet, no animation strip. Clear silhouette and readable costume contrast when displayed only 80 pixels tall.\nConstraints: authentic transparent background, no floor, no projected ground shadow, no labels or readable text, no logo/watermark, no border, no scenery, no extra characters. No exaggerated luminous halo or combat pose. Do not copy Durvall's drow identity or healer's shop/herbs/furniture. Anatomy must be coherent, two arms, two legs, clearly resolved natural hands.\nSubject: ONE anonymous adult deserter from Durao, a fugitive of the old war pursued by a Molydeus. The lore does not define race, species or gender, so avoid fixing those traits: hood raised and cloth covering the lower face, face deep in shade, no visible pointed ears, horns, tail or wings. A lean upright biped, cautious lowered shoulders, subdued battered grey-ochre layered campaign clothing, scuffed leather straps and small worn metal shoulder guard, frayed hem, empty lowered hands. This is a rescue target with an exhausted non-aggressive silhouette, no raised weapon, no heroic armor, no monster snarl, no shackles/cage or scenery.\nPrioritize generous empty transparent margins: all figure parts remain strictly in the middle 70 percent of the canvas, with head below y=15 percent and feet above y=85 percent. Nothing near any outer edge.",
+      "preview_heights": [
+        80
+      ],
+      "revision": "v01",
+      "content_state": "DRAFT",
+      "status": "VISUALLY_ACCEPTED_DRAFT_NOT_ADMITTED",
+      "transparent_background": true,
+      "destination": ".atena/generated/art032-npcs-2026-10-11/sources/NP02_desertor_durao_v01.png",
+      "references": [
+        "assets/interactions/curandeiro.png",
+        "assets/animations/heroes/durvall/idle.png"
+      ],
+      "runtime_admission": false,
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-dc7d3eec-420d-4339-b3f0-73d09a4cae01.png",
+      "generated_at_utc": "2026-10-11T15:40:41.270017+00:00",
+      "tool": "built-in image_gen",
+      "sha256": "4d73424cfe0560606fd3e9ddd94ec02b493546873235b4a0a7ad00be7ea57e59",
+      "inspection": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "visible_bbox_alpha_above8": [
+          336,
+          148,
+          865,
+          1111
+        ],
+        "margins_px": [
+          336,
+          148,
+          389,
+          143
+        ],
+        "minimum_margin_fraction": 0.11403508771929824,
+        "transparent_fraction": 0.8056477644742566,
+        "semi_transparent_pixels": 305468,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "alpha_genuine": true,
+        "no_visible_border_clipping_alpha_above8": true,
+        "requested_10_percent_margin_met": true,
+        "native_bytes_preserved": true
+      },
+      "audit": {
+        "code": "NP02",
+        "revision": "v01",
+        "path": ".atena/generated/art032-npcs-2026-10-11/sources/NP02_desertor_durao_v01.png",
+        "sha256": "4d73424cfe0560606fd3e9ddd94ec02b493546873235b4a0a7ad00be7ea57e59",
+        "size": [
+          1254,
+          1254
+        ],
+        "bbox_alpha_above8": [
+          336,
+          148,
+          865,
+          1111
+        ],
+        "margins_px": [
+          336,
+          148,
+          389,
+          143
+        ],
+        "minimum_margin_percent": 11.4,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "border_note": "Native extremely low alpha residue preserved; alpha 1/255 on border is not visible object clipping. No cleaning performed.",
+        "checks": {
+          "png_rgba": true,
+          "square_canvas": true,
+          "native_copy_hash": true,
+          "real_transparent_alpha": true,
+          "no_visible_border_clipping_alpha_above8": true,
+          "requested_margin_10_percent": true
+        },
+        "recommended_for_owner_review": true,
+        "content_state": "DRAFT",
+        "runtime_admission": false,
+        "human_visual_acceptance": "APPROVED_EXPLICITLY",
+        "inspection": "NATIVE_TECHNICAL_VISUAL_INSPECTION_COMPLETED",
+        "preview_heights": [
+          80
+        ]
+      },
+      "human_visual_acceptance": "APPROVED_EXPLICITLY"
+    },
+    {
+      "code": "NP03",
+      "name": "vitima_enfeiticada",
+      "prompt": "Use case: stylized-concept.\nAsset type: ONE standalone static DRAFT sprite for Nottgard Survivors, a dark fantasy 2D isometric game. Requested square 1024x1024 with genuine transparent alpha background.\nStyle: detailed painted pixel-art with deliberate pixel clusters, matching the reference assets' elevated three-quarter isometric camera and upper-left lighting. Not flat vector, not photorealistic, not chibi. Reference 1 (curandeiro) is materials/pixel-painting STYLE ONLY, not an identity or scene to copy. Reference 2 (Durvall idle strip) is CAMERA/PIXEL-PAINTING ONLY, not his race, face, weapon or clothing, and NOT a request for multiple figures.\nComposition: exactly ONE full-body figure, looking and standing toward lower-right, centered, neutral idle pose, entire head, feet and every accessory comfortably inside the canvas with at least 10 percent transparent margins on all sides. Visible subject about 70 percent of canvas height. No zoomed head portrait, no multiple views, no sprite sheet, no animation strip. Clear silhouette and readable costume contrast when displayed only 80 pixels tall.\nConstraints: authentic transparent background, no floor, no projected ground shadow, no labels or readable text, no logo/watermark, no border, no scenery, no extra characters. No exaggerated luminous halo or combat pose. Do not copy Durvall's drow identity or healer's shop/herbs/furniture. Anatomy must be coherent, two arms, two legs, clearly resolved natural hands.\nSubject: ONE fully clothed adult human victim weakened by enchantment, a rescue target in Shendilavri. Lean tired body and hollow cheeks, gently hunched shoulders, unfocused weary eyes, one hand held near chest and the other loosely lowered. Worn modest pale-grey and dusty muted mauve garments, full-length simple tunic, cloth trousers, soft shoes; frail but alive and able to stand. Generic experimental DRAFT identity, no resemblance to a named hero. No gore, injuries, nudity, erotic styling, shackles, cage, throne, succubus anatomy, ghost transparency or magical orbit. A single human silhouette readable at 80 pixels.\nPrioritize generous empty transparent margins: all figure parts remain strictly in the middle 70 percent of the canvas, with head below y=15 percent and feet above y=85 percent. Nothing near any outer edge.",
+      "preview_heights": [
+        80
+      ],
+      "revision": "v01",
+      "content_state": "DRAFT",
+      "status": "VISUALLY_ACCEPTED_DRAFT_NOT_ADMITTED",
+      "transparent_background": true,
+      "destination": ".atena/generated/art032-npcs-2026-10-11/sources/NP03_vitima_enfeiticada_v01.png",
+      "references": [
+        "assets/interactions/curandeiro.png",
+        "assets/animations/heroes/durvall/idle.png"
+      ],
+      "runtime_admission": false,
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-b5ef6ad5-4ab2-4cb3-87fe-cf0129b6e9b3.png",
+      "generated_at_utc": "2026-10-11T15:42:13.229673+00:00",
+      "tool": "built-in image_gen",
+      "sha256": "3a944afa1c66e8db6ecfcd77077c0564254057a548e0f963b80967abc19b8c85",
+      "inspection": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "visible_bbox_alpha_above8": [
+          425,
+          167,
+          824,
+          1097
+        ],
+        "margins_px": [
+          425,
+          167,
+          430,
+          157
+        ],
+        "minimum_margin_fraction": 0.1251993620414673,
+        "transparent_fraction": 0.8421192534765942,
+        "semi_transparent_pixels": 247938,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "alpha_genuine": true,
+        "no_visible_border_clipping_alpha_above8": true,
+        "requested_10_percent_margin_met": true,
+        "native_bytes_preserved": true
+      },
+      "audit": {
+        "code": "NP03",
+        "revision": "v01",
+        "path": ".atena/generated/art032-npcs-2026-10-11/sources/NP03_vitima_enfeiticada_v01.png",
+        "sha256": "3a944afa1c66e8db6ecfcd77077c0564254057a548e0f963b80967abc19b8c85",
+        "size": [
+          1254,
+          1254
+        ],
+        "bbox_alpha_above8": [
+          425,
+          167,
+          824,
+          1097
+        ],
+        "margins_px": [
+          425,
+          167,
+          430,
+          157
+        ],
+        "minimum_margin_percent": 12.52,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "border_note": "Native extremely low alpha residue preserved; alpha 1/255 on border is not visible object clipping. No cleaning performed.",
+        "checks": {
+          "png_rgba": true,
+          "square_canvas": true,
+          "native_copy_hash": true,
+          "real_transparent_alpha": true,
+          "no_visible_border_clipping_alpha_above8": true,
+          "requested_margin_10_percent": true
+        },
+        "recommended_for_owner_review": true,
+        "content_state": "DRAFT",
+        "runtime_admission": false,
+        "human_visual_acceptance": "APPROVED_EXPLICITLY",
+        "inspection": "NATIVE_TECHNICAL_VISUAL_INSPECTION_COMPLETED",
+        "preview_heights": [
+          80
+        ]
+      },
+      "human_visual_acceptance": "APPROVED_EXPLICITLY"
+    },
+    {
+      "code": "PT01",
+      "name": "estrela_do_norte",
+      "prompt": "Use case: stylized-concept.\nAsset type: ONE standalone DRAFT orientation-point sprite, the Estrela do Norte mirage followed in Feng-tu, Nottgard Survivors. Requested square 1024x1024, genuine transparent alpha background.\nSubject: one small luminous star mirage only, compact cold-white center with four principal tapered points and four much shorter subtle diagonal rays, restrained pale icy-blue painted glow. This geometry is a visual DRAFT, not a claim about a canonical divine symbol. Mostly clear transparent negative space. Soft glow remains local, not a huge circular ring. Light-star face oriented to the isometric viewer, not a physical relic or terrain tile.\nStyle: restrained detailed painted pixel-art with deliberate pixel clusters, consistent with the game's neutral light effects and the reference's pixel-painted edge quality. It should remain recognizably a guide star at 48 and 80 pixels. Centered, whole star and glow comfortably inside frame, visible motif about 60 percent of canvas width.\nReference curandeiro is PIXEL-PAINTING QUALITY ONLY. Do not copy healer, objects, color palette or scene. No character, face, body, deity depiction, pedestal, temple, staff, ring, floor, projected shadow, text, border, badge or background. Exactly one isolated light star; not a grid or multiple phases. Genuine transparent background, no black/magenta/cyan backdrop.",
+      "preview_heights": [
+        48,
+        80
+      ],
+      "revision": "v01",
+      "content_state": "DRAFT",
+      "status": "VISUALLY_ACCEPTED_DRAFT_NOT_ADMITTED",
+      "transparent_background": true,
+      "destination": ".atena/generated/art032-npcs-2026-10-11/sources/PT01_estrela_do_norte_v01.png",
+      "references": [
+        "assets/interactions/curandeiro.png"
+      ],
+      "runtime_admission": false,
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-b1c53faa-0ce4-4df1-8b4d-93eed9017c3f.png",
+      "generated_at_utc": "2026-10-11T15:43:43.516212+00:00",
+      "tool": "built-in image_gen",
+      "sha256": "a3ec67f0dec4217be2d41dc45945d823aa05a8bf657a02964b0e0a11d030ea7c",
+      "inspection": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "visible_bbox_alpha_above8": [
+          192,
+          169,
+          1061,
+          1098
+        ],
+        "margins_px": [
+          192,
+          169,
+          193,
+          156
+        ],
+        "minimum_margin_fraction": 0.12440191387559808,
+        "transparent_fraction": 0.7013257734738471,
+        "semi_transparent_pixels": 469139,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "alpha_genuine": true,
+        "no_visible_border_clipping_alpha_above8": true,
+        "requested_10_percent_margin_met": true,
+        "native_bytes_preserved": true
+      },
+      "audit": {
+        "code": "PT01",
+        "revision": "v01",
+        "path": ".atena/generated/art032-npcs-2026-10-11/sources/PT01_estrela_do_norte_v01.png",
+        "sha256": "a3ec67f0dec4217be2d41dc45945d823aa05a8bf657a02964b0e0a11d030ea7c",
+        "size": [
+          1254,
+          1254
+        ],
+        "bbox_alpha_above8": [
+          192,
+          169,
+          1061,
+          1098
+        ],
+        "margins_px": [
+          192,
+          169,
+          193,
+          156
+        ],
+        "minimum_margin_percent": 12.44,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "border_note": "Native extremely low alpha residue preserved; alpha 1/255 on border is not visible object clipping. No cleaning performed.",
+        "checks": {
+          "png_rgba": true,
+          "square_canvas": true,
+          "native_copy_hash": true,
+          "real_transparent_alpha": true,
+          "no_visible_border_clipping_alpha_above8": true,
+          "requested_margin_10_percent": true
+        },
+        "recommended_for_owner_review": true,
+        "content_state": "DRAFT",
+        "runtime_admission": false,
+        "human_visual_acceptance": "APPROVED_EXPLICITLY",
+        "inspection": "NATIVE_TECHNICAL_VISUAL_INSPECTION_COMPLETED",
+        "preview_heights": [
+          48,
+          80
+        ]
+      },
+      "human_visual_acceptance": "APPROVED_EXPLICITLY"
+    }
+  ],
+  "owner_reply": "Aprovo as quatro peças DRAFT",
+  "current_step": "S-005/OWNER_VISUAL_ACCEPTANCE_RECORDED",
+  "generated": 4,
+  "previous_native_versions": [
+    {
+      "code": "NP01",
+      "name": "joao_barbosa",
+      "prompt": "Use case: stylized-concept.\nAsset type: ONE standalone static DRAFT sprite for Nottgard Survivors, a dark fantasy 2D isometric game. Requested square 1024x1024 with genuine transparent alpha background.\nStyle: detailed painted pixel-art with deliberate pixel clusters, matching the reference assets' elevated three-quarter isometric camera and upper-left lighting. Not flat vector, not photorealistic, not chibi. Reference 1 (curandeiro) is materials/pixel-painting STYLE ONLY, not an identity or scene to copy. Reference 2 (Durvall idle strip) is CAMERA/PIXEL-PAINTING ONLY, not his race, face, weapon or clothing, and NOT a request for multiple figures.\nComposition: exactly ONE full-body figure, looking and standing toward lower-right, centered, neutral idle pose, entire head, feet and every accessory comfortably inside the canvas with at least 10 percent transparent margins on all sides. Visible subject about 70 percent of canvas height. No zoomed head portrait, no multiple views, no sprite sheet, no animation strip. Clear silhouette and readable costume contrast when displayed only 80 pixels tall.\nConstraints: authentic transparent background, no floor, no projected ground shadow, no labels or readable text, no logo/watermark, no border, no scenery, no extra characters. No exaggerated luminous halo or combat pose. Do not copy Durvall's drow identity or healer's shop/herbs/furniture. Anatomy must be coherent, two arms, two legs, clearly resolved natural hands.\nSubject: João Barbosa, an adult male pilgrim devoted to Tou Um, guide of Feng-tu. Lore establishes only the role, not physical appearance: this is an experimental DRAFT costume, not canonical biography. A calm modest middle-aged pilgrim, short dark beard, worn midnight-blue layered travelling robe, ivory inner garment and muted blue-grey shoulder wrap, practical leather sandals, small plain shoulder pouch, one simple wooden walking staff held low in one hand. Earthy realistic proportions, tired but composed, modest friendly silhouette. No armor, sword, wings, elf ears, horns, crown, large magical effects or invented sacred emblem. Keep forehead/eyes and hands readable. The staff fits entirely inside the canvas.",
+      "preview_heights": [
+        80
+      ],
+      "revision": "v01",
+      "content_state": "DRAFT",
+      "status": "PRESERVED_NOT_SELECTED_FOR_MARGIN",
+      "transparent_background": true,
+      "destination": ".atena/generated/art032-npcs-2026-10-11/sources/NP01_joao_barbosa_v01.png",
+      "references": [
+        "assets/interactions/curandeiro.png",
+        "assets/animations/heroes/durvall/idle.png"
+      ],
+      "runtime_admission": false,
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-12180948-ddcc-41aa-963d-1b6d50791814.png",
+      "generated_at_utc": "2026-10-11T15:38:33.768653+00:00",
+      "tool": "built-in image_gen",
+      "sha256": "9794fd350de5699bed77c53383fc0ac79fbe08407583fc8e80fd32dc26248683",
+      "inspection": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "visible_bbox_alpha_above8": [
+          347,
+          106,
+          986,
+          1184
+        ],
+        "margins_px": [
+          347,
+          106,
+          268,
+          70
+        ],
+        "minimum_margin_fraction": 0.05582137161084529,
+        "transparent_fraction": 0.7425997573315629,
+        "semi_transparent_pixels": 404284,
+        "border_max_alpha": 1,
+        "alpha_genuine": true,
+        "no_border_clipping": false,
+        "requested_10_percent_margin_met": false,
+        "native_bytes_preserved": true
+      },
+      "reason": "Original lower visible margin 70/1254 px (5.58%), below requested 10%; native targeted framing correction",
+      "audit": {
+        "code": "NP01",
+        "revision": "v01",
+        "path": ".atena/generated/art032-npcs-2026-10-11/sources/NP01_joao_barbosa_v01.png",
+        "sha256": "9794fd350de5699bed77c53383fc0ac79fbe08407583fc8e80fd32dc26248683",
+        "size": [
+          1254,
+          1254
+        ],
+        "bbox_alpha_above8": [
+          347,
+          106,
+          986,
+          1184
+        ],
+        "margins_px": [
+          347,
+          106,
+          268,
+          70
+        ],
+        "minimum_margin_percent": 5.58,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "border_note": "Native extremely low alpha residue preserved; alpha 1/255 on border is not visible object clipping. No cleaning performed.",
+        "checks": {
+          "png_rgba": true,
+          "square_canvas": true,
+          "native_copy_hash": true,
+          "real_transparent_alpha": true,
+          "no_visible_border_clipping_alpha_above8": true,
+          "requested_margin_10_percent": false
+        },
+        "recommended_for_owner_review": false,
+        "content_state": "DRAFT",
+        "runtime_admission": false,
+        "human_visual_acceptance": "PENDING",
+        "inspection": "NATIVE_TECHNICAL_VISUAL_INSPECTION_COMPLETED",
+        "preview_heights": [
+          80
+        ]
+      }
+    }
+  ],
+  "native_candidates": 5,
+  "technical_status": "PASS_WITH_NATIVE_ALPHA_NOTE",
+  "owner_visual_acceptance": "APPROVED_EXPLICITLY",
+  "status": "COMPLETED_VISUALLY_ACCEPTED_DRAFT",
+  "gallery_qa": "gallery-qa.json",
+  "reading_preview": "review-reading.png",
+  "completed_steps": 5,
+  "total_steps": 5,
+  "step_results": [
+    {
+      "step": "S-001",
+      "status": "COMPLETED",
+      "result": "Sources, inventory, bible and explicit production approval recorded."
+    },
+    {
+      "step": "S-002",
+      "status": "COMPLETED",
+      "result": "Four candidates in five native calls; targeted NP01 framing correction v02; v01 preserved."
+    },
+    {
+      "step": "S-003",
+      "status": "COMPLETED",
+      "result": "Native hashes/RGBA/margins/source authority/protected files pass; alpha note and reading inspection recorded."
+    },
+    {
+      "step": "S-004",
+      "status": "COMPLETED",
+      "result": "HTML links/metadata validated; static Godot reading sheet inspected; browser inspection blocked and disclosed."
+    },
+    {
+      "step": "S-005",
+      "status": "COMPLETED",
+      "result": "Explicit owner acceptance recorded for NP01 v02, NP02 v01, NP03 v01 and PT01 v01; all remain DRAFT."
+    }
+  ],
+  "visual_acceptance_receipt": "visual-acceptance.json",
+  "visual_owner_reply": "Aprovo visualmente as quatro revisões"
+}

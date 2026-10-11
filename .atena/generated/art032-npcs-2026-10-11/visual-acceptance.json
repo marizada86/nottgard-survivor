@@ -1,0 +1,43 @@
+{
+  "plan": "PLAN-ART032-NPCS-PILOTO",
+  "revision": "v01",
+  "step": "S-005",
+  "date": "2026-10-11",
+  "owner_reply": "Aprovo visualmente as quatro revisões",
+  "authority": "EXPLICIT_HUMAN_REPLY_TO_EXACT_FOUR_REVISION_VISUAL_GATE",
+  "status": "APPROVED_EXPLICITLY",
+  "content_state": "DRAFT",
+  "accepted": [
+    {
+      "code": "NP01",
+      "revision": "v02",
+      "path": ".atena/generated/art032-npcs-2026-10-11/sources/NP01_joao_barbosa_v02.png",
+      "sha256": "9148e0a1a7c839871fd771201ddc64f9a96d77ebaee37ce6c25fc4622bac9ccc"
+    },
+    {
+      "code": "NP02",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-2026-10-11/sources/NP02_desertor_durao_v01.png",
+      "sha256": "4d73424cfe0560606fd3e9ddd94ec02b493546873235b4a0a7ad00be7ea57e59"
+    },
+    {
+      "code": "NP03",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-2026-10-11/sources/NP03_vitima_enfeiticada_v01.png",
+      "sha256": "3a944afa1c66e8db6ecfcd77077c0564254057a548e0f963b80967abc19b8c85"
+    },
+    {
+      "code": "PT01",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-2026-10-11/sources/PT01_estrela_do_norte_v01.png",
+      "sha256": "a3ec67f0dec4217be2d41dc45945d823aa05a8bf657a02964b0e0a11d030ea7c"
+    }
+  ],
+  "reviewed_scope": "Style/proposed appearance/actors at 80px/star at 48 and 80px; native alpha 1/255 note disclosed in the approved question.",
+  "canonical_promotion": false,
+  "runtime_admission": false,
+  "normalization_execution": false,
+  "commit_push_build": false,
+  "historical_NP01_v01_accepted": false,
+  "next_execution_authorized": false
+}

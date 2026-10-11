@@ -1,0 +1,9 @@
+# ART-032 lote 02 — preparação, 2026-10-11
+
+O dono esclareceu **“Produzir as próximas imagens de ART-032”**. [Plano DRAFT v01](../vault/drafts/PLAN-ART032-NPCS-LOTE02-v01.md) preparado: NP04 Nyxara, NP05 Vaelis, NP06 Graz'zt aliado, NP07 Reaper barqueiro, NP08 Vhaerith Aetherion, NP09 mercador de Rivenheart. As Irmãs Radiantes têm duas peças distintas. Papéis/lore confirmados; aparência não documentada é hipótese DRAFT, nunca canon presumido. Jaula/canoa/cenários e demais pontos fora do escopo.
+
+[Jobs/fontes e referências SHA256](../generated/art032-npcs-lote02-2026-10-11/jobs.json) e [seis prompts](../generated/art032-npcs-lote02-2026-10-11/prompts.md). Vault e Nottcard somente leitura. Buscas de nomes em arquivos Nottcard e JSONs `F:/dev/nottcard/data/` sem resultados; não é afirmação de inventário global. Canon de estilo PLAN-001 e referências locais de acabamento/câmera; contexto das entidades estruturado antes de imagegen. Nenhuma imagem gerada nesta preparação.
+
+Modo per-plan preservado. S-001 concluído (1/5); G0 antes de S-002 aguarda aceite do escopo exato NP04–NP09/v01. Não confundir aprovação da frente com aprovação desse escopo novo. Novo plano amplia apenas a produção DRAFT e seu gate visual; piloto concluído e cadeia PLAN-071/revisão de heróis preservados. Não altera arquitetura, dependencies, runtime, dados ou fontes anteriormente aceitas. Sem integração, normalização/admissão, CANON, commit, push ou build. [Estado](../state/art032-npcs-lote02.yaml).
+
+Próximo objetivo após G0: seis chamadas individuais builtin imagegen, fontes intactas em `sources/`, auditoria RGBA/hash/margem/corpo inteiro, prévias dos atores 80px (Graz'zt também 128px), galeria/prancha e gate visual S-005 por revisão. Rodar checks locais de referências/hashes/links e backlog; gameplay/playtest não aplicável sem runtime alterado.

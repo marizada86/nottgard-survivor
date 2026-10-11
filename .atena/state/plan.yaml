@@ -1,4 +1,60 @@
 version: 2
+art032_npcs_lote02_2026_10_11:
+  plan: PLAN-ART032-NPCS-LOTE02
+  revision: v01
+  card: ART-032
+  state_file: .atena/state/art032-npcs-lote02.yaml
+  request_classification: PLAN_CHANGE_REQUEST
+  status: COMPLETED_VISUALLY_ACCEPTED_DRAFT
+  mode: per-plan
+  checkpoint: S-005/OWNER_VISUAL_ACCEPTANCE_RECORDED
+  current_step_position: 5
+  completed_steps: 5
+  total_steps: 5
+  proposed_sources: [NP04, NP05, NP06, NP07, NP08, NP09]
+  generated: 6
+  content_state: DRAFT
+  runtime_admission: false
+  canonical_promotion: false
+  git_publication_build: NOT_AUTHORIZED
+  owner_front_reply: 'Produzir as próximas imagens de ART-032'
+  evidence: .atena/evidence/art032-npcs-lote02-delivery-2026-10-11.md
+  next_objective: 'Preparar plano futuro dos pontos restantes ART-032, mantendo as dez fontes aceitas; geração ainda depende de escopo aprovado'
+  scope_owner_reply: "Aprovo as seis peças DRAFT"
+  approved_date: "2026-10-11"
+  review_candidates: [NP04_v02, NP05_v01, NP06_v02, NP07_v01, NP08_v01, NP09_v01]
+  human_visual_acceptance: APPROVED_EXPLICITLY
+  visual_owner_reply: "Aprovo visualmente as seis revisões"
+  visual_acceptance_receipt: .atena/generated/art032-npcs-lote02-2026-10-11/visual-acceptance.json
+  next_execution_authorized: false
+art032_npcs_piloto_2026_10_11:
+  plan: PLAN-ART032-NPCS-PILOTO
+  revision: v01
+  card: ART-032
+  state_file: .atena/state/art032-npcs-piloto.yaml
+  request_classification: PLAN_DEVIATION
+  route: EXECUTE_APPROVED_DRAFT_FRONT_PRESERVE_PLAN071_AND_HERO_REVIEW
+  status: COMPLETED_VISUALLY_ACCEPTED_DRAFT
+  mode: per-plan
+  checkpoint: S-005/OWNER_VISUAL_ACCEPTANCE_RECORDED
+  current_step_position: 5
+  completed_steps: 5
+  total_steps: 5
+  proposed_sources: [NP01, NP02, NP03, PT01]
+  generated: 4
+  content_state: DRAFT
+  runtime_admission: false
+  git_publication_build: NOT_AUTHORIZED_FOR_NEW_IMAGES
+  next_objective: 'Preparar um plano futuro de normalização/admissão ou das demais peças ART-032; execução ainda não autorizada'
+  scope_owner_reply: "Aprovo as quatro peças DRAFT"
+  remaining_steps_after_current: 0
+  review_candidates: [NP01_v02, NP02_v01, NP03_v01, PT01_v01]
+  human_visual_acceptance: APPROVED_EXPLICITLY
+  evidence: .atena/evidence/art032-npcs-piloto-2026-10-11.md
+  visual_owner_reply: "Aprovo visualmente as quatro revisões"
+  visual_acceptance_receipt: .atena/generated/art032-npcs-2026-10-11/visual-acceptance.json
+  canonical_promotion: false
+  next_execution_authorized: false
 fila026_remaining_2026_10_11:
   state_file: .atena/state/fila026-remaining.yaml
   plan: PLAN-065

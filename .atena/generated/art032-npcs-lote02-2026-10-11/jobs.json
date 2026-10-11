@@ -1,0 +1,887 @@
+{
+  "plan": "PLAN-ART032-NPCS-LOTE02",
+  "revision": "v01",
+  "state": "DRAFT",
+  "approval_mode": "per-plan",
+  "approval": "APPROVED_PER_PLAN",
+  "owner_front_reply": "Produzir as próximas imagens de ART-032",
+  "current_step": "S-005/OWNER_VISUAL_ACCEPTANCE_RECORDED",
+  "completed_steps": 5,
+  "total_steps": 5,
+  "generated": 6,
+  "blocking_visual_gaps": 0,
+  "identity_status": "ROLES_VERIFIED_PHYSICAL_APPEARANCE_DRAFT_HYPOTHESES",
+  "visual_bible": ".atena/vault/drafts/PLAN-ART032-NPCS-LOTE02-v01.md",
+  "sources": [
+    {
+      "path": "F:/dev/nottgard-vault/03_NPCs/Irmãs Radiantes.md",
+      "sha256": "7d14f9c43987619517df20a3032d510a224cd0d5e157b9f6291dfc827c1e9261",
+      "authority": "CANON_LORE_READ_ONLY"
+    },
+    {
+      "path": "F:/dev/nottgard-vault/03_NPCs/Nyxara.md",
+      "sha256": "9302534d76d8b659c4cd5e1ffe398add54427e2d7551c74289f6f14d4f6d9832",
+      "authority": "CANON_LORE_READ_ONLY"
+    },
+    {
+      "path": "F:/dev/nottgard-vault/03_NPCs/Vaelis.md",
+      "sha256": "56eae1fb43b498220047535258d2d3aaf7bb041edb44a608cf4f2850ff19b724",
+      "authority": "CANON_LORE_READ_ONLY"
+    },
+    {
+      "path": "F:/dev/nottgard-vault/03_NPCs/Graz'zt.md",
+      "sha256": "1f0d4d1704ece05606f4d9ef398ef06ae5e3a5e2e204c9f7d4213e627f3dba12",
+      "authority": "CANON_LORE_READ_ONLY"
+    },
+    {
+      "path": "F:/dev/nottgard-vault/12_Lore/Graz'zt.md",
+      "sha256": "37710aff39581efc0a6c9471b0dccc0c094b79b3b3b5cd6d3c9ffd48f830463d",
+      "authority": "CANON_LORE_READ_ONLY"
+    },
+    {
+      "path": "F:/dev/nottgard-vault/07_Criaturas/Reaper do Estige.md",
+      "sha256": "de7d33a5ffb45ff11e1144e8a219fe6457e7ef754b69362df7842e1dd47a26af",
+      "authority": "CANON_LORE_READ_ONLY"
+    },
+    {
+      "path": "F:/dev/nottgard-vault/03_NPCs/Vhaerith Aetherion.md",
+      "sha256": "5cfd1841af67d2ec9897ae21638431803bb7fa89b67c52a3860c5f5c71c8f2ee",
+      "authority": "CANON_LORE_READ_ONLY"
+    },
+    {
+      "path": "F:/dev/nottgard-vault/04_Locais/Rivenheart.md",
+      "sha256": "9cf59b345a8c9269511fe737d4f5db96f94681a42a768e0af4a1a75e357b99dd",
+      "authority": "CANON_LORE_READ_ONLY"
+    },
+    {
+      "path": "F:/dev/nottgard-vault/10_Sessões/Arco 01 - Nottgard, A Noite Sem Fim/Sessão 15.md",
+      "sha256": "160c5c2c592f4e360bf69c2c6c59680d134a82db8dde3329e3ac3f3f1595c5fa",
+      "authority": "CANON_LORE_READ_ONLY"
+    },
+    {
+      "path": "F:/dev/nottgard-vault/10_Sessões/Arco 01 - Nottgard, A Noite Sem Fim/Sessão 16.md",
+      "sha256": "0f86fa66e2de5fe3a72895691a8d4d269a4785d95d1bb434edf9fce7ed10c1c3",
+      "authority": "CANON_LORE_READ_ONLY"
+    },
+    {
+      "path": "F:/dev/nottgard-vault/10_Sessões/Arco 01 - Nottgard, A Noite Sem Fim/Sessão 18.md",
+      "sha256": "90c6862204c453a259b9e30ede686a6a2f3693cb1172f5cee3ac36a062692b3c",
+      "authority": "CANON_LORE_READ_ONLY"
+    },
+    {
+      "path": "F:/dev/nottgard-vault/10_Sessões/Arco 01 - Nottgard, A Noite Sem Fim/Sessão 19 e 20 (parte 1).md",
+      "sha256": "089a638d5d1ee096a12bdd270421380cd146fca6b3fdf1773ae8b93156150303",
+      "authority": "CANON_LORE_READ_ONLY"
+    },
+    {
+      "path": "data/stage_events.json",
+      "sha256": "7d6f8dae1962cbf97208c86a95104446af37fc09daf332a98298d7d9e4e4186a",
+      "authority": "PROJECT_CONTEXT"
+    },
+    {
+      "path": ".atena/vault/canon/PLAN-001-nottgard-survivors.md",
+      "sha256": "f886646498b8918016c29480311b4a8e1eb578515ebcdf9fe4c5e8cd0d4afc1b",
+      "authority": "PROJECT_CONTEXT"
+    },
+    {
+      "path": ".atena/generated/art032-npcs-2026-10-11/visual-acceptance.json",
+      "sha256": "ae53f3ee56ef1db85476fddb1870389ec2e9fbfac8c22fb499750121777d87f9",
+      "authority": "PROJECT_CONTEXT"
+    }
+  ],
+  "style_references": [
+    {
+      "path": "assets/interactions/curandeiro.png",
+      "sha256": "ef6656e0c333193a1d8e427a347ce43394dcaacbcc4fab2f5c96ea3eac998f0b",
+      "role": "STYLE_OR_CAMERA_NOT_IDENTITY"
+    },
+    {
+      "path": "assets/animations/heroes/durvall/idle.png",
+      "sha256": "a483864e5764c63ce11412099dbb0fd9d26b4caea78c14f0f1df0d69f4c12f06",
+      "role": "STYLE_OR_CAMERA_NOT_IDENTITY"
+    }
+  ],
+  "jobs": [
+    {
+      "code": "NP04",
+      "name": "nyxara",
+      "title": "Nyxara",
+      "revision": "v02",
+      "content_state": "DRAFT",
+      "status": "VISUALLY_ACCEPTED_DRAFT_NOT_ADMITTED",
+      "prompt": "Use case: precise-object-edit.\nEdit target: the supplied Nyxara v01 DRAFT sprite. Change only the framing, zooming out substantially to create true transparent empty canvas around the entire existing figure and sword. The current figure occupies almost the full canvas height; make it uniformly smaller so its complete visible bounding box occupies ONLY the middle 60 percent of the square canvas in height, with roughly 20 percent transparent space ABOVE the highest hair and BELOW the lowest boot. Every sword point, hair lock, cloth tip and boot remains at least 15 percent away from any canvas edge.\nPreserve the proposed identity, dark tied hair, face, body proportions, silver armor, plum cloth, lowered sword, idle pose, isometric camera, upper-left lighting, painted pixel clusters, colors and details. No redesign, no new accessories, no extra characters, no floor/shadow, no labels, no anatomy or costume changes. Exactly one complete full-body figure, centered, with genuine transparent alpha background. Keep everything intact; only reduce the subject's scale within a spacious square transparent canvas. This remains DRAFT and is not canonical identity approval.",
+      "preview_heights": [
+        80
+      ],
+      "transparent_background": true,
+      "references": [
+        ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP04_nyxara_v01.png"
+      ],
+      "destination": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP04_nyxara_v02.png",
+      "runtime_admission": false,
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-25571c02-6190-47c9-b77f-68358cc2a2ce.png",
+      "sha256": "ef545d2a49727264401e19e3d2dd7f9b653551bc0aefa41616298fc1f583a5c1",
+      "tool": "built-in image_gen",
+      "generated_at_utc": "2026-10-11T16:17:08.142796+00:00",
+      "inspection": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "bbox_alpha_above8": [
+          376,
+          249,
+          968,
+          1062
+        ],
+        "margins_px": [
+          376,
+          249,
+          286,
+          192
+        ],
+        "minimum_margin_percent": 15.31,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "alpha_genuine": true,
+        "transparent_fraction": 0.8661756064803157,
+        "no_visible_border_clipping_alpha_above8": true,
+        "margin_10_percent_met": true,
+        "native_copy_hash": true
+      },
+      "correction_of": "e3ac6b90a7a208b79af2f03bbf92f27de0f429e74aaf3bffbf9c37783a9fff33",
+      "audit": {
+        "code": "NP04",
+        "title": "Nyxara",
+        "revision": "v02",
+        "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP04_nyxara_v02.png",
+        "sha256": "ef545d2a49727264401e19e3d2dd7f9b653551bc0aefa41616298fc1f583a5c1",
+        "size": [
+          1254,
+          1254
+        ],
+        "bbox_alpha_above8": [
+          376,
+          249,
+          968,
+          1062
+        ],
+        "margins_px": [
+          376,
+          249,
+          286,
+          192
+        ],
+        "minimum_margin_percent": 15.31,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "checks": {
+          "png_rgba": true,
+          "square_canvas": true,
+          "native_copy_hash": true,
+          "real_transparent_alpha": true,
+          "margin_10_percent_met": true,
+          "no_visible_border_clipping_alpha_above8": true
+        },
+        "recommended_for_owner_review": true,
+        "content_state": "DRAFT",
+        "human_visual_acceptance": "APPROVED_EXPLICITLY",
+        "runtime_admission": false,
+        "preview_heights": [
+          80
+        ]
+      },
+      "human_visual_acceptance": "APPROVED_EXPLICITLY"
+    },
+    {
+      "code": "NP05",
+      "name": "vaelis",
+      "title": "Vaelis",
+      "revision": "v01",
+      "content_state": "DRAFT",
+      "status": "VISUALLY_ACCEPTED_DRAFT_NOT_ADMITTED",
+      "prompt": "Use case: stylized-concept.\nAsset type: ONE standalone static DRAFT NPC sprite for Nottgard Survivors. Requested square 1024x1024, genuine transparent alpha.\nStyle: dark fantasy detailed painted pixel-art, deliberate pixel clusters, elevated three-quarter isometric camera, facing lower-right, upper-left light. Ref 1 healer: MATERIALS/PIXEL QUALITY ONLY, never shop, race, costume or identity. Ref 2 Durvall idle strip: CAMERA/PIXEL QUALITY ONLY, never his race, face, weapon, costume or multiple-frame layout.\nComposition: exactly one full-body adult figure in neutral idle pose, centered, entire head, feet and accessories inside frame. Visible subject approximately 60 percent of canvas height, at least 20 percent empty transparent room at top/bottom. Readable silhouette/costume at 80px. Not a portrait, sheet, animation strip or multiple views.\nConstraints: true alpha, no floor/projected shadow, scene, extra figures, labels, writing, logo, frame or watermark. No chibi, photorealistic or vector style. Coherent anatomy/hands, fully clothed, no gore or nudity. Proposed appearance is an experimental DRAFT hypothesis, never an assertion of undocumented canonical anatomy or biography. All weapons/accessories remain lowered, complete and comfortably away from edges. Restrained contrast/glow, no huge halo.\nSubject: Vaelis, the OTHER Radiant Sister, an adult female warrior and guide in Shendilavri. Role, armor and tiredness are documented; race and physical appearance are not. DRAFT proposal deliberately distinct from Nyxara: long brown braid over one shoulder, fully covering dark aged-bronze armor over grey-mauve fabric, practical boots, slightly tired relaxed shoulders, empty hands or one hand resting neutrally on her belt. Stand unaided, composed and able to act. No pregnancy depiction, injury, seduction, wings, horns, angel halo or narrative event. Exactly one figure.\nFraming priority: zoom out. One SMALL complete figure in a spacious square transparent canvas. Its visible height must be ONLY 60 percent of canvas height, with roughly 20 percent genuinely empty transparent canvas above the highest hair and below the lowest boot/pole. Never fill the frame. Keep the entire subject including every accessory within x=20..80 percent and y=20..80 percent. No element approaches an edge.",
+      "preview_heights": [
+        80
+      ],
+      "transparent_background": true,
+      "references": [
+        "assets/interactions/curandeiro.png",
+        "assets/animations/heroes/durvall/idle.png"
+      ],
+      "destination": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP05_vaelis_v01.png",
+      "runtime_admission": false,
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-65c27bc0-117d-47b1-829b-6339bf33d172.png",
+      "sha256": "0dc79c51e38ddfca4ae47bc2d549fe9ba162eb7d410eefa9ae5b66806bca0def",
+      "tool": "built-in image_gen",
+      "generated_at_utc": "2026-10-11T16:18:21.690190+00:00",
+      "inspection": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "bbox_alpha_above8": [
+          402,
+          213,
+          865,
+          1105
+        ],
+        "margins_px": [
+          402,
+          213,
+          389,
+          149
+        ],
+        "minimum_margin_percent": 11.88,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "alpha_genuine": true,
+        "transparent_fraction": 0.8444435541514363,
+        "no_visible_border_clipping_alpha_above8": true,
+        "margin_10_percent_met": true,
+        "native_copy_hash": true
+      },
+      "audit": {
+        "code": "NP05",
+        "title": "Vaelis",
+        "revision": "v01",
+        "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP05_vaelis_v01.png",
+        "sha256": "0dc79c51e38ddfca4ae47bc2d549fe9ba162eb7d410eefa9ae5b66806bca0def",
+        "size": [
+          1254,
+          1254
+        ],
+        "bbox_alpha_above8": [
+          402,
+          213,
+          865,
+          1105
+        ],
+        "margins_px": [
+          402,
+          213,
+          389,
+          149
+        ],
+        "minimum_margin_percent": 11.88,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "checks": {
+          "png_rgba": true,
+          "square_canvas": true,
+          "native_copy_hash": true,
+          "real_transparent_alpha": true,
+          "margin_10_percent_met": true,
+          "no_visible_border_clipping_alpha_above8": true
+        },
+        "recommended_for_owner_review": true,
+        "content_state": "DRAFT",
+        "human_visual_acceptance": "APPROVED_EXPLICITLY",
+        "runtime_admission": false,
+        "preview_heights": [
+          80
+        ]
+      },
+      "human_visual_acceptance": "APPROVED_EXPLICITLY"
+    },
+    {
+      "code": "NP06",
+      "name": "grazzt_aliado",
+      "title": "Graz'zt aliado",
+      "revision": "v02",
+      "content_state": "DRAFT",
+      "status": "VISUALLY_ACCEPTED_DRAFT_NOT_ADMITTED",
+      "prompt": "Use case: precise-object-edit.\nEdit target: the supplied Graz'zt ally v01 DRAFT sprite. Change ONLY the visible pointed elf-like ear so it becomes a small unobtrusive rounded humanoid ear, partially covered by the same dark hair. Do not introduce horns. The camera/style reference was never permission to inherit Durvall's drow/elf identity, and the Nottgard source does not define pointed ears for Graz'zt. This correction preserves a neutral experimental DRAFT physical proposal rather than asserting a canonical species.\nKeep all other details unchanged: dark-grey skin, dark long hair, face/expression, body proportions, black armor, silver edging, deep-violet mantle, lowered full sword, hands, pose, orientation, upper-left lighting, painted pixel clusters and exact spacious framing/scale. Exactly one complete full-body figure on a genuinely transparent square canvas, with all existing margins preserved. No text, floor, shadow, scene, new accessories, weapons or other figures. Only correct the ear shape; do not redesign the character.",
+      "preview_heights": [
+        80,
+        128
+      ],
+      "transparent_background": true,
+      "references": [
+        ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP06_grazzt_aliado_v01.png"
+      ],
+      "destination": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP06_grazzt_aliado_v02.png",
+      "runtime_admission": false,
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-d52046ec-4800-4683-9679-8a607195a003.png",
+      "sha256": "90fc10b2430106b0bc5d96b3607e3ad736c65d80cfe70d0e60c9916d314f8618",
+      "tool": "built-in image_gen",
+      "generated_at_utc": "2026-10-11T16:21:35.549558+00:00",
+      "inspection": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "bbox_alpha_above8": [
+          318,
+          239,
+          1047,
+          1100
+        ],
+        "margins_px": [
+          318,
+          239,
+          207,
+          154
+        ],
+        "minimum_margin_percent": 12.28,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "alpha_genuine": true,
+        "transparent_fraction": 0.8137557900841709,
+        "no_visible_border_clipping_alpha_above8": true,
+        "margin_10_percent_met": true,
+        "native_copy_hash": true
+      },
+      "correction_of": "f0f25bf12f997022c3b1f01f0615d61b60b75825a23cc76b7f6c79c65760eb0e",
+      "audit": {
+        "code": "NP06",
+        "title": "Graz'zt aliado",
+        "revision": "v02",
+        "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP06_grazzt_aliado_v02.png",
+        "sha256": "90fc10b2430106b0bc5d96b3607e3ad736c65d80cfe70d0e60c9916d314f8618",
+        "size": [
+          1254,
+          1254
+        ],
+        "bbox_alpha_above8": [
+          318,
+          239,
+          1047,
+          1100
+        ],
+        "margins_px": [
+          318,
+          239,
+          207,
+          154
+        ],
+        "minimum_margin_percent": 12.28,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "checks": {
+          "png_rgba": true,
+          "square_canvas": true,
+          "native_copy_hash": true,
+          "real_transparent_alpha": true,
+          "margin_10_percent_met": true,
+          "no_visible_border_clipping_alpha_above8": true
+        },
+        "recommended_for_owner_review": true,
+        "content_state": "DRAFT",
+        "human_visual_acceptance": "APPROVED_EXPLICITLY",
+        "runtime_admission": false,
+        "preview_heights": [
+          80,
+          128
+        ]
+      },
+      "human_visual_acceptance": "APPROVED_EXPLICITLY"
+    },
+    {
+      "code": "NP07",
+      "name": "reaper_barqueiro",
+      "title": "Reaper barqueiro",
+      "revision": "v01",
+      "content_state": "DRAFT",
+      "status": "VISUALLY_ACCEPTED_DRAFT_NOT_ADMITTED",
+      "prompt": "Use case: stylized-concept.\nAsset type: ONE standalone static DRAFT NPC sprite for Nottgard Survivors. Requested square 1024x1024, genuine transparent alpha.\nStyle: dark fantasy detailed painted pixel-art, deliberate pixel clusters, elevated three-quarter isometric camera, facing lower-right, upper-left light. Ref 1 healer: MATERIALS/PIXEL QUALITY ONLY, never shop, race, costume or identity. Ref 2 Durvall idle strip: CAMERA/PIXEL QUALITY ONLY, never his race, face, weapon, costume or multiple-frame layout.\nComposition: exactly one full-body adult figure in neutral idle pose, centered, entire head, feet and accessories inside frame. Visible subject approximately 60 percent of canvas height, at least 20 percent empty transparent room at top/bottom. Readable silhouette/costume at 80px. Not a portrait, sheet, animation strip or multiple views.\nConstraints: true alpha, no floor/projected shadow, scene, extra figures, labels, writing, logo, frame or watermark. No chibi, photorealistic or vector style. Coherent anatomy/hands, fully clothed, no gore or nudity. Proposed appearance is an experimental DRAFT hypothesis, never an assertion of undocumented canonical anatomy or biography. All weapons/accessories remain lowered, complete and comfortably away from edges. Restrained contrast/glow, no huge halo.\nSubject: ONE Reaper ferryman who conjures a canoe for payment on the Styx. Source defines its role, not exact anatomy or species. DRAFT proposal: upright adult-sized hooded figure in layered worn charcoal-grey ferry-worker cloth, face concealed in natural shadow, scuffed belt with small plain pouch, ONE simple wooden ferry pole held low and entirely within margins. Calm transactional stance, neither attacking nor a giant death apparition. No assertion of skeleton/undead anatomy, skull face, glowing evil eyes, scythe, boat, river, platform, souls or scenery. Distinct hood/pole silhouette readable at 80px.\nFraming priority: zoom out. One SMALL complete figure in a spacious square transparent canvas. Its visible height must be ONLY 60 percent of canvas height, with roughly 20 percent genuinely empty transparent canvas above the highest hair and below the lowest boot/pole. Never fill the frame. Keep the entire subject including every accessory within x=20..80 percent and y=20..80 percent. No element approaches an edge.",
+      "preview_heights": [
+        80
+      ],
+      "transparent_background": true,
+      "references": [
+        "assets/interactions/curandeiro.png",
+        "assets/animations/heroes/durvall/idle.png"
+      ],
+      "destination": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP07_reaper_barqueiro_v01.png",
+      "runtime_admission": false,
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-cb856be2-7f4b-4a32-aebf-b84be0604664.png",
+      "sha256": "1ddc09c66221fe19593e0f2c2a76823dd1db0760cb67f99f67c12cd42cd11642",
+      "tool": "built-in image_gen",
+      "generated_at_utc": "2026-10-11T16:22:49.649263+00:00",
+      "inspection": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "bbox_alpha_above8": [
+          364,
+          255,
+          909,
+          1046
+        ],
+        "margins_px": [
+          364,
+          255,
+          345,
+          208
+        ],
+        "minimum_margin_percent": 16.59,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "alpha_genuine": true,
+        "transparent_fraction": 0.8468753259108334,
+        "no_visible_border_clipping_alpha_above8": true,
+        "margin_10_percent_met": true,
+        "native_copy_hash": true
+      },
+      "audit": {
+        "code": "NP07",
+        "title": "Reaper barqueiro",
+        "revision": "v01",
+        "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP07_reaper_barqueiro_v01.png",
+        "sha256": "1ddc09c66221fe19593e0f2c2a76823dd1db0760cb67f99f67c12cd42cd11642",
+        "size": [
+          1254,
+          1254
+        ],
+        "bbox_alpha_above8": [
+          364,
+          255,
+          909,
+          1046
+        ],
+        "margins_px": [
+          364,
+          255,
+          345,
+          208
+        ],
+        "minimum_margin_percent": 16.59,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "checks": {
+          "png_rgba": true,
+          "square_canvas": true,
+          "native_copy_hash": true,
+          "real_transparent_alpha": true,
+          "margin_10_percent_met": true,
+          "no_visible_border_clipping_alpha_above8": true
+        },
+        "recommended_for_owner_review": true,
+        "content_state": "DRAFT",
+        "human_visual_acceptance": "APPROVED_EXPLICITLY",
+        "runtime_admission": false,
+        "preview_heights": [
+          80
+        ]
+      },
+      "human_visual_acceptance": "APPROVED_EXPLICITLY"
+    },
+    {
+      "code": "NP08",
+      "name": "vhaerith_aetherion",
+      "title": "Vhaerith Aetherion",
+      "revision": "v01",
+      "content_state": "DRAFT",
+      "status": "VISUALLY_ACCEPTED_DRAFT_NOT_ADMITTED",
+      "prompt": "Use case: stylized-concept.\nAsset type: ONE standalone static DRAFT NPC sprite for Nottgard Survivors. Requested square 1024x1024, genuine transparent alpha.\nStyle: dark fantasy detailed painted pixel-art, deliberate pixel clusters, elevated three-quarter isometric camera, facing lower-right, upper-left light. Ref 1 healer: MATERIALS/PIXEL QUALITY ONLY, never shop, race, costume or identity. Ref 2 Durvall idle strip: CAMERA/PIXEL QUALITY ONLY, never his race, face, weapon, costume or multiple-frame layout.\nComposition: exactly one full-body adult figure in neutral idle pose, centered, entire head, feet and accessories inside frame. Visible subject approximately 60 percent of canvas height, at least 20 percent empty transparent room at top/bottom. Readable silhouette/costume at 80px. Not a portrait, sheet, animation strip or multiple views.\nConstraints: true alpha, no floor/projected shadow, scene, extra figures, labels, writing, logo, frame or watermark. No chibi, photorealistic or vector style. Coherent anatomy/hands, fully clothed, no gore or nudity. Proposed appearance is an experimental DRAFT hypothesis, never an assertion of undocumented canonical anatomy or biography. All weapons/accessories remain lowered, complete and comfortably away from edges. Restrained contrast/glow, no huge halo.\nSubject: Vhaerith Aetherion, an adult ELF archaeologist and rune scholar imprisoned in Durao. Elf identity and imprisoned role are documented; age styling, face and costume are DRAFT proposals. A mature thoughtful elf with visible pointed ears, long grey hair, worn modest blue-grey layered robe, weathered cloth belt, practical boots, empty lowered hands, tired but welcoming upright pose. Entirely opaque living character, not ghost. No cage, chains, blood, injured hand, received rune, glowing rune inscriptions, book with text, portal, floor or invented sacred mark. The prison is textual context only; do not imply he has been freed.\nFraming priority: zoom out. One SMALL complete figure in a spacious square transparent canvas. Its visible height must be ONLY 60 percent of canvas height, with roughly 20 percent genuinely empty transparent canvas above the highest hair and below the lowest boot/pole. Never fill the frame. Keep the entire subject including every accessory within x=20..80 percent and y=20..80 percent. No element approaches an edge.",
+      "preview_heights": [
+        80
+      ],
+      "transparent_background": true,
+      "references": [
+        "assets/interactions/curandeiro.png",
+        "assets/animations/heroes/durvall/idle.png"
+      ],
+      "destination": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP08_vhaerith_aetherion_v01.png",
+      "runtime_admission": false,
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-b11b7379-b3e5-4c75-a049-02c547926aa1.png",
+      "sha256": "fe79429dc82351130d0a2ab95b10e98df5f94bf12be7f0904888ba4016ed06de",
+      "tool": "built-in image_gen",
+      "generated_at_utc": "2026-10-11T16:24:06.945718+00:00",
+      "inspection": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "bbox_alpha_above8": [
+          421,
+          226,
+          812,
+          1096
+        ],
+        "margins_px": [
+          421,
+          226,
+          442,
+          158
+        ],
+        "minimum_margin_percent": 12.6,
+        "border_max_alpha": 0,
+        "border_exactly_empty": true,
+        "alpha_genuine": true,
+        "transparent_fraction": 0.8520256709629663,
+        "no_visible_border_clipping_alpha_above8": true,
+        "margin_10_percent_met": true,
+        "native_copy_hash": true
+      },
+      "audit": {
+        "code": "NP08",
+        "title": "Vhaerith Aetherion",
+        "revision": "v01",
+        "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP08_vhaerith_aetherion_v01.png",
+        "sha256": "fe79429dc82351130d0a2ab95b10e98df5f94bf12be7f0904888ba4016ed06de",
+        "size": [
+          1254,
+          1254
+        ],
+        "bbox_alpha_above8": [
+          421,
+          226,
+          812,
+          1096
+        ],
+        "margins_px": [
+          421,
+          226,
+          442,
+          158
+        ],
+        "minimum_margin_percent": 12.6,
+        "border_max_alpha": 0,
+        "border_exactly_empty": true,
+        "checks": {
+          "png_rgba": true,
+          "square_canvas": true,
+          "native_copy_hash": true,
+          "real_transparent_alpha": true,
+          "margin_10_percent_met": true,
+          "no_visible_border_clipping_alpha_above8": true
+        },
+        "recommended_for_owner_review": true,
+        "content_state": "DRAFT",
+        "human_visual_acceptance": "APPROVED_EXPLICITLY",
+        "runtime_admission": false,
+        "preview_heights": [
+          80
+        ]
+      },
+      "human_visual_acceptance": "APPROVED_EXPLICITLY"
+    },
+    {
+      "code": "NP09",
+      "name": "mercador_rivenheart",
+      "title": "Mercador de Rivenheart",
+      "revision": "v01",
+      "content_state": "DRAFT",
+      "status": "VISUALLY_ACCEPTED_DRAFT_NOT_ADMITTED",
+      "prompt": "Use case: stylized-concept.\nAsset type: ONE standalone static DRAFT NPC sprite for Nottgard Survivors. Requested square 1024x1024, genuine transparent alpha.\nStyle: dark fantasy detailed painted pixel-art, deliberate pixel clusters, elevated three-quarter isometric camera, facing lower-right, upper-left light. Ref 1 healer: MATERIALS/PIXEL QUALITY ONLY, never shop, race, costume or identity. Ref 2 Durvall idle strip: CAMERA/PIXEL QUALITY ONLY, never his race, face, weapon, costume or multiple-frame layout.\nComposition: exactly one full-body adult figure in neutral idle pose, centered, entire head, feet and accessories inside frame. Visible subject approximately 60 percent of canvas height, at least 20 percent empty transparent room at top/bottom. Readable silhouette/costume at 80px. Not a portrait, sheet, animation strip or multiple views.\nConstraints: true alpha, no floor/projected shadow, scene, extra figures, labels, writing, logo, frame or watermark. No chibi, photorealistic or vector style. Coherent anatomy/hands, fully clothed, no gore or nudity. Proposed appearance is an experimental DRAFT hypothesis, never an assertion of undocumented canonical anatomy or biography. All weapons/accessories remain lowered, complete and comfortably away from edges. Restrained contrast/glow, no huge halo.\nSubject: ONE anonymous adult merchant from the shop of purported magical items in Rivenheart, Shendilavri. No canonical name, species or gender is assigned. DRAFT proposal: hooded biped with much of the face/ears concealed, restrained dusty-burgundy layered trading coat, dark leather belt and small pouch, sturdy shoes, one open hand in a modest commercial gesture, other hand down. Clear noncombat merchant silhouette. No horns, tail, wings or explicit succubus/incubus anatomy inferred from city demographics. No counter, stall, crates, weapon display, magic demonstration, glittering inventory, enslaved people, text, coins with emblems, floor or background.\nFraming priority: zoom out. One SMALL complete figure in a spacious square transparent canvas. Its visible height must be ONLY 60 percent of canvas height, with roughly 20 percent genuinely empty transparent canvas above the highest hair and below the lowest boot/pole. Never fill the frame. Keep the entire subject including every accessory within x=20..80 percent and y=20..80 percent. No element approaches an edge.",
+      "preview_heights": [
+        80
+      ],
+      "transparent_background": true,
+      "references": [
+        "assets/interactions/curandeiro.png",
+        "assets/animations/heroes/durvall/idle.png"
+      ],
+      "destination": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP09_mercador_rivenheart_v01.png",
+      "runtime_admission": false,
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-ecc225b2-0ebe-4586-9ee6-24073d2ea9a9.png",
+      "sha256": "0bcefb637594d1cda861d05cd14a7b47f06297a2e79bfb60098b809ccc84b1f9",
+      "tool": "built-in image_gen",
+      "generated_at_utc": "2026-10-11T16:25:27.021429+00:00",
+      "inspection": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "bbox_alpha_above8": [
+          372,
+          226,
+          905,
+          1072
+        ],
+        "margins_px": [
+          372,
+          226,
+          349,
+          182
+        ],
+        "minimum_margin_percent": 14.51,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "alpha_genuine": true,
+        "transparent_fraction": 0.8377828906033389,
+        "no_visible_border_clipping_alpha_above8": true,
+        "margin_10_percent_met": true,
+        "native_copy_hash": true
+      },
+      "audit": {
+        "code": "NP09",
+        "title": "Mercador de Rivenheart",
+        "revision": "v01",
+        "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP09_mercador_rivenheart_v01.png",
+        "sha256": "0bcefb637594d1cda861d05cd14a7b47f06297a2e79bfb60098b809ccc84b1f9",
+        "size": [
+          1254,
+          1254
+        ],
+        "bbox_alpha_above8": [
+          372,
+          226,
+          905,
+          1072
+        ],
+        "margins_px": [
+          372,
+          226,
+          349,
+          182
+        ],
+        "minimum_margin_percent": 14.51,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "checks": {
+          "png_rgba": true,
+          "square_canvas": true,
+          "native_copy_hash": true,
+          "real_transparent_alpha": true,
+          "margin_10_percent_met": true,
+          "no_visible_border_clipping_alpha_above8": true
+        },
+        "recommended_for_owner_review": true,
+        "content_state": "DRAFT",
+        "human_visual_acceptance": "APPROVED_EXPLICITLY",
+        "runtime_admission": false,
+        "preview_heights": [
+          80
+        ]
+      },
+      "human_visual_acceptance": "APPROVED_EXPLICITLY"
+    }
+  ],
+  "git_admission_canon_build": "NOT_AUTHORIZED",
+  "owner_reply": "Aprovo as seis peças DRAFT",
+  "approved_date": "2026-10-11",
+  "status": "COMPLETED_VISUALLY_ACCEPTED_DRAFT",
+  "owner_visual_acceptance": "APPROVED_EXPLICITLY",
+  "previous_native_versions": [
+    {
+      "code": "NP04",
+      "name": "nyxara",
+      "title": "Nyxara",
+      "revision": "v01",
+      "content_state": "DRAFT",
+      "status": "PRESERVED_NOT_SELECTED_CORRECTION",
+      "prompt": "Use case: stylized-concept.\nAsset type: ONE standalone static DRAFT NPC sprite for Nottgard Survivors. Requested square 1024x1024, genuine transparent alpha.\nStyle: dark fantasy detailed painted pixel-art, deliberate pixel clusters, elevated three-quarter isometric camera, facing lower-right, upper-left light. Ref 1 healer: MATERIALS/PIXEL QUALITY ONLY, never shop, race, costume or identity. Ref 2 Durvall idle strip: CAMERA/PIXEL QUALITY ONLY, never his race, face, weapon, costume or multiple-frame layout.\nComposition: exactly one full-body adult figure in neutral idle pose, centered, entire head, feet and accessories inside frame. Visible subject approximately 65-70 percent of canvas height, at least 15 percent empty transparent room at top/bottom. Readable silhouette/costume at 80px. Not a portrait, sheet, animation strip or multiple views.\nConstraints: true alpha, no floor/projected shadow, scene, extra figures, labels, writing, logo, frame or watermark. No chibi, photorealistic or vector style. Coherent anatomy/hands, fully clothed, no gore or nudity. Proposed appearance is an experimental DRAFT hypothesis, never an assertion of undocumented canonical anatomy or biography. All weapons/accessories remain lowered, complete and comfortably away from edges. Restrained contrast/glow, no huge halo.\nSubject: Nyxara, ONE of the two Radiant Sisters, an adult female warrior and guide serving Malcanthet in Shendilavri. Lore confirms the role, not species or physical appearance. DRAFT proposal: dark hair tied high, calm attentive expression, fully covering aged-silver practical armor over muted plum cloth, dark boots, a modest sword lowered beside her leg, no raised attack. Distinct slim upright silhouette and visible armor/cloth separation. No wings, horns, halo or angelic/succubus anatomy inferred from the title. No sister beside her, pregnancy or narrative scene.",
+      "preview_heights": [
+        80
+      ],
+      "transparent_background": true,
+      "references": [
+        "assets/interactions/curandeiro.png",
+        "assets/animations/heroes/durvall/idle.png"
+      ],
+      "destination": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP04_nyxara_v01.png",
+      "runtime_admission": false,
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-00d22b60-2b1f-4357-a227-debff71adaca.png",
+      "sha256": "e3ac6b90a7a208b79af2f03bbf92f27de0f429e74aaf3bffbf9c37783a9fff33",
+      "tool": "built-in image_gen",
+      "generated_at_utc": "2026-10-11T16:15:36.420776+00:00",
+      "inspection": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "bbox_alpha_above8": [
+          285,
+          65,
+          1090,
+          1194
+        ],
+        "margins_px": [
+          285,
+          65,
+          164,
+          60
+        ],
+        "minimum_margin_percent": 4.78,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "alpha_genuine": true,
+        "transparent_fraction": 0.7497500820341415,
+        "no_visible_border_clipping_alpha_above8": true,
+        "margin_10_percent_met": false,
+        "native_copy_hash": true
+      },
+      "audit": {
+        "code": "NP04",
+        "title": "Nyxara",
+        "revision": "v01",
+        "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP04_nyxara_v01.png",
+        "sha256": "e3ac6b90a7a208b79af2f03bbf92f27de0f429e74aaf3bffbf9c37783a9fff33",
+        "size": [
+          1254,
+          1254
+        ],
+        "bbox_alpha_above8": [
+          285,
+          65,
+          1090,
+          1194
+        ],
+        "margins_px": [
+          285,
+          65,
+          164,
+          60
+        ],
+        "minimum_margin_percent": 4.78,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "checks": {
+          "png_rgba": true,
+          "square_canvas": true,
+          "native_copy_hash": true,
+          "real_transparent_alpha": true,
+          "margin_10_percent_met": false,
+          "no_visible_border_clipping_alpha_above8": true
+        },
+        "recommended_for_owner_review": false,
+        "content_state": "DRAFT",
+        "human_visual_acceptance": "PENDING",
+        "runtime_admission": false,
+        "preview_heights": [
+          80
+        ]
+      }
+    },
+    {
+      "code": "NP06",
+      "name": "grazzt_aliado",
+      "title": "Graz'zt aliado",
+      "revision": "v01",
+      "content_state": "DRAFT",
+      "status": "PRESERVED_NOT_SELECTED_CORRECTION",
+      "prompt": "Use case: stylized-concept.\nAsset type: ONE standalone static DRAFT NPC sprite for Nottgard Survivors. Requested square 1024x1024, genuine transparent alpha.\nStyle: dark fantasy detailed painted pixel-art, deliberate pixel clusters, elevated three-quarter isometric camera, facing lower-right, upper-left light. Ref 1 healer: MATERIALS/PIXEL QUALITY ONLY, never shop, race, costume or identity. Ref 2 Durvall idle strip: CAMERA/PIXEL QUALITY ONLY, never his race, face, weapon, costume or multiple-frame layout.\nComposition: exactly one full-body adult figure in neutral idle pose, centered, entire head, feet and accessories inside frame. Visible subject approximately 60 percent of canvas height, at least 20 percent empty transparent room at top/bottom. Readable silhouette/costume at 80px. Not a portrait, sheet, animation strip or multiple views.\nConstraints: true alpha, no floor/projected shadow, scene, extra figures, labels, writing, logo, frame or watermark. No chibi, photorealistic or vector style. Coherent anatomy/hands, fully clothed, no gore or nudity. Proposed appearance is an experimental DRAFT hypothesis, never an assertion of undocumented canonical anatomy or biography. All weapons/accessories remain lowered, complete and comfortably away from edges. Restrained contrast/glow, no huge halo.\nSubject: Graz'zt, an Abyssal Lord temporarily allied with the group, summoned through rings; sword use is documented. Physical appearance is undefined in the consulted Nottgard source. DRAFT proposal: tall imposing adult masculine humanoid, dark grey skin, long dark hair, severe composed face, fitted black plate/leather with restrained silver edges, deep-violet mantle, one plain long sword held LOW entirely within frame. Regal disciplined silhouette rather than an attacking boss pose. Do not import an external franchise's six fingers, fixed horns, tail, wings, symbols or distinctive costume. No throne, portal, magical ring, mirror, slain victim or floor. No canonical claim for this proposed appearance. Preserve all cloth/sword within margins.\nFraming priority: zoom out. One SMALL complete figure in a spacious square transparent canvas. Its visible height must be ONLY 60 percent of canvas height, with roughly 20 percent genuinely empty transparent canvas above the highest hair and below the lowest boot/pole. Never fill the frame. Keep the entire subject including every accessory within x=20..80 percent and y=20..80 percent. No element approaches an edge.",
+      "preview_heights": [
+        80,
+        128
+      ],
+      "transparent_background": true,
+      "references": [
+        "assets/interactions/curandeiro.png",
+        "assets/animations/heroes/durvall/idle.png"
+      ],
+      "destination": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP06_grazzt_aliado_v01.png",
+      "runtime_admission": false,
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-ab767cb1-1359-42e7-b46e-9e21574a42d6.png",
+      "sha256": "f0f25bf12f997022c3b1f01f0615d61b60b75825a23cc76b7f6c79c65760eb0e",
+      "tool": "built-in image_gen",
+      "generated_at_utc": "2026-10-11T16:20:16.563364+00:00",
+      "inspection": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "bbox_alpha_above8": [
+          320,
+          240,
+          1046,
+          1097
+        ],
+        "margins_px": [
+          320,
+          240,
+          208,
+          157
+        ],
+        "minimum_margin_percent": 12.52,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "alpha_genuine": true,
+        "transparent_fraction": 0.8186288724566236,
+        "no_visible_border_clipping_alpha_above8": true,
+        "margin_10_percent_met": true,
+        "native_copy_hash": true
+      },
+      "audit": {
+        "code": "NP06",
+        "title": "Graz'zt aliado",
+        "revision": "v01",
+        "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP06_grazzt_aliado_v01.png",
+        "sha256": "f0f25bf12f997022c3b1f01f0615d61b60b75825a23cc76b7f6c79c65760eb0e",
+        "size": [
+          1254,
+          1254
+        ],
+        "bbox_alpha_above8": [
+          320,
+          240,
+          1046,
+          1097
+        ],
+        "margins_px": [
+          320,
+          240,
+          208,
+          157
+        ],
+        "minimum_margin_percent": 12.52,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "checks": {
+          "png_rgba": true,
+          "square_canvas": true,
+          "native_copy_hash": true,
+          "real_transparent_alpha": true,
+          "margin_10_percent_met": true,
+          "no_visible_border_clipping_alpha_above8": true
+        },
+        "recommended_for_owner_review": false,
+        "content_state": "DRAFT",
+        "human_visual_acceptance": "PENDING",
+        "runtime_admission": false,
+        "preview_heights": [
+          80,
+          128
+        ]
+      }
+    }
+  ],
+  "framing_refinement": "After NP04 v01 returned 4.78% margins, reinforce only the existing full-body/transparent margin invariant for remaining calls; no identity/style/scope change.",
+  "current_step_position": 5,
+  "technical_status": "PASS_WITH_NATIVE_ALPHA_NOTE",
+  "native_candidates": 8,
+  "human_visual_gate": "S-005",
+  "gallery_qa": "gallery-qa.json",
+  "reading_preview": "review-reading.png",
+  "step_results": [
+    {
+      "step": "S-001",
+      "status": "COMPLETED",
+      "result": "Six roles/identities/context/readiness/source hashes/prompts prepared; exact production scope approved."
+    },
+    {
+      "step": "S-002",
+      "status": "COMPLETED",
+      "result": "Six candidates/eight unchanged native outputs; NP04 v02 margin and NP06 v02 ear correction; previous versions preserved."
+    },
+    {
+      "step": "S-003",
+      "status": "COMPLETED",
+      "result": "Native alpha/PNG/RGBA/margins/hash/reference/prior accepted/runtime/PLAN071 audits pass with native alpha note; seven reading samples inspected."
+    },
+    {
+      "step": "S-004",
+      "status": "COMPLETED",
+      "result": "HTML references/metadata and complete Godot 1000x1120 reading sheet verified; evidence and owner review objective recorded."
+    },
+    {
+      "step": "S-005",
+      "status": "COMPLETED",
+      "result": "Owner explicitly accepted NP04 v02, NP05 v01, NP06 v02, NP07 v01, NP08 v01 and NP09 v01. All remain DRAFT; no admission/canonical promotion."
+    }
+  ],
+  "visual_acceptance_receipt": "visual-acceptance.json",
+  "visual_owner_reply": "Aprovo visualmente as seis revisões"
+}
