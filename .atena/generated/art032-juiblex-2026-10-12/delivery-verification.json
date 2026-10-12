@@ -1,0 +1,27 @@
+{
+  "plan": "PLAN-ART032-JUIBLEX",
+  "revision": "v01",
+  "status": "PASS_OWNER_VISUAL_GATE_PENDING",
+  "completed_steps": 4,
+  "total_steps": 5,
+  "current_step": "S-005/OWNER_VISUAL_ACCEPTANCE",
+  "content_state": "DRAFT",
+  "candidate": "MJ01_v03",
+  "native_outputs_preserved": 3,
+  "source_reference_and_comparison_hashes": "PASS",
+  "runtime_prior_accepted_and_plan071_return": "UNCHANGED_HASH_VERIFIED",
+  "links_contract_state": "PASS",
+  "reading_sheet": [
+    1000,
+    810
+  ],
+  "preview_count": 6,
+  "browser_render_verification": "NOT_ATTEMPTED_KNOWN_FILE_URL_POLICY_BLOCK",
+  "head": "51b51f7369ae34eede997435e6eb52ea057daf25",
+  "index": "EMPTY",
+  "runtime_admission": false,
+  "canonical_promotion": false,
+  "commit_push_build": false,
+  "human_visual_acceptance": "PENDING",
+  "next_execution_authorized": false
+}

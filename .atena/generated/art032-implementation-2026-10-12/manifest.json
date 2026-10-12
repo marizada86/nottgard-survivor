@@ -1,0 +1,671 @@
+{
+  "plan": "PLAN-ART032-IMPLEMENT",
+  "revision": "v01",
+  "owner_reply": "pode implementar",
+  "approval_mode": "per-plan",
+  "approval": "APPROVED_EXPLICITLY",
+  "content_state": "DRAFT_AUTHORIZED_RUNTIME_USE",
+  "origin": "guided-before-implementation",
+  "implementation_preceded_spec": false,
+  "current_step_position": 6,
+  "completed_steps": 6,
+  "total_steps": 6,
+  "entries": [
+    {
+      "code": "NP01",
+      "revision": "v02",
+      "path": ".atena/generated/art032-npcs-2026-10-11/sources/NP01_joao_barbosa_v02.png",
+      "sha256": "9148e0a1a7c839871fd771201ddc64f9a96d77ebaee37ce6c25fc4622bac9ccc",
+      "content_state": "DRAFT_AUTHORIZED_RUNTIME_USE",
+      "proposed_destination": "assets/interactions/npc_joao_barbosa.png",
+      "usage": "escort ally",
+      "event": "feng_tu/escolta_do_peregrino",
+      "transformation": "COMPLETED_GODOT_DERIVATIVE_CROP_ALPHA_PADDING_ASPECT_BASELINE_ORIGINAL_PRESERVED",
+      "runtime_admission": true,
+      "destination": "assets/interactions/npc_joao_barbosa.png",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/npc_joao_barbosa.png",
+      "target_visible_height": 240,
+      "padding": 4,
+      "derived_sha256": "1bf3b4caf5aef74d7020785567413e1bc6f8072350683da4bc0ab960f1d5343c",
+      "derived_size": [
+        154,
+        248
+      ],
+      "derived_margins_px": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "alpha_trace_cleanup": true,
+      "source_bytes_unchanged": true
+    },
+    {
+      "code": "NP02",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-2026-10-11/sources/NP02_desertor_durao_v01.png",
+      "sha256": "4d73424cfe0560606fd3e9ddd94ec02b493546873235b4a0a7ad00be7ea57e59",
+      "content_state": "DRAFT_AUTHORIZED_RUNTIME_USE",
+      "proposed_destination": "assets/interactions/npc_desertor_durao.png",
+      "usage": "rescue point",
+      "event": "durao/desertores",
+      "transformation": "COMPLETED_GODOT_DERIVATIVE_CROP_ALPHA_PADDING_ASPECT_BASELINE_ORIGINAL_PRESERVED",
+      "runtime_admission": true,
+      "destination": "assets/interactions/npc_desertor_durao.png",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/npc_desertor_durao.png",
+      "target_visible_height": 240,
+      "padding": 4,
+      "derived_sha256": "b394793e3f526d01cfe49f5273e343f287018e68b5fed5ff40a3d4ac84d7b14f",
+      "derived_size": [
+        140,
+        248
+      ],
+      "derived_margins_px": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "alpha_trace_cleanup": true,
+      "source_bytes_unchanged": true
+    },
+    {
+      "code": "NP03",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-2026-10-11/sources/NP03_vitima_enfeiticada_v01.png",
+      "sha256": "3a944afa1c66e8db6ecfcd77077c0564254057a548e0f963b80967abc19b8c85",
+      "content_state": "DRAFT_AUTHORIZED_RUNTIME_USE",
+      "proposed_destination": "assets/interactions/npc_vitima_enfeiticada.png",
+      "usage": "rescue point",
+      "event": "shendilavri/vitimas_drenadas",
+      "transformation": "COMPLETED_GODOT_DERIVATIVE_CROP_ALPHA_PADDING_ASPECT_BASELINE_ORIGINAL_PRESERVED",
+      "runtime_admission": true,
+      "destination": "assets/interactions/npc_vitima_enfeiticada.png",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/npc_vitima_enfeiticada.png",
+      "target_visible_height": 240,
+      "padding": 4,
+      "derived_sha256": "0e042e06510ac865c34fca0ac7f7377be4ba4c109a139533c627081f3202efa3",
+      "derived_size": [
+        111,
+        248
+      ],
+      "derived_margins_px": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "alpha_trace_cleanup": true,
+      "source_bytes_unchanged": true
+    },
+    {
+      "code": "PT01",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-2026-10-11/sources/PT01_estrela_do_norte_v01.png",
+      "sha256": "a3ec67f0dec4217be2d41dc45945d823aa05a8bf657a02964b0e0a11d030ea7c",
+      "content_state": "DRAFT_AUTHORIZED_RUNTIME_USE",
+      "proposed_destination": "assets/interactions/estrela_do_norte.png",
+      "usage": "pilgrimage point",
+      "event": "feng_tu/peregrinacao_da_estrela",
+      "transformation": "COMPLETED_GODOT_DERIVATIVE_CROP_ALPHA_PADDING_ASPECT_BASELINE_ORIGINAL_PRESERVED",
+      "runtime_admission": true,
+      "destination": "assets/interactions/estrela_do_norte.png",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/estrela_do_norte.png",
+      "target_visible_height": 96,
+      "padding": 4,
+      "derived_sha256": "df9aea5f175a15e865daf01680bc28e3e88652f50e4c858b3e7bcf0f37c6a5db",
+      "derived_size": [
+        98,
+        104
+      ],
+      "derived_margins_px": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "alpha_trace_cleanup": true,
+      "source_bytes_unchanged": true
+    },
+    {
+      "code": "NP04",
+      "title": "Nyxara",
+      "revision": "v02",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP04_nyxara_v02.png",
+      "sha256": "ef545d2a49727264401e19e3d2dd7f9b653551bc0aefa41616298fc1f583a5c1",
+      "content_state": "DRAFT_AUTHORIZED_RUNTIME_USE",
+      "proposed_destination": "assets/interactions/npc_nyxara.png",
+      "usage": "first reward ally",
+      "event": "shendilavri/vitimas_drenadas",
+      "transformation": "COMPLETED_GODOT_DERIVATIVE_CROP_ALPHA_PADDING_ASPECT_BASELINE_ORIGINAL_PRESERVED",
+      "runtime_admission": true,
+      "destination": "assets/interactions/npc_nyxara.png",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/npc_nyxara.png",
+      "target_visible_height": 240,
+      "padding": 4,
+      "derived_sha256": "026029a0ea518d04919c7ebf9f8a5eded1a93c5a0502eea79782fdd27bcff27f",
+      "derived_size": [
+        183,
+        248
+      ],
+      "derived_margins_px": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "alpha_trace_cleanup": true,
+      "source_bytes_unchanged": true
+    },
+    {
+      "code": "NP05",
+      "title": "Vaelis",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP05_vaelis_v01.png",
+      "sha256": "0dc79c51e38ddfca4ae47bc2d549fe9ba162eb7d410eefa9ae5b66806bca0def",
+      "content_state": "DRAFT_AUTHORIZED_RUNTIME_USE",
+      "proposed_destination": "assets/interactions/npc_vaelis.png",
+      "usage": "second reward ally",
+      "event": "shendilavri/vitimas_drenadas",
+      "transformation": "COMPLETED_GODOT_DERIVATIVE_CROP_ALPHA_PADDING_ASPECT_BASELINE_ORIGINAL_PRESERVED",
+      "runtime_admission": true,
+      "destination": "assets/interactions/npc_vaelis.png",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/npc_vaelis.png",
+      "target_visible_height": 240,
+      "padding": 4,
+      "derived_sha256": "4eb3ffca0016358a2a312f7d7207c59c17d580de192ee85f7969bbe1553ce532",
+      "derived_size": [
+        133,
+        248
+      ],
+      "derived_margins_px": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "alpha_trace_cleanup": true,
+      "source_bytes_unchanged": true
+    },
+    {
+      "code": "NP06",
+      "title": "Graz'zt aliado",
+      "revision": "v02",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP06_grazzt_aliado_v02.png",
+      "sha256": "90fc10b2430106b0bc5d96b3607e3ad736c65d80cfe70d0e60c9916d314f8618",
+      "content_state": "DRAFT_AUTHORIZED_RUNTIME_USE",
+      "proposed_destination": "assets/interactions/npc_grazzt_aliado.png",
+      "usage": "pact point and reward ally",
+      "event": "goranthis/o_nome_tres_vezes",
+      "transformation": "COMPLETED_GODOT_DERIVATIVE_CROP_ALPHA_PADDING_ASPECT_BASELINE_ORIGINAL_PRESERVED",
+      "runtime_admission": true,
+      "destination": "assets/interactions/npc_grazzt_aliado.png",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/npc_grazzt_aliado.png",
+      "target_visible_height": 240,
+      "padding": 4,
+      "derived_sha256": "c27f13805bef0dec61b19f62c297adb1e2e8eda97625b557b197fa7b268cea1e",
+      "derived_size": [
+        211,
+        248
+      ],
+      "derived_margins_px": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "alpha_trace_cleanup": true,
+      "source_bytes_unchanged": true
+    },
+    {
+      "code": "NP07",
+      "title": "Reaper barqueiro",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP07_reaper_barqueiro_v01.png",
+      "sha256": "1ddc09c66221fe19593e0f2c2a76823dd1db0760cb67f99f67c12cd42cd11642",
+      "content_state": "DRAFT_AUTHORIZED_RUNTIME_USE",
+      "proposed_destination": "assets/interactions/npc_reaper_barqueiro.png",
+      "usage": "pact point",
+      "event": "shedaklah/barqueiro_do_estige",
+      "transformation": "COMPLETED_GODOT_DERIVATIVE_CROP_ALPHA_PADDING_ASPECT_BASELINE_ORIGINAL_PRESERVED",
+      "runtime_admission": true,
+      "destination": "assets/interactions/npc_reaper_barqueiro.png",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/npc_reaper_barqueiro.png",
+      "target_visible_height": 240,
+      "padding": 4,
+      "derived_sha256": "679f923d7b6d97f6f4a3e0536d3e36a09abd5b8c70363ff99600d447d4ac3146",
+      "derived_size": [
+        173,
+        248
+      ],
+      "derived_margins_px": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "alpha_trace_cleanup": true,
+      "source_bytes_unchanged": true
+    },
+    {
+      "code": "NP08",
+      "title": "Vhaerith Aetherion",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP08_vhaerith_aetherion_v01.png",
+      "sha256": "fe79429dc82351130d0a2ab95b10e98df5f94bf12be7f0904888ba4016ed06de",
+      "content_state": "DRAFT_AUTHORIZED_RUNTIME_USE",
+      "proposed_destination": "assets/interactions/npc_vhaerith_aetherion.png",
+      "usage": "pact point",
+      "event": "durao/vhaerith_na_jaula",
+      "transformation": "COMPLETED_GODOT_DERIVATIVE_CROP_ALPHA_PADDING_ASPECT_BASELINE_ORIGINAL_PRESERVED",
+      "runtime_admission": true,
+      "destination": "assets/interactions/npc_vhaerith_aetherion.png",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/npc_vhaerith_aetherion.png",
+      "target_visible_height": 240,
+      "padding": 4,
+      "derived_sha256": "307dad89f3a4890d924af51f36ce888a5661d47db1b3a088ad2959d68f02b550",
+      "derived_size": [
+        116,
+        248
+      ],
+      "derived_margins_px": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "alpha_trace_cleanup": true,
+      "source_bytes_unchanged": true
+    },
+    {
+      "code": "NP09",
+      "title": "Mercador de Rivenheart",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP09_mercador_rivenheart_v01.png",
+      "sha256": "0bcefb637594d1cda861d05cd14a7b47f06297a2e79bfb60098b809ccc84b1f9",
+      "content_state": "DRAFT_AUTHORIZED_RUNTIME_USE",
+      "proposed_destination": "assets/interactions/npc_mercador_rivenheart.png",
+      "usage": "pact point",
+      "event": "shendilavri/mercador_de_rivenheart",
+      "transformation": "COMPLETED_GODOT_DERIVATIVE_CROP_ALPHA_PADDING_ASPECT_BASELINE_ORIGINAL_PRESERVED",
+      "runtime_admission": true,
+      "destination": "assets/interactions/npc_mercador_rivenheart.png",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/npc_mercador_rivenheart.png",
+      "target_visible_height": 240,
+      "padding": 4,
+      "derived_sha256": "29f6b4aa98564596843f9dbce91079a8e2dbd6c3d4f6ea57fcef3a4af3467895",
+      "derived_size": [
+        159,
+        248
+      ],
+      "derived_margins_px": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "alpha_trace_cleanup": true,
+      "source_bytes_unchanged": true
+    },
+    {
+      "code": "PT02",
+      "title": "Trono de Zuggtmoy",
+      "revision": "v02",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT02_trono_zuggtmoy_v02.png",
+      "sha256": "14e1d3b0749f887b328a1e5aea2c04e792a1e48af0d42701b0dbb6bd51984cc2",
+      "content_state": "DRAFT_AUTHORIZED_RUNTIME_USE",
+      "proposed_destination": "assets/interactions/trono_zuggtmoy.png",
+      "usage": "collect target",
+      "event": "shedaklah/pedido_de_zuggtmoy",
+      "transformation": "COMPLETED_GODOT_DERIVATIVE_CROP_ALPHA_PADDING_ASPECT_BASELINE_ORIGINAL_PRESERVED",
+      "runtime_admission": true,
+      "destination": "assets/interactions/trono_zuggtmoy.png",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/trono_zuggtmoy.png",
+      "target_visible_height": 240,
+      "padding": 4,
+      "derived_sha256": "9a874ad5c3fe340d24f1f4eb2d94f78a15b2929fbd9b3fb73fd4a204aa750ed9",
+      "derived_size": [
+        199,
+        248
+      ],
+      "derived_margins_px": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "alpha_trace_cleanup": true,
+      "source_bytes_unchanged": true
+    },
+    {
+      "code": "PT03",
+      "title": "Arco de pedra",
+      "revision": "v02",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT03_arco_pedra_v02.png",
+      "sha256": "3ecb7fc0291ea7704332833f8cf026cd9844d24a10c806020a97939d31bbe0f6",
+      "content_state": "DRAFT_AUTHORIZED_RUNTIME_USE",
+      "proposed_destination": "assets/interactions/arco_pedra.png",
+      "usage": "collect target",
+      "event": "shedaklah/portal_sem_vao",
+      "transformation": "COMPLETED_GODOT_DERIVATIVE_CROP_ALPHA_PADDING_ASPECT_BASELINE_ORIGINAL_PRESERVED",
+      "runtime_admission": true,
+      "destination": "assets/interactions/arco_pedra.png",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/arco_pedra.png",
+      "target_visible_height": 240,
+      "padding": 4,
+      "derived_sha256": "157d1153209297ec189f6326b6f5888a661501deed05bd7edb617f27ba2edae3",
+      "derived_size": [
+        208,
+        248
+      ],
+      "derived_margins_px": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "alpha_trace_cleanup": true,
+      "source_bytes_unchanged": true
+    },
+    {
+      "code": "PT04",
+      "title": "Massa de Thullgrime",
+      "revision": "v02",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT04_massa_thullgrime_v02.png",
+      "sha256": "1ae928be4144a3a24d2594eb2beeeff17b02cd6b38670685160ce8c9b9f1c1f9",
+      "content_state": "DRAFT_AUTHORIZED_RUNTIME_USE",
+      "proposed_destination": "assets/interactions/massa_thullgrime.png",
+      "usage": "intercept target",
+      "event": "molor/ritual_de_estagnacao",
+      "transformation": "COMPLETED_GODOT_DERIVATIVE_CROP_ALPHA_PADDING_ASPECT_BASELINE_ORIGINAL_PRESERVED",
+      "runtime_admission": true,
+      "destination": "assets/interactions/massa_thullgrime.png",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/massa_thullgrime.png",
+      "target_visible_height": 240,
+      "padding": 4,
+      "derived_sha256": "0226ec04ae3114b94aa64cefb00c20513b61f8efe48e6b982e2be3d0d3c8fdff",
+      "derived_size": [
+        375,
+        248
+      ],
+      "derived_margins_px": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "alpha_trace_cleanup": true,
+      "source_bytes_unchanged": true
+    },
+    {
+      "code": "PT05",
+      "title": "Coração de Limo",
+      "revision": "v01",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT05_coracao_limo_v01.png",
+      "sha256": "ca3c402e73dafab3ce5b96118b22225276aa0bbab24078f430e3af5f94e5690e",
+      "content_state": "DRAFT_AUTHORIZED_RUNTIME_USE",
+      "proposed_destination": "assets/interactions/coracao_limo.png",
+      "usage": "drop from elite",
+      "event": "shedaklah/pedido_de_zuggtmoy",
+      "transformation": "COMPLETED_GODOT_DERIVATIVE_CROP_ALPHA_PADDING_ASPECT_BASELINE_ORIGINAL_PRESERVED",
+      "runtime_admission": true,
+      "destination": "assets/interactions/coracao_limo.png",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/coracao_limo.png",
+      "target_visible_height": 96,
+      "padding": 4,
+      "derived_sha256": "cde2972f807c269b9b0c29679b6b240d5c5a301832c1093c63084e1f0fa5fb03",
+      "derived_size": [
+        91,
+        104
+      ],
+      "derived_margins_px": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "alpha_trace_cleanup": true,
+      "source_bytes_unchanged": true
+    },
+    {
+      "code": "PT06",
+      "title": "Esporo de Zuggtmoy",
+      "revision": "v02",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT06_esporo_zuggtmoy_v02.png",
+      "sha256": "dbffff2eae56c7a09f4cb1e04c9202deb18a3e909e5c9d13161f7810012fe22d",
+      "content_state": "DRAFT_AUTHORIZED_RUNTIME_USE",
+      "proposed_destination": "assets/interactions/esporo_zuggtmoy.png",
+      "usage": "collect item",
+      "event": "shedaklah/portal_sem_vao",
+      "transformation": "COMPLETED_GODOT_DERIVATIVE_CROP_ALPHA_PADDING_ASPECT_BASELINE_ORIGINAL_PRESERVED",
+      "runtime_admission": true,
+      "destination": "assets/interactions/esporo_zuggtmoy.png",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/esporo_zuggtmoy.png",
+      "target_visible_height": 96,
+      "padding": 4,
+      "derived_sha256": "cf0659b4528e7b28527b056f30510a26fadbba4a0b21935eff76cb19cba284af",
+      "derived_size": [
+        114,
+        104
+      ],
+      "derived_margins_px": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "alpha_trace_cleanup": true,
+      "source_bytes_unchanged": true
+    },
+    {
+      "code": "PT07",
+      "title": "Limo de Juiblex",
+      "revision": "v02",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT07_limo_juiblex_v02.png",
+      "sha256": "09f4612a81b6a7b06b12b229c1c65130b69ae3ed395faae65abd2343b531b5c1",
+      "content_state": "DRAFT_AUTHORIZED_RUNTIME_USE",
+      "proposed_destination": "assets/interactions/limo_juiblex.png",
+      "usage": "collect item",
+      "event": "shedaklah/portal_sem_vao",
+      "transformation": "COMPLETED_GODOT_DERIVATIVE_CROP_ALPHA_PADDING_ASPECT_BASELINE_ORIGINAL_PRESERVED",
+      "runtime_admission": true,
+      "destination": "assets/interactions/limo_juiblex.png",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/limo_juiblex.png",
+      "target_visible_height": 96,
+      "padding": 4,
+      "derived_sha256": "544ac56aa3a0490c4a8512a62e84478aea702b780237d526ba5e1305d1f4878b",
+      "derived_size": [
+        135,
+        104
+      ],
+      "derived_margins_px": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "alpha_trace_cleanup": true,
+      "source_bytes_unchanged": true
+    },
+    {
+      "code": "MJ01",
+      "title": "Manifestação de Juiblex",
+      "revision": "v03",
+      "path": ".atena/generated/art032-juiblex-2026-10-12/sources/MJ01_manifestacao_juiblex_v03.png",
+      "sha256": "ce37eb91132e1d2c22ca04c4c8102213e858dc46275a741207008d65dd20d8bf",
+      "content_state": "DRAFT_AUTHORIZED_RUNTIME_USE",
+      "proposed_destination": "assets/enemies/manifestacao_de_juiblex.png",
+      "usage": "static boss sprite",
+      "event": "shedaklah/pedido_de_zuggtmoy",
+      "transformation": "COMPLETED_GODOT_DERIVATIVE_CROP_ALPHA_PADDING_ASPECT_BASELINE_ORIGINAL_PRESERVED",
+      "runtime_admission": true,
+      "destination": "assets/enemies/manifestacao_de_juiblex.png",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/manifestacao_de_juiblex.png",
+      "target_visible_height": 240,
+      "padding": 4,
+      "derived_sha256": "5815ebbf48ab6be4891819ae71287795099558590dd6ed77921203083431896b",
+      "derived_size": [
+        310,
+        248
+      ],
+      "derived_margins_px": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "alpha_trace_cleanup": true,
+      "source_bytes_unchanged": true
+    }
+  ],
+  "receipts": [
+    {
+      "path": ".atena/generated/art032-npcs-2026-10-11/visual-acceptance.json",
+      "sha256": "ae53f3ee56ef1db85476fddb1870389ec2e9fbfac8c22fb499750121777d87f9",
+      "owner_reply": "Aprovo visualmente as quatro revisões"
+    },
+    {
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/visual-acceptance.json",
+      "sha256": "74cc191179ce409245b72cfe8f3e27231c1f02222810bf69cdc0a8588a454c34",
+      "owner_reply": "Aprovo visualmente as seis revisões"
+    },
+    {
+      "path": ".atena/generated/art032-pontos-2026-10-11/visual-acceptance.json",
+      "sha256": "4510def5aa92de9da36b81f7e06b1fce69399a519381e6ff6164ef9a63bb6e27",
+      "owner_reply": "atena, aprovado"
+    },
+    {
+      "path": ".atena/generated/art032-juiblex-2026-10-12/visual-acceptance.json",
+      "sha256": "f03eed716b48799086f8fe392e050476ff71ba0ab1fc82c7b1646860767d5c1d",
+      "owner_reply": "Aprovo visualmente MJ01 v03"
+    }
+  ],
+  "allowed_runtime_paths": [
+    "core/happenings.gd",
+    "ui/overlay.gd",
+    "ui/happening_art.gd",
+    "data/stage_events.json",
+    "tests/test_happening_art.gd",
+    "assets/interactions/npc_joao_barbosa.png",
+    "assets/interactions/npc_desertor_durao.png",
+    "assets/interactions/npc_vitima_enfeiticada.png",
+    "assets/interactions/estrela_do_norte.png",
+    "assets/interactions/npc_nyxara.png",
+    "assets/interactions/npc_vaelis.png",
+    "assets/interactions/npc_grazzt_aliado.png",
+    "assets/interactions/npc_reaper_barqueiro.png",
+    "assets/interactions/npc_vhaerith_aetherion.png",
+    "assets/interactions/npc_mercador_rivenheart.png",
+    "assets/interactions/trono_zuggtmoy.png",
+    "assets/interactions/arco_pedra.png",
+    "assets/interactions/massa_thullgrime.png",
+    "assets/interactions/coracao_limo.png",
+    "assets/interactions/esporo_zuggtmoy.png",
+    "assets/interactions/limo_juiblex.png",
+    "assets/enemies/manifestacao_de_juiblex.png"
+  ],
+  "snapshot": {
+    "core/happenings.gd": {
+      "exists": true,
+      "sha256": "9efb15d95c88ec1682e8b4b130273dbbc8428241528aded4bfd57617197c5f04"
+    },
+    "ui/overlay.gd": {
+      "exists": true,
+      "sha256": "bcf3ac3e6285db20fc626cc91d762cbe9aab8b417e5bd9a7a80a1df1a6434a50"
+    },
+    "ui/happening_art.gd": {
+      "exists": false,
+      "sha256": null
+    },
+    "data/stage_events.json": {
+      "exists": true,
+      "sha256": "7d6f8dae1962cbf97208c86a95104446af37fc09daf332a98298d7d9e4e4186a"
+    },
+    "tests/test_happening_art.gd": {
+      "exists": false,
+      "sha256": null
+    },
+    "assets/interactions/npc_joao_barbosa.png": {
+      "exists": false,
+      "sha256": null
+    },
+    "assets/interactions/npc_desertor_durao.png": {
+      "exists": false,
+      "sha256": null
+    },
+    "assets/interactions/npc_vitima_enfeiticada.png": {
+      "exists": false,
+      "sha256": null
+    },
+    "assets/interactions/estrela_do_norte.png": {
+      "exists": false,
+      "sha256": null
+    },
+    "assets/interactions/npc_nyxara.png": {
+      "exists": false,
+      "sha256": null
+    },
+    "assets/interactions/npc_vaelis.png": {
+      "exists": false,
+      "sha256": null
+    },
+    "assets/interactions/npc_grazzt_aliado.png": {
+      "exists": false,
+      "sha256": null
+    },
+    "assets/interactions/npc_reaper_barqueiro.png": {
+      "exists": false,
+      "sha256": null
+    },
+    "assets/interactions/npc_vhaerith_aetherion.png": {
+      "exists": false,
+      "sha256": null
+    },
+    "assets/interactions/npc_mercador_rivenheart.png": {
+      "exists": false,
+      "sha256": null
+    },
+    "assets/interactions/trono_zuggtmoy.png": {
+      "exists": false,
+      "sha256": null
+    },
+    "assets/interactions/arco_pedra.png": {
+      "exists": false,
+      "sha256": null
+    },
+    "assets/interactions/massa_thullgrime.png": {
+      "exists": false,
+      "sha256": null
+    },
+    "assets/interactions/coracao_limo.png": {
+      "exists": false,
+      "sha256": null
+    },
+    "assets/interactions/esporo_zuggtmoy.png": {
+      "exists": false,
+      "sha256": null
+    },
+    "assets/interactions/limo_juiblex.png": {
+      "exists": false,
+      "sha256": null
+    },
+    "assets/enemies/manifestacao_de_juiblex.png": {
+      "exists": true,
+      "sha256": "ce81d3cfd119e64f69b81d38592170dfcb2c3f97393945bb03cdabf714a77b96"
+    }
+  },
+  "git_head": "51b51f7369ae34eede997435e6eb52ea057daf25",
+  "git_index": "",
+  "transform": {
+    "engine": "Godot 4.7.2",
+    "method": "alpha<=8 clear on derivative, crop visible, proportional Lanczos to target visible height, four pixel padding",
+    "source_bytes": "PRESERVE",
+    "canonical_promotion": false
+  },
+  "runtime_admission": true,
+  "commit_push_build": false,
+  "prepared": 17,
+  "admitted": 17,
+  "checkpoint": "S-006/TECHNICAL_COMPLETION_RECORDED",
+  "status": "COMPLETED_TECHNICAL_DRAFT"
+}

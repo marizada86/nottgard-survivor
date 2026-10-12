@@ -1,0 +1,200 @@
+{
+  "plan": "PLAN-ART032-IMPLEMENT",
+  "revision": "v01",
+  "owner_reply": "pode implementar",
+  "date": "2026-10-12",
+  "state": "DRAFT_AUTHORIZED_RUNTIME_USE",
+  "canonical_promotion": false,
+  "count": 17,
+  "entries": [
+    {
+      "code": "NP01",
+      "revision": "v02",
+      "path": ".atena/generated/art032-npcs-2026-10-11/sources/NP01_joao_barbosa_v02.png",
+      "sha256": "9148e0a1a7c839871fd771201ddc64f9a96d77ebaee37ce6c25fc4622bac9ccc",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/npc_joao_barbosa.png",
+      "derived_sha256": "1bf3b4caf5aef74d7020785567413e1bc6f8072350683da4bc0ab960f1d5343c",
+      "destination": "assets/interactions/npc_joao_barbosa.png",
+      "event": "feng_tu/escolta_do_peregrino",
+      "usage": "escort ally"
+    },
+    {
+      "code": "NP02",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-2026-10-11/sources/NP02_desertor_durao_v01.png",
+      "sha256": "4d73424cfe0560606fd3e9ddd94ec02b493546873235b4a0a7ad00be7ea57e59",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/npc_desertor_durao.png",
+      "derived_sha256": "b394793e3f526d01cfe49f5273e343f287018e68b5fed5ff40a3d4ac84d7b14f",
+      "destination": "assets/interactions/npc_desertor_durao.png",
+      "event": "durao/desertores",
+      "usage": "rescue point"
+    },
+    {
+      "code": "NP03",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-2026-10-11/sources/NP03_vitima_enfeiticada_v01.png",
+      "sha256": "3a944afa1c66e8db6ecfcd77077c0564254057a548e0f963b80967abc19b8c85",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/npc_vitima_enfeiticada.png",
+      "derived_sha256": "0e042e06510ac865c34fca0ac7f7377be4ba4c109a139533c627081f3202efa3",
+      "destination": "assets/interactions/npc_vitima_enfeiticada.png",
+      "event": "shendilavri/vitimas_drenadas",
+      "usage": "rescue point"
+    },
+    {
+      "code": "PT01",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-2026-10-11/sources/PT01_estrela_do_norte_v01.png",
+      "sha256": "a3ec67f0dec4217be2d41dc45945d823aa05a8bf657a02964b0e0a11d030ea7c",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/estrela_do_norte.png",
+      "derived_sha256": "df9aea5f175a15e865daf01680bc28e3e88652f50e4c858b3e7bcf0f37c6a5db",
+      "destination": "assets/interactions/estrela_do_norte.png",
+      "event": "feng_tu/peregrinacao_da_estrela",
+      "usage": "pilgrimage point"
+    },
+    {
+      "code": "NP04",
+      "revision": "v02",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP04_nyxara_v02.png",
+      "sha256": "ef545d2a49727264401e19e3d2dd7f9b653551bc0aefa41616298fc1f583a5c1",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/npc_nyxara.png",
+      "derived_sha256": "026029a0ea518d04919c7ebf9f8a5eded1a93c5a0502eea79782fdd27bcff27f",
+      "destination": "assets/interactions/npc_nyxara.png",
+      "event": "shendilavri/vitimas_drenadas",
+      "usage": "first reward ally"
+    },
+    {
+      "code": "NP05",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP05_vaelis_v01.png",
+      "sha256": "0dc79c51e38ddfca4ae47bc2d549fe9ba162eb7d410eefa9ae5b66806bca0def",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/npc_vaelis.png",
+      "derived_sha256": "4eb3ffca0016358a2a312f7d7207c59c17d580de192ee85f7969bbe1553ce532",
+      "destination": "assets/interactions/npc_vaelis.png",
+      "event": "shendilavri/vitimas_drenadas",
+      "usage": "second reward ally"
+    },
+    {
+      "code": "NP06",
+      "revision": "v02",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP06_grazzt_aliado_v02.png",
+      "sha256": "90fc10b2430106b0bc5d96b3607e3ad736c65d80cfe70d0e60c9916d314f8618",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/npc_grazzt_aliado.png",
+      "derived_sha256": "c27f13805bef0dec61b19f62c297adb1e2e8eda97625b557b197fa7b268cea1e",
+      "destination": "assets/interactions/npc_grazzt_aliado.png",
+      "event": "goranthis/o_nome_tres_vezes",
+      "usage": "pact point and reward ally"
+    },
+    {
+      "code": "NP07",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP07_reaper_barqueiro_v01.png",
+      "sha256": "1ddc09c66221fe19593e0f2c2a76823dd1db0760cb67f99f67c12cd42cd11642",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/npc_reaper_barqueiro.png",
+      "derived_sha256": "679f923d7b6d97f6f4a3e0536d3e36a09abd5b8c70363ff99600d447d4ac3146",
+      "destination": "assets/interactions/npc_reaper_barqueiro.png",
+      "event": "shedaklah/barqueiro_do_estige",
+      "usage": "pact point"
+    },
+    {
+      "code": "NP08",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP08_vhaerith_aetherion_v01.png",
+      "sha256": "fe79429dc82351130d0a2ab95b10e98df5f94bf12be7f0904888ba4016ed06de",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/npc_vhaerith_aetherion.png",
+      "derived_sha256": "307dad89f3a4890d924af51f36ce888a5661d47db1b3a088ad2959d68f02b550",
+      "destination": "assets/interactions/npc_vhaerith_aetherion.png",
+      "event": "durao/vhaerith_na_jaula",
+      "usage": "pact point"
+    },
+    {
+      "code": "NP09",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP09_mercador_rivenheart_v01.png",
+      "sha256": "0bcefb637594d1cda861d05cd14a7b47f06297a2e79bfb60098b809ccc84b1f9",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/npc_mercador_rivenheart.png",
+      "derived_sha256": "29f6b4aa98564596843f9dbce91079a8e2dbd6c3d4f6ea57fcef3a4af3467895",
+      "destination": "assets/interactions/npc_mercador_rivenheart.png",
+      "event": "shendilavri/mercador_de_rivenheart",
+      "usage": "pact point"
+    },
+    {
+      "code": "PT02",
+      "revision": "v02",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT02_trono_zuggtmoy_v02.png",
+      "sha256": "14e1d3b0749f887b328a1e5aea2c04e792a1e48af0d42701b0dbb6bd51984cc2",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/trono_zuggtmoy.png",
+      "derived_sha256": "9a874ad5c3fe340d24f1f4eb2d94f78a15b2929fbd9b3fb73fd4a204aa750ed9",
+      "destination": "assets/interactions/trono_zuggtmoy.png",
+      "event": "shedaklah/pedido_de_zuggtmoy",
+      "usage": "collect target"
+    },
+    {
+      "code": "PT03",
+      "revision": "v02",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT03_arco_pedra_v02.png",
+      "sha256": "3ecb7fc0291ea7704332833f8cf026cd9844d24a10c806020a97939d31bbe0f6",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/arco_pedra.png",
+      "derived_sha256": "157d1153209297ec189f6326b6f5888a661501deed05bd7edb617f27ba2edae3",
+      "destination": "assets/interactions/arco_pedra.png",
+      "event": "shedaklah/portal_sem_vao",
+      "usage": "collect target"
+    },
+    {
+      "code": "PT04",
+      "revision": "v02",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT04_massa_thullgrime_v02.png",
+      "sha256": "1ae928be4144a3a24d2594eb2beeeff17b02cd6b38670685160ce8c9b9f1c1f9",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/massa_thullgrime.png",
+      "derived_sha256": "0226ec04ae3114b94aa64cefb00c20513b61f8efe48e6b982e2be3d0d3c8fdff",
+      "destination": "assets/interactions/massa_thullgrime.png",
+      "event": "molor/ritual_de_estagnacao",
+      "usage": "intercept target"
+    },
+    {
+      "code": "PT05",
+      "revision": "v01",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT05_coracao_limo_v01.png",
+      "sha256": "ca3c402e73dafab3ce5b96118b22225276aa0bbab24078f430e3af5f94e5690e",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/coracao_limo.png",
+      "derived_sha256": "cde2972f807c269b9b0c29679b6b240d5c5a301832c1093c63084e1f0fa5fb03",
+      "destination": "assets/interactions/coracao_limo.png",
+      "event": "shedaklah/pedido_de_zuggtmoy",
+      "usage": "drop from elite"
+    },
+    {
+      "code": "PT06",
+      "revision": "v02",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT06_esporo_zuggtmoy_v02.png",
+      "sha256": "dbffff2eae56c7a09f4cb1e04c9202deb18a3e909e5c9d13161f7810012fe22d",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/esporo_zuggtmoy.png",
+      "derived_sha256": "cf0659b4528e7b28527b056f30510a26fadbba4a0b21935eff76cb19cba284af",
+      "destination": "assets/interactions/esporo_zuggtmoy.png",
+      "event": "shedaklah/portal_sem_vao",
+      "usage": "collect item"
+    },
+    {
+      "code": "PT07",
+      "revision": "v02",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT07_limo_juiblex_v02.png",
+      "sha256": "09f4612a81b6a7b06b12b229c1c65130b69ae3ed395faae65abd2343b531b5c1",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/limo_juiblex.png",
+      "derived_sha256": "544ac56aa3a0490c4a8512a62e84478aea702b780237d526ba5e1305d1f4878b",
+      "destination": "assets/interactions/limo_juiblex.png",
+      "event": "shedaklah/portal_sem_vao",
+      "usage": "collect item"
+    },
+    {
+      "code": "MJ01",
+      "revision": "v03",
+      "path": ".atena/generated/art032-juiblex-2026-10-12/sources/MJ01_manifestacao_juiblex_v03.png",
+      "sha256": "ce37eb91132e1d2c22ca04c4c8102213e858dc46275a741207008d65dd20d8bf",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/manifestacao_de_juiblex.png",
+      "derived_sha256": "5815ebbf48ab6be4891819ae71287795099558590dd6ed77921203083431896b",
+      "destination": "assets/enemies/manifestacao_de_juiblex.png",
+      "event": "shedaklah/pedido_de_zuggtmoy",
+      "usage": "static boss sprite"
+    }
+  ],
+  "rollback": "backup/ plus manifest snapshot; preserve unrelated working tree changes",
+  "commit_push_export": "NOT_AUTHORIZED"
+}

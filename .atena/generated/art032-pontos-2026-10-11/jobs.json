@@ -1,0 +1,1139 @@
+{
+  "plan": "PLAN-ART032-PONTOS",
+  "revision": "v01",
+  "content_state": "DRAFT",
+  "approval_mode": "per-plan",
+  "approval": "APPROVED_PER_PLAN",
+  "owner_reply": "atena, aprovado, commite e continue a Próxima frente proposta: os pontos de acontecimentos restantes de ART-032.",
+  "approval_authority": "EXPLICIT_CONTINUATION_OF_PREVIOUSLY_NAMED_SIX_POINT_FRONT",
+  "current_step": "S-005/OWNER_VISUAL_ACCEPTANCE_RECORDED",
+  "completed_steps": 5,
+  "total_steps": 5,
+  "generated": 6,
+  "blocking_visual_gaps": 0,
+  "visual_bible": ".atena/vault/drafts/PLAN-ART032-PONTOS-v01.md",
+  "sources": [
+    {
+      "path": "F:/dev/nottgard-vault/03_NPCs/Zuggtmoy.md",
+      "sha256": "7b220e3cd8d350aa9bf1b71f754d696bbf8d4b9d5e778b020afb52130b3cf705",
+      "authority": "CANON_LORE_READ_ONLY"
+    },
+    {
+      "path": "F:/dev/nottgard-vault/03_NPCs/Juiblex.md",
+      "sha256": "76111cb0fff377f69f818415345af312e2d7fa8bdbbad69ea8e66adc1ab863a5",
+      "authority": "CANON_LORE_READ_ONLY"
+    },
+    {
+      "path": "F:/dev/nottgard-vault/04_Locais/Palácio de Zuggtmoy.md",
+      "sha256": "a61a5f6afe955deda87d5e5e6d445b9bb418c318d760b4e9ac040677886714cc",
+      "authority": "CANON_LORE_READ_ONLY"
+    },
+    {
+      "path": "F:/dev/nottgard-vault/04_Locais/Thullgrime.md",
+      "sha256": "4638a5d60b74eb1447f9bcad431bf0cc2df0917162d632fc3e57b7b1c21679e2",
+      "authority": "CANON_LORE_READ_ONLY"
+    },
+    {
+      "path": "F:/dev/nottgard-vault/07_Criaturas/Receptáculo de Juiblex.md",
+      "sha256": "e90277018856391329345134d49e50aca12e8d0cadaff3d543b8ac6762eb78ab",
+      "authority": "CANON_LORE_READ_ONLY"
+    },
+    {
+      "path": "F:/dev/nottgard-vault/10_Sessões/Arco 01 - Nottgard, A Noite Sem Fim/Sessão 15.md",
+      "sha256": "160c5c2c592f4e360bf69c2c6c59680d134a82db8dde3329e3ac3f3f1595c5fa",
+      "authority": "CANON_LORE_READ_ONLY"
+    },
+    {
+      "path": "F:/dev/nottgard-vault/10_Sessões/Arco 01 - Nottgard, A Noite Sem Fim/Sessão 16.md",
+      "sha256": "0f86fa66e2de5fe3a72895691a8d4d269a4785d95d1bb434edf9fce7ed10c1c3",
+      "authority": "CANON_LORE_READ_ONLY"
+    },
+    {
+      "path": "F:/dev/nottgard-vault/10_Sessões/Arco 01 - Nottgard, A Noite Sem Fim/Sessão 17.md",
+      "sha256": "c3d18d7277d5fb0252c629e9ff539606220e3c38d733574ef799a661be3d6a3d",
+      "authority": "CANON_LORE_READ_ONLY"
+    },
+    {
+      "path": "data/stage_events.json",
+      "sha256": "7d6f8dae1962cbf97208c86a95104446af37fc09daf332a98298d7d9e4e4186a",
+      "authority": "PROJECT_CONTEXT"
+    },
+    {
+      "path": ".atena/vault/canon/PLAN-001-nottgard-survivors.md",
+      "sha256": "f886646498b8918016c29480311b4a8e1eb578515ebcdf9fe4c5e8cd0d4afc1b",
+      "authority": "PROJECT_CONTEXT"
+    },
+    {
+      "path": ".atena/generated/art032-npcs-2026-10-11/visual-acceptance.json",
+      "sha256": "ae53f3ee56ef1db85476fddb1870389ec2e9fbfac8c22fb499750121777d87f9",
+      "authority": "PROJECT_CONTEXT"
+    },
+    {
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/visual-acceptance.json",
+      "sha256": "74cc191179ce409245b72cfe8f3e27231c1f02222810bf69cdc0a8588a454c34",
+      "authority": "PROJECT_CONTEXT"
+    }
+  ],
+  "style_references": [
+    {
+      "path": "assets/interactions/chest_closed.png",
+      "sha256": "958ea71da4780dc409d2ad70a1cbe2fb9b341e0d0991e4b8e20a953aac37d1d7",
+      "role": "STYLE_CAMERA_OR_MATERIAL_NOT_POSE_IDENTITY"
+    },
+    {
+      "path": "assets/enemies/receptaculo_de_juiblex.png",
+      "sha256": "ce81d3cfd119e64f69b81d38592170dfcb2c3f97393945bb03cdabf714a77b96",
+      "role": "STYLE_CAMERA_OR_MATERIAL_NOT_POSE_IDENTITY"
+    },
+    {
+      "path": "assets/enemies/slime_de_juiblex.png",
+      "sha256": "3e07ad4d90551bac74269d7897f097176f9fb0c7917a5001df7aabc6b6c7c642",
+      "role": "STYLE_CAMERA_OR_MATERIAL_NOT_POSE_IDENTITY"
+    }
+  ],
+  "jobs": [
+    {
+      "code": "PT02",
+      "name": "trono_zuggtmoy",
+      "title": "Trono de Zuggtmoy",
+      "revision": "v02",
+      "content_state": "DRAFT",
+      "status": "VISUALLY_ACCEPTED_DRAFT_NOT_ADMITTED",
+      "prompt": "Use case: precise-object-edit. Edit ONLY the framing of this exact DRAFT fungal throne image. Keep the same empty throne geometry, wood boards, coherent seat/two armrests, mushroom clusters, ivory mycelium, painted pixel-art, colors, upper-left light and elevated lower-right isometric camera. Make the complete unchanged throne visually SMALLER and centered on a square transparent canvas, occupying only 65 percent of both width and height at most. REQUIRED at least 16 percent empty fully transparent padding above and below, left and right around every root/mushroom tip. Do not enlarge or zoom in. No clipping. Keep genuine transparent alpha background; no scene, floor, projected shadow, text, figure, halo, border or new ornament. One whole throne only. Requested 1024x1024.",
+      "preview_heights": [
+        80,
+        128
+      ],
+      "transparent_background": true,
+      "references": [
+        ".atena/generated/art032-pontos-2026-10-11/sources/PT02_trono_zuggtmoy_v01.png"
+      ],
+      "destination": ".atena/generated/art032-pontos-2026-10-11/sources/PT02_trono_zuggtmoy_v02.png",
+      "runtime_admission": false,
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-ae9efc27-8646-455a-a6f0-00b4b9008b3f.png",
+      "sha256": "14e1d3b0749f887b328a1e5aea2c04e792a1e48af0d42701b0dbb6bd51984cc2",
+      "tool": "built-in image_gen",
+      "generated_at_utc": "2026-10-11T17:42:19.151055+00:00",
+      "inspection": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "bbox_alpha_above8": [
+          313,
+          215,
+          999,
+          1076
+        ],
+        "margins_px": [
+          313,
+          215,
+          255,
+          178
+        ],
+        "minimum_margin_percent": 14.19,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "alpha_genuine": true,
+        "transparent_fraction": 0.7640895227775107,
+        "no_visible_border_clipping_alpha_above8": true,
+        "margin_10_percent_met": true,
+        "native_copy_hash": true
+      },
+      "correction_of": "9b0fd6e2e6cd67d36b827bfc28fbf7b10de8512cc0e9e5dc7ccaaa5d7af12281",
+      "audit": {
+        "code": "PT02",
+        "title": "Trono de Zuggtmoy",
+        "revision": "v02",
+        "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT02_trono_zuggtmoy_v02.png",
+        "sha256": "14e1d3b0749f887b328a1e5aea2c04e792a1e48af0d42701b0dbb6bd51984cc2",
+        "size": [
+          1254,
+          1254
+        ],
+        "bbox_alpha_above8": [
+          313,
+          215,
+          999,
+          1076
+        ],
+        "margins_px": [
+          313,
+          215,
+          255,
+          178
+        ],
+        "minimum_margin_percent": 14.19,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "checks": {
+          "png_rgba": true,
+          "square_canvas": true,
+          "native_copy_hash": true,
+          "transparent_alpha": true,
+          "margin_10_percent_met": true,
+          "no_visible_border_clipping_alpha_above8": true
+        },
+        "recommended_for_owner_review": true,
+        "content_state": "DRAFT",
+        "human_visual_acceptance": "APPROVED_EXPLICITLY",
+        "runtime_admission": false,
+        "preview_heights": [
+          80,
+          128
+        ]
+      },
+      "human_visual_acceptance": "APPROVED_EXPLICITLY"
+    },
+    {
+      "code": "PT03",
+      "name": "arco_pedra",
+      "title": "Arco de pedra",
+      "revision": "v02",
+      "content_state": "DRAFT",
+      "status": "VISUALLY_ACCEPTED_DRAFT_NOT_ADMITTED",
+      "prompt": "Use case: precise-object-edit. Change ONLY framing of this exact inactive sealed stone arch. Keep arch stones, two jambs, rounded lintel, opaque solid dark central stone face, abstract worn notches, moss, camera, light, pixel-art and colors unchanged. Scale the entire COMPLETE arch visually smaller and center it on the square genuine transparent canvas. Object height MUST be at most 65 percent of canvas height, with at least 16 percent empty clear alpha above and below. Keep at least 16 percent transparent padding left and right too. Do not zoom or fill the canvas. No floor, new symbols, projected shadow, glowing portal, figures, text or added features. Preserve all stone feet intact. Requested 1024x1024, true alpha.",
+      "preview_heights": [
+        80,
+        128
+      ],
+      "transparent_background": true,
+      "references": [
+        ".atena/generated/art032-pontos-2026-10-11/sources/PT03_arco_pedra_v01.png"
+      ],
+      "destination": ".atena/generated/art032-pontos-2026-10-11/sources/PT03_arco_pedra_v02.png",
+      "runtime_admission": false,
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-a777cca2-e266-4e5a-b2e5-84f0190208b2.png",
+      "sha256": "3ecb7fc0291ea7704332833f8cf026cd9844d24a10c806020a97939d31bbe0f6",
+      "tool": "built-in image_gen",
+      "generated_at_utc": "2026-10-11T17:44:41.550044+00:00",
+      "inspection": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "bbox_alpha_above8": [
+          366,
+          327,
+          920,
+          992
+        ],
+        "margins_px": [
+          366,
+          327,
+          334,
+          262
+        ],
+        "minimum_margin_percent": 20.89,
+        "border_max_alpha": 0,
+        "border_exactly_empty": true,
+        "alpha_genuine": true,
+        "transparent_fraction": 0.8357911779593975,
+        "no_visible_border_clipping_alpha_above8": true,
+        "margin_10_percent_met": true,
+        "native_copy_hash": true
+      },
+      "correction_of": "f05128ee6acfbdd0bd1cf163eb1dff78bd4c7312b64488a8982100af9d24621b",
+      "audit": {
+        "code": "PT03",
+        "title": "Arco de pedra",
+        "revision": "v02",
+        "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT03_arco_pedra_v02.png",
+        "sha256": "3ecb7fc0291ea7704332833f8cf026cd9844d24a10c806020a97939d31bbe0f6",
+        "size": [
+          1254,
+          1254
+        ],
+        "bbox_alpha_above8": [
+          366,
+          327,
+          920,
+          992
+        ],
+        "margins_px": [
+          366,
+          327,
+          334,
+          262
+        ],
+        "minimum_margin_percent": 20.89,
+        "border_max_alpha": 0,
+        "border_exactly_empty": true,
+        "checks": {
+          "png_rgba": true,
+          "square_canvas": true,
+          "native_copy_hash": true,
+          "transparent_alpha": true,
+          "margin_10_percent_met": true,
+          "no_visible_border_clipping_alpha_above8": true
+        },
+        "recommended_for_owner_review": true,
+        "content_state": "DRAFT",
+        "human_visual_acceptance": "APPROVED_EXPLICITLY",
+        "runtime_admission": false,
+        "preview_heights": [
+          80,
+          128
+        ]
+      },
+      "human_visual_acceptance": "APPROVED_EXPLICITLY"
+    },
+    {
+      "code": "PT04",
+      "name": "massa_thullgrime",
+      "title": "Massa de Thullgrime",
+      "revision": "v02",
+      "content_state": "DRAFT",
+      "status": "VISUALLY_ACCEPTED_DRAFT_NOT_ADMITTED",
+      "prompt": "Use case: precise-object-edit. Change ONLY framing of this exact dormant Thullgrime mound. Keep the same closed central cocoon, few amber eyes, olive slime and muted-mauve organic folds, low wide mound silhouette, pixel-art materials, camera, light and colors. Reduce the complete mound to no more than 65 percent of the square canvas WIDTH and center it. REQUIRED at least 16 percent empty fully transparent margins on BOTH left and right and all other sides, around every attached drip. Do not crop, fill canvas or zoom in. Genuine transparent alpha; no floor/shadow, loose drops, cultists, arms, blood, portal, halo, text or new parts. Requested 1024x1024.",
+      "preview_heights": [
+        80,
+        128
+      ],
+      "transparent_background": true,
+      "references": [
+        ".atena/generated/art032-pontos-2026-10-11/sources/PT04_massa_thullgrime_v01.png"
+      ],
+      "destination": ".atena/generated/art032-pontos-2026-10-11/sources/PT04_massa_thullgrime_v02.png",
+      "runtime_admission": false,
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-6c381499-0991-40fe-ab3b-c183ff31e948.png",
+      "sha256": "1ae928be4144a3a24d2594eb2beeeff17b02cd6b38670685160ce8c9b9f1c1f9",
+      "tool": "built-in image_gen",
+      "generated_at_utc": "2026-10-11T17:47:16.582659+00:00",
+      "inspection": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "bbox_alpha_above8": [
+          193,
+          368,
+          1079,
+          948
+        ],
+        "margins_px": [
+          193,
+          368,
+          175,
+          306
+        ],
+        "minimum_margin_percent": 13.96,
+        "border_max_alpha": 0,
+        "border_exactly_empty": true,
+        "alpha_genuine": true,
+        "transparent_fraction": 0.793244711023608,
+        "no_visible_border_clipping_alpha_above8": true,
+        "margin_10_percent_met": true,
+        "native_copy_hash": true
+      },
+      "correction_of": "d5525924b68db0b38189f7d56e3d62e052f6df6616fbd414fee2e5d634d80d60",
+      "audit": {
+        "code": "PT04",
+        "title": "Massa de Thullgrime",
+        "revision": "v02",
+        "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT04_massa_thullgrime_v02.png",
+        "sha256": "1ae928be4144a3a24d2594eb2beeeff17b02cd6b38670685160ce8c9b9f1c1f9",
+        "size": [
+          1254,
+          1254
+        ],
+        "bbox_alpha_above8": [
+          193,
+          368,
+          1079,
+          948
+        ],
+        "margins_px": [
+          193,
+          368,
+          175,
+          306
+        ],
+        "minimum_margin_percent": 13.96,
+        "border_max_alpha": 0,
+        "border_exactly_empty": true,
+        "checks": {
+          "png_rgba": true,
+          "square_canvas": true,
+          "native_copy_hash": true,
+          "transparent_alpha": true,
+          "margin_10_percent_met": true,
+          "no_visible_border_clipping_alpha_above8": true
+        },
+        "recommended_for_owner_review": true,
+        "content_state": "DRAFT",
+        "human_visual_acceptance": "APPROVED_EXPLICITLY",
+        "runtime_admission": false,
+        "preview_heights": [
+          80,
+          128
+        ]
+      },
+      "human_visual_acceptance": "APPROVED_EXPLICITLY"
+    },
+    {
+      "code": "PT05",
+      "name": "coracao_limo",
+      "title": "Coração de Limo",
+      "revision": "v01",
+      "content_state": "DRAFT",
+      "status": "VISUALLY_ACCEPTED_DRAFT_NOT_ADMITTED",
+      "prompt": "Use case: stylized-concept.\nAsset type: ONE standalone static DRAFT isometric event-point raster prop for Nottgard Survivors, requested square 1024x1024 with genuine transparent alpha background.\nStyle/medium: dark fantasy painted pixel-art, deliberate pixel clusters, worn materials, elevated three-quarter isometric camera looking down, front visible toward lower-right, light upper-left. Material detail subordinate to a clear silhouette at small sizes. No modern/vector/chibi/photoreal style.\nComposition: ONE complete object centered, about 65-70 percent of canvas extent, at least 15 percent clear transparent space around all extremities. Keep the entire object, attached drips/caps/corners, and restrained highlights away from all canvas edges. An isolated asset, not a scene, sheet, collage or multiple views.\nConstraints: actual transparent background; no floor, backdrop, projected shadow, other objects/characters, text, letters, logo, watermark, framing or pedestal unrelated to the object. No broad halo or loose particles. Entire subject visible. Physical geometry is an experimental DRAFT proposal, not new canon. References concern style/material only; never reproduce their literal subjects or layouts.\nSubject: ONE collectible slime-heart CORE from Juiblex's receptacle, an item delivered to Zuggtmoy. Physical heart shape is not documented; propose a compact organic ovoid gelatinous nucleus with asymmetric olive-green outer membrane and contained yellow-green pulsing-looking center, several thick short filaments folded tightly around the core. Static sprite, no animated pulse. Readable rounded CORE at 48px, strong contained bright center, dark olive edge, no large halo. NOT a literal anatomical human heart, gemstone, egg shell, severed organ, enemy, face or eyeball. No blood, container, pedestal, surrounding puddle, loose droplets or particles. Input 1 chest CAMERA/PIXEL quality only; input 2 receptacle SLIME/CORE MATERIAL and color only, no figure or eyes.",
+      "preview_heights": [
+        48,
+        80
+      ],
+      "transparent_background": true,
+      "references": [
+        "assets/interactions/chest_closed.png",
+        "assets/enemies/receptaculo_de_juiblex.png"
+      ],
+      "destination": ".atena/generated/art032-pontos-2026-10-11/sources/PT05_coracao_limo_v01.png",
+      "runtime_admission": false,
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-4995540c-19d0-4f53-b792-8806bc9b5504.png",
+      "sha256": "ca3c402e73dafab3ce5b96118b22225276aa0bbab24078f430e3af5f94e5690e",
+      "tool": "built-in image_gen",
+      "generated_at_utc": "2026-10-11T17:48:30.501923+00:00",
+      "inspection": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "bbox_alpha_above8": [
+          255,
+          164,
+          1058,
+          1096
+        ],
+        "margins_px": [
+          255,
+          164,
+          196,
+          158
+        ],
+        "minimum_margin_percent": 12.6,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "alpha_genuine": true,
+        "transparent_fraction": 0.6672561678227757,
+        "no_visible_border_clipping_alpha_above8": true,
+        "margin_10_percent_met": true,
+        "native_copy_hash": true
+      },
+      "audit": {
+        "code": "PT05",
+        "title": "Coração de Limo",
+        "revision": "v01",
+        "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT05_coracao_limo_v01.png",
+        "sha256": "ca3c402e73dafab3ce5b96118b22225276aa0bbab24078f430e3af5f94e5690e",
+        "size": [
+          1254,
+          1254
+        ],
+        "bbox_alpha_above8": [
+          255,
+          164,
+          1058,
+          1096
+        ],
+        "margins_px": [
+          255,
+          164,
+          196,
+          158
+        ],
+        "minimum_margin_percent": 12.6,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "checks": {
+          "png_rgba": true,
+          "square_canvas": true,
+          "native_copy_hash": true,
+          "transparent_alpha": true,
+          "margin_10_percent_met": true,
+          "no_visible_border_clipping_alpha_above8": true
+        },
+        "recommended_for_owner_review": true,
+        "content_state": "DRAFT",
+        "human_visual_acceptance": "APPROVED_EXPLICITLY",
+        "runtime_admission": false,
+        "preview_heights": [
+          48,
+          80
+        ]
+      },
+      "human_visual_acceptance": "APPROVED_EXPLICITLY"
+    },
+    {
+      "code": "PT06",
+      "name": "esporo_zuggtmoy",
+      "title": "Esporo de Zuggtmoy",
+      "revision": "v02",
+      "content_state": "DRAFT",
+      "status": "VISUALLY_ACCEPTED_DRAFT_NOT_ADMITTED",
+      "prompt": "Use case: precise-object-edit. Change ONLY framing of this exact single fungal spore unit. Preserve the same rounded mauve/plum puffball capsule, pale ridges and mycelial short base, gill-like pores, pixel-art, camera, light, palette and full silhouette. Scale the whole unchanged fungus smaller and CENTER it, occupying no more than 65 percent of square canvas width or height. At least 16 percent entirely transparent clear padding on all four sides. Do not zoom or fill canvas. True transparent alpha; no floor, projected shadow, extra mushrooms, cloud, particles, scene, face, text or added ornament. Requested 1024x1024.",
+      "preview_heights": [
+        48,
+        80
+      ],
+      "transparent_background": true,
+      "references": [
+        ".atena/generated/art032-pontos-2026-10-11/sources/PT06_esporo_zuggtmoy_v01.png"
+      ],
+      "destination": ".atena/generated/art032-pontos-2026-10-11/sources/PT06_esporo_zuggtmoy_v02.png",
+      "runtime_admission": false,
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-29a673b6-79a5-4cc5-a2d7-0f7a37305a61.png",
+      "sha256": "dbffff2eae56c7a09f4cb1e04c9202deb18a3e909e5c9d13161f7810012fe22d",
+      "tool": "built-in image_gen",
+      "generated_at_utc": "2026-10-11T17:50:48.480641+00:00",
+      "inspection": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "bbox_alpha_above8": [
+          262,
+          316,
+          996,
+          981
+        ],
+        "margins_px": [
+          262,
+          316,
+          258,
+          273
+        ],
+        "minimum_margin_percent": 20.57,
+        "border_max_alpha": 0,
+        "border_exactly_empty": true,
+        "alpha_genuine": true,
+        "transparent_fraction": 0.7877827634186234,
+        "no_visible_border_clipping_alpha_above8": true,
+        "margin_10_percent_met": true,
+        "native_copy_hash": true
+      },
+      "correction_of": "0a1747f740fc6663a4064b6c2b3ea5a990977540df19213615d2fd6be04ea781",
+      "audit": {
+        "code": "PT06",
+        "title": "Esporo de Zuggtmoy",
+        "revision": "v02",
+        "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT06_esporo_zuggtmoy_v02.png",
+        "sha256": "dbffff2eae56c7a09f4cb1e04c9202deb18a3e909e5c9d13161f7810012fe22d",
+        "size": [
+          1254,
+          1254
+        ],
+        "bbox_alpha_above8": [
+          262,
+          316,
+          996,
+          981
+        ],
+        "margins_px": [
+          262,
+          316,
+          258,
+          273
+        ],
+        "minimum_margin_percent": 20.57,
+        "border_max_alpha": 0,
+        "border_exactly_empty": true,
+        "checks": {
+          "png_rgba": true,
+          "square_canvas": true,
+          "native_copy_hash": true,
+          "transparent_alpha": true,
+          "margin_10_percent_met": true,
+          "no_visible_border_clipping_alpha_above8": true
+        },
+        "recommended_for_owner_review": true,
+        "content_state": "DRAFT",
+        "human_visual_acceptance": "APPROVED_EXPLICITLY",
+        "runtime_admission": false,
+        "preview_heights": [
+          48,
+          80
+        ]
+      },
+      "human_visual_acceptance": "APPROVED_EXPLICITLY"
+    },
+    {
+      "code": "PT07",
+      "name": "limo_juiblex",
+      "title": "Limo de Juiblex",
+      "revision": "v02",
+      "content_state": "DRAFT",
+      "status": "VISUALLY_ACCEPTED_DRAFT_NOT_ADMITTED",
+      "prompt": "Use case: precise-object-edit. Change ONLY framing of this exact collectible slime portion. Keep irregular low asymmetric goo silhouette with one tapered rise, folded short filaments, olive-green material, restrained wet highlights, no eyes or bright internal nucleus, camera/light/pixel-art unchanged. Center the complete unchanged object and reduce it to at most 65 percent of canvas WIDTH. At least 16 percent empty fully transparent margins on both sides and above/below every slime tip. Do not zoom, enlarge or crop. Genuine transparent alpha, one isolated whole object. No floor, shadow, extra drops, halo, text, container, face or added feature. Requested 1024x1024.",
+      "preview_heights": [
+        48,
+        80
+      ],
+      "transparent_background": true,
+      "references": [
+        ".atena/generated/art032-pontos-2026-10-11/sources/PT07_limo_juiblex_v01.png"
+      ],
+      "destination": ".atena/generated/art032-pontos-2026-10-11/sources/PT07_limo_juiblex_v02.png",
+      "runtime_admission": false,
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-145ff431-5373-40e3-9584-eee654e87c7d.png",
+      "sha256": "09f4612a81b6a7b06b12b229c1c65130b69ae3ed395faae65abd2343b531b5c1",
+      "tool": "built-in image_gen",
+      "generated_at_utc": "2026-10-11T17:53:13.023519+00:00",
+      "inspection": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "bbox_alpha_above8": [
+          183,
+          318,
+          1069,
+          988
+        ],
+        "margins_px": [
+          183,
+          318,
+          185,
+          266
+        ],
+        "minimum_margin_percent": 14.59,
+        "border_max_alpha": 0,
+        "border_exactly_empty": true,
+        "alpha_genuine": true,
+        "transparent_fraction": 0.7922774712626135,
+        "no_visible_border_clipping_alpha_above8": true,
+        "margin_10_percent_met": true,
+        "native_copy_hash": true
+      },
+      "correction_of": "86212d369cb1f0dde9402c42edf398cf67d7f5f6fb94de8704c70713d98e2e70",
+      "audit": {
+        "code": "PT07",
+        "title": "Limo de Juiblex",
+        "revision": "v02",
+        "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT07_limo_juiblex_v02.png",
+        "sha256": "09f4612a81b6a7b06b12b229c1c65130b69ae3ed395faae65abd2343b531b5c1",
+        "size": [
+          1254,
+          1254
+        ],
+        "bbox_alpha_above8": [
+          183,
+          318,
+          1069,
+          988
+        ],
+        "margins_px": [
+          183,
+          318,
+          185,
+          266
+        ],
+        "minimum_margin_percent": 14.59,
+        "border_max_alpha": 0,
+        "border_exactly_empty": true,
+        "checks": {
+          "png_rgba": true,
+          "square_canvas": true,
+          "native_copy_hash": true,
+          "transparent_alpha": true,
+          "margin_10_percent_met": true,
+          "no_visible_border_clipping_alpha_above8": true
+        },
+        "recommended_for_owner_review": true,
+        "content_state": "DRAFT",
+        "human_visual_acceptance": "APPROVED_EXPLICITLY",
+        "runtime_admission": false,
+        "preview_heights": [
+          48,
+          80
+        ]
+      },
+      "human_visual_acceptance": "APPROVED_EXPLICITLY"
+    }
+  ],
+  "git_admission_canon_push_build": "NOT_AUTHORIZED_FOR_NEW_OUTPUTS",
+  "previous_native_versions": [
+    {
+      "code": "PT02",
+      "name": "trono_zuggtmoy",
+      "title": "Trono de Zuggtmoy",
+      "revision": "v01",
+      "content_state": "DRAFT",
+      "status": "PRESERVED_NOT_SELECTED_FRAMING_CORRECTION",
+      "prompt": "Use case: stylized-concept.\nAsset type: ONE standalone static DRAFT isometric event-point raster prop for Nottgard Survivors, requested square 1024x1024 with genuine transparent alpha background.\nStyle/medium: dark fantasy painted pixel-art, deliberate pixel clusters, worn materials, elevated three-quarter isometric camera looking down, front visible toward lower-right, light upper-left. Material detail subordinate to a clear silhouette at small sizes. No modern/vector/chibi/photoreal style.\nComposition: ONE complete object centered, about 65-70 percent of canvas extent, at least 15 percent clear transparent space around all extremities. Keep the entire object, attached drips/caps/corners, and restrained highlights away from all canvas edges. An isolated asset, not a scene, sheet, collage or multiple views.\nConstraints: actual transparent background; no floor, backdrop, projected shadow, other objects/characters, text, letters, logo, watermark, framing or pedestal unrelated to the object. No broad halo or loose particles. Entire subject visible. Physical geometry is an experimental DRAFT proposal, not new canon. References concern style/material only; never reproduce their literal subjects or layouts.\nSubject: ONE EMPTY fungal throne, a delivery landmark in Zuggtmoy's palace in Shedaklah. Lore documents fungal sovereign and palace but not throne geometry. DRAFT form: compact high-backed chair grown from dark weathered brown wood entwined with thick mycelium, coherent seat and two armrests; a few large muted-mauve shelf mushroom caps integrated along the back and lower sides. Read clearly as a throne at 80px. Restrained organic elegance, simple asymmetrical cap clusters, soft ivory mycelium edges. No queen, humanoid face, crown, sacred symbol, chest, room, decorative scattered mushrooms, gore or shiny gold furniture. Input reference: chest is CAMERA/PIXEL/MATERIAL quality only; do not make a chest.",
+      "preview_heights": [
+        80,
+        128
+      ],
+      "transparent_background": true,
+      "references": [
+        "assets/interactions/chest_closed.png"
+      ],
+      "destination": ".atena/generated/art032-pontos-2026-10-11/sources/PT02_trono_zuggtmoy_v01.png",
+      "runtime_admission": false,
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-73d33329-49b2-4410-8c03-a42ddf10bc4b.png",
+      "sha256": "9b0fd6e2e6cd67d36b827bfc28fbf7b10de8512cc0e9e5dc7ccaaa5d7af12281",
+      "tool": "built-in image_gen",
+      "generated_at_utc": "2026-10-11T17:40:49.915187+00:00",
+      "inspection": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "bbox_alpha_above8": [
+          226,
+          63,
+          1135,
+          1213
+        ],
+        "margins_px": [
+          226,
+          63,
+          119,
+          41
+        ],
+        "minimum_margin_percent": 3.27,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "alpha_genuine": true,
+        "transparent_fraction": 0.5874611132732512,
+        "no_visible_border_clipping_alpha_above8": true,
+        "margin_10_percent_met": false,
+        "native_copy_hash": true
+      },
+      "audit": {
+        "code": "PT02",
+        "title": "Trono de Zuggtmoy",
+        "revision": "v01",
+        "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT02_trono_zuggtmoy_v01.png",
+        "sha256": "9b0fd6e2e6cd67d36b827bfc28fbf7b10de8512cc0e9e5dc7ccaaa5d7af12281",
+        "size": [
+          1254,
+          1254
+        ],
+        "bbox_alpha_above8": [
+          226,
+          63,
+          1135,
+          1213
+        ],
+        "margins_px": [
+          226,
+          63,
+          119,
+          41
+        ],
+        "minimum_margin_percent": 3.27,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "checks": {
+          "png_rgba": true,
+          "square_canvas": true,
+          "native_copy_hash": true,
+          "transparent_alpha": true,
+          "margin_10_percent_met": false,
+          "no_visible_border_clipping_alpha_above8": true
+        },
+        "recommended_for_owner_review": false,
+        "content_state": "DRAFT",
+        "human_visual_acceptance": "PENDING",
+        "runtime_admission": false,
+        "preview_heights": [
+          80,
+          128
+        ]
+      }
+    },
+    {
+      "code": "PT03",
+      "name": "arco_pedra",
+      "title": "Arco de pedra",
+      "revision": "v01",
+      "content_state": "DRAFT",
+      "status": "PRESERVED_NOT_SELECTED_FRAMING_CORRECTION",
+      "prompt": "Use case: stylized-concept.\nAsset type: ONE standalone static DRAFT isometric event-point raster prop for Nottgard Survivors, requested square 1024x1024 with genuine transparent alpha background.\nStyle/medium: dark fantasy painted pixel-art, deliberate pixel clusters, worn materials, elevated three-quarter isometric camera looking down, front visible toward lower-right, light upper-left. Material detail subordinate to a clear silhouette at small sizes. No modern/vector/chibi/photoreal style.\nComposition: ONE complete object centered, about 65-70 percent of canvas extent, at least 15 percent clear transparent space around all extremities. Keep the entire object, attached drips/caps/corners, and restrained highlights away from all canvas edges. An isolated asset, not a scene, sheet, collage or multiple views.\nConstraints: actual transparent background; no floor, backdrop, projected shadow, other objects/characters, text, letters, logo, watermark, framing or pedestal unrelated to the object. No broad halo or loose particles. Entire subject visible. Physical geometry is an experimental DRAFT proposal, not new canon. References concern style/material only; never reproduce their literal subjects or layouts.\nSubject: ONE ancient INACTIVE stone arch portal with NO traversable opening. Lore: stone arch without passage, old marks that require fungus and slime plus strong essence; portal is not active in this state. DRAFT geometry: freestanding thick weathered grey-stone arch outline with a dark OPAQUE stone/slate face filling the central span, two stout jambs and a rounded lintel; a small compact foot integral to the arch, no surrounding floor. A few shallow abstract worn notches, no readable alphabet or sacred seal asserted as canon. Central panel reads as sealed solid dark stone, NOT a view of background/transparent hole, liquid curtain or lit portal. Quiet muted grey/umber, sparse moss. Entire arch and foot complete. No purple/green portal effect, columns from a temple, room or people. Input reference: chest CAMERA/PIXEL/MATERIAL quality only, not its subject.",
+      "preview_heights": [
+        80,
+        128
+      ],
+      "transparent_background": true,
+      "references": [
+        "assets/interactions/chest_closed.png"
+      ],
+      "destination": ".atena/generated/art032-pontos-2026-10-11/sources/PT03_arco_pedra_v01.png",
+      "runtime_admission": false,
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-91def2eb-1007-4d25-baea-839c4ed002a9.png",
+      "sha256": "f05128ee6acfbdd0bd1cf163eb1dff78bd4c7312b64488a8982100af9d24621b",
+      "tool": "built-in image_gen",
+      "generated_at_utc": "2026-10-11T17:43:45.365219+00:00",
+      "inspection": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "bbox_alpha_above8": [
+          211,
+          100,
+          1097,
+          1172
+        ],
+        "margins_px": [
+          211,
+          100,
+          157,
+          82
+        ],
+        "minimum_margin_percent": 6.54,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "alpha_genuine": true,
+        "transparent_fraction": 0.5734167410697252,
+        "no_visible_border_clipping_alpha_above8": true,
+        "margin_10_percent_met": false,
+        "native_copy_hash": true
+      },
+      "audit": {
+        "code": "PT03",
+        "title": "Arco de pedra",
+        "revision": "v01",
+        "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT03_arco_pedra_v01.png",
+        "sha256": "f05128ee6acfbdd0bd1cf163eb1dff78bd4c7312b64488a8982100af9d24621b",
+        "size": [
+          1254,
+          1254
+        ],
+        "bbox_alpha_above8": [
+          211,
+          100,
+          1097,
+          1172
+        ],
+        "margins_px": [
+          211,
+          100,
+          157,
+          82
+        ],
+        "minimum_margin_percent": 6.54,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "checks": {
+          "png_rgba": true,
+          "square_canvas": true,
+          "native_copy_hash": true,
+          "transparent_alpha": true,
+          "margin_10_percent_met": false,
+          "no_visible_border_clipping_alpha_above8": true
+        },
+        "recommended_for_owner_review": false,
+        "content_state": "DRAFT",
+        "human_visual_acceptance": "PENDING",
+        "runtime_admission": false,
+        "preview_heights": [
+          80,
+          128
+        ]
+      }
+    },
+    {
+      "code": "PT04",
+      "name": "massa_thullgrime",
+      "title": "Massa de Thullgrime",
+      "revision": "v01",
+      "content_state": "DRAFT",
+      "status": "PRESERVED_NOT_SELECTED_FRAMING_CORRECTION",
+      "prompt": "Use case: stylized-concept.\nAsset type: ONE standalone static DRAFT isometric event-point raster prop for Nottgard Survivors, requested square 1024x1024 with genuine transparent alpha background.\nStyle/medium: dark fantasy painted pixel-art, deliberate pixel clusters, worn materials, elevated three-quarter isometric camera looking down, front visible toward lower-right, light upper-left. Material detail subordinate to a clear silhouette at small sizes. No modern/vector/chibi/photoreal style.\nComposition: ONE complete object centered, about 65-70 percent of canvas extent, at least 15 percent clear transparent space around all extremities. Keep the entire object, attached drips/caps/corners, and restrained highlights away from all canvas edges. An isolated asset, not a scene, sheet, collage or multiple views.\nConstraints: actual transparent background; no floor, backdrop, projected shadow, other objects/characters, text, letters, logo, watermark, framing or pedestal unrelated to the object. No broad halo or loose particles. Entire subject visible. Physical geometry is an experimental DRAFT proposal, not new canon. References concern style/material only; never reproduce their literal subjects or layouts.\nSubject: ONE dormant Thullgrime ritual mass, an event landmark BEFORE it awakens as Juiblex's receptacle. Lore documents a mass of flesh and slime with a cocoon and eyes at the center, sustained by ritual. DRAFT form: low broad asymmetrical mound of olive-green viscous slime intertwined with restrained muted-mauve organic folds, a rounded closed cocoon bulging centrally, a few small dull amber eyes nestled close around this center. CLEARLY RESTING MOUND, NOT a standing humanoid/monster, not attacking. Readable central cocoon and mound silhouette at 80/128px. Organic flesh stylized and restrained, no open wounds, body parts, teeth, blood or realistic gore. No cultists, crates, ritual ring, active portal, floor or extra scene. Reference 1 chest: CAMERA/PIXEL quality only. Reference 2 receptacle: OLIVE SLIME texture, amber eye color and restrained wet glints only; do NOT copy upright humanoid pose, limbs or exposed bright nucleus.",
+      "preview_heights": [
+        80,
+        128
+      ],
+      "transparent_background": true,
+      "references": [
+        "assets/interactions/chest_closed.png",
+        "assets/enemies/receptaculo_de_juiblex.png"
+      ],
+      "destination": ".atena/generated/art032-pontos-2026-10-11/sources/PT04_massa_thullgrime_v01.png",
+      "runtime_admission": false,
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-a7c3082b-d748-425c-88a9-7e61a3cbc241.png",
+      "sha256": "d5525924b68db0b38189f7d56e3d62e052f6df6616fbd414fee2e5d634d80d60",
+      "tool": "built-in image_gen",
+      "generated_at_utc": "2026-10-11T17:45:59.374510+00:00",
+      "inspection": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "bbox_alpha_above8": [
+          66,
+          257,
+          1222,
+          1027
+        ],
+        "margins_px": [
+          66,
+          257,
+          32,
+          227
+        ],
+        "minimum_margin_percent": 2.55,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "alpha_genuine": true,
+        "transparent_fraction": 0.6385289561441664,
+        "no_visible_border_clipping_alpha_above8": true,
+        "margin_10_percent_met": false,
+        "native_copy_hash": true
+      },
+      "audit": {
+        "code": "PT04",
+        "title": "Massa de Thullgrime",
+        "revision": "v01",
+        "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT04_massa_thullgrime_v01.png",
+        "sha256": "d5525924b68db0b38189f7d56e3d62e052f6df6616fbd414fee2e5d634d80d60",
+        "size": [
+          1254,
+          1254
+        ],
+        "bbox_alpha_above8": [
+          66,
+          257,
+          1222,
+          1027
+        ],
+        "margins_px": [
+          66,
+          257,
+          32,
+          227
+        ],
+        "minimum_margin_percent": 2.55,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "checks": {
+          "png_rgba": true,
+          "square_canvas": true,
+          "native_copy_hash": true,
+          "transparent_alpha": true,
+          "margin_10_percent_met": false,
+          "no_visible_border_clipping_alpha_above8": true
+        },
+        "recommended_for_owner_review": false,
+        "content_state": "DRAFT",
+        "human_visual_acceptance": "PENDING",
+        "runtime_admission": false,
+        "preview_heights": [
+          80,
+          128
+        ]
+      }
+    },
+    {
+      "code": "PT06",
+      "name": "esporo_zuggtmoy",
+      "title": "Esporo de Zuggtmoy",
+      "revision": "v01",
+      "content_state": "DRAFT",
+      "status": "PRESERVED_NOT_SELECTED_FRAMING_CORRECTION",
+      "prompt": "Use case: stylized-concept.\nAsset type: ONE standalone static DRAFT isometric event-point raster prop for Nottgard Survivors, requested square 1024x1024 with genuine transparent alpha background.\nStyle/medium: dark fantasy painted pixel-art, deliberate pixel clusters, worn materials, elevated three-quarter isometric camera looking down, front visible toward lower-right, light upper-left. Material detail subordinate to a clear silhouette at small sizes. No modern/vector/chibi/photoreal style.\nComposition: ONE complete object centered, about 65-70 percent of canvas extent, at least 15 percent clear transparent space around all extremities. Keep the entire object, attached drips/caps/corners, and restrained highlights away from all canvas edges. An isolated asset, not a scene, sheet, collage or multiple views.\nConstraints: actual transparent background; no floor, backdrop, projected shadow, other objects/characters, text, letters, logo, watermark, framing or pedestal unrelated to the object. No broad halo or loose particles. Entire subject visible. Physical geometry is an experimental DRAFT proposal, not new canon. References concern style/material only; never reproduce their literal subjects or layouts.\nSubject: ONE collectible unit of fungal matter called a spore of Zuggtmoy, paired with Juiblex's slime in the stone-arch event. Exact spore anatomy is undocumented, so use a DRAFT compact fungal capsule/puffball, rounded muted-mauve textured cap with several large clear ridges/pores and a very short off-white mycelial base integrated into the same object. One cohesive fungal unit, not a group of mushrooms or microscopic diagram. A substantial pale underside/ridged edge distinguishes it at 48px. Organic rather than a jewel, dull plum cap/ivory mycelium, restrained luminosity, no cloud, particles, butterflies, faces, sacred emblem, plant pot, forest or floor. Do not invent a visible magical alphabet. Input chest CAMERA/PIXEL/MATERIAL quality only, never chest structure.",
+      "preview_heights": [
+        48,
+        80
+      ],
+      "transparent_background": true,
+      "references": [
+        "assets/interactions/chest_closed.png"
+      ],
+      "destination": ".atena/generated/art032-pontos-2026-10-11/sources/PT06_esporo_zuggtmoy_v01.png",
+      "runtime_admission": false,
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-006676c3-f01b-4f9c-90ee-2309c1c85618.png",
+      "sha256": "0a1747f740fc6663a4064b6c2b3ea5a990977540df19213615d2fd6be04ea781",
+      "tool": "built-in image_gen",
+      "generated_at_utc": "2026-10-11T17:49:46.770002+00:00",
+      "inspection": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "bbox_alpha_above8": [
+          100,
+          168,
+          1159,
+          1143
+        ],
+        "margins_px": [
+          100,
+          168,
+          95,
+          111
+        ],
+        "minimum_margin_percent": 7.58,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "alpha_genuine": true,
+        "transparent_fraction": 0.5585278623556136,
+        "no_visible_border_clipping_alpha_above8": true,
+        "margin_10_percent_met": false,
+        "native_copy_hash": true
+      },
+      "audit": {
+        "code": "PT06",
+        "title": "Esporo de Zuggtmoy",
+        "revision": "v01",
+        "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT06_esporo_zuggtmoy_v01.png",
+        "sha256": "0a1747f740fc6663a4064b6c2b3ea5a990977540df19213615d2fd6be04ea781",
+        "size": [
+          1254,
+          1254
+        ],
+        "bbox_alpha_above8": [
+          100,
+          168,
+          1159,
+          1143
+        ],
+        "margins_px": [
+          100,
+          168,
+          95,
+          111
+        ],
+        "minimum_margin_percent": 7.58,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "checks": {
+          "png_rgba": true,
+          "square_canvas": true,
+          "native_copy_hash": true,
+          "transparent_alpha": true,
+          "margin_10_percent_met": false,
+          "no_visible_border_clipping_alpha_above8": true
+        },
+        "recommended_for_owner_review": false,
+        "content_state": "DRAFT",
+        "human_visual_acceptance": "PENDING",
+        "runtime_admission": false,
+        "preview_heights": [
+          48,
+          80
+        ]
+      }
+    },
+    {
+      "code": "PT07",
+      "name": "limo_juiblex",
+      "title": "Limo de Juiblex",
+      "revision": "v01",
+      "content_state": "DRAFT",
+      "status": "PRESERVED_NOT_SELECTED_FRAMING_CORRECTION",
+      "prompt": "Use case: stylized-concept.\nAsset type: ONE standalone static DRAFT isometric event-point raster prop for Nottgard Survivors, requested square 1024x1024 with genuine transparent alpha background.\nStyle/medium: dark fantasy painted pixel-art, deliberate pixel clusters, worn materials, elevated three-quarter isometric camera looking down, front visible toward lower-right, light upper-left. Material detail subordinate to a clear silhouette at small sizes. No modern/vector/chibi/photoreal style.\nComposition: ONE complete object centered, about 65-70 percent of canvas extent, at least 15 percent clear transparent space around all extremities. Keep the entire object, attached drips/caps/corners, and restrained highlights away from all canvas edges. An isolated asset, not a scene, sheet, collage or multiple views.\nConstraints: actual transparent background; no floor, backdrop, projected shadow, other objects/characters, text, letters, logo, watermark, framing or pedestal unrelated to the object. No broad halo or loose particles. Entire subject visible. Physical geometry is an experimental DRAFT proposal, not new canon. References concern style/material only; never reproduce their literal subjects or layouts.\nSubject: ONE small collectible PORTION OF SLIME from Juiblex, paired with Zuggtmoy's fungal spore at the stone arch. Compact irregular droplet-shaped olive/acid-green gelatinous lump with short attached folded filaments and two or three controlled wet surface highlights. Low asymmetrical silhouette, wider base, one modest tapered rise, no separate detached drops. Reads clearly as goo at 48px. Distinct from the slime-heart: NO bright internal core/nucleus, no round jewel-like capsule. No eyes, face, limbs, humanoid posture, teeth, horn or creature anatomy. No ground tile, large puddle, container, halo, scene or particles. Input 1 chest CAMERA/PIXEL quality only; input 2 slime enemy SLIME TEXTURE and color only, never humanoid silhouette/eyes/limbs.",
+      "preview_heights": [
+        48,
+        80
+      ],
+      "transparent_background": true,
+      "references": [
+        "assets/interactions/chest_closed.png",
+        "assets/enemies/slime_de_juiblex.png"
+      ],
+      "destination": ".atena/generated/art032-pontos-2026-10-11/sources/PT07_limo_juiblex_v01.png",
+      "runtime_admission": false,
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-51121da4-cfb9-4c0b-9f8d-74d4f892265e.png",
+      "sha256": "86212d369cb1f0dde9402c42edf398cf67d7f5f6fb94de8704c70713d98e2e70",
+      "tool": "built-in image_gen",
+      "generated_at_utc": "2026-10-11T17:51:59.115065+00:00",
+      "inspection": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "bbox_alpha_above8": [
+          101,
+          269,
+          1138,
+          1041
+        ],
+        "margins_px": [
+          101,
+          269,
+          116,
+          213
+        ],
+        "minimum_margin_percent": 8.05,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "alpha_genuine": true,
+        "transparent_fraction": 0.7248053437930043,
+        "no_visible_border_clipping_alpha_above8": true,
+        "margin_10_percent_met": false,
+        "native_copy_hash": true
+      },
+      "audit": {
+        "code": "PT07",
+        "title": "Limo de Juiblex",
+        "revision": "v01",
+        "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT07_limo_juiblex_v01.png",
+        "sha256": "86212d369cb1f0dde9402c42edf398cf67d7f5f6fb94de8704c70713d98e2e70",
+        "size": [
+          1254,
+          1254
+        ],
+        "bbox_alpha_above8": [
+          101,
+          269,
+          1138,
+          1041
+        ],
+        "margins_px": [
+          101,
+          269,
+          116,
+          213
+        ],
+        "minimum_margin_percent": 8.05,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "checks": {
+          "png_rgba": true,
+          "square_canvas": true,
+          "native_copy_hash": true,
+          "transparent_alpha": true,
+          "margin_10_percent_met": false,
+          "no_visible_border_clipping_alpha_above8": true
+        },
+        "recommended_for_owner_review": false,
+        "content_state": "DRAFT",
+        "human_visual_acceptance": "PENDING",
+        "runtime_admission": false,
+        "preview_heights": [
+          48,
+          80
+        ]
+      }
+    }
+  ],
+  "current_step_position": 5,
+  "status": "COMPLETED_VISUALLY_ACCEPTED_DRAFT",
+  "technical_status": "PASS_WITH_NATIVE_ALPHA_NOTE",
+  "owner_visual_acceptance": "APPROVED_EXPLICITLY",
+  "native_outputs": 11,
+  "remaining_steps_after_current": 0,
+  "human_visual_acceptance": "APPROVED_EXPLICITLY",
+  "reading_preview": ".atena/generated/art032-pontos-2026-10-11/review-reading.png",
+  "gallery_qa": "gallery-qa.json",
+  "visual_acceptance_receipt": "visual-acceptance.json",
+  "visual_owner_reply": "atena, aprovado",
+  "visual_accepted_date": "2026-10-12",
+  "next_objective": "Preparar plano futuro da Manifestação de Juiblex ou preparação/admissão das dezesseis fontes aceitas ART-032; nova execução depende de escopo aprovado",
+  "next_execution_authorized": false
+}

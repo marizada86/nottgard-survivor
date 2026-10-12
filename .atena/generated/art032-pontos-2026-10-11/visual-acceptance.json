@@ -1,0 +1,61 @@
+{
+  "plan": "PLAN-ART032-PONTOS",
+  "revision": "v01",
+  "step": "S-005",
+  "date": "2026-10-12",
+  "owner_reply": "atena, aprovado",
+  "authority": "EXPLICIT_HUMAN_APPROVAL_OF_PENDING_SIX_REVISION_VISUAL_GATE",
+  "status": "APPROVED_EXPLICITLY",
+  "content_state": "DRAFT",
+  "accepted": [
+    {
+      "code": "PT02",
+      "title": "Trono de Zuggtmoy",
+      "revision": "v02",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT02_trono_zuggtmoy_v02.png",
+      "sha256": "14e1d3b0749f887b328a1e5aea2c04e792a1e48af0d42701b0dbb6bd51984cc2"
+    },
+    {
+      "code": "PT03",
+      "title": "Arco de pedra",
+      "revision": "v02",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT03_arco_pedra_v02.png",
+      "sha256": "3ecb7fc0291ea7704332833f8cf026cd9844d24a10c806020a97939d31bbe0f6"
+    },
+    {
+      "code": "PT04",
+      "title": "Massa de Thullgrime",
+      "revision": "v02",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT04_massa_thullgrime_v02.png",
+      "sha256": "1ae928be4144a3a24d2594eb2beeeff17b02cd6b38670685160ce8c9b9f1c1f9"
+    },
+    {
+      "code": "PT05",
+      "title": "Coração de Limo",
+      "revision": "v01",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT05_coracao_limo_v01.png",
+      "sha256": "ca3c402e73dafab3ce5b96118b22225276aa0bbab24078f430e3af5f94e5690e"
+    },
+    {
+      "code": "PT06",
+      "title": "Esporo de Zuggtmoy",
+      "revision": "v02",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT06_esporo_zuggtmoy_v02.png",
+      "sha256": "dbffff2eae56c7a09f4cb1e04c9202deb18a3e909e5c9d13161f7810012fe22d"
+    },
+    {
+      "code": "PT07",
+      "title": "Limo de Juiblex",
+      "revision": "v02",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT07_limo_juiblex_v02.png",
+      "sha256": "09f4612a81b6a7b06b12b229c1c65130b69ae3ed395faae65abd2343b531b5c1"
+    }
+  ],
+  "reviewed_scope": "Six proposed DRAFT geometries; props at 80/128px and collectibles at 48/80px; PT02/PT05 native border alpha 1/255 disclosed in pending visual question.",
+  "canonical_promotion": false,
+  "runtime_admission": false,
+  "normalization_execution": false,
+  "commit_push_build": false,
+  "historical_five_v01_versions_accepted": false,
+  "next_execution_authorized": false
+}

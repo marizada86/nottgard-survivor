@@ -80,7 +80,7 @@ func fire(b: Battle, def: Dictionary) -> bool:
 			var n := int(def.get("n", 3))
 			obj.need = n
 			for i in n:
-				_add_point(b, "event_npc", _far_pos(b, 6.0, 12.0), obj, String(def.get("label", "sobrevivente")), _col(def, Color(0.95, 0.9, 0.6)))
+				_add_point(b, "event_npc", _far_pos(b, 6.0, 12.0), obj, String(def.get("label", "sobrevivente")), _col(def, Color(0.95, 0.9, 0.6)), String(def.get("asset", "")))
 		"pact":
 			obj.need = 0
 			var at := _far_pos(b, 4.0, 7.0)
@@ -110,7 +110,7 @@ func fire(b: Battle, def: Dictionary) -> bool:
 			obj.ends_at = b.time + b.hero.temp_t
 			var dir := Vector2(-1.0, -1.0).normalized()   # norte na tela
 			var at := (b.hero.pos + dir * float(def.get("distance", 12.0))).clamp(Vector2(2, 2), b.map_size - Vector2(2, 2))
-			_add_point(b, "event_star", at, obj, String(def.get("label", "a estrela")), _col(def, Color(0.75, 0.9, 1.0)))
+			_add_point(b, "event_star", at, obj, String(def.get("label", "a estrela")), _col(def, Color(0.75, 0.9, 1.0)), String(def.get("asset", "")))
 			obj.pos = at
 			obj.need = 1
 		"quake":
@@ -142,7 +142,7 @@ func _fire_collect(b: Battle, def: Dictionary, obj: Dictionary) -> void:
 			e.event_tag = String(obj.id)
 			e.event_item = String(item.label)
 		else:
-			_add_point(b, "event_item", _far_pos(b, 7.0, 11.0), obj, String(item.label), _col(item, Color(0.7, 0.95, 0.6)))
+			_add_point(b, "event_item", _far_pos(b, 7.0, 11.0), obj, String(item.label), _col(item, Color(0.7, 0.95, 0.6)), String(item.get("asset", "")))
 	var target: Dictionary = def.get("target", {})
 	var tpos := _far_pos(b, 6.0, 10.0)
 	if target.has("pos"):
@@ -155,7 +155,7 @@ func _fire_escort(b: Battle, def: Dictionary, obj: Dictionary) -> void:
 	var dir := (b.map_size * 0.5 - b.hero.pos)
 	dir = dir.normalized() if dir.length() > 2.0 else Vector2(1, 0).rotated(b.rng.randf() * TAU)
 	var goal := (b.hero.pos + dir * float(def.get("distance", 14.0))).clamp(Vector2(3, 3), b.map_size - Vector2(3, 3))
-	_add_ally(b, {"label": String(npc.get("label", "peregrino")), "sprite": String(npc.get("sprite", "")), "pos": b.hero.pos + Vector2(1.0, 0.5),
+	_add_ally(b, {"label": String(npc.get("label", "peregrino")), "sprite": String(npc.get("sprite", "")), "asset": String(npc.get("asset", "")), "pos": b.hero.pos + Vector2(1.0, 0.5),
 		"hp": float(npc.get("hp", 60.0)), "speed": float(npc.get("speed", 1.0)), "aggro": 5.0, "goal": goal, "role": "escort", "obj": String(obj.id), "life": 9999.0})
 	_add_point(b, "event_target", goal, obj, String(def.get("target_label", "destino")), _col(def, Color(0.75, 0.9, 1.0)), String(def.get("asset", "")), true)
 	obj.need = 1
@@ -313,7 +313,7 @@ func _ally_gone(b: Battle, a: Dictionary) -> void:
 
 func _add_ally(b: Battle, spec: Dictionary) -> void:
 	_serial += 1
-	var a := {"id": _serial, "label": "", "sprite": "", "pos": b.hero.pos, "hp": 40.0, "life": 45.0, "dice": "1d8", "speed": 1.4,
+	var a := {"id": _serial, "label": "", "sprite": "", "asset": "", "pos": b.hero.pos, "hp": 40.0, "life": 45.0, "dice": "1d8", "speed": 1.4,
 		"aggro": 3.0, "goal": Vector2.ZERO, "role": "soldier", "obj": "", "atk_cd": 0.0}
 	a.merge(spec, true)
 	a.max_hp = float(a.hp)
@@ -332,7 +332,12 @@ func on_kill(b: Battle, e: Enemy) -> void:
 	if obj.is_empty():
 		return
 	if e.event_item != "":
-		_add_point(b, "event_item", e.pos, obj, e.event_item, Color(0.7, 0.95, 0.6))
+		var item_asset := ""
+		for item in Dictionary(obj.def).get("items", []):
+			if String(item.get("label", "")) == e.event_item:
+				item_asset = String(item.get("asset", ""))
+				break
+		_add_point(b, "event_item", e.pos, obj, e.event_item, Color(0.7, 0.95, 0.6), item_asset)
 		b.events.append({"type": "toast", "text": "%s caiu no chão." % e.event_item, "color": Color(0.7, 0.95, 0.6)})
 		return
 	match String(obj.kind):
@@ -518,8 +523,10 @@ func _apply_reward(b: Battle, r: Dictionary, at: Vector2) -> void:
 		b.wipe_map()
 	var al: Dictionary = r.get("allies", {})
 	if not al.is_empty():
+		var ally_assets: Array = al.get("assets", [])
 		for i in int(al.get("n", 2)):
-			_add_ally(b, {"label": String(al.get("label", "aliado")), "sprite": String(al.get("id", "")), "pos": b.hero.pos + Vector2(1.2, 0.0).rotated(float(i) * 2.0),
+			var asset := String(ally_assets[i % ally_assets.size()]) if not ally_assets.is_empty() else String(al.get("asset", ""))
+			_add_ally(b, {"label": String(al.get("label", "aliado")), "sprite": String(al.get("id", "")), "asset": asset, "pos": b.hero.pos + Vector2(1.2, 0.0).rotated(float(i) * 2.0),
 				"hp": float(al.get("hp", 40.0)), "life": float(al.get("life", 30.0)), "dice": String(al.get("dice", "1d8")), "speed": float(al.get("speed", 1.5))})
 
 ## SPEC-129 B-005: concede uma bênção permanente (como a do altar) e conta para o Favor; se o herói já tem todas, vira moedas.

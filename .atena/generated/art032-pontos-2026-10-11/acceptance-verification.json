@@ -1,0 +1,29 @@
+{
+  "plan": "PLAN-ART032-PONTOS",
+  "revision": "v01",
+  "date": "2026-10-12",
+  "status": "PASS_VISUAL_ACCEPTANCE_RECORDED",
+  "completed_steps": 5,
+  "total_steps": 5,
+  "current_step": "S-005/OWNER_VISUAL_ACCEPTANCE_RECORDED",
+  "accepted_revisions": [
+    "PT02_v02",
+    "PT03_v02",
+    "PT04_v02",
+    "PT05_v01",
+    "PT06_v02",
+    "PT07_v02"
+  ],
+  "accepted_draft_total_art032": 16,
+  "native_sources_in_lot": 11,
+  "receipt": "visual-acceptance.json",
+  "source_reference_runtime_and_plan071_hashes": "PASS_UNCHANGED",
+  "links_and_state": "PASS",
+  "human_visual_acceptance": "APPROVED_EXPLICITLY",
+  "content_state": "DRAFT",
+  "canonical_promotion": false,
+  "runtime_admission": false,
+  "new_commit_push_build": false,
+  "git_head_and_index": "UNCHANGED",
+  "next_execution_authorized": false
+}

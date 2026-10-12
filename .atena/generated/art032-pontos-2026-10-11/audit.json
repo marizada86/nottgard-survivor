@@ -1,0 +1,500 @@
+{
+  "plan": "PLAN-ART032-PONTOS",
+  "revision": "v01",
+  "status": "PASS_WITH_NATIVE_ALPHA_NOTE",
+  "content_state": "DRAFT",
+  "owner_reply": "atena, aprovado, commite e continue a Próxima frente proposta: os pontos de acontecimentos restantes de ART-032.",
+  "approval_mode": "per-plan",
+  "review_candidates": 6,
+  "native_outputs": 11,
+  "requested_canvas": [
+    1024,
+    1024
+  ],
+  "actual_canvas": [
+    1254,
+    1254
+  ],
+  "source_and_reference_hashes": "PASS",
+  "previous_accepted_sources_receipts_runtime_plan071": "UNCHANGED_HASH_VERIFIED",
+  "native_resizing_cleaning": "NOT_PERFORMED",
+  "human_visual_acceptance": "APPROVED_EXPLICITLY",
+  "records": [
+    {
+      "code": "PT02",
+      "title": "Trono de Zuggtmoy",
+      "revision": "v02",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT02_trono_zuggtmoy_v02.png",
+      "sha256": "14e1d3b0749f887b328a1e5aea2c04e792a1e48af0d42701b0dbb6bd51984cc2",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox_alpha_above8": [
+        313,
+        215,
+        999,
+        1076
+      ],
+      "margins_px": [
+        313,
+        215,
+        255,
+        178
+      ],
+      "minimum_margin_percent": 14.19,
+      "border_max_alpha": 1,
+      "border_exactly_empty": false,
+      "checks": {
+        "png_rgba": true,
+        "square_canvas": true,
+        "native_copy_hash": true,
+        "transparent_alpha": true,
+        "margin_10_percent_met": true,
+        "no_visible_border_clipping_alpha_above8": true
+      },
+      "recommended_for_owner_review": true,
+      "content_state": "DRAFT",
+      "human_visual_acceptance": "APPROVED_EXPLICITLY",
+      "runtime_admission": false,
+      "preview_heights": [
+        80,
+        128
+      ]
+    },
+    {
+      "code": "PT03",
+      "title": "Arco de pedra",
+      "revision": "v02",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT03_arco_pedra_v02.png",
+      "sha256": "3ecb7fc0291ea7704332833f8cf026cd9844d24a10c806020a97939d31bbe0f6",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox_alpha_above8": [
+        366,
+        327,
+        920,
+        992
+      ],
+      "margins_px": [
+        366,
+        327,
+        334,
+        262
+      ],
+      "minimum_margin_percent": 20.89,
+      "border_max_alpha": 0,
+      "border_exactly_empty": true,
+      "checks": {
+        "png_rgba": true,
+        "square_canvas": true,
+        "native_copy_hash": true,
+        "transparent_alpha": true,
+        "margin_10_percent_met": true,
+        "no_visible_border_clipping_alpha_above8": true
+      },
+      "recommended_for_owner_review": true,
+      "content_state": "DRAFT",
+      "human_visual_acceptance": "APPROVED_EXPLICITLY",
+      "runtime_admission": false,
+      "preview_heights": [
+        80,
+        128
+      ]
+    },
+    {
+      "code": "PT04",
+      "title": "Massa de Thullgrime",
+      "revision": "v02",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT04_massa_thullgrime_v02.png",
+      "sha256": "1ae928be4144a3a24d2594eb2beeeff17b02cd6b38670685160ce8c9b9f1c1f9",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox_alpha_above8": [
+        193,
+        368,
+        1079,
+        948
+      ],
+      "margins_px": [
+        193,
+        368,
+        175,
+        306
+      ],
+      "minimum_margin_percent": 13.96,
+      "border_max_alpha": 0,
+      "border_exactly_empty": true,
+      "checks": {
+        "png_rgba": true,
+        "square_canvas": true,
+        "native_copy_hash": true,
+        "transparent_alpha": true,
+        "margin_10_percent_met": true,
+        "no_visible_border_clipping_alpha_above8": true
+      },
+      "recommended_for_owner_review": true,
+      "content_state": "DRAFT",
+      "human_visual_acceptance": "APPROVED_EXPLICITLY",
+      "runtime_admission": false,
+      "preview_heights": [
+        80,
+        128
+      ]
+    },
+    {
+      "code": "PT05",
+      "title": "Coração de Limo",
+      "revision": "v01",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT05_coracao_limo_v01.png",
+      "sha256": "ca3c402e73dafab3ce5b96118b22225276aa0bbab24078f430e3af5f94e5690e",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox_alpha_above8": [
+        255,
+        164,
+        1058,
+        1096
+      ],
+      "margins_px": [
+        255,
+        164,
+        196,
+        158
+      ],
+      "minimum_margin_percent": 12.6,
+      "border_max_alpha": 1,
+      "border_exactly_empty": false,
+      "checks": {
+        "png_rgba": true,
+        "square_canvas": true,
+        "native_copy_hash": true,
+        "transparent_alpha": true,
+        "margin_10_percent_met": true,
+        "no_visible_border_clipping_alpha_above8": true
+      },
+      "recommended_for_owner_review": true,
+      "content_state": "DRAFT",
+      "human_visual_acceptance": "APPROVED_EXPLICITLY",
+      "runtime_admission": false,
+      "preview_heights": [
+        48,
+        80
+      ]
+    },
+    {
+      "code": "PT06",
+      "title": "Esporo de Zuggtmoy",
+      "revision": "v02",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT06_esporo_zuggtmoy_v02.png",
+      "sha256": "dbffff2eae56c7a09f4cb1e04c9202deb18a3e909e5c9d13161f7810012fe22d",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox_alpha_above8": [
+        262,
+        316,
+        996,
+        981
+      ],
+      "margins_px": [
+        262,
+        316,
+        258,
+        273
+      ],
+      "minimum_margin_percent": 20.57,
+      "border_max_alpha": 0,
+      "border_exactly_empty": true,
+      "checks": {
+        "png_rgba": true,
+        "square_canvas": true,
+        "native_copy_hash": true,
+        "transparent_alpha": true,
+        "margin_10_percent_met": true,
+        "no_visible_border_clipping_alpha_above8": true
+      },
+      "recommended_for_owner_review": true,
+      "content_state": "DRAFT",
+      "human_visual_acceptance": "APPROVED_EXPLICITLY",
+      "runtime_admission": false,
+      "preview_heights": [
+        48,
+        80
+      ]
+    },
+    {
+      "code": "PT07",
+      "title": "Limo de Juiblex",
+      "revision": "v02",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT07_limo_juiblex_v02.png",
+      "sha256": "09f4612a81b6a7b06b12b229c1c65130b69ae3ed395faae65abd2343b531b5c1",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox_alpha_above8": [
+        183,
+        318,
+        1069,
+        988
+      ],
+      "margins_px": [
+        183,
+        318,
+        185,
+        266
+      ],
+      "minimum_margin_percent": 14.59,
+      "border_max_alpha": 0,
+      "border_exactly_empty": true,
+      "checks": {
+        "png_rgba": true,
+        "square_canvas": true,
+        "native_copy_hash": true,
+        "transparent_alpha": true,
+        "margin_10_percent_met": true,
+        "no_visible_border_clipping_alpha_above8": true
+      },
+      "recommended_for_owner_review": true,
+      "content_state": "DRAFT",
+      "human_visual_acceptance": "APPROVED_EXPLICITLY",
+      "runtime_admission": false,
+      "preview_heights": [
+        48,
+        80
+      ]
+    },
+    {
+      "code": "PT02",
+      "title": "Trono de Zuggtmoy",
+      "revision": "v01",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT02_trono_zuggtmoy_v01.png",
+      "sha256": "9b0fd6e2e6cd67d36b827bfc28fbf7b10de8512cc0e9e5dc7ccaaa5d7af12281",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox_alpha_above8": [
+        226,
+        63,
+        1135,
+        1213
+      ],
+      "margins_px": [
+        226,
+        63,
+        119,
+        41
+      ],
+      "minimum_margin_percent": 3.27,
+      "border_max_alpha": 1,
+      "border_exactly_empty": false,
+      "checks": {
+        "png_rgba": true,
+        "square_canvas": true,
+        "native_copy_hash": true,
+        "transparent_alpha": true,
+        "margin_10_percent_met": false,
+        "no_visible_border_clipping_alpha_above8": true
+      },
+      "recommended_for_owner_review": false,
+      "content_state": "DRAFT",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "preview_heights": [
+        80,
+        128
+      ]
+    },
+    {
+      "code": "PT03",
+      "title": "Arco de pedra",
+      "revision": "v01",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT03_arco_pedra_v01.png",
+      "sha256": "f05128ee6acfbdd0bd1cf163eb1dff78bd4c7312b64488a8982100af9d24621b",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox_alpha_above8": [
+        211,
+        100,
+        1097,
+        1172
+      ],
+      "margins_px": [
+        211,
+        100,
+        157,
+        82
+      ],
+      "minimum_margin_percent": 6.54,
+      "border_max_alpha": 1,
+      "border_exactly_empty": false,
+      "checks": {
+        "png_rgba": true,
+        "square_canvas": true,
+        "native_copy_hash": true,
+        "transparent_alpha": true,
+        "margin_10_percent_met": false,
+        "no_visible_border_clipping_alpha_above8": true
+      },
+      "recommended_for_owner_review": false,
+      "content_state": "DRAFT",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "preview_heights": [
+        80,
+        128
+      ]
+    },
+    {
+      "code": "PT04",
+      "title": "Massa de Thullgrime",
+      "revision": "v01",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT04_massa_thullgrime_v01.png",
+      "sha256": "d5525924b68db0b38189f7d56e3d62e052f6df6616fbd414fee2e5d634d80d60",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox_alpha_above8": [
+        66,
+        257,
+        1222,
+        1027
+      ],
+      "margins_px": [
+        66,
+        257,
+        32,
+        227
+      ],
+      "minimum_margin_percent": 2.55,
+      "border_max_alpha": 1,
+      "border_exactly_empty": false,
+      "checks": {
+        "png_rgba": true,
+        "square_canvas": true,
+        "native_copy_hash": true,
+        "transparent_alpha": true,
+        "margin_10_percent_met": false,
+        "no_visible_border_clipping_alpha_above8": true
+      },
+      "recommended_for_owner_review": false,
+      "content_state": "DRAFT",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "preview_heights": [
+        80,
+        128
+      ]
+    },
+    {
+      "code": "PT06",
+      "title": "Esporo de Zuggtmoy",
+      "revision": "v01",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT06_esporo_zuggtmoy_v01.png",
+      "sha256": "0a1747f740fc6663a4064b6c2b3ea5a990977540df19213615d2fd6be04ea781",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox_alpha_above8": [
+        100,
+        168,
+        1159,
+        1143
+      ],
+      "margins_px": [
+        100,
+        168,
+        95,
+        111
+      ],
+      "minimum_margin_percent": 7.58,
+      "border_max_alpha": 1,
+      "border_exactly_empty": false,
+      "checks": {
+        "png_rgba": true,
+        "square_canvas": true,
+        "native_copy_hash": true,
+        "transparent_alpha": true,
+        "margin_10_percent_met": false,
+        "no_visible_border_clipping_alpha_above8": true
+      },
+      "recommended_for_owner_review": false,
+      "content_state": "DRAFT",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "preview_heights": [
+        48,
+        80
+      ]
+    },
+    {
+      "code": "PT07",
+      "title": "Limo de Juiblex",
+      "revision": "v01",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT07_limo_juiblex_v01.png",
+      "sha256": "86212d369cb1f0dde9402c42edf398cf67d7f5f6fb94de8704c70713d98e2e70",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox_alpha_above8": [
+        101,
+        269,
+        1138,
+        1041
+      ],
+      "margins_px": [
+        101,
+        269,
+        116,
+        213
+      ],
+      "minimum_margin_percent": 8.05,
+      "border_max_alpha": 1,
+      "border_exactly_empty": false,
+      "checks": {
+        "png_rgba": true,
+        "square_canvas": true,
+        "native_copy_hash": true,
+        "transparent_alpha": true,
+        "margin_10_percent_met": false,
+        "no_visible_border_clipping_alpha_above8": true
+      },
+      "recommended_for_owner_review": false,
+      "content_state": "DRAFT",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "preview_heights": [
+        48,
+        80
+      ]
+    }
+  ],
+  "head": "51b51f7369ae34eede997435e6eb52ea057daf25",
+  "notes": [
+    "Selected PT02/PT05 have native alpha 1/255 on the border; other four selected have fully empty borders; no source cleaning",
+    "Five original v01 versions preserved, superseded only for framing below the 10 percent margin contract",
+    "Geometry of throne/inactive stone face/spore and core appearance remains DRAFT, not canonical intent",
+    "Slime-core is a collectible event adaptation, not a documented anatomical heart",
+    "No game tests, playtest, normalization, integration, canonical promotion, new commit, push or build for this isolated lot",
+    "HTML links/metadata checked locally; no browser rendering claim or workaround for known file URL policy block"
+  ],
+  "gallery_qa": "gallery-qa.json",
+  "reading_preview": "review-reading.png",
+  "reading_inspection": "COMPLETED_BY_ATENA",
+  "browser_render_verification": "NOT_ATTEMPTED_KNOWN_FILE_URL_POLICY_BLOCK",
+  "visual_acceptance_receipt": "visual-acceptance.json"
+}

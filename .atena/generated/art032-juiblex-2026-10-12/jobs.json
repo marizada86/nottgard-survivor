@@ -1,0 +1,524 @@
+{
+  "plan": "PLAN-ART032-JUIBLEX",
+  "revision": "v01",
+  "content_state": "DRAFT",
+  "approval_mode": "per-plan",
+  "approval": "APPROVED_PER_PLAN",
+  "owner_front_reply": "atena, continue",
+  "request_classification": "PLAN_CHANGE_REQUEST",
+  "current_step": "S-005/OWNER_VISUAL_ACCEPTANCE_RECORDED",
+  "current_step_position": 5,
+  "completed_steps": 5,
+  "total_steps": 5,
+  "remaining_steps_after_current": 0,
+  "generated": 1,
+  "blocking_visual_gaps": 0,
+  "identity": "JUIBLEX_HIVE_MIND_MANIFESTATION_NOT_UNCONSCIOUS_BACKUP",
+  "physical_geometry": "DRAFT_HYPOTHESIS",
+  "visual_bible": ".atena/vault/drafts/PLAN-ART032-JUIBLEX-v01.md",
+  "sources": [
+    {
+      "path": "F:/dev/nottgard-vault/03_NPCs/Juiblex.md",
+      "sha256": "76111cb0fff377f69f818415345af312e2d7fa8bdbbad69ea8e66adc1ab863a5",
+      "authority": "CANON_LORE_READ_ONLY"
+    },
+    {
+      "path": "F:/dev/nottgard-vault/07_Criaturas/Receptáculo de Juiblex.md",
+      "sha256": "e90277018856391329345134d49e50aca12e8d0cadaff3d543b8ac6762eb78ab",
+      "authority": "CANON_LORE_READ_ONLY"
+    },
+    {
+      "path": "F:/dev/nottgard-vault/10_Sessões/Arco 01 - Nottgard, A Noite Sem Fim/Sessão 12.md",
+      "sha256": "9d51e0a9b62390e70bf9c84fa8d808ae6b6cd9530f969ff22b4462ddc44feab4",
+      "authority": "CANON_LORE_READ_ONLY"
+    },
+    {
+      "path": "F:/dev/nottgard-vault/10_Sessões/Arco 01 - Nottgard, A Noite Sem Fim/Sessão 16.md",
+      "sha256": "0f86fa66e2de5fe3a72895691a8d4d269a4785d95d1bb434edf9fce7ed10c1c3",
+      "authority": "CANON_LORE_READ_ONLY"
+    },
+    {
+      "path": "F:/dev/nottgard-vault/10_Sessões/Arco 01 - Nottgard, A Noite Sem Fim/Sessão 17.md",
+      "sha256": "c3d18d7277d5fb0252c629e9ff539606220e3c38d733574ef799a661be3d6a3d",
+      "authority": "CANON_LORE_READ_ONLY"
+    },
+    {
+      "path": ".atena/specs/SPEC-118-acontecimentos-exclusivos-por-fase.md",
+      "sha256": "a83f72543919a8601b51834dc5bfef28b3b2714235420097ed483abbb65691a2",
+      "authority": "PROJECT_CONTEXT_OR_ACCEPTANCE"
+    },
+    {
+      "path": ".atena/vault/canon/PLAN-001-nottgard-survivors.md",
+      "sha256": "f886646498b8918016c29480311b4a8e1eb578515ebcdf9fe4c5e8cd0d4afc1b",
+      "authority": "PROJECT_CONTEXT_OR_ACCEPTANCE"
+    },
+    {
+      "path": "data/enemies.json",
+      "sha256": "3013778a703b0265297f1ed5df16922a2cae0b88412dab38c343331d99bbed27",
+      "authority": "PROJECT_CONTEXT_OR_ACCEPTANCE"
+    },
+    {
+      "path": "data/stage_events.json",
+      "sha256": "7d6f8dae1962cbf97208c86a95104446af37fc09daf332a98298d7d9e4e4186a",
+      "authority": "PROJECT_CONTEXT_OR_ACCEPTANCE"
+    },
+    {
+      "path": "data/boss_phases.json",
+      "sha256": "df836aa9d44d66dc5531e8609bbc2e973684aa8533672a534d613aa31aa9b63a",
+      "authority": "PROJECT_CONTEXT_OR_ACCEPTANCE"
+    },
+    {
+      "path": "ui/enemy_view.gd",
+      "sha256": "4ee77ceea765859439d60d0e331d37bbc5e23bb7f25867ae3af257f31d51f9cd",
+      "authority": "PROJECT_CONTEXT_OR_ACCEPTANCE"
+    },
+    {
+      "path": ".atena/generated/art032-npcs-2026-10-11/visual-acceptance.json",
+      "sha256": "ae53f3ee56ef1db85476fddb1870389ec2e9fbfac8c22fb499750121777d87f9",
+      "authority": "PROJECT_CONTEXT_OR_ACCEPTANCE"
+    },
+    {
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/visual-acceptance.json",
+      "sha256": "74cc191179ce409245b72cfe8f3e27231c1f02222810bf69cdc0a8588a454c34",
+      "authority": "PROJECT_CONTEXT_OR_ACCEPTANCE"
+    },
+    {
+      "path": ".atena/generated/art032-pontos-2026-10-11/visual-acceptance.json",
+      "sha256": "4510def5aa92de9da36b81f7e06b1fce69399a519381e6ff6164ef9a63bb6e27",
+      "authority": "PROJECT_CONTEXT_OR_ACCEPTANCE"
+    }
+  ],
+  "style_references": [
+    {
+      "path": "assets/enemies/receptaculo_de_juiblex.png",
+      "sha256": "ce81d3cfd119e64f69b81d38592170dfcb2c3f97393945bb03cdabf714a77b96",
+      "role": "MATERIAL_CAMERA_NOT_HUMANOID_GEOMETRY"
+    },
+    {
+      "path": "assets/enemies/slime_de_juiblex.png",
+      "sha256": "3e07ad4d90551bac74269d7897f097176f9fb0c7917a5001df7aabc6b6c7c642",
+      "role": "MATERIAL_CAMERA_NOT_HUMANOID_GEOMETRY"
+    }
+  ],
+  "comparison_references": [
+    {
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT04_massa_thullgrime_v02.png",
+      "sha256": "1ae928be4144a3a24d2594eb2beeeff17b02cd6b38670685160ce8c9b9f1c1f9",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED",
+      "role": "DORMANT_VS_ACTIVE_SILHOUETTE_COMPARISON_NOT_EDIT_TARGET"
+    }
+  ],
+  "jobs": [
+    {
+      "code": "MJ01",
+      "name": "manifestacao_juiblex",
+      "title": "Manifestação de Juiblex",
+      "revision": "v03",
+      "content_state": "DRAFT",
+      "status": "VISUALLY_ACCEPTED_DRAFT_NOT_ADMITTED",
+      "prompt": "Use case: precise-object-edit. ONLY shrink and recenter this exact complete MJ01 DRAFT slime creature. Keep every part of the same geometry/material/pixel-art/camera/light/color: broad gel base, asymmetric raised main lobe and THREE bulky attached curled filament extensions, no eyes/cocoon/bright nucleus. The current visible object is 72 percent of the canvas WIDTH. Make the visible object 25 percent smaller relative to this input, so it occupies ONLY about 54 percent of the output canvas width, and proportional height. The longest dimension MUST stay below 65 percent of canvas extent; center in both axes. At least 20 percent clear empty transparent room around every extremity left/right and top/bottom. No zoom, crop, new features or redesigned proportions. Genuine transparent square canvas, whole body/tips intact, no floor/shadow/scene/halo/text/frame/watermark. Requested 1024x1024.",
+      "transparent_background": true,
+      "references": [
+        ".atena/generated/art032-juiblex-2026-10-12/sources/MJ01_manifestacao_juiblex_v02.png"
+      ],
+      "preview_heights": [
+        80,
+        128
+      ],
+      "destination": ".atena/generated/art032-juiblex-2026-10-12/sources/MJ01_manifestacao_juiblex_v03.png",
+      "runtime_admission": false,
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-6900e1f2-4bb7-48ae-9039-e8bd8e1324cc.png",
+      "sha256": "ce37eb91132e1d2c22ca04c4c8102213e858dc46275a741207008d65dd20d8bf",
+      "tool": "built-in image_gen",
+      "generated_at_utc": "2026-10-12T04:29:40.438653+00:00",
+      "inspection": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "bbox_alpha_above8": [
+          266,
+          357,
+          1025,
+          960
+        ],
+        "margins_px": [
+          266,
+          357,
+          229,
+          294
+        ],
+        "minimum_margin_percent": 18.26,
+        "border_max_alpha": 0,
+        "border_exactly_empty": true,
+        "alpha_genuine": true,
+        "transparent_fraction": 0.8276965067446055,
+        "no_visible_border_clipping_alpha_above8": true,
+        "margin_10_percent_met": true,
+        "native_copy_hash": true
+      },
+      "correction_of": "6ff962d5aaad10901a823840f4870d5b2a5d22d78c6930a6b662fb1499c43473",
+      "audit": {
+        "code": "MJ01",
+        "title": "Manifestação de Juiblex",
+        "revision": "v03",
+        "path": ".atena/generated/art032-juiblex-2026-10-12/sources/MJ01_manifestacao_juiblex_v03.png",
+        "sha256": "ce37eb91132e1d2c22ca04c4c8102213e858dc46275a741207008d65dd20d8bf",
+        "size": [
+          1254,
+          1254
+        ],
+        "bbox_alpha_above8": [
+          266,
+          357,
+          1025,
+          960
+        ],
+        "margins_px": [
+          266,
+          357,
+          229,
+          294
+        ],
+        "minimum_margin_percent": 18.26,
+        "visible_extent_percent": [
+          60.53,
+          48.09
+        ],
+        "border_max_alpha": 0,
+        "border_exactly_empty": true,
+        "transparent_fraction": 0.8276965067446055,
+        "checks": {
+          "png_rgba": true,
+          "square": true,
+          "native_copy_hash": true,
+          "transparent_alpha": true,
+          "margin_10_percent_met": true,
+          "extent_at_most_70_percent": true,
+          "no_border_clipping_alpha_above8": true
+        },
+        "recommended_for_owner_review": true,
+        "content_state": "DRAFT",
+        "human_visual_acceptance": "APPROVED_EXPLICITLY",
+        "runtime_admission": false
+      },
+      "human_visual_acceptance": "APPROVED_EXPLICITLY"
+    }
+  ],
+  "canon_admission_commit_push_build": "NOT_AUTHORIZED",
+  "owner_reply": "Aprovo MJ01 DRAFT",
+  "approved_date": "2026-10-12",
+  "status": "COMPLETED_VISUALLY_ACCEPTED_DRAFT",
+  "next_execution_authorized": false,
+  "previous_native_versions": [
+    {
+      "code": "MJ01",
+      "name": "manifestacao_juiblex",
+      "title": "Manifestação de Juiblex",
+      "revision": "v01",
+      "content_state": "DRAFT",
+      "status": "PRESERVED_NOT_SELECTED_FRAMING_CORRECTION",
+      "prompt": "Use case: stylized-concept.\nAsset type: ONE standalone full-body static DRAFT boss sprite for Nottgard Survivors: Manifestation of Juiblex. Square 1024x1024 requested, genuine transparent alpha.\nSubject/context: Juiblex is a sticky filamentous hive-mind entity; each manifestation is part of the actual being. This is the active boss of Shedaklah after the alliance with Zuggtmoy, not the dormant ritual mass or unconscious Thullgrime backup. Proposed physical geometry is experimental DRAFT, not a canonical anatomy claim.\nInput images: ref 1 receptacle and ref 2 slime enemy are MATERIAL/CAMERA/PIXEL QUALITY/COLOR references ONLY. Never copy their humanoid stance, eyes, exposed luminous nucleus, limb layout or the unconscious backup identity.\nStyle/medium: dark fantasy painted pixel-art with deliberate clusters; elevated three-quarter isometric view looking down, front toward lower-right, upper-left light. Olive-green/green-black gelatinous surfaces, dark recesses, restrained pale wet glints. Keep broad simple masses legible at 80 and 128 px, not photoreal, vector or chibi.\nDRAFT body: ONE cohesive asymmetric amorphous creature with a broad grounded gel base, an off-center raised main lobe and THREE thick attached filament extensions of different lengths curling inward. The silhouette is wider and less human than the upright receptacle. Active watchful neutral/resting pose, not an attack blast. No human anatomy, two legs/two arms, fixed face, visible eyes, closed cocoon or exposed bright nucleus. No tiny separate creatures. Filaments are parts of the body, not background roots.\nComposition/framing: entire coherent body centered and SMALL within canvas, max 65 percent of canvas width and height. At least 16 percent clear transparent padding above, below, left and right around all filament tips. Never fill the frame or zoom. Whole base/filaments intact, no visible clipping.\nConstraints: actual transparent alpha; one figure only. No floor, projected shadow, backdrop, scene, aura, giant puddle, loose particles/drops, other slimes, victims, ritual, portal, symbols, armor, crown, text, border, watermark, sheet, animation strip or multiple views. No gore or imported external-franchise anatomy. A static original candidate, not a recolor of a reference.\n",
+      "transparent_background": true,
+      "references": [
+        "assets/enemies/receptaculo_de_juiblex.png",
+        "assets/enemies/slime_de_juiblex.png"
+      ],
+      "preview_heights": [
+        80,
+        128
+      ],
+      "destination": ".atena/generated/art032-juiblex-2026-10-12/sources/MJ01_manifestacao_juiblex_v01.png",
+      "runtime_admission": false,
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-15c92d7e-3bbc-4611-9bbe-4abd0e6408c9.png",
+      "sha256": "be2bb65d0ff458f6a10b83a56cb4a58c1a7d167fde46e5ed93b39b0ce1cf9d21",
+      "tool": "built-in image_gen",
+      "generated_at_utc": "2026-10-12T04:26:50.430074+00:00",
+      "inspection": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "bbox_alpha_above8": [
+          77,
+          209,
+          1201,
+          1099
+        ],
+        "margins_px": [
+          77,
+          209,
+          53,
+          155
+        ],
+        "minimum_margin_percent": 4.23,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "alpha_genuine": true,
+        "transparent_fraction": 0.614639215117684,
+        "no_visible_border_clipping_alpha_above8": true,
+        "margin_10_percent_met": false,
+        "native_copy_hash": true
+      },
+      "audit": {
+        "code": "MJ01",
+        "title": "Manifestação de Juiblex",
+        "revision": "v01",
+        "path": ".atena/generated/art032-juiblex-2026-10-12/sources/MJ01_manifestacao_juiblex_v01.png",
+        "sha256": "be2bb65d0ff458f6a10b83a56cb4a58c1a7d167fde46e5ed93b39b0ce1cf9d21",
+        "size": [
+          1254,
+          1254
+        ],
+        "bbox_alpha_above8": [
+          77,
+          209,
+          1201,
+          1099
+        ],
+        "margins_px": [
+          77,
+          209,
+          53,
+          155
+        ],
+        "minimum_margin_percent": 4.23,
+        "visible_extent_percent": [
+          89.63,
+          70.97
+        ],
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "transparent_fraction": 0.614639215117684,
+        "checks": {
+          "png_rgba": true,
+          "square": true,
+          "native_copy_hash": true,
+          "transparent_alpha": true,
+          "margin_10_percent_met": false,
+          "extent_at_most_70_percent": false,
+          "no_border_clipping_alpha_above8": true
+        },
+        "recommended_for_owner_review": false,
+        "content_state": "DRAFT",
+        "human_visual_acceptance": "PENDING",
+        "runtime_admission": false
+      }
+    },
+    {
+      "code": "MJ01",
+      "name": "manifestacao_juiblex",
+      "title": "Manifestação de Juiblex",
+      "revision": "v02",
+      "content_state": "DRAFT",
+      "status": "PRESERVED_NOT_SELECTED_FRAMING_CORRECTION",
+      "prompt": "Use case: precise-object-edit. Change ONLY framing of this exact MJ01 DRAFT manifestation of Juiblex. Preserve the same one cohesive asymmetric slime creature: broad gel base, raised off-center main lobe, THREE attached bulky filament extensions of different lengths, their inward bends and bulbous tips, all negative spaces, olive-green/green-black pixel-art material, upper-left light, camera and proportions. Do not redesign or add eyes, a face, cocoon, exposed luminous core, limbs, figures or particles. Reduce the ENTIRE unchanged creature to at most 62 percent of square canvas width and height, centered; REQUIRED at least 17 percent empty clear transparent alpha on every side around every drip/filament tip. Do not zoom in or fill canvas. No clipping or loss of tips. Genuine transparent background; no floor/projected shadow, scene, halo, text, frame or watermark. Requested 1024x1024.",
+      "transparent_background": true,
+      "references": [
+        ".atena/generated/art032-juiblex-2026-10-12/sources/MJ01_manifestacao_juiblex_v01.png"
+      ],
+      "preview_heights": [
+        80,
+        128
+      ],
+      "destination": ".atena/generated/art032-juiblex-2026-10-12/sources/MJ01_manifestacao_juiblex_v02.png",
+      "runtime_admission": false,
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-e7c30940-3716-4eb9-8999-ff5170d0bf7c.png",
+      "sha256": "6ff962d5aaad10901a823840f4870d5b2a5d22d78c6930a6b662fb1499c43473",
+      "tool": "built-in image_gen",
+      "generated_at_utc": "2026-10-12T04:28:04.365462+00:00",
+      "inspection": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "bbox_alpha_above8": [
+          185,
+          290,
+          1089,
+          1003
+        ],
+        "margins_px": [
+          185,
+          290,
+          165,
+          251
+        ],
+        "minimum_margin_percent": 13.16,
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "alpha_genuine": true,
+        "transparent_fraction": 0.7555878604732797,
+        "no_visible_border_clipping_alpha_above8": true,
+        "margin_10_percent_met": true,
+        "native_copy_hash": true
+      },
+      "correction_of": "be2bb65d0ff458f6a10b83a56cb4a58c1a7d167fde46e5ed93b39b0ce1cf9d21",
+      "audit": {
+        "code": "MJ01",
+        "title": "Manifestação de Juiblex",
+        "revision": "v02",
+        "path": ".atena/generated/art032-juiblex-2026-10-12/sources/MJ01_manifestacao_juiblex_v02.png",
+        "sha256": "6ff962d5aaad10901a823840f4870d5b2a5d22d78c6930a6b662fb1499c43473",
+        "size": [
+          1254,
+          1254
+        ],
+        "bbox_alpha_above8": [
+          185,
+          290,
+          1089,
+          1003
+        ],
+        "margins_px": [
+          185,
+          290,
+          165,
+          251
+        ],
+        "minimum_margin_percent": 13.16,
+        "visible_extent_percent": [
+          72.09,
+          56.86
+        ],
+        "border_max_alpha": 1,
+        "border_exactly_empty": false,
+        "transparent_fraction": 0.7555878604732797,
+        "checks": {
+          "png_rgba": true,
+          "square": true,
+          "native_copy_hash": true,
+          "transparent_alpha": true,
+          "margin_10_percent_met": true,
+          "extent_at_most_70_percent": false,
+          "no_border_clipping_alpha_above8": true
+        },
+        "recommended_for_owner_review": false,
+        "content_state": "DRAFT",
+        "human_visual_acceptance": "PENDING",
+        "runtime_admission": false
+      }
+    }
+  ],
+  "comparison_cards": [
+    {
+      "title": "MJ01 v03",
+      "path": ".atena/generated/art032-juiblex-2026-10-12/sources/MJ01_manifestacao_juiblex_v03.png",
+      "gallery_path": "sources/MJ01_manifestacao_juiblex_v03.png",
+      "role": "Candidata DRAFT — aceite pendente",
+      "sha256": "ce37eb91132e1d2c22ca04c4c8102213e858dc46275a741207008d65dd20d8bf",
+      "preview_heights": [
+        80,
+        128
+      ],
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox_alpha_above8": [
+        266,
+        357,
+        1025,
+        960
+      ],
+      "margins_px": [
+        266,
+        357,
+        229,
+        294
+      ],
+      "minimum_margin_percent": 18.26,
+      "visible_extent_percent": [
+        60.53,
+        48.09
+      ],
+      "border_max_alpha": 0,
+      "border_exactly_empty": true,
+      "transparent_fraction": 0.8276965067446055
+    },
+    {
+      "title": "Receptáculo de Juiblex",
+      "path": "assets/enemies/receptaculo_de_juiblex.png",
+      "gallery_path": "../../../assets/enemies/receptaculo_de_juiblex.png",
+      "role": "Referência runtime existente — sem alteração",
+      "sha256": "ce81d3cfd119e64f69b81d38592170dfcb2c3f97393945bb03cdabf714a77b96",
+      "preview_heights": [
+        80,
+        128
+      ],
+      "size": [
+        320,
+        480
+      ],
+      "bbox_alpha_above8": [
+        6,
+        21,
+        317,
+        460
+      ],
+      "margins_px": [
+        6,
+        21,
+        3,
+        20
+      ],
+      "minimum_margin_percent": 0.62,
+      "visible_extent_percent": [
+        97.19,
+        91.46
+      ],
+      "border_max_alpha": 2,
+      "border_exactly_empty": false,
+      "transparent_fraction": 0.44629557291666666
+    },
+    {
+      "title": "PT04 massa v02",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT04_massa_thullgrime_v02.png",
+      "gallery_path": "../art032-pontos-2026-10-11/sources/PT04_massa_thullgrime_v02.png",
+      "role": "DRAFT visualmente aceita — estado dormente",
+      "sha256": "1ae928be4144a3a24d2594eb2beeeff17b02cd6b38670685160ce8c9b9f1c1f9",
+      "preview_heights": [
+        80,
+        128
+      ],
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox_alpha_above8": [
+        193,
+        368,
+        1079,
+        948
+      ],
+      "margins_px": [
+        193,
+        368,
+        175,
+        306
+      ],
+      "minimum_margin_percent": 13.96,
+      "visible_extent_percent": [
+        70.65,
+        46.25
+      ],
+      "border_max_alpha": 0,
+      "border_exactly_empty": true,
+      "transparent_fraction": 0.793244711023608
+    }
+  ],
+  "native_outputs": 3,
+  "technical_status": "PASS",
+  "owner_visual_acceptance": "APPROVED_EXPLICITLY",
+  "human_visual_acceptance": "APPROVED_EXPLICITLY",
+  "reading_preview": ".atena/generated/art032-juiblex-2026-10-12/review-reading.png",
+  "gallery_qa": "gallery-qa.json",
+  "next_objective": "Preparar plano futuro de preparação/admissão das dezessete fontes aceitas ART-032; execução ainda requer escopo aprovado",
+  "visual_acceptance_receipt": "visual-acceptance.json",
+  "visual_owner_reply": "Aprovo visualmente MJ01 v03",
+  "visual_accepted_date": "2026-10-12",
+  "last_request_classification": "IN_PLAN"
+}

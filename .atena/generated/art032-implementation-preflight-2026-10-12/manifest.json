@@ -1,0 +1,285 @@
+{
+  "revision": "ART032-IMPLEMENTATION-PREFLIGHT/v01",
+  "date": "2026-10-12",
+  "owner_request": "atena, proxima imagem, depois iplemente",
+  "request_classification": "PLAN_CHANGE_REQUEST",
+  "status": "PREFLIGHT_COMPLETE_REQUEST_CLARIFICATION_PENDING",
+  "approval_mode": "per-plan",
+  "accepted_sources": 17,
+  "historical_native_sources": 27,
+  "receipts": [
+    {
+      "path": ".atena/generated/art032-npcs-2026-10-11/visual-acceptance.json",
+      "sha256": "ae53f3ee56ef1db85476fddb1870389ec2e9fbfac8c22fb499750121777d87f9",
+      "owner_reply": "Aprovo visualmente as quatro revisões"
+    },
+    {
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/visual-acceptance.json",
+      "sha256": "74cc191179ce409245b72cfe8f3e27231c1f02222810bf69cdc0a8588a454c34",
+      "owner_reply": "Aprovo visualmente as seis revisões"
+    },
+    {
+      "path": ".atena/generated/art032-pontos-2026-10-11/visual-acceptance.json",
+      "sha256": "4510def5aa92de9da36b81f7e06b1fce69399a519381e6ff6164ef9a63bb6e27",
+      "owner_reply": "atena, aprovado"
+    },
+    {
+      "path": ".atena/generated/art032-juiblex-2026-10-12/visual-acceptance.json",
+      "sha256": "f03eed716b48799086f8fe392e050476ff71ba0ab1fc82c7b1646860767d5c1d",
+      "owner_reply": "Aprovo visualmente MJ01 v03"
+    }
+  ],
+  "entries": [
+    {
+      "code": "NP01",
+      "revision": "v02",
+      "path": ".atena/generated/art032-npcs-2026-10-11/sources/NP01_joao_barbosa_v02.png",
+      "sha256": "9148e0a1a7c839871fd771201ddc64f9a96d77ebaee37ce6c25fc4622bac9ccc",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED",
+      "proposed_destination": "assets/interactions/npc_joao_barbosa.png",
+      "usage": "escort ally",
+      "event": "feng_tu/escolta_do_peregrino",
+      "transformation": "PROPOSED_GODOT_DERIVATIVE_CROP_ALPHA_PADDING_ASPECT_BASELINE_WITH_ORIGINAL_PRESERVED",
+      "runtime_admission": false
+    },
+    {
+      "code": "NP02",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-2026-10-11/sources/NP02_desertor_durao_v01.png",
+      "sha256": "4d73424cfe0560606fd3e9ddd94ec02b493546873235b4a0a7ad00be7ea57e59",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED",
+      "proposed_destination": "assets/interactions/npc_desertor_durao.png",
+      "usage": "rescue point",
+      "event": "durao/desertores",
+      "transformation": "PROPOSED_GODOT_DERIVATIVE_CROP_ALPHA_PADDING_ASPECT_BASELINE_WITH_ORIGINAL_PRESERVED",
+      "runtime_admission": false
+    },
+    {
+      "code": "NP03",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-2026-10-11/sources/NP03_vitima_enfeiticada_v01.png",
+      "sha256": "3a944afa1c66e8db6ecfcd77077c0564254057a548e0f963b80967abc19b8c85",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED",
+      "proposed_destination": "assets/interactions/npc_vitima_enfeiticada.png",
+      "usage": "rescue point",
+      "event": "shendilavri/vitimas_drenadas",
+      "transformation": "PROPOSED_GODOT_DERIVATIVE_CROP_ALPHA_PADDING_ASPECT_BASELINE_WITH_ORIGINAL_PRESERVED",
+      "runtime_admission": false
+    },
+    {
+      "code": "PT01",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-2026-10-11/sources/PT01_estrela_do_norte_v01.png",
+      "sha256": "a3ec67f0dec4217be2d41dc45945d823aa05a8bf657a02964b0e0a11d030ea7c",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED",
+      "proposed_destination": "assets/interactions/estrela_do_norte.png",
+      "usage": "pilgrimage point",
+      "event": "feng_tu/peregrinacao_da_estrela",
+      "transformation": "PROPOSED_GODOT_DERIVATIVE_CROP_ALPHA_PADDING_ASPECT_BASELINE_WITH_ORIGINAL_PRESERVED",
+      "runtime_admission": false
+    },
+    {
+      "code": "NP04",
+      "title": "Nyxara",
+      "revision": "v02",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP04_nyxara_v02.png",
+      "sha256": "ef545d2a49727264401e19e3d2dd7f9b653551bc0aefa41616298fc1f583a5c1",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED",
+      "proposed_destination": "assets/interactions/npc_nyxara.png",
+      "usage": "first reward ally",
+      "event": "shendilavri/vitimas_drenadas",
+      "transformation": "PROPOSED_GODOT_DERIVATIVE_CROP_ALPHA_PADDING_ASPECT_BASELINE_WITH_ORIGINAL_PRESERVED",
+      "runtime_admission": false
+    },
+    {
+      "code": "NP05",
+      "title": "Vaelis",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP05_vaelis_v01.png",
+      "sha256": "0dc79c51e38ddfca4ae47bc2d549fe9ba162eb7d410eefa9ae5b66806bca0def",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED",
+      "proposed_destination": "assets/interactions/npc_vaelis.png",
+      "usage": "second reward ally",
+      "event": "shendilavri/vitimas_drenadas",
+      "transformation": "PROPOSED_GODOT_DERIVATIVE_CROP_ALPHA_PADDING_ASPECT_BASELINE_WITH_ORIGINAL_PRESERVED",
+      "runtime_admission": false
+    },
+    {
+      "code": "NP06",
+      "title": "Graz'zt aliado",
+      "revision": "v02",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP06_grazzt_aliado_v02.png",
+      "sha256": "90fc10b2430106b0bc5d96b3607e3ad736c65d80cfe70d0e60c9916d314f8618",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED",
+      "proposed_destination": "assets/interactions/npc_grazzt_aliado.png",
+      "usage": "pact point and reward ally",
+      "event": "goranthis/o_nome_tres_vezes",
+      "transformation": "PROPOSED_GODOT_DERIVATIVE_CROP_ALPHA_PADDING_ASPECT_BASELINE_WITH_ORIGINAL_PRESERVED",
+      "runtime_admission": false
+    },
+    {
+      "code": "NP07",
+      "title": "Reaper barqueiro",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP07_reaper_barqueiro_v01.png",
+      "sha256": "1ddc09c66221fe19593e0f2c2a76823dd1db0760cb67f99f67c12cd42cd11642",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED",
+      "proposed_destination": "assets/interactions/npc_reaper_barqueiro.png",
+      "usage": "pact point",
+      "event": "shedaklah/barqueiro_do_estige",
+      "transformation": "PROPOSED_GODOT_DERIVATIVE_CROP_ALPHA_PADDING_ASPECT_BASELINE_WITH_ORIGINAL_PRESERVED",
+      "runtime_admission": false
+    },
+    {
+      "code": "NP08",
+      "title": "Vhaerith Aetherion",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP08_vhaerith_aetherion_v01.png",
+      "sha256": "fe79429dc82351130d0a2ab95b10e98df5f94bf12be7f0904888ba4016ed06de",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED",
+      "proposed_destination": "assets/interactions/npc_vhaerith_aetherion.png",
+      "usage": "pact point",
+      "event": "durao/vhaerith_na_jaula",
+      "transformation": "PROPOSED_GODOT_DERIVATIVE_CROP_ALPHA_PADDING_ASPECT_BASELINE_WITH_ORIGINAL_PRESERVED",
+      "runtime_admission": false
+    },
+    {
+      "code": "NP09",
+      "title": "Mercador de Rivenheart",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP09_mercador_rivenheart_v01.png",
+      "sha256": "0bcefb637594d1cda861d05cd14a7b47f06297a2e79bfb60098b809ccc84b1f9",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED",
+      "proposed_destination": "assets/interactions/npc_mercador_rivenheart.png",
+      "usage": "pact point",
+      "event": "shendilavri/mercador_de_rivenheart",
+      "transformation": "PROPOSED_GODOT_DERIVATIVE_CROP_ALPHA_PADDING_ASPECT_BASELINE_WITH_ORIGINAL_PRESERVED",
+      "runtime_admission": false
+    },
+    {
+      "code": "PT02",
+      "title": "Trono de Zuggtmoy",
+      "revision": "v02",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT02_trono_zuggtmoy_v02.png",
+      "sha256": "14e1d3b0749f887b328a1e5aea2c04e792a1e48af0d42701b0dbb6bd51984cc2",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED",
+      "proposed_destination": "assets/interactions/trono_zuggtmoy.png",
+      "usage": "collect target",
+      "event": "shedaklah/pedido_de_zuggtmoy",
+      "transformation": "PROPOSED_GODOT_DERIVATIVE_CROP_ALPHA_PADDING_ASPECT_BASELINE_WITH_ORIGINAL_PRESERVED",
+      "runtime_admission": false
+    },
+    {
+      "code": "PT03",
+      "title": "Arco de pedra",
+      "revision": "v02",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT03_arco_pedra_v02.png",
+      "sha256": "3ecb7fc0291ea7704332833f8cf026cd9844d24a10c806020a97939d31bbe0f6",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED",
+      "proposed_destination": "assets/interactions/arco_pedra.png",
+      "usage": "collect target",
+      "event": "shedaklah/portal_sem_vao",
+      "transformation": "PROPOSED_GODOT_DERIVATIVE_CROP_ALPHA_PADDING_ASPECT_BASELINE_WITH_ORIGINAL_PRESERVED",
+      "runtime_admission": false
+    },
+    {
+      "code": "PT04",
+      "title": "Massa de Thullgrime",
+      "revision": "v02",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT04_massa_thullgrime_v02.png",
+      "sha256": "1ae928be4144a3a24d2594eb2beeeff17b02cd6b38670685160ce8c9b9f1c1f9",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED",
+      "proposed_destination": "assets/interactions/massa_thullgrime.png",
+      "usage": "intercept target",
+      "event": "molor/ritual_de_estagnacao",
+      "transformation": "PROPOSED_GODOT_DERIVATIVE_CROP_ALPHA_PADDING_ASPECT_BASELINE_WITH_ORIGINAL_PRESERVED",
+      "runtime_admission": false
+    },
+    {
+      "code": "PT05",
+      "title": "Coração de Limo",
+      "revision": "v01",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT05_coracao_limo_v01.png",
+      "sha256": "ca3c402e73dafab3ce5b96118b22225276aa0bbab24078f430e3af5f94e5690e",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED",
+      "proposed_destination": "assets/interactions/coracao_limo.png",
+      "usage": "drop from elite",
+      "event": "shedaklah/pedido_de_zuggtmoy",
+      "transformation": "PROPOSED_GODOT_DERIVATIVE_CROP_ALPHA_PADDING_ASPECT_BASELINE_WITH_ORIGINAL_PRESERVED",
+      "runtime_admission": false
+    },
+    {
+      "code": "PT06",
+      "title": "Esporo de Zuggtmoy",
+      "revision": "v02",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT06_esporo_zuggtmoy_v02.png",
+      "sha256": "dbffff2eae56c7a09f4cb1e04c9202deb18a3e909e5c9d13161f7810012fe22d",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED",
+      "proposed_destination": "assets/interactions/esporo_zuggtmoy.png",
+      "usage": "collect item",
+      "event": "shedaklah/portal_sem_vao",
+      "transformation": "PROPOSED_GODOT_DERIVATIVE_CROP_ALPHA_PADDING_ASPECT_BASELINE_WITH_ORIGINAL_PRESERVED",
+      "runtime_admission": false
+    },
+    {
+      "code": "PT07",
+      "title": "Limo de Juiblex",
+      "revision": "v02",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT07_limo_juiblex_v02.png",
+      "sha256": "09f4612a81b6a7b06b12b229c1c65130b69ae3ed395faae65abd2343b531b5c1",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED",
+      "proposed_destination": "assets/interactions/limo_juiblex.png",
+      "usage": "collect item",
+      "event": "shedaklah/portal_sem_vao",
+      "transformation": "PROPOSED_GODOT_DERIVATIVE_CROP_ALPHA_PADDING_ASPECT_BASELINE_WITH_ORIGINAL_PRESERVED",
+      "runtime_admission": false
+    },
+    {
+      "code": "MJ01",
+      "title": "Manifestação de Juiblex",
+      "revision": "v03",
+      "path": ".atena/generated/art032-juiblex-2026-10-12/sources/MJ01_manifestacao_juiblex_v03.png",
+      "sha256": "ce37eb91132e1d2c22ca04c4c8102213e858dc46275a741207008d65dd20d8bf",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED",
+      "proposed_destination": "assets/enemies/manifestacao_de_juiblex.png",
+      "usage": "static boss sprite",
+      "event": "shedaklah/pedido_de_zuggtmoy",
+      "transformation": "PROPOSED_GODOT_DERIVATIVE_CROP_ALPHA_PADDING_ASPECT_BASELINE_WITH_ORIGINAL_PRESERVED",
+      "runtime_admission": false
+    }
+  ],
+  "runtime_snapshot": [
+    {
+      "path": "core/happenings.gd",
+      "sha256": "9efb15d95c88ec1682e8b4b130273dbbc8428241528aded4bfd57617197c5f04"
+    },
+    {
+      "path": "ui/overlay.gd",
+      "sha256": "bcf3ac3e6285db20fc626cc91d762cbe9aab8b417e5bd9a7a80a1df1a6434a50"
+    },
+    {
+      "path": "ui/enemy_view.gd",
+      "sha256": "4ee77ceea765859439d60d0e331d37bbc5e23bb7f25867ae3af257f31d51f9cd"
+    },
+    {
+      "path": "data/stage_events.json",
+      "sha256": "7d6f8dae1962cbf97208c86a95104446af37fc09daf332a98298d7d9e4e4186a"
+    },
+    {
+      "path": "assets/enemies/manifestacao_de_juiblex.png",
+      "sha256": "ce81d3cfd119e64f69b81d38592170dfcb2c3f97393945bb03cdabf714a77b96"
+    }
+  ],
+  "checks": {
+    "source_acceptance_hashes": "PASS",
+    "event_consumption_ids": "PASS",
+    "prior_sources_runtime_and_plan071": "UNCHANGED_HASH_VERIFIED"
+  },
+  "pending_decision": "Which new image/front comes first, and whether later implementation means ART-032",
+  "image_generation": false,
+  "image_transformation": false,
+  "runtime_admission": false,
+  "integration": false,
+  "canonical_promotion": false,
+  "commit_push_build": false
+}

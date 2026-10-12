@@ -1,4 +1,130 @@
 version: 2
+art032_publication_2026_10_12:
+  plan: PLAN-ART032-PUBLISH
+  revision: v01
+  request_classification: IN_PLAN
+  status: IN_PROGRESS
+  mode: per-plan
+  owner_reply: 'atena, commit e push'
+  checkpoint: S-002/COMMIT_AUTHORIZED
+  current_step_position: 2
+  completed_steps: 1
+  total_steps: 3
+  remaining_steps_after_current: 1
+  ordered_steps: [S-001, S-002, S-003]
+  branch: codex/assets-preparation-2026-10-10
+  destination: origin/codex/assets-preparation-2026-10-10
+  scope: ART032_IMPLEMENTATION_AND_UNCOMMITTED_ART032_PRODUCTION_RECORDS
+  content_state: DRAFT_AUTHORIZED_RUNTIME_USE
+  canonical_promotion: false
+  main_merge_release_export: NOT_REQUESTED
+  evidence: .atena/generated/art032-publication-2026-10-12/plan.md
+art032_implementation_2026_10_12:
+  plan: PLAN-ART032-IMPLEMENT
+  revision: v01
+  state_file: .atena/state/art032-implementation.yaml
+  request_classification: PLAN_CHANGE_REQUEST
+  status: COMPLETED_TECHNICAL_DRAFT
+  mode: per-plan
+  owner_reply: 'pode implementar'
+  approval_status: APPROVED_EXPLICITLY
+  checkpoint: S-006/TECHNICAL_COMPLETION_RECORDED
+  current_step_position: 6
+  completed_steps: 6
+  total_steps: 6
+  remaining_steps_after_current: 0
+  source_count: 17
+  prepared: 17
+  admitted: 17
+  content_state: DRAFT_AUTHORIZED_RUNTIME_USE
+  runtime_admission: true
+  canonical_promotion: false
+  commit_push_build: NOT_AUTHORIZED
+  evidence: .atena/evidence/art032-implementation-2026-10-12.md
+  technical_status: PASS
+  human_playtest: PENDING_NOT_PERFORMED
+  captures: 7
+  biomes: 6
+  gallery: .atena/generated/art032-implementation-2026-10-12/index.html
+  next_objective: "Playtest humano conforme roteiro; pendente, não realizado"
+  next_execution_authorized: false
+art032_next_request_2026_10_12:
+  request: ART032-NEXT-REQUEST
+  revision: v01
+  state_file: .atena/state/art032-next-request-2026-10-12.yaml
+  request_classification: PLAN_CHANGE_REQUEST
+  status: IMPLEMENTATION_COMPLETED
+  mode: per-plan
+  checkpoint: IMPLEMENTATION_TECHNICALLY_COMPLETED
+  evidence: .atena/generated/art032-implementation-preflight-2026-10-12/preflight.md
+  next_execution_authorized: false
+art032_juiblex_2026_10_12:
+  plan: PLAN-ART032-JUIBLEX
+  revision: v01
+  state_file: .atena/state/art032-juiblex.yaml
+  request_classification: PLAN_CHANGE_REQUEST
+  status: COMPLETED_VISUALLY_ACCEPTED_DRAFT
+  mode: per-plan
+  approval_status: APPROVED_EXPLICITLY
+  checkpoint: S-005/OWNER_VISUAL_ACCEPTANCE_RECORDED
+  current_step_position: 5
+  completed_steps: 5
+  total_steps: 5
+  remaining_steps_after_current: 0
+  proposed_sources: [MJ01]
+  generated: 1
+  content_state: DRAFT
+  runtime_admission: false
+  canonical_promotion: false
+  git_publication_build: NOT_AUTHORIZED
+  evidence: .atena/evidence/art032-juiblex-delivery-2026-10-12.md
+  owner_front_reply: 'atena, continue'
+  next_objective: "Preparar plano futuro de preparação/admissão das dezessete fontes aceitas ART-032; execução ainda requer escopo aprovado"
+  next_execution_authorized: false
+  scope_owner_reply: "Aprovo MJ01 DRAFT"
+  approved_date: "2026-10-12"
+  technical_status: PASS
+  review_candidates: [MJ01_v03]
+  reading_preview: .atena/generated/art032-juiblex-2026-10-12/review-reading.png
+  gallery: .atena/generated/art032-juiblex-2026-10-12/index.html
+  gallery_browser_verification: NOT_ATTEMPTED_KNOWN_FILE_URL_POLICY_BLOCK
+  human_visual_acceptance: APPROVED_EXPLICITLY
+  visual_owner_reply: "Aprovo visualmente MJ01 v03"
+  visual_accepted_date: "2026-10-12"
+  visual_acceptance_receipt: .atena/generated/art032-juiblex-2026-10-12/visual-acceptance.json
+  last_request_classification: IN_PLAN
+art032_pontos_2026_10_11:
+  plan: PLAN-ART032-PONTOS
+  revision: v01
+  state_file: .atena/state/art032-pontos.yaml
+  request_classification: PLAN_CHANGE_REQUEST
+  status: COMPLETED_VISUALLY_ACCEPTED_DRAFT
+  mode: per-plan
+  approval_status: APPROVED_EXPLICITLY
+  checkpoint: S-005/OWNER_VISUAL_ACCEPTANCE_RECORDED
+  current_step_position: 5
+  completed_steps: 5
+  total_steps: 5
+  remaining_steps_after_current: 0
+  proposed_sources: [PT02, PT03, PT04, PT05, PT06, PT07]
+  generated: 6
+  content_state: DRAFT
+  runtime_admission: false
+  canonical_promotion: false
+  git_publication_build: NOT_AUTHORIZED_FOR_NEW_OUTPUTS
+  evidence: .atena/evidence/art032-pontos-2026-10-11.md
+  next_objective: "Preparar plano futuro da Manifestação de Juiblex ou preparação/admissão das dezesseis fontes aceitas ART-032; nova execução depende de escopo aprovado"
+  scope_owner_reply: "atena, aprovado, commite e continue a Próxima frente proposta: os pontos de acontecimentos restantes de ART-032."
+  technical_status: PASS_WITH_NATIVE_ALPHA_NOTE
+  review_candidates: [PT02_v02, PT03_v02, PT04_v02, PT05_v01, PT06_v02, PT07_v02]
+  human_visual_acceptance: APPROVED_EXPLICITLY
+  gallery: .atena/generated/art032-pontos-2026-10-11/index.html
+  previous_lots_local_commit: 51b51f7369ae34eede997435e6eb52ea057daf25
+  previous_lots_commit_receipt: .atena/generated/art032-commit-2026-10-11/commit-receipt.json
+  visual_owner_reply: "atena, aprovado"
+  visual_accepted_date: "2026-10-12"
+  visual_acceptance_receipt: .atena/generated/art032-pontos-2026-10-11/visual-acceptance.json
+  next_execution_authorized: false
 art032_npcs_lote02_2026_10_11:
   plan: PLAN-ART032-NPCS-LOTE02
   revision: v01
