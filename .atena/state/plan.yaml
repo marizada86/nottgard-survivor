@@ -1,4 +1,160 @@
 version: 2
+hero_local_commit_2026_10_13:
+  plan: PLAN-053
+  revision: HERO-COMMIT/v01
+  request_classification: IN_PLAN
+  mode: per-plan
+  status: VALIDATED_READY_TO_COMMIT
+  owner_reply: "commit e continue"
+  checkpoint: S-002/LOCAL_COMMIT_AUTHORIZED
+  ordered_steps: [S-001, S-002, S-003]
+  current_step_position: 2
+  completed_steps: 1
+  total_steps: 3
+  remaining_steps_after_current: 1
+  content_state: DRAFT
+  push_merge_export: NOT_AUTHORIZED
+  runtime_admission: false
+  canonical_promotion: false
+  specification: .atena/generated/hero-commit-2026-10-13/plan.md
+  next_objective: "Verificar commit e retornar à análise AO09/AO10"
+hero_spread_exception_2026_10_13:
+  plan: PLAN-053
+  revision: DEV-024/hero-spread-exception-v01
+  last_request: 'atena, continue'
+  request_classification: IN_PLAN
+  proposed_change_classification: PLAN_CHANGE_REQUEST
+  mode: per-plan
+  status: COMPLETED_VISUALLY_ACCEPTED_DRAFT_WITH_EXCEPTION
+  approval_status: APPROVED_EXPLICITLY_WITH_LIMITED_EXCEPTION
+  checkpoint: S-003/TWO_V02_ACCEPTED_WITH_LIMITED_EXCEPTION
+  ordered_steps: [S-001, S-002, S-003]
+  current_step_position: 3
+  completed_steps: 3
+  total_steps: 3
+  remaining_steps_after_current: 0
+  content_state: DRAFT
+  proposed_codes: [AO04, AO07]
+  proposed_candidate_revision: body-pivot-v01/candidates-v02
+  proposed_exception_maxima_px: [14, 13]
+  global_spread_limit_px: 12
+  existing_accepted_strips: 12
+  existing_accepted_frames: 64
+  raster_modification: false
+  runtime_admission: false
+  canonical_promotion: false
+  commit_push_export: NOT_AUTHORIZED
+  specification: .atena/specs/SPEC-121-retomada-fila-imagens/hero-spread-exception-v01.md
+  review: .atena/generated/hero-spread-review-2026-10-13/review.json
+  gallery: .atena/generated/hero-spread-review-2026-10-13/index.html
+  evidence: .atena/evidence/hero-spread-review-2026-10-13.md
+  next_objective: 'Avaliar AO09/AO10; decidir ER03/ER06 antes da admissão'
+  next_execution_authorized: false
+  owner_reply: "Aprovo as duas v02 com exceção de 14/13 px (recomendado)"
+  accepted_date: "2026-10-13"
+  last_request_classification: IN_PLAN
+  visual_acceptance_receipt: .atena/generated/hero-spread-review-2026-10-13/visual-acceptance.json
+  accepted_hero_inventory: .atena/generated/hero-spread-review-2026-10-13/accepted-hero-inventory.json
+  accepted_total_strips: 14
+  accepted_total_frames: 76
+  remaining_animation_strips: [AO09, AO10, ER03, ER06]
+hero_wide_actions_2026_10_12:
+  plan: PLAN-053
+  revision: DEV-024/hero-wide-actions-v01
+  request_classification: PLAN_CHANGE_REQUEST
+  mode: per-plan
+  status: COMPLETED_VISUALLY_ACCEPTED_DRAFT
+  approval_status: APPROVED_EXPLICITLY
+  checkpoint: S-005/FOUR_WIDE_V01_ACCEPTED
+  current_step_position: 5
+  completed_steps: 5
+  total_steps: 5
+  remaining_steps_after_current: 0
+  ordered_steps: [BODY_GROUND_REFERENCES, PREPARE_20, AUDIT, GALLERY, OWNER_VISUAL_GATE]
+  proposed_codes: [AO08, ER08, ER09, ER10]
+  proposed_frames: 20
+  proposed_cell: [512, 512]
+  proposed_ground_y: 448
+  content_state: DRAFT
+  runtime_admission: false
+  canonical_promotion: false
+  commit_push_export: NOT_AUTHORIZED
+  specification: .atena/specs/SPEC-121-retomada-fila-imagens/hero-wide-actions-v01.md
+  next_objective: 'Resolver AO04/AO07/AO09/AO10/ER03/ER06; preservar doze tiras DRAFT aceitas'
+  next_execution_authorized: false
+  owner_reply: "Aprovo a preparação das quatro ações em 512×512"
+  manifest: .atena/generated/hero-wide-actions-2026-10-12/manifest.json
+  technical_status: PASS
+  prepared_frames: 20
+  prepared_strips: 4
+  human_visual_acceptance: FOUR_WIDE_V01_APPROVED_EXPLICITLY
+  gallery: .atena/generated/hero-wide-actions-2026-10-12/index.html
+  board: .atena/generated/hero-wide-actions-2026-10-12/review-board.png
+  evidence: .atena/evidence/hero-wide-actions-2026-10-12.md
+  last_request_classification: IN_PLAN
+  owner_visual_reply: "Aprovo visualmente as quatro wide v01"
+  accepted_date: "2026-10-12"
+  visual_acceptance_receipt: .atena/generated/hero-wide-actions-2026-10-12/visual-acceptance.json
+  accepted_hero_inventory: .atena/generated/hero-wide-actions-2026-10-12/accepted-hero-inventory.json
+  accepted_total_strips: 12
+  accepted_total_frames: 64
+  remaining_animation_strips: [AO04, AO07, AO09, AO10, ER03, ER06]
+hero_mask_feasibility_2026_10_12:
+  plan: PLAN-053
+  revision: DEV-024/v03/mask-feasibility-v01
+  request_classification: IN_PLAN
+  mode: per-plan
+  status: COMPLETED_NATIVE_EXTRACTION_PARTIAL_DRAFT
+  checkpoint: S-007/MASKS/NATIVE-16-VERIFIED
+  current_step_position: 4
+  completed_steps: 4
+  total_steps: 4
+  remaining_steps_after_current: 0
+  ordered_steps: [INPUTS, CORRIDORS, NATIVE_EXTRACTION, VERIFICATION]
+  content_state: DRAFT
+  examined: 5
+  native_sources_extracted: [ER08, ER09, ER10]
+  native_frames: 16
+  retained_ambiguous: [AO09, AO10]
+  source_recomposition: EXACT_RGBA
+  runtime_admission: false
+  canonical_promotion: false
+  commit_push_export: NOT_AUTHORIZED
+  evidence: .atena/evidence/hero-mask-feasibility-2026-10-12.md
+  gallery: .atena/generated/hero-mask-feasibility-2026-10-12/index.html
+  next_objective: 'Aprovar ensaio em canvas ampliado para ações; manter demais decisões pendentes'
+  next_execution_authorized: false
+hero_body_pivot_2026_10_12:
+  plan: PLAN-053
+  revision: DEV-024/v03/body-pivot-v01
+  request_classification: IN_PLAN
+  mode: per-plan
+  status: COMPLETED_PARTIAL_VISUALLY_ACCEPTED_DRAFT
+  checkpoint: S-007/BODY-PIVOT/EIGHT-V02-ACCEPTED
+  current_step_position: 4
+  completed_steps: 4
+  total_steps: 4
+  remaining_steps_after_current: 0
+  ordered_steps: [SOURCES_LANDMARKS, PREPARE, AUDIT, GALLERY_GATE]
+  content_state: DRAFT
+  strips: 11
+  input_frames: 60
+  runtime_admission: false
+  canonical_promotion: false
+  commit_push_export: NOT_AUTHORIZED
+  specification: .atena/specs/SPEC-121-retomada-fila-imagens/hero-body-pivot-v01.md
+  manifest: .atena/generated/hero-body-pivot-2026-10-12/manifest.json
+  next_objective: 'Avaliar máscaras/separação das cinco ações retidas; preservar oito aceites e demais decisões'
+  technical_candidates: [AO02, AO03, AO05, AO06, ER02, ER04, ER05, ER07]
+  held_current: [AO04, AO07, AO08]
+  held_source_separation_or_count: [ER03, ER06, AO09, AO10, ER08, ER09, ER10]
+  gallery: .atena/generated/hero-body-pivot-2026-10-12/index.html
+  audit: .atena/generated/hero-body-pivot-2026-10-12/audit.json
+  evidence: .atena/evidence/hero-body-pivot-2026-10-12.md
+  human_visual_acceptance: EIGHT_V02_APPROVED_EXPLICITLY
+  next_execution_authorized: false
+  owner_visual_reply: "Aprovo visualmente as oito candidatas v02"
+  acceptance_receipt: .atena/generated/hero-body-pivot-2026-10-12/visual-acceptance.json
 art032_publication_2026_10_12:
   plan: PLAN-ART032-PUBLISH
   revision: v01
@@ -357,19 +513,25 @@ image_queue_resume_2026_10_10:
   source_state: 'C:/Users/Higor Rossini/.codex/worktrees/20f4/nottgard-survivor/.atena/state/dev-024-art045-pilots.yaml'
   plan: PLAN-053
   revision: DEV-024/v03
-  checkpoint: S-007/ORIGINAL-GENERATIONS/REVIEW
+  checkpoint: S-007/ORIGINAL-GENERATIONS/BODY-FEET-LANDMARKS
   content_state: DRAFT
   runtime_admission: false
   source_decision: APPROVED_RECOMMENDED_ROUTE_DECIDE_BEFORE_INTEGRATION
   owner_reply: 'atena, aprovado'
   route_scope: 'Preparar demais pecas; ER03 sete poses candidato; ER06 separado pelo corte; decidir antes da integracao'
-  preparation_status: COMPLETED_SOURCE_SNAPSHOT_AND_GEOMETRY_PREFLIGHT
+  preparation_status: EXTRACTION_REVIEW_COMPLETED_11_EXTRACTABLE_7_HELD
   prepared_strips: 16
   prior_extractions_available: 5
-  extraction_review_remaining: 11
+  extraction_review_remaining: 0
+  extraction_review_state: .atena/state/hero-extraction-review-2026-10-11.yaml
+  extraction_native_frames: 30
+  extraction_new_safe_strips: 6
+  extraction_held_strips: [AO09, AO10, ER08, ER09, ER10]
+  external_source_worktree_available: false
   preparation_manifest: .atena/generated/hero-normalization-2026-10-10/manifest.json
   preflight: .atena/generated/hero-normalization-2026-10-10/preflight.json
-  next_objective: 'Revisar extracao das 11 tiras e marcar corpo/pes antes de aplicar escala comum e pivo'
+  preflight_role: HISTORICAL_GEOMETRY_BEFORE_EXTRACTION_REVIEW
+  next_objective: 'Marcar corpo/pes nas onze tiras extraiveis; avaliar mascaras das cinco retidas antes de normalizar'
   evidence: .atena/evidence/image-queue-resume-2026-10-10.md
 # Reconciliado por Atena em 2026-10-05: PLAN-056 aceito pelo dono; commits reais registrados.
 active_plan:

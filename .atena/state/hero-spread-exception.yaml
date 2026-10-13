@@ -1,0 +1,41 @@
+version: 1
+hero_spread_exception_2026_10_13:
+  plan: PLAN-053
+  revision: DEV-024/hero-spread-exception-v01
+  last_request: 'atena, continue'
+  request_classification: IN_PLAN
+  proposed_change_classification: PLAN_CHANGE_REQUEST
+  mode: per-plan
+  status: COMPLETED_VISUALLY_ACCEPTED_DRAFT_WITH_EXCEPTION
+  approval_status: APPROVED_EXPLICITLY_WITH_LIMITED_EXCEPTION
+  checkpoint: S-003/TWO_V02_ACCEPTED_WITH_LIMITED_EXCEPTION
+  ordered_steps: [S-001, S-002, S-003]
+  current_step_position: 3
+  completed_steps: 3
+  total_steps: 3
+  remaining_steps_after_current: 0
+  content_state: DRAFT
+  proposed_codes: [AO04, AO07]
+  proposed_candidate_revision: body-pivot-v01/candidates-v02
+  proposed_exception_maxima_px: [14, 13]
+  global_spread_limit_px: 12
+  existing_accepted_strips: 12
+  existing_accepted_frames: 64
+  raster_modification: false
+  runtime_admission: false
+  canonical_promotion: false
+  commit_push_export: NOT_AUTHORIZED
+  specification: .atena/specs/SPEC-121-retomada-fila-imagens/hero-spread-exception-v01.md
+  review: .atena/generated/hero-spread-review-2026-10-13/review.json
+  gallery: .atena/generated/hero-spread-review-2026-10-13/index.html
+  evidence: .atena/evidence/hero-spread-review-2026-10-13.md
+  next_objective: 'Avaliar AO09/AO10; decidir ER03/ER06 antes da admissão'
+  next_execution_authorized: false
+  owner_reply: "Aprovo as duas v02 com exceção de 14/13 px (recomendado)"
+  accepted_date: "2026-10-13"
+  last_request_classification: IN_PLAN
+  visual_acceptance_receipt: .atena/generated/hero-spread-review-2026-10-13/visual-acceptance.json
+  accepted_hero_inventory: .atena/generated/hero-spread-review-2026-10-13/accepted-hero-inventory.json
+  accepted_total_strips: 14
+  accepted_total_frames: 76
+  remaining_animation_strips: [AO09, AO10, ER03, ER06]

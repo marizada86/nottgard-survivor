@@ -1,0 +1,14 @@
+{
+  "status": "LOCAL_FILES_AND_METADATA_PASS",
+  "links": 55,
+  "animation_jobs": 4,
+  "native_canvas": [
+    512,
+    512
+  ],
+  "idle_reference_copy": "first 256x384 placed at x128/y80 without resizing",
+  "small_display_basis": "512 * chosen body height / 290 or 300, same geometry for idle and action",
+  "native_visual_inspection": "FOUR_STRIPS_AND_COMPARISON_BOARD_INSPECTED",
+  "browser_controls_test": "NOT_PERFORMED_KNOWN_FILE_URL_POLICY_BLOCK",
+  "human_visual_acceptance": "FOUR_WIDE_V01_APPROVED_EXPLICITLY_DRAFT"
+}

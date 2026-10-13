@@ -218,3 +218,14 @@ image_git_n03_publication:
   route: publish-now-then-return
   receipt: .atena/generated/n03-publication-2026-10-09/plan.json
   return_checkpoint: S-007/VFX/FILA-022/N-REMAINING
+
+queue_inventory_reconciliation_2026_10_11:
+  status: OLDER_N03_CURSOR_SUPERSEDED_BY_VERIFIED_LOCAL_RECORD
+  source_git_ref: cf17d7c3a0ff059320c7f580fd6a7d4ef8ec8aa1
+  source_snapshot: .atena/generated/art032-npcs-2026-10-11/historical-queue-state-cf17d7c.yaml
+  source_counts: {fila022: '36/36', fila023: '60/60', fila027: '20/20'}
+  current_authoritative_hero_review: .atena/state/hero-extraction-review-2026-10-11.yaml
+  proposed_next_generation: .atena/state/art032-npcs-piloto.yaml
+  warning: 'Older top-level N03 publication checkpoint is historical; do not regenerate missing copies from that cursor'
+  merge: NOT_PERFORMED
+  plan071_return: PRESERVED

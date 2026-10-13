@@ -1,0 +1,26 @@
+version: 1
+hero_mask_feasibility_2026_10_12:
+  plan: PLAN-053
+  revision: DEV-024/v03/mask-feasibility-v01
+  request_classification: IN_PLAN
+  mode: per-plan
+  status: COMPLETED_NATIVE_EXTRACTION_PARTIAL_DRAFT
+  checkpoint: S-007/MASKS/NATIVE-16-VERIFIED
+  current_step_position: 4
+  completed_steps: 4
+  total_steps: 4
+  remaining_steps_after_current: 0
+  ordered_steps: [INPUTS, CORRIDORS, NATIVE_EXTRACTION, VERIFICATION]
+  content_state: DRAFT
+  examined: 5
+  native_sources_extracted: [ER08, ER09, ER10]
+  native_frames: 16
+  retained_ambiguous: [AO09, AO10]
+  source_recomposition: EXACT_RGBA
+  runtime_admission: false
+  canonical_promotion: false
+  commit_push_export: NOT_AUTHORIZED
+  evidence: .atena/evidence/hero-mask-feasibility-2026-10-12.md
+  gallery: .atena/generated/hero-mask-feasibility-2026-10-12/index.html
+  next_objective: 'Aprovar ensaio em canvas ampliado para ações; manter demais decisões pendentes'
+  next_execution_authorized: false

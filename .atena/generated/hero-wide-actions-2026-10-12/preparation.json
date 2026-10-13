@@ -1,0 +1,447 @@
+{
+	"cell": [
+		512,
+		512
+	],
+	"engine": "4.7.2-stable (official)",
+	"frames": 20,
+	"records": [
+		{
+			"code": "AO08",
+			"content_state": "DRAFT",
+			"frames": [
+				{
+					"frame": 1.0,
+					"ground_y_geometry": 447.58273381295,
+					"head_y_geometry": 158.0,
+					"hip_x_geometry": 255.589712230216,
+					"paste_rect": [
+						183,
+						158,
+						147,
+						290
+					],
+					"path": "frames/AO08/f01.png",
+					"scale": 0.41726618705036,
+					"used_rect": [
+						67,
+						27,
+						353,
+						694
+					]
+				},
+				{
+					"frame": 2.0,
+					"ground_y_geometry": 448.41726618705,
+					"head_y_geometry": 158.0,
+					"hip_x_geometry": 256.356748201439,
+					"paste_rect": [
+						178,
+						158,
+						189,
+						290
+					],
+					"path": "frames/AO08/f02.png",
+					"scale": 0.41726618705036,
+					"used_rect": [
+						37,
+						24,
+						453,
+						696
+					]
+				},
+				{
+					"frame": 3.0,
+					"ground_y_geometry": 447.58273381295,
+					"head_y_geometry": 158.0,
+					"hip_x_geometry": 255.934474820144,
+					"paste_rect": [
+						178,
+						158,
+						271,
+						290
+					],
+					"path": "frames/AO08/f03.png",
+					"scale": 0.41726618705036,
+					"used_rect": [
+						9,
+						26,
+						649,
+						694
+					]
+				},
+				{
+					"frame": 4.0,
+					"ground_y_geometry": 448.251798561151,
+					"head_y_geometry": 157.0,
+					"hip_x_geometry": 256.293683453237,
+					"paste_rect": [
+						185,
+						157,
+						146,
+						291
+					],
+					"path": "frames/AO08/f04.png",
+					"scale": 0.41726618705036,
+					"used_rect": [
+						6,
+						23,
+						349,
+						698
+					]
+				}
+			],
+			"runtime_admission": false,
+			"scale": 0.41726618705036,
+			"strip": "strips/AO08_wide_v01.png"
+		},
+		{
+			"code": "ER08",
+			"content_state": "DRAFT",
+			"frames": [
+				{
+					"frame": 1.0,
+					"ground_y_geometry": 447.58273381295,
+					"head_y_geometry": 147.58273381295,
+					"hip_x_geometry": 256.438848920863,
+					"paste_rect": [
+						155,
+						126,
+						209,
+						322
+					],
+					"path": "frames/ER08/f01.png",
+					"scale": 0.539568345323741,
+					"used_rect": [
+						42,
+						109,
+						387,
+						596
+					]
+				},
+				{
+					"frame": 2.0,
+					"ground_y_geometry": 448.201438848921,
+					"head_y_geometry": 151.978417266187,
+					"hip_x_geometry": 256.395683453237,
+					"paste_rect": [
+						101,
+						125,
+						285,
+						323
+					],
+					"path": "frames/ER08/f02.png",
+					"scale": 0.539568345323741,
+					"used_rect": [
+						16,
+						107,
+						528,
+						599
+					]
+				},
+				{
+					"frame": 3.0,
+					"ground_y_geometry": 448.446043165468,
+					"head_y_geometry": 156.539568345324,
+					"hip_x_geometry": 255.913669064748,
+					"paste_rect": [
+						148,
+						156,
+						327,
+						292
+					],
+					"path": "frames/ER08/f03.png",
+					"scale": 0.539568345323741,
+					"used_rect": [
+						14,
+						151,
+						606,
+						542
+					]
+				},
+				{
+					"frame": 4.0,
+					"ground_y_geometry": 447.964028776978,
+					"head_y_geometry": 148.503597122302,
+					"hip_x_geometry": 255.848920863309,
+					"paste_rect": [
+						142,
+						128,
+						205,
+						320
+					],
+					"path": "frames/ER08/f04.png",
+					"scale": 0.539568345323741,
+					"used_rect": [
+						113,
+						112,
+						380,
+						593
+					]
+				}
+			],
+			"runtime_admission": false,
+			"scale": 0.539568345323741,
+			"strip": "strips/ER08_wide_v01.png"
+		},
+		{
+			"code": "ER09",
+			"content_state": "DRAFT",
+			"frames": [
+				{
+					"frame": 1.0,
+					"ground_y_geometry": 448.04347826087,
+					"head_y_geometry": 148.04347826087,
+					"hip_x_geometry": 256.086956521739,
+					"paste_rect": [
+						155,
+						135,
+						193,
+						313
+					],
+					"path": "frames/ER09/f01.png",
+					"scale": 0.652173913043478,
+					"used_rect": [
+						21,
+						134,
+						296,
+						480
+					]
+				},
+				{
+					"frame": 2.0,
+					"ground_y_geometry": 447.652173913044,
+					"head_y_geometry": 184.826086956522,
+					"hip_x_geometry": 256.478260869565,
+					"paste_rect": [
+						143,
+						177,
+						205,
+						289
+					],
+					"path": "frames/ER09/f02.png",
+					"scale": 0.652173913043478,
+					"used_rect": [
+						8,
+						179,
+						315,
+						443
+					]
+				},
+				{
+					"frame": 3.0,
+					"ground_y_geometry": 447.95652173913,
+					"head_y_geometry": 224.260869565217,
+					"hip_x_geometry": 255.565217391304,
+					"paste_rect": [
+						131,
+						221,
+						230,
+						250
+					],
+					"path": "frames/ER09/f03.png",
+					"scale": 0.652173913043478,
+					"used_rect": [
+						9,
+						252,
+						352,
+						384
+					]
+				},
+				{
+					"frame": 4.0,
+					"ground_y_geometry": 447.652173913044,
+					"head_y_geometry": 184.826086956522,
+					"hip_x_geometry": 255.608695652174,
+					"paste_rect": [
+						133,
+						177,
+						237,
+						285
+					],
+					"path": "frames/ER09/f04.png",
+					"scale": 0.652173913043478,
+					"used_rect": [
+						25,
+						197,
+						364,
+						437
+					]
+				},
+				{
+					"frame": 5.0,
+					"ground_y_geometry": 448.260869565217,
+					"head_y_geometry": 188.04347826087,
+					"hip_x_geometry": 255.913043478261,
+					"paste_rect": [
+						147,
+						175,
+						226,
+						298
+					],
+					"path": "frames/ER09/f05.png",
+					"scale": 0.652173913043478,
+					"used_rect": [
+						27,
+						191,
+						347,
+						457
+					]
+				},
+				{
+					"frame": 6.0,
+					"ground_y_geometry": 448.478260869565,
+					"head_y_geometry": 156.95652173913,
+					"hip_x_geometry": 256.260869565217,
+					"paste_rect": [
+						163,
+						155,
+						187,
+						293
+					],
+					"path": "frames/ER09/f06.png",
+					"scale": 0.652173913043478,
+					"used_rect": [
+						41,
+						158,
+						286,
+						450
+					]
+				}
+			],
+			"runtime_admission": false,
+			"scale": 0.652173913043478,
+			"strip": "strips/ER09_wide_v01.png"
+		},
+		{
+			"code": "ER10",
+			"content_state": "DRAFT",
+			"frames": [
+				{
+					"frame": 1.0,
+					"ground_y_geometry": 447.947939262473,
+					"head_y_geometry": 162.947939262473,
+					"hip_x_geometry": 255.587852494577,
+					"paste_rect": [
+						161,
+						124,
+						168,
+						324
+					],
+					"path": "frames/ER10/f01.png",
+					"scale": 0.61822125813449,
+					"used_rect": [
+						31,
+						99,
+						272,
+						524
+					]
+				},
+				{
+					"frame": 2.0,
+					"ground_y_geometry": 447.689804772234,
+					"head_y_geometry": 207.201735357918,
+					"hip_x_geometry": 255.570498915401,
+					"paste_rect": [
+						148,
+						180,
+						181,
+						268
+					],
+					"path": "frames/ER10/f02.png",
+					"scale": 0.61822125813449,
+					"used_rect": [
+						22,
+						194,
+						292,
+						433
+					]
+				},
+				{
+					"frame": 3.0,
+					"ground_y_geometry": 447.941431670282,
+					"head_y_geometry": 264.329718004338,
+					"hip_x_geometry": 255.644251626898,
+					"paste_rect": [
+						132,
+						226,
+						197,
+						222
+					],
+					"path": "frames/ER10/f03.png",
+					"scale": 0.61822125813449,
+					"used_rect": [
+						27,
+						248,
+						318,
+						359
+					]
+				},
+				{
+					"frame": 4.0,
+					"ground_y_geometry": 447.904555314534,
+					"head_y_geometry": 279.130151843818,
+					"hip_x_geometry": 255.553145336226,
+					"paste_rect": [
+						135,
+						234,
+						225,
+						214
+					],
+					"path": "frames/ER10/f04.png",
+					"scale": 0.61822125813449,
+					"used_rect": [
+						18,
+						281,
+						364,
+						346
+					]
+				},
+				{
+					"frame": 5.0,
+					"ground_y_geometry": 447.934924078091,
+					"head_y_geometry": 356.438177874187,
+					"hip_x_geometry": 256.188720173536,
+					"paste_rect": [
+						148,
+						328,
+						263,
+						136
+					],
+					"path": "frames/ER10/f05.png",
+					"scale": 0.61822125813449,
+					"used_rect": [
+						8,
+						432,
+						426,
+						220
+					]
+				},
+				{
+					"frame": 6.0,
+					"ground_y_geometry": 447.898047722343,
+					"head_y_geometry": 368.147505422994,
+					"hip_x_geometry": 256.043383947939,
+					"paste_rect": [
+						146,
+						336,
+						253,
+						121
+					],
+					"path": "frames/ER10/f06.png",
+					"scale": 0.61822125813449,
+					"used_rect": [
+						12,
+						449,
+						409,
+						196
+					]
+				}
+			],
+			"runtime_admission": false,
+			"scale": 0.61822125813449,
+			"strip": "strips/ER10_wide_v01.png"
+		}
+	],
+	"status": "DRAFT_PREPARED"
+}

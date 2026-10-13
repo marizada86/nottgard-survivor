@@ -1,0 +1,538 @@
+{
+  "plan": "PLAN-053",
+  "revision": "DEV-024/hero-wide-actions-v01",
+  "owner_reply": "Aprovo a preparação das quatro ações em 512×512",
+  "approval_mode": "per-plan",
+  "approval_status": "APPROVED_EXPLICITLY",
+  "content_state": "DRAFT",
+  "runtime_admission": false,
+  "canonical_promotion": false,
+  "commit_push_export": false,
+  "status": "COMPLETED_VISUALLY_ACCEPTED_DRAFT",
+  "current_step_position": 5,
+  "completed_steps": 5,
+  "total_steps": 5,
+  "checkpoint": "S-005/FOUR_WIDE_V01_ACCEPTED",
+  "records": [
+    {
+      "code": "AO08",
+      "hero": "arlindo",
+      "action": "attack",
+      "source": ".atena/generated/hero-normalization-2026-10-10/sources/ao08-attack-v01.png",
+      "source_sha256": "4e00d8ae2a73a9ef2d10be145a02a17813b55ea5546dc34309abc542c9a3ca0c",
+      "requested_scale": 0.4172661870503597,
+      "scale_basis": "Original approved body target 290 divided by median native hat-to-sole height; constant across cycle",
+      "reference_body_height": 290,
+      "frames": [
+        {
+          "frame": 1,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extraction-review-2026-10-11/AO08/f01.png",
+          "sha256": "cf66652b0656fb275f0ec7761b00cc940b2560b401c1999a5d2d5d047614f2c2",
+          "head_y": 27,
+          "ground_y": 721,
+          "hip_x": 240.965,
+          "significant_bbox": [
+            67,
+            27,
+            420,
+            721
+          ],
+          "pose": "standing_cast"
+        },
+        {
+          "frame": 2,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extraction-review-2026-10-11/AO08/f02.png",
+          "sha256": "2ec8c1b2ff0c4eb13e015cae008262fe099a3a899c6fb1ed8c9d1b338cf68206",
+          "head_y": 24,
+          "ground_y": 720,
+          "hip_x": 224.786,
+          "significant_bbox": [
+            37,
+            24,
+            490,
+            720
+          ],
+          "pose": "standing_cast"
+        },
+        {
+          "frame": 3,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extraction-review-2026-10-11/AO08/f03.png",
+          "sha256": "538227ae975752fc227ee3a2f93cc0fa94bfb50688778d0deb5b1d38b4e453c6",
+          "head_y": 26,
+          "ground_y": 720,
+          "hip_x": 195.774,
+          "significant_bbox": [
+            9,
+            26,
+            658,
+            720
+          ],
+          "pose": "standing_cast"
+        },
+        {
+          "frame": 4,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extraction-review-2026-10-11/AO08/f04.png",
+          "sha256": "c4da87e4d83c11433ef1b89f9fcc4da552b4fe2b75ad35e13a0117cc8cae5ffc",
+          "head_y": 23,
+          "ground_y": 721,
+          "hip_x": 176.859,
+          "significant_bbox": [
+            6,
+            23,
+            355,
+            721
+          ],
+          "pose": "standing_cast"
+        }
+      ],
+      "fit_limit": 0.5322071886912463,
+      "fit_conflict": false,
+      "cell": [
+        512,
+        512
+      ],
+      "center_x": 256,
+      "ground_y": 448,
+      "guard_px": 10,
+      "idle_reference": {
+        "path": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/AO02.png",
+        "sha256": "ebe364c08618a3ec53b071e25bb5cd1dfeb091436535013c7543903e2617f1fc",
+        "cell": [
+          256,
+          384
+        ],
+        "source_ground_y": 368,
+        "target_body_height": 290
+      }
+    },
+    {
+      "code": "ER08",
+      "hero": "erik",
+      "action": "attack",
+      "source": ".atena/generated/hero-normalization-2026-10-10/sources/er08-attack-v01.png",
+      "source_sha256": "60f43fd2a81ca3e51f3d9655cf1c4d36127a28e0b7309b9a7aa70ddfd2c880d8",
+      "requested_scale": 0.539568345323741,
+      "reference_body_height": 300,
+      "scale_basis": "First upright pose mapped to 300 px",
+      "frames": [
+        {
+          "frame": 1,
+          "path": ".atena/generated/hero-mask-feasibility-2026-10-12/native/ER08/f01.png",
+          "sha256": "f684ef90fd5d5c7f9e949e7cd5ad0c20e5f88c9b79417f928feb4120ad3fdbe7",
+          "head_y": 149,
+          "head_roi": [
+            233,
+            0,
+            303,
+            420
+          ],
+          "hip_x": 230,
+          "ground_y": 705,
+          "significant_bbox": [
+            42,
+            109,
+            429,
+            705
+          ],
+          "pose": "standing_or_lunging",
+          "landmark_uncertainty_source_px": 5
+        },
+        {
+          "frame": 2,
+          "path": ".atena/generated/hero-mask-feasibility-2026-10-12/native/ER08/f02.png",
+          "sha256": "2421bca3c4d3e6c91136174d350300d7f024762e9afc6c78474d8cf83a81ada4",
+          "head_y": 157,
+          "head_roi": [
+            319,
+            0,
+            389,
+            420
+          ],
+          "hip_x": 304,
+          "ground_y": 706,
+          "significant_bbox": [
+            16,
+            107,
+            544,
+            706
+          ],
+          "pose": "standing_or_lunging",
+          "landmark_uncertainty_source_px": 5
+        },
+        {
+          "frame": 3,
+          "path": ".atena/generated/hero-mask-feasibility-2026-10-12/native/ER08/f03.png",
+          "sha256": "8b609815c42bc9796e15524d95ab4213ad6921a8de593e87673b8e9374a2eaf4",
+          "head_y": 152,
+          "head_roi": [
+            223,
+            0,
+            293,
+            420
+          ],
+          "hip_x": 214,
+          "ground_y": 693,
+          "significant_bbox": [
+            14,
+            151,
+            620,
+            693
+          ],
+          "pose": "standing_or_lunging",
+          "landmark_uncertainty_source_px": 5
+        },
+        {
+          "frame": 4,
+          "path": ".atena/generated/hero-mask-feasibility-2026-10-12/native/ER08/f04.png",
+          "sha256": "09291af604a72483ce63cb20594c81e52672b757de9407b3e8a382110ba9b95c",
+          "head_y": 150,
+          "head_roi": [
+            306,
+            0,
+            376,
+            420
+          ],
+          "hip_x": 324,
+          "ground_y": 705,
+          "significant_bbox": [
+            113,
+            112,
+            493,
+            705
+          ],
+          "pose": "standing_or_lunging",
+          "landmark_uncertainty_source_px": 5
+        }
+      ],
+      "fit_limit": 0.6059113300492611,
+      "fit_conflict": false,
+      "cell": [
+        512,
+        512
+      ],
+      "center_x": 256,
+      "ground_y": 448,
+      "guard_px": 10,
+      "idle_reference": {
+        "path": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/ER02.png",
+        "sha256": "3c3ea2fbedac595dd8a2fcb2c8f118debf45d28f045c6318112291ed706c2dc2",
+        "cell": [
+          256,
+          384
+        ],
+        "source_ground_y": 368,
+        "target_body_height": 300
+      }
+    },
+    {
+      "code": "ER09",
+      "hero": "erik",
+      "action": "active",
+      "source": ".atena/generated/hero-normalization-2026-10-10/sources/er09-active-v01.png",
+      "source_sha256": "b32eb2cb7159b0c24cf8fff4174fe77324a4d18745651dae3286a587f2291bd1",
+      "requested_scale": 0.6521739130434783,
+      "reference_body_height": 300,
+      "scale_basis": "First upright pose mapped to 300 px",
+      "frames": [
+        {
+          "frame": 1,
+          "path": ".atena/generated/hero-mask-feasibility-2026-10-12/native/ER09/f01.png",
+          "sha256": "ab8ca3a92d1fe362ea7c37827728d0e7a5ba6e65f3520f207b193196971a48e4",
+          "head_y": 154,
+          "head_roi": [
+            152,
+            0,
+            222,
+            420
+          ],
+          "hip_x": 176,
+          "ground_y": 614,
+          "significant_bbox": [
+            21,
+            134,
+            317,
+            614
+          ],
+          "pose": "standing_or_crouching",
+          "landmark_uncertainty_source_px": 5
+        },
+        {
+          "frame": 2,
+          "path": ".atena/generated/hero-mask-feasibility-2026-10-12/native/ER09/f02.png",
+          "sha256": "573ffecb6ac33d1c87785b03271b83e29ed9154b8aee8a49d92631688e095f85",
+          "head_y": 191,
+          "head_roi": [
+            170,
+            0,
+            240,
+            420
+          ],
+          "hip_x": 182,
+          "ground_y": 594,
+          "significant_bbox": [
+            8,
+            179,
+            323,
+            622
+          ],
+          "pose": "standing_or_crouching",
+          "landmark_uncertainty_source_px": 5
+        },
+        {
+          "frame": 3,
+          "path": ".atena/generated/hero-mask-feasibility-2026-10-12/native/ER09/f03.png",
+          "sha256": "c7d05a8b680a406314672f048d50cb0ff22c8d0d280e67e06c285eb4b9ee79c4",
+          "head_y": 257,
+          "head_roi": [
+            181,
+            0,
+            251,
+            420
+          ],
+          "hip_x": 200,
+          "ground_y": 600,
+          "significant_bbox": [
+            9,
+            252,
+            361,
+            636
+          ],
+          "pose": "standing_or_crouching",
+          "landmark_uncertainty_source_px": 5
+        },
+        {
+          "frame": 4,
+          "path": ".atena/generated/hero-mask-feasibility-2026-10-12/native/ER09/f04.png",
+          "sha256": "8090bb53874497c49307f895e2eb491db395f20401ee7fc172007b14f969438d",
+          "head_y": 209,
+          "head_roi": [
+            192,
+            0,
+            262,
+            420
+          ],
+          "hip_x": 213,
+          "ground_y": 612,
+          "significant_bbox": [
+            25,
+            197,
+            389,
+            634
+          ],
+          "pose": "standing_or_crouching",
+          "landmark_uncertainty_source_px": 5
+        },
+        {
+          "frame": 5,
+          "path": ".atena/generated/hero-mask-feasibility-2026-10-12/native/ER09/f05.png",
+          "sha256": "03f23fa61f2f49f5342aaf664afee38987e06e0830d136dbb3c4aa92ba05c2d4",
+          "head_y": 211,
+          "head_roi": [
+            173,
+            0,
+            243,
+            420
+          ],
+          "hip_x": 194,
+          "ground_y": 610,
+          "significant_bbox": [
+            27,
+            191,
+            374,
+            648
+          ],
+          "pose": "standing_or_crouching",
+          "landmark_uncertainty_source_px": 5
+        },
+        {
+          "frame": 6,
+          "path": ".atena/generated/hero-mask-feasibility-2026-10-12/native/ER09/f06.png",
+          "sha256": "55fb4053208178bf200e384f597d16176df2e34446af9f4c70e82ed4563511b1",
+          "head_y": 161,
+          "head_roi": [
+            177,
+            0,
+            247,
+            420
+          ],
+          "hip_x": 184,
+          "ground_y": 608,
+          "significant_bbox": [
+            41,
+            158,
+            327,
+            608
+          ],
+          "pose": "standing_or_crouching",
+          "landmark_uncertainty_source_px": 5
+        }
+      ],
+      "fit_limit": 0.9125,
+      "fit_conflict": false,
+      "cell": [
+        512,
+        512
+      ],
+      "center_x": 256,
+      "ground_y": 448,
+      "guard_px": 10,
+      "idle_reference": {
+        "path": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/ER02.png",
+        "sha256": "3c3ea2fbedac595dd8a2fcb2c8f118debf45d28f045c6318112291ed706c2dc2",
+        "cell": [
+          256,
+          384
+        ],
+        "source_ground_y": 368,
+        "target_body_height": 300
+      }
+    },
+    {
+      "code": "ER10",
+      "hero": "erik",
+      "action": "death",
+      "source": ".atena/generated/hero-normalization-2026-10-10/sources/er10-death-v01.png",
+      "source_sha256": "2f8ca3ecf43fbd643ba3db7f32bc5a0c4525728692e2ab33b2ee89bf9ba83993",
+      "requested_scale": 0.6182212581344902,
+      "reference_body_height": 285,
+      "scale_basis": "First slightly leaned death pose provisionally 285 px (95% standing reference); compare silhouette/head with accepted idle, not a per-frame height target",
+      "frames": [
+        {
+          "frame": 1,
+          "path": ".atena/generated/hero-mask-feasibility-2026-10-12/native/ER10/f01.png",
+          "sha256": "ff29e5a47219b02f081df66263e6a83ebec22f9944d2fc77f1461815927b9269",
+          "head_y": 162,
+          "head_roi": null,
+          "hip_x": 184,
+          "ground_y": 623,
+          "significant_bbox": [
+            31,
+            99,
+            303,
+            623
+          ],
+          "pose": "first_leaned_reference",
+          "landmark_uncertainty_source_px": 5
+        },
+        {
+          "frame": 2,
+          "path": ".atena/generated/hero-mask-feasibility-2026-10-12/native/ER10/f02.png",
+          "sha256": "2b17efd5284dfb8b2486bd701bfb301ea69be7a9100bf79681ca15a8a6ee6241",
+          "head_y": 238,
+          "head_roi": null,
+          "hip_x": 196,
+          "ground_y": 627,
+          "significant_bbox": [
+            22,
+            194,
+            314,
+            627
+          ],
+          "pose": "kneeling_or_falling",
+          "landmark_uncertainty_source_px": 5
+        },
+        {
+          "frame": 3,
+          "path": ".atena/generated/hero-mask-feasibility-2026-10-12/native/ER10/f03.png",
+          "sha256": "b5fee8ef0246913df0729c7b79a21a226e9365229e044cc86da011ab63fe2728",
+          "head_y": 310,
+          "head_roi": null,
+          "hip_x": 227,
+          "ground_y": 607,
+          "significant_bbox": [
+            27,
+            248,
+            345,
+            607
+          ],
+          "pose": "kneeling_or_falling",
+          "landmark_uncertainty_source_px": 5
+        },
+        {
+          "frame": 4,
+          "path": ".atena/generated/hero-mask-feasibility-2026-10-12/native/ER10/f04.png",
+          "sha256": "8bfea3bb3709f5784158e0c3eb6bcd1082068614765f1a579164922d776aad8c",
+          "head_y": 354,
+          "head_roi": null,
+          "hip_x": 213,
+          "ground_y": 627,
+          "significant_bbox": [
+            18,
+            281,
+            382,
+            627
+          ],
+          "pose": "kneeling_or_falling",
+          "landmark_uncertainty_source_px": 5
+        },
+        {
+          "frame": 5,
+          "path": ".atena/generated/hero-mask-feasibility-2026-10-12/native/ER10/f05.png",
+          "sha256": "60c9250078ba14328d1b1f30360e17695dd8b5f15ab0c58f03aa12f66d538789",
+          "head_y": 478,
+          "head_roi": null,
+          "hip_x": 183,
+          "ground_y": 626,
+          "significant_bbox": [
+            8,
+            432,
+            434,
+            652
+          ],
+          "pose": "lying_contact",
+          "landmark_uncertainty_source_px": 5
+        },
+        {
+          "frame": 6,
+          "path": ".atena/generated/hero-mask-feasibility-2026-10-12/native/ER10/f06.png",
+          "sha256": "f1b4a8680940b7d0aac1970fe8f781a6e759c8b1c5f1632414328039599561c9",
+          "head_y": 501,
+          "head_roi": null,
+          "hip_x": 190,
+          "ground_y": 630,
+          "significant_bbox": [
+            12,
+            449,
+            421,
+            645
+          ],
+          "pose": "lying_contact",
+          "landmark_uncertainty_source_px": 5
+        }
+      ],
+      "fit_limit": 0.8358778625954199,
+      "fit_conflict": false,
+      "cell": [
+        512,
+        512
+      ],
+      "center_x": 256,
+      "ground_y": 448,
+      "guard_px": 10,
+      "idle_reference": {
+        "path": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/ER02.png",
+        "sha256": "3c3ea2fbedac595dd8a2fcb2c8f118debf45d28f045c6318112291ed706c2dc2",
+        "cell": [
+          256,
+          384
+        ],
+        "source_ground_y": 368,
+        "target_body_height": 300
+      }
+    }
+  ],
+  "head_before": "e6aea39f16b43e18d2d4501e870645a97b6d4dfe",
+  "method": "Godot deterministic proportional Lanczos; one scale per cycle; crop alpha extent; clear only derivative alpha<=8; explicit body/ground references",
+  "landmark_review": "All twenty native poses inspected; first death height 285 provisional compared with idle, crouch/fall compression is preserved, no claim of human acceptance",
+  "technical_status": "PASS",
+  "prepared_frames": 20,
+  "prepared_strips": 4,
+  "gallery": "index.html",
+  "board": "review-board.png",
+  "audit": "audit.json",
+  "human_visual_acceptance": "FOUR_WIDE_V01_APPROVED_EXPLICITLY",
+  "next_objective": "Resolve six remaining animation holds before any admission; preserve twelve accepted DRAFT strips",
+  "owner_visual_reply": "Aprovo visualmente as quatro wide v01",
+  "visual_acceptance": "visual-acceptance.json",
+  "accepted_inventory": "accepted-hero-inventory.json"
+}

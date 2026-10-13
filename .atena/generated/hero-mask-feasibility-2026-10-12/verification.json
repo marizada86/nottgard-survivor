@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "sources_examined": 5,
+  "native_frames": 16,
+  "pixel_recomposition": "EXACT_RGBA",
+  "ownership": "EXACTLY_ONCE",
+  "new_significant_pixel_loss": 0,
+  "feasible": [
+    "ER08",
+    "ER09",
+    "ER10"
+  ],
+  "retained": [
+    "AO09",
+    "AO10"
+  ],
+  "eight_accepted_hashes_preserved": true,
+  "native_diagnostics_inspection": "FIVE_CURVED_CORRIDOR_OVERLAYS_INSPECTED",
+  "runtime_admission": false,
+  "content_state": "DRAFT",
+  "limitations": "Transparent corridors establish geometry in the searched bands, not artistic acceptance. Failure to find a zero-alpha corridor does not establish global impossibility."
+}

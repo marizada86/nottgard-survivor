@@ -1,0 +1,25 @@
+{
+  "status": "PASS_WITH_EXPLICIT_LIMITED_SPREAD_EXCEPTION",
+  "steps_completed": 3,
+  "steps_total": 3,
+  "accepted_strips": 14,
+  "accepted_frames": 76,
+  "remaining": [
+    "AO09",
+    "AO10",
+    "ER03",
+    "ER06"
+  ],
+  "historical_hashes_preserved": {
+    ".atena\\generated\\hero-wide-actions-2026-10-12\\accepted-hero-inventory.json": "ae0544e8fdbd608374f7cdad538037d9879e577b270dc420700ecb7329420e7e",
+    ".atena\\generated\\hero-wide-actions-2026-10-12\\visual-acceptance.json": "2c59f5f588eab0fd870409fb627d59abf39c1a411a1c7b947b87d65068792f17",
+    ".atena\\generated\\hero-body-pivot-2026-10-12\\visual-acceptance.json": "e13e2bac7399498761a12fa73593fed1e412f36e02bc56787bf49c6248662358",
+    ".atena\\generated\\hero-body-pivot-2026-10-12\\audit.json": "fdc3f510139bde050e58894bd113ea3557ce59ebe251246aa37e70b11f94d79e"
+  },
+  "prior_state_tail_sha256": "ba80e5c4700371971fb2f0eafca3d892a3c13a5cf07f63e32ccac49cb46994cd",
+  "prior_state_tail_preserved": true,
+  "global_spread_limit_px": 12,
+  "runtime_admission": false,
+  "canonical_promotion": false,
+  "git_mutations": false
+}

@@ -1,0 +1,1799 @@
+{
+  "plan": "PLAN-053/SPEC-121/S-007",
+  "revision": "DEV-024/v03/body-pivot-v01",
+  "content_state": "DRAFT",
+  "approval_mode": "per-plan",
+  "authorization": "existing approved preparation route + atena, continuar a fila de assets",
+  "status": "COMPLETED_PARTIAL_VISUALLY_ACCEPTED_DRAFT",
+  "completed_steps": 4,
+  "total_steps": 4,
+  "ordered_steps": [
+    "SOURCES_LANDMARKS",
+    "PREPARE",
+    "AUDIT",
+    "GALLERY_GATE"
+  ],
+  "runtime_admission": false,
+  "canonical_promotion": false,
+  "commit_push_export": false,
+  "source_count": 20,
+  "input_frames": 60,
+  "strips": 11,
+  "held_unprocessed": [
+    "ER03",
+    "ER06",
+    "AO09",
+    "AO10",
+    "ER08",
+    "ER09",
+    "ER10"
+  ],
+  "method": "Godot proportional Lanczos, one scale per strip; alpha <=8 clear on derivative only; anatomical anchors; source bytes preserved",
+  "records": [
+    {
+      "code": "AO02",
+      "hero": "arlindo",
+      "source": ".atena/generated/hero-normalization-2026-10-10/sources/ao02-idle-v01.png",
+      "source_sha256": "e6df81e5fb10c896a4a43b9f05fcb0da8df1aad15c811f9f0ee92a9132615dbf",
+      "frames": [
+        {
+          "frame": 1,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extraction-review-2026-10-11/AO02/f01.png",
+          "sha256": "02738233910b402b0412c5493189801b59235a9121125b7bfe0401fc43809876",
+          "size": [
+            518,
+            768
+          ],
+          "significant_bbox": [
+            117,
+            18,
+            421,
+            754
+          ],
+          "head_y": 18,
+          "feet_y": 754,
+          "waist_x": 269.443,
+          "body_height": 736,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        },
+        {
+          "frame": 2,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extraction-review-2026-10-11/AO02/f02.png",
+          "sha256": "ff4108dcce5a34a03a78cc3dee14a8a595bf25a9065e65ac88b43967981b864b",
+          "size": [
+            505,
+            768
+          ],
+          "significant_bbox": [
+            97,
+            19,
+            409,
+            752
+          ],
+          "head_y": 19,
+          "feet_y": 752,
+          "waist_x": 257.917,
+          "body_height": 733,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        },
+        {
+          "frame": 3,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extraction-review-2026-10-11/AO02/f03.png",
+          "sha256": "4659cbe43056aa0b21b9dbfc4c7f68eea9ed3bc604ccd03d6355a97f18dbf82c",
+          "size": [
+            506,
+            768
+          ],
+          "significant_bbox": [
+            96,
+            16,
+            410,
+            752
+          ],
+          "head_y": 16,
+          "feet_y": 752,
+          "waist_x": 250.477,
+          "body_height": 736,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        },
+        {
+          "frame": 4,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extraction-review-2026-10-11/AO02/f04.png",
+          "sha256": "c8bbf649cf6d760b45ca202db272ed56accdac67dab6ddf6a6a5da32ee7cc703",
+          "size": [
+            519,
+            768
+          ],
+          "significant_bbox": [
+            96,
+            20,
+            403,
+            752
+          ],
+          "head_y": 20,
+          "feet_y": 752,
+          "waist_x": 253.736,
+          "body_height": 732,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        }
+      ],
+      "cell": [
+        256,
+        384
+      ],
+      "feet_y": 368,
+      "center_x": 128,
+      "guard_px": 10,
+      "target_body_height": 290,
+      "requested_scale": 0.3948264125255276,
+      "fit_limit": 0.48641304347826086,
+      "scale": 0.3948264125255276,
+      "size_conflict": false,
+      "body_spread_estimated": 1.5793056501021103,
+      "output": "strips/AO02.png",
+      "content_state": "DRAFT",
+      "runtime_admission": false
+    },
+    {
+      "code": "AO03",
+      "hero": "arlindo",
+      "source": ".atena/generated/hero-normalization-2026-10-10/sources/ao03-move_e-v01.png",
+      "source_sha256": "c8756558d5badef2b0c2a5a2cc536344ce85e8222c6bdae088cd8e3298c32588",
+      "frames": [
+        {
+          "frame": 1,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extracted/AO03/frame-1.png",
+          "sha256": "8a63df8ef44bfae8526e84a1a4ea770825982eae7ada931d972ddc63bdb1169e",
+          "size": [
+            373,
+            768
+          ],
+          "significant_bbox": [
+            3,
+            49,
+            370,
+            694
+          ],
+          "head_y": 49,
+          "feet_y": 694,
+          "waist_x": 176.745,
+          "body_height": 645,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        },
+        {
+          "frame": 2,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extracted/AO03/frame-2.png",
+          "sha256": "4f7250769befa8470e6e5a5d79dc62b81325222b0e0467999a739b63254e3130",
+          "size": [
+            330,
+            768
+          ],
+          "significant_bbox": [
+            2,
+            51,
+            328,
+            702
+          ],
+          "head_y": 51,
+          "feet_y": 702,
+          "waist_x": 158.743,
+          "body_height": 651,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        },
+        {
+          "frame": 3,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extracted/AO03/frame-3.png",
+          "sha256": "509f403ad9149ff04a28359fe5445318f5577103d5a3878fa7f18df60754ae89",
+          "size": [
+            341,
+            768
+          ],
+          "significant_bbox": [
+            3,
+            49,
+            338,
+            695
+          ],
+          "head_y": 49,
+          "feet_y": 695,
+          "waist_x": 157.902,
+          "body_height": 646,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        },
+        {
+          "frame": 4,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extracted/AO03/frame-4.png",
+          "sha256": "3a348f36ec59963ee85585359b2b8bcac950d5b2076c004ba31fbf3ba15efa60",
+          "size": [
+            353,
+            768
+          ],
+          "significant_bbox": [
+            3,
+            59,
+            350,
+            687
+          ],
+          "head_y": 59,
+          "feet_y": 687,
+          "waist_x": 153.022,
+          "body_height": 628,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        },
+        {
+          "frame": 5,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extracted/AO03/frame-5.png",
+          "sha256": "43c212dd7721305cb158943449fceb3da126b2090f3fc8d1f8f507a48ee60299",
+          "size": [
+            310,
+            768
+          ],
+          "significant_bbox": [
+            2,
+            56,
+            308,
+            701
+          ],
+          "head_y": 56,
+          "feet_y": 701,
+          "waist_x": 165.849,
+          "body_height": 645,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        },
+        {
+          "frame": 6,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extracted/AO03/frame-6.png",
+          "sha256": "7fab86972900d9ecd1517675715c170fd2e8c4bc7c6d90080be037661fcaff9f",
+          "size": [
+            309,
+            768
+          ],
+          "significant_bbox": [
+            2,
+            59,
+            307,
+            702
+          ],
+          "head_y": 59,
+          "feet_y": 702,
+          "waist_x": 171.993,
+          "body_height": 643,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        }
+      ],
+      "cell": [
+        256,
+        384
+      ],
+      "feet_y": 368,
+      "center_x": 128,
+      "guard_px": 10,
+      "target_body_height": 290,
+      "requested_scale": 0.4496124031007752,
+      "fit_limit": 0.5499231950844854,
+      "scale": 0.4496124031007752,
+      "size_conflict": false,
+      "body_spread_estimated": 10.34108527131783,
+      "output": "strips/AO03.png",
+      "content_state": "DRAFT",
+      "runtime_admission": false
+    },
+    {
+      "code": "AO04",
+      "hero": "arlindo",
+      "source": ".atena/generated/hero-normalization-2026-10-10/sources/ao04-move_se-v01.png",
+      "source_sha256": "8feae12325f647a118947654fae47b0fa5e3002b3c0bb436102c857c25b23b0b",
+      "frames": [
+        {
+          "frame": 1,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extracted/AO04/frame-1.png",
+          "sha256": "afe0159306683ee62d3b4747aeb58f0fe08d6dc4a8bc6af571c2268a25f10313",
+          "size": [
+            305,
+            809
+          ],
+          "significant_bbox": [
+            1,
+            80,
+            302,
+            733
+          ],
+          "head_y": 80,
+          "feet_y": 733,
+          "waist_x": 165.964,
+          "body_height": 653,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        },
+        {
+          "frame": 2,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extracted/AO04/frame-2.png",
+          "sha256": "750222068fa7051a7d90e94301f896a5f037710a0faa0365a31e7d6a1d0a839c",
+          "size": [
+            287,
+            809
+          ],
+          "significant_bbox": [
+            2,
+            99,
+            285,
+            725
+          ],
+          "head_y": 99,
+          "feet_y": 725,
+          "waist_x": 163.329,
+          "body_height": 626,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        },
+        {
+          "frame": 3,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extracted/AO04/frame-3.png",
+          "sha256": "b124cf733aaea13c7d96db6d3354951e88d859f453daa3d929e6706b569f1c13",
+          "size": [
+            283,
+            809
+          ],
+          "significant_bbox": [
+            3,
+            98,
+            281,
+            738
+          ],
+          "head_y": 98,
+          "feet_y": 738,
+          "waist_x": 157.224,
+          "body_height": 640,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        },
+        {
+          "frame": 4,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extracted/AO04/frame-4.png",
+          "sha256": "77de8d6ba6083eeb5dd4118f2f2865d5b07a2b6f3a9ae0eaddfaad52d439f9a3",
+          "size": [
+            334,
+            809
+          ],
+          "significant_bbox": [
+            3,
+            96,
+            331,
+            741
+          ],
+          "head_y": 96,
+          "feet_y": 741,
+          "waist_x": 172.585,
+          "body_height": 645,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        },
+        {
+          "frame": 5,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extracted/AO04/frame-5.png",
+          "sha256": "77526342a5c83e0f906ae3e1fc458c6e45c313ec2e840b3c1211f28e31cac312",
+          "size": [
+            287,
+            809
+          ],
+          "significant_bbox": [
+            2,
+            98,
+            285,
+            739
+          ],
+          "head_y": 98,
+          "feet_y": 739,
+          "waist_x": 163.124,
+          "body_height": 641,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        },
+        {
+          "frame": 6,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extracted/AO04/frame-6.png",
+          "sha256": "88d8cb5f25d80c91ea9576ad15186b3e0b3b98cf314bee18ca2c83d11491eac4",
+          "size": [
+            321,
+            809
+          ],
+          "significant_bbox": [
+            3,
+            98,
+            319,
+            738
+          ],
+          "head_y": 98,
+          "feet_y": 738,
+          "waist_x": 163.648,
+          "body_height": 640,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        }
+      ],
+      "cell": [
+        256,
+        384
+      ],
+      "feet_y": 368,
+      "center_x": 128,
+      "guard_px": 10,
+      "target_body_height": 290,
+      "requested_scale": 0.4527712724434036,
+      "fit_limit": 0.5482388973966309,
+      "scale": 0.4527712724434036,
+      "size_conflict": false,
+      "body_spread_estimated": 12.224824355971897,
+      "output": "strips/AO04.png",
+      "content_state": "DRAFT",
+      "runtime_admission": false
+    },
+    {
+      "code": "AO05",
+      "hero": "arlindo",
+      "source": ".atena/generated/hero-normalization-2026-10-10/sources/ao05-move_s-v01.png",
+      "source_sha256": "fcf1f0dc1fe81be057c7b19ba1a7fce6d01ddb15d889d03a7a61dd24f0a06666",
+      "frames": [
+        {
+          "frame": 1,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extraction-review-2026-10-11/AO05/f01.png",
+          "sha256": "64a41308186618ae5bf5e03810e70253c01e00396628c0407e2ff414c2c23b87",
+          "size": [
+            347,
+            768
+          ],
+          "significant_bbox": [
+            41,
+            35,
+            332,
+            713
+          ],
+          "head_y": 35,
+          "feet_y": 713,
+          "waist_x": 187.38,
+          "body_height": 678,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        },
+        {
+          "frame": 2,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extraction-review-2026-10-11/AO05/f02.png",
+          "sha256": "7d209bbd63565e83f7db2641e3d038355977c439e17939014b4d2c80bcae2e0f",
+          "size": [
+            327,
+            768
+          ],
+          "significant_bbox": [
+            16,
+            34,
+            310,
+            704
+          ],
+          "head_y": 34,
+          "feet_y": 704,
+          "waist_x": 152.155,
+          "body_height": 670,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        },
+        {
+          "frame": 3,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extraction-review-2026-10-11/AO05/f03.png",
+          "sha256": "bc2ff8f0cf280faa7ad094ab0c8097ff8cded4cee6b20711b926627dd098fbc0",
+          "size": [
+            345,
+            768
+          ],
+          "significant_bbox": [
+            18,
+            33,
+            319,
+            718
+          ],
+          "head_y": 33,
+          "feet_y": 718,
+          "waist_x": 162.352,
+          "body_height": 685,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        },
+        {
+          "frame": 4,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extraction-review-2026-10-11/AO05/f04.png",
+          "sha256": "64c09abbe874081fa632fd59cb241819ae669678d8e00a081ec9a31cf8b16db2",
+          "size": [
+            337,
+            768
+          ],
+          "significant_bbox": [
+            27,
+            34,
+            314,
+            710
+          ],
+          "head_y": 34,
+          "feet_y": 710,
+          "waist_x": 170.19,
+          "body_height": 676,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        },
+        {
+          "frame": 5,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extraction-review-2026-10-11/AO05/f05.png",
+          "sha256": "dc0322fa3ebf33032facdc15e04a47a961c69d3566085e172ae2940a9059f6be",
+          "size": [
+            338,
+            768
+          ],
+          "significant_bbox": [
+            24,
+            34,
+            321,
+            707
+          ],
+          "head_y": 34,
+          "feet_y": 707,
+          "waist_x": 175.517,
+          "body_height": 673,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        },
+        {
+          "frame": 6,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extraction-review-2026-10-11/AO05/f06.png",
+          "sha256": "685cb3ed147faf160f26f72bc8d40b08608ae4a17210620ebde5b2b93026bf22",
+          "size": [
+            354,
+            768
+          ],
+          "significant_bbox": [
+            17,
+            33,
+            313,
+            716
+          ],
+          "head_y": 33,
+          "feet_y": 716,
+          "waist_x": 162.547,
+          "body_height": 683,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        }
+      ],
+      "cell": [
+        256,
+        384
+      ],
+      "feet_y": 368,
+      "center_x": 128,
+      "guard_px": 10,
+      "target_body_height": 290,
+      "requested_scale": 0.42836041358936483,
+      "fit_limit": 0.5226277372262774,
+      "scale": 0.42836041358936483,
+      "size_conflict": false,
+      "body_spread_estimated": 6.425406203840472,
+      "output": "strips/AO05.png",
+      "content_state": "DRAFT",
+      "runtime_admission": false
+    },
+    {
+      "code": "AO06",
+      "hero": "arlindo",
+      "source": ".atena/generated/hero-normalization-2026-10-10/sources/ao06-move_ne-v01.png",
+      "source_sha256": "16a161b38cab86efa4557e026110b52214f992cd27000f03a9de0fdfaba5c650",
+      "frames": [
+        {
+          "frame": 1,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extraction-review-2026-10-11/AO06/f01.png",
+          "sha256": "548523f7aac5d2eac68a7b38cbae78418611ef57fb7c587a1766de0aa94f07e8",
+          "size": [
+            326,
+            836
+          ],
+          "significant_bbox": [
+            18,
+            102,
+            310,
+            722
+          ],
+          "head_y": 102,
+          "feet_y": 722,
+          "waist_x": 162.628,
+          "body_height": 620,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        },
+        {
+          "frame": 2,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extraction-review-2026-10-11/AO06/f02.png",
+          "sha256": "fbcd4c5f58ec9a099f59c3c89852cae540f1de4425cc2d224fb0de09210f2e7a",
+          "size": [
+            317,
+            836
+          ],
+          "significant_bbox": [
+            16,
+            104,
+            301,
+            721
+          ],
+          "head_y": 104,
+          "feet_y": 721,
+          "waist_x": 149.566,
+          "body_height": 617,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        },
+        {
+          "frame": 3,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extraction-review-2026-10-11/AO06/f03.png",
+          "sha256": "88cc2120021f9f6fcb37bf2e6cb0f21540be29bcec7df018c737c9c5a3e750e4",
+          "size": [
+            305,
+            836
+          ],
+          "significant_bbox": [
+            17,
+            100,
+            297,
+            714
+          ],
+          "head_y": 100,
+          "feet_y": 714,
+          "waist_x": 151.869,
+          "body_height": 614,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        },
+        {
+          "frame": 4,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extraction-review-2026-10-11/AO06/f04.png",
+          "sha256": "2a45eb31da96f2fe77128097048de0600f55f748c95329e4e6f6382e51cb1378",
+          "size": [
+            307,
+            836
+          ],
+          "significant_bbox": [
+            8,
+            100,
+            283,
+            721
+          ],
+          "head_y": 100,
+          "feet_y": 721,
+          "waist_x": 149.819,
+          "body_height": 621,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        },
+        {
+          "frame": 5,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extraction-review-2026-10-11/AO06/f05.png",
+          "sha256": "eea84f25f411e1d979543e352c099f124b71f8e425bfa20656183b3f7d9cf564",
+          "size": [
+            324,
+            836
+          ],
+          "significant_bbox": [
+            25,
+            98,
+            310,
+            717
+          ],
+          "head_y": 98,
+          "feet_y": 717,
+          "waist_x": 162.769,
+          "body_height": 619,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        },
+        {
+          "frame": 6,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extraction-review-2026-10-11/AO06/f06.png",
+          "sha256": "7bf5dd48764c55b459459704eb4e024cfaddad35c4c55048b19f97520ff2ce1b",
+          "size": [
+            302,
+            836
+          ],
+          "significant_bbox": [
+            14,
+            100,
+            286,
+            721
+          ],
+          "head_y": 100,
+          "feet_y": 721,
+          "waist_x": 157.596,
+          "body_height": 621,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        }
+      ],
+      "cell": [
+        256,
+        384
+      ],
+      "feet_y": 368,
+      "center_x": 128,
+      "guard_px": 10,
+      "target_body_height": 290,
+      "requested_scale": 0.46811945117029863,
+      "fit_limit": 0.5764895330112721,
+      "scale": 0.46811945117029863,
+      "size_conflict": false,
+      "body_spread_estimated": 3.2768361581920904,
+      "output": "strips/AO06.png",
+      "content_state": "DRAFT",
+      "runtime_admission": false
+    },
+    {
+      "code": "AO07",
+      "hero": "arlindo",
+      "source": ".atena/generated/hero-normalization-2026-10-10/sources/ao07-move_n-v01.png",
+      "source_sha256": "fd28f0e31899eda21c4e8fbf3241f25935fcd2dcd4300afb602dd7297e0104f7",
+      "frames": [
+        {
+          "frame": 1,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extracted/AO07/frame-1.png",
+          "sha256": "a8b906dc62a54a29a142f56926e9ec7580c5880252d7a466a8038854e83cff16",
+          "size": [
+            310,
+            768
+          ],
+          "significant_bbox": [
+            3,
+            46,
+            308,
+            700
+          ],
+          "head_y": 46,
+          "feet_y": 700,
+          "waist_x": 145.278,
+          "body_height": 654,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        },
+        {
+          "frame": 2,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extracted/AO07/frame-2.png",
+          "sha256": "3173cda8bf320e0ead7e086600f6fd97557fed10c36278c89c62c59f486759f5",
+          "size": [
+            279,
+            768
+          ],
+          "significant_bbox": [
+            3,
+            59,
+            276,
+            700
+          ],
+          "head_y": 59,
+          "feet_y": 700,
+          "waist_x": 154.323,
+          "body_height": 641,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        },
+        {
+          "frame": 3,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extracted/AO07/frame-3.png",
+          "sha256": "61b70bb689619b8906ac9c4920d754b0871a50a836248deb6cdb484a60dc16e9",
+          "size": [
+            278,
+            768
+          ],
+          "significant_bbox": [
+            3,
+            51,
+            276,
+            699
+          ],
+          "head_y": 51,
+          "feet_y": 699,
+          "waist_x": 123.821,
+          "body_height": 648,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        },
+        {
+          "frame": 4,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extracted/AO07/frame-4.png",
+          "sha256": "4b08e2969de48ddc278425e433baaef6463f707b01dd23c1609ea077e805d015",
+          "size": [
+            295,
+            768
+          ],
+          "significant_bbox": [
+            3,
+            53,
+            293,
+            700
+          ],
+          "head_y": 53,
+          "feet_y": 700,
+          "waist_x": 136.411,
+          "body_height": 647,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        },
+        {
+          "frame": 5,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extracted/AO07/frame-5.png",
+          "sha256": "ab4f4fa30d8cafc25eccee8c6691d8becea5a5951b9404ab86455176442c2e79",
+          "size": [
+            278,
+            768
+          ],
+          "significant_bbox": [
+            3,
+            61,
+            276,
+            686
+          ],
+          "head_y": 61,
+          "feet_y": 686,
+          "waist_x": 152.619,
+          "body_height": 625,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        },
+        {
+          "frame": 6,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extracted/AO07/frame-6.png",
+          "sha256": "841dc7a57ce6a482ae0ed5fa29597afe8268ea54b077869228fa0d51fbea591d",
+          "size": [
+            307,
+            768
+          ],
+          "significant_bbox": [
+            3,
+            51,
+            305,
+            703
+          ],
+          "head_y": 51,
+          "feet_y": 703,
+          "waist_x": 128.883,
+          "body_height": 652,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        }
+      ],
+      "cell": [
+        256,
+        384
+      ],
+      "feet_y": 368,
+      "center_x": 128,
+      "guard_px": 10,
+      "target_body_height": 290,
+      "requested_scale": 0.44787644787644787,
+      "fit_limit": 0.5474006116207951,
+      "scale": 0.44787644787644787,
+      "size_conflict": false,
+      "body_spread_estimated": 12.988416988416988,
+      "output": "strips/AO07.png",
+      "content_state": "DRAFT",
+      "runtime_admission": false
+    },
+    {
+      "code": "AO08",
+      "hero": "arlindo",
+      "source": ".atena/generated/hero-normalization-2026-10-10/sources/ao08-attack-v01.png",
+      "source_sha256": "4e00d8ae2a73a9ef2d10be145a02a17813b55ea5546dc34309abc542c9a3ca0c",
+      "frames": [
+        {
+          "frame": 1,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extraction-review-2026-10-11/AO08/f01.png",
+          "sha256": "cf66652b0656fb275f0ec7761b00cc940b2560b401c1999a5d2d5d047614f2c2",
+          "size": [
+            456,
+            768
+          ],
+          "significant_bbox": [
+            67,
+            27,
+            420,
+            721
+          ],
+          "head_y": 27,
+          "feet_y": 721,
+          "waist_x": 240.965,
+          "body_height": 694,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        },
+        {
+          "frame": 2,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extraction-review-2026-10-11/AO08/f02.png",
+          "sha256": "2ec8c1b2ff0c4eb13e015cae008262fe099a3a899c6fb1ed8c9d1b338cf68206",
+          "size": [
+            498,
+            768
+          ],
+          "significant_bbox": [
+            37,
+            24,
+            490,
+            720
+          ],
+          "head_y": 24,
+          "feet_y": 720,
+          "waist_x": 224.786,
+          "body_height": 696,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        },
+        {
+          "frame": 3,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extraction-review-2026-10-11/AO08/f03.png",
+          "sha256": "538227ae975752fc227ee3a2f93cc0fa94bfb50688778d0deb5b1d38b4e453c6",
+          "size": [
+            663,
+            768
+          ],
+          "significant_bbox": [
+            9,
+            26,
+            658,
+            720
+          ],
+          "head_y": 26,
+          "feet_y": 720,
+          "waist_x": 195.774,
+          "body_height": 694,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        },
+        {
+          "frame": 4,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extraction-review-2026-10-11/AO08/f04.png",
+          "sha256": "c4da87e4d83c11433ef1b89f9fcc4da552b4fe2b75ad35e13a0117cc8cae5ffc",
+          "size": [
+            431,
+            768
+          ],
+          "significant_bbox": [
+            6,
+            23,
+            355,
+            721
+          ],
+          "head_y": 23,
+          "feet_y": 721,
+          "waist_x": 176.859,
+          "body_height": 698,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "visually reviewed head; lower visible sole; alpha-weighted waist centroid in anatomical row band, pending annotated board review"
+        }
+      ],
+      "cell": [
+        256,
+        384
+      ],
+      "feet_y": 368,
+      "center_x": 128,
+      "guard_px": 10,
+      "target_body_height": 290,
+      "requested_scale": 0.4172661870503597,
+      "fit_limit": 0.2552863750632807,
+      "scale": 0.2552863750632807,
+      "size_conflict": true,
+      "body_spread_estimated": 1.021145500253123,
+      "output": "strips/AO08.png",
+      "content_state": "DRAFT",
+      "runtime_admission": false
+    },
+    {
+      "code": "ER02",
+      "hero": "erik",
+      "source": ".atena/generated/hero-normalization-2026-10-10/sources/er02-idle-v02.png",
+      "source_sha256": "340fbe94fb9246f840ca2d7c328e609090678e2c2a50a167552f4bb905f0fae4",
+      "frames": [
+        {
+          "frame": 1,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extraction-review-2026-10-11/ER02/f01.png",
+          "sha256": "ac6afe51ac8cadd845ff0623b80c20714ed2278f08a600308f26b51f398acd4c",
+          "size": [
+            520,
+            768
+          ],
+          "significant_bbox": [
+            73,
+            27,
+            486,
+            753
+          ],
+          "head_y": 28,
+          "feet_y": 753,
+          "waist_x": 315.776,
+          "body_height": 725,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "anatomical head ROI inspected visually excludes flame/pommel; lower sole and waist centroid; annotated board review",
+          "head_roi": [
+            276,
+            0,
+            356,
+            339
+          ],
+          "head_roi_alpha_threshold": 32
+        },
+        {
+          "frame": 2,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extraction-review-2026-10-11/ER02/f02.png",
+          "sha256": "0e7256c327b8d03f0789f9fa4871e94dc73ce1eb17bfc0243b754a07345ff1e8",
+          "size": [
+            496,
+            768
+          ],
+          "significant_bbox": [
+            34,
+            27,
+            453,
+            753
+          ],
+          "head_y": 27,
+          "feet_y": 753,
+          "waist_x": 279.288,
+          "body_height": 726,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "anatomical head ROI inspected visually excludes flame/pommel; lower sole and waist centroid; annotated board review",
+          "head_roi": [
+            239,
+            0,
+            319,
+            339
+          ],
+          "head_roi_alpha_threshold": 32
+        },
+        {
+          "frame": 3,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extraction-review-2026-10-11/ER02/f03.png",
+          "sha256": "7aa8ec0478acd6137044f2648aaf5342e668306355a38484b27f7f38eaf0abb8",
+          "size": [
+            496,
+            768
+          ],
+          "significant_bbox": [
+            43,
+            27,
+            448,
+            752
+          ],
+          "head_y": 27,
+          "feet_y": 752,
+          "waist_x": 280.303,
+          "body_height": 725,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "anatomical head ROI inspected visually excludes flame/pommel; lower sole and waist centroid; annotated board review",
+          "head_roi": [
+            240,
+            0,
+            320,
+            338
+          ],
+          "head_roi_alpha_threshold": 32
+        },
+        {
+          "frame": 4,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extraction-review-2026-10-11/ER02/f04.png",
+          "sha256": "cdbf97255034eb8f3d63ab58c1a421cd73c41030c1924364fb9c3711fd0eb660",
+          "size": [
+            536,
+            768
+          ],
+          "significant_bbox": [
+            48,
+            26,
+            446,
+            753
+          ],
+          "head_y": 26,
+          "feet_y": 753,
+          "waist_x": 277.453,
+          "body_height": 727,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "anatomical head ROI inspected visually excludes flame/pommel; lower sole and waist centroid; annotated board review",
+          "head_roi": [
+            237,
+            0,
+            317,
+            339
+          ],
+          "head_roi_alpha_threshold": 32
+        }
+      ],
+      "cell": [
+        256,
+        384
+      ],
+      "feet_y": 368,
+      "center_x": 128,
+      "guard_px": 10,
+      "target_body_height": 300,
+      "requested_scale": 0.4135079255685734,
+      "fit_limit": 0.4810671537131861,
+      "scale": 0.4135079255685734,
+      "size_conflict": false,
+      "body_spread_estimated": 0.8270158511371468,
+      "output": "strips/ER02.png",
+      "content_state": "DRAFT",
+      "runtime_admission": false
+    },
+    {
+      "code": "ER04",
+      "hero": "erik",
+      "source": ".atena/generated/hero-normalization-2026-10-10/sources/er04-move_se-v01.png",
+      "source_sha256": "e6f2221b56fa7be7d74b04530a3571cd8802b4b92ffb29346a544fa18299ea57",
+      "frames": [
+        {
+          "frame": 1,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extracted/ER04/frame-1.png",
+          "sha256": "1f7b9ec5a4e62677aca5ad4676401ef648dada4461d07d17d0285bb694ee9f78",
+          "size": [
+            326,
+            814
+          ],
+          "significant_bbox": [
+            2,
+            124,
+            324,
+            726
+          ],
+          "head_y": 131,
+          "feet_y": 726,
+          "waist_x": 155.729,
+          "body_height": 595,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "anatomical head ROI inspected visually excludes flame/pommel; lower sole and waist centroid; annotated board review",
+          "head_roi": [
+            151,
+            0,
+            201,
+            327
+          ],
+          "head_roi_alpha_threshold": 32
+        },
+        {
+          "frame": 2,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extracted/ER04/frame-2.png",
+          "sha256": "40ec08ba7ca0c0474bcf691addd0d76cc76f5277cbcc6c066b73d5ec3a68255a",
+          "size": [
+            324,
+            814
+          ],
+          "significant_bbox": [
+            2,
+            124,
+            322,
+            729
+          ],
+          "head_y": 131,
+          "feet_y": 729,
+          "waist_x": 160.475,
+          "body_height": 598,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "anatomical head ROI inspected visually excludes flame/pommel; lower sole and waist centroid; annotated board review",
+          "head_roi": [
+            155,
+            0,
+            205,
+            328
+          ],
+          "head_roi_alpha_threshold": 32
+        },
+        {
+          "frame": 3,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extracted/ER04/frame-3.png",
+          "sha256": "86ceb49f2f15a8fa73879a96db54cd6827e05b28c44451615fdadd41630d188c",
+          "size": [
+            299,
+            814
+          ],
+          "significant_bbox": [
+            3,
+            125,
+            296,
+            729
+          ],
+          "head_y": 133,
+          "feet_y": 729,
+          "waist_x": 142.366,
+          "body_height": 596,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "anatomical head ROI inspected visually excludes flame/pommel; lower sole and waist centroid; annotated board review",
+          "head_roi": [
+            137,
+            0,
+            187,
+            328
+          ],
+          "head_roi_alpha_threshold": 32
+        },
+        {
+          "frame": 4,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extracted/ER04/frame-4.png",
+          "sha256": "745b1baffa67241040247c05764c74660c37815045df7e255254b2ae5743d5cd",
+          "size": [
+            321,
+            814
+          ],
+          "significant_bbox": [
+            2,
+            131,
+            319,
+            722
+          ],
+          "head_y": 136,
+          "feet_y": 722,
+          "waist_x": 160.782,
+          "body_height": 586,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "anatomical head ROI inspected visually excludes flame/pommel; lower sole and waist centroid; annotated board review",
+          "head_roi": [
+            156,
+            0,
+            206,
+            325
+          ],
+          "head_roi_alpha_threshold": 32
+        },
+        {
+          "frame": 5,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extracted/ER04/frame-5.png",
+          "sha256": "231f9c9f3664bec4c170d40829b12fb48f21c61ebb7bcd4889c850d869f672e3",
+          "size": [
+            311,
+            814
+          ],
+          "significant_bbox": [
+            3,
+            124,
+            308,
+            726
+          ],
+          "head_y": 131,
+          "feet_y": 726,
+          "waist_x": 153.258,
+          "body_height": 595,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "anatomical head ROI inspected visually excludes flame/pommel; lower sole and waist centroid; annotated board review",
+          "head_roi": [
+            148,
+            0,
+            198,
+            327
+          ],
+          "head_roi_alpha_threshold": 32
+        },
+        {
+          "frame": 6,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extracted/ER04/frame-6.png",
+          "sha256": "49f51f81670c243a76d9b36bd1af182048dea604f9c988c916fdcd6b0e8d223f",
+          "size": [
+            311,
+            814
+          ],
+          "significant_bbox": [
+            2,
+            124,
+            309,
+            728
+          ],
+          "head_y": 133,
+          "feet_y": 728,
+          "waist_x": 159.447,
+          "body_height": 595,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "anatomical head ROI inspected visually excludes flame/pommel; lower sole and waist centroid; annotated board review",
+          "head_roi": [
+            154,
+            0,
+            204,
+            328
+          ],
+          "head_roi_alpha_threshold": 32
+        }
+      ],
+      "cell": [
+        256,
+        384
+      ],
+      "feet_y": 368,
+      "center_x": 128,
+      "guard_px": 10,
+      "target_body_height": 300,
+      "requested_scale": 0.5042016806722689,
+      "fit_limit": 0.5917355371900826,
+      "scale": 0.5042016806722689,
+      "size_conflict": false,
+      "body_spread_estimated": 6.050420168067227,
+      "output": "strips/ER04.png",
+      "content_state": "DRAFT",
+      "runtime_admission": false
+    },
+    {
+      "code": "ER05",
+      "hero": "erik",
+      "source": ".atena/generated/hero-normalization-2026-10-10/sources/er05-move_s-v01.png",
+      "source_sha256": "c4cf640e0bfb3948b0a16a3f99978eb0b047c454799f12412c699d6078b91ba3",
+      "frames": [
+        {
+          "frame": 1,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extracted/ER05/frame-1.png",
+          "sha256": "069d71a5bf13a72875b95c73d3db3f77571850eb6dde2d1c8a9b954622876499",
+          "size": [
+            325,
+            768
+          ],
+          "significant_bbox": [
+            2,
+            53,
+            323,
+            703
+          ],
+          "head_y": 53,
+          "feet_y": 703,
+          "waist_x": 152.355,
+          "body_height": 650,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "anatomical head ROI inspected visually excludes flame/pommel; lower sole and waist centroid; annotated board review",
+          "head_roi": [
+            112,
+            0,
+            192,
+            316
+          ],
+          "head_roi_alpha_threshold": 32
+        },
+        {
+          "frame": 2,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extracted/ER05/frame-2.png",
+          "sha256": "1d4fecde6cad107a1394194c2c9baaadf6e9c313ab6bf5cbb7b9a9e8b5129503",
+          "size": [
+            306,
+            768
+          ],
+          "significant_bbox": [
+            2,
+            52,
+            303,
+            698
+          ],
+          "head_y": 53,
+          "feet_y": 698,
+          "waist_x": 154.192,
+          "body_height": 645,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "anatomical head ROI inspected visually excludes flame/pommel; lower sole and waist centroid; annotated board review",
+          "head_roi": [
+            114,
+            0,
+            194,
+            314
+          ],
+          "head_roi_alpha_threshold": 32
+        },
+        {
+          "frame": 3,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extracted/ER05/frame-3.png",
+          "sha256": "6f71d913b2b817c6cc29ea882793f425e4735f976f1ddf8eb34a826f4d55cd92",
+          "size": [
+            310,
+            768
+          ],
+          "significant_bbox": [
+            3,
+            57,
+            308,
+            686
+          ],
+          "head_y": 58,
+          "feet_y": 686,
+          "waist_x": 148.545,
+          "body_height": 628,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "anatomical head ROI inspected visually excludes flame/pommel; lower sole and waist centroid; annotated board review",
+          "head_roi": [
+            109,
+            0,
+            189,
+            309
+          ],
+          "head_roi_alpha_threshold": 32
+        },
+        {
+          "frame": 4,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extracted/ER05/frame-4.png",
+          "sha256": "25b05551c3c3271490ebf5ebb0b82364c43cabd5864ac1f93d34c8055cd7a6c0",
+          "size": [
+            332,
+            768
+          ],
+          "significant_bbox": [
+            3,
+            55,
+            330,
+            704
+          ],
+          "head_y": 56,
+          "feet_y": 704,
+          "waist_x": 149.925,
+          "body_height": 648,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "anatomical head ROI inspected visually excludes flame/pommel; lower sole and waist centroid; annotated board review",
+          "head_roi": [
+            110,
+            0,
+            190,
+            317
+          ],
+          "head_roi_alpha_threshold": 32
+        },
+        {
+          "frame": 5,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extracted/ER05/frame-5.png",
+          "sha256": "a2dcbe172679a47b2c15f12e4042500579de20bb3d64bdb97eb74901acbd2778",
+          "size": [
+            309,
+            768
+          ],
+          "significant_bbox": [
+            1,
+            58,
+            307,
+            701
+          ],
+          "head_y": 58,
+          "feet_y": 701,
+          "waist_x": 151.088,
+          "body_height": 643,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "anatomical head ROI inspected visually excludes flame/pommel; lower sole and waist centroid; annotated board review",
+          "head_roi": [
+            111,
+            0,
+            191,
+            315
+          ],
+          "head_roi_alpha_threshold": 32
+        },
+        {
+          "frame": 6,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extracted/ER05/frame-6.png",
+          "sha256": "396d8465cf1bf6fe3faec2f3a03572edca8ea3f67d0b69fe0149834dad924f07",
+          "size": [
+            302,
+            768
+          ],
+          "significant_bbox": [
+            3,
+            58,
+            300,
+            688
+          ],
+          "head_y": 59,
+          "feet_y": 688,
+          "waist_x": 145.778,
+          "body_height": 629,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "anatomical head ROI inspected visually excludes flame/pommel; lower sole and waist centroid; annotated board review",
+          "head_roi": [
+            106,
+            0,
+            186,
+            310
+          ],
+          "head_roi_alpha_threshold": 32
+        }
+      ],
+      "cell": [
+        256,
+        384
+      ],
+      "feet_y": 368,
+      "center_x": 128,
+      "guard_px": 10,
+      "target_body_height": 300,
+      "requested_scale": 0.4658385093167702,
+      "fit_limit": 0.5507692307692308,
+      "scale": 0.4658385093167702,
+      "size_conflict": false,
+      "body_spread_estimated": 10.248447204968944,
+      "output": "strips/ER05.png",
+      "content_state": "DRAFT",
+      "runtime_admission": false
+    },
+    {
+      "code": "ER07",
+      "hero": "erik",
+      "source": ".atena/generated/hero-normalization-2026-10-10/sources/er07-move_n-v01.png",
+      "source_sha256": "6ae2917e571612e40a64bbe9d8264508ee0ee6489e2620e8f4c6194df76d5323",
+      "frames": [
+        {
+          "frame": 1,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extraction-review-2026-10-11/ER07/f01.png",
+          "sha256": "f66d8ccfcfe7aba67539f5b672bf820d3f9add623662986b69a952f3131f922f",
+          "size": [
+            341,
+            793
+          ],
+          "significant_bbox": [
+            28,
+            51,
+            321,
+            697
+          ],
+          "head_y": 87,
+          "feet_y": 697,
+          "waist_x": 173.816,
+          "body_height": 610,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "anatomical head ROI inspected visually excludes flame/pommel; lower sole and waist centroid; annotated board review",
+          "head_roi": [
+            134,
+            0,
+            214,
+            314
+          ],
+          "head_roi_alpha_threshold": 32
+        },
+        {
+          "frame": 2,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extraction-review-2026-10-11/ER07/f02.png",
+          "sha256": "224657abe6551f913efaadf5f346570b588096c62b24057eb62ec8c909525ac1",
+          "size": [
+            325,
+            793
+          ],
+          "significant_bbox": [
+            21,
+            72,
+            313,
+            703
+          ],
+          "head_y": 87,
+          "feet_y": 703,
+          "waist_x": 170.004,
+          "body_height": 616,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "anatomical head ROI inspected visually excludes flame/pommel; lower sole and waist centroid; annotated board review",
+          "head_roi": [
+            130,
+            0,
+            210,
+            316
+          ],
+          "head_roi_alpha_threshold": 32
+        },
+        {
+          "frame": 3,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extraction-review-2026-10-11/ER07/f03.png",
+          "sha256": "ea68ddb9a43c17c7d206afd57334cb139c684c4d08edb06a5cdfd9b8459fb0b2",
+          "size": [
+            320,
+            793
+          ],
+          "significant_bbox": [
+            13,
+            71,
+            307,
+            692
+          ],
+          "head_y": 81,
+          "feet_y": 692,
+          "waist_x": 158.838,
+          "body_height": 611,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "anatomical head ROI inspected visually excludes flame/pommel; lower sole and waist centroid; annotated board review",
+          "head_roi": [
+            119,
+            0,
+            199,
+            311
+          ],
+          "head_roi_alpha_threshold": 32
+        },
+        {
+          "frame": 4,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extraction-review-2026-10-11/ER07/f04.png",
+          "sha256": "0ef29d59a008500e27afbf5b0adc7292b4b019e0fc601209c4749521bef5cca3",
+          "size": [
+            328,
+            793
+          ],
+          "significant_bbox": [
+            14,
+            68,
+            311,
+            714
+          ],
+          "head_y": 88,
+          "feet_y": 714,
+          "waist_x": 160.345,
+          "body_height": 626,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "anatomical head ROI inspected visually excludes flame/pommel; lower sole and waist centroid; annotated board review",
+          "head_roi": [
+            120,
+            0,
+            200,
+            321
+          ],
+          "head_roi_alpha_threshold": 32
+        },
+        {
+          "frame": 5,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extraction-review-2026-10-11/ER07/f05.png",
+          "sha256": "17ea5a80c58b2e3bf0829f8ba9c661eb2ec5c8e238bd54a5b3154323e736a6ea",
+          "size": [
+            326,
+            793
+          ],
+          "significant_bbox": [
+            18,
+            69,
+            310,
+            689
+          ],
+          "head_y": 84,
+          "feet_y": 689,
+          "waist_x": 150.268,
+          "body_height": 605,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "anatomical head ROI inspected visually excludes flame/pommel; lower sole and waist centroid; annotated board review",
+          "head_roi": [
+            110,
+            0,
+            190,
+            310
+          ],
+          "head_roi_alpha_threshold": 32
+        },
+        {
+          "frame": 6,
+          "path": ".atena/generated/hero-normalization-2026-10-10/extraction-review-2026-10-11/ER07/f06.png",
+          "sha256": "faf46af85c3bcf868fa63bc92c7f8ff785a0eeea307fc7dcf67a3018e49f28f4",
+          "size": [
+            343,
+            793
+          ],
+          "significant_bbox": [
+            16,
+            69,
+            315,
+            701
+          ],
+          "head_y": 82,
+          "feet_y": 701,
+          "waist_x": 159.914,
+          "body_height": 619,
+          "landmark_uncertainty_source_px": 3,
+          "source_edge_pixels_gt8": 0,
+          "landmark_method": "anatomical head ROI inspected visually excludes flame/pommel; lower sole and waist centroid; annotated board review",
+          "head_roi": [
+            120,
+            0,
+            200,
+            315
+          ],
+          "head_roi_alpha_threshold": 32
+        }
+      ],
+      "cell": [
+        256,
+        384
+      ],
+      "feet_y": 368,
+      "center_x": 128,
+      "guard_px": 10,
+      "target_body_height": 300,
+      "requested_scale": 0.4889975550122249,
+      "fit_limit": 0.5541795665634675,
+      "scale": 0.4889975550122249,
+      "size_conflict": false,
+      "body_spread_estimated": 10.268948655256724,
+      "output": "strips/ER07.png",
+      "content_state": "DRAFT",
+      "runtime_admission": false
+    }
+  ],
+  "git_head": "e6aea39f16b43e18d2d4501e870645a97b6d4dfe",
+  "output_variant": "v02",
+  "landmark_review": "refined Erik head ROIs after inspecting native extractions; initial candidates preserved",
+  "current_step_position": 4,
+  "remaining_steps_after_current": 0,
+  "checkpoint": "S-007/BODY-PIVOT/EIGHT-V02-ACCEPTED",
+  "technical_candidates": [
+    "AO02",
+    "AO03",
+    "AO05",
+    "AO06",
+    "ER02",
+    "ER04",
+    "ER05",
+    "ER07"
+  ],
+  "held_candidates": [
+    "AO04",
+    "AO07",
+    "AO08"
+  ],
+  "native_visual_inspection": "ALL_ELEVEN_FINAL_V02_STRIPS_INSPECTED",
+  "gallery": "index.html",
+  "audit": "audit.json",
+  "human_visual_acceptance": "EIGHT_V02_APPROVED_EXPLICITLY",
+  "owner_reply": "Aprovo visualmente as oito candidatas v02",
+  "visual_acceptance": "visual-acceptance.json"
+}

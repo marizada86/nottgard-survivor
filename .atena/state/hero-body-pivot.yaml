@@ -1,0 +1,32 @@
+version: 1
+hero_body_pivot_2026_10_12:
+  plan: PLAN-053
+  revision: DEV-024/v03/body-pivot-v01
+  request_classification: IN_PLAN
+  mode: per-plan
+  status: COMPLETED_PARTIAL_VISUALLY_ACCEPTED_DRAFT
+  checkpoint: S-007/BODY-PIVOT/EIGHT-V02-ACCEPTED
+  current_step_position: 4
+  completed_steps: 4
+  total_steps: 4
+  remaining_steps_after_current: 0
+  ordered_steps: [SOURCES_LANDMARKS, PREPARE, AUDIT, GALLERY_GATE]
+  content_state: DRAFT
+  strips: 11
+  input_frames: 60
+  runtime_admission: false
+  canonical_promotion: false
+  commit_push_export: NOT_AUTHORIZED
+  specification: .atena/specs/SPEC-121-retomada-fila-imagens/hero-body-pivot-v01.md
+  manifest: .atena/generated/hero-body-pivot-2026-10-12/manifest.json
+  next_objective: 'Avaliar máscaras/separação das cinco ações retidas; preservar oito aceites e demais decisões'
+  technical_candidates: [AO02, AO03, AO05, AO06, ER02, ER04, ER05, ER07]
+  held_current: [AO04, AO07, AO08]
+  held_source_separation_or_count: [ER03, ER06, AO09, AO10, ER08, ER09, ER10]
+  gallery: .atena/generated/hero-body-pivot-2026-10-12/index.html
+  audit: .atena/generated/hero-body-pivot-2026-10-12/audit.json
+  evidence: .atena/evidence/hero-body-pivot-2026-10-12.md
+  human_visual_acceptance: EIGHT_V02_APPROVED_EXPLICITLY
+  next_execution_authorized: false
+  owner_visual_reply: "Aprovo visualmente as oito candidatas v02"
+  acceptance_receipt: .atena/generated/hero-body-pivot-2026-10-12/visual-acceptance.json

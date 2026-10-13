@@ -1,0 +1,35 @@
+version: 1
+plan: PLAN-053
+spec: SPEC-121
+revision: DEV-024/v03/extraction-review-v01
+request_classification: IN_PLAN
+authorization: 'atena continue a geração de imagens; rota de preparação já aprovada'
+mode: per-plan
+checkpoint: S-007/ORIGINAL-GENERATIONS/BODY-FEET-LANDMARKS
+status: EXTRACTION_REVIEW_COMPLETED_PARTIAL_SAFE_EXTRACTION
+content_state: DRAFT
+runtime_admission: false
+source_snapshot: .atena/generated/hero-normalization-2026-10-10/manifest.json
+source_snapshot_verified: 20
+external_worktree_available: false
+reviewed_pending_strips: 11
+extracted_native_frames: 30
+extracted_strips: [AO02, AO05, AO06, AO08, ER02, ER07]
+prior_extracted_strips: [AO03, AO04, AO07, ER04, ER05]
+held_unsafe_rectangular_separation: [AO09, AO10, ER08, ER09, ER10]
+held_original_decisions: [ER03, ER06]
+normalized_strips: 0
+audit: .atena/generated/hero-normalization-2026-10-10/extraction-review-v01.json
+gallery: .atena/generated/hero-normalization-2026-10-10/extraction-review.html
+evidence: .atena/evidence/hero-extraction-review-2026-10-11.md
+next_objective: 'Marcar corpo/pés nas onze tiras extraíveis; avaliar separação não retangular das cinco retidas, sem refazer a passada cancelada.'
+approval_status: EXISTING_PER_PLAN_SCOPE_APPROVED_VISUAL_ADMISSION_PENDING
+
+continuation_2026_10_12:
+  body_pivot_state: .atena/state/hero-body-pivot.yaml
+  body_pivot_accepted: [AO02, AO03, AO05, AO06, ER02, ER04, ER05, ER07]
+  new_native_mask_extractions: [ER08, ER09, ER10]
+  new_native_frames: 16
+  mask_review_state: .atena/state/hero-mask-feasibility.yaml
+  remaining_source_holds: [ER03, ER06, AO09, AO10]
+  proposed_wide_actions_state: .atena/state/hero-wide-actions.yaml
