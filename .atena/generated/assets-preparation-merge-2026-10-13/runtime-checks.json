@@ -1,0 +1,118 @@
+{
+	"abilities": [
+		{
+			"ability": "ruptura_sombria",
+			"hero": "durvall",
+			"kind": "arc",
+			"plain_rings_left": 0,
+			"sprites": 1
+		},
+		{
+			"ability": "guarda_de_lliira",
+			"freed_when_effect_ends": true,
+			"hero": "brook",
+			"kind": "follow",
+			"plain_rings_left": 0,
+			"sprites": 1
+		},
+		{
+			"ability": "comunhao",
+			"hero": "maelor",
+			"kind": "pulse",
+			"plain_rings_left": 0,
+			"sprites": 1
+		},
+		{
+			"ability": "passo_pelas_sombras",
+			"hero": "sylas",
+			"kind": "trail",
+			"plain_rings_left": 0,
+			"sprites": 1
+		},
+		{
+			"ability": "sobrecarga_mistica",
+			"freed_when_effect_ends": true,
+			"hero": "kayron",
+			"kind": "follow",
+			"plain_rings_left": 0,
+			"sprites": 1
+		},
+		{
+			"ability": "impacto_de_xargath",
+			"hero": "korrak",
+			"kind": "pulse",
+			"plain_rings_left": 0,
+			"sprites": 1
+		},
+		{
+			"ability": "constelacao",
+			"hero": "leoric",
+			"kind": "pulse",
+			"plain_rings_left": 0,
+			"sprites": 1
+		},
+		{
+			"ability": "suspensao_temporal",
+			"hero": "zynara",
+			"kind": "pulse",
+			"plain_rings_left": 0,
+			"sprites": 1
+		},
+		{
+			"ability": "concordia",
+			"hero": "bromnor",
+			"kind": "pulse",
+			"plain_rings_left": 0,
+			"sprites": 1
+		},
+		{
+			"ability": "dominacao",
+			"hero": "nyrelia",
+			"kind": "sigil",
+			"plain_rings_left": 1,
+			"sprites": 1
+		}
+	],
+	"appdata": "F:/dev/nottgard-survivor-merge/.atena/generated/assets-preparation-merge-2026-10-13/qa-appdata",
+	"fallbacks": {
+		"reduced_impact_projectile_uses_old_circle": true
+	},
+	"projectiles": [
+		{
+			"family": "orbe_radiante",
+			"flight_sprites": 1,
+			"impact_nodes": 1,
+			"steps": 21,
+			"weapon": "raio_de_luz"
+		},
+		{
+			"family": "orbe_radiante",
+			"flight_sprites": 3,
+			"impact_nodes": 3,
+			"steps": 22,
+			"weapon": "luz_mais_pura"
+		},
+		{
+			"family": "orbe_arcano",
+			"flight_sprites": 1,
+			"impact_nodes": 1,
+			"steps": 12,
+			"weapon": "raio_enfraquecedor"
+		},
+		{
+			"family": "onda_cortante",
+			"flight_sprites": 1,
+			"impact_nodes": 1,
+			"steps": 17,
+			"weapon": "lamina_trovejante"
+		},
+		{
+			"family": "onda_cortante",
+			"flight_sprites": 4,
+			"impact_nodes": 4,
+			"steps": 19,
+			"weapon": "tempestade"
+		}
+	],
+	"result": "PASS"
+}

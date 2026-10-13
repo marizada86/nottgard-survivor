@@ -1350,3 +1350,21 @@ vfx_projectiles_hero_abilities_2026_10_13:
   return_checkpoint: B-006/S-011
   evidence: .atena/evidence/vfx-projectiles-hero-abilities-admission-2026-10-13.md
   git_receipt: {authorization: "atena, faca o commit (2026-10-13)", branch: main, commits: ["6859583", "registros = commit seguinte"], pushed: false, note: "Sem push, exportacao nem aviso aos testers."}
+assets_preparation_merge_2026_10_13:
+  plan: PLAN-053
+  revision: assets-preparation-merge/v01
+  classification: IN_PLAN
+  state_file: .atena/state/assets-preparation-merge.yaml
+  mode: per-plan
+  approval_status: APPROVED_EXPLICITLY
+  owner_request: "atena, continuar implementando assets gerados pelo chatgpt"
+  status: LOCAL_MERGED_AWAITING_OWNER_PLAYTEST
+  checkpoint: S-004/MAIN_ADVANCED_OWNER_PLAYTEST
+  source_branch: codex/assets-preparation-2026-10-10
+  completed_steps: 4
+  total_steps: 4
+  pushed: false
+  rollback_tag: pre-merge-assets-preparation-2026-10-13
+  evidence: .atena/evidence/assets-preparation-merge-2026-10-13.md
+  return_plan: PLAN-071
+  return_checkpoint: B-006/S-011
