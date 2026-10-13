@@ -704,7 +704,7 @@ func _consume_events() -> void:
 				hero_node.play_action(&"attack")
 			"nova":
 				Sfx.play_weapon(String(ev.get("weapon", "")), "combat.nova")
-				_ring(ev.pos, ev.radius, _divine_theme().impact_accent, 0.35)
+				_nova_effect(ev)
 			"zone":
 				Sfx.play_weapon(String(ev.get("weapon", "")), "combat.zone")
 				var zone_theme: Dictionary = ev.get("visual_theme", _divine_theme())
@@ -962,6 +962,16 @@ func _play_sheet_effect(path: String, center: Vector2, radius: float, duration: 
 		tween.tween_callback(func(): sprite.frame = frame)
 		tween.tween_interval(duration / 4.0)
 	tween.tween_callback(sprite.queue_free)
+
+func _nova_effect(event: Dictionary) -> void:
+	var color: Color = _divine_theme().impact_accent
+	var pulse := RadiantPulseVfx.create_effect(event, color, Game.reduced_impact())
+	if pulse == null:
+		pulse = HourglassVfx.create_effect(event, color, Game.reduced_impact())
+	if pulse != null:
+		fx.add_child(pulse)
+	else:
+		_ring(event.pos, event.radius, color, RadiantPulseVfx.DURATION)
 
 func _ring(center: Vector2, radius: float, col: Color, dur: float) -> void:
 	var line := Line2D.new()
