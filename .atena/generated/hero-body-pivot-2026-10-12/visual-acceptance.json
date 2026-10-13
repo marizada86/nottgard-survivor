@@ -1,0 +1,111 @@
+{
+  "owner_reply": "Aprovo visualmente as oito candidatas v02",
+  "date": "2026-10-12",
+  "scope": "EIGHT_NORMALIZED_V02_CANDIDATES_ONLY",
+  "content_state": "DRAFT_VISUALLY_ACCEPTED_PREPARATION",
+  "entries": [
+    {
+      "code": "AO02",
+      "candidate": "body-pivot-v01/candidates-v02",
+      "path": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/AO02.png",
+      "sha256": "ebe364c08618a3ec53b071e25bb5cd1dfeb091436535013c7543903e2617f1fc",
+      "body_median": 290.0,
+      "body_spread": 2,
+      "source": ".atena/generated/hero-normalization-2026-10-10/sources/ao02-idle-v01.png",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED_PREPARATION",
+      "runtime_admission": false
+    },
+    {
+      "code": "AO03",
+      "candidate": "body-pivot-v01/candidates-v02",
+      "path": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/AO03.png",
+      "sha256": "8fb828bb8f0421c6f5014d549ce2da2216dc015ee78049faa09cbec4a4ca880e",
+      "body_median": 290.0,
+      "body_spread": 11,
+      "source": ".atena/generated/hero-normalization-2026-10-10/sources/ao03-move_e-v01.png",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED_PREPARATION",
+      "runtime_admission": false
+    },
+    {
+      "code": "AO05",
+      "candidate": "body-pivot-v01/candidates-v02",
+      "path": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/AO05.png",
+      "sha256": "3f37d88649efcbde3be4833a437988f43868d04403e3c63ffa22e14329ff8609",
+      "body_median": 290.0,
+      "body_spread": 6,
+      "source": ".atena/generated/hero-normalization-2026-10-10/sources/ao05-move_s-v01.png",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED_PREPARATION",
+      "runtime_admission": false
+    },
+    {
+      "code": "AO06",
+      "candidate": "body-pivot-v01/candidates-v02",
+      "path": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/AO06.png",
+      "sha256": "3d0b0c8bc2ef3a5fc8e6b967602e57dcc17cf4ff89758c9cb44300cfc88368a6",
+      "body_median": 290.0,
+      "body_spread": 4,
+      "source": ".atena/generated/hero-normalization-2026-10-10/sources/ao06-move_ne-v01.png",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED_PREPARATION",
+      "runtime_admission": false
+    },
+    {
+      "code": "ER02",
+      "candidate": "body-pivot-v01/candidates-v02",
+      "path": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/ER02.png",
+      "sha256": "3c3ea2fbedac595dd8a2fcb2c8f118debf45d28f045c6318112291ed706c2dc2",
+      "body_median": 300.0,
+      "body_spread": 1,
+      "source": ".atena/generated/hero-normalization-2026-10-10/sources/er02-idle-v02.png",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED_PREPARATION",
+      "runtime_admission": false
+    },
+    {
+      "code": "ER04",
+      "candidate": "body-pivot-v01/candidates-v02",
+      "path": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/ER04.png",
+      "sha256": "43ae0813ab51100e34c2bb99546c240bfef105201f56689ef161c7f8bde1ea1f",
+      "body_median": 301.0,
+      "body_spread": 5,
+      "source": ".atena/generated/hero-normalization-2026-10-10/sources/er04-move_se-v01.png",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED_PREPARATION",
+      "runtime_admission": false
+    },
+    {
+      "code": "ER05",
+      "candidate": "body-pivot-v01/candidates-v02",
+      "path": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/ER05.png",
+      "sha256": "8b3d492be3daad7813cfa4c1fcbe1cef389293532897ab1707b18a81d747b65f",
+      "body_median": 300.5,
+      "body_spread": 10,
+      "source": ".atena/generated/hero-normalization-2026-10-10/sources/er05-move_s-v01.png",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED_PREPARATION",
+      "runtime_admission": false
+    },
+    {
+      "code": "ER07",
+      "candidate": "body-pivot-v01/candidates-v02",
+      "path": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/ER07.png",
+      "sha256": "5fe3e45f0ebd24f231d5492472a6ea91522f16f84fb6b21031055f30d1c9b211",
+      "body_median": 300.5,
+      "body_spread": 10,
+      "source": ".atena/generated/hero-normalization-2026-10-10/sources/er07-move_n-v01.png",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED_PREPARATION",
+      "runtime_admission": false
+    }
+  ],
+  "not_accepted": [
+    "AO04",
+    "AO07",
+    "AO08",
+    "ER03",
+    "ER06",
+    "AO09",
+    "AO10",
+    "ER08",
+    "ER09",
+    "ER10"
+  ],
+  "canonical_promotion": false,
+  "runtime_admission": false,
+  "commit_push_export": false
+}

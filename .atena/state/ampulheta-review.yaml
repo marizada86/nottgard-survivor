@@ -1,0 +1,35 @@
+version: 1
+plan: PLAN-053
+revision: ampulheta-review/v01
+classification: IN_PLAN
+mode: per-plan
+status: COMPLETED_VISUALLY_ACCEPTED_DRAFT
+checkpoint: S-004/SEQUENCE_ACCEPTANCE_RECORDED
+ordered_steps: [S-001, S-002, S-003, S-004]
+current_step_position: 4
+completed_steps: 4
+total_steps: 4
+remaining_steps_after_current: 0
+spec: .atena/specs/SPEC-121-retomada-fila-imagens/ampulheta-review-v01.md
+owner_reply: 'atena, aprovado continuar fila de assets'
+recovery: .atena/generated/ampulheta-review-2026-10-13/recovery.json
+audit: .atena/generated/ampulheta-review-2026-10-13/audit.json
+gallery: .atena/generated/ampulheta-review-2026-10-13/index.html
+selected: [M01v02, M02v03, M03v01, M04v01, M05v01, M06v01]
+historical_approvals: {M03v01: PEAK_APPROVED, M01v02: SCALE_14_PERCENT_EXCEPTION_ACCEPTED}
+pending_visual_acceptance: []
+content_state: DRAFT_SEQUENCE_HISTORICAL_PEAK_AND_EXCEPTION_PRESERVED
+runtime_changed: false
+canonical_promotion: false
+new_generation: 0
+next_objective: Aprovar escopo e modo de ampulheta-admission/v01 antes da normalizacao e admissao.
+next_execution_authorized: false
+return_plan: {id: PLAN-071, checkpoint: B-006/S-011, preserved: true}
+hero_playtest: PENDING_PRESERVED
+evidence: .atena/evidence/ampulheta-review-2026-10-13.md
+verification: .atena/generated/ampulheta-review-2026-10-13/verification.json
+visual_acceptance: .atena/generated/ampulheta-review-2026-10-13/visual-acceptance.json
+admission_proposal: .atena/specs/SPEC-121-retomada-fila-imagens/ampulheta-admission-v01.md
+admission_mode: per-plan
+admission_state: .atena/state/ampulheta-admission.yaml
+admission_status: LOCAL_TECHNICAL_DELIVERED_AWAITING_OWNER_PLAYTEST

@@ -1,0 +1,36 @@
+version: 1
+plan: PLAN-053
+revision: pulso-admission/v01
+classification: PLAN_CHANGE_REQUEST
+status: OWNER_ACCEPTED_LOCAL_DELIVERY
+mode: per-plan
+checkpoint: S-004/OWNER_DELIVERY_ACCEPTANCE_RECORDED
+executable: false
+spec: .atena/specs/SPEC-121-retomada-fila-imagens/pulso-admission-v01.md
+source_acceptance: .atena/generated/pulso-resume-2026-10-13/visual-acceptance.json
+content_state: DRAFT
+ordered_steps: [S-001, S-002, S-003, S-004]
+completed_steps: 4
+total_steps: 4
+batches: {B-001: [S-001], B-002: [S-002], B-003: [S-003, S-004]}
+proposed_runtime_atlas: assets/vfx/pulso_radiante.png
+proposed_cell: [256, 256]
+proposed_frames: 6
+proposed_duration_seconds: 0.35
+weapon_allowlist: [sentenca_de_lliira, julgamento_da_gloria, descarga_estelar, chuva_de_estrelas, vela_sagrada, sopro_de_estrela]
+canonical_promotion: false
+runtime_changed: true
+human_runtime_playtest: PROCEDURE_NOT_REPORTED
+git_publication_export: NOT_AUTHORIZED
+next_objective: Continuar fila pela revisao da Ampulheta; playtest nao relatado permanece distinguido.
+return_plan: {id: PLAN-071, checkpoint: B-006/S-011, preserved: true}
+hero_playtest: PENDING_PRESERVED
+authorization: .atena/generated/pulso-admission-2026-10-13/authorization.json
+current_step_position: 4
+remaining_steps_after_current: 0
+derivative_audit: .atena/generated/pulso-admission-2026-10-13/derivative-audit.json
+build_id: "0.4.0/pulso-admission-v01/2ae8c48+local-fc366e643f4d"
+evidence: .atena/evidence/pulso-admission-2026-10-13.md
+verification: .atena/generated/pulso-admission-2026-10-13/verification.json
+owner_delivery_reply: "atena, aprovado continuar fila de assets"
+owner_acceptance_date: "2026-10-13"

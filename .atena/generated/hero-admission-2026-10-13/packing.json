@@ -1,0 +1,1439 @@
+{
+	"baseline": 448,
+	"cell": [
+		512,
+		512
+	],
+	"content_state": "DRAFT",
+	"frames": 101,
+	"records": [
+		{
+			"animation": "idle",
+			"baseline": 448,
+			"cell": [
+				512,
+				512
+			],
+			"code": "AO02",
+			"count": 4,
+			"destination": "assets/animations/heroes/arlindo/idle.png",
+			"frames": [
+				{
+					"index": 0,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						196,
+						157,
+						316,
+						448
+					]
+				},
+				{
+					"index": 1,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						192,
+						159,
+						315,
+						448
+					]
+				},
+				{
+					"index": 2,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						195,
+						157,
+						319,
+						448
+					]
+				},
+				{
+					"index": 3,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						194,
+						159,
+						315,
+						448
+					]
+				}
+			],
+			"hero": "arlindo",
+			"offset": [
+				128,
+				80
+			],
+			"path": ".atena/generated/hero-admission-2026-10-13/derivatives/AO02.png",
+			"rgba_preserved": true,
+			"sha256": "081a9f64aea94d0524e99c36ceca2a5383e769586ffd3872715502c1521ad630",
+			"source": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/AO02.png",
+			"source_sha256": "ebe364c08618a3ec53b071e25bb5cd1dfeb091436535013c7543903e2617f1fc"
+		},
+		{
+			"animation": "move_e",
+			"baseline": 448,
+			"cell": [
+				512,
+				512
+			],
+			"code": "AO03",
+			"count": 6,
+			"destination": "assets/animations/heroes/arlindo/move_e.png",
+			"frames": [
+				{
+					"index": 0,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						178,
+						158,
+						343,
+						448
+					]
+				},
+				{
+					"index": 1,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						186,
+						155,
+						333,
+						448
+					]
+				},
+				{
+					"index": 2,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						186,
+						158,
+						337,
+						448
+					]
+				},
+				{
+					"index": 3,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						189,
+						166,
+						345,
+						448
+					]
+				},
+				{
+					"index": 4,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						182,
+						158,
+						320,
+						448
+					]
+				},
+				{
+					"index": 5,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						180,
+						159,
+						317,
+						448
+					]
+				}
+			],
+			"hero": "arlindo",
+			"offset": [
+				128,
+				80
+			],
+			"path": ".atena/generated/hero-admission-2026-10-13/derivatives/AO03.png",
+			"rgba_preserved": true,
+			"sha256": "a290e66dfa258c92a43926ebcebfabe736ff8d89323efa5dacb5f844c4071a0c",
+			"source": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/AO03.png",
+			"source_sha256": "8fb828bb8f0421c6f5014d549ce2da2216dc015ee78049faa09cbec4a4ca880e"
+		},
+		{
+			"animation": "move_se",
+			"baseline": 448,
+			"cell": [
+				512,
+				512
+			],
+			"code": "AO04",
+			"count": 6,
+			"destination": "assets/animations/heroes/arlindo/move_se.png",
+			"frames": [
+				{
+					"index": 0,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						182,
+						152,
+						317,
+						448
+					]
+				},
+				{
+					"index": 1,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						183,
+						165,
+						311,
+						447
+					]
+				},
+				{
+					"index": 2,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						186,
+						158,
+						312,
+						448
+					]
+				},
+				{
+					"index": 3,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						179,
+						156,
+						328,
+						448
+					]
+				},
+				{
+					"index": 4,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						183,
+						158,
+						311,
+						448
+					]
+				},
+				{
+					"index": 5,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						183,
+						158,
+						326,
+						448
+					]
+				}
+			],
+			"hero": "arlindo",
+			"offset": [
+				128,
+				80
+			],
+			"path": ".atena/generated/hero-admission-2026-10-13/derivatives/AO04.png",
+			"rgba_preserved": true,
+			"sha256": "8ab3cdebdcd06831af5c9d62650049e05f9c865c1411247968ca6cef4fc4db48",
+			"source": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/AO04.png",
+			"source_sha256": "f2b8b31a440d02f906e577cb0b6fc48059b1dee0b8528d06936710c9077cff61"
+		},
+		{
+			"animation": "move_s",
+			"baseline": 448,
+			"cell": [
+				512,
+				512
+			],
+			"code": "AO05",
+			"count": 6,
+			"destination": "assets/animations/heroes/arlindo/move_s.png",
+			"frames": [
+				{
+					"index": 0,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						193,
+						158,
+						318,
+						448
+					]
+				},
+				{
+					"index": 1,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						198,
+						161,
+						324,
+						448
+					]
+				},
+				{
+					"index": 2,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						194,
+						155,
+						323,
+						448
+					]
+				},
+				{
+					"index": 3,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						195,
+						158,
+						318,
+						448
+					]
+				},
+				{
+					"index": 4,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						191,
+						160,
+						318,
+						448
+					]
+				},
+				{
+					"index": 5,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						194,
+						155,
+						321,
+						448
+					]
+				}
+			],
+			"hero": "arlindo",
+			"offset": [
+				128,
+				80
+			],
+			"path": ".atena/generated/hero-admission-2026-10-13/derivatives/AO05.png",
+			"rgba_preserved": true,
+			"sha256": "81b2bfb3d241181f2c3f5e0f90d4a40b14acf70c49640885005a56719ad3fa06",
+			"source": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/AO05.png",
+			"source_sha256": "3f37d88649efcbde3be4833a437988f43868d04403e3c63ffa22e14329ff8609"
+		},
+		{
+			"animation": "move_ne",
+			"baseline": 448,
+			"cell": [
+				512,
+				512
+			],
+			"code": "AO06",
+			"count": 6,
+			"destination": "assets/animations/heroes/arlindo/move_ne.png",
+			"frames": [
+				{
+					"index": 0,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						188,
+						158,
+						325,
+						448
+					]
+				},
+				{
+					"index": 1,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						193,
+						159,
+						326,
+						448
+					]
+				},
+				{
+					"index": 2,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						193,
+						162,
+						324,
+						448
+					]
+				},
+				{
+					"index": 3,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						190,
+						158,
+						319,
+						448
+					]
+				},
+				{
+					"index": 4,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						192,
+						158,
+						325,
+						448
+					]
+				},
+				{
+					"index": 5,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						189,
+						158,
+						316,
+						448
+					]
+				}
+			],
+			"hero": "arlindo",
+			"offset": [
+				128,
+				80
+			],
+			"path": ".atena/generated/hero-admission-2026-10-13/derivatives/AO06.png",
+			"rgba_preserved": true,
+			"sha256": "8f222058de1121dbe53ecb028d780790cfa2b58338cdcf5d6cebee69a74b74b0",
+			"source": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/AO06.png",
+			"source_sha256": "3d0b0c8bc2ef3a5fc8e6b967602e57dcc17cf4ff89758c9cb44300cfc88368a6"
+		},
+		{
+			"animation": "move_n",
+			"baseline": 448,
+			"cell": [
+				512,
+				512
+			],
+			"code": "AO07",
+			"count": 6,
+			"destination": "assets/animations/heroes/arlindo/move_n.png",
+			"frames": [
+				{
+					"index": 0,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						192,
+						155,
+						329,
+						448
+					]
+				},
+				{
+					"index": 1,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						188,
+						161,
+						310,
+						448
+					]
+				},
+				{
+					"index": 2,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						202,
+						158,
+						324,
+						448
+					]
+				},
+				{
+					"index": 3,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						196,
+						158,
+						326,
+						448
+					]
+				},
+				{
+					"index": 4,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						189,
+						168,
+						311,
+						448
+					]
+				},
+				{
+					"index": 5,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						200,
+						156,
+						335,
+						448
+					]
+				}
+			],
+			"hero": "arlindo",
+			"offset": [
+				128,
+				80
+			],
+			"path": ".atena/generated/hero-admission-2026-10-13/derivatives/AO07.png",
+			"rgba_preserved": true,
+			"sha256": "89e481f6266582454dbc25d2a93a5d64f1ed262d0b23883d1a6bfcb1ce1e3716",
+			"source": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/AO07.png",
+			"source_sha256": "999573a258ada0abfe0ac9ad647a64c058ed94edee8a728317c84d2811f3beb2"
+		},
+		{
+			"animation": "attack",
+			"baseline": 448,
+			"cell": [
+				512,
+				512
+			],
+			"code": "AO08",
+			"count": 4,
+			"destination": "assets/animations/heroes/arlindo/attack.png",
+			"frames": [
+				{
+					"index": 0,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						183,
+						158,
+						330,
+						448
+					]
+				},
+				{
+					"index": 1,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						178,
+						158,
+						367,
+						448
+					]
+				},
+				{
+					"index": 2,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						178,
+						158,
+						449,
+						448
+					]
+				},
+				{
+					"index": 3,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						185,
+						157,
+						331,
+						448
+					]
+				}
+			],
+			"hero": "arlindo",
+			"offset": [
+				0,
+				0
+			],
+			"path": ".atena/generated/hero-admission-2026-10-13/derivatives/AO08.png",
+			"rgba_preserved": true,
+			"sha256": "73ffd76cf87be5a3d6f14dbad6620e872104e6c818d80e41ca4ecadd513a73c7",
+			"source": ".atena/generated/hero-wide-actions-2026-10-12/strips/AO08_wide_v01.png",
+			"source_sha256": "73ffd76cf87be5a3d6f14dbad6620e872104e6c818d80e41ca4ecadd513a73c7"
+		},
+		{
+			"animation": "active",
+			"baseline": 448,
+			"cell": [
+				512,
+				512
+			],
+			"code": "AO09",
+			"count": 6,
+			"destination": "assets/animations/heroes/arlindo/active.png",
+			"frames": [
+				{
+					"index": 0,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						190,
+						158,
+						315,
+						448
+					]
+				},
+				{
+					"index": 1,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						188,
+						163,
+						322,
+						448
+					]
+				},
+				{
+					"index": 2,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						152,
+						157,
+						368,
+						448
+					]
+				},
+				{
+					"index": 3,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						145,
+						158,
+						375,
+						448
+					]
+				},
+				{
+					"index": 4,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						150,
+						157,
+						378,
+						448
+					]
+				},
+				{
+					"index": 5,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						190,
+						158,
+						316,
+						448
+					]
+				}
+			],
+			"hero": "arlindo",
+			"offset": [
+				0,
+				0
+			],
+			"path": ".atena/generated/hero-admission-2026-10-13/derivatives/AO09.png",
+			"rgba_preserved": true,
+			"sha256": "5996728502f5468dbdd7082ec48d7c3c773dc7cb5cd9ca3398a9c73be9b38760",
+			"source": ".atena/generated/hero-final-four-2026-10-13/strips/AO09_v02.png",
+			"source_sha256": "5996728502f5468dbdd7082ec48d7c3c773dc7cb5cd9ca3398a9c73be9b38760"
+		},
+		{
+			"animation": "death",
+			"baseline": 448,
+			"cell": [
+				512,
+				512
+			],
+			"code": "AO10",
+			"count": 6,
+			"destination": "assets/animations/heroes/arlindo/death.png",
+			"frames": [
+				{
+					"index": 0,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						169,
+						158,
+						344,
+						448
+					]
+				},
+				{
+					"index": 1,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						158,
+						187,
+						359,
+						448
+					]
+				},
+				{
+					"index": 2,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						137,
+						240,
+						377,
+						448
+					]
+				},
+				{
+					"index": 3,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						115,
+						311,
+						453,
+						448
+					]
+				},
+				{
+					"index": 4,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						102,
+						303,
+						469,
+						448
+					]
+				},
+				{
+					"index": 5,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						102,
+						302,
+						469,
+						448
+					]
+				}
+			],
+			"hero": "arlindo",
+			"offset": [
+				0,
+				0
+			],
+			"path": ".atena/generated/hero-admission-2026-10-13/derivatives/AO10.png",
+			"rgba_preserved": true,
+			"sha256": "5024a5ee5f895e940e46ddf9caece4fe03b906e7dd194c622b7f766881912290",
+			"source": ".atena/generated/hero-final-four-2026-10-13/strips/AO10_v02.png",
+			"source_sha256": "5024a5ee5f895e940e46ddf9caece4fe03b906e7dd194c622b7f766881912290"
+		},
+		{
+			"animation": "idle",
+			"baseline": 448,
+			"cell": [
+				512,
+				512
+			],
+			"code": "ER02",
+			"count": 4,
+			"destination": "assets/animations/heroes/erik/idle.png",
+			"frames": [
+				{
+					"index": 0,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						157,
+						148,
+						327,
+						448
+					]
+				},
+				{
+					"index": 1,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						156,
+						148,
+						328,
+						448
+					]
+				},
+				{
+					"index": 2,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						158,
+						148,
+						325,
+						448
+					]
+				},
+				{
+					"index": 3,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						161,
+						147,
+						326,
+						448
+					]
+				}
+			],
+			"hero": "erik",
+			"offset": [
+				128,
+				80
+			],
+			"path": ".atena/generated/hero-admission-2026-10-13/derivatives/ER02.png",
+			"rgba_preserved": true,
+			"sha256": "90d63b3d90e295cb04cda2cdfb066bf904b03375065906a93d4d1289f351171b",
+			"source": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/ER02.png",
+			"source_sha256": "3c3ea2fbedac595dd8a2fcb2c8f118debf45d28f045c6318112291ed706c2dc2"
+		},
+		{
+			"animation": "move_e",
+			"baseline": 448,
+			"cell": [
+				512,
+				512
+			],
+			"code": "ER03",
+			"count": 7,
+			"destination": "assets/animations/heroes/erik/move_e.png",
+			"frames": [
+				{
+					"index": 0,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						173,
+						141,
+						320,
+						448
+					]
+				},
+				{
+					"index": 1,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						164,
+						152,
+						328,
+						448
+					]
+				},
+				{
+					"index": 2,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						167,
+						147,
+						330,
+						448
+					]
+				},
+				{
+					"index": 3,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						165,
+						152,
+						328,
+						448
+					]
+				},
+				{
+					"index": 4,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						165,
+						147,
+						325,
+						448
+					]
+				},
+				{
+					"index": 5,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						172,
+						146,
+						329,
+						448
+					]
+				},
+				{
+					"index": 6,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						169,
+						149,
+						323,
+						448
+					]
+				}
+			],
+			"hero": "erik",
+			"offset": [
+				128,
+				80
+			],
+			"path": ".atena/generated/hero-admission-2026-10-13/derivatives/ER03.png",
+			"rgba_preserved": true,
+			"sha256": "ab9d88d33dff2d24aff4a347facacc0609e428c23c3be3aa9ad35045765f4cc7",
+			"source": ".atena/generated/hero-final-four-2026-10-13/strips/ER03_v02.png",
+			"source_sha256": "999011007d809fd148843ea17f33613635adaf99ac6549b049fecb94d5141ab1"
+		},
+		{
+			"animation": "move_se",
+			"baseline": 448,
+			"cell": [
+				512,
+				512
+			],
+			"code": "ER04",
+			"count": 6,
+			"destination": "assets/animations/heroes/erik/move_se.png",
+			"frames": [
+				{
+					"index": 0,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						178,
+						144,
+						340,
+						448
+					]
+				},
+				{
+					"index": 1,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						176,
+						143,
+						337,
+						448
+					]
+				},
+				{
+					"index": 2,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						186,
+						143,
+						334,
+						448
+					]
+				},
+				{
+					"index": 3,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						176,
+						150,
+						336,
+						448
+					]
+				},
+				{
+					"index": 4,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						180,
+						144,
+						334,
+						448
+					]
+				},
+				{
+					"index": 5,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						177,
+						143,
+						332,
+						448
+					]
+				}
+			],
+			"hero": "erik",
+			"offset": [
+				128,
+				80
+			],
+			"path": ".atena/generated/hero-admission-2026-10-13/derivatives/ER04.png",
+			"rgba_preserved": true,
+			"sha256": "8d82004c4e377c5b02eee24465e7697b4486d29e9c026991524455025a30c595",
+			"source": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/ER04.png",
+			"source_sha256": "43ae0813ab51100e34c2bb99546c240bfef105201f56689ef161c7f8bde1ea1f"
+		},
+		{
+			"animation": "move_s",
+			"baseline": 448,
+			"cell": [
+				512,
+				512
+			],
+			"code": "ER05",
+			"count": 6,
+			"destination": "assets/animations/heroes/erik/move_s.png",
+			"frames": [
+				{
+					"index": 0,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						186,
+						145,
+						336,
+						448
+					]
+				},
+				{
+					"index": 1,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						185,
+						147,
+						325,
+						448
+					]
+				},
+				{
+					"index": 2,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						188,
+						155,
+						330,
+						448
+					]
+				},
+				{
+					"index": 3,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						188,
+						146,
+						340,
+						448
+					]
+				},
+				{
+					"index": 4,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						186,
+						148,
+						329,
+						448
+					]
+				},
+				{
+					"index": 5,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						189,
+						155,
+						327,
+						448
+					]
+				}
+			],
+			"hero": "erik",
+			"offset": [
+				128,
+				80
+			],
+			"path": ".atena/generated/hero-admission-2026-10-13/derivatives/ER05.png",
+			"rgba_preserved": true,
+			"sha256": "9dd5a9702cedc755a32459017584aec5ceec40480d159fd5bdf85198a058d346",
+			"source": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/ER05.png",
+			"source_sha256": "8b3d492be3daad7813cfa4c1fcbe1cef389293532897ab1707b18a81d747b65f"
+		},
+		{
+			"animation": "move_ne",
+			"baseline": 448,
+			"cell": [
+				512,
+				512
+			],
+			"code": "ER06",
+			"count": 6,
+			"destination": "assets/animations/heroes/erik/move_ne.png",
+			"frames": [
+				{
+					"index": 0,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						160,
+						151,
+						326,
+						448
+					]
+				},
+				{
+					"index": 1,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						155,
+						151,
+						321,
+						448
+					]
+				},
+				{
+					"index": 2,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						158,
+						146,
+						328,
+						448
+					]
+				},
+				{
+					"index": 3,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						160,
+						146,
+						321,
+						448
+					]
+				},
+				{
+					"index": 4,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						158,
+						145,
+						322,
+						448
+					]
+				},
+				{
+					"index": 5,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						166,
+						137,
+						349,
+						448
+					]
+				}
+			],
+			"hero": "erik",
+			"offset": [
+				128,
+				80
+			],
+			"path": ".atena/generated/hero-admission-2026-10-13/derivatives/ER06.png",
+			"rgba_preserved": true,
+			"sha256": "34cb92eb79b64f5a6f46d01f5045daa9c690d13642b6f8d2f056ad37ec243604",
+			"source": ".atena/generated/hero-final-four-2026-10-13/strips/ER06_v02.png",
+			"source_sha256": "5a5e9e97a7ed45899e939d538341bda5ee1a9e3bfbcbe5335a776010582a9110"
+		},
+		{
+			"animation": "move_n",
+			"baseline": 448,
+			"cell": [
+				512,
+				512
+			],
+			"code": "ER07",
+			"count": 6,
+			"destination": "assets/animations/heroes/erik/move_n.png",
+			"frames": [
+				{
+					"index": 0,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						185,
+						132,
+						328,
+						448
+					]
+				},
+				{
+					"index": 1,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						183,
+						139,
+						326,
+						448
+					]
+				},
+				{
+					"index": 2,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						185,
+						145,
+						329,
+						448
+					]
+				},
+				{
+					"index": 3,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						184,
+						132,
+						329,
+						448
+					]
+				},
+				{
+					"index": 4,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						191,
+						145,
+						334,
+						448
+					]
+				},
+				{
+					"index": 5,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						186,
+						139,
+						332,
+						448
+					]
+				}
+			],
+			"hero": "erik",
+			"offset": [
+				128,
+				80
+			],
+			"path": ".atena/generated/hero-admission-2026-10-13/derivatives/ER07.png",
+			"rgba_preserved": true,
+			"sha256": "b154ec40e2d0deb95a563e68a9fc9e7f2161f98bfabf8203de53e09eb4b5add7",
+			"source": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/ER07.png",
+			"source_sha256": "5fe3e45f0ebd24f231d5492472a6ea91522f16f84fb6b21031055f30d1c9b211"
+		},
+		{
+			"animation": "attack",
+			"baseline": 448,
+			"cell": [
+				512,
+				512
+			],
+			"code": "ER08",
+			"count": 4,
+			"destination": "assets/animations/heroes/erik/attack.png",
+			"frames": [
+				{
+					"index": 0,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						155,
+						127,
+						364,
+						448
+					]
+				},
+				{
+					"index": 1,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						101,
+						126,
+						386,
+						448
+					]
+				},
+				{
+					"index": 2,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						148,
+						156,
+						475,
+						448
+					]
+				},
+				{
+					"index": 3,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						142,
+						128,
+						346,
+						448
+					]
+				}
+			],
+			"hero": "erik",
+			"offset": [
+				0,
+				0
+			],
+			"path": ".atena/generated/hero-admission-2026-10-13/derivatives/ER08.png",
+			"rgba_preserved": true,
+			"sha256": "4114f785c6e76099f2cd1506aa2b3e6b4a9a5d0a29d7010f92fa6e9309b71aff",
+			"source": ".atena/generated/hero-wide-actions-2026-10-12/strips/ER08_wide_v01.png",
+			"source_sha256": "4114f785c6e76099f2cd1506aa2b3e6b4a9a5d0a29d7010f92fa6e9309b71aff"
+		},
+		{
+			"animation": "active",
+			"baseline": 448,
+			"cell": [
+				512,
+				512
+			],
+			"code": "ER09",
+			"count": 6,
+			"destination": "assets/animations/heroes/erik/active.png",
+			"frames": [
+				{
+					"index": 0,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						155,
+						135,
+						348,
+						448
+					]
+				},
+				{
+					"index": 1,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						143,
+						177,
+						348,
+						466
+					]
+				},
+				{
+					"index": 2,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						131,
+						221,
+						361,
+						471
+					]
+				},
+				{
+					"index": 3,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						133,
+						177,
+						370,
+						462
+					]
+				},
+				{
+					"index": 4,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						147,
+						175,
+						373,
+						473
+					]
+				},
+				{
+					"index": 5,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						163,
+						155,
+						350,
+						448
+					]
+				}
+			],
+			"hero": "erik",
+			"offset": [
+				0,
+				0
+			],
+			"path": ".atena/generated/hero-admission-2026-10-13/derivatives/ER09.png",
+			"rgba_preserved": true,
+			"sha256": "cf3f1915f2ab2b69fce4ac79443352089bda9a227327f850bbae5e3c995c748d",
+			"source": ".atena/generated/hero-wide-actions-2026-10-12/strips/ER09_wide_v01.png",
+			"source_sha256": "cf3f1915f2ab2b69fce4ac79443352089bda9a227327f850bbae5e3c995c748d"
+		},
+		{
+			"animation": "death",
+			"baseline": 448,
+			"cell": [
+				512,
+				512
+			],
+			"code": "ER10",
+			"count": 6,
+			"destination": "assets/animations/heroes/erik/death.png",
+			"frames": [
+				{
+					"index": 0,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						161,
+						124,
+						329,
+						447
+					]
+				},
+				{
+					"index": 1,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						148,
+						180,
+						329,
+						448
+					]
+				},
+				{
+					"index": 2,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						132,
+						226,
+						329,
+						448
+					]
+				},
+				{
+					"index": 3,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						136,
+						234,
+						360,
+						448
+					]
+				},
+				{
+					"index": 4,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						148,
+						328,
+						411,
+						463
+					]
+				},
+				{
+					"index": 5,
+					"rgba_source_preserved": true,
+					"significant_bbox": [
+						146,
+						336,
+						399,
+						457
+					]
+				}
+			],
+			"hero": "erik",
+			"offset": [
+				0,
+				0
+			],
+			"path": ".atena/generated/hero-admission-2026-10-13/derivatives/ER10.png",
+			"rgba_preserved": true,
+			"sha256": "0029d353e694d9e2ed279dcad356ef350fa0fca3910461157211228e60640444",
+			"source": ".atena/generated/hero-wide-actions-2026-10-12/strips/ER10_wide_v01.png",
+			"source_sha256": "0029d353e694d9e2ed279dcad356ef350fa0fca3910461157211228e60640444"
+		}
+	],
+	"resampling": false,
+	"result": "PASS",
+	"revision": "hero-admission/v01",
+	"strips": 18
+}

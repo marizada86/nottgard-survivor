@@ -1,0 +1,69 @@
+from pathlib import Path
+import json,hashlib,subprocess,re,html
+root=Path(__file__).resolve().parents[3];out=Path(__file__).resolve().parent
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+snap=json.loads((out/'protected.json').read_text(encoding='utf-8'));assert all(sha(root/p)==h for p,h in snap.items() if p!='ui/run.gd')
+auth=json.loads((out/'authorization.json').read_text(encoding='utf-8'))
+for e in auth['sources']:assert sha(root/e['path'])==e['sha256']
+backup=json.loads((out/'backup.json').read_text(encoding='utf-8'))
+for p,h in backup['existing'].items():assert sha(out/'backup'/p)==h
+for name,text in [('suite.log','testes: 0 falha(s)'),('smoke.log','smoke: ok'),('capture.log','capture PASS:'),('launcher-smoke.log','QA hourglass playtest: ampulheta; reduced=false')]:
+ s=(out/name).read_text(encoding='utf-8');assert text in s and 'SCRIPT ERROR' not in s and 'Parse Error' not in s
+runtime=json.loads((out/'runtime-checks.json').read_text(encoding='utf-8'));assert runtime['result']=='PASS' and len(runtime['weapons'])==1 and runtime['weapons'][0]['weapon']=='ampulheta' and runtime['freed_after_completion'] and runtime['radiant_pulse_regression']
+shots=sorted((out/'captures').glob('*.png'));assert len(shots)==12
+assert sha(out/'ampulheta_silencio.png')==sha(root/'assets/vfx/ampulheta_silencio.png')
+paths=['assets/vfx/ampulheta_silencio.png','core/hourglass_vfx.gd','ui/run.gd','tests/test_hourglass_vfx.gd']
+fingerprint=hashlib.sha256(''.join(sha(root/p) for p in paths).encode()).hexdigest();head=subprocess.check_output(['git','rev-parse','--short','HEAD'],cwd=root).decode().strip();build=f'0.4.0/ampulheta-admission-v01/{head}+local-{fingerprint[:12]}'
+for tag,extra in [('Ampulheta',''),('Reduzido',' --reduced')]:
+ cmd=f'''@echo off
+setlocal
+cd /d "%~dp0..\\..\\.."
+set "APPDATA=%~dp0qa-playtest-{tag.lower()}"
+echo Local QA build: {build}
+"C:\\Users\\Higor Rossini\\Desktop\\Nottcard\\Godot_v4.7.2-stable_win64.exe" --path . --log-file ".atena/generated/ampulheta-admission-2026-10-13/playtest-{tag.lower()}.log" res://.atena/generated/ampulheta-admission-2026-10-13/playtest.tscn -- ampulheta{extra}
+endlocal
+''';(out/f'Jogar-{tag}.cmd').write_text(cmd,encoding='utf-8')
+gallery='''<!doctype html><html lang="pt-BR"><meta charset="utf-8"><title>Ampulheta admitida localmente — DRAFT v01</title><style>body{background:#181c24;color:#eee;font:16px system-ui;max-width:1280px;margin:30px auto}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}img{width:100%}h1,h2{color:#e6c480}.atlas{background:#000}figure{margin:0}</style><h1>Ampulheta · admissão local DRAFT</h1><p>Seis fases em0,35s, evento nova mágico da arma ampulheta. Modo reduzido mantém anel simples. Pulso preservado; aceite subjetivo em jogo pendente.</p><img class="atlas" src="black-preview.png"><div class="grid">'''
+for shot in shots:gallery+=f'<figure><h2>{html.escape(shot.stem)}</h2><a href="captures/{shot.name}"><img src="captures/{shot.name}"></a></figure>'
+(out/'index.html').write_text(gallery+'</div></html>',encoding='utf-8')
+readme=f'''# Playtest Ampulheta — DRAFT v01
+
+Build local `{build}`; checkout d8a8, Godot4.7.2, Dagruve, Maelor em perfil QA. Harness equipa a arma ampulheta somente no perfil descartável. Fontes aceitas; intensidade/ritmo/legibilidade em combate ainda precisam de feedback humano.
+
+Objetivo: conferir o anel mágico, ampulhetas e grãos, seis fases em0,35s, raio lógico4,0 e centro nos pés. Mecânica da arma (nova, atordoamento1,5s, cooldown5s) é a existente.
+
+1. [Jogar Ampulheta](Jogar-Ampulheta.cmd): caminhar30–60s por chão claro/escuro, esperar inimigos dentro do alcance e observar os disparos automáticos. Conferir crescimento, motivos/grãos, afinamento e resíduos. Sem alvo a nova não dispara.
+2. [Impacto reduzido](Jogar-Reduzido.cmd): repetir; deve aparecer o anel simples anterior, sem o novo efeito.
+
+Critério técnico: efeito centrado/raio coerente, sem fundo retangular/cortes/deslocamento, seis fases e liberação ao terminar. Critério humano: motivos legíveis, brilho confortável e ritmo aceitável. Atena verifica funcionamento; você avalia sensação/diversão. Feedback esperado: modo/arma, aceitável ou fase/cor/raio com defeito, captura se possível. Playtest humano ainda não realizado; feedback necessário para aceitar o marco visual em runtime.
+
+APPDATA/save em perfis QA locais separados pelos launchers; seu progresso real não é usado. [Galeria12capturas](index.html), [verificação](verification.json), [evento real e regressão](runtime-checks.json), [backup](backup.json).
+''';(out/'PLAYTEST.md').write_text(readme,encoding='utf-8')
+verify={'result':'PASS','revision':'ampulheta-admission/v01','build_id':build,'content_state':'DRAFT_ADMITTED_LOCAL','canonical_promotion':False,'atlas_sha256':sha(root/paths[0]),'runtime_fingerprint':fingerprint,'source_hashes':'PASS','frame_count':6,'cell':[256,256],'duration_seconds':0.35,'peak_ring_radius_px':88,'initial_ring_ratio':12/88,'M01_scale_exception_preserved':True,'suite_failures':0,'smoke_stages':9,'weapon_event':'ampulheta via Battle._fire and Run._consume_events','captures':12,'reduced_impact_fallback':True,'unsupported_event_fallback':True,'absent_invalid_texture_fallback':'REUSED_FRAME_PIPELINE_UNIT_CHECKED','freed_after_completion':True,'protected_preexisting_files_unchanged':len(snap)-1,'only_changed_preexisting_runtime_file':'ui/run.gd','runtime_additions':paths[:2],'test_addition':paths[3],'gameplay_tables_unchanged':True,'radiant_pulse_sources_helper_atlas_tests':'HASH_UNCHANGED_AND_RUNTIME_REGRESSION_PASS','hero_admission_preserved':True,'human_playtest':'PENDING','browser_gallery':'NOT_TESTED','playtest_scene_launcher':'HEADLESS_SCENE_SMOKE_PASS_15_FRAMES','git_export_publish':False,'notes':['Godot certificate-store warning','Suite shutdown resource/RID warnings','Pre-existing Pulse test Image.load_from_file res:// warning; runtime loads Texture2D']}
+(out/'verification.json').write_text(json.dumps(verify,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+ev=f'''# Ampulheta do Silêncio — admissão local v01, 2026-10-13
+
+PLAN-053/SPEC-121, IN_PLAN após aprovação, per-plan. [Spec](../specs/SPEC-121-retomada-fila-imagens/ampulheta-admission-v01.md), [autorização](../generated/ampulheta-admission-2026-10-13/authorization.json). Dono: “1. Por plano — uma aprovação para todo o escopo planejado.” Fontes M01v02,M02v03,M03v01,M04v01,M05v01,M06v01 aceitas e preservadas; [recibo anterior](../generated/ampulheta-review-2026-10-13/visual-acceptance.json). Conteúdo DRAFT; não promovido a CANON.
+
+S-001: snapshot/backups/hashes; Godot Lanczos por canvas1254→1024 para auditoria e direto1254→256 para runtime. Seis células256×256 ematlas1536×256, RGBbranco/alfa=luminânciaRec709 com piso<=2/255zero só no derivado, pivô128/128 comum. [Packing](../generated/ampulheta-admission-2026-10-13/packing.json), [auditoria](../generated/ampulheta-admission-2026-10-13/derivative-audit.json), [prévia](../generated/ampulheta-admission-2026-10-13/black-preview.png). Pico88px, anel inicial12px/88≈13,6%, compatível com exceção≈14%M01; fontes intactas, ampulhetas/grãos e2.472pixels alfa>12 emM06 preservados. Nenhuma escala individual/pintura/geração nova. Prévia das seis inspecionada; centro fotométrico apenas proxy, pivô do canvas fixo.
+
+S-002: atlas `assets/vfx/ampulheta_silencio.png` e helper `core/hourglass_vfx.gd`; pequeno encadeamento em Run._nova_effect após tentativa de Pulso, somente type=nova,dtype=magico,weapon=ampulheta. Helper reusa RadiantPulseVfx.frames_from_texture, sem mudar o arquivo/helper/cache do Pulso; cache próprio por família. Raio/pivô calibrados88px/projeção2:1, impactoaccent existente, seis fases0,35s, material aditivo, liberação no fim. Outros eventos/recurso ausente/atlas inválido/impacto reduzido mantêm anel simples. Mecânica nova instantânea existente radius4/stun1,5/cd5 preservada; nenhuma zona persistente ou alteração da interação ampulheta/parar tempo. Sem RNG/dano/colisão/tabelas alterados. Backup/novos destinos em [registro](../generated/ampulheta-admission-2026-10-13/backup.json).
+
+S-003: importação concluída; [suíte](../generated/ampulheta-admission-2026-10-13/suite.log) **0 falhas**, [smoke](../generated/ampulheta-admission-2026-10-13/smoke.log) **nove fases OK**. Teste focado confirma allowlist/tipo/dtype, arma existente/radius/stun/cd, isolamento das famílias, atlas/regiões/alpha/grãos/resíduos, duração/projeção/tinta/material e evento intacto. Fallback de ausência/atlas inválido coberto pelo pipeline de frames compartilhado e teste do Pulso na mesma suíte.
+
+[Harness](../generated/ampulheta-admission-2026-10-13/capture.gd) acionou Weapon.make(ampulheta)→Battle._fire→Run._consume_events, conferiu pivô/raio, seis fases, duas tintas, fallbacks, liberação após0,55s e regressão do Pulso em cena. [Dados PASS](../generated/ampulheta-admission-2026-10-13/runtime-checks.json), [log](../generated/ampulheta-admission-2026-10-13/capture.log), [galeria12capturas](../generated/ampulheta-admission-2026-10-13/index.html). Capturas representativas de pico/primeira/final/reduzido/Pulso vistas; sem cortes/retângulo preto/deslocamento aparente. Inspeção do modelo não é aceite humano em jogo. [Launcher smoke](../generated/ampulheta-admission-2026-10-13/launcher-smoke.log) abriu cena QA headless15frames com arma ampulheta, sem erro de script; não é playtest humano.
+
+APPDATA/save QA isolados no workspace para prepare/import/suite/smoke/capture/launcher. Fontes e3.000arquivos preexistentes runtime/testes fora de Run inalterados por hash, incluindo helper/atlas/teste do Pulso e arte dos heróis. Código de gameplay/tabelas intactos. Outputs registram aviso de certificado e avisos de recursos/RIDs ao encerrar suíte; teste preexistente do Pulso lê imagem porres:// e emite aviso de exportação, enquanto renderer usa Texture2D importada. Sem SCRIPT ERROR/Parse Error nos checks finais; nenhuma exportação/dependência nova.
+
+S-004: [verificação](../generated/ampulheta-admission-2026-10-13/verification.json), fontes/backup/links/contrato reconciliados, técnico **4/4 entregue**. Build `{build}`; [roteiro/launchers](../generated/ampulheta-admission-2026-10-13/PLAYTEST.md) preparados antes do playtest. Nenhum BLOCKING técnico principal permanece. Feedback de legibilidade dos motivos/grãos, intensidade/ritmo em movimento DEFERRED e pendente. Próximo OWNER_RUNTIME_PLAYTEST; dono informa aceitável ou fase/modo/cor/raio problemático. Atena não afirma diversão por checks. BUG-025/027/028/029 e playtests anteriores preservados; PLAN071 B006/S011 mantido. Sem CANON, commit, push, merge, exportação ou publicação; HEAD `{head}` e índice não alterados.
+''';(root/'.atena/evidence/ampulheta-admission-2026-10-13.md').write_text(ev,encoding='utf-8')
+state=root/'.atena/state/ampulheta-admission.yaml';s=state.read_text(encoding='utf-8').replace('status: EXECUTING_APPROVED','status: LOCAL_TECHNICAL_DELIVERED_AWAITING_OWNER_PLAYTEST').replace('checkpoint: S-003/RUNTIME_VERIFICATION','checkpoint: S-004/OWNER_RUNTIME_PLAYTEST').replace('completed_steps: 2','completed_steps: 4').replace('current_step_position: 3','current_step_position: 4').replace('remaining_steps_after_current: 1','remaining_steps_after_current: 0').replace('executable: true','executable: false').replace('next_objective: Validar suite/smoke, evento real, fases, tintas, fallback e regressao Pulso.','next_objective: Dono avaliar motivos/graos, brilho e ritmo da Ampulheta no jogo.');s+=f'build_id: "{build}"\nevidence: .atena/evidence/ampulheta-admission-2026-10-13.md\nverification: .atena/generated/ampulheta-admission-2026-10-13/verification.json\nhuman_runtime_playtest: PENDING_NOT_PERFORMED\n';state.write_text(s,encoding='utf-8')
+p=root/'.atena/state/plan.yaml';s=p.read_text(encoding='utf-8');prefix,tail=s.split('ampulheta_admission_2026_10_13:',1);tail=tail.replace('status: EXECUTING','status: LOCAL_TECHNICAL_DELIVERED_AWAITING_OWNER_PLAYTEST').replace('checkpoint: S-003/RUNTIME_VERIFICATION','checkpoint: S-004/OWNER_RUNTIME_PLAYTEST');tail+='  completed_steps: 4\n  total_steps: 4\n  evidence: .atena/evidence/ampulheta-admission-2026-10-13.md\n';p.write_text(prefix+'ampulheta_admission_2026_10_13:'+tail,encoding='utf-8')
+p=root/'.atena/state/plan-053-imagens.yaml';s=p.read_text(encoding='utf-8').replace('status: AMPULHETA_ACCEPTED_DRAFT_ADMISSION_PROPOSED','status: AMPULHETA_ADMITTED_LOCAL_OWNER_PLAYTEST_PENDING').replace('checkpoint: S-007/VFX/AMPULHETA/ADMISSION_SCOPE_APPROVAL','checkpoint: S-007/VFX/AMPULHETA/OWNER_RUNTIME_PLAYTEST');s=re.sub(r'^  current:.*$',"  current: 'Ampulheta seis fases admitidas localmente DRAFT; suite/smoke/capturas PASS, feedback humano runtime pendente.'",s,count=1,flags=re.M);s=re.sub(r'^  next:.*$',"  next: 'Playtest humano Ampulheta; depois decidir proxima familia de VFX existente, sem regeneracao automatica.'",s,count=1,flags=re.M);p.write_text(s,encoding='utf-8')
+spec=root/'.atena/specs/SPEC-121-retomada-fila-imagens/ampulheta-admission-v01.md';s=spec.read_text(encoding='utf-8');s+='\n## Resultado\n\nQuatro etapas técnicas concluídas; [evidência](../../evidence/ampulheta-admission-2026-10-13.md). Ampulheta admitida localmente DRAFT; Pulso preservado. Feedback subjetivo em jogo pendente.\n';spec.write_text(s,encoding='utf-8')
+links=0
+for p in [root/'.atena/evidence/ampulheta-admission-2026-10-13.md',spec,out/'PLAYTEST.md']:
+ for target in re.findall(r'\]\(([^)]+)\)',p.read_text(encoding='utf-8')):assert (p.parent/target).exists(),target;links+=1
+for target in re.findall(r'(?:src|href)="([^"]+)"',(out/'index.html').read_text(encoding='utf-8')):assert (out/target).exists();links+=1
+verify['active_links_verified']=links;(out/'verification.json').write_text(json.dumps(verify,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+print(json.dumps({'result':'PASS','steps':'4/4','links':links,'build':build,'human_playtest':'PENDING'},indent=2))

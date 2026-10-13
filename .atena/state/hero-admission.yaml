@@ -1,0 +1,29 @@
+version: 1
+plan: PLAN-053
+revision: hero-admission/v01
+request_classification: IN_PLAN
+content_state: DRAFT
+mode: per-plan
+approval_status: APPROVED_EXPLICITLY
+authorization_receipt: .atena/generated/hero-admission-2026-10-13/authorization.json
+status: LOCAL_TECHNICAL_DELIVERED_AWAITING_OWNER_PLAYTEST
+checkpoint: S-004/OWNER_RUNTIME_PLAYTEST
+ordered_steps: [S-001, S-002, S-003, S-004]
+current_step_position: 4
+completed_steps: 4
+total_steps: 4
+remaining_steps_after_current: 0
+steps: {S-001: COMPLETED, S-002: COMPLETED, S-003: COMPLETED, S-004: COMPLETED}
+spec: .atena/specs/SPEC-121-retomada-fila-imagens/hero-admission-v01.md
+portrait_visual_acceptance: AO01_ER01_V01_APPROVED
+canonical_promotion: false
+human_runtime_playtest: PENDING
+backup_manifest: .atena/generated/hero-admission-2026-10-13/backup-manifest.json
+next_objective: Dono avaliar fluidez, aparencia, porte e efeitos em playtest dos dois herois.
+return_plan: {id: PLAN-071, checkpoint: B-006/S-011, preserved: true}
+packing: .atena/generated/hero-admission-2026-10-13/packing.json
+admission_receipt: .atena/generated/hero-admission-2026-10-13/admission-receipt.json
+build_id: "0.4.0/hero-admission-v01/2ae8c48+local-27698ca26839"
+evidence: .atena/evidence/hero-admission-2026-10-13.md
+verification: .atena/generated/hero-admission-2026-10-13/verification.json
+next_execution_authorized: false

@@ -1,0 +1,13 @@
+{
+  "existing": {
+    "ui/run.gd": "0ef818179bd2f84d2b65df10337d7bb1efa18e9697bc19a8808917584edb7dbe",
+    ".atena/state/plan.yaml": "f168c039dc88ba6a27278e117bf9d46553c5d2c3bf5072a2de3053a144dc67a1",
+    ".atena/state/plan-053-imagens.yaml": "1bb6282ca5aa660ec4eeeeb95bc62f1f20e135d92a5d722f21db04c53331ff34",
+    ".atena/state/ampulheta-admission.yaml": "a9e1e0b72f357aea6e2ca1acaabc884cb8f4273f650f6b1242ec26b507cb752c"
+  },
+  "new_paths": [
+    "assets/vfx/ampulheta_silencio.png",
+    "core/hourglass_vfx.gd",
+    "tests/test_hourglass_vfx.gd"
+  ]
+}

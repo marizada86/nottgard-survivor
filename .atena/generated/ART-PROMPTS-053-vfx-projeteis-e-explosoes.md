@@ -46,3 +46,7 @@ Contrato comum (igual ao piloto): fundo preto `#000000`, só o efeito em branco 
 Cor saturada, fundo não preto, arma ou mão visível, efeito virado para outra direção, estilos diferentes entre quadros, perspectiva em vez de vista de cima.
 
 Texto integral dos prompts em [[CHATGPT-FILA-022-vfx-projeteis-e-explosoes]].
+
+## Reconciliação da continuidade — 2026-10-13
+
+FILA02236/36 fontes geradas conforme histórico10bd31c; FILA02360/60 também geradas. Neste workspace seis fontes do Pulso recuperadas com hashes e versões conferidos. Revisão das cinco fases adicionais pendente; nenhuma admissão nova. Estado anterior do cabeçalho preserva o checkpoint histórico, não contagem atual de produção. Evidência: `.atena/evidence/pulso-resume-2026-10-13.md`.

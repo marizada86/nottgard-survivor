@@ -1,0 +1,168 @@
+{
+  "status": "COMPLETE_CANDIDATE_SEQUENCE_VISUALLY_REVIEWED",
+  "sources": [
+    {
+      "code": "M01",
+      "path": ".atena/generated/art-candidates/vfx/ampulheta_silencio/ampulheta_silencio_spark_v02.png",
+      "sha256": "81573c62610071adfd806ddc0c893bcfce42ad73bc9a4878eb5d547241c6ee37",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v02",
+      "visible_bbox_above12": [
+        536,
+        531,
+        717,
+        717
+      ],
+      "mean_luminance": 0.7352173205232888,
+      "visible_fraction_above12": 0.007398970821282581,
+      "hot_light_centroid_normalized": [
+        0.4992483681416172,
+        0.4981360340368759
+      ],
+      "bright_ring_radius_proxy_px": 55
+    },
+    {
+      "code": "M02",
+      "path": ".atena/generated/art-candidates/vfx/ampulheta_silencio/ampulheta_silencio_grow_v03.png",
+      "sha256": "cb5a2ba306a4c8aa09867c42bddae9bf375412329568d56846e821155b5bb3d5",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v03",
+      "visible_bbox_above12": [
+        354,
+        357,
+        900,
+        893
+      ],
+      "mean_luminance": 7.231335007084189,
+      "visible_fraction_above12": 0.06956177234444673,
+      "hot_light_centroid_normalized": [
+        0.4987398156200119,
+        0.4992253404313826
+      ],
+      "bright_ring_radius_proxy_px": 214
+    },
+    {
+      "code": "M03",
+      "path": ".atena/generated/art-candidates/vfx/ampulheta_silencio/ampulheta_silencio_peak_v01.png",
+      "sha256": "a5d4870493878d18ff7a1aeca003b23642f7ef07cdb3ad46289b688a12673866",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "visible_bbox_above12": [
+        118,
+        118,
+        1136,
+        1117
+      ],
+      "mean_luminance": 19.36817113466572,
+      "visible_fraction_above12": 0.1879249559304961,
+      "hot_light_centroid_normalized": [
+        0.4967609897928539,
+        0.49047947691226196
+      ],
+      "bright_ring_radius_proxy_px": 433
+    },
+    {
+      "code": "M04",
+      "path": ".atena/generated/art-candidates/vfx/ampulheta_silencio/ampulheta_silencio_hold_v01.png",
+      "sha256": "f8a804729941fa556994b108caf88ffb90247ec7205dc99addfaef2d19d757d2",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "visible_bbox_above12": [
+        126,
+        119,
+        1127,
+        1111
+      ],
+      "mean_luminance": 11.187492527897968,
+      "visible_fraction_above12": 0.12052532374869318,
+      "hot_light_centroid_normalized": [
+        0.500919364572895,
+        0.49259289599286427
+      ],
+      "bright_ring_radius_proxy_px": 437
+    },
+    {
+      "code": "M05",
+      "path": ".atena/generated/art-candidates/vfx/ampulheta_silencio/ampulheta_silencio_fade_v01.png",
+      "sha256": "086b5b3ed2ecafd57a15d742d1381ef102cd7e2850e0e9c311a9d067f2bcbea9",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "visible_bbox_above12": [
+        124,
+        117,
+        1137,
+        1106
+      ],
+      "mean_luminance": 6.091022921229419,
+      "visible_fraction_above12": 0.09047348325867591
+    },
+    {
+      "code": "M06",
+      "path": ".atena/generated/art-candidates/vfx/ampulheta_silencio/ampulheta_silencio_dissipate_v01.png",
+      "sha256": "35bf9fcc44accaf13d4cb0c7804d6045b7b321bd2a4882e76eb3ca448aba7527",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "visible_bbox_above12": [
+        137,
+        126,
+        1120,
+        1101
+      ],
+      "mean_luminance": 1.5947697829465646,
+      "visible_fraction_above12": 0.033873105265701586
+    }
+  ],
+  "hot_centroid_spread_normalized": [
+    0.0041583747800411075,
+    0.008745863519120656
+  ],
+  "centroid_method": "Whole image weights max(luminance-80,0)^2 for M01-M04, proxy for light position, not exact geometric ring pivot",
+  "native_sources_preserved": true,
+  "preview_only": true,
+  "runtime_admission": false,
+  "manifest_assets": 202,
+  "timestamp": "2026-10-09T14:16:24.181947+00:00",
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "visual_inspected": true,
+  "visual_review": "Six hourglass silence phases: tiny centered pinpoint and quiet ring, growing ring, approved maximum peak with hourglass motifs, near-maximum hold thinning with fewer grains, dim fragmented outer ring, barely visible sparse remnants. Native sources and96px montage inspected; same flat centered white-gray painted light, no visible clipping.",
+  "human_gate_approval": ".atena/generated/s007-reconciliation/v01/m03-owner-approval-2026-10-09.json",
+  "review": ".atena/generated/s007-reconciliation/v01/ampulheta-silencio-six-frame-review-2026-10-09.png",
+  "preview_gif": ".atena/generated/s007-reconciliation/v01/ampulheta-silencio-sequence-review-2026-10-09.gif",
+  "other_frames_human_approval": "Not individually claimed",
+  "remaining_native_vfx_frames": 60,
+  "next": "H103 Durvall Ruptura Sombria PEAK gate only",
+  "native_dimensions_note": "Native bytes retained, technical normalization to1024 and geometric alignment deferred",
+  "phase_radius_ratios_to_peak": {
+    "M01": 0.12702078521939955,
+    "M02": 0.4942263279445728,
+    "M03": 1.0,
+    "M04": 1.0092378752886837
+  },
+  "phase_radius_review": "M02 v03 bright-band proxy about49%of peak, approximating45%target within5percentage points; M03 inner painted band influences proxy. M04 proxy about101%with thinner lower glow. No exact geometric scaling claimed.",
+  "owner_scale_exception": {
+    "frame": "M01",
+    "version": "v02",
+    "owner_reply": "Aceitar M01 v02 como exceção de escala",
+    "receipt": ".atena/generated/s007-reconciliation/v01/m01-scale-owner-approval-2026-10-09.json",
+    "note": "Initial radius roughly14%visually instead of target10%; proxy below is a measurement, not geometric exactness."
+  }
+}

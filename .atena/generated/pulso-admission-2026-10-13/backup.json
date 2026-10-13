@@ -1,0 +1,13 @@
+{
+  "existing": {
+    "ui/run.gd": "76f3e94a7ec6abb01e4d7011ed54272185048428e4a8914e8c6fbefa34416bee",
+    ".atena/state/plan.yaml": "e596cb7eaf210341dee33cecbe6e225f6d697b4f72dd5d8ae32a8d4e1ff11ba7",
+    ".atena/state/plan-053-imagens.yaml": "43d11c92aa7a4037ecdd2bd1b76c906a866ae9db3bdd5ea7e906af3cf0f7becc",
+    ".atena/state/pulso-admission.yaml": "3e969a7e5762e104734de0bf738d1fe3f2de1257e0062275a1fac972b769ed4e"
+  },
+  "new_paths": [
+    "assets/vfx/pulso_radiante.png",
+    "core/radiant_pulse_vfx.gd",
+    "tests/test_radiant_pulse_vfx.gd"
+  ]
+}

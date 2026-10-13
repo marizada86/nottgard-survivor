@@ -1,0 +1,58 @@
+{
+	"crop": [
+		520,
+		280,
+		240,
+		160
+	],
+	"fallback_comparisons": {
+		"arlindo": {
+			"crop": [
+				600,
+				315,
+				80,
+				85
+			],
+			"rendered_rgba_equal": true
+		},
+		"erik": {
+			"crop": [
+				600,
+				315,
+				80,
+				85
+			],
+			"rendered_rgba_equal": true
+		}
+	},
+	"order_left_to_right_top_to_bottom": [
+		"arlindo-idle-hud",
+		"arlindo-direction-0",
+		"arlindo-direction-1",
+		"arlindo-direction-2",
+		"arlindo-direction-3",
+		"arlindo-direction-4",
+		"arlindo-direction-5",
+		"arlindo-direction-6",
+		"arlindo-direction-7",
+		"arlindo-attack",
+		"arlindo-active",
+		"arlindo-death",
+		"arlindo-death-final",
+		"arlindo-static-fallback",
+		"erik-idle-hud",
+		"erik-direction-0",
+		"erik-direction-1",
+		"erik-direction-2",
+		"erik-direction-3",
+		"erik-direction-4",
+		"erik-direction-5",
+		"erik-direction-6",
+		"erik-direction-7",
+		"erik-attack",
+		"erik-active",
+		"erik-death",
+		"erik-death-final",
+		"erik-static-fallback"
+	]
+}

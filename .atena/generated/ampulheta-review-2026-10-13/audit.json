@@ -1,0 +1,122 @@
+{
+  "result": "PASS_NATIVE_RECOVERY",
+  "rows": [
+    {
+      "code": "M01",
+      "version": "v02",
+      "sha256": "81573c62610071adfd806ddc0c893bcfce42ad73bc9a4878eb5d547241c6ee37",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "bbox_max_channel_gt12": [
+        536,
+        531,
+        717,
+        717
+      ],
+      "edge_max_channel": 1,
+      "max_channel_difference": 8,
+      "native_bytes_preserved": true
+    },
+    {
+      "code": "M02",
+      "version": "v03",
+      "sha256": "cb5a2ba306a4c8aa09867c42bddae9bf375412329568d56846e821155b5bb3d5",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "bbox_max_channel_gt12": [
+        354,
+        357,
+        901,
+        893
+      ],
+      "edge_max_channel": 1,
+      "max_channel_difference": 12,
+      "native_bytes_preserved": true
+    },
+    {
+      "code": "M03",
+      "version": "v01",
+      "sha256": "a5d4870493878d18ff7a1aeca003b23642f7ef07cdb3ad46289b688a12673866",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "bbox_max_channel_gt12": [
+        118,
+        117,
+        1137,
+        1117
+      ],
+      "edge_max_channel": 1,
+      "max_channel_difference": 16,
+      "native_bytes_preserved": true
+    },
+    {
+      "code": "M04",
+      "version": "v01",
+      "sha256": "f8a804729941fa556994b108caf88ffb90247ec7205dc99addfaef2d19d757d2",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "bbox_max_channel_gt12": [
+        126,
+        119,
+        1127,
+        1112
+      ],
+      "edge_max_channel": 1,
+      "max_channel_difference": 12,
+      "native_bytes_preserved": true
+    },
+    {
+      "code": "M05",
+      "version": "v01",
+      "sha256": "086b5b3ed2ecafd57a15d742d1381ef102cd7e2850e0e9c311a9d067f2bcbea9",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "bbox_max_channel_gt12": [
+        124,
+        117,
+        1137,
+        1106
+      ],
+      "edge_max_channel": 2,
+      "max_channel_difference": 10,
+      "native_bytes_preserved": true
+    },
+    {
+      "code": "M06",
+      "version": "v01",
+      "sha256": "35bf9fcc44accaf13d4cb0c7804d6045b7b321bd2a4882e76eb3ca448aba7527",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "bbox_max_channel_gt12": [
+        135,
+        126,
+        1120,
+        1101
+      ],
+      "edge_max_channel": 1,
+      "max_channel_difference": 10,
+      "native_bytes_preserved": true
+    }
+  ],
+  "black_rgb_exact": "NOT_CLAIMED",
+  "grayscale_exact": "NOT_CLAIMED",
+  "normalized": false
+}

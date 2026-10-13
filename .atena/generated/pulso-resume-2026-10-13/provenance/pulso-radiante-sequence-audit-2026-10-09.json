@@ -1,0 +1,154 @@
+{
+  "status": "COMPLETE_CANDIDATE_SEQUENCE_VISUALLY_REVIEWED",
+  "sources": [
+    {
+      "code": "N01",
+      "path": ".atena/generated/art-candidates/vfx/pulso_radiante/pulso_radiante_spark_v03.png",
+      "sha256": "9fe7d8581307d7ed26a1159400f07a15bf730f543e9b70c55c873eb2bd93610d",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v03",
+      "visible_bbox_above12": [
+        530,
+        532,
+        724,
+        722
+      ],
+      "mean_luminance": 1.0380873708121252,
+      "visible_fraction_above12": 0.011638673310796202,
+      "hot_light_centroid_normalized": [
+        0.499628974948102,
+        0.4995388576596982
+      ],
+      "bright_ring_radius_proxy_px": 50
+    },
+    {
+      "code": "N02",
+      "path": ".atena/generated/art-candidates/vfx/pulso_radiante/pulso_radiante_grow_v02.png",
+      "sha256": "d74634c93e7ceaf7d6a599b98b5a3274a54d1cf0e104ad34509b5fb21c409fb4",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v02",
+      "visible_bbox_above12": [
+        343,
+        330,
+        910,
+        879
+      ],
+      "mean_luminance": 11.300377229866024,
+      "visible_fraction_above12": 0.08286402173332418,
+      "hot_light_centroid_normalized": [
+        0.49881645456401075,
+        0.4808137628853632
+      ],
+      "bright_ring_radius_proxy_px": 179
+    },
+    {
+      "code": "N03",
+      "path": ".atena/generated/art-candidates/vfx/pulso_radiante/pulso_radiante_peak_v01.png",
+      "sha256": "1bfa8061aec59959de9115ad5dcb94b3e27d5706ffdb86a3e99b8c7e7bf898ec",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "visible_bbox_above12": [
+        38,
+        48,
+        1215,
+        1193
+      ],
+      "mean_luminance": 47.23823096235587,
+      "visible_fraction_above12": 0.3455176290734085,
+      "hot_light_centroid_normalized": [
+        0.4996810660820343,
+        0.49550131904258665
+      ],
+      "bright_ring_radius_proxy_px": 429
+    },
+    {
+      "code": "N04",
+      "path": ".atena/generated/art-candidates/vfx/pulso_radiante/pulso_radiante_hold_v01.png",
+      "sha256": "42153c36d26464061070d376604458ebacfd9e1c23694900b808e5de036f75e8",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "visible_bbox_above12": [
+        53,
+        52,
+        1198,
+        1187
+      ],
+      "mean_luminance": 28.682057925006806,
+      "visible_fraction_above12": 0.26086030285224443,
+      "hot_light_centroid_normalized": [
+        0.4995163594862943,
+        0.5029547004530556
+      ],
+      "bright_ring_radius_proxy_px": 430
+    },
+    {
+      "code": "N05",
+      "path": ".atena/generated/art-candidates/vfx/pulso_radiante/pulso_radiante_fade_v01.png",
+      "sha256": "950453ad5f247610a32c32d59164edd6f7bb556e09fa452cf2666c9e680e82e5",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "visible_bbox_above12": [
+        62,
+        47,
+        1190,
+        1187
+      ],
+      "mean_luminance": 11.528533254987549,
+      "visible_fraction_above12": 0.17381762729282246
+    },
+    {
+      "code": "N06",
+      "path": ".atena/generated/art-candidates/vfx/pulso_radiante/pulso_radiante_dissipate_v01.png",
+      "sha256": "5d652aa925f3645e70772e4ec7ef36e654832021b65bc2919c1ab111d2f53188",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "visible_bbox_above12": [
+        114,
+        104,
+        1140,
+        1100
+      ],
+      "mean_luminance": 0.3534991058914504,
+      "visible_fraction_above12": 0.0035509972553538407
+    }
+  ],
+  "hot_centroid_spread_normalized": [
+    0.0008646115180235281,
+    0.022140937567692365
+  ],
+  "centroid_method": "Whole image weights max(luminance-80,0)^2 for N01-N04, proxy for light position, not exact geometric ring pivot",
+  "native_sources_preserved": true,
+  "preview_only": true,
+  "runtime_admission": false,
+  "manifest_assets": 202,
+  "timestamp": "2026-10-09T13:43:19.260653+00:00",
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "visual_inspected": true,
+  "visual_review": "Six pulse frames: tiny centered spark and small ring, bright growing circle, approved maximum peak, near-maximum hold with thinning band and fewer rays, dim gray outer fragments, barely visible sparse remnants. Native sources and96px montage inspected; same centered flat circle and painted white-gray light style, no visible cuts.",
+  "human_gate_approval": ".atena/generated/s007-reconciliation/v01/n03-owner-approval-2026-10-09.json",
+  "review": ".atena/generated/s007-reconciliation/v01/pulso-radiante-six-frame-review-2026-10-09.png",
+  "preview_gif": ".atena/generated/s007-reconciliation/v01/pulso-radiante-sequence-review-2026-10-09.gif",
+  "other_frames_human_approval": "Not individually claimed",
+  "remaining_native_vfx_frames": 66,
+  "next": "M03 hourglass silence PEAK gate only",
+  "native_dimensions_note": "Native bytes retained, technical normalization to1024 deferred"
+}

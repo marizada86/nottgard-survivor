@@ -1,0 +1,216 @@
+{
+  "date": "2026-10-13",
+  "owner_reply": "Aprovo as duas v02 com exceção de 14/13 px (recomendado)",
+  "scope": "AO04_AO07_BODY_PIVOT_V02_ONLY_WITH_14_13_PX_SPREAD_EXCEPTION",
+  "content_state": "DRAFT_VISUALLY_ACCEPTED_PREPARATION_WITH_EXCEPTION",
+  "global_spread_limit_px": 12,
+  "entries": [
+    {
+      "code": "AO04",
+      "revision": "body-pivot-v01/candidates-v02",
+      "path": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/AO04.png",
+      "sha256": "f2b8b31a440d02f906e577cb0b6fc48059b1dee0b8528d06936710c9077cff61",
+      "source": ".atena/generated/hero-normalization-2026-10-10/sources/ao04-move_se-v01.png",
+      "source_sha256": "8feae12325f647a118947654fae47b0fa5e3002b3c0bb436102c857c25b23b0b",
+      "frames": [
+        {
+          "frame": 1,
+          "path": ".atena/generated/hero-body-pivot-2026-10-12/v02/frames/AO04/f01.png",
+          "sha256": "ca10cdfa8f1141614f918f2c247f564749f7a23802cc042a3ce5e818030a3d17",
+          "height": 296,
+          "margins": [
+            54,
+            72,
+            67,
+            16
+          ],
+          "floor": 368
+        },
+        {
+          "frame": 2,
+          "path": ".atena/generated/hero-body-pivot-2026-10-12/v02/frames/AO04/f02.png",
+          "sha256": "50a0828d1555768705d47f970d163500af4d74b045eede4cc7e75449c082cd98",
+          "height": 282,
+          "margins": [
+            55,
+            85,
+            73,
+            17
+          ],
+          "floor": 367
+        },
+        {
+          "frame": 3,
+          "path": ".atena/generated/hero-body-pivot-2026-10-12/v02/frames/AO04/f03.png",
+          "sha256": "1a1b927654d7ef7b43c5465b3d287671736ecb08394b872677348731af72b6c8",
+          "height": 290,
+          "margins": [
+            58,
+            78,
+            72,
+            16
+          ],
+          "floor": 368
+        },
+        {
+          "frame": 4,
+          "path": ".atena/generated/hero-body-pivot-2026-10-12/v02/frames/AO04/f04.png",
+          "sha256": "1f607d33a01d20b9bf7084bb05ba082df1aa87d463fc4fffb9f075f78a2cf98f",
+          "height": 292,
+          "margins": [
+            51,
+            76,
+            56,
+            16
+          ],
+          "floor": 368
+        },
+        {
+          "frame": 5,
+          "path": ".atena/generated/hero-body-pivot-2026-10-12/v02/frames/AO04/f05.png",
+          "sha256": "6d71a9f258e3b22ea56609f8ce724fc15a7ab788a5a81248e28e7673e778b787",
+          "height": 290,
+          "margins": [
+            55,
+            78,
+            73,
+            16
+          ],
+          "floor": 368
+        },
+        {
+          "frame": 6,
+          "path": ".atena/generated/hero-body-pivot-2026-10-12/v02/frames/AO04/f06.png",
+          "sha256": "95326aee253e56ce768dcd8269aa98c1ceeadb49d93670f35472ac3f45a5af92",
+          "height": 290,
+          "margins": [
+            55,
+            78,
+            58,
+            16
+          ],
+          "floor": 368
+        }
+      ],
+      "body_median": 290,
+      "body_spread": 14,
+      "criterion": 12,
+      "excess": 2,
+      "spread_at_85": 4.103,
+      "uniform_scale": 0.452771272443404,
+      "human_visual_acceptance": "APPROVED_EXPLICITLY_DRAFT_WITH_EXCEPTION",
+      "exception_approval": "APPROVED_EXPLICITLY_EXACT_REVISION_ONLY",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED_PREPARATION_WITH_EXCEPTION",
+      "accepted_spread_max_px": 14,
+      "original_criterion_satisfied": false,
+      "technical_status": "STRUCTURAL_PASS_SPREAD_EXCEPTION_ACCEPTED",
+      "runtime_admission": false
+    },
+    {
+      "code": "AO07",
+      "revision": "body-pivot-v01/candidates-v02",
+      "path": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/AO07.png",
+      "sha256": "999573a258ada0abfe0ac9ad647a64c058ed94edee8a728317c84d2811f3beb2",
+      "source": ".atena/generated/hero-normalization-2026-10-10/sources/ao07-move_n-v01.png",
+      "source_sha256": "fd28f0e31899eda21c4e8fbf3241f25935fcd2dcd4300afb602dd7297e0104f7",
+      "frames": [
+        {
+          "frame": 1,
+          "path": ".atena/generated/hero-body-pivot-2026-10-12/v02/frames/AO07/f01.png",
+          "sha256": "33bb63122bf3ee7e82f789f63f8417b32597eb8b18600327bffaa613fce2bc6b",
+          "height": 293,
+          "margins": [
+            64,
+            75,
+            55,
+            16
+          ],
+          "floor": 368
+        },
+        {
+          "frame": 2,
+          "path": ".atena/generated/hero-body-pivot-2026-10-12/v02/frames/AO07/f02.png",
+          "sha256": "7e8e63ff794d643b7b3b4e6559c63dcb3af62ca2f613b40cb1887cda70324ac1",
+          "height": 287,
+          "margins": [
+            60,
+            81,
+            74,
+            16
+          ],
+          "floor": 368
+        },
+        {
+          "frame": 3,
+          "path": ".atena/generated/hero-body-pivot-2026-10-12/v02/frames/AO07/f03.png",
+          "sha256": "f1482aad9da90f9b3576543c91762b347ca8053ef77aa9043a8ceec9770a73d4",
+          "height": 290,
+          "margins": [
+            74,
+            78,
+            60,
+            16
+          ],
+          "floor": 368
+        },
+        {
+          "frame": 4,
+          "path": ".atena/generated/hero-body-pivot-2026-10-12/v02/frames/AO07/f04.png",
+          "sha256": "90adbec1b203ea46a8082802f1846a30bda1e617b90a0c1371b8a285fc0a27ae",
+          "height": 290,
+          "margins": [
+            68,
+            78,
+            58,
+            16
+          ],
+          "floor": 368
+        },
+        {
+          "frame": 5,
+          "path": ".atena/generated/hero-body-pivot-2026-10-12/v02/frames/AO07/f05.png",
+          "sha256": "2c2ca1841da0cb5b89d9bcb5c073969ed8258cf3b40ec2f979ec8a615719348b",
+          "height": 280,
+          "margins": [
+            61,
+            88,
+            73,
+            16
+          ],
+          "floor": 368
+        },
+        {
+          "frame": 6,
+          "path": ".atena/generated/hero-body-pivot-2026-10-12/v02/frames/AO07/f06.png",
+          "sha256": "2ca5859c4dbcb446b6947ca75df26a9e4f1f10f6ff4af16817be189f7dc20a48",
+          "height": 292,
+          "margins": [
+            72,
+            76,
+            49,
+            16
+          ],
+          "floor": 368
+        }
+      ],
+      "body_median": 290,
+      "body_spread": 13,
+      "criterion": 12,
+      "excess": 1,
+      "spread_at_85": 3.81,
+      "uniform_scale": 0.447876447876448,
+      "human_visual_acceptance": "APPROVED_EXPLICITLY_DRAFT_WITH_EXCEPTION",
+      "exception_approval": "APPROVED_EXPLICITLY_EXACT_REVISION_ONLY",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED_PREPARATION_WITH_EXCEPTION",
+      "accepted_spread_max_px": 13,
+      "original_criterion_satisfied": false,
+      "technical_status": "STRUCTURAL_PASS_SPREAD_EXCEPTION_ACCEPTED",
+      "runtime_admission": false
+    }
+  ],
+  "runtime_admission": false,
+  "canonical_promotion": false,
+  "commit_push_export": false,
+  "source_rasters_unchanged": true,
+  "other_revisions_not_accepted": true
+}

@@ -1,0 +1,181 @@
+{
+  "result": "PASS_NATIVE_RECOVERY",
+  "revision": "pulso-resume/v01",
+  "rows": [
+    {
+      "code": "N01",
+      "version": "v03",
+      "path": ".atena/generated/art-candidates/vfx/pulso_radiante/pulso_radiante_spark_v03.png",
+      "sha256": "9fe7d8581307d7ed26a1159400f07a15bf730f543e9b70c55c873eb2bd93610d",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "bbox_max_channel_above12": [
+        530,
+        532,
+        724,
+        722
+      ],
+      "historical_luminance_bbox_above12": [
+        530,
+        532,
+        724,
+        722
+      ],
+      "edge_max_channel": 1,
+      "max_channel_difference": 6,
+      "mean_max_channel": 1.1080020807419448,
+      "significant_border_clear": true,
+      "native_bytes_preserved": true
+    },
+    {
+      "code": "N02",
+      "version": "v02",
+      "path": ".atena/generated/art-candidates/vfx/pulso_radiante/pulso_radiante_grow_v02.png",
+      "sha256": "d74634c93e7ceaf7d6a599b98b5a3274a54d1cf0e104ad34509b5fb21c409fb4",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "bbox_max_channel_above12": [
+        343,
+        330,
+        910,
+        879
+      ],
+      "historical_luminance_bbox_above12": [
+        343,
+        330,
+        910,
+        879
+      ],
+      "edge_max_channel": 2,
+      "max_channel_difference": 11,
+      "mean_max_channel": 11.544828160730956,
+      "significant_border_clear": true,
+      "native_bytes_preserved": true
+    },
+    {
+      "code": "N03",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/pulso_radiante/pulso_radiante_peak_v01.png",
+      "sha256": "1bfa8061aec59959de9115ad5dcb94b3e27d5706ffdb86a3e99b8c7e7bf898ec",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "bbox_max_channel_above12": [
+        38,
+        48,
+        1215,
+        1193
+      ],
+      "historical_luminance_bbox_above12": [
+        38,
+        48,
+        1215,
+        1193
+      ],
+      "edge_max_channel": 1,
+      "max_channel_difference": 9,
+      "mean_max_channel": 47.47036723314739,
+      "significant_border_clear": true,
+      "native_bytes_preserved": true
+    },
+    {
+      "code": "N04",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/pulso_radiante/pulso_radiante_hold_v01.png",
+      "sha256": "42153c36d26464061070d376604458ebacfd9e1c23694900b808e5de036f75e8",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "bbox_max_channel_above12": [
+        53,
+        52,
+        1199,
+        1187
+      ],
+      "historical_luminance_bbox_above12": [
+        53,
+        52,
+        1198,
+        1187
+      ],
+      "edge_max_channel": 1,
+      "max_channel_difference": 9,
+      "mean_max_channel": 28.889059316407593,
+      "significant_border_clear": true,
+      "native_bytes_preserved": true
+    },
+    {
+      "code": "N05",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/pulso_radiante/pulso_radiante_fade_v01.png",
+      "sha256": "950453ad5f247610a32c32d59164edd6f7bb556e09fa452cf2666c9e680e82e5",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "bbox_max_channel_above12": [
+        61,
+        47,
+        1190,
+        1187
+      ],
+      "historical_luminance_bbox_above12": [
+        62,
+        47,
+        1190,
+        1187
+      ],
+      "edge_max_channel": 1,
+      "max_channel_difference": 6,
+      "mean_max_channel": 11.675989306309125,
+      "significant_border_clear": true,
+      "native_bytes_preserved": true
+    },
+    {
+      "code": "N06",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/pulso_radiante/pulso_radiante_dissipate_v01.png",
+      "sha256": "5d652aa925f3645e70772e4ec7ef36e654832021b65bc2919c1ab111d2f53188",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "bbox_max_channel_above12": [
+        114,
+        103,
+        1141,
+        1100
+      ],
+      "historical_luminance_bbox_above12": [
+        114,
+        104,
+        1140,
+        1100
+      ],
+      "edge_max_channel": 1,
+      "max_channel_difference": 5,
+      "mean_max_channel": 0.4364165452052634,
+      "significant_border_clear": true,
+      "native_bytes_preserved": true
+    }
+  ],
+  "native_normalized": false,
+  "rgba_editing": false,
+  "black_rgb_exact": "NOT_CLAIMED",
+  "pure_grayscale_exact": "NOT_CLAIMED",
+  "human_sequence_acceptance": "PENDING",
+  "gameplay_tests": "NOT_RUN_RUNTIME_UNCHANGED",
+  "visual_inspected_all_six": true
+}

@@ -1,0 +1,126 @@
+{
+	"alpha": "Rec.709 luminance; <=2/255 zero",
+	"atlas_size": [
+		1536,
+		256
+	],
+	"content_state": "DRAFT",
+	"duration": 0.35,
+	"pivot": [
+		128,
+		128
+	],
+	"records": [
+		{
+			"cell": [
+				256,
+				256
+			],
+			"code": "M01",
+			"normalized_size": [
+				1024,
+				1024
+			],
+			"offset": [
+				0,
+				0
+			],
+			"source": ".atena/generated/art-candidates/vfx/ampulheta_silencio/ampulheta_silencio_spark_v02.png",
+			"source_sha256": "81573c62610071adfd806ddc0c893bcfce42ad73bc9a4878eb5d547241c6ee37",
+			"version": "v02"
+		},
+		{
+			"cell": [
+				256,
+				256
+			],
+			"code": "M02",
+			"normalized_size": [
+				1024,
+				1024
+			],
+			"offset": [
+				256,
+				0
+			],
+			"source": ".atena/generated/art-candidates/vfx/ampulheta_silencio/ampulheta_silencio_grow_v03.png",
+			"source_sha256": "cb5a2ba306a4c8aa09867c42bddae9bf375412329568d56846e821155b5bb3d5",
+			"version": "v03"
+		},
+		{
+			"cell": [
+				256,
+				256
+			],
+			"code": "M03",
+			"normalized_size": [
+				1024,
+				1024
+			],
+			"offset": [
+				512,
+				0
+			],
+			"source": ".atena/generated/art-candidates/vfx/ampulheta_silencio/ampulheta_silencio_peak_v01.png",
+			"source_sha256": "a5d4870493878d18ff7a1aeca003b23642f7ef07cdb3ad46289b688a12673866",
+			"version": "v01"
+		},
+		{
+			"cell": [
+				256,
+				256
+			],
+			"code": "M04",
+			"normalized_size": [
+				1024,
+				1024
+			],
+			"offset": [
+				768,
+				0
+			],
+			"source": ".atena/generated/art-candidates/vfx/ampulheta_silencio/ampulheta_silencio_hold_v01.png",
+			"source_sha256": "f8a804729941fa556994b108caf88ffb90247ec7205dc99addfaef2d19d757d2",
+			"version": "v01"
+		},
+		{
+			"cell": [
+				256,
+				256
+			],
+			"code": "M05",
+			"normalized_size": [
+				1024,
+				1024
+			],
+			"offset": [
+				1024,
+				0
+			],
+			"source": ".atena/generated/art-candidates/vfx/ampulheta_silencio/ampulheta_silencio_fade_v01.png",
+			"source_sha256": "086b5b3ed2ecafd57a15d742d1381ef102cd7e2850e0e9c311a9d067f2bcbea9",
+			"version": "v01"
+		},
+		{
+			"cell": [
+				256,
+				256
+			],
+			"code": "M06",
+			"normalized_size": [
+				1024,
+				1024
+			],
+			"offset": [
+				1280,
+				0
+			],
+			"source": ".atena/generated/art-candidates/vfx/ampulheta_silencio/ampulheta_silencio_dissipate_v01.png",
+			"source_sha256": "35bf9fcc44accaf13d4cb0c7804d6045b7b321bd2a4882e76eb3ca448aba7527",
+			"version": "v01"
+		}
+	],
+	"resampling": "Godot Lanczos native1254 to1024 audit and directly to256 runtime",
+	"revision": "ampulheta-admission/v01",
+	"rgb": "white"
+}

@@ -1,0 +1,24 @@
+version: 1
+plan: PLAN-053
+revision: assets-main-publication/v01
+classification: IN_PLAN_AUTHORIZED_GIT_CHECKPOINT
+mode: per-plan
+approval_status: APPROVED_EXPLICITLY
+owner_reply: 'atena, aprovado commit e push na main'
+status: IN_PROGRESS
+checkpoint: G-001/COMMIT_GROUPS
+ordered_steps: [G-001, G-002, G-003]
+current_step_position: 1
+completed_steps: 0
+total_steps: 3
+remaining_steps_after_current: 2
+spec: .atena/specs/SPEC-121-retomada-fila-imagens/assets-main-publication-v01.md
+scope: .atena/generated/assets-main-publication-2026-10-13/plan.json
+branch: codex/assets-admission-main-2026-10-13
+destination: origin/main
+base: 2ae8c48e2378eb9fa6a1cc75b3bc0fa50f37c096
+content_state: DRAFT_ADMITTED_LOCAL
+canonical_promotion: false
+human_playtest_procedure: NOT_REPORTED
+next_objective: Commitar grupos autorizados e verificar checkout limpo antes de publicar.
+return_plan: {id: PLAN-071, checkpoint: B-006/S-011, preserved: true}

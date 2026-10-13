@@ -1,0 +1,11 @@
+{
+  "status": "APPROVED",
+  "owner_reply": "atena aprovado, continue",
+  "recorded_at": "2026-10-09T13:55:44.475466+00:00",
+  "frame": "M03",
+  "version": "v01",
+  "candidate": ".atena/generated/art-candidates/vfx/ampulheta_silencio/ampulheta_silencio_peak_v01.png",
+  "sha256": "a5d4870493878d18ff7a1aeca003b23642f7ef07cdb3ad46289b688a12673866",
+  "scope": "Generate M01,M02,M04,M05,M06, review six-frame sequence, then only H103 first FILA023 peak gate; no runtime admission or new Git publication.",
+  "previous_question": "Aprova M03 v01, o pico da Ampulheta do Silêncio apresentado, para gerar os outros cinco quadros? A FILA-022 exige esse gate antes da continuação."
+}

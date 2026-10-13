@@ -1,0 +1,276 @@
+{
+  "date": "2026-10-13",
+  "content_state": "DRAFT_VISUALLY_ACCEPTED_PREPARATION",
+  "accepted_strips": 18,
+  "accepted_frames": 101,
+  "expected_hero_animation_strips": 18,
+  "selected": [
+    {
+      "code": "AO02",
+      "revision": "body-pivot-v01/candidates-v02",
+      "path": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/AO02.png",
+      "sha256": "ebe364c08618a3ec53b071e25bb5cd1dfeb091436535013c7543903e2617f1fc",
+      "cell": [
+        256,
+        384
+      ],
+      "frames": 4,
+      "receipt": ".atena/generated/hero-body-pivot-2026-10-12/visual-acceptance.json",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED_PREPARATION"
+    },
+    {
+      "code": "AO03",
+      "revision": "body-pivot-v01/candidates-v02",
+      "path": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/AO03.png",
+      "sha256": "8fb828bb8f0421c6f5014d549ce2da2216dc015ee78049faa09cbec4a4ca880e",
+      "cell": [
+        256,
+        384
+      ],
+      "frames": 6,
+      "receipt": ".atena/generated/hero-body-pivot-2026-10-12/visual-acceptance.json",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED_PREPARATION"
+    },
+    {
+      "code": "AO04",
+      "revision": "body-pivot-v01/candidates-v02",
+      "path": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/AO04.png",
+      "sha256": "f2b8b31a440d02f906e577cb0b6fc48059b1dee0b8528d06936710c9077cff61",
+      "cell": [
+        256,
+        384
+      ],
+      "frames": 6,
+      "receipt": ".atena/generated/hero-spread-review-2026-10-13/visual-acceptance.json",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED_PREPARATION_WITH_EXCEPTION",
+      "accepted_spread_max_px": 14,
+      "original_spread_limit_px": 12
+    },
+    {
+      "code": "AO05",
+      "revision": "body-pivot-v01/candidates-v02",
+      "path": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/AO05.png",
+      "sha256": "3f37d88649efcbde3be4833a437988f43868d04403e3c63ffa22e14329ff8609",
+      "cell": [
+        256,
+        384
+      ],
+      "frames": 6,
+      "receipt": ".atena/generated/hero-body-pivot-2026-10-12/visual-acceptance.json",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED_PREPARATION"
+    },
+    {
+      "code": "AO06",
+      "revision": "body-pivot-v01/candidates-v02",
+      "path": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/AO06.png",
+      "sha256": "3d0b0c8bc2ef3a5fc8e6b967602e57dcc17cf4ff89758c9cb44300cfc88368a6",
+      "cell": [
+        256,
+        384
+      ],
+      "frames": 6,
+      "receipt": ".atena/generated/hero-body-pivot-2026-10-12/visual-acceptance.json",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED_PREPARATION"
+    },
+    {
+      "code": "AO07",
+      "revision": "body-pivot-v01/candidates-v02",
+      "path": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/AO07.png",
+      "sha256": "999573a258ada0abfe0ac9ad647a64c058ed94edee8a728317c84d2811f3beb2",
+      "cell": [
+        256,
+        384
+      ],
+      "frames": 6,
+      "receipt": ".atena/generated/hero-spread-review-2026-10-13/visual-acceptance.json",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED_PREPARATION_WITH_EXCEPTION",
+      "accepted_spread_max_px": 13,
+      "original_spread_limit_px": 12
+    },
+    {
+      "code": "AO08",
+      "revision": "wide-v01",
+      "path": ".atena/generated/hero-wide-actions-2026-10-12/strips/AO08_wide_v01.png",
+      "sha256": "73ffd76cf87be5a3d6f14dbad6620e872104e6c818d80e41ca4ecadd513a73c7",
+      "cell": [
+        512,
+        512
+      ],
+      "frames": 4,
+      "content_state": "DRAFT_VISUALLY_ACCEPTED_PREPARATION",
+      "receipt": ".atena/generated/hero-wide-actions-2026-10-12/visual-acceptance.json"
+    },
+    {
+      "code": "AO09",
+      "revision": "hero-final-four/v01/candidates-v02",
+      "path": ".atena/generated/hero-final-four-2026-10-13/strips/AO09_v02.png",
+      "sha256": "5996728502f5468dbdd7082ec48d7c3c773dc7cb5cd9ca3398a9c73be9b38760",
+      "cell": [
+        512,
+        512
+      ],
+      "frames": 6,
+      "receipt": ".atena/generated/hero-final-four-2026-10-13/visual-acceptance.json",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED_PREPARATION"
+    },
+    {
+      "code": "AO10",
+      "revision": "hero-final-four/v01/candidates-v02",
+      "path": ".atena/generated/hero-final-four-2026-10-13/strips/AO10_v02.png",
+      "sha256": "5024a5ee5f895e940e46ddf9caece4fe03b906e7dd194c622b7f766881912290",
+      "cell": [
+        512,
+        512
+      ],
+      "frames": 6,
+      "receipt": ".atena/generated/hero-final-four-2026-10-13/visual-acceptance.json",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED_PREPARATION"
+    },
+    {
+      "code": "ER02",
+      "revision": "body-pivot-v01/candidates-v02",
+      "path": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/ER02.png",
+      "sha256": "3c3ea2fbedac595dd8a2fcb2c8f118debf45d28f045c6318112291ed706c2dc2",
+      "cell": [
+        256,
+        384
+      ],
+      "frames": 4,
+      "receipt": ".atena/generated/hero-body-pivot-2026-10-12/visual-acceptance.json",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED_PREPARATION"
+    },
+    {
+      "code": "ER03",
+      "revision": "hero-final-four/v01/candidates-v02",
+      "path": ".atena/generated/hero-final-four-2026-10-13/strips/ER03_v02.png",
+      "sha256": "999011007d809fd148843ea17f33613635adaf99ac6549b049fecb94d5141ab1",
+      "cell": [
+        256,
+        384
+      ],
+      "frames": 7,
+      "receipt": ".atena/generated/hero-final-four-2026-10-13/visual-acceptance.json",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED_PREPARATION"
+    },
+    {
+      "code": "ER04",
+      "revision": "body-pivot-v01/candidates-v02",
+      "path": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/ER04.png",
+      "sha256": "43ae0813ab51100e34c2bb99546c240bfef105201f56689ef161c7f8bde1ea1f",
+      "cell": [
+        256,
+        384
+      ],
+      "frames": 6,
+      "receipt": ".atena/generated/hero-body-pivot-2026-10-12/visual-acceptance.json",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED_PREPARATION"
+    },
+    {
+      "code": "ER05",
+      "revision": "body-pivot-v01/candidates-v02",
+      "path": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/ER05.png",
+      "sha256": "8b3d492be3daad7813cfa4c1fcbe1cef389293532897ab1707b18a81d747b65f",
+      "cell": [
+        256,
+        384
+      ],
+      "frames": 6,
+      "receipt": ".atena/generated/hero-body-pivot-2026-10-12/visual-acceptance.json",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED_PREPARATION"
+    },
+    {
+      "code": "ER06",
+      "revision": "hero-final-four/v01/candidates-v02",
+      "path": ".atena/generated/hero-final-four-2026-10-13/strips/ER06_v02.png",
+      "sha256": "5a5e9e97a7ed45899e939d538341bda5ee1a9e3bfbcbe5335a776010582a9110",
+      "cell": [
+        256,
+        384
+      ],
+      "frames": 6,
+      "receipt": ".atena/generated/hero-final-four-2026-10-13/visual-acceptance.json",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED_PREPARATION_WITH_EXCEPTION",
+      "accepted_spread_max_px": 13,
+      "original_spread_limit_px": 12,
+      "sixth_source_revision": "v03"
+    },
+    {
+      "code": "ER07",
+      "revision": "body-pivot-v01/candidates-v02",
+      "path": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/ER07.png",
+      "sha256": "5fe3e45f0ebd24f231d5492472a6ea91522f16f84fb6b21031055f30d1c9b211",
+      "cell": [
+        256,
+        384
+      ],
+      "frames": 6,
+      "receipt": ".atena/generated/hero-body-pivot-2026-10-12/visual-acceptance.json",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED_PREPARATION"
+    },
+    {
+      "code": "ER08",
+      "revision": "wide-v01",
+      "path": ".atena/generated/hero-wide-actions-2026-10-12/strips/ER08_wide_v01.png",
+      "sha256": "4114f785c6e76099f2cd1506aa2b3e6b4a9a5d0a29d7010f92fa6e9309b71aff",
+      "cell": [
+        512,
+        512
+      ],
+      "frames": 4,
+      "content_state": "DRAFT_VISUALLY_ACCEPTED_PREPARATION",
+      "receipt": ".atena/generated/hero-wide-actions-2026-10-12/visual-acceptance.json"
+    },
+    {
+      "code": "ER09",
+      "revision": "wide-v01",
+      "path": ".atena/generated/hero-wide-actions-2026-10-12/strips/ER09_wide_v01.png",
+      "sha256": "cf3f1915f2ab2b69fce4ac79443352089bda9a227327f850bbae5e3c995c748d",
+      "cell": [
+        512,
+        512
+      ],
+      "frames": 6,
+      "content_state": "DRAFT_VISUALLY_ACCEPTED_PREPARATION",
+      "receipt": ".atena/generated/hero-wide-actions-2026-10-12/visual-acceptance.json"
+    },
+    {
+      "code": "ER10",
+      "revision": "wide-v01",
+      "path": ".atena/generated/hero-wide-actions-2026-10-12/strips/ER10_wide_v01.png",
+      "sha256": "0029d353e694d9e2ed279dcad356ef350fa0fca3910461157211228e60640444",
+      "cell": [
+        512,
+        512
+      ],
+      "frames": 6,
+      "content_state": "DRAFT_VISUALLY_ACCEPTED_PREPARATION",
+      "receipt": ".atena/generated/hero-wide-actions-2026-10-12/visual-acceptance.json"
+    }
+  ],
+  "remaining_animation_strips": [],
+  "portrait_sources": "AO01/ER01 preserved; status to reconcile separately before admission; not accepted/admitted/promoted by this animation receipt",
+  "runtime_admission": false,
+  "canonical_promotion": false,
+  "commit_push_export": false,
+  "ao08_resolution": "Accepted wide v01 replaces only the retained narrow diagnostic as current preparation candidate; does not accept the narrow 176.5px body version",
+  "previous_inventory": ".atena/generated/hero-spread-review-2026-10-13/accepted-hero-inventory.json",
+  "previous_inventory_sha256": "4f85ede3f8910100cb85ab76a8fb2a1deda4cfed48d81bbd356b8864bd0739e8",
+  "limited_exceptions": {
+    "AO04": {
+      "revision": "body-pivot-v01/candidates-v02",
+      "max_spread_px": 14
+    },
+    "AO07": {
+      "revision": "body-pivot-v01/candidates-v02",
+      "max_spread_px": 13
+    },
+    "ER06": {
+      "revision": "hero-final-four/v01/candidates-v02",
+      "max_spread_px": 13,
+      "original_spread_limit_px": 12
+    }
+  },
+  "global_spread_limit_px": 12,
+  "animation_preparation_status": "ALL_EIGHTEEN_ANIMATION_STRIPS_VISUALLY_ACCEPTED_DRAFT",
+  "admission_status": "NOT_AUTHORIZED"
+}

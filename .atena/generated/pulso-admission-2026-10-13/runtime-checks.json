@@ -1,0 +1,50 @@
+{
+	"appdata": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\d8a8\\nottgard-survivor\\.atena\\generated\\pulso-admission-2026-10-13\\qa-capture",
+	"freed_after_completion": true,
+	"phases": 6,
+	"reduced_impact_fallback": true,
+	"result": "PASS",
+	"tints": [
+		"Lliira",
+		"Tou Um"
+	],
+	"unsupported_fallback": true,
+	"weapons": [
+		{
+			"event_route": "Battle._fire -> nova -> Run._consume_events",
+			"radius": 2.6,
+			"rendered": true,
+			"weapon": "sentenca_de_lliira"
+		},
+		{
+			"event_route": "Battle._fire -> nova -> Run._consume_events",
+			"radius": 4.2,
+			"rendered": true,
+			"weapon": "julgamento_da_gloria"
+		},
+		{
+			"event_route": "Battle._fire -> nova -> Run._consume_events",
+			"radius": 3.2,
+			"rendered": true,
+			"weapon": "descarga_estelar"
+		},
+		{
+			"event_route": "Battle._fire -> nova -> Run._consume_events",
+			"radius": 5.0,
+			"rendered": true,
+			"weapon": "chuva_de_estrelas"
+		},
+		{
+			"event_route": "Battle._fire -> nova -> Run._consume_events",
+			"radius": 2.0,
+			"rendered": true,
+			"weapon": "vela_sagrada"
+		},
+		{
+			"event_route": "Battle._fire -> nova -> Run._consume_events",
+			"radius": 3.5,
+			"rendered": true,
+			"weapon": "sopro_de_estrela"
+		}
+	]
+}

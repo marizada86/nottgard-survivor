@@ -1,0 +1,775 @@
+{
+  "date": "2026-10-13",
+  "owner_reply": "Aprovo as quatro v02 com exceção ER06 de 13 px (recomendado)",
+  "scope": "AO09_AO10_ER03_ER06_ATLASES_V02_ONLY",
+  "content_state": "DRAFT_VISUALLY_ACCEPTED_PREPARATION",
+  "global_spread_limit_px": 12,
+  "accepted_exceptions": {
+    "ER06": {
+      "candidate_revision": "v02",
+      "max_spread_px": 13,
+      "scope": "EXACT_ATLAS_AND_SIX_FRAMES_IN_THIS_RECEIPT_ONLY"
+    }
+  },
+  "entries": [
+    {
+      "code": "AO09",
+      "candidate": "hero-final-four/v01/candidates-v02",
+      "candidate_revision": "v02",
+      "path": ".atena/generated/hero-final-four-2026-10-13/strips/AO09_v02.png",
+      "sha256": "5996728502f5468dbdd7082ec48d7c3c773dc7cb5cd9ca3398a9c73be9b38760",
+      "cell": [
+        512,
+        512
+      ],
+      "frame_count": 6,
+      "frames": [
+        {
+          "frame": 1,
+          "path": "frames/AO09/f01.png",
+          "sha256": "9f114d4a721eb352ab857bc59e20437fbf2369fa25e0a7f08065e3bc8bc518d0",
+          "input": ".atena/generated/hero-final-four-2026-10-13/sources/AO09/f01_v01.png",
+          "input_sha256": "82eb4ed316473a0a65f1bd47fa6f3cd5604faac4e6841baf2362525ea68fec30",
+          "bbox": [
+            190,
+            158,
+            315,
+            448
+          ],
+          "margins_px": [
+            190,
+            158,
+            197,
+            64
+          ],
+          "head_y": 158,
+          "ground_y": 448,
+          "body_height": 290,
+          "body_height_geometry": 290.0,
+          "scale": 0.302713987473904,
+          "ground_error": 0.0,
+          "hip_error": -0.31106471816300996
+        },
+        {
+          "frame": 2,
+          "path": "frames/AO09/f02.png",
+          "sha256": "32044ed85ab36ac10b4146d1477e002df7db5dac474d1ccf932991b7aa1bf727",
+          "input": ".atena/generated/hero-final-four-2026-10-13/sources/AO09/f02_v01.png",
+          "input_sha256": "d8d78e957387c698c0230d004bc226c5c834d7a7700bcbcf2f2e89427c4d29cf",
+          "bbox": [
+            188,
+            163,
+            322,
+            448
+          ],
+          "margins_px": [
+            188,
+            163,
+            190,
+            64
+          ],
+          "head_y": 163,
+          "ground_y": 448,
+          "body_height": 285,
+          "body_height_geometry": 284.853862212944,
+          "scale": 0.302713987473904,
+          "ground_error": -0.14613778705597724,
+          "hip_error": -0.49478079331899494
+        },
+        {
+          "frame": 3,
+          "path": "frames/AO09/f03.png",
+          "sha256": "db6bb9329c3a687335f814a0de5878de14f961727608eff4f23cd28e0c7775d3",
+          "input": ".atena/generated/hero-final-four-2026-10-13/sources/AO09/f03_v02.png",
+          "input_sha256": "79378c1402ecb5ab6c0f894dc3315d0839d4fac5670b594525a878e4b3122d66",
+          "bbox": [
+            152,
+            157,
+            368,
+            448
+          ],
+          "margins_px": [
+            152,
+            157,
+            144,
+            64
+          ],
+          "head_y": 157,
+          "ground_y": 448,
+          "body_height": 291,
+          "body_height_geometry": 290.605427974948,
+          "scale": 0.302713987473904,
+          "ground_error": -0.39457202505201394,
+          "hip_error": -0.16910229645100117
+        },
+        {
+          "frame": 4,
+          "path": "frames/AO09/f04.png",
+          "sha256": "972fb489a7937874939a69878fee54ecc17699e6aaf07c2456bedcc86780d2e9",
+          "input": ".atena/generated/hero-final-four-2026-10-13/sources/AO09/f04_v01.png",
+          "input_sha256": "f78984333dbe5791e986052e0875faf068b39d9f27bd5f16497492f441dfafb2",
+          "bbox": [
+            145,
+            158,
+            375,
+            448
+          ],
+          "margins_px": [
+            145,
+            158,
+            137,
+            64
+          ],
+          "head_y": 158,
+          "ground_y": 448,
+          "body_height": 290,
+          "body_height_geometry": 290.0,
+          "scale": 0.302713987473904,
+          "ground_error": 0.0,
+          "hip_error": 0.09603340292301255
+        },
+        {
+          "frame": 5,
+          "path": "frames/AO09/f05.png",
+          "sha256": "50d3deb4e47c4dafc756aa052561ce69380b05c6e2bc6410d695b6de28016d00",
+          "input": ".atena/generated/hero-final-four-2026-10-13/sources/AO09/f05_v01.png",
+          "input_sha256": "2e57a128a06bb14d47bc9d83b773e6c96e403e03edc7f74af40e5d057c6a9090",
+          "bbox": [
+            150,
+            157,
+            378,
+            448
+          ],
+          "margins_px": [
+            150,
+            157,
+            134,
+            64
+          ],
+          "head_y": 157,
+          "ground_y": 448,
+          "body_height": 291,
+          "body_height_geometry": 290.908141962422,
+          "scale": 0.302713987473904,
+          "ground_error": -0.09185803757799249,
+          "hip_error": -0.05010438413398788
+        },
+        {
+          "frame": 6,
+          "path": "frames/AO09/f06.png",
+          "sha256": "70da2b76d30050712723063b585e8bf24006a34b42859b7822960caba9720bbd",
+          "input": ".atena/generated/hero-final-four-2026-10-13/sources/AO09/f06_v02.png",
+          "input_sha256": "13af0199b0dba420345b4a51d2399726b0c9ec36c2a3087ad3789ed780b932c6",
+          "bbox": [
+            190,
+            158,
+            316,
+            448
+          ],
+          "margins_px": [
+            190,
+            158,
+            196,
+            64
+          ],
+          "head_y": 158,
+          "ground_y": 448,
+          "body_height": 290,
+          "body_height_geometry": 290.302713987474,
+          "scale": 0.302713987473904,
+          "ground_error": 0.30271398747402145,
+          "hip_error": -0.008350730688988506
+        }
+      ],
+      "body_median": 290.0,
+      "body_spread": 6,
+      "spread_check_applicable": true,
+      "death_compression_natural": false,
+      "original_spread_limit_px": 12,
+      "original_technical_reasons": [],
+      "accepted_spread_max_px": null,
+      "original_spread_criterion_satisfied": true,
+      "content_state": "DRAFT_VISUALLY_ACCEPTED_PREPARATION",
+      "human_visual_acceptance": "APPROVED_EXPLICITLY",
+      "runtime_admission": false
+    },
+    {
+      "code": "AO10",
+      "candidate": "hero-final-four/v01/candidates-v02",
+      "candidate_revision": "v02",
+      "path": ".atena/generated/hero-final-four-2026-10-13/strips/AO10_v02.png",
+      "sha256": "5024a5ee5f895e940e46ddf9caece4fe03b906e7dd194c622b7f766881912290",
+      "cell": [
+        512,
+        512
+      ],
+      "frame_count": 6,
+      "frames": [
+        {
+          "frame": 1,
+          "path": "frames/AO10/f01.png",
+          "sha256": "cec28441f6880c79bdca4b191573a1be59ea34534118e6e25d937ee799834336",
+          "input": ".atena/generated/hero-final-four-2026-10-13/sources/AO10/f01_v01.png",
+          "input_sha256": "da5e419f65023782ec937a937bfed73c00c81943077b3596ed5aed260a38ca72",
+          "bbox": [
+            169,
+            158,
+            344,
+            448
+          ],
+          "margins_px": [
+            169,
+            158,
+            168,
+            64
+          ],
+          "head_y": 158,
+          "ground_y": 448,
+          "body_height": 290,
+          "body_height_geometry": 290.0,
+          "scale": 0.313852813852814,
+          "ground_error": 0.0,
+          "hip_error": -0.3766233766230016
+        },
+        {
+          "frame": 2,
+          "path": "frames/AO10/f02.png",
+          "sha256": "a3262ffe7ecd02713f1fbb503f14303851986a67df9804078ac6ffb18ca13faa",
+          "input": ".atena/generated/hero-final-four-2026-10-13/sources/AO10/f02_v01.png",
+          "input_sha256": "b1dae3738d0eea8ead26eb0991cf430ea0e4fd3bbf4a56b4805ed0a840f9fcb8",
+          "bbox": [
+            158,
+            187,
+            359,
+            448
+          ],
+          "margins_px": [
+            158,
+            187,
+            153,
+            64
+          ],
+          "head_y": 187,
+          "ground_y": 448,
+          "body_height": 261,
+          "body_height_geometry": 260.811688311688,
+          "scale": 0.313852813852814,
+          "ground_error": -0.1883116883120124,
+          "hip_error": -0.39177489177498614
+        },
+        {
+          "frame": 3,
+          "path": "frames/AO10/f03.png",
+          "sha256": "42f23bdcf9142930514818c1b9f64b860e3e5ca85e0ace792d8917b62cb8544c",
+          "input": ".atena/generated/hero-final-four-2026-10-13/sources/AO10/f03_v01.png",
+          "input_sha256": "9ebbdce1b6fa8b8bc28400d8095f37972a0b5570f33096f8ea37bcd2df85006d",
+          "bbox": [
+            137,
+            240,
+            377,
+            448
+          ],
+          "margins_px": [
+            137,
+            240,
+            135,
+            64
+          ],
+          "head_y": 240,
+          "ground_y": 448,
+          "body_height": 208,
+          "body_height_geometry": 208.398268398268,
+          "scale": 0.313852813852814,
+          "ground_error": 0.3982683982679873,
+          "hip_error": 0.26406926406900766
+        },
+        {
+          "frame": 4,
+          "path": "frames/AO10/f04.png",
+          "sha256": "1612c540b7b650cb0672c80c3737b005c56d121275cc3bc80fe403fe00c3e001",
+          "input": ".atena/generated/hero-final-four-2026-10-13/sources/AO10/f04_v01.png",
+          "input_sha256": "00b25f889a0be91b2044e14a32f566b4af1e2fb56c254e809aaff3229af74b80",
+          "bbox": [
+            115,
+            311,
+            453,
+            448
+          ],
+          "margins_px": [
+            115,
+            311,
+            59,
+            64
+          ],
+          "head_y": 311,
+          "ground_y": 448,
+          "body_height": 137,
+          "body_height_geometry": 136.83982683982703,
+          "scale": 0.313852813852814,
+          "ground_error": -0.1601731601729739,
+          "hip_error": -0.08008658008699854
+        },
+        {
+          "frame": 5,
+          "path": "frames/AO10/f05.png",
+          "sha256": "6c0bea9809b09b3d2f0c61a2f26cd788f2451c602b190770d462b929a1f9a038",
+          "input": ".atena/generated/hero-final-four-2026-10-13/sources/AO10/f05_v01.png",
+          "input_sha256": "8441cf170d121a278d5cba80709cab2d59a964f3cde5a967e852404bcb1a291b",
+          "bbox": [
+            102,
+            303,
+            469,
+            448
+          ],
+          "margins_px": [
+            102,
+            303,
+            43,
+            64
+          ],
+          "head_y": 303,
+          "ground_y": 448,
+          "body_height": 145,
+          "body_height_geometry": 145.31385281385298,
+          "scale": 0.313852813852814,
+          "ground_error": 0.31385281385297503,
+          "hip_error": 0.10173160173201268
+        },
+        {
+          "frame": 6,
+          "path": "frames/AO10/f06.png",
+          "sha256": "0015de5dcd45c8fab4224f7b5da216228446ef123c4551898bc5422bf7ccac63",
+          "input": ".atena/generated/hero-final-four-2026-10-13/sources/AO10/f06_v01.png",
+          "input_sha256": "360d8dc547074f7ca74ba2ac82c4b8840cca15f41d114f8b01ccb1875870eec1",
+          "bbox": [
+            102,
+            302,
+            469,
+            448
+          ],
+          "margins_px": [
+            102,
+            302,
+            43,
+            64
+          ],
+          "head_y": 302,
+          "ground_y": 448,
+          "body_height": 146,
+          "body_height_geometry": 145.94155844155802,
+          "scale": 0.313852813852814,
+          "ground_error": -0.0584415584419844,
+          "hip_error": 0.10173160173201268
+        }
+      ],
+      "body_median": 177.0,
+      "body_spread": 153,
+      "spread_check_applicable": false,
+      "death_compression_natural": true,
+      "original_spread_limit_px": 12,
+      "original_technical_reasons": [],
+      "accepted_spread_max_px": null,
+      "original_spread_criterion_satisfied": "NOT_APPLICABLE_NATURAL_DEATH_COMPRESSION",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED_PREPARATION",
+      "human_visual_acceptance": "APPROVED_EXPLICITLY",
+      "runtime_admission": false
+    },
+    {
+      "code": "ER03",
+      "candidate": "hero-final-four/v01/candidates-v02",
+      "candidate_revision": "v02",
+      "path": ".atena/generated/hero-final-four-2026-10-13/strips/ER03_v02.png",
+      "sha256": "999011007d809fd148843ea17f33613635adaf99ac6549b049fecb94d5141ab1",
+      "cell": [
+        256,
+        384
+      ],
+      "frame_count": 7,
+      "frames": [
+        {
+          "frame": 1,
+          "path": "frames/ER03/f01.png",
+          "sha256": "e5f5afc425afd8f1323acc6cdee5cda85c476926869a8efdeba5089a44d82026",
+          "input": ".atena/generated/hero-final-four-2026-10-13/native/ER03/f01.png",
+          "input_sha256": "81ff75f9ee1d7f801e9f46361f3254632123ef877fe87eb3beb6efbfe22fcc11",
+          "bbox": [
+            45,
+            61,
+            192,
+            368
+          ],
+          "margins_px": [
+            45,
+            61,
+            64,
+            16
+          ],
+          "head_y": 61,
+          "ground_y": 368,
+          "body_height": 307,
+          "body_height_geometry": 306.20689655172373,
+          "scale": 0.517241379310345,
+          "ground_error": -0.27586206896597787,
+          "hip_error": 0.2758620689660063
+        },
+        {
+          "frame": 2,
+          "path": "frames/ER03/f02.png",
+          "sha256": "dbce77bca1d87dc0ea17db2c3add7469b12ca11fd3d30010318dfa68016e7665",
+          "input": ".atena/generated/hero-final-four-2026-10-13/native/ER03/f02.png",
+          "input_sha256": "5c3c8a3f7aa64f50449e07f73dd17d694cb79980fe1b4cf54dec293c32dee720",
+          "bbox": [
+            36,
+            72,
+            200,
+            368
+          ],
+          "margins_px": [
+            36,
+            72,
+            56,
+            16
+          ],
+          "head_y": 72,
+          "ground_y": 368,
+          "body_height": 296,
+          "body_height_geometry": 296.379310344828,
+          "scale": 0.517241379310345,
+          "ground_error": 0.3793103448280135,
+          "hip_error": -0.4482758620689964
+        },
+        {
+          "frame": 3,
+          "path": "frames/ER03/f03.png",
+          "sha256": "b8bbde485c821ddafb4ea6d3873e43c6049fccd4461e9414330312838089a3be",
+          "input": ".atena/generated/hero-final-four-2026-10-13/native/ER03/f03.png",
+          "input_sha256": "1bc2bb2739320c6accf19cd221d2cd3790f7d23e7b940dd753a32697ce719367",
+          "bbox": [
+            39,
+            67,
+            202,
+            368
+          ],
+          "margins_px": [
+            39,
+            67,
+            54,
+            16
+          ],
+          "head_y": 67,
+          "ground_y": 368,
+          "body_height": 301,
+          "body_height_geometry": 299.9999999999997,
+          "scale": 0.517241379310345,
+          "ground_error": -0.4827586206899923,
+          "hip_error": 0.0
+        },
+        {
+          "frame": 4,
+          "path": "frames/ER03/f04.png",
+          "sha256": "45923d455c2a8365f89c10e35534895b92f33e69ecf0a31d7d8ce8ad1e91c2ea",
+          "input": ".atena/generated/hero-final-four-2026-10-13/native/ER03/f04.png",
+          "input_sha256": "77a9c52603e804c12fadb6f0d43ab579f995c629336165779fb0e137f67682e8",
+          "bbox": [
+            37,
+            72,
+            200,
+            368
+          ],
+          "margins_px": [
+            37,
+            72,
+            56,
+            16
+          ],
+          "head_y": 72,
+          "ground_y": 368,
+          "body_height": 296,
+          "body_height_geometry": 295.8620689655177,
+          "scale": 0.517241379310345,
+          "ground_error": 0.3793103448280135,
+          "hip_error": 0.034482758621010134
+        },
+        {
+          "frame": 5,
+          "path": "frames/ER03/f05.png",
+          "sha256": "0121dfc7ed5587f265f99538d9f924f341362e41a167d6cecedd4e5f7f77e82b",
+          "input": ".atena/generated/hero-final-four-2026-10-13/native/ER03/f05.png",
+          "input_sha256": "b6ee2f337098f8fbf96337827a9879746aed95434cca8e5d5c2ebc334b852825",
+          "bbox": [
+            37,
+            67,
+            197,
+            368
+          ],
+          "margins_px": [
+            37,
+            67,
+            59,
+            16
+          ],
+          "head_y": 67,
+          "ground_y": 368,
+          "body_height": 301,
+          "body_height_geometry": 300.51724137931,
+          "scale": 0.517241379310345,
+          "ground_error": -0.4827586206899923,
+          "hip_error": 0.034482758621010134
+        },
+        {
+          "frame": 6,
+          "path": "frames/ER03/f06.png",
+          "sha256": "a3a402264ded235aed3e0ca2497e0df67ebac4911d68360b96e56f6b3112ef15",
+          "input": ".atena/generated/hero-final-four-2026-10-13/native/ER03/f06.png",
+          "input_sha256": "8303e37fa6dd4fd680a92f52ecaee7c5c048afb21e66dafe516afe353b66b7d7",
+          "bbox": [
+            44,
+            66,
+            201,
+            368
+          ],
+          "margins_px": [
+            44,
+            66,
+            55,
+            16
+          ],
+          "head_y": 66,
+          "ground_y": 368,
+          "body_height": 302,
+          "body_height_geometry": 301.551724137931,
+          "scale": 0.517241379310345,
+          "ground_error": -0.4482758620690106,
+          "hip_error": -0.20689655172400023
+        },
+        {
+          "frame": 7,
+          "path": "frames/ER03/f07.png",
+          "sha256": "cdf4bd7d58a0cdf72a0a28e970c0e6c1e03566973c31181de99c183156d165bf",
+          "input": ".atena/generated/hero-final-four-2026-10-13/native/ER03/f07.png",
+          "input_sha256": "1a641b5d2f307d1876ab7e4b01f8d32aa20add87306724f85f908306d469b811",
+          "bbox": [
+            41,
+            69,
+            195,
+            368
+          ],
+          "margins_px": [
+            41,
+            69,
+            61,
+            16
+          ],
+          "head_y": 69,
+          "ground_y": 368,
+          "body_height": 299,
+          "body_height_geometry": 298.965517241379,
+          "scale": 0.517241379310345,
+          "ground_error": -0.03448275862098171,
+          "hip_error": -0.10344827586199301
+        }
+      ],
+      "body_median": 301,
+      "body_spread": 11,
+      "spread_check_applicable": true,
+      "death_compression_natural": false,
+      "original_spread_limit_px": 12,
+      "original_technical_reasons": [],
+      "accepted_spread_max_px": null,
+      "original_spread_criterion_satisfied": true,
+      "content_state": "DRAFT_VISUALLY_ACCEPTED_PREPARATION",
+      "human_visual_acceptance": "APPROVED_EXPLICITLY",
+      "runtime_admission": false
+    },
+    {
+      "code": "ER06",
+      "candidate": "hero-final-four/v01/candidates-v02",
+      "candidate_revision": "v02",
+      "path": ".atena/generated/hero-final-four-2026-10-13/strips/ER06_v02.png",
+      "sha256": "5a5e9e97a7ed45899e939d538341bda5ee1a9e3bfbcbe5335a776010582a9110",
+      "cell": [
+        256,
+        384
+      ],
+      "frame_count": 6,
+      "frames": [
+        {
+          "frame": 1,
+          "path": "frames/ER06/f01.png",
+          "sha256": "063fe88d938e71b24d7fc5222fe3b53fc171d7bd4fd2f2abf5ca4d56273cb380",
+          "input": ".atena/generated/hero-final-four-2026-10-13/native/ER06/f01.png",
+          "input_sha256": "b4e518b1ea4b55060582612a307d1be4a33b8ae35a0c5a8925593ad128204f78",
+          "bbox": [
+            32,
+            71,
+            198,
+            368
+          ],
+          "margins_px": [
+            32,
+            71,
+            58,
+            16
+          ],
+          "head_y": 71,
+          "ground_y": 368,
+          "body_height": 297,
+          "body_height_geometry": 297.422680412371,
+          "scale": 0.515463917525773,
+          "ground_error": 0.42268041237099396,
+          "hip_error": 0.39175257732000546
+        },
+        {
+          "frame": 2,
+          "path": "frames/ER06/f02.png",
+          "sha256": "54024115ab666a15f35fa9168cacf579e4501eafea04c29ebc921c4832a711ee",
+          "input": ".atena/generated/hero-final-four-2026-10-13/native/ER06/f02.png",
+          "input_sha256": "9d2cc00004ce5f5375ab5f3eb6ddf5624cce85d4f9705714a29889cc30ed86fe",
+          "bbox": [
+            27,
+            71,
+            193,
+            368
+          ],
+          "margins_px": [
+            27,
+            71,
+            63,
+            16
+          ],
+          "head_y": 71,
+          "ground_y": 368,
+          "body_height": 297,
+          "body_height_geometry": 296.9072164948452,
+          "scale": 0.515463917525773,
+          "ground_error": 0.42268041237099396,
+          "hip_error": 0.030927835052011687
+        },
+        {
+          "frame": 3,
+          "path": "frames/ER06/f03.png",
+          "sha256": "7331d8476dbaa6313fed46a29a7ed18ce99fa17f6d599961d4d607b1c57a4017",
+          "input": ".atena/generated/hero-final-four-2026-10-13/native/ER06/f03.png",
+          "input_sha256": "674b863458bf94c6a22fc1776668f495a33b10ed349e0c28a828fa4bceca4a53",
+          "bbox": [
+            30,
+            66,
+            200,
+            368
+          ],
+          "margins_px": [
+            30,
+            66,
+            56,
+            16
+          ],
+          "head_y": 67,
+          "ground_y": 368,
+          "body_height": 301,
+          "body_height_geometry": 299.99999999999966,
+          "scale": 0.515463917525773,
+          "ground_error": -0.45360824742300565,
+          "hip_error": -0.06185567010300019
+        },
+        {
+          "frame": 4,
+          "path": "frames/ER06/f04.png",
+          "sha256": "d63d0be289961c6f9d6612395091f953d1484c6e4ae84716f4ab063cec6af16b",
+          "input": ".atena/generated/hero-final-four-2026-10-13/native/ER06/f04.png",
+          "input_sha256": "140a47cc20cf72d9717d9a66fd271850deca401f745311d3a5b6c11dfa28b134",
+          "bbox": [
+            32,
+            66,
+            193,
+            368
+          ],
+          "margins_px": [
+            32,
+            66,
+            63,
+            16
+          ],
+          "head_y": 66,
+          "ground_y": 368,
+          "body_height": 302,
+          "body_height_geometry": 301.546391752577,
+          "scale": 0.515463917525773,
+          "ground_error": -0.45360824742300565,
+          "hip_error": 0.39175257732000546
+        },
+        {
+          "frame": 5,
+          "path": "frames/ER06/f05.png",
+          "sha256": "89537bb3135a018fa2173c3be2c412b619cb3445dadb5aa0438ec31396c18be9",
+          "input": ".atena/generated/hero-final-four-2026-10-13/native/ER06/f05.png",
+          "input_sha256": "8834bfd0c7d48fce16094b696a124e219dda57821633735421ca2d49f261d9fa",
+          "bbox": [
+            30,
+            65,
+            194,
+            368
+          ],
+          "margins_px": [
+            30,
+            65,
+            62,
+            16
+          ],
+          "head_y": 65,
+          "ground_y": 368,
+          "body_height": 303,
+          "body_height_geometry": 303.092783505155,
+          "scale": 0.515463917525773,
+          "ground_error": 0.09278350515501188,
+          "hip_error": -0.06185567010300019
+        },
+        {
+          "frame": 6,
+          "path": "frames/ER06/f06.png",
+          "sha256": "2112d88f1e6633318ab4c02c429d121ed9f4fa07eb1ebcc899cb13d4a2af3fe7",
+          "input": ".atena/generated/hero-final-four-2026-10-13/sources/ER06/f06_v03.png",
+          "input_sha256": "3cd78f3b8d81db0f2b18c18fc97a4806012bde22eb80a4f3c0d55e53121ad6d9",
+          "bbox": [
+            38,
+            57,
+            221,
+            368
+          ],
+          "margins_px": [
+            38,
+            57,
+            35,
+            16
+          ],
+          "head_y": 58,
+          "ground_y": 368,
+          "body_height": 310,
+          "body_height_geometry": 310.82474226804123,
+          "scale": 0.515463917525773,
+          "ground_error": 0.34020618556701265,
+          "hip_error": -0.30927835051500097
+        }
+      ],
+      "body_median": 301.5,
+      "body_spread": 13,
+      "spread_check_applicable": true,
+      "death_compression_natural": false,
+      "original_spread_limit_px": 12,
+      "original_technical_reasons": [
+        "BODY_SPREAD_OVER_12_PX"
+      ],
+      "accepted_spread_max_px": 13,
+      "original_spread_criterion_satisfied": false,
+      "content_state": "DRAFT_VISUALLY_ACCEPTED_PREPARATION_WITH_EXCEPTION",
+      "human_visual_acceptance": "APPROVED_EXPLICITLY",
+      "runtime_admission": false
+    }
+  ],
+  "er03_seven_original_poses_accepted": true,
+  "er06_original_first_five_preserved": true,
+  "er06_new_sixth_source_revision": "v03",
+  "old_clipped_er06_source_not_selected": true,
+  "runtime_admission": false,
+  "canonical_promotion": false,
+  "commit_push_export": false
+}

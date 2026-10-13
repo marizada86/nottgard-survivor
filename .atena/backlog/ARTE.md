@@ -209,3 +209,11 @@ Texto integral das células antes do enxugamento de 2026-09-30.
 2026-10-04: S-006 aguardando GATE-FENGTU-IDENTITIES-V02. Seis identidades corrigidas prontas na prancha feng-tu_identities_v02.png, sem cortes, solidez0,956–0,979; Lu Yueh seis braços e Discípulo três conforme arte estática, decisão humana pendente. Nenhum ciclo Feng Tu iniciado. Durão integrado e build completa validada; PLAN-053 escopo per-plan aprovado, gate visual independente PENDING. Estado central PLAN-056 preservado.
 
 2026-10-04 — Build Larva validada: build/image-priority-feng-tu-larva/NottgardSurvivors.exe,8307924+,415768784bytes,SHA2562300E059814BF1065A587851B003EE7C8F772A384432CD2258EBB51652F8DF1D. Suite0falhas,smoke9fases,queue0,hash138/138,export0,EXEheadless60frames0; feng-tu-larva-build-validation-2026-10-04.json. Contém mudanças locais de balanceamento sob revisão separada, sem aprovação fictícia. Build Durão completa preservada. Acólito em geração, sem admissão prematura. BUG025/027/playtest humano pendentes.
+
+## Reconciliação VFX — 2026-10-13
+
+ART-029: FILA02236/36 fontes já geradas segundo histórico local10bd31c; recuperação por hash das seis fontes Pulso neste workspace concluída, N03v01 aprovado e cinco fases adicionais aguardam aceite visual. ART-030: FILA02360/60 fontes geradas segundo mesmo histórico; revisão/normalização/admissão pendentes. Não declarar todos os96 arquivos recuperados aqui. Produção faltante dos cabeçalhos antigos fica superada por este recibo; integração continua aberta. Evidência: [retomada Pulso](../evidence/pulso-resume-2026-10-13.md).
+
+2026-10-13 — ART-029: Pulso Radiante (seis fases) admitido localmente DRAFT, pulso-admission/v01 técnico4/4; suíte0falhas,smoke9fases,16capturas. Playtest humano e integração das demais famílias continuam pendentes. [Evidência](../evidence/pulso-admission-2026-10-13.md).
+
+2026-10-13 — ART-029: Ampulheta do Silêncio (seis fases) admitida localmente DRAFT, ampulheta-admission/v01 técnico4/4; suíte0falhas/smoke9fases/12capturas/regressão Pulso PASS. Playtest humano e admissão das demais famílias seguem pendentes. [Evidência](../evidence/ampulheta-admission-2026-10-13.md).

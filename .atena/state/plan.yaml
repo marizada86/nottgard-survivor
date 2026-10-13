@@ -678,3 +678,115 @@ image_git_n03_publication:
   route: publish-now-then-return
   receipt: .atena/generated/n03-publication-2026-10-09/plan.json
   return_checkpoint: S-007/VFX/FILA-022/N-REMAINING
+hero_admission_preparation_2026_10_13:
+  plan: PLAN-053
+  revision: hero-admission-preparation/v01
+  classification: IN_PLAN_PREPARATION_OF_NEXT_ART_CHECKPOINT
+  state_file: .atena/state/hero-admission-preparation.yaml
+  status: COMPLETED_PREPARATION_PENDING_OWNER_DECISION
+  checkpoint: GATE/RETRATOS_E_ADMISSAO_V01
+  completed_steps: 3
+  total_steps: 3
+  content_state: DRAFT
+  admission_proposal: .atena/specs/SPEC-121-retomada-fila-imagens/hero-admission-v01.md
+  admission_mode: per-plan
+  admission_execution_authorized: true
+  runtime_changed: false
+  return_plan: PLAN-071
+  return_checkpoint: B-006/S-011
+hero_admission_2026_10_13:
+  plan: PLAN-053
+  revision: hero-admission/v01
+  state_file: .atena/state/hero-admission.yaml
+  mode: per-plan
+  status: LOCAL_TECHNICAL_DELIVERED_AWAITING_OWNER_PLAYTEST
+  checkpoint: S-004/OWNER_RUNTIME_PLAYTEST
+  approval_receipt: .atena/generated/hero-admission-2026-10-13/authorization.json
+  portrait_acceptance: AO01_ER01_V01_APPROVED
+  canonical_promotion: false
+  return_plan: PLAN-071
+  return_checkpoint: B-006/S-011
+  completed_steps: 4
+  total_steps: 4
+  evidence: .atena/evidence/hero-admission-2026-10-13.md
+pulso_resume_2026_10_13:
+  plan: PLAN-053
+  revision: pulso-resume/v01
+  classification: IN_PLAN
+  route: RESUME_VFX_QUEUE_PRESERVE_HERO_PLAYTEST_AND_RANKING_RETURN
+  state_file: .atena/state/pulso-resume.yaml
+  mode: per-plan
+  status: COMPLETED_VISUALLY_ACCEPTED_DRAFT
+  checkpoint: S-004/SEQUENCE_ACCEPTANCE_RECORDED
+  authority: LOCAL_RECOVERY_WITH_HASHES_FROM_HISTORICAL_REPLICA
+  hero_playtest: PENDING_PRESERVED
+  return_plan: PLAN-071
+  return_checkpoint: B-006/S-011
+  visual_acceptance_receipt: .atena/generated/pulso-resume-2026-10-13/visual-acceptance.json
+  admission_proposal: .atena/specs/SPEC-121-retomada-fila-imagens/pulso-admission-v01.md
+  admission_mode: unconfigured
+  admission_approval: PENDING
+pulso_admission_2026_10_13:
+  plan: PLAN-053
+  revision: pulso-admission/v01
+  classification: IN_PLAN
+  state_file: .atena/state/pulso-admission.yaml
+  mode: per-plan
+  approval_status: APPROVED_EXPLICITLY
+  status: OWNER_ACCEPTED_LOCAL_DELIVERY
+  checkpoint: S-004/OWNER_DELIVERY_ACCEPTANCE_RECORDED
+  content_state: DRAFT
+  canonical_promotion: false
+  hero_playtest: PENDING_PRESERVED
+  return_plan: PLAN-071
+  return_checkpoint: B-006/S-011
+  completed_steps: 4
+  total_steps: 4
+  evidence: .atena/evidence/pulso-admission-2026-10-13.md
+ampulheta_review_2026_10_13:
+  plan: PLAN-053
+  revision: ampulheta-review/v01
+  classification: IN_PLAN
+  state_file: .atena/state/ampulheta-review.yaml
+  mode: per-plan
+  status: COMPLETED_VISUALLY_ACCEPTED_DRAFT
+  checkpoint: S-004/SEQUENCE_ACCEPTANCE_RECORDED
+  total_steps: 4
+  completed_steps: 4
+  content_state: DRAFT
+  runtime_admission: false
+  canonical_promotion: false
+  return_plan: PLAN-071
+  return_checkpoint: B-006/S-011
+  visual_acceptance: .atena/generated/ampulheta-review-2026-10-13/visual-acceptance.json
+  admission_mode: unconfigured
+  admission_proposal: .atena/specs/SPEC-121-retomada-fila-imagens/ampulheta-admission-v01.md
+ampulheta_admission_2026_10_13:
+  plan: PLAN-053
+  revision: ampulheta-admission/v01
+  classification: IN_PLAN
+  state_file: .atena/state/ampulheta-admission.yaml
+  mode: per-plan
+  approval_status: APPROVED_EXPLICITLY
+  status: LOCAL_TECHNICAL_DELIVERED_AWAITING_OWNER_PLAYTEST
+  checkpoint: S-004/OWNER_RUNTIME_PLAYTEST
+  content_state: DRAFT
+  canonical_promotion: false
+  return_plan: PLAN-071
+  return_checkpoint: B-006/S-011
+  completed_steps: 4
+  total_steps: 4
+  evidence: .atena/evidence/ampulheta-admission-2026-10-13.md
+assets_main_publication_2026_10_13:
+  plan: PLAN-053
+  revision: assets-main-publication/v01
+  state_file: .atena/state/assets-main-publication.yaml
+  mode: per-plan
+  approval_status: APPROVED_EXPLICITLY
+  owner_reply: 'atena, aprovado commit e push na main'
+  status: IN_PROGRESS
+  checkpoint: G-001/COMMIT_GROUPS
+  destination: origin/main
+  canonical_promotion: false
+  return_plan: PLAN-071
+  return_checkpoint: B-006/S-011

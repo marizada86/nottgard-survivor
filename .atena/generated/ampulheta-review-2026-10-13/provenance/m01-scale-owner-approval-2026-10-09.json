@@ -1,0 +1,13 @@
+{
+  "status": "ACCEPTED_OWNER_EXCEPTION",
+  "timestamp": "2026-10-09T14:06:05.103327+00:00",
+  "plan": "PLAN-053",
+  "owner_reply": "Aceitar M01 v02 como exceção de escala",
+  "frame": "M01",
+  "version": "v02",
+  "candidate": ".atena/generated/art-candidates/vfx/ampulheta_silencio/ampulheta_silencio_spark_v02.png",
+  "sha256": "81573c62610071adfd806ddc0c893bcfce42ad73bc9a4878eb5d547241c6ee37",
+  "reason": "Owner explicitly accepts roughly14%initial ring radius rather than target10%after three native versions",
+  "gate_receipt": ".atena/generated/s007-reconciliation/v01/m01-scale-owner-gate-2026-10-09.json",
+  "runtime_admission": false
+}

@@ -1,0 +1,24 @@
+{
+  "method": "Dominant bright annulus around exact canvas center, weights max(lum-80,0)^2 and7px radial window; photometric proxy, not exact geometric radius",
+  "peak_radius_proxy_px": 429,
+  "rows": [
+    {
+      "code": "N01",
+      "version": "v03",
+      "bright_ring_radius_proxy_px": 50,
+      "ratio_to_approved_peak": 0.11655011655011654
+    },
+    {
+      "code": "N02",
+      "version": "v02",
+      "bright_ring_radius_proxy_px": 179,
+      "ratio_to_approved_peak": 0.4172494172494173
+    },
+    {
+      "code": "N04",
+      "version": "v01",
+      "bright_ring_radius_proxy_px": 430,
+      "ratio_to_approved_peak": 1.0023310023310024
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+version: 1
+plan: PLAN-053
+revision: hero-admission-preparation/v01
+request_classification: IN_PLAN_PREPARATION_OF_NEXT_ART_CHECKPOINT
+content_state: DRAFT
+status: COMPLETED_PREPARATION_PENDING_OWNER_DECISION
+ordered_steps: [S-P01, S-P02, S-P03]
+current_step_position: 3
+completed_steps: 3
+total_steps: 3
+remaining_steps_after_current: 0
+checkpoint: GATE/RETRATOS_E_ADMISSAO_V01
+authorization: 'Pedido explícito de continuar: conferir retratos e preparar admissão; escopo somente preparatório.'
+source_state_snapshot: .atena/generated/hero-admission-preparation-2026-10-13/provenance/hero-final-four.yaml
+manifest: .atena/generated/hero-admission-preparation-2026-10-13/admission-manifest.json
+evidence: .atena/evidence/hero-admission-preparation-2026-10-13.md
+gallery: .atena/generated/hero-admission-preparation-2026-10-13/index.html
+portraits: {AO01: v01, ER01: v01}
+portrait_bytes_equal_current: true
+portrait_human_acceptance: AO01_ER01_V01_APPROVED
+accepted_animation_strips: 18
+accepted_animation_frames: 101
+runtime_changed: false
+canonical_promotion: false
+next_objective: 'Decidir retratos v01 e aprovação do plano de admissão; depois preparar derivados 512x512 sem reamostragem.'
+next_inputs: 'Inventário aceito, recibos, manifesto de destinos e aprovação do dono.'
+next_output: 'Derivados DRAFT e auditoria de igualdade RGBA/base/margens antes de integração.'
+next_checks: 'Hashes, igualdade de pixels, contagens, dimensões, âncoras e fontes preservadas.'
+admission_proposal:
+  revision: hero-admission/v01
+  classification: PLAN_CHANGE_REQUEST
+  spec: .atena/specs/SPEC-121-retomada-fila-imagens/hero-admission-v01.md
+  mode: per-plan
+  status: APPROVED_EXPLICITLY
+  checkpoint: GATE/ADMISSION_SCOPE_AND_MODE
+  ordered_steps: [S-001, S-002, S-003, S-004]
+  batches: {B-001: [S-001], B-002: [S-002], B-003: [S-003, S-004]}
+  executable: true
+return_plan: {id: PLAN-071, checkpoint: B-006/S-011, unchanged: true}

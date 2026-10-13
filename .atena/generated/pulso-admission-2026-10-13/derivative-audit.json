@@ -1,0 +1,118 @@
+{
+  "result": "PASS",
+  "phases": [
+    {
+      "phase": 0,
+      "bbox_alpha_gt12": [
+        109,
+        109,
+        147,
+        147
+      ],
+      "alpha_max": 255,
+      "alpha_sum": 64126.0,
+      "visible_pixels": 751,
+      "ring_radius_proxy_px": 10,
+      "hot_centroid": [
+        128.05615880475222,
+        127.97148971756098
+      ],
+      "edge_alpha": 0
+    },
+    {
+      "phase": 1,
+      "bbox_alpha_gt12": [
+        71,
+        68,
+        185,
+        179
+      ],
+      "alpha_max": 255,
+      "alpha_sum": 719229.0,
+      "visible_pixels": 5421,
+      "ring_radius_proxy_px": 37,
+      "hot_centroid": [
+        127.77923092384471,
+        123.12461407671181
+      ],
+      "edge_alpha": 0
+    },
+    {
+      "phase": 2,
+      "bbox_alpha_gt12": [
+        9,
+        10,
+        247,
+        243
+      ],
+      "alpha_max": 255,
+      "alpha_sum": 3081092.0,
+      "visible_pixels": 22658,
+      "ring_radius_proxy_px": 88,
+      "hot_centroid": [
+        128.0176522094033,
+        126.89360046006561
+      ],
+      "edge_alpha": 0
+    },
+    {
+      "phase": 3,
+      "bbox_alpha_gt12": [
+        12,
+        11,
+        244,
+        242
+      ],
+      "alpha_max": 255,
+      "alpha_sum": 1865178.0,
+      "visible_pixels": 17051,
+      "ring_radius_proxy_px": 88,
+      "hot_centroid": [
+        128.08288856080983,
+        128.94811393941856
+      ],
+      "edge_alpha": 0
+    },
+    {
+      "phase": 4,
+      "bbox_alpha_gt12": [
+        13,
+        10,
+        242,
+        241
+      ],
+      "alpha_max": 255,
+      "alpha_sum": 745929.0,
+      "visible_pixels": 11629,
+      "ring_radius_proxy_px": 87,
+      "hot_centroid": [
+        124.7033553066519,
+        128.11966661734206
+      ],
+      "edge_alpha": 0
+    },
+    {
+      "phase": 5,
+      "bbox_alpha_gt12": [
+        25,
+        22,
+        231,
+        224
+      ],
+      "alpha_max": 179,
+      "alpha_sum": 18018.0,
+      "visible_pixels": 312,
+      "ring_radius_proxy_px": 98,
+      "hot_centroid": [
+        132.56846273165155,
+        112.63441097232428
+      ],
+      "edge_alpha": 0
+    }
+  ],
+  "peak_ring_radius_px": 88,
+  "hist_peak_scaled_px": 87.57894736842105,
+  "centroid_note": "Photometric proxy; canvas pivot fixed128/128",
+  "noise_floor": 2,
+  "preserved_faint_phase": true
+}

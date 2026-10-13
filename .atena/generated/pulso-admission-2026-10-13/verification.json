@@ -1,0 +1,45 @@
+{
+  "result": "PASS",
+  "revision": "pulso-admission/v01",
+  "build_id": "0.4.0/pulso-admission-v01/2ae8c48+local-fc366e643f4d",
+  "content_state": "DRAFT_ADMITTED_LOCAL",
+  "canonical_promotion": false,
+  "atlas_sha256": "2821fd1696a5b3fb01bfdd0a0b1fca99f061a8ed7b716e4443614c7e5fe2fe8b",
+  "runtime_fingerprint": "fc366e643f4d9c82c7ec966c80528b1c8ffd00d58caec31a992150151e3f7e29",
+  "source_hashes": "PASS",
+  "frame_count": 6,
+  "cell": [
+    256,
+    256
+  ],
+  "duration_seconds": 0.35,
+  "peak_ring_radius_px": 88,
+  "suite_failures": 0,
+  "smoke_stages": 9,
+  "weapon_events_verified": 6,
+  "captures": 16,
+  "reduced_impact_fallback": true,
+  "unsupported_event_fallback": true,
+  "absent_invalid_texture_fallback": "UNIT_CHECKED",
+  "freed_after_completion": true,
+  "protected_preexisting_files_unchanged": 2994,
+  "only_changed_preexisting_runtime_file": "ui/run.gd",
+  "runtime_additions": [
+    "assets/vfx/pulso_radiante.png",
+    "core/radiant_pulse_vfx.gd"
+  ],
+  "test_addition": "tests/test_radiant_pulse_vfx.gd",
+  "gameplay_tables_unchanged": true,
+  "hero_admission_preserved": true,
+  "human_playtest": "PENDING",
+  "browser_gallery": "NOT_TESTED",
+  "git_export_publish": false,
+  "notes": [
+    "Godot certificate-store warning",
+    "Suite shutdown resource/RID warnings",
+    "Test-only Image.load_from_file res:// warning; runtime loads Texture2D",
+    "Capture attempt1 failed because QA inspected consumed events; harness fixed, final capture PASS"
+  ],
+  "active_links_verified": 61,
+  "playtest_scene_launcher": "HEADLESS_SCENE_SMOKE_PASS_15_FRAMES"
+}

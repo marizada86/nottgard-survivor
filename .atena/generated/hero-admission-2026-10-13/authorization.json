@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-13",
+  "revision": "hero-admission/v01",
+  "approval_mode": "per-plan",
+  "scope_reply": "1. Por plano — uma aprovação para todo o escopo planejado.",
+  "portrait_reply": "Aprovo os dois retratos v01",
+  "portraits": [
+    {
+      "code": "AO01",
+      "hero": "arlindo",
+      "revision": "v01",
+      "content_state": "DRAFT_PRESERVED_SOURCE",
+      "candidate": ".atena/generated/hero-normalization-2026-10-10/sources/ao01-retrato-v01.png",
+      "sha256": "7b77f90efb3ce5f2266ad7569bbcfb52b91fe0225df6ea80c04070d4d7f9750e",
+      "png": {
+        "size": [
+          1536,
+          1024
+        ],
+        "color_type": 2,
+        "alpha_channel": false
+      },
+      "destination": "assets/portraits/arlindo.png",
+      "current_sha256": "7b77f90efb3ce5f2266ad7569bbcfb52b91fe0225df6ea80c04070d4d7f9750e",
+      "bytes_equal": true,
+      "human_acceptance_this_checkpoint": "PENDING"
+    },
+    {
+      "code": "ER01",
+      "hero": "erik",
+      "revision": "v01",
+      "content_state": "DRAFT_PRESERVED_SOURCE",
+      "candidate": ".atena/generated/hero-normalization-2026-10-10/sources/er01-retrato-v01.png",
+      "sha256": "0551a2b2059a970c8df8c8452a3af77704371f98acea5a0dda223cb2dd750d07",
+      "png": {
+        "size": [
+          1536,
+          1024
+        ],
+        "color_type": 2,
+        "alpha_channel": false
+      },
+      "destination": "assets/portraits/erik.png",
+      "current_sha256": "0551a2b2059a970c8df8c8452a3af77704371f98acea5a0dda223cb2dd750d07",
+      "bytes_equal": true,
+      "human_acceptance_this_checkpoint": "PENDING"
+    }
+  ],
+  "content_state": "DRAFT",
+  "canonical_promotion": false,
+  "commit_push_merge_export": false
+}

@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-13",
+  "revision": "ampulheta-admission/v01",
+  "owner_reply": "1. Por plano — uma aprovação para todo o escopo planejado.",
+  "scope": "Full ampulheta-admission/v01 local normalization/admission/verification/playtest preparation",
+  "mode": "per-plan",
+  "sources": [
+    {
+      "code": "M01",
+      "version": "v02",
+      "path": ".atena/generated/art-candidates/vfx/ampulheta_silencio/ampulheta_silencio_spark_v02.png",
+      "sha256": "81573c62610071adfd806ddc0c893bcfce42ad73bc9a4878eb5d547241c6ee37",
+      "acceptance": "HISTORICAL_SCALE_EXCEPTION_ACCEPTED"
+    },
+    {
+      "code": "M02",
+      "version": "v03",
+      "path": ".atena/generated/art-candidates/vfx/ampulheta_silencio/ampulheta_silencio_grow_v03.png",
+      "sha256": "cb5a2ba306a4c8aa09867c42bddae9bf375412329568d56846e821155b5bb3d5",
+      "acceptance": "APPROVED_EXPLICITLY_DRAFT_2026_10_13"
+    },
+    {
+      "code": "M03",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/ampulheta_silencio/ampulheta_silencio_peak_v01.png",
+      "sha256": "a5d4870493878d18ff7a1aeca003b23642f7ef07cdb3ad46289b688a12673866",
+      "acceptance": "HISTORICAL_PEAK_APPROVED"
+    },
+    {
+      "code": "M04",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/ampulheta_silencio/ampulheta_silencio_hold_v01.png",
+      "sha256": "f8a804729941fa556994b108caf88ffb90247ec7205dc99addfaef2d19d757d2",
+      "acceptance": "APPROVED_EXPLICITLY_DRAFT_2026_10_13"
+    },
+    {
+      "code": "M05",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/ampulheta_silencio/ampulheta_silencio_fade_v01.png",
+      "sha256": "086b5b3ed2ecafd57a15d742d1381ef102cd7e2850e0e9c311a9d067f2bcbea9",
+      "acceptance": "APPROVED_EXPLICITLY_DRAFT_2026_10_13"
+    },
+    {
+      "code": "M06",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/ampulheta_silencio/ampulheta_silencio_dissipate_v01.png",
+      "sha256": "35bf9fcc44accaf13d4cb0c7804d6045b7b321bd2a4882e76eb3ca448aba7527",
+      "acceptance": "APPROVED_EXPLICITLY_DRAFT_2026_10_13"
+    }
+  ],
+  "canonical_promotion": false,
+  "git_export_publish": false
+}

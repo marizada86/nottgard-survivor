@@ -1,0 +1,350 @@
+{
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "generator": "built-in imagegen",
+  "remaining_at_start": 71,
+  "counter_field": "native_generated_since_N03",
+  "approval_receipt": ".atena/generated/s007-reconciliation/v01/n03-owner-approval-2026-10-09.json",
+  "native_originals_preserved": true,
+  "jobs": [
+    {
+      "code": "N01",
+      "effect": "pulso_radiante",
+      "name": "pulso_radiante_spark",
+      "version": "v03",
+      "destination": ".atena/generated/art-candidates/vfx/pulso_radiante/pulso_radiante_spark_v03.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\pulso_radiante\\pulso_radiante_peak_v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "prompt": "Use case: stylized-concept. ONE MICROSIZED INITIAL SPARK frame for a2D radiant pulse. Square1024 canvas, visually pure BLACK empty background. Reference1 is APPROVED full N03 peak ONLY for white/gray circular light identity: this new first instant is aboutONE TENTH that ring radius. Reference2 is approved painted light STYLE ONLY. Make an EXTREMELY TINY white pinpoint exactly at50%width50%height with a MINUSCULE thin round halo ring around it, tiny faint internal gray band and just a few extremely short rays. The ring DIAMETER must be only7%of the total canvas width (about88pixels on1254canvas), radius3.5%ofcanvas width. TOTAL little mark including every tiny ray occupies no more than10%ofcanvas width. About99%of canvas remains empty BLACK. This is the first instant of the pulse, a pin-sized symbol of light at center, NOT an already-expanded ring. Same neutral white/gray painted glow as reference1, flat top-down. Keep exact center, no large flare, no medium or large ring, no multiple objects, symbols, text, perspective, ground, character, weapon, hand, border or scene. Only the TINY centered pinpoint and miniature circle on vast black canvas, no montage.",
+      "generated_at": "2026-10-09T13:34:01.970091+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-c0869042-06e0-4d1a-9be6-a0f097d9ef42.png",
+      "sha256": "9fe7d8581307d7ed26a1159400f07a15bf730f543e9b70c55c873eb2bd93610d",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        530,
+        532,
+        724,
+        722
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 6,
+      "mean_luminance": 1.0380873708121252,
+      "visible_fraction_above12": 0.011638673310796202,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "N02",
+      "effect": "pulso_radiante",
+      "name": "pulso_radiante_grow",
+      "version": "v02",
+      "destination": ".atena/generated/art-candidates/vfx/pulso_radiante/pulso_radiante_grow_v02.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\pulso_radiante\\pulso_radiante_grow_v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\pulso_radiante\\pulso_radiante_peak_v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Reference1 is rejected N02 growing pulse to correct SIZE ONLY. Reference2 is approved N03 FULL PEAK identity. Reference3 is approved physical pilot STYLE ONLY. Reduce the COMPLETE circular light effect in reference1 to TWO THIRDS of its current dimensions (about67%), while keeping exact center and the same full square BLACK canvas. Target the white ring diameter about400pixels on1254square native canvas: ring spans only32%of canvas width, radius200pixels, about45%of reference2 peak ring radius. All ray tips fit within central45%ofcanvas width. Keep circular round shape, white/gray bright thin ring, gray soft band just inside, short outward rays, flat top-down painted light texture. Exact50%width50%height pivot, open BLACK inside and vast BLACK outside. Do NOT retain current large ring: this phase must be visibly MUCH SMALLER than reference1 and less thanhalf of full peak ring radius. No translation, perspective, ellipse, colors, weapons, hands, characters, scene, ground, glyphs, text or montage. Single corrected grow frame only.",
+      "generated_at": "2026-10-09T13:38:03.204256+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-14c3cc1d-fb9b-49b8-a935-771b44a40863.png",
+      "sha256": "d74634c93e7ceaf7d6a599b98b5a3274a54d1cf0e104ad34509b5fb21c409fb4",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        343,
+        330,
+        910,
+        879
+      ],
+      "outer_border_max_luminance": 2,
+      "maximum_channel_difference": 11,
+      "mean_luminance": 11.300377229866024,
+      "visible_fraction_above12": 0.08286402173332418,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "N04",
+      "effect": "pulso_radiante",
+      "name": "pulso_radiante_hold",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a perfectly round, centered pulse of light on the ground: a bright thin ring with a softer wide band just inside it and short light rays pointing outward. Frame 4 of 6, hold: the shape at near-maximum radius but thinning, the bright band narrowing, fewer details. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED N03 v01 radiant pulse PEAK: authoritative identity, centered circular geometry and painted light texture. Reference2 is APPROVED physical pilot painted white-core/gray-falloff STYLE ONLY, never its crescent geometry. Generate ONLY N04 requested phase, never a montage. Flat top-down white/gray light on pure visually BLACK background, square1024 requested, black margins. No scene, ground, character, weapon, hand, readable text or perspective.\nHOLD phase: preserve same center and near-maximum approved N03 radius, but THIN the inner bright band and ring, fewer smaller outward rays/details. No size or position jump. Visibly weaker than N03 peak, still white/gray painted light. Open BLACK central interior; no solid flash core.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\pulso_radiante\\pulso_radiante_peak_v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/pulso_radiante/pulso_radiante_hold_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "generated_at": "2026-10-09T13:39:56.617569+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-5375dbe8-8de9-4c11-bea4-5d8458bfe64a.png",
+      "sha256": "42153c36d26464061070d376604458ebacfd9e1c23694900b808e5de036f75e8",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        53,
+        52,
+        1198,
+        1187
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 9,
+      "mean_luminance": 28.682057925006806,
+      "visible_fraction_above12": 0.26086030285224443,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "N05",
+      "effect": "pulso_radiante",
+      "name": "pulso_radiante_fade",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a perfectly round, centered pulse of light on the ground: a bright thin ring with a softer wide band just inside it and short light rays pointing outward. Frame 5 of 6, fade: the shape breaking apart into fragments at the outer edge, dimmer gray, dissolving. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED N03 v01 radiant pulse PEAK: authoritative identity, centered circular geometry and painted light texture. Reference2 is APPROVED physical pilot painted white-core/gray-falloff STYLE ONLY, never its crescent geometry. Generate ONLY N05 requested phase, never a montage. Flat top-down white/gray light on pure visually BLACK background, square1024 requested, black margins. No scene, ground, character, weapon, hand, readable text or perspective.\nFADE phase: preserve approved N03 center and outer circle extent, but break its thin ring into disconnected DIM GRAY curved fragments at outer edge, dissolving gray rays, large black gaps and open BLACK center. Remove continuous bright white band; distinctly dimmer than peak and hold. No large white flash or complete bright circle.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\pulso_radiante\\pulso_radiante_peak_v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/pulso_radiante/pulso_radiante_fade_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "generated_at": "2026-10-09T13:41:37.916769+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-37273d0c-6dc5-4a32-b493-cfe761a967e1.png",
+      "sha256": "950453ad5f247610a32c32d59164edd6f7bb556e09fa452cf2666c9e680e82e5",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        62,
+        47,
+        1190,
+        1187
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 6,
+      "mean_luminance": 11.528533254987549,
+      "visible_fraction_above12": 0.17381762729282246,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "N06",
+      "effect": "pulso_radiante",
+      "name": "pulso_radiante_dissipate",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a perfectly round, centered pulse of light on the ground: a bright thin ring with a softer wide band just inside it and short light rays pointing outward. Frame 6 of 6, dissipate: the last moment: only a few very faint fragments and specks remain, almost black. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED N03 v01 radiant pulse PEAK: authoritative identity, centered circular geometry and painted light texture. Reference2 is APPROVED physical pilot painted white-core/gray-falloff STYLE ONLY, never its crescent geometry. Generate ONLY N06 requested phase, never a montage. Flat top-down white/gray light on pure visually BLACK background, square1024 requested, black margins. No scene, ground, character, weapon, hand, readable text or perspective.\nDISSIPATE last frame: almost BLACK, only a FEW very faint DARK GRAY broken outer-ring fragments and sparse specks remain at approved N03 outer extent. Same exact pivot and flat view. No complete circle, white band, bright rays, flash core, glyphs or smoke. Barely visible remnants only.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\pulso_radiante\\pulso_radiante_peak_v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/pulso_radiante/pulso_radiante_dissipate_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "generated_at": "2026-10-09T13:42:51.488521+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-546a759a-3d17-4252-8562-e81c73a5c4b5.png",
+      "sha256": "5d652aa925f3645e70772e4ec7ef36e654832021b65bc2919c1ab111d2f53188",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        114,
+        104,
+        1140,
+        1100
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 5,
+      "mean_luminance": 0.3534991058914504,
+      "visible_fraction_above12": 0.0035509972553538407,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "M03",
+      "effect": "ampulheta_silencio",
+      "name": "ampulheta_silencio_peak",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a perfectly round, centered zone of stillness: a thin ring with faint hourglass shapes spaced around it and fine falling sand grains drifting, a calm quiet glow rather than an explosion. Frame 3 of 6, peak: PEAK frame: the full shape at maximum radius and brightness, hot white core, crisp detail.\n\nAttachment is APPROVED physical pilot white-core and gray-falloff painted STYLE ONLY: DO NOT copy its crescent silhouette. Generate a NEW perfectly round centered QUIET STILLNESS ZONE at maximum PEAK. Thin gently luminous circular ring, several faint but recognizable small hourglass silhouettes evenly spaced along it, fine scattered drifting sand grains. Calm steady light, no explosive burst, no sharp radial star rays or flying projectile. Perfect round face-on circle lying flat on ground plane, no ellipse/tilt/perspective. White and gray only; strongest crisp light along thin ring, open BLACK interior. Radius about40%canvas width, generous BLACK margins beyond all motifs/grains. Single square1024 requested frame M03 only; no characters, real glass object, hands, weapon, scene, ground texture, shadows, glyph text or letters.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/ampulheta_silencio/ampulheta_silencio_peak_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "generated_at": "2026-10-09T13:44:57.250062+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-b35299eb-1926-492f-88e8-e2dfee15a72e.png",
+      "sha256": "a5d4870493878d18ff7a1aeca003b23642f7ef07cdb3ad46289b688a12673866",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        118,
+        118,
+        1136,
+        1117
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 16,
+      "mean_luminance": 19.36817113466572,
+      "visible_fraction_above12": 0.1879249559304961,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    }
+  ],
+  "rejected_native_versions": [
+    {
+      "code": "N01",
+      "effect": "pulso_radiante",
+      "name": "pulso_radiante_spark",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a perfectly round, centered pulse of light on the ground: a bright thin ring with a softer wide band just inside it and short light rays pointing outward. Frame 1 of 6, spark: the very first instant: a tiny bright point at the center with a very small ring, about 10 percent of the final radius. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED N03 v01 radiant pulse PEAK: authoritative identity, centered circular geometry and painted light texture. Reference2 is APPROVED physical pilot painted white-core/gray-falloff STYLE ONLY, never its crescent geometry. Generate ONLY N01 requested phase, never a montage. Flat top-down white/gray light on pure visually BLACK background, square1024 requested, black margins. No scene, ground, character, weapon, hand, readable text or perspective.\nSPARK ONLY: a tiny white light point exactly at canvas center and a VERY SMALL circular ring, just10%of APPROVED N03 radius (roughly44pxradius on native1254canvas, about3.5%of canvas width). Entire tiny effect including micro rays inside central12%of canvas. Do NOT reproduce the large peak ring. Most of canvas remains empty BLACK. Soft painted white and gray falloff; no large flare.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\pulso_radiante\\pulso_radiante_peak_v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/pulso_radiante/pulso_radiante_spark_v01.png",
+      "status": "REJECTED_VISUAL",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "generated_at": "2026-10-09T13:28:20.988517+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-8c0b9fdc-6c87-4246-b4e8-788365a549be.png",
+      "sha256": "0140555ae3227ac87de19a6bf6ce6adaf5c2d2f38c210d3f6609abc8868727f2",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        496,
+        494,
+        757,
+        756
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 8,
+      "mean_luminance": 2.2727062872492234,
+      "visible_fraction_above12": 0.02178674175652267,
+      "native_bytes_preserved": true,
+      "runtime_admission": false,
+      "rejection_reason": "Spark ring radius visually about16%of peak rather than requested about10%; reduce native effect while preserving exact center and texture."
+    },
+    {
+      "code": "N01",
+      "effect": "pulso_radiante",
+      "name": "pulso_radiante_spark",
+      "version": "v02",
+      "destination": ".atena/generated/art-candidates/vfx/pulso_radiante/pulso_radiante_spark_v02.png",
+      "status": "REJECTED_VISUAL",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\pulso_radiante\\pulso_radiante_spark_v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\pulso_radiante\\pulso_radiante_peak_v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Reference1 is N01 spark frame to correct. Reference2 is APPROVED N03 full peak identity/geometry; reference3 is APPROVED physical pilot STYLE ONLY. Change ONLY SIZE of the complete small effect in reference1: scale the tiny circle, point, band and tiny rays DOWN to60%of their current dimensions, keeping its center EXACTLY at canvas center. Keep square native canvas size and the surrounding pure visually black background unchanged. Target tiny ring radius about44pixels on1254square canvas, about10%of N03 full ring radius. Entire effect including micro rays fits within central12%ofcanvas width. Keep the central tiny white light point, thin tiny round ring, white/gray painted glow texture, same phase and exact centered pivot. No changes to direction, no larger ring, no extra glow, symbols, characters, weapon, hands, ground, scene, text or border. Return ONE native frame only, never a comparison or montage.",
+      "generated_at": "2026-10-09T13:31:53.823832+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-3ea7abfb-b75b-45b0-8909-32c910eebe39.png",
+      "sha256": "9917d9014b95e625b56e69944dd421a28c03afbff545e3e576f59bf887bc6f1f",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        514,
+        511,
+        741,
+        740
+      ],
+      "outer_border_max_luminance": 2,
+      "maximum_channel_difference": 7,
+      "mean_luminance": 1.9792720709995955,
+      "visible_fraction_above12": 0.015926070068603436,
+      "native_bytes_preserved": true,
+      "runtime_admission": false,
+      "rejection_reason": "Native size correction too subtle; ring still approximately14%of peak, last version targets about10%."
+    },
+    {
+      "code": "N02",
+      "effect": "pulso_radiante",
+      "name": "pulso_radiante_grow",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a perfectly round, centered pulse of light on the ground: a bright thin ring with a softer wide band just inside it and short light rays pointing outward. Frame 2 of 6, grow: the shape expanding fast, about 45 percent of the final radius, bright and sharp. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED N03 v01 radiant pulse PEAK: authoritative identity, centered circular geometry and painted light texture. Reference2 is APPROVED physical pilot painted white-core/gray-falloff STYLE ONLY, never its crescent geometry. Generate ONLY N02 requested phase, never a montage. Flat top-down white/gray light on pure visually BLACK background, square1024 requested, black margins. No scene, ground, character, weapon, hand, readable text or perspective.\nGROW ONLY: circular ring45%of APPROVED N03 final ring radius, roughly200pxradius on native1254canvas. Same center and circular front-facing geometry, bright thin ring and softer band just inside, tiny outward rays. Entire growing effect fits within central45%ofcanvas. Clearly smaller than N03 peak, no full-size ring.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\pulso_radiante\\pulso_radiante_peak_v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/pulso_radiante/pulso_radiante_grow_v01.png",
+      "status": "REJECTED_VISUAL",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "generated_at": "2026-10-09T13:35:55.940502+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-28fcd3f8-ba6d-42f3-bb51-f0e270c1e605.png",
+      "sha256": "e4f5438e9bf5eab9f41746b5404a288242c6253ec3b6b6ef291704e58c229cd6",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        221,
+        215,
+        1033,
+        1008
+      ],
+      "outer_border_max_luminance": 2,
+      "maximum_channel_difference": 8,
+      "mean_luminance": 23.035843832431592,
+      "visible_fraction_above12": 0.16923134645370858,
+      "native_bytes_preserved": true,
+      "runtime_admission": false,
+      "rejection_reason": "Grow circle visually abouttwo-thirds of peak radius rather than requested45%; native size correction required."
+    }
+  ]
+}

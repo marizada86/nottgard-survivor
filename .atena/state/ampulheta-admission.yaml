@@ -1,0 +1,36 @@
+version: 1
+plan: PLAN-053
+revision: ampulheta-admission/v01
+classification: PLAN_CHANGE_REQUEST
+status: OWNER_ACCEPTED_LOCAL_DELIVERY_GIT_PUBLICATION_APPROVED
+mode: per-plan
+executable: false
+checkpoint: S-004/OWNER_DELIVERY_ACCEPTANCE_RECORDED
+spec: .atena/specs/SPEC-121-retomada-fila-imagens/ampulheta-admission-v01.md
+source_acceptance: .atena/generated/ampulheta-review-2026-10-13/visual-acceptance.json
+ordered_steps: [S-001, S-002, S-003, S-004]
+completed_steps: 4
+total_steps: 4
+batches: {B-001: [S-001], B-002: [S-002], B-003: [S-003, S-004]}
+content_state: DRAFT
+runtime_admission: true
+canonical_promotion: false
+proposed_weapon: ampulheta
+existing_kind: nova
+existing_dtype: magico
+existing_radius: 4.0
+proposed_duration_seconds: 0.35
+proposed_cell: [256, 256]
+proposed_frames: 6
+proposed_atlas: assets/vfx/ampulheta_silencio.png
+return_plan: {id: PLAN-071, checkpoint: B-006/S-011, preserved: true}
+authorization: .atena/generated/ampulheta-admission-2026-10-13/authorization.json
+current_step_position: 4
+remaining_steps_after_current: 0
+next_objective: Dono avaliar motivos/graos, brilho e ritmo da Ampulheta no jogo.
+build_id: "0.4.0/ampulheta-admission-v01/2ae8c48+local-1f69574d8a27"
+evidence: .atena/evidence/ampulheta-admission-2026-10-13.md
+verification: .atena/generated/ampulheta-admission-2026-10-13/verification.json
+human_runtime_playtest: PROCEDURE_NOT_REPORTED
+owner_delivery_reply: "atena, aprovado commit e push na main"
+publication_state: .atena/state/assets-main-publication.yaml

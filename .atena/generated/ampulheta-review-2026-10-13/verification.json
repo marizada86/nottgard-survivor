@@ -1,0 +1,22 @@
+{
+  "result": "PASS",
+  "links": 28,
+  "protected_runtime_files": 3001,
+  "sources": 6,
+  "selected": [
+    "M01v02",
+    "M02v03",
+    "M03v01",
+    "M04v01",
+    "M05v01",
+    "M06v01"
+  ],
+  "visual_inspection": "ALL_SIX_AND_BOARD_VIEWED",
+  "browser": "NOT_TESTED",
+  "new_generation": 0,
+  "runtime_admission": false,
+  "canonical_promotion": false,
+  "pending_visual_acceptance": [],
+  "human_sequence_acceptance": "FOUR_PHASES_APPROVED_EXPLICITLY",
+  "acceptance_receipt": "visual-acceptance.json"
+}

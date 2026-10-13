@@ -1,0 +1,47 @@
+{
+  "result": "PASS",
+  "revision": "ampulheta-admission/v01",
+  "build_id": "0.4.0/ampulheta-admission-v01/2ae8c48+local-1f69574d8a27",
+  "content_state": "DRAFT_ADMITTED_LOCAL",
+  "canonical_promotion": false,
+  "atlas_sha256": "b8f8460b1817c09de792210369c7e5d0a996a56b6a26fc309a0f9edd7ed9cb37",
+  "runtime_fingerprint": "1f69574d8a27145601625707de990eff4e5998538233770cd80b55084366dd96",
+  "source_hashes": "PASS",
+  "frame_count": 6,
+  "cell": [
+    256,
+    256
+  ],
+  "duration_seconds": 0.35,
+  "peak_ring_radius_px": 88,
+  "initial_ring_ratio": 0.13636363636363635,
+  "M01_scale_exception_preserved": true,
+  "suite_failures": 0,
+  "smoke_stages": 9,
+  "weapon_event": "ampulheta via Battle._fire and Run._consume_events",
+  "captures": 12,
+  "reduced_impact_fallback": true,
+  "unsupported_event_fallback": true,
+  "absent_invalid_texture_fallback": "REUSED_FRAME_PIPELINE_UNIT_CHECKED",
+  "freed_after_completion": true,
+  "protected_preexisting_files_unchanged": 3000,
+  "only_changed_preexisting_runtime_file": "ui/run.gd",
+  "runtime_additions": [
+    "assets/vfx/ampulheta_silencio.png",
+    "core/hourglass_vfx.gd"
+  ],
+  "test_addition": "tests/test_hourglass_vfx.gd",
+  "gameplay_tables_unchanged": true,
+  "radiant_pulse_sources_helper_atlas_tests": "HASH_UNCHANGED_AND_RUNTIME_REGRESSION_PASS",
+  "hero_admission_preserved": true,
+  "human_playtest": "PENDING",
+  "browser_gallery": "NOT_TESTED",
+  "playtest_scene_launcher": "HEADLESS_SCENE_SMOKE_PASS_15_FRAMES",
+  "git_export_publish": false,
+  "notes": [
+    "Godot certificate-store warning",
+    "Suite shutdown resource/RID warnings",
+    "Pre-existing Pulse test Image.load_from_file res:// warning; runtime loads Texture2D"
+  ],
+  "active_links_verified": 52
+}

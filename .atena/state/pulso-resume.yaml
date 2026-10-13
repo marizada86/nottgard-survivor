@@ -1,0 +1,35 @@
+version: 1
+plan: PLAN-053
+revision: pulso-resume/v01
+classification: IN_PLAN
+mode: per-plan
+status: COMPLETED_VISUALLY_ACCEPTED_DRAFT
+checkpoint: S-004/SEQUENCE_ACCEPTANCE_RECORDED
+ordered_steps: [S-001, S-002, S-003, S-004]
+current_step_position: 4
+completed_steps: 4
+total_steps: 4
+remaining_steps_after_current: 0
+scope_authorization: 'atena, seguir recomendação retomando o Pulso Radiante'
+spec: .atena/specs/SPEC-121-retomada-fila-imagens/pulso-resume-v01.md
+recovery: .atena/generated/pulso-resume-2026-10-13/recovery.json
+selected: [N01v03, N02v02, N03v01, N04v01, N05v01, N06v01]
+content_state: DRAFT_SEQUENCE_HISTORIC_N03_GATE_APPROVED
+native_sources: 6
+generation_this_resume: 0
+runtime_admission: false
+canonical_promotion: false
+human_sequence_acceptance: APPROVED_EXPLICITLY_FIVE_DRAFT_PHASES
+hero_runtime_playtest: PENDING_PRESERVED
+return_plan: {id: PLAN-071, checkpoint: B-006/S-011, preserved: true}
+next_objective: Aprovar escopo e modo de pulso-admission/v01 antes da normalizacao e integracao.
+gallery: .atena/generated/pulso-resume-2026-10-13/index.html
+audit: .atena/generated/pulso-resume-2026-10-13/audit.json
+next_execution_authorized: false
+evidence: .atena/evidence/pulso-resume-2026-10-13.md
+verification: .atena/generated/pulso-resume-2026-10-13/verification.json
+visual_acceptance_receipt: .atena/generated/pulso-resume-2026-10-13/visual-acceptance.json
+admission_proposal: .atena/specs/SPEC-121-retomada-fila-imagens/pulso-admission-v01.md
+admission_mode: per-plan
+admission_approval: APPROVED_LOCAL_TECHNICAL_DELIVERED
+admission_state: .atena/state/pulso-admission.yaml

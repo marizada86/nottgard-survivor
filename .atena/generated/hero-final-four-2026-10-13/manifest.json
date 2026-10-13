@@ -1,0 +1,1067 @@
+{
+  "plan": "PLAN-053",
+  "revision": "hero-final-four/v01",
+  "content_state": "DRAFT",
+  "records": [
+    {
+      "code": "AO09",
+      "cell": [
+        512,
+        512
+      ],
+      "ground_target": 448,
+      "center_target": 256.0,
+      "target_body_height": 290,
+      "reference_body_height": 958,
+      "reference_method": "first standing pose",
+      "uniform_scale": 0.302713987473904,
+      "body_spread_check_applicable": true,
+      "death_compression_natural": false,
+      "frames": [
+        {
+          "frame": 1,
+          "path": ".atena/generated/hero-final-four-2026-10-13/sources/AO09/f01_v01.png",
+          "sha256": "82eb4ed316473a0a65f1bd47fa6f3cd5604faac4e6841baf2362525ea68fec30",
+          "version": "v01",
+          "source_type": "builtin-imagegen",
+          "source_size": [
+            1254,
+            1254
+          ],
+          "significant_bbox": [
+            410,
+            202,
+            824,
+            1160
+          ],
+          "source_edge_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "head_y": 202,
+          "ground_y": 1160,
+          "hip_x": 627,
+          "head_roi": null,
+          "body_height": 958,
+          "landmark_method": "full hat outline and lowest body contact; hip manually estimated",
+          "landmark_uncertainty_px": 12,
+          "predicted_margins": [
+            190.31106471816284,
+            158.0,
+            196.36534446764094,
+            64.0
+          ]
+        },
+        {
+          "frame": 2,
+          "path": ".atena/generated/hero-final-four-2026-10-13/sources/AO09/f02_v01.png",
+          "sha256": "d8d78e957387c698c0230d004bc226c5c834d7a7700bcbcf2f2e89427c4d29cf",
+          "version": "v01",
+          "source_type": "builtin-imagegen",
+          "source_size": [
+            1254,
+            1254
+          ],
+          "significant_bbox": [
+            416,
+            201,
+            859,
+            1142
+          ],
+          "source_edge_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "head_y": 201,
+          "ground_y": 1142,
+          "hip_x": 639,
+          "head_roi": null,
+          "body_height": 941,
+          "landmark_method": "full hat outline and lowest body contact; hip manually estimated",
+          "landmark_uncertainty_px": 12,
+          "predicted_margins": [
+            188.49478079331942,
+            163.14613778705632,
+            189.40292275574112,
+            64.0
+          ]
+        },
+        {
+          "frame": 3,
+          "path": ".atena/generated/hero-final-four-2026-10-13/sources/AO09/f03_v02.png",
+          "sha256": "79378c1402ecb5ab6c0f894dc3315d0839d4fac5670b594525a878e4b3122d66",
+          "version": "v02",
+          "source_type": "builtin-imagegen",
+          "source_size": [
+            1254,
+            1254
+          ],
+          "significant_bbox": [
+            295,
+            201,
+            1007,
+            1161
+          ],
+          "source_edge_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "head_y": 201,
+          "ground_y": 1161,
+          "hip_x": 638,
+          "head_roi": null,
+          "body_height": 960,
+          "landmark_method": "full hat outline and lowest body contact; hip manually estimated",
+          "landmark_uncertainty_px": 12,
+          "predicted_margins": [
+            152.16910229645094,
+            157.39457202505218,
+            144.29853862212943,
+            64.0
+          ]
+        },
+        {
+          "frame": 4,
+          "path": ".atena/generated/hero-final-four-2026-10-13/sources/AO09/f04_v01.png",
+          "sha256": "f78984333dbe5791e986052e0875faf068b39d9f27bd5f16497492f441dfafb2",
+          "version": "v01",
+          "source_type": "builtin-imagegen",
+          "source_size": [
+            1254,
+            1254
+          ],
+          "significant_bbox": [
+            271,
+            202,
+            1032,
+            1160
+          ],
+          "source_edge_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "head_y": 202,
+          "ground_y": 1160,
+          "hip_x": 638,
+          "head_roi": null,
+          "body_height": 958,
+          "landmark_method": "full hat outline and lowest body contact; hip manually estimated",
+          "landmark_uncertainty_px": 12,
+          "predicted_margins": [
+            144.90396659707721,
+            158.0,
+            136.73068893528185,
+            64.0
+          ]
+        },
+        {
+          "frame": 5,
+          "path": ".atena/generated/hero-final-four-2026-10-13/sources/AO09/f05_v01.png",
+          "sha256": "2e57a128a06bb14d47bc9d83b773e6c96e403e03edc7f74af40e5d057c6a9090",
+          "version": "v01",
+          "source_type": "builtin-imagegen",
+          "source_size": [
+            1254,
+            1254
+          ],
+          "significant_bbox": [
+            288,
+            201,
+            1041,
+            1162
+          ],
+          "source_edge_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "head_y": 201,
+          "ground_y": 1162,
+          "hip_x": 638,
+          "head_roi": null,
+          "body_height": 961,
+          "landmark_method": "full hat outline and lowest body contact; hip manually estimated",
+          "landmark_uncertainty_px": 12,
+          "predicted_margins": [
+            150.0501043841336,
+            157.09185803757828,
+            134.0062630480167,
+            64.0
+          ]
+        },
+        {
+          "frame": 6,
+          "path": ".atena/generated/hero-final-four-2026-10-13/sources/AO09/f06_v02.png",
+          "sha256": "13af0199b0dba420345b4a51d2399726b0c9ec36c2a3087ad3789ed780b932c6",
+          "version": "v02",
+          "source_type": "builtin-imagegen",
+          "source_size": [
+            1254,
+            1254
+          ],
+          "significant_bbox": [
+            409,
+            202,
+            825,
+            1161
+          ],
+          "source_edge_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "head_y": 202,
+          "ground_y": 1161,
+          "hip_x": 627,
+          "head_roi": null,
+          "body_height": 959,
+          "landmark_method": "full hat outline and lowest body contact; hip manually estimated",
+          "landmark_uncertainty_px": 12,
+          "predicted_margins": [
+            190.00835073068893,
+            157.6972860125261,
+            196.06263048016703,
+            64.0
+          ]
+        }
+      ],
+      "idle_reference": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/AO02.png",
+      "content_state": "DRAFT",
+      "runtime_admission": false
+    },
+    {
+      "code": "AO10",
+      "cell": [
+        512,
+        512
+      ],
+      "ground_target": 448,
+      "center_target": 256.0,
+      "target_body_height": 290,
+      "reference_body_height": 924,
+      "reference_method": "first standing pose",
+      "uniform_scale": 0.31385281385281383,
+      "body_spread_check_applicable": false,
+      "death_compression_natural": true,
+      "frames": [
+        {
+          "frame": 1,
+          "path": ".atena/generated/hero-final-four-2026-10-13/sources/AO10/f01_v01.png",
+          "sha256": "da5e419f65023782ec937a937bfed73c00c81943077b3596ed5aed260a38ca72",
+          "version": "v01",
+          "source_type": "builtin-imagegen",
+          "source_size": [
+            1254,
+            1254
+          ],
+          "significant_bbox": [
+            354,
+            208,
+            911,
+            1132
+          ],
+          "source_edge_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "head_y": 208,
+          "ground_y": 1132,
+          "hip_x": 630,
+          "head_roi": null,
+          "body_height": 924,
+          "landmark_method": "full hat outline and lowest body contact; hip manually estimated",
+          "landmark_uncertainty_px": 12,
+          "predicted_margins": [
+            169.3766233766234,
+            158.0,
+            167.8073593073593,
+            64.0
+          ]
+        },
+        {
+          "frame": 2,
+          "path": ".atena/generated/hero-final-four-2026-10-13/sources/AO10/f02_v01.png",
+          "sha256": "b1dae3738d0eea8ead26eb0991cf430ea0e4fd3bbf4a56b4805ed0a840f9fcb8",
+          "version": "v01",
+          "source_type": "builtin-imagegen",
+          "source_size": [
+            1254,
+            1254
+          ],
+          "significant_bbox": [
+            324,
+            278,
+            965,
+            1109
+          ],
+          "source_edge_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "head_y": 278,
+          "ground_y": 1109,
+          "hip_x": 635,
+          "head_roi": null,
+          "body_height": 831,
+          "landmark_method": "full hat outline and lowest body contact; hip manually estimated",
+          "landmark_uncertainty_px": 12,
+          "predicted_margins": [
+            158.3917748917749,
+            187.18831168831173,
+            152.42857142857144,
+            64.0
+          ]
+        },
+        {
+          "frame": 3,
+          "path": ".atena/generated/hero-final-four-2026-10-13/sources/AO10/f03_v01.png",
+          "sha256": "9ebbdce1b6fa8b8bc28400d8095f37972a0b5570f33096f8ea37bcd2df85006d",
+          "version": "v01",
+          "source_type": "builtin-imagegen",
+          "source_size": [
+            1254,
+            1254
+          ],
+          "significant_bbox": [
+            260,
+            374,
+            1025,
+            1038
+          ],
+          "source_edge_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "head_y": 374,
+          "ground_y": 1038,
+          "hip_x": 640,
+          "head_roi": null,
+          "body_height": 664,
+          "landmark_method": "full hat outline and lowest body contact; hip manually estimated",
+          "landmark_uncertainty_px": 12,
+          "predicted_margins": [
+            136.73593073593076,
+            239.60173160173161,
+            135.16666666666666,
+            64.0
+          ]
+        },
+        {
+          "frame": 4,
+          "path": ".atena/generated/hero-final-four-2026-10-13/sources/AO10/f04_v01.png",
+          "sha256": "00b25f889a0be91b2044e14a32f566b4af1e2fb56c254e809aaff3229af74b80",
+          "version": "v01",
+          "source_type": "builtin-imagegen",
+          "source_size": [
+            1254,
+            1254
+          ],
+          "significant_bbox": [
+            111,
+            627,
+            1188,
+            1063
+          ],
+          "source_edge_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "head_y": 627,
+          "ground_y": 1063,
+          "hip_x": 560,
+          "head_roi": null,
+          "body_height": 436,
+          "landmark_method": "full hat outline and lowest body contact; hip manually estimated",
+          "landmark_uncertainty_px": 12,
+          "predicted_margins": [
+            115.0800865800866,
+            311.16017316017314,
+            58.90043290043292,
+            64.00000000000003
+          ]
+        },
+        {
+          "frame": 5,
+          "path": ".atena/generated/hero-final-four-2026-10-13/sources/AO10/f05_v01.png",
+          "sha256": "8441cf170d121a278d5cba80709cab2d59a964f3cde5a967e852404bcb1a291b",
+          "version": "v01",
+          "source_type": "builtin-imagegen",
+          "source_size": [
+            1254,
+            1254
+          ],
+          "significant_bbox": [
+            69,
+            647,
+            1239,
+            1110
+          ],
+          "source_edge_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "head_y": 647,
+          "ground_y": 1110,
+          "hip_x": 560,
+          "head_roi": null,
+          "body_height": 463,
+          "landmark_method": "full hat outline and lowest body contact; hip manually estimated",
+          "landmark_uncertainty_px": 12,
+          "predicted_margins": [
+            101.89826839826841,
+            302.6861471861472,
+            42.89393939393938,
+            64.0
+          ]
+        },
+        {
+          "frame": 6,
+          "path": ".atena/generated/hero-final-four-2026-10-13/sources/AO10/f06_v01.png",
+          "sha256": "360d8dc547074f7ca74ba2ac82c4b8840cca15f41d114f8b01ccb1875870eec1",
+          "version": "v01",
+          "source_type": "builtin-imagegen",
+          "source_size": [
+            1254,
+            1254
+          ],
+          "significant_bbox": [
+            69,
+            646,
+            1239,
+            1111
+          ],
+          "source_edge_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "head_y": 646,
+          "ground_y": 1111,
+          "hip_x": 560,
+          "head_roi": null,
+          "body_height": 465,
+          "landmark_method": "full hat outline and lowest body contact; hip manually estimated",
+          "landmark_uncertainty_px": 12,
+          "predicted_margins": [
+            101.89826839826841,
+            302.0584415584416,
+            42.89393939393938,
+            63.99999999999997
+          ]
+        }
+      ],
+      "idle_reference": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/AO02.png",
+      "content_state": "DRAFT",
+      "runtime_admission": false
+    },
+    {
+      "code": "ER03",
+      "cell": [
+        256,
+        384
+      ],
+      "ground_target": 368,
+      "center_target": 128.0,
+      "target_body_height": 300,
+      "reference_body_height": 580,
+      "reference_method": "median of seven preserved original poses",
+      "uniform_scale": 0.5172413793103449,
+      "body_spread_check_applicable": true,
+      "death_compression_natural": false,
+      "frames": [
+        {
+          "frame": 1,
+          "path": ".atena/generated/hero-final-four-2026-10-13/native/ER03/f01.png",
+          "sha256": "81ff75f9ee1d7f801e9f46361f3254632123ef877fe87eb3beb6efbfe22fcc11",
+          "version": "native-mask-v01",
+          "source_type": "exact-native-RGBA-mask",
+          "source_size": [
+            313,
+            793
+          ],
+          "significant_bbox": [
+            15,
+            103,
+            301,
+            696
+          ],
+          "source_edge_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "head_y": 104,
+          "ground_y": 696,
+          "hip_x": 176,
+          "head_roi": [
+            100,
+            0,
+            255,
+            250
+          ],
+          "body_height": 592,
+          "landmark_method": "hair alpha>32 in inspected ROI excluding flame/pommel; lowest sole and manually estimated hip",
+          "landmark_uncertainty_px": 6,
+          "predicted_margins": [
+            44.72413793103448,
+            61.27586206896552,
+            63.34482758620689,
+            16.0
+          ]
+        },
+        {
+          "frame": 2,
+          "path": ".atena/generated/hero-final-four-2026-10-13/native/ER03/f02.png",
+          "sha256": "5c3c8a3f7aa64f50449e07f73dd17d694cb79980fe1b4cf54dec293c32dee720",
+          "version": "native-mask-v01",
+          "source_type": "exact-native-RGBA-mask",
+          "source_size": [
+            338,
+            793
+          ],
+          "significant_bbox": [
+            11,
+            103,
+            329,
+            676
+          ],
+          "source_edge_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "head_y": 103,
+          "ground_y": 676,
+          "hip_x": 188,
+          "head_roi": [
+            100,
+            0,
+            255,
+            250
+          ],
+          "body_height": 573,
+          "landmark_method": "hair alpha>32 in inspected ROI excluding flame/pommel; lowest sole and manually estimated hip",
+          "landmark_uncertainty_px": 6,
+          "predicted_margins": [
+            36.448275862068954,
+            71.62068965517238,
+            55.06896551724137,
+            16.0
+          ]
+        },
+        {
+          "frame": 3,
+          "path": ".atena/generated/hero-final-four-2026-10-13/native/ER03/f03.png",
+          "sha256": "1bc2bb2739320c6accf19cd221d2cd3790f7d23e7b940dd753a32697ce719367",
+          "version": "native-mask-v01",
+          "source_type": "exact-native-RGBA-mask",
+          "source_size": [
+            343,
+            793
+          ],
+          "significant_bbox": [
+            14,
+            107,
+            332,
+            688
+          ],
+          "source_edge_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "head_y": 108,
+          "ground_y": 688,
+          "hip_x": 188,
+          "head_roi": [
+            100,
+            0,
+            255,
+            250
+          ],
+          "body_height": 580,
+          "landmark_method": "hair alpha>32 in inspected ROI excluding flame/pommel; lowest sole and manually estimated hip",
+          "landmark_uncertainty_px": 6,
+          "predicted_margins": [
+            38.0,
+            67.48275862068965,
+            53.51724137931032,
+            16.0
+          ]
+        },
+        {
+          "frame": 4,
+          "path": ".atena/generated/hero-final-four-2026-10-13/native/ER03/f04.png",
+          "sha256": "77a9c52603e804c12fadb6f0d43ab579f995c629336165779fb0e137f67682e8",
+          "version": "native-mask-v01",
+          "source_type": "exact-native-RGBA-mask",
+          "source_size": [
+            341,
+            793
+          ],
+          "significant_bbox": [
+            10,
+            108,
+            328,
+            681
+          ],
+          "source_edge_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "head_y": 109,
+          "ground_y": 681,
+          "hip_x": 186,
+          "head_roi": [
+            100,
+            0,
+            255,
+            250
+          ],
+          "body_height": 572,
+          "landmark_method": "hair alpha>32 in inspected ROI excluding flame/pommel; lowest sole and manually estimated hip",
+          "landmark_uncertainty_px": 6,
+          "predicted_margins": [
+            36.9655172413793,
+            71.62068965517238,
+            54.55172413793102,
+            16.0
+          ]
+        },
+        {
+          "frame": 5,
+          "path": ".atena/generated/hero-final-four-2026-10-13/native/ER03/f05.png",
+          "sha256": "b6ee2f337098f8fbf96337827a9879746aed95434cca8e5d5c2ebc334b852825",
+          "version": "native-mask-v01",
+          "source_type": "exact-native-RGBA-mask",
+          "source_size": [
+            337,
+            793
+          ],
+          "significant_bbox": [
+            10,
+            108,
+            322,
+            689
+          ],
+          "source_edge_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "head_y": 108,
+          "ground_y": 689,
+          "hip_x": 186,
+          "head_roi": [
+            100,
+            0,
+            255,
+            250
+          ],
+          "body_height": 581,
+          "landmark_method": "hair alpha>32 in inspected ROI excluding flame/pommel; lowest sole and manually estimated hip",
+          "landmark_uncertainty_px": 6,
+          "predicted_margins": [
+            36.9655172413793,
+            67.48275862068965,
+            57.65517241379311,
+            16.0
+          ]
+        },
+        {
+          "frame": 6,
+          "path": ".atena/generated/hero-final-four-2026-10-13/native/ER03/f06.png",
+          "sha256": "8303e37fa6dd4fd680a92f52ecaee7c5c048afb21e66dafe516afe353b66b7d7",
+          "version": "native-mask-v01",
+          "source_type": "exact-native-RGBA-mask",
+          "source_size": [
+            325,
+            793
+          ],
+          "significant_bbox": [
+            13,
+            107,
+            316,
+            690
+          ],
+          "source_edge_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "head_y": 107,
+          "ground_y": 690,
+          "hip_x": 175,
+          "head_roi": [
+            100,
+            0,
+            255,
+            250
+          ],
+          "body_height": 583,
+          "landmark_method": "hair alpha>32 in inspected ROI excluding flame/pommel; lowest sole and manually estimated hip",
+          "landmark_uncertainty_px": 6,
+          "predicted_margins": [
+            44.20689655172413,
+            66.44827586206895,
+            55.06896551724137,
+            16.0
+          ]
+        },
+        {
+          "frame": 7,
+          "path": ".atena/generated/hero-final-four-2026-10-13/native/ER03/f07.png",
+          "sha256": "1a641b5d2f307d1876ab7e4b01f8d32aa20add87306724f85f908306d469b811",
+          "version": "native-mask-v01",
+          "source_type": "exact-native-RGBA-mask",
+          "source_size": [
+            315,
+            793
+          ],
+          "significant_bbox": [
+            10,
+            108,
+            307,
+            686
+          ],
+          "source_edge_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "head_y": 108,
+          "ground_y": 686,
+          "hip_x": 178,
+          "head_roi": [
+            100,
+            0,
+            255,
+            250
+          ],
+          "body_height": 578,
+          "landmark_method": "hair alpha>32 in inspected ROI excluding flame/pommel; lowest sole and manually estimated hip",
+          "landmark_uncertainty_px": 6,
+          "predicted_margins": [
+            41.103448275862064,
+            69.0344827586207,
+            61.27586206896552,
+            16.0
+          ]
+        }
+      ],
+      "idle_reference": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/ER02.png",
+      "content_state": "DRAFT",
+      "runtime_admission": false
+    },
+    {
+      "code": "ER06",
+      "cell": [
+        256,
+        384
+      ],
+      "ground_target": 368,
+      "center_target": 128.0,
+      "target_body_height": 300,
+      "reference_body_height": 582,
+      "reference_method": "median of original first five",
+      "uniform_scale": 0.5154639175257731,
+      "body_spread_check_applicable": true,
+      "death_compression_natural": false,
+      "frames": [
+        {
+          "frame": 1,
+          "path": ".atena/generated/hero-final-four-2026-10-13/native/ER06/f01.png",
+          "sha256": "b4e518b1ea4b55060582612a307d1be4a33b8ae35a0c5a8925593ad128204f78",
+          "version": "native-mask-v01",
+          "source_type": "exact-native-RGBA-mask",
+          "source_size": [
+            354,
+            768
+          ],
+          "significant_bbox": [
+            13,
+            115,
+            335,
+            692
+          ],
+          "source_edge_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "head_y": 115,
+          "ground_y": 692,
+          "hip_x": 200,
+          "head_roi": [
+            145,
+            0,
+            260,
+            250
+          ],
+          "body_height": 577,
+          "landmark_method": "hair alpha>32 in inspected ROI excluding flame/pommel; lowest sole and manually estimated hip",
+          "landmark_uncertainty_px": 6,
+          "predicted_margins": [
+            31.60824742268042,
+            70.57731958762889,
+            58.41237113402062,
+            16.0
+          ]
+        },
+        {
+          "frame": 2,
+          "path": ".atena/generated/hero-final-four-2026-10-13/native/ER06/f02.png",
+          "sha256": "9d2cc00004ce5f5375ab5f3eb6ddf5624cce85d4f9705714a29889cc30ed86fe",
+          "version": "native-mask-v01",
+          "source_type": "exact-native-RGBA-mask",
+          "source_size": [
+            364,
+            768
+          ],
+          "significant_bbox": [
+            20,
+            113,
+            342,
+            690
+          ],
+          "source_edge_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "head_y": 114,
+          "ground_y": 690,
+          "hip_x": 216,
+          "head_roi": [
+            145,
+            0,
+            260,
+            250
+          ],
+          "body_height": 576,
+          "landmark_method": "hair alpha>32 in inspected ROI excluding flame/pommel; lowest sole and manually estimated hip",
+          "landmark_uncertainty_px": 6,
+          "predicted_margins": [
+            26.96907216494847,
+            70.57731958762889,
+            63.05154639175257,
+            16.0
+          ]
+        },
+        {
+          "frame": 3,
+          "path": ".atena/generated/hero-final-four-2026-10-13/native/ER06/f03.png",
+          "sha256": "674b863458bf94c6a22fc1776668f495a33b10ed349e0c28a828fa4bceca4a53",
+          "version": "native-mask-v01",
+          "source_type": "exact-native-RGBA-mask",
+          "source_size": [
+            384,
+            768
+          ],
+          "significant_bbox": [
+            39,
+            102,
+            368,
+            687
+          ],
+          "source_edge_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "head_y": 105,
+          "ground_y": 687,
+          "hip_x": 229,
+          "head_roi": [
+            145,
+            0,
+            260,
+            250
+          ],
+          "body_height": 582,
+          "landmark_method": "hair alpha>32 in inspected ROI excluding flame/pommel; lowest sole and manually estimated hip",
+          "landmark_uncertainty_px": 6,
+          "predicted_margins": [
+            30.0618556701031,
+            66.45360824742272,
+            56.35051546391753,
+            16.0
+          ]
+        },
+        {
+          "frame": 4,
+          "path": ".atena/generated/hero-final-four-2026-10-13/native/ER06/f04.png",
+          "sha256": "140a47cc20cf72d9717d9a66fd271850deca401f745311d3a5b6c11dfa28b134",
+          "version": "native-mask-v01",
+          "source_type": "exact-native-RGBA-mask",
+          "source_size": [
+            378,
+            768
+          ],
+          "significant_bbox": [
+            43,
+            107,
+            358,
+            692
+          ],
+          "source_edge_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "head_y": 107,
+          "ground_y": 692,
+          "hip_x": 230,
+          "head_roi": [
+            145,
+            0,
+            260,
+            250
+          ],
+          "body_height": 585,
+          "landmark_method": "hair alpha>32 in inspected ROI excluding flame/pommel; lowest sole and manually estimated hip",
+          "landmark_uncertainty_px": 6,
+          "predicted_margins": [
+            31.60824742268042,
+            66.45360824742272,
+            62.02061855670104,
+            16.0
+          ]
+        },
+        {
+          "frame": 5,
+          "path": ".atena/generated/hero-final-four-2026-10-13/native/ER06/f05.png",
+          "sha256": "8834bfd0c7d48fce16094b696a124e219dda57821633735421ca2d49f261d9fa",
+          "version": "native-mask-v01",
+          "source_type": "exact-native-RGBA-mask",
+          "source_size": [
+            376,
+            768
+          ],
+          "significant_bbox": [
+            39,
+            109,
+            360,
+            697
+          ],
+          "source_edge_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "head_y": 109,
+          "ground_y": 697,
+          "hip_x": 229,
+          "head_roi": [
+            145,
+            0,
+            260,
+            250
+          ],
+          "body_height": 588,
+          "landmark_method": "hair alpha>32 in inspected ROI excluding flame/pommel; lowest sole and manually estimated hip",
+          "landmark_uncertainty_px": 6,
+          "predicted_margins": [
+            30.0618556701031,
+            64.90721649484539,
+            60.4742268041237,
+            16.0
+          ]
+        },
+        {
+          "frame": 6,
+          "path": ".atena/generated/hero-final-four-2026-10-13/sources/ER06/f06_v03.png",
+          "sha256": "3cd78f3b8d81db0f2b18c18fc97a4806012bde22eb80a4f3c0d55e53121ad6d9",
+          "version": "v03",
+          "source_type": "builtin-imagegen",
+          "source_size": [
+            1254,
+            1254
+          ],
+          "significant_bbox": [
+            466,
+            537,
+            821,
+            1141
+          ],
+          "source_edge_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "head_y": 538,
+          "ground_y": 1141,
+          "hip_x": 640,
+          "head_roi": [
+            590,
+            0,
+            740,
+            800
+          ],
+          "body_height": 603,
+          "landmark_method": "hair alpha>32 in inspected ROI excluding flame/pommel; lowest sole and manually estimated hip",
+          "landmark_uncertainty_px": 6,
+          "predicted_margins": [
+            38.30927835051547,
+            56.659793814433044,
+            34.70103092783509,
+            16.0
+          ]
+        }
+      ],
+      "idle_reference": ".atena/generated/hero-body-pivot-2026-10-12/v02/strips/ER02.png",
+      "content_state": "DRAFT",
+      "runtime_admission": false
+    }
+  ],
+  "frames": 25,
+  "source_rasters_preserved": true,
+  "per_frame_zoom": false,
+  "global_spread_limit_px": 12,
+  "runtime_admission": false,
+  "canonical_promotion": false,
+  "commit_push_export": false,
+  "status": "COMPLETED_VISUALLY_ACCEPTED_DRAFT_WITH_LIMITED_EXCEPTION",
+  "completed_steps": 6,
+  "total_steps": 6,
+  "human_visual_acceptance": "FOUR_V02_APPROVED_EXPLICITLY",
+  "acceptance_receipt": ".atena/generated/hero-final-four-2026-10-13/visual-acceptance.json",
+  "accepted_exceptions": {
+    "ER06": 13
+  }
+}

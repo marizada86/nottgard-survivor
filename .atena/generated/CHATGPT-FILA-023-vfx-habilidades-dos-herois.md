@@ -2,7 +2,7 @@
 id: "CHATGPT-FILA-023"
 type: "fila-de-prompts"
 title: "Fila de VFX: das habilidades dos 10 heróis (ART-030) (60 imagens)"
-status: "pronta para envio, mas só depois de o piloto (CHATGPT-FILA-020) ser aprovado; nada executado"
+status: "Reconciliação 2026-10-13: 60/60 fontes geradas segundo registros de 10bd31c; revisão/normalização/admissão pendentes; recuperação integral das fontes fora desta retomada."
 created: "2026-10-01"
 relations: ["[[ART-PROMPTS-054-vfx-habilidades-dos-herois]]", "[[PLAN-051-vfx-de-ataques-e-magias-2026-10-01]]"]
 ---

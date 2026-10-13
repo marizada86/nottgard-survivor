@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-13",
+  "revision": "pulso-admission/v01",
+  "owner_reply": "1. Por plano — uma aprovação para todo o escopo planejado.",
+  "scope": "Full pulso-admission/v01 local normalization/admission/verification/playtest preparation",
+  "mode": "per-plan",
+  "sources": [
+    {
+      "code": "N01",
+      "version": "v03",
+      "path": ".atena/generated/art-candidates/vfx/pulso_radiante/pulso_radiante_spark_v03.png",
+      "sha256": "9fe7d8581307d7ed26a1159400f07a15bf730f543e9b70c55c873eb2bd93610d",
+      "acceptance": "APPROVED_EXPLICITLY_DRAFT_2026_10_13"
+    },
+    {
+      "code": "N02",
+      "version": "v02",
+      "path": ".atena/generated/art-candidates/vfx/pulso_radiante/pulso_radiante_grow_v02.png",
+      "sha256": "d74634c93e7ceaf7d6a599b98b5a3274a54d1cf0e104ad34509b5fb21c409fb4",
+      "acceptance": "APPROVED_EXPLICITLY_DRAFT_2026_10_13"
+    },
+    {
+      "code": "N03",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/pulso_radiante/pulso_radiante_peak_v01.png",
+      "sha256": "1bfa8061aec59959de9115ad5dcb94b3e27d5706ffdb86a3e99b8c7e7bf898ec",
+      "acceptance": "HISTORICAL_N03_GATE_PRESERVED"
+    },
+    {
+      "code": "N04",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/pulso_radiante/pulso_radiante_hold_v01.png",
+      "sha256": "42153c36d26464061070d376604458ebacfd9e1c23694900b808e5de036f75e8",
+      "acceptance": "APPROVED_EXPLICITLY_DRAFT_2026_10_13"
+    },
+    {
+      "code": "N05",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/pulso_radiante/pulso_radiante_fade_v01.png",
+      "sha256": "950453ad5f247610a32c32d59164edd6f7bb556e09fa452cf2666c9e680e82e5",
+      "acceptance": "APPROVED_EXPLICITLY_DRAFT_2026_10_13"
+    },
+    {
+      "code": "N06",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/pulso_radiante/pulso_radiante_dissipate_v01.png",
+      "sha256": "5d652aa925f3645e70772e4ec7ef36e654832021b65bc2919c1ab111d2f53188",
+      "acceptance": "APPROVED_EXPLICITLY_DRAFT_2026_10_13"
+    }
+  ],
+  "canonical_promotion": false,
+  "git_export_publish": false
+}

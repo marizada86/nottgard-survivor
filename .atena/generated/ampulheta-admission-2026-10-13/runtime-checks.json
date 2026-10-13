@@ -1,0 +1,21 @@
+{
+	"appdata": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\d8a8\\nottgard-survivor\\.atena\\generated\\ampulheta-admission-2026-10-13\\qa-capture",
+	"freed_after_completion": true,
+	"phases": 6,
+	"radiant_pulse_regression": true,
+	"reduced_impact_fallback": true,
+	"result": "PASS",
+	"tints": [
+		"Lliira",
+		"Tou Um"
+	],
+	"unsupported_fallback": true,
+	"weapons": [
+		{
+			"event_route": "Battle._fire -> nova -> Run._consume_events",
+			"radius": 4.0,
+			"rendered": true,
+			"weapon": "ampulheta"
+		}
+	]
+}
