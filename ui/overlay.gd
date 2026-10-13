@@ -494,6 +494,8 @@ func _draw_over() -> void:
 	for pr in battle.projectiles:
 		var p := Iso.to_screen(pr.pos) + Vector2(0, -16)
 		if pr.owner == "hero":
+			if ProjectileVfx.handles(pr, Game.reduced_impact()):
+				continue   # ART-029: o sprite de voo (ui/run.gd) substitui o circulo
 			var theme: Dictionary = pr.get("visual_theme", DivineVisuals.resolve(battle.hero.id, battle.visual_god, battle.visual_boon_selected))
 			var col: Color = theme.primary
 			var trail: Color = theme.aura_accent

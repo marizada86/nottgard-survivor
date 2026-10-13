@@ -38,6 +38,10 @@ var _items_focus: WeakRef
 var _recovery_offer := false
 var _stage_clear_events_seen: Dictionary = {}
 var _final_victory_event_seen := false
+var _proj_vfx: Array[Dictionary] = []     # ART-029: sprite de voo por projetil do heroi {pr, node, family, theme}
+var _ability_follow := {}                 # ART-030: ability_id -> anel que acompanha o heroi (guarda, sobrecarga)
+var _active_dir := Vector2.ZERO           # ART-030: direcao da ultima habilidade ativa pedida (so apresentacao)
+var _swing_dir_frame := Vector2.ZERO
 var _divine_aura: Line2D
 var _divine_aura_accent: Line2D
 var _encounter_layer: CanvasLayer
@@ -301,6 +305,7 @@ func _unhandled_input(ev: InputEvent) -> void:
 	if not ev.is_pressed() or (ev is InputEventKey and ev.echo):
 		return
 	if battle.state == "running" and ev.is_action_pressed("hero_active"):
+		_active_dir = battle.aim_dir
 		if battle.use_active(battle.aim_dir):
 			get_viewport().set_input_as_handled()
 		return
@@ -465,6 +470,7 @@ func _mobile_command(action: StringName) -> void:
 		&"hero_active":
 			var target := battle.nearest(battle.hero.pos, 1000.0)
 			var direction := (target.pos - battle.hero.pos).normalized() if target != null else battle.aim_dir
+			_active_dir = direction
 			battle.use_active(direction)
 		Game.ACTION_RUN_INTERACT:
 			battle.interact()
@@ -561,6 +567,8 @@ func _process(dt: float) -> void:
 		Playtest.record_run(battle)
 	if hero_node == null:
 		return
+	_sync_projectile_vfx()
+	_sync_ability_follow()
 	_shake = maxf(0.0, _shake - dt * 3.0)
 	camera.position = hero_node.position + Vector2(randf_range(-1, 1), randf_range(-1, 1)) * _shake * 6.0
 	_update_fog_overlay()
@@ -661,6 +669,7 @@ func _present_hq(hq_id: String) -> void:
 # ------------------------------------------------------------------ efeitos
 
 func _consume_events() -> void:
+	_swing_dir_frame = Vector2.ZERO
 	for ev in battle.events:
 		var at := Iso.to_screen(ev.pos) if ev.has("pos") else Vector2.ZERO
 		match String(ev.type):
@@ -692,12 +701,15 @@ func _consume_events() -> void:
 					Sfx.play("enemy.summon")
 					if ev.has("enemy_id"): Sfx.play_enemy(String(ev.enemy_id), "action")
 				_float_text(at + Vector2(0, -50), ev.text, Color(0.7, 0.8, 1.0), 12)
+				if cue == "dominado":
+					_ability_effect("dominacao", ev)
 			"heal":
 				Sfx.play("player.heal")
 				_float_text(at + Vector2(0, -60), "+%d" % ev.amount, Color(0.4, 1.0, 0.5), 14)
 			"swing":
 				Sfx.play_weapon(String(ev.get("weapon", "")), "combat.swing")
 				hero_node.play_action(&"attack")
+				_swing_dir_frame = ev.get("dir", Vector2.ZERO)
 				_swing(ev, _divine_theme())
 			"cast":
 				Sfx.play_weapon(String(ev.get("weapon", "")), "combat.magic")
@@ -765,7 +777,9 @@ func _consume_events() -> void:
 			"active":
 				Sfx.play_hero(String(ev.get("hero_id", battle.hero.id)))
 				hero_node.play_action(&"active")
-				_ring(ev.pos, float(ev.get("radius", 2.0)), _dcol(String(ev.get("dtype", "radiante"))), 0.3)
+				if not _ability_effect(String(ev.get("ability_id", "")), ev):
+					_ring(ev.pos, float(ev.get("radius", 2.0)), _dcol(String(ev.get("dtype", "radiante"))), 0.3)
+				_swing_dir_frame = Vector2.ZERO
 			"boss_phase":
 				var active_boss: String = String(battle.stage.get("boss", ""))
 				Sfx.play_boss(active_boss, "phase")
@@ -963,6 +977,89 @@ func _play_sheet_effect(path: String, center: Vector2, radius: float, duration: 
 		tween.tween_interval(duration / 4.0)
 	tween.tween_callback(sprite.queue_free)
 
+## ART-029: sprite de voo para os projeteis do heroi com familia aceita; no impacto toca o quadro de impacto.
+## So apresentacao: posicao, dano e colisao continuam em Battle. Impacto reduzido mantem o circulo antigo.
+func _sync_projectile_vfx() -> void:
+	if battle == null:
+		return
+	var reduced := Game.reduced_impact()
+	var live: Array = []
+	if not reduced:
+		for pr in battle.projectiles:
+			if ProjectileVfx.handles(pr):
+				live.append(pr)
+	var kept: Array[Dictionary] = []
+	var i := 0
+	for pr in live:
+		while i < _proj_vfx.size() and not is_same(_proj_vfx[i].pr, pr):
+			_retire_projectile_vfx(_proj_vfx[i])
+			i += 1
+		var entry: Dictionary
+		if i < _proj_vfx.size():
+			entry = _proj_vfx[i]
+			i += 1
+			var node: AnimatedSprite2D = entry.node
+			node.position = ProjectileVfx.screen_position(pr.pos)
+			node.rotation = ProjectileVfx.rotation_for(pr.dir)
+		else:
+			var theme: Dictionary = pr.get("visual_theme", _divine_theme())
+			var sprite := ProjectileVfx.create_flight(pr, theme.primary)
+			if sprite == null:
+				continue
+			fx.add_child(sprite)
+			entry = {"pr": pr, "node": sprite, "family": ProjectileVfx.family_for(pr), "theme": theme}
+		kept.append(entry)
+	while i < _proj_vfx.size():
+		_retire_projectile_vfx(_proj_vfx[i])
+		i += 1
+	_proj_vfx = kept
+
+func _retire_projectile_vfx(entry: Dictionary) -> void:
+	var node: Node = entry.node
+	if is_instance_valid(node):
+		node.queue_free()
+	var pr: Dictionary = entry.pr
+	# Acertou (consumido com vida sobrando) ou chegou ao fim do alcance dentro do mapa: toca o impacto.
+	# Projeteis que perfuram nao somem no acerto, entao o fim do alcance e o seu impacto visivel.
+	var inside: bool = pr.pos.x >= 0.0 and pr.pos.y >= 0.0 and pr.pos.x <= battle.map_size.x and pr.pos.y <= battle.map_size.y
+	if inside and not Game.reduced_impact():
+		var impact := ProjectileVfx.create_impact(entry.family, pr.pos, entry.theme.impact_accent)
+		if impact != null:
+			fx.add_child(impact)
+
+## ART-030: efeito visual da habilidade ativa. Devolve false quando nao ha sprite (o anel antigo continua).
+func _ability_effect(ability_id: String, ev: Dictionary) -> bool:
+	if Game.reduced_impact() or not HeroAbilityVfx.supports(ability_id) or HeroAbilityVfx.frames_for(ability_id) == null:
+		return false
+	if ability_id == "dominacao" and String(ev.get("text", "")) == "":
+		return false   # o sigilo vem do evento de texto no alvo; no evento active o anel antigo continua
+	var heading: Vector2 = _swing_dir_frame if _swing_dir_frame.length() > 0.01 else _active_dir
+	var color: Color = _divine_theme().impact_accent
+	var data_distance := float(Data.table("abilities").get(String(battle.hero.id), {}).get("distance", 3.5))
+	var effect := HeroAbilityVfx.create_effect(ability_id, ev.merged({"distance": data_distance}), color, heading)
+	if effect == null:
+		return false
+	if HeroAbilityVfx.kind(ability_id) == "follow":
+		if _ability_follow.has(ability_id) and is_instance_valid(_ability_follow[ability_id]):
+			_ability_follow[ability_id].queue_free()
+		hero_node.add_child(effect)
+		_ability_follow[ability_id] = effect
+	else:
+		fx.add_child(effect)
+	return true
+
+## Guarda de Lliira e Sobrecarga Mistica: o anel dura enquanto o efeito de jogo dura.
+func _sync_ability_follow() -> void:
+	for id in _ability_follow.keys():
+		var node: Node = _ability_follow[id]
+		var alive := is_instance_valid(node)
+		if alive:
+			alive = (battle.active_guard > 0 and battle.active_guard_t > 0.0) if id == "guarda_de_lliira" else battle.active_buff_t > 0.0
+		if not alive:
+			if is_instance_valid(node):
+				node.queue_free()
+			_ability_follow.erase(id)
+
 func _nova_effect(event: Dictionary) -> void:
 	var color: Color = _divine_theme().impact_accent
 	var pulse := RadiantPulseVfx.create_effect(event, color, Game.reduced_impact())
@@ -970,6 +1067,8 @@ func _nova_effect(event: Dictionary) -> void:
 		pulse = HourglassVfx.create_effect(event, color, Game.reduced_impact())
 	if pulse != null:
 		fx.add_child(pulse)
+	elif HeroAbilityVfx.covers_nova(String(event.get("weapon", ""))) and not Game.reduced_impact() and HeroAbilityVfx.frames_for(String(event.weapon)) != null:
+		return   # ART-030: o sprite da habilidade (evento active) substitui o anel
 	else:
 		_ring(event.pos, event.radius, color, RadiantPulseVfx.DURATION)
 
