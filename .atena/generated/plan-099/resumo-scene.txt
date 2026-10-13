@@ -1,0 +1,11 @@
+livre          molor        quadros=900 ms_medio=0.997 p95=3.112 max=6.480 inimigos=68 draws=66
+livre          parede=7s (arquivo: scene-livre.log)
+1nuc+0queim    molor        quadros=900 ms_medio=1.076 p95=1.755 max=4.025 inimigos=68 draws=66
+1nuc+0queim    parede=5s (arquivo: scene-1nuc+0queim.log)
+1nuc+1queim    molor        quadros=900 ms_medio=1.380 p95=3.544 max=7.174 inimigos=68 draws=66
+1nuc+1queim    parede=6s (arquivo: scene-1nuc+1queim.log)
+1nuc+3queim    molor        quadros=900 ms_medio=1.358 p95=3.385 max=7.211 inimigos=68 draws=66
+1nuc+3queim    parede=6s (arquivo: scene-1nuc+3queim.log)
+1nuc+7queim    molor        quadros=900 ms_medio=1.374 p95=3.548 max=8.125 inimigos=68 draws=66
+1nuc+7queim    parede=7s (arquivo: scene-1nuc+7queim.log)
+FIM

@@ -1,0 +1,63 @@
+{
+  "status": "PUBLISHED_REMOTE_SHA_VERIFIED",
+  "integration_commit": "ce2d259088a05201d288bd568a35fa4e4886e474",
+  "branch": "codex/erik-arlindo-integracao-2026-10-10",
+  "main_merge": "fast-forward",
+  "main_before": "bfdb5ca",
+  "main_after": "ce2d259088a05201d288bd568a35fa4e4886e474",
+  "preserved_other_session_changes": [
+    ".atena/backlog/BUGS.md",
+    ".atena/backlog/README.md",
+    ".atena/specs/INDEX.md",
+    ".atena/state/INDEX.md",
+    ".atena/state/plan.yaml",
+    "tests/test_playtest_fixes.gd",
+    "ui/hud.gd",
+    "ui/quest_panel.gd",
+    "ui/run.gd"
+  ],
+  "remote_url": "https://github.com/marizada86/nottgard-survivor.git",
+  "destination_branch": "main",
+  "push_executed": true,
+  "files": 105,
+  "bytes_approx": 29500000,
+  "ancestral_unpushed_commits": [
+    "3dd4970",
+    "cd5aab5",
+    "22bd1bf",
+    "beec8b2",
+    "bfdb5ca"
+  ],
+  "auto_review_rejection": "Sensitive egress of 105 files including generated screenshots/logs/assets to unverified external GitHub destination. General push authorization insufficient for exact payload/destination. Do not bypass.",
+  "exact_owner_question": "Authorize ce2d259 (105 files, about 29.5 MB) and its five unpushed main ancestors to github.com/marizada86/nottgard-survivor branch main, including configured build/release workflow, or keep merge local.",
+  "technical_checks": "suite zero failures, nine-stage smoke OK, 20 source hashes and 30 delivery links verified",
+  "human_playtest": "PENDING",
+  "prior_status": "LOCAL_COMMITTED_MERGED_PUSH_REJECTED_PENDING_EXACT_OWNER_APPROVAL",
+  "remote_sha": "ce2d259088a05201d288bd568a35fa4e4886e474",
+  "push_range": "60fd1ff..ce2d259",
+  "verification": "git push exit 0; git ls-remote refs/heads/main exactly matches integration commit",
+  "exact_owner_approval": {
+    "owner_reply": "atena, autorizado e aprovado, principalmente erik e arlindo",
+    "question": "Voce autoriza publicar os 105 arquivos (~29.5 MB) e cinco commits ancestrais em github.com/marizada86/nottgard-survivor, branch main, acionando o build/release?",
+    "integration_commit": "ce2d259088a05201d288bd568a35fa4e4886e474",
+    "files": 105,
+    "bytes_approx": 29500000,
+    "ancestral_unpushed_commits": [
+      "3dd4970",
+      "cd5aab5",
+      "22bd1bf",
+      "beec8b2",
+      "bfdb5ca"
+    ],
+    "destination": "https://github.com/marizada86/nottgard-survivor.git",
+    "branch": "main",
+    "build_release": "AUTHORIZED",
+    "scope": "Exact payload and destination presented after auto-review rejection; no additional changes included"
+  },
+  "workflow": {
+    "id": 38026139860,
+    "name": "Build and Release",
+    "status_at_check": "in_progress",
+    "url": "https://github.com/marizada86/nottgard-survivor/actions/runs/38026139860"
+  }
+}

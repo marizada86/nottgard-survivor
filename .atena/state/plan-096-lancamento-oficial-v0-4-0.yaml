@@ -1,0 +1,43 @@
+id: PLAN-096
+spec: SPEC-169
+spec_file: .atena/specs/SPEC-169-lancamento-oficial-da-v0-4-0.md
+mode: per-plan
+status: PREPARED_AWAITING_COMMIT_AND_NOTICE
+created: '2026-10-10'
+request_classification: PLAN_DEVIATION
+deviation_id: DEV-036
+authorization_verbatim: 'atena, agora vamos lançar a v0.4.0 oficialmente, prepare tudo para os playtesters'
+approval_basis: 'Dono escolheu (2026-10-10): fazer agora e voltar ao PLAN-071; por plano; incluir BUG-042 e MEC-064; manter o pre-lancamento latest.'
+checkpoint: B-004/S-009 (commit local dos documentos aguarda aprovacao)
+return:
+  plan: PLAN-071
+  state_file: .atena/state/plan-071-playtest-ranking.yaml
+  checkpoint_observed: B-006/S-011
+batches:
+  B-001: {title: 'Codigo da 0.4.0 (ja commitado por outra sessao em 602cef5)', steps: [S-001], status: DONE_LOCAL}
+  B-002: {title: 'Documentos dos testers e pacote', steps: [S-002, S-003, S-004, S-005, S-006], status: DONE_LOCAL}
+  B-003: {title: 'Verificacao e .exe local', steps: [S-007, S-008], status: DONE_LOCAL (S-008 exportado a pedido do dono em 2026-10-10)}
+  B-004: {title: 'Publicacao', steps: [S-009, S-010, S-011], status: PENDING_GATE}
+steps:
+  S-001: 'Conferido: 602cef5 (BUG-042, MEC-064, registros, piloto Kayron fora do jogo) commitado e publicado pelo dono em outra sessao; arvore limpa.'
+  S-002: 'CHANGELOG-0.4.0 (html e pdf): barra, eventos, pausa em abas, novo Quartel, questlog, avisos, nevoa 3% a 9%, Arlindo e Erik com arte propria.'
+  S-003: 'GUIA-FACIL-0.4.0 (html e pdf): teclas, pausa em abas, resumo.'
+  S-004: 'QUESTIONARIO-007 (md, html, pdf): perguntas para o que entrou depois de 2026-10-09.'
+  S-005: 'RELEASES.md e changelogs/README.md alinhados; EVID do lancamento.'
+  S-006: 'Pacote .atena/generated/v040-lancamento (3 PDFs, aviso do Discord, roteiro de conferencia).'
+  S-007: 'Checkout limpo de 602cef5 (= origin/main): suite, smoke, kit_test, mobile_buttons_check, controller_check, backlog_check.'
+  S-008: 'Exportar build/NottgardSurvivors-Playtest 0.4.0.exe de commit limpo (stamp_build, import, export).'
+  S-009: 'GATE: commit local dos documentos (aprovacao explicita).'
+  S-010: 'Conferir o CI do 602cef5 (run 38027372176) e os assets do latest; push dos documentos so se o dono quiser (republica o latest).'
+  S-011: 'Conferir o rodape 0.4.0 do .exe baixado e entregar o aviso pronto ao dono (envio e do dono).'
+gates:
+  dependencies: NO_NEW_DEPENDENCIES
+  new_art: NOT_REQUIRED
+  commit_push_build_export_notice: 'EXPLICIT_APPROVAL_EACH (git.local_commits, git.publish; aviso e do dono)'
+  other_sessions_changes: PRESERVE_UNTOUCHED
+  version_change: NOT_ALLOWED (0.4.0 refeita, sem 0.5.0)
+blocking_gaps: []
+return_to: PLAN-071 (B-006/S-011, active_plan sem alteracao)
+evidence: EVID-238
+verification: 'checkout limpo de 602cef5: suite 0 falhas; smoke ok; kit OK; controller_check 90/0; mobile_buttons_check 146/0; backlog_check 0 alertas; CI do 602cef5 success'
+not_performed: ['S-009 commit dos documentos', 'push dos documentos', 'aviso aos testers (dono)']

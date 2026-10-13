@@ -13,6 +13,7 @@ const NOTE_MARGIN := 24.0
 const HQ_SCREEN := preload("res://ui/hq_screen.tscn")
 const QueueScript := preload("res://core/evidence_queue.gd")
 var evidence_queue = QueueScript.new()
+var frame_stats := FrameStats.new()   # PLAN-099 (SPEC-172): tempo de quadro da run e do último minuto
 var _last_run: Dictionary = {}
 var _central: PanelContainer
 var _central_scroll: ScrollContainer
@@ -701,7 +702,7 @@ func _input(ev: InputEvent) -> void:
 # ------------------------------------------------------------------ contexto
 
 func context() -> Dictionary:
-	var ctx := {"tela": Game.screen_name, "build": Version.profile_slug(), "commit": Version.build_id()}
+	var ctx := {"tela": Game.screen_name, "build": Version.profile_slug(), "commit": Version.build_id(), "maquina": MachineInfo.short(), "quadros": frame_stats.line()}
 	var cs := get_tree().current_scene
 	if cs != null and cs.has_method("playtest_context"):
 		ctx.merge(cs.playtest_context())
@@ -1080,6 +1081,7 @@ func download_pending() -> void:
 		JavaScriptBridge.download_buffer(stats.to_utf8_buffer(), "estatisticas.log", "text/plain")
 
 func _process(_delta: float) -> void:
+	frame_stats.add(_delta)
 	if _playtest_bar != null:
 		_playtest_bar.visible = not _guide_open and not _note_open and not _qa_open
 	if _central != null and _central.visible:

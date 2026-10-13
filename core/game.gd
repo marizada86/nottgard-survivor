@@ -76,6 +76,7 @@ func _ready() -> void:
 	if save_notice != "":
 		logline(save_notice)
 	logline("Jogo iniciado v%s (%s)" % [Version.VERSION, Version.build_id()])
+	logline("Maquina: %s" % MachineInfo.short())   # PLAN-099 (SPEC-172)
 
 func ensure_input_actions() -> void:
 	# Substituir apenas bindings de controle; preservar teclado e mouse.

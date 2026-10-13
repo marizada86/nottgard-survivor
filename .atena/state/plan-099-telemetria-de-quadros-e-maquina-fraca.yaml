@@ -1,0 +1,39 @@
+id: PLAN-099
+spec: SPEC-172
+spec_file: .atena/specs/SPEC-172-telemetria-de-quadros-e-maquina-fraca-emulada.md
+mode: per-plan
+status: IMPLEMENTED_LOCAL_AWAITING_FIELD_DATA
+created: '2026-10-11'
+request_classification: PLAN_DEVIATION
+deviation_id: DEV-039
+authorization_verbatim: 'atena, vamos analisar o que podemos fazer sobre a fluidez em máquina fraca (EVID-240).'
+approval_basis: 'Dono escolheu: alvo notebook/PC antigo com Windows; alavancas A (telemetria) e F (emulacao); fazer agora e voltar ao PLAN-071; por plano (2026-10-11).'
+checkpoint: B-002/S-006 (concluido)
+return:
+  plan: PLAN-071
+  state_file: .atena/state/plan-071-playtest-ranking.yaml
+  checkpoint_observed: B-006/S-011
+batches:
+  B-001: {title: Telemetria no kit, steps: [S-001, S-002, S-003, S-004], status: DONE_LOCAL}
+  B-002: {title: Emulacao de maquina fraca, steps: [S-005, S-006], status: DONE_LOCAL}
+steps:
+  S-001: 'core/frame_stats.gd + tests/test_frame_stats.gd.'
+  S-002: 'core/machine_info.gd + tests/test_machine_info.gd.'
+  S-003: 'Ligar no Playtest (alimentar e contexto), run.gd (checkpoints minute e finish) e linha de log.'
+  S-004: 'Testes de integracao e bateria (suite, smoke, controller_check, mobile_buttons_check, kit_test).'
+  S-005: 'tools/perf_emulate.ps1: afinidade, prioridade e queimadores; rodar em 3 niveis.'
+  S-006: 'EVID-241, cartao TOOL-007, indices e retorno ao PLAN-071.'
+gates:
+  dependencies: NO_NEW_DEPENDENCIES
+  gameplay_balance_art_audio_version: NOT_ALTERED
+  stats_contract_v1: UNCHANGED
+  privacy: 'sem usuario, pasta, host nem id de maquina'
+  commit_push_build_export: NOT_AUTHORIZED
+  other_sessions_changes: PRESERVE_UNTOUCHED
+  files_expected: [core/frame_stats.gd, core/machine_info.gd, core/playtest.gd, ui/run.gd, core/game.gd, tools/perf_emulate.ps1]
+blocking_gaps: []
+return_to: PLAN-071 (B-006/S-011, active_plan sem alteracao)
+commit_push_build_export: NOT_PERFORMED
+evidence: EVID-241
+verification: 'suite 0 falhas (2 mutacoes detectadas), smoke ok, controller_check 94/0, mobile_buttons_check 146/0, kit_test OK; emulacao sim ate 8x: passo 5,2 a 7,2 ms (31 a 43% do quadro); scene nao e estimativa valida (prioridade das threads graficas)'
+discarded: 'primeira rodada de emulacao (-Niveis lido como 137 queimadores); parametro corrigido'

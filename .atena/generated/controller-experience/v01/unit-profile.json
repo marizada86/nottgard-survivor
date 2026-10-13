@@ -1,0 +1,50 @@
+{
+	"achievements": {},
+	"cleared": {},
+	"codex": {
+		"enemies": {},
+		"items": {},
+		"weapons": {}
+	},
+	"coins": 0,
+	"ecos": {},
+	"hqs_seen": {},
+	"name": "",
+	"relics": {},
+	"settings": {
+		"abyss_marks": {},
+		"aim": "auto",
+		"ambience_muted": false,
+		"ambience_volume": 0.75,
+		"controller": {
+			"bindings": {
+				"hero_active": 7
+			},
+			"family": "ps5"
+		},
+		"difficulty": 0,
+		"fullscreen": false,
+		"music_muted": false,
+		"music_volume": 0.8,
+		"resolution": "1280x720",
+		"sfx_muted": false,
+		"sfx_volume": 0.9,
+		"volume": 0.7,
+		"window_mode": "windowed"
+	},
+	"stats": {
+		"best_time": {},
+		"boss_kills": {},
+		"bosses_total": 0,
+		"chests_total": 0,
+		"deaths": 0,
+		"elites_total": 0,
+		"gold_total": 0,
+		"heroes_played": {},
+		"kills_total": 0,
+		"reached": {},
+		"runs": 0
+	},
+	"upgrades": {},
+	"welcome_seen": false
+}

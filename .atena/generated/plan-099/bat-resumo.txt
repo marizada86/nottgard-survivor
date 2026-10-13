@@ -1,0 +1,8 @@
+suite rc=0 dur=61s
+smoke rc=0 dur=22s
+controller_check rc=0 dur=73s
+mobile_buttons_check rc=0 dur=14s
+kit_test rc=0 dur=4s
+audit_projeto rc=0 dur=2s
+backlog_check rc=0 dur=1s
+FIM

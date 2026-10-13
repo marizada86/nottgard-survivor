@@ -27,6 +27,7 @@ previous_plan_cursor:
   current: 'PLAN-059 (SPEC-125) commitado e publicado (05264f0, 1392627) em 2026-10-05; o playtest decide Docas, Molor e fases finais.'
   next: 'Retomar PLAN-053 (imagens, Shu: attack_02, death_03, death_04) e/ou abrir spec de balanceamento BAL-018 (precisa de linha de base do bot por heroi). Push da main (1 a 3 commits a frente) exige aprovacao.'
 local_git_receipts:
+  - {plan: PLAN-097, also: PLAN-098, request_classification: PLAN_DEVIATION, deviation: [DEV-037, DEV-038], authorization: "atena, commit e push (2026-10-11)", branch: main, commits: [76d444c, 55a8d85, b83f188], pushed: true, push_range: "602cef5..b83f188", evidence: [EVID-239, EVID-240], scope: "76d444c = BUG-043 foco do controle ao comprar melhoria; 55a8d85 = desempenho (can_stand indexado, grade de alcance por componentes, sonda); b83f188 = registros", verification: "checkout limpo do HEAD (git archive): testes 0 falhas, smoke ok; antes, na arvore: suite 0 falhas, controller_check 94/0, mobile_buttons_check 146/0, kit_test OK, backlog_check 0 alertas", ci: "Build and Release disparado pelo push; resultado nao verificado aqui (gh ausente)", note: "O release latest passa a apontar para b83f188; a versao segue 0.4.0. Ficaram fora, de outra sessao: SPEC-169/PLAN-096/DEV-036, documentos da 0.4.0 e o rank de contribuicoes (CONTRIBUICOES-PLAYTESTERS.md). Este recibo vai no proximo commit."}
   - {plan: PLAN-071, request_classification: PLAN_DEVIATION, deviation: [DEV-029, DEV-030, DEV-031, DEV-032, DEV-033], authorization: "atena, 1 (DEV-029); pedidos explicitos de execucao nos demais (2026-10-10); commit (2026-10-10)", branch: main, commits: [8afd6b0, 6f4d488, d4c6cfe, eaa6196, 60fd1ff, 3dd4970], pushed: false, evidence: [EVID-232, EVID-233, EVID-234, EVID-235], scope: "BUG-040 moldura de detalhe (recorte, margem e rolagem), CA e CAM sem balao na HUD e na ficha C, BUG-041 anel de foco do slot, fade e dissolucao entre jogo e janelas (MEC-003)", verification: "suite 0 falhas; smoke ok; kit_test OK; mobile_buttons_check 146/0; controller_check 90/0; backlog_check", note: "Sem push, exportacao nem aviso aos testers. Todos aguardam playtest do dono. Mudancas de outra sessao (core/playtest.gd, ART-047) em commits proprios."}
   - {plan: PLAN-093, request_classification: PLAN_DEVIATION, deviation: DEV-028, authorization: "atena vamos para o item 2 (lote 2 da nova UI); por plano; direcao visual e escopo aprovados (2026-10-09)", branch: main, commits: [72de2df], pushed: false, evidence: EVID-231, scope: "Quartel no UiKit, Codex no Catalog, Opcoes no OptionsPanel (menu.gd, menu.tscn, ui_kit.gd, options_panel.gd), testes, capturas, indices", verification: "suite 0 falhas; mobile_buttons_check 146/0; controller_check --headless 90/0; smoke ok; kit_test OK; hash do save real antes = depois", note: "Sem push, exportacao nem aviso aos testers. Titulo sem mudanca por escolha. tools/build_scenes.gd (gerador antigo) ainda monta os 21 nos removidos; nao rodado."}
   - {plan: investigacao-falhas-antigas e indices, batch: "push", request_classification: PLAN_DEVIATION, authorization: "atena push (2026-10-09)", branch: main, commits: [b7f2351, ee5b30e, 587d0b5, "este recibo"], pushed: true, push_range: "f64f1f0..este-recibo", scope: "b7f2351 = verificacoes nao gravam mais no save real, indices de aba por nome, expectativa de recusa atualizada (TOOL-005, EVID-230); 587d0b5 = indices de planos e specs e status velhos corrigidos", verification: "controller_check --headless 90/0, mobile_buttons_check 146/0, smoke ok, backlog_check sem alertas; so ferramentas e documentos, nenhum codigo do jogo", ci: "Build and Release disparado pelo push; resultado nao verificado aqui (gh ausente)", note: "O release latest passa a apontar para este push; a versao segue 0.4.0 e o jogo publicado e o mesmo do push anterior (so ferramentas e documentos mudaram)."}
@@ -106,6 +107,19 @@ suspension:
   suspended_plan_state_file: '.atena/state/plan-053-imagens.yaml'
   note: 'PLAN-053 retomado; biomas ate Pilares completos localmente. S-007 onda cortante completa como candidata; aguardando gate humano N03. PLAN-071 preservado. PLAN-071 suspenso com retorno acima.'
 deferred_requests:
+  - id: DEV-039
+    request: "Fluidez em maquina fraca (EVID-240): telemetria de quadros e maquina no kit de playtest e emulacao de maquina fraca."
+    request_classification: PLAN_DEVIATION
+    status: IMPLEMENTED_LOCAL_AWAITING_FIELD_DATA
+    evidence: EVID-241
+    verification: 'suite 0 falhas; smoke ok; controller_check 94/0; mobile_buttons_check 146/0; kit_test OK; emulacao sim ate 8x: passo 31 a 43% do quadro'
+    note: 'Sem commit, push, exportacao nem aviso. Telemetria so chega ao tester em build nova.'
+    recorded: "2026-10-11"
+    authorization_verbatim: "atena, vamos analisar o que podemos fazer sobre a fluidez em máquina fraca (EVID-240)."
+    route: "Dono escolheu: alvo notebook/PC antigo Windows; alavancas A e F; fazer agora e voltar ao PLAN-071 (B-006/S-011 inalterado); por plano. Sem commit, push, exportacao nem aviso aos testers."
+    plan: PLAN-099
+    spec: SPEC-172
+    scope: "core/frame_stats.gd, core/machine_info.gd, core/playtest.gd, ui/run.gd, core/game.gd, tools/perf_emulate.ps1, testes"
   - id: DEV-038
     request: 'Bateria de testes do release candidate 0.4.0 e revisao do que nunca foi otimizado, priorizando o mais antigo.'
     request_classification: PLAN_DEVIATION
@@ -134,6 +148,19 @@ deferred_requests:
     bug: BUG-043
     scope: 'ui/menu.gd (_fill_upgrades), tests/test_quartel.gd'
     cause: '_fill_upgrades destroi todas as linhas, inclusive o botao focado, e nao devolve o foco a nenhum botao novo.'
+  - id: DEV-036
+    request: 'Lancar a v0.4.0 oficialmente e preparar tudo para os playtesters (documentos, verificacao, .exe local e push).'
+    request_classification: PLAN_DEVIATION
+    status: PREPARED_AWAITING_COMMIT_AND_NOTICE
+    evidence: EVID-238
+    verification: 'checkout limpo de 602cef5: suite 0 falhas; smoke ok; kit OK; controller_check 90/0; mobile_buttons_check 146/0; backlog_check 0 alertas; CI do 602cef5 success; latest = 602cef5'
+    recorded: '2026-10-10'
+    authorization_verbatim: 'atena, agora vamos lançar a v0.4.0 oficialmente, prepare tudo para os playtesters'
+    route: 'Dono escolheu: fazer agora e voltar ao PLAN-071 (B-006/S-011 inalterado); por plano; incluir BUG-042 e MEC-064; manter o pre-lancamento latest. Commit local, push, exportacao e aviso seguem com aprovacao explicita cada.'
+    plan: PLAN-096
+    spec: SPEC-169
+    scope: 'changelogs (html e pdf), questionario 007, RELEASES.md, pacote .atena/generated/v040-lancamento, verificacao em checkout limpo, .exe local; nenhum codigo do jogo'
+    note: 'VERSION segue 0.4.0. HEAD 602cef5 esta 1 commit a frente de origin/main (ce2d259, CI verde).'
   - id: DEV-035
     request: 'Questlog na direita do jogo, sem interface e translucido, para o jogador nao perder informacao na tela (resolve a pendencia 1 da EVID-236).'
     request_classification: PLAN_DEVIATION

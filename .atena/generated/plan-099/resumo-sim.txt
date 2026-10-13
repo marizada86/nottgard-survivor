@@ -1,0 +1,16 @@
+livre          molor        passos=3600 us/passo=791.9 p95=1425 max=10390 fiel=true
+livre          shedaklah    passos=3600 us/passo=759.4 p95=1183 max=2544 fiel=true
+livre          parede=16s (arquivo: sim-livre.log)
+1nuc+0queim    molor        passos=3600 us/passo=819.8 p95=1470 max=10192 fiel=true
+1nuc+0queim    shedaklah    passos=3600 us/passo=780.7 p95=1251 max=2457 fiel=true
+1nuc+0queim    parede=15s (arquivo: sim-1nuc+0queim.log)
+1nuc+1queim    molor        passos=3600 us/passo=1623.1 p95=1651 max=65745 fiel=true
+1nuc+1queim    shedaklah    passos=3600 us/passo=1519.6 p95=1257 max=35045 fiel=true
+1nuc+1queim    parede=27s (arquivo: sim-1nuc+1queim.log)
+1nuc+3queim    molor        passos=3600 us/passo=3150.4 p95=1613 max=103270 fiel=true
+1nuc+3queim    shedaklah    passos=3600 us/passo=3081.3 p95=1241 max=108005 fiel=true
+1nuc+3queim    parede=52s (arquivo: sim-1nuc+3queim.log)
+1nuc+7queim    molor        passos=3600 us/passo=5217.1 p95=1591 max=254503 fiel=true
+1nuc+7queim    shedaklah    passos=3600 us/passo=7186.6 p95=2120 max=492717 fiel=true
+1nuc+7queim    parede=104s (arquivo: sim-1nuc+7queim.log)
+FIM

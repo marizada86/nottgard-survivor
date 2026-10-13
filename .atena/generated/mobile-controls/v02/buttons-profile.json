@@ -1,0 +1,75 @@
+{
+	"achievements": {
+		"stage_reached_dagruve": true,
+		"stage_reached_docas": true,
+		"stage_reached_durao": true,
+		"stage_reached_feng_tu": true,
+		"stage_reached_goranthis": true,
+		"stage_reached_molor": true,
+		"stage_reached_pilares": true,
+		"stage_reached_shedaklah": true,
+		"stage_reached_shendilavri": true
+	},
+	"cleared": {},
+	"codex": {
+		"enemies": {},
+		"items": {},
+		"weapons": {}
+	},
+	"coins": 9900,
+	"ecos": {},
+	"hqs_seen": {
+		"hqn_01": true,
+		"hqn_02": true,
+		"hqn_03": true,
+		"hqn_04": true,
+		"hqn_05": true,
+		"hqn_06": true,
+		"hqn_07": true,
+		"hqn_08": true,
+		"hqn_09": true,
+		"hqn_10": true,
+		"hqn_11": true,
+		"hqn_12": true,
+		"hqn_13": true,
+		"hqn_14": true
+	},
+	"name": "Teste botoes mobile",
+	"relics": {},
+	"settings": {
+		"abyss_marks": {},
+		"aim": "auto",
+		"ambience_muted": true,
+		"ambience_volume": 0.25,
+		"barks": false,
+		"difficulty": 1,
+		"fullscreen": false,
+		"music_muted": true,
+		"music_volume": 0.25,
+		"reduced_impact": true,
+		"resolution": "1280x720",
+		"sfx_muted": true,
+		"sfx_volume": 0.25,
+		"volume": 0.25,
+		"window_mode": "windowed"
+	},
+	"stats": {
+		"best_time": {},
+		"boss_kills": {},
+		"bosses_total": 0,
+		"chests_total": 0,
+		"deaths": 0,
+		"elites_total": 0,
+		"gold_total": 0,
+		"heroes_played": {},
+		"kills_total": 0,
+		"reached": {
+			"dagruve": true
+		},
+		"runs": 0
+	},
+	"upgrades": {
+		"forca_bruta": 1
+	},
+	"welcome_seen": true
+}

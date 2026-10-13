@@ -1,12 +1,12 @@
 # QUESTIONARIO-007 — Versão 0.4.0
 
-Criado em 2026-10-08 (PLAN-081 B-008); **refeito em 2026-10-09** (PLAN-083 B-006: segredos nos oito mapas e ofertas pelo teclado; a versão continua 0.4.0). Arquivo para os testers: `QUESTIONARIO Rápido - 007.pdf` (fonte em `.html`, mesma pasta; gerado com
+Criado em 2026-10-08 (PLAN-081 B-008); **refeito em 2026-10-09 e ampliado em 2026-10-10 (perguntas 13 a 16: eventos, barra e questlog, pausa em abas, névoa)** (PLAN-083 B-006: segredos nos oito mapas e ofertas pelo teclado; a versão continua 0.4.0). Arquivo para os testers: `QUESTIONARIO Rápido - 007.pdf` (fonte em `.html`, mesma pasta; gerado com
 `chrome --headless --print-to-pdf`; uma página A4). Cobre **0.3.1 → 0.4.0**: 4 linhas de dificuldade por faixa de mapas (Fácil demais · Na medida · Difícil demais · Não cheguei),
-"onde e quando morreu pela primeira vez", 12 frases com Concordo · Em parte · Discordo · Não notei, 3 prioridades, comentário livre e nota 0 a 10.
+"onde e quando morreu pela primeira vez", 16 frases com Concordo · Em parte · Discordo · Não notei, 3 prioridades, comentário livre e nota 0 a 10.
 Pergunta nova no cabeçalho: com o que jogou (teclado e mouse, controle, celular).
 
 ## Regra de leitura
-- Perguntas **2, 5, 7 e 9** são invertidas: Concordo = problema.
+- Perguntas **2, 5, 7, 9 e 16** são invertidas: Concordo = problema.
 - Demais: "Concordo" e "Em parte" validam; "Discordo" pede ajuste. "Não notei" = sem exposição.
 - Decidir só com duas respostas independentes. Mudar número de balanceamento só com a rodada do bot por herói (EVID-208 é a linha de base).
 - A pergunta 11 mistura controle e celular de propósito (aceite físico pendente, MEC-049 e MEC-052): se vier "Discordo", perguntar qual dos dois.
@@ -25,5 +25,9 @@ Pergunta nova no cabeçalho: com o que jogou (teclado e mouse, controle, celular
 | 10 | Ficha C, quests, HUD sem sobreposição | BUG-034 a BUG-037, MEC-053 a MEC-056 (SPEC-147) |
 | 12 | Arlindo Orlando e Erik Blackthorn: arma, habilidade, passiva e desbloqueio | MEC-062, MEC-063 (SPEC-160) |
 | 11 | Controle Xbox/PlayStation, toque no celular e ofertas só com W/A, S/D e Enter | MEC-052, MEC-049, ART-037 (ícones de controle), MEC-001 (SPEC-156) |
+| 13 | Seis eventos aleatórios novos | MEC-005 (SPEC-164) |
+| 14 | Barra de progresso e questlog à direita | MEC-002 (SPEC-163), MEC-064 (SPEC-168), BUG-042 (SPEC-167) |
+| 15 | Menu de pausa em abas, Quartel no novo padrão e fade | MEC-003 (SPEC-165, SPEC-166, EVID-235) |
+| 16 | Névoa das bordas e Maré de Névoa | MEC-059, MEC-060 (SPEC-158) |
 
 Perguntas abertas para a conversa: a fase em que o Manzi viu o lago (indicador do Estige, MEC-056); se o Daniel viu o ranking atualizar (MEC-057).

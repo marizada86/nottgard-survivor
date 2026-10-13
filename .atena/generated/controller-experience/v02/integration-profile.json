@@ -1,0 +1,89 @@
+{
+	"achievements": {
+		"cronista_de_nottgard": true
+	},
+	"cleared": {
+		"dagruve": true,
+		"docas": true
+	},
+	"codex": {
+		"enemies": {
+			"arbusto_quebravel": true,
+			"caixote_quebravel": true,
+			"candelabro_quebravel": true,
+			"carroca_quebravel": true,
+			"cultista_adaga": true,
+			"cultista_arqueiro": true,
+			"cultista_cajado": true,
+			"slime_corrosivo": true,
+			"zumbi": true
+		},
+		"items": {
+			"controller_test_0": true,
+			"controller_test_1": true
+		},
+		"weapons": {
+			"espada_sombria": true
+		}
+	},
+	"coins": 300,
+	"ecos": {},
+	"hqs_seen": {
+		"hqn_01": true,
+		"hqn_02": true,
+		"hqn_03": true,
+		"hqn_04": true,
+		"hqn_05": true,
+		"hqn_06": true,
+		"hqn_07": true,
+		"hqn_08": true,
+		"hqn_09": true,
+		"hqn_10": true,
+		"hqn_11": true,
+		"hqn_12": true,
+		"hqn_13": true,
+		"hqn_14": true
+	},
+	"name": "Controle local",
+	"relics": {},
+	"settings": {
+		"abyss_marks": {},
+		"aim": "mouse",
+		"ambience_muted": false,
+		"ambience_volume": 0.75,
+		"controller": {},
+		"difficulty": 0.0,
+		"fullscreen": false,
+		"music_muted": false,
+		"music_volume": 0.8,
+		"resolution": "1280x720",
+		"sfx_muted": false,
+		"sfx_volume": 0.9,
+		"volume": 0.7,
+		"window_mode": "windowed"
+	},
+	"stats": {
+		"best_time": {
+			"dagruve": 0.866666666666668
+		},
+		"bets_won_total": 0,
+		"boss_kills": {},
+		"bosses_total": 0,
+		"chests_total": 0,
+		"deaths": 0.0,
+		"elites_total": 0,
+		"gold_total": 0,
+		"heroes_played": {
+			"durvall": true
+		},
+		"kills_total": 0,
+		"loyalty_total": 0,
+		"reached": {
+			"dagruve": true
+		},
+		"rituals_total": 0,
+		"runs": 1
+	},
+	"upgrades": {},
+	"welcome_seen": true
+}

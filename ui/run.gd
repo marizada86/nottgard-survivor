@@ -87,6 +87,7 @@ func _ready() -> void:
 	stats_ctx.task_id = String(Game.profile.data.settings.get("playtest_task", "general"))
 	if Version.evidence_enabled():
 		battle.run_record.begin(battle, stats_ctx, "web" if OS.has_feature("web") else "windows", Game.qa_sandbox)
+	Playtest.frame_stats.reset()   # PLAN-099: a estatistica de quadros e por run
 	Playtest.record_run(battle)
 	if battle.state == "revive_offer":
 		hud.show_revive_offer(battle)
@@ -556,7 +557,7 @@ func _physics_process(dt: float) -> void:
 func _process(dt: float) -> void:
 	if battle != null and not _result_shown and battle.run_time >= _stats_checkpoint_at:
 		_stats_checkpoint_at = battle.run_time + 60.0
-		battle.run_record.checkpoint(battle, "minute")
+		battle.run_record.checkpoint(battle, "minute", {"quadros": Playtest.frame_stats.lap()})   # PLAN-099
 		Playtest.record_run(battle)
 	if hero_node == null:
 		return
@@ -593,7 +594,7 @@ func _show_result() -> void:
 	get_tree().paused = false
 	var res := battle.result()
 	var outcome := "abandoned" if battle.death_reason == "abandoned" else "extracted" if battle.extracted else "won" if res.won else "dead"
-	battle.run_record.checkpoint(battle, "finish")
+	battle.run_record.checkpoint(battle, "finish", {"quadros_total": Playtest.frame_stats.total(), "maquina": MachineInfo.describe()})   # PLAN-099
 	Playtest.record_run(battle, outcome, true)
 	Game.finish_run(res)
 	Sfx.stop_ambience()

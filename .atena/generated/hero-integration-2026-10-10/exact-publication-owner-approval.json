@@ -1,0 +1,12 @@
+{
+  "owner_reply": "atena, autorizado e aprovado, principalmente erik e arlindo",
+  "question": "Voce autoriza publicar os 105 arquivos (~29.5 MB) e cinco commits ancestrais em github.com/marizada86/nottgard-survivor, branch main, acionando o build/release?",
+  "integration_commit": "ce2d259088a05201d288bd568a35fa4e4886e474",
+  "files": 105,
+  "bytes_approx": 29500000,
+  "ancestral_unpushed_commits": ["3dd4970", "cd5aab5", "22bd1bf", "beec8b2", "bfdb5ca"],
+  "destination": "https://github.com/marizada86/nottgard-survivor.git",
+  "branch": "main",
+  "build_release": "AUTHORIZED",
+  "scope": "Exact payload and destination presented after auto-review rejection; no additional changes included"
+}
