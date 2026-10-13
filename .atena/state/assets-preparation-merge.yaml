@@ -1,0 +1,21 @@
+version: 1
+plan: PLAN-053
+revision: assets-preparation-merge/v01
+classification: IN_PLAN
+status: IN_PROGRESS_S-001
+mode: per-plan
+approval_status: APPROVED_EXPLICITLY
+owner_request: "atena, continuar implementando assets gerados pelo chatgpt"
+owner_choices: {route: "Mesclar a branch inteira", approval: "Por plano"}
+approved: "2026-10-13"
+spec: .atena/specs/SPEC-121-retomada-fila-imagens/assets-preparation-merge-v01.md
+source_branch: codex/assets-preparation-2026-10-10
+ordered_steps: [S-001, S-002, S-003, S-004]
+current_step: S-001
+current_step_position: 1
+completed_steps: 0
+total_steps: 4
+checkpoint: S-001/MERGE_IN_ISOLATED_WORKTREE
+content_state: "CANON v01 (lettering e cursores, ja admitido na branch); DRAFT (demais)"
+git_publication_export: NOT_AUTHORIZED
+return_plan: {id: PLAN-071, checkpoint: B-006/S-011, preserved: true}
