@@ -8,14 +8,16 @@ func run() -> Array:
 		tree.root.add_child(view)
 		view.apply_hero(hero)
 		var frames: SpriteFrames = view.sprite.sprite_frames
-		var expected := {&"idle": 4, &"move_e": 7 if hero == "erik" else 6, &"move_se": 6, &"move_s": 6, &"move_ne": 5 if hero == "erik" else 6, &"move_n": 6, &"attack": 4, &"active": 6, &"death": 6}
+		var expected := {&"idle": 4, &"move_e": 7 if hero == "erik" else 6, &"move_se": 6, &"move_s": 6, &"move_ne": 6, &"move_n": 6, &"attack": 4, &"active": 6, &"death": 6}
+		if view.cell_of(hero) != Vector2i(512, 512) or not is_equal_approx(view.sprite.offset.y, -192.0):
+			failures.append("%s: célula/base da arte admitida incorreta" % hero)
 		for animation in expected:
 			if not frames.has_animation(animation) or frames.get_frame_count(animation) != expected[animation]:
 				failures.append("%s/%s: contagem incorreta" % [hero, animation])
 				continue
 			for index in expected[animation]:
 				var texture: AtlasTexture = frames.get_frame_texture(animation, index)
-				if not texture.atlas.resource_path.begins_with("res://assets/animations/heroes/%s/" % hero) or texture.region.end.x > texture.atlas.get_width():
+				if not texture.atlas.resource_path.begins_with("res://assets/animations/heroes/%s/" % hero) or texture.region.end.x > texture.atlas.get_width() or texture.region.end.y > texture.atlas.get_height() or texture.region.size != Vector2(512, 512):
 					failures.append("%s/%s: frame usa outra arte ou excede a tira" % [hero, animation])
 		for action in [&"attack", &"active"]:
 			view.play_action(action)

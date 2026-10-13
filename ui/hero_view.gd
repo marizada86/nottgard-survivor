@@ -4,8 +4,8 @@ extends Node2D
 
 const CELL := Vector2i(256, 384)
 ## Wider source cells keep Erik's torch and Arlindo's spell inside the frame.
-const HERO_SOURCE_CELL := {&"arlindo": Vector2i(384, 384), &"erik": Vector2i(384, 384)}
-const HERO_WALK_FRAME_COUNTS := {&"erik": {&"move_e": 7, &"move_ne": 5}}
+const HERO_SOURCE_CELL := {&"arlindo": Vector2i(512, 512), &"erik": Vector2i(512, 512)}
+const HERO_WALK_FRAME_COUNTS := {&"erik": {&"move_e": 7, &"move_ne": 6}}
 const DISPLAY_HEIGHT := 72.0
 ## A âncora é o pixel mais baixo da arte (ponta do pé da frente); erguer a sombra põe o corpo no meio dela.
 const SHADOW_LIFT := 0.4
@@ -15,7 +15,7 @@ const SHADOW_RADIUS_PER_HEIGHT := 0.2
 const HERO_FEET_Y := {
 	&"korrak": 350.0, &"kayron": 376.0, &"sylas": 376.0, &"maelor": 364.0, &"nyrelia": 368.0,
 	&"durvall": 376.0, &"zynara": 376.0, &"bromnor": 364.0, &"leoric": 368.0, &"brook": 368.0,
-	&"arlindo": 368.0, &"erik": 368.0,
+	&"arlindo": 448.0, &"erik": 448.0,
 }
 ## SPEC-154 (BUG-029): tiras pré-reduzidas para o tamanho de tela, por herói. `dir` = pasta das tiras reduzidas e `factor` = redução
 ## sobre a célula 256x384 (altura em tela / altura da arte, ou o dobro). Sem entrada vale o conjunto original. Reverter = apagar a entrada.
@@ -341,6 +341,12 @@ func _draw() -> void:
 		body = Color(1, 0.6, 0.6)
 	if hero_texture != null and not _has_animation:
 		var tint := Color(0.35, 0.35, 0.4, 0.65) if dead else (Color(1.5, 0.75, 0.75) if flash else Color.WHITE)
+		if HERO_SOURCE_CELL.has(StringName(_active_hero_id)):
+			var scale_factor := display_scale(_active_hero_id)
+			var texture_size := Vector2(hero_texture.get_size()) * scale_factor
+			var baseline := float(HERO_FEET_Y[StringName(_active_hero_id)]) * scale_factor
+			draw_texture_rect(hero_texture, Rect2(Vector2(-texture_size.x * 0.5, -baseline), texture_size), false, tint)
+			return
 		var height := 72.0
 		var width := height * float(hero_texture.get_width()) / float(hero_texture.get_height())
 		draw_texture_rect(hero_texture, Rect2(-width * 0.5, -height, width, height), false, tint)
