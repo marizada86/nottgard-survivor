@@ -784,8 +784,8 @@ assets_main_publication_2026_10_13:
   mode: per-plan
   approval_status: APPROVED_EXPLICITLY
   owner_reply: 'atena, aprovado commit e push na main'
-  status: IN_PROGRESS
-  checkpoint: G-001/COMMIT_GROUPS
+  status: VALIDATED_READY_FOR_MAIN_PUSH
+  checkpoint: G-003/MAIN_FF_AND_PUSH
   destination: origin/main
   canonical_promotion: false
   return_plan: PLAN-071

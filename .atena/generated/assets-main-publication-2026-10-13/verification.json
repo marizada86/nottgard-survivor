@@ -1,0 +1,524 @@
+{
+  "status": "PASS",
+  "validated_commit": "02c9903de74eec9eb9ab2d7da9de325f0e436ad6",
+  "runtime_hashes": {
+    "assets/animations/heroes/arlindo/active.png": "5996728502f5468dbdd7082ec48d7c3c773dc7cb5cd9ca3398a9c73be9b38760",
+    "assets/animations/heroes/arlindo/attack.png": "73ffd76cf87be5a3d6f14dbad6620e872104e6c818d80e41ca4ecadd513a73c7",
+    "assets/animations/heroes/arlindo/death.png": "5024a5ee5f895e940e46ddf9caece4fe03b906e7dd194c622b7f766881912290",
+    "assets/animations/heroes/arlindo/idle.png": "081a9f64aea94d0524e99c36ceca2a5383e769586ffd3872715502c1521ad630",
+    "assets/animations/heroes/arlindo/move_e.png": "a290e66dfa258c92a43926ebcebfabe736ff8d89323efa5dacb5f844c4071a0c",
+    "assets/animations/heroes/arlindo/move_n.png": "89e481f6266582454dbc25d2a93a5d64f1ed262d0b23883d1a6bfcb1ce1e3716",
+    "assets/animations/heroes/arlindo/move_ne.png": "8f222058de1121dbe53ecb028d780790cfa2b58338cdcf5d6cebee69a74b74b0",
+    "assets/animations/heroes/arlindo/move_s.png": "81b2bfb3d241181f2c3f5e0f90d4a40b14acf70c49640885005a56719ad3fa06",
+    "assets/animations/heroes/arlindo/move_se.png": "8ab3cdebdcd06831af5c9d62650049e05f9c865c1411247968ca6cef4fc4db48",
+    "assets/animations/heroes/erik/active.png": "cf3f1915f2ab2b69fce4ac79443352089bda9a227327f850bbae5e3c995c748d",
+    "assets/animations/heroes/erik/attack.png": "4114f785c6e76099f2cd1506aa2b3e6b4a9a5d0a29d7010f92fa6e9309b71aff",
+    "assets/animations/heroes/erik/death.png": "0029d353e694d9e2ed279dcad356ef350fa0fca3910461157211228e60640444",
+    "assets/animations/heroes/erik/idle.png": "90d63b3d90e295cb04cda2cdfb066bf904b03375065906a93d4d1289f351171b",
+    "assets/animations/heroes/erik/move_e.png": "ab9d88d33dff2d24aff4a347facacc0609e428c23c3be3aa9ad35045765f4cc7",
+    "assets/animations/heroes/erik/move_n.png": "b154ec40e2d0deb95a563e68a9fc9e7f2161f98bfabf8203de53e09eb4b5add7",
+    "assets/animations/heroes/erik/move_ne.png": "34cb92eb79b64f5a6f46d01f5045daa9c690d13642b6f8d2f056ad37ec243604",
+    "assets/animations/heroes/erik/move_s.png": "9dd5a9702cedc755a32459017584aec5ceec40480d159fd5bdf85198a058d346",
+    "assets/animations/heroes/erik/move_se.png": "8d82004c4e377c5b02eee24465e7697b4486d29e9c026991524455025a30c595",
+    "assets/heroes/arlindo.png": "e36ec1260efe5fb42b724877a40f67030c4c1a742bd0cc1f6d327ea2092239cc",
+    "assets/heroes/erik.png": "7c42c7afc8b0488f24c491b68e46b76a594e0d6ab6e9ed6b023b1810088b629f",
+    "assets/vfx/ampulheta_silencio.png": "b8f8460b1817c09de792210369c7e5d0a996a56b6a26fc309a0f9edd7ed9cb37",
+    "assets/vfx/pulso_radiante.png": "2821fd1696a5b3fb01bfdd0a0b1fca99f061a8ed7b716e4443614c7e5fe2fe8b",
+    "core/hourglass_vfx.gd": "602c0a8e75dc500729128dcb18e2fd8fb41129861538e24d47f8f3758a2c5856",
+    "core/radiant_pulse_vfx.gd": "370dcc35c1defa1042023102c76391ead9b63b64eba8d9c34fe45e2a702649fa",
+    "tests/test_animation_assets.gd": "d919dde0a89b6c89484d88f9794c3a1455e050a54d4e9b61d3e76f330399a250",
+    "tests/test_hero_own_art.gd": "cdb1c030344353aa9aea7eb9aab0b55229e6988e5a2f6abd8e404234ea6f75e9",
+    "tests/test_hourglass_vfx.gd": "08c24b82e491540cf81a191c082c2aa9b3cad02f2b4afbfcca52f223473410f2",
+    "tests/test_radiant_pulse_vfx.gd": "b914fe6b5b5966d4b9ff99060e9779b3017bdc170a6940b1d4226aa7b86ef1b2",
+    "ui/hero_view.gd": "25c8d1460c69a134eda672555b669020efe18228a51bac131ca938e984489c16",
+    "ui/run.gd": "9d9a0b8b0314880ea9005ae1274eb7eca86355cd349e6ed8edc8e02f2ae92524"
+  },
+  "qa_files_published": [],
+  "artifact_paths_in_tree": true,
+  "maximum_changed_blob_bytes": 2645551,
+  "whitespace_exception": "Two blank-at-EOF warnings in recovered historical provenance markdown; original content preserved.",
+  "human_playtest": "PROCEDURE_NOT_REPORTED",
+  "canonical_promotion": false,
+  "links": [
+    {
+      "document": ".atena/evidence/ampulheta-admission-2026-10-13.md",
+      "target": ".atena/specs/SPEC-121-retomada-fila-imagens/ampulheta-admission-v01.md",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/ampulheta-admission-2026-10-13.md",
+      "target": ".atena/generated/ampulheta-admission-2026-10-13/authorization.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/ampulheta-admission-2026-10-13.md",
+      "target": ".atena/generated/ampulheta-review-2026-10-13/visual-acceptance.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/ampulheta-admission-2026-10-13.md",
+      "target": ".atena/generated/ampulheta-admission-2026-10-13/packing.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/ampulheta-admission-2026-10-13.md",
+      "target": ".atena/generated/ampulheta-admission-2026-10-13/derivative-audit.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/ampulheta-admission-2026-10-13.md",
+      "target": ".atena/generated/ampulheta-admission-2026-10-13/black-preview.png",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/ampulheta-admission-2026-10-13.md",
+      "target": ".atena/generated/ampulheta-admission-2026-10-13/backup.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/ampulheta-admission-2026-10-13.md",
+      "target": ".atena/generated/ampulheta-admission-2026-10-13/suite.log.txt",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/ampulheta-admission-2026-10-13.md",
+      "target": ".atena/generated/ampulheta-admission-2026-10-13/smoke.log.txt",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/ampulheta-admission-2026-10-13.md",
+      "target": ".atena/generated/ampulheta-admission-2026-10-13/capture.gd",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/ampulheta-admission-2026-10-13.md",
+      "target": ".atena/generated/ampulheta-admission-2026-10-13/runtime-checks.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/ampulheta-admission-2026-10-13.md",
+      "target": ".atena/generated/ampulheta-admission-2026-10-13/capture.log.txt",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/ampulheta-admission-2026-10-13.md",
+      "target": ".atena/generated/ampulheta-admission-2026-10-13/index.html",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/ampulheta-admission-2026-10-13.md",
+      "target": ".atena/generated/ampulheta-admission-2026-10-13/launcher-smoke.log.txt",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/ampulheta-admission-2026-10-13.md",
+      "target": ".atena/generated/ampulheta-admission-2026-10-13/verification.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/ampulheta-admission-2026-10-13.md",
+      "target": ".atena/generated/ampulheta-admission-2026-10-13/PLAYTEST.md",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/ampulheta-review-2026-10-13.md",
+      "target": ".atena/specs/SPEC-121-retomada-fila-imagens/ampulheta-review-v01.md",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/ampulheta-review-2026-10-13.md",
+      "target": ".atena/generated/ampulheta-review-2026-10-13/pulse-delivery-acceptance.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/ampulheta-review-2026-10-13.md",
+      "target": ".atena/generated/ampulheta-review-2026-10-13/provenance/m03-owner-approval-2026-10-09.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/ampulheta-review-2026-10-13.md",
+      "target": ".atena/generated/ampulheta-review-2026-10-13/provenance/m01-scale-owner-approval-2026-10-09.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/ampulheta-review-2026-10-13.md",
+      "target": ".atena/generated/ampulheta-review-2026-10-13/recovery.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/ampulheta-review-2026-10-13.md",
+      "target": ".atena/generated/ampulheta-review-2026-10-13/provenance/ampulheta-silencio-six-frame-review-2026-10-09.png",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/ampulheta-review-2026-10-13.md",
+      "target": ".atena/generated/ampulheta-review-2026-10-13/audit.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/ampulheta-review-2026-10-13.md",
+      "target": ".atena/generated/ampulheta-review-2026-10-13/index.html",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/ampulheta-review-2026-10-13.md",
+      "target": ".atena/generated/ampulheta-review-2026-10-13/provenance/ampulheta-silencio-sequence-review-2026-10-09.gif",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/ampulheta-review-2026-10-13.md",
+      "target": ".atena/generated/ampulheta-review-2026-10-13/visual-acceptance.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/ampulheta-review-2026-10-13.md",
+      "target": ".atena/specs/SPEC-121-retomada-fila-imagens/ampulheta-admission-v01.md",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/hero-admission-2026-10-13.md",
+      "target": ".atena/specs/SPEC-121-retomada-fila-imagens/hero-admission-v01.md",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/hero-admission-2026-10-13.md",
+      "target": ".atena/generated/hero-admission-2026-10-13/authorization.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/hero-admission-2026-10-13.md",
+      "target": ".atena/generated/hero-admission-2026-10-13/backup-manifest.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/hero-admission-2026-10-13.md",
+      "target": ".atena/generated/hero-admission-2026-10-13/packing.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/hero-admission-2026-10-13.md",
+      "target": ".atena/generated/hero-admission-2026-10-13/index.html",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/hero-admission-2026-10-13.md",
+      "target": ".atena/generated/hero-admission-2026-10-13/admission-receipt.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/hero-admission-2026-10-13.md",
+      "target": ".atena/generated/hero-admission-2026-10-13/suite.log.txt",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/hero-admission-2026-10-13.md",
+      "target": ".atena/generated/hero-admission-2026-10-13/smoke.log.txt",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/hero-admission-2026-10-13.md",
+      "target": ".atena/generated/hero-admission-2026-10-13/capture.gd",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/hero-admission-2026-10-13.md",
+      "target": ".atena/generated/hero-admission-2026-10-13/capture.log.txt",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/hero-admission-2026-10-13.md",
+      "target": ".atena/generated/hero-admission-2026-10-13/runtime-board.png",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/hero-admission-2026-10-13.md",
+      "target": ".atena/generated/hero-admission-2026-10-13/runtime-board.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/hero-admission-2026-10-13.md",
+      "target": ".atena/generated/hero-admission-2026-10-13/verification.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/hero-admission-2026-10-13.md",
+      "target": ".atena/generated/hero-admission-2026-10-13/PLAYTEST.md",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/hero-admission-preparation-2026-10-13.md",
+      "target": ".atena/generated/hero-admission-preparation-2026-10-13/provenance/hero-final-four.yaml",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/hero-admission-preparation-2026-10-13.md",
+      "target": ".atena/generated/hero-admission-preparation-2026-10-13/admission-manifest.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/hero-admission-preparation-2026-10-13.md",
+      "target": ".atena/evidence/hero-own-art-integration-2026-10-10.md",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/hero-admission-preparation-2026-10-13.md",
+      "target": ".atena/specs/SPEC-121-retomada-fila-imagens/hero-admission-v01.md",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/hero-admission-preparation-2026-10-13.md",
+      "target": ".atena/generated/hero-admission-preparation-2026-10-13/index.html",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/hero-admission-preparation-2026-10-13.md",
+      "target": ".atena/generated/hero-admission-preparation-2026-10-13/verification.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/pulso-admission-2026-10-13.md",
+      "target": ".atena/specs/SPEC-121-retomada-fila-imagens/pulso-admission-v01.md",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/pulso-admission-2026-10-13.md",
+      "target": ".atena/generated/pulso-admission-2026-10-13/authorization.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/pulso-admission-2026-10-13.md",
+      "target": ".atena/generated/pulso-resume-2026-10-13/visual-acceptance.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/pulso-admission-2026-10-13.md",
+      "target": ".atena/generated/pulso-admission-2026-10-13/packing.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/pulso-admission-2026-10-13.md",
+      "target": ".atena/generated/pulso-admission-2026-10-13/derivative-audit.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/pulso-admission-2026-10-13.md",
+      "target": ".atena/generated/pulso-admission-2026-10-13/black-preview.png",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/pulso-admission-2026-10-13.md",
+      "target": ".atena/generated/pulso-admission-2026-10-13/suite.log.txt",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/pulso-admission-2026-10-13.md",
+      "target": ".atena/generated/pulso-admission-2026-10-13/smoke.log.txt",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/pulso-admission-2026-10-13.md",
+      "target": ".atena/generated/pulso-admission-2026-10-13/capture.gd",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/pulso-admission-2026-10-13.md",
+      "target": ".atena/generated/pulso-admission-2026-10-13/runtime-checks.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/pulso-admission-2026-10-13.md",
+      "target": ".atena/generated/pulso-admission-2026-10-13/capture.log.txt",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/pulso-admission-2026-10-13.md",
+      "target": ".atena/generated/pulso-admission-2026-10-13/index.html",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/pulso-admission-2026-10-13.md",
+      "target": ".atena/generated/pulso-admission-2026-10-13/capture-attempt1.log.txt",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/pulso-admission-2026-10-13.md",
+      "target": ".atena/generated/pulso-admission-2026-10-13/verification.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/pulso-admission-2026-10-13.md",
+      "target": ".atena/generated/pulso-admission-2026-10-13/backup.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/pulso-admission-2026-10-13.md",
+      "target": ".atena/generated/pulso-admission-2026-10-13/PLAYTEST.md",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/pulso-admission-2026-10-13.md",
+      "target": ".atena/generated/pulso-admission-2026-10-13/launcher-smoke.log.txt",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/pulso-admission-2026-10-13.md",
+      "target": ".atena/generated/ampulheta-review-2026-10-13/pulse-delivery-acceptance.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/pulso-resume-2026-10-13.md",
+      "target": ".atena/specs/SPEC-121-retomada-fila-imagens/pulso-resume-v01.md",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/pulso-resume-2026-10-13.md",
+      "target": ".atena/generated/pulso-resume-2026-10-13/recovery.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/pulso-resume-2026-10-13.md",
+      "target": ".atena/generated/pulso-resume-2026-10-13/provenance/receipt.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/pulso-resume-2026-10-13.md",
+      "target": ".atena/vault/canon/ASSET-APPROVAL-REGISTER-030-vfx-pulso-radiante-2026-10-09.md",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/pulso-resume-2026-10-13.md",
+      "target": ".atena/generated/pulso-resume-2026-10-13/audit.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/pulso-resume-2026-10-13.md",
+      "target": ".atena/generated/pulso-resume-2026-10-13/provenance/pulse-phase-radius-audit-2026-10-09.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/pulso-resume-2026-10-13.md",
+      "target": ".atena/generated/pulso-resume-2026-10-13/index.html",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/pulso-resume-2026-10-13.md",
+      "target": ".atena/generated/pulso-resume-2026-10-13/provenance/pulso-radiante-six-frame-review-2026-10-09.png",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/pulso-resume-2026-10-13.md",
+      "target": ".atena/generated/pulso-resume-2026-10-13/provenance/pulso-radiante-sequence-review-2026-10-09.gif",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/pulso-resume-2026-10-13.md",
+      "target": ".atena/state/pulso-resume.yaml",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/pulso-resume-2026-10-13.md",
+      "target": ".atena/generated/pulso-resume-2026-10-13/visual-acceptance.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/evidence/pulso-resume-2026-10-13.md",
+      "target": ".atena/specs/SPEC-121-retomada-fila-imagens/pulso-admission-v01.md",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/specs/SPEC-121-retomada-fila-imagens/ampulheta-admission-v01.md",
+      "target": ".atena/generated/ampulheta-review-2026-10-13/recovery.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/specs/SPEC-121-retomada-fila-imagens/ampulheta-admission-v01.md",
+      "target": ".atena/generated/ampulheta-review-2026-10-13/visual-acceptance.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/specs/SPEC-121-retomada-fila-imagens/ampulheta-admission-v01.md",
+      "target": ".atena/specs/SPEC-121-retomada-fila-imagens/ampulheta-review-v01.md",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/specs/SPEC-121-retomada-fila-imagens/ampulheta-admission-v01.md",
+      "target": ".atena/generated/ampulheta-admission-2026-10-13/authorization.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/specs/SPEC-121-retomada-fila-imagens/ampulheta-admission-v01.md",
+      "target": ".atena/evidence/ampulheta-admission-2026-10-13.md",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/specs/SPEC-121-retomada-fila-imagens/assets-main-publication-v01.md",
+      "target": ".atena/generated/assets-main-publication-2026-10-13/plan.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/specs/SPEC-121-retomada-fila-imagens/hero-admission-v01.md",
+      "target": ".atena/generated/hero-admission-preparation-2026-10-13/admission-manifest.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/specs/SPEC-121-retomada-fila-imagens/hero-admission-v01.md",
+      "target": ".atena/generated/hero-final-four-2026-10-13/accepted-hero-inventory.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/specs/SPEC-121-retomada-fila-imagens/hero-admission-v01.md",
+      "target": ".atena/generated/hero-admission-preparation-2026-10-13/provenance/hero-final-four.yaml",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/specs/SPEC-121-retomada-fila-imagens/hero-admission-v01.md",
+      "target": ".atena/generated/ART-PROMPTS-060-erik-e-arlindo-jogaveis.md",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/specs/SPEC-121-retomada-fila-imagens/hero-admission-v01.md",
+      "target": ".atena/generated/hero-admission-2026-10-13/authorization.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/specs/SPEC-121-retomada-fila-imagens/hero-admission-v01.md",
+      "target": ".atena/evidence/hero-admission-2026-10-13.md",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/specs/SPEC-121-retomada-fila-imagens/hero-admission-v01.md",
+      "target": ".atena/generated/hero-admission-2026-10-13/verification.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/specs/SPEC-121-retomada-fila-imagens/pulso-admission-v01.md",
+      "target": ".atena/generated/pulso-resume-2026-10-13/recovery.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/specs/SPEC-121-retomada-fila-imagens/pulso-admission-v01.md",
+      "target": ".atena/generated/pulso-resume-2026-10-13/visual-acceptance.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/specs/SPEC-121-retomada-fila-imagens/pulso-admission-v01.md",
+      "target": ".atena/specs/SPEC-121-retomada-fila-imagens/pulso-resume-v01.md",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/specs/SPEC-121-retomada-fila-imagens/pulso-admission-v01.md",
+      "target": ".atena/generated/pulso-admission-2026-10-13/authorization.json",
+      "in_committed_tree": true
+    },
+    {
+      "document": ".atena/specs/SPEC-121-retomada-fila-imagens/pulso-admission-v01.md",
+      "target": ".atena/evidence/pulso-admission-2026-10-13.md",
+      "in_committed_tree": true
+    }
+  ],
+  "local_only_link_targets": [],
+  "import_exit_code": 0,
+  "suite_exit_code": 0,
+  "smoke_exit_code": 0,
+  "smoke_stages": 9
+}
