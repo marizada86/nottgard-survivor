@@ -784,9 +784,14 @@ assets_main_publication_2026_10_13:
   mode: per-plan
   approval_status: APPROVED_EXPLICITLY
   owner_reply: 'atena, aprovado commit e push na main'
-  status: VALIDATED_READY_FOR_MAIN_PUSH
-  checkpoint: G-003/MAIN_FF_AND_PUSH
+  status: COMPLETE_PUBLISHED
+  checkpoint: COMPLETE
   destination: origin/main
   canonical_promotion: false
   return_plan: PLAN-071
   return_checkpoint: B-006/S-011
+  verified_runtime_push_sha: 2a5873a08ee1681990ae7ac603fdb2256ef7e0a1
+  evidence: .atena/evidence/assets-main-publication-2026-10-13.md
+  completed_steps: 3
+  total_steps: 3
+  ci_result: NOT_VERIFIED

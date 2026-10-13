@@ -5,11 +5,11 @@ classification: IN_PLAN_AUTHORIZED_GIT_CHECKPOINT
 mode: per-plan
 approval_status: APPROVED_EXPLICITLY
 owner_reply: 'atena, aprovado commit e push na main'
-status: VALIDATED_READY_FOR_MAIN_PUSH
-checkpoint: G-003/MAIN_FF_AND_PUSH
+status: COMPLETE_PUBLISHED
+checkpoint: COMPLETE
 ordered_steps: [G-001, G-002, G-003]
 current_step_position: 3
-completed_steps: 2
+completed_steps: 3
 total_steps: 3
 remaining_steps_after_current: 0
 spec: .atena/specs/SPEC-121-retomada-fila-imagens/assets-main-publication-v01.md
@@ -20,9 +20,14 @@ base: 2ae8c48e2378eb9fa6a1cc75b3bc0fa50f37c096
 content_state: DRAFT_ADMITTED_LOCAL
 canonical_promotion: false
 human_playtest_procedure: NOT_REPORTED
-next_objective: Commitar grupos autorizados e verificar checkout limpo antes de publicar.
+next_objective: Retomar fila autorizada; feedback humano dos playtests permanece pendente.
 return_plan: {id: PLAN-071, checkpoint: B-006/S-011, preserved: true}
 
 
 verification: .atena/generated/assets-main-publication-2026-10-13/verification.json
 evidence: .atena/evidence/assets-main-publication-2026-10-13.md
+
+verified_runtime_push_sha: 2a5873a08ee1681990ae7ac603fdb2256ef7e0a1
+publication_receipt: this_commit
+final_remote_sha_receipt: .atena/generated/assets-main-publication-2026-10-13/final-machine-receipt.json
+ci_result: NOT_VERIFIED

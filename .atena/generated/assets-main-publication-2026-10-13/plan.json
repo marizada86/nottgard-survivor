@@ -408,8 +408,13 @@
     ".atena/generated/pulso-admission-2026-10-13/suite.log.txt"
   ],
   "commits": [
+    "2a5873a08ee1681990ae7ac603fdb2256ef7e0a1 docs(add): verify committed assets before main publication",
     "02c9903de74eec9eb9ab2d7da9de325f0e436ad6 docs(add): record accepted assets and local admission evidence",
     "d3c2fc8003d514749148bbee181310c22e15ae16 art: admit radiant pulse and silence hourglass VFX",
     "7755002edbb248debfdcffa92527f83eb9864d04 art: admit reviewed Erik and Arlindo animation atlases"
-  ]
+  ],
+  "status": "COMPLETE_PUBLISHED",
+  "verified_runtime_push_sha": "2a5873a08ee1681990ae7ac603fdb2256ef7e0a1",
+  "final_receipt": "this_commit",
+  "ci_result": "NOT_VERIFIED"
 }
