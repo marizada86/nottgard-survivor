@@ -217,3 +217,5 @@ ART-029: FILA02236/36 fontes já geradas segundo histórico local10bd31c; recupe
 2026-10-13 — ART-029: Pulso Radiante (seis fases) admitido localmente DRAFT, pulso-admission/v01 técnico4/4; suíte0falhas,smoke9fases,16capturas. Playtest humano e integração das demais famílias continuam pendentes. [Evidência](../evidence/pulso-admission-2026-10-13.md).
 
 2026-10-13 — ART-029: Ampulheta do Silêncio (seis fases) admitida localmente DRAFT, ampulheta-admission/v01 técnico4/4; suíte0falhas/smoke9fases/12capturas/regressão Pulso PASS. Playtest humano e admissão das demais famílias seguem pendentes. [Evidência](../evidence/ampulheta-admission-2026-10-13.md).
+
+2026-10-13 — ART-029/ART-030: projéteis (orbe radiante, orbe arcano, onda cortante) e as dez habilidades dos heróis admitidos localmente DRAFT, vfx-projectiles-and-hero-abilities/v01 técnico 8/8; suíte0falhas, smoke9fases, controller94/0, mobile146/0, 21capturas. Aceite do dono por versão/hash; playtest humano pendente. [Evidência](../evidence/vfx-projectiles-hero-abilities-admission-2026-10-13.md).

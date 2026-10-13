@@ -1,0 +1,132 @@
+{
+ "result": "PASS",
+ "revision": "vfx-projectiles-and-hero-abilities/v01",
+ "build_id": "0.4.0/vfx-projectiles-hero-abilities-v01/a431fa9+local-a359abcdde16",
+ "head": "a431fa9",
+ "checks": {
+  "suite": "0 falhas (inclui tests/test_projectile_and_ability_vfx.gd; 4 mutacoes detectadas)",
+  "smoke": "nove fases ok",
+  "controller_check": "94 verificacoes; 0 falhas",
+  "mobile_buttons_check": "146 verificacoes; 0 falhas",
+  "capture": "21 capturas 1280x720; 5 armas de projetil, 10 habilidades, impacto reduzido",
+  "runtime_checks": ".atena/generated/vfx-projectiles-hero-abilities-2026-10-13/runtime-checks.json"
+ },
+ "changed_runtime_files": [
+  {
+   "path": "ui/run.gd",
+   "sha256": "605b5ec67a89dcbddca6a3fdc12e1f62a6664faffd33fb999cd8b756e121c3fa"
+  },
+  {
+   "path": "ui/overlay.gd",
+   "sha256": "ef3c01e7725598a84cafd38b4c027d219fe99aed21d8d4a8599f0b6bd16f83ec"
+  },
+  {
+   "path": "core/projectile_vfx.gd",
+   "sha256": "8029d48dd1acd7349e35f09ce2622e6bb27499af6dabef3aaf2a47f7f1e3a7f1"
+  },
+  {
+   "path": "core/hero_ability_vfx.gd",
+   "sha256": "43d9532742cf3794938383e6254e6f64cbe60b23198cd16d0e4bfabf4a11f25f"
+  },
+  {
+   "path": "tests/test_projectile_and_ability_vfx.gd",
+   "sha256": "df65e73d6505b42617a7bd46971e3b3d977f1da255fdc6e48a09de089a839416"
+  }
+ ],
+ "new_atlases": [
+  {
+   "path": "assets/vfx/habilidade_bromnor.png",
+   "sha256": "df694d697a7366dc13ed4c5b36215fb81d6e62f28c453b8916ee6dde8487e1f7"
+  },
+  {
+   "path": "assets/vfx/habilidade_brook.png",
+   "sha256": "a48562171748f68a43b0088a800a91f4113355fc8f8b5cc9cf4f41b48996af50"
+  },
+  {
+   "path": "assets/vfx/habilidade_durvall.png",
+   "sha256": "4c2915bfcb95ab65c6f4ed285328ae6bdbf46fefac8ea3e2efa92e686639f6a4"
+  },
+  {
+   "path": "assets/vfx/habilidade_kayron.png",
+   "sha256": "4e7877a535b92b01c19b45b823b869d01aa0e0c1ffc602999dd30a8c9452a021"
+  },
+  {
+   "path": "assets/vfx/habilidade_korrak.png",
+   "sha256": "3d70d2d8538cb15b5239795c6047892be854f292f5da9bf22b92775fc593cda1"
+  },
+  {
+   "path": "assets/vfx/habilidade_leoric.png",
+   "sha256": "e54e8b139c60d8f887643d96bb6c82704de74ad0727f1b9ea2006b1eaf5274a6"
+  },
+  {
+   "path": "assets/vfx/habilidade_maelor.png",
+   "sha256": "cef437056f7ad14f24d291708a788e101e179261941257f7ba57e2a2a71a5513"
+  },
+  {
+   "path": "assets/vfx/habilidade_nyrelia.png",
+   "sha256": "2f3119abd57327e2a0f38b3cc9d64269a06cffc2d5d23bc8d9a1d4b02e2a2048"
+  },
+  {
+   "path": "assets/vfx/habilidade_sylas.png",
+   "sha256": "55aeda61f155fa462c2b964578c2ffb6d6590249ad1b8938b52a00c6e619e691"
+  },
+  {
+   "path": "assets/vfx/habilidade_zynara.png",
+   "sha256": "f4119572d87559488f094d774f7d6ead34b340c0f62bd209c07b2c67bcb9bbc9"
+  },
+  {
+   "path": "assets/vfx/onda_cortante.png",
+   "sha256": "7f93bc57f2fb98b4b327a460e0836bf96f72e9daac7a22239a86456e3868862b"
+  },
+  {
+   "path": "assets/vfx/orbe_arcano.png",
+   "sha256": "3b923bab8a19a8d08e125f404d744fa71b19fae0aac600791858acaa058724cd"
+  },
+  {
+   "path": "assets/vfx/orbe_radiante.png",
+   "sha256": "ab43c273f1e929f087c3a430fb9600b0df3bd840c1150832d16ce86caff0a743"
+  }
+ ],
+ "working_tree_runtime_status": [
+  "M ui/overlay.gd",
+  " M ui/run.gd",
+  "?? assets/vfx/habilidade_bromnor.png",
+  "?? assets/vfx/habilidade_bromnor.png.import",
+  "?? assets/vfx/habilidade_brook.png",
+  "?? assets/vfx/habilidade_brook.png.import",
+  "?? assets/vfx/habilidade_durvall.png",
+  "?? assets/vfx/habilidade_durvall.png.import",
+  "?? assets/vfx/habilidade_kayron.png",
+  "?? assets/vfx/habilidade_kayron.png.import",
+  "?? assets/vfx/habilidade_korrak.png",
+  "?? assets/vfx/habilidade_korrak.png.import",
+  "?? assets/vfx/habilidade_leoric.png",
+  "?? assets/vfx/habilidade_leoric.png.import",
+  "?? assets/vfx/habilidade_maelor.png",
+  "?? assets/vfx/habilidade_maelor.png.import",
+  "?? assets/vfx/habilidade_nyrelia.png",
+  "?? assets/vfx/habilidade_nyrelia.png.import",
+  "?? assets/vfx/habilidade_sylas.png",
+  "?? assets/vfx/habilidade_sylas.png.import",
+  "?? assets/vfx/habilidade_zynara.png",
+  "?? assets/vfx/habilidade_zynara.png.import",
+  "?? assets/vfx/onda_cortante.png",
+  "?? assets/vfx/onda_cortante.png.import",
+  "?? assets/vfx/orbe_arcano.png",
+  "?? assets/vfx/orbe_arcano.png.import",
+  "?? assets/vfx/orbe_radiante.png",
+  "?? assets/vfx/orbe_radiante.png.import",
+  "?? core/hero_ability_vfx.gd",
+  "?? core/hero_ability_vfx.gd.uid",
+  "?? core/projectile_vfx.gd",
+  "?? core/projectile_vfx.gd.uid",
+  "?? tests/test_projectile_and_ability_vfx.gd",
+  "?? tests/test_projectile_and_ability_vfx.gd.uid"
+ ],
+ "protected_untouched": [
+  "core/battle.gd",
+  "core/hero.gd",
+  "data/"
+ ],
+ "note": "Nenhum arquivo protegido aparece como modificado no git; so os destinos permitidos mudaram."
+}

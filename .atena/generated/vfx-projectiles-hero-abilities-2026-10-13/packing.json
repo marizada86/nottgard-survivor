@@ -1,0 +1,1549 @@
+{
+	"alpha": "luminancia Rec.709; <=2/255 vira 0",
+	"cell": [
+		256,
+		256
+	],
+	"content_state": "DRAFT",
+	"effects": [
+		{
+			"atlas": "assets/vfx/orbe_radiante.png",
+			"frames": 8,
+			"group": "A",
+			"id": "orbe_radiante",
+			"records": [
+				{
+					"bbox": [
+						38,
+						86,
+						167,
+						168
+					],
+					"code": "P01",
+					"offset": [
+						0,
+						0
+					],
+					"pixels_alpha_gt12": 5884,
+					"source": "a-sources/orbe_radiante/orbe_radiante_fly_00_v01.png",
+					"source_sha256": "a321dde3ebdce44f469c46a4147a4400bd97f3e958ec5ab0cb109338adaea752",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						33,
+						84,
+						169,
+						169
+					],
+					"code": "P02",
+					"offset": [
+						256,
+						0
+					],
+					"pixels_alpha_gt12": 6517,
+					"source": "a-sources/orbe_radiante/orbe_radiante_fly_01_v01.png",
+					"source_sha256": "bc48320c2de5aef68717bfe74679965fd2526ccd30369666735b181a6dab96ba",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						53,
+						86,
+						168,
+						168
+					],
+					"code": "P03",
+					"offset": [
+						512,
+						0
+					],
+					"pixels_alpha_gt12": 5659,
+					"source": "a-sources/orbe_radiante/orbe_radiante_fly_02_v01.png",
+					"source_sha256": "0d98f6826b1612f18307337cda34be0fed6709dd095fe6517dd21cd30b2f3f60",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						39,
+						88,
+						166,
+						167
+					],
+					"code": "P04",
+					"offset": [
+						768,
+						0
+					],
+					"pixels_alpha_gt12": 5384,
+					"source": "a-sources/orbe_radiante/orbe_radiante_fly_03_v01.png",
+					"source_sha256": "cf569ff20892598e4d399a4ee2d8fe8bb7f974cc6e8198e6067a0906d0729d92",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						76,
+						76,
+						180,
+						170
+					],
+					"code": "P05",
+					"offset": [
+						1024,
+						0
+					],
+					"pixels_alpha_gt12": 6313,
+					"source": "a-sources/orbe_radiante/orbe_radiante_hit_00_v01.png",
+					"source_sha256": "1166c89f27735cb9d8e8a7425d4e7dc85d38712fb42148b9de2d6749ee6b3b3f",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						45,
+						37,
+						210,
+						210
+					],
+					"code": "P06",
+					"offset": [
+						1280,
+						0
+					],
+					"pixels_alpha_gt12": 15023,
+					"source": "a-sources/orbe_radiante/orbe_radiante_hit_01_v01.png",
+					"source_sha256": "cd8de8d95839ac8700975d1f73f867bab4325e4c19be3252476d22e6ef1dca5c",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						40,
+						40,
+						216,
+						209
+					],
+					"code": "P07",
+					"offset": [
+						1536,
+						0
+					],
+					"pixels_alpha_gt12": 10485,
+					"source": "a-sources/orbe_radiante/orbe_radiante_hit_02_v01.png",
+					"source_sha256": "11d77ed513ab15a253f053964c719a6e87829ffb3fda9f87587b3e65c3dd4f7c",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						64,
+						60,
+						193,
+						190
+					],
+					"code": "P08",
+					"offset": [
+						1792,
+						0
+					],
+					"pixels_alpha_gt12": 1614,
+					"source": "a-sources/orbe_radiante/orbe_radiante_hit_03_v01.png",
+					"source_sha256": "97062541c2bab36d8451892dadefb7553e21eeb723afa0d3f83912b6693df2f1",
+					"version": "v01"
+				}
+			]
+		},
+		{
+			"atlas": "assets/vfx/orbe_arcano.png",
+			"frames": 8,
+			"group": "A",
+			"id": "orbe_arcano",
+			"records": [
+				{
+					"bbox": [
+						25,
+						94,
+						165,
+						164
+					],
+					"code": "Q01",
+					"offset": [
+						0,
+						0
+					],
+					"pixels_alpha_gt12": 5611,
+					"source": "a-sources/orbe_arcano/orbe_arcano_fly_00_v03.png",
+					"source_sha256": "be4fc0674b455b2efb5609e27c4228569b22d274cfb077665b09f778f5fc88fb",
+					"version": "v03"
+				},
+				{
+					"bbox": [
+						18,
+						92,
+						165,
+						164
+					],
+					"code": "Q02",
+					"offset": [
+						256,
+						0
+					],
+					"pixels_alpha_gt12": 6161,
+					"source": "a-sources/orbe_arcano/orbe_arcano_fly_01_v01.png",
+					"source_sha256": "034eb57a9646d3de68662c0408c9b3b98827538560c7a03318f31e88f2eff1ef",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						41,
+						94,
+						165,
+						164
+					],
+					"code": "Q03",
+					"offset": [
+						512,
+						0
+					],
+					"pixels_alpha_gt12": 5178,
+					"source": "a-sources/orbe_arcano/orbe_arcano_fly_02_v01.png",
+					"source_sha256": "5010a77a124a1c3f72b831783aa650146e9deaea790e538ca3d94a140b47d711",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						26,
+						94,
+						163,
+						163
+					],
+					"code": "Q04",
+					"offset": [
+						768,
+						0
+					],
+					"pixels_alpha_gt12": 5076,
+					"source": "a-sources/orbe_arcano/orbe_arcano_fly_03_v01.png",
+					"source_sha256": "67347db56ac39ff33a1d73ff991e4274ecafa2c9e8549e05f4a447e77f6c9f89",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						83,
+						85,
+						181,
+						168
+					],
+					"code": "Q05",
+					"offset": [
+						1024,
+						0
+					],
+					"pixels_alpha_gt12": 4965,
+					"source": "a-sources/orbe_arcano/orbe_arcano_hit_00_v01.png",
+					"source_sha256": "7164675a2489957161b03aac30f967f6b25be79418407d6545af0f669484892b",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						35,
+						34,
+						223,
+						210
+					],
+					"code": "Q06",
+					"offset": [
+						1280,
+						0
+					],
+					"pixels_alpha_gt12": 17321,
+					"source": "a-sources/orbe_arcano/orbe_arcano_hit_01_v01.png",
+					"source_sha256": "8388c93447f69e80064d03fc4fc0016d01bf57f700e42b6dd806ceb363b29b08",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						29,
+						26,
+						229,
+						220
+					],
+					"code": "Q07",
+					"offset": [
+						1536,
+						0
+					],
+					"pixels_alpha_gt12": 12556,
+					"source": "a-sources/orbe_arcano/orbe_arcano_hit_02_v01.png",
+					"source_sha256": "b3c77052708c70a1db60ff187cdc5d7c0bd3a092a68095ada0a3056b3face503",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						62,
+						55,
+						200,
+						197
+					],
+					"code": "Q08",
+					"offset": [
+						1792,
+						0
+					],
+					"pixels_alpha_gt12": 2389,
+					"source": "a-sources/orbe_arcano/orbe_arcano_hit_03_v01.png",
+					"source_sha256": "224a23efd7fdfffd220d621ec82bc62193c6ad826515897fe9cdb3613fd66954",
+					"version": "v01"
+				}
+			]
+		},
+		{
+			"atlas": "assets/vfx/onda_cortante.png",
+			"frames": 8,
+			"group": "A",
+			"id": "onda_cortante",
+			"records": [
+				{
+					"bbox": [
+						93,
+						63,
+						180,
+						191
+					],
+					"code": "R01",
+					"offset": [
+						0,
+						0
+					],
+					"pixels_alpha_gt12": 4918,
+					"source": "a-sources/onda_cortante/onda_cortante_fly_00_v02.png",
+					"source_sha256": "53f665277345e5a59d093f25e5f3f9ebfd800a1b146c535d0b48513b4e4308f1",
+					"version": "v02"
+				},
+				{
+					"bbox": [
+						92,
+						62,
+						182,
+						192
+					],
+					"code": "R02",
+					"offset": [
+						256,
+						0
+					],
+					"pixels_alpha_gt12": 5192,
+					"source": "a-sources/onda_cortante/onda_cortante_fly_01_v01.png",
+					"source_sha256": "2c83e4d6759beaa50bd339e7a365b2f2cf87b6db7543885f72a961aae98ad844",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						94,
+						64,
+						181,
+						191
+					],
+					"code": "R03",
+					"offset": [
+						512,
+						0
+					],
+					"pixels_alpha_gt12": 4935,
+					"source": "a-sources/onda_cortante/onda_cortante_fly_02_v01.png",
+					"source_sha256": "8e053772e4805e2ffd2c20715e89d7e8c44d088a6f87abc4c45bd7d6c542193b",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						93,
+						63,
+						180,
+						191
+					],
+					"code": "R04",
+					"offset": [
+						768,
+						0
+					],
+					"pixels_alpha_gt12": 4523,
+					"source": "a-sources/onda_cortante/onda_cortante_fly_03_v01.png",
+					"source_sha256": "a636ee836297e261874a26a096a64e0ed8748d720b6f89e0aca0ebb472166b43",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						78,
+						74,
+						183,
+						182
+					],
+					"code": "R05",
+					"offset": [
+						1024,
+						0
+					],
+					"pixels_alpha_gt12": 5457,
+					"source": "a-sources/onda_cortante/onda_cortante_hit_00_v02.png",
+					"source_sha256": "7fbbdadd57d6af7152b54c8dc6ca6fd76e29703990bf8e5e89cada58a45d0ae4",
+					"version": "v02"
+				},
+				{
+					"bbox": [
+						10,
+						19,
+						237,
+						233
+					],
+					"code": "R06",
+					"offset": [
+						1280,
+						0
+					],
+					"pixels_alpha_gt12": 22260,
+					"source": "a-sources/onda_cortante/onda_cortante_hit_01_v01.png",
+					"source_sha256": "fc2013656b41122311941289fb851347751b0a2b230975476304f63a5fb342c2",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						14,
+						28,
+						233,
+						230
+					],
+					"code": "R07",
+					"offset": [
+						1536,
+						0
+					],
+					"pixels_alpha_gt12": 12005,
+					"source": "a-sources/onda_cortante/onda_cortante_hit_02_v01.png",
+					"source_sha256": "79296cd598e203e1d3034fdd526fd92e1599ce86bac042aa3210df2474fa4672",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						28,
+						32,
+						226,
+						223
+					],
+					"code": "R08",
+					"offset": [
+						1792,
+						0
+					],
+					"pixels_alpha_gt12": 2935,
+					"source": "a-sources/onda_cortante/onda_cortante_hit_03_v01.png",
+					"source_sha256": "0ca2b691f2a420f7338b9eb68a8616213901cc94d4f06a70e4482beaa7c98c08",
+					"version": "v01"
+				}
+			]
+		},
+		{
+			"atlas": "assets/vfx/habilidade_durvall.png",
+			"frames": 6,
+			"group": "B",
+			"id": "durvall_ruptura_sombria",
+			"records": [
+				{
+					"bbox": [
+						124,
+						89,
+						181,
+						158
+					],
+					"code": "H101",
+					"offset": [
+						0,
+						0
+					],
+					"pixels_alpha_gt12": 1916,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/durvall_ruptura_sombria/durvall_ruptura_sombria_start_v01.png",
+					"source_sha256": "00b891b430ae103cf252d2fb84cd871baffa6c924d16910dc2df7f985ce48844",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						99,
+						60,
+						204,
+						193
+					],
+					"code": "H102",
+					"offset": [
+						256,
+						0
+					],
+					"pixels_alpha_gt12": 5816,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/durvall_ruptura_sombria/durvall_ruptura_sombria_sweep_v02.png",
+					"source_sha256": "809ecc013e2443033ef335632db7a9691d022f3321da017ca426326fb3e2020e",
+					"version": "v02"
+				},
+				{
+					"bbox": [
+						43,
+						12,
+						231,
+						240
+					],
+					"code": "H103",
+					"offset": [
+						512,
+						0
+					],
+					"pixels_alpha_gt12": 17636,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/durvall_ruptura_sombria/durvall_ruptura_sombria_peak_v01.png",
+					"source_sha256": "e5f022ec1c630409f6405add4250ebfc73ebe052ea233e8c227ec5ce67fe8974",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						55,
+						15,
+						223,
+						236
+					],
+					"code": "H104",
+					"offset": [
+						768,
+						0
+					],
+					"pixels_alpha_gt12": 11304,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/durvall_ruptura_sombria/durvall_ruptura_sombria_hold_v01.png",
+					"source_sha256": "341e6fa8418c4d4aca7f06b21116c3be8ff634cbb2fd6340da7c47dd283a3556",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						45,
+						12,
+						231,
+						239
+					],
+					"code": "H105",
+					"offset": [
+						1024,
+						0
+					],
+					"pixels_alpha_gt12": 9326,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/durvall_ruptura_sombria/durvall_ruptura_sombria_fade_v01.png",
+					"source_sha256": "17bbd4c6c43348370cb860feeb1eb10113d2bbb35a1a980d0c37bbced2ad02a2",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						134,
+						33,
+						229,
+						220
+					],
+					"code": "H106",
+					"offset": [
+						1280,
+						0
+					],
+					"pixels_alpha_gt12": 613,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/durvall_ruptura_sombria/durvall_ruptura_sombria_dissipate_v01.png",
+					"source_sha256": "86c6d108e6b7034acbec687bcfc7ea1537cde6480b389b7870b0b5cb5826314c",
+					"version": "v01"
+				}
+			]
+		},
+		{
+			"atlas": "assets/vfx/habilidade_brook.png",
+			"frames": 6,
+			"group": "B",
+			"id": "brook_guarda_de_lliira",
+			"records": [
+				{
+					"bbox": [
+						17,
+						16,
+						239,
+						229
+					],
+					"code": "H201",
+					"offset": [
+						0,
+						0
+					],
+					"pixels_alpha_gt12": 16728,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/brook_guarda_de_lliira/brook_guarda_de_lliira_loop_00_v02.png",
+					"source_sha256": "076c90602cf4f72e7e78df90791e8dbda1d47be473f81c1687e9c91347af9166",
+					"version": "v02"
+				},
+				{
+					"bbox": [
+						16,
+						15,
+						239,
+						231
+					],
+					"code": "H202",
+					"offset": [
+						256,
+						0
+					],
+					"pixels_alpha_gt12": 18107,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/brook_guarda_de_lliira/brook_guarda_de_lliira_loop_01_v01.png",
+					"source_sha256": "9dfd35c3d44f632a910699f121adcdbfb92b1b9570f897e16fae2a0a581ea193",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						16,
+						14,
+						240,
+						232
+					],
+					"code": "H203",
+					"offset": [
+						512,
+						0
+					],
+					"pixels_alpha_gt12": 19511,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/brook_guarda_de_lliira/brook_guarda_de_lliira_loop_02_v01.png",
+					"source_sha256": "d8b58bc231a433cf8d33ea4bc19a55f7362afcba71e27b1c58ae67389694522e",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						17,
+						16,
+						239,
+						229
+					],
+					"code": "H204",
+					"offset": [
+						768,
+						0
+					],
+					"pixels_alpha_gt12": 16821,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/brook_guarda_de_lliira/brook_guarda_de_lliira_loop_03_v01.png",
+					"source_sha256": "a146a13a5af5a533f3e3f199bd37870520d95abd6d2f6339bd74032b6e0ac74f",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						18,
+						17,
+						238,
+						229
+					],
+					"code": "H205",
+					"offset": [
+						1024,
+						0
+					],
+					"pixels_alpha_gt12": 15496,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/brook_guarda_de_lliira/brook_guarda_de_lliira_loop_04_v01.png",
+					"source_sha256": "795e92c2e1bc58c2ed2f2431e5ae586d063de694c5dc78d65306282a54daf01b",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						18,
+						16,
+						238,
+						229
+					],
+					"code": "H206",
+					"offset": [
+						1280,
+						0
+					],
+					"pixels_alpha_gt12": 15972,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/brook_guarda_de_lliira/brook_guarda_de_lliira_loop_05_v01.png",
+					"source_sha256": "f353d745355e6d4792d793e3e473c06c6b20a50302f50f65703ea5960f8c3270",
+					"version": "v01"
+				}
+			]
+		},
+		{
+			"atlas": "assets/vfx/habilidade_maelor.png",
+			"frames": 6,
+			"group": "B",
+			"id": "maelor_comunhao",
+			"records": [
+				{
+					"bbox": [
+						28,
+						23,
+						228,
+						227
+					],
+					"code": "H301",
+					"offset": [
+						0,
+						0
+					],
+					"pixels_alpha_gt12": 17359,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/maelor_comunhao/maelor_comunhao_loop_00_v01.png",
+					"source_sha256": "ed622fe59738017a625ebd2daaf90d2f738213d1fca299d9240d08ccd3fd3969",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						27,
+						21,
+						229,
+						228
+					],
+					"code": "H302",
+					"offset": [
+						256,
+						0
+					],
+					"pixels_alpha_gt12": 18201,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/maelor_comunhao/maelor_comunhao_loop_01_v01.png",
+					"source_sha256": "7a289aae4816f19800cfdefd63dae9e3662020d590b92d1df9dcefd1e27543bd",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						27,
+						23,
+						228,
+						227
+					],
+					"code": "H303",
+					"offset": [
+						512,
+						0
+					],
+					"pixels_alpha_gt12": 18213,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/maelor_comunhao/maelor_comunhao_loop_02_v01.png",
+					"source_sha256": "c6dddbbcc415c987e32a2fe31a3ef61360b026f6cf2c08232eae8f43b4a3678a",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						28,
+						23,
+						228,
+						227
+					],
+					"code": "H304",
+					"offset": [
+						768,
+						0
+					],
+					"pixels_alpha_gt12": 17037,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/maelor_comunhao/maelor_comunhao_loop_03_v01.png",
+					"source_sha256": "b5b5c8334439e61fcce91922ef624addbbf92b7e27696b2c65cccaf57bd79821",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						28,
+						23,
+						228,
+						227
+					],
+					"code": "H305",
+					"offset": [
+						1024,
+						0
+					],
+					"pixels_alpha_gt12": 16722,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/maelor_comunhao/maelor_comunhao_loop_04_v01.png",
+					"source_sha256": "5c1e88fb174de1791a186c6b75eb86ba89d066f47f99b7ae4f4f91453b35d25d",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						28,
+						23,
+						228,
+						227
+					],
+					"code": "H306",
+					"offset": [
+						1280,
+						0
+					],
+					"pixels_alpha_gt12": 16527,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/maelor_comunhao/maelor_comunhao_loop_05_v01.png",
+					"source_sha256": "574f8ca4fedc2d3dfbdf452a8aef7278dd840bc7ed13918bd1e06b49a27a73aa",
+					"version": "v01"
+				}
+			]
+		},
+		{
+			"atlas": "assets/vfx/habilidade_sylas.png",
+			"frames": 6,
+			"group": "B",
+			"id": "sylas_passo_pelas_sombras",
+			"records": [
+				{
+					"bbox": [
+						117,
+						111,
+						186,
+						146
+					],
+					"code": "H401",
+					"offset": [
+						0,
+						0
+					],
+					"pixels_alpha_gt12": 1258,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_head_v01.png",
+					"source_sha256": "8ae09583105acd45b96ddbef76abdd8eb55e8c05c537dedbe6fc7f655c46842f",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						42,
+						105,
+						247,
+						150
+					],
+					"code": "H402",
+					"offset": [
+						256,
+						0
+					],
+					"pixels_alpha_gt12": 4669,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_grow_v01.png",
+					"source_sha256": "d8c714e84fe6c0fadfeaaefec7d30c7be522acae9c4553e09d72bf18001785ed",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						116,
+						105,
+						248,
+						150
+					],
+					"code": "H403",
+					"offset": [
+						512,
+						0
+					],
+					"pixels_alpha_gt12": 3160,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_peak_v02.png",
+					"source_sha256": "d9b23e455cf3b7a83e8e6c10820227b2cb829cb09949ed2b1abeb16bb9aa9919",
+					"version": "v02"
+				},
+				{
+					"bbox": [
+						119,
+						107,
+						245,
+						146
+					],
+					"code": "H404",
+					"offset": [
+						768,
+						0
+					],
+					"pixels_alpha_gt12": 2285,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_thin_v01.png",
+					"source_sha256": "1566667d31959b6665ebdb5ae0d6f347a897ea047ef26e9daea23e97a16bf70b",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						115,
+						103,
+						245,
+						151
+					],
+					"code": "H405",
+					"offset": [
+						1024,
+						0
+					],
+					"pixels_alpha_gt12": 2378,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_break_v01.png",
+					"source_sha256": "a2e237fddd38a73ba396497708d90085e0c71ac6070e6207d15f7f28bc30f64c",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						119,
+						108,
+						244,
+						145
+					],
+					"code": "H406",
+					"offset": [
+						1280,
+						0
+					],
+					"pixels_alpha_gt12": 1827,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_specks_v01.png",
+					"source_sha256": "f21b76a36baddb88a242e1771eb78f65a6c7d25178e34d4a76f0a2c7d932d3a0",
+					"version": "v01"
+				}
+			]
+		},
+		{
+			"atlas": "assets/vfx/habilidade_kayron.png",
+			"frames": 6,
+			"group": "B",
+			"id": "kayron_sobrecarga_mistica",
+			"records": [
+				{
+					"bbox": [
+						11,
+						10,
+						244,
+						242
+					],
+					"code": "H501",
+					"offset": [
+						0,
+						0
+					],
+					"pixels_alpha_gt12": 23717,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/kayron_sobrecarga_mistica/kayron_sobrecarga_mistica_loop_00_v01.png",
+					"source_sha256": "36eec357eef30bcc44325e9e75d3d1270eba4bf158fe26d8cc0282074fa7aade",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						12,
+						9,
+						243,
+						242
+					],
+					"code": "H502",
+					"offset": [
+						256,
+						0
+					],
+					"pixels_alpha_gt12": 22929,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/kayron_sobrecarga_mistica/kayron_sobrecarga_mistica_loop_01_v01.png",
+					"source_sha256": "803d5008bb331f4e5512deec967cea9d584adbffaad1d2425d74871bcaae5863",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						12,
+						10,
+						244,
+						242
+					],
+					"code": "H503",
+					"offset": [
+						512,
+						0
+					],
+					"pixels_alpha_gt12": 23396,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/kayron_sobrecarga_mistica/kayron_sobrecarga_mistica_loop_02_v01.png",
+					"source_sha256": "5ccbc566f6659f79c8034e29a96c86073faff6cfda4db1b2b1096e1cd30cc5fb",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						11,
+						10,
+						244,
+						242
+					],
+					"code": "H504",
+					"offset": [
+						768,
+						0
+					],
+					"pixels_alpha_gt12": 23125,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/kayron_sobrecarga_mistica/kayron_sobrecarga_mistica_loop_03_v01.png",
+					"source_sha256": "f5acb4dbd26ae9e8905332b926842fa588f40e19945cec847cbde6485955a2a4",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						13,
+						10,
+						243,
+						243
+					],
+					"code": "H505",
+					"offset": [
+						1024,
+						0
+					],
+					"pixels_alpha_gt12": 23213,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/kayron_sobrecarga_mistica/kayron_sobrecarga_mistica_loop_04_v01.png",
+					"source_sha256": "4a75d55d26e75ec082b5d355ac0a3e42ad0d7418683ec417046ae93c1f862d31",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						11,
+						11,
+						242,
+						243
+					],
+					"code": "H506",
+					"offset": [
+						1280,
+						0
+					],
+					"pixels_alpha_gt12": 22945,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/kayron_sobrecarga_mistica/kayron_sobrecarga_mistica_loop_05_v01.png",
+					"source_sha256": "4eb87a88215e602cc4759c102123298d74606166861fa34dd79a05886fb3e508",
+					"version": "v01"
+				}
+			]
+		},
+		{
+			"atlas": "assets/vfx/habilidade_korrak.png",
+			"frames": 6,
+			"group": "B",
+			"id": "korrak_impacto_de_xargath",
+			"records": [
+				{
+					"bbox": [
+						80,
+						78,
+						175,
+						174
+					],
+					"code": "H601",
+					"offset": [
+						0,
+						0
+					],
+					"pixels_alpha_gt12": 3854,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/korrak_impacto_de_xargath/korrak_impacto_de_xargath_spark_v01.png",
+					"source_sha256": "4433be8205d67bec672b9bef6215ff3ef0db254aed84c89a822304b0b96a2a03",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						25,
+						21,
+						232,
+						231
+					],
+					"code": "H602",
+					"offset": [
+						256,
+						0
+					],
+					"pixels_alpha_gt12": 24445,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/korrak_impacto_de_xargath/korrak_impacto_de_xargath_grow_v01.png",
+					"source_sha256": "8a2ea18d8d8c37f26d7e68e2027cc3b5b9ed3b1c55221a61f3c14cf72264d9bb",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						2,
+						6,
+						255,
+						244
+					],
+					"code": "H603",
+					"offset": [
+						512,
+						0
+					],
+					"pixels_alpha_gt12": 36412,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/korrak_impacto_de_xargath/korrak_impacto_de_xargath_peak_v01.png",
+					"source_sha256": "7487b2677e93a447058a98e832037d18582fa8ce13430adb94a496c29a5b2a4b",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						4,
+						10,
+						252,
+						243
+					],
+					"code": "H604",
+					"offset": [
+						768,
+						0
+					],
+					"pixels_alpha_gt12": 27437,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/korrak_impacto_de_xargath/korrak_impacto_de_xargath_hold_v01.png",
+					"source_sha256": "1ed3e6bc49d9fd82937f303f4630d914ca64d4067cafdc3fc5867fc06f1dee34",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						2,
+						10,
+						252,
+						243
+					],
+					"code": "H605",
+					"offset": [
+						1024,
+						0
+					],
+					"pixels_alpha_gt12": 29772,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/korrak_impacto_de_xargath/korrak_impacto_de_xargath_fade_v01.png",
+					"source_sha256": "ddf3ccd69943015f62fd652b1a93da79d807b22bb3074a5969a337224369e76c",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						35,
+						33,
+						224,
+						224
+					],
+					"code": "H606",
+					"offset": [
+						1280,
+						0
+					],
+					"pixels_alpha_gt12": 1846,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/korrak_impacto_de_xargath/korrak_impacto_de_xargath_dissipate_v01.png",
+					"source_sha256": "9a27d109277e4ffdf9c4891611db80f8c27acfb34ccf2aac5baa5e76a9008e75",
+					"version": "v01"
+				}
+			]
+		},
+		{
+			"atlas": "assets/vfx/habilidade_leoric.png",
+			"frames": 6,
+			"group": "B",
+			"id": "leoric_constelacao",
+			"records": [
+				{
+					"bbox": [
+						91,
+						89,
+						165,
+						165
+					],
+					"code": "H701",
+					"offset": [
+						0,
+						0
+					],
+					"pixels_alpha_gt12": 2384,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/leoric_constelacao/leoric_constelacao_spark_v01.png",
+					"source_sha256": "4bf8e3b559e001b8eef4e0cee123c7b0f768cae62f09df25a56f914b5354fa02",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						18,
+						21,
+						239,
+						234
+					],
+					"code": "H702",
+					"offset": [
+						256,
+						0
+					],
+					"pixels_alpha_gt12": 16986,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/leoric_constelacao/leoric_constelacao_grow_v01.png",
+					"source_sha256": "c7cb21dad1a4867c340939ae2c8bac3ffed4940bd29e77293b50907275c87154",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						7,
+						7,
+						249,
+						243
+					],
+					"code": "H703",
+					"offset": [
+						512,
+						0
+					],
+					"pixels_alpha_gt12": 18777,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/leoric_constelacao/leoric_constelacao_peak_v01.png",
+					"source_sha256": "98d36534b7a3f0667612b2442d2f1cb647ede94f1ffaa6dac3b2d927eb76254b",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						6,
+						6,
+						249,
+						244
+					],
+					"code": "H704",
+					"offset": [
+						768,
+						0
+					],
+					"pixels_alpha_gt12": 15203,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/leoric_constelacao/leoric_constelacao_hold_v01.png",
+					"source_sha256": "f139e87ffc61cb02808eb46c0eadbfad996655bf031bdb78330bd9b8dcadbdf2",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						7,
+						6,
+						249,
+						247
+					],
+					"code": "H705",
+					"offset": [
+						1024,
+						0
+					],
+					"pixels_alpha_gt12": 13349,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/leoric_constelacao/leoric_constelacao_fade_v01.png",
+					"source_sha256": "14aee760943a5b814ea8483fea065c42fe88e94bad8b8e46bfc47092566cfa0b",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						14,
+						10,
+						242,
+						239
+					],
+					"code": "H706",
+					"offset": [
+						1280,
+						0
+					],
+					"pixels_alpha_gt12": 1471,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/leoric_constelacao/leoric_constelacao_dissipate_v01.png",
+					"source_sha256": "7623afa5bfe2cfd6f7d441b91c45e4259d34b2f4d98bd697b6701e2fef5b475e",
+					"version": "v01"
+				}
+			]
+		},
+		{
+			"atlas": "assets/vfx/habilidade_nyrelia.png",
+			"frames": 6,
+			"group": "B",
+			"id": "nyrelia_dominacao",
+			"records": [
+				{
+					"bbox": [
+						27,
+						25,
+						229,
+						230
+					],
+					"code": "H801",
+					"offset": [
+						0,
+						0
+					],
+					"pixels_alpha_gt12": 25916,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/nyrelia_dominacao/nyrelia_dominacao_loop_00_v01.png",
+					"source_sha256": "8006055ec0b5a9e09857d624e89cf76b8da9259b9a0995d65e413432591e26ea",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						26,
+						23,
+						228,
+						230
+					],
+					"code": "H802",
+					"offset": [
+						256,
+						0
+					],
+					"pixels_alpha_gt12": 25204,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/nyrelia_dominacao/nyrelia_dominacao_loop_01_v01.png",
+					"source_sha256": "99572ff64363755ed3d69fb6bbb5d8005379e6131d86c37e50555d06e90acb63",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						27,
+						25,
+						228,
+						230
+					],
+					"code": "H803",
+					"offset": [
+						512,
+						0
+					],
+					"pixels_alpha_gt12": 25256,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/nyrelia_dominacao/nyrelia_dominacao_loop_02_v01.png",
+					"source_sha256": "3ac7aef18ba5a665cd2ea7e7b0de922817d2ead137a4fcbf66e7277ba657fdc4",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						27,
+						27,
+						228,
+						231
+					],
+					"code": "H804",
+					"offset": [
+						768,
+						0
+					],
+					"pixels_alpha_gt12": 24701,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/nyrelia_dominacao/nyrelia_dominacao_loop_03_v01.png",
+					"source_sha256": "f05e58d4c3c6d4cce1d58343ff9325c1b2098b66ccbda403bdf1b56a58e8f478",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						27,
+						24,
+						228,
+						232
+					],
+					"code": "H805",
+					"offset": [
+						1024,
+						0
+					],
+					"pixels_alpha_gt12": 25520,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/nyrelia_dominacao/nyrelia_dominacao_loop_04_v01.png",
+					"source_sha256": "ea2b5bc3416c44864e70c689c45e72c69d4301fdac758153d0e758f981bfcedd",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						27,
+						23,
+						228,
+						231
+					],
+					"code": "H806",
+					"offset": [
+						1280,
+						0
+					],
+					"pixels_alpha_gt12": 25081,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/nyrelia_dominacao/nyrelia_dominacao_loop_05_v01.png",
+					"source_sha256": "40cb95d976e5437e4c050b4a3bf8aed6a40470679db74444fd4d1367ead56afa",
+					"version": "v01"
+				}
+			]
+		},
+		{
+			"atlas": "assets/vfx/habilidade_zynara.png",
+			"frames": 6,
+			"group": "B",
+			"id": "zynara_suspensao_temporal",
+			"records": [
+				{
+					"bbox": [
+						85,
+						83,
+						171,
+						173
+					],
+					"code": "H901",
+					"offset": [
+						0,
+						0
+					],
+					"pixels_alpha_gt12": 3935,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/zynara_suspensao_temporal/zynara_suspensao_temporal_spark_v01.png",
+					"source_sha256": "ded810743e51675d2f75e42cfeb26d86af12c329c21dbc250d316b3963021281",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						39,
+						37,
+						217,
+						217
+					],
+					"code": "H902",
+					"offset": [
+						256,
+						0
+					],
+					"pixels_alpha_gt12": 15678,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/zynara_suspensao_temporal/zynara_suspensao_temporal_grow_v01.png",
+					"source_sha256": "b681c46cbb0798317dccb2bc793be57254e5348e5663eb4097d6c749393be092",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						7,
+						4,
+						249,
+						248
+					],
+					"code": "H903",
+					"offset": [
+						512,
+						0
+					],
+					"pixels_alpha_gt12": 27549,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/zynara_suspensao_temporal/zynara_suspensao_temporal_peak_v01.png",
+					"source_sha256": "1db71f49a4730f0cb7c451feb6a49a2b931c9f77e948b34e19412c7e01b4f444",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						9,
+						4,
+						249,
+						248
+					],
+					"code": "H904",
+					"offset": [
+						768,
+						0
+					],
+					"pixels_alpha_gt12": 20435,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/zynara_suspensao_temporal/zynara_suspensao_temporal_hold_v01.png",
+					"source_sha256": "95c9bd597f7ce5d15fb32193bec4aa2a8fdd3f707585e5d20bd8200df3124cfb",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						8,
+						5,
+						248,
+						246
+					],
+					"code": "H905",
+					"offset": [
+						1024,
+						0
+					],
+					"pixels_alpha_gt12": 20439,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/zynara_suspensao_temporal/zynara_suspensao_temporal_fade_v01.png",
+					"source_sha256": "7482483b98fc5f5a0aa0e39e5eba8525b2767737bee65db1a15c9ea4df1a243d",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						18,
+						22,
+						242,
+						233
+					],
+					"code": "H906",
+					"offset": [
+						1280,
+						0
+					],
+					"pixels_alpha_gt12": 5738,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/zynara_suspensao_temporal/zynara_suspensao_temporal_dissipate_v01.png",
+					"source_sha256": "d003a1c41851d82c0b7b71798ec8f99ef169e59394ea581224433cbb7f39c70c",
+					"version": "v01"
+				}
+			]
+		},
+		{
+			"atlas": "assets/vfx/habilidade_bromnor.png",
+			"frames": 6,
+			"group": "B",
+			"id": "bromnor_concordia",
+			"records": [
+				{
+					"bbox": [
+						90,
+						90,
+						166,
+						166
+					],
+					"code": "H1001",
+					"offset": [
+						0,
+						0
+					],
+					"pixels_alpha_gt12": 3114,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/bromnor_concordia/bromnor_concordia_spark_v01.png",
+					"source_sha256": "bab80ebd8cca186774b5c59746bd2b6a14ff450733e0b0df3d9f74d2f99c3afe",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						24,
+						25,
+						232,
+						226
+					],
+					"code": "H1002",
+					"offset": [
+						256,
+						0
+					],
+					"pixels_alpha_gt12": 21373,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/bromnor_concordia/bromnor_concordia_grow_v01.png",
+					"source_sha256": "3e29afae675d64358a8c3ba70bf3b61b52efb6922aa3564e6525aeb322134c40",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						6,
+						5,
+						250,
+						243
+					],
+					"code": "H1003",
+					"offset": [
+						512,
+						0
+					],
+					"pixels_alpha_gt12": 31293,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/bromnor_concordia/bromnor_concordia_peak_v01.png",
+					"source_sha256": "d469e767f9506ece65a663e6f4d7462d44ce885a649bca230652088feb8440ea",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						7,
+						7,
+						249,
+						242
+					],
+					"code": "H1004",
+					"offset": [
+						768,
+						0
+					],
+					"pixels_alpha_gt12": 22976,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/bromnor_concordia/bromnor_concordia_hold_v01.png",
+					"source_sha256": "f73ad79b8a29b1a9a454f7585ba9cb43e638ece1d47afa806d3084f883032087",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						7,
+						5,
+						249,
+						243
+					],
+					"code": "H1005",
+					"offset": [
+						1024,
+						0
+					],
+					"pixels_alpha_gt12": 24303,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/bromnor_concordia/bromnor_concordia_fade_v01.png",
+					"source_sha256": "b3d115caaa841b5482b0faaf6719bb7d621e5edc7278c207f7cca9e2bfac31f0",
+					"version": "v01"
+				},
+				{
+					"bbox": [
+						19,
+						19,
+						237,
+						227
+					],
+					"code": "H1006",
+					"offset": [
+						1280,
+						0
+					],
+					"pixels_alpha_gt12": 3992,
+					"source": "b-sources/.atena/generated/art-candidates/vfx/bromnor_concordia/bromnor_concordia_dissipate_v01.png",
+					"source_sha256": "9ba52f01aa3ba206f00b79a73f82bbe74c19e7143b2c4e81f88e2267cc4ce6ec",
+					"version": "v01"
+				}
+			]
+		}
+	],
+	"pivot": [
+		128,
+		128
+	],
+	"resampling": "Godot Lanczos, 1254 direto para 256 (sem intermediario)",
+	"revision": "vfx-projectiles-and-hero-abilities/v01",
+	"rgb": "branco"
+}

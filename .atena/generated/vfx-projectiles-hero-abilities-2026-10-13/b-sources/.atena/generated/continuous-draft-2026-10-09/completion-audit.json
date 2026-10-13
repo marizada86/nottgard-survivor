@@ -1,0 +1,1730 @@
+{
+  "status": "NATIVE_GENERATION_COMPLETE_REVIEW_PENDING",
+  "vfx_count": 60,
+  "new_vfx": 41,
+  "new_hero_idle": 1,
+  "hero_pilot_pieces": 4,
+  "hash_checks": 60,
+  "manifest_sha256": "09928dd3c6f336d8ed1fc356f088e062a1d7adaf61d08fd51754cb3dfc56c913",
+  "runtime_admission": false,
+  "metrics": [
+    {
+      "effect": "durvall",
+      "group": 1,
+      "frames": 6,
+      "adjacent_difference_mean": [
+        14.698272705078125,
+        35.030517578125,
+        20.271530151367188,
+        19.661849975585938,
+        9.414321899414062,
+        3.8951873779296875
+      ],
+      "loop_seam_difference": 3.8951873779296875,
+      "human_acceptance": "PENDING",
+      "runtime_ready": false
+    },
+    {
+      "effect": "brook",
+      "group": 2,
+      "frames": 6,
+      "adjacent_difference_mean": [
+        5.5359344482421875,
+        2.46954345703125,
+        6.439788818359375,
+        5.5695037841796875,
+        2.6982879638671875,
+        2.7574310302734375
+      ],
+      "loop_seam_difference": 2.7574310302734375,
+      "human_acceptance": "PENDING",
+      "runtime_ready": false
+    },
+    {
+      "effect": "maelor",
+      "group": 3,
+      "frames": 6,
+      "adjacent_difference_mean": [
+        4.847686767578125,
+        1.919036865234375,
+        5.04833984375,
+        2.95947265625,
+        1.2517242431640625,
+        3.137847900390625
+      ],
+      "loop_seam_difference": 3.137847900390625,
+      "human_acceptance": "PENDING",
+      "runtime_ready": false
+    },
+    {
+      "effect": "sylas",
+      "group": 4,
+      "frames": 6,
+      "adjacent_difference_mean": [
+        6.36175537109375,
+        4.661102294921875,
+        3.05963134765625,
+        2.852630615234375,
+        2.3309478759765625,
+        3.040557861328125
+      ],
+      "loop_seam_difference": 3.040557861328125,
+      "human_acceptance": "PENDING",
+      "runtime_ready": false
+    },
+    {
+      "effect": "kayron",
+      "group": 5,
+      "frames": 6,
+      "adjacent_difference_mean": [
+        31.100936889648438,
+        31.01446533203125,
+        9.05609130859375,
+        11.675277709960938,
+        24.438919067382812,
+        23.854141235351562
+      ],
+      "loop_seam_difference": 23.854141235351562,
+      "human_acceptance": "PENDING",
+      "runtime_ready": false
+    },
+    {
+      "effect": "korrak",
+      "group": 6,
+      "frames": 6,
+      "adjacent_difference_mean": [
+        43.713836669921875,
+        51.66734313964844,
+        33.89384460449219,
+        27.503799438476562,
+        43.531524658203125,
+        7.88323974609375
+      ],
+      "loop_seam_difference": 7.88323974609375,
+      "human_acceptance": "PENDING",
+      "runtime_ready": false
+    },
+    {
+      "effect": "leoric",
+      "group": 7,
+      "frames": 6,
+      "adjacent_difference_mean": [
+        24.573593139648438,
+        23.03155517578125,
+        6.94830322265625,
+        9.769760131835938,
+        14.965133666992188,
+        4.37896728515625
+      ],
+      "loop_seam_difference": 4.37896728515625,
+      "human_acceptance": "PENDING",
+      "runtime_ready": false
+    },
+    {
+      "effect": "nyrelia",
+      "group": 8,
+      "frames": 6,
+      "adjacent_difference_mean": [
+        10.20318603515625,
+        10.11041259765625,
+        9.216949462890625,
+        14.494247436523438,
+        13.665802001953125,
+        9.739364624023438
+      ],
+      "loop_seam_difference": 9.739364624023438,
+      "human_acceptance": "PENDING",
+      "runtime_ready": false
+    },
+    {
+      "effect": "zynara",
+      "group": 9,
+      "frames": 6,
+      "adjacent_difference_mean": [
+        29.500808715820312,
+        57.756591796875,
+        18.555740356445312,
+        16.018798828125,
+        21.6658935546875,
+        9.0289306640625
+      ],
+      "loop_seam_difference": 9.0289306640625,
+      "human_acceptance": "PENDING",
+      "runtime_ready": false
+    },
+    {
+      "effect": "bromnor",
+      "group": 10,
+      "frames": 6,
+      "adjacent_difference_mean": [
+        42.00935363769531,
+        53.21470642089844,
+        21.9942626953125,
+        22.026824951171875,
+        27.968460083007812,
+        8.152923583984375
+      ],
+      "loop_seam_difference": 8.152923583984375,
+      "human_acceptance": "PENDING",
+      "runtime_ready": false
+    }
+  ],
+  "flags": [
+    {
+      "code": "H401",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H402",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H404",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H405",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H406",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H501",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H502",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H503",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H504",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H505",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H506",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H601",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H602",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H603",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H604",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H605",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H606",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H701",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H702",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H703",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H704",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H705",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H706",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H801",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H802",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H803",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H804",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H805",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H806",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H901",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H902",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H903",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H904",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H905",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H906",
+      "flags": [
+        "SIZE_NORMALIZATION",
+        "COLOR_DIFFERENCE"
+      ]
+    },
+    {
+      "code": "H1001",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H1002",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H1003",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H1004",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H1005",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    },
+    {
+      "code": "H1006",
+      "flags": [
+        "SIZE_NORMALIZATION"
+      ]
+    }
+  ],
+  "visual_pending": {
+    "Sylas": "H402 reach/leftward tail; H406 opacity fading needs review",
+    "Korrak": "Flames have vertical appearance; assess flat topdown contract",
+    "Kayron/Nyrelia": "Subtle phase variation; seam and rotation review",
+    "All": "Native size and exact pivot normalization; human acceptance"
+  },
+  "records": [
+    {
+      "code": "H101",
+      "name": "durvall_ruptura_sombria_start",
+      "destination": ".atena/generated/art-candidates/vfx/durvall_ruptura_sombria/durvall_ruptura_sombria_start_v01.png",
+      "sha256": "00b891b430ae103cf252d2fb84cd871baffa6c924d16910dc2df7f985ce48844",
+      "status": "PREVIOUSLY_GENERATED",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\durvall_ruptura_sombria\\durvall_ruptura_sombria_start_v01.png"
+    },
+    {
+      "code": "H102",
+      "name": "durvall_ruptura_sombria_sweep",
+      "destination": ".atena/generated/art-candidates/vfx/durvall_ruptura_sombria/durvall_ruptura_sombria_sweep_v02.png",
+      "sha256": "809ecc013e2443033ef335632db7a9691d022f3321da017ca426326fb3e2020e",
+      "status": "PREVIOUSLY_GENERATED",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\durvall_ruptura_sombria\\durvall_ruptura_sombria_sweep_v02.png"
+    },
+    {
+      "code": "H103",
+      "name": "durvall_ruptura_sombria_peak",
+      "destination": ".atena/generated/art-candidates/vfx/durvall_ruptura_sombria/durvall_ruptura_sombria_peak_v01.png",
+      "sha256": "e5f022ec1c630409f6405add4250ebfc73ebe052ea233e8c227ec5ce67fe8974",
+      "status": "PREVIOUSLY_GENERATED",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\durvall_ruptura_sombria\\durvall_ruptura_sombria_peak_v01.png"
+    },
+    {
+      "code": "H104",
+      "name": "durvall_ruptura_sombria_hold",
+      "destination": ".atena/generated/art-candidates/vfx/durvall_ruptura_sombria/durvall_ruptura_sombria_hold_v01.png",
+      "sha256": "341e6fa8418c4d4aca7f06b21116c3be8ff634cbb2fd6340da7c47dd283a3556",
+      "status": "PREVIOUSLY_GENERATED",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\durvall_ruptura_sombria\\durvall_ruptura_sombria_hold_v01.png"
+    },
+    {
+      "code": "H105",
+      "name": "durvall_ruptura_sombria_fade",
+      "destination": ".atena/generated/art-candidates/vfx/durvall_ruptura_sombria/durvall_ruptura_sombria_fade_v01.png",
+      "sha256": "17bbd4c6c43348370cb860feeb1eb10113d2bbb35a1a980d0c37bbced2ad02a2",
+      "status": "PREVIOUSLY_GENERATED",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\durvall_ruptura_sombria\\durvall_ruptura_sombria_fade_v01.png"
+    },
+    {
+      "code": "H106",
+      "name": "durvall_ruptura_sombria_dissipate",
+      "destination": ".atena/generated/art-candidates/vfx/durvall_ruptura_sombria/durvall_ruptura_sombria_dissipate_v01.png",
+      "sha256": "86c6d108e6b7034acbec687bcfc7ea1537cde6480b389b7870b0b5cb5826314c",
+      "status": "PREVIOUSLY_GENERATED",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\durvall_ruptura_sombria\\durvall_ruptura_sombria_dissipate_v01.png"
+    },
+    {
+      "code": "H201",
+      "name": "brook_guarda_de_lliira_loop_00",
+      "destination": ".atena/generated/art-candidates/vfx/brook_guarda_de_lliira/brook_guarda_de_lliira_loop_00_v02.png",
+      "sha256": "076c90602cf4f72e7e78df90791e8dbda1d47be473f81c1687e9c91347af9166",
+      "status": "PREVIOUSLY_GENERATED",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\brook_guarda_de_lliira\\brook_guarda_de_lliira_loop_00_v02.png"
+    },
+    {
+      "code": "H202",
+      "name": "brook_guarda_de_lliira_loop_01",
+      "destination": ".atena/generated/art-candidates/vfx/brook_guarda_de_lliira/brook_guarda_de_lliira_loop_01_v01.png",
+      "sha256": "9dfd35c3d44f632a910699f121adcdbfb92b1b9570f897e16fae2a0a581ea193",
+      "status": "PREVIOUSLY_GENERATED",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\brook_guarda_de_lliira\\brook_guarda_de_lliira_loop_01_v01.png"
+    },
+    {
+      "code": "H203",
+      "name": "brook_guarda_de_lliira_loop_02",
+      "destination": ".atena/generated/art-candidates/vfx/brook_guarda_de_lliira/brook_guarda_de_lliira_loop_02_v01.png",
+      "sha256": "d8b58bc231a433cf8d33ea4bc19a55f7362afcba71e27b1c58ae67389694522e",
+      "status": "PREVIOUSLY_GENERATED",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\brook_guarda_de_lliira\\brook_guarda_de_lliira_loop_02_v01.png"
+    },
+    {
+      "code": "H204",
+      "name": "brook_guarda_de_lliira_loop_03",
+      "destination": ".atena/generated/art-candidates/vfx/brook_guarda_de_lliira/brook_guarda_de_lliira_loop_03_v01.png",
+      "sha256": "a146a13a5af5a533f3e3f199bd37870520d95abd6d2f6339bd74032b6e0ac74f",
+      "status": "PREVIOUSLY_GENERATED",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\brook_guarda_de_lliira\\brook_guarda_de_lliira_loop_03_v01.png"
+    },
+    {
+      "code": "H205",
+      "name": "brook_guarda_de_lliira_loop_04",
+      "destination": ".atena/generated/art-candidates/vfx/brook_guarda_de_lliira/brook_guarda_de_lliira_loop_04_v01.png",
+      "sha256": "795e92c2e1bc58c2ed2f2431e5ae586d063de694c5dc78d65306282a54daf01b",
+      "status": "PREVIOUSLY_GENERATED",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\brook_guarda_de_lliira\\brook_guarda_de_lliira_loop_04_v01.png"
+    },
+    {
+      "code": "H206",
+      "name": "brook_guarda_de_lliira_loop_05",
+      "destination": ".atena/generated/art-candidates/vfx/brook_guarda_de_lliira/brook_guarda_de_lliira_loop_05_v01.png",
+      "sha256": "f353d745355e6d4792d793e3e473c06c6b20a50302f50f65703ea5960f8c3270",
+      "status": "PREVIOUSLY_GENERATED",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\brook_guarda_de_lliira\\brook_guarda_de_lliira_loop_05_v01.png"
+    },
+    {
+      "code": "H301",
+      "name": "maelor_comunhao_loop_00",
+      "destination": ".atena/generated/art-candidates/vfx/maelor_comunhao/maelor_comunhao_loop_00_v01.png",
+      "sha256": "ed622fe59738017a625ebd2daaf90d2f738213d1fca299d9240d08ccd3fd3969",
+      "status": "PREVIOUSLY_GENERATED",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\maelor_comunhao\\maelor_comunhao_loop_00_v01.png"
+    },
+    {
+      "code": "H302",
+      "name": "maelor_comunhao_loop_01",
+      "destination": ".atena/generated/art-candidates/vfx/maelor_comunhao/maelor_comunhao_loop_01_v01.png",
+      "sha256": "7a289aae4816f19800cfdefd63dae9e3662020d590b92d1df9dcefd1e27543bd",
+      "status": "PREVIOUSLY_GENERATED",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\maelor_comunhao\\maelor_comunhao_loop_01_v01.png"
+    },
+    {
+      "code": "H303",
+      "name": "maelor_comunhao_loop_02",
+      "destination": ".atena/generated/art-candidates/vfx/maelor_comunhao/maelor_comunhao_loop_02_v01.png",
+      "sha256": "c6dddbbcc415c987e32a2fe31a3ef61360b026f6cf2c08232eae8f43b4a3678a",
+      "status": "PREVIOUSLY_GENERATED",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\maelor_comunhao\\maelor_comunhao_loop_02_v01.png"
+    },
+    {
+      "code": "H304",
+      "name": "maelor_comunhao_loop_03",
+      "destination": ".atena/generated/art-candidates/vfx/maelor_comunhao/maelor_comunhao_loop_03_v01.png",
+      "sha256": "b5b5c8334439e61fcce91922ef624addbbf92b7e27696b2c65cccaf57bd79821",
+      "status": "PREVIOUSLY_GENERATED",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\maelor_comunhao\\maelor_comunhao_loop_03_v01.png"
+    },
+    {
+      "code": "H305",
+      "name": "maelor_comunhao_loop_04",
+      "destination": ".atena/generated/art-candidates/vfx/maelor_comunhao/maelor_comunhao_loop_04_v01.png",
+      "sha256": "5c1e88fb174de1791a186c6b75eb86ba89d066f47f99b7ae4f4f91453b35d25d",
+      "status": "PREVIOUSLY_GENERATED",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\maelor_comunhao\\maelor_comunhao_loop_04_v01.png"
+    },
+    {
+      "code": "H306",
+      "name": "maelor_comunhao_loop_05",
+      "destination": ".atena/generated/art-candidates/vfx/maelor_comunhao/maelor_comunhao_loop_05_v01.png",
+      "sha256": "574f8ca4fedc2d3dfbdf452a8aef7278dd840bc7ed13918bd1e06b49a27a73aa",
+      "status": "PREVIOUSLY_GENERATED",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\maelor_comunhao\\maelor_comunhao_loop_05_v01.png"
+    },
+    {
+      "code": "H401",
+      "name": "sylas_passo_pelas_sombras_head",
+      "effect": "sylas_passo_pelas_sombras",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a ribbon of shadow smoke: a long tapering streak with wispy torn ends, like the trail left by a very fast dash through shadows, with a few sharp narrow mask-shaped glints, reach about 45 percent of the image width. Frame 1 of 6, head: only the sharp bright head of the streak at the center, almost no trail yet, a few tiny sparks. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.",
+      "destination": ".atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_head_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-a083be90-7c1f-499d-99e5-eaea6d49b303.png",
+      "sha256": "8ae09583105acd45b96ddbef76abdd8eb55e8c05c537dedbe6fc7f655c46842f",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        558,
+        543,
+        912,
+        713
+      ],
+      "border_max": 1,
+      "channel_difference": 10,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T19:54:26.224681+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\sylas_passo_pelas_sombras\\sylas_passo_pelas_sombras_head_v01.png"
+    },
+    {
+      "code": "H402",
+      "name": "sylas_passo_pelas_sombras_grow",
+      "effect": "sylas_passo_pelas_sombras",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a ribbon of shadow smoke: a long tapering streak with wispy torn ends, like the trail left by a very fast dash through shadows, with a few sharp narrow mask-shaped glints, reach about 45 percent of the image width. Frame 2 of 6, grow: the streak stretching out to the left behind the head, about 60 percent of the final length, trail thin and bright. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.",
+      "destination": ".atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_grow_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-d66924a9-b48c-4fd8-818d-62f2ef531a17.png",
+      "sha256": "d8c714e84fe6c0fadfeaaefec7d30c7be522acae9c4553e09d72bf18001785ed",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        191,
+        513,
+        1212,
+        736
+      ],
+      "border_max": 2,
+      "channel_difference": 11,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T19:54:56.764921+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\sylas_passo_pelas_sombras\\sylas_passo_pelas_sombras_grow_v01.png"
+    },
+    {
+      "code": "H403",
+      "name": "sylas_passo_pelas_sombras_peak",
+      "destination": ".atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_peak_v02.png",
+      "sha256": "d9b23e455cf3b7a83e8e6c10820227b2cb829cb09949ed2b1abeb16bb9aa9919",
+      "status": "PREVIOUSLY_GENERATED",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\sylas_passo_pelas_sombras\\sylas_passo_pelas_sombras_peak_v02.png"
+    },
+    {
+      "code": "H404",
+      "name": "sylas_passo_pelas_sombras_thin",
+      "effect": "sylas_passo_pelas_sombras",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a ribbon of shadow smoke: a long tapering streak with wispy torn ends, like the trail left by a very fast dash through shadows, with a few sharp narrow mask-shaped glints, reach about 45 percent of the image width. Frame 4 of 6, thin: the streak thinning from its tail end, the trail breaking into wisps, head dimming. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.",
+      "destination": ".atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_thin_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-06fc9833-990f-4856-b07f-325b034bab35.png",
+      "sha256": "1566667d31959b6665ebdb5ae0d6f347a897ea047ef26e9daea23e97a16bf70b",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        574,
+        523,
+        1201,
+        722
+      ],
+      "border_max": 1,
+      "channel_difference": 11,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T19:55:22.801941+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\sylas_passo_pelas_sombras\\sylas_passo_pelas_sombras_thin_v01.png"
+    },
+    {
+      "code": "H405",
+      "name": "sylas_passo_pelas_sombras_break",
+      "effect": "sylas_passo_pelas_sombras",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a ribbon of shadow smoke: a long tapering streak with wispy torn ends, like the trail left by a very fast dash through shadows, with a few sharp narrow mask-shaped glints, reach about 45 percent of the image width. Frame 5 of 6, break: the trail broken into separate drifting wisps, dim gray. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.",
+      "destination": ".atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_break_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-cb310f6c-f2f6-4282-aa2e-8cabc8a85d8c.png",
+      "sha256": "a2e237fddd38a73ba396497708d90085e0c71ac6070e6207d15f7f28bc30f64c",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        561,
+        505,
+        1205,
+        743
+      ],
+      "border_max": 1,
+      "channel_difference": 8,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T19:55:52.357643+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\sylas_passo_pelas_sombras\\sylas_passo_pelas_sombras_break_v01.png"
+    },
+    {
+      "code": "H406",
+      "name": "sylas_passo_pelas_sombras_specks",
+      "effect": "sylas_passo_pelas_sombras",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a ribbon of shadow smoke: a long tapering streak with wispy torn ends, like the trail left by a very fast dash through shadows, with a few sharp narrow mask-shaped glints, reach about 45 percent of the image width. Frame 6 of 6, specks: only a few faint specks and wisps remain, almost black. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.",
+      "destination": ".atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_specks_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-6958b50f-6304-4905-9b59-efade3254740.png",
+      "sha256": "f21b76a36baddb88a242e1771eb78f65a6c7d25178e34d4a76f0a2c7d932d3a0",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        575,
+        529,
+        1197,
+        711
+      ],
+      "border_max": 1,
+      "channel_difference": 7,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T19:56:15.692507+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\sylas_passo_pelas_sombras\\sylas_passo_pelas_sombras_specks_v01.png"
+    },
+    {
+      "code": "H501",
+      "name": "kayron_sobrecarga_mistica_loop_00",
+      "effect": "kayron_sobrecarga_mistica",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a crackling energy aura: jagged electric arcs spiraling around an empty center, fast and chaotic yet circular, bright white lightning with fine branches. Frame 1 of 6, loop 00: phase 1 of a seamless 6-frame loop: the pattern at 0 degrees of its cycle.",
+      "destination": ".atena/generated/art-candidates/vfx/kayron_sobrecarga_mistica/kayron_sobrecarga_mistica_loop_00_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-4f777d78-a706-4c5c-9f2b-3e283a2199a9.png",
+      "sha256": "36eec357eef30bcc44325e9e75d3d1270eba4bf158fe26d8cc0282074fa7aade",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        57,
+        49,
+        1196,
+        1193
+      ],
+      "border_max": 1,
+      "channel_difference": 11,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T19:56:44.108798+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\kayron_sobrecarga_mistica\\kayron_sobrecarga_mistica_loop_00_v01.png"
+    },
+    {
+      "code": "H502",
+      "name": "kayron_sobrecarga_mistica_loop_01",
+      "effect": "kayron_sobrecarga_mistica",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a crackling energy aura: jagged electric arcs spiraling around an empty center, fast and chaotic yet circular, bright white lightning with fine branches. Frame 2 of 6, loop 01: phase 2 of the loop: the same pattern advanced by one sixth of the cycle (rotating or pulsing slightly). Match exactly the line style, glow, thickness and shape of the approved gate frame attached.",
+      "destination": ".atena/generated/art-candidates/vfx/kayron_sobrecarga_mistica/kayron_sobrecarga_mistica_loop_01_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-27f45d8b-54a1-4801-8e3d-61b8bbea8c80.png",
+      "sha256": "803d5008bb331f4e5512deec967cea9d584adbffaad1d2425d74871bcaae5863",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        57,
+        45,
+        1201,
+        1192
+      ],
+      "border_max": 2,
+      "channel_difference": 11,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T19:57:14.286498+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\kayron_sobrecarga_mistica\\kayron_sobrecarga_mistica_loop_01_v01.png"
+    },
+    {
+      "code": "H503",
+      "name": "kayron_sobrecarga_mistica_loop_02",
+      "effect": "kayron_sobrecarga_mistica",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a crackling energy aura: jagged electric arcs spiraling around an empty center, fast and chaotic yet circular, bright white lightning with fine branches. Frame 3 of 6, loop 02: phase 3 of the loop: advanced by two sixths of the cycle. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.",
+      "destination": ".atena/generated/art-candidates/vfx/kayron_sobrecarga_mistica/kayron_sobrecarga_mistica_loop_02_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-a2ab3cb2-98a7-44f1-b6e1-8f2c87fb5d1b.png",
+      "sha256": "5ccbc566f6659f79c8034e29a96c86073faff6cfda4db1b2b1096e1cd30cc5fb",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        54,
+        49,
+        1195,
+        1194
+      ],
+      "border_max": 2,
+      "channel_difference": 11,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T19:57:42.593407+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\kayron_sobrecarga_mistica\\kayron_sobrecarga_mistica_loop_02_v01.png"
+    },
+    {
+      "code": "H504",
+      "name": "kayron_sobrecarga_mistica_loop_03",
+      "effect": "kayron_sobrecarga_mistica",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a crackling energy aura: jagged electric arcs spiraling around an empty center, fast and chaotic yet circular, bright white lightning with fine branches. Frame 4 of 6, loop 03: phase 4 of the loop: advanced by three sixths of the cycle, the halfway point. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.",
+      "destination": ".atena/generated/art-candidates/vfx/kayron_sobrecarga_mistica/kayron_sobrecarga_mistica_loop_03_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-7bb3e12d-b33b-446e-b5ba-b39431be16d6.png",
+      "sha256": "f5acb4dbd26ae9e8905332b926842fa588f40e19945cec847cbde6485955a2a4",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        57,
+        48,
+        1196,
+        1194
+      ],
+      "border_max": 1,
+      "channel_difference": 11,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T19:58:12.548474+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\kayron_sobrecarga_mistica\\kayron_sobrecarga_mistica_loop_03_v01.png"
+    },
+    {
+      "code": "H505",
+      "name": "kayron_sobrecarga_mistica_loop_04",
+      "effect": "kayron_sobrecarga_mistica",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a crackling energy aura: jagged electric arcs spiraling around an empty center, fast and chaotic yet circular, bright white lightning with fine branches. Frame 5 of 6, loop 04: phase 5 of the loop: advanced by four sixths of the cycle. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.",
+      "destination": ".atena/generated/art-candidates/vfx/kayron_sobrecarga_mistica/kayron_sobrecarga_mistica_loop_04_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-74780b43-cd79-4424-9df1-90440236386e.png",
+      "sha256": "4a75d55d26e75ec082b5d355ac0a3e42ad0d7418683ec417046ae93c1f862d31",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        59,
+        51,
+        1193,
+        1193
+      ],
+      "border_max": 2,
+      "channel_difference": 9,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T19:58:50.015045+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\kayron_sobrecarga_mistica\\kayron_sobrecarga_mistica_loop_04_v01.png"
+    },
+    {
+      "code": "H506",
+      "name": "kayron_sobrecarga_mistica_loop_05",
+      "effect": "kayron_sobrecarga_mistica",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a crackling energy aura: jagged electric arcs spiraling around an empty center, fast and chaotic yet circular, bright white lightning with fine branches. Frame 6 of 6, loop 05: phase 6 of the loop: advanced by five sixths of the cycle, so that the next frame flows back into phase 1 without a visible jump. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.",
+      "destination": ".atena/generated/art-candidates/vfx/kayron_sobrecarga_mistica/kayron_sobrecarga_mistica_loop_05_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-7ef3ebe5-2229-48e1-a4ea-06ee6da161ad.png",
+      "sha256": "4eb87a88215e602cc4759c102123298d74606166861fa34dd79a05886fb3e508",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        53,
+        53,
+        1188,
+        1196
+      ],
+      "border_max": 2,
+      "channel_difference": 8,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T19:59:18.862433+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\kayron_sobrecarga_mistica\\kayron_sobrecarga_mistica_loop_05_v01.png"
+    },
+    {
+      "code": "H601",
+      "name": "korrak_impacto_de_xargath_spark",
+      "effect": "korrak_impacto_de_xargath",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a ground slam: a thick shockwave ring with radial cracks spreading across the ground and a burst of flame tongues rising from the center, ember specks flying outward. Frame 1 of 6, spark: the very first instant: a tiny bright point at the center with a very small ring, about 10 percent of the final radius. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.",
+      "destination": ".atena/generated/art-candidates/vfx/korrak_impacto_de_xargath/korrak_impacto_de_xargath_spark_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-9d192b2a-5620-4d29-bf80-6669d57d07b0.png",
+      "sha256": "4433be8205d67bec672b9bef6215ff3ef0db254aed84c89a822304b0b96a2a03",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        389,
+        382,
+        857,
+        851
+      ],
+      "border_max": 1,
+      "channel_difference": 9,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T20:00:18.853486+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\korrak_impacto_de_xargath\\korrak_impacto_de_xargath_spark_v01.png"
+    },
+    {
+      "code": "H602",
+      "name": "korrak_impacto_de_xargath_grow",
+      "effect": "korrak_impacto_de_xargath",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a ground slam: a thick shockwave ring with radial cracks spreading across the ground and a burst of flame tongues rising from the center, ember specks flying outward. Frame 2 of 6, grow: the shape expanding fast, about 45 percent of the final radius, bright and sharp. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.",
+      "destination": ".atena/generated/art-candidates/vfx/korrak_impacto_de_xargath/korrak_impacto_de_xargath_grow_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-41b4855e-e0cc-4187-9fdb-27661d94e9e6.png",
+      "sha256": "8a2ea18d8d8c37f26d7e68e2027cc3b5b9ed3b1c55221a61f3c14cf72264d9bb",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        118,
+        100,
+        1150,
+        1134
+      ],
+      "border_max": 2,
+      "channel_difference": 10,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T20:00:46.013921+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\korrak_impacto_de_xargath\\korrak_impacto_de_xargath_grow_v01.png"
+    },
+    {
+      "code": "H603",
+      "name": "korrak_impacto_de_xargath_peak",
+      "effect": "korrak_impacto_de_xargath",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a ground slam: a thick shockwave ring with radial cracks spreading across the ground and a burst of flame tongues rising from the center, ember specks flying outward. Frame 3 of 6, peak: PEAK frame: the full shape at maximum radius and brightness, hot white core, crisp detail.",
+      "destination": ".atena/generated/art-candidates/vfx/korrak_impacto_de_xargath/korrak_impacto_de_xargath_peak_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-6f3011c6-47c3-450f-ab99-6cecb6cae25b.png",
+      "sha256": "7487b2677e93a447058a98e832037d18582fa8ce13430adb94a496c29a5b2a4b",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        3,
+        26,
+        1251,
+        1205
+      ],
+      "border_max": 4,
+      "channel_difference": 11,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T19:59:50.763490+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\korrak_impacto_de_xargath\\korrak_impacto_de_xargath_peak_v01.png"
+    },
+    {
+      "code": "H604",
+      "name": "korrak_impacto_de_xargath_hold",
+      "effect": "korrak_impacto_de_xargath",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a ground slam: a thick shockwave ring with radial cracks spreading across the ground and a burst of flame tongues rising from the center, ember specks flying outward. Frame 4 of 6, hold: the shape at near-maximum radius but thinning, the bright band narrowing, fewer details. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.",
+      "destination": ".atena/generated/art-candidates/vfx/korrak_impacto_de_xargath/korrak_impacto_de_xargath_hold_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-59a12d25-803e-47b4-9b45-576b2ebd61ab.png",
+      "sha256": "1ed3e6bc49d9fd82937f303f4630d914ca64d4067cafdc3fc5867fc06f1dee34",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        14,
+        44,
+        1235,
+        1201
+      ],
+      "border_max": 2,
+      "channel_difference": 10,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T20:01:23.210194+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\korrak_impacto_de_xargath\\korrak_impacto_de_xargath_hold_v01.png"
+    },
+    {
+      "code": "H605",
+      "name": "korrak_impacto_de_xargath_fade",
+      "effect": "korrak_impacto_de_xargath",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a ground slam: a thick shockwave ring with radial cracks spreading across the ground and a burst of flame tongues rising from the center, ember specks flying outward. Frame 5 of 6, fade: the shape breaking apart into fragments at the outer edge, dimmer gray, dissolving. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.",
+      "destination": ".atena/generated/art-candidates/vfx/korrak_impacto_de_xargath/korrak_impacto_de_xargath_fade_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-0e919660-6b88-4941-9495-d41d4eb49e4e.png",
+      "sha256": "ddf3ccd69943015f62fd652b1a93da79d807b22bb3074a5969a337224369e76c",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        6,
+        43,
+        1237,
+        1196
+      ],
+      "border_max": 2,
+      "channel_difference": 11,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T20:02:04.123378+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\korrak_impacto_de_xargath\\korrak_impacto_de_xargath_fade_v01.png"
+    },
+    {
+      "code": "H606",
+      "name": "korrak_impacto_de_xargath_dissipate",
+      "effect": "korrak_impacto_de_xargath",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a ground slam: a thick shockwave ring with radial cracks spreading across the ground and a burst of flame tongues rising from the center, ember specks flying outward. Frame 6 of 6, dissipate: the last moment: only a few very faint fragments and specks remain, almost black. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.",
+      "destination": ".atena/generated/art-candidates/vfx/korrak_impacto_de_xargath/korrak_impacto_de_xargath_dissipate_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-00b2ba33-e09a-453d-9da0-00245215bd59.png",
+      "sha256": "9a27d109277e4ffdf9c4891611db80f8c27acfb34ccf2aac5baa5e76a9008e75",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        172,
+        157,
+        1098,
+        1107
+      ],
+      "border_max": 1,
+      "channel_difference": 9,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T20:02:30.783438+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\korrak_impacto_de_xargath\\korrak_impacto_de_xargath_dissipate_v01.png"
+    },
+    {
+      "code": "H701",
+      "name": "leoric_constelacao_spark",
+      "effect": "leoric_constelacao",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a constellation burst: eight bright star points radiating outward from the center, with thin lines connecting neighboring stars, like a star map exploding outward. Frame 1 of 6, spark: the very first instant: a tiny bright point at the center with a very small ring, about 10 percent of the final radius. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.",
+      "destination": ".atena/generated/art-candidates/vfx/leoric_constelacao/leoric_constelacao_spark_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-8c1a3529-f5a0-462c-af78-7579ec98dac6.png",
+      "sha256": "4bf8e3b559e001b8eef4e0cee123c7b0f768cae62f09df25a56f914b5354fa02",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        446,
+        436,
+        807,
+        810
+      ],
+      "border_max": 1,
+      "channel_difference": 8,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T20:03:23.393016+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\leoric_constelacao\\leoric_constelacao_spark_v01.png"
+    },
+    {
+      "code": "H702",
+      "name": "leoric_constelacao_grow",
+      "effect": "leoric_constelacao",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a constellation burst: eight bright star points radiating outward from the center, with thin lines connecting neighboring stars, like a star map exploding outward. Frame 2 of 6, grow: the shape expanding fast, about 45 percent of the final radius, bright and sharp. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.",
+      "destination": ".atena/generated/art-candidates/vfx/leoric_constelacao/leoric_constelacao_grow_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-fb792eaa-ce5f-4d3b-8600-96dd90d83752.png",
+      "sha256": "c7cb21dad1a4867c340939ae2c8bac3ffed4940bd29e77293b50907275c87154",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        85,
+        99,
+        1171,
+        1150
+      ],
+      "border_max": 1,
+      "channel_difference": 11,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T20:03:55.332604+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\leoric_constelacao\\leoric_constelacao_grow_v01.png"
+    },
+    {
+      "code": "H703",
+      "name": "leoric_constelacao_peak",
+      "effect": "leoric_constelacao",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a constellation burst: eight bright star points radiating outward from the center, with thin lines connecting neighboring stars, like a star map exploding outward. Frame 3 of 6, peak: PEAK frame: the full shape at maximum radius and brightness, hot white core, crisp detail.",
+      "destination": ".atena/generated/art-candidates/vfx/leoric_constelacao/leoric_constelacao_peak_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-6254613a-a7fe-413f-bf22-fb102eac7874.png",
+      "sha256": "98d36534b7a3f0667612b2442d2f1cb647ede94f1ffaa6dac3b2d927eb76254b",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        30,
+        31,
+        1223,
+        1191
+      ],
+      "border_max": 1,
+      "channel_difference": 13,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T20:03:01.242951+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\leoric_constelacao\\leoric_constelacao_peak_v01.png"
+    },
+    {
+      "code": "H704",
+      "name": "leoric_constelacao_hold",
+      "effect": "leoric_constelacao",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a constellation burst: eight bright star points radiating outward from the center, with thin lines connecting neighboring stars, like a star map exploding outward. Frame 4 of 6, hold: the shape at near-maximum radius but thinning, the bright band narrowing, fewer details. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.",
+      "destination": ".atena/generated/art-candidates/vfx/leoric_constelacao/leoric_constelacao_hold_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-0692e7a8-fe36-4c94-a58b-63050a93d4fc.png",
+      "sha256": "f139e87ffc61cb02808eb46c0eadbfad996655bf031bdb78330bd9b8dcadbdf2",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        30,
+        26,
+        1223,
+        1197
+      ],
+      "border_max": 1,
+      "channel_difference": 11,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T20:04:22.306865+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\leoric_constelacao\\leoric_constelacao_hold_v01.png"
+    },
+    {
+      "code": "H705",
+      "name": "leoric_constelacao_fade",
+      "effect": "leoric_constelacao",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a constellation burst: eight bright star points radiating outward from the center, with thin lines connecting neighboring stars, like a star map exploding outward. Frame 5 of 6, fade: the shape breaking apart into fragments at the outer edge, dimmer gray, dissolving. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.",
+      "destination": ".atena/generated/art-candidates/vfx/leoric_constelacao/leoric_constelacao_fade_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-26ad83d3-a13e-4efe-9600-aeeff12a3822.png",
+      "sha256": "14aee760943a5b814ea8483fea065c42fe88e94bad8b8e46bfc47092566cfa0b",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        36,
+        29,
+        1223,
+        1209
+      ],
+      "border_max": 1,
+      "channel_difference": 8,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T20:04:48.805551+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\leoric_constelacao\\leoric_constelacao_fade_v01.png"
+    },
+    {
+      "code": "H706",
+      "name": "leoric_constelacao_dissipate",
+      "effect": "leoric_constelacao",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a constellation burst: eight bright star points radiating outward from the center, with thin lines connecting neighboring stars, like a star map exploding outward. Frame 6 of 6, dissipate: the last moment: only a few very faint fragments and specks remain, almost black. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.",
+      "destination": ".atena/generated/art-candidates/vfx/leoric_constelacao/leoric_constelacao_dissipate_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-277641b5-efa2-458c-91da-d2b15520cc82.png",
+      "sha256": "7623afa5bfe2cfd6f7d441b91c45e4259d34b2f4d98bd697b6701e2fef5b475e",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        70,
+        51,
+        1184,
+        1171
+      ],
+      "border_max": 1,
+      "channel_difference": 7,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T20:05:20.489735+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\leoric_constelacao\\leoric_constelacao_dissipate_v01.png"
+    },
+    {
+      "code": "H801",
+      "name": "nyrelia_dominacao_loop_00",
+      "effect": "nyrelia_dominacao",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a hypnotic charm sigil: a spiral eye-like glyph made of concentric thin rings with a small bright pupil at the center, lying flat and slowly rotating. Frame 1 of 6, loop 00: phase 1 of a seamless 6-frame loop: the pattern at 0 degrees of its cycle.",
+      "destination": ".atena/generated/art-candidates/vfx/nyrelia_dominacao/nyrelia_dominacao_loop_00_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-4d491422-3eb6-47b1-9c62-7d059c8db7f6.png",
+      "sha256": "8006055ec0b5a9e09857d624e89cf76b8da9259b9a0995d65e413432591e26ea",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        131,
+        122,
+        1120,
+        1127
+      ],
+      "border_max": 1,
+      "channel_difference": 10,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T20:05:52.032590+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\nyrelia_dominacao\\nyrelia_dominacao_loop_00_v01.png"
+    },
+    {
+      "code": "H802",
+      "name": "nyrelia_dominacao_loop_01",
+      "effect": "nyrelia_dominacao",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a hypnotic charm sigil: a spiral eye-like glyph made of concentric thin rings with a small bright pupil at the center, lying flat and slowly rotating. Frame 2 of 6, loop 01: phase 2 of the loop: the same pattern advanced by one sixth of the cycle (rotating or pulsing slightly). Match exactly the line style, glow, thickness and shape of the approved gate frame attached.",
+      "destination": ".atena/generated/art-candidates/vfx/nyrelia_dominacao/nyrelia_dominacao_loop_01_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-391bc719-a37b-4af6-b6e8-05db827af5e8.png",
+      "sha256": "99572ff64363755ed3d69fb6bbb5d8005379e6131d86c37e50555d06e90acb63",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        127,
+        113,
+        1117,
+        1127
+      ],
+      "border_max": 2,
+      "channel_difference": 9,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T20:06:21.202457+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\nyrelia_dominacao\\nyrelia_dominacao_loop_01_v01.png"
+    },
+    {
+      "code": "H803",
+      "name": "nyrelia_dominacao_loop_02",
+      "effect": "nyrelia_dominacao",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a hypnotic charm sigil: a spiral eye-like glyph made of concentric thin rings with a small bright pupil at the center, lying flat and slowly rotating. Frame 3 of 6, loop 02: phase 3 of the loop: advanced by two sixths of the cycle. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.",
+      "destination": ".atena/generated/art-candidates/vfx/nyrelia_dominacao/nyrelia_dominacao_loop_02_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-c69ca134-cb30-437f-a222-33a16966c8d3.png",
+      "sha256": "3ac7aef18ba5a665cd2ea7e7b0de922817d2ead137a4fcbf66e7277ba657fdc4",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        132,
+        122,
+        1119,
+        1126
+      ],
+      "border_max": 1,
+      "channel_difference": 10,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T20:06:44.549636+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\nyrelia_dominacao\\nyrelia_dominacao_loop_02_v01.png"
+    },
+    {
+      "code": "H804",
+      "name": "nyrelia_dominacao_loop_03",
+      "effect": "nyrelia_dominacao",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a hypnotic charm sigil: a spiral eye-like glyph made of concentric thin rings with a small bright pupil at the center, lying flat and slowly rotating. Frame 4 of 6, loop 03: phase 4 of the loop: advanced by three sixths of the cycle, the halfway point. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.",
+      "destination": ".atena/generated/art-candidates/vfx/nyrelia_dominacao/nyrelia_dominacao_loop_03_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-b001f65a-5571-4e04-a9c0-a0f358e5fadd.png",
+      "sha256": "f05e58d4c3c6d4cce1d58343ff9325c1b2098b66ccbda403bdf1b56a58e8f478",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        131,
+        132,
+        1118,
+        1133
+      ],
+      "border_max": 2,
+      "channel_difference": 9,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T20:07:15.573240+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\nyrelia_dominacao\\nyrelia_dominacao_loop_03_v01.png"
+    },
+    {
+      "code": "H805",
+      "name": "nyrelia_dominacao_loop_04",
+      "effect": "nyrelia_dominacao",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a hypnotic charm sigil: a spiral eye-like glyph made of concentric thin rings with a small bright pupil at the center, lying flat and slowly rotating. Frame 5 of 6, loop 04: phase 5 of the loop: advanced by four sixths of the cycle. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.",
+      "destination": ".atena/generated/art-candidates/vfx/nyrelia_dominacao/nyrelia_dominacao_loop_04_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-154c7909-b953-4191-9444-944226484c01.png",
+      "sha256": "ea2b5bc3416c44864e70c689c45e72c69d4301fdac758153d0e758f981bfcedd",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        132,
+        119,
+        1116,
+        1138
+      ],
+      "border_max": 2,
+      "channel_difference": 11,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T20:07:46.864050+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\nyrelia_dominacao\\nyrelia_dominacao_loop_04_v01.png"
+    },
+    {
+      "code": "H806",
+      "name": "nyrelia_dominacao_loop_05",
+      "effect": "nyrelia_dominacao",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a hypnotic charm sigil: a spiral eye-like glyph made of concentric thin rings with a small bright pupil at the center, lying flat and slowly rotating. Frame 6 of 6, loop 05: phase 6 of the loop: advanced by five sixths of the cycle, so that the next frame flows back into phase 1 without a visible jump. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.",
+      "destination": ".atena/generated/art-candidates/vfx/nyrelia_dominacao/nyrelia_dominacao_loop_05_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-356e4a3d-0026-45e4-a53e-01ab549f1dc6.png",
+      "sha256": "40cb95d976e5437e4c050b4a3bf8aed6a40470679db74444fd4d1367ead56afa",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        132,
+        113,
+        1117,
+        1132
+      ],
+      "border_max": 2,
+      "channel_difference": 11,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T20:08:12.755626+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\nyrelia_dominacao\\nyrelia_dominacao_loop_05_v01.png"
+    },
+    {
+      "code": "H901",
+      "name": "zynara_suspensao_temporal_spark",
+      "effect": "zynara_suspensao_temporal",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a time-stop field: a very large circle with clock-like tick marks around the rim, two thin clock hands at the center, and frozen shard-like fragments hanging around, an eerie stillness. Frame 1 of 6, spark: the very first instant: a tiny bright point at the center with a very small ring, about 10 percent of the final radius. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.",
+      "destination": ".atena/generated/art-candidates/vfx/zynara_suspensao_temporal/zynara_suspensao_temporal_spark_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-e3357d07-c82c-4c37-b633-24d624fde7c7.png",
+      "sha256": "ded810743e51675d2f75e42cfeb26d86af12c329c21dbc250d316b3963021281",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        413,
+        402,
+        842,
+        850
+      ],
+      "border_max": 1,
+      "channel_difference": 10,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T20:09:09.594644+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\zynara_suspensao_temporal\\zynara_suspensao_temporal_spark_v01.png"
+    },
+    {
+      "code": "H902",
+      "name": "zynara_suspensao_temporal_grow",
+      "effect": "zynara_suspensao_temporal",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a time-stop field: a very large circle with clock-like tick marks around the rim, two thin clock hands at the center, and frozen shard-like fragments hanging around, an eerie stillness. Frame 2 of 6, grow: the shape expanding fast, about 45 percent of the final radius, bright and sharp. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.",
+      "destination": ".atena/generated/art-candidates/vfx/zynara_suspensao_temporal/zynara_suspensao_temporal_grow_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-0aebef1c-4697-42cb-9171-9f84cbb7f337.png",
+      "sha256": "b681c46cbb0798317dccb2bc793be57254e5348e5663eb4097d6c749393be092",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        188,
+        179,
+        1066,
+        1067
+      ],
+      "border_max": 1,
+      "channel_difference": 11,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T20:09:41.603208+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\zynara_suspensao_temporal\\zynara_suspensao_temporal_grow_v01.png"
+    },
+    {
+      "code": "H903",
+      "name": "zynara_suspensao_temporal_peak",
+      "effect": "zynara_suspensao_temporal",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a time-stop field: a very large circle with clock-like tick marks around the rim, two thin clock hands at the center, and frozen shard-like fragments hanging around, an eerie stillness. Frame 3 of 6, peak: PEAK frame: the full shape at maximum radius and brightness, hot white core, crisp detail.",
+      "destination": ".atena/generated/art-candidates/vfx/zynara_suspensao_temporal/zynara_suspensao_temporal_peak_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-ed953dee-0588-4ca9-af76-3e292f8b0a35.png",
+      "sha256": "1db71f49a4730f0cb7c451feb6a49a2b931c9f77e948b34e19412c7e01b4f444",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        31,
+        16,
+        1223,
+        1220
+      ],
+      "border_max": 2,
+      "channel_difference": 10,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T20:08:44.472406+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\zynara_suspensao_temporal\\zynara_suspensao_temporal_peak_v01.png"
+    },
+    {
+      "code": "H904",
+      "name": "zynara_suspensao_temporal_hold",
+      "effect": "zynara_suspensao_temporal",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a time-stop field: a very large circle with clock-like tick marks around the rim, two thin clock hands at the center, and frozen shard-like fragments hanging around, an eerie stillness. Frame 4 of 6, hold: the shape at near-maximum radius but thinning, the bright band narrowing, fewer details. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.",
+      "destination": ".atena/generated/art-candidates/vfx/zynara_suspensao_temporal/zynara_suspensao_temporal_hold_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-eef06f08-e38c-4d85-8552-9e9111347c75.png",
+      "sha256": "95c9bd597f7ce5d15fb32193bec4aa2a8fdd3f707585e5d20bd8200df3124cfb",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        38,
+        14,
+        1222,
+        1221
+      ],
+      "border_max": 2,
+      "channel_difference": 11,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T20:10:07.733547+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\zynara_suspensao_temporal\\zynara_suspensao_temporal_hold_v01.png"
+    },
+    {
+      "code": "H905",
+      "name": "zynara_suspensao_temporal_fade",
+      "effect": "zynara_suspensao_temporal",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a time-stop field: a very large circle with clock-like tick marks around the rim, two thin clock hands at the center, and frozen shard-like fragments hanging around, an eerie stillness. Frame 5 of 6, fade: the shape breaking apart into fragments at the outer edge, dimmer gray, dissolving. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.",
+      "destination": ".atena/generated/art-candidates/vfx/zynara_suspensao_temporal/zynara_suspensao_temporal_fade_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-cf65b07c-a859-4212-8a7c-6608dda5f62f.png",
+      "sha256": "7482483b98fc5f5a0aa0e39e5eba8525b2767737bee65db1a15c9ea4df1a243d",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        35,
+        24,
+        1221,
+        1213
+      ],
+      "border_max": 1,
+      "channel_difference": 10,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T20:10:45.349465+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\zynara_suspensao_temporal\\zynara_suspensao_temporal_fade_v01.png"
+    },
+    {
+      "code": "H906",
+      "name": "zynara_suspensao_temporal_dissipate",
+      "effect": "zynara_suspensao_temporal",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a time-stop field: a very large circle with clock-like tick marks around the rim, two thin clock hands at the center, and frozen shard-like fragments hanging around, an eerie stillness. Frame 6 of 6, dissipate: the last moment: only a few very faint fragments and specks remain, almost black. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.",
+      "destination": ".atena/generated/art-candidates/vfx/zynara_suspensao_temporal/zynara_suspensao_temporal_dissipate_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-98718dc1-8fc9-49d9-83c6-082f96310917.png",
+      "sha256": "d003a1c41851d82c0b7b71798ec8f99ef169e59394ea581224433cbb7f39c70c",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        88,
+        110,
+        1184,
+        1140
+      ],
+      "border_max": 1,
+      "channel_difference": 17,
+      "technical_flags": [
+        "SIZE_NORMALIZATION",
+        "COLOR_DIFFERENCE"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T20:11:14.469487+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\zynara_suspensao_temporal\\zynara_suspensao_temporal_dissipate_v01.png"
+    },
+    {
+      "code": "H1001",
+      "name": "bromnor_concordia_spark",
+      "effect": "bromnor_concordia",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a shield-shaped shockwave: a bright expanding ring with a sturdy shield emblem silhouette at the center and short outward-pushing chevron arrows along the ring. Frame 1 of 6, spark: the very first instant: a tiny bright point at the center with a very small ring, about 10 percent of the final radius. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.",
+      "destination": ".atena/generated/art-candidates/vfx/bromnor_concordia/bromnor_concordia_spark_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-3a7df7f7-165b-475a-a237-154fcf9a413b.png",
+      "sha256": "bab80ebd8cca186774b5c59746bd2b6a14ff450733e0b0df3d9f74d2f99c3afe",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        441,
+        440,
+        814,
+        815
+      ],
+      "border_max": 1,
+      "channel_difference": 7,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T20:12:11.515236+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\bromnor_concordia\\bromnor_concordia_spark_v01.png"
+    },
+    {
+      "code": "H1002",
+      "name": "bromnor_concordia_grow",
+      "effect": "bromnor_concordia",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a shield-shaped shockwave: a bright expanding ring with a sturdy shield emblem silhouette at the center and short outward-pushing chevron arrows along the ring. Frame 2 of 6, grow: the shape expanding fast, about 45 percent of the final radius, bright and sharp. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.",
+      "destination": ".atena/generated/art-candidates/vfx/bromnor_concordia/bromnor_concordia_grow_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-c9066cc5-8218-4623-a0bd-4b8aa712a92c.png",
+      "sha256": "3e29afae675d64358a8c3ba70bf3b61b52efb6922aa3564e6525aeb322134c40",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        118,
+        122,
+        1136,
+        1109
+      ],
+      "border_max": 1,
+      "channel_difference": 9,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T20:12:43.766633+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\bromnor_concordia\\bromnor_concordia_grow_v01.png"
+    },
+    {
+      "code": "H1003",
+      "name": "bromnor_concordia_peak",
+      "effect": "bromnor_concordia",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a shield-shaped shockwave: a bright expanding ring with a sturdy shield emblem silhouette at the center and short outward-pushing chevron arrows along the ring. Frame 3 of 6, peak: PEAK frame: the full shape at maximum radius and brightness, hot white core, crisp detail.",
+      "destination": ".atena/generated/art-candidates/vfx/bromnor_concordia/bromnor_concordia_peak_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-df1cd40e-0901-4432-a86d-3b1f3ca01aa7.png",
+      "sha256": "d469e767f9506ece65a663e6f4d7462d44ce885a649bca230652088feb8440ea",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        30,
+        21,
+        1225,
+        1193
+      ],
+      "border_max": 1,
+      "channel_difference": 8,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T20:11:48.529933+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\bromnor_concordia\\bromnor_concordia_peak_v01.png"
+    },
+    {
+      "code": "H1004",
+      "name": "bromnor_concordia_hold",
+      "effect": "bromnor_concordia",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a shield-shaped shockwave: a bright expanding ring with a sturdy shield emblem silhouette at the center and short outward-pushing chevron arrows along the ring. Frame 4 of 6, hold: the shape at near-maximum radius but thinning, the bright band narrowing, fewer details. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.",
+      "destination": ".atena/generated/art-candidates/vfx/bromnor_concordia/bromnor_concordia_hold_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-e50bfad6-675e-41ef-8f2c-5633fb6c964f.png",
+      "sha256": "f73ad79b8a29b1a9a454f7585ba9cb43e638ece1d47afa806d3084f883032087",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        34,
+        33,
+        1219,
+        1189
+      ],
+      "border_max": 1,
+      "channel_difference": 9,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T20:13:17.421910+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\bromnor_concordia\\bromnor_concordia_hold_v01.png"
+    },
+    {
+      "code": "H1005",
+      "name": "bromnor_concordia_fade",
+      "effect": "bromnor_concordia",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a shield-shaped shockwave: a bright expanding ring with a sturdy shield emblem silhouette at the center and short outward-pushing chevron arrows along the ring. Frame 5 of 6, fade: the shape breaking apart into fragments at the outer edge, dimmer gray, dissolving. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.",
+      "destination": ".atena/generated/art-candidates/vfx/bromnor_concordia/bromnor_concordia_fade_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-482cf44a-b769-4352-8138-071f81c87b83.png",
+      "sha256": "b3d115caaa841b5482b0faaf6719bb7d621e5edc7278c207f7cca9e2bfac31f0",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        32,
+        23,
+        1222,
+        1195
+      ],
+      "border_max": 1,
+      "channel_difference": 9,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T20:13:45.541943+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\bromnor_concordia\\bromnor_concordia_fade_v01.png"
+    },
+    {
+      "code": "H1006",
+      "name": "bromnor_concordia_dissipate",
+      "effect": "bromnor_concordia",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a shield-shaped shockwave: a bright expanding ring with a sturdy shield emblem silhouette at the center and short outward-pushing chevron arrows along the ring. Frame 6 of 6, dissipate: the last moment: only a few very faint fragments and specks remain, almost black. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.",
+      "destination": ".atena/generated/art-candidates/vfx/bromnor_concordia/bromnor_concordia_dissipate_v01.png",
+      "status": "GENERATED_DRAFT_PENDING_HUMAN_REVIEW",
+      "original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-ef1752c2-32af-450b-9cc5-0d22005a74b9.png",
+      "sha256": "9ba52f01aa3ba206f00b79a73f82bbe74c19e7143b2c4e81f88e2267cc4ce6ec",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        88,
+        86,
+        1168,
+        1124
+      ],
+      "border_max": 1,
+      "channel_difference": 11,
+      "technical_flags": [
+        "SIZE_NORMALIZATION"
+      ],
+      "runtime_admission": false,
+      "generated_at": "2026-10-09T20:14:16.039833+00:00",
+      "absolute_path": "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\bromnor_concordia\\bromnor_concordia_dissipate_v01.png"
+    }
+  ]
+}

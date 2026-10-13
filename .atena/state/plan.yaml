@@ -795,3 +795,24 @@ assets_main_publication_2026_10_13:
   completed_steps: 3
   total_steps: 3
   ci_result: NOT_VERIFIED
+vfx_projectiles_hero_abilities_2026_10_13:
+  plan: PLAN-053
+  revision: vfx-projectiles-and-hero-abilities/v01
+  classification: IN_PLAN
+  state_file: .atena/state/vfx-projectiles-and-hero-abilities.yaml
+  mode: per-plan
+  approval_status: APPROVED_EXPLICITLY
+  owner_request: 'atena, implemente os assets gerados recentes pelo chatgpt'
+  owner_choices: 'Grupos A e B; Por plano'
+  status: LOCAL_TECHNICAL_DELIVERED_AWAITING_OWNER_PLAYTEST
+  checkpoint: S-008/OWNER_RUNTIME_PLAYTEST
+  content_state: DRAFT
+  canonical_promotion: false
+  human_gates: [S-002/GATE-A, S-005/GATE-B]
+  completed_steps: 8
+  total_steps: 8
+  spec: .atena/specs/SPEC-121-retomada-fila-imagens/vfx-projectiles-and-hero-abilities-v01.md
+  return_plan: PLAN-071
+  return_checkpoint: B-006/S-011
+  evidence: .atena/evidence/vfx-projectiles-hero-abilities-admission-2026-10-13.md
+  git_receipt: {authorization: "atena, faca o commit (2026-10-13)", branch: main, commits: ["6859583", "registros = commit seguinte"], pushed: false, note: "Sem push, exportacao nem aviso aos testers."}

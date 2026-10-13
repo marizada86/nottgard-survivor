@@ -1,0 +1,41 @@
+version: 1
+plan: PLAN-053
+revision: vfx-projectiles-and-hero-abilities/v01
+classification: IN_PLAN
+status: LOCAL_TECHNICAL_DELIVERED_AWAITING_OWNER_PLAYTEST
+mode: per-plan
+approval_status: APPROVED_EXPLICITLY
+owner_request: "atena, implemente os assets gerados recentes pelo chatgpt"
+owner_choices: {scope: "Grupos A e B", approval: "Por plano"}
+approved: "2026-10-13"
+spec: .atena/specs/SPEC-121-retomada-fila-imagens/vfx-projectiles-and-hero-abilities-v01.md
+content_state: DRAFT
+canonical_promotion: false
+ordered_steps: [S-001, S-002, S-003, S-004, S-005, S-006, S-007, S-008]
+batches: {B-001: [S-001, S-002], B-002: [S-003, S-004], B-003: [S-005, S-006, S-007], B-004: [S-008]}
+current_step: S-008
+current_step_position: 8
+completed_steps: 8
+total_steps: 8
+checkpoint: S-008/OWNER_RUNTIME_PLAYTEST
+human_gates: {GATE-A: "S-002, aceite dos 3 projeteis (A1, A2, A3) por versao/hash", GATE-B: "S-005, aceite por heroi (H1 a H10) por versao/hash"}
+runtime_changed: true
+git_publication_export: NOT_AUTHORIZED
+working_dir: .atena/generated/vfx-projectiles-hero-abilities-2026-10-13
+sources:
+  group_a: {origin: ".codex/generated_images (recuperacao por SHA-256 dos audits de s007-reconciliation)", frames: 24}
+  group_b: {origin: "git 10bd31c, branch codex/fila-imagens-continuacao-2026-10-09, somente leitura", frames: 60}
+return_plan: {id: PLAN-071, checkpoint: B-006/S-011, preserved: true}
+hero_playtest: PENDING_PRESERVED
+evidence: .atena/evidence/vfx-projectiles-hero-abilities-2026-10-13.md
+review_gallery: .atena/generated/vfx-projectiles-hero-abilities-2026-10-13/review/index.html
+manifest: .atena/generated/vfx-projectiles-hero-abilities-2026-10-13/manifest.json
+audit: .atena/generated/vfx-projectiles-hero-abilities-2026-10-13/audit.json
+next_objective: "Dono joga com Jogar-Projeteis.cmd e Jogar-Habilidade.cmd e informa o que incomoda; commit, push e exportacao seguem pendentes de aprovacao."
+owner_acceptance: {receipt: .atena/generated/vfx-projectiles-hero-abilities-2026-10-13/authorization.json, reply: "atena esta aprovado continue a implementacao", gates: [S-002, S-005], scope: "13 efeitos, 84 quadros, DRAFT"}
+admission_evidence: .atena/evidence/vfx-projectiles-hero-abilities-admission-2026-10-13.md
+verification: .atena/generated/vfx-projectiles-hero-abilities-2026-10-13/verification.json
+playtest: .atena/generated/vfx-projectiles-hero-abilities-2026-10-13/PLAYTEST.md
+build_id: "0.4.0/vfx-projectiles-hero-abilities-v01/a431fa9+local-a359abcdde16"
+human_runtime_playtest: PENDING
+git_receipt: {authorization: "atena, faca o commit (2026-10-13)", runtime_commit: "6859583", records_commit: "commit seguinte", pushed: false}

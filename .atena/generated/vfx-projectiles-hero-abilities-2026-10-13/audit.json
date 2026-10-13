@@ -1,0 +1,2018 @@
+{
+  "effects": [
+    {
+      "flags": [
+        "DIM_PEAK:P08=156"
+      ],
+      "frames": [
+        {
+          "bbox_lum_gt12": [
+            188,
+            420,
+            820,
+            820
+          ],
+          "code": "P01",
+          "edge_max": 1,
+          "lum_centroid": [
+            605.1,
+            619.9
+          ],
+          "mean_lum": 13.72,
+          "peak_lum": 255,
+          "sha256": "a321dde3ebdce44f469c46a4147a4400bd97f3e958ec5ab0cb109338adaea752",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            160,
+            412,
+            828,
+            828
+          ],
+          "code": "P02",
+          "edge_max": 2,
+          "lum_centroid": [
+            599.7,
+            619.5
+          ],
+          "mean_lum": 15.17,
+          "peak_lum": 255,
+          "sha256": "bc48320c2de5aef68717bfe74679965fd2526ccd30369666735b181a6dab96ba",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            260,
+            420,
+            820,
+            820
+          ],
+          "code": "P03",
+          "edge_max": 2,
+          "lum_centroid": [
+            605.6,
+            619.1
+          ],
+          "mean_lum": 13.29,
+          "peak_lum": 255,
+          "sha256": "0d98f6826b1612f18307337cda34be0fed6709dd095fe6517dd21cd30b2f3f60",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            188,
+            432,
+            812,
+            816
+          ],
+          "code": "P04",
+          "edge_max": 2,
+          "lum_centroid": [
+            601.7,
+            622.0
+          ],
+          "mean_lum": 12.24,
+          "peak_lum": 255,
+          "sha256": "cf569ff20892598e4d399a4ee2d8fe8bb7f974cc6e8198e6067a0906d0729d92",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            368,
+            372,
+            876,
+            832
+          ],
+          "code": "P05",
+          "edge_max": 2,
+          "lum_centroid": [
+            634.0,
+            617.5
+          ],
+          "mean_lum": 14.02,
+          "peak_lum": 255,
+          "sha256": "1166c89f27735cb9d8e8a7425d4e7dc85d38712fb42148b9de2d6749ee6b3b3f",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            216,
+            184,
+            1032,
+            1028
+          ],
+          "code": "P06",
+          "edge_max": 2,
+          "lum_centroid": [
+            635.2,
+            620.9
+          ],
+          "mean_lum": 32.88,
+          "peak_lum": 255,
+          "sha256": "cd8de8d95839ac8700975d1f73f867bab4325e4c19be3252476d22e6ef1dca5c",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            192,
+            196,
+            1056,
+            1024
+          ],
+          "code": "P07",
+          "edge_max": 1,
+          "lum_centroid": [
+            603.3,
+            621.1
+          ],
+          "mean_lum": 12.89,
+          "peak_lum": 254,
+          "sha256": "11d77ed513ab15a253f053964c719a6e87829ffb3fda9f87587b3e65c3dd4f7c",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            316,
+            292,
+            944,
+            924
+          ],
+          "code": "P08",
+          "edge_max": 1,
+          "lum_centroid": [],
+          "mean_lum": 1.22,
+          "peak_lum": 156,
+          "sha256": "97062541c2bab36d8451892dadefb7553e21eeb723afa0d3f83912b6693df2f1",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        }
+      ],
+      "group": "A",
+      "id": "orbe_radiante",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "ok": false,
+      "title": "Orbe radiante"
+    },
+    {
+      "flags": [
+        "DIM_PEAK:Q08=92"
+      ],
+      "frames": [
+        {
+          "bbox_lum_gt12": [
+            120,
+            460,
+            804,
+            800
+          ],
+          "code": "Q01",
+          "edge_max": 2,
+          "lum_centroid": [
+            603.4,
+            625.8
+          ],
+          "mean_lum": 9.07,
+          "peak_lum": 254,
+          "sha256": "be4fc0674b455b2efb5609e27c4228569b22d274cfb077665b09f778f5fc88fb",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v03"
+        },
+        {
+          "bbox_lum_gt12": [
+            92,
+            452,
+            808,
+            804
+          ],
+          "code": "Q02",
+          "edge_max": 2,
+          "lum_centroid": [
+            550.9,
+            622.1
+          ],
+          "mean_lum": 10.35,
+          "peak_lum": 255,
+          "sha256": "034eb57a9646d3de68662c0408c9b3b98827538560c7a03318f31e88f2eff1ef",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            200,
+            460,
+            808,
+            800
+          ],
+          "code": "Q03",
+          "edge_max": 2,
+          "lum_centroid": [
+            604.8,
+            625.3
+          ],
+          "mean_lum": 8.59,
+          "peak_lum": 255,
+          "sha256": "5010a77a124a1c3f72b831783aa650146e9deaea790e538ca3d94a140b47d711",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            120,
+            460,
+            800,
+            800
+          ],
+          "code": "Q04",
+          "edge_max": 2,
+          "lum_centroid": [
+            623.5,
+            627.1
+          ],
+          "mean_lum": 6.73,
+          "peak_lum": 254,
+          "sha256": "67347db56ac39ff33a1d73ff991e4274ecafa2c9e8549e05f4a447e77f6c9f89",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            412,
+            416,
+            880,
+            824
+          ],
+          "code": "Q05",
+          "edge_max": 2,
+          "lum_centroid": [
+            620.5,
+            618.3
+          ],
+          "mean_lum": 7.78,
+          "peak_lum": 254,
+          "sha256": "7164675a2489957161b03aac30f967f6b25be79418407d6545af0f669484892b",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            168,
+            172,
+            1076,
+            1028
+          ],
+          "code": "Q06",
+          "edge_max": 1,
+          "lum_centroid": [
+            622.7,
+            608.5
+          ],
+          "mean_lum": 29.55,
+          "peak_lum": 255,
+          "sha256": "8388c93447f69e80064d03fc4fc0016d01bf57f700e42b6dd806ceb363b29b08",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            140,
+            128,
+            1116,
+            1064
+          ],
+          "code": "Q07",
+          "edge_max": 2,
+          "lum_centroid": [
+            609.4,
+            591.9
+          ],
+          "mean_lum": 11.37,
+          "peak_lum": 253,
+          "sha256": "b3c77052708c70a1db60ff187cdc5d7c0bd3a092a68095ada0a3056b3face503",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            308,
+            272,
+            956,
+            960
+          ],
+          "code": "Q08",
+          "edge_max": 1,
+          "lum_centroid": [],
+          "mean_lum": 1.4,
+          "peak_lum": 92,
+          "sha256": "224a23efd7fdfffd220d621ec82bc62193c6ad826515897fe9cdb3613fd66954",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        }
+      ],
+      "group": "A",
+      "id": "orbe_arcano",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "ok": false,
+      "title": "Orbe arcano"
+    },
+    {
+      "flags": [
+        "DIM_PEAK:R08=106"
+      ],
+      "frames": [
+        {
+          "bbox_lum_gt12": [
+            460,
+            312,
+            884,
+            932
+          ],
+          "code": "R01",
+          "edge_max": 2,
+          "lum_centroid": [
+            719.8,
+            623.3
+          ],
+          "mean_lum": 10.3,
+          "peak_lum": 255,
+          "sha256": "53f665277345e5a59d093f25e5f3f9ebfd800a1b146c535d0b48513b4e4308f1",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v02"
+        },
+        {
+          "bbox_lum_gt12": [
+            460,
+            304,
+            892,
+            936
+          ],
+          "code": "R02",
+          "edge_max": 2,
+          "lum_centroid": [
+            716.4,
+            619.5
+          ],
+          "mean_lum": 11.27,
+          "peak_lum": 255,
+          "sha256": "2c83e4d6759beaa50bd339e7a365b2f2cf87b6db7543885f72a961aae98ad844",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            460,
+            312,
+            884,
+            932
+          ],
+          "code": "R03",
+          "edge_max": 2,
+          "lum_centroid": [
+            719.6,
+            617.9
+          ],
+          "mean_lum": 10.25,
+          "peak_lum": 254,
+          "sha256": "8e053772e4805e2ffd2c20715e89d7e8c44d088a6f87abc4c45bd7d6c542193b",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            456,
+            312,
+            884,
+            932
+          ],
+          "code": "R04",
+          "edge_max": 1,
+          "lum_centroid": [
+            721.6,
+            620.2
+          ],
+          "mean_lum": 8.27,
+          "peak_lum": 250,
+          "sha256": "a636ee836297e261874a26a096a64e0ed8748d720b6f89e0aca0ebb472166b43",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            380,
+            368,
+            896,
+            888
+          ],
+          "code": "R05",
+          "edge_max": 1,
+          "lum_centroid": [
+            638.5,
+            626.1
+          ],
+          "mean_lum": 9.21,
+          "peak_lum": 255,
+          "sha256": "7fbbdadd57d6af7152b54c8dc6ca6fd76e29703990bf8e5e89cada58a45d0ae4",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v02"
+        },
+        {
+          "bbox_lum_gt12": [
+            48,
+            96,
+            1148,
+            1136
+          ],
+          "code": "R06",
+          "edge_max": 2,
+          "lum_centroid": [
+            634.0,
+            611.5
+          ],
+          "mean_lum": 40.71,
+          "peak_lum": 255,
+          "sha256": "fc2013656b41122311941289fb851347751b0a2b230975476304f63a5fb342c2",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            68,
+            136,
+            1120,
+            1128
+          ],
+          "code": "R07",
+          "edge_max": 1,
+          "lum_centroid": [
+            630.1,
+            602.5
+          ],
+          "mean_lum": 12.95,
+          "peak_lum": 250,
+          "sha256": "79296cd598e203e1d3034fdd526fd92e1599ce86bac042aa3210df2474fa4672",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            100,
+            148,
+            1092,
+            1088
+          ],
+          "code": "R08",
+          "edge_max": 1,
+          "lum_centroid": [],
+          "mean_lum": 1.81,
+          "peak_lum": 106,
+          "sha256": "0ca2b691f2a420f7338b9eb68a8616213901cc94d4f06a70e4482beaa7c98c08",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        }
+      ],
+      "group": "A",
+      "id": "onda_cortante",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "ok": false,
+      "title": "Onda cortante"
+    },
+    {
+      "flags": [
+        "DIM_PEAK:H106=95"
+      ],
+      "frames": [
+        {
+          "bbox_lum_gt12": [
+            604,
+            432,
+            884,
+            772
+          ],
+          "code": "H101",
+          "edge_max": 1,
+          "lum_centroid": [
+            751.4,
+            600.3
+          ],
+          "mean_lum": 3.47,
+          "peak_lum": 255,
+          "sha256": "00b891b430ae103cf252d2fb84cd871baffa6c924d16910dc2df7f985ce48844",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            476,
+            292,
+            996,
+            944
+          ],
+          "code": "H102",
+          "edge_max": 1,
+          "lum_centroid": [
+            812.8,
+            605.1
+          ],
+          "mean_lum": 12.97,
+          "peak_lum": 255,
+          "sha256": "809ecc013e2443033ef335632db7a9691d022f3321da017ca426326fb3e2020e",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v02"
+        },
+        {
+          "bbox_lum_gt12": [
+            208,
+            56,
+            1128,
+            1176
+          ],
+          "code": "H103",
+          "edge_max": 2,
+          "lum_centroid": [
+            789.9,
+            599.7
+          ],
+          "mean_lum": 40.61,
+          "peak_lum": 255,
+          "sha256": "e5f022ec1c630409f6405add4250ebfc73ebe052ea233e8c227ec5ce67fe8974",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            268,
+            72,
+            1088,
+            1152
+          ],
+          "code": "H104",
+          "edge_max": 1,
+          "lum_centroid": [
+            802.9,
+            594.0
+          ],
+          "mean_lum": 23.46,
+          "peak_lum": 255,
+          "sha256": "341e6fa8418c4d4aca7f06b21116c3be8ff634cbb2fd6340da7c47dd283a3556",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            220,
+            60,
+            1128,
+            1168
+          ],
+          "code": "H105",
+          "edge_max": 2,
+          "lum_centroid": [
+            852.2,
+            612.8
+          ],
+          "mean_lum": 9.43,
+          "peak_lum": 215,
+          "sha256": "17bbd4c6c43348370cb860feeb1eb10113d2bbb35a1a980d0c37bbced2ad02a2",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            648,
+            164,
+            1116,
+            1076
+          ],
+          "code": "H106",
+          "edge_max": 1,
+          "lum_centroid": [],
+          "mean_lum": 0.39,
+          "peak_lum": 95,
+          "sha256": "86c6d108e6b7034acbec687bcfc7ea1537cde6480b389b7870b0b5cb5826314c",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        }
+      ],
+      "group": "B",
+      "id": "durvall_ruptura_sombria",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "ok": false,
+      "title": "H1 Durvall: Ruptura Sombria"
+    },
+    {
+      "flags": [],
+      "frames": [
+        {
+          "bbox_lum_gt12": [
+            84,
+            80,
+            1168,
+            1120
+          ],
+          "code": "H201",
+          "edge_max": 2,
+          "lum_centroid": [
+            624.5,
+            616.7
+          ],
+          "mean_lum": 29.52,
+          "peak_lum": 254,
+          "sha256": "076c90602cf4f72e7e78df90791e8dbda1d47be473f81c1687e9c91347af9166",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v02"
+        },
+        {
+          "bbox_lum_gt12": [
+            80,
+            76,
+            1168,
+            1128
+          ],
+          "code": "H202",
+          "edge_max": 2,
+          "lum_centroid": [
+            617.1,
+            606.7
+          ],
+          "mean_lum": 35.02,
+          "peak_lum": 255,
+          "sha256": "9dfd35c3d44f632a910699f121adcdbfb92b1b9570f897e16fae2a0a581ea193",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            80,
+            72,
+            1172,
+            1132
+          ],
+          "code": "H203",
+          "edge_max": 2,
+          "lum_centroid": [
+            625.4,
+            610.0
+          ],
+          "mean_lum": 36.45,
+          "peak_lum": 255,
+          "sha256": "d8b58bc231a433cf8d33ea4bc19a55f7362afcba71e27b1c58ae67389694522e",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            84,
+            76,
+            1168,
+            1120
+          ],
+          "code": "H204",
+          "edge_max": 1,
+          "lum_centroid": [
+            625.7,
+            615.4
+          ],
+          "mean_lum": 30.07,
+          "peak_lum": 255,
+          "sha256": "a146a13a5af5a533f3e3f199bd37870520d95abd6d2f6339bd74032b6e0ac74f",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            88,
+            84,
+            1164,
+            1120
+          ],
+          "code": "H205",
+          "edge_max": 1,
+          "lum_centroid": [
+            638.8,
+            611.4
+          ],
+          "mean_lum": 24.51,
+          "peak_lum": 254,
+          "sha256": "795e92c2e1bc58c2ed2f2431e5ae586d063de694c5dc78d65306282a54daf01b",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            88,
+            80,
+            1164,
+            1116
+          ],
+          "code": "H206",
+          "edge_max": 1,
+          "lum_centroid": [
+            624.5,
+            617.6
+          ],
+          "mean_lum": 26.9,
+          "peak_lum": 254,
+          "sha256": "f353d745355e6d4792d793e3e473c06c6b20a50302f50f65703ea5960f8c3270",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        }
+      ],
+      "group": "B",
+      "id": "brook_guarda_de_lliira",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "ok": true,
+      "title": "H2 Brook: Guarda de Lliira"
+    },
+    {
+      "flags": [],
+      "frames": [
+        {
+          "bbox_lum_gt12": [
+            136,
+            112,
+            1116,
+            1108
+          ],
+          "code": "H301",
+          "edge_max": 1,
+          "lum_centroid": [
+            624.8,
+            626.0
+          ],
+          "mean_lum": 27.45,
+          "peak_lum": 255,
+          "sha256": "ed622fe59738017a625ebd2daaf90d2f738213d1fca299d9240d08ccd3fd3969",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            132,
+            104,
+            1116,
+            1112
+          ],
+          "code": "H302",
+          "edge_max": 2,
+          "lum_centroid": [
+            623.7,
+            619.3
+          ],
+          "mean_lum": 32.22,
+          "peak_lum": 255,
+          "sha256": "7a289aae4816f19800cfdefd63dae9e3662020d590b92d1df9dcefd1e27543bd",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            132,
+            112,
+            1116,
+            1112
+          ],
+          "code": "H303",
+          "edge_max": 2,
+          "lum_centroid": [
+            626.8,
+            622.0
+          ],
+          "mean_lum": 31.83,
+          "peak_lum": 255,
+          "sha256": "c6dddbbcc415c987e32a2fe31a3ef61360b026f6cf2c08232eae8f43b4a3678a",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            136,
+            112,
+            1116,
+            1108
+          ],
+          "code": "H304",
+          "edge_max": 1,
+          "lum_centroid": [
+            624.7,
+            626.2
+          ],
+          "mean_lum": 26.79,
+          "peak_lum": 255,
+          "sha256": "b5b5c8334439e61fcce91922ef624addbbf92b7e27696b2c65cccaf57bd79821",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            136,
+            112,
+            1116,
+            1112
+          ],
+          "code": "H305",
+          "edge_max": 1,
+          "lum_centroid": [
+            625.0,
+            628.1
+          ],
+          "mean_lum": 23.96,
+          "peak_lum": 255,
+          "sha256": "5c1e88fb174de1791a186c6b75eb86ba89d066f47f99b7ae4f4f91453b35d25d",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            136,
+            112,
+            1112,
+            1108
+          ],
+          "code": "H306",
+          "edge_max": 1,
+          "lum_centroid": [
+            623.8,
+            632.0
+          ],
+          "mean_lum": 24.47,
+          "peak_lum": 255,
+          "sha256": "574f8ca4fedc2d3dfbdf452a8aef7278dd840bc7ed13918bd1e06b49a27a73aa",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        }
+      ],
+      "group": "B",
+      "id": "maelor_comunhao",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "ok": true,
+      "title": "H3 Maelor: Comunhao"
+    },
+    {
+      "flags": [],
+      "frames": [
+        {
+          "bbox_lum_gt12": [
+            564,
+            544,
+            912,
+            712
+          ],
+          "code": "H401",
+          "edge_max": 1,
+          "lum_centroid": [
+            795.6,
+            624.4
+          ],
+          "mean_lum": 2.08,
+          "peak_lum": 254,
+          "sha256": "8ae09583105acd45b96ddbef76abdd8eb55e8c05c537dedbe6fc7f655c46842f",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            204,
+            512,
+            1208,
+            736
+          ],
+          "code": "H402",
+          "edge_max": 2,
+          "lum_centroid": [
+            991.0,
+            624.0
+          ],
+          "mean_lum": 7.06,
+          "peak_lum": 254,
+          "sha256": "d8c714e84fe6c0fadfeaaefec7d30c7be522acae9c4553e09d72bf18001785ed",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            568,
+            512,
+            1212,
+            732
+          ],
+          "code": "H403",
+          "edge_max": 1,
+          "lum_centroid": [
+            1037.1,
+            624.2
+          ],
+          "mean_lum": 4.87,
+          "peak_lum": 254,
+          "sha256": "d9b23e455cf3b7a83e8e6c10820227b2cb829cb09949ed2b1abeb16bb9aa9919",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v02"
+        },
+        {
+          "bbox_lum_gt12": [
+            576,
+            524,
+            1196,
+            720
+          ],
+          "code": "H404",
+          "edge_max": 1,
+          "lum_centroid": [
+            1080.2,
+            623.2
+          ],
+          "mean_lum": 2.61,
+          "peak_lum": 254,
+          "sha256": "1566667d31959b6665ebdb5ae0d6f347a897ea047ef26e9daea23e97a16bf70b",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            560,
+            508,
+            1200,
+            740
+          ],
+          "code": "H405",
+          "edge_max": 1,
+          "lum_centroid": [
+            909.3,
+            629.3
+          ],
+          "mean_lum": 2.03,
+          "peak_lum": 251,
+          "sha256": "a2e237fddd38a73ba396497708d90085e0c71ac6070e6207d15f7f28bc30f64c",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            580,
+            528,
+            1196,
+            708
+          ],
+          "code": "H406",
+          "edge_max": 2,
+          "lum_centroid": [
+            1115.7,
+            623.9
+          ],
+          "mean_lum": 1.72,
+          "peak_lum": 245,
+          "sha256": "f21b76a36baddb88a242e1771eb78f65a6c7d25178e34d4a76f0a2c7d932d3a0",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        }
+      ],
+      "group": "B",
+      "id": "sylas_passo_pelas_sombras",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "ok": true,
+      "title": "H4 Sylas: Passo pelas Sombras"
+    },
+    {
+      "flags": [],
+      "frames": [
+        {
+          "bbox_lum_gt12": [
+            56,
+            52,
+            1192,
+            1192
+          ],
+          "code": "H501",
+          "edge_max": 1,
+          "lum_centroid": [
+            628.4,
+            618.7
+          ],
+          "mean_lum": 42.5,
+          "peak_lum": 255,
+          "sha256": "36eec357eef30bcc44325e9e75d3d1270eba4bf158fe26d8cc0282074fa7aade",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            56,
+            48,
+            1192,
+            1176
+          ],
+          "code": "H502",
+          "edge_max": 2,
+          "lum_centroid": [
+            637.7,
+            612.3
+          ],
+          "mean_lum": 42.89,
+          "peak_lum": 255,
+          "sha256": "803d5008bb331f4e5512deec967cea9d584adbffaad1d2425d74871bcaae5863",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            60,
+            52,
+            1188,
+            1184
+          ],
+          "code": "H503",
+          "edge_max": 2,
+          "lum_centroid": [
+            627.3,
+            611.9
+          ],
+          "mean_lum": 43.44,
+          "peak_lum": 255,
+          "sha256": "5ccbc566f6659f79c8034e29a96c86073faff6cfda4db1b2b1096e1cd30cc5fb",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            56,
+            48,
+            1192,
+            1184
+          ],
+          "code": "H504",
+          "edge_max": 1,
+          "lum_centroid": [
+            637.0,
+            612.2
+          ],
+          "mean_lum": 42.44,
+          "peak_lum": 255,
+          "sha256": "f5acb4dbd26ae9e8905332b926842fa588f40e19945cec847cbde6485955a2a4",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            60,
+            52,
+            1192,
+            1188
+          ],
+          "code": "H505",
+          "edge_max": 2,
+          "lum_centroid": [
+            629.1,
+            615.7
+          ],
+          "mean_lum": 42.11,
+          "peak_lum": 255,
+          "sha256": "4a75d55d26e75ec082b5d355ac0a3e42ad0d7418683ec417046ae93c1f862d31",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            52,
+            52,
+            1184,
+            1192
+          ],
+          "code": "H506",
+          "edge_max": 2,
+          "lum_centroid": [
+            621.0,
+            620.7
+          ],
+          "mean_lum": 42.08,
+          "peak_lum": 255,
+          "sha256": "4eb87a88215e602cc4759c102123298d74606166861fa34dd79a05886fb3e508",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        }
+      ],
+      "group": "B",
+      "id": "kayron_sobrecarga_mistica",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "ok": true,
+      "title": "H5 Kayron: Sobrecarga Mistica"
+    },
+    {
+      "flags": [],
+      "frames": [
+        {
+          "bbox_lum_gt12": [
+            388,
+            384,
+            856,
+            848
+          ],
+          "code": "H601",
+          "edge_max": 2,
+          "lum_centroid": [
+            624.6,
+            611.2
+          ],
+          "mean_lum": 6.35,
+          "peak_lum": 255,
+          "sha256": "4433be8205d67bec672b9bef6215ff3ef0db254aed84c89a822304b0b96a2a03",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            120,
+            104,
+            1136,
+            1124
+          ],
+          "code": "H602",
+          "edge_max": 2,
+          "lum_centroid": [
+            634.0,
+            629.1
+          ],
+          "mean_lum": 48.68,
+          "peak_lum": 255,
+          "sha256": "8a2ea18d8d8c37f26d7e68e2027cc3b5b9ed3b1c55221a61f3c14cf72264d9bb",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            4,
+            24,
+            1248,
+            1200
+          ],
+          "code": "H603",
+          "edge_max": 4,
+          "lum_centroid": [
+            627.8,
+            619.0
+          ],
+          "mean_lum": 70.02,
+          "peak_lum": 255,
+          "sha256": "7487b2677e93a447058a98e832037d18582fa8ce13430adb94a496c29a5b2a4b",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            16,
+            44,
+            1232,
+            1188
+          ],
+          "code": "H604",
+          "edge_max": 2,
+          "lum_centroid": [
+            620.0,
+            615.1
+          ],
+          "mean_lum": 47.02,
+          "peak_lum": 255,
+          "sha256": "1ed3e6bc49d9fd82937f303f4630d914ca64d4067cafdc3fc5867fc06f1dee34",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            12,
+            48,
+            1236,
+            1188
+          ],
+          "code": "H605",
+          "edge_max": 2,
+          "lum_centroid": [
+            617.9,
+            616.9
+          ],
+          "mean_lum": 44.16,
+          "peak_lum": 255,
+          "sha256": "ddf3ccd69943015f62fd652b1a93da79d807b22bb3074a5969a337224369e76c",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            172,
+            156,
+            1096,
+            1100
+          ],
+          "code": "H606",
+          "edge_max": 1,
+          "lum_centroid": [
+            742.3,
+            612.0
+          ],
+          "mean_lum": 1.7,
+          "peak_lum": 254,
+          "sha256": "9a27d109277e4ffdf9c4891611db80f8c27acfb34ccf2aac5baa5e76a9008e75",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        }
+      ],
+      "group": "B",
+      "id": "korrak_impacto_de_xargath",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "ok": true,
+      "title": "H6 Korrak: Impacto de Xar'gath"
+    },
+    {
+      "flags": [],
+      "frames": [
+        {
+          "bbox_lum_gt12": [
+            444,
+            436,
+            804,
+            808
+          ],
+          "code": "H701",
+          "edge_max": 1,
+          "lum_centroid": [
+            623.6,
+            621.0
+          ],
+          "mean_lum": 3.24,
+          "peak_lum": 255,
+          "sha256": "4bf8e3b559e001b8eef4e0cee123c7b0f768cae62f09df25a56f914b5354fa02",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            100,
+            112,
+            1168,
+            1148
+          ],
+          "code": "H702",
+          "edge_max": 1,
+          "lum_centroid": [
+            623.9,
+            624.5
+          ],
+          "mean_lum": 26.48,
+          "peak_lum": 255,
+          "sha256": "c7cb21dad1a4867c340939ae2c8bac3ffed4940bd29e77293b50907275c87154",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            40,
+            32,
+            1212,
+            1188
+          ],
+          "code": "H703",
+          "edge_max": 1,
+          "lum_centroid": [
+            623.5,
+            618.6
+          ],
+          "mean_lum": 27.15,
+          "peak_lum": 255,
+          "sha256": "98d36534b7a3f0667612b2442d2f1cb647ede94f1ffaa6dac3b2d927eb76254b",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            44,
+            24,
+            1204,
+            1196
+          ],
+          "code": "H704",
+          "edge_max": 1,
+          "lum_centroid": [
+            625.8,
+            610.1
+          ],
+          "mean_lum": 20.77,
+          "peak_lum": 255,
+          "sha256": "f139e87ffc61cb02808eb46c0eadbfad996655bf031bdb78330bd9b8dcadbdf2",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            40,
+            28,
+            1216,
+            1208
+          ],
+          "code": "H705",
+          "edge_max": 1,
+          "lum_centroid": [
+            615.9,
+            629.8
+          ],
+          "mean_lum": 15.52,
+          "peak_lum": 254,
+          "sha256": "14aee760943a5b814ea8483fea065c42fe88e94bad8b8e46bfc47092566cfa0b",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            68,
+            52,
+            1184,
+            1168
+          ],
+          "code": "H706",
+          "edge_max": 1,
+          "lum_centroid": [
+            585.0,
+            634.9
+          ],
+          "mean_lum": 1.33,
+          "peak_lum": 247,
+          "sha256": "7623afa5bfe2cfd6f7d441b91c45e4259d34b2f4d98bd697b6701e2fef5b475e",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        }
+      ],
+      "group": "B",
+      "id": "leoric_constelacao",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "ok": true,
+      "title": "H7 Leoric: Constelacao"
+    },
+    {
+      "flags": [],
+      "frames": [
+        {
+          "bbox_lum_gt12": [
+            132,
+            124,
+            1120,
+            1124
+          ],
+          "code": "H801",
+          "edge_max": 2,
+          "lum_centroid": [
+            631.0,
+            623.2
+          ],
+          "mean_lum": 48.35,
+          "peak_lum": 255,
+          "sha256": "8006055ec0b5a9e09857d624e89cf76b8da9259b9a0995d65e413432591e26ea",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            128,
+            112,
+            1116,
+            1124
+          ],
+          "code": "H802",
+          "edge_max": 2,
+          "lum_centroid": [
+            629.3,
+            619.8
+          ],
+          "mean_lum": 47.65,
+          "peak_lum": 255,
+          "sha256": "99572ff64363755ed3d69fb6bbb5d8005379e6131d86c37e50555d06e90acb63",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            132,
+            124,
+            1116,
+            1124
+          ],
+          "code": "H803",
+          "edge_max": 1,
+          "lum_centroid": [
+            630.7,
+            622.0
+          ],
+          "mean_lum": 47.62,
+          "peak_lum": 255,
+          "sha256": "3ac7aef18ba5a665cd2ea7e7b0de922817d2ead137a4fcbf66e7277ba657fdc4",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            132,
+            132,
+            1116,
+            1132
+          ],
+          "code": "H804",
+          "edge_max": 2,
+          "lum_centroid": [
+            632.7,
+            611.6
+          ],
+          "mean_lum": 47.12,
+          "peak_lum": 255,
+          "sha256": "f05e58d4c3c6d4cce1d58343ff9325c1b2098b66ccbda403bdf1b56a58e8f478",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            132,
+            120,
+            1116,
+            1136
+          ],
+          "code": "H805",
+          "edge_max": 2,
+          "lum_centroid": [
+            637.3,
+            618.8
+          ],
+          "mean_lum": 49.49,
+          "peak_lum": 255,
+          "sha256": "ea2b5bc3416c44864e70c689c45e72c69d4301fdac758153d0e758f981bfcedd",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            132,
+            112,
+            1116,
+            1132
+          ],
+          "code": "H806",
+          "edge_max": 2,
+          "lum_centroid": [
+            629.8,
+            622.3
+          ],
+          "mean_lum": 47.85,
+          "peak_lum": 255,
+          "sha256": "40cb95d976e5437e4c050b4a3bf8aed6a40470679db74444fd4d1367ead56afa",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        }
+      ],
+      "group": "B",
+      "id": "nyrelia_dominacao",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "ok": true,
+      "title": "H8 Nyrelia: Dominacao"
+    },
+    {
+      "flags": [],
+      "frames": [
+        {
+          "bbox_lum_gt12": [
+            416,
+            400,
+            836,
+            848
+          ],
+          "code": "H901",
+          "edge_max": 1,
+          "lum_centroid": [
+            629.5,
+            621.2
+          ],
+          "mean_lum": 5.24,
+          "peak_lum": 255,
+          "sha256": "ded810743e51675d2f75e42cfeb26d86af12c329c21dbc250d316b3963021281",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            188,
+            180,
+            1064,
+            1064
+          ],
+          "code": "H902",
+          "edge_max": 1,
+          "lum_centroid": [
+            630.7,
+            624.4
+          ],
+          "mean_lum": 27.49,
+          "peak_lum": 255,
+          "sha256": "b681c46cbb0798317dccb2bc793be57254e5348e5663eb4097d6c749393be092",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            32,
+            16,
+            1220,
+            1220
+          ],
+          "code": "H903",
+          "edge_max": 2,
+          "lum_centroid": [
+            638.1,
+            614.2
+          ],
+          "mean_lum": 46.25,
+          "peak_lum": 255,
+          "sha256": "1db71f49a4730f0cb7c451feb6a49a2b931c9f77e948b34e19412c7e01b4f444",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            40,
+            16,
+            1220,
+            1220
+          ],
+          "code": "H904",
+          "edge_max": 2,
+          "lum_centroid": [
+            633.4,
+            605.8
+          ],
+          "mean_lum": 30.36,
+          "peak_lum": 255,
+          "sha256": "95c9bd597f7ce5d15fb32193bec4aa2a8fdd3f707585e5d20bd8200df3124cfb",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            40,
+            28,
+            1216,
+            1208
+          ],
+          "code": "H905",
+          "edge_max": 2,
+          "lum_centroid": [
+            607.7,
+            605.6
+          ],
+          "mean_lum": 24.81,
+          "peak_lum": 255,
+          "sha256": "7482483b98fc5f5a0aa0e39e5eba8525b2767737bee65db1a15c9ea4df1a243d",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            92,
+            112,
+            1184,
+            1136
+          ],
+          "code": "H906",
+          "edge_max": 1,
+          "lum_centroid": [
+            479.3,
+            497.2
+          ],
+          "mean_lum": 4.82,
+          "peak_lum": 254,
+          "sha256": "d003a1c41851d82c0b7b71798ec8f99ef169e59394ea581224433cbb7f39c70c",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        }
+      ],
+      "group": "B",
+      "id": "zynara_suspensao_temporal",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "ok": true,
+      "title": "H9 Zynara: Suspensao Temporal"
+    },
+    {
+      "flags": [],
+      "frames": [
+        {
+          "bbox_lum_gt12": [
+            440,
+            440,
+            812,
+            812
+          ],
+          "code": "H1001",
+          "edge_max": 1,
+          "lum_centroid": [
+            625.0,
+            624.0
+          ],
+          "mean_lum": 5.25,
+          "peak_lum": 254,
+          "sha256": "bab80ebd8cca186774b5c59746bd2b6a14ff450733e0b0df3d9f74d2f99c3afe",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            116,
+            124,
+            1132,
+            1108
+          ],
+          "code": "H1002",
+          "edge_max": 1,
+          "lum_centroid": [
+            623.7,
+            613.6
+          ],
+          "mean_lum": 41.55,
+          "peak_lum": 255,
+          "sha256": "3e29afae675d64358a8c3ba70bf3b61b52efb6922aa3564e6525aeb322134c40",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            28,
+            20,
+            1224,
+            1192
+          ],
+          "code": "H1003",
+          "edge_max": 1,
+          "lum_centroid": [
+            623.0,
+            597.2
+          ],
+          "mean_lum": 59.6,
+          "peak_lum": 255,
+          "sha256": "d469e767f9506ece65a663e6f4d7462d44ce885a649bca230652088feb8440ea",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            32,
+            32,
+            1216,
+            1188
+          ],
+          "code": "H1004",
+          "edge_max": 1,
+          "lum_centroid": [
+            626.6,
+            605.0
+          ],
+          "mean_lum": 40.31,
+          "peak_lum": 255,
+          "sha256": "f73ad79b8a29b1a9a454f7585ba9cb43e638ece1d47afa806d3084f883032087",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            32,
+            24,
+            1220,
+            1192
+          ],
+          "code": "H1005",
+          "edge_max": 1,
+          "lum_centroid": [
+            634.8,
+            624.4
+          ],
+          "mean_lum": 30.19,
+          "peak_lum": 254,
+          "sha256": "b3d115caaa841b5482b0faaf6719bb7d621e5edc7278c207f7cca9e2bfac31f0",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        },
+        {
+          "bbox_lum_gt12": [
+            92,
+            88,
+            1160,
+            1120
+          ],
+          "code": "H1006",
+          "edge_max": 1,
+          "lum_centroid": [
+            642.9,
+            622.5
+          ],
+          "mean_lum": 3.07,
+          "peak_lum": 250,
+          "sha256": "9ba52f01aa3ba206f00b79a73f82bbe74c19e7143b2c4e81f88e2267cc4ce6ec",
+          "size": [
+            1254,
+            1254
+          ],
+          "version": "v01"
+        }
+      ],
+      "group": "B",
+      "id": "bromnor_concordia",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "ok": true,
+      "title": "H10 Bromnor: Concordia"
+    }
+  ],
+  "revision": "vfx-projectiles-and-hero-abilities/v01"
+}
