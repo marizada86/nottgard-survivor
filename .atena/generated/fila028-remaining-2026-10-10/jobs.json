@@ -1,0 +1,251 @@
+{
+  "plan": "PLAN-053/SPEC-121",
+  "revision": "FILA-028-REMAINING/v01",
+  "approval_mode": "per-plan",
+  "scope_approval": "APPROVED",
+  "sources": [
+    {
+      "path": ".atena\\generated\\ART-PROMPTS-061-eventos-arcanista-icones-segredos-e-altar.md",
+      "sha256": "897316f4033a1620a17f81ac68655deb7dfcefbd8b975ef57f3771538f6b324d"
+    },
+    {
+      "path": ".atena\\generated\\ART-PROMPTS-059-icones-das-bencaos-novas.md",
+      "sha256": "c3e73282969e18c206e1ad30d6976e6f06f2498ecb1d6b05a6996375fa43452c"
+    }
+  ],
+  "jobs": [
+    {
+      "code": "SE03",
+      "item": "camara_aberta",
+      "prompt": "Use case: stylized-concept\nAsset type: objeto interativo de jogo 2D isométrico\nStyle/medium: pixel art sombria coerente com o jogo, pixels nítidos, pedra cinza-arroxeada, metal escuro, um acento de cor por objeto, luz principal no alto à esquerda\nComposition/framing: vista três quartos, objeto inteiro centrado ocupando cerca de 70% da altura, sombra suave no chão\nConstraints: fundo liso ciano #00FFFF, sem texto, letras, números, moldura ou cenário, sem personagens (exceto onde o pedido disser), quadrado\n\nPrimary request: a mesma câmara de pedra da imagem de referência, agora com os três selos quebrados no chão, a porta entreaberta e uma luz violeta quente saindo do vão, poeira no ar; mesma posição, escala e paleta da referência.\nReference 3 is the approved chamber identity. Preserve its camera, stone silhouette, scale and palette. Exactly three broken seals on the floor, no intact seals on door. No banners or new ornament. Request square native high resolution.",
+      "references": [
+        {
+          "path": "assets/interactions/loja.png",
+          "sha256": "b7c092ab509af9687288004d3b0c693f470487b8bd4dbea2f46b353f336afba7",
+          "role": "style anchor"
+        },
+        {
+          "path": "assets/interactions/doacao.png",
+          "sha256": "df364ad5b3672c04f61a4cd0eef2e6185218c518d31217b299a2c6abb27fee0d",
+          "role": "style anchor"
+        },
+        {
+          "path": ".atena/generated/fila028-ar-se-2026-10-10/native-sources/SE02_v03.png",
+          "sha256": "d31f373d4bb2baa332c10b60941f2f0ef27ca78cc1964159bdf4f82956781451",
+          "role": "approved identity authority"
+        }
+      ],
+      "state": "GENERATED_AUDITED_PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "selected_version": "v02"
+    },
+    {
+      "code": "SE04",
+      "item": "ruina_dagruve",
+      "prompt": "Use case: stylized-concept\nAsset type: objeto interativo de jogo 2D isométrico\nStyle/medium: pixel art sombria coerente com o jogo, pixels nítidos, pedra cinza-arroxeada, metal escuro, um acento de cor por objeto, luz principal no alto à esquerda\nComposition/framing: vista três quartos, objeto inteiro centrado ocupando cerca de 70% da altura, sombra suave no chão\nConstraints: fundo liso ciano #00FFFF, sem texto, letras, números, moldura ou cenário, sem personagens (exceto onde o pedido disser), quadrado\n\nPrimary request: Capela abandonada: pequena capela de pedra escura com o telhado parcialmente desabado, vitral quebrado, névoa baixa no chão e lápides ao lado.\nCompact isolated ruin prop for Dagruve, not a panoramic scene. No characters, no readable text, no insignia. Entire composition centered with clear empty padding. Request square native high resolution.",
+      "references": [
+        {
+          "path": "assets/interactions/loja.png",
+          "sha256": "b7c092ab509af9687288004d3b0c693f470487b8bd4dbea2f46b353f336afba7",
+          "role": "style anchor"
+        },
+        {
+          "path": "assets/interactions/doacao.png",
+          "sha256": "df364ad5b3672c04f61a4cd0eef2e6185218c518d31217b299a2c6abb27fee0d",
+          "role": "style anchor"
+        }
+      ],
+      "state": "GENERATED_AUDITED_PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "selected_version": "v02"
+    },
+    {
+      "code": "SE05",
+      "item": "ruina_docas",
+      "prompt": "Use case: stylized-concept\nAsset type: objeto interativo de jogo 2D isométrico\nStyle/medium: pixel art sombria coerente com o jogo, pixels nítidos, pedra cinza-arroxeada, metal escuro, um acento de cor por objeto, luz principal no alto à esquerda\nComposition/framing: vista três quartos, objeto inteiro centrado ocupando cerca de 70% da altura, sombra suave no chão\nConstraints: fundo liso ciano #00FFFF, sem texto, letras, números, moldura ou cenário, sem personagens (exceto onde o pedido disser), quadrado\n\nPrimary request: Galpão abandonado: galpão de madeira e ferro corroído com a porta entreaberta, caixas de carga empilhadas e uma corda caída; sensação de porto morto.\nCompact isolated ruin prop for Docas, not a panoramic scene. No characters, no readable text, no insignia. Entire composition centered with clear empty padding. Request square native high resolution.",
+      "references": [
+        {
+          "path": "assets/interactions/loja.png",
+          "sha256": "b7c092ab509af9687288004d3b0c693f470487b8bd4dbea2f46b353f336afba7",
+          "role": "style anchor"
+        },
+        {
+          "path": "assets/interactions/doacao.png",
+          "sha256": "df364ad5b3672c04f61a4cd0eef2e6185218c518d31217b299a2c6abb27fee0d",
+          "role": "style anchor"
+        }
+      ],
+      "state": "GENERATED_AUDITED_PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "selected_version": "v02"
+    },
+    {
+      "code": "SE06",
+      "item": "ruina_shedaklah",
+      "prompt": "Use case: stylized-concept\nAsset type: objeto interativo de jogo 2D isométrico\nStyle/medium: pixel art sombria coerente com o jogo, pixels nítidos, pedra cinza-arroxeada, metal escuro, um acento de cor por objeto, luz principal no alto à esquerda\nComposition/framing: vista três quartos, objeto inteiro centrado ocupando cerca de 70% da altura, sombra suave no chão\nConstraints: fundo liso ciano #00FFFF, sem texto, letras, números, moldura ou cenário, sem personagens (exceto onde o pedido disser), quadrado\n\nPrimary request: Ruína do bosque fúngico: muro de pedra tomado por cogumelos grandes e limo verde-escuro, um arco quebrado e esporos no ar.\nCompact isolated ruin prop for Shedaklah, not a panoramic scene. No characters, no readable text, no insignia. Entire composition centered with clear empty padding. Request square native high resolution.",
+      "references": [
+        {
+          "path": "assets/interactions/loja.png",
+          "sha256": "b7c092ab509af9687288004d3b0c693f470487b8bd4dbea2f46b353f336afba7",
+          "role": "style anchor"
+        },
+        {
+          "path": "assets/interactions/doacao.png",
+          "sha256": "df364ad5b3672c04f61a4cd0eef2e6185218c518d31217b299a2c6abb27fee0d",
+          "role": "style anchor"
+        }
+      ],
+      "state": "GENERATED_AUDITED_PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "selected_version": "v02"
+    },
+    {
+      "code": "SE07",
+      "item": "ruina_molor",
+      "prompt": "Use case: stylized-concept\nAsset type: objeto interativo de jogo 2D isométrico\nStyle/medium: pixel art sombria coerente com o jogo, pixels nítidos, pedra cinza-arroxeada, metal escuro, um acento de cor por objeto, luz principal no alto à esquerda\nComposition/framing: vista três quartos, objeto inteiro centrado ocupando cerca de 70% da altura, sombra suave no chão\nConstraints: fundo liso ciano #00FFFF, sem texto, letras, números, moldura ou cenário, sem personagens (exceto onde o pedido disser), quadrado\n\nPrimary request: Ruína na gruta de estalactites: pilares de pedra com estalactites que descem do teto, poças de slime esverdeado e um altar partido.\nCompact isolated ruin prop for Molor, not a panoramic scene. No characters, no readable text, no insignia. Entire composition centered with clear empty padding. Request square native high resolution.",
+      "references": [
+        {
+          "path": "assets/interactions/loja.png",
+          "sha256": "b7c092ab509af9687288004d3b0c693f470487b8bd4dbea2f46b353f336afba7",
+          "role": "style anchor"
+        },
+        {
+          "path": "assets/interactions/doacao.png",
+          "sha256": "df364ad5b3672c04f61a4cd0eef2e6185218c518d31217b299a2c6abb27fee0d",
+          "role": "style anchor"
+        }
+      ],
+      "state": "GENERATED_AUDITED_PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "selected_version": "v02"
+    },
+    {
+      "code": "SE08",
+      "item": "ruina_durao",
+      "prompt": "Use case: stylized-concept\nAsset type: objeto interativo de jogo 2D isométrico\nStyle/medium: pixel art sombria coerente com o jogo, pixels nítidos, pedra cinza-arroxeada, metal escuro, um acento de cor por objeto, luz principal no alto à esquerda\nComposition/framing: vista três quartos, objeto inteiro centrado ocupando cerca de 70% da altura, sombra suave no chão\nConstraints: fundo liso ciano #00FFFF, sem texto, letras, números, moldura ou cenário, sem personagens (exceto onde o pedido disser), quadrado\n\nPrimary request: Acampamento abandonado: tendas cinzentas rasgadas, uma fogueira apagada, armas largadas e uma bandeira sem emblema caída.\nCompact isolated ruin prop for Durao, not a panoramic scene. No characters, no readable text, no insignia. Entire composition centered with clear empty padding. Request square native high resolution.",
+      "references": [
+        {
+          "path": "assets/interactions/loja.png",
+          "sha256": "b7c092ab509af9687288004d3b0c693f470487b8bd4dbea2f46b353f336afba7",
+          "role": "style anchor"
+        },
+        {
+          "path": "assets/interactions/doacao.png",
+          "sha256": "df364ad5b3672c04f61a4cd0eef2e6185218c518d31217b299a2c6abb27fee0d",
+          "role": "style anchor"
+        }
+      ],
+      "state": "GENERATED_AUDITED_PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "selected_version": "v02"
+    },
+    {
+      "code": "SE09",
+      "item": "ruina_feng_tu",
+      "prompt": "Use case: stylized-concept\nAsset type: objeto interativo de jogo 2D isométrico\nStyle/medium: pixel art sombria coerente com o jogo, pixels nítidos, pedra cinza-arroxeada, metal escuro, um acento de cor por objeto, luz principal no alto à esquerda\nComposition/framing: vista três quartos, objeto inteiro centrado ocupando cerca de 70% da altura, sombra suave no chão\nConstraints: fundo liso ciano #00FFFF, sem texto, letras, números, moldura ou cenário, sem personagens (exceto onde o pedido disser), quadrado\n\nPrimary request: Templo arruinado de Tou Um: templo de pedra clara partido ao meio, uma estrela de pedra caída no chão, vermelho estreito de um tapete rasgado; sem texto.\nCompact isolated ruin prop for Feng-tu, not a panoramic scene. No characters, no readable text, no insignia. Entire composition centered with clear empty padding. Request square native high resolution.",
+      "references": [
+        {
+          "path": "assets/interactions/loja.png",
+          "sha256": "b7c092ab509af9687288004d3b0c693f470487b8bd4dbea2f46b353f336afba7",
+          "role": "style anchor"
+        },
+        {
+          "path": "assets/interactions/doacao.png",
+          "sha256": "df364ad5b3672c04f61a4cd0eef2e6185218c518d31217b299a2c6abb27fee0d",
+          "role": "style anchor"
+        }
+      ],
+      "state": "GENERATED_AUDITED_PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "selected_version": "v02"
+    },
+    {
+      "code": "SE10",
+      "item": "ruina_shendilavri",
+      "prompt": "Use case: stylized-concept\nAsset type: objeto interativo de jogo 2D isométrico\nStyle/medium: pixel art sombria coerente com o jogo, pixels nítidos, pedra cinza-arroxeada, metal escuro, um acento de cor por objeto, luz principal no alto à esquerda\nComposition/framing: vista três quartos, objeto inteiro centrado ocupando cerca de 70% da altura, sombra suave no chão\nConstraints: fundo liso ciano #00FFFF, sem texto, letras, números, moldura ou cenário, sem personagens (exceto onde o pedido disser), quadrado\n\nPrimary request: Ruína na colina de Rivenheart: arcos de pedra rosada sobre uma colina, cortinas rasgadas ao vento e pétalas secas; elegância decaída.\nCompact isolated ruin prop for Shendilavri, not a panoramic scene. No characters, no readable text, no insignia. Entire composition centered with clear empty padding. Request square native high resolution.",
+      "references": [
+        {
+          "path": "assets/interactions/loja.png",
+          "sha256": "b7c092ab509af9687288004d3b0c693f470487b8bd4dbea2f46b353f336afba7",
+          "role": "style anchor"
+        },
+        {
+          "path": "assets/interactions/doacao.png",
+          "sha256": "df364ad5b3672c04f61a4cd0eef2e6185218c518d31217b299a2c6abb27fee0d",
+          "role": "style anchor"
+        }
+      ],
+      "state": "GENERATED_AUDITED_PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "selected_version": "v02"
+    },
+    {
+      "code": "SE11",
+      "item": "ruina_goranthis",
+      "prompt": "Use case: stylized-concept\nAsset type: objeto interativo de jogo 2D isométrico\nStyle/medium: pixel art sombria coerente com o jogo, pixels nítidos, pedra cinza-arroxeada, metal escuro, um acento de cor por objeto, luz principal no alto à esquerda\nComposition/framing: vista três quartos, objeto inteiro centrado ocupando cerca de 70% da altura, sombra suave no chão\nConstraints: fundo liso ciano #00FFFF, sem texto, letras, números, moldura ou cenário, sem personagens (exceto onde o pedido disser), quadrado\n\nPrimary request: Salão de festa abandonado: salão aberto com mesas viradas, taças quebradas e fitas prateadas penduradas; festa que acabou.\nCompact isolated ruin prop for Goranthis, not a panoramic scene. No characters, no readable text, no insignia. Entire composition centered with clear empty padding. Request square native high resolution.",
+      "references": [
+        {
+          "path": "assets/interactions/loja.png",
+          "sha256": "b7c092ab509af9687288004d3b0c693f470487b8bd4dbea2f46b353f336afba7",
+          "role": "style anchor"
+        },
+        {
+          "path": "assets/interactions/doacao.png",
+          "sha256": "df364ad5b3672c04f61a4cd0eef2e6185218c518d31217b299a2c6abb27fee0d",
+          "role": "style anchor"
+        }
+      ],
+      "state": "GENERATED_AUDITED_PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "selected_version": "v02"
+    },
+    {
+      "code": "I01",
+      "item": "lliira_juramento",
+      "prompt": "Use case: stylized-concept\nAsset type: ícone de HUD para jogo\nStyle/medium: pixel art sombria de alto contraste, contorno escuro grosso, poucos blocos de cor, silhueta clara a 32–48 px\nComposition/framing: um símbolo central simples, 18% de margem, sem elementos soltos\nConstraints: fundo realmente transparente; sem texto, letras, números, moldura, círculo de fundo, logotipo, marca-d'água ou aparência 3D\n\nPrimary request: três fitas de Lliira (dourada, azul e vermelho-seco) amarradas em torno de uma mão aberta e erguida, com a fita vermelho-seco ainda solta no fim.\nRequest square native 1024x1024, genuine alpha background, entire symbol with at least 18 percent clear padding. Preserve family form and palette from references.",
+      "references": [
+        {
+          "path": "assets/icons/boons/lliira_alegria.png",
+          "sha256": "4fab3de8e67b026285462ec4b03fb2e156e298ef563d57f7d5488c1b18214362",
+          "role": "deity family anchor"
+        },
+        {
+          "path": "assets/icons/boons/lliira_sorte.png",
+          "sha256": "54249770a446d2c7bbe35f897ca804c155c6068d8c218153fbae20145dd2f6ec",
+          "role": "deity family anchor"
+        }
+      ],
+      "state": "GENERATED_AUDITED_PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "selected_version": "v03"
+    },
+    {
+      "code": "I02",
+      "item": "tou_um_caminho",
+      "prompt": "Use case: stylized-concept\nAsset type: ícone de HUD para jogo\nStyle/medium: pixel art sombria de alto contraste, contorno escuro grosso, poucos blocos de cor, silhueta clara a 32–48 px\nComposition/framing: um símbolo central simples, 18% de margem, sem elementos soltos\nConstraints: fundo realmente transparente; sem texto, letras, números, moldura, círculo de fundo, logotipo, marca-d'água ou aparência 3D\n\nPrimary request: Estrela do Norte azul-branca no alto de um caminho vermelho estreito que sobe e se perde; uma pegada pequena na base.\nRequest square native 1024x1024, genuine alpha background, entire symbol with at least 18 percent clear padding. Preserve family form and palette from references.",
+      "references": [
+        {
+          "path": "assets/icons/boons/tou_um_estrela.png",
+          "sha256": "ae35d6c169b14c9a2ddc1ea75c625d10597d680e267e905d09d4c683cc9b4d85",
+          "role": "deity family anchor"
+        }
+      ],
+      "state": "GENERATED_AUDITED_PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "selected_version": "v02"
+    }
+  ],
+  "owner_reply": "Aprovo as 11 peças",
+  "status": "GENERATED_AUDITED_AWAITING_OWNER_REVIEW"
+}

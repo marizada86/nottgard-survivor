@@ -1,4 +1,538 @@
 version: 2
+hero_local_commit_2026_10_13:
+  plan: PLAN-053
+  revision: HERO-COMMIT/v01
+  request_classification: IN_PLAN
+  mode: per-plan
+  status: VALIDATED_READY_TO_COMMIT
+  owner_reply: "commit e continue"
+  checkpoint: S-002/LOCAL_COMMIT_AUTHORIZED
+  ordered_steps: [S-001, S-002, S-003]
+  current_step_position: 2
+  completed_steps: 1
+  total_steps: 3
+  remaining_steps_after_current: 1
+  content_state: DRAFT
+  push_merge_export: NOT_AUTHORIZED
+  runtime_admission: false
+  canonical_promotion: false
+  specification: .atena/generated/hero-commit-2026-10-13/plan.md
+  next_objective: "Verificar commit e retornar à análise AO09/AO10"
+hero_spread_exception_2026_10_13:
+  plan: PLAN-053
+  revision: DEV-024/hero-spread-exception-v01
+  last_request: 'atena, continue'
+  request_classification: IN_PLAN
+  proposed_change_classification: PLAN_CHANGE_REQUEST
+  mode: per-plan
+  status: COMPLETED_VISUALLY_ACCEPTED_DRAFT_WITH_EXCEPTION
+  approval_status: APPROVED_EXPLICITLY_WITH_LIMITED_EXCEPTION
+  checkpoint: S-003/TWO_V02_ACCEPTED_WITH_LIMITED_EXCEPTION
+  ordered_steps: [S-001, S-002, S-003]
+  current_step_position: 3
+  completed_steps: 3
+  total_steps: 3
+  remaining_steps_after_current: 0
+  content_state: DRAFT
+  proposed_codes: [AO04, AO07]
+  proposed_candidate_revision: body-pivot-v01/candidates-v02
+  proposed_exception_maxima_px: [14, 13]
+  global_spread_limit_px: 12
+  existing_accepted_strips: 12
+  existing_accepted_frames: 64
+  raster_modification: false
+  runtime_admission: false
+  canonical_promotion: false
+  commit_push_export: NOT_AUTHORIZED
+  specification: .atena/specs/SPEC-121-retomada-fila-imagens/hero-spread-exception-v01.md
+  review: .atena/generated/hero-spread-review-2026-10-13/review.json
+  gallery: .atena/generated/hero-spread-review-2026-10-13/index.html
+  evidence: .atena/evidence/hero-spread-review-2026-10-13.md
+  next_objective: 'Avaliar AO09/AO10; decidir ER03/ER06 antes da admissão'
+  next_execution_authorized: false
+  owner_reply: "Aprovo as duas v02 com exceção de 14/13 px (recomendado)"
+  accepted_date: "2026-10-13"
+  last_request_classification: IN_PLAN
+  visual_acceptance_receipt: .atena/generated/hero-spread-review-2026-10-13/visual-acceptance.json
+  accepted_hero_inventory: .atena/generated/hero-spread-review-2026-10-13/accepted-hero-inventory.json
+  accepted_total_strips: 14
+  accepted_total_frames: 76
+  remaining_animation_strips: [AO09, AO10, ER03, ER06]
+hero_wide_actions_2026_10_12:
+  plan: PLAN-053
+  revision: DEV-024/hero-wide-actions-v01
+  request_classification: PLAN_CHANGE_REQUEST
+  mode: per-plan
+  status: COMPLETED_VISUALLY_ACCEPTED_DRAFT
+  approval_status: APPROVED_EXPLICITLY
+  checkpoint: S-005/FOUR_WIDE_V01_ACCEPTED
+  current_step_position: 5
+  completed_steps: 5
+  total_steps: 5
+  remaining_steps_after_current: 0
+  ordered_steps: [BODY_GROUND_REFERENCES, PREPARE_20, AUDIT, GALLERY, OWNER_VISUAL_GATE]
+  proposed_codes: [AO08, ER08, ER09, ER10]
+  proposed_frames: 20
+  proposed_cell: [512, 512]
+  proposed_ground_y: 448
+  content_state: DRAFT
+  runtime_admission: false
+  canonical_promotion: false
+  commit_push_export: NOT_AUTHORIZED
+  specification: .atena/specs/SPEC-121-retomada-fila-imagens/hero-wide-actions-v01.md
+  next_objective: 'Resolver AO04/AO07/AO09/AO10/ER03/ER06; preservar doze tiras DRAFT aceitas'
+  next_execution_authorized: false
+  owner_reply: "Aprovo a preparação das quatro ações em 512×512"
+  manifest: .atena/generated/hero-wide-actions-2026-10-12/manifest.json
+  technical_status: PASS
+  prepared_frames: 20
+  prepared_strips: 4
+  human_visual_acceptance: FOUR_WIDE_V01_APPROVED_EXPLICITLY
+  gallery: .atena/generated/hero-wide-actions-2026-10-12/index.html
+  board: .atena/generated/hero-wide-actions-2026-10-12/review-board.png
+  evidence: .atena/evidence/hero-wide-actions-2026-10-12.md
+  last_request_classification: IN_PLAN
+  owner_visual_reply: "Aprovo visualmente as quatro wide v01"
+  accepted_date: "2026-10-12"
+  visual_acceptance_receipt: .atena/generated/hero-wide-actions-2026-10-12/visual-acceptance.json
+  accepted_hero_inventory: .atena/generated/hero-wide-actions-2026-10-12/accepted-hero-inventory.json
+  accepted_total_strips: 12
+  accepted_total_frames: 64
+  remaining_animation_strips: [AO04, AO07, AO09, AO10, ER03, ER06]
+hero_mask_feasibility_2026_10_12:
+  plan: PLAN-053
+  revision: DEV-024/v03/mask-feasibility-v01
+  request_classification: IN_PLAN
+  mode: per-plan
+  status: COMPLETED_NATIVE_EXTRACTION_PARTIAL_DRAFT
+  checkpoint: S-007/MASKS/NATIVE-16-VERIFIED
+  current_step_position: 4
+  completed_steps: 4
+  total_steps: 4
+  remaining_steps_after_current: 0
+  ordered_steps: [INPUTS, CORRIDORS, NATIVE_EXTRACTION, VERIFICATION]
+  content_state: DRAFT
+  examined: 5
+  native_sources_extracted: [ER08, ER09, ER10]
+  native_frames: 16
+  retained_ambiguous: [AO09, AO10]
+  source_recomposition: EXACT_RGBA
+  runtime_admission: false
+  canonical_promotion: false
+  commit_push_export: NOT_AUTHORIZED
+  evidence: .atena/evidence/hero-mask-feasibility-2026-10-12.md
+  gallery: .atena/generated/hero-mask-feasibility-2026-10-12/index.html
+  next_objective: 'Aprovar ensaio em canvas ampliado para ações; manter demais decisões pendentes'
+  next_execution_authorized: false
+hero_body_pivot_2026_10_12:
+  plan: PLAN-053
+  revision: DEV-024/v03/body-pivot-v01
+  request_classification: IN_PLAN
+  mode: per-plan
+  status: COMPLETED_PARTIAL_VISUALLY_ACCEPTED_DRAFT
+  checkpoint: S-007/BODY-PIVOT/EIGHT-V02-ACCEPTED
+  current_step_position: 4
+  completed_steps: 4
+  total_steps: 4
+  remaining_steps_after_current: 0
+  ordered_steps: [SOURCES_LANDMARKS, PREPARE, AUDIT, GALLERY_GATE]
+  content_state: DRAFT
+  strips: 11
+  input_frames: 60
+  runtime_admission: false
+  canonical_promotion: false
+  commit_push_export: NOT_AUTHORIZED
+  specification: .atena/specs/SPEC-121-retomada-fila-imagens/hero-body-pivot-v01.md
+  manifest: .atena/generated/hero-body-pivot-2026-10-12/manifest.json
+  next_objective: 'Avaliar máscaras/separação das cinco ações retidas; preservar oito aceites e demais decisões'
+  technical_candidates: [AO02, AO03, AO05, AO06, ER02, ER04, ER05, ER07]
+  held_current: [AO04, AO07, AO08]
+  held_source_separation_or_count: [ER03, ER06, AO09, AO10, ER08, ER09, ER10]
+  gallery: .atena/generated/hero-body-pivot-2026-10-12/index.html
+  audit: .atena/generated/hero-body-pivot-2026-10-12/audit.json
+  evidence: .atena/evidence/hero-body-pivot-2026-10-12.md
+  human_visual_acceptance: EIGHT_V02_APPROVED_EXPLICITLY
+  next_execution_authorized: false
+  owner_visual_reply: "Aprovo visualmente as oito candidatas v02"
+  acceptance_receipt: .atena/generated/hero-body-pivot-2026-10-12/visual-acceptance.json
+art032_publication_2026_10_12:
+  plan: PLAN-ART032-PUBLISH
+  revision: v01
+  request_classification: IN_PLAN
+  status: IN_PROGRESS
+  mode: per-plan
+  owner_reply: 'atena, commit e push'
+  checkpoint: S-002/COMMIT_AUTHORIZED
+  current_step_position: 2
+  completed_steps: 1
+  total_steps: 3
+  remaining_steps_after_current: 1
+  ordered_steps: [S-001, S-002, S-003]
+  branch: codex/assets-preparation-2026-10-10
+  destination: origin/codex/assets-preparation-2026-10-10
+  scope: ART032_IMPLEMENTATION_AND_UNCOMMITTED_ART032_PRODUCTION_RECORDS
+  content_state: DRAFT_AUTHORIZED_RUNTIME_USE
+  canonical_promotion: false
+  main_merge_release_export: NOT_REQUESTED
+  evidence: .atena/generated/art032-publication-2026-10-12/plan.md
+art032_implementation_2026_10_12:
+  plan: PLAN-ART032-IMPLEMENT
+  revision: v01
+  state_file: .atena/state/art032-implementation.yaml
+  request_classification: PLAN_CHANGE_REQUEST
+  status: COMPLETED_TECHNICAL_DRAFT
+  mode: per-plan
+  owner_reply: 'pode implementar'
+  approval_status: APPROVED_EXPLICITLY
+  checkpoint: S-006/TECHNICAL_COMPLETION_RECORDED
+  current_step_position: 6
+  completed_steps: 6
+  total_steps: 6
+  remaining_steps_after_current: 0
+  source_count: 17
+  prepared: 17
+  admitted: 17
+  content_state: DRAFT_AUTHORIZED_RUNTIME_USE
+  runtime_admission: true
+  canonical_promotion: false
+  commit_push_build: NOT_AUTHORIZED
+  evidence: .atena/evidence/art032-implementation-2026-10-12.md
+  technical_status: PASS
+  human_playtest: PENDING_NOT_PERFORMED
+  captures: 7
+  biomes: 6
+  gallery: .atena/generated/art032-implementation-2026-10-12/index.html
+  next_objective: "Playtest humano conforme roteiro; pendente, não realizado"
+  next_execution_authorized: false
+art032_next_request_2026_10_12:
+  request: ART032-NEXT-REQUEST
+  revision: v01
+  state_file: .atena/state/art032-next-request-2026-10-12.yaml
+  request_classification: PLAN_CHANGE_REQUEST
+  status: IMPLEMENTATION_COMPLETED
+  mode: per-plan
+  checkpoint: IMPLEMENTATION_TECHNICALLY_COMPLETED
+  evidence: .atena/generated/art032-implementation-preflight-2026-10-12/preflight.md
+  next_execution_authorized: false
+art032_juiblex_2026_10_12:
+  plan: PLAN-ART032-JUIBLEX
+  revision: v01
+  state_file: .atena/state/art032-juiblex.yaml
+  request_classification: PLAN_CHANGE_REQUEST
+  status: COMPLETED_VISUALLY_ACCEPTED_DRAFT
+  mode: per-plan
+  approval_status: APPROVED_EXPLICITLY
+  checkpoint: S-005/OWNER_VISUAL_ACCEPTANCE_RECORDED
+  current_step_position: 5
+  completed_steps: 5
+  total_steps: 5
+  remaining_steps_after_current: 0
+  proposed_sources: [MJ01]
+  generated: 1
+  content_state: DRAFT
+  runtime_admission: false
+  canonical_promotion: false
+  git_publication_build: NOT_AUTHORIZED
+  evidence: .atena/evidence/art032-juiblex-delivery-2026-10-12.md
+  owner_front_reply: 'atena, continue'
+  next_objective: "Preparar plano futuro de preparação/admissão das dezessete fontes aceitas ART-032; execução ainda requer escopo aprovado"
+  next_execution_authorized: false
+  scope_owner_reply: "Aprovo MJ01 DRAFT"
+  approved_date: "2026-10-12"
+  technical_status: PASS
+  review_candidates: [MJ01_v03]
+  reading_preview: .atena/generated/art032-juiblex-2026-10-12/review-reading.png
+  gallery: .atena/generated/art032-juiblex-2026-10-12/index.html
+  gallery_browser_verification: NOT_ATTEMPTED_KNOWN_FILE_URL_POLICY_BLOCK
+  human_visual_acceptance: APPROVED_EXPLICITLY
+  visual_owner_reply: "Aprovo visualmente MJ01 v03"
+  visual_accepted_date: "2026-10-12"
+  visual_acceptance_receipt: .atena/generated/art032-juiblex-2026-10-12/visual-acceptance.json
+  last_request_classification: IN_PLAN
+art032_pontos_2026_10_11:
+  plan: PLAN-ART032-PONTOS
+  revision: v01
+  state_file: .atena/state/art032-pontos.yaml
+  request_classification: PLAN_CHANGE_REQUEST
+  status: COMPLETED_VISUALLY_ACCEPTED_DRAFT
+  mode: per-plan
+  approval_status: APPROVED_EXPLICITLY
+  checkpoint: S-005/OWNER_VISUAL_ACCEPTANCE_RECORDED
+  current_step_position: 5
+  completed_steps: 5
+  total_steps: 5
+  remaining_steps_after_current: 0
+  proposed_sources: [PT02, PT03, PT04, PT05, PT06, PT07]
+  generated: 6
+  content_state: DRAFT
+  runtime_admission: false
+  canonical_promotion: false
+  git_publication_build: NOT_AUTHORIZED_FOR_NEW_OUTPUTS
+  evidence: .atena/evidence/art032-pontos-2026-10-11.md
+  next_objective: "Preparar plano futuro da Manifestação de Juiblex ou preparação/admissão das dezesseis fontes aceitas ART-032; nova execução depende de escopo aprovado"
+  scope_owner_reply: "atena, aprovado, commite e continue a Próxima frente proposta: os pontos de acontecimentos restantes de ART-032."
+  technical_status: PASS_WITH_NATIVE_ALPHA_NOTE
+  review_candidates: [PT02_v02, PT03_v02, PT04_v02, PT05_v01, PT06_v02, PT07_v02]
+  human_visual_acceptance: APPROVED_EXPLICITLY
+  gallery: .atena/generated/art032-pontos-2026-10-11/index.html
+  previous_lots_local_commit: 51b51f7369ae34eede997435e6eb52ea057daf25
+  previous_lots_commit_receipt: .atena/generated/art032-commit-2026-10-11/commit-receipt.json
+  visual_owner_reply: "atena, aprovado"
+  visual_accepted_date: "2026-10-12"
+  visual_acceptance_receipt: .atena/generated/art032-pontos-2026-10-11/visual-acceptance.json
+  next_execution_authorized: false
+art032_npcs_lote02_2026_10_11:
+  plan: PLAN-ART032-NPCS-LOTE02
+  revision: v01
+  card: ART-032
+  state_file: .atena/state/art032-npcs-lote02.yaml
+  request_classification: PLAN_CHANGE_REQUEST
+  status: COMPLETED_VISUALLY_ACCEPTED_DRAFT
+  mode: per-plan
+  checkpoint: S-005/OWNER_VISUAL_ACCEPTANCE_RECORDED
+  current_step_position: 5
+  completed_steps: 5
+  total_steps: 5
+  proposed_sources: [NP04, NP05, NP06, NP07, NP08, NP09]
+  generated: 6
+  content_state: DRAFT
+  runtime_admission: false
+  canonical_promotion: false
+  git_publication_build: NOT_AUTHORIZED
+  owner_front_reply: 'Produzir as próximas imagens de ART-032'
+  evidence: .atena/evidence/art032-npcs-lote02-delivery-2026-10-11.md
+  next_objective: 'Preparar plano futuro dos pontos restantes ART-032, mantendo as dez fontes aceitas; geração ainda depende de escopo aprovado'
+  scope_owner_reply: "Aprovo as seis peças DRAFT"
+  approved_date: "2026-10-11"
+  review_candidates: [NP04_v02, NP05_v01, NP06_v02, NP07_v01, NP08_v01, NP09_v01]
+  human_visual_acceptance: APPROVED_EXPLICITLY
+  visual_owner_reply: "Aprovo visualmente as seis revisões"
+  visual_acceptance_receipt: .atena/generated/art032-npcs-lote02-2026-10-11/visual-acceptance.json
+  next_execution_authorized: false
+art032_npcs_piloto_2026_10_11:
+  plan: PLAN-ART032-NPCS-PILOTO
+  revision: v01
+  card: ART-032
+  state_file: .atena/state/art032-npcs-piloto.yaml
+  request_classification: PLAN_DEVIATION
+  route: EXECUTE_APPROVED_DRAFT_FRONT_PRESERVE_PLAN071_AND_HERO_REVIEW
+  status: COMPLETED_VISUALLY_ACCEPTED_DRAFT
+  mode: per-plan
+  checkpoint: S-005/OWNER_VISUAL_ACCEPTANCE_RECORDED
+  current_step_position: 5
+  completed_steps: 5
+  total_steps: 5
+  proposed_sources: [NP01, NP02, NP03, PT01]
+  generated: 4
+  content_state: DRAFT
+  runtime_admission: false
+  git_publication_build: NOT_AUTHORIZED_FOR_NEW_IMAGES
+  next_objective: 'Preparar um plano futuro de normalização/admissão ou das demais peças ART-032; execução ainda não autorizada'
+  scope_owner_reply: "Aprovo as quatro peças DRAFT"
+  remaining_steps_after_current: 0
+  review_candidates: [NP01_v02, NP02_v01, NP03_v01, PT01_v01]
+  human_visual_acceptance: APPROVED_EXPLICITLY
+  evidence: .atena/evidence/art032-npcs-piloto-2026-10-11.md
+  visual_owner_reply: "Aprovo visualmente as quatro revisões"
+  visual_acceptance_receipt: .atena/generated/art032-npcs-2026-10-11/visual-acceptance.json
+  canonical_promotion: false
+  next_execution_authorized: false
+fila026_remaining_2026_10_11:
+  state_file: .atena/state/fila026-remaining.yaml
+  plan: PLAN-065
+  revision: FILA026-REMAINING/v01
+  status: S016_COMMIT_AUTHORIZED
+  mode: per-plan
+  checkpoint: B-004/S-016/CODE_COMMIT_AUTHORIZED
+  integration_owner_reply: 'atena, vamos seguir para o proximo'
+  art_commit: 86c453fe2f6328b9495f8bb0cdc36618e02111f2
+  art_push_verification: REMOTE_SHA_MATCH
+  git_authorization: 'atena, aprovado commite e push'
+  admission_authorization: 'Autorizo a admissão e validação'
+  current_step_position: 16
+  completed_steps: 15
+  total_steps: 16
+  generated: 9
+  prepared: 9
+  technical_status: PASS
+  content_state: CANON_VISUAL_G2
+  owner_reply: 'Aprovo as nove revisões v01'
+  visual_register: .atena/vault/canon/ASSET-APPROVAL-FILA026-G2-v01.md
+  runtime_admission: true
+  admitted: 10
+  admission_register: .atena/vault/canon/ASSET-APPROVAL-REGISTER-031-fila026-admission-2026-10-11.json
+  admission_evidence: .atena/evidence/fila026-admission-2026-10-11.md
+  gallery: .atena/generated/fila026-remaining-2026-10-11/index.html
+  evidence: .atena/evidence/fila026-remaining-2026-10-11.md
+  next_objective: 'Commit separado MEC-058/codigo aguarda aprovacao explicita; playtest pendente'
+  integration_revision: FILA026-INTEGRATION/v01
+  integration_evidence: .atena/evidence/fila026-integration-2026-10-11.md
+  integration_gallery: .atena/generated/fila026-integration-2026-10-11/index.html
+  integration_audit: .atena/generated/fila026-integration-2026-10-11/audit.json
+  suite_failures: 0
+  captures: 18
+  code_commit_authorization: APPROVED_EXPLICITLY_2026_10_11
+  code_push_build_authorization: NOT_AUTHORIZED
+  human_playtest: PENDING
+  code_commit_owner_reply: "atena, commit e vamos criar as proximas imagens"
+fila026_l01_2026_10_11:
+  plan: PLAN-065
+  state_file: .atena/state/plan-065-lettering-cursor.yaml
+  request_classification: IN_PLAN
+  revision: L01/v01
+  status: G1_ACCEPTED
+  mode: per-plan
+  checkpoint: B-003/S-009/G1_ACCEPTED
+  current_step_position: 9
+  total_steps: 16
+  generated_candidates: 2
+  recommended: v02
+  selected: v01
+  owner_reply: 'Aprovo L01 v01'
+  visual_register: .atena/vault/canon/ASSET-APPROVAL-FILA026-L01-v01.md
+  technical_checks: PASS
+  content_state: CANON_VISUAL_G1_REFERENCE
+  runtime_admission: true
+  gallery: .atena/generated/fila026-l01-2026-10-11/index.html
+  evidence: .atena/evidence/fila026-l01-2026-10-11.md
+  next_objective: 'L01 v01 admitida, commitada e publicada em S013; S014 permanece pendente'
+fila028_altar_correction_2026_10_10:
+  state_file: .atena/state/fila028-altar-correction.yaml
+  revision: AL01-CORR/v01
+  status: VISUALLY_ACCEPTED_PREPARATION_CANON
+  mode: per-plan
+  checkpoint: S-006/ACCEPTED
+  scope_approval: 'Aprovo a correção do altar'
+  completed_steps: 5
+  total_steps: 5
+  evidence: .atena/evidence/fila028-altar-correction-2026-10-10.md
+  source_state: CANON_AL01_v02
+  output_state: CANON_PREPARATION_VISUAL_ONLY
+  owner_visual_acceptance: 'Aprovo com ciclo de 900 ms'
+  accepted_cycle_ms: 900
+  visual_register: .atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md
+  current_prepared_assets: 34
+  local_commit_authorization: 'aprovado, commit'
+  local_commit_authorization_date: '2026-10-11'
+  push_authorization: NOT_AUTHORIZED_FOR_CORRECTION
+  runtime_admission: false
+fila028_preparation_publish_2026_10_10:
+  request_classification: PLAN_DEVIATION
+  route: commit-push-authorized-preparation-then-return-to-owner-review
+  authorization: 'atena, commit e push'
+  mode: per-plan
+  status: PUSHED_REMOTE_SHA_VERIFIED
+  checkpoint: GIT/VERIFIED
+  commit: 711e585371bbb785a1ccefde77dfa0a2de648a95
+  remote_sha: 711e585371bbb785a1ccefde77dfa0a2de648a95
+  branch: codex/assets-preparation-2026-10-10
+  main_in_scope: false
+  return_checkpoint: S-007/OWNER-PREPARATION-REVIEW
+fila028_preparation_2026_10_10:
+  state_file: .atena/state/fila028-preparation.yaml
+  status: ACCEPTED_33_HELD_ALTAR
+  mode: per-plan
+  checkpoint: S-007/ACCEPTED_WITH_HELD_ALTAR
+  owner_acceptance: 'continuando do ultimo checkpoint, está aprovado, pode comitar'
+  accepted_derivatives: 33
+  visual_register: .atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md
+  scope_approval: 'Aprovo a preparação das 34 fontes'
+  completed_steps: 6
+  total_steps: 6
+  held: [AL01]
+  evidence: .atena/evidence/fila028-preparation-2026-10-10.md
+  source_state: CANON_SOURCE_VISUAL_ONLY
+  derived_state: MIXED_CANON_PREPARATION_33_DRAFT_ALTAR
+  runtime_admission: false
+fila028_remaining_2026_10_10:
+  state_file: .atena/state/fila028-remaining.yaml
+  status: VISUALLY_APPROVED_PREPARATION_PENDING
+  mode: per-plan
+  checkpoint: S-012/ACCEPTED
+  scope_approval: 'Aprovo as 11 peças'
+  evidence: .atena/evidence/fila028-remaining-2026-10-10.md
+  content_state: CANON_SOURCE_VISUAL_ONLY
+  runtime_admission: false
+  visual_register: .atena/vault/canon/ASSET-APPROVAL-FILA028-REMAINING-2026-10-10.md
+  commit: 09bdda2df184e15cf5748c4c779acebe1f360978
+fila028_publish_2026_10_10:
+  request_classification: PLAN_DEVIATION
+  route: commit-push-requested-assets-then-return-to-visual-review
+  authorization: 'atena commit e push'
+  mode: per-plan
+  checkpoint: GIT/VERIFIED
+  status: PUSHED_REMOTE_SHA_VERIFIED
+  commit: 1a0051599195c57e309cf30cd68bcf3a19ea9b36
+  remote_sha: 1a0051599195c57e309cf30cd68bcf3a19ea9b36
+  branch: codex/assets-preparation-2026-10-10
+  main_in_scope: false
+  return_checkpoint: S-004/OWNER-VISUAL-REVIEW
+fila028_ar_se_2026_10_10:
+  state_file: .atena/state/fila028-ar-se.yaml
+  status: VISUALLY_APPROVED_PREPARATION_PENDING
+  mode: per-plan
+  checkpoint: S-004/ACCEPTED
+  scope_approval: 'Aprovo esse plano'
+  evidence: .atena/evidence/fila028-ar-se-2026-10-10.md
+  content_state: CANON_SOURCE_VISUAL_ONLY
+  visual_register: .atena/vault/canon/ASSET-APPROVAL-FILA028-IC-AR-SE-2026-10-10.md
+  runtime_admission: false
+fila028_icons_2026_10_10:
+  state_file: .atena/state/fila028-icons.yaml
+  status: VISUALLY_APPROVED_PREPARATION_PENDING
+  mode: per-plan
+  checkpoint: S-014/ACCEPTED
+  scope_approval: 'atena aprovado continue'
+  previous_commit: 3b99d62
+  content_state: CANON_SOURCE_VISUAL_ONLY
+  visual_register: .atena/vault/canon/ASSET-APPROVAL-FILA028-IC-AR-SE-2026-10-10.md
+  runtime_admission: false
+  evidence: .atena/evidence/fila028-icons-2026-10-10.md
+  commit: 0e2d2e6772d315f06608c69aa1d61d630d596148
+fila028_generation_2026_10_10:
+  state_file: .atena/state/fila028-generation.yaml
+  mode: per-plan
+  checkpoint: S-008/ACCEPTED
+  status: VISUALLY_APPROVED_LOCAL_COMMIT_AUTHORIZED
+  visual_register: .atena/vault/canon/ASSET-APPROVAL-FILA028-AL-EV-2026-10-10.md
+  evidence: .atena/evidence/fila028-generation-2026-10-10.md
+  scope: [AL01, EV01, EV02, EV03, EV04, EV05, EV06]
+  content_state: DRAFT
+  runtime_admission: false
+  owner_reply: 'Por plano (recomendado)'
+  commit_preparation: 3fd8fd9
+  return_checkpoint: S-007/ORIGINAL-GENERATIONS/NORMALIZATION-EXTRACTION-11
+image_queue_resume_2026_10_10:
+  request_classification: PLAN_DEVIATION
+  route: publish-now-then-return-to-image-queue
+  authorization: 'Main com publicação do latest e branch da fila'
+  publication_status: PUSHED_REMOTE_SHA_VERIFIED
+  main_sha: 60fd1fff18d4a56a4df26391fcfb47216ee2ed40
+  image_branch_sha: cf17d7c3a0ff059320c7f580fd6a7d4ef8ec8aa1
+  ci_status: NOT_VERIFIED
+  source_state: 'C:/Users/Higor Rossini/.codex/worktrees/20f4/nottgard-survivor/.atena/state/dev-024-art045-pilots.yaml'
+  plan: PLAN-053
+  revision: DEV-024/v03
+  checkpoint: S-007/ORIGINAL-GENERATIONS/BODY-FEET-LANDMARKS
+  content_state: DRAFT
+  runtime_admission: false
+  source_decision: APPROVED_RECOMMENDED_ROUTE_DECIDE_BEFORE_INTEGRATION
+  owner_reply: 'atena, aprovado'
+  route_scope: 'Preparar demais pecas; ER03 sete poses candidato; ER06 separado pelo corte; decidir antes da integracao'
+  preparation_status: EXTRACTION_REVIEW_COMPLETED_11_EXTRACTABLE_7_HELD
+  prepared_strips: 16
+  prior_extractions_available: 5
+  extraction_review_remaining: 0
+  extraction_review_state: .atena/state/hero-extraction-review-2026-10-11.yaml
+  extraction_native_frames: 30
+  extraction_new_safe_strips: 6
+  extraction_held_strips: [AO09, AO10, ER08, ER09, ER10]
+  external_source_worktree_available: false
+  preparation_manifest: .atena/generated/hero-normalization-2026-10-10/manifest.json
+  preflight: .atena/generated/hero-normalization-2026-10-10/preflight.json
+  preflight_role: HISTORICAL_GEOMETRY_BEFORE_EXTRACTION_REVIEW
+  next_objective: 'Marcar corpo/pes nas onze tiras extraiveis; avaliar mascaras das cinco retidas antes de normalizar'
+  evidence: .atena/evidence/image-queue-resume-2026-10-10.md
 # Reconciliado por Atena em 2026-10-05: PLAN-056 aceito pelo dono; commits reais registrados.
 active_plan:
   id: PLAN-071

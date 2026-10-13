@@ -1,0 +1,37 @@
+version: 1
+plan: PLAN-ART032-IMPLEMENT
+revision: v01
+request_classification: PLAN_CHANGE_REQUEST
+owner_reply: 'pode implementar'
+status: COMPLETED_TECHNICAL_DRAFT
+approval_mode: per-plan
+approval_status: APPROVED_EXPLICITLY
+content_state: DRAFT_AUTHORIZED_RUNTIME_USE
+checkpoint: S-006/TECHNICAL_COMPLETION_RECORDED
+current_step_position: 6
+completed_steps: 6
+total_steps: 6
+remaining_steps_after_current: 0
+ordered_steps: [S-001, S-002, S-003, S-004, S-005, S-006]
+completed_ordered_steps: [S-001, S-002, S-003, S-004, S-005, S-006]
+source_count: 17
+prepared: 17
+admitted: 17
+runtime_admission: true
+canonical_promotion: false
+commit_push_build: NOT_AUTHORIZED
+visual_bible: .atena/vault/drafts/PLAN-ART032-IMPLEMENT-v01.md
+output_package: .atena/generated/art032-implementation-2026-10-12
+evidence: .atena/evidence/art032-implementation-2026-10-12.md
+preserved_checkpoint: PLAN071_AND_HERO_EXTRACTION_REVIEW
+human_playtest: PENDING_NOT_PERFORMED
+next_objective: 'Playtest humano da integração local conforme roteiro; pendente, não realizado'
+technical_status: PASS
+new_test_failures: 0
+captures: 7
+biomes: 6
+protected_hashes_preserved: 2966
+gallery: .atena/generated/art032-implementation-2026-10-12/index.html
+verification: .atena/generated/art032-implementation-2026-10-12/delivery-verification.json
+playtest_guide: .atena/generated/art032-implementation-2026-10-12/playtest.md
+next_execution_authorized: false

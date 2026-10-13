@@ -1,0 +1,1568 @@
+{
+  "status": "STRUCTURAL_QA_PASS_CRITERIA_RECORDED",
+  "revision": "DEV-024/v03/body-pivot-v01",
+  "candidate_variant": "v02",
+  "strips": 11,
+  "frames": 60,
+  "technical_candidates": [
+    "AO02",
+    "AO03",
+    "AO05",
+    "AO06",
+    "ER02",
+    "ER04",
+    "ER05",
+    "ER07"
+  ],
+  "held_candidates": [
+    "AO04",
+    "AO07",
+    "AO08"
+  ],
+  "original_held_unprocessed": [
+    "ER03",
+    "ER06",
+    "AO09",
+    "AO10",
+    "ER08",
+    "ER09",
+    "ER10"
+  ],
+  "sources_preserved": 20,
+  "protected_hashes": 3068,
+  "head_unchanged": "e6aea39f16b43e18d2d4501e870645a97b6d4dfe",
+  "index_empty": true,
+  "per_frame_zoom": false,
+  "threshold_cleanup": "derivative alpha<=8 only",
+  "runtime_admission": false,
+  "content_state": "DRAFT",
+  "browser_verification": "NOT_ATTEMPTED_KNOWN_FILE_URL_POLICY_BLOCK",
+  "human_visual_acceptance": "EIGHT_APPROVED_EXPLICITLY_DRAFT",
+  "records": [
+    {
+      "code": "AO02",
+      "hero": "arlindo",
+      "status": "TECHNICALLY_VERIFIED_VISUALLY_ACCEPTED_DRAFT",
+      "reasons": [],
+      "target_body_height": 290,
+      "body_median": 290.0,
+      "body_spread": 2,
+      "landmark_spread": 1.5793056501020146,
+      "uniform_scale": 0.394826412525528,
+      "source_bytes_unchanged": true,
+      "frames": [
+        {
+          "frame": 1,
+          "path": "v02/frames/AO02/f01.png",
+          "sha256": "a5bd71d9cc7e110bc7d83d8607e60ffa32309549f3d4e6d28bf05ab65374f0ee",
+          "bbox": [
+            68,
+            77,
+            188,
+            368
+          ],
+          "margins_px": [
+            68,
+            77,
+            68,
+            16
+          ],
+          "body_height_raster": 291,
+          "body_height_landmark": 290.592239618788,
+          "feet_y_raster": 368,
+          "head_y_raster": 77,
+          "scale": 0.394826412525528
+        },
+        {
+          "frame": 2,
+          "path": "v02/frames/AO02/f02.png",
+          "sha256": "5525181c795bcee837eaeb3627b23c09394d8a483150d58324e78ac3fca016f5",
+          "bbox": [
+            64,
+            79,
+            187,
+            368
+          ],
+          "margins_px": [
+            64,
+            79,
+            69,
+            16
+          ],
+          "body_height_raster": 289,
+          "body_height_landmark": 289.407760381212,
+          "feet_y_raster": 368,
+          "head_y_raster": 79,
+          "scale": 0.394826412525528
+        },
+        {
+          "frame": 3,
+          "path": "v02/frames/AO02/f03.png",
+          "sha256": "e6437d2d0e63b595e423c2ca6280f119ede0712555cd773df967eef4c72c6ce6",
+          "bbox": [
+            67,
+            77,
+            191,
+            368
+          ],
+          "margins_px": [
+            67,
+            77,
+            65,
+            16
+          ],
+          "body_height_raster": 291,
+          "body_height_landmark": 290.592239618788,
+          "feet_y_raster": 368,
+          "head_y_raster": 77,
+          "scale": 0.394826412525528
+        },
+        {
+          "frame": 4,
+          "path": "v02/frames/AO02/f04.png",
+          "sha256": "113c49d57b4ea61f5526585f54ecbe46d0d6da4a9028e4d31d5ce509fb720624",
+          "bbox": [
+            66,
+            79,
+            187,
+            368
+          ],
+          "margins_px": [
+            66,
+            79,
+            69,
+            16
+          ],
+          "body_height_raster": 289,
+          "body_height_landmark": 289.012933968686,
+          "feet_y_raster": 368,
+          "head_y_raster": 79,
+          "scale": 0.394826412525528
+        }
+      ],
+      "strip": "v02/strips/AO02.png",
+      "strip_sha256": "ebe364c08618a3ec53b071e25bb5cd1dfeb091436535013c7543903e2617f1fc",
+      "runtime_admission": false,
+      "human_visual_acceptance": "APPROVED_EXPLICITLY_DRAFT"
+    },
+    {
+      "code": "AO03",
+      "hero": "arlindo",
+      "status": "TECHNICALLY_VERIFIED_VISUALLY_ACCEPTED_DRAFT",
+      "reasons": [],
+      "target_body_height": 290,
+      "body_median": 290.0,
+      "body_spread": 11,
+      "landmark_spread": 10.34108527131798,
+      "uniform_scale": 0.449612403100775,
+      "source_bytes_unchanged": true,
+      "frames": [
+        {
+          "frame": 1,
+          "path": "v02/frames/AO03/f01.png",
+          "sha256": "8da667e10b3fb189b3c8e2f3a7a001dc0e67de4110d12c304924600b99fff72d",
+          "bbox": [
+            50,
+            78,
+            215,
+            368
+          ],
+          "margins_px": [
+            50,
+            78,
+            41,
+            16
+          ],
+          "body_height_raster": 290,
+          "body_height_landmark": 290.0,
+          "feet_y_raster": 368,
+          "head_y_raster": 78,
+          "scale": 0.449612403100775
+        },
+        {
+          "frame": 2,
+          "path": "v02/frames/AO03/f02.png",
+          "sha256": "f0d425ce5d6662c776f32bec1ef7d9c4b6305b4e1de0f4a838b957f185e21206",
+          "bbox": [
+            58,
+            75,
+            205,
+            368
+          ],
+          "margins_px": [
+            58,
+            75,
+            51,
+            16
+          ],
+          "body_height_raster": 293,
+          "body_height_landmark": 292.697674418605,
+          "feet_y_raster": 368,
+          "head_y_raster": 75,
+          "scale": 0.449612403100775
+        },
+        {
+          "frame": 3,
+          "path": "v02/frames/AO03/f03.png",
+          "sha256": "bcaf7f6cf4d4435425fe947e615d4cdde246dc7441b0caa5b9ed439f176cda35",
+          "bbox": [
+            58,
+            78,
+            209,
+            368
+          ],
+          "margins_px": [
+            58,
+            78,
+            47,
+            16
+          ],
+          "body_height_raster": 290,
+          "body_height_landmark": 290.449612403101,
+          "feet_y_raster": 368,
+          "head_y_raster": 78,
+          "scale": 0.449612403100775
+        },
+        {
+          "frame": 4,
+          "path": "v02/frames/AO03/f04.png",
+          "sha256": "82fc569c870f7fe0dc94d3c605c6b77435d8ba4c82c90dd247806edb98fb6ce6",
+          "bbox": [
+            61,
+            86,
+            217,
+            368
+          ],
+          "margins_px": [
+            61,
+            86,
+            39,
+            16
+          ],
+          "body_height_raster": 282,
+          "body_height_landmark": 282.356589147287,
+          "feet_y_raster": 368,
+          "head_y_raster": 86,
+          "scale": 0.449612403100775
+        },
+        {
+          "frame": 5,
+          "path": "v02/frames/AO03/f05.png",
+          "sha256": "03e7cfdeb550db0daf1aa2f1d49e8ad9c4a7376eca8463658d82e5fb9aa38521",
+          "bbox": [
+            54,
+            78,
+            192,
+            368
+          ],
+          "margins_px": [
+            54,
+            78,
+            64,
+            16
+          ],
+          "body_height_raster": 290,
+          "body_height_landmark": 290.0,
+          "feet_y_raster": 368,
+          "head_y_raster": 78,
+          "scale": 0.449612403100775
+        },
+        {
+          "frame": 6,
+          "path": "v02/frames/AO03/f06.png",
+          "sha256": "b9201a1031f1dbc19e02824287c9991e6e2e5d15d280d25c6c2e7c8ac07ce6ee",
+          "bbox": [
+            52,
+            79,
+            189,
+            368
+          ],
+          "margins_px": [
+            52,
+            79,
+            67,
+            16
+          ],
+          "body_height_raster": 289,
+          "body_height_landmark": 289.100775193798,
+          "feet_y_raster": 368,
+          "head_y_raster": 79,
+          "scale": 0.449612403100775
+        }
+      ],
+      "strip": "v02/strips/AO03.png",
+      "strip_sha256": "8fb828bb8f0421c6f5014d549ce2da2216dc015ee78049faa09cbec4a4ca880e",
+      "runtime_admission": false,
+      "human_visual_acceptance": "APPROVED_EXPLICITLY_DRAFT"
+    },
+    {
+      "code": "AO04",
+      "hero": "arlindo",
+      "status": "HELD_TECHNICAL_CRITERIA",
+      "reasons": [
+        "BODY_SPREAD_OVER_12_PX"
+      ],
+      "target_body_height": 290,
+      "body_median": 290.0,
+      "body_spread": 14,
+      "landmark_spread": 12.224824355971975,
+      "uniform_scale": 0.452771272443404,
+      "source_bytes_unchanged": true,
+      "frames": [
+        {
+          "frame": 1,
+          "path": "v02/frames/AO04/f01.png",
+          "sha256": "ca10cdfa8f1141614f918f2c247f564749f7a23802cc042a3ce5e818030a3d17",
+          "bbox": [
+            54,
+            72,
+            189,
+            368
+          ],
+          "margins_px": [
+            54,
+            72,
+            67,
+            16
+          ],
+          "body_height_raster": 296,
+          "body_height_landmark": 295.659640905543,
+          "feet_y_raster": 368,
+          "head_y_raster": 72,
+          "scale": 0.452771272443404
+        },
+        {
+          "frame": 2,
+          "path": "v02/frames/AO04/f02.png",
+          "sha256": "50a0828d1555768705d47f970d163500af4d74b045eede4cc7e75449c082cd98",
+          "bbox": [
+            55,
+            85,
+            183,
+            367
+          ],
+          "margins_px": [
+            55,
+            85,
+            73,
+            17
+          ],
+          "body_height_raster": 282,
+          "body_height_landmark": 283.434816549571,
+          "feet_y_raster": 367,
+          "head_y_raster": 85,
+          "scale": 0.452771272443404
+        },
+        {
+          "frame": 3,
+          "path": "v02/frames/AO04/f03.png",
+          "sha256": "1a1b927654d7ef7b43c5465b3d287671736ecb08394b872677348731af72b6c8",
+          "bbox": [
+            58,
+            78,
+            184,
+            368
+          ],
+          "margins_px": [
+            58,
+            78,
+            72,
+            16
+          ],
+          "body_height_raster": 290,
+          "body_height_landmark": 289.773614363778,
+          "feet_y_raster": 368,
+          "head_y_raster": 78,
+          "scale": 0.452771272443404
+        },
+        {
+          "frame": 4,
+          "path": "v02/frames/AO04/f04.png",
+          "sha256": "1f607d33a01d20b9bf7084bb05ba082df1aa87d463fc4fffb9f075f78a2cf98f",
+          "bbox": [
+            51,
+            76,
+            200,
+            368
+          ],
+          "margins_px": [
+            51,
+            76,
+            56,
+            16
+          ],
+          "body_height_raster": 292,
+          "body_height_landmark": 292.037470725995,
+          "feet_y_raster": 368,
+          "head_y_raster": 76,
+          "scale": 0.452771272443404
+        },
+        {
+          "frame": 5,
+          "path": "v02/frames/AO04/f05.png",
+          "sha256": "6d71a9f258e3b22ea56609f8ce724fc15a7ab788a5a81248e28e7673e778b787",
+          "bbox": [
+            55,
+            78,
+            183,
+            368
+          ],
+          "margins_px": [
+            55,
+            78,
+            73,
+            16
+          ],
+          "body_height_raster": 290,
+          "body_height_landmark": 290.226385636222,
+          "feet_y_raster": 368,
+          "head_y_raster": 78,
+          "scale": 0.452771272443404
+        },
+        {
+          "frame": 6,
+          "path": "v02/frames/AO04/f06.png",
+          "sha256": "95326aee253e56ce768dcd8269aa98c1ceeadb49d93670f35472ac3f45a5af92",
+          "bbox": [
+            55,
+            78,
+            198,
+            368
+          ],
+          "margins_px": [
+            55,
+            78,
+            58,
+            16
+          ],
+          "body_height_raster": 290,
+          "body_height_landmark": 289.773614363778,
+          "feet_y_raster": 368,
+          "head_y_raster": 78,
+          "scale": 0.452771272443404
+        }
+      ],
+      "strip": "v02/strips/AO04.png",
+      "strip_sha256": "f2b8b31a440d02f906e577cb0b6fc48059b1dee0b8528d06936710c9077cff61",
+      "runtime_admission": false,
+      "human_visual_acceptance": "PENDING"
+    },
+    {
+      "code": "AO05",
+      "hero": "arlindo",
+      "status": "TECHNICALLY_VERIFIED_VISUALLY_ACCEPTED_DRAFT",
+      "reasons": [],
+      "target_body_height": 290,
+      "body_median": 290.0,
+      "body_spread": 6,
+      "landmark_spread": 6.425406203840964,
+      "uniform_scale": 0.428360413589365,
+      "source_bytes_unchanged": true,
+      "frames": [
+        {
+          "frame": 1,
+          "path": "v02/frames/AO05/f01.png",
+          "sha256": "9f06836608d7eff228f480fb30ceb95facc47a7382b36b0616138c03d59e2747",
+          "bbox": [
+            65,
+            78,
+            190,
+            368
+          ],
+          "margins_px": [
+            65,
+            78,
+            66,
+            16
+          ],
+          "body_height_raster": 290,
+          "body_height_landmark": 290.428360413589,
+          "feet_y_raster": 368,
+          "head_y_raster": 78,
+          "scale": 0.428360413589365
+        },
+        {
+          "frame": 2,
+          "path": "v02/frames/AO05/f02.png",
+          "sha256": "b06dd792f050101e5bee1d9f1a41cbb57e1b96feb33ddbbe297df995b0c54b7a",
+          "bbox": [
+            70,
+            81,
+            196,
+            368
+          ],
+          "margins_px": [
+            70,
+            81,
+            60,
+            16
+          ],
+          "body_height_raster": 287,
+          "body_height_landmark": 287.001477104874,
+          "feet_y_raster": 368,
+          "head_y_raster": 81,
+          "scale": 0.428360413589365
+        },
+        {
+          "frame": 3,
+          "path": "v02/frames/AO05/f03.png",
+          "sha256": "ba06f0a81f0b428dbc23fa8c793afda4db3f3b5651f83c220d4602a7097d7245",
+          "bbox": [
+            66,
+            75,
+            195,
+            368
+          ],
+          "margins_px": [
+            66,
+            75,
+            61,
+            16
+          ],
+          "body_height_raster": 293,
+          "body_height_landmark": 293.426883308715,
+          "feet_y_raster": 368,
+          "head_y_raster": 75,
+          "scale": 0.428360413589365
+        },
+        {
+          "frame": 4,
+          "path": "v02/frames/AO05/f04.png",
+          "sha256": "8d1c5f30c04b07d19a3aa73f75ac02acca79d8cb76cb2f2abc15fcd60975e435",
+          "bbox": [
+            67,
+            78,
+            190,
+            368
+          ],
+          "margins_px": [
+            67,
+            78,
+            66,
+            16
+          ],
+          "body_height_raster": 290,
+          "body_height_landmark": 289.571639586411,
+          "feet_y_raster": 368,
+          "head_y_raster": 78,
+          "scale": 0.428360413589365
+        },
+        {
+          "frame": 5,
+          "path": "v02/frames/AO05/f05.png",
+          "sha256": "faa22e18d1a3913bf765c02e6c087408c8f13b9d94287812cbbdfaf6df2772f6",
+          "bbox": [
+            63,
+            80,
+            190,
+            368
+          ],
+          "margins_px": [
+            63,
+            80,
+            66,
+            16
+          ],
+          "body_height_raster": 288,
+          "body_height_landmark": 288.286558345643,
+          "feet_y_raster": 368,
+          "head_y_raster": 80,
+          "scale": 0.428360413589365
+        },
+        {
+          "frame": 6,
+          "path": "v02/frames/AO05/f06.png",
+          "sha256": "3f360d18e4307064a8b643f3f2b2baffb595bd6b53d846cc0ca8e9420e52a844",
+          "bbox": [
+            66,
+            75,
+            193,
+            368
+          ],
+          "margins_px": [
+            66,
+            75,
+            63,
+            16
+          ],
+          "body_height_raster": 293,
+          "body_height_landmark": 292.570162481536,
+          "feet_y_raster": 368,
+          "head_y_raster": 75,
+          "scale": 0.428360413589365
+        }
+      ],
+      "strip": "v02/strips/AO05.png",
+      "strip_sha256": "3f37d88649efcbde3be4833a437988f43868d04403e3c63ffa22e14329ff8609",
+      "runtime_admission": false,
+      "human_visual_acceptance": "APPROVED_EXPLICITLY_DRAFT"
+    },
+    {
+      "code": "AO06",
+      "hero": "arlindo",
+      "status": "TECHNICALLY_VERIFIED_VISUALLY_ACCEPTED_DRAFT",
+      "reasons": [],
+      "target_body_height": 290,
+      "body_median": 290.0,
+      "body_spread": 4,
+      "landmark_spread": 3.2768361581919976,
+      "uniform_scale": 0.468119451170299,
+      "source_bytes_unchanged": true,
+      "frames": [
+        {
+          "frame": 1,
+          "path": "v02/frames/AO06/f01.png",
+          "sha256": "62917195b4a971a3a365e1342de7de2c2380af04055fcaba44f22d1e2af10543",
+          "bbox": [
+            60,
+            78,
+            197,
+            368
+          ],
+          "margins_px": [
+            60,
+            78,
+            59,
+            16
+          ],
+          "body_height_raster": 290,
+          "body_height_landmark": 290.234059725585,
+          "feet_y_raster": 368,
+          "head_y_raster": 78,
+          "scale": 0.468119451170299
+        },
+        {
+          "frame": 2,
+          "path": "v02/frames/AO06/f02.png",
+          "sha256": "6c3f59f30bfc25d0f1197dbc1f127a175e5f5edbdbd2e5501d1306e7735eb0cd",
+          "bbox": [
+            65,
+            79,
+            198,
+            368
+          ],
+          "margins_px": [
+            65,
+            79,
+            58,
+            16
+          ],
+          "body_height_raster": 289,
+          "body_height_landmark": 288.829701372074,
+          "feet_y_raster": 368,
+          "head_y_raster": 79,
+          "scale": 0.468119451170299
+        },
+        {
+          "frame": 3,
+          "path": "v02/frames/AO06/f03.png",
+          "sha256": "ad4200a1dbdcc0bf9c689214210890d8c3e269c1a7e81b36f577c76dc17856b2",
+          "bbox": [
+            65,
+            82,
+            196,
+            368
+          ],
+          "margins_px": [
+            65,
+            82,
+            60,
+            16
+          ],
+          "body_height_raster": 286,
+          "body_height_landmark": 287.425343018563,
+          "feet_y_raster": 368,
+          "head_y_raster": 82,
+          "scale": 0.468119451170299
+        },
+        {
+          "frame": 4,
+          "path": "v02/frames/AO06/f04.png",
+          "sha256": "1172c78659ab2fd01c4501d8a780b83ae1a0607b50558aa514a96f11b88ca814",
+          "bbox": [
+            62,
+            78,
+            191,
+            368
+          ],
+          "margins_px": [
+            62,
+            78,
+            65,
+            16
+          ],
+          "body_height_raster": 290,
+          "body_height_landmark": 290.702179176755,
+          "feet_y_raster": 368,
+          "head_y_raster": 78,
+          "scale": 0.468119451170299
+        },
+        {
+          "frame": 5,
+          "path": "v02/frames/AO06/f05.png",
+          "sha256": "14ae52a6af705534a05ccb13027a1d48274ae024ed7c0dfbffca0568d21ba0b1",
+          "bbox": [
+            64,
+            78,
+            197,
+            368
+          ],
+          "margins_px": [
+            64,
+            78,
+            59,
+            16
+          ],
+          "body_height_raster": 290,
+          "body_height_landmark": 289.765940274415,
+          "feet_y_raster": 368,
+          "head_y_raster": 78,
+          "scale": 0.468119451170299
+        },
+        {
+          "frame": 6,
+          "path": "v02/frames/AO06/f06.png",
+          "sha256": "2dcac2ecf53769815e6eb573b9c4bae15f5a958e5f9b8d630952e1a2f795bf66",
+          "bbox": [
+            61,
+            78,
+            188,
+            368
+          ],
+          "margins_px": [
+            61,
+            78,
+            68,
+            16
+          ],
+          "body_height_raster": 290,
+          "body_height_landmark": 290.702179176755,
+          "feet_y_raster": 368,
+          "head_y_raster": 78,
+          "scale": 0.468119451170299
+        }
+      ],
+      "strip": "v02/strips/AO06.png",
+      "strip_sha256": "3d0b0c8bc2ef3a5fc8e6b967602e57dcc17cf4ff89758c9cb44300cfc88368a6",
+      "runtime_admission": false,
+      "human_visual_acceptance": "APPROVED_EXPLICITLY_DRAFT"
+    },
+    {
+      "code": "AO07",
+      "hero": "arlindo",
+      "status": "HELD_TECHNICAL_CRITERIA",
+      "reasons": [
+        "BODY_SPREAD_OVER_12_PX"
+      ],
+      "target_body_height": 290,
+      "body_median": 290.0,
+      "body_spread": 13,
+      "landmark_spread": 12.988416988416986,
+      "uniform_scale": 0.447876447876448,
+      "source_bytes_unchanged": true,
+      "frames": [
+        {
+          "frame": 1,
+          "path": "v02/frames/AO07/f01.png",
+          "sha256": "33bb63122bf3ee7e82f789f63f8417b32597eb8b18600327bffaa613fce2bc6b",
+          "bbox": [
+            64,
+            75,
+            201,
+            368
+          ],
+          "margins_px": [
+            64,
+            75,
+            55,
+            16
+          ],
+          "body_height_raster": 293,
+          "body_height_landmark": 292.911196911197,
+          "feet_y_raster": 368,
+          "head_y_raster": 75,
+          "scale": 0.447876447876448
+        },
+        {
+          "frame": 2,
+          "path": "v02/frames/AO07/f02.png",
+          "sha256": "7e8e63ff794d643b7b3b4e6559c63dcb3af62ca2f613b40cb1887cda70324ac1",
+          "bbox": [
+            60,
+            81,
+            182,
+            368
+          ],
+          "margins_px": [
+            60,
+            81,
+            74,
+            16
+          ],
+          "body_height_raster": 287,
+          "body_height_landmark": 287.088803088803,
+          "feet_y_raster": 368,
+          "head_y_raster": 81,
+          "scale": 0.447876447876448
+        },
+        {
+          "frame": 3,
+          "path": "v02/frames/AO07/f03.png",
+          "sha256": "f1482aad9da90f9b3576543c91762b347ca8053ef77aa9043a8ceec9770a73d4",
+          "bbox": [
+            74,
+            78,
+            196,
+            368
+          ],
+          "margins_px": [
+            74,
+            78,
+            60,
+            16
+          ],
+          "body_height_raster": 290,
+          "body_height_landmark": 290.223938223938,
+          "feet_y_raster": 368,
+          "head_y_raster": 78,
+          "scale": 0.447876447876448
+        },
+        {
+          "frame": 4,
+          "path": "v02/frames/AO07/f04.png",
+          "sha256": "90adbec1b203ea46a8082802f1846a30bda1e617b90a0c1371b8a285fc0a27ae",
+          "bbox": [
+            68,
+            78,
+            198,
+            368
+          ],
+          "margins_px": [
+            68,
+            78,
+            58,
+            16
+          ],
+          "body_height_raster": 290,
+          "body_height_landmark": 289.776061776062,
+          "feet_y_raster": 368,
+          "head_y_raster": 78,
+          "scale": 0.447876447876448
+        },
+        {
+          "frame": 5,
+          "path": "v02/frames/AO07/f05.png",
+          "sha256": "2c2ca1841da0cb5b89d9bcb5c073969ed8258cf3b40ec2f979ec8a615719348b",
+          "bbox": [
+            61,
+            88,
+            183,
+            368
+          ],
+          "margins_px": [
+            61,
+            88,
+            73,
+            16
+          ],
+          "body_height_raster": 280,
+          "body_height_landmark": 279.92277992278,
+          "feet_y_raster": 368,
+          "head_y_raster": 88,
+          "scale": 0.447876447876448
+        },
+        {
+          "frame": 6,
+          "path": "v02/frames/AO07/f06.png",
+          "sha256": "2ca5859c4dbcb446b6947ca75df26a9e4f1f10f6ff4af16817be189f7dc20a48",
+          "bbox": [
+            72,
+            76,
+            207,
+            368
+          ],
+          "margins_px": [
+            72,
+            76,
+            49,
+            16
+          ],
+          "body_height_raster": 292,
+          "body_height_landmark": 292.015444015444,
+          "feet_y_raster": 368,
+          "head_y_raster": 76,
+          "scale": 0.447876447876448
+        }
+      ],
+      "strip": "v02/strips/AO07.png",
+      "strip_sha256": "999573a258ada0abfe0ac9ad647a64c058ed94edee8a728317c84d2811f3beb2",
+      "runtime_admission": false,
+      "human_visual_acceptance": "PENDING"
+    },
+    {
+      "code": "AO08",
+      "hero": "arlindo",
+      "status": "HELD_TECHNICAL_CRITERIA",
+      "reasons": [
+        "SIZE_CONFLICT_WITH_BODY_TARGET",
+        "BODY_MEDIAN_OUTSIDE_3_PERCENT"
+      ],
+      "target_body_height": 290,
+      "body_median": 176.5,
+      "body_spread": 1,
+      "landmark_spread": 1.0160397727519808,
+      "uniform_scale": 0.254009943187964,
+      "source_bytes_unchanged": true,
+      "frames": [
+        {
+          "frame": 1,
+          "path": "v02/frames/AO08/f01.png",
+          "sha256": "fa8c5e3c1198f50a222a1a702e1ff2ef9fb45f9bed728fad146b6bb601d45cea",
+          "bbox": [
+            84,
+            192,
+            174,
+            368
+          ],
+          "margins_px": [
+            84,
+            192,
+            82,
+            16
+          ],
+          "body_height_raster": 176,
+          "body_height_landmark": 176.282900572447,
+          "feet_y_raster": 368,
+          "head_y_raster": 192,
+          "scale": 0.254009943187964
+        },
+        {
+          "frame": 2,
+          "path": "v02/frames/AO08/f02.png",
+          "sha256": "a4580b034951736cae218aaf387a41164d65163d37ba37008283de694765a0ed",
+          "bbox": [
+            80,
+            191,
+            195,
+            368
+          ],
+          "margins_px": [
+            80,
+            191,
+            61,
+            16
+          ],
+          "body_height_raster": 177,
+          "body_height_landmark": 176.790920458823,
+          "feet_y_raster": 368,
+          "head_y_raster": 191,
+          "scale": 0.254009943187964
+        },
+        {
+          "frame": 3,
+          "path": "v02/frames/AO08/f03.png",
+          "sha256": "2a5fdeb9273dbcb8618885be77b56cb0ba654c1062890950eeb72df033be4f93",
+          "bbox": [
+            81,
+            192,
+            246,
+            368
+          ],
+          "margins_px": [
+            81,
+            192,
+            10,
+            16
+          ],
+          "body_height_raster": 176,
+          "body_height_landmark": 176.282900572447,
+          "feet_y_raster": 368,
+          "head_y_raster": 192,
+          "scale": 0.254009943187964
+        },
+        {
+          "frame": 4,
+          "path": "v02/frames/AO08/f04.png",
+          "sha256": "018dd325ecdf9c87061faefc4a91140c449906be9c7aca1e67795977c1cdb944",
+          "bbox": [
+            85,
+            191,
+            174,
+            368
+          ],
+          "margins_px": [
+            85,
+            191,
+            82,
+            16
+          ],
+          "body_height_raster": 177,
+          "body_height_landmark": 177.298940345199,
+          "feet_y_raster": 368,
+          "head_y_raster": 191,
+          "scale": 0.254009943187964
+        }
+      ],
+      "strip": "v02/strips/AO08.png",
+      "strip_sha256": "aefb31ed0dae7d9efa8a4a59f555e5f1b1484e68ff7551555c74687a0c102158",
+      "runtime_admission": false,
+      "human_visual_acceptance": "PENDING"
+    },
+    {
+      "code": "ER02",
+      "hero": "erik",
+      "status": "TECHNICALLY_VERIFIED_VISUALLY_ACCEPTED_DRAFT",
+      "reasons": [],
+      "target_body_height": 300,
+      "body_median": 300.0,
+      "body_spread": 1,
+      "landmark_spread": 0.8270158511369914,
+      "uniform_scale": 0.413507925568573,
+      "source_bytes_unchanged": true,
+      "frames": [
+        {
+          "frame": 1,
+          "path": "v02/frames/ER02/f01.png",
+          "sha256": "388b26737932b94689dae15d0732f02abd01e36b774ea525a257ae42229abb7f",
+          "bbox": [
+            29,
+            68,
+            199,
+            368
+          ],
+          "margins_px": [
+            29,
+            68,
+            57,
+            16
+          ],
+          "body_height_raster": 300,
+          "body_height_landmark": 299.793246037216,
+          "feet_y_raster": 368,
+          "head_y_raster": 68,
+          "scale": 0.413507925568573
+        },
+        {
+          "frame": 2,
+          "path": "v02/frames/ER02/f02.png",
+          "sha256": "a93202025cecf086bdb36bf6fc857031e5b9708137b6e3af46834ebe85dceed5",
+          "bbox": [
+            28,
+            68,
+            200,
+            368
+          ],
+          "margins_px": [
+            28,
+            68,
+            56,
+            16
+          ],
+          "body_height_raster": 300,
+          "body_height_landmark": 300.206753962784,
+          "feet_y_raster": 368,
+          "head_y_raster": 68,
+          "scale": 0.413507925568573
+        },
+        {
+          "frame": 3,
+          "path": "v02/frames/ER02/f03.png",
+          "sha256": "243f9de9f39c39933d3849e959e65b492ecaf3cc68c2b12f1bf565377b67a07d",
+          "bbox": [
+            30,
+            68,
+            197,
+            368
+          ],
+          "margins_px": [
+            30,
+            68,
+            59,
+            16
+          ],
+          "body_height_raster": 300,
+          "body_height_landmark": 299.793246037216,
+          "feet_y_raster": 368,
+          "head_y_raster": 68,
+          "scale": 0.413507925568573
+        },
+        {
+          "frame": 4,
+          "path": "v02/frames/ER02/f04.png",
+          "sha256": "b46332caa35a572dc9ee1544e4d574e537be47a131363e2d7ad68861047d2a70",
+          "bbox": [
+            33,
+            67,
+            198,
+            368
+          ],
+          "margins_px": [
+            33,
+            67,
+            58,
+            16
+          ],
+          "body_height_raster": 301,
+          "body_height_landmark": 300.620261888353,
+          "feet_y_raster": 368,
+          "head_y_raster": 67,
+          "scale": 0.413507925568573
+        }
+      ],
+      "strip": "v02/strips/ER02.png",
+      "strip_sha256": "3c3ea2fbedac595dd8a2fcb2c8f118debf45d28f045c6318112291ed706c2dc2",
+      "runtime_admission": false,
+      "human_visual_acceptance": "APPROVED_EXPLICITLY_DRAFT"
+    },
+    {
+      "code": "ER04",
+      "hero": "erik",
+      "status": "TECHNICALLY_VERIFIED_VISUALLY_ACCEPTED_DRAFT",
+      "reasons": [],
+      "target_body_height": 300,
+      "body_median": 301.0,
+      "body_spread": 5,
+      "landmark_spread": 6.050420168067035,
+      "uniform_scale": 0.504201680672269,
+      "source_bytes_unchanged": true,
+      "frames": [
+        {
+          "frame": 1,
+          "path": "v02/frames/ER04/f01.png",
+          "sha256": "6290c77dc3db04976393fca9b32ae1993e75f3c00da077d96979c9733837ab4f",
+          "bbox": [
+            50,
+            64,
+            212,
+            368
+          ],
+          "margins_px": [
+            50,
+            64,
+            44,
+            16
+          ],
+          "body_height_raster": 301,
+          "body_height_landmark": 300.0,
+          "feet_y_raster": 368,
+          "head_y_raster": 67,
+          "scale": 0.504201680672269
+        },
+        {
+          "frame": 2,
+          "path": "v02/frames/ER04/f02.png",
+          "sha256": "fff07ba300d318e772be971555deef653dfe9ace7cb128902859926ee17b8eb3",
+          "bbox": [
+            48,
+            63,
+            209,
+            368
+          ],
+          "margins_px": [
+            48,
+            63,
+            47,
+            16
+          ],
+          "body_height_raster": 301,
+          "body_height_landmark": 301.512605042017,
+          "feet_y_raster": 368,
+          "head_y_raster": 67,
+          "scale": 0.504201680672269
+        },
+        {
+          "frame": 3,
+          "path": "v02/frames/ER04/f03.png",
+          "sha256": "3ad1df0ddfb37a80f5ec39a27689009fb725a90e96b09d1ad81149f4c473b246",
+          "bbox": [
+            58,
+            63,
+            206,
+            368
+          ],
+          "margins_px": [
+            58,
+            63,
+            50,
+            16
+          ],
+          "body_height_raster": 301,
+          "body_height_landmark": 300.504201680672,
+          "feet_y_raster": 368,
+          "head_y_raster": 67,
+          "scale": 0.504201680672269
+        },
+        {
+          "frame": 4,
+          "path": "v02/frames/ER04/f04.png",
+          "sha256": "b15d08de90e68e1d0cac84886f8ef93fddb514dfdf298de158ed28da03a741af",
+          "bbox": [
+            48,
+            70,
+            208,
+            368
+          ],
+          "margins_px": [
+            48,
+            70,
+            48,
+            16
+          ],
+          "body_height_raster": 296,
+          "body_height_landmark": 295.46218487395,
+          "feet_y_raster": 368,
+          "head_y_raster": 72,
+          "scale": 0.504201680672269
+        },
+        {
+          "frame": 5,
+          "path": "v02/frames/ER04/f05.png",
+          "sha256": "c58812668e5c3b45f91e508b8fcced92adbc8de3c1eb644c5b72f9dddcbfba61",
+          "bbox": [
+            52,
+            64,
+            206,
+            368
+          ],
+          "margins_px": [
+            52,
+            64,
+            50,
+            16
+          ],
+          "body_height_raster": 300,
+          "body_height_landmark": 300.0,
+          "feet_y_raster": 368,
+          "head_y_raster": 68,
+          "scale": 0.504201680672269
+        },
+        {
+          "frame": 6,
+          "path": "v02/frames/ER04/f06.png",
+          "sha256": "4a41a75e7811401187cf5fb88b3e06925475b74a2b4726b76669dfcfff20a533",
+          "bbox": [
+            49,
+            63,
+            204,
+            368
+          ],
+          "margins_px": [
+            49,
+            63,
+            52,
+            16
+          ],
+          "body_height_raster": 301,
+          "body_height_landmark": 300.0,
+          "feet_y_raster": 368,
+          "head_y_raster": 67,
+          "scale": 0.504201680672269
+        }
+      ],
+      "strip": "v02/strips/ER04.png",
+      "strip_sha256": "43ae0813ab51100e34c2bb99546c240bfef105201f56689ef161c7f8bde1ea1f",
+      "runtime_admission": false,
+      "human_visual_acceptance": "APPROVED_EXPLICITLY_DRAFT"
+    },
+    {
+      "code": "ER05",
+      "hero": "erik",
+      "status": "TECHNICALLY_VERIFIED_VISUALLY_ACCEPTED_DRAFT",
+      "reasons": [],
+      "target_body_height": 300,
+      "body_median": 300.5,
+      "body_spread": 10,
+      "landmark_spread": 10.248447204969011,
+      "uniform_scale": 0.46583850931677,
+      "source_bytes_unchanged": true,
+      "frames": [
+        {
+          "frame": 1,
+          "path": "v02/frames/ER05/f01.png",
+          "sha256": "d8e6b4ec77c422b7b485737153d8760e71baadfb1b11486f7e4fdfa40173db09",
+          "bbox": [
+            58,
+            65,
+            208,
+            368
+          ],
+          "margins_px": [
+            58,
+            65,
+            48,
+            16
+          ],
+          "body_height_raster": 303,
+          "body_height_landmark": 302.795031055901,
+          "feet_y_raster": 368,
+          "head_y_raster": 65,
+          "scale": 0.46583850931677
+        },
+        {
+          "frame": 2,
+          "path": "v02/frames/ER05/f02.png",
+          "sha256": "2993a2f008e5435df81585145f5640890911553eee9d55353517e09845a2cf24",
+          "bbox": [
+            57,
+            67,
+            197,
+            368
+          ],
+          "margins_px": [
+            57,
+            67,
+            59,
+            16
+          ],
+          "body_height_raster": 301,
+          "body_height_landmark": 300.465838509317,
+          "feet_y_raster": 368,
+          "head_y_raster": 67,
+          "scale": 0.46583850931677
+        },
+        {
+          "frame": 3,
+          "path": "v02/frames/ER05/f03.png",
+          "sha256": "39307c8ca91d3fc7bac12148d8bec16d6c2b3ee0c9da31c758457cfc67de4f51",
+          "bbox": [
+            60,
+            75,
+            202,
+            368
+          ],
+          "margins_px": [
+            60,
+            75,
+            54,
+            16
+          ],
+          "body_height_raster": 293,
+          "body_height_landmark": 292.546583850932,
+          "feet_y_raster": 368,
+          "head_y_raster": 75,
+          "scale": 0.46583850931677
+        },
+        {
+          "frame": 4,
+          "path": "v02/frames/ER05/f04.png",
+          "sha256": "31aa980c47146c17f2d882bf5635d1e62a091ebc7d8f4f5a30d77a6835d2802b",
+          "bbox": [
+            60,
+            66,
+            212,
+            368
+          ],
+          "margins_px": [
+            60,
+            66,
+            44,
+            16
+          ],
+          "body_height_raster": 302,
+          "body_height_landmark": 301.863354037267,
+          "feet_y_raster": 368,
+          "head_y_raster": 66,
+          "scale": 0.46583850931677
+        },
+        {
+          "frame": 5,
+          "path": "v02/frames/ER05/f05.png",
+          "sha256": "bd85437259453176afcb980fa65f523b0946ab2132ed5cc7cbc15b7a67ae92e4",
+          "bbox": [
+            58,
+            68,
+            201,
+            368
+          ],
+          "margins_px": [
+            58,
+            68,
+            55,
+            16
+          ],
+          "body_height_raster": 300,
+          "body_height_landmark": 299.534161490683,
+          "feet_y_raster": 368,
+          "head_y_raster": 68,
+          "scale": 0.46583850931677
+        },
+        {
+          "frame": 6,
+          "path": "v02/frames/ER05/f06.png",
+          "sha256": "7a746afe980bfad903c92f5c50dad13315192e809d0abfa0a08f36da9e5683a6",
+          "bbox": [
+            61,
+            75,
+            199,
+            368
+          ],
+          "margins_px": [
+            61,
+            75,
+            57,
+            16
+          ],
+          "body_height_raster": 293,
+          "body_height_landmark": 293.012422360248,
+          "feet_y_raster": 368,
+          "head_y_raster": 75,
+          "scale": 0.46583850931677
+        }
+      ],
+      "strip": "v02/strips/ER05.png",
+      "strip_sha256": "8b3d492be3daad7813cfa4c1fcbe1cef389293532897ab1707b18a81d747b65f",
+      "runtime_admission": false,
+      "human_visual_acceptance": "APPROVED_EXPLICITLY_DRAFT"
+    },
+    {
+      "code": "ER07",
+      "hero": "erik",
+      "status": "TECHNICALLY_VERIFIED_VISUALLY_ACCEPTED_DRAFT",
+      "reasons": [],
+      "target_body_height": 300,
+      "body_median": 300.5,
+      "body_spread": 10,
+      "landmark_spread": 10.268948655256963,
+      "uniform_scale": 0.488997555012225,
+      "source_bytes_unchanged": true,
+      "frames": [
+        {
+          "frame": 1,
+          "path": "v02/frames/ER07/f01.png",
+          "sha256": "e913e9925c4ddc65e7c6922013dcc4d1dfe065256b87899011434d45511f7081",
+          "bbox": [
+            57,
+            52,
+            200,
+            368
+          ],
+          "margins_px": [
+            57,
+            52,
+            56,
+            16
+          ],
+          "body_height_raster": 299,
+          "body_height_landmark": 298.288508557457,
+          "feet_y_raster": 368,
+          "head_y_raster": 69,
+          "scale": 0.488997555012225
+        },
+        {
+          "frame": 2,
+          "path": "v02/frames/ER07/f02.png",
+          "sha256": "664aefe74a35f5dfb0e1ed07c9bb2a080a53bad6851250f4ba7aa23564e32b6e",
+          "bbox": [
+            55,
+            59,
+            198,
+            368
+          ],
+          "margins_px": [
+            55,
+            59,
+            58,
+            16
+          ],
+          "body_height_raster": 302,
+          "body_height_landmark": 301.222493887531,
+          "feet_y_raster": 368,
+          "head_y_raster": 66,
+          "scale": 0.488997555012225
+        },
+        {
+          "frame": 3,
+          "path": "v02/frames/ER07/f03.png",
+          "sha256": "c73c248280c6aa00c75e51ccee9493cc49af2fd860e9ffb83a91014dd7bc53a2",
+          "bbox": [
+            57,
+            65,
+            201,
+            368
+          ],
+          "margins_px": [
+            57,
+            65,
+            55,
+            16
+          ],
+          "body_height_raster": 299,
+          "body_height_landmark": 298.777506112469,
+          "feet_y_raster": 368,
+          "head_y_raster": 69,
+          "scale": 0.488997555012225
+        },
+        {
+          "frame": 4,
+          "path": "v02/frames/ER07/f04.png",
+          "sha256": "8d3ead583da85bbd8f24bc28eeee79505752913a27281f6a5ea7e364c56babed",
+          "bbox": [
+            56,
+            52,
+            201,
+            368
+          ],
+          "margins_px": [
+            56,
+            52,
+            55,
+            16
+          ],
+          "body_height_raster": 306,
+          "body_height_landmark": 306.112469437653,
+          "feet_y_raster": 368,
+          "head_y_raster": 62,
+          "scale": 0.488997555012225
+        },
+        {
+          "frame": 5,
+          "path": "v02/frames/ER07/f05.png",
+          "sha256": "73ea6bf4c5908df891460a810257c724790641212121705e167eb7b919cb0455",
+          "bbox": [
+            63,
+            65,
+            206,
+            368
+          ],
+          "margins_px": [
+            63,
+            65,
+            50,
+            16
+          ],
+          "body_height_raster": 296,
+          "body_height_landmark": 295.843520782396,
+          "feet_y_raster": 368,
+          "head_y_raster": 72,
+          "scale": 0.488997555012225
+        },
+        {
+          "frame": 6,
+          "path": "v02/frames/ER07/f06.png",
+          "sha256": "712fd69d81de596a9a7e739f1e18a0732b3192c9735ad6416d3de56709535757",
+          "bbox": [
+            58,
+            59,
+            204,
+            368
+          ],
+          "margins_px": [
+            58,
+            59,
+            52,
+            16
+          ],
+          "body_height_raster": 303,
+          "body_height_landmark": 302.689486552567,
+          "feet_y_raster": 368,
+          "head_y_raster": 65,
+          "scale": 0.488997555012225
+        }
+      ],
+      "strip": "v02/strips/ER07.png",
+      "strip_sha256": "5fe3e45f0ebd24f231d5492472a6ea91522f16f84fb6b21031055f30d1c9b211",
+      "runtime_admission": false,
+      "human_visual_acceptance": "APPROVED_EXPLICITLY_DRAFT"
+    }
+  ]
+}

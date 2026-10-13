@@ -1,0 +1,29 @@
+# Ações dos heróis em canvas ampliado — 2026-10-12
+
+PLAN-053 / DEV-024/hero-wide-actions-v01, **DRAFT**. [Contrato](../specs/SPEC-121-retomada-fila-imagens/hero-wide-actions-v01.md) aprovado explicitamente: **“Aprovo a preparação das quatro ações em 512×512”**. Por plano preservado. Contrato, identidade/contexto, hashes e parâmetros antecederam os derivados. Preparação técnica 4/5 concluída; S-005 (5/5) é o aceite visual humano e está pendente.
+
+| Passo | Resultado |
+|---|---|
+| S-001 BODY_GROUND_REFERENCES | Quatro fontes de ações e vinte quadros vinculados por hash: AO08 usa as extrações retangulares originais; ER08/ER09/ER10 as dezesseis extrações por máscaras com recomposição RGBA exata. Idles AO02/ER02, pertencentes às oito candidatas v02 aceitas, são referências preservadas. Marcadores de cabeça, cintura e chão definidos após inspeção de todas as poses nativas. |
+| S-002 PREPARE_20 | Godot 4.7.2: vinte células 512×512 e quatro tiras, escala proporcional única por ciclo, centro x=256/chão y=448, margem >=10 px. Somente alfa <=8/255 limpo nos derivados; nenhuma fonte/extração ou identidade repintada/regenerada. AO08 mantém corpo mediano próximo de 290 px com projétil completo; já não precisa da redução diagnóstica anterior para 176,5 px. |
+| S-003 AUDIT | Vinte células recompõem exatamente os quatro atlas. Bbox recortado é igual à extensão significativa nativa, sem cortar arma/efeito. Margem mínima **37 px**; erro máximo do mapeamento inteiro do chão **0,438 px**, centro **0,593 px**. Uma escala por tira, arredondamento dimensional <=0,5 px, todos os hashes de entradas/refs preservados. **3.236 hashes protegidos** iguais, cauda anterior de plan.yaml/PLAN-071 preservada, HEAD e índice vazio iguais. |
+| S-004 GALLERY | Prancha e quatro comparações com os idles sem reescala, quadros individuais, prévias a corpo de referência 85/120/240 px, base/eixo e cadências de revisão. Morte conserva o último quadro até reiniciar a sequência. Quatro tiras finais e prancha inspecionadas nativamente. **53 links locais** e referências dinâmicas conferidos. |
+| S-005 OWNER_VISUAL_GATE | PENDENTE. Aparência, porte, mão da tocha, figurino, progressão do golpe/ativa/queda e contato aparente com o chão exigem avaliação do dono. Os checks técnicos não substituem esse julgamento. |
+
+## Referências de escala e limites
+
+Arlindo: 290 px pela mediana chapéu–sola, uma escala para quatro quadros. Ataque e ativa de Erik: primeira referência ereta a 300 px, mantendo a compressão de lunge/agachamento das fontes. Morte: primeira pose já levemente inclinada calibrada provisoriamente para 285 px (95% da referência ereta), sem impor altura ereta aos quadros da queda. Essa escolha DRAFT é mostrada junto ao idle, não declarada cânone físico nem aceite artístico. A cabeça de poses caídas não coincide com o ponto mais alto de capa/espada; o campo de altura por marcador não representa toda a silhueta nessas poses.
+
+Marcadores têm incerteza aproximada de cinco pixels na fonte das ações de Erik. A auditoria comprova o encaixe matemático dos marcadores, não uma segmentação anatômica perfeita. Na ativa o fogo ocupa pixels abaixo dos pés; chão e fim da caixa alfa são separados. Não inferir base corporal pela extremidade do fogo. Revisão nativa mostra figuras/efeitos dentro das células; consistência de massa/rosto/figurino ainda depende do aceite humano.
+
+[Prancha](../generated/hero-wide-actions-2026-10-12/review-board.png), [galeria](../generated/hero-wide-actions-2026-10-12/index.html), [auditoria](../generated/hero-wide-actions-2026-10-12/audit.json), [manifesto/marcações](../generated/hero-wide-actions-2026-10-12/manifest.json), [registro Godot](../generated/hero-wide-actions-2026-10-12/preparation.json), [QA da galeria](../generated/hero-wide-actions-2026-10-12/gallery-qa.json).
+
+Godot gerou os PNGs; Python leu matrizes e escreveu JSON/HTML. Projeto de preparação isolado, nenhuma dependência instalada. O primeiro assert do relatório de auditoria exigia igualdade textual excessiva de float; substituído por tolerância de serialização, sem mudar os pixels. Execução final sem erro de script; aviso preexistente de certificados continua. Não declarar os controles da galeria executados no navegador: file:// tem bloqueio de política conhecido; arquivos/metadata/links e imagens nativas foram verificados. Não houve playtest.
+
+Nenhuma alteração em assets/, core/, ui/, data/ ou Git. Nenhuma integração, CANON, commit, push ou export autorizados. Oito candidatas anteriormente aceitas continuam preservadas DRAFT; AO04/AO07 e ER03/ER06/AO09/AO10 mantêm seus impedimentos/decisões anteriores. Compatibilidade de canvas ampliado com o renderer permanece sem teste/implementação e terá gate próprio. Próximo objetivo preparado: aceite das quatro wide v01; a partir dele, escolher escopo dos impedimentos restantes ou eventual admissão, sem inferir autorização.
+
+## Aceite do dono
+
+Em 2026-10-12: **“Aprovo visualmente as quatro wide v01”**. Aceite de AO08/ER08/ER09/ER10 wide v01, incluindo a calibração de 285 px da primeira pose de morte; [recibo por hash](../generated/hero-wide-actions-2026-10-12/visual-acceptance.json). Plano 5/5 concluído visualmente aceito DRAFT, sem integração/CANON/Git. AO08 wide aceita resolve a preparação de escala retida na candidata estreita; a versão estreita de 176,5 px não foi aceita.
+
+[Inventário atual](../generated/hero-wide-actions-2026-10-12/accepted-hero-inventory.json): doze tiras/64 quadros DRAFT aceitos (oito candidatas v02 + quatro wide v01). Restam seis tiras: AO04/AO07 por variação de 14/13 px, AO09/AO10 por separação ambígua, ER03 por sete poses versus seis, ER06 pelo corte no quadro seis. Não estender esse aceite a tais exceções, retratos ou compatibilidade com renderer. Próximo objetivo preparado: resolver esses seis impedimentos com os gates anteriores preservados.

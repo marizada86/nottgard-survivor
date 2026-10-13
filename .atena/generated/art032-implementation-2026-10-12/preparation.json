@@ -1,0 +1,365 @@
+{
+  "count": 17,
+  "engine": "4.7.2-stable (official)",
+  "method": "DERIVATIVE_ONLY_ALPHA_CROP_ASPECT_LANCZOS_PADDING",
+  "records": [
+    {
+      "body_target": [
+        146,
+        240
+      ],
+      "code": "NP01",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/npc_joao_barbosa.png",
+      "padding": 4,
+      "size": [
+        154,
+        248
+      ],
+      "source": ".atena/generated/art032-npcs-2026-10-11/sources/NP01_joao_barbosa_v02.png",
+      "source_crop": [
+        402,
+        242,
+        499,
+        822
+      ],
+      "source_file_modified": false
+    },
+    {
+      "body_target": [
+        132,
+        240
+      ],
+      "code": "NP02",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/npc_desertor_durao.png",
+      "padding": 4,
+      "size": [
+        140,
+        248
+      ],
+      "source": ".atena/generated/art032-npcs-2026-10-11/sources/NP02_desertor_durao_v01.png",
+      "source_crop": [
+        336,
+        148,
+        529,
+        963
+      ],
+      "source_file_modified": false
+    },
+    {
+      "body_target": [
+        103,
+        240
+      ],
+      "code": "NP03",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/npc_vitima_enfeiticada.png",
+      "padding": 4,
+      "size": [
+        111,
+        248
+      ],
+      "source": ".atena/generated/art032-npcs-2026-10-11/sources/NP03_vitima_enfeiticada_v01.png",
+      "source_crop": [
+        425,
+        167,
+        399,
+        930
+      ],
+      "source_file_modified": false
+    },
+    {
+      "body_target": [
+        90,
+        96
+      ],
+      "code": "PT01",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/estrela_do_norte.png",
+      "padding": 4,
+      "size": [
+        98,
+        104
+      ],
+      "source": ".atena/generated/art032-npcs-2026-10-11/sources/PT01_estrela_do_norte_v01.png",
+      "source_crop": [
+        192,
+        169,
+        869,
+        929
+      ],
+      "source_file_modified": false
+    },
+    {
+      "body_target": [
+        175,
+        240
+      ],
+      "code": "NP04",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/npc_nyxara.png",
+      "padding": 4,
+      "size": [
+        183,
+        248
+      ],
+      "source": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP04_nyxara_v02.png",
+      "source_crop": [
+        376,
+        249,
+        592,
+        813
+      ],
+      "source_file_modified": false
+    },
+    {
+      "body_target": [
+        125,
+        240
+      ],
+      "code": "NP05",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/npc_vaelis.png",
+      "padding": 4,
+      "size": [
+        133,
+        248
+      ],
+      "source": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP05_vaelis_v01.png",
+      "source_crop": [
+        402,
+        213,
+        463,
+        892
+      ],
+      "source_file_modified": false
+    },
+    {
+      "body_target": [
+        203,
+        240
+      ],
+      "code": "NP06",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/npc_grazzt_aliado.png",
+      "padding": 4,
+      "size": [
+        211,
+        248
+      ],
+      "source": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP06_grazzt_aliado_v02.png",
+      "source_crop": [
+        318,
+        239,
+        729,
+        861
+      ],
+      "source_file_modified": false
+    },
+    {
+      "body_target": [
+        165,
+        240
+      ],
+      "code": "NP07",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/npc_reaper_barqueiro.png",
+      "padding": 4,
+      "size": [
+        173,
+        248
+      ],
+      "source": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP07_reaper_barqueiro_v01.png",
+      "source_crop": [
+        364,
+        255,
+        545,
+        791
+      ],
+      "source_file_modified": false
+    },
+    {
+      "body_target": [
+        108,
+        240
+      ],
+      "code": "NP08",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/npc_vhaerith_aetherion.png",
+      "padding": 4,
+      "size": [
+        116,
+        248
+      ],
+      "source": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP08_vhaerith_aetherion_v01.png",
+      "source_crop": [
+        421,
+        226,
+        391,
+        870
+      ],
+      "source_file_modified": false
+    },
+    {
+      "body_target": [
+        151,
+        240
+      ],
+      "code": "NP09",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/npc_mercador_rivenheart.png",
+      "padding": 4,
+      "size": [
+        159,
+        248
+      ],
+      "source": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP09_mercador_rivenheart_v01.png",
+      "source_crop": [
+        372,
+        226,
+        533,
+        846
+      ],
+      "source_file_modified": false
+    },
+    {
+      "body_target": [
+        191,
+        240
+      ],
+      "code": "PT02",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/trono_zuggtmoy.png",
+      "padding": 4,
+      "size": [
+        199,
+        248
+      ],
+      "source": ".atena/generated/art032-pontos-2026-10-11/sources/PT02_trono_zuggtmoy_v02.png",
+      "source_crop": [
+        313,
+        215,
+        686,
+        861
+      ],
+      "source_file_modified": false
+    },
+    {
+      "body_target": [
+        200,
+        240
+      ],
+      "code": "PT03",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/arco_pedra.png",
+      "padding": 4,
+      "size": [
+        208,
+        248
+      ],
+      "source": ".atena/generated/art032-pontos-2026-10-11/sources/PT03_arco_pedra_v02.png",
+      "source_crop": [
+        366,
+        327,
+        554,
+        665
+      ],
+      "source_file_modified": false
+    },
+    {
+      "body_target": [
+        367,
+        240
+      ],
+      "code": "PT04",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/massa_thullgrime.png",
+      "padding": 4,
+      "size": [
+        375,
+        248
+      ],
+      "source": ".atena/generated/art032-pontos-2026-10-11/sources/PT04_massa_thullgrime_v02.png",
+      "source_crop": [
+        193,
+        368,
+        886,
+        580
+      ],
+      "source_file_modified": false
+    },
+    {
+      "body_target": [
+        83,
+        96
+      ],
+      "code": "PT05",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/coracao_limo.png",
+      "padding": 4,
+      "size": [
+        91,
+        104
+      ],
+      "source": ".atena/generated/art032-pontos-2026-10-11/sources/PT05_coracao_limo_v01.png",
+      "source_crop": [
+        255,
+        164,
+        803,
+        932
+      ],
+      "source_file_modified": false
+    },
+    {
+      "body_target": [
+        106,
+        96
+      ],
+      "code": "PT06",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/esporo_zuggtmoy.png",
+      "padding": 4,
+      "size": [
+        114,
+        104
+      ],
+      "source": ".atena/generated/art032-pontos-2026-10-11/sources/PT06_esporo_zuggtmoy_v02.png",
+      "source_crop": [
+        262,
+        316,
+        734,
+        665
+      ],
+      "source_file_modified": false
+    },
+    {
+      "body_target": [
+        127,
+        96
+      ],
+      "code": "PT07",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/limo_juiblex.png",
+      "padding": 4,
+      "size": [
+        135,
+        104
+      ],
+      "source": ".atena/generated/art032-pontos-2026-10-11/sources/PT07_limo_juiblex_v02.png",
+      "source_crop": [
+        183,
+        318,
+        886,
+        670
+      ],
+      "source_file_modified": false
+    },
+    {
+      "body_target": [
+        302,
+        240
+      ],
+      "code": "MJ01",
+      "derived_path": ".atena/generated/art032-implementation-2026-10-12/normalized/manifestacao_de_juiblex.png",
+      "padding": 4,
+      "size": [
+        310,
+        248
+      ],
+      "source": ".atena/generated/art032-juiblex-2026-10-12/sources/MJ01_manifestacao_juiblex_v03.png",
+      "source_crop": [
+        266,
+        357,
+        759,
+        603
+      ],
+      "source_file_modified": false
+    }
+  ],
+  "status": "PASS"
+}

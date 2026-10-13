@@ -1,0 +1,26 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/.atena/generated/fila026-remaining-2026-10-11/prepared/L03_v01.png size=(551, 160) transparent=40123 solid251+=48037 partial=0
+  solid bounds=(0, 0)..(550, 159) clipped=true
+C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/.atena/generated/fila026-remaining-2026-10-11/prepared/L04_v01.png size=(720, 135) transparent=43396 solid251+=53804 partial=0
+  solid bounds=(0, 0)..(719, 134) clipped=true
+C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/.atena/generated/fila026-remaining-2026-10-11/prepared/L05_v01.png size=(537, 110) transparent=26807 solid251+=32263 partial=0
+  solid bounds=(0, 0)..(536, 109) clipped=true
+C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/.atena/generated/fila026-remaining-2026-10-11/prepared/P01_v01.png size=(640, 96) transparent=34471 solid251+=26969 partial=0
+  solid bounds=(0, 0)..(639, 95) clipped=true
+C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/.atena/generated/fila026-remaining-2026-10-11/prepared/P02_v01.png size=(320, 48) transparent=7472 solid251+=7888 partial=0
+  solid bounds=(0, 0)..(319, 47) clipped=true
+C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/.atena/generated/fila026-remaining-2026-10-11/prepared/P03_v01.png size=(720, 112) transparent=44034 solid251+=36606 partial=0
+  solid bounds=(1, 0)..(718, 111) clipped=true
+C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/.atena/generated/fila026-remaining-2026-10-11/prepared/C01_v01.png size=(32, 32) transparent=759 solid251+=265 partial=0
+  solid bounds=(1, 1)..(28, 29) clipped=false
+C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/.atena/generated/fila026-remaining-2026-10-11/prepared/C02_v01.png size=(32, 32) transparent=688 solid251+=336 partial=0
+  solid bounds=(4, 1)..(27, 30) clipped=false
+C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/.atena/generated/fila026-remaining-2026-10-11/prepared/C03_v01.png size=(40, 40) transparent=1252 solid251+=348 partial=0
+  solid bounds=(1, 1)..(38, 38) clipped=false
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)
+ERROR: Cannot save file 'C:/Users/Higor Rossini/AppData/Roaming/Godot/editor_settings-4.7.tres'.
+   at: save (scene/resources/resource_format_text.cpp:1768)
+ERROR: Error saving editor settings to C:/Users/Higor Rossini/AppData/Roaming/Godot/editor_settings-4.7.tres
+   at: save (editor/settings/editor_settings.cpp:1525)

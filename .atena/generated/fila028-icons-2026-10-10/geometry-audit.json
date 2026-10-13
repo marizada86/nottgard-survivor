@@ -1,0 +1,603 @@
+{
+  "content_state": "DRAFT",
+  "reports": [
+    {
+      "code": "IC01",
+      "version": "v01",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "c9a201de0b906328ae58928d2b475317e0dcda95c3fc771b1adcf51269eaf841",
+      "bbox": [
+        225,
+        244,
+        1041,
+        1020
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "margin_fraction": 0.1699,
+      "margin_pass": true,
+      "margin_nominal_pass": true,
+      "margin_rounding_tolerance_pixels": 1,
+      "native_alpha_pass": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "IC02",
+      "version": "v01",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "bad1ea75eef368a33bc5fec852923cdb9905953e13f3cbf8ed255ec8c635d3a5",
+      "bbox": [
+        166,
+        167,
+        1130,
+        1124
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "margin_fraction": 0.0989,
+      "margin_pass": false,
+      "margin_nominal_pass": false,
+      "margin_rounding_tolerance_pixels": 1,
+      "native_alpha_pass": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "IC02",
+      "version": "v02",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "d26b1e8456187ce1274401a646dacb3667f3228e0bf85c94dddd57b5701d9020",
+      "bbox": [
+        322,
+        316,
+        962,
+        942
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "margin_fraction": 0.2329,
+      "margin_pass": true,
+      "margin_nominal_pass": true,
+      "margin_rounding_tolerance_pixels": 1,
+      "native_alpha_pass": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "IC03",
+      "version": "v01",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "ed8ba9101589b3c5f99470c7f8bf39c3c81c46869f3e627190d3ba601a6608d3",
+      "bbox": [
+        106,
+        78,
+        1220,
+        1154
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "margin_fraction": 0.0271,
+      "margin_pass": false,
+      "margin_nominal_pass": false,
+      "margin_rounding_tolerance_pixels": 1,
+      "native_alpha_pass": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "IC03",
+      "version": "v02",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "93405a3b4764d20507633ab559cf581595c36ee3185edd1a30a362ebc3cba385",
+      "bbox": [
+        240,
+        229,
+        1066,
+        1030
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "margin_fraction": 0.1499,
+      "margin_pass": true,
+      "margin_nominal_pass": false,
+      "margin_rounding_tolerance_pixels": 1,
+      "native_alpha_pass": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "IC04",
+      "version": "v01",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "e78ee9f8b25e8c2affb886a741dbff46a9559c6d5ee4ee959dccbdd364ae9441",
+      "bbox": [
+        143,
+        176,
+        1162,
+        1083
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "margin_fraction": 0.0734,
+      "margin_pass": false,
+      "margin_nominal_pass": false,
+      "margin_rounding_tolerance_pixels": 1,
+      "native_alpha_pass": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "IC04",
+      "version": "v02",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "aca0836a3f910024ad300ee63fc7730d7a0758f4a87529815f2dbf235ba533cb",
+      "bbox": [
+        234,
+        274,
+        1072,
+        1011
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "margin_fraction": 0.1451,
+      "margin_pass": false,
+      "margin_nominal_pass": false,
+      "margin_rounding_tolerance_pixels": 1,
+      "native_alpha_pass": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "IC04",
+      "version": "v03",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "4ce655b3ee4eca0276391415409cf617a5cafe3e62ae000f2ef9969c70e2a38d",
+      "bbox": [
+        338,
+        354,
+        967,
+        905
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "margin_fraction": 0.2289,
+      "margin_pass": true,
+      "margin_nominal_pass": true,
+      "margin_rounding_tolerance_pixels": 1,
+      "native_alpha_pass": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "IC05",
+      "version": "v01",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "545e990564494def94e082d13fb11e64de775459fbc8ad50471adc98cbde815c",
+      "bbox": [
+        140,
+        173,
+        1146,
+        1109
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "margin_fraction": 0.0861,
+      "margin_pass": false,
+      "margin_nominal_pass": false,
+      "margin_rounding_tolerance_pixels": 1,
+      "native_alpha_pass": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "IC05",
+      "version": "v02",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "bac3c1e2145e23388010c2bec8298de1504be241dff1df4d9708f53fbcb9b16b",
+      "bbox": [
+        297,
+        319,
+        979,
+        967
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "margin_fraction": 0.2193,
+      "margin_pass": true,
+      "margin_nominal_pass": true,
+      "margin_rounding_tolerance_pixels": 1,
+      "native_alpha_pass": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "IC05",
+      "version": "v03",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "8678674e83f81538f9c19783c342249625c9f5bd34711b2ac11491394aa965d3",
+      "bbox": [
+        331,
+        354,
+        946,
+        937
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "margin_fraction": 0.2456,
+      "margin_pass": true,
+      "margin_nominal_pass": true,
+      "margin_rounding_tolerance_pixels": 1,
+      "native_alpha_pass": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "IC06",
+      "version": "v01",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "3bc2c0308a492ee8164218286d46b44c916282159a130c85e5305bc5fb9a4820",
+      "bbox": [
+        338,
+        202,
+        906,
+        1047
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "margin_fraction": 0.1611,
+      "margin_pass": true,
+      "margin_nominal_pass": true,
+      "margin_rounding_tolerance_pixels": 1,
+      "native_alpha_pass": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "IC07",
+      "version": "v01",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "db689bb4c203dfd48aef5e27e27ec06327edea23f486759219b112ad160977e3",
+      "bbox": [
+        394,
+        240,
+        938,
+        1023
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "margin_fraction": 0.1842,
+      "margin_pass": true,
+      "margin_nominal_pass": true,
+      "margin_rounding_tolerance_pixels": 1,
+      "native_alpha_pass": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "IC08",
+      "version": "v01",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "1704bec0e6a1ea2bc053149f35b1164de2b0355da0d8f8889134d919a4a9d0cc",
+      "bbox": [
+        189,
+        120,
+        1119,
+        1157
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "margin_fraction": 0.0774,
+      "margin_pass": false,
+      "margin_nominal_pass": false,
+      "margin_rounding_tolerance_pixels": 1,
+      "native_alpha_pass": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "IC08",
+      "version": "v02",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "d7e958bc197bda00c4a50de1f6312dce80e9af38a0eb102cc7a803a6ce98cae4",
+      "bbox": [
+        327,
+        298,
+        958,
+        995
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "margin_fraction": 0.2065,
+      "margin_pass": true,
+      "margin_nominal_pass": true,
+      "margin_rounding_tolerance_pixels": 1,
+      "native_alpha_pass": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "IC09",
+      "version": "v01",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "677cad12895d33320fd94685222adc8f7088043dfc57b20fd503b5fcd2a8ceff",
+      "bbox": [
+        291,
+        196,
+        963,
+        1090
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "margin_fraction": 0.1308,
+      "margin_pass": false,
+      "margin_nominal_pass": false,
+      "margin_rounding_tolerance_pixels": 1,
+      "native_alpha_pass": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "IC09",
+      "version": "v02",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "321082bb7f0383a52c0b188f5d8e892cf580d7974613b48411170dd647a1bf2b",
+      "bbox": [
+        391,
+        311,
+        864,
+        942
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "margin_fraction": 0.248,
+      "margin_pass": true,
+      "margin_nominal_pass": true,
+      "margin_rounding_tolerance_pixels": 1,
+      "native_alpha_pass": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "IC10",
+      "version": "v01",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "19bb80611abe7ebf9883a27e040945376b64238edcee6630db9a470344e97a90",
+      "bbox": [
+        300,
+        271,
+        970,
+        948
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "margin_fraction": 0.2161,
+      "margin_pass": true,
+      "margin_nominal_pass": true,
+      "margin_rounding_tolerance_pixels": 1,
+      "native_alpha_pass": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "IC11",
+      "version": "v01",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "8a1e58c4715a58b55fd8473feb7ad70edf47ebbb8abb5bdcc1fdb0896a4a6459",
+      "bbox": [
+        229,
+        269,
+        1028,
+        925
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "margin_fraction": 0.1802,
+      "margin_pass": true,
+      "margin_nominal_pass": true,
+      "margin_rounding_tolerance_pixels": 1,
+      "native_alpha_pass": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "IC12",
+      "version": "v01",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "4d366d7636d45fc9114cd2b0459380dc884c030b7ea09462b6cd10ff719a21fb",
+      "bbox": [
+        353,
+        158,
+        912,
+        1070
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "margin_fraction": 0.126,
+      "margin_pass": false,
+      "margin_nominal_pass": false,
+      "margin_rounding_tolerance_pixels": 1,
+      "native_alpha_pass": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "IC12",
+      "version": "v02",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "0e0b5b2ac34cb00a17f5775be2a80f3f1dbc5aeca65d832ab283ed7660268630",
+      "bbox": [
+        433,
+        319,
+        829,
+        954
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "margin_fraction": 0.2392,
+      "margin_pass": true,
+      "margin_nominal_pass": true,
+      "margin_rounding_tolerance_pixels": 1,
+      "native_alpha_pass": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "IC13",
+      "version": "v01",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "9464122d76924aedbdf824309406481311a569e9c842a6df527ffca5e143a062",
+      "bbox": [
+        370,
+        142,
+        1101,
+        1113
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "margin_fraction": 0.1124,
+      "margin_pass": false,
+      "margin_nominal_pass": false,
+      "margin_rounding_tolerance_pixels": 1,
+      "native_alpha_pass": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "IC13",
+      "version": "v02",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "04058478cb6210fa1ff07ade9beafafddfc9321c5ab1ee5a403c40b54e5d09b4",
+      "bbox": [
+        426,
+        304,
+        934,
+        974
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "margin_fraction": 0.2233,
+      "margin_pass": true,
+      "margin_nominal_pass": true,
+      "margin_rounding_tolerance_pixels": 1,
+      "native_alpha_pass": true,
+      "runtime_admission": false
+    }
+  ]
+}

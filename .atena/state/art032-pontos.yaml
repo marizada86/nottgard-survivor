@@ -1,0 +1,43 @@
+version: 1
+plan: PLAN-ART032-PONTOS
+revision: v01
+card: ART-032
+request_classification: PLAN_CHANGE_REQUEST
+route: EXECUTE_APPROVED_NAMED_SIX_POINT_FRONT_PRESERVE_CLOSED_LOTS_AND_PLAN071
+status: COMPLETED_VISUALLY_ACCEPTED_DRAFT
+approval_mode: per-plan
+approval_status: APPROVED_EXPLICITLY
+content_state: DRAFT
+checkpoint: S-005/OWNER_VISUAL_ACCEPTANCE_RECORDED
+current_step_position: 5
+completed_steps: 5
+total_steps: 5
+remaining_steps_after_current: 0
+ordered_steps: [S-001, S-002, S-003, S-004, S-005]
+completed_ordered_steps: [S-001, S-002, S-003, S-004, S-005]
+proposed_sources: [PT02, PT03, PT04, PT05, PT06, PT07]
+generated: 6
+blocking_visual_gaps: 0
+runtime_admission: false
+canonical_promotion: false
+git_publication_build: NOT_AUTHORIZED_FOR_NEW_OUTPUTS
+visual_bible: .atena/vault/drafts/PLAN-ART032-PONTOS-v01.md
+output_package: .atena/generated/art032-pontos-2026-10-11
+evidence: .atena/evidence/art032-pontos-2026-10-11.md
+human_visual_acceptance: APPROVED_EXPLICITLY
+preserved_checkpoint: PLAN071_AND_HERO_EXTRACTION_REVIEW
+next_objective: "Preparar plano futuro da Manifestação de Juiblex ou preparação/admissão das dezesseis fontes aceitas ART-032; nova execução depende de escopo aprovado"
+scope_owner_reply: "atena, aprovado, commite e continue a Próxima frente proposta: os pontos de acontecimentos restantes de ART-032."
+approved_date: "2026-10-11"
+native_outputs_preserved: 11
+technical_status: PASS_WITH_NATIVE_ALPHA_NOTE
+review_candidates: [PT02_v02, PT03_v02, PT04_v02, PT05_v01, PT06_v02, PT07_v02]
+reading_preview: .atena/generated/art032-pontos-2026-10-11/review-reading.png
+gallery: .atena/generated/art032-pontos-2026-10-11/index.html
+gallery_browser_verification: NOT_ATTEMPTED_KNOWN_FILE_URL_POLICY_BLOCK
+previous_lots_local_commit: 51b51f7369ae34eede997435e6eb52ea057daf25
+previous_lots_commit_receipt: .atena/generated/art032-commit-2026-10-11/commit-receipt.json
+visual_owner_reply: "atena, aprovado"
+visual_accepted_date: "2026-10-12"
+visual_acceptance_receipt: .atena/generated/art032-pontos-2026-10-11/visual-acceptance.json
+next_execution_authorized: false

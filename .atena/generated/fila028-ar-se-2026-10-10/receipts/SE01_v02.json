@@ -1,0 +1,27 @@
+{
+  "code": "SE01",
+  "item": "eco",
+  "prompt": "Use case: precise-object-edit. Preserve the pale-blue memory crystal, pixel art style, white-blue light thread and fine particles. REMOVE THE ENTIRE PEDESTAL, ALL STONE BASE, METAL BRACKET AND JEWEL SUPPORT. Only a small free-floating crystal fragment and its light thread and fine particles remain, no other object. Entire crystal plus light occupies around 50 percent of square canvas height and is centered, empty padding around. Uniform solid cyan #00FFFF background. No base, mount, altar, scenery, text, face or emblem.",
+  "references": [
+    {
+      "path": "assets/interactions/loja.png",
+      "sha256": "b7c092ab509af9687288004d3b0c693f470487b8bd4dbea2f46b353f336afba7",
+      "role": "style anchor"
+    },
+    {
+      "path": "assets/interactions/doacao.png",
+      "sha256": "df364ad5b3672c04f61a4cd0eef2e6185218c518d31217b299a2c6abb27fee0d",
+      "role": "style anchor"
+    }
+  ],
+  "state": "GENERATED_PENDING_VISUAL_ACCEPTANCE",
+  "content_state": "DRAFT",
+  "runtime_admission": false,
+  "actual_references": [
+    "C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/.atena/generated/fila028-ar-se-2026-10-10/native-sources/SE01_v01.png"
+  ],
+  "version": "v02",
+  "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-58dbbea5-7386-495c-acdd-2d5d2c80a8a9.png",
+  "destination": ".atena/generated/fila028-ar-se-2026-10-10/native-sources/SE01_v02.png",
+  "native_destination": ".atena/generated/art-candidates/fila028-ar-se/SE01_v02.png"
+}

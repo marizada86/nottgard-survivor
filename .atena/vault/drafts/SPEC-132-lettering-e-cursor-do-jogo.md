@@ -1,7 +1,7 @@
 ---
 id: SPEC-132
 title: Lettering do jogo (logo, banners, placas) e cursor do mouse temáticos
-status: approved-in-execution (aprovada por plano pelo dono em 2026-10-06; B-001 e B-002 feitas, EVID-172)
+status: implemented-pending-playtest
 origin: pedido do dono (2026-10-06), "arte de lettering para estilo e imersão, também uma arte para o cursor do mouse"
 cards: ART-039, ART-040, MEC-058
 risk: baixo (UI e arte; sem efeito no combate nem em números). Atenção: o cursor da mira é lido pelo combate (hotspot errado desalinha a mira).
@@ -9,6 +9,8 @@ plan: PLAN-065 (por plano)
 ---
 
 # SPEC-132
+
+Implementação local 2026-10-11: fontes CANON v01 admitidas e publicadas; S014/S015 concluídas, S016 com registros prontos e commit de código pendente de aprovação. Suíte 0 falhas, auditoria 0 erros/9 avisos, smoke nove fases, 18 capturas. [Evidência](../../evidence/fila026-integration-2026-10-11.md). Nenhuma build ou aceite humano nesta etapa; o estado operacional é `.atena/state/plan-065-lettering-cursor.yaml`.
 
 ## Pedido
 Dar identidade ao texto do jogo com **lettering desenhado** (hoje tudo é `Label` com a fonte Cinzel Decorative e contorno) e trocar o cursor do sistema por um **cursor temático**.

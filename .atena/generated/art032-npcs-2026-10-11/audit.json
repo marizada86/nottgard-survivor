@@ -1,0 +1,249 @@
+{
+  "plan": "PLAN-ART032-NPCS-PILOTO",
+  "revision": "v01",
+  "authorization": "Aprovo as quatro peças DRAFT",
+  "mode": "per-plan",
+  "status": "PASS_WITH_NATIVE_ALPHA_NOTE",
+  "native_sources": 5,
+  "review_candidates": 4,
+  "image_tool": "built-in image_gen",
+  "native_canvas_actual": [
+    1254,
+    1254
+  ],
+  "requested_canvas": [
+    1024,
+    1024
+  ],
+  "resizing_or_cleaning_native": "NOT_PERFORMED",
+  "protected_runtime_files": 2938,
+  "runtime_assets_code_data_tests": "UNCHANGED_HASH_VERIFIED",
+  "plan071_and_return_chain": "UNCHANGED_HASH_VERIFIED",
+  "source_reference_hashes": "PASS",
+  "head": "fc5c709f3ef5c4acdc7c5a8a842747b72c7f70ec",
+  "git_commit_push_build_this_generation": "NONE",
+  "records": [
+    {
+      "code": "NP01",
+      "revision": "v02",
+      "path": ".atena/generated/art032-npcs-2026-10-11/sources/NP01_joao_barbosa_v02.png",
+      "sha256": "9148e0a1a7c839871fd771201ddc64f9a96d77ebaee37ce6c25fc4622bac9ccc",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox_alpha_above8": [
+        402,
+        242,
+        901,
+        1064
+      ],
+      "margins_px": [
+        402,
+        242,
+        353,
+        190
+      ],
+      "minimum_margin_percent": 15.15,
+      "border_max_alpha": 0,
+      "border_exactly_empty": true,
+      "border_note": "None",
+      "checks": {
+        "png_rgba": true,
+        "square_canvas": true,
+        "native_copy_hash": true,
+        "real_transparent_alpha": true,
+        "no_visible_border_clipping_alpha_above8": true,
+        "requested_margin_10_percent": true
+      },
+      "recommended_for_owner_review": true,
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "human_visual_acceptance": "APPROVED_EXPLICITLY",
+      "inspection": "NATIVE_TECHNICAL_VISUAL_INSPECTION_COMPLETED",
+      "preview_heights": [
+        80
+      ]
+    },
+    {
+      "code": "NP02",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-2026-10-11/sources/NP02_desertor_durao_v01.png",
+      "sha256": "4d73424cfe0560606fd3e9ddd94ec02b493546873235b4a0a7ad00be7ea57e59",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox_alpha_above8": [
+        336,
+        148,
+        865,
+        1111
+      ],
+      "margins_px": [
+        336,
+        148,
+        389,
+        143
+      ],
+      "minimum_margin_percent": 11.4,
+      "border_max_alpha": 1,
+      "border_exactly_empty": false,
+      "border_note": "Native extremely low alpha residue preserved; alpha 1/255 on border is not visible object clipping. No cleaning performed.",
+      "checks": {
+        "png_rgba": true,
+        "square_canvas": true,
+        "native_copy_hash": true,
+        "real_transparent_alpha": true,
+        "no_visible_border_clipping_alpha_above8": true,
+        "requested_margin_10_percent": true
+      },
+      "recommended_for_owner_review": true,
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "human_visual_acceptance": "APPROVED_EXPLICITLY",
+      "inspection": "NATIVE_TECHNICAL_VISUAL_INSPECTION_COMPLETED",
+      "preview_heights": [
+        80
+      ]
+    },
+    {
+      "code": "NP03",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-2026-10-11/sources/NP03_vitima_enfeiticada_v01.png",
+      "sha256": "3a944afa1c66e8db6ecfcd77077c0564254057a548e0f963b80967abc19b8c85",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox_alpha_above8": [
+        425,
+        167,
+        824,
+        1097
+      ],
+      "margins_px": [
+        425,
+        167,
+        430,
+        157
+      ],
+      "minimum_margin_percent": 12.52,
+      "border_max_alpha": 1,
+      "border_exactly_empty": false,
+      "border_note": "Native extremely low alpha residue preserved; alpha 1/255 on border is not visible object clipping. No cleaning performed.",
+      "checks": {
+        "png_rgba": true,
+        "square_canvas": true,
+        "native_copy_hash": true,
+        "real_transparent_alpha": true,
+        "no_visible_border_clipping_alpha_above8": true,
+        "requested_margin_10_percent": true
+      },
+      "recommended_for_owner_review": true,
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "human_visual_acceptance": "APPROVED_EXPLICITLY",
+      "inspection": "NATIVE_TECHNICAL_VISUAL_INSPECTION_COMPLETED",
+      "preview_heights": [
+        80
+      ]
+    },
+    {
+      "code": "PT01",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-2026-10-11/sources/PT01_estrela_do_norte_v01.png",
+      "sha256": "a3ec67f0dec4217be2d41dc45945d823aa05a8bf657a02964b0e0a11d030ea7c",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox_alpha_above8": [
+        192,
+        169,
+        1061,
+        1098
+      ],
+      "margins_px": [
+        192,
+        169,
+        193,
+        156
+      ],
+      "minimum_margin_percent": 12.44,
+      "border_max_alpha": 1,
+      "border_exactly_empty": false,
+      "border_note": "Native extremely low alpha residue preserved; alpha 1/255 on border is not visible object clipping. No cleaning performed.",
+      "checks": {
+        "png_rgba": true,
+        "square_canvas": true,
+        "native_copy_hash": true,
+        "real_transparent_alpha": true,
+        "no_visible_border_clipping_alpha_above8": true,
+        "requested_margin_10_percent": true
+      },
+      "recommended_for_owner_review": true,
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "human_visual_acceptance": "APPROVED_EXPLICITLY",
+      "inspection": "NATIVE_TECHNICAL_VISUAL_INSPECTION_COMPLETED",
+      "preview_heights": [
+        48,
+        80
+      ]
+    },
+    {
+      "code": "NP01",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-2026-10-11/sources/NP01_joao_barbosa_v01.png",
+      "sha256": "9794fd350de5699bed77c53383fc0ac79fbe08407583fc8e80fd32dc26248683",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox_alpha_above8": [
+        347,
+        106,
+        986,
+        1184
+      ],
+      "margins_px": [
+        347,
+        106,
+        268,
+        70
+      ],
+      "minimum_margin_percent": 5.58,
+      "border_max_alpha": 1,
+      "border_exactly_empty": false,
+      "border_note": "Native extremely low alpha residue preserved; alpha 1/255 on border is not visible object clipping. No cleaning performed.",
+      "checks": {
+        "png_rgba": true,
+        "square_canvas": true,
+        "native_copy_hash": true,
+        "real_transparent_alpha": true,
+        "no_visible_border_clipping_alpha_above8": true,
+        "requested_margin_10_percent": false
+      },
+      "recommended_for_owner_review": false,
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "human_visual_acceptance": "PENDING",
+      "inspection": "NATIVE_TECHNICAL_VISUAL_INSPECTION_COMPLETED",
+      "preview_heights": [
+        80
+      ]
+    }
+  ],
+  "review_limits": [
+    "Physical appearance of Joao and deserter remains DRAFT hypothesis; no canonical promotion",
+    "Pixel alpha >8 used only as visible bounding-box proxy; very faint glow may extend beyond it",
+    "Browser previews show cropped visible bounding boxes at 48/80px; no PNG normalization or game admission",
+    "Technical reading is not human acceptance; no playtest performed"
+  ],
+  "gallery_qa": "gallery-qa.json",
+  "reading_preview": "review-reading.png",
+  "browser_render_verification": "NOT_PERFORMED_URL_POLICY_BLOCKED_FILE_PROTOCOL",
+  "human_visual_acceptance": "APPROVED_EXPLICITLY",
+  "visual_acceptance_receipt": "visual-acceptance.json"
+}

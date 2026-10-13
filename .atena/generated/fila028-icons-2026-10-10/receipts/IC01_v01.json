@@ -1,0 +1,24 @@
+{
+  "code": "IC01",
+  "item": "bola_de_fogo",
+  "prompt": "Use case: stylized-concept. One painted dark pixel-art game item or ability icon, thick dark outline, clear readable materials, high contrast, upper-left lighting. Single central object or compact magical gesture, three-quarter view, at least 15 percent clear margin on every side. Genuine transparent background. Square native source, request 1024x1024. Readable silhouette at 48px, eventual game target 128x128. No lettering, numerals, extra hands, frame, scenery, logo or watermark; no color touching image edges. References are style anchors unless explicitly identified as object identity. No background disk or decorative border. IC01: Esfera de fogo laranja-vermelha com cauda curta e centro amarelo-branco, desenhada como um projétil prestes a explodir; chamas angulares, sem rosto.",
+  "references": [
+    {
+      "path": "assets/icons/weapons/descarga_estelar.png",
+      "sha256": "3cac724853cb9361b0be56dcdbad5939cb5c5aa9f8813d53cbf00972dfc2c224",
+      "role": "family style anchor"
+    },
+    {
+      "path": "assets/icons/weapons/golpe_esmagador.png",
+      "sha256": "254c901dc2ccbdc90dd97f6664a7c878702e0b539b263b50eec415e682f1ac5b",
+      "role": "family style anchor"
+    }
+  ],
+  "native_destination": ".atena/generated/art-candidates/fila028-icons/IC01_v01.png",
+  "state": "GENERATED_PENDING_VISUAL_ACCEPTANCE",
+  "content_state": "DRAFT",
+  "runtime_admission": false,
+  "version": "v01",
+  "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-ee312ecb-d423-4b3d-929f-c065abe130aa.png",
+  "destination": ".atena/generated/fila028-icons-2026-10-10/native-sources/IC01_v01.png"
+}

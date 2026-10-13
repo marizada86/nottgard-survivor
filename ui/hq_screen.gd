@@ -15,6 +15,7 @@ var completed := false
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	Lettering.decorate_label(title_label, "placa_titulo_larga", 20)
 	Game.controls.changed.connect(_update_hint)
 	_update_hint()
 	if Game.touch_controls_enabled():

@@ -1,0 +1,28 @@
+{
+  "code": "IC02",
+  "item": "tormenta_de_fogo",
+  "prompt": "Edit the provided IC02 transparent icon. Preserve all FOUR fireballs, their parallel arrangement, shapes, palette and low fire band. Change ONLY framing: uniformly reduce the entire composition to fit within the central 60 percent of a square transparent canvas; every flame, spark and outline stays at least 20 percent away from all four edges. Center as one group. Preserve painted pixel-art detail and genuine native alpha. No new elements, cropping, lettering or background.",
+  "references": [
+    {
+      "path": "assets/icons/weapons/descarga_estelar.png",
+      "sha256": "3cac724853cb9361b0be56dcdbad5939cb5c5aa9f8813d53cbf00972dfc2c224",
+      "role": "family style anchor"
+    },
+    {
+      "path": "assets/icons/weapons/golpe_esmagador.png",
+      "sha256": "254c901dc2ccbdc90dd97f6664a7c878702e0b539b263b50eec415e682f1ac5b",
+      "role": "family style anchor"
+    }
+  ],
+  "native_destination": ".atena/generated/art-candidates/fila028-icons/IC02_v02.png",
+  "state": "GENERATED_PENDING_VISUAL_ACCEPTANCE",
+  "content_state": "DRAFT",
+  "runtime_admission": false,
+  "actual_references": [
+    "C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/.atena/generated/fila028-icons-2026-10-10/native-sources/IC02_v01.png"
+  ],
+  "version": "v02",
+  "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-94e36971-8290-4c33-be4e-05642fb75433.png",
+  "destination": ".atena/generated/fila028-icons-2026-10-10/native-sources/IC02_v02.png",
+  "correction": "v01 margin 9.89%, below 15%"
+}

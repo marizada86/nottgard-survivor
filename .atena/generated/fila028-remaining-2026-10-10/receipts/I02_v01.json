@@ -1,0 +1,22 @@
+{
+  "code": "I02",
+  "item": "tou_um_caminho",
+  "prompt": "Use case: stylized-concept\nAsset type: ícone de HUD para jogo\nStyle/medium: pixel art sombria de alto contraste, contorno escuro grosso, poucos blocos de cor, silhueta clara a 32–48 px\nComposition/framing: um símbolo central simples, 18% de margem, sem elementos soltos\nConstraints: fundo realmente transparente; sem texto, letras, números, moldura, círculo de fundo, logotipo, marca-d'água ou aparência 3D\n\nPrimary request: Estrela do Norte azul-branca no alto de um caminho vermelho estreito que sobe e se perde; uma pegada pequena na base.\nRequest square native 1024x1024, genuine alpha background, entire symbol with at least 18 percent clear padding. Preserve family form and palette from references.",
+  "references": [
+    {
+      "path": "assets/icons/boons/tou_um_estrela.png",
+      "sha256": "ae35d6c169b14c9a2ddc1ea75c625d10597d680e267e905d09d4c683cc9b4d85",
+      "role": "deity family anchor"
+    }
+  ],
+  "state": "GENERATED_PENDING_VISUAL_ACCEPTANCE",
+  "content_state": "DRAFT",
+  "runtime_admission": false,
+  "actual_references": [
+    "C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/assets/icons/boons/tou_um_estrela.png"
+  ],
+  "version": "v01",
+  "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-0b2f97b8-7128-4be8-b4d8-61e2202c9cc4.png",
+  "destination": ".atena/generated/fila028-remaining-2026-10-10/native-sources/I02_v01.png",
+  "native_destination": ".atena/generated/art-candidates/fila028-remaining/I02_v01.png"
+}

@@ -49,6 +49,8 @@ playtest" viram verificados ou reabertos.
 
 ## Aguardando versão (sem build)
 
+- **Lettering e cursor (MEC-058, ART-039/040)**: peças CANON v01 publicadas em `86c453f`; integração local pronta, **ainda sem commit de código nem build** ([evidência](../evidence/fila026-integration-2026-10-11.md), PLAN-065/SPEC-132). **O que testar na próxima build autorizada que inclua a integração:** título, Quartel, HQ, ficha C, vitória/derrota, evolução e chefe em 720p/1080p, sem texto cortado/controles cobertos; ponteiro/mão 32 px e mira 40 px na janela real; AUTO/MOUSE e retorno ao ponteiro ao abrir pausa, nível, altar e ficha C, restaurando a mira ao fechar. Touch simulado passou; aparelho real e avaliação humana continuam pendentes. Registrar versão/build_id reais e tela/resolução ao reportar problemas.
+
 Tudo o que estava aqui entrou na [0.4.0](#versão-040--major-update-pronta-publicação-pendente). Desde então:
 
 - **MEC-059 e MEC-060, névoa punitiva** ([SPEC-158](../specs/SPEC-158-nevoa-de-borda-e-de-fim-de-fase.md), PLAN-084; implementado e commitado local em 3c55756, sem push): faixa de 3 tiles junto às bordas fere de 3% a 9% da vida máxima por segundo (dano verdadeiro, sobe com a exposição contínua) nas 9 fases; a Maré de Névoa passa a nascer após o chefe em todas as fases com próximo mapa (menos Pilares). **O que testar:** ficar no canto deve doer e o aviso deve aparecer; a faixa verde deve mostrar onde o dano começa; depois do chefe dá tempo de chegar ao portal. Ajustes em `data/fog.json`.

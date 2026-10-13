@@ -1,0 +1,96 @@
+{
+  "date": "2026-10-11",
+  "owner_request": "atena, aprovado, commite e continue a Próxima frente proposta: os pontos de acontecimentos restantes de ART-032.",
+  "authority": "EXPLICIT_LOCAL_COMMIT_ONLY",
+  "base_head": "fc5c709f3ef5c4acdc7c5a8a842747b72c7f70ec",
+  "accepted_draft_sources": 10,
+  "native_outputs_preserved": 13,
+  "source_hashes_and_gallery_links": "PASS",
+  "protected_runtime_assets_and_plan071_chain": "PASS",
+  "unrelated_changes": "EXCLUDED_AND_PRESERVED",
+  "root_state_staging": "ART032_BLOCKS_ONLY_OVER_HEAD",
+  "canon_admission_push_build": false,
+  "selected_revisions": [
+    {
+      "code": "NP01",
+      "revision": "v02",
+      "path": ".atena/generated/art032-npcs-2026-10-11/sources/NP01_joao_barbosa_v02.png",
+      "sha256": "9148e0a1a7c839871fd771201ddc64f9a96d77ebaee37ce6c25fc4622bac9ccc"
+    },
+    {
+      "code": "NP02",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-2026-10-11/sources/NP02_desertor_durao_v01.png",
+      "sha256": "4d73424cfe0560606fd3e9ddd94ec02b493546873235b4a0a7ad00be7ea57e59"
+    },
+    {
+      "code": "NP03",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-2026-10-11/sources/NP03_vitima_enfeiticada_v01.png",
+      "sha256": "3a944afa1c66e8db6ecfcd77077c0564254057a548e0f963b80967abc19b8c85"
+    },
+    {
+      "code": "PT01",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-2026-10-11/sources/PT01_estrela_do_norte_v01.png",
+      "sha256": "a3ec67f0dec4217be2d41dc45945d823aa05a8bf657a02964b0e0a11d030ea7c"
+    },
+    {
+      "code": "NP04",
+      "title": "Nyxara",
+      "revision": "v02",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP04_nyxara_v02.png",
+      "sha256": "ef545d2a49727264401e19e3d2dd7f9b653551bc0aefa41616298fc1f583a5c1"
+    },
+    {
+      "code": "NP05",
+      "title": "Vaelis",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP05_vaelis_v01.png",
+      "sha256": "0dc79c51e38ddfca4ae47bc2d549fe9ba162eb7d410eefa9ae5b66806bca0def"
+    },
+    {
+      "code": "NP06",
+      "title": "Graz'zt aliado",
+      "revision": "v02",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP06_grazzt_aliado_v02.png",
+      "sha256": "90fc10b2430106b0bc5d96b3607e3ad736c65d80cfe70d0e60c9916d314f8618"
+    },
+    {
+      "code": "NP07",
+      "title": "Reaper barqueiro",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP07_reaper_barqueiro_v01.png",
+      "sha256": "1ddc09c66221fe19593e0f2c2a76823dd1db0760cb67f99f67c12cd42cd11642"
+    },
+    {
+      "code": "NP08",
+      "title": "Vhaerith Aetherion",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP08_vhaerith_aetherion_v01.png",
+      "sha256": "fe79429dc82351130d0a2ab95b10e98df5f94bf12be7f0904888ba4016ed06de"
+    },
+    {
+      "code": "NP09",
+      "title": "Mercador de Rivenheart",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP09_mercador_rivenheart_v01.png",
+      "sha256": "0bcefb637594d1cda861d05cd14a7b47f06297a2e79bfb60098b809ccc84b1f9"
+    }
+  ],
+  "scope_paths": [
+    ".atena/generated/art032-npcs-2026-10-11",
+    ".atena/generated/art032-npcs-lote02-2026-10-11",
+    ".atena/backlog/ARTE.md",
+    ".atena/state/art032-npcs-piloto.yaml",
+    ".atena/state/art032-npcs-lote02.yaml",
+    ".atena/evidence/art032-npcs-piloto-2026-10-11.md",
+    ".atena/evidence/art032-npcs-lote02-preparation-2026-10-11.md",
+    ".atena/evidence/art032-npcs-lote02-delivery-2026-10-11.md",
+    ".atena/vault/drafts/PLAN-ART032-NPCS-PILOTO-v01.md",
+    ".atena/vault/drafts/PLAN-ART032-NPCS-LOTE02-v01.md",
+    ".atena/state/plan.yaml",
+    ".atena/generated/art032-commit-2026-10-11/verify_stage.py",
+    ".atena/generated/art032-commit-2026-10-11/precommit-verification.json"
+  ]
+}

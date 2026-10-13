@@ -53,6 +53,52 @@ static func plate(id: String, size: Vector2 = Vector2.ZERO) -> NinePatchRect:
 	rect.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	return rect
 
+## Preserva o Label e sua grafia para fallback; troca apenas o desenho.
+static func set_banner(label: Label, id: String, height: float) -> void:
+	if not label.has_meta("lettering_minimum"):
+		label.set_meta("lettering_minimum", label.custom_minimum_size)
+	var rect := label.get_node_or_null("LetteringBanner") as TextureRect
+	var tex := texture(id)
+	if tex == null:
+		label.self_modulate.a = 1.0
+		label.custom_minimum_size = label.get_meta("lettering_minimum")
+		if rect != null:
+			rect.hide()
+		return
+	if rect == null:
+		rect = TextureRect.new()
+		rect.name = "LetteringBanner"
+		rect.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		rect.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		rect.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		label.add_child(rect)
+		rect.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	rect.texture = tex
+	rect.show()
+	label.self_modulate.a = 0.0
+	label.custom_minimum_size.y = maxf(height, label.custom_minimum_size.y)
+
+## Placa atrás do próprio Label, preservando sinais, foco e referências.
+static func decorate_label(label: Label, id: String, font_size: int) -> void:
+	style(label, font_size)
+	if label.has_node("LetteringPlate"):
+		return
+	var rect := plate(id)
+	if rect == null:
+		return
+	rect.name = "LetteringPlate"
+	rect.custom_minimum_size = Vector2.ZERO
+	rect.show_behind_parent = true
+	label.add_child(rect)
+	rect.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	label.custom_minimum_size.y = maxf(label.custom_minimum_size.y, 48.0 if id == "placa_titulo_secao" else 56.0)
+	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	var padding := StyleBoxEmpty.new()
+	padding.content_margin_left = rect.patch_margin_left
+	padding.content_margin_right = rect.patch_margin_right
+	label.add_theme_stylebox_override("normal", padding)
+
 static func margins_fit(id: String) -> bool:
 	var p := piece(id)
 	if not p.has("margins"):

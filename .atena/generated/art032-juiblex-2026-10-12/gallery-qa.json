@@ -1,0 +1,41 @@
+{
+  "plan": "PLAN-ART032-JUIBLEX",
+  "revision": "v01",
+  "content_state": "DRAFT",
+  "gallery_local_links": "PASS",
+  "gallery_metadata": "PASS",
+  "preview_count": 6,
+  "preview_heights": [
+    80,
+    128,
+    80,
+    128,
+    80,
+    128
+  ],
+  "reading_image": "review-reading.png",
+  "reading_image_size": [
+    1000,
+    810
+  ],
+  "reading_image_sha256": "b395a82c64218d91a2999aa1a8636b874363861c3ebf7045046a31e8fbdda08b",
+  "reading_render": "GODOT_SUBVIEWPORT_OPENGL_COMPATIBILITY",
+  "reading_inspection": "COMPLETED_BY_ATENA",
+  "reading_observations": {
+    "MJ01_v03": "Broad asymmetric base, raised lobe and three thick cohesive curved extensions remain distinct at 80/128px; no humanoid legs, fixed face, cocoon or exposed luminous core. Proposed lobes/vesicles remain DRAFT geometry.",
+    "receptacle_comparison": "Existing narrower upright humanoid with eyes and exposed core, compared at same visible height; native runtime texture unchanged.",
+    "PT04_v02_comparison": "Accepted DRAFT dormant low mass with central cocoon/eyes remains distinct from MJ01; unchanged source.",
+    "limits": "Fine gel recesses simplify at 80px. Equal-height comparison is for silhouette, not real world/runtime scale. Owner still assesses appearance/style/readability; map contrast deferred."
+  },
+  "human_visual_acceptance": "APPROVED_EXPLICITLY",
+  "playtest": "NOT_PERFORMED",
+  "native_pixels_changed_by_preview": false,
+  "browser_render_verification": "NOT_ATTEMPTED_KNOWN_FILE_URL_POLICY_BLOCK",
+  "browser_workaround_attempted": false,
+  "renderer_notes": [
+    "Local render completed despite shader-cache/certificate-store warnings; no network operation.",
+    "Independent SubViewport preserves complete 1000x810 image; native reference aspect ratio preserved."
+  ],
+  "visual_acceptance_receipt": "visual-acceptance.json",
+  "reading_sheet_delivery_state": "HISTORICAL_PRE_ACCEPTANCE_REVIEW_SHEET_UNCHANGED"
+}

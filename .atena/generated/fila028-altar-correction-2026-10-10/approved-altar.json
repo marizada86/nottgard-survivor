@@ -1,0 +1,60 @@
+{
+  "revision": "AL01-CORR/v01",
+  "owner_reply": "Aprovo com ciclo de 900 ms",
+  "request_classification": "IN_PLAN",
+  "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+  "cycle_ms": 900,
+  "runtime_admission": false,
+  "entries": [
+    {
+      "code": "AL01",
+      "source_version": "v02",
+      "derived_revision": "AL01-CORR/v01",
+      "path": ".atena/generated/fila028-altar-correction-2026-10-10/normalized/AL01_loop_v03.png",
+      "sha256": "4919393a4c10b1b357e13646537b599035cbefacf7de1e374f1876501d49a605",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_admission": false,
+      "cycle_ms": 900
+    }
+  ],
+  "frames": [
+    {
+      "frame": 0,
+      "path": ".atena/generated/fila028-altar-correction-2026-10-10/frames/AL01_loop_v03_f0.png",
+      "sha256": "38ad9aa5962d0653a179ac15a7f15e53360104e28095a76c825ecc5f4c666b95",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY"
+    },
+    {
+      "frame": 1,
+      "path": ".atena/generated/fila028-altar-correction-2026-10-10/frames/AL01_loop_v03_f1.png",
+      "sha256": "c53be0ced2b5a387bb19487992e79818cc5f13902a7cbb8cbc2ac5ced236a845",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY"
+    },
+    {
+      "frame": 2,
+      "path": ".atena/generated/fila028-altar-correction-2026-10-10/frames/AL01_loop_v03_f2.png",
+      "sha256": "75c92628052c1f21c668eebc6dcef8a5b67897e9649cbffc73ff0550e395dbf1",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY"
+    },
+    {
+      "frame": 3,
+      "path": ".atena/generated/fila028-altar-correction-2026-10-10/frames/AL01_loop_v03_f3.png",
+      "sha256": "b69f13c8139a6aec5f6e2d6b6ffb5e2607361c3750d0658bc8516cb64e2b20d3",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY"
+    },
+    {
+      "frame": 4,
+      "path": ".atena/generated/fila028-altar-correction-2026-10-10/frames/AL01_loop_v03_f4.png",
+      "sha256": "636a7b93e9b37a12535c39a4cafca8c721fd212fb5b8e573ec28a71617c27c66",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY"
+    },
+    {
+      "frame": 5,
+      "path": ".atena/generated/fila028-altar-correction-2026-10-10/frames/AL01_loop_v03_f5.png",
+      "sha256": "70011f40fec5405d387f8565b5086772a7edc95963fb6664dcd54247a72f3fac",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY"
+    }
+  ],
+  "previous_derivative_state": "DRAFT_HELD_SUPERSEDED_FOR_PREPARATION",
+  "commit_push": "NOT_AUTHORIZED"
+}

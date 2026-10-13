@@ -1,0 +1,27 @@
+{
+  "plan": "PLAN-ART032-JUIBLEX",
+  "revision": "v01",
+  "step": "S-005",
+  "date": "2026-10-12",
+  "request_classification": "IN_PLAN",
+  "owner_reply": "Aprovo visualmente MJ01 v03",
+  "authority": "EXPLICIT_HUMAN_REPLY_TO_EXACT_MJ01_V03_VISUAL_GATE",
+  "status": "APPROVED_EXPLICITLY",
+  "content_state": "DRAFT",
+  "accepted": [
+    {
+      "code": "MJ01",
+      "title": "Manifestação de Juiblex",
+      "revision": "v03",
+      "path": ".atena/generated/art032-juiblex-2026-10-12/sources/MJ01_manifestacao_juiblex_v03.png",
+      "sha256": "ce37eb91132e1d2c22ca04c4c8102213e858dc46275a741207008d65dd20d8bf"
+    }
+  ],
+  "reviewed_scope": "Asymmetric body, broad base, three extensions, style/material and reading at 80/128px compared with the receptacle and dormant mass; minimum margin 18.26% and transparent native border disclosed.",
+  "historical_v01_v02_accepted": false,
+  "canonical_promotion": false,
+  "runtime_admission": false,
+  "normalization_execution": false,
+  "commit_push_build": false,
+  "next_execution_authorized": false
+}

@@ -502,7 +502,9 @@ func _boon_entry(bn: Dictionary) -> Dictionary:
 		"detail": "[font_size=22][b]☼ %s[/b][/font_size]%s\n%s" % [String(bn.get("name", "")), ("\n[color=#c9a8ee]Bênção de %s[/color]" % god) if god != "" else "", String(bn.get("desc", ""))]}
 
 func _add_section(s: Dictionary) -> void:
-	_content.add_child(_label(String(s.title), 15, GOLD))
+	var heading := _label(String(s.title), 15, GOLD)
+	_content.add_child(heading)
+	Lettering.decorate_label(heading, "placa_titulo_secao", 15)
 	var entries: Array = s.entries
 	if entries.is_empty():
 		_content.add_child(_label(String(s.get("empty_text", "")), 14, MUTED))

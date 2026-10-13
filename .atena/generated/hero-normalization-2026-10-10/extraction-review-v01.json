@@ -1,0 +1,988 @@
+{
+  "revision": "DEV-024/v03/extraction-review-v01",
+  "date": "2026-10-11",
+  "approval": "Existing approved route: prepare other pieces, keep originals, hold ER03/ER06 before integration.",
+  "method": "Read-only alpha projections plus visual source review; deterministic Godot rectangle extraction.",
+  "threshold": 8,
+  "threshold_note": "Low-alpha pixels are preserved; zero alpha>8 at a boundary is not proof of artistic quality.",
+  "reviewed_strips": 11,
+  "safe_rectangular_candidates": [
+    "AO02",
+    "AO05",
+    "AO06",
+    "AO08",
+    "ER02",
+    "ER07"
+  ],
+  "held": [
+    "AO09",
+    "AO10",
+    "ER08",
+    "ER09",
+    "ER10"
+  ],
+  "prior_extractions": 5,
+  "source_hashes_passed": true,
+  "content_state": "DRAFT",
+  "runtime_admission": false,
+  "next": "Body/feet landmarks for eleven extractable strips; review non-rectangular separation for five held strips. ER03/ER06 retain their earlier decisions.",
+  "records": [
+    {
+      "code": "AO02",
+      "source": "sources/ao02-idle-v01.png",
+      "source_sha256": "e6df81e5fb10c896a4a43b9f05fcb0da8df1aad15c811f9f0ee92a9132615dbf",
+      "source_size": [
+        2048,
+        768
+      ],
+      "observed_poses": 4,
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "status": "RECTANGULAR_EXTRACTION_CANDIDATE",
+      "review": "Source inspected visually; boundaries checked numerically. No gait correction or regeneration.",
+      "boundaries": [
+        {
+          "x": 518,
+          "pixels_alpha_gt_8": 0,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 0
+        },
+        {
+          "x": 1023,
+          "pixels_alpha_gt_8": 0,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 16
+        },
+        {
+          "x": 1529,
+          "pixels_alpha_gt_8": 0,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 6
+        }
+      ],
+      "frames": [
+        {
+          "frame": 1,
+          "rect": [
+            0,
+            0,
+            518,
+            768
+          ],
+          "path": "extraction-review-2026-10-11/AO02/f01.png",
+          "sha256": "02738233910b402b0412c5493189801b59235a9121125b7bfe0401fc43809876",
+          "size": [
+            518,
+            768
+          ]
+        },
+        {
+          "frame": 2,
+          "rect": [
+            518,
+            0,
+            505,
+            768
+          ],
+          "path": "extraction-review-2026-10-11/AO02/f02.png",
+          "sha256": "ff4108dcce5a34a03a78cc3dee14a8a595bf25a9065e65ac88b43967981b864b",
+          "size": [
+            505,
+            768
+          ]
+        },
+        {
+          "frame": 3,
+          "rect": [
+            1023,
+            0,
+            506,
+            768
+          ],
+          "path": "extraction-review-2026-10-11/AO02/f03.png",
+          "sha256": "4659cbe43056aa0b21b9dbfc4c7f68eea9ed3bc604ccd03d6355a97f18dbf82c",
+          "size": [
+            506,
+            768
+          ]
+        },
+        {
+          "frame": 4,
+          "rect": [
+            1529,
+            0,
+            519,
+            768
+          ],
+          "path": "extraction-review-2026-10-11/AO02/f04.png",
+          "sha256": "c8bbf649cf6d760b45ca202db272ed56accdac67dab6ddf6a6a5da32ee7cc703",
+          "size": [
+            519,
+            768
+          ]
+        }
+      ],
+      "body_landmarks": "PENDING",
+      "feet_anchor": "PENDING"
+    },
+    {
+      "code": "AO05",
+      "source": "sources/ao05-move_s-v01.png",
+      "source_sha256": "fcf1f0dc1fe81be057c7b19ba1a7fce6d01ddb15d889d03a7a61dd24f0a06666",
+      "source_size": [
+        2048,
+        768
+      ],
+      "observed_poses": 6,
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "status": "RECTANGULAR_EXTRACTION_CANDIDATE",
+      "review": "Source inspected visually; boundaries checked numerically. No gait correction or regeneration.",
+      "boundaries": [
+        {
+          "x": 347,
+          "pixels_alpha_gt_8": 0,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 5
+        },
+        {
+          "x": 674,
+          "pixels_alpha_gt_8": 0,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 2
+        },
+        {
+          "x": 1019,
+          "pixels_alpha_gt_8": 0,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 0
+        },
+        {
+          "x": 1356,
+          "pixels_alpha_gt_8": 0,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 0
+        },
+        {
+          "x": 1694,
+          "pixels_alpha_gt_8": 0,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 0
+        }
+      ],
+      "frames": [
+        {
+          "frame": 1,
+          "rect": [
+            0,
+            0,
+            347,
+            768
+          ],
+          "path": "extraction-review-2026-10-11/AO05/f01.png",
+          "sha256": "64a41308186618ae5bf5e03810e70253c01e00396628c0407e2ff414c2c23b87",
+          "size": [
+            347,
+            768
+          ]
+        },
+        {
+          "frame": 2,
+          "rect": [
+            347,
+            0,
+            327,
+            768
+          ],
+          "path": "extraction-review-2026-10-11/AO05/f02.png",
+          "sha256": "7d209bbd63565e83f7db2641e3d038355977c439e17939014b4d2c80bcae2e0f",
+          "size": [
+            327,
+            768
+          ]
+        },
+        {
+          "frame": 3,
+          "rect": [
+            674,
+            0,
+            345,
+            768
+          ],
+          "path": "extraction-review-2026-10-11/AO05/f03.png",
+          "sha256": "bc2ff8f0cf280faa7ad094ab0c8097ff8cded4cee6b20711b926627dd098fbc0",
+          "size": [
+            345,
+            768
+          ]
+        },
+        {
+          "frame": 4,
+          "rect": [
+            1019,
+            0,
+            337,
+            768
+          ],
+          "path": "extraction-review-2026-10-11/AO05/f04.png",
+          "sha256": "64c09abbe874081fa632fd59cb241819ae669678d8e00a081ec9a31cf8b16db2",
+          "size": [
+            337,
+            768
+          ]
+        },
+        {
+          "frame": 5,
+          "rect": [
+            1356,
+            0,
+            338,
+            768
+          ],
+          "path": "extraction-review-2026-10-11/AO05/f05.png",
+          "sha256": "dc0322fa3ebf33032facdc15e04a47a961c69d3566085e172ae2940a9059f6be",
+          "size": [
+            338,
+            768
+          ]
+        },
+        {
+          "frame": 6,
+          "rect": [
+            1694,
+            0,
+            354,
+            768
+          ],
+          "path": "extraction-review-2026-10-11/AO05/f06.png",
+          "sha256": "685cb3ed147faf160f26f72bc8d40b08608ae4a17210620ebde5b2b93026bf22",
+          "size": [
+            354,
+            768
+          ]
+        }
+      ],
+      "body_landmarks": "PENDING",
+      "feet_anchor": "PENDING"
+    },
+    {
+      "code": "AO06",
+      "source": "sources/ao06-move_ne-v01.png",
+      "source_sha256": "16a161b38cab86efa4557e026110b52214f992cd27000f03a9de0fdfaba5c650",
+      "source_size": [
+        1881,
+        836
+      ],
+      "observed_poses": 6,
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "status": "RECTANGULAR_EXTRACTION_CANDIDATE",
+      "review": "Source inspected visually; boundaries checked numerically. No gait correction or regeneration.",
+      "boundaries": [
+        {
+          "x": 326,
+          "pixels_alpha_gt_8": 0,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 5
+        },
+        {
+          "x": 643,
+          "pixels_alpha_gt_8": 0,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 8
+        },
+        {
+          "x": 948,
+          "pixels_alpha_gt_8": 0,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 34
+        },
+        {
+          "x": 1255,
+          "pixels_alpha_gt_8": 0,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 17
+        },
+        {
+          "x": 1579,
+          "pixels_alpha_gt_8": 0,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 0
+        }
+      ],
+      "frames": [
+        {
+          "frame": 1,
+          "rect": [
+            0,
+            0,
+            326,
+            836
+          ],
+          "path": "extraction-review-2026-10-11/AO06/f01.png",
+          "sha256": "548523f7aac5d2eac68a7b38cbae78418611ef57fb7c587a1766de0aa94f07e8",
+          "size": [
+            326,
+            836
+          ]
+        },
+        {
+          "frame": 2,
+          "rect": [
+            326,
+            0,
+            317,
+            836
+          ],
+          "path": "extraction-review-2026-10-11/AO06/f02.png",
+          "sha256": "fbcd4c5f58ec9a099f59c3c89852cae540f1de4425cc2d224fb0de09210f2e7a",
+          "size": [
+            317,
+            836
+          ]
+        },
+        {
+          "frame": 3,
+          "rect": [
+            643,
+            0,
+            305,
+            836
+          ],
+          "path": "extraction-review-2026-10-11/AO06/f03.png",
+          "sha256": "88cc2120021f9f6fcb37bf2e6cb0f21540be29bcec7df018c737c9c5a3e750e4",
+          "size": [
+            305,
+            836
+          ]
+        },
+        {
+          "frame": 4,
+          "rect": [
+            948,
+            0,
+            307,
+            836
+          ],
+          "path": "extraction-review-2026-10-11/AO06/f04.png",
+          "sha256": "2a45eb31da96f2fe77128097048de0600f55f748c95329e4e6f6382e51cb1378",
+          "size": [
+            307,
+            836
+          ]
+        },
+        {
+          "frame": 5,
+          "rect": [
+            1255,
+            0,
+            324,
+            836
+          ],
+          "path": "extraction-review-2026-10-11/AO06/f05.png",
+          "sha256": "eea84f25f411e1d979543e352c099f124b71f8e425bfa20656183b3f7d9cf564",
+          "size": [
+            324,
+            836
+          ]
+        },
+        {
+          "frame": 6,
+          "rect": [
+            1579,
+            0,
+            302,
+            836
+          ],
+          "path": "extraction-review-2026-10-11/AO06/f06.png",
+          "sha256": "7bf5dd48764c55b459459704eb4e024cfaddad35c4c55048b19f97520ff2ce1b",
+          "size": [
+            302,
+            836
+          ]
+        }
+      ],
+      "body_landmarks": "PENDING",
+      "feet_anchor": "PENDING"
+    },
+    {
+      "code": "AO08",
+      "source": "sources/ao08-attack-v01.png",
+      "source_sha256": "4e00d8ae2a73a9ef2d10be145a02a17813b55ea5546dc34309abc542c9a3ca0c",
+      "source_size": [
+        2048,
+        768
+      ],
+      "observed_poses": 4,
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "status": "RECTANGULAR_EXTRACTION_CANDIDATE",
+      "review": "Source inspected visually; boundaries checked numerically. No gait correction or regeneration.",
+      "boundaries": [
+        {
+          "x": 456,
+          "pixels_alpha_gt_8": 0,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 0
+        },
+        {
+          "x": 954,
+          "pixels_alpha_gt_8": 0,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 0
+        },
+        {
+          "x": 1617,
+          "pixels_alpha_gt_8": 0,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 21
+        }
+      ],
+      "frames": [
+        {
+          "frame": 1,
+          "rect": [
+            0,
+            0,
+            456,
+            768
+          ],
+          "path": "extraction-review-2026-10-11/AO08/f01.png",
+          "sha256": "cf66652b0656fb275f0ec7761b00cc940b2560b401c1999a5d2d5d047614f2c2",
+          "size": [
+            456,
+            768
+          ]
+        },
+        {
+          "frame": 2,
+          "rect": [
+            456,
+            0,
+            498,
+            768
+          ],
+          "path": "extraction-review-2026-10-11/AO08/f02.png",
+          "sha256": "2ec8c1b2ff0c4eb13e015cae008262fe099a3a899c6fb1ed8c9d1b338cf68206",
+          "size": [
+            498,
+            768
+          ]
+        },
+        {
+          "frame": 3,
+          "rect": [
+            954,
+            0,
+            663,
+            768
+          ],
+          "path": "extraction-review-2026-10-11/AO08/f03.png",
+          "sha256": "538227ae975752fc227ee3a2f93cc0fa94bfb50688778d0deb5b1d38b4e453c6",
+          "size": [
+            663,
+            768
+          ]
+        },
+        {
+          "frame": 4,
+          "rect": [
+            1617,
+            0,
+            431,
+            768
+          ],
+          "path": "extraction-review-2026-10-11/AO08/f04.png",
+          "sha256": "c4da87e4d83c11433ef1b89f9fcc4da552b4fe2b75ad35e13a0117cc8cae5ffc",
+          "size": [
+            431,
+            768
+          ]
+        }
+      ],
+      "body_landmarks": "PENDING",
+      "feet_anchor": "PENDING"
+    },
+    {
+      "code": "AO09",
+      "source": "sources/ao09-active-v01.png",
+      "source_sha256": "b07733b52c8c55f0fb8ecee6afa175976e844594ba805ab9c76ad1b45726f724",
+      "source_size": [
+        1983,
+        793
+      ],
+      "observed_poses": 6,
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "status": "HELD_UNSAFE_RECTANGULAR_SEPARATION",
+      "review": "Source inspected visually; boundaries checked numerically. No gait correction or regeneration.",
+      "boundaries": [
+        {
+          "x": 308,
+          "pixels_alpha_gt_8": 0,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 0
+        },
+        {
+          "x": 597,
+          "pixels_alpha_gt_8": 39,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 118
+        },
+        {
+          "x": 921,
+          "pixels_alpha_gt_8": 211,
+          "pixels_alpha_gt_128": 48,
+          "pixels_alpha_gt_0": 274
+        },
+        {
+          "x": 1350,
+          "pixels_alpha_gt_8": 235,
+          "pixels_alpha_gt_128": 158,
+          "pixels_alpha_gt_0": 305
+        },
+        {
+          "x": 1686,
+          "pixels_alpha_gt_8": 0,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 140
+        }
+      ],
+      "frames": [],
+      "body_landmarks": "PENDING",
+      "feet_anchor": "PENDING"
+    },
+    {
+      "code": "AO10",
+      "source": "sources/ao10-death-v01.png",
+      "source_sha256": "103b76a306d4721ba45e9670de4e52beb230f2663e3c95e4f71ad8370792575e",
+      "source_size": [
+        2048,
+        768
+      ],
+      "observed_poses": 6,
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "status": "HELD_UNSAFE_RECTANGULAR_SEPARATION",
+      "review": "Source inspected visually; boundaries checked numerically. No gait correction or regeneration.",
+      "boundaries": [
+        {
+          "x": 321,
+          "pixels_alpha_gt_8": 0,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 60
+        },
+        {
+          "x": 616,
+          "pixels_alpha_gt_8": 28,
+          "pixels_alpha_gt_128": 19,
+          "pixels_alpha_gt_0": 112
+        },
+        {
+          "x": 914,
+          "pixels_alpha_gt_8": 67,
+          "pixels_alpha_gt_128": 65,
+          "pixels_alpha_gt_0": 79
+        },
+        {
+          "x": 1314,
+          "pixels_alpha_gt_8": 48,
+          "pixels_alpha_gt_128": 47,
+          "pixels_alpha_gt_0": 79
+        },
+        {
+          "x": 1678,
+          "pixels_alpha_gt_8": 47,
+          "pixels_alpha_gt_128": 36,
+          "pixels_alpha_gt_0": 84
+        }
+      ],
+      "frames": [],
+      "body_landmarks": "PENDING",
+      "feet_anchor": "PENDING"
+    },
+    {
+      "code": "ER02",
+      "source": "sources/er02-idle-v02.png",
+      "source_sha256": "340fbe94fb9246f840ca2d7c328e609090678e2c2a50a167552f4bb905f0fae4",
+      "source_size": [
+        2048,
+        768
+      ],
+      "observed_poses": 4,
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "status": "RECTANGULAR_EXTRACTION_CANDIDATE",
+      "review": "Source inspected visually; boundaries checked numerically. No gait correction or regeneration.",
+      "boundaries": [
+        {
+          "x": 520,
+          "pixels_alpha_gt_8": 0,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 0
+        },
+        {
+          "x": 1016,
+          "pixels_alpha_gt_8": 0,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 0
+        },
+        {
+          "x": 1512,
+          "pixels_alpha_gt_8": 0,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 0
+        }
+      ],
+      "frames": [
+        {
+          "frame": 1,
+          "rect": [
+            0,
+            0,
+            520,
+            768
+          ],
+          "path": "extraction-review-2026-10-11/ER02/f01.png",
+          "sha256": "ac6afe51ac8cadd845ff0623b80c20714ed2278f08a600308f26b51f398acd4c",
+          "size": [
+            520,
+            768
+          ]
+        },
+        {
+          "frame": 2,
+          "rect": [
+            520,
+            0,
+            496,
+            768
+          ],
+          "path": "extraction-review-2026-10-11/ER02/f02.png",
+          "sha256": "0e7256c327b8d03f0789f9fa4871e94dc73ce1eb17bfc0243b754a07345ff1e8",
+          "size": [
+            496,
+            768
+          ]
+        },
+        {
+          "frame": 3,
+          "rect": [
+            1016,
+            0,
+            496,
+            768
+          ],
+          "path": "extraction-review-2026-10-11/ER02/f03.png",
+          "sha256": "7aa8ec0478acd6137044f2648aaf5342e668306355a38484b27f7f38eaf0abb8",
+          "size": [
+            496,
+            768
+          ]
+        },
+        {
+          "frame": 4,
+          "rect": [
+            1512,
+            0,
+            536,
+            768
+          ],
+          "path": "extraction-review-2026-10-11/ER02/f04.png",
+          "sha256": "cdbf97255034eb8f3d63ab58c1a421cd73c41030c1924364fb9c3711fd0eb660",
+          "size": [
+            536,
+            768
+          ]
+        }
+      ],
+      "body_landmarks": "PENDING",
+      "feet_anchor": "PENDING"
+    },
+    {
+      "code": "ER07",
+      "source": "sources/er07-move_n-v01.png",
+      "source_sha256": "6ae2917e571612e40a64bbe9d8264508ee0ee6489e2620e8f4c6194df76d5323",
+      "source_size": [
+        1983,
+        793
+      ],
+      "observed_poses": 6,
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "status": "RECTANGULAR_EXTRACTION_CANDIDATE",
+      "review": "Source inspected visually; boundaries checked numerically. No gait correction or regeneration.",
+      "boundaries": [
+        {
+          "x": 341,
+          "pixels_alpha_gt_8": 0,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 0
+        },
+        {
+          "x": 666,
+          "pixels_alpha_gt_8": 0,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 2
+        },
+        {
+          "x": 986,
+          "pixels_alpha_gt_8": 0,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 0
+        },
+        {
+          "x": 1314,
+          "pixels_alpha_gt_8": 0,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 0
+        },
+        {
+          "x": 1640,
+          "pixels_alpha_gt_8": 0,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 0
+        }
+      ],
+      "frames": [
+        {
+          "frame": 1,
+          "rect": [
+            0,
+            0,
+            341,
+            793
+          ],
+          "path": "extraction-review-2026-10-11/ER07/f01.png",
+          "sha256": "f66d8ccfcfe7aba67539f5b672bf820d3f9add623662986b69a952f3131f922f",
+          "size": [
+            341,
+            793
+          ]
+        },
+        {
+          "frame": 2,
+          "rect": [
+            341,
+            0,
+            325,
+            793
+          ],
+          "path": "extraction-review-2026-10-11/ER07/f02.png",
+          "sha256": "224657abe6551f913efaadf5f346570b588096c62b24057eb62ec8c909525ac1",
+          "size": [
+            325,
+            793
+          ]
+        },
+        {
+          "frame": 3,
+          "rect": [
+            666,
+            0,
+            320,
+            793
+          ],
+          "path": "extraction-review-2026-10-11/ER07/f03.png",
+          "sha256": "ea68ddb9a43c17c7d206afd57334cb139c684c4d08edb06a5cdfd9b8459fb0b2",
+          "size": [
+            320,
+            793
+          ]
+        },
+        {
+          "frame": 4,
+          "rect": [
+            986,
+            0,
+            328,
+            793
+          ],
+          "path": "extraction-review-2026-10-11/ER07/f04.png",
+          "sha256": "0ef29d59a008500e27afbf5b0adc7292b4b019e0fc601209c4749521bef5cca3",
+          "size": [
+            328,
+            793
+          ]
+        },
+        {
+          "frame": 5,
+          "rect": [
+            1314,
+            0,
+            326,
+            793
+          ],
+          "path": "extraction-review-2026-10-11/ER07/f05.png",
+          "sha256": "17ea5a80c58b2e3bf0829f8ba9c661eb2ec5c8e238bd54a5b3154323e736a6ea",
+          "size": [
+            326,
+            793
+          ]
+        },
+        {
+          "frame": 6,
+          "rect": [
+            1640,
+            0,
+            343,
+            793
+          ],
+          "path": "extraction-review-2026-10-11/ER07/f06.png",
+          "sha256": "faf46af85c3bcf868fa63bc92c7f8ff785a0eeea307fc7dcf67a3018e49f28f4",
+          "size": [
+            343,
+            793
+          ]
+        }
+      ],
+      "body_landmarks": "PENDING",
+      "feet_anchor": "PENDING"
+    },
+    {
+      "code": "ER08",
+      "source": "sources/er08-attack-v01.png",
+      "source_sha256": "60f43fd2a81ca3e51f3d9655cf1c4d36127a28e0b7309b9a7aa70ddfd2c880d8",
+      "source_size": [
+        2048,
+        768
+      ],
+      "observed_poses": 4,
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "status": "HELD_UNSAFE_RECTANGULAR_SEPARATION",
+      "review": "Source inspected visually; boundaries checked numerically. No gait correction or regeneration.",
+      "boundaries": [
+        {
+          "x": 446,
+          "pixels_alpha_gt_8": 0,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 0
+        },
+        {
+          "x": 984,
+          "pixels_alpha_gt_8": 39,
+          "pixels_alpha_gt_128": 21,
+          "pixels_alpha_gt_0": 177
+        },
+        {
+          "x": 1612,
+          "pixels_alpha_gt_8": 0,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 0
+        }
+      ],
+      "frames": [],
+      "body_landmarks": "PENDING",
+      "feet_anchor": "PENDING"
+    },
+    {
+      "code": "ER09",
+      "source": "sources/er09-active-v01.png",
+      "source_sha256": "b32eb2cb7159b0c24cf8fff4174fe77324a4d18745651dae3286a587f2291bd1",
+      "source_size": [
+        2048,
+        768
+      ],
+      "observed_poses": 6,
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "status": "HELD_UNSAFE_RECTANGULAR_SEPARATION",
+      "review": "Source inspected visually; boundaries checked numerically. No gait correction or regeneration.",
+      "boundaries": [
+        {
+          "x": 333,
+          "pixels_alpha_gt_8": 0,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 0
+        },
+        {
+          "x": 671,
+          "pixels_alpha_gt_8": 0,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 18
+        },
+        {
+          "x": 1035,
+          "pixels_alpha_gt_8": 0,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 23
+        },
+        {
+          "x": 1404,
+          "pixels_alpha_gt_8": 14,
+          "pixels_alpha_gt_128": 11,
+          "pixels_alpha_gt_0": 123
+        },
+        {
+          "x": 1747,
+          "pixels_alpha_gt_8": 0,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 24
+        }
+      ],
+      "frames": [],
+      "body_landmarks": "PENDING",
+      "feet_anchor": "PENDING"
+    },
+    {
+      "code": "ER10",
+      "source": "sources/er10-death-v01.png",
+      "source_sha256": "2f8ca3ecf43fbd643ba3db7f32bc5a0c4525728692e2ab33b2ee89bf9ba83993",
+      "source_size": [
+        2172,
+        724
+      ],
+      "observed_poses": 6,
+      "content_state": "DRAFT",
+      "runtime_admission": false,
+      "status": "HELD_UNSAFE_RECTANGULAR_SEPARATION",
+      "review": "Source inspected visually; boundaries checked numerically. No gait correction or regeneration.",
+      "boundaries": [
+        {
+          "x": 328,
+          "pixels_alpha_gt_8": 0,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 0
+        },
+        {
+          "x": 664,
+          "pixels_alpha_gt_8": 0,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 36
+        },
+        {
+          "x": 1005,
+          "pixels_alpha_gt_8": 0,
+          "pixels_alpha_gt_128": 0,
+          "pixels_alpha_gt_0": 116
+        },
+        {
+          "x": 1356,
+          "pixels_alpha_gt_8": 33,
+          "pixels_alpha_gt_128": 30,
+          "pixels_alpha_gt_0": 93
+        },
+        {
+          "x": 1744,
+          "pixels_alpha_gt_8": 49,
+          "pixels_alpha_gt_128": 45,
+          "pixels_alpha_gt_0": 86
+        }
+      ],
+      "frames": [],
+      "body_landmarks": "PENDING",
+      "feet_anchor": "PENDING"
+    }
+  ],
+  "verification": {
+    "native_frames": 30,
+    "pixel_identical_to_source": true,
+    "full_source_reconstruction_passed": true,
+    "sources_verified": 20,
+    "prior_extractions_unchanged": true,
+    "discarded_pixels": 0,
+    "normalized": false,
+    "runtime_admission": false
+  }
+}

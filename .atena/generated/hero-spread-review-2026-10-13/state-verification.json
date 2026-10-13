@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "prior_state_tail_sha256": "ba80e5c4700371971fb2f0eafca3d892a3c13a5cf07f63e32ccac49cb46994cd",
+  "prior_state_tail_preserved": true,
+  "proposal_pending": true,
+  "content_state": "DRAFT",
+  "accepted_before": {
+    "strips": 12,
+    "frames": 64
+  },
+  "runtime_admission": false,
+  "canonical_promotion": false,
+  "git_mutations": false
+}

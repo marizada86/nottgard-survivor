@@ -4,6 +4,7 @@ extends Node2D
 @export_enum("under", "over") var mode := "over"
 var battle: Battle
 static var _texture_cache := {}
+const HAPPENING_ART := preload("res://ui/happening_art.gd")
 var _large_fx_by_quadrant: Array[int] = [0, 0, 0, 0]
 const PARTICLE_CAP := 96
 const PARTICLES_PER_ZONE := 8
@@ -439,6 +440,8 @@ func _draw_over() -> void:
 		# Eventos em escala de personagem (heróis têm 40-85 px; o portal é a maior estrutura).
 		# Baús mantêm o tamanho original (54 px).
 		var base_h := (54.0 if it.kind in ["chest", "boss_chest"] else (100.0 if it.kind == "portal" else 80.0)) * size_scale
+		if asset != "" and String(it.kind) in ["event_item", "event_star"]:
+			base_h = 48.0 * size_scale
 		var texture := _texture("res://assets/interactions/%s.png" % asset)
 		var scenery_asset := ""
 		if String(it.get("name", "")) == "Poço de Oferendas":
@@ -462,12 +465,15 @@ func _draw_over() -> void:
 			draw_texture_rect_region(animation_texture, Rect2(draw_p.x - w * 0.5, draw_p.y - h, w, h), Rect2(frame * 192, 0, 192, 192))
 		elif texture != null:
 			var h := base_h
-			var w := h * float(texture.get_width()) / float(texture.get_height())
-			draw_texture_rect(texture, Rect2(draw_p.x - w * 0.5, draw_p.y - h, w, h), false)
+			if String(it.kind).begins_with("event_"):
+				draw_texture_rect_region(texture, HAPPENING_ART.destination_rect(texture, draw_p, h), HAPPENING_ART.source_rect(texture))
+			else:
+				var w := h * float(texture.get_width()) / float(texture.get_height())
+				draw_texture_rect(texture, Rect2(draw_p.x - w * 0.5, draw_p.y - h, w, h), false)
 		else:
 			draw_colored_polygon(PackedVector2Array([draw_p + Vector2(0, -18), draw_p + Vector2(14, 0), draw_p + Vector2(0, 9), draw_p + Vector2(-14, 0)]), Color(col, 0.35))
 			draw_rect(Rect2(draw_p + Vector2(-9, -22), Vector2(18, 16)), col.darkened(0.2))
-		var label_w := 220.0 if String(it.kind).begins_with("event_") else 110.0  # SPEC-118: rótulos de evento são nomes longos
+		var label_w := maxf(220.0, ThemeDB.fallback_font.get_string_size(label, HORIZONTAL_ALIGNMENT_LEFT, -1, 15).x + 12.0) if String(it.kind).begins_with("event_") else 110.0
 		if String(it.kind).begins_with("event_"):
 			# SPEC-147: rótulo de quest maior e com contorno, para não se perder no cenário
 			draw_string_outline(ThemeDB.fallback_font, draw_p + Vector2(-label_w * 0.5, -base_h - 8.0), label, HORIZONTAL_ALIGNMENT_CENTER, label_w, 15, 5, Color(0, 0, 0, 0.85))
@@ -562,11 +568,15 @@ func _draw_happenings() -> void:
 		draw_polyline(_ellipse_closed(hp_.arena.pos, float(hp_.arena.radius)), Color(1.0, 0.45, 0.15, 0.55 + 0.35 * pulse), 4.0)
 	for a in hp_.allies:
 		var p := Iso.to_screen(a.pos)
-		var tex: Texture2D = _texture("res://assets/enemies/%s.png" % String(a.sprite)) if String(a.sprite) != "" else null
-		var h := 64.0
+		var event_asset := String(a.get("asset", ""))
+		var tex: Texture2D = _texture("res://assets/interactions/%s.png" % event_asset) if event_asset != "" else (_texture("res://assets/enemies/%s.png" % String(a.sprite)) if String(a.sprite) != "" else null)
+		var h := 80.0 if event_asset != "" else 64.0
 		if tex != null:
-			var w := h * float(tex.get_width()) / float(tex.get_height())
-			draw_texture_rect(tex, Rect2(p.x - w * 0.5, p.y - h, w, h), false, Color(0.85, 1.0, 0.85))
+			if event_asset != "":
+				draw_texture_rect_region(tex, HAPPENING_ART.destination_rect(tex, p, h), HAPPENING_ART.source_rect(tex))
+			else:
+				var w := h * float(tex.get_width()) / float(tex.get_height())
+				draw_texture_rect(tex, Rect2(p.x - w * 0.5, p.y - h, w, h), false, Color(0.85, 1.0, 0.85))
 		else:
 			# NPC sem arte própria: figura provisória (ver ART do SPEC-118)
 			draw_circle(p + Vector2(0, -40), 8.0, Color(0.95, 0.85, 0.7))

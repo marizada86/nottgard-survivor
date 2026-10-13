@@ -1,0 +1,49 @@
+{
+  "plan": "PLAN-ART032-PONTOS",
+  "revision": "v01",
+  "content_state": "DRAFT",
+  "gallery_local_links": "PASS",
+  "gallery_metadata": "PASS",
+  "preview_count": 12,
+  "preview_heights": [
+    80,
+    128,
+    80,
+    128,
+    80,
+    128,
+    48,
+    80,
+    48,
+    80,
+    48,
+    80
+  ],
+  "reading_image": "review-reading.png",
+  "reading_image_size": [
+    1000,
+    1440
+  ],
+  "reading_image_sha256": "f6ca80fa7ed5a46162d5a211f6d95e5ed5628489321f09667444f6998cd7f938",
+  "reading_render": "GODOT_SUBVIEWPORT_OPENGL_COMPATIBILITY",
+  "reading_inspection": "COMPLETED_BY_ATENA",
+  "reading_observations": {
+    "PT02_v02": "Empty seat/armrests/back and mushroom clusters read at 80/128px; wood/mycelium geometry remains DRAFT.",
+    "PT03_v02": "Closed dark stone face and complete arch remain legible at 80/128px; no active portal; carved marks are DRAFT abstract ornament.",
+    "PT04_v02": "Low mound and central wrapped cocoon distinguish dormant ritual mass at 80/128px.",
+    "PT05_v01": "Compact upright nucleus with contained center remains distinguishable from the wider coreless slime at 48/80px.",
+    "PT06_v02": "Mauve fungal capsule and pale short base remain distinguishable at 48/80px.",
+    "PT07_v02": "Irregular wider base/tapered rise and coreless slime read at 48/80px; contrast over actual maps remains deferred."
+  },
+  "human_visual_acceptance": "APPROVED_EXPLICITLY",
+  "playtest": "NOT_PERFORMED",
+  "browser_render_verification": "NOT_ATTEMPTED_KNOWN_FILE_URL_POLICY_BLOCK",
+  "browser_workaround_attempted": false,
+  "native_pixels_changed_by_preview": false,
+  "renderer_notes": [
+    "Shader-cache and certificate-store warnings did not prevent successful local rendering; no network operation.",
+    "Independent SubViewport preserves full 1000x1440 sheet without screen-size clamping."
+  ],
+  "visual_acceptance_receipt": "visual-acceptance.json",
+  "reading_sheet_delivery_state": "HISTORICAL_PRE_ACCEPTANCE_REVIEW_SHEET_UNCHANGED"
+}

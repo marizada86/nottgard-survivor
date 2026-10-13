@@ -1,0 +1,276 @@
+{
+  "plan": "PLAN-ART032-JUIBLEX",
+  "revision": "v01",
+  "status": "PASS",
+  "content_state": "DRAFT",
+  "owner_reply": "Aprovo MJ01 DRAFT",
+  "approval_mode": "per-plan",
+  "candidate": "MJ01_v03",
+  "native_outputs": 3,
+  "requested_canvas": [
+    1024,
+    1024
+  ],
+  "actual_canvas": [
+    1254,
+    1254
+  ],
+  "records": [
+    {
+      "code": "MJ01",
+      "title": "Manifestação de Juiblex",
+      "revision": "v03",
+      "path": ".atena/generated/art032-juiblex-2026-10-12/sources/MJ01_manifestacao_juiblex_v03.png",
+      "sha256": "ce37eb91132e1d2c22ca04c4c8102213e858dc46275a741207008d65dd20d8bf",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox_alpha_above8": [
+        266,
+        357,
+        1025,
+        960
+      ],
+      "margins_px": [
+        266,
+        357,
+        229,
+        294
+      ],
+      "minimum_margin_percent": 18.26,
+      "visible_extent_percent": [
+        60.53,
+        48.09
+      ],
+      "border_max_alpha": 0,
+      "border_exactly_empty": true,
+      "transparent_fraction": 0.8276965067446055,
+      "checks": {
+        "png_rgba": true,
+        "square": true,
+        "native_copy_hash": true,
+        "transparent_alpha": true,
+        "margin_10_percent_met": true,
+        "extent_at_most_70_percent": true,
+        "no_border_clipping_alpha_above8": true
+      },
+      "recommended_for_owner_review": true,
+      "content_state": "DRAFT",
+      "human_visual_acceptance": "APPROVED_EXPLICITLY",
+      "runtime_admission": false
+    },
+    {
+      "code": "MJ01",
+      "title": "Manifestação de Juiblex",
+      "revision": "v01",
+      "path": ".atena/generated/art032-juiblex-2026-10-12/sources/MJ01_manifestacao_juiblex_v01.png",
+      "sha256": "be2bb65d0ff458f6a10b83a56cb4a58c1a7d167fde46e5ed93b39b0ce1cf9d21",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox_alpha_above8": [
+        77,
+        209,
+        1201,
+        1099
+      ],
+      "margins_px": [
+        77,
+        209,
+        53,
+        155
+      ],
+      "minimum_margin_percent": 4.23,
+      "visible_extent_percent": [
+        89.63,
+        70.97
+      ],
+      "border_max_alpha": 1,
+      "border_exactly_empty": false,
+      "transparent_fraction": 0.614639215117684,
+      "checks": {
+        "png_rgba": true,
+        "square": true,
+        "native_copy_hash": true,
+        "transparent_alpha": true,
+        "margin_10_percent_met": false,
+        "extent_at_most_70_percent": false,
+        "no_border_clipping_alpha_above8": true
+      },
+      "recommended_for_owner_review": false,
+      "content_state": "DRAFT",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false
+    },
+    {
+      "code": "MJ01",
+      "title": "Manifestação de Juiblex",
+      "revision": "v02",
+      "path": ".atena/generated/art032-juiblex-2026-10-12/sources/MJ01_manifestacao_juiblex_v02.png",
+      "sha256": "6ff962d5aaad10901a823840f4870d5b2a5d22d78c6930a6b662fb1499c43473",
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox_alpha_above8": [
+        185,
+        290,
+        1089,
+        1003
+      ],
+      "margins_px": [
+        185,
+        290,
+        165,
+        251
+      ],
+      "minimum_margin_percent": 13.16,
+      "visible_extent_percent": [
+        72.09,
+        56.86
+      ],
+      "border_max_alpha": 1,
+      "border_exactly_empty": false,
+      "transparent_fraction": 0.7555878604732797,
+      "checks": {
+        "png_rgba": true,
+        "square": true,
+        "native_copy_hash": true,
+        "transparent_alpha": true,
+        "margin_10_percent_met": true,
+        "extent_at_most_70_percent": false,
+        "no_border_clipping_alpha_above8": true
+      },
+      "recommended_for_owner_review": false,
+      "content_state": "DRAFT",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false
+    }
+  ],
+  "comparison_cards": [
+    {
+      "title": "MJ01 v03",
+      "path": ".atena/generated/art032-juiblex-2026-10-12/sources/MJ01_manifestacao_juiblex_v03.png",
+      "gallery_path": "sources/MJ01_manifestacao_juiblex_v03.png",
+      "role": "Candidata DRAFT — aceite pendente",
+      "sha256": "ce37eb91132e1d2c22ca04c4c8102213e858dc46275a741207008d65dd20d8bf",
+      "preview_heights": [
+        80,
+        128
+      ],
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox_alpha_above8": [
+        266,
+        357,
+        1025,
+        960
+      ],
+      "margins_px": [
+        266,
+        357,
+        229,
+        294
+      ],
+      "minimum_margin_percent": 18.26,
+      "visible_extent_percent": [
+        60.53,
+        48.09
+      ],
+      "border_max_alpha": 0,
+      "border_exactly_empty": true,
+      "transparent_fraction": 0.8276965067446055
+    },
+    {
+      "title": "Receptáculo de Juiblex",
+      "path": "assets/enemies/receptaculo_de_juiblex.png",
+      "gallery_path": "../../../assets/enemies/receptaculo_de_juiblex.png",
+      "role": "Referência runtime existente — sem alteração",
+      "sha256": "ce81d3cfd119e64f69b81d38592170dfcb2c3f97393945bb03cdabf714a77b96",
+      "preview_heights": [
+        80,
+        128
+      ],
+      "size": [
+        320,
+        480
+      ],
+      "bbox_alpha_above8": [
+        6,
+        21,
+        317,
+        460
+      ],
+      "margins_px": [
+        6,
+        21,
+        3,
+        20
+      ],
+      "minimum_margin_percent": 0.62,
+      "visible_extent_percent": [
+        97.19,
+        91.46
+      ],
+      "border_max_alpha": 2,
+      "border_exactly_empty": false,
+      "transparent_fraction": 0.44629557291666666
+    },
+    {
+      "title": "PT04 massa v02",
+      "path": ".atena/generated/art032-pontos-2026-10-11/sources/PT04_massa_thullgrime_v02.png",
+      "gallery_path": "../art032-pontos-2026-10-11/sources/PT04_massa_thullgrime_v02.png",
+      "role": "DRAFT visualmente aceita — estado dormente",
+      "sha256": "1ae928be4144a3a24d2594eb2beeeff17b02cd6b38670685160ce8c9b9f1c1f9",
+      "preview_heights": [
+        80,
+        128
+      ],
+      "size": [
+        1254,
+        1254
+      ],
+      "bbox_alpha_above8": [
+        193,
+        368,
+        1079,
+        948
+      ],
+      "margins_px": [
+        193,
+        368,
+        175,
+        306
+      ],
+      "minimum_margin_percent": 13.96,
+      "visible_extent_percent": [
+        70.65,
+        46.25
+      ],
+      "border_max_alpha": 0,
+      "border_exactly_empty": true,
+      "transparent_fraction": 0.793244711023608
+    }
+  ],
+  "source_and_reference_hashes": "PASS",
+  "runtime_prior_sixteen_accepted_sources_receipts_plan071": "UNCHANGED_HASH_VERIFIED",
+  "native_resizing_cleaning": "NOT_PERFORMED",
+  "human_visual_acceptance": "APPROVED_EXPLICITLY",
+  "notes": [
+    "MJ01 v01 preserved, not selected: margin 4.23%; v02 preserved, not selected: visible width 72.09% exceeds contract; v03 fits 60.53% width and 18.26% margin",
+    "Selected v03 has exactly empty native border; v01/v02 residual alpha 1/255 preserved",
+    "Geometry remains an authorized DRAFT hypothesis; lobes/vesicles are not asserted as canonical eyes/anatomy",
+    "No humanoid legs or exposed central luminous nucleus; three cohesive asymmetric extensions retained; owner assesses proposed silhouette",
+    "Reading comparison uses equal visible height in memory only, not world scale or final normalized PNGs",
+    "No gameplay/playtest/runtime integration, CANON promotion, commit, push or build"
+  ],
+  "gallery_qa": "gallery-qa.json",
+  "reading_preview": "review-reading.png",
+  "reading_inspection": "COMPLETED_BY_ATENA",
+  "browser_render_verification": "NOT_ATTEMPTED_KNOWN_FILE_URL_POLICY_BLOCK",
+  "visual_acceptance_receipt": "visual-acceptance.json"
+}

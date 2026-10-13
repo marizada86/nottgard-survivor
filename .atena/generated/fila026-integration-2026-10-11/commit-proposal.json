@@ -1,0 +1,40 @@
+{
+  "plan": "PLAN-065",
+  "mechanic": "MEC-058",
+  "status": "LOCAL_COMMIT_APPROVED_EXPLICITLY",
+  "proposed_subject": "feat(ui): integrate approved lettering across game screens",
+  "tracked_whitelist": [
+    "ui/lettering.gd",
+    "ui/hud.gd",
+    "ui/run.gd",
+    "ui/hq_screen.gd",
+    "ui/menu.gd",
+    "ui/character_sheet.gd",
+    "tests/test_lettering_assets.gd",
+    ".atena/evidence/fila026-integration-2026-10-11.md",
+    ".atena/vault/drafts/PLAN-065-lettering-e-cursor-2026-10-06.md",
+    ".atena/vault/drafts/SPEC-132-lettering-e-cursor-do-jogo.md",
+    ".atena/backlog/ARTE.md",
+    ".atena/backlog/MECANICAS.md",
+    ".atena/backlog/RELEASES.md",
+    ".atena/state/fila026-remaining.yaml",
+    ".atena/state/plan-065-lettering-cursor.yaml"
+  ],
+  "partial_file": {
+    ".atena/state/plan.yaml": "Only fila026_remaining_2026_10_11 entry; preserve hero extraction and PLAN-071 tail"
+  },
+  "evidence_package": ".atena/generated/fila026-integration-2026-10-11",
+  "exclude_generated_temporary_profiles": [
+    "*-profile.json",
+    "*-profile.json.bak"
+  ],
+  "exclude_other_work": [
+    "Hero extraction/review and FILA-027 changes",
+    "tests/test_quartel.gd.uid",
+    ".atena/generated/controller-experience/v01/unit-profile.json",
+    ".atena/generated/controller-experience/v01/unit-profile.json.bak"
+  ],
+  "runtime_art_already_in_separate_commit": "86c453fe2f6328b9495f8bb0cdc36618e02111f2",
+  "push_build": "Separate explicit gate",
+  "authorization": "atena, commit e vamos criar as proximas imagens"
+}

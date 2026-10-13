@@ -1,0 +1,44 @@
+version: 1
+plan: PLAN-ART032-JUIBLEX
+revision: v01
+card: ART-032
+request_classification: PLAN_CHANGE_REQUEST
+route: PREPARE_NEXT_IMAGE_FRONT_PRESERVE_THREE_CLOSED_LOTS_AND_PLAN071
+owner_front_reply: 'atena, continue'
+status: COMPLETED_VISUALLY_ACCEPTED_DRAFT
+approval_mode: per-plan
+approval_status: APPROVED_EXPLICITLY
+content_state: DRAFT
+checkpoint: S-005/OWNER_VISUAL_ACCEPTANCE_RECORDED
+current_step_position: 5
+completed_steps: 5
+total_steps: 5
+remaining_steps_after_current: 0
+ordered_steps: [S-001, S-002, S-003, S-004, S-005]
+completed_ordered_steps: [S-001, S-002, S-003, S-004, S-005]
+proposed_sources: [MJ01_manifestacao_juiblex_v01]
+generated: 1
+blocking_visual_gaps: 0
+physical_identity: DRAFT_GEOMETRY_HYPOTHESIS_FOR_CANON_LORE_ENTITY
+visual_bible: .atena/vault/drafts/PLAN-ART032-JUIBLEX-v01.md
+output_package: .atena/generated/art032-juiblex-2026-10-12
+evidence: .atena/evidence/art032-juiblex-delivery-2026-10-12.md
+runtime_admission: false
+canonical_promotion: false
+git_publication_build: NOT_AUTHORIZED
+human_visual_acceptance: APPROVED_EXPLICITLY
+preserved_checkpoint: PLAN071_AND_HERO_EXTRACTION_REVIEW
+next_objective: "Preparar plano futuro de preparação/admissão das dezessete fontes aceitas ART-032; execução ainda requer escopo aprovado"
+next_execution_authorized: false
+scope_owner_reply: "Aprovo MJ01 DRAFT"
+approved_date: "2026-10-12"
+native_outputs_preserved: 3
+technical_status: PASS
+review_candidates: [MJ01_v03]
+reading_preview: .atena/generated/art032-juiblex-2026-10-12/review-reading.png
+gallery: .atena/generated/art032-juiblex-2026-10-12/index.html
+gallery_browser_verification: NOT_ATTEMPTED_KNOWN_FILE_URL_POLICY_BLOCK
+visual_owner_reply: "Aprovo visualmente MJ01 v03"
+visual_accepted_date: "2026-10-12"
+visual_acceptance_receipt: .atena/generated/art032-juiblex-2026-10-12/visual-acceptance.json
+last_request_classification: IN_PLAN

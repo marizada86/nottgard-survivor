@@ -1,0 +1,42 @@
+version: 1
+plan: PLAN-ART032-NPCS-PILOTO
+revision: v01
+card: ART-032
+request_classification: PLAN_DEVIATION
+route: PREPARE_SELECTED_IMAGE_FRONT_NOW_PRESERVE_PLAN071_AND_HERO_REVIEW
+owner_request: 'atena, commit e vamos criar as proximas imagens'
+owner_selected_front: 'NPCs e pontos de acontecimentos (ART-032) — recomendado'
+status: COMPLETED_VISUALLY_ACCEPTED_DRAFT
+approval_mode: per-plan
+approval_status: APPROVED_EXPLICITLY
+content_state: DRAFT
+runtime_admission: false
+checkpoint: S-005/OWNER_VISUAL_ACCEPTANCE_RECORDED
+current_step_position: 5
+completed_steps: 5
+total_steps: 5
+proposed_sources: [NP01_JOAO_BARBOSA_v02, NP02_DESERTOR_v01, NP03_VITIMA_v01, PT01_ESTRELA_DO_NORTE_v01]
+blocking_gaps: 0
+physical_identity: DRAFT_HYPOTHESES_EXCEPT_GENERIC_HUMAN_VICTIM
+visual_bible: .atena/vault/drafts/PLAN-ART032-NPCS-PILOTO-v01.md
+output_package: .atena/generated/art032-npcs-2026-10-11
+next_objective: 'Preparar um plano futuro de normalização/admissão ou das demais peças ART-032; execução ainda não autorizada'
+git_publication_build: NOT_AUTHORIZED_FOR_NEW_IMAGES
+human_visual_acceptance: APPROVED_EXPLICITLY
+preserved_checkpoint: PLAN071_AND_HERO_EXTRACTION_REVIEW
+scope_owner_reply: "Aprovo as quatro peças DRAFT"
+approved_at: "2026-10-11"
+generated: 4
+
+remaining_steps_after_current: 0
+native_outputs_preserved: 5
+technical_status: PASS_WITH_NATIVE_ALPHA_NOTE
+evidence: .atena/evidence/art032-npcs-piloto-2026-10-11.md
+reading_preview: .atena/generated/art032-npcs-2026-10-11/review-reading.png
+gallery_browser_verification: NOT_PERFORMED_URL_POLICY_BLOCKED
+completed_ordered_steps: [S-001, S-002, S-003, S-004, S-005]
+visual_owner_reply: "Aprovo visualmente as quatro revisões"
+visual_accepted_revisions: [NP01_v02, NP02_v01, NP03_v01, PT01_v01]
+visual_acceptance_receipt: .atena/generated/art032-npcs-2026-10-11/visual-acceptance.json
+canonical_promotion: false
+next_execution_authorized: false

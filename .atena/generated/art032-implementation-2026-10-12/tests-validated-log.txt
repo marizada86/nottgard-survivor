@@ -1,0 +1,30 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+ERROR: Error opening file 'C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/assets/animations/heroes/arlindo/idle.png'.
+   at: load_image (core/io/image_loader.cpp:91)
+   GDScript backtrace (most recent call first):
+       [0] _walk_metrics (res://tests/test_animation_assets.gd:432)
+       [1] _validate_hero_walk_stability (res://tests/test_animation_assets.gd:401)
+       [2] run (res://tests/test_animation_assets.gd:389)
+       [3] _run (res://tests/run_all.gd:17)
+ERROR: Error opening file 'C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/assets/animations/heroes/erik/idle.png'.
+   at: load_image (core/io/image_loader.cpp:91)
+   GDScript backtrace (most recent call first):
+       [0] _walk_metrics (res://tests/test_animation_assets.gd:432)
+       [1] _validate_hero_walk_stability (res://tests/test_animation_assets.gd:401)
+       [2] run (res://tests/test_animation_assets.gd:389)
+       [3] _run (res://tests/run_all.gd:17)
+WalkTrace: ticks=90 eventos={ "start": 1 } breakpoints=0
+WalkTrace: ticks=90 eventos={ "start": 1 } breakpoints=0
+WalkTrace: ticks=90 eventos={ "start": 1 } breakpoints=0
+WalkTrace: ticks=90 eventos={ "start": 1 } breakpoints=0
+WalkTrace: ticks=90 eventos={ "start": 1 } breakpoints=0
+WalkTrace: ticks=90 eventos={ "start": 1 } breakpoints=0
+WalkTrace: ticks=90 eventos={ "start": 1 } breakpoints=0
+WalkTrace: ticks=90 eventos={ "start": 1 } breakpoints=0
+WalkTrace: ticks=40 eventos={ "start": 2, "idle_drop": 1 } breakpoints=1
+WalkTrace: ticks=40 eventos={ "start": 1 } breakpoints=0
+WalkTrace: ticks=40 eventos={ "start": 1, "switch": 39 } breakpoints=37
+WalkTrace: ticks=40 eventos={ "start": 1 } breakpoints=0
+WalkTrace: ticks=40 eventos={ "start": 1 } breakpoints=0
+testes: 0 falha(s)

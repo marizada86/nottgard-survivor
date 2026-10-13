@@ -1,7 +1,7 @@
 ---
 id: "CHATGPT-FILA-028"
 title: "Fila de geração: eventos aleatórios, Arcanista, ícones das armas e equipamentos novos, segredos e altar animado"
-status: "criada 2026-10-09; nenhuma peça gerada; aguardando o dono enviar ao ChatGPT"
+status: "2026-10-10: 34 fontes aceitas; 34 preparacoes visuais CANON aceitas, incluindo correcao AL01-CORR/v01 com ciclo 900 ms; integracao runtime pendente; loop antigo do altar retido como historico"
 priority: "normal: depois da FILA-027 (Erik e Arlindo)"
 created: "2026-10-09"
 relations: ["[[ART-PROMPTS-061-eventos-arcanista-icones-segredos-e-altar]]", "[[ART-PROMPTS-059-icones-das-bencaos-novas]]", "[[SPEC-164-eventos-aleatorios-novos-mec-005]]"]
@@ -35,65 +35,65 @@ Compilação operacional de [[ART-PROMPTS-061-eventos-arcanista-icones-segredos-
 
 ## 1. AL: altar animado (ART-044)
 
-- [ ] gerada · [ ] aprovada: AL01 `altar_active` (grade 3×2 → sheet 1152 × 192)
+- [x] gerada · [x] aprovada: AL01 `altar_active` (v02, fonte nativa grade 3×2; sheet 1152 × 192 ainda não montado)
 
 ## 2. EV: eventos aleatórios (ART-046)
 
-- [ ] gerada · [ ] aprovada: EV01 `pacto_sangue`
-- [ ] gerada · [ ] aprovada: EV02 `relicario`
-- [ ] gerada · [ ] aprovada: EV03 `peregrino` (NPC)
-- [ ] gerada · [ ] aprovada: EV04 `contador` (NPC)
-- [ ] gerada · [ ] aprovada: EV05 `carroca`
-- [ ] gerada · [ ] aprovada: EV06 `eclipse_pedra` (fundo ciano)
+- [x] gerada · [x] aprovada: EV01 `pacto_sangue` (v02)
+- [x] gerada · [x] aprovada: EV02 `relicario` (v01)
+- [x] gerada · [x] aprovada: EV03 `peregrino` (NPC, v01)
+- [x] gerada · [x] aprovada: EV04 `contador` (NPC, v02)
+- [x] gerada · [x] aprovada: EV05 `carroca` (v02)
+- [x] gerada · [x] aprovada: EV06 `eclipse_pedra` (fundo ciano, v02)
 
 ## 3. IC: ícones das armas e equipamentos novos (ART-042)
 
 Armas e feitiços (`assets/icons/weapons/`):
 
-- [ ] gerada · [ ] aprovada: IC01 `bola_de_fogo`
-- [ ] gerada · [ ] aprovada: IC02 `tormenta_de_fogo`
-- [ ] gerada · [ ] aprovada: IC03 `lamina_de_sombra`
-- [ ] gerada · [ ] aprovada: IC04 `romper_armadura`
-- [ ] gerada · [ ] aprovada: IC05 `esmagar_defesas`
-- [ ] gerada · [ ] aprovada: IC06 `dominio_da_vontade`
+- [x] gerada · [x] aprovada: IC01 `bola_de_fogo`
+- [x] gerada · [x] aprovada: IC02 `tormenta_de_fogo`
+- [x] gerada · [x] aprovada: IC03 `lamina_de_sombra`
+- [x] gerada · [x] aprovada: IC04 `romper_armadura`
+- [x] gerada · [x] aprovada: IC05 `esmagar_defesas`
+- [x] gerada · [x] aprovada: IC06 `dominio_da_vontade`
 
 Equipamentos únicos (`assets/icons/items/`):
 
-- [ ] gerada · [ ] aprovada: IC07 `cajado_familia_infernum`
-- [ ] gerada · [ ] aprovada: IC08 `wave_of_terror`
-- [ ] gerada · [ ] aprovada: IC09 `colar_visao_verdadeira`
-- [ ] gerada · [ ] aprovada: IC10 `detector_arcano`
-- [ ] gerada · [ ] aprovada: IC11 `dispositivo_antimagia_gilly`
-- [ ] gerada · [ ] aprovada: IC12 `dispositivo_das_docas`
-- [ ] gerada · [ ] aprovada: IC13 `coracao_da_dominancia` (com a referência do dono)
+- [x] gerada · [x] aprovada: IC07 `cajado_familia_infernum`
+- [x] gerada · [x] aprovada: IC08 `wave_of_terror`
+- [x] gerada · [x] aprovada: IC09 `colar_visao_verdadeira`
+- [x] gerada · [x] aprovada: IC10 `detector_arcano`
+- [x] gerada · [x] aprovada: IC11 `dispositivo_antimagia_gilly`
+- [x] gerada · [x] aprovada: IC12 `dispositivo_das_docas`
+- [x] gerada · [x] aprovada: IC13 `coracao_da_dominancia` (com a referência do dono)
 
 ## 4. AR: Arcanista (ART-041)
 
-- [ ] gerada · [ ] aprovada: AR01 `arcanista` (NPC, fundo ciano)
+- [x] gerada · [x] aprovada: AR01 `arcanista` (NPC, fundo ciano)
 
 ## 5. SE: segredos da fatia piloto (ART-043)
 
-- [ ] gerada · [ ] aprovada: SE01 `eco` (miniatura 128 × 128, fundo ciano)
-- [ ] gerada · [ ] aprovada: SE02 `camara_selada` (fundo ciano)
-- [ ] gerada · [ ] aprovada: SE03 `camara_aberta` (com a SE02 aprovada anexada)
+- [x] gerada · [x] aprovada: SE01 `eco` (miniatura 128 × 128, fundo ciano)
+- [x] gerada · [x] aprovada: SE02 `camara_selada` (fundo ciano)
+- [x] gerada · [x] aprovada: SE03 `camara_aberta` (com a SE02 aprovada anexada)
 
 ## 6. SE: ruína de cada fase (ART-043)
 
-- [ ] gerada · [ ] aprovada: SE04 `ruina_dagruve`
-- [ ] gerada · [ ] aprovada: SE05 `ruina_docas`
-- [ ] gerada · [ ] aprovada: SE06 `ruina_shedaklah`
-- [ ] gerada · [ ] aprovada: SE07 `ruina_molor`
-- [ ] gerada · [ ] aprovada: SE08 `ruina_durao`
-- [ ] gerada · [ ] aprovada: SE09 `ruina_feng_tu`
-- [ ] gerada · [ ] aprovada: SE10 `ruina_shendilavri`
-- [ ] gerada · [ ] aprovada: SE11 `ruina_goranthis`
+- [x] gerada · [x] aprovada: SE04 `ruina_dagruve`
+- [x] gerada · [x] aprovada: SE05 `ruina_docas`
+- [x] gerada · [x] aprovada: SE06 `ruina_shedaklah`
+- [x] gerada · [x] aprovada: SE07 `ruina_molor`
+- [x] gerada · [x] aprovada: SE08 `ruina_durao`
+- [x] gerada · [x] aprovada: SE09 `ruina_feng_tu`
+- [x] gerada · [x] aprovada: SE10 `ruina_shendilavri`
+- [x] gerada · [x] aprovada: SE11 `ruina_goranthis`
 
 ## 7. BN: ícones das bênçãos novas (ART-038)
 
 Prompts em [[ART-PROMPTS-059-icones-das-bencaos-novas]]; ícones 128 × 128, destino `assets/icons/boons/<id>.png`.
 
-- [ ] gerada · [ ] aprovada: I01 `lliira_juramento`
-- [ ] gerada · [ ] aprovada: I02 `tou_um_caminho`
+- [x] gerada · [x] aprovada: I01 `lliira_juramento`
+- [x] gerada · [x] aprovada: I02 `tou_um_caminho`
 
 ## Mensagens
 

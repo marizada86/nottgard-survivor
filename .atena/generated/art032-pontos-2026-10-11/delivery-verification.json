@@ -1,0 +1,29 @@
+{
+  "plan": "PLAN-ART032-PONTOS",
+  "revision": "v01",
+  "status": "PASS_OWNER_VISUAL_GATE_PENDING",
+  "completed_steps": 4,
+  "total_steps": 5,
+  "current_step": "S-005",
+  "content_state": "DRAFT",
+  "review_candidates": 6,
+  "native_outputs_preserved": 11,
+  "native_sources_and_references_hashes": "PASS",
+  "runtime_prior_accepted_sources_and_plan071_return": "UNCHANGED_HASH_VERIFIED",
+  "links_contract_and_state": "PASS",
+  "gallery_preview_count": 12,
+  "reading_sheet": [
+    1000,
+    1440
+  ],
+  "browser_render_verification": "NOT_ATTEMPTED_KNOWN_FILE_URL_POLICY_BLOCK",
+  "local_commit_of_previous_lots": "51b51f7369ae34eede997435e6eb52ea057daf25",
+  "committed_original_png_blobs_verified": 13,
+  "git_index": "EMPTY",
+  "new_lot_committed": false,
+  "push": false,
+  "runtime_admission": false,
+  "canonical_promotion": false,
+  "human_visual_acceptance": "PENDING",
+  "unrelated_dirty_changes": "PRESERVED"
+}

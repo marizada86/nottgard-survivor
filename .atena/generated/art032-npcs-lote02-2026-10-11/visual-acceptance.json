@@ -1,0 +1,61 @@
+{
+  "plan": "PLAN-ART032-NPCS-LOTE02",
+  "revision": "v01",
+  "step": "S-005",
+  "date": "2026-10-11",
+  "owner_reply": "Aprovo visualmente as seis revisões",
+  "authority": "EXPLICIT_HUMAN_REPLY_TO_EXACT_SIX_REVISION_VISUAL_GATE",
+  "status": "APPROVED_EXPLICITLY",
+  "content_state": "DRAFT",
+  "accepted": [
+    {
+      "code": "NP04",
+      "title": "Nyxara",
+      "revision": "v02",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP04_nyxara_v02.png",
+      "sha256": "ef545d2a49727264401e19e3d2dd7f9b653551bc0aefa41616298fc1f583a5c1"
+    },
+    {
+      "code": "NP05",
+      "title": "Vaelis",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP05_vaelis_v01.png",
+      "sha256": "0dc79c51e38ddfca4ae47bc2d549fe9ba162eb7d410eefa9ae5b66806bca0def"
+    },
+    {
+      "code": "NP06",
+      "title": "Graz'zt aliado",
+      "revision": "v02",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP06_grazzt_aliado_v02.png",
+      "sha256": "90fc10b2430106b0bc5d96b3607e3ad736c65d80cfe70d0e60c9916d314f8618"
+    },
+    {
+      "code": "NP07",
+      "title": "Reaper barqueiro",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP07_reaper_barqueiro_v01.png",
+      "sha256": "1ddc09c66221fe19593e0f2c2a76823dd1db0760cb67f99f67c12cd42cd11642"
+    },
+    {
+      "code": "NP08",
+      "title": "Vhaerith Aetherion",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP08_vhaerith_aetherion_v01.png",
+      "sha256": "fe79429dc82351130d0a2ab95b10e98df5f94bf12be7f0904888ba4016ed06de"
+    },
+    {
+      "code": "NP09",
+      "title": "Mercador de Rivenheart",
+      "revision": "v01",
+      "path": ".atena/generated/art032-npcs-lote02-2026-10-11/sources/NP09_mercador_rivenheart_v01.png",
+      "sha256": "0bcefb637594d1cda861d05cd14a7b47f06297a2e79bfb60098b809ccc84b1f9"
+    }
+  ],
+  "reviewed_scope": "Proposed physiques/costume, distinction of Radiant Sisters, six actors at 80px and Grazzt at 128px; five native border alpha 1/255 notes disclosed in approved question.",
+  "canonical_promotion": false,
+  "runtime_admission": false,
+  "normalization_execution": false,
+  "commit_push_build": false,
+  "historical_NP04_NP06_v01_accepted": false,
+  "next_execution_authorized": false
+}

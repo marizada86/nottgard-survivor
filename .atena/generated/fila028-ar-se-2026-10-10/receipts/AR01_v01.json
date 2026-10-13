@@ -1,0 +1,34 @@
+{
+  "code": "AR01",
+  "item": "arcanista",
+  "prompt": "Use case: stylized-concept\nAsset type: objeto interativo de jogo 2D isométrico\nStyle/medium: pixel art sombria coerente com o jogo, pixels nítidos, pedra cinza-arroxeada, metal escuro, um acento de cor por objeto, luz principal no alto à esquerda\nComposition/framing: vista três quartos, objeto inteiro centrado ocupando cerca de 70% da altura, sombra suave no chão\nConstraints: fundo liso ciano #00FFFF, sem texto, letras, números, moldura ou cenário, sem personagens (exceto onde o pedido disser), quadrado\n\nPrimary request: figura de papel genérico, um mago-escriba de meia-idade, de pé, túnica longa roxo-escura com detalhes em violeta, capuz baixo, uma mão segurando um livro grosso fechado com fecho de metal e a outra erguida com um pequeno fogo-fátuo violeta flutuando sobre a palma; paleta abissal, tom arcano.\nConstraints extra: um único personagem, sem emblema, sem texto, sem cajado enorme, rosto discreto; em escala de evento (cerca de 80 px na tela) e distinto do Curandeiro (`assets/interactions/curandeiro.png`).\nRequest square native 1024x1024. Entire isolated subject centered with empty padding. Keep cyan background perfectly flat and uniform; no gradient, no scenery. No readable glyphs. References 1 and 2 are style anchors only. Reference 3 is the healer: make the Arcanist clearly different, purple robe, closed book and a raised palm with violet wisp; do not copy the healer stall or cauldron.",
+  "references": [
+    {
+      "path": "assets/interactions/loja.png",
+      "sha256": "b7c092ab509af9687288004d3b0c693f470487b8bd4dbea2f46b353f336afba7",
+      "role": "style anchor"
+    },
+    {
+      "path": "assets/interactions/doacao.png",
+      "sha256": "df364ad5b3672c04f61a4cd0eef2e6185218c518d31217b299a2c6abb27fee0d",
+      "role": "style anchor"
+    },
+    {
+      "path": "assets/interactions/curandeiro.png",
+      "sha256": "ef6656e0c333193a1d8e427a347ce43394dcaacbcc4fab2f5c96ea3eac998f0b",
+      "role": "differentiation reference"
+    }
+  ],
+  "state": "GENERATED_PENDING_VISUAL_ACCEPTANCE",
+  "content_state": "DRAFT",
+  "runtime_admission": false,
+  "actual_references": [
+    "C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/assets/interactions/loja.png",
+    "C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/assets/interactions/doacao.png",
+    "C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/assets/interactions/curandeiro.png"
+  ],
+  "version": "v01",
+  "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-d34a90f4-1a8e-418f-ad10-79cdeaf26da5.png",
+  "destination": ".atena/generated/fila028-ar-se-2026-10-10/native-sources/AR01_v01.png",
+  "native_destination": ".atena/generated/art-candidates/fila028-ar-se/AR01_v01.png"
+}

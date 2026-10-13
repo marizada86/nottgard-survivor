@@ -1,0 +1,500 @@
+{
+  "plan": "PLAN-065",
+  "spec": "SPEC-132",
+  "revision": "FILA026-REMAINING/v01",
+  "g1": "ACCEPTED_L01_v01",
+  "current_step": "S-014/OWNER_INTEGRATION_GATE",
+  "step_position": 14,
+  "total_steps": 16,
+  "content_state": "CANON_VISUAL_G2",
+  "runtime_admission": true,
+  "sources": 9,
+  "prepared": 9,
+  "technical_status": "PASS",
+  "reference_hashes": {
+    ".atena/generated/fila026-l01-2026-10-11/prepared/L01_v01.png": "5d5214fbfad023c90ecd8e46a86f8efeded578e9a8009b685d3ff2f04b4eecb5",
+    "assets/ui/backgrounds/defeat_background.png": "3c9c07f798e2c34bc3d9ec0bde40cb6de4bffeb54ec32d79495793f27f3b3943",
+    "assets/ui/backgrounds/victory_background.png": "787f2656c8698249fbb4db551f16f600f77e10811959156799646e9f48350936",
+    "assets/ui/evolucao_painel_moldura.png": "cd8863b5733b44248217a8020069ca140d48fa525a73009e246ae5e76b7689c0",
+    "assets/ui/ficha/ficha_moldura_painel.png": "1576d862265e400e2480d0b3b071850101f60317589b0edd2953d4446e30a72c"
+  },
+  "records": [
+    {
+      "code": "L03",
+      "revision": "v01",
+      "kind": "lettering",
+      "source": "sources/L03_v01.png",
+      "source_sha256": "ad346142fe9362a7ce2401f5e98ad38285af5177f3c5fe4bafef92e0a8a7c0bd",
+      "prepared": "prepared/L03_v01.png",
+      "size": [
+        551,
+        160
+      ],
+      "hashes": {
+        "native": "20532e198751598ab39fadf59eada8bb8246ab20a56d5a9733e9ef48bf391b52",
+        "final": "a1e49651d87284593a7f7a405e3cb893335ecf1c15daefb3377ece0c520a0633"
+      },
+      "checks": {
+        "source_hash": true,
+        "reference_hashes": true,
+        "native_key_erosion_exact": true,
+        "non_key_non_eroded_colors_unchanged": true,
+        "rgba": true,
+        "size": true,
+        "no_source_clipping": true,
+        "all_final_colors_from_source": true,
+        "visual_inspection": "COMPLETED",
+        "owner_acceptance": "ACCEPTED_G2_v01",
+        "proportional_no_enlargement": true,
+        "glyph_review": "Correct letter sequence and accent/punctuation; Gothic capital/small-cap rendering for L03/L04 shown for owner review",
+        "requested_text": "Vitória!"
+      },
+      "content_state": "CANON_VISUAL_G2",
+      "runtime_admission": true
+    },
+    {
+      "code": "L04",
+      "revision": "v01",
+      "kind": "lettering",
+      "source": "sources/L04_v01.png",
+      "source_sha256": "edabab76d8b055cc40f089c7cd2bf5a027b6ef32cb5a45fec125019239f84647",
+      "prepared": "prepared/L04_v01.png",
+      "size": [
+        720,
+        135
+      ],
+      "hashes": {
+        "native": "dca352e439891084293210156d40700929eab9f2a9802b29c3e6b7dcf85dbf28",
+        "final": "c7b6476dcd4e8a184d1cd80df82fa87f78e11632c66d343d56ce701316f86187"
+      },
+      "checks": {
+        "source_hash": true,
+        "reference_hashes": true,
+        "native_key_erosion_exact": true,
+        "non_key_non_eroded_colors_unchanged": true,
+        "rgba": true,
+        "size": true,
+        "no_source_clipping": true,
+        "all_final_colors_from_source": true,
+        "visual_inspection": "COMPLETED",
+        "owner_acceptance": "ACCEPTED_G2_v01",
+        "proportional_no_enlargement": true,
+        "glyph_review": "Correct letter sequence and accent/punctuation; Gothic capital/small-cap rendering for L03/L04 shown for owner review",
+        "requested_text": "Você caiu..."
+      },
+      "content_state": "CANON_VISUAL_G2",
+      "runtime_admission": true
+    },
+    {
+      "code": "L05",
+      "revision": "v01",
+      "kind": "lettering",
+      "source": "sources/L05_v01.png",
+      "source_sha256": "630dba868bc0c45938d30e7840d64b1d99c16e31c1d6b7e0bfa611d654053a6f",
+      "prepared": "prepared/L05_v01.png",
+      "size": [
+        537,
+        110
+      ],
+      "hashes": {
+        "native": "2f82125f435a792bd674ff36f092eca1193e6cb0f8a8aa93758a4bb1d982b96e",
+        "final": "0402d2523fea04a44b9618a9f6059d82099dfa5c3ed812d7024489061e24184b"
+      },
+      "checks": {
+        "source_hash": true,
+        "reference_hashes": true,
+        "native_key_erosion_exact": true,
+        "non_key_non_eroded_colors_unchanged": true,
+        "rgba": true,
+        "size": true,
+        "no_source_clipping": true,
+        "all_final_colors_from_source": true,
+        "visual_inspection": "COMPLETED",
+        "owner_acceptance": "ACCEPTED_G2_v01",
+        "proportional_no_enlargement": true,
+        "glyph_review": "Correct letter sequence and accent/punctuation; Gothic capital/small-cap rendering for L03/L04 shown for owner review",
+        "requested_text": "EVOLUÇÃO"
+      },
+      "content_state": "CANON_VISUAL_G2",
+      "runtime_admission": true
+    },
+    {
+      "code": "P01",
+      "revision": "v01",
+      "kind": "plate",
+      "source": "sources/P01_v01.png",
+      "source_sha256": "9d5e1b528054108f4aefcaf3d868502d4665334d4c77720aee487d6a27c94688",
+      "prepared": "prepared/P01_v01.png",
+      "size": [
+        640,
+        96
+      ],
+      "hashes": {
+        "native": "fefef24124d268a86a90ca935a32affc61d4e10302ead013d5697906607ecfc2",
+        "final": "24a4d122d5da2407e0aa945f02dfa80dbca9998cd158de2829bb1210694bd6b4"
+      },
+      "checks": {
+        "source_hash": true,
+        "reference_hashes": true,
+        "native_key_erosion_exact": true,
+        "non_key_non_eroded_colors_unchanged": true,
+        "rgba": true,
+        "size": true,
+        "no_source_clipping": true,
+        "all_final_colors_from_source": true,
+        "visual_inspection": "COMPLETED",
+        "owner_acceptance": "ACCEPTED_G2_v01",
+        "middle_exactly_uniform_per_row": true,
+        "nine_slice_margins": [
+          56,
+          56,
+          28,
+          28
+        ],
+        "material_derivation": "Proportional-height endcaps retained; native center column replicated horizontally. Source grain remains in historical source."
+      },
+      "content_state": "CANON_VISUAL_G2",
+      "runtime_admission": true
+    },
+    {
+      "code": "P02",
+      "revision": "v01",
+      "kind": "plate",
+      "source": "sources/P02_v01.png",
+      "source_sha256": "9466c812254bdc684ebd2ab8e16db8bf8430e2b77b95aa6c1cd0943ac5e1cffa",
+      "prepared": "prepared/P02_v01.png",
+      "size": [
+        320,
+        48
+      ],
+      "hashes": {
+        "native": "02a4b76ed66ac551a96eaff0d1183e3a82e8b541a52bc15aee6b4429df806bd6",
+        "final": "6c50e27c2242c08573fb5d83b4c3475ad31eebcdffc33035491e53b21fe30a77"
+      },
+      "checks": {
+        "source_hash": true,
+        "reference_hashes": true,
+        "native_key_erosion_exact": true,
+        "non_key_non_eroded_colors_unchanged": true,
+        "rgba": true,
+        "size": true,
+        "no_source_clipping": true,
+        "all_final_colors_from_source": true,
+        "visual_inspection": "COMPLETED",
+        "owner_acceptance": "ACCEPTED_G2_v01",
+        "middle_exactly_uniform_per_row": true,
+        "nine_slice_margins": [
+          32,
+          32,
+          16,
+          16
+        ],
+        "material_derivation": "Proportional-height endcaps retained; native center column replicated horizontally. Source grain remains in historical source."
+      },
+      "content_state": "CANON_VISUAL_G2",
+      "runtime_admission": true
+    },
+    {
+      "code": "P03",
+      "revision": "v01",
+      "kind": "plate",
+      "source": "sources/P03_v01.png",
+      "source_sha256": "9b965e07ae920890c26542ea82c398d5ce73d985a44c05a3ba70fe47873fdaf4",
+      "prepared": "prepared/P03_v01.png",
+      "size": [
+        720,
+        112
+      ],
+      "hashes": {
+        "native": "f686fc7074cec71fa5448132fb8ad934e157f8735b577ed73078af2ea8d689ce",
+        "final": "87a2ed9f6fbd81b66b577f8bc66726d296a2c398df8b8dddd15e34ea3ae398f8"
+      },
+      "checks": {
+        "source_hash": true,
+        "reference_hashes": true,
+        "native_key_erosion_exact": true,
+        "non_key_non_eroded_colors_unchanged": true,
+        "rgba": true,
+        "size": true,
+        "no_source_clipping": true,
+        "all_final_colors_from_source": true,
+        "visual_inspection": "COMPLETED",
+        "owner_acceptance": "ACCEPTED_G2_v01",
+        "middle_exactly_uniform_per_row": true,
+        "nine_slice_margins": [
+          80,
+          80,
+          36,
+          36
+        ],
+        "material_derivation": "Proportional-height endcaps retained; native center column replicated horizontally. Source grain remains in historical source."
+      },
+      "content_state": "CANON_VISUAL_G2",
+      "runtime_admission": true
+    },
+    {
+      "code": "C01",
+      "revision": "v01",
+      "kind": "cursor",
+      "source": "sources/C01_v01.png",
+      "source_sha256": "7a9b2a90b2c6bf083749a339e1f0f2fcfdd8fcdece432ab692d9fab8622cd988",
+      "prepared": "prepared/C01_v01.png",
+      "size": [
+        32,
+        32
+      ],
+      "hashes": {
+        "native": "305144dc8a90de5d719e5a815d3fbfa11bdbe7221c72e56f87f2ac9972af082b",
+        "final": "13e1ff47d863fce8170b57e4436932e67024a3c655d635c616a130204d2f8954"
+      },
+      "checks": {
+        "source_hash": true,
+        "reference_hashes": true,
+        "native_key_erosion_exact": true,
+        "non_key_non_eroded_colors_unchanged": true,
+        "rgba": true,
+        "size": true,
+        "no_source_clipping": true,
+        "all_final_colors_from_source": true,
+        "visual_inspection": "COMPLETED",
+        "owner_acceptance": "ACCEPTED_G2_v01",
+        "hotspot": [
+          1,
+          1
+        ]
+      },
+      "content_state": "CANON_VISUAL_G2",
+      "runtime_admission": true
+    },
+    {
+      "code": "C02",
+      "revision": "v01",
+      "kind": "cursor",
+      "source": "sources/C02_v01.png",
+      "source_sha256": "a13e7dad815a5914ca41e9a00dad23e4c5df7d55d41e0a9ce7030e26f60e2c0b",
+      "prepared": "prepared/C02_v01.png",
+      "size": [
+        32,
+        32
+      ],
+      "hashes": {
+        "native": "293ddef09359307743a41723d3f94a2b600e058f415d48d89a953df8c79098c8",
+        "final": "735e8c39c7c390f27f930907d63e189c1d5f36dca95a7c19c1b5e87bd542e138"
+      },
+      "checks": {
+        "source_hash": true,
+        "reference_hashes": true,
+        "native_key_erosion_exact": true,
+        "non_key_non_eroded_colors_unchanged": true,
+        "rgba": true,
+        "size": true,
+        "no_source_clipping": true,
+        "all_final_colors_from_source": true,
+        "visual_inspection": "COMPLETED",
+        "owner_acceptance": "ACCEPTED_G2_v01",
+        "hotspot": [
+          4,
+          1
+        ]
+      },
+      "content_state": "CANON_VISUAL_G2",
+      "runtime_admission": true
+    },
+    {
+      "code": "C03",
+      "revision": "v01",
+      "kind": "cursor",
+      "source": "sources/C03_v01.png",
+      "source_sha256": "18d0bff0822ed44d4c5dfe6ec8395d04e930a3dbb57d3b6b6aa1266988fed906",
+      "prepared": "prepared/C03_v01.png",
+      "size": [
+        40,
+        40
+      ],
+      "hashes": {
+        "native": "f68154a8aec3ee0f61f2511f6dc00079b39c3f295318310cba080a41b4bf9a0d",
+        "final": "1ce67285efb10cd4fc40f8e0049915234447e52076d01a89ccdd2f653534286e"
+      },
+      "checks": {
+        "source_hash": true,
+        "reference_hashes": true,
+        "native_key_erosion_exact": true,
+        "non_key_non_eroded_colors_unchanged": true,
+        "rgba": true,
+        "size": true,
+        "no_source_clipping": true,
+        "all_final_colors_from_source": true,
+        "visual_inspection": "COMPLETED",
+        "owner_acceptance": "ACCEPTED_G2_v01",
+        "center_12x12_clear": true,
+        "four_fold_rgba_symmetry": true,
+        "hotspot": [
+          20,
+          20
+        ]
+      },
+      "content_state": "CANON_VISUAL_G2",
+      "runtime_admission": true
+    }
+  ],
+  "optional_L02": "DEFERRED_OPTIONAL",
+  "preview_limitation": "Composites on actual local backgrounds/capture; no runtime admission, no hardware cursor/playtest claim.",
+  "next": "Authorize S014 remaining UI hookups; S015 full verification and S016 closure remain pending.",
+  "owner_approval": {
+    "plan": "PLAN-065",
+    "spec": "SPEC-132",
+    "gate": "G2_ACCEPTED_PER_PIECE",
+    "date": "2026-10-11",
+    "owner_reply": "Aprovo as nove revisões v01",
+    "content_state": "CANON_VISUAL_G2",
+    "runtime_admission": false,
+    "scope": "Visual acceptance of each named v01 source and prepared derivative shown in the gallery; includes Gothic capitals of L03/L04, contrast and cursors at 32/40 px.",
+    "records": [
+      {
+        "code": "L03",
+        "revision": "v01",
+        "source": "sources/L03_v01.png",
+        "source_sha256": "ad346142fe9362a7ce2401f5e98ad38285af5177f3c5fe4bafef92e0a8a7c0bd",
+        "prepared": "prepared/L03_v01.png",
+        "prepared_sha256": "a1e49651d87284593a7f7a405e3cb893335ecf1c15daefb3377ece0c520a0633",
+        "native_sha256": "20532e198751598ab39fadf59eada8bb8246ab20a56d5a9733e9ef48bf391b52",
+        "size": [
+          551,
+          160
+        ]
+      },
+      {
+        "code": "L04",
+        "revision": "v01",
+        "source": "sources/L04_v01.png",
+        "source_sha256": "edabab76d8b055cc40f089c7cd2bf5a027b6ef32cb5a45fec125019239f84647",
+        "prepared": "prepared/L04_v01.png",
+        "prepared_sha256": "c7b6476dcd4e8a184d1cd80df82fa87f78e11632c66d343d56ce701316f86187",
+        "native_sha256": "dca352e439891084293210156d40700929eab9f2a9802b29c3e6b7dcf85dbf28",
+        "size": [
+          720,
+          135
+        ]
+      },
+      {
+        "code": "L05",
+        "revision": "v01",
+        "source": "sources/L05_v01.png",
+        "source_sha256": "630dba868bc0c45938d30e7840d64b1d99c16e31c1d6b7e0bfa611d654053a6f",
+        "prepared": "prepared/L05_v01.png",
+        "prepared_sha256": "0402d2523fea04a44b9618a9f6059d82099dfa5c3ed812d7024489061e24184b",
+        "native_sha256": "2f82125f435a792bd674ff36f092eca1193e6cb0f8a8aa93758a4bb1d982b96e",
+        "size": [
+          537,
+          110
+        ]
+      },
+      {
+        "code": "P01",
+        "revision": "v01",
+        "source": "sources/P01_v01.png",
+        "source_sha256": "9d5e1b528054108f4aefcaf3d868502d4665334d4c77720aee487d6a27c94688",
+        "prepared": "prepared/P01_v01.png",
+        "prepared_sha256": "24a4d122d5da2407e0aa945f02dfa80dbca9998cd158de2829bb1210694bd6b4",
+        "native_sha256": "fefef24124d268a86a90ca935a32affc61d4e10302ead013d5697906607ecfc2",
+        "size": [
+          640,
+          96
+        ]
+      },
+      {
+        "code": "P02",
+        "revision": "v01",
+        "source": "sources/P02_v01.png",
+        "source_sha256": "9466c812254bdc684ebd2ab8e16db8bf8430e2b77b95aa6c1cd0943ac5e1cffa",
+        "prepared": "prepared/P02_v01.png",
+        "prepared_sha256": "6c50e27c2242c08573fb5d83b4c3475ad31eebcdffc33035491e53b21fe30a77",
+        "native_sha256": "02a4b76ed66ac551a96eaff0d1183e3a82e8b541a52bc15aee6b4429df806bd6",
+        "size": [
+          320,
+          48
+        ]
+      },
+      {
+        "code": "P03",
+        "revision": "v01",
+        "source": "sources/P03_v01.png",
+        "source_sha256": "9b965e07ae920890c26542ea82c398d5ce73d985a44c05a3ba70fe47873fdaf4",
+        "prepared": "prepared/P03_v01.png",
+        "prepared_sha256": "87a2ed9f6fbd81b66b577f8bc66726d296a2c398df8b8dddd15e34ea3ae398f8",
+        "native_sha256": "f686fc7074cec71fa5448132fb8ad934e157f8735b577ed73078af2ea8d689ce",
+        "size": [
+          720,
+          112
+        ]
+      },
+      {
+        "code": "C01",
+        "revision": "v01",
+        "source": "sources/C01_v01.png",
+        "source_sha256": "7a9b2a90b2c6bf083749a339e1f0f2fcfdd8fcdece432ab692d9fab8622cd988",
+        "prepared": "prepared/C01_v01.png",
+        "prepared_sha256": "13e1ff47d863fce8170b57e4436932e67024a3c655d635c616a130204d2f8954",
+        "native_sha256": "305144dc8a90de5d719e5a815d3fbfa11bdbe7221c72e56f87f2ac9972af082b",
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "code": "C02",
+        "revision": "v01",
+        "source": "sources/C02_v01.png",
+        "source_sha256": "a13e7dad815a5914ca41e9a00dad23e4c5df7d55d41e0a9ce7030e26f60e2c0b",
+        "prepared": "prepared/C02_v01.png",
+        "prepared_sha256": "735e8c39c7c390f27f930907d63e189c1d5f36dca95a7c19c1b5e87bd542e138",
+        "native_sha256": "293ddef09359307743a41723d3f94a2b600e058f415d48d89a953df8c79098c8",
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "code": "C03",
+        "revision": "v01",
+        "source": "sources/C03_v01.png",
+        "source_sha256": "18d0bff0822ed44d4c5dfe6ec8395d04e930a3dbb57d3b6b6aa1266988fed906",
+        "prepared": "prepared/C03_v01.png",
+        "prepared_sha256": "1ce67285efb10cd4fc40f8e0049915234447e52076d01a89ccdd2f653534286e",
+        "native_sha256": "f68154a8aec3ee0f61f2511f6dc00079b39c3f295318310cba080a41b4bf9a0d",
+        "size": [
+          40,
+          40
+        ]
+      }
+    ],
+    "integration_authorized": false,
+    "commit_authorized": false,
+    "push_authorized": false
+  },
+  "gate": "G2_ACCEPTED_PER_PIECE",
+  "completed_steps": 13,
+  "admission_receipt": "admission-receipt.json",
+  "status": "ART_COMMITTED_PUSH_VERIFIED_WAITING_S014",
+  "publication": {
+    "plan": "PLAN-065",
+    "step": "S-013",
+    "request_classification": "IN_PLAN",
+    "authorization": "atena, aprovado commite e push",
+    "branch": "codex/assets-preparation-2026-10-10",
+    "date": "2026-10-11",
+    "status": "ART_COMMIT_PUSH_VERIFIED",
+    "art_commit": "86c453fe2f6328b9495f8bb0cdc36618e02111f2",
+    "remote_tip_at_art_verification": "86c453fe2f6328b9495f8bb0cdc36618e02111f2",
+    "remote_before": "85ee82ab4366c0d14a60e44e3b9c7a060dcf38c7",
+    "also_delivered_prior_commits": [
+      "7af88e7",
+      "1e05a69"
+    ],
+    "force_push": false,
+    "main_changed": false,
+    "build_run": false,
+    "hero_changes_committed": false,
+    "next_checkpoint": "S-014/OWNER_INTEGRATION_GATE"
+  }
+}

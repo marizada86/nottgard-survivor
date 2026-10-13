@@ -1,0 +1,76 @@
+{
+	"records": [
+		{
+			"content_state": "DRAFT",
+			"final": "prepared/L01_v01.png",
+			"final_size": [
+				700,
+				176
+			],
+			"interpolation": "nearest",
+			"key_pixels_removed": 1224313,
+			"native": "prepared/L01_v01_native.png",
+			"padded_crop": [
+				0,
+				309,
+				1536,
+				695
+			],
+			"revision": "v01",
+			"runtime_admission": false,
+			"small": "previews/L01_v01_300x48.png",
+			"small_size": [
+				191,
+				48
+			],
+			"source": "C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/.atena/generated/art-candidates/lettering/l01_v01.png",
+			"source_bbox": [
+				3,
+				313,
+				1533,
+				691
+			],
+			"source_size": [
+				1536,
+				1024
+			],
+			"title": "previews/L01_v01_title_1280x720.png"
+		},
+		{
+			"content_state": "DRAFT",
+			"final": "prepared/L01_v02.png",
+			"final_size": [
+				905,
+				176
+			],
+			"interpolation": "nearest",
+			"key_pixels_removed": 1324082,
+			"native": "prepared/L01_v02_native.png",
+			"padded_crop": [
+				14,
+				373,
+				1522,
+				666
+			],
+			"revision": "v02",
+			"runtime_admission": false,
+			"small": "previews/L01_v02_300x48.png",
+			"small_size": [
+				247,
+				48
+			],
+			"source": "C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/.atena/generated/art-candidates/lettering/l01_v02.png",
+			"source_bbox": [
+				18,
+				377,
+				1518,
+				662
+			],
+			"source_size": [
+				1536,
+				1024
+			],
+			"title": "previews/L01_v02_title_1280x720.png"
+		}
+	]
+}

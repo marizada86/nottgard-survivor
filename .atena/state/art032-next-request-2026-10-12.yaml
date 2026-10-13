@@ -1,0 +1,22 @@
+version: 1
+request: ART032-NEXT-REQUEST
+revision: v01
+owner_request: 'atena, proxima imagem, depois iplemente'
+request_classification: PLAN_CHANGE_REQUEST
+approval_mode: per-plan
+status: IMPLEMENTATION_COMPLETED
+checkpoint: IMPLEMENTATION_TECHNICALLY_COMPLETED
+preflight_ordered_steps: [INVENTORY, CONSUMPTION_MAP]
+preflight_completed_steps: 2
+preflight_total_steps: 2
+accepted_draft_sources: 17
+evidence: .atena/generated/art032-implementation-preflight-2026-10-12/preflight.md
+manifest: .atena/generated/art032-implementation-preflight-2026-10-12/manifest.json
+pending_question: null
+new_image_scope: NONE_REQUESTED_BEFORE_ART032_IMPLEMENTATION
+runtime_implementation_scope: ART032_17_ACCEPTED_SOURCES
+next_execution_authorized: false
+preserved_checkpoint: PLAN071_AND_HERO_EXTRACTION_REVIEW
+next_objective: 'Playtest humano pendente; implementação concluída, nenhuma nova imagem solicitada'
+owner_clarification: "pode implementar"
+implementation_plan: PLAN-ART032-IMPLEMENT/v01

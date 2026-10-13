@@ -50,6 +50,10 @@ var _hq_open := false
 
 func _ready() -> void:
 	Game.screen_name = "menu"
+	Lettering.decorate_label($Title, "placa_titulo_larga", 30)
+	$Title.size = Vector2(720, 56)
+	Lettering.decorate_label($Tabs/Jogar/Left/HeroTitle, "placa_titulo_secao", 20)
+	Lettering.decorate_label($Tabs/Jogar/Right/StageTitle, "placa_titulo_secao", 18)
 	if Game.qa_sandbox:
 		%Tabs.current_tab = Game.qa_menu_tab
 	stage_list.fixed_icon_size = Vector2i(96, 54)
@@ -214,7 +218,7 @@ func _layout_touch_menu() -> void:
 	var safe := Game.touch_safe_rect()
 	%Tabs.offset_left = safe.position.x
 	%Tabs.offset_right = safe.end.x - get_viewport_rect().size.x
-	%Tabs.offset_top = safe.position.y + 88
+	%Tabs.offset_top = safe.position.y + 104
 	%Tabs.offset_bottom = safe.end.y - get_viewport_rect().size.y - 24
 	%Tabs.add_theme_font_size_override("font_size", 20)
 	%Tabs.add_theme_constant_override("side_margin", 12)
@@ -227,7 +231,7 @@ func _layout_touch_menu() -> void:
 		bar.add_theme_stylebox_override(style_name, style)
 	$Title.position = safe.position
 	$Title.add_theme_font_size_override("font_size", 32)
-	$Subtitle.position = safe.position + Vector2(4, 48)
+	$Subtitle.position = safe.position + Vector2(4, 64)
 	$Tabs/Jogar/Left.custom_minimum_size.x = 240
 	$Tabs/Jogar/Mid.custom_minimum_size.x = 420
 	portrait.custom_minimum_size = Vector2(360, 180)

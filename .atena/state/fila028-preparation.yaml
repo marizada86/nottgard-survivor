@@ -1,0 +1,46 @@
+plan: PLAN-053
+spec: SPEC-121-retomada-fila-imagens/preparation-fila028-v01.md
+revision: FILA-028-PREP/v01
+classification: PLAN_CHANGE_REQUEST
+approval_mode: per-plan
+mode_basis: 'Escolha anterior Por plano preservada'
+scope_approval: 'Aprovo a preparação das 34 fontes'
+status: ACCEPTED_33_HELD_ALTAR
+altar_hold_resolution: ACCEPTED_CORRECTION_AL01_CORR_v01
+altar_visual_register: .atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md
+current_prepared_inventory: .atena/generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json
+checkpoint: S-007/ACCEPTED_WITH_HELD_ALTAR
+source_state: CANON_SOURCE_VISUAL_ONLY
+derived_state: MIXED_CANON_PREPARATION_33_DRAFT_ALTAR
+runtime_admission: false
+ordered_steps: [TOOLS_PARAMETERS, ICONS_15, PROPS_18, ALTAR_6_FRAMES, AUDIT, GALLERY]
+total_steps: 6
+completed_steps: 6
+previous_commit: 09bdda2df184e15cf5748c4c779acebe1f360978
+manifest: .atena/generated/fila028-preparation-2026-10-10/manifest.json
+next_objective: 'Definir proximo escopo de correcao do altar retido; sem execucao aprovada'
+tool: 'F:/dev/nottgard-survivor/Godot_v4.7.2-stable_win64.exe'
+tool_version: '4.7.2.stable.official.ed1daf0bf'
+approval_status: APPROVED_PER_PLAN
+derivatives: 34
+frames: 6
+masks: 24
+metric_pass_review_pending: 0
+accepted_derivatives: 33
+held: [AL01]
+hold_reason: 'Corpo varia entre quadros; ROI nao invariante'
+evidence: .atena/evidence/fila028-preparation-2026-10-10.md
+gallery: .atena/generated/fila028-preparation-2026-10-10/index.html
+source_hashes_unchanged: true
+owner_preparation_acceptance: 'continuando do ultimo checkpoint, está aprovado, pode comitar'
+acceptance_classification: IN_PLAN
+visual_register: .atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md
+acceptance_commit: AUTHORIZED_LOCAL_ONLY
+acceptance_push: NOT_AUTHORIZED
+commit_push: PUSHED_REMOTE_SHA_VERIFIED
+preparation_commit: 711e585371bbb785a1ccefde77dfa0a2de648a95
+verified_remote_sha: 711e585371bbb785a1ccefde77dfa0a2de648a95
+git_authorization: 'atena, commit e push'
+git_branch: codex/assets-preparation-2026-10-10
+next_output: 'PNG finais em pacote local, mascaras/parametros, auditoria e galeria'
+return_checkpoint: S-007/ORIGINAL-GENERATIONS/NORMALIZATION-EXTRACTION-11

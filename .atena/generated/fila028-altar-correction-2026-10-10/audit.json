@@ -1,0 +1,523 @@
+{
+  "revision": "AL01-CORR/v01",
+  "status": "TECHNICALLY_VERIFIED_DRAFT_OWNER_REVIEW_PENDING",
+  "content_state": "DRAFT",
+  "runtime_admission": false,
+  "checks": {
+    "protected_inputs_unchanged": true,
+    "mask_partition_disjoint": true,
+    "body_invariant_all_pixels": true,
+    "outside_effects_invariant_all_pixels": true,
+    "body_opaque_all_segmented_pixels": true,
+    "frames_rgba_192": true,
+    "packed_rgba_1152_192": true,
+    "anchor_invariant": true,
+    "transparent_outer_borders": true,
+    "at_least_four_distinct_frames": true,
+    "motion_bounded_cyclic": true,
+    "seam_delta_in_adjacent_range": true
+  },
+  "source_hashes": [
+    {
+      "path": ".atena/generated/fila028-icons-2026-10-10/native-sources/IC01_v01.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC01_v01.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-icons-2026-10-10/native-sources/IC02_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC02_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-icons-2026-10-10/native-sources/IC03_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC03_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-icons-2026-10-10/native-sources/IC04_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC04_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-icons-2026-10-10/native-sources/IC05_v03.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC05_v03.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-icons-2026-10-10/native-sources/IC06_v01.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC06_v01.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-icons-2026-10-10/native-sources/IC07_v01.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC07_v01.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-icons-2026-10-10/native-sources/IC08_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC08_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-icons-2026-10-10/native-sources/IC09_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC09_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-icons-2026-10-10/native-sources/IC10_v01.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC10_v01.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-icons-2026-10-10/native-sources/IC11_v01.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC11_v01.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-icons-2026-10-10/native-sources/IC12_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC12_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-icons-2026-10-10/native-sources/IC13_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC13_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-ar-se-2026-10-10/native-sources/AR01_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/AR01_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-ar-se-2026-10-10/native-sources/SE01_v03.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE01_v03.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-ar-se-2026-10-10/native-sources/SE02_v03.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE02_v03.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-remaining-2026-10-10/native-sources/SE03_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE03_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-remaining-2026-10-10/native-sources/SE04_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE04_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-remaining-2026-10-10/native-sources/SE05_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE05_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-remaining-2026-10-10/native-sources/SE06_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE06_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-remaining-2026-10-10/native-sources/SE07_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE07_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-remaining-2026-10-10/native-sources/SE08_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE08_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-remaining-2026-10-10/native-sources/SE09_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE09_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-remaining-2026-10-10/native-sources/SE10_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE10_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-remaining-2026-10-10/native-sources/SE11_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE11_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-remaining-2026-10-10/native-sources/I01_v03.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/I01_v03.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-remaining-2026-10-10/native-sources/I02_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/I02_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-generation-2026-10-10/native-sources/AL01_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/AL01_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-generation-2026-10-10/native-sources/EV01_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/EV01_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-generation-2026-10-10/native-sources/EV02_v01.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/EV02_v01.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-generation-2026-10-10/native-sources/EV03_v01.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/EV03_v01.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-generation-2026-10-10/native-sources/EV04_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/EV04_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-generation-2026-10-10/native-sources/EV05_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/EV05_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-generation-2026-10-10/native-sources/EV06_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/EV06_v02.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/frames/AL01_v02_f0.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/frames/AL01_v02_f1.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/frames/AL01_v02_f2.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/frames/AL01_v02_f3.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/frames/AL01_v02_f4.png",
+      "unchanged": true
+    },
+    {
+      "path": ".atena/generated/fila028-preparation-2026-10-10/frames/AL01_v02_f5.png",
+      "unchanged": true
+    }
+  ],
+  "body_pixels": 14278,
+  "fire_pixels": 350,
+  "allowed_effect_pixels": 390,
+  "unique_frames": 6,
+  "frames": [
+    {
+      "frame": 0,
+      "sha256": "38ad9aa5962d0653a179ac15a7f15e53360104e28095a76c825ecc5f4c666b95",
+      "mode": "RGBA",
+      "size": [
+        192,
+        192
+      ],
+      "body_changed_pixels": 0,
+      "outside_allowed_changed_pixels": 0,
+      "nonopaque_body_pixels": 0,
+      "effect_changed_pixels": 364,
+      "bbox": [
+        18,
+        18,
+        182,
+        171
+      ],
+      "edge_alpha_pixels": 0
+    },
+    {
+      "frame": 1,
+      "sha256": "c53be0ced2b5a387bb19487992e79818cc5f13902a7cbb8cbc2ac5ced236a845",
+      "mode": "RGBA",
+      "size": [
+        192,
+        192
+      ],
+      "body_changed_pixels": 0,
+      "outside_allowed_changed_pixels": 0,
+      "nonopaque_body_pixels": 0,
+      "effect_changed_pixels": 368,
+      "bbox": [
+        18,
+        18,
+        182,
+        171
+      ],
+      "edge_alpha_pixels": 0
+    },
+    {
+      "frame": 2,
+      "sha256": "75c92628052c1f21c668eebc6dcef8a5b67897e9649cbffc73ff0550e395dbf1",
+      "mode": "RGBA",
+      "size": [
+        192,
+        192
+      ],
+      "body_changed_pixels": 0,
+      "outside_allowed_changed_pixels": 0,
+      "nonopaque_body_pixels": 0,
+      "effect_changed_pixels": 349,
+      "bbox": [
+        18,
+        18,
+        182,
+        171
+      ],
+      "edge_alpha_pixels": 0
+    },
+    {
+      "frame": 3,
+      "sha256": "b69f13c8139a6aec5f6e2d6b6ffb5e2607361c3750d0658bc8516cb64e2b20d3",
+      "mode": "RGBA",
+      "size": [
+        192,
+        192
+      ],
+      "body_changed_pixels": 0,
+      "outside_allowed_changed_pixels": 0,
+      "nonopaque_body_pixels": 0,
+      "effect_changed_pixels": 370,
+      "bbox": [
+        18,
+        18,
+        182,
+        171
+      ],
+      "edge_alpha_pixels": 0
+    },
+    {
+      "frame": 4,
+      "sha256": "636a7b93e9b37a12535c39a4cafca8c721fd212fb5b8e573ec28a71617c27c66",
+      "mode": "RGBA",
+      "size": [
+        192,
+        192
+      ],
+      "body_changed_pixels": 0,
+      "outside_allowed_changed_pixels": 0,
+      "nonopaque_body_pixels": 0,
+      "effect_changed_pixels": 370,
+      "bbox": [
+        18,
+        18,
+        182,
+        171
+      ],
+      "edge_alpha_pixels": 0
+    },
+    {
+      "frame": 5,
+      "sha256": "70011f40fec5405d387f8565b5086772a7edc95963fb6664dcd54247a72f3fac",
+      "mode": "RGBA",
+      "size": [
+        192,
+        192
+      ],
+      "body_changed_pixels": 0,
+      "outside_allowed_changed_pixels": 0,
+      "nonopaque_body_pixels": 0,
+      "effect_changed_pixels": 343,
+      "bbox": [
+        18,
+        18,
+        182,
+        171
+      ],
+      "edge_alpha_pixels": 0
+    }
+  ],
+  "transitions": [
+    {
+      "from_frame": 0,
+      "to_frame": 1,
+      "changed_pixels": 320,
+      "body_changed_pixels": 0,
+      "effect_rgba_l1": 5056
+    },
+    {
+      "from_frame": 1,
+      "to_frame": 2,
+      "changed_pixels": 258,
+      "body_changed_pixels": 0,
+      "effect_rgba_l1": 36512
+    },
+    {
+      "from_frame": 2,
+      "to_frame": 3,
+      "changed_pixels": 370,
+      "body_changed_pixels": 0,
+      "effect_rgba_l1": 40909
+    },
+    {
+      "from_frame": 3,
+      "to_frame": 4,
+      "changed_pixels": 315,
+      "body_changed_pixels": 0,
+      "effect_rgba_l1": 6729
+    },
+    {
+      "from_frame": 4,
+      "to_frame": 5,
+      "changed_pixels": 255,
+      "body_changed_pixels": 0,
+      "effect_rgba_l1": 37235
+    },
+    {
+      "from_frame": 5,
+      "to_frame": 0,
+      "changed_pixels": 369,
+      "body_changed_pixels": 0,
+      "effect_rgba_l1": 39601
+    }
+  ],
+  "motion": [
+    {
+      "name": "back",
+      "max_absolute_shift": 0,
+      "max_cyclic_step": 0
+    },
+    {
+      "name": "right",
+      "max_absolute_shift": 1,
+      "max_cyclic_step": 1
+    },
+    {
+      "name": "left",
+      "max_absolute_shift": 0,
+      "max_cyclic_step": 0
+    },
+    {
+      "name": "front",
+      "max_absolute_shift": 0,
+      "max_cyclic_step": 0
+    },
+    {
+      "name": "embers",
+      "max_absolute_shift": 0,
+      "max_cyclic_step": 0
+    }
+  ],
+  "sheet_sha256": "4919393a4c10b1b357e13646537b599035cbefacf7de1e374f1876501d49a605",
+  "mask_authority": "Manual fire regions inspected against base image before frame production",
+  "seam_criterion": "Wrap L1 <= 1.25 times maximum adjacent non-wrap L1; human rhythm acceptance still pending",
+  "limitations": [
+    "Mask classification is a visual judgment; opacity/invariance measured over every pixel in those masks.",
+    "Three flames use brightness-only fallback; right flame shifts by up to one pixel.",
+    "No runtime test or owner loop acceptance performed."
+  ]
+}

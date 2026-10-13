@@ -1,0 +1,253 @@
+{
+  "body": "all native opaque pixels outside fire masks",
+  "effects": [
+    {
+      "name": "back",
+      "phase": 0.0,
+      "pixels": 112.0,
+      "rect": [
+        94.0,
+        17.0,
+        107.0,
+        41.0
+      ],
+      "shift": false
+    },
+    {
+      "name": "right",
+      "phase": 1.4,
+      "pixels": 82.0,
+      "rect": [
+        128.0,
+        34.0,
+        139.0,
+        54.0
+      ],
+      "shift": true
+    },
+    {
+      "name": "left",
+      "phase": 2.8,
+      "pixels": 47.0,
+      "rect": [
+        64.0,
+        58.0,
+        72.0,
+        68.0
+      ],
+      "shift": false
+    },
+    {
+      "name": "front",
+      "phase": 4.2,
+      "pixels": 36.0,
+      "rect": [
+        121.0,
+        73.0,
+        129.0,
+        82.0
+      ],
+      "shift": false
+    },
+    {
+      "name": "embers",
+      "phase": 0.9,
+      "pixels": 73.0,
+      "rect": [
+        86.0,
+        70.0,
+        107.0,
+        77.0
+      ],
+      "shift": false
+    }
+  ],
+  "max_shift_px": 1.0,
+  "motion_fallback": "brightness only when envelope intersects non-fire object",
+  "phases": 6.0,
+  "preview_ms": 900.0,
+  "revision": "AL01-CORR/v01",
+  "timeline": [
+    {
+      "effects": [
+        {
+          "gain": 0.98,
+          "name": "back",
+          "shift": 0
+        },
+        {
+          "gain": 1.05390872974913,
+          "name": "right",
+          "shift": 1
+        },
+        {
+          "gain": 1.00512411126169,
+          "name": "left",
+          "shift": 0
+        },
+        {
+          "gain": 0.914631817068981,
+          "name": "front",
+          "shift": 0
+        },
+        {
+          "gain": 1.0739992291553,
+          "name": "embers",
+          "shift": 0
+        }
+      ],
+      "frame": 0
+    },
+    {
+      "effects": [
+        {
+          "gain": 1.04495190528383,
+          "name": "back",
+          "shift": 0
+        },
+        {
+          "gain": 1.02799405464159,
+          "name": "right",
+          "shift": 1
+        },
+        {
+          "gain": 0.931362919403424,
+          "name": "left",
+          "shift": 0
+        },
+        {
+          "gain": 0.915472534102395,
+          "name": "front",
+          "shift": 0
+        },
+        {
+          "gain": 1.09159921742981,
+          "name": "embers",
+          "shift": 0
+        }
+      ],
+      "frame": 1
+    },
+    {
+      "effects": [
+        {
+          "gain": 1.04495190528383,
+          "name": "back",
+          "shift": 0
+        },
+        {
+          "gain": 0.954085324892453,
+          "name": "right",
+          "shift": 0
+        },
+        {
+          "gain": 0.906238808141732,
+          "name": "left",
+          "shift": 0
+        },
+        {
+          "gain": 0.980840717033414,
+          "name": "front",
+          "shift": 0
+        },
+        {
+          "gain": 0.997599988274515,
+          "name": "embers",
+          "shift": 0
+        }
+      ],
+      "frame": 2
+    },
+    {
+      "effects": [
+        {
+          "gain": 0.98,
+          "name": "back",
+          "shift": 0
+        },
+        {
+          "gain": 0.906091270250865,
+          "name": "right",
+          "shift": -1
+        },
+        {
+          "gain": 0.954875888738307,
+          "name": "left",
+          "shift": 0
+        },
+        {
+          "gain": 1.04536818293102,
+          "name": "front",
+          "shift": 0
+        },
+        {
+          "gain": 0.886000770844702,
+          "name": "embers",
+          "shift": 0
+        }
+      ],
+      "frame": 3
+    },
+    {
+      "effects": [
+        {
+          "gain": 0.915048094716167,
+          "name": "back",
+          "shift": 0
+        },
+        {
+          "gain": 0.932005945358413,
+          "name": "right",
+          "shift": -1
+        },
+        {
+          "gain": 1.02863708059658,
+          "name": "left",
+          "shift": 0
+        },
+        {
+          "gain": 1.0445274658976,
+          "name": "front",
+          "shift": 0
+        },
+        {
+          "gain": 0.868400782570187,
+          "name": "embers",
+          "shift": 0
+        }
+      ],
+      "frame": 4
+    },
+    {
+      "effects": [
+        {
+          "gain": 0.915048094716167,
+          "name": "back",
+          "shift": 0
+        },
+        {
+          "gain": 1.00591467510755,
+          "name": "right",
+          "shift": 0
+        },
+        {
+          "gain": 1.05376119185827,
+          "name": "left",
+          "shift": 0
+        },
+        {
+          "gain": 0.979159282966586,
+          "name": "front",
+          "shift": 0
+        },
+        {
+          "gain": 0.962400011725485,
+          "name": "embers",
+          "shift": 0
+        }
+      ],
+      "frame": 5
+    }
+  ],
+  "tool": "Godot 4.7.2 Image"
+}

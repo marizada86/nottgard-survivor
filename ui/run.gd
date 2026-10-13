@@ -224,6 +224,9 @@ func _setup_encounter_overlays() -> void:
 	_boss_intro_title.add_theme_color_override("font_outline_color", Color(0.01, 0.01, 0.01))
 	_boss_intro_title.add_theme_constant_override("outline_size", 8)
 	_boss_intro_panel.add_child(_boss_intro_title)
+	Lettering.decorate_label(_boss_intro_title, "placa_chefe", 28)
+	_boss_intro_title.offset_top = -136.0
+	_boss_intro_title.offset_bottom = -64.0
 	_boss_intro_subtitle = Label.new()
 	_boss_intro_subtitle.set_anchors_preset(Control.PRESET_CENTER_BOTTOM)
 	_boss_intro_subtitle.offset_left = -460.0

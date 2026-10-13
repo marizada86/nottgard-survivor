@@ -2,7 +2,7 @@
 id: "ART-PROMPTS-060"
 type: "prompts-de-arte"
 title: "Erik Blackthorn e Arlindo Orlando: retrato e as nove tiras de animação (heróis jogáveis)"
-status: "prompts prontos para o ChatGPT; nenhuma imagem gerada; candidatos ficam fora do runtime até admissão do dono"
+status: "20 fontes DRAFT geradas; extração/normalização em revisão; candidatos fora do runtime até admissão do dono"
 priority: "alta (pedido do dono em 2026-10-09: assets e imagens de Erik e Arlindo em primeiro lugar)"
 created: "2026-10-09"
 relations: ["[[SPEC-160-arlindo-orlando-e-erik-blackthorn-jogaveis]]", "[[PROPOSTA-arlindo-e-erik-jogaveis-2026-10-09]]", "[[ART-PROMPTS-055-regerar-caminhadas-e-acoes-dos-herois]]", "[[SPEC-021-prompts-de-animacao-dos-herois]]"]

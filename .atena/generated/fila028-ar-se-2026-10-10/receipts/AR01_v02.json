@@ -1,0 +1,32 @@
+{
+  "code": "AR01",
+  "item": "arcanista",
+  "prompt": "Use case: precise-object-edit. Preserve this exact generic purple mage, anatomy with two hands, closed book, violet palm wisp, palette and pixel-art style. Change only framing: uniformly reduce the entire figure including the wisp so the whole subject occupies 65 to 70 percent of a square canvas height, centered vertically and horizontally with ample empty padding. Keep solid uniform cyan #00FFFF background, no gradient, no new objects, no lettering, no symbols or scene.",
+  "references": [
+    {
+      "path": "assets/interactions/loja.png",
+      "sha256": "b7c092ab509af9687288004d3b0c693f470487b8bd4dbea2f46b353f336afba7",
+      "role": "style anchor"
+    },
+    {
+      "path": "assets/interactions/doacao.png",
+      "sha256": "df364ad5b3672c04f61a4cd0eef2e6185218c518d31217b299a2c6abb27fee0d",
+      "role": "style anchor"
+    },
+    {
+      "path": "assets/interactions/curandeiro.png",
+      "sha256": "ef6656e0c333193a1d8e427a347ce43394dcaacbcc4fab2f5c96ea3eac998f0b",
+      "role": "differentiation reference"
+    }
+  ],
+  "state": "GENERATED_PENDING_VISUAL_ACCEPTANCE",
+  "content_state": "DRAFT",
+  "runtime_admission": false,
+  "actual_references": [
+    "C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/.atena/generated/fila028-ar-se-2026-10-10/native-sources/AR01_v01.png"
+  ],
+  "version": "v02",
+  "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-62185870-d953-4f51-9dd5-4f8f9a6e4b72.png",
+  "destination": ".atena/generated/fila028-ar-se-2026-10-10/native-sources/AR01_v02.png",
+  "native_destination": ".atena/generated/art-candidates/fila028-ar-se/AR01_v02.png"
+}

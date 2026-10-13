@@ -1,0 +1,34 @@
+{
+  "code": "SE03",
+  "item": "camara_aberta",
+  "prompt": "Use case: stylized-concept\nAsset type: objeto interativo de jogo 2D isométrico\nStyle/medium: pixel art sombria coerente com o jogo, pixels nítidos, pedra cinza-arroxeada, metal escuro, um acento de cor por objeto, luz principal no alto à esquerda\nComposition/framing: vista três quartos, objeto inteiro centrado ocupando cerca de 70% da altura, sombra suave no chão\nConstraints: fundo liso ciano #00FFFF, sem texto, letras, números, moldura ou cenário, sem personagens (exceto onde o pedido disser), quadrado\n\nPrimary request: a mesma câmara de pedra da imagem de referência, agora com os três selos quebrados no chão, a porta entreaberta e uma luz violeta quente saindo do vão, poeira no ar; mesma posição, escala e paleta da referência.\nReference 3 is the approved chamber identity. Preserve its camera, stone silhouette, scale and palette. Exactly three broken seals on the floor, no intact seals on door. No banners or new ornament. Request square native high resolution.",
+  "references": [
+    {
+      "path": "assets/interactions/loja.png",
+      "sha256": "b7c092ab509af9687288004d3b0c693f470487b8bd4dbea2f46b353f336afba7",
+      "role": "style anchor"
+    },
+    {
+      "path": "assets/interactions/doacao.png",
+      "sha256": "df364ad5b3672c04f61a4cd0eef2e6185218c518d31217b299a2c6abb27fee0d",
+      "role": "style anchor"
+    },
+    {
+      "path": ".atena/generated/fila028-ar-se-2026-10-10/native-sources/SE02_v03.png",
+      "sha256": "d31f373d4bb2baa332c10b60941f2f0ef27ca78cc1964159bdf4f82956781451",
+      "role": "approved identity authority"
+    }
+  ],
+  "state": "GENERATED_PENDING_VISUAL_ACCEPTANCE",
+  "content_state": "DRAFT",
+  "runtime_admission": false,
+  "actual_references": [
+    "C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/assets/interactions/loja.png",
+    "C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/assets/interactions/doacao.png",
+    "C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/.atena/generated/fila028-ar-se-2026-10-10/native-sources/SE02_v03.png"
+  ],
+  "version": "v01",
+  "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-9312c1f2-b65a-4e6e-827b-9f7b6f2b6c06.png",
+  "destination": ".atena/generated/fila028-remaining-2026-10-10/native-sources/SE03_v01.png",
+  "native_destination": ".atena/generated/art-candidates/fila028-remaining/SE03_v01.png"
+}

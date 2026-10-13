@@ -1,0 +1,22 @@
+{
+  "code": "I02",
+  "item": "tou_um_caminho",
+  "prompt": "Use case: precise-object-edit. Preserve the supplied blessing icon EXACTLY, its shapes, colors, pixel-art style and identity. Change only framing: uniformly shrink the entire composition to the CENTRAL 50 PERCENT of a square canvas. Center on both axes, at least 25 percent genuinely transparent empty padding on EVERY side including all ribbon tips and star glow. No new objects, no background, no text, no border. Keep the blue-white North Star, narrow rising red path and a single small footprint at its base.",
+  "references": [
+    {
+      "path": "assets/icons/boons/tou_um_estrela.png",
+      "sha256": "ae35d6c169b14c9a2ddc1ea75c625d10597d680e267e905d09d4c683cc9b4d85",
+      "role": "deity family anchor"
+    }
+  ],
+  "state": "GENERATED_PENDING_VISUAL_ACCEPTANCE",
+  "content_state": "DRAFT",
+  "runtime_admission": false,
+  "actual_references": [
+    "C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/.atena/generated/fila028-remaining-2026-10-10/native-sources/I02_v01.png"
+  ],
+  "version": "v02",
+  "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-9e1b9f56-2666-440e-85d0-09f8a59841a1.png",
+  "destination": ".atena/generated/fila028-remaining-2026-10-10/native-sources/I02_v02.png",
+  "native_destination": ".atena/generated/art-candidates/fila028-remaining/I02_v02.png"
+}

@@ -1,0 +1,20 @@
+ERROR: Error opening file 'C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/assets/animations/heroes/arlindo/idle.png'.
+   at: load_image (core/io/image_loader.cpp:91)
+   GDScript backtrace (most recent call first):
+       [0] _walk_metrics (res://tests/test_animation_assets.gd:432)
+       [1] _validate_hero_walk_stability (res://tests/test_animation_assets.gd:401)
+       [2] run (res://tests/test_animation_assets.gd:389)
+       [3] _run (res://tests/run_all.gd:17)
+ERROR: Error opening file 'C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/assets/animations/heroes/erik/idle.png'.
+   at: load_image (core/io/image_loader.cpp:91)
+   GDScript backtrace (most recent call first):
+       [0] _walk_metrics (res://tests/test_animation_assets.gd:432)
+       [1] _validate_hero_walk_stability (res://tests/test_animation_assets.gd:401)
+       [2] run (res://tests/test_animation_assets.gd:389)
+       [3] _run (res://tests/run_all.gd:17)
+WARNING: 7 RIDs of type "CanvasItem" were leaked.
+   at: _free_rids (servers/rendering/renderer_canvas_cull.cpp:2735)
+WARNING: 76 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+   at: cleanup (core/object/object.cpp:2536)
+ERROR: 7 resources still in use at exit (run with --verbose for details).
+   at: clear (core/io/resource.cpp:822)

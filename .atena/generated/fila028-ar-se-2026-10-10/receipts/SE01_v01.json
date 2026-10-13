@@ -1,0 +1,28 @@
+{
+  "code": "SE01",
+  "item": "eco",
+  "prompt": "Use case: stylized-concept\nAsset type: objeto interativo de jogo 2D isométrico\nStyle/medium: pixel art sombria coerente com o jogo, pixels nítidos, pedra cinza-arroxeada, metal escuro, um acento de cor por objeto, luz principal no alto à esquerda\nComposition/framing: vista três quartos, objeto inteiro centrado ocupando cerca de 70% da altura, sombra suave no chão\nConstraints: fundo liso ciano #00FFFF, sem texto, letras, números, moldura ou cenário, sem personagens (exceto onde o pedido disser), quadrado\n\nPrimary request: uma lembrança em miniatura: pequeno fragmento de cristal azul-pálido do tamanho de uma mão, translúcido, com um fio de luz branco-azulada subindo e uma fina poeira de partículas; sensação de memória aprisionada, sem rosto nem símbolo.\nComposition extra: ocupa cerca de 50% da altura; deve ler como \"brilho colecionável\", nunca como moeda nem poção.\nRequest square native 1024x1024. Entire isolated subject centered with empty padding. Keep cyan background perfectly flat and uniform; no gradient, no scenery. No readable glyphs. References 1 and 2 are style anchors only.",
+  "references": [
+    {
+      "path": "assets/interactions/loja.png",
+      "sha256": "b7c092ab509af9687288004d3b0c693f470487b8bd4dbea2f46b353f336afba7",
+      "role": "style anchor"
+    },
+    {
+      "path": "assets/interactions/doacao.png",
+      "sha256": "df364ad5b3672c04f61a4cd0eef2e6185218c518d31217b299a2c6abb27fee0d",
+      "role": "style anchor"
+    }
+  ],
+  "state": "GENERATED_PENDING_VISUAL_ACCEPTANCE",
+  "content_state": "DRAFT",
+  "runtime_admission": false,
+  "actual_references": [
+    "C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/assets/interactions/loja.png",
+    "C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/assets/interactions/doacao.png"
+  ],
+  "version": "v01",
+  "source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12406-d9fb-7170-afb2-e8a3fce209b8\\exec-6f488c44-7576-4fce-93e6-6930a45f41b2.png",
+  "destination": ".atena/generated/fila028-ar-se-2026-10-10/native-sources/SE01_v01.png",
+  "native_destination": ".atena/generated/art-candidates/fila028-ar-se/SE01_v01.png"
+}

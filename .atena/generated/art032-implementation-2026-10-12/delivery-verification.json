@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "plan": "PLAN-ART032-IMPLEMENT/v01",
+  "protected_paths_unchanged": 2966,
+  "source_count": 17,
+  "receipts_preserved": 4,
+  "historical_natives_preserved": 27,
+  "runtime_admitted": 17,
+  "backup_hashes": "PASS",
+  "mechanical_data_unchanged": true,
+  "sources_and_derivatives_hashes": "PASS",
+  "padding_alpha_aspect": "PASS",
+  "capture_count": 7,
+  "biomes": 6,
+  "all_assets_covered": true,
+  "test_failures": 0,
+  "test_log": "tests-final-log.txt",
+  "preexisting_engine_errors": [
+    "ERROR: Error opening file 'C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/assets/animations/heroes/arlindo/idle.png'.",
+    "ERROR: Error opening file 'C:/Users/Higor Rossini/.codex/worktrees/ffff/nottgard-survivor/assets/animations/heroes/erik/idle.png'."
+  ],
+  "new_script_errors": 0,
+  "head_unchanged": "51b51f7369ae34eede997435e6eb52ea057daf25",
+  "index_unchanged_empty": true,
+  "human_playtest": "PENDING_NOT_PERFORMED",
+  "commit_push_export": "NOT_AUTHORIZED",
+  "gallery_local_links_verified": 75
+}

@@ -1,0 +1,32 @@
+plan: PLAN-053
+spec: SPEC-121-retomada-fila-imagens/generation-fila028-icons-v01.md
+revision: FILA-028-IC/v01
+classification: PLAN_CHANGE_REQUEST
+approval_mode: per-plan
+mode_basis: 'Por plano (recomendado), escolha anterior preservada'
+scope_approval: APPROVED
+owner_reply: 'atena aprovado continue'
+status: VISUALLY_APPROVED_PREPARATION_PENDING
+checkpoint: S-014/ACCEPTED
+content_state: CANON_SOURCE_VISUAL_ONLY
+runtime_admission: false
+total_steps: 14
+completed_steps: 14
+ordered_codes: [IC01, IC02, IC03, IC04, IC05, IC06, IC07, IC08, IC09, IC10, IC11, IC12, IC13, AUDIT]
+previous_commit: 3b99d62
+return_checkpoint: S-007/ORIGINAL-GENERATIONS/NORMALIZATION-EXTRACTION-11
+evidence: .atena/evidence/fila028-icons-2026-10-10.md
+gallery: .atena/generated/fila028-icons-2026-10-10/index.html
+audit: .atena/generated/fila028-icons-2026-10-10/audit.json
+accepted_exceptions: [IC04-margin, IC03-one-pixel-tolerance]
+next_objective: 'Preparar proximo escopo de producao; recorte e integracao dependem de plano proprio'
+next_inputs: 'Galeria dos 13 candidatos e historico das 23 fontes nativas'
+next_output: 'Aceite ou correcoes identificando codigo e versao; nenhuma promocao inferida'
+next_checks: 'IC04 margem, IC03 tolerancia, IC05 tres partes e IC09 tres pontas'
+next_approval: APPROVED_SOURCE_VISUAL_ONLY
+commit_authorization: 'atena, commit e continue'
+commit_status: COMMITTED_LOCAL
+commit: 0e2d2e6772d315f06608c69aa1d61d630d596148
+commit_scope: 'IC01-IC13 DRAFT, fontes, prompts, galeria, auditoria e estado; aceite visual permanece pendente'
+visual_approval_reply: 'atena, aprovo tudo'
+visual_register: .atena/vault/canon/ASSET-APPROVAL-FILA028-IC-AR-SE-2026-10-10.md

@@ -1,0 +1,15 @@
+extends SceneTree
+func _init() -> void:
+	var project_dir: String = OS.get_cmdline_user_args()[0].replace("\\", "/")
+	var package: String = project_dir.path_join(".atena/generated/fila028-altar-correction-2026-10-10")
+	var base := Image.new()
+	assert(base.load(project_dir.path_join(".atena/generated/fila028-preparation-2026-10-10/frames/AL01_v02_f0.png")) == OK)
+	base.convert(Image.FORMAT_RGBA8)
+	assert(base.save_png(package.path_join("base.png")) == OK)
+	var zoom: Image = base.duplicate()
+	zoom.resize(768,768,Image.INTERPOLATE_NEAREST)
+	var canvas := Image.create(768,768,false,Image.FORMAT_RGBA8)
+	canvas.fill(Color(0.18,0.18,0.21,1))
+	canvas.blend_rect(zoom,Rect2i(0,0,768,768),Vector2i.ZERO)
+	assert(canvas.save_png(package.path_join("base-preview.png")) == OK)
+	quit()

@@ -1,0 +1,91 @@
+{
+  "failures": [],
+  "imported": [
+    {
+      "path": "res://assets/ui/title/logo.png",
+      "resource_exists": true,
+      "size": [
+        700,
+        176
+      ]
+    },
+    {
+      "path": "res://assets/ui/lettering/banner_vitoria.png",
+      "resource_exists": true,
+      "size": [
+        551,
+        160
+      ]
+    },
+    {
+      "path": "res://assets/ui/lettering/banner_derrota.png",
+      "resource_exists": true,
+      "size": [
+        720,
+        135
+      ]
+    },
+    {
+      "path": "res://assets/ui/lettering/banner_evolucao.png",
+      "resource_exists": true,
+      "size": [
+        537,
+        110
+      ]
+    },
+    {
+      "path": "res://assets/ui/lettering/placa_titulo_larga.png",
+      "resource_exists": true,
+      "size": [
+        640,
+        96
+      ]
+    },
+    {
+      "path": "res://assets/ui/lettering/placa_titulo_secao.png",
+      "resource_exists": true,
+      "size": [
+        320,
+        48
+      ]
+    },
+    {
+      "path": "res://assets/ui/lettering/placa_chefe.png",
+      "resource_exists": true,
+      "size": [
+        720,
+        112
+      ]
+    },
+    {
+      "path": "res://assets/ui/cursor/cursor_ponteiro.png",
+      "resource_exists": true,
+      "size": [
+        32,
+        32
+      ]
+    },
+    {
+      "path": "res://assets/ui/cursor/cursor_mao.png",
+      "resource_exists": true,
+      "size": [
+        32,
+        32
+      ]
+    },
+    {
+      "path": "res://assets/ui/cursor/cursor_mira.png",
+      "resource_exists": true,
+      "size": [
+        40,
+        40
+      ]
+    }
+  ],
+  "scope": "S013 admission; not S014 hookups or S015 full suite/playtest",
+  "status": "PASS",
+  "tests": [
+    "test_cursor.gd",
+    "test_lettering_assets.gd"
+  ]
+}

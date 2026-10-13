@@ -1,0 +1,21 @@
+# PLAN-053 / DEV-024 — ações em canvas ampliado, v01 DRAFT APROVADA
+
+Classificação **PLAN_CHANGE_REQUEST**. Modalidade per-plan já selecionada, escopo **aprovado explicitamente**. O contrato de ART-PROMPTS-060 fixa células 256×384; essa proposta altera somente a preparação experimental de quatro ações, não a forma de jogar/renderer. A rota anterior não autorizava presumir nova dimensão; a dimensão experimental foi aprovada explicitamente abaixo. A passada cancelada permanece fora do escopo.
+
+Entradas: AO08 quatro extrações retangulares originais; ER08 quatro, ER09 seis e ER10 seis novas extrações nativas por máscara, com recomposição RGBA exata. Vinte quadros ao todo. Referências: [ART-PROMPTS-060](../../generated/ART-PROMPTS-060-erik-e-arlindo-jogaveis.md), [corpo/pivô aceito](../../generated/hero-body-pivot-2026-10-12/visual-acceptance.json), [máscaras](../../generated/hero-mask-feasibility-2026-10-12/native-extractions.json), [PLAN-001 CANON](../../vault/canon/PLAN-001-nottgard-survivors.md). Identidades, figurinos, props, três quartos e luz originais; contexto de herói isolado/efeitos de ação. Aparência DRAFT permanece; nenhuma lore nova. Fontes retrato/Nottcard e vault só leitura.
+
+## Escopo proposto
+
+Preparar candidatas separadas, via Godot determinístico, em **512×512**, centro corporal x=256 e referência de chão y=448, margem mínima 10 px. Aumentar espaço disponível para magia/fogo/corpo deitado, preservando pixels de fonte, proporção e escala única por tira. Não ampliar o próprio personagem para preencher a célula. Referências corporais 290 px Arlindo/300 px Erik nas poses eretas; comparar proporções com idles aceitos. Crouch/queda não são forçados a altura de pessoa ereta; registrar cabeça/sola/chão e compressão por pose, sem zoom por quadro.
+
+S-001 marcações e encaixe: medir corpo/apoio/efeito dos vinte quadros; papel do contato com o chão documentado, especialmente queda. S-002 candidatos: corpo/efeito inteiro em 512×512, mantendo cor/alfa significativos, limpar <=8 apenas no derivado. S-003 auditoria: hashes, proporção, margem, ancoragem e ausência de corte/zoom, comparação de escala e registro das exceções de pose. S-004 galeria: sequência, idles aceitos ao lado e prévia com corpo a 85 px. S-005 aceite visual do dono antes de qualquer uso posterior.
+
+BLOCKING para preparar após aprovação: nenhuma dependência/imagem faltante. RESOLVABLE: marcadores corporais/de chão e encaixe. Se uma peça não cumprir a margem/escala, reter e reportar; não escalar até passar sem tornar a discrepância visível. DEFERRED: runtime suporta ou precisará de ajuste para novos canvases (não testado/não implementado), integração de quaisquer heróis, AO04/AO07 e as outras quatro fontes retidas, promoção CANON/commit/push/exportação. A comparação é experimental; não declarar compatibilidade de renderer ou playtest realizados.
+
+Não regenerar identidades/poses, repintar, reconstruir membro/contorno ausente, mudar passada ou tocar assets/, ui/, core/, data/. Saídas somente novo pacote .atena/generated/hero-wide-actions-2026-10-12; recuperação por preservação dos originais e candidatos anteriores. Fatos operacionais em .atena/state/hero-wide-actions.yaml e evidência própria; dono da preparação Atena, futura integração com gate separado.
+
+Autorização de 2026-10-12: **“Aprovo a preparação das quatro ações em 512×512”**. S-001 1/5 concluído; marco de morte inicial 285 px é uma calibração provisória da pose já inclinada, comparada ao idle; não altera cânone nem força alturas dos quadros da queda. Referências/marcadores e hashes registrados antes dos derivados.
+
+Entrega técnica: S-001–S-004 concluídos, 4/5; S-005 (5/5) atual, pendente de aceite visual das quatro wide v01 DRAFT. Vinte células/4 tiras, margem mínima 37 px; [evidência](../../evidence/hero-wide-actions-2026-10-12.md). Compatibilidade/admissão/CANON/Git permanecem fora deste escopo.
+
+S-005 concluído: **“Aprovo visualmente as quatro wide v01”**, 2026-10-12. Cinco passos concluídos, 5/5, conteúdo DRAFT aceito visualmente. O aceite não autoriza admissão/CANON/Git; [recibo](../../generated/hero-wide-actions-2026-10-12/visual-acceptance.json). Restam seis tiras do escopo maior e a compatibilidade do renderer antes da futura admissão.

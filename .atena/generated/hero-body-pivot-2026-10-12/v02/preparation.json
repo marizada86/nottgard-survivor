@@ -1,0 +1,1367 @@
+{
+	"engine": "4.7.2-stable (official)",
+	"frames": 60,
+	"runtime_admission": false,
+	"status": "CANDIDATES_PREPARED",
+	"strips": [
+		{
+			"code": "AO02",
+			"frames": [
+				{
+					"body_height": 290.592239618788,
+					"feet_y": 368,
+					"frame": 1.0,
+					"head_y": 77.4077603812117,
+					"paste_rect": [
+						68,
+						77,
+						120,
+						291
+					],
+					"path": "frames/AO02/f01.png",
+					"scale": 0.394826412525528,
+					"used_rect": [
+						117,
+						18,
+						304,
+						736
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 289.407760381212,
+					"feet_y": 368,
+					"frame": 2.0,
+					"head_y": 78.5922396187883,
+					"paste_rect": [
+						64,
+						79,
+						123,
+						289
+					],
+					"path": "frames/AO02/f02.png",
+					"scale": 0.394826412525528,
+					"used_rect": [
+						97,
+						19,
+						312,
+						733
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 290.592239618788,
+					"feet_y": 368,
+					"frame": 3.0,
+					"head_y": 77.4077603812117,
+					"paste_rect": [
+						67,
+						77,
+						124,
+						291
+					],
+					"path": "frames/AO02/f03.png",
+					"scale": 0.394826412525528,
+					"used_rect": [
+						96,
+						16,
+						314,
+						736
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 289.012933968686,
+					"feet_y": 368,
+					"frame": 4.0,
+					"head_y": 78.9870660313138,
+					"paste_rect": [
+						66,
+						79,
+						121,
+						289
+					],
+					"path": "frames/AO02/f04.png",
+					"scale": 0.394826412525528,
+					"used_rect": [
+						96,
+						20,
+						307,
+						732
+					],
+					"waist_x": 128
+				}
+			],
+			"output": "strips/AO02.png",
+			"scale": 0.394826412525528,
+			"size_conflict": false,
+			"state": "DRAFT"
+		},
+		{
+			"code": "AO03",
+			"frames": [
+				{
+					"body_height": 290.0,
+					"feet_y": 368,
+					"frame": 1.0,
+					"head_y": 78.0,
+					"paste_rect": [
+						50,
+						78,
+						165,
+						290
+					],
+					"path": "frames/AO03/f01.png",
+					"scale": 0.449612403100775,
+					"used_rect": [
+						3,
+						49,
+						367,
+						645
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 292.697674418605,
+					"feet_y": 368,
+					"frame": 2.0,
+					"head_y": 75.3023255813953,
+					"paste_rect": [
+						58,
+						75,
+						147,
+						293
+					],
+					"path": "frames/AO03/f02.png",
+					"scale": 0.449612403100775,
+					"used_rect": [
+						2,
+						51,
+						326,
+						651
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 290.449612403101,
+					"feet_y": 368,
+					"frame": 3.0,
+					"head_y": 77.5503875968992,
+					"paste_rect": [
+						58,
+						78,
+						151,
+						290
+					],
+					"path": "frames/AO03/f03.png",
+					"scale": 0.449612403100775,
+					"used_rect": [
+						3,
+						49,
+						335,
+						646
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 282.356589147287,
+					"feet_y": 368,
+					"frame": 4.0,
+					"head_y": 85.6434108527131,
+					"paste_rect": [
+						61,
+						86,
+						156,
+						282
+					],
+					"path": "frames/AO03/f04.png",
+					"scale": 0.449612403100775,
+					"used_rect": [
+						3,
+						59,
+						347,
+						628
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 290.0,
+					"feet_y": 368,
+					"frame": 5.0,
+					"head_y": 78.0,
+					"paste_rect": [
+						54,
+						78,
+						138,
+						290
+					],
+					"path": "frames/AO03/f05.png",
+					"scale": 0.449612403100775,
+					"used_rect": [
+						2,
+						56,
+						306,
+						645
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 289.100775193798,
+					"feet_y": 368,
+					"frame": 6.0,
+					"head_y": 78.8992248062015,
+					"paste_rect": [
+						52,
+						79,
+						137,
+						289
+					],
+					"path": "frames/AO03/f06.png",
+					"scale": 0.449612403100775,
+					"used_rect": [
+						2,
+						59,
+						305,
+						643
+					],
+					"waist_x": 128
+				}
+			],
+			"output": "strips/AO03.png",
+			"scale": 0.449612403100775,
+			"size_conflict": false,
+			"state": "DRAFT"
+		},
+		{
+			"code": "AO04",
+			"frames": [
+				{
+					"body_height": 295.659640905543,
+					"feet_y": 368,
+					"frame": 1.0,
+					"head_y": 72.3403590944574,
+					"paste_rect": [
+						53,
+						72,
+						136,
+						296
+					],
+					"path": "frames/AO04/f01.png",
+					"scale": 0.452771272443404,
+					"used_rect": [
+						1,
+						80,
+						301,
+						653
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 283.434816549571,
+					"feet_y": 368,
+					"frame": 2.0,
+					"head_y": 84.5651834504293,
+					"paste_rect": [
+						55,
+						85,
+						128,
+						283
+					],
+					"path": "frames/AO04/f02.png",
+					"scale": 0.452771272443404,
+					"used_rect": [
+						2,
+						99,
+						283,
+						626
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 289.773614363778,
+					"feet_y": 368,
+					"frame": 3.0,
+					"head_y": 78.2263856362217,
+					"paste_rect": [
+						58,
+						78,
+						126,
+						290
+					],
+					"path": "frames/AO04/f03.png",
+					"scale": 0.452771272443404,
+					"used_rect": [
+						3,
+						98,
+						278,
+						640
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 292.037470725995,
+					"feet_y": 368,
+					"frame": 4.0,
+					"head_y": 75.9625292740047,
+					"paste_rect": [
+						51,
+						76,
+						149,
+						292
+					],
+					"path": "frames/AO04/f04.png",
+					"scale": 0.452771272443404,
+					"used_rect": [
+						3,
+						96,
+						328,
+						645
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 290.226385636222,
+					"feet_y": 368,
+					"frame": 5.0,
+					"head_y": 77.7736143637783,
+					"paste_rect": [
+						55,
+						78,
+						128,
+						290
+					],
+					"path": "frames/AO04/f05.png",
+					"scale": 0.452771272443404,
+					"used_rect": [
+						2,
+						98,
+						283,
+						641
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 289.773614363778,
+					"feet_y": 368,
+					"frame": 6.0,
+					"head_y": 78.2263856362217,
+					"paste_rect": [
+						55,
+						78,
+						143,
+						290
+					],
+					"path": "frames/AO04/f06.png",
+					"scale": 0.452771272443404,
+					"used_rect": [
+						3,
+						98,
+						316,
+						640
+					],
+					"waist_x": 128
+				}
+			],
+			"output": "strips/AO04.png",
+			"scale": 0.452771272443404,
+			"size_conflict": false,
+			"state": "DRAFT"
+		},
+		{
+			"code": "AO05",
+			"frames": [
+				{
+					"body_height": 290.428360413589,
+					"feet_y": 368,
+					"frame": 1.0,
+					"head_y": 77.5716395864107,
+					"paste_rect": [
+						65,
+						78,
+						125,
+						290
+					],
+					"path": "frames/AO05/f01.png",
+					"scale": 0.428360413589365,
+					"used_rect": [
+						41,
+						35,
+						291,
+						678
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 287.001477104874,
+					"feet_y": 368,
+					"frame": 2.0,
+					"head_y": 80.9985228951256,
+					"paste_rect": [
+						70,
+						81,
+						126,
+						287
+					],
+					"path": "frames/AO05/f02.png",
+					"scale": 0.428360413589365,
+					"used_rect": [
+						16,
+						34,
+						294,
+						670
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 293.426883308715,
+					"feet_y": 368,
+					"frame": 3.0,
+					"head_y": 74.5731166912851,
+					"paste_rect": [
+						66,
+						75,
+						129,
+						293
+					],
+					"path": "frames/AO05/f03.png",
+					"scale": 0.428360413589365,
+					"used_rect": [
+						18,
+						33,
+						301,
+						685
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 289.571639586411,
+					"feet_y": 368,
+					"frame": 4.0,
+					"head_y": 78.4283604135894,
+					"paste_rect": [
+						67,
+						78,
+						123,
+						290
+					],
+					"path": "frames/AO05/f04.png",
+					"scale": 0.428360413589365,
+					"used_rect": [
+						27,
+						34,
+						287,
+						676
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 288.286558345643,
+					"feet_y": 368,
+					"frame": 5.0,
+					"head_y": 79.7134416543575,
+					"paste_rect": [
+						63,
+						80,
+						127,
+						288
+					],
+					"path": "frames/AO05/f05.png",
+					"scale": 0.428360413589365,
+					"used_rect": [
+						24,
+						34,
+						297,
+						673
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 292.570162481536,
+					"feet_y": 368,
+					"frame": 6.0,
+					"head_y": 75.4298375184638,
+					"paste_rect": [
+						66,
+						75,
+						127,
+						293
+					],
+					"path": "frames/AO05/f06.png",
+					"scale": 0.428360413589365,
+					"used_rect": [
+						17,
+						33,
+						296,
+						683
+					],
+					"waist_x": 128
+				}
+			],
+			"output": "strips/AO05.png",
+			"scale": 0.428360413589365,
+			"size_conflict": false,
+			"state": "DRAFT"
+		},
+		{
+			"code": "AO06",
+			"frames": [
+				{
+					"body_height": 290.234059725585,
+					"feet_y": 368,
+					"frame": 1.0,
+					"head_y": 77.7659402744148,
+					"paste_rect": [
+						60,
+						78,
+						137,
+						290
+					],
+					"path": "frames/AO06/f01.png",
+					"scale": 0.468119451170299,
+					"used_rect": [
+						18,
+						102,
+						292,
+						620
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 288.829701372074,
+					"feet_y": 368,
+					"frame": 2.0,
+					"head_y": 79.1702986279258,
+					"paste_rect": [
+						65,
+						79,
+						133,
+						289
+					],
+					"path": "frames/AO06/f02.png",
+					"scale": 0.468119451170299,
+					"used_rect": [
+						16,
+						104,
+						285,
+						617
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 287.425343018563,
+					"feet_y": 368,
+					"frame": 3.0,
+					"head_y": 80.5746569814366,
+					"paste_rect": [
+						65,
+						81,
+						131,
+						287
+					],
+					"path": "frames/AO06/f03.png",
+					"scale": 0.468119451170299,
+					"used_rect": [
+						17,
+						100,
+						280,
+						614
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 290.702179176755,
+					"feet_y": 368,
+					"frame": 4.0,
+					"head_y": 77.2978208232445,
+					"paste_rect": [
+						62,
+						77,
+						129,
+						291
+					],
+					"path": "frames/AO06/f04.png",
+					"scale": 0.468119451170299,
+					"used_rect": [
+						8,
+						100,
+						275,
+						621
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 289.765940274415,
+					"feet_y": 368,
+					"frame": 5.0,
+					"head_y": 78.2340597255852,
+					"paste_rect": [
+						64,
+						78,
+						133,
+						290
+					],
+					"path": "frames/AO06/f05.png",
+					"scale": 0.468119451170299,
+					"used_rect": [
+						25,
+						98,
+						285,
+						619
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 290.702179176755,
+					"feet_y": 368,
+					"frame": 6.0,
+					"head_y": 77.2978208232445,
+					"paste_rect": [
+						61,
+						77,
+						127,
+						291
+					],
+					"path": "frames/AO06/f06.png",
+					"scale": 0.468119451170299,
+					"used_rect": [
+						14,
+						100,
+						272,
+						621
+					],
+					"waist_x": 128
+				}
+			],
+			"output": "strips/AO06.png",
+			"scale": 0.468119451170299,
+			"size_conflict": false,
+			"state": "DRAFT"
+		},
+		{
+			"code": "AO07",
+			"frames": [
+				{
+					"body_height": 292.911196911197,
+					"feet_y": 368,
+					"frame": 1.0,
+					"head_y": 75.0888030888031,
+					"paste_rect": [
+						64,
+						75,
+						137,
+						293
+					],
+					"path": "frames/AO07/f01.png",
+					"scale": 0.447876447876448,
+					"used_rect": [
+						3,
+						46,
+						305,
+						654
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 287.088803088803,
+					"feet_y": 368,
+					"frame": 2.0,
+					"head_y": 80.911196911197,
+					"paste_rect": [
+						60,
+						81,
+						122,
+						287
+					],
+					"path": "frames/AO07/f02.png",
+					"scale": 0.447876447876448,
+					"used_rect": [
+						3,
+						59,
+						273,
+						641
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 290.223938223938,
+					"feet_y": 368,
+					"frame": 3.0,
+					"head_y": 77.7760617760618,
+					"paste_rect": [
+						74,
+						78,
+						122,
+						290
+					],
+					"path": "frames/AO07/f03.png",
+					"scale": 0.447876447876448,
+					"used_rect": [
+						3,
+						51,
+						273,
+						648
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 289.776061776062,
+					"feet_y": 368,
+					"frame": 4.0,
+					"head_y": 78.2239382239383,
+					"paste_rect": [
+						68,
+						78,
+						130,
+						290
+					],
+					"path": "frames/AO07/f04.png",
+					"scale": 0.447876447876448,
+					"used_rect": [
+						3,
+						53,
+						290,
+						647
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 279.92277992278,
+					"feet_y": 368,
+					"frame": 5.0,
+					"head_y": 88.0772200772201,
+					"paste_rect": [
+						61,
+						88,
+						122,
+						280
+					],
+					"path": "frames/AO07/f05.png",
+					"scale": 0.447876447876448,
+					"used_rect": [
+						3,
+						61,
+						273,
+						625
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 292.015444015444,
+					"feet_y": 368,
+					"frame": 6.0,
+					"head_y": 75.984555984556,
+					"paste_rect": [
+						72,
+						76,
+						135,
+						292
+					],
+					"path": "frames/AO07/f06.png",
+					"scale": 0.447876447876448,
+					"used_rect": [
+						3,
+						51,
+						302,
+						652
+					],
+					"waist_x": 128
+				}
+			],
+			"output": "strips/AO07.png",
+			"scale": 0.447876447876448,
+			"size_conflict": false,
+			"state": "DRAFT"
+		},
+		{
+			"code": "AO08",
+			"frames": [
+				{
+					"body_height": 176.282900572447,
+					"feet_y": 368,
+					"frame": 1.0,
+					"head_y": 191.717099427553,
+					"paste_rect": [
+						84,
+						192,
+						90,
+						176
+					],
+					"path": "frames/AO08/f01.png",
+					"scale": 0.254009943187964,
+					"used_rect": [
+						67,
+						27,
+						353,
+						694
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 176.790920458823,
+					"feet_y": 368,
+					"frame": 2.0,
+					"head_y": 191.209079541177,
+					"paste_rect": [
+						80,
+						191,
+						115,
+						177
+					],
+					"path": "frames/AO08/f02.png",
+					"scale": 0.254009943187964,
+					"used_rect": [
+						37,
+						24,
+						453,
+						696
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 176.282900572447,
+					"feet_y": 368,
+					"frame": 3.0,
+					"head_y": 191.717099427553,
+					"paste_rect": [
+						81,
+						192,
+						165,
+						176
+					],
+					"path": "frames/AO08/f03.png",
+					"scale": 0.254009943187964,
+					"used_rect": [
+						9,
+						26,
+						649,
+						694
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 177.298940345199,
+					"feet_y": 368,
+					"frame": 4.0,
+					"head_y": 190.701059654801,
+					"paste_rect": [
+						85,
+						191,
+						89,
+						177
+					],
+					"path": "frames/AO08/f04.png",
+					"scale": 0.254009943187964,
+					"used_rect": [
+						6,
+						23,
+						349,
+						698
+					],
+					"waist_x": 128
+				}
+			],
+			"output": "strips/AO08.png",
+			"scale": 0.254009943187964,
+			"size_conflict": true,
+			"state": "DRAFT"
+		},
+		{
+			"code": "ER02",
+			"frames": [
+				{
+					"body_height": 299.793246037216,
+					"feet_y": 368,
+					"frame": 1.0,
+					"head_y": 68.2067539627843,
+					"paste_rect": [
+						28,
+						68,
+						171,
+						300
+					],
+					"path": "frames/ER02/f01.png",
+					"scale": 0.413507925568573,
+					"used_rect": [
+						73,
+						27,
+						413,
+						726
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 300.206753962784,
+					"feet_y": 368,
+					"frame": 2.0,
+					"head_y": 67.7932460372157,
+					"paste_rect": [
+						27,
+						68,
+						173,
+						300
+					],
+					"path": "frames/ER02/f02.png",
+					"scale": 0.413507925568573,
+					"used_rect": [
+						34,
+						27,
+						419,
+						726
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 299.793246037216,
+					"feet_y": 368,
+					"frame": 3.0,
+					"head_y": 68.2067539627843,
+					"paste_rect": [
+						30,
+						68,
+						167,
+						300
+					],
+					"path": "frames/ER02/f03.png",
+					"scale": 0.413507925568573,
+					"used_rect": [
+						43,
+						27,
+						405,
+						725
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 300.620261888353,
+					"feet_y": 368,
+					"frame": 4.0,
+					"head_y": 67.3797381116472,
+					"paste_rect": [
+						33,
+						67,
+						165,
+						301
+					],
+					"path": "frames/ER02/f04.png",
+					"scale": 0.413507925568573,
+					"used_rect": [
+						48,
+						26,
+						398,
+						727
+					],
+					"waist_x": 128
+				}
+			],
+			"output": "strips/ER02.png",
+			"scale": 0.413507925568573,
+			"size_conflict": false,
+			"state": "DRAFT"
+		},
+		{
+			"code": "ER04",
+			"frames": [
+				{
+					"body_height": 300.0,
+					"feet_y": 368,
+					"frame": 1.0,
+					"head_y": 68.0,
+					"paste_rect": [
+						50,
+						64,
+						162,
+						304
+					],
+					"path": "frames/ER04/f01.png",
+					"scale": 0.504201680672269,
+					"used_rect": [
+						2,
+						124,
+						322,
+						602
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 301.512605042017,
+					"feet_y": 368,
+					"frame": 2.0,
+					"head_y": 66.4873949579832,
+					"paste_rect": [
+						48,
+						63,
+						161,
+						305
+					],
+					"path": "frames/ER04/f02.png",
+					"scale": 0.504201680672269,
+					"used_rect": [
+						2,
+						124,
+						320,
+						605
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 300.504201680672,
+					"feet_y": 368,
+					"frame": 3.0,
+					"head_y": 67.4957983193277,
+					"paste_rect": [
+						58,
+						63,
+						148,
+						305
+					],
+					"path": "frames/ER04/f03.png",
+					"scale": 0.504201680672269,
+					"used_rect": [
+						3,
+						125,
+						293,
+						604
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 295.46218487395,
+					"feet_y": 368,
+					"frame": 4.0,
+					"head_y": 72.5378151260504,
+					"paste_rect": [
+						48,
+						70,
+						160,
+						298
+					],
+					"path": "frames/ER04/f04.png",
+					"scale": 0.504201680672269,
+					"used_rect": [
+						2,
+						131,
+						317,
+						591
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 300.0,
+					"feet_y": 368,
+					"frame": 5.0,
+					"head_y": 68.0,
+					"paste_rect": [
+						52,
+						64,
+						154,
+						304
+					],
+					"path": "frames/ER04/f05.png",
+					"scale": 0.504201680672269,
+					"used_rect": [
+						3,
+						124,
+						305,
+						602
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 300.0,
+					"feet_y": 368,
+					"frame": 6.0,
+					"head_y": 68.0,
+					"paste_rect": [
+						49,
+						63,
+						155,
+						305
+					],
+					"path": "frames/ER04/f06.png",
+					"scale": 0.504201680672269,
+					"used_rect": [
+						2,
+						124,
+						307,
+						604
+					],
+					"waist_x": 128
+				}
+			],
+			"output": "strips/ER04.png",
+			"scale": 0.504201680672269,
+			"size_conflict": false,
+			"state": "DRAFT"
+		},
+		{
+			"code": "ER05",
+			"frames": [
+				{
+					"body_height": 302.795031055901,
+					"feet_y": 368,
+					"frame": 1.0,
+					"head_y": 65.2049689440994,
+					"paste_rect": [
+						58,
+						65,
+						150,
+						303
+					],
+					"path": "frames/ER05/f01.png",
+					"scale": 0.46583850931677,
+					"used_rect": [
+						2,
+						53,
+						321,
+						650
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 300.465838509317,
+					"feet_y": 368,
+					"frame": 2.0,
+					"head_y": 67.5341614906832,
+					"paste_rect": [
+						57,
+						67,
+						140,
+						301
+					],
+					"path": "frames/ER05/f02.png",
+					"scale": 0.46583850931677,
+					"used_rect": [
+						2,
+						52,
+						301,
+						646
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 292.546583850932,
+					"feet_y": 368,
+					"frame": 3.0,
+					"head_y": 75.4534161490683,
+					"paste_rect": [
+						60,
+						75,
+						142,
+						293
+					],
+					"path": "frames/ER05/f03.png",
+					"scale": 0.46583850931677,
+					"used_rect": [
+						3,
+						57,
+						305,
+						629
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 301.863354037267,
+					"feet_y": 368,
+					"frame": 4.0,
+					"head_y": 66.1366459627329,
+					"paste_rect": [
+						60,
+						66,
+						152,
+						302
+					],
+					"path": "frames/ER05/f04.png",
+					"scale": 0.46583850931677,
+					"used_rect": [
+						3,
+						55,
+						327,
+						649
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 299.534161490683,
+					"feet_y": 368,
+					"frame": 5.0,
+					"head_y": 68.4658385093168,
+					"paste_rect": [
+						58,
+						68,
+						143,
+						300
+					],
+					"path": "frames/ER05/f05.png",
+					"scale": 0.46583850931677,
+					"used_rect": [
+						1,
+						58,
+						306,
+						643
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 293.012422360248,
+					"feet_y": 368,
+					"frame": 6.0,
+					"head_y": 74.9875776397516,
+					"paste_rect": [
+						61,
+						75,
+						138,
+						293
+					],
+					"path": "frames/ER05/f06.png",
+					"scale": 0.46583850931677,
+					"used_rect": [
+						3,
+						58,
+						297,
+						630
+					],
+					"waist_x": 128
+				}
+			],
+			"output": "strips/ER05.png",
+			"scale": 0.46583850931677,
+			"size_conflict": false,
+			"state": "DRAFT"
+		},
+		{
+			"code": "ER07",
+			"frames": [
+				{
+					"body_height": 298.288508557457,
+					"feet_y": 368,
+					"frame": 1.0,
+					"head_y": 69.7114914425428,
+					"paste_rect": [
+						57,
+						52,
+						143,
+						316
+					],
+					"path": "frames/ER07/f01.png",
+					"scale": 0.488997555012225,
+					"used_rect": [
+						28,
+						51,
+						293,
+						646
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 301.222493887531,
+					"feet_y": 368,
+					"frame": 2.0,
+					"head_y": 66.7775061124694,
+					"paste_rect": [
+						55,
+						59,
+						143,
+						309
+					],
+					"path": "frames/ER07/f02.png",
+					"scale": 0.488997555012225,
+					"used_rect": [
+						21,
+						72,
+						292,
+						631
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 298.777506112469,
+					"feet_y": 368,
+					"frame": 3.0,
+					"head_y": 69.2224938875306,
+					"paste_rect": [
+						57,
+						64,
+						144,
+						304
+					],
+					"path": "frames/ER07/f03.png",
+					"scale": 0.488997555012225,
+					"used_rect": [
+						13,
+						71,
+						294,
+						621
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 306.112469437653,
+					"feet_y": 368,
+					"frame": 4.0,
+					"head_y": 61.8875305623472,
+					"paste_rect": [
+						56,
+						52,
+						145,
+						316
+					],
+					"path": "frames/ER07/f04.png",
+					"scale": 0.488997555012225,
+					"used_rect": [
+						14,
+						68,
+						297,
+						646
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 295.843520782396,
+					"feet_y": 368,
+					"frame": 5.0,
+					"head_y": 72.1564792176039,
+					"paste_rect": [
+						63,
+						65,
+						143,
+						303
+					],
+					"path": "frames/ER07/f05.png",
+					"scale": 0.488997555012225,
+					"used_rect": [
+						18,
+						69,
+						292,
+						620
+					],
+					"waist_x": 128
+				},
+				{
+					"body_height": 302.689486552567,
+					"feet_y": 368,
+					"frame": 6.0,
+					"head_y": 65.3105134474328,
+					"paste_rect": [
+						58,
+						59,
+						146,
+						309
+					],
+					"path": "frames/ER07/f06.png",
+					"scale": 0.488997555012225,
+					"used_rect": [
+						16,
+						69,
+						299,
+						632
+					],
+					"waist_x": 128
+				}
+			],
+			"output": "strips/ER07.png",
+			"scale": 0.488997555012225,
+			"size_conflict": false,
+			"state": "DRAFT"
+		}
+	]
+}

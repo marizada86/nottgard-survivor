@@ -1,0 +1,611 @@
+{
+  "status": "TECHNICAL_PASS_VISUALLY_ACCEPTED_DRAFT",
+  "plan": "PLAN-053/DEV-024/hero-wide-actions-v01",
+  "strips": 4,
+  "frames": 20,
+  "cell": [
+    512,
+    512
+  ],
+  "guard_px": 10,
+  "minimum_margin_px": 37,
+  "maximum_ground_error_px": 0.4375,
+  "maximum_center_error_px": 0.5934065934065984,
+  "sources_unchanged": true,
+  "protected_hashes": 3236,
+  "prior_eight_accepted_candidates_preserved": true,
+  "prior_tail_preserved": true,
+  "head_unchanged": "e6aea39f16b43e18d2d4501e870645a97b6d4dfe",
+  "index_empty": true,
+  "per_frame_zoom": false,
+  "repaint_or_regeneration": false,
+  "runtime_admission": false,
+  "canonical_promotion": false,
+  "commit_push_export": false,
+  "human_visual_acceptance": "FOUR_WIDE_V01_APPROVED_EXPLICITLY_DRAFT",
+  "pose_criteria": "Crouch and fall retain their native compression, never scaled to standing height per frame. Ground/head markers have source-space uncertainty and do not prove artistic mass consistency.",
+  "preexisting_engine_warning": "Failed to read root certificate store",
+  "new_script_errors": 0,
+  "records": [
+    {
+      "code": "AO08",
+      "strip": "strips/AO08_wide_v01.png",
+      "sha256": "73ffd76cf87be5a3d6f14dbad6620e872104e6c818d80e41ca4ecadd513a73c7",
+      "size": [
+        2048,
+        512
+      ],
+      "uniform_scale": 0.4172661870503597,
+      "scale_reference_px": 290,
+      "reference_measured_px": 290.0,
+      "scale_basis": "Original approved body target 290 divided by median native hat-to-sole height; constant across cycle",
+      "all_frames_fit": true,
+      "frames": [
+        {
+          "frame": 1,
+          "path": "frames/AO08/f01.png",
+          "sha256": "adf65303f0411f5a9db4ab65d06d93c99d8a56f076185cdfd05cd6947e72a0b6",
+          "bbox": [
+            183,
+            158,
+            330,
+            448
+          ],
+          "margins_px": [
+            183,
+            158,
+            182,
+            64
+          ],
+          "significant_bottom": 448,
+          "ground_coordinate_resize": 448.0,
+          "body_center_coordinate_resize": 255.44434844192637,
+          "ground_error_px": 0.0,
+          "center_error_px": 0.5556515580736345,
+          "scale": 0.4172661870503597,
+          "body_marker_height": 290.0,
+          "pose": "standing_cast"
+        },
+        {
+          "frame": 2,
+          "path": "frames/AO08/f02.png",
+          "sha256": "b0ddb5b5cbd4b7e9bfb695403ca87f60174bc8c0b69f2fbcf093ad83a78f8856",
+          "bbox": [
+            178,
+            158,
+            367,
+            448
+          ],
+          "margins_px": [
+            178,
+            158,
+            145,
+            64
+          ],
+          "significant_bottom": 448,
+          "ground_coordinate_resize": 448.0,
+          "body_center_coordinate_resize": 256.34780132450334,
+          "ground_error_px": 0.0,
+          "center_error_px": 0.3478013245033367,
+          "scale": 0.4172661870503597,
+          "body_marker_height": 290.0,
+          "pose": "standing_cast"
+        },
+        {
+          "frame": 3,
+          "path": "frames/AO08/f03.png",
+          "sha256": "17991faa6b7c3a01bd51a71fe8c3f586e30716bf3de360416dd806cf32f9c134",
+          "bbox": [
+            178,
+            158,
+            449,
+            448
+          ],
+          "margins_px": [
+            178,
+            158,
+            63,
+            64
+          ],
+          "significant_bottom": 448,
+          "ground_coordinate_resize": 448.0,
+          "body_center_coordinate_resize": 255.99037596302003,
+          "ground_error_px": 0.0,
+          "center_error_px": 0.009624036979971606,
+          "scale": 0.4172661870503597,
+          "body_marker_height": 290.0,
+          "pose": "standing_cast"
+        },
+        {
+          "frame": 4,
+          "path": "frames/AO08/f04.png",
+          "sha256": "fc1445fead9d1ba907b25dfb3d70e89c9f5db97e9e669408dc11f216e97a1426",
+          "bbox": [
+            185,
+            157,
+            331,
+            448
+          ],
+          "margins_px": [
+            185,
+            157,
+            181,
+            64
+          ],
+          "significant_bottom": 448,
+          "ground_coordinate_resize": 448.0,
+          "body_center_coordinate_resize": 256.47683094555873,
+          "ground_error_px": 0.0,
+          "center_error_px": 0.4768309455587314,
+          "scale": 0.4172661870503597,
+          "body_marker_height": 291.0,
+          "pose": "standing_cast"
+        }
+      ],
+      "technical_status": "PASS",
+      "human_visual_acceptance": "APPROVED_EXPLICITLY_DRAFT",
+      "content_state": "DRAFT",
+      "runtime_admission": false
+    },
+    {
+      "code": "ER08",
+      "strip": "strips/ER08_wide_v01.png",
+      "sha256": "4114f785c6e76099f2cd1506aa2b3e6b4a9a5d0a29d7010f92fa6e9309b71aff",
+      "size": [
+        2048,
+        512
+      ],
+      "uniform_scale": 0.539568345323741,
+      "scale_reference_px": 300,
+      "reference_measured_px": 300.41726618705,
+      "scale_basis": "First upright pose mapped to 300 px",
+      "all_frames_fit": true,
+      "frames": [
+        {
+          "frame": 1,
+          "path": "frames/ER08/f01.png",
+          "sha256": "d4a9eb6fe37963421763886a835387a6bf09b2a39085c0ba35e47452e01cab9b",
+          "bbox": [
+            155,
+            127,
+            364,
+            448
+          ],
+          "margins_px": [
+            155,
+            127,
+            148,
+            64
+          ],
+          "significant_bottom": 448,
+          "ground_coordinate_resize": 448.00000000000006,
+          "body_center_coordinate_resize": 256.5297157622739,
+          "ground_error_px": 5.684341886080802e-14,
+          "center_error_px": 0.529715762273895,
+          "scale": 0.539568345323741,
+          "body_marker_height": 300.41726618705,
+          "pose": "standing_or_lunging"
+        },
+        {
+          "frame": 2,
+          "path": "frames/ER08/f02.png",
+          "sha256": "9bc30a7cd6a6723ca5246934829628f0167e9bc46295ede3fafa8d3768f4ba6e",
+          "bbox": [
+            101,
+            126,
+            386,
+            448
+          ],
+          "margins_px": [
+            101,
+            126,
+            126,
+            64
+          ],
+          "significant_bottom": 448,
+          "ground_coordinate_resize": 448.0,
+          "body_center_coordinate_resize": 256.4545454545455,
+          "ground_error_px": 0.0,
+          "center_error_px": 0.4545454545454959,
+          "scale": 0.539568345323741,
+          "body_marker_height": 296.02158273381303,
+          "pose": "standing_or_lunging"
+        },
+        {
+          "frame": 3,
+          "path": "frames/ER08/f03.png",
+          "sha256": "1dafe76e311b5f1b43c62b75c2b93d57b6c73f4625434fe73da442e2f2d9613a",
+          "bbox": [
+            148,
+            156,
+            475,
+            448
+          ],
+          "margins_px": [
+            148,
+            156,
+            37,
+            64
+          ],
+          "significant_bottom": 448,
+          "ground_coordinate_resize": 448.0,
+          "body_center_coordinate_resize": 255.92079207920793,
+          "ground_error_px": 0.0,
+          "center_error_px": 0.07920792079207217,
+          "scale": 0.539568345323741,
+          "body_marker_height": 291.460431654676,
+          "pose": "standing_or_lunging"
+        },
+        {
+          "frame": 4,
+          "path": "frames/ER08/f04.png",
+          "sha256": "aaae0df8a9b08a1d5a530e5785f3bd1dea011808883365649a7e65c0ea2eebcf",
+          "bbox": [
+            142,
+            128,
+            346,
+            448
+          ],
+          "margins_px": [
+            142,
+            128,
+            166,
+            64
+          ],
+          "significant_bottom": 448,
+          "ground_coordinate_resize": 448.0,
+          "body_center_coordinate_resize": 255.82894736842104,
+          "ground_error_px": 0.0,
+          "center_error_px": 0.17105263157895934,
+          "scale": 0.539568345323741,
+          "body_marker_height": 299.49640287769796,
+          "pose": "standing_or_lunging"
+        }
+      ],
+      "technical_status": "PASS",
+      "human_visual_acceptance": "APPROVED_EXPLICITLY_DRAFT",
+      "content_state": "DRAFT",
+      "runtime_admission": false
+    },
+    {
+      "code": "ER09",
+      "strip": "strips/ER09_wide_v01.png",
+      "sha256": "cf3f1915f2ab2b69fce4ac79443352089bda9a227327f850bbae5e3c995c748d",
+      "size": [
+        3072,
+        512
+      ],
+      "uniform_scale": 0.6521739130434783,
+      "scale_reference_px": 300,
+      "reference_measured_px": 299.95652173913004,
+      "scale_basis": "First upright pose mapped to 300 px",
+      "all_frames_fit": true,
+      "frames": [
+        {
+          "frame": 1,
+          "path": "frames/ER09/f01.png",
+          "sha256": "d6372c2a784d40f4327b7387523b181b920043966b5c741cdfbeaf612638dc30",
+          "bbox": [
+            155,
+            135,
+            348,
+            448
+          ],
+          "margins_px": [
+            155,
+            135,
+            164,
+            64
+          ],
+          "significant_bottom": 448,
+          "ground_coordinate_resize": 448.0,
+          "body_center_coordinate_resize": 256.06418918918916,
+          "ground_error_px": 0.0,
+          "center_error_px": 0.06418918918916461,
+          "scale": 0.6521739130434783,
+          "body_marker_height": 299.95652173913004,
+          "pose": "standing_or_crouching"
+        },
+        {
+          "frame": 2,
+          "path": "frames/ER09/f02.png",
+          "sha256": "2e631cb9f7ca85487a4e8e96e2ab15c06c2b8a28aa0c9c2a4de7c3dabe51c329",
+          "bbox": [
+            143,
+            177,
+            348,
+            466
+          ],
+          "margins_px": [
+            143,
+            177,
+            164,
+            46
+          ],
+          "significant_bottom": 466,
+          "ground_coordinate_resize": 447.7336343115124,
+          "body_center_coordinate_resize": 256.23809523809524,
+          "ground_error_px": 0.26636568848761044,
+          "center_error_px": 0.2380952380952408,
+          "scale": 0.6521739130434783,
+          "body_marker_height": 263.173913043478,
+          "pose": "standing_or_crouching"
+        },
+        {
+          "frame": 3,
+          "path": "frames/ER09/f03.png",
+          "sha256": "4b342da6c7edf5252489fd37fd51be6093c3c6c3f32dfbe22928eca3f14279b6",
+          "bbox": [
+            131,
+            221,
+            361,
+            471
+          ],
+          "margins_px": [
+            131,
+            221,
+            151,
+            41
+          ],
+          "significant_bottom": 471,
+          "ground_coordinate_resize": 447.5625,
+          "body_center_coordinate_resize": 255.80113636363637,
+          "ground_error_px": 0.4375,
+          "center_error_px": 0.19886363636362603,
+          "scale": 0.6521739130434783,
+          "body_marker_height": 223.739130434783,
+          "pose": "standing_or_crouching"
+        },
+        {
+          "frame": 4,
+          "path": "frames/ER09/f04.png",
+          "sha256": "2f4089d41453efd1397ff9440d80e4e2ce5f44afb491e6f0d002d60a9319070b",
+          "bbox": [
+            133,
+            177,
+            370,
+            462
+          ],
+          "margins_px": [
+            133,
+            177,
+            142,
+            50
+          ],
+          "significant_bottom": 462,
+          "ground_coordinate_resize": 447.6521739130435,
+          "body_center_coordinate_resize": 255.4065934065934,
+          "ground_error_px": 0.34782608695650197,
+          "center_error_px": 0.5934065934065984,
+          "scale": 0.6521739130434783,
+          "body_marker_height": 263.173913043478,
+          "pose": "standing_or_crouching"
+        },
+        {
+          "frame": 5,
+          "path": "frames/ER09/f05.png",
+          "sha256": "df210dba75e178446e7c44582f66d7f9764c555cc3e046586eec719905890d8f",
+          "bbox": [
+            147,
+            175,
+            373,
+            473
+          ],
+          "margins_px": [
+            147,
+            175,
+            139,
+            39
+          ],
+          "significant_bottom": 473,
+          "ground_coordinate_resize": 448.22100656455143,
+          "body_center_coordinate_resize": 255.76657060518733,
+          "ground_error_px": 0.22100656455143053,
+          "center_error_px": 0.23342939481267422,
+          "scale": 0.6521739130434783,
+          "body_marker_height": 259.95652173913004,
+          "pose": "standing_or_crouching"
+        },
+        {
+          "frame": 6,
+          "path": "frames/ER09/f06.png",
+          "sha256": "914cc7c88545fd90223980120cb86fc6cb169c422d1f194653a619333402c1ae",
+          "bbox": [
+            163,
+            155,
+            350,
+            448
+          ],
+          "margins_px": [
+            163,
+            155,
+            162,
+            64
+          ],
+          "significant_bottom": 448,
+          "ground_coordinate_resize": 448.0,
+          "body_center_coordinate_resize": 256.5,
+          "ground_error_px": 0.0,
+          "center_error_px": 0.5,
+          "scale": 0.6521739130434783,
+          "body_marker_height": 291.04347826086996,
+          "pose": "standing_or_crouching"
+        }
+      ],
+      "technical_status": "PASS",
+      "human_visual_acceptance": "APPROVED_EXPLICITLY_DRAFT",
+      "content_state": "DRAFT",
+      "runtime_admission": false
+    },
+    {
+      "code": "ER10",
+      "strip": "strips/ER10_wide_v01.png",
+      "sha256": "0029d353e694d9e2ed279dcad356ef350fa0fca3910461157211228e60640444",
+      "size": [
+        3072,
+        512
+      ],
+      "uniform_scale": 0.6182212581344902,
+      "scale_reference_px": 285,
+      "reference_measured_px": 285.052060737527,
+      "scale_basis": "First slightly leaned death pose provisionally 285 px (95% standing reference); compare silhouette/head with accepted idle, not a per-frame height target",
+      "all_frames_fit": true,
+      "frames": [
+        {
+          "frame": 1,
+          "path": "frames/ER10/f01.png",
+          "sha256": "71fd6cdbe3e26d6a5f6021b9b3c9b80a1cc186fb3177b8e49ec71fd97d617a3a",
+          "bbox": [
+            161,
+            124,
+            329,
+            447
+          ],
+          "margins_px": [
+            161,
+            124,
+            183,
+            65
+          ],
+          "significant_bottom": 447,
+          "ground_coordinate_resize": 448.0,
+          "body_center_coordinate_resize": 255.5,
+          "ground_error_px": 0.0,
+          "center_error_px": 0.5,
+          "scale": 0.6182212581344902,
+          "body_marker_height": 285.052060737527,
+          "pose": "first_leaned_reference"
+        },
+        {
+          "frame": 2,
+          "path": "frames/ER10/f02.png",
+          "sha256": "f1d7737af154a0fe5e4f22cc5e91a345442c836e25d808d4c93ee46c9cb7c2a8",
+          "bbox": [
+            148,
+            180,
+            329,
+            448
+          ],
+          "margins_px": [
+            148,
+            180,
+            183,
+            64
+          ],
+          "significant_bottom": 448,
+          "ground_coordinate_resize": 448.0,
+          "body_center_coordinate_resize": 255.85616438356163,
+          "ground_error_px": 0.0,
+          "center_error_px": 0.1438356164383663,
+          "scale": 0.6182212581344902,
+          "body_marker_height": 240.798264642082,
+          "pose": "kneeling_or_falling"
+        },
+        {
+          "frame": 3,
+          "path": "frames/ER10/f03.png",
+          "sha256": "c0709eb8d8a8e3bae9cfd2e628fcb578009021677b37597c8b6741ad36e142d4",
+          "bbox": [
+            132,
+            226,
+            329,
+            448
+          ],
+          "margins_px": [
+            132,
+            226,
+            183,
+            64
+          ],
+          "significant_bottom": 448,
+          "ground_coordinate_resize": 448.0,
+          "body_center_coordinate_resize": 255.8993710691824,
+          "ground_error_px": 0.0,
+          "center_error_px": 0.10062893081760649,
+          "scale": 0.6182212581344902,
+          "body_marker_height": 183.67028199566198,
+          "pose": "kneeling_or_falling"
+        },
+        {
+          "frame": 4,
+          "path": "frames/ER10/f04.png",
+          "sha256": "b7dbc78321c7dc91f6fd199ad5c5917ffcd8d69a3160bff358e618190552ad98",
+          "bbox": [
+            136,
+            234,
+            360,
+            448
+          ],
+          "margins_px": [
+            136,
+            234,
+            152,
+            64
+          ],
+          "significant_bottom": 448,
+          "ground_coordinate_resize": 448.0,
+          "body_center_coordinate_resize": 255.53571428571428,
+          "ground_error_px": 0.0,
+          "center_error_px": 0.4642857142857224,
+          "scale": 0.6182212581344902,
+          "body_marker_height": 168.869848156182,
+          "pose": "kneeling_or_falling"
+        },
+        {
+          "frame": 5,
+          "path": "frames/ER10/f05.png",
+          "sha256": "8daf7b2d1dc780eedb92656ec4ee8e050ddad8ef2320918214988c0f1d57f0b7",
+          "bbox": [
+            148,
+            328,
+            411,
+            463
+          ],
+          "margins_px": [
+            148,
+            328,
+            101,
+            49
+          ],
+          "significant_bottom": 463,
+          "ground_coordinate_resize": 447.92727272727274,
+          "body_center_coordinate_resize": 256.0399061032864,
+          "ground_error_px": 0.07272727272726343,
+          "center_error_px": 0.03990610328639832,
+          "scale": 0.6182212581344902,
+          "body_marker_height": 91.56182212581302,
+          "pose": "lying_contact"
+        },
+        {
+          "frame": 6,
+          "path": "frames/ER10/f06.png",
+          "sha256": "89c443b5fb5560d378abe5a6d3750c0816ecbac3e76614a0c28b64d592633f71",
+          "bbox": [
+            146,
+            336,
+            399,
+            457
+          ],
+          "margins_px": [
+            146,
+            336,
+            113,
+            55
+          ],
+          "significant_bottom": 457,
+          "ground_coordinate_resize": 447.73979591836735,
+          "body_center_coordinate_resize": 256.1075794621027,
+          "ground_error_px": 0.26020408163265074,
+          "center_error_px": 0.10757946210270575,
+          "scale": 0.6182212581344902,
+          "body_marker_height": 79.85249457700598,
+          "pose": "lying_contact"
+        }
+      ],
+      "technical_status": "PASS",
+      "human_visual_acceptance": "APPROVED_EXPLICITLY_DRAFT",
+      "content_state": "DRAFT",
+      "runtime_admission": false
+    }
+  ]
+}

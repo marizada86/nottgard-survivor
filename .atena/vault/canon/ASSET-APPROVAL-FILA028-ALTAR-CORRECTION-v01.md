@@ -1,0 +1,9 @@
+# Aceite da correção AL01-CORR/v01
+
+Autoridade: dono, “Aprovo com ciclo de 900 ms”, na pergunta que identificou AL01-CORR/v01/AL01_loop_v03 e sua conservação do corpo/quatro velas, oscilação discreta da chama direita e pulsação de brilho nas demais e brasas. Classificação IN_PLAN, checkpoint OWNER-ALTAR-REVIEW aceito. Sem autorização de commit/push ou integração.
+
+Promovidas a CANON de preparação visual a tira AL01_loop_v03 RGBA 1152×192 e seus seis frames RGBA 192×192, exclusivamente nos hashes do [registro de aceite](../../generated/fila028-altar-correction-2026-10-10/approved-altar.json). Cadência aceita: ciclo de 900 ms, seis frames de 150 ms. [Galeria reconciliada](../../generated/fila028-altar-correction-2026-10-10/index.html), [evidência](../../evidence/fila028-altar-correction-2026-10-10.md), [inventário atual das 34 preparações aceitas](../../generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json).
+
+Aceite humano da aparência, conservação de materiais e quatro velas, pulsação e transição cíclica nesta cadência. Os doze checks técnicos do corpo invariável/opaco, limites de efeito e preservação das entradas passam; não são prova de diversão. A fonte AL01 v02 permanece CANON visual anterior. A derivada AL01_v02 e seus frames antigos seguem DRAFT retidos/históricos; a correção aceita resolve a pendência de preparação de AL01 sem aprovar o loop defeituoso anterior ou dispensar seu contrato.
+
+A base e máscaras intermediárias permanecem artefatos técnicos de produção; apenas a tira/seis frames identificados recebem este aceite. Audit.json conserva o estado DRAFT do momento anterior à revisão; este registro é a autoridade atual do conteúdo. Nenhuma imagem alterada para registrar o aceite. As demais 33 preparações CANON permanecem intactas. CANON de preparação não é admissão runtime nem alteração de lore/arquitetura.
