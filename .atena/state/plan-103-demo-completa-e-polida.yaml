@@ -30,6 +30,7 @@ owner_decisions:
   D19: 'G-D2 (2026-10-14, apos jogar a candidata move_e): manter 10 fps; ritmo por heroi (17 fps) descartado. Queixa: movimento abrupto e corrida engracada (provisorio). Seguir com P2 a P4 e testar 8 quadros (P5).'
   D20: 'Piloto Durvall, GIFs da branch codex/durvall-pilot-gifs (2026-10-14): P2 (move_se) e P3 (move_s) bons a 5 fps; P5 (8 quadros) muito ruim, descartado; P1 (move_e) com pouca fluidez, pede v02; P3 tem a espada cortada de um lado e aparecendo no outro (quadros se tocam), pede v02 com faixas vazias; P4 (attack) estoura a celula de 256, pede celula larga 512.'
   D21: 'Avaliacao do dono (2026-10-14) das imagens do GPT: P1 v02 pernas boas, espada cortada; P3 v02 ruim (repete perna), v01 melhor; P4 v02 ruim, v01 melhor; P2 bom. Corte da espada medido nas fontes: o gerador corta na borda da imagem (move_e v02 51 px, move_s v01 62, move_se v01 11). Decisao: v03 em grade 3x2 (ataque 2x2) de quadros 512x512 com corpo 330 px; celula 512x512 para o Durvall na integracao como Erik e Arlindo.'
+  D22: 'G-D3 (2026-10-14): piloto Durvall v03 em grade (move_e, move_se, move_s, attack) aprovado por enquanto; reavaliar depois das direcoes finais. Proximo: move_n, move_ne, move_w, move_sw, move_nw como tiras reais (sem espelho, a espada nao e simetrica), prompts em PROMPTS-v03-direcoes.md.'
   D16: 'M1 r2: referencias = ficha do Vault, arte do Nottcard e imagens do dono; nenhum inimigo; tira defeituosa nao e mais anexada.'
 batches:
   B-001: {milestone: M0, title: 'Base e validacao continua', kind: CONTINUOUS, status: PENDING_FIRST_APPROVAL}
@@ -53,7 +54,7 @@ deferred_gaps: ['mobile', 'Web', 'loja/Steam', 'localizacao', 'cooperativo']
 return:
   plan: PLAN-100
   note: 'PLAN-100 concluido local, aguardando decisoes do dono (filtro padrao, fonte); passam ao B-001/M0. PLAN-071 segue arquivado.'
-next_objective: "Dono manda P1 a P4 v03 (grade) ao GPT e salva em retorno/; Atena normaliza com --grid e reabre o laboratorio. Depois: aceite visual do piloto (G-D3), migracao do Durvall para celula 512x512 e integracao DRAFT."
+next_objective: "Dono manda P6 a P10 (move_n, move_ne, move_w, move_sw, move_nw) ao GPT e salva em retorno/; Atena normaliza em grade, gera GIFs e abre o laboratorio com as 8 direcoes. Depois: migracao do Durvall para celula 512x512 e integracao DRAFT."
 phase_a:
   steps_done: [S-001, S-002, S-003, S-004]
   evidence: EVID-246
