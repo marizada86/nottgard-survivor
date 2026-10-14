@@ -167,6 +167,7 @@ func _build_animations() -> void:
 	_has_animation = SpriteStripFrames.add_strip(frames, &"attack", "%s/attack.png" % root, cell, 4, 12.0, false) or _has_animation
 	_has_animation = SpriteStripFrames.add_strip(frames, &"active", "%s/active.png" % root, cell, 6, 12.0, false) or _has_animation
 	_has_animation = SpriteStripFrames.add_strip(frames, &"death", "%s/death.png" % root, cell, 6, 9.0, false) or _has_animation
+	_lab_apply_candidate(frames, cell)
 	# Uma folha isolada nao deve ocultar o retrato estatico do heroi.
 	_has_animation = frames.has_animation(&"idle")
 	sprite.sprite_frames = frames
@@ -335,6 +336,34 @@ func _process(delta: float) -> void:
 		var k := clampf(delta * WALK_SETTLE_SPEED, 0.0, 1.0)
 		sprite.position = sprite.position.lerp(Vector2.ZERO, k)
 		sprite.rotation = lerpf(sprite.rotation, 0.0, k)
+
+## SPEC-176: tiras candidatas (fora de assets/) só no laboratório: --walk-debug --walk-candidate=<pasta com <herói>/<tira>.png>.
+## Substitui só as tiras que existirem; nada é admitido nem gravado.
+func _lab_apply_candidate(frames: SpriteFrames, cell: Vector2i) -> void:
+	if Engine.is_editor_hint() or not WalkTrace.enabled():
+		return
+	var dir := WalkTrace.option("walk-candidate")
+	if dir == "":
+		return
+	for animation in [&"move_e", &"move_se", &"move_s", &"move_n", &"move_ne", &"attack"]:
+		var path := "%s/%s/%s.png" % [dir, _active_hero_id, animation]
+		if not FileAccess.file_exists(path):
+			continue
+		var image := Image.load_from_file(path)
+		if image == null or image.is_empty():
+			continue
+		var texture := ImageTexture.create_from_image(image)
+		var is_move := String(animation).begins_with("move")
+		if frames.has_animation(animation):
+			frames.remove_animation(animation)
+		frames.add_animation(animation)
+		frames.set_animation_speed(animation, 10.0 if is_move else 12.0)
+		frames.set_animation_loop(animation, is_move)
+		for index in maxi(1, image.get_width() / cell.x):
+			var atlas := AtlasTexture.new()
+			atlas.atlas = texture
+			atlas.region = Rect2(index * cell.x, 0, cell.x, cell.y)
+			frames.add_frame(animation, atlas)
 
 ## SPEC-176 (S-005), caminho C2: reforço procedural da passada, sincronizado aos quadros (dois apoios por ciclo).
 func _lab_stride(delta: float) -> void:
