@@ -993,7 +993,7 @@ func show_result(res: Dictionary, summary: Dictionary) -> void:
 	pause_panel.visible = false
 	hide_revive_offer()
 	result_title.text = "Vitória!" if res.won else "Você caiu..."
-	Lettering.set_banner(result_title, "banner_vitoria" if res.won else "banner_derrota", 104.0)
+	Lettering.set_banner(result_title, "banner_vitoria" if res.won else "banner_derrota", 104.0 if res.won else 73.0)
 	var background_path := "res://assets/ui/backgrounds/victory_background.png" if res.won else "res://assets/ui/backgrounds/defeat_background.png"
 	result_background.texture = load(background_path) if ResourceLoader.exists(background_path) else null
 	var t := int(res.time)
