@@ -1,0 +1,448 @@
+{
+  "status": "PASS",
+  "sources_unchanged": true,
+  "atlases": 5,
+  "cells": 30,
+  "rows": [
+    {
+      "code": "E01",
+      "version": "v02",
+      "visible_gt12": 1985,
+      "bbox_gt12": [
+        120,
+        83,
+        174,
+        172
+      ],
+      "peak_alpha": 255,
+      "edges_transparent": true
+    },
+    {
+      "code": "E02",
+      "version": "v02",
+      "visible_gt12": 6737,
+      "bbox_gt12": [
+        88,
+        41,
+        210,
+        212
+      ],
+      "peak_alpha": 255,
+      "edges_transparent": true
+    },
+    {
+      "code": "E03",
+      "version": "v01",
+      "visible_gt12": 17242,
+      "bbox_gt12": [
+        43,
+        7,
+        238,
+        246
+      ],
+      "peak_alpha": 255,
+      "edges_transparent": true
+    },
+    {
+      "code": "E04",
+      "version": "v01",
+      "visible_gt12": 12461,
+      "bbox_gt12": [
+        43,
+        11,
+        228,
+        239
+      ],
+      "peak_alpha": 255,
+      "edges_transparent": true
+    },
+    {
+      "code": "E05",
+      "version": "v01",
+      "visible_gt12": 7491,
+      "bbox_gt12": [
+        43,
+        9,
+        233,
+        243
+      ],
+      "peak_alpha": 225,
+      "edges_transparent": true
+    },
+    {
+      "code": "E06",
+      "version": "v01",
+      "visible_gt12": 2118,
+      "bbox_gt12": [
+        133,
+        32,
+        226,
+        217
+      ],
+      "peak_alpha": 93,
+      "edges_transparent": true
+    },
+    {
+      "code": "F01",
+      "version": "v01",
+      "visible_gt12": 1968,
+      "bbox_gt12": [
+        120,
+        83,
+        172,
+        170
+      ],
+      "peak_alpha": 255,
+      "edges_transparent": true
+    },
+    {
+      "code": "F02",
+      "version": "v01",
+      "visible_gt12": 6432,
+      "bbox_gt12": [
+        102,
+        46,
+        203,
+        211
+      ],
+      "peak_alpha": 255,
+      "edges_transparent": true
+    },
+    {
+      "code": "F03",
+      "version": "v01",
+      "visible_gt12": 19123,
+      "bbox_gt12": [
+        42,
+        9,
+        235,
+        246
+      ],
+      "peak_alpha": 255,
+      "edges_transparent": true
+    },
+    {
+      "code": "F04",
+      "version": "v01",
+      "visible_gt12": 12332,
+      "bbox_gt12": [
+        43,
+        11,
+        229,
+        242
+      ],
+      "peak_alpha": 255,
+      "edges_transparent": true
+    },
+    {
+      "code": "F05",
+      "version": "v01",
+      "visible_gt12": 7458,
+      "bbox_gt12": [
+        50,
+        9,
+        235,
+        245
+      ],
+      "peak_alpha": 204,
+      "edges_transparent": true
+    },
+    {
+      "code": "F06",
+      "version": "v01",
+      "visible_gt12": 999,
+      "bbox_gt12": [
+        128,
+        30,
+        223,
+        222
+      ],
+      "peak_alpha": 87,
+      "edges_transparent": true
+    },
+    {
+      "code": "H101",
+      "version": "v01",
+      "visible_gt12": 1888,
+      "bbox_gt12": [
+        124,
+        89,
+        181,
+        158
+      ],
+      "peak_alpha": 255,
+      "edges_transparent": true
+    },
+    {
+      "code": "H102",
+      "version": "v02",
+      "visible_gt12": 5751,
+      "bbox_gt12": [
+        99,
+        60,
+        204,
+        193
+      ],
+      "peak_alpha": 255,
+      "edges_transparent": true
+    },
+    {
+      "code": "H103",
+      "version": "v01",
+      "visible_gt12": 17458,
+      "bbox_gt12": [
+        43,
+        12,
+        231,
+        240
+      ],
+      "peak_alpha": 255,
+      "edges_transparent": true
+    },
+    {
+      "code": "H104",
+      "version": "v01",
+      "visible_gt12": 11146,
+      "bbox_gt12": [
+        55,
+        15,
+        222,
+        236
+      ],
+      "peak_alpha": 255,
+      "edges_transparent": true
+    },
+    {
+      "code": "H105",
+      "version": "v01",
+      "visible_gt12": 8946,
+      "bbox_gt12": [
+        45,
+        12,
+        230,
+        239
+      ],
+      "peak_alpha": 234,
+      "edges_transparent": true
+    },
+    {
+      "code": "H106",
+      "version": "v01",
+      "visible_gt12": 592,
+      "bbox_gt12": [
+        134,
+        33,
+        228,
+        220
+      ],
+      "peak_alpha": 91,
+      "edges_transparent": true
+    },
+    {
+      "code": "H201",
+      "version": "v02",
+      "visible_gt12": 16511,
+      "bbox_gt12": [
+        17,
+        16,
+        239,
+        229
+      ],
+      "peak_alpha": 255,
+      "edges_transparent": true
+    },
+    {
+      "code": "H202",
+      "version": "v01",
+      "visible_gt12": 17870,
+      "bbox_gt12": [
+        17,
+        15,
+        239,
+        230
+      ],
+      "peak_alpha": 255,
+      "edges_transparent": true
+    },
+    {
+      "code": "H203",
+      "version": "v01",
+      "visible_gt12": 19242,
+      "bbox_gt12": [
+        16,
+        15,
+        239,
+        231
+      ],
+      "peak_alpha": 255,
+      "edges_transparent": true
+    },
+    {
+      "code": "H204",
+      "version": "v01",
+      "visible_gt12": 16591,
+      "bbox_gt12": [
+        17,
+        16,
+        238,
+        229
+      ],
+      "peak_alpha": 255,
+      "edges_transparent": true
+    },
+    {
+      "code": "H205",
+      "version": "v01",
+      "visible_gt12": 15259,
+      "bbox_gt12": [
+        18,
+        17,
+        238,
+        229
+      ],
+      "peak_alpha": 255,
+      "edges_transparent": true
+    },
+    {
+      "code": "H206",
+      "version": "v01",
+      "visible_gt12": 15746,
+      "bbox_gt12": [
+        18,
+        17,
+        238,
+        228
+      ],
+      "peak_alpha": 255,
+      "edges_transparent": true
+    },
+    {
+      "code": "H301",
+      "version": "v01",
+      "visible_gt12": 17025,
+      "bbox_gt12": [
+        28,
+        23,
+        228,
+        227
+      ],
+      "peak_alpha": 255,
+      "edges_transparent": true
+    },
+    {
+      "code": "H302",
+      "version": "v01",
+      "visible_gt12": 17932,
+      "bbox_gt12": [
+        28,
+        21,
+        228,
+        228
+      ],
+      "peak_alpha": 255,
+      "edges_transparent": true
+    },
+    {
+      "code": "H303",
+      "version": "v01",
+      "visible_gt12": 17964,
+      "bbox_gt12": [
+        27,
+        23,
+        228,
+        227
+      ],
+      "peak_alpha": 255,
+      "edges_transparent": true
+    },
+    {
+      "code": "H304",
+      "version": "v01",
+      "visible_gt12": 16765,
+      "bbox_gt12": [
+        28,
+        23,
+        228,
+        227
+      ],
+      "peak_alpha": 255,
+      "edges_transparent": true
+    },
+    {
+      "code": "H305",
+      "version": "v01",
+      "visible_gt12": 16410,
+      "bbox_gt12": [
+        28,
+        23,
+        228,
+        227
+      ],
+      "peak_alpha": 255,
+      "edges_transparent": true
+    },
+    {
+      "code": "H306",
+      "version": "v01",
+      "visible_gt12": 16232,
+      "bbox_gt12": [
+        28,
+        23,
+        228,
+        227
+      ],
+      "peak_alpha": 255,
+      "edges_transparent": true
+    }
+  ],
+  "calibration": {
+    "melee_arco_radiante": {
+      "pivot": [
+        128,
+        128
+      ],
+      "main_radius": 107.2,
+      "method": "Canvas-center origin per accepted directional reference; 95th percentile radius of gate alpha>=0.5, excludes faint sparks; one pivot/scale for all six frames.",
+      "atlas_sha256": "96750c5e938260bcfc4776d0aada843adbade58a87f6a837a91d8e5158bd80ff"
+    },
+    "melee_arco_fogo": {
+      "pivot": [
+        128,
+        128
+      ],
+      "main_radius": 106.53,
+      "method": "Canvas-center origin per accepted directional reference; 95th percentile radius of gate alpha>=0.5, excludes faint sparks; one pivot/scale for all six frames.",
+      "atlas_sha256": "7956a56c856d93a3ba0321948f8b4e552ae3e4523ebf17936cb72e87a3252356"
+    },
+    "durvall_ruptura_sombria": {
+      "pivot": [
+        128,
+        128
+      ],
+      "main_radius": 104.72,
+      "method": "Canvas-center origin per accepted directional reference; 95th percentile radius of gate alpha>=0.5, excludes faint sparks; one pivot/scale for all six frames.",
+      "atlas_sha256": "4c2915bfcb95ab65c6f4ed285328ae6bdbf46fefac8ea3e2efa92e686639f6a4"
+    },
+    "brook_guarda_de_lliira": {
+      "pivot": [
+        128.0,
+        126.0
+      ],
+      "main_radius": 93.0,
+      "method": "Geometric annulus fit: mean circle intensity contrast against radius +/-3, 240 angular samples, centers near canvas center. Excludes cardinal star/spark bounding-box bias. Fixed pivot/radius for six frames.",
+      "atlas_sha256": "a48562171748f68a43b0088a800a91f4113355fc8f8b5cc9cf4f41b48996af50"
+    },
+    "maelor_comunhao": {
+      "pivot": [
+        130.0,
+        126.0
+      ],
+      "main_radius": 82.0,
+      "method": "Geometric annulus fit: mean circle intensity contrast against radius +/-3, 240 angular samples, centers near canvas center. Excludes cardinal star/spark bounding-box bias. Fixed pivot/radius for six frames.",
+      "atlas_sha256": "cef437056f7ad14f24d291708a788e101e179261941257f7ba57e2a2a71a5513"
+    }
+  },
+  "rgb": "white",
+  "edges_transparent": true,
+  "raster_editing_tool": "Godot prepare.gd only; Python read-only audit"
+}

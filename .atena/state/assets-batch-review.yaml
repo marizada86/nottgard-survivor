@@ -1,0 +1,37 @@
+version: 1
+plan: PLAN-053
+revision: assets-batch-review/v01
+classification: IN_PLAN
+mode: per-plan
+status: COMPLETED_VISUALLY_ACCEPTED_DRAFT
+checkpoint: S-004/VISUAL_BATCH_ACCEPTANCE_RECORDED
+ordered_steps: [S-001, S-002, S-003, S-004]
+current_step_position: 4
+completed_steps: 4
+total_steps: 4
+remaining_steps_after_current: 0
+batch: L-001
+images: 30
+families: [arco_largo_radiante, arco_largo_fogo, durvall_ruptura_sombria, brook_guarda_de_lliira, maelor_comunhao]
+owner_request: 'atena, continuar assets, aumentar tamanho de lotes de imagens para facilitar o processo e ser mais rapido'
+content_state: DRAFT_WITH_HISTORICAL_GATE_ACCEPTANCES_PRESERVED
+runtime_admission: false
+new_generation: 0
+canonical_promotion: false
+spec: .atena/specs/SPEC-121-retomada-fila-imagens/assets-batch-review-v01.md
+return_plan: {id: PLAN-071, checkpoint: B-006/S-011, preserved: true}
+manifest: .atena/generated/assets-batch-review-2026-10-13/manifest.json
+gallery: .atena/generated/assets-batch-review-2026-10-13/index.html
+verification: .atena/generated/assets-batch-review-2026-10-13/verification.json
+evidence: .atena/evidence/assets-batch-review-2026-10-13.md
+next_objective: Admissao tecnica5/5 entregue; aguardar playtest humano runtime.
+next_inputs: Galeria 30 fontes, cinco gates historicos, manifesto/hashes.
+next_output: Recibo de aceite visual agrupado; depois proposta conjunta de admissao.
+next_checks: Coerencia, expansao/afinamento, residuos, leitura96px, fechamento Brook/Maelor.
+approval_status: VISUALLY_ACCEPTED_EXPLICITLY
+visual_acceptance: .atena/generated/assets-batch-review-2026-10-13/visual-acceptance.json
+admission_proposal: .atena/specs/SPEC-121-retomada-fila-imagens/assets-l001-admission-v01.md
+admission_mode: per-plan
+admission_execution_authorized: true
+admission_state: .atena/state/assets-l001-admission.yaml
+admission_status: LOCAL_TECHNICAL_DELIVERED_AWAITING_OWNER_PLAYTEST

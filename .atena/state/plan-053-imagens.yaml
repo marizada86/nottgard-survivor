@@ -3,9 +3,9 @@ active_plan:
   id: PLAN-053
   spec_id: SPEC-121
   current_step: S-007
-  checkpoint: S-007/VFX/ONDA_CORTANTE/OWNER_DELIVERY_ACCEPTANCE_RECORDED
+  checkpoint: S-007/VFX/L-001/OWNER_DELIVERY_ACCEPTANCE_RECORDED
   total_steps: 7
-  status: ONDA_CORTANTE_OWNER_ACCEPTED_LOCAL_DELIVERY
+  status: L001_OWNER_ACCEPTED_LOCAL_DELIVERY
   approval:
     mode: per-plan
     checkpoint: PLAN
@@ -19,10 +19,10 @@ active_plan:
     date: '2026-10-03'
     evidence: Pedido pode continuar após seleção Por plano; gates visuais preservados.
 plan_cursor:
-  current: 'Onda Cortante entrega local aceita DRAFT; procedimento de playtest nao relatado; commit local concluido.'
-  next: 'Commit local concluido; conferir proxima pendencia nas filas existentes sem regeneracao automatica.'
-  review: '.atena/generated/onda-cortante-admission-2026-10-13/index.html'
-  evidence: '.atena/evidence/onda-cortante-admission-2026-10-13.md'
+  current: 'L-001 cincoatlas admitidos localmente, tecnico5/5PASS; suite0/smoke9/capturas131; entrega local aceita; procedimento de playtest nao relatado.'
+  next: 'Commit local autorizado; retomar revisao L002/42herois existente, sem regeneracao automatica.'
+  review: '.atena/generated/assets-l001-admission-2026-10-13/index.html'
+  evidence: '.atena/evidence/assets-l001-admission-2026-10-13.md'
 identity_gate:
   id: GATE-PILARES-IDENTITY-V01
   status: APPROVED
@@ -345,3 +345,44 @@ assets_git_checkpoint_2026_10_13:
   commit_subject: "feat(vfx): admit radiant and arcane orbs and cutting wave"
   commit_locator: "git log --all --fixed-strings --grep=feat(vfx): admit radiant and arcane orbs and cutting wave"
   published: false
+assets_batch_review_2026_10_13:
+  plan: PLAN-053
+  revision: assets-batch-review/v01
+  classification: IN_PLAN
+  state_file: .atena/state/assets-batch-review.yaml
+  mode: per-plan
+  status: COMPLETED_VISUALLY_ACCEPTED_DRAFT
+  checkpoint: S-004/VISUAL_BATCH_ACCEPTANCE_RECORDED
+  completed_steps: 4
+  total_steps: 4
+  batch: L-001
+  images: 30
+  additional_phases_pending_acceptance: 0
+  historical_gates_preserved: 5
+  preference: Larger complete-sequence review batches requested explicitly by owner.
+  next_proposed_batch_images: 42
+  content_state: DRAFT_WITH_HISTORICAL_GATES_PRESERVED
+  runtime_admission: false
+  canonical_promotion: false
+  evidence: .atena/evidence/assets-batch-review-2026-10-13.md
+  return_plan: PLAN-071
+  return_checkpoint: B-006/S-011
+  visual_acceptance: .atena/generated/assets-batch-review-2026-10-13/visual-acceptance.json
+  admission_mode: per-plan
+assets_l001_admission_2026_10_13:
+  plan: PLAN-053
+  revision: assets-l001-admission/v01
+  classification: IN_PLAN_APPROVED_ADMISSION
+  state_file: .atena/state/assets-l001-admission.yaml
+  mode: per-plan
+  status: OWNER_ACCEPTED_LOCAL_DELIVERY
+  checkpoint: S-005/OWNER_DELIVERY_ACCEPTANCE_RECORDED
+  completed_steps: 5
+  total_steps: 5
+  content_state: DRAFT_WITH_HISTORICAL_GATES_PRESERVED
+  runtime_admission: true
+  canonical_promotion: false
+  return_plan: PLAN-071
+  return_checkpoint: B-006/S-011
+  evidence: .atena/evidence/assets-l001-admission-2026-10-13.md
+  owner_delivery_acceptance: .atena/generated/assets-l001-admission-2026-10-13/owner-delivery-and-commit-authorization.json

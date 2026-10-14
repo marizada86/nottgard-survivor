@@ -1,0 +1,405 @@
+{
+  "alpha": "Rec709 luminance; <=2/255zero",
+  "atlas_size": [
+    1536,
+    256
+  ],
+  "canvas_center": [
+    128,
+    128
+  ],
+  "cell": [
+    256,
+    256
+  ],
+  "filter": "Godot Lanczos native->1024 audit and native->256 runtime",
+  "native_bytes_preserved": true,
+  "records": [
+    {
+      "atlas": "melee_arco_radiante",
+      "code": "E01",
+      "offset": [
+        0,
+        0
+      ],
+      "sha256": "5f146fba88aad2b388de4eac4d393893f901860fb99ef4047fa099c1efe890eb",
+      "source": ".atena/generated/art-candidates/vfx/arco_largo_radiante/arco_largo_radiante_start_v02.png",
+      "version": "v02"
+    },
+    {
+      "atlas": "melee_arco_radiante",
+      "code": "E02",
+      "offset": [
+        256,
+        0
+      ],
+      "sha256": "4ce350315c6285e49dd16e02be91516efb9326f301e41e54962accf376898fbf",
+      "source": ".atena/generated/art-candidates/vfx/arco_largo_radiante/arco_largo_radiante_sweep_v02.png",
+      "version": "v02"
+    },
+    {
+      "atlas": "melee_arco_radiante",
+      "code": "E03",
+      "offset": [
+        512,
+        0
+      ],
+      "sha256": "aa72cc5f234bda6ef82c91b8a26690e25514f8c25fd7826f520f07caed978640",
+      "source": ".atena/generated/art-candidates/vfx/arco_largo_radiante/arco_largo_radiante_peak_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "melee_arco_radiante",
+      "code": "E04",
+      "offset": [
+        768,
+        0
+      ],
+      "sha256": "b6a72657fca5f6221650d62d31e3c767a3df27818f67d7ddfeef199de181ac4f",
+      "source": ".atena/generated/art-candidates/vfx/arco_largo_radiante/arco_largo_radiante_hold_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "melee_arco_radiante",
+      "code": "E05",
+      "offset": [
+        1024,
+        0
+      ],
+      "sha256": "cb4ab149220043c56a339700a477c09797d69462676d4e110ea9530cb3c05c04",
+      "source": ".atena/generated/art-candidates/vfx/arco_largo_radiante/arco_largo_radiante_fade_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "melee_arco_radiante",
+      "code": "E06",
+      "offset": [
+        1280,
+        0
+      ],
+      "sha256": "e09bccd8c35fd1d3695041684dd9840518de207dc53d073186dd8b19d215aa8c",
+      "source": ".atena/generated/art-candidates/vfx/arco_largo_radiante/arco_largo_radiante_dissipate_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "melee_arco_fogo",
+      "code": "F01",
+      "offset": [
+        0,
+        0
+      ],
+      "sha256": "19f0d996ccf6e243f6bab7c8ac0135507f684e3135819ee5a41db9c971b665fc",
+      "source": ".atena/generated/art-candidates/vfx/arco_largo_fogo/arco_largo_fogo_start_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "melee_arco_fogo",
+      "code": "F02",
+      "offset": [
+        256,
+        0
+      ],
+      "sha256": "671ebc8ab76edb3ab5c44cacd52b71be824d0dd66d35fd868fad10fba020df87",
+      "source": ".atena/generated/art-candidates/vfx/arco_largo_fogo/arco_largo_fogo_sweep_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "melee_arco_fogo",
+      "code": "F03",
+      "offset": [
+        512,
+        0
+      ],
+      "sha256": "9893fc40652c2d2efdafb468a12f9c13dba1f2e239496eebc6cbefb0b892fc8a",
+      "source": ".atena/generated/art-candidates/vfx/arco_largo_fogo/arco_largo_fogo_peak_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "melee_arco_fogo",
+      "code": "F04",
+      "offset": [
+        768,
+        0
+      ],
+      "sha256": "b784214f915ae6ba213a79848e336082c7f810e8b8a80ea83bd31aaf9df0f645",
+      "source": ".atena/generated/art-candidates/vfx/arco_largo_fogo/arco_largo_fogo_hold_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "melee_arco_fogo",
+      "code": "F05",
+      "offset": [
+        1024,
+        0
+      ],
+      "sha256": "9cff44d0b217625168dba0603d8aa72665e5f41cddf6e4955fca26e7032bfdaa",
+      "source": ".atena/generated/art-candidates/vfx/arco_largo_fogo/arco_largo_fogo_fade_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "melee_arco_fogo",
+      "code": "F06",
+      "offset": [
+        1280,
+        0
+      ],
+      "sha256": "b81b72ef0ef70c8330ad6f45e0c6bfdcc536fdf20b0f528d39601b7baabd8afb",
+      "source": ".atena/generated/art-candidates/vfx/arco_largo_fogo/arco_largo_fogo_dissipate_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "durvall_ruptura_sombria",
+      "code": "H101",
+      "offset": [
+        0,
+        0
+      ],
+      "sha256": "00b891b430ae103cf252d2fb84cd871baffa6c924d16910dc2df7f985ce48844",
+      "source": ".atena/generated/art-candidates/vfx/durvall_ruptura_sombria/durvall_ruptura_sombria_start_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "durvall_ruptura_sombria",
+      "code": "H102",
+      "offset": [
+        256,
+        0
+      ],
+      "sha256": "809ecc013e2443033ef335632db7a9691d022f3321da017ca426326fb3e2020e",
+      "source": ".atena/generated/art-candidates/vfx/durvall_ruptura_sombria/durvall_ruptura_sombria_sweep_v02.png",
+      "version": "v02"
+    },
+    {
+      "atlas": "durvall_ruptura_sombria",
+      "code": "H103",
+      "offset": [
+        512,
+        0
+      ],
+      "sha256": "e5f022ec1c630409f6405add4250ebfc73ebe052ea233e8c227ec5ce67fe8974",
+      "source": ".atena/generated/art-candidates/vfx/durvall_ruptura_sombria/durvall_ruptura_sombria_peak_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "durvall_ruptura_sombria",
+      "code": "H104",
+      "offset": [
+        768,
+        0
+      ],
+      "sha256": "341e6fa8418c4d4aca7f06b21116c3be8ff634cbb2fd6340da7c47dd283a3556",
+      "source": ".atena/generated/art-candidates/vfx/durvall_ruptura_sombria/durvall_ruptura_sombria_hold_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "durvall_ruptura_sombria",
+      "code": "H105",
+      "offset": [
+        1024,
+        0
+      ],
+      "sha256": "17bbd4c6c43348370cb860feeb1eb10113d2bbb35a1a980d0c37bbced2ad02a2",
+      "source": ".atena/generated/art-candidates/vfx/durvall_ruptura_sombria/durvall_ruptura_sombria_fade_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "durvall_ruptura_sombria",
+      "code": "H106",
+      "offset": [
+        1280,
+        0
+      ],
+      "sha256": "86c6d108e6b7034acbec687bcfc7ea1537cde6480b389b7870b0b5cb5826314c",
+      "source": ".atena/generated/art-candidates/vfx/durvall_ruptura_sombria/durvall_ruptura_sombria_dissipate_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "brook_guarda_de_lliira",
+      "code": "H201",
+      "offset": [
+        0,
+        0
+      ],
+      "sha256": "076c90602cf4f72e7e78df90791e8dbda1d47be473f81c1687e9c91347af9166",
+      "source": ".atena/generated/art-candidates/vfx/brook_guarda_de_lliira/brook_guarda_de_lliira_loop_00_v02.png",
+      "version": "v02"
+    },
+    {
+      "atlas": "brook_guarda_de_lliira",
+      "code": "H202",
+      "offset": [
+        256,
+        0
+      ],
+      "sha256": "9dfd35c3d44f632a910699f121adcdbfb92b1b9570f897e16fae2a0a581ea193",
+      "source": ".atena/generated/art-candidates/vfx/brook_guarda_de_lliira/brook_guarda_de_lliira_loop_01_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "brook_guarda_de_lliira",
+      "code": "H203",
+      "offset": [
+        512,
+        0
+      ],
+      "sha256": "d8b58bc231a433cf8d33ea4bc19a55f7362afcba71e27b1c58ae67389694522e",
+      "source": ".atena/generated/art-candidates/vfx/brook_guarda_de_lliira/brook_guarda_de_lliira_loop_02_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "brook_guarda_de_lliira",
+      "code": "H204",
+      "offset": [
+        768,
+        0
+      ],
+      "sha256": "a146a13a5af5a533f3e3f199bd37870520d95abd6d2f6339bd74032b6e0ac74f",
+      "source": ".atena/generated/art-candidates/vfx/brook_guarda_de_lliira/brook_guarda_de_lliira_loop_03_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "brook_guarda_de_lliira",
+      "code": "H205",
+      "offset": [
+        1024,
+        0
+      ],
+      "sha256": "795e92c2e1bc58c2ed2f2431e5ae586d063de694c5dc78d65306282a54daf01b",
+      "source": ".atena/generated/art-candidates/vfx/brook_guarda_de_lliira/brook_guarda_de_lliira_loop_04_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "brook_guarda_de_lliira",
+      "code": "H206",
+      "offset": [
+        1280,
+        0
+      ],
+      "sha256": "f353d745355e6d4792d793e3e473c06c6b20a50302f50f65703ea5960f8c3270",
+      "source": ".atena/generated/art-candidates/vfx/brook_guarda_de_lliira/brook_guarda_de_lliira_loop_05_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "maelor_comunhao",
+      "code": "H301",
+      "offset": [
+        0,
+        0
+      ],
+      "sha256": "ed622fe59738017a625ebd2daaf90d2f738213d1fca299d9240d08ccd3fd3969",
+      "source": ".atena/generated/art-candidates/vfx/maelor_comunhao/maelor_comunhao_loop_00_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "maelor_comunhao",
+      "code": "H302",
+      "offset": [
+        256,
+        0
+      ],
+      "sha256": "7a289aae4816f19800cfdefd63dae9e3662020d590b92d1df9dcefd1e27543bd",
+      "source": ".atena/generated/art-candidates/vfx/maelor_comunhao/maelor_comunhao_loop_01_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "maelor_comunhao",
+      "code": "H303",
+      "offset": [
+        512,
+        0
+      ],
+      "sha256": "c6dddbbcc415c987e32a2fe31a3ef61360b026f6cf2c08232eae8f43b4a3678a",
+      "source": ".atena/generated/art-candidates/vfx/maelor_comunhao/maelor_comunhao_loop_02_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "maelor_comunhao",
+      "code": "H304",
+      "offset": [
+        768,
+        0
+      ],
+      "sha256": "b5b5c8334439e61fcce91922ef624addbbf92b7e27696b2c65cccaf57bd79821",
+      "source": ".atena/generated/art-candidates/vfx/maelor_comunhao/maelor_comunhao_loop_03_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "maelor_comunhao",
+      "code": "H305",
+      "offset": [
+        1024,
+        0
+      ],
+      "sha256": "5c1e88fb174de1791a186c6b75eb86ba89d066f47f99b7ae4f4f91453b35d25d",
+      "source": ".atena/generated/art-candidates/vfx/maelor_comunhao/maelor_comunhao_loop_04_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "maelor_comunhao",
+      "code": "H306",
+      "offset": [
+        1280,
+        0
+      ],
+      "sha256": "574f8ca4fedc2d3dfbdf452a8aef7278dd840bc7ed13918bd1e06b49a27a73aa",
+      "source": ".atena/generated/art-candidates/vfx/maelor_comunhao/maelor_comunhao_loop_05_v01.png",
+      "version": "v01"
+    }
+  ],
+  "revision": "assets-l001-admission/v01",
+  "rgb": "white",
+  "runtime_calibration": {
+    "melee_arco_radiante": {
+      "pivot": [
+        128,
+        128
+      ],
+      "main_radius": 107.2,
+      "method": "Canvas-center origin per accepted directional reference; 95th percentile radius of gate alpha>=0.5, excludes faint sparks; one pivot/scale for all six frames.",
+      "atlas_sha256": "96750c5e938260bcfc4776d0aada843adbade58a87f6a837a91d8e5158bd80ff"
+    },
+    "melee_arco_fogo": {
+      "pivot": [
+        128,
+        128
+      ],
+      "main_radius": 106.53,
+      "method": "Canvas-center origin per accepted directional reference; 95th percentile radius of gate alpha>=0.5, excludes faint sparks; one pivot/scale for all six frames.",
+      "atlas_sha256": "7956a56c856d93a3ba0321948f8b4e552ae3e4523ebf17936cb72e87a3252356"
+    },
+    "durvall_ruptura_sombria": {
+      "pivot": [
+        128,
+        128
+      ],
+      "main_radius": 104.72,
+      "method": "Canvas-center origin per accepted directional reference; 95th percentile radius of gate alpha>=0.5, excludes faint sparks; one pivot/scale for all six frames.",
+      "atlas_sha256": "4c2915bfcb95ab65c6f4ed285328ae6bdbf46fefac8ea3e2efa92e686639f6a4"
+    },
+    "brook_guarda_de_lliira": {
+      "pivot": [
+        128.0,
+        126.0
+      ],
+      "main_radius": 93.0,
+      "method": "Geometric annulus fit: mean circle intensity contrast against radius +/-3, 240 angular samples, centers near canvas center. Excludes cardinal star/spark bounding-box bias. Fixed pivot/radius for six frames.",
+      "atlas_sha256": "a48562171748f68a43b0088a800a91f4113355fc8f8b5cc9cf4f41b48996af50"
+    },
+    "maelor_comunhao": {
+      "pivot": [
+        130.0,
+        126.0
+      ],
+      "main_radius": 82.0,
+      "method": "Geometric annulus fit: mean circle intensity contrast against radius +/-3, 240 angular samples, centers near canvas center. Excludes cardinal star/spark bounding-box bias. Fixed pivot/radius for six frames.",
+      "atlas_sha256": "cef437056f7ad14f24d291708a788e101e179261941257f7ba57e2a2a71a5513"
+    }
+  },
+  "timing": {
+    "melee_fps": 30,
+    "brook_fps": 12,
+    "brook_lifetime": "Battle guard charge/timer; current max4s",
+    "maelor_fps": 10,
+    "maelor_duration": 0.6
+  }
+}

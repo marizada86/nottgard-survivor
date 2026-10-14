@@ -1,0 +1,13 @@
+# Playtest L-001 — cinco sequências / v01
+
+Build local `0.4.0/assets-l001-admission-v01/1b0edb3+local-92c12e0ca1c7`, checkout d8a8/Godot4.7.2, Dagruve, perfil QA isolado. Escopo: três armas e ativações de Durvall/Brook/Maelor,30fontes/cincoatlas. DRAFT mantido e gates históricos preservados; sem exportação. Objetivo: conferir leitura, brilho, ritmo, alcance visual e alinhamento durante movimento.
+
+1. Jogar30–60s com [Golpe do Juízo](Jogar-Juizo.cmd), [Martelo da Glória](Jogar-Martelo.cmd) e [Machado de Xar'gath](Jogar-Machado.cmd). Mover por pisos claros/escuros e apontar em oito direções com controle de Mira. Observar raios versus chamas, avanço/afinamento do arco e conforto do brilho; cortes duram0,2s.
+2. [Durvall](Jogar-Durvall.cmd): usar Q ou botão direito perto de inimigos, esperar cooldown normal e repetir. Conferir rasgo/rachaduras do golpe e ausência de duplicação do corte. Não confundir ring genérico de ativação preservado com um segundo corte.
+3. [Brook](Jogar-Brook.cmd): ativar Q/botão direito, mover e observar o anel acompanhando os pés. Sem receber golpe, ele termina em até4s. Em outra ativação receber um golpe: a guarda bloqueia e o anel desaparece quando a carga é consumida. Conferir estrelas e pulsação calma, sem rotação das marcas.
+4. [Maelor](Jogar-Maelor.cmd): ativar, observar um único ciclo de0,6s com sinais de mais; mover durante a ativação. Cura/marca continuam instantâneas, sem campo de cura persistente. Comparar [tinta Tou Um](Jogar-Tou-Um.cmd).
+5. [Reduzido com Brook](Jogar-Reduzido.cmd): ativações usam o ring simples anterior. Nas Opções, alternar reduzir efeitos durante uma guarda para conferir remoção do atlas. Pausar/retomar em todos os casos e observar se o efeito não fica preso.
+
+Critérios técnicos: orientação coerente/sem corte de borda ou fundo retangular, alinhamento e vida útil corretos, reduzido preservado. Critérios humanos: rasgo/raios/chamas/estrelas/mais legíveis, brilho confortável e cadência aceitável em combate. Atena verifica consistência; você avalia sensação/dificuldade/diversão. Feedback esperado: arma ou herói, modo/cor/direção, aceitável ou problema, voo/golpe/ciclo/fase se identificável. Playtest humano PENDENTE, necessário ao aceite visual em runtime; smoke dos atalhos não substitui jogar.
+
+Cada atalho isola APPDATA e save QA nesta pasta; nenhum progresso real é usado. Os três atalhos de armas equipam só aquela arma no perfil descartável; os de herói mantêm equipamento inicial. [Galeria131capturas](index.html), [verificação](verification.json), [checks principais](runtime-checks.json), [regressão projéteis/Pulso/Ampulheta](vfx-regression/runtime-checks.json).

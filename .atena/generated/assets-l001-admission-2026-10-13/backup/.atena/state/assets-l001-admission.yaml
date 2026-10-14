@@ -1,0 +1,26 @@
+version: 1
+plan: PLAN-053
+revision: assets-l001-admission/v01
+classification: PLAN_CHANGE_REQUEST
+status: PROPOSED_AWAITING_SCOPE_AND_MODE
+mode: unconfigured
+approval_status: PENDING
+checkpoint: PLAN_APPROVAL
+ordered_steps: [S-001, S-002, S-003, S-004, S-005]
+batches: {B-001: [S-001], B-002: [S-002, S-003], B-003: [S-004, S-005]}
+completed_steps: 0
+total_steps: 5
+current_step_position: 1
+remaining_steps_after_current: 4
+images: 30
+atlases: 5
+content_state: DRAFT_WITH_HISTORICAL_GATES_PRESERVED
+runtime_changed: false
+canonical_promotion: false
+spec: .atena/specs/SPEC-121-retomada-fila-imagens/assets-l001-admission-v01.md
+source_acceptance: .atena/generated/assets-batch-review-2026-10-13/visual-acceptance.json
+next_objective: Escolher modo e aprovar escopo conjunto antes de executar S-001.
+next_inputs: Cinco sequencias aceitas, hashes, escopo/calibracao/lifecycle propostos.
+next_output: Autorizacao per-plan, per-batch ou per-step.
+next_checks: Preservar gameplay; Brook segue carga/4s; Maelor feedback unico0,6s.
+return_plan: {id: PLAN-071, checkpoint: B-006/S-011, preserved: true}

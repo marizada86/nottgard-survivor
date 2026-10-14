@@ -15,9 +15,19 @@ const SHAPE_PATHS := {
 	"arco_largo": "res://assets/vfx/melee_fisico_arco_largo.png",
 	"estocada_longa": "res://assets/vfx/melee_estocada_longa.png",
 	"chicote": "res://assets/vfx/melee_chicote.png",
+	"arco_radiante": "res://assets/vfx/melee_arco_radiante.png",
+	"arco_fogo": "res://assets/vfx/melee_arco_fogo.png",
+	"ruptura_sombria": "res://assets/vfx/durvall_ruptura_sombria.png",
 }
+const CALIBRATED_RADII := {"arco_radiante":107.2, "arco_fogo":106.53, "ruptura_sombria":104.72}
 
 static func shape_for(weapon: String, dtype: String) -> String:
+	if weapon in ["golpe_do_juizo", "martelo_da_gloria"]:
+		return "arco_radiante" if dtype == "radiante" else ""
+	if weapon == "machado_de_xargath":
+		return "arco_fogo" if dtype == "fogo" else ""
+	if weapon == "ruptura_sombria":
+		return "ruptura_sombria" if dtype == "fisico" else ""
 	if weapon == "estocada_mistica":
 		return "estocada_longa" if dtype == "magico" else ""
 	return String(WEAPON_SHAPES.get(weapon, "")) if dtype == "fisico" else ""
@@ -31,9 +41,13 @@ static func create_effect(event: Dictionary, color: Color) -> Node2D:
 	var shape := shape_for(String(event.get("weapon", "")), String(event.get("dtype", "")))
 	if shape.is_empty():
 		return null
+	if CALIBRATED_RADII.has(shape) and event.get("type", "") != "swing":
+		return null
 	if not _frames.has(shape):
+		if not ResourceLoader.exists(SHAPE_PATHS[shape]):
+			return null
 		var texture := load(SHAPE_PATHS[shape]) as Texture2D
-		if texture == null:
+		if texture == null or texture.get_size() != Vector2(1536, 256):
 			return null
 		var frames := SpriteFrames.new()
 		frames.set_animation_loop("default", false)
@@ -44,13 +58,16 @@ static func create_effect(event: Dictionary, color: Color) -> Node2D:
 			frame.region = Rect2(index * 256, 0, 256, 256)
 			frames.add_frame("default", frame)
 		_frames[shape] = frames
+	if _frames[shape] == null:
+		return null
 	var root := Node2D.new()
 	root.transform = projection(event.dir)
 	root.position = Iso.to_screen(event.pos) + Vector2(0, -18)
 	var sprite := AnimatedSprite2D.new()
 	sprite.sprite_frames = _frames[shape]
 	var radius_fraction := 0.45 if shape in ["estocada_longa", "chicote"] else 0.4
-	var reach_scale := float(event.range) * Iso.TILE_W * 0.5 * sqrt(2.0) / (256.0 * radius_fraction)
+	var source_radius := float(CALIBRATED_RADII.get(shape, 256.0 * radius_fraction))
+	var reach_scale := float(event.range) * Iso.TILE_W * 0.5 * sqrt(2.0) / source_radius
 	sprite.scale = Vector2.ONE * reach_scale
 	sprite.modulate = color
 	var material := CanvasItemMaterial.new()

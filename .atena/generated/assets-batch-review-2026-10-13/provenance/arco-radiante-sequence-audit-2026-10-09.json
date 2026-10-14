@@ -1,0 +1,93 @@
+{
+  "status": "COMPLETE_CANDIDATE_SEQUENCE_VISUALLY_REVIEWED",
+  "sources": [
+    {
+      "code": "E01",
+      "path": ".atena/generated/art-candidates/vfx/arco_largo_radiante/arco_largo_radiante_start_v02.png",
+      "sha256": "5f146fba88aad2b388de4eac4d393893f901860fb99ef4047fa099c1efe890eb",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v02",
+      "mean_luminance": 3.8563334172752457,
+      "visible_fraction_above12": 0.030413681005471486
+    },
+    {
+      "code": "E02",
+      "path": ".atena/generated/art-candidates/vfx/arco_largo_radiante/arco_largo_radiante_sweep_v02.png",
+      "sha256": "4ce350315c6285e49dd16e02be91516efb9326f301e41e54962accf376898fbf",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v02",
+      "mean_luminance": 14.07801891999827,
+      "visible_fraction_above12": 0.10301198843127829
+    },
+    {
+      "code": "E03",
+      "path": ".atena/generated/art-candidates/vfx/arco_largo_radiante/arco_largo_radiante_peak_v01.png",
+      "sha256": "aa72cc5f234bda6ef82c91b8a26690e25514f8c25fd7826f520f07caed978640",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 40.41153094785681,
+      "visible_fraction_above12": 0.2642599502962132
+    },
+    {
+      "code": "E04",
+      "path": ".atena/generated/art-candidates/vfx/arco_largo_radiante/arco_largo_radiante_hold_v01.png",
+      "sha256": "b6a72657fca5f6221650d62d31e3c767a3df27818f67d7ddfeef199de181ac4f",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 25.84491795314006,
+      "visible_fraction_above12": 0.19069376718583467
+    },
+    {
+      "code": "E05",
+      "path": ".atena/generated/art-candidates/vfx/arco_largo_radiante/arco_largo_radiante_fade_v01.png",
+      "sha256": "cb4ab149220043c56a339700a477c09797d69462676d4e110ea9530cb3c05c04",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 7.8878485179165105,
+      "visible_fraction_above12": 0.11340234375993631
+    },
+    {
+      "code": "E06",
+      "path": ".atena/generated/art-candidates/vfx/arco_largo_radiante/arco_largo_radiante_dissipate_v01.png",
+      "sha256": "e09bccd8c35fd1d3695041684dd9840518de207dc53d073186dd8b19d215aa8c",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 1.4536278168234855,
+      "visible_fraction_above12": 0.03161684841362505
+    }
+  ],
+  "native_sources_preserved": true,
+  "preview_only": true,
+  "runtime_admission": false,
+  "manifest_assets": 202,
+  "timestamp": "2026-10-09T03:18:36.590133+00:00",
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "visual_inspected": true,
+  "visual_review": "One continuous right-facing radiant arc expands from start/sweep to peak; hold thins, fade breaks into fragments, dissipate leaves faint gray specks; review montage and 96px thumbnails inspected.",
+  "human_peak_approval": ".atena/generated/s007-reconciliation/v01/e03-owner-approval-2026-10-09.json",
+  "review": ".atena/generated/s007-reconciliation/v01/arco-radiante-six-frame-review-2026-10-09.png",
+  "preview_gif": ".atena/generated/s007-reconciliation/v01/arco-radiante-review-2026-10-09.gif",
+  "other_frames_human_approval": "not individually claimed",
+  "remaining_native_vfx_frames": 102,
+  "native_dimensions_note": "Native1254 square sources retained; requested1024 normalization deferred to future admission",
+  "next": "F03 peak generation only, then required owner gate"
+}

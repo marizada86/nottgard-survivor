@@ -1,0 +1,93 @@
+{
+  "status": "COMPLETE_CANDIDATE_SEQUENCE_VISUALLY_REVIEWED",
+  "sources": [
+    {
+      "code": "F01",
+      "path": ".atena/generated/art-candidates/vfx/arco_largo_fogo/arco_largo_fogo_start_v01.png",
+      "sha256": "19f0d996ccf6e243f6bab7c8ac0135507f684e3135819ee5a41db9c971b665fc",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 3.7537710268130815,
+      "visible_fraction_above12": 0.029931015010340116
+    },
+    {
+      "code": "F02",
+      "path": ".atena/generated/art-candidates/vfx/arco_largo_fogo/arco_largo_fogo_sweep_v01.png",
+      "sha256": "671ebc8ab76edb3ab5c44cacd52b71be824d0dd66d35fd868fad10fba020df87",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 14.693479112454181,
+      "visible_fraction_above12": 0.09806513892386469
+    },
+    {
+      "code": "F03",
+      "path": ".atena/generated/art-candidates/vfx/arco_largo_fogo/arco_largo_fogo_peak_v01.png",
+      "sha256": "9893fc40652c2d2efdafb468a12f9c13dba1f2e239496eebc6cbefb0b892fc8a",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 46.756160827616384,
+      "visible_fraction_above12": 0.2921808108788718
+    },
+    {
+      "code": "F04",
+      "path": ".atena/generated/art-candidates/vfx/arco_largo_fogo/arco_largo_fogo_hold_v01.png",
+      "sha256": "b784214f915ae6ba213a79848e336082c7f810e8b8a80ea83bd31aaf9df0f645",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 25.640298731459648,
+      "visible_fraction_above12": 0.18783274701179511
+    },
+    {
+      "code": "F05",
+      "path": ".atena/generated/art-candidates/vfx/arco_largo_fogo/arco_largo_fogo_fade_v01.png",
+      "sha256": "9cff44d0b217625168dba0603d8aa72665e5f41cddf6e4955fca26e7032bfdaa",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 7.557939633046659,
+      "visible_fraction_above12": 0.1123200018314599
+    },
+    {
+      "code": "F06",
+      "path": ".atena/generated/art-candidates/vfx/arco_largo_fogo/arco_largo_fogo_dissipate_v01.png",
+      "sha256": "b81b72ef0ef70c8330ad6f45e0c6bfdcc536fdf20b0f528d39601b7baabd8afb",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 0.6486999178386739,
+      "visible_fraction_above12": 0.014424018579143234
+    }
+  ],
+  "native_sources_preserved": true,
+  "preview_only": true,
+  "runtime_admission": false,
+  "manifest_assets": 202,
+  "timestamp": "2026-10-09T03:34:40.257488+00:00",
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "visual_inspected": true,
+  "visual_review": "Single right-facing fire arc grows start/sweep to approved peak, then narrows and fades through fragments to faint wisps. Neutral white/gray flames and embers. Native frames and96px montage inspected; no visible cuts.",
+  "human_peak_approval": ".atena/generated/s007-reconciliation/v01/f03-owner-approval-2026-10-09.json",
+  "review": ".atena/generated/s007-reconciliation/v01/arco-fogo-six-frame-review-2026-10-09.png",
+  "preview_gif": ".atena/generated/s007-reconciliation/v01/arco-fogo-review-2026-10-09.gif",
+  "other_frames_human_approval": "not individually claimed",
+  "remaining_native_vfx_frames": 96,
+  "next": "FILA022 P01 first flight gate only",
+  "native_dimensions_note": "Native1254 square sources retained; requested1024 normalization deferred"
+}

@@ -1,0 +1,45 @@
+{
+  "status": "COMPLETE_CANDIDATE_SEQUENCE_VISUALLY_REVIEWED",
+  "frames": [
+    {
+      "code": "H101",
+      "path": ".atena/generated/art-candidates/vfx/durvall_ruptura_sombria/durvall_ruptura_sombria_start_v01.png",
+      "sha256": "00b891b430ae103cf252d2fb84cd871baffa6c924d16910dc2df7f985ce48844",
+      "mean_luminance": 3.5478322637098763
+    },
+    {
+      "code": "H102",
+      "path": ".atena/generated/art-candidates/vfx/durvall_ruptura_sombria/durvall_ruptura_sombria_sweep_v02.png",
+      "sha256": "809ecc013e2443033ef335632db7a9691d022f3321da017ca426326fb3e2020e",
+      "mean_luminance": 13.240618855388435
+    },
+    {
+      "code": "H103",
+      "path": ".atena/generated/art-candidates/vfx/durvall_ruptura_sombria/durvall_ruptura_sombria_peak_v01.png",
+      "sha256": "e5f022ec1c630409f6405add4250ebfc73ebe052ea233e8c227ec5ce67fe8974",
+      "mean_luminance": 40.79170577596667
+    },
+    {
+      "code": "H104",
+      "path": ".atena/generated/art-candidates/vfx/durvall_ruptura_sombria/durvall_ruptura_sombria_hold_v01.png",
+      "sha256": "341e6fa8418c4d4aca7f06b21116c3be8ff634cbb2fd6340da7c47dd283a3556",
+      "mean_luminance": 23.654878551315218
+    },
+    {
+      "code": "H105",
+      "path": ".atena/generated/art-candidates/vfx/durvall_ruptura_sombria/durvall_ruptura_sombria_fade_v01.png",
+      "sha256": "17bbd4c6c43348370cb860feeb1eb10113d2bbb35a1a980d0c37bbced2ad02a2",
+      "mean_luminance": 9.735240849695646
+    },
+    {
+      "code": "H106",
+      "path": ".atena/generated/art-candidates/vfx/durvall_ruptura_sombria/durvall_ruptura_sombria_dissipate_v01.png",
+      "sha256": "86c6d108e6b7034acbec687bcfc7ea1537cde6480b389b7870b0b5cb5826314c",
+      "mean_luminance": 0.45893269130488973
+    }
+  ],
+  "native_bytes_preserved": true,
+  "normalization": "Deferred1024 and pivot alignment; previews only",
+  "runtime_admission": false,
+  "review": "Direction, gradual growth, thinner hold, broken dim fade, near-black dissipation and96px readability inspected; native1254 preserved; gameplay not tested"
+}

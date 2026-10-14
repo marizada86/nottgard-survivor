@@ -1,0 +1,18 @@
+{
+  "owner_reply": "atena commit e proximo",
+  "classification": "IN_PLAN_AUTHORIZED_LOCAL_GIT_AND_QUEUE_CONTINUATION",
+  "scope": "L001 review/admission local delivery and associated evidence; then L002 42-image review",
+  "build_id": "0.4.0/assets-l001-admission-v01/1b0edb3+local-92c12e0ca1c7",
+  "delivery_accepted": true,
+  "human_playtest_procedure": "NOT_REPORTED",
+  "subjective_specific_criteria": "NOT_INDEPENDENTLY_VERIFIED",
+  "content_state": "DRAFT_WITH_HISTORICAL_GATES_PRESERVED",
+  "canonical_promotion": false,
+  "commit_authorized": true,
+  "push_authorized": false,
+  "merge_authorized": false,
+  "export_authorized": false,
+  "runtime_hash_verification": "PASS",
+  "backlog": "P0=0; open P1 BUG025/027/028/029; 16 awaiting playtest; 0 alerts",
+  "branch": "codex/assets-admission-main-2026-10-13"
+}

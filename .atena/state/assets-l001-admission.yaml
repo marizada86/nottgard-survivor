@@ -1,0 +1,32 @@
+version: 1
+plan: PLAN-053
+revision: assets-l001-admission/v01
+classification: IN_PLAN_APPROVED_ADMISSION
+status: OWNER_ACCEPTED_LOCAL_DELIVERY
+mode: per-plan
+approval_status: APPROVED_EXPLICITLY
+checkpoint: S-005/OWNER_DELIVERY_ACCEPTANCE_RECORDED
+ordered_steps: [S-001, S-002, S-003, S-004, S-005]
+batches: {B-001: [S-001], B-002: [S-002, S-003], B-003: [S-004, S-005]}
+completed_steps: 5
+total_steps: 5
+current_step_position: 5
+remaining_steps_after_current: 0
+images: 30
+atlases: 5
+content_state: DRAFT_WITH_HISTORICAL_GATES_PRESERVED
+runtime_changed: true
+canonical_promotion: false
+spec: .atena/specs/SPEC-121-retomada-fila-imagens/assets-l001-admission-v01.md
+source_acceptance: .atena/generated/assets-batch-review-2026-10-13/visual-acceptance.json
+next_objective: Commit local autorizado e revisao L002/42fontes em seguida.
+next_inputs: Build local identificado, roteiro e oito atalhos QA; tres armas e tres herois.
+next_output: Feedback humano arma/heroi/modo/cor/direcao, aceitavel ou problema.
+next_checks: Leitura, brilho, ritmo e alinhamento; guarda consumida/4s e Comunhao breve sem cura continua.
+return_plan: {id: PLAN-071, checkpoint: B-006/S-011, preserved: true}
+verification: .atena/generated/assets-l001-admission-2026-10-13/verification.json
+evidence: .atena/evidence/assets-l001-admission-2026-10-13.md
+playtest: .atena/generated/assets-l001-admission-2026-10-13/PLAYTEST.md
+human_runtime_playtest: PROCEDURE_NOT_REPORTED
+build_id: 0.4.0/assets-l001-admission-v01/1b0edb3+local-92c12e0ca1c7
+owner_delivery_acceptance: .atena/generated/assets-l001-admission-2026-10-13/owner-delivery-and-commit-authorization.json

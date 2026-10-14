@@ -49,6 +49,7 @@ var _fog_edges: Array[TextureRect] = []
 var _edge_fog: EdgeFog
 var _texture_cache: Dictionary = {}
 var _stage_background: CanvasLayer
+var _active_vfx: Dictionary = {}
 
 func _texture(path: String) -> Texture2D:
 	if not _texture_cache.has(path):
@@ -766,7 +767,8 @@ func _consume_events() -> void:
 			"active":
 				Sfx.play_hero(String(ev.get("hero_id", battle.hero.id)))
 				hero_node.play_action(&"active")
-				_ring(ev.pos, float(ev.get("radius", 2.0)), _dcol(String(ev.get("dtype", "radiante"))), 0.3)
+				if not _hero_active_effect(ev):
+					_ring(ev.pos, float(ev.get("radius", 2.0)), _dcol(String(ev.get("dtype", "radiante"))), 0.3)
 			"boss_phase":
 				var active_boss: String = String(battle.stage.get("boss", ""))
 				Sfx.play_boss(active_boss, "phase")
@@ -921,6 +923,16 @@ func _make_divine_aura(radius_x: float, radius_y: float, width: float) -> Line2D
 
 func _divine_theme() -> Dictionary:
 	return DivineVisuals.resolve(battle.hero.id, battle.visual_god, battle.visual_boon_selected)
+
+func _hero_active_effect(event: Dictionary) -> bool:
+	var effect := HeroActiveVfx.create_effect(event,battle,_divine_theme().aura_accent,Game.reduced_impact())
+	if effect == null: return false
+	var id := String(event.hero_id)
+	if is_instance_valid(_active_vfx.get(id)):
+		_active_vfx[id].queue_free()
+	_active_vfx[id] = effect
+	fx.add_child(effect)
+	return true
 
 func _swing(ev: Dictionary, theme: Dictionary) -> void:
 	if not Game.reduced_impact():

@@ -1,0 +1,232 @@
+{
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "generator": "built-in imagegen",
+  "remaining_at_start": 101,
+  "counter_field": "native_generated_since_F03",
+  "approval_receipt": ".atena/generated/s007-reconciliation/v01/f03-owner-approval-2026-10-09.json",
+  "native_originals_preserved": true,
+  "jobs": [
+    {
+      "code": "F01",
+      "effect": "arco_largo_fogo",
+      "name": "arco_largo_fogo_start",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a very wide sweeping arc of about 200 degrees, a thick band whose outer rim has flame-like licking tongues and small embers drifting off it, heavy and infernal, reach about 45 percent of the image width. Frame 1 of 6, start: the very first instant: a thin sharp bright sliver just beginning at the center, only about one quarter of the final length, a few tiny sparks right at the origin. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is the APPROVED F03 peak for this exact fire arc. Reference2 is the APPROVED physical pilot for painted white-core/gray-glow STYLE ONLY. Generate ONLY F01 phase specified above. Keep the same ground-flat orientation, exact canvas-center pivot and RIGHT-facing direction. Preserve painted flame texture but strictly neutral white/gray, no orange or red. All glow, flame tips and embers must fit inside black margins.\nSTART geometry: ONE thin simple C-shaped early arc opening LEFT and bulging RIGHT, about one quarter of the approved peak reach. A tiny weak sliver near the canvas-center pivot, only a few tiny embers. No mirrored pair of lobes, hourglass, inward pinch, or full-size bright peak.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\arco_largo_fogo\\arco_largo_fogo_peak_v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/arco_largo_fogo/arco_largo_fogo_start_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-021-vfx-corpo-a-corpo-excecoes.md",
+      "generated_at": "2026-10-09T03:28:24.106749+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-089e1bae-bb52-4474-9939-9c242d65d488.png",
+      "sha256": "19f0d996ccf6e243f6bab7c8ac0135507f684e3135819ee5a41db9c971b665fc",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        586,
+        407,
+        843,
+        834
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 10,
+      "mean_luminance": 3.7537710268130815,
+      "visible_fraction_above12": 0.029931015010340116,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "F02",
+      "effect": "arco_largo_fogo",
+      "name": "arco_largo_fogo_sweep",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a very wide sweeping arc of about 200 degrees, a thick band whose outer rim has flame-like licking tongues and small embers drifting off it, heavy and infernal, reach about 45 percent of the image width. Frame 2 of 6, sweep: the strike sweeping outward: the shape growing fast, a bright leading edge with a thin faint trail behind it, about 60 percent of the final reach. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is the APPROVED F03 peak for this exact fire arc. Reference2 is the APPROVED physical pilot for painted white-core/gray-glow STYLE ONLY. Generate ONLY F02 phase specified above. Keep the same ground-flat orientation, exact canvas-center pivot and RIGHT-facing direction. Preserve painted flame texture but strictly neutral white/gray, no orange or red. All glow, flame tips and embers must fit inside black margins.\nSWEEP phase: one C-shaped arc opening LEFT and bulging RIGHT, clearly smaller and thinner than F03, about60% of its reach. Bright narrow leading edge, thin faint trailing band, fewer and shorter flame tongues. Do not duplicate the full-size peak.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\arco_largo_fogo\\arco_largo_fogo_peak_v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/arco_largo_fogo/arco_largo_fogo_sweep_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-021-vfx-corpo-a-corpo-excecoes.md",
+      "generated_at": "2026-10-09T03:30:01.230638+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-77c544d4-9ea9-4704-8513-89576210bfb1.png",
+      "sha256": "671ebc8ab76edb3ab5c44cacd52b71be824d0dd66d35fd868fad10fba020df87",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        496,
+        222,
+        995,
+        1036
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 10,
+      "mean_luminance": 14.693479112454181,
+      "visible_fraction_above12": 0.09806513892386469,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "F04",
+      "effect": "arco_largo_fogo",
+      "name": "arco_largo_fogo_hold",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a very wide sweeping arc of about 200 degrees, a thick band whose outer rim has flame-like licking tongues and small embers drifting off it, heavy and infernal, reach about 45 percent of the image width. Frame 4 of 6, hold: the shape still fully extended but starting to thin out, the white core narrowing, edges becoming ragged, fewer sparks. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is the APPROVED F03 peak for this exact fire arc. Reference2 is the APPROVED physical pilot for painted white-core/gray-glow STYLE ONLY. Generate ONLY F04 phase specified above. Keep the same ground-flat orientation, exact canvas-center pivot and RIGHT-facing direction. Preserve painted flame texture but strictly neutral white/gray, no orange or red. All glow, flame tips and embers must fit inside black margins.\nHOLD phase after the peak: same full-radius single C-shaped fire arc as F03, opening LEFT, bulging RIGHT; white core clearly narrower and weaker, outer flames ragged and starting to die, substantially fewer embers. Do not duplicate the thick brilliant peak.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\arco_largo_fogo\\arco_largo_fogo_peak_v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/arco_largo_fogo/arco_largo_fogo_hold_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-021-vfx-corpo-a-corpo-excecoes.md",
+      "generated_at": "2026-10-09T03:32:19.224476+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-3ed8837c-8f03-41ac-aa80-2fce6f7db648.png",
+      "sha256": "b784214f915ae6ba213a79848e336082c7f810e8b8a80ea83bd31aaf9df0f645",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        208,
+        56,
+        1124,
+        1186
+      ],
+      "outer_border_max_luminance": 2,
+      "maximum_channel_difference": 7,
+      "mean_luminance": 25.640298731459648,
+      "visible_fraction_above12": 0.18783274701179511,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "F05",
+      "effect": "arco_largo_fogo",
+      "name": "arco_largo_fogo_fade",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a very wide sweeping arc of about 200 degrees, a thick band whose outer rim has flame-like licking tongues and small embers drifting off it, heavy and infernal, reach about 45 percent of the image width. Frame 5 of 6, fade: the shape breaking apart: fragmented streaks and broken pieces, dimmer gray, the edges dissolving. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is the APPROVED F03 peak for this exact fire arc. Reference2 is the APPROVED physical pilot for painted white-core/gray-glow STYLE ONLY. Generate ONLY F05 phase specified above. Keep the same ground-flat orientation, exact canvas-center pivot and RIGHT-facing direction. Preserve painted flame texture but strictly neutral white/gray, no orange or red. All glow, flame tips and embers must fit inside black margins.\nFADE phase: only disconnected broken fragments of the same fire arc remain at the original full-radius positions. Mostly dim GRAY, no continuous bright white band or intact bright crescent. Small fading flame remnants and few dim tiny embers. Much weaker than hold.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\arco_largo_fogo\\arco_largo_fogo_peak_v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/arco_largo_fogo/arco_largo_fogo_fade_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-021-vfx-corpo-a-corpo-excecoes.md",
+      "generated_at": "2026-10-09T03:33:12.775942+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-69d4d5cd-f2bb-4ef5-91ab-b3da29113ebb.png",
+      "sha256": "9cff44d0b217625168dba0603d8aa72665e5f41cddf6e4955fca26e7032bfdaa",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        240,
+        42,
+        1152,
+        1197
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 6,
+      "mean_luminance": 7.557939633046659,
+      "visible_fraction_above12": 0.1123200018314599,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "F06",
+      "effect": "arco_largo_fogo",
+      "name": "arco_largo_fogo_dissipate",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a very wide sweeping arc of about 200 degrees, a thick band whose outer rim has flame-like licking tongues and small embers drifting off it, heavy and infernal, reach about 45 percent of the image width. Frame 6 of 6, dissipate: the last moment: only a few faint wisps and tiny specks remain, almost black, nothing bright. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is the APPROVED F03 peak for this exact fire arc. Reference2 is the APPROVED physical pilot for painted white-core/gray-glow STYLE ONLY. Generate ONLY F06 phase specified above. Keep the same ground-flat orientation, exact canvas-center pivot and RIGHT-facing direction. Preserve painted flame texture but strictly neutral white/gray, no orange or red. All glow, flame tips and embers must fit inside black margins.\nDISSIPATE phase: almost entirely pure BLACK; only a few very faint DARK GRAY wisps and tiny ember specks remain where the right-facing arc was. Nothing bright, no white core, no intact crescent. Preserve the same pivot and spatial layout.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\arco_largo_fogo\\arco_largo_fogo_peak_v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/arco_largo_fogo/arco_largo_fogo_dissipate_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-021-vfx-corpo-a-corpo-excecoes.md",
+      "generated_at": "2026-10-09T03:34:06.903890+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-28736d03-268c-4cdb-acd4-a1e1f8a21e70.png",
+      "sha256": "b81b72ef0ef70c8330ad6f45e0c6bfdcc536fdf20b0f528d39601b7baabd8afb",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        612,
+        148,
+        1091,
+        1084
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 5,
+      "mean_luminance": 0.6486999178386739,
+      "visible_fraction_above12": 0.014424018579143234,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "P01",
+      "effect": "orbe_radiante",
+      "name": "orbe_radiante_fly_00",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a round glowing orb of holy light with a bright white core and a soft halo, a short pointed tail behind it pointing LEFT because it flies to the RIGHT, and a few tiny star-like sparks. Frame 1 of 8, fly 00: flight frame 1 of 4 (these four frames loop): the projectile in flight at its normal size, tail streaming behind it.\n\nThe attached approved physical pilot is a STYLE REFERENCE ONLY for painted light texture, white core and gray soft falloff. Generate a NEW round radiant projectile, not an arc. The round orb core must be centered at the exact canvas center, with a SHORT pointed tail streaming directly LEFT because it travels RIGHT. No 3D sphere shading, no perspective, no crescent blade, no color. Only this one first flight frame, with orb, halo, tail and few tiny star sparks comfortably inside pure-black margins.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_fly_00_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "generated_at": "2026-10-09T03:36:16.273949+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-1c15ed2e-ce0c-47cc-8299-16959e093f34.png",
+      "sha256": "a321dde3ebdce44f469c46a4147a4400bd97f3e958ec5ab0cb109338adaea752",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        185,
+        422,
+        821,
+        822
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 9,
+      "mean_luminance": 13.811896349544297,
+      "visible_fraction_above12": 0.0888881257805962,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    }
+  ]
+}

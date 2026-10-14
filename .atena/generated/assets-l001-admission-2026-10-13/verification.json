@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "build_id": "0.4.0/assets-l001-admission-v01/1b0edb3+local-92c12e0ca1c7",
+  "content_state": "DRAFT_WITH_HISTORICAL_GATES_PRESERVED",
+  "technical_steps_completed": 5,
+  "sources_verified": 30,
+  "atlases": 5,
+  "suite_failures": 0,
+  "smoke_stages": 9,
+  "captures": 131,
+  "capture_groups": [
+    109,
+    22
+  ],
+  "preexisting_runtime_files": 3033,
+  "unchanged_preexisting_runtime_files": 3031,
+  "allowed_changed_files": [
+    "core/melee_vfx.gd",
+    "ui/run.gd"
+  ],
+  "battle_data_overlay_orbs_pulse_hourglass_unchanged": true,
+  "runtime_sha256": {
+    "core/melee_vfx.gd": "82da08c8d9fec138ebe1ef8cc08ef7ef27faa80863805a3da4f93bc1d4dff009",
+    "core/hero_active_vfx.gd": "48cf29e6368501ede9322e4feaac42e45762f9b53736aedbae48c0d4e5922a05",
+    "ui/hero_active_vfx.gd": "6516946f04be2c4b371fc33e90410f469bc2665c493f64914c67b88b741e9573",
+    "ui/run.gd": "ec6db1192df3cb053f35d864fbe7229ae7c51b7c97bd43802db4d567f1f2cea9",
+    "tests/test_assets_l001_vfx.gd": "a5313bcbf0f481c50bc34545d8b6178848d6bd4544d2b64daeb5a1e5e08eb389",
+    "assets/vfx/melee_arco_radiante.png": "96750c5e938260bcfc4776d0aada843adbade58a87f6a837a91d8e5158bd80ff",
+    "assets/vfx/melee_arco_fogo.png": "7956a56c856d93a3ba0321948f8b4e552ae3e4523ebf17936cb72e87a3252356",
+    "assets/vfx/durvall_ruptura_sombria.png": "4c2915bfcb95ab65c6f4ed285328ae6bdbf46fefac8ea3e2efa92e686639f6a4",
+    "assets/vfx/brook_guarda_de_lliira.png": "a48562171748f68a43b0088a800a91f4113355fc8f8b5cc9cf4f41b48996af50",
+    "assets/vfx/maelor_comunhao.png": "cef437056f7ad14f24d291708a788e101e179261941257f7ba57e2a2a71a5513"
+  },
+  "logs": [
+    "focused-final.log",
+    "suite.log",
+    "smoke.log",
+    "capture-final.log",
+    "vfx-regression-final.log",
+    "import-final.log",
+    "Jogar-Juizo.log",
+    "Jogar-Martelo.log",
+    "Jogar-Machado.log",
+    "Jogar-Durvall.log",
+    "Jogar-Brook.log",
+    "Jogar-Maelor.log",
+    "Jogar-Reduzido.log",
+    "Jogar-Tou-Um.log"
+  ],
+  "native_backup_atlas_hashes": "PASS",
+  "human_playtest": "PENDING_NOT_PERFORMED",
+  "canonical_promotion": false,
+  "git_operations": "NONE",
+  "exported": false,
+  "known_log_warnings": "Sandbox certificate store; preexisting test Image.load warning and teardown resource leaks; no script/parse/assert errors in final checks."
+}

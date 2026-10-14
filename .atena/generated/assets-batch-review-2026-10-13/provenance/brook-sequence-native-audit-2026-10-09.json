@@ -1,0 +1,78 @@
+{
+  "status": "COMPLETE_CANDIDATE_SEQUENCE_VISUALLY_REVIEWED",
+  "sources": [
+    {
+      "code": "H201",
+      "path": ".atena/generated/art-candidates/vfx/brook_guarda_de_lliira/brook_guarda_de_lliira_loop_00_v02.png",
+      "sha256": "076c90602cf4f72e7e78df90791e8dbda1d47be473f81c1687e9c91347af9166",
+      "mean_luminance": 29.775797511758228
+    },
+    {
+      "code": "H202",
+      "path": ".atena/generated/art-candidates/vfx/brook_guarda_de_lliira/brook_guarda_de_lliira_loop_01_v01.png",
+      "sha256": "9dfd35c3d44f632a910699f121adcdbfb92b1b9570f897e16fae2a0a581ea193",
+      "mean_luminance": 35.29187683940895
+    },
+    {
+      "code": "H203",
+      "path": ".atena/generated/art-candidates/vfx/brook_guarda_de_lliira/brook_guarda_de_lliira_loop_02_v01.png",
+      "sha256": "d8b58bc231a433cf8d33ea4bc19a55f7362afcba71e27b1c58ae67389694522e",
+      "mean_luminance": 36.7350519803932
+    },
+    {
+      "code": "H204",
+      "path": ".atena/generated/art-candidates/vfx/brook_guarda_de_lliira/brook_guarda_de_lliira_loop_03_v01.png",
+      "sha256": "a146a13a5af5a533f3e3f199bd37870520d95abd6d2f6339bd74032b6e0ac74f",
+      "mean_luminance": 30.27546174410944
+    },
+    {
+      "code": "H205",
+      "path": ".atena/generated/art-candidates/vfx/brook_guarda_de_lliira/brook_guarda_de_lliira_loop_04_v01.png",
+      "sha256": "795e92c2e1bc58c2ed2f2431e5ae586d063de694c5dc78d65306282a54daf01b",
+      "mean_luminance": 24.70647802629671
+    },
+    {
+      "code": "H206",
+      "path": ".atena/generated/art-candidates/vfx/brook_guarda_de_lliira/brook_guarda_de_lliira_loop_05_v01.png",
+      "sha256": "f353d745355e6d4792d793e3e473c06c6b20a50302f50f65703ea5960f8c3270",
+      "mean_luminance": 27.178553986096166
+    }
+  ],
+  "adjacent_preview_differences": [
+    {
+      "from_frame": "H201",
+      "to_frame": "H202",
+      "mean_abs_preview_luminance_difference": 5.574513888888889
+    },
+    {
+      "from_frame": "H202",
+      "to_frame": "H203",
+      "mean_abs_preview_luminance_difference": 2.545590277777778
+    },
+    {
+      "from_frame": "H203",
+      "to_frame": "H204",
+      "mean_abs_preview_luminance_difference": 6.484140625
+    },
+    {
+      "from_frame": "H204",
+      "to_frame": "H205",
+      "mean_abs_preview_luminance_difference": 5.598133680555556
+    },
+    {
+      "from_frame": "H205",
+      "to_frame": "H206",
+      "mean_abs_preview_luminance_difference": 2.7926085069444446
+    },
+    {
+      "from_frame": "H206",
+      "to_frame": "H201",
+      "mean_abs_preview_luminance_difference": 2.8128949652777777
+    }
+  ],
+  "native_bytes_preserved": true,
+  "runtime_admission": false,
+  "geometry": "Static circle/star slots, subtle breathing glow; native1254;1024 normalization deferred",
+  "review": "Six-frame sheet96px and last-to-first pair inspected: ring and four three-point stars stationary, breathing halo; closure pair has no conspicuous geometric jump. GIF prepared, no runtime/playtest claimed.",
+  "human_acceptance": "Only H201v02 explicitly approved; five remaining frames technical review only"
+}

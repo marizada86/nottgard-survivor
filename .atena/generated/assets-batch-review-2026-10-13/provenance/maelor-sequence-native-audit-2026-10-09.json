@@ -1,0 +1,78 @@
+{
+  "status": "COMPLETE_CANDIDATE_SEQUENCE_VISUALLY_REVIEWED",
+  "sources": [
+    {
+      "code": "H301",
+      "path": ".atena/generated/art-candidates/vfx/maelor_comunhao/maelor_comunhao_loop_00_v01.png",
+      "sha256": "ed622fe59738017a625ebd2daaf90d2f738213d1fca299d9240d08ccd3fd3969",
+      "mean_luminance": 27.655070600235547
+    },
+    {
+      "code": "H302",
+      "path": ".atena/generated/art-candidates/vfx/maelor_comunhao/maelor_comunhao_loop_01_v01.png",
+      "sha256": "7a289aae4816f19800cfdefd63dae9e3662020d590b92d1df9dcefd1e27543bd",
+      "mean_luminance": 32.477552533646715
+    },
+    {
+      "code": "H303",
+      "path": ".atena/generated/art-candidates/vfx/maelor_comunhao/maelor_comunhao_loop_02_v01.png",
+      "sha256": "c6dddbbcc415c987e32a2fe31a3ef61360b026f6cf2c08232eae8f43b4a3678a",
+      "mean_luminance": 32.03876208572758
+    },
+    {
+      "code": "H304",
+      "path": ".atena/generated/art-candidates/vfx/maelor_comunhao/maelor_comunhao_loop_03_v01.png",
+      "sha256": "b5b5c8334439e61fcce91922ef624addbbf92b7e27696b2c65cccaf57bd79821",
+      "mean_luminance": 26.999717014008123
+    },
+    {
+      "code": "H305",
+      "path": ".atena/generated/art-candidates/vfx/maelor_comunhao/maelor_comunhao_loop_04_v01.png",
+      "sha256": "5c1e88fb174de1791a186c6b75eb86ba89d066f47f99b7ae4f4f91453b35d25d",
+      "mean_luminance": 24.17062465501146
+    },
+    {
+      "code": "H306",
+      "path": ".atena/generated/art-candidates/vfx/maelor_comunhao/maelor_comunhao_loop_05_v01.png",
+      "sha256": "574f8ca4fedc2d3dfbdf452a8aef7278dd840bc7ed13918bd1e06b49a27a73aa",
+      "mean_luminance": 24.674665313421293
+    }
+  ],
+  "adjacent_preview_differences": [
+    {
+      "from_frame": "H301",
+      "to_frame": "H302",
+      "mean_abs_preview_luminance_difference": 4.921072048611111
+    },
+    {
+      "from_frame": "H302",
+      "to_frame": "H303",
+      "mean_abs_preview_luminance_difference": 1.9953255208333334
+    },
+    {
+      "from_frame": "H303",
+      "to_frame": "H304",
+      "mean_abs_preview_luminance_difference": 5.066080729166667
+    },
+    {
+      "from_frame": "H304",
+      "to_frame": "H305",
+      "mean_abs_preview_luminance_difference": 2.9980208333333334
+    },
+    {
+      "from_frame": "H305",
+      "to_frame": "H306",
+      "mean_abs_preview_luminance_difference": 1.3056293402777779
+    },
+    {
+      "from_frame": "H306",
+      "to_frame": "H301",
+      "mean_abs_preview_luminance_difference": 3.1786371527777777
+    }
+  ],
+  "native_bytes_preserved": true,
+  "runtime_admission": false,
+  "geometry": "Static circle/plus slots, subtle breathing glow; native1254;1024 normalization deferred",
+  "review": "Six-frame96px sheet and final-to-first pair inspected: ring and healing plus marks stable, soft halo pulse, no conspicuous geometric jump. GIF prepared; no runtime/playtest claimed.",
+  "human_acceptance": "Only H301v01 explicit; five remaining frames technical review only"
+}
