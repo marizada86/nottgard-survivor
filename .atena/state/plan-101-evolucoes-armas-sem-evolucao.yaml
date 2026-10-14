@@ -1,0 +1,54 @@
+id: PLAN-101
+spec: SPEC-174
+spec_file: .atena/specs/SPEC-174-evolucoes-das-armas-sem-evolucao-lote-1-e-atributo-minimo.md
+mode: per-plan
+status: COMPLETED_LOCAL_AWAITING_PLAYTEST
+approved: "2026-10-13"
+approval_basis: "Dono escolheu Por plano, minimo 16 em todas (Martelo em Constituicao), Constelacao de Silva e Martelo da Luz (2026-10-13). Fazer agora; commit, push, exportacao e aviso ficam sem autorizacao."
+content_state: DRAFT
+created: '2026-10-13'
+request_classification: PLAN_DEVIATION
+deviation_id: DEV-041
+authorization_verbatim: 'atena, aprovo o plano com 5 evoluções'
+owner_decisions:
+  D1: 'Lote 1 com 5 evolucoes aprovado (2026-10-13).'
+  D2: 'Sopro de Estrela: nome ligado a Sylvaris/Silva; vault checado, recomendacao Constelacao de Silva.'
+  D3: 'Atributo minimo 16 em todas as 5 evolucoes novas; Martelo em Constituicao 16 (escolha do dono, 2026-10-13).'
+  D4: 'Por plano (2026-10-13).'
+  D5: 'Nomes: Constelacao de Silva (Sopro de Estrela) e Martelo da Luz (Martelo da Gloria).'
+return:
+  plan: PLAN-100
+  state_file: .atena/state/plan-100-filtro-visual-e-fonte.yaml
+  note: 'PLAN-100 (active_plan) ja estava COMPLETED_LOCAL_AWAITING_OWNER_DECISIONS; este plano foi executado como desvio (DEV-041) e nao o altera.'
+ordered_batches: [B-001, B-002, B-003]
+batches:
+  B-001: {title: Dados das 5 evolucoes, steps: [S-001, S-002, S-003, S-004], status: DONE_LOCAL}
+  B-002: {title: Atributo minimo para evoluir, steps: [S-005, S-006, S-007], status: DONE_LOCAL, depends_on: 'D3 (valores) e B-001'}
+  B-003: {title: Verificacao e fechamento, steps: [S-008, S-009, S-010, S-011], status: DONE_LOCAL}
+steps:
+  S-001: 'data/weapons.json: 5 entradas src Evolucao (levels vazio, icon_like da base) e 5 blocos evolve nas bases.'
+  S-002: 'data/audio_manifest.json: evento weapon.<id>.fire por evolucao (clone da base, como o ART-042).'
+  S-003: 'tests/test_data.gd e tests/test_new_content.gd: contagem, alvo e passiva existentes, regressao das 10 evolucoes antigas.'
+  S-004: 'tools/bal_conteudo_novo.gd: incluir as 5 evolucoes na regua.'
+  S-005: 'core/weapon.gd e core/battle.gd: campo opcional evolve.min_attr; oferta so com nivel, passiva e atributo efetivo.'
+  S-006: 'core/battle.gd evolve_hint e ui/character_sheet.gd: listar o atributo que falta; selo so com as tres condicoes.'
+  S-007: 'tests/test_battle.gd e tools/audit_projeto.gd: oferta presente/ausente por condicao; validacao do campo.'
+  S-008: 'Suite, smoke, audit_projeto, kit_test, backlog_check.'
+  S-009: 'bal_conteudo_novo.gd antes/depois e bot_curva.gd (Nyrelia, Sylas, Bromnor, Leoric; 2 fases).'
+  S-010: 'EVID-243, cartao MEC-067, indices, README (proximos livres).'
+  S-011: 'Registrar o playtest humano das 5 evolucoes e dos minimos como pendente.'
+gates:
+  dependencies: NO_NEW_DEPENDENCIES
+  assets_changed: NONE
+  existing_evolutions: UNCHANGED
+  heal_lifesteal_on_new_evolutions: NONE
+  default_state: 'nenhum minimo aplicado as 10 evolucoes antigas'
+  commit_push_build_export: COMMIT_LOCAL_AUTHORIZED_2026-10-13_PUSH_BUILD_EXPORT_NOT_AUTHORIZED
+  other_sessions_changes: PRESERVE_UNTOUCHED
+  files_expected: [data/weapons.json, data/audio_manifest.json, core/weapon.gd, core/battle.gd, ui/character_sheet.gd, tools/bal_conteudo_novo.gd, tools/audit_projeto.gd, tests/test_data.gd, tests/test_new_content.gd, tests/test_battle.gd]
+blocking_gaps: []
+resolvable_gaps: []
+deferred_gaps: ['icones e sons proprios', 'evolucoes de Ampulheta, Vela Sagrada, Machado, Arlindo, Erik e Lamina de Sombra', 'teto de atordoamento contra chefe']
+next_objective: 'Playtest humano das 5 evolucoes e dos minimos; depois decidir o proximo lote (Ampulheta, Vela Sagrada, Machado) e o teto de atordoamento contra chefe.'
+evidence: .atena/evidence/EVID-243-evolucoes-lote-1-e-atributo-minimo-2026-10-13.md
+result: 'Suite 0 falhas (mutacao da condicao de atributo: 6 falhas); smoke 9 fases; audit 0 erros; duelo no motor dentro da faixa das evolucoes existentes; playtest humano pendente; commits locais (563c07b codigo, documentos no commit seguinte), sem push.'

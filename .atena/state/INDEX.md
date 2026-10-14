@@ -2,13 +2,13 @@
 
 Atualizado em 2026-10-13 (Atena). Cada linha liga o plano à spec, ao que ele é e ao que **ainda falta**. O estado operacional (plano ativo, recibos de commit, desvios) fica em [`plan.yaml`](plan.yaml); o índice das specs, em [`../specs/INDEX.md`](../specs/INDEX.md) (gerado por `node tools/atena_index.js`). Os arquivos de plano não foram movidos nem renomeados: links antigos continuam valendo.
 
-**Resumo:** 1 plano ativo (PLAN-100) · 1 arquivado, prioridade baixa (PLAN-071) · 19 entregues, aguardando playtest ou arte · 9 esperando arte, aparelho ou o dono · 12 fechados sem pendência. Total de arquivos de plano em `state/`: 41.
+**Resumo:** 1 plano ativo (PLAN-100) · 1 arquivado, prioridade baixa (PLAN-071) · 20 entregues, aguardando playtest ou arte · 9 esperando arte, aparelho ou o dono · 12 fechados sem pendência. Total de arquivos de plano em `state/`: 41.
 
 ## Ativo
 
 | Plano | Spec | O que é | Falta |
 |---|---|---|---|
-| PLAN-100 | SPEC-173 | Filtro visual de tela e fonte da interface (lote 1 da estética) | B-001 em execução; B-002 (download das fontes) e B-003 aguardam aprovação |
+| PLAN-100 | SPEC-173 | Filtro visual de tela e fonte dos títulos (lote 1 da estética); concluído local, EVID-242 | Decisões do dono (filtro padrão, fonte dos títulos); push pendente |
 
 ## Arquivados, prioridade baixa
 
@@ -46,6 +46,7 @@ O código está na `main` (e, exceto o PLAN-093, no `origin`); o que falta é **
 | PLAN-097 | SPEC-170 | Foco do controle ao comprar melhoria (BUG-043) | Playtest no controle (EVID-239) |
 | PLAN-098 | SPEC-171 | Bateria da 0.4.0 e revisão de desempenho (can_stand indexado, grade de alcance por componentes) | Playtest em máquina fraca (EVID-240) |
 | PLAN-099 | SPEC-172 | Telemetria de quadros e máquina no kit; emulação de máquina fraca | Dados de campo dos testers (EVID-241) |
+| PLAN-101 | SPEC-174 | Cinco evoluções para as armas mais fracas no late-game e atributo mínimo para evoluir (MEC-067) | Playtest humano; commitado local, sem push (EVID-243) |
 
 ## Esperando arte, aparelho ou o dono
 

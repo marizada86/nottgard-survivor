@@ -4,10 +4,10 @@ Gerado por `node tools/atena_index.js` (não editar à mão). Agrupa pelo **stat
 
 | Grupo | Specs |
 |---|--:|
-| aberta (rascunho ou planejada) | 8 |
+| aberta (rascunho ou planejada) | 7 |
 | aprovada, sem fechar | 4 |
 | pausada | 2 |
-| entregue | 160 |
+| entregue | 161 |
 | substituída | 2 |
 | **total** | **176** |
 
@@ -28,7 +28,7 @@ Gerado por `node tools/atena_index.js` (não editar à mão). Agrupa pelo **stat
 - SPEC-082: `SPEC-082-integracao-de-decais-do-lote-2.md` e `SPEC-082-loja-e-ferreiro-mostram-todas-as-opcoes.md` e `SPEC-082-skin-leoric-cartola-e-sobretudo.md`
 - SPEC-099: `SPEC-099-integracao-animacoes-cultista-adaga.md` e `SPEC-099-integracao-hqs-hqn-11-a-14.md`
 
-## Aberta (rascunho ou planejada) (8)
+## Aberta (rascunho ou planejada) (7)
 
 | Spec | Título | Status |
 |---|---|---|
@@ -39,7 +39,6 @@ Gerado por `node tools/atena_index.js` (não editar à mão). Agrupa pelo **stat
 | [SPEC-116](SPEC-116-dopamina-tematica.md) | Dopamina temática: feedback e recompensa | proposta para escolha do dono (2026-10-01) |
 | [SPEC-117](SPEC-117-alma-e-historia-na-run.md) | Alma e história na run: mapa narrativo por fase e chefe | proposta para escolha do dono (2026-10-01) |
 | [SPEC-169](SPEC-169-lancamento-oficial-da-v0-4-0.md) | Lançamento oficial da 0.4.0 para os playtesters (documentos, verificação e pacote) | PREPARADA em 2026-10-10 (PLAN-096, EVID-238); o código já foi publicado (602cef5); commit dos documentos e aviso aos testers aguardam o dono |
-| [SPEC-174](SPEC-174-evolucoes-das-armas-sem-evolucao-lote-1-e-atributo-minimo.md) | Evoluções das armas sem evolução (lote 1, cinco armas) e atributo mínimo para evoluir | PLANEJADA em 2026-10-13 (PLAN-101); DRAFT; conteúdo do lote 1 aprovado pelo dono, nível de aprovação e mínimos de atributo aguardam escolha; nada codi |
 
 ## Aprovada, sem fechar (4)
 
@@ -57,7 +56,7 @@ Gerado por `node tools/atena_index.js` (não editar à mão). Agrupa pelo **stat
 | [SPEC-101](SPEC-101-polimento-proporcoes-movimento-herois.md) | Auditoria e piloto de proporções no movimento dos heróis | SPEC-106 de Durvall aprovada; produção pausada por falta de fluxo local 2D adequado |
 | [SPEC-154](SPEC-154-pixels-soltos-dos-herois-pre-reducao-das-tiras-bug-029.md) | Pixels soltos nos heróis: pré-redução das tiras para o tamanho de tela (BUG-029) | PAUSADA em 2026-10-09 (PLAN-082): o dono não adotou a variante C; HERO_STRIP_SET vazio e BUG-029 aberto; registros e ferramentas commitados (eb57860) |
 
-## Entregue (160)
+## Entregue (161)
 
 | Spec | Título | Status |
 |---|---|---|
@@ -221,6 +220,7 @@ Gerado por `node tools/atena_index.js` (não editar à mão). Agrupa pelo **stat
 | [SPEC-171](SPEC-171-bateria-da-0-4-0-e-revisao-de-desempenho-por-idade.md) | Bateria de testes do release candidate 0.4.0 e revisão de desempenho do código mais antigo | IMPLEMENTADA LOCAL em 2026-10-10 (PLAN-098, EVID-240); aguarda playtest |
 | [SPEC-172](SPEC-172-telemetria-de-quadros-e-maquina-fraca-emulada.md) | Telemetria de maquina e quadros no kit de playtest e emulacao de maquina fraca | IMPLEMENTADA LOCAL em 2026-10-11 (PLAN-099, EVID-241); aguarda dados de campo |
 | [SPEC-173](SPEC-173-filtro-visual-e-fonte-da-interface-lote-1.md) | Filtro visual de tela e fonte da interface (lote 1 da estética) | IMPLEMENTADA LOCAL em 2026-10-13 (PLAN-100, EVID-242); r3: Pixel descartado, IM Fell como padrão dos títulos; commits locais; aguarda playtest |
+| [SPEC-174](SPEC-174-evolucoes-das-armas-sem-evolucao-lote-1-e-atributo-minimo.md) | Evoluções das armas sem evolução (lote 1, cinco armas) e atributo mínimo para evoluir | IMPLEMENTADA LOCAL em 2026-10-13 (PLAN-101, EVID-243); DRAFT; aguarda playtest humano; commitada local (563c07b), sem push |
 
 ## Substituída (2)
 

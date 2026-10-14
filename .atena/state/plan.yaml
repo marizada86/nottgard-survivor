@@ -574,6 +574,7 @@ previous_plan_cursor:
   current: 'PLAN-059 (SPEC-125) commitado e publicado (05264f0, 1392627) em 2026-10-05; o playtest decide Docas, Molor e fases finais.'
   next: 'Retomar PLAN-053 (imagens, Shu: attack_02, death_03, death_04) e/ou abrir spec de balanceamento BAL-018 (precisa de linha de base do bot por heroi). Push da main (1 a 3 commits a frente) exige aprovacao.'
 local_git_receipts:
+  - {plan: PLAN-101, deviation: DEV-041, authorization: "atena, commite em dois commits (2026-10-13)", branch: main, commits: [563c07b, "documentos = commit seguinte"], pushed: false, evidence: EVID-243, scope: "563c07b = dados das 5 evolucoes, evolve.min_attr (core/weapon.gd, core/battle.gd, ui/character_sheet.gd), testes, audit e regua; documentos = SPEC-174, PLAN-101, EVID-243, MEC-067, rascunho, regua.js e duelo.gd, indices e DEV-041", note: "Sem push, build nem exportacao. Ficaram fora: unit-profile.json (efeito colateral da suite) e arquivos de outra sessao (tools/capture_body_font.*, ART-PROMPTS-063, CHATGPT-FILA-030, capturas do plan-100)."}
   - {plan: PLAN-097, also: PLAN-098, request_classification: PLAN_DEVIATION, deviation: [DEV-037, DEV-038], authorization: "atena, commit e push (2026-10-11)", branch: main, commits: [76d444c, 55a8d85, b83f188], pushed: true, push_range: "602cef5..b83f188", evidence: [EVID-239, EVID-240], scope: "76d444c = BUG-043 foco do controle ao comprar melhoria; 55a8d85 = desempenho (can_stand indexado, grade de alcance por componentes, sonda); b83f188 = registros", verification: "checkout limpo do HEAD (git archive): testes 0 falhas, smoke ok; antes, na arvore: suite 0 falhas, controller_check 94/0, mobile_buttons_check 146/0, kit_test OK, backlog_check 0 alertas", ci: "Build and Release disparado pelo push; resultado nao verificado aqui (gh ausente)", note: "O release latest passa a apontar para b83f188; a versao segue 0.4.0. Ficaram fora, de outra sessao: SPEC-169/PLAN-096/DEV-036, documentos da 0.4.0 e o rank de contribuicoes (CONTRIBUICOES-PLAYTESTERS.md). Este recibo vai no proximo commit."}
   - {plan: PLAN-071, request_classification: PLAN_DEVIATION, deviation: [DEV-029, DEV-030, DEV-031, DEV-032, DEV-033], authorization: "atena, 1 (DEV-029); pedidos explicitos de execucao nos demais (2026-10-10); commit (2026-10-10)", branch: main, commits: [8afd6b0, 6f4d488, d4c6cfe, eaa6196, 60fd1ff, 3dd4970], pushed: false, evidence: [EVID-232, EVID-233, EVID-234, EVID-235], scope: "BUG-040 moldura de detalhe (recorte, margem e rolagem), CA e CAM sem balao na HUD e na ficha C, BUG-041 anel de foco do slot, fade e dissolucao entre jogo e janelas (MEC-003)", verification: "suite 0 falhas; smoke ok; kit_test OK; mobile_buttons_check 146/0; controller_check 90/0; backlog_check", note: "Sem push, exportacao nem aviso aos testers. Todos aguardam playtest do dono. Mudancas de outra sessao (core/playtest.gd, ART-047) em commits proprios."}
   - {plan: PLAN-093, request_classification: PLAN_DEVIATION, deviation: DEV-028, authorization: "atena vamos para o item 2 (lote 2 da nova UI); por plano; direcao visual e escopo aprovados (2026-10-09)", branch: main, commits: [72de2df], pushed: false, evidence: EVID-231, scope: "Quartel no UiKit, Codex no Catalog, Opcoes no OptionsPanel (menu.gd, menu.tscn, ui_kit.gd, options_panel.gd), testes, capturas, indices", verification: "suite 0 falhas; mobile_buttons_check 146/0; controller_check --headless 90/0; smoke ok; kit_test OK; hash do save real antes = depois", note: "Sem push, exportacao nem aviso aos testers. Titulo sem mudanca por escolha. tools/build_scenes.gd (gerador antigo) ainda monta os 21 nos removidos; nao rodado."}
@@ -655,6 +656,22 @@ suspension:
   suspended_plan_state_file: '.atena/state/plan-053-imagens.yaml'
   note: 'PLAN-053 retomado; biomas ate Pilares completos localmente. S-007 onda cortante completa como candidata; aguardando gate humano N03. PLAN-071 preservado. PLAN-071 suspenso com retorno acima.'
 deferred_requests:
+  - id: DEV-041
+    request: "Rascunho de proposta de evolucoes para as armas sem evolucao, priorizando as mais fracas no late-game."
+    request_classification: PLAN_DEVIATION
+    status: COMPLETED_LOCAL_AWAITING_PLAYTEST
+    evidence: EVID-243
+    recorded: "2026-10-13"
+    authorization_verbatim: "atena, prepare a proposta de evolucoes como rascunho, de prioridade aquelas que estao mais fracas menos efetivas no late-game"
+    approval_verbatim: "atena, aprovo o plano com 5 evolucoes"
+    plan: PLAN-101
+    spec: SPEC-174
+    state_file: .atena/state/plan-101-evolucoes-armas-sem-evolucao.yaml
+    card: MEC-067
+    route: "Pedido explicito de rascunho; feito agora, so documento e script de leitura. PLAN-100 (active_plan) inalterado. Nada em data/ nem no codigo; sem commit, push, exportacao."
+    content_state: DRAFT
+    draft: .atena/vault/drafts/PROPOSTA-evolucoes-armas-sem-evolucao-2026-10-13.md
+    scope: ".atena/generated/evolucoes-armas-2026-10-13/regua.js (somente leitura de data/weapons.json)"
   - id: DEV-040
     request: "Estetica, lote 1: filtro visual de tela (pixel do mundo, paleta e dither, gravura) e fonte da interface, como opcoes; sem arte nova."
     request_classification: PLAN_DEVIATION
