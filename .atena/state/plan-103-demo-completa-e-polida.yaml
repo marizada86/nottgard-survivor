@@ -1,0 +1,47 @@
+id: PLAN-103
+spec: SPEC-176
+spec_file: .atena/specs/SPEC-176-movimento-dos-herois-marco-m1-do-plan-103.md
+plan_file: .atena/vault/drafts/PLAN-103-demo-completa-e-polida-2026-10-14.md
+mode: per-batch
+status: STRUCTURE_APPROVED_SPEC_176_DRAFTED_AWAITING_BATCH_B002_APPROVAL
+approved: "2026-10-14"
+approval_basis: "Dono respondeu as perguntas guiadas de 2026-10-14: alvo, prioridades, plataforma, ritmo, sequencia, mecanicas, movimento, arte, nivel por lote, primeiro marco M1, piso de audio e Definicao de Pronto aprovada como esta."
+content_state: DRAFT
+created: "2026-10-14"
+request_classification: PLAN_CHANGE_REQUEST   # substitui PLAN-100 como plano ativo; PLAN-100 segue aguardando decisoes do dono (entram no M0)
+owner_decisions:
+  D1: 'Alvo: jogo atual completo, polido (9 fases, 12 herois).'
+  D2: 'Frentes: arte e animacao, game feel e dificuldade, UI/onboarding/clareza.'
+  D3: 'Plataforma: Windows, teclado/mouse e controle; mobile e Web pos-demo.'
+  D4: 'Ritmo: por marcos, sem data.'
+  D5: 'Sequencia: validacao e mecanicas novas em paralelo (mitigacao: lote e commit proprios por mecanica).'
+  D6: 'Mecanicas: chefes marcantes, builds e sinergias, rejogabilidade e meta, identidade por fase.'
+  D7: 'Movimento dos herois: marco proprio, decisao pelo olho do dono.'
+  D8: 'Arte: priorizar por visibilidade (camadas A, B, C).'
+  D9: 'Aprovacao por lote.'
+  D10: 'Primeiro marco: M1 Movimento dos herois (M0 corre junto).'
+  D11: 'Audio: piso minimo na camada A (nenhum SFX emprestado no que aparece nos primeiros 15 min; passe de mixagem no M2).'
+  D12: 'Definicao de Pronto (8 criterios, secao 4 do plano) aprovada como esta.'
+batches:
+  B-001: {milestone: M0, title: 'Base e validacao continua', kind: CONTINUOUS, status: PENDING_FIRST_APPROVAL}
+  B-002: {milestone: M1, title: "Movimento dos herois", status: SPEC_DRAFTED_AWAITING_APPROVAL, spec: SPEC-176, steps: [S-001, S-002, S-003, S-004, S-005, S-006, S-007, S-008, S-009, S-010, S-011, S-012, S-013], owner_gates: [G-D1, G-D2, G-D3, G-D4]}
+  B-003: {milestone: M2, title: 'Game feel e apresentacao', status: PLANNED}
+  B-004: {milestone: M3, title: 'UI, onboarding e clareza', status: PLANNED}
+  B-005: {milestone: M4, title: 'Mecanicas (4a chefes, 4b builds, 4c meta, 4d fases)', status: PLANNED, note: 'proposta por frente antes de spec; teto de 2 mecanicas por frente'}
+  B-006: {milestone: M5, title: 'Arte por visibilidade (camadas A/B/C)', status: PLANNED}
+  B-007: {milestone: M6, title: 'Balanceamento final (conteudo congelado)', status: PLANNED}
+  B-008: {milestone: M7, title: 'Candidata a demo', status: PLANNED}
+ordered_batches: [B-002, B-003, B-004, B-005, B-006, B-007, B-008]   # B-001 corre em paralelo; M2/M3 podem andar com M4
+checkpoint: B-002/PENDING_BATCH_APPROVAL
+gates:
+  dependencies: NO_NEW_DEPENDENCIES
+  commit_push_build_export_notice: NOT_AUTHORIZED   # cada um exige aprovacao a parte (add.yaml)
+  canonical_promotion: NONE   # direcao visual e visao seguem DRAFT ate decisao explicita
+  other_sessions_changes: PRESERVE_UNTOUCHED
+blocking_gaps: []
+resolvable_gaps: []   # R1 a R4 resolvidas em 2026-10-14
+deferred_gaps: ['mobile', 'Web', 'loja/Steam', 'localizacao', 'cooperativo']
+return:
+  plan: PLAN-100
+  note: 'PLAN-100 concluido local, aguardando decisoes do dono (filtro padrao, fonte); passam ao B-001/M0. PLAN-071 segue arquivado.'
+next_objective: "Dono aprova o lote B-002 (SPEC-176); Atena executa a Fase A (linha de base, sem alterar arquivos do jogo) e para no G-D1."

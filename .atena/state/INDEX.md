@@ -2,13 +2,14 @@
 
 Atualizado em 2026-10-13 (Atena). Cada linha liga o plano à spec, ao que ele é e ao que **ainda falta**. O estado operacional (plano ativo, recibos de commit, desvios) fica em [`plan.yaml`](plan.yaml); o índice das specs, em [`../specs/INDEX.md`](../specs/INDEX.md) (gerado por `node tools/atena_index.js`). Os arquivos de plano não foram movidos nem renomeados: links antigos continuam valendo.
 
-**Resumo:** 1 plano ativo (PLAN-100) · 1 arquivado, prioridade baixa (PLAN-071) · 21 entregues, aguardando playtest ou arte · 9 esperando arte, aparelho ou o dono · 12 fechados sem pendência. Total de arquivos de plano em `state/`: 41.
+**Resumo:** 1 plano ativo (PLAN-103, que assumiu o lugar do PLAN-100 em 2026-10-14) · 1 arquivado, prioridade baixa (PLAN-071) · 21 entregues, aguardando playtest ou arte · 9 esperando arte, aparelho ou o dono · 12 fechados sem pendência. Total de arquivos de plano em `state/`: 41.
 
 ## Ativo
 
 | Plano | Spec | O que é | Falta |
 |---|---|---|---|
-| PLAN-100 | SPEC-173 | Filtro visual de tela e fonte dos títulos (lote 1 da estética); concluído local, EVID-242 | Decisões do dono (filtro padrão, fonte dos títulos); push pendente |
+| PLAN-103 | SPEC-176 (M1, DRAFT) | **Demo completa e polida:** M0 validação contínua, M1 movimento dos heróis, M2 game feel, M3 UI e onboarding, M4 mecânicas (chefes, builds, meta, fases), M5 arte por visibilidade, M6 balanceamento, M7 candidata; aprovação por lote; estrutura aprovada em 2026-10-14 ([rascunho](../vault/drafts/PLAN-103-demo-completa-e-polida-2026-10-14.md)) | Aprovação do lote B-002 (SPEC-176, movimento dos heróis) |
+| PLAN-100 | SPEC-173 | Filtro visual de tela e fonte dos títulos (lote 1 da estética); concluído local, EVID-242; deixou de ser o plano ativo em 2026-10-14 | Decisões do dono (filtro padrão, fonte dos títulos), tratadas no M0 do PLAN-103; push pendente |
 
 ## Arquivados, prioridade baixa
 

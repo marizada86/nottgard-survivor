@@ -4,12 +4,12 @@ Gerado por `node tools/atena_index.js` (não editar à mão). Agrupa pelo **stat
 
 | Grupo | Specs |
 |---|--:|
-| aberta (rascunho ou planejada) | 7 |
+| aberta (rascunho ou planejada) | 8 |
 | aprovada, sem fechar | 4 |
 | pausada | 2 |
 | entregue | 162 |
 | substituída | 2 |
-| **total** | **177** |
+| **total** | **178** |
 
 ## Números repetidos
 
@@ -28,7 +28,7 @@ Gerado por `node tools/atena_index.js` (não editar à mão). Agrupa pelo **stat
 - SPEC-082: `SPEC-082-integracao-de-decais-do-lote-2.md` e `SPEC-082-loja-e-ferreiro-mostram-todas-as-opcoes.md` e `SPEC-082-skin-leoric-cartola-e-sobretudo.md`
 - SPEC-099: `SPEC-099-integracao-animacoes-cultista-adaga.md` e `SPEC-099-integracao-hqs-hqn-11-a-14.md`
 
-## Aberta (rascunho ou planejada) (7)
+## Aberta (rascunho ou planejada) (8)
 
 | Spec | Título | Status |
 |---|---|---|
@@ -39,6 +39,7 @@ Gerado por `node tools/atena_index.js` (não editar à mão). Agrupa pelo **stat
 | [SPEC-116](SPEC-116-dopamina-tematica.md) | Dopamina temática: feedback e recompensa | proposta para escolha do dono (2026-10-01) |
 | [SPEC-117](SPEC-117-alma-e-historia-na-run.md) | Alma e história na run: mapa narrativo por fase e chefe | proposta para escolha do dono (2026-10-01) |
 | [SPEC-169](SPEC-169-lancamento-oficial-da-v0-4-0.md) | Lançamento oficial da 0.4.0 para os playtesters (documentos, verificação e pacote) | PREPARADA em 2026-10-10 (PLAN-096, EVID-238); o código já foi publicado (602cef5); commit dos documentos e aviso aos testers aguardam o dono |
+| [SPEC-176](SPEC-176-movimento-dos-herois-marco-m1-do-plan-103.md) | Movimento dos heróis: marco M1 da demo (PLAN-103) | DRAFT em 2026-10-14; estrutura do PLAN-103 aprovada pelo dono; aguarda aprovação do lote B-002 |
 
 ## Aprovada, sem fechar (4)
 
@@ -219,7 +220,7 @@ Gerado por `node tools/atena_index.js` (não editar à mão). Agrupa pelo **stat
 | [SPEC-170](SPEC-170-foco-do-controle-ao-comprar-melhoria-bug-043.md) | Foco do controle ao comprar melhoria no Quartel (BUG-043) | IMPLEMENTADA LOCAL em 2026-10-10 (PLAN-097, EVID-239); aguarda playtest |
 | [SPEC-171](SPEC-171-bateria-da-0-4-0-e-revisao-de-desempenho-por-idade.md) | Bateria de testes do release candidate 0.4.0 e revisão de desempenho do código mais antigo | IMPLEMENTADA LOCAL em 2026-10-10 (PLAN-098, EVID-240); aguarda playtest |
 | [SPEC-172](SPEC-172-telemetria-de-quadros-e-maquina-fraca-emulada.md) | Telemetria de maquina e quadros no kit de playtest e emulacao de maquina fraca | IMPLEMENTADA LOCAL em 2026-10-11 (PLAN-099, EVID-241); aguarda dados de campo |
-| [SPEC-173](SPEC-173-filtro-visual-e-fonte-da-interface-lote-1.md) | Filtro visual de tela e fonte da interface (lote 1 da estética) | IMPLEMENTADA LOCAL em 2026-10-13 (PLAN-100, EVID-242); r3: Pixel descartado, IM Fell como padrão dos títulos; commits locais; aguarda playtest |
+| [SPEC-173](SPEC-173-filtro-visual-e-fonte-da-interface-lote-1.md) | Filtro visual de tela e fonte da interface (lote 1 da estética) | IMPLEMENTADA LOCAL em 2026-10-13 (PLAN-100, EVID-242); r3: Pixel descartado, IM Fell como padrão dos títulos; r4: EB Garamond no corpo (MEC-069); comm |
 | [SPEC-174](SPEC-174-evolucoes-das-armas-sem-evolucao-lote-1-e-atributo-minimo.md) | Evoluções das armas sem evolução (lote 1, cinco armas) e atributo mínimo para evoluir | IMPLEMENTADA LOCAL em 2026-10-13 (PLAN-101, EVID-243); DRAFT; aguarda playtest humano; commitada local (563c07b), sem push |
 | [SPEC-175](SPEC-175-camara-selada-com-pista-no-questlog-mec-068.md) | Câmara selada com pista no questlog (MEC-068, opção B) | IMPLEMENTADA LOCAL em 2026-10-13 (PLAN-102, EVID-244); DRAFT; aguarda playtest humano; commitada local (bbb792e), sem push |
 
