@@ -49,3 +49,6 @@ Nada mudou em quando, onde ou como as chaves disparam, nem em relíquias, Ecos o
 - Horário do acontecimento: o mostrado é o real da partida (jitter do acontecimento); antes de disparar é uma previsão exata do que foi sorteado.
 - A suíte e as verificações regravam `unit-profile.json`, `integration-profile.json`, `buttons-profile.json` e `buttons-report.json` em `.atena/generated`, como já acontecia; fora do escopo.
 - Commits locais (código `bbb792e` e documentos); sem push, build ou exportação.
+
+## 5. Adendo (2026-10-14): cabeçalho "Missões"
+Relato do dono vendo o questlog em jogo: a linha da câmara ficava solta, sem dizer o que era. `QuestPanel` ganhou o cabeçalho fixo **Missões** (15 pt, dourado apagado, mesma largura e alinhamento à direita), dentro do mesmo painel translúcido; some junto com o questlog quando não há objetivos e não conta como linha de objetivo. `ui/quest_panel.gd` (`TITLE`), teste `_questlog_title` em `tests/test_secrets.gd`. Suíte 0 falhas, smoke ok, `mobile_buttons_check` 146/0, captura conferida. Sem commit.

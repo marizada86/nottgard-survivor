@@ -36,6 +36,7 @@ func run() -> Array:
 	_keys(out)
 	_key_events(out)
 	_chamber_log(out)
+	_questlog_title(out)
 	_achievements(out)
 	TerrainLayout.scale = saved
 	return out
@@ -482,4 +483,20 @@ func _chamber_log(out: Array) -> void:
 			described += 1
 	if described != 2:
 		out.append("questlog deveria descrever o mais urgente e a câmara (viu %d descrições)" % described)
+	panel.free()
+
+# ---------------------------------------------------------------- cabeçalho do questlog
+func _questlog_title(out: Array) -> void:
+	var panel := QuestPanel.new()
+	var title: Label = panel.get_node_or_null("VBoxContainer/Title") if panel.get_child_count() > 0 else null
+	if title == null:
+		title = panel.find_child("Title", true, false) as Label
+	if title == null or title.text != QuestPanel.TITLE:
+		out.append("o questlog deveria ter o cabeçalho '%s'" % QuestPanel.TITLE)
+	panel.update_entries([{"id": "q", "kind": "collect", "title": "Missão", "text": "texto", "need": 0, "have": 0, "left": -1.0}])
+	if panel._rows.get_child_count() != 1:
+		out.append("o cabeçalho não deve contar como linha de objetivo (viu %d linhas)" % panel._rows.get_child_count())
+	panel.update_entries([])
+	if panel.visible:
+		out.append("sem objetivos o questlog (e o cabeçalho) deve ficar escondido")
 	panel.free()

@@ -25,6 +25,8 @@ completo em [INTAKE.md](INTAKE.md).
 | IN-072 | 2026-10-07 | EVID-200 #7 | Daniel: revisar posição e espaçamento dos textos da HUD | BUG-036 (implementado local) |
 | IN-073 | 2026-10-10 | Relato do dono (Hiago, T02) | Hiago: ao comprar um upgrade em melhorias no controle o input some e não dá para comprar mais nada até apertar R1/RB ou L1/LB | BUG-043 (implementado local) |
 | IN-074 | 2026-10-13 | Relato do dono (jogando) | A "câmara selada" é vaga: não dá para saber o que fazer para abri-la. Causa verificada: a câmara não aparece no questlog; 3 dos 8 acontecimentos-chave (Ritual da Névoa, Cais atacado, Do trono ao lodo) não têm `objective_text` e nem entram no questlog; a única pista é o rótulo "câmara selada" e o aviso "Algo da fase a abrirá" | MEC-068 (SPEC-175, PLAN-102; opção B escolhida pelo dono em 2026-10-13) |
+| IN-075 | 2026-10-14 | Relato do dono (jogando) | O questlog mostra a linha da câmara solta: faltava um cabeçalho dizendo o que é (sugestão: "Missões" ou "Quadro de missões") | MEC-064 (adendo; cabeçalho "Missões" implementado local, EVID-244 adendo) |
+| IN-076 | 2026-10-14 | Relato do dono (jogando) | Nas ofertas de nível, os rótulos SINERGIA, DEFESA e NOVA DIREÇÃO vinham antes do nome do item e ninguém explicava o que eram; o nome deveria vir primeiro (remover ou simplificar) | Rótulo removido das ofertas (cartão e botão simples); o papel segue só como regra interna de montagem da oferta; implementado local |
 
 ## Perguntas para o próximo playtest
 

@@ -778,6 +778,18 @@ func run() -> Array:
 		tip_node.free()
 	bare_card.free()
 	full_tip.free()
+	# o papel da oferta (SINERGIA, DEFESA, NOVA DIREÇÃO) não aparece antes do nome
+	for role in ["synergy", "defense", "direction"]:
+		var role_card := OfferCard.new()
+		role_card.setup(0, {"t": "weapon_up", "name": "Espada Sombria → Nv 2", "desc": "x", "brief": "+1 dado", "role": role}, Color.WHITE, null)
+		var shown := ""
+		for l in role_card.find_children("*", "Label", true, false):
+			shown += (l as Label).text + "|"
+		if shown.find("[") >= 0 or shown.find("SINERGIA") >= 0 or shown.find("DEFESA") >= 0 or shown.find("DIREÇÃO") >= 0:
+			out.append("cartão de oferta (%s) não deveria mostrar o papel antes do nome: %s" % [role, shown])
+		if shown.find("1.  Espada Sombria") != 0:
+			out.append("cartão de oferta (%s) deveria começar pelo nome: %s" % [role, shown])
+		role_card.free()
 	if String(cmp.offer[0].brief) == "" or int(cmp.offer[0].badge.up) != 1 or int(cmp.offer[0].badge.down) != 1:
 		out.append("oferta de item deveria trazer brief e badge ▲1 ▼1: %s" % str(cmp.offer[0].badge))
 	if int(cmp.offer[1].badge.up) != 1 or int(cmp.offer[1].badge.down) != 1 or cmp.offer[1].detail.footer.size() < 1:

@@ -623,10 +623,8 @@ func show_offer(b: Battle) -> void:
 		var o: Dictionary = b.offer[i]
 		var is_card := o.has("brief")
 		var btn: Button = OfferCard.new() if is_card else Button.new()
-		var role_names := {"synergy": "SINERGIA", "defense": "DEFESA", "direction": "NOVA DIREÇÃO"}
-		var role := String(role_names.get(o.get("role", ""), ""))
 		if not is_card:
-			btn.text = "%d.  %s%s\n      %s" % [i + 1, "[%s] " % role if role != "" else "", o.name, o.desc]
+			btn.text = "%d.  %s\n      %s" % [i + 1, o.name, o.desc]   # sem rótulo de papel: o nome vem primeiro
 			btn.alignment = HORIZONTAL_ALIGNMENT_LEFT
 			btn.custom_minimum_size = Vector2(620, 62)
 		var icon_path := offer_icon_path(o)

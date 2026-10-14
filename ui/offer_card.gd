@@ -37,12 +37,11 @@ func setup(index: int, o: Dictionary, name_color: Color, icon_tex: Texture2D) ->
 	left.alignment = BoxContainer.ALIGNMENT_CENTER
 	left.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	row.add_child(left)
-	var role_names := {"synergy": "SINERGIA", "defense": "DEFESA", "direction": "NOVA DIREÇÃO"}
-	var role := String(role_names.get(o.get("role", ""), ""))
+	# O `role` da oferta (synergy, defense, direction) só serve para montar as opções; não aparece no cartão: o nome vem primeiro.
 	var title := String(o.name)
 	if String(o.get("price_text", "")) != "" and title.find(" — ") >= 0:
 		title = title.substr(0, title.rfind(" — "))
-	left.add_child(_label("%d.  %s%s" % [index + 1, "[%s] " % role if role != "" else "", title], 19, name_color))
+	left.add_child(_label("%d.  %s" % [index + 1, title], 19, name_color))
 	var brief := _label(String(o.get("brief", "")), 16, Color(0.88, 0.88, 0.88))
 	brief.clip_text = true
 	left.add_child(brief)

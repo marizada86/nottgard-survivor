@@ -10,8 +10,10 @@ const LOG_WIDTH := 300.0
 const GOLD := Color(0.93, 0.78, 0.4)
 const URGENT := Color(1.0, 0.45, 0.4)
 const URGENT_SECONDS := 10.0
+const TITLE := "Missões"   # cabeçalho fixo: sem ele as linhas soltas não dizem o que são
 
 var _rows: VBoxContainer
+var _title: Label
 var _signature := ""
 var _timers: Dictionary = {}  # id -> Label com o prazo restante
 var _progress: Dictionary = {}  # id -> have, para pulsar quando avança
@@ -23,10 +25,17 @@ func _init() -> void:
 	visible = false
 	modulate = Color(1, 1, 1, LOG_ALPHA)
 	add_theme_stylebox_override("panel", StyleBoxEmpty.new())
+	var root := VBoxContainer.new()
+	root.add_theme_constant_override("separation", 4)
+	root.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	add_child(root)
+	_title = _label(TITLE, 15, Color(0.74, 0.66, 0.5))
+	_title.name = "Title"
+	root.add_child(_title)
 	_rows = VBoxContainer.new()
 	_rows.add_theme_constant_override("separation", 3)
 	_rows.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	add_child(_rows)
+	root.add_child(_rows)
 
 ## `entries`: Happenings.hud_entries(); `carrying`: Happenings.carrying_text().
 func update_entries(entries: Array, carrying := "") -> void:
