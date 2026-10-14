@@ -4,12 +4,12 @@ Gerado por `node tools/atena_index.js` (não editar à mão). Agrupa pelo **stat
 
 | Grupo | Specs |
 |---|--:|
-| aberta (rascunho ou planejada) | 6 |
+| aberta (rascunho ou planejada) | 8 |
 | aprovada, sem fechar | 4 |
 | pausada | 2 |
-| entregue | 154 |
+| entregue | 160 |
 | substituída | 2 |
-| **total** | **168** |
+| **total** | **176** |
 
 ## Números repetidos
 
@@ -28,7 +28,7 @@ Gerado por `node tools/atena_index.js` (não editar à mão). Agrupa pelo **stat
 - SPEC-082: `SPEC-082-integracao-de-decais-do-lote-2.md` e `SPEC-082-loja-e-ferreiro-mostram-todas-as-opcoes.md` e `SPEC-082-skin-leoric-cartola-e-sobretudo.md`
 - SPEC-099: `SPEC-099-integracao-animacoes-cultista-adaga.md` e `SPEC-099-integracao-hqs-hqn-11-a-14.md`
 
-## Aberta (rascunho ou planejada) (6)
+## Aberta (rascunho ou planejada) (8)
 
 | Spec | Título | Status |
 |---|---|---|
@@ -38,6 +38,8 @@ Gerado por `node tools/atena_index.js` (não editar à mão). Agrupa pelo **stat
 | [SPEC-103](SPEC-103-piloto-runtime-escala-direcional-brook.md) | Piloto runtime de escala direcional de Brook | rascunho suspenso — programa PLAN-049 aprovado; manter apenas como diagnóstico histórico |
 | [SPEC-116](SPEC-116-dopamina-tematica.md) | Dopamina temática: feedback e recompensa | proposta para escolha do dono (2026-10-01) |
 | [SPEC-117](SPEC-117-alma-e-historia-na-run.md) | Alma e história na run: mapa narrativo por fase e chefe | proposta para escolha do dono (2026-10-01) |
+| [SPEC-169](SPEC-169-lancamento-oficial-da-v0-4-0.md) | Lançamento oficial da 0.4.0 para os playtesters (documentos, verificação e pacote) | PREPARADA em 2026-10-10 (PLAN-096, EVID-238); o código já foi publicado (602cef5); commit dos documentos e aviso aos testers aguardam o dono |
+| [SPEC-174](SPEC-174-evolucoes-das-armas-sem-evolucao-lote-1-e-atributo-minimo.md) | Evoluções das armas sem evolução (lote 1, cinco armas) e atributo mínimo para evoluir | PLANEJADA em 2026-10-13 (PLAN-101); DRAFT; conteúdo do lote 1 aprovado pelo dono, nível de aprovação e mínimos de atributo aguardam escolha; nada codi |
 
 ## Aprovada, sem fechar (4)
 
@@ -55,7 +57,7 @@ Gerado por `node tools/atena_index.js` (não editar à mão). Agrupa pelo **stat
 | [SPEC-101](SPEC-101-polimento-proporcoes-movimento-herois.md) | Auditoria e piloto de proporções no movimento dos heróis | SPEC-106 de Durvall aprovada; produção pausada por falta de fluxo local 2D adequado |
 | [SPEC-154](SPEC-154-pixels-soltos-dos-herois-pre-reducao-das-tiras-bug-029.md) | Pixels soltos nos heróis: pré-redução das tiras para o tamanho de tela (BUG-029) | PAUSADA em 2026-10-09 (PLAN-082): o dono não adotou a variante C; HERO_STRIP_SET vazio e BUG-029 aberto; registros e ferramentas commitados (eb57860) |
 
-## Entregue (157)
+## Entregue (160)
 
 | Spec | Título | Status |
 |---|---|---|
@@ -213,12 +215,12 @@ Gerado por `node tools/atena_index.js` (não editar à mão). Agrupa pelo **stat
 | [SPEC-164](SPEC-164-eventos-aleatorios-novos-mec-005.md) | Seis eventos aleatórios novos (MEC-005) | IMPLEMENTADA e publicada (ac2bc86, EVID-228); aceite subjetivo pendente do playtest |
 | [SPEC-165](SPEC-165-sistema-de-ui-e-menu-de-pausa-mec-003.md) | Sistema de UI e novo menu de pausa (MEC-003, fase 1) | IMPLEMENTADA e publicada (455beca, EVID-229); direção visual ainda DRAFT: aguarda aprovação do dono |
 | [SPEC-166](SPEC-166-nova-ui-lote-2-quartel-selecao-e-titulo-mec-003.md) | Nova UI, lote 2: Quartel, seleção de herói e mapa, e título no UiKit (MEC-003) | IMPLEMENTADA em 2026-10-09 (PLAN-093, EVID-231); aguarda playtest; título sem mudança por escolha (P3) |
-| [SPEC-167](SPEC-167-avisos-do-topo-sem-acumular-nem-colidir-bug-042.md) | Avisos do topo sem acumular nem colidir com a ficha e a fala do herói (BUG-042, continua o BUG-036) | IMPLEMENTADA LOCAL em 2026-10-10 (PLAN-094, EVID-236); aguarda playtest; pendência com quests e chefe |
+| [SPEC-167](SPEC-167-avisos-do-topo-sem-acumular-nem-colidir-bug-042.md) | Avisos do topo sem acumular nem colidir com a ficha e a fala do herói (BUG-042, continua o | IMPLEMENTADA LOCAL em 2026-10-10 (PLAN-094, EVID-236); aguarda playtest; a pendência com quests foi resolvida pelo MEC-064 (SPEC-168) |
 | [SPEC-168](SPEC-168-questlog-a-direita-sem-moldura-mec-064.md) | Questlog à direita, sem moldura e translúcido (MEC-064; resolve a pendência da EVID-236) | IMPLEMENTADA LOCAL em 2026-10-10 (PLAN-095, EVID-237); aguarda playtest |
-| [SPEC-169](SPEC-169-lancamento-oficial-da-v0-4-0.md) | Lançamento oficial da 0.4.0 para os playtesters (documentos, verificação e pacote) | PREPARADA em 2026-10-10 (PLAN-096, EVID-238); commit dos documentos e aviso aguardam o dono |
 | [SPEC-170](SPEC-170-foco-do-controle-ao-comprar-melhoria-bug-043.md) | Foco do controle ao comprar melhoria no Quartel (BUG-043) | IMPLEMENTADA LOCAL em 2026-10-10 (PLAN-097, EVID-239); aguarda playtest |
-| [SPEC-171](SPEC-171-bateria-da-0-4-0-e-revisao-de-desempenho-por-idade.md) | Bateria de testes da 0.4.0 e revisão de desempenho do código mais antigo | IMPLEMENTADA LOCAL em 2026-10-10 (PLAN-098, EVID-240); aguarda playtest |
-| [SPEC-172](SPEC-172-telemetria-de-quadros-e-maquina-fraca-emulada.md) | Telemetria de máquina e quadros no kit de playtest e emulação de máquina fraca | IMPLEMENTADA LOCAL em 2026-10-11 (PLAN-099, EVID-241); aguarda dados de campo |
+| [SPEC-171](SPEC-171-bateria-da-0-4-0-e-revisao-de-desempenho-por-idade.md) | Bateria de testes do release candidate 0.4.0 e revisão de desempenho do código mais antigo | IMPLEMENTADA LOCAL em 2026-10-10 (PLAN-098, EVID-240); aguarda playtest |
+| [SPEC-172](SPEC-172-telemetria-de-quadros-e-maquina-fraca-emulada.md) | Telemetria de maquina e quadros no kit de playtest e emulacao de maquina fraca | IMPLEMENTADA LOCAL em 2026-10-11 (PLAN-099, EVID-241); aguarda dados de campo |
+| [SPEC-173](SPEC-173-filtro-visual-e-fonte-da-interface-lote-1.md) | Filtro visual de tela e fonte da interface (lote 1 da estética) | IMPLEMENTADA LOCAL em 2026-10-13 (PLAN-100, EVID-242); r3: Pixel descartado, IM Fell como padrão dos títulos; commits locais; aguarda playtest |
 
 ## Substituída (2)
 

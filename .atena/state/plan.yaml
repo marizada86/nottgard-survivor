@@ -539,8 +539,9 @@ active_plan:
   spec_id: SPEC-173
   state_file: '.atena/state/plan-100-filtro-visual-e-fonte.yaml'
   mode: per-batch
-  checkpoint: B-001/S-001
-  status: B001_EXECUTING
+  checkpoint: B-003/S-012
+  status: COMPLETED_LOCAL_AWAITING_OWNER_DECISIONS
+  evidence: EVID-242
   approved: '2026-10-13'
   assumed_active: '2026-10-13'
   request_classification: IN_PLAN
@@ -654,6 +655,21 @@ suspension:
   suspended_plan_state_file: '.atena/state/plan-053-imagens.yaml'
   note: 'PLAN-053 retomado; biomas ate Pilares completos localmente. S-007 onda cortante completa como candidata; aguardando gate humano N03. PLAN-071 preservado. PLAN-071 suspenso com retorno acima.'
 deferred_requests:
+  - id: DEV-040
+    request: "Estetica, lote 1: filtro visual de tela (pixel do mundo, paleta e dither, gravura) e fonte da interface, como opcoes; sem arte nova."
+    request_classification: PLAN_DEVIATION
+    status: COMPLETED_LOCAL_AWAITING_OWNER_DECISIONS
+    evidence: EVID-242
+    recorded: "2026-10-13"
+    authorization_verbatim: "atena, abre a spec do lote 1, aprovação por lote"
+    route: "Dono confirmou em 2026-10-13 (atena, sim, faca agora, aprovo o B-001): fazer agora e voltar ao PLAN-071. Nenhuma execucao, commit, push, exportacao nem download autorizados."
+    route_update: "2026-10-13: dono pediu arquivar o PLAN-071 com prioridade baixa; PLAN-100 assume como active_plan e o retorno ao PLAN-071 deixa de existir."
+    plan: PLAN-100
+    spec: SPEC-173
+    state_file: .atena/state/plan-100-filtro-visual-e-fonte.yaml
+    mode: per-batch
+    content_state: DRAFT
+    scope: "ui/visual_filter.*, ui/ui_fonts.gd, ui/options_panel.gd, ui/run.gd, ui/lettering.gd, ui/title.gd, ui/menu.tscn, ui/theme.tres, core/profile.gd, core/game.gd, testes"
   - id: DEV-039
     request: "Fluidez em maquina fraca (EVID-240): telemetria de quadros e maquina no kit de playtest e emulacao de maquina fraca."
     request_classification: PLAN_DEVIATION

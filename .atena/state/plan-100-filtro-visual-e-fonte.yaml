@@ -1,0 +1,54 @@
+id: PLAN-100
+spec: SPEC-173
+spec_file: .atena/specs/SPEC-173-filtro-visual-e-fonte-da-interface-lote-1.md
+mode: per-batch
+status: COMPLETED_LOCAL_AWAITING_OWNER_DECISIONS
+content_state: DRAFT
+created: '2026-10-13'
+request_classification: PLAN_DEVIATION
+deviation_id: DEV-040
+authorization_verbatim: 'abre a spec do lote 1, aprovação por lote'
+owner_reply_route_and_b001: 'atena, sim, faça agora, aprovo o B-001 (2026-10-13)'
+approval_basis: 'Dono pediu a spec do lote 1 (filtro de tela e fonte) e escolheu aprovação por lote (2026-10-13). Rota confirmada na mesma data: fazer agora e voltar ao PLAN-071; B-001 aprovado. B-002 e B-003 seguem pendentes de aprovacao propria.'
+checkpoint: B-003/S-012 (plano fechado local; EVID-242)
+return:
+  plan: null
+  note: 'PLAN-071 arquivado com prioridade baixa em 2026-10-13; PLAN-100 e o active_plan. Nao ha retorno devido.'
+  archived_plan: PLAN-071
+  state_file: .atena/state/plan-071-playtest-ranking.yaml
+  checkpoint_observed: B-006/S-011
+ordered_batches: [B-001, B-002, B-003]
+batches:
+  B-001: {title: Filtro visual de tela (MEC-065), steps: [S-001, S-002, S-003, S-004, S-005], status: DONE_LOCAL, approved: '2026-10-13', result: .atena/generated/plan-100/b001-resultado.md}
+  B-002: {title: Fonte da interface (MEC-066), steps: [S-006, S-007, S-008, S-009], status: DONE_LOCAL, approved: '2026-10-13', download_approved: '2026-10-13', result: .atena/generated/plan-100/b002-resultado.md, gate: 'S-006 pede aprovacao do download das fontes (nome, origem, tamanho)'}
+  B-003: {title: Fechamento e retorno, steps: [S-010, S-011, S-012], status: DONE_LOCAL, approved: '2026-10-13'}
+steps:
+  S-001: 'ui/visual_filter.gdshader e ui/visual_filter.gd (CanvasLayer + ColorRect, modos pixel/paleta/gravura).'
+  S-002: 'settings.visual_filter com migracao em core/profile.gd e leitura em core/game.gd; sinal ao mudar.'
+  S-003: 'Opcao Visual em ui/options_panel.gd; criacao e camada do VisualFilter em ui/run.gd (acima do mundo, abaixo da Hud e da camada de encontros).'
+  S-004: 'tests/test_visual_filter.gd: desligado sem custo, Hud fora do filtro, migracao, variantes distintas; sem tocar o save real.'
+  S-005: 'Capturas das 3 variantes em 3 biomas e medicao de custo (FrameStats/perf_probe).'
+  S-006: 'Pedido de download das fontes candidatas (aprovacao do dono).'
+  S-007: 'ui/ui_fonts.gd e ligacao em Lettering, theme, title e menu, com fallback para a fonte atual.'
+  S-008: 'Opcao Fonte em OptionsPanel e tests/test_ui_fonts.gd (cobertura de glifos e fallback).'
+  S-009: 'Capturas comparativas (ficha C, Quartel, HUD, titulo).'
+  S-010: 'Suite, smoke, controller_check, mobile_buttons_check, kit_test, backlog_check.'
+  S-011: 'EVID-242, cartoes MEC-065 e MEC-066, indices.'
+  S-012: 'Fechar o plano (PLAN-071 foi arquivado em 2026-10-13; sem retorno devido).'
+gates:
+  dependencies: 'fontes OFL somente no B-002, com aprovacao do download; nenhuma biblioteca nova'
+  assets_changed: NONE
+  gameplay_balance_data_version: NOT_ALTERED
+  default_state: 'filtro Desligado e fonte padrao; nada vira padrao sem retorno do dono'
+  commit_push_build_export: NOT_AUTHORIZED
+  other_sessions_changes: PRESERVE_UNTOUCHED
+  files_expected: [ui/visual_filter.gdshader, ui/visual_filter.gd, ui/ui_fonts.gd, ui/options_panel.gd, ui/run.gd, ui/lettering.gd, ui/title.gd, ui/menu.tscn, ui/theme.tres, core/profile.gd, core/game.gd, tests/test_visual_filter.gd, tests/test_ui_fonts.gd]
+blocking_gaps: []
+resolvable_gaps: ['rota do desvio', 'download das fontes (B-002)', 'escolha da fonte (subjetiva)']
+deferred_gaps: ['filtro em menus e titulo', 'paleta por bioma (lote 3)']
+return_to: null (PLAN-071 arquivado em 2026-10-13; PLAN-100 e o active_plan)
+next_objective: 'Dono decide: destino do Pixel do mundo, avaliacao da Paleta e dither, IM Fell English como padrao e usos da Uncial Antiqua. Commit, exportacao e push so com aprovacao.'
+evidence: EVID-242
+owner_feedback: {gravura: bom, desligado: bom, pixel_do_mundo: 'ruim -> descartado', paleta_e_dither: 'fica como opcao', fonte: 'IM Fell English padrao dos titulos; Cinzel vira opcao; Uncial Antiqua opcao e candidata a outros usos'}
+post_close_adjustments: {authorization_verbatim: 'atena, descarte o pixel do mundo e faca os commits separados; 2. deixe como opcao; 3. pode virar padrao dos titulos; 4. Sim, considerar tambem virar a fonte padrao para o jogo', request_classification: IN_PLAN, commits: AUTHORIZED_LOCAL_SEPARATE, push_export: NOT_AUTHORIZED, body_font_for_whole_game: ANALYSIS_ONLY}
+verification: 'suite 0 falhas; smoke ok; controller_check 94/0; mobile_buttons_check 146/0; kit_test OK; backlog_check P0=0'
