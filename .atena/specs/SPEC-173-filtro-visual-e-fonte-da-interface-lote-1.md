@@ -1,7 +1,7 @@
 ---
 id: "SPEC-173"
 title: "Filtro visual de tela e fonte da interface (lote 1 da estética)"
-status: "IMPLEMENTADA LOCAL em 2026-10-13 (PLAN-100, EVID-242); r3: Pixel descartado, IM Fell como padrão dos títulos; commits locais; aguarda playtest"
+status: "IMPLEMENTADA LOCAL em 2026-10-13 (PLAN-100, EVID-242); r3: Pixel descartado, IM Fell como padrão dos títulos; r4: EB Garamond no corpo (MEC-069); commits locais; aguarda playtest"
 origin: planned
 implementation_preceded_spec: false
 request_classification: PLAN_DEVIATION
@@ -32,6 +32,9 @@ Origem: pedido do dono em 2026-10-13 ("faça sugestões do que pode ser melhorad
 ## Revisão r3 (2026-10-13, após o fechamento do PLAN-100)
 Decisões do dono, no retorno do playtest das capturas: (1) **Pixel do mundo descartado**: "ficou ruim"; perfis com `visual_filter = pixel` voltam para `off`. (2) **Paleta e dither fica como opção**. (3) **IM Fell English é o padrão dos títulos**; a Cinzel vira opção (`cinzel`) e fallback; o id antigo `padrao` vira o padrão novo. (4) **Uncial Antiqua** segue como opção e candidata a outros usos. (5) Avaliar a IM Fell English também como **fonte do jogo inteiro** (corpo): fora desta spec, tratada como análise (ver EVID-242).
 Os trechos abaixo sobre a variante "Pixel do mundo" e o padrão "Cinzel" descrevem a r1/r2 e ficam como histórico.
+
+## Revisão r4 (2026-10-14)
+O item 5 da r3 foi decidido: **EB Garamond vira a fonte do corpo do jogo** (tema do projeto, com a Alegreya Sans de fallback). Motivo: a IM Fell English tem algarismos irregulares sem versão alinhada e desloca o layout; EB Garamond mantém a altura de linha da Alegreya e os números ficam legíveis. Candidatas comparadas: Spectral (descartada por altura de linha) e Cardo (segunda opção). Entregue como MEC-069; títulos seguem na IM Fell English. Tamanho padrão do corpo fica em 20 (21 estourava o teto de altura dos avisos do topo).
 
 ## Lacunas
 | Tipo | Item | Padrão recomendado |
