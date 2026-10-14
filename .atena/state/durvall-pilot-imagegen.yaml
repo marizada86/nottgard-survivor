@@ -106,3 +106,76 @@ local_commit_authorization:
   push_merge: NOT_AUTHORIZED
   content_state: DRAFT
   human_acceptance: PENDING
+
+p1_p3_p4_v02:
+  revision: P1-P3-P4/v02
+  classification: IN_PLAN
+  mode: per-batch
+  approval_status: APPROVED_EXPLICITLY
+  owner_request: 'atena agora vamos para P1 v02, P3 v02 e P4 v02'
+  status: INPUTS_VERIFIED_GENERATION_AUTHORIZED
+  ordered_steps: [P1, P3, P4, VERIFY]
+  completed_steps: 0
+  total_steps: 4
+  checkpoint: B-002/S-007/P1_V02_GENERATION
+  content_state: DRAFT
+  identity: 'Durvall ficha DRAFT r1 aprovada no G-D1; idle como autoridade visual'
+  source_authority: 'Checkout principal local: PROMPT-P1-v02.md, PROMPTS-v02.md, PLAN-103 D20'
+  visual_context: 'P1 perfil direita, P3 frente, P4 ataque tres-quartos direita; pintura de pixel, luz superior esquerda'
+  blocking_gaps: []
+  pending: ['Aceite visual apos retornos', 'Admissao runtime nao faz parte desta geracao']
+  runtime_admission: false
+  canonical_promotion: false
+  git_publication: NOT_AUTHORIZED
+
+
+p1_p3_p4_v02_delivery:
+  revision: P1-P3-P4/v02
+  status: RETURNED_DRAFT_TECHNICAL_HOLD_AWAITING_OWNER_REVIEW
+  ordered_steps: [P1, P3, P4, VERIFY]
+  completed_steps: 4
+  total_steps: 4
+  remaining_steps: 0
+  checkpoint: B-002/S-008/V02_OWNER_REVIEW
+  outputs: [durvall_move_e_v02.png, durvall_move_s_v02.png, durvall_attack_wide_v01.png]
+  evidence: .atena/evidence/durvall-pilot-p1-p3-p4-v02-2026-10-14.md
+  report: .atena/generated/m1-movimento/piloto-durvall/avaliacao/report-v02.json
+  human_visual_acceptance: PENDING
+  runtime_admission: false
+
+
+v02_gifs_5fps:
+  classification: IN_PLAN
+  revision: P1-P3-P4/v02-gifs-5fps
+  owner_request: 'faca os gifs'
+  status: DELIVERED_DRAFT_AWAITING_OWNER_VISUAL_REVIEW
+  ordered_steps: [DERIVE, VERIFY]
+  completed_steps: 2
+  total_steps: 2
+  checkpoint: B-002/S-008/V02_GIFS_OWNER_REVIEW
+  fps: 5
+  content_state: DRAFT
+  runtime_admission: false
+  evidence: .atena/evidence/durvall-v02-gifs-5fps-2026-10-14.md
+
+
+owner_review_v02_2026_10_14:
+  classification: IN_PLAN
+  content_state: DRAFT
+  checkpoint: B-002/S-008/REVIEW_RECORDED_REVISIONS_PENDING
+  corrected_reference: P1_V02_CONFIRMED_BY_OWNER
+  p1_v02_feedback: 'pernas boas, restante pode melhorar, espada cortada pelo dimensionamento'
+  p3_v02: REJECTED_REPEATING_LEG
+  p3_preferred: P3_v01_WITH_SWORD_CROP_UNRESOLVED
+  p4_v02: REJECTED_OWNER_PREFERS_V01
+  p4_preferred: P4_v01
+  runtime_admission: false
+  evidence: .atena/evidence/durvall-owner-review-v02-2026-10-14.md
+  next_objective: 'Preparar revisao pontual de P1 v02 e enquadramento de P3 v01/P4 v01 preservando movimentos preferidos'
+
+v02_local_commit_authorization:
+  owner_reply: 'commit'
+  date: '2026-10-14'
+  scope: 'Fontes P1-P3-P4 v02, GIFs 5fps, prompts, gabaritos, scripts, relatorios, evidencias e avaliacao corrigida'
+  content_state: DRAFT
+  push_merge: NOT_AUTHORIZED

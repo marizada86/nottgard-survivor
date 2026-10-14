@@ -1480,3 +1480,42 @@ durvall_g_d2_p3_p5_gif_2026_10_14:
   fps: 10
   state_file: .atena/state/durvall-pilot-imagegen.yaml
   evidence: .atena/evidence/durvall-pilot-p3-p5-gif-2026-10-14.md
+
+durvall_p1_p3_p4_v02_2026_10_14:
+  plan: PLAN-103
+  revision: P1-P3-P4/v02
+  classification: IN_PLAN
+  mode: per-batch
+  approval_status: APPROVED_EXPLICITLY
+  owner_request: 'atena agora vamos para P1 v02, P3 v02 e P4 v02'
+  status: RETURNED_DRAFT_TECHNICAL_HOLD_AWAITING_OWNER_REVIEW
+  checkpoint: B-002/S-008/V02_OWNER_REVIEW
+  completed_steps: 4
+  total_steps: 4
+  content_state: DRAFT
+  state_file: .atena/state/durvall-pilot-imagegen.yaml
+  evidence: .atena/evidence/durvall-pilot-p1-p3-p4-v02-2026-10-14.md
+
+
+durvall_v02_gifs_5fps_2026_10_14:
+  plan: PLAN-103
+  revision: P1-P3-P4/v02-gifs-5fps
+  classification: IN_PLAN
+  mode: per-batch
+  approval_status: APPROVED_EXPLICITLY
+  status: DELIVERED_DRAFT_AWAITING_OWNER_VISUAL_REVIEW
+  checkpoint: B-002/S-008/V02_GIFS_OWNER_REVIEW
+  completed_steps: 2
+  total_steps: 2
+  content_state: DRAFT
+  state_file: .atena/state/durvall-pilot-imagegen.yaml
+  evidence: .atena/evidence/durvall-v02-gifs-5fps-2026-10-14.md
+
+
+durvall_owner_review_v02_2026_10_14:
+  plan: PLAN-103
+  classification: IN_PLAN
+  content_state: DRAFT
+  checkpoint: B-002/S-008/REVIEW_RECORDED_REVISIONS_PENDING
+  state_file: .atena/state/durvall-pilot-imagegen.yaml
+  evidence: .atena/evidence/durvall-owner-review-v02-2026-10-14.md

@@ -1,0 +1,59 @@
+[
+  {
+    "prompt": "P1 v02",
+    "file": "durvall_move_e_v02.png",
+    "dimensions": [
+      1774,
+      887
+    ],
+    "expected_dimensions": [
+      1536,
+      384
+    ],
+    "declared_frames": 6,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "sha256": "95c58617374a87566045e7a1d33fc81135912733205c07e51db1e20ee642f387",
+    "exact_dimensions_pass": false
+  },
+  {
+    "prompt": "P3 v02",
+    "file": "durvall_move_s_v02.png",
+    "dimensions": [
+      2171,
+      724
+    ],
+    "expected_dimensions": [
+      1856,
+      384
+    ],
+    "declared_frames": 6,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "sha256": "7c86c763904263f1879fb4f31502b36197ac1da44ddbb77c5fa6c5978d360679",
+    "exact_dimensions_pass": false
+  },
+  {
+    "prompt": "P4 v02",
+    "file": "durvall_attack_wide_v01.png",
+    "dimensions": [
+      2172,
+      724
+    ],
+    "expected_dimensions": [
+      2048,
+      512
+    ],
+    "declared_frames": 4,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "sha256": "3aae77b178e4c60d676ec2ebdb76a3cf17ebb913bfa79acafcf5bb593f1c2c26",
+    "exact_dimensions_pass": false
+  }
+]
