@@ -1,6 +1,11 @@
 [gd_resource type="Theme" format=3]
 
 [ext_resource type="FontFile" path="res://assets/fonts/AlegreyaSans-Regular.ttf" id="1_rqugq"]
+[ext_resource type="FontFile" path="res://assets/fonts/EBGaramond-Variable.ttf" id="2_ebgar"]
+
+[sub_resource type="FontVariation" id="FontVariation_body"]
+base_font = ExtResource("2_ebgar")
+fallbacks = [ExtResource("1_rqugq")]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rqugq"]
 content_margin_left = 8.0
@@ -131,7 +136,7 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
 [resource]
-default_font = ExtResource("1_rqugq")
+default_font = SubResource("FontVariation_body")
 default_font_size = 20
 Button/colors/font_color = Color(0.92, 0.88, 0.78, 1)
 Button/colors/font_disabled_color = Color(0.45, 0.45, 0.45, 1)
