@@ -187,7 +187,7 @@ Gerado por `node tools/atena_index.js` (não editar à mão). Agrupa pelo **stat
 | [SPEC-135](SPEC-135-bau-e-portal-fora-de-bloqueio.md) | Baú, baú do chefe e portal nunca nascem dentro de bloqueio de cenário | implemented-pending-playtest (aprovada por plano pelo dono em 2026-10-06) |
 | [SPEC-135](SPEC-135-experiencia-controles-xbox-playstation-2026-10-06.md) | Experiência com controles Xbox e PlayStation | LOCAL_VALIDATED_HARDWARE_PENDING |
 | [SPEC-136](SPEC-136-grazzt-limpa-o-mapa.md) | Graz'zt limpa o mapa (evento "O nome dito três vezes") | implemented-pending-playtest (aprovada por plano pelo dono em 2026-10-06) |
-| [SPEC-138](SPEC-138-playtest-e-ranking.md) | Playtest Web e estatisticas Discord para ranking | APPROVED_LOCAL |
+| [SPEC-138](SPEC-138-playtest-e-ranking.md) | Playtest Web e estatisticas Discord para ranking | ARQUIVADA em 2026-10-13 (PLAN-071, prioridade baixa); entrega local concluída em EVID-187; aceite nos clientes finais e gates remotos pendentes |
 | [SPEC-141](SPEC-141-marcas-do-abismo-entrega-1.md) | Marcas do Abismo, entrega 1 (cinco marcas, run inteira) | IMPLEMENTADA LOCAL 2026-10-07 (PLAN-074, EVID-196 e EVID-192); aguarda playtest; sem commit |
 | [SPEC-142](SPEC-142-balanceamento-da-economia-de-ouro.md) | Balanceamento da economia de ouro (moedas da run e moedas do Quartel) | IMPLEMENTADA localmente em 2026-10-07 (PLAN-075, B-004 pulada); aguarda playtest com gold_src; sem commit |
 | [SPEC-143](SPEC-143-marcas-do-abismo-entrega-2.md) | Marcas do Abismo, entrega 2 (liberação por conquista e as quatro marcas restantes) | IMPLEMENTADA LOCAL 2026-10-07 (PLAN-076, EVID-195); aguarda playtest; sem commit |

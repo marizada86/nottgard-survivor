@@ -3,7 +3,16 @@ plan:
   id: PLAN-071
   spec_id: SPEC-138
   title: Playtest Web e ranking por evidencias Discord
-  status: LOCAL_DELIVERED_AWAITING_DEVICE_ACCEPTANCE
+  status: ARCHIVED_LOW_PRIORITY
+  priority: low
+  archived:
+    date: '2026-10-13'
+    authorization_verbatim: 'atena, arquive esse plan e dê commite prioridade baixa para esse plan'
+    prior_status: LOCAL_DELIVERED_AWAITING_DEVICE_ACCEPTANCE
+    prior_checkpoint: {current: B-006, step: S-011, status: LOCAL_DELIVERED}
+    successor_active_plan: PLAN-100
+    reopen_when: 'Dono quiser homologar os clientes finais (Chrome, Edge, Firefox, tela cheia, toque, exportacao Windows) ou ativar o pipeline (banco real, credenciais, comandos remotos do Discord).'
+    pending_preserved: 'manual_acceptance, gates e site_return (PLAN-060 B-002/S-005) continuam registrados abaixo; nada foi fechado por este arquivamento.'
   origin: guided-add
   implementation_preceded_spec: false
   request_classification: PLAN_DEVIATION
@@ -42,4 +51,4 @@ plan:
   blocking_gaps: []
   evidence: .atena/evidence/EVID-187-playtest-ranking-local-2026-10-06.md
   manual_acceptance: [Chrome_Edge_Firefox, fullscreen, touch_device, Windows_export]
-  next: Entrega local estavel; homologar clientes finais e ativar pipeline somente pelo checkpoint operacional autorizado.
+  next: 'Arquivado com prioridade baixa em 2026-10-13. Entrega local estavel; para retomar, homologar clientes finais e ativar pipeline somente pelo checkpoint operacional autorizado.'

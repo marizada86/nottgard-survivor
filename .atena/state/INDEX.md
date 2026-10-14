@@ -1,14 +1,20 @@
 # Índice de planos: o que está vivo
 
-Atualizado em 2026-10-09 (Atena). Cada linha liga o plano à spec, ao que ele é e ao que **ainda falta**. O estado operacional (plano ativo, recibos de commit, desvios) fica em [`plan.yaml`](plan.yaml); o índice das specs, em [`../specs/INDEX.md`](../specs/INDEX.md) (gerado por `node tools/atena_index.js`). Os arquivos de plano não foram movidos nem renomeados: links antigos continuam valendo.
+Atualizado em 2026-10-13 (Atena). Cada linha liga o plano à spec, ao que ele é e ao que **ainda falta**. O estado operacional (plano ativo, recibos de commit, desvios) fica em [`plan.yaml`](plan.yaml); o índice das specs, em [`../specs/INDEX.md`](../specs/INDEX.md) (gerado por `node tools/atena_index.js`). Os arquivos de plano não foram movidos nem renomeados: links antigos continuam valendo.
 
-**Resumo:** 1 plano ativo · 19 entregues, aguardando playtest ou arte · 9 esperando arte, aparelho ou o dono · 12 fechados sem pendência. Total de arquivos de plano em `state/`: 41.
+**Resumo:** 1 plano ativo (PLAN-100) · 1 arquivado, prioridade baixa (PLAN-071) · 19 entregues, aguardando playtest ou arte · 9 esperando arte, aparelho ou o dono · 12 fechados sem pendência. Total de arquivos de plano em `state/`: 41.
 
 ## Ativo
 
 | Plano | Spec | O que é | Falta |
 |---|---|---|---|
-| PLAN-071 | SPEC-138 | Playtest Web e ranking por evidências do Discord | Aceite nos clientes finais (ranking e F7) e gates remotos; retomado em B-006/S-011 |
+| PLAN-100 | SPEC-173 | Filtro visual de tela e fonte da interface (lote 1 da estética) | B-001 em execução; B-002 (download das fontes) e B-003 aguardam aprovação |
+
+## Arquivados, prioridade baixa
+
+| Plano | Spec | O que é | Para reabrir |
+|---|---|---|---|
+| PLAN-071 | SPEC-138 | Playtest Web e ranking por evidências do Discord (entrega local concluída, EVID-187) | Aceite nos clientes finais (Chrome, Edge, Firefox, tela cheia, toque, exportação Windows) e gates remotos (banco real, credenciais, comandos do Discord, pipeline do dono); arquivado em 2026-10-13 |
 
 ## Entregues, aguardando playtest
 

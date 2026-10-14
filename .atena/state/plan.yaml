@@ -535,19 +535,31 @@ image_queue_resume_2026_10_10:
   evidence: .atena/evidence/image-queue-resume-2026-10-10.md
 # Reconciliado por Atena em 2026-10-05: PLAN-056 aceito pelo dono; commits reais registrados.
 active_plan:
-  id: PLAN-071
-  spec_id: SPEC-138
-  state_file: '.atena/state/plan-071-playtest-ranking.yaml'
-  mode: per-plan
-  checkpoint: B-006/S-011
-  status: LOCAL_DELIVERED_AWAITING_DEVICE_ACCEPTANCE
-  approved: '2026-10-06'
-  resumed: '2026-10-09'
-  resumed_after: {plan: PLAN-083, also: [PLAN-084, PLAN-085, PLAN-086, PLAN-087], at: '2026-10-09', evidence: EVID-223}
+  id: PLAN-100
+  spec_id: SPEC-173
+  state_file: '.atena/state/plan-100-filtro-visual-e-fonte.yaml'
+  mode: per-batch
+  checkpoint: B-001/S-001
+  status: B001_EXECUTING
+  approved: '2026-10-13'
+  assumed_active: '2026-10-13'
   request_classification: IN_PLAN
-  resume_note: 'Falta o aceite dos clientes finais (ranking e F7) e os gates remotos; push, exportacao e aviso aos testers da 0.4.0 refeita seguem pendentes de aprovacao.'
+  assumed_after: {archived_plan: PLAN-071, authorization_verbatim: 'atena, arquive esse plan e dê commite prioridade baixa para esse plan'}
+  resume_note: 'PLAN-071 arquivado com prioridade baixa; PLAN-100 (filtro visual e fonte) deixa de ser desvio e assume como plano ativo. Retornos antigos a PLAN-071 B-006/S-011 passam a apontar para o PLAN-100.'
+archived_plans:
+  - id: PLAN-071
+    spec_id: SPEC-138
+    state_file: '.atena/state/plan-071-playtest-ranking.yaml'
+    archived: '2026-10-13'
+    priority: low
+    status: ARCHIVED_LOW_PRIORITY
+    prior_status: LOCAL_DELIVERED_AWAITING_DEVICE_ACCEPTANCE
+    prior_checkpoint: B-006/S-011
+    authorization_verbatim: 'atena, arquive esse plan e dê commite prioridade baixa para esse plan'
+    pending: 'Aceite nos clientes finais (Chrome, Edge, Firefox, tela cheia, toque, exportacao Windows) e gates remotos (banco real, credenciais, comandos do Discord, pipeline do dono); PLAN-060 B-002/S-005 do site segue PENDING_PUBLICATION.'
+    evidence: .atena/evidence/EVID-187-playtest-ranking-local-2026-10-06.md
 plan_cursor:
-  current: 'PLAN-071 / SPEC-138 retomado em 2026-10-09 apos fechar o PLAN-083 (0.4.0 refeita, EVID-218 e EVID-223). Commits locais da 0.4.0 refeita feitos (d83c106, 2d929b0, 10c833d, c0ebc87); nada publicado.'
+  current: 'PLAN-100 / SPEC-173 e o plano ativo desde 2026-10-13 (PLAN-071 arquivado, prioridade baixa). B-001 aprovado e em execucao; B-002 e B-003 aguardam aprovacao propria.'
   next: 'Dono decide: push (republica o latest), exportacao do .exe local e aviso aos testers; escolha A/B/C/D do inventario (.atena/generated/organizacao-087/). BUG-025/027/028/029 aguardam a solucao de arte do dono.'
 closed_plan_snapshot:
   id: PLAN-083
@@ -605,6 +617,7 @@ suspension:
     prior_status: LOCAL_DELIVERED_AWAITING_DEVICE_ACCEPTANCE
     snapshot: '.atena/generated/shendilavri-resume/v01/plan-before-resume-2026-10-07.yaml'
     approval: '2026-10-07: dono respondeu atena, continue apos pergunta explicita sobre retomar imagens preservando retorno ao ranking.'
+    superseded: '2026-10-13: PLAN-071 arquivado com prioridade baixa (ver archived_plans); este retorno nao e mais devido.'
   playtest_ranking_return:
     suspended_plan: PLAN-070
     latest_status: COMPLETED_GENERATION_VISUALLY_APPROVED
