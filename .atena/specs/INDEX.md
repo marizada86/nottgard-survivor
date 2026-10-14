@@ -39,7 +39,7 @@ Gerado por `node tools/atena_index.js` (não editar à mão). Agrupa pelo **stat
 | [SPEC-116](SPEC-116-dopamina-tematica.md) | Dopamina temática: feedback e recompensa | proposta para escolha do dono (2026-10-01) |
 | [SPEC-117](SPEC-117-alma-e-historia-na-run.md) | Alma e história na run: mapa narrativo por fase e chefe | proposta para escolha do dono (2026-10-01) |
 | [SPEC-169](SPEC-169-lancamento-oficial-da-v0-4-0.md) | Lançamento oficial da 0.4.0 para os playtesters (documentos, verificação e pacote) | PREPARADA em 2026-10-10 (PLAN-096, EVID-238); o código já foi publicado (602cef5); commit dos documentos e aviso aos testers aguardam o dono |
-| [SPEC-176](SPEC-176-movimento-dos-herois-marco-m1-do-plan-103.md) | Movimento dos heróis: marco M1 da demo (PLAN-103) | DRAFT em 2026-10-14; estrutura do PLAN-103 aprovada pelo dono; aguarda aprovação do lote B-002 |
+| [SPEC-176](SPEC-176-movimento-dos-herois-marco-m1-do-plan-103.md) | Movimento dos heróis: marco M1 da demo (PLAN-103) | DRAFT r2 em 2026-10-14: escopo mudou de 'corrigir caminhos' para 'refazer as tiras de animação com contrato de prompt novo'; aguarda aprovação do lote |
 
 ## Aprovada, sem fechar (4)
 
