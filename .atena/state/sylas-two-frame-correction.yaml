@@ -1,0 +1,42 @@
+version: 1
+plan: PLAN-053
+revision: sylas-two-frame-correction/v01
+classification: IN_PLAN_APPROVED_CORRECTION
+status: COMPLETED_VISUALLY_ACCEPTED_DRAFT
+mode: per-plan
+approval_status: APPROVED_EXPLICITLY
+checkpoint: S-004/TWO_FRAME_ACCEPTANCE_RECORDED
+ordered_steps: [S-001, S-002, S-003, S-004]
+batches: {B-001: [S-001, S-002], B-002: [S-003, S-004]}
+completed_steps: 4
+total_steps: 4
+current_step_position: 4
+remaining_steps_after_current: 0
+frames: [H402, H406]
+preserved_historical_gate: H403v02
+accepted_other_frames: 39
+content_state: DRAFT
+new_generation: 3
+runtime_changed: false
+canonical_promotion: false
+spec: .atena/specs/SPEC-121-retomada-fila-imagens/sylas-two-frame-correction-v01.md
+source_decision: .atena/generated/assets-l002-review-2026-10-13/visual-acceptance.json
+next_objective: AdmissaoL002 tecnica5/5 entregue; aguardar playtest humano runtime.
+next_inputs: Galeria seis fases, H402v03/H406v02, hashes e relatorio de comparacao.
+next_output: Recibo humano de aceite conjunto ou excecoes; depois proposta de admissao42fontes.
+next_checks: Crescimento menor que pico; fim fragmentado sem ponta; fontes/runtime intactos.
+return_plan: {id: PLAN-071, checkpoint: B-006/S-011, preserved: true}
+selected_for_owner_review: [H402v03, H406v02]
+not_selected: [H402v02]
+image_calls_used: 3
+evidence: .atena/evidence/sylas-two-frame-correction-2026-10-13.md
+gallery: .atena/generated/sylas-two-frame-correction-2026-10-13/index.html
+verification: .atena/generated/sylas-two-frame-correction-2026-10-13/verification.json
+owner_visual_acceptance: APPROVED_EXPLICITLY
+visual_acceptance: .atena/generated/sylas-two-frame-correction-2026-10-13/visual-acceptance.json
+accepted_at: 2026-10-14
+admission_proposal: .atena/specs/SPEC-121-retomada-fila-imagens/assets-l002-admission-v01.md
+admission_execution_authorized: true
+admission_mode: per-plan
+admission_state: .atena/state/assets-l002-admission.yaml
+admission_status: LOCAL_TECHNICAL_DELIVERED_AWAITING_OWNER_PLAYTEST

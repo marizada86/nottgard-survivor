@@ -1,0 +1,14 @@
+{
+	"comparison": "Original use_active baseline vs current, full Battle.step for9seconds/scenario; only visual_origin/visual_target_id excluded, Enemy/target instance IDs canonicalized.",
+	"counts": {
+		"failed_actives": 12,
+		"origin_metadata": 20,
+		"scenarios": 140,
+		"short_dash": 4,
+		"steps": 12600,
+		"successful_actives": 128,
+		"target_metadata": 12,
+		"zero_dash": 4
+	},
+	"status": "PASS"
+}

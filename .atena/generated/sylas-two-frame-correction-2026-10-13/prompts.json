@@ -1,0 +1,90 @@
+{
+  "revision": "sylas-two-frame-correction/v01",
+  "status": "PROPOSED_NOT_EXECUTABLE_UNTIL_APPROVAL",
+  "tool": "built-in image_gen",
+  "skill": "C:/Users/Higor Rossini/.codex/skills/.system/imagegen/SKILL.md",
+  "jobs": [
+    {
+      "code": "H402",
+      "planned_version": "v02",
+      "intent": "edit",
+      "use_case": "precise-object-edit",
+      "edit_target": {
+        "code": "H402",
+        "version": "v01",
+        "path": ".atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_grow_v01.png",
+        "sha256": "d8c714e84fe6c0fadfeaaefec7d30c7be522acae9c4553e09d72bf18001785ed",
+        "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-d66924a9-b48c-4fd8-818d-62f2ef531a17.png",
+        "group": 4,
+        "acceptance": "PENDING_VISUAL_ACCEPTANCE"
+      },
+      "references": [
+        {
+          "code": "H403",
+          "version": "v02",
+          "path": ".atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_peak_v02.png",
+          "sha256": "d9b23e455cf3b7a83e8e6c10820227b2cb829cb09949ed2b1abeb16bb9aa9919",
+          "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-01695d2f-904e-4f16-9ecf-5a5f08638e8a.png",
+          "group": 4,
+          "acceptance": "HISTORICAL_GATE_ACCEPTED",
+          "role": "IMMUTABLE_APPROVED_PEAK_STYLE_AND_MAX_EXTENT"
+        },
+        {
+          "code": "H401",
+          "version": "v01",
+          "path": ".atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_head_v01.png",
+          "sha256": "8ae09583105acd45b96ddbef76abdd8eb55e8c05c537dedbe6fc7f655c46842f",
+          "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-a083be90-7c1f-499d-99e5-eaea6d49b303.png",
+          "group": 4,
+          "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+          "role": "ACCEPTED_START_SEQUENCE_CONTEXT"
+        }
+      ],
+      "transparent_background": false,
+      "prompt": "Use case: precise-object-edit. Asset: isolated 2D game VFX, growth frame H402 for Sylas shadow dash. Image 1 is the edit target H402v01, Image 2 is immutable approved H403v02 PEAK reference, Image 3 is accepted H401v01 START reference. Correct only the phase progression: a compact right-facing torn smoke ribbon, approximately 60 percent of the peak forward extent, larger than START and clearly shorter/dimmer than PEAK. Square 1024x1024, exact black opaque background, no transparency. Keep logical origin at canvas center; effect stays predominantly in RIGHT half, brightest head around x=0.78 to0.82, y=0.5; do not extend the tail far left of center. Preserve painted white/gray smoke texture and subtle abstract mask-shaped glints, same top-down flat orientation, not perspective. Do not move/resize the entire old full-length streak; redraw its growth phase so it no longer exceeds the approved peak. Keep safe black margins. No character, body, weapon, text, border, scenery, color, new emblem, full peak or longer/brighter tail."
+    },
+    {
+      "code": "H406",
+      "planned_version": "v02",
+      "intent": "edit",
+      "use_case": "precise-object-edit",
+      "edit_target": {
+        "code": "H406",
+        "version": "v01",
+        "path": ".atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_specks_v01.png",
+        "sha256": "f21b76a36baddb88a242e1771eb78f65a6c7d25178e34d4a76f0a2c7d932d3a0",
+        "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-6958b50f-6304-4905-9b59-efade3254740.png",
+        "group": 4,
+        "acceptance": "PENDING_VISUAL_ACCEPTANCE"
+      },
+      "references": [
+        {
+          "code": "H405",
+          "version": "v01",
+          "path": ".atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_break_v01.png",
+          "sha256": "a2e237fddd38a73ba396497708d90085e0c71ac6070e6207d15f7f28bc30f64c",
+          "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-cb310f6c-f2f6-4282-aa2e-8cabc8a85d8c.png",
+          "group": 4,
+          "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+          "role": "ACCEPTED_PREVIOUS_BREAK_PHASE"
+        },
+        {
+          "code": "H403",
+          "version": "v02",
+          "path": ".atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_peak_v02.png",
+          "sha256": "d9b23e455cf3b7a83e8e6c10820227b2cb829cb09949ed2b1abeb16bb9aa9919",
+          "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-01695d2f-904e-4f16-9ecf-5a5f08638e8a.png",
+          "group": 4,
+          "acceptance": "HISTORICAL_GATE_ACCEPTED",
+          "role": "IMMUTABLE_STYLE_ONLY_NOT_BRIGHTNESS_OR_SHAPE_TARGET"
+        }
+      ],
+      "transparent_background": false,
+      "prompt": "Use case: precise-object-edit. Asset: isolated 2D game VFX, LAST dissipation frame H406 for Sylas shadow dash. Image 1 is edit target H406v01; Image 2 is accepted previous BREAK phase H405v01; Image 3 is immutable approved H403v02 PEAK for painted white/gray STYLE ONLY, never recreate its head or brightness. Replace coherent luminous arrowhead, continuous smoke ribbon and intact mask glints with only a FEW tiny very faint gray torn wisps/fragments and specks in the residual locations of Image2. This is the final almost-black instant: much dimmer/sparser than H405, no recognizable head, no continuous stroke, no intact mask face or eyes, no bright core, no renewed growth. Square1024x1024, exact BLACK opaque background, no transparency; almost all canvas pure black. Preserve central origin and rightward spatial context, top-down flat orientation, safe black margins. Do not merely lower opacity while keeping the full arrow shape: break/remove that silhouette. No character/body/weapon/text/border/scenery/color/new motif."
+    }
+  ],
+  "initial_calls": 2,
+  "max_total_calls_including_one_retry_per_frame": 4,
+  "canonical_promotion": false,
+  "runtime_admission": false
+}

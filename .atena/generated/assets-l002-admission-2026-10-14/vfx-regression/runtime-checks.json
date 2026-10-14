@@ -1,0 +1,62 @@
+{
+	"directions": 8,
+	"fallbacks": [
+		"reduced",
+		"missing flight",
+		"missing impact",
+		"arcane",
+		"secondary hit"
+	],
+	"flight_frames": 4,
+	"flight_loop_return": true,
+	"human_playtest": false,
+	"impact_cap": 32,
+	"impact_frames": 4,
+	"layer_freed_with_run": true,
+	"mixed_three_families": true,
+	"nova_regressions": true,
+	"pause_and_lifetime": true,
+	"screenshots": [
+		"lamina_trovejante-flight",
+		"eight-directions",
+		"flight-phase-0",
+		"flight-phase-1",
+		"flight-phase-2",
+		"flight-phase-3",
+		"flight-loop-return",
+		"lamina_trovejante-impact",
+		"impact-phase-0",
+		"impact-phase-1",
+		"impact-phase-2",
+		"impact-phase-3",
+		"tint-lliira",
+		"tint-tou-um",
+		"reduced-fallback",
+		"missing-texture-fallback",
+		"unsupported-magic-fallback",
+		"tempestade-flight",
+		"tempestade-impact",
+		"mixed-three-families",
+		"regression-sentenca_de_lliira",
+		"regression-ampulheta"
+	],
+	"status": "PASS",
+	"tints": [
+		"Lliira",
+		"Tou Um"
+	],
+	"weapons": [
+		{
+			"number_cap_independent": true,
+			"real_hits": 1,
+			"spawned": 1,
+			"weapon": "lamina_trovejante"
+		},
+		{
+			"number_cap_independent": true,
+			"real_hits": 1,
+			"spawned": 4,
+			"weapon": "tempestade"
+		}
+	]
+}

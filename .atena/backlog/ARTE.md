@@ -227,3 +227,13 @@ ART-029: FILA02236/36 fontes já geradas segundo histórico local10bd31c; recupe
 2026-10-13 — ART-028/030: loteL00130fontes E/F/H1/H2/H3,25fases adicionais aceitas DRAFT pelo dono; cinco gates históricos preservados. Proposta conjunta assets-l001-admission/v01 preparada, escopo/modo pendentes; sem integração/CANON/Git. Recibo `.atena/generated/assets-batch-review-2026-10-13/visual-acceptance.json`.
 
 2026-10-13 — ART-028/030 L001: arcos Radiante/Fogo e VFX Durvall/Brook/Maelor,30fontes/cincoatlas admitidos localmente, DRAFT mantido/gates históricos preservados. assets-l001-admission/v01 técnico5/5; suíte0/smoke9,131capturas e snapshots de simulação PASS. Guarda segue carga/tempo; Comunhão um ciclo0,6s visual. Feedback humano runtime pendente; demais42quadros de heróis continuam revisão/admissão pendentes. Sem CANON/Git/exportação. Evidência `.atena/evidence/assets-l001-admission-2026-10-13.md`.
+
+2026-10-13 — ART-030 L002:42fontes dos7heróis restantes recuperadas por hash, runtimeintacto; revisão agrupada com recomendação reservarH402/H406(Sylas) para correção. Demais39fasesDRAFT e exceções dependem de decisão visual; H403v02 preservado. Sem geração/admissão/CANON/Git neste lote. Evidência `.atena/evidence/assets-l002-review-2026-10-13.md`. L001 commitlocal2b96638 concluído, sempush.
+
+2026-10-13 — ART030 L002: dono aceitou39fasesDRAFT e reservouH402v01/H406v01 para correção; H403v02 histórico preservado. Proposta limitada sylas-two-frame-correction/v01 pronta, aguardando escopo/modo; nenhum novo gerado/integrado, semCANON/Git. Recibo `.atena/generated/assets-l002-review-2026-10-13/visual-acceptance.json`.
+
+2026-10-13 — ART030 L002 correção técnica4/4: H402v03/H406v02 candidatos DRAFT após3chamadas built-in, gate visual conjunto pendente. H402v02 não proposta;39aceites/H403v02/fontes/runtime intactos. Sem admissão/CANON/Git. Evidência `.atena/evidence/sylas-two-frame-correction-2026-10-13.md`.
+
+2026-10-14 — ART030 L002: H402v03/H406v02 aceitos DRAFT,39demais fases e H403v02 preservados.42fontes selecionadas para proposta conjunta assets-l002-admission/v01,seteatlas/setehabilidades. Escopo/modo pendentes; sem normalização/admissão/CANON/Git. Recibo `.atena/generated/sylas-two-frame-correction-2026-10-13/visual-acceptance.json`.
+
+2026-10-14 — ART030 L002:42fontes/seteatlas/setehabilidades admitidos localmente, DRAFT e H403v02 histórico preservados; técnico5/5, suíte0/smoke9/paridade140cenários12600passos/capturas221PASS. Só dois metadados de evento novos, gameplay intacto. Leoric raio visual2tiles, projéteis/evento11preservados. Playtest humano pendente; não encerrar subjetivamente toda FILA023. Sem CANON/Git/exportação. Evidência `.atena/evidence/assets-l002-admission-2026-10-14.md`.

@@ -1,0 +1,258 @@
+{
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "generator": "built-in imagegen",
+  "remaining_at_start": 47,
+  "counter_field": "native_generated_since_H301",
+  "approval_receipt": ".atena/generated/s007-reconciliation/v01/h301-owner-approval-2026-10-09.json",
+  "jobs": [
+    {
+      "code": "H302",
+      "name": "maelor_comunhao_loop_01",
+      "effect": "maelor_comunhao",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a gentle healing aura: a wide soft circle of light with small plus-shaped sparkles rising and drifting outward, and a slow pulsing ring. Frame 2 of 6, loop 01: phase 2 of the loop: the same pattern advanced by one sixth of the cycle (rotating or pulsing slightly). Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\nReference1 is CANON APPROVED H301v01 identity and geometry anchor. Keep EXACT same circle size, position, width and texture, SAME small clear PLUS-shaped healing marks with four equal perpendicular arms in SAME positions. No star-shaped sparkle replacements, no new large symbols. Choose subtle BREATHING HALO pulse, not rotation or scaling. Keep major plus marks STATIC; only tiny specks may drift minimally. Phase60degrees gentle breathing: inner halo8%brighter than reference. Same plus marks in same slots, tiny grains only hint a slow outward drift. Neutral white-gray light, BLACK open interior/background, safe margins,1024square requested, top-down flat, no character/weapon/ground/text/perspective. One frame, no montage.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\maelor_comunhao\\maelor_comunhao_loop_00_v01.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/maelor_comunhao/maelor_comunhao_loop_01_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "generated_at": "2026-10-09T15:12:08.387163+00:00",
+      "original_path": "C:/Users/Higor Rossini/.codex/generated_images/01a12116-a4f7-7623-abef-db43878f0eea/exec-a31511ab-36ad-40c6-9379-53941b9dfc94.png",
+      "sha256": "7a289aae4816f19800cfdefd63dae9e3662020d590b92d1df9dcefd1e27543bd",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        133,
+        105,
+        1119,
+        1115
+      ],
+      "outer_border_max_luminance": 2,
+      "maximum_channel_difference": 12,
+      "mean_luminance": 32.477552533646715,
+      "visible_fraction_above12": 0.27504394231918783,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "H303",
+      "name": "maelor_comunhao_loop_02",
+      "effect": "maelor_comunhao",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a gentle healing aura: a wide soft circle of light with small plus-shaped sparkles rising and drifting outward, and a slow pulsing ring. Frame 3 of 6, loop 02: phase 3 of the loop: advanced by two sixths of the cycle. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\nReference1 is CANON APPROVED H301v01 identity and geometry anchor. Keep EXACT same circle size, position, width and texture, SAME small clear PLUS-shaped healing marks with four equal perpendicular arms in SAME positions. No star-shaped sparkle replacements, no new large symbols. Choose subtle BREATHING HALO pulse, not rotation or scaling. Keep major plus marks STATIC; only tiny specks may drift minimally. Phase120degrees gentle breathing: inner halo12%brighter than reference, calm. Same plus marks in same slots; tiny grains drift subtly, no burst. Neutral white-gray light, BLACK open interior/background, safe margins,1024square requested, top-down flat, no character/weapon/ground/text/perspective. One frame, no montage.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\maelor_comunhao\\maelor_comunhao_loop_00_v01.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/maelor_comunhao/maelor_comunhao_loop_02_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "generated_at": "2026-10-09T15:13:14.026947+00:00",
+      "original_path": "C:/Users/Higor Rossini/.codex/generated_images/01a12116-a4f7-7623-abef-db43878f0eea/exec-161ae605-f49f-409d-8a3a-bef29e3dab7d.png",
+      "sha256": "c6dddbbcc415c987e32a2fe31a3ef61360b026f6cf2c08232eae8f43b4a3678a",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        133,
+        110,
+        1118,
+        1113
+      ],
+      "outer_border_max_luminance": 2,
+      "maximum_channel_difference": 10,
+      "mean_luminance": 32.03876208572758,
+      "visible_fraction_above12": 0.2752385349338258,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "H304",
+      "name": "maelor_comunhao_loop_03",
+      "effect": "maelor_comunhao",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a gentle healing aura: a wide soft circle of light with small plus-shaped sparkles rising and drifting outward, and a slow pulsing ring. Frame 4 of 6, loop 03: phase 4 of the loop: advanced by three sixths of the cycle, the halfway point. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\nReference1 is CANON APPROVED H301v01 identity and geometry anchor. Keep EXACT same circle size, position, width and texture, SAME small clear PLUS-shaped healing marks with four equal perpendicular arms in SAME positions. No star-shaped sparkle replacements, no new large symbols. Choose subtle BREATHING HALO pulse, not rotation or scaling. Keep major plus marks STATIC; only tiny specks may drift minimally. Phase180degrees: return glow to reference baseline. Same plus marks and circle positions, quiet steady aura. Neutral white-gray light, BLACK open interior/background, safe margins,1024square requested, top-down flat, no character/weapon/ground/text/perspective. One frame, no montage.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\maelor_comunhao\\maelor_comunhao_loop_00_v01.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/maelor_comunhao/maelor_comunhao_loop_03_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "generated_at": "2026-10-09T15:13:59.946835+00:00",
+      "original_path": "C:/Users/Higor Rossini/.codex/generated_images/01a12116-a4f7-7623-abef-db43878f0eea/exec-04350552-e2e2-402e-92af-c35d222862da.png",
+      "sha256": "b5b5c8334439e61fcce91922ef624addbbf92b7e27696b2c65cccaf57bd79821",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        138,
+        111,
+        1118,
+        1112
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 9,
+      "mean_luminance": 26.999717014008123,
+      "visible_fraction_above12": 0.25727687349445094,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "H305",
+      "name": "maelor_comunhao_loop_04",
+      "effect": "maelor_comunhao",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a gentle healing aura: a wide soft circle of light with small plus-shaped sparkles rising and drifting outward, and a slow pulsing ring. Frame 5 of 6, loop 04: phase 5 of the loop: advanced by four sixths of the cycle. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\nReference1 is CANON APPROVED H301v01 identity and geometry anchor. Keep EXACT same circle size, position, width and texture, SAME small clear PLUS-shaped healing marks with four equal perpendicular arms in SAME positions. No star-shaped sparkle replacements, no new large symbols. Choose subtle BREATHING HALO pulse, not rotation or scaling. Keep major plus marks STATIC; only tiny specks may drift minimally. Phase240degrees: inner halo8%dimmer than reference, ring and plus marks remain legible. Same geometry and slots; no fading away. Neutral white-gray light, BLACK open interior/background, safe margins,1024square requested, top-down flat, no character/weapon/ground/text/perspective. One frame, no montage.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\maelor_comunhao\\maelor_comunhao_loop_00_v01.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/maelor_comunhao/maelor_comunhao_loop_04_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "generated_at": "2026-10-09T15:14:50.994504+00:00",
+      "original_path": "C:/Users/Higor Rossini/.codex/generated_images/01a12116-a4f7-7623-abef-db43878f0eea/exec-08bc324e-dd77-40dc-9c63-908ff21fc81a.png",
+      "sha256": "5c1e88fb174de1791a186c6b75eb86ba89d066f47f99b7ae4f4f91453b35d25d",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        138,
+        112,
+        1116,
+        1112
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 10,
+      "mean_luminance": 24.17062465501146,
+      "visible_fraction_above12": 0.25199489226182753,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "H306",
+      "name": "maelor_comunhao_loop_05",
+      "effect": "maelor_comunhao",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect is centered and radially symmetric, maximum radius about 45 percent of the image width. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a gentle healing aura: a wide soft circle of light with small plus-shaped sparkles rising and drifting outward, and a slow pulsing ring. Frame 6 of 6, loop 05: phase 6 of the loop: advanced by five sixths of the cycle, so that the next frame flows back into phase 1 without a visible jump. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\nReference1 is CANON APPROVED H301v01 identity and geometry anchor. Keep EXACT same circle size, position, width and texture, SAME small clear PLUS-shaped healing marks with four equal perpendicular arms in SAME positions. No star-shaped sparkle replacements, no new large symbols. Choose subtle BREATHING HALO pulse, not rotation or scaling. Keep major plus marks STATIC; only tiny specks may drift minimally. Phase300degrees: glow5%dimmer than reference, gently recovering to baseline so next reference frame closes smoothly. Same plus marks, ring geometry and positions. Tiny grains nearly same as reference. Neutral white-gray light, BLACK open interior/background, safe margins,1024square requested, top-down flat, no character/weapon/ground/text/perspective. One frame, no montage.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\maelor_comunhao\\maelor_comunhao_loop_00_v01.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/maelor_comunhao/maelor_comunhao_loop_05_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "generated_at": "2026-10-09T15:15:58.107564+00:00",
+      "original_path": "C:/Users/Higor Rossini/.codex/generated_images/01a12116-a4f7-7623-abef-db43878f0eea/exec-d50f051a-d906-44fa-9562-f5d7ccf61517.png",
+      "sha256": "574f8ca4fedc2d3dfbdf452a8aef7278dd840bc7ed13918bd1e06b49a27a73aa",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        138,
+        112,
+        1115,
+        1112
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 10,
+      "mean_luminance": 24.674665313421293,
+      "visible_fraction_above12": 0.2491090710682753,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "H403",
+      "name": "sylas_passo_pelas_sombras_peak",
+      "effect": "sylas_passo_pelas_sombras",
+      "version": "v02",
+      "prompt": "EDIT this rejected Sylas dash VFX frame to correct COMPOSITION and MOTIF. Preserve neutral WHITE/GRAY hand-painted smoke/light style on pure BLACK square. The ENTIRE RIBBON must occupy ONLY RIGHT HALF of canvas: tail begins EXACT CANVAS CENTER x50%,y50%; leading sharp white tip at x93%,y50%. ALL LEFT HALF x0..48% remains EMPTY BLACK. Compress/recompose ribbon to length43%canvaswidth, keeping gray wispy torn tail and WHITE leading core. Overall ribbon thickness about14%canvasheight, horizontal right-facing, no curve/crescent. Add EXACTLY THREE tiny abstract MASK-SHAPED LIGHT GLINTS embedded along gray ribbon: each a slender gray angular outline with a pair of narrow white tilted eye slits, like a tiny masquerade-mask symbol made solely of wispy light. These are tiny2D light motifs, not actual mask props, heads, characters or skulls. Only THREE, at x60%,72%,84% on/near horizontal axis, small2-3%canvaswidth. Few torn smoke strands, no floating diamond shards. Keep SAFE BLACK margin beyond right tip. Pure top-down white-gray light only, no ground, weapon, hand, character, scene,text, perspective or montage. One square1024requested PEAK image.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\sylas_passo_pelas_sombras\\sylas_passo_pelas_sombras_peak_v01.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_peak_v02.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "generated_at": "2026-10-09T15:19:49.453889+00:00",
+      "original_path": "C:/Users/Higor Rossini/.codex/generated_images/01a12116-a4f7-7623-abef-db43878f0eea/exec-01695d2f-904e-4f16-9ecf-5a5f08638e8a.png",
+      "sha256": "d9b23e455cf3b7a83e8e6c10820227b2cb829cb09949ed2b1abeb16bb9aa9919",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        566,
+        511,
+        1214,
+        737
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 12,
+      "mean_luminance": 4.9786342396516154,
+      "visible_fraction_above12": 0.046919077452948016,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    }
+  ],
+  "rejected_versions": [
+    {
+      "code": "H403",
+      "name": "sylas_passo_pelas_sombras_peak",
+      "effect": "sylas_passo_pelas_sombras",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a ribbon of shadow smoke: a long tapering streak with wispy torn ends, like the trail left by a very fast dash through shadows, with a few sharp narrow mask-shaped glints, reach about 45 percent of the image width. Frame 3 of 6, peak: PEAK frame: the full long streak at maximum length and brightness, hot white core, wispy torn trailing end.\nReference is CANON physical pilot painted WHITE/GRAY VFX STYLE ONLY; DO NOT use its crescent shape. Generate NEW ONLY Sylas PEAK gate: a LONG STRAIGHT RIGHT-FACING DASH SMOKE RIBBON from EXACT CANVAS CENTER toward RIGHT, far tip reaches x90-94% of canvas, on horizontal axis y50%. Thin/tapering fast shadow-smoke ribbon with bright white core at leading RIGHT head and torn gray wispy trailing strands near center. A FEW SMALL SHARP NARROW abstract MASK-SHAPED GLINTS woven into ribbon (tiny eye-slit light motifs, not actual props/faces/bodies). Rightmost leading head crisp, trail ragged. NOT a crescent, slash arc, circle, projectile orb, feather or weapon. Flat top-down, white/gray light only, visually BLACK outside ribbon and entire left half mostly empty. SAFE BLACK margin beyond every tip, origincenter,1024square requested, readable96px. No real mask object, character, hands, weapon, ground, perspective or text. Only one peak image, no montage.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\20f4\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_peak_v01.png",
+      "status": "REJECTED_VISUAL",
+      "transparent_background": false,
+      "generated_at": "2026-10-09T15:17:21.216171+00:00",
+      "original_path": "C:/Users/Higor Rossini/.codex/generated_images/01a12116-a4f7-7623-abef-db43878f0eea/exec-f039dba1-a097-44f4-87f6-e304f0604f1c.png",
+      "sha256": "a6b039cb885d0d7bd8bdf0d0fc7c36cd09a963156de7eaf50b58d4fb108801d9",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        94,
+        486,
+        1208,
+        735
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 10,
+      "mean_luminance": 8.184982537538568,
+      "visible_fraction_above12": 0.07389114005835234,
+      "native_bytes_preserved": true,
+      "runtime_admission": false,
+      "rejection_reason": "Trail spans most full canvas instead of center-to-right; mask-shaped glints not clear."
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+version: 1
+plan: PLAN-053
+revision: assets-l002-admission/v01
+classification: IN_PLAN_APPROVED_ADMISSION
+status: LOCAL_TECHNICAL_DELIVERED_AWAITING_OWNER_PLAYTEST
+mode: per-plan
+approval_status: APPROVED_EXPLICITLY
+checkpoint: S-005/OWNER_RUNTIME_PLAYTEST
+ordered_steps: [S-001, S-002, S-003, S-004, S-005]
+batches: {B-001: [S-001], B-002: [S-002, S-003], B-003: [S-004, S-005]}
+completed_steps: 5
+total_steps: 5
+current_step_position: 5
+remaining_steps_after_current: 0
+images: 42
+atlases: 7
+families: [sylas, kayron, korrak, leoric, nyrelia, zynara, bromnor]
+content_state: DRAFT_WITH_H403_V02_HISTORICAL_GATE_PRESERVED
+runtime_changed: true
+canonical_promotion: false
+spec: .atena/specs/SPEC-121-retomada-fila-imagens/assets-l002-admission-v01.md
+selected_sources: .atena/generated/assets-l002-admission-2026-10-14/selected-sources.json
+next_objective: Dono avaliar sete habilidades em runtime no build local identificado.
+next_inputs: Roteiro/nove atalhos QA, sete herois, duas tintas/reduzido e galeria221.
+next_output: Feedback humano heroi/modo/cor/direcao, aceitavel ou problema.
+next_checks: Leitura/brilho/ritmo/alinhamento, dash real, alvo fixo, ciclos e pulsos breves.
+return_plan: {id: PLAN-071, checkpoint: B-006/S-011, preserved: true}
+verification: .atena/generated/assets-l002-admission-2026-10-14/verification.json
+evidence: .atena/evidence/assets-l002-admission-2026-10-14.md
+playtest: .atena/generated/assets-l002-admission-2026-10-14/PLAYTEST.md
+human_runtime_playtest: PENDING_NOT_PERFORMED
+build_id: 0.4.0/assets-l002-admission-v01/2b96638+local-0c664cdc0023
+git_authorization: .atena/generated/assets-l002-admission-2026-10-14/git-authorization.json
+git_delivery: AUTHORIZED_COMMIT_AND_PUSH_CURRENT_BRANCH

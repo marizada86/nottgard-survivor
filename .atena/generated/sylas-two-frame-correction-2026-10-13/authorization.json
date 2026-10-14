@@ -1,0 +1,431 @@
+{
+  "revision": "sylas-two-frame-correction/v01",
+  "mode": "per-plan",
+  "owner_reply": "1. Por plano — uma aprovação para todo o escopo planejado. (Recomendado)",
+  "accepted_other_frames": [
+    {
+      "code": "H401",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_head_v01.png",
+      "sha256": "8ae09583105acd45b96ddbef76abdd8eb55e8c05c537dedbe6fc7f655c46842f",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-a083be90-7c1f-499d-99e5-eaea6d49b303.png",
+      "group": 4,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H404",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_thin_v01.png",
+      "sha256": "1566667d31959b6665ebdb5ae0d6f347a897ea047ef26e9daea23e97a16bf70b",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-06fc9833-990f-4856-b07f-325b034bab35.png",
+      "group": 4,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H405",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_break_v01.png",
+      "sha256": "a2e237fddd38a73ba396497708d90085e0c71ac6070e6207d15f7f28bc30f64c",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-cb310f6c-f2f6-4282-aa2e-8cabc8a85d8c.png",
+      "group": 4,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H501",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/kayron_sobrecarga_mistica/kayron_sobrecarga_mistica_loop_00_v01.png",
+      "sha256": "36eec357eef30bcc44325e9e75d3d1270eba4bf158fe26d8cc0282074fa7aade",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-4f777d78-a706-4c5c-9f2b-3e283a2199a9.png",
+      "group": 5,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H502",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/kayron_sobrecarga_mistica/kayron_sobrecarga_mistica_loop_01_v01.png",
+      "sha256": "803d5008bb331f4e5512deec967cea9d584adbffaad1d2425d74871bcaae5863",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-27f45d8b-54a1-4801-8e3d-61b8bbea8c80.png",
+      "group": 5,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H503",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/kayron_sobrecarga_mistica/kayron_sobrecarga_mistica_loop_02_v01.png",
+      "sha256": "5ccbc566f6659f79c8034e29a96c86073faff6cfda4db1b2b1096e1cd30cc5fb",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-a2ab3cb2-98a7-44f1-b6e1-8f2c87fb5d1b.png",
+      "group": 5,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H504",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/kayron_sobrecarga_mistica/kayron_sobrecarga_mistica_loop_03_v01.png",
+      "sha256": "f5acb4dbd26ae9e8905332b926842fa588f40e19945cec847cbde6485955a2a4",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-7bb3e12d-b33b-446e-b5ba-b39431be16d6.png",
+      "group": 5,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H505",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/kayron_sobrecarga_mistica/kayron_sobrecarga_mistica_loop_04_v01.png",
+      "sha256": "4a75d55d26e75ec082b5d355ac0a3e42ad0d7418683ec417046ae93c1f862d31",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-74780b43-cd79-4424-9df1-90440236386e.png",
+      "group": 5,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H506",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/kayron_sobrecarga_mistica/kayron_sobrecarga_mistica_loop_05_v01.png",
+      "sha256": "4eb87a88215e602cc4759c102123298d74606166861fa34dd79a05886fb3e508",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-7ef3ebe5-2229-48e1-a4ea-06ee6da161ad.png",
+      "group": 5,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H601",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/korrak_impacto_de_xargath/korrak_impacto_de_xargath_spark_v01.png",
+      "sha256": "4433be8205d67bec672b9bef6215ff3ef0db254aed84c89a822304b0b96a2a03",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-9d192b2a-5620-4d29-bf80-6669d57d07b0.png",
+      "group": 6,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H602",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/korrak_impacto_de_xargath/korrak_impacto_de_xargath_grow_v01.png",
+      "sha256": "8a2ea18d8d8c37f26d7e68e2027cc3b5b9ed3b1c55221a61f3c14cf72264d9bb",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-41b4855e-e0cc-4187-9fdb-27661d94e9e6.png",
+      "group": 6,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H603",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/korrak_impacto_de_xargath/korrak_impacto_de_xargath_peak_v01.png",
+      "sha256": "7487b2677e93a447058a98e832037d18582fa8ce13430adb94a496c29a5b2a4b",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-6f3011c6-47c3-450f-ab99-6cecb6cae25b.png",
+      "group": 6,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H604",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/korrak_impacto_de_xargath/korrak_impacto_de_xargath_hold_v01.png",
+      "sha256": "1ed3e6bc49d9fd82937f303f4630d914ca64d4067cafdc3fc5867fc06f1dee34",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-59a12d25-803e-47b4-9b45-576b2ebd61ab.png",
+      "group": 6,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H605",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/korrak_impacto_de_xargath/korrak_impacto_de_xargath_fade_v01.png",
+      "sha256": "ddf3ccd69943015f62fd652b1a93da79d807b22bb3074a5969a337224369e76c",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-0e919660-6b88-4941-9495-d41d4eb49e4e.png",
+      "group": 6,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H606",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/korrak_impacto_de_xargath/korrak_impacto_de_xargath_dissipate_v01.png",
+      "sha256": "9a27d109277e4ffdf9c4891611db80f8c27acfb34ccf2aac5baa5e76a9008e75",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-00b2ba33-e09a-453d-9da0-00245215bd59.png",
+      "group": 6,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H701",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/leoric_constelacao/leoric_constelacao_spark_v01.png",
+      "sha256": "4bf8e3b559e001b8eef4e0cee123c7b0f768cae62f09df25a56f914b5354fa02",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-8c1a3529-f5a0-462c-af78-7579ec98dac6.png",
+      "group": 7,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H702",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/leoric_constelacao/leoric_constelacao_grow_v01.png",
+      "sha256": "c7cb21dad1a4867c340939ae2c8bac3ffed4940bd29e77293b50907275c87154",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-fb792eaa-ce5f-4d3b-8600-96dd90d83752.png",
+      "group": 7,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H703",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/leoric_constelacao/leoric_constelacao_peak_v01.png",
+      "sha256": "98d36534b7a3f0667612b2442d2f1cb647ede94f1ffaa6dac3b2d927eb76254b",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-6254613a-a7fe-413f-bf22-fb102eac7874.png",
+      "group": 7,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H704",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/leoric_constelacao/leoric_constelacao_hold_v01.png",
+      "sha256": "f139e87ffc61cb02808eb46c0eadbfad996655bf031bdb78330bd9b8dcadbdf2",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-0692e7a8-fe36-4c94-a58b-63050a93d4fc.png",
+      "group": 7,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H705",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/leoric_constelacao/leoric_constelacao_fade_v01.png",
+      "sha256": "14aee760943a5b814ea8483fea065c42fe88e94bad8b8e46bfc47092566cfa0b",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-26ad83d3-a13e-4efe-9600-aeeff12a3822.png",
+      "group": 7,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H706",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/leoric_constelacao/leoric_constelacao_dissipate_v01.png",
+      "sha256": "7623afa5bfe2cfd6f7d441b91c45e4259d34b2f4d98bd697b6701e2fef5b475e",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-277641b5-efa2-458c-91da-d2b15520cc82.png",
+      "group": 7,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H801",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/nyrelia_dominacao/nyrelia_dominacao_loop_00_v01.png",
+      "sha256": "8006055ec0b5a9e09857d624e89cf76b8da9259b9a0995d65e413432591e26ea",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-4d491422-3eb6-47b1-9c62-7d059c8db7f6.png",
+      "group": 8,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H802",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/nyrelia_dominacao/nyrelia_dominacao_loop_01_v01.png",
+      "sha256": "99572ff64363755ed3d69fb6bbb5d8005379e6131d86c37e50555d06e90acb63",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-391bc719-a37b-4af6-b6e8-05db827af5e8.png",
+      "group": 8,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H803",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/nyrelia_dominacao/nyrelia_dominacao_loop_02_v01.png",
+      "sha256": "3ac7aef18ba5a665cd2ea7e7b0de922817d2ead137a4fcbf66e7277ba657fdc4",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-c69ca134-cb30-437f-a222-33a16966c8d3.png",
+      "group": 8,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H804",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/nyrelia_dominacao/nyrelia_dominacao_loop_03_v01.png",
+      "sha256": "f05e58d4c3c6d4cce1d58343ff9325c1b2098b66ccbda403bdf1b56a58e8f478",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-b001f65a-5571-4e04-a9c0-a0f358e5fadd.png",
+      "group": 8,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H805",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/nyrelia_dominacao/nyrelia_dominacao_loop_04_v01.png",
+      "sha256": "ea2b5bc3416c44864e70c689c45e72c69d4301fdac758153d0e758f981bfcedd",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-154c7909-b953-4191-9444-944226484c01.png",
+      "group": 8,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H806",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/nyrelia_dominacao/nyrelia_dominacao_loop_05_v01.png",
+      "sha256": "40cb95d976e5437e4c050b4a3bf8aed6a40470679db74444fd4d1367ead56afa",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-356e4a3d-0026-45e4-a53e-01ab549f1dc6.png",
+      "group": 8,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H901",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/zynara_suspensao_temporal/zynara_suspensao_temporal_spark_v01.png",
+      "sha256": "ded810743e51675d2f75e42cfeb26d86af12c329c21dbc250d316b3963021281",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-e3357d07-c82c-4c37-b633-24d624fde7c7.png",
+      "group": 9,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H902",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/zynara_suspensao_temporal/zynara_suspensao_temporal_grow_v01.png",
+      "sha256": "b681c46cbb0798317dccb2bc793be57254e5348e5663eb4097d6c749393be092",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-0aebef1c-4697-42cb-9171-9f84cbb7f337.png",
+      "group": 9,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H903",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/zynara_suspensao_temporal/zynara_suspensao_temporal_peak_v01.png",
+      "sha256": "1db71f49a4730f0cb7c451feb6a49a2b931c9f77e948b34e19412c7e01b4f444",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-ed953dee-0588-4ca9-af76-3e292f8b0a35.png",
+      "group": 9,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H904",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/zynara_suspensao_temporal/zynara_suspensao_temporal_hold_v01.png",
+      "sha256": "95c9bd597f7ce5d15fb32193bec4aa2a8fdd3f707585e5d20bd8200df3124cfb",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-eef06f08-e38c-4d85-8552-9e9111347c75.png",
+      "group": 9,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H905",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/zynara_suspensao_temporal/zynara_suspensao_temporal_fade_v01.png",
+      "sha256": "7482483b98fc5f5a0aa0e39e5eba8525b2767737bee65db1a15c9ea4df1a243d",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-cf65b07c-a859-4212-8a7c-6608dda5f62f.png",
+      "group": 9,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H906",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/zynara_suspensao_temporal/zynara_suspensao_temporal_dissipate_v01.png",
+      "sha256": "d003a1c41851d82c0b7b71798ec8f99ef169e59394ea581224433cbb7f39c70c",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-98718dc1-8fc9-49d9-83c6-082f96310917.png",
+      "group": 9,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H1001",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/bromnor_concordia/bromnor_concordia_spark_v01.png",
+      "sha256": "bab80ebd8cca186774b5c59746bd2b6a14ff450733e0b0df3d9f74d2f99c3afe",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-3a7df7f7-165b-475a-a237-154fcf9a413b.png",
+      "group": 10,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H1002",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/bromnor_concordia/bromnor_concordia_grow_v01.png",
+      "sha256": "3e29afae675d64358a8c3ba70bf3b61b52efb6922aa3564e6525aeb322134c40",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-c9066cc5-8218-4623-a0bd-4b8aa712a92c.png",
+      "group": 10,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H1003",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/bromnor_concordia/bromnor_concordia_peak_v01.png",
+      "sha256": "d469e767f9506ece65a663e6f4d7462d44ce885a649bca230652088feb8440ea",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-df1cd40e-0901-4432-a86d-3b1f3ca01aa7.png",
+      "group": 10,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H1004",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/bromnor_concordia/bromnor_concordia_hold_v01.png",
+      "sha256": "f73ad79b8a29b1a9a454f7585ba9cb43e638ece1d47afa806d3084f883032087",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-e50bfad6-675e-41ef-8f2c-5633fb6c964f.png",
+      "group": 10,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H1005",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/bromnor_concordia/bromnor_concordia_fade_v01.png",
+      "sha256": "b3d115caaa841b5482b0faaf6719bb7d621e5edc7278c207f7cca9e2bfac31f0",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-482cf44a-b769-4352-8138-071f81c87b83.png",
+      "group": 10,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H1006",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/bromnor_concordia/bromnor_concordia_dissipate_v01.png",
+      "sha256": "9ba52f01aa3ba206f00b79a73f82bbe74c19e7143b2c4e81f88e2267cc4ce6ec",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-ef1752c2-32af-450b-9cc5-0d22005a74b9.png",
+      "group": 10,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    }
+  ],
+  "reserved_targets": [
+    {
+      "code": "H402",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_grow_v01.png",
+      "sha256": "d8c714e84fe6c0fadfeaaefec7d30c7be522acae9c4553e09d72bf18001785ed",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-d66924a9-b48c-4fd8-818d-62f2ef531a17.png",
+      "group": 4,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "decision": "RESERVED_FOR_CORRECTION_NOT_ACCEPTED"
+    },
+    {
+      "code": "H406",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_specks_v01.png",
+      "sha256": "f21b76a36baddb88a242e1771eb78f65a6c7d25178e34d4a76f0a2c7d932d3a0",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-6958b50f-6304-4905-9b59-efade3254740.png",
+      "group": 4,
+      "acceptance": "PENDING_VISUAL_ACCEPTANCE",
+      "decision": "RESERVED_FOR_CORRECTION_NOT_ACCEPTED"
+    }
+  ],
+  "historical_gate": [
+    {
+      "code": "H403",
+      "version": "v02",
+      "path": ".atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_peak_v02.png",
+      "sha256": "d9b23e455cf3b7a83e8e6c10820227b2cb829cb09949ed2b1abeb16bb9aa9919",
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a12116-a4f7-7623-abef-db43878f0eea\\exec-01695d2f-904e-4f16-9ecf-5a5f08638e8a.png",
+      "group": 4,
+      "acceptance": "HISTORICAL_GATE_ACCEPTED"
+    }
+  ],
+  "scope": "Two edits; one optional directed retry per frame, maximum four calls; joint visual review; no runtime/CANON/Git"
+}

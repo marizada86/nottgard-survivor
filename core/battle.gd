@@ -524,6 +524,8 @@ func use_active(dir: Vector2 = Vector2.ZERO) -> bool:
 	if state != "running" or active_cd > 0.0 or hero.dead:
 		return false
 	var p := active_def
+	var visual_origin := hero.pos
+	var visual_target_id := 0
 	var used := true
 	var radius := float(p.get("radius", p.get("range", 2.0)))
 	match String(p.kind):
@@ -568,6 +570,7 @@ func use_active(dir: Vector2 = Vector2.ZERO) -> bool:
 				used = false
 			else:
 				charm_target.charmed_t = float(p.duration)
+				visual_target_id = charm_target.get_instance_id()
 				events.append({"type": "text", "pos": charm_target.pos, "text": "dominado"})
 		"time_stop":
 			time_slow_t = float(p.duration)
@@ -597,7 +600,12 @@ func use_active(dir: Vector2 = Vector2.ZERO) -> bool:
 	active_cd_max = active_cd
 	if _has_item_effect("projectile_slow_on_active"):
 		projectile_slow_t = 4.0
-	events.append({"type": "active", "pos": hero.pos, "radius": radius, "dtype": p.get("dtype", "radiante"), "name": p.name, "hero_id": hero.id, "ability_id": p.id})
+	var active_event := {"type": "active", "pos": hero.pos, "radius": radius, "dtype": p.get("dtype", "radiante"), "name": p.name, "hero_id": hero.id, "ability_id": p.id}
+	if hero.id == "sylas" and p.kind == "dash_weaken":
+		active_event["visual_origin"] = visual_origin
+	if hero.id == "nyrelia" and p.kind == "charm":
+		active_event["visual_target_id"] = visual_target_id
+	events.append(active_event)
 	events.append({"type": "toast", "text": p.name})
 	return true
 

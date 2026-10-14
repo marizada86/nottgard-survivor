@@ -1,0 +1,28 @@
+version: 1
+plan: PLAN-053
+revision: sylas-two-frame-correction/v01
+classification: PLAN_CHANGE_REQUEST
+status: PROPOSED_AWAITING_SCOPE_AND_MODE
+mode: unconfigured
+approval_status: PENDING
+checkpoint: PLAN_APPROVAL
+ordered_steps: [S-001, S-002, S-003, S-004]
+batches: {B-001: [S-001, S-002], B-002: [S-003, S-004]}
+completed_steps: 0
+total_steps: 4
+current_step_position: 1
+remaining_steps_after_current: 3
+frames: [H402, H406]
+preserved_historical_gate: H403v02
+accepted_other_frames: 39
+content_state: DRAFT
+new_generation: 0
+runtime_changed: false
+canonical_promotion: false
+spec: .atena/specs/SPEC-121-retomada-fila-imagens/sylas-two-frame-correction-v01.md
+source_decision: .atena/generated/assets-l002-review-2026-10-13/visual-acceptance.json
+next_objective: Escolher modo e aprovar correcao limitada dos dois quadros antes de executar.
+next_inputs: AlvosH402/H406 e referenciasH401/H403/H405, prompts e hashes.
+next_output: Dois candidatos versionados e gate visual conjunto apos execucao aprovada.
+next_checks: Crescimento menor que pico; fim fragmentado sem ponta; fontes/runtime intactos.
+return_plan: {id: PLAN-071, checkpoint: B-006/S-011, preserved: true}

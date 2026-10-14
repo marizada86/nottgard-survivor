@@ -1,0 +1,28 @@
+{
+  "revision": "sylas-two-frame-correction/v01",
+  "accepted_at": "2026-10-14",
+  "owner_reply": "Aprovo H402 v03 e H406 v02 DRAFT (Recomendado)",
+  "accepted": [
+    {
+      "code": "H402",
+      "version": "v03",
+      "path": ".atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_grow_v03.png",
+      "sha256": "b6b6e2753e32661b1a28688238fb12bab2583b8480f5ac11b419f72d060fd4db",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    },
+    {
+      "code": "H406",
+      "version": "v02",
+      "path": ".atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_specks_v02.png",
+      "sha256": "891953f31a7007e43766c80a8cd3cb7c267bb02c4662b710ce911dd794fe55bc",
+      "content_state": "DRAFT_VISUALLY_ACCEPTED"
+    }
+  ],
+  "previous_39_acceptances_preserved": true,
+  "historical_H403_v02_preserved": true,
+  "exceptions": [],
+  "canonical_promotion": false,
+  "authorized_next_action": "PREPARE_JOINT_L002_ADMISSION_PROPOSAL",
+  "admission_execution_authorized": false,
+  "git_authorized": false
+}

@@ -955,3 +955,72 @@ assets_l001_admission_2026_10_13:
   return_checkpoint: B-006/S-011
   evidence: .atena/evidence/assets-l001-admission-2026-10-13.md
   owner_delivery_acceptance: .atena/generated/assets-l001-admission-2026-10-13/owner-delivery-and-commit-authorization.json
+l001_git_receipt_2026_10_13:
+  owner_reply: 'atena commit e proximo'
+  status: COMMITTED_LOCAL
+  commit: 2b96638
+  scope: L001 review/admission and evidence
+  evidence: .atena/generated/assets-l002-review-2026-10-13/l001-commit-receipt.json
+  pushed: false
+  merged: false
+  canonical_promotion: false
+assets_l002_review_2026_10_13:
+  plan: PLAN-053
+  revision: assets-l002-review/v01
+  classification: IN_PLAN
+  state_file: .atena/state/assets-l002-review.yaml
+  mode: per-plan
+  status: COMPLETED_VISUALLY_ACCEPTED_AFTER_CORRECTIONS
+  checkpoint: S-004/OWNER_VISUAL_DECISION_RECORDED
+  completed_steps: 4
+  total_steps: 4
+  images: 42
+  additional_frames_pending_acceptance: 0
+  historical_gates_preserved: 1
+  recommended_exclusions: [H402v01, H406v01]
+  content_state: DRAFT_WITH_H403_V02_HISTORICAL_GATE_PRESERVED
+  runtime_admission: false
+  canonical_promotion: false
+  evidence: .atena/evidence/assets-l002-review-2026-10-13.md
+  return_plan: PLAN-071
+  return_checkpoint: B-006/S-011
+  accepted_additional_frames: 39
+  reserved_frames: [H402v01, H406v01]
+  visual_acceptance: .atena/generated/assets-l002-review-2026-10-13/visual-acceptance.json
+sylas_two_frame_correction_2026_10_13:
+  plan: PLAN-053
+  revision: sylas-two-frame-correction/v01
+  classification: IN_PLAN_APPROVED_CORRECTION
+  state_file: .atena/state/sylas-two-frame-correction.yaml
+  mode: per-plan
+  status: COMPLETED_VISUALLY_ACCEPTED_DRAFT
+  checkpoint: S-004/TWO_FRAME_ACCEPTANCE_RECORDED
+  completed_steps: 4
+  total_steps: 4
+  frames: [H402, H406]
+  content_state: DRAFT
+  runtime_admission: false
+  canonical_promotion: false
+  return_plan: PLAN-071
+  return_checkpoint: B-006/S-011
+  selected_for_owner_review: [H402v03, H406v02]
+  evidence: .atena/evidence/sylas-two-frame-correction-2026-10-13.md
+  visual_acceptance: .atena/generated/sylas-two-frame-correction-2026-10-13/visual-acceptance.json
+assets_l002_admission_2026_10_14:
+  plan: PLAN-053
+  revision: assets-l002-admission/v01
+  classification: IN_PLAN_APPROVED_ADMISSION
+  state_file: .atena/state/assets-l002-admission.yaml
+  mode: per-plan
+  status: LOCAL_TECHNICAL_DELIVERED_AWAITING_OWNER_PLAYTEST
+  checkpoint: S-005/OWNER_RUNTIME_PLAYTEST
+  completed_steps: 5
+  total_steps: 5
+  images: 42
+  atlases: 7
+  content_state: DRAFT_WITH_H403_V02_HISTORICAL_GATE_PRESERVED
+  runtime_admission: true
+  canonical_promotion: false
+  return_plan: PLAN-071
+  return_checkpoint: B-006/S-011
+  evidence: .atena/evidence/assets-l002-admission-2026-10-14.md

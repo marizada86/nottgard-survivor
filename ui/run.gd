@@ -927,7 +927,7 @@ func _divine_theme() -> Dictionary:
 func _hero_active_effect(event: Dictionary) -> bool:
 	var effect := HeroActiveVfx.create_effect(event,battle,_divine_theme().aura_accent,Game.reduced_impact())
 	if effect == null: return false
-	var id := String(event.hero_id)
+	var id := HeroActiveVfx.event_hero(event)
 	if is_instance_valid(_active_vfx.get(id)):
 		_active_vfx[id].queue_free()
 	_active_vfx[id] = effect
@@ -978,6 +978,15 @@ func _play_sheet_effect(path: String, center: Vector2, radius: float, duration: 
 
 func _nova_effect(event: Dictionary) -> void:
 	var color: Color = _divine_theme().impact_accent
+	if HeroActiveVfx.supports(event,Game.reduced_impact()):
+		var pulse_theme: Dictionary = event.get("visual_theme",_divine_theme())
+		var active_pulse := HeroActiveVfx.create_effect(event,battle,pulse_theme.impact_accent,Game.reduced_impact())
+		if active_pulse != null:
+			var id := HeroActiveVfx.event_hero(event)
+			if is_instance_valid(_active_vfx.get(id)): _active_vfx[id].queue_free()
+			_active_vfx[id] = active_pulse
+			fx.add_child(active_pulse)
+			return
 	var pulse := RadiantPulseVfx.create_effect(event, color, Game.reduced_impact())
 	if pulse == null:
 		pulse = HourglassVfx.create_effect(event, color, Game.reduced_impact())

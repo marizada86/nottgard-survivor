@@ -1,0 +1,580 @@
+{
+  "alpha": "Rec709 luminance; <=2/255zero",
+  "atlas_size": [
+    1536,
+    256
+  ],
+  "canvas_center": [
+    128,
+    128
+  ],
+  "cell": [
+    256,
+    256
+  ],
+  "filter": "Godot Lanczos native->1024 audit and native->256 runtime",
+  "native_bytes_preserved": true,
+  "records": [
+    {
+      "atlas": "sylas_passo_pelas_sombras",
+      "code": "H401",
+      "offset": [
+        0,
+        0
+      ],
+      "sha256": "8ae09583105acd45b96ddbef76abdd8eb55e8c05c537dedbe6fc7f655c46842f",
+      "source": ".atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_head_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "sylas_passo_pelas_sombras",
+      "code": "H402",
+      "offset": [
+        256,
+        0
+      ],
+      "sha256": "b6b6e2753e32661b1a28688238fb12bab2583b8480f5ac11b419f72d060fd4db",
+      "source": ".atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_grow_v03.png",
+      "version": "v03"
+    },
+    {
+      "atlas": "sylas_passo_pelas_sombras",
+      "code": "H403",
+      "offset": [
+        512,
+        0
+      ],
+      "sha256": "d9b23e455cf3b7a83e8e6c10820227b2cb829cb09949ed2b1abeb16bb9aa9919",
+      "source": ".atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_peak_v02.png",
+      "version": "v02"
+    },
+    {
+      "atlas": "sylas_passo_pelas_sombras",
+      "code": "H404",
+      "offset": [
+        768,
+        0
+      ],
+      "sha256": "1566667d31959b6665ebdb5ae0d6f347a897ea047ef26e9daea23e97a16bf70b",
+      "source": ".atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_thin_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "sylas_passo_pelas_sombras",
+      "code": "H405",
+      "offset": [
+        1024,
+        0
+      ],
+      "sha256": "a2e237fddd38a73ba396497708d90085e0c71ac6070e6207d15f7f28bc30f64c",
+      "source": ".atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_break_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "sylas_passo_pelas_sombras",
+      "code": "H406",
+      "offset": [
+        1280,
+        0
+      ],
+      "sha256": "891953f31a7007e43766c80a8cd3cb7c267bb02c4662b710ce911dd794fe55bc",
+      "source": ".atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_specks_v02.png",
+      "version": "v02"
+    },
+    {
+      "atlas": "kayron_sobrecarga_mistica",
+      "code": "H501",
+      "offset": [
+        0,
+        0
+      ],
+      "sha256": "36eec357eef30bcc44325e9e75d3d1270eba4bf158fe26d8cc0282074fa7aade",
+      "source": ".atena/generated/art-candidates/vfx/kayron_sobrecarga_mistica/kayron_sobrecarga_mistica_loop_00_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "kayron_sobrecarga_mistica",
+      "code": "H502",
+      "offset": [
+        256,
+        0
+      ],
+      "sha256": "803d5008bb331f4e5512deec967cea9d584adbffaad1d2425d74871bcaae5863",
+      "source": ".atena/generated/art-candidates/vfx/kayron_sobrecarga_mistica/kayron_sobrecarga_mistica_loop_01_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "kayron_sobrecarga_mistica",
+      "code": "H503",
+      "offset": [
+        512,
+        0
+      ],
+      "sha256": "5ccbc566f6659f79c8034e29a96c86073faff6cfda4db1b2b1096e1cd30cc5fb",
+      "source": ".atena/generated/art-candidates/vfx/kayron_sobrecarga_mistica/kayron_sobrecarga_mistica_loop_02_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "kayron_sobrecarga_mistica",
+      "code": "H504",
+      "offset": [
+        768,
+        0
+      ],
+      "sha256": "f5acb4dbd26ae9e8905332b926842fa588f40e19945cec847cbde6485955a2a4",
+      "source": ".atena/generated/art-candidates/vfx/kayron_sobrecarga_mistica/kayron_sobrecarga_mistica_loop_03_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "kayron_sobrecarga_mistica",
+      "code": "H505",
+      "offset": [
+        1024,
+        0
+      ],
+      "sha256": "4a75d55d26e75ec082b5d355ac0a3e42ad0d7418683ec417046ae93c1f862d31",
+      "source": ".atena/generated/art-candidates/vfx/kayron_sobrecarga_mistica/kayron_sobrecarga_mistica_loop_04_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "kayron_sobrecarga_mistica",
+      "code": "H506",
+      "offset": [
+        1280,
+        0
+      ],
+      "sha256": "4eb87a88215e602cc4759c102123298d74606166861fa34dd79a05886fb3e508",
+      "source": ".atena/generated/art-candidates/vfx/kayron_sobrecarga_mistica/kayron_sobrecarga_mistica_loop_05_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "korrak_impacto_de_xargath",
+      "code": "H601",
+      "offset": [
+        0,
+        0
+      ],
+      "sha256": "4433be8205d67bec672b9bef6215ff3ef0db254aed84c89a822304b0b96a2a03",
+      "source": ".atena/generated/art-candidates/vfx/korrak_impacto_de_xargath/korrak_impacto_de_xargath_spark_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "korrak_impacto_de_xargath",
+      "code": "H602",
+      "offset": [
+        256,
+        0
+      ],
+      "sha256": "8a2ea18d8d8c37f26d7e68e2027cc3b5b9ed3b1c55221a61f3c14cf72264d9bb",
+      "source": ".atena/generated/art-candidates/vfx/korrak_impacto_de_xargath/korrak_impacto_de_xargath_grow_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "korrak_impacto_de_xargath",
+      "code": "H603",
+      "offset": [
+        512,
+        0
+      ],
+      "sha256": "7487b2677e93a447058a98e832037d18582fa8ce13430adb94a496c29a5b2a4b",
+      "source": ".atena/generated/art-candidates/vfx/korrak_impacto_de_xargath/korrak_impacto_de_xargath_peak_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "korrak_impacto_de_xargath",
+      "code": "H604",
+      "offset": [
+        768,
+        0
+      ],
+      "sha256": "1ed3e6bc49d9fd82937f303f4630d914ca64d4067cafdc3fc5867fc06f1dee34",
+      "source": ".atena/generated/art-candidates/vfx/korrak_impacto_de_xargath/korrak_impacto_de_xargath_hold_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "korrak_impacto_de_xargath",
+      "code": "H605",
+      "offset": [
+        1024,
+        0
+      ],
+      "sha256": "ddf3ccd69943015f62fd652b1a93da79d807b22bb3074a5969a337224369e76c",
+      "source": ".atena/generated/art-candidates/vfx/korrak_impacto_de_xargath/korrak_impacto_de_xargath_fade_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "korrak_impacto_de_xargath",
+      "code": "H606",
+      "offset": [
+        1280,
+        0
+      ],
+      "sha256": "9a27d109277e4ffdf9c4891611db80f8c27acfb34ccf2aac5baa5e76a9008e75",
+      "source": ".atena/generated/art-candidates/vfx/korrak_impacto_de_xargath/korrak_impacto_de_xargath_dissipate_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "leoric_constelacao",
+      "code": "H701",
+      "offset": [
+        0,
+        0
+      ],
+      "sha256": "4bf8e3b559e001b8eef4e0cee123c7b0f768cae62f09df25a56f914b5354fa02",
+      "source": ".atena/generated/art-candidates/vfx/leoric_constelacao/leoric_constelacao_spark_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "leoric_constelacao",
+      "code": "H702",
+      "offset": [
+        256,
+        0
+      ],
+      "sha256": "c7cb21dad1a4867c340939ae2c8bac3ffed4940bd29e77293b50907275c87154",
+      "source": ".atena/generated/art-candidates/vfx/leoric_constelacao/leoric_constelacao_grow_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "leoric_constelacao",
+      "code": "H703",
+      "offset": [
+        512,
+        0
+      ],
+      "sha256": "98d36534b7a3f0667612b2442d2f1cb647ede94f1ffaa6dac3b2d927eb76254b",
+      "source": ".atena/generated/art-candidates/vfx/leoric_constelacao/leoric_constelacao_peak_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "leoric_constelacao",
+      "code": "H704",
+      "offset": [
+        768,
+        0
+      ],
+      "sha256": "f139e87ffc61cb02808eb46c0eadbfad996655bf031bdb78330bd9b8dcadbdf2",
+      "source": ".atena/generated/art-candidates/vfx/leoric_constelacao/leoric_constelacao_hold_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "leoric_constelacao",
+      "code": "H705",
+      "offset": [
+        1024,
+        0
+      ],
+      "sha256": "14aee760943a5b814ea8483fea065c42fe88e94bad8b8e46bfc47092566cfa0b",
+      "source": ".atena/generated/art-candidates/vfx/leoric_constelacao/leoric_constelacao_fade_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "leoric_constelacao",
+      "code": "H706",
+      "offset": [
+        1280,
+        0
+      ],
+      "sha256": "7623afa5bfe2cfd6f7d441b91c45e4259d34b2f4d98bd697b6701e2fef5b475e",
+      "source": ".atena/generated/art-candidates/vfx/leoric_constelacao/leoric_constelacao_dissipate_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "nyrelia_dominacao",
+      "code": "H801",
+      "offset": [
+        0,
+        0
+      ],
+      "sha256": "8006055ec0b5a9e09857d624e89cf76b8da9259b9a0995d65e413432591e26ea",
+      "source": ".atena/generated/art-candidates/vfx/nyrelia_dominacao/nyrelia_dominacao_loop_00_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "nyrelia_dominacao",
+      "code": "H802",
+      "offset": [
+        256,
+        0
+      ],
+      "sha256": "99572ff64363755ed3d69fb6bbb5d8005379e6131d86c37e50555d06e90acb63",
+      "source": ".atena/generated/art-candidates/vfx/nyrelia_dominacao/nyrelia_dominacao_loop_01_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "nyrelia_dominacao",
+      "code": "H803",
+      "offset": [
+        512,
+        0
+      ],
+      "sha256": "3ac7aef18ba5a665cd2ea7e7b0de922817d2ead137a4fcbf66e7277ba657fdc4",
+      "source": ".atena/generated/art-candidates/vfx/nyrelia_dominacao/nyrelia_dominacao_loop_02_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "nyrelia_dominacao",
+      "code": "H804",
+      "offset": [
+        768,
+        0
+      ],
+      "sha256": "f05e58d4c3c6d4cce1d58343ff9325c1b2098b66ccbda403bdf1b56a58e8f478",
+      "source": ".atena/generated/art-candidates/vfx/nyrelia_dominacao/nyrelia_dominacao_loop_03_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "nyrelia_dominacao",
+      "code": "H805",
+      "offset": [
+        1024,
+        0
+      ],
+      "sha256": "ea2b5bc3416c44864e70c689c45e72c69d4301fdac758153d0e758f981bfcedd",
+      "source": ".atena/generated/art-candidates/vfx/nyrelia_dominacao/nyrelia_dominacao_loop_04_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "nyrelia_dominacao",
+      "code": "H806",
+      "offset": [
+        1280,
+        0
+      ],
+      "sha256": "40cb95d976e5437e4c050b4a3bf8aed6a40470679db74444fd4d1367ead56afa",
+      "source": ".atena/generated/art-candidates/vfx/nyrelia_dominacao/nyrelia_dominacao_loop_05_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "zynara_suspensao_temporal",
+      "code": "H901",
+      "offset": [
+        0,
+        0
+      ],
+      "sha256": "ded810743e51675d2f75e42cfeb26d86af12c329c21dbc250d316b3963021281",
+      "source": ".atena/generated/art-candidates/vfx/zynara_suspensao_temporal/zynara_suspensao_temporal_spark_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "zynara_suspensao_temporal",
+      "code": "H902",
+      "offset": [
+        256,
+        0
+      ],
+      "sha256": "b681c46cbb0798317dccb2bc793be57254e5348e5663eb4097d6c749393be092",
+      "source": ".atena/generated/art-candidates/vfx/zynara_suspensao_temporal/zynara_suspensao_temporal_grow_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "zynara_suspensao_temporal",
+      "code": "H903",
+      "offset": [
+        512,
+        0
+      ],
+      "sha256": "1db71f49a4730f0cb7c451feb6a49a2b931c9f77e948b34e19412c7e01b4f444",
+      "source": ".atena/generated/art-candidates/vfx/zynara_suspensao_temporal/zynara_suspensao_temporal_peak_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "zynara_suspensao_temporal",
+      "code": "H904",
+      "offset": [
+        768,
+        0
+      ],
+      "sha256": "95c9bd597f7ce5d15fb32193bec4aa2a8fdd3f707585e5d20bd8200df3124cfb",
+      "source": ".atena/generated/art-candidates/vfx/zynara_suspensao_temporal/zynara_suspensao_temporal_hold_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "zynara_suspensao_temporal",
+      "code": "H905",
+      "offset": [
+        1024,
+        0
+      ],
+      "sha256": "7482483b98fc5f5a0aa0e39e5eba8525b2767737bee65db1a15c9ea4df1a243d",
+      "source": ".atena/generated/art-candidates/vfx/zynara_suspensao_temporal/zynara_suspensao_temporal_fade_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "zynara_suspensao_temporal",
+      "code": "H906",
+      "offset": [
+        1280,
+        0
+      ],
+      "sha256": "d003a1c41851d82c0b7b71798ec8f99ef169e59394ea581224433cbb7f39c70c",
+      "source": ".atena/generated/art-candidates/vfx/zynara_suspensao_temporal/zynara_suspensao_temporal_dissipate_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "bromnor_concordia",
+      "code": "H1001",
+      "offset": [
+        0,
+        0
+      ],
+      "sha256": "bab80ebd8cca186774b5c59746bd2b6a14ff450733e0b0df3d9f74d2f99c3afe",
+      "source": ".atena/generated/art-candidates/vfx/bromnor_concordia/bromnor_concordia_spark_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "bromnor_concordia",
+      "code": "H1002",
+      "offset": [
+        256,
+        0
+      ],
+      "sha256": "3e29afae675d64358a8c3ba70bf3b61b52efb6922aa3564e6525aeb322134c40",
+      "source": ".atena/generated/art-candidates/vfx/bromnor_concordia/bromnor_concordia_grow_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "bromnor_concordia",
+      "code": "H1003",
+      "offset": [
+        512,
+        0
+      ],
+      "sha256": "d469e767f9506ece65a663e6f4d7462d44ce885a649bca230652088feb8440ea",
+      "source": ".atena/generated/art-candidates/vfx/bromnor_concordia/bromnor_concordia_peak_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "bromnor_concordia",
+      "code": "H1004",
+      "offset": [
+        768,
+        0
+      ],
+      "sha256": "f73ad79b8a29b1a9a454f7585ba9cb43e638ece1d47afa806d3084f883032087",
+      "source": ".atena/generated/art-candidates/vfx/bromnor_concordia/bromnor_concordia_hold_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "bromnor_concordia",
+      "code": "H1005",
+      "offset": [
+        1024,
+        0
+      ],
+      "sha256": "b3d115caaa841b5482b0faaf6719bb7d621e5edc7278c207f7cca9e2bfac31f0",
+      "source": ".atena/generated/art-candidates/vfx/bromnor_concordia/bromnor_concordia_fade_v01.png",
+      "version": "v01"
+    },
+    {
+      "atlas": "bromnor_concordia",
+      "code": "H1006",
+      "offset": [
+        1280,
+        0
+      ],
+      "sha256": "9ba52f01aa3ba206f00b79a73f82bbe74c19e7143b2c4e81f88e2267cc4ce6ec",
+      "source": ".atena/generated/art-candidates/vfx/bromnor_concordia/bromnor_concordia_dissipate_v01.png",
+      "version": "v01"
+    }
+  ],
+  "revision": "assets-l002-admission/v01",
+  "rgb": "white",
+  "calibration": {
+    "sylas": {
+      "name": "sylas_passo_pelas_sombras",
+      "pivot": [
+        128.0,
+        128.0
+      ],
+      "source_radius_or_forward_extent": 117.0,
+      "method": "Canvas-center logical origin; accepted peak forward bright extent >=0.5, six frames same origin/scale; length matched to actual dash.",
+      "content_side": 256,
+      "common_inset": 0,
+      "atlas_sha256": "4d2a0f2975c1d87ae21acc64faa7208c4077969d6fa5c78a1413024711e3d37a"
+    },
+    "kayron": {
+      "name": "kayron_sobrecarga_mistica",
+      "pivot": [
+        128.5,
+        125.0
+      ],
+      "source_radius_or_forward_extent": 99.43,
+      "method": "Canvas-center logical origin for radial peak; symmetric bright bounding-box midpoint for loop sigil. 95th percentile geometric bright radius>=0.5; same origin/scale for six frames.",
+      "content_side": 256,
+      "common_inset": 0,
+      "atlas_sha256": "4e7877a535b92b01c19b45b823b869d01aa0e0c1ffc602999dd30a8c9452a021"
+    },
+    "korrak": {
+      "name": "korrak_impacto_de_xargath",
+      "pivot": [
+        128.0,
+        128.0
+      ],
+      "source_radius_or_forward_extent": 102.48,
+      "method": "Canvas-center logical origin for radial peak; symmetric bright bounding-box midpoint for loop sigil. 95th percentile geometric bright radius>=0.5; same origin/scale for six frames.",
+      "content_side": 248,
+      "common_inset": 4,
+      "atlas_sha256": "58b1ec09e840fca8998c89da86781e12c1eb16d8f99de11f44b4636a776f6897"
+    },
+    "leoric": {
+      "name": "leoric_constelacao",
+      "pivot": [
+        128.0,
+        128.0
+      ],
+      "source_radius_or_forward_extent": 103.17,
+      "method": "Canvas-center logical origin for radial peak; symmetric bright bounding-box midpoint for loop sigil. 95th percentile geometric bright radius>=0.5; same origin/scale for six frames.",
+      "content_side": 256,
+      "common_inset": 0,
+      "atlas_sha256": "e54e8b139c60d8f887643d96bb6c82704de74ad0727f1b9ea2006b1eaf5274a6"
+    },
+    "nyrelia": {
+      "name": "nyrelia_dominacao",
+      "pivot": [
+        128.0,
+        127.5
+      ],
+      "source_radius_or_forward_extent": 91.93,
+      "method": "Canvas-center logical origin for radial peak; symmetric bright bounding-box midpoint for loop sigil. 95th percentile geometric bright radius>=0.5; same origin/scale for six frames.",
+      "content_side": 256,
+      "common_inset": 0,
+      "atlas_sha256": "2f3119abd57327e2a0f38b3cc9d64269a06cffc2d5d23bc8d9a1d4b02e2a2048"
+    },
+    "zynara": {
+      "name": "zynara_suspensao_temporal",
+      "pivot": [
+        128.0,
+        128.0
+      ],
+      "source_radius_or_forward_extent": 110.11,
+      "method": "Canvas-center logical origin for radial peak; symmetric bright bounding-box midpoint for loop sigil. 95th percentile geometric bright radius>=0.5; same origin/scale for six frames.",
+      "content_side": 256,
+      "common_inset": 0,
+      "atlas_sha256": "f4119572d87559488f094d774f7d6ead34b340c0f62bd209c07b2c67bcb9bbc9"
+    },
+    "bromnor": {
+      "name": "bromnor_concordia",
+      "pivot": [
+        128.0,
+        128.0
+      ],
+      "source_radius_or_forward_extent": 102.11,
+      "method": "Canvas-center logical origin for radial peak; symmetric bright bounding-box midpoint for loop sigil. 95th percentile geometric bright radius>=0.5; same origin/scale for six frames.",
+      "content_side": 256,
+      "common_inset": 0,
+      "atlas_sha256": "df694d697a7366dc13ed4c5b36215fb81d6e62f28c453b8916ee6dde8487e1f7"
+    }
+  },
+  "Korrak_common_content_side": 248,
+  "Korrak_common_transparent_inset": 4,
+  "timing": {
+    "sylas": 0.3,
+    "pulses": 0.35,
+    "cycles_fps": 12,
+    "Kayron": "active_buff_t",
+    "Nyrelia": "chosen Enemy.charmed_t"
+  },
+  "Leoric_visual_radius": 2,
+  "Leoric_event_radius_projectile_range": 11
+}

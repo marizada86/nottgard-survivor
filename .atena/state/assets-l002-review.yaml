@@ -1,0 +1,46 @@
+version: 1
+plan: PLAN-053
+revision: assets-l002-review/v01
+classification: IN_PLAN
+mode: per-plan
+status: COMPLETED_VISUALLY_ACCEPTED_AFTER_CORRECTIONS
+checkpoint: S-004/OWNER_VISUAL_DECISION_RECORDED
+ordered_steps: [S-001, S-002, S-003, S-004]
+current_step_position: 4
+completed_steps: 4
+total_steps: 4
+remaining_steps_after_current: 0
+batch: L-002
+images: 42
+families: [sylas, kayron, korrak, leoric, nyrelia, zynara, bromnor]
+owner_request: 'atena commit e proximo'
+content_state: DRAFT_WITH_H403_V02_HISTORICAL_GATE_PRESERVED
+new_generation: 0
+runtime_admission: false
+canonical_promotion: false
+spec: .atena/specs/SPEC-121-retomada-fila-imagens/assets-l002-review-v01.md
+return_plan: {id: PLAN-071, checkpoint: B-006/S-011, preserved: true}
+manifest: .atena/generated/assets-l002-review-2026-10-13/manifest.json
+gallery: .atena/generated/assets-l002-review-2026-10-13/index.html
+findings: .atena/generated/assets-l002-review-2026-10-13/visual-findings.json
+verification: .atena/generated/assets-l002-review-2026-10-13/verification.json
+evidence: .atena/evidence/assets-l002-review-2026-10-13.md
+next_objective: AdmissaoL002 tecnica5/5 entregue; aguardar playtest humano runtime.
+next_inputs: Galeria42, manifesto/hashes, achados e gateH403v02 preservado.
+next_output: Recibo humano com aceites/excecoes; depois proposta limitada de correcao/admissao.
+next_checks: Cauda/fimSylas, chamasKorrak, ciclosKayron/Nyrelia, motivos/residuos/leitura96px.
+approval_status: APPROVED_39_PLUS_CORRECTED_2
+recommended_exclusions: [H402v01, H406v01]
+recommended_additional_acceptance_count: 39
+visual_acceptance: .atena/generated/assets-l002-review-2026-10-13/visual-acceptance.json
+accepted_additional_frames: 39
+reserved_frames: [H402v01, H406v01]
+correction_proposal: .atena/specs/SPEC-121-retomada-fila-imagens/sylas-two-frame-correction-v01.md
+correction_execution_authorized: false
+resolved_exclusions: {H402v01: H402v03, H406v01: H406v02}
+remaining_exclusions: []
+correction_acceptance: .atena/generated/sylas-two-frame-correction-2026-10-13/visual-acceptance.json
+admission_proposal: .atena/specs/SPEC-121-retomada-fila-imagens/assets-l002-admission-v01.md
+admission_mode: per-plan
+admission_state: .atena/state/assets-l002-admission.yaml
+admission_status: LOCAL_TECHNICAL_DELIVERED_AWAITING_OWNER_PLAYTEST

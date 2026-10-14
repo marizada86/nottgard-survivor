@@ -1,0 +1,168 @@
+{
+  "status": "PASS_TECHNICAL_AND_ATENA_INSPECTION",
+  "rows": [
+    {
+      "code": "H401",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_head_v01.png",
+      "sha256": "8ae09583105acd45b96ddbef76abdd8eb55e8c05c537dedbe6fc7f655c46842f",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "mean_luminance": 2.145880831355611,
+      "visible_gt12": 29630,
+      "hot_gt128": 10758,
+      "bbox_gt12": [
+        558,
+        543,
+        913,
+        713
+      ],
+      "edge_max_channel": 1,
+      "channel_difference_max": 10
+    },
+    {
+      "code": "H402",
+      "version": "v03",
+      "path": ".atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_grow_v03.png",
+      "sha256": "b6b6e2753e32661b1a28688238fb12bab2583b8480f5ac11b419f72d060fd4db",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "mean_luminance": 3.220735127019375,
+      "visible_gt12": 43686,
+      "hot_gt128": 15285,
+      "bbox_gt12": [
+        570,
+        541,
+        1040,
+        711
+      ],
+      "edge_max_channel": 2,
+      "channel_difference_max": 14
+    },
+    {
+      "code": "H403",
+      "version": "v02",
+      "path": ".atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_peak_v02.png",
+      "sha256": "d9b23e455cf3b7a83e8e6c10820227b2cb829cb09949ed2b1abeb16bb9aa9919",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "mean_luminance": 4.994017767196009,
+      "visible_gt12": 74143,
+      "hot_gt128": 25224,
+      "bbox_gt12": [
+        565,
+        511,
+        1214,
+        737
+      ],
+      "edge_max_channel": 1,
+      "channel_difference_max": 12
+    },
+    {
+      "code": "H404",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_thin_v01.png",
+      "sha256": "1566667d31959b6665ebdb5ae0d6f347a897ea047ef26e9daea23e97a16bf70b",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "mean_luminance": 2.8103914393239875,
+      "visible_gt12": 52685,
+      "hot_gt128": 10346,
+      "bbox_gt12": [
+        574,
+        523,
+        1201,
+        722
+      ],
+      "edge_max_channel": 1,
+      "channel_difference_max": 11
+    },
+    {
+      "code": "H405",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_break_v01.png",
+      "sha256": "a2e237fddd38a73ba396497708d90085e0c71ac6070e6207d15f7f28bc30f64c",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "mean_luminance": 2.2820998876958964,
+      "visible_gt12": 54340,
+      "hot_gt128": 5512,
+      "bbox_gt12": [
+        561,
+        505,
+        1205,
+        743
+      ],
+      "edge_max_channel": 1,
+      "channel_difference_max": 10
+    },
+    {
+      "code": "H406",
+      "version": "v02",
+      "path": ".atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_specks_v02.png",
+      "sha256": "891953f31a7007e43766c80a8cd3cb7c267bb02c4662b710ce911dd794fe55bc",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "mean_luminance": 0.3877379332229369,
+      "visible_gt12": 10053,
+      "hot_gt128": 215,
+      "bbox_gt12": [
+        563,
+        527,
+        1199,
+        729
+      ],
+      "edge_max_channel": 1,
+      "channel_difference_max": 8
+    }
+  ],
+  "not_selected_H402v02": {
+    "code": "H402",
+    "version": "v02",
+    "path": ".atena/generated/art-candidates/vfx/sylas_passo_pelas_sombras/sylas_passo_pelas_sombras_grow_v02.png",
+    "sha256": "e20b8226a915fe49e51f0fe884dc3f38a28ea49f0b0bab8177d9fad66745db60",
+    "native_dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "mean_luminance": 5.119457328764859,
+    "visible_gt12": 71925,
+    "hot_gt128": 24882,
+    "bbox_gt12": [
+      464,
+      519,
+      1145,
+      729
+    ],
+    "edge_max_channel": 2,
+    "channel_difference_max": 10
+  },
+  "diagnostics": {
+    "growth_width_fraction_of_peak": 0.724191063174114,
+    "growth_mean_fraction_of_peak": 0.6449186360880171,
+    "dissipate_hot_fraction_of_previous": 0.03900580551523948,
+    "faint_left_wisp_note": "H402v03 left bound570/1254, comparable to accepted peak565/1254 and start558/1254. Not exact x0.49 prompt envelope; main form is rightward, no long left tail as v01. Record actual placement; no pixel correction."
+  },
+  "atena_visual_review": "H402v03 compact intermediate plume; H406v02 fragmented residual without coherent arrowhead or intact masks. Subjective acceptance pending.",
+  "normalization": "NOT_PERFORMED: generated1254square vs requested1024; native preserved",
+  "native_source_bytes_preserved": true
+}

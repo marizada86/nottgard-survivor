@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "build_id": "0.4.0/assets-l002-admission-v01/2b96638+local-0c664cdc0023",
+  "technical_steps_completed": 5,
+  "sources_verified": 42,
+  "atlases": 7,
+  "suite_failures": 0,
+  "smoke_stages": 9,
+  "captures": 221,
+  "capture_groups": [
+    99,
+    100,
+    22
+  ],
+  "parity": {
+    "comparison": "Original use_active baseline vs current, full Battle.step for9seconds/scenario; only visual_origin/visual_target_id excluded, Enemy/target instance IDs canonicalized.",
+    "counts": {
+      "failed_actives": 12,
+      "origin_metadata": 20,
+      "scenarios": 140,
+      "short_dash": 4,
+      "steps": 12600,
+      "successful_actives": 128,
+      "target_metadata": 12,
+      "zero_dash": 4
+    },
+    "status": "PASS"
+  },
+  "preexisting_runtime_files": 3049,
+  "unchanged_preexisting_runtime_files": 3045,
+  "allowed_changed_files": [
+    "core/battle.gd",
+    "core/hero_active_vfx.gd",
+    "ui/hero_active_vfx.gd",
+    "ui/run.gd"
+  ],
+  "battle_change_limited_to_use_active": true,
+  "data_overlay_melee_orbs_pulse_hourglass_L001_atlases_tests_unchanged": true,
+  "runtime_sha256": {
+    "core/battle.gd": "5b376673087f725fee82188f0025c8ea8923e7ddda1fc91793772ad91c1aecae",
+    "core/hero_active_vfx.gd": "0bb313af60330d7e74aaa44b0315ce8deb38207d9080c02ee407126c1c223d25",
+    "ui/hero_active_vfx.gd": "fec360e02e11f65bba4f00251e6299997216768d8f702d7d86c1e04a069e8092",
+    "ui/run.gd": "6c1779ad3ceeeffe0c2c4ed9700506beb31964737a861dd3d2ba4952fc1c2d8e",
+    "tests/test_assets_l002_vfx.gd": "9c2827700cc6ad61da0570eb668ee7bb3912a4f740939378bd8a3e6c0bcd467d",
+    "assets/vfx/sylas_passo_pelas_sombras.png": "4d2a0f2975c1d87ae21acc64faa7208c4077969d6fa5c78a1413024711e3d37a",
+    "assets/vfx/kayron_sobrecarga_mistica.png": "4e7877a535b92b01c19b45b823b869d01aa0e0c1ffc602999dd30a8c9452a021",
+    "assets/vfx/korrak_impacto_de_xargath.png": "58b1ec09e840fca8998c89da86781e12c1eb16d8f99de11f44b4636a776f6897",
+    "assets/vfx/leoric_constelacao.png": "e54e8b139c60d8f887643d96bb6c82704de74ad0727f1b9ea2006b1eaf5274a6",
+    "assets/vfx/nyrelia_dominacao.png": "2f3119abd57327e2a0f38b3cc9d64269a06cffc2d5d23bc8d9a1d4b02e2a2048",
+    "assets/vfx/zynara_suspensao_temporal.png": "f4119572d87559488f094d774f7d6ead34b340c0f62bd209c07b2c67bcb9bbc9",
+    "assets/vfx/bromnor_concordia.png": "df694d697a7366dc13ed4c5b36215fb81d6e62f28c453b8916ee6dde8487e1f7"
+  },
+  "logs": [
+    "focused-final.log",
+    "suite.log",
+    "smoke.log",
+    "parity-final.log",
+    "capture-final.log",
+    "l001-regression-final.log",
+    "vfx-regression-final.log",
+    "import-final.log",
+    "Jogar-Sylas.log",
+    "Jogar-Kayron.log",
+    "Jogar-Korrak.log",
+    "Jogar-Leoric.log",
+    "Jogar-Nyrelia.log",
+    "Jogar-Zynara.log",
+    "Jogar-Bromnor.log",
+    "Jogar-Reduzido.log",
+    "Jogar-Tou-Um.log"
+  ],
+  "native_backup_atlas_hashes": "PASS",
+  "human_playtest": "PENDING_NOT_PERFORMED",
+  "content_state": "DRAFT_WITH_H403_V02_HISTORICAL_GATE_PRESERVED",
+  "canonical_promotion": false,
+  "git_operations": "NONE",
+  "exported": false,
+  "known_log_warnings": "Certificate store unavailable in sandbox; Image.load and resource/RID cleanup warnings during test teardown/short launcher exit. No script/parse/assert errors in final logs."
+}

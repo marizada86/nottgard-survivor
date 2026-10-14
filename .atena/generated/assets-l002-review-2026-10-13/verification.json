@@ -1,0 +1,41 @@
+{
+  "status": "PASS_TECHNICAL_REVIEW_OWNER_DECISION_PENDING",
+  "hashes_verified": 42,
+  "runtime_files_unchanged": 3049,
+  "gallery_links_verified": 148,
+  "historical_gates_preserved": 1,
+  "additional_frames_pending_acceptance": 41,
+  "pixel_flags": [
+    {
+      "code": "H703",
+      "kind": "CHANNEL_DIFFERENCE",
+      "max": 13,
+      "pixels": 1
+    },
+    {
+      "code": "H905",
+      "kind": "CHANNEL_DIFFERENCE",
+      "max": 13,
+      "pixels": 1
+    },
+    {
+      "code": "H906",
+      "kind": "CHANNEL_DIFFERENCE",
+      "max": 17,
+      "pixels": 5
+    }
+  ],
+  "new_generation": 0,
+  "runtime_admission": false,
+  "canonical_promotion": false,
+  "git_operations": "NONE",
+  "technical_steps_completed": 4,
+  "document_links_verified": 8,
+  "atena_visual_review": "SEVEN_HISTORICAL_CONTACT_SHEETS_INSPECTED",
+  "recommended_exclusions": [
+    "H402v01",
+    "H406v01"
+  ],
+  "owner_visual_acceptance": "PENDING",
+  "active_plan071_preserved": true
+}

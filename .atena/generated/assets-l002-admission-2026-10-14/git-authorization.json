@@ -1,0 +1,17 @@
+{
+  "owner_reply": "atena,commit e push",
+  "date": "2026-10-14",
+  "classification": "IN_PLAN_AUTHORIZED_GIT_DELIVERY",
+  "revision": "assets-l002-admission/v01",
+  "mode": "per-plan",
+  "scope": "L002 integration, visual review and Sylas correction records; push current asset branch including prior orb/wave and L001 commits",
+  "branch": "codex/assets-admission-main-2026-10-13",
+  "remote": "origin",
+  "commit_authorized": true,
+  "push_authorized": true,
+  "merge_authorized": false,
+  "canonical_promotion": false,
+  "human_runtime_playtest": "PENDING_NOT_PERFORMED",
+  "verification": "Runtime hashes unchanged; existing suite/smoke/parity/captures PASS; backlog P0=0, four open P1 BUG-025/027/028/029,16 awaiting playtest",
+  "push_status": "PENDING_EXECUTION"
+}

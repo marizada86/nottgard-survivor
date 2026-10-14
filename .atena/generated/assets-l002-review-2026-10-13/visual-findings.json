@@ -1,0 +1,32 @@
+{
+  "revision": "assets-l002-review/v01",
+  "atena_inspection": "Seven historical contact sheets inspected; source metrics read-only; human loop/rhythm acceptance not inferred",
+  "recommendation": "Approve other 39 DRAFT sources if visually acceptable; reserve H402v01/H406v01 for correction proposal. H403v02 historical approval preserved. No correction execution authorized yet.",
+  "recommended_exclusions": [
+    {
+      "code": "H402",
+      "version": "v01",
+      "reason": "Growth trail extends substantially farther left and is brighter than accepted H403 peak; sequence decreases extent into peak.",
+      "bbox_width_native": 1022,
+      "accepted_peak_bbox_width_native": 649,
+      "mean_luminance": 7.38,
+      "accepted_peak_mean_luminance": 4.99
+    },
+    {
+      "code": "H406",
+      "version": "v01",
+      "reason": "Dissipation retains coherent bright head/trail rather than only faint specks; hot-pixel count slightly rises vs H405.",
+      "pixels_luminance_gt128": 5758,
+      "previous_frame_pixels_luminance_gt128": 5512
+    }
+  ],
+  "other_review_notes": {
+    "Korrak": "Radial burst with flame tongues; historical vertical-appearance warning remains explicit owner evaluation. No automatic rejection from a contact sheet; native borders pass, peak margin tight and derivative calibration deferred.",
+    "Kayron/Nyrelia": "Motifs and six phases coherent on contact sheets; cycle seam/rotation needs owner evaluation in historical GIF.",
+    "Leoric": "Eight outer stars/lines visible; center junction is bright. Owner visual acceptance pending.",
+    "Zynara": "Clock motif and fading visible; channel deltas>12 only H905 one pixel/H906 five pixels; H703 one pixel too. Not exact grayscale; future approved technical alpha normalization may handle minor channel deviation without artistic redraw.",
+    "Bromnor": "Central shield/ring preserved, transitions to fragments; owner visual acceptance pending."
+  },
+  "sources_edited": false,
+  "human_acceptance": "PENDING"
+}

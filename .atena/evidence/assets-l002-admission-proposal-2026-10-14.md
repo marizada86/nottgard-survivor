@@ -1,0 +1,7 @@
+# L002 admissão — preparação da proposta / 2026-10-14
+
+Correções H402v03/H406v02 aceitas DRAFT pelo dono;39fases anteriores e H403v02 histórico preservados.42hashes conferidos,3049arquivos runtime intactos. [Seleção](../generated/assets-l002-admission-2026-10-14/selected-sources.json), [recibo](../generated/sylas-two-frame-correction-2026-10-13/visual-acceptance.json), [proposta prospectiva](../specs/SPEC-121-retomada-fila-imagens/assets-l002-admission-v01.md).
+
+Leitura de Battle.use_active/_fire_nova e helpers locais identificou dados reais disponíveis para pulsos/ciclos. Proposta usa estadoativo para Kayron e alvo real charmed para Nyrelia; apenas dois metadados visuais opcionais propostos no active bem-sucedido: visual_originSylas e visual_target_idNyrelia. Não implementar ainda. PulsosKorrak/Bromnor no nova sem segundoatlasnoactive, Leoric conserva oito projéteis e Zynara conserva time_slow4s com flash breve. Preservação do gameplay, comparação baseline e regressões delimitadas na spec.
+
+Autoridade/prontidão: bíblia L002, sete motivos já aceitos e entidadecorpoN/A; nenhuma geração/repintura. Primeiro checkpoint executável depende de seleção explícita do modo/escopo. BLOCKINGaprovacao; calibrações/metadados resolvíveis no plano; feedback humano runtime e bugs025/027/028/029 diferidos. PLAN071/B006/S011 preservado. Sem CANON/Git/exportação e nenhum teste do jogo repetido por não haver alteração runtime.

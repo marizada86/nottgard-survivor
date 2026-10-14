@@ -541,3 +541,5 @@ A single frame of a 2D game visual effect, pure top-down view as if lying flat o
 
 
 2026-10-13 — ART-028/030 L001: arcos Radiante/Fogo e VFX Durvall/Brook/Maelor,30fontes/cincoatlas admitidos localmente, DRAFT mantido/gates históricos preservados. assets-l001-admission/v01 técnico5/5; suíte0/smoke9,131capturas e snapshots de simulação PASS. Guarda segue carga/tempo; Comunhão um ciclo0,6s visual. Feedback humano runtime pendente; demais42quadros de heróis continuam revisão/admissão pendentes. Sem CANON/Git/exportação. Evidência `.atena/evidence/assets-l001-admission-2026-10-13.md`.
+
+2026-10-14 — ART030 L002:42fontes/seteatlas/setehabilidades admitidos localmente, DRAFT e H403v02 histórico preservados; técnico5/5, suíte0/smoke9/paridade140cenários12600passos/capturas221PASS. Só dois metadados de evento novos, gameplay intacto. Leoric raio visual2tiles, projéteis/evento11preservados. Playtest humano pendente; não encerrar subjetivamente toda FILA023. Sem CANON/Git/exportação. Evidência `.atena/evidence/assets-l002-admission-2026-10-14.md`.

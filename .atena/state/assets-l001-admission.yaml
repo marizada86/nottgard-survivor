@@ -19,7 +19,7 @@ runtime_changed: true
 canonical_promotion: false
 spec: .atena/specs/SPEC-121-retomada-fila-imagens/assets-l001-admission-v01.md
 source_acceptance: .atena/generated/assets-batch-review-2026-10-13/visual-acceptance.json
-next_objective: Commit local autorizado e revisao L002/42fontes em seguida.
+next_objective: Commit local2b96638 concluido; revisaoL002 em gate visual.
 next_inputs: Build local identificado, roteiro e oito atalhos QA; tres armas e tres herois.
 next_output: Feedback humano arma/heroi/modo/cor/direcao, aceitavel ou problema.
 next_checks: Leitura, brilho, ritmo e alinhamento; guarda consumida/4s e Comunhao breve sem cura continua.
@@ -30,3 +30,5 @@ playtest: .atena/generated/assets-l001-admission-2026-10-13/PLAYTEST.md
 human_runtime_playtest: PROCEDURE_NOT_REPORTED
 build_id: 0.4.0/assets-l001-admission-v01/1b0edb3+local-92c12e0ca1c7
 owner_delivery_acceptance: .atena/generated/assets-l001-admission-2026-10-13/owner-delivery-and-commit-authorization.json
+git_status: COMMITTED_LOCAL_NOT_PUSHED
+commit: 2b96638
