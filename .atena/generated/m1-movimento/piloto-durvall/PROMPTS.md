@@ -10,6 +10,8 @@ Nesta pasta você tem tudo. Para cada prompt: **abra uma conversa nova**, anexe 
 
 Arquivos: `durvall_idle.png` (referência do personagem) e `gabarito_*.png` (guia de posição; **não** deve aparecer na imagem final).
 
+**Decisão (2026-10-14, depois de jogar a candidata):** o ritmo atual de **10 fps** fica; o ritmo por herói (17 fps) foi descartado. A queixa foi falta de fluidez (movimento abrupto) e a corrida "engraçada". Por isso há o **P5**, uma versão de `move_e` com **8 quadros**, mais suave, para comparar com o P1.
+
 ---
 
 ## P1: `move_e` (andando para a direita, de perfil)
@@ -122,4 +124,35 @@ QUADROS:
 A espada fica na mão esquerda em todos os quadros.
 
 NÃO FAÇA: mudar o rosto, o cabelo, a armadura ou a cor; trocar a espada de mão; incluir símbolo, aura, faísca ou rastro de golpe; cortar a espada; cenário; sombra no chão.
+```
+
+---
+
+## P5 (opcional): `move_e` com 8 quadros, mais fluido
+
+**Anexe:** `durvall_idle.png` e `gabarito_move_e_8.png`. Salve como `durvall_move_e8_v01.png`.
+
+```
+Gere UMA tira de animação de personagem para jogo 2D isométrico: pintura de pixel detalhada, câmera três-quartos, luz vinda do alto à esquerda. Fundo TRANSPARENTE real (PNG com alfa). Sem cenário, sem chão, sem sombra projetada, sem texto, sem rótulos, sem desfoque de movimento.
+
+PERSONAGEM: use a imagem "durvall_idle.png" como referência OBRIGATÓRIA de rosto, cabelo, armadura, espada, paleta, proporção e acabamento. Não redesenhe nada. É Durvall, drow de pele cinza-azulada, cabelo branco longo e solto, orelhas pontudas, armadura negra laminada com ombreiras de espinhos, faixa vinho no cinto, pendente azul no peito, botas negras e uma espada de lâmina azul-gelo luminosa na MÃO ESQUERDA (a mesma mão em todos os quadros).
+
+FORMATO: uma faixa horizontal com 8 quadros iguais, lado a lado, sem espaço e sem moldura entre eles (cada quadro com proporção 2:3). Use "gabarito_move_e_8.png" só como guia de posição: linha verde = chão onde o pé de apoio toca; linha azul = topo da cabeça; retângulo vermelho = margem que nada pode cruzar; silhueta cinza = tamanho do personagem parado; cruzes rosa nos quadros 1 e 5 = onde os pés caem. NÃO desenhe nenhuma linha, número ou silhueta do gabarito na imagem final.
+
+DIREÇÃO: o personagem corre para a DIREITA da imagem, de perfil, numa corrida natural de guerreiro: tronco levemente inclinado para a frente, sem exagero, braços junto ao corpo balançando pouco, passos firmes (não pulinhos).
+
+MEDIDAS (importante): o personagem tem sempre a MESMA altura da silhueta (do topo da cabeça à sola), em todos os quadros; nunca aumente ou diminua o corpo para animar. O pé de apoio toca sempre a linha verde. Nos quadros 1 e 5 os dois pés ficam afastados mais ou menos a metade da altura do corpo (as cruzes rosa); entre os contatos o movimento é gradual, em passos pequenos entre um quadro e o seguinte. Nada pode encostar no retângulo vermelho, espada e cabelo incluídos.
+
+QUADROS (dois passos, quatro quadros cada):
+1) Contato: pé direito à frente, calcanhar tocando; pé esquerdo atrás, ponta apoiada.
+2) Recuo: corpo desce, a perna da frente absorve o peso.
+3) Passagem: perna de trás passa sob o corpo; corpo no ponto mais baixo da passagem.
+4) Impulso: o corpo sobe, a perna de trás empurra e se prepara para ir à frente.
+5) Contato: igual ao 1 com as pernas trocadas (pé esquerdo à frente).
+6) Recuo, igual ao 2 com as pernas trocadas.
+7) Passagem, igual ao 3 com as pernas trocadas.
+8) Impulso, igual ao 4 com as pernas trocadas; o quadro 8 leva suavemente de volta ao quadro 1.
+A espada fica na mesma mão em todos os quadros, sem cortar.
+
+NÃO FAÇA: mudar o rosto, o cabelo, a armadura ou a cor; trocar a espada de mão; incluir símbolo, aura ou efeito que não esteja no idle; cortar a espada; cenário; sombra no chão.
 ```

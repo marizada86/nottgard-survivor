@@ -27,6 +27,7 @@ owner_decisions:
   D15: 'M1 r2: laboratorio de codigo para o patinar e coleta H5 continuam em paralelo.'
   D17: 'G-D1 (2026-10-14, "aprovo as fichas"): 12 fichas aprovadas como escritas; P1, P3, P4 e P6 fechados pela recomendacao; P2 (referencia canonica de Brook) e P7 abertos.'
   D18: 'P5 (2026-10-14): nome oficial do grupo e Grimholders; o dono corrigira o Vault (somente leitura aqui). Nenhuma mudanca no jogo.'
+  D19: 'G-D2 (2026-10-14, apos jogar a candidata move_e): manter 10 fps; ritmo por heroi (17 fps) descartado. Queixa: movimento abrupto e corrida engracada (provisorio). Seguir com P2 a P4 e testar 8 quadros (P5).'
   D16: 'M1 r2: referencias = ficha do Vault, arte do Nottcard e imagens do dono; nenhum inimigo; tira defeituosa nao e mais anexada.'
 batches:
   B-001: {milestone: M0, title: 'Base e validacao continua', kind: CONTINUOUS, status: PENDING_FIRST_APPROVAL}
@@ -50,7 +51,7 @@ deferred_gaps: ['mobile', 'Web', 'loja/Steam', 'localizacao', 'cooperativo']
 return:
   plan: PLAN-100
   note: 'PLAN-100 concluido local, aguardando decisoes do dono (filtro padrao, fonte); passam ao B-001/M0. PLAN-071 segue arquivado.'
-next_objective: "Dono manda os 4 prompts do piloto Durvall ao GPT e salva os PNGs em .atena/generated/m1-movimento/piloto-durvall/retorno/; Atena audita (S-008) e integra como candidata local para ver no jogo com o ritmo auto. G-D2 (caminho de codigo) segue em aberto; assumido o ritmo por heroi da formula para o piloto."
+next_objective: "Dono manda P2 (move_se), P3 (move_s), P4 (attack) e opcionalmente P5 (move_e 8 quadros) ao GPT e salva em retorno/; Atena normaliza e abre o laboratorio com tudo."
 phase_a:
   steps_done: [S-001, S-002, S-003, S-004]
   evidence: EVID-246
