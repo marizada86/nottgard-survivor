@@ -4,6 +4,8 @@ extends SceneTree
 ##
 ## Separa os quadros por componentes conexos (alfa), aplica UMA escala para todos (média das alturas dos quadros com o pé no chão),
 ## ancora a base do pé de apoio em `base_y` (quadros no ar sobem na mesma proporção) e centra pela cabeça (centroide do topo).
+## Opção `--grid=CxR` (ex.: 3x2): o gerador devolveu os quadros em grade, linha por linha; a ordem sai lida da esquerda para a direita e de cima para baixo.
+## Opção `--clean-left=N`: apaga pixels azul-gelo (ponta de espada do quadro vizinho que se sobrepõe ao cabelo) a menos de N px da borda esquerda da célula; só para tiras com a espada à direita.
 ## Imprime por quadro: altura, base, largura, margens e abertura dos pés (12% inferiores). Não altera a entrada.
 
 const ALPHA := 0.15
@@ -15,6 +17,20 @@ func _initialize() -> void:
 		printerr("uso: -- <entrada.png> <saida.png> <quadros> [altura_alvo] [base_y] [celula_w] [celula_h]")
 		quit(2)
 		return
+	var clean_left := 0
+	var grid_cols := 0
+	var grid_rows := 0
+	var positional: Array[String] = []
+	for a in args:
+		if a.begins_with("--clean-left="):
+			clean_left = int(a.substr(13))
+		elif a.begins_with("--grid="):
+			var parts := a.substr(7).split("x")
+			grid_cols = int(parts[0])
+			grid_rows = int(parts[1])
+		else:
+			positional.append(a)
+	args = PackedStringArray(positional)
 	var frames_expected := int(args[2])
 	var target_h := float(args[3]) if args.size() > 3 else 231.0
 	var base_y := int(args[4]) if args.size() > 4 else 376
@@ -25,14 +41,40 @@ func _initialize() -> void:
 		quit(1)
 		return
 	img.convert(Image.FORMAT_RGBA8)
-	var comps := _components(img, 0, img.get_width())
-	if comps.size() != frames_expected:
-		# Quadros que se tocam viram um componente só: divide em colunas iguais e fica com o maior componente de cada uma.
+	var comps := _components(img, 0, img.get_width(), 0, img.get_height())
+	if grid_cols > 0 and comps.size() != frames_expected:
+		# Grade: cada célula do gerador é igual; fica o maior componente de cada uma.
+		comps = []
+		var cw := img.get_width() / grid_cols
+		var chh := img.get_height() / grid_rows
+		for r in grid_rows:
+			for c in grid_cols:
+				var part := _components(img, c * cw, (c + 1) * cw, r * chh, (r + 1) * chh)
+				if part.is_empty():
+					printerr("célula %d,%d sem quadro" % [c + 1, r + 1])
+					quit(1)
+					return
+				part.sort_custom(func(a, b): return a.area > b.area)
+				comps.append(part[0])
+	if grid_cols > 0 and comps.size() == frames_expected:
+		var row_h := float(img.get_height()) / float(grid_rows)
+		comps.sort_custom(func(a, b):
+			var ra := clampi(int((a.y0 + a.y1) * 0.5 / row_h), 0, grid_rows - 1)
+			var rb := clampi(int((b.y0 + b.y1) * 0.5 / row_h), 0, grid_rows - 1)
+			if ra != rb:
+				return ra < rb
+			return a.x0 < b.x0)
+	elif comps.size() != frames_expected:
+		# Quadros que se tocam: corta nas colunas mais vazias perto das divisas e devolve cada pedaço fino (ponta de espada)
+		# ao quadro com que ele se encontra do outro lado do corte, em vez de fatiar a espada ao meio.
+		comps = _components_valley(img, frames_expected)
+	if grid_cols == 0 and comps.size() != frames_expected:
+		# Último recurso: divide em colunas iguais e fica com o maior componente de cada uma.
 		print("aviso: %d componentes para %d quadros; usando colunas iguais (cortes e contaminação possíveis)" % [comps.size(), frames_expected])
 		comps = []
 		var column := img.get_width() / frames_expected
 		for i in frames_expected:
-			var part := _components(img, i * column, (i + 1) * column)
+			var part := _components(img, i * column, (i + 1) * column, 0, img.get_height())
 			if part.is_empty():
 				printerr("coluna %d sem quadro" % (i + 1))
 				quit(1)
@@ -40,10 +82,16 @@ func _initialize() -> void:
 			part.sort_custom(func(a, b): return a.area > b.area)
 			comps.append(part[0])
 		comps.sort_custom(func(a, b): return a.x0 < b.x0)
-	var max_base := 0
+	# Linha de base de referência por linha da grade (uma só linha numa tira simples): o quadro mais baixo da linha.
+	var rows_count := maxi(1, grid_rows)
+	var row_h2 := float(img.get_height()) / float(rows_count)
+	var row_max := {}
 	for c in comps:
-		max_base = maxi(max_base, c.y1)
-	var ground: Array = comps.filter(func(c): return c.y1 >= max_base - 4)
+		c["row"] = clampi(int((c.y0 + c.y1) * 0.5 / row_h2), 0, rows_count - 1) if grid_cols > 0 else 0
+		row_max[c.row] = maxi(int(row_max.get(c.row, 0)), c.y1)
+	for c in comps:
+		c["base_ref"] = row_max[c.row]
+	var ground: Array = comps.filter(func(c): return c.y1 >= c.base_ref - 4)
 	var mean_h := 0.0
 	for c in ground:
 		mean_h += float(c.y1 - c.y0 + 1)
@@ -77,8 +125,14 @@ func _initialize() -> void:
 					cnt += 1
 		var head_x := (sum_x / maxf(cnt, 1.0)) * scale
 		var left := roundi(cell.x * 0.5 - head_x)
-		var top := roundi(base_y + 1 - (float(max_base - c.y0 + 1)) * scale)
+		var top := roundi(base_y + 1 - (float(c.base_ref - c.y0 + 1)) * scale)
 		out.blit_rect(crop, Rect2i(0, 0, nw, nh), Vector2i(i * cell.x + left, top))
+		if clean_left > 0:
+			for yy in cell.y:
+				for xx in mini(clean_left, cell.x):
+					var px := out.get_pixel(i * cell.x + xx, yy)
+					if px.a > 0.0 and px.b > px.r + 0.16 and px.b > 0.45:
+						out.set_pixel(i * cell.x + xx, yy, Color(0, 0, 0, 0))
 		# métricas no quadro final
 		var spread := _foot_spread(crop, nh)
 		print("%d,%d,%d,%d,%d,%d,%d,%d,%d" % [i + 1, nh, top + nh - 1, nw, left, cell.x - (left + nw), top, cell.y - (top + nh), spread])
@@ -100,7 +154,7 @@ func _foot_spread(crop: Image, h: int) -> int:
 				max_x = maxi(max_x, x)
 	return max_x - min_x + 1 if max_x >= 0 else 0
 
-func _components(img: Image, x_min: int, x_max: int) -> Array:
+func _components(img: Image, x_min: int, x_max: int, y_min: int, y_max: int) -> Array:
 	var w := img.get_width()
 	var h := img.get_height()
 	var label := PackedInt32Array()
@@ -108,7 +162,7 @@ func _components(img: Image, x_min: int, x_max: int) -> Array:
 	var comps: Array = []
 	var stack: Array[int] = []
 	var id := 0
-	for y in h:
+	for y in range(y_min, y_max):
 		for x in range(x_min, x_max):
 			var i := y * w + x
 			if label[i] != 0 or img.get_pixel(x, y).a <= ALPHA:
@@ -133,7 +187,7 @@ func _components(img: Image, x_min: int, x_max: int) -> Array:
 				for d in [Vector2i(1, 0), Vector2i(-1, 0), Vector2i(0, 1), Vector2i(0, -1)]:
 					var nx: int = px + d.x
 					var ny: int = py + d.y
-					if nx < x_min or ny < 0 or nx >= x_max or ny >= h:
+					if nx < x_min or ny < y_min or nx >= x_max or ny >= y_max:
 						continue
 					var ni := ny * w + nx
 					if label[ni] == 0 and img.get_pixel(nx, ny).a > ALPHA:
@@ -143,3 +197,126 @@ func _components(img: Image, x_min: int, x_max: int) -> Array:
 				comps.append({"id": id, "x0": x0, "x1": x1, "y0": y0, "y1": y1, "area": area, "label": label})
 	comps.sort_custom(func(a, b): return a.x0 < b.x0)
 	return comps
+
+## Separa quadros que se tocam: corta nas colunas de menor ocupação perto de cada divisa e re-anexa os pedaços finos
+## (menores que MIN_AREA) ao componente grande com que eles se encontram através do corte.
+func _components_valley(img: Image, n: int) -> Array:
+	var w := img.get_width()
+	var h := img.get_height()
+	var occ := PackedInt32Array()
+	occ.resize(w)
+	for x in w:
+		var c := 0
+		for y in h:
+			if img.get_pixel(x, y).a > ALPHA:
+				c += 1
+		occ[x] = c
+	var cuts: Array[int] = []
+	for k in range(1, n):
+		var b := roundi(float(k) * w / float(n))
+		var best := b
+		var best_v := 1 << 30
+		for x in range(maxi(1, b - 60), mini(w - 2, b + 60) + 1):
+			if occ[x] < best_v:
+				best_v = occ[x]
+				best = x
+		cuts.append(best)
+	var is_cut := PackedByteArray()
+	is_cut.resize(w)
+	for c in cuts:
+		is_cut[c] = 1
+	var label := PackedInt32Array()
+	label.resize(w * h)
+	var areas := {}
+	var stack: Array[int] = []
+	var id := 0
+	for y in h:
+		for x in w:
+			var i := y * w + x
+			if label[i] != 0 or is_cut[x] == 1 or img.get_pixel(x, y).a <= ALPHA:
+				continue
+			id += 1
+			var area := 0
+			label[i] = id
+			stack.append(i)
+			while not stack.is_empty():
+				var p: int = stack.pop_back()
+				var px := p % w
+				var py := p / w
+				area += 1
+				for d in [Vector2i(1, 0), Vector2i(-1, 0), Vector2i(0, 1), Vector2i(0, -1)]:
+					var nx: int = px + d.x
+					var ny: int = py + d.y
+					if nx < 0 or ny < 0 or nx >= w or ny >= h or is_cut[nx] == 1:
+						continue
+					var ni := ny * w + nx
+					if label[ni] == 0 and img.get_pixel(nx, ny).a > ALPHA:
+						label[ni] = id
+						stack.append(ni)
+			areas[id] = area
+	# pedaços finos -> componente grande do outro lado do corte (mais pixels de contato)
+	var remap := {}
+	for c in cuts:
+		var votes := {}
+		for y in h:
+			if img.get_pixel(c, y).a <= ALPHA:
+				continue
+			var left: int = label[y * w + c - 1]
+			var right: int = label[y * w + c + 1]
+			if left == 0 or right == 0:
+				continue
+			var left_big: bool = int(areas[left]) >= MIN_AREA
+			var right_big: bool = int(areas[right]) >= MIN_AREA
+			if left_big != right_big:
+				var small: int = right if left_big else left
+				var big: int = left if left_big else right
+				votes[small] = votes.get(small, {})
+				votes[small][big] = int(votes[small].get(big, 0)) + 1
+		for small in votes:
+			var best_big := -1
+			var best_n := -1
+			for big in votes[small]:
+				if int(votes[small][big]) > best_n:
+					best_n = int(votes[small][big])
+					best_big = big
+			remap[small] = best_big
+	# o pedaço fino pode estar ligado a outro pedaço fino (ponta com vários trechos): resolve cadeias
+	for small in remap.keys():
+		var target: int = remap[small]
+		var guard := 0
+		while remap.has(target) and guard < 8:
+			target = remap[target]
+			guard += 1
+		remap[small] = target
+	for i in w * h:
+		var l: int = label[i]
+		if l != 0 and remap.has(l):
+			label[i] = remap[l]
+	# colunas de corte: cada pixel vai para o rótulo vizinho (esquerda, senão direita)
+	for c in cuts:
+		for y in h:
+			if img.get_pixel(c, y).a > ALPHA:
+				var l: int = label[y * w + c - 1]
+				if l == 0:
+					l = label[y * w + c + 1]
+				label[y * w + c] = l
+	var boxes := {}
+	for y in h:
+		for x in w:
+			var l: int = label[y * w + x]
+			if l == 0:
+				continue
+			if not boxes.has(l):
+				boxes[l] = {"id": l, "x0": x, "x1": x, "y0": y, "y1": y, "area": 0, "label": label}
+			var b: Dictionary = boxes[l]
+			b.x0 = mini(b.x0, x)
+			b.x1 = maxi(b.x1, x)
+			b.y0 = mini(b.y0, y)
+			b.y1 = maxi(b.y1, y)
+			b.area += 1
+	var out: Array = []
+	for l in boxes:
+		if int(boxes[l].area) >= MIN_AREA:
+			out.append(boxes[l])
+	out.sort_custom(func(a, b): return a.x0 < b.x0)
+	return out

@@ -6,6 +6,8 @@
 //
 // Cada célula traz: chão (verde), topo da cabeça (azul), margem proibida de 10 px (vermelho), eixo central, número do quadro
 // e a silhueta do idle (cinza) como escala. `--gutter` deixa uma faixa vazia entre as células (separa quadros que se tocam).
+// `--cols` organiza as células em grade (linha por linha, como o gerador devolve): ex. 6 quadros em 3 colunas x 2 linhas.
+// `--idle-scale` amplia a silhueta (e `--height`/`--step` valem na mesma escala); a normalização reduz depois para a altura do jogo.
 // `--marks` põe cruzes rosa nos pés do contato (quadros indicados) afastadas por `--step` px.
 const fs = require("fs"), zlib = require("zlib");
 
@@ -21,6 +23,9 @@ const BASE = parseInt(arg("base", "376"), 10), HEIGHT = parseInt(arg("height", "
 const GUT = parseInt(arg("gutter", "0"), 10), STEP = parseInt(arg("step", "0"), 10);
 const MARKS = arg("marks", "").split(",").filter(Boolean).map(Number);
 const IDLE_FEET = parseInt(arg("idle-feet", "376"), 10);
+const COLS = parseInt(arg("cols", String(N)), 10);
+const ROWS = Math.ceil(N / COLS);
+const ISCALE = parseFloat(arg("idle-scale", "1"));
 
 function decode(path) {
   const b = fs.readFileSync(path); let o = 8, w, h, ct, idat = [];
@@ -57,32 +62,35 @@ const DIG = { "0": ["111", "101", "101", "101", "111"], "1": ["010", "110", "010
 
 const idle = decode(`assets/animations/heroes/${hero}/idle.png`);
 const idleCell = Math.round(idle.w / 4);           // idle tem 4 quadros
-const W = N * CW + (N - 1) * GUT, H = CH;
+const W = COLS * CW + (COLS - 1) * GUT, H = ROWS * CH + (ROWS - 1) * GUT;
 const px = Buffer.alloc(W * H * 4);
 const set = (x, y, r, g, b) => { if (x < 0 || y < 0 || x >= W || y >= H) return; const i = (y * W + x) * 4; px[i] = r; px[i + 1] = g; px[i + 2] = b; px[i + 3] = 255; };
 for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) set(x, y, GUT > 0 ? 210 : 236, GUT > 0 ? 210 : 236, GUT > 0 ? 210 : 236);
 const TOP = BASE - HEIGHT;
 for (let c = 0; c < N; c++) {
-  const x0 = c * (CW + GUT);
-  for (let y = 0; y < CH; y++) for (let x = 0; x < CW; x++) set(x0 + x, y, 236, 236, 236);
-  // silhueta do idle, com os pés de `idle-feet` levados para `BASE` e o centro da célula do idle no centro desta
-  const ox = Math.round(CW / 2 - idleCell / 2), oy = BASE - IDLE_FEET;
-  for (let y = 0; y < idle.h; y++) for (let x = 0; x < idleCell; x++) { if (idle.px[(y * idle.w + x) * 4 + 3] > 40) set(x0 + ox + x, oy + y, 170, 170, 176); }
-  for (let x = 0; x < CW; x++) { set(x0 + x, BASE, 0, 160, 60); set(x0 + x, BASE + 1, 0, 160, 60); set(x0 + x, TOP, 30, 90, 220); set(x0 + x, TOP + 1, 30, 90, 220); }
-  for (let y = 0; y < CH; y++) { if (y % 8 < 4) set(x0 + Math.floor(CW / 2), y, 120, 120, 120); }
-  for (let x = 10; x < CW - 10; x++) { set(x0 + x, 10, 220, 40, 40); set(x0 + x, CH - 11, 220, 40, 40); }
-  for (let y = 10; y < CH - 10; y++) { set(x0 + 10, y, 220, 40, 40); set(x0 + CW - 11, y, 220, 40, 40); }
-  for (let y = 0; y < CH; y++) { set(x0, y, 60, 60, 60); set(x0 + CW - 1, y, 60, 60, 60); }
+  const x0 = (c % COLS) * (CW + GUT), y0 = Math.floor(c / COLS) * (CH + GUT);
+  for (let y = 0; y < CH; y++) for (let x = 0; x < CW; x++) set(x0 + x, y0 + y, 236, 236, 236);
+  // silhueta do idle, ampliada por ISCALE em torno dos pés (centro do idle no centro da célula, pés em BASE)
+  for (let dy = 0; dy < CH; dy++) for (let dx = 0; dx < CW; dx++) {
+    const sx = Math.round(idleCell / 2 + (dx - CW / 2) / ISCALE), sy = Math.round(IDLE_FEET + (dy - BASE) / ISCALE);
+    if (sx < 0 || sy < 0 || sx >= idleCell || sy >= idle.h) continue;
+    if (idle.px[(sy * idle.w + sx) * 4 + 3] > 40) set(x0 + dx, y0 + dy, 170, 170, 176);
+  }
+  for (let x = 0; x < CW; x++) { set(x0 + x, y0 + BASE, 0, 160, 60); set(x0 + x, y0 + BASE + 1, 0, 160, 60); set(x0 + x, y0 + TOP, 30, 90, 220); set(x0 + x, y0 + TOP + 1, 30, 90, 220); }
+  for (let y = 0; y < CH; y++) { if (y % 8 < 4) set(x0 + Math.floor(CW / 2), y0 + y, 120, 120, 120); }
+  for (let x = 10; x < CW - 10; x++) { set(x0 + x, y0 + 10, 220, 40, 40); set(x0 + x, y0 + CH - 11, 220, 40, 40); }
+  for (let y = 10; y < CH - 10; y++) { set(x0 + 10, y0 + y, 220, 40, 40); set(x0 + CW - 11, y0 + y, 220, 40, 40); }
+  for (let y = 0; y < CH; y++) { set(x0, y0 + y, 60, 60, 60); set(x0 + CW - 1, y0 + y, 60, 60, 60); }
   const label = String(c + 1);
   for (let k = 0; k < label.length; k++) {
     const d = DIG[label[k]];
-    for (let r = 0; r < 5; r++) for (let q = 0; q < 3; q++) if (d[r][q] === "1") for (let yy = 0; yy < 5; yy++) for (let xx = 0; xx < 5; xx++) set(x0 + 16 + k * 20 + q * 5 + xx, 16 + r * 5 + yy, 40, 40, 40);
+    for (let r = 0; r < 5; r++) for (let q = 0; q < 3; q++) if (d[r][q] === "1") for (let yy = 0; yy < 5; yy++) for (let xx = 0; xx < 5; xx++) set(x0 + 16 + k * 20 + q * 5 + xx, y0 + 16 + r * 5 + yy, 40, 40, 40);
   }
   if (STEP > 0 && MARKS.includes(c + 1)) {
     for (const fx of [Math.floor(CW / 2) - Math.round(STEP / 2), Math.floor(CW / 2) + Math.round(STEP / 2)]) {
-      for (let k = -9; k <= 9; k++) { set(x0 + fx + k, BASE - 1, 230, 0, 200); set(x0 + fx, BASE - 1 + k, 230, 0, 200); }
+      for (let k = -9; k <= 9; k++) { set(x0 + fx + k, y0 + BASE - 1, 230, 0, 200); set(x0 + fx, y0 + BASE - 1 + k, 230, 0, 200); }
     }
   }
 }
 fs.writeFileSync(out, encode(W, H, px));
-console.log(`${out}: ${W}x${H}, ${N} células de ${CW}x${CH}, base ${BASE}, altura ${HEIGHT}, gutter ${GUT}`);
+console.log(`${out}: ${W}x${H}, ${N} células de ${CW}x${CH} em ${COLS}x${ROWS}, base ${BASE}, altura ${HEIGHT}, gutter ${GUT}`);
