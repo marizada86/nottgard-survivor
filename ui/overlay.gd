@@ -1,8 +1,13 @@
 extends Node2D
 ## Desenha zonas, telégrafos, projéteis, coletáveis e interações. Um nó por camada (mode).
 
-@export_enum("under", "over") var mode := "over"
+@export_enum("under", "over", "text") var mode := "over"
 var battle: Battle
+## SPEC-173: com o filtro de tela, o texto do mundo (rótulos, nomes) é desenhado por uma 3ª instância (mode "text"), numa camada
+## acima do filtro, para não ser pixelizado. A instância "over" só enfileira o texto; a "text" desenha a fila de source.
+var split_text := false
+var source  # Node2D da instância "over" (sem tipo: o script não tem class_name)
+var _text_queue: Array[Dictionary] = []
 static var _texture_cache := {}
 const HAPPENING_ART := preload("res://ui/happening_art.gd")
 var _large_fx_by_quadrant: Array[int] = [0, 0, 0, 0]
@@ -166,8 +171,29 @@ func _draw() -> void:
 		return
 	if mode == "under":
 		_draw_zones()
+	elif mode == "text":
+		_draw_text_queue()
 	else:
+		_text_queue.clear()
 		_draw_over()
+
+## SPEC-173: rótulo do mundo. Com split_text, vai para a fila que a instância "text" desenha acima do filtro de tela.
+func _text(pos: Vector2, text: String, width: float, size: int, color: Color, outline: int = 0, outline_color: Color = Color(0, 0, 0, 0.85)) -> void:
+	if split_text:
+		_text_queue.append({"pos": pos, "text": text, "width": width, "size": size, "color": color, "outline": outline, "outline_color": outline_color})
+		return
+	_paint_text(pos, text, width, size, color, outline, outline_color)
+
+func _paint_text(pos: Vector2, text: String, width: float, size: int, color: Color, outline: int, outline_color: Color) -> void:
+	if outline > 0:
+		draw_string_outline(ThemeDB.fallback_font, pos, text, HORIZONTAL_ALIGNMENT_CENTER, width, size, outline, outline_color)
+	draw_string(ThemeDB.fallback_font, pos, text, HORIZONTAL_ALIGNMENT_CENTER, width, size, color)
+
+func _draw_text_queue() -> void:
+	if source == null:
+		return
+	for e in source._text_queue:
+		_paint_text(e.pos, e.text, e.width, e.size, e.color, e.outline, e.outline_color)
 
 func _draw_zones() -> void:
 	_large_fx_by_quadrant = [0, 0, 0, 0]
@@ -476,10 +502,9 @@ func _draw_over() -> void:
 		var label_w := maxf(220.0, ThemeDB.fallback_font.get_string_size(label, HORIZONTAL_ALIGNMENT_LEFT, -1, 15).x + 12.0) if String(it.kind).begins_with("event_") else 110.0
 		if String(it.kind).begins_with("event_"):
 			# SPEC-147: rótulo de quest maior e com contorno, para não se perder no cenário
-			draw_string_outline(ThemeDB.fallback_font, draw_p + Vector2(-label_w * 0.5, -base_h - 8.0), label, HORIZONTAL_ALIGNMENT_CENTER, label_w, 15, 5, Color(0, 0, 0, 0.85))
-			draw_string(ThemeDB.fallback_font, draw_p + Vector2(-label_w * 0.5, -base_h - 8.0), label, HORIZONTAL_ALIGNMENT_CENTER, label_w, 15, Color(col.lightened(0.25), 1.0))
+			_text(draw_p + Vector2(-label_w * 0.5, -base_h - 8.0), label, label_w, 15, Color(col.lightened(0.25), 1.0), 5)
 		else:
-			draw_string(ThemeDB.fallback_font, draw_p + Vector2(-label_w * 0.5, -base_h - 8.0), label, HORIZONTAL_ALIGNMENT_CENTER, label_w, 12, Color(col, 0.95))
+			_text(draw_p + Vector2(-label_w * 0.5, -base_h - 8.0), label, label_w, 12, Color(col, 0.95))
 	_draw_happenings()
 	_draw_ecos()
 	_draw_star_path()
@@ -527,7 +552,7 @@ func _draw_star_path() -> void:
 	var c := mp + Vector2(0, -34)
 	draw_circle(c, 16.0 + 4.0 * pulse, Color(gold, 0.16 + 0.12 * pulse))
 	draw_colored_polygon(PackedVector2Array([c + Vector2(0, -12), c + Vector2(8, 0), c + Vector2(0, 12), c + Vector2(-8, 0)]), Color(gold, 0.95))
-	draw_string(ThemeDB.fallback_font, c + Vector2(-60, -20), "Estrela do Norte", HORIZONTAL_ALIGNMENT_CENTER, 120, 12, Color(gold, 0.95))
+	_text(c + Vector2(-60, -20), "Estrela do Norte", 120, 12, Color(gold, 0.95))
 
 ## SPEC-147: realce de item, alvo, NPC ou inimigo da quest que está dentro da tela. A cor vem do marcador, mas nunca
 ## fica apagada: o anel e a seta usam a cor com brilho mínimo para se destacar do cenário.
@@ -585,7 +610,7 @@ func _draw_happenings() -> void:
 		var frac := clampf(float(a.hp) / maxf(1.0, float(a.max_hp)), 0.0, 1.0)
 		draw_rect(Rect2(p + Vector2(-20, -h - 10), Vector2(40, 4)), Color(0, 0, 0, 0.6))
 		draw_rect(Rect2(p + Vector2(-20, -h - 10), Vector2(40 * frac, 4)), Color(0.4, 1.0, 0.5))
-		draw_string(ThemeDB.fallback_font, p + Vector2(-60, -h - 14), String(a.label), HORIZONTAL_ALIGNMENT_CENTER, 120, 12, Color(0.75, 1.0, 0.8))
+		_text(p + Vector2(-60, -h - 14), String(a.label), 120, 12, Color(0.75, 1.0, 0.8))
 	var view := get_viewport_rect().grow(-EventPointer.MARGIN)
 	for m in hp_.markers(battle):
 		# SPEC-147 (IN-071): dentro da tela o alvo da quest ganha anel pulsante e uma seta que balança sobre ele;

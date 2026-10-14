@@ -53,6 +53,9 @@ var _fog_edges: Array[TextureRect] = []
 var _edge_fog: EdgeFog
 var _texture_cache: Dictionary = {}
 var _stage_background: CanvasLayer
+var _visual_filter: VisualFilter  # SPEC-173: entre o mundo e a HUD
+var _text_layer: CanvasLayer      # SPEC-173: texto do mundo, acima do filtro
+var _text_fx: Node2D
 
 func _texture(path: String) -> Texture2D:
 	if not _texture_cache.has(path):
@@ -84,6 +87,7 @@ func _ready() -> void:
 	hud.pause_items_pressed.connect(_toggle_items_panel)
 	Game.controls.recovery_requested.connect(_controller_recovery)
 	_setup_encounter_overlays()
+	_setup_visual_filter()
 	_load_stage()
 	if Game.qa_sandbox:
 		battle.qa_prepare(Game.qa_launch)
@@ -180,6 +184,33 @@ func _load_stage() -> void:
 	Sfx.set_context(battle.hero.id, battle.stage_id)
 	Sfx.start_music(battle.stage_id)
 	Sfx.start_ambience(battle.stage_id)
+
+## SPEC-173 (MEC-065): o filtro cabe entre o mundo e o texto do mundo, e o texto entre o filtro e a HUD; desligado, o filtro não desenha.
+## O texto (números de dano, falas, rótulos) vai numa camada que segue a câmera, para ficar nítido sob qualquer variante.
+func _setup_visual_filter() -> void:
+	hud.layer = VisualFilter.HUD_LAYER
+	_visual_filter = VisualFilter.new()
+	add_child(_visual_filter)
+	_text_layer = CanvasLayer.new()
+	_text_layer.name = "WorldText"
+	_text_layer.layer = VisualFilter.TEXT_LAYER
+	_text_layer.follow_viewport_enabled = true
+	add_child(_text_layer)
+	_text_fx = Node2D.new()
+	_text_fx.name = "TextFx"
+	_text_layer.add_child(_text_fx)
+	var text_overlay = (load("res://ui/overlay.gd") as GDScript).new()
+	text_overlay.mode = "text"
+	text_overlay.battle = battle
+	text_overlay.source = over
+	over.split_text = true
+	_text_layer.add_child(text_overlay)
+	_visual_filter.apply(Game.profile.data.settings)
+	Game.visual_settings_changed.connect(_on_visual_settings_changed)
+
+func _on_visual_settings_changed() -> void:
+	if is_instance_valid(_visual_filter):
+		_visual_filter.apply(Game.profile.data.settings)
 
 func _setup_encounter_overlays() -> void:
 	_encounter_layer = CanvasLayer.new()
@@ -354,6 +385,8 @@ func _sync_cursor() -> void:
 func _exit_tree() -> void:
 	if get_tree().process_frame.is_connected(_sync_cursor):
 		get_tree().process_frame.disconnect(_sync_cursor)
+	if Game.visual_settings_changed.is_connected(_on_visual_settings_changed):
+		Game.visual_settings_changed.disconnect(_on_visual_settings_changed)
 	CursorSkin.reset()
 	if battle != null and not _result_shown:
 		Playtest.record_run(battle)
@@ -896,7 +929,7 @@ func _float_text(at: Vector2, text: String, col: Color, size: int, critical: boo
 	l.add_theme_constant_override("outline_size", 5 if critical else 4)
 	l.pivot_offset = Vector2(18, 12)
 	l.scale = Vector2.ONE * (0.7 if critical else 0.82)
-	fx.add_child(l)
+	_text_fx.add_child(l)
 	_numbers += 1
 	var t := create_tween()
 	t.tween_property(l, "scale", Vector2.ONE * (1.15 if critical else 1.0), 0.12).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
@@ -1217,7 +1250,7 @@ func _bark_now(trigger: String) -> void:
 	l.add_theme_color_override("font_outline_color", Color(0.05, 0.04, 0.08))
 	l.add_theme_constant_override("outline_size", 5)
 	l.position = hero_node.position + Vector2(-95, -118)
-	fx.add_child(l)
+	_text_fx.add_child(l)
 	_bark_label = l
 	var t := create_tween()
 	t.tween_interval(2.6)

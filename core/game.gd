@@ -5,6 +5,10 @@ const SAVE_PATH := "user://profile.json"
 const SAVE_BACKUP_SUFFIX := ".bak"
 const SAVE_TEMP_SUFFIX := ".tmp"
 const SAVE_CORRUPT_SUFFIX := ".corrupt"
+const VISUAL_FILTERS := ["off", "paleta", "gravura"]  # SPEC-173; os rótulos ficam em ui/visual_filter.gd
+
+## SPEC-173: o filtro visual ou o impacto reduzido mudou (a partida aberta reaplica o filtro na hora).
+signal visual_settings_changed
 
 var profile: Profile
 var persisted := false
@@ -395,6 +399,15 @@ func set_window_mode(style: String) -> void:
 	profile.data.settings.fullscreen = style == "fullscreen"
 	apply_settings()
 	save()
+
+
+## SPEC-173: filtro visual de tela (off, paleta, gravura). Aplica na hora, na partida aberta.
+func set_visual_filter(mode: String) -> void:
+	if not (mode in VISUAL_FILTERS):
+		return
+	profile.data.settings.visual_filter = mode
+	save()
+	visual_settings_changed.emit()
 
 
 func set_resolution(resolution: String) -> void:

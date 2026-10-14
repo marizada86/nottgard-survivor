@@ -18,6 +18,7 @@ var barks: CheckBox
 var reduced_impact: CheckBox
 var display_mode: OptionButton
 var resolution: OptionButton
+var visual: OptionButton
 var _syncing := false
 
 func _init() -> void:
@@ -62,6 +63,15 @@ func _init() -> void:
 		Game.set_resolution(resolution.get_item_text(i))
 		changed.emit())
 	add_child(_row("Resolução", resolution))
+	visual = OptionButton.new()  # SPEC-173 (MEC-065)
+	for label in VisualFilter.LABELS:
+		visual.add_item(label)
+	visual.item_selected.connect(func(i):
+		if _syncing:
+			return
+		Game.set_visual_filter(String(VisualFilter.MODES[i]))
+		changed.emit())
+	add_child(_row("Visual", visual))
 	if Game.touch_controls_enabled():
 		aim.disabled = true
 		display_mode.disabled = true
@@ -113,11 +123,14 @@ func refresh() -> void:
 	reduced_impact.button_pressed = bool(s.get("reduced_impact", false))
 	display_mode.select(maxi(0, Game.WINDOW_MODES.find(String(s.get("window_mode", "windowed")))))
 	resolution.select(maxi(0, Game.SUPPORTED_RESOLUTIONS.find(String(s.get("resolution", "1280x720")))))
+	visual.select(maxi(0, VisualFilter.MODES.find(VisualFilter.mode_of(s))))
 	_syncing = false
 
 func _save(key: String, value: Variant) -> void:
 	Game.profile.data.settings[key] = value
 	Game.save()
+	if key == "reduced_impact":
+		Game.visual_settings_changed.emit()  # SPEC-173: a gravura tira o grão com impacto reduzido
 	changed.emit()
 
 func _save_master(value: float) -> void:
