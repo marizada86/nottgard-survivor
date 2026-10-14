@@ -64,7 +64,7 @@ func button_name(index: int) -> String:
 	if family() in ["ps4", "ps5"]:
 		return String({0: "×", 1: "○", 2: "□", 3: "△", 4: "Create" if family() == "ps5" else "Share", 6: "Options", 7: "L3", 8: "R3", 9: "L1", 10: "R1"}.get(index, "Botão %d" % index))
 	if family() == "generic":
-		return String({0: "Sul", 1: "Leste", 2: "Oeste", 3: "Norte", 4: "Voltar central", 6: "Menu", 7: "Clique esquerdo", 8: "Clique direito", 9: "Ombro esquerdo", 10: "Ombro direito"}.get(index, "Botão %d" % index))
+		return String({0: "Botão inferior", 1: "Botão direito", 2: "Botão esquerdo", 3: "Botão superior", 4: "Voltar", 6: "Menu", 7: "Analógico esq. (apertar)", 8: "Analógico dir. (apertar)", 9: "Ombro esquerdo", 10: "Ombro direito"}.get(index, "Botão %d" % index))
 	return String(BUTTON_NAMES.get(index, "Botão %d" % index))
 
 func action_button(action: String) -> int:
