@@ -121,6 +121,7 @@ var _dbg_smooth := false
 var _dbg_force := Vector2.ZERO
 var _dbg_bob := 0.0    # SPEC-176: balanço vertical sincronizado ao ciclo (px de tela); 0 = desligado
 var _dbg_lean := 0.0   # SPEC-176: inclinação sincronizada ao ciclo (rad); 0 = desligado
+var _lab_real := {}    # SPEC-176: tiras de oeste reais vindas de --walk-candidate (sem espelho); vazio = comportamento normal
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
@@ -238,7 +239,7 @@ func sync_visual(screen_position: Vector2, is_dead: bool, is_flash: bool) -> voi
 				sprite.flip_h = false
 			elif walking:
 				desired = _walk_animation(movement_delta)
-				sprite.flip_h = walk_flips_horizontally(movement_delta)
+				sprite.flip_h = false if _lab_real.has(directional_walk_animation(movement_delta)) else walk_flips_horizontally(movement_delta)
 				if uses_procedural_walk(_active_hero_id):
 					sprite.position = Vector2.ZERO
 					sprite.rotation = 0.0
@@ -342,10 +343,11 @@ func _process(delta: float) -> void:
 func _lab_apply_candidate(frames: SpriteFrames, cell: Vector2i) -> void:
 	if Engine.is_editor_hint() or not WalkTrace.enabled():
 		return
+	_lab_real = {}
 	var dir := WalkTrace.option("walk-candidate")
 	if dir == "":
 		return
-	for animation in [&"move_e", &"move_se", &"move_s", &"move_n", &"move_ne", &"attack"]:
+	for animation in [&"move_e", &"move_se", &"move_s", &"move_n", &"move_ne", &"move_w", &"move_sw", &"move_nw", &"attack"]:
 		var path := "%s/%s/%s.png" % [dir, _active_hero_id, animation]
 		if not FileAccess.file_exists(path):
 			continue
@@ -361,6 +363,8 @@ func _lab_apply_candidate(frames: SpriteFrames, cell: Vector2i) -> void:
 		frames.add_animation(animation)
 		frames.set_animation_speed(animation, 10.0 if is_move else 12.0)
 		frames.set_animation_loop(animation, is_move)
+		if animation in [&"move_w", &"move_sw", &"move_nw"]:
+			_lab_real[animation] = true
 		for index in maxi(1, image.get_width() / frame_size.x):
 			var atlas := AtlasTexture.new()
 			atlas.atlas = texture
@@ -392,6 +396,8 @@ func _on_animation_finished() -> void:
 	_action_locked = false
 
 func _walk_animation(delta: Vector2) -> StringName:
+	if _lab_real.has(directional_walk_animation(delta)):
+		return directional_walk_animation(delta)
 	var animation := walk_animation_for_direction(delta)
 	return animation if sprite.sprite_frames.has_animation(animation) else &"move"
 
