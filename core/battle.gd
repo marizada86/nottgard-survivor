@@ -841,7 +841,7 @@ func _hero_hit(e: Enemy, p: Dictionary, roll: bool, visual_theme: Dictionary = {
 		run_record.hit(String(p.get("_audio_id", p.get("id", "unattributed"))), dmg, e.hp)
 		e.hp -= dmg
 		e.hit_flash = 0.12
-		events.append({"type": "hit", "pos": e.pos, "amount": int(dmg), "crit": crit, "dtype": dtype, "tid": e.get_instance_id(), "visual_theme": resolved_theme})
+		events.append({"type": "hit", "pos": e.pos, "amount": int(dmg), "crit": crit, "dtype": dtype, "tid": e.get_instance_id(), "visual_theme": resolved_theme, "weapon": p.get("_audio_id", p.get("id", "")), "kind": p.get("kind", "")})
 		if crit and _has_boon_effect("critical_wave"):
 			for other in enemies:
 				if other != e and not other.dead and other.pos.distance_to(e.pos) <= 2.0:

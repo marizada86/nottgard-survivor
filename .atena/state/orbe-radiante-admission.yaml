@@ -1,0 +1,34 @@
+version: 1
+plan: PLAN-053
+revision: orbe-radiante-admission/v01
+classification: IN_PLAN_APPROVED_ADMISSION
+status: OWNER_ACCEPTED_LOCAL_DELIVERY
+mode: per-plan
+approval_status: APPROVED_EXPLICITLY
+checkpoint: S-004/OWNER_DELIVERY_ACCEPTANCE_RECORDED
+ordered_steps: [S-001, S-002, S-003, S-004]
+batches: {B-001: [S-001], B-002: [S-002], B-003: [S-003, S-004]}
+current_step_position: 4
+completed_steps: 4
+total_steps: 4
+remaining_steps_after_current: 0
+spec: .atena/specs/SPEC-121-retomada-fila-imagens/orbe-radiante-admission-v01.md
+source_acceptance: .atena/generated/orbe-radiante-review-2026-10-13/visual-acceptance.json
+content_state: DRAFT
+canonical_promotion: false
+runtime_changed: true
+defaults: {cell: 256, flight_fps: 12, impact_duration: 0.24, flight_core_px: 5, impact_peak_px: 12}
+weapons: [raio_de_luz, luz_mais_pura, marca_da_retidao]
+next_objective: Retomar fila pela revisao do Orbe Arcano; preservar distincao de playtest nao relatado.
+return_plan: {id: PLAN-071, checkpoint: B-006/S-011, preserved: true}
+authorization: .atena/generated/orbe-radiante-admission-2026-10-13/authorization.json
+verification: .atena/generated/orbe-radiante-admission-2026-10-13/verification.json
+evidence: .atena/evidence/orbe-radiante-admission-2026-10-13.md
+playtest: .atena/generated/orbe-radiante-admission-2026-10-13/PLAYTEST.md
+build_id: 0.4.0/orbe-radiante-admission-v01/a431fa9+local-c9693f3da2cc
+human_runtime_playtest: PROCEDURE_NOT_REPORTED
+next_inputs: Roteiro QA, tres armas radiantes e modo reduzido.
+next_output: Feedback humano arma/modo/cor/direcao e aceitavel ou problema.
+next_checks: Legibilidade, conforto, ritmo, orientacao e residuos; sem afirmar diversao por metricas.
+owner_delivery_reply: aprovado
+owner_delivery_acceptance: .atena/generated/orbe-arcano-review-2026-10-13/radiant-delivery-acceptance.json

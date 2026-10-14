@@ -665,6 +665,7 @@ func _consume_events() -> void:
 		var at := Iso.to_screen(ev.pos) if ev.has("pos") else Vector2.ZERO
 		match String(ev.type):
 			"hit":
+				over.spawn_orb_impact(ev)
 				Sfx.play("combat.critical" if ev.crit else "combat.impact", -14.0)
 				if ev.crit:
 					_hit_stop(0.04)

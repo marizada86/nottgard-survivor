@@ -1,0 +1,25 @@
+{
+  "owner_reply": "atena aprovado, commit",
+  "classification": "IN_PLAN_AUTHORIZED_LOCAL_GIT",
+  "scope": [
+    "orbe-radiante-admission/v01",
+    "orbe-arcano-admission/v01",
+    "onda-cortante-admission/v01"
+  ],
+  "onda_delivery_accepted": true,
+  "human_playtest_procedure": "NOT_REPORTED",
+  "subjective_specific_criteria": "NOT_INDEPENDENTLY_VERIFIED",
+  "content_state": "DRAFT",
+  "canonical_promotion": false,
+  "commit_authorized": true,
+  "push_authorized": false,
+  "merge_authorized": false,
+  "export_authorized": false,
+  "branch": "codex/assets-admission-main-2026-10-13",
+  "pre_commit_head": "a431fa90932afb8424fc9e8a43c019241e4c1056",
+  "runtime_hash_verification": "PASS",
+  "backlog": "P0=0; open P1=BUG-025/027/028/029; 16 awaiting playtest; 0 organizational alerts",
+  "commit_result": "COMMITTED_LOCAL",
+  "commit_subject": "feat(vfx): admit radiant and arcane orbs and cutting wave",
+  "published": false
+}

@@ -1,0 +1,146 @@
+{
+  "revision": "onda-cortante-admission/v01",
+  "mode": "per-plan",
+  "owner_reply": "1. Por plano — uma aprovação para todo o escopo planejado. (Recomendado)",
+  "sources": [
+    {
+      "code": "R01",
+      "path": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_fly_00_v02.png",
+      "sha256": "53f665277345e5a59d093f25e5f3f9ebfd800a1b146c535d0b48513b4e4308f1",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v02",
+      "mean_luminance": 10.552484680601024,
+      "visible_fraction_above12": 0.07416967458518706,
+      "central_hot_light_centroid_normalized": [
+        0.5809216255092068,
+        0.5005883000177849
+      ],
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-4f339012-973b-4673-bd62-4360483f2b5e.png",
+      "prompt": "Edit the FIRST attached image: this is R01 v01, a single flying energy crescent frame. The SECOND image is approved painted white/gray glow STYLE only. Keep the first image crescent EXACTLY at the same position, same scale, same right-facing curvature, same thin white painted blade and tapered tips pointing backward LEFT, black background and square canvas. No movement, no enlargement, no rotation, no additional blade or ring.\n\nCHANGE ONLY THE LIGHTNING DETAIL: add a few clearly recognizable THIN angular zigzag ELECTRIC ARCS crackling close along the OUTER CONVEX RIGHT EDGE of the crescent. Small branching white/gray lightning filaments with sharp bends and a few forked tips, concentrated close to the blade edge, readable as lightning even when reduced to96px. The main energy blade remains thin and dominant; do not turn it into a giant explosion or add long bolts across the canvas. Distinguish lightning from smooth brush streaks and detached diamond sparks. Preserve stylized hand-painted white bright core and soft gray falloff.\n\nOnly ONE first flight frame of this cutting-wave projectile, flat top-down as drawn on the ground. Pure BLACK background, WHITE/GRAY effect only. No color, person, hand, weapon, readable text, border, scene, shadow, ground or perspective. Keep all glow and fine lightning safely inside the generous black margins. Requested1024x1024; preserve native square layout.",
+      "human_acceptance": "R01_HISTORICAL_APPROVED"
+    },
+    {
+      "code": "R02",
+      "path": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_fly_01_v01.png",
+      "sha256": "2c83e4d6759beaa50bd339e7a365b2f2cf87b6db7543885f72a961aae98ad844",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 11.523336487514277,
+      "visible_fraction_above12": 0.07837185758364303,
+      "central_hot_light_centroid_normalized": [
+        0.5801609919995767,
+        0.4993470472624687
+      ],
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-970771d0-e73b-449c-bbec-3840ce17c210.png",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a thin crescent blade of energy, curved with its tips pointing backward to the LEFT because it flies to the RIGHT, with fine jagged lightning crackling along its edge. Frame 2 of 8, fly 01: flight frame 2 of 4: the same projectile, its glow pulsing slightly brighter and the tail flickering a little longer. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED R01 v02 cutting-wave identity/position including fine jagged lightning. Reference2 is APPROVED physical pilot painted white-core/gray-glow STYLE ONLY. Generate ONLY R02 phase, never a montage. Native square1024 requested, flat overhead view, white/gray effect only, pure black background and safe margins. No weapon, hand, character, scene, border, ground or readable text.\nFLIGHT LOOP: Preserve EXACT approved R01 v02 crescent position, diameter, curvature and LEFT-pointing tapered tips. Main blade still leads RIGHT. Glow only slightly brighter and short trailing edge light flickers slightly longer. Keep visible fine angular lightning filaments close along the convex RIGHT edge. No translation, scaling or rotation of the crescent.",
+      "human_acceptance": "PENDING_VISUAL_ACCEPTANCE"
+    },
+    {
+      "code": "R03",
+      "path": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_fly_02_v01.png",
+      "sha256": "8e053772e4805e2ffd2c20715e89d7e8c44d088a6f87abc4c45bd7d6c542193b",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 10.499500164068284,
+      "visible_fraction_above12": 0.07446410720145295,
+      "central_hot_light_centroid_normalized": [
+        0.5808166570617251,
+        0.49725113994418696
+      ],
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-219671d8-78fe-4fcc-a281-8448f760bfb0.png",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a thin crescent blade of energy, curved with its tips pointing backward to the LEFT because it flies to the RIGHT, with fine jagged lightning crackling along its edge. Frame 3 of 8, fly 02: flight frame 3 of 4: the same projectile, its inner details rotated a quarter turn, the tail a little shorter. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED R01 v02 cutting-wave identity/position including fine jagged lightning. Reference2 is APPROVED physical pilot painted white-core/gray-glow STYLE ONLY. Generate ONLY R03 phase, never a montage. Native square1024 requested, flat overhead view, white/gray effect only, pure black background and safe margins. No weapon, hand, character, scene, border, ground or readable text.\nFLIGHT LOOP: Exact same approved R01 v02 position, shape, diameter, RIGHT-facing crescent and LEFT-pointing tips. Change only the inner painted light details through a quarter-turn phase and slightly shorten trailing wisps. This is internal detail motion ONLY: NEVER rotate the overall crescent or its direction. Fine jagged lightning remains along leading convex edge.",
+      "human_acceptance": "PENDING_VISUAL_ACCEPTANCE"
+    },
+    {
+      "code": "R04",
+      "path": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_fly_03_v01.png",
+      "sha256": "a636ee836297e261874a26a096a64e0ed8748d720b6f89e0aca0ebb472166b43",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 8.359809375548483,
+      "visible_fraction_above12": 0.06789120110701577,
+      "central_hot_light_centroid_normalized": [
+        0.581630476941512,
+        0.49750471114133465
+      ],
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-457089d3-9136-4125-a247-75eeadaffb16.png",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a thin crescent blade of energy, curved with its tips pointing backward to the LEFT because it flies to the RIGHT, with fine jagged lightning crackling along its edge. Frame 4 of 8, fly 03: flight frame 4 of 4: the same projectile, glow slightly dimmer, so that the next frame flows back into frame 1. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED R01 v02 cutting-wave identity/position including fine jagged lightning. Reference2 is APPROVED physical pilot painted white-core/gray-glow STYLE ONLY. Generate ONLY R04 phase, never a montage. Native square1024 requested, flat overhead view, white/gray effect only, pure black background and safe margins. No weapon, hand, character, scene, border, ground or readable text.\nLOOP CLOSURE: Preserve exactly approved R01 v02 crescent position, size, direction and silhouette. Slightly dimmer white/gray glow and original short trailing edge length so returning to R01 is a gentle pulse with no jump in position, size or orientation. Retain fine jagged electric filaments along right edge.",
+      "human_acceptance": "PENDING_VISUAL_ACCEPTANCE"
+    },
+    {
+      "code": "R05",
+      "path": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_hit_00_v02.png",
+      "sha256": "7fbbdadd57d6af7152b54c8dc6ca6fd76e29703990bf8e5e89cada58a45d0ae4",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v02",
+      "mean_luminance": 9.301187396503439,
+      "visible_fraction_above12": 0.08170600489915524,
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-296c98d1-9ae4-4565-a7a0-fd3a6107c1b5.png",
+      "prompt": "Use case: precise-object-edit. Asset: ONE early collision flash frame for a2D game, square1024, opaque visually pure black canvas. Reference1 is the REJECTED impact frame to correct. Reference2 is APPROVED cutting-wave identity for white/gray fine lightning texture ONLY, NEVER its crescent silhouette. Reference3 is APPROVED painted white-core gray-falloff STYLE ONLY. Correct reference1 into a COMPACT early impact: REMOVE the entire large intact CRESCENT, ALL long curved blade arcs and ALL flight trails. Move the small white flash core to exact canvas center (50%width,50%height). Keep only that small bright compact flash, a FEW short nascent radial sparks and tiny disconnected angular energy fragments with fine electric filaments. Entire compact burst within central40%of canvas, about60%of upcoming full impact peak size, generous black margins. No intact curved flying blade, no tail, no large ring, no glyphs, no symbols, no character, no weapon, no hand, no ground, no perspective, no text. Flat overhead light effect, same painted texture. Single image, never a montage.",
+      "human_acceptance": "PENDING_VISUAL_ACCEPTANCE"
+    },
+    {
+      "code": "R06",
+      "path": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_hit_01_v01.png",
+      "sha256": "fc2013656b41122311941289fb851347751b0a2b230975476304f63a5fb342c2",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 41.02424395045901,
+      "visible_fraction_above12": 0.331000765651987,
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-1f0629e1-713b-42f4-826e-0e267299fcfb.png",
+      "prompt": "Use case: stylized-concept. ONE2D game VFX IMPACT PEAK frame R06, square1024 canvas, pure black background, flat overhead view. Reference1 is APPROVED cutting-wave flight identity for white/gray jagged lightning and painted light texture ONLY: DO NOT copy its intact crescent shape. Reference2 is APPROVED physical pilot STYLE ONLY. Reference3 is preceding GENERATED R05 early collision flash, technical continuity only, not separately owner-approved. Create the next phase of reference3: a MAXIMUM-SIZE BRIGHTEST energy collision BURST, substantially larger than R05 (R05 was about60%of this peak size), hot white compact flash core exactly at canvas center, many short angular radial blade-energy fragments, sparks and fine jagged electric filaments in all directions. Entire burst centered and within central80%ofcanvas, generous black margins beyond every particle. White and gray ONLY, bright painted core with soft gray light falloff. The flying blade has ceased to exist: NO intact crescent, NO long curved blade arc, NO flight tail, NO sideways smoke stream. NO glyphs, symbols, letters, orb motifs, character, weapon, hand, scene, ground, shadow or perspective. Only a centered expanding radial collision flash, NEVER a montage.",
+      "human_acceptance": "PENDING_VISUAL_ACCEPTANCE"
+    },
+    {
+      "code": "R07",
+      "path": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_hit_02_v01.png",
+      "sha256": "79296cd598e203e1d3034fdd526fd92e1599ce86bac042aa3210df2474fa4672",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 13.19009154755818,
+      "visible_fraction_above12": 0.16980622136754092,
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-d648bc8d-3ee7-455a-9ecf-a7b71da65875.png",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a thin crescent blade of energy, curved with its tips pointing backward to the LEFT because it flies to the RIGHT, with fine jagged lightning crackling along its edge. Frame 7 of 8, hit 02: impact frame 3 of 4: the burst expanding into fragments and a thin ring, dimmer gray. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED R01 v02 cutting-wave identity/position including fine jagged lightning. Reference2 is APPROVED physical pilot painted white-core/gray-glow STYLE ONLY. Generate ONLY R07 phase, never a montage. Native square1024 requested, flat overhead view, white/gray effect only, pure black background and safe margins. No weapon, hand, character, scene, border, ground or readable text.\nIMPACT DECAY: No solid white core, intact projectile or left flight tail. Centered thin expanding GRAY ring with dim broken blade-energy fragments and fine fading electric filaments, clearly dimmer than peak, open black center. Keep exact pivot and painted light texture. No glyphs or readable text.\n\nReference3 is the preceding GENERATED R06 cutting-wave IMPACT PEAK as technical phase-continuity support, not separately human-approved. Preserve its exact center and fragmented blade-energy texture while removing ALL solid white core and following requested dim decay phase. Approved R01 identity (reference1) and physical style pilot (reference2) remain authoritative. No intact flying crescent, tail, glyphs or orb motifs. Thin expanding GRAY broken ring and dim blade-energy fragments with fading fine electric filaments, clearly dimmer than R06, open black center.",
+      "human_acceptance": "PENDING_VISUAL_ACCEPTANCE"
+    },
+    {
+      "code": "R08",
+      "path": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_hit_03_v01.png",
+      "sha256": "0ca2b691f2a420f7338b9eb68a8616213901cc94d4f06a70e4482beaa7c98c08",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 1.9334181655385383,
+      "visible_fraction_above12": 0.036806620727547444,
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-75ee6eca-0ee2-432e-9d45-4ecec7bd282c.png",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a thin crescent blade of energy, curved with its tips pointing backward to the LEFT because it flies to the RIGHT, with fine jagged lightning crackling along its edge. Frame 8 of 8, hit 03: impact frame 4 of 4: only faint scattered specks and a barely visible ring remain, almost black. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED R01 v02 cutting-wave identity/position including fine jagged lightning. Reference2 is APPROVED physical pilot painted white-core/gray-glow STYLE ONLY. Generate ONLY R08 phase, never a montage. Native square1024 requested, flat overhead view, white/gray effect only, pure black background and safe margins. No weapon, hand, character, scene, border, ground or readable text.\nFINAL IMPACT: Almost entirely BLACK with a barely visible DARK GRAY centered broken ring and sparse faint specks or broken energy fragments. No white core, bright lightning, intact projectile, flight tail or left smoke stream. Same exact canvas-center pivot.\n\nReference3 is the preceding GENERATED R06 cutting-wave IMPACT PEAK as technical phase-continuity support, not separately human-approved. Preserve its exact center and fragmented blade-energy texture while removing ALL solid white core and following requested dim decay phase. Approved R01 identity (reference1) and physical style pilot (reference2) remain authoritative. No intact flying crescent, tail, glyphs or orb motifs. Almost black remnants: barely visible dark gray broken ring and sparse faint fragments. No white core, bright lightning or bright sparks.",
+      "human_acceptance": "PENDING_VISUAL_ACCEPTANCE"
+    }
+  ],
+  "content_state": "DRAFT",
+  "canonical_promotion": false,
+  "scope": "Approved cutting-wave admission: two atlases, own helper, family dispatch in existing layer, calibration, validation/playtest preparation. Battle/data/run/overlay and Both orb helpers/atlases protected; no Git/export."
+}

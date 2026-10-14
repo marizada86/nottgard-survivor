@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "build_id": "0.4.0/orbe-radiante-admission-v01/a431fa9+local-c9693f3da2cc",
+  "sources": 8,
+  "atlases": 2,
+  "steps_completed": 4,
+  "suite_failures": 0,
+  "smoke_stages": 9,
+  "rendered_captures": 23,
+  "simulation_parity": {
+    "comparison": "Pre-admission Battle vs current, identical RNG/damage/hp/status/projectile trajectory/pierce/events except primary hit weapon/kind. Instance IDs canonicalized.",
+    "counts": {
+      "crit": 9,
+      "hit": 286,
+      "miss": 92,
+      "piercing_contacts": 3904,
+      "scenarios": 80,
+      "steps": 7200
+    },
+    "status": "PASS"
+  },
+  "protected_preexisting_files": 3007,
+  "unchanged_preexisting_files": 3004,
+  "allowed_changed_files": [
+    "core/battle.gd",
+    "ui/overlay.gd",
+    "ui/run.gd"
+  ],
+  "battle_only_approved_hit_metadata": true,
+  "source_and_backup_hashes": "PASS",
+  "human_playtest": "PENDING_NOT_PERFORMED",
+  "canonical_promotion": false,
+  "content_state": "DRAFT_ADMITTED_LOCAL",
+  "git": "NO_COMMIT_PUSH_MERGE",
+  "exported": false,
+  "logs": [
+    "focused-final.log",
+    "suite.log",
+    "smoke.log",
+    "parity-verified.log",
+    "capture-final.log",
+    "import-final.log",
+    "Jogar-Raio.log",
+    "Jogar-Luz-Pura.log",
+    "Jogar-Marca.log",
+    "Jogar-Reduzido.log",
+    "Jogar-Tou-Um.log"
+  ],
+  "runtime_sha256": {
+    "assets/vfx/orbe_radiante_voo.png": "9faacd1b08ffbfc18a31e9fa049082ee20e12349bf0c2b1e6341a1b31d84cf7f",
+    "assets/vfx/orbe_radiante_impacto.png": "3da8c0969e367d10491ebf73588f7f7d4cad2247e98cb45c86937e8bb2e0a495",
+    "core/radiant_orb_vfx.gd": "9df7021d28da6bdf0508a275b6833114e98ad902c8cecf43c58504f067ae237b",
+    "ui/radiant_orb_layer.gd": "a8c4f168dd6ffb3301db69555f51f14b9b8cf7d565e48a4db8b07f4b54528d54",
+    "core/battle.gd": "a7d29e32db1664e3560c185e058a45fd19ce1c4c0cc04fc6fe9823d5072b2388",
+    "ui/overlay.gd": "3ce739e0219a6e515f900b37ef022435d67602232837cd8975a36b972b071db8",
+    "ui/run.gd": "28e86753f57af8f779be4368da21663cdf954013036ab2e2266f24828fb4b28a",
+    "tests/test_radiant_orb_vfx.gd": "cbc952f047e4e743b70e871201052e8f46f9f21958b19a673feb408a50994c09"
+  },
+  "qa_attempt_notes": "Initial focused draw API and capture typing errors corrected; baseline harness adapted to Battle subclass overriding only original _hero_hit, boon/status fixtures corrected. Only clean final logs accepted."
+}

@@ -1,0 +1,34 @@
+version: 1
+plan: PLAN-053
+revision: onda-cortante-admission/v01
+classification: IN_PLAN_APPROVED_ADMISSION
+status: OWNER_ACCEPTED_LOCAL_DELIVERY
+mode: per-plan
+approval_status: APPROVED_EXPLICITLY
+checkpoint: S-004/OWNER_DELIVERY_ACCEPTANCE_RECORDED
+ordered_steps: [S-001, S-002, S-003, S-004]
+batches: {B-001: [S-001], B-002: [S-002], B-003: [S-003, S-004]}
+current_step_position: 4
+completed_steps: 4
+total_steps: 4
+remaining_steps_after_current: 0
+spec: .atena/specs/SPEC-121-retomada-fila-imagens/onda-cortante-admission-v01.md
+source_acceptance: .atena/generated/onda-cortante-review-2026-10-13/visual-acceptance.json
+content_state: DRAFT
+canonical_promotion: false
+runtime_changed: true
+weapons: [lamina_trovejante, tempestade]
+defaults: {cell: 256, flight_fps: 12, impact_duration: 0.24, flight_main_height_px: 18, impact_main_radius_px: 12, combined_impact_cap: 32}
+next_objective: Commit local concluido; conferir proxima pendencia da fila existente ao retomar.
+return_plan: {id: PLAN-071, checkpoint: B-006/S-011, preserved: true}
+authorization: .atena/generated/onda-cortante-admission-2026-10-13/authorization.json
+verification: .atena/generated/onda-cortante-admission-2026-10-13/verification.json
+evidence: .atena/evidence/onda-cortante-admission-2026-10-13.md
+playtest: .atena/generated/onda-cortante-admission-2026-10-13/PLAYTEST.md
+build_id: 0.4.0/onda-cortante-admission-v01/a431fa9+local-7a192db2f9dc
+human_runtime_playtest: PROCEDURE_NOT_REPORTED
+next_inputs: Roteiro, cinco atalhos QA, duas armas e cena de tres familias.
+next_output: Feedback humano arma/modo/cor/direcao, aceitavel ou problema.
+next_checks: Crescente/pontas/raios, leitura da perfuracao, conforto, ritmo e reduzido.
+owner_delivery_acceptance: .atena/generated/onda-cortante-admission-2026-10-13/owner-delivery-and-commit-authorization.json
+git_status: COMMITTED_LOCAL_NOT_PUSHED

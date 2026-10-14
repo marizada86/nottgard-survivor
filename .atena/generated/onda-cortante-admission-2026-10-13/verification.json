@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "build_id": "0.4.0/onda-cortante-admission-v01/a431fa9+local-7a192db2f9dc",
+  "content_state": "DRAFT_ADMITTED_LOCAL",
+  "steps_completed": 4,
+  "sources_verified": 8,
+  "atlases": 2,
+  "suite_failures": 0,
+  "smoke_stages": 9,
+  "captures": 69,
+  "capture_groups": [
+    22,
+    24,
+    23
+  ],
+  "combined_impact_budget": 32,
+  "protected_preexisting_files": 3025,
+  "unchanged_preexisting_files": 3024,
+  "allowed_changed_files": [
+    "ui/radiant_orb_layer.gd"
+  ],
+  "battle_data_run_overlay_orb_helpers_tests_atlases_unchanged": true,
+  "source_backup_and_atlas_hashes": "PASS",
+  "logs": [
+    "focused-final.log",
+    "suite.log",
+    "smoke.log",
+    "capture-final.log",
+    "arcane-regression-final.log",
+    "radiant-regression-final.log",
+    "import-final.log",
+    "parity-final.log",
+    "Jogar-Lamina.log",
+    "Jogar-Tempestade.log",
+    "Jogar-Reduzido.log",
+    "Jogar-Tou-Um.log",
+    "Jogar-Misto.log"
+  ],
+  "runtime_sha256": {
+    "core/cutting_wave_vfx.gd": "dd12a587e5366e3c4f4cf8c0a11ff39d536c99f39b115e0037d9f70909dd1d22",
+    "ui/radiant_orb_layer.gd": "13d8b49a9f7335a4bd9052bab1223038440471e7acdb594b8eecc08abb23fa7c",
+    "assets/vfx/onda_cortante_voo.png": "642c332f71fa898ae4aae42cd5760ff69162854a131cef55ba2e21a9e0ce894a",
+    "assets/vfx/onda_cortante_impacto.png": "a2dbf386412582172ea06dd6005ed3d44cc3191cf61baed6d181c66a302de8e4",
+    "tests/test_cutting_wave_vfx.gd": "0ed07ffb4e8d795ee9dae649f4139c9c730c2db3b154818606bb10c0856edbc1"
+  },
+  "human_playtest": "PENDING_NOT_PERFORMED",
+  "canonical_promotion": false,
+  "git_operations": "NO_COMMIT_PUSH_MERGE",
+  "exported": false,
+  "known_log_warnings": "Godot root certificate store unavailable; preexisting suite teardown resource leaks and Image.load warning. No script/parse/assert errors; no external networking required."
+}

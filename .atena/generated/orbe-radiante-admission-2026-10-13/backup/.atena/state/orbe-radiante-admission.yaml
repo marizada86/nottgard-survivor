@@ -1,0 +1,23 @@
+version: 1
+plan: PLAN-053
+revision: orbe-radiante-admission/v01
+classification: PLAN_CHANGE_REQUEST
+status: PROPOSED_NOT_EXECUTABLE
+mode: unconfigured
+approval_status: PENDING_OWNER_CHOICE
+checkpoint: PLAN_APPROVAL
+ordered_steps: [S-001, S-002, S-003, S-004]
+batches: {B-001: [S-001], B-002: [S-002], B-003: [S-003, S-004]}
+current_step_position: 1
+completed_steps: 0
+total_steps: 4
+remaining_steps_after_current: 3
+spec: .atena/specs/SPEC-121-retomada-fila-imagens/orbe-radiante-admission-v01.md
+source_acceptance: .atena/generated/orbe-radiante-review-2026-10-13/visual-acceptance.json
+content_state: DRAFT
+canonical_promotion: false
+runtime_changed: false
+defaults: {cell: 256, flight_fps: 12, impact_duration: 0.24, flight_core_px: 5, impact_peak_px: 12}
+weapons: [raio_de_luz, luz_mais_pura, marca_da_retidao]
+next_objective: Escolher modo e aprovar escopo de normalizacao/admissao antes de executar S-001.
+return_plan: {id: PLAN-071, checkpoint: B-006/S-011, preserved: true}

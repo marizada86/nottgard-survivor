@@ -1,0 +1,108 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "code": "P01",
+      "visible_gt12": 5813,
+      "bbox_gt12": [
+        38,
+        86,
+        167,
+        168
+      ],
+      "peak_alpha": 255
+    },
+    {
+      "code": "P02",
+      "visible_gt12": 6447,
+      "bbox_gt12": [
+        33,
+        85,
+        169,
+        169
+      ],
+      "peak_alpha": 255
+    },
+    {
+      "code": "P03",
+      "visible_gt12": 5603,
+      "bbox_gt12": [
+        53,
+        86,
+        167,
+        168
+      ],
+      "peak_alpha": 255
+    },
+    {
+      "code": "P04",
+      "visible_gt12": 5316,
+      "bbox_gt12": [
+        39,
+        88,
+        166,
+        166
+      ],
+      "peak_alpha": 255
+    },
+    {
+      "code": "P05",
+      "visible_gt12": 6244,
+      "bbox_gt12": [
+        76,
+        76,
+        179,
+        170
+      ],
+      "peak_alpha": 255
+    },
+    {
+      "code": "P06",
+      "visible_gt12": 14830,
+      "bbox_gt12": [
+        45,
+        37,
+        210,
+        210
+      ],
+      "peak_alpha": 255
+    },
+    {
+      "code": "P07",
+      "visible_gt12": 10196,
+      "bbox_gt12": [
+        40,
+        40,
+        216,
+        209
+      ],
+      "peak_alpha": 255
+    },
+    {
+      "code": "P08",
+      "visible_gt12": 1481,
+      "bbox_gt12": [
+        64,
+        60,
+        193,
+        190
+      ],
+      "peak_alpha": 152
+    }
+  ],
+  "pivot": [
+    128,
+    128
+  ],
+  "flight_core_radius": 27,
+  "impact_peak_radius": 46,
+  "flight_scale": 0.18518518518518517,
+  "impact_scale": 0.2608695652173913,
+  "radius_method": "Centered radial median; P01 >=0.8 for bright core, P06 >=0.5 for main luminous body, excludes narrow rays/tail. Same scale across each four frames. Exact visual pivot not inferred from photometric centroid.",
+  "native_sources_unchanged": true,
+  "p08_residue_preserved": true,
+  "atlases": {
+    "orbe_radiante_voo": "9faacd1b08ffbfc18a31e9fa049082ee20e12349bf0c2b1e6341a1b31d84cf7f",
+    "orbe_radiante_impacto": "3da8c0969e367d10491ebf73588f7f7d4cad2247e98cb45c86937e8bb2e0a495"
+  }
+}

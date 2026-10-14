@@ -1,0 +1,142 @@
+{
+  "alpha": "Rec709 luminance; <=2/255zero",
+  "atlas_size": [
+    1024,
+    256
+  ],
+  "content_state": "DRAFT",
+  "filter": "Godot Lanczos1254->1024 audit and1254->256 runtime",
+  "flight_fps": 12,
+  "impact_duration": 0.24,
+  "records": [
+    {
+      "cell": [
+        256,
+        256
+      ],
+      "code": "R01",
+      "offset": [
+        0,
+        0
+      ],
+      "sha256": "53f665277345e5a59d093f25e5f3f9ebfd800a1b146c535d0b48513b4e4308f1",
+      "source": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_fly_00_v02.png",
+      "version": "v02"
+    },
+    {
+      "cell": [
+        256,
+        256
+      ],
+      "code": "R02",
+      "offset": [
+        256,
+        0
+      ],
+      "sha256": "2c83e4d6759beaa50bd339e7a365b2f2cf87b6db7543885f72a961aae98ad844",
+      "source": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_fly_01_v01.png",
+      "version": "v01"
+    },
+    {
+      "cell": [
+        256,
+        256
+      ],
+      "code": "R03",
+      "offset": [
+        512,
+        0
+      ],
+      "sha256": "8e053772e4805e2ffd2c20715e89d7e8c44d088a6f87abc4c45bd7d6c542193b",
+      "source": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_fly_02_v01.png",
+      "version": "v01"
+    },
+    {
+      "cell": [
+        256,
+        256
+      ],
+      "code": "R04",
+      "offset": [
+        768,
+        0
+      ],
+      "sha256": "a636ee836297e261874a26a096a64e0ed8748d720b6f89e0aca0ebb472166b43",
+      "source": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_fly_03_v01.png",
+      "version": "v01"
+    },
+    {
+      "cell": [
+        256,
+        256
+      ],
+      "code": "R05",
+      "offset": [
+        0,
+        0
+      ],
+      "sha256": "7fbbdadd57d6af7152b54c8dc6ca6fd76e29703990bf8e5e89cada58a45d0ae4",
+      "source": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_hit_00_v02.png",
+      "version": "v02"
+    },
+    {
+      "cell": [
+        256,
+        256
+      ],
+      "code": "R06",
+      "offset": [
+        256,
+        0
+      ],
+      "sha256": "fc2013656b41122311941289fb851347751b0a2b230975476304f63a5fb342c2",
+      "source": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_hit_01_v01.png",
+      "version": "v01"
+    },
+    {
+      "cell": [
+        256,
+        256
+      ],
+      "code": "R07",
+      "offset": [
+        512,
+        0
+      ],
+      "sha256": "79296cd598e203e1d3034fdd526fd92e1599ce86bac042aa3210df2474fa4672",
+      "source": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_hit_02_v01.png",
+      "version": "v01"
+    },
+    {
+      "cell": [
+        256,
+        256
+      ],
+      "code": "R08",
+      "offset": [
+        768,
+        0
+      ],
+      "sha256": "0ca2b691f2a420f7338b9eb68a8616213901cc94d4f06a70e4482beaa7c98c08",
+      "source": ".atena/generated/art-candidates/vfx/onda_cortante/onda_cortante_hit_03_v01.png",
+      "version": "v01"
+    }
+  ],
+  "revision": "onda-cortante-admission/v01",
+  "rgb": "white",
+  "canvas_center": [
+    128,
+    128
+  ],
+  "runtime_pivots": {
+    "flight": [
+      137.5,
+      127
+    ],
+    "impact": [
+      128,
+      128
+    ]
+  },
+  "calibration": "Fixed geometry per animation; derivative-audit.json; native pixels unchanged."
+}

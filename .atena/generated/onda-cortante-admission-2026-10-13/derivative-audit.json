@@ -1,0 +1,153 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "code": "R01",
+      "version": "v02",
+      "visible_gt12": 4850,
+      "bbox_gt12": [
+        93,
+        63,
+        180,
+        191
+      ],
+      "peak_alpha": 255
+    },
+    {
+      "code": "R02",
+      "version": "v01",
+      "visible_gt12": 5130,
+      "bbox_gt12": [
+        92,
+        62,
+        182,
+        192
+      ],
+      "peak_alpha": 255
+    },
+    {
+      "code": "R03",
+      "version": "v01",
+      "visible_gt12": 4867,
+      "bbox_gt12": [
+        94,
+        64,
+        181,
+        191
+      ],
+      "peak_alpha": 255
+    },
+    {
+      "code": "R04",
+      "version": "v01",
+      "visible_gt12": 4460,
+      "bbox_gt12": [
+        93,
+        63,
+        180,
+        191
+      ],
+      "peak_alpha": 255
+    },
+    {
+      "code": "R05",
+      "version": "v02",
+      "visible_gt12": 5358,
+      "bbox_gt12": [
+        78,
+        74,
+        183,
+        182
+      ],
+      "peak_alpha": 255
+    },
+    {
+      "code": "R06",
+      "version": "v01",
+      "visible_gt12": 21877,
+      "bbox_gt12": [
+        10,
+        19,
+        237,
+        233
+      ],
+      "peak_alpha": 255
+    },
+    {
+      "code": "R07",
+      "version": "v01",
+      "visible_gt12": 11607,
+      "bbox_gt12": [
+        14,
+        28,
+        233,
+        230
+      ],
+      "peak_alpha": 255
+    },
+    {
+      "code": "R08",
+      "version": "v01",
+      "visible_gt12": 2768,
+      "bbox_gt12": [
+        29,
+        34,
+        226,
+        221
+      ],
+      "peak_alpha": 95
+    }
+  ],
+  "flight": {
+    "principal_bboxes": [
+      [
+        105,
+        71,
+        170,
+        183
+      ],
+      [
+        105,
+        69,
+        171,
+        185
+      ],
+      [
+        105,
+        71,
+        170,
+        184
+      ],
+      [
+        112,
+        73,
+        164,
+        181
+      ]
+    ],
+    "pivot": [
+      137.5,
+      127.0
+    ],
+    "main_height": 112,
+    "scale": 0.16071428571428573,
+    "screen_main_height": 18,
+    "method": "Largest 8-connected bright component >=0.8 of RGB-derived alpha; R01 bbox midpoint is geometric reference. Same pivot/scale in all four frames, narrow rays outside bright component not used to set size."
+  },
+  "impact": {
+    "pivot": [
+      128,
+      128
+    ],
+    "main_radius": 40,
+    "scale": 0.3,
+    "screen_radius": 12,
+    "method": "Centered radial median >=0.5 in accepted R06, excludes thin decorative rays."
+  },
+  "r08_residue_preserved": true,
+  "sources_unchanged": true,
+  "atlas_sha256": {
+    "onda_cortante_voo": "642c332f71fa898ae4aae42cd5760ff69162854a131cef55ba2e21a9e0ce894a",
+    "onda_cortante_impacto": "a2dbf386412582172ea06dd6005ed3d44cc3191cf61baed6d181c66a302de8e4"
+  }
+}

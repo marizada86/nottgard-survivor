@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "sources_verified": 8,
+  "selected": [
+    "R01v02",
+    "R02v01",
+    "R03v01",
+    "R04v01",
+    "R05v02",
+    "R06v01",
+    "R07v01",
+    "R08v01"
+  ],
+  "runtime_files_unchanged": 3025,
+  "gallery_links_verified": 26,
+  "preview_gifs": {
+    "flight": {
+      "frames": 4,
+      "size": [
+        256,
+        256
+      ],
+      "historical_preview_only": true
+    },
+    "impact": {
+      "frames": 4,
+      "size": [
+        256,
+        256
+      ],
+      "historical_preview_only": true
+    }
+  },
+  "model_inspection": "Eight native sources and historical sheet/96px thumbnails inspected. Right-facing crescent, leftward tapered tips and fine jagged lightning retained; compact impact R05v02, peak R06, fragmented annulus R07 and faint residues R08. No visible edge cuts. Animated closure R04->R01 remains human pending; browser playback not claimed.",
+  "pivot_note": "Historical hot-light centroid is a consistency proxy, not geometric crescent pivot. No source or frame-position edits.",
+  "human_acceptance": "R01v02_APPROVED_HISTORICALLY_SEVEN_OTHER_PHASES_PENDING",
+  "canonical_promotion": false,
+  "runtime_admission": false,
+  "new_generation": 0
+}

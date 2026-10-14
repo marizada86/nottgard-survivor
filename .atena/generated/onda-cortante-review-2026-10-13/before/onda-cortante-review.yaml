@@ -1,0 +1,19 @@
+version: 1
+plan: PLAN-053
+revision: onda-cortante-review/v01
+classification: IN_PLAN
+mode: per-plan
+owner_reply: 'aprovado, continue'
+status: IN_PROGRESS
+checkpoint: S-001/VERIFY_AUTHORITY_AND_INPUTS
+ordered_steps: [S-001, S-002, S-003, S-004]
+current_step_position: 1
+completed_steps: 0
+total_steps: 4
+remaining_steps_after_current: 3
+spec: .atena/specs/SPEC-121-retomada-fila-imagens/onda-cortante-review-v01.md
+content_state: DRAFT_SEQUENCE_R01_V02_HISTORICAL_APPROVAL_PRESERVED
+runtime_admission: false
+canonical_promotion: false
+new_generation: 0
+return_plan: {id: PLAN-071, checkpoint: B-006/S-011, preserved: true}

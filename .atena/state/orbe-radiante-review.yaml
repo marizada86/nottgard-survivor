@@ -1,0 +1,38 @@
+version: 1
+plan: PLAN-053
+revision: orbe-radiante-review/v01
+classification: IN_PLAN
+mode: per-plan
+owner_reply: 'atena, vamos continuar os assets'
+status: COMPLETED_VISUALLY_ACCEPTED_DRAFT
+checkpoint: S-004/SEQUENCE_ACCEPTANCE_RECORDED
+ordered_steps: [S-001, S-002, S-003, S-004]
+current_step_position: 4
+completed_steps: 4
+total_steps: 4
+remaining_steps_after_current: 0
+spec: .atena/specs/SPEC-121-retomada-fila-imagens/orbe-radiante-review-v01.md
+content_state: DRAFT_SEQUENCE_P01_HISTORICAL_APPROVAL_PRESERVED
+runtime_admission: false
+canonical_promotion: false
+new_generation: 0
+return_plan: {id: PLAN-071, checkpoint: B-006/S-011, preserved: true}
+recovery: .atena/generated/orbe-radiante-review-2026-10-13/recovery.json
+audit: .atena/generated/orbe-radiante-review-2026-10-13/audit.json
+verification: .atena/generated/orbe-radiante-review-2026-10-13/verification.json
+gallery: .atena/generated/orbe-radiante-review-2026-10-13/index.html
+evidence: .atena/evidence/orbe-radiante-review-2026-10-13.md
+selected: [P01v01, P02v01, P03v01, P04v01, P05v01, P06v01, P07v01, P08v01]
+pending_visual_acceptance: []
+next_objective: Admissao tecnica entregue; aguardar playtest humano runtime.
+next_inputs: Oito fontes e hashes, aceite visual, roteamento atual de projeteis radiantes.
+next_output: Proposta de atlas de voo/impacto, pivô, escala, cadencia, allowlist e checks.
+next_checks: Preservar gameplay e fallbacks, cores, impacto reduzido, loop e cleanup.
+admission_execution_authorized: true
+human_runtime_playtests: PREVIOUS_PENDING_PRESERVED
+visual_acceptance: .atena/generated/orbe-radiante-review-2026-10-13/visual-acceptance.json
+visual_owner_reply: 'Aprovo os sete quadros DRAFT'
+admission_proposal: .atena/specs/SPEC-121-retomada-fila-imagens/orbe-radiante-admission-v01.md
+admission_mode: per-plan
+admission_state: .atena/state/orbe-radiante-admission.yaml
+admission_status: LOCAL_TECHNICAL_DELIVERED_AWAITING_OWNER_PLAYTEST

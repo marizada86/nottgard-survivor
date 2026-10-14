@@ -1,0 +1,121 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "code": "Q01",
+      "visible_gt12": 5522,
+      "bbox_gt12": [
+        25,
+        94,
+        164,
+        163
+      ],
+      "peak_alpha": 255
+    },
+    {
+      "code": "Q02",
+      "visible_gt12": 6078,
+      "bbox_gt12": [
+        20,
+        92,
+        165,
+        164
+      ],
+      "peak_alpha": 255
+    },
+    {
+      "code": "Q03",
+      "visible_gt12": 5090,
+      "bbox_gt12": [
+        41,
+        94,
+        165,
+        164
+      ],
+      "peak_alpha": 255
+    },
+    {
+      "code": "Q04",
+      "visible_gt12": 4982,
+      "bbox_gt12": [
+        26,
+        94,
+        163,
+        163
+      ],
+      "peak_alpha": 255
+    },
+    {
+      "code": "Q05",
+      "visible_gt12": 4855,
+      "bbox_gt12": [
+        84,
+        85,
+        180,
+        168
+      ],
+      "peak_alpha": 255
+    },
+    {
+      "code": "Q06",
+      "visible_gt12": 17006,
+      "bbox_gt12": [
+        35,
+        34,
+        223,
+        210
+      ],
+      "peak_alpha": 255
+    },
+    {
+      "code": "Q07",
+      "visible_gt12": 12129,
+      "bbox_gt12": [
+        29,
+        26,
+        229,
+        219
+      ],
+      "peak_alpha": 255
+    },
+    {
+      "code": "Q08",
+      "visible_gt12": 2230,
+      "bbox_gt12": [
+        63,
+        56,
+        200,
+        197
+      ],
+      "peak_alpha": 95
+    }
+  ],
+  "calibration_method": "Search for luminous geometric annulus in Q01/Q06 using mean circle intensity contrast against radii +/-2px. Narrow ring rather than brightness centroid; inspect previews as well. Coordinates reference pixel centers. One constant pivot and scale per animation, never per frame.",
+  "flight": {
+    "contrast_score": 78.94999999999999,
+    "pivot": [
+      135.0,
+      128.0
+    ],
+    "radius": 21.5,
+    "screen_ring_radius": 5,
+    "scale": 0.23255813953488372,
+    "visible_tail_extent_px": 25.58139534883721
+  },
+  "impact": {
+    "contrast_score": 66.62291666666667,
+    "pivot": [
+      128.5,
+      124.0
+    ],
+    "radius": 41.0,
+    "screen_ring_radius": 12,
+    "scale": 0.2926829268292683
+  },
+  "native_sources_preserved": true,
+  "q08_residue_preserved": true,
+  "atlas_sha256": {
+    "orbe_arcano_voo": "6cc4fe149156a5015da043a71ceaa5181b501d982c42ee0a9001c9656cd986d7",
+    "orbe_arcano_impacto": "3b527130849f0b336523ccde0a8c03454a0e9374cb58219a2497d6c3d5338acc"
+  }
+}

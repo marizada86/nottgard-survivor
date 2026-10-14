@@ -1,0 +1,15 @@
+# Orbe Radiante — revisão v01, 2026-10-13
+
+PLAN-053/SPEC-121, IN_PLAN, per-plan. Continuação “atena, vamos continuar os assets”. [Spec preparada antes da recuperação](../specs/SPEC-121-retomada-fila-imagens/orbe-radiante-review-v01.md). Bíblia/contrato ART-PROMPTS-053 e FILA-022; identidade de personagem N/A para VFX abstrato compartilhado. P01 v01 preserva aprovação do [registro 027](../vault/canon/ASSET-APPROVAL-REGISTER-027-vfx-orbe-radiante-2026-10-09.md); nenhuma promoção das outras fases.
+
+S-001/S-002: snapshots dos estados e proteção por hash de assets/core/ui/data/tests; oito fontes nativas 1254×1254 recuperadas por hashes de registros locais da revisão histórica `10bd31c`. [Recibo](../generated/orbe-radiante-review-2026-10-13/recovery.json) inclui revisões, hashes, originais e prompts; [auditoria](../generated/orbe-radiante-review-2026-10-13/audit.json). Nenhuma nova geração, transformação ou normalização de pixels. Divergências de preto/canais registradas como medidas; não declarar fundo RGB zero ou cinza exatos.
+
+S-003: oito fontes e prancha histórica com miniaturas 96 px inspecionadas nesta retomada. Sem cortes aparentes; núcleo/halo consistentes, cauda à esquerda, voo para direita. P06 apresenta pico, P07 abre anel/fragmentos e P08 deixa resíduos tênues. [Galeria local](../generated/orbe-radiante-review-2026-10-13/index.html) mostra fontes amplas e 96 px, hashes e GIFs históricos separados de voo/impacto; não representam cadência final de jogo. Inspeção estática sugere continuidade; fechamento animado P04→P01 e percepção subjetiva seguem para o dono. Não se afirma execução no navegador ou teste runtime nesta revisão.
+
+S-004: [verificação](../generated/orbe-radiante-review-2026-10-13/verification.json) confere hashes, recursos da galeria e runtime protegido. Técnico 4/4 entregue, zero BLOCKING técnico encontrado; checkpoint OWNER_SEQUENCE_REVIEW pendente. Sete fases P02–P08 v01 permanecem DRAFT sem aceite humano; P01 v01 aprovado historicamente. Próximo objetivo após aceite: preparar proposta de normalização e admissão do voo/impacto para armas radiantes existentes, com atlas, pivô, escala/cadência, allowlist, fallbacks, cores, impacto reduzido e testes; não executar integração neste checkpoint.
+
+PLAN-071 B-006/S-011 preservado, assim como playtests humanos anteriores não relatados e BUG-025/027/028/029. Sem alteração de assets oficiais, gameplay, CANON ou Git. Nenhuma suíte de runtime repetida para esta revisão de arquivos intactos; a verificação pertinente é por hash e contrato visual.
+
+## Aceite visual registrado
+
+Dono respondeu “Aprovo os sete quadros DRAFT”. [Recibo de aceite](../generated/orbe-radiante-review-2026-10-13/visual-acceptance.json) identifica P02–P08 v01 por hash; P01 aprovado historicamente preservado. Revisão4/4 concluída e visualmente aceita, sem promoção CANON. [Proposta de admissão v01](../specs/SPEC-121-retomada-fila-imagens/orbe-radiante-admission-v01.md) preparada: impacto de renderer e metadados analisado, quatro etapas e recuperação/checks definidos; execução depende de escolha/aprovação do modo. Nenhuma transformação ou integração nesta resposta.

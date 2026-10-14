@@ -3,6 +3,8 @@ extends Node2D
 
 @export_enum("under", "over") var mode := "over"
 var battle: Battle
+const ORB_LAYER := preload("res://ui/radiant_orb_layer.gd")
+var _orb_layer: Node2D
 static var _texture_cache := {}
 var _large_fx_by_quadrant: Array[int] = [0, 0, 0, 0]
 const PARTICLE_CAP := 96
@@ -14,10 +16,21 @@ var _rich_particle_emitters: Array[int] = [0, 0, 0, 0]
 var _particle_serial := 0
 
 func _process(dt: float) -> void:
+	_ensure_orb_layer()
 	if mode == "under" and battle != null:
 		_advance_particles(dt)
 		_emit_zone_particles(dt)
 	queue_redraw()
+
+func _ensure_orb_layer() -> void:
+	if mode == "over" and battle != null and not is_instance_valid(_orb_layer):
+		_orb_layer = ORB_LAYER.new()
+		_orb_layer.battle = battle
+		add_child(_orb_layer)
+
+func spawn_orb_impact(event: Dictionary) -> bool:
+	_ensure_orb_layer()
+	return is_instance_valid(_orb_layer) and _orb_layer.spawn_impact(event)
 
 func _ellipse(c: Vector2, r: float, n: int = 28) -> PackedVector2Array:
 	# círculo no chão em projeção isométrica (raio r em tiles)
@@ -492,6 +505,8 @@ func _draw_over() -> void:
 		else:
 			draw_circle(p + Vector2(0, -4), 4.0, Color(0.6, 0.85, 1.0))
 	for pr in battle.projectiles:
+		if is_instance_valid(_orb_layer) and _orb_layer.can_draw_projectile(pr):
+			continue
 		var p := Iso.to_screen(pr.pos) + Vector2(0, -16)
 		if pr.owner == "hero":
 			var theme: Dictionary = pr.get("visual_theme", DivineVisuals.resolve(battle.hero.id, battle.visual_god, battle.visual_boon_selected))

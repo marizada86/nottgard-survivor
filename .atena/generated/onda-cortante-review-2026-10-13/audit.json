@@ -1,0 +1,164 @@
+{
+  "status": "PASS_NATIVE_RECOVERY",
+  "sources": [
+    {
+      "code": "R01",
+      "version": "v02",
+      "sha256": "53f665277345e5a59d093f25e5f3f9ebfd800a1b146c535d0b48513b4e4308f1",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "edge_max_channel": 2,
+      "max_channel_difference": 9,
+      "bbox_gt12": [
+        454,
+        310,
+        885,
+        934
+      ],
+      "native_bytes_preserved": true
+    },
+    {
+      "code": "R02",
+      "version": "v01",
+      "sha256": "2c83e4d6759beaa50bd339e7a365b2f2cf87b6db7543885f72a961aae98ad844",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "edge_max_channel": 2,
+      "max_channel_difference": 9,
+      "bbox_gt12": [
+        452,
+        305,
+        894,
+        939
+      ],
+      "native_bytes_preserved": true
+    },
+    {
+      "code": "R03",
+      "version": "v01",
+      "sha256": "8e053772e4805e2ffd2c20715e89d7e8c44d088a6f87abc4c45bd7d6c542193b",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "edge_max_channel": 2,
+      "max_channel_difference": 11,
+      "bbox_gt12": [
+        457,
+        313,
+        886,
+        934
+      ],
+      "native_bytes_preserved": true
+    },
+    {
+      "code": "R04",
+      "version": "v01",
+      "sha256": "a636ee836297e261874a26a096a64e0ed8748d720b6f89e0aca0ebb472166b43",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "edge_max_channel": 1,
+      "max_channel_difference": 7,
+      "bbox_gt12": [
+        454,
+        312,
+        885,
+        933
+      ],
+      "native_bytes_preserved": true
+    },
+    {
+      "code": "R05",
+      "version": "v02",
+      "sha256": "7fbbdadd57d6af7152b54c8dc6ca6fd76e29703990bf8e5e89cada58a45d0ae4",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "edge_max_channel": 1,
+      "max_channel_difference": 8,
+      "bbox_gt12": [
+        381,
+        365,
+        899,
+        889
+      ],
+      "native_bytes_preserved": true
+    },
+    {
+      "code": "R06",
+      "version": "v01",
+      "sha256": "fc2013656b41122311941289fb851347751b0a2b230975476304f63a5fb342c2",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "edge_max_channel": 2,
+      "max_channel_difference": 12,
+      "bbox_gt12": [
+        48,
+        91,
+        1164,
+        1140
+      ],
+      "native_bytes_preserved": true
+    },
+    {
+      "code": "R07",
+      "version": "v01",
+      "sha256": "79296cd598e203e1d3034fdd526fd92e1599ce86bac042aa3210df2474fa4672",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "edge_max_channel": 1,
+      "max_channel_difference": 9,
+      "bbox_gt12": [
+        66,
+        136,
+        1140,
+        1129
+      ],
+      "native_bytes_preserved": true
+    },
+    {
+      "code": "R08",
+      "version": "v01",
+      "sha256": "0ca2b691f2a420f7338b9eb68a8616213901cc94d4f06a70e4482beaa7c98c08",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "edge_max_channel": 1,
+      "max_channel_difference": 6,
+      "bbox_gt12": [
+        98,
+        145,
+        1112,
+        1094
+      ],
+      "native_bytes_preserved": true
+    }
+  ],
+  "normalized": false,
+  "exact_black_or_grayscale": "NOT_CLAIMED",
+  "historical_flight_centroid_spread_normalized": [
+    0.0014694849419353284,
+    0.0033371600735979112
+  ],
+  "centroid_note": "Historical hot-light proxy; not exact pivot or runtime approval"
+}

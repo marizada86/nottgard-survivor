@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "build_id": "0.4.0/orbe-arcano-admission-v01/a431fa9+local-498dd8dce1bb",
+  "content_state": "DRAFT_ADMITTED_LOCAL",
+  "steps_completed": 4,
+  "sources_verified": 8,
+  "atlases": 2,
+  "suite_failures": 0,
+  "smoke_stages": 9,
+  "arcane_mixed_captures": 24,
+  "radiant_regression_captures": 23,
+  "combined_impact_budget": 32,
+  "protected_preexisting_files": 3017,
+  "unchanged_preexisting_files": 3016,
+  "allowed_changed_files": [
+    "ui/radiant_orb_layer.gd"
+  ],
+  "battle_data_run_overlay_radiant_helper_and_atlases_unchanged": true,
+  "source_backup_and_atlas_hashes": "PASS",
+  "logs": [
+    "focused-final.log",
+    "suite.log",
+    "smoke.log",
+    "capture-final.log",
+    "radiant-regression-final.log",
+    "import-final.log",
+    "Jogar-Raio.log",
+    "Jogar-Dominar.log",
+    "Jogar-Cajado.log",
+    "Jogar-Reduzido.log",
+    "Jogar-Tou-Um.log",
+    "Jogar-Misto.log"
+  ],
+  "runtime_sha256": {
+    "core/arcane_orb_vfx.gd": "fae15eddc1b3de7c7175c8a2f755f20bff52f1522f0ecd2d3953b8c85113adcf",
+    "ui/radiant_orb_layer.gd": "8b5ef5003be17748819fb3c54d218ccfebc464463d14a9fb32470d612bbb7b89",
+    "assets/vfx/orbe_arcano_voo.png": "6cc4fe149156a5015da043a71ceaa5181b501d982c42ee0a9001c9656cd986d7",
+    "assets/vfx/orbe_arcano_impacto.png": "3b527130849f0b336523ccde0a8c03454a0e9374cb58219a2497d6c3d5338acc",
+    "core/radiant_orb_vfx.gd": "9df7021d28da6bdf0508a275b6833114e98ad902c8cecf43c58504f067ae237b",
+    "assets/vfx/orbe_radiante_voo.png": "9faacd1b08ffbfc18a31e9fa049082ee20e12349bf0c2b1e6341a1b31d84cf7f",
+    "assets/vfx/orbe_radiante_impacto.png": "3da8c0969e367d10491ebf73588f7f7d4cad2247e98cb45c86937e8bb2e0a495",
+    "tests/test_arcane_orb_vfx.gd": "fe106c6aa47de7a30a5c5ca46bb09234d416cfaffc547547776892b0846232e9"
+  },
+  "human_playtest": "PENDING_NOT_PERFORMED",
+  "canonical_promotion": false,
+  "git_operations": "NO_COMMIT_PUSH_MERGE",
+  "exported": false
+}

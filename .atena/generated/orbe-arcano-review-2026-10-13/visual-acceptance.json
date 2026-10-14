@@ -1,0 +1,56 @@
+{
+  "revision": "orbe-arcano-review/v01",
+  "date": "2026-10-13",
+  "owner_reply": "Aprovo os sete quadros DRAFT",
+  "accepted": [
+    {
+      "code": "Q02",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_fly_01_v01.png",
+      "sha256": "034eb57a9646d3de68662c0408c9b3b98827538560c7a03318f31e88f2eff1ef"
+    },
+    {
+      "code": "Q03",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_fly_02_v01.png",
+      "sha256": "5010a77a124a1c3f72b831783aa650146e9deaea790e538ca3d94a140b47d711"
+    },
+    {
+      "code": "Q04",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_fly_03_v01.png",
+      "sha256": "67347db56ac39ff33a1d73ff991e4274ecafa2c9e8549e05f4a447e77f6c9f89"
+    },
+    {
+      "code": "Q05",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_hit_00_v01.png",
+      "sha256": "7164675a2489957161b03aac30f967f6b25be79418407d6545af0f669484892b"
+    },
+    {
+      "code": "Q06",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_hit_01_v01.png",
+      "sha256": "8388c93447f69e80064d03fc4fc0016d01bf57f700e42b6dd806ceb363b29b08"
+    },
+    {
+      "code": "Q07",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_hit_02_v01.png",
+      "sha256": "b3c77052708c70a1db60ff187cdc5d7c0bd3a092a68095ada0a3056b3face503"
+    },
+    {
+      "code": "Q08",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_hit_03_v01.png",
+      "sha256": "224a23efd7fdfffd220d621ec82bc62193c6ad826515897fe9cdb3613fd66954"
+    }
+  ],
+  "historical_q01_v03_preserved": "be4fc0674b455b2efb5609e27c4228569b22d274cfb077665b09f778f5fc88fb",
+  "content_state": "DRAFT_VISUALLY_ACCEPTED",
+  "canonical_promotion": false,
+  "scope": "Visual acceptance of Q02-Q08 v01 and permission to prepare normalization/admission proposal only",
+  "runtime_admission_authorized": false,
+  "git_authorized": false,
+  "runtime_playtest": "NOT_PERFORMED_BY_THIS_APPROVAL"
+}

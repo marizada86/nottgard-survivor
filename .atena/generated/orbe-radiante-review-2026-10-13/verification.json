@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "sources_verified": 8,
+  "runtime_files_unchanged": 3007,
+  "gallery_links_verified": 26,
+  "preview_gifs": {
+    "flight": {
+      "frames": 4,
+      "size": [
+        256,
+        256
+      ],
+      "historical_preview_only": true
+    },
+    "impact": {
+      "frames": 4,
+      "size": [
+        256,
+        256
+      ],
+      "historical_preview_only": true
+    }
+  },
+  "new_generation": 0,
+  "native_pixel_edits": 0,
+  "canonical_promotion": false,
+  "runtime_admission": false,
+  "visual_inspection": "Eight native sources and historical sheet with 96px thumbnails inspected; no visible cuts, right-facing flight/left tail, peak P06, fragments P07 and faint remnants P08. Animated loop acceptance remains human pending; browser playback not claimed.",
+  "human_acceptance": "P01_HISTORICAL_APPROVED_P02_TO_P08_PENDING"
+}

@@ -1,0 +1,12 @@
+{
+	"comparison": "Pre-admission Battle vs current, identical RNG/damage/hp/status/projectile trajectory/pierce/events except primary hit weapon/kind. Instance IDs canonicalized.",
+	"counts": {
+		"crit": 4,
+		"hit": 116,
+		"miss": 55,
+		"piercing_contacts": 1536,
+		"scenarios": 32,
+		"steps": 2880
+	},
+	"status": "PASS"
+}

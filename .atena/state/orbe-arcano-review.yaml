@@ -1,0 +1,38 @@
+version: 1
+plan: PLAN-053
+revision: orbe-arcano-review/v01
+classification: IN_PLAN
+mode: per-plan
+owner_reply: 'aprovado'
+status: COMPLETED_VISUALLY_ACCEPTED_DRAFT
+checkpoint: S-004/SEQUENCE_ACCEPTANCE_RECORDED
+ordered_steps: [S-001, S-002, S-003, S-004]
+current_step_position: 4
+completed_steps: 4
+total_steps: 4
+remaining_steps_after_current: 0
+spec: .atena/specs/SPEC-121-retomada-fila-imagens/orbe-arcano-review-v01.md
+content_state: DRAFT_SEQUENCE_Q01_V03_HISTORICAL_APPROVAL_PRESERVED
+runtime_admission: false
+canonical_promotion: false
+new_generation: 0
+return_plan: {id: PLAN-071, checkpoint: B-006/S-011, preserved: true}
+recovery: .atena/generated/orbe-arcano-review-2026-10-13/recovery.json
+audit: .atena/generated/orbe-arcano-review-2026-10-13/audit.json
+verification: .atena/generated/orbe-arcano-review-2026-10-13/verification.json
+evidence: .atena/evidence/orbe-arcano-review-2026-10-13.md
+gallery: .atena/generated/orbe-arcano-review-2026-10-13/index.html
+selected: [Q01v03, Q02v01, Q03v01, Q04v01, Q05v01, Q06v01, Q07v01, Q08v01]
+pending_visual_acceptance: []
+next_objective: Admissao tecnica entregue; aguardar playtest humano runtime.
+next_inputs: Fontes/hashes, aceite visual, renderer e allowlist das tres armas magicas.
+next_output: Proposta limitada de atlas/pivos/escala/cadencia e integracao, sem alterar gameplay.
+next_checks: Legibilidade, loop, glifos, fallbacks, reduzido, regressao Radiante/Pulso/Ampulheta.
+admission_execution_authorized: true
+previous_human_playtests: PROCEDURE_NOT_REPORTED_PRESERVED
+visual_acceptance: .atena/generated/orbe-arcano-review-2026-10-13/visual-acceptance.json
+visual_owner_reply: 'Aprovo os sete quadros DRAFT'
+admission_proposal: .atena/specs/SPEC-121-retomada-fila-imagens/orbe-arcano-admission-v01.md
+admission_mode: per-plan
+admission_state: .atena/state/orbe-arcano-admission.yaml
+admission_status: LOCAL_TECHNICAL_DELIVERED_AWAITING_OWNER_PLAYTEST

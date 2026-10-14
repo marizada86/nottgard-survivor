@@ -335,3 +335,21 @@ Seis fases Pulso visualmente aceitas e atlas/helper integrados como DRAFT no pul
 ## Ampulheta admitida localmente — 2026-10-13
 
 Seis fases aceitas, normalizadas e admitidas DRAFT no ampulheta-admission/v01,4/4técnico, suíte0falhas/smoke9fases/12capturas, regressão Pulso PASS. Playtest humano pendente. M01v02 exceção≈14% preservada; M02v03 selecionada. Outras famílias desta fila não foram admitidas por este lote. Evidência: `.atena/evidence/ampulheta-admission-2026-10-13.md`.
+
+## Orbe Radiante — aceite visual da sequência, 2026-10-13
+
+P02–P08 v01 aceitos DRAFT pelo dono (“Aprovo os sete quadros DRAFT”); P01 v01 aprovado preservado. Oito hashes verificados; proposta orbe-radiante-admission/v01 preparada e pendente de escopo/modo. Não confundir aceite visual com admissão ou CANON. Recibo: `.atena/generated/orbe-radiante-review-2026-10-13/visual-acceptance.json`.
+
+2026-10-13 — ART-029: Orbe Radiante oito fases admitidas localmente DRAFT, orbe-radiante-admission/v01 técnico4/4; suíte0falhas,smoke9fases,paridade80cenários/7.200passos,23capturas PASS. Somente Raio de Luz/Luz Mais Pura/Marca da Retidão. Playtest humano pendente; próxima família proposta Orbe Arcano. Sem CANON ou Git. Evidência: `.atena/evidence/orbe-radiante-admission-2026-10-13.md`.
+
+## Orbe Arcano — aceite visual da sequência, 2026-10-13
+
+Q02–Q08 v01 aceitos DRAFT pelo dono (“Aprovo os sete quadros DRAFT”); Q01 v03 aprovado preservado. Oito hashes verificados; proposta orbe-arcano-admission/v01 preparada e pendente de escopo/modo. Não confundir aceite visual com admissão ou CANON. Recibo: `.atena/generated/orbe-arcano-review-2026-10-13/visual-acceptance.json`.
+
+2026-10-13 — ART-029: Orbe Arcano oito fases admitidas localmente DRAFT, orbe-arcano-admission/v01 técnico4/4. Suíte0falhas/smoke9fases,24capturas Arcano/misto+23regressão Radiante PASS. Só Raio Enfraquecedor/Dominar Pessoa/Cajado dos Desejos; Battle/data intactos. Playtest humano pendente; próxima família proposta Onda Cortante. Sem CANON/Git. Evidência: `.atena/evidence/orbe-arcano-admission-2026-10-13.md`.
+
+## Onda Cortante — aceite visual, 2026-10-13
+
+R02/R03/R04/R06/R07/R08v01 e R05v02 aceitos DRAFT pelo dono (“Aprovo as sete fases DRAFT”); R01v02 aprovado preservado. Oito hashes conferidos; proposta onda-cortante-admission/v01 preparada e pendente de escopo/modo. Não é admissão runtime/CANON. Recibo: `.atena/generated/onda-cortante-review-2026-10-13/visual-acceptance.json`.
+
+2026-10-13 — ART-029: Onda Cortante oito fontes aceitas (R01v02/R05v02 e demaisv01) admitidas localmente DRAFT, onda-cortante-admission/v01 técnico4/4. Só Lâmina Trovejante/Tempestade; suíte0/smoke9,69capturas e paridade32cenários PASS. Battle/data e dois orbes/Pulso/Ampulheta preservados. Playtest humano pendente; sem fechar subjetivamente toda FILA022, sem CANON/Git/exportação. Evidência: `.atena/evidence/onda-cortante-admission-2026-10-13.md`.

@@ -795,3 +795,122 @@ assets_main_publication_2026_10_13:
   completed_steps: 3
   total_steps: 3
   ci_result: NOT_VERIFIED
+orbe_radiante_review_2026_10_13:
+  plan: PLAN-053
+  revision: orbe-radiante-review/v01
+  classification: IN_PLAN
+  state_file: .atena/state/orbe-radiante-review.yaml
+  mode: per-plan
+  status: COMPLETED_VISUALLY_ACCEPTED_DRAFT
+  checkpoint: S-004/SEQUENCE_ACCEPTANCE_RECORDED
+  completed_steps: 4
+  total_steps: 4
+  content_state: DRAFT_P01_HISTORICAL_APPROVAL_PRESERVED
+  runtime_admission: false
+  canonical_promotion: false
+  return_plan: PLAN-071
+  return_checkpoint: B-006/S-011
+  visual_acceptance: .atena/generated/orbe-radiante-review-2026-10-13/visual-acceptance.json
+  admission_proposal: .atena/specs/SPEC-121-retomada-fila-imagens/orbe-radiante-admission-v01.md
+  admission_mode: per-plan
+orbe_radiante_admission_2026_10_13:
+  plan: PLAN-053
+  revision: orbe-radiante-admission/v01
+  classification: IN_PLAN_APPROVED_ADMISSION
+  state_file: .atena/state/orbe-radiante-admission.yaml
+  mode: per-plan
+  approval_status: APPROVED_EXPLICITLY
+  status: OWNER_ACCEPTED_LOCAL_DELIVERY
+  checkpoint: S-004/OWNER_DELIVERY_ACCEPTANCE_RECORDED
+  completed_steps: 4
+  total_steps: 4
+  content_state: DRAFT
+  canonical_promotion: false
+  return_plan: PLAN-071
+  return_checkpoint: B-006/S-011
+  evidence: .atena/evidence/orbe-radiante-admission-2026-10-13.md
+orbe_arcano_review_2026_10_13:
+  plan: PLAN-053
+  revision: orbe-arcano-review/v01
+  classification: IN_PLAN
+  state_file: .atena/state/orbe-arcano-review.yaml
+  mode: per-plan
+  status: COMPLETED_VISUALLY_ACCEPTED_DRAFT
+  checkpoint: S-004/SEQUENCE_ACCEPTANCE_RECORDED
+  completed_steps: 4
+  total_steps: 4
+  content_state: DRAFT_Q01_V03_HISTORICAL_APPROVAL_PRESERVED
+  runtime_admission: false
+  canonical_promotion: false
+  return_plan: PLAN-071
+  return_checkpoint: B-006/S-011
+  visual_acceptance: .atena/generated/orbe-arcano-review-2026-10-13/visual-acceptance.json
+  admission_proposal: .atena/specs/SPEC-121-retomada-fila-imagens/orbe-arcano-admission-v01.md
+  admission_mode: per-plan
+orbe_arcano_admission_2026_10_13:
+  plan: PLAN-053
+  revision: orbe-arcano-admission/v01
+  classification: IN_PLAN_APPROVED_ADMISSION
+  state_file: .atena/state/orbe-arcano-admission.yaml
+  mode: per-plan
+  approval_status: APPROVED_EXPLICITLY
+  status: OWNER_ACCEPTED_LOCAL_DELIVERY
+  checkpoint: S-004/OWNER_DELIVERY_ACCEPTANCE_RECORDED
+  completed_steps: 4
+  total_steps: 4
+  content_state: DRAFT
+  canonical_promotion: false
+  return_plan: PLAN-071
+  return_checkpoint: B-006/S-011
+  evidence: .atena/evidence/orbe-arcano-admission-2026-10-13.md
+onda_cortante_review_2026_10_13:
+  plan: PLAN-053
+  revision: onda-cortante-review/v01
+  classification: IN_PLAN
+  state_file: .atena/state/onda-cortante-review.yaml
+  mode: per-plan
+  status: COMPLETED_VISUALLY_ACCEPTED_DRAFT
+  checkpoint: S-004/SEQUENCE_ACCEPTANCE_RECORDED
+  completed_steps: 4
+  total_steps: 4
+  content_state: DRAFT_R01_V02_HISTORICAL_APPROVAL_PRESERVED
+  runtime_admission: false
+  canonical_promotion: false
+  return_plan: PLAN-071
+  return_checkpoint: B-006/S-011
+  visual_acceptance: .atena/generated/onda-cortante-review-2026-10-13/visual-acceptance.json
+  admission_proposal: .atena/specs/SPEC-121-retomada-fila-imagens/onda-cortante-admission-v01.md
+  admission_mode: per-plan
+onda_cortante_admission_2026_10_13:
+  plan: PLAN-053
+  revision: onda-cortante-admission/v01
+  classification: IN_PLAN_APPROVED_ADMISSION
+  state_file: .atena/state/onda-cortante-admission.yaml
+  mode: per-plan
+  approval_status: APPROVED_EXPLICITLY
+  status: OWNER_ACCEPTED_LOCAL_DELIVERY
+  checkpoint: S-004/OWNER_DELIVERY_ACCEPTANCE_RECORDED
+  completed_steps: 4
+  total_steps: 4
+  content_state: DRAFT
+  canonical_promotion: false
+  return_plan: PLAN-071
+  return_checkpoint: B-006/S-011
+  evidence: .atena/evidence/onda-cortante-admission-2026-10-13.md
+  owner_acceptance: .atena/generated/onda-cortante-admission-2026-10-13/owner-delivery-and-commit-authorization.json
+assets_git_checkpoint_2026_10_13:
+  classification: IN_PLAN_AUTHORIZED_LOCAL_GIT
+  owner_reply: 'atena aprovado, commit'
+  scope: [orbe-radiante-admission/v01, orbe-arcano-admission/v01, onda-cortante-admission/v01]
+  mode: per-plan
+  status: COMMITTED_LOCAL
+  evidence: .atena/generated/onda-cortante-admission-2026-10-13/owner-delivery-and-commit-authorization.json
+  content_state: DRAFT
+  canonical_promotion: false
+  push_authorized: false
+  merge_authorized: false
+  return_plan: PLAN-071
+  return_checkpoint: B-006/S-011
+  commit_subject: "feat(vfx): admit radiant and arcane orbs and cutting wave"
+  commit_locator: "git log --all --fixed-strings --grep=feat(vfx): admit radiant and arcane orbs and cutting wave"
+  published: false

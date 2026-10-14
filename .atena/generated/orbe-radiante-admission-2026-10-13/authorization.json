@@ -1,0 +1,147 @@
+{
+  "revision": "orbe-radiante-admission/v01",
+  "mode": "per-plan",
+  "owner_reply": "1. Por plano — uma aprovação para todo o escopo planejado. (Recomendado)",
+  "sources": [
+    {
+      "code": "P01",
+      "path": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_fly_00_v01.png",
+      "sha256": "a321dde3ebdce44f469c46a4147a4400bd97f3e958ec5ab0cb109338adaea752",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 13.811896349544297,
+      "visible_fraction_above12": 0.0888881257805962,
+      "central_hot_light_centroid_normalized": [
+        0.48735400260497347,
+        0.4964182591937981
+      ],
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-1c15ed2e-ce0c-47cc-8299-16959e093f34.png",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a round glowing orb of holy light with a bright white core and a soft halo, a short pointed tail behind it pointing LEFT because it flies to the RIGHT, and a few tiny star-like sparks. Frame 1 of 8, fly 00: flight frame 1 of 4 (these four frames loop): the projectile in flight at its normal size, tail streaming behind it.\n\nThe attached approved physical pilot is a STYLE REFERENCE ONLY for painted light texture, white core and gray soft falloff. Generate a NEW round radiant projectile, not an arc. The round orb core must be centered at the exact canvas center, with a SHORT pointed tail streaming directly LEFT because it travels RIGHT. No 3D sphere shading, no perspective, no crescent blade, no color. Only this one first flight frame, with orb, halo, tail and few tiny star sparks comfortably inside pure-black margins.",
+      "human_acceptance": "P01_HISTORICAL_APPROVED"
+    },
+    {
+      "code": "P02",
+      "path": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_fly_01_v01.png",
+      "sha256": "bc48320c2de5aef68717bfe74679965fd2526ccd30369666735b181a6dab96ba",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 15.370481445021863,
+      "visible_fraction_above12": 0.09874748492225198,
+      "central_hot_light_centroid_normalized": [
+        0.4863686779266139,
+        0.4961639258861543
+      ],
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-210b9ca5-2de1-47f2-af3d-b9c6d09855ee.png",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a round glowing orb of holy light with a bright white core and a soft halo, a short pointed tail behind it pointing LEFT because it flies to the RIGHT, and a few tiny star-like sparks. Frame 2 of 8, fly 01: flight frame 2 of 4: the same projectile, its glow pulsing slightly brighter and the tail flickering a little longer. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED P01 first flight for this radiant orb identity. Reference2 is the APPROVED physical pilot for painted white-core/gray-glow STYLE ONLY. Generate ONLY P02 phase specified above, never a contact sheet. Flat ground-plane view, exact canvas-center pivot, all pixels and glow inside pure-black margins. Strictly neutral white/gray and no text, scene, character or weapon.\nFLIGHT LOOP: keep EXACTLY the same orb center, circular body diameter and silhouette as approved P01. Only glow pulses slightly brighter and pointed left tail flickers a little longer; no scaling or translation of orb.",
+      "human_acceptance": "PENDING_VISUAL_ACCEPTANCE"
+    },
+    {
+      "code": "P03",
+      "path": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_fly_02_v01.png",
+      "sha256": "0d98f6826b1612f18307337cda34be0fed6709dd095fe6517dd21cd30b2f3f60",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 13.592671871065223,
+      "visible_fraction_above12": 0.08572440598378649,
+      "central_hot_light_centroid_normalized": [
+        0.48678429511912175,
+        0.49568803203115497
+      ],
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-7dcb0610-b651-4694-ba64-606ecb4be005.png",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a round glowing orb of holy light with a bright white core and a soft halo, a short pointed tail behind it pointing LEFT because it flies to the RIGHT, and a few tiny star-like sparks. Frame 3 of 8, fly 02: flight frame 3 of 4: the same projectile, its inner details rotated a quarter turn, the tail a little shorter. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED P01 first flight for this radiant orb identity. Reference2 is the APPROVED physical pilot for painted white-core/gray-glow STYLE ONLY. Generate ONLY P03 phase specified above, never a contact sheet. Flat ground-plane view, exact canvas-center pivot, all pixels and glow inside pure-black margins. Strictly neutral white/gray and no text, scene, character or weapon.\nFLIGHT LOOP: keep EXACTLY the same orb center, circular body diameter and silhouette as P01. Rotate only the painted internal light swirls a quarter turn, not the orb position or tail direction. Left tail a little shorter; no scaling or translation.",
+      "human_acceptance": "PENDING_VISUAL_ACCEPTANCE"
+    },
+    {
+      "code": "P04",
+      "path": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_fly_03_v01.png",
+      "sha256": "cf569ff20892598e4d399a4ee2d8fe8bb7f974cc6e8198e6067a0906d0729d92",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 12.39339059189223,
+      "visible_fraction_above12": 0.08134797992516452,
+      "central_hot_light_centroid_normalized": [
+        0.4857063253428609,
+        0.49801503147684884
+      ],
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-bea4af32-5958-4f9d-bdaa-cd0aaf780ac4.png",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a round glowing orb of holy light with a bright white core and a soft halo, a short pointed tail behind it pointing LEFT because it flies to the RIGHT, and a few tiny star-like sparks. Frame 4 of 8, fly 03: flight frame 4 of 4: the same projectile, glow slightly dimmer, so that the next frame flows back into frame 1. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED P01 first flight for this radiant orb identity. Reference2 is the APPROVED physical pilot for painted white-core/gray-glow STYLE ONLY. Generate ONLY P04 phase specified above, never a contact sheet. Flat ground-plane view, exact canvas-center pivot, all pixels and glow inside pure-black margins. Strictly neutral white/gray and no text, scene, character or weapon.\nLOOP CLOSURE: same fixed orb center, circular body diameter and silhouette as P01. Glow slightly dimmer, same short left tail so returning to P01 is a gentle light pulse, with no position or size jump.",
+      "human_acceptance": "PENDING_VISUAL_ACCEPTANCE"
+    },
+    {
+      "code": "P05",
+      "path": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_hit_00_v01.png",
+      "sha256": "1166c89f27735cb9d8e8a7425d4e7dc85d38712fb42148b9de2d6749ee6b3b3f",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 14.316417766178532,
+      "visible_fraction_above12": 0.09557486219536081,
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-84967b99-8e6c-4596-a5a2-8ea102ce5771.png",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a round glowing orb of holy light with a bright white core and a soft halo, a short pointed tail behind it pointing LEFT because it flies to the RIGHT, and a few tiny star-like sparks. Frame 5 of 8, hit 00: impact frame 1 of 4: the projectile has just hit, a bright flash burst with tiny sparks starting, no tail anymore, about 60 percent of the final size. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED P01 first flight for this radiant orb identity. Reference2 is the APPROVED physical pilot for painted white-core/gray-glow STYLE ONLY. Generate ONLY P05 phase specified above, never a contact sheet. Flat ground-plane view, exact canvas-center pivot, all pixels and glow inside pure-black margins. Strictly neutral white/gray and no text, scene, character or weapon.\nIMPACT START: no tail or left stream at all. A compact centered round flash with tiny sparks starting radially, about60% of the coming peak size. Same exact canvas-center pivot. Only early impact, not a full maximum burst.",
+      "human_acceptance": "PENDING_VISUAL_ACCEPTANCE"
+    },
+    {
+      "code": "P06",
+      "path": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_hit_01_v01.png",
+      "sha256": "cd8de8d95839ac8700975d1f73f867bab4325e4c19be3252476d22e6ef1dca5c",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 33.15371989855747,
+      "visible_fraction_above12": 0.22738846536378643,
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-79955c8d-3101-49ce-b76a-46aa4da396f4.png",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a round glowing orb of holy light with a bright white core and a soft halo, a short pointed tail behind it pointing LEFT because it flies to the RIGHT, and a few tiny star-like sparks. Frame 6 of 8, hit 01: impact frame 2 of 4, the PEAK of the impact: the brightest burst at maximum size, a hot white core and radiating sparks. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED P01 first flight for this radiant orb identity. Reference2 is the APPROVED physical pilot for painted white-core/gray-glow STYLE ONLY. Generate ONLY P06 phase specified above, never a contact sheet. Flat ground-plane view, exact canvas-center pivot, all pixels and glow inside pure-black margins. Strictly neutral white/gray and no text, scene, character or weapon.\nIMPACT PEAK: no tail or flight stream at all. Centered round holy-light burst with the brightest hot white core, radiating short light rays and sparks evenly around it, at maximum impact size. Same exact canvas-center pivot, comfortable black margins outside all glow and spark tips.",
+      "human_acceptance": "PENDING_VISUAL_ACCEPTANCE"
+    },
+    {
+      "code": "P07",
+      "path": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_hit_02_v01.png",
+      "sha256": "11d77ed513ab15a253f053964c719a6e87829ffb3fda9f87587b3e65c3dd4f7c",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 13.066007595471207,
+      "visible_fraction_above12": 0.15677169580468497,
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-e5a0e939-4e99-42f6-baf6-70d17ebce201.png",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a round glowing orb of holy light with a bright white core and a soft halo, a short pointed tail behind it pointing LEFT because it flies to the RIGHT, and a few tiny star-like sparks. Frame 7 of 8, hit 02: impact frame 3 of 4: the burst expanding into fragments and a thin ring, dimmer gray. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED P01 first flight for this radiant orb identity. Reference2 is the APPROVED physical pilot for painted white-core/gray-glow STYLE ONLY. Generate ONLY P07 phase specified above, never a contact sheet. Flat ground-plane view, exact canvas-center pivot, all pixels and glow inside pure-black margins. Strictly neutral white/gray and no text, scene, character or weapon.\nIMPACT DECAY: no tail, no flight projectile, no intact solid white orb. Centered thin expanding GRAY ring with broken dim fragments and scattered sparks, clearly weaker than peak. Keep the exact center and same painting texture.\nReference3 is the GENERATED P06 preceding impact peak, technically inspected but not individually owner-approved. It is a SUPPORTING PHASE REFERENCE for exact canvas-center position, impact painting texture, and spatial continuity only. Keep the approved P01 identity/style, but decay this P06 explosion: remove its solid white core entirely, let the round effect EXPAND into a thin dim fragmented ring slightly beyond the old round core. Do not shrink back to flight-orb size and do not copy the bright peak. Keep all fragments, ring and specks inside black margins. Follow the dimness and fragmentation specified for P07.",
+      "human_acceptance": "PENDING_VISUAL_ACCEPTANCE"
+    },
+    {
+      "code": "P08",
+      "path": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_hit_03_v01.png",
+      "sha256": "97062541c2bab36d8451892dadefb7553e21eeb723afa0d3f83912b6693df2f1",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 1.439003482317509,
+      "visible_fraction_above12": 0.02190120800042734,
+      "archived_original": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-c452a231-ad39-4904-aac3-ecb8eca7e528.png",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a round glowing orb of holy light with a bright white core and a soft halo, a short pointed tail behind it pointing LEFT because it flies to the RIGHT, and a few tiny star-like sparks. Frame 8 of 8, hit 03: impact frame 4 of 4: only faint scattered specks and a barely visible ring remain, almost black. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED P01 first flight for this radiant orb identity. Reference2 is the APPROVED physical pilot for painted white-core/gray-glow STYLE ONLY. Generate ONLY P08 phase specified above, never a contact sheet. Flat ground-plane view, exact canvas-center pivot, all pixels and glow inside pure-black margins. Strictly neutral white/gray and no text, scene, character or weapon.\nFINAL IMPACT: almost entirely pure BLACK; only a barely visible DARK GRAY centered broken ring and a few very faint small specks. No white core, no bright sparks, no intact orb, no tail. Same exact pivot.\nReference3 is the GENERATED P06 preceding impact peak, technically inspected but not individually owner-approved. It is a SUPPORTING PHASE REFERENCE for exact canvas-center position, impact painting texture, and spatial continuity only. Keep the approved P01 identity/style, but decay this P06 explosion: remove its solid white core entirely, let the round effect EXPAND into a thin dim fragmented ring slightly beyond the old round core. Do not shrink back to flight-orb size and do not copy the bright peak. Keep all fragments, ring and specks inside black margins. Follow the dimness and fragmentation specified for P08.",
+      "human_acceptance": "PENDING_VISUAL_ACCEPTANCE"
+    }
+  ],
+  "visual_acceptance": ".atena/generated/orbe-radiante-review-2026-10-13/visual-acceptance.json",
+  "content_state": "DRAFT",
+  "canonical_promotion": false,
+  "scope": "Approved admission proposal: 2 atlases, visual helper/layer, overlay/run routing, primary hit weapon/kind metadata only, validation and playtest preparation; no Git/export"
+}

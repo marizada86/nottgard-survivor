@@ -1,0 +1,141 @@
+{
+  "status": "COMPLETE_CANDIDATE_SEQUENCE_VISUALLY_REVIEWED",
+  "sources": [
+    {
+      "code": "Q01",
+      "path": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_fly_00_v03.png",
+      "sha256": "be4fc0674b455b2efb5609e27c4228569b22d274cfb077665b09f778f5fc88fb",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v03",
+      "mean_luminance": 9.3887432623897,
+      "visible_fraction_above12": 0.08435081105693042,
+      "central_hot_light_centroid_normalized": [
+        0.49558026483846324,
+        0.5020071242430542
+      ]
+    },
+    {
+      "code": "Q02",
+      "path": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_fly_01_v01.png",
+      "sha256": "034eb57a9646d3de68662c0408c9b3b98827538560c7a03318f31e88f2eff1ef",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 10.666457447809751,
+      "visible_fraction_above12": 0.0924149579400146,
+      "central_hot_light_centroid_normalized": [
+        0.4796692471743191,
+        0.502520748729376
+      ]
+    },
+    {
+      "code": "Q03",
+      "path": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_fly_02_v01.png",
+      "sha256": "5010a77a124a1c3f72b831783aa650146e9deaea790e538ca3d94a140b47d711",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 8.781938625743713,
+      "visible_fraction_above12": 0.07789046343566615,
+      "central_hot_light_centroid_normalized": [
+        0.4917715092183404,
+        0.5013109490621003
+      ]
+    },
+    {
+      "code": "Q04",
+      "path": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_fly_03_v01.png",
+      "sha256": "67347db56ac39ff33a1d73ff991e4274ecafa2c9e8549e05f4a447e77f6c9f89",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 7.039883218994274,
+      "visible_fraction_above12": 0.07585677983562647,
+      "central_hot_light_centroid_normalized": [
+        0.5080508903492501,
+        0.5028582599254316
+      ]
+    },
+    {
+      "code": "Q05",
+      "path": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_hit_00_v01.png",
+      "sha256": "7164675a2489957161b03aac30f967f6b25be79418407d6545af0f669484892b",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 8.064125261682552,
+      "visible_fraction_above12": 0.07513627842260429
+    },
+    {
+      "code": "Q06",
+      "path": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_hit_01_v01.png",
+      "sha256": "8388c93447f69e80064d03fc4fc0016d01bf57f700e42b6dd806ceb363b29b08",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 29.769438911909322,
+      "visible_fraction_above12": 0.2601404373627995
+    },
+    {
+      "code": "Q07",
+      "path": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_hit_02_v01.png",
+      "sha256": "b3c77052708c70a1db60ff187cdc5d7c0bd3a092a68095ada0a3056b3face503",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 11.613830956251002,
+      "visible_fraction_above12": 0.18517013499385698
+    },
+    {
+      "code": "Q08",
+      "path": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_hit_03_v01.png",
+      "sha256": "224a23efd7fdfffd220d621ec82bc62193c6ad826515897fe9cdb3613fd66954",
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "version": "v01",
+      "mean_luminance": 1.508071777966011,
+      "visible_fraction_above12": 0.03319012334373704
+    }
+  ],
+  "flight_centroid_spread_normalized": [
+    0.028381643174931026,
+    0.0015473108633313748
+  ],
+  "centroid_method": "Central30%-70% crop, weights max(luminance-180,0)^2; proxy for hot light consistency, not exact ring pivot",
+  "native_sources_preserved": true,
+  "preview_only": true,
+  "runtime_admission": false,
+  "manifest_assets": 202,
+  "timestamp": "2026-10-09T04:26:26.564852+00:00",
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "visual_inspected": true,
+  "visual_review": "Four flight frames maintain arcane core, circular glyph ring and left wispy tail; small glow/internal detail/tail variation with Q04-Q01 closure reviewed. Four centered impacts remove flight tail, flash peaks at Q06, then dim fragments/ring and faint residues. Native frames and96px montage inspected; no visible cuts.",
+  "human_gate_approval": ".atena/generated/s007-reconciliation/v01/q01-owner-approval-2026-10-09.json",
+  "review": ".atena/generated/s007-reconciliation/v01/orbe-arcano-eight-frame-review-2026-10-09.png",
+  "preview_gifs": [
+    ".atena/generated/s007-reconciliation/v01/orbe-arcano-flight-review-2026-10-09.gif",
+    ".atena/generated/s007-reconciliation/v01/orbe-arcano-impact-review-2026-10-09.gif"
+  ],
+  "other_frames_human_approval": "Not individually claimed",
+  "remaining_native_vfx_frames": 80,
+  "next": "R01 cutting wave first-flight gate only",
+  "native_dimensions_note": "Native square bytes retained; technical normalization to1024 deferred"
+}

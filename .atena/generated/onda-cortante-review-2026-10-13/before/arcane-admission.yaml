@@ -1,0 +1,32 @@
+version: 1
+plan: PLAN-053
+revision: orbe-arcano-admission/v01
+classification: IN_PLAN_APPROVED_ADMISSION
+status: LOCAL_TECHNICAL_DELIVERED_AWAITING_OWNER_PLAYTEST
+mode: per-plan
+approval_status: APPROVED_EXPLICITLY
+checkpoint: S-004/OWNER_RUNTIME_PLAYTEST
+ordered_steps: [S-001, S-002, S-003, S-004]
+batches: {B-001: [S-001], B-002: [S-002], B-003: [S-003, S-004]}
+current_step_position: 4
+completed_steps: 4
+total_steps: 4
+remaining_steps_after_current: 0
+spec: .atena/specs/SPEC-121-retomada-fila-imagens/orbe-arcano-admission-v01.md
+source_acceptance: .atena/generated/orbe-arcano-review-2026-10-13/visual-acceptance.json
+content_state: DRAFT
+canonical_promotion: false
+runtime_changed: true
+weapons: [raio_enfraquecedor, dominar_pessoa, cajado_dos_desejos]
+defaults: {cell: 256, flight_fps: 12, impact_duration: 0.24, flight_ring_px: 5, impact_ring_px: 12, combined_impact_cap: 32}
+next_objective: Dono avaliar estabilidade do anel, leitura de glifos/cauda, conforto e ritmo em runtime.
+return_plan: {id: PLAN-071, checkpoint: B-006/S-011, preserved: true}
+authorization: .atena/generated/orbe-arcano-admission-2026-10-13/authorization.json
+verification: .atena/generated/orbe-arcano-admission-2026-10-13/verification.json
+evidence: .atena/evidence/orbe-arcano-admission-2026-10-13.md
+playtest: .atena/generated/orbe-arcano-admission-2026-10-13/PLAYTEST.md
+build_id: 0.4.0/orbe-arcano-admission-v01/a431fa9+local-498dd8dce1bb
+human_runtime_playtest: PENDING_NOT_PERFORMED
+next_inputs: Roteiro e seis atalhos QA, tres armas e cena mista.
+next_output: Feedback humano arma/modo/cor/direcao, aceitavel ou problema.
+next_checks: Legibilidade, conforto, ritmo, anel/cauda e reduzido; nao afirmar diversao por metricas.

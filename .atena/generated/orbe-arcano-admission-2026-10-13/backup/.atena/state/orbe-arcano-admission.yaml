@@ -1,0 +1,23 @@
+version: 1
+plan: PLAN-053
+revision: orbe-arcano-admission/v01
+classification: PLAN_CHANGE_REQUEST
+status: PROPOSED_NOT_EXECUTABLE
+mode: unconfigured
+approval_status: PENDING_OWNER_CHOICE
+checkpoint: PLAN_APPROVAL
+ordered_steps: [S-001, S-002, S-003, S-004]
+batches: {B-001: [S-001], B-002: [S-002], B-003: [S-003, S-004]}
+current_step_position: 1
+completed_steps: 0
+total_steps: 4
+remaining_steps_after_current: 3
+spec: .atena/specs/SPEC-121-retomada-fila-imagens/orbe-arcano-admission-v01.md
+source_acceptance: .atena/generated/orbe-arcano-review-2026-10-13/visual-acceptance.json
+content_state: DRAFT
+canonical_promotion: false
+runtime_changed: false
+weapons: [raio_enfraquecedor, dominar_pessoa, cajado_dos_desejos]
+defaults: {cell: 256, flight_fps: 12, impact_duration: 0.24, flight_ring_px: 5, impact_ring_px: 12, combined_impact_cap: 32}
+next_objective: Escolher modo e aprovar escopo antes da execucao de S-001.
+return_plan: {id: PLAN-071, checkpoint: B-006/S-011, preserved: true}

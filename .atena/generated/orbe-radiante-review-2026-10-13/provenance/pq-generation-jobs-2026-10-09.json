@@ -1,0 +1,409 @@
+{
+  "plan": "PLAN-053",
+  "spec": "SPEC-121",
+  "generator": "built-in imagegen",
+  "remaining_at_start": 95,
+  "counter_field": "native_generated_since_P01",
+  "approval_receipt": ".atena/generated/s007-reconciliation/v01/p01-owner-approval-2026-10-09.json",
+  "native_originals_preserved": true,
+  "jobs": [
+    {
+      "code": "P02",
+      "effect": "orbe_radiante",
+      "name": "orbe_radiante_fly_01",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a round glowing orb of holy light with a bright white core and a soft halo, a short pointed tail behind it pointing LEFT because it flies to the RIGHT, and a few tiny star-like sparks. Frame 2 of 8, fly 01: flight frame 2 of 4: the same projectile, its glow pulsing slightly brighter and the tail flickering a little longer. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED P01 first flight for this radiant orb identity. Reference2 is the APPROVED physical pilot for painted white-core/gray-glow STYLE ONLY. Generate ONLY P02 phase specified above, never a contact sheet. Flat ground-plane view, exact canvas-center pivot, all pixels and glow inside pure-black margins. Strictly neutral white/gray and no text, scene, character or weapon.\nFLIGHT LOOP: keep EXACTLY the same orb center, circular body diameter and silhouette as approved P01. Only glow pulses slightly brighter and pointed left tail flickers a little longer; no scaling or translation of orb.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\orbe_radiante\\orbe_radiante_fly_00_v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_fly_01_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "generated_at": "2026-10-09T03:45:20.408581+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-210b9ca5-2de1-47f2-af3d-b9c6d09855ee.png",
+      "sha256": "bc48320c2de5aef68717bfe74679965fd2526ccd30369666735b181a6dab96ba",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        159,
+        414,
+        829,
+        829
+      ],
+      "outer_border_max_luminance": 2,
+      "maximum_channel_difference": 6,
+      "mean_luminance": 15.370481445021863,
+      "visible_fraction_above12": 0.09874748492225198,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "P03",
+      "effect": "orbe_radiante",
+      "name": "orbe_radiante_fly_02",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a round glowing orb of holy light with a bright white core and a soft halo, a short pointed tail behind it pointing LEFT because it flies to the RIGHT, and a few tiny star-like sparks. Frame 3 of 8, fly 02: flight frame 3 of 4: the same projectile, its inner details rotated a quarter turn, the tail a little shorter. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED P01 first flight for this radiant orb identity. Reference2 is the APPROVED physical pilot for painted white-core/gray-glow STYLE ONLY. Generate ONLY P03 phase specified above, never a contact sheet. Flat ground-plane view, exact canvas-center pivot, all pixels and glow inside pure-black margins. Strictly neutral white/gray and no text, scene, character or weapon.\nFLIGHT LOOP: keep EXACTLY the same orb center, circular body diameter and silhouette as P01. Rotate only the painted internal light swirls a quarter turn, not the orb position or tail direction. Left tail a little shorter; no scaling or translation.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\orbe_radiante\\orbe_radiante_fly_00_v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_fly_02_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "generated_at": "2026-10-09T03:46:34.694287+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-7dcb0610-b651-4694-ba64-606ecb4be005.png",
+      "sha256": "0d98f6826b1612f18307337cda34be0fed6709dd095fe6517dd21cd30b2f3f60",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        259,
+        422,
+        821,
+        822
+      ],
+      "outer_border_max_luminance": 2,
+      "maximum_channel_difference": 8,
+      "mean_luminance": 13.592671871065223,
+      "visible_fraction_above12": 0.08572440598378649,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "P04",
+      "effect": "orbe_radiante",
+      "name": "orbe_radiante_fly_03",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a round glowing orb of holy light with a bright white core and a soft halo, a short pointed tail behind it pointing LEFT because it flies to the RIGHT, and a few tiny star-like sparks. Frame 4 of 8, fly 03: flight frame 4 of 4: the same projectile, glow slightly dimmer, so that the next frame flows back into frame 1. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED P01 first flight for this radiant orb identity. Reference2 is the APPROVED physical pilot for painted white-core/gray-glow STYLE ONLY. Generate ONLY P04 phase specified above, never a contact sheet. Flat ground-plane view, exact canvas-center pivot, all pixels and glow inside pure-black margins. Strictly neutral white/gray and no text, scene, character or weapon.\nLOOP CLOSURE: same fixed orb center, circular body diameter and silhouette as P01. Glow slightly dimmer, same short left tail so returning to P01 is a gentle light pulse, with no position or size jump.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\orbe_radiante\\orbe_radiante_fly_00_v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_fly_03_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "generated_at": "2026-10-09T03:48:54.023521+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-bea4af32-5958-4f9d-bdaa-cd0aaf780ac4.png",
+      "sha256": "cf569ff20892598e4d399a4ee2d8fe8bb7f974cc6e8198e6067a0906d0729d92",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        186,
+        432,
+        815,
+        816
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 10,
+      "mean_luminance": 12.39339059189223,
+      "visible_fraction_above12": 0.08134797992516452,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "P05",
+      "effect": "orbe_radiante",
+      "name": "orbe_radiante_hit_00",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a round glowing orb of holy light with a bright white core and a soft halo, a short pointed tail behind it pointing LEFT because it flies to the RIGHT, and a few tiny star-like sparks. Frame 5 of 8, hit 00: impact frame 1 of 4: the projectile has just hit, a bright flash burst with tiny sparks starting, no tail anymore, about 60 percent of the final size. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED P01 first flight for this radiant orb identity. Reference2 is the APPROVED physical pilot for painted white-core/gray-glow STYLE ONLY. Generate ONLY P05 phase specified above, never a contact sheet. Flat ground-plane view, exact canvas-center pivot, all pixels and glow inside pure-black margins. Strictly neutral white/gray and no text, scene, character or weapon.\nIMPACT START: no tail or left stream at all. A compact centered round flash with tiny sparks starting radially, about60% of the coming peak size. Same exact canvas-center pivot. Only early impact, not a full maximum burst.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\orbe_radiante\\orbe_radiante_fly_00_v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_hit_00_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "generated_at": "2026-10-09T03:49:56.808094+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-84967b99-8e6c-4596-a5a2-8ea102ce5771.png",
+      "sha256": "1166c89f27735cb9d8e8a7425d4e7dc85d38712fb42148b9de2d6749ee6b3b3f",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        370,
+        371,
+        882,
+        834
+      ],
+      "outer_border_max_luminance": 2,
+      "maximum_channel_difference": 9,
+      "mean_luminance": 14.316417766178532,
+      "visible_fraction_above12": 0.09557486219536081,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "P06",
+      "effect": "orbe_radiante",
+      "name": "orbe_radiante_hit_01",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a round glowing orb of holy light with a bright white core and a soft halo, a short pointed tail behind it pointing LEFT because it flies to the RIGHT, and a few tiny star-like sparks. Frame 6 of 8, hit 01: impact frame 2 of 4, the PEAK of the impact: the brightest burst at maximum size, a hot white core and radiating sparks. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED P01 first flight for this radiant orb identity. Reference2 is the APPROVED physical pilot for painted white-core/gray-glow STYLE ONLY. Generate ONLY P06 phase specified above, never a contact sheet. Flat ground-plane view, exact canvas-center pivot, all pixels and glow inside pure-black margins. Strictly neutral white/gray and no text, scene, character or weapon.\nIMPACT PEAK: no tail or flight stream at all. Centered round holy-light burst with the brightest hot white core, radiating short light rays and sparks evenly around it, at maximum impact size. Same exact canvas-center pivot, comfortable black margins outside all glow and spark tips.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\orbe_radiante\\orbe_radiante_fly_00_v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_hit_01_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "generated_at": "2026-10-09T03:51:40.049132+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-79955c8d-3101-49ce-b76a-46aa4da396f4.png",
+      "sha256": "cd8de8d95839ac8700975d1f73f867bab4325e4c19be3252476d22e6ef1dca5c",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        215,
+        178,
+        1035,
+        1030
+      ],
+      "outer_border_max_luminance": 2,
+      "maximum_channel_difference": 11,
+      "mean_luminance": 33.15371989855747,
+      "visible_fraction_above12": 0.22738846536378643,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "P07",
+      "effect": "orbe_radiante",
+      "name": "orbe_radiante_hit_02",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a round glowing orb of holy light with a bright white core and a soft halo, a short pointed tail behind it pointing LEFT because it flies to the RIGHT, and a few tiny star-like sparks. Frame 7 of 8, hit 02: impact frame 3 of 4: the burst expanding into fragments and a thin ring, dimmer gray. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED P01 first flight for this radiant orb identity. Reference2 is the APPROVED physical pilot for painted white-core/gray-glow STYLE ONLY. Generate ONLY P07 phase specified above, never a contact sheet. Flat ground-plane view, exact canvas-center pivot, all pixels and glow inside pure-black margins. Strictly neutral white/gray and no text, scene, character or weapon.\nIMPACT DECAY: no tail, no flight projectile, no intact solid white orb. Centered thin expanding GRAY ring with broken dim fragments and scattered sparks, clearly weaker than peak. Keep the exact center and same painting texture.\nReference3 is the GENERATED P06 preceding impact peak, technically inspected but not individually owner-approved. It is a SUPPORTING PHASE REFERENCE for exact canvas-center position, impact painting texture, and spatial continuity only. Keep the approved P01 identity/style, but decay this P06 explosion: remove its solid white core entirely, let the round effect EXPAND into a thin dim fragmented ring slightly beyond the old round core. Do not shrink back to flight-orb size and do not copy the bright peak. Keep all fragments, ring and specks inside black margins. Follow the dimness and fragmentation specified for P07.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\orbe_radiante\\orbe_radiante_fly_00_v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\orbe_radiante\\orbe_radiante_hit_01_v01.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_hit_02_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "supporting_phase_reference": {
+        "code": "P06",
+        "role": "technical preceding impact phase; not individually owner-approved",
+        "path": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_hit_01_v01.png",
+        "sha256": "cd8de8d95839ac8700975d1f73f867bab4325e4c19be3252476d22e6ef1dca5c"
+      },
+      "generated_at": "2026-10-09T03:52:50.734559+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-e5a0e939-4e99-42f6-baf6-70d17ebce201.png",
+      "sha256": "11d77ed513ab15a253f053964c719a6e87829ffb3fda9f87587b3e65c3dd4f7c",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        194,
+        194,
+        1062,
+        1029
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 9,
+      "mean_luminance": 13.066007595471207,
+      "visible_fraction_above12": 0.15677169580468497,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "P08",
+      "effect": "orbe_radiante",
+      "name": "orbe_radiante_hit_03",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a round glowing orb of holy light with a bright white core and a soft halo, a short pointed tail behind it pointing LEFT because it flies to the RIGHT, and a few tiny star-like sparks. Frame 8 of 8, hit 03: impact frame 4 of 4: only faint scattered specks and a barely visible ring remain, almost black. Match exactly the line style, glow, thickness and shape of the approved gate frame attached.\n\nReference1 is APPROVED P01 first flight for this radiant orb identity. Reference2 is the APPROVED physical pilot for painted white-core/gray-glow STYLE ONLY. Generate ONLY P08 phase specified above, never a contact sheet. Flat ground-plane view, exact canvas-center pivot, all pixels and glow inside pure-black margins. Strictly neutral white/gray and no text, scene, character or weapon.\nFINAL IMPACT: almost entirely pure BLACK; only a barely visible DARK GRAY centered broken ring and a few very faint small specks. No white core, no bright sparks, no intact orb, no tail. Same exact pivot.\nReference3 is the GENERATED P06 preceding impact peak, technically inspected but not individually owner-approved. It is a SUPPORTING PHASE REFERENCE for exact canvas-center position, impact painting texture, and spatial continuity only. Keep the approved P01 identity/style, but decay this P06 explosion: remove its solid white core entirely, let the round effect EXPAND into a thin dim fragmented ring slightly beyond the old round core. Do not shrink back to flight-orb size and do not copy the bright peak. Keep all fragments, ring and specks inside black margins. Follow the dimness and fragmentation specified for P08.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\orbe_radiante\\orbe_radiante_fly_00_v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\orbe_radiante\\orbe_radiante_hit_01_v01.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_hit_03_v01.png",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "supporting_phase_reference": {
+        "code": "P06",
+        "role": "technical preceding impact phase; not individually owner-approved",
+        "path": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_hit_01_v01.png",
+        "sha256": "cd8de8d95839ac8700975d1f73f867bab4325e4c19be3252476d22e6ef1dca5c"
+      },
+      "generated_at": "2026-10-09T03:54:21.016452+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-c452a231-ad39-4904-aac3-ecb8eca7e528.png",
+      "sha256": "97062541c2bab36d8451892dadefb7553e21eeb723afa0d3f83912b6693df2f1",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        315,
+        294,
+        945,
+        929
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 7,
+      "mean_luminance": 1.439003482317509,
+      "visible_fraction_above12": 0.02190120800042734,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    },
+    {
+      "code": "Q01",
+      "effect": "orbe_arcano",
+      "name": "orbe_arcano_fly_00",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "version": "v03",
+      "status": "GENERATED_VISUALLY_INSPECTED",
+      "destination": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_fly_00_v03.png",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\orbe_radiante\\orbe_radiante_fly_00_v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\orbe_arcano\\orbe_arcano_fly_00_v02.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "reference_roles": [
+        "P01 approved orb center position only",
+        "Q01 v02 unapproved arcane ring and smoke design only",
+        "A03 v02 approved white/gray painted glow style"
+      ],
+      "prompt": "Generate ONE arcane projectile first-flight frame with generous black margins on a square1024x1024 canvas. This is the third native attempt: position is critical.\n\nREFERENCE1 is the APPROVED radiant orb. Copy ONLY its ORB CENTER POSITION: its white core sits in the exact center of the canvas. REFERENCE2 is the arcane design to reconstruct at that centered position: replace radiant body with a SMALL compact white bright core, ONE thin CIRCULAR ring around it with four tiny abstract circular glyph marks, and wispy smoky ribbons trailing to the LEFT for rightward flight. Reference2 core is too far right: DO NOT COPY ITS POSITION. REFERENCE3 is the approved painted white-core/gray falloff style.\n\nThe core and circular ring MUST be centered at EXACT50 percent width and50 percent height, aligned with the core position of reference1. Draw the ring around the canvas center, then a white core at its center, then add trailing smoke asymmetrically on the LEFT. The whole smoke-plus-orb bounding box WILL be left of canvas center; do not recenter that box. The ring is small and circular, no ellipse or perspective. White/gray only, flat overhead ground-plane drawing, pure black background. Dense compact white core surrounded by black space inside the thin ring, small circles as glyphs only. No readable letters, no scene, no people, no hands, no weapon, no border, no shadows. Preserve the arcane identity of reference2 but use the centered position of reference1. All pixels/glow within frame. Only this single first flight frame, no other phases or montage.",
+      "generated_at": "2026-10-09T04:01:26.417805+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-363da36b-6421-4b24-ba8d-425453428065.png",
+      "sha256": "be4fc0674b455b2efb5609e27c4228569b22d274cfb077665b09f778f5fc88fb",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        107,
+        457,
+        807,
+        803
+      ],
+      "outer_border_max_luminance": 2,
+      "maximum_channel_difference": 10,
+      "mean_luminance": 9.3887432623897,
+      "visible_fraction_above12": 0.08435081105693042,
+      "native_bytes_preserved": true,
+      "runtime_admission": false
+    }
+  ],
+  "rejected_native_versions": [
+    {
+      "code": "Q01",
+      "effect": "orbe_arcano",
+      "name": "orbe_arcano_fly_00",
+      "version": "v01",
+      "prompt": "A single frame of a 2D game visual effect, pure top-down view as if lying flat on the ground, no perspective. Pure black background (#000000), nothing else in the image: no character, no weapon, no hand, no text, no border, no shadow, no ground. The effect is neutral white and light gray only (no color, any motif such as flames or rays is drawn in white and gray), with soft glowing edges so it can be tinted and blended additively in the game. Square 1024x1024 canvas, the origin point of the effect at the exact center of the image. The effect points to the RIGHT, maximum reach about 45 percent of the image width from the center. Clean stylized hand-painted look with sharp bright core and soft falloff, readable at small size. Subject: a swirling arcane orb: a small dense bright core inside a thin rotating ring with tiny circular glyph marks on the ring, and a wispy smoky trail pointing LEFT because it flies to the RIGHT. Frame 1 of 8, fly 00: flight frame 1 of 4 (these four frames loop): the projectile in flight at its normal size, tail streaming behind it.\n\nThe attached approved physical pilot is a STYLE REFERENCE ONLY for painted light texture, white core and gray falloff. Generate the NEW arcane projectile specified above, not a crescent or radiant orb: a compact dense white core centered exactly on the canvas, surrounded by ONE thin circular rotating ring with tiny abstract circular glyph marks, and a wispy smoky trail flowing LEFT because it travels RIGHT. Flat ground-plane drawing, no 3D sphere or perspective, no readable letters, no color. Only this first flight frame; all ring, smoky trail, glow and particles safely inside pure-black margins.",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "destination": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_fly_00_v01.png",
+      "status": "REJECTED_VISUAL",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "generated_at": "2026-10-09T03:58:43.683136+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-98fe287f-edfe-4a5d-bb75-24c551a89a06.png",
+      "sha256": "0fd8ce091b9e1655b9e701d2a9b3a6a8ba65d44c613e379c648a0bf19e08f787",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        163,
+        459,
+        828,
+        774
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 9,
+      "mean_luminance": 7.852965566010139,
+      "visible_fraction_above12": 0.07582625550391855,
+      "native_bytes_preserved": true,
+      "runtime_admission": false,
+      "rejection_reason": "Native Q01 v01 ring/core visually displaced right of canvas center, approximately 5 percent of canvas width; preserve native source and correct with imagegen."
+    },
+    {
+      "code": "Q01",
+      "effect": "orbe_arcano",
+      "name": "orbe_arcano_fly_00",
+      "transparent_background": false,
+      "source_queue": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "version": "v02",
+      "status": "REJECTED_VISUAL",
+      "destination": ".atena/generated/art-candidates/vfx/orbe_arcano/orbe_arcano_fly_00_v02.png",
+      "referenced_image_paths": [
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\art-candidates\\vfx\\orbe_arcano\\orbe_arcano_fly_00_v01.png",
+        "C:\\Users\\Higor Rossini\\.codex\\worktrees\\e36f\\nottgard-survivor\\.atena\\generated\\s007-reconciliation\\v01\\approved-pilot-A03-v02-reference.png"
+      ],
+      "correction_reason": "Native Q01 v01 ring/core visually displaced right of canvas center, approximately 5 percent of canvas width; preserve native source and correct with imagegen.",
+      "reference_roles": [
+        "Q01 v01 unapproved native geometry to correct",
+        "A03 v02 approved style reference"
+      ],
+      "prompt": "Edit the FIRST attached image (Q01 v01 arcane orb); the SECOND attachment is the approved white/gray painted glow STYLE reference only. Produce ONE corrected first-flight arcane orb frame, never a contact sheet. Preserve its compact dense bright white core, thin circular ring with tiny abstract circular glyph marks, wispy smoky trail extending LEFT for RIGHTWARD flight, hand-painted white/gray glow, pure black background, flat top-down view and circular ring seen face-on.\n\nCRITICAL POSITION CORRECTION: the first image has the core and ring noticeably too far RIGHT. Move the entire effect approximately 60 pixels LEFT on the same square canvas. Put the geometric CENTER of the bright core AND the surrounding ring at EXACT CANVAS CENTER (50 percent width, 50 percent height). The trailing smoke is asymmetric and extends left, so do NOT center the bounding box of the whole effect. Center the ORB CORE AND RING themselves. Preserve their circular shape and scale; preserve the smoky tail relative to the orb. Generous black margins and all particles/glow inside. Requested1024x1024 square, core and ring center at512,512; if native size differs, use exact50 percent center. No color, readable text, character, weapon, hand, scene, border, ground or perspective. Only fix centered placement; do not change the design into a radiant orb or crescent.",
+      "generated_at": "2026-10-09T04:00:26.948392+00:00",
+      "original_path": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a11675-f9ef-7082-9515-fb80f80850be\\exec-4fa649f0-0db8-4dd6-8e44-7fea64195f38.png",
+      "sha256": "3c478b4d335a3711955bd2ad63a2e71e94398e3b312ad7ae8b497337838b69b8",
+      "visual_inspected": true,
+      "native_dimensions": [
+        1254,
+        1254
+      ],
+      "native_mode": "RGB",
+      "canvas_square": true,
+      "visible_bbox_above12": [
+        96,
+        432,
+        868,
+        807
+      ],
+      "outer_border_max_luminance": 1,
+      "maximum_channel_difference": 10,
+      "mean_luminance": 12.25076501606343,
+      "visible_fraction_above12": 0.11035690574849477,
+      "native_bytes_preserved": true,
+      "runtime_admission": false,
+      "rejection_reason": "Native edit v02 retained ring/core right of center; third and final native centering attempt uses approved centered radiant orb as position reference only."
+    }
+  ]
+}

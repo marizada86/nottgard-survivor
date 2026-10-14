@@ -217,3 +217,9 @@ ART-029: FILA02236/36 fontes já geradas segundo histórico local10bd31c; recupe
 2026-10-13 — ART-029: Pulso Radiante (seis fases) admitido localmente DRAFT, pulso-admission/v01 técnico4/4; suíte0falhas,smoke9fases,16capturas. Playtest humano e integração das demais famílias continuam pendentes. [Evidência](../evidence/pulso-admission-2026-10-13.md).
 
 2026-10-13 — ART-029: Ampulheta do Silêncio (seis fases) admitida localmente DRAFT, ampulheta-admission/v01 técnico4/4; suíte0falhas/smoke9fases/12capturas/regressão Pulso PASS. Playtest humano e admissão das demais famílias seguem pendentes. [Evidência](../evidence/ampulheta-admission-2026-10-13.md).
+
+2026-10-13 — ART-029: Orbe Radiante oito fases admitidas localmente DRAFT, orbe-radiante-admission/v01 técnico4/4; suíte0falhas,smoke9fases,paridade80cenários/7.200passos,23capturas PASS. Somente Raio de Luz/Luz Mais Pura/Marca da Retidão. Playtest humano pendente; próxima família proposta Orbe Arcano. Sem CANON ou Git. Evidência: `.atena/evidence/orbe-radiante-admission-2026-10-13.md`.
+
+2026-10-13 — ART-029: Orbe Arcano oito fases admitidas localmente DRAFT, orbe-arcano-admission/v01 técnico4/4. Suíte0falhas/smoke9fases,24capturas Arcano/misto+23regressão Radiante PASS. Só Raio Enfraquecedor/Dominar Pessoa/Cajado dos Desejos; Battle/data intactos. Playtest humano pendente; próxima família proposta Onda Cortante. Sem CANON/Git. Evidência: `.atena/evidence/orbe-arcano-admission-2026-10-13.md`.
+
+2026-10-13 — ART-029: Onda Cortante oito fontes aceitas (R01v02/R05v02 e demaisv01) admitidas localmente DRAFT, onda-cortante-admission/v01 técnico4/4. Só Lâmina Trovejante/Tempestade; suíte0/smoke9,69capturas e paridade32cenários PASS. Battle/data e dois orbes/Pulso/Ampulheta preservados. Playtest humano pendente; sem fechar subjetivamente toda FILA022, sem CANON/Git/exportação. Evidência: `.atena/evidence/onda-cortante-admission-2026-10-13.md`.

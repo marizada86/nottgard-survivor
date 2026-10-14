@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "native_sources_verified": 8,
+  "runtime_files_unchanged": 3017,
+  "gallery_links_verified": 26,
+  "preview_gifs": {
+    "flight": {
+      "frames": 4,
+      "size": [
+        256,
+        256
+      ],
+      "historical_preview_only": true
+    },
+    "impact": {
+      "frames": 4,
+      "size": [
+        256,
+        256
+      ],
+      "historical_preview_only": true
+    }
+  },
+  "model_inspection": "Eight native sources and historical sheet/96px thumbnails inspected. Ring/glyph positions appear stable, smoky tail faces left, impact peaks Q06, fades to fragmented ring Q07 and dim remnants Q08. No visible cuts. Animated perception/loop closure remains human pending; no browser playback claimed.",
+  "photometric_note": "Historical x centroid spread ~2.84% is not proof of geometric ring motion. Approved Q01 framing preserved; exact runtime pivot is deferred.",
+  "content_state": "DRAFT_SEQUENCE_Q01_V03_HISTORICAL_APPROVAL_PRESERVED",
+  "human_acceptance": "Q02_TO_Q08_V01_PENDING",
+  "runtime_admission": false,
+  "canonical_promotion": false,
+  "new_generation": 0
+}

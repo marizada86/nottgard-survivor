@@ -1,0 +1,70 @@
+{
+	"directions": 8,
+	"fallbacks": [
+		"reduced",
+		"missing flight",
+		"missing impact",
+		"arcane",
+		"secondary hit"
+	],
+	"flight_frames": 4,
+	"flight_loop_return": true,
+	"human_playtest": false,
+	"impact_cap": 32,
+	"impact_frames": 4,
+	"layer_freed_with_run": true,
+	"mixed_arcane_radiant": true,
+	"nova_regressions": true,
+	"pause_and_lifetime": true,
+	"screenshots": [
+		"raio_enfraquecedor-flight",
+		"eight-directions",
+		"flight-phase-0",
+		"flight-phase-1",
+		"flight-phase-2",
+		"flight-phase-3",
+		"flight-loop-return",
+		"raio_enfraquecedor-impact",
+		"impact-phase-0",
+		"impact-phase-1",
+		"impact-phase-2",
+		"impact-phase-3",
+		"tint-lliira",
+		"tint-tou-um",
+		"reduced-fallback",
+		"missing-texture-fallback",
+		"unsupported-magic-fallback",
+		"dominar_pessoa-flight",
+		"dominar_pessoa-impact",
+		"cajado_dos_desejos-flight",
+		"cajado_dos_desejos-impact",
+		"mixed-arcane-radiant",
+		"regression-sentenca_de_lliira",
+		"regression-ampulheta"
+	],
+	"status": "PASS",
+	"tints": [
+		"Lliira",
+		"Tou Um"
+	],
+	"weapons": [
+		{
+			"number_cap_independent": true,
+			"real_hits": 1,
+			"spawned": 1,
+			"weapon": "raio_enfraquecedor"
+		},
+		{
+			"number_cap_independent": true,
+			"real_hits": 1,
+			"spawned": 1,
+			"weapon": "dominar_pessoa"
+		},
+		{
+			"number_cap_independent": true,
+			"real_hits": 1,
+			"spawned": 3,
+			"weapon": "cajado_dos_desejos"
+		}
+	]
+}

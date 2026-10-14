@@ -1,0 +1,56 @@
+{
+  "revision": "orbe-radiante-review/v01",
+  "date": "2026-10-13",
+  "owner_reply": "Aprovo os sete quadros DRAFT",
+  "accepted": [
+    {
+      "code": "P02",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_fly_01_v01.png",
+      "sha256": "bc48320c2de5aef68717bfe74679965fd2526ccd30369666735b181a6dab96ba"
+    },
+    {
+      "code": "P03",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_fly_02_v01.png",
+      "sha256": "0d98f6826b1612f18307337cda34be0fed6709dd095fe6517dd21cd30b2f3f60"
+    },
+    {
+      "code": "P04",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_fly_03_v01.png",
+      "sha256": "cf569ff20892598e4d399a4ee2d8fe8bb7f974cc6e8198e6067a0906d0729d92"
+    },
+    {
+      "code": "P05",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_hit_00_v01.png",
+      "sha256": "1166c89f27735cb9d8e8a7425d4e7dc85d38712fb42148b9de2d6749ee6b3b3f"
+    },
+    {
+      "code": "P06",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_hit_01_v01.png",
+      "sha256": "cd8de8d95839ac8700975d1f73f867bab4325e4c19be3252476d22e6ef1dca5c"
+    },
+    {
+      "code": "P07",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_hit_02_v01.png",
+      "sha256": "11d77ed513ab15a253f053964c719a6e87829ffb3fda9f87587b3e65c3dd4f7c"
+    },
+    {
+      "code": "P08",
+      "version": "v01",
+      "path": ".atena/generated/art-candidates/vfx/orbe_radiante/orbe_radiante_hit_03_v01.png",
+      "sha256": "97062541c2bab36d8451892dadefb7553e21eeb723afa0d3f83912b6693df2f1"
+    }
+  ],
+  "historical_p01_preserved": "a321dde3ebdce44f469c46a4147a4400bd97f3e958ec5ab0cb109338adaea752",
+  "content_state": "DRAFT_VISUALLY_ACCEPTED",
+  "canonical_promotion": false,
+  "scope": "Visual acceptance of P02-P08 v01 and permission to prepare normalization/admission proposal only",
+  "runtime_admission_authorized": false,
+  "git_authorized": false,
+  "runtime_playtest": "NOT_PERFORMED_BY_THIS_APPROVAL"
+}
