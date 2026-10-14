@@ -25,11 +25,21 @@ func _initialize() -> void:
 		quit(1)
 		return
 	img.convert(Image.FORMAT_RGBA8)
-	var comps := _components(img)
+	var comps := _components(img, 0, img.get_width())
 	if comps.size() != frames_expected:
-		printerr("quadros encontrados: %d, esperado %d" % [comps.size(), frames_expected])
-		quit(1)
-		return
+		# Quadros que se tocam viram um componente só: divide em colunas iguais e fica com o maior componente de cada uma.
+		print("aviso: %d componentes para %d quadros; usando colunas iguais (cortes e contaminação possíveis)" % [comps.size(), frames_expected])
+		comps = []
+		var column := img.get_width() / frames_expected
+		for i in frames_expected:
+			var part := _components(img, i * column, (i + 1) * column)
+			if part.is_empty():
+				printerr("coluna %d sem quadro" % (i + 1))
+				quit(1)
+				return
+			part.sort_custom(func(a, b): return a.area > b.area)
+			comps.append(part[0])
+		comps.sort_custom(func(a, b): return a.x0 < b.x0)
 	var max_base := 0
 	for c in comps:
 		max_base = maxi(max_base, c.y1)
@@ -90,7 +100,7 @@ func _foot_spread(crop: Image, h: int) -> int:
 				max_x = maxi(max_x, x)
 	return max_x - min_x + 1 if max_x >= 0 else 0
 
-func _components(img: Image) -> Array:
+func _components(img: Image, x_min: int, x_max: int) -> Array:
 	var w := img.get_width()
 	var h := img.get_height()
 	var label := PackedInt32Array()
@@ -99,7 +109,7 @@ func _components(img: Image) -> Array:
 	var stack: Array[int] = []
 	var id := 0
 	for y in h:
-		for x in w:
+		for x in range(x_min, x_max):
 			var i := y * w + x
 			if label[i] != 0 or img.get_pixel(x, y).a <= ALPHA:
 				continue
@@ -123,7 +133,7 @@ func _components(img: Image) -> Array:
 				for d in [Vector2i(1, 0), Vector2i(-1, 0), Vector2i(0, 1), Vector2i(0, -1)]:
 					var nx: int = px + d.x
 					var ny: int = py + d.y
-					if nx < 0 or ny < 0 or nx >= w or ny >= h:
+					if nx < x_min or ny < 0 or nx >= x_max or ny >= h:
 						continue
 					var ni := ny * w + nx
 					if label[ni] == 0 and img.get_pixel(nx, ny).a > ALPHA:

@@ -353,16 +353,18 @@ func _lab_apply_candidate(frames: SpriteFrames, cell: Vector2i) -> void:
 		if image == null or image.is_empty():
 			continue
 		var texture := ImageTexture.create_from_image(image)
+		# Tira em célula larga (ex.: ataque 512x512 com os pés em y=440, que cai no mesmo ponto do 256x384 com pés em y=376).
+		var frame_size := Vector2i(512, 512) if image.get_height() >= 512 else cell
 		var is_move := String(animation).begins_with("move")
 		if frames.has_animation(animation):
 			frames.remove_animation(animation)
 		frames.add_animation(animation)
 		frames.set_animation_speed(animation, 10.0 if is_move else 12.0)
 		frames.set_animation_loop(animation, is_move)
-		for index in maxi(1, image.get_width() / cell.x):
+		for index in maxi(1, image.get_width() / frame_size.x):
 			var atlas := AtlasTexture.new()
 			atlas.atlas = texture
-			atlas.region = Rect2(index * cell.x, 0, cell.x, cell.y)
+			atlas.region = Rect2(index * frame_size.x, 0, frame_size.x, frame_size.y)
 			frames.add_frame(animation, atlas)
 
 ## SPEC-176 (S-005), caminho C2: reforço procedural da passada, sincronizado aos quadros (dois apoios por ciclo).
