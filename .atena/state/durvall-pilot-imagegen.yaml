@@ -1,0 +1,108 @@
+plan: PLAN-103
+spec: SPEC-176
+revision: piloto-durvall/P1-v01
+classification: IN_PLAN
+mode: per-batch
+approval_status: APPROVED_EXPLICITLY
+owner_request: 'Comece só pelo P1 (move_e); anexe durvall_idle.png e gabarito_move_e.png; salve em retorno/.'
+checkpoint: B-002/S-008/P1_RETURNED_TECHNICAL_HOLD
+status: P1_RETURNED_DRAFT_REQUIRES_REVISION
+content_state: DRAFT
+canonical_promotion: false
+runtime_admission: false
+source_checkout: F:/dev/nottgard-survivor
+source_revision: f1d62ef2
+source_authority: 'Projeto local: PROMPTS.md e estado PLAN-103 atualizados no checkout principal; G-D1 aprovado em 2026-10-14.'
+identity: 'Durvall, ficha DRAFT r1 aprovada no G-D1; idle é referência visual obrigatória.'
+scene: 'Tira move_e, perfil à direita; jogo 2D isométrico, pintura de pixel, luz superior esquerda; sem cenário, chão, sombra ou texto.'
+visual_inputs: [durvall_idle.png, gabarito_move_e.png, PROMPTS.md/P1]
+blocking_gaps: []
+deferred: ['G-D2: código/ritmo, piloto autorizado com 17 fps', 'P2-P4: dependem de P1 bom e aceite visual']
+output: .atena/generated/m1-movimento/piloto-durvall/retorno/durvall_move_e_v01.png
+checks: [six_frames, alpha, guide_absent, identity, unclipped]
+next_objective: 'Revisar P1 antes de P2-P4; fonte nativa preservada, sem admissão runtime.'
+evidence: .atena/evidence/durvall-pilot-p1-imagegen-2026-10-14.md
+
+p1_visual_acceptance:
+  owner_reply: 'parece bom, proximo'
+  date: '2026-10-14'
+  content_state: DRAFT
+  technical_hold: PRESERVED
+p2:
+  revision: P2-v01
+  classification: IN_PLAN
+  approval_status: APPROVED_EXPLICITLY
+  checkpoint: GENERATION_AUTHORIZED
+  visual_inputs: [durvall_idle.png, gabarito_move_se.png, PROMPTS.md/P2]
+  identity: 'Ficha Durvall DRAFT r1 aprovada; idle como autoridade'
+  scene: 'move_se, tres-quartos de frente, baixo e direita; luz superior esquerda, sem cenario'
+  blocking_gaps: []
+  output: .atena/generated/m1-movimento/piloto-durvall/retorno/durvall_move_se_v01.png
+
+
+p2_result:
+  status: RETURNED_DRAFT_TECHNICAL_HOLD
+  checkpoint: OWNER_REVIEW_P2
+  evidence: .atena/evidence/durvall-pilot-p2-imagegen-2026-10-14.md
+  dimensions: [2172, 724]
+  human_visual_acceptance: PENDING
+  next: 'P3 move_s: idle e gabarito_move_s; depois P4 attack'
+
+
+p3_p5_gif:
+  revision: G-D2-P3-P5/v01
+  classification: IN_PLAN
+  mode: per-batch
+  approval_status: APPROVED_EXPLICITLY
+  owner_request: 'cheque as atualizacoes dos prompts ate o P5 na G-D2 e execute os prompts e faca um gif para avaliacao'
+  g_d2: 'Manter 10 fps; 17 fps descartado; comparar seis e oito quadros'
+  content_state: DRAFT
+  identity: 'Durvall ficha DRAFT r1 aprovada, idle como autoridade visual'
+  visual_context: 'P3 frente, P4 ataque direita tres-quartos, P5 corrida perfil direita; pintura de pixel e luz superior esquerda'
+  inputs: 'PROMPTS.md atualizado no checkout principal; idle e gabarito especifico por prompt'
+  blocking_gaps: []
+  ordered_steps: [P3, P4, P5, GIF_VERIFY]
+  checkpoint: P3_AUTHORIZED
+  next_objective: 'Gerar P3-P5 e GIF a 10 fps; preservar PNGs nativos; sem runtime'
+
+
+g_d2_p3_p5_delivery:
+  revision: G-D2-P3-P5/v01
+  status: DELIVERED_DRAFT_AWAITING_OWNER_VISUAL_REVIEW
+  classification: IN_PLAN
+  mode: per-batch
+  approval_status: APPROVED_EXPLICITLY
+  ordered_steps: [P3, P4, P5, GIF_VERIFY]
+  completed_steps: 4
+  total_steps: 4
+  remaining_steps: 0
+  checkpoint: B-002/S-008/GIF_OWNER_REVIEW
+  fps: 10
+  canonical_promotion: false
+  runtime_admission: false
+  human_visual_acceptance: PENDING
+  technical_format: HOLD
+  evidence: .atena/evidence/durvall-pilot-p3-p5-gif-2026-10-14.md
+  gif: .atena/generated/m1-movimento/piloto-durvall/avaliacao/durvall_p1_p5_10fps.gif
+  next_objective: 'Dono compara P1/P5 e revisa P2-P4; decidir revisoes antes de admissao'
+
+
+gif_5fps_review:
+  classification: IN_PLAN
+  revision: GIF-5fps/v01
+  owner_request: 'ainda esta estranho vamos tentar um gif a 5fps'
+  status: DELIVERED_DRAFT_AWAITING_OWNER_REVIEW
+  fps: 5
+  frame_duration_ms: 200
+  frames: 24
+  gif: .atena/generated/m1-movimento/piloto-durvall/avaliacao/durvall_p1_p5_5fps.gif
+  runtime_admission: false
+
+
+local_commit_authorization:
+  owner_reply: 'commit'
+  date: '2026-10-14'
+  scope: 'Prompts, gabaritos, retornos P1-P5, GIFs 10/5fps, script, relatorio, evidencias e estado desta conversa'
+  push_merge: NOT_AUTHORIZED
+  content_state: DRAFT
+  human_acceptance: PENDING

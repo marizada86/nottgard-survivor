@@ -1,0 +1,350 @@
+{
+  "fps": 10,
+  "frames": 24,
+  "cycle_ms": 2400,
+  "human_acceptance": "PENDING",
+  "runtime_admission": false,
+  "preview_method": "alpha components when separable, equal-cell fallback; fixed scale per strip; upper-body x anchor and common y origin; no interpolation",
+  "sources": [
+    {
+      "prompt": "P1 move_e / 6",
+      "file": "durvall_move_e_v01.png",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "frames": 6,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "component_count": 6,
+      "extraction": "alpha components; horizontal upper-body anchor; common vertical origin",
+      "preview_alpha_threshold": 128,
+      "cells_divisible": false,
+      "expected_dimensions": [
+        1536,
+        384
+      ],
+      "exact_format_pass": false,
+      "cell_alpha_boxes": [
+        [
+          137,
+          309,
+          478,
+          669
+        ],
+        [
+          161,
+          323,
+          458,
+          669
+        ],
+        [
+          171,
+          300,
+          469,
+          641
+        ],
+        [
+          144,
+          309,
+          473,
+          669
+        ],
+        [
+          168,
+          323,
+          460,
+          669
+        ],
+        [
+          171,
+          300,
+          448,
+          641
+        ]
+      ],
+      "fixed_envelope": [
+        137,
+        300,
+        478,
+        669
+      ],
+      "preview_scale": 0.6158357771260997,
+      "sha256": "84c21fdff6cab9ce11c3de42874eff649682790f994a9acef6b865564f33223d"
+    },
+    {
+      "prompt": "P2 move_se / 6",
+      "file": "durvall_move_se_v01.png",
+      "dimensions": [
+        2172,
+        724
+      ],
+      "frames": 6,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "component_count": 6,
+      "extraction": "alpha components; horizontal upper-body anchor; common vertical origin",
+      "preview_alpha_threshold": 128,
+      "cells_divisible": true,
+      "expected_dimensions": [
+        1536,
+        384
+      ],
+      "exact_format_pass": false,
+      "cell_alpha_boxes": [
+        [
+          182,
+          170,
+          583,
+          623
+        ],
+        [
+          208,
+          182,
+          561,
+          610
+        ],
+        [
+          229,
+          160,
+          568,
+          623
+        ],
+        [
+          210,
+          181,
+          587,
+          623
+        ],
+        [
+          191,
+          182,
+          569,
+          607
+        ],
+        [
+          234,
+          156,
+          558,
+          623
+        ]
+      ],
+      "fixed_envelope": [
+        182,
+        156,
+        587,
+        623
+      ],
+      "preview_scale": 0.4925053533190578,
+      "sha256": "66f8d4e28fa111efad4eab6ea85171a8fe09613f117a4f77559913c22155131c"
+    },
+    {
+      "prompt": "P3 move_s / 6",
+      "file": "durvall_move_s_v01.png",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "frames": 6,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "component_count": 4,
+      "extraction": "equal-cell fallback; dominant component per cell (joins unresolved)",
+      "preview_alpha_threshold": 128,
+      "cells_divisible": false,
+      "expected_dimensions": [
+        1536,
+        384
+      ],
+      "exact_format_pass": false,
+      "cell_alpha_boxes": [
+        [
+          172,
+          262,
+          450,
+          742
+        ],
+        [
+          156,
+          282,
+          451,
+          716
+        ],
+        [
+          181,
+          251,
+          455,
+          706
+        ],
+        [
+          170,
+          267,
+          466,
+          735
+        ],
+        [
+          176,
+          285,
+          459,
+          717
+        ],
+        [
+          182,
+          252,
+          466,
+          706
+        ]
+      ],
+      "fixed_envelope": [
+        156,
+        251,
+        466,
+        742
+      ],
+      "preview_scale": 0.4684317718940937,
+      "sha256": "d641f489600f939ab6bc6b1d19d7f87b7d4e30659ddd1b2ca68cb5f5f21d68e4"
+    },
+    {
+      "prompt": "P4 attack / 4",
+      "file": "durvall_attack_v01.png",
+      "dimensions": [
+        2048,
+        768
+      ],
+      "frames": 4,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "component_count": 4,
+      "extraction": "alpha components; horizontal upper-body anchor; common vertical origin",
+      "preview_alpha_threshold": 128,
+      "cells_divisible": true,
+      "expected_dimensions": [
+        1024,
+        384
+      ],
+      "exact_format_pass": false,
+      "cell_alpha_boxes": [
+        [
+          382,
+          216,
+          719,
+          738
+        ],
+        [
+          306,
+          294,
+          871,
+          740
+        ],
+        [
+          287,
+          294,
+          873,
+          738
+        ],
+        [
+          363,
+          290,
+          755,
+          744
+        ]
+      ],
+      "fixed_envelope": [
+        287,
+        216,
+        873,
+        744
+      ],
+      "preview_scale": 0.3583617747440273,
+      "sha256": "80e5f45af8d8d86dc048afb009db935744ffead3efd495ae2d7cf647fb32425d"
+    },
+    {
+      "prompt": "P5 move_e / 8",
+      "file": "durvall_move_e8_v01.png",
+      "dimensions": [
+        2048,
+        768
+      ],
+      "frames": 8,
+      "alpha_range": [
+        0,
+        254
+      ],
+      "component_count": 4,
+      "extraction": "equal-cell fallback; dominant component per cell (joins unresolved)",
+      "preview_alpha_threshold": 128,
+      "cells_divisible": true,
+      "expected_dimensions": [
+        2048,
+        384
+      ],
+      "exact_format_pass": false,
+      "cell_alpha_boxes": [
+        [
+          118,
+          262,
+          357,
+          589
+        ],
+        [
+          112,
+          271,
+          368,
+          581
+        ],
+        [
+          128,
+          277,
+          369,
+          584
+        ],
+        [
+          102,
+          262,
+          358,
+          579
+        ],
+        [
+          115,
+          262,
+          371,
+          589
+        ],
+        [
+          126,
+          275,
+          382,
+          580
+        ],
+        [
+          107,
+          275,
+          362,
+          585
+        ],
+        [
+          125,
+          259,
+          381,
+          586
+        ]
+      ],
+      "fixed_envelope": [
+        102,
+        259,
+        382,
+        589
+      ],
+      "preview_scale": 0.696969696969697,
+      "sha256": "150faaf3ede4902c5352d46ea256ac374c8227edb10094d4f42778a667c1df22"
+    }
+  ]
+}

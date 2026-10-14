@@ -1441,3 +1441,42 @@ local_git_receipt_2026_10_13_push:
   verification: "suite 0 falhas, smoke nove fases, controller_check 94/0, mobile_buttons_check 146/0 antes do push"
   ci: "Build and Release disparado pelo push; resultado nao verificado aqui"
   note: "O release latest passa a apontar para 09b36fe; a versao segue 0.4.0. Este recibo fica sem commit ate o proximo."
+
+durvall_pilot_imagegen_2026_10_14:
+  plan: PLAN-103
+  revision: piloto-durvall/P1-v01
+  classification: IN_PLAN
+  state_file: .atena/state/durvall-pilot-imagegen.yaml
+  mode: per-batch
+  approval_status: APPROVED_EXPLICITLY
+  checkpoint: B-002/S-008/P1_RETURNED_TECHNICAL_HOLD
+  content_state: DRAFT
+  source_checkpoint: 'F:/dev/nottgard-survivor: B-002/S-008_AWAITING_RETURN'
+
+
+
+durvall_pilot_p2_return_2026_10_14:
+  plan: PLAN-103
+  revision: piloto-durvall/P2-v01
+  classification: IN_PLAN
+  mode: per-batch
+  checkpoint: B-002/S-008/OWNER_REVIEW_P2
+  content_state: DRAFT
+  state_file: .atena/state/durvall-pilot-imagegen.yaml
+  evidence: .atena/evidence/durvall-pilot-p2-imagegen-2026-10-14.md
+
+
+durvall_g_d2_p3_p5_gif_2026_10_14:
+  plan: PLAN-103
+  revision: G-D2-P3-P5/v01
+  classification: IN_PLAN
+  mode: per-batch
+  approval_status: APPROVED_EXPLICITLY
+  status: DELIVERED_DRAFT_AWAITING_OWNER_VISUAL_REVIEW
+  checkpoint: B-002/S-008/GIF_OWNER_REVIEW
+  completed_steps: 4
+  total_steps: 4
+  content_state: DRAFT
+  fps: 10
+  state_file: .atena/state/durvall-pilot-imagegen.yaml
+  evidence: .atena/evidence/durvall-pilot-p3-p5-gif-2026-10-14.md
