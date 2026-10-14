@@ -1368,3 +1368,12 @@ assets_preparation_merge_2026_10_13:
   evidence: .atena/evidence/assets-preparation-merge-2026-10-13.md
   return_plan: PLAN-071
   return_checkpoint: B-006/S-011
+local_git_receipt_2026_10_13_push:
+  authorization: "atena, faca o push (2026-10-13)"
+  branch: main
+  push_range: "a431fa9..09b36fe"
+  pushed: true
+  scope: "21 commits: VFX dos projeteis e habilidades (6859583, 85b01cd), spec/estado e mesclagem de codex/assets-preparation-2026-10-10 (55c1cbd, af5e54b, 09b36fe)"
+  verification: "suite 0 falhas, smoke nove fases, controller_check 94/0, mobile_buttons_check 146/0 antes do push"
+  ci: "Build and Release disparado pelo push; resultado nao verificado aqui"
+  note: "O release latest passa a apontar para 09b36fe; a versao segue 0.4.0. Este recibo fica sem commit ate o proximo."
