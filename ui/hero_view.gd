@@ -11,6 +11,10 @@ const DISPLAY_HEIGHT := 72.0
 const SHADOW_LIFT := 0.4
 ## Raio da sombra (px) por px de altura visível do personagem: grande tem sombra grande, pequeno, pequena.
 const SHADOW_RADIUS_PER_HEIGHT := 0.2
+## SPEC-176 (S-005), laboratório de passada: passo-alvo como fração da altura em tela e limites do ritmo. Só vale com --walk-debug.
+const LAB_STEP_TO_HEIGHT := 0.55
+const LAB_FPS_MIN := 8.0
+const LAB_FPS_MAX := 30.0
 ## Linha (px na célula 256x384) em que ficam os pés no idle; o sprite é ancorado aí para tocar a sombra.
 const HERO_FEET_Y := {
 	&"korrak": 350.0, &"kayron": 376.0, &"sylas": 376.0, &"maelor": 364.0, &"nyrelia": 368.0,
@@ -115,6 +119,8 @@ var _trace: WalkTrace = null
 var _dbg_ready := false
 var _dbg_smooth := false
 var _dbg_force := Vector2.ZERO
+var _dbg_bob := 0.0    # SPEC-176: balanço vertical sincronizado ao ciclo (px de tela); 0 = desligado
+var _dbg_lean := 0.0   # SPEC-176: inclinação sincronizada ao ciclo (rad); 0 = desligado
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
@@ -183,6 +189,19 @@ static func display_scale(hero: String) -> float:
 		return DISPLAY_HEIGHT / CELL.y
 	return float(HERO_DISPLAY_HEIGHT[key]) / (float(HERO_IDLE_ART_HEIGHT[key]) * strip_factor(hero))
 
+## SPEC-176 (S-005): ritmo do ciclo de andar (quadros por segundo) para o passo casar com o chão.
+## fps = velocidade × quadros / (2 × passo-alvo), com passo-alvo = LAB_STEP_TO_HEIGHT × altura em tela do herói.
+## `speed_px` <= 0 usa a velocidade base do herói (com a passiva de velocidade, como a do Korrak).
+static func lab_walk_fps(hero: String, speed_px := -1.0, frames := 6) -> float:
+	var key := StringName(hero)
+	var height := float(HERO_DISPLAY_HEIGHT.get(key, DISPLAY_HEIGHT))
+	var speed := speed_px
+	if speed <= 0.0:
+		speed = Hero.SPEED_PX
+		var passive: Dictionary = Data.table("heroes").get(hero, {}).get("passive", {})
+		speed *= 1.0 + float(passive.get("mods", {}).get("speed_pct", 0.0))
+	return clampf(roundf(speed * float(frames) / (2.0 * LAB_STEP_TO_HEIGHT * height)), LAB_FPS_MIN, LAB_FPS_MAX)
+
 func sync_visual(screen_position: Vector2, is_dead: bool, is_flash: bool) -> void:
 	if not _dbg_ready:
 		_walk_debug_setup()
@@ -236,11 +255,21 @@ func _walk_debug_setup() -> void:
 		return
 	_dbg_smooth = WalkTrace.option("walk-smooth") != ""
 	_dbg_force = WalkTrace.forced_direction()
+	# Laboratório de passada (SPEC-176 S-005): --walk-speed=N (px/s), --walk-fps=auto|N, --walk-bob=px, --walk-lean=rad.
+	var lab_speed := WalkTrace.option("walk-speed")
+	Hero.dev_speed_override = float(lab_speed) if lab_speed != "" else 0.0
+	_dbg_bob = maxf(0.0, float(WalkTrace.option("walk-bob"))) if WalkTrace.option("walk-bob") != "" else 0.0
+	_dbg_lean = maxf(0.0, float(WalkTrace.option("walk-lean"))) if WalkTrace.option("walk-lean") != "" else 0.0
 	var fps := WalkTrace.option("walk-fps")
-	if fps != "" and sprite != null and sprite.sprite_frames != null:
+	var fps_value := 0.0
+	if fps == "auto":
+		fps_value = lab_walk_fps(_active_hero_id, Hero.dev_speed_override)
+	elif fps != "":
+		fps_value = float(fps)
+	if fps_value > 0.0 and sprite != null and sprite.sprite_frames != null:
 		for animation in sprite.sprite_frames.get_animation_names():
 			if String(animation).begins_with("move"):
-				sprite.sprite_frames.set_animation_speed(animation, float(fps))
+				sprite.sprite_frames.set_animation_speed(animation, fps_value)
 	if name != &"Hero":
 		return
 	_trace = WalkTrace.open(_active_hero_id, get_instance_id())
@@ -291,12 +320,30 @@ static func uses_procedural_walk_for_direction(hero: String, direction: Vector2)
 
 ## Balanço do passo (quique e inclinação a partir dos pés) para quem anda com o idle.
 func _process(delta: float) -> void:
-	if sprite == null or not _has_animation or not uses_procedural_walk(_active_hero_id):
+	if sprite == null or not _has_animation:
+		return
+	if _dbg_bob > 0.0 or _dbg_lean > 0.0:
+		_lab_stride(delta)
+		return
+	if not uses_procedural_walk(_active_hero_id):
 		return
 	if _procedural_walking and not dead and not _action_locked:
 		_walk_phase = fposmod(_walk_phase + delta * WALK_STEP_HZ * PI, TAU * 4.0)
 		sprite.position.y = -absf(sin(_walk_phase)) * WALK_BOB_PX
 		sprite.rotation = sin(_walk_phase * 0.5) * WALK_SWAY_RAD
+	else:
+		var k := clampf(delta * WALK_SETTLE_SPEED, 0.0, 1.0)
+		sprite.position = sprite.position.lerp(Vector2.ZERO, k)
+		sprite.rotation = lerpf(sprite.rotation, 0.0, k)
+
+## SPEC-176 (S-005), caminho C2: reforço procedural da passada, sincronizado aos quadros (dois apoios por ciclo).
+func _lab_stride(delta: float) -> void:
+	var walking_anim := _walking and not dead and not _action_locked and String(sprite.animation).begins_with("move")
+	if walking_anim and sprite.sprite_frames != null and sprite.sprite_frames.has_animation(sprite.animation):
+		var count := maxi(sprite.sprite_frames.get_frame_count(sprite.animation), 1)
+		var t := (float(sprite.frame) + sprite.frame_progress) / float(count)
+		sprite.position.y = -absf(sin(t * TAU)) * _dbg_bob
+		sprite.rotation = sin(t * TAU) * _dbg_lean
 	else:
 		var k := clampf(delta * WALK_SETTLE_SPEED, 0.0, 1.0)
 		sprite.position = sprite.position.lerp(Vector2.ZERO, k)

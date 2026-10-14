@@ -5,6 +5,8 @@ extends RefCounted
 const TerrainLayout := preload("res://core/terrain_layout.gd")
 
 const SPEED_PX := 190.0   # velocidade visual base, em pixels de tela
+## SPEC-176 (S-005): só o laboratório de passada liga isto (`--walk-debug --walk-speed=N`); 0 = valor normal.
+static var dev_speed_override := 0.0
 const RADIUS := 0.3       # tiles
 
 var pos := Vector2.ZERO
@@ -160,7 +162,8 @@ func speed_px() -> float:
 	var f := 1.0 + m("speed_pct")
 	if slow_t > 0.0:
 		f *= 0.6
-	return SPEED_PX * clampf(f, 0.4, 2.0)
+	var base := dev_speed_override if dev_speed_override > 0.0 else SPEED_PX
+	return base * clampf(f, 0.4, 2.0)
 
 static func movement_input(left: bool, right: bool, up: bool, down: bool) -> Vector2:
 	return Vector2(int(right) - int(left), int(down) - int(up))
