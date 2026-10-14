@@ -75,6 +75,8 @@ var _decoy_serial := 0
 var pickups: Array = []
 var interactions: Array = []
 var chamber_unlocked := false   # SPEC-152: a chave da fase já abriu a câmara selada
+var chamber_seen := false   # SPEC-175: o herói já chegou perto da câmara (só então ela entra no questlog)
+var _chamber_key_lost := false   # SPEC-175: o ritual-chave passou sem ser interrompido; a câmara fica selada na partida
 var relic_taken := false
 var ecos: Array = []   # SPEC-152: Ecos de Nottgard da fase ({id, pos, found, texto, fonte, onde})
 var events: Array = []
@@ -296,6 +298,8 @@ func load_stage(stage_key: String) -> void:
 	interactions.clear()
 	ecos.clear()
 	chamber_unlocked = false
+	chamber_seen = false
+	_chamber_key_lost = false
 	relic_taken = false
 	time = 0.0
 	boss = null
@@ -668,6 +672,7 @@ func step(screen_dir: Vector2, dt: float) -> void:
 	_update_pickups(dt)
 	_update_interactions(dt)
 	_update_ecos()
+	_update_chamber_seen()
 	_director(dt)
 
 func _build_grid() -> void:
@@ -953,6 +958,8 @@ func _update_zones(dt: float) -> void:
 				if bool(z.get("unlock_chamber", false)):  # SPEC-157: o ritual de Dagruve é a chave da câmara
 					unlock_chamber()
 			elif z.delay <= 0.0:
+				if bool(z.get("unlock_chamber", false)) and not chamber_unlocked:
+					_chamber_key_lost = true   # SPEC-175: o ritual some sem nova chance; o questlog avisa
 				if stage.waves.is_empty():
 					events.append({"type": "toast", "text": "O ritual se desfaz."})
 				else:
@@ -1625,12 +1632,67 @@ func unlock_chamber() -> void:
 	chamber_unlocked = true
 	events.append({"type": "toast", "text": "Algo se abriu: a câmara selada da fase está liberada.", "color": Color(0.85, 0.72, 1.0)})
 
+## SPEC-175: o acontecimento-chave da fase (`reward.unlock_chamber`); {} quando a fase não tem câmara com chave.
+func chamber_key_def() -> Dictionary:
+	for d in stage_events:
+		if _event_unlocks_chamber(d):
+			return d
+	return {}
+
+static func _sentence(text: String) -> String:
+	if text == "":
+		return ""
+	var s := text.substr(0, 1).to_upper() + text.substr(1)
+	return s if s.ends_with(".") else s + "."
+
+## SPEC-175: o que fazer para abrir a câmara selada, em uma frase (questlog e aviso do E).
+func chamber_status_text() -> String:
+	var key := chamber_key_def()
+	if key.is_empty():
+		return "Algo da fase a abrirá."
+	if _chamber_key_lost:
+		return "A chave se perdeu nesta partida."
+	var id := String(key.get("id", ""))
+	if _stage_events_done.has(id):
+		return _sentence(String(key.get("chamber_hint", key.get("objective_text", ""))))
+	var at := int(float(key.get("at", 0.0)))
+	return "Abre com «%s» aos %d:%02d." % [String(key.get("title", "o acontecimento da fase")), at / 60, at % 60]
+
+## SPEC-175: linha do questlog para a câmara ({} até o herói chegar perto dela e depois de pegar a relíquia).
+## Mesma forma de `Happenings.hud_entries`, com `kind: "chamber"` (sempre mostra o texto).
+func chamber_entry() -> Dictionary:
+	if relic_taken or not chamber_seen or secrets_spec().is_empty():
+		return {}
+	var entry := {"id": "camara_selada", "kind": "chamber", "title": "Câmara selada", "text": "", "need": 0, "have": 0, "left": -1.0}
+	if chamber_unlocked:
+		entry.title = "Câmara aberta"
+		entry.text = "Vá até ela e aperte [E]."
+		return entry
+	entry.text = chamber_status_text()
+	var key := chamber_key_def()
+	if not key.is_empty() and not _chamber_key_lost and String(key.get("kind", "")) == "wave" and _stage_events_done.has(String(key.get("id", ""))):
+		var total := int(key.get("count", 0))
+		var alive := _key_wave.filter(func(e): return not e.dead).size()
+		if total > 0:
+			entry.need = total
+			entry.have = clampi(total - alive, 0, total)
+	return entry
+
+func _update_chamber_seen() -> void:
+	if chamber_seen:
+		return
+	var reach := float(secrets_rules().get("camara_vista", 10.0))
+	for it in interactions:
+		if String(it.kind) == "camara" and hero.pos.distance_to(it.pos) <= reach:
+			chamber_seen = true
+			return
+
 ## Câmara selada (E): trancada sem a chave; aberta, entrega a relíquia da fase uma vez por run (cópia garantida, o item continua no sorteio).
 func _open_chamber() -> bool:
 	if relic_taken:
 		return false
 	if not chamber_unlocked:
-		events.append({"type": "toast", "text": "A câmara está selada. Algo da fase a abrirá.", "color": Color(0.8, 0.75, 0.9)})
+		events.append({"type": "toast", "text": "A câmara está selada. %s" % chamber_status_text(), "color": Color(0.8, 0.75, 0.9)})
 		return false
 	var relic: Dictionary = secrets_spec().get("relic", {})
 	var ids: Array = relic.get("items", [])

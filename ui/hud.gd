@@ -577,7 +577,11 @@ func update_stats(b: Battle) -> void:
 		if b.stage.get("next", "") != "":
 			pr += "   [%s] Descer ×%.2f" % [Game.controls.prompt("run_interact", "E"), b.next_reward_multiplier()]
 	prompt_label.text = pr
-	quest_panel.update_entries(b.happenings.hud_entries(b), b.happenings.carrying_text())
+	var quest_entries: Array = b.happenings.hud_entries(b)
+	var chamber_row: Dictionary = b.chamber_entry()   # SPEC-175: a câmara selada diz o que a abre
+	if not chamber_row.is_empty():
+		quest_entries.append(chamber_row)
+	quest_panel.update_entries(quest_entries, b.happenings.carrying_text())
 	var eco_progress := b.ecos_progress()
 	eco_counter.visible = eco_progress.x > 0
 	eco_counter.text = "✦ Ecos %d/%d" % [eco_progress.x, eco_progress.y]

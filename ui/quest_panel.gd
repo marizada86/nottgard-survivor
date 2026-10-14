@@ -36,8 +36,12 @@ func update_entries(entries: Array, carrying := "") -> void:
 		_timers.clear()
 		visible = false
 		return
-	var shown: Array = entries.slice(0, MAX_ROWS)
-	var extra := entries.size() - shown.size()
+	# SPEC-175: a linha da câmara (kind "chamber") tem vaga reservada: os objetivos comuns cedem lugar a ela
+	var chamber: Array = entries.filter(func(e): return String(e.get("kind", "")) == "chamber")
+	var common: Array = entries.filter(func(e): return String(e.get("kind", "")) != "chamber")
+	var room := maxi(0, MAX_ROWS - chamber.size())
+	var shown: Array = common.slice(0, room) + chamber
+	var extra := common.size() - mini(common.size(), room)
 	var urgent := urgent_index(shown)
 	var sig: Array = [carrying, extra, urgent]
 	for e in shown:
@@ -83,7 +87,7 @@ func _rebuild(shown: Array, extra: int, carrying: String, urgent: int) -> void:
 	for i in shown.size():
 		var e: Dictionary = shown[i]
 		progress[String(e.id)] = int(e.have)
-		_rows.add_child(_row(e, i == urgent))
+		_rows.add_child(_row(e, i == urgent or String(e.get("kind", "")) == "chamber"))
 	_progress = progress
 	if extra > 0:
 		_rows.add_child(_label("+%d objetivo%s" % [extra, "" if extra == 1 else "s"], 14, Color(0.7, 0.7, 0.78)))

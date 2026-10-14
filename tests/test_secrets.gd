@@ -35,6 +35,7 @@ func run() -> Array:
 	_relics(out)
 	_keys(out)
 	_key_events(out)
+	_chamber_log(out)
 	_achievements(out)
 	TerrainLayout.scale = saved
 	return out
@@ -373,3 +374,112 @@ func _achievements(out: Array) -> void:
 	var earned: Array = p.check_achievements(run)
 	if not earned.has("ecos_durao") or p.coins() != coins_before + 300 or earned.has("ecos_molor"):
 		out.append("Ecos de Durao deveria sair com 300 moedas só para a fase certa (%s)" % str(earned))
+
+# ---------------------------------------------------------------- linha da câmara no questlog (SPEC-175, MEC-068)
+func _chamber_log(out: Array) -> void:
+	# dados: toda chave tem instrução; a distância de visão existe
+	for stage in STAGES:
+		var key := {}
+		for ev in Data.table("stage_events")[stage]:
+			if bool(Dictionary(ev.get("reward", {})).get("unlock_chamber", false)):
+				key = ev
+		if key.is_empty():
+			out.append("%s: deveria ter um acontecimento-chave da câmara" % stage)
+		elif String(key.get("chamber_hint", "")).strip_edges() == "":
+			out.append("%s: a chave %s deveria ter chamber_hint" % [stage, key.get("id", "?")])
+	if float(Data.table("secrets").get("_regras", {}).get("camara_vista", 0.0)) <= 0.0:
+		out.append("secrets.json deveria definir camara_vista")
+	# Dagruve: não vista, vista, em curso, perdida, aberta, pega
+	var b := _chamber_bat("dagruve")
+	var chamber: Dictionary = b.interactions.filter(func(i): return String(i.kind) == "camara")[0]
+	b.hero.pos = chamber.pos + Vector2(40.0, 0.0)
+	b._update_chamber_seen()
+	if b.chamber_seen or not b.chamber_entry().is_empty():
+		out.append("dagruve: longe da câmara não deveria haver linha no questlog")
+	b.hero.pos = chamber.pos + Vector2(3.0, 0.0)
+	b._update_chamber_seen()
+	var e: Dictionary = b.chamber_entry()
+	if e.is_empty() or String(e.kind) != "chamber" or String(e.title) != "Câmara selada":
+		out.append("dagruve: perto da câmara deveria aparecer a linha 'Câmara selada' (%s)" % str(e))
+	elif String(e.text).find("Ritual da Névoa") < 0 or String(e.text).find("1:55") < 0:
+		out.append("dagruve: a linha deveria dizer o acontecimento e o horário (%s)" % String(e.text))
+	b._stage_events_done["ritual_da_nevoa"] = true
+	if String(b.chamber_entry().text).find("selo") < 0:
+		out.append("dagruve: com o ritual em curso a linha deveria dizer o que fazer (%s)" % String(b.chamber_entry().text))
+	b._fire_stage_event(_event_def("dagruve", "ritual_da_nevoa"))
+	b.hero.pos = Vector2(1.0, 1.0)
+	for i in 400:
+		b._update_zones(0.1)
+	b._update_chamber_seen()
+	b.hero.pos = chamber.pos + Vector2(0.4, 0.0)
+	if String(b.chamber_entry().text) != "A chave se perdeu nesta partida.":
+		out.append("dagruve: ritual perdido deveria avisar que a chave se perdeu (%s)" % String(b.chamber_entry().text))
+	b.events.clear()
+	b._open_chamber()
+	var toast := ""
+	for ev in b.events:
+		if String(ev.type) == "toast":
+			toast = String(ev.text)
+	if toast.find("A câmara está selada.") < 0 or toast.find("se perdeu") < 0:
+		out.append("dagruve: o aviso do E deveria nomear o motivo (%s)" % toast)
+	var opened := _chamber_bat("dagruve")
+	opened._update_chamber_seen()
+	opened.unlock_chamber()
+	if String(opened.chamber_entry().title) != "Câmara aberta" or String(opened.chamber_entry().text).find("[E]") < 0:
+		out.append("dagruve: câmara aberta deveria mandar ir até ela e apertar E (%s)" % str(opened.chamber_entry()))
+	opened.relic_taken = true
+	if not opened.chamber_entry().is_empty():
+		out.append("dagruve: depois da relíquia a linha deveria sumir")
+	# Dagruve: o aviso do E antes do ritual nomeia a chave
+	var early := _chamber_bat("dagruve")
+	early.events.clear()
+	early._open_chamber()
+	var early_toast := ""
+	for ev in early.events:
+		if String(ev.type) == "toast":
+			early_toast = String(ev.text)
+	if early_toast.find("Ritual da Névoa") < 0:
+		out.append("dagruve: o aviso do E deveria nomear o Ritual da Névoa (%s)" % early_toast)
+	# Docas: progresso da onda-chave
+	var d := _chamber_bat("docas")
+	d._update_chamber_seen()
+	d._stage_events_done["cais_atacado"] = true
+	d._fire_stage_event(_event_def("docas", "cais_atacado"))
+	var raiders: Array = d._key_wave.duplicate()
+	var de: Dictionary = d.chamber_entry()
+	if int(de.need) != 3 or int(de.have) != 0 or String(de.text).find("cais") < 0:
+		out.append("docas: a linha deveria mostrar 0/3 e a instrução do cais (%s)" % str(de))
+	if raiders.size() == 3:
+		d._kill(raiders[0])
+		d._kill(raiders[1])
+		if int(d.chamber_entry().have) != 2:
+			out.append("docas: abater 2 de 3 deveria mostrar 2/3 (%s)" % str(d.chamber_entry()))
+	# Goranthis: horário do paraíso e abertura sozinha
+	var g := _chamber_bat("goranthis")
+	g._update_chamber_seen()
+	# o horário real da partida pode variar com o jitter do acontecimento (map_shift)
+	var g_at := int(float(g.chamber_key_def().get("at", 0.0)))
+	if String(g.chamber_entry().text).find("%d:%02d" % [g_at / 60, g_at % 60]) < 0:
+		out.append("goranthis: a linha deveria dizer o horário real do paraíso (%s)" % String(g.chamber_entry().text))
+	g.happenings.fire(g, _event_def("goranthis", "do_trono_ao_lodo"))
+	if String(g.chamber_entry().title) != "Câmara aberta":
+		out.append("goranthis: depois de o paraíso cair a câmara deveria estar aberta")
+	# questlog: a linha da câmara tem vaga reservada e sempre mostra o texto
+	var panel := QuestPanel.new()
+	var rows: Array = []
+	for i in 5:
+		rows.append({"id": "q%d" % i, "kind": "collect", "title": "Missão %d" % i, "text": "descrição %d" % i, "need": 0, "have": 0, "left": 100.0 - float(i)})
+	rows.append({"id": "camara_selada", "kind": "chamber", "title": "Câmara selada", "text": "Abre com «X» aos 1:55.", "need": 0, "have": 0, "left": -1.0})
+	panel.update_entries(rows)
+	var kids: Array = panel._rows.get_children()
+	if kids.size() != QuestPanel.MAX_ROWS + 1:
+		out.append("questlog com 5 objetivos e a câmara deveria ter %d linhas e '+N' (viu %d)" % [QuestPanel.MAX_ROWS, kids.size()])
+	elif (kids[QuestPanel.MAX_ROWS - 1] as Control).get_child_count() < 2:
+		out.append("a linha da câmara deveria mostrar o texto mesmo sem ser a mais urgente")
+	var described := 0
+	for row in kids:
+		if row.get_child_count() > 1:
+			described += 1
+	if described != 2:
+		out.append("questlog deveria descrever o mais urgente e a câmara (viu %d descrições)" % described)
+	panel.free()
