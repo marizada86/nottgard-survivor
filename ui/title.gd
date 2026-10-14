@@ -71,11 +71,11 @@ func _build_logo() -> void:
 	if _logo_frames.is_empty():
 		var lab := Label.new()
 		lab.text = Version.GAME_NAME
-		lab.add_theme_font_override("font", load("res://assets/fonts/CinzelDecorative-Bold.ttf"))
-		lab.add_theme_font_size_override("font_size", 72)
+		lab.add_theme_font_override("font", UiFonts.title_font())
+		lab.add_theme_font_size_override("font_size", roundi(72 * UiFonts.size_scale()))
 		lab.add_theme_color_override("font_color", Color(0.88, 0.8, 0.98))
 		lab.add_theme_color_override("font_outline_color", Color(0.12, 0.03, 0.2))
-		lab.add_theme_constant_override("outline_size", 10)
+		lab.add_theme_constant_override("outline_size", roundi(10 * UiFonts.outline_scale()))
 		lab.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		lab.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 		lab.set_anchors_preset(Control.PRESET_TOP_WIDE)
@@ -97,11 +97,11 @@ func _build_logo() -> void:
 func _build_prompt() -> void:
 	_prompt = Label.new()
 	_prompt.text = "Clique para jogar"
-	_prompt.add_theme_font_override("font", load("res://assets/fonts/CinzelDecorative-Bold.ttf"))
-	_prompt.add_theme_font_size_override("font_size", 30)
+	_prompt.add_theme_font_override("font", UiFonts.title_font())
+	_prompt.add_theme_font_size_override("font_size", roundi(30 * UiFonts.size_scale()))
 	_prompt.add_theme_color_override("font_color", Color(0.92, 0.88, 0.98))
 	_prompt.add_theme_color_override("font_outline_color", Color(0.1, 0.03, 0.18))
-	_prompt.add_theme_constant_override("outline_size", 8)
+	_prompt.add_theme_constant_override("outline_size", roundi(8 * UiFonts.outline_scale()))
 	_prompt.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_prompt.set_anchors_preset(Control.PRESET_BOTTOM_WIDE)
 	_prompt.offset_top = -110

@@ -109,10 +109,12 @@ static func margins_fit(id: String) -> bool:
 
 ## Estilo de lettering para Label dinâmico: Cinzel Decorative, contorno escuro, sombra e gradiente de ouro.
 static func style(label: Label, font_size: int, gradient := true) -> Label:
-	label.add_theme_font_override("font", load(FONT_PATH))
-	label.add_theme_font_size_override("font_size", font_size)
+	label.add_theme_font_override("font", UiFonts.title_font())  # SPEC-173: Cinzel por padrão; Opções → TELA → Fonte
+	var fid := UiFonts.current()
+	var shown := roundi(font_size * UiFonts.size_scale(fid))  # SPEC-173: compensa o desenho de cada fonte
+	label.add_theme_font_size_override("font_size", shown)
 	label.add_theme_color_override("font_outline_color", OUTLINE_COLOR)
-	label.add_theme_constant_override("outline_size", maxi(4, font_size / 6))
+	label.add_theme_constant_override("outline_size", maxi(2, roundi(maxi(4, font_size / 6) * UiFonts.outline_scale(fid))))
 	label.add_theme_color_override("font_shadow_color", SHADOW_COLOR)
 	label.add_theme_constant_override("shadow_offset_x", 0)
 	label.add_theme_constant_override("shadow_offset_y", maxi(2, font_size / 12))

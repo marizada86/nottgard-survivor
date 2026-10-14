@@ -19,6 +19,7 @@ var reduced_impact: CheckBox
 var display_mode: OptionButton
 var resolution: OptionButton
 var visual: OptionButton
+var title_font: OptionButton
 var _syncing := false
 
 func _init() -> void:
@@ -72,6 +73,16 @@ func _init() -> void:
 		Game.set_visual_filter(String(VisualFilter.MODES[i]))
 		changed.emit())
 	add_child(_row("Visual", visual))
+	title_font = OptionButton.new()  # SPEC-173 (MEC-066)
+	for o in UiFonts.available():
+		title_font.add_item(String(o.label))
+	title_font.tooltip_text = "Fonte dos títulos. Vale ao reabrir a tela."
+	title_font.item_selected.connect(func(i):
+		if _syncing:
+			return
+		Game.set_ui_font(String(UiFonts.available()[i].id))
+		changed.emit())
+	add_child(_row("Fonte dos títulos", title_font))
 	if Game.touch_controls_enabled():
 		aim.disabled = true
 		display_mode.disabled = true
@@ -124,6 +135,8 @@ func refresh() -> void:
 	display_mode.select(maxi(0, Game.WINDOW_MODES.find(String(s.get("window_mode", "windowed")))))
 	resolution.select(maxi(0, Game.SUPPORTED_RESOLUTIONS.find(String(s.get("resolution", "1280x720")))))
 	visual.select(maxi(0, VisualFilter.MODES.find(VisualFilter.mode_of(s))))
+	var font_ids: Array = UiFonts.available().map(func(o): return String(o.id))
+	title_font.select(maxi(0, font_ids.find(UiFonts.normalize(s.get("ui_font", UiFonts.DEFAULT_ID)))))
 	_syncing = false
 
 func _save(key: String, value: Variant) -> void:

@@ -45,9 +45,9 @@ func run() -> Array:
 	Lettering.style(label, 32)
 	if label.material == null or not (label.material is ShaderMaterial):
 		out.append("Lettering.style não aplicou o gradiente")
-	if label.get_theme_font_size("font_size") != 32:
+	if label.get_theme_font_size("font_size") != roundi(32 * UiFonts.size_scale()):  # SPEC-173: cada fonte de título compensa o tamanho
 		out.append("Lettering.style não aplicou o tamanho")
-	if label.get_theme_constant("outline_size") < 4:
+	if label.get_theme_constant("outline_size") < 2:
 		out.append("Lettering.style sem contorno")
 	label.free()
 	var flat := Label.new()
