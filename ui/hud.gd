@@ -20,7 +20,7 @@ signal pause_items_pressed
 const STATUS_MAX_LINES := 4
 const STACK_TOP := 90.0   # abaixo do relógio, do nome da fase e do ícone da regra
 const STACK_WIDTH := 640.0   # a barra do chefe tem 580 px; 640 deixa a direita livre para o questlog (x >= 968)
-const QUESTLOG_TOP := 66.0        # abaixo dos botões 1x e ? (y 12 a 58)
+const QUESTLOG_TOP := 92.0        # abaixo dos botões 1x e ? (y 12 a 58), com folga
 const QUESTLOG_MARGIN := 12.0
 const TOAST_MAX_COUNT := 4
 const TOAST_MAX_HEIGHT := 120.0   # cabe a epígrafe de 2 linhas e mais 3 avisos curtos; abaixo disso fica acima da fala do herói

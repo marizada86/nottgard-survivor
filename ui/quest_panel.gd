@@ -6,7 +6,7 @@ extends PanelContainer
 
 const MAX_ROWS := 4
 const LOG_ALPHA := 0.8
-const LOG_WIDTH := 300.0
+const LOG_WIDTH := 350.0
 const GOLD := Color(0.93, 0.78, 0.4)
 const URGENT := Color(1.0, 0.45, 0.4)
 const URGENT_SECONDS := 10.0
@@ -29,7 +29,7 @@ func _init() -> void:
 	root.add_theme_constant_override("separation", 4)
 	root.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(root)
-	_title = _label(TITLE, 15, Color(0.74, 0.66, 0.5))
+	_title = _label(TITLE, 18, Color(0.74, 0.66, 0.5))
 	_title.name = "Title"
 	root.add_child(_title)
 	_rows = VBoxContainer.new()
@@ -99,9 +99,9 @@ func _rebuild(shown: Array, extra: int, carrying: String, urgent: int) -> void:
 		_rows.add_child(_row(e, i == urgent or String(e.get("kind", "")) == "chamber"))
 	_progress = progress
 	if extra > 0:
-		_rows.add_child(_label("+%d objetivo%s" % [extra, "" if extra == 1 else "s"], 14, Color(0.7, 0.7, 0.78)))
+		_rows.add_child(_label("+%d objetivo%s" % [extra, "" if extra == 1 else "s"], 17, Color(0.7, 0.7, 0.78)))
 	if carrying != "":
-		_rows.add_child(_label("Carregando: %s" % carrying, 14, Color(0.7, 0.95, 0.75)))
+		_rows.add_child(_label("Carregando: %s" % carrying, 17, Color(0.7, 0.95, 0.75)))
 
 func _row(e: Dictionary, with_text: bool) -> Control:
 	var v := VBoxContainer.new()
@@ -110,20 +110,20 @@ func _row(e: Dictionary, with_text: bool) -> Control:
 	var head := HBoxContainer.new()
 	head.add_theme_constant_override("separation", 8)
 	head.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	var title := _label(String(e.title), 17, GOLD)
+	var title := _label(String(e.title), 21, GOLD)
 	title.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	title.clip_text = true
 	head.add_child(title)
 	if int(e.need) > 1:
-		head.add_child(_label("%d/%d" % [int(e.have), int(e.need)], 17, Color(0.7, 0.95, 0.75)))
+		head.add_child(_label("%d/%d" % [int(e.have), int(e.need)], 21, Color(0.7, 0.95, 0.75)))
 	if float(e.left) >= 0.0:
-		var t := _label("", 16, Color(0.85, 0.85, 0.9))
+		var t := _label("", 20, Color(0.85, 0.85, 0.9))
 		_timers[String(e.id)] = t
 		head.add_child(t)
-	head.add_child(_label("◆", 17, GOLD))
+	head.add_child(_label("◆", 21, GOLD))
 	v.add_child(head)
 	if with_text:
-		var text := _label(String(e.text), 14, Color(0.92, 0.9, 0.86))
+		var text := _label(String(e.text), 17, Color(0.92, 0.9, 0.86))
 		text.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		text.custom_minimum_size.x = LOG_WIDTH
 		v.add_child(text)
