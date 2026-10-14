@@ -31,4 +31,7 @@ playtest: .atena/generated/assets-l002-admission-2026-10-14/PLAYTEST.md
 human_runtime_playtest: PENDING_NOT_PERFORMED
 build_id: 0.4.0/assets-l002-admission-v01/2b96638+local-0c664cdc0023
 git_authorization: .atena/generated/assets-l002-admission-2026-10-14/git-authorization.json
-git_delivery: AUTHORIZED_COMMIT_AND_PUSH_CURRENT_BRANCH
+git_delivery: COMMITTED_AND_PUSHED_CURRENT_BRANCH
+commit: a6ffc34b039ac4e8cc9cc9712d0eeb71b4d38fe1
+branch: codex/assets-admission-main-2026-10-13
+pushed: true

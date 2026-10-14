@@ -13,5 +13,12 @@
   "canonical_promotion": false,
   "human_runtime_playtest": "PENDING_NOT_PERFORMED",
   "verification": "Runtime hashes unchanged; existing suite/smoke/parity/captures PASS; backlog P0=0, four open P1 BUG-025/027/028/029,16 awaiting playtest",
-  "push_status": "PENDING_EXECUTION"
+  "push_status": "CONFIRMED",
+  "commit": "a6ffc34b039ac4e8cc9cc9712d0eeb71b4d38fe1",
+  "pushed_commits": [
+    "1b0edb3f",
+    "2b966385",
+    "a6ffc34b"
+  ],
+  "remote_ref": "refs/heads/codex/assets-admission-main-2026-10-13"
 }
