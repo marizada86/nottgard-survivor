@@ -25,10 +25,12 @@ owner_decisions:
   D13: 'M1 r2: refazer so as tiras de animacao dos herois; idle e retrato atuais ficam como base de identidade.'
   D14: 'M1 r2: piloto em 1 heroi (Durvall), depois lotes de 3 a 4 com gate visual por lote.'
   D15: 'M1 r2: laboratorio de codigo para o patinar e coleta H5 continuam em paralelo.'
+  D17: 'G-D1 (2026-10-14, "aprovo as fichas"): 12 fichas aprovadas como escritas; P1, P3, P4 e P6 fechados pela recomendacao; P2 (referencia canonica de Brook) e P7 abertos.'
+  D18: 'P5 (2026-10-14): nome oficial do grupo e Grimholders; o dono corrigira o Vault (somente leitura aqui). Nenhuma mudanca no jogo.'
   D16: 'M1 r2: referencias = ficha do Vault, arte do Nottcard e imagens do dono; nenhum inimigo; tira defeituosa nao e mais anexada.'
 batches:
   B-001: {milestone: M0, title: 'Base e validacao continua', kind: CONTINUOUS, status: PENDING_FIRST_APPROVAL}
-  B-002: {milestone: M1, title: "Movimento dos herois (r2: refazer tiras com contrato de prompt v2)", status: PHASE_A_DONE_AWAITING_G_D1, approved: "2026-10-14", spec: SPEC-176, steps: [S-001, S-002, S-003, S-004, S-005, S-006, S-007, S-008, S-009, S-010, S-011, S-012, S-013, S-014, S-015], owner_gates: [G-D1, G-D2, G-D3, G-D4, G-D5, G-D6], reserved: [ART-PROMPTS-064, CHATGPT-FILA-031]}
+  B-002: {milestone: M1, title: "Movimento dos herois (r2: refazer tiras com contrato de prompt v2)", status: G_D1_APPROVED_LAB_READY_AWAITING_G_D2, approved: "2026-10-14", spec: SPEC-176, steps: [S-001, S-002, S-003, S-004, S-005, S-006, S-007, S-008, S-009, S-010, S-011, S-012, S-013, S-014, S-015], owner_gates: [G-D1, G-D2, G-D3, G-D4, G-D5, G-D6], reserved: [ART-PROMPTS-064, CHATGPT-FILA-031]}
   B-003: {milestone: M2, title: 'Game feel e apresentacao', status: PLANNED}
   B-004: {milestone: M3, title: 'UI, onboarding e clareza', status: PLANNED}
   B-005: {milestone: M4, title: 'Mecanicas (4a chefes, 4b builds, 4c meta, 4d fases)', status: PLANNED, note: 'proposta por frente antes de spec; teto de 2 mecanicas por frente'}
@@ -36,7 +38,7 @@ batches:
   B-007: {milestone: M6, title: 'Balanceamento final (conteudo congelado)', status: PLANNED}
   B-008: {milestone: M7, title: 'Candidata a demo', status: PLANNED}
 ordered_batches: [B-002, B-003, B-004, B-005, B-006, B-007, B-008]   # B-001 corre em paralelo; M2/M3 podem andar com M4
-checkpoint: B-002/G-D1
+checkpoint: B-002/S-008_AWAITING_RETURN
 gates:
   dependencies: NO_NEW_DEPENDENCIES
   commit_push_build_export_notice: NOT_AUTHORIZED   # cada um exige aprovacao a parte (add.yaml)
@@ -48,9 +50,19 @@ deferred_gaps: ['mobile', 'Web', 'loja/Steam', 'localizacao', 'cooperativo']
 return:
   plan: PLAN-100
   note: 'PLAN-100 concluido local, aguardando decisoes do dono (filtro padrao, fonte); passam ao B-001/M0. PLAN-071 segue arquivado.'
-next_objective: "Dono revisa as fichas (G-D1: Durvall, Zynara, Leoric, Nyrelia no minimo), resolve P1 a P7 e decide o ritmo por heroi (G-D2). Depois: laboratorio de codigo (S-005) e piloto Durvall (S-007)."
+next_objective: "Dono manda os 4 prompts do piloto Durvall ao GPT e salva os PNGs em .atena/generated/m1-movimento/piloto-durvall/retorno/; Atena audita (S-008) e integra como candidata local para ver no jogo com o ritmo auto. G-D2 (caminho de codigo) segue em aberto; assumido o ritmo por heroi da formula para o piloto."
 phase_a:
   steps_done: [S-001, S-002, S-003, S-004]
   evidence: EVID-246
+phase_c:
+  steps_done: [S-007]
+  prompts: .atena/generated/m1-movimento/piloto-durvall/PROMPTS.md
+  note: "G-D2 nao decidido formalmente; piloto usa a formula de ritmo por heroi (17 fps no Durvall) por decisao de simplificar do dono (2026-10-14)."
+phase_b:
+  steps_done: [S-005]
+  evidence: EVID-247
+  outputs: [ui/hero_view.gd, core/hero.gd, tests/test_walk_lab.gd, .atena/generated/walk-debug/Abrir-laboratorio-de-passada.cmd, .atena/generated/m1-movimento/caminhos-passo-por-altura.md]
+  game_files_changed: [ui/hero_view.gd, core/hero.gd]   # so com --walk-debug; sem a flag o jogo e identico
+  commit: NOT_AUTHORIZED
   outputs: [.atena/generated/m1-movimento/inventario.csv, .atena/generated/m1-movimento/reguas.csv, .atena/vault/drafts/FICHAS-DE-IDENTIDADE-herois-m1-2026-10-14.md, .atena/generated/ART-PROMPTS-064-contrato-de-prompt-v2-tiras-dos-herois.md, tools/m1_inventory.gd]
   game_files_changed: NONE

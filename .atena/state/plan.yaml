@@ -540,13 +540,13 @@ active_plan:
   state_file: '.atena/state/plan-103-demo-completa-e-polida.yaml'
   plan_file: '.atena/vault/drafts/PLAN-103-demo-completa-e-polida-2026-10-14.md'
   mode: per-batch
-  checkpoint: B-002/G-D1
-  status: B002_PHASE_A_DONE_AWAITING_G_D1
+  checkpoint: B-002/S-008_AWAITING_RETURN
+  status: B002_PILOT_PROMPTS_READY_AWAITING_RETURN
   approved: '2026-10-14'
   content_state: DRAFT
   request_classification: PLAN_CHANGE_REQUEST
   ordered_batches: [B-002, B-003, B-004, B-005, B-006, B-007, B-008]   # B-001 (M0) continuo
-  next_objective: 'Fase A concluida (EVID-246). Dono revisa as fichas e decide ritmo por heroi (G-D1/G-D2); depois S-005 e piloto Durvall.'
+  next_objective: 'G-D1 aprovado; laboratorio de passada pronto (EVID-247). Dono escolhe o caminho e o ritmo por heroi (G-D2); depois S-007 (piloto Durvall).'
   replaces_active: {id: PLAN-100, status: COMPLETED_LOCAL_AWAITING_OWNER_DECISIONS, state_file: '.atena/state/plan-100-filtro-visual-e-fonte.yaml', evidence: EVID-242, note: 'decisoes pendentes do dono (filtro padrao, fonte) passam ao B-001/M0; nada do PLAN-100 foi alterado'}
 archived_plans:
   - id: PLAN-071
@@ -575,6 +575,7 @@ previous_plan_cursor:
   current: 'PLAN-059 (SPEC-125) commitado e publicado (05264f0, 1392627) em 2026-10-05; o playtest decide Docas, Molor e fases finais.'
   next: 'Retomar PLAN-053 (imagens, Shu: attack_02, death_03, death_04) e/ou abrir spec de balanceamento BAL-018 (precisa de linha de base do bot por heroi). Push da main (1 a 3 commits a frente) exige aprovacao.'
 local_git_receipts:
+  - {plan: PLAN-103, batch: B-002, phase: B_C, request_classification: IN_PLAN, authorization: "atena, commite as mudancas (2026-10-14)", branch: main, commits: ["codigo = laboratorio de passada (core/hero.gd, ui/hero_view.gd, tests/test_walk_lab.gd)", "documentos = este recibo, EVID-247, fichas, gabaritos e prompts do piloto"], pushed: false, evidence: EVID-247, scope: "S-005 laboratorio de passada (opcoes so com --walk-debug), G-D1 e P5 registrados, S-007 prompts e gabaritos do piloto Durvall", verification: "tests/run_all.gd 0 falhas; mutacao do LAB_STEP_TO_HEIGHT falhou em 12 herois e foi restaurada", note: "Sem push, build nem exportacao. Ficaram fora: perfis regravados pelos checks e, de outra sessao, ART-PROMPTS-063, CHATGPT-FILA-030 e capturas do plan-100. O recibo anterior do commit ad2a36f7 diz pushed:false mas foi publicado (73a6fb2..ad2a36f)."}
   - {plan: PLAN-103, batch: B-002, phase: A, request_classification: IN_PLAN, authorization: "atena, commite esses documentos (2026-10-14)", branch: main, commits: ["este recibo = commit da Fase A"], pushed: false, evidence: EVID-246, scope: "inventario.csv e reguas.csv, fichas de identidade (DRAFT), ART-PROMPTS-064, SPEC-176 r2, EVID-246, tools/m1_inventory.gd, indices e estado do PLAN-103", note: "Sem push, build nem exportacao. Ficaram fora: perfis regravados pelos checks e, de outra sessao, ART-PROMPTS-063, CHATGPT-FILA-030 e capturas do plan-100."}
   - {plan: PLAN-103, also: [PLAN-100, PLAN-101, PLAN-102], batch: "push", request_classification: PLAN_DEVIATION, authorization: "sim, autorizo o commit e push na main (2026-10-14)", branch: main, commits: ["17 commits locais 09b36fe..5aba819 (MEC-065 a MEC-069, MEC-068, BUG de questlog, rotulos do controle)", "este recibo = commit dos documentos do PLAN-103"], pushed: true, push_range: "09b36fe..este-recibo", evidence: [EVID-242, EVID-243, EVID-244, EVID-245], scope: "codigo dos PLAN-100 a 102, fonte do corpo EB Garamond (MEC-069), questlog com cabecalho e maior, rotulos do controle generico; documentos: PLAN-103 (rascunho e estado), SPEC-176, indices", verification: "antes do push, na arvore: tests/run_all.gd 0 falhas (53 s); backlog_check 0 P0, 4 P1 sem implementacao conhecidos", ci: "Build and Release disparado pelo push; resultado nao verificado aqui", note: "O release latest passa a apontar para este push; a versao segue 0.4.0. Ficaram fora: perfis regravados pelos checks (unit-profile, integration-profile, buttons-profile, buttons-report e .bak) e, de outra sessao, ART-PROMPTS-063, CHATGPT-FILA-030 e capturas do plan-100. Sem exportacao do .exe nem aviso aos testers."}
   - {plan: PLAN-102, deviation: DEV-042, authorization: "atena, commite em dois commits (2026-10-14)", branch: main, commits: [bbb792e, "documentos = commit seguinte"], pushed: false, evidence: EVID-244, scope: "bbb792e = linha da camara no questlog (core/battle.gd, ui/quest_panel.gd, ui/hud.gd), chamber_hint nas 8 chaves, camara_vista, testes e ferramenta de captura; documentos = SPEC-175, PLAN-102, EVID-244, MEC-068, IN-074, capturas, indices e DEV-042", note: "Sem push, build nem exportacao. Ficaram fora: perfis regravados pelos checks (unit-profile, integration-profile, buttons-profile e buttons-report) e arquivos de outra sessao (fontes do corpo, capture_body_font, ART-PROMPTS-063, CHATGPT-FILA-030, capturas do plan-100)."}

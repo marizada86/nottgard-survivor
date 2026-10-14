@@ -1,7 +1,7 @@
 ---
 id: FICHAS-IDENTIDADE-M1
 title: Fichas de identidade dos 12 heróis para refazer as tiras (SPEC-176, S-002)
-status: DRAFT r1 em 2026-10-14; aguarda revisão do dono no portão G-D1
+status: DRAFT r1 em 2026-10-14; **aprovadas pelo dono no G-D1 em 2026-10-14** ("aprovo as fichas"); conteúdo segue DRAFT, sem promoção a canon; P2 e P7 seguem abertos; P5 fechado (Grimholders)
 content_state: DRAFT
 spec: SPEC-176
 plan: PLAN-103
@@ -14,6 +14,20 @@ Cada ficha diz **o que a arte nova precisa preservar**. Ela não inventa lore, n
 
 Convenção de lado: "lado da tela" é o lado do **quadro** em que o objeto aparece no `idle` atual (herói de frente em três-quartos). Não afirma mão direita ou esquerda do personagem. O Vault não registra lateralidade de nenhum herói; o lado vem do sprite e vale como decisão de arte, para o espelho não trocar a arma de mão.
 
+## Decisão do dono (G-D1, 2026-10-14)
+
+Resposta literal: "aprovo as fichas". Aprovadas **como escritas**, com as recomendações da tabela abaixo adotadas. Ficam abertos só o que depende de insumo seu:
+
+| Ponto | Situação após a aprovação |
+|---|---|
+| P1 Kayron | Fechado: **sprite atual, sem asas** |
+| P2 Brook, referência canônica | **Aberto**: o arquivo `brook-canonical-2026-09-29.png` continua ausente; precisa ser reenviado antes da geração de Brook (L1 não o inclui; entra no L3) |
+| P3 Leoric | Fechado: cartola e cristal azul |
+| P4 Nyrelia | Fechado: rosto oculto |
+| P5 Grimholders × Greenholders | Fechado (2026-10-14): o nome oficial é **Grimholders**; o dono corrigirá o Vault (somente leitura a partir deste projeto). O jogo já usa Grimholders |
+| P6 Erik, cicatriz | Fechado: **não adotada** |
+| P7 Imagens de referência | **Aberto**: sem imagens entregues, a ficha usa Vault e Nottcard |
+
 ## Pontos para decisão do dono (G-D1)
 
 | # | Ponto | Situação | Recomendação |
@@ -22,7 +36,7 @@ Convenção de lado: "lado da tela" é o lado do **quadro** em que o objeto apar
 | P2 | **Brook: referência canônica ausente** | `CHARACTER-IDENTITY-003` exige `reference-staging/brook-canonical-2026-09-29.png` como base de todo asset. **O arquivo não está no repositório** (busca em `.atena/` e na árvore). O retrato do Nottcard é o legado (anão, martelo, escudo azul), superado | Dono reenvia a imagem canônica; até lá a ficha usa as invariantes escritas do registro 003 e o idle atual |
 | P3 | **Leoric: chapéu e cristal** | Canon (registro 018, 2026-09-29): **cartola preta com faixa marrom** e sobretudo marrom; cajado com cristal azul. O Nottcard mostra chapéu de mago pontudo e cristal âmbar | Manter o canon (cartola, cristal azul); divergência com o Nottcard já decidida |
 | P4 | **Nyrelia: rosto** | Idle: capuz e **máscara escura sem rosto visível**. Vault: "usa máscara e sua espécie não foi estabelecida". Não há retrato no Nottcard | Manter rosto oculto; nenhum rosto é inventado |
-| P5 | **Grimholders × Greenholders** | O jogo (`hero_bios.json`) escreve **Grimholders** para Arlindo, Erik e Nyrelia; as fichas do Vault (03_NPCs) escrevem **Greenholders**; alguns dossiês do Vault usam Grimholders | Não afeta a arte. Decidir o nome oficial antes de qualquer texto novo (vault vale mais que o Nottcard) |
+| P5 | **Grimholders × Greenholders** | O jogo (`hero_bios.json`) escreve **Grimholders**; as fichas do Vault (03_NPCs) escreviam **Greenholders**. **Decidido pelo dono (2026-10-14): Grimholders**; o Vault será corrigido por ele | Nenhuma ação na arte; nenhum texto do jogo muda |
 | P6 | **Erik: cicatriz** | O retrato do Nottcard mostra cicatriz na testa e antebraço enfaixado; o sprite não os mostra na escala de jogo | Opcional; só entra se o dono pedir (custa legibilidade a 64 px) |
 | P7 | **Imagens de referência do dono (D16)** | Ainda não entregues | Pasta `.atena/generated/m1-movimento/refs/<herói>/` |
 
@@ -179,7 +193,7 @@ Convenção de lado: "lado da tela" é o lado do **quadro** em que o objeto apar
 
 | Campo | Conteúdo | Fonte |
 |---|---|---|
-| Quem é | Humano andarilho, líder do grupo local (nome do grupo: ver **P5**), usa magia de memória | vault |
+| Quem é | Humano andarilho, líder dos **Grimholders** (nome oficial decidido em P5), usa magia de memória | vault |
 | Traços fixos | Homem **maduro**, rosto marcado, **barba curta grisalha**, olhar para baixo, postura curvada | idle, nottcard |
 | Roupa e armadura | **Chapéu de feltro marrom** de aba, **sobretudo marrom longo**, **cachecol vermelho-escuro**, luvas escuras, botas marrons | idle, nottcard |
 | Arma | **Memória Alterada** (magia): mãos juntas na frente, sem objeto | idle, `heroes.json` |
