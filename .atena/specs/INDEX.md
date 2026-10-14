@@ -7,9 +7,9 @@ Gerado por `node tools/atena_index.js` (não editar à mão). Agrupa pelo **stat
 | aberta (rascunho ou planejada) | 7 |
 | aprovada, sem fechar | 4 |
 | pausada | 2 |
-| entregue | 161 |
+| entregue | 162 |
 | substituída | 2 |
-| **total** | **176** |
+| **total** | **177** |
 
 ## Números repetidos
 
@@ -56,7 +56,7 @@ Gerado por `node tools/atena_index.js` (não editar à mão). Agrupa pelo **stat
 | [SPEC-101](SPEC-101-polimento-proporcoes-movimento-herois.md) | Auditoria e piloto de proporções no movimento dos heróis | SPEC-106 de Durvall aprovada; produção pausada por falta de fluxo local 2D adequado |
 | [SPEC-154](SPEC-154-pixels-soltos-dos-herois-pre-reducao-das-tiras-bug-029.md) | Pixels soltos nos heróis: pré-redução das tiras para o tamanho de tela (BUG-029) | PAUSADA em 2026-10-09 (PLAN-082): o dono não adotou a variante C; HERO_STRIP_SET vazio e BUG-029 aberto; registros e ferramentas commitados (eb57860) |
 
-## Entregue (161)
+## Entregue (162)
 
 | Spec | Título | Status |
 |---|---|---|
@@ -221,6 +221,7 @@ Gerado por `node tools/atena_index.js` (não editar à mão). Agrupa pelo **stat
 | [SPEC-172](SPEC-172-telemetria-de-quadros-e-maquina-fraca-emulada.md) | Telemetria de maquina e quadros no kit de playtest e emulacao de maquina fraca | IMPLEMENTADA LOCAL em 2026-10-11 (PLAN-099, EVID-241); aguarda dados de campo |
 | [SPEC-173](SPEC-173-filtro-visual-e-fonte-da-interface-lote-1.md) | Filtro visual de tela e fonte da interface (lote 1 da estética) | IMPLEMENTADA LOCAL em 2026-10-13 (PLAN-100, EVID-242); r3: Pixel descartado, IM Fell como padrão dos títulos; commits locais; aguarda playtest |
 | [SPEC-174](SPEC-174-evolucoes-das-armas-sem-evolucao-lote-1-e-atributo-minimo.md) | Evoluções das armas sem evolução (lote 1, cinco armas) e atributo mínimo para evoluir | IMPLEMENTADA LOCAL em 2026-10-13 (PLAN-101, EVID-243); DRAFT; aguarda playtest humano; commitada local (563c07b), sem push |
+| [SPEC-175](SPEC-175-camara-selada-com-pista-no-questlog-mec-068.md) | Câmara selada com pista no questlog (MEC-068, opção B) | IMPLEMENTADA LOCAL em 2026-10-13 (PLAN-102, EVID-244); DRAFT; aguarda playtest humano; commitada local (bbb792e), sem push |
 
 ## Substituída (2)
 

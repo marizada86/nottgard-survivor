@@ -1,0 +1,47 @@
+id: PLAN-102
+spec: SPEC-175
+spec_file: .atena/specs/SPEC-175-camara-selada-com-pista-no-questlog-mec-068.md
+mode: per-plan
+status: COMPLETED_LOCAL_AWAITING_PLAYTEST
+approved: "2026-10-13"
+approval_basis: "Dono escolheu opcao B, Por plano e So avisar quando a chave do ritual se perde (2026-10-13). Fazer agora; commit, push, exportacao e aviso sem autorizacao."
+content_state: DRAFT
+created: '2026-10-13'
+request_classification: PLAN_DEVIATION
+deviation_id: DEV-042
+authorization_verbatim: 'atena, opção B'
+owner_decisions:
+  D1: 'Opcao B (linha da camara no questlog depois de vista) escolhida em 2026-10-13.'
+  D2: 'Por plano (2026-10-13).'
+  D3: 'Chave do ritual perdida: so avisar que se perdeu; nenhuma regra muda (escolha do dono, 2026-10-13).'
+return:
+  plan: PLAN-100
+  note: 'PLAN-100 concluido local aguardando decisoes do dono; PLAN-101 concluido local aguardando playtest. Este plano nao altera nenhum dos dois.'
+ordered_batches: [B-001, B-002, B-003]
+batches:
+  B-001: {title: Dados e estado da camara, steps: [S-001, S-002, S-003], status: DONE_LOCAL}
+  B-002: {title: Questlog e aviso, steps: [S-004, S-005], status: DONE_LOCAL}
+  B-003: {title: Verificacao e fechamento, steps: [S-006, S-007, S-008], status: DONE_LOCAL}
+steps:
+  S-001: 'data/stage_events.json: chamber_hint nos 8 acontecimentos-chave; data/secrets.json: _regras.camara_vista.'
+  S-002: 'core/battle.gd: chamber_seen, estado da chave (pendente, em curso, perdida, aberta) e chamber_entry(); aviso do E nomeando a chave.'
+  S-003: 'tests/test_data.gd e testes de Battle: estados da linha por tipo de chave (ritual, onda, map_shift).'
+  S-004: 'ui/quest_panel.gd: linha kind chamber sempre com texto e vaga reservada; ui/hud.gd: junta chamber_entry a hud_entries.'
+  S-005: 'Teste do QuestPanel com a linha da camara (texto, limite de 4 linhas).'
+  S-006: 'Suite, smoke, controller_check, mobile_buttons_check, backlog_check.'
+  S-007: 'Capturas do questlog nos 3 tipos de chave.'
+  S-008: 'EVID-244, cartao MEC-068, indices, README; registrar o playtest humano como pendente.'
+gates:
+  dependencies: NO_NEW_DEPENDENCIES
+  assets_changed: NONE
+  chamber_rewards_positions_unchanged: true
+  key_triggers_unchanged: true
+  commit_push_build_export: COMMIT_LOCAL_AUTHORIZED_2026-10-14_PUSH_BUILD_EXPORT_NOT_AUTHORIZED
+  other_sessions_changes: PRESERVE_UNTOUCHED
+  files_expected: [data/stage_events.json, data/secrets.json, core/battle.gd, ui/quest_panel.gd, ui/hud.gd, tests/test_data.gd, tests/test_playtest_fixes.gd]
+blocking_gaps: []
+resolvable_gaps: []
+deferred_gaps: ['seta na borda ate a camara aberta', 'descricao em todas as linhas', 'retry do ritual', 'arte da camara (ART-043)']
+next_objective: 'Playtest humano da legibilidade da linha da camara; depois decidir a opcao C (seta na borda, descricao em todas as linhas) e o retry do ritual.'
+evidence: .atena/evidence/EVID-244-camara-selada-com-pista-no-questlog-2026-10-13.md
+result: 'Suite 0 falhas (mutacao: 3 falhas); smoke 9 fases; controller_check 94/0; mobile_buttons_check 146/0; capturas nos 3 tipos de chave; playtest humano pendente; commits locais (bbb792e codigo, documentos no commit seguinte), sem push.'
