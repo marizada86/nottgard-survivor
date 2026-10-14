@@ -63,6 +63,12 @@ func _init() -> void:
 			var into := String(d.evolve.get("into", ""))
 			if not weapons.has(into):
 				_e("weapons", "%s evolui para inexistente %s" % [id, into])
+			# SPEC-174: min_attr opcional = {atributo: mínimo inteiro}
+			for ak in d.evolve.get("min_attr", {}):
+				if not (String(ak) in ["forca", "inteligencia", "constituicao", "carisma"]):
+					_e("weapons", "%s: min_attr com atributo desconhecido %s" % [id, ak])
+				elif int(d.evolve.min_attr[ak]) < 8 or int(d.evolve.min_attr[ak]) > 30:
+					_w("weapons", "%s: min_attr %s=%s fora da faixa 8 a 30" % [id, ak, d.evolve.min_attr[ak]])
 			var ps := String(d.evolve.get("passive", ""))
 			if not passives.has(ps) and not weapons.has(ps) and not _t("upgrades").has(ps):
 				_w("weapons", "%s: passiva de evolução %s não está em passives/upgrades" % [id, ps])

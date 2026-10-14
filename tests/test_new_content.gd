@@ -63,6 +63,7 @@ func run() -> Array:
 	_items(out)
 	_coracao(out)
 	_icons(out)
+	_lote1_evolutions(out)
 	return out
 
 # ---------------------------------------------------------------- W1 Bola de Fogo (SPEC-150)
@@ -270,3 +271,95 @@ func _icons(out: Array) -> void:
 		out.append("arma com ícone próprio deveria usá-lo")
 	if Items.item_icon("nao_existe") != "res://assets/icons/items/nao_existe.png":
 		out.append("id desconhecido deveria devolver o caminho próprio")
+
+# ---------------------------------------------------------------- Evoluções do lote 1 e atributo mínimo (SPEC-174)
+## base, evolução, passiva, atributo mínimo e valor (D5: 16 em todas; Martelo em Constituição).
+const LOTE1 := [
+	{"base": "dominar_pessoa", "into": "dominio_coletivo", "passive": "sabedoria", "attr": "carisma", "min": 16},
+	{"base": "golpe_esmagador", "into": "maca_demolidora", "passive": "pele_de_pedra", "attr": "forca", "min": 16},
+	{"base": "martelo_da_gloria", "into": "martelo_da_luz", "passive": "cota_de_malha", "attr": "constituicao", "min": 16},
+	{"base": "raio_enfraquecedor", "into": "raio_da_ruina", "passive": "robe_arcano", "attr": "inteligencia", "min": 16},
+	{"base": "sopro_de_estrela", "into": "constelacao_de_silva", "passive": "sabedoria", "attr": "carisma", "min": 16},
+]
+
+func _offer_has_evolve(b: Battle, into: String) -> bool:
+	return b._build_offer().any(func(o): return String(o.t) == "evolve" and String(o.into) == into)
+
+func _lote1_evolutions(out: Array) -> void:
+	var table: Dictionary = Data.table("weapons")
+	var events: Dictionary = Data.table("audio_manifest").get("events", {})
+	for c in LOTE1:
+		var base: Dictionary = table.get(String(c.base), {})
+		var evo: Dictionary = table.get(String(c.into), {})
+		if base.is_empty() or evo.is_empty():
+			out.append("lote 1: %s / %s deveriam existir" % [c.base, c.into])
+			continue
+		var ev: Dictionary = base.get("evolve", {})
+		if String(ev.get("into", "")) != String(c.into) or String(ev.get("passive", "")) != String(c.passive):
+			out.append("lote 1: %s deveria evoluir em %s com %s" % [c.base, c.into, c.passive])
+		if int(ev.get("min_attr", {}).get(String(c.attr), 0)) != int(c.min):
+			out.append("lote 1: %s deveria pedir %s %d" % [c.base, c.attr, int(c.min)])
+		if String(evo.get("src", "")) != "Evolução" or not (evo.get("levels", []) as Array).is_empty():
+			out.append("lote 1: %s deveria ser evolução sem níveis" % c.into)
+		for banned in ["heal", "lifesteal"]:
+			if evo.has(banned):
+				out.append("lote 1: %s não pode ter %s (cura não melhora)" % [c.into, banned])
+		if not events.has("weapon.%s.fire" % c.into):
+			out.append("lote 1: %s deveria ter evento de som weapon.%s.fire" % [c.into, c.into])
+		if not ResourceLoader.exists(Items.weapon_icon(String(c.into))):
+			out.append("lote 1: %s deveria ter ícone provisório (icon_like)" % c.into)
+		# oferta: nível 5 + passiva + atributo; faltando qualquer um, nada de evolução
+		var b := _bat(31)
+		b.hero.weapons = [Weapon.make(String(c.base), 5)]
+		b.hero.meta_mods = {"choices": 60}
+		b.hero.base_attrs[String(c.attr)] = int(c.min)
+		b.hero.passives = {String(c.passive): 1}
+		b.hero.recalc()
+		if not _offer_has_evolve(b, String(c.into)):
+			out.append("lote 1: %s deveria ser oferecida com %s %d, passiva e nível 5" % [c.into, c.attr, int(c.min)])
+		b.hero.base_attrs[String(c.attr)] = int(c.min) - 1
+		b.hero.recalc()
+		if _offer_has_evolve(b, String(c.into)):
+			out.append("lote 1: %s não deveria ser oferecida com %s %d" % [c.into, c.attr, int(c.min) - 1])
+		var hint := b.evolve_hint(b.hero.weapons[0])
+		if hint.find("Falta") < 0 or hint.find("agora %d" % (int(c.min) - 1)) < 0:
+			out.append("lote 1: a dica de %s deveria citar o atributo que falta: %s" % [c.base, hint])
+		b.hero.base_attrs[String(c.attr)] = int(c.min)
+		b.hero.passives = {}
+		b.hero.recalc()
+		if _offer_has_evolve(b, String(c.into)):
+			out.append("lote 1: %s não deveria ser oferecida sem a passiva %s" % [c.into, c.passive])
+		var low := _bat(32)
+		low.hero.weapons = [Weapon.make(String(c.base), 4)]
+		low.hero.meta_mods = {"choices": 60}
+		low.hero.base_attrs[String(c.attr)] = int(c.min)
+		low.hero.passives = {String(c.passive): 1}
+		low.hero.recalc()
+		if _offer_has_evolve(low, String(c.into)):
+			out.append("lote 1: %s não deveria ser oferecida com a arma no nível 4" % c.into)
+	# a passiva de atributo abre a evolução (o atributo efetivo conta passivas): CON 14 + Constituição nv2 = 16
+	var hammer := _bat(33)
+	hammer.hero.weapons = [Weapon.make("martelo_da_gloria", 5)]
+	hammer.hero.meta_mods = {"choices": 60}
+	hammer.hero.base_attrs["constituicao"] = 14
+	hammer.hero.passives = {"cota_de_malha": 1, "constituicao": 1}
+	hammer.hero.recalc()
+	if hammer.hero.attr("constituicao") != 15 or _offer_has_evolve(hammer, "martelo_da_luz"):
+		out.append("Martelo da Luz não deveria abrir com CON 15 (atributo %d)" % hammer.hero.attr("constituicao"))
+	hammer.hero.passives["constituicao"] = 2
+	hammer.hero.recalc()
+	if hammer.hero.attr("constituicao") != 16 or not _offer_has_evolve(hammer, "martelo_da_luz"):
+		out.append("Martelo da Luz deveria abrir com CON 16 vindo da passiva (atributo %d)" % hammer.hero.attr("constituicao"))
+	else:
+		hammer.state = "levelup"
+		hammer.offer = hammer._build_offer()
+		hammer.pending_levels = 1
+		hammer.offer_kind = "levelup"
+		hammer.choose(hammer.offer.find(hammer.offer.filter(func(o): return o.t == "evolve")[0]))
+		if hammer.hero.weapons[0].id != "martelo_da_luz":
+			out.append("escolher a evolução deveria trocar o Martelo da Glória pelo Martelo da Luz")
+	# regressão: as 10 evoluções anteriores continuam sem exigência de atributo
+	for id in table:
+		var d: Dictionary = table[id]
+		if d.has("evolve") and not LOTE1.any(func(c): return String(c.base) == String(id)) and d.evolve.has("min_attr"):
+			out.append("%s (evolução anterior ao lote 1) não deveria ter min_attr" % id)

@@ -2972,6 +2972,61 @@
       "pitch_jitter": 0.035,
       "cooldown_ms": 250,
       "priority": 4
+    },
+    "weapon.raio_da_ruina.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.raio_enfraquecedor.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.raio_enfraquecedor.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.maca_demolidora.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.golpe_esmagador.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.golpe_esmagador.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.dominio_coletivo.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.dominar_pessoa.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.dominar_pessoa.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.martelo_da_luz.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.martelo_da_gloria.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.martelo_da_gloria.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
+    },
+    "weapon.constelacao_de_silva.fire": {
+      "files": [
+        "res://assets/audio/sfx/weapon/weapon.sopro_de_estrela.fire_01.wav",
+        "res://assets/audio/sfx/weapon/weapon.sopro_de_estrela.fire_02.wav"
+      ],
+      "bus": "Player",
+      "volume_db": -12,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 55,
+      "priority": 2
     }
   },
   "aliases": {

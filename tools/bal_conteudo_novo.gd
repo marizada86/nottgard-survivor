@@ -5,8 +5,10 @@ extends SceneTree
 ## Itens únicos: poder = soma de mods normalizados (mesma régua de tools/bal_itens.gd), por slot e tier.
 ## Saída: linhas "ARMA;..." e "ITEM;...".
 
-const NEW_WEAPONS := ["bola_de_fogo", "tormenta_de_fogo", "lamina_de_sombra", "romper_armadura", "esmagar_defesas", "dominio_da_vontade"]
-const REFERENCE := ["descarga_estelar", "chuva_de_estrelas", "lamina_trovejante", "raio_enfraquecedor", "golpe_esmagador", "golpe_do_juizo", "dominar_pessoa", "cera_fervente", "espada_sombria"]
+const NEW_WEAPONS := ["bola_de_fogo", "tormenta_de_fogo", "lamina_de_sombra", "romper_armadura", "esmagar_defesas", "dominio_da_vontade",
+	"dominio_coletivo", "maca_demolidora", "martelo_da_luz", "raio_da_ruina", "constelacao_de_silva"]   # SPEC-174: evoluções do lote 1
+const REFERENCE := ["descarga_estelar", "chuva_de_estrelas", "lamina_trovejante", "raio_enfraquecedor", "golpe_esmagador", "golpe_do_juizo", "dominar_pessoa", "cera_fervente", "espada_sombria",
+	"martelo_da_gloria", "sopro_de_estrela", "espada_do_receptaculo", "luz_mais_pura", "tempestade"]
 const NEW_ITEMS := ["cajado_familia_infernum", "wave_of_terror", "colar_visao_verdadeira", "detector_arcano", "dispositivo_antimagia_gilly", "dispositivo_das_docas", "coracao_da_dominancia"]
 
 func _unit(k: String) -> float:

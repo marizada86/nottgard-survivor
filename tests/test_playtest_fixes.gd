@@ -317,8 +317,8 @@ func _armas() -> Array:
 	for wid in wdata:
 		if wdata[wid].has("evolve"):
 			evolving.append(String(wid))
-	if evolving.size() != 10:
-		out.append("esperava 10 armas que evoluem, achei %d (atualize o teste se o conteúdo mudou)" % evolving.size())
+	if evolving.size() != 15:   # 10 anteriores + 5 do lote 1 (SPEC-174)
+		out.append("esperava 15 armas que evoluem, achei %d (atualize o teste se o conteúdo mudou)" % evolving.size())
 	for base in evolving:
 		var into := String(wdata[base].evolve.into)
 		var b := Battle.new(3, "sylas", "dagruve")
@@ -338,7 +338,8 @@ func _armas() -> Array:
 			for o in b._build_offer():
 				if String(o.get("t", "")) == "weapon_new" and String(o.id) == base:
 					control += 1
-		if control == 0:
+		# bases de item (src "Item") nunca saem como NOVA; o controle só vale para cartas
+		if control == 0 and not String(wdata[base].src).begins_with("Item"):
 			out.append("%s: controle falhou, a base nunca foi oferecida sem a evolução" % base)
 	return out
 
@@ -385,7 +386,7 @@ func _ficha() -> Array:
 	if d.find("Próximo nível") >= 0 or d.find("Nível máximo") < 0 or d.find("Evolução:") < 0:
 		out.append("arma no nível máximo: deve dizer 'Nível máximo' e manter a evolução")
 	# arma que não evolui: sem bloco de evolução
-	var plain := Weapon.make("golpe_esmagador")
+	var plain := Weapon.make("estocada_mistica")
 	d = sheet._weapon_entry(plain).detail
 	if d.find("Evolução:") >= 0 or d.find("Próximo nível (Nv 2)") < 0:
 		out.append("arma sem evolução: só o próximo nível, sem bloco de evolução")

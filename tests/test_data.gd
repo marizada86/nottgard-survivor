@@ -40,6 +40,11 @@ func run() -> Array:
 				out.append("arma %s evolui com passiva %s inexistente" % [wid, w.evolve.passive])
 			if not weapons.has(w.evolve.into):
 				out.append("arma %s evolui para %s inexistente" % [wid, w.evolve.into])
+			for ak in w.evolve.get("min_attr", {}):
+				if not ["forca", "inteligencia", "constituicao", "carisma"].has(String(ak)):
+					out.append("arma %s: min_attr com atributo desconhecido %s" % [wid, ak])
+				elif int(w.evolve.min_attr[ak]) < 8 or int(w.evolve.min_attr[ak]) > 30:
+					out.append("arma %s: min_attr %s fora da faixa 8 a 30" % [wid, ak])
 		if not ["melee", "bolt", "nova", "zone"].has(w.kind):
 			out.append("arma %s: kind %s inválido" % [wid, w.kind])
 	for hid in heroes:

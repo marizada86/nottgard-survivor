@@ -43,5 +43,23 @@ func params() -> Dictionary:
 func can_evolve() -> bool:
 	return def.has("evolve") and level >= MAX_LEVEL
 
+const ATTR_FULL := {"forca": "Força", "inteligencia": "Inteligência", "constituicao": "Constituição", "carisma": "Carisma"}
+
+## SPEC-174: mínimo de atributo para evoluir ({} = sem exigência). Chave = atributo, valor = mínimo efetivo.
+func evolve_min_attr() -> Dictionary:
+	var ev: Dictionary = def.get("evolve", {})
+	return ev.get("min_attr", {})
+
+## SPEC-174: atributos que ainda faltam, como [{attr, need, have}]; vazio quando o herói cumpre (ou não há exigência).
+## `h` é o Hero: usa o atributo efetivo (base + passivas + itens + bênçãos).
+func missing_attrs(h) -> Array:
+	var out: Array = []
+	var req := evolve_min_attr()
+	for a in req:
+		var have: int = h.attr(String(a))
+		if have < int(req[a]):
+			out.append({"attr": String(a), "need": int(req[a]), "have": have})
+	return out
+
 func display_name() -> String:
 	return "%s %s" % [String(def.name), ("Nv %d" % level) if max_level() > 1 else "★"]

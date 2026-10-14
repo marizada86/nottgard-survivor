@@ -2582,7 +2582,7 @@ func _build_offer() -> Array:
 		if not w.granted:
 			owned_w += 1
 		var pv: Dictionary = w.params()
-		if w.can_evolve() and int(hero.passives.get(w.def.evolve.passive, 0)) > 0:
+		if w.can_evolve() and int(hero.passives.get(w.def.evolve.passive, 0)) > 0 and w.missing_attrs(hero).is_empty():
 			var evo: Dictionary = wdata[w.def.evolve.into]
 			pool.append({"t": "evolve", "id": w.id, "into": w.def.evolve.into, "name": "★ EVOLUÇÃO: %s" % evo.name, "desc": evo.desc, "weight": 9.0, "role": "synergy"})
 		elif w.level < w.max_level():
@@ -2698,9 +2698,16 @@ func evolve_hint(w: Weapon) -> String:
 		missing.append("nível %d (agora %d)" % [Weapon.MAX_LEVEL, w.level])
 	if int(hero.passives.get(String(w.def.evolve.passive), 0)) <= 0:
 		missing.append("passiva %s" % pname)
+	# SPEC-174: atributo mínimo (só as evoluções que declaram `min_attr`)
+	var req_text := "nível %d + passiva %s" % [Weapon.MAX_LEVEL, pname]
+	var min_attr := w.evolve_min_attr()
+	for a in min_attr:
+		req_text += " + %s %d" % [Weapon.ATTR_FULL.get(String(a), String(a)), int(min_attr[a])]
+	for m in w.missing_attrs(hero):
+		missing.append("%s %d (agora %d)" % [Weapon.ATTR_FULL.get(String(m.attr), String(m.attr)), int(m.need), int(m.have)])
 	if missing.is_empty():
 		return "Pronta para evoluir em %s: escolha a evolução no próximo level-up." % into
-	return "Evolui em %s com nível %d + passiva %s. Falta: %s." % [into, Weapon.MAX_LEVEL, pname, ", ".join(missing)]
+	return "Evolui em %s com %s. Falta: %s." % [into, req_text, ", ".join(missing)]
 
 ## SPEC-147 (IN-059): o que o próximo nível da arma muda; "" no nível máximo ou quando a arma não evolui por níveis.
 func next_level_text(w: Weapon) -> String:

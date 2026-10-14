@@ -432,7 +432,8 @@ func _empty_entry(caption: String, detail: String) -> Dictionary:
 
 func _weapon_entry(w: Weapon) -> Dictionary:
 	var tag := "  [color=#99cc99](concedida por item)[/color]" if w.granted else ""
-	var status := "  [color=#ffd966]▲ pronta para evoluir[/color]" if w.can_evolve() else ""
+	var evolve_ready := w.can_evolve() and w.missing_attrs(_b.hero).is_empty()   # SPEC-174: atributo mínimo, quando a evolução o pede
+	var status := "  [color=#ffd966]▲ pronta para evoluir[/color]" if evolve_ready else ""
 	var dmg_line := _b.weapon_damage_text(w.params())
 	var hint := _b.evolve_hint(w)
 	var detail := "[font_size=22][b]%s[/b][/font_size]%s%s\n%s%s%s" % [w.display_name(), tag, status, String(w.def.get("desc", "")),
@@ -449,7 +450,7 @@ func _weapon_entry(w: Weapon) -> Dictionary:
 	var multi := w.max_level() > 1
 	return {"icon": Items.weapon_icon(String(w.id)), "letter": String(w.def.name).substr(0, 1),
 		"border": GRANTED_BORDER if w.granted else IRON, "badge": ("Nv%d" % w.level) if multi else "★",
-		"badge_max": (w.level >= w.max_level()) if multi else true, "evolve": w.can_evolve(), "empty": false, "detail": detail}
+		"badge_max": (w.level >= w.max_level()) if multi else true, "evolve": evolve_ready, "empty": false, "detail": detail}
 
 func _item_entry(it: Dictionary) -> Dictionary:
 	var rarity := String(it.get("rarity", "comum"))
