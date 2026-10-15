@@ -6,7 +6,7 @@ status: "APROVADO por lote em 2026-10-15; B-001 a B-003 aprovados (G-L5-1 a G-L5
 content_state: DRAFT
 request_classification: IN_PLAN   # M4a (chefes marcantes) do PLAN-103, decisão D6
 relations: ["[[PLAN-103-demo-completa-e-polida-2026-10-14]]", "[[PROPOSTA-l5-mecanicas-de-chefe-2026-10-14]]", "[[EVID-257-l5-mecanicas-de-chefe-piloto-2026-10-15]]"]
-spec_reservada: "SPEC-179"
+spec_reservada: "SPEC-180"   # SPEC-179 ficou com o M3 de outra sessão
 ---
 
 # PLAN-105: mecânicas de chefe nos outros 6 mapas
