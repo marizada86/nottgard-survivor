@@ -1,7 +1,7 @@
 ---
 id: "CHATGPT-FILA-030"
 title: "Fila de geração: névoa do mundo, faixa da borda (NB01) e frente da Maré (NB02)"
-status: "criada 2026-10-13; geração aprovada pelo dono; nenhuma peça gerada (a sessão não tem gerador de imagem)"
+status: "duas fontes v01 aceitas visualmente em 2026-10-15; DRAFT, preparação e admissão pendentes"
 priority: "baixa: refinamento visual; as mecânicas MEC-059/060 já funcionam com polígonos e `nevoa_borda_01`"
 created: "2026-10-13"
 relations: ["[[ART-PROMPTS-063-nevoa-de-borda-e-frente-da-mare]]", "[[ART-PROMPTS-025-lote-1-nevoa-bau-de-chefe-imas-e-npcs]]", "[[SPEC-158-nevoa-de-borda-e-de-fim-de-fase]]"]
@@ -20,8 +20,10 @@ Compilação operacional de [[ART-PROMPTS-063-nevoa-de-borda-e-frente-da-mare]];
 
 ## Fila
 
-- [ ] gerada · [ ] aprovada — NB01 `nevoa_mundo_borda_01` (final 1536×384, repetível na horizontal)
-- [ ] gerada · [ ] aprovada — NB02 `nevoa_mundo_frente_01` (final 1280×360)
+- [x] gerada · [a] aprovada visualmente DRAFT — NB01 `nevoa_mundo_borda_01` v01 (fonte 2172×724; final pretendido 1536×384, costura pendente)
+- [x] gerada · [a] aprovada visualmente DRAFT — NB02 `nevoa_mundo_frente_01` v01 (fonte 2097×750; final pretendido 1280×360)
+
+Entrega DRAFT v01: [galeria](fila030-review-2026-10-15/index.html) e [evidência](../evidence/fila030-generation-2026-10-15.md). Dono respondeu "aprovado" à direção visual das duas v01, com as pendências informadas. Preparação de proporção, cinza/preto, vazio superior e costura continua pendente; nenhuma admissão em runtime ou promoção canônica.
 
 ## NB01 — colar no ChatGPT
 

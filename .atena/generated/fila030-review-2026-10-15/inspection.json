@@ -1,0 +1,26 @@
+[
+  {
+    "code": "NB01",
+    "revision": "v01",
+    "width": 2172,
+    "height": 724,
+    "sha256": "FC6430FA575DE4631E82FED521C76B39C25CDEA01A75471907D1A392DEB2ECC0",
+    "edge_red_mean_abs_difference": 6.607734806629834,
+    "edge_red_max_abs_difference": 85,
+    "rgb_deviation_sample_grid_8": 7,
+    "top_quarter_max_red_sample_grid_8": 1,
+    "source_preserved": true
+  },
+  {
+    "code": "NB02",
+    "revision": "v01",
+    "width": 2097,
+    "height": 750,
+    "sha256": "064D21D28E35F9FB7DCFAA82A098AB6307F2052F353E4BB7048CCFE57D3C1639",
+    "edge_red_mean_abs_difference": 0.332,
+    "edge_red_max_abs_difference": 2,
+    "rgb_deviation_sample_grid_8": 10,
+    "top_quarter_max_red_sample_grid_8": 104,
+    "source_preserved": true
+  }
+]

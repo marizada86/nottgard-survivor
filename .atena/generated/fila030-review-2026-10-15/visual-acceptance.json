@@ -1,0 +1,32 @@
+{
+  "plan": "FILA030-GENERATION",
+  "revision": "v01",
+  "date": "2026-10-15",
+  "owner_reply": "aprovado",
+  "scope": "Direção visual das fontes NB01 v01 e NB02 v01 com pendências técnicas informadas",
+  "status": "APPROVED_EXPLICITLY",
+  "content_state": "DRAFT",
+  "sources": [
+    {
+      "code": "NB01",
+      "revision": "v01",
+      "path": ".atena/generated/art-candidates/nevoa-mundo/NB01_v01.png",
+      "sha256": "FC6430FA575DE4631E82FED521C76B39C25CDEA01A75471907D1A392DEB2ECC0"
+    },
+    {
+      "code": "NB02",
+      "revision": "v01",
+      "path": ".atena/generated/art-candidates/nevoa-mundo/NB02_v01.png",
+      "sha256": "064D21D28E35F9FB7DCFAA82A098AB6307F2052F353E4BB7048CCFE57D3C1639"
+    }
+  ],
+  "preparation_pending": [
+    "proporção e dimensões finais",
+    "costura NB01",
+    "luminância e preto",
+    "vazio superior NB02"
+  ],
+  "runtime_admission": false,
+  "canonical_promotion": false,
+  "new_execution_authorized": false
+}

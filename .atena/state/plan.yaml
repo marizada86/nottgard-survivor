@@ -1446,6 +1446,38 @@ local_git_receipt_2026_10_13_push:
   verification: "suite 0 falhas, smoke nove fases, controller_check 94/0, mobile_buttons_check 146/0 antes do push"
   ci: "Build and Release disparado pelo push; resultado nao verificado aqui"
   note: "O release latest passa a apontar para 09b36fe; a versao segue 0.4.0. Este recibo fica sem commit ate o proximo."
+fila030_resume_2026_10_15:
+  revision: FILA030-GENERATION/v01
+  request_classification: PLAN_DEVIATION
+  route: DO_NOW_AND_RETURN
+  owner_reply: '2. (FILA-030, NB01 e NB02)'
+  state_file: .atena/state/fila030-generation.yaml
+  specification: .atena/specs/SPEC-121-retomada-fila-imagens/fila030-generation-v01.md
+  mode: per-plan
+  approval_status: APPROVED_EXPLICITLY
+  approval_reply: 'por plano'
+  status: COMPLETED_VISUALLY_ACCEPTED_DRAFT
+  checkpoint: S-004/OWNER_VISUAL_ACCEPTANCE_RECORDED
+  ordered_steps: [S-001, S-002, S-003, S-004]
+  current_step_position: 4
+  completed_steps: 4
+  total_steps: 4
+  remaining_steps_after_current: 0
+  content_state: DRAFT
+  return_plan: PLAN-103
+  return_checkpoint: B-004/R3_PROPOSAL_AWAITING_G-M3-3
+  suspension_scope: 'Esta frente de produção; checkpoints paralelos B-002/S-008 e B-003 preservados'
+  generated: 2
+  evidence: .atena/evidence/fila030-generation-2026-10-15.md
+  gallery: .atena/generated/fila030-review-2026-10-15/index.html
+  human_visual_acceptance: APPROVED_EXPLICITLY
+  visual_owner_reply: 'aprovado'
+  visual_accepted_date: '2026-10-15'
+  visual_acceptance_receipt: .atena/generated/fila030-review-2026-10-15/visual-acceptance.json
+  local_commit_authorization: 'commite (2026-10-15)'
+  request_classification_latest: IN_PLAN
+  push_export: NOT_AUTHORIZED
+  next_execution_authorized: false
 plan_104_retratos_ficha_hud_2026_10_14:
   plan: PLAN-104
   revision: DRAFT/r1

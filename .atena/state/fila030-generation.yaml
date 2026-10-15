@@ -1,0 +1,44 @@
+id: FILA030-GENERATION
+revision: v01
+content_state: DRAFT
+origin: planned
+implementation_preceded_spec: false
+request_classification: PLAN_DEVIATION
+route: DO_NOW_AND_RETURN
+owner_request: 'atena, continuar produção da fila de arte; opção 2'
+scope: [NB01, NB02]
+generation_approval_basis: 'CHATGPT-FILA-030 registra geração aprovada; dono escolheu retomar esta frente em 2026-10-15'
+mode: per-plan
+approval_status: APPROVED_EXPLICITLY
+approval_reply: 'por plano'
+status: COMPLETED_VISUALLY_ACCEPTED_DRAFT
+checkpoint: S-004/OWNER_VISUAL_ACCEPTANCE_RECORDED
+ordered_steps: [S-001, S-002, S-003, S-004]
+ordered_batches: [B-001, B-002, B-003]
+current_step_position: 4
+completed_steps: 4
+total_steps: 4
+remaining_steps_after_current: 0
+specification: .atena/specs/SPEC-121-retomada-fila-imagens/fila030-generation-v01.md
+visual_contract: ART-PROMPTS-063/r1
+generated: 2
+candidate_versions: {NB01: v01, NB02: v01}
+technical_status: SOURCE_REVIEW_WITH_PREPARATION_NOTES_NOT_ADMISSION_PASS
+human_visual_acceptance: APPROVED_EXPLICITLY
+visual_owner_reply: 'aprovado'
+visual_accepted_date: '2026-10-15'
+visual_acceptance_receipt: .atena/generated/fila030-review-2026-10-15/visual-acceptance.json
+gallery: .atena/generated/fila030-review-2026-10-15/index.html
+inspection: .atena/generated/fila030-review-2026-10-15/inspection.json
+evidence: .atena/evidence/fila030-generation-2026-10-15.md
+runtime_admission: false
+canonical_promotion: false
+local_commit_authorization: 'commite (2026-10-15)'
+request_classification_latest: IN_PLAN
+commit_scope: FILA030_SOURCES_PREVIEWS_AND_RECORDS_ONLY
+push_export: NOT_AUTHORIZED
+return_plan: PLAN-103
+return_checkpoint: B-004/R3_PROPOSAL_AWAITING_G-M3-3
+preserved_parallel_checkpoints: [B-002/S-008_AWAITING_RETURN, B-003/R5_DONE_AWAITING_OWNER_VISUAL_REVIEW]
+next_execution_authorized: false
+next_objective: 'Planejar preparação/costura/alfa das duas fontes aceitas; execução depende de novo escopo aprovado'
