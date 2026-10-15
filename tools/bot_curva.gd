@@ -1,6 +1,6 @@
 extends SceneTree
 ## Curva de dificuldade por fase (PLAN-055 F2). Mesmo piloto do tools/bot.gd, mas mede cada fase:
-##   godot --headless --path . -s tools/bot_curva.gd -- <heroi> <seeds> [dt] [maxfases] [lado] [meta 0=novato 1=veterano 2=loja cheia] [marcas]
+##   godot --headless --path . -s tools/bot_curva.gd -- <heroi> <seeds> [dt] [maxfases] [lado] [meta 0=novato 1=veterano 2=loja cheia] [marcas] [l2 0|1] [l4 0|1]
 ## Saída CSV (prefixo "CSV;"): heroi;seed;fase;nv_entrada;nv_saida;dur_s;pv_min_pct;s_abaixo_50;s_abaixo_25;dano_recebido;chefe_s;resultado
 ## BAL-023 (venda = só da run, fora do total): junto de cada CSV sai uma linha "GOLD;" com moedas brutas da fase por fonte:
 ##   GOLD;heroi;seed;fase;total;abate;elite;chefe;quebravel;evento;venda;oferta;arma;outro
@@ -19,6 +19,11 @@ func _init() -> void:
 	_map_side = float(a[4]) if a.size() > 4 else 60.0
 	_meta = METAS[clampi(int(a[5]) if a.size() > 5 else 0, 0, 2)]
 	_marks = _parse_marks(a[6] if a.size() > 6 else "")
+	# 8º argumento: 0 desliga o bloco "l2" de data/difficulty.json (campo vivo, PV do chefe, corrosão); padrão = o que está no arquivo
+	if a.size() > 7:
+		Data.table("difficulty")["l2"]["enabled"] = (a[7] != "0")
+	if a.size() > 8:   # 9º argumento: 0 desliga o bloco "l4" (inimigos legíveis e movimentos novos)
+		Data.table("difficulty")["l4"]["enabled"] = (a[8] != "0")
 	TerrainLayout.scale = _map_side / 40.0
 	for s in seeds:
 		_run(hero, s + 1, dt, max_stages)
@@ -206,7 +211,7 @@ func _pick_item(b: Battle) -> int:
 	for i in b.offer.size():
 		var badge: Dictionary = b.offer[i].get("badge", {})
 		var s := int(badge.get("up", 0)) - int(badge.get("down", 0))
-		if s > best_s:
+		if s > best_s or (s == best_s and bool(b.offer[i].get("equips", false))):   # L1: empate equipa o novo (o atual vem primeiro)
 			best_s = s
 			best = i
 	return best

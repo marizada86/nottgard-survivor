@@ -40,7 +40,18 @@ func _collect_pos(node: Variant, out: Array) -> void:
 		for v in node:
 			_collect_pos(v, out)
 
+## L2 (EVID-254): estes números são da regra base; o bloco l2 de data/difficulty.json é testado em test_l2_boss_field_and_corrosion.gd.
 func run() -> Array:
+	var l2: Dictionary = Data.table("difficulty").get("l2", {})
+	var was_on: bool = bool(l2.get("enabled", false))
+	if l2.has("enabled"):
+		l2["enabled"] = false
+	var out := _run_base()
+	if l2.has("enabled"):
+		l2["enabled"] = was_on
+	return out
+
+func _run_base() -> Array:
 	var out: Array = []
 	var cfg: Dictionary = Data.table("fog")
 

@@ -126,7 +126,11 @@ func _run(seed_v: int, hero_id: String, stage_id: String, seconds: float, replic
 			b.choose(_pick(b))
 			continue
 		if b.state == "item_offer":
-			b.choose(0)
+			var equip_index := 0   # L1: o atual vem primeiro; estas ferramentas sempre equipavam o novo
+			for oi in b.offer.size():
+				if bool(b.offer[oi].get("equips", false)):
+					equip_index = oi
+			b.choose(equip_index)
 			continue
 		if b.state == "dead" or b.state == "revive_offer" or b.state == "won":
 			break

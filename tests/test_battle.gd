@@ -137,15 +137,15 @@ func run() -> Array:
 	fk.hero.items["armadura"] = {"id": "cota_fk", "base": "cota", "name": "Cota", "slot": "armadura", "rarity": "comum", "mods": cota_b.mods.duplicate(), "level": 1}
 	for i in 3:
 		fk.give_item({"id": "novo_%d" % i, "name": "Novo", "slot": "armadura", "rarity": "comum", "mods": {"ca": 1.0}, "level": 1})
-		if i == 0 and String(fk.offer[1].desc).find("Fidelidade 1/3") < 0:
+		if i == 0 and String(fk.offer[0].desc).find("Fidelidade 1/3") < 0:
 			out.append("oferta de manter deveria mostrar o progresso da fidelidade")
-		fk.choose(1)
+		fk.choose(0)   # L1: o atual vem primeiro
 	if int(fk.hero.items.armadura.level) != 2:
 		out.append("3 recusas seguidas deveriam subir o item para Nv 2 (nível %d)" % int(fk.hero.items.armadura.level))
 	fk.give_item({"id": "novo_x", "name": "Novo", "slot": "armadura", "rarity": "comum", "mods": {"ca": 1.0}, "level": 1})
-	fk.choose(0)
+	fk.choose(1)   # equipar o novo
 	fk.give_item({"id": "novo_y", "name": "Novo", "slot": "armadura", "rarity": "comum", "mods": {"ca": 1.0}, "level": 1})
-	fk.choose(1)
+	fk.choose(0)   # manter
 	if int(fk.keep_streak.get("armadura", 0)) != 0:
 		out.append("equipar um item novo deveria zerar a sequência (e itens sem nível não contam)")
 
@@ -549,7 +549,7 @@ func run() -> Array:
 		out.append("item para slot ocupado deveria abrir uma oferta de 2 opções")
 	if it.hero.items.arma.id != "machado_de_xargath":
 		out.append("item ocupado não deveria trocar antes da escolha")
-	it.choose(0)  # equipar o novo (martelo), vender o machado
+	it.choose(1)  # equipar o novo (martelo), vender o machado; L1: o atual vem primeiro
 	if it.state != "running":
 		out.append("escolher um item deveria retomar a run")
 	if it.hero.items.arma.id != "martelo_da_gloria":
@@ -566,7 +566,7 @@ func run() -> Array:
 	it.give_item(Items.unique(lamina))
 	if it.state != "item_offer":
 		out.append("segundo item para o mesmo slot também deveria ofertar escolha")
-	it.choose(1)  # manter o atual (martelo), vender a lâmina
+	it.choose(0)  # manter o atual (martelo), vender a lâmina
 	if it.hero.items.arma.id != "martelo_da_gloria":
 		out.append("escolher 'manter atual' não deveria trocar o item equipado")
 	if it.hero.gold <= gold_before2:
@@ -740,10 +740,10 @@ func run() -> Array:
 	var old_item := {"id": "a", "name": "Velho", "slot": "amuleto", "rarity": "comum", "mods": {"cam": 1.0, "hp": 2.0}, "level": 1}
 	cmp.hero.items["amuleto"] = old_item
 	cmp.give_item({"id": "b", "name": "Novo", "slot": "amuleto", "rarity": "raro", "mods": {"cam": 3.0, "hp": 1.0}})
-	var equip_desc := String(cmp.offer[0].desc)
+	var equip_desc := String(cmp.offer[1].desc)
 	if equip_desc.find("Contra o atual: +2 CAM, -1 PV") < 0:
 		out.append("oferta de item deveria trazer a diferença contra o equipado: %s" % equip_desc)
-	if String(cmp.offer[0].get("tooltip", "")).find("Velho") < 0:
+	if String(cmp.offer[1].get("tooltip", "")).find("Velho") < 0:
 		out.append("oferta de item deveria ter tooltip com o item equipado")
 	if Items.compare_text({"cam": 1.0}, {"cam": 1.0}) != "sem diferença nos atributos":
 		out.append("compare_text de mods iguais deveria avisar que não há diferença")

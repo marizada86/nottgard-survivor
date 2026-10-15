@@ -274,6 +274,9 @@ func _update_modulate() -> void:
 		sprite.modulate = Color(0.6, 0.7, 1.4, alpha)
 	elif enemy.slow_t > 0.0:
 		sprite.modulate = Color(0.75, 0.9, 1.2, alpha)
+	elif enemy.cast_t > 0.0 or enemy.shoot_wind > 0.0 or enemy.windup > 0.0:   # L4: aviso no corpo (golpe em área, mira, bote)
+		var warm := 0.5 + 0.5 * sin(Time.get_ticks_msec() / 70.0)
+		sprite.modulate = Color(1.55 + 0.35 * warm, 1.0, 0.7, alpha)
 	else:
 		sprite.modulate = Color(1, 1, 1, alpha)
 

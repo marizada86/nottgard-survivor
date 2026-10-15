@@ -94,6 +94,11 @@ func _enemy_marks(out: Array) -> void:
 
 ## Horda: mais inimigos nascem e cabem ao mesmo tempo (herói imortal e sem armas, para contar só o nascimento).
 func _density(out: Array) -> void:
+	# L2: a poça passa a tirar % do PV máximo e matava o herói de 999999 PV; a contagem de nascimentos mede a regra base
+	var l2: Dictionary = Data.table("difficulty").get("l2", {})
+	var l2_was: bool = bool(l2.get("enabled", false))
+	if l2.has("enabled"):
+		l2["enabled"] = false
 	var counts: Array = []
 	for marks in [{}, {"horda": 1}, {"horda": 3}]:
 		var b := _bat(marks, "shedaklah")
@@ -103,6 +108,8 @@ func _density(out: Array) -> void:
 		for i in 700:
 			b.step(Vector2.ZERO, 0.1)
 		counts.append(b._spawn_serial)
+	if l2.has("enabled"):
+		l2["enabled"] = l2_was
 	if float(counts[1]) < float(counts[0]) * 1.1:
 		out.append("Horda 1 deveria nascer ao menos +10%% (0:%d, 1:%d)" % [counts[0], counts[1]])
 	if float(counts[2]) < float(counts[0]) * 1.3:

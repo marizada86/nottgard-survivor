@@ -101,7 +101,8 @@ func _ready() -> void:
 	aim_btn.pressed.connect(func(): aim_pressed.emit())
 	vol_slider.value_changed.connect(func(v: float):
 		Game.profile.data.settings.volume = v
-		Game.apply_settings())
+		Game.apply_audio())
+	vol_slider.drag_ended.connect(func(_changed: bool): Game.save())  # BUG-044: grava ao soltar, não a cada passo
 	# SPEC-131: painel do herói no padrão da ficha C, acima das linhas do Estige
 	hero_panel = HeroPanel.new()
 	hero_panel.name = "HeroPanel"
@@ -120,6 +121,7 @@ func _ready() -> void:
 	boss_panel.visible = false
 	levelup_panel.visible = false
 	pause_panel.visible = false
+	_wrap_result_text_in_scroll()
 	result_panel.visible = false
 	revive_panel.visible = false
 	items_panel = CharacterSheet.new()
@@ -554,7 +556,8 @@ func update_stats(b: Battle) -> void:
 		boss_panel.visible = false
 	var lines: Array = []
 	for w in h.weapons:
-		lines.append("⚔ %s%s" % [w.display_name(), " (item)" if w.granted else ""])
+		var evolve_note := b.evolve_status(w)   # L1 (IN-095): o que falta para evoluir, só no nível máximo
+		lines.append("⚔ %s%s%s" % [w.display_name(), " (item)" if w.granted else "", (" · " + evolve_note) if evolve_note != "" else ""])
 	var pl: Array = []
 	for pid in h.passives:
 		pl.append("%s %d" % [Data.table("passives")[pid].name, h.passives[pid]])
@@ -660,7 +663,7 @@ func show_offer(b: Battle) -> void:
 		else:
 			btn.pressed.connect(func(): offer_chosen.emit(i))
 		offer_box.add_child(btn)
-		if i == 0:
+		if i == (b.offer_focus if b.offer_kind == "item" else 0):
 			btn.grab_focus()
 		if is_card:
 			var detail := (btn as OfferCard).build_detail(true)
@@ -694,10 +697,14 @@ func show_offer(b: Battle) -> void:
 	if mobile == null:
 		if b.offer_kind == "levelup" and Game.controls.is_controller():
 			lv_title.text = "Nível %d — escolha" % b.hero.level
+		var want_focus: int = b.offer_focus if b.offer_kind == "item" else 0   # L1: na troca de item, o melhor pelo veredito
+		var seen := 0
 		for choice in offer_box.get_children():
 			if choice is Button and not choice.disabled:
-				choice.call_deferred("grab_focus")
-				break
+				if seen >= want_focus:
+					choice.call_deferred("grab_focus")
+					break
+				seen += 1
 
 func hide_offer() -> void:
 	levelup_panel.visible = false
@@ -1009,10 +1016,11 @@ func show_result(res: Dictionary, summary: Dictionary) -> void:
 	for id in summary.achievements:
 		for a in Data.table("achievements").achievements:
 			if a.id == id:
-				names.append("★ %s — %s" % [a.name, a.reward.get("text", "")])
+				names.append(achievement_line(a))
 	if not names.is_empty():
 		txt += "\n\nConquistas:\n" + "\n".join(names)
 	result_text.text = txt
+	_fit_result_scroll()
 	var result_was_open := result_panel.visible
 	result_panel.visible = true
 	if not result_was_open:
@@ -1047,3 +1055,43 @@ func _build_pause_menu() -> void:
 		title.hide()   # o cabeçalho "PAUSA" agora é do PauseMenu
 	pause_menu.build(_pause_box, _pause_box.get_node("VolRow"))
 	pause_menu.is_blocked = func(): return items_panel.visible or _controls_panel.visible or _confirm_dialog.visible or Playtest.is_overlay_open()
+
+
+## BUG-045: a lista de conquistas rola dentro do painel de resultado; título e botões ficam sempre à vista.
+var _result_scroll: ScrollContainer
+
+func _wrap_result_text_in_scroll() -> void:
+	var box := result_text.get_parent()
+	var index := result_text.get_index()
+	_result_scroll = ScrollContainer.new()
+	_result_scroll.name = "ResultScroll"
+	_result_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	_result_scroll.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	box.remove_child(result_text)
+	_result_scroll.add_child(result_text)
+	result_text.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	box.add_child(_result_scroll)
+	box.move_child(_result_scroll, index)
+
+## Altura da lista = o que cabe na tela depois do título, dos botões e da moldura (folga de 140 px).
+func _fit_result_scroll() -> void:
+	if _result_scroll == null:
+		return
+	var box := result_text.get_parent().get_parent()
+	var row_height := 0.0
+	var row := box.get_node_or_null("Row")
+	if row != null:
+		row_height = row.get_combined_minimum_size().y
+	var title_height := maxf(result_title.get_combined_minimum_size().y, result_title.custom_minimum_size.y)
+	var viewport_height := get_viewport().get_visible_rect().size.y
+	var available := maxf(120.0, viewport_height - title_height - row_height - 140.0)
+	_result_scroll.custom_minimum_size.y = minf(result_text.get_combined_minimum_size().y, available)
+	_result_scroll.scroll_vertical = 0
+
+## BUG-045: toda conquista mostra o que dá; as que só pagam moedas diziam "Nome —" sem nada depois.
+static func achievement_line(a: Dictionary) -> String:
+	var reward: Dictionary = a.get("reward", {})
+	var text := String(reward.get("text", ""))
+	if text == "" and int(reward.get("coins", 0)) > 0:
+		text = "+%d moedas" % int(reward.coins)
+	return "★ %s — %s" % [a.name, text] if text != "" else "★ %s" % a.name

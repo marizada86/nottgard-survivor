@@ -1,6 +1,23 @@
 {
   "_enemy_speed": "SPEC-124: multiplicador global da velocidade dos inimigos moveis (speed > 0); 1.0 = valores de enemies.json.",
   "enemy_speed_mult": 1.2,
+  "l2": {
+    "_spec": "L2 do relato do T05 (EVID-250, EVID-252): enabled desliga tudo de uma vez (as sondas comparam antes e depois). field: com o chefe vivo as ondas continuam a field_rate do ritmo e do teto (antes só 1 inimigo a cada 3,5 s). boss_power: o PV do chefe cresce com o nível e o dano do herói (bonus = per_level x (nível - start_level) + per_dmg x dmg_pct, teto max_bonus). corrosion: a poça tira também pct_max_hp do PV máximo e, como a borda da névoa, suspende a regeneração passiva; edge_max_dps_pct sobe a rampa final da borda.",
+    "enabled": true,
+    "field": {"rate": 0.4},
+    "boss_power": {"start_level": 6, "per_level": 0.04, "per_dmg": 0.35, "max_bonus": 0.8},
+    "corrosion": {"puddle_pct_max_hp": 0.015, "linger": 0.6, "edge_max_dps_pct": 0.12}
+  },
+  "l4": {
+    "_spec": "L4 do relato do T05 (EVID-250, proposta em vault/drafts/PROPOSTA-l4-...): enabled desliga tudo. emerge: elite imóvel com golpe em área nasce a (alcance - margin) tiles do herói. telegraph: linha do golpe, sprite quente e aviso mais longo em delay_override (por inimigo). aim: o tiro sai windup s depois, na direção travada. strafe: atirador anda de lado dentro da faixa de manter distância. lunge: bote dos inimigos com move lunge. pack: inimigos com move pack andam solo x solo e em grupo x group quando há need aliados do mesmo tipo a radius tiles.",
+    "enabled": true,
+    "emerge": {"enabled": true, "margin": 1.2},
+    "telegraph": {"enabled": true, "delay_override": {"tentaculo_kraken": 1.3}},
+    "aim": {"enabled": true, "windup": 0.4},
+    "strafe": {"enabled": true, "speed": 0.5, "switch_min": 2.0, "switch_max": 3.0},
+    "lunge": {"enabled": true, "min": 1.6, "max": 4.2, "windup": 0.45, "dist": 3.0, "speed": 9.0, "cd": 4.0},
+    "pack": {"enabled": true, "solo": 0.85, "group": 1.25, "need": 2, "radius": 3.0}
+  },
   "gold": {
     "_spec": "SPEC-142 B-003 (BAL-023): economia de ouro. meta_coin_exponent: o ouro de cada fase entra no Quartel dividido por coin_mult^expoente (1.0 = valor-base, sem a inflacao x5 das fases finais; 0 = como antes). gold_hit_per_second: teto de moedas por segundo do Chicote Avarento (valor-base, sem coin_mult). reward_cap: teto do multiplicador de recompensa (descida x Marcas). run_only_sell: venda de pecas vale na run (escalada por coin_mult) mas nao entra no Quartel.",
     "meta_coin_exponent": 1.0,

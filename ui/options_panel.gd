@@ -148,8 +148,8 @@ func _save(key: String, value: Variant) -> void:
 
 func _save_master(value: float) -> void:
 	Game.profile.data.settings.volume = value
-	Game.apply_settings()
-	Game.save()
+	Game.apply_audio()
+	_save_soon()
 	changed.emit()
 
 func _save_volume(key: String, value: float) -> void:
@@ -163,12 +163,45 @@ func _save_volume(key: String, value: float) -> void:
 			"sfx": sfx_mute.button_pressed = false
 			"ambience": ambience_mute.button_pressed = false
 		_syncing = false
-	Game.apply_settings()
-	Game.save()
+	Game.apply_audio()
+	_save_soon()
 	changed.emit()
 
 func _save_mute(channel: String, muted: bool) -> void:
 	Game.profile.data.settings["%s_muted" % channel] = muted
-	Game.apply_settings()
-	Game.save()
+	Game.apply_audio()
+	_save_soon()
 	changed.emit()
+
+## BUG-044: arrastar o slider dispara dezenas de mudanças; o save (com backup) é gravado uma vez, 0,4 s depois da última,
+## ou na hora se o painel sair da tela. Fora da árvore (testes) grava direto.
+const SAVE_DELAY := 0.4
+var _save_timer: Timer
+var save_pending := false
+
+func _save_soon() -> void:
+	save_pending = true
+	if not is_inside_tree():
+		flush_save()
+		return
+	if _save_timer == null:
+		_save_timer = Timer.new()
+		_save_timer.one_shot = true
+		_save_timer.timeout.connect(flush_save)
+		add_child(_save_timer)
+	_save_timer.start(SAVE_DELAY)
+
+func flush_save() -> void:
+	if not save_pending:
+		return
+	save_pending = false
+	if _save_timer != null and not _save_timer.is_stopped():
+		_save_timer.stop()
+	Game.save()
+
+func _exit_tree() -> void:
+	flush_save()
+
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_VISIBILITY_CHANGED and not is_visible_in_tree():
+		flush_save()

@@ -13,6 +13,11 @@ const ENEMY_ATK_CD := 1.3
 const SPAWN_SLOW := 1.35   # multiplica o intervalo das ondas (ritmo lento)
 const FIRST_INTERACTION_SECONDS := 45.0   # SPEC-147 (IN-065): o primeiro interativo (sempre baú) só surge depois disso; era 4 s
 const HIT_INVULN := 0.1
+## SPEC-177 F-1: dano contínuo (névoa) vira um único aviso por intervalo, em vez de um evento por quadro.
+const CONTINUOUS_HURT_SOURCES := ["mare_nevoa", "borda_nevoa"]
+const CONTINUOUS_HURT_INTERVAL := 0.5
+var _dot_accum := 0.0
+var _dot_last_emit := -99.0
 ## Revisão das curas: a barreira que nasce do excesso de cura (Bênção da Cura, Resto da Tarn) vai até esta fração do PV máximo (antes 0,25).
 const OVERHEAL_BARRIER_CAP := 0.10
 const HERO_HIT_R := 0.3
@@ -88,6 +93,8 @@ var run_time := 0.0
 var state := "running"   # running | levelup | altar | item_offer | shop | evolve_cine | revive_offer | dead | won
 var offer: Array = []
 var offer_kind := ""
+## L1 (IN-084): índice da opção que começa em foco. Na troca de item é a melhor pelo veredito (empate: manter o atual).
+var offer_focus := 0
 var world_mod := {}            # SPEC-164: Pedra do Eclipse ativa (multiplicadores e relógio); vazio = nenhuma
 var event_blood_lost := 0.0     # SPEC-164: PV máximos perdidos em Pactos de Sangue na run (teto de 45%)
 var pending_levels := 0
@@ -657,7 +664,8 @@ func step(screen_dir: Vector2, dt: float) -> void:
 	_update_postboss_fog(dt)
 	_update_world_mod(dt)
 	_update_edge_fog(dt)
-	if hero.m("regen") > 0.0:
+	_corroded_t = maxf(0.0, _corroded_t - dt)
+	if hero.m("regen") > 0.0 and _corroded_t <= 0.0:   # L2: poça e borda da névoa suspendem a regeneração passiva
 		_heal_hero(hero.m("regen") * dt)
 	_build_grid()
 	_update_weapons(dt)
@@ -846,7 +854,8 @@ func _hero_hit(e: Enemy, p: Dictionary, roll: bool, visual_theme: Dictionary = {
 		run_record.hit(String(p.get("_audio_id", p.get("id", "unattributed"))), dmg, e.hp)
 		e.hp -= dmg
 		e.hit_flash = 0.12
-		events.append({"type": "hit", "pos": e.pos, "amount": int(dmg), "crit": crit, "dtype": dtype, "tid": e.get_instance_id(), "visual_theme": resolved_theme})
+		events.append({"type": "hit", "pos": e.pos, "amount": int(dmg), "crit": crit, "dtype": dtype, "tid": e.get_instance_id(), "visual_theme": resolved_theme,
+			"tier": "boss" if e.is_boss() else ("elite" if e.affix != "" or e.drops_chest else ""), "frac": dmg / maxf(1.0, e.max_hp)})   # L3: faixa do número, som e pausa
 		if crit and _has_boon_effect("critical_wave"):
 			for other in enemies:
 				if other != e and not other.dead and other.pos.distance_to(e.pos) <= 2.0:
@@ -940,9 +949,12 @@ func _update_zones(dt: float) -> void:
 						_heal_hero(1.0 + hero.max_hp * 0.01)
 				elif hero.m("puddle_immune") <= 0.0:
 					hero.slow_t = 0.3
+					var puddle_corrosion := l2_corrosion()
+					if not puddle_corrosion.is_empty():
+						_corroded_t = maxf(_corroded_t, float(puddle_corrosion.get("linger", 0.6)))
 					if z.acc >= 0.9:
 						z.acc = 0.0
-						_hurt_hero(2.0 + tier(), "puddle")
+						_hurt_hero(2.0 + tier() + hero.max_hp * float(puddle_corrosion.get("puddle_pct_max_hp", 0.0)), "puddle")
 			if z.life > 0.0:
 				keep.append(z)
 		elif z.kind == "rule_ritual":
@@ -1122,6 +1134,7 @@ func _enemy_step(e: Enemy, dt: float) -> void:
 	e.hit_flash = maxf(0.0, e.hit_flash - dt)
 	e.atk_cd = maxf(0.0, e.atk_cd - dt)
 	e.slow_t = maxf(0.0, e.slow_t - dt)
+	e.cast_t = maxf(0.0, e.cast_t - dt)
 	if not e.affixes.is_empty():
 		_affix_step(e, dt)
 	if e.burn_t > 0.0:
@@ -1163,11 +1176,20 @@ func _enemy_step(e: Enemy, dt: float) -> void:
 		if e.windup <= 0.0:
 			e.charge_t = float(e.charge_ab.dist) / float(e.charge_ab.speed)
 		return
+	if e.shoot_wind > 0.0:   # L4 B1: parado mirando; o tiro sai na direção travada
+		e.shoot_wind -= dt
+		if e.shoot_wind <= 0.0:
+			_enemy_shot(e, e.shoot_ab, e.shoot_dir)
+		return
+	_l4_lunge_step(e, dist, to, dt)
+	if e.windup > 0.0:
+		return
 	for i in e.abilities.size():
 		e.ab_cd[i] -= dt
 		if e.ab_cd[i] <= 0.0 and _use_ability(e, i, e.abilities[i], dist, to):
 			e.ab_cd[i] = float(e.abilities[i].cd) * (0.85 + rng.randf() * 0.3)
 	var spd := e.speed * (0.5 if e.slow_t > 0.0 else 1.0) * RandomEvents.world_mult(world_mod, "enemy_speed", e.is_boss())   # SPEC-164: Eclipse
+	spd *= _l4_pack_mult(e, dt)   # L4 C2
 	if e.speed > 0.0 and dist > 0.001:
 		var dir := to / dist
 		var mv := Vector2.ZERO
@@ -1176,6 +1198,8 @@ func _enemy_step(e: Enemy, dt: float) -> void:
 				mv = dir
 			elif dist < e.keep - 1.2:
 				mv = -dir * 0.7
+			else:
+				mv = _l4_strafe(e, dir, dt)   # L4 B2: dentro da faixa, anda de lado em vez de ficar parado
 		elif dist > ENEMY_ATK_RANGE * 0.6:
 			mv = _chase_dir(e, dir, dist)
 		if mv != Vector2.ZERO:
@@ -1289,17 +1313,30 @@ func _use_ability(e: Enemy, idx: int, a: Dictionary, dist: float, to: Vector2) -
 			if dist > float(a.range):
 				return false
 			var dir := to.normalized()
-			projectiles.append({"owner": "enemy", "pos": e.pos, "dir": dir, "speed": float(a.speed), "life": float(a.range) / float(a.speed) + 1.0, "radius": 0.25,
-				"dice": a.dice, "bonus": int(a.bonus) + int(minute() / 4.0) + tier(), "dtype": a.dtype, "pierce": 0, "hit": {}, "p": {}, "by": e})
-			events.append({"type": "enemy_action", "enemy_id": e.id, "pos": e.pos, "ability": "shoot"})
+			var aim := l4_section("aim")
+			if not aim.is_empty() and not e.is_boss():   # L4 B1: o tiro sai 0,4 s depois, na direção travada agora
+				e.shoot_wind = float(aim.get("windup", 0.4))
+				e.shoot_dir = dir
+				e.shoot_ab = a
+				events.append({"type": "aim", "pos": e.pos, "dir": dir, "len": minf(float(a.range), 9.0), "enemy_id": e.id})
+				return true
+			_enemy_shot(e, a, dir)
 			return true
 		"aoe":
 			if dist > float(a.range):
 				return false
 			var lead := hero.pos
-			zones.append({"owner": "enemy", "kind": "telegraph", "pos": lead, "radius": float(a.radius), "delay": float(a.delay), "life": 99.0,
-				"dice": a.dice, "bonus": e.atk_bonus, "dtype": a.dtype})
-			events.append({"type": "telegraph", "pos": lead, "radius": float(a.radius), "delay": float(a.delay), "enemy_id": e.id})
+			var delay := float(a.delay)
+			var zone := {"owner": "enemy", "kind": "telegraph", "pos": lead, "radius": float(a.radius), "delay": delay, "life": 99.0,
+				"dice": a.dice, "bonus": e.atk_bonus, "dtype": a.dtype}
+			var tele := l4_section("telegraph")
+			if not tele.is_empty():   # L4 A2: linha de quem lançou até o círculo, sprite quente e aviso mais longo no que é imóvel
+				delay = float(tele.get("delay_override", {}).get(e.id, delay))
+				zone.delay = delay
+				zone["src"] = e.pos
+				e.cast_t = delay
+			zones.append(zone)
+			events.append({"type": "telegraph", "pos": lead, "radius": float(a.radius), "delay": delay, "enemy_id": e.id})
 			return true
 		"charge":
 			if dist < 2.5 or dist > float(a.dist) + 3.0:
@@ -1365,6 +1402,18 @@ func _stage_dmg_mult(src: String) -> float:
 		return 1.0
 	return float(stage.get("dmg_mult", 1.0)) * _mk_dmg
 
+## Acumula o dano contínuo e emite `hurt` (continuous) com o inteiro acumulado no máximo a cada CONTINUOUS_HURT_INTERVAL; a fração fica guardada.
+func _emit_continuous_hurt(dmg: float, force: bool) -> void:
+	_dot_accum += dmg
+	if _dot_accum < 1.0:
+		return
+	if not force and time >= _dot_last_emit and time - _dot_last_emit < CONTINUOUS_HURT_INTERVAL:
+		return
+	var whole := int(_dot_accum)
+	_dot_accum -= float(whole)
+	_dot_last_emit = time
+	events.append({"type": "hurt", "pos": hero.pos, "amount": whole, "continuous": true})
+
 func _hurt_hero(dmg: float, src: String, bypass_generic_defenses: bool = false) -> void:
 	if hero.dead or (invuln > 0.0 and not bypass_generic_defenses):
 		return
@@ -1395,7 +1444,10 @@ func _hurt_hero(dmg: float, src: String, bypass_generic_defenses: bool = false) 
 	stats.damage_taken += dmg
 	stats.clean_kills = 0
 	kinds.on_hit(self, src)
-	events.append({"type": "hurt", "pos": hero.pos, "amount": int(dmg)})
+	if CONTINUOUS_HURT_SOURCES.has(src):
+		_emit_continuous_hurt(dmg, hero.hp <= 0.0)
+	else:
+		events.append({"type": "hurt", "pos": hero.pos, "amount": int(dmg)})
 	if _has_boon_effect("pain_retaliation") and not bypass_generic_defenses:
 		for e in enemies:
 			if not e.dead and e.pos.distance_to(hero.pos) <= 2.2:
@@ -1898,8 +1950,12 @@ func _update_edge_fog(dt: float) -> void:
 		_edge_warned = true
 		events.append({"type": "toast", "text": "A névoa queima junto às bordas do mapa: afaste-se.", "color": Color(0.58, 0.9, 0.58)})
 	edge_exposure += dt
+	var corrosion := l2_corrosion()
+	if not corrosion.is_empty():
+		_corroded_t = maxf(_corroded_t, float(corrosion.get("linger", 0.6)))
 	var ratio := clampf(edge_exposure / maxf(1.0, float(cfg.get("ramp_seconds", 20.0))), 0.0, 1.0)
-	var pct := lerpf(float(cfg.get("start_dps_pct", 0.02)), float(cfg.get("max_dps_pct", 0.06)), ratio)
+	var edge_max := float(corrosion.get("edge_max_dps_pct", cfg.get("max_dps_pct", 0.06))) if not corrosion.is_empty() else float(cfg.get("max_dps_pct", 0.06))
+	var pct := lerpf(float(cfg.get("start_dps_pct", 0.02)), edge_max, ratio)
 	var extra := pct - postboss_fog_pct_at_hero()
 	if extra > 0.0:
 		_hurt_hero(hero.max_hp * extra * dt, "borda_nevoa", true)
@@ -2499,18 +2555,20 @@ func give_item(item: Dictionary, announce := false) -> void:
 	var cur_now := Items.scaled_mods(cur, int(cur.get("level", 1)))
 	var gold_for_cur: float = sell_value(String(cur.rarity))
 	var gold_for_new: float = sell_value(String(item.rarity))
-	offer = [
-		{"t": "item_swap", "name": "Equipar %s [%s]" % [item.name, Items.rarity_label(item.rarity)],
+	var equip_option := {"t": "item_swap", "name": "Equipar %s [%s]" % [item.name, Items.rarity_label(item.rarity)],
 			"desc": "%s\nContra o atual: %s\n(vende %s por %d moedas)" % [Items.mods_text(item.mods), Items.compare_text(item.mods, cur_now), cur.name, int(gold_for_cur)],
 			"keep": item, "sell": cur, "equips": true, "tooltip": "Equipado agora: %s\n%s" % [cur.name, Items.mods_text(cur_now)],
 			"brief": Items.brief_text(item.mods), "badge": Items.verdict(item.mods, cur_now), "price_text": "vende %s: %d" % [cur.name, int(gold_for_cur)],
-			"detail": _swap_detail(item, item.mods, cur, cur_now, "vende %s por %d moedas" % [cur.name, int(gold_for_cur)])},
-		{"t": "item_swap", "name": "Manter %s [%s]" % [cur.name, Items.rarity_label(cur.rarity)],
+			"detail": _swap_detail(item, item.mods, cur, cur_now, "vende %s por %d moedas" % [cur.name, int(gold_for_cur)])}
+	var keep_option := {"t": "item_swap", "name": "Manter %s [%s]" % [cur.name, Items.rarity_label(cur.rarity)],
 			"desc": "%s\nContra o novo: %s\n(vende %s por %d moedas)%s" % [Items.mods_text(cur_now), Items.compare_text(cur_now, item.mods), item.name, int(gold_for_new), _keep_hint(String(cur.slot), cur)],
 			"keep": cur, "sell": item, "tooltip": "Novo item: %s\n%s" % [item.name, Items.mods_text(item.mods)],
 			"brief": Items.brief_text(cur_now), "badge": Items.verdict(cur_now, item.mods), "price_text": "vende %s: %d" % [item.name, int(gold_for_new)],
-			"detail": _swap_detail(cur, cur_now, item, item.mods, "vende %s por %d moedas" % [item.name, int(gold_for_new)], _keep_hint(String(cur.slot), cur).strip_edges())},
-	]
+			"detail": _swap_detail(cur, cur_now, item, item.mods, "vende %s por %d moedas" % [item.name, int(gold_for_new)], _keep_hint(String(cur.slot), cur).strip_edges())}
+	# L1 (IN-084): ordem fixa, o atual primeiro e o novo depois; quem decide o foco é o veredito, não a posição
+	offer = [keep_option, equip_option]
+	var verdict_new: Dictionary = equip_option.badge
+	offer_focus = 1 if int(verdict_new.up) > int(verdict_new.down) else 0
 	offer_kind = "item"
 	state = "item_offer"
 	events.append({"type": "item_offer", "new_item": item, "current_item": cur})
@@ -2665,12 +2723,19 @@ func _build_offer() -> Array:
 				continue
 			pool.append({"t": "weapon_new", "id": wid, "name": "NOVA: %s" % d.name, "desc": d.desc, "weight": 2.0, "role": _weapon_offer_role(d)})
 	var owned_p := hero.passives.size()
+	# L1 (IN-095, opção A): a passiva que libera a evolução de uma arma no nível máximo não depende de espaço (teto de 5) e pesa mais na oferta
+	var evolution_passives := evolution_passives_needed()
 	for pid in pdata:
 		var lv := int(hero.passives.get(pid, 0))
 		if lv >= 5:
 			continue
 		if lv > 0:
 			pool.append({"t": "passive", "id": pid, "name": "%s → Nv %d" % [pdata[pid].name, lv + 1], "desc": pdata[pid].desc, "weight": 3.0, "role": "synergy", "badge": {"text": "Nv %d → %d" % [lv, lv + 1]}})
+		elif evolution_passives.has(pid):
+			var needed_by: Dictionary = evolution_passives[pid]
+			pool.append({"t": "passive", "id": pid, "name": "NOVA: %s" % pdata[pid].name, "weight": 9.0, "role": "synergy",
+				"desc": "%s
+Libera a evolução de %s em %s (não ocupa espaço de passiva)." % [pdata[pid].desc, needed_by.weapon, needed_by.into]})
 		elif owned_p < 5:
 			pool.append({"t": "passive", "id": pid, "name": "NOVA: %s" % pdata[pid].name, "desc": pdata[pid].desc, "weight": 2.0, "role": _passive_offer_role(pdata[pid])})
 	var out: Array = []
@@ -2900,6 +2965,10 @@ func choose(i: int) -> void:
 			for w in hero.weapons:
 				if w.id == c.id:
 					w.level += 1
+					if w.can_evolve():   # L1 (IN-095): avisa o que falta quando a arma chega ao nível máximo
+						var status := evolve_status(w)
+						if status != "" and status != "pronta para evoluir":
+							events.append({"type": "toast", "text": "%s no nível máximo: %s para evoluir." % [String(w.def.name), status]})
 		"evolve":
 			for w in hero.weapons:
 				if w.id == c.id:
@@ -2984,7 +3053,7 @@ func _spawn(id: String, at: Vector2, minute_override: float = -1.0) -> Enemy:
 
 ## MEC-011: parte dos perseguidores contorna pelos lados em vez de formar fila (sem consumir o RNG da run).
 func _flank_side_for(e: Enemy, serial: int) -> int:
-	if e.is_boss() or e.move != "chase" or e.speed <= 0.0:
+	if e.is_boss() or e.move == "keep" or e.speed <= 0.0:
 		return 0
 	var share := float(Data.table("difficulty").get("flank", {}).get("share", 0.0))
 	if share <= 0.0 or float((serial * 37) % 100) / 100.0 >= share:
@@ -3003,6 +3072,7 @@ func _chase_dir(e: Enemy, dir: Vector2, dist: float) -> Vector2:
 
 func _spawn_elite(id: String, at: Vector2) -> Enemy:
 	var e := _spawn(id, at)
+	_emerge_in_reach(e)
 	if _stage_order() < AFFIX_FIRST_AFFIXED_STAGE:
 		_apply_affix(e, AFFIXES[rng.randi() % AFFIXES.size()])
 	else:
@@ -3156,16 +3226,21 @@ func _director(dt: float) -> void:
 	if _mk_density != 1.0:
 		cap = int(float(cap) * _mk_density)
 	if _combat_count() < cap:
+		var live_rate := boss_field_rate()   # L2: > 0 enquanto o chefe vive; as ondas continuam em ritmo menor
 		for wi in stage.waves.size():
 			var w: Dictionary = stage.waves[wi]
-			if time < float(w.t0) or time > float(w.t1):
+			var past_end := time > float(w.t1)
+			# L2: só voltam as ondas da segunda metade da fase (t1 a partir de 60% da duração), as que já estavam em cena perto do chefe
+			var resumes := live_rate > 0.0 and float(w.t1) >= float(stage.duration) * 0.6
+			if time < float(w.t0) or (past_end and not resumes):
 				continue
+			var rate := live_rate if past_end else 1.0
 			_acc[wi] = float(_acc.get(wi, 0.0)) + dt
 			var every := float(w.every) * SPAWN_SLOW * lerpf(1.0, float(o.get("every_mult", 1.0)), opening)
-			every /= _mk_density
+			every /= _mk_density * rate
 			if _acc[wi] >= every:
 				_acc[wi] = 0.0
-				var max_alive := int(ceil(float(w.max) * lerpf(1.0, float(o.get("max_mult", 1.0)), opening) * _mk_density))
+				var max_alive := int(ceil(float(w.max) * lerpf(1.0, float(o.get("max_mult", 1.0)), opening) * _mk_density * rate))
 				var per_wave := int(ceil(float(w.n) * lerpf(1.0, float(o.get("n_mult", 1.0)), opening)))
 				var room := max_alive - alive(String(w.id))
 				for i in mini(per_wave, room):
@@ -3193,7 +3268,7 @@ func _director(dt: float) -> void:
 		boss_spawned = true
 		var scale_extra := 1.0 + 0.5 * boss_repeat
 		boss = _spawn(happenings.boss_id(self), _ring_pos(), 0.0)
-		boss.max_hp = round(boss.max_hp * scale_extra * (1.0 + 0.3 * tier() * 0.0))
+		boss.max_hp = round(boss.max_hp * scale_extra * boss_power_factor() * (1.0 + 0.3 * tier() * 0.0))
 		boss.hp = boss.max_hp
 		_apply_boss_affix(boss)
 		_apply_awake_boss(boss)
@@ -3202,7 +3277,7 @@ func _director(dt: float) -> void:
 		events.append({"type": "boss", "enemy": boss})
 		_start_boss_intro(boss)
 		events.append({"type": "toast", "text": "%s surge!" % boss.name})
-	if boss_spawned and not boss_dead:
+	if boss_spawned and not boss_dead and boss_field_rate() <= 0.0:   # L2 desligado: o antigo pinga-pinga
 		_trickle += dt
 		if _trickle >= 3.5 and _combat_count() < cap:
 			_trickle = 0.0
@@ -3444,3 +3519,143 @@ func result() -> Dictionary:
 		"clean_streak": stats.clean_streak_best, "level": hero.level, "stage": stage_id, "hero": hero.id, "bosses": stats.bosses, "boss_ids": stats.boss_ids, "elites": stats.elites, "crits": stats.crits,
 		"ones": stats.ones, "still": stats.still_best, "rituals": stats.rituals, "bets_won": stats.bets_won, "loyalty": stats.loyalty, "chests": stats.chests, "stages_cleared": stats.stages_cleared, "stage_ids": stats.stage_ids, "cleared_ids": stats.cleared_ids, "final_victory": final_victory, "weapons": hero.weapons.map(func(w): return w.id), "codex": codex,
 		"reward_rate": death_reward_rate if state == "dead" else 1.0, "death_reason": death_reason}
+
+## L1 (IN-095): passivas que faltam para evoluir uma arma que já está no nível máximo.
+## Retorna {id_da_passiva: {"weapon": nome da arma, "into": nome da evolução}}.
+func evolution_passives_needed() -> Dictionary:
+	var out := {}
+	var passives: Dictionary = Data.table("passives")
+	var weapons: Dictionary = Data.table("weapons")
+	for w in hero.weapons:
+		if not w.can_evolve():
+			continue
+		var pid := String(w.def.evolve.passive)
+		if int(hero.passives.get(pid, 0)) > 0 or not passives.has(pid) or out.has(pid):
+			continue
+		out[pid] = {"weapon": String(w.def.name), "into": String(weapons.get(String(w.def.evolve.into), {}).get("name", String(w.def.evolve.into)))}
+	return out
+
+## L1 (IN-095, opção C): texto curto para a lista de armas da HUD quando a arma está no nível máximo e pode evoluir.
+## "" = nada a dizer (a arma não evolui ou ainda não chegou ao nível máximo).
+func evolve_status(w: Weapon) -> String:
+	if not w.can_evolve():
+		return ""
+	var pid := String(w.def.evolve.passive)
+	if int(hero.passives.get(pid, 0)) <= 0:
+		return "falta %s" % String(Data.table("passives").get(pid, {}).get("name", pid))
+	var missing := w.missing_attrs(hero)
+	if not missing.is_empty():
+		var m: Dictionary = missing[0]
+		return "falta %s %d" % [Weapon.ATTR_FULL.get(String(m.attr), String(m.attr)), int(m.need)]
+	return "pronta para evoluir"
+
+# ------------------------------------------------------------------ L2 (relato do T05, EVID-250 e EVID-252)
+
+var _corroded_t := 0.0
+
+func _l2() -> Dictionary:
+	var cfg: Dictionary = Data.table("difficulty").get("l2", {})
+	return cfg if bool(cfg.get("enabled", false)) else {}
+
+## Fração do ritmo e do teto das ondas que continua enquanto o chefe vive; 0 = desligado (volta ao pinga-pinga antigo).
+func boss_field_rate() -> float:
+	var cfg := _l2()
+	if cfg.is_empty() or not boss_spawned or boss_dead or bool(stage.get("endless", false)):
+		return 0.0
+	return clampf(float(cfg.get("field", {}).get("rate", 0.0)), 0.0, 1.0)
+
+## Multiplicador do PV do chefe pelo poder do herói (nível e dano). 1.0 = sem efeito.
+func boss_power_factor() -> float:
+	var cfg := _l2()
+	if cfg.is_empty():
+		return 1.0
+	var p: Dictionary = cfg.get("boss_power", {})
+	var by_level := maxf(0.0, float(hero.level) - float(p.get("start_level", 6))) * float(p.get("per_level", 0.0))
+	var by_dmg := maxf(0.0, hero.m("dmg_pct")) * float(p.get("per_dmg", 0.0))
+	return 1.0 + minf(float(p.get("max_bonus", 0.0)), by_level + by_dmg)
+
+## Corrosão da poça e da borda da névoa (vazio = L2 desligado).
+func l2_corrosion() -> Dictionary:
+	var cfg := _l2()
+	return cfg.get("corrosion", {}) if not cfg.is_empty() else {}
+
+# ------------------------------------------------------------------ L4 (relato do T05, proposta em vault/drafts/PROPOSTA-l4-...)
+
+## Seção do bloco `l4` de data/difficulty.json; vazio quando o L4 está desligado ou a seção não existe/está desligada.
+func l4_section(name: String) -> Dictionary:
+	var cfg: Dictionary = Data.table("difficulty").get("l4", {})
+	if not bool(cfg.get("enabled", false)):
+		return {}
+	var s: Dictionary = cfg.get(name, {})
+	return s if bool(s.get("enabled", true)) else {}
+
+## Tiro de inimigo (imediato ou ao fim da mira).
+func _enemy_shot(e: Enemy, a: Dictionary, dir: Vector2) -> void:
+	projectiles.append({"owner": "enemy", "pos": e.pos, "dir": dir, "speed": float(a.speed), "life": float(a.range) / float(a.speed) + 1.0, "radius": 0.25,
+		"dice": a.dice, "bonus": int(a.bonus) + int(minute() / 4.0) + tier(), "dtype": a.dtype, "pierce": 0, "hit": {}, "p": {}, "by": e})
+	events.append({"type": "enemy_action", "enemy_id": e.id, "pos": e.pos, "ability": "shoot"})
+
+## L4 A1: elite imóvel com golpe em área nasce ao alcance dele (antes: no anel de 8 a 11 tiles, fora do alcance de 6).
+func _emerge_in_reach(e: Enemy) -> void:
+	if e.speed > 0.0 or e.is_boss() or l4_section("emerge").is_empty():
+		return
+	var reach := 0.0
+	for a in e.abilities:
+		if String(a.t) == "aoe":
+			reach = maxf(reach, float(a.range))
+	if reach <= 0.0:
+		return
+	var want := reach - float(l4_section("emerge").get("margin", 1.2))
+	for i in 12:
+		var ang := rng.randf() * TAU
+		var p := hero.pos + Vector2(cos(ang), sin(ang)) * want
+		if p.x > 1.0 and p.y > 1.0 and p.x < map_size.x - 1.0 and p.y < map_size.y - 1.0 and hero.can_stand(p, e.radius):
+			e.pos = p
+			return
+
+## L4 B2: passo lateral do atirador dentro da faixa de manter distância. Retorna o movimento (já na escala de 0,5 da velocidade).
+func _l4_strafe(e: Enemy, dir: Vector2, dt: float) -> Vector2:
+	var s := l4_section("strafe")
+	if s.is_empty() or e.is_boss():
+		return Vector2.ZERO
+	e.strafe_t -= dt
+	if e.strafe_t <= 0.0:
+		e.strafe_t = rng.randf_range(float(s.get("switch_min", 2.0)), float(s.get("switch_max", 3.0)))
+		e.strafe_side = -e.strafe_side if e.strafe_side != 0.0 else 1.0
+	return Vector2(-dir.y, dir.x) * e.strafe_side * float(s.get("speed", 0.5))
+
+## L4 C1: bote. Reaproveita a investida (windup + charge): arma, mostra a linha e salta.
+func _l4_lunge_step(e: Enemy, dist: float, to: Vector2, dt: float) -> void:
+	if e.move != "lunge" or e.is_boss():
+		return
+	var s := l4_section("lunge")
+	if s.is_empty():
+		return
+	e.lunge_cd = maxf(0.0, e.lunge_cd - dt)
+	if e.lunge_cd > 0.0 or e.windup > 0.0 or e.charge_t > 0.0 or hero.dead:
+		return
+	if dist < float(s.get("min", 1.6)) or dist > float(s.get("max", 4.2)):
+		return
+	e.lunge_cd = float(s.get("cd", 4.0))
+	e.windup = float(s.get("windup", 0.45))
+	e.charge_dir = to.normalized()
+	e.charge_ab = {"dist": float(s.get("dist", 3.0)), "speed": float(s.get("speed", 9.0)), "dice": e.atk_dice, "bonus": e.atk_bonus}
+	events.append({"type": "windup", "pos": e.pos, "dir": e.charge_dir, "len": float(e.charge_ab.dist), "enemy_id": e.id})
+
+## L4 C2: bando. Sozinho hesita, com aliados do mesmo tipo por perto acelera.
+func _l4_pack_mult(e: Enemy, dt: float) -> float:
+	if e.move != "pack" or e.is_boss():
+		return 1.0
+	var s := l4_section("pack")
+	if s.is_empty():
+		return 1.0
+	e.pack_t -= dt
+	if e.pack_t <= 0.0:
+		e.pack_t = 0.4
+		var n := 0
+		var r := float(s.get("radius", 3.0))
+		for o in enemies:
+			if o != e and not o.dead and o.id == e.id and o.pos.distance_to(e.pos) <= r:
+				n += 1
+		e.pack_n = n
+	return float(s.get("group", 1.25)) if e.pack_n >= int(s.get("need", 2)) else float(s.get("solo", 0.85))

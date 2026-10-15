@@ -178,7 +178,7 @@ func _pick_item(b: Battle) -> int:
 	for i in b.offer.size():
 		var badge: Dictionary = b.offer[i].get("badge", {})
 		var s := int(badge.get("up", 0)) - int(badge.get("down", 0))
-		if s > best_s:
+		if s > best_s or (s == best_s and bool(b.offer[i].get("equips", false))):   # L1: empate equipa o novo (o atual vem primeiro)
 			best_s = s
 			best = i
 	return best

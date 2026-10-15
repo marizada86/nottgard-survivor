@@ -75,7 +75,11 @@ func _run(hero_id: String, seed_v: int, dt: float, max_stages: int, boon_id: Str
 			b.choose(_pick(b))
 			continue
 		if b.state == "item_offer":
-			b.choose(0)
+			var equip_index := 0   # L1: o atual vem primeiro; estas ferramentas sempre equipavam o novo
+			for oi in b.offer.size():
+				if bool(b.offer[oi].get("equips", false)):
+					equip_index = oi
+			b.choose(equip_index)
 			continue
 		if b.run_time > 9000.0:
 			st.res = "cap_tempo"

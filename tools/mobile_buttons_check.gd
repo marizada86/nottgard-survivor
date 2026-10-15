@@ -363,7 +363,11 @@ func _check_offers(run: Node) -> void:
 	_record("comprar_loja", run.battle.hero.gold < gold)
 	# Retomar com uma saída por toque, mesmo se compra abriu comparação de equipamento.
 	if run.battle.state == "item_offer":
-		await _choose(run, 0, "equipar_item")
+		var equip_at := 0
+		for oi in run.battle.offer.size():
+			if bool(run.battle.offer[oi].get("equips", false)):
+				equip_at = oi
+		await _choose(run, equip_at, "equipar_item")
 	run.battle._open_shop_event("loja")
 	var leave: int = run.battle.offer.size() - 1
 	await _choose(run, leave, "sair_loja")

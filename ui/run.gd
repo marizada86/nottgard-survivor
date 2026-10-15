@@ -29,6 +29,11 @@ var _result_shown := false
 var _stats_checkpoint_at := 60.0
 var _shake := 0.0
 var _numbers := 0
+var _aux_texts := 0   # SPEC-177 F-2: textos flutuantes que não são acerto (dano recebido, status, cura, loot)
+const AUX_TEXT_MAX := 8
+
+static func can_show_aux_text(current: int) -> bool:
+	return current < AUX_TEXT_MAX
 const NUMBER_MERGE_MS := 350
 var _recent_numbers := {}  # tid do alvo -> {label, amount, until}: soma acertos rápidos no mesmo alvo (MEC-031 D5)
 var _paused := false
@@ -710,23 +715,30 @@ func _consume_events() -> void:
 		var at := Iso.to_screen(ev.pos) if ev.has("pos") else Vector2.ZERO
 		match String(ev.type):
 			"hit":
-				Sfx.play("combat.critical" if ev.crit else "combat.impact", -14.0)
-				if ev.crit:
-					_hit_stop(0.04)
+				# L3 (EVID-250): faixa do golpe (fração do PV do alvo em elite e chefe; crítico sobe a faixa) decide número, som e pausa
+				var hit_tier := String(ev.get("tier", ""))
+				var hit_frac := float(ev.get("frac", 0.0))
+				var hit_band := DamageFeedback.band(hit_frac, hit_tier, bool(ev.crit))
+				Sfx.play("combat.critical" if ev.crit else "combat.impact", DamageFeedback.sound_db(hit_band, bool(ev.crit), hit_tier), DamageFeedback.sound_pitch(hit_band))
+				var stop_s := DamageFeedback.hit_stop(hit_band, bool(ev.crit), hit_tier)
+				if stop_s > 0.0:
+					_hit_stop(stop_s)
 				var theme: Dictionary = ev.get("visual_theme", _divine_theme())
 				var number_col := _dcol(String(ev.get("dtype", "fisico")))
-				var merged: bool = not ev.crit and _merge_damage_number(int(ev.get("tid", 0)), int(ev.amount))
+				var merged: bool = not ev.crit and _merge_damage_number(int(ev.get("tid", 0)), int(ev.amount), hit_frac)
 				if not merged and _numbers < 14:
-					var label := _float_text(at + Vector2(randf_range(-6, 6), -36), str(ev.amount), number_col.lightened(0.25) if ev.crit else number_col, 22 if ev.crit else 14, ev.crit, theme.outline)
+					var tone: float = maxf(0.25 if ev.crit else 0.0, DamageFeedback.lighten(hit_band))
+					var label := _float_text(at + Vector2(randf_range(-6, 6), -36), str(ev.amount), number_col.lightened(tone), DamageFeedback.number_size(hit_band, bool(ev.crit)), bool(ev.crit) or hit_band >= 2, theme.outline, true, DamageFeedback.outline_size(hit_band))
 					if not ev.crit and ev.has("tid"):
-						_recent_numbers[int(ev.tid)] = {"label": label, "amount": int(ev.amount), "until": Time.get_ticks_msec() + NUMBER_MERGE_MS}
+						_recent_numbers[int(ev.tid)] = {"label": label, "amount": int(ev.amount), "frac": hit_frac, "tier": hit_tier, "color": number_col, "until": Time.get_ticks_msec() + int(DamageFeedback.MERGE_MS.get(hit_tier, NUMBER_MERGE_MS))}
 					if ev.has("visual_theme") and under.has_method("spawn_impact"):
 						under.call("spawn_impact", ev.pos, 3, theme.impact_accent)
 			"miss":
 				Sfx.play("combat.miss", -18.0)
 			"hurt":
-				Sfx.play("player.hurt")
-				_shake = 0.6
+				if not ev.get("continuous", false):   # SPEC-177 F-1: dano contínuo da névoa não soa nem treme a cada aviso
+					Sfx.play("player.hurt")
+					_shake = 0.6
 				_float_text(at + Vector2(0, -58), "-%d" % ev.amount, Color(1.0, 0.3, 0.3), 16)
 			"text":
 				var cue := String(ev.text).to_lower()
@@ -904,7 +916,7 @@ func _dcol(dtype: String) -> Color:
 	return Color(0.85, 0.85, 0.9)
 
 ## Soma o acerto ao número recente do mesmo alvo, se ainda estiver na janela; devolve true se somou.
-func _merge_damage_number(tid: int, amount: int) -> bool:
+func _merge_damage_number(tid: int, amount: int, frac: float = 0.0) -> bool:
 	if tid == 0 or not _recent_numbers.has(tid):
 		return false
 	var entry: Dictionary = _recent_numbers[tid]
@@ -915,28 +927,42 @@ func _merge_damage_number(tid: int, amount: int) -> bool:
 		return false
 	var label: Label = raw_label
 	entry.amount = int(entry.amount) + amount
+	entry.frac = float(entry.get("frac", 0.0)) + frac
 	label.text = str(entry.amount)
 	label.scale = Vector2.ONE * 1.2
+	# L3: a soma de golpes seguidos em elite e chefe pode subir de faixa
+	var merged_band := DamageFeedback.band(float(entry.frac), String(entry.get("tier", "")), false)
+	label.add_theme_font_size_override("font_size", DamageFeedback.number_size(merged_band, false))
+	label.add_theme_constant_override("outline_size", DamageFeedback.outline_size(merged_band))
 	return true
 
-func _float_text(at: Vector2, text: String, col: Color, size: int, critical: bool = false, outline: Color = Color(0, 0, 0)) -> Label:
+## `counted_as_hit`: o número de acerto entra no limite de 14; os demais textos (dano recebido, status, cura, loot) têm limite próprio (SPEC-177 F-2) e retornam null quando excedem.
+func _float_text(at: Vector2, text: String, col: Color, size: int, critical: bool = false, outline: Color = Color(0, 0, 0), counted_as_hit: bool = false, outline_px: int = -1) -> Label:
+	if not counted_as_hit and not can_show_aux_text(_aux_texts):
+		return null
 	var l := Label.new()
 	l.text = text
 	l.position = at
 	l.modulate = col
 	l.add_theme_font_size_override("font_size", size)
 	l.add_theme_color_override("font_outline_color", outline)
-	l.add_theme_constant_override("outline_size", 5 if critical else 4)
+	l.add_theme_constant_override("outline_size", outline_px if outline_px > 0 else (5 if critical else 4))
 	l.pivot_offset = Vector2(18, 12)
 	l.scale = Vector2.ONE * (0.7 if critical else 0.82)
 	_text_fx.add_child(l)
-	_numbers += 1
+	if counted_as_hit:
+		_numbers += 1
+	else:
+		_aux_texts += 1
 	var t := create_tween()
 	t.tween_property(l, "scale", Vector2.ONE * (1.15 if critical else 1.0), 0.12).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 	t.tween_property(l, "position:y", at.y - 22, 0.6)
 	t.parallel().tween_property(l, "modulate:a", 0.0, 0.6)
 	t.tween_callback(func():
-		_numbers -= 1
+		if counted_as_hit:
+			_numbers -= 1
+		else:
+			_aux_texts -= 1
 		l.queue_free())
 	return l
 
@@ -1182,11 +1208,13 @@ func _kill_burst(enemy: Enemy, at: Vector2) -> void:
 	var tint := Color(enemy.color, 0.85).lightened(0.25)
 	var reduced := Game.reduced_impact()
 	if enemy.is_boss():
+		Sfx.play("combat.explosion", -10.0, 0.75)   # L3: a queda do chefe tem peso próprio, sem arquivo novo
 		_ring(at, 2.4, tint, 0.45)
 		if under.has_method("spawn_impact"):
 			under.call("spawn_impact", at, 6 if reduced else 16, tint)
 		_hit_stop(0.12)
 	elif enemy.affix != "" or enemy.drops_chest:
+		Sfx.play("combat.critical", -10.0, 0.8)   # L3: queda de elite, mais grave que o golpe
 		_ring(at, 1.2, Color(1.0, 0.85, 0.4), 0.3)
 		if under.has_method("spawn_impact"):
 			under.call("spawn_impact", at, 4 if reduced else 10, tint)

@@ -333,6 +333,10 @@ func _draw_trap(z: Dictionary) -> void:
 func _draw_telegraph(z: Dictionary) -> void:
 	var total := maxf(0.01, float(z.get("total", z.delay)))
 	var t := clampf(1.0 - float(z.delay) / total, 0.0, 1.0)
+	if z.has("src"):   # L4 A2: linha de quem lançou até o círculo, mais forte perto do golpe
+		var from := Iso.to_screen(z.src) + Vector2(0, -14)
+		var to := Iso.to_screen(z.pos)
+		draw_line(from, to, Color(1.0, 0.45, 0.2, 0.25 + t * 0.5), 1.5 + t * 1.5)
 	var beat := 0.5 + 0.5 * sin(_phase() * (5.0 + t * 9.0))
 	draw_colored_polygon(_ellipse(z.pos, z.radius), Color(0.92, 0.12, 0.08, 0.1 + t * 0.18))
 	draw_polyline(_ellipse_closed(z.pos, z.radius), Color(1.0, 0.3, 0.16, 0.56 + t * 0.34), 1.8 + t * 1.6)
@@ -540,6 +544,11 @@ func _draw_over() -> void:
 			var a := Iso.to_screen(e.pos)
 			var b := Iso.to_screen(e.pos + e.charge_dir * float(e.charge_ab.dist))
 			draw_line(a, b, Color(1.0, 0.25, 0.2, 0.6), 4.0)
+		if e.shoot_wind > 0.0:   # L4 B1: mira do atirador, a direção que o tiro vai seguir
+			var sa := Iso.to_screen(e.pos) + Vector2(0, -16)
+			var sb := Iso.to_screen(e.pos + e.shoot_dir * float(e.shoot_ab.get("range", 8.0))) + Vector2(0, -16)
+			var fade := clampf(1.0 - e.shoot_wind / 0.4, 0.0, 1.0)
+			draw_line(sa, sb, Color(1.0, 0.35, 0.25, 0.25 + fade * 0.55), 1.5 + fade)
 
 ## SPEC-129: estrela do Caminho de Tou Um (arte provisória: losango dourado). A seta de fora da tela é da HUD (SPEC-159).
 func _draw_star_path() -> void:

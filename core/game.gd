@@ -365,11 +365,25 @@ const WINDOW_MODES = ["windowed", "borderless", "fullscreen"]
 func reduced_impact() -> bool:
 	return bool(profile.data.settings.get("reduced_impact", false))
 
-func apply_settings() -> void:
+## BUG-044: contador só para teste; conta quantas vezes a janela foi reaplicada.
+var window_apply_count := 0
+
+## BUG-044: só o áudio (volume mestre e canais). Os sliders chamam esta; reaplicar a janela a cada passo
+## do slider piscava a tela (em tela cheia sai e volta) e redimensionava a janela.
+func apply_audio() -> void:
 	var s: Dictionary = profile.data.settings
 	AudioServer.set_bus_volume_db(0, linear_to_db(clampf(float(s.volume), 0.0, 1.0)))
 	if has_node("/root/Sfx"):
 		Sfx.apply_mix(s)
+
+func apply_settings() -> void:
+	apply_audio()
+	apply_window()
+
+## Modo de tela, borda e resolução. Só deve rodar na partida, ao mudar modo ou resolução.
+func apply_window() -> void:
+	var s: Dictionary = profile.data.settings
+	window_apply_count += 1
 	if OS.has_feature("android") or OS.has_feature("ios"):
 		return
 	var style := String(s.get("window_mode", "windowed"))

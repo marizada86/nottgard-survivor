@@ -35,6 +35,15 @@ var windup := 0.0          # investida armada
 var charge_t := 0.0
 var charge_dir := Vector2.ZERO
 var charge_ab: Dictionary = {}
+var cast_t := 0.0           # L4: aviso de golpe em área armado por este inimigo (tinge o sprite)
+var shoot_wind := 0.0        # L4: mira antes do tiro
+var shoot_dir := Vector2.ZERO
+var shoot_ab: Dictionary = {}
+var lunge_cd := 0.0          # L4: bote
+var strafe_side := 1.0       # L4: passo lateral do atirador
+var strafe_t := 0.0
+var pack_n := 0              # L4: aliados do mesmo tipo por perto (atualizado a cada 0,4 s)
+var pack_t := 0.0
 var affix := ""            # afixo principal do elite ("" = não é elite)
 var affixes: Array = []    # SPEC-120: todos os afixos (elite e chefe)
 var affix_t := 0.0         # SPEC-120: relógio do afixo invocador
