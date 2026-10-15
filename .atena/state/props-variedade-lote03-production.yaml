@@ -1,0 +1,31 @@
+plan: PLAN-053
+revision: PROPS-VARIEDADE-LOTE03/v01
+classification: IN_PLAN
+mode: per-plan
+owner_request: 'atena aprovado, commit e proximo'
+approval_status: AUTHORIZED_NEXT_STATIC_PROP_BATCH
+prior_accepted_assets_commit: e0af748f
+status: DELIVERED_DRAFT_OWNER_REVIEW_PENDING
+checkpoint: OWNER_VISUAL_REVIEW
+content_state: DRAFT
+ordered_steps: [PV17, PV18, PV19, PV20, PV21, PV22, PV23, PV24, AUDIT_GALLERY]
+completed_steps: 9
+total_steps: 9
+imagegen_calls: 8
+maximum_imagegen_calls: 8
+blocking_gaps: []
+runtime_admission: false
+canonical_promotion: false
+commit_push_export: COMMIT_AND_PUSH_AUTHORIZED_EXPORT_NOT_AUTHORIZED
+spec: .atena/specs/SPEC-121-retomada-fila-imagens/production-props-variedade-lote03-v01.md
+technical_delivery_checks: PASSED
+native_dimensions: [1254, 1254]
+native_margin_notes: [PV17, PV18, PV19, PV20, PV22]
+design_review_required: [PV18, PV20]
+mirror_center_alpha_max: 1
+owner_visual_acceptance: PENDING
+gallery: .atena/generated/props-variedade-lote03-2026-10-15/index.html
+evidence: .atena/evidence/props-variedade-lote03-2026-10-15.md
+next_objective: 'Dono avaliar PV17–PV24, com ressalvas de PV18/PV20; registrar aceite por codigo ou lote antes de correcao/admissao'
+versioning_owner_request: 'atena, commit e push'
+versioning_scope: DRAFT_ARCHIVE_ONLY_VISUAL_ACCEPTANCE_PENDING

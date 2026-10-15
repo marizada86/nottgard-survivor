@@ -1,0 +1,753 @@
+{
+  "revision": "PROPS-VARIEDADE-LOTE03/v01",
+  "content_state": "DRAFT",
+  "imagegen_calls": 8,
+  "sources": [
+    {
+      "id": "PV17",
+      "name": "esporo",
+      "biome": "fungico",
+      "content_state": "DRAFT",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          25,
+          23,
+          1226,
+          1254
+        ],
+        "128": [
+          387,
+          65,
+          894,
+          1115
+        ]
+      },
+      "alpha128_margins": [
+        387,
+        65,
+        360,
+        139
+      ],
+      "native_12percent_margin_pass": false,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "8bcbc630806d19a3d7e92cab29d0231795bcdb79697e7f7a1fec953826a5a208",
+      "prompt_sha256": "40b7dcecca73b6c7118927b2634e447934a4d7b42fa08470a9c043548a0e850f",
+      "reference_sha256": "cde5ded19d7f393cb2edcaf5ec17bab394ea4e34c1d48e9c83d58021c41b6014",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "dimensions": [
+            64,
+            64
+          ],
+          "nonzero_alpha_bounds": [
+            21,
+            6,
+            44,
+            54
+          ],
+          "decoded": true,
+          "sha256": "f982ecc4547c9f12ac440b15fd39506cab05608d85ca1192705301a4ef0b65ba"
+        },
+        {
+          "size": 128,
+          "dimensions": [
+            128,
+            128
+          ],
+          "nonzero_alpha_bounds": [
+            17,
+            8,
+            111,
+            112
+          ],
+          "decoded": true,
+          "sha256": "413ef0c1ac8f59e1a1eb39efbe8c62f00c1e768b8a5ba0be8524d03ea29f7b85"
+        },
+        {
+          "size": 256,
+          "dimensions": [
+            256,
+            256
+          ],
+          "nonzero_alpha_bounds": [
+            18,
+            17,
+            228,
+            233
+          ],
+          "decoded": true,
+          "sha256": "de42877c10a346043eaeaf3d6d46ebf34c10d28d6b27cf482b447072e0ebd5c2"
+        }
+      ],
+      "owner_visual_acceptance": "PENDING",
+      "world_scale_and_anchor": "NOT_TESTED",
+      "runtime_admission": false
+    },
+    {
+      "id": "PV18",
+      "name": "lodo",
+      "biome": "fungico",
+      "content_state": "DRAFT",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          0,
+          15,
+          1253,
+          1254
+        ],
+        "128": [
+          111,
+          321,
+          1171,
+          977
+        ]
+      },
+      "alpha128_margins": [
+        111,
+        321,
+        83,
+        277
+      ],
+      "native_12percent_margin_pass": false,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "b3b6715448f982d2420bb43f0e3f30da406279b3a8a431f4230e2923414f8ea8",
+      "prompt_sha256": "312163b0980c602fa364d13fa23fef9ca58c7917d15186eaddb2b850e1095a2d",
+      "reference_sha256": "7d6a5439b743d4870c15e83a109b77ec19739150f5a901dc677bfc26017f3e58",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "dimensions": [
+            64,
+            64
+          ],
+          "nonzero_alpha_bounds": [
+            9,
+            14,
+            60,
+            55
+          ],
+          "decoded": true,
+          "sha256": "e9eb42d78482b573c06e88aecbe09c35dffcc25f9df6f0e3c5bcc3f448fd4630"
+        },
+        {
+          "size": 128,
+          "dimensions": [
+            128,
+            128
+          ],
+          "nonzero_alpha_bounds": [
+            11,
+            21,
+            120,
+            111
+          ],
+          "decoded": true,
+          "sha256": "de679f32263b4c3f105ab27ea2e0f7ff1c14e9f1e0c22c989a8825793c9fb499"
+        },
+        {
+          "size": 256,
+          "dimensions": [
+            256,
+            256
+          ],
+          "nonzero_alpha_bounds": [
+            16,
+            43,
+            240,
+            233
+          ],
+          "decoded": true,
+          "sha256": "9f8d9e5a8c4bbf94e051fc25c63a6e9e8d2c8eb82af8ef9843e05cb416b0a189"
+        }
+      ],
+      "owner_visual_acceptance": "PENDING",
+      "world_scale_and_anchor": "NOT_TESTED",
+      "runtime_admission": false
+    },
+    {
+      "id": "PV19",
+      "name": "estalactite",
+      "biome": "viscoso",
+      "content_state": "DRAFT",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          49,
+          19,
+          1214,
+          1238
+        ],
+        "128": [
+          344,
+          63,
+          955,
+          1160
+        ]
+      },
+      "alpha128_margins": [
+        344,
+        63,
+        299,
+        94
+      ],
+      "native_12percent_margin_pass": false,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "3b6ba90485ed9b6f345650da51473b6bad67c2ab59626f0a4cdb1b6f5acc52c4",
+      "prompt_sha256": "5b8963974bbddb7659c88ef8fd4fb7543f6242bf5500038fb8196cb4682f8830",
+      "reference_sha256": "87d1311d7efa6e8474c1eb43557be6f0833f028f2fe2bbe424a6ca08b0481967",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "dimensions": [
+            64,
+            64
+          ],
+          "nonzero_alpha_bounds": [
+            18,
+            6,
+            50,
+            60
+          ],
+          "decoded": true,
+          "sha256": "9797c1a87d772175ed8908132335aad14a37856c96fdabddeb1768590c2ac819"
+        },
+        {
+          "size": 128,
+          "dimensions": [
+            128,
+            128
+          ],
+          "nonzero_alpha_bounds": [
+            29,
+            11,
+            100,
+            120
+          ],
+          "decoded": true,
+          "sha256": "b519ed9ca867cd17561ab0ca17ed29a727a8c25dff00b5beb79fc4308260dd09"
+        },
+        {
+          "size": 256,
+          "dimensions": [
+            256,
+            256
+          ],
+          "nonzero_alpha_bounds": [
+            52,
+            20,
+            221,
+            240
+          ],
+          "decoded": true,
+          "sha256": "0d18efee3d58e5b3a729ab9c9da65f766362459d95abb48b95cb06ff6355f5e3"
+        }
+      ],
+      "owner_visual_acceptance": "PENDING",
+      "world_scale_and_anchor": "NOT_TESTED",
+      "runtime_admission": false
+    },
+    {
+      "id": "PV20",
+      "name": "espelho_ornado",
+      "biome": "ornamental",
+      "content_state": "DRAFT",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          0,
+          25,
+          1238,
+          1254
+        ],
+        "128": [
+          250,
+          84,
+          1027,
+          1120
+        ]
+      },
+      "alpha128_margins": [
+        250,
+        84,
+        227,
+        134
+      ],
+      "native_12percent_margin_pass": false,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "380f9beab2602c6026d347a7e342df21ae0b49e8caabe3c1ed19b3ca091bb0c1",
+      "prompt_sha256": "bb7a2950595688a74f108984257e02448787513c8494bc705415816534c8ee5d",
+      "reference_sha256": "370d58ade35196855596600c9101a47dc3ed2008acc517e9624ea6a54770fad6",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "dimensions": [
+            64,
+            64
+          ],
+          "nonzero_alpha_bounds": [
+            5,
+            5,
+            56,
+            57
+          ],
+          "decoded": true,
+          "sha256": "028420c6ea906c81c5c0dee007dc6e2eca3cab236a533133a9440573a07c7437"
+        },
+        {
+          "size": 128,
+          "dimensions": [
+            128,
+            128
+          ],
+          "nonzero_alpha_bounds": [
+            29,
+            11,
+            115,
+            118
+          ],
+          "decoded": true,
+          "sha256": "ae3fc64b6f4983dc08f431add32c2c46d6afb7cd4e3e8e8b2abec3385aa2ec46"
+        },
+        {
+          "size": 256,
+          "dimensions": [
+            256,
+            256
+          ],
+          "nonzero_alpha_bounds": [
+            22,
+            22,
+            236,
+            237
+          ],
+          "decoded": true,
+          "sha256": "8b2ccf70ddf2fdf3cfa27903df331a847ebedece33158599e69fece85cf3c045"
+        }
+      ],
+      "owner_visual_acceptance": "PENDING",
+      "world_scale_and_anchor": "NOT_TESTED",
+      "runtime_admission": false
+    },
+    {
+      "id": "PV21",
+      "name": "flor",
+      "biome": "flora",
+      "content_state": "DRAFT",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          27,
+          21,
+          1240,
+          1222
+        ],
+        "128": [
+          272,
+          340,
+          1005,
+          961
+        ]
+      },
+      "alpha128_margins": [
+        272,
+        340,
+        249,
+        293
+      ],
+      "native_12percent_margin_pass": true,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "693f5a94e3a19f0eaed418c27ca4c272f06153e36f362252661079df3aa926ce",
+      "prompt_sha256": "60da163ea6511eabf85eba609a9fb1a05a686be26ff3c2dfec07bf664bcfd52d",
+      "reference_sha256": "215fd38c981e161d11c530d2bc80bf9371f2105ff88e971272b3e8ca5429f0da",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "dimensions": [
+            64,
+            64
+          ],
+          "nonzero_alpha_bounds": [
+            15,
+            8,
+            49,
+            54
+          ],
+          "decoded": true,
+          "sha256": "a463758087fe9b6b608396d1fff1dddc141a2b0fafe0d1673395e0e09c747dfb"
+        },
+        {
+          "size": 128,
+          "dimensions": [
+            128,
+            128
+          ],
+          "nonzero_alpha_bounds": [
+            30,
+            33,
+            115,
+            108
+          ],
+          "decoded": true,
+          "sha256": "5514efd3b8cafe91ab10b11a395b82ab6eae498868782817ff31b2230e1d8b2a"
+        },
+        {
+          "size": 256,
+          "dimensions": [
+            256,
+            256
+          ],
+          "nonzero_alpha_bounds": [
+            29,
+            34,
+            239,
+            216
+          ],
+          "decoded": true,
+          "sha256": "5165f165b07d879bbfe543c85382ac20fb993164954453085b82d44c8c03ea46"
+        }
+      ],
+      "owner_visual_acceptance": "PENDING",
+      "world_scale_and_anchor": "NOT_TESTED",
+      "runtime_admission": false
+    },
+    {
+      "id": "PV22",
+      "name": "fragmento",
+      "biome": "abissal",
+      "content_state": "DRAFT",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          79,
+          23,
+          1178,
+          1254
+        ],
+        "128": [
+          424,
+          119,
+          857,
+          1127
+        ]
+      },
+      "alpha128_margins": [
+        424,
+        119,
+        397,
+        127
+      ],
+      "native_12percent_margin_pass": false,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "ecc5f3a316faffd3c19c600bf265c8a737a0d4c7677043bd1fbc51bf9e4b47b4",
+      "prompt_sha256": "19d0d7df5f038f852aa8534b57a0b3ca34dea6439b79fac1e6d6724493387c79",
+      "reference_sha256": "c7004c9083b00cdbdf2103d8e4970b446f3beef51426e401e8e740c1a7cef3f7",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "dimensions": [
+            64,
+            64
+          ],
+          "nonzero_alpha_bounds": [
+            22,
+            8,
+            47,
+            57
+          ],
+          "decoded": true,
+          "sha256": "0e306dfb0c749f1057961dd49dbe1224d16562720d8b6a2c1e8c8fb849f2dbe6"
+        },
+        {
+          "size": 128,
+          "dimensions": [
+            128,
+            128
+          ],
+          "nonzero_alpha_bounds": [
+            44,
+            16,
+            95,
+            108
+          ],
+          "decoded": true,
+          "sha256": "57db8c5c506570546dab0b3986194f180ccceeeac3815c3febea0bb7e15ab59d"
+        },
+        {
+          "size": 256,
+          "dimensions": [
+            256,
+            256
+          ],
+          "nonzero_alpha_bounds": [
+            31,
+            32,
+            218,
+            227
+          ],
+          "decoded": true,
+          "sha256": "5a264648d7342ddd4875da818e52de54350a6de4ceef133616c1280f9fd2eece"
+        }
+      ],
+      "owner_visual_acceptance": "PENDING",
+      "world_scale_and_anchor": "NOT_TESTED",
+      "runtime_admission": false
+    },
+    {
+      "id": "PV23",
+      "name": "nucleo",
+      "biome": "abissal",
+      "content_state": "DRAFT",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          41,
+          31,
+          1208,
+          1213
+        ],
+        "128": [
+          386,
+          275,
+          889,
+          1040
+        ]
+      },
+      "alpha128_margins": [
+        386,
+        275,
+        365,
+        214
+      ],
+      "native_12percent_margin_pass": true,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "13fbabd16077cb62377bae1c641572cdca75f1572be84ab1165d81b6242c5a57",
+      "prompt_sha256": "72e5775978be15b400d94d1ec3391c0d1eb1b3231ae4fbbd8d7899ede6a482fd",
+      "reference_sha256": "11c9f0670cdde8a5c5b702952f304df62992f1f7815e47bcf2032ad3d60a3182",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "dimensions": [
+            64,
+            64
+          ],
+          "nonzero_alpha_bounds": [
+            20,
+            9,
+            44,
+            52
+          ],
+          "decoded": true,
+          "sha256": "650b9977a79b1925aae13b532cc5c4de3ee78ce618f9b35a246768a6bf29f2b3"
+        },
+        {
+          "size": 128,
+          "dimensions": [
+            128,
+            128
+          ],
+          "nonzero_alpha_bounds": [
+            41,
+            31,
+            89,
+            104
+          ],
+          "decoded": true,
+          "sha256": "c37da37f4591b046527e93114c47d2f8ddc723733a9136f377f315685e2ce69c"
+        },
+        {
+          "size": 256,
+          "dimensions": [
+            256,
+            256
+          ],
+          "nonzero_alpha_bounds": [
+            44,
+            37,
+            223,
+            213
+          ],
+          "decoded": true,
+          "sha256": "922d3ce3ea60e9880504dcfa45fdd534305437160afbbcae88fef23f9970f1dd"
+        }
+      ],
+      "owner_visual_acceptance": "PENDING",
+      "world_scale_and_anchor": "NOT_TESTED",
+      "runtime_admission": false
+    },
+    {
+      "id": "PV24",
+      "name": "corrente",
+      "biome": "ferro",
+      "content_state": "DRAFT",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          33,
+          39,
+          1224,
+          1205
+        ],
+        "128": [
+          258,
+          393,
+          1025,
+          905
+        ]
+      },
+      "alpha128_margins": [
+        258,
+        393,
+        229,
+        349
+      ],
+      "native_12percent_margin_pass": true,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "29d24d60ed610007477bbe2b0357258cd9edb835ffd837aa65bd1001c3e708c6",
+      "prompt_sha256": "f2858d96d59e615d7df48597dcd1fe7f6939981b73bd2db9593c96fa9f9ecb68",
+      "reference_sha256": "f3460028883b93548833253ace3ebed49bbad9f6852da5d0b1a24acd1099dad2",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "dimensions": [
+            64,
+            64
+          ],
+          "nonzero_alpha_bounds": [
+            14,
+            21,
+            51,
+            46
+          ],
+          "decoded": true,
+          "sha256": "d1f0befce4a2ff60cc2d8c7320efa51e02d63d6440fa23e479a66dca127f2f10"
+        },
+        {
+          "size": 128,
+          "dimensions": [
+            128,
+            128
+          ],
+          "nonzero_alpha_bounds": [
+            29,
+            43,
+            101,
+            92
+          ],
+          "decoded": true,
+          "sha256": "f13edcf074d0cbd3d408c4d7e8eabbd922784f269a65a1e4e25ec573bad05b59"
+        },
+        {
+          "size": 256,
+          "dimensions": [
+            256,
+            256
+          ],
+          "nonzero_alpha_bounds": [
+            57,
+            86,
+            228,
+            190
+          ],
+          "decoded": true,
+          "sha256": "f9ba810aa67dd78d308ad6db1b6ab45868a8d05b15e2758d693247940dd1c0f2"
+        }
+      ],
+      "owner_visual_acceptance": "PENDING",
+      "world_scale_and_anchor": "NOT_TESTED",
+      "runtime_admission": false
+    }
+  ],
+  "gallery_links": 42,
+  "missing_links": [],
+  "visual_acceptance": "PENDING",
+  "technical_delivery_pass": true,
+  "native_margin_notes": [
+    "PV17",
+    "PV18",
+    "PV19",
+    "PV20",
+    "PV22"
+  ],
+  "runtime_admission": false,
+  "canonical_promotion": false,
+  "mirror_center_alpha_max": 1,
+  "design_review_notes": {
+    "PV18": "Open mushrooms instead of closed buds",
+    "PV20": "Extra skull ornament not requested"
+  }
+}

@@ -5,8 +5,10 @@ mode: per-plan
 owner_request: 'atena aprovado, commite e continue'
 approval_status: AUTHORIZED_CONTINUATION_STATIC_PROP_CANDIDATES
 prior_accepted_assets_commit: a09d0ba3
-status: VISUALLY_ACCEPTED_LOCAL_COMMIT_AUTHORIZED
-checkpoint: LOCAL_COMMIT
+status: VISUALLY_ACCEPTED_COMMITTED_LOCALLY
+checkpoint: ADMISSION_SCOPE_PENDING
+local_commit: e0af748f
+pushed: false
 content_state: CANON_VISUAL_v01
 owner_reply: 'atena aprovado, commit e proximo'
 ordered_steps: [PV09, PV10, PV11, PV12, PV13, PV14, PV15, PV16, AUDIT_GALLERY]
@@ -26,4 +28,4 @@ full_native_margin_contract: NOT_MET
 owner_visual_acceptance: APPROVED_AS_DISPLAYED
 gallery: .atena/generated/props-variedade-lote02-2026-10-15/index.html
 evidence: .atena/evidence/props-variedade-lote02-2026-10-15.md
-next_objective: 'Dono revisar PV09–PV16, aceitar por codigo ou informar defeitos; sem nova correcao/admissao automatica'
+next_objective: 'Lote02 aceito e commitado; admissao separada pendente, producao continuada no lote03'

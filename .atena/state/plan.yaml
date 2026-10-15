@@ -6,20 +6,20 @@ asset_queue_priority_override_2026_10_14:
   main_character_assets_priority: LOW
   main_character_motion_production: AWAITING_OWNER_METHOD_DECISION
   state_file: .atena/state/asset-queue-priority-2026-10-14.yaml
-  next_production_state: .atena/state/props-variedade-lote02-production.yaml
+  next_production_state: .atena/state/props-variedade-lote03-production.yaml
   previous_checkpoints: PRESERVED
-  current_production_state: .atena/state/props-variedade-lote02-production.yaml
-  current_production_revision: PROPS-VARIEDADE-LOTE02/v01
-  current_production_checkpoint: LOCAL_COMMIT
+  current_production_state: .atena/state/props-variedade-lote03-production.yaml
+  current_production_revision: PROPS-VARIEDADE-LOTE03/v01
+  current_production_checkpoint: OWNER_VISUAL_REVIEW
   current_production_completed_steps: 9
   current_production_total_steps: 9
   l02_visual_acceptance: APPROVED_v01
-  latest_delivery: PROPS_VARIANTES_PV09_PV16_v01_VISUALLY_ACCEPTED
+  latest_delivery: PROPS_VARIANTES_PV17_PV24_v01_DRAFT_OWNER_REVIEW_PENDING
   owner_props_reply: 'atena aprovado, commit e proximo'
-  props_local_commit: a09d0ba3
-  props_push: NOT_AUTHORIZED
-  gallery: .atena/generated/props-variedade-lote02-2026-10-15/index.html
-  evidence: .atena/evidence/props-variedade-lote02-2026-10-15.md
+  props_local_commit: e0af748f
+  props_push: AUTHORIZED_PENDING_EXECUTION
+  gallery: .atena/generated/props-variedade-lote03-2026-10-15/index.html
+  evidence: .atena/evidence/props-variedade-lote03-2026-10-15.md
 hero_local_commit_2026_10_13:
   plan: PLAN-053
   revision: HERO-COMMIT/v01

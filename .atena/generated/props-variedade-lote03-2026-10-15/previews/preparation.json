@@ -1,0 +1,138 @@
+[
+  {
+    "base_y": 240,
+    "crop_alpha_nonzero": [
+      25,
+      23,
+      1201,
+      1231
+    ],
+    "id": "PV17",
+    "method": "all native alpha retained; bbox crop then uniform nearest resize; no repaint, threshold or edge cleanup",
+    "minimum_margin_after_fit": 16,
+    "preview": [
+      256,
+      256
+    ],
+    "runtime_admission": false
+  },
+  {
+    "base_y": 240,
+    "crop_alpha_nonzero": [
+      0,
+      15,
+      1253,
+      1239
+    ],
+    "id": "PV18",
+    "method": "all native alpha retained; bbox crop then uniform nearest resize; no repaint, threshold or edge cleanup",
+    "minimum_margin_after_fit": 16,
+    "preview": [
+      256,
+      256
+    ],
+    "runtime_admission": false
+  },
+  {
+    "base_y": 240,
+    "crop_alpha_nonzero": [
+      49,
+      19,
+      1165,
+      1219
+    ],
+    "id": "PV19",
+    "method": "all native alpha retained; bbox crop then uniform nearest resize; no repaint, threshold or edge cleanup",
+    "minimum_margin_after_fit": 16,
+    "preview": [
+      256,
+      256
+    ],
+    "runtime_admission": false
+  },
+  {
+    "base_y": 240,
+    "crop_alpha_nonzero": [
+      0,
+      25,
+      1238,
+      1229
+    ],
+    "id": "PV20",
+    "method": "all native alpha retained; bbox crop then uniform nearest resize; no repaint, threshold or edge cleanup",
+    "minimum_margin_after_fit": 16,
+    "preview": [
+      256,
+      256
+    ],
+    "runtime_admission": false
+  },
+  {
+    "base_y": 240,
+    "crop_alpha_nonzero": [
+      27,
+      21,
+      1213,
+      1201
+    ],
+    "id": "PV21",
+    "method": "all native alpha retained; bbox crop then uniform nearest resize; no repaint, threshold or edge cleanup",
+    "minimum_margin_after_fit": 16,
+    "preview": [
+      256,
+      256
+    ],
+    "runtime_admission": false
+  },
+  {
+    "base_y": 240,
+    "crop_alpha_nonzero": [
+      79,
+      23,
+      1099,
+      1231
+    ],
+    "id": "PV22",
+    "method": "all native alpha retained; bbox crop then uniform nearest resize; no repaint, threshold or edge cleanup",
+    "minimum_margin_after_fit": 16,
+    "preview": [
+      256,
+      256
+    ],
+    "runtime_admission": false
+  },
+  {
+    "base_y": 240,
+    "crop_alpha_nonzero": [
+      41,
+      31,
+      1167,
+      1182
+    ],
+    "id": "PV23",
+    "method": "all native alpha retained; bbox crop then uniform nearest resize; no repaint, threshold or edge cleanup",
+    "minimum_margin_after_fit": 16,
+    "preview": [
+      256,
+      256
+    ],
+    "runtime_admission": false
+  },
+  {
+    "base_y": 240,
+    "crop_alpha_nonzero": [
+      33,
+      39,
+      1191,
+      1166
+    ],
+    "id": "PV24",
+    "method": "all native alpha retained; bbox crop then uniform nearest resize; no repaint, threshold or edge cleanup",
+    "minimum_margin_after_fit": 16,
+    "preview": [
+      256,
+      256
+    ],
+    "runtime_admission": false
+  }
+]

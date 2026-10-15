@@ -1,0 +1,90 @@
+[
+  {
+    "id": "PV17",
+    "name": "esporo",
+    "biome": "fungico",
+    "reference": "assets/props/esporo_01.png",
+    "source": "native-sources/PV17_v01.png",
+    "prompt": "prompts/PV17.txt",
+    "candidate_copy": ".atena/generated/art-candidates/props-variedade-lote03/esporo_variante_v01.png",
+    "content_state": "DRAFT",
+    "specific": "A newly arranged hanging fungal spore cluster in the SAME dark violet twisted fibrous stem and luminous pink-magenta membrane family: two larger asymmetric teardrop sacs with one smaller sac tucked behind, curved stem and sparse tiny cap-like growths. Entire stem, sacs and small drips contained. No floating spore cloud, creature, face, eyes or newly invented symbol. Keep the reference colors rather than recoloring."
+  },
+  {
+    "id": "PV18",
+    "name": "lodo",
+    "biome": "fungico",
+    "reference": "assets/props/lodo_01.png",
+    "source": "native-sources/PV18_v01.png",
+    "prompt": "prompts/PV18.txt",
+    "candidate_copy": ".atena/generated/art-candidates/props-variedade-lote03/lodo_variante_v01.png",
+    "content_state": "DRAFT",
+    "specific": "A lower wider compact fungal pool in the SAME purple-brown viscous material family, irregular dark rock rim and a few small porous fungal growths at its edges. Change rim outline and place two tiny closed mushrooms on the opposite side from reference. A single contained pool sprite, no surrounding floor or second puddle, no face, creature, skull, debris or extra emission. Same purple palette, do not turn it green."
+  },
+  {
+    "id": "PV19",
+    "name": "estalactite",
+    "biome": "viscoso",
+    "reference": "assets/props/estalactite_01.png",
+    "source": "native-sources/PV19_v01.png",
+    "prompt": "prompts/PV19.txt",
+    "candidate_copy": ".atena/generated/art-candidates/props-variedade-lote03/estalactite_variante_v01.png",
+    "content_state": "DRAFT",
+    "specific": "One new irregular hanging wet green-black stalactite group with three uneven downward teeth from a compact dark rock cap, the same toxic green viscous coating and sparse drops. Retain the reference separation between hanging formation and one small contained droplet/spot below; all components fully inside generous margins. No cave ceiling scene, ground plane, creature, face, mist or new spray effect."
+  },
+  {
+    "id": "PV20",
+    "name": "espelho_ornado",
+    "biome": "ornamental",
+    "reference": "assets/props/espelho_ornado_01.png",
+    "source": "native-sources/PV20_v01.png",
+    "prompt": "prompts/PV20.txt",
+    "candidate_copy": ".atena/generated/art-candidates/props-variedade-lote03/espelho_ornado_variante_v01.png",
+    "content_state": "DRAFT",
+    "specific": "One slightly wider lower oval freestanding mirror frame of the SAME aged gold carved filigree family, asymmetric modest worn scroll tips, two complete small feet. Keep elaborate ornament at the frame only. The oval interior is EMPTY TRANSPARENT so the game may provide content later. No reflection, black/gray painted fill, face, person, portal, image, text, new emblem, background scene or floor."
+  },
+  {
+    "id": "PV21",
+    "name": "flor",
+    "biome": "flora",
+    "reference": "assets/props/flor_01.png",
+    "source": "native-sources/PV21_v01.png",
+    "prompt": "prompts/PV21.txt",
+    "candidate_copy": ".atena/generated/art-candidates/props-variedade-lote03/flor_variante_v01.png",
+    "content_state": "DRAFT",
+    "specific": "A new compact low cluster of the SAME white and pale-lilac five-petaled flowers with dark green leaves and small muted yellow centers: four open flowers at varied heights plus one closed bud, new leaf and bloom arrangement. No bouquet wrapping, pot, grass/ground island, fantasy mouth, face, insects, glowing aura or new species-like color. Keep small readable silhouette and the existing family."
+  },
+  {
+    "id": "PV22",
+    "name": "fragmento",
+    "biome": "abissal",
+    "reference": "assets/props/fragmento_01.png",
+    "source": "native-sources/PV22_v01.png",
+    "prompt": "prompts/PV22.txt",
+    "candidate_copy": ".atena/generated/art-candidates/props-variedade-lote03/fragmento_variante_v01.png",
+    "content_state": "DRAFT",
+    "specific": "A newly shaped single suspended broken dark stone architectural fragment in the SAME carved violet-gray stone and restrained lilac energy family. Change block fracture and lower taper, retain a few small joined-or-nearby stone chips connected by the existing small violet threads. All chips and faint threads inside margins. No giant new energy cloud, portal, character, floating text, invented rune or pedestal/ground not in the reference."
+  },
+  {
+    "id": "PV23",
+    "name": "nucleo",
+    "biome": "abissal",
+    "reference": "assets/props/nucleo_01.png",
+    "source": "native-sources/PV23_v01.png",
+    "prompt": "prompts/PV23.txt",
+    "candidate_copy": ".atena/generated/art-candidates/props-variedade-lote03/nucleo_variante_v01.png",
+    "content_state": "DRAFT",
+    "specific": "One new compact faceted violet crystal core held inside a lower asymmetric dark stone socket, the SAME intense lilac crystalline material, rock and short inner light arcs as reference. Vary crystal facets and supporting prongs, keep the energy close to the crystal. No new symbol, orb creature, outer lightning cloud, portal, floor, character, text or extra collectible gems."
+  },
+  {
+    "id": "PV24",
+    "name": "corrente",
+    "biome": "ferro",
+    "reference": "assets/props/corrente_01.png",
+    "source": "native-sources/PV24_v01.png",
+    "prompt": "prompts/PV24.txt",
+    "candidate_copy": ".atena/generated/art-candidates/props-variedade-lote03/corrente_variante_v01.png",
+    "content_state": "DRAFT",
+    "specific": "A new low asymmetric coil of heavy old rusted iron chain, same chunky oval links and warm brown-black rust as reference, with a short free end extending toward the opposite side. Links readable, physically interlinked, a compact single grouping. No new clasp emblem, shackle, weapon, victim, bone, ground patch, text or loot. Entire free end and every link visible with generous margin."
+  }
+]

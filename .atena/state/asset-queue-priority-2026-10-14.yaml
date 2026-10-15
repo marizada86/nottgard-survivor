@@ -10,11 +10,12 @@ existing_acceptance: PRESERVE
 rejected_motion_retry: NOT_AUTHORIZED
 new_canon_intent: NONE
 runtime_admission: NOT_AUTHORIZED_BY_PRIORITY_CHANGE
-current_candidate: PROPS_VARIANTES_PV09_PV16_v01
-current_state_file: .atena/state/props-variedade-lote02-production.yaml
+current_candidate: PROPS_VARIANTES_PV17_PV24_v01
+current_state_file: .atena/state/props-variedade-lote03-production.yaml
 current_candidate_status: GENERATED_DRAFT_OWNER_REVIEW_PENDING
 l02_prior_delivery: VISUALLY_ACCEPTED_v01_ADMISSION_PENDING
 prior_props_delivery: PV01_PV08_VISUALLY_ACCEPTED_COMMITTED_LOCALLY_a09d0ba3
+prior_props_lote02_delivery: PV09_PV16_VISUALLY_ACCEPTED_COMMITTED_LOCALLY_e0af748f
 next_work_selection: EXISTING_NON_HERO_UI_PROPS_GENERAL_VFX_PREPARATION_ADMISSION_SUBJECT_TO_THEIR_GATES
-evidence: .atena/evidence/props-variedade-lote02-2026-10-15.md
-commit_push_new_scope: NOT_AUTHORIZED
+evidence: .atena/evidence/props-variedade-lote03-2026-10-15.md
+commit_push_new_scope: AUTHORIZED_DRAFT_LOTE03_AND_PRIOR_LOCAL_ASSET_COMMITS
