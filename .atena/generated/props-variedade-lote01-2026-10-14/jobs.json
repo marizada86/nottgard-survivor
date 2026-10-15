@@ -1,0 +1,90 @@
+[
+  {
+    "id": "PV01",
+    "name": "braseiro",
+    "biome": "dagruve",
+    "reference": "assets/props/braseiro_01.png",
+    "source": "native-sources/PV01_v01.png",
+    "prompt": "prompts/PV01.txt",
+    "candidate_copy": ".atena/generated/art-candidates/props-variedade-lote01/braseiro_variante_v01.png",
+    "content_state": "DRAFT",
+    "specific": "A squat broader black iron brazier bowl on three short splayed iron legs, one old side ring, with a different visible arrangement of low glowing orange coals and a modest short flame. Change rim notch pattern and leg spacing while keeping the same family, rust, scale and materials. Not a tall torch, altar or campfire."
+  },
+  {
+    "id": "PV02",
+    "name": "livros",
+    "biome": "dagruve",
+    "reference": "assets/props/livros_01.png",
+    "source": "native-sources/PV02_v01.png",
+    "prompt": "prompts/PV02.txt",
+    "candidate_copy": ".atena/generated/art-candidates/props-variedade-lote01/livros_variante_v01.png",
+    "content_state": "DRAFT",
+    "specific": "A low staggered stack of three closed weathered leather-bound books, their orientations slightly offset, tied with old coarse cord. One small rolled blank parchment rests against the side of the stack rather than on top. Same dark brown leather, worn pale page edges and muted brass wear. No readable cover marks, no loose pages flying, no magic aura."
+  },
+  {
+    "id": "PV03",
+    "name": "velas",
+    "biome": "dagruve",
+    "reference": "assets/props/velas_01.png",
+    "source": "native-sources/PV03_v01.png",
+    "prompt": "prompts/PV03.txt",
+    "candidate_copy": ".atena/generated/art-candidates/props-variedade-lote01/velas_variante_v01.png",
+    "content_state": "DRAFT",
+    "specific": "A compact cluster of five uneven melted ivory wax candles on the same family of low dark wood and iron tray: one taller candle at the rear and four short candles in front and sides. Tiny warm flames and subtle orange cores; no external glowing cloud. New candle arrangement, same worn materials and wax palette. No altar additions or symbols."
+  },
+  {
+    "id": "PV04",
+    "name": "ossos",
+    "biome": "dagruve",
+    "reference": "assets/props/ossos_01.png",
+    "source": "native-sources/PV04_v01.png",
+    "prompt": "prompts/PV04.txt",
+    "candidate_copy": ".atena/generated/art-candidates/props-variedade-lote01/ossos_variante_v01.png",
+    "content_state": "DRAFT",
+    "specific": "A new low asymmetrical arrangement of dry weathered gray-beige bones with one small cracked skull near the side, a broken rib section and a few short long bones. Same non-graphic ancient bone material; no flesh, blood or living creature, no new fantastical anatomy. Keep the pile compact, readable and low, without a soil patch."
+  },
+  {
+    "id": "PV05",
+    "name": "barril",
+    "biome": "docas",
+    "reference": "assets/props/barril_01.png",
+    "source": "native-sources/PV05_v01.png",
+    "prompt": "prompts/PV05.txt",
+    "candidate_copy": ".atena/generated/art-candidates/props-variedade-lote01/barril_variante_v01.png",
+    "content_state": "DRAFT",
+    "specific": "One squat closed dockside barrel of water-darkened wood, three old iron hoops, clearly visible intact plank lid, small worn stave edge and a modest coil of coarse rope against the base. Change proportions slightly wider/lower and rotate plank arrangement relative to reference; keep dock grime and material. No leak, loot, labels, glowing marks or puddle."
+  },
+  {
+    "id": "PV06",
+    "name": "caixote",
+    "biome": "docas",
+    "reference": "assets/props/caixote_01.png",
+    "source": "native-sources/PV06_v01.png",
+    "prompt": "prompts/PV06.txt",
+    "candidate_copy": ".atena/generated/art-candidates/props-variedade-lote01/caixote_variante_v01.png",
+    "content_state": "DRAFT",
+    "specific": "One lower wider rectangular closed shipping crate with dark wet timber, reinforced iron corners and two short diagonal wood braces. A single coarse rope binding crosses around its middle; same iron and wood family as reference, visibly distinct from its tall narrow silhouette. Entire crate visible, no labels, logos, loot or broken contents."
+  },
+  {
+    "id": "PV07",
+    "name": "carga",
+    "biome": "docas",
+    "reference": "assets/props/carga_01.png",
+    "source": "native-sources/PV07_v01.png",
+    "prompt": "prompts/PV07.txt",
+    "candidate_copy": ".atena/generated/art-candidates/props-variedade-lote01/carga_variante_v01.png",
+    "content_state": "DRAFT",
+    "specific": "A new compact low dockside cargo grouping of two coarse brown burlap sacks tied closed, one laid horizontally and one leaning behind it, with one short plain rolled fabric bundle to the side. Same cloth, cord, moisture and muted palette as reference. Different arrangement from three upright sacks. No coins, bottles, weapons, writing or attached emblem."
+  },
+  {
+    "id": "PV08",
+    "name": "rede",
+    "biome": "docas",
+    "reference": "assets/props/rede_01.png",
+    "source": "native-sources/PV08_v01.png",
+    "prompt": "prompts/PV08.txt",
+    "candidate_copy": ".atena/generated/art-candidates/props-variedade-lote01/rede_variante_v01.png",
+    "content_state": "DRAFT",
+    "specific": "A new compact folded dark fishing net with small dull stone floats and coarse rope laid on two short stacked old dock planks with rusty iron ends. Vary the folds and exposed rope loop, keeping the family, palette and footprint. No fish, carcass, hook weapons, water, dock scene or extra props. Entire net bundle and floats visible."
+  }
+]

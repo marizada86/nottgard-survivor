@@ -1,0 +1,122 @@
+{
+  "revision": "L02/v01",
+  "content_state": "CANON_VISUAL_v01",
+  "imagegen_calls": 1,
+  "source": {
+    "dimensions": [
+      2172,
+      724
+    ],
+    "alpha_range": [
+      255,
+      255
+    ],
+    "corners_rgba": [
+      [
+        4,
+        249,
+        252,
+        255
+      ],
+      [
+        4,
+        248,
+        250,
+        255
+      ],
+      [
+        6,
+        245,
+        248,
+        255
+      ],
+      [
+        4,
+        247,
+        251,
+        255
+      ]
+    ]
+  },
+  "source_sha256": "7bb3a989a8db5dcb20ac11503d1fb90c2971fd05f5c51cd534f4623e58e89c66",
+  "prompt_sha256": "7e15e1288ea78ff3aabcfd7822910478466cc2c4e1fd5fe82cf01cd6f7a36c99",
+  "candidate_copy_matches": true,
+  "content_margins": [
+    52,
+    191,
+    46,
+    199
+  ],
+  "preparation": {
+    "bounds_xywh": [
+      52,
+      191,
+      2074,
+      334
+    ],
+    "content_size": [
+      373,
+      60
+    ],
+    "final_canvas": [
+      480,
+      64
+    ],
+    "key": "global cyan threshold per prompt including enclosed counters; no letter repaint",
+    "removed_pixels": 1252926,
+    "runtime_capture": false,
+    "small_size": [
+      186,
+      30
+    ]
+  },
+  "previews": [
+    {
+      "file": "L02-30px.png",
+      "dimensions": [
+        186,
+        30
+      ],
+      "sha256": "ca965af8e77d202c963df31d15236854bc9350762addd10bada7c2d20eab07b2"
+    },
+    {
+      "file": "L02-480x64.png",
+      "dimensions": [
+        480,
+        64
+      ],
+      "sha256": "8007901efea3b8371326de155501eb0834e1a3a0e8e3e55d5893f08533c43368"
+    },
+    {
+      "file": "L02-keyed.png",
+      "dimensions": [
+        2172,
+        724
+      ],
+      "sha256": "b61b2dab2654c8427593a802c7747af4b986af248582650c5e6bcea51605a038"
+    },
+    {
+      "file": "title-mock.png",
+      "dimensions": [
+        960,
+        540
+      ],
+      "sha256": "61e7909f70625e2c045bbe3b4cd15962c72eb863ecfa8a8e41b997c401d4777a"
+    }
+  ],
+  "text_visual_check": {
+    "expected": "Clique para jogar",
+    "observed": "Clique para jogar",
+    "method": "manual visual inspection of native image and 30px preview",
+    "owner_acceptance": "APPROVED_v01"
+  },
+  "gallery_links": 8,
+  "missing_links": [],
+  "runtime_admission": false,
+  "canonical_promotion": "VISUAL_ONLY_L02_v01",
+  "technical_delivery_pass": true,
+  "notes": [
+    "Preview is a technical composition, not a runtime capture.",
+    "Dynamic keyboard/controller/touch prompt behavior preserved."
+  ]
+}

@@ -1,0 +1,749 @@
+{
+  "revision": "PROPS-VARIEDADE-LOTE01/v01",
+  "content_state": "CANON_VISUAL_v01",
+  "imagegen_calls": 8,
+  "sources": [
+    {
+      "id": "PV01",
+      "name": "braseiro",
+      "biome": "dagruve",
+      "content_state": "CANON_VISUAL_v01",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          55,
+          36,
+          1228,
+          1237
+        ],
+        "128": [
+          215,
+          243,
+          1056,
+          1077
+        ]
+      },
+      "alpha128_margins": [
+        215,
+        243,
+        198,
+        177
+      ],
+      "native_12percent_margin_pass": true,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "527ec37b38e3c5879a17a41feffdafe0557d7aa0fc2c8f76986b79e3eed77a63",
+      "prompt_sha256": "8cb657f3cc5a7201f4402635f3905a44ee6f377be7f79157e17a50f5b0f7578e",
+      "reference_sha256": "2e4fc0e1982da5d7b350df9e22617858d4c69aadcaa36154f14c660b5dc1540a",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "dimensions": [
+            64,
+            64
+          ],
+          "nonzero_alpha_bounds": [
+            7,
+            13,
+            51,
+            53
+          ],
+          "decoded": true,
+          "sha256": "512f0553233cf15d5af83815b93d4a2bf03e975288d3ff213f741549af9fcf97"
+        },
+        {
+          "size": 128,
+          "dimensions": [
+            128,
+            128
+          ],
+          "nonzero_alpha_bounds": [
+            23,
+            27,
+            103,
+            109
+          ],
+          "decoded": true,
+          "sha256": "f7d7fc8b389c140e037966a585af3d4f5205067c188efde294291921fa983084"
+        },
+        {
+          "size": 256,
+          "dimensions": [
+            256,
+            256
+          ],
+          "nonzero_alpha_bounds": [
+            19,
+            32,
+            206,
+            221
+          ],
+          "decoded": true,
+          "sha256": "b0ee6f8f1e7ec89cd705cddb1e667fc9eacf88d6ff7b61af07582a4cd6e56a0f"
+        }
+      ],
+      "owner_visual_acceptance": "APPROVED_AS_DISPLAYED",
+      "world_scale_and_anchor": "NOT_TESTED",
+      "runtime_admission": false
+    },
+    {
+      "id": "PV02",
+      "name": "livros",
+      "biome": "dagruve",
+      "content_state": "CANON_VISUAL_v01",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          0,
+          0,
+          1238,
+          1224
+        ],
+        "128": [
+          134,
+          278,
+          1125,
+          1081
+        ]
+      },
+      "alpha128_margins": [
+        134,
+        278,
+        129,
+        173
+      ],
+      "native_12percent_margin_pass": false,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "a5539b0a80664b72f900c8c12483e1738d76a14d4d4e05f596595b70420e4367",
+      "prompt_sha256": "098a2d59baab4838e7af8489512972519d9eb94d5fbfd96610e002632c162958",
+      "reference_sha256": "b87237fa1fbe9f55b2ec50028c5823cb8fd63866030fd326af1de2a1ab6bebe8",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "dimensions": [
+            64,
+            64
+          ],
+          "nonzero_alpha_bounds": [
+            10,
+            15,
+            60,
+            60
+          ],
+          "decoded": true,
+          "sha256": "5e84f28c3071342bc3df81423a91c13363e041da4f1974842650dddbbfe44dcf"
+        },
+        {
+          "size": 128,
+          "dimensions": [
+            128,
+            128
+          ],
+          "nonzero_alpha_bounds": [
+            19,
+            28,
+            110,
+            117
+          ],
+          "decoded": true,
+          "sha256": "ea14c666276d63cb754dbcba095cfb87a532351770cbbb0dd5de9ba4b9be3971"
+        },
+        {
+          "size": 256,
+          "dimensions": [
+            256,
+            256
+          ],
+          "nonzero_alpha_bounds": [
+            32,
+            36,
+            239,
+            239
+          ],
+          "decoded": true,
+          "sha256": "c8f3393db7b3d63dedbf532bcf5ffbea35bd800c691e5ff0a6f9401032f07f8c"
+        }
+      ],
+      "owner_visual_acceptance": "APPROVED_AS_DISPLAYED",
+      "world_scale_and_anchor": "NOT_TESTED",
+      "runtime_admission": false
+    },
+    {
+      "id": "PV03",
+      "name": "velas",
+      "biome": "dagruve",
+      "content_state": "CANON_VISUAL_v01",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          0,
+          32,
+          1202,
+          1230
+        ],
+        "128": [
+          169,
+          230,
+          1128,
+          1108
+        ]
+      },
+      "alpha128_margins": [
+        169,
+        230,
+        126,
+        146
+      ],
+      "native_12percent_margin_pass": false,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "14c3ca332a2b550ef853fc29565f1615cfc9828c6023fd7f86e445cc46b036c7",
+      "prompt_sha256": "06b0b86fc5aaa349403eefe410d7cc00b9308f52820cf7a2134e6b6e506d65fd",
+      "reference_sha256": "97ad156c84231b200a175bfad15a9e9232fc561aad3962a58a81f0bbc1212555",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "dimensions": [
+            64,
+            64
+          ],
+          "nonzero_alpha_bounds": [
+            12,
+            6,
+            56,
+            58
+          ],
+          "decoded": true,
+          "sha256": "c2ea4ddf9c473a98183f821694e7010131a05bb9dbaea54d286100bd0621c4a4"
+        },
+        {
+          "size": 128,
+          "dimensions": [
+            128,
+            128
+          ],
+          "nonzero_alpha_bounds": [
+            17,
+            16,
+            114,
+            118
+          ],
+          "decoded": true,
+          "sha256": "673907fc4f70dad2de794fd533688eb5a40aebd734e429aa86643bf3851a19ab"
+        },
+        {
+          "size": 256,
+          "dimensions": [
+            256,
+            256
+          ],
+          "nonzero_alpha_bounds": [
+            27,
+            19,
+            240,
+            239
+          ],
+          "decoded": true,
+          "sha256": "5c94c1d7a66dc1e68868a8c271246768b267776246436d326504e281bcf6c8b3"
+        }
+      ],
+      "owner_visual_acceptance": "APPROVED_AS_DISPLAYED",
+      "world_scale_and_anchor": "NOT_TESTED",
+      "runtime_admission": false
+    },
+    {
+      "id": "PV04",
+      "name": "ossos",
+      "biome": "dagruve",
+      "content_state": "CANON_VISUAL_v01",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          81,
+          47,
+          1182,
+          1214
+        ],
+        "128": [
+          216,
+          462,
+          1039,
+          880
+        ]
+      },
+      "alpha128_margins": [
+        216,
+        462,
+        215,
+        374
+      ],
+      "native_12percent_margin_pass": true,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "d99ab8cc688352a44d9ab180d537eadcedc8d7dc3afab476f557f1881fd2a163",
+      "prompt_sha256": "79967bf90d8669c466069738ad21013b9810f618e216991c2b5bdb38aa956f21",
+      "reference_sha256": "d518ca7c348f674fc501cdbc28ae25df1032608ef4800cf4136287451a2b03c5",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "dimensions": [
+            64,
+            64
+          ],
+          "nonzero_alpha_bounds": [
+            12,
+            24,
+            52,
+            44
+          ],
+          "decoded": true,
+          "sha256": "7653ecd82b101398f0e5b39e238cf9f690687d659b59b35280722420e665635f"
+        },
+        {
+          "size": 128,
+          "dimensions": [
+            128,
+            128
+          ],
+          "nonzero_alpha_bounds": [
+            23,
+            36,
+            103,
+            120
+          ],
+          "decoded": true,
+          "sha256": "a4e3be85e47fa602b8c9ce78dce5fee0ac6d54c23084098b40962aecf190ca31"
+        },
+        {
+          "size": 256,
+          "dimensions": [
+            256,
+            256
+          ],
+          "nonzero_alpha_bounds": [
+            47,
+            66,
+            214,
+            240
+          ],
+          "decoded": true,
+          "sha256": "76e310476f1fb9db6dec5632fbdc31bc5d71df6a05ca6929ad22af9bf0b6b596"
+        }
+      ],
+      "owner_visual_acceptance": "APPROVED_AS_DISPLAYED",
+      "world_scale_and_anchor": "NOT_TESTED",
+      "runtime_admission": false
+    },
+    {
+      "id": "PV05",
+      "name": "barril",
+      "biome": "docas",
+      "content_state": "CANON_VISUAL_v01",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          0,
+          39,
+          1210,
+          1230
+        ],
+        "128": [
+          215,
+          218,
+          1142,
+          1107
+        ]
+      },
+      "alpha128_margins": [
+        215,
+        218,
+        112,
+        147
+      ],
+      "native_12percent_margin_pass": false,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "ccc1220696ab1dd7ab32be4aff78e1d2cb97e2ad04291747947e02f50f0150da",
+      "prompt_sha256": "69ec1056426ca6e6c3f277987c900535da3cc4a7a2a60107e74553f36fbeb9e5",
+      "reference_sha256": "5625804a3339c6b9fdb6a85cae77e302c20dab05ddfe958c64d70f52d3adf1c9",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "dimensions": [
+            64,
+            64
+          ],
+          "nonzero_alpha_bounds": [
+            14,
+            13,
+            57,
+            60
+          ],
+          "decoded": true,
+          "sha256": "8d2498b3b7cb9c9d97742c96a7a8c60d5ec703881af10fdeaf0b3f6e553e8f00"
+        },
+        {
+          "size": 128,
+          "dimensions": [
+            128,
+            128
+          ],
+          "nonzero_alpha_bounds": [
+            27,
+            17,
+            115,
+            119
+          ],
+          "decoded": true,
+          "sha256": "abf4903d8a6394038964aaf57471e6cc81d6fb93d4903bec6a049514c4018782"
+        },
+        {
+          "size": 256,
+          "dimensions": [
+            256,
+            256
+          ],
+          "nonzero_alpha_bounds": [
+            24,
+            35,
+            230,
+            239
+          ],
+          "decoded": true,
+          "sha256": "9b174b7a82b93fb51274a975d169179572a5745946715640e0a54b13a17d6631"
+        }
+      ],
+      "owner_visual_acceptance": "APPROVED_AS_DISPLAYED",
+      "world_scale_and_anchor": "NOT_TESTED",
+      "runtime_admission": false
+    },
+    {
+      "id": "PV06",
+      "name": "caixote",
+      "biome": "docas",
+      "content_state": "CANON_VISUAL_v01",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          0,
+          85,
+          1234,
+          1254
+        ],
+        "128": [
+          131,
+          205,
+          1125,
+          1167
+        ]
+      },
+      "alpha128_margins": [
+        131,
+        205,
+        129,
+        87
+      ],
+      "native_12percent_margin_pass": false,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "75f2e264dac274d057d216bc6277fd213200643b0c4fc46005db4903c5fcd820",
+      "prompt_sha256": "b46403730255f32e5c9155404b90047c138e04b69cd73989c32feca17b676c75",
+      "reference_sha256": "de5d989a62090498bb626b12b3698406e3993b15859805227bd87958568310a4",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "dimensions": [
+            64,
+            64
+          ],
+          "nonzero_alpha_bounds": [
+            10,
+            8,
+            58,
+            59
+          ],
+          "decoded": true,
+          "sha256": "75d9cccb005827eb30806f01e55ba4b5b8f40b094630f7fd03f1902b88a4d5e8"
+        },
+        {
+          "size": 128,
+          "dimensions": [
+            128,
+            128
+          ],
+          "nonzero_alpha_bounds": [
+            19,
+            14,
+            117,
+            118
+          ],
+          "decoded": true,
+          "sha256": "648e9851bda0b95430dff4f179d8c4e51c05046b3df11d15ded07e1b70173160"
+        },
+        {
+          "size": 256,
+          "dimensions": [
+            256,
+            256
+          ],
+          "nonzero_alpha_bounds": [
+            19,
+            29,
+            240,
+            237
+          ],
+          "decoded": true,
+          "sha256": "9cfd9cb0394764c9dd502c912e2df25607503b06caac3b89145b444ce67d0bf1"
+        }
+      ],
+      "owner_visual_acceptance": "APPROVED_AS_DISPLAYED",
+      "world_scale_and_anchor": "NOT_TESTED",
+      "runtime_admission": false
+    },
+    {
+      "id": "PV07",
+      "name": "carga",
+      "biome": "docas",
+      "content_state": "CANON_VISUAL_v01",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          61,
+          29,
+          1200,
+          1228
+        ],
+        "128": [
+          105,
+          243,
+          1156,
+          1045
+        ]
+      },
+      "alpha128_margins": [
+        105,
+        243,
+        98,
+        209
+      ],
+      "native_12percent_margin_pass": false,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "8ce8a576ceecf1cecd9dad78585e5470c717d2435c90e06606f7fedf4e5f94f7",
+      "prompt_sha256": "f3bbeacbaaf1fc8404f59ea9c3c322e5f403ebd3bcd41306779dbb01ff4be043",
+      "reference_sha256": "0354f259d167105cd1ae3977cf0ba3e376748c8fee4835f7c4350dffef0ec761",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "dimensions": [
+            64,
+            64
+          ],
+          "nonzero_alpha_bounds": [
+            7,
+            8,
+            56,
+            53
+          ],
+          "decoded": true,
+          "sha256": "22acd354245d17e92ed880812273447da46a1da0af6682a095cce88a249980aa"
+        },
+        {
+          "size": 128,
+          "dimensions": [
+            128,
+            128
+          ],
+          "nonzero_alpha_bounds": [
+            14,
+            16,
+            113,
+            103
+          ],
+          "decoded": true,
+          "sha256": "35576e2393910b90bd7aec37428904db3f10eddf06e724d2b55eb0f400610097"
+        },
+        {
+          "size": 256,
+          "dimensions": [
+            256,
+            256
+          ],
+          "nonzero_alpha_bounds": [
+            29,
+            33,
+            233,
+            220
+          ],
+          "decoded": true,
+          "sha256": "1a03ce306b9272dacc83e8b68d9cf1954ba6f2757172941d082b02210a4aa2e9"
+        }
+      ],
+      "owner_visual_acceptance": "APPROVED_AS_DISPLAYED",
+      "world_scale_and_anchor": "NOT_TESTED",
+      "runtime_admission": false
+    },
+    {
+      "id": "PV08",
+      "name": "rede",
+      "biome": "docas",
+      "content_state": "CANON_VISUAL_v01",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          0,
+          19,
+          1224,
+          1254
+        ],
+        "128": [
+          66,
+          292,
+          1190,
+          1160
+        ]
+      },
+      "alpha128_margins": [
+        66,
+        292,
+        64,
+        94
+      ],
+      "native_12percent_margin_pass": false,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "9b07e885f810988b0cb48784dc8367d456879c00563f07cfdc8f4af6155b4d6c",
+      "prompt_sha256": "d47c747201e53feeb0edfe500555445096a06e6f02b91f55bf63c8b178851565",
+      "reference_sha256": "296dc4b4f20aacea07f71d2c22537013fc5bb03dfddc4f37a14b56526666e40b",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "dimensions": [
+            64,
+            64
+          ],
+          "nonzero_alpha_bounds": [
+            7,
+            16,
+            58,
+            56
+          ],
+          "decoded": true,
+          "sha256": "840e6e863cf191afe5c10942f506e3841cf673926fcb10242d80befd51733723"
+        },
+        {
+          "size": 128,
+          "dimensions": [
+            128,
+            128
+          ],
+          "nonzero_alpha_bounds": [
+            14,
+            15,
+            116,
+            112
+          ],
+          "decoded": true,
+          "sha256": "36e698fe147906efc48a6b5eafb353a62c5462d3654ed77fd310c1edfe473b38"
+        },
+        {
+          "size": 256,
+          "dimensions": [
+            256,
+            256
+          ],
+          "nonzero_alpha_bounds": [
+            28,
+            28,
+            233,
+            224
+          ],
+          "decoded": true,
+          "sha256": "e65ec045c326f652b8e9152501948a732481949d45a203c2c29ccbfa92c0ad21"
+        }
+      ],
+      "owner_visual_acceptance": "APPROVED_AS_DISPLAYED",
+      "world_scale_and_anchor": "NOT_TESTED",
+      "runtime_admission": false
+    }
+  ],
+  "gallery_links": 43,
+  "missing_links": [],
+  "visual_acceptance": "APPROVED_AS_DISPLAYED",
+  "technical_delivery_pass": true,
+  "native_margin_notes": [
+    "PV02",
+    "PV03",
+    "PV05",
+    "PV06",
+    "PV07",
+    "PV08"
+  ],
+  "runtime_admission": false,
+  "canonical_promotion": "VISUAL_ONLY_PV01_PV08_v01"
+}

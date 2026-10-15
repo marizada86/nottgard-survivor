@@ -1,7 +1,7 @@
 ---
 id: "CHATGPT-FILA-026"
 title: "Fila de geração: lettering, placas de título e cursor (ART-039, ART-040)"
-status: "Dez PNGs v01 aceitos/admitidos/commitados/publicados, validacao PASS; S014 integracao pendente; L02 opcional deferida"
+status: "Dez PNGs v01 aceitos/admitidos/publicados; L02_v01 aceita visualmente pelo dono, CANON_VISUAL, admissao pendente"
 priority: "3ª: PLAN-053 (heróis) → FILA-025 (ficha C) → esta → FILA-021 → FILA-022/023"
 created: "2026-10-06"
 relations: ["[[ART-PROMPTS-058-lettering-placas-e-cursor]]", "[[SPEC-132-lettering-e-cursor-do-jogo]]", "[[PLAN-065-lettering-e-cursor-2026-10-06]]"]
@@ -31,7 +31,9 @@ Compilação operacional de [[ART-PROMPTS-058-lettering-placas-e-cursor]]; em ca
 - [x] gerada · [a] aprovada — C01 `cursor_ponteiro` v01 CANON visual G2
 - [x] gerada · [a] aprovada — C02 `cursor_mao` v01 CANON visual G2
 - [x] gerada · [a] aprovada — C03 `cursor_mira` v01 CANON visual G2
-- [ ] gerada · [ ] aprovada — L02 `prompt_clique` (opcional)
+- [x] gerada · [x] aprovada — L02 `prompt_clique` v01 (CANON_VISUAL, admissão pendente)
+
+Retomada de produção sem prioridade de heróis em 2026-10-14: [L02 fonte, prompt, prévias e auditoria](fila026-l02-2026-10-14/index.html). Aceite posterior: "atena aprovado, faça um lote maior de imagens para eu aprovar"; [CANON visual L02 v01](../vault/canon/ASSET-APPROVAL-FILA026-L02-v01.md). Prompt dinâmico por dispositivo preservado, sem admissão ou Git novos. Os registros de L02 adiada abaixo são históricos.
 
 Alinhamento com a ficha C: as placas P01 e P02 só são geradas **depois da aprovação da A01** da FILA-025, para herdarem o mesmo ferro e ouro.
 

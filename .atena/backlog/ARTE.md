@@ -12,7 +12,14 @@
 
 ## Abertos
 
-### PRIORIDADE MÁXIMA — Erik Blackthorn e Arlindo Orlando (2026-10-09)
+### Prioridade operacional vigente — decisão do dono em 2026-10-14
+
+"continuar fila, diminuir a prioridade dos assets dos personagens principais(vou pensar em uma forma de resolver esse problema de geração de movimentos)". UI, cenários/props, inimigos e VFX gerais passam à frente dos assets dos heróis. Heróis ficam com prioridade reduzida; novas gerações de movimento aguardam decisão do dono sobre método. Fontes e aceites existentes preservados. Esta ordem substitui as prioridades históricas abaixo, sem reabrir filas já produzidas ou liberar integração pendente.
+
+L02 opcional (`Clique para jogar`, FILA-026) v01 aceita visualmente, admissão pendente: [galeria](../generated/fila026-l02-2026-10-14/index.html). Oito variantes estáticas de props PV01–PV08 v01 para ART-012 aceitas visualmente pelo dono em2026-10-15, commit local autorizado; [galeria](../generated/props-variedade-lote01-2026-10-14/index.html). U05/U06 continuam condicionadas a MEC-004. UI U01–U04 já aceita e publicada, admissão separada pendente. [Estado da repriorização](../state/asset-queue-priority-2026-10-14.yaml).
+
+
+### Pendências registradas — prioridade dos heróis reduzida em 2026-10-14
 
 | ID | Tipo | Item | Sabor Nottgard | Origem | Dependência |
 |---|---|---|---|---|---|
@@ -21,7 +28,7 @@
 | ART-047 | UI/moldura | **Botão de ação principal (JOGAR):** moldura de nove fatias, aço neutro e interior de pedra escura, 320×64 com fatias 28/28/20/20; o código escreve o rótulo e o glifo e tinge os estados. Serve também ao `HqPlayBtn`, Continuar e Fechar | o botão atual é `StyleBoxFlat` por código; as abas já usam `ficha_aba_moldura` | pergunta do dono 2026-10-10; [ART-PROMPTS-062](../generated/ART-PROMPTS-062-botao-de-acao-jogar.md), [CHATGPT-FILA-029](../generated/CHATGPT-FILA-029-botao-de-acao-jogar.md) | 1 geração; integração pede spec e aprovação (SPEC-166 definiu "nada em `assets/`"); sem bloquear o jogo; **DRAFT r1, nenhuma peça gerada** |
 | ART-048 | prop | **Refazer `assets/props/pilar_01.png`:** o sprite toca as linhas 0 e 255 do canvas de 256×256, com o capitel sem o topo e a base no último pixel. Regerar o pilar inteiro (capitel completo como o do `pilar_03`, correia de couro e argola, margem livre ao redor), mesmo fundo transparente e mesma paleta de Dagruve; ao admitir, devolver a variante 1 ao sorteio em `ui/prop.gd` (`_prop_texture`) e conferir a âncora de contato. | Pilar de pedra de Dagruve (`kind: "pilar"`, `data/scenery.json`, `data/stages.json`); sem lore nova | Dono, 2026-10-13, captura de jogo; paliativo: variante 1 fora do sorteio | Candidato em `.atena/generated/` até admissão do dono |
 
-### PRIORIDADE ALTA — tiras de heróis (2026-10-02)
+### Prioridade reduzida — tiras de heróis (ordem histórica de 2026-10-02)
 
 **Fila de imagens, ordem de 2026-10-06:** (1) PLAN-053, tiras dos heróis; (2) FILA-021 E e F; (3) FILA-022 e FILA-023 (dependem do piloto da FILA-020). [CHATGPT-FILA-025](../generated/CHATGPT-FILA-025-ficha-c-molduras-e-icones.md) concluída: dez peças da ficha C normalizadas e integradas localmente (ART-035 / PLAN-072).
 

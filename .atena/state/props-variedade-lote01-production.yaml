@@ -1,0 +1,32 @@
+plan: PLAN-053
+revision: PROPS-VARIEDADE-LOTE01/v01
+classification: IN_PLAN
+mode: per-plan
+owner_request: 'atena aprovado, faça um lote maior de imagens para eu aprovar'
+approval_status: OWNER_AUTHORIZED_LARGER_CANDIDATE_BATCH
+content_state: CANON_VISUAL_v01
+status: VISUALLY_ACCEPTED_LOCAL_COMMIT_AUTHORIZED
+checkpoint: LOCAL_COMMIT
+owner_reply: 'atena aprovado, commite e continue'
+ordered_steps: [PV01, PV02, PV03, PV04, PV05, PV06, PV07, PV08, AUDIT_GALLERY]
+completed_steps: 9
+total_steps: 9
+imagegen_calls: 8
+maximum_imagegen_calls: 8
+blocking_gaps: []
+main_character_assets: EXCLUDED_DEPRIORITIZED
+runtime_admission: false
+canonical_promotion: VISUAL_ONLY_PV01_PV08_v01
+commit_push_export: LOCAL_COMMIT_AUTHORIZED_PUSH_EXPORT_NOT_AUTHORIZED
+spec: .atena/specs/SPEC-121-retomada-fila-imagens/production-props-variedade-lote01-v01.md
+batch_path_date: '2026-10-14'
+completion_session_date: '2026-10-15'
+technical_delivery_checks: PASSED
+native_pngs: 8
+native_dimensions: [1254, 1254]
+native_margin_notes: [PV02, PV03, PV05, PV06, PV07, PV08]
+full_native_margin_contract: NOT_MET_BY_SIX_SOURCES
+owner_visual_acceptance: APPROVED_AS_DISPLAYED
+gallery: .atena/generated/props-variedade-lote01-2026-10-14/index.html
+evidence: .atena/evidence/props-variedade-lote01-2026-10-15.md
+next_objective: 'Commit local do lote aceito e L02 previamente aceita; continuar producao nao heroica'

@@ -42,7 +42,8 @@ visual_register: .atena/vault/canon/ASSET-APPROVAL-FILA026-G2-v01.md
 owner_receipt: .atena/generated/fila026-remaining-2026-10-11/owner-approval.json
 admission_proposal: .atena/generated/fila026-remaining-2026-10-11/admission-proposal.json
 integration_authorization: S014_AUTHORIZED_BY_CONTEXTUAL_CONTINUATION_2026_10_11
-optional_L02: DEFERRED_OPTIONAL
+optional_L02: VISUALLY_ACCEPTED_CANON_v01_ADMISSION_PENDING
+optional_L02_state: .atena/state/fila026-l02-production.yaml
 cursor_hotspots: {C01: [1, 1], C02: [4, 1], C03: [20, 20]}
 gallery: .atena/generated/fila026-remaining-2026-10-11/index.html
 jobs: .atena/generated/fila026-remaining-2026-10-11/jobs.json

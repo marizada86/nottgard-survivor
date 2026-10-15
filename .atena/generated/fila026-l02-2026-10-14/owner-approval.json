@@ -1,0 +1,30 @@
+{
+  "revision": "L02/v01",
+  "owner_reply": "atena aprovado, faça um lote maior de imagens para eu aprovar",
+  "content_state": "CANON_VISUAL_v01",
+  "source": {
+    "path": ".atena/generated/fila026-l02-2026-10-14/native-sources/L02_v01.png",
+    "sha256": "7bb3a989a8db5dcb20ac11503d1fb90c2971fd05f5c51cd534f4623e58e89c66"
+  },
+  "previews": [
+    {
+      "path": ".atena/generated/fila026-l02-2026-10-14/previews/L02-30px.png",
+      "sha256": "ca965af8e77d202c963df31d15236854bc9350762addd10bada7c2d20eab07b2"
+    },
+    {
+      "path": ".atena/generated/fila026-l02-2026-10-14/previews/L02-480x64.png",
+      "sha256": "8007901efea3b8371326de155501eb0834e1a3a0e8e3e55d5893f08533c43368"
+    },
+    {
+      "path": ".atena/generated/fila026-l02-2026-10-14/previews/L02-keyed.png",
+      "sha256": "b61b2dab2654c8427593a802c7747af4b986af248582650c5e6bcea51605a038"
+    },
+    {
+      "path": ".atena/generated/fila026-l02-2026-10-14/previews/title-mock.png",
+      "sha256": "61e7909f70625e2c045bbe3b4cd15962c72eb863ecfa8a8e41b997c401d4777a"
+    }
+  ],
+  "runtime_admission": false,
+  "commit_push_authorized": false,
+  "new_batch_approval": false
+}
