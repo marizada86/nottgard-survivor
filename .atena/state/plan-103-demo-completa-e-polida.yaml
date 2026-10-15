@@ -36,13 +36,13 @@ batches:
   B-001: {milestone: M0, title: 'Base e validacao continua', kind: CONTINUOUS, status: PENDING_FIRST_APPROVAL}
   B-002: {milestone: M1, title: "Movimento dos herois (r2: refazer tiras com contrato de prompt v2)", status: G_D1_APPROVED_LAB_READY_AWAITING_G_D2, approved: "2026-10-14", spec: SPEC-176, steps: [S-001, S-002, S-003, S-004, S-005, S-006, S-007, S-008, S-009, S-010, S-011, S-012, S-013, S-014, S-015], owner_gates: [G-D1, G-D2, G-D3, G-D4, G-D5, G-D6], reserved: [ART-PROMPTS-064, CHATGPT-FILA-031]}
   B-003: {milestone: M2, title: 'Game feel e apresentacao', status: R5_DONE_AWAITING_OWNER_VISUAL_REVIEW, approved: '2026-10-14', spec: SPEC-177, owner_gates: [G-M2-1, G-M2-2, G-M2-3, G-M2-4], note: 'aprovado enquanto B-002 espera imagens do dono; primeira rodada = auditoria sem alterar o jogo'}
-  B-004: {milestone: M3, title: 'UI, onboarding e clareza', status: PLANNED}
+  B-004: {milestone: M3, title: 'UI, onboarding e clareza', status: R2_DONE_AWAITING_OWNER_PLAYTEST_R3_TO_PROPOSE, approved: '2026-10-15', spec: SPEC-179, owner_gates: [G-M3-1, G-M3-2], proposal: '.atena/vault/drafts/PROPOSTA-m3-ui-onboarding-e-clareza-2026-10-15.md', note: 'rodadas R1 a R5; R1 e R2 recomendadas primeiro'}
   B-005: {milestone: M4, title: 'Mecanicas (4a chefes, 4b builds, 4c meta, 4d fases)', status: PLANNED, note: 'proposta por frente antes de spec; teto de 2 mecanicas por frente'}
   B-006: {milestone: M5, title: 'Arte por visibilidade (camadas A/B/C)', status: PLANNED}
   B-007: {milestone: M6, title: 'Balanceamento final (conteudo congelado)', status: PLANNED}
   B-008: {milestone: M7, title: 'Candidata a demo', status: PLANNED}
 ordered_batches: [B-002, B-003, B-004, B-005, B-006, B-007, B-008]   # B-001 corre em paralelo; M2/M3 podem andar com M4
-checkpoint: B-003/R5_DONE_AWAITING_OWNER_VISUAL_REVIEW   # A e B: EVID-257; E, F-11 a F-13 e Atmosfera C+D: EVID-261; B-002 segue em S-008_AWAITING_RETURN
+checkpoint: B-004/R2_DONE   # EVID-263; R3 a propor; B-003 aguarda revisao visual do dono; B-002 em S-008_AWAITING_RETURN; push suspenso ate a decisao da L5
 gates:
   dependencies: NO_NEW_DEPENDENCIES
   commit_push_build_export_notice: NOT_AUTHORIZED   # cada um exige aprovacao a parte (add.yaml)

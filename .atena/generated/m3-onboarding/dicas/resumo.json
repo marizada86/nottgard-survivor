@@ -1,0 +1,56 @@
+[
+	{
+		"case": "extrair_descer",
+		"estado": "item_offer",
+		"mostrou": true,
+		"tempo": 14.0
+	},
+	{
+		"case": "ritual",
+		"estado": "running",
+		"mostrou": true,
+		"tempo": 20.0
+	},
+	{
+		"case": "bau_fonte",
+		"estado": "running",
+		"mostrou": true,
+		"tempo": 19.9
+	},
+	{
+		"case": "altar",
+		"estado": "altar",
+		"mostrou": true,
+		"tempo": 14.0
+	},
+	{
+		"case": "item_novo",
+		"estado": "running",
+		"mostrou": true,
+		"tempo": 19.9
+	},
+	{
+		"case": "mare",
+		"estado": "running",
+		"mostrou": true,
+		"tempo": 20.1
+	},
+	{
+		"case": "questlog",
+		"estado": "running",
+		"mostrou": true,
+		"tempo": 46.0
+	},
+	{
+		"case": "ritual_desligadas",
+		"estado": "running",
+		"mostrou": false,
+		"tempo": 19.9
+	},
+	{
+		"case": "bau_fonte_barrada",
+		"estado": "running",
+		"mostrou": false,
+		"tempo": 19.9
+	}
+]

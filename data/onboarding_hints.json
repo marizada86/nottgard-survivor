@@ -1,0 +1,12 @@
+{
+  "_nota": "SPEC-179 R2 (DRAFT, aprovado pelo dono em 2026-10-15): dicas de primeira vez. Marcadores: {interact}, {pause} e {extract} viram a tecla ou o botão do controle em uso; {detail} o de detalhes. Texto até 90 caracteres.",
+  "hints": [
+    {"id": "extrair_descer", "text": "Extrair [{extract}] encerra e leva a recompensa. Descer [{interact}] segue: {next} e mais risco."},
+    {"id": "ritual", "text": "O ritual invoca um elite e 6 inimigos; o elite solta um baú."},
+    {"id": "bau_fonte", "text": "Baús e fontes abrem ao encostar."},
+    {"id": "mare", "text": "Maré: abates seguidos dão XP extra. 3 s sem matar zera a sequência."},
+    {"id": "questlog", "text": "Missões opcionais: cumpra a condição para abrir câmaras e recompensas."},
+    {"id": "altar", "text": "▲ são bênçãos, ▼ são maldições. Recusar apaga o altar."},
+    {"id": "item_novo", "text": "Item novo: compare com o equipado antes de trocar (segure {detail})."}
+  ]
+}

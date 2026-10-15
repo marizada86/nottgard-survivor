@@ -11,7 +11,7 @@ static func fresh() -> Dictionary:
 		"settings": {"aim": "auto", "volume": 0.7, "music_volume": 0.8, "sfx_volume": 0.9, "ambience_volume": 0.75,
 			"music_muted": false, "sfx_muted": false, "ambience_muted": false,
 			"window_mode": "windowed", "resolution": "1280x720", "fullscreen": false, "difficulty": 0, "abyss_marks": {},
-			"visual_filter": "off", "ui_font": "fell", "atmosphere": "leve"}}
+			"visual_filter": "off", "ui_font": "fell", "atmosphere": "leve", "hints": "on", "hints_seen": {}}}
 
 func _init(d: Dictionary = {}) -> void:
 	data = fresh()
@@ -99,6 +99,11 @@ func _migrate_settings(source: Dictionary) -> void:
 	# SPEC-177 R5: atmosfera por fase (Desligada ou Leve); valor desconhecido volta para Leve.
 	if not (str(data.settings.get("atmosphere", "leve")) in ["off", "leve"]):
 		data.settings.atmosphere = "leve"
+	# SPEC-179 R2: dicas de primeira vez (on, off) e as já vistas.
+	if not (str(data.settings.get("hints", "on")) in ["on", "off"]):
+		data.settings.hints = "on"
+	if not (data.settings.get("hints_seen", {}) is Dictionary):
+		data.settings.hints_seen = {}
 
 func coins() -> int:
 	return int(data.coins)

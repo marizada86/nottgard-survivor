@@ -60,6 +60,9 @@ var _texture_cache: Dictionary = {}
 var _stage_background: CanvasLayer
 var _visual_filter: VisualFilter  # SPEC-173: entre o mundo e a HUD
 var _atmosphere: Atmosphere  # SPEC-177 R5-C/D: partículas e gradação por fase
+var _hints: OnboardingHints   # SPEC-179 R2: dicas de primeira vez
+var _hint_flags := {}
+var _hint_poll := 0.0
 var _text_layer: CanvasLayer      # SPEC-173: texto do mundo, acima do filtro
 var _text_fx: Node2D
 var _danger: DangerVignette       # M2 R5 (A): vinheta de vida baixa e de golpe recebido, abaixo do texto do mundo
@@ -95,6 +98,7 @@ func _ready() -> void:
 	Game.controls.recovery_requested.connect(_controller_recovery)
 	_setup_encounter_overlays()
 	_setup_visual_filter()
+	_setup_hints()
 	_load_stage()
 	if Game.qa_sandbox:
 		battle.qa_prepare(Game.qa_launch)
@@ -632,6 +636,7 @@ func _process(dt: float) -> void:
 		_edge_fog.proximity = battle.edge_proximity(battle.hero.pos)
 	_update_low_hp_bark()
 	_update_pending_bark()
+	_update_hints(dt)
 	if _danger != null:
 		var alive := battle.state != "dead" and battle.state != "won"
 		_danger.tick(dt, battle.hero.hp / maxf(battle.hero.max_hp, 1.0), alive, Game.reduced_impact())
@@ -807,6 +812,7 @@ func _consume_events() -> void:
 					Sfx.play_enemy(String(ev.enemy.id), "death")
 				_kill_burst(ev.enemy, ev.pos)
 			"streak":
+				_hint_flags["mare"] = true
 				Sfx.play("progress.levelup", -20.0)  # mais baixo que o level up (-17 dB no manifesto)
 				hud.toast("%s — %d abates (+%d%% XP por 5 s)" % [ev.name, ev.count, roundi(float(ev.xp_bonus) * 100.0)], Color(0.62, 0.55, 0.85))
 			"pickup":
@@ -818,6 +824,7 @@ func _consume_events() -> void:
 				Sfx.play("progress.item")
 				_loot_reveal(ev.item)
 			"item_offer":
+				_hint_flags["item_novo"] = true
 				_loot_reveal(ev.new_item)
 			"levelup":
 				Sfx.play("progress.levelup")
@@ -1304,6 +1311,61 @@ func _bark_now(trigger: String) -> void:
 	t.tween_interval(2.6)
 	t.tween_property(l, "modulate:a", 0.0, 0.6)
 	t.tween_callback(l.queue_free)
+
+## SPEC-179 R2: dicas de primeira vez. A regra (teto, chefe, vida) mora em OnboardingHints; aqui só os gatilhos.
+func _setup_hints() -> void:
+	_hints = OnboardingHints.new()
+	var settings: Dictionary = Game.profile.data.settings
+	if not (settings.get("hints_seen", null) is Dictionary):
+		settings["hints_seen"] = {}
+	_hints.seen = settings["hints_seen"]
+	_hints.enabled = String(settings.get("hints", "on")) != "off"
+
+func _hint_near(kinds: Array, radius: float) -> bool:
+	for it in battle.interactions:
+		if not it.used and kinds.has(String(it.kind)) and it.pos.distance_to(battle.hero.pos) <= radius:
+			return true
+	return false
+
+func _update_hints(dt: float) -> void:
+	if _hints == null or battle == null or not _hints.enabled:
+		return
+	_hint_poll -= dt
+	if _hint_poll > 0.0:
+		return
+	_hint_poll = 0.25
+	if battle.state != "running" and battle.state != "altar":
+		return
+	var wanted := ""
+	if battle.stage_cleared or battle.final_victory:
+		wanted = "extrair_descer"
+	elif battle.state == "altar":
+		wanted = "altar"
+	elif _hint_near(["ritual"], 3.5):
+		wanted = "ritual"
+	elif _hint_near(["chest", "boss_chest", "fountain"], 5.0):
+		wanted = "bau_fonte"
+	elif _hint_flags.get("item_novo", false):
+		wanted = "item_novo"
+	elif _hint_flags.get("mare", false):
+		wanted = "mare"
+	elif not battle.happenings.hud_entries(battle).is_empty() or not battle.chamber_entry().is_empty():
+		wanted = "questlog"
+	if wanted == "":
+		return
+	var boss_active: bool = battle.boss != null and not battle.boss.dead
+	var fraction: float = battle.hero.hp / maxf(1.0, battle.hero.max_hp)
+	if not _hints.can_show(wanted, battle.time, boss_active, fraction):
+		return
+	var text := OnboardingHints.render(OnboardingHints.text_of(wanted), {
+		"interact": Game.controls.prompt("run_interact", "E"), "pause": Game.controls.prompt("run_pause", "Esc"),
+		"extract": Game.controls.prompt("run_extract", "X"),
+		"detail": Game.controls.prompt("offer_details", "Shift"),
+		"next": ("×%.2f" % battle.next_reward_multiplier()).replace(".", ",")})
+	_hints.mark(wanted, battle.time)
+	if not Game.qa_sandbox:
+		Game.save()
+	hud.toast("Dica: " + text, Color(0.8, 0.92, 1.0))
 
 func _update_low_hp_bark() -> void:
 	if battle == null or battle.hero == null or battle.hero.dead:

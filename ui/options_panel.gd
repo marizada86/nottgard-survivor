@@ -20,6 +20,7 @@ var display_mode: OptionButton
 var resolution: OptionButton
 var visual: OptionButton
 var atmosphere: OptionButton  # SPEC-177 R5-C/D
+var hints: OptionButton  # SPEC-179 R2
 var title_font: OptionButton
 var _syncing := false
 
@@ -84,6 +85,24 @@ func _init() -> void:
 		Game.set_atmosphere(String(Atmosphere.MODES[i]))
 		changed.emit())
 	add_child(_row("Atmosfera", atmosphere))
+	hints = OptionButton.new()  # SPEC-179 R2
+	hints.add_item("Ligadas")
+	hints.add_item("Desligadas")
+	hints.tooltip_text = "Dicas curtas na primeira vez que cada sistema aparece."
+	hints.item_selected.connect(func(i):
+		if _syncing:
+			return
+		Game.set_hints("on" if i == 0 else "off")
+		changed.emit())
+	var hints_row := _row("Dicas", hints)
+	var review := Button.new()
+	review.text = "Rever dicas"
+	review.tooltip_text = "As dicas já vistas voltam a aparecer."
+	review.pressed.connect(func():
+		Game.reset_hints()
+		changed.emit())
+	hints_row.add_child(review)
+	add_child(hints_row)
 	title_font = OptionButton.new()  # SPEC-173 (MEC-066)
 	for o in UiFonts.available():
 		title_font.add_item(String(o.label))
@@ -147,6 +166,7 @@ func refresh() -> void:
 	resolution.select(maxi(0, Game.SUPPORTED_RESOLUTIONS.find(String(s.get("resolution", "1280x720")))))
 	visual.select(maxi(0, VisualFilter.MODES.find(VisualFilter.mode_of(s))))
 	atmosphere.select(maxi(0, Atmosphere.MODES.find(Atmosphere.mode_of(s))))
+	hints.select(0 if String(s.get("hints", "on")) != "off" else 1)
 	var font_ids: Array = UiFonts.available().map(func(o): return String(o.id))
 	title_font.select(maxi(0, font_ids.find(UiFonts.normalize(s.get("ui_font", UiFonts.DEFAULT_ID)))))
 	_syncing = false

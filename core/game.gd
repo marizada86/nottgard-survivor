@@ -424,6 +424,17 @@ func set_visual_filter(mode: String) -> void:
 	visual_settings_changed.emit()
 
 
+## SPEC-179 R2: dicas de primeira vez (on, off); "rever dicas" limpa as já vistas.
+func set_hints(mode: String) -> void:
+	if not (mode in ["on", "off"]):
+		return
+	profile.data.settings.hints = mode
+	save()
+
+func reset_hints() -> void:
+	profile.data.settings.hints_seen = {}
+	save()
+
 ## SPEC-177 R5: atmosfera por fase (off, leve). Aplica na hora, na partida aberta.
 func set_atmosphere(mode: String) -> void:
 	if not (mode in ["off", "leve"]):

@@ -81,5 +81,5 @@ func _draw() -> void:
 	if key_icon != null:
 		draw_texture_rect(key_icon, Rect2(14, SIZE.y - 15, 32, 16), false)
 		return
-	draw_string_outline(kfont, Vector2(0, key_y), _key_text, HORIZONTAL_ALIGNMENT_CENTER, SIZE.x, 10, 3, Color(0, 0, 0, 0.9))
-	draw_string(kfont, Vector2(0, key_y), _key_text, HORIZONTAL_ALIGNMENT_CENTER, SIZE.x, 10, Color(1, 0.95, 0.75, 0.9))
+	draw_string_outline(kfont, Vector2(0, key_y), _key_text, HORIZONTAL_ALIGNMENT_CENTER, SIZE.x, 12, 5, Color(0, 0, 0, 1.0))
+	draw_string(kfont, Vector2(0, key_y), _key_text, HORIZONTAL_ALIGNMENT_CENTER, SIZE.x, 12, Color(1, 0.97, 0.82, 1.0))

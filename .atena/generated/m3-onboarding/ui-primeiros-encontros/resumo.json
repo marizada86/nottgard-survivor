@@ -1,0 +1,49 @@
+[
+	{
+		"id": "levelup",
+		"state": "levelup"
+	},
+	{
+		"id": "altar",
+		"state": "altar"
+	},
+	{
+		"id": "bau_perto",
+		"state": "running"
+	},
+	{
+		"id": "bau_aberto",
+		"interact": false,
+		"state": "running"
+	},
+	{
+		"id": "fonte_perto",
+		"state": "running"
+	},
+	{
+		"id": "fonte_usada",
+		"interact": false,
+		"state": "running"
+	},
+	{
+		"id": "ritual_perto",
+		"state": "running"
+	},
+	{
+		"id": "ritual_usado",
+		"interact": true,
+		"state": "running"
+	},
+	{
+		"id": "chefe_70",
+		"state": "running"
+	},
+	{
+		"id": "portal",
+		"state": "running"
+	},
+	{
+		"id": "vitoria",
+		"state": "won"
+	}
+]
