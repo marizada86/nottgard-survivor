@@ -1,0 +1,628 @@
+{
+  "revision": "PROPS-VARIEDADE-LOTE04/v01",
+  "content_state": "CANON_VISUAL_v01",
+  "imagegen_calls": 8,
+  "sources": [
+    {
+      "id": "PV25",
+      "name": "resina",
+      "content_state": "CANON_VISUAL_v01",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          33,
+          54,
+          1240,
+          1198
+        ],
+        "128": [
+          205,
+          308,
+          1091,
+          947
+        ]
+      },
+      "alpha128_margins": [
+        205,
+        308,
+        163,
+        307
+      ],
+      "native_12percent_margin_pass": true,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "d19fbcd2c2d671b29617662c43e52ecd6d9673d3194fce3a846d89a3a9bdc699",
+      "prompt_sha256": "213b307886589cf13e70ca7ed793b37037637a9d22093256b6fefbfc1248a1a5",
+      "reference_sha256": "f6198a6cd593f7c820755968b4f61d5a0dc0840a68cf44c3e951e585ecf9a063",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "sha256": "87f6a4386532ff64b534f3b5b0dbd52568583187d5d1368c604f25a9c238a5f7",
+          "alpha_bounds": [
+            12,
+            19,
+            57,
+            48
+          ]
+        },
+        {
+          "size": 128,
+          "sha256": "36d13f5dbf33ec04f0b2e1494ba26466af209b9fbbae00582f044997519e93e7",
+          "alpha_bounds": [
+            11,
+            20,
+            106,
+            120
+          ]
+        },
+        {
+          "size": 256,
+          "sha256": "93336b4eca4cb7388fb9f304ff3ef756ff97edda77cee4849141760c4ab174b3",
+          "alpha_bounds": [
+            19,
+            41,
+            230,
+            240
+          ]
+        }
+      ],
+      "design_review_note": "",
+      "runtime_scale_anchor_collision": "NOT_TESTED",
+      "owner_visual_acceptance": "APPROVED_AS_DISPLAYED"
+    },
+    {
+      "id": "PV26",
+      "name": "veu",
+      "content_state": "CANON_VISUAL_v01",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          47,
+          55,
+          1226,
+          1254
+        ],
+        "128": [
+          123,
+          110,
+          1170,
+          1198
+        ]
+      },
+      "alpha128_margins": [
+        123,
+        110,
+        84,
+        56
+      ],
+      "native_12percent_margin_pass": false,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "b716af602daad48300bc74c6deddef550818598551af8dd69637814581bd121f",
+      "prompt_sha256": "c3cb23efb7f0b3417e8461a08d346b19514af77f5b6ebc81c7efe66ec751e8e5",
+      "reference_sha256": "f4b700dd9763ea5639750aecce98ffc8a6b80ce831d8d9fed11ef63c1a10ba4c",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "sha256": "14e086b12d390e2092abd5cf8462e3443a6b9735f707d6298f0f4244ebf6a6b9",
+          "alpha_bounds": [
+            8,
+            6,
+            57,
+            58
+          ]
+        },
+        {
+          "size": 128,
+          "sha256": "8a639c14c3c9d3b4014ab50b153eefd9eae030d4e72d6cddfc76f0eb8330ac18",
+          "alpha_bounds": [
+            15,
+            10,
+            116,
+            115
+          ]
+        },
+        {
+          "size": 256,
+          "sha256": "cdbc3c514c8c39d2f201e9d4097e22e7aa7e1e330107b147102809a093e78ab5",
+          "alpha_bounds": [
+            18,
+            21,
+            232,
+            231
+          ]
+        }
+      ],
+      "design_review_note": "Bordado mais elaborado que o da referência; avaliar a leitura pequena.",
+      "runtime_scale_anchor_collision": "NOT_TESTED",
+      "owner_visual_acceptance": "APPROVED_AS_DISPLAYED"
+    },
+    {
+      "id": "PV27",
+      "name": "sino",
+      "content_state": "CANON_VISUAL_v01",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          0,
+          15,
+          1248,
+          1254
+        ],
+        "128": [
+          159,
+          107,
+          1136,
+          1167
+        ]
+      },
+      "alpha128_margins": [
+        159,
+        107,
+        118,
+        87
+      ],
+      "native_12percent_margin_pass": false,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "751c61f5e98ee9c5d9a59ce944fd38a58ddd9b1afe1db55c0f0f12d294162a1e",
+      "prompt_sha256": "ec67a09866fa1852bdd803c96590ae415f9b6639a92ee771ca255d478365043d",
+      "reference_sha256": "2dfa6740054d105324c586d38af7e36c2ab3a81d5352ea0657b651e900e4fab6",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "sha256": "1d9dc77ebcd3d01c023397efd37cdcf15df6d6fc711945e0235c5035214688f8",
+          "alpha_bounds": [
+            11,
+            6,
+            59,
+            56
+          ]
+        },
+        {
+          "size": 128,
+          "sha256": "0030b43914167dad26016dfc0497edf033a4b8f3e703f3290cadc3f18191810d",
+          "alpha_bounds": [
+            15,
+            11,
+            110,
+            117
+          ]
+        },
+        {
+          "size": 256,
+          "sha256": "6a1ad68775bf19df53738f731d74aa39829b25bf0c51986dd6f055e2dd9bb07c",
+          "alpha_bounds": [
+            20,
+            23,
+            235,
+            234
+          ]
+        }
+      ],
+      "design_review_note": "",
+      "runtime_scale_anchor_collision": "NOT_TESTED",
+      "owner_visual_acceptance": "APPROVED_AS_DISPLAYED"
+    },
+    {
+      "id": "PV28",
+      "name": "runa",
+      "content_state": "CANON_VISUAL_v01",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          0,
+          63,
+          1238,
+          1254
+        ],
+        "128": [
+          129,
+          223,
+          1130,
+          1109
+        ]
+      },
+      "alpha128_margins": [
+        129,
+        223,
+        124,
+        145
+      ],
+      "native_12percent_margin_pass": false,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "2da5af9e5ab0f51a917fa9638d6bc39130d3b6dcb37ed729c1b2c4d4be6ff1bb",
+      "prompt_sha256": "8eda9067768f3200e6dd05a6a23c7e9534c7801c9a0ac33a0509b71efd3b6d76",
+      "reference_sha256": "6d2bb509a8b93ef82ad4cd385b5a9853ac8bfdbddf734cf995791def51e1b0bb",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "sha256": "0ef0d2c54c1c7b65166c264a5ab18c1c50a00a9e0b1c95d0c26128fa03829ed1",
+          "alpha_bounds": [
+            10,
+            6,
+            59,
+            54
+          ]
+        },
+        {
+          "size": 128,
+          "sha256": "0a17e21279b4702df6b76084733c88e3dc1966e94cdadfffdde5c3b5a8ffe7ad",
+          "alpha_bounds": [
+            19,
+            15,
+            118,
+            107
+          ]
+        },
+        {
+          "size": 256,
+          "sha256": "4e8b16eb7af4232e4e6ac2e695cb184660d57a76aebb97206124eeafd4fd4c53",
+          "alpha_bounds": [
+            36,
+            26,
+            239,
+            228
+          ]
+        }
+      ],
+      "design_review_note": "Detalhes do traçado central da runa alterados; não assumir equivalência de símbolo.",
+      "runtime_scale_anchor_collision": "NOT_TESTED",
+      "owner_visual_acceptance": "APPROVED_AS_DISPLAYED"
+    },
+    {
+      "id": "PV29",
+      "name": "taca",
+      "content_state": "CANON_VISUAL_v01",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          0,
+          32,
+          1238,
+          1254
+        ],
+        "128": [
+          109,
+          275,
+          1144,
+          1070
+        ]
+      },
+      "alpha128_margins": [
+        109,
+        275,
+        110,
+        184
+      ],
+      "native_12percent_margin_pass": false,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "db491404403e2cb3d25b6cf6396d89e2ca5dfdb24e5d9ab3d26fe6f9f63f461e",
+      "prompt_sha256": "01773e41cbdf0221dca564443b6ae6240f47f2fe46a9c6835b392424910ce1bf",
+      "reference_sha256": "b67adaf8ddb72fd56b7b79fd9200ea523d07e8fe910e2bf976cfbb51ad530ed0",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "sha256": "5e0cde2e73ace9c203092dd57f47ca0b8c0f6b11bfc75484839bc5f3341f1823",
+          "alpha_bounds": [
+            5,
+            14,
+            58,
+            52
+          ]
+        },
+        {
+          "size": 128,
+          "sha256": "5633bf17587bc4b496e6baba0f0f26e1ebd0688903c7385a93f6be1cc35ebc0f",
+          "alpha_bounds": [
+            11,
+            15,
+            114,
+            104
+          ]
+        },
+        {
+          "size": 256,
+          "sha256": "e90f034ea3d740d0db7953a9ed289a5ce38d7e83511b9378f5ed07b7ce4e64d9",
+          "alpha_bounds": [
+            22,
+            21,
+            239,
+            222
+          ]
+        }
+      ],
+      "design_review_note": "Só três pernas da mesa ficam visíveis nesta perspectiva; o pedido de quatro visíveis não foi atendido. Taça com detalhes decorativos diferentes.",
+      "runtime_scale_anchor_collision": "NOT_TESTED",
+      "owner_visual_acceptance": "APPROVED_AS_DISPLAYED"
+    },
+    {
+      "id": "PV30",
+      "name": "taca_dourada",
+      "content_state": "CANON_VISUAL_v01",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          0,
+          64,
+          1234,
+          1224
+        ],
+        "128": [
+          57,
+          259,
+          1211,
+          1029
+        ]
+      },
+      "alpha128_margins": [
+        57,
+        259,
+        43,
+        225
+      ],
+      "native_12percent_margin_pass": false,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "e0749cb7af5b55a373ba18aa2f30367d37f71cb5d50bac320ae7a4471711a08a",
+      "prompt_sha256": "57fbd073666c6ec729543aeee9b9982790df11abd254115c66e8921275afa9a1",
+      "reference_sha256": "131d85a6aab409d33ab259edd18652b1563e4671dadfd4d73897ba30ce3b9c4a",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "sha256": "cb6944d106228d502c78653556ffe64772f3ba73310b12254905cf9708c734bd",
+          "alpha_bounds": [
+            6,
+            11,
+            60,
+            51
+          ]
+        },
+        {
+          "size": 128,
+          "sha256": "be377946aefe08de604b0b498a1952256fff3f9b5054cb99a691d6ed5e43c990",
+          "alpha_bounds": [
+            12,
+            20,
+            120,
+            112
+          ]
+        },
+        {
+          "size": 256,
+          "sha256": "cc6d362d0e64d9c4be63f1ede2322b70ac4989bdde28e104d9b124cb6b94cd3e",
+          "alpha_bounds": [
+            24,
+            39,
+            240,
+            232
+          ]
+        }
+      ],
+      "design_review_note": "Bordados, joias e distribuição das manchas diferem da referência.",
+      "runtime_scale_anchor_collision": "NOT_TESTED",
+      "owner_visual_acceptance": "APPROVED_AS_DISPLAYED"
+    },
+    {
+      "id": "PV31",
+      "name": "coluna",
+      "content_state": "CANON_VISUAL_v01",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          65,
+          35,
+          1085,
+          1254
+        ],
+        "128": [
+          424,
+          82,
+          838,
+          1169
+        ]
+      },
+      "alpha128_margins": [
+        424,
+        82,
+        416,
+        85
+      ],
+      "native_12percent_margin_pass": false,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "ba2ebef2c390b32fe230439669a76a23525493dcfc2ed5389ee5cf76f0776ea7",
+      "prompt_sha256": "a5c87c4441117790b3b2393e9b38a6af1972706f885063675a602baa9fbb2a7e",
+      "reference_sha256": "2a28395b17c3a00313336b1a5aca0a73179d059d1592de2c5e82b6d920a6d16a",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "sha256": "4dc66b8254f07f60a5ceb534204c092bee531dead928970dce27a496b0950a2d",
+          "alpha_bounds": [
+            25,
+            6,
+            45,
+            56
+          ]
+        },
+        {
+          "size": 128,
+          "sha256": "71667301f724f0f5f72d83596382dffad75390f81e8694e615c264f6b1e8126c",
+          "alpha_bounds": [
+            49,
+            11,
+            90,
+            112
+          ]
+        },
+        {
+          "size": 256,
+          "sha256": "2795ff8f41165970e840231ca4fb6b91c1bae54e2c71d1ecd03d3be5a135b32e",
+          "alpha_bounds": [
+            35,
+            23,
+            181,
+            237
+          ]
+        }
+      ],
+      "design_review_note": "Trepadeiras sobem além do terço inferior pedido; avaliar a proximidade visual da variante com a referência.",
+      "runtime_scale_anchor_collision": "NOT_TESTED",
+      "owner_visual_acceptance": "APPROVED_AS_DISPLAYED"
+    },
+    {
+      "id": "PV32",
+      "name": "osso",
+      "content_state": "CANON_VISUAL_v01",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          17,
+          37,
+          1242,
+          1230
+        ],
+        "128": [
+          198,
+          347,
+          1062,
+          901
+        ]
+      },
+      "alpha128_margins": [
+        198,
+        347,
+        192,
+        353
+      ],
+      "native_12percent_margin_pass": true,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "68b8dab6b1f37da5aaae06c5039ea37786c7ace7d80cf1d1becb41b02839b7f3",
+      "prompt_sha256": "a35f82e7e1cf69512527f885c3e97239a817fc5c8ae041060d156b0309836e04",
+      "reference_sha256": "1b332b989e458c306383eab4e2fbe7e0880d59147396eabe141bf266f00bd16c",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "sha256": "9e09b183b07fa173f350a4d1dcdcd46196fd0a64a795793220d95c3b8753f49f",
+          "alpha_bounds": [
+            8,
+            19,
+            59,
+            46
+          ]
+        },
+        {
+          "size": 128,
+          "sha256": "e831351e6e44b4c73ba9825e33e111b141d4d690b5db8bce8854d07ac6be7d6c",
+          "alpha_bounds": [
+            8,
+            21,
+            117,
+            112
+          ]
+        },
+        {
+          "size": 256,
+          "sha256": "a5f356333dc20c5c8cef4abfa605a5c83634994bbff96f9883efafafce1de377",
+          "alpha_bounds": [
+            16,
+            42,
+            235,
+            239
+          ]
+        }
+      ],
+      "design_review_note": "",
+      "runtime_scale_anchor_collision": "NOT_TESTED",
+      "owner_visual_acceptance": "APPROVED_AS_DISPLAYED"
+    }
+  ],
+  "technical_delivery_pass": true,
+  "gallery_links": 43,
+  "missing_links": [],
+  "native_margin_notes": [
+    "PV26",
+    "PV27",
+    "PV28",
+    "PV29",
+    "PV30",
+    "PV31"
+  ],
+  "design_review_notes": {
+    "PV26": "Bordado mais elaborado que o da referência; avaliar a leitura pequena.",
+    "PV28": "Detalhes do traçado central da runa alterados; não assumir equivalência de símbolo.",
+    "PV29": "Só três pernas da mesa ficam visíveis nesta perspectiva; o pedido de quatro visíveis não foi atendido. Taça com detalhes decorativos diferentes.",
+    "PV30": "Bordados, joias e distribuição das manchas diferem da referência.",
+    "PV31": "Trepadeiras sobem além do terço inferior pedido; avaliar a proximidade visual da variante com a referência."
+  },
+  "visual_acceptance": "APPROVED_AS_DISPLAYED",
+  "runtime_admission": false,
+  "canonical_promotion": "VISUAL_ONLY_PV25_PV32_v01"
+}

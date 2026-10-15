@@ -1,0 +1,9 @@
+# Lote04/v01 — oito variantes estáticas DRAFT
+
+Pedido “Aprovar o lote como exibido e continuar a fila”: IN_PLAN, PLAN-053, aprovação per-plan preservada. Aceite PV17–PV24 registrado separadamente; esta continuação autoriza produção experimental das próximas famílias existentes, sem aceite antecipado.
+
+PV25 resina; PV26 véu; PV27 sino; PV28 runa; PV29 taça sobre mesa; PV30 taça dourada sobre tecido; PV31 coluna; PV32 osso. São variantes opcionais das referências locais v01 correspondentes, não oito lacunas obrigatórias. ART-PROMPTS-007 aprovado para geração orienta pixel art, câmera isométrica30graus, luz superior esquerda, alfa real e alvo12% margem. Referências oficiais v01 são autoridade de material/paleta; vistas antes da produção e arquivadas com hash. Cena textual por peça nos jobs/prompts. Identidade de personagem N/A: objetos, tecidos e restos estáticos sem novo personagem, facção, símbolo ou lore. Runas existentes preservadas como linguagem visual; sem escrita nova. Sem lacunas BLOCKING para candidatas DRAFT.
+
+Etapas PV25,PV26,PV27,PV28,PV29,PV30,PV31,PV32,AUDIT_GALLERY (9). Uma chamada built-in image_gen por peça, máximo8, sem retries automáticos. Novos caminhos de lote04, referências anteriores intactas. Fontes nativas preservadas, prévias técnicas256/128/64 com alfa original; só crop e escala nearest proporcional pelo mesmo preparador Godot. Nenhum retoque criativo por código.
+
+Checks: decodificação PNG, dimensões, alfa, bounds, margens nativas, hashes, referências/cópias iguais, links da galeria e inspeção visual individual/prancha. Margens deficientes ou divergências ficam sinalizadas; falha retida sem nova chamada. Escala física, âncora, colisão e leitura subjetiva não verificadas no jogo. Checkpoint final OWNER_VISUAL_REVIEW. Sem runtime, assets oficiais, novas dependências, export, commit/push ou CANON das novas candidatas.

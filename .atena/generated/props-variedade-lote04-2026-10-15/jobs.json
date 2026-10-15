@@ -1,0 +1,90 @@
+[
+  {
+    "id": "PV25",
+    "name": "resina",
+    "biome": "viscoso",
+    "reference": "assets/props/resina_01.png",
+    "source": "native-sources/PV25_v01.png",
+    "prompt": "prompts/PV25.txt",
+    "candidate_copy": ".atena/generated/art-candidates/props-variedade-lote04/resina_variante_v01.png",
+    "content_state": "DRAFT",
+    "specific": "A compact irregular olive-yellow translucent resin slab/pool, SAME dark rocky crust and small suspended bubbles as reference. New asymmetric outline, lower central mound and two short hardened spikes at the rear. All drips contained. No new color family, no creature or face, no floor."
+  },
+  {
+    "id": "PV26",
+    "name": "veu",
+    "biome": "ornamental",
+    "reference": "assets/props/veu_01.png",
+    "source": "native-sources/PV26_v01.png",
+    "prompt": "prompts/PV26.txt",
+    "candidate_copy": ".atena/generated/art-candidates/props-variedade-lote04/veu_variante_v01.png",
+    "content_state": "DRAFT",
+    "specific": "A free hanging deep crimson velvet veil with worn gold embroidered edging and tassels, SAME reference material. New asymmetric drape with one upper fold slightly lower, a broad central sag and two hanging sides. Only fabric; no poles, room, figure, face or added skull. Entire tassels and hem visible."
+  },
+  {
+    "id": "PV27",
+    "name": "sino",
+    "biome": "templo",
+    "reference": "assets/props/sino_01.png",
+    "source": "native-sources/PV27_v01.png",
+    "prompt": "prompts/PV27.txt",
+    "candidate_copy": ".atena/generated/art-candidates/props-variedade-lote04/sino_variante_v01.png",
+    "content_state": "DRAFT",
+    "specific": "One weathered dark bronze bell suspended from its complete aged wooden support frame, SAME reference. New compact silhouette with slightly wider bell body and asymmetrically reinforced wooden feet. Keep clapper, suspension and two posts structurally plausible, no lettering or invented symbols, no added shrine or creature."
+  },
+  {
+    "id": "PV28",
+    "name": "runa",
+    "biome": "abissal",
+    "reference": "assets/props/runa_01.png",
+    "source": "native-sources/PV28_v01.png",
+    "prompt": "prompts/PV28.txt",
+    "candidate_copy": ".atena/generated/art-candidates/props-variedade-lote04/runa_variante_v01.png",
+    "content_state": "DRAFT",
+    "specific": "One low square stone rune slab viewed isometrically, SAME dark grey block border and contained violet engraved abstract mark as reference. Change stone cracks and chip one corner modestly while keeping a complete slab. Preserve the reference rune visual identity rather than inventing script. Glow confined to incisions, no external aura or floating VFX."
+  },
+  {
+    "id": "PV29",
+    "name": "taca",
+    "biome": "ornamental",
+    "reference": "assets/props/taca_01.png",
+    "source": "native-sources/PV29_v01.png",
+    "prompt": "prompts/PV29.txt",
+    "candidate_copy": ".atena/generated/art-candidates/props-variedade-lote04/taca_variante_v01.png",
+    "content_state": "DRAFT",
+    "specific": "A single compact worn wooden table supporting one fallen old gold goblet and a small contained dark red wine spill, SAME existing reference subject and materials. New tabletop plank arrangement and fallen goblet angle. All four complete table legs and goblet foot visible. Wine only, no person, injury, hand, skull, extra vessel or floor."
+  },
+  {
+    "id": "PV30",
+    "name": "taca_dourada",
+    "biome": "ornamental",
+    "reference": "assets/props/taca_dourada_01.png",
+    "source": "native-sources/PV30_v01.png",
+    "prompt": "prompts/PV30.txt",
+    "candidate_copy": ".atena/generated/art-candidates/props-variedade-lote04/taca_dourada_variante_v01.png",
+    "content_state": "DRAFT",
+    "specific": "A fallen ornate gold goblet resting on a crumpled ivory cloth with restrained worn gold embroidered edge and contained dark red wine spill, SAME reference composition and material family. New angle of cup and folds, entire cup stem/base and cloth hem inside frame. No table, body, injury, face, skull, extra vessels or added symbols."
+  },
+  {
+    "id": "PV31",
+    "name": "coluna",
+    "biome": "marmore",
+    "reference": "assets/props/coluna_01.png",
+    "source": "native-sources/PV31_v01.png",
+    "prompt": "prompts/PV31.txt",
+    "candidate_copy": ".atena/generated/art-candidates/props-variedade-lote04/coluna_variante_v01.png",
+    "content_state": "DRAFT",
+    "specific": "One complete aged ivory marble column with a chipped ionic capital, fluted shaft and low square base, SAME reference with sparse dark green climbing vines. A new arrangement of cracks, modest asymmetric damage at capital corner and vines concentrated on lower third. Capital and base entirely visible. No new blood, creature, statue, wall or ground tile."
+  },
+  {
+    "id": "PV32",
+    "name": "osso",
+    "biome": "osseos",
+    "reference": "assets/props/osso_01.png",
+    "source": "native-sources/PV32_v01.png",
+    "prompt": "prompts/PV32.txt",
+    "candidate_copy": ".atena/generated/art-candidates/props-variedade-lote04/osso_variante_v01.png",
+    "content_state": "DRAFT",
+    "specific": "A compact small heap of old beige bones around one weathered cracked skull, SAME reference brown dusty fragments. New low asymmetric arrangement with two long bones crossing loosely in front and rib fragments behind; keep skull anatomy plausible and all bone ends visible. Static old remains only, no living creature, fresh injury, blood, weapons, flowers or ground tile."
+  }
+]

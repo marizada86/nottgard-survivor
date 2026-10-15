@@ -1,13 +1,13 @@
 {
   "revision": "PROPS-VARIEDADE-LOTE03/v01",
-  "content_state": "DRAFT",
+  "content_state": "CANON_VISUAL_v01",
   "imagegen_calls": 8,
   "sources": [
     {
       "id": "PV17",
       "name": "esporo",
       "biome": "fungico",
-      "content_state": "DRAFT",
+      "content_state": "CANON_VISUAL_v01",
       "dimensions": [
         1254,
         1254
@@ -90,7 +90,7 @@
           "sha256": "de42877c10a346043eaeaf3d6d46ebf34c10d28d6b27cf482b447072e0ebd5c2"
         }
       ],
-      "owner_visual_acceptance": "PENDING",
+      "owner_visual_acceptance": "APPROVED_AS_DISPLAYED",
       "world_scale_and_anchor": "NOT_TESTED",
       "runtime_admission": false
     },
@@ -98,7 +98,7 @@
       "id": "PV18",
       "name": "lodo",
       "biome": "fungico",
-      "content_state": "DRAFT",
+      "content_state": "CANON_VISUAL_v01",
       "dimensions": [
         1254,
         1254
@@ -181,7 +181,7 @@
           "sha256": "9f8d9e5a8c4bbf94e051fc25c63a6e9e8d2c8eb82af8ef9843e05cb416b0a189"
         }
       ],
-      "owner_visual_acceptance": "PENDING",
+      "owner_visual_acceptance": "APPROVED_AS_DISPLAYED",
       "world_scale_and_anchor": "NOT_TESTED",
       "runtime_admission": false
     },
@@ -189,7 +189,7 @@
       "id": "PV19",
       "name": "estalactite",
       "biome": "viscoso",
-      "content_state": "DRAFT",
+      "content_state": "CANON_VISUAL_v01",
       "dimensions": [
         1254,
         1254
@@ -272,7 +272,7 @@
           "sha256": "0d18efee3d58e5b3a729ab9c9da65f766362459d95abb48b95cb06ff6355f5e3"
         }
       ],
-      "owner_visual_acceptance": "PENDING",
+      "owner_visual_acceptance": "APPROVED_AS_DISPLAYED",
       "world_scale_and_anchor": "NOT_TESTED",
       "runtime_admission": false
     },
@@ -280,7 +280,7 @@
       "id": "PV20",
       "name": "espelho_ornado",
       "biome": "ornamental",
-      "content_state": "DRAFT",
+      "content_state": "CANON_VISUAL_v01",
       "dimensions": [
         1254,
         1254
@@ -363,7 +363,7 @@
           "sha256": "8b2ccf70ddf2fdf3cfa27903df331a847ebedece33158599e69fece85cf3c045"
         }
       ],
-      "owner_visual_acceptance": "PENDING",
+      "owner_visual_acceptance": "APPROVED_AS_DISPLAYED",
       "world_scale_and_anchor": "NOT_TESTED",
       "runtime_admission": false
     },
@@ -371,7 +371,7 @@
       "id": "PV21",
       "name": "flor",
       "biome": "flora",
-      "content_state": "DRAFT",
+      "content_state": "CANON_VISUAL_v01",
       "dimensions": [
         1254,
         1254
@@ -454,7 +454,7 @@
           "sha256": "5165f165b07d879bbfe543c85382ac20fb993164954453085b82d44c8c03ea46"
         }
       ],
-      "owner_visual_acceptance": "PENDING",
+      "owner_visual_acceptance": "APPROVED_AS_DISPLAYED",
       "world_scale_and_anchor": "NOT_TESTED",
       "runtime_admission": false
     },
@@ -462,7 +462,7 @@
       "id": "PV22",
       "name": "fragmento",
       "biome": "abissal",
-      "content_state": "DRAFT",
+      "content_state": "CANON_VISUAL_v01",
       "dimensions": [
         1254,
         1254
@@ -545,7 +545,7 @@
           "sha256": "5a264648d7342ddd4875da818e52de54350a6de4ceef133616c1280f9fd2eece"
         }
       ],
-      "owner_visual_acceptance": "PENDING",
+      "owner_visual_acceptance": "APPROVED_AS_DISPLAYED",
       "world_scale_and_anchor": "NOT_TESTED",
       "runtime_admission": false
     },
@@ -553,7 +553,7 @@
       "id": "PV23",
       "name": "nucleo",
       "biome": "abissal",
-      "content_state": "DRAFT",
+      "content_state": "CANON_VISUAL_v01",
       "dimensions": [
         1254,
         1254
@@ -636,7 +636,7 @@
           "sha256": "922d3ce3ea60e9880504dcfa45fdd534305437160afbbcae88fef23f9970f1dd"
         }
       ],
-      "owner_visual_acceptance": "PENDING",
+      "owner_visual_acceptance": "APPROVED_AS_DISPLAYED",
       "world_scale_and_anchor": "NOT_TESTED",
       "runtime_admission": false
     },
@@ -644,7 +644,7 @@
       "id": "PV24",
       "name": "corrente",
       "biome": "ferro",
-      "content_state": "DRAFT",
+      "content_state": "CANON_VISUAL_v01",
       "dimensions": [
         1254,
         1254
@@ -727,14 +727,14 @@
           "sha256": "f9ba810aa67dd78d308ad6db1b6ab45868a8d05b15e2758d693247940dd1c0f2"
         }
       ],
-      "owner_visual_acceptance": "PENDING",
+      "owner_visual_acceptance": "APPROVED_AS_DISPLAYED",
       "world_scale_and_anchor": "NOT_TESTED",
       "runtime_admission": false
     }
   ],
-  "gallery_links": 42,
+  "gallery_links": 43,
   "missing_links": [],
-  "visual_acceptance": "PENDING",
+  "visual_acceptance": "APPROVED_AS_DISPLAYED",
   "technical_delivery_pass": true,
   "native_margin_notes": [
     "PV17",
@@ -744,7 +744,7 @@
     "PV22"
   ],
   "runtime_admission": false,
-  "canonical_promotion": false,
+  "canonical_promotion": "VISUAL_ONLY_PV17_PV24_v01",
   "mirror_center_alpha_max": 1,
   "design_review_notes": {
     "PV18": "Open mushrooms instead of closed buds",

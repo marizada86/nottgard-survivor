@@ -21,7 +21,7 @@ L02 opcional (`Clique para jogar`, FILA-026) v01 aceita visualmente, admissão p
 
 ### Pendências registradas — prioridade dos heróis reduzida em 2026-10-14
 
-Continuação em2026-10-15: lote01 e L02 aceitos no commit local `a09d0ba3`; lote02 PV09–PV16 aceito no commit local `e0af748f`, publicados com lote03 no commit `37335f0b`. Lote03 PV17–PV24 de detalhes ambientais gerado em DRAFT, [galeria](../generated/props-variedade-lote03-2026-10-15/index.html), com ressalvas de PV18/PV20 e aceite pendente. Admissões permanecem separadas; sem novos movimentos de personagens principais. Push verificado na branch codex/durvall-pilot-gifs-2026-10-14; lote03 permanece DRAFT.
+Continuação em2026-10-15: lote01/L02 commit `a09d0ba3`, lote02 `e0af748f`, lote03 DRAFT `37335f0b`, publicados com recibo `910a25a3`. PV17–PV24 v01 aceitas visualmente depois da publicação; PV25–PV32 v01 também aceitas como exibidas, com ressalvas preservadas. Lotes03/04 CANON_VISUAL_v01; [galeria lote04](../generated/props-variedade-lote04-2026-10-15/index.html). Commit/push dos assets e aceites autorizados, admissão separada pendente. Sem novos movimentos de personagens principais.
 
 | ID | Tipo | Item | Sabor Nottgard | Origem | Dependência |
 |---|---|---|---|---|---|

@@ -1,0 +1,27 @@
+plan: PLAN-053
+revision: PROPS-VARIEDADE-LOTE04/v01
+classification: IN_PLAN
+mode: per-plan
+owner_request: Aprovar o lote como exibido e continuar a fila
+approval_status: AUTHORIZED_NEXT_STATIC_PROP_BATCH
+status: VISUALLY_ACCEPTED_COMMIT_PUSH_AUTHORIZED
+checkpoint: COMMIT_PUSH
+content_state: CANON_VISUAL_v01
+ordered_steps: [PV25, PV26, PV27, PV28, PV29, PV30, PV31, PV32, AUDIT_GALLERY]
+completed_steps: 9
+total_steps: 9
+imagegen_calls: 8
+maximum_imagegen_calls: 8
+blocking_gaps: []
+runtime_admission: false
+canonical_promotion: VISUAL_ONLY_v01
+commit_push_export: COMMIT_PUSH_AUTHORIZED_EXPORT_NOT_AUTHORIZED
+owner_visual_acceptance: APPROVED_AS_DISPLAYED
+spec: .atena/specs/SPEC-121-retomada-fila-imagens/production-props-variedade-lote04-v01.md
+gallery: .atena/generated/props-variedade-lote04-2026-10-15/index.html
+evidence: .atena/evidence/props-variedade-lote04-2026-10-15.md
+technical_delivery_checks: PASSED
+native_margin_notes: ["PV26", "PV27", "PV28", "PV29", "PV30", "PV31"]
+design_review_required: [PV26, PV28, PV29, PV30, PV31]
+next_objective: 'Arquivar fontes e aceites lote03/04, publicar branch e verificar SHA remoto; admissao separada pendente'
+visual_owner_reply: 'atena, aprovado, commite e push'

@@ -56,7 +56,7 @@ if approved:
     for item in audit:
         if expected.get(item['id'])!=item['source_sha256']:raise ValueError('Approved source changed')
         item['content_state']='CANON_VISUAL_v01';item['owner_visual_acceptance']='APPROVED_AS_DISPLAYED'
-    page=page.replace('Todas DRAFT, aguardando sua avaliação; nenhuma integrada.','Todas v01 aceitas visualmente pelo dono; nenhuma integrada. <a href="owner-approval.json">Recibo de aceite</a>.').replace('DRAFT v01 · avaliação pendente','CANON VISUAL v01 · aceita como exibida').replace('Arquivamento DRAFT por commit e push autorizado; revisão visual pendente, sem integração ou promoção CANON.','Aceite visual registrado; commit local autorizado, sem push ou integração.')
+    page=page.replace('Todas DRAFT, aguardando sua avaliação; nenhuma integrada.','Todas v01 aceitas visualmente pelo dono; nenhuma integrada. <a href="owner-approval.json">Recibo de aceite</a>.').replace('DRAFT v01 · avaliação pendente','CANON VISUAL v01 · aceita como exibida').replace('Arquivamento DRAFT por commit e push autorizado; revisão visual pendente, sem integração ou promoção CANON.','Aceite visual registrado após publicação DRAFT verificada; integração pendente. Novas alterações ainda não commitadas.')
 (ROOT/'index.html').write_text(page,encoding='utf-8')
 class Links(HTMLParser):
     def __init__(self):super().__init__();self.paths=[]
