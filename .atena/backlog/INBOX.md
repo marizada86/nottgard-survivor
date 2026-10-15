@@ -135,3 +135,38 @@ informada). Plano: [PLAN-055](../vault/drafts/PLAN-055-mapas-vivos-segredos-e-di
 | IN-056 | Manzi: bênção sem opção de não escolher nenhuma; balancear e adicionar bênçãos novas e entidades que concedem | MEC-046, MEC-047, BAL-019 |
 | IN-057 | Manzi: v0.3.0 muito fácil (já em andamento) | BAL-001 (+1 relato), BAL-018 |
 | IN-058 | Manzi (T04, observação final, repassada pelo dono em 2026-10-06): CA e CAM não são claros; algo deve explicar (tooltip: Classe de Armadura e Classe de Armadura Mágica) | MEC-045 (SPEC-130, D8) |
+
+## Classificados — relatório de T05 (Mariz) via dono, 2026-10-14
+
+Origem: [EVID-250](../evidence/EVID-250-relato-t05-mariz-v040-2026-10-14.md) (relatório escrito sobre a v0.4.0; sem log nem hash; o Print 1 não chegou). Verificação só por leitura de código.
+
+| ID | Tema | Já feito? | Destino |
+|---|---|---|---|
+| IN-077 | Volume (menu e opções): bug ao aumentar ou diminuir | NOVO; implementado local (EVID-251) | BUG-044 |
+| IN-078 | 1º slot da ficha: lado esquerdo some ao passar o mouse (Print 1) | 0.4.0, suspeita de reincidência do BUG-041 | BUG-046 (confirmar com o print) |
+| IN-079 | Monstros presos em objetos do cenário | 0.4.0 | BUG-012 (+1 relato; pedir o mapa) |
+| IN-080 | Tela de resultado após a morte estoura a tela (Print 2) | banner HEAD ajuda, não resolve | BUG-045 |
+| IN-081 | Durvall anda com uma perna só (horizontal e para cima) | EM CURSO (M1) | BUG-028, BUG-027, SPEC-176 |
+| IN-082 | Esperava menu principal antes da seleção de herói | NOVO | M3, sem cartão |
+| IN-083 | Mensagem ao coletar item parece esperar interação | 0.4.0 | M3 (confirmar o objeto) |
+| IN-084 | Item novo na 1ª posição induz a equipar | NOVO | MEC-070 (a propor) |
+| IN-085 | Avisos de missão no topo central tapam o jogo | 0.4.0 + HEAD (questlog à direita) | MEC-064, M3 |
+| IN-086 | Iluminação uniforme, pouca profundidade | EM CURSO (névoa do mundo) | M5/ART |
+| IN-087 | Dano da borda baixo; névoa como pressão ativa | 0.4.0 | BAL-004, BAL-028, M4d |
+| IN-088 | Números de dano ilegíveis; ataques sem impacto | EM CURSO (M2 R5) | SPEC-177, MEC-031 |
+| IN-089 | Inimigos parecidos; tentáculo parado sem ataque perceptível | parcial | M4 e telégrafo no M2 |
+| IN-090 | Poças deixam de ameaçar | 0.4.0 | BALANCEAMENTO (+1) |
+| IN-091 | 1º chefe muito fácil | 0.4.0 | BALANCEAMENTO (+1) |
+| IN-092 | Guardião Alado maior | NOVO | ART (escala), M5 |
+| IN-093 | Chefes são só versões maiores | planejado | M4a |
+| IN-094 | Elites sem comportamento próprio | planejado | M4a |
+| IN-095 | Habilidade principal não evolui; falta ultimate | NOVO | MEC-070 (a propor) |
+| IN-096 | Sons cômicos em vez de pesados | parcial; F-4/F-5 recusadas em 2026-10-14 | SPEC-177 (decisão do dono) |
+
+Avaliação medida do relatório acima: [EVID-252](../evidence/EVID-252-avaliacao-medida-do-relatorio-t05-mariz-2026-10-14.md) e proposta em [AVALIACAO-playtest-t05-mariz-v040-2026-10-14](../vault/drafts/AVALIACAO-playtest-t05-mariz-v040-2026-10-14.md). Achados que mudam o destino: IN-095 é bloqueio de regra (evolução da arma inicial depende de 1 entre 14 passivas e há 5 espaços; MEC-070 reservado); IN-079 são atiradores `keep`, nenhum perseguidor preso; IN-091 e IN-093 vêm do diretor (as ondas acabam quando o chefe nasce).
+
+L1 implementado local em 2026-10-14 ([EVID-253](../evidence/EVID-253-l1-evolucao-troca-de-item-e-guardiao-2026-10-14.md)): IN-095 (evolução fora do teto de passivas e aviso na HUD, MEC-070), IN-084 (troca de item em ordem fixa com foco no melhor) e IN-092 (Guardião Alado maior; a imagem da abertura segue pendente, ART-049 a abrir). Aguardam playtest.
+
+L2 implementado local em 2026-10-14 ([EVID-254](../evidence/EVID-254-l2-campo-vivo-pv-do-chefe-poca-e-nevoa-2026-10-14.md)), atrás de `l2.enabled` em `data/difficulty.json`: IN-091/IN-093 (campo vivo com o chefe e PV do chefe com o poder do herói), IN-090 (poça de % do PV máximo, sem regeneração) e IN-087 (borda a 12% e sem regeneração). Aguardam playtest e a rodada de 12 heróis.
+
+L3 implementado local em 2026-10-14 ([EVID-255](../evidence/EVID-255-l3-impacto-numeros-pausa-e-som-2026-10-14.md)): IN-088 (número de dano em 4 faixas, pausa de acerto em elite e chefe) e IN-096 (dinâmica e tom do som do acerto e da queda, sem arquivo novo). Aguardam o ouvido e o olho do dono.

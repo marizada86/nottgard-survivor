@@ -1,0 +1,92 @@
+Relatório de Playtest — Nottgard: Abyss Megadungeon
+QA / Playtest
+Avaliação de gameplay
+14/10/2026
+
+1. Resumo geral
+Nottgard: Abyss Megadungeon apresenta uma base de gameplay muito boa, com uma experiência fluida, acessível e agradável. A HUD é um dos pontos positivos, oferecendo informações bem explicadas e uma apresentação visual organizada.
+Entretanto, durante o playtest, identifiquei alguns bugs e oportunidades importantes de melhoria, especialmente nos sistemas de combate, progressão, inteligência artificial, balanceamento e apresentação visual.
+Minha principal percepção é que o jogo funciona bem, mas ainda não oferece desafios e recompensas suficientes para manter o combate empolgante ao longo da partida.
+Os chefes e inimigos de elite poderiam apresentar mecânicas mais variadas, o feedback dos ataques poderia ser mais impactante e a progressão das habilidades precisa transmitir uma sensação maior de evolução.
+2. Bugs e problemas técnicos
+ID	Problema identificado	Prioridade sugerida
+BUG-01	Ocorre um bug ao aumentar ou diminuir qualquer configuração de volume, tanto no menu quanto nas opções durante o jogo.	Alta
+BUG-02	Ao passar o mouse pelo primeiro slot da HUD, na ficha do herói, parte do lado esquerdo do elemento não aparece corretamente. Evidência: Print 1.	Média
+BUG-03	Alguns monstros ficam presos em objetos do cenário, aparentemente por problemas de navegação ou colisão.	Média
+BUG-04	Após a morte do personagem, a tela apresentou um problema visual. Evidência: Print 2.	Alta
+Animação — Durvall
+Ao movimentar Durvall horizontalmente, a animação parece utilizar apenas uma das pernas, resultando em uma caminhada incompleta ou pouco natural. O mesmo problema é perceptível ao caminhar para cima.
+3. Interface e experiência do usuário (UI/UX)
+3.1. Fluxo inicial do jogo
+Ao iniciar o jogo, esperava encontrar um menu principal convencional. Entretanto, foi apresentada apenas uma tela inicial que, ao receber um clique, direcionou imediatamente para a seleção de herói.
+Embora não seja necessariamente um erro, o fluxo foi diferente do esperado.
+3.2. HUD — ponto positivo
+A HUD está muito bem apresentada. As informações são claras, visualmente agradáveis e fáceis de compreender. Foi um dos aspectos de que mais gostei durante o teste.
+3.3. Mensagem ao coletar itens
+Ao coletar determinados objetos, a mensagem exibida possui bastante destaque visual e transmite a impressão de que o jogo está aguardando alguma interação do jogador.
+3.4. Ordenação de equipamentos
+Ao receber um novo item, ele aparece constantemente na primeira posição da lista de opções, fazendo parecer que é automaticamente a melhor escolha.
+Essa organização me induziu a equipar um item que eu não desejava utilizar.
+3.5. Avisos de missão
+Os avisos de missão, posicionados na parte superior central da tela, possuem uma presença visual muito forte e acabam obstruindo parcialmente a visão da área de jogo.
+4. Ambientação, iluminação e névoa
+4.1. Iluminação do mapa
+Senti falta de variações de luminosidade pelo cenário. A iluminação aparenta ser relativamente uniforme, o que diminui a sensação de profundidade e exploração de uma megadungeon.
+4.2. Limites do mapa e avanço da névoa
+Atualmente, o dano causado nas bordas do mapa é baixo e não representa uma ameaça significativa.
+A névoa poderia ser aproveitada como uma mecânica ativa para pressionar o jogador a avançar ou abandonar o andar.
+5. Combate e feedback de dano
+5.1. Impacto dos ataques
+O feedback visual de dano nos inimigos não está tão satisfatório quanto poderia.
+Durante o combate, tive dificuldade para identificar os valores de dano causados, e os ataques não transmitiram uma sensação forte de impacto ou recompensa.
+Sugestões de melhoria:
+- Tornar os números de dano mais legíveis e diferenciá-los conforme a importância do acerto.
+- Melhorar os efeitos de impacto e reação dos inimigos.
+- Adicionar uma resposta audiovisual mais marcante a acertos críticos e golpes poderosos.
+- Trabalhar melhor o ritmo das animações e efeitos para aumentar a satisfação durante o combate.
+O objetivo é fazer com que causar dano seja visualmente recompensador, criando aquela sensação de satisfação que incentiva o jogador a continuar lutando.
+5.2. Variedade mecânica dos inimigos
+A maior parte dos inimigos apresenta comportamentos semelhantes: aproximação lenta e formas parecidas de causar dano.
+Encontrei poucas mecânicas realmente distintas. Um dos únicos exemplos foi um inimigo que avança, arrastando-se para frente enquanto causa dano.
+O inimigo em formato de tentáculo, por exemplo, parece permanecer parado sem executar um ataque perceptível.
+Também senti falta de situações que exigissem reflexos mais rápidos e tomadas de decisão além de desviar de projéteis circulares.
+5.3. Perigos de área
+As poças de dano no chão me causaram preocupação apenas no início da partida. Com o avanço do jogo, o dano deixou de representar uma ameaça relevante, e passei a ignorar boa parte dos perigos de área.
+6. Chefes e inimigos de elite
+6.1. Primeiro chefe
+O primeiro chefe apresentou dificuldade muito baixa.
+Havia poucos monstros simultaneamente, e consegui derrotá-lo permanecendo praticamente parado durante o confronto.
+Isso reduziu bastante a sensação de desafio e conquista que normalmente se espera de uma batalha contra chefe.
+6.2. Segundo chefe — Guardião Alado
+O Guardião Alado poderia possuir uma presença visual maior. Aumentar suas proporções ajudaria a transmitir a ideia de um inimigo mais imponente e ameaçador.
+6.3. Mecânicas dos chefes
+Minha impressão geral é que os chefes são, essencialmente, versões maiores e com mais pontos de vida, utilizando ataques relativamente simples, como projéteis disparados em diferentes direções.
+Esperava encontros com mecânicas próprias, que exigissem adaptações na estratégia e movimentação.
+6.4. Inimigos de elite
+Os inimigos de elite também não se destacaram tanto quanto eu esperava.
+Faltam comportamentos exclusivos que os diferenciem dos inimigos comuns e obriguem o jogador a prestar mais atenção.
+Seria interessante que cada elite oferecesse uma ameaça reconhecível, como investidas, ataques direcionais, controle de área ou habilidades que modifiquem temporariamente o posicionamento do jogador.
+7. Progressão e habilidades do personagem
+A habilidade principal do personagem acabou sendo um dos pontos menos empolgantes da experiência.
+Durante o teste, continuei utilizando essencialmente a mesma onda de ataque desde o início, sem perceber uma evolução visual ou mecânica significativa.
+Fiquei esperando a possibilidade de melhorar essa habilidade ou desbloquear uma habilidade especial, como uma ultimate.
+8. Áudio e apresentação
+As animações são relativamente simples, mas não impedem que o jogo seja agradável e jogável.
+Quanto ao áudio, alguns sons me fizeram rir durante a partida. O efeito acabou sendo mais cômico do que impactante em determinados momentos.
+Vale revisar se essa reação combina com a identidade pretendida para o jogo. Caso a intenção seja transmitir tensão e perigo, alguns efeitos sonoros podem precisar de maior peso e intensidade.
+9. Priorização sugerida
+Prioridade	Área	Recomendação
+P0 — Crítica	Bugs	Investigar o problema da tela após a morte, caso impeça o fluxo normal do jogo.
+P1 — Alta	Bugs	Corrigir os problemas de volume e verificar suas condições de reprodução.
+P1 — Alta	Gameplay	Rebalancear o primeiro chefe e aumentar a variedade mecânica dos chefes e elites.
+P1 — Alta	Combate	Melhorar o feedback dos ataques e a percepção dos valores de dano.
+P1 — Alta	Progressão	Tornar a evolução das habilidades mais perceptível.
+P2 — Média	Gameplay	Revisar dano ambiental, névoa e comportamento dos inimigos.
+P2 — Média	UI/UX	Melhorar ordenação de itens, avisos de missão e mensagens de coleta.
+P2 — Média	Visual	Revisar a animação de Durvall, iluminação e apresentação do Guardião Alado.
+P3 — Baixa	Apresentação	Avaliar o fluxo inicial e o tom dos efeitos sonoros.
+As prioridades são sugestões baseadas no impacto percebido durante o playtest, não em uma análise técnica de causa ou frequência. A classificação final deve ser feita após reprodução dos problemas.10. Considerações finais
+Nottgard: Abyss Megadungeon já possui uma base sólida e divertida. A jogabilidade é agradável, a HUD é muito boa e o conjunto funciona, mesmo com algumas animações simples e problemas pontuais.
+O principal ponto que senti falta foi de um desafio maior. Depois de compreender os padrões de combate, quase nada exigiu uma mudança significativa na minha forma de jogar. Os inimigos comuns, elites e chefes poderiam exigir mais movimentação, atenção e adaptação.
+Acredito que o maior potencial de evolução esteja na variedade mecânica dos inimigos, na progressão das habilidades, na apresentação do dano e na construção de encontros mais desafiadores.
+Em resumo: gostei bastante do jogo e vejo uma boa base para evoluir. Só senti falta de algo que realmente me colocasse à prova — afinal, talvez eu seja bom demais.
