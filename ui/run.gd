@@ -751,7 +751,7 @@ func _consume_events() -> void:
 					_shake = 0.6
 				if _danger != null:
 					_danger.on_hurt(float(ev.amount), battle.hero.max_hp, bool(ev.get("continuous", false)), Game.reduced_impact())
-				_float_text(at + Vector2(0, -58), "-%d" % ev.amount, Color(1.0, 0.3, 0.3), 16)
+				_float_text(at + Vector2(0, -58), "-%d" % ev.amount, Color(1.0, 0.35, 0.3), DamageFeedback.HURT_SIZE, false, Color(0, 0, 0), false, DamageFeedback.AUX_OUTLINE)
 			"text":
 				var cue := String(ev.text).to_lower()
 				if cue == "guarda": Sfx.play("player.guard")
@@ -760,12 +760,12 @@ func _consume_events() -> void:
 				elif cue == "invoca":
 					Sfx.play("enemy.summon")
 					if ev.has("enemy_id"): Sfx.play_enemy(String(ev.enemy_id), "action")
-				_float_text(at + Vector2(0, -50), ev.text, Color(0.7, 0.8, 1.0), 12)
+				_float_text(at + Vector2(0, -50), ev.text, Color(0.7, 0.8, 1.0), DamageFeedback.CUE_SIZE, false, Color(0, 0, 0), false, DamageFeedback.AUX_OUTLINE)
 				if cue == "dominado":
 					_ability_effect("dominacao", ev)
 			"heal":
 				Sfx.play("player.heal")
-				_float_text(at + Vector2(0, -60), "+%d" % ev.amount, Color(0.4, 1.0, 0.5), 14)
+				_float_text(at + Vector2(0, -60), "+%d" % ev.amount, Color(0.4, 1.0, 0.5), DamageFeedback.HEAL_SIZE, false, Color(0, 0, 0), false, DamageFeedback.AUX_OUTLINE)
 			"swing":
 				Sfx.play_weapon(String(ev.get("weapon", "")), "combat.swing")
 				hero_node.play_action(&"attack")

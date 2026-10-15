@@ -76,4 +76,12 @@ func run() -> Array:
 	if v.alpha() != 0.0:
 		out.append("fora da partida a vinheta deveria sumir")
 	v.free()
+	# B: números que não são acerto
+	if DamageFeedback.HURT_SIZE < 20 or DamageFeedback.HEAL_SIZE < 16 or DamageFeedback.CUE_SIZE < 14:
+		out.append("números de dano recebido, cura e aviso abaixo do tamanho de M2 R5")
+	if DamageFeedback.HURT_SIZE <= DamageFeedback.number_size(0, false):
+		out.append("o dano recebido deveria ser maior que o acerto comum")
+	for b in 4:
+		if DamageFeedback.outline_size(b) < 5:
+			out.append("contorno da faixa %d abaixo de 5 px" % b)
 	return out

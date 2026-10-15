@@ -5,9 +5,14 @@ extends RefCounted
 ## sobre eles: só o crítico sobe a faixa. Elites e chefes absorvem muitos golpes, e é neles que a fração mostra a diferença.
 
 const ELITE_BANDS := [0.03, 0.08, 0.15]   # fração do PV máximo do alvo: faixa 1, 2 e 3
-const NUMBER_SIZES := [14, 18, 24, 30]
+const NUMBER_SIZES := [16, 19, 25, 31]   # M2 R5 (B): o comum passa de 14 para 16 px
 const CRIT_EXTRA_SIZE := 2
-const OUTLINES := [4, 5, 6, 7]
+const OUTLINES := [5, 5, 6, 7]
+## M2 R5 (B): números que não são acerto também ficam legíveis sobre o chão claro.
+const HURT_SIZE := 20      # dano que o herói recebe (era 16)
+const HEAL_SIZE := 16      # cura (era 14)
+const CUE_SIZE := 14       # "Guarda", "Esquiva", "Barreira" etc. (era 12)
+const AUX_OUTLINE := 5
 const MERGE_MS := {"": 350, "elite": 150, "boss": 150}
 
 ## `tier`: "" (comum), "elite" ou "boss".

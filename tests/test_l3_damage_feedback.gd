@@ -21,8 +21,8 @@ func run() -> Array:
 		if size <= last:
 			out.append("o tamanho do número deveria crescer com a faixa (faixa %d: %d)" % [b, size])
 		last = size
-	if DamageFeedback.number_size(0, false) != 14:
-		out.append("o número comum continua em 14 px")
+	if DamageFeedback.number_size(0, false) != 16:
+		out.append("o número comum fica em 16 px (M2 R5, opção B)")
 	if DamageFeedback.number_size(2, true) != DamageFeedback.number_size(2, false) + 2:
 		out.append("crítico deveria somar 2 px ao tamanho da faixa")
 	if DamageFeedback.number_size(3, true) < 30:
