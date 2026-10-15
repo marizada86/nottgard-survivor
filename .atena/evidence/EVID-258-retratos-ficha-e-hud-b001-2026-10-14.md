@@ -1,5 +1,5 @@
 ---
-id: EVID-256
+id: EVID-258
 title: Retratos da Ficha e do HUD, lote B-001 (resolvedor com fallback)
 spec: SPEC-178
 plan: PLAN-104
@@ -7,7 +7,7 @@ date: 2026-10-14
 content_state: DRAFT
 ---
 
-# EVID-256 — B-001 (S-001 a S-003)
+# EVID-258 — B-001 (S-001 a S-003)
 
 ## Feito
 - `ui/hero_portraits.gd` (`HeroPortraits`): `path`, `path_for_kind`, `has_own`, `texture` para `menu|ficha|hud`; ordem: `assets/portraits/<tipo>/<id>.png`, depois `assets/portraits/<id>.png`.
