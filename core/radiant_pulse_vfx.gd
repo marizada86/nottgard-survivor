@@ -8,7 +8,7 @@ const FRAME_COUNT := 6
 const DURATION := 0.35
 ## Dominant luminous annulus measured in the accepted peak after reduction.
 const PEAK_RING_RADIUS := 88.0
-const WEAPONS := ["sentenca_de_lliira", "julgamento_da_gloria", "descarga_estelar", "chuva_de_estrelas", "vela_sagrada", "sopro_de_estrela"]
+const WEAPONS := ["sentenca_de_lliira", "julgamento_da_gloria", "descarga_estelar", "chuva_de_estrelas", "vela_sagrada", "sopro_de_estrela", "constelacao_de_silva"]
 static var _frames: SpriteFrames
 
 static func supports(event: Dictionary, reduced_impact: bool = false) -> bool:

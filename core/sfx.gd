@@ -195,7 +195,7 @@ func _play_event(key: String, volume_override_db: float, pitch_mult: float = 1.0
 	voice.bus = String(definition.get("bus", "SFX"))
 	voice.volume_db = float(definition.get("volume_db", -8.0)) if volume_override_db >= 90.0 else volume_override_db
 	var jitter := float(definition.get("pitch_jitter", 0.0))
-	voice.pitch_scale = (1.0 + randf_range(-jitter, jitter)) * pitch_mult
+	voice.pitch_scale = (1.0 + randf_range(-jitter, jitter)) * pitch_mult * float(definition.get("pitch", 1.0))   # SPEC-177 F-6: tom próprio quando dois eventos dividem o mesmo arquivo
 	voice.play()
 	_voice_priority[voice_index] = priority
 	_voice_started[voice_index] = now

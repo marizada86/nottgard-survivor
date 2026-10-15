@@ -3,7 +3,7 @@ extends RefCounted
 
 const FAMILIES := {
 	"orbe_radiante": {"dtype": "radiante", "weapons": ["raio_de_luz", "luz_mais_pura", "marca_da_retidao"]},
-	"orbe_arcano": {"dtype": "magico", "weapons": ["raio_enfraquecedor", "dominar_pessoa", "cajado_dos_desejos"]},
+	"orbe_arcano": {"dtype": "magico", "weapons": ["raio_enfraquecedor", "dominar_pessoa", "cajado_dos_desejos", "raio_da_ruina", "dominio_coletivo"]},
 	"onda_cortante": {"dtype": "magico", "weapons": ["lamina_trovejante", "tempestade"]},
 }
 const ABILITY_KINDS := {

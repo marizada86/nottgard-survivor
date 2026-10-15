@@ -8,6 +8,8 @@ const WEAPON_SHAPES := {
 	"adaga_rapida": "corte_medio", "rajada_infinita": "corte_medio",
 	"lamina_da_digestao": "corte_medio",
 	"golpe_atordoante": "arco_largo", "espada_do_receptaculo": "arco_largo",
+	# SPEC-177 F-7: evoluções e carta da mesma família física (só dtype físico usa este kit)
+	"romper_armadura": "corte_medio", "maca_demolidora": "arco_largo", "esmagar_defesas": "arco_largo",
 }
 static var _frames: Dictionary = {}
 const SHAPE_PATHS := {

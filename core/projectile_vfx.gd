@@ -15,7 +15,7 @@ const FAMILIES := {
 	&"orbe_radiante": {"path": "res://assets/vfx/orbe_radiante.png", "dtype": "radiante", "scale": 0.45, "pivot_x": 124.0,
 		"weapons": ["raio_de_luz", "luz_mais_pura", "marca_da_retidao", "constelacao"]},
 	&"orbe_arcano": {"path": "res://assets/vfx/orbe_arcano.png", "dtype": "magico", "scale": 0.45, "pivot_x": 124.0,
-		"weapons": ["raio_enfraquecedor", "dominar_pessoa", "cajado_dos_desejos"]},
+		"weapons": ["raio_enfraquecedor", "dominar_pessoa", "cajado_dos_desejos", "raio_da_ruina", "dominio_coletivo"]},
 	&"onda_cortante": {"path": "res://assets/vfx/onda_cortante.png", "dtype": "magico", "scale": 0.5, "pivot_x": 147.0,
 		"weapons": ["lamina_trovejante", "tempestade"]},
 }
