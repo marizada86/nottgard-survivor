@@ -1,0 +1,120 @@
+{
+  "revision": "FILA-012-UI/v01",
+  "owner_visual_reply": "aprovado, continue",
+  "owner_git_reply": "atena aprovado, commite e push",
+  "content_state": "CANON_VISUAL_v01",
+  "sources": [
+    {
+      "id": "U01",
+      "revision": "v01",
+      "path": ".atena/generated/fila012-ui-2026-10-14/native-sources/U01_v01.png",
+      "sha256": "5f19cc5b08273bc28e5dd2560f1fbe24e323d5eebac824c6b1b0e113d0f1e533"
+    },
+    {
+      "id": "U02",
+      "revision": "v01",
+      "path": ".atena/generated/fila012-ui-2026-10-14/native-sources/U02_v01.png",
+      "sha256": "5e6d316b2a57bfba17a2e2bfed81fbad6585eacc5c8db94e48f97c150e579fcb"
+    },
+    {
+      "id": "U03",
+      "revision": "v01",
+      "path": ".atena/generated/fila012-ui-2026-10-14/native-sources/U03_v01.png",
+      "sha256": "a9d1097511087a304c8b5fc3f8aa9fc154512869ece149ce1de339c734addd5d"
+    },
+    {
+      "id": "U04",
+      "revision": "v01",
+      "path": ".atena/generated/fila012-ui-2026-10-14/native-sources/U04_v01.png",
+      "sha256": "fde09c4908fef295dc08415d12db40fdf9d4b9a7d9afb30ee635a807dfc5d9cb"
+    }
+  ],
+  "previews": [
+    {
+      "path": ".atena/generated/fila012-ui-2026-10-14/previews/U01-180px.png",
+      "sha256": "4b97b44f295d8ea3b1e9d8293bfe32c3782bf2e5ac39f801f14606e8a15aa7ea"
+    },
+    {
+      "path": ".atena/generated/fila012-ui-2026-10-14/previews/U01-360px.png",
+      "sha256": "59d014919ee958b70abedddae2cff378cd1114d62311852fcd3fa009fa386b7d"
+    },
+    {
+      "path": ".atena/generated/fila012-ui-2026-10-14/previews/U01-720px.png",
+      "sha256": "7b691214b3fb15208a65d2d8bca5eeafea3a9d76232d8d72d3ac4ee0f43c4cc0"
+    },
+    {
+      "path": ".atena/generated/fila012-ui-2026-10-14/previews/U01-keyed.png",
+      "sha256": "5e5be2e4563df4a2668e427a5b59e96b33993788621d30cc872010b1313b0bf6"
+    },
+    {
+      "path": ".atena/generated/fila012-ui-2026-10-14/previews/U02-keyed.png",
+      "sha256": "32a3948d83f501f678e152ea820fda7eae3c3df34141da7fc5a58ba04532bff4"
+    },
+    {
+      "path": ".atena/generated/fila012-ui-2026-10-14/previews/U02-marker-0-16px.png",
+      "sha256": "463f328b06d1486389fde732460284ac4f4ec1978586ce0d6ec7ff0af5a5c361"
+    },
+    {
+      "path": ".atena/generated/fila012-ui-2026-10-14/previews/U02-marker-0-24px.png",
+      "sha256": "98dfdaaa8dfa5fb84ecc4c08acc4a340f8ec10b627bd189f79c0fab871a5da5e"
+    },
+    {
+      "path": ".atena/generated/fila012-ui-2026-10-14/previews/U02-marker-0-32px.png",
+      "sha256": "ea73b7b908f9e981252d13084d077497ed81ab8e26a624fd8f3da6b4192163ad"
+    },
+    {
+      "path": ".atena/generated/fila012-ui-2026-10-14/previews/U02-marker-0-48px.png",
+      "sha256": "8dde2ef1a239e8b34d0fc25eff63c41c9abf0e94727e9422b9d347e8ff165004"
+    },
+    {
+      "path": ".atena/generated/fila012-ui-2026-10-14/previews/U02-marker-1-16px.png",
+      "sha256": "128b9f1da785ee7a220cdee1290ed13a9684c19addfb7af805a7a4bda6309a3e"
+    },
+    {
+      "path": ".atena/generated/fila012-ui-2026-10-14/previews/U02-marker-1-24px.png",
+      "sha256": "857c0a6e78adf5262660c368840fcab9c084a84bf6ef0bd4c32ced132e3bab24"
+    },
+    {
+      "path": ".atena/generated/fila012-ui-2026-10-14/previews/U02-marker-1-32px.png",
+      "sha256": "30b1020b8390749b4792e3b473b6bb6d40150e055a45f9fac5b1b73569c5f56b"
+    },
+    {
+      "path": ".atena/generated/fila012-ui-2026-10-14/previews/U02-marker-1-48px.png",
+      "sha256": "436192e369802b345c3542763e1d840c0cce02e5d1a3d691d662ce7986df3b6d"
+    },
+    {
+      "path": ".atena/generated/fila012-ui-2026-10-14/previews/U03-128px.png",
+      "sha256": "5857d6019bae6469026ce9908a0a53216ac05c71bcab13d1f97787a33287ac82"
+    },
+    {
+      "path": ".atena/generated/fila012-ui-2026-10-14/previews/U03-64px.png",
+      "sha256": "7e5d17e8e23c13e9bf22527d5f45bd803cb04a8e07a5e2affc47854174732d37"
+    },
+    {
+      "path": ".atena/generated/fila012-ui-2026-10-14/previews/U03-keyed.png",
+      "sha256": "d330c7a481097a79c9d96d4e35f88cadc33de43e864d3b7005aca8f5a4ed2482"
+    },
+    {
+      "path": ".atena/generated/fila012-ui-2026-10-14/previews/U04-128px.png",
+      "sha256": "5276a85b7dd8639f0952d9189d9a144a26e3c7faf2ce8e484a57ff31f3be9f17"
+    },
+    {
+      "path": ".atena/generated/fila012-ui-2026-10-14/previews/U04-64px.png",
+      "sha256": "0685fe2bf41d6e96b1fc35be6b1a55d171a2b457dbfa37816682daad55c72413"
+    },
+    {
+      "path": ".atena/generated/fila012-ui-2026-10-14/previews/U04-keyed.png",
+      "sha256": "acd8c6b87a94e9939199151911a60ba89d83cd4d2b02361d1a93e5bd0a353111"
+    }
+  ],
+  "acceptance": "AS_DISPLAYED_WITH_DOCUMENTED_NOTES",
+  "runtime_admission": false,
+  "notes": [
+    "U01 native aspect mismatch and 25px height at 180px shown and accepted visually; HUD placement remains undecided.",
+    "U02 normalized review sizes differ from native symbol sizes.",
+    "U03/U04 dark checker texture accepted as displayed."
+  ],
+  "commit_authorized": true,
+  "push_authorized": true,
+  "export_authorized": false
+}

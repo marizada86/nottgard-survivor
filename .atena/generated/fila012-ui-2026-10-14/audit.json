@@ -1,0 +1,349 @@
+{
+  "revision": "FILA-012-UI/v01",
+  "content_state": "CANON_VISUAL_v01",
+  "imagegen_calls": 4,
+  "sources": [
+    {
+      "id": "U01",
+      "name": "hud_progresso_moldura",
+      "source": "native-sources/U01_v01.png",
+      "prompt": "prompts/U01.txt",
+      "dimensions": [
+        1983,
+        793
+      ],
+      "native_aspect": 2.5006305170239598,
+      "requested_aspect": 8,
+      "native_aspect_pass": false,
+      "content_bounds_xywh": [
+        34,
+        261,
+        1930,
+        273
+      ],
+      "content_aspect": 7.069597069597069,
+      "content_margins": [
+        34,
+        261,
+        19,
+        259
+      ],
+      "corner_rgba": [
+        [
+          233,
+          14,
+          240,
+          255
+        ],
+        [
+          241,
+          16,
+          241,
+          255
+        ],
+        [
+          231,
+          37,
+          237,
+          255
+        ],
+        [
+          237,
+          29,
+          238,
+          255
+        ]
+      ],
+      "native_alpha_range": [
+        255,
+        255
+      ],
+      "keyed_alpha_range": [
+        0,
+        255
+      ],
+      "transparent_preview_pixels": 1224578,
+      "opaque_preview_outer_edge_pixels": 0,
+      "sha256": "5f19cc5b08273bc28e5dd2560f1fbe24e323d5eebac824c6b1b0e113d0f1e533",
+      "candidate_copy_hash_matches": true,
+      "content_state": "CANON_VISUAL_v01",
+      "owner_visual_acceptance": "APPROVED_AS_DISPLAYED",
+      "runtime_admission": false
+    },
+    {
+      "id": "U02",
+      "name": "hud_progresso_marcador",
+      "source": "native-sources/U02_v01.png",
+      "prompt": "prompts/U02.txt",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "native_aspect": 2.0,
+      "requested_aspect": 2,
+      "native_aspect_pass": true,
+      "content_bounds_xywh": [
+        279,
+        144,
+        1292,
+        598
+      ],
+      "content_aspect": 2.160535117056856,
+      "content_margins": [
+        279,
+        144,
+        203,
+        145
+      ],
+      "corner_rgba": [
+        [
+          241,
+          11,
+          241,
+          255
+        ],
+        [
+          246,
+          18,
+          242,
+          255
+        ],
+        [
+          238,
+          33,
+          236,
+          255
+        ],
+        [
+          243,
+          29,
+          241,
+          255
+        ]
+      ],
+      "native_alpha_range": [
+        255,
+        255
+      ],
+      "keyed_alpha_range": [
+        0,
+        255
+      ],
+      "transparent_preview_pixels": 1344049,
+      "opaque_preview_outer_edge_pixels": 0,
+      "sha256": "5e6d316b2a57bfba17a2e2bfed81fbad6585eacc5c8db94e48f97c150e579fcb",
+      "candidate_copy_hash_matches": true,
+      "content_state": "CANON_VISUAL_v01",
+      "owner_visual_acceptance": "APPROVED_AS_DISPLAYED",
+      "runtime_admission": false
+    },
+    {
+      "id": "U03",
+      "name": "catalogo_item_bloqueado",
+      "source": "native-sources/U03_v01.png",
+      "prompt": "prompts/U03.txt",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "native_aspect": 1.0,
+      "requested_aspect": 1,
+      "native_aspect_pass": true,
+      "content_bounds_xywh": [
+        137,
+        154,
+        980,
+        949
+      ],
+      "content_aspect": 1.0326659641728135,
+      "content_margins": [
+        137,
+        154,
+        137,
+        151
+      ],
+      "corner_rgba": [
+        [
+          244,
+          13,
+          242,
+          255
+        ],
+        [
+          247,
+          17,
+          243,
+          255
+        ],
+        [
+          239,
+          33,
+          236,
+          255
+        ],
+        [
+          242,
+          29,
+          239,
+          255
+        ]
+      ],
+      "native_alpha_range": [
+        255,
+        255
+      ],
+      "keyed_alpha_range": [
+        0,
+        255
+      ],
+      "transparent_preview_pixels": 653473,
+      "opaque_preview_outer_edge_pixels": 0,
+      "sha256": "a9d1097511087a304c8b5fc3f8aa9fc154512869ece149ce1de339c734addd5d",
+      "candidate_copy_hash_matches": true,
+      "content_state": "CANON_VISUAL_v01",
+      "owner_visual_acceptance": "APPROVED_AS_DISPLAYED",
+      "runtime_admission": false
+    },
+    {
+      "id": "U04",
+      "name": "catalogo_item_moldura",
+      "source": "native-sources/U04_v01.png",
+      "prompt": "prompts/U04.txt",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "native_aspect": 1.0,
+      "requested_aspect": 1,
+      "native_aspect_pass": true,
+      "content_bounds_xywh": [
+        137,
+        154,
+        980,
+        950
+      ],
+      "content_aspect": 1.0315789473684212,
+      "content_margins": [
+        137,
+        154,
+        137,
+        150
+      ],
+      "corner_rgba": [
+        [
+          240,
+          15,
+          240,
+          255
+        ],
+        [
+          247,
+          18,
+          243,
+          255
+        ],
+        [
+          237,
+          35,
+          237,
+          255
+        ],
+        [
+          243,
+          29,
+          239,
+          255
+        ]
+      ],
+      "native_alpha_range": [
+        255,
+        255
+      ],
+      "keyed_alpha_range": [
+        0,
+        255
+      ],
+      "transparent_preview_pixels": 652638,
+      "opaque_preview_outer_edge_pixels": 0,
+      "sha256": "fde09c4908fef295dc08415d12db40fdf9d4b9a7d9afb30ee635a807dfc5d9cb",
+      "candidate_copy_hash_matches": true,
+      "content_state": "CANON_VISUAL_v01",
+      "owner_visual_acceptance": "APPROVED_AS_DISPLAYED",
+      "runtime_admission": false
+    }
+  ],
+  "gallery_links": 26,
+  "missing_gallery_links": [],
+  "preparation": [
+    {
+      "code": "U01",
+      "key_method": "magenta threshold flood from image border only",
+      "keyed_bounds": [
+        34,
+        261,
+        1930,
+        273
+      ],
+      "runtime_admission": false
+    },
+    {
+      "code": "U02",
+      "key_method": "magenta threshold flood from image border only",
+      "keyed_bounds": [
+        279,
+        144,
+        1292,
+        598
+      ],
+      "runtime_admission": false
+    },
+    {
+      "code": "U03",
+      "key_method": "magenta threshold flood from image border only",
+      "keyed_bounds": [
+        137,
+        154,
+        980,
+        949
+      ],
+      "runtime_admission": false
+    },
+    {
+      "code": "U04",
+      "key_method": "magenta threshold flood from image border only",
+      "keyed_bounds": [
+        137,
+        154,
+        980,
+        950
+      ],
+      "runtime_admission": false
+    },
+    {
+      "bounds": [
+        279,
+        243,
+        397,
+        416
+      ],
+      "code": "U02-marker-0"
+    },
+    {
+      "bounds": [
+        134,
+        144,
+        550,
+        598
+      ],
+      "code": "U02-marker-1"
+    }
+  ],
+  "technical_delivery_pass": true,
+  "visual_acceptance": "APPROVED_AS_DISPLAYED_RUNTIME_PENDING",
+  "full_visual_contract_verified": false,
+  "limitations": [
+    "U01 native aspect differs from 8:1; actual HUD placement not tested.",
+    "U02 source symbols have different pixel sizes; review canvases normalized independently.",
+    "U03/U04 dark interiors include painted checker texture, retained in previews."
+  ]
+}

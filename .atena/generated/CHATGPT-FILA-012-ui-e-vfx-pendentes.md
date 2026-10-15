@@ -2,7 +2,7 @@
 id: "CHATGPT-FILA-012"
 type: "fila-de-prompts"
 title: "Fila — UI e VFX pendentes (ART-002, 003, 004, 010, 014)"
-status: "U07–U09 gerados e integrados em 2026-10-02; U01–U06 pendentes; EVID-145"
+status: "U01–U04 v01 aceitas visualmente 2026-10-14, CANON_VISUAL; commit/push autorizados, admissao pendente; U05–U06 pendentes de MEC-004; U07–U09 integrados; EVID-145"
 created: "2026-10-01"
 relations: ["[[ART-PROMPTS-043-ui-e-vfx-pendentes]]"]
 ---
@@ -14,7 +14,9 @@ Marque `[x]` ao gerar e `[a]` ao aprovar. Sem imagem de referência obrigatória
 
 #### U01 - `hud_progresso_moldura` (ART-002)
 
-- [ ] gerada · [ ] aprovada
+- [x] gerada · [x] aprovada
+
+U01–U04 v01 aceitas visualmente pelo dono ("aprovado, continue"; "atena aprovado, commite e push"). [Galeria](fila012-ui-2026-10-14/index.html), [recibo](fila012-ui-2026-10-14/owner-approval.json) e [CANON visual](../vault/canon/ASSET-APPROVAL-FILA012-UI-v01.md). U01 aceita como exibida; encaixe/proporção no HUD pendentes, sem integração. [Evidência](../evidence/fila012-ui-production-2026-10-14.md).
 
 ```text
 Use case: stylized-concept
@@ -26,7 +28,7 @@ Constraints: fundo liso magenta #FF00FF, canal interno preto sólido, sem texto,
 ```n
 #### U02 - `hud_progresso_marcador` (ART-002)
 
-- [ ] gerada · [ ] aprovada
+- [x] gerada · [x] aprovada
 
 ```text
 Use case: stylized-concept
@@ -38,7 +40,7 @@ Constraints: fundo liso magenta #FF00FF, sem texto, sem personagens
 ```n
 #### U03 - `catalogo_item_bloqueado` (ART-003)
 
-- [ ] gerada · [ ] aprovada
+- [x] gerada · [x] aprovada
 
 ```text
 Use case: stylized-concept
@@ -50,7 +52,7 @@ Constraints: fundo liso magenta #FF00FF, sem texto, sem letras, sem personagens
 ```n
 #### U04 - `catalogo_item_moldura` (ART-003)
 
-- [ ] gerada · [ ] aprovada
+- [x] gerada · [x] aprovada
 
 ```text
 Use case: stylized-concept

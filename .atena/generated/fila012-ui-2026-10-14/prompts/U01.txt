@@ -1,0 +1,9 @@
+Use case: stylized-concept
+Asset type: moldura de barra de progresso horizontal para HUD de jogo
+Primary request: barra comprida e estreita de metal escuro e pedra, cantos reforçados, canal interno vazio e escuro onde o preenchimento aparece, um pequeno encaixe em forma de caveira de chefe na ponta direita, detalhes de rebites e runas apagadas
+Style/medium: pixel art sombria coerente com o jogo, metal cinza-escuro com filetes âmbar discretos
+Composition/framing: vista frontal plana, proporção 8 para 1, barra centrada ocupando quase toda a largura
+Constraints: fundo liso magenta #FF00FF, canal interno preto sólido, sem texto, sem números, sem personagens
+
+Production clarification (same original design, DRAFT candidate): Reference images show the established material family only: aged dark steel, dark stone, restrained amber/old-gold accents. One SINGLE long thin EMPTY progress frame in an exactly 8:1 wide composition. Keep outer magenta clearance around the complete metal silhouette including the boss-skull socket on the RIGHT. Black empty continuous inner channel, no progress fill or jewels in the channel. No readable glyphs or lettering.
+Background: perfectly flat SOLID #FF00FF magenta outside the object, never a gradient, shadow, checkerboard or scene. Detailed dark fantasy pixel-art finish with crisp pixel clusters and controlled dithering; avoid smooth 3D/render blur. Keep all external tips wholly inside canvas. Do not render reference backgrounds or labels.

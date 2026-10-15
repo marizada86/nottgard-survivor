@@ -1,0 +1,64 @@
+[
+  {
+    "code": "U01",
+    "key_method": "magenta threshold flood from image border only",
+    "keyed_bounds": [
+      34,
+      261,
+      1930,
+      273
+    ],
+    "runtime_admission": false
+  },
+  {
+    "code": "U02",
+    "key_method": "magenta threshold flood from image border only",
+    "keyed_bounds": [
+      279,
+      144,
+      1292,
+      598
+    ],
+    "runtime_admission": false
+  },
+  {
+    "code": "U03",
+    "key_method": "magenta threshold flood from image border only",
+    "keyed_bounds": [
+      137,
+      154,
+      980,
+      949
+    ],
+    "runtime_admission": false
+  },
+  {
+    "code": "U04",
+    "key_method": "magenta threshold flood from image border only",
+    "keyed_bounds": [
+      137,
+      154,
+      980,
+      950
+    ],
+    "runtime_admission": false
+  },
+  {
+    "bounds": [
+      279,
+      243,
+      397,
+      416
+    ],
+    "code": "U02-marker-0"
+  },
+  {
+    "bounds": [
+      134,
+      144,
+      550,
+      598
+    ],
+    "code": "U02-marker-1"
+  }
+]

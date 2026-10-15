@@ -1,0 +1,31 @@
+plan: PLAN-053
+revision: FILA-012-UI/v01
+classification: IN_PLAN
+mode: per-plan
+owner_request: 'atena vamos continuar os assets'
+approval_status: AUTHORIZED_CONTINUATION_OF_EXISTING_CANDIDATE_QUEUE
+status: VISUALLY_ACCEPTED_COMMIT_PUSH_AUTHORIZED
+checkpoint: LOCAL_COMMIT_AND_PUSH
+content_state: CANON_VISUAL_v01
+owner_visual_reply: 'aprovado, continue'
+owner_git_reply: 'atena aprovado, commite e push'
+ordered_steps: [U01, U02, U03, U04, AUDIT_GALLERY]
+completed_steps: 5
+total_steps: 5
+imagegen_calls: 4
+maximum_imagegen_calls: 4
+blocking_gaps: []
+spec: .atena/specs/SPEC-121-retomada-fila-imagens/production-fila012-ui-v01.md
+runtime_admission: false
+canonical_promotion: VISUAL_ONLY_U01_U04_v01
+commit_push_export: COMMIT_AND_PUSH_AUTHORIZED_EXPORT_NOT_AUTHORIZED
+previous_checkpoints: PRESERVED_PENDING_VISUAL_REVIEW
+technical_delivery_checks: PASSED
+held_candidates: []
+accepted_candidates: [U01_v01, U02_v01, U03_v01, U04_v01]
+accepted_as_displayed_notes: 'U01 proporcao/altura e U03/U04 textura mostradas na galeria; aceite visual nao altera metricas ou aprova layout runtime'
+remaining_runtime_decision: 'U01 25px a 180px versus barra atual 4px; definir encaixe antes de admissao'
+awaiting_visual_review: []
+gallery: .atena/generated/fila012-ui-2026-10-14/index.html
+evidence: .atena/evidence/fila012-ui-production-2026-10-14.md
+next_objective: 'Commit e push dos assets aceitos; depois preparar escopo de admissao separado'

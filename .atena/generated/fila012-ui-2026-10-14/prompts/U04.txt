@@ -1,0 +1,10 @@
+Use case: stylized-concept
+Asset type: casela de catálogo de item desbloqueado para menu de jogo
+Primary request: casela quadrada vazia de metal escuro com moldura dourada fina e cantos reforçados, interior de pedra lisa escura onde o ícone do item será colocado, leve brilho âmbar na borda interna
+Style/medium: pixel art sombria coerente com o jogo
+Composition/framing: vista frontal plana, casela centrada, quadrada, mesmo tamanho e enquadramento da casela bloqueada
+Constraints: fundo liso magenta #FF00FF, interior liso e vazio, sem texto, sem letras, sem personagens
+
+Production clarification (same original design, DRAFT candidate): Image 1 is the DRAFT locked-slot U03 matching reference: preserve its exact square border, corner geometry, thickness, stone/metal texture, camera, lighting, framing and canvas margins as closely as possible. Make the UNLOCKED/EMPTY companion state: remove the padlock and generic item silhouette, leaving a plain empty dark stone interior for an item icon supplied later by the game. Thin old-gold edging and subtle inner amber glow as requested; no bright decorative content in the interior. One single square slot; no item, text, letters, runes, character or extra prop. Other reference is the established slot family.
+Background: perfectly flat SOLID #FF00FF magenta outside the object, never a gradient, shadow, checkerboard or scene. Detailed dark fantasy pixel-art finish with crisp pixel clusters and controlled dithering; avoid smooth 3D/render blur. Keep all external tips wholly inside canvas. Do not render reference backgrounds or labels.
+Matching target U03 has an UNWANTED checkerboard painted into its interior. Do NOT reproduce that checkerboard in this unlocked companion. Use plain dark rough stone with subtle natural pixel texture, NOT alternating square grid tiles. Outside object remains uniform magenta.

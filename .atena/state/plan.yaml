@@ -1519,3 +1519,27 @@ durvall_owner_review_v02_2026_10_14:
   checkpoint: B-002/S-008/REVIEW_RECORDED_REVISIONS_PENDING
   state_file: .atena/state/durvall-pilot-imagegen.yaml
   evidence: .atena/evidence/durvall-owner-review-v02-2026-10-14.md
+
+fila012_ui_production:
+  plan: PLAN-053
+  revision: FILA-012-UI/v01
+  classification: IN_PLAN
+  mode: per-plan
+  owner_request: 'atena vamos continuar os assets'
+  status: VISUALLY_ACCEPTED_COMMIT_PUSH_AUTHORIZED
+  checkpoint: LOCAL_COMMIT_AND_PUSH
+  owner_visual_reply: 'aprovado, continue'
+  owner_git_reply: 'atena aprovado, commite e push'
+  completed_steps: 5
+  total_steps: 5
+  content_state: CANON_VISUAL_v01
+  state_file: .atena/state/fila012-ui-production.yaml
+  spec: .atena/specs/SPEC-121-retomada-fila-imagens/production-fila012-ui-v01.md
+  evidence: .atena/evidence/fila012-ui-production-2026-10-14.md
+  gallery: .atena/generated/fila012-ui-2026-10-14/index.html
+  technical_delivery_checks: PASSED
+  held_candidates: []
+  accepted_candidates: [U01_v01, U02_v01, U03_v01, U04_v01]
+  runtime_admission: false
+  canonical_promotion: VISUAL_ONLY_U01_U04_v01
+  commit_push_export: COMMIT_AND_PUSH_AUTHORIZED_EXPORT_NOT_AUTHORIZED
