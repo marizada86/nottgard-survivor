@@ -1,0 +1,14 @@
+{
+  "revision": "FILA-012-UI/v01",
+  "owner_authorization": "atena aprovado, commite e push",
+  "artifact_commit": "56fcf13ea46661fc565895264d8c94c907221591",
+  "remote": "origin",
+  "branch": "codex/durvall-pilot-gifs-2026-10-14",
+  "artifact_push": "SUCCEEDED",
+  "remote_hash_verification": "EXACT_MATCH",
+  "verified_remote_artifact_head": "56fcf13ea46661fc565895264d8c94c907221591",
+  "scope": "Four FILA-012 UI v01 sources, previews, prompts, audit, visual acceptance and scoped plan records",
+  "runtime_admission": false,
+  "other_dirty_changes_included": false,
+  "note": "This receipt records the verified artifact push; its own subsequent documentation commit is not self-referenced. The new branch also contains the two prior Durvall commits already present at HEAD before this operation."
+}
