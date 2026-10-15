@@ -172,3 +172,5 @@ L2 implementado local em 2026-10-14 ([EVID-254](../evidence/EVID-254-l2-campo-vi
 L3 implementado local em 2026-10-14 ([EVID-255](../evidence/EVID-255-l3-impacto-numeros-pausa-e-som-2026-10-14.md)): IN-088 (número de dano em 4 faixas, pausa de acerto em elite e chefe) e IN-096 (dinâmica e tom do som do acerto e da queda, sem arquivo novo). Aguardam o ouvido e o olho do dono.
 
 L4 implementado em 2026-10-14 (commit `ff6bb4b1`, [EVID-256](../evidence/EVID-256-l4-inimigos-legiveis-e-movimentos-novos-2026-10-14.md)), atrás de `l4.enabled`: IN-079 e IN-089 (Tentáculo ao alcance e com linha do golpe, atiradores com mira e passo lateral) e IN-094 (bote e bando). Aguardam playtest e a rodada de 12 heróis.
+
+L5 piloto implementado em 2026-10-15 ([EVID-257](../evidence/EVID-257-l5-mecanicas-de-chefe-piloto-2026-10-15.md)), atras de `boss_mech.enabled`: IN-091 e IN-093 (mecanicas de chefe no estilo de raide em Sacerdote, Guardiao Alado e Blogbog, orcamento de caos que cresce com as fases). Sem commit; aguarda playtest do dono, do Mariz e de um segundo jogador.
