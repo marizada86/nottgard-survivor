@@ -2,7 +2,7 @@
 id: "AVALIACAO-playtest-t05-mariz-v040-2026-10-14"
 title: "Avaliação do playtest do Mariz (T05, v0.4.0)"
 created: "2026-10-14"
-status: "DRAFT: L1, L2 e L3 implementados local (EVID-253, EVID-254, EVID-255); L4 a L6 aguardam decisão do dono"
+status: "DRAFT: L1 a L4 implementados e commitados local (EVID-253 a EVID-256); L5 e L6 aguardam decisão do dono"
 content_state: DRAFT
 relations: ["[[EVID-250-relato-t05-mariz-v040-2026-10-14]]", "[[EVID-252-avaliacao-medida-do-relatorio-t05-mariz-2026-10-14]]", "[[EVID-251-bug-044-e-bug-045-volume-e-tela-de-resultado-2026-10-14]]", "[[PLAN-103-demo-completa-e-polida-2026-10-14]]"]
 ---
