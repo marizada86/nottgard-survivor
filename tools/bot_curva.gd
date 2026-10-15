@@ -6,6 +6,7 @@ extends SceneTree
 ##   GOLD;heroi;seed;fase;total;abate;elite;chefe;quebravel;evento;venda;oferta;arma;outro
 
 var _map_side := 60.0
+var _start_stage := "dagruve"
 var _meta := {}
 var _marks := {}   # SPEC-141 e SPEC-143: 7º argumento "horda=3,fome=2", "all=3" ou "all=max"
 const METAS := [{}, {"dmg_pct": 0.16, "hp": 8, "ca": 1, "speed_pct": 0.03}, {"dmg_pct": 0.4, "hp": 20, "ca": 3, "speed_pct": 0.09, "pickup": 1.2}]
@@ -26,6 +27,10 @@ func _init() -> void:
 		Data.table("difficulty")["l4"]["enabled"] = (a[8] != "0")
 	if a.size() > 9:   # 10º argumento: 0 desliga o bloco "boss_mech" (mecânicas de chefe do L5)
 		Data.table("difficulty")["boss_mech"]["enabled"] = (a[9] != "0")
+	if a.size() > 10 and a[10] != "":   # 11º argumento: fase inicial (padrão dagruve); 12º: chefes sem mecânica, separados por vírgula
+		_start_stage = a[10]
+	if a.size() > 11:
+		Data.table("difficulty")["boss_mech"]["off_bosses"] = Array(a[11].split(",", false))
 	TerrainLayout.scale = _map_side / 40.0
 	for s in seeds:
 		_run(hero, s + 1, dt, max_stages)
@@ -61,7 +66,7 @@ func _emit(hero_id: String, seed_v: int, st: Dictionary, b: Battle) -> void:
 
 func _run(hero_id: String, seed_v: int, dt: float, max_stages: int) -> void:
 	seed(seed_v * 7919)  # BAL-018: RNG global do bot reprodutível (empates em _pick)
-	var b := Battle.new(seed_v, hero_id, "dagruve", {"meta_mods": _meta, "abyss_marks": _marks})
+	var b := Battle.new(seed_v, hero_id, _start_stage, {"meta_mods": _meta, "abyss_marks": _marks})
 	b.map_size = Vector2(_map_side, _map_side)
 	b.hero.map_size = b.map_size
 	b.hero.pos = b.map_size * 0.5

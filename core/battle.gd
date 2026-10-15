@@ -699,6 +699,16 @@ func _build_grid() -> void:
 		_grid[k].append(e)
 
 func nearest(from: Vector2, max_range: float) -> Enemy:
+	if boss_mech != null:   # PLAN-105: totens e servos do chefe imune são o alvo preferido da mira automática
+		var preferred: Enemy = null
+		var pd := max_range
+		for t in boss_mech.priority_targets():
+			var td: float = t.pos.distance_to(from) - t.radius
+			if td <= pd:
+				pd = td
+				preferred = t
+		if preferred != null:
+			return preferred
 	var best: Enemy = null
 	var bd := max_range
 	for e in enemies:

@@ -1,15 +1,41 @@
 {
-  "_spec": "L5 (PROPOSTA-l5-mecanicas-de-chefe): mecânicas de chefe por fase. Chave '1' = ao cair a 70% do PV, '2' = a 35% (as mesmas de boss_phases.json). 'verbs' substitui os verbos repetidos da fase anterior; 'skip' lista ações de boss_phases.json que esta mecânica substitui nesta fase. Piloto: Sacerdote (Dagruve), Guardião Alado (Docas) e Blogbog (Molor).",
+  "_spec": "L5 (PROPOSTA-l5-mecanicas-de-chefe): mecânicas de chefe por fase. Chave '1' = ao cair a 70% do PV, '2' = a 35% (as mesmas de boss_phases.json). 'verbs' substitui os verbos repetidos da fase anterior; 'skip' lista ações de boss_phases.json que esta mecânica substitui nesta fase. Piloto: Sacerdote (Dagruve), Guardião Alado (Docas) e Blogbog (Molor). PLAN-105 B-002: Zuggtmoy e Molydeus. B-003: Discípulo Pestilento e Malcanthet. B-004: Socothbenoth e A Síntese Abissal. Chave \"enrage\" no chefe: início próprio do enrage suave (start_s).",
   "sacerdote_mente_derretida": {
     "1": {"verbs": [{"t": "totems", "n": 2, "hp": 45, "shield": 0.3}]},
-    "2": {"verbs": [{"t": "cast", "name": "Sussurro", "first": 4.0, "cd": 16.0, "windup": 2.5, "dice": "2d8", "stun": 2.0}]}
+    "2": {"verbs": [{"t": "cast", "name": "Sussurro", "first": 4, "cd": 16, "windup": 2.5, "dice": "2d8", "stun": 2}]}
   },
   "guardiao_verdadeiro": {
-    "1": {"verbs": [{"t": "sweep", "first": 3.0, "cd": 9.0, "warn": 1.0, "dur": 2.2, "arc": 90, "len": 9.0, "dice": "2d6"}]},
-    "2": {"verbs": [{"t": "cast", "name": "Grito Abissal", "first": 3.0, "cd": 15.0, "windup": 2.5, "dice": "3d6", "stun": 2.0}]}
+    "1": {"verbs": [{"t": "sweep", "first": 3, "cd": 9, "warn": 1, "dur": 2.2, "arc": 90, "len": 9, "dice": "2d6"}]},
+    "2": {"verbs": [{"t": "cast", "name": "Grito Abissal", "first": 3, "cd": 15, "windup": 2.5, "dice": "3d6", "stun": 2}]}
   },
   "blogbog": {
-    "1": {"verbs": [{"t": "immune_adds", "id": "slime_de_juiblex", "n": 3, "max_s": 12.0}], "skip": ["summon"]},
-    "2": {"verbs": [{"t": "quadrants", "first": 2.0, "cd": 8.0, "warn": 1.5, "radius": 9.0, "dice": "2d8"}]}
+    "1": {"verbs": [{"t": "immune_adds", "id": "slime_de_juiblex", "n": 3, "max_s": 12}], "skip": ["summon"]},
+    "2": {"verbs": [{"t": "quadrants", "first": 2, "cd": 8, "warn": 1.5, "radius": 9, "dice": "2d8"}]}
+  },
+  "zuggtmoy": {
+    "1": {"verbs": [{"t": "quadrants", "first": 2, "cd": 9, "warn": 1.5, "radius": 9, "dice": "2d8", "lit": 3, "puddle": true}], "skip": ["hazard"]},
+    "2": {"verbs": [{"t": "totems", "n": 3, "hp": 60, "heal_pct_s": 0.01, "heal_cap_pct": 0.2, "name": "Cogumelo-mãe"}], "skip": ["summon"]}
+  },
+  "molydeus_chefe": {
+    "1": {"verbs": [{"t": "mark", "first": 4, "cd": 12, "follow": 2, "lock": 1, "radius": 3, "dice": "2d6", "slow": 1.2}]},
+    "2": {"verbs": [{"t": "sweep", "first": 3, "cd": 12, "warn": 1.2, "dur": 2.8, "arc": 90, "len": 9, "dice": "2d6", "beams": 2, "gap_deg": 180}], "skip": ["ring"]}
+  },
+  "discipulo_pestilento": {
+    "1": {"verbs": [{"t": "quadrants", "first": 2, "cd": 10, "warn": 1.5, "radius": 9, "dice": "2d6", "lit": 2, "puddle": true}, {"t": "mark", "first": 5, "cd": 14, "follow": 2, "lock": 1, "radius": 3, "dice": "2d6", "puddle": true}], "skip": ["hazard"]},
+    "2": {"verbs": [{"t": "cast", "name": "Grito na mente", "first": 3, "cd": 15, "windup": 2.5, "dice": "3d8", "stun": 2}, {"t": "immune_adds", "id": "cultista_de_feng_tu", "n": 4, "max_s": 12, "name": "Cultista da Peste"}], "skip": ["ring"]}
+  },
+  "malcanthet": {
+    "1": {"verbs": [{"t": "immune_adds", "id": "ilusao_de_sucubo", "n": 4, "hp": 30, "max_s": 12, "name": "Ilusão da Rainha"}, {"t": "mark", "first": 5, "cd": 14, "follow": 2, "lock": 1, "radius": 3, "dice": "2d6"}], "skip": ["summon"]},
+    "2": {"verbs": [{"t": "cast", "name": "Beijo da Rainha", "first": 3, "cd": 15, "windup": 2.5, "dice": "3d6", "stun": 2}, {"t": "sweep", "first": 4, "cd": 12, "warn": 1.2, "dur": 2.8, "arc": 90, "len": 9, "dice": "2d6", "beams": 1}], "skip": ["summon"]}
+  },
+  "socothbenoth": {
+    "1": {"verbs": [{"t": "quadrants", "first": 2, "cd": 12, "warn": 1.5, "radius": 9, "dice": "2d8", "lit": 3, "puddle": false}, {"t": "totems", "n": 2, "hp": 80, "heal_pct_s": 0.01, "heal_cap_pct": 0.2, "name": "Âncora de Juiblex"}], "skip": ["hazard"]},
+    "2": {"verbs": [{"t": "cast", "name": "Verdade desfeita", "first": 3, "cd": 18, "windup": 2.5, "dice": "3d8", "stun": 2}, {"t": "immune_adds", "id": "ilusao_de_socothbenoth", "n": 6, "hp": 40, "max_s": 12, "name": "Ilusão do Paraíso"}], "skip": ["summon", "ring"]},
+    "enrage": {"start_s": 135}
+  },
+  "sintese_abissal": {
+    "1": {"verbs": [{"t": "totems", "n": 3, "hp": 80, "heal_pct_s": 0.01, "heal_cap_pct": 0.1, "name": "Lodo de Astherion"}, {"t": "sweep", "first": 3, "cd": 12, "warn": 1.2, "dur": 2.6, "arc": 90, "len": 10, "dice": "2d6", "beams": 1}], "skip": ["hazard", "strikes"]},
+    "2": {"verbs": [{"t": "cast", "name": "Armadura do Psíquico", "effect": "armor", "first": 3, "cd": 24, "windup": 2.5, "stun": 2, "armor_s": 4.5}, {"t": "quadrants", "first": 2, "cd": 12, "warn": 1.5, "radius": 10, "dice": "2d8", "lit": 2, "puddle": true}], "skip": ["ring"]},
+    "enrage": {"start_s": 180}
   }
 }

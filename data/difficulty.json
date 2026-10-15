@@ -11,7 +11,9 @@
   "boss_mech": {
     "_spec": "L5 (PROPOSTA-l5-mecanicas-de-chefe, aprovada em 2026-10-14): mecânicas de chefe no estilo de raide, definidas em data/boss_mechanics.json. enabled liga tudo; verbs liga cada verbo. budget: mecânicas ativas ao mesmo tempo = base + ordem_da_fase / every_stages (cresce ao avançar). enrage: depois de start_s de luta o chefe ganha step de dano a cada every_s, até max_steps.",
     "enabled": true,
-    "verbs": {"totems": true, "cast": true, "sweep": true, "quadrants": true, "immune_adds": true, "enrage": true},
+    "verbs": {"totems": true, "cast": true, "sweep": true, "quadrants": true, "immune_adds": true, "mark": true, "enrage": true},
+    "armor": {"reduction": 0.4, "seconds": 6.0},
+    "off_bosses": [],
     "budget": {"base": 2, "every_stages": 3},
     "enrage": {"enabled": true, "start_s": 90.0, "every_s": 15.0, "step": 0.08, "max_steps": 5}
   },
