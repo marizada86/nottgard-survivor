@@ -2,7 +2,7 @@
 id: PLAN-104
 title: Retratos próprios da Ficha (C) e do HUD
 spec: SPEC-178
-status: DRAFT r1; aprovado per-plan em 2026-10-14; B-001 feito (EVID-256); aguarda G-R0 (imagens do dono)
+status: DRAFT r1; aprovado per-plan em 2026-10-14; B-001 feito (EVID-258); aguarda G-R0 (imagens do dono)
 content_state: DRAFT
 mode: per-plan   # aprovado pelo dono em 2026-10-14; rota: fazer agora e voltar ao PLAN-103
 request_classification: PLAN_DEVIATION   # em relação ao PLAN-103 ativo (B-002 aguarda imagens do dono; B-003 em R5)

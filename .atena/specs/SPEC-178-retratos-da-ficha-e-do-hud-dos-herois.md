@@ -1,7 +1,7 @@
 ---
 id: "SPEC-178"
 title: "Retratos próprios da Ficha do herói (C) e do HUD dos 12 heróis"
-status: "DRAFT r1 em 2026-10-14; plano aprovado por plano (per-plan) e rota fazer-agora-e-voltar; B-001 feito (EVID-256); aguarda G-R0"
+status: "DRAFT r1 em 2026-10-14; plano aprovado por plano (per-plan) e rota fazer-agora-e-voltar; B-001 feito (EVID-258); aguarda G-R0"
 origin: planned
 implementation_preceded_spec: false
 request_classification: PLAN_DEVIATION   # PLAN-103 ativo; o pedido não é B-002 (movimento) nem B-003 (game feel); encaixa em M3 (UI) e M5 (arte por visibilidade)

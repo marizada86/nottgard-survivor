@@ -1458,7 +1458,7 @@ plan_104_retratos_ficha_hud_2026_10_14:
   approval_status: APPROVED_EXPLICITLY
   content_state: DRAFT
   ordered_batches: [B-001, B-002, B-003]
-  checkpoint: G-R0/AWAITING_OWNER_IMAGES   # B-001 feito (EVID-256); aguarda 24 PNG do dono
+  checkpoint: G-R0/AWAITING_OWNER_IMAGES   # B-001 feito (EVID-258); aguarda 24 PNG do dono
   owner_gates: [G-R0, G-R1, G-R2]
   commit_push_build_export_notice: "commit e push autorizados pelo dono em 2026-10-14 (atena commit e push); build, exportacao e aviso seguem nao autorizados"
   canonical_promotion: false
