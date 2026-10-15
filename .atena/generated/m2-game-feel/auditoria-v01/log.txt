@@ -1,0 +1,26 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 610.47 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce GTX 1660 SUPER
+
+game feel { "stage": "dagruve", "hero": "durvall", "time": 42.5, "state": "revive_offer", "level": 2, "shots": 16, "max_numbers": 51, "max_fx_children": 4, "max_enemies": 51, "levelups": 1 }
+game feel { "stage": "docas", "hero": "brook", "time": 34.7, "state": "revive_offer", "level": 1, "shots": 11, "max_numbers": 12, "max_fx_children": 3, "max_enemies": 39, "levelups": 0 }
+game feel { "stage": "shedaklah", "hero": "maelor", "time": 15.2, "state": "revive_offer", "level": 1, "shots": 5, "max_numbers": 6, "max_fx_children": 3, "max_enemies": 24, "levelups": 0 }
+game feel { "stage": "molor", "hero": "sylas", "time": 29.0, "state": "revive_offer", "level": 1, "shots": 10, "max_numbers": 9, "max_fx_children": 3, "max_enemies": 29, "levelups": 0 }
+game feel { "stage": "durao", "hero": "kayron", "time": 41.2, "state": "revive_offer", "level": 1, "shots": 14, "max_numbers": 50, "max_fx_children": 3, "max_enemies": 37, "levelups": 0 }
+game feel { "stage": "feng_tu", "hero": "korrak", "time": 24.2, "state": "revive_offer", "level": 1, "shots": 8, "max_numbers": 5, "max_fx_children": 4, "max_enemies": 41, "levelups": 0 }
+game feel { "stage": "shendilavri", "hero": "leoric", "time": 18.9, "state": "revive_offer", "level": 1, "shots": 6, "max_numbers": 6, "max_fx_children": 3, "max_enemies": 25, "levelups": 0 }
+game feel { "stage": "goranthis", "hero": "nyrelia", "time": 16.2, "state": "revive_offer", "level": 1, "shots": 5, "max_numbers": 1, "max_fx_children": 3, "max_enemies": 35, "levelups": 0 }
+game feel { "stage": "pilares", "hero": "zynara", "time": 6.2, "state": "revive_offer", "level": 1, "shots": 2, "max_numbers": 1, "max_fx_children": 3, "max_enemies": 14, "levelups": 0 }
+game feel: ok 9 fases
+ERROR: 3 RID allocations of type 'N5GLES37TextureE' were leaked at exit.
+ERROR: Texture with GL ID of 22: leaked 5460 bytes.
+   at: ~Utilities (drivers/gles3/storage/utilities.cpp:82)
+ERROR: Texture with GL ID of 23: leaked 5460 bytes.
+   at: ~Utilities (drivers/gles3/storage/utilities.cpp:82)
+ERROR: Texture with GL ID of 24: leaked 8520 bytes.
+   at: ~Utilities (drivers/gles3/storage/utilities.cpp:82)
+ERROR: Parameter "RenderingServer::get_singleton()" is null.
+   at: ~CompressedTexture2D (scene/resources/compressed_texture.cpp:464)
+ERROR: Parameter "RenderingServer::get_singleton()" is null.
+   at: ~CompressedTexture2D (scene/resources/compressed_texture.cpp:464)
+ERROR: Parameter "RenderingServer::get_singleton()" is null.
+   at: ~CompressedTexture2D (scene/resources/compressed_texture.cpp:464)

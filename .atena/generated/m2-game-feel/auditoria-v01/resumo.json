@@ -1,0 +1,110 @@
+[
+	{
+		"hero": "durvall",
+		"level": 2,
+		"levelups": 1,
+		"max_enemies": 51,
+		"max_fx_children": 4,
+		"max_numbers": 51,
+		"shots": 16,
+		"stage": "dagruve",
+		"state": "revive_offer",
+		"time": 42.5
+	},
+	{
+		"hero": "brook",
+		"level": 1,
+		"levelups": 0,
+		"max_enemies": 39,
+		"max_fx_children": 3,
+		"max_numbers": 12,
+		"shots": 11,
+		"stage": "docas",
+		"state": "revive_offer",
+		"time": 34.7
+	},
+	{
+		"hero": "maelor",
+		"level": 1,
+		"levelups": 0,
+		"max_enemies": 24,
+		"max_fx_children": 3,
+		"max_numbers": 6,
+		"shots": 5,
+		"stage": "shedaklah",
+		"state": "revive_offer",
+		"time": 15.2
+	},
+	{
+		"hero": "sylas",
+		"level": 1,
+		"levelups": 0,
+		"max_enemies": 29,
+		"max_fx_children": 3,
+		"max_numbers": 9,
+		"shots": 10,
+		"stage": "molor",
+		"state": "revive_offer",
+		"time": 29.0
+	},
+	{
+		"hero": "kayron",
+		"level": 1,
+		"levelups": 0,
+		"max_enemies": 37,
+		"max_fx_children": 3,
+		"max_numbers": 50,
+		"shots": 14,
+		"stage": "durao",
+		"state": "revive_offer",
+		"time": 41.2
+	},
+	{
+		"hero": "korrak",
+		"level": 1,
+		"levelups": 0,
+		"max_enemies": 41,
+		"max_fx_children": 4,
+		"max_numbers": 5,
+		"shots": 8,
+		"stage": "feng_tu",
+		"state": "revive_offer",
+		"time": 24.2
+	},
+	{
+		"hero": "leoric",
+		"level": 1,
+		"levelups": 0,
+		"max_enemies": 25,
+		"max_fx_children": 3,
+		"max_numbers": 6,
+		"shots": 6,
+		"stage": "shendilavri",
+		"state": "revive_offer",
+		"time": 18.9
+	},
+	{
+		"hero": "nyrelia",
+		"level": 1,
+		"levelups": 0,
+		"max_enemies": 35,
+		"max_fx_children": 3,
+		"max_numbers": 1,
+		"shots": 5,
+		"stage": "goranthis",
+		"state": "revive_offer",
+		"time": 16.2
+	},
+	{
+		"hero": "zynara",
+		"level": 1,
+		"levelups": 0,
+		"max_enemies": 14,
+		"max_fx_children": 3,
+		"max_numbers": 1,
+		"shots": 2,
+		"stage": "pilares",
+		"state": "revive_offer",
+		"time": 6.2
+	}
+]

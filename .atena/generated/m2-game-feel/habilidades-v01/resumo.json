@@ -1,0 +1,110 @@
+[
+	{
+		"ability": "ruptura_sombria",
+		"fired": true,
+		"fx_after": 5,
+		"fx_before": 2,
+		"has_vfx": true,
+		"hero": "durvall",
+		"time": 6.7
+	},
+	{
+		"ability": "guarda_de_lliira",
+		"fired": true,
+		"fx_after": 3,
+		"fx_before": 2,
+		"has_vfx": true,
+		"hero": "brook",
+		"time": 7.0
+	},
+	{
+		"ability": "comunhao",
+		"fired": true,
+		"fx_after": 4,
+		"fx_before": 3,
+		"has_vfx": true,
+		"hero": "maelor",
+		"time": 7.0
+	},
+	{
+		"ability": "passo_pelas_sombras",
+		"fired": true,
+		"fx_after": 4,
+		"fx_before": 3,
+		"has_vfx": true,
+		"hero": "sylas",
+		"time": 6.9
+	},
+	{
+		"ability": "sobrecarga_mistica",
+		"fired": true,
+		"fx_after": 3,
+		"fx_before": 3,
+		"has_vfx": true,
+		"hero": "kayron",
+		"time": 7.0
+	},
+	{
+		"ability": "impacto_de_xargath",
+		"fired": true,
+		"fx_after": 4,
+		"fx_before": 2,
+		"has_vfx": true,
+		"hero": "korrak",
+		"time": 6.9
+	},
+	{
+		"ability": "constelacao",
+		"fired": true,
+		"fx_after": 12,
+		"fx_before": 3,
+		"has_vfx": true,
+		"hero": "leoric",
+		"time": 6.9
+	},
+	{
+		"ability": "dominacao",
+		"fired": true,
+		"fx_after": 4,
+		"fx_before": 2,
+		"has_vfx": true,
+		"hero": "nyrelia",
+		"time": 7.1
+	},
+	{
+		"ability": "suspensao_temporal",
+		"fired": true,
+		"fx_after": 3,
+		"fx_before": 3,
+		"has_vfx": true,
+		"hero": "zynara",
+		"time": 7.0
+	},
+	{
+		"ability": "concordia",
+		"fired": true,
+		"fx_after": 4,
+		"fx_before": 2,
+		"has_vfx": true,
+		"hero": "bromnor",
+		"time": 7.0
+	},
+	{
+		"ability": "modify_memory",
+		"fired": true,
+		"fx_after": 4,
+		"fx_before": 2,
+		"has_vfx": false,
+		"hero": "arlindo",
+		"time": 6.9
+	},
+	{
+		"ability": "navios_em_chamas",
+		"fired": true,
+		"fx_after": 5,
+		"fx_before": 2,
+		"has_vfx": false,
+		"hero": "erik",
+		"time": 6.9
+	}
+]
