@@ -5,8 +5,10 @@ mode: per-plan
 owner_request: 'atena aprovado, faça um lote maior de imagens para eu aprovar'
 approval_status: OWNER_AUTHORIZED_LARGER_CANDIDATE_BATCH
 content_state: CANON_VISUAL_v01
-status: VISUALLY_ACCEPTED_LOCAL_COMMIT_AUTHORIZED
-checkpoint: LOCAL_COMMIT
+status: VISUALLY_ACCEPTED_COMMITTED_LOCALLY
+checkpoint: ADMISSION_SCOPE_PENDING
+local_commit: a09d0ba3
+pushed: false
 owner_reply: 'atena aprovado, commite e continue'
 ordered_steps: [PV01, PV02, PV03, PV04, PV05, PV06, PV07, PV08, AUDIT_GALLERY]
 completed_steps: 9

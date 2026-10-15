@@ -1,0 +1,13 @@
+# Continuação — oito props de outros biomas — lote02/v01 DRAFT
+
+Pedido: "atena aprovado, commite e continue" após PV01–PV08. Commit local a09d0ba3 arquiva os oito props aceitos, L02 anteriormente aceita e prioridade reduzida dos heróis; sem push. IN_PLAN: continuar a mesma produção de variantes estáticas ART-012/PLAN-053, modo per-plan preservado. O pedido de continuar autoriza novo lote de candidatas, não seu aceite visual. Sem nova mecânica, integração ou substituição de imagens adotadas.
+
+Seleção: PV09 cogumelo/Shedaklah; PV10 bolha/Molor; PV11 rocha/Durao; PV12 torii/Feng-tu; PV13 cristal/Shendilavri; PV14 cachoeira/Goranthis; PV15 pilar_abissal/Pilares; PV16 lanterna/Feng-tu. São variantes opcionais dos tipos e referências existentes, não oito pendências obrigatórias ausentes. data/stages.json fundamenta as sete famílias principais; lanterna usa a identidade material de seu prop existente. Referências v01 correspondentes vistas antes das chamadas, papéis explícitos de câmera/paleta/material. Identidade de personagem N/A: props; cachoeira sem novo rosto/personagem. Sem lore nova ou mudança funcional.
+
+Bíblia ART-PROMPTS-007: pixel art densa e sombria, câmera isométrica cerca30graus, luz superior esquerda, alfa verdadeiro, sem chão ou sombra separada; conservar família/material/paleta de cada referência; objeto inteiro, alvo12% de margem, legível em64–160px. Sem lacunas BLOCKING para candidatos experimentais. Um arranjo/silhueta novo especificado por peça; nenhuma geração de herói. Lote02 permanece DRAFT.
+
+Etapas PV09,PV10,PV11,PV12,PV13,PV14,PV15,PV16,AUDIT_GALLERY (9). Oito chamadas image_gen built-in no máximo, uma por peça, sem retry automático. Pacote em .atena/generated/props-variedade-lote02-2026-10-15/ com jobs.json, prompts/PVxx.txt, native-sources/PVxx_v01.png, references/, prévias64/128/256 e galeria comparativa. Cópias em art-candidates/props-variedade-lote02/. Reusar processamento técnico do lote01, sem reescrever imagens criativamente; fontes e alfa intactos, recorte/escala de revisão apenas.
+
+Checks: PNGs decodificáveis, dimensões/alfa/bboxes/margens/hashes, fontes/cópias e referências idênticas, links válidos, inspeção individual e prancha. Medir margem nativa e sinalizar se inferior12%; não confundir preparação da prévia com cumprimento nativo. Escala física/âncora/colisão não verificadas; qualidade subjetiva/variedade aguardam dono. Retorno inválido fica retido, sem nova rodada automática.
+
+Recuperação: caminhos novos versionados, referências antigas preservadas. Sem assets/ oficiais, gameplay/data, dependências, saves, CANON das novas candidatas, novo commit/push ou exportação. Checkpoint final OWNER_VISUAL_REVIEW do lote02; os aceites e o commit de lote01 permanecem independentes.

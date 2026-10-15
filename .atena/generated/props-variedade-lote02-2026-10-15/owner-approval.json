@@ -1,0 +1,212 @@
+{
+  "revision": "PROPS-VARIEDADE-LOTE02/v01",
+  "owner_reply": "atena aprovado, commit e proximo",
+  "content_state": "CANON_VISUAL_v01",
+  "sources": [
+    {
+      "id": "PV09",
+      "name": "cogumelo",
+      "revision": "v01",
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/native-sources/PV09_v01.png",
+      "sha256": "4872a59bba1fd35da236da2b0f4c723391624456497b38072bd267ee2afaea71"
+    },
+    {
+      "id": "PV10",
+      "name": "bolha",
+      "revision": "v01",
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/native-sources/PV10_v01.png",
+      "sha256": "71264e831a08beb53e2386279fcfe59c1e9124a215c78ff9578cd040a305213b"
+    },
+    {
+      "id": "PV11",
+      "name": "rocha",
+      "revision": "v01",
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/native-sources/PV11_v01.png",
+      "sha256": "bcea1d4c533ef22bccf5a5554c092fb6a6eca45a12943b642062e6234bd5ae61"
+    },
+    {
+      "id": "PV12",
+      "name": "torii",
+      "revision": "v01",
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/native-sources/PV12_v01.png",
+      "sha256": "a27ae6d493aceb403e4dccc71c1d4a0657eb658c860d3e773ccd9f7922ad6bfc"
+    },
+    {
+      "id": "PV13",
+      "name": "cristal",
+      "revision": "v01",
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/native-sources/PV13_v01.png",
+      "sha256": "5f8ce69dafb709138733a41e90bcb257f7ee217852f2c3c2e23bd9ac589fa26c"
+    },
+    {
+      "id": "PV14",
+      "name": "cachoeira",
+      "revision": "v01",
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/native-sources/PV14_v01.png",
+      "sha256": "f806f97dfaa57a42ad3274ce761dc876db81e63c436899cf677390ba57bfdd9e"
+    },
+    {
+      "id": "PV15",
+      "name": "pilar_abissal",
+      "revision": "v01",
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/native-sources/PV15_v01.png",
+      "sha256": "81a2632e24bc57c9b3b47029936cf967b0822f440ebcb21c81b44c100cebc33c"
+    },
+    {
+      "id": "PV16",
+      "name": "lanterna",
+      "revision": "v01",
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/native-sources/PV16_v01.png",
+      "sha256": "6ef52aad10ee7e295b14cfce5f50932339310119d7d385919e66f0ccae70481d"
+    }
+  ],
+  "previews": [
+    {
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/previews/contact-sheet.png",
+      "sha256": "cf38bc57f477aab4d6eefcbbae966bd27361c1ad21ef3b9ace0030d81e714139"
+    },
+    {
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/previews/PV09-128.png",
+      "sha256": "cc9c4c85a01d8005fe0a48df64d022d24bff410b2f415ffadb94b4adae1b3fb1"
+    },
+    {
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/previews/PV09-256.png",
+      "sha256": "d077bcb33088d56866cca3fbccd70436dd44e339225d418d520fac2b4f983e17"
+    },
+    {
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/previews/PV09-64.png",
+      "sha256": "c7898ef17cdc5741152274a37ad8c9b5d131c5863a595791d1221013a7790705"
+    },
+    {
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/previews/PV09-reference-256.png",
+      "sha256": "02a6ad2229afb9cc1ca1d02458996f7f2a42f8cfa6e2493217c8149e0a8c15e5"
+    },
+    {
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/previews/PV10-128.png",
+      "sha256": "a7c816b53052ed7d6a4dc9fbceece62515f03fc8559ef16627e7c58df4f0c422"
+    },
+    {
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/previews/PV10-256.png",
+      "sha256": "4f65c877440d2fdef6a8c385935e8205149aa3a94ae3da606ca554237229d168"
+    },
+    {
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/previews/PV10-64.png",
+      "sha256": "37c8da227ff54a23c18426d34c1964ff27ba28bcc8bd633189215fb44eecf137"
+    },
+    {
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/previews/PV10-reference-256.png",
+      "sha256": "a12eed5982934f474bc76c92d8877042fb8b9ebc68349f9f4f9be9a7186d24ba"
+    },
+    {
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/previews/PV11-128.png",
+      "sha256": "9b345db3526e771d8143c6051e5f133dbfeb5277d50c819e85dcc17f777ec38a"
+    },
+    {
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/previews/PV11-256.png",
+      "sha256": "da1889a4a1c566c260f975f2073eda11477a0da0a77ae7af711220c026967b52"
+    },
+    {
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/previews/PV11-64.png",
+      "sha256": "b06b24dc7ce3e91e88446bea2a2d1639411b806dd351161d5b622923e9f3d2e3"
+    },
+    {
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/previews/PV11-reference-256.png",
+      "sha256": "46a1bff3c2b9a26fdc0f898ac21a1070434fc2615f392427ef5fbee8dc0cab52"
+    },
+    {
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/previews/PV12-128.png",
+      "sha256": "5277dcda7359f73a0813bec62544a741aa00ed81e4d2359c1f06907d2451df3a"
+    },
+    {
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/previews/PV12-256.png",
+      "sha256": "72ede9875c069004847601fca7a8518e79121c55fd6f45e0e430891bf10908a7"
+    },
+    {
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/previews/PV12-64.png",
+      "sha256": "a01ae2d491a1d4ef5052cec43d9486b162964b14eb1a2dca026f178e51ab7208"
+    },
+    {
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/previews/PV12-reference-256.png",
+      "sha256": "5b2edeeb911fae377188c1edfdfce9775bfe23e49f546072250c33bb4e9dba7d"
+    },
+    {
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/previews/PV13-128.png",
+      "sha256": "ea064a576f75a9b02d2d1a500075676d170c5da5399a48e11f44c99f643ab580"
+    },
+    {
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/previews/PV13-256.png",
+      "sha256": "5002020a92c771ba63cba8ff1bcccd4f4e240c4161212222badbd4cddeaed644"
+    },
+    {
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/previews/PV13-64.png",
+      "sha256": "8eb6841c694bd09880885c58a13d4e3d55a7a50a21cc4ae0f8150ec12ec96e08"
+    },
+    {
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/previews/PV13-reference-256.png",
+      "sha256": "65da7bdb81af8f77d5a4466477791b91fc22adb8ec7b1fe8a9a295a6a15d14c7"
+    },
+    {
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/previews/PV14-128.png",
+      "sha256": "3304edc1159261ecea1604f2948f080ec08041d1bb71bc0e72d12caf30f23e82"
+    },
+    {
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/previews/PV14-256.png",
+      "sha256": "cb98be6dfadb123588e90f6ab3c17256f5d62be8d70ff62e8ad303a7e508d326"
+    },
+    {
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/previews/PV14-64.png",
+      "sha256": "7f88fe7464d184cda49ff2c6c28db59b6f9a8dfe638aef21546512aeafcb9448"
+    },
+    {
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/previews/PV14-reference-256.png",
+      "sha256": "2f07212777a8af673130057fe417c5563a05f8f9350b9097df2557a6d1b197b0"
+    },
+    {
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/previews/PV15-128.png",
+      "sha256": "6467ba172319a499ac510420345b756ec3346020e21abb19f7dbd3b00b2b1e63"
+    },
+    {
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/previews/PV15-256.png",
+      "sha256": "15ca9f12773567f67bd77b1dd6a810134a705224a5a0f398a671ecfc292c7ac5"
+    },
+    {
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/previews/PV15-64.png",
+      "sha256": "d468d441f6409228182766d7c01a0e3cdd58622bff64f1d2e2c3fd1981d64fd1"
+    },
+    {
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/previews/PV15-reference-256.png",
+      "sha256": "3c5b22ead3b781bbafb222801775a3388a0893e7bff1071654ad2296854aff72"
+    },
+    {
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/previews/PV16-128.png",
+      "sha256": "3653b6c9372c39e3452b2a2e4beccca3257cbe712d762cda6a8385a0ddc36d21"
+    },
+    {
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/previews/PV16-256.png",
+      "sha256": "0444828a013a31f4b64ce1c209c194f9d6756a747e205e86f82f615c0427667d"
+    },
+    {
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/previews/PV16-64.png",
+      "sha256": "07ce506d5f9faa49f0075567dc8dba38305bf4482805eea159c880c6ea28e722"
+    },
+    {
+      "path": ".atena/generated/props-variedade-lote02-2026-10-15/previews/PV16-reference-256.png",
+      "sha256": "0a1bb7be9b9cab0e01e4779a8491d9ad153525c63d6c71cc5123b315fac7eb2d"
+    }
+  ],
+  "accepted_as_displayed": true,
+  "native_margin_notes_preserved": [
+    "PV09",
+    "PV10",
+    "PV11",
+    "PV12",
+    "PV13",
+    "PV14",
+    "PV15",
+    "PV16"
+  ],
+  "runtime_admission": false,
+  "commit_authorized": true,
+  "push_authorized": false,
+  "new_batch_visual_approval": false
+}

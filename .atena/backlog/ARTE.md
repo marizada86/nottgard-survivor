@@ -21,6 +21,8 @@ L02 opcional (`Clique para jogar`, FILA-026) v01 aceita visualmente, admissão p
 
 ### Pendências registradas — prioridade dos heróis reduzida em 2026-10-14
 
+Continuação em2026-10-15: lote01 de props e L02 aceitos arquivados no commit local `a09d0ba3`, sem push. Oito variantes PV09–PV16 v01 de outros biomas aceitas visualmente pelo dono, commit local autorizado; [galeria](../generated/props-variedade-lote02-2026-10-15/index.html), admissão pendente. Tipos/famílias existentes, sem novos movimentos de personagens principais.
+
 | ID | Tipo | Item | Sabor Nottgard | Origem | Dependência |
 |---|---|---|---|---|---|
 | ART-045 | retrato + tiras | **Erik e Arlindo jogáveis:** retrato de seleção (1536×1024) e nove tiras de animação cada (`idle`, cinco `move_*`, `attack`, `active`, `death`), a partir dos retratos do Nottcard; ordem de cota: ER01, ER02, AO01, AO02 primeiro | Grimholders, névoa, Amuleto da Luz (Erik); andarilho de Dagruve e magia de memória (Arlindo) | pedido do dono 2026-10-09; [ART-PROMPTS-060](../generated/ART-PROMPTS-060-erik-e-arlindo-jogaveis.md), [CHATGPT-FILA-027](../generated/CHATGPT-FILA-027-erik-e-arlindo.md) | [SPEC-160](../specs/SPEC-160-arlindo-orlando-e-erik-blackthorn-jogaveis.md); arte própria integrada localmente v04 em 2026-10-10: 18 tiras e dois retratos; ER03=7, ER06=5; aceite de fluidez pendente ([evidência](../evidence/hero-own-art-integration-2026-10-10.md)) |

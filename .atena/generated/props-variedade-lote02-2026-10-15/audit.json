@@ -1,0 +1,751 @@
+{
+  "revision": "PROPS-VARIEDADE-LOTE02/v01",
+  "content_state": "CANON_VISUAL_v01",
+  "imagegen_calls": 8,
+  "sources": [
+    {
+      "id": "PV09",
+      "name": "cogumelo",
+      "biome": "shedaklah",
+      "content_state": "CANON_VISUAL_v01",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          65,
+          37,
+          1246,
+          1236
+        ],
+        "128": [
+          274,
+          82,
+          1082,
+          1205
+        ]
+      },
+      "alpha128_margins": [
+        274,
+        82,
+        172,
+        49
+      ],
+      "native_12percent_margin_pass": false,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "4872a59bba1fd35da236da2b0f4c723391624456497b38072bd267ee2afaea71",
+      "prompt_sha256": "5a54ee6486430820ec5c020afee5331e286f90b9b3550d399d774c8ade9a9fb0",
+      "reference_sha256": "19a1d74f2033a548055001fd982265a167cf73d90efd6e8dad40c1f224d982d0",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "dimensions": [
+            64,
+            64
+          ],
+          "nonzero_alpha_bounds": [
+            14,
+            6,
+            52,
+            59
+          ],
+          "decoded": true,
+          "sha256": "c7898ef17cdc5741152274a37ad8c9b5d131c5863a595791d1221013a7790705"
+        },
+        {
+          "size": 128,
+          "dimensions": [
+            128,
+            128
+          ],
+          "nonzero_alpha_bounds": [
+            27,
+            11,
+            104,
+            117
+          ],
+          "decoded": true,
+          "sha256": "cc9c4c85a01d8005fe0a48df64d022d24bff410b2f415ffadb94b4adae1b3fb1"
+        },
+        {
+          "size": 256,
+          "dimensions": [
+            256,
+            256
+          ],
+          "nonzero_alpha_bounds": [
+            55,
+            16,
+            238,
+            235
+          ],
+          "decoded": true,
+          "sha256": "d077bcb33088d56866cca3fbccd70436dd44e339225d418d520fac2b4f983e17"
+        }
+      ],
+      "owner_visual_acceptance": "APPROVED_AS_DISPLAYED",
+      "world_scale_and_anchor": "NOT_TESTED",
+      "runtime_admission": false
+    },
+    {
+      "id": "PV10",
+      "name": "bolha",
+      "biome": "molor",
+      "content_state": "CANON_VISUAL_v01",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          0,
+          25,
+          1192,
+          1254
+        ],
+        "128": [
+          394,
+          178,
+          945,
+          1156
+        ]
+      },
+      "alpha128_margins": [
+        394,
+        178,
+        309,
+        98
+      ],
+      "native_12percent_margin_pass": false,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "71264e831a08beb53e2386279fcfe59c1e9124a215c78ff9578cd040a305213b",
+      "prompt_sha256": "d0f991acedaa834e7173fd1d03512cb09bb761493b6d2631c78bd7989be0d0f4",
+      "reference_sha256": "c295f3651202f5b66d0e5016f9ee6f6c00467afcfa5f63000b4d9277056426c0",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "dimensions": [
+            64,
+            64
+          ],
+          "nonzero_alpha_bounds": [
+            22,
+            11,
+            48,
+            56
+          ],
+          "decoded": true,
+          "sha256": "37c8da227ff54a23c18426d34c1964ff27ba28bcc8bd633189215fb44eecf137"
+        },
+        {
+          "size": 128,
+          "dimensions": [
+            128,
+            128
+          ],
+          "nonzero_alpha_bounds": [
+            44,
+            17,
+            96,
+            111
+          ],
+          "decoded": true,
+          "sha256": "a7c816b53052ed7d6a4dc9fbceece62515f03fc8559ef16627e7c58df4f0c422"
+        },
+        {
+          "size": 256,
+          "dimensions": [
+            256,
+            256
+          ],
+          "nonzero_alpha_bounds": [
+            51,
+            35,
+            235,
+            223
+          ],
+          "decoded": true,
+          "sha256": "4f65c877440d2fdef6a8c385935e8205149aa3a94ae3da606ca554237229d168"
+        }
+      ],
+      "owner_visual_acceptance": "APPROVED_AS_DISPLAYED",
+      "world_scale_and_anchor": "NOT_TESTED",
+      "runtime_admission": false
+    },
+    {
+      "id": "PV11",
+      "name": "rocha",
+      "biome": "durao",
+      "content_state": "CANON_VISUAL_v01",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          65,
+          23,
+          1206,
+          1228
+        ],
+        "128": [
+          296,
+          165,
+          988,
+          1121
+        ]
+      },
+      "alpha128_margins": [
+        296,
+        165,
+        266,
+        133
+      ],
+      "native_12percent_margin_pass": false,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "bcea1d4c533ef22bccf5a5554c092fb6a6eca45a12943b642062e6234bd5ae61",
+      "prompt_sha256": "7b2df0a0d2e1301ef59a4f10996875149393e82178206bad47147636da2becff",
+      "reference_sha256": "8b8145bd9724f2905aa0f47d25f02d88e2079f5633ba08f8a7491e610e91a5ec",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "dimensions": [
+            64,
+            64
+          ],
+          "nonzero_alpha_bounds": [
+            16,
+            10,
+            49,
+            55
+          ],
+          "decoded": true,
+          "sha256": "b06b24dc7ce3e91e88446bea2a2d1639411b806dd351161d5b622923e9f3d2e3"
+        },
+        {
+          "size": 128,
+          "dimensions": [
+            128,
+            128
+          ],
+          "nonzero_alpha_bounds": [
+            18,
+            16,
+            97,
+            110
+          ],
+          "decoded": true,
+          "sha256": "9b345db3526e771d8143c6051e5f133dbfeb5277d50c819e85dcc17f777ec38a"
+        },
+        {
+          "size": 256,
+          "dimensions": [
+            256,
+            256
+          ],
+          "nonzero_alpha_bounds": [
+            37,
+            20,
+            195,
+            236
+          ],
+          "decoded": true,
+          "sha256": "da1889a4a1c566c260f975f2073eda11477a0da0a77ae7af711220c026967b52"
+        }
+      ],
+      "owner_visual_acceptance": "APPROVED_AS_DISPLAYED",
+      "world_scale_and_anchor": "NOT_TESTED",
+      "runtime_admission": false
+    },
+    {
+      "id": "PV12",
+      "name": "torii",
+      "biome": "feng_tu",
+      "content_state": "CANON_VISUAL_v01",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          25,
+          17,
+          1224,
+          1254
+        ],
+        "128": [
+          130,
+          57,
+          1162,
+          1206
+        ]
+      },
+      "alpha128_margins": [
+        130,
+        57,
+        92,
+        48
+      ],
+      "native_12percent_margin_pass": false,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "a27ae6d493aceb403e4dccc71c1d4a0657eb658c860d3e773ccd9f7922ad6bfc",
+      "prompt_sha256": "ad57a09a5d9a5ed1668b5e7fab72795a8c489c718e16477dc5c7fbc79cd1a620",
+      "reference_sha256": "1c2c19984594d922bedbcae28b54fa606992d54a5bc7fa20c480919de27de9ea",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "dimensions": [
+            64,
+            64
+          ],
+          "nonzero_alpha_bounds": [
+            9,
+            5,
+            56,
+            58
+          ],
+          "decoded": true,
+          "sha256": "a01ae2d491a1d4ef5052cec43d9486b162964b14eb1a2dca026f178e51ab7208"
+        },
+        {
+          "size": 128,
+          "dimensions": [
+            128,
+            128
+          ],
+          "nonzero_alpha_bounds": [
+            18,
+            11,
+            112,
+            116
+          ],
+          "decoded": true,
+          "sha256": "5277dcda7359f73a0813bec62544a741aa00ed81e4d2359c1f06907d2451df3a"
+        },
+        {
+          "size": 256,
+          "dimensions": [
+            256,
+            256
+          ],
+          "nonzero_alpha_bounds": [
+            37,
+            22,
+            226,
+            232
+          ],
+          "decoded": true,
+          "sha256": "72ede9875c069004847601fca7a8518e79121c55fd6f45e0e430891bf10908a7"
+        }
+      ],
+      "owner_visual_acceptance": "APPROVED_AS_DISPLAYED",
+      "world_scale_and_anchor": "NOT_TESTED",
+      "runtime_admission": false
+    },
+    {
+      "id": "PV13",
+      "name": "cristal",
+      "biome": "shendilavri",
+      "content_state": "CANON_VISUAL_v01",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          49,
+          31,
+          1127,
+          1190
+        ],
+        "128": [
+          440,
+          34,
+          851,
+          1186
+        ]
+      },
+      "alpha128_margins": [
+        440,
+        34,
+        403,
+        68
+      ],
+      "native_12percent_margin_pass": false,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "5f8ce69dafb709138733a41e90bcb257f7ee217852f2c3c2e23bd9ac589fa26c",
+      "prompt_sha256": "a26e588709cae532e8ae524d8fb18fd47a2b3ad08541993988e8404408045d8b",
+      "reference_sha256": "82875261a0dfef689a22d368a1b731b75e96de34b77c261ddbc048316103e635",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "dimensions": [
+            64,
+            64
+          ],
+          "nonzero_alpha_bounds": [
+            24,
+            4,
+            45,
+            60
+          ],
+          "decoded": true,
+          "sha256": "8eb6841c694bd09880885c58a13d4e3d55a7a50a21cc4ae0f8150ec12ec96e08"
+        },
+        {
+          "size": 128,
+          "dimensions": [
+            128,
+            128
+          ],
+          "nonzero_alpha_bounds": [
+            49,
+            8,
+            106,
+            120
+          ],
+          "decoded": true,
+          "sha256": "ea064a576f75a9b02d2d1a500075676d170c5da5399a48e11f44c99f643ab580"
+        },
+        {
+          "size": 256,
+          "dimensions": [
+            256,
+            256
+          ],
+          "nonzero_alpha_bounds": [
+            98,
+            16,
+            217,
+            240
+          ],
+          "decoded": true,
+          "sha256": "5002020a92c771ba63cba8ff1bcccd4f4e240c4161212222badbd4cddeaed644"
+        }
+      ],
+      "owner_visual_acceptance": "APPROVED_AS_DISPLAYED",
+      "world_scale_and_anchor": "NOT_TESTED",
+      "runtime_admission": false
+    },
+    {
+      "id": "PV14",
+      "name": "cachoeira",
+      "biome": "goranthis",
+      "content_state": "CANON_VISUAL_v01",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          0,
+          0,
+          1202,
+          1190
+        ],
+        "128": [
+          304,
+          75,
+          994,
+          1175
+        ]
+      },
+      "alpha128_margins": [
+        304,
+        75,
+        260,
+        79
+      ],
+      "native_12percent_margin_pass": false,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "f806f97dfaa57a42ad3274ce761dc876db81e63c436899cf677390ba57bfdd9e",
+      "prompt_sha256": "0ffe423335ccc653dc154a5554a5d81692ff77746ecd7ded31e6cea3bbf873ae",
+      "reference_sha256": "da8e1809ef8c7cfdf138456070465c069c734f0c19d771fae8d9e97ed9ee616f",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "dimensions": [
+            64,
+            64
+          ],
+          "nonzero_alpha_bounds": [
+            18,
+            7,
+            50,
+            59
+          ],
+          "decoded": true,
+          "sha256": "7f88fe7464d184cda49ff2c6c28db59b6f9a8dfe638aef21546512aeafcb9448"
+        },
+        {
+          "size": 128,
+          "dimensions": [
+            128,
+            128
+          ],
+          "nonzero_alpha_bounds": [
+            35,
+            14,
+            115,
+            120
+          ],
+          "decoded": true,
+          "sha256": "3304edc1159261ecea1604f2948f080ec08041d1bb71bc0e72d12caf30f23e82"
+        },
+        {
+          "size": 256,
+          "dimensions": [
+            256,
+            256
+          ],
+          "nonzero_alpha_bounds": [
+            44,
+            29,
+            230,
+            240
+          ],
+          "decoded": true,
+          "sha256": "cb98be6dfadb123588e90f6ab3c17256f5d62be8d70ff62e8ad303a7e508d326"
+        }
+      ],
+      "owner_visual_acceptance": "APPROVED_AS_DISPLAYED",
+      "world_scale_and_anchor": "NOT_TESTED",
+      "runtime_admission": false
+    },
+    {
+      "id": "PV15",
+      "name": "pilar_abissal",
+      "biome": "pilares",
+      "content_state": "CANON_VISUAL_v01",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          25,
+          8,
+          1242,
+          1254
+        ],
+        "128": [
+          398,
+          157,
+          880,
+          1182
+        ]
+      },
+      "alpha128_margins": [
+        398,
+        157,
+        374,
+        72
+      ],
+      "native_12percent_margin_pass": false,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "81a2632e24bc57c9b3b47029936cf967b0822f440ebcb21c81b44c100cebc33c",
+      "prompt_sha256": "2a73258ff40542e17d3adafe750ec5f3e37b321d69ca8e091c6c79dd193549aa",
+      "reference_sha256": "d95b5997845cf82ed0f67b2c5e73b692344b95818e4faee0de840af160217835",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "dimensions": [
+            64,
+            64
+          ],
+          "nonzero_alpha_bounds": [
+            20,
+            11,
+            43,
+            57
+          ],
+          "decoded": true,
+          "sha256": "d468d441f6409228182766d7c01a0e3cdd58622bff64f1d2e2c3fd1981d64fd1"
+        },
+        {
+          "size": 128,
+          "dimensions": [
+            128,
+            128
+          ],
+          "nonzero_alpha_bounds": [
+            9,
+            21,
+            89,
+            114
+          ],
+          "decoded": true,
+          "sha256": "6467ba172319a499ac510420345b756ec3346020e21abb19f7dbd3b00b2b1e63"
+        },
+        {
+          "size": 256,
+          "dimensions": [
+            256,
+            256
+          ],
+          "nonzero_alpha_bounds": [
+            19,
+            16,
+            237,
+            228
+          ],
+          "decoded": true,
+          "sha256": "15ca9f12773567f67bd77b1dd6a810134a705224a5a0f398a671ecfc292c7ac5"
+        }
+      ],
+      "owner_visual_acceptance": "APPROVED_AS_DISPLAYED",
+      "world_scale_and_anchor": "NOT_TESTED",
+      "runtime_admission": false
+    },
+    {
+      "id": "PV16",
+      "name": "lanterna",
+      "biome": "feng_tu",
+      "content_state": "CANON_VISUAL_v01",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          57,
+          20,
+          1055,
+          1182
+        ],
+        "128": [
+          428,
+          216,
+          910,
+          1132
+        ]
+      },
+      "alpha128_margins": [
+        428,
+        216,
+        344,
+        122
+      ],
+      "native_12percent_margin_pass": false,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "6ef52aad10ee7e295b14cfce5f50932339310119d7d385919e66f0ccae70481d",
+      "prompt_sha256": "6ce8adbc700682c3893f173190de0966d4ad8270badb04e135d0fe2560a4e075",
+      "reference_sha256": "471295e2d45d7bfd19a3e3c33d53c97a1f1419791b29e5115237650d7d0597fc",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "dimensions": [
+            64,
+            64
+          ],
+          "nonzero_alpha_bounds": [
+            26,
+            13,
+            51,
+            58
+          ],
+          "decoded": true,
+          "sha256": "07ce506d5f9faa49f0075567dc8dba38305bf4482805eea159c880c6ea28e722"
+        },
+        {
+          "size": 128,
+          "dimensions": [
+            128,
+            128
+          ],
+          "nonzero_alpha_bounds": [
+            51,
+            26,
+            111,
+            116
+          ],
+          "decoded": true,
+          "sha256": "3653b6c9372c39e3452b2a2e4beccca3257cbe712d762cda6a8385a0ddc36d21"
+        },
+        {
+          "size": 256,
+          "dimensions": [
+            256,
+            256
+          ],
+          "nonzero_alpha_bounds": [
+            41,
+            52,
+            222,
+            232
+          ],
+          "decoded": true,
+          "sha256": "0444828a013a31f4b64ce1c209c194f9d6756a747e205e86f82f615c0427667d"
+        }
+      ],
+      "owner_visual_acceptance": "APPROVED_AS_DISPLAYED",
+      "world_scale_and_anchor": "NOT_TESTED",
+      "runtime_admission": false
+    }
+  ],
+  "gallery_links": 43,
+  "missing_links": [],
+  "visual_acceptance": "APPROVED_AS_DISPLAYED",
+  "technical_delivery_pass": true,
+  "native_margin_notes": [
+    "PV09",
+    "PV10",
+    "PV11",
+    "PV12",
+    "PV13",
+    "PV14",
+    "PV15",
+    "PV16"
+  ],
+  "runtime_admission": false,
+  "canonical_promotion": "VISUAL_ONLY_PV09_PV16_v01"
+}

@@ -1,0 +1,29 @@
+plan: PLAN-053
+revision: PROPS-VARIEDADE-LOTE02/v01
+classification: IN_PLAN
+mode: per-plan
+owner_request: 'atena aprovado, commite e continue'
+approval_status: AUTHORIZED_CONTINUATION_STATIC_PROP_CANDIDATES
+prior_accepted_assets_commit: a09d0ba3
+status: VISUALLY_ACCEPTED_LOCAL_COMMIT_AUTHORIZED
+checkpoint: LOCAL_COMMIT
+content_state: CANON_VISUAL_v01
+owner_reply: 'atena aprovado, commit e proximo'
+ordered_steps: [PV09, PV10, PV11, PV12, PV13, PV14, PV15, PV16, AUDIT_GALLERY]
+completed_steps: 9
+total_steps: 9
+imagegen_calls: 8
+maximum_imagegen_calls: 8
+blocking_gaps: []
+runtime_admission: false
+canonical_promotion: VISUAL_ONLY_PV09_PV16_v01
+commit_push_export: LOCAL_COMMIT_AUTHORIZED_PUSH_EXPORT_NOT_AUTHORIZED
+spec: .atena/specs/SPEC-121-retomada-fila-imagens/production-props-variedade-lote02-v01.md
+technical_delivery_checks: PASSED
+native_dimensions: [1254, 1254]
+native_margin_notes: [PV09, PV10, PV11, PV12, PV13, PV14, PV15, PV16]
+full_native_margin_contract: NOT_MET
+owner_visual_acceptance: APPROVED_AS_DISPLAYED
+gallery: .atena/generated/props-variedade-lote02-2026-10-15/index.html
+evidence: .atena/evidence/props-variedade-lote02-2026-10-15.md
+next_objective: 'Dono revisar PV09–PV16, aceitar por codigo ou informar defeitos; sem nova correcao/admissao automatica'
