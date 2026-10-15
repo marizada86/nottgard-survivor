@@ -26,3 +26,5 @@ Entregas: [galeria](../generated/props-variedade-lote03-2026-10-15/index.html), 
 ## Autorização de versionamento
 
 Pedido posterior “atena, commit e push”: IN_PLAN, arquivar o lote03 como DRAFT e publicar a branch, incluindo os dois commits locais anteriores de assets. Revisão visual PV17–PV24 permanece pendente, com ressalvas PV18/PV20 preservadas. Sem promoção CANON, integração ou exportação. Escopo seletivo preserva os demais trabalhos locais.
+
+Resultado: commit `37335f0b938b50d9808c29451f93168d5ce1a33d` com70 arquivos de assets/registros; push de `711faa84` até este commit concluído. `git ls-remote --heads` confirmou SHA idêntico. Auditoria passou:8 PNGs e42 links sem ausências; diff --check passou. Recibo arquivado junto à galeria. Permanecem DRAFT e checkpoint OWNER_VISUAL_REVIEW, sem admissão ou promoção; demais alterações locais preservadas.
