@@ -4,6 +4,7 @@ extends Node
 
 var _dir := "res://.atena/generated/m3-onboarding/ui-primeiros-encontros/"
 var _stage := "dagruve"
+var _only: PackedStringArray = []
 ## alvo do qa_prepare; interact = true chama Battle.interact() em seguida (bau, fonte, ritual)
 const TARGETS := [
 	{"id": "levelup", "target": "levelup", "interact": false},
@@ -17,6 +18,8 @@ const TARGETS := [
 	{"id": "chefe_70", "target": "boss_70", "interact": false},
 	{"id": "portal", "target": "portal", "interact": false},
 	{"id": "vitoria", "target": "victory", "interact": false},
+	{"id": "reviver", "target": "revive_offer", "interact": false},
+	{"id": "derrota", "target": "defeat", "interact": false},
 ]
 
 func _ready() -> void:
@@ -25,10 +28,14 @@ func _ready() -> void:
 			_dir = argument.trim_prefix("--dir=")
 		elif argument.begins_with("--stage="):
 			_stage = argument.trim_prefix("--stage=")
+		elif argument.begins_with("--only="):
+			_only = argument.trim_prefix("--only=").split(",")
 	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(_dir))
 	Playtest.visible = false
 	var report: Array = []
 	for t in TARGETS:
+		if not _only.is_empty() and not _only.has(String(t.id)):
+			continue
 		Game.qa_sandbox = true
 		Game.qa_launch = {"seed": 12345, "target_state": t.target}
 		Game.run_stage = _stage

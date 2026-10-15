@@ -21,7 +21,7 @@ Origem: PLAN-103, lote B-004. Proposta em `vault/drafts/PROPOSTA-m3-ui-onboardin
 |---|---|---|
 | R1 | Inventário dos primeiros minutos | **feita** (EVID-262) |
 | R2 | Dicas de primeira vez (7), opção Ligadas/Desligadas, teto 1 a cada 90 s e 7 no total, sem chefe nem vida < 30% | **feita** (EVID-263; aprovada em G-M3-2, com o Q/RMB) |
-| R3 | Ofertas e HUD da run no padrão UiKit | a propor após a R2 |
+| R3 | Ofertas e HUD da run no padrão UiKit (R3a ofertas, R3b decisão do portal, R3c reviver, R3d HUD) | proposta pronta, aguarda G-M3-3 (`vault/drafts/PROPOSTA-m3-r3-ofertas-e-hud-da-run-2026-10-15.md`) |
 | R4 | Promoção da direção visual DRAFT → CANON | com o dono |
 | R5 | Teste com jogador novo | com o dono |
 

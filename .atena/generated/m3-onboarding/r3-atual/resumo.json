@@ -1,0 +1,19 @@
+[
+	{
+		"id": "levelup",
+		"state": "levelup"
+	},
+	{
+		"id": "bau_aberto",
+		"interact": false,
+		"state": "running"
+	},
+	{
+		"id": "reviver",
+		"state": "revive_offer"
+	},
+	{
+		"id": "derrota",
+		"state": "dead"
+	}
+]
