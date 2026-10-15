@@ -57,3 +57,9 @@ Verificado: as 12 habilidades disparam em run real; 10 mostram a arte DRAFT admi
 
 ## Decisões do gate G-M2-2 (2026-10-14)
 F-7 e F-6 aprovadas; F-9 aprovada (nome em português); F-4 e F-5 **recusadas** (sem prompts de SFX por ora). Novo achado F-10: `validate_audio.js` aponta os eventos `boss.discipulo_pestilento.*` ausentes (cai no som genérico).
+
+## R5 (G-M2-3, 2026-10-15)
+Opções A (vinheta de vida baixa) e B (números legíveis) feitas e commitadas por outra sessão (EVID-257). Opção E feita e amostras de C e D geradas para Dagruve, Molor e Durao (EVID-261). Achados F-11 (textos de aviso e de introdução sem contraste) e F-12 (HUD atrás da pausa translúcida); correções aguardam o gate G-M2-4.
+
+## R5 gate G-M2-4 (2026-10-15): F-11, F-12, F-13 e Atmosfera (C+D) implementados
+F-11 e F-12 aprovados; C e D entram juntos (opção "Atmosfera", padrão Leve). F-13 (contorno do relógio, fase, armas e chefe em piso claro) saiu da conferência e entrou no mesmo lote por ser a mesma classe de problema. Evidência: EVID-261. Pendente humano: aceite visual dos 9 perfis e medição em máquina fraca.

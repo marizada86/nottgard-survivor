@@ -1,0 +1,12 @@
+{
+  "_nota": "SPEC-177 R5-C/D (DRAFT): atmosfera por fase. particles: cor RGBA, vx/vy em px/s (vy negativo sobe), amount, size. grade: tint (multiplica a cor), sat (saturacao), vig (vinheta).",
+  "dagruve": {"name": "cinza lenta de cemiterio", "particles": {"color": [0.78, 0.74, 0.82, 0.55], "vx": 6.0, "vy": 9.0, "amount": 46, "size": 2.4}, "grade": {"tint": [0.93, 0.94, 1.04], "sat": 0.88, "vig": 0.28}},
+  "docas": {"name": "maresia fria", "particles": {"color": [0.7, 0.85, 0.95, 0.5], "vx": 10.0, "vy": 7.0, "amount": 36, "size": 2.2}, "grade": {"tint": [0.92, 1.0, 1.06], "sat": 0.95, "vig": 0.24}},
+  "shedaklah": {"name": "esporos roxos", "particles": {"color": [0.82, 0.6, 0.95, 0.6], "vx": 3.0, "vy": -9.0, "amount": 36, "size": 2.5}, "grade": {"tint": [1.03, 0.95, 1.05], "sat": 1.02, "vig": 0.26}},
+  "molor": {"name": "esporos subindo", "particles": {"color": [0.72, 1.0, 0.45, 0.7], "vx": 4.0, "vy": -10.0, "amount": 40, "size": 2.6}, "grade": {"tint": [0.96, 1.05, 0.88], "sat": 1.08, "vig": 0.22}},
+  "durao": {"name": "fagulhas frias a deriva", "particles": {"color": [0.55, 0.9, 1.0, 0.6], "vx": 8.0, "vy": -6.0, "amount": 36, "size": 2.2}, "grade": {"tint": [0.9, 0.99, 1.07], "sat": 0.94, "vig": 0.26}},
+  "feng_tu": {"name": "cinza de incenso", "particles": {"color": [0.82, 0.8, 0.78, 0.5], "vx": -6.0, "vy": -7.0, "amount": 34, "size": 2.3}, "grade": {"tint": [1.03, 0.97, 0.95], "sat": 0.94, "vig": 0.25}},
+  "shendilavri": {"name": "petalas e brasas rosadas", "particles": {"color": [1.0, 0.62, 0.78, 0.6], "vx": 7.0, "vy": -5.0, "amount": 34, "size": 2.6}, "grade": {"tint": [1.05, 0.96, 1.0], "sat": 1.04, "vig": 0.22}},
+  "goranthis": {"name": "poeira dourada", "particles": {"color": [1.0, 0.9, 0.55, 0.6], "vx": 3.0, "vy": -6.0, "amount": 36, "size": 2.4}, "grade": {"tint": [1.04, 1.02, 0.92], "sat": 1.03, "vig": 0.2}},
+  "pilares": {"name": "po de pedra ao vento", "particles": {"color": [0.85, 0.88, 0.92, 0.4], "vx": 12.0, "vy": 3.0, "amount": 22, "size": 2.0}, "grade": {"tint": [0.95, 0.99, 1.04], "sat": 0.95, "vig": 0.22}}
+}

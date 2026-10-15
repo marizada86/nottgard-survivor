@@ -59,6 +59,7 @@ var _edge_fog: EdgeFog
 var _texture_cache: Dictionary = {}
 var _stage_background: CanvasLayer
 var _visual_filter: VisualFilter  # SPEC-173: entre o mundo e a HUD
+var _atmosphere: Atmosphere  # SPEC-177 R5-C/D: partículas e gradação por fase
 var _text_layer: CanvasLayer      # SPEC-173: texto do mundo, acima do filtro
 var _text_fx: Node2D
 var _danger: DangerVignette       # M2 R5 (A): vinheta de vida baixa e de golpe recebido, abaixo do texto do mundo
@@ -123,6 +124,9 @@ func playtest_context() -> Dictionary:
 # ------------------------------------------------------------------ fase
 
 func _load_stage() -> void:
+	if is_instance_valid(_atmosphere):   # SPEC-177 R5: o perfil da atmosfera acompanha a fase atual
+		_atmosphere.setup(battle.stage_id, Game.profile.data.settings)
+		_atmosphere.apply(Game.profile.data.settings, Game.touch_controls_enabled())
 	for n in enemy_nodes.values():
 		n.queue_free()
 	enemy_nodes.clear()
@@ -195,6 +199,8 @@ func _load_stage() -> void:
 ## O texto (números de dano, falas, rótulos) vai numa camada que segue a câmera, para ficar nítido sob qualquer variante.
 func _setup_visual_filter() -> void:
 	hud.layer = VisualFilter.HUD_LAYER
+	_atmosphere = Atmosphere.new()   # antes do filtro: a gradação entra primeiro na mesma camada
+	add_child(_atmosphere)
 	_visual_filter = VisualFilter.new()
 	add_child(_visual_filter)
 	var danger_layer := CanvasLayer.new()
@@ -221,6 +227,8 @@ func _setup_visual_filter() -> void:
 	Game.visual_settings_changed.connect(_on_visual_settings_changed)
 
 func _on_visual_settings_changed() -> void:
+	if is_instance_valid(_atmosphere):
+		_atmosphere.apply(Game.profile.data.settings, Game.touch_controls_enabled())
 	if is_instance_valid(_visual_filter):
 		_visual_filter.apply(Game.profile.data.settings)
 

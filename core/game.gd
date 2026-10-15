@@ -424,6 +424,15 @@ func set_visual_filter(mode: String) -> void:
 	visual_settings_changed.emit()
 
 
+## SPEC-177 R5: atmosfera por fase (off, leve). Aplica na hora, na partida aberta.
+func set_atmosphere(mode: String) -> void:
+	if not (mode in ["off", "leve"]):
+		return
+	profile.data.settings.atmosphere = mode
+	save()
+	visual_settings_changed.emit()
+
+
 ## SPEC-173 (MEC-066): fonte dos títulos (ver UiFonts). Vale ao reabrir a tela; não há reinício.
 func set_ui_font(id: String) -> void:
 	if UiFonts.normalize(id) != id:

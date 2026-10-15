@@ -104,6 +104,7 @@ func _ready() -> void:
 		Game.apply_audio())
 	vol_slider.drag_ended.connect(func(_changed: bool): Game.save())  # BUG-044: grava ao soltar, não a cada passo
 	# SPEC-131: painel do herói no padrão da ficha C, acima das linhas do Estige
+	_outline_world_labels()
 	hero_panel = HeroPanel.new()
 	hero_panel.name = "HeroPanel"
 	$StatBox.add_child(hero_panel)
@@ -476,6 +477,9 @@ var _detail_nodes: Array = []
 var _detail_on := false
 
 func _process(_delta: float) -> void:
+	if hero_panel != null:   # SPEC-177 F-12: a pausa é translúcida; a ficha de status e os avisos não aparecem por trás do título
+		hero_panel.visible = not pause_panel.visible
+	toast_box.visible = not pause_panel.visible
 	if event_pointer != null:
 		event_pointer.battle = _battle
 		event_pointer.visible = _battle != null and _battle.state == "running" and not (items_panel.visible or levelup_panel.visible or pause_panel.visible or result_panel.visible or revive_panel.visible)
@@ -886,13 +890,23 @@ func toast(text: String, color: Color = Color(1, 1, 1)) -> void:
 		return
 	_show_toast(text, color)
 
+## SPEC-177 F-11: luminância mínima do texto dos avisos (a fonte do tema já é creme, então a cor entra como cor da fonte, não como modulate).
+const TOAST_MIN_LUMA := 0.68
+
+static func legible_toast_color(c: Color) -> Color:
+	var luma := 0.299 * c.r + 0.587 * c.g + 0.114 * c.b
+	if luma >= TOAST_MIN_LUMA:
+		return c
+	var t := clampf((TOAST_MIN_LUMA - luma) / maxf(0.01, 1.0 - luma), 0.0, 1.0)
+	return c.lerp(Color(1, 1, 1, c.a), t)
+
 func _show_toast(text: String, color: Color) -> void:
 	var l := Label.new()
 	l.text = text
-	l.modulate = color
+	l.add_theme_color_override("font_color", legible_toast_color(color))
 	l.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	l.add_theme_color_override("font_outline_color", Color(0, 0, 0))
-	l.add_theme_constant_override("outline_size", 5)
+	l.add_theme_color_override("font_outline_color", Color(0, 0, 0, 0.95))
+	l.add_theme_constant_override("outline_size", 6)
 	var long := text.length() > TOAST_LONG_CHARS
 	if long:
 		# epígrafes de fase (SPEC-117) são longas: quebram na largura do aviso e ficam mais tempo na tela
@@ -1095,3 +1109,11 @@ static func achievement_line(a: Dictionary) -> String:
 	if text == "" and int(reward.get("coins", 0)) > 0:
 		text = "+%d moedas" % int(reward.coins)
 	return "★ %s — %s" % [a.name, text] if text != "" else "★ %s" % a.name
+
+## SPEC-177 F-13: relógio, nome da fase, armas e nome do chefe ficam sobre o mundo; em piso claro (Goranthis) sumiam.
+func _outline_world_labels() -> void:
+	for label in [timer_label, stage_label, %WeaponsLabel, %BossName]:
+		if label == null:
+			continue
+		label.add_theme_color_override("font_outline_color", Color(0, 0, 0, 0.92))
+		label.add_theme_constant_override("outline_size", 6 if label == timer_label else 5)
