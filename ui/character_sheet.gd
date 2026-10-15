@@ -320,8 +320,9 @@ func _input(ev: InputEvent) -> void:
 
 func _refresh_hero() -> void:
 	var h := _b.hero
-	var portrait_path := "res://assets/portraits/%s.png" % h.id
-	_portrait.texture = load(portrait_path) if ResourceLoader.exists(portrait_path) else null
+	_portrait.texture = HeroPortraits.texture(h.id, HeroPortraits.FICHA)
+	# faixa 3:1 própria preenche a caixa; o retrato 3:2 do menu (fallback) segue centralizado inteiro
+	_portrait.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED if HeroPortraits.has_own(h.id, HeroPortraits.FICHA) else TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 	_hero_label.text = h.name
 	_level_label.text = "Nível %d" % h.level
 	var names := {"forca": "FOR", "inteligencia": "INT", "constituicao": "CON", "carisma": "CAR"}

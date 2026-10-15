@@ -264,8 +264,7 @@ func update(b: Battle) -> void:
 	var h := b.hero
 	if h.id != _hero_id:
 		_hero_id = h.id
-		var path := "res://assets/portraits/%s.png" % h.id
-		_portrait.texture = load(path) if ResourceLoader.exists(path) else null
+		_portrait.texture = HeroPortraits.texture(h.id, HeroPortraits.HUD)
 	name_label.text = h.name
 	level_label.text = "Nv %d" % h.level
 	hp_bar.max_value = h.max_hp
