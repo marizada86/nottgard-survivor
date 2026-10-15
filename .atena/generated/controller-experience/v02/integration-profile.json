@@ -23,7 +23,8 @@
 			"controller_test_1": true
 		},
 		"weapons": {
-			"espada_sombria": true
+			"espada_sombria": true,
+			"tocha_do_incendiario": true
 		}
 	},
 	"coins": 300,
@@ -59,12 +60,14 @@
 		"resolution": "1280x720",
 		"sfx_muted": false,
 		"sfx_volume": 0.9,
+		"ui_font": "fell",
+		"visual_filter": "off",
 		"volume": 0.7,
 		"window_mode": "windowed"
 	},
 	"stats": {
 		"best_time": {
-			"dagruve": 0.866666666666668
+			"dagruve": 0.55
 		},
 		"bets_won_total": 0,
 		"boss_kills": {},
