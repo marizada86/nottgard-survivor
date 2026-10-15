@@ -61,6 +61,7 @@ var _stage_background: CanvasLayer
 var _visual_filter: VisualFilter  # SPEC-173: entre o mundo e a HUD
 var _text_layer: CanvasLayer      # SPEC-173: texto do mundo, acima do filtro
 var _text_fx: Node2D
+var _danger: DangerVignette       # M2 R5 (A): vinheta de vida baixa e de golpe recebido, abaixo do texto do mundo
 
 func _texture(path: String) -> Texture2D:
 	if not _texture_cache.has(path):
@@ -196,6 +197,12 @@ func _setup_visual_filter() -> void:
 	hud.layer = VisualFilter.HUD_LAYER
 	_visual_filter = VisualFilter.new()
 	add_child(_visual_filter)
+	var danger_layer := CanvasLayer.new()
+	danger_layer.name = "DangerLayer"
+	danger_layer.layer = VisualFilter.TEXT_LAYER   # mesma camada do texto, desenhada antes dele
+	add_child(danger_layer)
+	_danger = DangerVignette.new()
+	danger_layer.add_child(_danger)
 	_text_layer = CanvasLayer.new()
 	_text_layer.name = "WorldText"
 	_text_layer.layer = VisualFilter.TEXT_LAYER
@@ -617,6 +624,9 @@ func _process(dt: float) -> void:
 		_edge_fog.proximity = battle.edge_proximity(battle.hero.pos)
 	_update_low_hp_bark()
 	_update_pending_bark()
+	if _danger != null:
+		var alive := battle.state != "dead" and battle.state != "won"
+		_danger.tick(dt, battle.hero.hp / maxf(battle.hero.max_hp, 1.0), alive, Game.reduced_impact())
 
 func _sync() -> void:
 	var h := battle.hero
@@ -739,6 +749,8 @@ func _consume_events() -> void:
 				if not ev.get("continuous", false):   # SPEC-177 F-1: dano contínuo da névoa não soa nem treme a cada aviso
 					Sfx.play("player.hurt")
 					_shake = 0.6
+				if _danger != null:
+					_danger.on_hurt(float(ev.amount), battle.hero.max_hp, bool(ev.get("continuous", false)), Game.reduced_impact())
 				_float_text(at + Vector2(0, -58), "-%d" % ev.amount, Color(1.0, 0.3, 0.3), 16)
 			"text":
 				var cue := String(ev.text).to_lower()
