@@ -1,0 +1,15 @@
+{
+  "_spec": "L5 (PROPOSTA-l5-mecanicas-de-chefe): mecânicas de chefe por fase. Chave '1' = ao cair a 70% do PV, '2' = a 35% (as mesmas de boss_phases.json). 'verbs' substitui os verbos repetidos da fase anterior; 'skip' lista ações de boss_phases.json que esta mecânica substitui nesta fase. Piloto: Sacerdote (Dagruve), Guardião Alado (Docas) e Blogbog (Molor).",
+  "sacerdote_mente_derretida": {
+    "1": {"verbs": [{"t": "totems", "n": 2, "hp": 45, "shield": 0.3}]},
+    "2": {"verbs": [{"t": "cast", "name": "Sussurro", "first": 4.0, "cd": 16.0, "windup": 2.5, "dice": "2d8", "stun": 2.0}]}
+  },
+  "guardiao_verdadeiro": {
+    "1": {"verbs": [{"t": "sweep", "first": 3.0, "cd": 9.0, "warn": 1.0, "dur": 2.2, "arc": 90, "len": 9.0, "dice": "2d6"}]},
+    "2": {"verbs": [{"t": "cast", "name": "Grito Abissal", "first": 3.0, "cd": 15.0, "windup": 2.5, "dice": "3d6", "stun": 2.0}]}
+  },
+  "blogbog": {
+    "1": {"verbs": [{"t": "immune_adds", "id": "slime_de_juiblex", "n": 3, "max_s": 12.0}], "skip": ["summon"]},
+    "2": {"verbs": [{"t": "quadrants", "first": 2.0, "cd": 8.0, "warn": 1.5, "radius": 9.0, "dice": "2d8"}]}
+  }
+}

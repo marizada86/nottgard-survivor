@@ -8,6 +8,13 @@
     "boss_power": {"start_level": 6, "per_level": 0.04, "per_dmg": 0.35, "max_bonus": 0.8},
     "corrosion": {"puddle_pct_max_hp": 0.015, "linger": 0.6, "edge_max_dps_pct": 0.12}
   },
+  "boss_mech": {
+    "_spec": "L5 (PROPOSTA-l5-mecanicas-de-chefe, aprovada em 2026-10-14): mecânicas de chefe no estilo de raide, definidas em data/boss_mechanics.json. enabled liga tudo; verbs liga cada verbo. budget: mecânicas ativas ao mesmo tempo = base + ordem_da_fase / every_stages (cresce ao avançar). enrage: depois de start_s de luta o chefe ganha step de dano a cada every_s, até max_steps.",
+    "enabled": true,
+    "verbs": {"totems": true, "cast": true, "sweep": true, "quadrants": true, "immune_adds": true, "enrage": true},
+    "budget": {"base": 2, "every_stages": 3},
+    "enrage": {"enabled": true, "start_s": 90.0, "every_s": 15.0, "step": 0.08, "max_steps": 5}
+  },
   "l4": {
     "_spec": "L4 do relato do T05 (EVID-250, proposta em vault/drafts/PROPOSTA-l4-...): enabled desliga tudo. emerge: elite imóvel com golpe em área nasce a (alcance - margin) tiles do herói. telegraph: linha do golpe, sprite quente e aviso mais longo em delay_override (por inimigo). aim: o tiro sai windup s depois, na direção travada. strafe: atirador anda de lado dentro da faixa de manter distância. lunge: bote dos inimigos com move lunge. pack: inimigos com move pack andam solo x solo e em grupo x group quando há need aliados do mesmo tipo a radius tiles.",
     "enabled": true,

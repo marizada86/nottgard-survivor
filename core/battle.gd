@@ -95,6 +95,8 @@ var offer: Array = []
 var offer_kind := ""
 ## L1 (IN-084): índice da opção que começa em foco. Na troca de item é a melhor pelo veredito (empate: manter o atual).
 var offer_focus := 0
+## L5: mecânicas do chefe atual (null quando desligado ou sem definição)
+var boss_mech: BossMechanics = null
 var world_mod := {}            # SPEC-164: Pedra do Eclipse ativa (multiplicadores e relógio); vazio = nenhuma
 var event_blood_lost := 0.0     # SPEC-164: PV máximos perdidos em Pactos de Sangue na run (teto de 45%)
 var pending_levels := 0
@@ -311,6 +313,7 @@ func load_stage(stage_key: String) -> void:
 	time = 0.0
 	boss = null
 	boss_spawned = false
+	boss_mech = null
 	boss_dead = false
 	boss_repeat = 0
 	stage_cleared = false
@@ -606,6 +609,8 @@ func use_active(dir: Vector2 = Vector2.ZERO) -> bool:
 		return false
 	active_cd = active_cooldown_effective()
 	active_cd_max = active_cd
+	if boss_mech != null:   # L5: a ativa interrompe a conjuração do chefe
+		boss_mech.on_hero_active()
 	if _has_item_effect("projectile_slow_on_active"):
 		projectile_slow_t = 4.0
 	events.append({"type": "active", "pos": hero.pos, "radius": radius, "dtype": p.get("dtype", "radiante"), "name": p.name, "hero_id": hero.id, "ability_id": p.id})
@@ -671,6 +676,8 @@ func step(screen_dir: Vector2, dt: float) -> void:
 	_update_weapons(dt)
 	_update_projectiles(dt)
 	_update_zones(dt)
+	if boss_mech != null:
+		boss_mech.step(dt)
 	_update_decoys(dt)
 	happenings.step(self, dt)
 	for e in enemies:
@@ -811,6 +818,9 @@ func _fire_zone(p: Dictionary, area: float) -> bool:
 func _hero_hit(e: Enemy, p: Dictionary, roll: bool, visual_theme: Dictionary = {}) -> bool:
 	var resolved_theme: Dictionary = visual_theme if not visual_theme.is_empty() else DivineVisuals.resolve(hero.id, visual_god, visual_boon_selected)
 	if e.dead:
+		return false
+	if boss_mech != null and boss_mech.is_immune(e):   # L5: chefe imune enquanto os servos vivem
+		events.append({"type": "text", "pos": e.pos, "text": "imune"})
 		return false
 	var attr := String(p.get("attr", "forca"))
 	var dtype := String(p.get("dtype", "fisico"))
@@ -1094,7 +1104,11 @@ func _check_boss_phase(e: Enemy) -> void:
 			break
 		e.phase_index += 1
 		events.append({"type": "boss_phase", "pos": e.pos, "text": String(phase.announcement)})
+		if boss_mech != null and e == boss:
+			boss_mech.on_phase(e.phase_index)
 		for action in phase.actions:
+			if boss_mech != null and e == boss and boss_mech.skips_action(e.phase_index, String(action.t)):
+				continue   # L5: a mecânica nova substitui esta ação
 			_apply_boss_phase_action(e, action)
 
 func _apply_boss_phase_action(e: Enemy, action: Dictionary) -> void:
@@ -1400,7 +1414,8 @@ func _hit_chance(accuracy: int, evasion: float) -> float:
 func _stage_dmg_mult(src: String) -> float:
 	if src != "hit" and src != "aoe":
 		return 1.0
-	return float(stage.get("dmg_mult", 1.0)) * _mk_dmg
+	var enrage := boss_mech.enrage_mult() if boss_mech != null and boss != null and not boss.dead else 1.0   # L5
+	return float(stage.get("dmg_mult", 1.0)) * _mk_dmg * enrage
 
 ## Acumula o dano contínuo e emite `hurt` (continuous) com o inteiro acumulado no máximo a cada CONTINUOUS_HURT_INTERVAL; a fração fica guardada.
 func _emit_continuous_hurt(dmg: float, force: bool) -> void:
@@ -1829,6 +1844,9 @@ func wipe_map() -> int:
 
 func _on_boss_dead(e: Enemy) -> void:
 	run_record.checkpoint(self, "boss_dead", {"id": e.id})
+	if boss_mech != null:   # L5: turíbulos, conjuração e varredura somem com o chefe
+		boss_mech.on_boss_dead()
+		boss_mech = null
 	boss_dead = true
 	stats.bosses += 1
 	stats.boss_ids.append(e.id)
@@ -3133,10 +3151,11 @@ func _apply_boss_affix(boss_e: Enemy) -> void:
 
 ## Escudeiro: aliados (não ele mesmo) a até AFFIX_SHIELD_RADIUS dele recebem 25 % menos dano do herói.
 func _shield_factor(e: Enemy) -> float:
+	var mech := boss_mech.damage_taken_mult(e) if boss_mech != null else 1.0   # L5: turíbulos blindam o chefe
 	for s in _shielders:
 		if s != e and not s.dead and s.pos.distance_to(e.pos) <= AFFIX_SHIELD_RADIUS:
-			return 1.0 - AFFIX_SHIELD_REDUCTION
-	return 1.0
+			return (1.0 - AFFIX_SHIELD_REDUCTION) * mech
+	return mech
 
 ## Invocador: chama servos do bioma de tempos em tempos, respeitando o teto de inimigos da fase.
 func _affix_step(e: Enemy, dt: float) -> void:
@@ -3272,6 +3291,7 @@ func _director(dt: float) -> void:
 		boss.hp = boss.max_hp
 		_apply_boss_affix(boss)
 		_apply_awake_boss(boss)
+		boss_mech = BossMechanics.create(self, boss)   # L5
 		happenings.on_boss_spawn(self, boss)
 		codex.enemies[boss.id] = true
 		events.append({"type": "boss", "enemy": boss})

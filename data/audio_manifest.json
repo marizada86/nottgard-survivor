@@ -1297,6 +1297,24 @@
       "cooldown_ms": 65,
       "priority": 1
     },
+    "enemy.totem_de_chefe.action": {
+      "files": ["res://assets/audio/sfx/combat/combat.impact_01.wav"],
+      "bus": "Enemies",
+      "volume_db": -12,
+      "pitch": 0.8,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 180,
+      "priority": 1
+    },
+    "enemy.totem_de_chefe.death": {
+      "files": ["res://assets/audio/sfx/combat/combat.explosion_01.wav"],
+      "bus": "Enemies",
+      "volume_db": -10,
+      "pitch": 0.9,
+      "pitch_jitter": 0.035,
+      "cooldown_ms": 65,
+      "priority": 2
+    },
     "enemy.candelabro_quebravel.action": {
       "files": [
         "res://assets/audio/sfx/combat/combat.impact_01.wav"

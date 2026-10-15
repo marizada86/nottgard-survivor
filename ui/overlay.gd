@@ -539,6 +539,8 @@ func _draw_over() -> void:
 		else:
 			draw_circle(p, 5.0, Color(1.0, 0.25, 0.25))
 			draw_circle(p, 2.5, Color(1.0, 0.8, 0.6))
+	if battle.boss_mech != null:   # L5: mecânicas do chefe (turíbulos, imunidade, conjuração, varredura, quadrantes)
+		battle.boss_mech.draw_fx(self)
 	for e in battle.enemies:
 		if e.windup > 0.0:
 			var a := Iso.to_screen(e.pos)

@@ -1,6 +1,6 @@
 extends SceneTree
 ## Curva de dificuldade por fase (PLAN-055 F2). Mesmo piloto do tools/bot.gd, mas mede cada fase:
-##   godot --headless --path . -s tools/bot_curva.gd -- <heroi> <seeds> [dt] [maxfases] [lado] [meta 0=novato 1=veterano 2=loja cheia] [marcas] [l2 0|1] [l4 0|1]
+##   godot --headless --path . -s tools/bot_curva.gd -- <heroi> <seeds> [dt] [maxfases] [lado] [meta 0=novato 1=veterano 2=loja cheia] [marcas] [l2 0|1] [l4 0|1] [boss_mech 0|1]
 ## Saída CSV (prefixo "CSV;"): heroi;seed;fase;nv_entrada;nv_saida;dur_s;pv_min_pct;s_abaixo_50;s_abaixo_25;dano_recebido;chefe_s;resultado
 ## BAL-023 (venda = só da run, fora do total): junto de cada CSV sai uma linha "GOLD;" com moedas brutas da fase por fonte:
 ##   GOLD;heroi;seed;fase;total;abate;elite;chefe;quebravel;evento;venda;oferta;arma;outro
@@ -24,6 +24,8 @@ func _init() -> void:
 		Data.table("difficulty")["l2"]["enabled"] = (a[7] != "0")
 	if a.size() > 8:   # 9º argumento: 0 desliga o bloco "l4" (inimigos legíveis e movimentos novos)
 		Data.table("difficulty")["l4"]["enabled"] = (a[8] != "0")
+	if a.size() > 9:   # 10º argumento: 0 desliga o bloco "boss_mech" (mecânicas de chefe do L5)
+		Data.table("difficulty")["boss_mech"]["enabled"] = (a[9] != "0")
 	TerrainLayout.scale = _map_side / 40.0
 	for s in seeds:
 		_run(hero, s + 1, dt, max_stages)
@@ -92,7 +94,9 @@ func _run(hero_id: String, seed_v: int, dt: float, max_stages: int) -> void:
 				return
 			st = _new_stat(b)
 			last_hp = b.hero.hp
-		if b.active_cd <= 0.0 and not b.enemies.is_empty():
+		# L5: com mecânicas de chefe o piloto guarda a habilidade para interromper a conjuração (como um jogador atento)
+		var hold_active: bool = b.boss_mech != null and b.boss_mech.cast.is_empty()
+		if b.active_cd <= 0.0 and not b.enemies.is_empty() and not hold_active:
 			var active_target := b.nearest(b.hero.pos, 10.0)
 			var active_dir := (active_target.pos - b.hero.pos).normalized() if active_target != null else Vector2(1, 0)
 			b.use_active(active_dir)
@@ -200,6 +204,8 @@ func _move(b: Battle) -> Vector2:
 	# quando o boss existe e está calmo, aproxima para causar dano
 	if b.boss != null and not b.boss.dead and near < 3:
 		v += (b.boss.pos - h.pos).normalized() * 0.5
+	if b.boss_mech != null:   # L5: desvia de varredura e quadrantes acesos
+		v += _mech_avoid(b)
 	if v.length() < 0.05:
 		return Vector2.ZERO
 	return Iso.to_screen(v.normalized()).normalized()
@@ -215,3 +221,32 @@ func _pick_item(b: Battle) -> int:
 			best_s = s
 			best = i
 	return best
+
+## L5: desvio das mecânicas de chefe (varredura, quadrantes). Vetor em coordenadas de mundo, peso alto para dominar o resto.
+func _mech_avoid(b: Battle) -> Vector2:
+	var m: BossMechanics = b.boss_mech
+	var h := b.hero
+	var push := Vector2.ZERO
+	if not m.sweep.is_empty():
+		var origin: Vector2 = m.sweep.origin
+		var dir := Vector2.from_angle(float(m.sweep.a))
+		var rel := h.pos - origin
+		var along := rel.dot(dir)
+		var across := rel.cross(dir)
+		if along > -1.0 and along < float(m.sweep.len) + 1.0 and absf(across) < 2.6:
+			var side := 1.0 if across >= 0.0 else -1.0
+			push += Vector2(-dir.y, dir.x) * side * 4.0 * -1.0 + (h.pos - origin).normalized() * 1.5
+	if not m.quad.is_empty():
+		var center: Vector2 = m.quad.center
+		var rel2 := h.pos - center
+		if rel2.length() <= float(m.quad.radius) + 1.0:
+			var idx := int(floor(wrapf(rel2.angle(), 0.0, TAU) / (TAU / 4.0)))
+			if (m.quad.sectors as Array).has(idx):
+				var safe := 0
+				for s in 4:
+					if not (m.quad.sectors as Array).has(s):
+						safe = s
+						break
+				var target := center + Vector2.from_angle((float(safe) + 0.5) * TAU / 4.0) * 4.0
+				push += (target - h.pos).normalized() * 4.0
+	return push
