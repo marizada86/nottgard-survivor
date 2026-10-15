@@ -20,3 +20,5 @@ Preparação Godot saiu0; mensagens auxiliares em preparation-error.log (logs us
 ## Arquivamento DRAFT autorizado
 
 Pedido posterior “atena commit e push”: IN_PLAN, arquivar PV33–PV40 v01 como DRAFT e publicar a branch. Avaliação visual pendente, margens/variedade e guindaste preservados como ressalvas. Sem promoção CANON ou integração. Escopo seletivo de assets/records, preservando demais alterações locais. Backlog antes do commit:0P0,4P1 abertos(BUG-025/027/028/029),16 implementados aguardando playtest e alerta histórico ART-045 duplicado.
+
+Resultado: commit `57602d4270abce80c57d7cf38a209650a9a510d5` arquivou fontes nativas, referências, prompts, prévias, galeria e registros. Push concluído; git ls-remote confirmou SHA idêntico na branch codex/durvall-pilot-gifs-2026-10-14. Auditoria passou(8 PNGs,42links), diff --cached --check passou. Lote permanece DRAFT, checkpoint OWNER_VISUAL_REVIEW. Recibo publication-receipt.json arquivado. Demais trabalhos locais preservados.

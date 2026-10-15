@@ -4,7 +4,7 @@ classification: IN_PLAN
 mode: per-plan
 owner_request: atena continue a produção de assets
 approval_status: AUTHORIZED_CONTINUATION_STATIC_CANDIDATES
-status: DELIVERED_DRAFT_OWNER_REVIEW_PENDING
+status: DRAFT_ARTIFACTS_PUSHED_VERIFIED_OWNER_REVIEW_PENDING
 checkpoint: OWNER_VISUAL_REVIEW
 content_state: DRAFT
 ordered_steps: [PV33, PV34, PV35, PV36, PV37, PV38, PV39, PV40, AUDIT_GALLERY]
@@ -26,3 +26,5 @@ design_review_required: [PV33, PV34, PV35, PV36, PV37, PV38, PV39, PV40]
 next_objective: Dono avaliar PV33–PV40 v01 como exibidas por codigo ou lote antes de correcao ou admissao
 versioning_owner_request: 'atena commit e push'
 versioning_scope: DRAFT_ARCHIVE_ONLY_VISUAL_ACCEPTANCE_PENDING
+artifact_commit: 57602d4270abce80c57d7cf38a209650a9a510d5
+remote_publication: VERIFIED
