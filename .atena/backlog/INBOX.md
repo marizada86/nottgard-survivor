@@ -174,3 +174,11 @@ L3 implementado local em 2026-10-14 ([EVID-255](../evidence/EVID-255-l3-impacto-
 L4 implementado em 2026-10-14 (commit `ff6bb4b1`, [EVID-256](../evidence/EVID-256-l4-inimigos-legiveis-e-movimentos-novos-2026-10-14.md)), atrás de `l4.enabled`: IN-079 e IN-089 (Tentáculo ao alcance e com linha do golpe, atiradores com mira e passo lateral) e IN-094 (bote e bando). Aguardam playtest e a rodada de 12 heróis.
 
 L5 piloto implementado em 2026-10-15 ([EVID-257](../evidence/EVID-257-l5-mecanicas-de-chefe-piloto-2026-10-15.md)), atras de `boss_mech.enabled`: IN-091 e IN-093 (mecanicas de chefe no estilo de raide em Sacerdote, Guardiao Alado e Blogbog, orcamento de caos que cresce com as fases). Sem commit; aguarda playtest do dono, do Mariz e de um segundo jogador.
+
+PLAN-105 B-001 implementado local em 2026-10-15 ([EVID-259](../evidence/EVID-259-plan-105-b001-verbos-novos-das-mecanicas-de-chefe-2026-10-15.md)): marca, totem que cura, 2 feixes, quadrantes com poça e conjuracao de armadura. Aguarda o gate G-L5-1; sem commit.
+
+PLAN-105 B-002 implementado local em 2026-10-15 ([EVID-260](../evidence/EVID-260-plan-105-b002-zuggtmoy-e-molydeus-2026-10-15.md)): Zuggtmoy (quadrantes de esporos e cogumelos-mae que curam) e Molydeus (marca de sentenca e correntes). Aguarda o gate G-L5-2; sem commit.
+
+PLAN-105 B-003 implementado local em 2026-10-15 ([EVID-261](../evidence/EVID-261-plan-105-b003-discipulo-pestilento-e-malcanthet-2026-10-15.md)): Discipulo Pestilento (quadrantes e marca da peste, grito e cultistas) e Malcanthet (ilusoes e marca, beijo e varredura de um lado). Aguarda o gate G-L5-3; sem commit.
+
+PLAN-105 B-004 implementado local em 2026-10-15 ([EVID-264](../evidence/EVID-264-plan-105-b004-socothbenoth-e-sintese-abissal-2026-10-15.md)): Socothbenoth (quadrantes e ancoras que curam, ilusoes e grito) e Sintese Abissal (lodo que cura, varredura, armadura e quadrantes). Os 9 chefes tem mecanicas. Aguarda o gate G-L5-4; sem commit.
