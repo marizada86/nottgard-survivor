@@ -1,0 +1,633 @@
+{
+  "revision": "PROPS-VARIEDADE-LOTE05/v01",
+  "content_state": "DRAFT",
+  "imagegen_calls": 8,
+  "sources": [
+    {
+      "id": "PV33",
+      "name": "doca",
+      "content_state": "DRAFT",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          0,
+          18,
+          1238,
+          1208
+        ],
+        "128": [
+          94,
+          304,
+          1184,
+          963
+        ]
+      },
+      "alpha128_margins": [
+        94,
+        304,
+        70,
+        291
+      ],
+      "native_12percent_margin_pass": false,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "9c6c95e1a8927d2e4a8372d1e4cd6d44006d7e39782f96a6b3f8d63536d5b856",
+      "prompt_sha256": "708f13250de6b3da35fc203e6f128a715bdc1744f5c2482e301203f306861603",
+      "reference_sha256": "49f51e198d8da876a4fc1fee305e0ab0028f484aa0d7b0f7ab0bf108e041ad2b",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "sha256": "f78273386705b187782f5ed6ae2034016350298bc00737bae8e51c3666fbdeed",
+          "alpha_bounds": [
+            8,
+            16,
+            58,
+            54
+          ]
+        },
+        {
+          "size": 128,
+          "sha256": "ed3bb2b92794f7c016bde83621d0c55e0b2c9a688b7c3c91af9b98ac6e214478",
+          "alpha_bounds": [
+            11,
+            18,
+            116,
+            101
+          ]
+        },
+        {
+          "size": 256,
+          "sha256": "cbf6eb3f29c63d0c4485bc47efcab1a2399231b33dcd6a3c1864a1f295ff2b1b",
+          "alpha_bounds": [
+            16,
+            25,
+            236,
+            221
+          ]
+        }
+      ],
+      "design_review_note": "Enquadramento apertado; avaliar variedade frente à referência e coerência da amarração.",
+      "runtime_scale_anchor_collision": "NOT_TESTED",
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "id": "PV34",
+      "name": "margem",
+      "content_state": "DRAFT",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          0,
+          52,
+          1240,
+          1226
+        ],
+        "128": [
+          134,
+          371,
+          1168,
+          920
+        ]
+      },
+      "alpha128_margins": [
+        134,
+        371,
+        86,
+        334
+      ],
+      "native_12percent_margin_pass": false,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "228f6dde09cf68459423f0deadc6798e775403f22517b944aea2fc0a243a9c97",
+      "prompt_sha256": "943242ad833550d224446ca0e37836de8a9c60d2b6d20e17809a8c32f5a39a98",
+      "reference_sha256": "4cd9432a3a7d8fd92d2016bc7a4dd1f318d8a4d2d529d8b3b5e7d52177c638fb",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "sha256": "0d82bbbb2ea7cfafb4273e4a2797daab80ed06791b4dbc6d7018329f7cab0c7a",
+          "alpha_bounds": [
+            10,
+            21,
+            57,
+            52
+          ]
+        },
+        {
+          "size": 128,
+          "sha256": "cc2efea2cdcc75065a0d4ab667afa4240865955445ff57067b7a3596f5a4c753",
+          "alpha_bounds": [
+            19,
+            42,
+            120,
+            105
+          ]
+        },
+        {
+          "size": 256,
+          "sha256": "d13a5cc08c05a631efd45a3c9fb7b0486f1d4b7a04c50187caa1f3cf53771d18",
+          "alpha_bounds": [
+            24,
+            28,
+            240,
+            223
+          ]
+        }
+      ],
+      "design_review_note": "Avaliar leitura das algas e distinção da composição em tamanho pequeno.",
+      "runtime_scale_anchor_collision": "NOT_TESTED",
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "id": "PV35",
+      "name": "dagruve_estrutura",
+      "content_state": "DRAFT",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          0,
+          29,
+          1238,
+          1254
+        ],
+        "128": [
+          134,
+          63,
+          1131,
+          1183
+        ]
+      },
+      "alpha128_margins": [
+        134,
+        63,
+        123,
+        71
+      ],
+      "native_12percent_margin_pass": false,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "bc2b154dbf81531698ba55b6855a6afef777b0eb4ad0e109149f0af900afe118",
+      "prompt_sha256": "eb0ac43dda0f4bd7254d8c92910c606b011c92ef6352cc86123a0cf810945735",
+      "reference_sha256": "a472b8b11a98c4b1f9218cdff76f853849e15bb3fc990c65423c77f42774c0a3",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "sha256": "91ac5d68fc8b425c95ed27fda390cf7ca63cff0ffa2acaee7c9acca9457dd0a6",
+          "alpha_bounds": [
+            10,
+            6,
+            55,
+            57
+          ]
+        },
+        {
+          "size": 128,
+          "sha256": "9f4eb198840630fd2a535fa69079f8a616cf763e4ec6e918637c68ac7969fa2f",
+          "alpha_bounds": [
+            20,
+            9,
+            116,
+            118
+          ]
+        },
+        {
+          "size": 256,
+          "sha256": "1f3cbea1e8edfb3c43c27d981cfc79faed6902ce44ebab01971583929635ac81",
+          "alpha_bounds": [
+            16,
+            18,
+            239,
+            236
+          ]
+        }
+      ],
+      "design_review_note": "Composição próxima da referência; avaliar se a alteração de telhado e aberturas acrescenta variedade suficiente.",
+      "runtime_scale_anchor_collision": "NOT_TESTED",
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "id": "PV36",
+      "name": "docas_estrutura",
+      "content_state": "DRAFT",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          0,
+          0,
+          1236,
+          1254
+        ],
+        "128": [
+          78,
+          133,
+          1184,
+          1142
+        ]
+      },
+      "alpha128_margins": [
+        78,
+        133,
+        70,
+        112
+      ],
+      "native_12percent_margin_pass": false,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "c2e34200e44706f3b65960de3c83a36ffd94838d0060a34412d3b2cefae12538",
+      "prompt_sha256": "f44f461014aa9d3dd78ffa303f9abfbeda3a7ff4eb71c7a1c09aacbeb291ea0f",
+      "reference_sha256": "be2268311a40627c20709b21385fb50a787ff6414d1dea7834c65c31399e7a32",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "sha256": "f0f03e633c92c8e8dfbd47ad150b229874fb4278587e899a5d4c25a021881c12",
+          "alpha_bounds": [
+            7,
+            10,
+            57,
+            59
+          ]
+        },
+        {
+          "size": 128,
+          "sha256": "a0320f5a369a9df4a322cd06f4835b23de161e85112239e7fa6798611298e679",
+          "alpha_bounds": [
+            15,
+            18,
+            116,
+            118
+          ]
+        },
+        {
+          "size": 256,
+          "sha256": "def46214257c6607244fe69846fcd901da557fda007a90fbde8e4d0eada610ee",
+          "alpha_bounds": [
+            30,
+            37,
+            238,
+            237
+          ]
+        }
+      ],
+      "design_review_note": "Composição próxima da referência; abertura mais larga e pequenos conteúdos visíveis no interior.",
+      "runtime_scale_anchor_collision": "NOT_TESTED",
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "id": "PV37",
+      "name": "docas_guindaste",
+      "content_state": "DRAFT",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          0,
+          20,
+          1230,
+          1228
+        ],
+        "128": [
+          182,
+          48,
+          1193,
+          1216
+        ]
+      },
+      "alpha128_margins": [
+        182,
+        48,
+        61,
+        38
+      ],
+      "native_12percent_margin_pass": false,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "ca96f48a0862abcbe41952677f154fb1bd7be6756cbb3bd6e72ca3fe4df52be8",
+      "prompt_sha256": "c7f47d305e7b6cebb8e18f99dbae52a85869b5c99630779fd6b78cc5a6e63c5e",
+      "reference_sha256": "c0e71fbb5558843eb6bd4e87a6fd8fdb1868570cccec91effebfc087c5886974",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "sha256": "db43ee0cdf6963fba4586255b750111b9750c093fffbf87e0afbcdc551a61248",
+          "alpha_bounds": [
+            12,
+            6,
+            59,
+            60
+          ]
+        },
+        {
+          "size": 128,
+          "sha256": "d5ff967dbd003a0816c50b22d0ad2cd9a698b520fa2f8a601613495bf20c9f6b",
+          "alpha_bounds": [
+            12,
+            12,
+            117,
+            119
+          ]
+        },
+        {
+          "size": 256,
+          "sha256": "c261023673ea9364508fc23611663343f11ed1b10636160b37010dd90badf4f0",
+          "alpha_bounds": [
+            25,
+            25,
+            235,
+            239
+          ]
+        }
+      ],
+      "design_review_note": "Percurso entre corda, roldanas e corrente não certificado como mecanicamente coerente; margem apertada à direita e abaixo.",
+      "runtime_scale_anchor_collision": "NOT_TESTED",
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "id": "PV38",
+      "name": "shedaklah_estrutura",
+      "content_state": "DRAFT",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          0,
+          40,
+          1214,
+          1254
+        ],
+        "128": [
+          90,
+          207,
+          1186,
+          1099
+        ]
+      },
+      "alpha128_margins": [
+        90,
+        207,
+        68,
+        155
+      ],
+      "native_12percent_margin_pass": false,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "4404ff462d3ecfba74185f2949e5759fa83e7fdadbe97730551934584c935dac",
+      "prompt_sha256": "d7cd56e0691945ff540141428f656271cba93d7a59b19c43a3ba60368066b947",
+      "reference_sha256": "2cebd62c11caa82aadb758b4f57d364208803f3d5590a97361d43a6a3f0ab9e1",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "sha256": "dabb0f4e54c1244c5e9be447abf930d57cd38a9374dcea050d54da04d02237f0",
+          "alpha_bounds": [
+            8,
+            11,
+            59,
+            53
+          ]
+        },
+        {
+          "size": 128,
+          "sha256": "2181cff6521a5ecfcc70ce5ed1b0d78a832a00f998a4b95d148e796163947a0c",
+          "alpha_bounds": [
+            15,
+            10,
+            117,
+            106
+          ]
+        },
+        {
+          "size": 256,
+          "sha256": "4248f1f7023e9b9ec4ce2c9e435f9c4e447d359685a9ab9c30ec4a8df8d59788",
+          "alpha_bounds": [
+            31,
+            21,
+            235,
+            213
+          ]
+        }
+      ],
+      "design_review_note": "Avaliar massa de fungos e separação visual das vigas em tamanho pequeno.",
+      "runtime_scale_anchor_collision": "NOT_TESTED",
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "id": "PV39",
+      "name": "molor_estrutura",
+      "content_state": "DRAFT",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          0,
+          25,
+          1248,
+          1254
+        ],
+        "128": [
+          44,
+          61,
+          1233,
+          1208
+        ]
+      },
+      "alpha128_margins": [
+        44,
+        61,
+        21,
+        46
+      ],
+      "native_12percent_margin_pass": false,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "904dd89ec33b19f2af2330c4541d0ff950400bd057651276bd0f613765dc70ba",
+      "prompt_sha256": "5168b1041c7d3ec0ba9f09144ebd5c7c21feab050993aee07fed69ee513392cd",
+      "reference_sha256": "0d403068efcb34bfb65986d7e5a2190d96287c61e8749f3ab03358d03b9897a8",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "sha256": "274982dfca9f3cf08a09ccfe8f68235568df3a720694ae453e01006352626165",
+          "alpha_bounds": [
+            5,
+            6,
+            59,
+            59
+          ]
+        },
+        {
+          "size": 128,
+          "sha256": "25fe6b48b9bb6ba48dad6f319ccb43ed912c9622a07b454dd06b2720c6c31935",
+          "alpha_bounds": [
+            11,
+            12,
+            120,
+            118
+          ]
+        },
+        {
+          "size": 256,
+          "sha256": "0b24f9042d8b15b1f697bfc8c9f115830e2fe1d23b42615edbdd8c7c2393a063",
+          "alpha_bounds": [
+            16,
+            19,
+            240,
+            237
+          ]
+        }
+      ],
+      "design_review_note": "Avaliar separação das vigas e limite do entulho/base; enquadramento lateral apertado.",
+      "runtime_scale_anchor_collision": "NOT_TESTED",
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "id": "PV40",
+      "name": "durao_estrutura",
+      "content_state": "DRAFT",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_boxes": {
+        "1": [
+          0,
+          77,
+          1206,
+          1254
+        ],
+        "128": [
+          58,
+          95,
+          1203,
+          1157
+        ]
+      },
+      "alpha128_margins": [
+        58,
+        95,
+        51,
+        97
+      ],
+      "native_12percent_margin_pass": false,
+      "opaque_outer_edge_pixels": 0,
+      "source_sha256": "6b45b4741852e6bc1a546b241d459b937b3be045d0f76446e1d477f1cac0e851",
+      "prompt_sha256": "8eba5aa861613a588270a71eb565b7c25133b30b730eddb42bd0680c2134a0ec",
+      "reference_sha256": "c7692a4afed52631b499487100469e16096c251b403b3c453dc814e28b186d1d",
+      "archived_reference_identical": true,
+      "candidate_copy_identical": true,
+      "previews": [
+        {
+          "size": 64,
+          "sha256": "bb71a7a21a2baeeb7cf3776d2f5d2600124f636c6775265dd42f1942ea82d898",
+          "alpha_bounds": [
+            7,
+            6,
+            60,
+            55
+          ]
+        },
+        {
+          "size": 128,
+          "sha256": "28593557027ba680f573669d14b0a9420c2d4d61a311b405f72185489d938e64",
+          "alpha_bounds": [
+            12,
+            11,
+            120,
+            118
+          ]
+        },
+        {
+          "size": 256,
+          "sha256": "33a08921d9b531f9c45530e98c825c9cc059c067f33eaf4998a1ed6eb256e6b5",
+          "alpha_bounds": [
+            25,
+            23,
+            240,
+            237
+          ]
+        }
+      ],
+      "design_review_note": "Avaliar ruína e contraste do interior azul; estrutura não validada para colisão ou escala em jogo.",
+      "runtime_scale_anchor_collision": "NOT_TESTED",
+      "owner_visual_acceptance": "PENDING"
+    }
+  ],
+  "technical_delivery_pass": true,
+  "gallery_links": 42,
+  "missing_links": [],
+  "native_margin_notes": [
+    "PV33",
+    "PV34",
+    "PV35",
+    "PV36",
+    "PV37",
+    "PV38",
+    "PV39",
+    "PV40"
+  ],
+  "design_review_notes": {
+    "PV33": "Enquadramento apertado; avaliar variedade frente à referência e coerência da amarração.",
+    "PV34": "Avaliar leitura das algas e distinção da composição em tamanho pequeno.",
+    "PV35": "Composição próxima da referência; avaliar se a alteração de telhado e aberturas acrescenta variedade suficiente.",
+    "PV36": "Composição próxima da referência; abertura mais larga e pequenos conteúdos visíveis no interior.",
+    "PV37": "Percurso entre corda, roldanas e corrente não certificado como mecanicamente coerente; margem apertada à direita e abaixo.",
+    "PV38": "Avaliar massa de fungos e separação visual das vigas em tamanho pequeno.",
+    "PV39": "Avaliar separação das vigas e limite do entulho/base; enquadramento lateral apertado.",
+    "PV40": "Avaliar ruína e contraste do interior azul; estrutura não validada para colisão ou escala em jogo."
+  },
+  "visual_acceptance": "PENDING",
+  "runtime_admission": false,
+  "canonical_promotion": false
+}

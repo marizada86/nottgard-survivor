@@ -21,7 +21,7 @@ L02 opcional (`Clique para jogar`, FILA-026) v01 aceita visualmente, admissão p
 
 ### Pendências registradas — prioridade dos heróis reduzida em 2026-10-14
 
-Continuação em2026-10-15: lote01/L02 commit `a09d0ba3`, lote02 `e0af748f`, lote03 DRAFT `37335f0b`, publicados com recibo `910a25a3`. PV17–PV24 v01 aceitas visualmente depois da publicação; PV25–PV32 v01 também aceitas como exibidas, com ressalvas preservadas. Lotes03/04 CANON_VISUAL_v01; [galeria lote04](../generated/props-variedade-lote04-2026-10-15/index.html). Assets lote04 e aceites lote03/04 publicados no commit `025e50ce`, SHA remoto verificado; admissão separada pendente. Sem novos movimentos de personagens principais.
+Continuação em2026-10-15: lote01/L02 commit `a09d0ba3`, lote02 `e0af748f`, lote03 DRAFT `37335f0b`, publicados com recibo `910a25a3`. PV17–PV24 v01 aceitas visualmente depois da publicação; PV25–PV32 v01 também aceitas como exibidas, com ressalvas preservadas. Lotes03/04 CANON_VISUAL_v01; [galeria lote04](../generated/props-variedade-lote04-2026-10-15/index.html). Assets lote04 e aceites lote03/04 publicados no commit `025e50ce`, SHA remoto verificado; admissão separada pendente. Sem novos movimentos de personagens principais. Continuação lote05 PV33–PV40 v01 DRAFT entregue para avaliação na [galeria](../generated/props-variedade-lote05-2026-10-15/index.html); variantes de detritos e estruturas existentes, sem nova admissão ou commit/push.
 
 | ID | Tipo | Item | Sabor Nottgard | Origem | Dependência |
 |---|---|---|---|---|---|
