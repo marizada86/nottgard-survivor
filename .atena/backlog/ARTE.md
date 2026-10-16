@@ -12,6 +12,14 @@
 
 ## Abertos
 
+### PRIORIDADE ALTA — nome novo do jogo (2026-10-15)
+
+Pedido do dono em 2026-10-15: preparar os assets que envolvem a mudança de nome e dar prioridade alta. Inventário fechado: **só o logotipo do título** carrega o nome em arte ([ART-PROMPTS-065](../generated/ART-PROMPTS-065-logotipo-abyss-megadungeon.md)).
+
+| ID | Tipo | Item | Sabor Nottgard | Origem | Dependência |
+|---|---|---|---|---|---|
+| ART-049 | logotipo | **Logotipo do título com o nome novo (LN01):** `assets/ui/title/logo.png` traz NOTTGARD SURVIVORS na arte; gerar lockup `NOTTGARD` / `ABYSS MEGADUNGEON` no mesmo estilo (ouro forjado, rachadura roxa, pontas góticas), final até 1100×176, chave ciano | Abismo, runas roxas de Nottgard; sem lore nova | Dono, 2026-10-15, [SPEC-181](../specs/SPEC-181-renomeacao-nottgard-abyss-megadungeon.md) | **prompt em [ART-PROMPTS-065](../generated/ART-PROMPTS-065-logotipo-abyss-megadungeon.md), fila [CHATGPT-FILA-032](../generated/CHATGPT-FILA-032-logotipo-abyss-megadungeon.md) (2026-10-15)**; G-1 resolvida (lockup sem hífen escrito, dono 2026-10-16); aguarda o envio ao gerador; candidata em `.atena/generated/` até admissão; a tela de título mostra o logo antigo até lá |
+
 ### PRIORIDADE MÁXIMA — Erik Blackthorn e Arlindo Orlando (2026-10-09)
 
 | ID | Tipo | Item | Sabor Nottgard | Origem | Dependência |
@@ -20,7 +28,6 @@
 | ART-046 | props + ícones | **Seis eventos aleatórios (MEC-005):** props de mapa e ícones para Pacto de Sangue, Relicário Lacrado, Peregrino Ferido, Contador de Histórias, Carroça Abandonada e Pedra do Eclipse (hoje losango colorido com rótulo; o Peregrino e o Contador pedem figura de NPC) | sombra e pedra de Nottgard; vermelho de cera, ferro com ossos, fogueira baixa, carroça tombada, pedra negra | [SPEC-164](../specs/SPEC-164-eventos-aleatorios-novos-mec-005.md) | **prompts EV01 a EV06 em [[ART-PROMPTS-061-eventos-arcanista-icones-segredos-e-altar]], fila [CHATGPT-FILA-028](../generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md) (2026-10-09)**; provisório até a arte; sem bloquear o jogo |
 | ART-047 | UI/moldura | **Botão de ação principal (JOGAR):** moldura de nove fatias, aço neutro e interior de pedra escura, 320×64 com fatias 28/28/20/20; o código escreve o rótulo e o glifo e tinge os estados. Serve também ao `HqPlayBtn`, Continuar e Fechar | o botão atual é `StyleBoxFlat` por código; as abas já usam `ficha_aba_moldura` | pergunta do dono 2026-10-10; [ART-PROMPTS-062](../generated/ART-PROMPTS-062-botao-de-acao-jogar.md), [CHATGPT-FILA-029](../generated/CHATGPT-FILA-029-botao-de-acao-jogar.md) | 1 geração; integração pede spec e aprovação (SPEC-166 definiu "nada em `assets/`"); sem bloquear o jogo; **DRAFT r1, nenhuma peça gerada** |
 | ART-048 | prop | **Refazer `assets/props/pilar_01.png`:** o sprite toca as linhas 0 e 255 do canvas de 256×256, com o capitel sem o topo e a base no último pixel. Regerar o pilar inteiro (capitel completo como o do `pilar_03`, correia de couro e argola, margem livre ao redor), mesmo fundo transparente e mesma paleta de Dagruve; ao admitir, devolver a variante 1 ao sorteio em `ui/prop.gd` (`_prop_texture`) e conferir a âncora de contato. | Pilar de pedra de Dagruve (`kind: "pilar"`, `data/scenery.json`, `data/stages.json`); sem lore nova | Dono, 2026-10-13, captura de jogo; paliativo: variante 1 fora do sorteio | Candidato em `.atena/generated/` até admissão do dono |
-| ART-049 | logotipo | **Logotipo do título com o nome novo:** `assets/ui/title/logo.png` traz NOTTGARD SURVIVORS na arte; gerar versão com NOTTGARD - ABYSS MEGADUNGEON no mesmo estilo (ouro lapidado, runas roxas) | Abismo, runas roxas de Nottgard | Dono, 2026-10-15, [SPEC-181](../specs/SPEC-181-renomeacao-nottgard-abyss-megadungeon.md) | Candidato em `.atena/generated/` até admissão do dono; a tela de título usa o logo antigo até lá |
 
 ### PRIORIDADE ALTA — tiras de heróis (2026-10-02)
 

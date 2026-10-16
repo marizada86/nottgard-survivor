@@ -45,8 +45,11 @@ intocado, nomes de arquivo do .exe e do zip mantidos por ora.
 
 ## Pendências
 
-- **ART-049:** `assets/ui/title/logo.png` traz "NOTTGARD SURVIVORS" na arte; a tela
-  de título continua mostrando o nome antigo até haver logotipo novo.
+- **ART-049 (prioridade alta, 2026-10-15):** `assets/ui/title/logo.png` traz
+  "NOTTGARD SURVIVORS" na arte; a tela de título continua mostrando o nome antigo
+  até haver logotipo novo. Preparado: [[ART-PROMPTS-065-logotipo-abyss-megadungeon]]
+  e [[CHATGPT-FILA-032-logotipo-abyss-megadungeon]]; G-1 resolvida (lockup sem hífen); aguarda o envio ao
+  gerador. É o único asset com o nome em arte (inventário no ART-PROMPTS-065).
 - Decidir depois se os nomes de arquivo do release acompanham o novo nome.
 
 ## Aceite
