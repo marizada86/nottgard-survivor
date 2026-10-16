@@ -1671,6 +1671,7 @@ func _place_secrets() -> int:
 				interactions[-1].safe = true   # o baú da ruína nunca vira Mímico
 				interactions[-1].fixed = true
 				interactions[-1].name = String(poi.name)
+				interactions[-1].ruin_art = "ruina_" + stage_id   # SPEC-182: só a arte atrás do baú (assets/interactions/ruina_<fase>.png)
 				placed += 1
 			"camara":
 				_add_interaction("camara", at)

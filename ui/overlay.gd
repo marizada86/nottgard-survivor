@@ -11,6 +11,10 @@ var _text_queue: Array[Dictionary] = []
 static var _texture_cache := {}
 const HAPPENING_ART := preload("res://ui/happening_art.gd")
 var _large_fx_by_quadrant: Array[int] = [0, 0, 0, 0]
+const ALTAR_FRAME_MS := 150   # SPEC-182 (AL01-CORR/v01): 6 quadros em 900 ms
+const RUIN_HEIGHT := 150.0    # SPEC-182: ruína (256 px de lado) desenhada atrás do baú do ponto
+const RUIN_DROP := 14.0       # a base da ruína fica um pouco abaixo do baú
+const ECO_ART_HEIGHT := 44.0  # SPEC-182: cristal do Eco (128 px de lado)
 const PARTICLE_CAP := 96
 const PARTICLES_PER_ZONE := 8
 const PARTICLES_PER_IMPACT := 12
@@ -443,8 +447,8 @@ func _draw_over() -> void:
 			# Eventos com PNG oficial em assets/interactions/<tipo>.png (loja, ferreiro, curandeiro, doação, aposta, ampulheta); sem PNG (arcanista, câmara) o quadrado colorido com rótulo é o provisório
 			"loja": col = Color(1.0, 0.85, 0.3); label = "loja [E/oeste]"; asset = "loja"
 			"ferreiro": col = Color(1.0, 0.5, 0.2); label = ("%s [E/oeste]" % String(it.name).to_lower()) if String(it.get("name", "")) != "" else "ferreiro [E/oeste]"; asset = "ferreiro"
-			"camara": col = Color(0.85, 0.7, 1.0); label = "câmara [E/oeste]" if battle.chamber_unlocked else "câmara selada"; asset = "camara_selada"  # SPEC-152: sem PNG (ART-043), vale o losango provisório
-			"arcanista": col = Color(0.6, 0.45, 1.0); label = "arcanista [E/oeste]"; asset = "arcanista"  # SPEC-149: sem PNG (ART-041), vale o losango roxo provisório
+			"camara": col = Color(0.85, 0.7, 1.0); label = "câmara [E/oeste]" if battle.chamber_unlocked else "câmara selada"; asset = "camara_aberta" if battle.chamber_unlocked else "camara_selada"  # SPEC-182 (FILA-028 SE02/SE03); antes SPEC-152: sem PNG (ART-043), vale o losango provisório
+			"arcanista": col = Color(0.6, 0.45, 1.0); label = "arcanista [E/oeste]"; asset = "arcanista"  # SPEC-182 (FILA-028 AR01); antes SPEC-149: sem PNG (ART-041), vale o losango roxo provisório
 			"curandeiro": col = Color(0.4, 1.0, 0.5); label = "curandeiro [E/oeste]"; asset = "curandeiro"
 			"doacao": col = Color(0.75, 0.45, 1.0); label = "altar da doação [E/oeste]"; asset = "doacao"
 			"aposta": col = Color(0.95, 0.8, 0.3); label = "mesa de aposta [E/oeste]"; asset = "aposta"
@@ -484,13 +488,18 @@ func _draw_over() -> void:
 		var animation_id: String = {"fountain": "fountain_active", "altar": "altar_active", "ritual": "ritual", "portal": "portal"}.get(String(it.kind), "")
 		var animation_count: int = {"fountain_active": 6, "altar_active": 6, "ritual": 8, "portal": 8}.get(animation_id, 0)
 		var animation_texture := _texture("res://assets/animations/interactions/%s.png" % animation_id) if animation_id != "" else null
-		# O sheet animado do altar tem o corpo de pedra transparente (só poço e chamas): o chão e a estrada apareciam através dele.
-		# Enquanto o sheet não for refeito, o altar usa o sprite estático completo.
-		if scenery_texture != null or String(it.kind) == "altar":
+		# SPEC-182 (FILA-028 SE04 a SE11): a ruína da fase fica atrás do baú do ponto; só visual, o baú segue com a mesma posição e as mesmas regras
+		var ruin_texture: Texture2D = _texture("res://assets/interactions/%s.png" % String(it.get("ruin_art", ""))) if String(it.get("ruin_art", "")) != "" else null
+		if ruin_texture != null:
+			var ruin_h := RUIN_HEIGHT * size_scale
+			draw_texture_rect(ruin_texture, Rect2(draw_p.x - ruin_h * 0.5, draw_p.y - ruin_h + RUIN_DROP, ruin_h, ruin_h), false)
+		# SPEC-182 (FILA-028 AL01): o sheet do altar foi refeito com o corpo de pedra opaco (AL01-CORR/v01, 6 quadros, ciclo de 900 ms);
+		# o sprite estático completo segue como reserva quando o sheet não carrega.
+		if scenery_texture != null:
 			animation_texture = null
 		if animation_texture != null and animation_count > 0:
 			var h := base_h
-			var frame := int(Time.get_ticks_msec() / 100) % animation_count
+			var frame := int(Time.get_ticks_msec() / (ALTAR_FRAME_MS if animation_id == "altar_active" else 100)) % animation_count
 			var w := h
 			draw_texture_rect_region(animation_texture, Rect2(draw_p.x - w * 0.5, draw_p.y - h, w, h), Rect2(frame * 192, 0, 192, 192))
 		elif texture != null:
@@ -594,7 +603,13 @@ func _draw_ecos() -> void:
 		var strength := 1.0 - clampf(dist / clue, 0.0, 1.0)
 		var pulse := 0.5 + 0.5 * sin(Time.get_ticks_msec() / 220.0)
 		draw_circle(p + Vector2(0, -18), 10.0 + 6.0 * pulse, Color(0.8, 0.62, 1.0, (0.10 + 0.22 * strength) * (0.6 + 0.4 * pulse)))
-		draw_circle(p + Vector2(0, -18), 4.0, Color(0.95, 0.88, 1.0, 0.35 + 0.5 * strength))
+		var eco_texture := _texture("res://assets/interactions/eco.png")   # SPEC-182 (FILA-028 SE01): o cristal aparece conforme o herói se aproxima
+		if eco_texture != null:
+			var eco_h := ECO_ART_HEIGHT * (0.8 + 0.2 * pulse)
+			var eco_w := eco_h * float(eco_texture.get_width()) / float(eco_texture.get_height())
+			draw_texture_rect(eco_texture, Rect2(p.x - eco_w * 0.5, p.y - eco_h - 4.0, eco_w, eco_h), false, Color(1, 1, 1, 0.35 + 0.65 * strength))
+		else:
+			draw_circle(p + Vector2(0, -18), 4.0, Color(0.95, 0.88, 1.0, 0.35 + 0.5 * strength))
 
 ## SPEC-118: aliados e peregrinos, círculo da arena e setas na borda para os objetivos fora da tela.
 func _draw_happenings() -> void:
