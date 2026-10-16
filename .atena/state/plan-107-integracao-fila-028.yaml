@@ -1,0 +1,31 @@
+id: PLAN-107
+spec: SPEC-182
+spec_file: .atena/specs/SPEC-182-integracao-da-fila-028-artes-do-claude-handoff-v01.md
+mode: per-plan
+status: COMPLETED_LOCAL_AWAITING_OWNER_PLAYTEST
+approved: "2026-10-16"
+approval_basis: "Dono: rota 'Fazer agora e voltar' e aprovação 'Por plano' (2026-10-16), depois de 'atena' + pacote claude-handoff-v01"
+content_state: CANON_PREPARATION_VISUAL_ONLY
+request_classification: PLAN_DEVIATION
+route: DO_NOW_AND_RETURN
+return_plan: PLAN-103
+return_checkpoint: "B-002/S-008_AWAITING_RETURN; B-004/R3_PROPOSAL_AWAITING_G-M3-3"
+ordered_batches: [B-001, B-002, B-003, B-004]
+batches:
+  B-001: 'Icones: 6 armas, 7 itens, 2 bencaos (15)'
+  B-002: 'Arcanista e 6 eventos (7)'
+  B-003: 'Eco, camara selada/aberta e 8 ruinas (11)'
+  B-004: 'Altar animado AL01 (1)'
+current_batch: none
+completed_batches: 4
+total_batches: 4
+gates:
+  dependencies: NO_NEW_DEPENDENCIES
+  raster_modification: false
+  canonical_promotion: false
+  commit_push_build_export: NOT_AUTHORIZED
+  other_sessions_changes: PRESERVE_UNTOUCHED
+out_of_scope:
+  durvall_v03: 'PLAN-103/M1; faltam retornos N, NE, W, SW, NW'
+  no_image: [ART-047, ART-048, ART-049, PLAN-104]
+evidence: .atena/evidence/EVID-266-integracao-fila-028-artes-do-claude-handoff-2026-10-16.md

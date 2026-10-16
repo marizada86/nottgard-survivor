@@ -1478,3 +1478,24 @@ rename_abyss_megadungeon_2026_10_15:
   evidence: .atena/evidence/EVID-265-renomeacao-abyss-megadungeon-2026-10-15.md
   commit_push_build_export: NOT_AUTHORIZED
   other_sessions_changes: PRESERVE_UNTOUCHED
+
+claude_art_integration_2026_10_16:
+  plan: PLAN-107
+  spec: SPEC-182
+  deviation: DEV-043
+  state_file: .atena/state/plan-107-integracao-fila-028.yaml
+  request_classification: PLAN_DEVIATION
+  route: DO_NOW_AND_RETURN   # decisao do dono 2026-10-16: "Fazer agora e voltar" + "Por plano"
+  mode: per-plan
+  approval_status: APPROVED_EXPLICITLY
+  status: COMPLETED_LOCAL_AWAITING_OWNER_PLAYTEST
+  checkpoint: B-004/DONE_RETURN_TO_PLAN-103
+  content_state: CANON_PREPARATION_VISUAL_ONLY
+  source_package: {branch: codex/claude-art-handoff-2026-10-16, commit: f88a8c9b, worktree: 'C:\Users\Higor Rossini\.codex\worktrees\46e1\nottgard-survivor', path: .atena/generated/art-candidates/claude-handoff-v01}
+  suspended_plan: {id: PLAN-103, checkpoint: "B-002/S-008_AWAITING_RETURN", note: "suspenso so para esta integracao; nada do PLAN-103 foi alterado"}
+  return_plan: PLAN-103
+  commit_push_build_export: NOT_AUTHORIZED
+  other_sessions_changes: PRESERVE_UNTOUCHED
+  evidence: .atena/evidence/EVID-266-integracao-fila-028-artes-do-claude-handoff-2026-10-16.md
+  verification: "importacao 34 recursos; tests/run_all.gd 0 falhas; smoke 9 fases ok; capturas das 8 fases"
+  return_note: "PLAN-103 retoma em B-002/S-008_AWAITING_RETURN; Durvall v03 segue no M1"
