@@ -1,0 +1,77 @@
+{
+  "plan": "FILA032-PRODUCTION",
+  "revision": "v01",
+  "content_state": "DRAFT",
+  "tool": "imagegen",
+  "source_queue_origin": "F:/dev/nottgard-survivor/.atena/generated/CHATGPT-FILA-032-logotipo-abyss-megadungeon.md",
+  "candidate": "LN01/v01",
+  "source": ".atena/generated/art-candidates/lettering/LN01_v01.png",
+  "source_sha256": "B6B3EDB1C41B9E84BC0153A8C66C644C2B526B5897B5317FF6B349CB2ED7E9CB",
+  "source_count": 1,
+  "attempts": 1,
+  "requested_text": [
+    "NOTTGARD",
+    "ABYSS MEGADUNGEON"
+  ],
+  "visual_spelling_review": "EXACT_TEXT_OBSERVED_MANUALLY",
+  "spelling_errors_observed": 0,
+  "human_visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+  "runtime_admission": false,
+  "canonical_promotion": false,
+  "implementation_owner": "Claude",
+  "references": [
+    {
+      "origin": "F:\\dev\\nottgard-survivor\\assets\\ui\\title\\logo.png",
+      "snapshot": ".atena\\generated\\fila032-production-2026-10-16\\references\\logo.png",
+      "sha256": "5D5214FBFAD023C90ECD8E46A86F8EFEDED578E9A8009B685D3FF2F04B4EECB5"
+    },
+    {
+      "origin": "F:\\dev\\nottgard-survivor\\assets\\ui\\title\\title_background.png",
+      "snapshot": ".atena\\generated\\fila032-production-2026-10-16\\references\\title_background.png",
+      "sha256": "6A0D949542C2AC0DC1B12D1612B13C49754C926C5D47AF90A6FCA8FC85CEA471"
+    },
+    {
+      "origin": "F:\\dev\\nottgard-survivor\\assets\\ui\\evolucao_painel_moldura.png",
+      "snapshot": ".atena\\generated\\fila032-production-2026-10-16\\references\\evolucao_painel_moldura.png",
+      "sha256": "CD8863B5733B44248217A8020069CA140D48FA525A73009E246AE5E76B7689C0"
+    }
+  ],
+  "inspection": {
+    "revision": "v01",
+    "width": 1536.0,
+    "height": 1024.0,
+    "bbox_xywh": [
+      3.0,
+      303.0,
+      1530.0,
+      377.0
+    ],
+    "bbox_method": "non-cyan broad threshold",
+    "foreground_aspect": 4.058355437665782,
+    "noncyan_edge_pixels": 0.0,
+    "fit_width": 714.0,
+    "fit_height": 176.0,
+    "fit_scale": 0.46684350132625996,
+    "source_sha256": "B6B3EDB1C41B9E84BC0153A8C66C644C2B526B5897B5317FF6B349CB2ED7E9CB",
+    "proof_crop_xywh": [
+      300,
+      570,
+      950,
+      65
+    ],
+    "subtitle_glyph_y_observed": [
+      583,
+      626
+    ],
+    "subtitle_height_source_approx": 44,
+    "subtitle_height_at_fit_approx": 20.54111405835544,
+    "subtitle_measurement_basis": "Manual visual glyph bounds, not automated OCR or runtime"
+  },
+  "prompt": "prompt-v01.txt",
+  "notes": [
+    "Chave ciano ainda presente",
+    "Margens laterais estreitas",
+    "Linha inferior menor que proporção de altura solicitada, estimativa 20.5px em QA",
+    "Aceite em título desktop/mobile pendente"
+  ]
+}

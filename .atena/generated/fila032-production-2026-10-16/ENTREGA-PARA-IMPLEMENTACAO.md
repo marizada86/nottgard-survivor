@@ -1,0 +1,13 @@
+# LN01 — entrega de produção para Claude
+
+Fonte DRAFT v01, direção visual aceita pelo dono em 2026-10-16: "aprovado, commit e vamos continuar a produção". [Recibo](visual-acceptance.json). [LN01_v01.png](../art-candidates/lettering/LN01_v01.png), 1536×1024, chave ciano #00FFFF, sem alfa definitivo. [Manifesto](manifest.json), [inspeção](inspection.json), [galeria](index.html), [prompt](prompt-v01.txt).
+
+Texto visual conferido: NOTTGARD / ABYSS MEGADUNGEON, sem hífen. Nome oficial e decisão do lockup estão nos snapshots de ART-PROMPTS-065, FILA-032, SPEC-181 e PLAN-106, lidos do checkout principal em 2026-10-16. Produzir esta fonte não altera nem promove o cânone local antigo deste worktree. Nenhuma renomeação de código/configuração foi aplicada aqui.
+
+Destino futuro de referência: `assets/ui/title/logo.png`, teto de 1100×176 RGBA; manter backup da imagem substituída e seguir aprovação de admissão. A fonte original continua preservada. Caixa de conteúdo por limiar amplo de ciano: x3/y303/w1530/h377, proporção ~4,06:1. Redução proporcional limitada pelo teto gera ~714×176; não esticar artificialmente para 1100 de largura. Segunda linha ~20,5 px nessa prévia (limites manuais dos glifos y583..626); verificar altura real ≥14 px no título a 1280×720 e no mobile. A diagramação gerada fez a linha inferior menor que a proporção ~40% pedida, embora legível no exame da prévia; confirmar no aceite.
+
+Preparação: remover ciano com tolerância controlada incluindo vazios das letras; preservar roxo/rachadura e contornos dourados, sem halo ciano. Margens laterais são estreitas, então não aplicar erosão/corte indiscriminados nas pontas. Prévias deste pacote somente recortam e redimensionam com nearest-neighbor; não foram deschaveadas nem montadas no título. Auditoria de alfa/halo deve ocorrer após preparação.
+
+Consumers de referência do plano no principal: `ui/title.gd:_build_logo`, carregando logo.png, faixa 1280×176. Contexto do principal contém renomeação no PLAN-106; antes de integrar confirmar branch/arquivos/escopo e não usar este worktree antigo como prova da situação de runtime atual. Sem alterar saves, game_id, nomes de executável/ZIP ou textos de outros lugares nesta entrega.
+
+Aceite posterior: derivada conforme seleção do dono, captura do título desktop/mobile, texto exato letra a letra, contraste sobre o fundo roxo, ornamento fora das letras, sem halo; checagens de importação/runtime pertinentes. Nenhuma captura em jogo, admissão ou integração feita aqui. Commit local das entregas desta sequência autorizado pelo dono em 2026-10-16; push/exportação e envio automático a outro chat não solicitados.

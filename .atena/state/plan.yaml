@@ -1478,6 +1478,132 @@ fila030_resume_2026_10_15:
   request_classification_latest: IN_PLAN
   push_export: NOT_AUTHORIZED
   next_execution_authorized: false
+fila030_preparation_2026_10_15:
+  revision: FILA030-PREPARATION/v01
+  state_file: .atena/state/fila030-preparation.yaml
+  specification: .atena/specs/SPEC-121-retomada-fila-imagens/fila030-preparation-v01.md
+  request_classification: IN_PLAN
+  mode: per-plan
+  status: COMPLETED_VISUALLY_ACCEPTED_DRAFT
+  approval_status: APPROVED_EXPLICITLY
+  owner_reply: 'atena aprovo por plano'
+  checkpoint: S-004/OWNER_PREPARATION_ACCEPTANCE_RECORDED
+  ordered_steps: [S-001, S-002, S-003, S-004]
+  current_step_position: 4
+  completed_steps: 4
+  total_steps: 4
+  remaining_steps_after_current: 0
+  content_state: DRAFT
+  prepared: 2
+  technical_status: PASS
+  human_visual_acceptance: APPROVED_EXPLICITLY
+  visual_owner_reply: 'atena, aprovado, continue a produção de assets, o claude irá implementar'
+  visual_acceptance_receipt: .atena/generated/fila030-preparation-2026-10-15/v01/visual-acceptance.json
+  implementation_owner: Claude
+  gallery: .atena/generated/fila030-preparation-2026-10-15/v01/index.html
+  evidence: .atena/evidence/fila030-preparation-2026-10-15.md
+  next_execution_authorized: false
+  return_plan: PLAN-103
+  return_checkpoint: B-004/R3_PROPOSAL_AWAITING_G-M3-3
+fila029_production_2026_10_15:
+  revision: FILA029-PRODUCTION/v01
+  state_file: .atena/state/fila029-production.yaml
+  specification: .atena/specs/SPEC-121-retomada-fila-imagens/fila029-production-v01.md
+  request_classification: PLAN_CHANGE_REQUEST
+  mode: per-plan
+  status: COMPLETED_SOURCE_VISUALLY_ACCEPTED_DRAFT
+  approval_status: APPROVED_EXPLICITLY
+  owner_scope_reply: 'prossiga atena'
+  checkpoint: S-004/OWNER_SOURCE_ACCEPTANCE_RECORDED
+  ordered_steps: [S-001, S-002, S-003, S-004]
+  current_step_position: 4
+  completed_steps: 4
+  total_steps: 4
+  remaining_steps_after_current: 0
+  generated: 3
+  recommended: B01/v03
+  gallery: .atena/generated/fila029-production-2026-10-15/index.html
+  evidence: .atena/evidence/fila029-production-2026-10-15.md
+  human_visual_acceptance: APPROVED_EXPLICITLY_SOURCE_DIRECTION
+  visual_owner_reply: 'aprovado, faça lotes maiores para aprovação'
+  visual_acceptance_receipt: .atena/generated/fila029-production-2026-10-15/visual-acceptance.json
+  scope: [B01]
+  content_state: DRAFT
+  implementation_owner: Claude
+  next_execution_authorized: false
+asset_production_workflow_2026_10_15:
+  request_classification: IN_PLAN
+  owner_request: 'aprovado, faça lotes maiores para aprovação'
+  source: .atena/vault/drafts/FLUXO-producao-assets-lotes-maiores-2026-10-15.md
+  visual_review_grouping: READY_ASSETS_BY_FAMILY
+  suggested_review_size: {target_min: 6, target_max: 8}
+  review_size_basis: 'Padrão operacional proposto por Atena para concretizar lotes maiores; dono não fixou quantidade'
+  one_gallery_per_review_group: true
+  implementation_owner: Claude
+  production_approval_mode: per-plan
+  global_plan103_approval_mode: UNCHANGED_PER_BATCH
+  individual_visual_prompting: ONLY_ON_BLOCKING_OR_REQUIRED_IDENTITY_GATE
+  new_unbounded_generation_authorized: false
+asset_lot02_production_2026_10_15:
+  revision: ASSET-LOT02/v01
+  state_file: .atena/state/asset-lot02-production.yaml
+  specification: .atena/specs/SPEC-121-retomada-fila-imagens/asset-lot02-production-v01.md
+  request_classification: PLAN_CHANGE_REQUEST
+  mode: per-plan
+  status: COMPLETED_SOURCE_VISUALLY_ACCEPTED_DRAFT
+  approval_status: APPROVED_EXPLICITLY
+  owner_reply: 'aprovado'
+  checkpoint: S-004/OWNER_JOINT_ACCEPTANCE_RECORDED
+  scope: [UI01, UI02-A, UI02-B, UI03, UI04, PR01]
+  planned_assets: 6
+  planned_source_images: 5
+  ordered_steps: [S-001, S-002, S-003, S-004]
+  current_step_position: 4
+  completed_steps: 4
+  total_steps: 4
+  remaining_steps_after_current: 0
+  visual_review: ONE_JOINT_GALLERY
+  content_state: DRAFT
+  implementation_owner: Claude
+  generated: 5
+  review_assets: 6
+  gallery: .atena/generated/asset-lot02-2026-10-15/index.html
+  evidence: .atena/evidence/asset-lot02-production-2026-10-15.md
+  human_visual_acceptance: APPROVED_EXPLICITLY_SOURCE_DIRECTION
+  visual_owner_reply: 'atena aprovado agora vamos para o item CHATGPT-FILA-032'
+  visual_accepted_date: '2026-10-16'
+  visual_acceptance_receipt: .atena/generated/asset-lot02-2026-10-15/visual-acceptance.json
+  next_execution_authorized: false
+fila032_production_2026_10_16:
+  revision: FILA032-PRODUCTION/v01
+  state_file: .atena/state/fila032-production.yaml
+  specification: .atena/specs/SPEC-121-retomada-fila-imagens/fila032-production-v01.md
+  request_classification: PLAN_CHANGE_REQUEST
+  mode: per-plan
+  approval_status: APPROVED_EXPLICITLY_NAMED_QUEUE
+  owner_request: 'atena aprovado agora vamos para o item CHATGPT-FILA-032'
+  status: COMPLETED_SOURCE_VISUALLY_ACCEPTED_DRAFT
+  checkpoint: S-004/OWNER_SOURCE_ACCEPTANCE_RECORDED
+  scope: [LN01]
+  ordered_steps: [S-001, S-002, S-003, S-004]
+  current_step_position: 4
+  completed_steps: 4
+  total_steps: 4
+  remaining_steps_after_current: 0
+  content_state: DRAFT
+  implementation_owner: Claude
+  generated: 1
+  candidate: LN01/v01
+  gallery: .atena/generated/fila032-production-2026-10-16/index.html
+  evidence: .atena/evidence/fila032-production-2026-10-16.md
+  human_visual_acceptance: APPROVED_EXPLICITLY_SOURCE_DIRECTION
+  visual_owner_reply: 'aprovado, commit e vamos continuar a produção'
+  visual_accepted_date: '2026-10-16'
+  visual_acceptance_receipt: .atena/generated/fila032-production-2026-10-16/visual-acceptance.json
+  local_commit_authorization: 'aprovado, commit e vamos continuar a produção (2026-10-16)'
+  local_commit_scope: PENDING_ART_DELIVERIES_IN_THIS_CHAT
+  push_export: NOT_AUTHORIZED
+  next_execution_authorized: false
 plan_104_retratos_ficha_hud_2026_10_14:
   plan: PLAN-104
   revision: DRAFT/r1

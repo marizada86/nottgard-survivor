@@ -14,7 +14,7 @@ Marque `[x]` ao gerar e `[a]` ao aprovar. Sem imagem de referência obrigatória
 
 #### U01 - `hud_progresso_moldura` (ART-002)
 
-- [ ] gerada · [ ] aprovada
+- [x] gerada · [a] direção visual da fonte aprovada — ASSET-LOT02/v01 DRAFT, aceite conjunto 2026-10-16; implementação pendente
 
 ```text
 Use case: stylized-concept
@@ -26,7 +26,7 @@ Constraints: fundo liso magenta #FF00FF, canal interno preto sólido, sem texto,
 ```n
 #### U02 - `hud_progresso_marcador` (ART-002)
 
-- [ ] gerada · [ ] aprovada
+- [x] gerada · [a] direção visual da fonte aprovada — ASSET-LOT02/v01 DRAFT, aceite conjunto 2026-10-16; implementação pendente
 
 ```text
 Use case: stylized-concept
@@ -38,7 +38,7 @@ Constraints: fundo liso magenta #FF00FF, sem texto, sem personagens
 ```n
 #### U03 - `catalogo_item_bloqueado` (ART-003)
 
-- [ ] gerada · [ ] aprovada
+- [x] gerada · [a] direção visual da fonte aprovada — ASSET-LOT02/v01 DRAFT, aceite conjunto 2026-10-16; implementação pendente
 
 ```text
 Use case: stylized-concept
@@ -50,7 +50,7 @@ Constraints: fundo liso magenta #FF00FF, sem texto, sem letras, sem personagens
 ```n
 #### U04 - `catalogo_item_moldura` (ART-003)
 
-- [ ] gerada · [ ] aprovada
+- [x] gerada · [a] direção visual da fonte aprovada — ASSET-LOT02/v01 DRAFT, aceite conjunto 2026-10-16; implementação pendente
 
 ```text
 Use case: stylized-concept

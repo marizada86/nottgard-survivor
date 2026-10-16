@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="pt-BR"><meta charset="utf-8"><title>FILA-030 — preparação DRAFT v01</title>
+<style>body{margin:28px;background:#181c20;color:#edf0f2;font:16px system-ui;max-width:1536px}p{max-width:1050px;line-height:1.6}img{display:block;max-width:100%;height:auto;margin:16px 0}a{color:#afd4ff}section{border-top:1px solid #555;margin-top:32px}nav{line-height:2}</style>
+<h1>FILA-030 — preparação DRAFT v01</h1>
+<p>Duas derivadas técnicas das fontes v01 aceitas. Conferência técnica PASS; as duas derivadas v01 foram aceitas visualmente pelo dono em 15/10/2026. Implementação a cargo de Claude. Nenhum asset foi admitido no jogo. As fontes permanecem intactas.</p>
+<nav><a href="nevoa_mundo_borda_01.png">NB01 preparada — 1536×384 RGBA</a> · <a href="nevoa_mundo_frente_01.png">NB02 preparada — 1280×360 RGBA</a> · <a href="manifest.json">Manifesto e medições</a></nav>
+<section><h2>Comparação com as fontes</h2><p>Esquerda: fonte com preto original. Direita: derivada com alfa sobre fundo escuro. Escalas ajustadas para comparação; originais preservados. NB01 teve costura apenas horizontal. NB02 teve o conteúdo vertical mapeado para baixo dos primeiros 90 px, com pontas atenuadas.</p><img src="source-comparison.png" alt="Fontes e derivadas lado a lado"></section>
+<section><h2>Alfa sobre fundos escuro, claro e quadriculado</h2><p>RGB constante (224, 232, 240), alfa por luminância Rec.709, ruído até 2/255 removido. A névoa fica pouco contrastada no fundo claro; a avaliação de legibilidade em combate exige integração e playtest posteriores.</p><img src="alpha-surfaces.png" alt="Duas derivadas sobre três fundos"></section>
+<section><h2>NB01 — repetição horizontal 3×1</h2><p>Colunas externas de alfa idênticas. Inspeção em três cópias; nenhum requisito de emenda vertical.</p><img src="NB01-repeat-3x1.png" alt="NB01 em três cópias horizontais"><h3>Grade 3×3 para diagnóstico</h3><p>As transições verticais são esperadas: a textura tem base densa e topo vazio.</p><img src="NB01-repeat-3x3.png" alt="NB01 em grade de nove cópias"></section>
+<section><h2>NB02 — profundidades de 80 e 360 px</h2><img src="NB02-depth-80.png" alt="NB02 a 80 pixels"><img src="NB02-depth-360.png" alt="NB02 a 360 pixels"></section>
+<p>Checkpoint visual das duas derivadas DRAFT v01 concluído. Entrega local disponível em ENTREGA-PARA-IMPLEMENTACAO.md. Avalie a silhueta, a costura horizontal de NB01, a crista de NB02 e a aparência após conversão para alfa. Esta galeria não é um playtest nem comprova perigo ou avanço em jogo.</p>
+</html>

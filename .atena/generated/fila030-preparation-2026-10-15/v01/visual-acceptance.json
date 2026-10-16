@@ -1,0 +1,38 @@
+{
+  "plan": "FILA030-PREPARATION",
+  "revision": "v01",
+  "date": "2026-10-15",
+  "owner_reply": "atena, aprovado, continue a produção de assets, o claude irá implementar",
+  "status": "APPROVED_EXPLICITLY",
+  "content_state": "DRAFT",
+  "accepted_outputs": [
+    {
+      "code": "NB01",
+      "file": "nevoa_mundo_borda_01.png",
+      "width": 1536,
+      "height": 384,
+      "top_alpha_max": 0,
+      "edge_delta_or_alpha_max": 0,
+      "nonconstant_rgb_pixels": 0,
+      "format": "RGBA8",
+      "sha256": "47C4C79CF0941F797999A8792DAC1C07580B6CB95A2A2380DBB0342E203E7475",
+      "checks": "PASS"
+    },
+    {
+      "code": "NB02",
+      "file": "nevoa_mundo_frente_01.png",
+      "width": 1280,
+      "height": 360,
+      "top_alpha_max": 0,
+      "edge_delta_or_alpha_max": 0,
+      "nonconstant_rgb_pixels": 0,
+      "format": "RGBA8",
+      "sha256": "6CF4BF42CB3C1FC32AF3FFDF01E5C914C12337267A2B4E1925D888E9CE7EDF45",
+      "checks": "PASS"
+    }
+  ],
+  "implementation_owner": "Claude",
+  "runtime_admission": false,
+  "canonical_promotion": false,
+  "scope": "Aceite visual das duas preparadas NB01/NB02 v01; entrega local para implementação"
+}

@@ -1,0 +1,22 @@
+id: PLAN-106
+spec: SPEC-181
+spec_file: .atena/specs/SPEC-181-renomeacao-nottgard-abyss-megadungeon.md
+mode: per-plan
+status: COMPLETED_LOCAL_ART_PENDING
+approved: "2026-10-15"
+approval_basis: "Dono: 'Aprovado o escopo A recomendado (preservar saves, canon via nova revisao, historico intocado, nomes de arquivo do .exe/zip mantidos por ora). Nivel de aprovacao: por plano.'"
+content_state: CANON
+request_classification: PLAN_CHANGE_REQUEST
+steps:
+  S-001: 'Pontos vivos: project.godot, version.gd, menu, export_presets, README, workflow, ferramentas.'
+  S-002: 'Preservar user:// com custom_user_dir_name.'
+  S-003: 'PLAN-001 §16 (revisao r2 do canon).'
+  S-004: 'Suite, verificacao do user dir, EVID-265, ART-049.'
+gates:
+  dependencies: NO_NEW_DEPENDENCIES
+  assets_changed: NONE
+  commit_push_build_export: NOT_AUTHORIZED
+  other_sessions_changes: PRESERVE_UNTOUCHED
+pending:
+  ART-049: 'PRIORIDADE ALTA (dono, 2026-10-15). Logotipo novo (assets/ui/title/logo.png ainda diz SURVIVORS); prompt ART-PROMPTS-065 e fila CHATGPT-FILA-032 prontos; G-1 resolvida (lockup sem hífen escrito, 2026-10-16); aguarda envio ao gerador.'
+  release_file_names: 'NottgardSurvivors*.exe/zip mantidos; decisao futura do dono.'

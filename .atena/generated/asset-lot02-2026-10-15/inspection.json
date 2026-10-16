@@ -1,0 +1,140 @@
+[
+  {
+    "code": "UI01",
+    "revision": "v01",
+    "source": ".atena/generated/art-candidates/asset-lot02/UI01_v01.png",
+    "width": 2172,
+    "height": 724,
+    "bbox_xywh": [
+      36,
+      253,
+      2101,
+      228
+    ],
+    "bbox_method": "non-magenta broad threshold",
+    "source_edge_foreground_pixels": 0,
+    "source_alpha_zero_pixels": 0,
+    "source_alpha_partial_pixels": 0,
+    "source_alpha_opaque_pixels": 1572528,
+    "center_alpha_sample_min": 255,
+    "center_alpha_sample_max": 255,
+    "center_alpha_sample_mean_floor": 255,
+    "half": -1,
+    "sha256": "DED84D1C382EA6A5F802C9A47184F9B64D693E86A65E40257677726662134D8A"
+  },
+  {
+    "code": "UI02-A",
+    "revision": "v01",
+    "source": ".atena/generated/art-candidates/asset-lot02/UI02_v01.png",
+    "width": 1774,
+    "height": 887,
+    "bbox_xywh": [
+      167,
+      91,
+      554,
+      694
+    ],
+    "bbox_method": "non-magenta broad threshold",
+    "source_edge_foreground_pixels": 0,
+    "source_alpha_zero_pixels": 0,
+    "source_alpha_partial_pixels": 0,
+    "source_alpha_opaque_pixels": 1573538,
+    "center_alpha_sample_min": 255,
+    "center_alpha_sample_max": 255,
+    "center_alpha_sample_mean_floor": 255,
+    "half": 0,
+    "sha256": "FAB9FB0421BFA7AEEC2ECC0A8EB620170A75C9709CA16C7190D4CF92E9A5BEE0"
+  },
+  {
+    "code": "UI02-B",
+    "revision": "v01",
+    "source": ".atena/generated/art-candidates/asset-lot02/UI02_v01.png",
+    "width": 1774,
+    "height": 887,
+    "bbox_xywh": [
+      1000,
+      60,
+      661,
+      771
+    ],
+    "bbox_method": "non-magenta broad threshold",
+    "source_edge_foreground_pixels": 0,
+    "source_alpha_zero_pixels": 0,
+    "source_alpha_partial_pixels": 0,
+    "source_alpha_opaque_pixels": 1573538,
+    "center_alpha_sample_min": 255,
+    "center_alpha_sample_max": 255,
+    "center_alpha_sample_mean_floor": 255,
+    "half": 1,
+    "sha256": "FAB9FB0421BFA7AEEC2ECC0A8EB620170A75C9709CA16C7190D4CF92E9A5BEE0"
+  },
+  {
+    "code": "UI03",
+    "revision": "v01",
+    "source": ".atena/generated/art-candidates/asset-lot02/UI03_v01.png",
+    "width": 1254,
+    "height": 1254,
+    "bbox_xywh": [
+      149,
+      151,
+      957,
+      929
+    ],
+    "bbox_method": "non-magenta broad threshold",
+    "source_edge_foreground_pixels": 0,
+    "source_alpha_zero_pixels": 0,
+    "source_alpha_partial_pixels": 0,
+    "source_alpha_opaque_pixels": 1572516,
+    "center_alpha_sample_min": 255,
+    "center_alpha_sample_max": 255,
+    "center_alpha_sample_mean_floor": 255,
+    "half": -1,
+    "sha256": "0249C5F5F1FD0766201754F9F4CD8EDCE2F7A45EB9ACB44473A7261E153720BA"
+  },
+  {
+    "code": "UI04",
+    "revision": "v01",
+    "source": ".atena/generated/art-candidates/asset-lot02/UI04_v01.png",
+    "width": 1254,
+    "height": 1254,
+    "bbox_xywh": [
+      149,
+      151,
+      957,
+      929
+    ],
+    "bbox_method": "non-magenta broad threshold",
+    "source_edge_foreground_pixels": 0,
+    "source_alpha_zero_pixels": 0,
+    "source_alpha_partial_pixels": 0,
+    "source_alpha_opaque_pixels": 1572516,
+    "center_alpha_sample_min": 255,
+    "center_alpha_sample_max": 255,
+    "center_alpha_sample_mean_floor": 255,
+    "half": -1,
+    "sha256": "D64C2F1F1B167908F08FF1BEEE724C9D621EB94BA9FF874A4DA3D69E8760F436"
+  },
+  {
+    "code": "PR01",
+    "revision": "v01",
+    "source": ".atena/generated/art-candidates/asset-lot02/PR01_v01.png",
+    "width": 1254,
+    "height": 1254,
+    "bbox_xywh": [
+      428,
+      80,
+      397,
+      1099
+    ],
+    "bbox_method": "alpha >= 16, QA crop only",
+    "source_edge_foreground_pixels": 0,
+    "source_alpha_zero_pixels": 1275585,
+    "source_alpha_partial_pixels": 295947,
+    "source_alpha_opaque_pixels": 984,
+    "center_alpha_sample_min": 252,
+    "center_alpha_sample_max": 253,
+    "center_alpha_sample_mean_floor": 252,
+    "half": -1,
+    "sha256": "2DB8B16D78767270F9751E28D8A59663C870F1B4EF465BDE80FEA18B6C44D759"
+  }
+]

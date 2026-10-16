@@ -1,0 +1,77 @@
+{
+  "plan": "FILA030-PREPARATION",
+  "revision": "v01",
+  "content_state": "DRAFT",
+  "runtime_admission": false,
+  "human_visual_acceptance": "APPROVED_EXPLICITLY",
+  "sources": [
+    {
+      "code": "NB01",
+      "revision": "v01",
+      "path": ".atena/generated/art-candidates/nevoa-mundo/NB01_v01.png",
+      "sha256": "FC6430FA575DE4631E82FED521C76B39C25CDEA01A75471907D1A392DEB2ECC0"
+    },
+    {
+      "code": "NB02",
+      "revision": "v01",
+      "path": ".atena/generated/art-candidates/nevoa-mundo/NB02_v01.png",
+      "sha256": "064D21D28E35F9FB7DCFAA82A098AB6307F2052F353E4BB7048CCFE57D3C1639"
+    }
+  ],
+  "original_hashes_preserved": true,
+  "rgb": [
+    224,
+    232,
+    240
+  ],
+  "luminance": [
+    0.2126,
+    0.7152,
+    0.0722
+  ],
+  "background_threshold_255": 2,
+  "nb01": {
+    "resize": "nearest-neighbor",
+    "top_transparent_rows": 128,
+    "horizontal_blend_band": 64,
+    "vertical_seam_processing": false
+  },
+  "nb02": {
+    "content_bbox_inclusive": [
+      2,
+      163,
+      2096,
+      749
+    ],
+    "x_mapping": "full source width to 1280",
+    "y_mapping": "content minY..maxY to output y=90..359, nearest-neighbor",
+    "top_transparent_rows": 90,
+    "side_fade_width": 102.4
+  },
+  "outputs": [
+    {
+      "code": "NB01",
+      "file": "nevoa_mundo_borda_01.png",
+      "width": 1536,
+      "height": 384,
+      "top_alpha_max": 0,
+      "edge_delta_or_alpha_max": 0,
+      "nonconstant_rgb_pixels": 0,
+      "format": "RGBA8",
+      "sha256": "47C4C79CF0941F797999A8792DAC1C07580B6CB95A2A2380DBB0342E203E7475",
+      "checks": "PASS"
+    },
+    {
+      "code": "NB02",
+      "file": "nevoa_mundo_frente_01.png",
+      "width": 1280,
+      "height": 360,
+      "top_alpha_max": 0,
+      "edge_delta_or_alpha_max": 0,
+      "nonconstant_rgb_pixels": 0,
+      "format": "RGBA8",
+      "sha256": "6CF4BF42CB3C1FC32AF3FFDF01E5C914C12337267A2B4E1925D888E9CE7EDF45",
+      "checks": "PASS"
+    }
+  ]
+}

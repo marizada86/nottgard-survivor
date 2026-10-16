@@ -1,7 +1,7 @@
 ---
 id: "CHATGPT-FILA-030"
 title: "Fila de geração: névoa do mundo, faixa da borda (NB01) e frente da Maré (NB02)"
-status: "duas fontes v01 aceitas visualmente em 2026-10-15; DRAFT, preparação e admissão pendentes"
+status: "fontes e duas preparadas DRAFT v01 aceitas visualmente em 2026-10-15; técnico PASS; implementação a cargo de Claude, admissão pendente"
 priority: "baixa: refinamento visual; as mecânicas MEC-059/060 já funcionam com polígonos e `nevoa_borda_01`"
 created: "2026-10-13"
 relations: ["[[ART-PROMPTS-063-nevoa-de-borda-e-frente-da-mare]]", "[[ART-PROMPTS-025-lote-1-nevoa-bau-de-chefe-imas-e-npcs]]", "[[SPEC-158-nevoa-de-borda-e-de-fim-de-fase]]"]
@@ -26,6 +26,8 @@ Compilação operacional de [[ART-PROMPTS-063-nevoa-de-borda-e-frente-da-mare]];
 Entrega DRAFT v01: [galeria](fila030-review-2026-10-15/index.html) e [evidência](../evidence/fila030-generation-2026-10-15.md). Dono respondeu "aprovado" à direção visual das duas v01, com as pendências informadas. Preparação de proporção, cinza/preto, vazio superior e costura continua pendente; nenhuma admissão em runtime ou promoção canônica.
 
 ## NB01 — colar no ChatGPT
+
+Preparação técnica: [galeria das derivadas DRAFT v01](fila030-preparation-2026-10-15/v01/index.html), dimensões/alfa/costura conferidos; ambas aceitas pelo dono. [Entrega local para implementação por Claude](fila030-preparation-2026-10-15/v01/ENTREGA-PARA-IMPLEMENTACAO.md). Fontes originais preservadas. Nenhuma admissão em runtime realizada nesta frente.
 
 ```text
 A wide horizontal strip of low, creeping ground mist for a dark-fantasy game, drawn as slow rolling banks and long thin horizontal wisps in pure white and light gray. The mist hugs the ground: it is thickest and most opaque along the bottom edge of the image and fades steadily upward until the top third is almost completely empty black. Wisps must run mostly horizontally, parallel to the long axis of the strip, with occasional small curls, and no tall vertical columns, no towering shapes and no single dominant focal cloud. Pixel-art style with controlled dithering and clearly visible stepped pixel bands for density, no smooth airbrushed gradient and no painterly softness. The pattern must be seamlessly tileable horizontally: the left edge must match the right edge exactly, with no visible seam and no feature that repeats obviously. Density varies unevenly along the strip, with thinner and thicker patches, but the bottom edge is never empty. Background: a single completely flat pure black (#000000) — the mist is white on black, with no color, no ground, no scenery, no objects, no creatures, no text, no logo, no watermark, no frame and no border. Wide landscape image.

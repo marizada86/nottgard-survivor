@@ -1,7 +1,7 @@
 ---
 id: "CHATGPT-FILA-029"
 title: "Fila de geração: botão de ação principal (JOGAR), moldura de nove fatias (ART-047)"
-status: "criada 2026-10-10; nenhuma peça gerada; aguardando o dono enviar ao ChatGPT"
+status: "B01 v03 DRAFT aceita visualmente em 2026-10-15; v01/v02 retidas; preparação e aceite in-game pendentes; implementação por Claude"
 priority: "baixa: refinamento visual do Quartel; não bloqueia o jogo (o botão atual funciona)"
 created: "2026-10-10"
 relations: ["[[ART-PROMPTS-062-botao-de-acao-jogar]]", "[[ART-PROMPTS-057-ficha-c-molduras-e-icones]]", "[[SPEC-166-nova-ui-lote-2-quartel-selecao-e-titulo-mec-003]]"]
@@ -19,7 +19,9 @@ Compilação operacional de [[ART-PROMPTS-062-botao-de-acao-jogar]]; em caso de 
 
 ## Fila
 
-- [ ] gerada · [ ] aprovada — B01 `botao_acao_moldura` (final 320×64, fatias 28/28/20/20)
+- [x] gerada · [a] direção visual da fonte aprovada — B01 `botao_acao_moldura` (v03 DRAFT; fonte 2172×724, final pretendido 320×64, fatias 28/28/20/20; aceite in-game pendente)
+
+Entrega: [galeria](fila029-production-2026-10-15/index.html), [evidência](../evidence/fila029-production-2026-10-15.md), [orientações para implementação por Claude](fila029-production-2026-10-15/ENTREGA-PARA-IMPLEMENTACAO.md). Aprovação da direção da fonte não substitui o aceite no Quartel desktop/mobile. v01 retida por contato nas bordas; v02 retida por preenchimento irregular. Fontes originais preservadas.
 
 ## B01 — mensagem completa (colar no ChatGPT)
 

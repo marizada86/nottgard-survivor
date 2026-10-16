@@ -1,0 +1,43 @@
+id: ASSET-LOT02
+revision: v01
+content_state: DRAFT
+origin: planned
+implementation_preceded_spec: false
+request_classification: PLAN_CHANGE_REQUEST
+owner_request: 'continue; lotes maiores para aprovação'
+mode: per-plan
+approval_status: APPROVED_EXPLICITLY
+owner_reply: 'aprovado'
+approved_date: '2026-10-15'
+status: COMPLETED_SOURCE_VISUALLY_ACCEPTED_DRAFT
+checkpoint: S-004/OWNER_JOINT_ACCEPTANCE_RECORDED
+ordered_steps: [S-001, S-002, S-003, S-004]
+current_step_position: 4
+completed_steps: 4
+total_steps: 4
+remaining_steps_after_current: 0
+scope: [UI01, UI02-A, UI02-B, UI03, UI04, PR01]
+planned_source_images: 5
+planned_assets: 6
+specification: .atena/specs/SPEC-121-retomada-fila-imagens/asset-lot02-production-v01.md
+implementation_owner: Claude
+visual_review: ONE_JOINT_GALLERY
+generated: 5
+review_assets: 6
+candidate_versions: {UI01: v01, UI02-A: v01, UI02-B: v01, UI03: v01, UI04: v01, PR01: v01}
+technical_status: SOURCE_REVIEW_COMPLETED_WITH_PREPARATION_NOTES
+human_visual_acceptance: APPROVED_EXPLICITLY_SOURCE_DIRECTION
+visual_owner_reply: 'atena aprovado agora vamos para o item CHATGPT-FILA-032'
+visual_accepted_date: '2026-10-16'
+visual_acceptance_receipt: .atena/generated/asset-lot02-2026-10-15/visual-acceptance.json
+gallery: .atena/generated/asset-lot02-2026-10-15/index.html
+manifest: .atena/generated/asset-lot02-2026-10-15/manifest.json
+evidence: .atena/evidence/asset-lot02-production-2026-10-15.md
+handoff: .atena/generated/asset-lot02-2026-10-15/ENTREGA-PARA-IMPLEMENTACAO.md
+next_execution_authorized: false
+runtime_admission: false
+canonical_promotion: false
+commit_push_export: NOT_AUTHORIZED
+return_plan: PLAN-103
+return_checkpoint: B-004/R3_PROPOSAL_AWAITING_G-M3-3
+next_objective: 'Lote aceito; implementação com Claude; produção segue para FILA-032 por pedido do dono'

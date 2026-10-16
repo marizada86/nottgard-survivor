@@ -1,0 +1,31 @@
+{
+  "revision": "v01",
+  "width": 1536.0,
+  "height": 1024.0,
+  "bbox_xywh": [
+    3.0,
+    303.0,
+    1530.0,
+    377.0
+  ],
+  "bbox_method": "non-cyan broad threshold",
+  "foreground_aspect": 4.058355437665782,
+  "noncyan_edge_pixels": 0.0,
+  "fit_width": 714.0,
+  "fit_height": 176.0,
+  "fit_scale": 0.46684350132625996,
+  "source_sha256": "B6B3EDB1C41B9E84BC0153A8C66C644C2B526B5897B5317FF6B349CB2ED7E9CB",
+  "proof_crop_xywh": [
+    300,
+    570,
+    950,
+    65
+  ],
+  "subtitle_glyph_y_observed": [
+    583,
+    626
+  ],
+  "subtitle_height_source_approx": 44,
+  "subtitle_height_at_fit_approx": 20.54111405835544,
+  "subtitle_measurement_basis": "Manual visual glyph bounds, not automated OCR or runtime"
+}

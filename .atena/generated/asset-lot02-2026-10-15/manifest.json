@@ -1,0 +1,184 @@
+{
+  "plan": "ASSET-LOT02",
+  "revision": "v01",
+  "content_state": "DRAFT",
+  "tool": "imagegen",
+  "source_count": 5,
+  "review_asset_count": 6,
+  "attempts": 5,
+  "technical_status": "SOURCE_REVIEW_WITH_PREPARATION_NOTES",
+  "human_visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+  "runtime_admission": false,
+  "canonical_promotion": false,
+  "implementation_owner": "Claude",
+  "reference_hashes": [
+    {
+      "path": "assets/ui/ficha/ficha_aba_moldura.png",
+      "sha256": "3A17767A5E025F97D09AEB4FE501A947FCB1C10924DF94E958D418D90D812494"
+    },
+    {
+      "path": "assets/ui/ficha/ficha_moldura_detalhe.png",
+      "sha256": "6930ECE272362ADA2A364D45F829650B2C2E4D39FCB69FC9C48AFD5C8EE7A902"
+    },
+    {
+      "path": "assets/ui/evolucao_painel_moldura.png",
+      "sha256": "CD8863B5733B44248217A8020069CA140D48FA525A73009E246AE5E76B7689C0"
+    },
+    {
+      "path": "assets/props/pilar_01.png",
+      "sha256": "73B720E70A41A1646C2DADDFCC8A23B9CA70BE3D13ED7D2DDB8B4BAF4A7F0B3C"
+    },
+    {
+      "path": "assets/props/pilar_03.png",
+      "sha256": "1C4FE4C155EB1C1FC9E8AA39AF2AEC74AEE4C9D5303A4090CA18A3A0DD0C581F"
+    }
+  ],
+  "assets": [
+    {
+      "code": "UI01",
+      "revision": "v01",
+      "source": ".atena/generated/art-candidates/asset-lot02/UI01_v01.png",
+      "width": 2172,
+      "height": 724,
+      "bbox_xywh": [
+        36,
+        253,
+        2101,
+        228
+      ],
+      "bbox_method": "non-magenta broad threshold",
+      "source_edge_foreground_pixels": 0,
+      "source_alpha_zero_pixels": 0,
+      "source_alpha_partial_pixels": 0,
+      "source_alpha_opaque_pixels": 1572528,
+      "center_alpha_sample_min": 255,
+      "center_alpha_sample_max": 255,
+      "center_alpha_sample_mean_floor": 255,
+      "half": -1,
+      "sha256": "DED84D1C382EA6A5F802C9A47184F9B64D693E86A65E40257677726662134D8A"
+    },
+    {
+      "code": "UI02-A",
+      "revision": "v01",
+      "source": ".atena/generated/art-candidates/asset-lot02/UI02_v01.png",
+      "width": 1774,
+      "height": 887,
+      "bbox_xywh": [
+        167,
+        91,
+        554,
+        694
+      ],
+      "bbox_method": "non-magenta broad threshold",
+      "source_edge_foreground_pixels": 0,
+      "source_alpha_zero_pixels": 0,
+      "source_alpha_partial_pixels": 0,
+      "source_alpha_opaque_pixels": 1573538,
+      "center_alpha_sample_min": 255,
+      "center_alpha_sample_max": 255,
+      "center_alpha_sample_mean_floor": 255,
+      "half": 0,
+      "sha256": "FAB9FB0421BFA7AEEC2ECC0A8EB620170A75C9709CA16C7190D4CF92E9A5BEE0"
+    },
+    {
+      "code": "UI02-B",
+      "revision": "v01",
+      "source": ".atena/generated/art-candidates/asset-lot02/UI02_v01.png",
+      "width": 1774,
+      "height": 887,
+      "bbox_xywh": [
+        1000,
+        60,
+        661,
+        771
+      ],
+      "bbox_method": "non-magenta broad threshold",
+      "source_edge_foreground_pixels": 0,
+      "source_alpha_zero_pixels": 0,
+      "source_alpha_partial_pixels": 0,
+      "source_alpha_opaque_pixels": 1573538,
+      "center_alpha_sample_min": 255,
+      "center_alpha_sample_max": 255,
+      "center_alpha_sample_mean_floor": 255,
+      "half": 1,
+      "sha256": "FAB9FB0421BFA7AEEC2ECC0A8EB620170A75C9709CA16C7190D4CF92E9A5BEE0"
+    },
+    {
+      "code": "UI03",
+      "revision": "v01",
+      "source": ".atena/generated/art-candidates/asset-lot02/UI03_v01.png",
+      "width": 1254,
+      "height": 1254,
+      "bbox_xywh": [
+        149,
+        151,
+        957,
+        929
+      ],
+      "bbox_method": "non-magenta broad threshold",
+      "source_edge_foreground_pixels": 0,
+      "source_alpha_zero_pixels": 0,
+      "source_alpha_partial_pixels": 0,
+      "source_alpha_opaque_pixels": 1572516,
+      "center_alpha_sample_min": 255,
+      "center_alpha_sample_max": 255,
+      "center_alpha_sample_mean_floor": 255,
+      "half": -1,
+      "sha256": "0249C5F5F1FD0766201754F9F4CD8EDCE2F7A45EB9ACB44473A7261E153720BA"
+    },
+    {
+      "code": "UI04",
+      "revision": "v01",
+      "source": ".atena/generated/art-candidates/asset-lot02/UI04_v01.png",
+      "width": 1254,
+      "height": 1254,
+      "bbox_xywh": [
+        149,
+        151,
+        957,
+        929
+      ],
+      "bbox_method": "non-magenta broad threshold",
+      "source_edge_foreground_pixels": 0,
+      "source_alpha_zero_pixels": 0,
+      "source_alpha_partial_pixels": 0,
+      "source_alpha_opaque_pixels": 1572516,
+      "center_alpha_sample_min": 255,
+      "center_alpha_sample_max": 255,
+      "center_alpha_sample_mean_floor": 255,
+      "half": -1,
+      "sha256": "D64C2F1F1B167908F08FF1BEEE724C9D621EB94BA9FF874A4DA3D69E8760F436"
+    },
+    {
+      "code": "PR01",
+      "revision": "v01",
+      "source": ".atena/generated/art-candidates/asset-lot02/PR01_v01.png",
+      "width": 1254,
+      "height": 1254,
+      "bbox_xywh": [
+        428,
+        80,
+        397,
+        1099
+      ],
+      "bbox_method": "alpha >= 16, QA crop only",
+      "source_edge_foreground_pixels": 0,
+      "source_alpha_zero_pixels": 1275585,
+      "source_alpha_partial_pixels": 295947,
+      "source_alpha_opaque_pixels": 984,
+      "center_alpha_sample_min": 252,
+      "center_alpha_sample_max": 253,
+      "center_alpha_sample_mean_floor": 252,
+      "half": -1,
+      "sha256": "2DB8B16D78767270F9751E28D8A59663C870F1B4EF465BDE80FEA18B6C44D759"
+    }
+  ],
+  "notes": [
+    "UI02-A e UI02-B compartilham fonte e hash",
+    "UI usa magenta opaco, ainda sem alfa final",
+    "PR01 tem alfa nativo com resíduos de baixa opacidade e corpo amostrado 252..253",
+    "UI01 não autoriza alteração de layout da barra de 4 px",
+    "Medições e recortes são QA de fontes, não admissão"
+  ],
+  "prompts": "prompts.md"
+}

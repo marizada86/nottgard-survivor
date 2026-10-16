@@ -1,0 +1,107 @@
+{
+  "plan": "FILA029-PRODUCTION",
+  "revision": "v01",
+  "content_state": "DRAFT",
+  "tool": "imagegen",
+  "attempts": 3,
+  "recommended": "B01/v03",
+  "technical_status": "SOURCE_REVIEW_WITH_PREPARATION_NOTES",
+  "human_visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+  "in_game_acceptance": "PENDING_NOT_PERFORMED",
+  "runtime_admission": false,
+  "canonical_promotion": false,
+  "implementation_owner": "Claude",
+  "references": [
+    {
+      "path": "assets/ui/ficha/ficha_aba_moldura.png",
+      "sha256": "3A17767A5E025F97D09AEB4FE501A947FCB1C10924DF94E958D418D90D812494",
+      "content_state": "EXISTING_PROJECT_REFERENCE",
+      "role": "família e forma"
+    },
+    {
+      "path": "assets/ui/ficha/ficha_moldura_detalhe.png",
+      "sha256": "6930ECE272362ADA2A364D45F829650B2C2E4D39FCB69FC9C48AFD5C8EE7A902",
+      "content_state": "EXISTING_PROJECT_REFERENCE",
+      "role": "limite de ornamento"
+    },
+    {
+      "path": "assets/ui/evolucao_painel_moldura.png",
+      "sha256": "CD8863B5733B44248217A8020069CA140D48FA525A73009E246AE5E76B7689C0",
+      "content_state": "EXISTING_PROJECT_REFERENCE",
+      "role": "material; composição e dourado excluídos pelo prompt específico"
+    }
+  ],
+  "sources": [
+    {
+      "revision": "v01",
+      "width": 2172.0,
+      "height": 724.0,
+      "foreground_bbox_inclusive": [
+        0.0,
+        143.0,
+        2171.0,
+        517.0
+      ],
+      "foreground_width": 2172.0,
+      "foreground_height": 375.0,
+      "foreground_aspect": 5.792,
+      "nonmagenta_edge_pixels": 12.0,
+      "center_roi": "x20..80%, y30..70% of foreground bbox",
+      "center_luminance_min": 22.068199999999997,
+      "center_luminance_max": 41.855599999999995,
+      "center_luminance_range_255": 19.787399999999998,
+      "center_luminance_mean": 30.982785282156176,
+      "sha256": "ED4F84A0655FCEDA6FC78BB4FB6491DE15887BDFC508FA3C86C8BB66536D26A9"
+    },
+    {
+      "revision": "v02",
+      "width": 2172.0,
+      "height": 724.0,
+      "foreground_bbox_inclusive": [
+        62.0,
+        164.0,
+        2108.0,
+        508.0
+      ],
+      "foreground_width": 2047.0,
+      "foreground_height": 345.0,
+      "foreground_aspect": 5.933333333333334,
+      "nonmagenta_edge_pixels": 0.0,
+      "center_roi": "x20..80%, y30..70% of foreground bbox",
+      "center_luminance_min": 23.927799999999998,
+      "center_luminance_max": 45.8556,
+      "center_luminance_range_255": 21.927800000000005,
+      "center_luminance_mean": 33.72790650873391,
+      "sha256": "3A5CEBACE386650600C6ECC4388F342EB282BD70BBCC052A6DA21C2E582EFCA2"
+    },
+    {
+      "revision": "v03",
+      "width": 2172.0,
+      "height": 724.0,
+      "foreground_bbox_inclusive": [
+        62.0,
+        163.0,
+        2107.0,
+        508.0
+      ],
+      "foreground_width": 2046.0,
+      "foreground_height": 346.0,
+      "foreground_aspect": 5.913294797687861,
+      "nonmagenta_edge_pixels": 0.0,
+      "center_roi": "x20..80%, y30..70% of foreground bbox",
+      "center_luminance_min": 32.9278,
+      "center_luminance_max": 36.2126,
+      "center_luminance_range_255": 3.284800000000004,
+      "center_luminance_mean": 34.67693023753814,
+      "sha256": "46AE33EF6E016879B72A59A6A2BF218559D2791360A87ACC4E5E2E1AA8EA50A6"
+    }
+  ],
+  "prompt_file": "prompts.md",
+  "preparation_pending": [
+    "alfa e remoção magenta",
+    "proporção final 5:1",
+    "nove fatias",
+    "teste de rótulo e glifo",
+    "tintas e revisão no Quartel desktop/mobile"
+  ]
+}
