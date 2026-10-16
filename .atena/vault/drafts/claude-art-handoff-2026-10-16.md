@@ -6,7 +6,7 @@ origin: guided
 implementation_preceded_spec: false
 classification: PLAN_DEVIATION
 approval_mode: per-plan
-status: PACKAGE_VERIFIED_READY_FOR_PUBLICATION
+status: LOCAL_DELIVERED_PUSH_BLOCKED_APPROVAL_REQUIRED
 ---
 
 # Entrega das artes pendentes ao Claude

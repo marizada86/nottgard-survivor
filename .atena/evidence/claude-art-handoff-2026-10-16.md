@@ -21,6 +21,10 @@ Backlog: 0 P0, quatro P1 abertos (BUG-025/027/028/029), 18 P1 implementados agua
 
 ## Publicação
 
-Branch dedicada: `codex/claude-art-handoff-2026-10-16`, base `806a7429`. Main preservada. O workflow de release só dispara por push em main; este push de branch não publica uma build. Commit/push autorizados condicionalmente no pedido e necessários para disponibilizar os arquivos ignorados ao Claude em outro checkout. O recibo de publicação será anexado após confirmação do SHA remoto.
+Branch dedicada: `codex/claude-art-handoff-2026-10-16`, base `806a7429`. Pacote commitado localmente em `5a0f679e`. Main preservada. O workflow de release só dispara por push em main; push desta branch não publica uma build.
+
+O push não ocorreu. A revisão automática rejeitou `git push -u origin codex/claude-art-handoff-2026-10-16`: considerou não verificados a confiança/propriedade do remoto e a autorização condicional para o destino específico. `git remote get-url --push origin` confirmou `https://github.com/marizada86/nottgard-survivor.git`; `gh` não está disponível para verificar conta/propriedade. Não houve tentativa indireta nem contorno do bloqueio. Solicitação ao dono: confirmar explicitamente o push do pacote de artes e registros para esse repositório e essa branch. Etapa S-003 permanece pendente de publicação e verificação remota.
+
+Verificação complementar concluída: sete links Markdown locais válidos; dimensões dos 38 PNGs principais conferidas (Durvall 3072×512 nos movimentos, 2048×512 no ataque; altar 1152×192); `git diff --cached --check` sem erros. Relatório em `.atena/generated/art-candidates/claude-handoff-v01/verification.json`.
 
 Próximo objetivo após entrega: retornar ao PLAN-103, preservando espera das imagens Durvall e da decisão G-M3-3. Implementação futura exige seu checkpoint e conserva os gates visuais/playtests individuais.

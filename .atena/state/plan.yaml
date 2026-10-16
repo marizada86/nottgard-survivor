@@ -3,11 +3,11 @@ claude_art_handoff_2026_10_16:
   id: CLAUDE-ART-HANDOFF-2026-10-16
   revision: v01
   request_classification: PLAN_DEVIATION
-  status: IN_PROGRESS
+  status: LOCAL_DELIVERED_PUSH_BLOCKED_APPROVAL_REQUIRED
   mode: per-plan
   route: DO_NOW_AND_RETURN
   approval_receipt: 'Dono respondeu 1 em 2026-10-16, aprovando por plano a entrega proposta.'
-  checkpoint: B-003/S-003/VERIFY_AND_PUBLISH
+  checkpoint: B-003/S-003/REMOTE_DESTINATION_APPROVAL_REQUIRED
   ordered_steps: [S-001, S-002, S-003]
   ordered_batches: [B-001, B-002, B-003]
   completed_steps: 2
@@ -29,6 +29,10 @@ claude_art_handoff_2026_10_16:
   support_images: 10
   audited_local_images: 2371
   historical_held_candidates: 55
+  local_package_commit: 5a0f679e
+  pushed: false
+  push_block: 'Automatic approval review rejected push: remote origin ownership/trust and destination authorization not verified. gh CLI unavailable; exact destination confirmation requested.'
+  exact_push_destination: https://github.com/marizada86/nottgard-survivor.git
   evidence: .atena/evidence/claude-art-handoff-2026-10-16.md
   canonical_promotion: false
 hero_local_commit_2026_10_13:
