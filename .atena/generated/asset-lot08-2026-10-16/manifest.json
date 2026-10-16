@@ -1,0 +1,775 @@
+{
+  "id": "ASSET-LOT08",
+  "revision": "v01",
+  "content_state": "DRAFT",
+  "status": "VISUALLY_ACCEPTED_DRAFT_WITH_PREPARATION_NOTES",
+  "selected_sources": 11,
+  "review_entries": 5,
+  "generation_attempts": 12,
+  "assets": [
+    {
+      "code": "PR01",
+      "revision": "v01",
+      "source": ".atena/generated/art-candidates/asset-lot08/PR01_v01.png",
+      "source_link": "../art-candidates/asset-lot08/PR01_v01.png",
+      "source_sha256": "BAE63B084973451ACA564A9919C3C368111EEBD0FE4CAC7C85B1C5F53EB10ED8",
+      "width": 1254,
+      "height": 1254,
+      "qa_frame": "frames/PR01/00.png",
+      "qa_sha256": "F3304137EA04BCC692DD83D70AA3CAF7C4B3B88AA752CA37B3E08C89060BFC6A",
+      "alpha_ge16_pixels": 622447,
+      "alpha_ge128_pixels": 616222,
+      "alpha_1to15_pixels": 38800,
+      "alpha255_pixels": 361,
+      "edge_band4_alpha_ge16_pixels": 0,
+      "visible_bbox_xyxy": [
+        151,
+        62,
+        1160,
+        1191
+      ],
+      "core_bbox_xyxy": [
+        152,
+        63,
+        1159,
+        1190
+      ],
+      "core_alpha_mode": 252,
+      "margin_min_px": 62,
+      "nominal_origin_xy": null,
+      "geometric_root_proxy_bbox_and_centroid": null,
+      "root_proxy_is_semantic_annotation": false,
+      "human_visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+      "runtime_admission": false
+    },
+    {
+      "code": "PR02",
+      "revision": "v01",
+      "source": ".atena/generated/art-candidates/asset-lot08/PR02_v01.png",
+      "source_link": "../art-candidates/asset-lot08/PR02_v01.png",
+      "source_sha256": "E917AB224A56E368473D8474E0D9FCC825D6199FB4A3CBAB4799444E49C6CCFE",
+      "width": 1254,
+      "height": 1254,
+      "qa_frame": "frames/PR02/00.png",
+      "qa_sha256": "84C9CE9DE79721940FB598AE942B230BAF6A5600E121D601212FBCCC8D18162D",
+      "alpha_ge16_pixels": 604432,
+      "alpha_ge128_pixels": 587039,
+      "alpha_1to15_pixels": 80243,
+      "alpha255_pixels": 3087,
+      "edge_band4_alpha_ge16_pixels": 0,
+      "visible_bbox_xyxy": [
+        205,
+        60,
+        1208,
+        1173
+      ],
+      "core_bbox_xyxy": [
+        205,
+        61,
+        1208,
+        1173
+      ],
+      "core_alpha_mode": 252,
+      "margin_min_px": 45,
+      "nominal_origin_xy": null,
+      "geometric_root_proxy_bbox_and_centroid": null,
+      "root_proxy_is_semantic_annotation": false,
+      "human_visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+      "runtime_admission": false
+    },
+    {
+      "code": "PR03",
+      "revision": "v01",
+      "source": ".atena/generated/art-candidates/asset-lot08/PR03_v01.png",
+      "source_link": "../art-candidates/asset-lot08/PR03_v01.png",
+      "source_sha256": "22878CCA1AD410D626E74777CF1627749FBF41B334B62E1DFF67952BEE913F94",
+      "width": 1254,
+      "height": 1254,
+      "qa_frame": "frames/PR03/00.png",
+      "qa_sha256": "007BAD7397E20D91A5E7C92B406E2E659A77F34E93E51FF189382A4264855CA1",
+      "alpha_ge16_pixels": 299786,
+      "alpha_ge128_pixels": 296666,
+      "alpha_1to15_pixels": 16828,
+      "alpha255_pixels": 399,
+      "edge_band4_alpha_ge16_pixels": 0,
+      "visible_bbox_xyxy": [
+        134,
+        297,
+        1154,
+        991
+      ],
+      "core_bbox_xyxy": [
+        134,
+        298,
+        1153,
+        990
+      ],
+      "core_alpha_mode": 253,
+      "margin_min_px": 99,
+      "nominal_origin_xy": null,
+      "geometric_root_proxy_bbox_and_centroid": null,
+      "root_proxy_is_semantic_annotation": false,
+      "human_visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+      "runtime_admission": false
+    },
+    {
+      "code": "GR01",
+      "revision": "v01",
+      "source": ".atena/generated/art-candidates/asset-lot08/GR01_v01.png",
+      "source_link": "../art-candidates/asset-lot08/GR01_v01.png",
+      "source_sha256": "8AF8F18535F9D222B5E13C7ECF8D7F4F4EB77ABB1921F35374B797805C739EB9",
+      "width": 1254,
+      "height": 1254,
+      "qa_frame": "frames/GR01/00.png",
+      "qa_sha256": "F2EB2A66393A9081CB015E0FF94D1D41E4A1033AB11E2DBCE7910A2B8C1D36CA",
+      "alpha_ge16_pixels": 298652,
+      "alpha_ge128_pixels": 294424,
+      "alpha_1to15_pixels": 17514,
+      "alpha255_pixels": 379,
+      "edge_band4_alpha_ge16_pixels": 0,
+      "visible_bbox_xyxy": [
+        279,
+        194,
+        1047,
+        1062
+      ],
+      "core_bbox_xyxy": [
+        280,
+        195,
+        1046,
+        1061
+      ],
+      "core_alpha_mode": 253,
+      "margin_min_px": 191,
+      "nominal_origin_xy": null,
+      "geometric_root_proxy_bbox_and_centroid": null,
+      "root_proxy_is_semantic_annotation": false,
+      "human_visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+      "runtime_admission": false
+    },
+    {
+      "code": "GR02",
+      "revision": "v02",
+      "source": ".atena/generated/art-candidates/asset-lot08/GR02_v02.png",
+      "source_link": "../art-candidates/asset-lot08/GR02_v02.png",
+      "source_sha256": "12CCFE2EDAAA38FA760DC45158433D625654481B033C95615129DFDFD0136823",
+      "width": 1254,
+      "height": 1254,
+      "qa_frame": "frames/GR02/00.png",
+      "qa_sha256": "F49F08B80D9E98DB1DF934A8E9A0B4AF158DAFC486E295D8966A8F348EB90A69",
+      "alpha_ge16_pixels": 309516,
+      "alpha_ge128_pixels": 305688,
+      "alpha_1to15_pixels": 14240,
+      "alpha255_pixels": 611,
+      "edge_band4_alpha_ge16_pixels": 0,
+      "visible_bbox_xyxy": [
+        260,
+        194,
+        1049,
+        1063
+      ],
+      "core_bbox_xyxy": [
+        261,
+        194,
+        1048,
+        1062
+      ],
+      "core_alpha_mode": 253,
+      "margin_min_px": 190,
+      "nominal_origin_xy": null,
+      "geometric_root_proxy_bbox_and_centroid": null,
+      "root_proxy_is_semantic_annotation": false,
+      "human_visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+      "runtime_admission": false
+    },
+    {
+      "code": "GR03",
+      "revision": "v01",
+      "source": ".atena/generated/art-candidates/asset-lot08/GR03_v01.png",
+      "source_link": "../art-candidates/asset-lot08/GR03_v01.png",
+      "source_sha256": "19E57280FFE49EBC5D9413F8DD45673A5F1410E1CC67CC7AE5901B9802EA2A40",
+      "width": 1254,
+      "height": 1254,
+      "qa_frame": "frames/GR03/00.png",
+      "qa_sha256": "AA2747DE404FCB2FE5416D9F485022ED20518B64BCE71082F3F6C9E716273C7A",
+      "alpha_ge16_pixels": 299744,
+      "alpha_ge128_pixels": 295779,
+      "alpha_1to15_pixels": 12237,
+      "alpha255_pixels": 358,
+      "edge_band4_alpha_ge16_pixels": 0,
+      "visible_bbox_xyxy": [
+        287,
+        194,
+        1049,
+        1062
+      ],
+      "core_bbox_xyxy": [
+        287,
+        195,
+        1049,
+        1062
+      ],
+      "core_alpha_mode": 253,
+      "margin_min_px": 191,
+      "nominal_origin_xy": null,
+      "geometric_root_proxy_bbox_and_centroid": null,
+      "root_proxy_is_semantic_annotation": false,
+      "human_visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+      "runtime_admission": false
+    },
+    {
+      "code": "GR04",
+      "revision": "v01",
+      "source": ".atena/generated/art-candidates/asset-lot08/GR04_v01.png",
+      "source_link": "../art-candidates/asset-lot08/GR04_v01.png",
+      "source_sha256": "7EC3037FA34DC581C78CEE093C02EDF1DCD2DB48F1DBED0C9A6736C70D52CABC",
+      "width": 1254,
+      "height": 1254,
+      "qa_frame": "frames/GR04/00.png",
+      "qa_sha256": "4F039C01CEC4BC503724F1DD7D3BB3591C6E84B9FF76B5AC0E9B5A625C569AFA",
+      "alpha_ge16_pixels": 301079,
+      "alpha_ge128_pixels": 297313,
+      "alpha_1to15_pixels": 12661,
+      "alpha255_pixels": 440,
+      "edge_band4_alpha_ge16_pixels": 0,
+      "visible_bbox_xyxy": [
+        282,
+        194,
+        1050,
+        1062
+      ],
+      "core_bbox_xyxy": [
+        283,
+        195,
+        1049,
+        1061
+      ],
+      "core_alpha_mode": 253,
+      "margin_min_px": 191,
+      "nominal_origin_xy": null,
+      "geometric_root_proxy_bbox_and_centroid": null,
+      "root_proxy_is_semantic_annotation": false,
+      "human_visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+      "runtime_admission": false
+    },
+    {
+      "code": "FJ01",
+      "revision": "v01",
+      "source": ".atena/generated/art-candidates/asset-lot08/FJ01_v01.png",
+      "source_link": "../art-candidates/asset-lot08/FJ01_v01.png",
+      "source_sha256": "650BD12E293D8A53D1A4B36184668ADF56AB1E23D9E4ACA0BB0BCF0C48BA5B15",
+      "width": 1254,
+      "height": 1254,
+      "qa_frame": "frames/FJ01/00.png",
+      "qa_sha256": "490E1D38C66DAC75299D89CC9742DB84E1EAC25D6962B9905DBC0C934E5CDAE1",
+      "alpha_ge16_pixels": 113099,
+      "alpha_ge128_pixels": 107804,
+      "alpha_1to15_pixels": 26151,
+      "alpha255_pixels": 442,
+      "edge_band4_alpha_ge16_pixels": 0,
+      "visible_bbox_xyxy": [
+        165,
+        500,
+        1139,
+        773
+      ],
+      "core_bbox_xyxy": [
+        166,
+        500,
+        1138,
+        772
+      ],
+      "core_alpha_mode": 253,
+      "margin_min_px": 114,
+      "nominal_origin_xy": [
+        156.75,
+        627
+      ],
+      "geometric_root_proxy_bbox_and_centroid": [
+        166,
+        616,
+        185,
+        686,
+        178.25675675675674,
+        651.7186732186732,
+        814
+      ],
+      "root_proxy_is_semantic_annotation": false,
+      "human_visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+      "runtime_admission": false
+    },
+    {
+      "code": "FJ02",
+      "revision": "v01",
+      "source": ".atena/generated/art-candidates/asset-lot08/FJ02_v01.png",
+      "source_link": "../art-candidates/asset-lot08/FJ02_v01.png",
+      "source_sha256": "58FC6C99F6BDB18A19BE0E696FA412E0B07868799D2B53A1B11730B2C665257D",
+      "width": 1254,
+      "height": 1254,
+      "qa_frame": "frames/FJ02/00.png",
+      "qa_sha256": "C5858A60F41281BFEC5FFC16BD7575131758E51BC06237B647CF439F5A1ADA89",
+      "alpha_ge16_pixels": 123494,
+      "alpha_ge128_pixels": 115006,
+      "alpha_1to15_pixels": 33275,
+      "alpha255_pixels": 152,
+      "edge_band4_alpha_ge16_pixels": 0,
+      "visible_bbox_xyxy": [
+        164,
+        503,
+        1164,
+        774
+      ],
+      "core_bbox_xyxy": [
+        169,
+        504,
+        1163,
+        774
+      ],
+      "core_alpha_mode": 253,
+      "margin_min_px": 89,
+      "nominal_origin_xy": [
+        156.75,
+        627
+      ],
+      "geometric_root_proxy_bbox_and_centroid": [
+        169,
+        611,
+        188,
+        688,
+        180.51282051282053,
+        650.1913214990138,
+        1014
+      ],
+      "root_proxy_is_semantic_annotation": false,
+      "human_visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+      "runtime_admission": false
+    },
+    {
+      "code": "FJ03",
+      "revision": "v01",
+      "source": ".atena/generated/art-candidates/asset-lot08/FJ03_v01.png",
+      "source_link": "../art-candidates/asset-lot08/FJ03_v01.png",
+      "source_sha256": "1C14F8C022354B98AA3A03E2262A4BC04D009AA1D91AA92D32423B91F21DC55C",
+      "width": 1254,
+      "height": 1254,
+      "qa_frame": "frames/FJ03/00.png",
+      "qa_sha256": "A20F1658B89E9C03BBB7E73B0D9466C663A76FF91539D5A0D39127E199AD0EE1",
+      "alpha_ge16_pixels": 118326,
+      "alpha_ge128_pixels": 111903,
+      "alpha_1to15_pixels": 30030,
+      "alpha255_pixels": 72,
+      "edge_band4_alpha_ge16_pixels": 0,
+      "visible_bbox_xyxy": [
+        168,
+        503,
+        1125,
+        778
+      ],
+      "core_bbox_xyxy": [
+        169,
+        504,
+        1124,
+        778
+      ],
+      "core_alpha_mode": 252,
+      "margin_min_px": 128,
+      "nominal_origin_xy": [
+        156.75,
+        627
+      ],
+      "geometric_root_proxy_bbox_and_centroid": [
+        169,
+        617,
+        188,
+        686,
+        180.74060606060607,
+        652.6533333333333,
+        825
+      ],
+      "root_proxy_is_semantic_annotation": false,
+      "human_visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+      "runtime_admission": false
+    },
+    {
+      "code": "FJ04",
+      "revision": "v01",
+      "source": ".atena/generated/art-candidates/asset-lot08/FJ04_v01.png",
+      "source_link": "../art-candidates/asset-lot08/FJ04_v01.png",
+      "source_sha256": "24A76603659D7174DF252C2D17E98906112D7CBBA2C39471543DB0E920185CA7",
+      "width": 1254,
+      "height": 1254,
+      "qa_frame": "frames/FJ04/00.png",
+      "qa_sha256": "2EFCFE414013C1B82571DB1F9A68762070974E5C219D4612513F349B9582DAED",
+      "alpha_ge16_pixels": 94412,
+      "alpha_ge128_pixels": 86591,
+      "alpha_1to15_pixels": 29811,
+      "alpha255_pixels": 45,
+      "edge_band4_alpha_ge16_pixels": 0,
+      "visible_bbox_xyxy": [
+        167,
+        527,
+        1138,
+        761
+      ],
+      "core_bbox_xyxy": [
+        169,
+        528,
+        1135,
+        760
+      ],
+      "core_alpha_mode": 252,
+      "margin_min_px": 115,
+      "nominal_origin_xy": [
+        156.75,
+        627
+      ],
+      "geometric_root_proxy_bbox_and_centroid": [
+        169,
+        620,
+        188,
+        688,
+        180.90628706998814,
+        653.3238434163701,
+        843
+      ],
+      "root_proxy_is_semantic_annotation": false,
+      "human_visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+      "runtime_admission": false
+    }
+  ],
+  "sequences": [
+    {
+      "code": "GR",
+      "name": "Grazzt — fontes individuais",
+      "revision": "v01",
+      "width": 1254,
+      "height": 1254,
+      "frame_count": 4,
+      "loop": true,
+      "core_base_spread_px": 1,
+      "frames": [
+        {
+          "index": 0,
+          "code": "GR01",
+          "revision": "v01",
+          "source": ".atena/generated/art-candidates/asset-lot08/GR01_v01.png",
+          "source_link": "../art-candidates/asset-lot08/GR01_v01.png",
+          "source_sha256": "8AF8F18535F9D222B5E13C7ECF8D7F4F4EB77ABB1921F35374B797805C739EB9",
+          "qa_frame": "frames/GR01/00.png",
+          "qa_sha256": "F2EB2A66393A9081CB015E0FF94D1D41E4A1033AB11E2DBCE7910A2B8C1D36CA",
+          "visible_bbox_xyxy": [
+            279,
+            194,
+            1047,
+            1062
+          ],
+          "core_bbox_xyxy": [
+            280,
+            195,
+            1046,
+            1061
+          ]
+        },
+        {
+          "index": 1,
+          "code": "GR02",
+          "revision": "v02",
+          "source": ".atena/generated/art-candidates/asset-lot08/GR02_v02.png",
+          "source_link": "../art-candidates/asset-lot08/GR02_v02.png",
+          "source_sha256": "12CCFE2EDAAA38FA760DC45158433D625654481B033C95615129DFDFD0136823",
+          "qa_frame": "frames/GR02/00.png",
+          "qa_sha256": "F49F08B80D9E98DB1DF934A8E9A0B4AF158DAFC486E295D8966A8F348EB90A69",
+          "visible_bbox_xyxy": [
+            260,
+            194,
+            1049,
+            1063
+          ],
+          "core_bbox_xyxy": [
+            261,
+            194,
+            1048,
+            1062
+          ]
+        },
+        {
+          "index": 2,
+          "code": "GR03",
+          "revision": "v01",
+          "source": ".atena/generated/art-candidates/asset-lot08/GR03_v01.png",
+          "source_link": "../art-candidates/asset-lot08/GR03_v01.png",
+          "source_sha256": "19E57280FFE49EBC5D9413F8DD45673A5F1410E1CC67CC7AE5901B9802EA2A40",
+          "qa_frame": "frames/GR03/00.png",
+          "qa_sha256": "AA2747DE404FCB2FE5416D9F485022ED20518B64BCE71082F3F6C9E716273C7A",
+          "visible_bbox_xyxy": [
+            287,
+            194,
+            1049,
+            1062
+          ],
+          "core_bbox_xyxy": [
+            287,
+            195,
+            1049,
+            1062
+          ]
+        },
+        {
+          "index": 3,
+          "code": "GR04",
+          "revision": "v01",
+          "source": ".atena/generated/art-candidates/asset-lot08/GR04_v01.png",
+          "source_link": "../art-candidates/asset-lot08/GR04_v01.png",
+          "source_sha256": "7EC3037FA34DC581C78CEE093C02EDF1DCD2DB48F1DBED0C9A6736C70D52CABC",
+          "qa_frame": "frames/GR04/00.png",
+          "qa_sha256": "4F039C01CEC4BC503724F1DD7D3BB3591C6E84B9FF76B5AC0E9B5A625C569AFA",
+          "visible_bbox_xyxy": [
+            282,
+            194,
+            1050,
+            1062
+          ],
+          "core_bbox_xyxy": [
+            283,
+            195,
+            1049,
+            1061
+          ]
+        }
+      ],
+      "human_visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+      "runtime_admission": false
+    },
+    {
+      "code": "FJ",
+      "name": "Jato — origem interna",
+      "revision": "v01",
+      "width": 1254,
+      "height": 1254,
+      "frame_count": 4,
+      "loop": true,
+      "core_base_spread_px": 18,
+      "frames": [
+        {
+          "index": 0,
+          "code": "FJ01",
+          "revision": "v01",
+          "source": ".atena/generated/art-candidates/asset-lot08/FJ01_v01.png",
+          "source_link": "../art-candidates/asset-lot08/FJ01_v01.png",
+          "source_sha256": "650BD12E293D8A53D1A4B36184668ADF56AB1E23D9E4ACA0BB0BCF0C48BA5B15",
+          "qa_frame": "frames/FJ01/00.png",
+          "qa_sha256": "490E1D38C66DAC75299D89CC9742DB84E1EAC25D6962B9905DBC0C934E5CDAE1",
+          "visible_bbox_xyxy": [
+            165,
+            500,
+            1139,
+            773
+          ],
+          "core_bbox_xyxy": [
+            166,
+            500,
+            1138,
+            772
+          ]
+        },
+        {
+          "index": 1,
+          "code": "FJ02",
+          "revision": "v01",
+          "source": ".atena/generated/art-candidates/asset-lot08/FJ02_v01.png",
+          "source_link": "../art-candidates/asset-lot08/FJ02_v01.png",
+          "source_sha256": "58FC6C99F6BDB18A19BE0E696FA412E0B07868799D2B53A1B11730B2C665257D",
+          "qa_frame": "frames/FJ02/00.png",
+          "qa_sha256": "C5858A60F41281BFEC5FFC16BD7575131758E51BC06237B647CF439F5A1ADA89",
+          "visible_bbox_xyxy": [
+            164,
+            503,
+            1164,
+            774
+          ],
+          "core_bbox_xyxy": [
+            169,
+            504,
+            1163,
+            774
+          ]
+        },
+        {
+          "index": 2,
+          "code": "FJ03",
+          "revision": "v01",
+          "source": ".atena/generated/art-candidates/asset-lot08/FJ03_v01.png",
+          "source_link": "../art-candidates/asset-lot08/FJ03_v01.png",
+          "source_sha256": "1C14F8C022354B98AA3A03E2262A4BC04D009AA1D91AA92D32423B91F21DC55C",
+          "qa_frame": "frames/FJ03/00.png",
+          "qa_sha256": "A20F1658B89E9C03BBB7E73B0D9466C663A76FF91539D5A0D39127E199AD0EE1",
+          "visible_bbox_xyxy": [
+            168,
+            503,
+            1125,
+            778
+          ],
+          "core_bbox_xyxy": [
+            169,
+            504,
+            1124,
+            778
+          ]
+        },
+        {
+          "index": 3,
+          "code": "FJ04",
+          "revision": "v01",
+          "source": ".atena/generated/art-candidates/asset-lot08/FJ04_v01.png",
+          "source_link": "../art-candidates/asset-lot08/FJ04_v01.png",
+          "source_sha256": "24A76603659D7174DF252C2D17E98906112D7CBBA2C39471543DB0E920185CA7",
+          "qa_frame": "frames/FJ04/00.png",
+          "qa_sha256": "2EFCFE414013C1B82571DB1F9A68762070974E5C219D4612513F349B9582DAED",
+          "visible_bbox_xyxy": [
+            167,
+            527,
+            1138,
+            761
+          ],
+          "core_bbox_xyxy": [
+            169,
+            528,
+            1135,
+            760
+          ]
+        }
+      ],
+      "human_visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+      "runtime_admission": false
+    }
+  ],
+  "attempts": [
+    {
+      "file": ".atena/generated/art-candidates/asset-lot08/FJ01_v01.png",
+      "sha256": "650BD12E293D8A53D1A4B36184668ADF56AB1E23D9E4ACA0BB0BCF0C48BA5B15",
+      "selected": true,
+      "reason": "SELECTED_FOR_REVIEW"
+    },
+    {
+      "file": ".atena/generated/art-candidates/asset-lot08/FJ02_v01.png",
+      "sha256": "58FC6C99F6BDB18A19BE0E696FA412E0B07868799D2B53A1B11730B2C665257D",
+      "selected": true,
+      "reason": "SELECTED_FOR_REVIEW"
+    },
+    {
+      "file": ".atena/generated/art-candidates/asset-lot08/FJ03_v01.png",
+      "sha256": "1C14F8C022354B98AA3A03E2262A4BC04D009AA1D91AA92D32423B91F21DC55C",
+      "selected": true,
+      "reason": "SELECTED_FOR_REVIEW"
+    },
+    {
+      "file": ".atena/generated/art-candidates/asset-lot08/FJ04_v01.png",
+      "sha256": "24A76603659D7174DF252C2D17E98906112D7CBBA2C39471543DB0E920185CA7",
+      "selected": true,
+      "reason": "SELECTED_FOR_REVIEW"
+    },
+    {
+      "file": ".atena/generated/art-candidates/asset-lot08/GR01_v01.png",
+      "sha256": "8AF8F18535F9D222B5E13C7ECF8D7F4F4EB77ABB1921F35374B797805C739EB9",
+      "selected": true,
+      "reason": "SELECTED_FOR_REVIEW"
+    },
+    {
+      "file": ".atena/generated/art-candidates/asset-lot08/GR02_v01.png",
+      "sha256": "CB4CC5AAD8C969CE58F1E32516BB9CF86A4A52A30F8899F378ACE42795130434",
+      "selected": false,
+      "reason": "SUPERSEDED_SCALE_DRIFT"
+    },
+    {
+      "file": ".atena/generated/art-candidates/asset-lot08/GR02_v02.png",
+      "sha256": "12CCFE2EDAAA38FA760DC45158433D625654481B033C95615129DFDFD0136823",
+      "selected": true,
+      "reason": "SELECTED_FOR_REVIEW"
+    },
+    {
+      "file": ".atena/generated/art-candidates/asset-lot08/GR03_v01.png",
+      "sha256": "19E57280FFE49EBC5D9413F8DD45673A5F1410E1CC67CC7AE5901B9802EA2A40",
+      "selected": true,
+      "reason": "SELECTED_FOR_REVIEW"
+    },
+    {
+      "file": ".atena/generated/art-candidates/asset-lot08/GR04_v01.png",
+      "sha256": "7EC3037FA34DC581C78CEE093C02EDF1DCD2DB48F1DBED0C9A6736C70D52CABC",
+      "selected": true,
+      "reason": "SELECTED_FOR_REVIEW"
+    },
+    {
+      "file": ".atena/generated/art-candidates/asset-lot08/PR01_v01.png",
+      "sha256": "BAE63B084973451ACA564A9919C3C368111EEBD0FE4CAC7C85B1C5F53EB10ED8",
+      "selected": true,
+      "reason": "SELECTED_FOR_REVIEW"
+    },
+    {
+      "file": ".atena/generated/art-candidates/asset-lot08/PR02_v01.png",
+      "sha256": "E917AB224A56E368473D8474E0D9FCC825D6199FB4A3CBAB4799444E49C6CCFE",
+      "selected": true,
+      "reason": "SELECTED_FOR_REVIEW"
+    },
+    {
+      "file": ".atena/generated/art-candidates/asset-lot08/PR03_v01.png",
+      "sha256": "22878CCA1AD410D626E74777CF1627749FBF41B334B62E1DFF67952BEE913F94",
+      "selected": true,
+      "reason": "SELECTED_FOR_REVIEW"
+    }
+  ],
+  "emitter_annotations": [
+    {
+      "code": "FJ01",
+      "proposed_xy": [
+        166,
+        652
+      ],
+      "authority": "MODEL_PROPOSAL_FROM_GEOMETRIC_PROXY_AND_VISUAL_INSPECTION",
+      "semantic_pivot_verified": false
+    },
+    {
+      "code": "FJ02",
+      "proposed_xy": [
+        169,
+        650
+      ],
+      "authority": "MODEL_PROPOSAL_FROM_GEOMETRIC_PROXY_AND_VISUAL_INSPECTION",
+      "semantic_pivot_verified": false
+    },
+    {
+      "code": "FJ03",
+      "proposed_xy": [
+        169,
+        653
+      ],
+      "authority": "MODEL_PROPOSAL_FROM_GEOMETRIC_PROXY_AND_VISUAL_INSPECTION",
+      "semantic_pivot_verified": false
+    },
+    {
+      "code": "FJ04",
+      "proposed_xy": [
+        169,
+        653
+      ],
+      "authority": "MODEL_PROPOSAL_FROM_GEOMETRIC_PROXY_AND_VISUAL_INSPECTION",
+      "semantic_pivot_verified": false
+    }
+  ],
+  "reference_snapshot": "references.json",
+  "prompts": "prompts.md",
+  "handoff": "ENTREGA-PARA-IMPLEMENTACAO.md",
+  "inspection": "inspection.json",
+  "player_check": "player-check.json",
+  "dependent_source_references": {
+    "GR02_GR03_GR04": "GR01/v01",
+    "FJ02_FJ03_FJ04": "FJ01/v01"
+  },
+  "legacy_holds_preserved": [
+    "FC02_ORIGIN",
+    "NE06_SWORD_CROSSING_COLUMNS"
+  ],
+  "human_visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+  "runtime_admission": false,
+  "canonical_promotion": false,
+  "implementation_owner": "Claude"
+}

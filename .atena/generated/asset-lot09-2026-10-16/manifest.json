@@ -1,0 +1,1267 @@
+{
+  "id": "ASSET-LOT09",
+  "revision": "v01",
+  "content_state": "DRAFT",
+  "status": "VISUALLY_ACCEPTED_DRAFT_WITH_PREPARATION_NOTES",
+  "generation_attempts": 10,
+  "selected_sources": 7,
+  "qa_drawings": 28,
+  "sequences": [
+    {
+      "code": "EP01",
+      "name": "Trono",
+      "revision": "v03",
+      "source": ".atena/generated/animation-candidates/asset-lot09/EP01_v03.png",
+      "source_sha256": "1C0A1783319318232300F7CD4E9DDE2B677B6B86F06E74CC2735A62C0D3F5589",
+      "width": 2048,
+      "height": 768,
+      "columns": 4,
+      "rows": 1,
+      "frame_count": 4,
+      "loop": true,
+      "core_base_spread_px": 0,
+      "unique_qa_pixel_file_hashes": 4,
+      "frames": [
+        {
+          "index": 0,
+          "expected_empty": false,
+          "cell_xywh": [
+            0,
+            0,
+            512,
+            768
+          ],
+          "alpha_ge16_pixels": 115363,
+          "alpha_ge128_pixels": 113543,
+          "alpha_1to15_pixels": 9500,
+          "alpha255_pixels": 0,
+          "edge_band4_alpha_ge16_pixels": 0,
+          "visible_bbox_xyxy": [
+            86,
+            158,
+            467,
+            648
+          ],
+          "core_bbox_xyxy": [
+            87,
+            159,
+            466,
+            647
+          ],
+          "core_alpha_mode": 253,
+          "edge_left_alpha_ge16": 0,
+          "edge_right_alpha_ge16": 0,
+          "edge_top_alpha_ge16": 0,
+          "edge_bottom_alpha_ge16": 0,
+          "left_root_core_yminmax": [
+            768,
+            -1
+          ],
+          "qa_frame": "frames/EP01/00.png",
+          "qa_sha256": "DED2BC1F6191D606D145DBCB19B70DDC3BE70AE1BA00C61FBE1C62ED06899374"
+        },
+        {
+          "index": 1,
+          "expected_empty": false,
+          "cell_xywh": [
+            512,
+            0,
+            512,
+            768
+          ],
+          "alpha_ge16_pixels": 117827,
+          "alpha_ge128_pixels": 115987,
+          "alpha_1to15_pixels": 10727,
+          "alpha255_pixels": 0,
+          "edge_band4_alpha_ge16_pixels": 0,
+          "visible_bbox_xyxy": [
+            72,
+            155,
+            460,
+            648
+          ],
+          "core_bbox_xyxy": [
+            73,
+            156,
+            459,
+            647
+          ],
+          "core_alpha_mode": 253,
+          "edge_left_alpha_ge16": 0,
+          "edge_right_alpha_ge16": 0,
+          "edge_top_alpha_ge16": 0,
+          "edge_bottom_alpha_ge16": 0,
+          "left_root_core_yminmax": [
+            768,
+            -1
+          ],
+          "qa_frame": "frames/EP01/01.png",
+          "qa_sha256": "233F4B87A2815C8ED08C0565EE184830791E8D4F6D3BE32F07963FB0D7E9B95B"
+        },
+        {
+          "index": 2,
+          "expected_empty": false,
+          "cell_xywh": [
+            1024,
+            0,
+            512,
+            768
+          ],
+          "alpha_ge16_pixels": 118806,
+          "alpha_ge128_pixels": 116898,
+          "alpha_1to15_pixels": 9766,
+          "alpha255_pixels": 0,
+          "edge_band4_alpha_ge16_pixels": 0,
+          "visible_bbox_xyxy": [
+            64,
+            154,
+            454,
+            648
+          ],
+          "core_bbox_xyxy": [
+            65,
+            155,
+            453,
+            647
+          ],
+          "core_alpha_mode": 253,
+          "edge_left_alpha_ge16": 0,
+          "edge_right_alpha_ge16": 0,
+          "edge_top_alpha_ge16": 0,
+          "edge_bottom_alpha_ge16": 0,
+          "left_root_core_yminmax": [
+            768,
+            -1
+          ],
+          "qa_frame": "frames/EP01/02.png",
+          "qa_sha256": "38406CEFA052732D6CC4BE683FD185BB1EB4E996868B89FE13E6FE79B856422F"
+        },
+        {
+          "index": 3,
+          "expected_empty": false,
+          "cell_xywh": [
+            1536,
+            0,
+            512,
+            768
+          ],
+          "alpha_ge16_pixels": 114951,
+          "alpha_ge128_pixels": 113163,
+          "alpha_1to15_pixels": 10274,
+          "alpha255_pixels": 0,
+          "edge_band4_alpha_ge16_pixels": 0,
+          "visible_bbox_xyxy": [
+            59,
+            158,
+            443,
+            648
+          ],
+          "core_bbox_xyxy": [
+            60,
+            159,
+            442,
+            647
+          ],
+          "core_alpha_mode": 253,
+          "edge_left_alpha_ge16": 0,
+          "edge_right_alpha_ge16": 0,
+          "edge_top_alpha_ge16": 0,
+          "edge_bottom_alpha_ge16": 0,
+          "left_root_core_yminmax": [
+            768,
+            -1
+          ],
+          "qa_frame": "frames/EP01/03.png",
+          "qa_sha256": "BFDFC345E5285D25151E41D6FCBDCC270775A865806FC512303F2ED70CFA91FE"
+        }
+      ],
+      "human_visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+      "runtime_admission": false
+    },
+    {
+      "code": "EP02",
+      "name": "Arco",
+      "revision": "v02",
+      "source": ".atena/generated/animation-candidates/asset-lot09/EP02_v02.png",
+      "source_sha256": "09B706113DBEA9021E6A55805A2BFD4E35BA014672CD4CD6C98C4CCEF187B354",
+      "width": 1536,
+      "height": 1024,
+      "columns": 4,
+      "rows": 1,
+      "frame_count": 4,
+      "loop": true,
+      "core_base_spread_px": 0,
+      "unique_qa_pixel_file_hashes": 4,
+      "frames": [
+        {
+          "index": 0,
+          "expected_empty": false,
+          "cell_xywh": [
+            0,
+            0,
+            384,
+            1024
+          ],
+          "alpha_ge16_pixels": 94374,
+          "alpha_ge128_pixels": 93520,
+          "alpha_1to15_pixels": 3413,
+          "alpha255_pixels": 0,
+          "edge_band4_alpha_ge16_pixels": 0,
+          "visible_bbox_xyxy": [
+            29,
+            313,
+            363,
+            712
+          ],
+          "core_bbox_xyxy": [
+            30,
+            314,
+            362,
+            712
+          ],
+          "core_alpha_mode": 253,
+          "edge_left_alpha_ge16": 0,
+          "edge_right_alpha_ge16": 0,
+          "edge_top_alpha_ge16": 0,
+          "edge_bottom_alpha_ge16": 0,
+          "left_root_core_yminmax": [
+            1024,
+            -1
+          ],
+          "qa_frame": "frames/EP02/00.png",
+          "qa_sha256": "6B6DE6903C29E97AE63CE36F516B6A74DE8D73FE1E2AFAFAB410018B730FF7BE"
+        },
+        {
+          "index": 1,
+          "expected_empty": false,
+          "cell_xywh": [
+            384,
+            0,
+            384,
+            1024
+          ],
+          "alpha_ge16_pixels": 94100,
+          "alpha_ge128_pixels": 93284,
+          "alpha_1to15_pixels": 3343,
+          "alpha255_pixels": 0,
+          "edge_band4_alpha_ge16_pixels": 0,
+          "visible_bbox_xyxy": [
+            27,
+            313,
+            360,
+            712
+          ],
+          "core_bbox_xyxy": [
+            28,
+            314,
+            359,
+            712
+          ],
+          "core_alpha_mode": 253,
+          "edge_left_alpha_ge16": 0,
+          "edge_right_alpha_ge16": 0,
+          "edge_top_alpha_ge16": 0,
+          "edge_bottom_alpha_ge16": 0,
+          "left_root_core_yminmax": [
+            1024,
+            -1
+          ],
+          "qa_frame": "frames/EP02/01.png",
+          "qa_sha256": "3D42C1336B54F110DAE08A5BB2B67AB0B5DA67FE0007227900512277D5526C7A"
+        },
+        {
+          "index": 2,
+          "expected_empty": false,
+          "cell_xywh": [
+            768,
+            0,
+            384,
+            1024
+          ],
+          "alpha_ge16_pixels": 94165,
+          "alpha_ge128_pixels": 93321,
+          "alpha_1to15_pixels": 3272,
+          "alpha255_pixels": 0,
+          "edge_band4_alpha_ge16_pixels": 0,
+          "visible_bbox_xyxy": [
+            24,
+            313,
+            357,
+            712
+          ],
+          "core_bbox_xyxy": [
+            25,
+            314,
+            357,
+            712
+          ],
+          "core_alpha_mode": 253,
+          "edge_left_alpha_ge16": 0,
+          "edge_right_alpha_ge16": 0,
+          "edge_top_alpha_ge16": 0,
+          "edge_bottom_alpha_ge16": 0,
+          "left_root_core_yminmax": [
+            1024,
+            -1
+          ],
+          "qa_frame": "frames/EP02/02.png",
+          "qa_sha256": "B3BE0EF2479FE84DFF52916F583F561A4A191F171AA4B0E84BB1C515562D5C4B"
+        },
+        {
+          "index": 3,
+          "expected_empty": false,
+          "cell_xywh": [
+            1152,
+            0,
+            384,
+            1024
+          ],
+          "alpha_ge16_pixels": 94309,
+          "alpha_ge128_pixels": 93468,
+          "alpha_1to15_pixels": 3350,
+          "alpha255_pixels": 0,
+          "edge_band4_alpha_ge16_pixels": 0,
+          "visible_bbox_xyxy": [
+            22,
+            313,
+            355,
+            712
+          ],
+          "core_bbox_xyxy": [
+            23,
+            314,
+            355,
+            712
+          ],
+          "core_alpha_mode": 253,
+          "edge_left_alpha_ge16": 0,
+          "edge_right_alpha_ge16": 0,
+          "edge_top_alpha_ge16": 0,
+          "edge_bottom_alpha_ge16": 0,
+          "left_root_core_yminmax": [
+            1024,
+            -1
+          ],
+          "qa_frame": "frames/EP02/03.png",
+          "qa_sha256": "667BCEF8D03C201E7908DB41AAA1641B94E93547A05689EFC7B4AD02188920A2"
+        }
+      ],
+      "human_visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+      "runtime_admission": false
+    },
+    {
+      "code": "EP03",
+      "name": "Massa",
+      "revision": "v01",
+      "source": ".atena/generated/animation-candidates/asset-lot09/EP03_v01.png",
+      "source_sha256": "1C311AD778DE4D871C373DAEF82375A4913B472EE1135375C43C2A46E979DAE8",
+      "width": 2172,
+      "height": 724,
+      "columns": 4,
+      "rows": 1,
+      "frame_count": 4,
+      "loop": true,
+      "core_base_spread_px": 10,
+      "unique_qa_pixel_file_hashes": 4,
+      "frames": [
+        {
+          "index": 0,
+          "expected_empty": false,
+          "cell_xywh": [
+            0,
+            0,
+            543,
+            724
+          ],
+          "alpha_ge16_pixels": 107044,
+          "alpha_ge128_pixels": 105750,
+          "alpha_1to15_pixels": 6671,
+          "alpha255_pixels": 153,
+          "edge_band4_alpha_ge16_pixels": 0,
+          "visible_bbox_xyxy": [
+            14,
+            207,
+            527,
+            544
+          ],
+          "core_bbox_xyxy": [
+            14,
+            207,
+            526,
+            543
+          ],
+          "core_alpha_mode": 253,
+          "edge_left_alpha_ge16": 0,
+          "edge_right_alpha_ge16": 0,
+          "edge_top_alpha_ge16": 0,
+          "edge_bottom_alpha_ge16": 0,
+          "left_root_core_yminmax": [
+            724,
+            -1
+          ],
+          "qa_frame": "frames/EP03/00.png",
+          "qa_sha256": "E0B5A2F9E65F318F3A5BAE5DC2C016CA48A4BCAADB4F6DA7BF253F71AD1C707D"
+        },
+        {
+          "index": 1,
+          "expected_empty": false,
+          "cell_xywh": [
+            543,
+            0,
+            543,
+            724
+          ],
+          "alpha_ge16_pixels": 114150,
+          "alpha_ge128_pixels": 112802,
+          "alpha_1to15_pixels": 5982,
+          "alpha255_pixels": 128,
+          "edge_band4_alpha_ge16_pixels": 0,
+          "visible_bbox_xyxy": [
+            13,
+            200,
+            528,
+            553
+          ],
+          "core_bbox_xyxy": [
+            13,
+            201,
+            527,
+            552
+          ],
+          "core_alpha_mode": 253,
+          "edge_left_alpha_ge16": 0,
+          "edge_right_alpha_ge16": 0,
+          "edge_top_alpha_ge16": 0,
+          "edge_bottom_alpha_ge16": 0,
+          "left_root_core_yminmax": [
+            724,
+            -1
+          ],
+          "qa_frame": "frames/EP03/01.png",
+          "qa_sha256": "D198F4AD98A405BB963AE42E84F2991913A65C994E71A29041A7F99D0CA29877"
+        },
+        {
+          "index": 2,
+          "expected_empty": false,
+          "cell_xywh": [
+            1086,
+            0,
+            543,
+            724
+          ],
+          "alpha_ge16_pixels": 105973,
+          "alpha_ge128_pixels": 104618,
+          "alpha_1to15_pixels": 6359,
+          "alpha255_pixels": 143,
+          "edge_band4_alpha_ge16_pixels": 0,
+          "visible_bbox_xyxy": [
+            14,
+            208,
+            524,
+            543
+          ],
+          "core_bbox_xyxy": [
+            15,
+            209,
+            523,
+            542
+          ],
+          "core_alpha_mode": 253,
+          "edge_left_alpha_ge16": 0,
+          "edge_right_alpha_ge16": 0,
+          "edge_top_alpha_ge16": 0,
+          "edge_bottom_alpha_ge16": 0,
+          "left_root_core_yminmax": [
+            724,
+            -1
+          ],
+          "qa_frame": "frames/EP03/02.png",
+          "qa_sha256": "541351E4724728948766F7BDDF394BAE5787C1E7EF8FC802E0F7EB2DD394C1C5"
+        },
+        {
+          "index": 3,
+          "expected_empty": false,
+          "cell_xywh": [
+            1629,
+            0,
+            543,
+            724
+          ],
+          "alpha_ge16_pixels": 108007,
+          "alpha_ge128_pixels": 106700,
+          "alpha_1to15_pixels": 7122,
+          "alpha255_pixels": 115,
+          "edge_band4_alpha_ge16_pixels": 0,
+          "visible_bbox_xyxy": [
+            10,
+            208,
+            527,
+            546
+          ],
+          "core_bbox_xyxy": [
+            11,
+            209,
+            527,
+            546
+          ],
+          "core_alpha_mode": 253,
+          "edge_left_alpha_ge16": 0,
+          "edge_right_alpha_ge16": 0,
+          "edge_top_alpha_ge16": 0,
+          "edge_bottom_alpha_ge16": 0,
+          "left_root_core_yminmax": [
+            724,
+            -1
+          ],
+          "qa_frame": "frames/EP03/03.png",
+          "qa_sha256": "934E7D072A8D51942C3CDFF64A3CC2BE9405FF861EDA495105BD128EC46449F6"
+        }
+      ],
+      "human_visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+      "runtime_admission": false
+    },
+    {
+      "code": "EP04",
+      "name": "Estrela",
+      "revision": "v01",
+      "source": ".atena/generated/animation-candidates/asset-lot09/EP04_v01.png",
+      "source_sha256": "E38C273D72F2C65858CEF9A73C2A3CCA2504790779ACC9BAD68A806971081689",
+      "width": 1536,
+      "height": 1024,
+      "columns": 4,
+      "rows": 1,
+      "frame_count": 4,
+      "loop": true,
+      "core_base_spread_px": 2,
+      "unique_qa_pixel_file_hashes": 4,
+      "frames": [
+        {
+          "index": 0,
+          "expected_empty": false,
+          "cell_xywh": [
+            0,
+            0,
+            384,
+            1024
+          ],
+          "alpha_ge16_pixels": 30266,
+          "alpha_ge128_pixels": 28618,
+          "alpha_1to15_pixels": 13609,
+          "alpha255_pixels": 0,
+          "edge_band4_alpha_ge16_pixels": 0,
+          "visible_bbox_xyxy": [
+            30,
+            335,
+            347,
+            681
+          ],
+          "core_bbox_xyxy": [
+            30,
+            335,
+            346,
+            679
+          ],
+          "core_alpha_mode": 253,
+          "edge_left_alpha_ge16": 0,
+          "edge_right_alpha_ge16": 0,
+          "edge_top_alpha_ge16": 0,
+          "edge_bottom_alpha_ge16": 0,
+          "left_root_core_yminmax": [
+            1024,
+            -1
+          ],
+          "qa_frame": "frames/EP04/00.png",
+          "qa_sha256": "090E989007C8A7A9527D50C4411C1FEDCCD4767542BA44F8C1DE3C7CD96FCEEB"
+        },
+        {
+          "index": 1,
+          "expected_empty": false,
+          "cell_xywh": [
+            384,
+            0,
+            384,
+            1024
+          ],
+          "alpha_ge16_pixels": 30798,
+          "alpha_ge128_pixels": 29106,
+          "alpha_1to15_pixels": 14548,
+          "alpha255_pixels": 0,
+          "edge_band4_alpha_ge16_pixels": 0,
+          "visible_bbox_xyxy": [
+            32,
+            335,
+            350,
+            682
+          ],
+          "core_bbox_xyxy": [
+            32,
+            335,
+            349,
+            681
+          ],
+          "core_alpha_mode": 253,
+          "edge_left_alpha_ge16": 0,
+          "edge_right_alpha_ge16": 0,
+          "edge_top_alpha_ge16": 0,
+          "edge_bottom_alpha_ge16": 0,
+          "left_root_core_yminmax": [
+            1024,
+            -1
+          ],
+          "qa_frame": "frames/EP04/01.png",
+          "qa_sha256": "ECA396A8BF889A2A35103C5CFFC9F9B2A9776A032A8F498287EAC5238683B5F0"
+        },
+        {
+          "index": 2,
+          "expected_empty": false,
+          "cell_xywh": [
+            768,
+            0,
+            384,
+            1024
+          ],
+          "alpha_ge16_pixels": 30321,
+          "alpha_ge128_pixels": 28681,
+          "alpha_1to15_pixels": 16082,
+          "alpha255_pixels": 0,
+          "edge_band4_alpha_ge16_pixels": 0,
+          "visible_bbox_xyxy": [
+            29,
+            335,
+            346,
+            681
+          ],
+          "core_bbox_xyxy": [
+            30,
+            335,
+            345,
+            679
+          ],
+          "core_alpha_mode": 253,
+          "edge_left_alpha_ge16": 0,
+          "edge_right_alpha_ge16": 0,
+          "edge_top_alpha_ge16": 0,
+          "edge_bottom_alpha_ge16": 0,
+          "left_root_core_yminmax": [
+            1024,
+            -1
+          ],
+          "qa_frame": "frames/EP04/02.png",
+          "qa_sha256": "917AA8AE8A74B66870909D9A6AF2FBA48A7AED76DC7D9D72B3E955C3449C25E1"
+        },
+        {
+          "index": 3,
+          "expected_empty": false,
+          "cell_xywh": [
+            1152,
+            0,
+            384,
+            1024
+          ],
+          "alpha_ge16_pixels": 30226,
+          "alpha_ge128_pixels": 28599,
+          "alpha_1to15_pixels": 14944,
+          "alpha255_pixels": 0,
+          "edge_band4_alpha_ge16_pixels": 0,
+          "visible_bbox_xyxy": [
+            35,
+            335,
+            354,
+            681
+          ],
+          "core_bbox_xyxy": [
+            36,
+            335,
+            353,
+            679
+          ],
+          "core_alpha_mode": 253,
+          "edge_left_alpha_ge16": 0,
+          "edge_right_alpha_ge16": 0,
+          "edge_top_alpha_ge16": 0,
+          "edge_bottom_alpha_ge16": 0,
+          "left_root_core_yminmax": [
+            1024,
+            -1
+          ],
+          "qa_frame": "frames/EP04/03.png",
+          "qa_sha256": "0FDFC5E5C91B8DDB156ABEAB8CC9B602371688662690A789A68FFD0247747FFE"
+        }
+      ],
+      "human_visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+      "runtime_admission": false
+    },
+    {
+      "code": "EP05",
+      "name": "Coração",
+      "revision": "v01",
+      "source": ".atena/generated/animation-candidates/asset-lot09/EP05_v01.png",
+      "source_sha256": "CFF89FF4A3E8982C9939E5178775DF3F1D12E26D9DC524072F59D7C6621450A0",
+      "width": 2172,
+      "height": 724,
+      "columns": 4,
+      "rows": 1,
+      "frame_count": 4,
+      "loop": true,
+      "core_base_spread_px": 0,
+      "unique_qa_pixel_file_hashes": 4,
+      "frames": [
+        {
+          "index": 0,
+          "expected_empty": false,
+          "cell_xywh": [
+            0,
+            0,
+            543,
+            724
+          ],
+          "alpha_ge16_pixels": 118696,
+          "alpha_ge128_pixels": 117270,
+          "alpha_1to15_pixels": 10287,
+          "alpha255_pixels": 45,
+          "edge_band4_alpha_ge16_pixels": 0,
+          "visible_bbox_xyxy": [
+            96,
+            131,
+            482,
+            580
+          ],
+          "core_bbox_xyxy": [
+            97,
+            132,
+            481,
+            579
+          ],
+          "core_alpha_mode": 253,
+          "edge_left_alpha_ge16": 0,
+          "edge_right_alpha_ge16": 0,
+          "edge_top_alpha_ge16": 0,
+          "edge_bottom_alpha_ge16": 0,
+          "left_root_core_yminmax": [
+            724,
+            -1
+          ],
+          "qa_frame": "frames/EP05/00.png",
+          "qa_sha256": "154A434D41502BCEE53186BFB3D2AD52EF63E014EC98DBAF6E060E8CB8684741"
+        },
+        {
+          "index": 1,
+          "expected_empty": false,
+          "cell_xywh": [
+            543,
+            0,
+            543,
+            724
+          ],
+          "alpha_ge16_pixels": 118810,
+          "alpha_ge128_pixels": 117373,
+          "alpha_1to15_pixels": 11410,
+          "alpha255_pixels": 25,
+          "edge_band4_alpha_ge16_pixels": 0,
+          "visible_bbox_xyxy": [
+            96,
+            131,
+            483,
+            580
+          ],
+          "core_bbox_xyxy": [
+            97,
+            132,
+            482,
+            579
+          ],
+          "core_alpha_mode": 253,
+          "edge_left_alpha_ge16": 0,
+          "edge_right_alpha_ge16": 0,
+          "edge_top_alpha_ge16": 0,
+          "edge_bottom_alpha_ge16": 0,
+          "left_root_core_yminmax": [
+            724,
+            -1
+          ],
+          "qa_frame": "frames/EP05/01.png",
+          "qa_sha256": "BC2FB9904CAEAAD91F98B041240AC8200CEE4801108AC9A8305B43D936E93397"
+        },
+        {
+          "index": 2,
+          "expected_empty": false,
+          "cell_xywh": [
+            1086,
+            0,
+            543,
+            724
+          ],
+          "alpha_ge16_pixels": 118599,
+          "alpha_ge128_pixels": 117183,
+          "alpha_1to15_pixels": 13164,
+          "alpha255_pixels": 49,
+          "edge_band4_alpha_ge16_pixels": 0,
+          "visible_bbox_xyxy": [
+            97,
+            131,
+            482,
+            580
+          ],
+          "core_bbox_xyxy": [
+            98,
+            132,
+            482,
+            579
+          ],
+          "core_alpha_mode": 253,
+          "edge_left_alpha_ge16": 0,
+          "edge_right_alpha_ge16": 0,
+          "edge_top_alpha_ge16": 0,
+          "edge_bottom_alpha_ge16": 0,
+          "left_root_core_yminmax": [
+            724,
+            -1
+          ],
+          "qa_frame": "frames/EP05/02.png",
+          "qa_sha256": "3B044C42A625E0C840E0149136F8C92C159076A8724ED2DD96075ECD4FCFC74D"
+        },
+        {
+          "index": 3,
+          "expected_empty": false,
+          "cell_xywh": [
+            1629,
+            0,
+            543,
+            724
+          ],
+          "alpha_ge16_pixels": 118671,
+          "alpha_ge128_pixels": 117253,
+          "alpha_1to15_pixels": 11490,
+          "alpha255_pixels": 53,
+          "edge_band4_alpha_ge16_pixels": 0,
+          "visible_bbox_xyxy": [
+            96,
+            131,
+            481,
+            580
+          ],
+          "core_bbox_xyxy": [
+            97,
+            132,
+            481,
+            579
+          ],
+          "core_alpha_mode": 253,
+          "edge_left_alpha_ge16": 0,
+          "edge_right_alpha_ge16": 0,
+          "edge_top_alpha_ge16": 0,
+          "edge_bottom_alpha_ge16": 0,
+          "left_root_core_yminmax": [
+            724,
+            -1
+          ],
+          "qa_frame": "frames/EP05/03.png",
+          "qa_sha256": "0ECDC1730206C6A1D80F0F3D1FEA6ED28A6F244584C8DD06AD4E9331B5281A3B"
+        }
+      ],
+      "human_visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+      "runtime_admission": false
+    },
+    {
+      "code": "EP06",
+      "name": "Esporo",
+      "revision": "v01",
+      "source": ".atena/generated/animation-candidates/asset-lot09/EP06_v01.png",
+      "source_sha256": "E2A8B37590BA2E634B2BA877FB1E3BE8361D2644B5AC01D0C9C43F19FCC73841",
+      "width": 2103,
+      "height": 748,
+      "columns": 4,
+      "rows": 1,
+      "frame_count": 4,
+      "loop": true,
+      "core_base_spread_px": 6,
+      "unique_qa_pixel_file_hashes": 4,
+      "frames": [
+        {
+          "index": 0,
+          "expected_empty": false,
+          "cell_xywh": [
+            0,
+            0,
+            525,
+            748
+          ],
+          "alpha_ge16_pixels": 100916,
+          "alpha_ge128_pixels": 99577,
+          "alpha_1to15_pixels": 7101,
+          "alpha255_pixels": 63,
+          "edge_band4_alpha_ge16_pixels": 0,
+          "visible_bbox_xyxy": [
+            80,
+            231,
+            493,
+            596
+          ],
+          "core_bbox_xyxy": [
+            81,
+            233,
+            492,
+            594
+          ],
+          "core_alpha_mode": 253,
+          "edge_left_alpha_ge16": 0,
+          "edge_right_alpha_ge16": 0,
+          "edge_top_alpha_ge16": 0,
+          "edge_bottom_alpha_ge16": 0,
+          "left_root_core_yminmax": [
+            748,
+            -1
+          ],
+          "qa_frame": "frames/EP06/00.png",
+          "qa_sha256": "B74B11B436106EBDC10567FD2FF9A8183FF2BB529633619EDB70244F0CA9411B"
+        },
+        {
+          "index": 1,
+          "expected_empty": false,
+          "cell_xywh": [
+            525,
+            0,
+            526,
+            748
+          ],
+          "alpha_ge16_pixels": 111365,
+          "alpha_ge128_pixels": 109939,
+          "alpha_1to15_pixels": 7478,
+          "alpha255_pixels": 45,
+          "edge_band4_alpha_ge16_pixels": 0,
+          "visible_bbox_xyxy": [
+            53,
+            210,
+            479,
+            599
+          ],
+          "core_bbox_xyxy": [
+            54,
+            211,
+            478,
+            598
+          ],
+          "core_alpha_mode": 253,
+          "edge_left_alpha_ge16": 0,
+          "edge_right_alpha_ge16": 0,
+          "edge_top_alpha_ge16": 0,
+          "edge_bottom_alpha_ge16": 0,
+          "left_root_core_yminmax": [
+            748,
+            -1
+          ],
+          "qa_frame": "frames/EP06/01.png",
+          "qa_sha256": "DA625D05B71418E243055CAA434E44F8C947B4096778816BE31E402305E3C37F"
+        },
+        {
+          "index": 2,
+          "expected_empty": false,
+          "cell_xywh": [
+            1051,
+            0,
+            526,
+            748
+          ],
+          "alpha_ge16_pixels": 104766,
+          "alpha_ge128_pixels": 103437,
+          "alpha_1to15_pixels": 6717,
+          "alpha255_pixels": 34,
+          "edge_band4_alpha_ge16_pixels": 0,
+          "visible_bbox_xyxy": [
+            46,
+            226,
+            465,
+            601
+          ],
+          "core_bbox_xyxy": [
+            47,
+            227,
+            464,
+            600
+          ],
+          "core_alpha_mode": 253,
+          "edge_left_alpha_ge16": 0,
+          "edge_right_alpha_ge16": 0,
+          "edge_top_alpha_ge16": 0,
+          "edge_bottom_alpha_ge16": 0,
+          "left_root_core_yminmax": [
+            748,
+            -1
+          ],
+          "qa_frame": "frames/EP06/02.png",
+          "qa_sha256": "D241B810DE410BD636D962EDAD8F1641C9941B39CDA57C8808A4D2826E5DFA32"
+        },
+        {
+          "index": 3,
+          "expected_empty": false,
+          "cell_xywh": [
+            1577,
+            0,
+            526,
+            748
+          ],
+          "alpha_ge16_pixels": 100649,
+          "alpha_ge128_pixels": 99326,
+          "alpha_1to15_pixels": 7796,
+          "alpha255_pixels": 39,
+          "edge_band4_alpha_ge16_pixels": 0,
+          "visible_bbox_xyxy": [
+            32,
+            232,
+            444,
+            596
+          ],
+          "core_bbox_xyxy": [
+            33,
+            233,
+            443,
+            595
+          ],
+          "core_alpha_mode": 253,
+          "edge_left_alpha_ge16": 0,
+          "edge_right_alpha_ge16": 0,
+          "edge_top_alpha_ge16": 0,
+          "edge_bottom_alpha_ge16": 0,
+          "left_root_core_yminmax": [
+            748,
+            -1
+          ],
+          "qa_frame": "frames/EP06/03.png",
+          "qa_sha256": "5F3610E5FD681F97C8DDAF2D50100DF5814166003B1E8185AFFB8B04515C7F88"
+        }
+      ],
+      "human_visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+      "runtime_admission": false
+    },
+    {
+      "code": "EP07",
+      "name": "Limo",
+      "revision": "v01",
+      "source": ".atena/generated/animation-candidates/asset-lot09/EP07_v01.png",
+      "source_sha256": "62D9A991460558CFB51062991C557FE80216B2D65CF0CCA2A24DBFD28E7F13D5",
+      "width": 2172,
+      "height": 724,
+      "columns": 4,
+      "rows": 1,
+      "frame_count": 4,
+      "loop": true,
+      "core_base_spread_px": 0,
+      "unique_qa_pixel_file_hashes": 4,
+      "frames": [
+        {
+          "index": 0,
+          "expected_empty": false,
+          "cell_xywh": [
+            0,
+            0,
+            543,
+            724
+          ],
+          "alpha_ge16_pixels": 71966,
+          "alpha_ge128_pixels": 70439,
+          "alpha_1to15_pixels": 11055,
+          "alpha255_pixels": 19,
+          "edge_band4_alpha_ge16_pixels": 0,
+          "visible_bbox_xyxy": [
+            51,
+            229,
+            472,
+            543
+          ],
+          "core_bbox_xyxy": [
+            52,
+            230,
+            472,
+            541
+          ],
+          "core_alpha_mode": 253,
+          "edge_left_alpha_ge16": 0,
+          "edge_right_alpha_ge16": 0,
+          "edge_top_alpha_ge16": 0,
+          "edge_bottom_alpha_ge16": 0,
+          "left_root_core_yminmax": [
+            724,
+            -1
+          ],
+          "qa_frame": "frames/EP07/00.png",
+          "qa_sha256": "34C285314C0ECB45E4F025B0FF3090C71F5594B343CBB045CA7BA3E33A84553E"
+        },
+        {
+          "index": 1,
+          "expected_empty": false,
+          "cell_xywh": [
+            543,
+            0,
+            543,
+            724
+          ],
+          "alpha_ge16_pixels": 77044,
+          "alpha_ge128_pixels": 75402,
+          "alpha_1to15_pixels": 10483,
+          "alpha255_pixels": 28,
+          "edge_band4_alpha_ge16_pixels": 0,
+          "visible_bbox_xyxy": [
+            49,
+            219,
+            482,
+            542
+          ],
+          "core_bbox_xyxy": [
+            50,
+            220,
+            479,
+            541
+          ],
+          "core_alpha_mode": 253,
+          "edge_left_alpha_ge16": 0,
+          "edge_right_alpha_ge16": 0,
+          "edge_top_alpha_ge16": 0,
+          "edge_bottom_alpha_ge16": 0,
+          "left_root_core_yminmax": [
+            724,
+            -1
+          ],
+          "qa_frame": "frames/EP07/01.png",
+          "qa_sha256": "0038F927CE638D0B1AD87A9DAE35E9E8231DFF00856F26195896A25BCC6E62F9"
+        },
+        {
+          "index": 2,
+          "expected_empty": false,
+          "cell_xywh": [
+            1086,
+            0,
+            543,
+            724
+          ],
+          "alpha_ge16_pixels": 72372,
+          "alpha_ge128_pixels": 70832,
+          "alpha_1to15_pixels": 9689,
+          "alpha255_pixels": 29,
+          "edge_band4_alpha_ge16_pixels": 0,
+          "visible_bbox_xyxy": [
+            51,
+            229,
+            472,
+            542
+          ],
+          "core_bbox_xyxy": [
+            52,
+            230,
+            471,
+            541
+          ],
+          "core_alpha_mode": 253,
+          "edge_left_alpha_ge16": 0,
+          "edge_right_alpha_ge16": 0,
+          "edge_top_alpha_ge16": 0,
+          "edge_bottom_alpha_ge16": 0,
+          "left_root_core_yminmax": [
+            724,
+            -1
+          ],
+          "qa_frame": "frames/EP07/02.png",
+          "qa_sha256": "2755A3EBE265428FA973032206A7B38680421FB893176F30801A58EB5599048F"
+        },
+        {
+          "index": 3,
+          "expected_empty": false,
+          "cell_xywh": [
+            1629,
+            0,
+            543,
+            724
+          ],
+          "alpha_ge16_pixels": 71930,
+          "alpha_ge128_pixels": 70479,
+          "alpha_1to15_pixels": 11484,
+          "alpha255_pixels": 27,
+          "edge_band4_alpha_ge16_pixels": 0,
+          "visible_bbox_xyxy": [
+            54,
+            229,
+            474,
+            542
+          ],
+          "core_bbox_xyxy": [
+            54,
+            230,
+            473,
+            541
+          ],
+          "core_alpha_mode": 253,
+          "edge_left_alpha_ge16": 0,
+          "edge_right_alpha_ge16": 0,
+          "edge_top_alpha_ge16": 0,
+          "edge_bottom_alpha_ge16": 0,
+          "left_root_core_yminmax": [
+            724,
+            -1
+          ],
+          "qa_frame": "frames/EP07/03.png",
+          "qa_sha256": "DD2DA7D5AE20E03EB973FF2B006B5234376ABDA8482BCBB159952C87253A29C8"
+        }
+      ],
+      "human_visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+      "runtime_admission": false
+    }
+  ],
+  "attempts": [
+    {
+      "source": ".atena/generated/animation-candidates/asset-lot09/EP01_v01.png",
+      "sha256": "D7897807594F8EE3F82B7510391552FD2D5AB44456205E93302A369EAE7D5FB6",
+      "selected": false
+    },
+    {
+      "source": ".atena/generated/animation-candidates/asset-lot09/EP01_v02.png",
+      "sha256": "E950DB2E2D68BA375877B688E9BCAECF7321E8FE2FA9D0A3DC6B787128746437",
+      "selected": false
+    },
+    {
+      "source": ".atena/generated/animation-candidates/asset-lot09/EP01_v03.png",
+      "sha256": "1C0A1783319318232300F7CD4E9DDE2B677B6B86F06E74CC2735A62C0D3F5589",
+      "selected": true
+    },
+    {
+      "source": ".atena/generated/animation-candidates/asset-lot09/EP02_v01.png",
+      "sha256": "2572BC8B5561A77DE8F78BDDCF5D72773D3E9F8BC1A9F95B6F564D95A351F316",
+      "selected": false
+    },
+    {
+      "source": ".atena/generated/animation-candidates/asset-lot09/EP02_v02.png",
+      "sha256": "09B706113DBEA9021E6A55805A2BFD4E35BA014672CD4CD6C98C4CCEF187B354",
+      "selected": true
+    },
+    {
+      "source": ".atena/generated/animation-candidates/asset-lot09/EP03_v01.png",
+      "sha256": "1C311AD778DE4D871C373DAEF82375A4913B472EE1135375C43C2A46E979DAE8",
+      "selected": true
+    },
+    {
+      "source": ".atena/generated/animation-candidates/asset-lot09/EP04_v01.png",
+      "sha256": "E38C273D72F2C65858CEF9A73C2A3CCA2504790779ACC9BAD68A806971081689",
+      "selected": true
+    },
+    {
+      "source": ".atena/generated/animation-candidates/asset-lot09/EP05_v01.png",
+      "sha256": "CFF89FF4A3E8982C9939E5178775DF3F1D12E26D9DC524072F59D7C6621450A0",
+      "selected": true
+    },
+    {
+      "source": ".atena/generated/animation-candidates/asset-lot09/EP06_v01.png",
+      "sha256": "E2A8B37590BA2E634B2BA877FB1E3BE8361D2644B5AC01D0C9C43F19FCC73841",
+      "selected": true
+    },
+    {
+      "source": ".atena/generated/animation-candidates/asset-lot09/EP07_v01.png",
+      "sha256": "62D9A991460558CFB51062991C557FE80216B2D65CF0CCA2A24DBFD28E7F13D5",
+      "selected": true
+    }
+  ],
+  "references": "references.json",
+  "prompts": "prompts.md",
+  "handoff": "ENTREGA-PARA-IMPLEMENTACAO.md",
+  "human_visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+  "runtime_admission": false,
+  "canonical_promotion": false,
+  "implementation_owner": "Claude"
+}

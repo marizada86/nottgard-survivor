@@ -1,0 +1,90 @@
+{
+  "plan": "ASSET-LOT08",
+  "revision": "v01",
+  "date": "2026-10-16",
+  "owner_reply": "aprovado, continue",
+  "status": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+  "content_state": "DRAFT",
+  "assets": [
+    {
+      "code": "PR01",
+      "revision": "v01",
+      "source": ".atena/generated/art-candidates/asset-lot08/PR01_v01.png",
+      "source_sha256": "BAE63B084973451ACA564A9919C3C368111EEBD0FE4CAC7C85B1C5F53EB10ED8"
+    },
+    {
+      "code": "PR02",
+      "revision": "v01",
+      "source": ".atena/generated/art-candidates/asset-lot08/PR02_v01.png",
+      "source_sha256": "E917AB224A56E368473D8474E0D9FCC825D6199FB4A3CBAB4799444E49C6CCFE"
+    },
+    {
+      "code": "PR03",
+      "revision": "v01",
+      "source": ".atena/generated/art-candidates/asset-lot08/PR03_v01.png",
+      "source_sha256": "22878CCA1AD410D626E74777CF1627749FBF41B334B62E1DFF67952BEE913F94"
+    },
+    {
+      "code": "GR01",
+      "revision": "v01",
+      "source": ".atena/generated/art-candidates/asset-lot08/GR01_v01.png",
+      "source_sha256": "8AF8F18535F9D222B5E13C7ECF8D7F4F4EB77ABB1921F35374B797805C739EB9"
+    },
+    {
+      "code": "GR02",
+      "revision": "v02",
+      "source": ".atena/generated/art-candidates/asset-lot08/GR02_v02.png",
+      "source_sha256": "12CCFE2EDAAA38FA760DC45158433D625654481B033C95615129DFDFD0136823"
+    },
+    {
+      "code": "GR03",
+      "revision": "v01",
+      "source": ".atena/generated/art-candidates/asset-lot08/GR03_v01.png",
+      "source_sha256": "19E57280FFE49EBC5D9413F8DD45673A5F1410E1CC67CC7AE5901B9802EA2A40"
+    },
+    {
+      "code": "GR04",
+      "revision": "v01",
+      "source": ".atena/generated/art-candidates/asset-lot08/GR04_v01.png",
+      "source_sha256": "7EC3037FA34DC581C78CEE093C02EDF1DCD2DB48F1DBED0C9A6736C70D52CABC"
+    },
+    {
+      "code": "FJ01",
+      "revision": "v01",
+      "source": ".atena/generated/art-candidates/asset-lot08/FJ01_v01.png",
+      "source_sha256": "650BD12E293D8A53D1A4B36184668ADF56AB1E23D9E4ACA0BB0BCF0C48BA5B15"
+    },
+    {
+      "code": "FJ02",
+      "revision": "v01",
+      "source": ".atena/generated/art-candidates/asset-lot08/FJ02_v01.png",
+      "source_sha256": "58FC6C99F6BDB18A19BE0E696FA412E0B07868799D2B53A1B11730B2C665257D"
+    },
+    {
+      "code": "FJ03",
+      "revision": "v01",
+      "source": ".atena/generated/art-candidates/asset-lot08/FJ03_v01.png",
+      "source_sha256": "1C14F8C022354B98AA3A03E2262A4BC04D009AA1D91AA92D32423B91F21DC55C"
+    },
+    {
+      "code": "FJ04",
+      "revision": "v01",
+      "source": ".atena/generated/art-candidates/asset-lot08/FJ04_v01.png",
+      "source_sha256": "24A76603659D7174DF252C2D17E98906112D7CBBA2C39471543DB0E920185CA7"
+    }
+  ],
+  "legacy_holds_preserved": [
+    "FC02_ORIGIN",
+    "NE06_SWORD_CROSSING_COLUMNS"
+  ],
+  "preparation_pending": [
+    "ALPHA",
+    "PROP_MARGINS",
+    "REGISTRATION",
+    "EMITTER_CONFIRMATION"
+  ],
+  "runtime_admission": false,
+  "canonical_promotion": false,
+  "implementation_owner": "Claude",
+  "commit_push_export": "NOT_AUTHORIZED"
+}

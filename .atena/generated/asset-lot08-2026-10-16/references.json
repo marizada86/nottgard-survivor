@@ -1,0 +1,38 @@
+[
+  {
+    "code": "PR01",
+    "sha256": "1C2C19984594D922BEDBCAE28B54FA606992D54A5BC7FA20C480919DE27DE9EA",
+    "path": "assets/props/torii_01.png",
+    "role": "style_not_identity"
+  },
+  {
+    "code": "PR02",
+    "sha256": "F3460028883B93548833253ACE3EBED49BBAD9F6852DA5D0B1A24ACD1099DAD2",
+    "path": "assets/props/corrente_01.png",
+    "role": "iron_material"
+  },
+  {
+    "code": "PR03",
+    "sha256": "49F51E198D8DA876A4FC1FEE305E0AB0028F484AA0D7B0F7AB0BF108E041AD2B",
+    "path": "assets/props/doca_01.png",
+    "role": "wood_rope_material"
+  },
+  {
+    "code": "GR",
+    "sha256": "C27F13805BEF0DEC61B19F62C297ADB1E2E8EDA97625B557B197FA7B268CEA1E",
+    "path": "assets/interactions/npc_grazzt_aliado.png",
+    "role": "existing_identity"
+  },
+  {
+    "code": "FJ",
+    "sha256": "8C75565064D848CAAB9D436A1AFA08C4D256B59B7958AED10AFE8E6A0737BE31",
+    "path": ".atena/generated/animation-candidates/asset-lot06/FC01_v01.png",
+    "role": "flame_palette"
+  },
+  {
+    "code": "FJ",
+    "sha256": "E22D74BC1FF740FF9380AE283A15BB5168A3B8274C77521DB1C162C07BB8332A",
+    "path": ".atena/generated/animation-candidates/asset-lot06/FC02_v03.png",
+    "role": "accepted_direction_held_geometry"
+  }
+]

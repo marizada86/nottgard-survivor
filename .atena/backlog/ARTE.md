@@ -242,3 +242,11 @@ Produção 2026-10-16: [ASSET-LOT05 DRAFT](../generated/asset-lot05-2026-10-16/i
 Produção 2026-10-16: [ASSET-LOT06 v02 DRAFT](../generated/asset-lot06-2026-10-16/index.html) — ART-004 ícone/jato e extensão aprovada ART-022 seis idles de eventos:8fontes,29desenhos,12tentativas preservadas. Direção visual das oito revisões aceita em2026-10-16. FC02v03 permanece retido por origem; idles com ancoragem/continuidade/alfa para preparação. Implementação com Claude; MEC-004 não implementada. Sem admissão.
 
 Produção 2026-10-16: [ASSET-LOT07 DRAFT](../generated/asset-lot07-2026-10-16/index.html) — extensão aprovada ART-032/ART-022: nove idles,36poses,15tentativas preservadas. Direção visual das nove revisões aceita em2026-10-16; NE06 Grazzt v03 permanece retido por espada nas divisões após três tentativas. Oito demais sem contato alfa≥16 na banda4px; base do contorno0–1px, sem prova de fluidez. Alfa/margens/registro/consumer para preparação por Claude. Sem admissão.
+
+Produção 2026-10-16: [ASSET-LOT08/v01 DRAFT](../generated/asset-lot08-2026-10-16/index.html) — ART-032 três props (templo-alvo, jaula e canoa), quatro quadros individuais de Graz’zt e quatro do jato ART-004: onze fontes selecionadas, doze tentativas, cinco entradas de revisão conjunta PENDING. GR02/v02 corrige deriva de escala; demais v01. Espada inteira e origem interna candidata; alfa/margens/registro e emissor exigem preparação por Claude. Retenções FC02_ORIGIN/NE06_SWORD_CROSSING_COLUMNS preservadas até decisão sobre substituições. Sem admissão ou implementação.
+
+LOT08/v01: direção visual das onze revisões selecionadas aceita explicitamente em2026-10-16 ('aprovado, continue'); recibo visual-acceptance.json na entrega. Conteúdo DRAFT; preparação e implementação com Claude, retenções históricas preservadas.
+
+Produção2026-10-16: [ASSET-LOT09/v01 DRAFT](../generated/asset-lot09-2026-10-16/index.html), ART-032: trono, arco, massa, estrela, coração, esporo e limo; sete fontes/28poses, dez tentativas. EP01v03/EP02v02/demaisv01. Zero contato nas bandas4px selecionadas; margens/alfa/registro exigem preparação por Claude. Aceite visual PENDING; sem admissão ou implementação.
+
+LOT09/v01: sete revisões/28poses aceitas visualmente em2026-10-16 ('aprovado, continue'); DRAFT, preparação e implementação com Claude, sem admissão. Recibo na galeria.
