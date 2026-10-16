@@ -346,7 +346,7 @@ func _build_menu() -> void:
 	bg.color = Color(0.06, 0.05, 0.08)
 	bg.set_anchors_preset(Control.PRESET_FULL_RECT)
 	_add(m, bg, "Bg", m)
-	var title := _label("NOTTGARD SURVIVORS", 44, Color(0.9, 0.75, 0.42))
+	var title := _label("NOTTGARD - ABYSS MEGADUNGEON", 44, Color(0.9, 0.75, 0.42))
 	var cz: Font = load("res://assets/fonts/CinzelDecorative-Bold.ttf")
 	if cz != null:
 		title.add_theme_font_override("font", cz)

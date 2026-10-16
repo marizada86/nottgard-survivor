@@ -1,4 +1,4 @@
-# Nottgard Survivors
+# Nottgard - Abyss Megadungeon
 
 Survivor-like lento e legível, ambientado em Nottgard, com foco no **Plano Abissal**. Sem história: a lore aparece só como sabor (nomes, bestiário, itens). Feito em Godot 4.7 com [Atena Driven Development](https://github.com/guimariz/atena-driven-development) (ADD) — specs, plano e evidências em [`.atena/`](.atena/).
 

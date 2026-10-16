@@ -1465,3 +1465,16 @@ plan_104_retratos_ficha_hud_2026_10_14:
   return_plan: PLAN-103
   return_checkpoint: "B-002/S-008_AWAITING_RETURN; B-003/R5_PROPOSAL_AWAITING_G-M2-3"
   other_sessions_changes: PRESERVE_UNTOUCHED
+
+
+rename_abyss_megadungeon_2026_10_15:
+  plan: PLAN-106
+  spec: SPEC-181
+  state_file: .atena/state/plan-106-renomeacao-abyss-megadungeon.yaml
+  request_classification: PLAN_CHANGE_REQUEST
+  mode: per-plan
+  approval_status: APPROVED_EXPLICITLY
+  status: COMPLETED_LOCAL_ART_PENDING
+  evidence: .atena/evidence/EVID-265-renomeacao-abyss-megadungeon-2026-10-15.md
+  commit_push_build_export: NOT_AUTHORIZED
+  other_sessions_changes: PRESERVE_UNTOUCHED

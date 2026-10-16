@@ -1,5 +1,5 @@
 /*
- * Nottgard Survivors audio forge.
+ * Nottgard - Abyss Megadungeon audio forge.
  * Generates deterministic, original mono PCM WAV assets without dependencies.
  * Run from the project root: node tools/generate_audio.js
  *

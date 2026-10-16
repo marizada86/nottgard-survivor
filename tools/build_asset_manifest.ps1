@@ -143,7 +143,7 @@ foreach ($id in $screenRefs.Keys) {
 
 $manifest = [ordered]@{
     schema_version = 1
-    project = "Nottgard Survivors"
+    project = "Nottgard - Abyss Megadungeon"
     generated_at = "2026-09-24"
     specification = "SPEC-015-producao-total-de-assets-visuais; SPEC-022-props-de-dagruve-braseiros; SPEC-023-props-de-dagruve-caixotes; SPEC-024-props-de-dagruve-velas; SPEC-025-props-de-dagruve-livros; SPEC-026-props-de-dagruve-barris; SPEC-027-props-de-dagruve-redes; SPEC-028-props-de-dagruve-ossos; SPEC-029-props-de-dagruve-estrutura-de-doca; SPEC-030-props-de-dagruve-carga"
     expected_png_files = 266

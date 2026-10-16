@@ -350,3 +350,15 @@ integração exigem SPEC de voo aprovado; candidatos não substituem assets
 oficiais sem aprovação rastreável e evidência conforme a SPEC-044. A SPEC-021
 e o manifesto anterior permanecem como registros históricos da produção sob o
 contrato precedente.
+
+
+## 16. Revisão r2 — nome do jogo (2026-10-15)
+
+Status: **CANON — aprovado pelo dono em 2026-10-15** ([[SPEC-181]], [[PLAN-106]]).
+
+O nome do jogo passa de **Nottgard Survivors** (§14, item 1, 2026-09-21) para
+**Nottgard - Abyss Megadungeon**. O gênero e os pilares não mudam; o texto
+acima fica como histórico do título de trabalho. Os saves continuam na pasta de
+dados antiga (`Nottgard Survivors`) de propósito. Os nomes de arquivo do release
+(`NottgardSurvivors*`) e o `game_id` dos registros de run ficam como estão até
+nova decisão do dono. O logotipo do título aguarda arte nova (ART-049).

@@ -10,7 +10,9 @@ config_version=5
 
 [application]
 
-config/name="Nottgard Survivors"
+config/name="Nottgard - Abyss Megadungeon"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="Godot/app_userdata/Nottgard Survivors"
 run/main_scene="res://ui/title.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"

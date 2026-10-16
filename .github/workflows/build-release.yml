@@ -89,7 +89,7 @@ jobs:
           tag: latest
           name: "Playtest v${{ steps.ver.outputs.version }} (${{ github.sha }})"
           body: |
-            Build automática de playtest — Nottgard Survivors v${{ steps.ver.outputs.version }}
+            Build automática de playtest — Nottgard - Abyss Megadungeon v${{ steps.ver.outputs.version }}
             Commit: ${{ github.sha }}
 
             **Como jogar:** baixe `NottgardSurvivors-windows.zip` (ou o `.exe` direto), extraia e abra.
@@ -107,5 +107,5 @@ jobs:
       - name: Anunciar aos playtesters no Discord (opcional)
         if: env.DISCORD_WEBHOOK_DOWNLOADS != ''
         run: |
-          MSG="**Nottgard Survivors v${{ steps.ver.outputs.version }}** — nova build de playtest disponível: https://github.com/${{ github.repository }}/releases/tag/latest"
+          MSG="**Nottgard - Abyss Megadungeon v${{ steps.ver.outputs.version }}** — nova build de playtest disponível: https://github.com/${{ github.repository }}/releases/tag/latest"
           jq -n --arg content "$MSG" '{content: $content}' | curl -sS -X POST -H "Content-Type: application/json" -d @- "$DISCORD_WEBHOOK_DOWNLOADS"
