@@ -1,0 +1,92 @@
+{
+  "id": "LN01",
+  "revision": "v02",
+  "content_state": "DRAFT",
+  "visual_acceptance": "APPROVED_EXPLICITLY_V02",
+  "technical_checks": {
+    "rgba": true,
+    "fits_1100x176": true,
+    "has_transparency": true,
+    "no_opaque_cyan": true,
+    "solid_silhouette_clear_of_edges": true
+  },
+  "opaque_cyan_pixels": 0,
+  "solid_alpha128_bounds": [
+    1,
+    1,
+    698,
+    175
+  ],
+  "text_visual_inspection": "NOTTGARD / ABYSS MEGADUNGEON; v02 visually accepted by owner 2026-10-16",
+  "subtitle_height_visual_estimate_px": 18,
+  "method": "Built-in imagegen background extraction, two candidates; v02 export via System.Drawing, nearest-neighbor proportional scale. Not pixel-identical to source.",
+  "export_source_rect_xywh": [
+    4,
+    93,
+    2164,
+    545
+  ],
+  "export_dimensions": [
+    699,
+    176
+  ],
+  "alpha_note": "Generated source includes stray low-alpha pixels outside solid silhouette; crop follows solid bounds plus margin. No alpha threshold or recoloring applied to candidate.",
+  "preview": "Static composition on actual title background at 1280x720, logo at x290,y24; not a runtime capture or playtest.",
+  "runtime_destination": "assets/ui/title/logo.png",
+  "runtime_before_sha256": "5d5214fbfad023c90ecd8e46a86f8efeded578e9a8009b685d3ff2f04b4eecb5",
+  "runtime_changed": false,
+  "delivery_status": "ZIP_FOR_OWNER_ATTACHMENT_NO_DIRECT_SEND",
+  "files": [
+    {
+      "path": "LN01_source_v01.png",
+      "sha256": "1e2158fd37ba1694f31801bac5914bb039da10e2711286bfc38ca9bdc29f2f26",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "LN01_transparent_v02.png",
+      "sha256": "dba6c6915a1096010b412bdd20cbdc52e7d559a3bf8a4b8ec4118932e842c7b3",
+      "dimensions": [
+        2172,
+        724
+      ]
+    },
+    {
+      "path": "LN01_runtime_candidate_v02.png",
+      "sha256": "7aeec54dbe20a7de8fab88bf1575c1d27397f2c012246ec5667798f4523a7f09",
+      "dimensions": [
+        699,
+        176
+      ]
+    },
+    {
+      "path": "preview_title_1280x720_v02.png",
+      "sha256": "3d16f16d91abec8b249b18a5365820c9b00e4ab5ebba8f5fe43b7d927222c434",
+      "dimensions": [
+        1280,
+        720
+      ]
+    }
+  ],
+  "acceptance_receipt": "visual-acceptance.json",
+  "supporting_files": [
+    {
+      "path": "LEIA-ME.md",
+      "sha256": "3a196c845ac61a0aa7cbbe5a6ceed230da7e0f3eaa2aef80db6a159df22170f2"
+    },
+    {
+      "path": "MENSAGEM-PARA-CLAUDE.txt",
+      "sha256": "8d2892ef0c58973b348e45b6e08d2a97339324aeb1204c45aac03e9d135352bd"
+    },
+    {
+      "path": "imagegen-final-prompt.txt",
+      "sha256": "005433e05b9b27f4a603a40d2d4e502f494742efce073ec165115b1119204388"
+    },
+    {
+      "path": "visual-acceptance.json",
+      "sha256": "6ba2265fc3121afbba017522d4f287bf154ed911ccc2a2140d9dd192a563c70a"
+    }
+  ]
+}

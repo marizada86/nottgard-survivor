@@ -1499,3 +1499,23 @@ claude_art_integration_2026_10_16:
   evidence: .atena/evidence/EVID-266-integracao-fila-028-artes-do-claude-handoff-2026-10-16.md
   verification: "importacao 34 recursos; tests/run_all.gd 0 falhas; smoke 9 fases ok; capturas das 8 fases"
   return_note: "PLAN-103 retoma em B-002/S-008_AWAITING_RETURN; Durvall v03 segue no M1"
+
+logo_ln01_admission_2026_10_16:
+  plan: PLAN-109
+  spec: SPEC-184
+  deviation: DEV-044
+  state_file: .atena/state/plan-109-admissao-logo-ln01.yaml
+  request_classification: PLAN_DEVIATION
+  route: DO_NOW_AND_RETURN   # dono 2026-10-16: "Fazer agora e voltar" + "Por plano"
+  mode: per-plan
+  approval_status: APPROVED_EXPLICITLY
+  status: COMPLETED_LOCAL_AWAITING_OWNER_REVIEW
+  checkpoint: S-003/DONE_RETURN_TO_PLAN-103
+  content_state: DRAFT
+  suspended_plan: {id: PLAN-103, checkpoint: "B-002/S-008_AWAITING_RETURN", note: "suspenso so para esta admissao; nada do PLAN-103 foi alterado"}
+  return_plan: PLAN-103
+  commit_push_build_export: NOT_AUTHORIZED
+  other_sessions_changes: PRESERVE_UNTOUCHED
+  evidence: .atena/evidence/EVID-267-admissao-do-logotipo-ln01-v02-2026-10-16.md
+  verification: "import sem erro; tests/run_all.gd 0 falhas; captura do titulo 1280x720"
+  return_note: "PLAN-103 retoma em B-002/S-008_AWAITING_RETURN"

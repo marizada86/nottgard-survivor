@@ -1,0 +1,23 @@
+id: PLAN-109
+spec: SPEC-184
+spec_file: .atena/specs/SPEC-184-admissao-do-logotipo-ln01-v02-art-049.md
+mode: per-plan
+status: COMPLETED_LOCAL_AWAITING_OWNER_REVIEW
+approved: "2026-10-16"
+approval_basis: "Dono: 'Fazer agora e voltar' e 'Por plano' (2026-10-16), depois de 'atena, a logo foi gerada' + claude-logo-handoff-v01.zip"
+content_state: DRAFT
+request_classification: PLAN_DEVIATION
+route: DO_NOW_AND_RETURN
+return_plan: PLAN-103
+return_checkpoint: "B-002/S-008_AWAITING_RETURN; B-004/R3_PROPOSAL_AWAITING_G-M3-3"
+steps:
+  S-001: 'Backup e copia do logo.png'
+  S-002: 'Importar e capturar o titulo real'
+  S-003: 'Suite e EVID-267'
+gates:
+  dependencies: NO_NEW_DEPENDENCIES
+  raster_modification: false
+  canonical_promotion: false
+  commit_push_build_export: NOT_AUTHORIZED
+  other_sessions_changes: PRESERVE_UNTOUCHED
+evidence: .atena/evidence/EVID-267-admissao-do-logotipo-ln01-v02-2026-10-16.md
