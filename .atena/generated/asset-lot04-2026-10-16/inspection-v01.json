@@ -1,0 +1,1196 @@
+[
+  {
+    "code": "QB01",
+    "name": "Candelabro",
+    "revision": "v01",
+    "source": ".atena/generated/animation-candidates/asset-lot04/QB01_v01.png",
+    "source_sha256": "45392856F6A12998776BA62C6EA03EC289F8E46158C8E7D6B1CA4880A941C74D",
+    "width": 1536,
+    "height": 1024,
+    "columns": 3,
+    "rows": 2,
+    "frame_count": 5,
+    "loop": false,
+    "core_base_spread_px": 36.0,
+    "unique_qa_pixel_file_hashes": 5,
+    "frames": [
+      {
+        "index": 0,
+        "expected_empty": false,
+        "cell_xywh": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "alpha_ge16_pixels": 75292,
+        "alpha_ge128_pixels": 71918,
+        "alpha_1to15_pixels": 8761,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          54,
+          84,
+          468,
+          479
+        ],
+        "core_bbox_xyxy": [
+          55,
+          93,
+          467,
+          478
+        ],
+        "core_alpha_mode": 253,
+        "qa_frame": "frames/QB01/00.png",
+        "qa_sha256": "E31AB0004B1C8D84CA4A021136D2FFA5814C57E9B5E2ED2F3B9DA59FEF77A8F4"
+      },
+      {
+        "index": 1,
+        "expected_empty": false,
+        "cell_xywh": [
+          512,
+          0,
+          512,
+          512
+        ],
+        "alpha_ge16_pixels": 78285,
+        "alpha_ge128_pixels": 74897,
+        "alpha_1to15_pixels": 9345,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          47,
+          115,
+          474,
+          481
+        ],
+        "core_bbox_xyxy": [
+          47,
+          125,
+          473,
+          481
+        ],
+        "core_alpha_mode": 252,
+        "qa_frame": "frames/QB01/01.png",
+        "qa_sha256": "48516220E10CB9AB0DECD5C08B52FB2D1E024A48437B286C7FD8359EC34F8D6A"
+      },
+      {
+        "index": 2,
+        "expected_empty": false,
+        "cell_xywh": [
+          1024,
+          0,
+          512,
+          512
+        ],
+        "alpha_ge16_pixels": 73548,
+        "alpha_ge128_pixels": 71221,
+        "alpha_1to15_pixels": 8436,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          46,
+          170,
+          474,
+          486
+        ],
+        "core_bbox_xyxy": [
+          46,
+          182,
+          474,
+          485
+        ],
+        "core_alpha_mode": 253,
+        "qa_frame": "frames/QB01/02.png",
+        "qa_sha256": "3FC3E4AA68DE72A0B3E6B0D7EF9A3C71E85167FA359601175C2793A3D7B8C81D"
+      },
+      {
+        "index": 3,
+        "expected_empty": false,
+        "cell_xywh": [
+          0,
+          512,
+          512,
+          512
+        ],
+        "alpha_ge16_pixels": 85092,
+        "alpha_ge128_pixels": 82428,
+        "alpha_1to15_pixels": 15895,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          39,
+          110,
+          492,
+          450
+        ],
+        "core_bbox_xyxy": [
+          40,
+          110,
+          491,
+          449
+        ],
+        "core_alpha_mode": 252,
+        "qa_frame": "frames/QB01/03.png",
+        "qa_sha256": "91B3500313E05770E770E58E2272C8D4EC72DEA131A37E6142916E502D651609"
+      },
+      {
+        "index": 4,
+        "expected_empty": false,
+        "cell_xywh": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "alpha_ge16_pixels": 72864,
+        "alpha_ge128_pixels": 71246,
+        "alpha_1to15_pixels": 8642,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          35,
+          220,
+          479,
+          452
+        ],
+        "core_bbox_xyxy": [
+          35,
+          221,
+          479,
+          451
+        ],
+        "core_alpha_mode": 252,
+        "qa_frame": "frames/QB01/04.png",
+        "qa_sha256": "6728EFA8A79092D59F7A7BD473F3B67908DE0414BBD123E6BA6111740A419A6A"
+      },
+      {
+        "index": 5,
+        "expected_empty": true,
+        "cell_xywh": [
+          1024,
+          512,
+          512,
+          512
+        ],
+        "alpha_ge16_pixels": 0,
+        "alpha_ge128_pixels": 0,
+        "alpha_1to15_pixels": 447,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          512,
+          512,
+          -1,
+          -1
+        ],
+        "core_bbox_xyxy": [
+          512,
+          512,
+          -1,
+          -1
+        ],
+        "core_alpha_mode": 0,
+        "qa_frame": null,
+        "qa_sha256": null
+      }
+    ],
+    "human_visual_acceptance": "PENDING",
+    "runtime_admission": false
+  },
+  {
+    "code": "QB02",
+    "name": "Caixote",
+    "revision": "v01",
+    "source": ".atena/generated/animation-candidates/asset-lot04/QB02_v01.png",
+    "source_sha256": "30752B3758BAD9CB3C23CB102D210B3725F6551349698330338950C3C4C7E99B",
+    "width": 1536,
+    "height": 1024,
+    "columns": 3,
+    "rows": 2,
+    "frame_count": 5,
+    "loop": false,
+    "core_base_spread_px": 30.0,
+    "unique_qa_pixel_file_hashes": 5,
+    "frames": [
+      {
+        "index": 0,
+        "expected_empty": false,
+        "cell_xywh": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "alpha_ge16_pixels": 114264,
+        "alpha_ge128_pixels": 113160,
+        "alpha_1to15_pixels": 6612,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 118,
+        "visible_bbox_xyxy": [
+          144,
+          10,
+          416,
+          511
+        ],
+        "core_bbox_xyxy": [
+          145,
+          11,
+          415,
+          511
+        ],
+        "core_alpha_mode": 252,
+        "qa_frame": "frames/QB02/00.png",
+        "qa_sha256": "F2739792B7C4356EEC7D3D89D057E25CB4399A5BD9AA2496A478A96E6D16CE3B"
+      },
+      {
+        "index": 1,
+        "expected_empty": false,
+        "cell_xywh": [
+          512,
+          0,
+          512,
+          512
+        ],
+        "alpha_ge16_pixels": 120945,
+        "alpha_ge128_pixels": 119411,
+        "alpha_1to15_pixels": 7444,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 169,
+        "visible_bbox_xyxy": [
+          95,
+          9,
+          423,
+          511
+        ],
+        "core_bbox_xyxy": [
+          96,
+          10,
+          422,
+          511
+        ],
+        "core_alpha_mode": 252,
+        "qa_frame": "frames/QB02/01.png",
+        "qa_sha256": "4FFD35BC6F2D556B0C6D349E93272181E8D6F392C28C0C1C6559CC656905A1A8"
+      },
+      {
+        "index": 2,
+        "expected_empty": false,
+        "cell_xywh": [
+          1024,
+          0,
+          512,
+          512
+        ],
+        "alpha_ge16_pixels": 127007,
+        "alpha_ge128_pixels": 125031,
+        "alpha_1to15_pixels": 9467,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 181,
+        "visible_bbox_xyxy": [
+          99,
+          11,
+          415,
+          511
+        ],
+        "core_bbox_xyxy": [
+          100,
+          12,
+          414,
+          511
+        ],
+        "core_alpha_mode": 252,
+        "qa_frame": "frames/QB02/02.png",
+        "qa_sha256": "BFB3178BEA48237208FCBA54338658F3E8CA71DD649D1D6053D921DC35591162"
+      },
+      {
+        "index": 3,
+        "expected_empty": false,
+        "cell_xywh": [
+          0,
+          512,
+          512,
+          512
+        ],
+        "alpha_ge16_pixels": 109419,
+        "alpha_ge128_pixels": 106061,
+        "alpha_1to15_pixels": 17314,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 42,
+        "visible_bbox_xyxy": [
+          72,
+          0,
+          492,
+          482
+        ],
+        "core_bbox_xyxy": [
+          73,
+          0,
+          491,
+          481
+        ],
+        "core_alpha_mode": 252,
+        "qa_frame": "frames/QB02/03.png",
+        "qa_sha256": "DB878424A3384E1492DF55DAA019D4095B7DAF5688A7BF217F4419091C578AFC"
+      },
+      {
+        "index": 4,
+        "expected_empty": false,
+        "cell_xywh": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "alpha_ge16_pixels": 75590,
+        "alpha_ge128_pixels": 73409,
+        "alpha_1to15_pixels": 11857,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 89,
+        "visible_bbox_xyxy": [
+          49,
+          0,
+          484,
+          487
+        ],
+        "core_bbox_xyxy": [
+          49,
+          0,
+          484,
+          485
+        ],
+        "core_alpha_mode": 252,
+        "qa_frame": "frames/QB02/04.png",
+        "qa_sha256": "6A93992502A955DCF80EF394D2E277EB2EA1EB75483639CCA55593D866272407"
+      },
+      {
+        "index": 5,
+        "expected_empty": true,
+        "cell_xywh": [
+          1024,
+          512,
+          512,
+          512
+        ],
+        "alpha_ge16_pixels": 138,
+        "alpha_ge128_pixels": 106,
+        "alpha_1to15_pixels": 2289,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 103,
+        "visible_bbox_xyxy": [
+          226,
+          0,
+          257,
+          6
+        ],
+        "core_bbox_xyxy": [
+          228,
+          0,
+          256,
+          5
+        ],
+        "core_alpha_mode": 249,
+        "qa_frame": null,
+        "qa_sha256": null
+      }
+    ],
+    "human_visual_acceptance": "PENDING",
+    "runtime_admission": false
+  },
+  {
+    "code": "QB03",
+    "name": "Arbusto fúngico",
+    "revision": "v01",
+    "source": ".atena/generated/animation-candidates/asset-lot04/QB03_v01.png",
+    "source_sha256": "EFA4126E7711C0BAC0DC0184B28FC77E59A2AFD0C9B68381BAAF5D9AE9ADAC55",
+    "width": 1536,
+    "height": 1024,
+    "columns": 3,
+    "rows": 2,
+    "frame_count": 5,
+    "loop": false,
+    "core_base_spread_px": 41.0,
+    "unique_qa_pixel_file_hashes": 5,
+    "frames": [
+      {
+        "index": 0,
+        "expected_empty": false,
+        "cell_xywh": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "alpha_ge16_pixels": 88321,
+        "alpha_ge128_pixels": 84742,
+        "alpha_1to15_pixels": 18298,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          98,
+          50,
+          458,
+          504
+        ],
+        "core_bbox_xyxy": [
+          98,
+          51,
+          458,
+          503
+        ],
+        "core_alpha_mode": 253,
+        "qa_frame": "frames/QB03/00.png",
+        "qa_sha256": "D00E00EA54B37E75E7B808828BF4E2128DD2D27BDD2666E1608D6F249428A877"
+      },
+      {
+        "index": 1,
+        "expected_empty": false,
+        "cell_xywh": [
+          512,
+          0,
+          512,
+          512
+        ],
+        "alpha_ge16_pixels": 92844,
+        "alpha_ge128_pixels": 88754,
+        "alpha_1to15_pixels": 21217,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 55,
+        "visible_bbox_xyxy": [
+          96,
+          62,
+          464,
+          510
+        ],
+        "core_bbox_xyxy": [
+          96,
+          63,
+          463,
+          510
+        ],
+        "core_alpha_mode": 252,
+        "qa_frame": "frames/QB03/01.png",
+        "qa_sha256": "EC84AF69307299D929A4A42816A16255401B6CDE96CA95EA328FBB248C9DA8A0"
+      },
+      {
+        "index": 2,
+        "expected_empty": false,
+        "cell_xywh": [
+          1024,
+          0,
+          512,
+          512
+        ],
+        "alpha_ge16_pixels": 106725,
+        "alpha_ge128_pixels": 101362,
+        "alpha_1to15_pixels": 27180,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 112,
+        "visible_bbox_xyxy": [
+          52,
+          55,
+          473,
+          511
+        ],
+        "core_bbox_xyxy": [
+          53,
+          56,
+          472,
+          510
+        ],
+        "core_alpha_mode": 252,
+        "qa_frame": "frames/QB03/02.png",
+        "qa_sha256": "B3F7669EA8A815CB35AE34F4057A725B82A74C55D96839835064A9384A402FAE"
+      },
+      {
+        "index": 3,
+        "expected_empty": false,
+        "cell_xywh": [
+          0,
+          512,
+          512,
+          512
+        ],
+        "alpha_ge16_pixels": 92540,
+        "alpha_ge128_pixels": 86962,
+        "alpha_1to15_pixels": 32860,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          57,
+          90,
+          493,
+          469
+        ],
+        "core_bbox_xyxy": [
+          58,
+          91,
+          492,
+          469
+        ],
+        "core_alpha_mode": 252,
+        "qa_frame": "frames/QB03/03.png",
+        "qa_sha256": "EFB92879DA4A7336555129F9DF0393A017B8744E1245812F14CD965206AE382D"
+      },
+      {
+        "index": 4,
+        "expected_empty": false,
+        "cell_xywh": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "alpha_ge16_pixels": 55850,
+        "alpha_ge128_pixels": 53637,
+        "alpha_1to15_pixels": 10204,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          40,
+          243,
+          489,
+          472
+        ],
+        "core_bbox_xyxy": [
+          40,
+          244,
+          488,
+          471
+        ],
+        "core_alpha_mode": 252,
+        "qa_frame": "frames/QB03/04.png",
+        "qa_sha256": "F24FC94F8D077195CBA2179F415B1DD8FAE9B77B62F65ED50B9651112695BBB5"
+      },
+      {
+        "index": 5,
+        "expected_empty": true,
+        "cell_xywh": [
+          1024,
+          512,
+          512,
+          512
+        ],
+        "alpha_ge16_pixels": 0,
+        "alpha_ge128_pixels": 0,
+        "alpha_1to15_pixels": 467,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          512,
+          512,
+          -1,
+          -1
+        ],
+        "core_bbox_xyxy": [
+          512,
+          512,
+          -1,
+          -1
+        ],
+        "core_alpha_mode": 0,
+        "qa_frame": null,
+        "qa_sha256": null
+      }
+    ],
+    "human_visual_acceptance": "PENDING",
+    "runtime_admission": false
+  },
+  {
+    "code": "QB04",
+    "name": "Saco de esporos",
+    "revision": "v01",
+    "source": ".atena/generated/animation-candidates/asset-lot04/QB04_v01.png",
+    "source_sha256": "0215685F042A0EB7E5955B419E8EDB0A2DA825023C4971CEE6A9394E7EA0029B",
+    "width": 1536,
+    "height": 1024,
+    "columns": 3,
+    "rows": 2,
+    "frame_count": 5,
+    "loop": false,
+    "core_base_spread_px": 40.0,
+    "unique_qa_pixel_file_hashes": 5,
+    "frames": [
+      {
+        "index": 0,
+        "expected_empty": false,
+        "cell_xywh": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "alpha_ge16_pixels": 120800,
+        "alpha_ge128_pixels": 119102,
+        "alpha_1to15_pixels": 10016,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          58,
+          66,
+          467,
+          501
+        ],
+        "core_bbox_xyxy": [
+          59,
+          66,
+          466,
+          501
+        ],
+        "core_alpha_mode": 253,
+        "qa_frame": "frames/QB04/00.png",
+        "qa_sha256": "DE67612D194DB8B1701337D7678A775310DA87071D51208C5CE29B74A9F6F11B"
+      },
+      {
+        "index": 1,
+        "expected_empty": false,
+        "cell_xywh": [
+          512,
+          0,
+          512,
+          512
+        ],
+        "alpha_ge16_pixels": 120294,
+        "alpha_ge128_pixels": 118583,
+        "alpha_1to15_pixels": 9708,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          55,
+          66,
+          461,
+          501
+        ],
+        "core_bbox_xyxy": [
+          56,
+          67,
+          460,
+          501
+        ],
+        "core_alpha_mode": 253,
+        "qa_frame": "frames/QB04/01.png",
+        "qa_sha256": "55115E24563F24740EAC4776C615E30B1F7356BC73EF9D33918B8EB92F3946D9"
+      },
+      {
+        "index": 2,
+        "expected_empty": false,
+        "cell_xywh": [
+          1024,
+          0,
+          512,
+          512
+        ],
+        "alpha_ge16_pixels": 109187,
+        "alpha_ge128_pixels": 107344,
+        "alpha_1to15_pixels": 10703,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          44,
+          101,
+          474,
+          501
+        ],
+        "core_bbox_xyxy": [
+          45,
+          102,
+          474,
+          501
+        ],
+        "core_alpha_mode": 253,
+        "qa_frame": "frames/QB04/02.png",
+        "qa_sha256": "4D685F2A2888B429F2BAA836591FD2E92FE4A13E1EBAAAAE61CE72E14F999051"
+      },
+      {
+        "index": 3,
+        "expected_empty": false,
+        "cell_xywh": [
+          0,
+          512,
+          512,
+          512
+        ],
+        "alpha_ge16_pixels": 86917,
+        "alpha_ge128_pixels": 85345,
+        "alpha_1to15_pixels": 8481,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          52,
+          138,
+          491,
+          462
+        ],
+        "core_bbox_xyxy": [
+          53,
+          138,
+          491,
+          461
+        ],
+        "core_alpha_mode": 253,
+        "qa_frame": "frames/QB04/03.png",
+        "qa_sha256": "55B29243F71F9862BE59D659393A8318DE64A3AF55FB48606BDA98EF8245B1DD"
+      },
+      {
+        "index": 4,
+        "expected_empty": false,
+        "cell_xywh": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "alpha_ge16_pixels": 63723,
+        "alpha_ge128_pixels": 62428,
+        "alpha_1to15_pixels": 7855,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          40,
+          221,
+          488,
+          467
+        ],
+        "core_bbox_xyxy": [
+          40,
+          222,
+          488,
+          467
+        ],
+        "core_alpha_mode": 253,
+        "qa_frame": "frames/QB04/04.png",
+        "qa_sha256": "5FD467A9B27B5A77BFEBF052811E108DF92B4C60AA9CE7E65872F59FE2775B9D"
+      },
+      {
+        "index": 5,
+        "expected_empty": true,
+        "cell_xywh": [
+          1024,
+          512,
+          512,
+          512
+        ],
+        "alpha_ge16_pixels": 0,
+        "alpha_ge128_pixels": 0,
+        "alpha_1to15_pixels": 1664,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          512,
+          512,
+          -1,
+          -1
+        ],
+        "core_bbox_xyxy": [
+          512,
+          512,
+          -1,
+          -1
+        ],
+        "core_alpha_mode": 0,
+        "qa_frame": null,
+        "qa_sha256": null
+      }
+    ],
+    "human_visual_acceptance": "PENDING",
+    "runtime_admission": false
+  },
+  {
+    "code": "QB05",
+    "name": "Casulo viscoso",
+    "revision": "v01",
+    "source": ".atena/generated/animation-candidates/asset-lot04/QB05_v01.png",
+    "source_sha256": "7655A288E2754E133BA5D7605A79C3390EDEFFE8A12E3658D64E58156FF9EF2A",
+    "width": 1536,
+    "height": 1024,
+    "columns": 3,
+    "rows": 2,
+    "frame_count": 5,
+    "loop": false,
+    "core_base_spread_px": 44.0,
+    "unique_qa_pixel_file_hashes": 5,
+    "frames": [
+      {
+        "index": 0,
+        "expected_empty": false,
+        "cell_xywh": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "alpha_ge16_pixels": 107429,
+        "alpha_ge128_pixels": 106266,
+        "alpha_1to15_pixels": 7404,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 161,
+        "visible_bbox_xyxy": [
+          117,
+          65,
+          450,
+          511
+        ],
+        "core_bbox_xyxy": [
+          117,
+          65,
+          450,
+          511
+        ],
+        "core_alpha_mode": 253,
+        "qa_frame": "frames/QB05/00.png",
+        "qa_sha256": "F377346BB45674D9C6B0CC5D284C20F91563F3386C98535DC54A7786A8395567"
+      },
+      {
+        "index": 1,
+        "expected_empty": false,
+        "cell_xywh": [
+          512,
+          0,
+          512,
+          512
+        ],
+        "alpha_ge16_pixels": 109240,
+        "alpha_ge128_pixels": 107640,
+        "alpha_1to15_pixels": 7686,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 164,
+        "visible_bbox_xyxy": [
+          99,
+          63,
+          439,
+          511
+        ],
+        "core_bbox_xyxy": [
+          101,
+          64,
+          438,
+          511
+        ],
+        "core_alpha_mode": 253,
+        "qa_frame": "frames/QB05/01.png",
+        "qa_sha256": "4ABA800A3EC7ED716B685EFA7A4112AA259B83A93A8D7AC5D34C666BFF1ED8F5"
+      },
+      {
+        "index": 2,
+        "expected_empty": false,
+        "cell_xywh": [
+          1024,
+          0,
+          512,
+          512
+        ],
+        "alpha_ge16_pixels": 105697,
+        "alpha_ge128_pixels": 103000,
+        "alpha_1to15_pixels": 11634,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 173,
+        "visible_bbox_xyxy": [
+          76,
+          108,
+          434,
+          511
+        ],
+        "core_bbox_xyxy": [
+          77,
+          109,
+          434,
+          511
+        ],
+        "core_alpha_mode": 253,
+        "qa_frame": "frames/QB05/02.png",
+        "qa_sha256": "5C4D5DD02F567CA68BEBD7CE16F5E0FFC578A2A743E5AC63731153C928B7A781"
+      },
+      {
+        "index": 3,
+        "expected_empty": false,
+        "cell_xywh": [
+          0,
+          512,
+          512,
+          512
+        ],
+        "alpha_ge16_pixels": 92808,
+        "alpha_ge128_pixels": 90809,
+        "alpha_1to15_pixels": 10737,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 93,
+        "visible_bbox_xyxy": [
+          61,
+          0,
+          488,
+          467
+        ],
+        "core_bbox_xyxy": [
+          61,
+          0,
+          487,
+          467
+        ],
+        "core_alpha_mode": 253,
+        "qa_frame": "frames/QB05/03.png",
+        "qa_sha256": "5156B814D8DC3401309A1F375EBF4A258A0247A7D1399385BE81843A874B2489"
+      },
+      {
+        "index": 4,
+        "expected_empty": false,
+        "cell_xywh": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "alpha_ge16_pixels": 74902,
+        "alpha_ge128_pixels": 73231,
+        "alpha_1to15_pixels": 10687,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 93,
+        "visible_bbox_xyxy": [
+          45,
+          0,
+          483,
+          467
+        ],
+        "core_bbox_xyxy": [
+          46,
+          0,
+          483,
+          467
+        ],
+        "core_alpha_mode": 253,
+        "qa_frame": "frames/QB05/04.png",
+        "qa_sha256": "E2E5A5646FB7E3F2A709EDEAF0DD1CB5C849D09F309D48A9C87EAC87FB56883E"
+      },
+      {
+        "index": 5,
+        "expected_empty": true,
+        "cell_xywh": [
+          1024,
+          512,
+          512,
+          512
+        ],
+        "alpha_ge16_pixels": 122,
+        "alpha_ge128_pixels": 95,
+        "alpha_1to15_pixels": 3700,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 99,
+        "visible_bbox_xyxy": [
+          275,
+          0,
+          305,
+          5
+        ],
+        "core_bbox_xyxy": [
+          278,
+          0,
+          304,
+          4
+        ],
+        "core_alpha_mode": 249,
+        "qa_frame": null,
+        "qa_sha256": null
+      }
+    ],
+    "human_visual_acceptance": "PENDING",
+    "runtime_admission": false
+  },
+  {
+    "code": "QB06",
+    "name": "Urna funerária",
+    "revision": "v01",
+    "source": ".atena/generated/animation-candidates/asset-lot04/QB06_v01.png",
+    "source_sha256": "7E124E4A5344996C63F1B26CFECF8B2CB3EFD1A0BBD3DC63FBC131170A4E9DA2",
+    "width": 1536,
+    "height": 1024,
+    "columns": 3,
+    "rows": 2,
+    "frame_count": 5,
+    "loop": false,
+    "core_base_spread_px": 47.0,
+    "unique_qa_pixel_file_hashes": 5,
+    "frames": [
+      {
+        "index": 0,
+        "expected_empty": false,
+        "cell_xywh": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "alpha_ge16_pixels": 100544,
+        "alpha_ge128_pixels": 99011,
+        "alpha_1to15_pixels": 8066,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 611,
+        "visible_bbox_xyxy": [
+          147,
+          63,
+          470,
+          511
+        ],
+        "core_bbox_xyxy": [
+          148,
+          63,
+          470,
+          511
+        ],
+        "core_alpha_mode": 253,
+        "qa_frame": "frames/QB06/00.png",
+        "qa_sha256": "BCACA9E2A7A7A8549035BFB3DDC64A8F28DF381C1D78ED4B81EDA5871E895251"
+      },
+      {
+        "index": 1,
+        "expected_empty": false,
+        "cell_xywh": [
+          512,
+          0,
+          512,
+          512
+        ],
+        "alpha_ge16_pixels": 109194,
+        "alpha_ge128_pixels": 107025,
+        "alpha_1to15_pixels": 11284,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 646,
+        "visible_bbox_xyxy": [
+          91,
+          57,
+          443,
+          511
+        ],
+        "core_bbox_xyxy": [
+          91,
+          58,
+          442,
+          511
+        ],
+        "core_alpha_mode": 252,
+        "qa_frame": "frames/QB06/01.png",
+        "qa_sha256": "E66BB106F754319E19EE691A399CE4C78EE8B782577D6FDC01FEF9E62B44C8E6"
+      },
+      {
+        "index": 2,
+        "expected_empty": false,
+        "cell_xywh": [
+          1024,
+          0,
+          512,
+          512
+        ],
+        "alpha_ge16_pixels": 124827,
+        "alpha_ge128_pixels": 121219,
+        "alpha_1to15_pixels": 19081,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 812,
+        "visible_bbox_xyxy": [
+          40,
+          60,
+          445,
+          511
+        ],
+        "core_bbox_xyxy": [
+          40,
+          61,
+          444,
+          511
+        ],
+        "core_alpha_mode": 252,
+        "qa_frame": "frames/QB06/02.png",
+        "qa_sha256": "1E06AEEC4F72589AE70A936CC18F565CFBA83CE5984544E621DB792CDB445E35"
+      },
+      {
+        "index": 3,
+        "expected_empty": false,
+        "cell_xywh": [
+          0,
+          512,
+          512,
+          512
+        ],
+        "alpha_ge16_pixels": 112078,
+        "alpha_ge128_pixels": 109156,
+        "alpha_1to15_pixels": 14731,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 515,
+        "visible_bbox_xyxy": [
+          47,
+          0,
+          506,
+          467
+        ],
+        "core_bbox_xyxy": [
+          48,
+          0,
+          505,
+          466
+        ],
+        "core_alpha_mode": 253,
+        "qa_frame": "frames/QB06/03.png",
+        "qa_sha256": "D72D35EBBD18C7AC23345A39C55E23C2242731DB6706D95D226DECBCBB833319"
+      },
+      {
+        "index": 4,
+        "expected_empty": false,
+        "cell_xywh": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "alpha_ge16_pixels": 94015,
+        "alpha_ge128_pixels": 91756,
+        "alpha_1to15_pixels": 10344,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 621,
+        "visible_bbox_xyxy": [
+          26,
+          0,
+          511,
+          464
+        ],
+        "core_bbox_xyxy": [
+          26,
+          0,
+          511,
+          464
+        ],
+        "core_alpha_mode": 252,
+        "qa_frame": "frames/QB06/04.png",
+        "qa_sha256": "A8D3FDF3E5E6F5AD5972BE764503F31719DDEBA80C849F3CFE5EBEC887345F5B"
+      },
+      {
+        "index": 5,
+        "expected_empty": true,
+        "cell_xywh": [
+          1024,
+          512,
+          512,
+          512
+        ],
+        "alpha_ge16_pixels": 3003,
+        "alpha_ge128_pixels": 2789,
+        "alpha_1to15_pixels": 2331,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 692,
+        "visible_bbox_xyxy": [
+          0,
+          0,
+          351,
+          403
+        ],
+        "core_bbox_xyxy": [
+          0,
+          0,
+          350,
+          402
+        ],
+        "core_alpha_mode": 252,
+        "qa_frame": null,
+        "qa_sha256": null
+      }
+    ],
+    "human_visual_acceptance": "PENDING",
+    "runtime_admission": false
+  }
+]

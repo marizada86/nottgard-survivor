@@ -1,0 +1,59 @@
+{
+  "plan": "ASSET-LOT04",
+  "revision": "v01",
+  "date": "2026-10-16",
+  "owner_reply": "aprovado, commite",
+  "scope": "Direção visual de QB01/v01, QB02/v03, QB03/v02, QB04/v01, QB05/v02, QB06/v02 — 30 poses",
+  "status": "APPROVED_EXPLICITLY_SEQUENCE_DIRECTION",
+  "content_state": "DRAFT",
+  "sequences": [
+    {
+      "code": "QB01",
+      "revision": "v01",
+      "source": ".atena/generated/animation-candidates/asset-lot04/QB01_v01.png",
+      "source_sha256": "45392856F6A12998776BA62C6EA03EC289F8E46158C8E7D6B1CA4880A941C74D",
+      "frame_count": 5
+    },
+    {
+      "code": "QB02",
+      "revision": "v03",
+      "source": ".atena/generated/animation-candidates/asset-lot04/QB02_v03.png",
+      "source_sha256": "FFFE7DEEB1BA9342EC5588A3644AED066852676AAFD339234E23F08095942164",
+      "frame_count": 5
+    },
+    {
+      "code": "QB03",
+      "revision": "v02",
+      "source": ".atena/generated/animation-candidates/asset-lot04/QB03_v02.png",
+      "source_sha256": "E2FF46DC036C72DBE584607613040F43D646B3E7E64ABE7A28C615E790C8B3D3",
+      "frame_count": 5
+    },
+    {
+      "code": "QB04",
+      "revision": "v01",
+      "source": ".atena/generated/animation-candidates/asset-lot04/QB04_v01.png",
+      "source_sha256": "0215685F042A0EB7E5955B419E8EDB0A2DA825023C4971CEE6A9394E7EA0029B",
+      "frame_count": 5
+    },
+    {
+      "code": "QB05",
+      "revision": "v02",
+      "source": ".atena/generated/animation-candidates/asset-lot04/QB05_v02.png",
+      "source_sha256": "616D234F97557AB97B1E90563CE7CD57DE4B19440960410F96EBE72E6AD96922",
+      "frame_count": 5
+    },
+    {
+      "code": "QB06",
+      "revision": "v02",
+      "source": ".atena/generated/animation-candidates/asset-lot04/QB06_v02.png",
+      "source_sha256": "C9270C56AAFCD91F5DD7BDDE8137D449A8C05139FB17152ECDF3AE1A32B71417",
+      "frame_count": 5
+    }
+  ],
+  "runtime_admission": false,
+  "canonical_promotion": false,
+  "implementation_owner": "Claude",
+  "technical_preparation": "PENDING_ALPHA_SCALE_PIVOT",
+  "local_commit_authorized": true,
+  "push_authorized": false
+}

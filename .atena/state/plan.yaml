@@ -1604,6 +1604,69 @@ fila032_production_2026_10_16:
   local_commit_scope: PENDING_ART_DELIVERIES_IN_THIS_CHAT
   push_export: NOT_AUTHORIZED
   next_execution_authorized: false
+asset_lot03_interactions_2026_10_16:
+  revision: ASSET-LOT03/v01
+  state_file: .atena/state/asset-lot03-interactions.yaml
+  specification: .atena/specs/SPEC-121-retomada-fila-imagens/asset-lot03-interactions-v01.md
+  request_classification: PLAN_CHANGE_REQUEST
+  mode: per-plan
+  status: COMPLETED_SEQUENCE_VISUALLY_ACCEPTED_DRAFT
+  approval_status: APPROVED_EXPLICITLY
+  owner_scope_reply: 'aprovado por plano'
+  checkpoint: S-004/OWNER_JOINT_SEQUENCE_ACCEPTANCE_RECORDED
+  scope: [IA01, IA02, IA03, IA04, IA05, IA06]
+  planned_sources: 6
+  planned_frames: 29
+  ordered_steps: [S-001, S-002, S-003, S-004]
+  current_step_position: 4
+  completed_steps: 4
+  total_steps: 4
+  remaining_steps_after_current: 0
+  content_state: DRAFT
+  previous_delivery_commit: 16fbcf0a
+  implementation_owner: Claude
+  generated: 6
+  qa_frames: 29
+  gallery: .atena/generated/asset-lot03-2026-10-16/index.html
+  evidence: .atena/evidence/asset-lot03-interactions-2026-10-16.md
+  human_visual_acceptance: APPROVED_EXPLICITLY_SEQUENCE_DIRECTION
+  visual_owner_reply: 'aprovado, deixe a implementação para o claude, continue a produção'
+  visual_accepted_date: '2026-10-16'
+  visual_acceptance_receipt: .atena/generated/asset-lot03-2026-10-16/visual-acceptance.json
+  next_execution_authorized: false
+asset_lot04_breakables_2026_10_16:
+  revision: ASSET-LOT04/v01
+  state_file: .atena/state/asset-lot04-breakables.yaml
+  specification: .atena/specs/SPEC-121-retomada-fila-imagens/asset-lot04-breakables-v01.md
+  request_classification: PLAN_CHANGE_REQUEST
+  mode: per-plan
+  status: COMPLETED_SEQUENCE_VISUALLY_ACCEPTED_DRAFT
+  approval_status: APPROVED_EXPLICITLY
+  owner_scope_reply: 'aprovo'
+  checkpoint: S-004/OWNER_JOINT_SEQUENCE_ACCEPTANCE_RECORDED
+  scope: [QB01, QB02, QB03, QB04, QB05, QB06]
+  planned_sources: 6
+  planned_frames: 30
+  ordered_steps: [S-001, S-002, S-003, S-004]
+  current_step_position: 4
+  completed_steps: 4
+  total_steps: 4
+  remaining_steps_after_current: 0
+  content_state: DRAFT
+  implementation_owner: Claude
+  generated: 6
+  generation_attempts: 11
+  qa_frames: 30
+  selected_candidates: [QB01/v01, QB02/v03, QB03/v02, QB04/v01, QB05/v02, QB06/v02]
+  gallery: .atena/generated/asset-lot04-2026-10-16/index.html
+  evidence: .atena/evidence/asset-lot04-breakables-2026-10-16.md
+  human_visual_acceptance: APPROVED_EXPLICITLY_SEQUENCE_DIRECTION
+  visual_owner_reply: 'aprovado, commite'
+  visual_accepted_date: '2026-10-16'
+  visual_acceptance_receipt: .atena/generated/asset-lot04-2026-10-16/visual-acceptance.json
+  local_commit_authorization: 'aprovado, commite (2026-10-16)'
+  push_export: NOT_AUTHORIZED
+  next_execution_authorized: false
 plan_104_retratos_ficha_hud_2026_10_14:
   plan: PLAN-104
   revision: DRAFT/r1

@@ -1,0 +1,41 @@
+id: ASSET-LOT04
+revision: v01
+content_state: DRAFT
+origin: planned
+implementation_preceded_spec: false
+request_classification: PLAN_CHANGE_REQUEST
+owner_request: 'aprovado, deixe a implementação para o claude, continue a produção'
+mode: per-plan
+approval_status: APPROVED_EXPLICITLY
+owner_scope_reply: 'aprovo'
+approved_date: '2026-10-16'
+status: COMPLETED_SEQUENCE_VISUALLY_ACCEPTED_DRAFT
+checkpoint: S-004/OWNER_JOINT_SEQUENCE_ACCEPTANCE_RECORDED
+ordered_steps: [S-001, S-002, S-003, S-004]
+current_step_position: 4
+completed_steps: 4
+total_steps: 4
+remaining_steps_after_current: 0
+scope: [QB01, QB02, QB03, QB04, QB05, QB06]
+planned_sources: 6
+planned_frames: 30
+generated: 6
+generation_attempts: 11
+qa_frames: 30
+selected_candidates: [QB01/v01, QB02/v03, QB03/v02, QB04/v01, QB05/v02, QB06/v02]
+gallery: .atena/generated/asset-lot04-2026-10-16/index.html
+evidence: .atena/evidence/asset-lot04-breakables-2026-10-16.md
+human_visual_acceptance: APPROVED_EXPLICITLY_SEQUENCE_DIRECTION
+visual_owner_reply: 'aprovado, commite'
+visual_accepted_date: '2026-10-16'
+visual_acceptance_receipt: .atena/generated/asset-lot04-2026-10-16/visual-acceptance.json
+specification: .atena/specs/SPEC-121-retomada-fila-imagens/asset-lot04-breakables-v01.md
+implementation_owner: Claude
+visual_review: ONE_JOINT_GALLERY_WITH_PLAYBACK
+runtime_admission: false
+canonical_promotion: false
+next_execution_authorized: false
+local_commit_authorization: 'aprovado, commite (2026-10-16)'
+push_export: NOT_AUTHORIZED
+return_plan: PLAN-103
+next_objective: 'Preparação e admissão com Claude; próximo lote de produção requer escopo aprovado'
