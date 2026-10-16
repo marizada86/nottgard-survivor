@@ -1,0 +1,82 @@
+{
+  "plan": "ASSET-LOT07",
+  "revision": "v01",
+  "date": "2026-10-16",
+  "owner_reply": "aprovado, commite e continue",
+  "status": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+  "scope": "Nove revisões selecionadas/36desenhos; NE06 retido tecnicamente",
+  "content_state": "DRAFT",
+  "sequences": [
+    {
+      "code": "NE01",
+      "revision": "v01",
+      "source": ".atena/generated/animation-candidates/asset-lot07/NE01_v01.png",
+      "source_sha256": "910B5317D9A594D9CE404691C0677A9DE5B9002CCAF63F371B61EAECA5ECF17C",
+      "frame_count": 4
+    },
+    {
+      "code": "NE02",
+      "revision": "v02",
+      "source": ".atena/generated/animation-candidates/asset-lot07/NE02_v02.png",
+      "source_sha256": "2F9593949CFA6CF5E3D17EE638A5DD7ED641D69773843FE7DA931DDEB4A75363",
+      "frame_count": 4
+    },
+    {
+      "code": "NE03",
+      "revision": "v02",
+      "source": ".atena/generated/animation-candidates/asset-lot07/NE03_v02.png",
+      "source_sha256": "CF73EF4004E8ACF62B31D616F6AE30FCE7E93C72BA221899DD88AE295018CE9B",
+      "frame_count": 4
+    },
+    {
+      "code": "NE04",
+      "revision": "v01",
+      "source": ".atena/generated/animation-candidates/asset-lot07/NE04_v01.png",
+      "source_sha256": "F05095116D5ECBE7366A835AC2AA261B9289953A515B1FA936B4FC14E47E245A",
+      "frame_count": 4
+    },
+    {
+      "code": "NE05",
+      "revision": "v02",
+      "source": ".atena/generated/animation-candidates/asset-lot07/NE05_v02.png",
+      "source_sha256": "5419761D437A19214FA0A0FFEDD86BA0A9ED7FB6182357F37C507FA1F4338E1A",
+      "frame_count": 4
+    },
+    {
+      "code": "NE06",
+      "revision": "v03",
+      "source": ".atena/generated/animation-candidates/asset-lot07/NE06_v03.png",
+      "source_sha256": "F3B80B35F1E1653C50DECEFCEA4AED2AABDE63B50638ADC86B01F2812B3E025F",
+      "frame_count": 4
+    },
+    {
+      "code": "NE07",
+      "revision": "v02",
+      "source": ".atena/generated/animation-candidates/asset-lot07/NE07_v02.png",
+      "source_sha256": "539DCB7866A973CED779BEE509CF6863617FC38B8657A0A38767EE50C881B270",
+      "frame_count": 4
+    },
+    {
+      "code": "NE08",
+      "revision": "v01",
+      "source": ".atena/generated/animation-candidates/asset-lot07/NE08_v01.png",
+      "source_sha256": "7EF8AFC402AC09BC3D100DB254E5648F13918B93C984B3DDE30A3F2D9E912560",
+      "frame_count": 4
+    },
+    {
+      "code": "NE09",
+      "revision": "v01",
+      "source": ".atena/generated/animation-candidates/asset-lot07/NE09_v01.png",
+      "source_sha256": "ABC264D86E8D103DAA92F9D4F03020C05D60C54410D39108C29B267EDDE6F8A3",
+      "frame_count": 4
+    }
+  ],
+  "technical_holds": [
+    "NE06_SWORD_CROSSING_COLUMNS"
+  ],
+  "runtime_admission": false,
+  "canonical_promotion": false,
+  "implementation_owner": "Claude",
+  "local_commit_authorized": true,
+  "push_export": "NOT_AUTHORIZED"
+}

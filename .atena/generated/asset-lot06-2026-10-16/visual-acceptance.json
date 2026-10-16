@@ -1,0 +1,74 @@
+{
+  "plan": "ASSET-LOT06",
+  "revision": "v02",
+  "date": "2026-10-16",
+  "owner_reply": "aprovado, continue",
+  "status": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+  "scope": "Oito revisões selecionadas,29desenhos; aceite visual sem dispensar FC02_ORIGIN",
+  "content_state": "DRAFT",
+  "sequences": [
+    {
+      "code": "FC01",
+      "revision": "v01",
+      "source": ".atena/generated/animation-candidates/asset-lot06/FC01_v01.png",
+      "source_sha256": "8C75565064D848CAAB9D436A1AFA08C4D256B59B7958AED10AFE8E6A0737BE31",
+      "frame_count": 1
+    },
+    {
+      "code": "FC02",
+      "revision": "v03",
+      "source": ".atena/generated/animation-candidates/asset-lot06/FC02_v03.png",
+      "source_sha256": "E22D74BC1FF740FF9380AE283A15BB5168A3B8274C77521DB1C162C07BB8332A",
+      "frame_count": 4
+    },
+    {
+      "code": "IE01",
+      "revision": "v02",
+      "source": ".atena/generated/animation-candidates/asset-lot06/IE01_v02.png",
+      "source_sha256": "2DCB839240A5F7246B76D39BF7D1D40CE31DEC94A979C1CCE008818292A92095",
+      "frame_count": 4
+    },
+    {
+      "code": "IE02",
+      "revision": "v01",
+      "source": ".atena/generated/animation-candidates/asset-lot06/IE02_v01.png",
+      "source_sha256": "2EE0EE2A8378BF6500BCF40D2F11F7456C96B98688772582DD39E7312FC0D137",
+      "frame_count": 4
+    },
+    {
+      "code": "IE03",
+      "revision": "v01",
+      "source": ".atena/generated/animation-candidates/asset-lot06/IE03_v01.png",
+      "source_sha256": "3765E21802360D745BF5A4907A4156E445906DA8CD76E7302BEC4FA460102C60",
+      "frame_count": 4
+    },
+    {
+      "code": "IE04",
+      "revision": "v02",
+      "source": ".atena/generated/animation-candidates/asset-lot06/IE04_v02.png",
+      "source_sha256": "C386CB7624009DDFDB7AFD3E7DB1BE043FB1BCE648F3AED9F2FF5B58FF6391DB",
+      "frame_count": 4
+    },
+    {
+      "code": "IE05",
+      "revision": "v01",
+      "source": ".atena/generated/animation-candidates/asset-lot06/IE05_v01.png",
+      "source_sha256": "BEA6D2EFA6BE8CE41636728D3339697C3EEC18F4AB1FC11BD4DB39186954B607",
+      "frame_count": 4
+    },
+    {
+      "code": "IE06",
+      "revision": "v01",
+      "source": ".atena/generated/animation-candidates/asset-lot06/IE06_v01.png",
+      "source_sha256": "091DA58758A6B4BB5DD554C127A389CEAD7D4B0BB88F68A1D1013AA15BAD1E6C",
+      "frame_count": 4
+    }
+  ],
+  "technical_holds": [
+    "FC02_ORIGIN"
+  ],
+  "runtime_admission": false,
+  "canonical_promotion": false,
+  "implementation_owner": "Claude",
+  "commit_push_export": "NOT_AUTHORIZED"
+}

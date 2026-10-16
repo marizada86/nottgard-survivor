@@ -1686,3 +1686,138 @@ plan_104_retratos_ficha_hud_2026_10_14:
   return_plan: PLAN-103
   return_checkpoint: "B-002/S-008_AWAITING_RETURN; B-003/R5_PROPOSAL_AWAITING_G-M2-3"
   other_sessions_changes: PRESERVE_UNTOUCHED
+
+asset_lot05_breakables_2026_10_16:
+  id: ASSET-LOT05
+  revision: v01
+  content_state: DRAFT
+  origin: planned
+  implementation_preceded_spec: false
+  request_classification: PLAN_CHANGE_REQUEST
+  owner_request: 'atena, vamos prosseguir'
+  mode: per-plan
+  approval_status: APPROVED_EXPLICITLY
+  status: COMPLETED_SEQUENCE_VISUALLY_ACCEPTED_DRAFT
+  checkpoint: S-004/OWNER_JOINT_SEQUENCE_ACCEPTANCE_RECORDED
+  ordered_steps: [S-001, S-002, S-003, S-004]
+  current_step_position: 4
+  completed_steps: 4
+  total_steps: 4
+  remaining_steps_after_current: 0
+  scope: [QB07, QB08, QB09, QB10, QB11, QB12]
+  planned_sources: 6
+  planned_frames: 30
+  generated: 6
+  generation_attempts: 8
+  qa_frames: 30
+  selected_candidates: [QB07/v01, QB08/v02, QB09/v01, QB10/v01, QB11/v01, QB12/v02]
+  gallery: .atena/generated/asset-lot05-2026-10-16/index.html
+  evidence: .atena/evidence/asset-lot05-breakables-2026-10-16.md
+  human_visual_acceptance: APPROVED_EXPLICITLY_SEQUENCE_DIRECTION
+  visual_owner_reply: 'aprovado, pode seguir para os proximos'
+  visual_accepted_date: '2026-10-16'
+  visual_acceptance_receipt: .atena/generated/asset-lot05-2026-10-16/visual-acceptance.json
+  specification: .atena/specs/SPEC-121-retomada-fila-imagens/asset-lot05-breakables-v01.md
+  references: .atena/generated/asset-lot05-2026-10-16/references.json
+  previous_delivery_commit: cef5c0e5
+  implementation_owner: Claude
+  visual_review: ONE_JOINT_GALLERY_WITH_PLAYBACK
+  runtime_admission: false
+  canonical_promotion: false
+  next_execution_authorized: false
+  commit_push_export: NOT_AUTHORIZED
+  return_plan: PLAN-103
+  next_objective: 'Propor próximo escopo sem duplicar fontes existentes; implementação com Claude'
+  owner_scope_reply: 'aprovado, por plano'
+  approved_date: '2026-10-16'
+
+asset_lot06_flamethrower_2026_10_16:
+  id: ASSET-LOT06
+  revision: v02
+  content_state: DRAFT
+  origin: planned
+  implementation_preceded_spec: false
+  request_classification: PLAN_CHANGE_REQUEST
+  owner_request: 'atena estou indo dormir faça um lote maior'
+  mode: per-plan
+  approval_status: APPROVED_EXPLICITLY
+  status: VISUALLY_ACCEPTED_DRAFT_WITH_TECHNICAL_HOLD
+  checkpoint: S-004/OWNER_VISUAL_ACCEPTANCE_RECORDED
+  ordered_steps: [S-001, S-002, S-003, S-004]
+  current_step_position: 4
+  completed_steps: 4
+  total_steps: 4
+  remaining_steps_after_current: 0
+  scope: [FC01, FC02, IE01, IE02, IE03, IE04, IE05, IE06]
+  planned_sources: 8
+  planned_drawings: 29
+  generated: 8
+  generation_attempts: 12
+  qa_drawings: 29
+  animated_frames: 28
+  selected_candidates: [FC01/v01, FC02/v03, IE01/v02, IE02/v01, IE03/v01, IE04/v02, IE05/v01, IE06/v01]
+  technical_holds: [FC02_ORIGIN]
+  human_visual_acceptance: APPROVED_EXPLICITLY_SOURCE_DIRECTION
+  visual_owner_reply: 'aprovado, continue'
+  visual_accepted_date: '2026-10-16'
+  visual_acceptance_receipt: .atena/generated/asset-lot06-2026-10-16/visual-acceptance.json
+  gallery: .atena/generated/asset-lot06-2026-10-16/index.html
+  evidence: .atena/evidence/asset-lot06-expanded-2026-10-16.md
+  specification: .atena/specs/SPEC-121-retomada-fila-imagens/asset-lot06-expanded-v02.md
+  implementation_owner: Claude
+  mechanic: MEC-004_NOT_IMPLEMENTED
+  visual_production_only: true
+  runtime_admission: false
+  canonical_promotion: false
+  next_execution_authorized: false
+  commit_push_export: NOT_AUTHORIZED
+  return_plan: PLAN-103
+  next_objective: 'Planejar próximo lote de produção; FC02 retido e implementação com Claude'
+  owner_scope_reply: 'Aprovo as 8 fontes por plano'
+  approved_date: '2026-10-16'
+
+asset_lot07_npc_idles_2026_10_16:
+  id: ASSET-LOT07
+  revision: v01
+  content_state: DRAFT
+  origin: planned
+  implementation_preceded_spec: false
+  request_classification: PLAN_CHANGE_REQUEST
+  owner_request: 'aprovado, continue'
+  mode: per-plan
+  approval_status: APPROVED_EXPLICITLY
+  status: VISUALLY_ACCEPTED_DRAFT_WITH_TECHNICAL_HOLD
+  checkpoint: S-004/OWNER_VISUAL_ACCEPTANCE_RECORDED
+  ordered_steps: [S-001, S-002, S-003, S-004]
+  current_step_position: 4
+  completed_steps: 4
+  total_steps: 4
+  remaining_steps_after_current: 0
+  scope: [NE01, NE02, NE03, NE04, NE05, NE06, NE07, NE08, NE09]
+  planned_sources: 9
+  planned_drawings: 36
+  proposed_layout: FOUR_COLUMNS_ONE_ROW
+  generated: 9
+  generation_attempts: 15
+  qa_drawings: 36
+  selected_candidates: [NE01/v01, NE02/v02, NE03/v02, NE04/v01, NE05/v02, NE06/v03, NE07/v02, NE08/v01, NE09/v01]
+  technical_holds: [NE06_SWORD_CROSSING_COLUMNS]
+  human_visual_acceptance: APPROVED_EXPLICITLY_SOURCE_DIRECTION
+  visual_owner_reply: 'aprovado, commite e continue'
+  visual_accepted_date: '2026-10-16'
+  visual_acceptance_receipt: .atena/generated/asset-lot07-2026-10-16/visual-acceptance.json
+  gallery: .atena/generated/asset-lot07-2026-10-16/index.html
+  evidence: .atena/evidence/asset-lot07-npc-idles-2026-10-16.md
+  specification: .atena/specs/SPEC-121-retomada-fila-imagens/asset-lot07-npc-idles-v01.md
+  references: .atena/generated/asset-lot07-2026-10-16/references.json
+  implementation_owner: Claude
+  runtime_admission: false
+  canonical_promotion: false
+  next_execution_authorized: false
+  local_commit_authorization: 'aprovado, commite e continue (2026-10-16)'
+  local_commit_scope: LOT05_LOT06_LOT07_PENDING_ART_DELIVERIES
+  push_export: NOT_AUTHORIZED
+  return_plan: PLAN-103
+  next_objective: 'Continuar inventário para novo escopo; NE06 retido e implementação com Claude'
+  owner_scope_reply: 'aprovado'
+  approved_date: '2026-10-16'

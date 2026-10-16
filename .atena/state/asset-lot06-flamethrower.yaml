@@ -1,0 +1,43 @@
+id: ASSET-LOT06
+revision: v02
+content_state: DRAFT
+origin: planned
+implementation_preceded_spec: false
+request_classification: PLAN_CHANGE_REQUEST
+owner_request: 'atena estou indo dormir faça um lote maior'
+mode: per-plan
+approval_status: APPROVED_EXPLICITLY
+status: VISUALLY_ACCEPTED_DRAFT_WITH_TECHNICAL_HOLD
+checkpoint: S-004/OWNER_VISUAL_ACCEPTANCE_RECORDED
+ordered_steps: [S-001, S-002, S-003, S-004]
+current_step_position: 4
+completed_steps: 4
+total_steps: 4
+remaining_steps_after_current: 0
+scope: [FC01, FC02, IE01, IE02, IE03, IE04, IE05, IE06]
+planned_sources: 8
+planned_drawings: 29
+generated: 8
+generation_attempts: 12
+qa_drawings: 29
+animated_frames: 28
+selected_candidates: [FC01/v01, FC02/v03, IE01/v02, IE02/v01, IE03/v01, IE04/v02, IE05/v01, IE06/v01]
+technical_holds: [FC02_ORIGIN]
+human_visual_acceptance: APPROVED_EXPLICITLY_SOURCE_DIRECTION
+visual_owner_reply: 'aprovado, continue'
+visual_accepted_date: '2026-10-16'
+visual_acceptance_receipt: .atena/generated/asset-lot06-2026-10-16/visual-acceptance.json
+gallery: .atena/generated/asset-lot06-2026-10-16/index.html
+evidence: .atena/evidence/asset-lot06-expanded-2026-10-16.md
+specification: .atena/specs/SPEC-121-retomada-fila-imagens/asset-lot06-expanded-v02.md
+implementation_owner: Claude
+mechanic: MEC-004_NOT_IMPLEMENTED
+visual_production_only: true
+runtime_admission: false
+canonical_promotion: false
+next_execution_authorized: false
+commit_push_export: NOT_AUTHORIZED
+return_plan: PLAN-103
+next_objective: 'Planejar próximo lote de produção; FC02 retido e implementação com Claude'
+owner_scope_reply: 'Aprovo as 8 fontes por plano'
+approved_date: '2026-10-16'

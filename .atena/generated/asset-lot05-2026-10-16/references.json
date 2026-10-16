@@ -1,0 +1,74 @@
+[
+  {
+    "code": "QB07",
+    "id": "carroca_quebravel",
+    "path": "assets/enemies/carroca_quebravel.png",
+    "sha256": "2AD71A527E3531E2070978BF3808EC26F42FBCA4559C046F604B89471772B92E",
+    "flags": [
+      "inerte",
+      "quebravel"
+    ],
+    "note": "Carroça de Dagruve; destrutível fixo com loot e Sorte existentes.",
+    "existing_death": false
+  },
+  {
+    "code": "QB08",
+    "id": "pilha_carga_quebravel",
+    "path": "assets/enemies/pilha_carga_quebravel.png",
+    "sha256": "333F986CA1E34AE003EE93F559B7B33B2B8CB5329BD5FBEE9ED04AE047A2625A",
+    "flags": [
+      "inerte",
+      "quebravel"
+    ],
+    "note": "Carga das Docas; destrutível fixo com loot e Sorte existentes.",
+    "existing_death": false
+  },
+  {
+    "code": "QB09",
+    "id": "lanterna_de_papel_quebravel",
+    "path": "assets/enemies/lanterna_de_papel_quebravel.png",
+    "sha256": "0E2ED3C6C603D5B3C58F5057E9B8A2CA0CC18DE46EAA8DF9A6C098C7EE522092",
+    "flags": [
+      "inerte",
+      "quebravel"
+    ],
+    "note": "Objeto quebrável de Feng-tu; não se move nem ataca.",
+    "existing_death": false
+  },
+  {
+    "code": "QB10",
+    "id": "espelho_ilusorio_quebravel",
+    "path": "assets/enemies/espelho_ilusorio_quebravel.png",
+    "sha256": "1FB7067F320C2AB70218DE25FE451522A362EB6D0CD4DF1DB912AA522987E0A8",
+    "flags": [
+      "inerte",
+      "quebravel"
+    ],
+    "note": "Objeto quebrável de Shendilavri; não se move nem ataca.",
+    "existing_death": false
+  },
+  {
+    "code": "QB11",
+    "id": "estatua_rachada_quebravel",
+    "path": "assets/enemies/estatua_rachada_quebravel.png",
+    "sha256": "E3647BBD5A2250501875F9C8F0C5C02E4EB6D248CB88D5F83E1F12E9528AE8E5",
+    "flags": [
+      "inerte",
+      "quebravel"
+    ],
+    "note": "Objeto quebrável de Goranthis; não se move nem ataca.",
+    "existing_death": false
+  },
+  {
+    "code": "QB12",
+    "id": "relicario_instavel_quebravel",
+    "path": "assets/enemies/relicario_instavel_quebravel.png",
+    "sha256": "F06EF3CCBB2FCFF9BC2820D1DCEF70B53AC7BD97B7271B01F73430F72A1F3A38",
+    "flags": [
+      "inerte",
+      "quebravel"
+    ],
+    "note": "Objeto quebrável dos Pilares; não se move nem ataca.",
+    "existing_death": false
+  }
+]

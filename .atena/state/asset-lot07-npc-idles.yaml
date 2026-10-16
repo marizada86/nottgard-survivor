@@ -1,0 +1,44 @@
+id: ASSET-LOT07
+revision: v01
+content_state: DRAFT
+origin: planned
+implementation_preceded_spec: false
+request_classification: PLAN_CHANGE_REQUEST
+owner_request: 'aprovado, continue'
+mode: per-plan
+approval_status: APPROVED_EXPLICITLY
+status: VISUALLY_ACCEPTED_DRAFT_WITH_TECHNICAL_HOLD
+checkpoint: S-004/OWNER_VISUAL_ACCEPTANCE_RECORDED
+ordered_steps: [S-001, S-002, S-003, S-004]
+current_step_position: 4
+completed_steps: 4
+total_steps: 4
+remaining_steps_after_current: 0
+scope: [NE01, NE02, NE03, NE04, NE05, NE06, NE07, NE08, NE09]
+planned_sources: 9
+planned_drawings: 36
+proposed_layout: FOUR_COLUMNS_ONE_ROW
+generated: 9
+generation_attempts: 15
+qa_drawings: 36
+selected_candidates: [NE01/v01, NE02/v02, NE03/v02, NE04/v01, NE05/v02, NE06/v03, NE07/v02, NE08/v01, NE09/v01]
+technical_holds: [NE06_SWORD_CROSSING_COLUMNS]
+human_visual_acceptance: APPROVED_EXPLICITLY_SOURCE_DIRECTION
+visual_owner_reply: 'aprovado, commite e continue'
+visual_accepted_date: '2026-10-16'
+visual_acceptance_receipt: .atena/generated/asset-lot07-2026-10-16/visual-acceptance.json
+gallery: .atena/generated/asset-lot07-2026-10-16/index.html
+evidence: .atena/evidence/asset-lot07-npc-idles-2026-10-16.md
+specification: .atena/specs/SPEC-121-retomada-fila-imagens/asset-lot07-npc-idles-v01.md
+references: .atena/generated/asset-lot07-2026-10-16/references.json
+implementation_owner: Claude
+runtime_admission: false
+canonical_promotion: false
+next_execution_authorized: false
+local_commit_authorization: 'aprovado, commite e continue (2026-10-16)'
+local_commit_scope: LOT05_LOT06_LOT07_PENDING_ART_DELIVERIES
+push_export: NOT_AUTHORIZED
+return_plan: PLAN-103
+next_objective: 'Continuar inventário para novo escopo; NE06 retido e implementação com Claude'
+owner_scope_reply: 'aprovado'
+approved_date: '2026-10-16'

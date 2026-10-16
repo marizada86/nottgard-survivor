@@ -1,0 +1,57 @@
+{
+  "plan": "ASSET-LOT05",
+  "revision": "v01",
+  "date": "2026-10-16",
+  "owner_reply": "aprovado, pode seguir para os proximos",
+  "status": "APPROVED_EXPLICITLY_SEQUENCE_DIRECTION",
+  "content_state": "DRAFT",
+  "sequences": [
+    {
+      "code": "QB07",
+      "revision": "v01",
+      "source": ".atena/generated/animation-candidates/asset-lot05/QB07_v01.png",
+      "source_sha256": "F78655CCF772D9425622DF59F69790383FE9038CCD2EFD206D7943AB94DBAC73",
+      "frame_count": 5
+    },
+    {
+      "code": "QB08",
+      "revision": "v02",
+      "source": ".atena/generated/animation-candidates/asset-lot05/QB08_v02.png",
+      "source_sha256": "5FD497709C3FFEA1AEEBF906D7EB74FB49E66084EC84E4B4ADF046520884869A",
+      "frame_count": 5
+    },
+    {
+      "code": "QB09",
+      "revision": "v01",
+      "source": ".atena/generated/animation-candidates/asset-lot05/QB09_v01.png",
+      "source_sha256": "02C426850F06871AA7E16499229E4385FDBEC1451435092526593701820707C5",
+      "frame_count": 5
+    },
+    {
+      "code": "QB10",
+      "revision": "v01",
+      "source": ".atena/generated/animation-candidates/asset-lot05/QB10_v01.png",
+      "source_sha256": "B75A4F6884C08BEEAED058DFC56712636C2EB008921445BB3777AC7DB1633AAF",
+      "frame_count": 5
+    },
+    {
+      "code": "QB11",
+      "revision": "v01",
+      "source": ".atena/generated/animation-candidates/asset-lot05/QB11_v01.png",
+      "source_sha256": "9729FC68E6ADDA8FB432270608FC0153BCD3587AA1EC50E34912C49B63864793",
+      "frame_count": 5
+    },
+    {
+      "code": "QB12",
+      "revision": "v02",
+      "source": ".atena/generated/animation-candidates/asset-lot05/QB12_v02.png",
+      "source_sha256": "C1947012523E98D7C140628DFD74D3923F0DBB1293515423F98C42F152744E68",
+      "frame_count": 5
+    }
+  ],
+  "runtime_admission": false,
+  "canonical_promotion": false,
+  "implementation_owner": "Claude",
+  "technical_preparation": "PENDING_ALPHA_SCALE_PIVOT",
+  "commit_push_export": "NOT_AUTHORIZED"
+}
