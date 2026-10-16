@@ -1,4 +1,36 @@
 version: 2
+claude_art_handoff_2026_10_16:
+  id: CLAUDE-ART-HANDOFF-2026-10-16
+  revision: v01
+  request_classification: PLAN_DEVIATION
+  status: IN_PROGRESS
+  mode: per-plan
+  route: DO_NOW_AND_RETURN
+  approval_receipt: 'Dono respondeu 1 em 2026-10-16, aprovando por plano a entrega proposta.'
+  checkpoint: B-003/S-003/VERIFY_AND_PUBLISH
+  ordered_steps: [S-001, S-002, S-003]
+  ordered_batches: [B-001, B-002, B-003]
+  completed_steps: 2
+  current_step_position: 3
+  remaining_steps_after_current: 0
+  total_steps: 3
+  execution_authorized: true
+  suspended_plan: {id: PLAN-103, checkpoint: B-002/S-008_AWAITING_RETURN, native_state_checkpoint: B-004/R3_PROPOSAL_AWAITING_G-M3-3, reason: APPROVED_ART_HANDOFF_THEN_RETURN}
+  content_state: DRAFT
+  specification: .atena/vault/drafts/claude-art-handoff-2026-10-16.md
+  destination: .atena/generated/art-candidates
+  return_plan: PLAN-103
+  return_checkpoint: B-002/S-008_AWAITING_RETURN
+  owner_request: 'atena mande todas as artes que precisam ser implementadas para .atena/generated/art-candidates para o claude implementar, se for necessário de commit e push'
+  conditional_git_authorization: COMMIT_AND_PUSH_IF_NEEDED_FOR_HANDOFF
+  proposed_git_destination: origin/codex/claude-art-handoff-2026-10-16
+  package: .atena/generated/art-candidates/claude-handoff-v01/manifest.json
+  primary_assets: 38
+  support_images: 10
+  audited_local_images: 2371
+  historical_held_candidates: 55
+  evidence: .atena/evidence/claude-art-handoff-2026-10-16.md
+  canonical_promotion: false
 hero_local_commit_2026_10_13:
   plan: PLAN-053
   revision: HERO-COMMIT/v01

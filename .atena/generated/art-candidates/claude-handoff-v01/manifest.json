@@ -1,0 +1,930 @@
+{
+  "id": "CLAUDE-ART-HANDOFF-2026-10-16",
+  "revision": "v01",
+  "date": "2026-10-16",
+  "content_state": "DRAFT_HANDOFF_WITH_PER_ASSET_STATES",
+  "approval_mode": "per-plan",
+  "entries": [
+    {
+      "source": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC01_v01.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/IC01_v01.png",
+      "sha256": "acbee13cc408c869d562787b2c0aed9e4a337be4c99a37a63e477181990e991b",
+      "bytes": 5722,
+      "records": [
+        ".atena/generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md",
+        ".atena/generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md"
+      ],
+      "id": "IC01",
+      "name": "bola_de_fogo",
+      "revision": "FILA-028-PREP/v01",
+      "source_version": "v01",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_destination": "assets/icons/weapons/bola_de_fogo.png",
+      "runtime_before_sha256": null,
+      "status": "PENDING_RUNTIME_IMPLEMENTATION",
+      "admission_gate": "Visual preparation accepted; implement under separate runtime scope/checkpoint. Handoff approval does not promote canon or grant all future runtime changes.",
+      "integration": "Wire dedicated icon in data/UI; remove borrowed icon_like fallback only for this item; verify 48 px readability."
+    },
+    {
+      "source": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC02_v02.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/IC02_v02.png",
+      "sha256": "f540a20278456d49a620e2935f2ab2c5047ba618bd84bb2a8359ec607420d39b",
+      "bytes": 4721,
+      "records": [
+        ".atena/generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md",
+        ".atena/generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md"
+      ],
+      "id": "IC02",
+      "name": "tormenta_de_fogo",
+      "revision": "FILA-028-PREP/v01",
+      "source_version": "v02",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_destination": "assets/icons/weapons/tormenta_de_fogo.png",
+      "runtime_before_sha256": null,
+      "status": "PENDING_RUNTIME_IMPLEMENTATION",
+      "admission_gate": "Visual preparation accepted; implement under separate runtime scope/checkpoint. Handoff approval does not promote canon or grant all future runtime changes.",
+      "integration": "Wire dedicated icon in data/UI; remove borrowed icon_like fallback only for this item; verify 48 px readability."
+    },
+    {
+      "source": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC03_v02.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/IC03_v02.png",
+      "sha256": "60978a596d0050fec3ed4edbaf696f817b42c3047f02acc48dadbb0ca19d2a16",
+      "bytes": 5186,
+      "records": [
+        ".atena/generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md",
+        ".atena/generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md"
+      ],
+      "id": "IC03",
+      "name": "lamina_de_sombra",
+      "revision": "FILA-028-PREP/v01",
+      "source_version": "v02",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_destination": "assets/icons/weapons/lamina_de_sombra.png",
+      "runtime_before_sha256": null,
+      "status": "PENDING_RUNTIME_IMPLEMENTATION",
+      "admission_gate": "Visual preparation accepted; implement under separate runtime scope/checkpoint. Handoff approval does not promote canon or grant all future runtime changes.",
+      "integration": "Wire dedicated icon in data/UI; remove borrowed icon_like fallback only for this item; verify 48 px readability."
+    },
+    {
+      "source": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC04_v02.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/IC04_v02.png",
+      "sha256": "e28c4dec2fc31b6dfb76a9710835745eccf32e45dcdbbac057a0460f028abd09",
+      "bytes": 6888,
+      "records": [
+        ".atena/generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md",
+        ".atena/generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md"
+      ],
+      "id": "IC04",
+      "name": "romper_armadura",
+      "revision": "FILA-028-PREP/v01",
+      "source_version": "v02",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_destination": "assets/icons/weapons/romper_armadura.png",
+      "runtime_before_sha256": null,
+      "status": "PENDING_RUNTIME_IMPLEMENTATION",
+      "admission_gate": "Visual preparation accepted; implement under separate runtime scope/checkpoint. Handoff approval does not promote canon or grant all future runtime changes.",
+      "integration": "Wire dedicated icon in data/UI; remove borrowed icon_like fallback only for this item; verify 48 px readability."
+    },
+    {
+      "source": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC05_v03.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/IC05_v03.png",
+      "sha256": "115d31d7d861f9c7a3d1c58ce42b4b82880079370015ec062c6444f23eed25fc",
+      "bytes": 4338,
+      "records": [
+        ".atena/generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md",
+        ".atena/generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md"
+      ],
+      "id": "IC05",
+      "name": "esmagar_defesas",
+      "revision": "FILA-028-PREP/v01",
+      "source_version": "v03",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_destination": "assets/icons/weapons/esmagar_defesas.png",
+      "runtime_before_sha256": null,
+      "status": "PENDING_RUNTIME_IMPLEMENTATION",
+      "admission_gate": "Visual preparation accepted; implement under separate runtime scope/checkpoint. Handoff approval does not promote canon or grant all future runtime changes.",
+      "integration": "Wire dedicated icon in data/UI; remove borrowed icon_like fallback only for this item; verify 48 px readability."
+    },
+    {
+      "source": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC06_v01.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/IC06_v01.png",
+      "sha256": "136fa0e45b51d47278cc3dc074765d567f3ac1e0f5cf02239b5ee9769ee845f5",
+      "bytes": 5545,
+      "records": [
+        ".atena/generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md",
+        ".atena/generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md"
+      ],
+      "id": "IC06",
+      "name": "dominio_da_vontade",
+      "revision": "FILA-028-PREP/v01",
+      "source_version": "v01",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_destination": "assets/icons/weapons/dominio_da_vontade.png",
+      "runtime_before_sha256": null,
+      "status": "PENDING_RUNTIME_IMPLEMENTATION",
+      "admission_gate": "Visual preparation accepted; implement under separate runtime scope/checkpoint. Handoff approval does not promote canon or grant all future runtime changes.",
+      "integration": "Wire dedicated icon in data/UI; remove borrowed icon_like fallback only for this item; verify 48 px readability."
+    },
+    {
+      "source": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC07_v01.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/IC07_v01.png",
+      "sha256": "232162f425d96f57d2a4a20fb296b1cd5a26d0277422db1973f2ff61470e2142",
+      "bytes": 3422,
+      "records": [
+        ".atena/generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md",
+        ".atena/generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md"
+      ],
+      "id": "IC07",
+      "name": "cajado_familia_infernum",
+      "revision": "FILA-028-PREP/v01",
+      "source_version": "v01",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_destination": "assets/icons/items/cajado_familia_infernum.png",
+      "runtime_before_sha256": null,
+      "status": "PENDING_RUNTIME_IMPLEMENTATION",
+      "admission_gate": "Visual preparation accepted; implement under separate runtime scope/checkpoint. Handoff approval does not promote canon or grant all future runtime changes.",
+      "integration": "Wire dedicated icon in data/UI; remove borrowed icon_like fallback only for this item; verify 48 px readability."
+    },
+    {
+      "source": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC08_v02.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/IC08_v02.png",
+      "sha256": "d03bf703b8267fcebc94bfd280734e54920cfc8280f6e90efece83f7b8b70297",
+      "bytes": 3692,
+      "records": [
+        ".atena/generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md",
+        ".atena/generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md"
+      ],
+      "id": "IC08",
+      "name": "wave_of_terror",
+      "revision": "FILA-028-PREP/v01",
+      "source_version": "v02",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_destination": "assets/icons/items/wave_of_terror.png",
+      "runtime_before_sha256": null,
+      "status": "PENDING_RUNTIME_IMPLEMENTATION",
+      "admission_gate": "Visual preparation accepted; implement under separate runtime scope/checkpoint. Handoff approval does not promote canon or grant all future runtime changes.",
+      "integration": "Wire dedicated icon in data/UI; remove borrowed icon_like fallback only for this item; verify 48 px readability."
+    },
+    {
+      "source": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC09_v02.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/IC09_v02.png",
+      "sha256": "015cbd7252a22a44e29070c6af2680c604c9471793829ce19fd978f6a453ed0b",
+      "bytes": 2954,
+      "records": [
+        ".atena/generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md",
+        ".atena/generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md"
+      ],
+      "id": "IC09",
+      "name": "colar_visao_verdadeira",
+      "revision": "FILA-028-PREP/v01",
+      "source_version": "v02",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_destination": "assets/icons/items/colar_visao_verdadeira.png",
+      "runtime_before_sha256": null,
+      "status": "PENDING_RUNTIME_IMPLEMENTATION",
+      "admission_gate": "Visual preparation accepted; implement under separate runtime scope/checkpoint. Handoff approval does not promote canon or grant all future runtime changes.",
+      "integration": "Wire dedicated icon in data/UI; remove borrowed icon_like fallback only for this item; verify 48 px readability."
+    },
+    {
+      "source": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC10_v01.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/IC10_v01.png",
+      "sha256": "28c2b29999d9320a6cf9d35c7ab4a25424e5815b7006120ceacac4228b23a9e2",
+      "bytes": 6169,
+      "records": [
+        ".atena/generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md",
+        ".atena/generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md"
+      ],
+      "id": "IC10",
+      "name": "detector_arcano",
+      "revision": "FILA-028-PREP/v01",
+      "source_version": "v01",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_destination": "assets/icons/items/detector_arcano.png",
+      "runtime_before_sha256": null,
+      "status": "PENDING_RUNTIME_IMPLEMENTATION",
+      "admission_gate": "Visual preparation accepted; implement under separate runtime scope/checkpoint. Handoff approval does not promote canon or grant all future runtime changes.",
+      "integration": "Wire dedicated icon in data/UI; remove borrowed icon_like fallback only for this item; verify 48 px readability."
+    },
+    {
+      "source": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC11_v01.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/IC11_v01.png",
+      "sha256": "a62d5e82bed4615013de261f38744c19b88ed52352dc5936c3bf3456b7fe8aa4",
+      "bytes": 7608,
+      "records": [
+        ".atena/generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md",
+        ".atena/generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md"
+      ],
+      "id": "IC11",
+      "name": "dispositivo_antimagia_gilly",
+      "revision": "FILA-028-PREP/v01",
+      "source_version": "v01",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_destination": "assets/icons/items/dispositivo_antimagia_gilly.png",
+      "runtime_before_sha256": null,
+      "status": "PENDING_RUNTIME_IMPLEMENTATION",
+      "admission_gate": "Visual preparation accepted; implement under separate runtime scope/checkpoint. Handoff approval does not promote canon or grant all future runtime changes.",
+      "integration": "Wire dedicated icon in data/UI; remove borrowed icon_like fallback only for this item; verify 48 px readability."
+    },
+    {
+      "source": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC12_v02.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/IC12_v02.png",
+      "sha256": "005491b516d995cd36e68f43cacd514a7242b73f211843d84f5460b34c567d2d",
+      "bytes": 3880,
+      "records": [
+        ".atena/generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md",
+        ".atena/generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md"
+      ],
+      "id": "IC12",
+      "name": "dispositivo_das_docas",
+      "revision": "FILA-028-PREP/v01",
+      "source_version": "v02",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_destination": "assets/icons/items/dispositivo_das_docas.png",
+      "runtime_before_sha256": null,
+      "status": "PENDING_RUNTIME_IMPLEMENTATION",
+      "admission_gate": "Visual preparation accepted; implement under separate runtime scope/checkpoint. Handoff approval does not promote canon or grant all future runtime changes.",
+      "integration": "Wire dedicated icon in data/UI; remove borrowed icon_like fallback only for this item; verify 48 px readability."
+    },
+    {
+      "source": ".atena/generated/fila028-preparation-2026-10-10/normalized/IC13_v02.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/IC13_v02.png",
+      "sha256": "55fe65825a65ab7b75cb834b1af7ae661060ec766c1c33d396ed2b1ea31d1998",
+      "bytes": 4085,
+      "records": [
+        ".atena/generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md",
+        ".atena/generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md"
+      ],
+      "id": "IC13",
+      "name": "coracao_da_dominancia",
+      "revision": "FILA-028-PREP/v01",
+      "source_version": "v02",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_destination": "assets/icons/items/coracao_da_dominancia.png",
+      "runtime_before_sha256": null,
+      "status": "PENDING_RUNTIME_IMPLEMENTATION",
+      "admission_gate": "Visual preparation accepted; implement under separate runtime scope/checkpoint. Handoff approval does not promote canon or grant all future runtime changes.",
+      "integration": "Wire dedicated icon in data/UI; remove borrowed icon_like fallback only for this item; verify 48 px readability."
+    },
+    {
+      "source": ".atena/generated/fila028-preparation-2026-10-10/normalized/AR01_v02.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/AR01_v02.png",
+      "sha256": "99130e68a2271e7e4e21bca54028f63c1136a969214a837a1e7ee5d3e71dbb3a",
+      "bytes": 39523,
+      "records": [
+        ".atena/generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md",
+        ".atena/generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md"
+      ],
+      "id": "AR01",
+      "name": "arcanista",
+      "revision": "FILA-028-PREP/v01",
+      "source_version": "v02",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_destination": "assets/interactions/arcanista.png",
+      "runtime_before_sha256": null,
+      "status": "PENDING_RUNTIME_IMPLEMENTATION",
+      "admission_gate": "Visual preparation accepted; implement under separate runtime scope/checkpoint. Handoff approval does not promote canon or grant all future runtime changes.",
+      "integration": "Wire overlay and event IDs against actual data; preserve interactions and ground anchor; do not conflate ART-032 happenings."
+    },
+    {
+      "source": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE01_v03.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/SE01_v03.png",
+      "sha256": "00bd931215078db6c970886aae447afa353897a4be785589137fc9616b19a002",
+      "bytes": 4010,
+      "records": [
+        ".atena/generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md",
+        ".atena/generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md"
+      ],
+      "id": "SE01",
+      "name": "eco",
+      "revision": "FILA-028-PREP/v01",
+      "source_version": "v03",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_destination": "assets/interactions/eco.png",
+      "runtime_before_sha256": null,
+      "status": "PENDING_RUNTIME_IMPLEMENTATION",
+      "admission_gate": "Visual preparation accepted; implement under separate runtime scope/checkpoint. Handoff approval does not promote canon or grant all future runtime changes.",
+      "integration": "Wire secrets/scenery and chamber locked/open states; preserve spawn/collision rules and ground anchor."
+    },
+    {
+      "source": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE02_v03.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/SE02_v03.png",
+      "sha256": "417cc37b899b4b7f8d811f753741eaeae9c4423c092d8bc7e66033d336386a4a",
+      "bytes": 53174,
+      "records": [
+        ".atena/generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md",
+        ".atena/generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md"
+      ],
+      "id": "SE02",
+      "name": "camara_selada",
+      "revision": "FILA-028-PREP/v01",
+      "source_version": "v03",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_destination": "assets/interactions/camara_selada.png",
+      "runtime_before_sha256": null,
+      "status": "PENDING_RUNTIME_IMPLEMENTATION",
+      "admission_gate": "Visual preparation accepted; implement under separate runtime scope/checkpoint. Handoff approval does not promote canon or grant all future runtime changes.",
+      "integration": "Wire secrets/scenery and chamber locked/open states; preserve spawn/collision rules and ground anchor."
+    },
+    {
+      "source": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE03_v02.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/SE03_v02.png",
+      "sha256": "0c6f45dece0434306399a771ae2918fdadcda30a38203c62ac31dbc238673d8a",
+      "bytes": 55751,
+      "records": [
+        ".atena/generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md",
+        ".atena/generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md"
+      ],
+      "id": "SE03",
+      "name": "camara_aberta",
+      "revision": "FILA-028-PREP/v01",
+      "source_version": "v02",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_destination": "assets/interactions/camara_aberta.png",
+      "runtime_before_sha256": null,
+      "status": "PENDING_RUNTIME_IMPLEMENTATION",
+      "admission_gate": "Visual preparation accepted; implement under separate runtime scope/checkpoint. Handoff approval does not promote canon or grant all future runtime changes.",
+      "integration": "Wire secrets/scenery and chamber locked/open states; preserve spawn/collision rules and ground anchor."
+    },
+    {
+      "source": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE04_v02.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/SE04_v02.png",
+      "sha256": "dbca7885d5a14c70f0f644cc00723fce28e8090da59200977937f1f91fe76581",
+      "bytes": 50884,
+      "records": [
+        ".atena/generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md",
+        ".atena/generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md"
+      ],
+      "id": "SE04",
+      "name": "ruina_dagruve",
+      "revision": "FILA-028-PREP/v01",
+      "source_version": "v02",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_destination": "assets/interactions/ruina_dagruve.png",
+      "runtime_before_sha256": null,
+      "status": "PENDING_RUNTIME_IMPLEMENTATION",
+      "admission_gate": "Visual preparation accepted; implement under separate runtime scope/checkpoint. Handoff approval does not promote canon or grant all future runtime changes.",
+      "integration": "Wire secrets/scenery and chamber locked/open states; preserve spawn/collision rules and ground anchor."
+    },
+    {
+      "source": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE05_v02.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/SE05_v02.png",
+      "sha256": "62bbbefc4cfda83d3de2a6e0034dd1d0fa0dc66324245ba12249016a7eca8a1b",
+      "bytes": 53899,
+      "records": [
+        ".atena/generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md",
+        ".atena/generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md"
+      ],
+      "id": "SE05",
+      "name": "ruina_docas",
+      "revision": "FILA-028-PREP/v01",
+      "source_version": "v02",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_destination": "assets/interactions/ruina_docas.png",
+      "runtime_before_sha256": null,
+      "status": "PENDING_RUNTIME_IMPLEMENTATION",
+      "admission_gate": "Visual preparation accepted; implement under separate runtime scope/checkpoint. Handoff approval does not promote canon or grant all future runtime changes.",
+      "integration": "Wire secrets/scenery and chamber locked/open states; preserve spawn/collision rules and ground anchor."
+    },
+    {
+      "source": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE06_v02.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/SE06_v02.png",
+      "sha256": "f0285a7578b0c1fff0c92ed4d01a931f9b10ecabc1b45608caf3636ee31da289",
+      "bytes": 46280,
+      "records": [
+        ".atena/generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md",
+        ".atena/generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md"
+      ],
+      "id": "SE06",
+      "name": "ruina_shedaklah",
+      "revision": "FILA-028-PREP/v01",
+      "source_version": "v02",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_destination": "assets/interactions/ruina_shedaklah.png",
+      "runtime_before_sha256": null,
+      "status": "PENDING_RUNTIME_IMPLEMENTATION",
+      "admission_gate": "Visual preparation accepted; implement under separate runtime scope/checkpoint. Handoff approval does not promote canon or grant all future runtime changes.",
+      "integration": "Wire secrets/scenery and chamber locked/open states; preserve spawn/collision rules and ground anchor."
+    },
+    {
+      "source": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE07_v02.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/SE07_v02.png",
+      "sha256": "22bae573cfba69f3a947fae91b29abae2c7552a8eb216e7eca0c3387cb1d9a30",
+      "bytes": 47983,
+      "records": [
+        ".atena/generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md",
+        ".atena/generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md"
+      ],
+      "id": "SE07",
+      "name": "ruina_molor",
+      "revision": "FILA-028-PREP/v01",
+      "source_version": "v02",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_destination": "assets/interactions/ruina_molor.png",
+      "runtime_before_sha256": null,
+      "status": "PENDING_RUNTIME_IMPLEMENTATION",
+      "admission_gate": "Visual preparation accepted; implement under separate runtime scope/checkpoint. Handoff approval does not promote canon or grant all future runtime changes.",
+      "integration": "Wire secrets/scenery and chamber locked/open states; preserve spawn/collision rules and ground anchor."
+    },
+    {
+      "source": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE08_v02.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/SE08_v02.png",
+      "sha256": "eabc7ec8b7831bd6667bca124f06d0328af8755ded4b74774602e7199a491393",
+      "bytes": 43868,
+      "records": [
+        ".atena/generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md",
+        ".atena/generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md"
+      ],
+      "id": "SE08",
+      "name": "ruina_durao",
+      "revision": "FILA-028-PREP/v01",
+      "source_version": "v02",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_destination": "assets/interactions/ruina_durao.png",
+      "runtime_before_sha256": null,
+      "status": "PENDING_RUNTIME_IMPLEMENTATION",
+      "admission_gate": "Visual preparation accepted; implement under separate runtime scope/checkpoint. Handoff approval does not promote canon or grant all future runtime changes.",
+      "integration": "Wire secrets/scenery and chamber locked/open states; preserve spawn/collision rules and ground anchor."
+    },
+    {
+      "source": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE09_v02.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/SE09_v02.png",
+      "sha256": "bfba3d732c57399ab626ded2a3fc6f84ffd6387f9b6c74cd86bfea822dfe3353",
+      "bytes": 39136,
+      "records": [
+        ".atena/generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md",
+        ".atena/generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md"
+      ],
+      "id": "SE09",
+      "name": "ruina_feng_tu",
+      "revision": "FILA-028-PREP/v01",
+      "source_version": "v02",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_destination": "assets/interactions/ruina_feng_tu.png",
+      "runtime_before_sha256": null,
+      "status": "PENDING_RUNTIME_IMPLEMENTATION",
+      "admission_gate": "Visual preparation accepted; implement under separate runtime scope/checkpoint. Handoff approval does not promote canon or grant all future runtime changes.",
+      "integration": "Wire secrets/scenery and chamber locked/open states; preserve spawn/collision rules and ground anchor."
+    },
+    {
+      "source": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE10_v02.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/SE10_v02.png",
+      "sha256": "92d8581c57854fd7517c194554e9d08972af886ce42813e0a00a22b6153f4780",
+      "bytes": 47545,
+      "records": [
+        ".atena/generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md",
+        ".atena/generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md"
+      ],
+      "id": "SE10",
+      "name": "ruina_shendilavri",
+      "revision": "FILA-028-PREP/v01",
+      "source_version": "v02",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_destination": "assets/interactions/ruina_shendilavri.png",
+      "runtime_before_sha256": null,
+      "status": "PENDING_RUNTIME_IMPLEMENTATION",
+      "admission_gate": "Visual preparation accepted; implement under separate runtime scope/checkpoint. Handoff approval does not promote canon or grant all future runtime changes.",
+      "integration": "Wire secrets/scenery and chamber locked/open states; preserve spawn/collision rules and ground anchor."
+    },
+    {
+      "source": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE11_v02.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/SE11_v02.png",
+      "sha256": "00b594ae1e037af4d6b26f7533d64ea72f16d28cf89b5370efba5ebec0e65bab",
+      "bytes": 62834,
+      "records": [
+        ".atena/generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md",
+        ".atena/generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md"
+      ],
+      "id": "SE11",
+      "name": "ruina_goranthis",
+      "revision": "FILA-028-PREP/v01",
+      "source_version": "v02",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_destination": "assets/interactions/ruina_goranthis.png",
+      "runtime_before_sha256": null,
+      "status": "PENDING_RUNTIME_IMPLEMENTATION",
+      "admission_gate": "Visual preparation accepted; implement under separate runtime scope/checkpoint. Handoff approval does not promote canon or grant all future runtime changes.",
+      "integration": "Wire secrets/scenery and chamber locked/open states; preserve spawn/collision rules and ground anchor."
+    },
+    {
+      "source": ".atena/generated/fila028-preparation-2026-10-10/normalized/I01_v03.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/I01_v03.png",
+      "sha256": "10711178d46408a191894b42ef79a8b99b981dbdb9a1dfcfa70c4c2ecb523f94",
+      "bytes": 2485,
+      "records": [
+        ".atena/generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md",
+        ".atena/generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md"
+      ],
+      "id": "I01",
+      "name": "lliira_juramento",
+      "revision": "FILA-028-PREP/v01",
+      "source_version": "v03",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_destination": "assets/icons/boons/lliira_juramento.png",
+      "runtime_before_sha256": null,
+      "status": "PENDING_RUNTIME_IMPLEMENTATION",
+      "admission_gate": "Visual preparation accepted; implement under separate runtime scope/checkpoint. Handoff approval does not promote canon or grant all future runtime changes.",
+      "integration": "Wire dedicated icon in data/UI; remove borrowed icon_like fallback only for this item; verify 48 px readability."
+    },
+    {
+      "source": ".atena/generated/fila028-preparation-2026-10-10/normalized/I02_v02.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/I02_v02.png",
+      "sha256": "453e372719f4135cf186da2478b1898b44011ebffd8ad7e23a7fc4f945eb8900",
+      "bytes": 3461,
+      "records": [
+        ".atena/generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md",
+        ".atena/generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md"
+      ],
+      "id": "I02",
+      "name": "tou_um_caminho",
+      "revision": "FILA-028-PREP/v01",
+      "source_version": "v02",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_destination": "assets/icons/boons/tou_um_caminho.png",
+      "runtime_before_sha256": null,
+      "status": "PENDING_RUNTIME_IMPLEMENTATION",
+      "admission_gate": "Visual preparation accepted; implement under separate runtime scope/checkpoint. Handoff approval does not promote canon or grant all future runtime changes.",
+      "integration": "Wire dedicated icon in data/UI; remove borrowed icon_like fallback only for this item; verify 48 px readability."
+    },
+    {
+      "source": ".atena/generated/fila028-preparation-2026-10-10/normalized/EV01_v02.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/EV01_v02.png",
+      "sha256": "40bddb0d4a7292b92739f4c620b4d8f3fea543907450e7a9fbb06082eb4e28ae",
+      "bytes": 46091,
+      "records": [
+        ".atena/generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md",
+        ".atena/generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md"
+      ],
+      "id": "EV01",
+      "name": "pacto_sangue",
+      "revision": "FILA-028-PREP/v01",
+      "source_version": "v02",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_destination": "assets/interactions/pacto_sangue.png",
+      "runtime_before_sha256": null,
+      "status": "PENDING_RUNTIME_IMPLEMENTATION",
+      "admission_gate": "Visual preparation accepted; implement under separate runtime scope/checkpoint. Handoff approval does not promote canon or grant all future runtime changes.",
+      "integration": "Wire overlay and event IDs against actual data; preserve interactions and ground anchor; do not conflate ART-032 happenings."
+    },
+    {
+      "source": ".atena/generated/fila028-preparation-2026-10-10/normalized/EV02_v01.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/EV02_v01.png",
+      "sha256": "eaf5fbf3a3bfcd820c699ce6a9934d3149e71cea27ab08b57921bac3173bf609",
+      "bytes": 66906,
+      "records": [
+        ".atena/generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md",
+        ".atena/generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md"
+      ],
+      "id": "EV02",
+      "name": "relicario",
+      "revision": "FILA-028-PREP/v01",
+      "source_version": "v01",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_destination": "assets/interactions/relicario.png",
+      "runtime_before_sha256": null,
+      "status": "PENDING_RUNTIME_IMPLEMENTATION",
+      "admission_gate": "Visual preparation accepted; implement under separate runtime scope/checkpoint. Handoff approval does not promote canon or grant all future runtime changes.",
+      "integration": "Wire overlay and event IDs against actual data; preserve interactions and ground anchor; do not conflate ART-032 happenings."
+    },
+    {
+      "source": ".atena/generated/fila028-preparation-2026-10-10/normalized/EV03_v01.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/EV03_v01.png",
+      "sha256": "86175ac2edaa85a3a576ef9c54b824b06bd6a6af9e14a1d287dcef81ee61a0cd",
+      "bytes": 55423,
+      "records": [
+        ".atena/generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md",
+        ".atena/generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md"
+      ],
+      "id": "EV03",
+      "name": "peregrino",
+      "revision": "FILA-028-PREP/v01",
+      "source_version": "v01",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_destination": "assets/interactions/peregrino.png",
+      "runtime_before_sha256": null,
+      "status": "PENDING_RUNTIME_IMPLEMENTATION",
+      "admission_gate": "Visual preparation accepted; implement under separate runtime scope/checkpoint. Handoff approval does not promote canon or grant all future runtime changes.",
+      "integration": "Wire overlay and event IDs against actual data; preserve interactions and ground anchor; do not conflate ART-032 happenings."
+    },
+    {
+      "source": ".atena/generated/fila028-preparation-2026-10-10/normalized/EV04_v02.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/EV04_v02.png",
+      "sha256": "0e553e882c195ea52a58563929dfa5e50db28f8362b0a60f030efd8eaba67941",
+      "bytes": 46352,
+      "records": [
+        ".atena/generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md",
+        ".atena/generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md"
+      ],
+      "id": "EV04",
+      "name": "contador",
+      "revision": "FILA-028-PREP/v01",
+      "source_version": "v02",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_destination": "assets/interactions/contador.png",
+      "runtime_before_sha256": null,
+      "status": "PENDING_RUNTIME_IMPLEMENTATION",
+      "admission_gate": "Visual preparation accepted; implement under separate runtime scope/checkpoint. Handoff approval does not promote canon or grant all future runtime changes.",
+      "integration": "Wire overlay and event IDs against actual data; preserve interactions and ground anchor; do not conflate ART-032 happenings."
+    },
+    {
+      "source": ".atena/generated/fila028-preparation-2026-10-10/normalized/EV05_v02.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/EV05_v02.png",
+      "sha256": "27ec98c36fa53bae5a360c86fb7ee1f50247850d7e0c822e75aaa93e54299f59",
+      "bytes": 72685,
+      "records": [
+        ".atena/generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md",
+        ".atena/generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md"
+      ],
+      "id": "EV05",
+      "name": "carroca",
+      "revision": "FILA-028-PREP/v01",
+      "source_version": "v02",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_destination": "assets/interactions/carroca.png",
+      "runtime_before_sha256": null,
+      "status": "PENDING_RUNTIME_IMPLEMENTATION",
+      "admission_gate": "Visual preparation accepted; implement under separate runtime scope/checkpoint. Handoff approval does not promote canon or grant all future runtime changes.",
+      "integration": "Wire overlay and event IDs against actual data; preserve interactions and ground anchor; do not conflate ART-032 happenings."
+    },
+    {
+      "source": ".atena/generated/fila028-preparation-2026-10-10/normalized/EV06_v02.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/EV06_v02.png",
+      "sha256": "56edac77bd08bee4de1a3fb038a8e33b1e4407a560a3a0fdb77ce1ed6cc016ab",
+      "bytes": 64013,
+      "records": [
+        ".atena/generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md",
+        ".atena/generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md"
+      ],
+      "id": "EV06",
+      "name": "eclipse_pedra",
+      "revision": "FILA-028-PREP/v01",
+      "source_version": "v02",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_destination": "assets/interactions/eclipse_pedra.png",
+      "runtime_before_sha256": null,
+      "status": "PENDING_RUNTIME_IMPLEMENTATION",
+      "admission_gate": "Visual preparation accepted; implement under separate runtime scope/checkpoint. Handoff approval does not promote canon or grant all future runtime changes.",
+      "integration": "Wire overlay and event IDs against actual data; preserve interactions and ground anchor; do not conflate ART-032 happenings."
+    },
+    {
+      "source": ".atena/generated/fila028-altar-correction-2026-10-10/normalized/AL01_loop_v03.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/AL01_loop_v03.png",
+      "sha256": "4919393a4c10b1b357e13646537b599035cbefacf7de1e374f1876501d49a605",
+      "bytes": 51714,
+      "records": [
+        ".atena/generated/fila028-acceptance-2026-10-10/approved-prepared-assets.json",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-PREPARATION-v01.md",
+        ".atena/vault/canon/ASSET-APPROVAL-FILA028-ALTAR-CORRECTION-v01.md",
+        ".atena/generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md"
+      ],
+      "id": "AL01",
+      "name": "altar_active",
+      "revision": "AL01-CORR/v01",
+      "source_version": "v02",
+      "content_state": "CANON_PREPARATION_VISUAL_ONLY",
+      "runtime_destination": "assets/animations/interactions/altar_active.png",
+      "runtime_before_sha256": "e3f2da839eba1408d3e5fb1e5a62d58574b30e853612494fba41a571e94b3d95",
+      "status": "PENDING_RUNTIME_IMPLEMENTATION",
+      "admission_gate": "Visual preparation accepted; implement under separate runtime scope/checkpoint. Handoff approval does not promote canon or grant all future runtime changes.",
+      "integration": "6 horizontal frames, 900 ms loop. Preserve altar logic/grounding; do not use superseded AL01_v02."
+    },
+    {
+      "source": ".atena/generated/m1-movimento/piloto-durvall/candidata_v03/durvall/move_e.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/durvall-v03/move_e.png",
+      "sha256": "be06e76433e472e20b3e869f8615855bb5ec09b2a286b622b064d7b8c17c0591",
+      "bytes": 466616,
+      "records": [
+        ".atena/state/plan-103-demo-completa-e-polida.yaml",
+        ".atena/specs/SPEC-176-movimento-dos-herois-marco-m1-do-plan-103.md"
+      ],
+      "id": "DURVALL-move_e",
+      "name": "durvall/move_e",
+      "revision": "piloto-v03/grade-v01",
+      "content_state": "DRAFT_PROVISIONALLY_ACCEPTED_G_D3",
+      "status": "LAB_ONLY_PENDING_FULL_DIRECTION_SET_AND_RUNTIME_GATE",
+      "runtime_destination": "assets/animations/heroes/durvall/move_e.png",
+      "runtime_before_sha256": "f860a4e8b228f6eaf0bdf233c449c1d01191ad381b5d4555daa7356484400e58",
+      "admission_gate": "D22: approved for now; reassess after final directions. Do not replace runtime until M1 checkpoint permits.",
+      "integration": "512x512 cells; 6 frames for moves, 4 attack frames. Preserve sword handedness; no mirrored substitute for missing W/SW/NW. Five missing directions stay pending, not replaced by historical candidates."
+    },
+    {
+      "source": ".atena/generated/m1-movimento/piloto-durvall/candidata_v03/durvall/move_se.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/durvall-v03/move_se.png",
+      "sha256": "5d6c6b4ef375fc3c1a274af57743207ca043630f4734d4320caad11e2fe8ca3c",
+      "bytes": 460989,
+      "records": [
+        ".atena/state/plan-103-demo-completa-e-polida.yaml",
+        ".atena/specs/SPEC-176-movimento-dos-herois-marco-m1-do-plan-103.md"
+      ],
+      "id": "DURVALL-move_se",
+      "name": "durvall/move_se",
+      "revision": "piloto-v03/grade-v01",
+      "content_state": "DRAFT_PROVISIONALLY_ACCEPTED_G_D3",
+      "status": "LAB_ONLY_PENDING_FULL_DIRECTION_SET_AND_RUNTIME_GATE",
+      "runtime_destination": "assets/animations/heroes/durvall/move_se.png",
+      "runtime_before_sha256": "a2ffcc4c1ee758b2df2bdb8bb987f9edc434a09acbe9637b2edce7a76fd3aaaa",
+      "admission_gate": "D22: approved for now; reassess after final directions. Do not replace runtime until M1 checkpoint permits.",
+      "integration": "512x512 cells; 6 frames for moves, 4 attack frames. Preserve sword handedness; no mirrored substitute for missing W/SW/NW. Five missing directions stay pending, not replaced by historical candidates."
+    },
+    {
+      "source": ".atena/generated/m1-movimento/piloto-durvall/candidata_v03/durvall/move_s.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/durvall-v03/move_s.png",
+      "sha256": "abe1625ed6449c829e1d608b379317c4871331a4ec831a2a268435b19a953c5a",
+      "bytes": 408542,
+      "records": [
+        ".atena/state/plan-103-demo-completa-e-polida.yaml",
+        ".atena/specs/SPEC-176-movimento-dos-herois-marco-m1-do-plan-103.md"
+      ],
+      "id": "DURVALL-move_s",
+      "name": "durvall/move_s",
+      "revision": "piloto-v03/grade-v01",
+      "content_state": "DRAFT_PROVISIONALLY_ACCEPTED_G_D3",
+      "status": "LAB_ONLY_PENDING_FULL_DIRECTION_SET_AND_RUNTIME_GATE",
+      "runtime_destination": "assets/animations/heroes/durvall/move_s.png",
+      "runtime_before_sha256": "26f3c6c858dc2414aea5fa1debbb854ad9cf910e0257e38c064b84b092290e8f",
+      "admission_gate": "D22: approved for now; reassess after final directions. Do not replace runtime until M1 checkpoint permits.",
+      "integration": "512x512 cells; 6 frames for moves, 4 attack frames. Preserve sword handedness; no mirrored substitute for missing W/SW/NW. Five missing directions stay pending, not replaced by historical candidates."
+    },
+    {
+      "source": ".atena/generated/m1-movimento/piloto-durvall/candidata_v03/durvall/attack.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/durvall-v03/attack.png",
+      "sha256": "4e0459e1d07bc6b7e57b30b9a3430cde70adb8ab97bdcbc852c9b6d50f9aa1b0",
+      "bytes": 300836,
+      "records": [
+        ".atena/state/plan-103-demo-completa-e-polida.yaml",
+        ".atena/specs/SPEC-176-movimento-dos-herois-marco-m1-do-plan-103.md"
+      ],
+      "id": "DURVALL-attack",
+      "name": "durvall/attack",
+      "revision": "piloto-v03/grade-v01",
+      "content_state": "DRAFT_PROVISIONALLY_ACCEPTED_G_D3",
+      "status": "LAB_ONLY_PENDING_FULL_DIRECTION_SET_AND_RUNTIME_GATE",
+      "runtime_destination": "assets/animations/heroes/durvall/attack.png",
+      "runtime_before_sha256": "852fd859595caed94934b4e804b921ac93e6a1a496989dab4b2b0e2ace43ad40",
+      "admission_gate": "D22: approved for now; reassess after final directions. Do not replace runtime until M1 checkpoint permits.",
+      "integration": "512x512 cells; 6 frames for moves, 4 attack frames. Preserve sword handedness; no mirrored substitute for missing W/SW/NW. Five missing directions stay pending, not replaced by historical candidates."
+    }
+  ],
+  "support_files": [
+    {
+      "source": ".atena/generated/m1-movimento/piloto-durvall/retorno/codex/durvall_move_e_grade_v01.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/durvall-v03/sources/move_e_grade_v01.png",
+      "sha256": "8cebcbf957b49f4322f67062780b0e01ad20cadf7e0c3aed3d04cd492b164c3d",
+      "bytes": 2123727,
+      "records": [
+        ".atena/state/plan-103-demo-completa-e-polida.yaml"
+      ]
+    },
+    {
+      "source": ".atena/generated/m1-movimento/piloto-durvall/retorno/codex/durvall_move_se_grade_v01.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/durvall-v03/sources/move_se_grade_v01.png",
+      "sha256": "3810814700e465d8b7240f3c878ed9c862edebf48e3b4ad484514fc0bc0620dc",
+      "bytes": 2116605,
+      "records": [
+        ".atena/state/plan-103-demo-completa-e-polida.yaml"
+      ]
+    },
+    {
+      "source": ".atena/generated/m1-movimento/piloto-durvall/retorno/codex/durvall_move_s_grade_v01.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/durvall-v03/sources/move_s_grade_v01.png",
+      "sha256": "2ca779e08ed0424e5dc2450f714e7f1758eb7fec7fa79c738c1a8c949133ae8d",
+      "bytes": 2076150,
+      "records": [
+        ".atena/state/plan-103-demo-completa-e-polida.yaml"
+      ]
+    },
+    {
+      "source": ".atena/generated/m1-movimento/piloto-durvall/retorno/codex/durvall_attack_grade_v01.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/durvall-v03/sources/attack_grade_v01.png",
+      "sha256": "8b7c73a9eef0c699e34b81cffb1530eb24fcfa9943366b934314e5ca6709e1a0",
+      "bytes": 1116005,
+      "records": [
+        ".atena/state/plan-103-demo-completa-e-polida.yaml"
+      ]
+    },
+    {
+      "source": ".atena/generated/fila028-altar-correction-2026-10-10/frames/AL01_loop_v03_f0.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/altar-frames/AL01_loop_v03_f0.png",
+      "sha256": "38ad9aa5962d0653a179ac15a7f15e53360104e28095a76c825ecc5f4c666b95",
+      "bytes": 40691,
+      "records": [
+        ".atena/generated/fila028-altar-correction-2026-10-10/approved-altar.json"
+      ]
+    },
+    {
+      "source": ".atena/generated/fila028-altar-correction-2026-10-10/frames/AL01_loop_v03_f1.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/altar-frames/AL01_loop_v03_f1.png",
+      "sha256": "c53be0ced2b5a387bb19487992e79818cc5f13902a7cbb8cbc2ac5ced236a845",
+      "bytes": 40654,
+      "records": [
+        ".atena/generated/fila028-altar-correction-2026-10-10/approved-altar.json"
+      ]
+    },
+    {
+      "source": ".atena/generated/fila028-altar-correction-2026-10-10/frames/AL01_loop_v03_f2.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/altar-frames/AL01_loop_v03_f2.png",
+      "sha256": "75c92628052c1f21c668eebc6dcef8a5b67897e9649cbffc73ff0550e395dbf1",
+      "bytes": 40700,
+      "records": [
+        ".atena/generated/fila028-altar-correction-2026-10-10/approved-altar.json"
+      ]
+    },
+    {
+      "source": ".atena/generated/fila028-altar-correction-2026-10-10/frames/AL01_loop_v03_f3.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/altar-frames/AL01_loop_v03_f3.png",
+      "sha256": "b69f13c8139a6aec5f6e2d6b6ffb5e2607361c3750d0658bc8516cb64e2b20d3",
+      "bytes": 40735,
+      "records": [
+        ".atena/generated/fila028-altar-correction-2026-10-10/approved-altar.json"
+      ]
+    },
+    {
+      "source": ".atena/generated/fila028-altar-correction-2026-10-10/frames/AL01_loop_v03_f4.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/altar-frames/AL01_loop_v03_f4.png",
+      "sha256": "636a7b93e9b37a12535c39a4cafca8c721fd212fb5b8e573ec28a71617c27c66",
+      "bytes": 40756,
+      "records": [
+        ".atena/generated/fila028-altar-correction-2026-10-10/approved-altar.json"
+      ]
+    },
+    {
+      "source": ".atena/generated/fila028-altar-correction-2026-10-10/frames/AL01_loop_v03_f5.png",
+      "path": ".atena/generated/art-candidates/claude-handoff-v01/fila028/altar-frames/AL01_loop_v03_f5.png",
+      "sha256": "70011f40fec5405d387f8565b5086772a7edc95963fb6664dcd54247a72f3fac",
+      "bytes": 40740,
+      "records": [
+        ".atena/generated/fila028-altar-correction-2026-10-10/approved-altar.json"
+      ]
+    }
+  ],
+  "notes": [
+    "No runtime files changed.",
+    "CANON_PREPARATION_VISUAL_ONLY does not imply runtime admission.",
+    "Paths proposed from prompt contract; Claude must verify actual data IDs and wiring."
+  ]
+}
