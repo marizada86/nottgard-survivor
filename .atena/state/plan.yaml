@@ -3,19 +3,19 @@ claude_art_handoff_2026_10_16:
   id: CLAUDE-ART-HANDOFF-2026-10-16
   revision: v01
   request_classification: PLAN_DEVIATION
-  status: LOCAL_DELIVERED_PUSH_BLOCKED_APPROVAL_REQUIRED
+  status: COMPLETE_PUBLISHED_VERIFIED
   mode: per-plan
   route: DO_NOW_AND_RETURN
   approval_receipt: 'Dono respondeu 1 em 2026-10-16, aprovando por plano a entrega proposta.'
-  checkpoint: B-003/S-003/REMOTE_DESTINATION_APPROVAL_REQUIRED
+  checkpoint: COMPLETE/RETURN_TO_PLAN103
   ordered_steps: [S-001, S-002, S-003]
   ordered_batches: [B-001, B-002, B-003]
-  completed_steps: 2
+  completed_steps: 3
   current_step_position: 3
   remaining_steps_after_current: 0
   total_steps: 3
   execution_authorized: true
-  suspended_plan: {id: PLAN-103, checkpoint: B-002/S-008_AWAITING_RETURN, native_state_checkpoint: B-004/R3_PROPOSAL_AWAITING_G-M3-3, reason: APPROVED_ART_HANDOFF_THEN_RETURN}
+  resumed_plan: {id: PLAN-103, checkpoint: B-002/S-008_AWAITING_RETURN, native_state_checkpoint: B-004/R3_PROPOSAL_AWAITING_G-M3-3, reason: ART_HANDOFF_COMPLETE_CHECKPOINTS_PRESERVED}
   content_state: DRAFT
   specification: .atena/vault/drafts/claude-art-handoff-2026-10-16.md
   destination: .atena/generated/art-candidates
@@ -30,8 +30,11 @@ claude_art_handoff_2026_10_16:
   audited_local_images: 2371
   historical_held_candidates: 55
   local_package_commit: 5a0f679e
-  pushed: false
-  push_block: 'Automatic approval review rejected push: remote origin ownership/trust and destination authorization not verified. gh CLI unavailable; exact destination confirmation requested.'
+  pushed: true
+  push_authorization: 'atena push — 2026-10-16, resposta à confirmação explícita do repositório e branch.'
+  verified_remote_package_sha: ae46f6ca792d0b9b9b417fbc8f2322f15e52cdad
+  push_block: RESOLVED_BY_EXPLICIT_DESTINATION_CONFIRMATION
+  next_objective: 'PLAN-103: aguardar retornos Durvall e decisão G-M3-3; implementação pelo Claude conserva seus gates.'
   exact_push_destination: https://github.com/marizada86/nottgard-survivor.git
   evidence: .atena/evidence/claude-art-handoff-2026-10-16.md
   canonical_promotion: false
