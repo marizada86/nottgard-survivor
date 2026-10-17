@@ -266,3 +266,7 @@ LOT12/v01:12revisões/três ciclos visualmente aceitos em2026-10-16 ('atena apro
 Produção2026-10-17: [ASSET-LOT13/v01 DRAFT](../generated/asset-lot13-2026-10-16/index.html), ART-032 Manifestação de Juiblex:26PNGs individuais/cinco estados,27tentativas; JI00/v02 e demais/v01. Aceite visual PENDING. Zero contato banda4px, mas alfa/registro/escala e margem JD04/JD05 retidos para preparação por Claude; sem admissão ou implementação. [Evidência](../evidence/asset-lot13-juiblex-animation-2026-10-17.md). Retenções históricas LOT11 preservadas.
 
 LOT13/v01:26revisões/cinco estados visualmente aceitos em2026-10-17 (“atena, aprovado, proximo”); DRAFT, retenções técnicas e históricas preservadas. Preparação e implementação com Claude, sem admissão.
+
+Produção2026-10-17: [ASSET-LOT14/v01 DRAFT](../generated/asset-lot14-2026-10-17/index.html), ART-021/022 — Mímico20poses e Turíbulo9poses,29PNGs individuais/36tentativas, seis entradas de revisão. MM01/MM05/MD03/TD03/TD04v02, demaisv01; aceite visual PENDING. Alfa/margens/registro pendentes; rupturaTD retida por crescimento de base após três tentativas emTD03. Sem admissão, implementação com Claude. [Evidência](../evidence/asset-lot14-mimic-totem-2026-10-17.md).
+
+LOT14/v01:29revisões/seis sequências visualmente aceitas em2026-10-17 (“aprovado, commit e continue”), DRAFT. Retenções técnicas/históricas preservadas, incluindo rupturaTD; sem admissão. Commit local autorizado, implementação com Claude.

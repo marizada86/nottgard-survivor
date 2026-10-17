@@ -2109,14 +2109,14 @@ asset_lot14_mimic_totem_2026_10_17:
   request_classification: PLAN_CHANGE_REQUEST
   owner_request: 'atena, aprovado, proximo'
   mode: per-plan
-  approval_status: PENDING_SCOPE_APPROVAL
-  status: PROPOSED_AWAITING_APPROVAL
-  checkpoint: S-001/OWNER_SCOPE_APPROVAL_PENDING
+  approval_status: APPROVED_CONTEXTUAL_CONTINUATION
+  status: VISUALLY_ACCEPTED_DRAFT_WITH_TECHNICAL_HOLDS
+  checkpoint: S-004/OWNER_VISUAL_ACCEPTANCE_RECORDED
   ordered_steps: [S-001, S-002, S-003, S-004]
-  current_step_position: 1
-  completed_steps: 0
+  current_step_position: 4
+  completed_steps: 4
   total_steps: 4
-  remaining_steps_after_current: 3
+  remaining_steps_after_current: 0
   readiness_prepared: true
   scope: [MI00-MI03, MM00-MM05, MA00-MA03, MD00-MD05, TI00-TI03, TD00-TD04]
   planned_sources: 29
@@ -2125,30 +2125,46 @@ asset_lot14_mimic_totem_2026_10_17:
   max_generation_calls: 87
   max_attempts_per_file: 3
   proposed_visual_gate: JOINT_SIX_STATES_USING_IMPLEMENTED_STATIC_IDENTITIES
-  generated: 0
-  generation_attempts: 0
+  generated: 29
+  generation_attempts: 36
   specification: .atena/specs/SPEC-121-retomada-fila-imagens/asset-lot14-mimic-totem-v01.md
   references: .atena/generated/asset-lot14-2026-10-17/references.json
   implementation_owner: Claude
   runtime_admission: false
   canonical_promotion: false
   next_execution_authorized: false
-  commit_push_export: LOCAL_COMMIT_AND_PUSH_AUTHORIZED_EXPORT_NOT_AUTHORIZED
+  commit_push_export: LOCAL_COMMIT_AUTHORIZED_PUSH_EXPORT_NOT_AUTHORIZED
   return_plan: PLAN-103
-  next_objective: 'Aprovar29fontes/seis estados e revisão conjunta; depois produzir DRAFT'
+  next_objective: 'Commit local e preparar LOT15 para ART-033; implementação com Claude'
+  owner_scope_reply: 'atena continue a fila de assets'
+  approved_date: '2026-10-17'
+  last_request_classification: IN_PLAN
+  completed_date: '2026-10-17'
+  qa_drawings: 29
+  selected_candidates: 'MM01/MM05/MD03/TD03/TD04v02; demaisv01'
+  human_visual_acceptance: APPROVED_EXPLICITLY_SOURCE_DIRECTION
+  technical_holds: [LOT14_ALPHA_PREPARATION, LOT14_MARGIN_TARGET, LOT14_REGISTRATION_SCALE_REVIEW, LOT14_TD_BASE_GROWTH_AFTER_THREE_ATTEMPTS]
+  legacy_holds_preserved: [RU05_HORIZONTAL_DRIFT, RU07_HORIZONTAL_DRIFT, RU08_COLUMN_CONTACT_AND_DRIFT, LOT13_ALPHA_PREPARATION, LOT13_REGISTRATION_REVIEW, LOT13_JD04_JD05_MARGIN_TARGET]
+  gallery: .atena/generated/asset-lot14-2026-10-17/index.html
+  manifest: .atena/generated/asset-lot14-2026-10-17/manifest.json
+  evidence: .atena/evidence/asset-lot14-mimic-totem-2026-10-17.md
+
+  visual_owner_reply: 'aprovado, commit e continue'
+  visual_accepted_date: '2026-10-17'
+  visual_acceptance_receipt: .atena/generated/asset-lot14-2026-10-17/visual-acceptance.json
 
 asset_lots12_14_publication_2026_10_17:
   mode: per-plan
   request_classification: IN_PLAN_OPERATIONAL_DELIVERY
   owner_reply: 'atena commit e push'
   approval_status: EXPLICIT_LOCAL_COMMIT_AND_REMOTE_PUSH
-  status: LOCAL_COMMIT_COMPLETE_PUSH_PENDING_DESTINATION_AND_PAYLOAD_APPROVAL
-  checkpoint: S-003/AUTO_REVIEW_REJECTED_PUSH
+  status: COMPLETED_REMOTE_HASH_VERIFIED
+  checkpoint: S-004/PUSH_VERIFIED
   ordered_steps: [S-001, S-002, S-003, S-004]
-  current_step_position: 3
-  completed_steps: 2
+  current_step_position: 4
+  completed_steps: 4
   total_steps: 4
-  remaining_steps_after_current: 1
+  remaining_steps_after_current: 0
   branch: codex/art-production-lot12-14-2026-10-17
   remote: origin
   scope: [LOT12_ACCEPTED, LOT13_ACCEPTED, LOT14_PROPOSAL_ONLY]
@@ -2159,6 +2175,68 @@ asset_lots12_14_publication_2026_10_17:
   canonical_promotion: false
   export_merge: NOT_AUTHORIZED
   content_commit: 6d0e157b
-  push_executed: false
+  push_executed: true
   auto_review_result: REJECTED_UNVERIFIED_EXTERNAL_DESTINATION_AND_FULL_PAYLOAD
-  next_objective: 'Confirmar destino GitHub e payload completo antes de novo push'
+  next_objective: 'Aguardar aprovação do LOT14; implementação com Claude'
+
+  final_owner_authorization: 'Autorizo o push dos oito commits completos da branch codex/art-production-lot12-14-2026-10-17, incluindo PNGs, galerias e registros, para https://github.com/marizada86/nottgard-survivor.git.'
+  published_head: b1b9e5223ace47608f54bc495ba6aa797ae1d03f
+  remote_head_verified: b1b9e5223ace47608f54bc495ba6aa797ae1d03f
+  published_local_commits: 8
+  verification: git-ls-remote-exact-head-match
+  post_push_receipt: LOCAL_UNCOMMITTED_NOT_PART_OF_EIGHT_COMMITS
+
+asset_lot15_heroes_back_walk_2026_10_17:
+  id: ASSET-LOT15
+  revision: v01
+  content_state: DRAFT
+  origin: planned
+  implementation_preceded_spec: false
+  request_classification: PLAN_CHANGE_REQUEST
+  owner_request: 'aprovado, commit e continue'
+  mode: per-plan
+  approval_status: PENDING_SCOPE_APPROVAL
+  status: PROPOSED_AWAITING_APPROVAL
+  checkpoint: S-001/OWNER_SCOPE_APPROVAL_PENDING
+  ordered_steps: [S-001, S-002, S-003, S-004]
+  current_step_position: 1
+  completed_steps: 0
+  total_steps: 4
+  remaining_steps_after_current: 3
+  readiness_prepared: true
+  scope: [ZN00-ZN05, ZE00-ZE05, LN00-LN05, LE00-LE05, YN00-YN05, YE00-YE05]
+  planned_sources: 36
+  planned_drawings: 36
+  planned_review_entries: 6
+  max_generation_calls: 108
+  max_attempts_per_file: 3
+  generated: 0
+  generation_attempts: 0
+  specification: .atena/specs/SPEC-121-retomada-fila-imagens/asset-lot15-heroes-back-walk-v01.md
+  references: .atena/generated/asset-lot15-2026-10-17/references.json
+  implementation_owner: Claude
+  runtime_admission: false
+  canonical_promotion: false
+  next_execution_authorized: false
+  commit_push_export: NOT_AUTHORIZED_FOR_NEW_PRODUCTION
+  return_plan: PLAN-103
+  next_objective: 'Aprovar36fontes/seis caminhadas de costas e revisão conjunta'
+
+asset_lot14_local_commit_2026_10_17:
+  mode: per-plan
+  request_classification: IN_PLAN_OPERATIONAL_DELIVERY
+  owner_reply: 'aprovado, commit e continue'
+  approval_status: EXPLICIT_LOCAL_COMMIT
+  status: VALIDATED_READY_TO_COMMIT
+  checkpoint: S-002/LOCAL_COMMIT_AUTHORIZED
+  ordered_steps: [S-001, S-002, S-003]
+  current_step_position: 2
+  completed_steps: 1
+  total_steps: 3
+  remaining_steps_after_current: 1
+  scope: [LOT14_VISUALLY_ACCEPTED_WITH_HOLDS, LOT15_PROPOSAL_ONLY, PREVIOUS_PUSH_LOCAL_RECEIPT]
+  evidence: .atena/evidence/asset-lot14-local-commit-2026-10-17.md
+  lot15_generation_authorized: false
+  push_export_merge: NOT_AUTHORIZED
+  runtime_admission: false
+  canonical_promotion: false

@@ -1,0 +1,92 @@
+[
+  {
+    "hero": "zynara",
+    "sequence": "idle",
+    "path": "assets/animations/heroes/zynara/idle.png",
+    "sha256": "DCDA5475C52C06ABA54EAFB143FE249EC98B23A716CEF5EEB927E3618062107A",
+    "role": "IMPLEMENTED_IDENTITY_AND_MASS",
+    "reference_revision": "sha256-snapshot-2026-10-17",
+    "visually_inspected": true,
+    "new_animation_state": "DRAFT"
+  },
+  {
+    "hero": "zynara",
+    "sequence": "move_n",
+    "path": "assets/animations/heroes/zynara/move_n.png",
+    "sha256": "18C5410BDBB99EF6C6B98D3B13122A04CB0568AB6C521958287A7AD815C368DA",
+    "role": "DEFECTIVE_FRONT_VIEW_RHYTHM_ONLY",
+    "reference_revision": "sha256-snapshot-2026-10-17",
+    "visually_inspected": true,
+    "new_animation_state": "DRAFT"
+  },
+  {
+    "hero": "zynara",
+    "sequence": "move_ne",
+    "path": "assets/animations/heroes/zynara/move_ne.png",
+    "sha256": "35E619BFACF0CC137267C1E2AE814AA31A16E0D923B58D4A6EA3B267B3E5D695",
+    "role": "DEFECTIVE_FRONT_VIEW_RHYTHM_ONLY",
+    "reference_revision": "sha256-snapshot-2026-10-17",
+    "visually_inspected": true,
+    "new_animation_state": "DRAFT"
+  },
+  {
+    "hero": "leoric",
+    "sequence": "idle",
+    "path": "assets/animations/heroes/leoric/idle.png",
+    "sha256": "93A695BBCA6B716DAC18294F1E80009647BD7479D424681BDEF6506BC8688918",
+    "role": "IMPLEMENTED_IDENTITY_AND_MASS",
+    "reference_revision": "sha256-snapshot-2026-10-17",
+    "visually_inspected": true,
+    "new_animation_state": "DRAFT"
+  },
+  {
+    "hero": "leoric",
+    "sequence": "move_n",
+    "path": "assets/animations/heroes/leoric/move_n.png",
+    "sha256": "2D2BBABE651866430079F68A61F99CD272455C73DE53B3808D84EC010C09B2BE",
+    "role": "DEFECTIVE_FRONT_VIEW_RHYTHM_ONLY",
+    "reference_revision": "sha256-snapshot-2026-10-17",
+    "visually_inspected": true,
+    "new_animation_state": "DRAFT"
+  },
+  {
+    "hero": "leoric",
+    "sequence": "move_ne",
+    "path": "assets/animations/heroes/leoric/move_ne.png",
+    "sha256": "50D14999255EEB36F7EB3E194ED29D01BDC252A33595658F9A0E7F7C89ABCA57",
+    "role": "DEFECTIVE_FRONT_VIEW_RHYTHM_ONLY",
+    "reference_revision": "sha256-snapshot-2026-10-17",
+    "visually_inspected": true,
+    "new_animation_state": "DRAFT"
+  },
+  {
+    "hero": "nyrelia",
+    "sequence": "idle",
+    "path": "assets/animations/heroes/nyrelia/idle.png",
+    "sha256": "7FA0F6700ADA6FB5A362D14604A259AEE4F30E44088CF55BE00B21B562ABC9E6",
+    "role": "IMPLEMENTED_IDENTITY_AND_MASS",
+    "reference_revision": "sha256-snapshot-2026-10-17",
+    "visually_inspected": true,
+    "new_animation_state": "DRAFT"
+  },
+  {
+    "hero": "nyrelia",
+    "sequence": "move_n",
+    "path": "assets/animations/heroes/nyrelia/move_n.png",
+    "sha256": "D9C7F73E0143CFE384A9D381788AC08E8E7E92A2F9663941B33342E0A0BA7B5B",
+    "role": "DEFECTIVE_FRONT_VIEW_RHYTHM_ONLY",
+    "reference_revision": "sha256-snapshot-2026-10-17",
+    "visually_inspected": true,
+    "new_animation_state": "DRAFT"
+  },
+  {
+    "hero": "nyrelia",
+    "sequence": "move_ne",
+    "path": "assets/animations/heroes/nyrelia/move_ne.png",
+    "sha256": "669CD3A05BEAB27BC0ABFD1451EFB58E711C5B8ABE073676DE5EB130C8D2B32A",
+    "role": "DEFECTIVE_FRONT_VIEW_RHYTHM_ONLY",
+    "reference_revision": "sha256-snapshot-2026-10-17",
+    "visually_inspected": true,
+    "new_animation_state": "DRAFT"
+  }
+]

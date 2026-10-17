@@ -6,14 +6,14 @@ implementation_preceded_spec: false
 request_classification: PLAN_CHANGE_REQUEST
 owner_request: 'atena, aprovado, proximo'
 mode: per-plan
-approval_status: PENDING_SCOPE_APPROVAL
-status: PROPOSED_AWAITING_APPROVAL
-checkpoint: S-001/OWNER_SCOPE_APPROVAL_PENDING
+approval_status: APPROVED_CONTEXTUAL_CONTINUATION
+status: VISUALLY_ACCEPTED_DRAFT_WITH_TECHNICAL_HOLDS
+checkpoint: S-004/OWNER_VISUAL_ACCEPTANCE_RECORDED
 ordered_steps: [S-001, S-002, S-003, S-004]
-current_step_position: 1
-completed_steps: 0
+current_step_position: 4
+completed_steps: 4
 total_steps: 4
-remaining_steps_after_current: 3
+remaining_steps_after_current: 0
 readiness_prepared: true
 scope: [MI00-MI03, MM00-MM05, MA00-MA03, MD00-MD05, TI00-TI03, TD00-TD04]
 planned_sources: 29
@@ -22,14 +22,30 @@ planned_review_entries: 6
 max_generation_calls: 87
 max_attempts_per_file: 3
 proposed_visual_gate: JOINT_SIX_STATES_USING_IMPLEMENTED_STATIC_IDENTITIES
-generated: 0
-generation_attempts: 0
+generated: 29
+generation_attempts: 36
 specification: .atena/specs/SPEC-121-retomada-fila-imagens/asset-lot14-mimic-totem-v01.md
 references: .atena/generated/asset-lot14-2026-10-17/references.json
 implementation_owner: Claude
 runtime_admission: false
 canonical_promotion: false
 next_execution_authorized: false
-commit_push_export: LOCAL_COMMIT_AND_PUSH_AUTHORIZED_EXPORT_NOT_AUTHORIZED
+commit_push_export: LOCAL_COMMIT_AUTHORIZED_PUSH_EXPORT_NOT_AUTHORIZED
 return_plan: PLAN-103
-next_objective: 'Aprovar29fontes/seis estados e revisão conjunta; depois produzir DRAFT'
+next_objective: 'Commit local e preparar LOT15 para ART-033; implementação com Claude'
+owner_scope_reply: 'atena continue a fila de assets'
+approved_date: '2026-10-17'
+last_request_classification: IN_PLAN
+completed_date: '2026-10-17'
+qa_drawings: 29
+selected_candidates: 'MM01/MM05/MD03/TD03/TD04v02; demaisv01'
+human_visual_acceptance: APPROVED_EXPLICITLY_SOURCE_DIRECTION
+technical_holds: [LOT14_ALPHA_PREPARATION, LOT14_MARGIN_TARGET, LOT14_REGISTRATION_SCALE_REVIEW, LOT14_TD_BASE_GROWTH_AFTER_THREE_ATTEMPTS]
+legacy_holds_preserved: [RU05_HORIZONTAL_DRIFT, RU07_HORIZONTAL_DRIFT, RU08_COLUMN_CONTACT_AND_DRIFT, LOT13_ALPHA_PREPARATION, LOT13_REGISTRATION_REVIEW, LOT13_JD04_JD05_MARGIN_TARGET]
+gallery: .atena/generated/asset-lot14-2026-10-17/index.html
+manifest: .atena/generated/asset-lot14-2026-10-17/manifest.json
+evidence: .atena/evidence/asset-lot14-mimic-totem-2026-10-17.md
+
+visual_owner_reply: 'aprovado, commit e continue'
+visual_accepted_date: '2026-10-17'
+visual_acceptance_receipt: .atena/generated/asset-lot14-2026-10-17/visual-acceptance.json

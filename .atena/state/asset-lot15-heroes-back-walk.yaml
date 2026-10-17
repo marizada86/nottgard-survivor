@@ -1,0 +1,34 @@
+id: ASSET-LOT15
+revision: v01
+content_state: DRAFT
+origin: planned
+implementation_preceded_spec: false
+request_classification: PLAN_CHANGE_REQUEST
+owner_request: 'aprovado, commit e continue'
+mode: per-plan
+approval_status: PENDING_SCOPE_APPROVAL
+status: PROPOSED_AWAITING_APPROVAL
+checkpoint: S-001/OWNER_SCOPE_APPROVAL_PENDING
+ordered_steps: [S-001, S-002, S-003, S-004]
+current_step_position: 1
+completed_steps: 0
+total_steps: 4
+remaining_steps_after_current: 3
+readiness_prepared: true
+scope: [ZN00-ZN05, ZE00-ZE05, LN00-LN05, LE00-LE05, YN00-YN05, YE00-YE05]
+planned_sources: 36
+planned_drawings: 36
+planned_review_entries: 6
+max_generation_calls: 108
+max_attempts_per_file: 3
+generated: 0
+generation_attempts: 0
+specification: .atena/specs/SPEC-121-retomada-fila-imagens/asset-lot15-heroes-back-walk-v01.md
+references: .atena/generated/asset-lot15-2026-10-17/references.json
+implementation_owner: Claude
+runtime_admission: false
+canonical_promotion: false
+next_execution_authorized: false
+commit_push_export: NOT_AUTHORIZED_FOR_NEW_PRODUCTION
+return_plan: PLAN-103
+next_objective: 'Aprovar36fontes/seis caminhadas de costas e revisão conjunta'

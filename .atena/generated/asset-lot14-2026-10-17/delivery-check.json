@@ -1,0 +1,20 @@
+{
+  "status": "PASS_DELIVERY_INTEGRITY_ONLY",
+  "selected_source_hashes": 29,
+  "attempt_hashes": 36,
+  "qa_frame_hashes": 29,
+  "reference_hashes": 2,
+  "generation_reference_hashes": 78,
+  "prompt_records": 36,
+  "reading_previews": 87,
+  "local_links": 27,
+  "technical_holds": [
+    "LOT14_ALPHA_PREPARATION",
+    "LOT14_MARGIN_TARGET",
+    "LOT14_REGISTRATION_SCALE_REVIEW",
+    "LOT14_TD_BASE_GROWTH_AFTER_THREE_ATTEMPTS"
+  ],
+  "human_visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+  "runtime_admission": false,
+  "browser_render_verified": false
+}
