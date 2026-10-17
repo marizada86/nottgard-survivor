@@ -2142,13 +2142,13 @@ asset_lots12_14_publication_2026_10_17:
   request_classification: IN_PLAN_OPERATIONAL_DELIVERY
   owner_reply: 'atena commit e push'
   approval_status: EXPLICIT_LOCAL_COMMIT_AND_REMOTE_PUSH
-  status: VALIDATED_READY_TO_COMMIT
-  checkpoint: S-002/COMMIT_AUTHORIZED
+  status: LOCAL_COMMIT_COMPLETE_PUSH_PENDING_DESTINATION_AND_PAYLOAD_APPROVAL
+  checkpoint: S-003/AUTO_REVIEW_REJECTED_PUSH
   ordered_steps: [S-001, S-002, S-003, S-004]
-  current_step_position: 2
-  completed_steps: 1
+  current_step_position: 3
+  completed_steps: 2
   total_steps: 4
-  remaining_steps_after_current: 2
+  remaining_steps_after_current: 1
   branch: codex/art-production-lot12-14-2026-10-17
   remote: origin
   scope: [LOT12_ACCEPTED, LOT13_ACCEPTED, LOT14_PROPOSAL_ONLY]
@@ -2158,3 +2158,7 @@ asset_lots12_14_publication_2026_10_17:
   runtime_admission: false
   canonical_promotion: false
   export_merge: NOT_AUTHORIZED
+  content_commit: 6d0e157b
+  push_executed: false
+  auto_review_result: REJECTED_UNVERIFIED_EXTERNAL_DESTINATION_AND_FULL_PAYLOAD
+  next_objective: 'Confirmar destino GitHub e payload completo antes de novo push'
