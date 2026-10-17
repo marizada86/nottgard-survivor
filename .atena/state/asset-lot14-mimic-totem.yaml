@@ -1,0 +1,35 @@
+id: ASSET-LOT14
+revision: v01
+content_state: DRAFT
+origin: planned
+implementation_preceded_spec: false
+request_classification: PLAN_CHANGE_REQUEST
+owner_request: 'atena, aprovado, proximo'
+mode: per-plan
+approval_status: PENDING_SCOPE_APPROVAL
+status: PROPOSED_AWAITING_APPROVAL
+checkpoint: S-001/OWNER_SCOPE_APPROVAL_PENDING
+ordered_steps: [S-001, S-002, S-003, S-004]
+current_step_position: 1
+completed_steps: 0
+total_steps: 4
+remaining_steps_after_current: 3
+readiness_prepared: true
+scope: [MI00-MI03, MM00-MM05, MA00-MA03, MD00-MD05, TI00-TI03, TD00-TD04]
+planned_sources: 29
+planned_drawings: 29
+planned_review_entries: 6
+max_generation_calls: 87
+max_attempts_per_file: 3
+proposed_visual_gate: JOINT_SIX_STATES_USING_IMPLEMENTED_STATIC_IDENTITIES
+generated: 0
+generation_attempts: 0
+specification: .atena/specs/SPEC-121-retomada-fila-imagens/asset-lot14-mimic-totem-v01.md
+references: .atena/generated/asset-lot14-2026-10-17/references.json
+implementation_owner: Claude
+runtime_admission: false
+canonical_promotion: false
+next_execution_authorized: false
+commit_push_export: LOCAL_COMMIT_AND_PUSH_AUTHORIZED_EXPORT_NOT_AUTHORIZED
+return_plan: PLAN-103
+next_objective: 'Aprovar29fontes/seis estados e revisão conjunta; depois produzir DRAFT'

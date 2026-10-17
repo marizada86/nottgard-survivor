@@ -1,0 +1,22 @@
+[
+  {
+    "entity_id": "mimico",
+    "path": "assets/enemies/mimico.png",
+    "sha256": "1B2F72E09857BB647CC2ADB96ADB28CA30A5DBCBCFDC4A24EA3BA548C81EF0DB",
+    "role": "IMPLEMENTED_STATIC_VISUAL_BASELINE",
+    "reference_revision": "sha256-snapshot-2026-10-17",
+    "visually_inspected": true,
+    "new_animation_state": "DRAFT",
+    "canonical_promotion": false
+  },
+  {
+    "entity_id": "totem_de_chefe",
+    "path": "assets/enemies/totem_de_chefe.png",
+    "sha256": "97AD156C84231B200A175BFAD15A9E9232FC561AAD3962A58A81F0BBC1212555",
+    "role": "IMPLEMENTED_STATIC_VISUAL_BASELINE",
+    "reference_revision": "sha256-snapshot-2026-10-17",
+    "visually_inspected": true,
+    "new_animation_state": "DRAFT",
+    "canonical_promotion": false
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "status": "PASS_DELIVERY_INTEGRITY_ONLY",
+  "selected_source_hashes": 26,
+  "attempt_hashes": 27,
+  "qa_frame_hashes": 26,
+  "reference_hashes": 2,
+  "origin_records": 27,
+  "prompt_records": 27,
+  "reading_previews": 78,
+  "local_links": 23,
+  "death_core_heights_px": [
+    536,
+    517,
+    355,
+    354,
+    341,
+    266
+  ],
+  "technical_holds": [
+    "LOT13_ALPHA_PREPARATION",
+    "LOT13_REGISTRATION_REVIEW",
+    "LOT13_JD04_JD05_MARGIN_TARGET"
+  ],
+  "legacy_holds_preserved": [
+    "RU05_HORIZONTAL_DRIFT",
+    "RU07_HORIZONTAL_DRIFT",
+    "RU08_COLUMN_CONTACT_AND_DRIFT"
+  ],
+  "human_visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+  "runtime_admission": false,
+  "browser_render_verified": false
+}

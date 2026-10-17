@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "scope": "Offline DOM simulation, not browser render",
+  "players": 5,
+  "animated_qa_frames": 26,
+  "checks": [
+    "local PNG paths",
+    "default FPS",
+    "transition hold",
+    "pause",
+    "frame scrub",
+    "replay",
+    "FPS timing",
+    "source links",
+    "optional repeat"
+  ]
+}

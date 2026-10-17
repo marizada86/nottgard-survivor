@@ -1,0 +1,45 @@
+id: ASSET-LOT12
+revision: v01
+content_state: DRAFT
+origin: planned
+implementation_preceded_spec: false
+request_classification: PLAN_CHANGE_REQUEST
+owner_request: 'aprovado, commit e continue'
+mode: per-plan
+approval_status: APPROVED_CONTEXTUAL_CONTINUATION
+owner_scope_reply: 'atena continue'
+approved_date: '2026-10-16'
+status: VISUALLY_ACCEPTED_DRAFT_WITH_PREPARATION_NOTES
+checkpoint: S-004/OWNER_VISUAL_ACCEPTANCE_RECORDED
+ordered_steps: [S-001, S-002, S-003, S-004]
+current_step_position: 4
+completed_steps: 4
+total_steps: 4
+remaining_steps_after_current: 0
+scope: [DR01, DR02, DR03, DR04, SR01, SR02, SR03, SR04, BR01, BR02, BR03, BR04]
+planned_sources: 12
+planned_drawings: 12
+planned_review_entries: 3
+max_generation_calls: 36
+generated: 12
+generation_attempts: 12
+qa_drawings: 12
+selected_candidates: [DR01/v01, DR02/v01, DR03/v01, DR04/v01, SR01/v01, SR02/v01, SR03/v01, SR04/v01, BR01/v01, BR02/v01, BR03/v01, BR04/v01]
+human_visual_acceptance: APPROVED_EXPLICITLY_SOURCE_DIRECTION
+visual_owner_reply: 'atena aprovado prossiga'
+visual_accepted_date: '2026-10-16'
+visual_acceptance_receipt: .atena/generated/asset-lot12-2026-10-16/visual-acceptance.json
+preparation_notes: [ALPHA, MARGINS, REGISTRATION, RIGIDITY_REVIEW]
+gallery: .atena/generated/asset-lot12-2026-10-16/index.html
+evidence: .atena/evidence/asset-lot12-ruin-source-repairs-2026-10-16.md
+specification: .atena/specs/SPEC-121-retomada-fila-imagens/asset-lot12-ruin-source-repairs-v01.md
+references: .atena/generated/asset-lot12-2026-10-16/references.json
+previous_delivery_commit: 179740d2
+legacy_holds_preserved: [RU05_HORIZONTAL_DRIFT, RU07_HORIZONTAL_DRIFT, RU08_COLUMN_CONTACT_AND_DRIFT]
+implementation_owner: Claude
+runtime_admission: false
+canonical_promotion: false
+next_execution_authorized: false
+commit_push_export: LOCAL_COMMIT_AND_PUSH_AUTHORIZED_EXPORT_NOT_AUTHORIZED
+return_plan: PLAN-103
+next_objective: 'Planejar próxima produção; implementação com Claude e retenções históricas preservadas'

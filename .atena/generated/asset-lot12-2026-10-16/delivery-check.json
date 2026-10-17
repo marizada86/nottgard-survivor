@@ -1,0 +1,18 @@
+{
+  "status": "PASS_DELIVERY_INTEGRITY_ONLY",
+  "selected_source_hashes": 12,
+  "attempt_hashes": 12,
+  "qa_frame_hashes": 12,
+  "reference_hashes": 6,
+  "origin_records": 12,
+  "prompt_records": 12,
+  "local_links": 20,
+  "legacy_holds_preserved": [
+    "RU05_HORIZONTAL_DRIFT",
+    "RU07_HORIZONTAL_DRIFT",
+    "RU08_COLUMN_CONTACT_AND_DRIFT"
+  ],
+  "human_visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+  "runtime_admission": false,
+  "browser_render_verified": false
+}

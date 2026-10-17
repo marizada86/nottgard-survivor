@@ -258,3 +258,11 @@ LOT10/v01: sete revisões selecionadas/28poses aceitas visualmente em2026-10-16 
 Produção2026-10-16: [ASSET-LOT11/v01 DRAFT](../generated/asset-lot11-2026-10-16/index.html), ART-043: oito ruínas/32poses de QA em15tentativas. RU01..04v01,RU05v03,RU06v02,RU07v03,RU08v01. RU05/RU07 retidos por deriva; RU08 retido por contato e deriva após três tentativas, v02/v03 piores. Cinco demais para revisão com alfa/margens/registro pendentes, sem admissão. Aceite visual conjunto PENDING, implementação com Claude.
 
 LOT11/v01: direção visual das oito revisões/32poses aceita em2026-10-16 ('aprovado, commit e continue'), DRAFT. Retenções RU05/RU07/RU08 preservadas; sem admissão, implementação com Claude. Commit local LOT10/LOT11 autorizado.
+
+Produção2026-10-16: [ASSET-LOT12/v01 DRAFT](../generated/asset-lot12-2026-10-16/index.html), reparo ART-043: Durao/Shendilavri/Goranthis em12fontes individuais/12poses, todasv01,12tentativas. Sem contato na banda4px; base5/2/1px e centro bbox0,5/12/5px no canvas1254. Alfa/margens/registro pendentes. Aceite visual PENDING; retenções antigas RU05/RU07/RU08 preservadas. Preparação e implementação com Claude, sem admissão.
+
+LOT12/v01:12revisões/três ciclos visualmente aceitos em2026-10-16 ('atena aprovado prossiga'); DRAFT, sem admissão. Retenções históricas LOT11 preservadas; preparação e implementação com Claude.
+
+Produção2026-10-17: [ASSET-LOT13/v01 DRAFT](../generated/asset-lot13-2026-10-16/index.html), ART-032 Manifestação de Juiblex:26PNGs individuais/cinco estados,27tentativas; JI00/v02 e demais/v01. Aceite visual PENDING. Zero contato banda4px, mas alfa/registro/escala e margem JD04/JD05 retidos para preparação por Claude; sem admissão ou implementação. [Evidência](../evidence/asset-lot13-juiblex-animation-2026-10-17.md). Retenções históricas LOT11 preservadas.
+
+LOT13/v01:26revisões/cinco estados visualmente aceitos em2026-10-17 (“atena, aprovado, proximo”); DRAFT, retenções técnicas e históricas preservadas. Preparação e implementação com Claude, sem admissão.

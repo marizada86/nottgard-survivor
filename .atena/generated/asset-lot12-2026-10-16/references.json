@@ -1,0 +1,53 @@
+[
+  {
+    "code": "DR",
+    "name": "Durao",
+    "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE08_v02.png",
+    "sha256": "EABC7EC8B7831BD6667BCA124F06D0328AF8755DED4B74774602E7199A491393",
+    "role": "EXISTING_STATIC_IDENTITY",
+    "reference_state": "CANON_PREPARATION_VISUAL_ONLY",
+    "visually_inspected": true
+  },
+  {
+    "code": "DR",
+    "path": ".atena/generated/animation-candidates/asset-lot11/RU05_v03.png",
+    "sha256": "95BE9D57456E194C7062DC589DA912E4DDF6E7C5362B57AD453C8575693164B2",
+    "role": "ACCEPTED_DIRECTION_TECHNICALLY_HELD_NOT_GEOMETRY_AUTHORITY",
+    "reference_state": "DRAFT",
+    "visually_inspected": true
+  },
+  {
+    "code": "SR",
+    "name": "Shendilavri",
+    "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE10_v02.png",
+    "sha256": "92D8581C57854FD7517C194554E9D08972AF886CE42813E0A00A22B6153F4780",
+    "role": "EXISTING_STATIC_IDENTITY",
+    "reference_state": "CANON_PREPARATION_VISUAL_ONLY",
+    "visually_inspected": true
+  },
+  {
+    "code": "SR",
+    "path": ".atena/generated/animation-candidates/asset-lot11/RU07_v03.png",
+    "sha256": "B63C45B2697BCF1FCEF39C3DFCC96B707114789265CA91EE61E75A6FA9DD6C34",
+    "role": "ACCEPTED_DIRECTION_TECHNICALLY_HELD_NOT_GEOMETRY_AUTHORITY",
+    "reference_state": "DRAFT",
+    "visually_inspected": true
+  },
+  {
+    "code": "BR",
+    "name": "Goranthis",
+    "path": ".atena/generated/fila028-preparation-2026-10-10/normalized/SE11_v02.png",
+    "sha256": "00B594AE1E037AF4D6B26F7533D64EA72F16D28CF89B5370EFBA5EBEC0E65BAB",
+    "role": "EXISTING_STATIC_IDENTITY",
+    "reference_state": "CANON_PREPARATION_VISUAL_ONLY",
+    "visually_inspected": true
+  },
+  {
+    "code": "BR",
+    "path": ".atena/generated/animation-candidates/asset-lot11/RU08_v01.png",
+    "sha256": "8BFE265AD8797BE288DE5A4BB4B61D2BFA41DA7CC9EB498761263CC4C8B2E334",
+    "role": "ACCEPTED_DIRECTION_TECHNICALLY_HELD_NOT_GEOMETRY_AUTHORITY",
+    "reference_state": "DRAFT",
+    "visually_inspected": true
+  }
+]

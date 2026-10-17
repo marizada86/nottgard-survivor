@@ -1,0 +1,25 @@
+# LOT13 — prompts exatos do especial
+
+## JS00_v01
+
+FIRST reference fixes exact canvas/creature scale/localposition/base/camera. SECOND reference is accepted identity. Do NOT enlarge or recompose. Keep creature SMALL with same generous alpha padding as first reference, all3thickfilaments intact inside margins. Asymmetric olive wet gel boss, no new mouth/eyes/core/human limbs/extra appendages. One whole sprite per transparent square PNG, no sheet, no floor/castshadow/aura/haze/text/scene/othercreatures. Opaque gel, upperleft light, same isometric darkfantasy pixelart. JS00 special0of6 anticipation: broad base compresses modestly while upper lobe draws inward, three existing thickfilaments curl toward corebody, no exposed core. Ready a body pulse, no aura/ring/projectile/summonedcreature. Exact rootbase/canvas scale maintained.
+
+## JS01_v01
+
+FIRST reference fixes exact canvas/creature scale/localposition/base/camera. SECOND reference is accepted identity. Do NOT enlarge or recompose. Keep creature SMALL with same generous alpha padding as first reference, all3thickfilaments intact inside margins. Asymmetric olive wet gel boss, no new mouth/eyes/core/human limbs/extra appendages. One whole sprite per transparent square PNG, no sheet, no floor/castshadow/aura/haze/text/scene/othercreatures. Opaque gel, upperleft light, same isometric darkfantasy pixelart. JS01 special1of6. Deepen anticipation contraction: broadbase gathers inward and upper lobe compresses, three existing thickfilaments curl a little higher toward main body. Visible body tension, no newcore/face, same overall mass and rootbase. Do not shrink via camera; gel changes form.
+
+## JS02_v01
+
+FIRST reference fixes exact canvas/creature scale/localposition/base/camera. SECOND reference is accepted identity. Do NOT enlarge or recompose. Keep creature SMALL with same generous alpha padding as first reference, all3thickfilaments intact inside margins. Asymmetric olive wet gel boss, no new mouth/eyes/core/human limbs/extra appendages. One whole sprite per transparent square PNG, no sheet, no floor/castshadow/aura/haze/text/scene/othercreatures. Opaque gel, upperleft light, same isometric darkfantasy pixelart. JS02 special2of6. Three existing thickfilaments visibly tense and lift INWARD, upper lobe expands from compression, body gathered for pulse. Keep all3extensions distinguishable, no extra limbs/core or added effect. Same rootbase, same bodymass/scale, ample margins.
+
+## JS03_v01
+
+FIRST reference fixes exact canvas/creature scale/localposition/base/camera. SECOND reference is accepted identity. Do NOT enlarge or recompose. Keep creature SMALL with same generous alpha padding as first reference, all3thickfilaments intact inside margins. Asymmetric olive wet gel boss, no new mouth/eyes/core/human limbs/extra appendages. One whole sprite per transparent square PNG, no sheet, no floor/castshadow/aura/haze/text/scene/othercreatures. Opaque gel, upperleft light, same isometric darkfantasy pixelart. JS03 special3of6 BODY PULSE PEAK. Central lobe rises about10% and all THREE EXISTING thickfilaments flex visibly upward/inward together, creating a tense lifted silhouette; broadbase stays anchored. Preserve coherent same gelbody and volume, no new limbs/eyes/core. All tips complete within margins. No aura/ring/beam/projectile/summon or other VFX; body motion only.
+
+## JS04_v01
+
+FIRST reference fixes exact canvas/creature scale/localposition/base/camera. SECOND reference is accepted identity. Do NOT enlarge or recompose. Keep creature SMALL with same generous alpha padding as first reference, all3thickfilaments intact inside margins. Asymmetric olive wet gel boss, no new mouth/eyes/core/human limbs/extra appendages. One whole sprite per transparent square PNG, no sheet, no floor/castshadow/aura/haze/text/scene/othercreatures. Opaque gel, upperleft light, same isometric darkfantasy pixelart. JS04 special4of6 release: upper lobe settles from pulse peak, all3filaments gently droop toward their neutral curled positions, base relaxes but stays registered. No detached effect or new anatomy. Same bodyvolume/scale, complete tips and generous margins.
+
+## JS05_v01
+
+FIRST reference fixes exact canvas/creature scale/localposition/base/camera. SECOND reference is accepted identity. Do NOT enlarge or recompose. Keep creature SMALL with same generous alpha padding as first reference, all3thickfilaments intact inside margins. Asymmetric olive wet gel boss, no new mouth/eyes/core/human limbs/extra appendages. One whole sprite per transparent square PNG, no sheet, no floor/castshadow/aura/haze/text/scene/othercreatures. Opaque gel, upperleft light, same isometric darkfantasy pixelart. JS05 special5of6 recovery: return almost exactly to the FIRST reference resting silhouette and relaxed curled positions of all three filaments, after the pulse. Keep same base registration and creature scale as first reference, generous transparent margins, unchanged volume and identity. Only subtle settled gelatinous folds distinguish this recovery frame from idle. No separate effect.
