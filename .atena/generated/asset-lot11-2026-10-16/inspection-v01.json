@@ -1,0 +1,1370 @@
+[
+  {
+    "code": "RU01",
+    "name": "Dagruve",
+    "revision": "v01",
+    "source": ".atena/generated/animation-candidates/asset-lot11/RU01_v01.png",
+    "source_sha256": "7FBB03432751343CD05FD3D2DD2C5DF2F4688FF599D7D93E80812A3682141D99",
+    "width": 2048,
+    "height": 768,
+    "columns": 4,
+    "rows": 1,
+    "frame_count": 4,
+    "loop": true,
+    "core_base_spread_px": 1.0,
+    "unique_qa_pixel_file_hashes": 4,
+    "frames": [
+      {
+        "index": 0,
+        "expected_empty": false,
+        "cell_xywh": [
+          0,
+          0,
+          512,
+          768
+        ],
+        "alpha_ge16_pixels": 141595,
+        "alpha_ge128_pixels": 139431,
+        "alpha_1to15_pixels": 9749,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          5,
+          153,
+          507,
+          647
+        ],
+        "core_bbox_xyxy": [
+          6,
+          154,
+          505,
+          646
+        ],
+        "core_alpha_mode": 253,
+        "edge_left_alpha_ge16": 0,
+        "edge_right_alpha_ge16": 0,
+        "edge_top_alpha_ge16": 0,
+        "edge_bottom_alpha_ge16": 0,
+        "left_root_core_yminmax": [
+          768,
+          -1
+        ],
+        "qa_frame": "frames/RU01/00.png",
+        "qa_sha256": "6E1B9DB1331BE4F89091CB7ECEA1D2444AFCCAE23AA1E146046F84BEA340BADB"
+      },
+      {
+        "index": 1,
+        "expected_empty": false,
+        "cell_xywh": [
+          512,
+          0,
+          512,
+          768
+        ],
+        "alpha_ge16_pixels": 141695,
+        "alpha_ge128_pixels": 139510,
+        "alpha_1to15_pixels": 10251,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          6,
+          153,
+          507,
+          647
+        ],
+        "core_bbox_xyxy": [
+          6,
+          154,
+          505,
+          646
+        ],
+        "core_alpha_mode": 253,
+        "edge_left_alpha_ge16": 0,
+        "edge_right_alpha_ge16": 0,
+        "edge_top_alpha_ge16": 0,
+        "edge_bottom_alpha_ge16": 0,
+        "left_root_core_yminmax": [
+          768,
+          -1
+        ],
+        "qa_frame": "frames/RU01/01.png",
+        "qa_sha256": "8F3D896D7B9BBBFC01B2CABD50E03B6D8448A419F2491B6BEFDE69068F28789A"
+      },
+      {
+        "index": 2,
+        "expected_empty": false,
+        "cell_xywh": [
+          1024,
+          0,
+          512,
+          768
+        ],
+        "alpha_ge16_pixels": 141789,
+        "alpha_ge128_pixels": 139588,
+        "alpha_1to15_pixels": 10747,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          6,
+          152,
+          507,
+          647
+        ],
+        "core_bbox_xyxy": [
+          6,
+          153,
+          504,
+          647
+        ],
+        "core_alpha_mode": 253,
+        "edge_left_alpha_ge16": 0,
+        "edge_right_alpha_ge16": 0,
+        "edge_top_alpha_ge16": 0,
+        "edge_bottom_alpha_ge16": 0,
+        "left_root_core_yminmax": [
+          768,
+          -1
+        ],
+        "qa_frame": "frames/RU01/02.png",
+        "qa_sha256": "82805B64CAD0FEBE5098437DB276EF6025105941442019EFD71E0A639BCF2A2F"
+      },
+      {
+        "index": 3,
+        "expected_empty": false,
+        "cell_xywh": [
+          1536,
+          0,
+          512,
+          768
+        ],
+        "alpha_ge16_pixels": 141632,
+        "alpha_ge128_pixels": 139433,
+        "alpha_1to15_pixels": 10101,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          6,
+          153,
+          507,
+          647
+        ],
+        "core_bbox_xyxy": [
+          7,
+          154,
+          505,
+          647
+        ],
+        "core_alpha_mode": 253,
+        "edge_left_alpha_ge16": 0,
+        "edge_right_alpha_ge16": 0,
+        "edge_top_alpha_ge16": 0,
+        "edge_bottom_alpha_ge16": 0,
+        "left_root_core_yminmax": [
+          768,
+          -1
+        ],
+        "qa_frame": "frames/RU01/03.png",
+        "qa_sha256": "52DAB516922C6D35D78C9D40046231B7EBB8FDD8BB3EBD803B7A70091BAA5629"
+      }
+    ],
+    "human_visual_acceptance": "PENDING",
+    "runtime_admission": false
+  },
+  {
+    "code": "RU02",
+    "name": "Docas",
+    "revision": "v01",
+    "source": ".atena/generated/animation-candidates/asset-lot11/RU02_v01.png",
+    "source_sha256": "7A5617600A70C286DC3E390EE75C24E6FCEF2077815857811253B9EF4E413F53",
+    "width": 2048,
+    "height": 768,
+    "columns": 4,
+    "rows": 1,
+    "frame_count": 4,
+    "loop": true,
+    "core_base_spread_px": 0.0,
+    "unique_qa_pixel_file_hashes": 4,
+    "frames": [
+      {
+        "index": 0,
+        "expected_empty": false,
+        "cell_xywh": [
+          0,
+          0,
+          512,
+          768
+        ],
+        "alpha_ge16_pixels": 119112,
+        "alpha_ge128_pixels": 117417,
+        "alpha_1to15_pixels": 6880,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          42,
+          191,
+          492,
+          574
+        ],
+        "core_bbox_xyxy": [
+          43,
+          191,
+          490,
+          573
+        ],
+        "core_alpha_mode": 253,
+        "edge_left_alpha_ge16": 0,
+        "edge_right_alpha_ge16": 0,
+        "edge_top_alpha_ge16": 0,
+        "edge_bottom_alpha_ge16": 0,
+        "left_root_core_yminmax": [
+          768,
+          -1
+        ],
+        "qa_frame": "frames/RU02/00.png",
+        "qa_sha256": "33B528D4E6E68CE595CB7AA323FE8A1BFB20239DB415E2E57C2C34E4B9F42786"
+      },
+      {
+        "index": 1,
+        "expected_empty": false,
+        "cell_xywh": [
+          512,
+          0,
+          512,
+          768
+        ],
+        "alpha_ge16_pixels": 119173,
+        "alpha_ge128_pixels": 117516,
+        "alpha_1to15_pixels": 7159,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          42,
+          190,
+          492,
+          574
+        ],
+        "core_bbox_xyxy": [
+          43,
+          191,
+          490,
+          573
+        ],
+        "core_alpha_mode": 253,
+        "edge_left_alpha_ge16": 0,
+        "edge_right_alpha_ge16": 0,
+        "edge_top_alpha_ge16": 0,
+        "edge_bottom_alpha_ge16": 0,
+        "left_root_core_yminmax": [
+          768,
+          -1
+        ],
+        "qa_frame": "frames/RU02/01.png",
+        "qa_sha256": "44D36F5238E7BD8B42384625C1E29B711C46DB8BAACAFA882820837EA505475F"
+      },
+      {
+        "index": 2,
+        "expected_empty": false,
+        "cell_xywh": [
+          1024,
+          0,
+          512,
+          768
+        ],
+        "alpha_ge16_pixels": 119082,
+        "alpha_ge128_pixels": 117430,
+        "alpha_1to15_pixels": 6799,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          42,
+          191,
+          492,
+          574
+        ],
+        "core_bbox_xyxy": [
+          43,
+          191,
+          490,
+          573
+        ],
+        "core_alpha_mode": 253,
+        "edge_left_alpha_ge16": 0,
+        "edge_right_alpha_ge16": 0,
+        "edge_top_alpha_ge16": 0,
+        "edge_bottom_alpha_ge16": 0,
+        "left_root_core_yminmax": [
+          768,
+          -1
+        ],
+        "qa_frame": "frames/RU02/02.png",
+        "qa_sha256": "5B7DA32DCD5C8A51270634F1DC07FA7D9DBE4B96E8D51F8E8492943E09FAA076"
+      },
+      {
+        "index": 3,
+        "expected_empty": false,
+        "cell_xywh": [
+          1536,
+          0,
+          512,
+          768
+        ],
+        "alpha_ge16_pixels": 119108,
+        "alpha_ge128_pixels": 117477,
+        "alpha_1to15_pixels": 7600,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          42,
+          191,
+          491,
+          574
+        ],
+        "core_bbox_xyxy": [
+          43,
+          191,
+          490,
+          573
+        ],
+        "core_alpha_mode": 253,
+        "edge_left_alpha_ge16": 0,
+        "edge_right_alpha_ge16": 0,
+        "edge_top_alpha_ge16": 0,
+        "edge_bottom_alpha_ge16": 0,
+        "left_root_core_yminmax": [
+          768,
+          -1
+        ],
+        "qa_frame": "frames/RU02/03.png",
+        "qa_sha256": "4BA05882C6C84114EAF32ABD46DE436E1B86B5595AE33330AB510343DBE406EA"
+      }
+    ],
+    "human_visual_acceptance": "PENDING",
+    "runtime_admission": false
+  },
+  {
+    "code": "RU03",
+    "name": "Shedaklah",
+    "revision": "v01",
+    "source": ".atena/generated/animation-candidates/asset-lot11/RU03_v01.png",
+    "source_sha256": "87FD05EDC7712C2C33D1AE397E143241FA438873E02579085B66859972F8E633",
+    "width": 2048,
+    "height": 768,
+    "columns": 4,
+    "rows": 1,
+    "frame_count": 4,
+    "loop": true,
+    "core_base_spread_px": 0.0,
+    "unique_qa_pixel_file_hashes": 4,
+    "frames": [
+      {
+        "index": 0,
+        "expected_empty": false,
+        "cell_xywh": [
+          0,
+          0,
+          512,
+          768
+        ],
+        "alpha_ge16_pixels": 97160,
+        "alpha_ge128_pixels": 92999,
+        "alpha_1to15_pixels": 11716,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          90,
+          220,
+          458,
+          603
+        ],
+        "core_bbox_xyxy": [
+          91,
+          221,
+          457,
+          602
+        ],
+        "core_alpha_mode": 253,
+        "edge_left_alpha_ge16": 0,
+        "edge_right_alpha_ge16": 0,
+        "edge_top_alpha_ge16": 0,
+        "edge_bottom_alpha_ge16": 0,
+        "left_root_core_yminmax": [
+          768,
+          -1
+        ],
+        "qa_frame": "frames/RU03/00.png",
+        "qa_sha256": "15060FCC9779C21A49809BBEF0DACAB512B68E1442F3E2661661511FD0A1D2D8"
+      },
+      {
+        "index": 1,
+        "expected_empty": false,
+        "cell_xywh": [
+          512,
+          0,
+          512,
+          768
+        ],
+        "alpha_ge16_pixels": 98707,
+        "alpha_ge128_pixels": 93241,
+        "alpha_1to15_pixels": 14435,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          90,
+          220,
+          456,
+          603
+        ],
+        "core_bbox_xyxy": [
+          90,
+          221,
+          455,
+          602
+        ],
+        "core_alpha_mode": 253,
+        "edge_left_alpha_ge16": 0,
+        "edge_right_alpha_ge16": 0,
+        "edge_top_alpha_ge16": 0,
+        "edge_bottom_alpha_ge16": 0,
+        "left_root_core_yminmax": [
+          768,
+          -1
+        ],
+        "qa_frame": "frames/RU03/01.png",
+        "qa_sha256": "4058B01D8332F331C3AED9F94DFC28BAB4A5E6D80097A2EBE5FFD59F38941548"
+      },
+      {
+        "index": 2,
+        "expected_empty": false,
+        "cell_xywh": [
+          1024,
+          0,
+          512,
+          768
+        ],
+        "alpha_ge16_pixels": 96940,
+        "alpha_ge128_pixels": 92727,
+        "alpha_1to15_pixels": 11589,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          90,
+          220,
+          456,
+          603
+        ],
+        "core_bbox_xyxy": [
+          90,
+          221,
+          455,
+          602
+        ],
+        "core_alpha_mode": 253,
+        "edge_left_alpha_ge16": 0,
+        "edge_right_alpha_ge16": 0,
+        "edge_top_alpha_ge16": 0,
+        "edge_bottom_alpha_ge16": 0,
+        "left_root_core_yminmax": [
+          768,
+          -1
+        ],
+        "qa_frame": "frames/RU03/02.png",
+        "qa_sha256": "6AF0342FBB7939A13859B376467415A4E839B5CB3478563FEB1BD62ACA7CF745"
+      },
+      {
+        "index": 3,
+        "expected_empty": false,
+        "cell_xywh": [
+          1536,
+          0,
+          512,
+          768
+        ],
+        "alpha_ge16_pixels": 96486,
+        "alpha_ge128_pixels": 92574,
+        "alpha_1to15_pixels": 12203,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          89,
+          220,
+          455,
+          603
+        ],
+        "core_bbox_xyxy": [
+          89,
+          221,
+          454,
+          602
+        ],
+        "core_alpha_mode": 253,
+        "edge_left_alpha_ge16": 0,
+        "edge_right_alpha_ge16": 0,
+        "edge_top_alpha_ge16": 0,
+        "edge_bottom_alpha_ge16": 0,
+        "left_root_core_yminmax": [
+          768,
+          -1
+        ],
+        "qa_frame": "frames/RU03/03.png",
+        "qa_sha256": "AAC06BC379E704F0D2DB438AD3711711B4FF763D5B6B3464B37A978259B00644"
+      }
+    ],
+    "human_visual_acceptance": "PENDING",
+    "runtime_admission": false
+  },
+  {
+    "code": "RU04",
+    "name": "Molor",
+    "revision": "v01",
+    "source": ".atena/generated/animation-candidates/asset-lot11/RU04_v01.png",
+    "source_sha256": "558DDB212F53E18B9BB14006CF5F4F7D5BC94A836BD1D1156E34DB73D56D74E0",
+    "width": 2048,
+    "height": 768,
+    "columns": 4,
+    "rows": 1,
+    "frame_count": 4,
+    "loop": true,
+    "core_base_spread_px": 0.0,
+    "unique_qa_pixel_file_hashes": 4,
+    "frames": [
+      {
+        "index": 0,
+        "expected_empty": false,
+        "cell_xywh": [
+          0,
+          0,
+          512,
+          768
+        ],
+        "alpha_ge16_pixels": 119278,
+        "alpha_ge128_pixels": 116302,
+        "alpha_1to15_pixels": 15549,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          63,
+          180,
+          479,
+          604
+        ],
+        "core_bbox_xyxy": [
+          63,
+          182,
+          479,
+          603
+        ],
+        "core_alpha_mode": 253,
+        "edge_left_alpha_ge16": 0,
+        "edge_right_alpha_ge16": 0,
+        "edge_top_alpha_ge16": 0,
+        "edge_bottom_alpha_ge16": 0,
+        "left_root_core_yminmax": [
+          768,
+          -1
+        ],
+        "qa_frame": "frames/RU04/00.png",
+        "qa_sha256": "3DFE396BB8D6D0FF900A9787A9A42457EC892ED90B8852459E77D271F89C5D30"
+      },
+      {
+        "index": 1,
+        "expected_empty": false,
+        "cell_xywh": [
+          512,
+          0,
+          512,
+          768
+        ],
+        "alpha_ge16_pixels": 119262,
+        "alpha_ge128_pixels": 116427,
+        "alpha_1to15_pixels": 16020,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          63,
+          179,
+          479,
+          604
+        ],
+        "core_bbox_xyxy": [
+          63,
+          182,
+          478,
+          603
+        ],
+        "core_alpha_mode": 253,
+        "edge_left_alpha_ge16": 0,
+        "edge_right_alpha_ge16": 0,
+        "edge_top_alpha_ge16": 0,
+        "edge_bottom_alpha_ge16": 0,
+        "left_root_core_yminmax": [
+          768,
+          -1
+        ],
+        "qa_frame": "frames/RU04/01.png",
+        "qa_sha256": "7FEEBE008DD0593541DAABEA24D2F4C4B83B84D7390FEFD960FC714D284CEB22"
+      },
+      {
+        "index": 2,
+        "expected_empty": false,
+        "cell_xywh": [
+          1024,
+          0,
+          512,
+          768
+        ],
+        "alpha_ge16_pixels": 119238,
+        "alpha_ge128_pixels": 116284,
+        "alpha_1to15_pixels": 14717,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          63,
+          179,
+          479,
+          604
+        ],
+        "core_bbox_xyxy": [
+          63,
+          182,
+          478,
+          603
+        ],
+        "core_alpha_mode": 253,
+        "edge_left_alpha_ge16": 0,
+        "edge_right_alpha_ge16": 0,
+        "edge_top_alpha_ge16": 0,
+        "edge_bottom_alpha_ge16": 0,
+        "left_root_core_yminmax": [
+          768,
+          -1
+        ],
+        "qa_frame": "frames/RU04/02.png",
+        "qa_sha256": "18253236375C9E9EB759C2457784CA3D20334714C31DDFB70365942D8D249280"
+      },
+      {
+        "index": 3,
+        "expected_empty": false,
+        "cell_xywh": [
+          1536,
+          0,
+          512,
+          768
+        ],
+        "alpha_ge16_pixels": 119195,
+        "alpha_ge128_pixels": 116365,
+        "alpha_1to15_pixels": 14933,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          63,
+          180,
+          479,
+          604
+        ],
+        "core_bbox_xyxy": [
+          63,
+          182,
+          478,
+          603
+        ],
+        "core_alpha_mode": 253,
+        "edge_left_alpha_ge16": 0,
+        "edge_right_alpha_ge16": 0,
+        "edge_top_alpha_ge16": 0,
+        "edge_bottom_alpha_ge16": 0,
+        "left_root_core_yminmax": [
+          768,
+          -1
+        ],
+        "qa_frame": "frames/RU04/03.png",
+        "qa_sha256": "901216071A4D297156242F4E35072DAF4F2989CABA16B858DAEAF74D02ABADAF"
+      }
+    ],
+    "human_visual_acceptance": "PENDING",
+    "runtime_admission": false
+  },
+  {
+    "code": "RU05",
+    "name": "Durao",
+    "revision": "v01",
+    "source": ".atena/generated/animation-candidates/asset-lot11/RU05_v01.png",
+    "source_sha256": "E26C54E9CD5D902F6B9F470A008AEC49B9A0F4BC31ED321D24DFC0C2FEBFAF10",
+    "width": 2048,
+    "height": 768,
+    "columns": 4,
+    "rows": 1,
+    "frame_count": 4,
+    "loop": true,
+    "core_base_spread_px": 0.0,
+    "unique_qa_pixel_file_hashes": 4,
+    "frames": [
+      {
+        "index": 0,
+        "expected_empty": false,
+        "cell_xywh": [
+          0,
+          0,
+          512,
+          768
+        ],
+        "alpha_ge16_pixels": 114290,
+        "alpha_ge128_pixels": 110862,
+        "alpha_1to15_pixels": 12815,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 14,
+        "visible_bbox_xyxy": [
+          39,
+          214,
+          509,
+          601
+        ],
+        "core_bbox_xyxy": [
+          41,
+          215,
+          508,
+          599
+        ],
+        "core_alpha_mode": 253,
+        "edge_left_alpha_ge16": 0,
+        "edge_right_alpha_ge16": 14,
+        "edge_top_alpha_ge16": 0,
+        "edge_bottom_alpha_ge16": 0,
+        "left_root_core_yminmax": [
+          768,
+          -1
+        ],
+        "qa_frame": "frames/RU05/00.png",
+        "qa_sha256": "E597C6D7FE9EB3FBFECCACA389BD7318A61B02A1BF68E659BEFFEA25A1B9FCA3"
+      },
+      {
+        "index": 1,
+        "expected_empty": false,
+        "cell_xywh": [
+          512,
+          0,
+          512,
+          768
+        ],
+        "alpha_ge16_pixels": 114910,
+        "alpha_ge128_pixels": 111442,
+        "alpha_1to15_pixels": 12704,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 18,
+        "visible_bbox_xyxy": [
+          40,
+          213,
+          509,
+          601
+        ],
+        "core_bbox_xyxy": [
+          41,
+          215,
+          508,
+          599
+        ],
+        "core_alpha_mode": 253,
+        "edge_left_alpha_ge16": 0,
+        "edge_right_alpha_ge16": 18,
+        "edge_top_alpha_ge16": 0,
+        "edge_bottom_alpha_ge16": 0,
+        "left_root_core_yminmax": [
+          768,
+          -1
+        ],
+        "qa_frame": "frames/RU05/01.png",
+        "qa_sha256": "5CB03EA7820C0FF6C5151750966FED57C2F4D15E5739369CA3F13EDC61755916"
+      },
+      {
+        "index": 2,
+        "expected_empty": false,
+        "cell_xywh": [
+          1024,
+          0,
+          512,
+          768
+        ],
+        "alpha_ge16_pixels": 114289,
+        "alpha_ge128_pixels": 110914,
+        "alpha_1to15_pixels": 13264,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 17,
+        "visible_bbox_xyxy": [
+          39,
+          213,
+          509,
+          601
+        ],
+        "core_bbox_xyxy": [
+          40,
+          214,
+          508,
+          599
+        ],
+        "core_alpha_mode": 253,
+        "edge_left_alpha_ge16": 0,
+        "edge_right_alpha_ge16": 17,
+        "edge_top_alpha_ge16": 0,
+        "edge_bottom_alpha_ge16": 0,
+        "left_root_core_yminmax": [
+          768,
+          -1
+        ],
+        "qa_frame": "frames/RU05/02.png",
+        "qa_sha256": "B7850B7EECE2FAC01574A08D77148AE33BD206DEEBF3308D492FA0CC835C0AFE"
+      },
+      {
+        "index": 3,
+        "expected_empty": false,
+        "cell_xywh": [
+          1536,
+          0,
+          512,
+          768
+        ],
+        "alpha_ge16_pixels": 114395,
+        "alpha_ge128_pixels": 110966,
+        "alpha_1to15_pixels": 12929,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 10,
+        "visible_bbox_xyxy": [
+          39,
+          213,
+          509,
+          601
+        ],
+        "core_bbox_xyxy": [
+          41,
+          215,
+          508,
+          599
+        ],
+        "core_alpha_mode": 253,
+        "edge_left_alpha_ge16": 0,
+        "edge_right_alpha_ge16": 10,
+        "edge_top_alpha_ge16": 0,
+        "edge_bottom_alpha_ge16": 0,
+        "left_root_core_yminmax": [
+          768,
+          -1
+        ],
+        "qa_frame": "frames/RU05/03.png",
+        "qa_sha256": "75EB7725333025C6E43C5204CC78FF21389B9DF293FC0001DBC36A8A6EC6B5B7"
+      }
+    ],
+    "human_visual_acceptance": "PENDING",
+    "runtime_admission": false
+  },
+  {
+    "code": "RU06",
+    "name": "Feng-tu",
+    "revision": "v01",
+    "source": ".atena/generated/animation-candidates/asset-lot11/RU06_v01.png",
+    "source_sha256": "160D891D7A7480B6EC1AD4A383E99C9E1404244379F1E3BD3363170F5B28F719",
+    "width": 2046,
+    "height": 768,
+    "columns": 4,
+    "rows": 1,
+    "frame_count": 4,
+    "loop": true,
+    "core_base_spread_px": 1.0,
+    "unique_qa_pixel_file_hashes": 4,
+    "frames": [
+      {
+        "index": 0,
+        "expected_empty": false,
+        "cell_xywh": [
+          0,
+          0,
+          511,
+          768
+        ],
+        "alpha_ge16_pixels": 106735,
+        "alpha_ge128_pixels": 103627,
+        "alpha_1to15_pixels": 15331,
+        "alpha255_pixels": 9,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          67,
+          203,
+          484,
+          629
+        ],
+        "core_bbox_xyxy": [
+          68,
+          204,
+          483,
+          629
+        ],
+        "core_alpha_mode": 253,
+        "edge_left_alpha_ge16": 0,
+        "edge_right_alpha_ge16": 0,
+        "edge_top_alpha_ge16": 0,
+        "edge_bottom_alpha_ge16": 0,
+        "left_root_core_yminmax": [
+          768,
+          -1
+        ],
+        "qa_frame": "frames/RU06/00.png",
+        "qa_sha256": "9F241BE8713F63E0CE87EB4E06075324BC3243596D84B99E7D989387B7B40CDF"
+      },
+      {
+        "index": 1,
+        "expected_empty": false,
+        "cell_xywh": [
+          511,
+          0,
+          512,
+          768
+        ],
+        "alpha_ge16_pixels": 109006,
+        "alpha_ge128_pixels": 105486,
+        "alpha_1to15_pixels": 17509,
+        "alpha255_pixels": 34,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          61,
+          203,
+          476,
+          631
+        ],
+        "core_bbox_xyxy": [
+          62,
+          204,
+          475,
+          630
+        ],
+        "core_alpha_mode": 253,
+        "edge_left_alpha_ge16": 0,
+        "edge_right_alpha_ge16": 0,
+        "edge_top_alpha_ge16": 0,
+        "edge_bottom_alpha_ge16": 0,
+        "left_root_core_yminmax": [
+          768,
+          -1
+        ],
+        "qa_frame": "frames/RU06/01.png",
+        "qa_sha256": "37A73BD2B0CCF16D6F215CC674FF16974C35470C2BEC59F1FA3003E9C5E4079D"
+      },
+      {
+        "index": 2,
+        "expected_empty": false,
+        "cell_xywh": [
+          1023,
+          0,
+          511,
+          768
+        ],
+        "alpha_ge16_pixels": 108188,
+        "alpha_ge128_pixels": 104856,
+        "alpha_1to15_pixels": 18469,
+        "alpha255_pixels": 34,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          45,
+          203,
+          463,
+          631
+        ],
+        "core_bbox_xyxy": [
+          47,
+          204,
+          462,
+          630
+        ],
+        "core_alpha_mode": 253,
+        "edge_left_alpha_ge16": 0,
+        "edge_right_alpha_ge16": 0,
+        "edge_top_alpha_ge16": 0,
+        "edge_bottom_alpha_ge16": 0,
+        "left_root_core_yminmax": [
+          768,
+          -1
+        ],
+        "qa_frame": "frames/RU06/02.png",
+        "qa_sha256": "73CDE618AD126BA90FC52B6BED61545A6AA12DB34A0C16EAADA3766BBC65D222"
+      },
+      {
+        "index": 3,
+        "expected_empty": false,
+        "cell_xywh": [
+          1534,
+          0,
+          512,
+          768
+        ],
+        "alpha_ge16_pixels": 106601,
+        "alpha_ge128_pixels": 103690,
+        "alpha_1to15_pixels": 15810,
+        "alpha255_pixels": 49,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          38,
+          203,
+          455,
+          629
+        ],
+        "core_bbox_xyxy": [
+          39,
+          204,
+          454,
+          629
+        ],
+        "core_alpha_mode": 253,
+        "edge_left_alpha_ge16": 0,
+        "edge_right_alpha_ge16": 0,
+        "edge_top_alpha_ge16": 0,
+        "edge_bottom_alpha_ge16": 0,
+        "left_root_core_yminmax": [
+          768,
+          -1
+        ],
+        "qa_frame": "frames/RU06/03.png",
+        "qa_sha256": "A3ED75DFCE41796A08CDB22F0B59C96ABD0BF226442C02CD334BCDDDF508D4A8"
+      }
+    ],
+    "human_visual_acceptance": "PENDING",
+    "runtime_admission": false
+  },
+  {
+    "code": "RU07",
+    "name": "Shendilavri",
+    "revision": "v01",
+    "source": ".atena/generated/animation-candidates/asset-lot11/RU07_v01.png",
+    "source_sha256": "193FA34C0EF3AAB9F1F6F54F1BEBE5351985BCC5E526F33D099319C937AC880A",
+    "width": 2048,
+    "height": 768,
+    "columns": 4,
+    "rows": 1,
+    "frame_count": 4,
+    "loop": true,
+    "core_base_spread_px": 0.0,
+    "unique_qa_pixel_file_hashes": 4,
+    "frames": [
+      {
+        "index": 0,
+        "expected_empty": false,
+        "cell_xywh": [
+          0,
+          0,
+          512,
+          768
+        ],
+        "alpha_ge16_pixels": 113832,
+        "alpha_ge128_pixels": 108520,
+        "alpha_1to15_pixels": 18888,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 54,
+        "visible_bbox_xyxy": [
+          68,
+          158,
+          511,
+          605
+        ],
+        "core_bbox_xyxy": [
+          69,
+          159,
+          511,
+          604
+        ],
+        "core_alpha_mode": 253,
+        "edge_left_alpha_ge16": 0,
+        "edge_right_alpha_ge16": 54,
+        "edge_top_alpha_ge16": 0,
+        "edge_bottom_alpha_ge16": 0,
+        "left_root_core_yminmax": [
+          768,
+          -1
+        ],
+        "qa_frame": "frames/RU07/00.png",
+        "qa_sha256": "B77CAAF86C33C6E2DC34E94AE26EED154B820B1B0016D323D94112FD2D7B4771"
+      },
+      {
+        "index": 1,
+        "expected_empty": false,
+        "cell_xywh": [
+          512,
+          0,
+          512,
+          768
+        ],
+        "alpha_ge16_pixels": 113270,
+        "alpha_ge128_pixels": 108267,
+        "alpha_1to15_pixels": 19657,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 155,
+        "visible_bbox_xyxy": [
+          0,
+          159,
+          511,
+          605
+        ],
+        "core_bbox_xyxy": [
+          0,
+          159,
+          511,
+          604
+        ],
+        "core_alpha_mode": 253,
+        "edge_left_alpha_ge16": 31,
+        "edge_right_alpha_ge16": 124,
+        "edge_top_alpha_ge16": 0,
+        "edge_bottom_alpha_ge16": 0,
+        "left_root_core_yminmax": [
+          452,
+          460
+        ],
+        "qa_frame": "frames/RU07/01.png",
+        "qa_sha256": "D23E984B086AD24293B84B8F164E5EDB49329D57EFC7DC3A3D44BE45BEF97243"
+      },
+      {
+        "index": 2,
+        "expected_empty": false,
+        "cell_xywh": [
+          1024,
+          0,
+          512,
+          768
+        ],
+        "alpha_ge16_pixels": 114205,
+        "alpha_ge128_pixels": 109032,
+        "alpha_1to15_pixels": 19412,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 190,
+        "visible_bbox_xyxy": [
+          0,
+          158,
+          511,
+          605
+        ],
+        "core_bbox_xyxy": [
+          0,
+          159,
+          511,
+          604
+        ],
+        "core_alpha_mode": 253,
+        "edge_left_alpha_ge16": 91,
+        "edge_right_alpha_ge16": 99,
+        "edge_top_alpha_ge16": 0,
+        "edge_bottom_alpha_ge16": 0,
+        "left_root_core_yminmax": [
+          405,
+          421
+        ],
+        "qa_frame": "frames/RU07/02.png",
+        "qa_sha256": "1B6190F528FE96A5444A1672406FB3DAF381E4A479DE973D385A200E14B49274"
+      },
+      {
+        "index": 3,
+        "expected_empty": false,
+        "cell_xywh": [
+          1536,
+          0,
+          512,
+          768
+        ],
+        "alpha_ge16_pixels": 114850,
+        "alpha_ge128_pixels": 109202,
+        "alpha_1to15_pixels": 19438,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 98,
+        "visible_bbox_xyxy": [
+          0,
+          159,
+          490,
+          605
+        ],
+        "core_bbox_xyxy": [
+          0,
+          159,
+          489,
+          604
+        ],
+        "core_alpha_mode": 252,
+        "edge_left_alpha_ge16": 98,
+        "edge_right_alpha_ge16": 0,
+        "edge_top_alpha_ge16": 0,
+        "edge_bottom_alpha_ge16": 0,
+        "left_root_core_yminmax": [
+          427,
+          451
+        ],
+        "qa_frame": "frames/RU07/03.png",
+        "qa_sha256": "CCD0343D61AC9364F8DD53DD65A3DC513F90E35A7EBE16F96B8B3200922C2A9D"
+      }
+    ],
+    "human_visual_acceptance": "PENDING",
+    "runtime_admission": false
+  },
+  {
+    "code": "RU08",
+    "name": "Goranthis",
+    "revision": "v01",
+    "source": ".atena/generated/animation-candidates/asset-lot11/RU08_v01.png",
+    "source_sha256": "8BFE265AD8797BE288DE5A4BB4B61D2BFA41DA7CC9EB498761263CC4C8B2E334",
+    "width": 2048,
+    "height": 768,
+    "columns": 4,
+    "rows": 1,
+    "frame_count": 4,
+    "loop": true,
+    "core_base_spread_px": 0.0,
+    "unique_qa_pixel_file_hashes": 4,
+    "frames": [
+      {
+        "index": 0,
+        "expected_empty": false,
+        "cell_xywh": [
+          0,
+          0,
+          512,
+          768
+        ],
+        "alpha_ge16_pixels": 119580,
+        "alpha_ge128_pixels": 116991,
+        "alpha_1to15_pixels": 10566,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 124,
+        "visible_bbox_xyxy": [
+          72,
+          211,
+          511,
+          622
+        ],
+        "core_bbox_xyxy": [
+          73,
+          212,
+          511,
+          621
+        ],
+        "core_alpha_mode": 253,
+        "edge_left_alpha_ge16": 0,
+        "edge_right_alpha_ge16": 124,
+        "edge_top_alpha_ge16": 0,
+        "edge_bottom_alpha_ge16": 0,
+        "left_root_core_yminmax": [
+          768,
+          -1
+        ],
+        "qa_frame": "frames/RU08/00.png",
+        "qa_sha256": "2BA09C9CC2A3F84EFEBC668DBD98056BB35889300A63F5584E0258FEBB781927"
+      },
+      {
+        "index": 1,
+        "expected_empty": false,
+        "cell_xywh": [
+          512,
+          0,
+          512,
+          768
+        ],
+        "alpha_ge16_pixels": 120585,
+        "alpha_ge128_pixels": 117746,
+        "alpha_1to15_pixels": 14103,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 21,
+        "visible_bbox_xyxy": [
+          0,
+          210,
+          508,
+          622
+        ],
+        "core_bbox_xyxy": [
+          56,
+          211,
+          506,
+          621
+        ],
+        "core_alpha_mode": 253,
+        "edge_left_alpha_ge16": 15,
+        "edge_right_alpha_ge16": 6,
+        "edge_top_alpha_ge16": 0,
+        "edge_bottom_alpha_ge16": 0,
+        "left_root_core_yminmax": [
+          768,
+          -1
+        ],
+        "qa_frame": "frames/RU08/01.png",
+        "qa_sha256": "2AD0DF5BA6878E44BCA0886FB64E51C7F8A1E4F97C6AC57FEDA1D35EDB2A57DF"
+      },
+      {
+        "index": 2,
+        "expected_empty": false,
+        "cell_xywh": [
+          1024,
+          0,
+          512,
+          768
+        ],
+        "alpha_ge16_pixels": 120352,
+        "alpha_ge128_pixels": 117762,
+        "alpha_1to15_pixels": 12412,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          43,
+          211,
+          495,
+          622
+        ],
+        "core_bbox_xyxy": [
+          44,
+          212,
+          495,
+          621
+        ],
+        "core_alpha_mode": 253,
+        "edge_left_alpha_ge16": 0,
+        "edge_right_alpha_ge16": 0,
+        "edge_top_alpha_ge16": 0,
+        "edge_bottom_alpha_ge16": 0,
+        "left_root_core_yminmax": [
+          768,
+          -1
+        ],
+        "qa_frame": "frames/RU08/02.png",
+        "qa_sha256": "6F37051A5B67BCFC347938266E1F4C63A3F954033DD3675C049977D99088FDDF"
+      },
+      {
+        "index": 3,
+        "expected_empty": false,
+        "cell_xywh": [
+          1536,
+          0,
+          512,
+          768
+        ],
+        "alpha_ge16_pixels": 119869,
+        "alpha_ge128_pixels": 117144,
+        "alpha_1to15_pixels": 11692,
+        "alpha255_pixels": 0,
+        "edge_band4_alpha_ge16_pixels": 0,
+        "visible_bbox_xyxy": [
+          39,
+          211,
+          480,
+          622
+        ],
+        "core_bbox_xyxy": [
+          40,
+          212,
+          479,
+          621
+        ],
+        "core_alpha_mode": 253,
+        "edge_left_alpha_ge16": 0,
+        "edge_right_alpha_ge16": 0,
+        "edge_top_alpha_ge16": 0,
+        "edge_bottom_alpha_ge16": 0,
+        "left_root_core_yminmax": [
+          768,
+          -1
+        ],
+        "qa_frame": "frames/RU08/03.png",
+        "qa_sha256": "80718F1348F8EB26F7AB5BB92607B428C7FA45750342A778FEFA546009A5A22A"
+      }
+    ],
+    "human_visual_acceptance": "PENDING",
+    "runtime_admission": false
+  }
+]

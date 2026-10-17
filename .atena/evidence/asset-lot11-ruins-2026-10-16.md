@@ -1,0 +1,17 @@
+# Evidência ASSET-LOT11/v01
+
+DRAFT, origin planned, implementation_preceded_spec false. Escopo oito fontes/32poses aprovado per-plan por “aprovado, continue” em2026-10-16, antes de gerar. [Spec](../specs/SPEC-121-retomada-fila-imagens/asset-lot11-ruins-v01.md), [estado](../state/asset-lot11-ruins.yaml), [galeria](../generated/asset-lot11-2026-10-16/index.html), [entrega](../generated/asset-lot11-2026-10-16/ENTREGA-PARA-IMPLEMENTACAO.md).
+
+S-001: oito referências SE04..SE11/v02 inspecionadas e hashes revalidados, bíblia/identidades arquitetônicas e contextos por fase preparados. Identidade pessoal N/A para ruínas sem personagem. Referências CANON_PREPARATION_VISUAL_ONLY; novas poses DRAFT. Busca nominal prévia sem ciclos correspondentes, sem prova de inventário absoluto. RTK já habilitado. Vault/Nottcard não alterados.
+
+S-002:15chamadas built-in imagegen, oito seleções/32poses de QA, todas tentativas preservadas e prompts exatos persistidos. Nenhuma peça excedeu três versões. RU01..04v01,RU05v03,RU06v02,RU07v03,RU08v01. Nativos selecionados2048×768; tentativa RU06v01 mede2046×768. Orçamento total24 não foi integralmente consumido porque limite por peça impediu novas correções RU05/07/08. Cópias nativas byte a byte conferidas em generation-origins.json; referências preservadas.
+
+S-003: fontes/contatos/prancha e oito leituras80px inspecionados. Motivos por bioma reconhecíveis, fogueira Durao apagada e estrela caída Feng-tu preservada; rigidez fina e fluidez seguem para avaliação humana. RU05v03 deriva41px,RU07v03 deriva39,5px,RU08v01 contato145pixels na banda4px/deriva32,5px: três retenções técnicas explícitas após esgotar tentativas. RU08v02/v03 piores (contato660/697,deriva45,5/67,5); melhor v01 escolhida sem liberar retenção. Recortes RU08 podem conter parte de célula vizinha.
+
+Demais entradas sem contato na banda4px: RU01/02/03/04/06. Margens mínimas selecionadas4/19/53/32/5/47/13/0px, todas abaixo do alvo64px. Base do núcleo varia1/0/0/0/1/5/0/0px; deriva horizontal de centro bbox1/0/2,5/0,5/41/0,5/39,5/32,5px. Bbox inclui efeito/tecido, não pivô semântico certificado. Alfa residual e margem/registro demandam preparação. Nenhum PASS global de arte ou runtime, quatro hashes distintos não demonstram fluidez.
+
+S-004: oito players/32arquivos de QA com pausa/replay/scrub/FPS/repetição, contatos e leituras48/80/128, manifesto/hash/prompts/referências/origens e entrega local para Claude. Simulação DOM offline PASS para controles, sem render de navegador. Integridade PASS_DELIVERY_INTEGRITY_ONLY com três retenções, não valida runtime. Nenhum teste Godot/playtest porque não houve mudança de ativos oficiais/código/dados.
+
+Etapas4/4 entregues com retenções. Próximo checkpoint: revisão visual conjunta, aceite parcial permitido; aceite de direção não libera RU05/RU07/RU08. Preparação/admissão/consumer/integração e novo método/orçamento de reparo são escopos posteriores. Implementação com Claude, nenhuma mensagem enviada. Sem CANON, commit/push/merge/exportação nesta produção. Bugs P1 abertos BUG-025/027/028/029 e18 correções aguardando playtest continuam pendentes; check de sessão sem alertas de organização.
+
+Aceite posterior2026-10-16: 'aprovado, commit e continue'. Direção visual das oito revisões selecionadas/32poses de QA aceita DRAFT; recibo visual-acceptance.json no pacote. Supera PENDING visual anterior, preservando as três retenções técnicas RU05/RU07/RU08 e demais notas de preparação. Sem admissão/CANON. Commit local das entregas pendentes LOT10/LOT11 autorizado; sem push/exportação.

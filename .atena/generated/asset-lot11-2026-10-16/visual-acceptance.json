@@ -1,0 +1,82 @@
+{
+  "plan": "ASSET-LOT11",
+  "revision": "v01",
+  "date": "2026-10-16",
+  "owner_reply": "aprovado, commit e continue",
+  "status": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+  "content_state": "DRAFT",
+  "sequences": [
+    {
+      "code": "RU01",
+      "revision": "v01",
+      "source": ".atena/generated/animation-candidates/asset-lot11/RU01_v01.png",
+      "source_sha256": "7FBB03432751343CD05FD3D2DD2C5DF2F4688FF599D7D93E80812A3682141D99",
+      "frame_count": 4
+    },
+    {
+      "code": "RU02",
+      "revision": "v01",
+      "source": ".atena/generated/animation-candidates/asset-lot11/RU02_v01.png",
+      "source_sha256": "7A5617600A70C286DC3E390EE75C24E6FCEF2077815857811253B9EF4E413F53",
+      "frame_count": 4
+    },
+    {
+      "code": "RU03",
+      "revision": "v01",
+      "source": ".atena/generated/animation-candidates/asset-lot11/RU03_v01.png",
+      "source_sha256": "87FD05EDC7712C2C33D1AE397E143241FA438873E02579085B66859972F8E633",
+      "frame_count": 4
+    },
+    {
+      "code": "RU04",
+      "revision": "v01",
+      "source": ".atena/generated/animation-candidates/asset-lot11/RU04_v01.png",
+      "source_sha256": "558DDB212F53E18B9BB14006CF5F4F7D5BC94A836BD1D1156E34DB73D56D74E0",
+      "frame_count": 4
+    },
+    {
+      "code": "RU05",
+      "revision": "v03",
+      "source": ".atena/generated/animation-candidates/asset-lot11/RU05_v03.png",
+      "source_sha256": "95BE9D57456E194C7062DC589DA912E4DDF6E7C5362B57AD453C8575693164B2",
+      "frame_count": 4
+    },
+    {
+      "code": "RU06",
+      "revision": "v02",
+      "source": ".atena/generated/animation-candidates/asset-lot11/RU06_v02.png",
+      "source_sha256": "2B21DB714B2D9D56DFBACB03050C91D5DF84A23F02224F7B70FE354C3E5D371B",
+      "frame_count": 4
+    },
+    {
+      "code": "RU07",
+      "revision": "v03",
+      "source": ".atena/generated/animation-candidates/asset-lot11/RU07_v03.png",
+      "source_sha256": "B63C45B2697BCF1FCEF39C3DFCC96B707114789265CA91EE61E75A6FA9DD6C34",
+      "frame_count": 4
+    },
+    {
+      "code": "RU08",
+      "revision": "v01",
+      "source": ".atena/generated/animation-candidates/asset-lot11/RU08_v01.png",
+      "source_sha256": "8BFE265AD8797BE288DE5A4BB4B61D2BFA41DA7CC9EB498761263CC4C8B2E334",
+      "frame_count": 4
+    }
+  ],
+  "technical_holds_preserved": {
+    "RU05": "HORIZONTAL_DRIFT_AFTER_THREE_ATTEMPTS",
+    "RU07": "HORIZONTAL_DRIFT_AFTER_THREE_ATTEMPTS",
+    "RU08": "COLUMN_CONTACT_AND_DRIFT_AFTER_THREE_ATTEMPTS"
+  },
+  "preparation_pending": [
+    "ALPHA",
+    "MARGINS",
+    "REGISTRATION",
+    "ARCHITECTURAL_RIGIDITY"
+  ],
+  "runtime_admission": false,
+  "canonical_promotion": false,
+  "implementation_owner": "Claude",
+  "local_commit_authorized": true,
+  "push_export": "NOT_AUTHORIZED"
+}

@@ -1,0 +1,69 @@
+{
+  "plan": "ASSET-LOT10",
+  "revision": "v01",
+  "date": "2026-10-16",
+  "owner_reply": "atena aprovado, continue",
+  "status": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+  "content_state": "DRAFT",
+  "sequences": [
+    {
+      "code": "ES01",
+      "revision": "v02",
+      "source": ".atena/generated/animation-candidates/asset-lot10/ES01_v02.png",
+      "source_sha256": "67DABABF21591DDEE54F4597972324D40402205B7377A84A3171FDF38171C029",
+      "frame_count": 4
+    },
+    {
+      "code": "ES02",
+      "revision": "v01",
+      "source": ".atena/generated/animation-candidates/asset-lot10/ES02_v01.png",
+      "source_sha256": "5C6ACECA69F07A084FF8B9B3D20026EAAD5B504B7FEA08941BAE5669F0DDD8FF",
+      "frame_count": 4
+    },
+    {
+      "code": "ES03",
+      "revision": "v01",
+      "source": ".atena/generated/animation-candidates/asset-lot10/ES03_v01.png",
+      "source_sha256": "65B468A789662A66F51232F30A38D8CBB0C2FA48A5C571367C0885DAF16A4763",
+      "frame_count": 4
+    },
+    {
+      "code": "ES04",
+      "revision": "v03",
+      "source": ".atena/generated/animation-candidates/asset-lot10/ES04_v03.png",
+      "source_sha256": "3BB57DE872BA0C08CFEA8D9389F3D06EC81BA7A41442E836C1068A615232FEFC",
+      "frame_count": 4
+    },
+    {
+      "code": "ES05",
+      "revision": "v02",
+      "source": ".atena/generated/animation-candidates/asset-lot10/ES05_v02.png",
+      "source_sha256": "E5F4062790C5C5E74E5C5B226384D4555823A50B8A1FD605FB50E4308AAA4D97",
+      "frame_count": 4
+    },
+    {
+      "code": "ES06",
+      "revision": "v01",
+      "source": ".atena/generated/animation-candidates/asset-lot10/ES06_v01.png",
+      "source_sha256": "46E8DC6C7404C5A71DC1E4FE9D72F2D8A8713BAEEB82D907603CF60BFA1AF57F",
+      "frame_count": 4
+    },
+    {
+      "code": "ES07",
+      "revision": "v03",
+      "source": ".atena/generated/animation-candidates/asset-lot10/ES07_v03.png",
+      "source_sha256": "02D9228613136F89358A4C1405BB8616D971EB2FC4C20AF08278B4A0B7C79EAC",
+      "frame_count": 4
+    }
+  ],
+  "preparation_pending": [
+    "ALPHA",
+    "MARGINS",
+    "REGISTRATION",
+    "CHAMBER_PAIR_REVIEW"
+  ],
+  "runtime_admission": false,
+  "canonical_promotion": false,
+  "implementation_owner": "Claude",
+  "commit_push_export": "NOT_AUTHORIZED"
+}

@@ -1,0 +1,19 @@
+{
+  "status": "PASS_DELIVERY_INTEGRITY_ONLY",
+  "quality": "WITH_THREE_TECHNICAL_HOLDS",
+  "selected_source_hashes": 8,
+  "attempt_hashes": 15,
+  "qa_frame_hashes": 32,
+  "reference_hashes": 8,
+  "origin_records": 15,
+  "prompt_records": 15,
+  "local_links": 20,
+  "technical_holds": {
+    "RU05": "HORIZONTAL_DRIFT_AFTER_THREE_ATTEMPTS",
+    "RU07": "HORIZONTAL_DRIFT_AFTER_THREE_ATTEMPTS",
+    "RU08": "COLUMN_CONTACT_AND_DRIFT_AFTER_THREE_ATTEMPTS"
+  },
+  "human_visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+  "runtime_admission": false,
+  "browser_render_verified": false
+}

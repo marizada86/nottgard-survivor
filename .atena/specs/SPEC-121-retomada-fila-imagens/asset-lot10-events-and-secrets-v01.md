@@ -1,6 +1,6 @@
 # ASSET-LOT10/v01 — eventos restantes e segredos
 
-DRAFT, origin planned, implementation_preceded_spec false. PLAN_CHANGE_REQUEST após aceite LOT09 (“aprovado, continue”). Inventário/proposta preparados; este novo escopo aguarda aprovação específica. Modalidade per-plan preservada, sem repetir seleção de nível. Claude permanece responsável por preparação/admissão/implementação. PLAN-103 e outras frentes preservados.
+DRAFT, origin planned, implementation_preceded_spec false. PLAN_CHANGE_REQUEST após aceite LOT09 (“aprovado, continue”). Inventário/proposta preparados; este novo escopo foi aprovado explicitamente em2026-10-16 (“aprovado, continue”), antes da geração. Modalidade per-plan preservada, sem repetir seleção de nível. Claude permanece responsável por preparação/admissão/implementação. PLAN-103 e outras frentes preservados.
 
 ## Autoridade e prontidão
 
@@ -26,9 +26,13 @@ ES06 e ES07 são ciclos independentes dos dois estados estáticos existentes; pa
 
 Sete folhas, quatro poses por folha,28desenhos; uma galeria com sete players. Até três tentativas por fonte por defeito objetivo, máximo21chamadas. Nenhuma variante adicional. Cada chamada built-in imagegen com sua referência, originais/versionamentos/prompts/hashes preservados.
 
-1. S-001 prontidão/proposta: concluída. Sete identidades e referências inspecionadas, contextos e limites definidos. BLOCKING único é aprovação deste novo escopo.
+1. S-001 prontidão/proposta: concluída. Sete identidades e referências inspecionadas, contextos e limites definidos. Aprovação recebida antes da produção; nenhuma lacuna BLOCKING textual restante.
 2. S-002 produção: uma linha4×1 por fonte, alvo2048×768, células512×768, motivo≤300px de largura, margem solicitada≥64px e base localy600. Medir resultado nativo, sem prometer dimensões exatas. Mesmo enquadramento/base/escala, fases luz baixa→pico discreto→relaxamento→próxima do início. Sem gate intermediário por fonte.
 3. S-003 QA: quatro poses efetivas, transparência/solidez, células inteiras, zero contato alfa≥16 na banda4px, margens reais, identidade/rigidez, base/escala e retorno4→1. Leituras48/80/128 e contatos preservando proporção. Hash distinto não comprova animação. Defeito persistente no limite gera retenção seletiva; não ocultar corte ou fabricar poses por crop. Notas de alfa/registro não equivalem a PASS de admissão.
 4. S-004 galeria única, sete players com pausa/replay/FPS/repetição/scrub, fontes em `.atena/generated/animation-candidates/asset-lot10/`, pacote em `.atena/generated/asset-lot10-2026-10-16/`; manifesto, referências, prompts, medidas, evidência e entrega local para Claude. Validar caminhos/hashes/controles, distinguir DOM offline de render real. Parar no aceite visual conjunto, permitindo aceite parcial por código/revisão.
 
 RESOLVABLE: leitura de luz discreta, alfa/margem, registro/rigidez e pareamento arquitetônico. DEFERRED: CANON, normalização/pivô/escala/temporização/consumer, admissão/implementação, transições, contraste runtime e playtest. Recuperação por fontes versionadas, sem sobrescrever referências nem alterar entregas anteriores. Escopo não muda arquitetura, mecânica, código/dados, dependências ou permissões; não resolve bugs e retenções anteriores. Sem commit, push, merge, exportação, publicação ou mensagem a Claude. Aprovação per-plan permitirá executar S-001..S-004; gate visual permanece independente.
+
+Resultado2026-10-16:4/4 etapas entregues, sete fontes/28poses em13tentativas; ES01/ES05v02, ES04/ES07v03, demaisv01. Todos nativos2048×768, sem contato alfa≥16 nas bandas4px; várias margens abaixo64px, alfa/registro e pareamento das câmaras pendentes. [Evidência](../../evidence/asset-lot10-events-and-secrets-2026-10-16.md). Aceite visual conjunto PENDING, nenhuma admissão/CANON/implementação.
+
+Aceite posterior2026-10-16: 'atena aprovado, continue'. Sete revisões selecionadas/28poses aceitas como direção visual DRAFT, recibo visual-acceptance.json no pacote. Supera PENDING visual anterior, preserva preparação/registro/pareamento e ausência de admissão/CANON. Implementação com Claude.

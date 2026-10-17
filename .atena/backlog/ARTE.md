@@ -250,3 +250,11 @@ LOT08/v01: direção visual das onze revisões selecionadas aceita explicitament
 Produção2026-10-16: [ASSET-LOT09/v01 DRAFT](../generated/asset-lot09-2026-10-16/index.html), ART-032: trono, arco, massa, estrela, coração, esporo e limo; sete fontes/28poses, dez tentativas. EP01v03/EP02v02/demaisv01. Zero contato nas bandas4px selecionadas; margens/alfa/registro exigem preparação por Claude. Aceite visual PENDING; sem admissão ou implementação.
 
 LOT09/v01: sete revisões/28poses aceitas visualmente em2026-10-16 ('aprovado, continue'); DRAFT, preparação e implementação com Claude, sem admissão. Recibo na galeria.
+
+Produção2026-10-16: [ASSET-LOT10/v01 DRAFT](../generated/asset-lot10-2026-10-16/index.html), ART-046/ART-043: Pacto, Relicário, Carroça, Eclipse, Eco e câmaras selada/aberta; sete fontes/28poses em13tentativas. ES01/ES05v02, ES04/ES07v03, demaisv01. Zero contato nas bandas4px; alfa/margens/registro/pareamento pendentes. Aceite visual PENDING, preparação e implementação com Claude; sem admissão.
+
+LOT10/v01: sete revisões selecionadas/28poses aceitas visualmente em2026-10-16 ('atena aprovado, continue'); recibo no pacote. DRAFT, sem admissão; preparação e implementação com Claude.
+
+Produção2026-10-16: [ASSET-LOT11/v01 DRAFT](../generated/asset-lot11-2026-10-16/index.html), ART-043: oito ruínas/32poses de QA em15tentativas. RU01..04v01,RU05v03,RU06v02,RU07v03,RU08v01. RU05/RU07 retidos por deriva; RU08 retido por contato e deriva após três tentativas, v02/v03 piores. Cinco demais para revisão com alfa/margens/registro pendentes, sem admissão. Aceite visual conjunto PENDING, implementação com Claude.
+
+LOT11/v01: direção visual das oito revisões/32poses aceita em2026-10-16 ('aprovado, commit e continue'), DRAFT. Retenções RU05/RU07/RU08 preservadas; sem admissão, implementação com Claude. Commit local LOT10/LOT11 autorizado.

@@ -1,0 +1,43 @@
+id: ASSET-LOT11
+revision: v01
+content_state: DRAFT
+origin: planned
+implementation_preceded_spec: false
+request_classification: PLAN_CHANGE_REQUEST
+owner_request: 'atena aprovado, continue'
+mode: per-plan
+approval_status: APPROVED_EXPLICITLY
+owner_scope_reply: 'aprovado, continue'
+approved_date: '2026-10-16'
+status: VISUALLY_ACCEPTED_DRAFT_WITH_TECHNICAL_HOLDS
+checkpoint: S-004/OWNER_VISUAL_ACCEPTANCE_RECORDED
+ordered_steps: [S-001, S-002, S-003, S-004]
+current_step_position: 4
+completed_steps: 4
+total_steps: 4
+remaining_steps_after_current: 0
+scope: [RU01, RU02, RU03, RU04, RU05, RU06, RU07, RU08]
+planned_sources: 8
+planned_drawings: 32
+max_generation_calls: 24
+generated: 8
+generation_attempts: 15
+qa_drawings: 32
+selected_candidates: [RU01/v01, RU02/v01, RU03/v01, RU04/v01, RU05/v03, RU06/v02, RU07/v03, RU08/v01]
+human_visual_acceptance: APPROVED_EXPLICITLY_SOURCE_DIRECTION
+visual_owner_reply: 'aprovado, commit e continue'
+visual_accepted_date: '2026-10-16'
+visual_acceptance_receipt: .atena/generated/asset-lot11-2026-10-16/visual-acceptance.json
+technical_holds: [RU05_HORIZONTAL_DRIFT, RU07_HORIZONTAL_DRIFT, RU08_COLUMN_CONTACT_AND_DRIFT]
+preparation_notes: [ALPHA, MARGINS, REGISTRATION, ARCHITECTURAL_RIGIDITY]
+gallery: .atena/generated/asset-lot11-2026-10-16/index.html
+evidence: .atena/evidence/asset-lot11-ruins-2026-10-16.md
+specification: .atena/specs/SPEC-121-retomada-fila-imagens/asset-lot11-ruins-v01.md
+references: .atena/generated/asset-lot11-2026-10-16/references.json
+implementation_owner: Claude
+runtime_admission: false
+canonical_promotion: false
+next_execution_authorized: false
+commit_push_export: NOT_AUTHORIZED
+return_plan: PLAN-103
+next_objective: 'Preparar plano de reparo RU05/RU07/RU08; implementação com Claude'
