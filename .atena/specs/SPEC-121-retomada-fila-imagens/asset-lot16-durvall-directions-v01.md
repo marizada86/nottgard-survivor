@@ -1,0 +1,24 @@
+# ASSET-LOT16/v01 — Durvall, cinco direções restantes
+
+DRAFT, origin planned, implementation_preceded_spec false. Continuação IN_PLAN do escopo já registrado em PLAN-103/B-002, decisãoD22: piloto v03 aprovado provisoriamente, produzir P6..P10 antes de reavaliar. Pedido atual “atena, continue” retoma produção de assets; implementação permanece com Claude. Modo per-batch do marco, B-002 já aprovado; não atribuir nova aprovação visual às fontes que serão geradas.
+
+## Prontidão e autoridade
+
+[Estado M1/D22](../../state/plan-103-demo-completa-e-polida.yaml), [prompts exatos](../../generated/m1-movimento/piloto-durvall/PROMPTS-v03-direcoes.md), [ficha de identidade aprovada G-D1](../../vault/drafts/FICHAS-DE-IDENTIDADE-herois-m1-2026-10-14.md), [registro canônico002](../../vault/canon/ASSET-APPROVAL-REGISTER-002-durvall-brook-2026-09-27.md). O cânone fixa fontes antigas; não é promoção automática destas novas revisões. Não importar decisões/lore do checkout principal.
+
+Retornos locais e do checkout principal consultados: há E/SE/S/attack, não foram encontrados os cinco nomes P6..P10 solicitados. FILA-031 é ID reservado no M1, não arquivo desaparecido. A reconciliação dos31arquivosCHATGPT-FILA deixou esse escopo reservado de fora; a conclusão anterior de nenhuma fonte obrigatória identificada era incompleta para todo o projeto.
+
+Referências vistas: idle de Durvall emquatroposes, gabarito3×2 e move_e piloto v03 aceito. Para geração anexar somente idle e gabarito, como contrato; não anexar tiras defeituosas ou espelhar. Identidade aplicável: Durvall Gellad, drow cinza-azulado, cabelo branco longo, armadura negra laminada/espinhos, faixa vinho, espada azul-gelo na mão anatômicaESQUERDA. Pendente de peito só na frente; não inventar símbolo/divindade/colar. Costas N/NE/NW mostram cabelo/nuca/armadura posteriores; nenhum rosto emN. W perfil esquerdo e SW três-quartos frontal. Roupa/equipamento constantes. BíbliaDRAFTv03: pixel pintado detalhado, luz superior esquerda, câmera três-quartos/isométrica, sem cenário/chão/sombra/texto. Cena textual: deslocamento nos mapas existentes. Sem nova lore.
+
+## Escopo e execução
+
+P6N, P7NE, P8W, P9SW, P10NW. Cinco fontes em grade3×2 com seis poses cada,30poses previstas. Uma chamada por folha/direção, sem fabricar espelhos ou poses por transformação. Solicitar1536×1024, células512square, corpo330px e espada inteira com faixas vazias; medir nativo real. Repetição máxima3tentativas/folha conforme add.yaml, teto operacional15chamadas. Originais/cópias e entradas/prompts preservados. Nomes versionados em `.atena/generated/art-candidates/asset-lot16/`, sem sobrescrever retornos antigos.
+
+1. S-001 prontidão: confirmar lacuna, identidade/cena/referências/autoridade e snapshots. Concluída antes de produzir, sem BLOCKING para estas cinco direções já solicitadas. Brook/P7da ficha e decisões de outros heróis não condicionam Durvall.
+2. S-002 gerar cinco folhas built-in imagegen, usando prompts existentes. Correções objetivas até limite; reter problemas remanescentes.
+3. S-003 QA: células/espada completa/faixas, mão, facing, alternância0/3, continuidade, alfa/margens e escala/base. Clones de inspeção por célula, contatos integrais e leituras48/80/128; não ocultar deriva por alinhamento. Não alegar ausência de patinar/fluidez pelo bbox.
+4. S-004 galeria conjunta com cinco playersloop6,5/10FPS para comparação ao piloto, pausa/replay/repeat/scrub; origens/hashes/prompts/manifesto/evidência e handoff localClaude. Checks de links/controles offline, distintos de render/playtest. Parar no aceite humano das cinco novas revisões e reavaliação do piloto v03.
+
+Saídas em `.atena/generated/asset-lot16-2026-10-17/`. Todo conteúdo novoDRAFT, sem runtime/CANON, normalização de importação, cópia para assets, laboratório, alteração deFPS/velocidade/código/dados, commit/push/export ou mensagem externa. P1BUG025/027/028/029 continuam abertos. PLAN-103/B-003/B-004, desvios anteriores e fontesLOT02..15 preservados. A entrega anterior de17pacotes continua aceita; o inventário de produção ganha a ressalva do escopoM1 reservado.
+
+Resultado2026-10-17: produção4/4 concluída com retenções,5selecionadas/13tentativas/30QA/90leituras. P6/P7/P8/P10v01, P9v02. P9retida por conflito de mão/direção após3tentativas; P8células515×509, demais512square. Sem contato banda4px; alfa/registro/escala/cadência pendentes. A avaliação inicial de halo no preview foi corrigida pela composiçãochecker com alfa, que não mostra aquele fundo. [Galeria](../../generated/asset-lot16-2026-10-17/index.html), [manifesto](../../generated/asset-lot16-2026-10-17/manifest.json), [evidência](../../evidence/asset-lot16-durvall-directions-2026-10-17.md). Checkpoint OWNER_DURVALL_DIRECTIONS_REVIEW/PENDING: aceitar parcialmente direção/revisão permitido, sem liberar retenções ou autorizar novas gerações além deste lote.

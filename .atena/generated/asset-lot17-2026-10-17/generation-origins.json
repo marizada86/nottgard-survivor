@@ -1,0 +1,217 @@
+[
+  {
+    "id": "SW00_v01",
+    "source": ".atena/generated/art-candidates/asset-lot17/SW00_v01.png",
+    "sha256": "D04A5C754975E4AF2F00B0EA9D5BE77048A3DBF0199622D55ECC6C4ECB9C2D0F",
+    "native_origin": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a13fe9-1c9e-7d32-9ccb-d1a37a3f79ec\\exec-c99da82c-9d9f-4a25-a515-f0a564a803d2.png",
+    "byte_exact_copy": true,
+    "prompt": "prompts/SW00_v01.txt",
+    "input_references": [
+      {
+        "path": ".atena/generated/m1-movimento/piloto-durvall/durvall_idle.png",
+        "sha256": "A483864E5764C63CE11412099DBB0FD9D26B4CAEA78C14F0F1DF0D69F4C12F06"
+      }
+    ],
+    "selected": false
+  },
+  {
+    "id": "SW00_v02",
+    "source": ".atena/generated/art-candidates/asset-lot17/SW00_v02.png",
+    "sha256": "463519E6619485E17005B71D25E965F4175D00CCC7BDF47F6EBF0D1298606DCB",
+    "native_origin": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a13fe9-1c9e-7d32-9ccb-d1a37a3f79ec\\exec-733a5234-01ef-4242-859a-83cc152ef85a.png",
+    "byte_exact_copy": true,
+    "prompt": "prompts/SW00_v02.txt",
+    "input_references": [
+      {
+        "path": ".atena/generated/art-candidates/asset-lot17/SW00_v01.png",
+        "sha256": "D04A5C754975E4AF2F00B0EA9D5BE77048A3DBF0199622D55ECC6C4ECB9C2D0F"
+      }
+    ],
+    "selected": true
+  },
+  {
+    "id": "SW01_v01",
+    "source": ".atena/generated/art-candidates/asset-lot17/SW01_v01.png",
+    "sha256": "6D609F15934F12A21AE47D53A45E5DDE5C068ECE2D418C267DBB76BB56C1E5BF",
+    "native_origin": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a13fe9-1c9e-7d32-9ccb-d1a37a3f79ec\\exec-b39cd89d-3ec7-4f0d-9256-2c66851341ba.png",
+    "byte_exact_copy": true,
+    "prompt": "prompts/SW01_v01.txt",
+    "input_references": [
+      {
+        "path": ".atena/generated/art-candidates/asset-lot17/SW00_v02.png",
+        "sha256": "463519E6619485E17005B71D25E965F4175D00CCC7BDF47F6EBF0D1298606DCB"
+      }
+    ],
+    "selected": false
+  },
+  {
+    "id": "SW01_v02",
+    "source": ".atena/generated/art-candidates/asset-lot17/SW01_v02.png",
+    "sha256": "56356F6D004D9A3F38CA9BEB5B6F2676F456BBB8689D2A7A9A94551F07EB65BB",
+    "native_origin": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a13fe9-1c9e-7d32-9ccb-d1a37a3f79ec\\exec-b85dfc6c-fae1-48de-8ca8-394f7df495fa.png",
+    "byte_exact_copy": true,
+    "prompt": "prompts/SW01_v02.txt",
+    "input_references": [
+      {
+        "path": ".atena/generated/art-candidates/asset-lot17/SW00_v02.png",
+        "sha256": "463519E6619485E17005B71D25E965F4175D00CCC7BDF47F6EBF0D1298606DCB"
+      },
+      {
+        "path": ".atena/generated/art-candidates/asset-lot17/SW01_v01.png",
+        "sha256": "6D609F15934F12A21AE47D53A45E5DDE5C068ECE2D418C267DBB76BB56C1E5BF"
+      }
+    ],
+    "selected": true
+  },
+  {
+    "id": "SW02_v01",
+    "source": ".atena/generated/art-candidates/asset-lot17/SW02_v01.png",
+    "sha256": "6336B90E2F8781530123DF54BCC3BD7D1D96066D1C317A482004C76C6A1662E0",
+    "native_origin": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a13fe9-1c9e-7d32-9ccb-d1a37a3f79ec\\exec-0c54b58d-c8e1-4678-b13e-6598ff805ee8.png",
+    "byte_exact_copy": true,
+    "prompt": "prompts/SW02_v01.txt",
+    "input_references": [
+      {
+        "path": ".atena/generated/art-candidates/asset-lot17/SW00_v02.png",
+        "sha256": "463519E6619485E17005B71D25E965F4175D00CCC7BDF47F6EBF0D1298606DCB"
+      }
+    ],
+    "selected": false
+  },
+  {
+    "id": "SW02_v02",
+    "source": ".atena/generated/art-candidates/asset-lot17/SW02_v02.png",
+    "sha256": "87D7817D8C3994F84AA2860651F19AAD5DD7704987FB316594281498BC0AD651",
+    "native_origin": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a13fe9-1c9e-7d32-9ccb-d1a37a3f79ec\\exec-83cd9e50-bfeb-4578-b9aa-f3cab2d897f4.png",
+    "byte_exact_copy": true,
+    "prompt": "prompts/SW02_v02.txt",
+    "input_references": [
+      {
+        "path": ".atena/generated/art-candidates/asset-lot17/SW00_v02.png",
+        "sha256": "463519E6619485E17005B71D25E965F4175D00CCC7BDF47F6EBF0D1298606DCB"
+      },
+      {
+        "path": ".atena/generated/art-candidates/asset-lot17/SW02_v01.png",
+        "sha256": "6336B90E2F8781530123DF54BCC3BD7D1D96066D1C317A482004C76C6A1662E0"
+      }
+    ],
+    "selected": true
+  },
+  {
+    "id": "SW03_v01",
+    "source": ".atena/generated/art-candidates/asset-lot17/SW03_v01.png",
+    "sha256": "7A41F2D903F60FB1985C8741BB91E0DAC3F0DC9139022E6FDF41C762630657A1",
+    "native_origin": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a13fe9-1c9e-7d32-9ccb-d1a37a3f79ec\\exec-3f2cdbc1-0da4-4d2d-b2ee-5b49f6732328.png",
+    "byte_exact_copy": true,
+    "prompt": "prompts/SW03_v01.txt",
+    "input_references": [
+      {
+        "path": ".atena/generated/art-candidates/asset-lot17/SW00_v02.png",
+        "sha256": "463519E6619485E17005B71D25E965F4175D00CCC7BDF47F6EBF0D1298606DCB"
+      }
+    ],
+    "selected": false
+  },
+  {
+    "id": "SW03_v02",
+    "source": ".atena/generated/art-candidates/asset-lot17/SW03_v02.png",
+    "sha256": "C331A25B3C71946379F3CC9DD461C4DC644D219F151424D163D7F6646F0D52C4",
+    "native_origin": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a13fe9-1c9e-7d32-9ccb-d1a37a3f79ec\\exec-097a9a00-d95a-4878-839a-148f6686a212.png",
+    "byte_exact_copy": true,
+    "prompt": "prompts/SW03_v02.txt",
+    "input_references": [
+      {
+        "path": ".atena/generated/art-candidates/asset-lot17/SW00_v02.png",
+        "sha256": "463519E6619485E17005B71D25E965F4175D00CCC7BDF47F6EBF0D1298606DCB"
+      },
+      {
+        "path": ".atena/generated/art-candidates/asset-lot17/SW04_v01.png",
+        "sha256": "4CB7629E246B5C220CE4F30DD7D27BF36982A5F635CA6E7303B5B3CF105C9D76"
+      }
+    ],
+    "selected": true
+  },
+  {
+    "id": "SW04_v01",
+    "source": ".atena/generated/art-candidates/asset-lot17/SW04_v01.png",
+    "sha256": "4CB7629E246B5C220CE4F30DD7D27BF36982A5F635CA6E7303B5B3CF105C9D76",
+    "native_origin": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a13fe9-1c9e-7d32-9ccb-d1a37a3f79ec\\exec-13835d58-057d-4ba7-8c80-17b11b4dab8b.png",
+    "byte_exact_copy": true,
+    "prompt": "prompts/SW04_v01.txt",
+    "input_references": [
+      {
+        "path": ".atena/generated/art-candidates/asset-lot17/SW03_v01.png",
+        "sha256": "7A41F2D903F60FB1985C8741BB91E0DAC3F0DC9139022E6FDF41C762630657A1"
+      }
+    ],
+    "selected": false
+  },
+  {
+    "id": "SW04_v02",
+    "source": ".atena/generated/art-candidates/asset-lot17/SW04_v02.png",
+    "sha256": "4F7732E31CAF14BC5BA0C377107B43FD4582916CD8E3BF04A3578D94F40704E5",
+    "native_origin": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a13fe9-1c9e-7d32-9ccb-d1a37a3f79ec\\exec-0fcea12c-3c11-4ded-8164-201aaecfb9ae.png",
+    "byte_exact_copy": true,
+    "prompt": "prompts/SW04_v02.txt",
+    "input_references": [
+      {
+        "path": ".atena/generated/art-candidates/asset-lot17/SW00_v02.png",
+        "sha256": "463519E6619485E17005B71D25E965F4175D00CCC7BDF47F6EBF0D1298606DCB"
+      },
+      {
+        "path": ".atena/generated/art-candidates/asset-lot17/SW04_v01.png",
+        "sha256": "4CB7629E246B5C220CE4F30DD7D27BF36982A5F635CA6E7303B5B3CF105C9D76"
+      }
+    ],
+    "selected": false
+  },
+  {
+    "id": "SW04_v03",
+    "source": ".atena/generated/art-candidates/asset-lot17/SW04_v03.png",
+    "sha256": "F41B23C3A4B6584246484B427ADC4635019EA3C34EF9DA734B43B871BF44CA1B",
+    "native_origin": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a13fe9-1c9e-7d32-9ccb-d1a37a3f79ec\\exec-1f62ec9a-47f5-4772-a0d6-0868b190595b.png",
+    "byte_exact_copy": true,
+    "prompt": "prompts/SW04_v03.txt",
+    "input_references": [
+      {
+        "path": ".atena/generated/art-candidates/asset-lot17/SW03_v02.png",
+        "sha256": "C331A25B3C71946379F3CC9DD461C4DC644D219F151424D163D7F6646F0D52C4"
+      }
+    ],
+    "selected": true
+  },
+  {
+    "id": "SW05_v01",
+    "source": ".atena/generated/art-candidates/asset-lot17/SW05_v01.png",
+    "sha256": "0F487CA062436C11B333A84E96810D02F8784EBE261FE6617D7E05B695DA83C5",
+    "native_origin": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a13fe9-1c9e-7d32-9ccb-d1a37a3f79ec\\exec-7f9f1915-639a-4ad5-ba3a-9e5277cb4957.png",
+    "byte_exact_copy": true,
+    "prompt": "prompts/SW05_v01.txt",
+    "input_references": [
+      {
+        "path": ".atena/generated/art-candidates/asset-lot17/SW00_v02.png",
+        "sha256": "463519E6619485E17005B71D25E965F4175D00CCC7BDF47F6EBF0D1298606DCB"
+      }
+    ],
+    "selected": false
+  },
+  {
+    "id": "SW05_v02",
+    "source": ".atena/generated/art-candidates/asset-lot17/SW05_v02.png",
+    "sha256": "1F9402628E6D86AE0117A7D33FB9406BD61368406772D426520FC661B3E3CAEF",
+    "native_origin": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a13fe9-1c9e-7d32-9ccb-d1a37a3f79ec\\exec-0827a623-dad6-40ec-8afb-b56592d228e0.png",
+    "byte_exact_copy": true,
+    "prompt": "prompts/SW05_v02.txt",
+    "input_references": [
+      {
+        "path": ".atena/generated/art-candidates/asset-lot17/SW00_v02.png",
+        "sha256": "463519E6619485E17005B71D25E965F4175D00CCC7BDF47F6EBF0D1298606DCB"
+      },
+      {
+        "path": ".atena/generated/art-candidates/asset-lot17/SW05_v01.png",
+        "sha256": "0F487CA062436C11B333A84E96810D02F8784EBE261FE6617D7E05B695DA83C5"
+      }
+    ],
+    "selected": true
+  }
+]

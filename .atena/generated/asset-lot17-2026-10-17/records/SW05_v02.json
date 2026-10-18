@@ -1,0 +1,9 @@
+{
+  "id": "SW05_v02",
+  "native": "exec-0827a623-dad6-40ec-8afb-b56592d228e0.png",
+  "prompt": "Precise game-animation composition edit. TWO references: FIRST is mandatory SMALLER CHARACTER SIZE and canvas-registration authority. SECOND gives ONLY the legs' phase, NOT its enlarged size. Make output same scale/bodywidth/canvasposition as FIRST. Body headtop atabout230pixels and groundcontact at1060pixels on1254square, entirehead-to-bootheightabout830pixels (~two thirdscanvas), generous empty margins. DO NOT fill canvas or follow secondimage larger torso. Transfer secondimage limb gesture to FIRST image's smaller body.\nFrame5: High return: SCREENRIGHT/anatomicalLEFT leg supports, SCREENLEFT/anatomicalRIGHT knee raised forward/boot lifted preparing return to firstimage contact.\nKeep firstimage exact Durvall identity and SOUTHWEST threequarter FRONT direction facing DOWN-LEFT. AnatomicalLEFT hand, attached to VIEWER RIGHT shoulder, holds sword HILT at viewerRIGHT belly; sword crosses front diagonallyDOWNLEFT. ViewerLEFT hand EMPTY. This weapon-arm assignment must remain clear, no swapped hand or mirror. Whitehair, bluegrayface, blackspikedarmor, winesash, smallbluechestpendant and full icyblueblade same as FIRST. Maintain same sword size and camera as FIRST. Only legs and slight hair/sash follow change. True transparent square, no ground/shadow/aura/text.",
+  "input_references": [
+    ".atena/generated/art-candidates/asset-lot17/SW00_v02.png",
+    ".atena/generated/art-candidates/asset-lot17/SW05_v01.png"
+  ]
+}

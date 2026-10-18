@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "scope": "Offline minimal DOM simulation, not browser render",
+  "players": 6,
+  "animated_qa_frames": 36,
+  "checks": [
+    "PNG paths",
+    "aspect ratio",
+    "8FPS default",
+    "sixframe wrap",
+    "pause",
+    "scrub",
+    "replay",
+    "2FPS timing",
+    "repeat on/off",
+    "source links"
+  ]
+}

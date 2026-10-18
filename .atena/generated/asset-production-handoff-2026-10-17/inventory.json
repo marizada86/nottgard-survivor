@@ -1,0 +1,739 @@
+{
+  "id": "ASSET-PRODUCTION-HANDOFF",
+  "revision": "v01",
+  "date": "2026-10-17",
+  "origin": "operational-reconciliation",
+  "request_classification": "IN_PLAN",
+  "owner_request": "aprovado, proximo",
+  "production_result": "RESERVED_M1_SCOPE_PRODUCED_LOT16_AWAITING_VISUAL_REVIEW",
+  "packages": [
+    {
+      "id": "LOT02",
+      "title": "HUD, catálogo e pilar",
+      "folder": "asset-lot02-2026-10-15",
+      "holds": "Preparar UI e pivô do pilar; respeitar barra atual4px.",
+      "content_state": "DRAFT",
+      "visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+      "implementation_owner": "Claude",
+      "files": {
+        "index.html": {
+          "path": ".atena/generated/asset-lot02-2026-10-15/index.html",
+          "sha256": "12C58C766BB3AFD558540FE731186939B49704D6E4CBDB5DC6A14F7C12DF3478"
+        },
+        "manifest.json": {
+          "path": ".atena/generated/asset-lot02-2026-10-15/manifest.json",
+          "sha256": "0970F48AD44C69E2EF362566BFC2E236909555BB069C22C8D462139ABE3E1013"
+        },
+        "visual-acceptance.json": {
+          "path": ".atena/generated/asset-lot02-2026-10-15/visual-acceptance.json",
+          "sha256": "314A32367FD2CACDCC533E0ADAF641DD334C4213B93482C2D7FA4C37C47DD659"
+        },
+        "ENTREGA-PARA-IMPLEMENTACAO.md": {
+          "path": ".atena/generated/asset-lot02-2026-10-15/ENTREGA-PARA-IMPLEMENTACAO.md",
+          "sha256": "9E07EC03A3A3E8FCC241F7791FE98C96B40CD28B78F3CCA108F5770C518C57BD"
+        }
+      }
+    },
+    {
+      "id": "LOT03",
+      "title": "Baús, loja, ferreiro, curandeiro e barril",
+      "folder": "asset-lot03-2026-10-16",
+      "holds": "Alfa, base e escala; seis sequências.",
+      "content_state": "DRAFT",
+      "visual_acceptance": "APPROVED_EXPLICITLY_SEQUENCE_DIRECTION",
+      "implementation_owner": "Claude",
+      "files": {
+        "index.html": {
+          "path": ".atena/generated/asset-lot03-2026-10-16/index.html",
+          "sha256": "4E3A750D7DAAB60AE31433EA7163A2F9B166BD94BEE39219A048244BFA706EB6"
+        },
+        "manifest.json": {
+          "path": ".atena/generated/asset-lot03-2026-10-16/manifest.json",
+          "sha256": "1BDF2E28C5465CA2E3F19EDFCC1EAF82716B43CFA26B84E045950AB0810F365C"
+        },
+        "visual-acceptance.json": {
+          "path": ".atena/generated/asset-lot03-2026-10-16/visual-acceptance.json",
+          "sha256": "8EA94FB46F7C823679BD459296046957D96CB2451B0CFCBA0E1DEA0C325F0C35"
+        },
+        "ENTREGA-PARA-IMPLEMENTACAO.md": {
+          "path": ".atena/generated/asset-lot03-2026-10-16/ENTREGA-PARA-IMPLEMENTACAO.md",
+          "sha256": "BAB0EA8168BC6A39E5E84895CC0D8ABDF6231929D5A65DF385F894460FEBA232"
+        }
+      }
+    },
+    {
+      "id": "LOT04",
+      "title": "Seis quebráveis",
+      "folder": "asset-lot04-2026-10-16",
+      "holds": "Alfa, registro e continuidade de ruptura.",
+      "content_state": "DRAFT",
+      "visual_acceptance": "APPROVED_EXPLICITLY_SEQUENCE_DIRECTION",
+      "implementation_owner": "Claude",
+      "files": {
+        "index.html": {
+          "path": ".atena/generated/asset-lot04-2026-10-16/index.html",
+          "sha256": "28F2DB1CBC8F130DBEF5030F2238F7071028ADA7345B843C116BD7DA8C4D7DA0"
+        },
+        "manifest.json": {
+          "path": ".atena/generated/asset-lot04-2026-10-16/manifest.json",
+          "sha256": "88ADBCF3A9A136A34E30419AA1E74785D19F7D04318C47502B3F2DE0F89ABEA4"
+        },
+        "visual-acceptance.json": {
+          "path": ".atena/generated/asset-lot04-2026-10-16/visual-acceptance.json",
+          "sha256": "24D0D2CFC1EF4FD8CF95149F38D6495B11E4DF74005BA52D2C5AD444201BC19E"
+        },
+        "ENTREGA-PARA-IMPLEMENTACAO.md": {
+          "path": ".atena/generated/asset-lot04-2026-10-16/ENTREGA-PARA-IMPLEMENTACAO.md",
+          "sha256": "CF83D60B42ADD57CF00C4A66423BC0CC1DFD1373D5A653138900106EC02C7AC8"
+        }
+      }
+    },
+    {
+      "id": "LOT05",
+      "title": "Seis quebráveis adicionais",
+      "folder": "asset-lot05-2026-10-16",
+      "holds": "Alfa, margens, base e escala.",
+      "content_state": "DRAFT",
+      "visual_acceptance": "APPROVED_EXPLICITLY_SEQUENCE_DIRECTION",
+      "implementation_owner": "Claude",
+      "files": {
+        "index.html": {
+          "path": ".atena/generated/asset-lot05-2026-10-16/index.html",
+          "sha256": "FB0506CBE535E776C148028101202AB26F321D127E143891DD4AF5243F6DAF3F"
+        },
+        "manifest.json": {
+          "path": ".atena/generated/asset-lot05-2026-10-16/manifest.json",
+          "sha256": "ED2365E03729DB5C606E73F37A934B7CF739920A4CE574DF7E0032C76542623C"
+        },
+        "visual-acceptance.json": {
+          "path": ".atena/generated/asset-lot05-2026-10-16/visual-acceptance.json",
+          "sha256": "59470CA6AF86E3175E49DEEE524AD51DE290F848FFBA2659B321D607732681D6"
+        },
+        "ENTREGA-PARA-IMPLEMENTACAO.md": {
+          "path": ".atena/generated/asset-lot05-2026-10-16/ENTREGA-PARA-IMPLEMENTACAO.md",
+          "sha256": "022170785B2499CD6DF99D23949292D9D9752433C7F0A479ED52176797BC75F5"
+        }
+      }
+    },
+    {
+      "id": "LOT06",
+      "title": "Lança-chamas e seis idles de eventos",
+      "folder": "asset-lot06-2026-10-16",
+      "holds": "FC02v03 retida por origem; MEC-004 depende de implementação.",
+      "content_state": "DRAFT",
+      "visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+      "implementation_owner": "Claude",
+      "files": {
+        "index.html": {
+          "path": ".atena/generated/asset-lot06-2026-10-16/index.html",
+          "sha256": "8E99F6908DB2718E51B37B8C0CB2A2BE215D01B96F756113762EC55DC15A5FFC"
+        },
+        "manifest.json": {
+          "path": ".atena/generated/asset-lot06-2026-10-16/manifest.json",
+          "sha256": "5B600F9432E97FDAFECD0E2CE5DB958BC4FB49FCCB581D4143097909F8043B85"
+        },
+        "visual-acceptance.json": {
+          "path": ".atena/generated/asset-lot06-2026-10-16/visual-acceptance.json",
+          "sha256": "F362F490C655DB162253B57B9DFECF4F6EC7CD7CDF1234C9BCC7FDB612CA9FCB"
+        },
+        "ENTREGA-PARA-IMPLEMENTACAO.md": {
+          "path": ".atena/generated/asset-lot06-2026-10-16/ENTREGA-PARA-IMPLEMENTACAO.md",
+          "sha256": "5EA97958F09FF0AA4B961CABC6AA826BDF464759170BE80B961863187BD44286"
+        }
+      }
+    },
+    {
+      "id": "LOT07",
+      "title": "Nove idles de NPCs",
+      "folder": "asset-lot07-2026-10-16",
+      "holds": "NE06v03 retida por espada; demais exigem preparação.",
+      "content_state": "DRAFT",
+      "visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+      "implementation_owner": "Claude",
+      "files": {
+        "index.html": {
+          "path": ".atena/generated/asset-lot07-2026-10-16/index.html",
+          "sha256": "C8AD4D1A5094BE1CC11061D28342BB0AEC7D241D2D1CD3CAEE2C2A09666366C4"
+        },
+        "manifest.json": {
+          "path": ".atena/generated/asset-lot07-2026-10-16/manifest.json",
+          "sha256": "097E227F9A8BB89696AF1DB2281B511D60F5AFE54CED79122DF0443982C7E7F9"
+        },
+        "visual-acceptance.json": {
+          "path": ".atena/generated/asset-lot07-2026-10-16/visual-acceptance.json",
+          "sha256": "503F6112BCCA035F16854A4027BD0D0C79C3F30C7E58995DD75F4FB55F7D42E0"
+        },
+        "ENTREGA-PARA-IMPLEMENTACAO.md": {
+          "path": ".atena/generated/asset-lot07-2026-10-16/ENTREGA-PARA-IMPLEMENTACAO.md",
+          "sha256": "7202C2206FE3698DAFD72B61EA96BDA87862E6B03611A9800F5DBA35EFB94C6E"
+        }
+      }
+    },
+    {
+      "id": "LOT08",
+      "title": "Props, Graz’zt e jato em quadros individuais",
+      "folder": "asset-lot08-2026-10-16",
+      "holds": "Revisar substituições de FC02/NE06; não liberar retenções antigas automaticamente.",
+      "content_state": "DRAFT",
+      "visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+      "implementation_owner": "Claude",
+      "files": {
+        "index.html": {
+          "path": ".atena/generated/asset-lot08-2026-10-16/index.html",
+          "sha256": "6822B298E425D8ECCBB7852FA8150E6620F561D739EBC8913A8B0681B4B4914E"
+        },
+        "manifest.json": {
+          "path": ".atena/generated/asset-lot08-2026-10-16/manifest.json",
+          "sha256": "3DC6A07E8C297F364DC691F2C4A370C08A5C03B0B6AFE405A16DB51A9EA45202"
+        },
+        "visual-acceptance.json": {
+          "path": ".atena/generated/asset-lot08-2026-10-16/visual-acceptance.json",
+          "sha256": "5E693C8B04155EE50DEF7311F357DE8B06A8843DEF4352D37DA5B5D8B8D5FFEE"
+        },
+        "ENTREGA-PARA-IMPLEMENTACAO.md": {
+          "path": ".atena/generated/asset-lot08-2026-10-16/ENTREGA-PARA-IMPLEMENTACAO.md",
+          "sha256": "E2569F93E6C3E1E70D08CF705CC45F7AEB1F41D13E4254188BD03FFFCBEAF127"
+        }
+      }
+    },
+    {
+      "id": "LOT09",
+      "title": "Sete pontos de acontecimento",
+      "folder": "asset-lot09-2026-10-16",
+      "holds": "Alfa, margens e registro.",
+      "content_state": "DRAFT",
+      "visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+      "implementation_owner": "Claude",
+      "files": {
+        "index.html": {
+          "path": ".atena/generated/asset-lot09-2026-10-16/index.html",
+          "sha256": "53C32D525F29B387FBEE89B2FEF3C8BEE7C5CB1016BDE480DD1E2630F5D5695F"
+        },
+        "manifest.json": {
+          "path": ".atena/generated/asset-lot09-2026-10-16/manifest.json",
+          "sha256": "067255B33A4E012ABCE20E695CF65DA09E37A992E62BD6E46A24549AFEFA49A4"
+        },
+        "visual-acceptance.json": {
+          "path": ".atena/generated/asset-lot09-2026-10-16/visual-acceptance.json",
+          "sha256": "A28F36BDA0CB2A68213B731FF5A989C8C2CD5B628CD30DC67D32602349C8FCEC"
+        },
+        "ENTREGA-PARA-IMPLEMENTACAO.md": {
+          "path": ".atena/generated/asset-lot09-2026-10-16/ENTREGA-PARA-IMPLEMENTACAO.md",
+          "sha256": "A3F4CA2C13FB93758973933F8C0AA2DD0C3CC320E6737AE25F02150CF4713FE2"
+        }
+      }
+    },
+    {
+      "id": "LOT10",
+      "title": "Eventos e segredos",
+      "folder": "asset-lot10-2026-10-16",
+      "holds": "Alfa, base, escala e pareamento selada/aberta.",
+      "content_state": "DRAFT",
+      "visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+      "implementation_owner": "Claude",
+      "files": {
+        "index.html": {
+          "path": ".atena/generated/asset-lot10-2026-10-16/index.html",
+          "sha256": "7E7AC882C5583FEECF1B0F2DE42487BAC375BB94F8FBA1C32EB7EBF77DD9729F"
+        },
+        "manifest.json": {
+          "path": ".atena/generated/asset-lot10-2026-10-16/manifest.json",
+          "sha256": "D8D04F24CE208A783ABFCE04A5EDDBFA4FD2135B9163ED02278705C5774A6076"
+        },
+        "visual-acceptance.json": {
+          "path": ".atena/generated/asset-lot10-2026-10-16/visual-acceptance.json",
+          "sha256": "E5041E96C6DF592C4168FAEADD047484ECF32A5EB0F417516623EEA837C38609"
+        },
+        "ENTREGA-PARA-IMPLEMENTACAO.md": {
+          "path": ".atena/generated/asset-lot10-2026-10-16/ENTREGA-PARA-IMPLEMENTACAO.md",
+          "sha256": "18AADB5207F8F2FC9D45464B23899FAA8F999BA5ED7B9EC77BFC03983C9D0218"
+        }
+      }
+    },
+    {
+      "id": "LOT11",
+      "title": "Oito ruínas",
+      "folder": "asset-lot11-2026-10-16",
+      "holds": "RU05/RU07 deriva; RU08 contato/deriva retidos.",
+      "content_state": "DRAFT",
+      "visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+      "implementation_owner": "Claude",
+      "files": {
+        "index.html": {
+          "path": ".atena/generated/asset-lot11-2026-10-16/index.html",
+          "sha256": "39F50B102E4419F68B79C1F91F09A28DCCAABC99FEA2067E14242C08987FC1B4"
+        },
+        "manifest.json": {
+          "path": ".atena/generated/asset-lot11-2026-10-16/manifest.json",
+          "sha256": "716042F009C7D373A54BB2C36D53673A631DFEEE1EA40A620C76EF716D7FE489"
+        },
+        "visual-acceptance.json": {
+          "path": ".atena/generated/asset-lot11-2026-10-16/visual-acceptance.json",
+          "sha256": "E36F6CA4638C7CB642A9E82E94BEB5F3AAF5D4FADE82E2B4B9C9D0E0ED754901"
+        },
+        "ENTREGA-PARA-IMPLEMENTACAO.md": {
+          "path": ".atena/generated/asset-lot11-2026-10-16/ENTREGA-PARA-IMPLEMENTACAO.md",
+          "sha256": "8F5E24359C826B1BED6BFE64CACC74087A22EA3E012D8392B7DAC7963D3586F3"
+        }
+      }
+    },
+    {
+      "id": "LOT12",
+      "title": "Reparo das ruínas Durão/Shendilavri/Goranthis",
+      "folder": "asset-lot12-2026-10-16",
+      "holds": "Conferir relação com RU05/07/08; sem liberação implícita.",
+      "content_state": "DRAFT",
+      "visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+      "implementation_owner": "Claude",
+      "files": {
+        "index.html": {
+          "path": ".atena/generated/asset-lot12-2026-10-16/index.html",
+          "sha256": "69BE6CCE8945865D82ECAF746DA12B43375851AFB310CD94D256A00F71F16E7B"
+        },
+        "manifest.json": {
+          "path": ".atena/generated/asset-lot12-2026-10-16/manifest.json",
+          "sha256": "557FF7E4D5DCA78D98F6AFCE6000631EED16E3F0FDC6A1A7040EBBEC8256A91E"
+        },
+        "visual-acceptance.json": {
+          "path": ".atena/generated/asset-lot12-2026-10-16/visual-acceptance.json",
+          "sha256": "099381CC5F3EEC84FB99DA3C7CCA19E37DECA5B9D6CBB0D4C46186B7530132C5"
+        },
+        "ENTREGA-PARA-IMPLEMENTACAO.md": {
+          "path": ".atena/generated/asset-lot12-2026-10-16/ENTREGA-PARA-IMPLEMENTACAO.md",
+          "sha256": "5ECEF2801AC55669D86DED3785A716706EDE7023C813FE274317351D88A3C1CD"
+        }
+      }
+    },
+    {
+      "id": "LOT13",
+      "title": "Manifestação de Juiblex",
+      "folder": "asset-lot13-2026-10-16",
+      "holds": "Alfa, registro, escala e margens JD04/05.",
+      "content_state": "DRAFT",
+      "visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+      "implementation_owner": "Claude",
+      "files": {
+        "index.html": {
+          "path": ".atena/generated/asset-lot13-2026-10-16/index.html",
+          "sha256": "F37245FC1DB54931026A955D33EF97F2D07753707B91EE0733535256D5746EA4"
+        },
+        "manifest.json": {
+          "path": ".atena/generated/asset-lot13-2026-10-16/manifest.json",
+          "sha256": "70E7439B356692A3D6DBAF9946277A8C4D111529DDC743245977BA2DC9108CE8"
+        },
+        "visual-acceptance.json": {
+          "path": ".atena/generated/asset-lot13-2026-10-16/visual-acceptance.json",
+          "sha256": "F8E1305C43E1F0F60D94974613B9DDF7B70046F601DE3BE0B2E99896F3DAE359"
+        },
+        "ENTREGA-PARA-IMPLEMENTACAO.md": {
+          "path": ".atena/generated/asset-lot13-2026-10-16/ENTREGA-PARA-IMPLEMENTACAO.md",
+          "sha256": "11ABFDE7D8C346059C69A5A3D919E7E13E16BBCA3DDC81812B3BB3E96A9E83EC"
+        }
+      }
+    },
+    {
+      "id": "LOT14",
+      "title": "Mímico e Turíbulo",
+      "folder": "asset-lot14-2026-10-17",
+      "holds": "TD retida por crescimento de base; demais alfa/registro.",
+      "content_state": "DRAFT",
+      "visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+      "implementation_owner": "Claude",
+      "files": {
+        "index.html": {
+          "path": ".atena/generated/asset-lot14-2026-10-17/index.html",
+          "sha256": "8F750553BC2AC913944BEF64C10243FDD3229B7CF4D79CADAF0E4D794AE4B4B4"
+        },
+        "manifest.json": {
+          "path": ".atena/generated/asset-lot14-2026-10-17/manifest.json",
+          "sha256": "70059EB4583E78F80B579643DA386F24C8FC74BBE2AA21585298C3A4D180EAC9"
+        },
+        "visual-acceptance.json": {
+          "path": ".atena/generated/asset-lot14-2026-10-17/visual-acceptance.json",
+          "sha256": "3F135E2A11D5F75336A2DE9B82CEF03050CDAA5672CCE1C8EDAFE25C00ED0C9D"
+        },
+        "ENTREGA-PARA-IMPLEMENTACAO.md": {
+          "path": ".atena/generated/asset-lot14-2026-10-17/ENTREGA-PARA-IMPLEMENTACAO.md",
+          "sha256": "D95BDE5AB9DF905F610F55CB235F82B20C01AC30926FF5C50DB02BEAE0108179"
+        }
+      }
+    },
+    {
+      "id": "LOT15",
+      "title": "Costas de Zynara, Leoric e Nyrelia",
+      "folder": "asset-lot15-2026-10-17",
+      "holds": "Nyrelia N/NE retida por registro/cadência; BUG-027 aberto.",
+      "content_state": "DRAFT",
+      "visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+      "implementation_owner": "Claude",
+      "files": {
+        "index.html": {
+          "path": ".atena/generated/asset-lot15-2026-10-17/index.html",
+          "sha256": "76375179A89CBC4925DEAED3151C1435EA2D1C6DE2FBBFFF4098BC662FB0918F"
+        },
+        "manifest.json": {
+          "path": ".atena/generated/asset-lot15-2026-10-17/manifest.json",
+          "sha256": "F12BE41C4499FD784E32C64FFF75867C84D0C2E3899CDFE5E042C8E7943F9D0B"
+        },
+        "visual-acceptance.json": {
+          "path": ".atena/generated/asset-lot15-2026-10-17/visual-acceptance.json",
+          "sha256": "B5873F7F68E97257B6F7AA3D9E5CF5342FB52BC2724B16DEBEB7BDF5C2184A8E"
+        },
+        "ENTREGA-PARA-IMPLEMENTACAO.md": {
+          "path": ".atena/generated/asset-lot15-2026-10-17/ENTREGA-PARA-IMPLEMENTACAO.md",
+          "sha256": "CE80F9525D835F4593170B6277DE3BEF336769BDCFA619D874461F04470AD316"
+        }
+      }
+    },
+    {
+      "id": "LOT16",
+      "title": "Durvall cinco direcoes restantes",
+      "folder": "asset-lot16-2026-10-17",
+      "holds": "P9retida por mao/direcao; alfa/registro/cadencia eP8celulasnaoquadradas.",
+      "content_state": "DRAFT",
+      "visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+      "implementation_owner": "Claude",
+      "files": {
+        "index.html": {
+          "path": ".atena/generated/asset-lot16-2026-10-17/index.html",
+          "sha256": "40673857DC4FD411D9A956A4C12BF84B71DB51A7598F20E6A9439B900402479D"
+        },
+        "manifest.json": {
+          "path": ".atena/generated/asset-lot16-2026-10-17/manifest.json",
+          "sha256": "5A12A6BF4F11B295174CF4D6267618C681E4123F042EF0901607256665DE0D8F"
+        },
+        "visual-acceptance.json": {
+          "path": ".atena/generated/asset-lot16-2026-10-17/visual-acceptance.json",
+          "sha256": "FF8E7CA74A7BC1877831A6AB7B7779D78418E9F6D1B288AD80D5E74557871A42"
+        },
+        "ENTREGA-PARA-IMPLEMENTACAO.md": {
+          "path": ".atena/generated/asset-lot16-2026-10-17/ENTREGA-PARA-IMPLEMENTACAO.md",
+          "sha256": "5481CA50149BA6205DF685BE6334836EA59B2C99C3FEA526F9751048CAC499B4"
+        }
+      }
+    },
+    {
+      "id": "LOT17",
+      "title": "Durvall SW em seis fontes individuais",
+      "folder": "asset-lot17-2026-10-17",
+      "holds": "Registro/escala/cadencia ealfa pendentes; SW04apos3tentativas. P9historica preservada.",
+      "content_state": "DRAFT",
+      "visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+      "implementation_owner": "Claude",
+      "files": {
+        "index.html": {
+          "path": ".atena/generated/asset-lot17-2026-10-17/index.html",
+          "sha256": "125B067861CFBC68874ECB797531C85A5332461A4A862449639801717A950B8F"
+        },
+        "manifest.json": {
+          "path": ".atena/generated/asset-lot17-2026-10-17/manifest.json",
+          "sha256": "330243C2C40CA4B16A34D7F9CE2E93E9401B5CD7A356492A7C66C4F6ECCC808A"
+        },
+        "visual-acceptance.json": {
+          "path": ".atena/generated/asset-lot17-2026-10-17/visual-acceptance.json",
+          "sha256": "342451283BDA85CE78E94EADF03C5CC2DC18DB9C7C9D9BE0B570952689BC39F6"
+        },
+        "ENTREGA-PARA-IMPLEMENTACAO.md": {
+          "path": ".atena/generated/asset-lot17-2026-10-17/ENTREGA-PARA-IMPLEMENTACAO.md",
+          "sha256": "7751DBA0BFE9E630E9611E97E503AFD583649B7896AB94863DD501C608156780"
+        }
+      }
+    },
+    {
+      "id": "FILA029",
+      "title": "Botão JOGAR B01v03",
+      "folder": "fila029-production-2026-10-15",
+      "holds": "Preparar nove fatias320×64 e validar com texto dinâmico.",
+      "content_state": "DRAFT",
+      "visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+      "implementation_owner": "Claude",
+      "files": {
+        "index.html": {
+          "path": ".atena/generated/fila029-production-2026-10-15/index.html",
+          "sha256": "8E6D3F8941D46F6B808A911B75BEFEDF1B2CE844CE439AFE6689856097C5B17E"
+        },
+        "manifest.json": {
+          "path": ".atena/generated/fila029-production-2026-10-15/manifest.json",
+          "sha256": "BE745354BF36B797FE6C5FF266AE5E5C59AA611356FF90C6CF9C7F112660BA7D"
+        },
+        "visual-acceptance.json": {
+          "path": ".atena/generated/fila029-production-2026-10-15/visual-acceptance.json",
+          "sha256": "D08039C381A44A572ADE22B60334CBDE4A93777A483634330E8D33E58540AB1B"
+        },
+        "ENTREGA-PARA-IMPLEMENTACAO.md": {
+          "path": ".atena/generated/fila029-production-2026-10-15/ENTREGA-PARA-IMPLEMENTACAO.md",
+          "sha256": "85777AC7F9BE3CA362316D763FA59905A856266B2887805DFBC006F7478325A7"
+        }
+      }
+    },
+    {
+      "id": "FILA030",
+      "title": "Névoa NB01/NB02 preparada",
+      "folder": "fila030-preparation-2026-10-15/v01",
+      "holds": "Derivadas aceitas; implementação e aceite no jogo pendentes.",
+      "content_state": "DRAFT",
+      "visual_acceptance": "APPROVED_EXPLICITLY",
+      "implementation_owner": "Claude",
+      "files": {
+        "index.html": {
+          "path": ".atena/generated/fila030-preparation-2026-10-15/v01/index.html",
+          "sha256": "FC6403260E85A17A00A8AAA9CFC7FAEF0B1B0FA46C501B5AF3F3ACDA4FED697D"
+        },
+        "manifest.json": {
+          "path": ".atena/generated/fila030-preparation-2026-10-15/v01/manifest.json",
+          "sha256": "5D93AC9C3372FC29CD958292DFD16C85EEE9B6EB2ECF391AF916C399A7D4A49E"
+        },
+        "visual-acceptance.json": {
+          "path": ".atena/generated/fila030-preparation-2026-10-15/v01/visual-acceptance.json",
+          "sha256": "A77BD576906F9840AF567883A7F73C64DA9FD88F2098044E8538F2D9005D6ABE"
+        },
+        "ENTREGA-PARA-IMPLEMENTACAO.md": {
+          "path": ".atena/generated/fila030-preparation-2026-10-15/v01/ENTREGA-PARA-IMPLEMENTACAO.md",
+          "sha256": "904A443132E194F321298B1C34CA6401F4AC97565A7A94779D5DA967EF9D8534"
+        }
+      }
+    },
+    {
+      "id": "FILA032",
+      "title": "Logotipo LN01v01",
+      "folder": "fila032-production-2026-10-16",
+      "holds": "Preparação/aceite in-game; não aplicar renomeação por este recibo.",
+      "content_state": "DRAFT",
+      "visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+      "implementation_owner": "Claude",
+      "files": {
+        "index.html": {
+          "path": ".atena/generated/fila032-production-2026-10-16/index.html",
+          "sha256": "85DCD59862EB9DC7004D887FF9278D8C7C7896E68FC32A9A8D95038FFF7ED929"
+        },
+        "manifest.json": {
+          "path": ".atena/generated/fila032-production-2026-10-16/manifest.json",
+          "sha256": "62CF3C41B706FD030DD43815B878A072CE5981E49D4AF17363ADCA8CDE5148EA"
+        },
+        "visual-acceptance.json": {
+          "path": ".atena/generated/fila032-production-2026-10-16/visual-acceptance.json",
+          "sha256": "102B465382375A798076BBB1225B4630A07CBC13FBBC6197340FA9195BA2A1C4"
+        },
+        "ENTREGA-PARA-IMPLEMENTACAO.md": {
+          "path": ".atena/generated/fila032-production-2026-10-16/ENTREGA-PARA-IMPLEMENTACAO.md",
+          "sha256": "F43B790E552CB3B39CD2D4318558429ECDD5C303AECAF76581FD4AE4C6C0EEC2"
+        }
+      }
+    }
+  ],
+  "queue_header_snapshots": [
+    {
+      "path": ".atena/generated/CHATGPT-FILA-001-prompts-prontos.md",
+      "sha256": "781E9F9C1D8BCF470A7FF8E0733531C7161089ED26675C96731C94878EF8EE32",
+      "historical_header_status": "\"reconciliada em 2026-10-02: Lotes 1/2 já admitidos; piloto HQ integrado; EVID-145\""
+    },
+    {
+      "path": ".atena/generated/CHATGPT-FILA-002-hqs-ondas-1-e-2.md",
+      "sha256": "AAE2F9B76A68552B752C815327065D115117F6EBB66D9E37622697B3570B7E6D",
+      "historical_header_status": "\"pronta para envio — nada executado; separada da CHATGPT-FILA-001, que está em andamento\""
+    },
+    {
+      "path": ".atena/generated/CHATGPT-FILA-003-hqs-trilha-c.md",
+      "sha256": "7236903D225B42F74F1E7E89DF8052C3B02E3A6C9698EE2A8E6EA125F67E30A1",
+      "historical_header_status": "\"opcional — pronta para envio, nada executado; separada das filas 001 (em andamento) e 002\""
+    },
+    {
+      "path": ".atena/generated/CHATGPT-FILA-004-piloto-cultista-adaga.md",
+      "sha256": "A476C14400B83272E1A1F8FA293D7DE8A1E81611D049FDA7EE62FB396AA8029B",
+      "historical_header_status": "\"pronta para envio — nada executado; separada das filas 001 (em andamento), 002 e 003\""
+    },
+    {
+      "path": ".atena/generated/CHATGPT-FILA-005-mobs-onda-1-identidade.md",
+      "sha256": "9C0BE4DCD973830AC1FC148FDB32BACD5E08385AFDD5BC05DBC3FE223363A0D5",
+      "historical_header_status": "\"I01–I08 aprovados pelo dono em 2026-09-30; Lote A liberado\""
+    },
+    {
+      "path": ".atena/generated/CHATGPT-FILA-006-mobs-onda-1-lote-a.md",
+      "sha256": "34A3E5E62B6D7A4765FAA3822C00373393597484A6A9A11BAB8A1EDBF45B39CD",
+      "historical_header_status": "\"80 quadros aprovados pelo dono em 2026-09-30\""
+    },
+    {
+      "path": ".atena/generated/CHATGPT-FILA-007-mobs-onda-1-lote-b.md",
+      "sha256": "717A14211C957FBCBD9C3A96466B36B90E38700F2FFB6C9D9D5C788A8CEA0603",
+      "historical_header_status": "\"40 quadros candidatos aprovados pelo dono em 2026-09-30\""
+    },
+    {
+      "path": ".atena/generated/CHATGPT-FILA-008-mobs-onda-1-lote-c.md",
+      "sha256": "7D8B5405ECA1F7E33146D713A6EB92EC54231BDFA1A5F6FE076B7429E0C2B771",
+      "historical_header_status": "\"40 quadros candidatos aprovados pelo dono; reuso da cópia requer decisão visual\""
+    },
+    {
+      "path": ".atena/generated/CHATGPT-FILA-009-fundo-da-tela-de-titulo.md",
+      "sha256": "C0F3495951FACFAE80EF5227D365734C2F2F0E5EC722C0E7CC660BE756CA39FD",
+      "historical_header_status": "\"gerada e integrada localmente em 2026-10-02 sob pedido do dono; EVID-145\""
+    },
+    {
+      "path": ".atena/generated/CHATGPT-FILA-010-piloto-cenario-dagruve-docas.md",
+      "sha256": "7859C188A5E282E4BDDD822CC26EFE9C7B7E67BD020BFF2BC9C3754360C29365",
+      "historical_header_status": "\"gerada e integrada localmente em 2026-10-02 sob pedido do dono; EVID-145\""
+    },
+    {
+      "path": ".atena/generated/CHATGPT-FILA-011-isca-sylas-e-eventos.md",
+      "sha256": "E01E44795A320C790A1BFDC7F87786184F8B7B8FE55C551F91C08B62FBC0737D",
+      "historical_header_status": "\"gerada e integrada localmente em 2026-10-02 sob pedido do dono; EVID-145\""
+    },
+    {
+      "path": ".atena/generated/CHATGPT-FILA-012-ui-e-vfx-pendentes.md",
+      "sha256": "760A036428256D1C33680210D52E3ABB96A963D8DC462C8DB73B8B779AFA2A91",
+      "historical_header_status": "\"U07–U09 gerados e integrados em 2026-10-02; U01–U06 pendentes; EVID-145\""
+    },
+    {
+      "path": ".atena/generated/CHATGPT-FILA-013-mobs-shedaklah.md",
+      "sha256": "043616C7FECA323B6BE2FA5FA77FB5757B158448925E4497AC5E4B2C655F463D",
+      "historical_header_status": "\"I01–I08 aprovadas; oito alvos integrados; 166 quadros/33 tiras; EVID-145\""
+    },
+    {
+      "path": ".atena/generated/CHATGPT-FILA-014-mobs-molor.md",
+      "sha256": "AFBF525BF1BE61661FAF73BBEE320D097559E84A1DA2372014F2A6EDFA4252AE",
+      "historical_header_status": "\"I01–I03 aprovadas; 66 quadros e 13 ciclos integrados; lote Molor concluído localmente; EVID-145\""
+    },
+    {
+      "path": ".atena/generated/CHATGPT-FILA-015-mobs-durao.md",
+      "sha256": "DD4AD19E92F7B67F43264259E85A3A01702E297455D5BE6C63C2CF5B933AFEEB",
+      "historical_header_status": "\"integrado — Durão completo: 126 quadros/25 tiras; menor reutiliza chefe\""
+    },
+    {
+      "path": ".atena/generated/CHATGPT-FILA-016-mobs-feng-tu.md",
+      "sha256": "E4CFB5BC58D450225251BA689E896210BDB880556C1EAFEBDBDD2CE6370F6BC0",
+      "historical_header_status": "\"Feng Tu integrado:126quadros/25tiras — build159validada\""
+    },
+    {
+      "path": ".atena/generated/CHATGPT-FILA-017-mobs-shendilavri.md",
+      "sha256": "DA85D4C3F9A4F9874FD8E7F9017AB1901B759701F590414834812B4C208879ED",
+      "historical_header_status": "\"5 de 5 pilotos aprovados pelo dono em 2026-10-07; ciclos em geracao\""
+    },
+    {
+      "path": ".atena/generated/CHATGPT-FILA-018-mobs-goranthis.md",
+      "sha256": "F8CCA1FCE2A552BBBC205BBA8C7492EB864A2AFB74C06AAB9D0B86D6842DAB7C",
+      "historical_header_status": "\"86 fontes geradas; 3 atores/12 tiras integrados; Socothbenoth candidato aguarda decisao da marcha\""
+    },
+    {
+      "path": ".atena/generated/CHATGPT-FILA-019-mobs-pilares.md",
+      "sha256": "5BDD8D232B1BCA50926F413B79D594AB976F3D8855669C7B789345BB76F23545",
+      "historical_header_status": "\"26 fontes/5 tiras candidatas revisadas; attack03 pendente de decisão após três versões; zero oficiais\""
+    },
+    {
+      "path": ".atena/generated/CHATGPT-FILA-020-piloto-vfx-corpo-a-corpo-fisico.md",
+      "sha256": "6E16EF00A34CA1BB102753B5C545FE4824493B9C8EAC3A8E85C27BCF2DD66FCC",
+      "historical_header_status": "\"12 quadros gerados; picos A03/B03 aprovados pelo dono; piloto integrado em 2026-10-02; EVID-145\""
+    },
+    {
+      "path": ".atena/generated/CHATGPT-FILA-021-vfx-corpo-a-corpo-excecoes.md",
+      "sha256": "B5095C8AE4D0BA8C0BB4839041A5E4FC5D4B01EA4A52D54E7269FB7E2D6D3151",
+      "historical_header_status": "\"C03 v02 e D03 v01 aprovados; Estocada e Chicote completos e integrados localmente; Arco radiante seis quadros gerados e revisados, E03 v01 aprovada; Arco de fogo seis quadros gerados e revisados, F03 v01 aprovada; FILA021 geração completa, E/F candidatas; EVID-145\""
+    },
+    {
+      "path": ".atena/generated/CHATGPT-FILA-022-vfx-projeteis-e-explosoes.md",
+      "sha256": "262736E37F46EA6BA965B163217848FEF16AAB4924B570E6AAF42D2821483EE1",
+      "historical_header_status": "\"FILA02236/36 geradas no historico; Pulso seis fases visualmente aceitas, cinco adicionais DRAFT em2026-10-13; normalizacao/admissao pendentes.\""
+    },
+    {
+      "path": ".atena/generated/CHATGPT-FILA-023-vfx-habilidades-dos-herois.md",
+      "sha256": "5A63F31264594B075CE30EE946A49F569FBD5F437B9CCD25E06D1DA045AF934F",
+      "historical_header_status": "\"Reconciliação 2026-10-13: 60/60 fontes geradas segundo registros de 10bd31c; revisão/normalização/admissão pendentes; recuperação integral das fontes fora desta retomada.\""
+    },
+    {
+      "path": ".atena/generated/CHATGPT-FILA-024-regerar-tiras-dos-herois.md",
+      "sha256": "F0C637BCD5334BB6F4D4918EAEF2174D5302331BF998D2BA0544733E8CD1F4E1",
+      "historical_header_status": "\"W01–W15 e A01–A10 integrados após auditoria; lote concluído; EVID-145\""
+    },
+    {
+      "path": ".atena/generated/CHATGPT-FILA-025-ficha-c-molduras-e-icones.md",
+      "sha256": "0A48E89349D371205BCA3E08856F624F272FA718E8EE188D629A5498238CD0AA",
+      "historical_header_status": "\"concluida: dez imagens aprovadas, normalizadas e integradas localmente; PLAN-070 geracao, PLAN-072 integracao\""
+    },
+    {
+      "path": ".atena/generated/CHATGPT-FILA-026-lettering-placas-e-cursor.md",
+      "sha256": "6F41134A7AA850AB5BEB7A95699503ED069C62CA615A241FBB12AE3F3082DBC0",
+      "historical_header_status": "\"Dez PNGs v01 aceitos/admitidos/commitados/publicados, validacao PASS; S014 integracao pendente; L02 opcional deferida\""
+    },
+    {
+      "path": ".atena/generated/CHATGPT-FILA-027-erik-e-arlindo.md",
+      "sha256": "058C17856579BD41B87BA4617DEF130E4E65B4093D1847F72BDF4F028D97FE8C",
+      "historical_header_status": "\"20 fontes DRAFT geradas; snapshot local verificado; extração revisada em 2026-10-11; normalização e admissão pendentes\""
+    },
+    {
+      "path": ".atena/generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md",
+      "sha256": "06F35BDD697E1FD884681C9E77C3A239F1A025E0CC901B8AE03790B3311B0508",
+      "historical_header_status": "\"2026-10-10: 34 fontes aceitas; 34 preparacoes visuais CANON aceitas, incluindo correcao AL01-CORR/v01 com ciclo 900 ms; integracao runtime pendente; loop antigo do altar retido como historico\""
+    },
+    {
+      "path": ".atena/generated/CHATGPT-FILA-029-botao-de-acao-jogar.md",
+      "sha256": "281FD88E286512048EA744357678DC259E7F3304C091EF3FAC3B158CC348EA0D",
+      "historical_header_status": "\"B01 v03 DRAFT aceita visualmente em 2026-10-15; v01/v02 retidas; preparação e aceite in-game pendentes; implementação por Claude\""
+    },
+    {
+      "path": ".atena/generated/CHATGPT-FILA-030-nevoa-de-borda-e-frente-da-mare.md",
+      "sha256": "75CD820B6B6AA6EFA582D2FBBF2B0F1DA80606A1E0A23B67B94BF97154EA0319",
+      "historical_header_status": "\"fontes e duas preparadas DRAFT v01 aceitas visualmente em 2026-10-15; técnico PASS; implementação a cargo de Claude, admissão pendente\""
+    },
+    {
+      "path": ".atena/generated/CHATGPT-FILA-032-logotipo-abyss-megadungeon.md",
+      "sha256": "B72C655444781500B22EBF8E8BE0F354FE3B0CDFD8A3EC12F3E1D67E689FB37C",
+      "historical_header_status": "LN01 v01 DRAFT aceita visualmente em 2026-10-16; preparação e aceite in-game pendentes"
+    }
+  ],
+  "findings": [
+    {
+      "scope": "FILA001/009/010/011, cenários e HQs002",
+      "result": "Registros locais de produção/admissão anteriores; HQs14/56 em data/hqs.json e56PNGs locais. Não produzir novamente pelo cabeçalho antigo de002.",
+      "evidence": ".atena/evidence/EVID-145-fila-de-imagens-prioritaria-2026-10-02.md"
+    },
+    {
+      "scope": "FILA003 e L02 daFILA026",
+      "result": "Opcionais/deferidos, não são nova produção obrigatória autorizada.",
+      "evidence": ".atena/generated/CHATGPT-FILA-003-hqs-trilha-c.md"
+    },
+    {
+      "scope": "FILA004..008 e013..019",
+      "result": "Evidências posteriores registram conclusão dos ciclos; cabeçalhos de017/018/019 são antigos. Arquivos semidle próprios incluem reuso e lotes recentes já gerados.",
+      "evidence": ".atena/evidence/EVID-145-fila-de-imagens-prioritaria-2026-10-02.md"
+    },
+    {
+      "scope": "FILA012",
+      "result": "U01..04 emLOT02; U05/06 emLOT06 e reparoLOT08; U07..09 já produzidas. MEC-004 e integração não são falta de geração.",
+      "evidence": ".atena/specs/SPEC-121-retomada-fila-imagens/asset-lot02-production-v01.md"
+    },
+    {
+      "scope": "FILA020..023",
+      "result": "Gerações registradas; admissão posterior de VFX. Recuperação integral de originais históricos não foi certificada neste índice.",
+      "evidence": ".atena/evidence/vfx-projectiles-hero-abilities-admission-2026-10-13.md"
+    },
+    {
+      "scope": "FILA024/027 e ART033",
+      "result": "Erik/Arlindo18atlas101poses admitidos; não regerar AO09/AO10/ER03/ER06 por pendência histórica. Costas ART033 agora produzidas/aceitas emLOT15, ainda sem implementação.",
+      "evidence": ".atena/evidence/hero-admission-2026-10-13.md"
+    },
+    {
+      "scope": "FILA025/026/028",
+      "result": "Produção e preparação anteriores documentadas;028tem34preparaçõesCANON, condição preservada. Não confundir esses registros com os novos lotesDRAFT.",
+      "evidence": ".atena/generated/CHATGPT-FILA-028-eventos-arcanista-icones-segredos-e-altar.md"
+    },
+    {
+      "scope": "FILA029/030/032 e LOT02..17",
+      "result": "19entregasDRAFT visualmente aceitas agrupadas; preparação, implementação e playtests continuam pendentes conforme cada manifesto.",
+      "evidence": ".atena/generated/asset-lot15-2026-10-17/visual-acceptance.json"
+    },
+    {
+      "scope": "FILA031/M1 reservado",
+      "result": "A consulta anterior so aos31arquivos de fila deixou de fora o escopo reservado no estadoM1/D22: cinco direcoes restantes deDurvall. LOT16 agora produzido em5fontes/30poses, direcao visual aceita comoDRAFT; P9retida por mao/direcao. Agora incluido nos19pacotes aceitos.",
+      "evidence": ".atena/specs/SPEC-121-retomada-fila-imagens/asset-lot16-durvall-directions-v01.md"
+    },
+    {
+      "scope": "Portal, ritual e fonte",
+      "result": "Manter fontes existentes conforme plano; não há defeito novo documentado que autorize regeneração.",
+      "evidence": ".atena/specs/SPEC-121-retomada-fila-imagens/asset-lot03-interactions-v01.md"
+    }
+  ],
+  "scope_limit": "Local catalog reconciliation and handoff links; not complete historical raw-source recovery or runtime verification",
+  "runtime_implementation_performed": false,
+  "message_sent_to_claude": false,
+  "commit_push": false,
+  "new_generation_authorized": false,
+  "implementation_owner": "Claude"
+}

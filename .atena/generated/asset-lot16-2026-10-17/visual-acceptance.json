@@ -1,0 +1,57 @@
+{
+  "id": "ASSET-LOT16",
+  "revision": "v01",
+  "date": "2026-10-17",
+  "status": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+  "owner_reply": "atena, aprovado, continue",
+  "content_state": "DRAFT",
+  "sources": [
+    {
+      "code": "P6",
+      "revision": "v01",
+      "source": ".atena/generated/art-candidates/asset-lot16/P6_v01.png",
+      "source_sha256": "31442F44699D998A8A89307DC73850FBA09FECD2ECAB501FCBD8662C34A12B7E",
+      "frame_count": 6
+    },
+    {
+      "code": "P7",
+      "revision": "v01",
+      "source": ".atena/generated/art-candidates/asset-lot16/P7_v01.png",
+      "source_sha256": "BBEA99D8C559BBA1D61E4C467912462CA44007059A595B115F93FF4843598B3F",
+      "frame_count": 6
+    },
+    {
+      "code": "P8",
+      "revision": "v01",
+      "source": ".atena/generated/art-candidates/asset-lot16/P8_v01.png",
+      "source_sha256": "5BD58DFEF3869EDC4FFEE1FC4188EEB17055685D66F14AC1A8B22BA72F2A0703",
+      "frame_count": 6
+    },
+    {
+      "code": "P9",
+      "revision": "v02",
+      "source": ".atena/generated/art-candidates/asset-lot16/P9_v02.png",
+      "source_sha256": "B3061DE71A7B87D09E0D7E92FAB8C719DBE72F3F6B2E26F31BA40B8BE95F67FD",
+      "frame_count": 6
+    },
+    {
+      "code": "P10",
+      "revision": "v01",
+      "source": ".atena/generated/art-candidates/asset-lot16/P10_v01.png",
+      "source_sha256": "F63AD797DCCC3B32223B68D2EBF0B7C634E66040AD90752C215DA7500C6C739C",
+      "frame_count": 6
+    }
+  ],
+  "technical_holds_preserved": [
+    "LOT16_ALPHA_PREPARATION",
+    "LOT16_REGISTRATION_SCALE_CADENCE",
+    "LOT16_P8_NON_SQUARE_NATIVE_CELLS",
+    "LOT16_P9_LEFT_HAND_DIRECTION_CONFLICT"
+  ],
+  "retained_directions": [
+    "P9"
+  ],
+  "runtime_admission": false,
+  "canonical_promotion": false,
+  "implementation_owner": "Claude"
+}

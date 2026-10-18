@@ -2195,14 +2195,14 @@ asset_lot15_heroes_back_walk_2026_10_17:
   request_classification: PLAN_CHANGE_REQUEST
   owner_request: 'aprovado, commit e continue'
   mode: per-plan
-  approval_status: PENDING_SCOPE_APPROVAL
-  status: PROPOSED_AWAITING_APPROVAL
-  checkpoint: S-001/OWNER_SCOPE_APPROVAL_PENDING
+  approval_status: APPROVED_EXPLICITLY
+  status: VISUALLY_ACCEPTED_DRAFT_WITH_TECHNICAL_HOLDS
+  checkpoint: OWNER_JOINT_VISUAL_REVIEW/APPROVED
   ordered_steps: [S-001, S-002, S-003, S-004]
-  current_step_position: 1
-  completed_steps: 0
+  current_step_position: 4
+  completed_steps: 4
   total_steps: 4
-  remaining_steps_after_current: 3
+  remaining_steps_after_current: 0
   readiness_prepared: true
   scope: [ZN00-ZN05, ZE00-ZE05, LN00-LN05, LE00-LE05, YN00-YN05, YE00-YE05]
   planned_sources: 36
@@ -2210,8 +2210,8 @@ asset_lot15_heroes_back_walk_2026_10_17:
   planned_review_entries: 6
   max_generation_calls: 108
   max_attempts_per_file: 3
-  generated: 0
-  generation_attempts: 0
+  generated: 36
+  generation_attempts: 52
   specification: .atena/specs/SPEC-121-retomada-fila-imagens/asset-lot15-heroes-back-walk-v01.md
   references: .atena/generated/asset-lot15-2026-10-17/references.json
   implementation_owner: Claude
@@ -2220,7 +2220,24 @@ asset_lot15_heroes_back_walk_2026_10_17:
   next_execution_authorized: false
   commit_push_export: NOT_AUTHORIZED_FOR_NEW_PRODUCTION
   return_plan: PLAN-103
-  next_objective: 'Aprovar36fontes/seis caminhadas de costas e revisão conjunta'
+  next_objective: 'Fila local reconciliada; entrega consolidada pronta para preparacao e implementacao pelo Claude'
+
+  owner_scope_reply: 'aprovo, por plano'
+  approved_date: '2026-10-17'
+  last_request_classification: IN_PLAN
+
+  gallery: .atena/generated/asset-lot15-2026-10-17/index.html
+  manifest: .atena/generated/asset-lot15-2026-10-17/manifest.json
+  evidence: .atena/evidence/asset-lot15-heroes-back-walk-2026-10-17.md
+  human_visual_acceptance: APPROVED_EXPLICITLY_SOURCE_DIRECTION
+  technical_holds: [LOT15_ALPHA_PREPARATION, LOT15_MARGIN_TARGET, LOT15_REGISTRATION_SCALE_REVIEW, LOT15_WALK_CADENCE_REVIEW, LOT15_NYRELIA_REGISTRATION_AFTER_THREE_ATTEMPTS]
+  legacy_holds_preserved: [LOT11, LOT13, LOT14]
+
+  owner_visual_reply: 'aprovado, proximo'
+  visual_acceptance_receipt: .atena/generated/asset-lot15-2026-10-17/visual-acceptance.json
+  consolidated_handoff: .atena/generated/asset-production-handoff-2026-10-17/index.html
+  continuation_evidence: .atena/evidence/asset-production-handoff-2026-10-17.md
+  additional_mandatory_ungenerated_sources_identified_in_reviewed_catalog: false
 
 asset_lot14_local_commit_2026_10_17:
   mode: per-plan
@@ -2243,3 +2260,178 @@ asset_lot14_local_commit_2026_10_17:
 
   content_commit: c58e399e
   next_objective: 'Aprovar LOT15/v01 antes de produzir36poses; implementação com Claude'
+
+asset_production_handoff_2026_10_17:
+  plan: ASSET-LOT15
+  revision: HANDOFF/v01
+  request_classification: IN_PLAN
+  owner_reply: 'aprovado, proximo'
+  mode: per-plan
+  status: LOCAL_QUEUE_RECONCILED_HANDOFF_COMPLETE
+  checkpoint: IMPLEMENTATION_WITH_CLAUDE
+  ordered_steps: [S-001, S-002, S-003]
+  current_step_position: 3
+  completed_steps: 3
+  total_steps: 3
+  remaining_steps_after_current: 0
+  content_state: DRAFT
+  packages: 17
+  local_queue_headers_reviewed: 31
+  new_images_generated: 0
+  gallery: .atena/generated/asset-production-handoff-2026-10-17/index.html
+  evidence: .atena/evidence/asset-production-handoff-2026-10-17.md
+  inventory: .atena/generated/asset-production-handoff-2026-10-17/inventory.json
+  additional_mandatory_ungenerated_sources_identified_in_reviewed_catalog: false
+  historical_source_recovery_fully_verified: false
+  implementation_owner: Claude
+  implementation_performed: false
+  message_sent_to_claude: false
+  next_execution_authorized: false
+  new_generation_authorized: false
+  commit_push_export: NOT_AUTHORIZED
+  runtime_admission: false
+  canonical_promotion: false
+  next_objective: 'Claude preparar e implementar fontes aceitas, iniciando LOT15/BUG-027 com retencoes preservadas'
+
+asset_production_source_integrity_2026_10_17:
+  plan: ASSET-LOT15
+  revision: HANDOFF-SOURCE-CHECK/v01
+  request_classification: IN_PLAN
+  owner_request: 'atena continue'
+  mode: per-plan
+  status: INTEGRITY_VERIFIED_FOLLOWUP_LOT16_PRODUCED
+  checkpoint: FOLLOWUP_IDENTIFIED_IN_PLAN103_D22
+  content_state: DRAFT
+  verification_complete: true
+  packages_checked: 17
+  source_or_delivery_pngs: 182
+  qa_frame_pngs: 356
+  missing_or_invalid: 0
+  source_report: .atena/generated/asset-production-handoff-2026-10-17/source-files-check.json
+  evidence: .atena/evidence/asset-production-handoff-2026-10-17.md
+  technical_holds_preserved: true
+  historical_source_recovery_fully_verified: false
+  new_generation_authorized: false
+  implementation_owner: Claude
+  implementation_performed: false
+  commit_push_export: NOT_AUTHORIZED
+  next_objective: 'LOT16 produzido, aguarda revisao visual; ressalva de escopoM1 adicionada a reconciliacao'
+
+asset_lot16_durvall_directions_2026_10_17:
+  id: ASSET-LOT16
+  revision: v01
+  content_state: DRAFT
+  origin: planned
+  implementation_preceded_spec: false
+  request_classification: IN_PLAN
+  owner_request: 'atena, continue'
+  parent_plan: PLAN-103
+  parent_batch: B-002
+  approval_basis: 'B-002 aprovado e D22 solicita P6..P10 apos aceite provisorio v03; pedido atual retoma producao de assets'
+  mode: per-batch
+  approval_status: APPROVED_EXISTING_BATCH_SCOPE_CONTINUATION
+  status: VISUALLY_ACCEPTED_DRAFT_WITH_TECHNICAL_HOLDS
+  checkpoint: OWNER_DURVALL_DIRECTIONS_REVIEW/APPROVED
+  ordered_steps: [S-001, S-002, S-003, S-004]
+  current_step_position: 4
+  completed_steps: 4
+  total_steps: 4
+  remaining_steps_after_current: 0
+  scope: [P6_move_n, P7_move_ne, P8_move_w, P9_move_sw, P10_move_nw]
+  planned_sources: 5
+  planned_drawings: 30
+  max_attempts_per_source: 3
+  max_generation_calls: 15
+  generated: 5
+  generation_attempts: 13
+  specification: .atena/specs/SPEC-121-retomada-fila-imagens/asset-lot16-durvall-directions-v01.md
+  gallery: .atena/generated/asset-lot16-2026-10-17/index.html
+  human_visual_acceptance: APPROVED_EXPLICITLY_SOURCE_DIRECTION
+  next_execution_authorized: false
+  implementation_owner: Claude
+  runtime_admission: false
+  canonical_promotion: false
+  commit_push_export: NOT_AUTHORIZED
+
+  manifest: .atena/generated/asset-lot16-2026-10-17/manifest.json
+  evidence: .atena/evidence/asset-lot16-durvall-directions-2026-10-17.md
+  technical_holds: [LOT16_ALPHA_PREPARATION, LOT16_REGISTRATION_SCALE_CADENCE, LOT16_P8_NON_SQUARE_NATIVE_CELLS, LOT16_P9_LEFT_HAND_DIRECTION_CONFLICT]
+  retained_directions: [P9]
+  next_objective: 'Aceite visual registrado; proposta LOT17 de seis fontes individuais para corrigir P9 apos limite de folhas'
+
+  owner_visual_reply: 'atena, aprovado, continue'
+  visual_acceptance_receipt: .atena/generated/asset-lot16-2026-10-17/visual-acceptance.json
+
+asset_lot17_durvall_sw_source_repair_2026_10_17:
+  id: ASSET-LOT17
+  revision: v01
+  content_state: DRAFT
+  origin: planned
+  implementation_preceded_spec: false
+  request_classification: PLAN_CHANGE_REQUEST
+  owner_request: 'atena, aprovado, continue'
+  mode: per-plan
+  approval_status: APPROVED_EXPLICITLY
+  status: VISUALLY_ACCEPTED_DRAFT_WITH_TECHNICAL_HOLDS
+  checkpoint: OWNER_JOINT_VISUAL_REVIEW/APPROVED
+  ordered_steps: [S-001, S-002, S-003, S-004]
+  current_step_position: 4
+  completed_steps: 4
+  total_steps: 4
+  remaining_steps_after_current: 0
+  scope: [SW00, SW01, SW02, SW03, SW04, SW05]
+  planned_sources: 6
+  planned_drawings: 6
+  max_attempts_per_source: 3
+  max_generation_calls: 18
+  generated: 6
+  generation_attempts: 13
+  specification: .atena/specs/SPEC-121-retomada-fila-imagens/asset-lot17-durvall-sw-source-repair-v01.md
+  references: .atena/generated/asset-lot17-proposal-2026-10-17/references.json
+  human_visual_acceptance: APPROVED_EXPLICITLY_SOURCE_DIRECTION
+  next_execution_authorized: false
+  implementation_owner: Claude
+  runtime_admission: false
+  canonical_promotion: false
+  commit_push_export: LOCAL_COMMIT_AUTHORIZED_PUSH_EXPORT_NOT_AUTHORIZED
+  next_objective: 'Aceite visual registrado; commit local autorizado; preparacao/implementacao com Claude, P9historica retida'
+
+  owner_scope_reply: 'aprovado, continue'
+  approved_date: '2026-10-17'
+  last_request_classification: IN_PLAN
+
+  gallery: .atena/generated/asset-lot17-2026-10-17/index.html
+  manifest: .atena/generated/asset-lot17-2026-10-17/manifest.json
+  evidence: .atena/evidence/asset-lot17-durvall-sw-source-repair-2026-10-17.md
+  technical_holds: [LOT17_ALPHA_PREPARATION, LOT17_REGISTRATION_SCALE_CADENCE_REVIEW, LOT17_SW04_REGISTRATION_AFTER_THREE_ATTEMPTS]
+  legacy_p9_hold_released: false
+
+  owner_visual_reply: 'aprovado, commite'
+  visual_acceptance_receipt: .atena/generated/asset-lot17-2026-10-17/visual-acceptance.json
+
+asset_lot15_17_local_commit_2026_10_17:
+  id: ASSET-LOT15-17-LOCAL-COMMIT
+  revision: v01
+  request_classification: IN_PLAN
+  owner_reply: 'aprovado, commite'
+  mode: per-plan
+  approval_status: APPROVED_EXPLICITLY
+  status: VALIDATED_READY_TO_COMMIT
+  checkpoint: S-003/LOCAL_COMMIT_AUTHORIZED
+  ordered_steps: [S-001, S-002, S-003]
+  current_step_position: 3
+  completed_steps: 2
+  total_steps: 3
+  remaining_steps_after_current: 0
+  scope: [LOT15, LOT16, LOT17, CONSOLIDATED_HANDOFF, ART_BACKLOG_STATE_EVIDENCE]
+  content_state: DRAFT
+  selected_sources: 47
+  preserved_source_attempts: 78
+  specification: .atena/specs/SPEC-121-retomada-fila-imagens/asset-lot15-17-local-commit-v01.md
+  implementation_owner: Claude
+  runtime_admission: false
+  canonical_promotion: false
+  technical_holds_preserved: true
+  historical_p9_hold_released: false
+  push_export_merge: NOT_AUTHORIZED
+  next_objective: 'Validar e commitar localmente conteudo; registrar recibo de sucesso'

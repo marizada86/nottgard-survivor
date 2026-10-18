@@ -1,0 +1,21 @@
+{
+  "status": "PASS_DELIVERY_INTEGRITY_ONLY",
+  "selected_source_hashes": 36,
+  "attempt_hashes": 52,
+  "qa_frame_hashes": 36,
+  "reference_hashes": 9,
+  "generation_reference_hashes": 86,
+  "prompt_records": 52,
+  "reading_previews": 108,
+  "local_links": 28,
+  "technical_holds": [
+    "LOT15_ALPHA_PREPARATION",
+    "LOT15_MARGIN_TARGET",
+    "LOT15_REGISTRATION_SCALE_REVIEW",
+    "LOT15_WALK_CADENCE_REVIEW",
+    "LOT15_NYRELIA_REGISTRATION_AFTER_THREE_ATTEMPTS"
+  ],
+  "human_visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+  "runtime_admission": false,
+  "browser_render_verified": false
+}

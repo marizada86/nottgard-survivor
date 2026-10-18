@@ -1,0 +1,8 @@
+{
+  "id": "ZN00_v02",
+  "native": "exec-9e33baf7-2c7d-4231-bed3-2afbbc9b35f2.png",
+  "prompt": "Use case: precise-object-edit. Correct this Zynara back-facing animation anchor. Preserve the entire pose, pixelart style, anatomy, hair, clothes, hourglass LEFT HAND screen LEFT, exact body scale/camera/canvas placement and all opaque/transparency behavior. CHANGE ONLY the leather cylindrical pouch hanging at screen LEFT waist: relocate it to her anatomical RIGHT hip, screen RIGHT in this FULL BACK view, just below right elbow/hand. Remove pouch from left hip completely; don't duplicate. Keep existing belt/coat decoration coherent but add no new accessory. Full back, absolutely no face/eyes/frontal mask. One individual sprite on transparent square. All feet/hair/hourglass/pouch whole, no floor/shadow/text. This is north walk0: same first contact stance as input.",
+  "input_references": [
+    ".atena/generated/art-candidates/asset-lot15/ZN00_v01.png"
+  ]
+}

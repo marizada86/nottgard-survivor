@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "scope": "Offline minimal DOM simulation, not browser render",
+  "players": 1,
+  "animated_qa_frames": 6,
+  "checks": [
+    "localPNG",
+    "5FPSdefault",
+    "10FPStiming",
+    "loop6",
+    "pause",
+    "scrub",
+    "replay",
+    "repeatonoff",
+    "source links",
+    "aspectpreservation"
+  ]
+}

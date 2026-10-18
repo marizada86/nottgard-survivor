@@ -1,0 +1,9 @@
+{
+  "id": "LE03_v01",
+  "native": "exec-e1cfabab-d640-40b0-8e2a-2138e89d2169.png",
+  "prompt": "Use case: stylized-concept. ONE whole individual animation sprite, not a sheet. FIRST reference fixes body scale/proportions, canvas registration, rear costume and foot support area; preserve these closely, no zoom/translation. SECOND reference fixes implemented identity/style. Detailed darkfantasy pixelart, upperleft light, elevated isometric camera. Opaque body/accessory, genuinely transparent square outside, generous empty margins and complete silhouette. No floor/castshadow, aura, scene, text, extra character, new accessory, face/eyes/nose or frontal mask/brooch on the back. Leoric has SHORT COMPACT nonhuman proportions exactly as idle, black top hat brown band, brown longcoat/cape, darktrousers/boots, twisted wooden staff with BLUE crystal held in anatomical RIGHT hand, screen RIGHT in back view. Gray hair only at back ofhead, NEVER face/beard on his back. Small broad head/shortlegs, do not stretch to human height. LE03 phase3of6 OPPOSITE CONTACT: LEFT foot is now forward AWAY from viewer, RIGHT foot trails BACK toward viewer with heel/sole visible. This must visibly REVERSE legs from first anchor0. Preserve body/rootline, exact same scale, costume and accessories; don't just change cloth. CRITICAL screenRIGHT boot is LOWEST/long trailing leg, screenLEFT boot is HIGHER/short leading leg, reverse lowest foot versus anchor0. Same THREEQUARTER BACK UP AND RIGHT angle as first, no face/beard visible; staff anatomicalRIGHT screenRIGHT. Feet step upperright/lowerleft. EXACT first small canvas scale/shortleg proportions. Exact same small body/shortleg size, original back hat/napehair/coat, no face or beard; staff stays right hand.",
+  "input_references": [
+    ".atena/generated/art-candidates/asset-lot15/LE00_v01.png",
+    "assets/animations/heroes/leoric/idle.png"
+  ]
+}

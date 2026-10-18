@@ -1,0 +1,45 @@
+id: ASSET-LOT17
+revision: v01
+content_state: DRAFT
+origin: planned
+implementation_preceded_spec: false
+request_classification: PLAN_CHANGE_REQUEST
+owner_request: 'atena, aprovado, continue'
+mode: per-plan
+approval_status: APPROVED_EXPLICITLY
+status: VISUALLY_ACCEPTED_DRAFT_WITH_TECHNICAL_HOLDS
+checkpoint: OWNER_JOINT_VISUAL_REVIEW/APPROVED
+ordered_steps: [S-001, S-002, S-003, S-004]
+current_step_position: 4
+completed_steps: 4
+total_steps: 4
+remaining_steps_after_current: 0
+scope: [SW00, SW01, SW02, SW03, SW04, SW05]
+planned_sources: 6
+planned_drawings: 6
+max_attempts_per_source: 3
+max_generation_calls: 18
+generated: 6
+generation_attempts: 13
+specification: .atena/specs/SPEC-121-retomada-fila-imagens/asset-lot17-durvall-sw-source-repair-v01.md
+references: .atena/generated/asset-lot17-proposal-2026-10-17/references.json
+human_visual_acceptance: APPROVED_EXPLICITLY_SOURCE_DIRECTION
+next_execution_authorized: false
+implementation_owner: Claude
+runtime_admission: false
+canonical_promotion: false
+commit_push_export: LOCAL_COMMIT_AUTHORIZED_PUSH_EXPORT_NOT_AUTHORIZED
+next_objective: 'Aceite visual registrado; commit local autorizado; preparacao/implementacao com Claude, P9historica retida'
+
+owner_scope_reply: 'aprovado, continue'
+approved_date: '2026-10-17'
+last_request_classification: IN_PLAN
+
+gallery: .atena/generated/asset-lot17-2026-10-17/index.html
+manifest: .atena/generated/asset-lot17-2026-10-17/manifest.json
+evidence: .atena/evidence/asset-lot17-durvall-sw-source-repair-2026-10-17.md
+technical_holds: [LOT17_ALPHA_PREPARATION, LOT17_REGISTRATION_SCALE_CADENCE_REVIEW, LOT17_SW04_REGISTRATION_AFTER_THREE_ATTEMPTS]
+legacy_p9_hold_released: false
+
+owner_visual_reply: 'aprovado, commite'
+visual_acceptance_receipt: .atena/generated/asset-lot17-2026-10-17/visual-acceptance.json

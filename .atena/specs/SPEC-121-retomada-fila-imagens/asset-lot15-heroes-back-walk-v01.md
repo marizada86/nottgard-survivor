@@ -47,3 +47,18 @@ RESOLVABLE: consistência posterior, vista NE, mão/acessório, escala/apoio/alf
 ## Impacto e recuperação
 
 Não substitui LOT14 aceito nem libera retenções históricas. PLAN-103/PLAN-053/SPEC-123 preservados. Sem código/dados/assets oficiais, dependências, arquitetura material, lore externo, publicação/commit/push/exportação/merge ou mensagem a outro chat. Recuperação por fontes versionadas/hashes e seleção explícita, sem sobrescrever originais. Aprovação do LOT14 não autoriza este novo lote; aguardando confirmação deste LOT15/v01.
+
+Aprovação explícita2026-10-17: “aprovo, por plano”. Escopo36fontes/108chamadas máximas/revisão conjunta autorizado; S-001 concluída, S-002 executável. Supera PENDING_SCOPE_APPROVAL anterior; não autoriza implementação, CANON, commit ou push.
+
+## Resultado da execução autorizada — 2026-10-17
+
+S-001..S-004 concluídas para produção/revisão local:36fontes selecionadas/52tentativas, seis ciclos6quadros. ZN00/ZE03/ZE04/LE03/LE04/YE01/YE02/YE05v02, YN03/YN04/YE03/YE04v03, demaisv01. [Galeria](../../generated/asset-lot15-2026-10-17/index.html), [manifesto](../../generated/asset-lot15-2026-10-17/manifest.json) e [evidência](../../evidence/asset-lot15-heroes-back-walk-2026-10-17.md).
+
+Inspeção não libera uso direto: alfa modal253/resíduos,11margens abaixo12%, registro/escala/cadência pendentes. Nyrelia03/04 N/NE atingiu3tentativas e mantém deslocamento vertical; reter para preparação/revisão. Bbox não certifica pivô nem escala anatômica; proporção final requer comparação aos idles. Retenções históricas preservadas, BUG-027 aberto.
+
+Checkpoint atual OWNER_JOINT_VISUAL_REVIEW/PENDING: primeiro quadro por herói/direção e36revisões aguardam aceite humano, parcial por herói/direção/revisão permitido. Tudo DRAFT, sem runtime/CANON. Próximo objetivo após aceite: preparação/implementação com Claude em escopo posterior. O PENDING inicial e proposal-check.json são histórico de prontidão, superados pela aprovação explícita do plano; não significam aprovação visual das saídas.
+## Aceite visual e continuação — 2026-10-17
+
+“aprovado, proximo” aceita os primeiros quadros e as36revisões selecionadas deste lote como direção visual DRAFT. [Recibo por hash](../../generated/asset-lot15-2026-10-17/visual-acceptance.json). Supera o checkpoint visual PENDING acima, preservando todas as retenções técnicas e BUG-027 aberto. Não promove CANON nem autoriza implementação/commit/push.
+
+Continuação IN_PLAN de reconciliação operacional e entrega: verificar coberturas posteriores das filas locais e reunir links/fontes/retenções para Claude em [índice consolidado](../../generated/asset-production-handoff-2026-10-17/index.html). Sem orçamento novo de geração; nenhuma nova fonte obrigatória identificada no catálogo local inspecionado. Não declara completude de fontes históricas recuperadas nem aceite in-game.

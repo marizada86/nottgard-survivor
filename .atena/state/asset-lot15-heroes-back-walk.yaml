@@ -6,14 +6,14 @@ implementation_preceded_spec: false
 request_classification: PLAN_CHANGE_REQUEST
 owner_request: 'aprovado, commit e continue'
 mode: per-plan
-approval_status: PENDING_SCOPE_APPROVAL
-status: PROPOSED_AWAITING_APPROVAL
-checkpoint: S-001/OWNER_SCOPE_APPROVAL_PENDING
+approval_status: APPROVED_EXPLICITLY
+status: VISUALLY_ACCEPTED_DRAFT_WITH_TECHNICAL_HOLDS
+checkpoint: OWNER_JOINT_VISUAL_REVIEW/APPROVED
 ordered_steps: [S-001, S-002, S-003, S-004]
-current_step_position: 1
-completed_steps: 0
+current_step_position: 4
+completed_steps: 4
 total_steps: 4
-remaining_steps_after_current: 3
+remaining_steps_after_current: 0
 readiness_prepared: true
 scope: [ZN00-ZN05, ZE00-ZE05, LN00-LN05, LE00-LE05, YN00-YN05, YE00-YE05]
 planned_sources: 36
@@ -21,8 +21,8 @@ planned_drawings: 36
 planned_review_entries: 6
 max_generation_calls: 108
 max_attempts_per_file: 3
-generated: 0
-generation_attempts: 0
+generated: 36
+generation_attempts: 52
 specification: .atena/specs/SPEC-121-retomada-fila-imagens/asset-lot15-heroes-back-walk-v01.md
 references: .atena/generated/asset-lot15-2026-10-17/references.json
 implementation_owner: Claude
@@ -31,4 +31,21 @@ canonical_promotion: false
 next_execution_authorized: false
 commit_push_export: NOT_AUTHORIZED_FOR_NEW_PRODUCTION
 return_plan: PLAN-103
-next_objective: 'Aprovar36fontes/seis caminhadas de costas e revisão conjunta'
+next_objective: 'Fila local reconciliada; entrega consolidada pronta para preparacao e implementacao pelo Claude'
+
+owner_scope_reply: 'aprovo, por plano'
+approved_date: '2026-10-17'
+last_request_classification: IN_PLAN
+
+gallery: .atena/generated/asset-lot15-2026-10-17/index.html
+manifest: .atena/generated/asset-lot15-2026-10-17/manifest.json
+evidence: .atena/evidence/asset-lot15-heroes-back-walk-2026-10-17.md
+human_visual_acceptance: APPROVED_EXPLICITLY_SOURCE_DIRECTION
+technical_holds: [LOT15_ALPHA_PREPARATION, LOT15_MARGIN_TARGET, LOT15_REGISTRATION_SCALE_REVIEW, LOT15_WALK_CADENCE_REVIEW, LOT15_NYRELIA_REGISTRATION_AFTER_THREE_ATTEMPTS]
+legacy_holds_preserved: [LOT11, LOT13, LOT14]
+
+owner_visual_reply: 'aprovado, proximo'
+visual_acceptance_receipt: .atena/generated/asset-lot15-2026-10-17/visual-acceptance.json
+consolidated_handoff: .atena/generated/asset-production-handoff-2026-10-17/index.html
+continuation_evidence: .atena/evidence/asset-production-handoff-2026-10-17.md
+additional_mandatory_ungenerated_sources_identified_in_reviewed_catalog: false

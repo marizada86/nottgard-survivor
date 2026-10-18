@@ -1,0 +1,237 @@
+[
+  {
+    "id": "P10_v01",
+    "source": ".atena/generated/art-candidates/asset-lot16/P10_v01.png",
+    "sha256": "F63AD797DCCC3B32223B68D2EBF0B7C634E66040AD90752C215DA7500C6C739C",
+    "native_origin": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a13fe9-1c9e-7d32-9ccb-d1a37a3f79ec\\exec-a16363f1-393c-4267-bb98-4fd5a17eece3.png",
+    "byte_exact_copy": true,
+    "prompt": "prompts/P10_v01.txt",
+    "input_references": [
+      {
+        "path": ".atena/generated/m1-movimento/piloto-durvall/durvall_idle.png",
+        "sha256": "A483864E5764C63CE11412099DBB0FD9D26B4CAEA78C14F0F1DF0D69F4C12F06"
+      },
+      {
+        "path": ".atena/generated/m1-movimento/piloto-durvall/gabarito_grade_move.png",
+        "sha256": "1C669F763CF6F478DB6F8726834C1791EFC245C23E2B1CDAA90B2F787B70A01F"
+      }
+    ],
+    "selected": true
+  },
+  {
+    "id": "P10_v02",
+    "source": ".atena/generated/art-candidates/asset-lot16/P10_v02.png",
+    "sha256": "453E88C555E0EDB46E02E4DF457B3EAACE770D5BDADD648BF8ED3A081D3D7387",
+    "native_origin": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a13fe9-1c9e-7d32-9ccb-d1a37a3f79ec\\exec-a953d425-9a76-4f2f-bee3-f47d82c6a9fb.png",
+    "byte_exact_copy": true,
+    "prompt": "prompts/P10_v02.txt",
+    "input_references": [
+      {
+        "path": ".atena/generated/art-candidates/asset-lot16/P10_v01.png",
+        "sha256": "F63AD797DCCC3B32223B68D2EBF0B7C634E66040AD90752C215DA7500C6C739C"
+      }
+    ],
+    "selected": false
+  },
+  {
+    "id": "P10_v03",
+    "source": ".atena/generated/art-candidates/asset-lot16/P10_v03.png",
+    "sha256": "EC192C860D307D82BFDC5CD8BB1419F515C0D76607DFB35525D98552C6703855",
+    "native_origin": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a13fe9-1c9e-7d32-9ccb-d1a37a3f79ec\\exec-db4ef715-7fc9-40f6-87bc-07b851f26148.png",
+    "byte_exact_copy": true,
+    "prompt": "prompts/P10_v03.txt",
+    "input_references": [
+      {
+        "path": ".atena/generated/m1-movimento/piloto-durvall/durvall_idle.png",
+        "sha256": "A483864E5764C63CE11412099DBB0FD9D26B4CAEA78C14F0F1DF0D69F4C12F06"
+      },
+      {
+        "path": ".atena/generated/m1-movimento/piloto-durvall/gabarito_grade_move.png",
+        "sha256": "1C669F763CF6F478DB6F8726834C1791EFC245C23E2B1CDAA90B2F787B70A01F"
+      }
+    ],
+    "selected": false
+  },
+  {
+    "id": "P6_v01",
+    "source": ".atena/generated/art-candidates/asset-lot16/P6_v01.png",
+    "sha256": "31442F44699D998A8A89307DC73850FBA09FECD2ECAB501FCBD8662C34A12B7E",
+    "native_origin": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a13fe9-1c9e-7d32-9ccb-d1a37a3f79ec\\exec-ab930b00-fcd9-44b9-a8da-e55d52c3b049.png",
+    "byte_exact_copy": true,
+    "prompt": "prompts/P6_v01.txt",
+    "input_references": [
+      {
+        "path": ".atena/generated/m1-movimento/piloto-durvall/durvall_idle.png",
+        "sha256": "A483864E5764C63CE11412099DBB0FD9D26B4CAEA78C14F0F1DF0D69F4C12F06"
+      },
+      {
+        "path": ".atena/generated/m1-movimento/piloto-durvall/gabarito_grade_move.png",
+        "sha256": "1C669F763CF6F478DB6F8726834C1791EFC245C23E2B1CDAA90B2F787B70A01F"
+      }
+    ],
+    "selected": true
+  },
+  {
+    "id": "P6_v02",
+    "source": ".atena/generated/art-candidates/asset-lot16/P6_v02.png",
+    "sha256": "CDB03EDD54217E0E411AAC8E6825646E9A63D20F244B783685E4790B8872F84D",
+    "native_origin": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a13fe9-1c9e-7d32-9ccb-d1a37a3f79ec\\exec-983f6fd4-8fe2-422d-bc42-008e81ba18da.png",
+    "byte_exact_copy": true,
+    "prompt": "prompts/P6_v02.txt",
+    "input_references": [
+      {
+        "path": ".atena/generated/art-candidates/asset-lot16/P6_v01.png",
+        "sha256": "31442F44699D998A8A89307DC73850FBA09FECD2ECAB501FCBD8662C34A12B7E"
+      }
+    ],
+    "selected": false
+  },
+  {
+    "id": "P6_v03",
+    "source": ".atena/generated/art-candidates/asset-lot16/P6_v03.png",
+    "sha256": "FDDAAF6099C5AD79D0F9A56BD1751C4CCDA7071E30C8538494050ACCC4C77811",
+    "native_origin": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a13fe9-1c9e-7d32-9ccb-d1a37a3f79ec\\exec-fd30de2f-38ea-45c2-98d5-76162c733438.png",
+    "byte_exact_copy": true,
+    "prompt": "prompts/P6_v03.txt",
+    "input_references": [
+      {
+        "path": ".atena/generated/m1-movimento/piloto-durvall/durvall_idle.png",
+        "sha256": "A483864E5764C63CE11412099DBB0FD9D26B4CAEA78C14F0F1DF0D69F4C12F06"
+      },
+      {
+        "path": ".atena/generated/m1-movimento/piloto-durvall/gabarito_grade_move.png",
+        "sha256": "1C669F763CF6F478DB6F8726834C1791EFC245C23E2B1CDAA90B2F787B70A01F"
+      }
+    ],
+    "selected": false
+  },
+  {
+    "id": "P7_v01",
+    "source": ".atena/generated/art-candidates/asset-lot16/P7_v01.png",
+    "sha256": "BBEA99D8C559BBA1D61E4C467912462CA44007059A595B115F93FF4843598B3F",
+    "native_origin": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a13fe9-1c9e-7d32-9ccb-d1a37a3f79ec\\exec-daad2866-21ff-4a90-b23c-c104ee55870c.png",
+    "byte_exact_copy": true,
+    "prompt": "prompts/P7_v01.txt",
+    "input_references": [
+      {
+        "path": ".atena/generated/m1-movimento/piloto-durvall/durvall_idle.png",
+        "sha256": "A483864E5764C63CE11412099DBB0FD9D26B4CAEA78C14F0F1DF0D69F4C12F06"
+      },
+      {
+        "path": ".atena/generated/m1-movimento/piloto-durvall/gabarito_grade_move.png",
+        "sha256": "1C669F763CF6F478DB6F8726834C1791EFC245C23E2B1CDAA90B2F787B70A01F"
+      }
+    ],
+    "selected": true
+  },
+  {
+    "id": "P7_v02",
+    "source": ".atena/generated/art-candidates/asset-lot16/P7_v02.png",
+    "sha256": "DAE2AC9F197C424CA6F388539A458405D0CEF67E42865BCD287855D3CEACC3DF",
+    "native_origin": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a13fe9-1c9e-7d32-9ccb-d1a37a3f79ec\\exec-2ae76966-df11-40d6-b792-e205161e1856.png",
+    "byte_exact_copy": true,
+    "prompt": "prompts/P7_v02.txt",
+    "input_references": [
+      {
+        "path": ".atena/generated/art-candidates/asset-lot16/P7_v01.png",
+        "sha256": "BBEA99D8C559BBA1D61E4C467912462CA44007059A595B115F93FF4843598B3F"
+      }
+    ],
+    "selected": false
+  },
+  {
+    "id": "P7_v03",
+    "source": ".atena/generated/art-candidates/asset-lot16/P7_v03.png",
+    "sha256": "3E6D95BA192EF62843AC6B5D17AAB9634B3D804B46D27FBE40C056623B95061C",
+    "native_origin": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a13fe9-1c9e-7d32-9ccb-d1a37a3f79ec\\exec-93273557-fc57-47fc-a64e-aa79a6f0911e.png",
+    "byte_exact_copy": true,
+    "prompt": "prompts/P7_v03.txt",
+    "input_references": [
+      {
+        "path": ".atena/generated/m1-movimento/piloto-durvall/durvall_idle.png",
+        "sha256": "A483864E5764C63CE11412099DBB0FD9D26B4CAEA78C14F0F1DF0D69F4C12F06"
+      },
+      {
+        "path": ".atena/generated/m1-movimento/piloto-durvall/gabarito_grade_move.png",
+        "sha256": "1C669F763CF6F478DB6F8726834C1791EFC245C23E2B1CDAA90B2F787B70A01F"
+      }
+    ],
+    "selected": false
+  },
+  {
+    "id": "P8_v01",
+    "source": ".atena/generated/art-candidates/asset-lot16/P8_v01.png",
+    "sha256": "5BD58DFEF3869EDC4FFEE1FC4188EEB17055685D66F14AC1A8B22BA72F2A0703",
+    "native_origin": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a13fe9-1c9e-7d32-9ccb-d1a37a3f79ec\\exec-6bca10fb-f2ee-4e6d-8a2d-27ff633a6c63.png",
+    "byte_exact_copy": true,
+    "prompt": "prompts/P8_v01.txt",
+    "input_references": [
+      {
+        "path": ".atena/generated/m1-movimento/piloto-durvall/durvall_idle.png",
+        "sha256": "A483864E5764C63CE11412099DBB0FD9D26B4CAEA78C14F0F1DF0D69F4C12F06"
+      },
+      {
+        "path": ".atena/generated/m1-movimento/piloto-durvall/gabarito_grade_move.png",
+        "sha256": "1C669F763CF6F478DB6F8726834C1791EFC245C23E2B1CDAA90B2F787B70A01F"
+      }
+    ],
+    "selected": true
+  },
+  {
+    "id": "P9_v01",
+    "source": ".atena/generated/art-candidates/asset-lot16/P9_v01.png",
+    "sha256": "564F8AF7E5C23A711798DA500CF804D3D7C35B1884812AF2DF615C5EBEE975AA",
+    "native_origin": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a13fe9-1c9e-7d32-9ccb-d1a37a3f79ec\\exec-d720ab66-ed60-4244-b636-cda28cd667eb.png",
+    "byte_exact_copy": true,
+    "prompt": "prompts/P9_v01.txt",
+    "input_references": [
+      {
+        "path": ".atena/generated/m1-movimento/piloto-durvall/durvall_idle.png",
+        "sha256": "A483864E5764C63CE11412099DBB0FD9D26B4CAEA78C14F0F1DF0D69F4C12F06"
+      },
+      {
+        "path": ".atena/generated/m1-movimento/piloto-durvall/gabarito_grade_move.png",
+        "sha256": "1C669F763CF6F478DB6F8726834C1791EFC245C23E2B1CDAA90B2F787B70A01F"
+      }
+    ],
+    "selected": false
+  },
+  {
+    "id": "P9_v02",
+    "source": ".atena/generated/art-candidates/asset-lot16/P9_v02.png",
+    "sha256": "B3061DE71A7B87D09E0D7E92FAB8C719DBE72F3F6B2E26F31BA40B8BE95F67FD",
+    "native_origin": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a13fe9-1c9e-7d32-9ccb-d1a37a3f79ec\\exec-fa64291c-776e-4b1e-9cd9-0a6e2f6fcc02.png",
+    "byte_exact_copy": true,
+    "prompt": "prompts/P9_v02.txt",
+    "input_references": [
+      {
+        "path": ".atena/generated/m1-movimento/piloto-durvall/durvall_idle.png",
+        "sha256": "A483864E5764C63CE11412099DBB0FD9D26B4CAEA78C14F0F1DF0D69F4C12F06"
+      },
+      {
+        "path": ".atena/generated/m1-movimento/piloto-durvall/gabarito_grade_move.png",
+        "sha256": "1C669F763CF6F478DB6F8726834C1791EFC245C23E2B1CDAA90B2F787B70A01F"
+      }
+    ],
+    "selected": true
+  },
+  {
+    "id": "P9_v03",
+    "source": ".atena/generated/art-candidates/asset-lot16/P9_v03.png",
+    "sha256": "7FC422B63EC203AF7EE5836B203ACDFF907804B739BA236ABE7336371ACD2447",
+    "native_origin": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a13fe9-1c9e-7d32-9ccb-d1a37a3f79ec\\exec-5a8f82d0-a45a-4832-b1b7-1c12115348ff.png",
+    "byte_exact_copy": true,
+    "prompt": "prompts/P9_v03.txt",
+    "input_references": [
+      {
+        "path": ".atena/generated/m1-movimento/piloto-durvall/durvall_idle.png",
+        "sha256": "A483864E5764C63CE11412099DBB0FD9D26B4CAEA78C14F0F1DF0D69F4C12F06"
+      },
+      {
+        "path": ".atena/generated/m1-movimento/piloto-durvall/gabarito_grade_move.png",
+        "sha256": "1C669F763CF6F478DB6F8726834C1791EFC245C23E2B1CDAA90B2F787B70A01F"
+      }
+    ],
+    "selected": false
+  }
+]

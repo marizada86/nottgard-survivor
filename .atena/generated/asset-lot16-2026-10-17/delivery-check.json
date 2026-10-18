@@ -1,0 +1,21 @@
+{
+  "status": "PASS_DELIVERY_INTEGRITY_AND_STATE_ONLY",
+  "selected_source_hashes": 5,
+  "attempt_hashes": 13,
+  "qa_frame_hashes": 30,
+  "reading_previews": 90,
+  "reference_hashes": 3,
+  "generation_input_hashes": 23,
+  "prompt_records": 13,
+  "local_links": 40,
+  "state_replicas_match": true,
+  "technical_holds": [
+    "LOT16_ALPHA_PREPARATION",
+    "LOT16_REGISTRATION_SCALE_CADENCE",
+    "LOT16_P8_NON_SQUARE_NATIVE_CELLS",
+    "LOT16_P9_LEFT_HAND_DIRECTION_CONFLICT"
+  ],
+  "human_visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+  "runtime_admission": false,
+  "browser_render_verified": false
+}

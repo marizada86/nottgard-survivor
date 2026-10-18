@@ -1,0 +1,9 @@
+{
+  "id": "YN04_v03",
+  "native": "exec-3d745753-ceaa-4033-90ec-e9f4af3cc7f3.png",
+  "prompt": "Use case precise-object-edit, rear walk sprite scale correction. TWO reference images. FIRST IMAGE is mandatory GEOMETRY/size/registration authority. SECOND IMAGE supplies ONLY the leg gesture to transfer. Output an individual sprite at the FIRST IMAGE'S SMALLER SIZE, not the second's enlarged size. In a 1254 square canvas: hood top y192, foot support y1020, silhouette width about440 centered x630, totalheight about828 pixels. Full back view. Nyrelia green closed hood and cloak, gold vertical BACK panel, no face/front mask/brooch/chain. Preserve second image walking leg arrangement but redraw to fit first's exact overall body size and position. SCREEN LEFT boot LOW trailing and SCREEN RIGHT boot HIGH leading. Transparent square outside. No floor, shadow, text, aura, gear. Do not fill canvas with enlarged character; broad empty margins required. Same rear costume, no new lore.",
+  "input_references": [
+    ".atena/generated/art-candidates/asset-lot15/YN00_v01.png",
+    ".atena/generated/art-candidates/asset-lot15/YN04_v02.png"
+  ]
+}

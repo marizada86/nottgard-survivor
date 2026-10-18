@@ -1,0 +1,21 @@
+{
+  "status": "PASS_DELIVERY_INTEGRITY_AND_STATE_ONLY",
+  "selected_source_hashes": 6,
+  "attempt_hashes": 13,
+  "qa_frame_hashes": 6,
+  "reading_previews": 18,
+  "reference_hashes": 3,
+  "generation_input_hashes": 18,
+  "prompt_records": 13,
+  "local_links": 45,
+  "state_replicas_match": true,
+  "technical_holds": [
+    "LOT17_ALPHA_PREPARATION",
+    "LOT17_REGISTRATION_SCALE_CADENCE_REVIEW",
+    "LOT17_SW04_REGISTRATION_AFTER_THREE_ATTEMPTS"
+  ],
+  "human_visual_acceptance": "APPROVED_EXPLICITLY_SOURCE_DIRECTION",
+  "historical_p9_hold_released": false,
+  "runtime_admission": false,
+  "browser_render_verified": false
+}

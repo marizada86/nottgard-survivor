@@ -1,0 +1,9 @@
+{
+  "id": "ZE02_v01",
+  "native": "exec-ad0eca00-de1c-4bc4-ab28-d5b2a55bdad5.png",
+  "prompt": "Use case: stylized-concept. ONE whole individual animation sprite, not a sheet. FIRST reference fixes body scale/proportions, canvas registration, rear costume and foot support area; preserve these closely, no zoom/translation. SECOND reference fixes implemented identity/style. Detailed darkfantasy pixelart, upperleft light, elevated isometric camera. Opaque body/accessory, genuinely transparent square outside, generous empty margins and complete silhouette. No floor/castshadow, aura, scene, text, extra character, new accessory, face/eyes/nose or frontal mask/brooch on the back. Zynara, tall slender elf, very long silver-white hair over shoulderblades, pointed ears, long black coat gold embroidered cuffs/hem, black boots, leatherpouch on anatomical RIGHT hip. Hourglass stays in anatomical LEFT hand and is visible on screen LEFT of body in back view. Back construction derived from front, no new costume/accessory. ZE02 phase2of6 passing: LEFT foot swings forward close past the planted right foot, left knee bends, right heel starts to rise. Feet closer together than contact0, one boot sole partly visible. Upperbody stays registered, no jumping or floating, only gentle cloth/hair follow. Same THREEQUARTER BACK angle walking UP AND RIGHT as first, no face/eye/profile. Feet travel upperright/lowerleft relative body, not sideways or toward viewer. Hourglass stays anatomicalLEFT visible screenLEFT, pouch anatomicalRIGHT. Preserve FIRST exact rear hair/coat, accessory hand, pouch side, bodywidth/height and baseline. No front face/profile, no mirrored hand.",
+  "input_references": [
+    ".atena/generated/art-candidates/asset-lot15/ZE00_v01.png",
+    "assets/animations/heroes/zynara/idle.png"
+  ]
+}

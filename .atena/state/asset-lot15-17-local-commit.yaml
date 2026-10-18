@@ -1,0 +1,25 @@
+id: ASSET-LOT15-17-LOCAL-COMMIT
+revision: v01
+request_classification: IN_PLAN
+owner_reply: 'aprovado, commite'
+mode: per-plan
+approval_status: APPROVED_EXPLICITLY
+status: VALIDATED_READY_TO_COMMIT
+checkpoint: S-003/LOCAL_COMMIT_AUTHORIZED
+ordered_steps: [S-001, S-002, S-003]
+current_step_position: 3
+completed_steps: 2
+total_steps: 3
+remaining_steps_after_current: 0
+scope: [LOT15, LOT16, LOT17, CONSOLIDATED_HANDOFF, ART_BACKLOG_STATE_EVIDENCE]
+content_state: DRAFT
+selected_sources: 47
+preserved_source_attempts: 78
+specification: .atena/specs/SPEC-121-retomada-fila-imagens/asset-lot15-17-local-commit-v01.md
+implementation_owner: Claude
+runtime_admission: false
+canonical_promotion: false
+technical_holds_preserved: true
+historical_p9_hold_released: false
+push_export_merge: NOT_AUTHORIZED
+next_objective: 'Validar e commitar localmente conteudo; registrar recibo de sucesso'

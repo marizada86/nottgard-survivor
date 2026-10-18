@@ -1,0 +1,22 @@
+Gere UMA imagem com uma sequência de animação de personagem para jogo 2D isométrico: pintura de pixel detalhada, câmera três-quartos, luz vinda do alto à esquerda. Fundo TRANSPARENTE real (PNG com alfa). Sem cenário, sem chão, sem sombra projetada, sem texto, sem rótulos, sem desfoque de movimento.
+
+PERSONAGEM: use a imagem "durvall_idle.png" como referência OBRIGATÓRIA de rosto, cabelo, armadura, espada, paleta, proporção e acabamento. Não redesenhe nada. É Durvall, drow de pele cinza-azulada, cabelo branco longo e solto, orelhas pontudas, armadura negra laminada com ombreiras de espinhos, faixa vinho no cinto, pendente azul no peito, botas negras e uma espada de lâmina azul-gelo luminosa na MÃO ESQUERDA do personagem (a mesma mão em todos os quadros; no idle, de frente, ela aparece do lado direito da imagem).
+
+FORMATO: UMA imagem em GRADE com 6 quadros QUADRADOS e iguais (3 colunas por 2 linhas), lidos da esquerda para a direita e de cima para baixo (quadros 1, 2 e 3 na linha de cima; 4, 5 e 6 na linha de baixo), SEPARADOS por faixas VAZIAS e transparentes. Cada quadro é um quadrado grande, com muito espaço livre ao redor do personagem. Use "gabarito_grade_move.png" só como guia de posição: linha verde = chão onde o pé de apoio toca; linha azul = topo da cabeça; retângulo vermelho = margem de cada quadro; silhueta cinza = tamanho do personagem parado. NÃO desenhe nenhuma linha, número, faixa ou silhueta do gabarito na imagem final: as separações ficam TRANSPARENTES.
+
+REGRA PRINCIPAL: cada quadro, com a espada, o cabelo e a capa, fica INTEIRO dentro do seu retângulo vermelho. Nada, nem a ponta da espada, pode tocar a borda do quadro, entrar na faixa de separação nem no quadro vizinho. Há bastante espaço: use-o.
+
+DIREÇÃO: o personagem anda para a ESQUERDA da imagem, de perfil. Ele está virado para a esquerda; a mão esquerda dele, com a espada, fica do lado da câmera (a espada aparece à frente do corpo). NÃO é um espelho da corrida para a direita: o personagem continua com a espada na mesma mão.
+
+MEDIDAS (importante): o personagem tem sempre a MESMA altura da silhueta (do topo da cabeça à sola), em todos os quadros; nunca aumente ou diminua o corpo para animar. O pé de apoio toca sempre a linha verde. A passada é MÉDIA: nos quadros de contato os dois pés ficam afastados cerca de 40% da altura do corpo, vista pela direção em que ele anda. Entre um quadro e o seguinte a mudança de pose é PEQUENA e gradual: nada de saltos bruscos de perna ou de braço.
+
+QUADROS (a mesma sequência de trote para todas as direções):
+1) Contato: um pé à frente tocando o chão com o calcanhar, o outro atrás só com a ponta apoiada.
+2) Passagem: perna de apoio sob o corpo, outra perna saindo do chão, corpo um pouco mais baixo.
+3) Alto: a perna de trás vai à frente, pé curto no ar, corpo um pouco mais alto.
+4) Contato: igual ao 1 com as pernas trocadas.
+5) Passagem: igual ao 2 com as pernas trocadas.
+6) Alto: igual ao 3 com as pernas trocadas; o quadro 6 leva suavemente de volta ao quadro 1.
+Braços balançam pouco, em oposição às pernas. A espada fica na mesma mão (esquerda do personagem) em todos os quadros.
+
+NÃO FAÇA: mudar o rosto, o cabelo, a armadura ou a cor; trocar a espada de mão; incluir símbolo, aura ou efeito que não esteja no idle; cortar a espada; deixar a espada atravessar para outro quadro; cenário; sombra no chão.

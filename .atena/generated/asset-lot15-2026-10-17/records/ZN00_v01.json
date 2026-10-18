@@ -1,0 +1,9 @@
+{
+  "id": "ZN00_v01",
+  "native": "exec-9f225795-c9f9-494b-939a-fa5a50c4d3d2.png",
+  "prompt": "Use case: stylized-concept. Asset: ONE individual game animation sprite on square requested1024 canvas, NOT a sheet or multiple views. Detailed darkfantasy pixelart matched to reference, upperleft light, elevated isometric camera. Character walks AWAY from viewer. Whole body and accessory complete on genuinely transparent background; opaque clothing/skin/accessories. No floor, castshadow, scenery, aura, text, border or extra character. Keep contactline at82% canvas and >=12% empty margins. Reference direction may be defective; NEVER copy its frontal face. No face, eye, nose, frontal mask or front brooch visible on the back. Zynara, tall slender elf, very long silver-white hair over shoulderblades, pointed ears, long black coat gold embroidered cuffs/hem, black boots, leatherpouch on anatomical RIGHT hip. Hourglass stays in anatomical LEFT hand and is visible on screen LEFT of body in back view. Back construction derived from front, no new costume/accessory. ZN00 north0of6: FULL BACK VIEW, facing directly UP screen, NO face/profile at all. Right foot forward away from viewer, left foot back toward viewer for first contact. Neutral step, hair and coat tails separate enough to read feet. Body is SMALL at62% canvasheight, NOT filling canvas. Keep width/mass of idle, don't stretch thin. Image1 has four copies of the same idle identity, image2 six defective front-facing walk poses used ONLY for rhythm/scale. Output ONE whole back-facing sprite only.",
+  "input_references": [
+    "assets/animations/heroes/zynara/idle.png",
+    "assets/animations/heroes/zynara/move_n.png"
+  ]
+}

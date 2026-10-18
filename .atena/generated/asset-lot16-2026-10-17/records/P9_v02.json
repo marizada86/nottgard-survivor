@@ -1,0 +1,9 @@
+{
+  "id": "P9_v02",
+  "native": "exec-fa64291c-776e-4b1e-9cd9-0a6e2f6fcc02.png",
+  "prompt": "Use case stylized game sprite sheet, 1536x1024 transparent PNG. Durvall drow identity from FIRST image; SECOND is only layout guide, omit all guide lines/numbers/background. Six whole sprites in3columns2rows, each fitting a512square, bodyheight330px and footline420px in each cell. All six face SOUTHWEST: walk diagonally TOWARD VIEWER AND SCREEN LEFT, threequarter FRONT view, nose points SCREEN LEFT, face on LEFT SIDE of head. Torso and toes orient lowerleft, NOT lower-right. White long hair behind toward screen RIGHT, black laminated spiked armor, dark wine sash, blue pendant on FRONT chest only. Icy-blue sword held in anatomical LEFT hand, which is the NEAR CAMERA hand for this facing, sword hilt and blade at screenLEFT/front of torso, point diagonally downleft. Do not mirror a rightward sprite. Six distinct medium trot phases:0contact,1passing/recoil,2raised passing,3OPPOSITEcontact with legs reversed,4oppositepassing,5raised return. Body proportions and scale stable, mediumstride40%bodyheight, complete boots and complete sword in all6cells. Matte solid character, completely transparent empty exterior and gaps; NO gray haze behind hair, NO diffuse blue/red aura, NO bloom cloud, NO spotlight, NO backdrop or ground. Sword blade may have narrow blue edging only. Pixel-painted darkfantasy, upperleft light asreference, no new costume/lore, no text.",
+  "input_references": [
+    ".atena/generated/m1-movimento/piloto-durvall/durvall_idle.png",
+    ".atena/generated/m1-movimento/piloto-durvall/gabarito_grade_move.png"
+  ]
+}

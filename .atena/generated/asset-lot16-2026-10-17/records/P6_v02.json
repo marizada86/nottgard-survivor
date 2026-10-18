@@ -1,0 +1,8 @@
+{
+  "id": "P6_v02",
+  "native": "exec-983f6fd4-8fe2-422d-bc42-008e81ba18da.png",
+  "prompt": "Use case background-removal precise edit. Preserve the SIX Durvall sprites and their six poses, costume, correct anatomicalLEFT sword hand, direction,3x2positions, scale, sharp pixelpaint, sword shape and silhouette from input. REMOVE ALL surrounding black/gray background and diffuse gray/blue/red HAZE/HALO CLOUDS. Every pixel outside the actual hair/armor/cloth/skin/boots/sword contours must become truly transparent. No head spotlight, no glow cloud behind hair, no ambient aura behind body, no blue cloud around sword. Keep only a THIN blue luminous edge attached to the sword blade itself. Do not trim/cut sword or hair. Keep1536x1024sheet3x2six equal512cells with clear transparent gaps. Fully solid matte body, antialiasing only at contour. No new marks, guide lines, floor/shadow or text. This is a transparent cutout cleanup, not adding lighting.",
+  "input_references": [
+    ".atena/generated/art-candidates/asset-lot16/P6_v01.png"
+  ]
+}
