@@ -168,8 +168,8 @@ const ASSETS := {
 	"res://assets/animations/heroes/bromnor/active.png": Vector2i(1536, 384),
 	"res://assets/animations/heroes/bromnor/death.png": Vector2i(1536, 384),
 	"res://assets/animations/heroes/zynara/idle.png": Vector2i(1024, 384),
-	"res://assets/animations/heroes/zynara/move_n.png": Vector2i(1536, 384),
-	"res://assets/animations/heroes/zynara/move_ne.png": Vector2i(1536, 384),
+	"res://assets/animations/heroes/zynara/move_n.png": Vector2i(3072, 512),   # lote 2 do M1 (LOT15): célula larga de 512 px
+	"res://assets/animations/heroes/zynara/move_ne.png": Vector2i(3072, 512),   # lote 2 do M1 (LOT15): célula larga de 512 px
 	"res://assets/animations/heroes/zynara/move_e.png": Vector2i(1536, 384),
 	"res://assets/animations/heroes/zynara/move_se.png": Vector2i(1536, 384),
 	"res://assets/animations/heroes/zynara/move_s.png": Vector2i(1536, 384),
@@ -177,8 +177,8 @@ const ASSETS := {
 	"res://assets/animations/heroes/zynara/active.png": Vector2i(1536, 384),
 	"res://assets/animations/heroes/zynara/death.png": Vector2i(1536, 384),
 	"res://assets/animations/heroes/leoric/idle.png": Vector2i(1024, 384),
-	"res://assets/animations/heroes/leoric/move_n.png": Vector2i(1536, 384),
-	"res://assets/animations/heroes/leoric/move_ne.png": Vector2i(1536, 384),
+	"res://assets/animations/heroes/leoric/move_n.png": Vector2i(3072, 512),   # lote 2 do M1 (LOT15): célula larga de 512 px
+	"res://assets/animations/heroes/leoric/move_ne.png": Vector2i(3072, 512),   # lote 2 do M1 (LOT15): célula larga de 512 px
 	"res://assets/animations/heroes/leoric/move_e.png": Vector2i(1536, 384),
 	"res://assets/animations/heroes/leoric/move_se.png": Vector2i(1536, 384),
 	"res://assets/animations/heroes/leoric/move_s.png": Vector2i(1536, 384),
@@ -395,7 +395,7 @@ func run() -> Array[String]:
 ## ou quadro colado na borda. Só pode encolher: ao regerar a tira, remova a entrada.
 const WALK_KNOWN_MASS := ["durvall/move_e", "durvall/move_se"]   # SPEC-176/185: piloto Durvall v03 (DRAFT, G-D3/G-D4): espada e passada longa deixam a massa fora de ±30% do idle
 const WALK_KNOWN_EDGE := []
-const WALK_KNOWN_BASE := ["durvall/move_ne"]   # SPEC-176/185: 3 dos 6 quadros no ar (pé 14 a 16 px acima) puxam a mediana da base 13 px; é o ciclo de corrida, não deriva
+const WALK_KNOWN_BASE := ["durvall/move_ne", "leoric/move_n"]   # SPEC-176/185: quadros no ar (Durvall NE: 3 de 6, pé 14 a 16 px acima; Leoric N: 4 de 6, 3 a 8 px) puxam a mediana da base; é o ciclo de corrida, não deriva
 
 func _validate_hero_walk_stability() -> Array[String]:
 	var failures: Array[String] = []

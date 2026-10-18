@@ -101,6 +101,8 @@ const WALK_SOURCE_DIRECTIONS := [&"e", &"se", &"s", &"n", &"ne"]
 const WIDE_CELL := Vector2i(512, 512)
 const WIDE_CELL_STRIPS := {
 	&"durvall": [&"move_e", &"move_se", &"move_s", &"move_n", &"move_ne", &"move_w", &"move_sw", &"move_nw", &"attack"],
+	&"zynara": [&"move_n", &"move_ne"],   # lote 2 (LOT15): costas e nordeste novos; as demais tiras seguem na célula 256x384
+	&"leoric": [&"move_n", &"move_ne"],
 }
 const REAL_WEST_WALK := {&"durvall": [&"move_w", &"move_sw", &"move_nw"]}
 const MIRRORED_WALK_ANIMATIONS := {
