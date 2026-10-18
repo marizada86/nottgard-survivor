@@ -42,7 +42,7 @@ batches:
   B-007: {milestone: M6, title: 'Balanceamento final (conteudo congelado)', status: PLANNED}
   B-008: {milestone: M7, title: 'Candidata a demo', status: PLANNED}
 ordered_batches: [B-002, B-003, B-004, B-005, B-006, B-007, B-008]   # B-001 corre em paralelo; M2/M3 podem andar com M4
-checkpoint: B-002/S-010_G-D4_AWAITING_OWNER_GAME   # S-010: Durvall admitido em assets/ com 8 direcoes reais, DRAFT (EVID-274); aceite em jogo e do dono; B-004/R3 segue aguardando G-M3-3
+checkpoint: B-002/S-011_LOTE2_AWAITING_OWNER_GAME   # S-010 Durvall (EVID-274) e S-011 Zynara/Leoric N e NE (EVID-275) admitidos DRAFT; aceite em jogo e do dono; Nyrelia retida; B-004/R3 segue aguardando G-M3-3
 gates:
   dependencies: NO_NEW_DEPENDENCIES
   commit_push_build_export_notice: NOT_AUTHORIZED   # cada um exige aprovacao a parte (add.yaml)
