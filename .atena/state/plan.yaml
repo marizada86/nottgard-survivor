@@ -540,13 +540,13 @@ active_plan:
   state_file: '.atena/state/plan-103-demo-completa-e-polida.yaml'
   plan_file: '.atena/vault/drafts/PLAN-103-demo-completa-e-polida-2026-10-14.md'
   mode: per-batch
-  checkpoint: B-002/S-009_G-D4_AWAITING_OWNER_LAB
-  status: B002_PILOT_8_DIRECTIONS_READY_AWAITING_OWNER_LAB
+  checkpoint: B-002/S-010_G-D4_AWAITING_OWNER_GAME
+  status: B002_PILOT_DURVALL_8_DIRECTIONS_ADMITTED_DRAFT_AWAITING_OWNER_GAME
   approved: '2026-10-14'
   content_state: DRAFT
   request_classification: PLAN_CHANGE_REQUEST
   ordered_batches: [B-002, B-003, B-004, B-005, B-006, B-007, B-008]   # B-001 (M0) continuo
-  next_objective: 'G-D4: dono joga a candidata de 8 direcoes do Durvall (Abrir-laboratorio-durvall-v03.cmd, EVID-273) e decide por direcao; se aceitar, migracao para celula 512x512 e integracao DRAFT.'
+  next_objective: 'G-D4: dono joga o Durvall (8 direcoes reais, DRAFT em assets/, EVID-274); depois lote 2 de herois (LOT15; Nyrelia 03/04 retida).'
   replaces_active: {id: PLAN-100, status: COMPLETED_LOCAL_AWAITING_OWNER_DECISIONS, state_file: '.atena/state/plan-100-filtro-visual-e-fonte.yaml', evidence: EVID-242, note: 'decisoes pendentes do dono (filtro padrao, fonte) passam ao B-001/M0; nada do PLAN-100 foi alterado'}
 archived_plans:
   - id: PLAN-071
