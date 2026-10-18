@@ -1,0 +1,121 @@
+{
+	"button": {
+		"bbox": [
+			63.0,
+			165.0,
+			2044.0,
+			343.0
+		],
+		"out": [
+			378.0,
+			63.0
+		],
+		"source": "B01_v03.png",
+		"stats": {
+			"eroded_edge_px": 4662.0,
+			"halo_edge_px": 0.0,
+			"magenta_removed": 903966.0
+		}
+	},
+	"markers": {
+		"marcador_chefe": {
+			"bbox": [
+				114.0,
+				61.0,
+				659.0,
+				768.0
+			],
+			"stats": {
+				"eroded_edge_px": 3968.0,
+				"halo_edge_px": 0.0,
+				"magenta_removed": 496630.0
+			}
+		},
+		"marcador_jogador": {
+			"bbox": [
+				168.0,
+				92.0,
+				552.0,
+				692.0
+			],
+			"stats": {
+				"eroded_edge_px": 2228.0,
+				"halo_edge_px": 0.0,
+				"magenta_removed": 610539.0
+			}
+		}
+	},
+	"pillar": {
+		"dest": [
+			96,
+			41
+		],
+		"low_alpha_cleared": 11186,
+		"ref_bbox": [
+			87,
+			41,
+			82,
+			180
+		],
+		"scaled": [
+			65,
+			180
+		],
+		"solidified": 279853,
+		"source_bbox": [
+			428,
+			80,
+			397,
+			1099
+		]
+	},
+	"pillar_audit": {
+		"any_alpha_bbox": [
+			33.0,
+			63.0,
+			1165.0,
+			1125.0
+		],
+		"low_alpha_px": 11186.0,
+		"opaque_px": 275663.0,
+		"partial_alpha_px": 10082.0,
+		"size": [
+			1254.0,
+			1254.0
+		],
+		"solid_bbox": [
+			428.0,
+			80.0,
+			397.0,
+			1099.0
+		]
+	},
+	"slots": {
+		"casela_aberta": {
+			"bbox": [
+				150.0,
+				152.0,
+				954.0,
+				927.0
+			],
+			"stats": {
+				"eroded_edge_px": 3790.0,
+				"halo_edge_px": 0.0,
+				"magenta_removed": 718864.0
+			}
+		},
+		"casela_bloqueada": {
+			"bbox": [
+				150.0,
+				152.0,
+				954.0,
+				927.0
+			],
+			"stats": {
+				"eroded_edge_px": 3791.0,
+				"halo_edge_px": 0.0,
+				"magenta_removed": 718904.0
+			}
+		}
+	}
+}

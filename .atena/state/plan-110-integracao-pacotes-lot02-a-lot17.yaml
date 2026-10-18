@@ -1,0 +1,52 @@
+id: PLAN-110
+spec: SPEC-185
+spec_file: .atena/specs/SPEC-185-integracao-dos-pacotes-de-arte-lot02-a-lot17.md
+mode: per-plan
+status: IN_PROGRESS
+approved: "2026-10-17"
+approval_basis: "Dono: 'implemente os assets que vieram do chatgpt'; rota 'Fazer agora e voltar'; aprovacao 'Por plano'; primeiro lote 'UI de alta visibilidade' (2026-10-17)"
+content_state: DRAFT
+request_classification: PLAN_DEVIATION
+route: DO_NOW_AND_RETURN
+return_plan: PLAN-103
+return_checkpoint: "B-002/S-008_AWAITING_RETURN; B-004/R3_PROPOSAL_AWAITING_G-M3-3"
+ordered_batches: [B-001, B-002, B-003, B-004]
+batches:
+  B-001: 'UI: botao JOGAR, moldura/marcadores/casela, pilar, nevoa'
+  B-002: 'Interacoes, quebraveis, NPCs, props, eventos e ruinas (LOT03 a LOT12)'
+  B-003: 'Juiblex e Mimico/Turibulo (LOT13, LOT14)'
+  B-004: 'Herois: costas e oito direcoes (LOT15 a LOT17)'
+current_batch: B-002
+completed_batches: 1
+total_batches: 4
+source_package: {branch: codex/art-production-lot12-14-2026-10-17, commit: 89a83520, worktree: 'C:\Users\Higor Rossini\.codex\worktrees\abde\nottgard-survivor'}
+gates:
+  dependencies: NO_NEW_DEPENDENCIES
+  canonical_promotion: false
+  commit_push_build_export: NOT_AUTHORIZED
+  other_sessions_changes: PRESERVE_UNTOUCHED
+b001_result: 'COMPLETED_LOCAL_AWAITING_OWNER_REVIEW (EVID-268); UI01 retida: pede decisao sobre a altura da barra de progresso'
+evidence_b001: .atena/evidence/EVID-268-plan-110-b001-ui-botao-marcadores-casela-pilar-nevoa-2026-10-18.md
+b002a_result: 'COMPLETED_LOCAL_AWAITING_OWNER_REVIEW (EVID-269): 12 quebraveis (LOT04 e LOT05)'
+b002_remaining: 'LOT03, LOT06 a LOT12: exigem sistema novo de animacao de interacoes e NPCs (mudanca de arquitetura de apresentacao): AGUARDA APROVACAO DO DONO'
+checkpoint: 'B-002/ARQUITETURA_AGUARDA_DONO'
+evidence_b002a: .atena/evidence/EVID-269-plan-110-b002a-quebraveis-lot04-e-lot05-2026-10-18.md
+approval_architecture_2026_10_18: 'Dono aprovou o sistema novo de animacao de interacoes e NPCs e o B-002 restante (LOT03, LOT06 a LOT12), parando nas retencoes; UI01: nao integrar a moldura por enquanto.'
+checkpoint: 'B-002/SISTEMA_DE_ANIMACAO_APROVADO'
+b002b_result: 'COMPLETED_LOCAL_AWAITING_OWNER_REVIEW (EVID-270): sistema de idles (36 tiras) e aberturas dos 2 baus; retidos e sem consumidor documentados'
+b002_status: 'COMPLETED_LOCAL (a: EVID-269, b: EVID-270); retidos: NE06/GR, RU05/RU07/RU08/LOT12, FC02/FJ; sem consumidor: IA06, FC01, LOT08 PR01-PR03'
+completed_batches: 2
+current_batch: B-003
+checkpoint: 'B-003/CHEFES_E_ATORES'
+evidence_b002b: .atena/evidence/EVID-270-plan-110-b002b-sistema-de-idles-e-aberturas-2026-10-18.md
+b003_result: 'COMPLETED_LOCAL_AWAITING_OWNER_REVIEW (EVID-271): Juiblex (5 estados), Mimico (4), Turibulo (idle); ruptura TD retida'
+completed_batches: 3
+current_batch: B-004
+checkpoint: 'B-004/HEROIS'
+evidence_b003: .atena/evidence/EVID-271-plan-110-b003-juiblex-mimico-e-turibulo-2026-10-18.md
+b004_result: 'NAO EXECUTADO (EVID-272): insumos do PLAN-103/M1 com retencoes (Nyrelia03/04, P9) e gates D22; devolvido ao PLAN-103'
+completed_batches: 3
+status: COMPLETED_LOCAL_B004_RETURNED_TO_PLAN_103
+current_batch: none
+checkpoint: 'RETORNO_AO_PLAN-103 (B-002/S-008_AWAITING_RETURN)'
+evidence_b004: .atena/evidence/EVID-272-plan-110-b004-herois-nao-executado-2026-10-18.md

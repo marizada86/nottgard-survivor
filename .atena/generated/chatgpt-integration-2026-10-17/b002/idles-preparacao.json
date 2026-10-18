@@ -1,0 +1,1272 @@
+{
+	"EP01": {
+		"alpha_cleared": 40267.0,
+		"arte": "trono_zuggtmoy",
+		"cell": [
+			295.0,
+			344.0
+		],
+		"fonte": "EP01_v03",
+		"frames": 4.0,
+		"overflow_px": 0.0,
+		"saida": "trono_zuggtmoy_idle",
+		"scale": 0.4896,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				4.1,
+				0.0
+			],
+			[
+				7.5,
+				0.0
+			],
+			[
+				11.5,
+				0.0
+			]
+		],
+		"solidified": 452351.0,
+		"width_ratio_vs_static": 0.97
+	},
+	"EP02": {
+		"alpha_cleared": 13378.0,
+		"arte": "arco_pedra",
+		"cell": [
+			304.0,
+			344.0
+		],
+		"fonte": "EP02_v02",
+		"frames": 4.0,
+		"overflow_px": 0.0,
+		"saida": "arco_pedra_idle",
+		"scale": 0.602,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				1.4,
+				0.0
+			],
+			[
+				3.2,
+				0.0
+			],
+			[
+				4.5,
+				0.0
+			]
+		],
+		"solidified": 370527.0,
+		"width_ratio_vs_static": 1.0
+	},
+	"EP03": {
+		"alpha_cleared": 26134.0,
+		"arte": "massa_thullgrime",
+		"cell": [
+			471.0,
+			344.0
+		],
+		"fonte": "EP03_v01",
+		"frames": 4.0,
+		"overflow_px": 0.0,
+		"saida": "massa_thullgrime_idle",
+		"scale": 0.7108,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				0.2,
+				-6.4
+			],
+			[
+				0.7,
+				0.0
+			],
+			[
+				1.1,
+				-2.1
+			]
+		],
+		"solidified": 424087.0,
+		"width_ratio_vs_static": 0.99
+	},
+	"EP04": {
+		"alpha_cleared": 59183.0,
+		"arte": "estrela_do_norte",
+		"cell": [
+			194.0,
+			200.0
+		],
+		"fonte": "EP04_v01",
+		"frames": 4.0,
+		"overflow_px": 0.0,
+		"saida": "estrela_do_norte_idle",
+		"scale": 0.2564,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				-0.4,
+				0.0
+			],
+			[
+				0.3,
+				0.0
+			],
+			[
+				-2.0,
+				0.3
+			]
+		],
+		"solidified": 107679.0,
+		"width_ratio_vs_static": 0.9
+	},
+	"EP05": {
+		"alpha_cleared": 46351.0,
+		"arte": "coracao_limo",
+		"cell": [
+			187.0,
+			200.0
+		],
+		"fonte": "EP05_v01",
+		"frames": 4.0,
+		"overflow_px": 0.0,
+		"saida": "coracao_limo_idle",
+		"scale": 0.2122,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				0.0,
+				0.0
+			],
+			[
+				0.0,
+				0.0
+			],
+			[
+				0.1,
+				0.0
+			]
+		],
+		"solidified": 463649.0,
+		"width_ratio_vs_static": 0.98
+	},
+	"EP06": {
+		"alpha_cleared": 29092.0,
+		"arte": "esporo_zuggtmoy",
+		"cell": [
+			210.0,
+			200.0
+		],
+		"fonte": "EP06_v01",
+		"frames": 4.0,
+		"overflow_px": 0.0,
+		"saida": "esporo_zuggtmoy_idle",
+		"scale": 0.2639,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				5.5,
+				-1.3
+			],
+			[
+				8.7,
+				-1.6
+			],
+			[
+				12.7,
+				0.0
+			]
+		],
+		"solidified": 407325.0,
+		"width_ratio_vs_static": 1.03
+	},
+	"EP07": {
+		"alpha_cleared": 42711.0,
+		"arte": "limo_juiblex",
+		"cell": [
+			231.0,
+			200.0
+		],
+		"fonte": "EP07_v01",
+		"frames": 4.0,
+		"overflow_px": 0.0,
+		"saida": "limo_juiblex_idle",
+		"scale": 0.3069,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				-0.3,
+				-0.3
+			],
+			[
+				-0.1,
+				0.0
+			],
+			[
+				-0.3,
+				0.0
+			]
+		],
+		"solidified": 281249.0,
+		"width_ratio_vs_static": 1.02
+	},
+	"ES01": {
+		"alpha_cleared": 36808.0,
+		"arte": "pacto_sangue",
+		"cell": [
+			352.0,
+			352.0
+		],
+		"fonte": "ES01_v02",
+		"frames": 4.0,
+		"overflow_px": 0.0,
+		"saida": "pacto_sangue_idle",
+		"scale": 0.5382,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				5.0,
+				0.0
+			],
+			[
+				7.8,
+				0.5
+			],
+			[
+				7.7,
+				0.0
+			]
+		],
+		"solidified": 237160.0,
+		"width_ratio_vs_static": 1.09
+	},
+	"ES02": {
+		"alpha_cleared": 18025.0,
+		"arte": "relicario",
+		"cell": [
+			352.0,
+			352.0
+		],
+		"fonte": "ES02_v01",
+		"frames": 4.0,
+		"overflow_px": 0.0,
+		"saida": "relicario_idle",
+		"scale": 0.4377,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				0.9,
+				-0.4
+			],
+			[
+				1.4,
+				0.0
+			],
+			[
+				1.4,
+				0.0
+			]
+		],
+		"solidified": 489529.0,
+		"width_ratio_vs_static": 1.01
+	},
+	"ES03": {
+		"alpha_cleared": 47325.0,
+		"arte": "carroca",
+		"cell": [
+			352.0,
+			352.0
+		],
+		"fonte": "ES03_v01",
+		"frames": 4.0,
+		"overflow_px": 0.0,
+		"saida": "carroca_idle",
+		"scale": 0.5046,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				0.2,
+				-0.5
+			],
+			[
+				0.0,
+				0.0
+			],
+			[
+				0.7,
+				0.0
+			]
+		],
+		"solidified": 370951.0,
+		"width_ratio_vs_static": 1.02
+	},
+	"ES04": {
+		"alpha_cleared": 13237.0,
+		"arte": "eclipse_pedra",
+		"cell": [
+			352.0,
+			352.0
+		],
+		"fonte": "ES04_v03",
+		"frames": 4.0,
+		"overflow_px": 0.0,
+		"saida": "eclipse_pedra_idle",
+		"scale": 0.5415,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				-1.9,
+				0.0
+			],
+			[
+				-1.0,
+				0.0
+			],
+			[
+				-1.3,
+				0.0
+			]
+		],
+		"solidified": 339805.0,
+		"width_ratio_vs_static": 0.99
+	},
+	"ES05": {
+		"alpha_cleared": 45364.0,
+		"arte": "eco",
+		"cell": [
+			224.0,
+			224.0
+		],
+		"fonte": "ES05_v02",
+		"frames": 4.0,
+		"overflow_px": 0.0,
+		"saida": "eco_idle",
+		"scale": 0.2226,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				-0.7,
+				-1.6
+			],
+			[
+				0.0,
+				0.0
+			],
+			[
+				0.1,
+				-0.2
+			]
+		],
+		"solidified": 67731.0,
+		"width_ratio_vs_static": 1.04
+	},
+	"ES06": {
+		"alpha_cleared": 29096.0,
+		"arte": "camara_selada",
+		"cell": [
+			352.0,
+			352.0
+		],
+		"fonte": "ES06_v01",
+		"frames": 4.0,
+		"overflow_px": 0.0,
+		"saida": "camara_selada_idle",
+		"scale": 0.363,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				0.0,
+				0.0
+			],
+			[
+				0.0,
+				0.0
+			],
+			[
+				-0.1,
+				0.0
+			]
+		],
+		"solidified": 521454.0,
+		"width_ratio_vs_static": 1.0
+	},
+	"ES07": {
+		"alpha_cleared": 41886.0,
+		"arte": "camara_aberta",
+		"cell": [
+			352.0,
+			352.0
+		],
+		"fonte": "ES07_v03",
+		"frames": 4.0,
+		"overflow_px": 0.0,
+		"saida": "camara_aberta_idle",
+		"scale": 0.4058,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				-0.1,
+				-0.4
+			],
+			[
+				-0.2,
+				-0.4
+			],
+			[
+				-0.1,
+				0.0
+			]
+		],
+		"solidified": 442121.0,
+		"width_ratio_vs_static": 1.01
+	},
+	"IA01": {
+		"alpha_cleared": 51117.0,
+		"arte": "chest_closed",
+		"cell": [
+			256.0,
+			256.0
+		],
+		"fonte": "IA01_v01",
+		"frames": 6.0,
+		"overflow_px": 0.0,
+		"saida": "chest_open",
+		"scale": 0.4181,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				5.3,
+				0.0
+			],
+			[
+				12.6,
+				-6.7
+			],
+			[
+				8.8,
+				-9.6
+			],
+			[
+				16.5,
+				-8.4
+			],
+			[
+				20.7,
+				-8.4
+			]
+		],
+		"solidified": 689263.0,
+		"width_ratio_vs_static": 0.98
+	},
+	"IA02": {
+		"alpha_cleared": 41224.0,
+		"arte": "bau_chefe_fechado",
+		"cell": [
+			256.0,
+			256.0
+		],
+		"fonte": "IA02_v01",
+		"frames": 6.0,
+		"overflow_px": 0.0,
+		"saida": "boss_chest_open",
+		"scale": 0.4352,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				0.6,
+				-0.4
+			],
+			[
+				1.7,
+				-7.4
+			],
+			[
+				1.7,
+				7.0
+			],
+			[
+				3.3,
+				4.8
+			],
+			[
+				3.4,
+				3.9
+			]
+		],
+		"solidified": 768192.0,
+		"width_ratio_vs_static": 1.06
+	},
+	"IA03": {
+		"alpha_cleared": 67871.0,
+		"arte": "loja",
+		"cell": [
+			352.0,
+			352.0
+		],
+		"fonte": "IA03_v01",
+		"frames": 4.0,
+		"overflow_px": 0.0,
+		"saida": "loja_idle",
+		"scale": 0.4108,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				5.4,
+				0.0
+			],
+			[
+				-0.2,
+				0.0
+			],
+			[
+				4.2,
+				-0.4
+			]
+		],
+		"solidified": 730086.0,
+		"width_ratio_vs_static": 1.02
+	},
+	"IA04": {
+		"alpha_cleared": 33977.0,
+		"arte": "ferreiro",
+		"cell": [
+			352.0,
+			352.0
+		],
+		"fonte": "IA04_v01",
+		"frames": 4.0,
+		"overflow_px": 0.0,
+		"saida": "ferreiro_idle",
+		"scale": 0.4029,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				1.0,
+				0.0
+			],
+			[
+				0.0,
+				3.2
+			],
+			[
+				1.1,
+				3.2
+			]
+		],
+		"solidified": 709586.0,
+		"width_ratio_vs_static": 1.01
+	},
+	"IA05": {
+		"alpha_cleared": 46657.0,
+		"arte": "curandeiro",
+		"cell": [
+			352.0,
+			352.0
+		],
+		"fonte": "IA05_v01",
+		"frames": 4.0,
+		"overflow_px": 0.0,
+		"saida": "curandeiro_idle",
+		"scale": 0.4081,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				5.6,
+				0.0
+			],
+			[
+				-0.1,
+				0.4
+			],
+			[
+				5.7,
+				0.4
+			]
+		],
+		"solidified": 788231.0,
+		"width_ratio_vs_static": 1.0
+	},
+	"IE01": {
+		"alpha_cleared": 49230.0,
+		"arte": "doacao",
+		"cell": [
+			352.0,
+			352.0
+		],
+		"fonte": "IE01_v02",
+		"frames": 4.0,
+		"overflow_px": 0.0,
+		"saida": "doacao_idle",
+		"scale": 0.4832,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				35.7,
+				0.0
+			],
+			[
+				-0.2,
+				24.2
+			],
+			[
+				35.7,
+				24.2
+			]
+		],
+		"solidified": 522644.0,
+		"width_ratio_vs_static": 1.0
+	},
+	"IE02": {
+		"alpha_cleared": 72748.0,
+		"arte": "aposta",
+		"cell": [
+			352.0,
+			352.0
+		],
+		"fonte": "IE02_v01",
+		"frames": 4.0,
+		"overflow_px": 0.0,
+		"saida": "aposta_idle",
+		"scale": 0.5307,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				12.8,
+				0.5
+			],
+			[
+				-0.8,
+				13.3
+			],
+			[
+				13.6,
+				13.3
+			]
+		],
+		"solidified": 443281.0,
+		"width_ratio_vs_static": 1.03
+	},
+	"IE03": {
+		"alpha_cleared": 42738.0,
+		"arte": "ampulheta",
+		"cell": [
+			288.0,
+			352.0
+		],
+		"fonte": "IE03_v01",
+		"frames": 4.0,
+		"overflow_px": 0.0,
+		"saida": "ampulheta_idle",
+		"scale": 0.4911,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				0.0,
+				0.0
+			],
+			[
+				0.0,
+				0.0
+			],
+			[
+				0.0,
+				0.0
+			]
+		],
+		"solidified": 308073.0,
+		"width_ratio_vs_static": 1.02
+	},
+	"IE04": {
+		"alpha_cleared": 37132.0,
+		"arte": "arcanista",
+		"cell": [
+			352.0,
+			352.0
+		],
+		"fonte": "IE04_v02",
+		"frames": 4.0,
+		"overflow_px": 0.0,
+		"saida": "arcanista_idle",
+		"scale": 0.3713,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				7.1,
+				0.0
+			],
+			[
+				-0.2,
+				18.9
+			],
+			[
+				7.1,
+				18.6
+			]
+		],
+		"solidified": 407813.0,
+		"width_ratio_vs_static": 1.08
+	},
+	"IE05": {
+		"alpha_cleared": 44112.0,
+		"arte": "peregrino",
+		"cell": [
+			352.0,
+			352.0
+		],
+		"fonte": "IE05_v01",
+		"frames": 4.0,
+		"overflow_px": 0.0,
+		"saida": "peregrino_idle",
+		"scale": 0.4033,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				1.3,
+				0.4
+			],
+			[
+				-0.5,
+				11.7
+			],
+			[
+				0.3,
+				11.3
+			]
+		],
+		"solidified": 440651.0,
+		"width_ratio_vs_static": 1.02
+	},
+	"IE06": {
+		"alpha_cleared": 40338.0,
+		"arte": "contador",
+		"cell": [
+			352.0,
+			352.0
+		],
+		"fonte": "IE06_v01",
+		"frames": 4.0,
+		"overflow_px": 0.0,
+		"saida": "contador_idle",
+		"scale": 0.4,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				-0.2,
+				0.0
+			],
+			[
+				-0.7,
+				10.8
+			],
+			[
+				0.0,
+				10.8
+			]
+		],
+		"solidified": 389633.0,
+		"width_ratio_vs_static": 0.99
+	},
+	"NE01": {
+		"alpha_cleared": 63150.0,
+		"arte": "npc_joao_barbosa",
+		"cell": [
+			250.0,
+			344.0
+		],
+		"fonte": "NE01_v01",
+		"frames": 4.0,
+		"overflow_px": 0.0,
+		"saida": "npc_joao_barbosa_idle",
+		"scale": 0.339,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				-0.1,
+				0.0
+			],
+			[
+				0.0,
+				0.0
+			],
+			[
+				0.2,
+				0.0
+			]
+		],
+		"solidified": 622574.0,
+		"width_ratio_vs_static": 0.85
+	},
+	"NE02": {
+		"alpha_cleared": 38924.0,
+		"arte": "npc_desertor_durao",
+		"cell": [
+			236.0,
+			344.0
+		],
+		"fonte": "NE02_v02",
+		"frames": 4.0,
+		"overflow_px": 0.0,
+		"saida": "npc_desertor_durao_idle",
+		"scale": 0.4212,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				-2.7,
+				-0.4
+			],
+			[
+				0.3,
+				-0.4
+			],
+			[
+				-1.9,
+				-0.4
+			]
+		],
+		"solidified": 402020.0,
+		"width_ratio_vs_static": 0.96
+	},
+	"NE03": {
+		"alpha_cleared": 48086.0,
+		"arte": "npc_vitima_enfeiticada",
+		"cell": [
+			207.0,
+			344.0
+		],
+		"fonte": "NE03_v02",
+		"frames": 4.0,
+		"overflow_px": 0.0,
+		"saida": "npc_vitima_enfeiticada_idle",
+		"scale": 0.4058,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				4.5,
+				0.0
+			],
+			[
+				7.8,
+				0.0
+			],
+			[
+				12.5,
+				0.0
+			]
+		],
+		"solidified": 379288.0,
+		"width_ratio_vs_static": 1.0
+	},
+	"NE04": {
+		"alpha_cleared": 38018.0,
+		"arte": "npc_nyxara",
+		"cell": [
+			279.0,
+			344.0
+		],
+		"fonte": "NE04_v01",
+		"frames": 4.0,
+		"overflow_px": 0.0,
+		"saida": "npc_nyxara_idle",
+		"scale": 0.4337,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				5.9,
+				0.0
+			],
+			[
+				18.2,
+				0.4
+			],
+			[
+				19.9,
+				0.0
+			]
+		],
+		"solidified": 339542.0,
+		"width_ratio_vs_static": 0.97
+	},
+	"NE05": {
+		"alpha_cleared": 42471.0,
+		"arte": "npc_vaelis",
+		"cell": [
+			229.0,
+			344.0
+		],
+		"fonte": "NE05_v02",
+		"frames": 4.0,
+		"overflow_px": 0.0,
+		"saida": "npc_vaelis_idle",
+		"scale": 0.3904,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				-1.3,
+				0.0
+			],
+			[
+				0.9,
+				0.0
+			],
+			[
+				0.5,
+				0.0
+			]
+		],
+		"solidified": 447332.0,
+		"width_ratio_vs_static": 1.02
+	},
+	"NE07": {
+		"alpha_cleared": 19733.0,
+		"arte": "npc_reaper_barqueiro",
+		"cell": [
+			269.0,
+			344.0
+		],
+		"fonte": "NE07_v02",
+		"frames": 4.0,
+		"overflow_px": 0.0,
+		"saida": "npc_reaper_barqueiro_idle",
+		"scale": 0.6267,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				-0.2,
+				0.6
+			],
+			[
+				9.9,
+				0.6
+			],
+			[
+				13.1,
+				0.6
+			]
+		],
+		"solidified": 214540.0,
+		"width_ratio_vs_static": 1.01
+	},
+	"NE08": {
+		"alpha_cleared": 51220.0,
+		"arte": "npc_vhaerith_aetherion",
+		"cell": [
+			212.0,
+			344.0
+		],
+		"fonte": "NE08_v01",
+		"frames": 4.0,
+		"overflow_px": 0.0,
+		"saida": "npc_vhaerith_aetherion_idle",
+		"scale": 0.3568,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				3.0,
+				0.0
+			],
+			[
+				9.3,
+				-0.4
+			],
+			[
+				11.6,
+				-0.4
+			]
+		],
+		"solidified": 526467.0,
+		"width_ratio_vs_static": 1.0
+	},
+	"NE09": {
+		"alpha_cleared": 28086.0,
+		"arte": "npc_mercador_rivenheart",
+		"cell": [
+			255.0,
+			344.0
+		],
+		"fonte": "NE09_v01",
+		"frames": 4.0,
+		"overflow_px": 0.0,
+		"saida": "npc_mercador_rivenheart_idle",
+		"scale": 0.395,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				-1.2,
+				0.0
+			],
+			[
+				-0.6,
+				0.0
+			],
+			[
+				-0.7,
+				0.0
+			]
+		],
+		"solidified": 530971.0,
+		"width_ratio_vs_static": 1.04
+	},
+	"RU01": {
+		"alpha_cleared": 40848,
+		"arte": "ruina_dagruve",
+		"cell": [
+			352,
+			352
+		],
+		"fonte": "RU01_v01",
+		"frames": 4,
+		"overflow_px": 0,
+		"saida": "ruina_dagruve_idle",
+		"scale": 0.3395,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				0.1,
+				0.0
+			],
+			[
+				0.0,
+				0.0
+			],
+			[
+				0.1,
+				0.0
+			]
+		],
+		"solidified": 549054,
+		"width_ratio_vs_static": 0.99
+	},
+	"RU02": {
+		"alpha_cleared": 28438,
+		"arte": "ruina_docas",
+		"cell": [
+			352,
+			352
+		],
+		"fonte": "RU02_v01",
+		"frames": 4,
+		"overflow_px": 0,
+		"saida": "ruina_docas_idle",
+		"scale": 0.3905,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				0.0,
+				0.4
+			],
+			[
+				0.1,
+				0.0
+			],
+			[
+				0.0,
+				0.4
+			]
+		],
+		"solidified": 463486,
+		"width_ratio_vs_static": 0.99
+	},
+	"RU03": {
+		"alpha_cleared": 49943,
+		"arte": "ruina_shedaklah",
+		"cell": [
+			352,
+			352
+		],
+		"fonte": "RU03_v01",
+		"frames": 4,
+		"overflow_px": 0,
+		"saida": "ruina_shedaklah_idle",
+		"scale": 0.3879,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				0.4,
+				0.0
+			],
+			[
+				0.4,
+				0.0
+			],
+			[
+				0.7,
+				0.0
+			]
+		],
+		"solidified": 359215,
+		"width_ratio_vs_static": 1.01
+	},
+	"RU04": {
+		"alpha_cleared": 61219,
+		"arte": "ruina_molor",
+		"cell": [
+			352,
+			352
+		],
+		"fonte": "RU04_v01",
+		"frames": 4,
+		"overflow_px": 0,
+		"saida": "ruina_molor_idle",
+		"scale": 0.3632,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				0.1,
+				-0.4
+			],
+			[
+				0.1,
+				-0.4
+			],
+			[
+				0.2,
+				-0.4
+			]
+		],
+		"solidified": 453130,
+		"width_ratio_vs_static": 1.02
+	},
+	"RU06": {
+		"alpha_cleared": 77315,
+		"arte": "ruina_feng_tu",
+		"cell": [
+			352,
+			352
+		],
+		"fonte": "RU06_v02",
+		"frames": 4,
+		"overflow_px": 0,
+		"saida": "ruina_feng_tu_idle",
+		"scale": 0.3349,
+		"shifts": [
+			[
+				0.0,
+				0.0
+			],
+			[
+				-0.1,
+				0.7
+			],
+			[
+				0.1,
+				0.0
+			],
+			[
+				0.4,
+				0.0
+			]
+		],
+		"solidified": 403254,
+		"width_ratio_vs_static": 0.99
+	}
+}

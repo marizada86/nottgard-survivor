@@ -1519,3 +1519,32 @@ logo_ln01_admission_2026_10_16:
   evidence: .atena/evidence/EVID-267-admissao-do-logotipo-ln01-v02-2026-10-16.md
   verification: "import sem erro; tests/run_all.gd 0 falhas; captura do titulo 1280x720"
   return_note: "PLAN-103 retoma em B-002/S-008_AWAITING_RETURN"
+
+local_git_receipt_2026_10_16_push:
+  authorization: "atena, commit e push local e na main (2026-10-16)"
+  branch: main
+  push_range: "8ec07974..926776c1"
+  pushed: true
+  scope: "8 commits: PLAN-106 (renomeacao e preparo do logo), PLAN-107/SPEC-182 (34 artes da FILA-028, EVID-266), PLAN-109/SPEC-184 (logo LN01 v02, EVID-267)"
+  verification: "tests/run_all.gd 0 falhas e smoke das 9 fases (FILA-028); suite 0 falhas e captura do titulo (logo)"
+  ci: "Build and Release disparado pelo push; resultado nao verificado aqui"
+  note: "O release latest passa a apontar para 926776c1; sem build local nem exportacao do .exe. Este recibo fica sem commit ate o proximo. Ficaram fora: GIF do ChatGPT e .uid de capturas de outras sessoes."
+
+chatgpt_art_integration_2026_10_17:
+  plan: PLAN-110
+  spec: SPEC-185
+  deviation: DEV-045
+  state_file: .atena/state/plan-110-integracao-pacotes-lot02-a-lot17.yaml
+  request_classification: PLAN_DEVIATION
+  route: DO_NOW_AND_RETURN   # dono 2026-10-17: "Fazer agora e voltar" + "Por plano"
+  mode: per-plan
+  approval_status: APPROVED_EXPLICITLY
+  status: COMPLETED_LOCAL_B004_RETURNED_TO_PLAN_103
+  checkpoint: RETORNO_AO_PLAN-103 (B-002/S-008_AWAITING_RETURN); B-004 herois nao executado (EVID-272)
+  content_state: DRAFT
+  suspended_plan: {id: PLAN-103, checkpoint: "B-002/S-008_AWAITING_RETURN", note: "suspenso so para esta integracao; nada do PLAN-103 foi alterado"}
+  return_plan: PLAN-103
+  commit_push_build_export: NOT_AUTHORIZED
+  other_sessions_changes: PRESERVE_UNTOUCHED
+  evidence: [EVID-268, EVID-269, EVID-270, EVID-271, EVID-272]
+  pending_owner_decisions: ["UI01: altura da barra de progresso (moldura 9,2:1 nao cabe nos 4 px)", "B-002 restante: aprovar sistema novo de animacao de interacoes e NPCs"]
