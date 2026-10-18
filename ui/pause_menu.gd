@@ -209,21 +209,19 @@ func _fill_catalog() -> void:
 		b.custom_minimum_size = CELL
 		b.expand_icon = true
 		b.icon_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		b.add_theme_constant_override("icon_max_width", 48)
+		b.add_theme_constant_override("icon_max_width", 44)
 		b.tooltip_text = String(e.name)
-		var border := UiKit.GOLD if bool(e.seen_run) else (UiKit.GOLD_DIM if bool(e.known) else UiKit.IRON)
-		b.add_theme_stylebox_override("normal", UiKit.box(Color(0.08, 0.07, 0.1, 0.9) if bool(e.known) else Color(0.04, 0.04, 0.05, 0.9), border, 2 if bool(e.seen_run) else 1, 4))
-		b.add_theme_stylebox_override("hover", UiKit.box(Color(0.16, 0.14, 0.2, 0.95), UiKit.GOLD, 2, 4))
-		b.add_theme_stylebox_override("focus", UiKit.box(Color(0.16, 0.14, 0.2, 0.95), UiKit.GOLD, 3, 4))
+		# SPEC-185 (LOT02 UI03/UI04): casela aberta para o que já se viu, bloqueada (silhueta e cadeado) para o resto; a tinta marca o que apareceu nesta run
+		var tint := Color(1.3, 1.15, 0.8) if bool(e.seen_run) else Color.WHITE
+		b.add_theme_stylebox_override("normal", UiKit.catalog_slot(bool(e.known), tint))
+		b.add_theme_stylebox_override("hover", UiKit.catalog_slot(bool(e.known), Color(1.3, 1.25, 1.05)))
+		b.add_theme_stylebox_override("focus", UiKit.catalog_slot(bool(e.known), Color(1.55, 1.4, 0.95)))
 		if bool(e.known):
 			var icon: Texture2D = load(String(e.icon)) if ResourceLoader.exists(String(e.icon)) else null
 			if icon != null:
 				b.icon = icon
 			else:
 				b.text = String(e.name).substr(0, 2)
-		else:
-			b.text = "?"
-			b.modulate = Color(0.55, 0.55, 0.6)
 		var show := _show_detail.bind(cat_id, String(e.id), bool(e.known), bool(e.seen_run))
 		b.pressed.connect(show)
 		b.focus_entered.connect(show)

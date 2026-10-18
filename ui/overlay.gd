@@ -492,7 +492,9 @@ func _draw_over() -> void:
 		var ruin_texture: Texture2D = _texture("res://assets/interactions/%s.png" % String(it.get("ruin_art", ""))) if String(it.get("ruin_art", "")) != "" else null
 		if ruin_texture != null:
 			var ruin_h := RUIN_HEIGHT * size_scale
-			draw_texture_rect(ruin_texture, Rect2(draw_p.x - ruin_h * 0.5, draw_p.y - ruin_h + RUIN_DROP, ruin_h, ruin_h), false)
+			var ruin_dest := Rect2(draw_p.x - ruin_h * 0.5, draw_p.y - ruin_h + RUIN_DROP, ruin_h, ruin_h)
+			if not InteractionAnim.draw(self, String(it.get("ruin_art", "")), ruin_texture, ruin_dest, Time.get_ticks_msec(), InteractionAnim.phase_for(it.pos)):
+				draw_texture_rect(ruin_texture, ruin_dest, false)
 		# SPEC-182 (FILA-028 AL01): o sheet do altar foi refeito com o corpo de pedra opaco (AL01-CORR/v01, 6 quadros, ciclo de 900 ms);
 		# o sprite estático completo segue como reserva quando o sheet não carrega.
 		if scenery_texture != null:
@@ -504,11 +506,18 @@ func _draw_over() -> void:
 			draw_texture_rect_region(animation_texture, Rect2(draw_p.x - w * 0.5, draw_p.y - h, w, h), Rect2(frame * 192, 0, 192, 192))
 		elif texture != null:
 			var h := base_h
+			# SPEC-185 (PLAN-110): com tira de idle para a arte, o quadro atual ocupa o retângulo da arte estática (ampliado pela folga); sem tira, a arte estática de sempre
+			var anim_asset := "" if scenery_texture != null else asset
+			var anim_phase := InteractionAnim.phase_for(it.pos)
 			if String(it.kind).begins_with("event_"):
-				draw_texture_rect_region(texture, HAPPENING_ART.destination_rect(texture, draw_p, h), HAPPENING_ART.source_rect(texture))
+				var used_dest := HAPPENING_ART.destination_rect(texture, draw_p, h)
+				if not InteractionAnim.draw(self, anim_asset, texture, InteractionAnim.full_dest_from_used(texture, used_dest), Time.get_ticks_msec(), anim_phase):
+					draw_texture_rect_region(texture, used_dest, HAPPENING_ART.source_rect(texture))
 			else:
 				var w := h * float(texture.get_width()) / float(texture.get_height())
-				draw_texture_rect(texture, Rect2(draw_p.x - w * 0.5, draw_p.y - h, w, h), false)
+				var full_dest := Rect2(draw_p.x - w * 0.5, draw_p.y - h, w, h)
+				if not InteractionAnim.draw(self, anim_asset, texture, full_dest, Time.get_ticks_msec(), anim_phase):
+					draw_texture_rect(texture, full_dest, false)
 		else:
 			draw_colored_polygon(PackedVector2Array([draw_p + Vector2(0, -18), draw_p + Vector2(14, 0), draw_p + Vector2(0, 9), draw_p + Vector2(-14, 0)]), Color(col, 0.35))
 			draw_rect(Rect2(draw_p + Vector2(-9, -22), Vector2(18, 16)), col.darkened(0.2))
@@ -607,7 +616,10 @@ func _draw_ecos() -> void:
 		if eco_texture != null:
 			var eco_h := ECO_ART_HEIGHT * (0.8 + 0.2 * pulse)
 			var eco_w := eco_h * float(eco_texture.get_width()) / float(eco_texture.get_height())
-			draw_texture_rect(eco_texture, Rect2(p.x - eco_w * 0.5, p.y - eco_h - 4.0, eco_w, eco_h), false, Color(1, 1, 1, 0.35 + 0.65 * strength))
+			var eco_dest := Rect2(p.x - eco_w * 0.5, p.y - eco_h - 4.0, eco_w, eco_h)
+			var eco_tint := Color(1, 1, 1, 0.35 + 0.65 * strength)
+			if not InteractionAnim.draw(self, "eco", eco_texture, eco_dest, Time.get_ticks_msec(), InteractionAnim.phase_for(eco.pos), eco_tint):   # SPEC-185 (LOT10 ES05)
+				draw_texture_rect(eco_texture, eco_dest, false, eco_tint)
 		else:
 			draw_circle(p + Vector2(0, -18), 4.0, Color(0.95, 0.88, 1.0, 0.35 + 0.5 * strength))
 
@@ -624,7 +636,9 @@ func _draw_happenings() -> void:
 		var h := 80.0 if event_asset != "" else 64.0
 		if tex != null:
 			if event_asset != "":
-				draw_texture_rect_region(tex, HAPPENING_ART.destination_rect(tex, p, h), HAPPENING_ART.source_rect(tex))
+				var ally_dest := HAPPENING_ART.destination_rect(tex, p, h)
+				if not InteractionAnim.draw(self, event_asset, tex, InteractionAnim.full_dest_from_used(tex, ally_dest), Time.get_ticks_msec(), InteractionAnim.phase_for(a.pos)):
+					draw_texture_rect_region(tex, ally_dest, HAPPENING_ART.source_rect(tex))
 			else:
 				var w := h * float(tex.get_width()) / float(tex.get_height())
 				draw_texture_rect(tex, Rect2(p.x - w * 0.5, p.y - h, w, h), false, Color(0.85, 1.0, 0.85))

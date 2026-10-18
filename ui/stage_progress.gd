@@ -1,7 +1,7 @@
 class_name StageProgress
 extends Control
 ## SPEC-163 (MEC-002): barra fina de progresso da fase, colada à base do relógio da HUD.
-## O estado (modo e fração) é uma conta estática e testada; o desenho só o aplica. Sem arte: tudo por código.
+## O estado (modo e fração) é uma conta estática e testada; o desenho só o aplica. A barra é desenhada por código; os marcadores usam a arte do LOT02 (SPEC-185).
 
 const MODE_NONE := "none"
 const MODE_STAGE := "stage"   # até o chefe: enche de 0 a 1
@@ -13,6 +13,11 @@ const GOLD := Color(0.95, 0.8, 0.4)
 const HOT := Color(0.95, 0.5, 0.2)
 const BOSS_RED := Color(0.95, 0.25, 0.2)
 const FOG_BLUE := Color(0.45, 0.85, 0.95)
+
+const MARKER_PLAYER := preload("res://assets/ui/progresso/marcador_jogador.png")   # SPEC-185 (LOT02 UI02-A): losango âmbar
+const MARKER_BOSS := preload("res://assets/ui/progresso/marcador_chefe.png")      # SPEC-185 (LOT02 UI02-B): caveira
+const MARKER_BOSS_SIZE := 20.0
+const MARKER_PLAYER_SIZE := 14.0
 
 var battle: Battle
 
@@ -60,7 +65,11 @@ func _draw() -> void:
 	draw_rect(fill, fill_color(s, Time.get_ticks_msec()))
 	draw_rect(r, Color(0.0, 0.0, 0.0, 0.85), false, 1.0)
 	if String(s.mode) == MODE_STAGE or String(s.mode) == MODE_BOSS:
-		# marcador do chefe na ponta direita: losango pequeno que sobe acima da barra
-		var c := Vector2(r.end.x, r.position.y + r.size.y * 0.5)
-		var col := BOSS_RED if String(s.mode) == MODE_BOSS else Color(0.85, 0.75, 0.6)
-		draw_colored_polygon(PackedVector2Array([c + Vector2(0, -5), c + Vector2(5, 0), c + Vector2(0, 5), c + Vector2(-5, 0)]), col)
+		# SPEC-185: marcador do jogador (losango) na ponta do preenchimento e do chefe (caveira) na ponta direita; a barra segue com 4 px
+		var mid_y := r.position.y + r.size.y * 0.5
+		if String(s.mode) == MODE_STAGE:
+			var p := Vector2(r.position.x + r.size.x * float(s.fraction), mid_y)
+			draw_texture_rect(MARKER_PLAYER, Rect2(p - Vector2.ONE * MARKER_PLAYER_SIZE * 0.5, Vector2.ONE * MARKER_PLAYER_SIZE), false)
+		var c := Vector2(r.end.x, mid_y)
+		var boss_tint := Color(1, 1, 1, 1) if String(s.mode) == MODE_BOSS else Color(0.85, 0.8, 0.75, 0.9)
+		draw_texture_rect(MARKER_BOSS, Rect2(c - Vector2.ONE * MARKER_BOSS_SIZE * 0.5, Vector2.ONE * MARKER_BOSS_SIZE), false, boss_tint)

@@ -1,0 +1,437 @@
+{
+	"_nota": "SPEC-185 (PLAN-110, B-002): tiras de animação de interações, NPCs, pontos de evento, eventos, segredos e ruínas. Gerado por tools/prepare_idle_strips.gd; cada tira está na escala da arte estática, com `pad` px de folga em volta (célula = textura estática + 2 x pad). `mode`: loop.",
+	"anims": {
+		"ampulheta": {
+			"cell": [
+				288.0,
+				352.0
+			],
+			"fps": 5.0,
+			"frames": 4.0,
+			"mode": "loop",
+			"pad": 48.0,
+			"source": "IE03 IE03_v01",
+			"strip": "res://assets/animations/interactions/ampulheta_idle.png"
+		},
+		"aposta": {
+			"cell": [
+				352.0,
+				352.0
+			],
+			"fps": 5.0,
+			"frames": 4.0,
+			"mode": "loop",
+			"pad": 48.0,
+			"source": "IE02 IE02_v01",
+			"strip": "res://assets/animations/interactions/aposta_idle.png"
+		},
+		"arcanista": {
+			"cell": [
+				352.0,
+				352.0
+			],
+			"fps": 5.0,
+			"frames": 4.0,
+			"mode": "loop",
+			"pad": 48.0,
+			"source": "IE04 IE04_v02",
+			"strip": "res://assets/animations/interactions/arcanista_idle.png"
+		},
+		"arco_pedra": {
+			"cell": [
+				304.0,
+				344.0
+			],
+			"fps": 5.0,
+			"frames": 4.0,
+			"mode": "loop",
+			"pad": 48.0,
+			"source": "EP02 EP02_v02",
+			"strip": "res://assets/animations/interactions/arco_pedra_idle.png"
+		},
+		"camara_aberta": {
+			"cell": [
+				352.0,
+				352.0
+			],
+			"fps": 5.0,
+			"frames": 4.0,
+			"mode": "loop",
+			"pad": 48.0,
+			"source": "ES07 ES07_v03",
+			"strip": "res://assets/animations/interactions/camara_aberta_idle.png"
+		},
+		"camara_selada": {
+			"cell": [
+				352.0,
+				352.0
+			],
+			"fps": 5.0,
+			"frames": 4.0,
+			"mode": "loop",
+			"pad": 48.0,
+			"source": "ES06 ES06_v01",
+			"strip": "res://assets/animations/interactions/camara_selada_idle.png"
+		},
+		"carroca": {
+			"cell": [
+				352.0,
+				352.0
+			],
+			"fps": 5.0,
+			"frames": 4.0,
+			"mode": "loop",
+			"pad": 48.0,
+			"source": "ES03 ES03_v01",
+			"strip": "res://assets/animations/interactions/carroca_idle.png"
+		},
+		"contador": {
+			"cell": [
+				352.0,
+				352.0
+			],
+			"fps": 5.0,
+			"frames": 4.0,
+			"mode": "loop",
+			"pad": 48.0,
+			"source": "IE06 IE06_v01",
+			"strip": "res://assets/animations/interactions/contador_idle.png"
+		},
+		"coracao_limo": {
+			"cell": [
+				187.0,
+				200.0
+			],
+			"fps": 5.0,
+			"frames": 4.0,
+			"mode": "loop",
+			"pad": 48.0,
+			"source": "EP05 EP05_v01",
+			"strip": "res://assets/animations/interactions/coracao_limo_idle.png"
+		},
+		"curandeiro": {
+			"cell": [
+				352.0,
+				352.0
+			],
+			"fps": 5.0,
+			"frames": 4.0,
+			"mode": "loop",
+			"pad": 48.0,
+			"source": "IA05 IA05_v01",
+			"strip": "res://assets/animations/interactions/curandeiro_idle.png"
+		},
+		"doacao": {
+			"cell": [
+				352.0,
+				352.0
+			],
+			"fps": 5.0,
+			"frames": 4.0,
+			"mode": "loop",
+			"pad": 48.0,
+			"source": "IE01 IE01_v02",
+			"strip": "res://assets/animations/interactions/doacao_idle.png"
+		},
+		"eclipse_pedra": {
+			"cell": [
+				352.0,
+				352.0
+			],
+			"fps": 5.0,
+			"frames": 4.0,
+			"mode": "loop",
+			"pad": 48.0,
+			"source": "ES04 ES04_v03",
+			"strip": "res://assets/animations/interactions/eclipse_pedra_idle.png"
+		},
+		"eco": {
+			"cell": [
+				224.0,
+				224.0
+			],
+			"fps": 5.0,
+			"frames": 4.0,
+			"mode": "loop",
+			"pad": 48.0,
+			"source": "ES05 ES05_v02",
+			"strip": "res://assets/animations/interactions/eco_idle.png"
+		},
+		"esporo_zuggtmoy": {
+			"cell": [
+				210.0,
+				200.0
+			],
+			"fps": 5.0,
+			"frames": 4.0,
+			"mode": "loop",
+			"pad": 48.0,
+			"source": "EP06 EP06_v01",
+			"strip": "res://assets/animations/interactions/esporo_zuggtmoy_idle.png"
+		},
+		"estrela_do_norte": {
+			"cell": [
+				194.0,
+				200.0
+			],
+			"fps": 5.0,
+			"frames": 4.0,
+			"mode": "loop",
+			"pad": 48.0,
+			"source": "EP04 EP04_v01",
+			"strip": "res://assets/animations/interactions/estrela_do_norte_idle.png"
+		},
+		"ferreiro": {
+			"cell": [
+				352.0,
+				352.0
+			],
+			"fps": 5.0,
+			"frames": 4.0,
+			"mode": "loop",
+			"pad": 48.0,
+			"source": "IA04 IA04_v01",
+			"strip": "res://assets/animations/interactions/ferreiro_idle.png"
+		},
+		"limo_juiblex": {
+			"cell": [
+				231.0,
+				200.0
+			],
+			"fps": 5.0,
+			"frames": 4.0,
+			"mode": "loop",
+			"pad": 48.0,
+			"source": "EP07 EP07_v01",
+			"strip": "res://assets/animations/interactions/limo_juiblex_idle.png"
+		},
+		"loja": {
+			"cell": [
+				352.0,
+				352.0
+			],
+			"fps": 5.0,
+			"frames": 4.0,
+			"mode": "loop",
+			"pad": 48.0,
+			"source": "IA03 IA03_v01",
+			"strip": "res://assets/animations/interactions/loja_idle.png"
+		},
+		"massa_thullgrime": {
+			"cell": [
+				471.0,
+				344.0
+			],
+			"fps": 5.0,
+			"frames": 4.0,
+			"mode": "loop",
+			"pad": 48.0,
+			"source": "EP03 EP03_v01",
+			"strip": "res://assets/animations/interactions/massa_thullgrime_idle.png"
+		},
+		"npc_desertor_durao": {
+			"cell": [
+				236.0,
+				344.0
+			],
+			"fps": 5.0,
+			"frames": 4.0,
+			"mode": "loop",
+			"pad": 48.0,
+			"source": "NE02 NE02_v02",
+			"strip": "res://assets/animations/interactions/npc_desertor_durao_idle.png"
+		},
+		"npc_joao_barbosa": {
+			"cell": [
+				250.0,
+				344.0
+			],
+			"fps": 5.0,
+			"frames": 4.0,
+			"mode": "loop",
+			"pad": 48.0,
+			"source": "NE01 NE01_v01",
+			"strip": "res://assets/animations/interactions/npc_joao_barbosa_idle.png"
+		},
+		"npc_mercador_rivenheart": {
+			"cell": [
+				255.0,
+				344.0
+			],
+			"fps": 5.0,
+			"frames": 4.0,
+			"mode": "loop",
+			"pad": 48.0,
+			"source": "NE09 NE09_v01",
+			"strip": "res://assets/animations/interactions/npc_mercador_rivenheart_idle.png"
+		},
+		"npc_nyxara": {
+			"cell": [
+				279.0,
+				344.0
+			],
+			"fps": 5.0,
+			"frames": 4.0,
+			"mode": "loop",
+			"pad": 48.0,
+			"source": "NE04 NE04_v01",
+			"strip": "res://assets/animations/interactions/npc_nyxara_idle.png"
+		},
+		"npc_reaper_barqueiro": {
+			"cell": [
+				269.0,
+				344.0
+			],
+			"fps": 5.0,
+			"frames": 4.0,
+			"mode": "loop",
+			"pad": 48.0,
+			"source": "NE07 NE07_v02",
+			"strip": "res://assets/animations/interactions/npc_reaper_barqueiro_idle.png"
+		},
+		"npc_vaelis": {
+			"cell": [
+				229.0,
+				344.0
+			],
+			"fps": 5.0,
+			"frames": 4.0,
+			"mode": "loop",
+			"pad": 48.0,
+			"source": "NE05 NE05_v02",
+			"strip": "res://assets/animations/interactions/npc_vaelis_idle.png"
+		},
+		"npc_vhaerith_aetherion": {
+			"cell": [
+				212.0,
+				344.0
+			],
+			"fps": 5.0,
+			"frames": 4.0,
+			"mode": "loop",
+			"pad": 48.0,
+			"source": "NE08 NE08_v01",
+			"strip": "res://assets/animations/interactions/npc_vhaerith_aetherion_idle.png"
+		},
+		"npc_vitima_enfeiticada": {
+			"cell": [
+				207.0,
+				344.0
+			],
+			"fps": 5.0,
+			"frames": 4.0,
+			"mode": "loop",
+			"pad": 48.0,
+			"source": "NE03 NE03_v02",
+			"strip": "res://assets/animations/interactions/npc_vitima_enfeiticada_idle.png"
+		},
+		"pacto_sangue": {
+			"cell": [
+				352.0,
+				352.0
+			],
+			"fps": 5.0,
+			"frames": 4.0,
+			"mode": "loop",
+			"pad": 48.0,
+			"source": "ES01 ES01_v02",
+			"strip": "res://assets/animations/interactions/pacto_sangue_idle.png"
+		},
+		"peregrino": {
+			"cell": [
+				352.0,
+				352.0
+			],
+			"fps": 5.0,
+			"frames": 4.0,
+			"mode": "loop",
+			"pad": 48.0,
+			"source": "IE05 IE05_v01",
+			"strip": "res://assets/animations/interactions/peregrino_idle.png"
+		},
+		"relicario": {
+			"cell": [
+				352.0,
+				352.0
+			],
+			"fps": 5.0,
+			"frames": 4.0,
+			"mode": "loop",
+			"pad": 48.0,
+			"source": "ES02 ES02_v01",
+			"strip": "res://assets/animations/interactions/relicario_idle.png"
+		},
+		"ruina_dagruve": {
+			"cell": [
+				352,
+				352
+			],
+			"fps": 5.0,
+			"frames": 4,
+			"mode": "loop",
+			"pad": 48,
+			"source": "RU01 RU01_v01",
+			"strip": "res://assets/animations/interactions/ruina_dagruve_idle.png"
+		},
+		"ruina_docas": {
+			"cell": [
+				352,
+				352
+			],
+			"fps": 5.0,
+			"frames": 4,
+			"mode": "loop",
+			"pad": 48,
+			"source": "RU02 RU02_v01",
+			"strip": "res://assets/animations/interactions/ruina_docas_idle.png"
+		},
+		"ruina_feng_tu": {
+			"cell": [
+				352,
+				352
+			],
+			"fps": 5.0,
+			"frames": 4,
+			"mode": "loop",
+			"pad": 48,
+			"source": "RU06 RU06_v02",
+			"strip": "res://assets/animations/interactions/ruina_feng_tu_idle.png"
+		},
+		"ruina_molor": {
+			"cell": [
+				352,
+				352
+			],
+			"fps": 5.0,
+			"frames": 4,
+			"mode": "loop",
+			"pad": 48,
+			"source": "RU04 RU04_v01",
+			"strip": "res://assets/animations/interactions/ruina_molor_idle.png"
+		},
+		"ruina_shedaklah": {
+			"cell": [
+				352,
+				352
+			],
+			"fps": 5.0,
+			"frames": 4,
+			"mode": "loop",
+			"pad": 48,
+			"source": "RU03 RU03_v01",
+			"strip": "res://assets/animations/interactions/ruina_shedaklah_idle.png"
+		},
+		"trono_zuggtmoy": {
+			"cell": [
+				295.0,
+				344.0
+			],
+			"fps": 5.0,
+			"frames": 4.0,
+			"mode": "loop",
+			"pad": 48.0,
+			"source": "EP01 EP01_v03",
+			"strip": "res://assets/animations/interactions/trono_zuggtmoy_idle.png"
+		}
+	}
+}

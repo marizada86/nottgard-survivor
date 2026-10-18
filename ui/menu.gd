@@ -74,6 +74,8 @@ func _ready() -> void:
 	hero_list.item_selected.connect(func(_i): _refresh_hero())
 	stage_list.item_selected.connect(func(_i): _refresh_stage())
 	play_btn.pressed.connect(_play)
+	UiKit.style_action_button(play_btn)   # SPEC-185 (FILA-029 B01)
+	UiKit.style_action_button(hq_play_btn)
 	options_panel = OptionsPanel.new()   # SPEC-166: no lugar dos controles que o menu montava um a um
 	$Tabs/Opções/Content.add_child(options_panel)
 	$Tabs/Opções/Content.move_child(options_panel, 0)

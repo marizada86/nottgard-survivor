@@ -8,6 +8,10 @@ const SHADOW_LIFT := 0.4
 ## Raio da sombra (px) por px de altura visível do inimigo: grande tem sombra grande, pequeno, pequena.
 const SHADOW_RADIUS_PER_HEIGHT := 0.2
 const ANIMATED := {
+	# SPEC-185 (LOT13 e LOT14): Manifestação de Juiblex (5 estados), Mímico (4) e Turíbulo (só idle; a ruptura TD segue retida)
+	"manifestacao_de_juiblex": {"cell": Vector2i(512, 320), "body_height": 266.1, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6, "special": 6}, "flip_h_for_move": true},
+	"mimico": {"cell": Vector2i(384, 352), "body_height": 403.4, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
+	"totem_de_chefe": {"cell": Vector2i(384, 352), "body_height": 515.4, "states": {"idle": 4}},
 	"sintese_abissal": {"cell": Vector2i(256, 384), "body_height": 218.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6, "special": 6}, "flip_h_for_move": true},
 	"socothbenoth": {"cell": Vector2i(256, 384), "body_height": 188.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6, "special": 6}, "flip_h_for_move": true},
 	"death_tyrant": {"cell": Vector2i(256, 384), "body_height": 176.0, "states": {"idle": 4, "move": 6, "attack": 4, "death": 6}, "flip_h_for_move": true},
@@ -59,6 +63,7 @@ const ANIMATED := {
 }
 ## Linha dos pés no idle (px na célula); ancora o sprite na sombra em vez da borda da célula.
 const FEET_Y := {
+	"manifestacao_de_juiblex": 292.0, "mimico": 324.0, "totem_de_chefe": 324.0,
 	"sintese_abissal": 356.0,
 	"socothbenoth": 356.0,
 	"death_tyrant": 356.0,
@@ -99,6 +104,13 @@ const FEET_Y := {
 	"cultista_cajado": 363.0, "guardiao_copia": 458.0, "guardiao_verdadeiro": 469.0, "notivago": 367.0,
 	"sacerdote_mente_derretida": 472.0, "slime_corrosivo": 372.0, "tentaculo_kraken": 372.0, "zumbi": 376.0,
 }
+## SPEC-185 (LOT04 e LOT05): quebráveis estáticos com tira de morte própria (5 quadros, célula 512x512, base na linha 432, escala da arte estática);
+## a arte estática vale até a morte e a tira a substitui, sem mudar posição nem regras.
+const DEATH_ONLY := ["candelabro_quebravel", "caixote_quebravel", "arbusto_quebravel", "saco_de_esporos_quebravel", "casulo_viscoso_quebravel", "urna_funeraria_quebravel",
+	"carroca_quebravel", "pilha_carga_quebravel", "lanterna_de_papel_quebravel", "espelho_ilusorio_quebravel", "estatua_rachada_quebravel", "relicario_instavel_quebravel"]
+const DEATH_ONLY_CELL := Vector2i(512, 512)
+const DEATH_ONLY_BASELINE := 432.0
+const DEATH_ONLY_FRAMES := 5
 static var _tex_cache := {}
 ## Altura visível (alfa) do primeiro quadro do idle, em px da célula, por inimigo.
 static var _art_height_cache := {}
@@ -116,6 +128,8 @@ var _has_animation := false
 var _flip_h_for_move := false
 var _action_locked := false
 var _dying := false
+var _death_only := false
+var _static_hidden := false
 var _last_screen_position := Vector2.ZERO
 var _cell := Vector2i(256, 384)
 
@@ -151,6 +165,8 @@ func _apply_id(enemy_id: String) -> void:
 func _build_animations(enemy_id: String) -> void:
 	var frames := SpriteStripFrames.empty()
 	_has_animation = false
+	_death_only = false
+	_static_hidden = false
 	_flip_h_for_move = false
 	if ANIMATED.has(enemy_id):
 		var spec: Dictionary = ANIMATED[enemy_id]
@@ -161,6 +177,8 @@ func _build_animations(enemy_id: String) -> void:
 			var looped: bool = state in ["idle", "move"]
 			var fps := 9.0 if state == "death" else (10.0 if looped else 12.0)
 			_has_animation = SpriteStripFrames.add_strip(frames, state, "res://assets/animations/enemies/%s/%s.png" % [source_id, state], _cell, int(spec.states[state]), fps, looped) or _has_animation
+	if enemy_id in DEATH_ONLY and not ANIMATED.has(enemy_id):
+		_death_only = SpriteStripFrames.add_strip(frames, "death", "res://assets/animations/enemies/%s/death.png" % enemy_id, DEATH_ONLY_CELL, DEATH_ONLY_FRAMES, 9.0, false)
 	sprite.sprite_frames = frames
 	_cache_art_height(enemy_id, frames)
 	sprite.visible = _has_animation
@@ -247,6 +265,16 @@ func play_death() -> void:
 	if _dying:
 		return
 	_dying = true
+	if _death_only and tex != null and sprite.sprite_frames.has_animation(&"death"):
+		_static_hidden = true
+		var actor_scale := enemy.scale if enemy != null else 1.0
+		sprite.scale = Vector2.ONE * (H_BASE * actor_scale / float(tex.get_height()))
+		sprite.position = _ground_point(actor_scale)
+		sprite.offset = Vector2(0, DEATH_ONLY_CELL.y * 0.5 - DEATH_ONLY_BASELINE)
+		sprite.visible = true
+		sprite.play(&"death")
+		queue_redraw()
+		return
 	if _flip_h_for_move:
 		sprite.flip_h = false
 	if _has_animation and sprite.sprite_frames.has_animation(&"death"):
@@ -280,6 +308,14 @@ func _update_modulate() -> void:
 	else:
 		sprite.modulate = Color(1, 1, 1, alpha)
 
+## Ponto de apoio da sombra (a base do inimigo assenta aqui); o mesmo que o _draw usa, para a tira de morte cair no lugar da arte estática.
+func _ground_point(actor_scale: float) -> Vector2:
+	var shadow_radius := _visible_height(actor_scale) * SHADOW_RADIUS_PER_HEIGHT
+	if tex != null and not _has_animation:
+		var static_width := H_BASE * actor_scale * float(tex.get_width()) / float(tex.get_height()) * _static_art_rect().size.x
+		shadow_radius = maxf(shadow_radius, static_width * STATIC_SHADOW_RADIUS_PER_WIDTH)
+	return Vector2(0, -shadow_radius * Iso.TILE_H / Iso.TILE_W * SHADOW_LIFT)
+
 func _draw() -> void:
 	if enemy == null and not Engine.is_editor_hint():
 		return
@@ -304,7 +340,7 @@ func _draw() -> void:
 			draw_polyline(halo, Color(0.3, 0.8, 0.5, 0.25), 1.5)
 	if enemy != null and enemy.is_boss():
 		draw_arc(ground, 22 * actor_scale, 0, TAU, 24, Color(0.9, 0.2, 0.2, 0.9), 3.0)
-	if tex != null and not _has_animation:
+	if tex != null and not _has_animation and not _static_hidden:
 		var height := H_BASE * actor_scale
 		var width := height * float(tex.get_width()) / float(tex.get_height())
 		# A base visível (não a borda do arquivo) assenta no centro da sombra.

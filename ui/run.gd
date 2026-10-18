@@ -242,7 +242,7 @@ func _setup_encounter_overlays() -> void:
 	add_child(_encounter_layer)
 	for edge in 4:
 		var fog := TextureRect.new()
-		fog.texture = _texture("res://assets/fx/nevoa_borda_01.png")
+		fog.texture = _texture("res://assets/fx/nevoa_mundo_frente_01.png") if ResourceLoader.exists("res://assets/fx/nevoa_mundo_frente_01.png") else _texture("res://assets/fx/nevoa_borda_01.png")   # SPEC-185 (FILA-030 NB02): frente da Maré; a faixa antiga fica de reserva
 		fog.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 		fog.stretch_mode = TextureRect.STRETCH_SCALE
 		fog.modulate = Color(0.34, 0.62, 0.46, 0.0)
@@ -866,7 +866,7 @@ func _consume_events() -> void:
 				if String(ev.get("ability", "")) == "summon": action = &"special_a"
 				elif String(ev.get("ability", "")) == "ring": action = &"special_b"
 				if String(ev.enemy_id) == "blogbog" and String(ev.get("ability", "")) == "summon": action = &"special"
-				if String(ev.enemy_id) in ["zuggtmoy", "socothbenoth", "sintese_abissal"] and String(ev.get("ability", "")) in ["summon", "ring"]: action = &"special"
+				if String(ev.enemy_id) in ["zuggtmoy", "socothbenoth", "sintese_abissal", "manifestacao_de_juiblex"] and String(ev.get("ability", "")) in ["summon", "ring"]: action = &"special"   # SPEC-185 (LOT13 JS): o pulso especial da Manifestação de Juiblex acompanha o chamado e o anel, como nos outros chefes
 				if String(ev.enemy_id) == "molydeus_chefe" and String(ev.get("ability", "")) == "aoe": action = &"special"
 				if String(ev.enemy_id) == "lu_yueh" and String(ev.get("ability", "")) == "aoe": action = &"special"
 				_play_enemy_action(String(ev.enemy_id), ev.pos, action)
@@ -918,17 +918,19 @@ func _play_interaction(ev: Dictionary) -> void:
 	# Interativo fixo do cenário (poço, oficina) tem arte própria: a animação genérica da fonte seria um segundo asset por cima.
 	if bool(ev.get("fixed", false)):
 		return
-	var sequence: String = {"chest": "chest_open", "boss_chest": "chest_open", "fountain": "fountain_active", "altar": "altar_active", "ritual": "ritual", "portal": "portal"}.get(String(ev.kind), "")
-	var count: int = {"chest_open": 6, "fountain_active": 6, "altar_active": 6, "ritual": 8, "portal": 8}.get(sequence, 0)
+	var sequence: String = {"chest": "chest_open", "boss_chest": "boss_chest_open", "fountain": "fountain_active", "altar": "altar_active", "ritual": "ritual", "portal": "portal"}.get(String(ev.kind), "")
+	var count: int = {"chest_open": 6, "boss_chest_open": 6, "fountain_active": 6, "altar_active": 6, "ritual": 8, "portal": 8}.get(sequence, 0)
 	var path := "res://assets/animations/interactions/%s.png" % sequence
 	if count == 0 or not ResourceLoader.exists(path):
 		return
 	var frames := SpriteStripFrames.empty()
-	SpriteStripFrames.add_strip(frames, &"activate", path, Vector2i(192, 192), count, 10.0, false)
+	# SPEC-185 (LOT03 IA01/IA02): as aberturas dos baús têm célula de 256 px na escala da arte estática (192 px) com 32 px de folga; as demais seguem em 192 px
+	var cell := Vector2i(256, 256) if sequence in ["chest_open", "boss_chest_open"] else Vector2i(192, 192)
+	SpriteStripFrames.add_strip(frames, &"activate", path, cell, count, 10.0, false)
 	var animated := AnimatedSprite2D.new()
 	animated.sprite_frames = frames
 	animated.position = Iso.to_screen(ev.pos)
-	animated.offset = Vector2(0, -96)
+	animated.offset = Vector2(0, -96)   # a base da arte estática (192 px) fica no ponto da interação, com ou sem folga na célula
 	var height := 70.0 if ev.kind == "portal" else 54.0
 	animated.scale = Vector2.ONE * (height / 192.0)
 	fx.add_child(animated)

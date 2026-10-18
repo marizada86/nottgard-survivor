@@ -249,7 +249,8 @@ const ASSETS := {
 	"res://assets/animations/enemies/sacerdote_mente_derretida/special_b.png": Vector2i(2560, 480),
 	"res://assets/animations/enemies/sacerdote_mente_derretida/phase.png": Vector2i(2560, 480),
 	"res://assets/animations/enemies/sacerdote_mente_derretida/death.png": Vector2i(3200, 480),
-	"res://assets/animations/interactions/chest_open.png": Vector2i(1152, 192),
+	"res://assets/animations/interactions/chest_open.png": Vector2i(1536, 256),   # SPEC-185 (LOT03 IA01): 6 quadros de 256 px na escala da arte estática, com 32 px de folga
+	"res://assets/animations/interactions/boss_chest_open.png": Vector2i(1536, 256),   # SPEC-185 (LOT03 IA02)
 	"res://assets/animations/interactions/fountain_active.png": Vector2i(1152, 192),
 	"res://assets/animations/interactions/altar_active.png": Vector2i(1152, 192),
 	"res://assets/animations/interactions/ritual.png": Vector2i(1536, 192),

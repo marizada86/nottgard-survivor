@@ -147,6 +147,43 @@ static func tab_button(text: String, tooltip: String, icon: Texture2D, group: Bu
 	tb.add_theme_color_override("font_pressed_color", GOLD)
 	return tb
 
+## SPEC-185 (FILA-029 B01 v03): moldura de nove fatias do botão de ação (JOGAR, Ler HQ). Metal neutro: o estado vem da tinta; o texto é do jogo.
+const ACTION_SLICE_X := 36.0
+const ACTION_SLICE_Y := 20.0
+
+static func action_frame(tint: Color = Color.WHITE) -> StyleBoxTexture:
+	var style := SheetArt.frame(SheetArt.ACTION, ACTION_SLICE_X, 12, tint)
+	style.set_texture_margin(SIDE_TOP, ACTION_SLICE_Y)
+	style.set_texture_margin(SIDE_BOTTOM, ACTION_SLICE_Y)
+	style.set_content_margin(SIDE_LEFT, 40)
+	style.set_content_margin(SIDE_RIGHT, 40)
+	style.set_content_margin(SIDE_TOP, 8)
+	style.set_content_margin(SIDE_BOTTOM, 8)
+	return style
+
+static func style_action_button(b: Button) -> void:
+	b.add_theme_stylebox_override("normal", action_frame())
+	b.add_theme_stylebox_override("hover", action_frame(Color(1.18, 1.12, 0.92)))
+	b.add_theme_stylebox_override("pressed", action_frame(Color(1.55, 1.25, 0.6)))
+	b.add_theme_stylebox_override("focus", action_frame(Color(1.35, 1.2, 0.75)))
+	b.add_theme_stylebox_override("disabled", action_frame(Color(0.55, 0.55, 0.58)))
+	b.add_theme_color_override("font_color", TEXT)
+	b.add_theme_color_override("font_hover_color", GOLD)
+	b.add_theme_color_override("font_focus_color", GOLD)
+	b.add_theme_color_override("font_pressed_color", GOLD)
+	b.add_theme_color_override("font_disabled_color", Color(0.62, 0.62, 0.64))
+
+## SPEC-185 (LOT02 UI03/UI04): casela do catálogo, 128 px reduzidos à célula; sem fatias, a moldura inteira encolhe junto.
+const SLOT_OPEN := preload("res://assets/ui/catalogo/casela_aberta.png")
+const SLOT_LOCKED := preload("res://assets/ui/catalogo/casela_bloqueada.png")
+
+static func catalog_slot(known: bool, tint: Color = Color.WHITE) -> StyleBoxTexture:
+	var style := StyleBoxTexture.new()
+	style.texture = SLOT_OPEN if known else SLOT_LOCKED
+	style.modulate_color = tint
+	style.set_content_margin_all(0)
+	return style
+
 ## Botão de dica de troca de aba (◂ Q / E ▸ ou L1/R1); não recebe foco.
 static func hint_button() -> Button:
 	var b := Button.new()

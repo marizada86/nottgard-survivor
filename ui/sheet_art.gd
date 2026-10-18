@@ -7,6 +7,7 @@ const DETAIL = preload(ROOT + "ficha_moldura_detalhe.png")
 const SLOT = preload(ROOT + "ficha_slot_moldura.png")
 const EMPTY_SLOT = preload(ROOT + "ficha_slot_vazio.png")
 const TAB = preload(ROOT + "ficha_aba_moldura.png")
+const ACTION = preload(ROOT + "botao_acao_moldura.png")   # SPEC-185 (FILA-029 B01 v03): 378x63, ornamentos laterais até ~34 px
 const BACKGROUND = preload(ROOT + "ficha_fundo_textura.png")
 const TAB_ICONS := [preload(ROOT + "ficha_aba_armas.png"), preload(ROOT + "ficha_aba_equipamento.png"),
 	preload(ROOT + "ficha_aba_passivas.png"), preload(ROOT + "ficha_aba_sinergias.png")]
