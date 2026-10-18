@@ -47,6 +47,12 @@ static func art_id(hero: String) -> String:
 		return hero
 	return String(Data.table("heroes").get(hero, {}).get("art_like", hero))
 
+## Célula da tira: larga (512x512) para as tiras do piloto que a tabela WIDE_CELL_STRIPS lista; as demais seguem a célula do herói.
+static func strip_cell(hero: String, animation: StringName) -> Vector2i:
+	if animation in WIDE_CELL_STRIPS.get(StringName(hero), []):
+		return WIDE_CELL
+	return cell_of(hero)
+
 static func cell_of(hero: String) -> Vector2i:
 	var f := strip_factor(hero)
 	var source_cell: Vector2i = HERO_SOURCE_CELL.get(StringName(hero), CELL)
@@ -90,6 +96,13 @@ const WALK_STEP_HZ := 3.2
 const WALK_SETTLE_SPEED := 14.0
 const WALK_DIRECTIONS := [&"e", &"se", &"s", &"sw", &"w", &"nw", &"n", &"ne"]
 const WALK_SOURCE_DIRECTIONS := [&"e", &"se", &"s", &"n", &"ne"]
+## SPEC-176 / SPEC-185 (M1, PLAN-103): tiras do piloto em célula larga de 512x512 (pés na linha 440, que cai no mesmo ponto dos pés em 376 da célula 256x384:
+## o deslocamento do sprite não muda) e direções de oeste reais (sem espelho: a espada do herói não é simétrica). Só o Durvall por enquanto.
+const WIDE_CELL := Vector2i(512, 512)
+const WIDE_CELL_STRIPS := {
+	&"durvall": [&"move_e", &"move_se", &"move_s", &"move_n", &"move_ne", &"move_w", &"move_sw", &"move_nw", &"attack"],
+}
+const REAL_WEST_WALK := {&"durvall": [&"move_w", &"move_sw", &"move_nw"]}
 const MIRRORED_WALK_ANIMATIONS := {
 	&"move_w": &"move_e",
 	&"move_nw": &"move_ne",
@@ -122,6 +135,7 @@ var _dbg_force := Vector2.ZERO
 var _dbg_bob := 0.0    # SPEC-176: balanço vertical sincronizado ao ciclo (px de tela); 0 = desligado
 var _dbg_lean := 0.0   # SPEC-176: inclinação sincronizada ao ciclo (rad); 0 = desligado
 var _lab_real := {}    # SPEC-176: tiras de oeste reais vindas de --walk-candidate (sem espelho); vazio = comportamento normal
+var _real_walk := {}   # SPEC-176: direções de oeste com tira própria no assets/ (sem espelho)
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
@@ -158,14 +172,18 @@ func _build_animations() -> void:
 	var strips := strip_set(_active_hero_id)
 	var root := String(strips.get("dir", "res://assets/animations/heroes/%s" % art_id(_active_hero_id)))
 	var cell := cell_of(_active_hero_id)
+	_real_walk = {}
 	_has_animation = false
 	_has_animation = SpriteStripFrames.add_strip(frames, &"idle", "%s/idle.png" % root, cell, 4, 8.0, true) or _has_animation
 	_has_animation = SpriteStripFrames.add_strip(frames, &"move", "%s/move.png" % root, cell, 6, 10.0, true) or _has_animation
 	for direction in WALK_SOURCE_DIRECTIONS:
 		var animation: StringName = StringName("move_%s" % direction)
 		var count: int = HERO_WALK_FRAME_COUNTS.get(StringName(_active_hero_id), {}).get(animation, 6)
-		_has_animation = SpriteStripFrames.add_strip(frames, animation, "%s/%s.png" % [root, animation], cell, count, 10.0, true) or _has_animation
-	_has_animation = SpriteStripFrames.add_strip(frames, &"attack", "%s/attack.png" % root, cell, 4, 12.0, false) or _has_animation
+		_has_animation = SpriteStripFrames.add_strip(frames, animation, "%s/%s.png" % [root, animation], strip_cell(_active_hero_id, animation), count, 10.0, true) or _has_animation
+	for animation in REAL_WEST_WALK.get(StringName(_active_hero_id), []):
+		if SpriteStripFrames.add_strip(frames, animation, "%s/%s.png" % [root, animation], strip_cell(_active_hero_id, animation), 6, 10.0, true):
+			_real_walk[animation] = true
+	_has_animation = SpriteStripFrames.add_strip(frames, &"attack", "%s/attack.png" % root, strip_cell(_active_hero_id, &"attack"), 4, 12.0, false) or _has_animation
 	_has_animation = SpriteStripFrames.add_strip(frames, &"active", "%s/active.png" % root, cell, 6, 12.0, false) or _has_animation
 	_has_animation = SpriteStripFrames.add_strip(frames, &"death", "%s/death.png" % root, cell, 6, 9.0, false) or _has_animation
 	_lab_apply_candidate(frames, cell)
@@ -239,7 +257,7 @@ func sync_visual(screen_position: Vector2, is_dead: bool, is_flash: bool) -> voi
 				sprite.flip_h = false
 			elif walking:
 				desired = _walk_animation(movement_delta)
-				sprite.flip_h = false if _lab_real.has(directional_walk_animation(movement_delta)) else walk_flips_horizontally(movement_delta)
+				sprite.flip_h = false if _is_real_walk(directional_walk_animation(movement_delta)) else walk_flips_horizontally(movement_delta)
 				if uses_procedural_walk(_active_hero_id):
 					sprite.position = Vector2.ZERO
 					sprite.rotation = 0.0
@@ -395,8 +413,11 @@ func _on_animation_finished() -> void:
 		return
 	_action_locked = false
 
+func _is_real_walk(animation: StringName) -> bool:
+	return _real_walk.has(animation) or _lab_real.has(animation)
+
 func _walk_animation(delta: Vector2) -> StringName:
-	if _lab_real.has(directional_walk_animation(delta)):
+	if _is_real_walk(directional_walk_animation(delta)):
 		return directional_walk_animation(delta)
 	var animation := walk_animation_for_direction(delta)
 	return animation if sprite.sprite_frames.has_animation(animation) else &"move"

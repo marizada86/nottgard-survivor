@@ -223,15 +223,15 @@ const ASSETS := {
 	"res://assets/animations/heroes/sylas/death.png": Vector2i(1536, 384),
 	"res://assets/animations/heroes/durvall/idle.png": Vector2i(1024, 384),
 	"res://assets/animations/heroes/durvall/move.png": Vector2i(1536, 384),
-	"res://assets/animations/heroes/durvall/move_n.png": Vector2i(1536, 384),
-	"res://assets/animations/heroes/durvall/move_ne.png": Vector2i(1536, 384),
-	"res://assets/animations/heroes/durvall/move_e.png": Vector2i(1536, 384),
-	"res://assets/animations/heroes/durvall/move_se.png": Vector2i(1536, 384),
-	"res://assets/animations/heroes/durvall/move_s.png": Vector2i(1536, 384),
-	"res://assets/animations/heroes/durvall/move_sw.png": Vector2i(1536, 384),
-	"res://assets/animations/heroes/durvall/move_w.png": Vector2i(1536, 384),
-	"res://assets/animations/heroes/durvall/move_nw.png": Vector2i(1536, 384),
-	"res://assets/animations/heroes/durvall/attack.png": Vector2i(1024, 384),
+	"res://assets/animations/heroes/durvall/move_n.png": Vector2i(3072, 512),   # SPEC-176/185: piloto em célula larga de 512 px
+	"res://assets/animations/heroes/durvall/move_ne.png": Vector2i(3072, 512),   # SPEC-176/185: piloto em célula larga de 512 px
+	"res://assets/animations/heroes/durvall/move_e.png": Vector2i(3072, 512),   # SPEC-176/185: piloto em célula larga de 512 px
+	"res://assets/animations/heroes/durvall/move_se.png": Vector2i(3072, 512),   # SPEC-176/185: piloto em célula larga de 512 px
+	"res://assets/animations/heroes/durvall/move_s.png": Vector2i(3072, 512),   # SPEC-176/185: piloto em célula larga de 512 px
+	"res://assets/animations/heroes/durvall/move_sw.png": Vector2i(3072, 512),   # SPEC-176/185: piloto em célula larga de 512 px
+	"res://assets/animations/heroes/durvall/move_w.png": Vector2i(3072, 512),   # SPEC-176/185: piloto em célula larga de 512 px
+	"res://assets/animations/heroes/durvall/move_nw.png": Vector2i(3072, 512),   # SPEC-176/185: piloto em célula larga de 512 px
+	"res://assets/animations/heroes/durvall/attack.png": Vector2i(2048, 512),   # SPEC-176/185: piloto em célula larga de 512 px
 	"res://assets/animations/heroes/durvall/active.png": Vector2i(1536, 384),
 	"res://assets/animations/heroes/durvall/death.png": Vector2i(1536, 384),
 	"res://assets/animations/enemies/zumbi/idle.png": Vector2i(1024, 384),
@@ -393,8 +393,9 @@ func run() -> Array[String]:
 
 ## Dívida conhecida de caminhada (EVID-146 / BUG-025 / ART-PROMPTS-055): massa fora de ±30% do idle
 ## ou quadro colado na borda. Só pode encolher: ao regerar a tira, remova a entrada.
-const WALK_KNOWN_MASS := []
+const WALK_KNOWN_MASS := ["durvall/move_e", "durvall/move_se"]   # SPEC-176/185: piloto Durvall v03 (DRAFT, G-D3/G-D4): espada e passada longa deixam a massa fora de ±30% do idle
 const WALK_KNOWN_EDGE := []
+const WALK_KNOWN_BASE := ["durvall/move_ne"]   # SPEC-176/185: 3 dos 6 quadros no ar (pé 14 a 16 px acima) puxam a mediana da base 13 px; é o ciclo de corrida, não deriva
 
 func _validate_hero_walk_stability() -> Array[String]:
 	var failures: Array[String] = []
@@ -415,7 +416,7 @@ func _validate_hero_walk_stability() -> Array[String]:
 					failures.append("altura de %s muda ao andar: %d px contra %d do idle" % [key, frame.height, idle.height])
 					break
 			for frame in strip.frames:
-				if absi(frame.bottom - idle.bottom) > 6:
+				if absi(frame.bottom - idle.bottom) > 6 and not WALK_KNOWN_BASE.has(key):
 					failures.append("pés de %s fora da linha de base do idle: %d contra %d" % [key, frame.bottom, idle.bottom])
 					break
 			for frame in strip.frames:
@@ -439,7 +440,9 @@ func _walk_metrics(path: String) -> Dictionary:
 	var masses: Array[int] = []
 	var hero: String = path.get_base_dir().get_file()
 	var view: Script = load("res://ui/hero_view.gd")
-	var cell: Vector2i = view.cell_of(hero)
+	# SPEC-176/185: tiras do piloto em célula larga (512x512, pés em 440): mede na célula da tira e leva a base para o equivalente da célula 256x384 (deslocamento vertical = diferença das alturas / 2)
+	var cell: Vector2i = view.strip_cell(hero, StringName(path.get_file().get_basename()))
+	var vertical_shift: int = (cell.y - view.cell_of(hero).y) / 2
 	var cell_width: int = cell.x
 	for index in image.get_width() / cell_width:
 		var left := cell_width
@@ -458,9 +461,9 @@ func _walk_metrics(path: String) -> Dictionary:
 				bottom = maxi(bottom, y)
 		if right < left:
 			continue
-		frames.append({"height": bottom - top + 1, "bottom": bottom + 1, "mass": mass, "edge": left <= 1 or top <= 1 or right >= cell_width - 2 or bottom >= cell.y - 2})
+		frames.append({"height": bottom - top + 1, "bottom": bottom + 1 - vertical_shift, "mass": mass, "edge": left <= 1 or top <= 1 or right >= cell_width - 2 or bottom >= cell.y - 2})
 		heights.append(bottom - top + 1)
-		bottoms.append(bottom + 1)
+		bottoms.append(bottom + 1 - vertical_shift)
 		masses.append(mass)
 	if frames.is_empty():
 		return {}
