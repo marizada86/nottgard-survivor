@@ -1,0 +1,18 @@
+{
+  "id": "V04_death",
+  "revision": "v01",
+  "state": "DRAFT",
+  "file": "V04_death_v01.png",
+  "prompt_file": "V04_death_prompt.txt",
+  "tool": "image_gen built-in",
+  "references": [
+    "F:/dev/nottgard-vault/output/referencias-personagens/RHE-004/S04-S05-biblioteca/refhq-r01/gargula-familia-front-candidate-v02.png",
+    "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+    "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+    "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+  ],
+  "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-ee49f554-354a-478d-94af-601d37dba963.png",
+  "human_visual_acceptance": "PENDING",
+  "runtime_admission": false,
+  "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+}

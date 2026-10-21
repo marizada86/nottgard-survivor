@@ -1,0 +1,18 @@
+{
+  "id": "V08_molydeus",
+  "revision": "v01",
+  "state": "DRAFT",
+  "file": "V08_molydeus_v01.png",
+  "prompt_file": "V08_molydeus_prompt.txt",
+  "tool": "image_gen built-in",
+  "references": [
+    "F:/dev/nottgard-vault/output/referencias-criaturas/RHE-013/r01/molydeus-candidate-v02.png",
+    "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+    "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+    "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+  ],
+  "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-02adb9ff-d5b4-409e-b700-760c3be7d82e.png",
+  "human_visual_acceptance": "PENDING",
+  "runtime_admission": false,
+  "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+}

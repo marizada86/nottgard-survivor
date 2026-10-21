@@ -1,0 +1,1598 @@
+{
+  "revision": "DRAFT/r1",
+  "status": "PARTIAL_PRODUCTION_CHECKPOINT",
+  "contract": "ASSET-GENERATION-LIST-20261021-r1.md",
+  "authorization": "aprovado, pode gerar; per-plan",
+  "source_count": 96,
+  "selected_count": 92,
+  "superseded": [
+    "V01_death_v01.png",
+    "V02_attack_v01.png",
+    "V10_sprite_v01.png",
+    "U09_v01.png"
+  ],
+  "remaining_character_poses": 33,
+  "human_visual_acceptance": "PENDING",
+  "runtime_admission": false,
+  "references_note": "Per-artifact references are preparation records; early records were reconstructed and are not an exact tool-call audit.",
+  "artifacts": [
+    {
+      "id": "C01",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "C01_v01.png",
+      "prompt_file": "C01_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/ui/boss-intros/sacerdote_mente_derretida.png",
+        "F:/dev/abyss-megadungeon/assets/stages/shedaklah_thumb.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-c6feac20-f2e3-435a-ac04-b2ef77e6e5b9.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "C02",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "C02_v01.png",
+      "prompt_file": "C02_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/ui/boss-intros/sacerdote_mente_derretida.png",
+        "F:/dev/abyss-megadungeon/assets/stages/shedaklah_thumb.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-5ccca9d0-cef5-438c-a3b5-2f94de22fd4d.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "C03",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "C03_v01.png",
+      "prompt_file": "C03_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/ui/boss-intros/sacerdote_mente_derretida.png",
+        "F:/dev/abyss-megadungeon/assets/stages/shedaklah_thumb.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-6c2d4092-2a9a-4ffa-91ce-fcf5c3224b39.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "C04",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "C04_v01.png",
+      "prompt_file": "C04_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/ui/boss-intros/sacerdote_mente_derretida.png",
+        "F:/dev/abyss-megadungeon/assets/stages/shedaklah_thumb.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-a1c373d7-679c-456c-9d2c-9f4e9e1b20c8.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "C05",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "C05_v01.png",
+      "prompt_file": "C05_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/ui/boss-intros/sacerdote_mente_derretida.png",
+        "F:/dev/abyss-megadungeon/assets/stages/shedaklah_thumb.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-356345ab-36e0-4d42-a5e8-63685db77a4d.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "C06",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "C06_v01.png",
+      "prompt_file": "C06_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/ui/boss-intros/sacerdote_mente_derretida.png",
+        "F:/dev/abyss-megadungeon/assets/stages/shedaklah_thumb.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-afd0621d-fb1f-4163-b96c-1631c2a78fd3.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "C07",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "C07_v01.png",
+      "prompt_file": "C07_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/ui/boss-intros/sacerdote_mente_derretida.png",
+        "F:/dev/abyss-megadungeon/assets/stages/shedaklah_thumb.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-e2106075-5b4d-4a3d-8b72-bd683fd876ab.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "C08",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "C08_v01.png",
+      "prompt_file": "C08_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/ui/boss-intros/sacerdote_mente_derretida.png",
+        "F:/dev/abyss-megadungeon/assets/stages/shedaklah_thumb.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-72299b0a-dc27-45c7-8d4e-a1ca6e43d3dd.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "C09",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "C09_v01.png",
+      "prompt_file": "C09_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/ui/boss-intros/sacerdote_mente_derretida.png",
+        "F:/dev/abyss-megadungeon/assets/stages/shedaklah_thumb.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-27356ce4-0de1-42ff-82d2-05c87b7b1222.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "C10",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "C10_v01.png",
+      "prompt_file": "C10_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/ui/boss-intros/sacerdote_mente_derretida.png",
+        "F:/dev/abyss-megadungeon/assets/stages/shedaklah_thumb.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-3d830acf-1f33-4c8e-9c1d-4d6fdf2f5ab2.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "C11_domwieck_remendo",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "C11_domwieck_remendo_v01.png",
+      "prompt_file": "C11_domwieck_remendo_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/decals/docas_remendo_01.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-3d3663fe-d27d-4c0f-98a9-1de07edd661c.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "C11_domwieck_trilha",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "C11_domwieck_trilha_v01.png",
+      "prompt_file": "C11_domwieck_trilha_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/decals/docas_remendo_01.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-2033e726-e411-4481-be20-22f2408656b7.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "C11_reino_remendo",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "C11_reino_remendo_v01.png",
+      "prompt_file": "C11_reino_remendo_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/decals/docas_remendo_01.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-dd3c0252-6f4e-48fd-b75e-d7fef391833f.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "C11_reino_trilha",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "C11_reino_trilha_v01.png",
+      "prompt_file": "C11_reino_trilha_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/decals/docas_remendo_01.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-f6ee6700-88cc-4e34-b975-6265dd110fa7.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "C12_domwieck",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "C12_domwieck_v01.png",
+      "prompt_file": "C12_domwieck_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/interactions/ruina_docas.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-08510274-faa3-40b1-b72d-e9f42e4ed5e1.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "C12_pilares",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "C12_pilares_v01.png",
+      "prompt_file": "C12_pilares_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/interactions/ruina_docas.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-4f6a5fa8-c3c0-4113-8e5c-aed95ee822ba.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "C12_reino_abissal",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "C12_reino_abissal_v01.png",
+      "prompt_file": "C12_reino_abissal_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/interactions/ruina_docas.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-10040c1f-54d8-479a-9aa5-0791231f21a4.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "C13_a",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "C13_a_v01.png",
+      "prompt_file": "C13_a_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/.atena/generated/asset-checkup-20261021/m-icons.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-1678e070-b9a3-4967-a4e4-f4e46c898beb.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "C13_b",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "C13_b_v01.png",
+      "prompt_file": "C13_b_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/.atena/generated/asset-checkup-20261021/m-icons.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-48f845ac-3dfe-443d-b301-4e5116efe431.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "C14",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "C14_v01.png",
+      "prompt_file": "C14_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/.atena/generated/asset-checkup-20261021/m-icons.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-10eacba3-5a5f-4767-beb1-edf04971a07b.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "C15_a",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "C15_a_v01.png",
+      "prompt_file": "C15_a_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/.atena/generated/asset-checkup-20261021/m-icons.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-9dac17d4-742b-4f50-9abf-18f50f055845.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "C15_b",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "C15_b_v01.png",
+      "prompt_file": "C15_b_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/.atena/generated/asset-checkup-20261021/m-icons.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-6c0e2ec5-3781-4663-9014-522496230812.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "C15_c",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "C15_c_v01.png",
+      "prompt_file": "C15_c_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/.atena/generated/asset-checkup-20261021/m-icons.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-9bb3f39c-7add-4b2e-9429-84279c22cbe0.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "C16_arlindo",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "C16_arlindo_v01.png",
+      "prompt_file": "C16_arlindo_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/.atena/generated/asset-checkup-20261021/m-icons.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-f84b9905-8e02-4897-b85a-e30c4c42d05f.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "C16_erik",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "C16_erik_v01.png",
+      "prompt_file": "C16_erik_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/.atena/generated/asset-checkup-20261021/m-icons.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-91909e6f-48aa-45c1-b43e-623f1e110fcd.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "N01_attack",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "N01_attack_v01.png",
+      "prompt_file": "N01_attack_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/nottgard-vault/output/referencias-personagens/B-FALT-003-05/r01/reaper-front-candidate-v01.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+        "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-438b96d0-30ea-4fc1-b549-10a4871c77b5.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "N01_death",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "N01_death_v01.png",
+      "prompt_file": "N01_death_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/nottgard-vault/output/referencias-personagens/B-FALT-003-05/r01/reaper-front-candidate-v01.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+        "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-8ccae319-b976-4e80-a7f3-4557561ff0a3.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "N01_idle",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "N01_idle_v01.png",
+      "prompt_file": "N01_idle_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/nottgard-vault/output/referencias-personagens/B-FALT-003-05/r01/reaper-front-candidate-v01.png",
+        "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-8ea05ad6-354c-41fd-91a1-1c80b0484f28.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "Q01",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "Q01_v01.png",
+      "prompt_file": "Q01_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/.atena/generated/asset-checkup-20261021/m-icons.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-4aa76791-3c04-4558-8310-328cbb6e835b.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "Q02",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "Q02_v01.png",
+      "prompt_file": "Q02_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_moldura_painel.png",
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_slot_moldura.png",
+        "F:/dev/abyss-megadungeon/assets/ui/lettering/placa_titulo_larga.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-6cb4d8c3-24b8-4f71-ba69-c6f0f2622cd8.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "Q03",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "Q03_v01.png",
+      "prompt_file": "Q03_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_moldura_painel.png",
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_slot_moldura.png",
+        "F:/dev/abyss-megadungeon/assets/ui/lettering/placa_titulo_larga.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-8993bd2a-98d2-43b3-bff6-17eb7b6405fb.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "Q04_a",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "Q04_a_v01.png",
+      "prompt_file": "Q04_a_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/.atena/generated/asset-checkup-20261021/m-icons.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-0d48a9b0-89b4-4b95-bd99-436c1bf91f4b.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "Q04_b",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "Q04_b_v01.png",
+      "prompt_file": "Q04_b_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/.atena/generated/asset-checkup-20261021/m-icons.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-11277ff8-8ab1-4625-a981-749483d5033b.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "Q04_c",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "Q04_c_v01.png",
+      "prompt_file": "Q04_c_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/.atena/generated/asset-checkup-20261021/m-icons.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-e2599fb4-0cfa-4eed-b9fc-b9d5607dc124.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "Q05",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "Q05_v01.png",
+      "prompt_file": "Q05_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_moldura_painel.png",
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_slot_moldura.png",
+        "F:/dev/abyss-megadungeon/assets/ui/lettering/placa_titulo_larga.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-98b1e1b8-29d1-4ed5-9995-0f42f9ed33bc.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "Q06",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "Q06_v01.png",
+      "prompt_file": "Q06_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/.atena/generated/asset-checkup-20261021/m-icons.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-137eb87d-7798-44a6-953d-b3e08c2a1c43.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "Q07",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "Q07_v01.png",
+      "prompt_file": "Q07_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/.atena/generated/asset-checkup-20261021/m-icons.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-b01b3746-c116-449e-b708-7fe37e98e194.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "Q08",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "Q08_v01.png",
+      "prompt_file": "Q08_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/.atena/generated/asset-checkup-20261021/m-icons.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-467c382f-ed5b-44c7-be3d-2d5a3fb36a00.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "Q09",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "Q09_v01.png",
+      "prompt_file": "Q09_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/.atena/generated/asset-checkup-20261021/m-icons.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-b6d5ba8e-4f63-4109-9f82-66eb6dc1b500.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "Q10",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "Q10_v01.png",
+      "prompt_file": "Q10_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/.atena/generated/asset-checkup-20261021/m-icons.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-85bc3cb4-8fa4-4fe3-bf77-15c5b3f98e08.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "U01",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "U01_v01.png",
+      "prompt_file": "U01_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_moldura_painel.png",
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_slot_moldura.png",
+        "F:/dev/abyss-megadungeon/assets/ui/lettering/placa_titulo_larga.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-b42aa781-b5c6-4bab-9996-2314a3720221.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "U02",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "U02_v01.png",
+      "prompt_file": "U02_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_moldura_painel.png",
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_slot_moldura.png",
+        "F:/dev/abyss-megadungeon/assets/ui/lettering/placa_titulo_larga.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-d9a8ae72-49be-420b-82f5-ab05fee42021.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "U03",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "U03_v01.png",
+      "prompt_file": "U03_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_moldura_painel.png",
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_slot_moldura.png",
+        "F:/dev/abyss-megadungeon/assets/ui/lettering/placa_titulo_larga.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-157b3e5b-ca00-4e25-9bb3-702363d8dd10.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "U04",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "U04_v01.png",
+      "prompt_file": "U04_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_moldura_painel.png",
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_slot_moldura.png",
+        "F:/dev/abyss-megadungeon/assets/ui/lettering/placa_titulo_larga.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-126c5aa6-ba0e-4023-9e3b-010095c973f3.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "U05",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "U05_v01.png",
+      "prompt_file": "U05_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_moldura_painel.png",
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_slot_moldura.png",
+        "F:/dev/abyss-megadungeon/assets/ui/lettering/placa_titulo_larga.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-d4a7c8e2-ce49-48e1-b7da-11cb1c152c30.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "U06",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "U06_v01.png",
+      "prompt_file": "U06_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_moldura_painel.png",
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_slot_moldura.png",
+        "F:/dev/abyss-megadungeon/assets/ui/lettering/placa_titulo_larga.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-34475093-d6f6-4af4-b689-09d9527d1682.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "U07",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "U07_v01.png",
+      "prompt_file": "U07_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_moldura_painel.png",
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_slot_moldura.png",
+        "F:/dev/abyss-megadungeon/assets/ui/lettering/placa_titulo_larga.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-38ab3072-0934-4e79-abfb-42a950426c01.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "U08",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "U08_v01.png",
+      "prompt_file": "U08_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_moldura_painel.png",
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_slot_moldura.png",
+        "F:/dev/abyss-megadungeon/assets/ui/lettering/placa_titulo_larga.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-c293ee80-b0e5-4aec-ba9e-f6eb9670559e.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "U09_v02",
+      "revision": "v02",
+      "state": "DRAFT",
+      "file": "U09_v02.png",
+      "prompt_file": "U09_v02_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-b42aa781-b5c6-4bab-9996-2314a3720221.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-f2619c71-286f-4e62-bc29-0d27b191b307.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "U09",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "U09_v01.png",
+      "prompt_file": "U09_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_moldura_painel.png",
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_slot_moldura.png",
+        "F:/dev/abyss-megadungeon/assets/ui/lettering/placa_titulo_larga.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-745e90af-62f6-441e-988d-176615b4382b.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "U10",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "U10_v01.png",
+      "prompt_file": "U10_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_fundo_textura.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-34669b71-c0ad-4910-a294-3dbcba4909f9.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "U11",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "U11_v01.png",
+      "prompt_file": "U11_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_moldura_painel.png",
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_slot_moldura.png",
+        "F:/dev/abyss-megadungeon/assets/ui/lettering/placa_titulo_larga.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-af09cee9-cc9d-4384-908f-38182dd0f405.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "U12",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "U12_v01.png",
+      "prompt_file": "U12_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_moldura_painel.png",
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_slot_moldura.png",
+        "F:/dev/abyss-megadungeon/assets/ui/lettering/placa_titulo_larga.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-e5ea50a4-670d-482b-8af8-5a30ff70bc7c.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "U13_fill",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "U13_fill_v01.png",
+      "prompt_file": "U13_fill_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-08e02692-50ac-44c1-89d7-94f9e644e8c1.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "U13_frame",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "U13_frame_v01.png",
+      "prompt_file": "U13_frame_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_moldura_painel.png",
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_slot_moldura.png",
+        "F:/dev/abyss-megadungeon/assets/ui/lettering/placa_titulo_larga.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-2f2de01e-95af-484f-8077-558bd82ab84a.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "U14",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "U14_v01.png",
+      "prompt_file": "U14_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_moldura_painel.png",
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_slot_moldura.png",
+        "F:/dev/abyss-megadungeon/assets/ui/lettering/placa_titulo_larga.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-ce757ff2-fef7-4cf9-9bd6-2044a24a39ad.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "U15",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "U15_v01.png",
+      "prompt_file": "U15_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_moldura_painel.png",
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_slot_moldura.png",
+        "F:/dev/abyss-megadungeon/assets/ui/lettering/placa_titulo_larga.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-af2f5c25-f8db-42db-8a9a-9c4ec6c6b1ad.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "U16",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "U16_v01.png",
+      "prompt_file": "U16_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_moldura_painel.png",
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_slot_moldura.png",
+        "F:/dev/abyss-megadungeon/assets/ui/lettering/placa_titulo_larga.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-de529cf9-32c3-42d1-85dd-5b1f650bd271.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "U17",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "U17_v01.png",
+      "prompt_file": "U17_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_moldura_painel.png",
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_slot_moldura.png",
+        "F:/dev/abyss-megadungeon/assets/ui/lettering/placa_titulo_larga.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-6d271bd6-2807-4c96-93f3-715e3cbd3eb1.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "U18",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "U18_v01.png",
+      "prompt_file": "U18_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_moldura_painel.png",
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_slot_moldura.png",
+        "F:/dev/abyss-megadungeon/assets/ui/lettering/placa_titulo_larga.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-914117ed-41cc-4ac3-82e4-c185ba498dc4.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "U19",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "U19_v01.png",
+      "prompt_file": "U19_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_moldura_painel.png",
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_slot_moldura.png",
+        "F:/dev/abyss-megadungeon/assets/ui/lettering/placa_titulo_larga.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-a29ccda3-7710-4d73-b338-16fef8769ae3.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "U20",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "U20_v01.png",
+      "prompt_file": "U20_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_moldura_painel.png",
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_slot_moldura.png",
+        "F:/dev/abyss-megadungeon/assets/ui/lettering/placa_titulo_larga.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-ea7e0775-e377-4557-82b8-5d43cb618732.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "U21",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "U21_v01.png",
+      "prompt_file": "U21_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_moldura_painel.png",
+        "F:/dev/abyss-megadungeon/assets/ui/ficha/ficha_slot_moldura.png",
+        "F:/dev/abyss-megadungeon/assets/ui/lettering/placa_titulo_larga.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-f4469ca2-0c57-4838-9f37-80c08e187145.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "V01_attack",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "V01_attack_v01.png",
+      "prompt_file": "V01_attack_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/nottgard-vault/output/referencias-personagens/SINTESE-ABISSAL/roxo-r01/sintese-front-v01.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-2023f87a-8535-4d46-b784-c5976e31681e.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "V01_death_v02",
+      "revision": "v02",
+      "state": "DRAFT",
+      "file": "V01_death_v02.png",
+      "prompt_file": "V01_death_v02_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/nottgard-vault/output/referencias-personagens/SINTESE-ABISSAL/roxo-r01/sintese-front-v01.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-206f5373-6416-42de-9dae-e56c5b3f43a3.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "V01_death",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "V01_death_v01.png",
+      "prompt_file": "V01_death_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/nottgard-vault/output/referencias-personagens/SINTESE-ABISSAL/roxo-r01/sintese-front-v01.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-007d366b-db69-4309-9dd9-e5f33c136b22.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SUPERSEDED_BY_v02_MARGIN"
+    },
+    {
+      "id": "V01_idle",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "V01_idle_v01.png",
+      "prompt_file": "V01_idle_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/nottgard-vault/output/referencias-personagens/SINTESE-ABISSAL/roxo-r01/sintese-front-v01.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-9c16863b-e75c-4a27-8098-575051a68643.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "V01_special",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "V01_special_v01.png",
+      "prompt_file": "V01_special_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/nottgard-vault/output/referencias-personagens/SINTESE-ABISSAL/roxo-r01/sintese-front-v01.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-ad988f8c-9606-4604-b4f1-1cae71e5617b.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "V02_attack_v02",
+      "revision": "v02",
+      "state": "DRAFT",
+      "file": "V02_attack_v02.png",
+      "prompt_file": "V02_attack_v02_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-f8963f09-8480-4c25-98b8-32eadef7deba.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-c99c592a-1979-4dd0-bd05-41cc04616345.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "V02_attack",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "V02_attack_v01.png",
+      "prompt_file": "V02_attack_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/nottgard-vault/output/referencias-personagens/Death-Tyrant/r02/death-tyrant-front-candidate-v03.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+        "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-f8963f09-8480-4c25-98b8-32eadef7deba.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "V02_death",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "V02_death_v01.png",
+      "prompt_file": "V02_death_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/nottgard-vault/output/referencias-personagens/Death-Tyrant/r02/death-tyrant-front-candidate-v03.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+        "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-0880929e-e08e-4cb6-b280-54c949685058.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "V02_idle",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "V02_idle_v01.png",
+      "prompt_file": "V02_idle_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/nottgard-vault/output/referencias-personagens/Death-Tyrant/r02/death-tyrant-front-candidate-v03.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+        "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-1b44ab4f-7e14-4e10-8553-42157f2c13c9.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "V03_attack",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "V03_attack_v01.png",
+      "prompt_file": "V03_attack_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/nottgard-vault/output/referencias-personagens/B-FALT-003-03/r01/receptaculo-front-candidate-v01.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+        "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-386864a2-2108-4985-a2b9-87c8439e98b6.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "V03_death",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "V03_death_v01.png",
+      "prompt_file": "V03_death_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/nottgard-vault/output/referencias-personagens/B-FALT-003-03/r01/receptaculo-front-candidate-v01.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+        "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-32accca5-e2cc-4d1c-a424-75b8adbb7b1e.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "V03_idle",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "V03_idle_v01.png",
+      "prompt_file": "V03_idle_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/nottgard-vault/output/referencias-personagens/B-FALT-003-03/r01/receptaculo-front-candidate-v01.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+        "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-44299bcc-25f0-4ffd-8bab-717b6421a5f8.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "V04_attack",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "V04_attack_v01.png",
+      "prompt_file": "V04_attack_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/nottgard-vault/output/referencias-personagens/RHE-004/S04-S05-biblioteca/refhq-r01/gargula-familia-front-candidate-v02.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+        "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-e45d4009-f1eb-4058-b10a-ad18a805207f.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "V04_death",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "V04_death_v01.png",
+      "prompt_file": "V04_death_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/nottgard-vault/output/referencias-personagens/RHE-004/S04-S05-biblioteca/refhq-r01/gargula-familia-front-candidate-v02.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+        "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-ee49f554-354a-478d-94af-601d37dba963.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "V04_idle",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "V04_idle_v01.png",
+      "prompt_file": "V04_idle_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/nottgard-vault/output/referencias-personagens/RHE-004/S04-S05-biblioteca/refhq-r01/gargula-familia-front-candidate-v02.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+        "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-9efcaf41-586e-4e1f-9022-baf5d1692ab7.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "V04_walk",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "V04_walk_v01.png",
+      "prompt_file": "V04_walk_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/nottgard-vault/output/referencias-personagens/RHE-004/S04-S05-biblioteca/refhq-r01/gargula-familia-front-candidate-v02.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+        "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-edac761e-085c-4e96-8036-6e50d5a54521.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "V05_attack",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "V05_attack_v01.png",
+      "prompt_file": "V05_attack_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/nottgard-vault/output/referencias-personagens/MCMD/r01/crueldades-front-candidate-v01.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+        "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-9d6a1d1e-3c36-4321-a5dd-aba400ae8c76.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "V05_death",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "V05_death_v01.png",
+      "prompt_file": "V05_death_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/nottgard-vault/output/referencias-personagens/MCMD/r01/crueldades-front-candidate-v01.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+        "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-3f2e7cf5-9a66-44a0-9d6d-8bd6b334a2c4.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "V05_idle",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "V05_idle_v01.png",
+      "prompt_file": "V05_idle_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/nottgard-vault/output/referencias-personagens/MCMD/r01/crueldades-front-candidate-v01.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+        "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-b1c201d4-ed99-49b7-91c8-ddf0462c0ebb.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "V06_attack",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "V06_attack_v01.png",
+      "prompt_file": "V06_attack_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/nottgard-vault/output/referencias-personagens/JTJJ-r1/fronts/juiblex-front-candidate-v01.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+        "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-62ac165c-cb19-4cdd-a522-f2963a214c49.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "V06_death",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "V06_death_v01.png",
+      "prompt_file": "V06_death_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/nottgard-vault/output/referencias-personagens/JTJJ-r1/fronts/juiblex-front-candidate-v01.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+        "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-b63bdf34-3cd1-4c7d-a529-f2c172276c84.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "V06_idle",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "V06_idle_v01.png",
+      "prompt_file": "V06_idle_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/nottgard-vault/output/referencias-personagens/JTJJ-r1/fronts/juiblex-front-candidate-v01.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+        "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-c716d74c-2b90-48b6-8aa8-06a928b606d8.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "V06_special",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "V06_special_v01.png",
+      "prompt_file": "V06_special_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/nottgard-vault/output/referencias-personagens/JTJJ-r1/fronts/juiblex-front-candidate-v01.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+        "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-01479fcf-0fea-45fb-91f0-eaf93cadc974.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "V07_attack",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "V07_attack_v01.png",
+      "prompt_file": "V07_attack_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/nottgard-vault/output/referencias-personagens/CNCR-r02/nidhogg/nidhogg-head-neck-hq-r03-v01.png",
+        "F:/dev/nottgard-vault/output/referencias-personagens/CNCR-r02/nidhogg/nidhogg-reference-selected-r01.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-35d685c4-5fc4-4ddf-ac32-af3319eff104.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "V07_death",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "V07_death_v01.png",
+      "prompt_file": "V07_death_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/nottgard-vault/output/referencias-personagens/CNCR-r02/nidhogg/nidhogg-head-neck-hq-r03-v01.png",
+        "F:/dev/nottgard-vault/output/referencias-personagens/CNCR-r02/nidhogg/nidhogg-reference-selected-r01.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-82d095c9-16b2-468b-bafe-815c60beebe6.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "V07_idle",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "V07_idle_v01.png",
+      "prompt_file": "V07_idle_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/nottgard-vault/output/referencias-personagens/CNCR-r02/nidhogg/nidhogg-head-neck-hq-r03-v01.png",
+        "F:/dev/nottgard-vault/output/referencias-personagens/CNCR-r02/nidhogg/nidhogg-reference-selected-r01.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-454fb165-10c8-48db-a6cd-0a6d84fef450.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "V08_molydeus",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "V08_molydeus_v01.png",
+      "prompt_file": "V08_molydeus_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/nottgard-vault/output/referencias-criaturas/RHE-013/r01/molydeus-candidate-v02.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+        "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-02adb9ff-d5b4-409e-b700-760c3be7d82e.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "V09_ezro",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "V09_ezro_v01.png",
+      "prompt_file": "V09_ezro_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/nottgard-vault/output/referencias-personagens/EEEE-r01/ezro/ezro-option-A-v01.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+        "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-69124055-66d2-4519-afc6-e8f28ca2796b.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "V09_shu",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "V09_shu_v01.png",
+      "prompt_file": "V09_shu_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/nottgard-vault/output/referencias-personagens/B-FALT-003-02/r02/shu-front-candidate-v02.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+        "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+        "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-4732d8d3-c193-4391-b862-4586b55ac5dc.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "V10_portrait",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "V10_portrait_v01.png",
+      "prompt_file": "V10_portrait_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/portraits/kayron.png",
+        "F:/dev/nottgard-vault/output/referencias-personagens/CHAR-028/pos-S24/r02-eyes/kayron-front-eyes-v01.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-8ea4a51d-73d8-46a7-9dc4-601017d2d671.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "V10_sprite_v02",
+      "revision": "v02",
+      "state": "DRAFT",
+      "file": "V10_sprite_v02.png",
+      "prompt_file": "V10_sprite_v02_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/heroes/kayron.png",
+        "F:/dev/nottgard-vault/output/referencias-personagens/CHAR-028/pos-S24/r02-eyes/kayron-front-eyes-v01.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-d2a96ef3-f316-4b4a-a655-59ceb35e3194.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "V10_sprite",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "V10_sprite_v01.png",
+      "prompt_file": "V10_sprite_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/heroes/kayron.png",
+        "F:/dev/nottgard-vault/output/referencias-personagens/CHAR-028/pos-S24/r02-eyes/kayron-front-eyes-v01.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-e3c2a194-f081-45c0-9043-df21f36abe0c.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    },
+    {
+      "id": "V11",
+      "revision": "v01",
+      "state": "DRAFT",
+      "file": "V11_v01.png",
+      "prompt_file": "V11_prompt.txt",
+      "tool": "image_gen built-in",
+      "references": [
+        "F:/dev/abyss-megadungeon/assets/ui/boss-intros/sacerdote_mente_derretida.png",
+        "F:/dev/abyss-megadungeon/assets/stages/shedaklah_thumb.png"
+      ],
+      "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-6c50e837-7822-4c53-a607-d0dbb34d24e6.png",
+      "human_visual_acceptance": "PENDING",
+      "runtime_admission": false,
+      "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+    }
+  ]
+}

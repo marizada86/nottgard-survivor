@@ -1,0 +1,18 @@
+{
+  "id": "V02_attack",
+  "revision": "v01",
+  "state": "DRAFT",
+  "file": "V02_attack_v01.png",
+  "prompt_file": "V02_attack_prompt.txt",
+  "tool": "image_gen built-in",
+  "references": [
+    "F:/dev/nottgard-vault/output/referencias-personagens/Death-Tyrant/r02/death-tyrant-front-candidate-v03.png",
+    "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+    "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+    "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+  ],
+  "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-f8963f09-8480-4c25-98b8-32eadef7deba.png",
+  "human_visual_acceptance": "PENDING",
+  "runtime_admission": false,
+  "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+}

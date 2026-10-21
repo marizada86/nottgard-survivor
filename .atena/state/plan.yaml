@@ -1,4 +1,41 @@
 version: 2
+asset_production_proposal_2026_10_21:
+  parent_plan: PLAN-103
+  parent_milestone: M5/B-006
+  revision: DRAFT/r1
+  request_classification: PLAN_CHANGE_REQUEST
+  scope: PROPOSE_ASSET_PRODUCTION_FRONT_WITHOUT_REPLACING_PARENT_PLAN
+  proposal: .atena/vault/drafts/PROPOSTA-assets-20261021-r1.md
+  status: GENERATING_DRAFT_SOURCES
+  mode: per-plan
+  approval_status: APPROVED_EXPLICITLY
+  owner_generation_reply: 'aprovado, pode gerar'
+  owner_mode_reply: 'atena por plano'
+  last_request_classification: IN_PLAN
+  checkpoint: S-007/REMAINING_CONTRACT_SOURCES
+  ordered_steps: [S-001, S-002, S-003, S-004, S-005, S-006, S-007, S-008]
+  current_step_position: 7
+  completed_steps: 6
+  total_steps: 8
+  remaining_steps_after_current: 1
+  content_state: DRAFT
+  missing_documents: []
+  input_directory: F:/dev/abyss-megadungeon/.atena/vault/drafts
+  output_directory: .atena/generated/asset-production-20261021-r1
+  requested_delivery_directory: F:/dev/abyss-megadungeon/assets_incoming
+  generated_source_count: 96
+  selected_source_count: 92
+  source_manifest: .atena/generated/asset-production-20261021-r1/manifest.json
+  remaining_character_poses: 33
+  human_visual_acceptance: PENDING
+  next_execution_authorized: true
+  canonical_promotion: false
+  runtime_admission: false
+  local_commit: AUTHORIZED_EXPLICITLY_2026_10_21
+  owner_commit_reply: commit
+  push_build_export: NOT_AUTHORIZED
+  parent_checkpoint_preserved: B-002/S-011_LOTE2_AWAITING_OWNER_GAME
+  next_objective: Resume S-007 at N02; 33 character poses remain. Then S-008 consolidation and human visual acceptance. PC delivery is partial (38 of 96 PNG sources).
 hero_local_commit_2026_10_13:
   plan: PLAN-053
   revision: HERO-COMMIT/v01

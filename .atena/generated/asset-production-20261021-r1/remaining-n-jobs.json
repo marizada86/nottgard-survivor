@@ -1,0 +1,362 @@
+[
+  {
+    "id": "N01_idle",
+    "prompt": "Use case: stylized-concept. N01 Reaper idle game sprite DRAFT adaptation. FIRST attached reference governs exact identity. Reaper: bald pale gray-skinned adult man, gaunt calm face, charcoal-blue long robe tied with rope belt, dark teal shoulder cloak with hood down, plain brown boots, EMPTY hands; do NOT turn into skeleton, add scythe, staff, oar or raised hood. Pose: neutral standing pose, arms relaxed, full body and feet visible. This is an isolated animation key pose, not a new story event or lore assertion. Other attached images are GAME STYLE only: dense pixel-art-inspired painting, crisp dark outlines, painterly shading, muted desaturated palette and restrained upper-left rim light, readable silhouette at150px. Portrait1024x1536, front3/4 slightly facing right, full figure and every appendage inside central75%width and80%height with generous blank margins. For floating Beholder no feet. Uniform flat light-gray #B4B4B4 background, no floor/cast shadow, vignette, gradient or scenery. No text, letters, numbers, frame, logo, watermark or extra characters. Keep costume, colors, face and silhouette identical to canon; do not copy outfits of game style references.",
+    "references": [
+      "F:/dev/nottgard-vault/output/referencias-personagens/B-FALT-003-05/r01/reaper-front-candidate-v01.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+      "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+    ]
+  },
+  {
+    "id": "N01_attack",
+    "prompt": "Use case: stylized-concept. N01 Reaper attack game sprite DRAFT adaptation. FIRST attached reference governs exact identity. Reaper: bald pale gray-skinned adult man, gaunt calm face, charcoal-blue long robe tied with rope belt, dark teal shoulder cloak with hood down, plain brown boots, EMPTY hands; do NOT turn into skeleton, add scythe, staff, oar or raised hood. Pose: one clear action key pose, weight forward and one arm reaching/striking; keep hands empty unless existing reference weapon, use ONLY existing weapon, NO new spells, powers, magic aura or props. This is an isolated animation key pose, not a new story event or lore assertion. Other attached images are GAME STYLE only: dense pixel-art-inspired painting, crisp dark outlines, painterly shading, muted desaturated palette and restrained upper-left rim light, readable silhouette at150px. Portrait1024x1536, front3/4 slightly facing right, full figure and every appendage inside central75%width and80%height with generous blank margins. For floating Beholder no feet. Uniform flat light-gray #B4B4B4 background, no floor/cast shadow, vignette, gradient or scenery. No text, letters, numbers, frame, logo, watermark or extra characters. Keep costume, colors, face and silhouette identical to canon; do not copy outfits of game style references.",
+    "references": [
+      "F:/dev/nottgard-vault/output/referencias-personagens/B-FALT-003-05/r01/reaper-front-candidate-v01.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+      "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+    ]
+  },
+  {
+    "id": "N01_death",
+    "prompt": "Use case: stylized-concept. N01 Reaper death game sprite DRAFT adaptation. FIRST attached reference governs exact identity. Reaper: bald pale gray-skinned adult man, gaunt calm face, charcoal-blue long robe tied with rope belt, dark teal shoulder cloak with hood down, plain brown boots, EMPTY hands; do NOT turn into skeleton, add scythe, staff, oar or raised hood. Pose: one clear collapsed/falling death key pose, knees buckled and body slumping low, recognizable face/clothing/equipment retained; non-graphic, no dismemberment, no new visual powers. This is an isolated animation key pose, not a new story event or lore assertion. Other attached images are GAME STYLE only: dense pixel-art-inspired painting, crisp dark outlines, painterly shading, muted desaturated palette and restrained upper-left rim light, readable silhouette at150px. Portrait1024x1536, front3/4 slightly facing right, full figure and every appendage inside central75%width and80%height with generous blank margins. For floating Beholder no feet. Uniform flat light-gray #B4B4B4 background, no floor/cast shadow, vignette, gradient or scenery. No text, letters, numbers, frame, logo, watermark or extra characters. Keep costume, colors, face and silhouette identical to canon; do not copy outfits of game style references.",
+    "references": [
+      "F:/dev/nottgard-vault/output/referencias-personagens/B-FALT-003-05/r01/reaper-front-candidate-v01.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+      "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+    ]
+  },
+  {
+    "id": "N02_idle",
+    "prompt": "Use case: stylized-concept. N02 Beholder idle game sprite DRAFT adaptation. FIRST attached reference governs exact identity. Beholder: brown/tan fleshy armored floating orb with horns/spines, huge central BLUE eye, multiple jointed stalks ending in BLUE eyes, toothy mouth. Preserve exact flesh/eye palette; distinct from red-eyed Death Tyrant. No legs or humanoid body. Pose: neutral hover, mouth slightly open, all blue eyes readable. This is an isolated animation key pose, not a new story event or lore assertion. Other attached images are GAME STYLE only: dense pixel-art-inspired painting, crisp dark outlines, painterly shading, muted desaturated palette and restrained upper-left rim light, readable silhouette at150px. Portrait1024x1536, front3/4 slightly facing right, full figure and every appendage inside central75%width and80%height with generous blank margins. For floating Beholder no feet. Uniform flat light-gray #B4B4B4 background, no floor/cast shadow, vignette, gradient or scenery. No text, letters, numbers, frame, logo, watermark or extra characters. Keep costume, colors, face and silhouette identical to canon; do not copy outfits of game style references.",
+    "references": [
+      "F:/dev/nottgard-vault/output/referencias-personagens/BBB-r01/beholder/beholder-front-candidate-v01.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+      "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+    ]
+  },
+  {
+    "id": "N02_attack",
+    "prompt": "Use case: stylized-concept. N02 Beholder attack game sprite DRAFT adaptation. FIRST attached reference governs exact identity. Beholder: brown/tan fleshy armored floating orb with horns/spines, huge central BLUE eye, multiple jointed stalks ending in BLUE eyes, toothy mouth. Preserve exact flesh/eye palette; distinct from red-eyed Death Tyrant. No legs or humanoid body. Pose: mouth wide open and stalks aiming forward, blue eye light gathering close to eyes with NO long offscreen beams. This is an isolated animation key pose, not a new story event or lore assertion. Other attached images are GAME STYLE only: dense pixel-art-inspired painting, crisp dark outlines, painterly shading, muted desaturated palette and restrained upper-left rim light, readable silhouette at150px. Portrait1024x1536, front3/4 slightly facing right, full figure and every appendage inside central75%width and80%height with generous blank margins. For floating Beholder no feet. Uniform flat light-gray #B4B4B4 background, no floor/cast shadow, vignette, gradient or scenery. No text, letters, numbers, frame, logo, watermark or extra characters. Keep costume, colors, face and silhouette identical to canon; do not copy outfits of game style references.",
+    "references": [
+      "F:/dev/nottgard-vault/output/referencias-personagens/BBB-r01/beholder/beholder-front-candidate-v01.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+      "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+    ]
+  },
+  {
+    "id": "N02_death",
+    "prompt": "Use case: stylized-concept. N02 Beholder death game sprite DRAFT adaptation. FIRST attached reference governs exact identity. Beholder: brown/tan fleshy armored floating orb with horns/spines, huge central BLUE eye, multiple jointed stalks ending in BLUE eyes, toothy mouth. Preserve exact flesh/eye palette; distinct from red-eyed Death Tyrant. No legs or humanoid body. Pose: body slumping low, stalks limp and blue eye lights dim, no new anatomy. This is an isolated animation key pose, not a new story event or lore assertion. Other attached images are GAME STYLE only: dense pixel-art-inspired painting, crisp dark outlines, painterly shading, muted desaturated palette and restrained upper-left rim light, readable silhouette at150px. Portrait1024x1536, front3/4 slightly facing right, full figure and every appendage inside central75%width and80%height with generous blank margins. For floating Beholder no feet. Uniform flat light-gray #B4B4B4 background, no floor/cast shadow, vignette, gradient or scenery. No text, letters, numbers, frame, logo, watermark or extra characters. Keep costume, colors, face and silhouette identical to canon; do not copy outfits of game style references.",
+    "references": [
+      "F:/dev/nottgard-vault/output/referencias-personagens/BBB-r01/beholder/beholder-front-candidate-v01.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+      "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+    ]
+  },
+  {
+    "id": "N03_idle",
+    "prompt": "Use case: stylized-concept. N03 Kein idle game sprite DRAFT adaptation. FIRST attached reference governs exact identity. Kein, S05-S06 counselor appearance: adult man with swept gray-brown hair, trimmed beard, ornate long black/brown coat with ivory lapels/cuffs and gold buckles/chains, brown waistcoat, green tie, dark trousers and brown boots, EMPTY hands. Pose: neutral standing pose, arms relaxed, full body and feet visible. This is an isolated animation key pose, not a new story event or lore assertion. Other attached images are GAME STYLE only: dense pixel-art-inspired painting, crisp dark outlines, painterly shading, muted desaturated palette and restrained upper-left rim light, readable silhouette at150px. Portrait1024x1536, front3/4 slightly facing right, full figure and every appendage inside central75%width and80%height with generous blank margins. For floating Beholder no feet. Uniform flat light-gray #B4B4B4 background, no floor/cast shadow, vignette, gradient or scenery. No text, letters, numbers, frame, logo, watermark or extra characters. Keep costume, colors, face and silhouette identical to canon; do not copy outfits of game style references.",
+    "references": [
+      "F:/dev/nottgard-vault/output/referencias-personagens/CHAR-029/S05-S06-conselheiro/r01/kein-front-candidate-v01.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+      "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+    ]
+  },
+  {
+    "id": "N03_attack",
+    "prompt": "Use case: stylized-concept. N03 Kein attack game sprite DRAFT adaptation. FIRST attached reference governs exact identity. Kein, S05-S06 counselor appearance: adult man with swept gray-brown hair, trimmed beard, ornate long black/brown coat with ivory lapels/cuffs and gold buckles/chains, brown waistcoat, green tie, dark trousers and brown boots, EMPTY hands. Pose: one clear action key pose, weight forward and one arm reaching/striking; keep hands empty unless existing reference weapon, use ONLY existing weapon, NO new spells, powers, magic aura or props. This is an isolated animation key pose, not a new story event or lore assertion. Other attached images are GAME STYLE only: dense pixel-art-inspired painting, crisp dark outlines, painterly shading, muted desaturated palette and restrained upper-left rim light, readable silhouette at150px. Portrait1024x1536, front3/4 slightly facing right, full figure and every appendage inside central75%width and80%height with generous blank margins. For floating Beholder no feet. Uniform flat light-gray #B4B4B4 background, no floor/cast shadow, vignette, gradient or scenery. No text, letters, numbers, frame, logo, watermark or extra characters. Keep costume, colors, face and silhouette identical to canon; do not copy outfits of game style references.",
+    "references": [
+      "F:/dev/nottgard-vault/output/referencias-personagens/CHAR-029/S05-S06-conselheiro/r01/kein-front-candidate-v01.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+      "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+    ]
+  },
+  {
+    "id": "N03_death",
+    "prompt": "Use case: stylized-concept. N03 Kein death game sprite DRAFT adaptation. FIRST attached reference governs exact identity. Kein, S05-S06 counselor appearance: adult man with swept gray-brown hair, trimmed beard, ornate long black/brown coat with ivory lapels/cuffs and gold buckles/chains, brown waistcoat, green tie, dark trousers and brown boots, EMPTY hands. Pose: one clear collapsed/falling death key pose, knees buckled and body slumping low, recognizable face/clothing/equipment retained; non-graphic, no dismemberment, no new visual powers. This is an isolated animation key pose, not a new story event or lore assertion. Other attached images are GAME STYLE only: dense pixel-art-inspired painting, crisp dark outlines, painterly shading, muted desaturated palette and restrained upper-left rim light, readable silhouette at150px. Portrait1024x1536, front3/4 slightly facing right, full figure and every appendage inside central75%width and80%height with generous blank margins. For floating Beholder no feet. Uniform flat light-gray #B4B4B4 background, no floor/cast shadow, vignette, gradient or scenery. No text, letters, numbers, frame, logo, watermark or extra characters. Keep costume, colors, face and silhouette identical to canon; do not copy outfits of game style references.",
+    "references": [
+      "F:/dev/nottgard-vault/output/referencias-personagens/CHAR-029/S05-S06-conselheiro/r01/kein-front-candidate-v01.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+      "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+    ]
+  },
+  {
+    "id": "N04_idle",
+    "prompt": "Use case: stylized-concept. N04 Astherion idle game sprite DRAFT adaptation. FIRST attached reference governs exact identity. Astherion: pale long-haired black-haired regal undead-looking man, spiked gold crown, elaborate black/gold spiked armor with skull medallions, dark red hanging robes and cape, plated boots and gauntlets, EMPTY hands. Preserve exact crown, skulls and face; no new weapons. Pose: neutral standing pose, arms relaxed, full body and feet visible. This is an isolated animation key pose, not a new story event or lore assertion. Other attached images are GAME STYLE only: dense pixel-art-inspired painting, crisp dark outlines, painterly shading, muted desaturated palette and restrained upper-left rim light, readable silhouette at150px. Portrait1024x1536, front3/4 slightly facing right, full figure and every appendage inside central75%width and80%height with generous blank margins. For floating Beholder no feet. Uniform flat light-gray #B4B4B4 background, no floor/cast shadow, vignette, gradient or scenery. No text, letters, numbers, frame, logo, watermark or extra characters. Keep costume, colors, face and silhouette identical to canon; do not copy outfits of game style references.",
+    "references": [
+      "F:/dev/nottgard-vault/output/referencias-personagens/B-OITO-FRONT-001/astherion-front-candidate-v01.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+      "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+    ]
+  },
+  {
+    "id": "N04_attack",
+    "prompt": "Use case: stylized-concept. N04 Astherion attack game sprite DRAFT adaptation. FIRST attached reference governs exact identity. Astherion: pale long-haired black-haired regal undead-looking man, spiked gold crown, elaborate black/gold spiked armor with skull medallions, dark red hanging robes and cape, plated boots and gauntlets, EMPTY hands. Preserve exact crown, skulls and face; no new weapons. Pose: one clear action key pose, weight forward and one arm reaching/striking; keep hands empty unless existing reference weapon, use ONLY existing weapon, NO new spells, powers, magic aura or props. This is an isolated animation key pose, not a new story event or lore assertion. Other attached images are GAME STYLE only: dense pixel-art-inspired painting, crisp dark outlines, painterly shading, muted desaturated palette and restrained upper-left rim light, readable silhouette at150px. Portrait1024x1536, front3/4 slightly facing right, full figure and every appendage inside central75%width and80%height with generous blank margins. For floating Beholder no feet. Uniform flat light-gray #B4B4B4 background, no floor/cast shadow, vignette, gradient or scenery. No text, letters, numbers, frame, logo, watermark or extra characters. Keep costume, colors, face and silhouette identical to canon; do not copy outfits of game style references.",
+    "references": [
+      "F:/dev/nottgard-vault/output/referencias-personagens/B-OITO-FRONT-001/astherion-front-candidate-v01.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+      "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+    ]
+  },
+  {
+    "id": "N04_death",
+    "prompt": "Use case: stylized-concept. N04 Astherion death game sprite DRAFT adaptation. FIRST attached reference governs exact identity. Astherion: pale long-haired black-haired regal undead-looking man, spiked gold crown, elaborate black/gold spiked armor with skull medallions, dark red hanging robes and cape, plated boots and gauntlets, EMPTY hands. Preserve exact crown, skulls and face; no new weapons. Pose: one clear collapsed/falling death key pose, knees buckled and body slumping low, recognizable face/clothing/equipment retained; non-graphic, no dismemberment, no new visual powers. This is an isolated animation key pose, not a new story event or lore assertion. Other attached images are GAME STYLE only: dense pixel-art-inspired painting, crisp dark outlines, painterly shading, muted desaturated palette and restrained upper-left rim light, readable silhouette at150px. Portrait1024x1536, front3/4 slightly facing right, full figure and every appendage inside central75%width and80%height with generous blank margins. For floating Beholder no feet. Uniform flat light-gray #B4B4B4 background, no floor/cast shadow, vignette, gradient or scenery. No text, letters, numbers, frame, logo, watermark or extra characters. Keep costume, colors, face and silhouette identical to canon; do not copy outfits of game style references.",
+    "references": [
+      "F:/dev/nottgard-vault/output/referencias-personagens/B-OITO-FRONT-001/astherion-front-candidate-v01.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+      "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+    ]
+  },
+  {
+    "id": "N05_idle",
+    "prompt": "Use case: stylized-concept. N05 Kukan idle game sprite DRAFT adaptation. FIRST attached reference governs exact identity. Kūkan Shito S18 copy appearance: adult red-skinned man with two small curved horns, pointed ears, black swept hair, gold eyes, dark long coat with burgundy lining over gray tunic and dark trousers, brown boots, slender red tail, EMPTY hands. Preserve reference, no new powers/equipment. Pose: neutral standing pose, arms relaxed, full body and feet visible. This is an isolated animation key pose, not a new story event or lore assertion. Other attached images are GAME STYLE only: dense pixel-art-inspired painting, crisp dark outlines, painterly shading, muted desaturated palette and restrained upper-left rim light, readable silhouette at150px. Portrait1024x1536, front3/4 slightly facing right, full figure and every appendage inside central75%width and80%height with generous blank margins. For floating Beholder no feet. Uniform flat light-gray #B4B4B4 background, no floor/cast shadow, vignette, gradient or scenery. No text, letters, numbers, frame, logo, watermark or extra characters. Keep costume, colors, face and silhouette identical to canon; do not copy outfits of game style references.",
+    "references": [
+      "F:/dev/nottgard-vault/output/referencias-personagens/KKLLL-r01/B-KKLLL-002/kukan-shito-front-candidate-v01.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+      "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+    ]
+  },
+  {
+    "id": "N05_attack",
+    "prompt": "Use case: stylized-concept. N05 Kukan attack game sprite DRAFT adaptation. FIRST attached reference governs exact identity. Kūkan Shito S18 copy appearance: adult red-skinned man with two small curved horns, pointed ears, black swept hair, gold eyes, dark long coat with burgundy lining over gray tunic and dark trousers, brown boots, slender red tail, EMPTY hands. Preserve reference, no new powers/equipment. Pose: one clear action key pose, weight forward and one arm reaching/striking; keep hands empty unless existing reference weapon, use ONLY existing weapon, NO new spells, powers, magic aura or props. This is an isolated animation key pose, not a new story event or lore assertion. Other attached images are GAME STYLE only: dense pixel-art-inspired painting, crisp dark outlines, painterly shading, muted desaturated palette and restrained upper-left rim light, readable silhouette at150px. Portrait1024x1536, front3/4 slightly facing right, full figure and every appendage inside central75%width and80%height with generous blank margins. For floating Beholder no feet. Uniform flat light-gray #B4B4B4 background, no floor/cast shadow, vignette, gradient or scenery. No text, letters, numbers, frame, logo, watermark or extra characters. Keep costume, colors, face and silhouette identical to canon; do not copy outfits of game style references.",
+    "references": [
+      "F:/dev/nottgard-vault/output/referencias-personagens/KKLLL-r01/B-KKLLL-002/kukan-shito-front-candidate-v01.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+      "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+    ]
+  },
+  {
+    "id": "N05_death",
+    "prompt": "Use case: stylized-concept. N05 Kukan death game sprite DRAFT adaptation. FIRST attached reference governs exact identity. Kūkan Shito S18 copy appearance: adult red-skinned man with two small curved horns, pointed ears, black swept hair, gold eyes, dark long coat with burgundy lining over gray tunic and dark trousers, brown boots, slender red tail, EMPTY hands. Preserve reference, no new powers/equipment. Pose: one clear collapsed/falling death key pose, knees buckled and body slumping low, recognizable face/clothing/equipment retained; non-graphic, no dismemberment, no new visual powers. This is an isolated animation key pose, not a new story event or lore assertion. Other attached images are GAME STYLE only: dense pixel-art-inspired painting, crisp dark outlines, painterly shading, muted desaturated palette and restrained upper-left rim light, readable silhouette at150px. Portrait1024x1536, front3/4 slightly facing right, full figure and every appendage inside central75%width and80%height with generous blank margins. For floating Beholder no feet. Uniform flat light-gray #B4B4B4 background, no floor/cast shadow, vignette, gradient or scenery. No text, letters, numbers, frame, logo, watermark or extra characters. Keep costume, colors, face and silhouette identical to canon; do not copy outfits of game style references.",
+    "references": [
+      "F:/dev/nottgard-vault/output/referencias-personagens/KKLLL-r01/B-KKLLL-002/kukan-shito-front-candidate-v01.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+      "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+    ]
+  },
+  {
+    "id": "N06_taverneiro_idle",
+    "prompt": "Use case: stylized-concept. N06_taverneiro Taverneiro idle game sprite DRAFT adaptation. FIRST attached reference governs exact identity. Taverneiro metamorfo in shown human appearance: adult brown-haired man with stubble, white rolled-sleeve shirt, brown vest, belt and brown trousers/boots, EMPTY hands. Do not invent shapeshift form, claws, monster features, weapons or props. Pose: neutral standing pose, arms relaxed, full body and feet visible. This is an isolated animation key pose, not a new story event or lore assertion. Other attached images are GAME STYLE only: dense pixel-art-inspired painting, crisp dark outlines, painterly shading, muted desaturated palette and restrained upper-left rim light, readable silhouette at150px. Portrait1024x1536, front3/4 slightly facing right, full figure and every appendage inside central75%width and80%height with generous blank margins. For floating Beholder no feet. Uniform flat light-gray #B4B4B4 background, no floor/cast shadow, vignette, gradient or scenery. No text, letters, numbers, frame, logo, watermark or extra characters. Keep costume, colors, face and silhouette identical to canon; do not copy outfits of game style references.",
+    "references": [
+      "F:/dev/nottgard-vault/output/referencias-personagens/B-OITO-FRONT-001/taverneiro-metamorfo-front-candidate-v01.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+      "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+    ]
+  },
+  {
+    "id": "N06_taverneiro_attack",
+    "prompt": "Use case: stylized-concept. N06_taverneiro Taverneiro attack game sprite DRAFT adaptation. FIRST attached reference governs exact identity. Taverneiro metamorfo in shown human appearance: adult brown-haired man with stubble, white rolled-sleeve shirt, brown vest, belt and brown trousers/boots, EMPTY hands. Do not invent shapeshift form, claws, monster features, weapons or props. Pose: one clear action key pose, weight forward and one arm reaching/striking; keep hands empty unless existing reference weapon, use ONLY existing weapon, NO new spells, powers, magic aura or props. This is an isolated animation key pose, not a new story event or lore assertion. Other attached images are GAME STYLE only: dense pixel-art-inspired painting, crisp dark outlines, painterly shading, muted desaturated palette and restrained upper-left rim light, readable silhouette at150px. Portrait1024x1536, front3/4 slightly facing right, full figure and every appendage inside central75%width and80%height with generous blank margins. For floating Beholder no feet. Uniform flat light-gray #B4B4B4 background, no floor/cast shadow, vignette, gradient or scenery. No text, letters, numbers, frame, logo, watermark or extra characters. Keep costume, colors, face and silhouette identical to canon; do not copy outfits of game style references.",
+    "references": [
+      "F:/dev/nottgard-vault/output/referencias-personagens/B-OITO-FRONT-001/taverneiro-metamorfo-front-candidate-v01.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+      "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+    ]
+  },
+  {
+    "id": "N06_taverneiro_death",
+    "prompt": "Use case: stylized-concept. N06_taverneiro Taverneiro death game sprite DRAFT adaptation. FIRST attached reference governs exact identity. Taverneiro metamorfo in shown human appearance: adult brown-haired man with stubble, white rolled-sleeve shirt, brown vest, belt and brown trousers/boots, EMPTY hands. Do not invent shapeshift form, claws, monster features, weapons or props. Pose: one clear collapsed/falling death key pose, knees buckled and body slumping low, recognizable face/clothing/equipment retained; non-graphic, no dismemberment, no new visual powers. This is an isolated animation key pose, not a new story event or lore assertion. Other attached images are GAME STYLE only: dense pixel-art-inspired painting, crisp dark outlines, painterly shading, muted desaturated palette and restrained upper-left rim light, readable silhouette at150px. Portrait1024x1536, front3/4 slightly facing right, full figure and every appendage inside central75%width and80%height with generous blank margins. For floating Beholder no feet. Uniform flat light-gray #B4B4B4 background, no floor/cast shadow, vignette, gradient or scenery. No text, letters, numbers, frame, logo, watermark or extra characters. Keep costume, colors, face and silhouette identical to canon; do not copy outfits of game style references.",
+    "references": [
+      "F:/dev/nottgard-vault/output/referencias-personagens/B-OITO-FRONT-001/taverneiro-metamorfo-front-candidate-v01.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+      "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+    ]
+  },
+  {
+    "id": "N06_atendente_idle",
+    "prompt": "Use case: stylized-concept. N06_atendente Atendente idle game sprite DRAFT adaptation. FIRST attached reference governs exact identity. Atendente: adult brown-haired woman with tied-back hair, simple cream blouse and apron, brown long skirt, broad brown waist sash and plain brown shoes, EMPTY hands. Preserve modest existing work clothes and face, no weapons/props. Pose: neutral standing pose, arms relaxed, full body and feet visible. This is an isolated animation key pose, not a new story event or lore assertion. Other attached images are GAME STYLE only: dense pixel-art-inspired painting, crisp dark outlines, painterly shading, muted desaturated palette and restrained upper-left rim light, readable silhouette at150px. Portrait1024x1536, front3/4 slightly facing right, full figure and every appendage inside central75%width and80%height with generous blank margins. For floating Beholder no feet. Uniform flat light-gray #B4B4B4 background, no floor/cast shadow, vignette, gradient or scenery. No text, letters, numbers, frame, logo, watermark or extra characters. Keep costume, colors, face and silhouette identical to canon; do not copy outfits of game style references.",
+    "references": [
+      "F:/dev/nottgard-vault/output/referencias-personagens/B-OITO-FRONT-001/atendente-front-candidate-v01.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+      "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+    ]
+  },
+  {
+    "id": "N06_atendente_attack",
+    "prompt": "Use case: stylized-concept. N06_atendente Atendente attack game sprite DRAFT adaptation. FIRST attached reference governs exact identity. Atendente: adult brown-haired woman with tied-back hair, simple cream blouse and apron, brown long skirt, broad brown waist sash and plain brown shoes, EMPTY hands. Preserve modest existing work clothes and face, no weapons/props. Pose: one clear action key pose, weight forward and one arm reaching/striking; keep hands empty unless existing reference weapon, use ONLY existing weapon, NO new spells, powers, magic aura or props. This is an isolated animation key pose, not a new story event or lore assertion. Other attached images are GAME STYLE only: dense pixel-art-inspired painting, crisp dark outlines, painterly shading, muted desaturated palette and restrained upper-left rim light, readable silhouette at150px. Portrait1024x1536, front3/4 slightly facing right, full figure and every appendage inside central75%width and80%height with generous blank margins. For floating Beholder no feet. Uniform flat light-gray #B4B4B4 background, no floor/cast shadow, vignette, gradient or scenery. No text, letters, numbers, frame, logo, watermark or extra characters. Keep costume, colors, face and silhouette identical to canon; do not copy outfits of game style references.",
+    "references": [
+      "F:/dev/nottgard-vault/output/referencias-personagens/B-OITO-FRONT-001/atendente-front-candidate-v01.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+      "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+    ]
+  },
+  {
+    "id": "N06_atendente_death",
+    "prompt": "Use case: stylized-concept. N06_atendente Atendente death game sprite DRAFT adaptation. FIRST attached reference governs exact identity. Atendente: adult brown-haired woman with tied-back hair, simple cream blouse and apron, brown long skirt, broad brown waist sash and plain brown shoes, EMPTY hands. Preserve modest existing work clothes and face, no weapons/props. Pose: one clear collapsed/falling death key pose, knees buckled and body slumping low, recognizable face/clothing/equipment retained; non-graphic, no dismemberment, no new visual powers. This is an isolated animation key pose, not a new story event or lore assertion. Other attached images are GAME STYLE only: dense pixel-art-inspired painting, crisp dark outlines, painterly shading, muted desaturated palette and restrained upper-left rim light, readable silhouette at150px. Portrait1024x1536, front3/4 slightly facing right, full figure and every appendage inside central75%width and80%height with generous blank margins. For floating Beholder no feet. Uniform flat light-gray #B4B4B4 background, no floor/cast shadow, vignette, gradient or scenery. No text, letters, numbers, frame, logo, watermark or extra characters. Keep costume, colors, face and silhouette identical to canon; do not copy outfits of game style references.",
+    "references": [
+      "F:/dev/nottgard-vault/output/referencias-personagens/B-OITO-FRONT-001/atendente-front-candidate-v01.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+      "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+    ]
+  },
+  {
+    "id": "N07_wonka_idle",
+    "prompt": "Use case: stylized-concept. N07_wonka Wonka idle game sprite DRAFT adaptation. FIRST attached reference governs exact identity. Wonka S09 docks logistics appearance: short stocky adult smallfolk man, curly orange-brown hair graying at temples, broad expressive face, mustard shirt, blue vest with toggle ties, brown belt/trousers/boots, EMPTY hands. Preserve short proportions, no top hat or candy imagery. Pose: neutral standing pose, arms relaxed, full body and feet visible. This is an isolated animation key pose, not a new story event or lore assertion. Other attached images are GAME STYLE only: dense pixel-art-inspired painting, crisp dark outlines, painterly shading, muted desaturated palette and restrained upper-left rim light, readable silhouette at150px. Portrait1024x1536, front3/4 slightly facing right, full figure and every appendage inside central75%width and80%height with generous blank margins. For floating Beholder no feet. Uniform flat light-gray #B4B4B4 background, no floor/cast shadow, vignette, gradient or scenery. No text, letters, numbers, frame, logo, watermark or extra characters. Keep costume, colors, face and silhouette identical to canon; do not copy outfits of game style references.",
+    "references": [
+      "F:/dev/nottgard-vault/output/referencias-personagens/CHAR-062/S09-logistica-docas/recovered-20261019-r01/wonka-front-approved-v02-hq.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+      "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+    ]
+  },
+  {
+    "id": "N07_wonka_attack",
+    "prompt": "Use case: stylized-concept. N07_wonka Wonka attack game sprite DRAFT adaptation. FIRST attached reference governs exact identity. Wonka S09 docks logistics appearance: short stocky adult smallfolk man, curly orange-brown hair graying at temples, broad expressive face, mustard shirt, blue vest with toggle ties, brown belt/trousers/boots, EMPTY hands. Preserve short proportions, no top hat or candy imagery. Pose: one clear action key pose, weight forward and one arm reaching/striking; keep hands empty unless existing reference weapon, use ONLY existing weapon, NO new spells, powers, magic aura or props. This is an isolated animation key pose, not a new story event or lore assertion. Other attached images are GAME STYLE only: dense pixel-art-inspired painting, crisp dark outlines, painterly shading, muted desaturated palette and restrained upper-left rim light, readable silhouette at150px. Portrait1024x1536, front3/4 slightly facing right, full figure and every appendage inside central75%width and80%height with generous blank margins. For floating Beholder no feet. Uniform flat light-gray #B4B4B4 background, no floor/cast shadow, vignette, gradient or scenery. No text, letters, numbers, frame, logo, watermark or extra characters. Keep costume, colors, face and silhouette identical to canon; do not copy outfits of game style references.",
+    "references": [
+      "F:/dev/nottgard-vault/output/referencias-personagens/CHAR-062/S09-logistica-docas/recovered-20261019-r01/wonka-front-approved-v02-hq.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+      "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+    ]
+  },
+  {
+    "id": "N07_wonka_death",
+    "prompt": "Use case: stylized-concept. N07_wonka Wonka death game sprite DRAFT adaptation. FIRST attached reference governs exact identity. Wonka S09 docks logistics appearance: short stocky adult smallfolk man, curly orange-brown hair graying at temples, broad expressive face, mustard shirt, blue vest with toggle ties, brown belt/trousers/boots, EMPTY hands. Preserve short proportions, no top hat or candy imagery. Pose: one clear collapsed/falling death key pose, knees buckled and body slumping low, recognizable face/clothing/equipment retained; non-graphic, no dismemberment, no new visual powers. This is an isolated animation key pose, not a new story event or lore assertion. Other attached images are GAME STYLE only: dense pixel-art-inspired painting, crisp dark outlines, painterly shading, muted desaturated palette and restrained upper-left rim light, readable silhouette at150px. Portrait1024x1536, front3/4 slightly facing right, full figure and every appendage inside central75%width and80%height with generous blank margins. For floating Beholder no feet. Uniform flat light-gray #B4B4B4 background, no floor/cast shadow, vignette, gradient or scenery. No text, letters, numbers, frame, logo, watermark or extra characters. Keep costume, colors, face and silhouette identical to canon; do not copy outfits of game style references.",
+    "references": [
+      "F:/dev/nottgard-vault/output/referencias-personagens/CHAR-062/S09-logistica-docas/recovered-20261019-r01/wonka-front-approved-v02-hq.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+      "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+    ]
+  },
+  {
+    "id": "N07_willie_idle",
+    "prompt": "Use case: stylized-concept. N07_willie Willie idle game sprite DRAFT adaptation. FIRST attached reference governs exact identity. Willie S01-S02 human appearance: short stocky elderly man, very long white beard and mustache, weathered broad face, dark tricorn-like hat with small red details, ragged layered brown/dark coat, trousers and boots, EMPTY hands. Do NOT substitute S08 amalgam form; epoch is specifically early human reference. Pose: neutral standing pose, arms relaxed, full body and feet visible. This is an isolated animation key pose, not a new story event or lore assertion. Other attached images are GAME STYLE only: dense pixel-art-inspired painting, crisp dark outlines, painterly shading, muted desaturated palette and restrained upper-left rim light, readable silhouette at150px. Portrait1024x1536, front3/4 slightly facing right, full figure and every appendage inside central75%width and80%height with generous blank margins. For floating Beholder no feet. Uniform flat light-gray #B4B4B4 background, no floor/cast shadow, vignette, gradient or scenery. No text, letters, numbers, frame, logo, watermark or extra characters. Keep costume, colors, face and silhouette identical to canon; do not copy outfits of game style references.",
+    "references": [
+      "F:/dev/nottgard-vault/output/referencias-personagens/CHAR-061/S01-S02/r01/willie-front-candidate-v01.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+      "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+    ]
+  },
+  {
+    "id": "N07_willie_attack",
+    "prompt": "Use case: stylized-concept. N07_willie Willie attack game sprite DRAFT adaptation. FIRST attached reference governs exact identity. Willie S01-S02 human appearance: short stocky elderly man, very long white beard and mustache, weathered broad face, dark tricorn-like hat with small red details, ragged layered brown/dark coat, trousers and boots, EMPTY hands. Do NOT substitute S08 amalgam form; epoch is specifically early human reference. Pose: one clear action key pose, weight forward and one arm reaching/striking; keep hands empty unless existing reference weapon, use ONLY existing weapon, NO new spells, powers, magic aura or props. This is an isolated animation key pose, not a new story event or lore assertion. Other attached images are GAME STYLE only: dense pixel-art-inspired painting, crisp dark outlines, painterly shading, muted desaturated palette and restrained upper-left rim light, readable silhouette at150px. Portrait1024x1536, front3/4 slightly facing right, full figure and every appendage inside central75%width and80%height with generous blank margins. For floating Beholder no feet. Uniform flat light-gray #B4B4B4 background, no floor/cast shadow, vignette, gradient or scenery. No text, letters, numbers, frame, logo, watermark or extra characters. Keep costume, colors, face and silhouette identical to canon; do not copy outfits of game style references.",
+    "references": [
+      "F:/dev/nottgard-vault/output/referencias-personagens/CHAR-061/S01-S02/r01/willie-front-candidate-v01.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+      "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+    ]
+  },
+  {
+    "id": "N07_willie_death",
+    "prompt": "Use case: stylized-concept. N07_willie Willie death game sprite DRAFT adaptation. FIRST attached reference governs exact identity. Willie S01-S02 human appearance: short stocky elderly man, very long white beard and mustache, weathered broad face, dark tricorn-like hat with small red details, ragged layered brown/dark coat, trousers and boots, EMPTY hands. Do NOT substitute S08 amalgam form; epoch is specifically early human reference. Pose: one clear collapsed/falling death key pose, knees buckled and body slumping low, recognizable face/clothing/equipment retained; non-graphic, no dismemberment, no new visual powers. This is an isolated animation key pose, not a new story event or lore assertion. Other attached images are GAME STYLE only: dense pixel-art-inspired painting, crisp dark outlines, painterly shading, muted desaturated palette and restrained upper-left rim light, readable silhouette at150px. Portrait1024x1536, front3/4 slightly facing right, full figure and every appendage inside central75%width and80%height with generous blank margins. For floating Beholder no feet. Uniform flat light-gray #B4B4B4 background, no floor/cast shadow, vignette, gradient or scenery. No text, letters, numbers, frame, logo, watermark or extra characters. Keep costume, colors, face and silhouette identical to canon; do not copy outfits of game style references.",
+    "references": [
+      "F:/dev/nottgard-vault/output/referencias-personagens/CHAR-061/S01-S02/r01/willie-front-candidate-v01.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+      "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+    ]
+  },
+  {
+    "id": "N08_idle",
+    "prompt": "Use case: stylized-concept. N08 Marciela idle game sprite DRAFT adaptation. FIRST attached reference governs exact identity. Marciela S17-S18 swamp-cloak appearance: adult woman, long brown hair under ragged brown hood, stern face, worn dark-brown layered cloak and clothes, crossed leather chest straps, belts and bracers, brown trousers/boots, EMPTY hands, no extra weapon or prop. Pose: neutral standing pose, arms relaxed, full body and feet visible. This is an isolated animation key pose, not a new story event or lore assertion. Other attached images are GAME STYLE only: dense pixel-art-inspired painting, crisp dark outlines, painterly shading, muted desaturated palette and restrained upper-left rim light, readable silhouette at150px. Portrait1024x1536, front3/4 slightly facing right, full figure and every appendage inside central75%width and80%height with generous blank margins. For floating Beholder no feet. Uniform flat light-gray #B4B4B4 background, no floor/cast shadow, vignette, gradient or scenery. No text, letters, numbers, frame, logo, watermark or extra characters. Keep costume, colors, face and silhouette identical to canon; do not copy outfits of game style references.",
+    "references": [
+      "F:/dev/nottgard-vault/output/referencias-personagens/CHAR-038/S17-S18-manto-pantano/recovered-20261019-r01/marciela-front-recovered.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+      "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+    ]
+  },
+  {
+    "id": "N08_attack",
+    "prompt": "Use case: stylized-concept. N08 Marciela attack game sprite DRAFT adaptation. FIRST attached reference governs exact identity. Marciela S17-S18 swamp-cloak appearance: adult woman, long brown hair under ragged brown hood, stern face, worn dark-brown layered cloak and clothes, crossed leather chest straps, belts and bracers, brown trousers/boots, EMPTY hands, no extra weapon or prop. Pose: one clear action key pose, weight forward and one arm reaching/striking; keep hands empty unless existing reference weapon, use ONLY existing weapon, NO new spells, powers, magic aura or props. This is an isolated animation key pose, not a new story event or lore assertion. Other attached images are GAME STYLE only: dense pixel-art-inspired painting, crisp dark outlines, painterly shading, muted desaturated palette and restrained upper-left rim light, readable silhouette at150px. Portrait1024x1536, front3/4 slightly facing right, full figure and every appendage inside central75%width and80%height with generous blank margins. For floating Beholder no feet. Uniform flat light-gray #B4B4B4 background, no floor/cast shadow, vignette, gradient or scenery. No text, letters, numbers, frame, logo, watermark or extra characters. Keep costume, colors, face and silhouette identical to canon; do not copy outfits of game style references.",
+    "references": [
+      "F:/dev/nottgard-vault/output/referencias-personagens/CHAR-038/S17-S18-manto-pantano/recovered-20261019-r01/marciela-front-recovered.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+      "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+    ]
+  },
+  {
+    "id": "N08_death",
+    "prompt": "Use case: stylized-concept. N08 Marciela death game sprite DRAFT adaptation. FIRST attached reference governs exact identity. Marciela S17-S18 swamp-cloak appearance: adult woman, long brown hair under ragged brown hood, stern face, worn dark-brown layered cloak and clothes, crossed leather chest straps, belts and bracers, brown trousers/boots, EMPTY hands, no extra weapon or prop. Pose: one clear collapsed/falling death key pose, knees buckled and body slumping low, recognizable face/clothing/equipment retained; non-graphic, no dismemberment, no new visual powers. This is an isolated animation key pose, not a new story event or lore assertion. Other attached images are GAME STYLE only: dense pixel-art-inspired painting, crisp dark outlines, painterly shading, muted desaturated palette and restrained upper-left rim light, readable silhouette at150px. Portrait1024x1536, front3/4 slightly facing right, full figure and every appendage inside central75%width and80%height with generous blank margins. For floating Beholder no feet. Uniform flat light-gray #B4B4B4 background, no floor/cast shadow, vignette, gradient or scenery. No text, letters, numbers, frame, logo, watermark or extra characters. Keep costume, colors, face and silhouette identical to canon; do not copy outfits of game style references.",
+    "references": [
+      "F:/dev/nottgard-vault/output/referencias-personagens/CHAR-038/S17-S18-manto-pantano/recovered-20261019-r01/marciela-front-recovered.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+      "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+    ]
+  },
+  {
+    "id": "N09_idle",
+    "prompt": "Use case: stylized-concept. N09 Thalion idle game sprite DRAFT adaptation. FIRST attached reference governs exact identity. Thalion: fair long-blond-haired pointed-eared adult man, blue eyes, ornate red/blue gold-trimmed hat, red cape, blue robes and gold armor, blue round chest brooch, ornate staff in anatomical RIGHT hand and sheathed/held dagger at LEFT. Preserve exact reference outfit and asymmetric equipment, no extra weapon. Pose: neutral standing pose, arms relaxed, full body and feet visible. This is an isolated animation key pose, not a new story event or lore assertion. Other attached images are GAME STYLE only: dense pixel-art-inspired painting, crisp dark outlines, painterly shading, muted desaturated palette and restrained upper-left rim light, readable silhouette at150px. Portrait1024x1536, front3/4 slightly facing right, full figure and every appendage inside central75%width and80%height with generous blank margins. For floating Beholder no feet. Uniform flat light-gray #B4B4B4 background, no floor/cast shadow, vignette, gradient or scenery. No text, letters, numbers, frame, logo, watermark or extra characters. Keep costume, colors, face and silhouette identical to canon; do not copy outfits of game style references.",
+    "references": [
+      "F:/dev/nottgard-vault/output/referencias-personagens/CANON-SEIS-20261018-r1/tha-03-thalion_fullbody_candidate_v1.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+      "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+    ]
+  },
+  {
+    "id": "N09_attack",
+    "prompt": "Use case: stylized-concept. N09 Thalion attack game sprite DRAFT adaptation. FIRST attached reference governs exact identity. Thalion: fair long-blond-haired pointed-eared adult man, blue eyes, ornate red/blue gold-trimmed hat, red cape, blue robes and gold armor, blue round chest brooch, ornate staff in anatomical RIGHT hand and sheathed/held dagger at LEFT. Preserve exact reference outfit and asymmetric equipment, no extra weapon. Pose: one clear action key pose, weight forward and one arm reaching/striking; keep hands empty unless existing reference weapon, use ONLY existing weapon, NO new spells, powers, magic aura or props. This is an isolated animation key pose, not a new story event or lore assertion. Other attached images are GAME STYLE only: dense pixel-art-inspired painting, crisp dark outlines, painterly shading, muted desaturated palette and restrained upper-left rim light, readable silhouette at150px. Portrait1024x1536, front3/4 slightly facing right, full figure and every appendage inside central75%width and80%height with generous blank margins. For floating Beholder no feet. Uniform flat light-gray #B4B4B4 background, no floor/cast shadow, vignette, gradient or scenery. No text, letters, numbers, frame, logo, watermark or extra characters. Keep costume, colors, face and silhouette identical to canon; do not copy outfits of game style references.",
+    "references": [
+      "F:/dev/nottgard-vault/output/referencias-personagens/CANON-SEIS-20261018-r1/tha-03-thalion_fullbody_candidate_v1.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+      "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+    ]
+  },
+  {
+    "id": "N09_death",
+    "prompt": "Use case: stylized-concept. N09 Thalion death game sprite DRAFT adaptation. FIRST attached reference governs exact identity. Thalion: fair long-blond-haired pointed-eared adult man, blue eyes, ornate red/blue gold-trimmed hat, red cape, blue robes and gold armor, blue round chest brooch, ornate staff in anatomical RIGHT hand and sheathed/held dagger at LEFT. Preserve exact reference outfit and asymmetric equipment, no extra weapon. Pose: one clear collapsed/falling death key pose, knees buckled and body slumping low, recognizable face/clothing/equipment retained; non-graphic, no dismemberment, no new visual powers. This is an isolated animation key pose, not a new story event or lore assertion. Other attached images are GAME STYLE only: dense pixel-art-inspired painting, crisp dark outlines, painterly shading, muted desaturated palette and restrained upper-left rim light, readable silhouette at150px. Portrait1024x1536, front3/4 slightly facing right, full figure and every appendage inside central75%width and80%height with generous blank margins. For floating Beholder no feet. Uniform flat light-gray #B4B4B4 background, no floor/cast shadow, vignette, gradient or scenery. No text, letters, numbers, frame, logo, watermark or extra characters. Keep costume, colors, face and silhouette identical to canon; do not copy outfits of game style references.",
+    "references": [
+      "F:/dev/nottgard-vault/output/referencias-personagens/CANON-SEIS-20261018-r1/tha-03-thalion_fullbody_candidate_v1.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+      "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+    ]
+  },
+  {
+    "id": "N10_idle",
+    "prompt": "Use case: stylized-concept. N10 Aila idle game sprite DRAFT adaptation. FIRST attached reference governs exact identity. Aila awakened S14 appearance: fair pale-blond/light-brown-haired woman with tired face and visible marks, light BLUE color over entire visible eye surface, NO white sclera or darker pupils, worn dark blue layered hood-down cloak over simple gray clothes, brown belt and boots, EMPTY hands. Preserve exact reference, no angel wings, new equipment or permanent magic aura. Pose: neutral standing pose, arms relaxed, full body and feet visible. This is an isolated animation key pose, not a new story event or lore assertion. Other attached images are GAME STYLE only: dense pixel-art-inspired painting, crisp dark outlines, painterly shading, muted desaturated palette and restrained upper-left rim light, readable silhouette at150px. Portrait1024x1536, front3/4 slightly facing right, full figure and every appendage inside central75%width and80%height with generous blank margins. For floating Beholder no feet. Uniform flat light-gray #B4B4B4 background, no floor/cast shadow, vignette, gradient or scenery. No text, letters, numbers, frame, logo, watermark or extra characters. Keep costume, colors, face and silhouette identical to canon; do not copy outfits of game style references.",
+    "references": [
+      "F:/dev/nottgard-vault/output/referencias-personagens/CHAR-002/S14-desperta/r03-turnaround/aila-front-v01.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+      "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+    ]
+  },
+  {
+    "id": "N10_attack",
+    "prompt": "Use case: stylized-concept. N10 Aila attack game sprite DRAFT adaptation. FIRST attached reference governs exact identity. Aila awakened S14 appearance: fair pale-blond/light-brown-haired woman with tired face and visible marks, light BLUE color over entire visible eye surface, NO white sclera or darker pupils, worn dark blue layered hood-down cloak over simple gray clothes, brown belt and boots, EMPTY hands. Preserve exact reference, no angel wings, new equipment or permanent magic aura. Pose: one clear action key pose, weight forward and one arm reaching/striking; keep hands empty unless existing reference weapon, use ONLY existing weapon, NO new spells, powers, magic aura or props. This is an isolated animation key pose, not a new story event or lore assertion. Other attached images are GAME STYLE only: dense pixel-art-inspired painting, crisp dark outlines, painterly shading, muted desaturated palette and restrained upper-left rim light, readable silhouette at150px. Portrait1024x1536, front3/4 slightly facing right, full figure and every appendage inside central75%width and80%height with generous blank margins. For floating Beholder no feet. Uniform flat light-gray #B4B4B4 background, no floor/cast shadow, vignette, gradient or scenery. No text, letters, numbers, frame, logo, watermark or extra characters. Keep costume, colors, face and silhouette identical to canon; do not copy outfits of game style references.",
+    "references": [
+      "F:/dev/nottgard-vault/output/referencias-personagens/CHAR-002/S14-desperta/r03-turnaround/aila-front-v01.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+      "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+    ]
+  },
+  {
+    "id": "N10_death",
+    "prompt": "Use case: stylized-concept. N10 Aila death game sprite DRAFT adaptation. FIRST attached reference governs exact identity. Aila awakened S14 appearance: fair pale-blond/light-brown-haired woman with tired face and visible marks, light BLUE color over entire visible eye surface, NO white sclera or darker pupils, worn dark blue layered hood-down cloak over simple gray clothes, brown belt and boots, EMPTY hands. Preserve exact reference, no angel wings, new equipment or permanent magic aura. Pose: one clear collapsed/falling death key pose, knees buckled and body slumping low, recognizable face/clothing/equipment retained; non-graphic, no dismemberment, no new visual powers. This is an isolated animation key pose, not a new story event or lore assertion. Other attached images are GAME STYLE only: dense pixel-art-inspired painting, crisp dark outlines, painterly shading, muted desaturated palette and restrained upper-left rim light, readable silhouette at150px. Portrait1024x1536, front3/4 slightly facing right, full figure and every appendage inside central75%width and80%height with generous blank margins. For floating Beholder no feet. Uniform flat light-gray #B4B4B4 background, no floor/cast shadow, vignette, gradient or scenery. No text, letters, numbers, frame, logo, watermark or extra characters. Keep costume, colors, face and silhouette identical to canon; do not copy outfits of game style references.",
+    "references": [
+      "F:/dev/nottgard-vault/output/referencias-personagens/CHAR-002/S14-desperta/r03-turnaround/aila-front-v01.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+      "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+      "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+    ]
+  }
+]
