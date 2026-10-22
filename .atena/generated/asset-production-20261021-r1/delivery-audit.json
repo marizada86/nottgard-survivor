@@ -1,0 +1,1043 @@
+{
+    "destination":  "F:\\dev\\abyss-megadungeon\\assets_incoming",
+    "state":  "DRAFT",
+    "files":  129,
+    "copied":  91,
+    "existing_identical":  38,
+    "sha256_verified":  true,
+    "runtime_modified":  false,
+    "delivered_files":  [
+                            {
+                                "file":  "C01_v01.png",
+                                "width":  1672,
+                                "height":  941,
+                                "bytes":  3079282,
+                                "sha256":  "70046F391D2BB5D024A8C24569BDD982D180D26D552EAD9E681891D9639A095F",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "C02_v01.png",
+                                "width":  1672,
+                                "height":  941,
+                                "bytes":  3246504,
+                                "sha256":  "FF1565B26712A128F4B3176096A44BC07565308F921029A3D853DF2516FA0E45",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "C03_v01.png",
+                                "width":  1672,
+                                "height":  941,
+                                "bytes":  2874988,
+                                "sha256":  "62F88BC1F2F6AD796CA48F124314AE19B679B6A65884CCDCEFCCFFE7645FB9D6",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "C04_v01.png",
+                                "width":  1672,
+                                "height":  941,
+                                "bytes":  2964640,
+                                "sha256":  "F31E7890106CB52D9028C6A23C4C3E30B88F740BC768EE91F6BD8C8FA30B421D",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "C05_v01.png",
+                                "width":  1672,
+                                "height":  941,
+                                "bytes":  3069215,
+                                "sha256":  "5BCE06F1454DD6500C645D42A3AF149EAF6FCA308C845C88340B0E719E72E722",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "C06_v01.png",
+                                "width":  1672,
+                                "height":  941,
+                                "bytes":  3034378,
+                                "sha256":  "8DB09B97B78A78BE0F7D0C2B8C371A5453DAA12B9004065B52BFC2B2A209D564",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "C07_v01.png",
+                                "width":  1672,
+                                "height":  941,
+                                "bytes":  2798767,
+                                "sha256":  "3331F651E2FD9F240E102DFCC06288F47BAFAB27E06B686DFCC9BF0C821A6D1E",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "C08_v01.png",
+                                "width":  1672,
+                                "height":  941,
+                                "bytes":  2782994,
+                                "sha256":  "062D24CA6D38FBDAE4C53AA5D50247E9628EA57A386E6E123B3981D005FE4A32",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "C09_v01.png",
+                                "width":  1536,
+                                "height":  1024,
+                                "bytes":  2956506,
+                                "sha256":  "77927C6C7CBB6CDBD58F1A34786C21FA8AB0BCBBAF003964EDF099509EC95E73",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "C10_v01.png",
+                                "width":  1536,
+                                "height":  1024,
+                                "bytes":  3073054,
+                                "sha256":  "9BB7ACE3208CC059E2F7DB391107A268CD2BE8D2AD6AB3E038C57F5F4A59113F",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "C11_domwieck_remendo_v01.png",
+                                "width":  1536,
+                                "height":  1024,
+                                "bytes":  2297538,
+                                "sha256":  "CE540C37BBCCA4F912FFA2D086DFC8405585F3E67E41C813EAA9BCC1CC2FE273",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "C11_domwieck_trilha_v01.png",
+                                "width":  1536,
+                                "height":  1024,
+                                "bytes":  2032567,
+                                "sha256":  "B1747B8CCA31B6521AC1DB684A51ACE10DE0A9020D8587C7BDD402EC0F6E056B",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "C11_reino_remendo_v01.png",
+                                "width":  1536,
+                                "height":  1024,
+                                "bytes":  2303345,
+                                "sha256":  "E14B9E979F6A7A050C9CE33E986C526380CD62F73BB3CC57D33F7A96E6FC2614",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "C11_reino_trilha_v01.png",
+                                "width":  1536,
+                                "height":  1024,
+                                "bytes":  2040909,
+                                "sha256":  "D155AC4C3809ADB36FFC2CCD6DE6A085F3E744A3B1470287F1433BA96A7F7741",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "C12_domwieck_v01.png",
+                                "width":  1254,
+                                "height":  1254,
+                                "bytes":  1965169,
+                                "sha256":  "1A927159DF7218E8BC737E0BA3F84961C48AA88CB5C9F907D6A7357795BFF7CA",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "C12_pilares_v01.png",
+                                "width":  1254,
+                                "height":  1254,
+                                "bytes":  2015521,
+                                "sha256":  "EB39E033EE0E1CCA30186BDA3F19AF280E8A43F3A276D9FE7A722C0766D568BC",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "C12_reino_abissal_v01.png",
+                                "width":  1254,
+                                "height":  1254,
+                                "bytes":  2012318,
+                                "sha256":  "F305BA768ABDB0E04CA1487C035A448FAAF0449A7836BF59CB696434BC07E7B1",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "C13_a_v01.png",
+                                "width":  1254,
+                                "height":  1254,
+                                "bytes":  1973046,
+                                "sha256":  "8A3AFA7E191AE5B60B28AF7B1CA1F5B45685D852638FCF9A92AB99896CC96737",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "C13_b_v01.png",
+                                "width":  1536,
+                                "height":  1024,
+                                "bytes":  1487099,
+                                "sha256":  "EA9FA2F82A1B17EA2C2AE9F44A54B25286FF7477958798021C143D3A842ED18C",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "C14_v01.png",
+                                "width":  1254,
+                                "height":  1254,
+                                "bytes":  1668558,
+                                "sha256":  "991FACD6932FA4AF5E63313F8FCABC97356CFD033AFE803035789B094D022C6F",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "C15_a_v01.png",
+                                "width":  1536,
+                                "height":  1024,
+                                "bytes":  2109746,
+                                "sha256":  "245A954328C0CA46D3624018E414F45D8F627A25ADEE305882C90B1375ED5D09",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "C15_b_v01.png",
+                                "width":  1254,
+                                "height":  1254,
+                                "bytes":  2133583,
+                                "sha256":  "F24259AD2160B2E6ACF3ADD0A6C3286F18DFED75FA498139231585707D344546",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "C15_c_v01.png",
+                                "width":  1536,
+                                "height":  1024,
+                                "bytes":  1701331,
+                                "sha256":  "32E5ED7A0240F33BF318352EE24DCEEB0284E199ED100111AB806A109042FC72",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "C16_arlindo_v01.png",
+                                "width":  2172,
+                                "height":  724,
+                                "bytes":  1081774,
+                                "sha256":  "5E8E513D66AA68B90A4EFA6874F4B32DB1079873E101A4F31DBA47A4B1137B81",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "C16_erik_v01.png",
+                                "width":  2172,
+                                "height":  724,
+                                "bytes":  1110949,
+                                "sha256":  "A6E2ACFE6ABC50F2CCE10845602B85CD155CDDBDA020A53188E52B3A9DFB4278",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "N01_attack_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  2002357,
+                                "sha256":  "E2552A4ABD590E959B6CD3F4A33195723F0C3F65BD0CEE9BC69EBB51181E61BD",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "N01_death_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  1884777,
+                                "sha256":  "958D8D46F192C294C3C80BE04028F21B28EA79132AAAAAB28E52CCEC2BC618A4",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "N01_idle_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  1815949,
+                                "sha256":  "2A82A1D91B9B125EE69F2812079F068E9502ED60286915FFBC5737212B316AC4",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "N02_attack_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  2347273,
+                                "sha256":  "7CEB5B3B4D601E98463D45817A9CC305F607E45E8762C6A9BFB5D86A8576C8B5",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "N02_death_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  2160302,
+                                "sha256":  "7E670721878ECC8674B6AA3581B11A439AD5246C0D8C7AA9D74EEBA9D590C54C",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "N02_idle_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  2314530,
+                                "sha256":  "7B34A395E97DCFE4C27A42DA7994215D028161643B41170AA0DF8188D053C173",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "N03_attack_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  1961081,
+                                "sha256":  "99842C5FDC6A1F9F1422A6B0056AABAD7527A0EBCEB87935881C89C194374376",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "N03_death_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  2165510,
+                                "sha256":  "271EC3E26E24416D85824A1BCCD624C4587B005FBA838E8DB7F037EE68AA231F",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "N03_idle_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  1980593,
+                                "sha256":  "70C2228D905875C1B675AA53BEF55EAF58AF69F5B2785C3950EAAADC4B6D2051",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "N04_attack_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  2355155,
+                                "sha256":  "C52CC5A69E26C53BBFBA787811C051197C0BE4F7F367CF714CDFB4BBFB90EDCA",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "N04_death_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  2207560,
+                                "sha256":  "2F7906689A025E6147F088B2D12531B3376D4220791B0A5FFCE4048F14B226C3",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "N04_idle_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  2162659,
+                                "sha256":  "D96B29FFD6147F827D17CA225B85857CC3587A9732A60BDF5FF78459E655D00F",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "N05_attack_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  1782584,
+                                "sha256":  "40F5E2D323E000D8A1024F20BF0D30EDC696E7952A26BBDE4E55C158467E7DE7",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "N05_death_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  1772654,
+                                "sha256":  "4D3D116828A2C20493EA0D682EBD8C53676AC8352EBD34204FE42864A1BC8613",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "N05_idle_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  1731910,
+                                "sha256":  "C6285611C04E2C54C7066D9835DA89DD0101AD3D5821D90A2CA525613D825EBF",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "N06_atendente_attack_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  1917331,
+                                "sha256":  "E11DD4092697D275248943ED450B1FAE5E9427A1326FD64E810A78410B0B4F26",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "N06_atendente_death_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  1945698,
+                                "sha256":  "3BBD2E9C5658E08260D19E915C7283D85DA86633FB9643B2DD53220B795A2E6C",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "N06_atendente_idle_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  1821386,
+                                "sha256":  "6867777D95D9931076AF5BA0F8D3EAE4A809A7426F4D34920C0E17CA6FEE5330",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "N06_taverneiro_attack_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  1695455,
+                                "sha256":  "AF8D7CF98261BCF2C56274768F1E6E7A51EC8BA2D98BD7E00B0C7D0743A99625",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "N06_taverneiro_death_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  1746693,
+                                "sha256":  "C8AF52D404A090C3AB051CAA3B7C4931B7138163B53CA7E626A89ABC0057B9EA",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "N06_taverneiro_idle_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  1704977,
+                                "sha256":  "639D3AFC0F7FAF80DD6058147D662C0A19BC3E798EB8CFFA1622AEA0E84D00CB",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "N07_willie_attack_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  2111277,
+                                "sha256":  "C830D03BCABBB3EE4A91BD89007B15A1AC35BF7D875B01A2193511FDEA9FC51D",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "N07_willie_death_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  2123778,
+                                "sha256":  "83BC6CFBD133458BEE334FFBE9BB431F1A018EE16D0AFC91D672F47BF71743AA",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "N07_willie_idle_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  2095539,
+                                "sha256":  "B3DB6F04B1B5A7E5642EB9C84BB3EA50A1524C3291A41F55BF5599CD74D9CE59",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "N07_wonka_attack_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  1784010,
+                                "sha256":  "2415E0FB289CBE9A1A84F41C78A5FC8E2E896DB407DFFAB57DFFA8BC73463DF9",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "N07_wonka_death_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  1815190,
+                                "sha256":  "E46EB28F462EC444B2208CAE8A8F2A739B3E881D9A85BE5FA6A6054730E25EEF",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "N07_wonka_idle_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  1951505,
+                                "sha256":  "4C12A0B4E41A71F9CA19EA407A39B47A2474850A04B26485FCF053F129AC5B59",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "N08_attack_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  1987844,
+                                "sha256":  "65A4A666FA7140D7A8EB61DD81887E77765829CB426E277BF2360EDE3BA5290A",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "N08_death_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  2045585,
+                                "sha256":  "9651CA972AD452DF9A5CC8CD67F213FCC9CDE10A99BD7CE42BA7E80965F0E3AA",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "N08_idle_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  1858902,
+                                "sha256":  "9DE3ED78163AF083F8E2CC68F0004CCCA114218426EAF5132E845C0952D55CEE",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "N09_attack_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  2298552,
+                                "sha256":  "B1700F5DD561079B38A4333C75624D94BD57C6FE244956DAA1AD28D186FFC41D",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "N09_death_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  2232878,
+                                "sha256":  "5804494C15D79100ACCD665954E75028C998D19AB0A2C117E6C879816A3AA01B",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "N09_idle_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  2117402,
+                                "sha256":  "C48798E142E282FB8814BC64ECDCA5D247CF2E15704B758927C89EE465327396",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "N10_attack_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  2144547,
+                                "sha256":  "0FAC9380E135393FCAC3FF75C43BF6BC47B27A994B8CD6F66299F50537428444",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "N10_death_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  1934137,
+                                "sha256":  "089272412172BA96EEC2FA89CEBD0BBBACCF64828361C4F3406A800C61600F68",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "N10_idle_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  1880085,
+                                "sha256":  "2E7035CB4DFC105387ED3D625A729FF00FCC119A1FCF58A0AFEA6138D02F8EF3",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "Q01_v01.png",
+                                "width":  1536,
+                                "height":  1024,
+                                "bytes":  1757697,
+                                "sha256":  "BFE242EAE9F48D20276546703D8C6B00EE983FAC8C5A3AB7FC5D25A1C9DDC348",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "Q02_v01.png",
+                                "width":  1536,
+                                "height":  1024,
+                                "bytes":  1733995,
+                                "sha256":  "301DB9A725F25E7AA1E5E8CA0267BBCAFBF70F514D65D0B14FE81F0605B2BA95",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "Q03_v01.png",
+                                "width":  2048,
+                                "height":  768,
+                                "bytes":  1735999,
+                                "sha256":  "F8D910BB6937245A72529E1FD08F761424EFF3446BD1186B8AD98861463C305C",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "Q04_a_v01.png",
+                                "width":  1536,
+                                "height":  1024,
+                                "bytes":  1954147,
+                                "sha256":  "ECF69434A1512B63F34A7CCF91CC0F89270BE83349D8B4F99DFB1983131F7173",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "Q04_b_v01.png",
+                                "width":  1536,
+                                "height":  1024,
+                                "bytes":  1972559,
+                                "sha256":  "7AA9E571574C33C6337D8D6EF34E0C57FC0F0CAD2F2414C95F4F9444A0D5685E",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "Q04_c_v01.png",
+                                "width":  1536,
+                                "height":  1024,
+                                "bytes":  1751925,
+                                "sha256":  "A1EE5EF4779AFF08A61C1BFE428502F0CE14936C5D1688563FCB8DD9C4EB2261",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "Q05_v01.png",
+                                "width":  1254,
+                                "height":  1254,
+                                "bytes":  1557440,
+                                "sha256":  "74446379B7EE6CFFF3ED9DAF7DD8DC8E756F91461F7B56413B62971919AD286B",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "Q06_v01.png",
+                                "width":  1254,
+                                "height":  1254,
+                                "bytes":  2416282,
+                                "sha256":  "3672953D97D8B0362B31B1AD9DE685DB7B2D01D20C315046D60B7FCA400EF170",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "Q07_v01.png",
+                                "width":  1536,
+                                "height":  1024,
+                                "bytes":  1743757,
+                                "sha256":  "2D1DD3C6374E311A0C1781F48220013D05FBEE1D3CCEB32B48CA973712503C6F",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "Q08_v01.png",
+                                "width":  1536,
+                                "height":  1024,
+                                "bytes":  2432586,
+                                "sha256":  "05C9D0BE792DDDDA4E695ECCFCE08525C913BC114CBFB37130F3EA49DE67CFDA",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "Q09_v01.png",
+                                "width":  1536,
+                                "height":  1024,
+                                "bytes":  1749911,
+                                "sha256":  "4EB65AA1D7B66A8AE9D7AC6E57A01C0E2ED9D64DD14DECF3AE072B747709143D",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "Q10_v01.png",
+                                "width":  1536,
+                                "height":  1024,
+                                "bytes":  1809666,
+                                "sha256":  "5B86610297F83F32C43897C9523F72C23826C214F04F12B73A931E1755F3DFF4",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "U01_v01.png",
+                                "width":  1049,
+                                "height":  1499,
+                                "bytes":  2419076,
+                                "sha256":  "2EE96A562EC835D1C13E6922171D301C8CA33383AE0C39969F9E569ECD9BE31C",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "U02_v01.png",
+                                "width":  1254,
+                                "height":  1254,
+                                "bytes":  1378704,
+                                "sha256":  "E3C0C6070E38675E0BE34D7B5E9E919BB079124CE89CDAE8B36572A5F7D585DE",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "U03_v01.png",
+                                "width":  1536,
+                                "height":  1024,
+                                "bytes":  1501212,
+                                "sha256":  "3CB88BB80286BB222A395493A7ED5D44B2AE442B7386A19011B50BDC5C81AC4F",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "U04_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  2224266,
+                                "sha256":  "84091E6D719B8879F2D2D916850450A4D6A0297F076BE752922EE0CA11BD1FFA",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "U05_v01.png",
+                                "width":  1536,
+                                "height":  1024,
+                                "bytes":  1403114,
+                                "sha256":  "CE4C886A97720D3D58986955827910B6A0BA3269B7D003CB5C2662F08698B541",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "U06_v01.png",
+                                "width":  1254,
+                                "height":  1254,
+                                "bytes":  2084288,
+                                "sha256":  "140F14EF647E242FA693F93A0CC2B068420E35ACF518680F658064A3294516AA",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "U07_v01.png",
+                                "width":  1536,
+                                "height":  1024,
+                                "bytes":  1304378,
+                                "sha256":  "320B6DC7248D600E160194728FCED75EC7A7076662EDB0DF5B56C2040A72BB8A",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "U08_v01.png",
+                                "width":  1536,
+                                "height":  1024,
+                                "bytes":  1449120,
+                                "sha256":  "657BE762157206433C150E11D44F70F6DF2922DAE7E3512FE3A6610646E8F657",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "U09_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  1475942,
+                                "sha256":  "AF5F7077339093ACF35D79719FB18C3DF97A9D740F116C3E1A3E77F862E80821",
+                                "selected":  false
+                            },
+                            {
+                                "file":  "U09_v02.png",
+                                "width":  1049,
+                                "height":  1500,
+                                "bytes":  722842,
+                                "sha256":  "67CAA968CD9A96292F5E4D1DA10D1908224C60A8263E62F881E7CBB55F49906A",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "U10_v01.png",
+                                "width":  1254,
+                                "height":  1254,
+                                "bytes":  3522065,
+                                "sha256":  "45872759EB43A4223758EB93F0C799F2A2D38BF0EB7B68979A0F31FC009C2E8D",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "U11_v01.png",
+                                "width":  2172,
+                                "height":  724,
+                                "bytes":  1452071,
+                                "sha256":  "7EE6B0460489A4532B24D4BF5B04453A18FFBEC5F7FEBD7BA3909B73910A0B45",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "U12_v01.png",
+                                "width":  2048,
+                                "height":  768,
+                                "bytes":  1566033,
+                                "sha256":  "DC5B49DB6EDE8D6E093A2EC114791CFD3CB18517FC5AACFC309C426C4706E4FA",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "U13_fill_v01.png",
+                                "width":  1897,
+                                "height":  829,
+                                "bytes":  1174280,
+                                "sha256":  "CDB3029737731F292823C675CEB2409FAB31F29EF9A0153F0A3D5D5295CA55DE",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "U13_frame_v01.png",
+                                "width":  2180,
+                                "height":  721,
+                                "bytes":  1295976,
+                                "sha256":  "4C87627F69FFE621D8C7ED4E618743BA9EEFD8A218286F0978D2F1C64B45E17C",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "U14_v01.png",
+                                "width":  1983,
+                                "height":  793,
+                                "bytes":  1282108,
+                                "sha256":  "4940EE2FD0D418DC591C5B6DBCD67D78260621E317177445B3CEC83AB495C0D5",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "U15_v01.png",
+                                "width":  1254,
+                                "height":  1254,
+                                "bytes":  1702756,
+                                "sha256":  "BEBC9167A5CB7F3B193D6A255F3AA6B9B4BCC82335C10522D1C6DB609A92BD52",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "U16_v01.png",
+                                "width":  2172,
+                                "height":  724,
+                                "bytes":  1634030,
+                                "sha256":  "BF9FED2E53B5B80F344AD07B40FA320C8611A7F685B4DD8FD9F14A79808F5B61",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "U17_v01.png",
+                                "width":  2172,
+                                "height":  724,
+                                "bytes":  1304499,
+                                "sha256":  "0EFEB4736CDF841D0DA6424FA5E6154B79A873D97D2B9711937F300BF44BB3C9",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "U18_v01.png",
+                                "width":  2121,
+                                "height":  741,
+                                "bytes":  1705947,
+                                "sha256":  "0E07EBB573465F44BE8A8C44F4F6F02A8D024EAE330100D5AD5986C0AFA04057",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "U19_v01.png",
+                                "width":  2079,
+                                "height":  756,
+                                "bytes":  1297549,
+                                "sha256":  "55A547B511EC6BD333DAF09D494D2038DCB18FF8CA3FC4D1488A572C7CA658CC",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "U20_v01.png",
+                                "width":  1672,
+                                "height":  941,
+                                "bytes":  1322755,
+                                "sha256":  "66B1820E7B81C785813B58FC71D8278E967054C8B89F2CAF1884767BEB8A916E",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "U21_v01.png",
+                                "width":  1605,
+                                "height":  980,
+                                "bytes":  1378798,
+                                "sha256":  "EFB00460245B96BB6318FEDC444F431D02F02C1CD6B1CAE0D41ECFFE58DCCF6C",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "V01_attack_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  2569050,
+                                "sha256":  "06948DE501A43CE54CA369F82E00F46822CB54B9442D221E550587C8C3D9A9D4",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "V01_death_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  2161306,
+                                "sha256":  "68C989A6394BB667EEA37C90880BF590096DF15C361C81C92DE14FBA89539000",
+                                "selected":  false
+                            },
+                            {
+                                "file":  "V01_death_v02.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  1863464,
+                                "sha256":  "9E38457607ED03A9054C921B709A279866313923ED0FE67ABFBF48EFFEE18284",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "V01_idle_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  2599415,
+                                "sha256":  "3651E8B483056EB60BAFED47D3A1A6A0C52AE9CDDA6A300AADDB3AA38D9DCDB3",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "V01_special_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  2542071,
+                                "sha256":  "D38B225BFC208A474A8DC5A6C47B590501DFE9D034A0011468CEF174E3038B98",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "V02_attack_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  2400702,
+                                "sha256":  "DE5A8C8E9CA4F74FD16A3A1BC928841E0212D8E2EFFBC683C8150CD16337F17A",
+                                "selected":  false
+                            },
+                            {
+                                "file":  "V02_attack_v02.png",
+                                "width":  1536,
+                                "height":  1024,
+                                "bytes":  1737905,
+                                "sha256":  "BD8187BD8797F94A98C0778EF1789C227B5953D7DA29079329A83D6C9A3FD5CB",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "V02_death_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  2158962,
+                                "sha256":  "792D79522C447CAB7C7CA7D121225DDE8213508AE0C5A758A5628E50592BF84F",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "V02_idle_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  2115816,
+                                "sha256":  "11880EC39D184D8A4CFB85C83AE7CE29EE5A6B8503A53669FEEF1B6EDF042599",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "V03_attack_v01.png",
+                                "width":  1536,
+                                "height":  1024,
+                                "bytes":  2740572,
+                                "sha256":  "5F01CCDADCC262F9A678A45821E53A26B98727933F3BECECC1FCE0C277069C21",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "V03_death_v01.png",
+                                "width":  1536,
+                                "height":  1024,
+                                "bytes":  2650023,
+                                "sha256":  "27EE3597851E8F9E9ACB8ED634ADBB0B9DEBE253CF609E2E816D6A4E9F4A0765",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "V03_idle_v01.png",
+                                "width":  1536,
+                                "height":  1024,
+                                "bytes":  2665975,
+                                "sha256":  "1446DB2772238A53C289F70A3FD8A12CDF0A966B54EB0A97AEA95D1E5C81E56E",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "V04_attack_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  2339427,
+                                "sha256":  "35348736DE541C92A0B0DB40354ACCBCED0AA23DA64CDA742789CFA8AE7E7D59",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "V04_death_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  2376611,
+                                "sha256":  "7904DEB77FF9A885F9E0CAB8FE126642DF176B1D668533ACA5A2679B6643DC10",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "V04_idle_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  2184044,
+                                "sha256":  "EA032990808D43397BA47D2AC1D08B7F96CC8A91D41C5B5FDD145EE007183EA4",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "V04_walk_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  2193175,
+                                "sha256":  "28437AB329B29FD5C242AFD0EAC20E03477F13346FC71A44D52E5958F25D987D",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "V05_attack_v01.png",
+                                "width":  1536,
+                                "height":  1024,
+                                "bytes":  2020471,
+                                "sha256":  "4A1A0DD4B9C0193B2B584C79FB2C7C6D02F50F78CC890952049D1A521BE63A9A",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "V05_death_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  1976325,
+                                "sha256":  "00D436D6951CFC5525ACDDF22B341F444D628A43312156D05D63B808137E89DB",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "V05_idle_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  2187771,
+                                "sha256":  "729C44D75FCFE4519A93CBF2EE4A4B1F61AEABA45A2EA6EC719D0AFC08A75DE5",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "V06_attack_v01.png",
+                                "width":  1536,
+                                "height":  1024,
+                                "bytes":  2393648,
+                                "sha256":  "47B1007B0B65B3060A4C24FC6AB8380110F4CB81E3F47B0FAE28A18A12D98973",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "V06_death_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  1846787,
+                                "sha256":  "72384881F4CE235FAD6533DCE91E2EC5B3B19ADB443B514408D64595069DD908",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "V06_idle_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  2351394,
+                                "sha256":  "FB78D5F9088A2EF7CF34F428F1AAA90397F9C8DF3F08EAB60ED8043A25D78C8D",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "V06_special_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  2447818,
+                                "sha256":  "3AD38A7BF99B87105493856529A15196AEAF0987839E7479CF734BC97E9A8456",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "V07_attack_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  2304854,
+                                "sha256":  "A88A8EE3B0DEEEDC1C0A764F9DECE6A2D932C9FE9C6AA4A6B03590D0916F9AF6",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "V07_death_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  2037868,
+                                "sha256":  "8083DDD44E5BBBC91EB9488435B1C3294E63D5545B43420C57A4DA64D3CCF0DF",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "V07_idle_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  2284799,
+                                "sha256":  "B6D8DCCE15FE19154E8F05374D186B9E2D5EAF9854918D316805535A7FEBA56D",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "V08_molydeus_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  2123338,
+                                "sha256":  "23F26539B229D59C34DDE03489F0F2C5C8F7F804022877BF148CF911E9C9EA14",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "V09_ezro_v01.png",
+                                "width":  1536,
+                                "height":  1024,
+                                "bytes":  2350259,
+                                "sha256":  "E47123DD8EE6E690522236458AEABD54C10D03F641892A35BB3A853875E2FFDF",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "V09_shu_v01.png",
+                                "width":  1536,
+                                "height":  1024,
+                                "bytes":  1996842,
+                                "sha256":  "6D5B609599BAA667FAA9F15D09F6F8D8E53B88B4808E5D70F07F9916127AE0B6",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "V10_portrait_v01.png",
+                                "width":  1536,
+                                "height":  1024,
+                                "bytes":  1943105,
+                                "sha256":  "6D5710BA5B1B14BF69DF259A9AB607FC4A799558025D1E268A8644ABBFE02B10",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "V10_sprite_v01.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  2278877,
+                                "sha256":  "DDE63C36FE0C0E9A3EF1D3CD91E7926288D4593E45A2579B5C942E87472D4D52",
+                                "selected":  false
+                            },
+                            {
+                                "file":  "V10_sprite_v02.png",
+                                "width":  1024,
+                                "height":  1536,
+                                "bytes":  1904897,
+                                "sha256":  "CD8341D9B43D8F32B9013071DDFDB4AA22BF6F55692D91391C53F2A75CF8F3D0",
+                                "selected":  true
+                            },
+                            {
+                                "file":  "V11_v01.png",
+                                "width":  1672,
+                                "height":  941,
+                                "bytes":  2459058,
+                                "sha256":  "612875B3551990EA588413BE5406C349EFB72D59D290B688DBA7BF8F5ECEDCBD",
+                                "selected":  true
+                            }
+                        ]
+}

@@ -1,0 +1,15 @@
+# Fontes concluídas — DRAFT r1
+
+Em 2026-10-21, o dono autorizou a continuação das 33 poses restantes. Solicitação IN_PLAN, aprovação per-plan preservada. Não houve promoção CANON nem integração no runtime. Produção feita com ImageGen embutido, uma chamada por pose; os prompts finais e anexos exatos desta retomada constam dos 33 registros N02–N10 e arquivos de prompt correspondentes.
+
+S-007 concluída: Beholder, Kein, Astherion, Kūkan Shito, Taverneiro, Atendente, Wonka, Willie humano S01–S02, Marciela, Thalion e Aila receberam idle, ataque e morte. Reaper já tinha três poses. N11 reutiliza o mímico existente. Morte representa pose de animação, sem estabelecer acontecimento de lore. Nenhum novo evento ou consumer foi implementado.
+
+S-008: 129 fontes PNG preservadas, 125 candidatas selecionadas para revisão e quatro versões substituídas. O manifesto relaciona contrato por código, prompts, referências e arquivos; png-audit.json registra dimensões e hashes. Todas as imagens foram abertas pelo decodificador PNG; arquivos de prompt e referências foram conferidos. As 33 novas imagens foram inspecionadas visualmente durante a geração: identidade e equipamento reconhecíveis, figuras completas e sem texto aparente. As margens ficaram abaixo dos 8% solicitados em várias poses, embora sem corte aparente; não declarar aprovação integral do contrato antes da preparação. A galeria permite filtrar lotes e comparar prévias de 150 px. Links locais de entrega devem ser verificados após a consolidação.
+
+Limites: fundos cinza variam e requerem normalização/extração; corpos e quadros precisam de recorte, escala e pivôs consistentes. As três poses por entidade são quadros-chave isolados, não animações prontas. Nine-slice, U10 repetível, separação das folhas de ícones e quadros C16 continuam pendentes. U19 contém peças extras fora do painel principal. U01/U02 preservam as dimensões da tabela e as diferenças dos consumers, sem mudança do jogo. As versões substituídas e as ressalvas de proveniência anteriores estão em checkpoint.md.
+
+Referências governam identidade CANON, mas toda adaptação produzida permanece DRAFT v01/v02. Mantidas as decisões de Síntese roxa, Molydeus com uma cabeça de lobo sem cobra conforme promoção posterior do Vault, Nidhogg limitado à cabeça/pescoço, Shu ortóptero e olhos inteiros dos aasimar. As imagens não promovem novos usos sugeridos para N.
+
+Próximo checkpoint: aceite visual do dono, S-008/HUMAN_VISUAL_ACCEPTANCE_PENDING. Revisar na galeria identidade, paleta, roupa, equipamento e leitura; informar IDs aceitos ou correções. Ainda não há aceite subjetivo nem playtest. Não há testes de gameplay aplicáveis a este lote de fontes sem alteração de runtime.
+
+Entrega concluída: F:/dev/abyss-megadungeon/assets_incoming, com os 129 PNGs e hashes SHA-256 conferidos. Foram copiados 91 arquivos novos; os 38 anteriores foram encontrados idênticos e preservados. delivery-audit.json registra a entrega. A galeria contém 129 imagens e zero links locais quebrados; git diff --check passou. O commit anterior d4419fe0 preserva o checkpoint parcial; esta continuação não foi incluída naquele commit.

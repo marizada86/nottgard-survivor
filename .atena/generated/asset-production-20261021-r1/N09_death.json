@@ -1,0 +1,18 @@
+{
+  "id": "N09_death",
+  "revision": "v01",
+  "state": "DRAFT",
+  "file": "N09_death_v01.png",
+  "prompt_file": "N09_death_prompt.txt",
+  "tool": "image_gen built-in",
+  "references": [
+    "F:/dev/nottgard-vault/output/referencias-personagens/CANON-SEIS-20261018-r1/tha-03-thalion_fullbody_candidate_v1.png",
+    "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+    "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+    "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+  ],
+  "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-97d48002-5080-4247-ac0d-858bd596b93c.png",
+  "human_visual_acceptance": "PENDING",
+  "runtime_admission": false,
+  "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+}

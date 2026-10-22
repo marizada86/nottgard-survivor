@@ -1,0 +1,18 @@
+{
+  "id": "N09_idle",
+  "revision": "v01",
+  "state": "DRAFT",
+  "file": "N09_idle_v01.png",
+  "prompt_file": "N09_idle_prompt.txt",
+  "tool": "image_gen built-in",
+  "references": [
+    "F:/dev/nottgard-vault/output/referencias-personagens/CANON-SEIS-20261018-r1/tha-03-thalion_fullbody_candidate_v1.png",
+    "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+    "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+    "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+  ],
+  "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-452637ef-dd03-4566-a199-cc4927d70352.png",
+  "human_visual_acceptance": "PENDING",
+  "runtime_admission": false,
+  "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+}

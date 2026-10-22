@@ -1,0 +1,18 @@
+{
+  "id": "N05_death",
+  "revision": "v01",
+  "state": "DRAFT",
+  "file": "N05_death_v01.png",
+  "prompt_file": "N05_death_prompt.txt",
+  "tool": "image_gen built-in",
+  "references": [
+    "F:/dev/nottgard-vault/output/referencias-personagens/KKLLL-r01/B-KKLLL-002/kukan-shito-front-candidate-v01.png",
+    "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+    "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+    "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+  ],
+  "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-43034650-511a-4d66-8ecf-fc49ebba7fc7.png",
+  "human_visual_acceptance": "PENDING",
+  "runtime_admission": false,
+  "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "N04_idle",
+  "revision": "v01",
+  "state": "DRAFT",
+  "file": "N04_idle_v01.png",
+  "prompt_file": "N04_idle_prompt.txt",
+  "tool": "image_gen built-in",
+  "references": [
+    "F:/dev/nottgard-vault/output/referencias-personagens/B-OITO-FRONT-001/astherion-front-candidate-v01.png",
+    "F:/dev/abyss-megadungeon/assets/enemies/zuggtmoy.png",
+    "F:/dev/abyss-megadungeon/assets/enemies/malcanthet.png",
+    "F:/dev/abyss-megadungeon/assets/portraits/durvall.png"
+  ],
+  "generated_source": "C:\\Users\\Higor Rossini\\.codex\\generated_images\\01a15eb1-4659-7141-b54a-e87fe1739b1f\\exec-4a82ec97-0bd0-4f5c-a99a-37e12d48982f.png",
+  "human_visual_acceptance": "PENDING",
+  "runtime_admission": false,
+  "review": "SOURCE_GENERATED_PREPARATION_PENDING"
+}
